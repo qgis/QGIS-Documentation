@@ -5,6 +5,12 @@
 Shapes polygons
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Convert lines to polygons
 -------------------------
 

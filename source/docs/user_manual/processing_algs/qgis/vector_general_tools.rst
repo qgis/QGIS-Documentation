@@ -5,6 +5,12 @@
 Vector general
 ==============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Delete duplicate geometries
 ---------------------------
 

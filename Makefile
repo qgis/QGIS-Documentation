@@ -60,9 +60,9 @@ springclean: clean
 # remove all resources from source/static directory
 # copy english resources from resources/en to source/static directory
 # IF we have a localized build (LANG != en) then
-# overwrite with potentially available LANG resources  by
+# overwrite with potentially available LANG resources by
 # copy LANG resources from resources/LANG to source/static directory
-# TODO: check if LANG != en, for now: unnessecary copy for english
+# TODO: check if LANG != en, for now: unnecessary copy for english
 localizeresources: clean
 	@echo
 	@echo "Removing all static content from $(SOURCEDIR)/static."
@@ -84,7 +84,7 @@ html: localizeresources
 	# ONLY in the english version run in nit-picky mode, so source errors/warnings will fail in Travis
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
-	@-if [ $(LANG) != "en" ]; then \
+	@if [ $(LANG) != "en" ]; then \
 		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG); \
 	else \
 		$(SPHINXBUILD) -n -W -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG); \
@@ -95,10 +95,10 @@ html: localizeresources
 # pdf will also make html
 pdf: html
 	# add the 'processing algorithms' part OUT of the pdf by adding it to exclude_patterns of build
-	# NOTE: this exlcusion line will be removed in docker-world.sh via a git checkout!
+	# NOTE: this exclusion line will be removed in docker-world.sh via a git checkout!
 	@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
 
-	@-if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+	@if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
 		cp -f $(SOURCEDIR)/conf.py $(SOURCEDIR)/i18n/$(LANG)/; \
 		cat $(SOURCEDIR)/i18n/$(LANG)/conf.py.diff >> $(SOURCEDIR)/i18n/$(LANG)/conf.py; \
 		$(SPHINXBUILD) -b latex -c $(SOURCEDIR)/i18n/$(LANG) $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(LANG); \
@@ -178,6 +178,27 @@ pdf: html
 		texi2pdf --quiet QGISTrainingManual.tex; \
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
+	# developer guidelines
+	@-if [ $(LANG) = "ja" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		nkf -W -e --overwrite QGISDevelopersGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISDevelopersGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISDevelopersGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISDevelopersGuide.tex; \
+		dvipdfmx QGISDevelopersGuide.dvi; \
+	elif [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISDevelopersGuide.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISDevelopersGuide.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISDevelopersGuide.tex; \
+		xdvipdfmx QGISDevelopersGuide.xdv; \
+	else \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		texi2pdf --quiet QGISDevelopersGuide.tex; \
+		texi2pdf --quiet QGISDevelopersGuide.tex; \
+		texi2pdf --quiet QGISDevelopersGuide.tex; \
+	fi
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDevelopersGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide.pdf
 
 full:  
 #	@-if [ $(LANG) != "en" ]; then \
@@ -192,6 +213,7 @@ full:
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual-$(LANG).pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide-$(LANG).pdf
 
 world: all
 

@@ -26,8 +26,9 @@ Keyboard shortcuts
 
 QGIS provides default keyboard shortcuts for many features. You can find them in
 section :ref:`label_menubar`. Additionally, the menu option
-:menuselection:`Settings --> Configure Shortcuts...` allows you to change the default
-keyboard shortcuts and add new keyboard shortcuts to QGIS features.
+:menuselection:`Settings -->` |keyboardShortcuts| :menuselection:`Keyboard
+Shortcuts...` allows you to change the default keyboard shortcuts and add new
+ones to QGIS features.
 
 .. _figure_shortcuts:
 
@@ -36,15 +37,17 @@ keyboard shortcuts and add new keyboard shortcuts to QGIS features.
 
    Define shortcut options
 
-Configuration is very simple. Just select a feature from the list and click
-on :
+Configuration is very simple. Use the search box at the top of the dialog
+to find a particular action, select it from the list and click on :
 
 * **[Change]** and press the new combination you want to assign as new shortcut
 * **[Set none]** to clear any assigned shortcut
 * or **[Set default]** to backup the shortcut to its original and default value.
 
-Once you have finished your configuration, you can save it as an XML file
-and load it to another QGIS installation.
+Proceed as above for any other tools you wish to customize. Once you have
+finished your configuration, simply **[Close]** the dialog to have your changes
+applied. You can also **[Save]** the changes as an :file:`.XML` file
+and **[Load]** them into another QGIS installation.
 
 .. _`context_help`:
 
@@ -191,6 +194,7 @@ Option                                                            Vector Layer  
 |addGroup| :menuselection:`Add Group`                             \                      \                     |checkbox|
 ================================================================  =====================  ===================== ===============
 
+Table: Context menu from Layers Panel items
 
 Enabling the **Mutually Exclusive Group** option you can make a group have only
 one layer visible at the same time.
@@ -283,6 +287,13 @@ dialog. It indeed offers you a quick and handy way to define the rendering and t
 behavior of a layer, and to visualize its effects without opening the layer
 properties dialog.
 
+Besides avoiding you dealing with the modal and blocking dialog of the layer
+properties, it also avoids you cluttering the screen with features dialogs given
+that it embeds most of them (color selector, effects properties, rule edit,
+label substitution...): e.g., clicking color buttons inside the layer style panel
+causes the color selector dialog to be opened inside the layer style panel itself
+rather than as a separate dialog. 
+
 From a drop-down list of current layers in the layer panel, select an item and:
 
 * set its symbology, transparency, and histogram in case of raster layer. These
@@ -297,6 +308,13 @@ From a drop-down list of current layers in the layer panel, select an item and:
 Another powerful feature of this panel is the :guilabel:`Live update` checkbox.
 Tick it and your changes are automatically rendered in the map canvas as you go on.
 You no longer need to hit the **[Apply]** button.
+
+.. _figure_layer_styling:
+
+.. figure:: /static/user_manual/introduction/layer_styling.png
+    :align: center
+
+    Defining a layer symbology from the layer styling panel
 
 .. index::
    single: Panels; Statistic
@@ -318,24 +336,37 @@ allows users to choose:
 
 Statistic information available are (depending on the field's type):
 
-* Sum (float or integer)
-* Mean (float or integer)
-* Median (float or integer)
-* Standard Deviation (float or integer)
-* Standard Deviation on Sample (float or integer)
-* Minimal value (date, string, float or integer)
-* Maximal value (date, string, float or integer)
-* Range (date, float or integer)
-* Minority (float or integer)
-* Majority (float or integer)
-* Variety (float or integer)
-* First Quartile (float or integer)
-* Third Quartile (float or integer)
-* Inter Quartile Range (float or integer)
-* Count Distinct Value (date or string)
-* Count number of Missing Value (date or string)
-* Minimum Length (string)
-* Maximum Length (string)
+================================== ============ ============  ============  ============
+ Statistics                         String       Integer       Float         Date
+================================== ============ ============  ============  ============
+Count                               |checkbox|   |checkbox|    |checkbox|    |checkbox|
+Count Distinct Value                |checkbox|                               |checkbox|
+Count Missing value                 |checkbox|                               |checkbox|
+Sum                                              |checkbox|    |checkbox|
+Mean                                             |checkbox|    |checkbox|    |checkbox|
+Standard Deviation                               |checkbox|    |checkbox|
+Standard Deviation on Sample                     |checkbox|    |checkbox|
+Minimal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
+Maximal value                       |checkbox|   |checkbox|    |checkbox|    |checkbox|
+Range                                            |checkbox|    |checkbox|    |checkbox|
+Minority                                         |checkbox|    |checkbox|
+Majority                                         |checkbox|    |checkbox|
+Variety                                          |checkbox|    |checkbox|
+First Quartile                                   |checkbox|    |checkbox|
+Third Quartile                                   |checkbox|    |checkbox|
+Inter Quartile Range                             |checkbox|    |checkbox|
+Minimum Length                      |checkbox|
+Maximum Length                      |checkbox|
+================================== ============ ============  ============  ============
+
+Table: Statistics available for each field type
+
+.. _figure_statistical_summary:
+
+.. figure:: /static/user_manual/introduction/statistical_summary.png
+    :align: center
+
+    Show statistics on a field
 
 .. index::
    single: Map; Overview
@@ -599,9 +630,14 @@ inside the project and can be copied and pasted from layer to layer in the proje
 it's also possible to save them outside the project so that they can be loaded
 in another project.
 
+Save in plain text file
+........................
+
 Clicking the |selectString| :menuselection:`Style --> Save Style`, you can
-save the style as a QGIS layer style file (``.qml``) or SLD file (``.sld``, for
-vector layers).
+save the style as a:
+
+* QGIS layer style file (:file:`.qml`)
+* or SLD file (:file:`.sld`), only available for vector layers.
 
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
@@ -611,41 +647,18 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
-If the datasource of the layer is a database (PostGIS, MSSQL, Oracle or Spatialite),
-you can also save your layer style inside a table (named `layer_styles`) of the
-database. Just click on :menuselection:`Save Style` combobox and choose **Save
-in database** item then fill in the dialog to define a style name, add a
+Save in database
+.................
+
+Layer style can also be stored in a database if the layer datasource is a 
+database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
+and Oracle. The layer style is saved inside a table (named :file:`layer_styles`) of the
+database. Just click on :menuselection:`Save Style --> Save in database`
+item then fill in the dialog to define a style name, add a
 description, an :file:`.ui` file if applicable and check if the style should be
 the default style.
-You can add several styles in the database. However each table can have only one
-default style.
-
-.. note:: You can only save your style in database if the layer come from such
-   database. You can't mix databases (layer in Oracle and style in MSSQL for
-   instance).
-
-.. note:: **Restore and Save default style**
-
-   You can save the current style as the default style for the layer or
-   overwrite the current style by the default one for current layer.
-
-   Interface could ask you from which (or to which) database you want to take
-   (or save) the default style in case a database is used. For
-   instance, if layer comes from PostgreSQL database, you can save the style
-   in this database. You can restore the default style either from this
-   database or from the local database.
-
-   Local database is a SQLite database in the :file:`~/.qgis2/` directory
-   (where QGIS stores its local settings).
-
-See also the tip in :ref:`sec_postgis_details` for more information on backup
-of PostGIS database with layers and styles saved by QGIS.
-
-When loading a layer in QGIS, if a default style already exists for this layer,
-QGIS will load the layer and its style. After you modified the layer style,
-you can **Save as Default**, creating a new style that becomes the default one
-or **Restore Default** style if you're not satisfied.
-
+You can add several styles for a single table in the database. However each table
+can have only one default style.
 
 .. _figure_save_style_database:
 
@@ -653,6 +666,46 @@ or **Restore Default** style if you're not satisfied.
    :align: center
 
    Save Style in database Dialog
+
+.. note:: You can only save your style in database if the layer comes from such a
+   database. You can't mix databases (layer in Oracle and style in MSSQL for
+   instance).
+
+Load style
+...........
+
+The :menuselection:`Style --> Load Style` helps you apply a saved style to a layer.
+While plain text file style (:file:`.sld` or :file:`.qml`) can be loaded on any layer
+regardless its format, you can also load style from database when it comes to
+tables from the same datasource database.
+
+The :guilabel:`Load Style from Database` dialog displays a list of related
+styles to the layer found in the database and all the other styles saved in it,
+with name and description.
+
+Use **Restore Default** style option to replace the current style of the layer
+by the default saved one.
+
+.. note:: **Restore and Save default style**
+
+   When loading a layer in QGIS, if a default style already exists for this layer,
+   QGIS will load the layer with this style.
+   Used on file based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
+   as Default` generates a :file:`.qml` file along the layer (with the same name),
+   and :guilabel:`Restore Default` looks for and loads that file when pressed.
+   
+   When saving or loading a default style for a database layer,
+   QGIS would ask you from which (or to which) database you want to take
+   (or save) the style. For
+   instance, if layer comes from PostgreSQL database, you can save the default
+   style only in the same datasource database or in a local database.
+
+   Local database is a SQLite database in the :file:`~/.qgis2/` directory
+   (where QGIS stores its local settings).
+
+See also the tip in :ref:`sec_postgis_details` for more information on backup
+of PostGIS database with layers and styles saved by QGIS.
+
 
 .. tip:: **Quickly share a layer style within the project**
 
@@ -676,18 +729,31 @@ checkbox in :menuselection:`Settings --> Options --> General` menu.
 When checked, the color dialog used is the one of the OS being used. Otherwise,
 QGIS custom color chooser is used.
 
-This dialog has four different tabs which allow you to select colors by
-|colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
+.. tip:: **Dynamically change the color with the live-updating option**
+
+   Check the :guilabel:`Use live-updating color chooser dialogs` option in
+   the :menuselection:`Settings --> Options --> General` menu to have the
+   color applied to your items as soon as you pick it in the color chooser dialog.
+ 
+The custom color chooser dialog has four different tabs which allow you to
+select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
 |colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`
 (not available under |osx|).
 
 Whatever method you use, the selected color is always described through color
-sliders for HSV (Hue, Saturation, Value) and RGB (Red, Green, Blue) values.
-There is also an :guilabel:`opacity` slider to set transparency level.
-On the lower left part of the dialog you can see a comparison between the
-:guilabel:`current` and the :guilabel:`new` color you are presently
-selecting and on the lower right part you have the option to add the color
-you just tweaked into a color slot button.
+sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
+values. The color is also identifiable as a :guilabel:`HTML notation`. 
+Finally, there is an :guilabel:`opacity` slider to set transparency level.
+
+Modifying a color is as simple as clicking in the color wheel or ramp or in any
+of the color parameters sliders. You can adjust such parameters with the spinbox
+beside or, handy, scrolling the mouse wheel over the corresponding slider. You
+can also typeset the color html notation.
+
+The dialog also provides a visual comparison between the
+:guilabel:`current` (applied to widget) and the :guilabel:`new` (being selected)
+colors. Thanks to drag-and-drop, any of these colors can be saved in a slot for
+an easy access.
 
 .. _figure_color_selector_ramp:
 
@@ -696,23 +762,26 @@ you just tweaked into a color slot button.
 
    Color selector ramp tab
 
-.. tip:: **Dynamically change the color with the live-updating option**
-
-   Check the :guilabel:`Use live-updating color chooser dialogs` option in
-   the General Settings to have the color applied to your items as you change
-   color parameters in the QGIS custom color chooser dialog.
-
-With |colorBox| :sup:`color ramp` or with |colorWheel| :sup:`color wheel`,
-you can browse to all possible color combinations.
-There are other possibilities though. By using |colorSwatches| :sup:`color swatches`
-you can choose from a preselected list. This selected list is
-populated with one of three methods:
+With |colorBox| :sup:`color ramp` or |colorWheel| :sup:`color wheel` tab,
+you can browse to all possible color combinations and apply it to the item.
+In the |colorSwatches| :sup:`color swatches` tab, you can choose from a
+preselected list of color palettes:
 
 * :guilabel:`Recent colors`,
 * :guilabel:`Standard colors`, a user-defined list of colors set under
   :menuselection:`Settings --> Options --> Colors` menu
 * or :guilabel:`Project colors`, a user-defined list of colors set under
   :menuselection:`Project --> Project Properties --> Default Styles`.
+
+The latest palettes can be modified thanks to the |signPlus| and |signMinus|
+buttons at the bottom of the frame.
+The :guilabel:`...` button nearby the palette combobox also offers several
+options to:
+
+* copy, paste, import or export colors
+* create, import or remove color palettes. Check the :guilabel:`Show in Color
+  Buttons` option to add the custom palette to the color selector widget (see
+  figure_color_selector_).
 
 .. _figure_color_selector_switcher:
 
@@ -724,15 +793,16 @@ populated with one of three methods:
 Another option is to use the |colorPicker| :sup:`color picker` which allows
 you to sample a color from under your mouse pointer at any part of
 QGIS or even from another application by pressing the space bar. Please note
-that the color picker is OS dependent and is currently not supported by OSX.
+that the color picker is OS dependent and is currently not supported by macOS.
 
-.. _tip_quick_color_picker_+_copy/paste_colors:
+.. _quick_color_modification:
 
-.. tip:: **quick color picker + copy/paste colors**
+.. tip:: **Quick color modification**
 
-   You can quickly choose from :guilabel:`Recent colors`, from :guilabel:`Standard colors`
-   or simply :guilabel:`copy` or :guilabel:`paste` a color by clicking
-   the drop-down arrow that follows the |selectColor| color box.
+   Click the drop-down arrow at the right of the |selectColor| color box button
+   to display a widget for a quick color selection, either in the color wheel or
+   from existing color palettes. You can also use it to :guilabel:`copy` or
+   :guilabel:`paste` a color.
 
 .. _figure_color_selector:
 
@@ -774,7 +844,7 @@ on layers, on features but also on print composer items:
   Burn can be used to tweak and colorise underlying layers.
 * **Overlay**: This mode combines the multiply and screen blending modes.
   In the resulting picture, light parts become lighter and dark parts become darker.
-* Soft light: This is very similar to overlay, but instead of using multiply/screen
+* **Soft light**: This is very similar to overlay, but instead of using multiply/screen
   it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
 * **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
   to emulate projecting a very intense light onto an image.
@@ -966,6 +1036,10 @@ QGIS provides several tools to select features in the map canvas. Selection
 tools are available in :menuselection:`View --> Select` menu or in the
 :guilabel:`Attributes toolbar`.
 
+.. note::
+
+   Selection tools work with the currently active layer.
+
 Selecting manually in the map canvas
 -------------------------------------
 
@@ -1024,30 +1098,57 @@ be selected in map canvas also):
 .. index::
    single: Selection tools; Select by value
 
-About Select Features By Value
--------------------------------
+.. _select_by_value:
 
-This feature opens a window to allow the user to choose for each column of the
-attribute table which value to look for, if the search should be case sensitive
-and the operation that should be used. Operation can be one of:
+Select Features By Value
+------------------------
 
-* :guilabel:`Exclude field`,
-* :guilabel:`Equal to (=)`,
-* :guilabel:`Not equal to`,
-* :guilabel:`Greater than (>)` (only for fields of integer or decimal type),
-* :guilabel:`Less than (<)` (only for fields of integer or decimal type),
-* :guilabel:`Greater than or equal to (>=)` (only for fields of integer
-  or decimal type),
-* :guilabel:`Less than or equal to (<=)` (only for fields of integer or
-  decimal type),
-* :guilabel:`Contains` (only for fields of type string),
-* :guilabel:`Not contains` (only for fields of type string),
-* :guilabel:`is missing (null)`,
-* :guilabel:`is not missing (null)`
+This selection tool opens the layer's feature form allowing the user to choose,
+for each field, which value to look for, if the search should be case sensitive,
+and the operation that should be used.
 
-The window allows user to :guilabel:`Reset form` or to :guilabel:`Select
-features`, :guilabel:`Add to current selection`, :guilabel:`Filter current
-selection`, :guilabel:`Remove from current selection`.
+.. _figure_filter_form:
+
+.. figure:: /static/user_manual/introduction/select_by_value.png
+   :align: center
+
+   Filter/Select features using form dialog
+
+Alongside each field, there is a drop-down list with the operation options to
+control the search behaviour. The common options are:
+
+* :guilabel:`Exclude Field` - The field will not be used for searching
+* :guilabel:`Equal to (=)`
+* :guilabel:`Not equal to`
+* :guilabel:`Is missing (null)`
+* :guilabel:`Is not missing (not null)`
+
+For numeric and datetime fields, the additional options are:
+
+* :guilabel:`Greater than (>)`
+* :guilabel:`Less than (<)`
+* :guilabel:`Greater than or equal to (>=)`
+* :guilabel:`Less than or equal to (<=)`
+* :guilabel:`Between (inclusive)`
+* :guilabel:`Is not between (inclusive)`
+
+For text fields, the additional options are:
+
+* :guilabel:`Contains`
+* :guilabel:`Does not contain`
+
+For the text options above, it is also possible to use the |checkbox|
+:guilabel:`Case sensitive` option.
+
+After setting all search options, you can use the :guilabel:`Select features`
+button to select the matching features. The drop-down options are:
+
+* :guilabel:`Select features`
+* :guilabel:`Add to current selection`
+* :guilabel:`Filter current selection`
+* :guilabel:`Remove from current current selection`
+
+You can also clean all search options using the :guilabel:`Reset form` button.
 
 .. index:: Data-defined override
 .. _data_defined:
@@ -1073,7 +1174,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows:
 * :guilabel:`Paste` and :guilabel:`Copy` buttons,
 * :guilabel:`Clear` button to remove the setup.
 
-.. tip:: When the :index:`data-defined override` option is setup correctly the
+.. tip:: When the data-defined override option is setup correctly the
    icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
    the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
@@ -1089,39 +1190,56 @@ Parameters that can be used with data-defined tools are:
    single: Identify features
 .. _`identify`:
 
-Identify features
+Identify Features
 =================
 
 The Identify tool allows you to interact with the map canvas and get information
-on features in a pop-up window. To identify features, use :menuselection:`View --> Identify
-features` or press :kbd:`Ctrl + Shift + I`, or click the |identify|
-:sup:`Identify features` icon on the Attributes toolbar.
+on features in a pop-up window. To identify features, use:
+
+* :menuselection:`View --> Identify Features` menu,
+* or press :kbd:`Ctrl + Shift + I` (or |osx| :kbd:`Cmd + Shift + I`),
+* or click the |identify| :sup:`Identify Features` icon on the Attributes toolbar.
+
+Using the Identify Features tool
+---------------------------------
 
 QGIS offers two ways to identify features with the |identify|
-:sup:`Identify features` tool:
+:sup:`Identify Features` tool:
 
 * **left click** will identify features according to the mode set in the
-  :guilabel:`Identify results` panel
+  :guilabel:`Identify Results` panel
 * **right click** will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
   features to identify.
 
-If you click on feature(s), the :guilabel:`Identify results` dialog will list
+.. tip:: **Filter the layers to query with the Identify Features tool**
+
+   Uncheck the :guilabel:`Identifiable` column in :menuselection:`Project -->`
+   (or |kde| :menuselection:`Settings -->`), :menuselection:`Project
+   Properties --> Identify layers` menu in front of a layer to avoid it
+   being queried when using the |identify| :sup:`Identify Features` in a mode
+   other than **Current Layer**. This is a handy way to return features from only
+   layers that are of interest for you.
+
+If you click on feature(s), the :guilabel:`Identify Results` dialog will list
 information about the clicked feature(s). The default view is a tree view where
 the first item is the name of the layer and its children are its identified feature(s).
 Each feature is described by the name of a field along with its value.
-This field is the one set in :menuselection:`Properties --> Display`.
+This field is the one set in :menuselection:`Layer Properties --> Display`.
 Then follows all the other information about the feature.
 
-This window can be customized to display custom fields, but by default it will
-display three kinds of information:
+Feature informations
+---------------------
+
+The Identify Results dialog can be customized to display custom fields, but by
+default it will display three kinds of information:
 
 .. index:: Actions
 
 * **Actions**: Actions can be added to the identify feature windows.
   The action is run by clicking on the action label. By default, only one action
-  is added, namely ``view feature form`` for editing. You can define more actions
-  in the layer's properties dialog.
+  is added, namely ``View feature form`` for editing. You can define more actions
+  in the layer's properties dialog (see :ref:`actions_menu`).
 * **Derived**: This information is calculated or derived from other information.
   This includes:
 
@@ -1134,15 +1252,21 @@ display three kinds of information:
     In case you click on a curved line using the info tool, QGIS will also display the
     radius of that section in the panel result.
 
-* **Data attributes**: This is the list of attribute fields and values for the feature that
-  has been clicked.
+* **Data attributes**: This is the list of attribute fields and values for the
+  feature that has been clicked.
 
+.. note:: Links in feature's attributes are clickable from the :guilabel:`Identify
+   Results` panel and will open in your default web browser.
+   
 .. _figure_identify:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
 
-   Identify features dialog
+   Identify Results dialog
+
+The Identify Results dialog
+----------------------------
 
 At the top of the window, you have seven icons:
 
@@ -1160,19 +1284,19 @@ comboboxes.
 With the :guilabel:`Mode` combobox you can define from which layers features
 should be identified:
 
-* 'Current layer' : only features from the selected layer are identified. The
+* **Current layer** : only features from the selected layer are identified. The
   layer may not be visible in the canvas.
-* 'Top down, stop at first': for only features from the upper visible layer.
-* 'Top down': for all features from the visible layers. The results are shown in
+* **Top down, stop at first**: for only features from the upper visible layer.
+* **Top down**: for all features from the visible layers. The results are shown in
   the panel.
-* and 'Layer selection': opens a context menu where the user selects the layer to
+* and **Layer selection**: opens a context menu where the user selects the layer to
   identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-The :guilabel:`View` can be set as 'Tree', 'Table' or 'Graph'.
+The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
-The identify tool allows you to |checkbox|:guilabel:`auto open a form`.
+The identify tool allows you to |checkbox|:guilabel:`Auto open a form`.
 If checked, each time a single feature is identified QGIS will open a form
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
@@ -1312,27 +1436,38 @@ panel allows you to:
   in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
 
 
-.. index:: Nesting projects
+.. index:: Nesting projects, Embed layers and groups
 .. _nesting_projects:
 
 Nesting Projects
 ================
 
-If you want to embed content from other project files into your project, you can
-choose :menuselection:`Layer --> Embed Layers and Groups`.
+Sometimes, you'd like to keep in different projects a bunch of layers with the
+same style. You can either create a :ref:`default style <store_style>` for
+these layers or embed them from another project to save you tons of work.
 
-Embedding layers
-----------------
+Embed layers and groups from an existing project has some advantages over
+styling:
 
-The following dialog allows you to embed layers from other projects. Here is a
-small example:
+* all types of layers (vector or raster, local or online...) can be added
+* fetching groups and layers, you can keep the same tree structure of the
+  "background" layers in your different projects
+* While the embedded layers are editable, you can't change their properties
+  such as symbology, labels, forms, default values, actions... This ensures
+  homogeneity throughout the projects
+* modify the items in the original project and changes are propagated to all
+  the other projects.
 
-#. Press |browseButton| to look for a project from the Alaska dataset.
-#. Select the project file :file:`relations.qgs`. You can see the content of the
+If you want to embed content from other project files into your project, select
+:menuselection:`Layer --> Embed Layers and Groups` and:
+
+#. Press |browseButton| to look for a project; you can see the content of the
    project (see figure_embed_dialog_).
-#. Press :kbd:`Ctrl` and click on the layers :file:`airports` and
-   :file:`regions`. Press **[OK]**. The selected layers are embedded in the map
-   legend and the map view now.
+#. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
+   groups you wish to retrieve.
+#. Press **[OK]**. The selected layers and groups are embedded in the Layer
+   panel and can be visualized in the map canvas now. Names of embedded items
+   appear in italic to distinguish them from regular layers and groups.
 
 .. _figure_embed_dialog:
 
@@ -1341,13 +1476,16 @@ small example:
 
    Select layers and groups to embed
 
-While the embedded layers are editable, you can't change their properties like
-style and labeling.
+Like any other layer, an embedded layer can be removed from the project by
+right-click on the layer and choose |removeLayer| :sup:`Remove`.
 
-Removing embedded layers
-------------------------
+.. tip:: **Change rendering of an embedded layer**
 
-Right-click on the embedded layer and choose |removeLayer| :sup:`Remove`.
+ It's not possible to change rendering of an embedded layer, unless you make
+ the changes in the original project file. However, right-click on a layer and
+ select :guilabel:`Duplicate` creates a layer which is fully-featured and not
+ dependent to the original project. You can then safely remove the linked
+ layer.
 
 .. index:: Decorations
 .. _decorations:
@@ -1505,82 +1643,124 @@ Layers (raster or vector) can be saved in another format with the
 in the layer in the layer tree) or in the :menuselection:`Layer --> Save As...`
 menu.
 
-The :guilabel:`Save As` dialog shows several parameters to change the behaviour
+Common parameters
+-----------------
+
+The :guilabel:`Save As` dialog shows several parameters to change the behavior
 when saving the layer. Common parameters (raster and vector) are:
 
-* Format
-* Filename
-* CRS
-* Add save file to map to add the new layer to the canvas
-* Extent (possible values are layer, Map view or custom extent)
-* Create (for raster), Layer or Custom (for vector) Options which allow you to
-  change some advanced options. Advanced user can see the driver documentation
-  in `gdal-ogr <http://gdal.org>`_ documentation.
+* :guilabel:`Format`
+* :guilabel:`File name`
+* :guilabel:`CRS`
+* :guilabel:`Add saved file to map` to add the new layer to the canvas
+* :guilabel:`Extent` (possible values are **layer**, **Map view** or **user-defined**
+  extent)
 
 However, some parameters are specific to raster and vector formats:
 
-* Raster specific parameters:
+Raster specific parameters
+--------------------------
 
-  * Resolution (horizontal and vertical)
-  * Pyramid creation
-  * Output mode (raw data or rendered image)
+* :guilabel:`Output mode` (it can be **raw data** or **rendered image**)
+* :guilabel:`Resolution`
+* :guilabel:`Create Options`: advanced options (file compression, block sizes, colorimetry...)
+  to fine tune the output file. See the `gdal-ogr <http://gdal.org>`_ driver documentation.
+* :guilabel:`Pyramids` creation
+* :guilabel:`VRT Tiles`
+* :guilabel:`No data values`
 
-* Vector specific parameters:
 
-  * Encoding
-  * Save only selected features
-  * Skip attribute creation
-  * Symbology export: can be used mainly for DXF export and for all file
-    formats who manage OGR feature styles (see note below) as DXF, KML, tab
-    file formats:
+Vector specific parameters
+--------------------------
 
-    * No symbology: default style of the application that reads the data
-    * Feature symbology: save style with OGR Feature Styles (see note below)
-    * Symbol Layer symbology: save with OGR Feature Styles (see note below) but
-      export the same geometry multiple times if there are multiple symbology
-      symbol layers used
+Depending on the format of export, some of these options are available or not:
 
-  * Geometry:
+* :guilabel:`Encoding`
+* :guilabel:`Save only selected features`
+* :guilabel:`Select fields to export and their export options`. In case you set your
+  fields behavior with some :ref:`Edit widgets <configure_field>`, e.g. ``value
+  map``, you can keep the displayed values in the layer by checking |checkbox|
+  :guilabel:`Replace all selected raw fields values by displayed values`.
+* :guilabel:`Symbology export`: can be used mainly for DXF export and for all file
+  formats who manage OGR feature styles (see note below) as DXF, KML, tab
+  file formats:
 
-    * force to multi-geometry,
-    * add z-dimension,
-    * add or remove a geometry column with the drop-down list. This is not
-      linked with the current geometry type of the layer. You can add an empty
-      geometry column to an attribute table, remove the geometry column of
-      a spatial layer.
+  * **No symbology**: default style of the application that reads the data
+  * **Feature symbology**: save style with OGR Feature Styles (see note below)
+  * **Symbol Layer symbology**: save with OGR Feature Styles (see note below)
+    but export the same geometry multiple times if there are multiple symbology
+    symbol layers used
+  * A **Scale** value can be applied to the latest options.
+  
+.. _ogr_features_note:
 
 .. note:: *OGR Feature Styles* are a way to store style directly in
-   the data as a hidden attribute. Only some format can handle this kind of
-   information. KML, DXF and TAB files format are such format. For advanced
-   user, you can read the `OGR Feature Styles specification
-   <http://www.gdal.org/ogr_feature_style.html>`_ document.
+     the data as a hidden attribute. Only some formats can handle this kind of
+     information. KML, DXF and TAB file formats are such formats. For advanced
+     users, you can read the `OGR Feature Styles specification
+     <http://www.gdal.org/ogr_feature_style.html>`_ document.
 
+* :guilabel:`Geometry`: you can configure the geometry capabilities of the output layer
+
+  * :guilabel:`geometry type`: keep the original geometry of the features when set to 
+    **Automatic**, otherwise removes or overrides it with any type. You can add
+    an empty geometry column to an attribute table, remove the geometry column
+    of a spatial layer.
+  * :guilabel:`Force multi-type`: force creation of multi-geometry features in the layer
+  * :guilabel:`Include z-dimension` to geometries.
+
+.. tip::
+
+  Overriding layer geometry type makes it possible to do things like save a
+  geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type of
+  geometry (point, line, polygon), so that geometries can then be manually added
+  to rows with the |addPart| :sup:`Add Part` tool .
+
+* :guilabel:`Datasources Options`, :guilabel:`Layer Options` or :guilabel:`Custom Options`
+  which allow you to configure some advanced parameters. See the `gdal-ogr <http://gdal.org>`_
+  driver documentation.
+
+.. index:: Overwrite file, Append features
+
+When saving a vector layer into an existing file, depending on the capabilities
+of the output format (Geopackage, SpatiaLite, FileGDB...), the user can
+decide whether to:
+
+* overwrite the whole file
+* overwrite only the target layer (the layer name is configurable)
+* append features to the existing target layer
+* append features, add new fields if there are any.
+
+For formats like Shapefile, MapInfo .tab, feature append is also available.
 
 .. note:: **About DXF files**
 
    Vector layers can be exported to DXF files using another tool, the
-   :guilabel:`DXF Export ...` in :menuselection:`Project`. The windows allow the
-   user to choose the layer file, the symbology mode (see the note above), the
-   symbology scale, the encoding, the visibility preset and the layers to include
-   in the DXF file.
+   :guilabel:`DXF Export...` in :menuselection:`Project`. The windows allow the
+   user to choose the layer file, the symbology mode (see the `OGR Feature Styles
+   <ogr_features_note>`_ note), the symbology scale, the encoding, the visibility
+   preset and the layers to include in the DXF file.
+  
 
-   As an option, you can |checkbox| :guilabel:`Use the layer title as name if
-   set` or :guilabel:`Export features intersecting the current map extent`.
+   As an option, you can |checkbox| :guilabel:`Use the layer title as name if set`
+   or :guilabel:`Export features intersecting the current map extent`.
 
-.. index:: Variables
+.. index:: Variables, Expressions
 
 .. _`general_tools_variables`:
 
-Use of variables for dynamic content
-====================================
+Variables
+=========
 
-You can define custom variables for use in :index:`expressions`. Variables can
-be defined at the application global level, project level, layer level and
-composition level. Just like CSS cascading rules, variables can be overwritten
-- eg, a project level variable will overwrite any application level variables
-set. You can use these variables to build text strings or other custom
-expressions using @ character before the variable name. For example in composer
-creating a label with this content::
+In QGIS, you can use variables to store useful recurrent values (e.g. the
+project's title, or the user's full name) that can be used in expressions.
+Variables can be defined at the application's global level, project level,
+layer level, composition level, and composer's item level. Just like CSS
+cascading rules, variables can be overwritten - e.g., a project level
+variable will overwrite any application's global level variables set with
+the same name. You can use these variables to build text strings or other
+custom expressions using the @ character before the variable name. For
+example in composer creating a label with this content::
 
   This map was made using QGIS [% @qgis_version %]. The project file for this
   map is: [% @project_path %]
@@ -1590,19 +1770,35 @@ Will render the label like this::
   This map was made using QGIS 2.14. The project file for this map is:
   /gis/qgis-user-conference-2015.qgs
 
-You can manage global variables from the :menuselection:`Settings --> Options` menu,
-and project level variables from Project properties (including adding your own
-custom variables).
+Besides the :ref:`preset read-only variables <variables_functions>`, you can
+define your own custom variables for any of the levels mentioned above. You can
+manage:
+
+* **global variables** from the :menuselection:`Settings --> Options` menu;
+* **project's variables** from :guilabel:`Project properties` (see
+  :ref:`project_properties`);
+* **vector layer's variables** from the :guilabel:`Layer Properties` dialog
+  (see :ref:`vector_properties_dialog`);
+* **composition's variables** from the :guilabel:`Composition` panel in the
+  Print composer (see :ref:`composer_composition_tab`);
+* and **composer item's variables** from the :guilabel:`Item properties`
+  panel in the Print composer (see :ref:`composer_item_options`).
+
+To differentiate from editable variables, read-only variable's names and
+values are emphasized in italic. On the other hand, higher level
+variables overwritten by lower level ones are strike through.
 
 .. _figure_variables_dialog:
 
 .. figure:: /static/user_manual/introduction/options_variables.png
    :align: center
 
-   Edit variable at the project level
+   Variables editor at the project's level
 
-.. note:: you can read more information and find examples here `Exploring variables
-   in QGIS 2.12, part 1 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
+.. note:: You can read more about variables and find some examples
+   in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1
+   <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
    `part 2 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
-   and `part 3 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_.
-
+   and `part 3 <http://nyalldawson
+   .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
+   blog posts.

@@ -101,8 +101,8 @@ Remember to install the postgis extensions::
 
 Next, import the data provided in the :kbd:`exercise_data/postgis/` directory.
 Refer back to the previous lesson for instructions, but remember that you'll
-need to create a new PostGIS connection to the new database. You can import \
-from the terminal or via SPIT. Import the files into the following database
+need to create a new PostGIS connection to the new database. You can import from
+the terminal or via DB Manager. Import the files into the following database
 tables:
 
 - :kbd:`points.shp` into :kbd:`building`

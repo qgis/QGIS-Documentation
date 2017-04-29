@@ -1,4 +1,4 @@
-.. index:: plugin layers
+.. index:: Plugin layers
 
 .. _pluginlayer:
 
@@ -12,7 +12,7 @@ layer type based on QgsPluginLayer might be the best way to implement that.
 **TODO:**
    Check correctness and elaborate on good use cases for QgsPluginLayer, ...
 
-.. index:: plugin layers; subclassing QgsPluginLayer
+.. index:: Plugin layers; Subclassing QgsPluginLayer
 
 Subclassing QgsPluginLayer
 ==========================

@@ -1,3 +1,4 @@
+.. index:: Plugins; Processing algorithm
 .. _processing_plugin:
 
 ****************************

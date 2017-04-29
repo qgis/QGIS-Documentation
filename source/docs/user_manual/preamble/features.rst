@@ -175,21 +175,27 @@ inherited. The ``ulimit`` command, which is a shell built-in, changes
 the limits only for the current shell process; the new limit will be
 inherited by any child processes.
 
-You can see all current ulimit info by typing ::
+You can see all current ulimit info by typing:
 
-    user@host:~$ ulimit -aS
+.. code-block:: bash
+
+    $ ulimit -aS
 
 You can see the current allowed number of opened files per process
-with the following command on a console ::
+with the following command on a console:
 
-    user@host:~$ ulimit -Sn
+.. code-block:: bash
+
+    $ ulimit -Sn
 
 To change the limits for an **existing session**, you may be able to
-use something like ::
+use something like:
 
-    user@host:~$ ulimit -Sn #number_of_allowed_open_files
-    user@host:~$ ulimit -Sn
-    user@host:~$ qgis
+.. code-block:: bash
+
+    $ ulimit -Sn #number_of_allowed_open_files
+    $ ulimit -Sn
+    $ qgis
 
 **To fix it forever**
 

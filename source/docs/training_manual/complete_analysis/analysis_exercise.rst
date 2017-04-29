@@ -28,9 +28,11 @@ where you should go to look.
 Solution Outline
 -------------------------------------------------------------------------------
 
-In order to solve this problem, you will have to use the available data
-(available in :kbd:`exercise_data/more_analysis`) to find the candidate area
-that is closest to your house.  If you don't live in Cape Town (where this
+In order to solve this problem, you will have to download data from 
+https://www.dropbox.com/s/q5evvkizuunrcs0/more_analysis.zip?dl=0 and place it
+under :file:`exercise_data/more_analysis` folder.
+You will use it to find the candidate area
+that is closest to your house. If you don't live in Cape Town (where this
 problem is based) you can choose any house in the Cape Town region. The
 solution will involve:
 
@@ -288,7 +290,7 @@ Activating the :guilabel:`Raster Terrain Analysis` plugin
 This plugin is included by default in QGIS 1.8. However, it may not be
 immediately visible. To check if it is accessible on your system:
 
-* Click on the menu item :guilabel:`Plugins --> Manage Plugins...`.
+* Click on the menu item :menuselection:`Plugins --> Manage Plugins...`.
 * Ensure that the box next to :guilabel:`Raster Terrain Analysis plugin` is
   selected.
 * Click :guilabel:`OK`.
@@ -498,7 +500,7 @@ rasters.
 Creating a bounding box vector
 -------------------------------------------------------------------------------
 
-* Click on the menu item :guilabel:`Layer --> New --> New Shapefile Layer...`.
+* Click on the menu item :menuselection:`Layer --> New --> New Shapefile Layer...`.
 * Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button.
 * Click :guilabel:`Specify CRS` and set the coordinate reference system
   :kbd:`WGS 84 / UTM zone 33S : EPSG:32733`.
@@ -733,7 +735,7 @@ Calculate polygon centroids
 Calculate which centroid is closest to your house
 -------------------------------------------------------------------------------
 
-* Click on the menu item :guilabel:`Vector --> Analysis Tools --> Distance
+* Click on the menu item :menuselection:`Vector --> Analysis Tools --> Distance
   matrix`.
 * The input layer should be your house, and the target layer
   :guilabel:`solution_centroids`. Both of these should use the :kbd:`id` field

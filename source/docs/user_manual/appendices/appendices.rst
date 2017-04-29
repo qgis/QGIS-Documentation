@@ -5,6 +5,7 @@
 Appendix
 ========
 
+.. index:: License document
 .. _gpl_appendix:
 
 GNU General Public License
@@ -18,7 +19,7 @@ Copyright (C) 1989, 1991 Free Software Foundation, Inc.
 
 
 Everyone is permitted to copy and distribute verbatim copies
-of this :index:`license document`, but changing it is not allowed.
+of this license document, but changing it is not allowed.
 
 Preamble
 

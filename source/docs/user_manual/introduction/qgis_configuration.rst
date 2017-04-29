@@ -35,8 +35,8 @@ require a restart of QGIS before they will be effective.
 
 The tabs where you can customize your options are described below.
 
-General Tab
--------------
+General Settings
+----------------
 
 **Application**
 
@@ -82,8 +82,8 @@ General Tab
 .. index:: Environment variables
 .. _`env_options`:
 
-System Tab
------------
+System Settings
+---------------
 
 **SVG paths**
 
@@ -126,8 +126,8 @@ source code.
    System environment variables in QGIS
 
 
-Data Sources Tab
------------------
+Data Sources Settings
+---------------------
 
 **Feature attributes and table**
 
@@ -179,10 +179,8 @@ Removing a folder from the list will make it available in the Browser panel.
 
 .. index:: Rendering
 
-Rendering Tab
---------------
-
-\
+Rendering Settings
+------------------
 
 .. _figure_rendering_menu:
 
@@ -258,8 +256,8 @@ Rendering Tab
 
 .. index:: Colors
 
-Colors Tab
-------------
+Colors Settings
+---------------
 
 This menu allows you to add some custom color that you can find in each color dialog
 window of the renderers. You will see a set of predefined colors in the tab: you can
@@ -268,8 +266,8 @@ and paste operations. Finally you can export the color set as a :file:`gpl` file
 them.
 
 
-Canvas and Legend Tab
-----------------------
+Canvas and Legend Settings
+--------------------------
 
 **Default map appearance (overridden by project properties)**
 
@@ -291,8 +289,8 @@ Canvas and Legend Tab
 
 .. index:: Map tools
 
-Map tools Tab
---------------
+Map tools Settings
+------------------
 
 This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
@@ -315,8 +313,8 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
 * :guilabel:`Preferred distance units` |radioButtonOn| ('Meters', 'Kilometers', 'Feet',
   'Yards', 'Miles', 'Nautical Miles', 'Degrees' or 'Map Units' )
 * :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square
-   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
-   'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
+  kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
+  'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
 * :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc', 'Seconds of arc' or 'Turns/revolutions')
 
@@ -333,8 +331,8 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
-Composer Tab
--------------
+Composer Settings
+-----------------
 
 **Composition defaults**
 
@@ -360,8 +358,8 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
 
 .. index:: Digitizing configuration
 
-Digitizing Tab
----------------
+Digitizing Settings
+-------------------
 
 This tab helps you configure general settings when :ref:`editing vector layer
 <editingvector>` (attributes and geometry).
@@ -409,8 +407,8 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
-GDAL Tab
----------
+GDAL Settings
+-------------
 
 GDAL is a data exchange library for raster files. In this tab, you can
 :guilabel:`Edit create options` and :guilabel:`Edit Pyramids Options` of the
@@ -419,8 +417,8 @@ format, as in some cases more than one GDAL driver is available.
 
 .. index:: CRS, Datum transformation, On-the-fly reprojection
 
-CRS Tab
---------
+CRS Settings
+------------
 
 **Default CRS for new projects**
 
@@ -459,14 +457,14 @@ or when a layer without a CRS is loaded.
 
 .. index:: Overwrite language
 
-Locale Tab
------------
+Locale Settings
+---------------
 
 * |checkbox| :guilabel:`Override system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
-Authentication Tab
--------------------
+Authentication Settings
+-----------------------
 
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
@@ -474,8 +472,8 @@ details.
 
 .. index:: Proxy, Network
 
-Network Tab
-------------
+Network Settings
+----------------
 
 **General**
 
@@ -525,17 +523,26 @@ http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
 
+.. index:: Variables
 
-Variables Tab
---------------
+Variables Settings
+------------------
 
-The :guilabel:`Variables` tab lists and helps you create global-level variables.
-More information about variables at section :ref:`general_tools_variables`.
+The :guilabel:`Variables` tab lists all the variables available at the
+global-level.
+
+It also allows the user to manage global-level variables. Click the |signPlus|
+button to add a new custom global-level variable. Likewise, select a custom
+global-level variable from the list and click the |signMinus| button to remove
+it.
+
+More information about variables in the :ref:`general_tools_variables`
+section.
 
 .. _optionsadvanced:
 
-Advanced Tab
-------------
+Advanced Settings
+-----------------
 
 Depending on your OS, all the settings related to QGIS (UI, tools, data providers,
 default values, plugins options...) are saved:
@@ -560,13 +567,14 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    single: Project; Properties
    single: Settings; Project
 
+.. _project_properties:
+
 Project Properties
 ==================
 
-In the properties window for the project under |nix|
-:menuselection:`Settings --> Project Properties` (kde) or |nix| |osx| |win|
-:menuselection:`Project --> Project Properties` (Gnome, OS X or Windows), you
-can set project-specific options.
+In the properties window for the project under :menuselection:`Project -->
+Project Properties` (or |kde| :menuselection:`Settings --> Project Properties`),
+you can set project-specific options.
 
 The project-specific options overwrite their equivalent in the options
 described above.
@@ -620,6 +628,11 @@ described above.
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
+  
+  You can also set whether a layer should appear as ``read-only``, meaning that
+  it can not be edited by the user, regardless of the data provider's
+  capabilities. Although this is a weak protection, it remains a quick and handy
+  configuration to avoid end-users modifying data when working with file-based layers.
 * The :guilabel:`Default Styles` tab lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
@@ -668,6 +681,14 @@ described above.
   lists and helps you create project-level variables.
   More information about variables at section :ref:`general_tools_variables`.
 
+* The :guilabel:`Variables` tab lists all the variables available at
+  the project's level (which includes all global variables). Besides, it
+  also allows the user to manage project-level variables. Click the |signPlus|
+  button to add a new custom project-level variable. Likewise, select a custom
+  project-level variable from the list and click the |signMinus| button to
+  remove it.
+  More information on variables usage in the General Tools
+  :ref:`general_tools_variables` section.
 
 .. index:: Customization
 .. _sec_customization:

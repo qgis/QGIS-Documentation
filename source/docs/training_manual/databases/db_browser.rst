@@ -51,7 +51,7 @@ nice to learn how to add a filtered set of records from a table as a layer
 by using queries that we learned about in previous sections.
 
 * Start a new empty map with no layers
-* Click the :guilabel:`Add PostGIS Layers` button or select :guilabel:`Layer
+* Click the :guilabel:`Add PostGIS Layers` button or select :menuselection:`Layer
   --> Add PostGIS Layers` from the menu.
 * In the :guilabel:`Add PostGIS Table(s)` dialog that comes up, connect to the
   :kbd:`postgis_demo` connection.

@@ -5,6 +5,12 @@
 Stereo
 ======
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Stereo Framework
 ----------------
 

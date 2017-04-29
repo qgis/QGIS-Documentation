@@ -7,29 +7,37 @@
  Working with the Attribute Table
 **********************************
 
+The attribute table displays information on features of a selected layer. Each
+row in the table represents a feature (with geometry or not), and each column
+contains a particular piece of information about the feature.
+Features in the table can be searched, selected, moved or even edited.
+
 .. only:: html
 
    .. contents::
       :local:
 
-The attribute table displays information on features of a selected layer. Each row
-in the table represents one map feature, and each column contains a particular
-piece of information about the feature. Features in the table can be searched,
-selected, moved or even edited.
+Manipulate the Attribute table interface
+=========================================
+
+Dialog overview
+----------------
 
 To open the attribute table for a vector layer, make the layer active by
-clicking on it in the map legend area. Then, from the main
+clicking on it in the :ref:`label_legend`. Then, from the main
 :menuselection:`Layer` menu, choose |openTable| :menuselection:`Open Attribute
-Table`. It is also possible to right click on the layer and choose
+Table`. It is also possible to right-click on the layer and choose
 |openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
-and to click on the |openTable| :guilabel:`Open Attribute Table` button
+or to click on the |openTable| :guilabel:`Open Attribute Table` button
 in the Attributes toolbar.
 
 This will open a new window that displays the feature attributes for the
-layer (figure_attributes_table_). The number of features and the number of
-selected features are shown in the attribute table title. Columm widths can be
-changed by dragging the boundary on the right of the column heading, resized column
-widths are maintained for a layer, and restored when next opening the attribute table.
+layer (figure_attributes_table_). According to the setting in
+:menuselection:`Settings --> Options --> Data sources` menu, the attribute table
+will open in a docked window or not. The total number of features in the layer
+and the number of currently selected/filtered features are shown in the
+attribute table title.
+
 
 .. _figure_attributes_table:
 
@@ -84,7 +92,7 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |conditionalFormatting| | conditional formatting              | Enable table formatting                    |                     |
+| |conditionalFormatting| | Conditional formatting              | Enable table formatting                    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 
 Table Attribute 1: Available Tools
@@ -106,25 +114,118 @@ Calculator` (see :ref:`calculate_fields_values`).
    |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
    option in :menuselection:`Settings --> Options --> Data Sources` menu.
 
+Table view vs Form view
+-----------------------
 
-.. index::
+QGIS provides two view modes to easily manipulate data in the attribute table:
+the |openTable| Table view and the |formView| Form view which uses the layer
+fields configuration (see :ref:`vector_attributes_menu`). You can switch from
+one to the other by clicking the convenient icon at the bottom right of the
+dialog.
+
+You can also specify the :guilabel:`Default view` mode at the opening of the
+attribute table in :menuselection:`Settings --> Options --> Data Sources` menu.
+It can be 'Remember last view', 'Table view' or 'Form view'.
+
+.. _figure_attribute_table_views:
+
+.. figure:: /static/user_manual/working_with_vector/attribute_table_views.png
+   :align: center
+
+   Attribute table in form view (top) vs table view (bottom)
+
+
+.. index:: Sort columns, Add actions
    pair: Attributes; Columns
 
-You can hide columns or change their width (either setting the width or with
-the :guilabel:`Autosize` setting) by right-clicking in the table header. To
-change several columns behavior at once, unhide a column or change the order of
-the columns, choose :guilabel:`Organize columns ...`. In this dialog, you can
-also add a new :guilabel:`Actions` column that adds a dropdown or button list of
-actions for each row, see :ref:`actions_menu` for more information about actions.
-Finally, one can choose to sort the rows with the :guilabel:`sort` and write an
-expression, e.g. to sort the row in regards of multi-column you can write
-`concat(col0, col1)`.
+Configure the columns
+----------------------
+
+Right-click in a column header when in table view to have access to tools that
+help you configure what can be displayed in the attribute table and how.
+
+Hide, organize columns and enable actions
+.........................................
+
+By right-clicking in a column header, you can choose to hide it from the
+attribute table. To change several columns behavior at once, unhide a column or
+change the order of the columns, choose :guilabel:`Organize columns ...`.
+In the new dialog, you can:
+
+* check/uncheck columns you want to show or hide
+* drag-and-drop items to reorder the columns in the attribute table. Note that
+  this change is for the table rendering and does not alter the fields order in
+  the layer datasource
+* enable a new virtual :guilabel:`Actions` column that displays in each row a
+  drop-down box or button list of actions for each row, see :ref:`actions_menu`
+  for more information about actions.
+
+Resize columns width
+.....................
+
+Columns width can be set through a right-click on the column header and
+select either:
+
+* :guilabel:`Set width...` to enter the desired value. By default, the current
+  value is displayed in the widget
+* :guilabel:`Autosize` to resize at the best fit the column.
+
+It can also be changed by dragging the boundary on the right of the column
+heading. The new size of the column is maintained for the layer, and restored at
+the next opening of the attribute table.
+
+Sort columns
+.............
+
+The table can be sorted by any column, by clicking on the column header. A
+small arrow indicates the sort order (downward pointing means descending
+values from the top row down, upward pointing means ascending values from
+the top row down).
+You can also choose to sort the rows with the :guilabel:`sort` option of the
+column header context menu and write an expression, e.g. to sort the row
+using multiple columns you can write ``concat(col0, col1)``.
+
+In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
+by preview expression` option.
+
+.. index:: Conditional formatting
+.. _conditional_formatting:
+
+Conditional formatting of Table Cells
+--------------------------------------
+
+You can enable the conditional formatting panel clicking on
+|conditionalFormatting| at the top right of the attributes window in table
+view (not available in form view).
+
+The new panel allows user to add new rules for conditional formatting of field
+or full row in regard of the expression on field. Adding new rule open a form
+to define:
+
+* the name of the rule,
+* a condition from expression window,
+* a preset formatting
+* some other parameters to improve, change or setup the formatting:
+
+  * background and text colors,
+  * use of icon,
+  * bold, italic underline, or strikeout,
+  * text field,
+  * font.
+
+.. _figure_conditional_format:
+
+.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
+   :align: center
+
+   Conditional Formatting of an attribute table
+
 
 .. index::
    pair: Attributes; Selection
 
 Selecting features in an attribute table
-=========================================
+========================================
 
 **Each selected row** in the attribute table displays the attributes of a
 selected feature in the layer. If the set of features selected in the main
@@ -141,10 +242,6 @@ Moving the cursor position in the attribute table, by clicking a cell in the
 table, does not change the row selection. Changing the selection in the main
 canvas does not move the cursor position in the attribute table.
 
-The table can be sorted by any column, by clicking on the column header. A
-small arrow indicates the sort order (downward pointing means descending
-values from the top row down, upward pointing means ascending values from
-the top row down).
 
 For a **simple search by attributes** on only one column, choose the
 :menuselection:`Column filter -->` from the menu in the bottom left corner.
@@ -181,53 +278,77 @@ To show selected records only, use :guilabel:`Show Selected Features` from the m
 at the bottom left. See next section for more information on filter feature.
 
 The field calculator bar allows you to make calculations on the selected rows only.
-For example, you can alter the number of the ID field of the layer :file:`regions.shp`
-with the expression
+For example, as shown in figure_attributes_table_, you can alter the number
+of the ID field of the layer :file:`regions.shp` with the expression:
 
 ::
 
- ID+5
+ ID + 5
 
-as shown in figure_attributes_table_ .
+It is also possible to select features using the :ref:`filter_select_form`.
+
+.. _filter_features:
 
 Filter features
 ===============
 
-At the bottom of the attribute table, you have a dropdown list of different
-filter:
+At the bottom of the attribute table, there is a drop-down list of different
+filters:
 
-* Show All Features;
-* Show Selected Features;
-* Show Features visible on map;
-* Show Edited and New Features;
-* Field Filter;
-* Advanced filter (Expression);
+* :guilabel:`Show All Features`
+* :guilabel:`Show Selected Features`
+* :guilabel:`Show Features visible on map`
+* :guilabel:`Show Edited and New Features`
+* :guilabel:`Field Filter` - allows the user to choose a column from a
+  list. Then, type a value and press :kbd:`Enter` to filter.
+* :guilabel:`Advanced filter (Expression)` - Opens the expression builder
+  dialog. Within it, you can create complex expressions to match table rows.
+  For example, you can filter the table using more that one field.
+  See :ref:`vector_expressions` for more information.
 
-The first four are self explanatory, the two last are expression filters. Field
-Filter allows user to choose a column name in the list and add a simple form to
-the right of the drop-down list to filter with a *like* expression parameter.
-This filter will create an expression filter as an :guilabel:`Advanced filter`.
-The last kind of filter will open an expression window, see :ref:`vector_expressions`
-for more information.
+It is also possible to filter features using the :ref:`filter_select_form`.
 
 
-Table/form mode
-===============
+.. _filter_select_form:
 
-QGIS provides two view modes to easily manipulate data in the attribute table:
-the |openTable| Table view and the |formView| Form view. You can switch from
-one to other by clicking the convenient icon at the bottom right of the dialog.
+Filter/Select features using form
+=================================
 
-You can also specify the default mode view at the opening of the attribute table
-in :menuselection:`Settings --> Options --> Data Sources` menu, :guilabel:`Default
-view` option. It can be 'Remember last view', 'Table view' or 'Form view'.
+Clicking the |filterMap| :sup:`Filter/Select features using form` or
+pressing :kbd:`Ctrl+F` the attribute table dialog will switch to form view
+and all widgets are replaced with their search variant.
 
+From this point onwards, this tool functionality is similar to the one described
+in the :ref:`select_by_value`, where you can find descriptions of all operators
+and selecting modes.
+
+Moreover, in the attribute table case, there is also a :guilabel:`Filter
+features` button that allows filtering features instead of selecting them (by
+creating an Advanced Filter (Expression) for the user).
+
+.. _figure_filter_select_form:
+
+.. figure:: /static/user_manual/working_with_vector/tableFilteredForm.png
+    :align: center
+
+    Attribute table filtered by the filter form
+
+If there are already filtered features, you can refine the filter using the
+drop-down list next to the :guilabel:`Filter features` button. The options are:
+
+* :guilabel:`Filter within ("AND")`
+* :guilabel:`Extend filter ("OR")`
+
+To clear the filter, either select :guilabel:`Show all features` option
+mentioned in :ref:`filter_features`, or click the clear the expression and
+click **[Apply]**.
 
 Zoom to feature
 ===============
 
 To zoom into a feature, without having to select it, right-click on the feature
-you want to zoom in, within the attribute table, and select :guilabel:`Zoom to feature`.
+you want to zoom in, within the attribute table, and select :guilabel:`Zoom to
+feature`.
 
 Copy cell content
 =================
@@ -268,7 +389,8 @@ layer`.
 This applies to features selected and copied within QGIS and
 also to features from another source defined using well-known text (WKT).
 
-.. index:: Field Calculator, Derived Fields, Virtual Fields
+
+.. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:
 
 Editing attribute values
@@ -279,8 +401,9 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes can hence be done cell by cell, feature by feature;
 * using the field calculator: update in a row a field that may already exist or to be
-  created but for multiple features;
-* or using the quick field calculation bar: same as above but for only existing field.
+  created but for multiple features; it can be used to create virtual fields.
+* using the quick field calculation bar: same as above but for only existing field
+* or using the multi edit mode: update in a row multiple fields for multiple features.
 
 .. _vector_field_calculator:
 
@@ -293,7 +416,7 @@ defined functions, for instance, to calculate length or area of geometry feature
 The results can be written to a new attribute field, a virtual field, or
 they can be used to update values in an existing field.
 
-The :index:`field calculator` is available on any layer that supports edit.
+The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
 figure_field_calculator_). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in
@@ -337,29 +460,12 @@ A short example illustrates how field calculator works when using the
    expression box and click **[Ok]**.
 #. You can now find a new field ``length`` in the attribute table.
 
-.. _quick_field_calculation_bar:
-
-The Quick Field Calculation Bar
--------------------------------
-
-While Field calculator is always available, the quick field calculation bar on top
-of the attribute table is only visible if the layer is in edit mode. Thanks to the
-expression engine, it offers a quicker access to edit an already existing field.
-
-In quick field :index:`calculation bar`, you simply need to:
-
-* select the existing field name in the drop-down list
-* fill the textbox with an expression you directly write or build using the |expression|
-  expression button
-* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
-  according to your need.
-
 .. _virtual_field:
 
 Create a Virtual Field
 -----------------------
 
-A :index:`virtual field` is a field based on an expression calculated on the fly,
+A virtual field is a field based on an expression calculated on the fly,
 meaning that its value is automatically updated as soon as the underlying parameter
 changes. The expression is set once; you no longer need to recalculate the field
 each time underlying values change.
@@ -374,6 +480,45 @@ that may change (e.g., using ``now()`` function).
    * A field can be set virtual only at its creation and the expression used
      can't be changed later: you'll need to delete and recreate that field.
 
+.. _quick_field_calculation_bar:
+
+The Quick Field Calculation Bar
+-------------------------------
+
+While Field calculator is always available, the quick field calculation bar on top
+of the attribute table is only visible if the layer is in edit mode. Thanks to the
+expression engine, it offers a quicker access to edit an already existing field.
+
+In quick field calculation bar, you simply need to:
+
+* select the existing field name in the drop-down list
+* fill the textbox with an expression you directly write or build using the |expression|
+  expression button
+* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
+  according to your need.
+
+.. index:: Multi edit
+.. _multi_edit_fields:
+
+Edit multiple fields
+---------------------
+
+Unlike the previous tools, the |multiEdit| :sup:`Toggle multi edit mode` button
+allows the attributes of multiple features to be edited simultaneously.
+It is available when the layer is in edit mode and it toggles the attribute
+table dialog into form view.
+
+In this mode, unless selected features have the same attribute value, the
+corresponding widget is shown empty. Unchanged field keep its original value.
+New widgets appear next to each editor widget allowing for display of the current
+multi edit state and for rolling back changes on a field-by-field basis.
+
+Changes will apply to **all selected features** and are made as a single edit
+command. So pressing |undo| :sup:`Undo` will rollback the attribute changes for
+all selected features at once.
+
+Multi edit mode is only available for auto generated and drag and drop forms 
+(see :ref:`customize_form`); it is not supported by custom ui forms.
 
 .. index:: Non Spatial Attribute Tables, Geometryless Data
 .. _non_spatial_attribute_tables:
@@ -394,40 +539,7 @@ layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
 
 
-.. index:: Conditional Formatting
-.. _conditional_formatting:
-
-Conditional formatting of Table Cells
-=====================================
-
-You can enable the conditional formatting panel clicking on
-|conditionalFormatting| at the top right of the attributes window in table
-view (not available in form view).
-
-The new panel allows user to add new rules for conditional formatting of field
-or full row in regard of the expression on field. Adding new rule open a form
-to define:
-
-* the name of the rule,
-* a condition from expression window,
-* a preset formatting
-* some other parameters to improve, change or setup the formatting:
-
-  * background and text colors,
-  * use of icon,
-  * bold, italic underline, or strikeout,
-  * text field,
-  * font.
-
-.. _figure_conditional_format:
-
-.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
-   :align: center
-
-   Conditional Formatting of an attribute table
-
-
-.. index:: Relations
+.. index:: Relations, Foreign key
 .. _vector_relations:
 
 Creating one to many relations
@@ -504,6 +616,7 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 
    Relation Manager
 
+.. index:: Feature form, Linked forms, Embedded form
 
 Forms
 -----

@@ -1,8 +1,11 @@
+.. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master
+    :target: https://travis-ci.org/qgis/QGIS-Documentation
+    
 QGIS Testing Documentation
 ***************************
 
-.. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master
-    :target: https://travis-ci.org/qgis/QGIS-Documentation
+.. contents::
+   :local:
 
 QGIS Testing Documentation is built from corresponding branch and NOT translated.
 
@@ -54,6 +57,8 @@ Uncomment the lines for the modules that you NOT want to build in this part of s
  #exclude_patterns += ['docs/user_manual/*']                                      
  # uncomment to exclude training manual from build                                
  #exclude_patterns += ['docs/training_manual/*']                                  
+ # uncomment to exclude dev guides from build                                     
+ #exclude_patterns += ['docs/developers_guide/*']  
  # uncomment to exclude doc guides from build                                     
  #exclude_patterns += ['docs/documentation_guidelines/*']                         
  # uncomment to exclude gentle intro  from build                                  
@@ -125,7 +130,7 @@ Keep in mind that different options of the ``make`` command (presented down the 
 You should also be aware that the ``make ..`` commands are made for production purposes which translates that
 the build will stop at the first inconsitency because of the ``sphinx-build -nW ..`` command. You should drop
 the ``-W`` option if you want your build to fully complete (with warnings of course)
-(e.g. sphinx-build -n -b html -d output/doctrees  -D language=en -A language=en source output/html/en``).
+(e.g. ``sphinx-build -n -b html -d output/doctrees  -D language=en -A language=en source output/html/en``).
 
 
 If you want add the QGIS-Documentation docs into the build, you either need

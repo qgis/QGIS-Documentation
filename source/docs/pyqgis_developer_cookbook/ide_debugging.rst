@@ -1,3 +1,5 @@
+.. index:: Plugins; Debugging
+
 **********************************************
 IDE settings for writing and debugging plugins
 **********************************************
@@ -34,7 +36,7 @@ you have to do:
   find the Python dll used by QGIS, you can find this under the bin folder
   of your OSGeoW install
 
-  ::
+  .. code-block:: bat
 
     @echo off
     SET OSGEO4W_ROOT=C:\OSGeo4W
@@ -61,7 +63,7 @@ To create that batch file, follow these steps:
 * Create the following script and use this to start eclipse when developing
   QGIS plugins.
 
-::
+.. code-block:: bat
 
   call "C:\OSGeo4W\bin\o4w_env.bat"
   set PATH=%PATH%;C:\path\to\your\qgis_core.dll\parent\folder
@@ -231,11 +233,15 @@ First add this code in the spot where you would like to debug
 
 Then run QGIS from the command line.
 
-On Linux do::
+On Linux do:
+
+.. code-block:: bash
 
  $ ./Qgis
 
-On Mac OS X do::
+On macOS do::
+
+.. code-block:: bash
 
  $ /Applications/Qgis.app/Contents/MacOS/Qgis
 
@@ -246,4 +252,4 @@ And when the application hits your breakpoint you can type in the console!
 **TODO:**
     Add testing information
 
-.. index:: plugins; releasing
+

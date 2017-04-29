@@ -2,8 +2,10 @@
 
    |updatedisclaimer|
 
+.. _composer_item_options:
+
 Composer Items Common Options
-==============================
+=============================
 
 .. only:: html
 
@@ -84,7 +86,7 @@ QGIS now allows advanced rendering for Composer items just like vector and raste
 
 
 Size and position
-------------------
+-----------------
 
 Each item inside the Composer can be moved and resized to create a perfect layout.
 For both operations the first step is to activate the |select| :sup:`Select/Move item` tool
@@ -126,7 +128,7 @@ to clear all selections or to invert the current selection.
 .. index:: Items alignment
 
 Alignment
-----------
+---------
 
 Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
 :sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
@@ -150,3 +152,18 @@ matching alignment icon. All selected elements will then be aligned to their com
 When moving items on the Composer canvas, alignment helper lines appear when borders, centers or
 corners are aligned.
 
+Variables
+---------
+
+The :guilabel:`Variables` lists all the variables available at
+the composer item's level (which includes all global, project and
+composition's variables). Map items also include Map settings variables that
+provide easy access to values like the map's scale, extent, and so on.
+
+The :guilabel:`Variables` also allows the user to manage composition-level
+variables. Click the |signPlus| button to add a new custom composition-level
+variable. Likewise, select a custom composition-level variable from the list
+and click the |signMinus| button to remove it.
+
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.

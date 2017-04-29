@@ -18,7 +18,7 @@ in the map legend, or right click on the layer name and choose :guilabel:`Proper
 from the context menu. This will open the :guilabel:`Raster Layer Properties`
 dialog (see figure_raster_properties_).
 
-There are several menus in the dialog:
+There are several tabs in the dialog:
 
 * :guilabel:`General`
 * :guilabel:`Style`
@@ -40,28 +40,39 @@ There are several menus in the dialog:
 
    The :ref:`layer_styling_panel` provides you with some of the common features
    of the Layer properties dialog and is a good modeless widget that
-   you can use to speed up the configuration of the layer styles and automatically
-   view your changes in the map canvas.
+   you can use to speed up the configuration of the layer styles and
+   automatically view your changes in the map canvas.
 
+.. note::
+
+   Because properties (symbology, label, actions, default values, forms...) of
+   embedded layers (see :ref:`nesting_projects`) are pulled from the original
+   project file and to avoid changes that may break this behavior, the layer
+   properties dialog is made unavailable for these layers.
 
 .. _label_generaltab:
 
-General Menu
--------------
+General Properties
+------------------
 
 Layer Info
 ..........
 
-The :guilabel:`General` menu displays basic information about the selected raster,
-including the layer source path, the display name in the legend (which can be
-modified), and the number of columns, rows and no-data values of the raster.
+The :guilabel:`General` tab displays basic information about the selected
+raster, including the layer source path, the display name in the legend
+(which can be modified), and the number of columns, rows and no-data values
+of the raster.
 
-Coordinate reference system
+Coordinate Reference System
 ...........................
 
-Here, you find the coordinate reference system (CRS) information printed as a
-PROJ.4 string. If this setting is not correct, it can be modified by clicking
-the **[Specify]** button.
+Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string. You
+can change the layer's CRS, selecting a recently used one in the drop-down list
+or clicking on |setProjection| :sup:`Select CRS` button (see :ref:`crs_selector`).
+Use this process only if the CRS applied to the layer is a wrong one or if none
+was applied. If you wish to reproject your data into another CRS, rather use
+layer reprojection algorithms from Processing or :ref:`Save it into another
+layer <general_saveas>`.
 
 Scale dependent visibility
 --------------------------
@@ -78,8 +89,8 @@ See :ref:`label_scaledepend` for more information.
 
 .. _label_symbology:
 
-Style Menu
-----------
+Style Properties
+----------------
 
 Band rendering
 ..............
@@ -301,8 +312,8 @@ its legend symbol, and the palette.
 
 .. index:: Transparency
 
-Transparency Menu
------------------
+Transparency Properties
+-----------------------
 
 QGIS has the ability to display each raster layer at a different transparency level.
 Use the transparency slider |slider| to indicate to what extent the underlying layers
@@ -312,7 +323,7 @@ overlayed by a classified raster map). This will make the look of the map more
 three dimensional.
 
 Additionally, you can enter a raster value that should be treated as *NODATA* in
-the :guilabel:`Additional no data value` menu.
+the :guilabel:`Additional no data value` option.
 
 An even more flexible way to customize the transparency can be done in the
 :guilabel:`Custom transparency options` section. The transparency of every pixel
@@ -325,8 +336,8 @@ to a transparency of 20%. The following steps are necessary:
 #. Open the :guilabel:`Properties` dialog by double-clicking on the raster
    name in the legend, or by right-clicking and choosing :menuselection:`Properties`
    from the pop-up menu.
-#. Select the :guilabel:`Transparency` menu.
-#. From the :guilabel:`Transparency band` menu, choose 'None'.
+#. Select the :guilabel:`Transparency` tab.
+#. From the :guilabel:`Transparency band` drop-down menu, choose 'None'.
 #. Click the |signPlus| :sup:`Add values manually`
    button. A new row will appear in the pixel list.
 #. Enter the raster value in the 'From' and 'To' column (we use 0 here),
@@ -344,8 +355,8 @@ applies them to the current raster layer.
 
 .. index:: Pyramids
 
-Pyramids Menu
--------------
+Pyramids Properties
+-------------------
 
 Large resolution raster layers can slow navigation in QGIS. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
@@ -364,16 +375,16 @@ Several resampling methods can be used to calculate the pyramids:
 * Mode
 * None
 
-If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu,
-QGIS tries to build pyramids internally. You can also choose 'External' and
-'External (Erdas Imagine)'.
+If you choose 'Internal (if possible)' from the :guilabel:`Overview format`
+drop-down menu, QGIS tries to build pyramids internally. You can also choose
+'External' and 'External (Erdas Imagine)'.
 
 .. _figure_raster_pyramids:
 
 .. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
    :align: center
 
-   The Pyramids Menu
+   The Pyramids Tab
 
 Please note that building pyramids may alter the original data file, and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
@@ -382,13 +393,13 @@ version of your raster, make a backup copy prior to building pyramids.
 .. index:: Histogram
 .. _label_histogram:
 
-Histogram Menu
----------------
+Histogram Properties
+--------------------
 
-The :guilabel:`Histogram` menu allows you to view the distribution of the bands
+The :guilabel:`Histogram` tab allows you to view the distribution of the bands
 or colors in your raster. The histogram is generated automatically when you open the
-:guilabel:`Histogram` menu. All existing bands will be displayed together. You can
-save the histogram as an image with the |fileSave| button.
+:guilabel:`Histogram` tab. All existing bands will be displayed together. You
+can save the histogram as an image with the |fileSave| button.
 With the :guilabel:`Visibility` option in the |actionRun| :guilabel:`Prefs/Actions` menu,
 you can display histograms of the individual bands. You will need to select the option
 |radioButtonOff| :guilabel:`Show selected band`.
@@ -406,14 +417,16 @@ you have chosen the :guilabel:`Min/max options`.
 
 .. index:: Metadata
 
-Metadata Menu
--------------
+Metadata Properties
+-------------------
 
-The :guilabel:`Metadata` menu displays a wealth of information about the raster layer,
-including statistics about each band in the current raster layer. From this menu, entries may be
-made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and
-:guilabel:`Properties`. In :guilabel:`Properties`, statistics are gathered on a 'need to know'
-basis, so it may well be that a given layer's statistics have not yet been collected.
+The :guilabel:`Metadata` tab displays a wealth of information about the raster
+layer, including statistics about each band in the current raster layer.
+From this tab, entries may be made for the :guilabel:`Description`,
+:guilabel:`Attribution`, :guilabel:`MetadataUrl` and :guilabel:`Properties`.
+In :guilabel:`Properties`, statistics are gathered on a 'need to know'
+basis, so it may well be that a given layer's statistics have not yet been
+collected.
 
 .. _figure_raster_metadata:
 
@@ -424,13 +437,14 @@ basis, so it may well be that a given layer's statistics have not yet been colle
 
 .. index:: Legend, Embedded widget
 
-Legend Menu
--------------
+Legend Properties
+-----------------
 
-The :guilabel:`Legend` menu provides you with a list of widgets you can embed within
-the layer tree in the Layers panel. The idea is to have a way to quickly access some
-actions that are often used with the layer (setup transparency, filtering, selection,
-style or other stuff...).
+The :guilabel:`Legend` tab provides you with a list of widgets you can embed
+within the layer tree in the Layers panel. The idea is to have a way to
+quickly access some actions that are often used with the layer (setup
+transparency, filtering, selection, style or other stuff...).
 
-By default, QGIS provides transparency widget but this can be extended by plugins
-registering their own widgets and assign custom actions to layers they manage.
+By default, QGIS provides transparency widget but this can be extended by
+plugins registering their own widgets and assign custom actions to layers
+they manage.

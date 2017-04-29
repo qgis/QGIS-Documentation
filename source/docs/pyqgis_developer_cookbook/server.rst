@@ -1,4 +1,4 @@
-.. index:: server plugins; developing, Python; developing server plugins
+.. index:: Server plugins; Developing, Python; Developing server plugins
 
 .. _server_plugins:
 
@@ -121,7 +121,7 @@ Here's the directory structure of our example server plugin
       HelloServer.py  --> *required*
       metadata.txt   --> *required*
 
-.. index:: plugins; metadata.txt, metadata, metadata.txt
+.. index:: Plugins; metadata.txt, Metadata
 
 __init__.py
 -----------

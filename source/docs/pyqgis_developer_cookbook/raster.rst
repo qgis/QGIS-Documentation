@@ -1,17 +1,18 @@
+.. index:: 
+   pair: Raster; Raster layers
+   
 .. _raster:
 
-.. index:: raster layers; using
-
-*******************
-Using Raster Layers
-*******************
+*********************
+ Using Raster Layers
+*********************
 
 .. contents::
    :local:
 
 This sections lists various operations you can do with raster layers.
 
-.. index:: raster layers; details
+.. index:: Raster layers; Details
 
 Layer Details
 =============
@@ -22,7 +23,9 @@ values. Usual color image (e.g. aerial photo) is a raster consisting of red,
 blue and green band. Single band layers typically represent either continuous
 variables (e.g. elevation) or discrete variables (e.g. land use). In some
 cases, a raster layer comes with a palette and raster values refer to colors
-stored in the palette::
+stored in the palette:
+
+.. code-block:: python
 
   rlayer.width(), rlayer.height()
   (812, 301)
@@ -39,7 +42,7 @@ stored in the palette::
   rlayer.hasPyramids()
   False
 
-.. index:: raster layers; renderer
+.. index:: Raster layers; Renderer
 
 Renderer
 ========
@@ -77,7 +80,7 @@ After doing the changes, you might want to force update of map canvas, see
 **TODO:**
    contrast enhancements, transparency (no data), user defined min/max, band statistics
 
-.. index:: rasters; single band
+.. index:: Raster layers; Single band
 
 Single Band Rasters
 -------------------
@@ -114,7 +117,7 @@ In the second step we will associate this shader with the raster layer::
 The number 1 in the code above is band number (raster bands are indexed from one).
 
 
-.. index:: rasters; multi band
+.. index:: Raster layers; Multi band
 
 Multi Band Rasters
 ------------------
@@ -131,7 +134,7 @@ In case only one band is necessary for visualization of the raster, single band
 drawing can be chosen --- either gray levels or pseudocolor.
 
 .. index::
-  pair: raster layers; refreshing
+  pair: Raster layers; Refreshing
 
 .. _refresh-layer:
 
@@ -178,7 +181,7 @@ symbology in the layer list (legend) widget. This can be done as follows
    iface.legendInterface().refreshLayerSymbology(layer)
 
 .. index::
-  pair: raster layers; querying
+  pair: Raster layers; Querying
 
 Query Values
 ============

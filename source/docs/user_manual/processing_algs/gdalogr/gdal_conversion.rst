@@ -5,6 +5,12 @@
 GDAL conversion
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 gdal2xyz
 --------
 

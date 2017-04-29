@@ -23,11 +23,13 @@ offline edits to the master dataset.
 Using the plugin
 ----------------
 
-* Open some vector layers (e.g., from a PostGIS or WFS-T datasource).
-* Save it as a project.
+* Open a project with some vector layers (e.g., from a PostGIS or WFS-T datasource).
 * Go to :menuselection:`Database --> Offline Editing -->` |offlineEditingCopy|
   :guilabel:`Convert to offline project` and select the layers to save.
   The content of the layers is saved to SpatiaLite tables.
+* You can check |checkbox| :guilabel:`Only synchronize selected features if a
+  selection is present` allowing the offline editing to only save and work on a
+  subset. It can be invaluable in case of large layers.
 * Edit the layers offline.
 * After being connected again, upload the changes using :menuselection:`Database
   --> Offline Editing -->` |offlineEditingSync| :guilabel:`Synchronize`.

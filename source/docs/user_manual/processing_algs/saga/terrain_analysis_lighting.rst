@@ -5,6 +5,12 @@
 Terrain lighting
 ================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Analytical hillshading
 ----------------------
 

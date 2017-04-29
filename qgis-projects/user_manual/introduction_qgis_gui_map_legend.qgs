@@ -1,52 +1,67 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Alaska" version="2.13.0-Master">
+<qgis version="2.99.0-Master" projectname="Alaska">
   <title>Alaska</title>
-  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <layer-tree-group expanded="1" name="" checked="Qt::PartiallyChecked">
     <customproperties/>
-    <layer-tree-group expanded="1" checked="Qt::Checked" name="Boundaries Group">
+    <layer-tree-group expanded="1" name="Boundaries Group" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="regions20130517221648766" name="regions">
+      <layer-tree-layer expanded="0" id="regions20130517221648766" name="regions" checked="Qt::Checked">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="alaska20130517221648216" name="alaska">
+      <layer-tree-layer expanded="1" id="alaska20130517221648216" name="alaska" checked="Qt::Checked">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Water Group">
+    <layer-tree-group expanded="1" name="Water Group" checked="Qt::PartiallyChecked">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="rivers20130517221648798" name="rivers">
+      <layer-tree-layer expanded="0" id="rivers20130517221648798" name="rivers" checked="Qt::Unchecked">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="majrivers_copy20141004123744134" name="majrivers">
+      <layer-tree-layer expanded="1" id="majrivers_copy20141004123744134" name="majrivers" checked="Qt::Checked">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="lakes20130517221648410" name="lakes">
+      <layer-tree-layer expanded="1" id="lakes20130517221648410" name="lakes" checked="Qt::Checked">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="swamp20130517232331437" name="swamp">
+      <layer-tree-layer expanded="0" id="swamp20130517232331437" name="swamp" checked="Qt::Unchecked">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="group1">
+    <layer-tree-group expanded="1" name="group1" checked="Qt::PartiallyChecked">
       <customproperties/>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="popp20130517221648651" name="popp">
+      <layer-tree-layer expanded="1" id="popp20130517221648651" name="popp" checked="Qt::Checked">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="airports20130517221648088" name="airports">
+      <layer-tree-layer expanded="1" id="airports20130517221648088" name="airports" checked="Qt::Checked">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="storagep20130517221648873" name="storagep">
+      <layer-tree-layer expanded="1" id="storagep20130517221648873" name="storagep" checked="Qt::Unchecked">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
   </layer-tree-group>
+  <snapping-settings mode="3" type="1" enabled="0" tolerance="0" unit="2" intersection-snapping="1">
+    <individual-layer-settings>
+      <layer-setting type="2" id="swamp20130517232331437" enabled="1" tolerance="0" units="0"/>
+      <layer-setting type="2" id="popp20130517221648651" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="lakes20130517221648410" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="alaska20130517221648216" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="rivers20130517221648798" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="airports20130517221648088" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="storagep20130517221648873" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="majrivers_copy20141004123744134" enabled="0" tolerance="0" units="0"/>
+      <layer-setting type="2" id="regions20130517221648766" enabled="1" tolerance="5" units="1"/>
+    </individual-layer-settings>
+  </snapping-settings>
   <relations/>
   <mapcanvas>
     <units>feet</units>
     <extent>
       <xmin>-2547227.42339134495705366</xmin>
-      <ymin>3496451.26407594932243228</ymin>
-      <xmax>-776394.09005801181774586</xmax>
+      <ymin>3496451.26407594978809357</ymin>
+      <xmax>-776394.09005801193416119</xmax>
       <ymax>5076312.37518705986440182</ymax>
     </extent>
     <rotation>0</rotation>
@@ -65,19 +80,19 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="lakes20130517221648410"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="regions20130517221648766"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="majrivers_copy20141004123744134"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="airports_copy20140330175838921"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="storagep20130517221648873"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="majrivers_copy20140330174217828"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="airports20130517221648088"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="majrivers20130517221648531"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="alaska20130517221648216"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="rivers20130517221648798"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="popp20130517221648651"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="swamp20130517232331437"/>
-      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="rivers_copy20141003182252298"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="airports_copy20140330175838921" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="swamp20130517232331437" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="regions20130517221648766" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="storagep20130517221648873" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="majrivers_copy20140330174217828" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="alaska20130517221648216" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="rivers20130517221648798" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="popp20130517221648651" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="rivers_copy20141003182252298" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="lakes20130517221648410" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="majrivers_copy20141004123744134" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="airports20130517221648088" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
+      <layer_coordinate_transform destDatumTransform="-1" layerid="majrivers20130517221648531" srcAuthId="EPSG:2964" srcDatumTransform="-1" destAuthId="EPSG:2964"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
@@ -94,65 +109,68 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="false">
-    <legendgroup open="true" checked="Qt::Checked" name="Boundaries Group">
-      <legendlayer drawingOrder="2" open="false" checked="Qt::Checked" name="regions" showFeatureCount="0">
-        <filegroup open="false" hidden="false">
+    <legendgroup name="Boundaries Group" checked="Qt::Checked" open="true">
+      <legendlayer drawingOrder="2" showFeatureCount="0" checked="Qt::Checked" name="regions" open="false">
+        <filegroup hidden="false" open="false">
           <legendlayerfile isInOverview="0" layerid="regions20130517221648766" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="5" open="true" checked="Qt::Checked" name="alaska" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
+      <legendlayer drawingOrder="5" showFeatureCount="0" checked="Qt::Checked" name="alaska" open="true">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="alaska20130517221648216" visible="1"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="Water Group">
-      <legendlayer drawingOrder="6" open="false" checked="Qt::Unchecked" name="rivers" showFeatureCount="0">
-        <filegroup open="false" hidden="false">
+    <legendgroup name="Water Group" checked="Qt::PartiallyChecked" open="true">
+      <legendlayer drawingOrder="6" showFeatureCount="0" checked="Qt::Unchecked" name="rivers" open="false">
+        <filegroup hidden="false" open="false">
           <legendlayerfile isInOverview="0" layerid="rivers20130517221648798" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="3" open="true" checked="Qt::Checked" name="majrivers" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
+      <legendlayer drawingOrder="3" showFeatureCount="0" checked="Qt::Checked" name="majrivers" open="true">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="majrivers_copy20141004123744134" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="4" open="true" checked="Qt::Checked" name="lakes" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
+      <legendlayer drawingOrder="4" showFeatureCount="0" checked="Qt::Checked" name="lakes" open="true">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="lakes20130517221648410" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="8" open="false" checked="Qt::Unchecked" name="swamp" showFeatureCount="0">
-        <filegroup open="false" hidden="false">
+      <legendlayer drawingOrder="8" showFeatureCount="0" checked="Qt::Unchecked" name="swamp" open="false">
+        <filegroup hidden="false" open="false">
           <legendlayerfile isInOverview="0" layerid="swamp20130517232331437" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="group1">
-      <legendlayer drawingOrder="1" open="true" checked="Qt::Checked" name="popp" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
+    <legendgroup name="group1" checked="Qt::PartiallyChecked" open="true">
+      <legendlayer drawingOrder="1" showFeatureCount="0" checked="Qt::Checked" name="popp" open="true">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="popp20130517221648651" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="0" open="true" checked="Qt::Checked" name="airports" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
+      <legendlayer drawingOrder="0" showFeatureCount="0" checked="Qt::Checked" name="airports" open="true">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="airports20130517221648088" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="7" open="true" checked="Qt::Unchecked" name="storagep" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
+      <legendlayer drawingOrder="7" showFeatureCount="0" checked="Qt::Unchecked" name="storagep" open="true">
+        <filegroup hidden="false" open="true">
           <legendlayerfile isInOverview="0" layerid="storagep20130517221648873" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
   </legend>
   <projectlayers>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="0" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Point" minimumScale="-4.65661e-10" simplifyDrawingTol="1" simplifyAlgorithm="0">
+      <extent>
+        <xmin>-4480198.52221446391195059</xmin>
+        <ymin>1433525.79887208016589284</ymin>
+        <xmax>4615124.97898511588573456</xmax>
+        <ymax>6502586.83034719526767731</ymax>
+      </extent>
       <id>airports20130517221648088</id>
       <datasource>../../../qgis_sample_data/shapefiles/airports.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -169,49 +187,75 @@
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="ID" expression=""/>
+        <default field="fk_region" expression=""/>
+        <default field="ELEV" expression=""/>
+        <default field="NAME" expression=""/>
+        <default field="USE" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="ID" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="fk_region" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="ELEV" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="NAME" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="USE" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="ID"/>
+        <constraint exp="" desc="" field="fk_region"/>
+        <constraint exp="" desc="" field="ELEV"/>
+        <constraint exp="" desc="" field="NAME"/>
+        <constraint exp="" desc="" field="USE"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="fk_region">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="ELEV">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="USE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="FontMarker" locked="0">
+          <symbol type="marker" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="FontMarker" enabled="1" locked="0">
               <prop k="angle" v="0"/>
               <prop k="chr" v="l"/>
               <prop k="color" v="0,0,0,255"/>
               <prop k="font" v="Dingbats"/>
               <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="miter"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="255,255,255,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
               <prop k="size" v="6"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
             </layer>
-            <layer pass="0" class="SvgMarker" locked="0">
+            <layer pass="0" class="SvgMarker" enabled="1" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="255,255,255,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
@@ -232,7 +276,7 @@
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -392,38 +436,49 @@
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <SingleCategoryDiagramRenderer diagramType="Pie">
-        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" sizeType="MM" minScaleDenominator="-4.65661e-10">
+      <SingleCategoryDiagramRenderer attributeLegend="1" sizeLegend="0" diagramType="Pie">
+        <DiagramCategory scaleDependency="Area" diagramOrientation="Up" barWidth="5" enabled="0" minScaleDenominator="-4.65661e-10" penColor="#000000" penAlpha="255" lineSizeType="MM" scaleBasedVisibility="0" minimumSize="0" maxScaleDenominator="1e+08" backgroundColor="#ffffff" backgroundAlpha="255" angleOffset="1440" lineSizeScale="0,0,0,0,0,0" sizeType="MM" sizeScale="0,0,0,0,0,0" width="15" labelPlacementMethod="XHeight" penWidth="0" height="15" transparency="0">
           <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute label="" field="" color="#000000"/>
         </DiagramCategory>
+        <symbol type="marker" name="sizeSymbol" alpha="1" clip_to_extent="1">
+          <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings yPosColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <DiagramLayerSettings priority="0" obstacle="0" showAll="1" xPosColumn="-1" zIndex="0" dist="0" yPosColumn="-1" placement="0" showColumn="0" linePlacementFlags="10"/>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="ID" index="0"/>
+        <alias name="" field="fk_region" index="1"/>
+        <alias name="" field="ELEV" index="2"/>
+        <alias name="" field="NAME" index="3"/>
+        <alias name="" field="USE" index="4"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -452,30 +507,19 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="fk_region">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ELEV">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="USE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>cat</previewExpression>
+      <mapTip>cat</mapTip>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Polygon" minimumScale="-4.65661e-10" simplifyDrawingTol="1" simplifyAlgorithm="0">
+      <extent>
+        <xmin>-7115212.9837922714650631</xmin>
+        <ymin>1368239.60631786310113966</ymin>
+        <xmax>4895579.81146616395562887</xmax>
+        <ymax>7805331.22309940494596958</ymax>
+      </extent>
       <id>alaska20130517221648216</id>
       <datasource>../../../qgis_sample_data/shapefiles/alaska.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -492,40 +536,64 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins>
         <join joinFieldName="NAME_1" targetFieldName="NAME" memoryCache="1" joinLayerId="regions20130517221648766"/>
       </vectorjoins>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="NAME" expression=""/>
+        <default field="AREA_MI" expression=""/>
+        <default field="regions_ID" expression=""/>
+        <default field="regions_NAME_2" expression=""/>
+        <default field="regions_TYPE_2" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="NAME" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="AREA_MI" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="regions_ID" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="regions_NAME_2" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="regions_TYPE_2" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="NAME"/>
+        <constraint exp="" desc="" field="AREA_MI"/>
+        <constraint exp="" desc="" field="regions_ID"/>
+        <constraint exp="" desc="" field="regions_NAME_2"/>
+        <constraint exp="" desc="" field="regions_TYPE_2"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="regions_ID">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="0" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="regions_NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="0" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="regions_TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="0" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleFill" locked="0">
+          <symbol type="fill" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="color" v="253,242,186,255"/>
               <prop k="joinstyle" v="bevel"/>
@@ -541,7 +609,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -667,32 +735,21 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="NAME" index="1"/>
+        <alias name="" field="AREA_MI" index="2"/>
+        <alias name="" field="regions_ID" index="3"/>
+        <alias name="" field="regions_NAME_2" index="4"/>
+        <alias name="" field="regions_TYPE_2" index="5"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -705,38 +762,24 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="regions_ID">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="regions_NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="regions_TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>cat</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Polygon" minimumScale="-4.65661e-10" simplifyDrawingTol="1" simplifyAlgorithm="0">
+      <extent>
+        <xmin>-1829520.49845402874052525</xmin>
+        <ymin>2714990.22347463946789503</ymin>
+        <xmax>967395.73710030119400471</xmax>
+        <ymax>7566011.26770899537950754</ymax>
+      </extent>
       <id>lakes20130517221648410</id>
       <datasource>../../../qgis_sample_data/shapefiles/lakes.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
       <dataUrl format="text/html">http://geobretagne.fr/geonetwork/srv/fr/metadata.show?uuid=abe1149d-5a8d-4dbf-9140-97294b22bd4f</dataUrl>
-      <metadataUrl format="text/xml" type="TC211">http://geobretagne.fr/geonetwork/srv/fr/iso19139.xml?id=2791</metadataUrl>
+      <metadataUrl type="TC211" format="text/xml">http://geobretagne.fr/geonetwork/srv/fr/iso19139.xml?id=2791</metadataUrl>
       <layername>lakes</layername>
       <srs>
         <spatialrefsys>
@@ -750,38 +793,62 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="NAMES" expression=""/>
+        <default field="AREA_MI" expression=""/>
+        <default field="xlabel" expression=""/>
+        <default field="ylabel" expression=""/>
+        <default field="rotation" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="NAMES" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="AREA_MI" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="xlabel" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="ylabel" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="rotation" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="NAMES"/>
+        <constraint exp="" desc="" field="AREA_MI"/>
+        <constraint exp="" desc="" field="xlabel"/>
+        <constraint exp="" desc="" field="ylabel"/>
+        <constraint exp="" desc="" field="rotation"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="Range" name="cat">
-          <widgetv2config AllowNull="0" fieldEditable="1" Step="1" Style="Edit" labelOnTop="0" Min="1" Max="30"/>
+          <widgetv2config Style="Edit" Step="1" fieldEditable="1" labelOnTop="0" Min="1" Max="30" AllowNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAMES">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="xlabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="ylabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="rotation">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleFill" locked="0">
+          <symbol type="fill" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="color" v="165,191,221,255"/>
               <prop k="joinstyle" v="bevel"/>
@@ -797,7 +864,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -951,34 +1018,27 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="NAMES" index="1"/>
+        <alias name="" field="AREA_MI" index="2"/>
+        <alias name="" field="xlabel" index="3"/>
+        <alias name="" field="ylabel" index="4"/>
+        <alias name="" field="rotation" index="5"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions>
-        <actionsetting action="http://www.google.com/search?q=[% &quot;NAMES&quot; %]" icon="" capture="0" type="5" name="Google search"/>
+        <actionsetting capture="0" type="5" shortTitle="" id="{6a265c48-da46-4895-8db7-050a00ed0e94}" action="http://www.google.com/search?q=[% &quot;NAMES&quot; %]" name="Google search" icon="">
+          <actionScope id="Feature"/>
+          <actionScope id="Field"/>
+          <actionScope id="Canvas"/>
+        </actionsetting>
       </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -987,24 +1047,24 @@ def my_form_open(dialog, layer, feature):
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
       <attributeEditorForm>
-        <attributeEditorContainer name="main">
-          <attributeEditorContainer name="Fields">
-            <attributeEditorField index="0" name="cat"/>
-            <attributeEditorField index="1" name="NAMES"/>
-            <attributeEditorField index="2" name="AREA_MI"/>
-            <attributeEditorContainer name="more">
-              <attributeEditorField index="5" name="rotation"/>
+        <attributeEditorContainer visibilityExpressionEnabled="0" showLabel="1" name="main" columnCount="0" groupBox="0" visibilityExpression="">
+          <attributeEditorContainer visibilityExpressionEnabled="0" showLabel="1" name="Fields" columnCount="0" groupBox="1" visibilityExpression="">
+            <attributeEditorField showLabel="1" name="cat" index="0"/>
+            <attributeEditorField showLabel="1" name="NAMES" index="1"/>
+            <attributeEditorField showLabel="1" name="AREA_MI" index="2"/>
+            <attributeEditorContainer visibilityExpressionEnabled="0" showLabel="1" name="more" columnCount="0" groupBox="1" visibilityExpression="">
+              <attributeEditorField showLabel="1" name="rotation" index="5"/>
             </attributeEditorContainer>
           </attributeEditorContainer>
-          <attributeEditorContainer name="Label control">
-            <attributeEditorField index="3" name="xlabel"/>
-            <attributeEditorField index="4" name="ylabel"/>
+          <attributeEditorContainer visibilityExpressionEnabled="0" showLabel="1" name="Label control" columnCount="0" groupBox="1" visibilityExpression="">
+            <attributeEditorField showLabel="1" name="xlabel" index="3"/>
+            <attributeEditorField showLabel="1" name="ylabel" index="4"/>
           </attributeEditorContainer>
         </attributeEditorContainer>
-        <attributeEditorContainer name="new">
-          <attributeEditorField index="3" name="xlabel"/>
-          <attributeEditorField index="4" name="ylabel"/>
-          <attributeEditorField index="5" name="rotation"/>
+        <attributeEditorContainer visibilityExpressionEnabled="0" showLabel="1" name="new" columnCount="0" groupBox="0" visibilityExpression="">
+          <attributeEditorField showLabel="1" name="xlabel" index="3"/>
+          <attributeEditorField showLabel="1" name="ylabel" index="4"/>
+          <attributeEditorField showLabel="1" name="rotation" index="5"/>
         </attributeEditorContainer>
       </attributeEditorForm>
       <widgets/>
@@ -1012,33 +1072,19 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="Range" name="cat">
-          <widgetv2config AllowNull="0" fieldEditable="1" Step="1" Style="Edit" labelOnTop="0" Min="1" Max="30"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAMES">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="xlabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ylabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="rotation">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>cat</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Line" minimumScale="-4.65661e-10" simplifyDrawingTol="1" simplifyAlgorithm="0">
+      <extent>
+        <xmin>-2038395.83981025964021683</xmin>
+        <ymin>3963487.82406435115262866</ymin>
+        <xmax>2121339.05160892568528652</xmax>
+        <ymax>7475758.68169373366981745</ymax>
+      </extent>
       <id>majrivers_copy20141004123744134</id>
       <datasource>../../../qgis_sample_data/shapefiles/majrivers.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1055,29 +1101,44 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="LENGTH" expression=""/>
+        <default field="DECRIPTION" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="LENGTH" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="DECRIPTION" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="LENGTH"/>
+        <constraint exp="" desc="" field="DECRIPTION"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="LENGTH">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="DECRIPTION">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="line" name="0">
-            <layer pass="0" class="SimpleLine" locked="0">
+          <symbol type="line" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="SimpleLine" enabled="1" locked="0">
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="5;2"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1097,7 +1158,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -1248,32 +1309,18 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="LENGTH" index="1"/>
+        <alias name="" field="DECRIPTION" index="2"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -1286,24 +1333,19 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="LENGTH">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="DECRIPTION">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>"cat"</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Point" minimumScale="-4.65661e-10" simplifyDrawingTol="1" simplifyAlgorithm="0">
+      <extent>
+        <xmin>-4483330.6510413708165288</xmin>
+        <ymin>1404268.91167207201942801</ymin>
+        <xmax>4604461.48758506868034601</xmax>
+        <ymax>6635460.6919027678668499</ymax>
+      </extent>
       <id>popp20130517221648651</id>
       <datasource>../../../qgis_sample_data/shapefiles/popp.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1320,40 +1362,63 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>"cat"||', '||"F_CODEDESC"||', '||"F_CODE"||', '||"TYPE"</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="F_CODE" expression=""/>
+        <default field="TYPE" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODEDESC" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODE" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="TYPE" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="F_CODEDESC"/>
+        <constraint exp="" desc="" field="F_CODE"/>
+        <constraint exp="" desc="" field="TYPE"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="FontMarker" locked="0">
+          <symbol type="marker" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="FontMarker" enabled="1" locked="0">
               <prop k="angle" v="0"/>
               <prop k="chr" v="l"/>
               <prop k="color" v="166,0,0,255"/>
               <prop k="font" v="Dingbats"/>
               <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="miter"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="255,255,255,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
               <prop k="size" v="2.23333"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
@@ -1362,7 +1427,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -1484,32 +1549,21 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="F_CODEDESC" index="1"/>
+        <alias name="" field="F_CODE" index="2"/>
+        <alias name="" field="TYPE" index="3"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -1522,27 +1576,19 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>"cat"||', '||"F_CODEDESC"||', '||"F_CODE"||', '||"TYPE"</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Polygon" minimumScale="-4.65661e-10" simplifyDrawingTol="1" simplifyAlgorithm="0">
+      <extent>
+        <xmin>-7117451.88276480510830879</xmin>
+        <ymin>1357479.18457806529477239</ymin>
+        <xmax>18764433.08787660673260689</xmax>
+        <ymax>9961531.59820250608026981</ymax>
+      </extent>
       <id>regions20130517221648766</id>
       <datasource>../../../qgis_sample_data/shapefiles/regions.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1559,29 +1605,44 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="ID" expression=""/>
+        <default field="NAME_2" expression=""/>
+        <default field="TYPE_2" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="ID" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="NAME_2" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="TYPE_2" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="ID"/>
+        <constraint exp="" desc="" field="NAME_2"/>
+        <constraint exp="" desc="" field="TYPE_2"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="0.32549" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleLine" locked="0">
+          <symbol type="fill" name="0" alpha="0.32549" clip_to_extent="1">
+            <layer pass="0" class="SimpleLine" enabled="1" locked="0">
               <prop k="capstyle" v="round"/>
               <prop k="customdash" v="5;2"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1601,7 +1662,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -1752,34 +1813,18 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>&lt;b> Name of feature: &lt;/b> [% "NAME_2" %] &lt;br>
-&lt;b> Is this place a Borough? &lt;/b> &lt;br> 
-[% CASE WHEN "TYPE_2"='Borough'THEN'Yes'ELSE'No. It is a '|| "TYPE_2"END%]</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="ID" index="0"/>
+        <alias name="" field="NAME_2" index="1"/>
+        <alias name="" field="TYPE_2" index="2"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -1792,24 +1837,15 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip>&lt;b> Name of feature: &lt;/b> [% "NAME_2" %] &lt;br>
+&lt;b> Is this place a Borough? &lt;/b> &lt;br> 
+[% CASE WHEN "TYPE_2"='Borough'THEN'Yes'ELSE'No. It is a '|| "TYPE_2"END%]</mapTip>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Line" minimumScale="0" simplifyDrawingTol="1" simplifyAlgorithm="0">
       <id>rivers20130517221648798</id>
       <datasource>../../../qgis_sample_data/shapefiles/rivers.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1826,32 +1862,50 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="NAM" expression=""/>
+        <default field="F_CODE" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODEDESC" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="NAM" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODE" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="F_CODEDESC"/>
+        <constraint exp="" desc="" field="NAM"/>
+        <constraint exp="" desc="" field="F_CODE"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="line" name="0">
-            <layer pass="0" class="SimpleLine" locked="0">
+          <symbol type="line" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="SimpleLine" enabled="1" locked="0">
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="5;2"/>
               <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1871,7 +1925,7 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -2020,32 +2074,19 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="F_CODEDESC" index="1"/>
+        <alias name="" field="NAM" index="2"/>
+        <alias name="" field="F_CODE" index="3"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -2058,27 +2099,13 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>cat</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Point" minimumScale="0" simplifyDrawingTol="1" simplifyAlgorithm="0">
       <id>storagep20130517221648873</id>
       <datasource>../../../qgis_sample_data/shapefiles/storagep.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2095,35 +2122,54 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="F_CODE" expression=""/>
+        <default field="TYPE" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODEDESC" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODE" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="TYPE" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="F_CODEDESC"/>
+        <constraint exp="" desc="" field="F_CODE"/>
+        <constraint exp="" desc="" field="TYPE"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
+          <symbol type="marker" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="SimpleMarker" enabled="1" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="123,141,186,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -2142,39 +2188,26 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties/>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="F_CODEDESC" index="1"/>
+        <alias name="" field="F_CODE" index="2"/>
+        <alias name="" field="TYPE" index="3"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -2187,27 +2220,13 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>cat</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer hasScaleBasedVisibilityFlag="0" simplifyDrawingHints="1" maximumScale="1e+08" type="vector" simplifyMaxScale="1" simplifyLocal="1" readOnly="0" geometry="Polygon" minimumScale="0" simplifyDrawingTol="1" simplifyAlgorithm="0">
       <id>swamp20130517232331437</id>
       <datasource>../../../qgis_sample_data/shapefiles/swamp.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2224,32 +2243,50 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="F_CODE" expression=""/>
+        <default field="AREAKM2" expression=""/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" notnull_strength="0" field="cat" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODEDESC" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="F_CODE" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" notnull_strength="0" field="AREAKM2" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="cat"/>
+        <constraint exp="" desc="" field="F_CODEDESC"/>
+        <constraint exp="" desc="" field="F_CODE"/>
+        <constraint exp="" desc="" field="AREAKM2"/>
+      </constraintExpressions>
+      <dataDependencies/>
       <expressionfields/>
       <map-layer-style-manager current="">
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="AREAKM2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" labelOnTop="0" UseHtml="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 symbollevels="0" type="singleSymbol" enableorderby="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleFill" locked="0">
+          <symbol type="fill" name="0" alpha="1" clip_to_extent="1">
+            <layer pass="0" class="SimpleFill" enabled="1" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="color" v="50,18,132,255"/>
               <prop k="joinstyle" v="bevel"/>
@@ -2265,39 +2302,26 @@ def my_form_open(dialog, layer, feature):
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties/>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>cat</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="Ubuntu"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
       <annotationform>../../Layouts_Alex</annotationform>
+      <aliases>
+        <alias name="" field="cat" index="0"/>
+        <alias name="" field="F_CODEDESC" index="1"/>
+        <alias name="" field="F_CODE" index="2"/>
+        <alias name="" field="AREAKM2" index="3"/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
@@ -2310,89 +2334,55 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AREAKM2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <expressionfields/>
+      <previewExpression>cat</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
   </projectlayers>
   <properties>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <PositionPrecision>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <DegreeFormat type="QString">D</DegreeFormat>
+    </PositionPrecision>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
-    <WMSKeywordList type="QStringList">
-      <value></value>
-    </WMSKeywordList>
-    <Topol>
-      <tolerance_2 type="QString">0</tolerance_2>
-      <layer1_0 type="QString">popp20130517221648651</layer1_0>
-      <layer2_0 type="QString">alaska20130517221648216</layer2_0>
-      <layer1_1 type="QString">regions20130517221648766</layer1_1>
-      <layer2_1 type="QString">No layer</layer2_1>
-      <layer1_2 type="QString">lakes20130517221648410</layer1_2>
-      <layer2_2 type="QString">No layer</layer2_2>
-      <testname_0 type="QString">must be inside</testname_0>
-      <testname_1 type="QString">must not have gaps</testname_1>
-      <testname_2 type="QString">must not have invalid geometries</testname_2>
-      <testCount type="int">3</testCount>
-      <tolerance_0 type="QString">0</tolerance_0>
-      <tolerance_1 type="QString">0</tolerance_1>
-    </Topol>
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList"/>
-    <WMSContactMail type="QString"></WMSContactMail>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-      <DegreeFormat type="QString">D</DegreeFormat>
-    </PositionPrecision>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
-    <Measure>
-      <Ellipsoid type="QString">NONE</Ellipsoid>
-    </Measure>
-    <WFSTLayers>
-      <Insert type="QStringList"/>
-      <Update type="QStringList"/>
-      <Delete type="QStringList"/>
-    </WFSTLayers>
-    <Gui>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <CanvasColorGreenPart type="int">191</CanvasColorGreenPart>
-      <CanvasColorRedPart type="int">165</CanvasColorRedPart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-      <CanvasColorBluePart type="int">221</CanvasColorBluePart>
-    </Gui>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WFSLayers type="QStringList"/>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+      <ProjectCRSID type="int">932</ProjectCRSID>
+    </SpatialRefSys>
+    <WMSFees type="QString"></WMSFees>
+    <WMSUrl type="QString"></WMSUrl>
     <Digitizing>
-      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
-      <LayerSnappingList type="QStringList">
-        <value>airports20130517221648088</value>
-        <value>alaska20130517221648216</value>
-        <value>lakes20130517221648410</value>
-        <value>majrivers_copy20141004123744134</value>
-        <value>popp20130517221648651</value>
+      <AvoidIntersectionsList type="QStringList">
         <value>regions20130517221648766</value>
-        <value>rivers20130517221648798</value>
-        <value>storagep20130517221648873</value>
         <value>swamp20130517232331437</value>
-      </LayerSnappingList>
+      </AvoidIntersectionsList>
+      <IntersectionSnapping type="bool">true</IntersectionSnapping>
+      <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>5.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
+      </LayerSnappingToleranceList>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
         <value>disabled</value>
@@ -2404,23 +2394,20 @@ def my_form_open(dialog, layer, feature):
         <value>disabled</value>
         <value>enabled</value>
       </LayerSnappingEnabledList>
-      <SnappingMode type="QString">advanced</SnappingMode>
-      <AvoidIntersectionsList type="QStringList">
+      <LayerSnappingList type="QStringList">
+        <value>airports20130517221648088</value>
+        <value>alaska20130517221648216</value>
+        <value>lakes20130517221648410</value>
+        <value>majrivers_copy20141004123744134</value>
+        <value>popp20130517221648651</value>
         <value>regions20130517221648766</value>
+        <value>rivers20130517221648798</value>
+        <value>storagep20130517221648873</value>
         <value>swamp20130517232331437</value>
-      </AvoidIntersectionsList>
-      <IntersectionSnapping type="bool">true</IntersectionSnapping>
-      <LayerSnappingToleranceUnitList type="QStringList">
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>1</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-      </LayerSnappingToleranceUnitList>
+      </LayerSnappingList>
+      <TopologicalEditing type="bool">true</TopologicalEditing>
+      <SnappingMode type="QString">advanced</SnappingMode>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnapToList type="QStringList">
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -2433,54 +2420,84 @@ def my_form_open(dialog, layer, feature):
         <value>to_vertex_and_segment</value>
       </LayerSnapToList>
       <DefaultSnapType type="QString">off</DefaultSnapType>
-      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
-      <TopologicalEditing type="bool">true</TopologicalEditing>
-      <LayerSnappingToleranceList type="QStringList">
-        <value>0.000000</value>
-        <value>0.000000</value>
-        <value>0.000000</value>
-        <value>0.000000</value>
-        <value>0.000000</value>
-        <value>5.000000</value>
-        <value>0.000000</value>
-        <value>0.000000</value>
-        <value>0.000000</value>
-      </LayerSnappingToleranceList>
+      <LayerSnappingToleranceUnitList type="QStringList">
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+        <value>1</value>
+        <value>0</value>
+        <value>0</value>
+        <value>0</value>
+      </LayerSnappingToleranceUnitList>
     </Digitizing>
     <Identify>
       <disabledLayers type="QStringList"/>
     </Identify>
+    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <Topol>
+      <layer1_1 type="QString">regions20130517221648766</layer1_1>
+      <layer1_2 type="QString">lakes20130517221648410</layer1_2>
+      <layer2_0 type="QString">alaska20130517221648216</layer2_0>
+      <layer2_1 type="QString">No layer</layer2_1>
+      <layer2_2 type="QString">No layer</layer2_2>
+      <tolerance_0 type="QString">0</tolerance_0>
+      <testname_0 type="QString">must be inside</testname_0>
+      <tolerance_1 type="QString">0</tolerance_1>
+      <tolerance_2 type="QString">0</tolerance_2>
+      <testname_1 type="QString">must not have gaps</testname_1>
+      <testname_2 type="QString">must not have invalid geometries</testname_2>
+      <layer1_0 type="QString">popp20130517221648651</layer1_0>
+      <testCount type="int">3</testCount>
+    </Topol>
+    <WFSTLayers>
+      <Insert type="QStringList"/>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <Measure>
+      <Ellipsoid type="QString">NONE</Ellipsoid>
+    </Measure>
+    <Gui>
+      <CanvasColorRedPart type="int">165</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">221</CanvasColorBluePart>
+      <CanvasColorGreenPart type="int">191</CanvasColorGreenPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+    </Gui>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Macros>
       <pythonCode type="QString"></pythonCode>
     </Macros>
-    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
-    <SpatialRefSys>
-      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
-      <ProjectCRSID type="int">932</ProjectCRSID>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
     <DefaultStyles>
-      <Fill type="QString"></Fill>
-      <Line type="QString"></Line>
       <Marker type="QString"></Marker>
-      <RandomColors type="bool">true</RandomColors>
+      <Line type="QString"></Line>
       <AlphaInt type="int">255</AlphaInt>
+      <RandomColors type="bool">true</RandomColors>
       <ColorRamp type="QString"></ColorRamp>
+      <Fill type="QString"></Fill>
     </DefaultStyles>
-    <WMSFees type="QString"></WMSFees>
-    <WMSUrl type="QString"></WMSUrl>
   </properties>
   <visibility-presets>
     <visibility-preset name="composer_map_main_map">
-      <layer id="lakes20130517221648410"/>
       <layer id="regions20130517221648766"/>
-      <layer id="majrivers_copy20141004123744134"/>
-      <layer id="airports20130517221648088"/>
       <layer id="alaska20130517221648216"/>
       <layer id="popp20130517221648651"/>
+      <layer id="lakes20130517221648410"/>
+      <layer id="majrivers_copy20141004123744134"/>
+      <layer id="airports20130517221648088"/>
     </visibility-preset>
     <visibility-preset name="composer_overview">
       <layer id="alaska20130517221648216"/>

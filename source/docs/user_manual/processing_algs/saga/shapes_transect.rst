@@ -5,6 +5,12 @@
 Shapes transect
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Transect through polygon shapefile
 ----------------------------------
 

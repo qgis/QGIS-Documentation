@@ -15,7 +15,7 @@ Expressions
    .. contents::
       :local:
 
-The :index:`Expressions` feature is available from many parts in QGIS. It can be
+The **Expressions** feature is available from many parts in QGIS. It can be
 accessed using the |expression| :sup:`Expression Builder`, the
 |expressionSelect| :sup:`Select By Expression...`, the :guilabel:`Geometry generator`
 symbol layer option, the |calculateField| :sup:`Field calculator` or the
@@ -42,7 +42,7 @@ select some features, create virtual field ...
 
 * Apply a categorized style to all the features according to whether their average house
   price is smaller or higher than 10000€ per square metre::
-  
+
     "price_m2" > 10000
 
 * Using the "Select By Expression..." tool, select all the features representing
@@ -61,12 +61,13 @@ The **Expressions** feature offers access to the:
 * :guilabel:`Function Editor` tab which helps to create custom functions
   to use in the expressions.
 
-.. index:: 
-   single: Expression; Named parameters, Function; Named parameters
+.. index:: Named parameters
+   single: Expressions; Named parameters
+   single: Functions; Named parameters
 
 .. tip:: **Use named parameters to improve the expression reading**
 
-  Some functions requiere many parameters to be set. The expression engine supports the
+  Some functions require many parameters to be set. The expression engine supports the
   use of named parameters. This means that instead of writing the cryptic expression
   ``clamp( 1, 2, 9)``, you can use ``clamp( min:=1, value:=2, max:=9)``. This also allows
   arguments to be switched, e.g. ``clamp( value:=2, max:=9, min:=1)``. Using named parameters
@@ -112,8 +113,7 @@ The :guilabel:`Customs` group lists the functions created or imported by the use
 There are many other groups, listed below.
 
 
-.. index:: Field Calculator Functions
-
+.. index:: Field calculator functions
 
 Operators
 ----------
@@ -208,8 +208,6 @@ This group contains functions to handle conditional checks in expressions.
  if                                   Tests a condition and returns a
                                       different result depending on the
                                       conditional check
- regexp_match                         Returns true if any part of a string
-                                      matches the supplied regular expression
 ===================================== =========================================
 
 **Some example:**
@@ -266,8 +264,8 @@ This group contains math functions (e.g., square root, sin and cos).
 =================  ==========================================================
 
 
-Aggregates
-----------
+Aggregates Functions
+--------------------
 
 This group contains functions which aggregate values over layers and fields.
 
@@ -276,6 +274,8 @@ This group contains functions which aggregate values over layers and fields.
 ====================== =======================================================
  aggregate              Returns an aggregate value calculated using
                         features from another layer
+ collect                Returns the multipart geometry of aggregated
+                        geometries from an expression
  concatenate            Returns the all aggregated strings from a field
                         or expression joined by a delimiter
  count                  Returns the count of matching features
@@ -317,9 +317,9 @@ This group contains functions which aggregate values over layers and fields.
 
 * Return the maximum of the "passengers" field from features in the layer
   grouped by "station_class" field::
- 
+
    maximum("passengers", group_by:="station_class")
-    
+
 * Calculate the total number of passengers for the stations inside the current
   atlas feature::
 
@@ -332,9 +332,44 @@ This group contains functions which aggregate values over layers and fields.
    aggregate_relation('my_relation', 'mean', "field_from_related_table")
 
   or::
-  
+
    aggregate_relation(relation:='my_relation', calculation := 'mean',
      expression := "field_from_related_table")
+
+
+Array Functions
+---------------
+
+This group contains functions to create and manipulate arrays.
+
+====================== =======================================================
+ Function               Description
+====================== =======================================================
+ array                  Returns an array containing all the values passed
+                        as parameter
+ array_append           Returns an array with the given value added at the end
+ array_cat              Returns an array containing all the given arrays concatenated
+ array_contains         Returns true if an array contains the given value
+ array_distinct         Returns an array containing distinct values of the given array
+ array_find             Returns the index (0 for the first one) of a value
+                        within an array. Returns -1 if the value is not found.
+ array_get              Returns the Nth value (0 for the first one) of an array
+ array_insert           Returns an array with the given value added at the
+                        given position
+ array_intersect        Returns true if any element of array1 exists in array2
+ array_length           Returns the number of elements of an array
+ array_prepend          Returns an array with the given value added at the beginning
+ array_remove_all       Returns an array with all the entries of the given
+                        value removed
+ array_remove_at        Returns an array with the given index removed
+ array_to_string        Concatenates array elements into a string separated by
+                        a delimiter using and optional string for empty values.
+ regexp_matches         Returns an array of all strings captured by capturing
+                        groups, in the order the groups themselves appear in
+                        the supplied regular expression against a string.
+ string_to_array        Splits string into an array using supplied delimiter
+                        and optional string for empty values
+====================== =======================================================
 
 
 Color Functions
@@ -374,8 +409,30 @@ This group contains functions for manipulating colors.
                     eg the red component or alpha component
 ================== ==========================================================
 
-Conversions
-------------
+
+Composition Functions
+---------------------
+
+This group contains functions to manipulate print composer items properties.
+
+==================  ========================================================
+ Function            Description
+==================  ========================================================
+ item_variables      Returns a map of variables from a composer item inside
+                     this composition
+==================  ========================================================
+
+**Some example:**
+
+* Get the scale of the 'Map 0' in the current print composer::
+
+    map_get( item_variables('Map 0'), 'map_scale')
+
+
+.. _conversion_functions:
+
+Conversions Functions
+---------------------
 
 This group contains functions to convert one data type to another
 (e.g., string to integer, integer to string).
@@ -394,7 +451,7 @@ This group contains functions to convert one data type to another
 ==================  ========================================================
 
 
-Custom functions
+Custom Functions
 -----------------
 
 This group contains functions created by the user.
@@ -415,13 +472,15 @@ This group contains functions for handling date and time data.
                  of days from an interval
  day_of_week     Returns a number corresponding to the day of the week
                  for a specified date or datetime
+ epoch           Returns the interval in milliseconds between the unix
+                 epoch and a given date value
  hour            Extracts the hour from a datetime or time,
                  or the number of hours from an interval
  minute          Extracts the minute from a datetime or time,
                  or the number of minutes from an interval
  month           Extracts the month part from a date or datetime, or the
                  number of months from an interval
- now()           Returns current date and time
+ now             Returns current date and time
  second          Extracts the second from a datetime or time,
                  or the number of seconds from an interval
  week            Extracts the week number from a date or datetime,
@@ -430,11 +489,60 @@ This group contains functions for handling date and time data.
                  or the number of years from an interval
 ==============  ==============================================================
 
-**Some example:**
+This group also shares several functions with the :ref:`conversion_functions` (
+to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
+(format_date) groups.
 
-* Get the month and the year of today in the format "10/2014"::
+**Some examples:**
 
-    month(now()) || '/' || year(now())
+* Get today's month and year in the "month_number/year" format:
+
+  .. code-block:: sql
+
+     format_date(now(),'MM/yyyy')
+     -- Returns '03/2017'
+
+Besides these functions, subtracting dates, datetimes or times using the
+``-`` (minus) operator will return an interval.
+
+Adding or subtracting an interval to dates, datetimes or times, using the
+``+`` (plus) and ``-`` (minus) operators, will return a datetime.
+
+* Get the number of days until QGIS 3.0 release:
+
+  .. code-block:: sql
+
+     to_date('2017-09-29') - to_date(now())
+     -- Returns <interval: 203 days>
+
+* The same with time:
+
+  .. code-block:: sql
+
+     to_datetime('2017-09-29 12:00:00') - to_datetime(now())
+     -- Returns <interval: 202.49 days>
+
+* Get the datetime of 100 days from now:
+
+  .. code-block:: sql
+
+     now() + to_interval('100 days')
+     -- Returns <datetime: 2017-06-18 01:00:00>
+
+.. note:: **Storing date and datetime and intervals on fields**
+
+   The ability to store *date*, *time* and *datetime* values directly on
+   fields may depend on the data source's provider (e.g., shapefiles accept
+   *date* format, but not *datetime* or *time* format). The following are some
+   suggestions to overcame this limitation.
+
+   *date*, *Datetime* and *time* can be stored in text type fields after
+   using the ``to_format()`` function.
+
+   *Intervals* can be stored in integer or decimal type fields after using
+   one of the date extraction functions (e.g., ``day()`` to get the interval
+   expressed in days)
+
 
 Fields and Values
 ------------------
@@ -488,12 +596,17 @@ This group  contains general assorted functions.
 ====================  =======================================================
  Function              Description
 ====================  =======================================================
+ env                   Gets an environment variable and returns its content
+                       as a string. If the variable is not found, ``NULL``
+                       will be returned.
  eval                  Evaluates an expression which is passed in a string.
                        Useful to expand dynamic parameters passed as context
                        variables or fields
+ is_layer_visible      Returns true if a specified layer is visible
  layer_property        Returns a property of a layer or a value of its
                        metadata. It can be layer name, crs, geometry type,
                        feature count...
+ raster_statistic      Returns statistics from a raster layer
  var                   Returns the value stored within a specified
                        variable. See variable functions below
 ====================  =======================================================
@@ -509,13 +622,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +========================+===================================================+
 | $area                  | Returns the area size of the current feature      |
 +------------------------+---------------------------------------------------+
-|$geometry               | Returns the geometry of the current feature (can  |
+| $geometry              | Returns the geometry of the current feature (can  |
 |                        | be used for processing with other functions)      |
 +------------------------+---------------------------------------------------+
 | $length                | Returns the length of the current line feature    |
 +------------------------+---------------------------------------------------+
 | $perimeter             | Returns the perimeter of the current polygon      |
-| feature                |                                                   |
+|                        | feature                                           |
 +------------------------+---------------------------------------------------+
 | $x                     | Returns the x coordinate of the current feature   |
 +------------------------+---------------------------------------------------+
@@ -527,9 +640,22 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | $y_at(n)               | Returns the y coordinate of the nth node of the   |
 |                        | current feature's geometry                        |
 +------------------------+---------------------------------------------------+
+| angle_at_vertex        | Returns the bisector angle (average angle) to the |
+|                        | geometry for a specified vertex on a linestring   |
+|                        | geometry. Angles are in degrees clockwise from    |
+|                        | north                                             |
++------------------------+---------------------------------------------------+
 | area                   | Returns the area of a geometry polygon feature.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
++------------------------+---------------------------------------------------+
+| azimuth                | Returns the north-based azimuth as the angle in   |
+|                        | radians measured clockwise from the vertical on   |
+|                        | point_a to point_b                                |
++------------------------+---------------------------------------------------+
+| boundary               | Returns the closure of the combinatorial boundary |
+|                        | of the geometry (ie the topological boundary of   |
+|                        | the geometry).                                    |
 +------------------------+---------------------------------------------------+
 | bounds                 | Returns a geometry which represents the bounding  |
 |                        | box of an input geometry. Calculations are in     |
@@ -576,7 +702,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | Reference System) between two geometries in       |
 |                        | projected units                                   |
 +------------------------+---------------------------------------------------+
+| distance_to_vertex     | Returns the distance along the geometry to a      |
+|                        | specified vertex                                  |
++------------------------+---------------------------------------------------+
 | end_point              | Returns the last node from a geometry             |
++------------------------+---------------------------------------------------+
+| extend                 | Extends the start and end of a linestring         |
+|                        | geometry by a specified amount                    |
 +------------------------+---------------------------------------------------+
 | exterior_ring          | Returns a line string representing the exterior   |
 |                        | ring of a polygon geometry,                       |
@@ -627,6 +759,21 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | length                 | Returns length of a line geometry feature         |
 |                        | (or length of a string)                           |
 +------------------------+---------------------------------------------------+
+| line_interpolate_angle | Returns the angle parallel to the geometry at a   |
+|                        | specified distance along a linestring geometry.   |
+|                        | Angles are in degrees clockwise from north.       |
++------------------------+---------------------------------------------------+
+| line_interpolate_point | Returns the point interpolated by a specified     |
+|                        | distance along a linestring geometry.             |
++------------------------+---------------------------------------------------+
+| line_locate_point      | Returns the distance along a linestring           |
+|                        | corresponding to the closest position the         |
+|                        | linestring comes to a specified point geometry.   |
++------------------------+---------------------------------------------------+
+| line_merge             | Returns a (Multi-)LineString geometry, where any  |
+|                        | connected LineStrings from the input geometry     |
+|                        | have been merged into a single linestring.        |
++------------------------+---------------------------------------------------+
 | m                      | Returns the m value of a point geometry           |
 +------------------------+---------------------------------------------------+
 | make_line              | Creates a line geometry from a series of point    |
@@ -659,6 +806,10 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | null if the input geometry is not a polygon or    |
 |                        | collection                                        |
 +------------------------+---------------------------------------------------+
+| offset_curve           | Returns a geometry formed by offsetting a         |
+|                        | linestring geometry to the side. Distances are in |
+|                        | the Spatial Reference System of this geometry.    |
++------------------------+---------------------------------------------------+
 | order_parts            | Orders the parts of a MultiGeometry by a given    |
 |                        | criteria                                          |
 +------------------------+---------------------------------------------------+
@@ -676,6 +827,10 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | point_on_surface       | Returns a point guaranteed to lie on the surface  |
 |                        | of a geometry                                     |
 +------------------------+---------------------------------------------------+
+| pole_of_inaccessibility| Calculates the approximate pole of inaccessibility|
+|                        | for a surface, which is the most distant internal |
+|                        | point from the boundary of the surface            |
++------------------------+---------------------------------------------------+
 | project                | Returns a point projected from a start point      |
 |                        | using a distance and bearing (azimuth) in radians |
 +------------------------+---------------------------------------------------+
@@ -692,6 +847,19 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | shortest_line          | Returns the shortest line joining two geometries. |
 |                        | The resultant line will start at geometry 1 and   |
 |                        | end at geometry 2                                 |
++------------------------+---------------------------------------------------+
+| simplify               | Simplifies a geometry by removing nodes using a   |
+|                        | distance based threshold                          |
++------------------------+---------------------------------------------------+
+| simplify_vw            | Simplifies a geometry by removing nodes using an  |
+|                        | area based threshold                              |
++------------------------+---------------------------------------------------+
+| single_sided_buffer    | Returns a geometry formed by buffering out just   |
+|                        | one side of a linestring geometry. Distances are  |
+|                        | in the Spatial Reference System of this geometry  |
++------------------------+---------------------------------------------------+
+| smooth                 | Smooths a geometry by adding extra nodes which    |
+|                        | round off corners in the geometry                 |
 +------------------------+---------------------------------------------------+
 | start_point            | Returns the first node from a geometry            |
 +------------------------+---------------------------------------------------+
@@ -754,6 +922,30 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
+
+Map Functions
+--------------
+
+This group contains functions to create or manipulate keys and values of maps.
+
+==================== =========================================================
+ Function             Description
+==================== =========================================================
+ map                  Returns a map containing all the keys and values passed
+                      as pair of parameters
+ map_akeys            Returns all the keys of a map as an array
+ map_avals            Returns all the values of a map as an array
+ map_concat           Returns a map containing all the entries of the given
+                      maps. If two maps contain the same key, the value of
+                      the second map is taken.
+ map_delete           Returns a map with the given key and its corresponding
+                      value deleted
+ map_exist            Returns true if the given key exists in the map
+ map_get              Returns the value of a map, given it's key
+ map_insert           Returns a map with an added key/value
+==================== =========================================================
+
+
 Record Functions
 -----------------
 
@@ -775,8 +967,10 @@ This group contains functions that operate on record identifiers.
                       feature
  get_feature          Returns the first feature of a layer matching a
                       given attribute value
+ is_selected          Returns if a feature is selected
+ num_selected         Returns the number of selected features on a given layer
  uuid                 Generates a Universally Unique Identifier (UUID)
-                      for each row. Each UUID is 38 characters long
+                      for each row. Each UUID is 38 characters long.
 ==================== =========================================================
 
 **Some examples:**
@@ -790,6 +984,8 @@ This group contains functions that operate on record identifiers.
 
     area( geometry( get_feature( 'layerA', 'id', attribute( $currentfeature, 'name') ) ) )
 
+
+.. _string_functions:
 
 String Functions
 -----------------
@@ -815,18 +1011,22 @@ This group contains functions that operate on strings
  lower                  converts a string to lower case
  lpad                   Returns a string with supplied width padded
                         using the fill character
+ regexp_match           Returns the first matching position matching a regular
+                        expression within a string, or 0 if the substring is
+                        not found
  regexp_replace         Returns a string with the supplied regular
                         expression replaced
  regexp_substr          Returns the portion of a string which matches
                         a supplied regular expression
- replace                Returns a string with the supplied string
-                        replaced
+ replace                Returns a string with the supplied string, array, or
+                        map of strings replaced by a string, an array of strings
+                        or paired values
  right(string, n)       Returns a substring that contains the n
                         rightmost characters of the string
  rpad                   Returns a string with supplied width padded
                         using the fill character
- strpos                 Returns the index of a regular expression
-                        in a string
+ strpos                 Returns the first matching position of a substring within
+                        another string, or 0 if the substring is not found
  substr                 Returns a part of a string
  title                  Converts all words of a string to title
                         case (all words lower case with leading
@@ -846,6 +1046,7 @@ This group contains recently used functions. Any expression used in the
 Expression dialog is added to the list, sorted from the more recent to
 the less one. This helps to quickly retrieve any previous expression.
 
+.. _variables_functions:
 
 Variables Functions
 --------------------
@@ -872,37 +1073,56 @@ To use these functions in an expression, they should be preceded by @ character
  atlas_geometry          Returns the current atlas feature geometry
  atlas_pagename          Returns the current atlas page name
  atlas_totalfeatures     Returns the total number of features in atlas
+ cluster_color           Returns the color of symbols within a cluster, or NULL
+                         if symbols have mixed colors
+ cluster_size            Returns the number of symbols contained within a cluster
+ geometry_part_count     Returns the number of parts in rendered feature's geometry
+ geometry_part_num       Returns the current geometry part number for feature being rendered
+ geometry_point_count    Returns the number of points in the rendered geometry's part
+ geometry_point_num      Returns the current point number in the rendered geometry's part
  grid_axis               Returns the current grid annotation axis
                          (eg, 'x' for longitude, 'y' for latitude)
  grid_number             Returns the current grid annotation value
  item_id                 Returns the composer item user ID
                          (not necessarily unique)
  item_uuid               Returns the composer item unique ID
+ layer                   Returns the current layer
  layer_id                Returns the ID of current layer
  layer_name              Returns the name of current layer
  layout_dpi              Returns the composition resolution (DPI)
  layout_numpages         Returns the number of pages in the composition
+ layout_page             Returns the current page of the composer item
  layout_pageheight       Returns the composition height in mm
  layout_pagewidth        Returns the composition width in mm
- map_id                  Returns the ID of current map destination.
-                         This will be 'canvas' for canvas renders, and
-                         the item ID for composer map renders
+ map_crs                 Returns the Coordinate reference system of the current map
+ map_crs_definition      Returns the full definition of the Coordinate reference
+                         system of the current map
+ map_extent              Returns the geometry representing the current extent of the map
  map_extent_center       Returns the point feature at the center of the map
  map_extent_height       Returns the current height of the map
  map_extent_width        Returns the current width of the map
+ map_id                  Returns the ID of current map destination.
+                         This will be 'canvas' for canvas renders, and
+                         the item ID for composer map renders
  map_rotation            Returns the current rotation of the map
  map_scale               Returns the current scale of the map
+ map_units               Returns the units of map measurements
+ project_crs             Returns the Coordinate reference system of the project
+ project_crs_definition  Returns the full definition of the Coordinate reference
+                         system of the project
  project_filename        Returns the filename of current project
  project_folder          Returns the folder for current project
  project_path            Returns the full path (including file name)
                          of current project
  project_title           Returns the title of current project
+ qgis_locale             Returns the current language of QGIS
  qgis_os_name            Returns the current Operating system name,
                          eg 'windows', 'linux' or 'osx'
- qgis_platform           Returns the QGIS platform, eg 'desktop' or 'server'
- qgis_release_name       Returns the current QGIS release name
- qgis_version            Returns the current QGIS version string
- qgis_version_no         Returns the current QGIS version number
+ qgis_platform           Returns QGIS platform, eg 'desktop' or 'server'
+ qgis_release_name       Returns current QGIS release name
+ qgis_short_version      Returns current QGIS version short string
+ qgis_version            Returns current QGIS version string
+ qgis_version_no         Returns current QGIS version number
  symbol_angle            Returns the angle of the symbol used to render
                          the feature (valid for marker symbols only)
  symbol_color            Returns the color of the symbol used to render
@@ -912,9 +1132,11 @@ To use these functions in an expression, they should be preceded by @ character
  user_full_name          Returns the current user's operating system
                          user name
  row_number              Stores the number of the current row
+ value                   Returns the current value
 ======================= =======================================================
 
 
+.. index:: Functions
 .. _function_editor:
 
 Function Editor
@@ -964,4 +1186,3 @@ Further information about creating Python code can be found in the
 
 The function editor is not only limited to working with the field calculator,
 it can be found whenever you work with expressions.
-

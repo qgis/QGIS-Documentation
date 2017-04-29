@@ -7,7 +7,7 @@ Code Snippets
 
 This section features code snippets to facilitate plugin development.
 
-.. index:: plugins; call method with shortcut
+.. index:: Plugins; Adding shortcut
 
 How to call a method by a key shortcut
 --------------------------------------
@@ -34,7 +34,7 @@ The method that is called when F7 is pressed
   def keyActionF7(self):
     QMessageBox.information(self.iface.mainWindow(),"Ok", "You pressed F7")
 
-.. index:: plugins; toggle layers
+.. index:: Plugins; Toggle layers
 
 How to toggle Layers
 --------------------
@@ -50,12 +50,12 @@ active layer
   new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
   node.setVisible(new_state)
 
-.. index:: plugins; access attributes of selected features
+.. index:: Plugins; Access attributes of selected features
 
 How to access attribute table of selected features
 --------------------------------------------------
 
-::
+.. code-block:: python
 
   def changeValue(self, value):
     layer = self.iface.activeLayer()
@@ -63,16 +63,17 @@ How to access attribute table of selected features
       nF = layer.selectedFeatureCount()
       if (nF > 0):
         layer.startEditing()
-      ob = layer.selectedFeaturesIds()
-      b = QVariant(value)
-      if (nF > 1):
-        for i in ob:
-        layer.changeAttributeValue(int(i), 1, b) # 1 being the second column
+        ob = layer.selectedFeaturesIds()
+        b = QVariant(value)
+        if (nF > 1):
+          for i in ob:
+          layer.changeAttributeValue(int(i), 1, b) # 1 being the second column
+        else:
+          layer.changeAttributeValue(int(ob[0]), 1, b) # 1 being the second column
+        layer.commitChanges()
       else:
-        layer.changeAttributeValue(int(ob[0]), 1, b) # 1 being the second column
-      layer.commitChanges()
-      else:
-        QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select at least one feature from current layer")
+        QMessageBox.critical(self.iface.mainWindow(), "Error",
+          "Please select at least one feature from current layer")
     else:
       QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select a layer")
 

@@ -47,6 +47,7 @@ Platform Icons
 ==========  ===============
 Icon        Substitution
 ==========  ===============
+|kde|       ``|kde|``
 |nix|       ``|nix|``
 |osx|       ``|osx|``
 |win|       ``|win|``
@@ -102,8 +103,9 @@ Icon                            Substitution                        Icon        
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
-|showPresets|                   ``|showPresets|``                   |zip|                           ``|zip|``
-|addLayer|                      ``|addLayer|``                      \                               \
+|showPresets|                   ``|showPresets|``                   |showSelectedLayers|            ``|showSelectedLayers|``
+|hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
+|addLayer|                      ``|addLayer|``                      |zip|                           ``|zip|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -123,10 +125,9 @@ Edit
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|saveEdits|                     ``|saveEdits|``
 |undo|                          ``|undo|``                          |redo|                          ``|redo|``
 |editCopy|                      ``|editCopy|``                      |editPaste|                     ``|editPaste|``
-|editCut|                       ``|editCut|``
+|editCut|                       ``|editCut|``                       |saveEdits|                     ``|saveEdits|``
 ==============================  ==================================  ==============================  ==================================
 
 Identity result
@@ -148,16 +149,18 @@ Digitizing and Advanced Digitizing
 ============================  =================================  =============================  ================================
 Icon                          Substitution                       Icon                           Substitution
 ============================  =================================  =============================  ================================
-|cad|                         ``|cad|``                          |tracing|                      ``|tracing|``
+|cad|                         ``|cad|``                          |cadConstruction|              ``|cadConstruction|``
+|cadParallel|                 ``|cadParallel|``                  |cadPerpendicular|             ``|cadPerpendicular|``
 |toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
+|tracing|                     ``|tracing|``                      |snapping|                     ``|snapping|``
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``
+|captureLine|                 ``|captureLine|``                  \                              \
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
 |nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
 |moveFeature|                 ``|moveFeature|``                  |rotateFeature|                ``|rotateFeature|``
 |simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
 |addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
-|fillRing|                    ``|fillRing|``
+|fillRing|                    ``|fillRing|``                     \                              \
 |deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
 |mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
 |splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
@@ -181,7 +184,7 @@ Icon                            Substitution                        Icon        
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
-|measureAngle|                  ``|measureAngle|``                  \                               \
+|measureAngle|                  ``|measureAngle|``                  |newMap|                        ``|newMap|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -211,7 +214,7 @@ Icon                     Substitution                 Icon                     S
 =======================  ===========================  =======================  ===========================
 |labeling|               ``|labeling|``               |labelingNone|           ``|labelingNone|``
 |labelingRuleBased|      ``|labelingRuleBased|``      |labelingObstacle|       ``|labelingObstacle|``
-|diagramProperties|      ``|diagramProperties|``      |diagramNone|            ``|diagramNone|``
+|piechart|               ``|piechart|``               |diagramNone|            ``|diagramNone|``
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
@@ -255,6 +258,7 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
+|settings|                      ``|settings|``                      \                               \
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -283,7 +287,7 @@ Projections and Georeferencer
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
-|customProjection|              ``|customProjection|``              \                               \
+|customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
@@ -316,7 +320,7 @@ Icon                     Substitution                 Icon                     S
 |alignHCenter|           ``|alignHCenter|``           |alignVCenter|           ``|alignVCenter|``
 |alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
 |locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
-|groupItems|             ``|groupItems|``
+|lockedRepeat|           ``|lockedRepeat|``           |groupItems|             ``|groupItems|``
 =======================  ===========================  =======================  ===========================
 
 Properties
@@ -332,7 +336,7 @@ Icon                                Substitution                            Icon
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |mapTips|                           ``|mapTips|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
-|legend|                            ``|legend|``
+|legend|                            ``|legend|``                            |dependencies|                            ``|dependencies|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
@@ -356,10 +360,11 @@ Standard provided with basic install, but not loaded with initial install
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |showPluginManager|             ``|showPluginManager|``             |pluginInstaller|               ``|pluginInstaller|``
+|installPluginFromZip|          ``|installPluginFromZip|``          \                               \
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |mapserverExport|               ``|mapserverExport|``               |exportMapServer|               ``|exportMapServer|``
-|spit|                          ``|spit|``                          |delimitedText|                 ``|delimitedText|``
+|delimitedText|                 ``|delimitedText|``                 \                               \
 |gdalScript|                    ``|gdalScript|``                    |dxf2shpConverter|              ``|dxf2shpConverter|``
 |spatialQuery|                  ``|spatialQuery|``                  |selectSubsetLayer|             ``|selectSubsetLayer|``
 |selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``

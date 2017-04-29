@@ -24,12 +24,7 @@ You can save the layout as a template and load it again in another session. Fina
 generating several maps based on a template can be done through the atlas generator.
 
 
-.. index::
-   single:Composer_Template
-.. index::
-   single:Map_Template
-
-
+.. index:: Composer template, Map template
 
 Sample Session
 ==============
@@ -75,7 +70,6 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 
 .. index:: Composer manager
-
 .. _composer_manager:
 
 The Composer Manager
@@ -120,7 +114,7 @@ You can also save composer templates in another folder.
 Choosing *specific* in the template list offers the ability to select such
 template and use it to create a new print composer.
 
-.. print_composer_menus:
+.. _print_composer_menus:
 
 Menus, tools and panels of the print composer
 =============================================
@@ -163,9 +157,12 @@ and :guilabel:`Atlas generation`.
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
-  item.
+  item (see :ref:`composer_items` for detailed information on each item
+  settings).
 * The :guilabel:`Atlas generation` tab allows you to enable the generation of an
-  atlas for the current Composer and gives access to its parameters.
+  atlas for the current Composer and gives access to its parameters
+  (see :ref:`atlas_generation` for detailed information on atlas
+  generation usage).
 
 
 In the bottom part of the Print Composer window, you can find a status bar with
@@ -183,7 +180,7 @@ over any toolbar or through :menuselection:`View --> Toolbars` or
 
 
 .. index::
-   single: print_composer;tools
+   single: Print composer; Tools
 
 .. _composer_tools:
 
@@ -365,16 +362,13 @@ To maximise the space available to interact with a composition you can use
    interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox|
    :guilabel:`Toggle full screen`.
 
+.. _composer_composition_tab:
 
 Composition Tab
 ---------------
 
-Page size and settings
-......................
-
 In the :guilabel:`Composition` tab, you can define the global settings of the
 current composition.
-
 
 .. _figure_composition:
 
@@ -383,18 +377,31 @@ current composition.
 
    Composition settings in the Print Composer
 
-You can choose one of the :guilabel:`Presets` formats for your paper sheet,
-or enter your custom :guilabel:`width`, :guilabel:`height` and :guilabel:`units`.
-You can also choose the page :guilabel:`Orientation` to use.
+General settings
+................
 
 Composition can be divided into several pages. For instance, a first page can show
 a map canvas, and a second page can show the attribute table associated with a
 layer, while a third one shows an HTML frame linking to your organization website.
-Set the :guilabel:`Number of pages` to the desired value. you can also custom the
-:guilabel:`Page Background` with the color or the symbol you want.
+Set the :guilabel:`Number of pages` to the desired value. You can also
+custom the :guilabel:`Page Background` with the color or the symbol you want.
 
-The Page size options apply to all the pages in the composition. However, you can
-modify the values using the data defined override options (see :ref:`atlas_data_defined_override`).
+The :guilabel:`reference map` select the map item to be used as the
+composition's master map. The map composer will use this map in any
+properties and variable calculating units or scale. This includes exporting
+the composition to georeferenced formats.
+
+Page size and resize
+....................
+
+In the :guilabel:`Page size` group, you can choose one of the
+:guilabel:`Presets` formats for your paper sheet, or enter your custom
+:guilabel:`width`, :guilabel:`height` and :guilabel:`units`.
+You can also choose the page :guilabel:`Orientation` to use.
+
+The Page size options apply to all the pages in the composition. However,
+you can modify the values using the data defined override options (see
+:ref:`atlas_data_defined_override`).
 
 A custom page size can also be set, using the :guilabel:`Resize page` tool.
 This creates an unique page composition, resizes the page to fit the current
@@ -405,14 +412,17 @@ Export settings
 ...............
 
 You can define a resolution to use for all exported maps in :guilabel:`Export
-resolution`. This setting can however be overridden each time you are exporting a map.
+resolution`. This setting can, however, be overridden each time you are
+exporting a map.
+
 When checked, |checkbox| :guilabel:`print as raster` means all elements will be
 rasterized before printing or saving as PostScript or PDF.
 
 While exporting to an image file format, you can choose to generate a world file
-by checking |checkbox| :guilabel:`World file on` and select a map item.
-The world file is created beside the exported map, has same name and contains
-information to easily georeference it.
+by checking |checkbox| :guilabel:`Save world file` using the map selected in
+|selectString| :guilabel:`Reference map` in the :guilabel:`general settings`
+group. The world file is created beside the exported map, has the same name
+and contains information to georeference it easily.
 
 .. _figure_composition_export:
 
@@ -453,7 +463,28 @@ also set the spacing, offset and snap tolerance of the grid as much as its style
 and color. These options are applied by default to any new print composer.
 
 
-.. index:: Revert_Layout_Actions
+Variables
+.........
+
+The :guilabel:`Variables` lists all the variables available at
+the composition's level (which includes all global and project's variables).
+
+It also allows the user to manage composition-level variables. Click the
+|signPlus| button to add a new custom composition-level variable. Likewise,
+select a custom composition-level variable from the list and click the
+|signMinus| button to remove it.
+
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
+
+.. _figure_composition_variables:
+
+.. figure:: /static/user_manual/print_composer/composition_variables.png
+   :align: center
+
+   Variables editor in the Print Composer
+
+.. index:: Revert layout actions
 
 Command History Tab: Revert and Restore actions
 -----------------------------------------------
@@ -476,11 +507,12 @@ the actions done after the selected one will be removed.
 
    Command history in the Print Composer
 
+.. _composer_items_tab:
 
 Items Tab
 ---------
 
-The :menuselection:`Items` tab offers some options to manage selection and
+The :guilabel:`Items` tab offers some options to manage selection and
 visibility of items.
 All the items added to the print composer canvas are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
@@ -502,4 +534,3 @@ Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 tab and unchecking the tickbox or you can use the icons on the toolbar.
-

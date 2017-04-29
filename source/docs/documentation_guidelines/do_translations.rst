@@ -11,7 +11,7 @@ This manual is aiming to help the translator.
 First the general process of how technically a translation is done
 is explained. Later the translation is explained from an actual English
 rst document that is translated to Dutch.
-Finally a summary of `Rules of translation <translation_summary>`_ is given.
+Finally a summary of :ref:`Rules of translation <translation_summary>` is given.
 
 Although these guidelines focus on QGIS documentation, the methods and
 the rules described below are also applicable to QGIS applications and
@@ -122,7 +122,7 @@ and choose ``Translate`` in the prompted dialog.
 Note that you can also choose to download the file and translate it
 with tools like Qt Linguist.
 The next page lists all the sentences in the file. All you need to do is select
-the text and translate following the `guidelines <translate_manual>`_.
+the text and translate following the :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
 http://docs.transifex.com/tutorials/txeditor/.

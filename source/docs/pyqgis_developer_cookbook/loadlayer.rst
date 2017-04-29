@@ -1,4 +1,4 @@
-.. loadlayer:
+.. _loadlayer:
 
 **************
 Loading Layers
@@ -88,7 +88,7 @@ providers:
      any authentication configuration this argument does not make any difference.
 
 .. index::
-  pair: Loading; Delimited text layers
+  pair: Loading; Delimited text files
 
 * CSV or other delimited text files --- to open a file with a semicolon as a
   delimiter, with field "x" for x-coordinate and field "y" for y-coordinate

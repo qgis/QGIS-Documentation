@@ -1,4 +1,4 @@
-.. index:: plugins; developing, Python; developing plugins
+.. index:: Plugins; Developing, Python; Developing plugins
 
 .. _developing_plugins:
 
@@ -17,8 +17,10 @@ language.
 Python plugins are listed together with C++ plugins in QGIS plugin manager.
 They are searched for in these paths:
 
-* UNIX/Mac: :file:`~/.qgis2/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
-* Windows: :file:`~/.qgis2/python/plugins` and :file:`(qgis_prefix)/python/plugins`
+* UNIX/Mac: :file:`~/.qgis2/python/plugins` and
+  :file:`(qgis_prefix)/share/qgis/python/plugins`
+* Windows: :file:`~/.qgis2/python/plugins` and
+  :file:`(qgis_prefix)/python/plugins`
 
 Home directory (denoted by above :file:`~`) on Windows is usually something
 like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or
@@ -49,7 +51,7 @@ Steps:
 #. *Publish*: Publish your plugin in QGIS repository or make your own
    repository as an "arsenal" of personal "GIS weapons".
 
-.. index:: plugins; writing
+.. index:: Plugins; Writing
 
 Writing a plugin
 ================
@@ -62,6 +64,8 @@ effort. The QGIS team also maintains an :ref:`official_pyqgis_repository`.
 Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki
 page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the
 community!
+
+.. _plugin_files_architecture:
 
 Plugin files
 ------------
@@ -111,7 +115,7 @@ This is the recommended option, as it produces 2.0 compatible sources.
     plugin :ref:`official_pyqgis_repository_validation`
 
 
-.. index:: plugins; writing code
+.. index:: Plugins; Writing code
 
 Plugin content
 ==============
@@ -119,7 +123,7 @@ Plugin content
 Here you can find information and examples about what to add in each of the
 files in the file structure described above.
 
-.. index:: plugins; metadata.txt
+.. index:: Plugins; Metadata, metadata.txt
 
 .. _plugin_metadata:
 
@@ -231,7 +235,7 @@ An example for this metadata.txt
   qgisMaximumVersion=2.0
 
 
-.. index:: plugins; metadata.txt, metadata, metadata.txt
+.. index:: Plugins; Initialisation
 
 __init__.py
 -----------
@@ -352,7 +356,7 @@ custom menu group directly to the menu bar, as the next example demonstrates:
 Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a name
 specific to your plugin so that it can be customized.
 
-.. index:: plugins; resource file, resources.qrc
+.. index:: Plugins; Resource file, resources.qrc
 
 Resource File
 -------------
@@ -397,7 +401,7 @@ When working on a real plugin it's wise to write the plugin in another
 (working) directory and create a makefile which will generate UI + resource
 files and install the plugin to your QGIS installation.
 
-.. index:: plugins; documentation, plugins; implementing help
+.. index:: Plugins; Documentation, Plugins; Implementing help
 
 Documentation
 =============
@@ -419,7 +423,7 @@ filename, which can replace "index" in the names of files being searched,
 and section, which is the name of an html anchor tag in the document
 on which the browser will be positioned.
 
-.. index:: plugins; code snippets
+.. index:: Plugins; Code snippets, Plugins; Translation
 
 Translation
 ===========

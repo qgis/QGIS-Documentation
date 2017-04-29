@@ -45,7 +45,7 @@ an appropriate value of snapping tolerance and search radius for features vertic
 Snapping tolerance
 ------------------
 
-:index:`Snapping tolerance` is the distance QGIS uses to ``search`` for the closest
+Snapping tolerance is the distance QGIS uses to ``search`` for the closest
 vertex and/or segment you are trying to connect to when you set a new vertex or
 move an existing vertex. If you aren't within the snapping tolerance, QGIS
 will leave the vertex where you release the mouse button, instead of snapping
@@ -137,7 +137,7 @@ layers, activate the |checkbox| :guilabel:`Avoid Intersections` option.
 
 .. index:: Shared polygon boundaries
    seealso: Shared polygon boundaries; Topology
-   
+
 Enable topological editing
 --------------------------
 
@@ -199,10 +199,10 @@ By default, QGIS loads layers read-only. This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
 supports it (see :ref:`supported_format`), and the underlying data source is writable
-(i.e., its files are not read-only). 
+(i.e., its files are not read-only).
 
 .. tip:: **Restrict edit permission on layers within a project**
-   
+
    From the :menuselection:`Project --> Project properties --> Identify` tab,
    You can choose to set any layer read-only regardless the provider permission.
    This can be a handy way, in a multi-users environment to avoid unauthorized users
@@ -357,7 +357,7 @@ not be able to tell which vertex is being edited and will display a warning.
 Basic operations
 ................
 
-.. index:: Nodes, Vertices, Vertex
+.. index:: Nodes, Vertices, Vertex, Geometryless feature
 
 Start by activating the |nodeTool| :sup:`Node Tool` and selecting a
 feature by clicking on it. Red boxes will appear at each vertex of this feature.
@@ -377,7 +377,7 @@ feature by clicking on it. Red boxes will appear at each vertex of this feature.
   should be moved if necessary.
 * **Deleting vertices**: Select the vertices and click the
   :kbd:`Delete` key. Deleting all the vertices of a feature generates, if
-  compatible with the datasource, a :index:`geometryless feature`. Note that
+  compatible with the datasource, a geometryless feature. Note that
   this doesn't delete the complete feature, just the geometry part;
   To delete a complete feature use the |deleteSelected| :sup:`Delete Selected` tool.
 * **Moving vertices**: Select all the vertices you want to move, click on
@@ -546,12 +546,12 @@ for Selected Layer(s)` is an easy way.
 
 The same functions are available for editing all layers of the project.
 
-.. tip:: **Use transaction group to edit, save or rollback multiple layers changes at once** 
+.. tip:: **Use transaction group to edit, save or rollback multiple layers changes at once**
 
    When working with layers from the same PostGreSQL database, activate the
    :guilabel:`Automatically create transaction groups where possible` option in
    :menuselection:`Project --> Project Properties --> Data Sources` to sync their
-   behavior (enter or exit the edit mode, save or rollback changes at the same time). 
+   behavior (enter or exit the edit mode, save or rollback changes at the same time).
 
 .. _sec_advanced_edit:
 
@@ -677,20 +677,19 @@ To abort feature simplification, you need to click on |simplifyFeatures|
    feature's geometry in data source.
 
 
-.. index::
+.. index:: Geometryless feature, Multipoint, Multiline, Multipolygon
    single: Digitizing tools; Add Part
 
 Add Part
 --------
 
 You can |addPart| :sup:`Add Part` to a selected feature generating a
-:index:`multipoint`, :index:`multiline` or :index:`multipolygon` feature. The
-new part must be digitized outside the existing one which should be selected
-beforehand.
+multipoint, multiline or multipolygon feature. The new part must be digitized
+outside the existing one which should be selected beforehand.
 
-The |addPart| :sup:`Add Part` can also be used to add a geometry to a :index:`geometryless
-feature`. First, select the feature in the attribute table and digitize the new geometry
-with the :index:`Add Part` tool.
+The |addPart| :sup:`Add Part` can also be used to add a geometry to a geometryless
+feature. First, select the feature in the attribute table and digitize the new
+geometry with the |addPart| :sup:`Add Part` tool.
 
 
 .. index::
@@ -699,7 +698,7 @@ with the :index:`Add Part` tool.
 Delete Part
 -----------
 
-The |deletePart| :sup:`Delete Part` tool allows you to :index:`delete parts` from
+The |deletePart| :sup:`Delete Part` tool allows you to delete parts from
 multifeatures (e.g., to delete polygons from a multi-polygon feature). This
 tool works with all multi-part geometries: point, line and polygon. Furthermore,
 it can be used to totally remove the geometric component of a feature.
@@ -712,7 +711,7 @@ To delete a part, simply click within the target part.
 Add Ring
 --------
 
-You can create :index:`ring polygons` using the |addRing|
+You can create ring polygons using the |addRing|
 :sup:`Add Ring` icon in the toolbar. This means that inside an existing area, it
 is possible to digitize further polygons that will occur as a 'hole', so
 only the area between the boundaries of the outer and inner polygons remains
@@ -840,7 +839,7 @@ the |splitParts| :sup:`Split Parts` icon.
 
 .. tip:: **Split a polyline feature in one-click**
 
-   A single click on a **snapped vertex** of a line feature with the |splitFeatures| 
+   A single click on a **snapped vertex** of a line feature with the |splitFeatures|
    :sup:`Split Features` or |splitParts| :sup:`Split Parts` tool is enough to have it
    split into new features or parts.
 
@@ -895,7 +894,7 @@ near the :guilabel:`Rotation` option of the highest level (preferably) of the sy
 layers and choose a field in the :guilabel:`Field Type` combobox. Values of this
 field are hence used to rotate each feature's symbol accordingly.
 
-.. note:: 
+.. note::
    As a global option, setting the rotation field at the first level of the symbol
    applies it to all the underlying levels while setting it at a lower level will
    rotate only this symbol layer (unless you have a single symbol layer).
@@ -990,10 +989,11 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
 The Advanced Digitizing panel
 =============================
 
-When capturing new geometries or geometry parts you also have the possibility
-to use the Advanced Digitizing panel. You can digitize lines exactly parallel or
-at a specific angle or lock lines to specific angles. Furthermore you can enter
-coordinates directly so that you can make a precise definition for your new geometry.
+When capturing, reshaping, splitting new or existing geometries you also have the
+possibility to use the Advanced Digitizing panel. You can digitize lines exactly
+parallel or perpendicular to a particular angle or lock lines to specific angles.
+Furthermore, you can enter coordinates directly so that you can make a precise
+definition of your new geometry.
 
 .. _figure_advanced_digitizing:
 
@@ -1003,6 +1003,228 @@ coordinates directly so that you can make a precise definition for your new geom
    The Advanced Digitizing panel
 
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
+
+The Advanced Digitizing panel can be open either with a right-click on the
+toolbar and choose Advanced Digitizing panel or in :menuselection:`View -->
+Panels --> Advanced Digitizing Panel`. Once the panel is visible, click the
+|cad| :sup:`enable advanced digitizing tool` button to activate the Advanced
+Digitizing tool.
+
+Concepts
+--------
+
+The aim of the Advanced Digitizing tool is to lock coordinates, lengths, and angles
+when moving the mouse during the digitalizing in the map canvas.
+
+You can also create constraints with relative or absolute reference. Relative
+reference means that the next vertex constraints' values will be relative to the
+previous vertex or segment.
+
+Snapping Settings
+-----------------
+
+Click the |settings| button to set the Advanced Digitizing Tool snapping settings.
+You can make the tool snap to common angles. The options are:
+
+- :guilabel:`Do not snap to common angles`
+- :guilabel:`Snap to 30º angles`
+- :guilabel:`Snap to 45º angles`
+- :guilabel:`Snap to 90º angles`
+
+You can also control the snapping to features. The options are:
+
+- :guilabel:`Do not snap to vertices or segments`
+- :guilabel:`Snap according to project configuration`
+- :guilabel:`Snap to all layers`
+
+Keyboard shortcuts
+------------------
+
+To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard
+shorcuts available:
+
++----------+-------------------+-------------------------------+---------------------------------------+
+| Key      | Simple            | :kbd:`Ctrl +` or :kbd:`Alt +` | :kbd:`Shift +`                        |
++==========+===================+===============================+=======================================+
+| :kbd:`d` | Set distance      | Lock distance                 | \                                     |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`a` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`x` | Set x coordinate  | Lock x coordinate             | Toggle relative x to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`y` | Set y coordinate  | Lock y coordinate             | Toggle relative y to last vertex      |
++----------+-------------------+-------------------------------+---------------------------------------+
+| :kbd:`c` | Toggle construction mode                                                                  |
++----------+-------------------------------------------------------------------------------------------+
+| :kbd:`p` | Toggle perpendicular and parallel modes                                                   |
++----------+-------------------------------------------------------------------------------------------+
+
+Absolute reference digitizing
+-----------------------------
+
+When drawing a new geometry from scratch, it is very useful to have the
+possibility to start digitizing vertexes at given coordinates.
+
+For example, to add a new feature to a polygonal layer, click the
+|capturePolygon| button. You can choose the X and Y coordinates where you want
+to start editing the feature, then:
+
+- Click the :guilabel:`x` text box (or use the :kbd:`x` keyboard shortcuts).
+- Type the X coordinate value you want and press :kbd:`Enter` or click the
+  |locked| button to their right to lock the mouse to the X axis on the map
+  canvas.
+- Click the :guilabel:`y` text box (or use the :kbd:`y` keyboard shortcuts).
+- Type the Y coordinate value you want and press :kbd:`Enter` or click the
+  |locked| button to their right to lock the mouse to the Y axis on the map
+  canvas.
+
+Two blue dotted lines and a green cross identify the exact coordinates you
+entered. Start digitizing by clicking on the map canvas; the mouse position is
+locked at the green cross.
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_coordinates.png
+   :align: center
+
+   Start drawing at given coordinates
+
+You can continue digitizing by free hand, adding a new pair of coordinates, or
+you can type the segment's **length** (distance) and **angle**.
+
+If you want to draw a segment of a given length, click the :guilabel:`d
+(distance)` text box (keyboard shortcut :kbd:`d`), type the distance value (in
+map units) and press :kbd:`Enter` or click the |locked| button on the right to
+lock the mouse in the map canvas to the length of the segment.
+In the map canvas, the clicked point is surrounded by a circle whose radius is
+the value entered in the distance text box.
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance.png
+   :align: center
+
+   Fixed length segment
+
+Finally, you can also choose the angle of the segment. As described before ,
+click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`a`), type the
+angle value (in degrees), and press :kbd:`Enter` or click the |locked| buttons
+on the right to lock it. In this way the segment will follow the desired angle:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_angle.png
+   :align: center
+
+   Fixed angle segment
+
+Relative reference digitizing
+-----------------------------
+
+Instead of using absolute values of angles or coordinates, you can also use
+values relative to the last digitized vertex or segment.
+
+For angles, you can click the |delta| button on the left of the :guilabel:`a`
+text box (or press :kbd:`Shift + a`) to toggle relative angles to the previous
+segment. With that option on, angles are measured between the last segment
+and the mouse pointer.
+
+For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
+:guilabel:`y` text boxes (or press :kbd:`Shift + x` or :kbd:`Shift + y`) to
+toggle relative coordinates to the previous vertex. With these options on,
+coordinates measurement will consider the last vertex to be the x and y axes
+origin.
+
+Continuous lock
+---------------
+
+Both in absolute or relative reference digitizing, angle, distance, x and y
+constraints can be locked continuously by clicking the |lockedRepeat|
+:guilabel:`Continuous lock` buttons. Using continuous lock allows you to
+digitize several points or vertexes using the same constraints.
+
+
+Parallel and perpendiculars line
+--------------------------------
+
+All the tools described above can be combined with the |cadPerpendicular|
+:sup:`Perpendicular` and |cadParallel| :sup:`Parallel` tools. These two tools
+allow drawing segments perfectly perpendicular or parallel to another segment.
+
+To draw a *perpendicular* segment, during the editing click the
+|cadPerpendicular| :sup:`Perpendicular` icon (keyboard shortcut :kbd:`p`) to
+activate it. Before drawing the perpendicular line,
+click on the segment of an existing feature that you want to be perpendicular
+to (the line of the existing feature will be colored in light orange); you
+should see a blue dotted line where your feature will be snapped:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_perpendicular.png
+   :align: center
+
+   Perpendicular digitizing
+
+To draw a *parallel* feature, the steps are the same: click on the
+|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`p` twice), click on
+the segment you want to use as reference and start drawing your feature:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_parallel.png
+   :align: center
+
+   Parallel digitizing
+
+These two tools just find the right angle of the perpendicular and
+parallel angle and lock this parameter during your editing.
+
+Construction mode
+-----------------
+
+You can enable and disable *construction* mode by clicking on the
+|cadConstruction| :sup:`Construction` icon or with the :kbd:`c` keyboard
+shortcut. While in construction mode, clicking the map canvas won't add new
+vertexes, but will capture the clicks' positions so that you can use them as
+reference points to then lock distance, angle or x and y relative values.
+
+As an example, the construction mode can be used to draw some point
+at an exact distance from an existing point.
+
+With an existing point in the map canvas and the snapping mode correctly
+activated, you can easily draw other points at given distances and angles from
+it. In addition to the |cad| button, you have to activate also the
+*construction* mode by clicking the |cadConstruction| :sup:`Construction`
+icon or with the :kbd:`c` keyboard shortcut.
+
+Click next to the point from which you want to calculate the distance and click
+on the :guilabel:`d` box (:kbd:`d` shortcut) type the desired distance and press
+:kbd:`Enter` to lock the mouse position in the map canvas:
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
+   :align: center
+
+   Distance from point
+
+Before adding the new point, press :kbd:`c` to exit the construction mode.
+Now, you can click on the map canvas, and the point will be placed at
+the distance entered.
+
+You can also use the angle constraint to, for example, create another point at
+the same distance of the original one, but at a particular angle from the newly
+added point. Click the |cadConstruction| :sup:`Construction` icon or with the
+:kbd:`c` keyboard shortcut to enter construction mode. Click the recently added
+point, and then the other one to set a direction segment. Then, click on the
+:guilabel:`d` text box (:kbd:`d` shortcut) type the desired distance and press
+:kbd:`Enter`. Click the :guilabel:`a` text box (:kbd:`a` shortcut) type the
+angle you want and press :kbd:`Enter`. The mouse position will be locked both in
+distance and angle.
+
+.. only:: html
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_angle_point.png
+   :align: center
+
+   Distance and angle from points
+
+Before adding the new point, press :kbd:`c` to exit the construction mode. Now,
+you can click on the map canvas, and the point will be placed at the distance
+and angle entered. Repeating the process, several points can be added.
+
+.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
+   :align: center
+
+   Points at given distance and angle
 
 
 .. index:: Create new layers
@@ -1039,13 +1261,14 @@ with X,Y,Z coordinates).
    Creating a new Shapefile layer dialog
 
 To complete the creation of the new shapefile layer, add the desired attributes
-by clicking on the **[Add to attributes list]** button and specifying a name and type for the
-attribute. A first 'id' column is added as default but can be removed, if not
-wanted. Only :guilabel:`Type: real` |selectString|, :guilabel:`Type: integer`
-|selectString|, :guilabel:`Type: string` |selectString| and :guilabel:`Type:date` |selectString|
-attributes are supported. Additionally and according to the attribute type, you can also define
-the width and precision of the new attribute column. Once you are happy with
-the attributes, click **[OK]** and provide a name for the shapefile. QGIS will
+by clicking on the **[Add to attributes list]** button and specifying a name and
+type for the attribute. A first 'id' column is added as default but can be
+removed, if not wanted. Only :guilabel:`Type: real` |selectString|,
+:guilabel:`Type: integer` |selectString|, :guilabel:`Type: string`
+|selectString| and :guilabel:`Type:date` |selectString| attributes are
+supported. Additionally and according to the attribute type, you can also define
+the width and precision of the new attribute column. Once you are happy with the
+attributes, click **[OK]** and provide a name for the shapefile. QGIS will
 automatically add a :file:`.shp` extension to the name you specify. Once the
 layer has been created, it will be added to the map, and you can edit it in the
 same way as described in section :ref:`sec_edit_existing_layer` above.
@@ -1113,4 +1336,3 @@ and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath |radioButtonOn|:guil
 |radioButtonOff|:guilabel:`Line` and |radioButtonOff|:guilabel:`Polygon` Layers.
 Temporary Scratch Layers are not saved and will be discarded when QGIS is closed.
 See also :ref:`paste_into_layer`.
-

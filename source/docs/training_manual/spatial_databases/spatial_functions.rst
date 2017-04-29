@@ -59,7 +59,7 @@ Installing on Other Platforms
 -------------------------------------------------------------------------------
 
 The `PostGIS website download <http://postgis.net/install/>`_ has information about
-installing on other platforms including MacOSX and on other linux distributions
+installing on other platforms including macOS and on other linux distributions
 
 Configuring Databases to use PostGIS
 -------------------------------------------------------------------------------

@@ -5,6 +5,12 @@
 Shapes tools
 ============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Create graticule
 ----------------
 

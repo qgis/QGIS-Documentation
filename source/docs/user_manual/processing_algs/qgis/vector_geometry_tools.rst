@@ -5,6 +5,12 @@
 Vector geometry
 ===============
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Check validity
 --------------
 

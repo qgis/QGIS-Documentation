@@ -98,6 +98,10 @@ click the "Fix Me" link at the bottom of the page to open its source file in Edi
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo and
    your changes will be applied in a new branch of your repository.
+   
+   Note that if you have commit rights to QGIS-Documentation repository, then
+   no message will show and you'll directly modify ``qgis:master`` branch itself
+   unless you save your changes in another branch.
 #. Do your changes following guidelines available at
    http://docs.qgis.org/testing/en/docs/documentation_guidelines/
 #. When you finish, at the bottom of the page, comment a bit what your changes
@@ -218,7 +222,7 @@ Local repository
 
 Now you are ready to get a local clone of **your** QGIS-Documentation repository:
 
-::
+.. code-block:: bash
 
   $ cd ~/Documents/Development/QGIS/
   $ git clone git@github.com:<YourName>/QGIS-Documentation.git
@@ -234,7 +238,7 @@ with your user name.
 
 Check it:
 
-::
+.. code-block:: bash
 
   $ git remote -v
   origin  git@github.com:<YourName>/QGIS-Documentation.git (fetch)
@@ -260,7 +264,7 @@ To be able to follow the work in the main project, add a new remote repository
 in your local repository. This new remote repository is the QGIS-Documentation
 repository from QGIS project:
 
-::
+.. code-block:: bash
 
   $ git remote add upstream git@github.com:qgis/QGIS-Documentation.git
   $ git remote -v
@@ -289,7 +293,7 @@ For testing doc (``master`` branch)
 Before working on a new contribution, you should always update your local master
 branch in your local repository. Just run this command line:
 
-::
+.. code-block:: bash
 
   # switch to master branch (it is easy to forget this step!)
   $ git checkout master
@@ -317,7 +321,7 @@ When you clone the repository (see :ref:`local_repository`), your clone has all
 the branches of the upstream repository.
 As above, you need to ensure your branch is up to date with the upstream's:
 
-::
+.. code-block:: bash
 
   # change branch e.g. for 2.14 LTR
   $ git checkout manual_en_2.14
@@ -340,7 +344,7 @@ Now that your base branch is updated, you need to create a dedicated branch
 in which you add your contribution. Always work on a branch other than the
 base branch! Always!
 
-::
+.. code-block:: bash
 
    $ git checkout -b myNewBranch
    # checkout means go to the branch
@@ -368,7 +372,9 @@ Few words about commit/push commands:
   ticket: your commit will close the ticket.
 
 Now that your changes are saved and committed in your local branch,
-you need to send them to your remote repository in order to create pull request::
+you need to send them to your remote repository in order to create pull request:
+
+.. code-block:: bash
 
    $ git push origin myNewBranch
 
@@ -390,7 +396,7 @@ After your PR has been merged into the official QGIS-Documentation, you can
 delete your branch. If you work a lot this way, in few weeks you will get a lot
 of unuseful branches. So keep your repository clean this way:
 
-::
+.. code-block:: bash
 
   # delete local branch
   $ git branch -d myNewBranch

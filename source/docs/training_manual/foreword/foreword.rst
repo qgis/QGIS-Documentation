@@ -109,7 +109,8 @@ Data
 ----
 
 .. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip. You can save the files in a folder named **exercise_data**.
+   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip.
+   You can save the files in a folder named **exercise_data**.
 
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
@@ -118,6 +119,16 @@ from the following sources:
 * Property boundaries (urban and rural), water bodies from NGI (http://www.ngi.gov.za/)
 * SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
 
+Source files and Issue reports
+-------------------------------
+
+The source of this document is available at GitHub `QGIS Documentation repository
+<https://github.com/qgis/QGIS-Documentation>`_. Consult `GitHub.com
+<https://github.com/>`_ for instructions on how to use the git version control
+system.
+
+Despite our efforts, you could find some errors or miss some information while following
+this training. Please report them at https://github.com/qgis/QGIS-Documentation/issues.
 
 Latest Version
 --------------

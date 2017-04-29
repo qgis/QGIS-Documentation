@@ -1,4 +1,4 @@
-.. index:: geometry; handling
+.. index:: Geometry; Handling
 
 .. _geometry:
 
@@ -24,7 +24,7 @@ The coordinates of geometries can be in any coordinate reference system (CRS).
 When fetching features from a layer, associated geometries will have
 coordinates in CRS of the layer.
 
-.. index:: geometry; construction
+.. index:: Geometry; Construction
 
 Geometry Construction
 =====================
@@ -33,11 +33,12 @@ There are several options for creating a geometry:
 
 * from coordinates
 
-  ::
+  .. code-block:: python
 
     gPnt = QgsGeometry.fromPoint(QgsPoint(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygon([[QgsPoint(1, 1), QgsPoint(2, 2), QgsPoint(2, 1)]])
+    gPolygon = QgsGeometry.fromPolygon([[QgsPoint(1, 1), QgsPoint(2, 2),
+                                        QgsPoint(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint` class.
 
@@ -63,7 +64,7 @@ There are several options for creating a geometry:
     g.setWkbAndOwnership(wkb, len(wkb))
 
 
-.. index:: geometry; access to
+.. index:: Geometry; Access to
 
 Access to Geometry
 ==================
@@ -98,13 +99,13 @@ vector type. How to use accessors
   >>> gPolygon.asPolygon()
   [[(1, 1), (2, 2), (2, 1), (1, 1)]]
 
-Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` objects,
-the values are accessible with :func:`x` and :func:`y` methods.
+.. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint`
+   objects, the values are accessible with :func:`x` and :func:`y` methods.
 
 For multipart geometries there are similar accessor functions:
 :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`.
 
-.. index:: geometry; predicates and operations
+.. index:: Geometry; Predicates and operations
 
 Geometry Predicates and Operations
 ==================================
@@ -119,7 +120,7 @@ Here you have a small example that combines iterating over the features in a
 given layer and performing some geometric computations based on their
 geometries.
 
-::
+.. code-block:: python
 
   # we assume that 'layer' is a polygon layer
   features = layer.getFeatures()
@@ -134,7 +135,7 @@ distance calculation, the :class:`QgsDistanceArea` class can be used. If
 projections are turned off, calculations will be planar, otherwise they'll be
 done on the ellipsoid. 
 
-::
+.. code-block:: python
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')

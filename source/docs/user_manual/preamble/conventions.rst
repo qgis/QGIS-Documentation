@@ -81,14 +81,13 @@ GUI sequences and small amounts of text may be formatted inline: Click
 |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS --> Quit
 to close QGIS`. This indicates that on Linux, Unix and Windows
 platforms, you should click the File menu first, then Quit, while on
-Macintosh OS X platforms, you should click the QGIS menu first, then
-Quit.
+macOS platforms, you should click the QGIS menu first, then Quit.
 
 Larger amounts of text may be formatted as a list:
 
 * |nix| Do this
 * |win| Do that
-* |osx| Do something else
+* |osx| Or do that
 
 or as paragraphs:
 
@@ -96,8 +95,7 @@ or as paragraphs:
 and this and this and this, and this and this and this.
 
 |win| Do that. Then do that and that and that, and that and that and
-that, and that and that and that, and that and that and that, and that
-and that and that.
+that, and that and that and that, and that and that.
 
 Screenshots that appear throughout the user guide have been created on
 different platforms; the platform is indicated by the

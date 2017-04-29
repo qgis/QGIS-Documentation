@@ -17,7 +17,8 @@ more complex data sources which may or may not be available for your region.
   these instructions if you wish to replace the default data sets.
 
 .. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip. You can save the files in a folder named **exercise_data**.
+   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip.
+   You can save the files in a folder named **exercise_data**.
 
 
 |hard| |TY|
@@ -34,7 +35,7 @@ water, such as streams and rivers.
 
 * Open a new QGIS project
 * In the :guilabel:`Vector` menu dropdown, select
-  :guilabel:`OpenStreetMap --> Download Data`. You can then manually enter the
+  :menuselection:`OpenStreetMap --> Download Data`. You can then manually enter the
   co-ordinates of the region you wish to use, or you can use an existing layer
   to set the co-ordinates.
 * Choose a location to save the resulting .osm file and click :guilabel:`Ok`:
@@ -56,7 +57,8 @@ water, such as streams and rivers.
    :align: center
 
 This will load three layers into your map which relate to OSM's naming
-conventions (you may need to zoom in/out to see the vector data).
+conventions (you may need to |zoomFullExtent| :sup:`Zoom Full` to see the
+vector data).
 
 .. _figure_osm_data_loaded:
 

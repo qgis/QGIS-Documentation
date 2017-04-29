@@ -5,6 +5,12 @@
 Imagery classification
 ======================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Change detection
 ----------------
 

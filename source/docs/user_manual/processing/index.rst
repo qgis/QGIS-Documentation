@@ -13,12 +13,10 @@ QGIS processing framework
 
     intro
     toolbox
+    history
     modeler
     batch
     console
-    history
     scripts
     3rdParty
     commander
-
-

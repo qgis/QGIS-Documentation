@@ -11,7 +11,7 @@ Introduction
 ============
 
 QGIS Documentation will
-be built automatically on the server at 0, 8am, 4pm PDT (Pacific Daylight Time).
+be built automatically on the server at 0, 8am, 4pm US/Pacific (Pacific Time).
 The current status is available at http://docs.qgis.org.
 
 QGIS Documentation is mainly written using the reStructuredText (reST) format syntax,
@@ -231,7 +231,7 @@ Figure
 
 ::
 
-   .. _figure_readme:
+   .. _figure_logo:
 
    .. figure:: /static/common/qgislogo.png
       :width: 20 em
@@ -242,7 +242,7 @@ Figure
 
 The result looks like this:
 
-.. _figure_readme:
+.. _figure_logo:
 
 .. figure:: /static/common/qgislogo.png
    :width: 20 em
@@ -250,32 +250,36 @@ The result looks like this:
 
    A caption: A logo I like
 
-Use ``.. only:: html`` to make the number to the figure (**Figure Readme**)
-visible only in the html files.
+To avoid possible conflict with another references, always begin figures
+anchor with ``_figure_`` and prefer using terms that can easily refer to the
+figure caption. While only the centered alignment is mandatory for the image,
+feel free to use any other options for figure (such as ``width``,
+``height``, ``scale``...) if needed.
+
 The scripts will insert an automatical generated number before the caption of
 the figure in pdf.
 
-To use a caption (see My caption) just insert indented text after a blank line
+To use a caption (*see My caption*) just insert indented text after a blank line
 in the figure block.
 
 Referencing to the figure can be done using the reference label like this
 
 ::
 
-   (see Figure_readme_).
+   (see Figure_logo_).
 
-
-It will show the anchor Figure_readme_. You can use uppercase if you want.
-It can be used in the same :file:`.rst` document but not in other .rst
-documents.
-
-You can not use the ``:ref:`` role for reference anymore, because in html the reference
-to the caption is lost (it now refers to the place before **Figure Readme:**)
+It will show the anchor Figure_logo_. You can use uppercase if you want.
+It can be used in the same :file:`.rst` document but not in others.
+You can still use the ``:ref:`` role for reference from other files, but
+keep in mind that this returns the full caption of the image.
 
 ::
 
-   see :ref:`figure_readme`, does not work due to the lost reference to
-   the caption of the figure, this is not a 'bug' but a choice we made!
+   see :ref:`figure_logo`
+   
+returns:
+
+see :ref:`figure_logo`
 
 
 Tables
@@ -301,7 +305,7 @@ You can also use more complicated tables by drawing them using references and al
    .. _my_drawn_table:
 
    +---------------+--------------------+
-   | Windows       | Mac OSX            |
+   | Windows       | macOS              |
    +---------------+--------------------+
    | |win|         | |osx|              |
    +---------------+--------------------+
@@ -317,7 +321,7 @@ The result:
 .. _my_drawn_table:
 
 +---------------+--------------------+
-| Windows       | Mac OSX            |
+| Windows       | macOS              |
 +---------------+--------------------+
 | |win|         | |osx|              |
 +---------------+--------------------+
@@ -386,8 +390,8 @@ Which will point to:
 
  .. [1] Updates of core plugins
 
-Managing Screnshots
-===================
+Managing Screenshots
+====================
 
 Add new Screenshots
 -------------------
@@ -405,14 +409,15 @@ For the user guide they go into :file:`./resources/en/user_manual/`
 * don't resize them in an image editor, the size will be set into the rst files if necessary
   (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
-* Set print size resolution to 135 dpi, eg in Gimp set the print resolution
-  (image > print size) and save. This way, if no size is set in the rst files,
-  images will be at original size in html and at a good print resolution in the PDF.
-  You can use ImageMagick convert command to do a batch of images:
+* make the top corners transparent if the background is not white
+* Set print size resolution to 135 dpi (e.g. in Gimp set the print resolution
+  :menuselection:`image --> print size` and save). This way, images will be at
+  original size in html and at a good print resolution in the PDF.
+  You can also use ImageMagick convert command to do a batch of images
 
 ::
 
- convert -units PixelsPerInch input.png -density 135 output.png
+  convert -units PixelsPerInch input.png -density 135 output.png
 
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the text

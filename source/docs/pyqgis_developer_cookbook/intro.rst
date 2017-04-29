@@ -30,9 +30,10 @@ in detail in the following sections:
 
 Python bindings are also available for QGIS Server:
 
-* starting from 2.8 release, Python plugins are also available on QGIS Server (see: `Server Python Plugins <server_plugins>`_)
-* starting from 2.11 version (Master at 2015-08-11), QGIS Server library has Python bindings that can be used to embed QGIS Server into a Python application.
-
+* starting from 2.8 release, Python plugins are also available on QGIS Server
+  (see :ref:`Server Python Plugins <server_plugins>`)
+* starting from 2.11 version (Master at 2015-08-11), QGIS Server library has
+  Python bindings that can be used to embed QGIS Server into a Python application.
 
 .. index:: API
 
@@ -55,7 +56,7 @@ Run Python code when QGIS starts
 There are two distinct methods to run Python code every time QGIS starts.
 
 .. index::
-  pair: environment; PYQGIS_STARTUP
+  pair: Environment; PYQGIS_STARTUP
 
 PYQGIS_STARTUP environment variable
 -----------------------------------
@@ -72,7 +73,7 @@ homebrew or MacPorts installs on Mac.
 
 
 .. index::
-  pair: Python; startup.py
+  single: Python; startup.py
 
 The :file:`startup.py` file
 ----------------------------
@@ -83,7 +84,7 @@ it is executed by the embedded Python interpreter.
 
 
 .. index::
-  pair: Python; console
+  pair: Python; Console
 
 .. _pythonconsole:
 
@@ -120,7 +121,7 @@ For those which use the console often, it may be useful to set a shortcut
 for triggering the console (within menu :menuselection:`Settings --> Configure
 shortcuts...`)
 
-.. index:: Python; plugins
+.. index:: Python; Plugins
 
 Python Plugins
 ==============
@@ -308,5 +309,5 @@ usually two possibilities:
   of software.
 
 The two deployment models can be mixed - deploy standalone application on
-Windows and Mac OS X, for Linux leave the installation of QGIS up to user
+Windows and macOS, for Linux leave the installation of QGIS up to user
 and his package manager.

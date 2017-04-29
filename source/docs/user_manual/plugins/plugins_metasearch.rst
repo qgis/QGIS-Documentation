@@ -78,7 +78,9 @@ To all listed Catalogue Service entries, click the dropdown select box.
 To add a Catalogue Service entry, click the **[New]** button, and enter a
 :guilabel:`Name` for the service, as well as the :guilabel:`URL` (endpoint).
 Note that only the base URL is required (not a full GetCapabilities URL).
-Clicking **[OK]** will add the service to the list of entries.
+If the CSW requires authentication, enter the appropriate :guilabel:`User name`
+and :guilabel:`Password` credentials. Clicking **[OK]** will add the service to
+the list of entries.
 
 To edit an existing Catalogue Service entry, select the entry you would like to
 edit and click the **[Edit]** button, and modify the :guilabel:`Name` or
@@ -96,7 +98,7 @@ example of the XML file format.
 
   <?xml version="1.0" encoding="UTF-8"?>
   <qgsCSWConnections version="1.0">
-      <csw name="Data.gov CSW" url="http://catalog.data.gov/csw-all"/>
+      <csw name="Data.gov CSW" url="https://catalog.data.gov/csw-all"/>
       <csw name="Geonorge - National CSW service for Norway" url="http://www.geonorge.no/geonetwork/srv/eng/csw"/>
       <csw name="Geoportale Nazionale - Servizio di ricerca Italiano" url="http://www.pcn.minambiente.it/geoportal/csw"/>
       <csw name="LINZ Data Service" url="http://data.linz.govt.nz/feeds/csw"/>

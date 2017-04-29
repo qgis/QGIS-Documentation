@@ -5,6 +5,12 @@
 Table tools
 ===========
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 Change date format
 ------------------
 

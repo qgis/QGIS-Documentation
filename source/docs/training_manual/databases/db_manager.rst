@@ -76,7 +76,7 @@ metadata, but what if we wanted to alter the table to add an additional column
 perhaps? DB Manager allows you to do this directly. 
 
 * Select the table you want to edit in the tree
-* Select :guilabel:`Table --> Edit Table` from the menu to open the 
+* Select :menuselection:`Table --> Edit Table` from the menu to open the 
   :guilabel:`Table Properties` dialog.
 
 .. image:: /static/training_manual/databases/edit_table.png
@@ -145,7 +145,7 @@ Lets take a look at how we can perform a *VACUUM ANALYZE* command from within
 DB Manager. 
 
 * Select one of your tables in the DB Manager Tree.
-* Select :guilabel:`Table --> Run Vacuum Analyze` from the menu.
+* Select :menuselection:`Table --> Run Vacuum Analyze` from the menu.
 
 Thats it! PostgreSQL will perform the operation. Depending on how big your
 table is, this may take some time to complete.
@@ -195,8 +195,7 @@ Importing Data into a Database with DB Manager
 -------------------------------------------------------------------------------
 
 We have already looked at how to import data into a spatial database using 
-command line tools and also looked at how to use the SPIT plugin, so now lets
-learn how to use DB Manager to do imports.
+command line tools, so now let's learn how to use DB Manager to do imports.
 
 * Click the :guilabel:`Import layer/file` button on the toolbar in the DB
   Manager dialog.
