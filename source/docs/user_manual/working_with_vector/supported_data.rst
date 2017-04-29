@@ -221,7 +221,7 @@ first check that the file meets the following requirements:
    can have any name.
 #. The X and Y coordinates (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
-#. If you have any data that is not a string (text) and the file is a CSV file, you must have a CSVT file (see section :ref:`csvt_files`).  
+#. If you have any data that is not a string (text) and the file is a CSV file, you must have a CSVT file (see section :ref:`csvt_files`).
 
 As an example of a valid text file, we import the elevation point data file
 :file:`elevp.csv` that comes with the QGIS sample dataset (see section
@@ -312,9 +312,9 @@ unless it is told otherwise. You can create a CSVT file to tell OGR (and QGIS)
 what data type the different columns are:
 
 
-.. csv-table:: 
+.. csv-table::
     :header: "Type", "Name", "Example"
-    
+
     "Whole number", "Integer", 4
     "Decimal number", "Real", 3.456
     "Date", "Date (YYYY-MM-DD)", 2016-07-28
@@ -322,7 +322,7 @@ what data type the different columns are:
     "Date & Time", "DateTime (YYYY-MM-DD HH:MM:SS+nn)", 2016-07-28 18:33:12+00
 
 The CSVT file is a **ONE line** plain text file with the data types in quotes
-and separated by commas, e.g.:: 
+and separated by commas, e.g.::
 
 "Integer","Real","String"
 
@@ -395,7 +395,7 @@ PostGIS Layers
 --------------
 
 PostGIS layers are stored in a PostgreSQL database. The advantages of PostGIS
-are the spatial indexing, filtering and query capabilities it provides. Using
+are its spatial indexing, filtering and querying capabilities it provides. Using
 PostGIS, vector functions such as select and identify work more accurately than they do
 with OGR layers in QGIS.
 
@@ -567,12 +567,12 @@ and the system file, the user file takes precedence.
   * The service file should be saved in Unix format in order to work.
     One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
     and :menuselection:`Edit --> EOL Conversion --> UNIX Format --> File save`.
-  * You can add environmental variables in various ways; a tested one, known to work reliably, 
+  * You can add environmental variables in various ways; a tested one, known to work reliably,
     is :menuselection:`Control Panel --> System and Security --> System -->
     Advanced system settings --> Environment Variables` adding ``PGSERVICEFILE`` and
     the path of the type :file:`C:\Users\John\pg_service.conf`
   * After adding an environment variable you may also need to restart the computer.
-  
+
 
 .. _sec_postgis_details:
 
@@ -670,7 +670,7 @@ reference systems and projections.
 
 .. index:: ogr2ogr
    single: PostGIS; ogr2ogr
-   
+
 ogr2ogr
 .......
 
@@ -917,11 +917,11 @@ Optionally, you can activate following checkboxes:
 
 .. warning::
 
-   In the :guilabel:`Authentication` tab, saving **username** and **password** 
+   In the :guilabel:`Authentication` tab, saving **username** and **password**
    will keep unprotected credentials in the connection configuration. Those
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   *Authentication configuration* instead (:guilabel:`configurations` tab).
    See :ref:`authentication_index` for more details.
 
 Once all parameters and options are set, you can test the connection by
@@ -977,7 +977,7 @@ To load a layer from Oracle Spatial, perform the following steps:
 DB2 Spatial Layers
 ---------------------
 
-IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS (mainframe) 
+IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS (mainframe)
 and IBM DashDB products allow
 users to store and analyse spatial data in relational table columns.
 The DB2 provider for QGIS supports the full range of visualization, analysis
@@ -991,7 +991,7 @@ and manipulation of spatial data in these databases.
 User documentation on these capabilities can be found at the
 `DB2 z/OS KnowledgeCenter`_
 ,
-`DB2 LUW KnowledgeCenter`_ 
+`DB2 LUW KnowledgeCenter`_
 and
 `DB2 DashDB KnowledgeCenter`_.
 
@@ -1009,9 +1009,9 @@ The client running QGIS needs to have one of the following installed:
 * IBM Data Server Driver Package
 * IBM Data Server Client
 
-If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as a client, 
+If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as a client,
 the DB2 executables and supporting files need to be included in the Windows path.
-This can be done by creating a batch file like the following with the name **db2.bat** and including it in the directory 
+This can be done by creating a batch file like the following with the name **db2.bat** and including it in the directory
 **%OSGEO4W_ROOT%/etc/ini**.
 
 ::
@@ -1030,14 +1030,14 @@ Creating a stored Connection
 Windows includes ODBC by default.
 
 The first time you use an DB2 Spatial data source,
-you must create a connection to the database that contains the data. 
+you must create a connection to the database that contains the data.
 A connection can be created by:
 
-* Right-clicking on  |db2| :menuselection:`DB2` in the QGIS Browser panel 
+* Right-clicking on  |db2| :menuselection:`DB2` in the QGIS Browser panel
   and selecting :menuselection:`New connection`
-  
-or  
-  
+
+or
+
 * Selecting the |addDb2Layer| :menuselection:`Add DB2
   Spatial Layer...` option from the :menuselection:`Layer` menu.
   To access the connection manager, click on the **[New]**
@@ -1067,11 +1067,11 @@ A driver / host / host connection requires in addition:
 
 .. warning::
 
-   In the :guilabel:`Authentication` tab, saving **username** and **password** 
+   In the :guilabel:`Authentication` tab, saving **username** and **password**
    will keep unprotected credentials in the connection configuration. Those
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab). 
+   *Authentication configuration* instead (:guilabel:`configurations` tab).
    See :ref:`authentication_index` for more details.
 
 Once all parameters and options are set, you can test the connection by
@@ -1082,7 +1082,7 @@ Loading a DB2 Spatial Layer
 
 |addDb2Layer| Once you have one or more connections defined, you can
 load layers from the DB2 database. A DB2 Spatial layer is defined by a row in the
-**DB2GSE.ST_GEOMETRY_COLUMNS** view. 
+**DB2GSE.ST_GEOMETRY_COLUMNS** view.
 
 To load a layer from DB2 Spatial, perform the following steps:
 
@@ -1103,14 +1103,14 @@ To load a layer from DB2 Spatial, perform the following steps:
 Or more simply, expand the |db2| :menuselection:`DB2` connection in the QGIS Browser panel
 and double-click the name of the layer.
 
-.. note:: 
+.. note::
 
   In order to work effectively with DB2 spatial tables in QGIS, it is important that
   tables have an INTEGER or BIGINT column defined as PRIMARY KEY and if new features
   are going to be added, this column should also have the GENERATED characteristic.
 
   It is also helpful for the spatial column to be registered with a specific spatial
-  reference identifier (most often 4326 for WGS84 coordinates). 
+  reference identifier (most often 4326 for WGS84 coordinates).
   A spatial column can be registered by calling the ST_Register_Spatial_Column stored
-  procedure.   
+  procedure.
 
