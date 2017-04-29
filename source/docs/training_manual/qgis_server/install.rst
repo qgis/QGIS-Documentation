@@ -220,11 +220,11 @@ Enable, start and check the status of the ``xvfb.service``:
    sudo systemctl start xvfb.service
    sudo systemctl status xvfb.service
 
- In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
- that tells QGIS Server instances to use display no. 99. If you're running the
- Server in Desktop then there's no need to install xvfb and you should simply
- comment with ``#`` this specific setting in the configuration file.
- More info at http://www.itopen.it/qgis-server-setup-notes/.
+In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
+that tells QGIS Server instances to use display no. 99. If you're running the
+Server in Desktop then there's no need to install xvfb and you should simply
+comment with ``#`` this specific setting in the configuration file.
+More info at http://www.itopen.it/qgis-server-setup-notes/.
 
 Now that Apache knows that he should answer requests to http://qgisplatform.demo
 we also need to setup the client system so that it knows who ``qgisplatform.demo``
