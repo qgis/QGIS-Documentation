@@ -533,7 +533,7 @@ Changes will apply to **all selected features** and are made as a single edit
 command. So pressing |undo| :sup:`Undo` will rollback the attribute changes for
 all selected features at once.
 
-Multi edit mode is only available for auto generated and drag and drop forms 
+Multi edit mode is only available for auto generated and drag and drop forms
 (see :ref:`customize_form`); it is not supported by custom ui forms.
 
 .. index:: Non Spatial Attribute Tables, Geometryless Data
@@ -685,3 +685,43 @@ to assign the current airport to another region.
    :align: center
 
    Identification dialog airport with relation to regions
+
+.. index:: Many-to-many relation; Relation
+
+N-M relation
+-------------
+
+N-M relation are many-to-many relation between two tables. For instance, the
+*Shop* and *Product* layers. A product is sold in several shop and a shop
+sells several products.
+
+In such case, we have a pivot table to list all products for all shops. In QGIS,
+you should setup two one-to-many relations as explain above, see
+:ref:`vector_relations`. One for the relation between *Product* table and the
+pivot table and the second one between *Shop* and the pivot table.
+
+When we add a new child (i.e. a product in a shop), QGIS will add a new row in
+the pivot table and in the *Product* table. If we link a product to a shop,
+QGIS will only add a row in the pivot table.
+
+In case you want to remove a link, a product or a shop, QGIS won't remove the
+row in the pivot table. The database administrator should add a *ON DELETE
+CASCADE* in the foreign key constraint:
+
+.. code-block:: sql
+
+   ALTER TABLE location.product
+   ADD CONSTRAINT location_product_shop_id_fkey
+      FOREIGN KEY (id)
+         REFERENCES location.shop(id)
+            ON DELETE CASCADE;
+
+Note that you should be in transaction mode when working on such context. QGIS
+should be able to add or update row(s) in all tables (product, shop and the
+pivot table).
+
+Finally, adding such relations in a form is done in the same way that for a
+one-to-many relation. The *relation* panel in the :guilabel:`Fields` properties
+of the vector layer will let the user add the relation in the form. It will
+appear as a *Many to many relation*.
+
