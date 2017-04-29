@@ -348,6 +348,34 @@ Icon                                Substitution                            Icon
 ==================================  ======================================  =============================  ================================
 
 
+Vector Menu Icons
+...................
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|matrix|                        ``|matrix|``                        |unique|                        ``|unique|``
+|sumLines|                      ``|sumLines|``                      |sumPoints|                     ``|sumPoints|``
+|basicStatistics|               ``|basicStatistics|``               |neighbor|                      ``|neighbor|``
+|mean|                          ``|mean|``                          |intersections|                 ``|intersections|``
+|randomSelection|               ``|randomSelection|``               |subSelection|                  ``|subSelection|``
+|randomPoints|                  ``|randomPoints|``                  \                                \
+|regularPoints|                 ``|regularPoints|``                 |vectorGrid|                    ``|vectorGrid|``
+|selectLocation|                ``|selectLocation|``                |layerExtent|                   ``|layerExtent|``
+|convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
+|intersect|                     ``|intersect|``                     |union|                         ``|union|``
+|symDifference|                 ``|symDifference|``                 |clip|                          ``|clip|``
+|difference|                    ``|difference|``                    |dissolve|                      ``|dissolve|``
+|checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
+|delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
+|simplify|                      ``|simplify|``                      |joinLocation|                  ``|joinLocation|``
+|multiToSingle|                 ``|multiToSingle|``                 |singleToMulti|                 ``|singleToMulti|``
+|toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
+|exportProjection|              ``|exportProjection|``              |defineProjection|              ``|defineProjection|``
+|splitLayer|                    ``|splitLayer|``                    |mergeShapes|                   ``|mergeShapes|``
+==============================  ==================================  ==============================  ==================================
+
+
 Plugin Icons
 ============
 
@@ -370,35 +398,6 @@ Icon                            Substitution                        Icon        
 |selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
 |topologychecker|               ``|topologychecker|``               |oracleRaster|                  ``|oracleRaster|``
-==============================  ==================================  ==============================  ==================================
-
-
-FTools Icons
-............
-
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|ftools|                        ``|ftools|``                        \                               \
-|matrix|                        ``|matrix|``                        |unique|                        ``|unique|``
-|sumLines|                      ``|sumLines|``                      |sumPoints|                     ``|sumPoints|``
-|basicStatistics|               ``|basicStatistics|``               |neighbor|                      ``|neighbor|``
-|mean|                          ``|mean|``                          |intersections|                 ``|intersections|``
-|randomSelection|               ``|randomSelection|``               |subSelection|                  ``|subSelection|``
-|randomPoints|                  ``|randomPoints|``                  \                                \
-|regularPoints|                 ``|regularPoints|``                 |vectorGrid|                    ``|vectorGrid|``
-|selectLocation|                ``|selectLocation|``                |layerExtent|                   ``|layerExtent|``
-|convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
-|intersect|                     ``|intersect|``                     |union|                         ``|union|``
-|symDifference|                 ``|symDifference|``                 |clip|                          ``|clip|``
-|difference|                    ``|difference|``                    |dissolve|                      ``|dissolve|``
-|checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
-|delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
-|simplify|                      ``|simplify|``                      |joinLocation|                  ``|joinLocation|``
-|multiToSingle|                 ``|multiToSingle|``                 |singleToMulti|                 ``|singleToMulti|``
-|toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
-|exportProjection|              ``|exportProjection|``              |defineProjection|              ``|defineProjection|``
-|splitLayer|                    ``|splitLayer|``                    |mergeShapes|                   ``|mergeShapes|``
 ==============================  ==================================  ==============================  ==================================
 
 

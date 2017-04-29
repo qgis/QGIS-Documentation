@@ -564,8 +564,6 @@ rst_epilog = """
    :width: 1.5em
 .. |frame|  image:: /static/common/frame.png
    :width: 1.5em
-.. |ftools| image:: /static/common/ftools_logo.png
-   :width: 1.5em
 .. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
    :width: 1.5em
 .. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png

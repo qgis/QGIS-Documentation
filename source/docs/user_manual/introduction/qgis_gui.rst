@@ -260,11 +260,11 @@ Vector
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 :menuselection:`OpenStreetMap -->`                              \                     see :ref:`open_street_map`                  \
-|analysis| :menuselection:`Analysis Tools -->`                  \                     see :ref:`ftools`                           \
-|sampling| :menuselection:`Research Tools -->`                  \                     see :ref:`ftools`                           \
-|geoprocessing| :menuselection:`Geoprocessing Tools -->`        \                     see :ref:`ftools`                           \
-|geometry| :menuselection:`Geometry Tools -->`                  \                     see :ref:`ftools`                           \
-|management| :menuselection:`Data Management Tools -->`         \                     see :ref:`ftools`                           \
+|analysis| :menuselection:`Analysis Tools -->`                  \                     see :ref:`vector_menu`                      \
+|sampling| :menuselection:`Research Tools -->`                  \                     see :ref:`vector_menu`                      \
+|geoprocessing| :menuselection:`Geoprocessing Tools -->`        \                     see :ref:`vector_menu`                      \
+|geometry| :menuselection:`Geometry Tools -->`                  \                     see :ref:`vector_menu`                      \
+|management| :menuselection:`Data Management Tools -->`         \                     see :ref:`vector_menu`                      \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.
