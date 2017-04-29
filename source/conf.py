@@ -751,6 +751,8 @@ rst_epilog = """
    :width: 1.5em
 .. |iconSettingsConsole|  image:: /static/common/iconSettingsConsole.png
    :width: 1.5em
+.. |iconeShowEditorConsole| image:: /static/common/iconShowEditorConsole.png
+   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |import| image:: /static/common/mIconImport.gif
