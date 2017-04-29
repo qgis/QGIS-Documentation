@@ -91,19 +91,19 @@ First we need to install Apache by running the following command in a terminal:
 ``apt-get install apache2 libapache2-mod-fcgid``.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
-called :file:`qgisplatform.demo.conf`, with this content:
+called :file:`qgis.demo.conf`, with this content:
 
 .. code-block:: apacheconf
 
  <VirtualHost *:80>
    ServerAdmin webmaster@localhost
-   ServerName qgisplatform.demo
+   ServerName qgis.demo
 
    DocumentRoot /var/www/html
 
    # Apache logs (different than QGIS Server log)
-   ErrorLog ${APACHE_LOG_DIR}/qgisplatform.demo.error.log
-   CustomLog ${APACHE_LOG_DIR}/qgisplatform.demo.access.log combined
+   ErrorLog ${APACHE_LOG_DIR}/qgis.demo.error.log
+   CustomLog ${APACHE_LOG_DIR}/qgis.demo.access.log combined
 
    # Longer timeout for WPS... default = 40
    FcgidIOTimeout 120
@@ -151,7 +151,7 @@ called :file:`qgisplatform.demo.conf`, with this content:
  </VirtualHost>
 
 You can do the above in a linux Desktop system by pasting and saving the above
-configuration after doing ``sudo nano /etc/apache2/sites-available/qgisplatform.demo.conf``.
+configuration after doing ``sudo nano /etc/apache2/sites-available/qgis.demo.conf``.
 
 .. note:: See some of the configuration options are explained in the Server
  :ref:`server_env_variables` section.
@@ -180,7 +180,7 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
 .. code-block:: bash
 
  sudo a2enmod fcgid
- sudo a2ensite qgisplatform.demo
+ sudo a2ensite qgis.demo
  sudo service apache2 restart
 
 .. note::
@@ -227,14 +227,29 @@ Server in Desktop then there's no need to install xvfb and you should simply
 comment with ``#`` this specific setting in the configuration file.
 More info at http://www.itopen.it/qgis-server-setup-notes/.
 
-Now that Apache knows that he should answer requests to http://qgisplatform.demo
-we also need to setup the client system so that it knows who ``qgisplatform.demo``
-is. We do that by adding ``127.0.0.1 qgisplatform.demo`` in the
+Now that Apache knows that he should answer requests to http://qgis.demo
+we also need to setup the client system so that it knows who ``qgis.demo``
+is. We do that by adding ``127.0.0.1 qgis.demo`` in the
 `hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
-with ``sudo sh -c "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"``.
+with ``sudo sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
+Replace ``127.0.0.1`` with the IP of your server.
+
+.. note::
+
+   Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
+   be configured for our setup to work.
+   You can also test the access to your QGIS Server from other clients on the
+   network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
+   file and point the ``myhost`` name to whatever IP the server machine has on the
+   network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
+   the local IP, only accessible from the local machine.  On ``*nix`` machines the
+   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
+   the :file:`C:\\Windows\\System32\\drivers\\etc` directory. Under Windows you
+   need to start your text editor with administrator privileges before opening
+   the hosts file.
 
 We can test one of the installed qgis servers with a http request from command
-line with ``curl http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi`` which
+line with ``curl http://qgis.demo/cgi-bin/qgis_mapserv.fcgi`` which
 should output:
 
 .. code-block:: xml
@@ -290,7 +305,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 * Apache doesn't know that he's supposed to answer requests pointing to the server
   named ``myhost``. In order to setup the virtual host the simplest way would
   be to make a ``myhost.conf`` file in the :file:`/etc/apache/sites-available`
-  directory that has the same content as file:`qgisplatform.demo.conf` except
+  directory that has the same content as file:`qgis.demo.conf` except
   for the ``ServerName`` line that should be ``ServerName myhost``. You could
   also change where the logs go as otherwise the logs for the two virtual hosts
   would be shared but this is optional.
@@ -298,20 +313,6 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
   and then reload the Apache service with ``sudo systemctl reload apache2``.
 * If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url
   you'll notice everything is working now!
-
-.. note::
-
-   Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files should
-   be configured for our setup to work.
-   You can also test the access to your QGIS Server from other clients on the
-   network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
-   file and point the ``myhost`` name to whatever IP the server machine has on the
-   network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
-   the local IP, only accessible from the local machine. On ``*nix`` machines the
-   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
-   the :file:`C:\\Windows\\System32\\drivers\\etc` directory. Under Windows you
-   need to start your text editor with administrator privileges before opening
-   the hosts file.
 
 |IC|
 -------------------------------------------------------------------------------
