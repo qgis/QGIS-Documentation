@@ -220,6 +220,18 @@ to define:
 
    Conditional Formatting of an attribute table
 
+Managing columns
+=================
+
+You can hide columns or change their width (either setting the width or with
+the :guilabel:`Autosize` setting) by right-clicking in the table header. To
+change several columns behavior at once, unhide a column or change the order of
+the columns, choose :guilabel:`Organize columns ...`. In this dialog, you can
+also add a new :guilabel:`Actions` column that adds a dropdown or button list of
+actions for each row, see :ref:`actions_menu` for more information about actions.
+Finally, one can choose to sort the rows with the :guilabel:`sort` and write an
+expression, e.g. to sort the row in regards of multi-column you can write
+`concat(col0, col1)`.
 
 .. index::
    pair: Attributes; Selection
@@ -343,18 +355,17 @@ To clear the filter, either select :guilabel:`Show all features` option
 mentioned in :ref:`filter_features`, or click the clear the expression and
 click **[Apply]**.
 
-Zoom to feature
+Action on cells
 ===============
 
-To zoom into a feature, without having to select it, right-click on the feature
-you want to zoom in, within the attribute table, and select :guilabel:`Zoom to
-feature`.
+Users have several possibilities to manipulate feature with the contextual menu
+like:
 
-Copy cell content
-=================
-
-To copy the content of a cell in the clipboard, right-click on the feature within
-the attribute table and select :guilabel:`Copy cell content`.
+* Select all (:kbd:`Ctrl+A`) the features
+* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`.
+* Zoom into a feature, without having to select it with :guilabel:`Zoom to feature`.
+* Open form. It toggles attribute table into form view with a focus on the
+  clicked feature
 
 .. _figure_copy_cell:
 
@@ -363,15 +374,20 @@ the attribute table and select :guilabel:`Copy cell content`.
 
     Copy cell content button
 
+
+You can also display a list of actions in this contextual menu. This is enabled in the
+:guilabel:`Actions` tab in the :menuselection:`Layer properties --> Actions tab`.
+See :ref:`actions_menu` for more information on actions.
+
 Save selected features as new layer
 ===================================
 
 The selected features can be saved as any OGR-supported vector format and
-also transformed into another coordinate reference system (CRS). Just open
-the right mouse menu of the layer and click on :menuselection:`Save
-as` to define the name of the output file, its format and CRS (see section
-:ref:`label_legend`). To save the selection ensure that the |checkbox|
-:menuselection:`Save only selected features` is selected.
+also transformed into another coordinate reference system (CRS). In the
+contextual menu of the layer, from the :guilabel:`Layers Panel`, click on
+:menuselection:`Save as` to define the name of the output file, its format
+and CRS (see section :ref:`label_legend`). To save the selection ensure
+that the |checkbox| :menuselection:`Save only selected features` is selected.
 It is also possible to specify OGR creation options within the dialog.
 
 .. _paste_into_layer:
