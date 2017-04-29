@@ -587,6 +587,8 @@ trouble loading a PostgreSQL table into QGIS, the information below may
 help you understand any QGIS messages and give you direction on changing
 the PostgreSQL table or view definition to allow QGIS to load it.
 
+**Primary key**
+
 QGIS requires that PostgreSQL layers contain a column that can be used
 as a unique key for the layer. For tables, this usually means that the table
 needs a primary key, or a column with a unique constraint on it. In QGIS,
@@ -596,6 +598,8 @@ these items, the oid column will be used instead. Performance will be
 improved if the column is indexed (note that primary keys are automatically
 indexed in PostgreSQL).
 
+**View**
+
 If the PostgreSQL layer is a view, the same requirement exists, but views
 do not have primary keys or columns with unique constraints on them. You have to
 define a primary key field (has to be integer) in the QGIS dialog before you
@@ -604,20 +608,26 @@ will not load the layer. If this occurs, the solution is to alter the view so
 that it does include a suitable column (a type of integer and either a primary
 key or with a unique constraint, preferably indexed).
 
+**Define primary key**
+
 QGIS offers a checkbox **Select at id** that is activated by default. This
 option gets the ids without the attributes which is faster in most cases. It
 can make sense to disable this option when you use expensive views.
 
-.. tip:: **Backup of PostGIS database with layers saved by QGIS**
+**QGIS layer_style table and backup**
 
-   If you want to make a backup of your PostGIS database using the :file:`pg_dump` and
-   :file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
-   restore afterwards, you need to set the XML option to :file:`DOCUMENT` and the
-   restore will work.
+If you want to make a backup of your PostGIS database using the :file:`pg_dump` and
+:file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
+restore afterwards, you need to set the XML option to :file:`DOCUMENT` before the
+restore command:
 
+.. code-block:: SQL
+   SET XML OPTION DOCUMENT;
 
 .. %FIXME: Add missing information
 .. % When dealing with views, QGIS parses the view definition and
+
+**Filter database side**
 
 QGIS allows to filter features already on server side. Check the
 |checkbox| :guilabel:`Execute expressions on postgres server-side if
