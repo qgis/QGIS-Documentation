@@ -222,7 +222,8 @@ first check that the file meets the following requirements:
    can have any name.
 #. The X and Y coordinates (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
-#. If you have any data that is not a string (text) and the file is a CSV file, you must have a CSVT file (see section :ref:`csvt_files`).
+#. If you have any data that is not a string (text) and the file is a CSV file,
+   you must have a CSVT file (see section :ref:`csvt_files`).
 
 As an example of a valid text file, we import the elevation point data file
 :file:`elevp.csv` that comes with the QGIS sample dataset (see section
