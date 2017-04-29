@@ -28,6 +28,9 @@ movement over time. Waypoints, routes and tracks are the three basic feature
 types in GPS data. QGIS displays waypoints in point layers, while routes and
 tracks are displayed in linestring layers.
 
+.. note:: QGIS supports also GNSS receivers. But we keep using the term GPS in
+   this documentation.
+
 .. _`label_loadgps`:
 
 Loading GPS data from a file
