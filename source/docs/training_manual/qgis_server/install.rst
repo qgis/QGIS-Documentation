@@ -306,7 +306,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
    be configured for our setup to work.
    You can also test the access to your QGIS Server from other clients on the
    network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
-   file and point the `myhost` name to whatever IP the server machine has on the
+   file and point the ``myhost`` name to whatever IP the server machine has on the
    network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
    the local IP, only accessible from the local machine.  On ``*nix`` machines the
    :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
