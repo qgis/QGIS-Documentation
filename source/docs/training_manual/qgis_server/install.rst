@@ -87,7 +87,7 @@ In this lesson we're going to use the
 First we need to install Apache by running the following command in a terminal:
 ``sudo apt-get install apache2 libapache2-mod-fcgid``.
 
-Let's create a file called :file:`qgisplatform.demo.conf` in that directory
+Let's create a file called :file:`qgisplatform.demo.conf` in the directory ``/etc/apache2/sites-available/`` 
 with this content:
 
 .. code-block:: apacheconf
@@ -110,7 +110,7 @@ with this content:
    FcgidInitialEnv LANG "en_US.UTF-8"
 
    # QGIS log (different from apache logs) see http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
-   FcgidInitialEnv QGIS_SERVER_LOG_FILE /logs/qgisserver.log
+   FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
    FcgidInitialEnv QGIS_DEBUG 1
@@ -152,7 +152,7 @@ configuration after doing ``sudo gedit /etc/apache2/sites-available/qgisplatform
 
 .. note::
 
- See some of the configuration options in the Server
+ See some of the configuration options are explained in the Server
  :ref:`server_env_variables` section.
 
 Let's now create the directories that will store the QGIS Server logs and
@@ -160,8 +160,8 @@ the authentication database:
 
 .. code-block:: bash
 
- sudo mkdir /logs
- sudo chown www-data:www-data /logs
+ sudo mkdir /var/log/qgis/
+ sudo chown www-data:www-data /var/log/qgis
 
  mkdir /home/qgis/qgisserverdb
  sudo chown www-data:www-data /home/qgis/qgisserverdb
@@ -179,8 +179,8 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
 .. code-block:: bash
 
  sudo a2enmod fcgid
- sudo a2ensite qgisplatform.demo.conf
- sudo systemctl restart apache2.service
+ sudo a2ensite qgisplatform.demo
+ sudo service apache2 restart
 
 .. note::
 
@@ -189,13 +189,17 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
  install a fake X Server and tell QGIS Server to use it. You can do that by
  running the following commands.
 
- Install xvfb with ``sudo apt-get install xvfb``
+ Install xvfb:
+ 
+.. code-block:: bash
+
+ sudo apt-get install xvfb
 
 .. note:: adding `` -y`` at the end of the above command will run it straight away, without requiring confirmation.
 
  Create the service file:
 
- .. code-block:: bash
+.. code-block:: bash
 
   sudo sh -c \
   "echo \
