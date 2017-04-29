@@ -277,12 +277,12 @@ understanding about the possibilities.
 You can install it like this:
 
 * As user ``qgis`` go to the home directory with ``cd /home/qgis``.
-* Download the QWC project with ``git clone git://github.com/qgis/QGIS-Web-Client.git``.
-  If you don't have ``git`` installed you can install it with ``sudo apt-get install -y git``.
+* Download the QWC project from `here <https://github.com/qgis/QGIS-Web-Client/archive/master.zip>`_ and unzip it.
 * Make a symbolic link to the ``/var/www/html`` directory as it's the ``DocumentRoot`` that
-  we've setup in the virtual host configuration. We can do that with
-  ``sudo ln -s /home/qgis/QGIS-Web-Client /var/www/html/``.
-* Access http://qgisplatform.demo/QGIS-Web-Client/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs
+  we've setup in the virtual host configuration. If you unzipped the archive under
+  :file:`/home/qgis/Downloads/QGIS-Web-Client-master` we can do that with
+  ``sudo ln -s /home/qgis/Downloads/QGIS-Web-Client-master /var/www/html/``.
+* Access http://qgisplatform.demo/QGIS-Web-Client-master/site/qgiswebclient.html?map=/home/qgis/projects/world.qgs
   from your Web browser.
 
 Now you should be able to see the Map as in the following figure:
