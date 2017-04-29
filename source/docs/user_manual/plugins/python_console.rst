@@ -37,6 +37,7 @@ clicking on the Enter selected command from the context menu. No matter if
 selected text contains the interpreter prompt (>>>, ...). Input area panel is
 the interactive python shell for input commands.
 
+
 Toolbar
 ========
 
@@ -75,7 +76,12 @@ Main features are:
 * Save and clear the command history accessing from context menu of input panel.
   The history will be saved into the file ~/.qgis2/console_history.txt.
 
-.. add screenshot here
+.. _figure_python_console:
+
+.. figure:: /static/user_manual/plugins/python_console.png
+   :align: center
+
+   The Python console
 
 Editor
 ======
@@ -107,6 +113,13 @@ Main features are:
 * Execute code snippets with the Enter selected command.
 * Execute the whole script with the Run script command (this creates
   a byte-compiled file with the extension .pyc).
+
+.. _figure_python_console_editor:
+
+.. figure:: /static/user_manual/plugins/python_console_editor.png
+   :align: center
+
+   The Python console editor
 
 Options
 =======
