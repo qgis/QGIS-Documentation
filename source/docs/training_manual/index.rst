@@ -21,6 +21,7 @@ QGIS Training Manual
    complete_analysis/index
    qgis_plugins/index
    online_resources/index
+   qgis_server/index
    grass/index
    assessment/index
    forestry/index

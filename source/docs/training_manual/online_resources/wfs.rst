@@ -151,4 +151,4 @@ instead of a WMS.
 |WN|
 -------------------------------------------------------------------------------
 
-Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS.
+Next, you'll see how to use QGIS Server to provide OGC services.
