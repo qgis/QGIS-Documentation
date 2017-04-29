@@ -891,6 +891,7 @@ The parameters required for a connection are:
   port is 1521.
 * **Username**: Username used to login to the database.
 * **Password**: Password used with *Username* to connect to the database.
+* **Workspace**: Workspace to switch to.
 
 Optionally, you can activate following checkboxes:
 
