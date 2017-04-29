@@ -30,7 +30,9 @@ the above link on how to do it) you can run the ``sudo apt-get update`` command
 to refresh the packages list and ``sudo apt-get dist-upgrade`` to upgrade the
 packages.
 
-.. note:: Currently Debian stable has LTR qgis packages, so the above steps are not necessary.
+.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to commands requiring admin permissions. In Debian you can work as admin (``root``), without using ``sudo``.
+
+.. note:: Currently Debian stable has LTR qgis packages in the source ``jessie-backports``, so the above steps are not necessary. Just add the ``jessie-backports`` repository and install with the ``-t jessie-backports`` option.
 
 Install QGIS Server with:
 
