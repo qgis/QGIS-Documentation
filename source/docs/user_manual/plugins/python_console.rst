@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index::
-   single: Pyhon
+   single: Python
 
 .. _console:
 
@@ -16,13 +16,13 @@ QGIS Python console
    .. contents::
       :local:
 
-As you will see later in this chapter, QGIs has been designed with a plugin
-architecture. Plugin are written in Python, a very famous langage in the
+As you will see later in this chapter, QGIS has been designed with a plugin
+architecture. Pluginis are written in Python, a very famous language in the
 geospatial world.
 
-QGIS brings a Python API to let the user to interact with its object (layers,
+QGIS brings a Python API to let the user interact with its objects (layers,
 feature or interface). To help the user, QGIS has a Python console. To open the
-console go to :menuselection:`Plugins --> Pytnon console`` (:kbd:`Ctrl+Alt+P`).
+console go to :menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`).
 
 The QGIS Python Console is an interactive shell for the python command
 executions. It also has a python file editor that allows you to edit and save
@@ -30,13 +30,14 @@ your python scripts. Both console and editor are based on PyQScintilla2
 package.
 
 The console is split in two main panels, top and bottom one resizable by using
-the horizontal splitter. Output area panel is a widget read-only which shows the
-commands output. You can drag and drop or copy and paste text into input area
-and execute code snippets from the output panel by selecting some text and
-clicking on the Enter selected command from the context menu. No matter if
-selected text contains the interpreter prompt (>>>, ...). Input area panel is
-the interactive python shell for input commands.
+the horizontal splitter:
 
+* Input area panel is the interactive python shell for input commands.
+* Output area panel is a widget read-only which shows the commands output.
+  You can drag and drop or copy and paste text into input area and execute code
+  snippets from the output panel by selecting some text and clicking on the
+  Enter selected command from the context menu. No matter if selected text
+  contains the interpreter prompt (>>>, ...).
 
 Toolbar
 ========
@@ -68,8 +69,8 @@ Main features are:
   * QScintilla2
   * osgeo-gdal-ogr
 
-* Ctrl+Alt+Space to view the auto-completion list.
-* Ctrl+Shift+Space to view the command history list.
+* :kbd:`Ctrl+Alt+Space` to view the auto-completion list.
+* :kbd:`Ctrl+Shift+Space` to view the command history list.
 * Execute code snippets with the Enter selected command from output panel.
 * Open QGIS API documentation by typing _api.
 * Open PyQGIS Cookbook by typing _pyqgis.
@@ -124,8 +125,7 @@ Main features are:
 Options
 =======
 
-This add further settings for python console:
-
+This adds further settings for Python console:
 **Autocompletion:** If checked the code completion is enabled. You can get
 autocompletion from current document, from installed APIs and both from APIs
 and current document.
