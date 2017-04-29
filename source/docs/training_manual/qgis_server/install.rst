@@ -227,7 +227,7 @@ Enable, start and check the status of the ``xvfb.service``:
  More info at http://www.itopen.it/qgis-server-setup-notes/.
 
 Now that Apache knows that he should answer requests to http://qgisplatform.demo
-we also need to setup the linux system so that it knows who ``qgisplatform.demo``
+we also need to setup the client system so that it knows who ``qgisplatform.demo``
 is. We do that by adding ``127.0.0.1 qgisplatform.demo`` in the
 `hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
 with ``sudo sh -c "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"``.
