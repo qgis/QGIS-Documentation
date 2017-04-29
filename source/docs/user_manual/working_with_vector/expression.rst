@@ -178,11 +178,22 @@ if one of the inputs is NULL then the result is NULL.
  a NOT IN (value[,value])    a is not below the values listed
 =========================== ===================================================
 
+.. note:: **About fields concatenation**
+
+  You can concatenate strings using either `||` or ``+``. The latter also means
+  sum up expression. So if you have an integer (field or numeric value) this can
+  be error prone. In this case, you should use `||`. If you concatenate two
+  string values, you can use both.
+
 **Some examples:**
 
 * Joins a string and a value from a column name::
 
     'My feature''s id is: ' || "gid"
+    'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
+    "country_name" + '(' + "country_code" + ')'
+    "country_name" || '(' || "country_code" || ')'
+
 
 * Test if the "description" attribute field starts with the 'Hello' string
   in the value (note the position of the % character)::
@@ -828,6 +839,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
 **Some examples:**
 
+* You can manipulate the current geometry with the variable $geometry to create
+  a buffer or get the point on surface::
+
+   buffer($geometry, 10)
+   point_on_surface($geometry)
+
 * Return the x coordinate of the current feature's centroid::
 
     x($geometry)
@@ -999,7 +1016,6 @@ To use these functions in an expression, they should be preceded by @ character
  row_number              Stores the number of the current row
  value                   Returns the current value
 ======================= =======================================================
-
 
 .. index:: Functions
 .. _function_editor:
