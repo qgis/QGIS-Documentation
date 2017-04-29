@@ -81,7 +81,7 @@ how to make WMS requests.
 -------------------------------------------------------------------------------
 
 In order to access on the installed QGIS server from an Internet Browser we
-need to use a HTTP server.
+need to use an HTTP server.
 
 In this lesson we're going to use the
 `Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
@@ -89,8 +89,8 @@ In this lesson we're going to use the
 First we need to install Apache by running the following command in a terminal:
 ``sudo apt-get install apache2 libapache2-mod-fcgid``.
 
-Let's create a file called :file:`qgisplatform.demo.conf` in the directory ``/etc/apache2/sites-available/`` 
-with this content:
+In the :file:`/etc/apache2/sites-available` directory let's create a file
+called :file:`qgisplatform.demo.conf`, with this content:
 
 .. code-block:: apacheconf
 
@@ -308,7 +308,11 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
    network (e.g. Windows or Macos machines) by going to their :file:`/etc/hosts`
    file and point the `myhost` name to whatever IP the server machine has on the
    network. You can be sure that that specific IP is not ``127.0.0.1`` as that's
-   the local IP, only accessible from the local machine.
+   the local IP, only accessible from the local machine.  On ``*nix`` machines the
+   :file:`hosts` file is located in :file:`/etc`, while on Windows it's under
+   the :file:`C:\\Windows\\System32\\drivers\\etc` directory. Under Windows you
+   need to start your text editor with administrator privileges before opening
+   the hosts file.
 
 |IC|
 -------------------------------------------------------------------------------
