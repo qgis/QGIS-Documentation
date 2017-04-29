@@ -42,7 +42,7 @@ Install QGIS Server with:
  # optionally also:
  sudo apt-get install python-qgis
 
-.. note:: adding `` -y`` at the end of the apt-get command will run it straight away, without requiring confirmation.
+.. note:: adding ``-y`` at the end of the apt-get command will run it straight away, without requiring confirmation.
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
@@ -152,9 +152,7 @@ with this content:
 You can do the above in a linux Desktop system by pasting and saving the above
 configuration after doing ``sudo nano /etc/apache2/sites-available/qgisplatform.demo.conf``.
 
-.. note::
-
- See some of the configuration options are explained in the Server
+.. note:: See some of the configuration options are explained in the Server
  :ref:`server_env_variables` section.
 
 Let's now create the directories that will store the QGIS Server logs and
@@ -214,9 +212,9 @@ Create the service file:
   WantedBy=multi-user.target' \
   > /etc/systemd/system/xvfb.service"
 
- Enable, start and check the status of the ``xvfb.service``:
+Enable, start and check the status of the ``xvfb.service``:
 
- .. code-block:: bash
+.. code-block:: bash
 
    sudo systemctl enable xvfb.service
    sudo systemctl start xvfb.service
