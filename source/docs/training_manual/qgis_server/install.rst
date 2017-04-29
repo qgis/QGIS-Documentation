@@ -232,8 +232,6 @@ is. We do that by adding ``127.0.0.1 qgisplatform.demo`` in the
 `hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
 with ``sudo sh -c "echo '127.0.0.1 qgisplatform.demo' >> /etc/hosts"``.
 
-.. note:: Add hosts instructions for Windows and OSX
-
 We can test one of the installed qgis servers with a http request from command
 line with ``curl http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi`` which
 should output:
