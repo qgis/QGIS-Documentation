@@ -223,7 +223,7 @@ first check that the file meets the following requirements:
 #. The X and Y coordinates (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
 #. If you have any data that is not a string (text) and the file is a CSV file,
-   you must have a CSVT file (see section :ref:`csvt_files`).  
+   you must have a CSVT file (see section :ref:`csvt_files`).
 
 As an example of a valid text file, we import the elevation point data file
 :file:`elevp.csv` that comes with the QGIS sample dataset (see section
@@ -994,8 +994,8 @@ and manipulation of spatial data in these databases.
 .. _DB2 Spatial Tutorial: https://www.ibm.com/developerworks/data/tutorials/dm-1202db2spatialdata1/
 
 User documentation on these capabilities can be found at the
-`DB2 z/OS KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_ and
-`DB2 DashDB KnowledgeCenter`_.
+`DB2 z/OS KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_
+and `DB2 DashDB KnowledgeCenter`_.
 
 For more information about working with the DB2 spatial capabilities, check out
 the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks.
@@ -1003,7 +1003,8 @@ the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks.
 Configuring QGIS for DB2
 .........................
 
-The DB2 provider currently only supports the Windows environment through the Windows ODBC driver.
+The DB2 provider currently only supports the Windows environment through the
+Windows ODBC driver.
 
 The client running QGIS needs to have one of the following installed:
 
@@ -1011,10 +1012,10 @@ The client running QGIS needs to have one of the following installed:
 * IBM Data Server Driver Package
 * IBM Data Server Client
 
-If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as a client,
-the DB2 executables and supporting files need to be included in the Windows path.
-This can be done by creating a batch file like the following with the name **db2.bat** and
-including it in the directory :file:`%OSGEO4W_ROOT%/etc/ini`.
+If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as
+a client, the DB2 executables and supporting files need to be included in the
+Windows path. This can be done by creating a batch file like the following with
+the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini**.
 
 ::
 
