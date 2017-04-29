@@ -42,6 +42,8 @@ Install QGIS Server with:
  # optionally also:
  sudo apt-get install python-qgis
 
+.. note:: adding `` -y`` at the end of the apt-get command will run it straight away, without requiring confirmation.
+
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
 
@@ -148,7 +150,7 @@ with this content:
  </VirtualHost>
 
 You can do the above in a linux Desktop system by pasting and saving the above
-configuration after doing ``sudo gedit /etc/apache2/sites-available/qgisplatform.demo.conf``.
+configuration after doing ``sudo nano /etc/apache2/sites-available/qgisplatform.demo.conf``.
 
 .. note::
 
@@ -170,11 +172,11 @@ the authentication database:
 
  ``www-data`` is the Apache user on Debian based systems and we need Apache to have access to
  those locations or files.
- The ``chown www-data...`` commands changes the owner of the respective directories/files
+ The ``chown www-data...`` commands changes the owner of the respective directories and files
  to ``www-data``.
 
 We can now enable the `virtual host <https://httpd.apache.org/docs/2.4/vhosts>`_,
-enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.service``:
+enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2`` service:
 
 .. code-block:: bash
 
@@ -195,9 +197,7 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2.s
 
  sudo apt-get install xvfb
 
-.. note:: adding `` -y`` at the end of the above command will run it straight away, without requiring confirmation.
-
- Create the service file:
+Create the service file:
 
 .. code-block:: bash
 
