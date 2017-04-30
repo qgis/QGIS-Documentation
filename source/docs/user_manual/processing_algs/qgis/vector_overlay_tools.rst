@@ -17,13 +17,19 @@ Clip
 Description
 ...........
 
-This algorithm extracts features from the Input Layer that fall within, or partially 
-within, the boundaries of features in the Clip Layer. Input Layer features that fall 
-partially within clip layer feature(s) are split along the boundary of the clip layer 
-feature(s). If any features are selected in the Input and Clip Layers, then only those 
-features are used in the clip operation. If no features are selected then the clip 
-operation is performed using all features. The clip function is also known as the 
-cookie-cutter.
+This algorithm clips a vector layer using the polygons of an additional
+polygons layer. Only the parts of the features in the input layer that falls
+within the polygons of the clipping layer will be added to the resulting layer.
+
+The attributes of the features are not modified, although properties such as
+area or length of the features will be modified by the clipoing operation. If
+such properties are stored as attributes, those attributes will have to be
+manually updated.
+
+This algorithm is optimised for clipping thousands of input features againsts
+few mask features. It also use spatial indexes on the providers, prepared
+geometries and apply an intersection operation if the geometry isn't wholly
+contained by the mask geometry.
 
 Parameters
 ..........
