@@ -11,6 +11,40 @@ Vector geometry
       :local:
       :depth: 1
 
+Boundary
+---------
+
+Description
+...........
+
+Returns the closure of the combinatorial boundary of the input geometries (ie
+the topological boundary of the geometry). For instance, a polygon geometry
+will have a boundary consisting of the linestrings for each ring in the
+polygon. Only valid for polygon or line layers.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Source layer to use.
+
+Output
+......
+
+``Output layer`` [vector: polygon]
+  Boundary of polygons from the input layer.
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:boundary', input_layer, output_layer)
+
+See also
+........
+
+
 Bounding boxes
 ---------------
 
