@@ -42,7 +42,8 @@ Install QGIS Server with:
  # optionally also:
  apt-get install python-qgis
 
-.. note:: adding ``-y`` at the end of the apt-get command will run it straight away, without requiring confirmation.
+.. note:: adding ``-y`` at the end of the apt-get command will run it straight
+   away, without requiring confirmation.
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
