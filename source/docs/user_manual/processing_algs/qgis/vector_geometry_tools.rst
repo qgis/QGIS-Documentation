@@ -697,6 +697,37 @@ Console usage
 See also
 ........
 
+Point on surface
+-----------------
+
+Description
+............
+
+Returns a point guaranteed to lay on the surface of a polygon geometry.
+
+Parameters
+...........
+
+``Input layer`` [vector: polygon]
+  Layer with polygon
+
+Outputs
+........
+
+``Output layer`` [vector: point]
+  The resulting layer with point on surface 
+
+Console usage
+..............
+
+::
+
+   processing.runalg('qgis:pointonsurface', input, output)
+
+See also
+........
+
+
 Points displacement
 -------------------
 
