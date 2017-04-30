@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index::
-   single: Pyhon
+   single: Python
 
 .. _console:
 
@@ -22,7 +22,7 @@ geospatial world.
 
 QGIS brings a Python API to let the user interact with its objects (layers,
 feature or interface). To help the user, QGIS has a Python console. To open the
-console go to :menuselection:`Plugins --> Python console`` (:kbd:`Ctrl+Alt+P`).
+console go to :menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`).
 
 The QGIS Python Console is an interactive shell for the python command
 executions. It also has a python file editor that allows you to edit and save
@@ -30,12 +30,14 @@ your python scripts. Both console and editor are based on PyQScintilla2
 package.
 
 The console is split in two main panels, top and bottom one resizable by using
-the horizontal splitter. Output area panel is a widget read-only which shows the
-commands output. You can drag and drop or copy and paste text into input area
-and execute code snippets from the output panel by selecting some text and
-clicking on the Enter selected command from the context menu. No matter if
-selected text contains the interpreter prompt (>>>, ...). Input area panel is
-the interactive python shell for input commands.
+the horizontal splitter:
+
+* Input area panel is the interactive python shell for input commands.
+* Output area panel is a widget read-only which shows the commands output. You
+  can drag and drop or copy and paste text into input area and execute code
+  snippets from the output panel by selecting some text and clicking on the
+  Enter selected command from the context menu. No matter if selected text
+  contains the interpreter prompt (>>>, ...).
 
 Toolbar
 ========
@@ -75,7 +77,12 @@ Main features are:
 * Save and clear the command history accessing from context menu of input panel.
   The history will be saved into the file ~/.qgis2/console_history.txt.
 
-.. add screenshot here
+.. _figure_python_console:
+
+.. figure:: /static/user_manual/plugins/python_console.png
+   :align: center
+
+   The Python console
 
 Editor
 ======
@@ -93,7 +100,7 @@ Main features are:
 * :kbd:`Ctrl+Space` to view the auto-completion list.
 * Sharing code snippets via codepad.org.
 * :kbd:`Ctrl+4` Syntax check.
-* Search bar (open it with the default Desktop Environement shorcut, usually
+* Search bar (open it with the default Desktop Environment shorcut, usually
   :kbd:`Ctrl+F`):
 
   * Use the default Desktop Environment shortcut to find next/previous
@@ -108,10 +115,18 @@ Main features are:
 * Execute the whole script with the Run script command (this creates
   a byte-compiled file with the extension .pyc).
 
+.. _figure_python_console_editor:
+
+.. figure:: /static/user_manual/plugins/python_console_editor.png
+   :align: center
+
+   The Python console editor
+
 Options
 =======
 
-This adds further settings for Python console:
+This add further settings for python console:
+
 **Autocompletion:** If checked the code completion is enabled. You can get
 autocompletion from current document, from installed APIs and both from APIs
 and current document.
