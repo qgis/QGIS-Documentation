@@ -161,10 +161,21 @@ to the :func:`getFeatures()` call. Here's an example
   for feature in layer.getFeatures(request):
       # do whatever you need with the feature
 
+With :func:`setLimit()` you can limit the number of requested features. 
+Here's an example
 
-If you need an attribute-based filter instead (or in addition) of a spatial one like shown in the example
-above, you can build an :obj:`QgsExpression` object and pass it to the
-:obj:`QgsFeatureRequest` constructor. Here's an example
+.. code-block:: python
+
+  request = QgsFeatureRequest()
+  request.setLimit(2)
+  for feature in layer.getFeatures(request):
+      # loop through only 2 features
+
+
+If you need an attribute-based filter instead (or in addition) of a spatial 
+one like shown in the examples above, you can build an :obj:`QgsExpression` 
+object and pass it to the :obj:`QgsFeatureRequest` constructor. 
+Here's an example
 
 ::
 
