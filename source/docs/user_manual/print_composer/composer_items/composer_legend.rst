@@ -42,12 +42,12 @@ tab provides the following functionalities (see figure_composer_legend_ppt_):
 
 In Main properties you can:
 
-* Change the title of the legend;
-* Set the title alignment to Left, Center or Right;
-* You can choose which :guilabel:`Map` item the current legend will refer to
+* change the title of the legend;
+* set the title alignment to Left, Center or Right;
+* choose which :guilabel:`Map` item the current legend will refer to
   in the select list;
-* You can wrap the text of the legend title on a given character;
-* Use |checkbox| :guilabel:`Resize to fit contents` to control whether or
+* wrap the text of the legend title on a given character;
+* use |checkbox| :guilabel:`Resize to fit contents` to control whether or
   not a legend should be automatically resized to fit its contents. If
   unchecked, then the legend will never resize and instead just stick to
   whatever size the user has set. Any content which doesn't fit the size
@@ -80,7 +80,7 @@ provides the following functionalities (see figure_composer_legend_items_):
   * Use the |addGroup| button to add a legend group.
   * Use the |signPlus| button to add layers and |signMinus| button to remove
     groups, layers or symbol classes.
-  * The |projectProperties| button is used to edit the layer, groupname or title.
+  * The |projectProperties| button is used to edit the layer, group name or title.
     First you need to select the legend item. Double-clicking the item also
     opens the text box to rename it.
   * The |sum| button adds a feature count for each class of vector layer.
@@ -94,11 +94,12 @@ provides the following functionalities (see figure_composer_legend_items_):
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the composer map item.
 
-  While the default behavior of the legend item is to mimic the Layers panel
-  tree, displaying the same groups, layers and classes of symbology, right-click
-  any item offers you options to hide layer's name or raise it as a group or
-  subgroup. In case you have made some changes to a layer, you can revert them
-  by choosing :guilabel:`Reset to defaults` from the contextual menu.
+  While the default behavior of the legend item is to mimic the
+  :guilabel:`Layers panel` tree, displaying the same groups, layers and classes
+  of symbology, right-click any item offers you options to hide layer's name or
+  raise it as a group or subgroup. In case you have made some changes to a layer,
+  you can revert them by choosing :guilabel:`Reset to defaults` from the
+  contextual menu.
 
   After changing the symbology in the QGIS main window, you can click on
   **[Update All]** to adapt the changes in the legend element of the Print Composer.
