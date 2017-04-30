@@ -6,7 +6,7 @@
 ===============================================================================
 
 **The goal for this lesson:** To learn how to install **QGIS Server** on Debian
-Stretch. With negligible variations you can also follow it for any Debian based
+Stretch. With negligible variations (prepending ``sudo`` to all admin commands) you can also follow it for any Debian based
 distribution like Ubuntu and its derivatives.
 
 |moderate| |FA| Install from packages
@@ -26,15 +26,15 @@ content:
  deb-src http://qgis.org/debian stretch main
 
 After you add the qgis.org repository public key to your apt keyring (follow
-the above link on how to do it) you can run the ``sudo apt-get update`` command
-to refresh the packages list and ``sudo apt-get dist-upgrade`` to upgrade the
+the above link on how to do it) you can run the ``apt-get update`` command
+to refresh the packages list and ``apt-get dist-upgrade`` to upgrade the
 packages.
 
 Install QGIS Server with:
 
 .. code-block:: bash
 
- sudo apt-get install qgis-server python-qgis
+ apt-get install qgis-server python-qgis
 
 Although QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine, we're going to
@@ -42,13 +42,13 @@ install it in this tutorial as it's easier for the audience:
 
 .. code-block:: bash
 
- sudo apt-get install qgis
+ apt-get install qgis
 
 |moderate| |FA| QGIS Server Executable
 -------------------------------------------------------------------------------
 
 The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it has
-been installed by running ``sudo find / -name 'qgis_mapserv.fcgi'`` which
+been installed by running ``find / -name 'qgis_mapserv.fcgi'`` which
 should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``.
 
 Optionally, if you want to do a command line test at this time you can run the
@@ -84,7 +84,7 @@ In this lesson we're going to use the
 `Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
 
 First we need to install Apache by running the following command in a terminal:
-``sudo apt-get install apache2 libapache2-mod-fcgid``.
+``apt-get install apache2 libapache2-mod-fcgid``.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
 called :file:`qgisplatform.demo.conf`, with this content:
