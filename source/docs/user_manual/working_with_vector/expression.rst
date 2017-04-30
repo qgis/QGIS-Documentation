@@ -29,6 +29,7 @@ The Expression string builder
 Main dialog to build expressions, the :guilabel:`Expression string builder`
 is available from many parts in QGIS and, can particularly be accessed when:
 
+* clicking the |expression| button;
 * :ref:`selecting features <sec_selection>` with the |expressionSelect|
   :sup:`Select By Expression...` tool;
 * :ref:`editing attributes <calculate_fields_values>` with e.g. the
@@ -36,8 +37,7 @@ is available from many parts in QGIS and, can particularly be accessed when:
 * manipulating symbology, label or composer item parameters with the |dataDefined|
   :sup:`Data defined override` tool (see :ref:`data_defined`);
 * building a :ref:`geometry generator <geometry_generator_symbol>` symbol layer;
-* doing some :ref:`geoprocessing <label_processing>`;
-* ...
+* doing some :ref:`geoprocessing <label_processing>`.
 
 The Expression builder dialog offers access to the:
 
@@ -74,7 +74,7 @@ The Expression builder dialog offers access to the:
   Likewise, the previous expression could also be used to define which features
   should be labeled or shown in the map.
   
-Using expressions offers you endless possibilities...
+Using expressions offers you a lot of possibilities.
 
 .. index:: Named parameters
    single: Expressions; Named parameters
@@ -97,10 +97,11 @@ List of functions
 =================
 
 The :guilabel:`Expression` tab provides the main interface to write expressions
-using functions as well as layer's fields and values. It contains widgets to:
+using functions, layer's fields and values. It contains widgets to:
 
-* type expressions using functions and/or fields. A preview of the expression's
-  result is displayed at the bottom of the dialog.
+* type expressions using functions and/or fields. At the bottom of the dialog,
+  is displayed the result of the expression evaluated on the first feature of
+  the layer.
 * select the appropriate function among a list, organized in groups. A search box
   is available to filter the list and quickly find a particular function or field.
   Double-clicking on the item's name adds it to the expression being written.
