@@ -42,12 +42,16 @@ tab provides the following functionalities (see figure_composer_legend_ppt_):
 
 In Main properties you can:
 
-* Change the title of the legend.
-* Set the title alignment to Left, Center or Right.
-* You can choose which :guilabel:`Map` item the current legend will refer to
-  in the select list.
-* You can wrap the text of the legend title on a given character.
-
+* change the title of the legend;
+* set the title alignment to Left, Center or Right;
+* choose which :guilabel:`Map` item the current legend will refer to
+  in the select list;
+* wrap the text of the legend title on a given character;
+* use |checkbox| :guilabel:`Resize to fit contents` to control whether or
+  not a legend should be automatically resized to fit its contents. If
+  unchecked, then the legend will never resize and instead just stick to
+  whatever size the user has set. Any content which doesn't fit the size
+  is cropped out.
 
 Legend items
 ------------
@@ -64,24 +68,45 @@ provides the following functionalities (see figure_composer_legend_items_):
 
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto-update`
   is checked. When :guilabel:`Auto-update` is unchecked this will give you more
-  control over the legend items. The icons below the legend items list will be activated.
+  control over the legend items. The icons below the legend items list will be
+  activated.
 * The legend items window lists all legend items and allows you to change item
   order, group layers, remove and restore items in the list, edit layer names
   and add a filter.
 
-  * The item order can be changed using the **[Up]** and **[Down]** buttons or
+  * The item order can be changed using the |arrowUp| and |arrowDown| buttons or
     with 'drag-and-drop' functionality. The order can not be changed for WMS
     legend graphics.
-  * Use the **[Add group]** button to add a legend group.
-  * Use the **[plus]** and **[minus]** button to add or remove layers.
-  * The **[Edit]** button is used to edit the layer, groupname or title.
-    First you need to select the legend item.
-  * The **[Sigma]** button adds a feature count for each vector layer.
-  * Use the **[filter]** button to filter the legend by map content, only the
-    legend items visible in the map will be listed in the legend.
+  * Use the |addGroup| button to add a legend group.
+  * Use the |signPlus| button to add layers and |signMinus| button to remove
+    groups, layers or symbol classes.
+  * The |projectProperties| button is used to edit the layer, group name or title.
+    First you need to select the legend item. Double-clicking the item also
+    opens the text box to rename it.
+  * The |sum| button adds a feature count for each class of vector layer.
+  * With the |filterMap| :sup:`Filter legend by map content` button, only the
+    legend items visible in the map will be listed in the legend. This tool
+    remains available when |checkbox| :guilabel:`Auto-update` is active.
+  * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
+    which of the legend items of a layer will be displayed, i.e. using a layer
+    that has different legend items (e.g., from a rule-based or categorized
+    symbology), you can specify a boolean expression to remove from the legend
+    tree, styles that have no feature satisfying a condition. Note that the
+    features are nevertheless kept and shown in the composer map item.
+
+  While the default behavior of the legend item is to mimic the
+  :guilabel:`Layers panel` tree, displaying the same groups, layers and classes
+  of symbology, right-click any item offers you options to hide layer's name or
+  raise it as a group or subgroup. In case you have made some changes to a layer,
+  you can revert them by choosing :guilabel:`Reset to defaults` from the
+  contextual menu.
 
   After changing the symbology in the QGIS main window, you can click on
   **[Update All]** to adapt the changes in the legend element of the Print Composer.
+
+* While generating an atlas with polygon features, you can filter out legend items
+  that lie outside the current atlas feature. To do that, check the |checkbox|
+  :guilabel:`Only show items inside current atlas feature` option. 
 
 
 
@@ -111,7 +136,7 @@ legend :guilabel:`Item Properties` tab provide the following functionalities
   * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer
     legend to be divided between columns.
 
-* You can also change the width and height of the legend symbol,set a color and
+* You can also change the width and height of the legend symbol, set a color and
   a thickness in case of raster layer symbol.
 
 
