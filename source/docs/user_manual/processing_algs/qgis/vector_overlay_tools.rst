@@ -18,18 +18,17 @@ Description
 ...........
 
 This algorithm clips a vector layer using the polygons of an additional
-polygons layer. Only the parts of the features in the input layer that falls
+polygon layer. Only the parts of the features in the input layer that falls
 within the polygons of the clipping layer will be added to the resulting layer.
 
 The attributes of the features are not modified, although properties such as
-area or length of the features will be modified by the clipoing operation. If
+area or length of the features will be modified by the clipping operation. If
 such properties are stored as attributes, those attributes will have to be
 manually updated.
 
-This algorithm is optimised for clipping thousands of input features againsts
-few mask features. It also use spatial indexes on the providers, prepared
-geometries and apply an intersection operation if the geometry isn't wholly
-contained by the mask geometry.
+This algorithm uses spatial indexes on the providers, prepared geometries and
+apply an intersection operation if the geometry isn't wholly contained by the
+mask geometry.
 
 Parameters
 ..........
