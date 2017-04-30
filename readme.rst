@@ -184,21 +184,13 @@ sysadmins (https://www.docker.com/).
 
 Docker can be used on Linux, MacOS  and Windows.
 
-In order to use a docker instance to build the documentation, you need first 
-to create your local docker image.
+In order to use a Docker instance to build the documentation, you can use 
+one of the scripts provided with QGIS-Documentation. The image will be installed
+if not already present.
 
-- install Docker (see https://docs.docker.com/installation/#installation)
+- install Docker (see https://docs.docker.com/engine/installation/)
 
-- clone the QGIS-sysadmin repository::
-
-   git clone git@github.com:qgis/QGIS-Sysadmin.git
-
-- build the docker image::
-
-   cd QGIS-Sysadmin/docker/sphinx
-   bash docker-build.sh
-
-- then you can go to your local QGIS-Documentation repository to build the doc::
+- go to your local QGIS-Documentation repository to build the doc::
 
    cd QGIS-Documentation/
    ./docker-run.sh LANG=fr html
