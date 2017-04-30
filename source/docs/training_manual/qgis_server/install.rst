@@ -6,8 +6,10 @@
 ===============================================================================
 
 **The goal for this lesson:** To learn how to install **QGIS Server** on Debian
-Stretch. With negligible variations you can also follow it for any Debian based
-distribution like Ubuntu and its derivatives.
+Stretch. With negligible variations you can also follow it for
+any Debian based distribution like Ubuntu and its derivatives.
+
+.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to commands requiring admin permissions. In Debian you can work as admin (``root``), without using ``sudo``.
 
 |moderate| |FA| Install from packages
 -------------------------------------------------------------------------------
@@ -25,12 +27,10 @@ content:
  deb http://qgis.org/debian stretch main
  deb-src http://qgis.org/debian stretch main
 
-After you add the qgis.org repository public key to your apt keyring (follow
-the above link on how to do it) you can run the ``sudo apt-get update`` command
-to refresh the packages list and ``sudo apt-get dist-upgrade`` to upgrade the
+After you add the ``gis.org`` repository public key to your apt keyring (follow
+the above link on how to do it) you can run the ``apt-get update`` command
+to refresh the packages list and ``apt-get dist-upgrade`` to upgrade the
 packages.
-
-.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to commands requiring admin permissions. In Debian you can work as admin (``root``), without using ``sudo``.
 
 .. note:: Currently Debian stable has LTR qgis packages in the source ``jessie-backports``, so the above steps are not necessary. Just add the ``jessie-backports`` repository and install with the ``-t jessie-backports`` option.
 
@@ -38,9 +38,9 @@ Install QGIS Server with:
 
 .. code-block:: bash
 
- sudo apt-get install qgis-server
+ apt-get install qgis-server
  # optionally also:
- sudo apt-get install python-qgis
+ apt-get install python-qgis
 
 .. note:: adding ``-y`` at the end of the apt-get command will run it straight away, without requiring confirmation.
 
@@ -51,7 +51,7 @@ the accompagning X Server) installed on the same machine.
 -------------------------------------------------------------------------------
 
 The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it has
-been installed by running ``sudo find / -name 'qgis_mapserv.fcgi'`` which
+been installed by running ``find / -name 'qgis_mapserv.fcgi'`` which
 should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``.
 
 Optionally, if you want to do a command line test at this time you can run the
@@ -87,7 +87,7 @@ In this lesson we're going to use the
 `Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
 
 First we need to install Apache by running the following command in a terminal:
-``sudo apt-get install apache2 libapache2-mod-fcgid``.
+``apt-get install apache2 libapache2-mod-fcgid``.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
 called :file:`qgis.demo.conf`, with this content:
@@ -150,7 +150,7 @@ called :file:`qgis.demo.conf`, with this content:
  </VirtualHost>
 
 You can do the above in a linux Desktop system by pasting and saving the above
-configuration after doing ``sudo nano /etc/apache2/sites-available/qgis.demo.conf``.
+configuration after doing ``nano /etc/apache2/sites-available/qgis.demo.conf``.
 
 .. note:: See some of the configuration options are explained in the Server
  :ref:`server_env_variables` section.
@@ -160,11 +160,11 @@ the authentication database:
 
 .. code-block:: bash
 
- sudo mkdir /var/log/qgis/
- sudo chown www-data:www-data /var/log/qgis
+ mkdir /var/log/qgis/
+ chown www-data:www-data /var/log/qgis
 
  mkdir /home/qgis/qgisserverdb
- sudo chown www-data:www-data /home/qgis/qgisserverdb
+ chown www-data:www-data /home/qgis/qgisserverdb
 
 .. note::
 
@@ -178,9 +178,9 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
 
 .. code-block:: bash
 
- sudo a2enmod fcgid
- sudo a2ensite qgis.demo
- sudo service apache2 restart
+ a2enmod fcgid
+ a2ensite qgis.demo
+ service apache2 restart
 
 .. note::
 
@@ -193,13 +193,13 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
  
 .. code-block:: bash
 
- sudo apt-get install xvfb
+ apt-get install xvfb
 
 Create the service file:
 
 .. code-block:: bash
 
-  sudo sh -c \
+  sh -c \
   "echo \
   '[Unit]
   Description=X Virtual Frame Buffer Service
@@ -216,9 +216,9 @@ Enable, start and check the status of the ``xvfb.service``:
 
 .. code-block:: bash
 
-   sudo systemctl enable xvfb.service
-   sudo systemctl start xvfb.service
-   sudo systemctl status xvfb.service
+   systemctl enable xvfb.service
+   systemctl start xvfb.service
+   systemctl status xvfb.service
 
 In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
 that tells QGIS Server instances to use display no. 99. If you're running the
@@ -230,7 +230,7 @@ Now that Apache knows that he should answer requests to http://qgis.demo
 we also need to setup the client system so that it knows who ``qgis.demo``
 is. We do that by adding ``127.0.0.1 qgis.demo`` in the
 `hosts <https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it
-with ``sudo sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
+with ``sh -c "echo '127.0.0.1 qgis.demo' >> /etc/hosts"``.
 Replace ``127.0.0.1`` with the IP of your server.
 
 .. note::
@@ -259,9 +259,13 @@ should output:
 
 .. note::
 
- curl can be installed with ``sudo apt-get install curl``.
+ curl can be installed with ``apt-get install curl``.
 
 Apache is now configured.
+
+Also, from yur client, you can check the capabilities of the server:
+
+http://qgis.dem/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 |moderate| |FA| Create another virtual host
 -------------------------------------------------------------------------------
@@ -272,7 +276,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 
 * Let's set up the ``myhost`` name to point to the localhost IP by adding
   ``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command:
-  ``sudo sh -c "echo '127.0.0.1 myhost' >> /etc/hosts"`` or by manually
+  ``sh -c "echo '127.0.0.1 myhost' >> /etc/hosts"`` or by manually
   editing the file with ``sudo gedit /etc/hosts``.
 * We can check that ``myhost`` points to the localhost by running in the terminal
   the  ``ping myhost`` command which should output:
@@ -283,7 +287,6 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
    PING myhost (127.0.0.1) 56(84) bytes of data.
    64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.024 ms
    64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.029 ms
-   ..
 
 * Let's try if we can access QGIS Server from the ``myhost`` site by doing:
   ``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url from
@@ -308,8 +311,8 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
   for the ``ServerName`` line that should be ``ServerName myhost``. You could
   also change where the logs go as otherwise the logs for the two virtual hosts
   would be shared but this is optional.
-* Let's now enable the virtual host with ``sudo apt-get a2ensite myhost.conf``
-  and then reload the Apache service with ``sudo systemctl reload apache2``.
+* Let's now enable the virtual host with ``apt-get a2ensite myhost.conf``
+  and then reload the Apache service with ``service apache2 reload``.
 * If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url
   you'll notice everything is working now!
 
