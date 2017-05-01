@@ -11,6 +11,7 @@ Plugins
 .. toctree::
    :maxdepth: 2
 
+   python_console
    plugins
    core_plugins
    plugins_coordinate_capture
