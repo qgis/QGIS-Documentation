@@ -70,3 +70,9 @@ and only that portion will be executed when you press :kbd:`F5` or click the
 
    Executing SQL queries in the DB Manager SQL window
 
+.. note::
+
+   The SQL Window can also be used to create Virtual Layers. In that case,
+   instead of selecting a database, select **QGIS Layers** under **Virtual
+   Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` for
+   instructions on the SQL syntax to use.
