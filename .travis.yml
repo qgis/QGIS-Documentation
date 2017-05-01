@@ -1,4 +1,11 @@
 language: python
+cache:
+  apt: true
+  pip: true
+  directories:
+    # Preserve the output dir for faster build times
+    /output
+  timeout: 1000
 
 #addons:
 #  apt:
