@@ -38,6 +38,21 @@ queries.
 Joins and complex queries can also be created simply by directly using the 
 names of the layers that are to be joined.
 
+Embedded layers
+---------------
+
+Besides the vector layers available in the map canvas, the user can add layers
+to the :guilabel:`Embedded layers` list, which he can use in queries
+without the need to have them showing in the map canvas or Layers panel.
+
+To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local name`,
+:guilabel:`Provider`, :guilabel:`Encoding` and the path to the
+:guilabel:`Source`.
+
+The :guilabel:`Import` button allows adding layers loaded in the map canvas into
+the Embedded layers list. This allows to later remove those layers from the
+Layers panel without breaking any existent query.
+
 Supported language
 ------------------
 
