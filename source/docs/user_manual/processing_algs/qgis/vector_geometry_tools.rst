@@ -11,6 +11,38 @@ Vector geometry
       :local:
       :depth: 1
 
+Bounding boxes
+---------------
+
+Description
+............
+
+This algorithm calculates the bounding box (envelope) of each feature in an
+input layer.
+
+Parameters
+-----------
+
+``Input layer`` [vector: any]
+  Source layer to check.
+
+Outputs
+--------
+
+``output_layer`` [vector: poylgon]
+  Output bounding boxes from input layer.
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:boundingboxes', input_layer, output_layer)
+
+See also
+........
+
+
 Check validity
 --------------
 
