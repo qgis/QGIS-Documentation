@@ -617,15 +617,15 @@ As for table, a checkbox **Select at id** is activated by default (see above
 for the meaning of the checkbox). It can make sense to disable this option when
 you use expensive views.
 
-.. _`layer_style_backup`:
+.. _layer_style_backup:
 
 QGIS layer_style table and database backup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   If you want to make a backup of your PostGIS database using the :file:`pg_dump` and
-   :file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
-   restore afterwards, you need to set the XML option to :file:`DOCUMENT` and the
-   restore will work.
+If you want to make a backup of your PostGIS database using the :file:`pg_dump` and
+:file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
+restore afterwards, you need to set the XML option to :file:`DOCUMENT` and the
+restore will work.
 
 .. code-block:: sql
 
@@ -645,6 +645,7 @@ gracefully fallback to local evaluation.
 
 Support of PostgreSQL data types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Most of common data types are supported by the PostgreSQL provider: integer, float,
 varchar, geometry and timestamp.
 
