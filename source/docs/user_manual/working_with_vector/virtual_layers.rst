@@ -52,6 +52,11 @@ queries.
 Joins and complex queries can also be created simply by directly using the
 names of the layers that are to be joined.
 
+.. note::
+
+   It's also possible to create virtual layers using the SQL window of
+   :ref:`dbmanager`.
+
 Embedded layers
 ---------------
 
