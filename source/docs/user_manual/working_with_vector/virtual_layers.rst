@@ -28,7 +28,7 @@ corresponding toolbar.
 
 The dialog allows you to specify a :guilabel:`Layer name` and a SQL
 :guilabel:`Query`. The
-query can use the name (or id) of loaded vector layers as well as field names
+query can use the name (or id) of loaded vector layers as well as fields' names
 of these layers.
 
 For example, if you have a layer called ``airports``, you can create a new
@@ -182,5 +182,5 @@ box. Example:
    FROM vtab
    WHERE _search_frame_=BuildMbr(-2.10,49.38,-1.3,49.99,4326)
 
-Spatial binary predicates like ``ST_Intersects`` are greatly sped up when used
-in conjunction with this spatial index syntax.
+Spatial binary predicates like ``ST_Intersects`` are significantly sped up when
+used in conjunction with this spatial index syntax.
