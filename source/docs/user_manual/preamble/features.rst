@@ -90,8 +90,8 @@ can also use the integrated GRASS tools, which include the complete
 GRASS functionality of more than 400 modules. (See section
 :ref:`sec_grass`.) Or, you can work with the Processing Plugin, which
 provides a powerful geospatial analysis framework to call native and
-third-party algorithms from QGIS, such as GDAL, SAGA, GRASS, fTools
-and more. (See section :ref:`sec_processing_intro`.)
+third-party algorithms from QGIS, such as GDAL, SAGA, GRASS and more.
+(See section :ref:`sec_processing_intro`.)
 
 Publish maps on the Internet
 ----------------------------
@@ -117,7 +117,6 @@ Core plugins include:
 #.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
 #.  Dxf2Shp Converter (Convert DXF files to shapefiles)
 #.  eVIS (Visualize events)
-#.  fTools (Analyze and manage vector data)
 #.  GDALTools (Integrate GDAL Tools into QGIS)
 #.  Georeferencer GDAL (Add projection information to rasters using GDAL)
 #.  GPS Tools (Load and import GPS data)

@@ -51,7 +51,6 @@
 |extract_nodes|
 |fontcombobox|
 |frame|
-|ftools|
 |fullCumulativeStretch|
 |FullHistogramStretch|
 |gdal|

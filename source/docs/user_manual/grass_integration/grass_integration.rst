@@ -714,8 +714,9 @@ map, so the detail is unnecessary.
 
 .. tip:: **The simplify tool**
 
-   Note that the QGIS fTools plugin has a :menuselection:`Simplify geometries -->`
-   tool that works just like the GRASS **v.generalize** Douglas-Peuker algorithm.
+   Note that QGIS has a :menuselection:`Vector --> Geometry Tools --> Simplify
+   geometries` tool that works just like the GRASS **v.generalize**
+   Douglas-Peuker algorithm.
 
 However, the purpose of this example is different. The contour lines created by
 ``r.contour`` have sharp angles that should be smoothed. Among the **v.generalize**
