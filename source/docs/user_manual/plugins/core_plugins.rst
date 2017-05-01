@@ -25,7 +25,6 @@ Icon                    Plugin                        Description               
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
 |dxf2shpConverter|      DXF2Shape Converter           Converts from DXF to SHP file format                    :ref:`dxf2shape`
 |eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
-|ftools|                fTools                        A suite of vector tools                                 :ref:`ftools`
 |rasterInfo|            GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |geometrySnapper|       Geometry Snapper              Snap geometries to a reference layer                    :ref:`geometry_snapper`

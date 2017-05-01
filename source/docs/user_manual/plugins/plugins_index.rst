@@ -18,7 +18,6 @@ Plugins
    plugins_db_manager
    plugins_dxf2shape_converter
    plugins_evis
-   plugins_ftools
    plugins_gdaltools
    plugins_geometry_checker
    plugins_geometry_snapper

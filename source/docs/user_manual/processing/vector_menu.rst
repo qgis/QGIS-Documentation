@@ -2,35 +2,37 @@
 
    |updatedisclaimer|
 
-.. index:: fTools
-.. _ftools:
+.. index:: Vector
+.. _vector_menu:
 
-fTools Plugin
-=============
+Vector menu
+============
 
 .. only:: html
 
    .. contents::
       :local:
 
-The goal of the fTools Python plugin is to provide a one-stop resource for many
-common vector-based GIS tasks, without the need for additional software,
-libraries, or complex work-arounds. It provides a growing suite of spatial data
-management and analysis functions that are both fast and functional.
+:guilabel:`Vector` menu provides a one-stop resource for many common vector-based GIS tasks.
+It provides a growing suite of spatial data management and analysis functions
+that are both fast and functional. These features are part of the processing
+framework. Note that some plugins can add other features so, in this chapter,
+only default features from processing framework will be listed.
 
-fTools is now automatically installed and enabled in new versions of QGIS, and
-as with all plugins, it can be disabled and enabled using the Plugin Manager
-(see :ref:`managing_plugins`). When enabled, the fTools plugin adds a
-:menuselection:`Vector` menu to QGIS, providing functions ranging from Analysis
-and Research Tools to Geometry and Geoprocessing Tools, as well as several useful
-Data Management Tools.
+Processing framework is automatically installed and, like any plugin, can be
+enabled and disabled using the Plugin Manager (see :ref:`managing_plugins`).
+When enabled, the Processing plugin adds a :menuselection:`Vector` menu to
+QGIS, providing functions ranging from Analysis and Research Tools to Geometry
+and Geoprocessing Tools, as well as several useful Data Management Tools.
 
-.. _`ftools_function`:
+See :ref:`label_processing` for more information about the processing framework.
+
+.. _`vector_function`:
 
 .. index::
    single: Analysis tools
 
-.. _table_ftools_analysis:
+.. _table_vector_analysis:
 
 Analysis tools
 ..............
@@ -56,7 +58,12 @@ Analysis tools
 |                     | values          | vector layer field.                  |
 +---------------------+-----------------+--------------------------------------+
 | |basicStatistics|   | Basic statistics| Compute basic statistics (mean, std  |
-|                     |                 | dev, N, sum, CV) on an input field.  |
+|                     | for text field  | dev, N, sum, CV) on an input text    |
+|                     |                 | field.                               |
++---------------------+-----------------+--------------------------------------+
+| |basicStatistics|   | Basic statistics| Compute basic statistics (mean, std  |
+|                     | for numeric     | dev, N, sum, CV) on an input numeric |
+|                     | field           | field                                |
 +---------------------+-----------------+--------------------------------------+
 | |neighbor|          | Nearest         | Compute nearest neighbor statistics  |
 |                     | neighbor        | to assess the level of clustering in |
@@ -74,100 +81,111 @@ Analysis tools
 |                     |                 | line intersections with length > 0.  |
 +---------------------+-----------------+--------------------------------------+
 
-Table Ftools 1: fTools Analysis tools
+Table tools 1: Default tools in Analysis group
 
 .. index::
    single: Research tools
-.. _table_ftools_research:
+.. _table_vector_research:
 
 Research tools
 ..............
-+---------------------+-----------------+--------------------------------------+
-| **Icon**            | **Tool**        | **Purpose**                          |
-+=====================+=================+======================================+
-| |randomSelection|   | Random selection| Randomly select n number of features,|
-|                     |                 | or n percentage of features.         |
-+---------------------+-----------------+--------------------------------------+
-| |subSelection|      | Random selection| Randomly select features within      |
-|                     | within subsets  | subsets based on a unique ID field.  |
-+---------------------+-----------------+--------------------------------------+
-| |randomPoints|      | Random points   | Generate pseudo-random points over a |
-|                     |                 | given input layer.                   |
-+---------------------+-----------------+--------------------------------------+
-| |regularPoints|     | Regular points  | Generate a regular grid of points    |
-|                     |                 | over a specified region and export   |
-|                     |                 | them as a point shapefile.           |
-+---------------------+-----------------+--------------------------------------+
-| |vectorGrid|        | Vector grid     | Generate a line or polygon grid      |
-|                     |                 | based on user-specified grid spacing.|
-+---------------------+-----------------+--------------------------------------+
-| |selectLocation|    | Select by       | Select features based on their       |
-|                     | location        | location relative to another layer   |
-|                     |                 | to form a new selection, or add or   |
-|                     |                 | subtract from the current selection. |
-+---------------------+-----------------+--------------------------------------+
-| |layerExtent|       | Polygon from    | Create a single rectangular          |
-|                     | layer extent    | polygon layer from the extent of an  |
-|                     |                 | input raster or vector layer.        |
-+---------------------+-----------------+--------------------------------------+
 
-Table Ftools 2: fTools Research tools
++--------------------+-------------------+--------------------------------------+
+| **Icon**           | **Tool**          | **Purpose**                          |
++====================+===================+======================================+
+| |randomSelection|  | Random selection  | Randomly select n number of features,|
+|                    |                   | or n percentage of features.         |
++--------------------+-------------------+--------------------------------------+
+| |subSelection|     | Random selection  | Randomly select features within      |
+|                    | within subsets    | subsets based on a unique ID field.  |
++--------------------+-------------------+--------------------------------------+
+| |randomPoints|     | Random points     | Generate pseudo-random points over a |
+|                    | inside polygons   | polygon layer (variable number of    |
+|                    |                   | point or fixed number of point).     |
++--------------------+-------------------+--------------------------------------+
+| |randomPoints|     | Random points in  | Generate pseudo-random points over a |
+|                    | extent            | given extent.                        |
++--------------------+-------------------+--------------------------------------+
+| |randomPoints|     | Random points in  | Generate pseudo-random points over   |
+|                    | layer bounds      | bounds of a given input layer.       |
++--------------------+-------------------+--------------------------------------+
+| |regularPoints|    | Regular points    | Generate a regular grid of points    |
+|                    |                   | over a specified region and export   |
+|                    |                   | them as a point shapefile.           |
++--------------------+-------------------+--------------------------------------+
+| |vectorGrid|       | Vector grid       | Generate a line or polygon grid      |
+|                    |                   | based on user-specified grid spacing.|
++--------------------+-------------------+--------------------------------------+
+| |selectLocation|   | Select by         | Select features based on their       |
+|                    | location          | location relative to another layer   |
+|                    |                   | to form a new selection, or add or   |
+|                    |                   | subtract from the current selection. |
++--------------------+-------------------+--------------------------------------+
+| |layerExtent|      | Polygon from      | Create a single rectangular          |
+|                    | layer extent      | polygon layer from the extent of an  |
+|                    |                   | input raster or vector layer.        |
++--------------------+-------------------+--------------------------------------+
+
+Table Tools 2: Default tools in Research group
 
 .. index::
    single: Geoprocessing tools
-.. _table_ftools_geoproc:
+.. _table_vector_geoproc:
 
 Geoprocessing tools
 ...................
-+---------------------+-----------------+--------------------------------------+
-| **Icon**            | **Tool**        | **Purpose**                          |
-+=====================+=================+======================================+
-| |convexHull|        | Convex hull(s)  | Create minimum convex hull(s) for an |
-|                     |                 | input layer, or based on an ID field.|
-+---------------------+-----------------+--------------------------------------+
-| |buffer|            | Buffer(s)       | Create buffer(s) around features     |
-|                     |                 | based on distance, or distance field.|
-+---------------------+-----------------+--------------------------------------+
-| |intersect|         | Intersect       | Overlay layers such that output      |
-|                     |                 | contains areas where both layers     |
-|                     |                 | intersect.                           |
-+---------------------+-----------------+--------------------------------------+
-| |union|             | Union           | Overlay layers such that output      |
-|                     |                 | contains intersecting and            |
-|                     |                 | non-intersecting areas.              |
-+---------------------+-----------------+--------------------------------------+
-| |symDifference|     | Symmetrical     | Overlay layers such that output      |
-|                     | difference      | contains those areas of the input    |
-|                     |                 | and difference layers that do not    |
-|                     |                 | intersect.                           |
-+---------------------+-----------------+--------------------------------------+
-| |clip|              | Clip            | Overlay layers such that output      |
-|                     |                 | contains areas that intersect the    |
-|                     |                 | clip layer.                          |
-+---------------------+-----------------+--------------------------------------+
-| |difference|        | Difference      | Overlay layers such that output      |
-|                     |                 | contains areas not intersecting the  |
-|                     |                 | clip layer.                          |
-+---------------------+-----------------+--------------------------------------+
-| |dissolve|          | Dissolve        | Merge features based on input field. |
-|                     |                 | All features with identical input    |
-|                     |                 | values are combined to form one      |
-|                     |                 | single feature.                      |
-+---------------------+-----------------+--------------------------------------+
-| |eliminate|         | Eliminate sliver| Merges selected features with the    |
-|                     | polygons        | neighboring polygon with the         |
-|                     |                 | largest area or largest common       |
-|                     |                 | boundary.                            |
-+---------------------+-----------------+--------------------------------------+
 
-Table Ftools 3: fTools Geoprocessing tools
++---------------------+-------------------+--------------------------------------+
+| **Icon**            | **Tool**          | **Purpose**                          |
++=====================+===================+======================================+
+| |convexHull|        | Convex hull(s)    | Create minimum convex hull(s) for an |
+|                     |                   | input layer, or based on an ID field.|
++---------------------+-------------------+--------------------------------------+
+| |buffer|            | Buffer with       | Create buffer(s) around features     |
+|                     | * fixed distance  | * based on fixed distance            |
+|                     | * distance field  | * based on distance field            |
++---------------------+-------------------+--------------------------------------+
+| |intersect|         | Intersect         | Overlay layers such that output      |
+|                     |                   | contains areas where both layers     |
+|                     |                   | intersect.                           |
++---------------------+-------------------+--------------------------------------+
+| |union|             | Union             | Overlay layers such that output      |
+|                     |                   | contains intersecting and            |
+|                     |                   | non-intersecting areas.              |
++---------------------+-------------------+--------------------------------------+
+| |symDifference|     | Symmetrical       | Overlay layers such that output      |
+|                     | difference        | contains those areas of the input    |
+|                     |                   | and difference layers that do not    |
+|                     |                   | intersect.                           |
++---------------------+-------------------+--------------------------------------+
+| |clip|              | Clip              | Overlay layers such that output      |
+|                     |                   | contains areas that intersect the    |
+|                     |                   | clip layer.                          |
++---------------------+-------------------+--------------------------------------+
+| |difference|        | Difference        | Overlay layers such that output      |
+|                     |                   | contains areas not intersecting the  |
+|                     |                   | clip layer.                          |
++---------------------+-------------------+--------------------------------------+
+| |dissolve|          | Dissolve          | Merge features based on input field. |
+|                     |                   | All features with identical input    |
+|                     |                   | values are combined to form one      |
+|                     |                   | single feature.                      |
++---------------------+-------------------+--------------------------------------+
+| |eliminate|         | Eliminate sliver  | Merges selected features with the    |
+|                     | polygons          | neighboring polygon with the         |
+|                     |                   | largest area or largest common       |
+|                     |                   | boundary.                            |
++---------------------+-------------------+--------------------------------------+
+
+Table Tools 3: Default tools in Geoprocessing group
 
 .. index::
    single: Geometry tools
-.. _table_ftools_geometry:
+.. _table_vector_geometry:
 
 Geometry tools
 ..............
+
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
@@ -175,7 +193,7 @@ Geometry tools
 |                     | validity        | closed holes, and fix node ordering. |
 |                     |                 | You can choose the engine used by the|
 |                     |                 | in the options dialog, digitizing tab|
-|                     |                 | Change the Validate geometries value.| 
+|                     |                 | Change the Validate geometries value.|
 |                     |                 | There is two engines: QGIS and GEOS  |
 |                     |                 | which have pretty different          |
 |                     |                 | behavior. Another tools exists which |
@@ -225,7 +243,7 @@ Geometry tools
 |                     |                 | layers and output them as points.    |
 +---------------------+-----------------+--------------------------------------+
 
-Table Ftools 4: fTools Geometry tools
+Table Tools 4: Default tools in Geometry group
 
 .. note::
 
@@ -237,10 +255,11 @@ Table Ftools 4: fTools Geometry tools
    single: Data Management tools
 
 
-.. _table_ftools_data:
+.. _table_vector_data:
 
 Data management tools
 .....................
+
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
@@ -265,4 +284,5 @@ Data management tools
 |                     | index           | supported formats.                   |
 +---------------------+-----------------+--------------------------------------+
 
-Table Ftools 5: fTools Data management tools
+Table Tools 5: Default tools in Data management group
+
