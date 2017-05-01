@@ -27,9 +27,8 @@ Open the virtual layer creation dialog by clicking on
 corresponding toolbar.
 
 The dialog allows you to specify a :guilabel:`Layer name` and a SQL
-:guilabel:`Query`. The
-query can use the name (or id) of loaded vector layers as well as fields' names
-of these layers.
+:guilabel:`Query`. The query can use the name (or id) of loaded vector
+layers as tables, as well as their fields' name as columns.
 
 For example, if you have a layer called ``airports``, you can create a new
 virtual layer called ``public_airports`` with an SQL query like:
