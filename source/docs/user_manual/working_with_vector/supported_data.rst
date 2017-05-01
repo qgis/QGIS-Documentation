@@ -643,12 +643,10 @@ possible (Experimental)` checkbox to do so. Only supported expressions will be
 sent to the database. Expressions using unsupported operators or functions will
 gracefully fallback to local evaluation.
 
-Support of PostgreSQL data tyes
+Support of PostgreSQL data types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Most of common data types are supported by the PostgreSQL provider: integer, float,
-varchar, geometry and timestamp.
-
-Array data types are not supported.
+varchar, geometry, timestamp and array.
 
 .. index:: shp2pgsql
    single: PostGIS; shp2pgsql
