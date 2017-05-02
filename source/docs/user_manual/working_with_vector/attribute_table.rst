@@ -545,18 +545,20 @@ layer during digitizing. Have a closer look at the edit widget in section
 .. index:: Relations, Foreign key
 .. _vector_relations:
 
-Creating one to many relations
-==============================
+Creating one or many to many relations
+======================================
 
-Relations are a technique often used in databases. The concept is, that
+Relations are a technique often used in databases. The concept is that
 features (rows) of different layers (tables) can belong to each other.
+
+.. _one_to_many_relation:
+
+1-N relation
+------------
 
 As an example you have a layer with all regions of alaska (polygon)
 which provides some attributes about its name and region type and a
 unique id (which acts as primary key).
-
-Foreign keys
--------------
 
 Then you get another point layer or table with information about airports
 that are located in the regions and you also want to keep track of these. If
@@ -570,47 +572,51 @@ relation using foreign keys, because there are several airports in most regions.
 
    Alaska region with airports
 
-In addition to the already existing attributes in the airports attribute table
-another field fk_region which acts as a foreign key (if you have a database, you will
-probably want to define a constraint on it).
+Foreign keys
+............
 
-This field fk_region will always contain an id of a region. It can be seen
-like a pointer to the region it belongs to. And you can design a custom edit
-form for the editing and QGIS takes care about the setup. It works with different
+In addition to the already existing attributes in the airports attribute table,
+you'll need another field ``fk_region`` which acts as a foreign key (if you have
+a database, you will probably want to define a constraint on it).
+
+This field fk_region will always contain an id of a region. It can be seen like
+a pointer to the region it belongs to. And you can design a custom edit form
+for the editing and QGIS takes care about the setup. It works with different
 providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
 
 Layers
--------
+......
 
 QGIS makes no difference between a table and a vector layer. Basically, a vector
-layer is a table with a geometry. So can add your table as a vector layer. To
-demonstrate you can load the 'region' shapefile (with geometries) and the 'airport'
-csv table (without geometries) and a foreign key (fk_region) to the layer
-region. This means, that each airport belongs to exactly one region while each
-region can have any number of airports (a typical one to many relation).
+layer is a table with a geometry. So you can add your table as a vector layer.
+To demonstrate you can load the 'region' shapefile (with geometries) and the
+'airport' csv table (without geometries) and a foreign key (fk_region) to the
+layer region. This means that each airport belongs to exactly one region while
+each region can have any number of airports (a typical one to many relation).
 
 
 Definition (Relation Manager)
-------------------------------
+.............................
 
-The first thing we are going to do is to let QGIS know about the relations between the layer.
-This is done in :menuselection:`Project --> Project Properties`.
-Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
+The first thing we are going to do is to let QGIS know about the relations
+between the layers. This is done in :menuselection:`Project --> Project Properties...`.
+Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
 
 * **name** is going to be used as a title. It should be a human readable string,
-  describing, what the relation is used for. We will just call say "Airports" in this case.
-* **referencing layer** is the one with the foreign key field on it. In our case
-  this is the airports layer
+  describing, what the relation is used for. We will just call say "Airports" in
+  this case.
+* **referencing layer** also considered as child layer, is the one with the
+  foreign key field on it. In our case, this is the airports layer
 * **referencing field** will say, which field points to the other layer so this
   is fk_region in this case
-* **referenced layer** is the one with the primary key, pointed to, so here it
-  is the regions layer
+* **referenced layer** also considered as parent layer, is the one with the
+  primary key, pointed to, so here it is the regions layer
 * **referenced field** is the primary key of the referenced layer so it is ID
 * **id** will be used for internal purposes and has to be unique. You may need
-  it to build custom forms once this is supported. If you leave it empty, one
-  will be generated for you but you can assign one yourself to get one that is
-  easier to handle.
+  it to build :ref:`custom forms <customize_form>` once this is supported. If
+  you leave it empty, one will be generated for you but you can assign one
+  yourself to get one that is easier to handle.
 
 .. _figure_relations_manager:
 
@@ -622,7 +628,7 @@ Open the :guilabel:`Relations` menu and click on :guilabel:`Add`.
 .. index:: Feature form, Linked forms, Embedded form
 
 Forms
------
+.....
 
 Now that QGIS knows about the relation, it will be used to improve the
 forms it generates. As we did not change the default form method (autogenerated)
@@ -638,13 +644,13 @@ under actions.
 
    Identification dialog regions with relation to airports
 
-As you can see, the airports assigned to this particular region are all shown in a
-table. And there are also some buttons available. Let's review them shortly
+As you can see, the airports assigned to this particular region are all shown in
+a table. And there are also some buttons available. Let's review them shortly
 
 * The |toggleEditing| button is for toggling the edit mode. Be aware that it
   toggles the edit mode of the airport layer, although we are in the feature
-  form of a feature from the region layer. But the table is representing features
-  of the airport layer.
+  form of a feature from the region layer. But the table is representing
+  features of the airport layer.
 * The |signPlus| button will add a new feature to the airport layer. And it will
   assign the new airport to the current region by default.
 * The |remove| button will delete the selected airport permanently.
@@ -657,14 +663,14 @@ table. And there are also some buttons available. Let's review them shortly
   the later let's you view all the airports in their respective form.
 
 If you work on the airport table, a new widget type is available which lets you
-embed the feature form of the referenced region on the feature form of the airports.
-It can be used when you open the layer properties of the airports table, switch to
-the :menuselection:`Fields` menu and change the widget type of the foreign key
-field 'fk_region' to Relation Reference.
+embed the feature form of the referenced region on the feature form of the
+airports. It can be used when you open the layer properties of the airports
+table, switch to the :menuselection:`Fields` menu and change the widget type of
+the foreign key field 'fk_region' to Relation Reference.
 
 If you look at the feature dialog now, you will see, that the form of the region
-is embedded inside the airports form and will even have a combobox, which allows you
-to assign the current airport to another region.
+is embedded inside the airports form and will even have a combobox, which allows
+you to assign the current airport to another region.
 
 .. _figure_linked_forms:
 
@@ -674,18 +680,21 @@ to assign the current airport to another region.
    Identification dialog airport with relation to regions
 
 .. index:: Many-to-many relation; Relation
+.. _many_to_many_relation:
 
 N-M relation
 -------------
 
 N-M relation are many-to-many relation between two tables. For instance, the
-*Shop* and *Product* layers. A product is sold in several shop and a shop
+*Shop* and *Product* layers: a product is sold in several shops and a shop
 sells several products.
 
-In such case, we have a pivot table to list all products for all shops. In QGIS,
-you should setup two one-to-many relations as explain above, see
-:ref:`vector_relations`. One for the relation between *Product* table and the
-pivot table and the second one between *Shop* and the pivot table.
+In such case, we need a pivot table to list all products for all shops. In
+QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
+as explained above:
+
+* a relation between *Product* table and the pivot table;
+* and a second one between *Shop* and the pivot table.
 
 When we add a new child (i.e. a product in a shop), QGIS will add a new row in
 the pivot table and in the *Product* table. If we link a product to a shop,
@@ -703,12 +712,14 @@ CASCADE* in the foreign key constraint:
          REFERENCES location.shop(id)
             ON DELETE CASCADE;
 
-Note that you should be in transaction mode when working on such context. QGIS
-should be able to add or update row(s) in all tables (product, shop and the
-pivot table).
+.. note:: **Combine N-M relation with automatic transaction group**
+
+  You should enable the transaction mode in :menuselection:`Project Properties
+  --> Data Sources -->` when working on such context. QGIS should be able to
+  add or update row(s) in all tables (product, shop and the pivot table).
 
 Finally, adding such relations in a form is done in the same way that for a
-one-to-many relation. The *relation* panel in the :guilabel:`Fields` properties
-of the vector layer will let the user add the relation in the form. It will
-appear as a *Many to many relation*.
+one-to-many relation. The :guilabel:`Relations` panel in the :guilabel:`Fields`
+properties of the vector layer will let the user add the relation in the form.
+It will appear as a **Many to many relation**.
 
