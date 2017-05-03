@@ -324,7 +324,6 @@ Menu Option                                                     Shortcut        
 |processingModel| :guilabel:`Graphical Modeler...`              :kbd:`Ctrl+Alt+M`     see :ref:`processing.modeler`               \
 |processingHistory| :guilabel:`History...`                      :kbd:`Ctrl+Alt+H`     see :ref:`processing.history`               \
 |processingResult| :guilabel:`Results Viewer`                   :kbd:`Ctrl+Alt+R`     see :ref:`processing.results`               \
-|processingCommander| :guilabel:`Commander`                     :kbd:`Ctrl+Alt+D`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.

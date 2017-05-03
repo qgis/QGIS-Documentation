@@ -963,8 +963,6 @@ rst_epilog = """
    :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
-.. |processingCommander| image:: /static/common/commander.png
-   :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
    :width: 2em
 .. |processingModel| image:: /static/common/processingModel.png

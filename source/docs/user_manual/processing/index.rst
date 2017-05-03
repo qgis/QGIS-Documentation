@@ -20,4 +20,3 @@ QGIS processing framework
     console
     scripts
     3rdParty
-    commander
