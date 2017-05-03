@@ -755,10 +755,7 @@ Reshape Features
 
 You can reshape line and polygon features using the |reshape|
 :sup:`Reshape Features` tool on the toolbar. For lines, it replaces the line
-part from the first to the last intersection with the original line. The
-|reshape| :sup:`Reshape Features` tool also helps you extend linestring
-geometries: simply begin or end the reshape line at either the first or last
-point of the existing line.
+part from the first to the last intersection with the original line.
 
 .. _figure_reshape_line:
 
@@ -766,6 +763,12 @@ point of the existing line.
    :align: center
 
    Reshape line
+
+.. tip:: **Extend linestring geometries with reshape tool**
+
+  Use the |reshape| :sup:`Reshape Features` tool to extend existing linestring
+  geometries: snap to the first or last vertex of the line and draw a new one.
+  Validate and the feature's geometry becomes the combination of the two lines.
 
 For polygons, it will reshape the polygon's boundary. For it to work, the
 reshape tool's line must cross the polygon's boundary at least twice. To draw
