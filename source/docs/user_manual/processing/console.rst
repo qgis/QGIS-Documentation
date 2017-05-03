@@ -16,10 +16,11 @@ the processing framework. Models involving several algorithms can be defined usi
 command-line interface, and additional operations such as loops and conditional
 sentences can be added to create more flexible and powerful workflows.
 
-There is not a processing console in QGIS, but all processing commands are available
-instead from the QGIS built-in Python console. That means that you can incorporate
-those commands into your console work and connect processing algorithms to all the
-other features (including methods from the QGIS API) available from there.
+There is not a processing console in QGIS, but all processing commands are
+available instead from the QGIS built-in :ref:`Python console <console>`.
+That means that you can incorporate those commands into your console work
+and connect processing algorithms to all the other features (including methods
+from the QGIS API) available from there.
 
 The code that you can execute from the Python console, even if it does not call
 any specific processing method, can be converted into a new algorithm that you can
