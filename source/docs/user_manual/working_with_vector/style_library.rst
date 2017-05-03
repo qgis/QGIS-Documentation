@@ -434,8 +434,13 @@ symbol layer types:
   * :guilabel:`Offset X,Y`
 
 * **Centroid fill**: places a marker symbol at the centroid of the visible
-  feature. The marker can be placed on every part of a multi-part feature or
+  feature. The position of the marker may however not be the real centroid
+  of the feature because calculation takes into account the polygon(s)
+  clipped to area visible in map canvas for rendering and ignores holes.
+  
+  The marker can be placed on every part of a multi-part feature or
   only on its biggest part, and forced to be inside the polygon;
+
 * **Geometry generator** (see geometry_generator_symbol_);
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
   simple two color gradients or a predefined :ref:`gradient color ramp
@@ -510,14 +515,14 @@ The Vector Field Marker
 The vector field marker is used to display vector field data such as earth
 deformation, tidal flows, and the like. It displays the vectors as lines
 (preferably arrows) that are scaled and oriented according to selected
-attributes of data points. It can only be used to render point data - line and
+attributes of data points. It can only be used to render point data; line and
 polygon layers are not drawn by this symbology.
 
 The vector field is defined by attributes in the data, which can represent the
 field either by:
 
-* **cartesian** components (``x`` and ``y`` components of the field),
-* or **polar** coordinates: In this case, attributes define ``Length`` and
+* **cartesian** components (``x`` and ``y`` components of the field)
+* or **polar** coordinates: in this case, attributes define ``Length`` and
   ``Angle``. The angle may be measured either clockwise from north, or
   Counterclockwise from east, and may be either in degrees or radians.
 * or as **height only** data, which displays a vertical arrow scaled using an
