@@ -73,9 +73,9 @@ first creating a record for Main Street in the :kbd:`streets` table.
 
 You should have also noticed that:
 
- * You can't add the street using its name
- * You can't add a street using a street :kbd:`id` before first creating the
-   street record on the streets table
+* You can't add the street using its name
+* You can't add a street using a street :kbd:`id` before first creating the
+  street record on the streets table
 
 Remember that our two tables are linked via a Primary/Foreign Key pair. This
 means that no valid person can be created without there also being a valid
