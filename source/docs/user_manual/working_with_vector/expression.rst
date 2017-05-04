@@ -15,18 +15,38 @@ Expressions
    .. contents::
       :local:
 
-The **Expressions** feature is available from many parts in QGIS. It can be
-accessed using the |expression| :sup:`Expression Builder`, the
-|expressionSelect| :sup:`Select By Expression...`, the :guilabel:`Geometry generator`
-symbol layer option, the |calculateField| :sup:`Field calculator` or the
-|dataDefined| :sup:`Data defined override` tool.
-Based on layer data and prebuilt or user defined functions,
-it offers a powerful way to manipulate attribute value, geometry and variables in
-order to dynamically change the geometry style, the content or position
+Based on layer data and prebuilt or user defined functions, **Expressions**
+offer a powerful way to manipulate attribute value, geometry and variables
+in order to dynamically change the geometry style, the content or position
 of the label, the value for diagram, the height of a composer item,
 select some features, create virtual field ...
 
-**Some examples:**
+.. _expression_builder:
+
+The Expression string builder
+=============================
+
+Main dialog to build expressions, the :guilabel:`Expression string builder`
+is available from many parts in QGIS and, can particularly be accessed when:
+
+* clicking the |expression| button;
+* :ref:`selecting features <sec_selection>` with the |expressionSelect|
+  :sup:`Select By Expression...` tool;
+* :ref:`editing attributes <calculate_fields_values>` with e.g. the
+  |calculateField| :sup:`Field calculator` tool;
+* manipulating symbology, label or composer item parameters with the |dataDefined|
+  :sup:`Data defined override` tool (see :ref:`data_defined`);
+* building a :ref:`geometry generator <geometry_generator_symbol>` symbol layer;
+* doing some :ref:`geoprocessing <label_processing>`.
+
+The Expression builder dialog offers access to the:
+
+* :ref:`Expression tab <functions_list>` which, thanks to a list of predefined
+  functions, helps to write and check the expression to use;
+* :ref:`Function Editor tab <function_editor>` which helps to extend the list of
+  functions by creating custom ones.
+
+**Some use cases of expressions:**
 
 * From Field Calculator, calculate a "pop_density" field using existing "total_pop"
   and "area_km2" fields::
@@ -51,15 +71,10 @@ select some features, create virtual field ...
 
     "density_level" = 'High population density' and "price_m2" > 10000
 
-Likewise, the previous expression could also be used to define which features
-should be labeled or shown in the map. Using expressions offers you a lot of
-possibilities.
-
-The **Expressions** feature offers access to the:
-
-* :guilabel:`Expression` tab which lists functions to use
-* :guilabel:`Function Editor` tab which helps to create custom functions
-  to use in the expressions.
+  Likewise, the previous expression could also be used to define which features
+  should be labeled or shown in the map.
+  
+Using expressions offers you a lot of possibilities.
 
 .. index:: Named parameters
    single: Expressions; Named parameters
@@ -74,46 +89,31 @@ The **Expressions** feature offers access to the:
   helps clarify what the arguments for an expression function refer to, which is helpful
   when you are trying to interpret an expression at a later date!
 
+
+.. index:: Functions
 .. _functions_list:
 
-Functions List
-===============
+List of functions
+=================
 
+The :guilabel:`Expression` tab provides the main interface to write expressions
+using functions, layer's fields and values. It contains widgets to:
 
+* type expressions using functions and/or fields. At the bottom of the dialog,
+  is displayed the result of the expression evaluated on the first feature of
+  the layer.
+* select the appropriate function among a list, organized in groups. A search box
+  is available to filter the list and quickly find a particular function or field.
+  Double-clicking on the item's name adds it to the expression being written.
+* display help for each function selected. When a field is selected, this widget
+  shows a sample of its values. Double-clicking a value adds it to the expression.
+  
 .. _figure_expression_tab:
 
 .. figure:: /static/user_manual/working_with_vector/function_list.png
    :align: center
 
    The Expression tab
-
-The **Expression** tab contains functions as well as layer's fields and values.
-It contains widgets to:
-
-- type expressions using functions and/or fields. A preview of the expression's
-  result is displayed at the bottom of the dialog.
-- select the appropriate function among a list. A search box is available to
-  filter the list and quickly find a particular function or field.
-  Double-clicking on the item's name adds it to the expression being written.
-- display help for each function selected. When a field is selected, this widget
-  shows a sample of its values. Double-clicking a value adds it to the expression.
-
-
-To help to quickly find a function, they are organized in groups.
-In :guilabel:`Operators`, you find mathematical operators.
-Look in :guilabel:`Math` for mathematical functions.
-The :guilabel:`Conversions` group contains functions that convert one
-data type to another.
-The :guilabel:`String` group provides functions for data strings,
-such as :guilabel:`Date and Time` handles date and time data.
-In the :guilabel:`Geometry` group, you find functions for geometry objects.
-With :guilabel:`Record` group functions, you can add a numeration to your data set
-while :guilabel:`Fields and Values` group helps view all attributes of the attribute table.
-The :guilabel:`Customs` group lists the functions created or imported by the user.
-There are many other groups, listed below.
-
-
-.. index:: Field calculator functions
 
 Operators
 ----------
@@ -411,7 +411,7 @@ Custom Functions
 -----------------
 
 This group contains functions created by the user.
-See function_editor_ for more details.
+See :ref:`function_editor` for more details.
 
 
 Date and Time Functions
@@ -842,12 +842,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 * You can manipulate the current geometry with the variable $geometry to create
   a buffer or get the point on surface::
 
-   buffer($geometry, 10)
-   point_on_surface($geometry)
+   buffer( $geometry, 10 )
+   point_on_surface( $geometry )
 
 * Return the x coordinate of the current feature's centroid::
 
-    x($geometry)
+    x( $geometry )
 
 * Send back a value according to feature's area::
 
@@ -1017,7 +1017,8 @@ To use these functions in an expression, they should be preceded by @ character
  value                   Returns the current value
 ======================= =======================================================
 
-.. index:: Functions
+
+.. index:: Custom functions
 .. _function_editor:
 
 Function Editor
