@@ -25,14 +25,14 @@ polygon. Only valid for polygon or line layers.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
+``Input layer`` [vector: line, polygon]
   Source layer to use.
 
 Output
 ......
 
-``Output layer`` [vector: polygon]
-  Boundary of polygons from the input layer.
+``Output layer`` [vector: point, line]
+  Boundary from the input layer (point for line, and line for polygon).
 
 Console usage
 .............
