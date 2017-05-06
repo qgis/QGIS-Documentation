@@ -518,8 +518,8 @@ dialog for the rivers layer of the QGIS sample dataset.
 Point displacement
 ..................
 
-The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
-works to visualize all features of a point layer, even if they have the same location.
+The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer works to
+visualize all features of a point layer, even if they have the same location.
 To do this, the symbols of the points are placed on a displacement circle
 around one center symbol or on several concentric circles.
 
@@ -534,6 +534,46 @@ around one center symbol or on several concentric circles.
    Graduated, Categorized or Rule-Based renderer using the :guilabel:`Renderer`
    drop-down list then the :guilabel:`Renderer Settings...` button.
 
+.. index:: Cluster
+   single: Symbology; Point cluster renderer
+.. _point_cluster:
+
+Point Cluster
+..............
+
+Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
+which blows up overlaid point features placement, the |pointClusterSymbol|
+:guilabel:`Point Cluster` renderer groups nearby points into a single
+rendered marker symbol. Based on a specified :guilabel:`Distance`, points
+that fall within from each others are merged into a single symbol.
+Points aggregation is made based on the closest group being formed, rather
+than just assigning them the first group within the search distance.
+
+From the main dialog, you can:
+
+* set the symbol to represent the point cluster in the :guilabel:`Cluster symbol`;
+  the default rendering displays the number of aggregated features thanks to the
+  ``@cluster_size`` :ref:`variable <general_tools_variables>` on Font marker
+  symbol layer.
+* use the :guilabel:`Renderer` drop-down list to apply any of the other feature
+  rendering types to the layer (single, categorized, rule-based...). Then, push
+  the **[Renderer settings...]** button to configure features' symbology as usual.
+  Note that this renderer is only visible on features that are not clustered.
+  Also, when the symbol color is the same for all the point features inside a
+  cluster, that color sets the ``@cluster_color`` variable of the cluster.
+
+.. _figure_cluster_symbology:
+
+.. figure:: /static/user_manual/working_with_vector/cluster_symbol.png
+   :align: center
+
+   Point Cluster dialog
+
+.. note::
+
+ Point displacement and cluster renderers do not alter feature geometry,
+ meaning that points are not moved from their position. They are still located
+ at their initial place. Changes are only visual, for rendering purpose.
 
 .. index::
    single: Symbology; Inverted polygon renderer
@@ -630,8 +670,8 @@ features of the layer:
   the percentage of visibility in the the menu beside the slider.
 
 * :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
-  achieve special rendering effects with these tools that you may
-  previously only know from graphics programs. The pixels of your overlaying and
+  achieve special rendering effects with these tools that you may previously
+  only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
 * Apply :ref:`paint effects <draw_effects>` on all the layer features with the
