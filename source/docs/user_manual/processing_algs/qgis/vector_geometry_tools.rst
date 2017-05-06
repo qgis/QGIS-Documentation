@@ -408,11 +408,14 @@ Dissolve
 Description
 ...........
 
-This algorithm combines the geometries of a polygon or line layer. It either combines
-all geometries in the layer or combines the geometries based on a common value in
-a certain field. If the geometries to be combined are spatially separated from each
-other the output will be multi geometries. In case the input is a polygon layer, common
-boundaries of adjacent polygons being combined are erased.
+This algorithm takes a polygon or line vector layer and combines their geometries
+into new geometries. One or more attributes can be specified to dissolve only
+geometries belonging to the same class (having the same value for the specified
+attributes), alternatively all geometries can be dissolved.
+  
+If the geometries to be dissolved are spatially separated from each other the output
+will be multi geometries. In case the input is a polygon layer, common boundaries
+of adjacent polygons being dissolved will get erased.
 
 Parameters
 ..........
@@ -422,15 +425,15 @@ Parameters
 
 ``Dissolve all (do not use field)`` [boolean]
   Dissolve all geometries; values in the output layer's fields are the ones of
-  the first input feature that happens to be processed. Returns one feature whose geometry represents
-  all geometries of the input layer.
+  the first input feature that happens to be processed. Returns one feature whose geometry
+  represents all geometries of the input layer.
 
   Default: *True*
 
-``Unique ID field`` [tablefield: any]
+``Unique ID fields`` [tablefield: any]
   Optional.
 
-  If features share a common value in this field their geometries will be combined.
+  If features share a common value in all selected field(s) their geometries will be combined.
   Values in the output layer's fields are the ones of the first input feature that happens to be processed.
   Returns one feature for each unique value in the field. The feature's
   geometry represents all input geometries with this value.
