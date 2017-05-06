@@ -685,38 +685,38 @@ you to assign the current airport to another region.
 N-M relation
 -------------
 
-N-M relation are many-to-many relation between two tables. For instance, the
-*Shop* and *Product* layers: a product is sold in several shops and a shop
-sells several products.
+N-M relation is a many-to-many relation between two tables. For instance, the
+``airports`` and ``airlines`` layers: an airport receives several airline
+companies and an airline company flies to several airports.
 
-In such case, we need a pivot table to list all products for all shops. In
+In such case, we need a pivot table to list all airlines for all airports. In
 QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
-* a relation between *Product* table and the pivot table;
-* and a second one between *Shop* and the pivot table.
+* a relation between ``airlines`` table and the pivot table;
+* and a second one between ``airports`` table and the pivot table.
 
-When we add a new child (i.e. a product in a shop), QGIS will add a new row in
-the pivot table and in the *Product* table. If we link a product to a shop,
-QGIS will only add a row in the pivot table.
+When we add a new child (i.e. a company to an airport), QGIS will add a new row
+in the pivot table and in the ``airlines`` table. If we link a compagny to an
+airport, QGIS will only add a row in the pivot table.
 
-In case you want to remove a link, a product or a shop, QGIS won't remove the
-row in the pivot table. The database administrator should add a *ON DELETE
-CASCADE* in the foreign key constraint:
+In case you want to remove a link, an airline or an airport, QGIS won't remove
+the row in the pivot table. The database administrator should add a *ON DELETE
+CASCADE* instruction in the foreign key constraint:
 
 .. code-block:: sql
 
-   ALTER TABLE location.product
-   ADD CONSTRAINT location_product_shop_id_fkey
+   ALTER TABLE location.airlines
+   ADD CONSTRAINT location_airlines_airports_id_fkey
       FOREIGN KEY (id)
-         REFERENCES location.shop(id)
+         REFERENCES location.airports(id)
             ON DELETE CASCADE;
 
 .. note:: **Combine N-M relation with automatic transaction group**
 
   You should enable the transaction mode in :menuselection:`Project Properties
   --> Data Sources -->` when working on such context. QGIS should be able to
-  add or update row(s) in all tables (product, shop and the pivot table).
+  add or update row(s) in all tables (airlines, airports and the pivot tables).
 
 Finally, adding such relations in a form is done in the same way that for a
 one-to-many relation. The :guilabel:`Relations` panel in the :guilabel:`Fields`
