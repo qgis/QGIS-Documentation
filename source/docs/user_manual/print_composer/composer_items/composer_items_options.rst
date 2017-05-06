@@ -160,10 +160,10 @@ the composer item's level (which includes all global, project and
 composition's variables). Map items also include Map settings variables that
 provide easy access to values like the map's scale, extent, and so on.
 
-The :guilabel:`Variables` also allows the user to manage composition-level
-variables. Click the |signPlus| button to add a new custom composition-level
-variable. Likewise, select a custom composition-level variable from the list
-and click the |signMinus| button to remove it.
+In :guilabel:`Variables`, it`s also possible to manage item-level variables.
+Click the |signPlus| button to add a new custom variable. Likewise, select any
+custom item-level variable from the list and click the |signMinus| button to
+remove it.
 
 More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.
