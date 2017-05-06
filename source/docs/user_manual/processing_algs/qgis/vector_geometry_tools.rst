@@ -721,7 +721,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: line]
   Resultant layer with merged line
 
 Console usage
