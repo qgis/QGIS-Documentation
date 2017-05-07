@@ -733,6 +733,42 @@ Console usage
 See also
 ........
 
+Merge lines
+------------
+
+Description
+............
+
+This algorithm joins all connected parts of MultiLineString geometries into
+single LineString geometries.
+
+If any parts of the input MultiLineString geometries are not connected, the
+resultant geometry will be a MultiLineString containing any lines which could
+be merged and any non-connected line parts.
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  input layer (line) to merge
+
+Outputs
+.......
+
+``Output layer`` [vector: line]
+  Resultant layer with merged line
+
+Console usage
+..............
+
+::
+
+   processing.runalg('qgis:mergelines', input, output)
+
+See also
+........
+
+
 Multipart to singleparts
 ------------------------
 
