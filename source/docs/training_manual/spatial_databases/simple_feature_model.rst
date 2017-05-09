@@ -36,7 +36,9 @@ For further information, have a look at the `OGC Simple Feature for SQL
 Add a geometry field to table
 -------------------------------------------------------------------------------
 
-Let's add a point field to our people table::
+Let's add a point field to our people table:
+
+.. code-block:: sql
 
   alter table people add column the_geom geometry;
 
@@ -46,11 +48,14 @@ Add a constraint based on geometry type
 -------------------------------------------------------------------------------
 
 You will notice that the geometry field type does not implicitly specify what
-*type* of geometry for the field - for that we need a constraint::
+*type* of geometry for the field - for that we need a constraint:
+
+.. code-block:: sql
 
   alter table people
   add constraint people_geom_point_chk
-      check(st_geometrytype(the_geom) = 'ST_Point'::text OR the_geom IS NULL);
+      check(st_geometrytype(the_geom) = 'ST_Point'::text
+            OR the_geom IS NULL);
 
 This adds a constraint to the table so that it will only accept a point geometry
 or a null value.
@@ -69,8 +74,9 @@ sure it has a constraint enforcing geometries to be polygons.
 Populate geometry_columns table
 -------------------------------------------------------------------------------
 
-At this point you should also add an entry into the :kbd:`geometry_columns`
-table::
+At this point you should also add an entry into the ``geometry_columns`` table:
+
+.. code-block:: sql
 
   insert into geometry_columns values
     ('','public','people','the_geom',2,4326,'POINT');
@@ -78,14 +84,18 @@ table::
 Why? :kbd:`geometry_columns` is used by certain applications to be aware of
 which tables in the database contain geometry data.
 
-.. note::  If the above :kbd:`INSERT` statement causes an error, run this
-   query first::
+.. note::
+
+   If the above ``INSERT`` statement causes an error, run this
+   query first:
+   
+   .. code-block:: sql
 
      select * from geometry_columns;
 
-    If the column :kbd:`f_table_name` contains the value :kbd:`people`, then
-    this table has already been registered and you don't need to do anything
-    more.
+   If the column :kbd:`f_table_name` contains the value :kbd:`people`, then
+   this table has already been registered and you don't need to do anything
+   more.
 
 The value :kbd:`2` refers to the number of dimensions; in this case, two: **x**
 and **y**.
@@ -106,7 +116,9 @@ Add an appropriate `geometry_columns` entry for your new cities layer
 Add geometry record to table using SQL
 -------------------------------------------------------------------------------
 
-Now that our tables are geo-enabled, we can store geometries in them::
+Now that our tables are geo-enabled, we can store geometries in them:
+
+.. code-block:: sql
 
   insert into people (name,house_no, street_id, phone_no, the_geom)
           values ('Fault Towers',

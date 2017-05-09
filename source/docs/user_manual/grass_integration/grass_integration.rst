@@ -867,7 +867,7 @@ appearance and parameters inside the Toolbox.
 A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) looks
 like this:
 
-::
+.. code-block:: xml
 
   <?xml version="1.0" encoding="UTF-8"?>
   <!DOCTYPE qgisgrassmodule SYSTEM "http://mrcc.com/qgisgrassmodule.dtd">
