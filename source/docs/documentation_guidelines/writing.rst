@@ -373,6 +373,41 @@ It's also recommanded to use index parameters such as ``single``, ``pair``,
 See http://www.sphinx-doc.org/en/stable/markup/misc.html#index-generating-markup
 for more information on index creation.
 
+Special Comments
+----------------
+
+Sometimes, you may want to emphasize some points of the description, either to
+warn, remind or give some hints to the user. In QGIS Documentation, we use reST
+special directives such as ``.. warning::``, ``.. note::`` and ``.. tip::``
+generating particular frames that highlight your comments. See
+http://www.sphinx-doc.org/en/stable/markup/para.html#paragraph-level-markup for
+more information.
+A clear and appropriate title is required for both warnings and tips.
+
+.. code-block:: rst
+
+ .. tip:: **Always use a meaningful title for tips**
+   
+  Begin tips with a title that summarizes what it is about. This helps
+  users to quickly overview the message you want to give them, and
+  decide on its relevance.
+
+Code snippets
+-------------
+
+You may also want to give examples and insert a code snippet. In this case,
+write the comment below a line with the ``::`` directive inserted. However, for
+a better rendering, especially to apply color highlighting to code according
+to its language, use the code-block directive, e.g. ``.. code-block:: xml``.
+By default, Python code snippets do not need this reST directive. More details
+at http://www.sphinx-doc.org/en/stable/markup/code.html.
+
+.. note::
+
+  While texts in note, tip and warning frames are translatable, be aware that
+  code block frames do not allow translation. So avoid comments not related to
+  code sample and keep this just as short as needed.
+
 Footnotes
 ---------
 
