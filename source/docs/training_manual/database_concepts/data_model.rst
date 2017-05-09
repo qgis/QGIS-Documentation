@@ -19,11 +19,15 @@ Install PostgreSQL
   Please note that the documentation will assume users are running QGIS under
   Ubuntu.
 
-Under Ubuntu::
+Under Ubuntu:
+
+.. code-block:: bash
 
   sudo apt-get install postgresql-9.1
 
-You should get a message like this::
+You should get a message like this:
+
+.. code-block:: bash
 
   [sudo] password for qgis:
   Reading package lists... Done
@@ -55,7 +59,9 @@ Create a database user
 Under Ubuntu:
 
 After the installation is complete, run this command to become the postgres
-user and then create a new database user::
+user and then create a new database user:
+
+.. code-block:: bash
 
   sudo su - postgres
 
@@ -64,7 +70,9 @@ Type in your normal log in password when prompted (you need to have sudo rights)
 Now, at the postgres user's bash prompt, create the database user. Make sure
 the user name matches your unix login name: it will make your life much easier,
 as postgres will automatically authenticate you when you are logged in as that
-user::
+user:
+
+.. code-block:: bash
 
   createuser -d -E -i -l -P -r -s qgis
 
@@ -73,7 +81,7 @@ password.
 
 What do those options mean?
 
-::
+.. code-block:: bash
 
   -d, --createdb     role can create new databases
   -E, --encrypted    encrypt stored password
@@ -84,7 +92,9 @@ What do those options mean?
   -s, --superuser    role will be superuser
 
 Now you should leave the postgres user's bash shell environment by
-typing::
+typing:
+
+.. code-block:: bash
 
   exit
 
@@ -110,16 +120,22 @@ Type :kbd:`q` to exit.
 Create a database
 -------------------------------------------------------------------------------
 
-The :kbd:`createdb` command is used to create a new database. It should be run
-from the bash shell prompt::
+The ``createdb`` command is used to create a new database. It should be run
+from the bash shell prompt:
+
+.. code-block:: psql
 
   createdb address -O qgis
 
-You can verify the existence of your new database by using this command::
+You can verify the existence of your new database by using this command:
+
+.. code-block:: psql
 
   psql -l
 
-Which should return something like this::
+Which should return something like this:
+
+.. code-block:: psql
 
   Name      |  Owner   | Encoding | Collation  |   Ctype    |   Access privileges
   ----------+----------+----------+------------+------------+-----------------------
@@ -162,11 +178,15 @@ Make Tables in SQL
 -------------------------------------------------------------------------------
 
 Let's start making some tables! We will use our ER Diagram as a guide. First,
-connect to the address db::
+connect to the address db:
+
+.. code-block:: sql
 
   psql address
 
-Then create a :kbd:`streets` table::
+Then create a :file:`streets` table:
+
+.. code-block:: sql
 
   create table streets (id serial not null primary key, name varchar(50));
 
@@ -176,13 +196,15 @@ automatically for every new record. :kbd:`varchar(50)` tells PostgreSQL to
 create a character field of 50 characters in length.
 
 You will notice that the command ends with a :kbd:`;` - all SQL commands should
-be terminated this way. When you press enter, psql will report something like
-this::
+be terminated this way. When you press :kbd:`Enter`, psql will report something
+like this:
 
-  NOTICE:  CREATE TABLE will create implicit sequence "streets_id_seq" for
-           serial column "streets.id"
-  NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index "streets_pkey"
-           for table "streets"
+.. code-block:: sql
+
+  NOTICE:  CREATE TABLE will create implicit sequence "streets_id_seq"
+           for serial column "streets.id"
+  NOTICE:  CREATE TABLE / PRIMARY KEY will create implicit index
+           "streets_pkey" for table "streets"
   CREATE TABLE
 
 That means your table was created successfully, with a primary key :kbd:`streets_pkey`
@@ -192,14 +214,18 @@ Note: If you hit return without entering a :kbd:`;`, then you will get a prompt 
 this: :kbd:`address-#`. This is because PG is expecting you to enter more. Enter
 :kbd:`;` to run your command.
 
-To view your table schema, you can do this::
+To view your table schema, you can do this:
+
+.. code-block:: psql
 
   \d streets
 
-Which should show something like this::
+Which should show something like this:
+
+.. code-block:: sql
 
   Table "public.streets"
-   Column |         Type          |            Modifiers
+  Column  |         Type          |            Modifiers
   --------+-----------------------+--------------------------------------
    id     | integer               | not null default
           |                       | nextval('streets_id_seq'::regclass)
@@ -207,11 +233,15 @@ Which should show something like this::
   Indexes:
     "streets_pkey" PRIMARY KEY, btree (id)
 
-To view your table contents, you can do this::
+To view your table contents, you can do this:
+
+.. code-block:: sql
 
   select * from streets;
 
-Which should show something like this::
+Which should show something like this:
+
+.. code-block:: sql
 
    id | name
    ---+------
@@ -248,7 +278,9 @@ There are two ways to do this:
 * Add the key after the table has been created
 * Define the key at time of table creation
 
-Our table has already been created, so let's do it the first way::
+Our table has already been created, so let's do it the first way:
+
+.. code-block:: sql
 
   alter table people
     add constraint people_streets_fk foreign key (street_id) references streets(id);
@@ -257,7 +289,9 @@ Our table has already been created, so let's do it the first way::
 That tells the :kbd:`people` table that its :kbd:`street_id` fields must match
 a valid street :kbd:`id` from the :kbd:`streets` table.
 
-The more usual way to create a constraint is to do it when you create the table::
+The more usual way to create a constraint is to do it when you create the table:
+
+.. code-block:: psql
 
   create table people (id serial not null primary key,
                        name varchar(50),
@@ -265,9 +299,11 @@ The more usual way to create a constraint is to do it when you create the table:
                        street_id int references streets(id) not null,
                        phone_no varchar null);
 
-    \d people
+  \d people
 
-After adding the constraint, our table schema looks like this now::
+After adding the constraint, our table schema looks like this now:
+
+.. code-block:: sql
 
   Table "public.people"
 
@@ -288,13 +324,17 @@ Create Indexes in SQL
 -------------------------------------------------------------------------------
 
 We want lightning fast searches on peoples names. To provide for this, we can
-create an index on the name column of our people table::
+create an index on the name column of our people table:
+
+.. code-block:: psql
 
   create index people_name_idx on people(name);
 
   \d people
 
-Which results in::
+Which results in:
+
+.. code-block:: sql
 
   Table "public.people"
 
@@ -315,7 +355,9 @@ Which results in::
 Dropping Tables in SQL
 -------------------------------------------------------------------------------
 
-If you want to get rid of a table you can use the :kbd:`drop` command::
+If you want to get rid of a table you can use the :kbd:`drop` command:
+
+.. code-block:: sql
 
   drop table streets;
 
@@ -326,7 +368,9 @@ If you want to get rid of a table you can use the :kbd:`drop` command::
 .. _backlink-database-concepts-5:
 
 If you used the same :kbd:`drop table` command on the `people` table, it would
-be successful::
+be successful:
+
+.. code-block:: sql
 
   drop table people;
 
@@ -343,7 +387,9 @@ useful way to learn about databases. However, there are quicker and easier ways
 to do a lot of what we are showing you. Install pgAdmin III and you can create,
 drop, alter etc tables using 'point and click' operations in a GUI.
 
-Under Ubuntu, you can install it like this::
+Under Ubuntu, you can install it like this:
+
+.. code-block:: bash
 
   sudo apt-get install pgadmin3
 

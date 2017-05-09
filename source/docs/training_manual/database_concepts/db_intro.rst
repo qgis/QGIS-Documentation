@@ -29,7 +29,7 @@ number of columns, but can have any number of rows. Each row is identified
 by the values appearing in a particular column subset which has been
 identified as a candidate key. *- Wikipedia*
 
-::
+.. code-block:: sql
 
    id | name  | age
   ----+-------+-----
@@ -51,7 +51,7 @@ row and one column. *- Wikipedia*
 
 A column:
 
-::
+.. code-block:: sql
 
   | name  |
   +-------+
@@ -60,7 +60,7 @@ A column:
 
 A field:
 
-::
+.. code-block:: sql
 
   | Horst |
 
@@ -70,7 +70,7 @@ Records
 A record is the information stored in a table row. Each record will have a
 field for each of the columns in the table.
 
-::
+.. code-block:: sql
 
   2 | Horst |  88  <-- one record
 
@@ -82,24 +82,28 @@ Datatypes restrict the kind of information that can be stored in a column.
 
 There are many kinds of datatypes. Let's focus on the most common:
 
-- String - to store free-form text data
-- Integer - to store whole numbers
-- Real - to store decimal numbers
-- Date - to store Horst's birthday so no one forgets
-- Boolean - to store simple true/false values
+* ``String`` - to store free-form text data
+* ``Integer`` - to store whole numbers
+* ``Real`` - to store decimal numbers
+* ``Date`` - to store Horst's birthday so no one forgets
+* ``Boolean`` - to store simple true/false values
 
 You can tell the database to allow you to also store nothing in a field. If
 there is nothing in a field, then the field content is referred to as a
-**'null' value**::
+**'null' value**:
+
+.. code-block:: sql
 
   insert into person (age) values (40);
 
   select * from person;
 
-Result::
+Result:
+
+.. code-block:: sql
 
     id | name  | age
-    ----+-------+-----
+    ---+-------+-----
      1 | Tim   |  20
      2 | Horst |  88
      4 |       |  40  <-- null for name
@@ -150,12 +154,14 @@ to a loss of data integrity. *- Wikipedia*
 
 There are different kinds of normalisation 'forms'.
 
-Let's take a look at a simple example::
+Let's take a look at a simple example:
+
+.. code-block:: sql
 
   Table "public.people"
 
-    Column  |          Type          |                Modifiers
-  ----------+------------------------+-----------------------------------------
+  Column    |          Type          |                Modifiers
+  ----------+------------------------+------------------------------------
    id       | integer                | not null default
             |                        | nextval('people_id_seq'::regclass)
             |                        |
@@ -165,12 +171,12 @@ Let's take a look at a simple example::
   Indexes:
    "people_pkey" PRIMARY KEY, btree (id)
 
-::
+.. code-block:: sql
 
   select * from people;
 
   id |     name      |           address           |  phone_no
-   --+---------------+-----------------------------+-------------
+  ---+---------------+-----------------------------+-------------
    1 | Tim Sutton    | 3 Buirski Plein, Swellendam | 071 123 123
    2 | Horst Duester | 4 Avenue du Roix, Geneva    | 072 121 122
   (2 rows)
@@ -201,16 +207,20 @@ Imagine you are reading a textbook and looking for the explanation of a concept
 - and the textbook has no index! You will have to start reading at one cover
 and work your way through the entire book until you find the information you
 need. The index at the back of a book helps you to jump quickly to the page
-with the relevant information::
+with the relevant information:
+
+.. code-block:: sql
 
   create index person_name_idx on people (name);
 
-Now searches on name will be faster::
+Now searches on name will be faster:
+
+.. code-block:: sql
 
   Table "public.people"
 
-    Column  |          Type          |               Modifiers
-  ----------+------------------------+-----------------------------------------
+  Column   |          Type          |               Modifiers
+  ----------+------------------------+-------------------------------------
    id       | integer                | not null default
             |                        | nextval('people_id_seq'::regclass)
             |                        |
@@ -228,7 +238,9 @@ A sequence is a unique number generator. It is normally used to create a unique
 identifier for a column in a table.
 
 In this example, id is a sequence - the number is incremented each time a
-record is added to the table::
+record is added to the table:
+
+.. code-block:: sql
 
    id |     name     |           address           |  phone_no
    ---+--------------+-----------------------------+-------------
@@ -241,7 +253,9 @@ Entity Relationship Diagramming
 In a normalised database, you typically have many relations (tables). The
 entity-relationship diagram (ER Diagram) is used to design the logical
 dependencies between the relations. Consider our non-normalised `people` table
-from earlier in the lesson::
+from earlier in the lesson:
+
+.. code-block:: sql
 
   select * from people;
 
@@ -252,7 +266,9 @@ from earlier in the lesson::
   (2 rows)
 
 With a little work we can split it into two tables, removing the need to repeat
-the street name for individuals who live in the same street::
+the street name for individuals who live in the same street:
+
+.. code-block:: sql
 
   select * from streets;
 
@@ -261,7 +277,9 @@ the street name for individuals who live in the same street::
    1  | Plein Street
   (1 row)
 
-and::
+and:
+
+.. code-block:: sql
 
   select * from people;
 
@@ -310,11 +328,13 @@ In ER Diagramming, the linkage between tables is normally based on Foreign keys
 linking to Primary keys.
 
 If we look at our people example, the table definition shows that the street
-column is a foreign key that references the primary key on the streets table::
+column is a foreign key that references the primary key on the streets table:
+
+.. code-block:: sql
 
   Table "public.people"
 
-    Column   |         Type          |  Modifiers
+   Column    |         Type          |  Modifiers
   -----------+-----------------------+--------------------------------------
    id        | integer               | not null default
              |                       | nextval('people_id_seq'::regclass)
@@ -340,8 +360,8 @@ Take a scenario where you have an accounting system. You need to transfer funds
 from one account and add them to another. The sequence of steps would go like
 this:
 
- - remove R20 from Joe
- - add R20 to Anne
+* remove R20 from Joe
+* add R20 to Anne
 
 If something goes wrong during the process (e.g. power failure), the
 transaction will be rolled back.

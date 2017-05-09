@@ -11,22 +11,30 @@ Materialised Views (Rule based views)
 -------------------------------------------------------------------------------
 
 Say you want to log every change of phone_no in your people table in to a
-people_log table. So you set up a new table::
+people_log table. So you set up a new table:
+
+.. code-block:: sql
 
   create table people_log (name text, time timestamp default NOW());
 
 In the next step, create a rule that logs every change of a phone_no in the
-people table into the people_log table::
+people table into the people_log table:
+
+.. code-block:: sql
 
   create rule people_log as on update to people
     where NEW.phone_no <> OLD.phone_no
     do insert into people_log values (OLD.name);
 
-To test that the rule works, let's modify a phone number::
+To test that the rule works, let's modify a phone number:
+
+.. code-block:: sql
 
   update people set phone_no = '082 555 1234' where id = 2;
 
-Check that the :kbd:`people` table was updated correctly::
+Check that the :kbd:`people` table was updated correctly:
+
+.. code-block:: sql
 
     select * from people where id=2;
 
@@ -36,7 +44,9 @@ Check that the :kbd:`people` table was updated correctly::
     (1 row)
 
 Now, thanks to the rule we created, the :kbd:`people_log` table will look like
-this::
+this:
+
+.. code-block:: sql
 
     select * from people_log;
 

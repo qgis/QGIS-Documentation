@@ -45,7 +45,7 @@ Same level titles must use same character for underline adornment.
 In QGIS Documentation, you should use following styles for chapter,
 section, subsection and minisec.
 
-::
+.. code-block:: rst
 
    ********
    Chapter
@@ -72,32 +72,32 @@ You can use some tags inside the text to emphasize some items.
   including selecting submenus and choosing a specific operation,
   or any subsequence of such a sequence.
 
-  ::
+  .. code-block:: rst
 
      :menuselection:`menu --> submenu`
 
-* **Dialog and Tab title**: Labels presented as part of an interactive user interface
-  including window title, tab title and option labels.
+* **Dialog and Tab title**: Labels presented as part of an interactive user
+  interface including window title, tab title and option labels.
 
-  ::
+  .. code-block:: rst
 
      :guilabel:`title`
 
 * **Button labels**
 
-  ::
+  .. code-block:: rst
 
      **[Apply]**
 
 * **Filename or directory**
 
-  ::
+  .. code-block:: rst
 
      :file:`README.rst`
 
 * **Icon with popup text belonging to Icon**
 
-  ::
+  .. code-block:: rst
 
      |icon| :sup:`popup_text`
 
@@ -105,7 +105,7 @@ You can use some tags inside the text to emphasize some items.
 
 * **Shorcut keyboard**
 
-  ::
+  .. code-block:: rst
 
      :kbd:`ctrl B`
 
@@ -114,7 +114,7 @@ You can use some tags inside the text to emphasize some items.
 
 * **User text**
 
-  ::
+  .. code-block:: rst
 
      ``label``
 
@@ -129,7 +129,7 @@ It then helps you create and call hyperlinks between sections or page.
 
 The example below creates the anchor of a section (e.g., Label/reference title)
 
-::
+.. code-block:: rst
 
    .. _my_anchor:
 
@@ -138,7 +138,7 @@ The example below creates the anchor of a section (e.g., Label/reference title)
 
 To call the reference in the **same page**, use
 
-::
+.. code-block:: rst
 
    see my_anchor_ for more information.
 
@@ -153,7 +153,7 @@ you do need to use empty lines before and after the anchor.
 Another way to jump to the same place **from anywhere in the documentation**
 is to use the ``:ref:`` role.
 
-::
+.. code-block:: rst
 
    see :ref:`my_anchor` for more information.
 
@@ -166,7 +166,7 @@ Because the reference often displays a full caption, there is not really
 the need to use the word *section*.
 Note that you can also use a custom caption to describe the reference
 
-::
+.. code-block:: rst
 
    see :ref:`Label and reference <my_anchor>` for more information.
 
@@ -186,7 +186,7 @@ Pictures
 
 To insert an image, use
 
-::
+.. code-block:: rst
 
    .. image:: /static/common/qgislogo.png
       :width: 10 em
@@ -203,14 +203,14 @@ You can put an image inside text or add an alias to use everywhere. To use an im
 inside a paragraph, just create an alias somewhere.
 
 
-::
+.. code-block:: rst
 
    .. |nice_logo| image:: /static/common/qgislogo.png
                   :width: 2 em
 
 and call it in your paragraph:
 
-::
+.. code-block:: rst
 
    my paragraph begins here with a nice logo |nice_logo|.
 
@@ -229,7 +229,7 @@ my paragraph begins here with a nice logo |nice_logo|.
 Figure
 ......
 
-::
+.. code-block:: rst
 
    .. _figure_logo:
 
@@ -264,7 +264,7 @@ in the figure block.
 
 Referencing to the figure can be done using the reference label like this
 
-::
+.. code-block:: rst
 
    (see Figure_logo_).
 
@@ -273,7 +273,7 @@ It can be used in the same :file:`.rst` document but not in others.
 You can still use the ``:ref:`` role for reference from other files, but
 keep in mind that this returns the full caption of the image.
 
-::
+.. code-block:: rst
 
    see :ref:`figure_logo`
    
@@ -287,7 +287,7 @@ Tables
 
 To create a simple table
 
-::
+.. code-block:: rst
 
    =======  =======  =======
    x        y        z
@@ -300,7 +300,7 @@ Use a ``\`` followed by an empty space to leave an empty space.
 
 You can also use more complicated tables by drawing them using references and all
 
-::
+.. code-block:: rst
 
    .. _my_drawn_table:
 
@@ -356,7 +356,7 @@ useful (coherent, consistent and really connected to each other):
 Several index tags exist in RST. You can either use the inline ``:index:`` tag
 within the normal text.
 
-::
+.. code-block:: rst
 
    QGIS allows to load several :index:`Vector formats` supported by GDAL/OGR ...
 
@@ -364,13 +364,13 @@ Or you can use the ``.. index::`` block-level markup which links to the
 beginning of the next paragraph. Because of the rules mentioned above, it's
 advised to use this latter tag as it's easier to fulfill them.
 
-::
+.. code-block:: rst
 
    .. index:: WMS, WFS, Loading layers
 
-It's also recommanded to use index parameters such as ``single``, ``pair``, ``see``...
-in order to build a more structured and interconnected table of index. See
-http://www.sphinx-doc.org/en/stable/markup/misc.html#index-generating-markup
+It's also recommanded to use index parameters such as ``single``, ``pair``,
+``see``... in order to build a more structured and interconnected table of index.
+See http://www.sphinx-doc.org/en/stable/markup/misc.html#index-generating-markup
 for more information on index creation.
 
 Footnotes
@@ -382,7 +382,7 @@ So, if possible don't use footnotes within any documentation.
 
 This is for creating a footnote
 
-::
+.. code-block:: rst
 
    blabla [1]_
 
@@ -399,15 +399,16 @@ Add new Screenshots
 Here are some hints to create new, nice looking screenshots.
 For the user guide they go into :file:`./resources/en/user_manual/`
 
-* same environment for all the screen caps (same OS, same decoration, same font size).
-  We have used Ubuntu with Unity and the default "ambience" theme.
-  For screenshots of QGIS main window and composer we have set it to show menus on the window
-  (not the default in unity).
-* reduce the window to the minimal space needed to show the feature (taking the all screen
-  for a small modal window > overkill)
+* same environment for all the screen caps (same OS, same decoration, same font
+  size). We have used Ubuntu with Unity and the default "ambience" theme.
+  For screenshots of QGIS main window and composer we have set it to show menus
+  on the window (not the default in unity).
+* reduce the window to the minimal space needed to show the feature (taking the
+  all screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files if necessary
-  (downscaling the dimensions without properly upping the resolution > ugly)
+* don't resize them in an image editor, the size will be set into the rst files
+  if necessary (downscaling the dimensions without properly upping the
+  resolution > ugly)
 * cut the background
 * make the top corners transparent if the background is not white
 * Set print size resolution to 135 dpi (e.g. in Gimp set the print resolution
@@ -415,14 +416,15 @@ For the user guide they go into :file:`./resources/en/user_manual/`
   original size in html and at a good print resolution in the PDF.
   You can also use ImageMagick convert command to do a batch of images
 
-::
+.. code-block:: bash
 
   convert -units PixelsPerInch input.png -density 135 output.png
 
 * save them in png (no jpeg artifacts)
-* the screenshot should show the content according to what is described in the text
-* you can find some prepared QGIS-projects that were used before to create screenshots
-  in :file:`./qgis-projects`.
+* the screenshot should show the content according to what is described in the
+  text
+* you can find some prepared QGIS-projects that were used before to create
+  screenshots in :file:`./qgis-projects`.
   This makes it easier to reproduce screenshots for the next version of QGIS.
   These projects use the QGIS `Sample Data <http://qgis.org/downloads/data/>`_
   (aka Alaska Dataset), which should be placed in the same folder
@@ -430,7 +432,7 @@ For the user guide they go into :file:`./resources/en/user_manual/`
 * Use the following command to remove the global menu function in Ubuntu
   to create smaller application screens with menu's:
 
-::
+.. code-block:: bash
 
   sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
@@ -441,8 +443,10 @@ Translate Screenshots
 Here are some hints to create screenshots for your translated user guide.
 They will go into :file:`./resources/<your language>/user_manual/`
 
-* same environment for all the screen caps (same OS, same decoration, same font size)
-* use the QGIS -projects included in QGIS-Documentation repository (in :file:`./qgis_projects` ).
+* same environment for all the screen caps (same OS, same decoration, same font
+  size)
+* use the QGIS -projects included in QGIS-Documentation repository (in
+  :file:`./qgis_projects` ).
   These were used to produce the 'original' screenshots in the manual.
   The QGIS `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
   should be placed in the same folder as the QGIS-Documentation Repository.
@@ -456,13 +460,15 @@ They will go into :file:`./resources/<your language>/user_manual/`
   (downscaling the dimensions without properly upping the resolution > ugly)
 * cut the background
 * save them in png (no jpeg artifacts)
-* the screenshot should show the content according to what is described in the text
+* the screenshot should show the content according to what is described in the
+  text
 
 
 Documenting Processing algorithms
 =================================
 
-If you want to write documentation for Processing algorithms consider these guidelines:
+If you want to write documentation for Processing algorithms consider these
+guidelines:
 
 * don't overwrite existing help files by files from other sources (e.g. QGIS
   source tree or Processing-Help repository), this files have different formats
