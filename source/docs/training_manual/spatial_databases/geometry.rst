@@ -33,9 +33,12 @@ the geometry_columns table.
 :ref:`Check your results <geometry-1>`
 
 Now let's insert a linestring into our streets table. In this case we will
-update an existing street record::
+update an existing street record:
 
-  update streets set the_geom = 'SRID=4326;LINESTRING(20 -33, 21 -34, 24 -33)'
+.. code-block:: sql
+
+  update streets
+  set the_geom = 'SRID=4326;LINESTRING(20 -33, 21 -34, 24 -33)'
   where streets.id=2;
 
 Take a look at the results in QGIS. (You may need to right-click on the streets
@@ -49,7 +52,9 @@ Creating Polygons
 -------------------------------------------------------------------------------
 
 Creating polygons is just as easy. One thing to remember is that by definition,
-polygons have at least four vertices, with the last and first being co-located::
+polygons have at least four vertices, with the last and first being co-located:
+
+.. code-block:: sql
 
     insert into cities (name, the_geom)
     values ('Tokyo', 'SRID=4326;POLYGON((10 -10, 5 -32, 30 -27, 10 -10))');
@@ -58,11 +63,13 @@ polygons have at least four vertices, with the last and first being co-located::
    is to allow you to add complex polygons with multiple unconnected areas. For
    instance
 
-::
+.. code-block:: sql
 
     insert into cities (name, the_geom)
-    values ('Tokyo Outer Wards', 'SRID=4326;POLYGON((20 10, 20 20, 35 20, 20 10),
-          (-10 -30, -5 0, -15 -15, -10 -30))');
+    values ('Tokyo Outer Wards',
+            'SRID=4326;POLYGON((20 10, 20 20, 35 20, 20 10),
+                               (-10 -30, -5 0, -15 -15, -10 -30))'
+            );
 
 If you followed this step, you can check what it did by loading the cities
 dataset into QGIS, opening its attribute table, and selecting the new entry.
@@ -82,30 +89,32 @@ For this exercise you should do the following:
 * Use SQL to insert some new people records, ensuring that each has
   an associated street and city.
 
-Your updated people schema should look something like this::
+Your updated people schema should look something like this:
 
-    \d people
+.. code-block:: sql
 
-    Table "public.people"
-       Column   |         Type          |                      Modifiers
-     -----------+-----------------------+--------------------------------------------
-      id        | integer               | not null
-                |                       | default nextval('people_id_seq'::regclass)
-      name      | character varying(50) |
-      house_no  | integer               | not null
-      street_id | integer               | not null
-      phone_no  | character varying     |
-      the_geom  | geometry              |
-      city_id   | integer               | not null
-    Indexes:
-      "people_pkey" PRIMARY KEY, btree (id)
-      "people_name_idx" btree (name)
-    Check constraints:
-      "people_geom_point_chk" CHECK (st_geometrytype(the_geom) =
-                           'ST_Point'::text OR the_geom IS NULL)
-    Foreign-key constraints:
-      "people_city_id_fkey" FOREIGN KEY (city_id) REFERENCES cities(id)
-      "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
+  \d people
+
+  Table "public.people"
+     Column   |         Type          |                      Modifiers
+   -----------+-----------------------+--------------------------------------------
+    id        | integer               | not null
+              |                       | default nextval('people_id_seq'::regclass)
+    name      | character varying(50) |
+    house_no  | integer               | not null
+    street_id | integer               | not null
+    phone_no  | character varying     |
+    the_geom  | geometry              |
+    city_id   | integer               | not null
+  Indexes:
+    "people_pkey" PRIMARY KEY, btree (id)
+    "people_name_idx" btree (name)
+  Check constraints:
+    "people_geom_point_chk" CHECK (st_geometrytype(the_geom) =
+                         'ST_Point'::text OR the_geom IS NULL)
+  Foreign-key constraints:
+    "people_city_id_fkey" FOREIGN KEY (city_id) REFERENCES cities(id)
+    "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
 
 
 :ref:`Check your results <geometry-2>`
@@ -135,12 +144,16 @@ sub-objects of SFS Geometries. When you want to select the first vertex point of
 every polygon geometry in the table myPolygonTable, you have to do this in this
 way:
 
-* Transform the polygon boundary to a linestring::
+* Transform the polygon boundary to a linestring:
+
+  .. code-block:: sql
 
     select st_boundary(geometry) from myPolygonTable;
 
 
-* Select the first vertex point of the resultant linestring::
+* Select the first vertex point of the resultant linestring:
+
+  .. code-block:: sql
 
     select st_startpoint(myGeometry)
     from (
@@ -157,15 +170,17 @@ start with ``ST_``.
 Clipping
 -------------------------------------------------------------------------------
 
-To clip a subpart of your data you can use the :kbd:`ST_INTERSECT()` function.
-To avoid empty geometries, use::
+To clip a subpart of your data you can use the ``ST_INTERSECT()`` function.
+To avoid empty geometries, use:
+
+.. code-block:: sql
 
   where not st_isempty(st_intersection(a.the_geom, b.the_geom))
 
 .. image:: /static/training_manual/spatial_databases/qgis_001.png
    :align: center
 
-::
+.. code-block:: sql
 
   select st_intersection(a.the_geom, b.the_geom), b.*
   from clip as a, road_lines as b
@@ -187,7 +202,9 @@ receiver.
    :align: center
 
 To create a linestring from a new point layer called 'points', you can run the
-following command::
+following command:
+
+.. code-block:: sql
 
   select ST_LineFromMultiPoint(st_collect(the_geom)), 1 as id
   from (
@@ -213,7 +230,9 @@ Differences between tables
 -------------------------------------------------------------------------------
 
 To detect the difference between two tables with the same structure, you can
-use the PostgreSQL keyword :kbd:`EXCEPT`::
+use the PostgreSQL keyword ``EXCEPT``:
+
+.. code-block:: sql
 
   select * from table_a
   except
@@ -226,7 +245,9 @@ Tablespaces
 -------------------------------------------------------------------------------
 
 You can define where postgres should store its data on disk by creating
-tablespaces::
+tablespaces:
+
+.. code-block:: sql
 
   CREATE TABLESPACE homespace LOCATION '/home/pg';
 

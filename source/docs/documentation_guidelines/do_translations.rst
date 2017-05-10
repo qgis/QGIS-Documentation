@@ -207,7 +207,7 @@ need special translation.
 
 Below we see an interesting sentence to translate:
 
-::
+.. code-block:: rst
 
    The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a
    point vector map. A heatmap is a raster map showing the density or
@@ -232,7 +232,7 @@ commonly used to refer to another section somewhere in the manual! The text
 following a ``:ref:`` statement should never be changed because it is a unique
 identifier!
 
-::
+.. code-block:: rst
 
    First this core plugin needs to be activated using the Plugin Manager
    (see Section :ref:`load_core_plugin`). After activation the heatmap icon
@@ -248,7 +248,7 @@ The next item contains the rst-tag ``:menuselection:`` followed by text
 actually displayed in a menu in QGIS application, this may be translated in the
 application and therefore should be changed when this is the case.
 
-::
+.. code-block:: rst
 
    Select from menu :menuselection:`View --> Toolbars --> Raster` to activate
    the Raster Toolbar when it is not yet activated.
@@ -258,7 +258,7 @@ the translation used in the Dutch localized QGIS application.
 
 A bit further we meet the following tricky translation item:
 
-::
+.. code-block:: rst
 
    The |heatmap| :sup:`Heatmap` tool button starts the Dialog of the Heatmap
    plugin (see figure_heatmap_settings_).
@@ -272,7 +272,7 @@ created ``figure_heatmap_settings_`` is replaced with a figure number.
 
 The next translation item with rst attributes is the following item:
 
-::
+.. code-block:: rst
 
     **Input Point dialog**: Provides a selection of loaded point vector maps.
 
@@ -282,7 +282,7 @@ translated in the application.
 
 The following translation item contains the ``:guilabel:`` rst tag.
 
-::
+.. code-block:: rst
 
     When the |checkbox| :guilabel:`Advanced` checkbox is checked it will
     give access to additional advanced options.
@@ -294,7 +294,7 @@ The following translation item contains \``airports\``. The quotes are
 used to give the text another text font. In this case it is a literal value and
 does not need translation.
 
-::
+.. code-block:: rst
 
     For the following example, we will use the ``airports`` vector point
     layer from the QGIS sample dataset (see :ref:`label_sampledata`).
