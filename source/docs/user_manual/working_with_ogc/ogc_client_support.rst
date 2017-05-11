@@ -35,7 +35,7 @@ Important OGC specifications supported by QGIS are:
 * **WFS-T** --- Web Feature Service - Transactional (:ref:`ogc-wfs`)
 * **WCS** --- Web Coverage Service (:ref:`ogc-wcs`)
 * **WPS** --- Web Processing Service
-* **CSW** --- Catalogue Service for the Web
+* **CSW** --- Catalogue Service for the Web 
 * **SFS** --- Simple Features for SQL (:ref:`label_postgis`)
 * **GML** --- Geography Markup Language
 
@@ -80,9 +80,9 @@ server understands HTTP as the data transport mechanism.
 
 Additionally, QGIS will cache your WMS responses (i.e. images) for 24h as long
 as the GetCapabilities request is not triggered. The GetCapabilities request is
-triggered everytime the **[Connect]** button in the **[Add layer(s) from WMS(T)S Server]**
-dialog is used to retrieve the WMS server capabilities. This is an automatic
-feature meant to optimize project loading time. If a project is saved with a WMS layer,
+triggered everytime the **[Connect]** button in the **[Add layer(s) from WMS(T)S Server]** 
+dialog is used to retrieve the WMS server capabilities. This is an automatic 
+feature meant to optimize project loading time. If a project is saved with a WMS layer, 
 the corresponding WMS tiles will be loaded from the cache the next time the project is opened
 as long as they are no older than 24H.
 
@@ -218,11 +218,11 @@ future QGIS sessions.
 
 .. warning::
 
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
    will keep unprotected credentials in the connection configuration. Those
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
    See ref:`authentication_index` for more details.
 
 .. _`ogc-wms-layers`:
@@ -313,7 +313,7 @@ and transmitted to QGIS in one go.
 In this version of QGIS, the :guilabel:`Global transparency` setting from the
 :guilabel:`Layer Properties` is hard coded to be always on, where available.
 
-.. index::
+.. index:: 
    single: WMS; Layer transparency
 
 .. tip:: **WMS Layer Transparency**
@@ -447,7 +447,7 @@ UMN Mapserver below to support GetFeatureInfo in GML format.
 
 **Viewing Properties**
 
-.. index::
+.. index:: 
    single: WMS; Properties
 
 Once you have added a WMS server, you can view its properties by right-clicking
@@ -457,7 +457,7 @@ on it in the legend and selecting :menuselection:`Properties`.
 
 **Metadata Tab**
 
-.. index::
+.. index:: 
    pair: WMS; Metadata
 
 The tab :guilabel:`Metadata` displays a wealth of information about the WMS
@@ -593,11 +593,11 @@ supports selection of time position, if temporal domain is offered by the server
 
 .. warning::
 
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
    will keep unprotected credentials in the connection configuration. Those
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
    See ref:`authentication_index` for more details.
 
 .. _`ogc-wfs`:
@@ -634,17 +634,13 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 
 Note that any proxy settings you may have set in your preferences are also recognized.
 
-In the WFS settings dialog, you can define the :guilabel:`maximal number of features`
-downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS
-2.0)` and force :guilabel:`Inverse axis orientation`.
-
 .. warning::
 
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
+   Entering **username** and **password** in the :guilabel:`Authentication` tab 
    will keep unprotected credentials in the connection configuration. Those
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
+   *Authentication configuration* instead (:guilabel:`configurations` tab). 
    See ref:`authentication_index` for more details.
 
 .. _figure_OGC_add_wfs:
@@ -654,17 +650,30 @@ downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS
 
    Adding a WFS layer
 
+.. Commented out..
+   in QGIS 1.8 the following checkbox seems to be missing, maybe the
+   loading of features is already prevented by default when it is not
+   the first layer loaded? This needs to be checked..
+
+   Without using the checkbox |checkbox|
+   :guilabel:`Only request features overlapping the current view extent`
+   QGIS fetches all features from the WFS-server. If you
+   only want to have a small selection based on your extent, zoom to the area
+   of interest, request the WFS-layer again and make sure you have checked
+   the checkbox mentioned above. Basically this adds the BBOX-parameter with
+   the values from your current extent to the WFS-query. This is extremely
+   useful when you only want to request **some** features from a huge
+   WFS-dataset.
+
 You'll notice the download progress is visualized in the lower left of the QGIS
 main window. Once the layer is loaded, you can identify and select a province or
 two and view the attribute table.
 
-.. note:: **About differences between WFS versions**
-
-  WFS 1.0.0, 1.1.0 and 2.0 are supported. Background download and progressive
-  rendering, on-disk caching of downloaded features and version autodetection are
-  now supported.
-
-  Only WFS 2.0 service supports GetFeature paging.
+Only WFS 1.0.0 is supported. At this time, there have not been many tests against
+WFS versions implemented in other WFS servers. If you encounter problems with any
+other WFS server, please do not hesitate to contact the development team. Please
+refer to section :ref:`label_helpsupport` for further information about the
+mailing lists.
 
 .. tip:: **Finding WFS Servers**
 
