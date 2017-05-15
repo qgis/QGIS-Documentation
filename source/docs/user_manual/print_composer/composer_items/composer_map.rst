@@ -139,12 +139,12 @@ functionalities (see figure_composer_map_extents_):
 
    Map Extents Dialog
 
-* The **Map extents** area allows you to specify the map extent using X and Y min/max
-  values and by clicking the **[Set to map canvas extent]** button. This button sets
-  the map extent of the composer map item to the extent of the current map view in the
-  main QGIS application. The button **[View extent in map canvas]** does exactly the
-  opposite, it updates the extent of the map view in the QGIS application to the extent
-  of the composer map item.
+The **Map extents** area allows you to specify the map extent using X and Y min/max
+values and by clicking the **[Set to map canvas extent]** button. This button sets
+the map extent of the composer map item to the extent of the current map view in the
+main QGIS application. The button **[View extent in map canvas]** does exactly the
+opposite, it updates the extent of the map view in the QGIS application to the extent
+of the composer map item.
 
 If you change the view on the QGIS map canvas by changing
 vector or raster properties, you can update the Print Composer view by selecting
