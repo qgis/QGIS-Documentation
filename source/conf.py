@@ -849,6 +849,12 @@ rst_epilog = """
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
+.. |multiEditChangedValues| image:: /static/common/multieditChangedValues.png
+   :width: 1.5em
+.. |multiEditMixedValues| image:: /static/common/multieditMixedValues.png
+   :width: 1.5em
+.. |multiEditSameValues| image:: /static/common/multieditSameValues.png
+   :width: 1.5em
 .. |multiToSingle| image:: /static/common/multi_to_single.png
    :width: 1.5em
 .. |neighbor| image:: /static/common/neighbour.png
