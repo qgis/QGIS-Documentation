@@ -33,7 +33,7 @@ numbers 1 through 5 in yellow circles are discussed below).
    Your window decorations (title bar, etc.) may appear different depending
    on your operating system and window manager.
 
-The QGIS GUI is divided into five areas:
+The QGIS GUI is divided into five components:
 
 #. Menu Bar
 #. Toolbars

@@ -56,9 +56,12 @@ top of the legend are drawn over layers listed lower down in the legend.
 
 At the top of the Layers panel, a toolbar allows you to:
 
+
+* |symbology| :sup:`Open the layer styling dock`: toggle the layer styling
+  panel on and off.
 * |addGroup| :sup:`Add new group`
 * |showPresets| :sup:`Manage Visibility`: control visibility of layers and
-  preset layers combination
+  preset layers combination.
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
   visible and whose features intersect the current map canvas have their style
   rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
