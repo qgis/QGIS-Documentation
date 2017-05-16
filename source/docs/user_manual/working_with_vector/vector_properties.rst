@@ -1419,7 +1419,7 @@ We now describe an example using the data-defined override function for the
 .. figure:: /static/user_manual/working_with_vector/move_label.png
    :align: center
 
-   Move labels
+   Moved labels
 
 .. _rule_based_labeling:
 
@@ -2215,7 +2215,7 @@ But what about if we need to use relative paths, relative to the selected layer
 (a file-based one, like a shapefile or SpatiaLite)? The following code will
 do the trick:
 
-::
+.. code-block:: python
 
   command = "firefox"
   imagerelpath = "images_test/test_image.jpg"
@@ -2235,14 +2235,14 @@ the *command* and *imagerelpath* variables must be changed to fit our needs.
 But what about if the relative path needs to be relative to the (saved)
 project file? The code of the Python action would be:
 
-::
+.. code-block:: python
 
-  command="firefox"
-  imagerelpath="images/test_image.jpg"
-  projectpath=qgis.core.QgsProject.instance().fileName()
+  command = "firefox"
+  imagerelpath = "images/test_image.jpg"
+  projectpath = qgis.core.QgsProject.instance().fileName()
   import os.path
-  path=os.path.dirname(str(projectpath)) if projectpath != '' else None
-  image=os.path.join(path, imagerelpath)
+  path = os.path.dirname(str(projectpath)) if projectpath != '' else None
+  image = os.path.join(path, imagerelpath)
   import subprocess
   subprocess.Popen( [command, image ] )
 
@@ -2253,8 +2253,7 @@ project and the names to be given to the layers are data driven (*filename* and
 *layername* are column names of the table of attributes of the vector where
 the action was created):
 
-::
-
+.. code-block:: python
 
   qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp',
     '[% "layername" %]', 'ogr')
@@ -2262,8 +2261,7 @@ the action was created):
 
 To add a raster (a TIF image in this example), it becomes:
 
-::
-
+.. code-block:: python
 
   qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif',
     '[% "layername" %]')
