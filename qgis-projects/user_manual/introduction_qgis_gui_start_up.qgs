@@ -1,9 +1,11 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.13.0-Master">
+<qgis projectname="" version="2.18.7">
   <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="landcover20130516233229406" name="landcover">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="landcover20130516233229406" source="/home/alexandre/qgis/qgis_sample_data/raster/landcover.img" name="landcover">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -11,10 +13,10 @@
   <mapcanvas>
     <units>feet</units>
     <extent>
-      <xmin>-4531087.56418966874480247</xmin>
-      <ymin>2579309.57171401893720031</ymin>
-      <xmax>3246690.21358811110258102</xmax>
-      <ymax>6749540.40861152857542038</ymax>
+      <xmin>-5281087.56418966874480247</xmin>
+      <ymin>2142960.34369813278317451</ymin>
+      <xmax>3968912.43581033358350396</xmax>
+      <ymax>7102556.30329408310353756</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -30,6 +32,7 @@
         <geographicflag>false</geographicflag>
       </spatialrefsys>
     </destinationsrs>
+    <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="landcover20130516233229406"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:3763" srcDatumTransform="-1" destDatumTransform="-1" layerid="contour100_2_Plataforma_continental20140508235403851"/>
@@ -50,11 +53,14 @@
   </legend>
   <projectlayers>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-7117600</xmin>
+        <ymin>1367760</ymin>
+        <xmax>4897040</xmax>
+        <ymax>7809680</ymax>
+      </extent>
       <id>landcover20130516233229406</id>
-      <datasource>../../../qgis_sample_data/raster/landcover.img</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../../Geodata/qgis_sample_data/raster/landcover.img</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -114,7 +120,12 @@
   </projectlayers>
   <properties>
     <WMSContactPerson type="QString"></WMSContactPerson>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WMSKeywordList type="QStringList">
       <value></value>
@@ -132,13 +143,16 @@
       <DegreeFormat type="QString">D</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Measure>
       <Ellipsoid type="QString">clrk66</Ellipsoid>
     </Measure>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <WFSTLayers>
       <Insert type="QStringList"/>
       <Update type="QStringList"/>
@@ -172,13 +186,13 @@
       <WorkingGisdbase type="QString">/data/Dropbox/Trabalho/QGIS/qgis_sample_data/grassdata</WorkingGisdbase>
       <WorkingMapset type="QString">demo</WorkingMapset>
     </GRASS>
-    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
     <WCSLayers type="QStringList"/>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
     <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=clrk66 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
+      <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
       <ProjectCrs type="QString">EPSG:2964</ProjectCrs>
       <ProjectCRSID type="int">932</ProjectCRSID>
       <ProjectionsEnabled type="int">1</ProjectionsEnabled>
@@ -191,7 +205,12 @@
       <AlphaInt type="int">255</AlphaInt>
       <ColorRamp type="QString"></ColorRamp>
     </DefaultStyles>
-    <WMSFees type="QString"></WMSFees>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
     <WMSUrl type="QString"></WMSUrl>
   </properties>
   <visibility-presets/>
