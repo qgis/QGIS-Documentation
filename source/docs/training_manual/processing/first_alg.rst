@@ -10,13 +10,29 @@ First, open the QGIS project corresponding to this lesson. It contains just a si
 
 .. image:: img/first_alg/canvas.png
 
-Now go to the text box at the top of the toolbox. That is the search box, and if you type text in it, it will filter the list of algorithms so just those ones contaning the entered text are shown. Type ``centroids`` and you should see something like this.
+Now go to the text box at the top of the toolbox. That is the search box, and if
+you type text in it, it will filter the list of algorithms so just those ones
+containing the entered text are shown.
+If there are algorithms that match your search but belong to a provider that is
+not active, an additional label will be shown in the lower part of the toolbox.
+
+Type ``centroids`` and you should see something like this.
 
 .. image:: img/first_alg/toolbox.png
 
-The search box is a very practical way of finding the algorithm you are looking for.
+The search box is a very practical way of finding the algorithm you are looking
+for. At the bottom of the dialog, an additional label shows that there are
+algorithms that match your search but belong to a provider that is not active.
+If you click on the link in that label, the list of algorithms will also
+include results from those inactive providers, which will be shown in light gray.
+A link to activate each inactive provider is also shown. We'll see later how to
+activate other providers.
 
-To execute an algorithm, you just have to double-click on its name in the toolbox. When you double-click on the *Centroids* algorithm, you will see the following dialog.
+.. image:: img/first_alg/toolbox_providers.png
+
+To execute an algorithm, you just have to double-click on its name in the
+toolbox. When you double-click on the *Polygon centroids* algorithm, you will
+see the following dialog.
 
 .. image::  img/first_alg/centroids.png
 
@@ -24,20 +40,32 @@ All algorithms have a similar interface, which basically contains input paramete
 
 Select the *Polygons* layer as input. The algorithm has a single output, which is the centroids layer. There are two options to define where a data output is saved: enter a filepath or save it to a temporary filename
 
-In case you want to set a destination and not save the result in a temporary file, the format of the output is defined by the filename extension. To select a format,
-just select the corresponding file extension (or add it if you are directly typing the filepath instead). If the extension of the filepath you entered does not
-match any of the supported ones, a default extension (usually ``.dbf`` for tables, ``.tif`` for raster layers and ``.shp`` for vector ones) will be appended to the filepath and the file format corresponding to that extension will be used to save the layer or table.
+In case you want to set a destination and not save the result in a temporary
+file, the format of the output is defined by the filename extension. To select
+a format, just select the corresponding file extension (or add it if you are
+directly typing the filepath instead). If the extension of the filepath you
+entered does not match any of the supported ones, a default extension (usually
+:file:`.dbf` for tables, :file:`.tif` for raster layers and :file:`.shp` for
+vector ones) will be appended to the filepath and the file format corresponding
+to that extension will be used to save the layer or table.
 
 In all the exercises in this guide, we will be saving results to a temporary file, since there is no need to save them for a later use. Feel free to save them to a permament location if you want to.
 
 .. warning:: Temporary files are deleted once you close QGIS. If you create a project with an output that was saved as a temporary output, QGIS will complain when you try to open back the project later, since that output file will not exist.
 
-Once you have configured the algorithm dialog, press *Run* to run the algorithm.
+Once you have configured the algorithm dialog, press **[Run]** to run the
+algorithm.
 
 You will get the following output.
 
 .. image:: img/first_alg/canvas2.png
 
-The output has the same CRS as the input. Geoalgorithms assumes all input layers share the same CRS and do not perform any reprojection. Except in the case of some special algorithms (for instance, reprojection ones), the outputs will also have that same CRS. We will see more about this soon.
+The output has the same CRS as the input. Geoalgorithms assume all input layers
+share the same CRS and do not perform any reprojection. Except in the case of
+some special algorithms (for instance, reprojection ones), the outputs will also
+have that same CRS. We will see more about this soon.
 
-Try yourself saving it using different file formats (use, for instance, ``shp`` and ``geojson`` as extensions). Also, if you do not want the layer to be loaded in QGIS after it is generated, you can check off the check box that is found below the output path box.
+Try yourself saving it using different file formats (use, for instance,
+:file:`shp` and :file:`geojson` as extensions). Also, if you do not want the
+layer to be loaded in QGIS after it is generated, you can check off the checkbox
+that is found below the output path box.
