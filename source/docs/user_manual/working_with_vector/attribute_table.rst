@@ -58,7 +58,7 @@ layer (figure_attributes_table_). According to the setting in
 :menuselection:`Settings --> Options --> Data sources` menu, the attribute table
 will open in a docked window or not. The total number of features in the layer
 and the number of currently selected/filtered features are shown in the
-attribute table title.
+attribute table title as well as if the layer is spatially limited.
 
 
 .. _figure_attributes_table:
@@ -302,52 +302,45 @@ more information and use case):
 It is also possible to select features using the :ref:`filter_select_form`.
 
 
-
-For a **simple search by attributes** on only one column, choose the
-:menuselection:`Column filter -->` from the menu in the bottom left corner.
-Select the field (column) on which the search should be
-performed from the drop-down menu, and hit the **[Apply]** button. Then, only
-the matching features are shown in the attribute table.
-
-
-The matching rows will be selected, and the total number of matching rows will
-appear in the title bar of the attribute table, as well as in the status bar of
-the main window. For searches that display only selected features on the map,
-use the Query Builder described in section :ref:`vector_query_builder`.
-
-To show selected records only, use :guilabel:`Show Selected Features` from the menu
-at the bottom left. See next section for more information on filter feature.
-
-The field calculator bar allows you to make calculations on the selected rows only.
-For example, as shown in figure_attributes_table_, you can alter the number
-of the ID field of the layer :file:`regions.shp` with the expression:
-
-::
-
- ID + 5
-
-It is also possible to select features using the :ref:`filter_select_form`.
-
 .. _filter_features:
 
-Filter features
-===============
+Filtering features
+------------------
 
-At the bottom of the attribute table, there is a drop-down list of different
-filters:
+Once you have selected features in the attribute table, you may want to display
+only these records in the table. This can be easily done using the
+:guilabel:`Show Selected Features` item from the drop-down list at the bottom
+left of the attribute table dialog. This list offers the following filters:
 
 * :guilabel:`Show All Features`
 * :guilabel:`Show Selected Features`
 * :guilabel:`Show Features visible on map`
 * :guilabel:`Show Edited and New Features`
-* :guilabel:`Field Filter` - allows the user to choose a column from a
-  list. Then, type a value and press :kbd:`Enter` to filter.
+* :guilabel:`Field Filter` - allows the user to filter based on value of a field:
+  choose a column from a list, type a value and press :kbd:`Enter` to filter.
+  Then, only the matching features are shown in the attribute table.
 * :guilabel:`Advanced filter (Expression)` - Opens the expression builder
   dialog. Within it, you can create complex expressions to match table rows.
   For example, you can filter the table using more that one field.
   See :ref:`vector_expressions` for more information.
 
 It is also possible to filter features using the :ref:`filter_select_form`.
+
+.. note::
+  
+  Filtering records out of the attribute table does not filter features out
+  of the layer; they are simply momentaneously hidden from the table and can be
+  accessed from the map canvas or by removing the filter. For filters that do
+  hide features from the layer, use the
+  :ref:`Query Builder <vector_query_builder>`.
+
+.. tip:: **Update datasource filtering with** ``Show Features Visible on Map`` 
+
+  When for performance reasons, features shown in attribute table are spatially
+  limited to the canvas extent at its opening (see :ref:`Data Source Options
+  <tip_table_filtering>` for a how-to), selecting :guilabel:`Show Features
+  Visible on Map` on a new canvas extent updates the spatial restriction.
+
 
 
 .. _filter_select_form:
