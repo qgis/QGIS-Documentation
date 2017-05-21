@@ -346,7 +346,7 @@ It is also possible to filter features using the :ref:`filter_select_form`.
 .. _filter_select_form:
 
 Filter/Select features using form
-=================================
+---------------------------------
 
 Clicking the |filterMap| :sup:`Filter/Select features using form` or
 pressing :kbd:`Ctrl+F` the attribute table dialog will switch to form view
@@ -378,7 +378,7 @@ mentioned in :ref:`filter_features`, or click the clear the expression and
 click **[Apply]**.
 
 Action on cells
-===============
+---------------
 
 Users have several possibilities to manipulate feature with the contextual menu
 like:
@@ -402,7 +402,7 @@ in the :menuselection:`Layer properties --> Actions` tab.
 See :ref:`actions_menu` for more information on actions.
 
 Save selected features as new layer
-===================================
+------------------------------------
 
 The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). In the
@@ -415,7 +415,7 @@ It is also possible to specify OGR creation options within the dialog.
 .. _paste_into_layer:
 
 Paste into new layer
-=====================
+---------------------
 
 Features that are on the clipboard may be pasted into a new
 layer.  To do this, first make a layer editable.  Select some features, copy
