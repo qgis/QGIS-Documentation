@@ -2,11 +2,17 @@ Running our first algorithm. The  toolbox
 ============================================================
 
 
-.. note:: In this lesson we will run our first algorithm, and get our first result from it.
+.. note:: In this lesson we will run our first algorithm, and get our first
+   result from it.
 
-As we have already mentioned, the processing framework can run algorithms from other applications, but it also contains native algorithms that need no external software to be run. To start exploring the processing framework, we are going to run one of those native algorithms. In particular, we are going to calculate the centroids of set of polygons.
+As we have already mentioned, the processing framework can run algorithms from
+other applications, but it also contains native algorithms that need no external
+software to be run. To start exploring the processing framework, we are going to
+run one of those native algorithms. In particular, we are going to calculate the
+centroids of set of polygons.
 
-First, open the QGIS project corresponding to this lesson. It contains just a single layer with two polygons
+First, open the QGIS project corresponding to this lesson. It contains just a
+single layer with two polygons
 
 .. image:: img/first_alg/canvas.png
 
@@ -36,9 +42,13 @@ see the following dialog.
 
 .. image::  img/first_alg/centroids.png
 
-All algorithms have a similar interface, which basically contains input parameters that you have to fill, and outputs that you have to select where to store. In this case, the only input we have is a vector layer with polygons.
+All algorithms have a similar interface, which basically contains input
+parameters that you have to fill, and outputs that you have to select where to
+store. In this case, the only input we have is a vector layer with polygons.
 
-Select the *Polygons* layer as input. The algorithm has a single output, which is the centroids layer. There are two options to define where a data output is saved: enter a filepath or save it to a temporary filename
+Select the *Polygons* layer as input. The algorithm has a single output, which
+is the centroids layer. There are two options to define where a data output is
+saved: enter a filepath or save it to a temporary filename
 
 In case you want to set a destination and not save the result in a temporary
 file, the format of the output is defined by the filename extension. To select
@@ -49,9 +59,14 @@ entered does not match any of the supported ones, a default extension (usually
 vector ones) will be appended to the filepath and the file format corresponding
 to that extension will be used to save the layer or table.
 
-In all the exercises in this guide, we will be saving results to a temporary file, since there is no need to save them for a later use. Feel free to save them to a permament location if you want to.
+In all the exercises in this guide, we will be saving results to a temporary
+file, since there is no need to save them for a later use. Feel free to save
+them to a permament location if you want to.
 
-.. warning:: Temporary files are deleted once you close QGIS. If you create a project with an output that was saved as a temporary output, QGIS will complain when you try to open back the project later, since that output file will not exist.
+.. warning:: Temporary files are deleted once you close QGIS. If you create a
+  project with an output that was saved as a temporary output, QGIS will
+  complain when you try to open back the project later, since that output file
+  will not exist.
 
 Once you have configured the algorithm dialog, press **[Run]** to run the
 algorithm.
@@ -60,7 +75,7 @@ You will get the following output.
 
 .. image:: img/first_alg/canvas2.png
 
-The output has the same CRS as the input. Geoalgorithms assume all input layers
+The output has the same CRS as the input. Geoalgorithms assumes all input layers
 share the same CRS and do not perform any reprojection. Except in the case of
 some special algorithms (for instance, reprojection ones), the outputs will also
 have that same CRS. We will see more about this soon.

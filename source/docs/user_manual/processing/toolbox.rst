@@ -32,9 +32,10 @@ A label in the bottom part of the toolbox will remind you of that whenever there
 are inactive providers. Use the link in the label to open the settings window and
 set up providers. We will discuss the settings dialog later in this manual.
 
-By default only, providers that do not rely on third-party applications (that is, those that
-only require QGIS elements to be run) are active. ALgorithms requiring external applications
-might need additional configuration. Configuring providers is explained in a later chapter in this manual.
+By default, only providers that do not rely on third-party applications (that is,
+those that only require QGIS elements to be run) are active. Algorithms requiring
+external applications might need additional configuration. Configuring providers
+is explained in a later chapter in this manual.
 
 In the upper part of the toolbox, you will find a text box. To reduce the number
 of algorithms shown in the toolbox and make it easier to find the one you need,
@@ -42,8 +43,8 @@ you can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms in the toolbox is reduced to just those that contain the
 text you have entered in their names.
 
-If there are algorithms that match your search but belong to a provider that is not active,
-an additional label will be shown in the lower part of the toolbox.
+If there are algorithms that match your search but belong to a provider that is
+not active, an additional label will be shown in the lower part of the toolbox.
 
 .. _figure_toolbox_search:
 
