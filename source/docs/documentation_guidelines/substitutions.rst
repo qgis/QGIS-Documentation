@@ -44,14 +44,12 @@ Can be used/found in many places in manuals.
 Platform Icons
 ..............
 
-==========  ===============
-Icon        Substitution
-==========  ===============
-|kde|       ``|kde|``
-|nix|       ``|nix|``
-|osx|       ``|osx|``
-|win|       ``|win|``
-==========  ===============
+==========  ===============  ==========  =============== 
+Icon        Substitution     Icon        Substitution
+==========  ===============  ==========  =============== 
+|kde|       ``|kde|``        |nix|       ``|nix|``
+|osx|       ``|osx|``        |win|       ``|win|``
+==========  ===============  ==========  =============== 
 
 
 
@@ -65,20 +63,9 @@ Icon                     Substitution               Icon                   Subst
 |radioButtonOn|          ``|radioButtonOn|``        |radioButtonOff|       ``|radioButtonOff|``
 |selectNumber|           ``|selectNumber|``         |selectString|         ``|selectString|``
 |browseButton|           ``|browseButton|``         |slider|               ``|slider|``
+|selectColor|            ``|selectColor|``          |inputText|            ``|inputText|``
+|tab|                    ``|tab|``                  |degrees|              ``|degrees|``
 =======================  =========================  =====================  =========================
-
-
-Menu items not used much
-........................
-
-==============  =================
-Icon            Substitution
-==============  =================
-|selectColor|   ``|selectColor|``
-|inputText|     ``|inputText|``
-|tab|           ``|tab|``
-|degrees|       ``|degrees|``
-==============  =================
 
 
 Toolbar Button Icons
@@ -295,10 +282,8 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 
 
-Composer Icons
+Print Composer
 ==============
-
-Icons used in Composer:
 
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
@@ -323,10 +308,8 @@ Icon                     Substitution                 Icon                     S
 |lockedRepeat|           ``|lockedRepeat|``           |groupItems|             ``|groupItems|``
 =======================  ===========================  =======================  ===========================
 
-Properties
-==========
-
-Icons used in Layer Properties dialog:
+Layer Properties
+================
 
 ==================================  ======================================  =============================  ================================
 Icon                                Substitution                            Icon                           Substitution
@@ -348,8 +331,11 @@ Icon                                Substitution                            Icon
 ==================================  ======================================  =============================  ================================
 
 
-Vector Menu Icons
-...................
+Plugins
+=======
+
+Vector Menu
+...........
 
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
@@ -375,12 +361,20 @@ Icon                            Substitution                        Icon        
 |splitLayer|                    ``|splitLayer|``                    |mergeShapes|                   ``|mergeShapes|``
 ==============================  ==================================  ==============================  ==================================
 
+Raster Menu
+...........
 
-Plugin Icons
-============
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
+|showRasterCalculator|          ``|showRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
+|rasterInterpolate|             ``|rasterInterpolate|``             |rasterInfo|                    ``|rasterInfo|``
+|rasterTerrain|                 ``|rasterTerrain|``                 |heatmap|                       ``|heatmap|``
+==============================  ==================================  ==============================  ==================================
 
-Core Plugin Icons
-.................
+Various Core Plugins
+....................
 
 Standard provided with basic install, but not loaded with initial install
 
@@ -399,7 +393,6 @@ Icon                            Substitution                        Icon        
 |geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
 |topologychecker|               ``|topologychecker|``               |oracleRaster|                  ``|oracleRaster|``
 ==============================  ==================================  ==============================  ==================================
-
 
 Grass integration
 .................
@@ -423,24 +416,12 @@ Icon                            Substitution                      Icon          
 |osmFeatureManager|            ``|osmFeatureManager|``            |osmIdentify|                  ``|osmIdentify|``
 |osmImport|                    ``|osmImport|``                    |osmSave|                      ``|osmSave|``
 |osmCreatePoint|               ``|osmCreatePoint|``               |osmCreateLine|                ``|osmCreateLine|``
-|osmCreatePolygon|             ``|osmCreatePolygon|``             \                               \
+|osmCreatePolygon|             ``|osmCreatePolygon|``             \                              \
 |osmMove|                      ``|osmMove|``                      |osmRemoveFeat|                ``|osmRemoveFeat|``
 |osmCreateRelation|            ``|osmCreateRelation|``            |osmAddRelation|               ``|osmAddRelation|``
 |osmEditRelation|              ``|osmEditRelation|``              |osmGenerateTags|              ``|osmGenerateTags|``
-|osmQuestionMark|              ``|osmQuestionMark|``              \                               \
+|osmQuestionMark|              ``|osmQuestionMark|``              \                              \
 =============================  =================================  =============================  ==================================
-
-Raster related
-..............
-
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
-|showRasterCalculator|          ``|showRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
-|rasterInterpolate|             ``|rasterInterpolate|``             |rasterInfo|                    ``|rasterInfo|``
-|rasterTerrain|                 ``|rasterTerrain|``                 |heatmap|                       ``|heatmap|``
-==============================  ==================================  ==============================  ==================================
 
 eVis plugin
 ...........
