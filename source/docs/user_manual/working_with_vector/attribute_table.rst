@@ -248,25 +248,6 @@ Select the field (column) on which the search should be
 performed from the drop-down menu, and hit the **[Apply]** button. Then, only
 the matching features are shown in the attribute table.
 
-To make a selection, you have to use the |expressionSelect| :sup:`Select features
-using an Expression` icon on top of the attribute table.
-|expressionSelect| :sup:`Select features using an Expression` allows you
-to define a subset of a table using a :guilabel:`Function List` like in the
-|calculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
-The query result can then be saved as a new vector layer.
-For example, if you want to find regions that are boroughs from :file:`regions.shp`
-of the QGIS sample data, you have to open the :guilabel:`Fields and Values` menu
-and choose the field that you want to query. Double-click the field 'TYPE_2' and also
-**[Load all unique values]** . From the list, choose and double-click 'Borough'.
-In the :guilabel:`Expression` field, the following query appears:
-
-::
-
- "TYPE_2"  =  'Borough'
-
-Here you can also use the :menuselection:`Function list --> Recent (Selection)` to
-make a selection that you used before. The expression builder remembers the last 20
-used expressions.
 
 The matching rows will be selected, and the total number of matching rows will
 appear in the title bar of the attribute table, as well as in the status bar of
