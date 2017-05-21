@@ -140,10 +140,16 @@ Table view vs Form view
 -----------------------
 
 QGIS provides two view modes to easily manipulate data in the attribute table:
-the |openTable| Table view and the |formView| Form view which uses the layer
-fields configuration (see :ref:`vector_attributes_menu`). You can switch from
-one to the other by clicking the convenient icon at the bottom right of the
-dialog.
+
+* the |openTable| Table view, displaying values of multiple features in a
+  tabular mode, each row representing a feature and each column a field;
+* and the |formView| Form view which shows identifiers of features in a first
+  panel and displays only the attributes of the clicked identifier in the second
+  one. Form view uses the layer fields configuration
+  (see :ref:`vector_attributes_menu`).
+  
+You can switch from one mode to the other by clicking the convenient icon at the
+bottom right of the dialog.
 
 You can also specify the :guilabel:`Default view` mode at the opening of the
 attribute table in :menuselection:`Settings --> Options --> Data Sources` menu.
@@ -245,14 +251,18 @@ to define:
 .. index::
    pair: Attributes; Selection
 
-Selecting features in an attribute table
-========================================
+Interacting with features in an attribute table
+===============================================
 
-**Each selected row** in the attribute table displays the attributes of a
-selected feature in the layer. If the set of features selected in the main
-window is changed, the selection is also updated in the attribute table.
-Likewise, if the set of rows selected in the attribute table is changed, the
-set of features selected in the main window will be updated.
+Selecting features
+------------------
+
+In table view, each row in the attribute table displays the attributes of a
+unique feature in the layer. Selecting a row selects the feature and likewise,
+selecting a feature in the map canvas (in case of geometry enabled layer)
+selects the row in the attribute table. If the set of features selected in the
+map canvas (or attribute table) is changed, then the selection is also updated
+in the attribute table (or map canvas) accordingly.
 
 Rows can be selected by clicking on the row number on the left side of the
 row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key.
@@ -262,6 +272,35 @@ between the current cursor position and the clicked row are selected.
 Moving the cursor position in the attribute table, by clicking a cell in the
 table, does not change the row selection. Changing the selection in the main
 canvas does not move the cursor position in the attribute table.
+
+In form view of the attribute table, features are by default identified in the
+left panel by the value of their displayed field (see :ref:`maptips`). This
+identifier can be replaced using the drop-down list at the top of the panel,
+either by selecting an existing field or using a custom expression. You can
+also choose to sort the list of features from the drop-down menu.
+
+Click a value in the left panel to display the feature's attributes in the
+right one. To select a feature, you need to click inside the square symbol at
+the left of the identifier. By default, the symbol turns into yellow. Like in
+the table view, you can perform multiple feature selection using the keyboard
+combinations previously exposed.
+
+.. actually, it looks like there's a difference in keyboard usage but i feel
+   it's a bug. Report at https://issues.qgis.org/issues/16553.
+
+Beyond selecting features with the mouse, you can perform automatic selection
+based on feature's attribute using tools available in the attribute table
+toolbar, such as (see section :ref:`automatic_selection` and following one for
+more information and use case):
+
+* |expressionSelect| :guilabel:`Select By Expression...`
+* |formSelect| :guilabel:`Select Features By Value...`
+* |deselectAll| :guilabel:`Deselect Features from All Layers`
+* |selectAll| :guilabel:`Select All Features`
+* |invertSelection| :guilabel:`Invert Feature Selection`.
+
+It is also possible to select features using the :ref:`filter_select_form`.
+
 
 
 For a **simple search by attributes** on only one column, choose the
