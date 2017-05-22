@@ -28,7 +28,7 @@ Let's get started right away!
 
 * Open QGIS. You will have a new, blank map.
 
-* Look for the :guilabel:`Add Vector Layer` button: |newVectorLayer|
+* Look for the :guilabel:`Add Vector Layer` button: |addOgrLayer|
 
 * Click on it to open the following dialog:
 
