@@ -4,8 +4,9 @@
 
 .. _supported_format:
 
-Supported Data Formats
-======================
+***********************************
+ Exploring Data Formats and Fields
+***********************************
 
 .. only:: html
 
