@@ -52,16 +52,19 @@ There are several options for creating a geometry:
 
 * from well-known text (WKT)
 
-  ::
+  .. code-block:: python
 
     gem = QgsGeometry.fromWkt("POINT(3 4)")
 
 * from well-known binary (WKB)
 
-  ::
+  .. code-block:: python
 
-    g = QgsGeometry()
-    g.setWkbAndOwnership(wkb, len(wkb))
+    >>> g = QgsGeometry()
+    >>> wkb = bytes.fromhex("010100000000000000000045400000000000001440")
+    >>> g.fromWkb(wkb)
+    >>> g.exportToWkt()
+    'Point (42 5)'
 
 
 .. index:: Geometry; Access to
@@ -72,7 +75,7 @@ Access to Geometry
 First, you should find out geometry type, :func:`wkbType` method is the one to
 use --- it returns a value from ``QGis.WkbType`` enumeration
 
-::
+.. code-block:: python
 
   >>> gPnt.wkbType() == QGis.WKBPoint
   True
@@ -90,7 +93,7 @@ As an alternative, one can use :func:`type` method which returns a value from
 To extract information from geometry there are accessor functions for every
 vector type. How to use accessors
 
-::
+.. code-block:: python
 
   >>> gPnt.asPoint()
   (1, 1)
