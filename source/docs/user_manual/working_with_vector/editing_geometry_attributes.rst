@@ -1213,8 +1213,6 @@ point, and then the other one to set a direction segment. Then, click on the
 angle you want and press :kbd:`Enter`. The mouse position will be locked both in
 distance and angle.
 
-.. only:: html
-
 .. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_angle_point.png
    :align: center
 
