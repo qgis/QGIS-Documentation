@@ -1,11 +1,11 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.7">
+<qgis projectname="" version="2.18.9">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="landcover20130516233229406" source="/home/alexandre/qgis/qgis_sample_data/raster/landcover.img" name="landcover">
+    <layer-tree-layer expanded="0" providerKey="gdal" checked="Qt::Checked" id="landcover20170531225059200" source="/home/alexandre/qgis/qgis_sample_data/raster/landcover.img" name="landcover">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -15,7 +15,7 @@
     <extent>
       <xmin>-5281087.56418966874480247</xmin>
       <ymin>2142960.34369813278317451</ymin>
-      <xmax>3968912.43581033358350396</xmax>
+      <xmax>3968912.43581033311784267</xmax>
       <ymax>7102556.30329408310353756</ymax>
     </extent>
     <rotation>0</rotation>
@@ -35,19 +35,20 @@
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="landcover20130516233229406"/>
+      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="landcover20170531225059200"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:3763" srcDatumTransform="-1" destDatumTransform="-1" layerid="contour100_2_Plataforma_continental20140508235403851"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="15978" layerid="Portugal_Polygons20140508235517911"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>landcover20130516233229406</item>
+      <item>landcover20170531225059200</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landcover" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="landcover20130516233229406" visible="1"/>
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="landcover" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="landcover20170531225059200" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -59,7 +60,7 @@
         <xmax>4897040</xmax>
         <ymax>7809680</ymax>
       </extent>
-      <id>landcover20130516233229406</id>
+      <id>landcover20170531225059200</id>
       <datasource>../../../../Geodata/qgis_sample_data/raster/landcover.img</datasource>
       <keywordList>
         <value></value>
@@ -89,26 +90,22 @@
       </map-layer-style-manager>
       <pipe>
         <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
-          <rasterTransparency>
-            <singleValuePixelList>
-              <pixelListEntry min="0" max="0" percentTransparent="20"/>
-            </singleValuePixelList>
-          </rasterTransparency>
+          <rasterTransparency/>
           <colorPalette>
-            <paletteEntry value="0" color="#4ba0d7" label="Water"/>
-            <paletteEntry value="1" color="#016400" label="Evergreen Neddleleaf Forest"/>
-            <paletteEntry value="2" color="#018200" label="Evergreen Broadleaf Forest"/>
-            <paletteEntry value="3" color="#97bf47" label="Deciduous Needleleaf Forest"/>
-            <paletteEntry value="4" color="#02dc00" label="Deciduous Broadleaf Forest"/>
-            <paletteEntry value="5" color="#00ff00" label="Mixed Forest"/>
-            <paletteEntry value="6" color="#92ae2f" label="Woodland"/>
-            <paletteEntry value="7" color="#dcce00" label="Wooded Grassland"/>
-            <paletteEntry value="8" color="#ffad00" label="Closed Shrubland"/>
-            <paletteEntry value="9" color="#fffbc3" label="Open Shrubland"/>
-            <paletteEntry value="10" color="#8c4809" label="Grassland"/>
-            <paletteEntry value="11" color="#f7a5ff" label="Cropland"/>
-            <paletteEntry value="12" color="#ffc7ae" label="Bare Ground"/>
-            <paletteEntry value="13" color="#00ffff" label="Urban and Built"/>
+            <paletteEntry value="0" color="#4ba0d7" label="0"/>
+            <paletteEntry value="1" color="#016400" label="1"/>
+            <paletteEntry value="2" color="#018200" label="2"/>
+            <paletteEntry value="3" color="#97bf47" label="3"/>
+            <paletteEntry value="4" color="#02dc00" label="4"/>
+            <paletteEntry value="5" color="#00ff00" label="5"/>
+            <paletteEntry value="6" color="#92ae2f" label="6"/>
+            <paletteEntry value="7" color="#dcce00" label="7"/>
+            <paletteEntry value="8" color="#ffad00" label="8"/>
+            <paletteEntry value="9" color="#fffbc3" label="9"/>
+            <paletteEntry value="10" color="#8c4809" label="10"/>
+            <paletteEntry value="11" color="#f7a5ff" label="11"/>
+            <paletteEntry value="12" color="#ffc7ae" label="12"/>
+            <paletteEntry value="13" color="#00ffff" label="13"/>
           </colorPalette>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
@@ -119,11 +116,11 @@
     </maplayer>
   </projectlayers>
   <properties>
-    <WMSContactPerson type="QString"></WMSContactPerson>
     <Variables>
       <variableNames type="QStringList"/>
       <variableValues type="QStringList"/>
     </Variables>
+    <WMSContactPerson type="QString"></WMSContactPerson>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
     <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
@@ -143,8 +140,8 @@
       <DegreeFormat type="QString">D</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
     <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
@@ -168,11 +165,15 @@
       <CanvasColorBluePart type="int">255</CanvasColorBluePart>
     </Gui>
     <Digitizing>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList"/>
       <LayerSnappingEnabledList type="QStringList"/>
+      <SnappingMode type="QString">advanced</SnappingMode>
       <AvoidIntersectionsList type="QStringList"/>
       <LayerSnappingToleranceUnitList type="QStringList"/>
       <LayerSnapToList type="QStringList"/>
+      <DefaultSnapType type="QString">off</DefaultSnapType>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList"/>
     </Digitizing>
     <Identify>
