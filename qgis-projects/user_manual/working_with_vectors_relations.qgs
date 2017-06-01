@@ -1,18 +1,22 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Alaska" version="2.18.7">
+<qgis projectname="Alaska" version="2.18.9">
   <title>Alaska</title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="airports_with_regions20140506222848006" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/airports.shp" name="airports">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="airports_with_regions20140506222848006" source="/home/alexandre/Geodata/qgis_sample_data/shapefiles/airports.shp" name="airports">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="regions20140506223021452" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/regions.shp" name="regions">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="regions20140506223021452" source="/home/alexandre/Geodata/qgis_sample_data/shapefiles/regions.shp" name="regions">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
-  <relations/>
+  <relations>
+    <relation referencingLayer="airports_with_regions20140506222848006" referencedLayer="regions20140506223021452" id="airports_with_regions20140506222848006_fk_region_regions20140506223021452_ID" name="airports_regions">
+      <fieldRef referencedField="ID" referencingField="fk_region"/>
+    </relation>
+  </relations>
   <mapcanvas>
     <units>feet</units>
     <extent>
@@ -207,15 +211,15 @@
           </symbol>
         </ComposerMapOverview>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="29.2011" page="1" id="" lastValidViewScaleFactor="1.34204" positionMode="0" positionLock="false" x="315.64" y="29.2011" visibility="1" zValue="10" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="98.9359" outlineWidth="0.3" excludeFromExports="0" uuid="{216419ed-5a57-4229-a79b-7201f7543e14}" height="79.6604" itemRotation="0" frame="false" pagex="315.64">
+        <ComposerItem pagey="29.2011" page="1" id="" lastValidViewScaleFactor="2.03926" positionMode="0" positionLock="false" x="315.64" y="29.2011" visibility="1" zValue="10" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="98.9359" outlineWidth="0.3" excludeFromExports="0" uuid="{216419ed-5a57-4229-a79b-7201f7543e14}" height="79.6604" itemRotation="0" frame="false" pagex="315.64">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
         </ComposerItem>
       </ComposerMap>
       <ComposerItemGroup>
-        <ComposerItemGroupElement uuid="{fec87e29-d5fd-448c-acbe-906e1498a1dc}"/>
         <ComposerItemGroupElement uuid="{2b30c648-da5e-4a74-887d-1f3eac770c26}"/>
+        <ComposerItemGroupElement uuid="{fec87e29-d5fd-448c-acbe-906e1498a1dc}"/>
         <ComposerItem pagey="15.8929" page="1" id="" lastValidViewScaleFactor="2.019" positionMode="0" positionLock="false" x="15.2129" y="15.8929" visibility="1" zValue="9" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="16.4859" outlineWidth="0.3" excludeFromExports="0" uuid="{2f6b8810-c51e-44ab-938b-d386175faa5b}" height="22.2447" itemRotation="0" frame="false" pagex="15.2129">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
@@ -239,11 +243,33 @@
           <customproperties/>
         </ComposerItem>
       </ComposerPicture>
-      <ComposerAttributeTable featureFilter="" contentFontColor="0,0,0,255" gridStrokeWidth="0.5" maxFeatures="15" composerMap="1" headerFontColor="0,0,0,255" showGrid="1" filterFeatures="false" lineTextDist="1" headerHAlignment="0" showOnlyVisibleFeatures="1" gridColor="0,0,0,255">
+      <ComposerAttributeTable featureFilter="" contentFontColor="0,0,0,255" gridStrokeWidth="0.5" maxFeatures="15" composerMap="1" headerFontColor="0,0,0,255" showGrid="1" filterFeatures="false" lineTextDist="1" headerHAlignment="0" showOnlyVisibleFeatures="1" vectorLayer="airports_with_regions20140506222848006" gridColor="0,0,0,255">
         <headerFontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
         <contentFontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
-        <displayColumns/>
-        <ComposerItem pagey="126.975" page="1" id="" lastValidViewScaleFactor="1.26366" positionMode="0" positionLock="false" x="315.64" y="126.975" visibility="1" zValue="6" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="0.5" outlineWidth="0.3" excludeFromExports="0" uuid="{4c8044fa-59c2-48fd-892f-a0b1b554de83}" height="37.1" itemRotation="0" frame="false" pagex="315.64">
+        <displayColumns>
+          <column width="0" vAlignment="128" attribute="ID" sortByRank="0" hAlignment="1" heading="ID" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="fk_region" sortByRank="0" hAlignment="1" heading="fk_region" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="ELEV" sortByRank="0" hAlignment="1" heading="ELEV" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="NAME" sortByRank="0" hAlignment="1" heading="NAME" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="USE" sortByRank="0" hAlignment="1" heading="USE" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="regions_NAME_2" sortByRank="0" hAlignment="1" heading="regions_NAME_2" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="regions_TYPE_2" sortByRank="0" hAlignment="1" heading="regions_TYPE_2" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+        </displayColumns>
+        <ComposerItem pagey="126.975" page="1" id="" lastValidViewScaleFactor="1.26366" positionMode="0" positionLock="false" x="315.64" y="126.975" visibility="1" zValue="6" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="189.733" outlineWidth="0.3" excludeFromExports="0" uuid="{4c8044fa-59c2-48fd-892f-a0b1b554de83}" height="98.1" itemRotation="0" frame="false" pagex="315.64">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -303,18 +329,18 @@
         </styles>
         <layer-tree-group expanded="1" checked="Qt::Checked" name="">
           <customproperties/>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="airports_with_regions20140506222848006" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/airports.shp" name="airports">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="airports_with_regions20140506222848006" source="/home/alexandre/Geodata/qgis_sample_data/shapefiles/airports.shp" name="airports">
             <customproperties>
               <property key="legend/title-style" value="hidden"/>
             </customproperties>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="regions20140506223021452" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/regions.shp" name="regions">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="regions20140506223021452" source="/home/alexandre/Geodata/qgis_sample_data/shapefiles/regions.shp" name="regions">
             <customproperties>
               <property key="legend/title-style" value="hidden"/>
             </customproperties>
           </layer-tree-layer>
         </layer-tree-group>
-        <ComposerItem pagey="229.523" page="1" id="" lastValidViewScaleFactor="2.83893" positionMode="0" positionLock="false" x="322.907" y="229.523" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="53.2188" outlineWidth="0.3" excludeFromExports="0" uuid="{8b76e5e5-d2e7-4bde-a4ba-8672a887d75a}" height="19.8" itemRotation="0" frame="false" pagex="322.907">
+        <ComposerItem pagey="229.523" page="1" id="" lastValidViewScaleFactor="2.83893" positionMode="0" positionLock="false" x="322.907" y="229.523" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="53.2188" outlineWidth="0.3" excludeFromExports="0" uuid="{8b76e5e5-d2e7-4bde-a4ba-8672a887d75a}" height="19.7" itemRotation="0" frame="false" pagex="322.907">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -399,7 +425,7 @@
           </symbol>
         </ComposerMapOverview>
         <AtlasMap scalingMode="0" atlasDriven="1" margin="0.10000000000000001"/>
-        <ComposerItem pagey="10" page="1" id="" lastValidViewScaleFactor="1.34204" positionMode="0" positionLock="false" x="10.3522" y="10" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="295.101" outlineWidth="0.3" excludeFromExports="0" uuid="{7ec4114b-93d8-4982-b461-ad4c834c2a7c}" height="277" itemRotation="0" frame="true" pagex="10.3522">
+        <ComposerItem pagey="10" page="1" id="" lastValidViewScaleFactor="2.03926" positionMode="0" positionLock="false" x="10.3522" y="10" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="295.101" outlineWidth="0.3" excludeFromExports="0" uuid="{7ec4114b-93d8-4982-b461-ad4c834c2a7c}" height="277" itemRotation="0" frame="true" pagex="10.3522">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
@@ -415,6 +441,52 @@
         </ComposerFrame>
         <customproperties/>
       </ComposerHtml>
+      <ComposerAttributeTableV2 vectorLayerName="airports" source="2" showGrid="1" maxFeatures="30" resizeMode="0" filterFeatures="false" featureFilter="" emptyTableMode="0" wrapString="" wrapBehaviour="0" headerMode="0" backgroundColor="255,255,255,255" showEmptyRows="0" emptyTableMessage="" showOnlyVisibleFeatures="0" vectorLayer="airports_with_regions20140506222848006" vectorLayerSource="/home/alexandre/Geodata/qgis_sample_data/shapefiles/airports.shp" composerMap="1" headerHAlignment="0" contentFontColor="0,0,0,255" headerFontColor="0,0,0,255" cellMargin="1" filterToAtlasIntersection="0" relationId="airports_with_regions20140506222848006_fk_region_regions20140506223021452_ID" gridStrokeWidth="0.5" gridColor="0,0,0,255" showUniqueRowsOnly="0" vectorLayerProvider="ogr">
+        <headerFontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+        <contentFontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+        <displayColumns>
+          <column width="0" vAlignment="128" attribute="ID" sortByRank="0" hAlignment="1" heading="ID" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="fk_region" sortByRank="0" hAlignment="1" heading="fk_region" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="ELEV" sortByRank="0" hAlignment="1" heading="ELEV" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="NAME" sortByRank="0" hAlignment="1" heading="NAME" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="USE" sortByRank="0" hAlignment="1" heading="USE" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="regions_NAME_2" sortByRank="0" hAlignment="1" heading="regions_NAME_2" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+          <column width="0" vAlignment="128" attribute="regions_TYPE_2" sortByRank="0" hAlignment="1" heading="regions_TYPE_2" sortOrder="0">
+            <backgroundColor alpha="0" red="0" blue="0" green="0"/>
+          </column>
+        </displayColumns>
+        <cellStyles>
+          <oddColumns enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <evenColumns enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <oddRows enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <evenRows enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <firstColumn enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <lastColumn enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <headerRow enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <firstRow enabled="0" cellBackgroundColor="255,255,255,255"/>
+          <lastRow enabled="0" cellBackgroundColor="255,255,255,255"/>
+        </cellStyles>
+        <ComposerFrame sectionWidth="149.662" sectionHeight="55.4123" hideBackgroundIfEmpty="0" hidePageIfEmpty="0" sectionX="0" sectionY="0">
+          <ComposerItem pagey="21.5765" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="326.099" y="21.5765" visibility="1" zValue="16" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="149.662" outlineWidth="0.3" excludeFromExports="0" uuid="{380c8f0c-8d9a-4a09-a46e-d1f01facb302}" height="55.4123" itemRotation="0" frame="false" pagex="326.099">
+            <FrameColor alpha="255" red="0" blue="0" green="0"/>
+            <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+            <customproperties/>
+          </ComposerItem>
+        </ComposerFrame>
+        <customproperties/>
+      </ComposerAttributeTableV2>
       <ComposerHtml maxBreakDistance="10" contentMode="0" resizeMode="0" url="file:///home/alexandre/Área de Trabalho/Sem título 1.html" useSmartBreaks="true" evaluateExpressions="true" html="" stylesheetEnabled="false" stylesheet="">
         <ComposerFrame sectionWidth="68.7904" sectionHeight="152.26" hideBackgroundIfEmpty="0" hidePageIfEmpty="0" sectionX="0" sectionY="0">
           <ComposerItem pagey="127.74" page="1" id="" lastValidViewScaleFactor="2.83893" positionMode="0" positionLock="false" x="16" y="127.74" visibility="1" zValue="15" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="68.7904" outlineWidth="0" excludeFromExports="0" uuid="{570970e1-7c34-492e-9a3e-7e37387cd3f8}" height="152.26" itemRotation="0" frame="true" pagex="16">
@@ -427,7 +499,7 @@
       </ComposerHtml>
       <customproperties/>
     </Composition>
-    <Atlas hideCoverage="false" coverageLayer="airports_with_regions20140506222848006" singleFile="false" filenamePattern="'output_'||$feature" enabled="true" coverageLayerName="airports" filterFeatures="false" coverageLayerProvider="ogr" sortFeatures="false" pageNameExpression="" coverageLayerSource="/home/alexandre/qgis/qgis_sample_data/shapefiles/airports.shp"/>
+    <Atlas hideCoverage="false" coverageLayer="regions20140506223021452" singleFile="false" filenamePattern="'output_'||$feature" enabled="true" coverageLayerName="regions" filterFeatures="false" coverageLayerProvider="ogr" sortFeatures="false" pageNameExpression="" coverageLayerSource="/home/alexandre/Geodata/qgis_sample_data/shapefiles/regions.shp"/>
   </Composer>
   <Composer title="alaska2 - A4" visible="0">
     <Composition resizeToContentsMarginLeft="0" snapping="0" showPages="1" guidesVisible="1" resizeToContentsMarginTop="0" worldFileMap="" alignmentSnap="1" printResolution="300" paperWidth="297" gridVisible="0" snapGridOffsetX="0" smartGuides="1" snapGridOffsetY="0" resizeToContentsMarginRight="0" snapTolerancePixels="10" printAsRaster="0" generateWorldFile="0" paperHeight="210" numPages="1" snapGridResolution="10" resizeToContentsMarginBottom="0">
@@ -726,6 +798,7 @@
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -779,7 +852,7 @@
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -825,9 +898,9 @@ def my_form_open(dialog, layer, feature):
       <srs>
         <spatialrefsys>
           <proj4>+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=clrk66 +towgs84=-10,158,187,0,0,0,0 +units=us-ft +no_defs</proj4>
-          <srsid>100005</srsid>
+          <srsid>100002</srsid>
           <srid>0</srid>
-          <authid>USER:100005</authid>
+          <authid>USER:100002</authid>
           <description> * Generated CRS (+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=clrk66 +towgs84=-10,158,187,0,0,0,0 +units=us-ft +no_defs)</description>
           <projectionacronym>aea</projectionacronym>
           <ellipsoidacronym>clrk66</ellipsoidacronym>
@@ -1029,7 +1102,7 @@ def my_form_open(dialog, layer, feature):
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions default="0"/>
+      <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="1" type="field" name="NAME_1"/>
@@ -1039,7 +1112,7 @@ def my_form_open(dialog, layer, feature):
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1058,12 +1131,16 @@ def my_form_open(dialog, layer, feature):
   </projectlayers>
   <properties>
     <WMSContactPerson type="QString"></WMSContactPerson>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WMSKeywordList type="QStringList">
       <value></value>
     </WMSKeywordList>
-    <WFSUrl type="QString"></WFSUrl>
     <Topol>
       <tolerance_2 type="QString">0</tolerance_2>
       <layer1_0 type="QString">popp20130517221648651</layer1_0>
@@ -1079,6 +1156,7 @@ def my_form_open(dialog, layer, feature):
       <tolerance_0 type="QString">0</tolerance_0>
       <tolerance_1 type="QString">0</tolerance_1>
     </Topol>
+    <WFSUrl type="QString"></WFSUrl>
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
@@ -1091,13 +1169,16 @@ def my_form_open(dialog, layer, feature):
       <DegreeFormat type="QString">D</DegreeFormat>
     </PositionPrecision>
     <WCSUrl type="QString"></WCSUrl>
-    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Measure>
       <Ellipsoid type="QString">NONE</Ellipsoid>
     </Measure>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <WFSTLayers>
       <Insert type="QStringList"/>
       <Update type="QStringList"/>
@@ -1201,7 +1282,7 @@ def my_form_open(dialog, layer, feature):
     <Macros>
       <pythonCode type="QString"></pythonCode>
     </Macros>
-    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
     <WCSLayers type="QStringList"/>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
@@ -1219,7 +1300,8 @@ def my_form_open(dialog, layer, feature):
       <AlphaInt type="int">255</AlphaInt>
       <ColorRamp type="QString"></ColorRamp>
     </DefaultStyles>
-    <WMSFees type="QString"></WMSFees>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSImageQuality type="int">90</WMSImageQuality>
     <Measurement>
       <DistanceUnits type="QString">meters</DistanceUnits>
       <AreaUnits type="QString">m2</AreaUnits>
