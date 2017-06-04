@@ -20,8 +20,9 @@ group, align, position and rotate each element and adjust their properties to
 create your layout. The layout can be printed or exported to image formats,
 PostScript, PDF or to SVG (export to SVG is not working properly with some
 recent Qt4 versions; you should try and check individually on your system).
-You can save the layout as a template and load it again in another session. Finally,
-generating several maps based on a template can be done through the atlas generator.
+You can save the layout as a template and load it again in another session.
+Finally, generating several maps based on a template can be done through the
+atlas generator.
 
 
 .. index:: Composer template, Map template
@@ -50,14 +51,16 @@ To demonstrate how to create a map please follow the next instructions.
    Inside the drawn rectangle the legend will be drawn.
 #. Select the |select| :sup:`Select/Move item` icon to select the map on
    the canvas and move it a bit.
-#. While the map item is still selected you can also change the size of the map item.
-   Click while holding down the left mouse button, in a white little rectangle in one
-   of the corners of the map item and drag it to a new location to change it's size.
-#. Click the :guilabel:`Item Properties` tab on the left lower panel and find the setting
-   for the orientation. Change the value of the setting :guilabel:`Map orientation` to
-   '15.00\ |degrees| '. You should see the orientation of the map item change.
-#. Now, you can print or export your print composition to image formats, PDF or to SVG
-   with the export tools in Composer menu.
+#. While the map item is still selected you can also change the size of the map
+   item. Click while holding down the left mouse button, in a white little
+   rectangle in one of the corners of the map item and drag it to a new location
+   to change its size.
+#. Click the :guilabel:`Item Properties` panel on the left down side and find
+   the setting for the orientation. Change the value of the setting
+   :guilabel:`Map orientation` to '15.00\ |degrees| '. You should see the
+   orientation of the map item change.
+#. Now, you can print or export your print composition to image formats, PDF or
+   to SVG with the export tools in Composer menu.
 #. Finally, you can save your print composition within the project file with the
    |fileSave| :sup:`Save Project` button.
 
@@ -76,8 +79,8 @@ The Composer Manager
 ====================
 
 The Composer Manager is the main window to manage print composers in the project.
-It helps you add new print composer, duplicate an existing one, rename or delete it.
-To open the composer manager dialog, click on the |composerManager|
+It helps you add new print composer, duplicate an existing one, rename or delete
+it. To open the composer manager dialog, click on the |composerManager|
 :sup:`Composer Manager` button in the toolbar or choose :menuselection:`Composer
 --> Composer Manager`. It can also be reached from the main window of QGIS with
 :menuselection:`Project --> Composer Manager`.
@@ -91,22 +94,24 @@ To open the composer manager dialog, click on the |composerManager|
    The Print Composer Manager
 
 
-The composer manager lists in its upper part all the available print composers in the project.
-The bottom part shows tools that help to:
+The composer manager lists in its upper part all the available print composers
+in the project. The bottom part shows tools that help to:
 
-* show the selected composer(s): you can open multiple print composers in one-click
-* duplicate the selected composer (available only if one print composer is selected):
-  it creates a new composer using the selected composer as template.
+* show the selected composer(s): you can open multiple print composers in
+  one-click
+* duplicate the selected composer (available only if one print composer is
+  selected): it creates a new composer using the selected composer as template.
   You'll be prompted to choose a new title for the new composer
 * rename the composer (also available only if one print composer is selected):
   You'll be prompted to choose a new title for the composer. Note that you can
   also rename the composer by double-clicking on its title in the upper part
-* remove the composer: the selected print composer(s) will be deleted from the project.
+* remove the composer: the selected print composer(s) will be deleted from the
+  project.
 
-With the Composer Manager, it's also possible to create new print composers as an
-empty composer or from a saved template. By default, QGIS will look for templates
-in user directory (:file:`~/.qgis2/composer_templates`) or application's one
-(:file:`ApplicationFolder/composer_templates`).
+With the Composer Manager, it's also possible to create new print composers as
+an empty composer or from a saved template. By default, QGIS will look for
+templates in user directory (:file:`~/.qgis2/composer_templates`) or
+application's one (:file:`ApplicationFolder/composer_templates`).
 QGIS will retrieve all the available templates and propose them in the combobox.
 The selected template will be used to create a new composer when clicking
 :guilabel:`Add` button.
@@ -119,9 +124,9 @@ template and use it to create a new print composer.
 Menus, tools and panels of the print composer
 =============================================
 
-Opening the Print Composer provides you with a blank canvas that represents
-the paper surface when using the print option. Initially you find buttons on
-the left beside the canvas to add map composer items: the current QGIS map canvas,
+Opening the Print Composer provides you with a blank canvas that represents the
+paper surface when using the print option. Initially you find buttons on the
+left beside the canvas to add map composer items: the current QGIS map canvas,
 text labels, images, legends, scale bars, basic shapes, arrows, attribute tables
 and HTML frames. In this toolbar you also find toolbar buttons to navigate,
 zoom in on an area and pan the view on the composer and toolbar buttons to
@@ -139,27 +144,29 @@ any elements are added.
    Print Composer
 
 
-On the right beside the canvas you find two panels.
-The upper panel holds the tabs :guilabel:`Items` and :guilabel:`Command History`
-and the lower panel holds the tabs :guilabel:`Composition`, :guilabel:`Item properties`
+On the right beside the canvas you find two set of panels. The upper one holds
+the panels :guilabel:`Items` and :guilabel:`Command History` and the lower holds
+the panels :guilabel:`Composition`, :guilabel:`Item properties`
 and :guilabel:`Atlas generation`.
 
-* The :guilabel:`Items` tab provides a list of all map composer items added to the canvas.
-* The :guilabel:`Command history` tab displays a history of all changes applied
+* The :guilabel:`Items` panel provides a list of all map composer items added to
+  the canvas.
+* The :guilabel:`Command history` panel displays a history of all changes applied
   to the Print Composer layout. With a mouse click, it is possible to undo and
   redo layout steps back and forth to a certain status.
-* The :guilabel:`Composition` tab allows you to set paper size, orientation, the page
-  background, number of pages and print quality for the output file in dpi. Furthermore,
-  you can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
-  all items will be converted to raster before printing or saving as PostScript or PDF.
-  In this tab, you can also customize settings for grid and smart guides.
-* The :guilabel:`Item Properties` tab displays the properties for the selected
+* The :guilabel:`Composition` panel allows you to set paper size, orientation, the
+  page background, number of pages and print quality for the output file in dpi.
+  Furthermore, you can also activate the |checkbox| :guilabel:`Print as raster`
+  checkbox. This means all items will be converted to raster before printing or
+  saving as PostScript or PDF.
+  In this panel, you can also customize settings for grid and smart guides.
+* The :guilabel:`Item Properties` panel displays the properties for the selected
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
-  :guilabel:`Item Properties` tab and customize the settings for the selected
+  :guilabel:`Item Properties` panel and customize the settings for the selected
   item (see :ref:`composer_items` for detailed information on each item
   settings).
-* The :guilabel:`Atlas generation` tab allows you to enable the generation of an
+* The :guilabel:`Atlas generation` panel allows you to enable the generation of an
   atlas for the current Composer and gives access to its parameters
   (see :ref:`atlas_generation` for detailed information on atlas
   generation usage).
@@ -170,12 +177,12 @@ mouse position, current page number, a combo box to set the zoom level,
 the number of selected items if applicable and, in the case of atlas generation,
 the number of features.
 
-In the upper part of the Print composer window, you can find menus and other toolbars.
-All Print Composer tools are available in menus and as icons in a toolbar.
-See a list of tools in table_composer_tools_.
+In the upper part of the Print composer window, you can find menus and other
+toolbars. All Print Composer tools are available in menus and as icons in a
+toolbar. See a list of tools in table_composer_tools_.
 
-The toolbars and the tabs can be switched off and on using the right mouse button
-over any toolbar or through :menuselection:`View --> Toolbars` or
+The toolbars and the panels can be switched off and on using the right mouse
+button over any toolbar or through :menuselection:`View --> Toolbars` or
 :menuselection:`View --> Panels`.
 
 
@@ -284,7 +291,8 @@ that will be used as default on any composer during your work.
 * :guilabel:`Compositions defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
   There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
-* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of the grid.
+* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of
+  the grid.
 
 
 Edit Menu
@@ -304,8 +312,8 @@ same position they were in their initial page. It ensures to copy/paste items at
 the same place, from page to page.
 
 .. note::
-   HTML items can not be copied in this way. As a workaround, use the **[Add Frame]**
-   button in the :menuselection:`Item Properties` tab.
+   HTML items can not be copied in this way. As a workaround, use the
+   **[Add Frame]** button in the :menuselection:`Item Properties` panel.
 
 
 View Menu
@@ -327,8 +335,8 @@ To navigate in the canvas layout, the Print Composer provides some general tools
   click in the rule (above or at the left side of the layout) and drag and drop
   to the desired location.
 * `Snap Guides`: allows user to snap items to the guides,
-* `Smart Guides`: uses other composer items as guides to dynamically snap to as user
-  moves or reshapes an item.
+* `Smart Guides`: uses other composer items as guides to dynamically snap to as
+  user moves or reshapes an item.
 * `Clear Guides` to remove all current guides.
 * `Show Bounding box` around the items.
 * `Show Rules` around the layout.
@@ -342,9 +350,9 @@ To navigate in the canvas layout, the Print Composer provides some general tools
 * `Panels` lists all panels available to hide/show them.
 * `Toolbars` same as above for toolbars.
 
-You can change the zoom level also using the mouse wheel or the combo box in the status bar.
-If you need to switch to pan mode while working in the Composer area, you can hold
-the :kbd:`Spacebar` or the mouse wheel.
+You can change the zoom level also using the mouse wheel or the combo box in
+the status bar. If you need to switch to pan mode while working in the Composer
+area, you can hold the :kbd:`Spacebar` or the mouse wheel.
 With :kbd:`Ctrl+Spacebar`, you can temporarily switch to Zoom In mode,
 and with :kbd:`Ctrl+Shift+Spacebar`, to Zoom Out mode.
 
@@ -364,13 +372,13 @@ To maximise the space available to interact with a composition you can use
 
 .. _composer_composition_tab:
 
-Composition Tab
----------------
+Composition Panel
+-----------------
 
 Page size and settings
 ......................
 
-In the :guilabel:`Composition` tab, you can define the global settings of the
+In the :guilabel:`Composition` panel, you can define the global settings of the
 current composition.
 
 
@@ -391,8 +399,9 @@ layer, while a third one shows an HTML frame linking to your organization websit
 Set the :guilabel:`Number of pages` to the desired value. you can also custom the
 :guilabel:`Page Background` with the color or the symbol you want.
 
-The Page size options apply to all the pages in the composition. However, you can
-modify the values using the data defined override options (see :ref:`atlas_data_defined_override`).
+The Page size options apply to all the pages in the composition. However, you
+can modify the values using the data defined override options
+(see :ref:`atlas_data_defined_override`).
 
 A custom page size can also be set, using the :guilabel:`Resize page` tool.
 This creates an unique page composition, resizes the page to fit the current
@@ -476,8 +485,8 @@ More information on variables usage in the General Tools
 
 .. index:: Revert layout actions
 
-Command History Tab: Revert and Restore actions
------------------------------------------------
+Command History Panel: Revert and Restore actions
+-------------------------------------------------
 
 During the layout process, it is possible to revert and restore changes.
 This can be done with the revert and restore tools:
@@ -485,8 +494,9 @@ This can be done with the revert and restore tools:
 * |undo| :sup:`Revert last change`
 * |redo| :sup:`Restore last change`
 
-This can also be done by mouse click within the :guilabel:`Command history` tab
-(see figure_composer_). The History tab lists the last actions done within the composer.
+This can also be done by mouse click within the :guilabel:`Command history`
+panel (see figure_composer_). The History panel lists the last actions done
+within the composer.
 Just select the point you want to revert to and once you do new action all
 the actions done after the selected one will be removed.
 
@@ -499,10 +509,10 @@ the actions done after the selected one will be removed.
 
 .. _composer_items_tab:
 
-Items Tab
----------
+Items Panel
+-----------
 
-The :guilabel:`Items` tab offers some options to manage selection and
+The :guilabel:`Items` panel offers some options to manage selection and
 visibility of items.
 All the items added to the print composer canvas are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
@@ -523,4 +533,4 @@ For any selected item, you can :
 Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
-tab and unchecking the tickbox or you can use the icons on the toolbar.
+panel and unchecking the tickbox or you can use the icons on the toolbar.
