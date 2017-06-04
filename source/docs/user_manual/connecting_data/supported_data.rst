@@ -245,20 +245,15 @@ they do with OGR layers in QGIS.
    a powerful means to visualize your data. Refer to your PostgreSQL manual for
    information on creating views.
 
-.. _sec_postgis_details:
-
-Some details about PostgreSQL layers
-....................................
-
 This section contains some details on how QGIS accesses PostgreSQL layers.
 Most of the time, QGIS should simply provide you with a list of database
-tables that can be loaded, and it will load them on request. However, if you have
-trouble loading a PostgreSQL table into QGIS, the information below may
+tables that can be loaded, and it will load them on request. However, if you
+have trouble loading a PostgreSQL table into QGIS, the information below may
 help you understand any QGIS messages and give you direction on changing
 the PostgreSQL table or view definition to allow QGIS to load it.
 
 Primary key
-^^^^^^^^^^^^
+...........
 
 QGIS requires that PostgreSQL layers contain a column that can be used
 as a unique key for the layer. For tables, this usually means that the table
@@ -273,7 +268,7 @@ QGIS offers a checkbox **Select at id** that is activated by default. This
 option gets the ids without the attributes which is faster in most cases.
 
 View
-^^^^
+....
 
 If the PostgreSQL layer is a view, the same requirement exists, but views
 do not always have primary keys or columns with unique constraints on them. You
@@ -290,7 +285,7 @@ you use expensive views.
 .. _layer_style_backup:
 
 QGIS layer_style table and database backup
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..........................................
 
 If you want to make a backup of your PostGIS database using the :file:`pg_dump` and
 :file:`pg_restore` commands, and the default layer styles as saved by QGIS fail to
@@ -305,7 +300,7 @@ restore will work.
 .. % When dealing with views, QGIS parses the view definition and
 
 Filter database side
-^^^^^^^^^^^^^^^^^^^^
+....................
 
 QGIS allows to filter features already on server side. Check the
 :menuselection:`Settings --> Options --> Data Sources -->` |checkbox|
@@ -315,7 +310,7 @@ sent to the database. Expressions using unsupported operators or functions will
 gracefully fallback to local evaluation.
 
 Support of PostgreSQL data types
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+................................
 
 Most of common data types are supported by the PostgreSQL provider: integer, float,
 varchar, geometry and timestamp.
@@ -421,8 +416,8 @@ index to speed up spatial searches of the data (GiST index information is taken
 from the PostGIS documentation available at http://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
-   first select the layer and click on :menuselection:`Table --> Edit table`, go to
-   :menuselection:`Indexes` tab and click on **[Add spatial index]**.
+   first select the layer and click on :menuselection:`Table --> Edit table`, go
+   to :menuselection:`Indexes` tab and click on **[Add spatial index]**.
 
 The syntax for creating a GiST index is:
 ::
