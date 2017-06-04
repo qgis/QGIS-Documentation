@@ -17,6 +17,28 @@ Features in the table can be searched, selected, moved or even edited.
    .. contents::
       :local:
 
+.. index:: Non Spatial Attribute Tables, Geometryless Data
+.. _non_spatial_attribute_tables:
+
+Non spatial tables
+==================
+
+QGIS allows you to load spatial and non-spatial layers. This currently includes
+tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
+SpatiaLite, DB2 and Oracle provider. When loaded in QGIS, they are listed in
+the :guilabel:`Layers Panel`. Whether the layer you are working with is
+spatially enabled or not doesn't change features you can have access to,
+except map canvas interaction.
+
+Non spatial tables can be used for field lookups or just generally browsed and
+edited using the table view. 
+As an example, you can use columns of the non-spatial table to define attribute
+values, or a range of values that are allowed, to be added to a specific vector
+layer during digitizing. Have a closer look at the edit widget in section
+:ref:`vector_attributes_menu` to find out more.
+
+.. _attribute_table_overview:
+
 Manipulate the Attribute table interface
 =========================================
 
@@ -568,25 +590,6 @@ changes for all selected features at once.
 
   Multi edit mode is only available for auto generated and drag and drop forms
   (see :ref:`customize_form`); it is not supported by custom ui forms.
-
-
-.. index:: Non Spatial Attribute Tables, Geometryless Data
-.. _non_spatial_attribute_tables:
-
-Working with non spatial attribute tables
-=========================================
-
-QGIS allows you also to load non-spatial tables. This currently includes tables
-supported by OGR and delimited text, as well as the PostgreSQL, MSSQL and Oracle provider.
-The tables can be used for field lookups or just generally browsed and edited using the table
-view. When you load the table, you will see it in the legend field. It can be
-opened with the |openTable| :sup:`Open Attribute Table` tool and
-is then editable like any other layer attribute table.
-
-As an example, you can use columns of the non-spatial table to define attribute
-values, or a range of values that are allowed, to be added to a specific vector
-layer during digitizing. Have a closer look at the edit widget in section
-:ref:`vector_attributes_menu` to find out more.
 
 
 .. index:: Relations, Foreign key
