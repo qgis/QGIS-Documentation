@@ -638,8 +638,9 @@ Filter database side
 ^^^^^^^^^^^^^^^^^^^^
 
 QGIS allows to filter features already on server side. Check the
-|checkbox| :guilabel:`Execute expressions on postgres server-side if
-possible (Experimental)` checkbox to do so. Only supported expressions will be
+:menuselection:`Settings --> Options --> Data Sources -->` |checkbox|
+:menuselection:`Execute expressions on postgres server-side if possible`
+checkbox to do so. Only supported expressions will be
 sent to the database. Expressions using unsupported operators or functions will
 gracefully fallback to local evaluation.
 
