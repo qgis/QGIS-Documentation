@@ -22,7 +22,6 @@ QGIS User Guide
     introduction/qgis_configuration
     working_with_projections/working_with_projections
     connecting_data/index
-    qgis_browser/qgis_browser
     working_with_vector/index
     working_with_raster/index
     print_composer/index
@@ -30,6 +29,7 @@ QGIS User Guide
     working_with_gps/index
     auth_system/index
     grass_integration/grass_integration
+    qgis_browser/qgis_browser
     processing/index
     processing_algs/index
     plugins/plugins_index
