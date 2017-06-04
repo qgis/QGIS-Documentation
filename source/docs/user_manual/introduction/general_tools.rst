@@ -1086,8 +1086,7 @@ same information, so if you select one feature in attribute table, it will
 be selected in map canvas also):
 
 * |expressionSelect| :sup:`Select By Expression...` allows user to select
-  features using expression dialog. See :ref:`vector_expressions` chapter for
-  some example.
+  features using expression dialog. 
 * |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
 * |deselectAll| :sup:`Deselect Features from All Layers` or press
   :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers.
@@ -1095,6 +1094,25 @@ be selected in map canvas also):
   features in the current layer.
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
   the current layer.
+
+
+For example, if you want to find regions that are boroughs from
+:file:`regions.shp` of the QGIS sample data, you can use the |expressionSelect|
+:sup:`Select features using an Expression` icon. Then, you open the
+:guilabel:`Fields and Values` menu and choose the field that you want to query.
+Double-click the field 'TYPE_2' and also click **[Load all unique values]**
+in the right panel. From the list, choose and double-click 'Borough'. In the
+:guilabel:`Expression` field, then you'd write the following query:
+
+::
+
+ "TYPE_2"  =  'Borough'
+
+From the expression builder dialog, you can also use the :menuselection:`Function
+list --> Recent (Selection)` to make a selection that you used before. The
+dialog remembers the last 20 used expressions. See :ref:`vector_expressions`
+chapter for more information and some example.
+
 
 .. tip:: **Save your selection into a new file**
    
