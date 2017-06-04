@@ -15,9 +15,9 @@ The Legend Item
 To add a map legend, click the |addLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the Print Composer canvas and
 position and customize the appearance in the legend :guilabel:`Item Properties`
-tab.
+panel.
 
-The :guilabel:`Item properties` of a legend item tab provides the following
+The :guilabel:`Item properties` panel of a legend item provides the following
 functionalities (see figure_composer_legend_):
 
 .. _Figure_composer_legend:
@@ -25,13 +25,13 @@ functionalities (see figure_composer_legend_):
 .. figure:: /static/user_manual/print_composer/legend_properties.png
    :align: center
 
-   Legend Item properties Tab
+   Legend Item Properties Panel
 
 Main properties
 ---------------
 
 The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties`
-tab provides the following functionalities (see figure_composer_legend_ppt_):
+panel provides the following functionalities (see figure_composer_legend_ppt_):
 
 .. _Figure_composer_legend_ppt:
 
@@ -56,8 +56,8 @@ In Main properties you can:
 Legend items
 ------------
 
-The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties` tab
-provides the following functionalities (see figure_composer_legend_items_):
+The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties`
+panel provides the following functionalities (see figure_composer_legend_items_):
 
 .. _Figure_composer_legend_items:
 
@@ -102,11 +102,12 @@ provides the following functionalities (see figure_composer_legend_items_):
   contextual menu.
 
   After changing the symbology in the QGIS main window, you can click on
-  **[Update All]** to adapt the changes in the legend element of the Print Composer.
+  **[Update All]** to adapt the changes in the legend element of the Print
+  Composer.
 
-* While generating an atlas with polygon features, you can filter out legend items
-  that lie outside the current atlas feature. To do that, check the |checkbox|
-  :guilabel:`Only show items inside current atlas feature` option. 
+* While generating an atlas with polygon features, you can filter out legend
+  items that lie outside the current atlas feature. To do that, check the
+  |checkbox| :guilabel:`Only show items inside current atlas feature` option.
 
 
 
@@ -114,7 +115,7 @@ Fonts, Columns, Symbol
 ----------------------
 
 The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
-legend :guilabel:`Item Properties` tab provide the following functionalities
+legend :guilabel:`Item Properties` panel provide the following functionalities
 (see figure_composer_legend_fonts_):
 
 .. _Figure_composer_legend_fonts:
@@ -129,12 +130,13 @@ legend :guilabel:`Item Properties` tab provide the following functionalities
   Click on a category button to open a **Select font** dialog.
 * You provide the labels with a **Color** using the advanced color picker,
   however the selected color will be given to all font items in the legend..
-* Legend items can be arranged over several columns. Set the number of columns in
-  the :guilabel:`Count` |selectNumber| field.
+* Legend items can be arranged over several columns. Set the number of columns
+  in the :guilabel:`Count` |selectNumber| field.
 
-  * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be adjusted.
-  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer
-    legend to be divided between columns.
+  * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be
+    adjusted.
+  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a
+    graduated layer legend to be divided between columns.
 
 * You can also change the width and height of the legend symbol, set a color and
   a thickness in case of raster layer symbol.
@@ -144,7 +146,7 @@ WMS LegendGraphic and Spacing
 ------------------------------
 
 The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend
-:guilabel:`Item Properties` tab provide the following functionalities (see
+:guilabel:`Item Properties` panel provide the following functionalities (see
 figure_composer_legend_wms_):
 
 .. _Figure_composer_legend_wms:

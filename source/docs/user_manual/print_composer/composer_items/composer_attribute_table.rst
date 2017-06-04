@@ -15,24 +15,25 @@ The Attribute Table Item
 
 It is possible to add parts of a vector attribute table to the Print Composer
 canvas: Click the |openTable| :sup:`Add attribute table` icon, click and drag
-with the left mouse button on the Print Composer canvas to place and size the item.
-You can better position and customize its appearance in the :guilabel:`Item Properties` tab.
+with the left mouse button on the Print Composer canvas to place and size the
+item. You can better position and customize its appearance in the
+:guilabel:`Item Properties` panel.
 
-The :guilabel:`Item properties` tab of an attribute table provides the following
-functionalities (see figure_composer_table_):
+The :guilabel:`Item properties` panel of an attribute table provides the
+following functionalities (see figure_composer_table_):
 
 .. _Figure_composer_table:
 
 .. figure:: /static/user_manual/print_composer/attribute_properties.png
    :align: center
 
-   Attribute table Item properties Tab
+   Attribute table Item Properties Panel
 
 
 Main properties
 ---------------
 
-The :guilabel:`Main properties` dialog of the attribute table` provides the
+The :guilabel:`Main properties` dialog of the attribute table provides the
 following functionalities (see figure_composer_table_ppt_):
 
 .. _Figure_composer_table_ppt:
@@ -42,21 +43,25 @@ following functionalities (see figure_composer_table_ppt_):
 
    Attribute table Main properties Dialog
 
-* For :guilabel:`Source` you can normally select only 'Layer features'.
-* With :guilabel:`Layer` you can choose from the vector layers loaded in the project.
-* In case you activated the |checkbox|:guilabel:`Generate an atlas` option in the
-  :guilabel:`Atlas generation` tab, there are two additional :guilabel:`Source` possible:
-  'Current atlas feature' (see figure_composer_table_atlas_) and 'Relation children'
-  (see figure_composer_table_relation_). Choosing the 'Current atlas feature'
-  you won't see any option to choose the layer, and the table item will only
-  show a row with the attributes from the current feature of the atlas coverage layer.
-  Choosing 'Relation children', an option with the relation names will show up.
-  The 'Relation children' option can only be used if you have defined a relation using
-  your atlas coverage layer as parent, and the table will show the children rows of
-  the atlas coverage layer's current feature (for further information about the
-  atlas generation, see :ref:`atlas_generation`).
-* The button **[Refresh table data]** can be used to refresh the table when the actual
-  contents of the table has changed.
+* For :guilabel:`Source` you can normally select only **Layer features**.
+* With :guilabel:`Layer` you can choose from the vector layers loaded in the
+  project.
+* In case you activated the |checkbox|:guilabel:`Generate an atlas` option in
+  the :guilabel:`Atlas generation` panel, there are two additional
+  :guilabel:`Source` possible:
+
+  * **Current atlas feature** (see figure_composer_table_atlas_): you won't see
+    any option to choose the layer, and the table item will only show a row with
+    the attributes from the current feature of the atlas coverage layer.
+  * and **Relation children** (see figure_composer_table_relation_): an option
+    with the relation names will show up. This feature can only be used if you
+    have defined a relation using your atlas coverage layer as parent, and the
+    table will show the children rows of the atlas coverage layer's current
+    feature (for further information about the atlas generation, see
+    :ref:`atlas_generation`).
+
+* The button **[Refresh table data]** can be used to refresh the table when the
+  actual contents of the table has changed.
 
 
 .. _Figure_composer_table_atlas:

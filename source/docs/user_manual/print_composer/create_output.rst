@@ -34,8 +34,8 @@ without bounding boxes. This can be enabled by deactivating :guilabel:`View -->`
 |checkbox| :guilabel:`Show bounding boxes` or pressing the shortcut
 :kbd:`Ctrl+Shift+B`.
 
-The Print Composer allows you to create several output formats, and it is possible
-to define the resolution (print quality) and paper size:
+The Print Composer allows you to create several output formats, and it is
+possible to define the resolution (print quality) and paper size:
 
 * The |filePrint| :sup:`Print` icon allows you to print the layout to a
   connected printer or a PostScript file, depending on installed printer drivers.
@@ -54,7 +54,7 @@ enter the filename to use to export composition: in the case of multi-page
 composition, each page will be exported to a file with the given name
 appended with the page number.
 
-You can then override the print resolution (set in Composition tab) and resize
+You can then override the print resolution (set in Composition panel) and resize
 exported image dimensions.
 
 .. _crop_to_content:
@@ -129,8 +129,8 @@ blend modes, transparency or symbol effects, these cannot be printed
 as vectors, and the effects may be lost. Checking :guilabel:`Print as a
 raster` in the :ref:`composer_composition_tab` helps to keep the effects but
 rasterize the composition. Note that the :guilabel:`Force layer to render as
-raster` in the Rendering tab of Layer Properties is a layer-level alternative that
-avoids global composition rasterization.
+raster` in the Rendering tab of Layer Properties dialog is a layer-level
+alternative that avoids global composition rasterization.
 
 If you need to export your layout as a **georeferenced PDF**, in the
 :ref:`composer_composition_tab`, make sure to select the correct map item to
@@ -152,22 +152,22 @@ current geometry. Fields associated with this geometry can be used within text
 labels.
 
 Every page will be generated with each feature. To enable the generation
-of an atlas and access generation parameters, refer to the `Atlas generation` tab.
-This tab contains the following widgets (see figure_composer_atlas_):
+of an atlas and access generation parameters, refer to the `Atlas generation`
+panel.This panel contains the following widgets (see figure_composer_atlas_):
 
 .. _figure_composer_atlas:
 
 .. figure:: /static/user_manual/print_composer/atlas_properties.png
    :align: center
 
-   Atlas generation tab
+   Atlas Generation Panel
 
 * |checkbox| :guilabel:`Generate an atlas`, which enables or disables the atlas
   generation.
-* A :guilabel:`Coverage layer` |selectString| combo box that allows you to choose
-  the   (vector) layer containing the features on which to iterate over.
+* A :guilabel:`Coverage layer` |selectString| combo box that allows you to
+  choose the (vector) layer containing the features on which to iterate over.
 * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
-  will hide   the coverage layer (but not the other ones) during the generation.
+  will hide the coverage layer (but not the other ones) during the generation.
 * An optional :guilabel:`Page name` combo box to give a more explicit name to
   each feature page(s) when previewing atlas. You can select an attribute of
   the coverage layer or set an expression. If this option is empty, QGIS will
@@ -235,7 +235,8 @@ or, another combination:
    [%format_number($area/1000000,2) %] km2
 
 The information ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]``
-is an expression used inside the label. Both expressions would result in the generated atlas as::
+is an expression used inside the label. Both expressions would result in the
+generated atlas as::
 
   The area of PARIS,75001 is 1.94 km2
 
@@ -246,33 +247,33 @@ Data Defined Override Buttons
 -----------------------------
 
 There are several places where you can use a |dataDefined| :sup:`Data Defined
-Override` button to override the selected setting. These options are particularly
-useful with Atlas Generation.
+Override` button to override the selected setting. These options are
+particularly useful with Atlas Generation.
 
-For the following examples the `Regions` layer of the QGIS sample dataset is used
-and selected for Atlas Generation.
+For the following examples the `Regions` layer of the QGIS sample dataset is
+used and selected for Atlas Generation.
 We also assume the paper format `A4 (210X297)` is selected in the
-:guilabel:`Composition` tab for field :guilabel:`Presets`.
+:guilabel:`Composition` panel for field :guilabel:`Presets`.
 
-With a `Data Defined Override` button you can dynamically set the paper orientation.
-When the height (north-south) of the extents of a region is greater than its width
-(east-west), you rather want to use `portrait` instead of `landscape` orientation
-to optimize the use of paper.
+With a `Data Defined Override` button you can dynamically set the paper
+orientation. When the height (north-south) of the extents of a region is greater
+than its width (east-west), you rather want to use `portrait` instead of
+`landscape` orientation to optimize the use of paper.
 
 In the :guilabel:`Composition` you can set the field :guilabel:`Orientation`
 and select `Landscape` or `Portrait`. We want to set the orientation dynamically
 using an expression depending on the region geometry.
 Press the |dataDefined| button of field :guilabel:`Orientation`, select
-:menuselection:`Edit...` so the :guilabel:`Expression string builder` dialog opens.
-Enter the following expression:
+:menuselection:`Edit...` so the :guilabel:`Expression string builder` dialog
+opens. Enter the following expression:
 
 .. code::
 
    CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
    THEN 'Landscape' ELSE 'Portrait' END
 
-Now the paper orients itself automatically. For each Region you need to reposition
-the location of the composer item as well. For the map item you can
+Now the paper orients itself automatically. For each Region you need to
+reposition the location of the composer item as well. For the map item you can
 use the |dataDefined| button of field :guilabel:`Width` to set it
 dynamically using following expression:
 
