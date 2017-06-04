@@ -402,11 +402,14 @@ Editing attribute values
 Editing attribute values can be done by:
 
 * typing the new value directly in the cell, whether the attribute table is in
-  table or form view. Changes can hence be done cell by cell, feature by feature;
-* using the field calculator: update in a row a field that may already exist or to be
-  created but for multiple features; it can be used to create virtual fields.
-* using the quick field calculation bar: same as above but for only existing field
-* or using the multi edit mode: update in a row multiple fields for multiple features.
+  table or form view. Changes are hence done cell by cell, feature by feature;
+* using the :ref:`field calculator <vector_field_calculator>`: update in a row
+  a field that may already exist or to be created but for multiple features; it
+  can be used to create virtual fields.
+* using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
+  same as above but for only existing field
+* or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
+  multiple fields for multiple features.
 
 .. _vector_field_calculator:
 
@@ -415,9 +418,9 @@ Field Calculator
 
 The |calculateField| :sup:`Field Calculator` button in the attribute table
 allows you to perform calculations on the basis of existing attribute values or
-defined functions, for instance, to calculate length or area of geometry features.
-The results can be written to a new attribute field, a virtual field, or
-they can be used to update values in an existing field.
+defined functions, for instance, to calculate length or area of geometry
+features. The results can be written to a new attribute field, a virtual field,
+or they can be used to update values in an existing field.
 
 The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
@@ -425,12 +428,12 @@ figure_field_calculator_). If the layer is not in edit mode, a warning is
 displayed and using the field calculator will cause the layer to be put in
 edit mode before the calculation is made.
 
-Based on the :ref:`Expression Builder <functions_list>` dialog, the field calculator
-dialog offers a complete interface to define an expression and apply it to an
-existing or a newly created field.
-To use the field calculator dialog, you first must select whether you want to only
-update selected features, create a new attribute field where the results of the
-calculation will be added or update an existing field.
+Based on the :ref:`Expression Builder <functions_list>` dialog, the field
+calculator dialog offers a complete interface to define an expression and apply
+it to an existing or a newly created field.
+To use the field calculator dialog, you first must select whether you want to
+only update selected features, create a new attribute field where the results
+of the calculation will be added or update an existing field.
 
 .. _figure_field_calculator:
 
@@ -442,8 +445,8 @@ calculation will be added or update an existing field.
 If you choose to add a new field, you need to enter a field name, a field type
 (integer, real, date or string) and if needed, the total field length and the
 field precision. For example, if you choose a field length of 10 and a field
-precision of 3, it means you have 6 digits before the dot, then the dot and another
-3 digits for the precision.
+precision of 3, it means you have 6 digits before the dot, then the dot and
+another 3 digits for the precision.
 
 A short example illustrates how field calculator works when using the
 :guilabel:`Expression` tab. We want to calculate the length in km of the
@@ -468,8 +471,8 @@ A short example illustrates how field calculator works when using the
 Create a Virtual Field
 -----------------------
 
-A virtual field is a field based on an expression calculated on the fly,
-meaning that its value is automatically updated as soon as the underlying parameter
+A virtual field is a field based on an expression calculated on the fly, meaning
+that its value is automatically updated as soon as the underlying parameter
 changes. The expression is set once; you no longer need to recalculate the field
 each time underlying values change.
 For example, you may want to use a virtual field if you need area to be evaluated
@@ -488,17 +491,18 @@ that may change (e.g., using ``now()`` function).
 The Quick Field Calculation Bar
 -------------------------------
 
-While Field calculator is always available, the quick field calculation bar on top
-of the attribute table is only visible if the layer is in edit mode. Thanks to the
-expression engine, it offers a quicker access to edit an already existing field.
+While Field calculator is always available, the quick field calculation bar on
+top of the attribute table is only visible if the layer is in edit mode. Thanks
+to the expression engine, it offers a quicker access to edit an already existing
+field.
 
 In quick field calculation bar, you simply need to:
 
 * select the existing field name in the drop-down list
-* fill the textbox with an expression you directly write or build using the |expression|
-  expression button
-* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]** button
-  according to your need.
+* fill the textbox with an expression you directly write or build using the
+  |expression| expression button
+* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]**
+  button according to your need.
 
 .. index:: Multi edit
 .. _multi_edit_fields:
@@ -506,22 +510,65 @@ In quick field calculation bar, you simply need to:
 Edit multiple fields
 ---------------------
 
-Unlike the previous tools, the |multiEdit| :sup:`Toggle multi edit mode` button
-allows the attributes of multiple features to be edited simultaneously.
-It is available when the layer is in edit mode and it toggles the attribute
-table dialog into form view.
+Unlike the previous tools, multi edit mode allows multiple attributes of
+different features to be edited simultaneously. When the layer is toggled to
+edit, multi edit capabilities are accessible:
 
-In this mode, unless selected features have the same attribute value, the
-corresponding widget is shown empty. Unchanged field keep its original value.
-New widgets appear next to each editor widget allowing for display of the current
-multi edit state and for rolling back changes on a field-by-field basis.
+* using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar
+  inside the attribute table dialog,
+* or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify
+  attributes of selected features` menu.
 
-Changes will apply to **all selected features** and are made as a single edit
-command. So pressing |undo| :sup:`Undo` will rollback the attribute changes for
-all selected features at once.
+In order to edit multiple fields in a row: 
 
-Multi edit mode is only available for auto generated and drag and drop forms
-(see :ref:`customize_form`); it is not supported by custom ui forms.
+#. select the features you want to edit;
+#. from the attribute table toolbar, click the |multiEdit| button. This will
+   toggle the dialog to its form view. Feature selection could also be made
+   at this step;
+#. at the right side of the attribute table, fields (and values) of selected
+   features are shown. New widgets appear next to each field allowing for
+   display of the current multi edit state:
+
+   * |multiEditMixedValues| the field contains different values for selected
+     features. It's shown empty and each feature will keep its original value.
+     You can reset the value of the field from the drop-down list of the widget.
+   * |multiEditSameValues| all selected features have the same value for this
+     field and the value displayed in the form will be kept. 
+   * |multiEditChangedValues| the field has been edited and the entered value
+     will be applied to all the selected features. A message appears at the top
+     of the dialog, inviting you to either apply or reset your modification.
+
+   Clicking any of these widgets allows you to either set the current value for
+   the field or reset to original value, meaning that you can roll back changes
+   on a field-by-field basis. 
+
+#. make the changes to the fields you want and click on **Apply changes** in
+   the upper message text or any other feature in the left panel.
+
+Changes will apply to **all selected features**. If no feature is selected, the
+whole table is updated with your changes. Modifications are made as a single
+edit command. So pressing |undo| :sup:`Undo` will rollback the attribute
+changes for all selected features at once.
+
+.. note::
+
+ Unlike the tool from the attribute table, hitting the :menuselection:`Edit
+ --> Modify Attributes of Selected Features` option provides you with a modal
+ dialog to fill attributes changes. Hence, features selection is required
+ before execution.
+ 
+.. _figure_field_multiedit:
+
+.. figure:: /static/user_manual/working_with_vector/attribute_multiedit.png
+   :align: center
+
+   Editing fields of multiple features
+
+.. note:: 
+
+  Multi edit mode is only available for auto generated and drag and drop forms
+  (see :ref:`customize_form`); it is not supported by custom ui forms.
+
 
 .. index:: Non Spatial Attribute Tables, Geometryless Data
 .. _non_spatial_attribute_tables:
