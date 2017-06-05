@@ -562,7 +562,7 @@ unique id (which acts as primary key).
 
 Then you get another point layer or table with information about airports
 that are located in the regions and you also want to keep track of these. If
-you want to add them to the region layer, you need to create a one to many
+you want to add them to the regions layer, you need to create a one to many
 relation using foreign keys, because there are several airports in most regions.
 
 .. _figure_relations_map:
@@ -571,6 +571,17 @@ relation using foreign keys, because there are several airports in most regions.
    :align: center
 
    Alaska region with airports
+
+Layers
+......
+
+QGIS makes no difference between a table and a vector layer. Basically, a vector
+layer is a table with a geometry. So you can add your table as a vector layer.
+To demonstrate the 1-n relation, you can load the :file:`regions` shapefile and
+the :file:`airports` shapefile which has a foreign key field (``fk_region``) to
+the layer regions. This means, that each airport belongs to exactly one region
+while each region can have any number of airports (a typical one to many
+relation).
 
 Foreign keys
 ............
@@ -581,20 +592,9 @@ a database, you will probably want to define a constraint on it).
 
 This field fk_region will always contain an id of a region. It can be seen like
 a pointer to the region it belongs to. And you can design a custom edit form
-for the editing and QGIS takes care about the setup. It works with different
+for editing and QGIS takes care of the setup. It works with different
 providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
-
-Layers
-......
-
-QGIS makes no difference between a table and a vector layer. Basically, a vector
-layer is a table with a geometry. So you can add your table as a vector layer.
-To demonstrate you can load the 'region' shapefile (with geometries) and the
-'airport' csv table (without geometries) and a foreign key (fk_region) to the
-layer region. This means that each airport belongs to exactly one region while
-each region can have any number of airports (a typical one to many relation).
-
 
 Definition (Relation Manager)
 .............................
@@ -604,17 +604,17 @@ between the layers. This is done in :menuselection:`Project --> Project Properti
 Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
 
 * **name** is going to be used as a title. It should be a human readable string,
-  describing, what the relation is used for. We will just call say "Airports" in
-  this case.
+  describing, what the relation is used for. We will just call say **Airports**
+  in this case.
 * **referencing layer** also considered as child layer, is the one with the
-  foreign key field on it. In our case, this is the airports layer
+  foreign key field on it. In our case, this is the ``airports`` layer
 * **referencing field** will say, which field points to the other layer so this
-  is fk_region in this case
+  is ``fk_region`` in this case
 * **referenced layer** also considered as parent layer, is the one with the
-  primary key, pointed to, so here it is the regions layer
-* **referenced field** is the primary key of the referenced layer so it is ID
+  primary key, pointed to, so here it is the ``regions`` layer
+* **referenced field** is the primary key of the referenced layer so it is ``ID``
 * **id** will be used for internal purposes and has to be unique. You may need
-  it to build :ref:`custom forms <customize_form>` once this is supported. If
+  it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
   yourself to get one that is easier to handle.
 
