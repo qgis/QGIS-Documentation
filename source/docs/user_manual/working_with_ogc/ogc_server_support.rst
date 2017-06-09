@@ -400,6 +400,28 @@ OGC WMS 1.3.0 specification:
 
     http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&DPI=300&...
 
+* **IMAGE_QUALITY** parameter is only used for JPEG images. By default, the
+  JPEG compression is ``-1``. You can change the default per QGIS project in
+  the :guilabel:`OWS Server --> WMS capabilities` menu of the
+  :menuselection:`Project --> Project Properties` dialog.
+  If you want to override it in a ``GetMap`` request you can do it using the
+  ``IMAGE_QUALITY`` parameter:
+
+  .. code-block:: guess
+
+   http://localhost/cgi-bin/qgis_mapserv.fcgi?\
+    REQUEST=GetMap&FORMAT=image/jpeg&IMAGE_QUALITY=65&...
+
+* **image/png; mode=** can be used to override the png format.
+  You can choose between ``image/png; mode=16bit``, ``image/png; mode=8bit``
+  and ``image/png; mode=1bit``. This can shrink the output image size quite
+  a bit. Example:
+
+  .. code-block:: guess
+
+   http://localhost/cgi-bin/qgis_mapserv.fcgi?\
+    REQUEST=GetMap&FORMAT=image/png; mode=8bit&...
+
 * **OPACITIES** parameter: Opacity can be set on layer or group level.
   Allowed values range from 0 (fully transparent) to 255 (fully opaque).
 
