@@ -402,7 +402,7 @@ OGC WMS 1.3.0 specification:
 
 * **IMAGE_QUALITY** parameter is only used for JPEG images. By default, the
   JPEG compression is ``-1``. You can change the default per QGIS project in
-  the :guilabel:`OWS Server --> WMS capabilities` menu of the
+  the :menuselection:`OWS Server --> WMS capabilities` menu of the
   :menuselection:`Project --> Project Properties` dialog.
   If you want to override it in a ``GetMap`` request you can do it using the
   ``IMAGE_QUALITY`` parameter:
