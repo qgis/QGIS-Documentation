@@ -9,7 +9,7 @@ QGIS Server Python Plugins
 .. contents::
    :local:
 
-Python plugins can also run on QGIS Server (see: :ref:`label_qgisserver`): by using the
+Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`): by using the
 *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
 server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
 
