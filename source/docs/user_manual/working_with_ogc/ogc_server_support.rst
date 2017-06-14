@@ -38,13 +38,10 @@ As QGIS desktop and QGIS Server use the same visualization libraries, the maps
 that are published on the web look the same as in desktop GIS.
 
 In the following sections, we will provide a sample configuration to set up
-a QGIS Server on Debian/Ubuntu Linux.
-For user contributed installation instructions on other platforms or
-distributions, we recommend reading one of the following URLs:
-
-* http://hub.qgis.org/projects/quantum-gis/wiki/QGIS_Server_Tutorial
-* http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
-* http://www.itopen.it/qgis-server-python-plugins-ubuntu-setup/
+a QGIS Server on Debian/Ubuntu Linux. For more detailed installation
+instructions on other platforms or distributions and more information on
+working with QGIS Server, we recommend reading the :ref:`QGIS Server Training
+Manual <training_qgis_server>` or :ref:`server_plugins`.
 
 .. index:: Apache, Debian Squeeze
 
