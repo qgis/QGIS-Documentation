@@ -212,8 +212,6 @@ Click *OK* and you're done.
    the SIP file changed), you should go back to this page and simply click
    *Apply*. This will let Eclipse parse all the libraries again.
 
-For another possible setting of Eclipse to work with QGIS Python plugins,
-check `this link <http://linfiniti.com/2011/12/remote-debugging-qgis-python-plugins-with-pydev>`_
 
 Debugging using PDB
 ===================
@@ -239,7 +237,7 @@ On Linux do:
 
  $ ./Qgis
 
-On macOS do::
+On macOS do:
 
 .. code-block:: bash
 
