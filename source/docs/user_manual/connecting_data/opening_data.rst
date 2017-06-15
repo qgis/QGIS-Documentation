@@ -79,11 +79,12 @@ To add a layer into a project:
 
 #. right-click on QGIS toolbar and check |checkbox| :guilabel:`Browser Panel`
    to activate it or select it from the menu :menuselection:`View --> Panels`
-   (or |kde| :menuselection:`Settings --> Panels`).
-#. a browser tree with your filesystem, databases and web services is dislayed;
+   (or |kde| :menuselection:`Settings --> Panels`);
+#. a browser tree with your filesystem, databases and web services is displayed;
 #. find the layer in the list;
-#. and add your data into the map canvas or the Layers Panel ADD HEPERLINK
-   with a **simple drag-and-drop or double-click**.
+#. and add your data into the :ref:`map canvas <label_mapview>` or the
+   :ref:`Layers Panel <label_legend>` with a **simple drag-and-drop or
+   double-click**.
 
 Once a file is loaded, you can zoom around it using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
@@ -97,33 +98,33 @@ vector layers.
 
 At the top of the Browser panel, you find some icons that help you to:
 
-* |addLayer| Add Selected Layers. You can also add data into the map canvas
-  by selecting **Add selected layer(s)** in the context menu.
-* |draw| Refresh the browser tree
-* |filterMap| search for specific data. Enter a search word or wildcard
-  and the browser will filter the tree to only show paths to matching DB tables,
-  filenames or folders -- other data or folders won't be displayed. See the
-  Browser Panel(2) example on the figure_browser_panels_. The comparison can be
-  case-sensitive or not. It can also be set to:
+* |addLayer| :sup:`Add Selected Layers`: you can also add data into the map
+  canvas by selecting **Add selected layer(s)** from the layer's context menu;
+* |draw| :sup:`Refresh` the browser tree;
+* |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
+  word or wildcard and the browser will filter the tree to only show paths to
+  matching DB tables, filenames or folders -- other data or folders won't be
+  displayed. See the Browser Panel(2) example on the figure_browser_panels_.
+  The comparison can be case-sensitive or not. It can also be set to:
 
-  * normal: return any item containing the search text
-  * using wildcard(s): fine tune the search using ``?`` and/or ``*`` characters
-    to specify the position of the search text
-  * using a regular expression
+  * **normal**: return any item containing the search text;
+  * using **wildcard(s)**: fine tune the search using ``?`` and/or ``*``
+    characters to specify the position of the search text;
+  * using a **regular expression**.
 
-* |collapseTree| Collapse the whole tree
-* |propertiesWidget| Enable and disable properties widget. When toggled on,
+* |collapseTree| :sup:`Collapse All` the whole tree;
+* |propertiesWidget| :sup:`Enable/disable properties widget`: when toggled on,
   a new widget is added at the bottom of the panel showing, if applicable,
-  metadatas of the selected item
+  metadatas of the selected item.
 
 Right-click an item in the browser tree helps you to:
 
 * in case of file or table, display its metadata or open it in your project.
-  Tables can even be renamed, deleted or truncated
+  Tables can even be renamed, deleted or truncated;
 * in case of folder, bookmark it into your favourites, hide it from the browser
   tree. Hidden folders can be managed from the :menuselection:`Settings -->
-  Options --> Data Sources` tab
-* create connection to databases or web servers
+  Options --> Data Sources` tab;
+* create connection to databases or web servers;
 * refresh, rename or delete schema.
 
 You can also import files into databases or copy tables from one schema/database
@@ -141,10 +142,10 @@ drag-and-drop from one panel to the other.
 
 .. tip:: **Add layers to QGIS by simple drag-and-drop from your OS file browser**
 
-   You can also add file(s) to the project by drag-and-drop them from your
+   You can also add file(s) to the project by drag-and-dropping them from your
    operating system file browser to the :guilabel:`Layers Panel` or the map
-   canvas. If the layer contains several geometry types, a new windows will ask
-   you to select the sublayer. This often occurs with GPX, Mapinfo or DXF files
+   canvas. If the layer contains several geometry types, a new dialog will ask
+   you to select sublayer(s). This often occurs with GPX, Mapinfo or DXF files
    format.
 
 .. index:: DB Manager
@@ -168,9 +169,6 @@ The |dbManager| :sup:`DB Manager` Plugin provides several features:
 * create :ref:`virtual layers <vector_virtual_layers>`.
 
 More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
-
-.. it might be nice to complete a bit the DB Manager page in Plugins chapter.
-   DB Manager can do more than what's shown (e.g., gui to build sql queries)
 
 .. _figure_db_manager_bis:
 
@@ -200,10 +198,10 @@ Loading a layer from a file
 
 To load a layer from a file, you can:
 
-* for vector data (like a Shapefile, a Mapinfo or a dxf layer), click on
+* for vector data (like Shapefile, Mapinfo or dxf layer), click on
   |addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the
   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
-  Layer` menu optionor type :kbd:`Ctrl+Shift+V`.
+  Layer` menu option or type :kbd:`Ctrl+Shift+V`.
   This will bring up a new window (see figure_vector_add_) from which you can
   check |radioButtonOn| :guilabel:`File` and click on **[Browse]**. You can
   also select the encoding for the file if desired.
@@ -265,10 +263,11 @@ type`.
 
 .. There are also undocummented ``database`` and ``protocol`` source types in
    the "Add Vector Layer" dialog.
+   (see https://github.com/qgis/QGIS-Documentation/issues/1950)
 
 .. _tip_load_from_external_drive_OSX:
 
-.. tip:: **Load layer and project from mounted external drives on macOS**
+.. tip:: **Load layers and projects from mounted external drives on macOS**
 
    On macOS, portable drives that are mounted beside the primary hard drive
    do not show up as expected under :menuselection:`File --> Open Project`.
@@ -306,11 +305,14 @@ First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the **[Browse]** button. Once the file is selected, QGIS attempts
 to parse the file with the most recently used delimiter. To enable QGIS to
 properly parse the file, it is important to select the correct delimiter. You
-can specify a delimiter by activating |radioButtonOn| :guilabel:`Custom
-delimiters`, or by activating |radioButtonOn| :guilabel:`Regular expression
-delimiter` and entering text into the :guilabel:`Expression` field. For example,
-to change the delimiter to tab, use ``\t`` (this is a regular expression for the
-tab character).
+can specify a delimiter by activating:
+
+* |radioButtonOn|:guilabel:`CSV (comma separated values)`;
+* |radioButtonOff|:guilabel:`Custom delimiters`, choosing among some predefined
+  delimiters like ``comma``, ``space``, ``tab``, ``semicolon``...;
+* or |radioButtonOff|:guilabel:`Regular expression delimiter` and entering text
+  into the :guilabel:`Expression` field. For example, to change the delimiter to
+  tab, use ``\t`` (this is a regular expression for the tab character).
 
 Once the file is parsed, set :guilabel:`Geometry definition` to
 |radioButtonOn|:guilabel:`Point coordinates` and choose the ``X`` and ``Y``
@@ -337,8 +339,8 @@ will be loaded as an ordinal table.
 Additionally, you can enable:
 
 * |checkbox| :guilabel:`Use spatial index` to improve the performance of
-  displaying and spatially selecting features.
-* |checkbox| :guilabel:`Use subset index`.
+  displaying and spatially selecting features;
+* |checkbox| :guilabel:`Use subset index`;
 * |checkbox| :guilabel:`Watch file` to watch for changes to the file by other
   applications while QGIS is running.
 
@@ -354,8 +356,7 @@ to the project. Layers are added with random style properties.
    polygon), the name of the layer will be made from 
    *<filename.dxf> entities <geometry type>*.
 
-
-.. need to be tested with dwg
+.. need to be tested with dwg. How does dwg format behave when added to QGIS?
 
 To keep the dxf/dwg structure and its symbology in QGIS, you may want to
 use the dedicated :menuselection:`DWG/DXF Import...` tool.
@@ -363,7 +364,7 @@ use the dedicated :menuselection:`DWG/DXF Import...` tool.
 .. TODO: Add here the fix for https://github.com/qgis/QGIS-Documentation/issues/1579
 
 .. index:: OSM (OpenStreetMap)
-.. _open_street_map:
+.. _openstreetmap:
 
 Importing OpenStreetMap Vectors
 -------------------------------
@@ -386,10 +387,10 @@ OpenStreetMap import tool:
 * To connect to the OSM server and download data, open the menu
   :menuselection:`Vector --> OpenStreetMap --> Download data...`. You can skip
   this step if you already obtained an :file:`.osm` XML file using JOSM,
-  Overpass API or any other source.
+  Overpass API or any other source;
 * The menu :menuselection:`Vector --> OpenStreetMap --> Import Topology from
   XML...` will convert your :file:`.osm` file into a SpatiaLite database
-  and create a corresponding database connection.
+  and create a corresponding database connection;
 * The menu :menuselection:`Vector --> OpenStreetMap --> Export Topology to
   SpatiaLite...` then allows you to open the database connection, select the
   type of data you want (points, lines, or polygons) and choose tags to import.
@@ -461,9 +462,9 @@ of them and load their tables:
 
 * |addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing
   :kbd:`Ctrl+Shift+D`
-* |addMssqlLayer| :guilabel:`Add MSSQL Spatial Layer` or by typing
+* |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer` or by typing
   :kbd:`Ctrl+Shift+M`
-* |addOracleLayer| :guilabel:`Add Oracle Spatial Layer...`  or typing
+* |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...`  or typing
   :kbd:`Ctrl+Shift+O`
 * |addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or typing
   :kbd:`Ctrl+Shift+2`
@@ -508,11 +509,11 @@ a PostGIS connection are (for other database types, see differences at
   that massive speed-ups in PostGIS layer rendering can be achieved by disabling
   SSL in the connection editor. The following options are available:
 
-  * Disable: Only try an unencrypted SSL connection.
-  * Allow: Try a non-SSL connection. If that fails, try an SSL connection.
-  * Prefer (the default): Try an SSL connection. If that fails, try a
-    non-SSL connection.
-  * Require: Only try an SSL connection.
+  * *Disable*: Only try an unencrypted SSL connection;
+  * *Allow*: Try a non-SSL connection. If that fails, try an SSL connection;
+  * *Prefer* (the default): Try an SSL connection. If that fails, try a
+    non-SSL connection;
+  * *Require*: Only try an SSL connection.
 
 * **Username**: User name used to log in to the database.
 * **Password**: Password used with *Username* to connect to the database.
@@ -520,16 +521,16 @@ a PostGIS connection are (for other database types, see differences at
 Optionally, depending on the type of database, you can activate the following
 checkboxes:
 
-*  |checkbox| :guilabel:`Save Username`
-*  |checkbox| :guilabel:`Save Password`
-*  |checkbox| :guilabel:`Only show layers in the layer registries`
-*  |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
-*  |checkbox| :guilabel:`Only look in the 'public' schema`
-*  |checkbox| :guilabel:`Also list tables with no geometry`
-*  |checkbox| :guilabel:`Use estimated table metadata`
+* |checkbox| :guilabel:`Save Username`
+* |checkbox| :guilabel:`Save Password`
+* |checkbox| :guilabel:`Only show layers in the layer registries`
+* |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
+* |checkbox| :guilabel:`Only look in the 'public' schema`
+* |checkbox| :guilabel:`Also list tables with no geometry`
+* |checkbox| :guilabel:`Use estimated table metadata`
 
 .. actually, MSSQL connection dialog is very different from the others. didn't
-  document it as it was neither the case in current documentation. i guess that
+  document it as it was neither the case in current documentation. I guess that
   this will be fixed for 3.0
 
 Once all parameters and options are set, you can test the connection by
@@ -541,8 +542,9 @@ clicking on the **[Test connection]** button.
    will keep unprotected credentials in the connection configuration. Those
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`Configurations` tab).
-   See :ref:`authentication_index` for more details.
+   *Authentication configuration* instead (:guilabel:`Configurations` tab -
+   See :ref:`authentication_index` for more details) or in a service connection
+   file (see :ref:`pg-service-file` for example).
 
 
 .. tip:: **Use estimated table metadata to speed up operations**
@@ -567,7 +569,7 @@ all the databases. Below are exposed these connection specificities.
 
 .. _pg-service-file:
 
-PostGreSQL Service connection file
+PostgreSQL Service connection file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The service connection file allows PostgreSQL connection parameters to be
@@ -649,35 +651,35 @@ location data in a native type within an Oracle database.
 In addition to some of the options in :ref:`vector_create_stored_connection`,
 the connection dialog proposes:
 
-* **Database**: SID or SERVICE_NAME of the Oracle instance.
+* **Database**: SID or SERVICE_NAME of the Oracle instance;
 * **Port**: Port number the Oracle database server listens on. The default
-  port is ``1521``.
+  port is ``1521``;
 * **Workspace**: Workspace to switch to.
 
-.. there's also an "Options" parameter. What's it?
+.. there's also a not documented "Options" parameter. What's it?
 
 Optionally, you can activate following checkboxes:
 
-*  |checkbox| :guilabel:`Only look in meta data table` Restricts the displayed
-   tables to those that are in the ``all_sdo_geom_metadata`` view. This can
-   speed up the initial display of spatial tables.
-*  |checkbox| :guilabel:`Only look for user's tables` When searching for spatial
-   tables, restrict the search to tables that are owned by the user.
-*  |checkbox| :guilabel:`Also list tables with no geometry` Indicates that
-   tables without geometry should also be listed by default.
-*  |checkbox| :guilabel:`Use estimated table statistics for the layer metadata`
-   When the layer is set up, various metadata are required for the Oracle table.
-   This includes information such as the table row count, geometry type and
-   spatial extents of the data in the geometry column. If the table contains a
-   large number of rows, determining this metadata can be time-consuming. By
-   activating this option, the following fast table metadata operations are
-   done: Row count is determined from ``all_tables.num_rows``. Table extents
-   are always determined with the SDO_TUNE.EXTENTS_OF function, even if a layer
-   filter is applied. Table geometry is determined from the first 100
-   non-null geometry rows in the table.
-*  |checkbox| :guilabel:`Only existing geometry types` Only list the existing
-   geometry types and don't offer to add others.
-*  |checkbox| :guilabel:`Include additional geometry attributes`
+* |checkbox| :guilabel:`Only look in metadata table`: restricts the displayed
+  tables to those that are in the ``all_sdo_geom_metadata`` view. This can
+  speed up the initial display of spatial tables;
+* |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial
+  tables, restrict the search to tables that are owned by the user;
+* |checkbox| :guilabel:`Also list tables with no geometry`: indicates that
+  tables without geometry should also be listed by default;
+* |checkbox| :guilabel:`Use estimated table statistics for the layer metadata`:
+  when the layer is set up, various metadata are required for the Oracle table.
+  This includes information such as the table row count, geometry type and
+  spatial extents of the data in the geometry column. If the table contains a
+  large number of rows, determining this metadata can be time-consuming. By
+  activating this option, the following fast table metadata operations are
+  done: Row count is determined from ``all_tables.num_rows``. Table extents
+  are always determined with the SDO_TUNE.EXTENTS_OF function, even if a layer
+  filter is applied. Table geometry is determined from the first 100
+  non-null geometry rows in the table;
+* |checkbox| :guilabel:`Only existing geometry types`: only list the existing
+  geometry types and don't offer to add others;
+* |checkbox| :guilabel:`Include additional geometry attributes`.
 
 .. _tip_ORACLE_Spatial_layers:
 

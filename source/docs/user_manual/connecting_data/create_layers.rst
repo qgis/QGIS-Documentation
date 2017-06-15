@@ -50,8 +50,6 @@ displayed as shown in figure_create_shapefile_. Choose the type of layer
 Note that QGIS does not yet support creation of 2.5D features (i.e., features
 with X,Y,Z coordinates).
 
-.. Z coordinate can be created in 3.0 (didn't see any issue report)
-
 .. _figure_create_shapefile:
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
@@ -267,8 +265,8 @@ Select some features, copy them to the clipboard, and then paste them into a
 new layer using :menuselection:`Edit --> Paste Features as -->` and choosing:
 
 * :menuselection:`New Vector Layer...`: you need to select the layer CRS, poping
-  up the :guilabel:`Save vector layer as...` dialog from which you can select any
-  supported data format (see :ref:`general_saveas` for parameters);
+  up the :guilabel:`Save vector layer as...` dialog from which you can select
+  any supported data format (see :ref:`general_saveas` for parameters);
 * or :menuselection:`Temporary Scratch Layer...`: you need to select the layer
   CRS and give a name.
 
