@@ -255,7 +255,7 @@ Vector
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`OpenStreetMap -->`                              \                     see :ref:`open_street_map`                  \
+:menuselection:`OpenStreetMap -->`                              \                     see :ref:`openstreetmap`                    \
 |analysis| :menuselection:`Analysis Tools -->`                  \                     see :ref:`vector_menu`                      \
 |sampling| :menuselection:`Research Tools -->`                  \                     see :ref:`vector_menu`                      \
 |geoprocessing| :menuselection:`Geoprocessing Tools -->`        \                     see :ref:`vector_menu`                      \
