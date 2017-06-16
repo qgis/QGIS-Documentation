@@ -52,7 +52,7 @@ with X,Y,Z coordinates).
 
 .. _figure_create_shapefile:
 
-.. figure:: /static/user_manual/working_with_vector/editNewVector.png
+.. figure:: /static/user_manual/connecting_data/editNewVector.png
    :align: center
 
    Creating a new Shapefile layer dialog
@@ -84,7 +84,7 @@ be displayed as shown in Figure_create_spatialite_.
 
 .. _figure_create_spatialite:
 
-.. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
+.. figure:: /static/user_manual/connecting_data/editNewSpatialite.png
    :align: center
 
    Creating a New SpatiaLite layer dialog
@@ -175,7 +175,12 @@ Raster specific parameters
 * :guilabel:`VRT Tiles`
 * :guilabel:`No data values`
 
-.. Add a screenshot for "save raster file as..." dialog
+.. _figure_save_raster:
+
+.. figure:: /static/user_manual/connecting_data/saveasraster.png
+   :align: center
+
+   Saving as a new raster layer
 
 Vector specific parameters
 --------------------------
@@ -227,7 +232,12 @@ Depending on the format of export, some of these options are available or not:
   which allow you to configure some advanced parameters. See the `gdal-ogr <http://gdal.org>`_
   driver documentation.
 
-.. Add a screenshot for "save vector file as..." dialog
+.. _figure_save_vector:
+
+.. figure:: /static/user_manual/connecting_data/saveasvector.png
+   :align: center
+
+   Saving as a new vector layer
 
 .. index:: Overwrite file, Append features
 
@@ -316,7 +326,7 @@ The SQL query will be executed, whatever the underlying provider of the
 ``airports`` layer is and even if this provider does not directly support SQL
 queries.
 
-.. figure:: /static/user_manual/working_with_vector/create_virtual_layers.png
+.. figure:: /static/user_manual/connecting_data/create_virtual_layers.png
    :align: center
 
    Create virtual layers dialog

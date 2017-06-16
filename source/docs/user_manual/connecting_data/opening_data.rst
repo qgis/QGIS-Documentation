@@ -134,7 +134,7 @@ drag-and-drop from one panel to the other.
 
 .. _figure_browser_panels:
 
-.. figure:: /static/user_manual/qgis_browser/browser_panels.png
+.. figure:: /static/user_manual/connecting_data/browser_panels.png
    :align: center
 
    QGIS Browser panels side-by-side
@@ -208,7 +208,7 @@ To load a layer from a file, you can:
 
   .. _figure_vector_add:
 	
-  .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
+  .. figure:: /static/user_manual/connecting_data/addvectorlayerdialog.png
      :align: center
 
      Add Vector Layer Dialog
@@ -227,7 +227,7 @@ selecting ``All files (*.*)``.
 
 .. _figure_vector_open:
 
-.. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
+.. figure:: /static/user_manual/connecting_data/shapefileopendialog.png
    :align: center
 
    Open an OGR Supported Vector Layer Dialog
@@ -239,7 +239,7 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
 .. _figure_vector_loaded:
 
-.. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
+.. figure:: /static/user_manual/connecting_data/shapefileloaded.png
    :align: center
 
    QGIS with Shapefile of Alaska loaded
@@ -296,7 +296,7 @@ Delimited Text File` dialog, as shown in figure_delimited_text_.
 
 .. _figure_delimited_text:
 
-.. figure:: /static/user_manual/introduction/delimited_text_dialog.png
+.. figure:: /static/user_manual/connecting_data/delimited_text_dialog.png
    :align: center
 
    Delimited Text Dialog
