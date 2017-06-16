@@ -132,10 +132,10 @@ Creating a new Temporary Scratch Layer
 Empty, editable memory layers can be defined using :menuselection:`Layer -->
 Create Layer --> New Temporary Scratch Layer`. Here you can even create
 |radioButtonOff|:guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
-and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath |radioButtonOn|:guilabel:`Point`,
-|radioButtonOff|:guilabel:`Line` and |radioButtonOff|:guilabel:`Polygon` Layers.
-Temporary Scratch Layers are not saved and will be discarded when QGIS is closed.
-See also :ref:`paste_into_layer`.
+and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath
+|radioButtonOn|:guilabel:`Point`, |radioButtonOff|:guilabel:`Line` and
+|radioButtonOff|:guilabel:`Polygon` Layers. Temporary Scratch Layers are not
+saved and will be discarded when QGIS is closed. See also :ref:`paste_into_layer`.
 
 
 .. index:: Save layer
@@ -159,8 +159,8 @@ when saving the layer. Common parameters (raster and vector) are:
 * :guilabel:`File name`
 * :guilabel:`CRS`
 * :guilabel:`Add saved file to map` to add the new layer to the canvas
-* :guilabel:`Extent` (possible values are **layer**, **Map view** or **user-defined**
-  extent)
+* :guilabel:`Extent` (possible values are **layer**, **Map view** or
+  **user-defined** extent)
 
 However, some parameters are specific to raster and vector formats:
 
@@ -169,8 +169,9 @@ Raster specific parameters
 
 * :guilabel:`Output mode` (it can be **raw data** or **rendered image**)
 * :guilabel:`Resolution`
-* :guilabel:`Create Options`: advanced options (file compression, block sizes, colorimetry...)
-  to fine tune the output file. See the `gdal-ogr <http://gdal.org>`_ driver documentation.
+* :guilabel:`Create Options`: advanced options (file compression, block sizes,
+  colorimetry...) to fine tune the output file. See the `gdal-ogr
+  <http://gdal.org>`_ driver documentation.
 * :guilabel:`Pyramids` creation
 * :guilabel:`VRT Tiles`
 * :guilabel:`No data values`
@@ -189,12 +190,13 @@ Depending on the format of export, some of these options are available or not:
 
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
-* :guilabel:`Select fields to export and their export options`. In case you set your
-  fields behavior with some :ref:`Edit widgets <configure_field>`, e.g. ``value
-  map``, you can keep the displayed values in the layer by checking |checkbox|
-  :guilabel:`Replace all selected raw fields values by displayed values`.
-* :guilabel:`Symbology export`: can be used mainly for DXF export and for all file
-  formats who manage OGR feature styles (see note below) as DXF, KML, tab
+* :guilabel:`Select fields to export and their export options`. In case you set
+  your fields behavior with some :ref:`Edit widgets <configure_field>`, e.g.
+  ``value map``, you can keep the displayed values in the layer by checking
+  |checkbox| :guilabel:`Replace all selected raw fields values by displayed
+  values`.
+* :guilabel:`Symbology export`: can be used mainly for DXF export and for all
+  file formats who manage OGR feature styles (see note below) as DXF, KML, tab
   file formats:
 
   * **No symbology**: default style of the application that reads the data
@@ -203,7 +205,7 @@ Depending on the format of export, some of these options are available or not:
     but export the same geometry multiple times if there are multiple symbology
     symbol layers used
   * A **Scale** value can be applied to the latest options.
-  
+
 .. _ogr_features_note:
 
 .. note:: *OGR Feature Styles* are a way to store style directly in
@@ -212,13 +214,15 @@ Depending on the format of export, some of these options are available or not:
      users, you can read the `OGR Feature Styles specification
      <http://www.gdal.org/ogr_feature_style.html>`_ document.
 
-* :guilabel:`Geometry`: you can configure the geometry capabilities of the output layer
+* :guilabel:`Geometry`: you can configure the geometry capabilities of the
+  output layer
 
-  * :guilabel:`geometry type`: keep the original geometry of the features when set to 
-    **Automatic**, otherwise removes or overrides it with any type. You can add
-    an empty geometry column to an attribute table, remove the geometry column
-    of a spatial layer.
-  * :guilabel:`Force multi-type`: force creation of multi-geometry features in the layer
+  * :guilabel:`geometry type`: keep the original geometry of the features when
+    set to **Automatic**, otherwise removes or overrides it with any type. You
+    can add an empty geometry column to an attribute table, remove the geometry
+    column of a spatial layer.
+  * :guilabel:`Force multi-type`: force creation of multi-geometry features in
+    the layer
   * :guilabel:`Include z-dimension` to geometries.
 
 .. tip::
@@ -228,9 +232,9 @@ Depending on the format of export, some of these options are available or not:
   geometry (point, line, polygon), so that geometries can then be manually added
   to rows with the |addPart| :sup:`Add Part` tool .
 
-* :guilabel:`Datasources Options`, :guilabel:`Layer Options` or :guilabel:`Custom Options`
-  which allow you to configure some advanced parameters. See the `gdal-ogr <http://gdal.org>`_
-  driver documentation.
+* :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
+  :guilabel:`Custom Options` which allow you to configure some advanced
+  parameters. See the `gdal-ogr <http://gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
 
@@ -255,13 +259,13 @@ For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 .. note:: **About DXF files**
 
    Vector layers can be exported to DXF files using another tool, the
-   :guilabel:`DXF Export...` in :menuselection:`Project` menu. The windows allow the
-   user to choose the layer file, the symbology mode (see the `OGR Feature Styles
-   <ogr_features_note>`_ note), the symbology scale, the encoding, the visibility
-   preset and the layers to include in the DXF file.
+   :guilabel:`DXF Export...` in :menuselection:`Project` menu. The windows allow
+   the  user to choose the layer file, the symbology mode (see the `OGR Feature
+   Styles <ogr_features_note>`_ note), the symbology scale, the encoding, the
+   visibility preset and the layers to include in the DXF file.
   
-   As an option, you can |checkbox| :guilabel:`Use the layer title as name if set`
-   or :guilabel:`Export features intersecting the current map extent`.
+   As an option, you can |checkbox| :guilabel:`Use the layer title as name if
+   set` or :guilabel:`Export features intersecting the current map extent`.
 
 .. if a DXF Export chapter is added this note could be removed or shrunk...
   
@@ -357,12 +361,12 @@ Layers panel without breaking any existent query.
 Supported language
 ------------------
 
-The underlying engine uses SQLite and Spatialite to operate.
+The underlying engine uses SQLite and SpatiaLite to operate.
 
 It means you can use all of the SQL your local installation of SQLite
 understands.
 
-Functions from SQLite and spatial functions from Spatialite
+Functions from SQLite and spatial functions from SpatiaLite
 can also be used in a virtual layer query. For instance, creating a point
 layer out of an attribute-only layer can be done with a query similar to:
 

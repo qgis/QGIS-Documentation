@@ -15,7 +15,7 @@
 
 .. The aim of this chapter is to describe and add information on particular
    formats read/written by QGIS. Also their characteristics (particular geometry
-   type, fields type...) would be exposed. The idea is to give keys to the 
+   type, fields type...) would be exposed. The idea is to give keys to the
    reader to understand what he should be aware of when working with these
    formats or how he could improve working with them in QGIS.
 
@@ -24,7 +24,7 @@ Raster data
 ===========
 
 Raster data in GIS are matrices of discrete cells that represent features on,
-above or below the earth's surface. Each cell in the raster grid is the same
+above or below the earth's surface. Each cell in the raster grid has the same
 size, and cells are usually rectangular (in QGIS they will always be
 rectangular). Typical raster datasets include remote sensing data, such as
 aerial photography, or satellite imagery and modelled data, such as an elevation
@@ -505,7 +505,7 @@ SpatiaLite Layers
 -----------------
 
 If you want to save a vector layer to SpatiaLite format, you can do this by
-right clicking the layer in the legend. Then, click on :menuselection:`Save as..`,
+right clicking the layer in the legend. Then, click on :menuselection:`Save as...`,
 define the name of the output file, and select 'SpatiaLite' as format and the CRS.
 Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
@@ -522,9 +522,10 @@ If you want to create a new SpatiaLite layer, please refer to section
 
 .. tip:: **SpatiaLite data management Plugins**
 
-   For SpatiaLite data management, you can also use several Python plugins:
-   QSpatiaLite, SpatiaLite Manager or :ref:`DB Manager <dbmanager>` (core plugin, recommended).
-   If necessary, they can be downloaded and installed with the Plugin Installer.
+ For SpatiaLite data management, you can also use several Python plugins:
+ QSpatiaLite, SpatiaLite Manager or :ref:`DB Manager <dbmanager>` (core plugin,
+ recommended). If necessary, they can be downloaded and installed with the
+ Plugin Installer.
 
 .. index:: DB2 Spatial
 .. _label_db2_spatial:
