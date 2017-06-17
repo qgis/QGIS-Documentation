@@ -92,41 +92,44 @@ Although the number and type of parameters depend on the characteristics of the
 algorithm, the structure is similar for all of them. The parameters found in the
 table can be of one of the following types.
 
-* A raster layer, to select from a list of all such layers available (currently
-  opened) in QGIS. The selector contains as well a button on its right-hand side,
-  to let you select filenames that represent layers currently not loaded in QGIS.
-* A vector layer, to select from a list of all vector layers available in QGIS.
-  Layers not loaded in QGIS can be selected as well, as in the case of raster
+* A **raster layer**, to select from a list of all such layers available
+  (currently opened) in QGIS. The selector contains as well a button on its
+  right-hand side, to let you select filenames that represent layers currently
+  not loaded in QGIS.
+* A **vector layer**, to select from a list of all vector layers available in
+  QGIS. Layers not loaded in QGIS can be selected as well, as in the case of raster
   layers, but only if the algorithm does not require a table field selected from
   the attributes table of the layer. In that case, only opened layers can be
   selected, since they need to be open so as to retrieve the list of field names
   available.
 
-  You will see a button by each vector layer selector, as shown in the figure below.
+  You will see a iterator button by each vector layer selector, as shown in the
+  figure below.
 
-.. _figure_vector_iterator:
+  .. _figure_vector_iterator:
 
-.. figure:: /static/user_manual/processing/vector_iterator.png
-   :align: center
+   .. figure:: /static/user_manual/processing/vector_iterator.png
+      :align: center
 
-   Vector iterator button
+      Vector iterator button
 
-If the algorithm contains several of them, you will be able to toggle just one
-of them. If the button corresponding to a vector input is toggled, the algorithm
-will be executed iteratively on each one of its features, instead of just once
-for the whole layer, producing as many outputs as times the algorithm is executed.
-This allows for automating the process when all features in a layer have to be
-processed separately.
+  If the algorithm contains several of them, you will be able to toggle just
+  one of them. If the button corresponding to a vector input is toggled, the
+  algorithm will be executed iteratively on each one of its features, instead
+  of just once for the whole layer, producing as many outputs as times the
+  algorithm is executed. This allows for automating the process when all
+  features in a layer have to be processed separately.
 
-* A table, to select from a list of all available in QGIS. Non-spatial
+* A **table**, to select from a list of all available in QGIS. Non-spatial
   tables are loaded into QGIS like vector layers, and in fact they are treated as
   such by the program. Currently, the list of available tables that you will see
   when executing an algorithm that needs one of them is restricted to
   tables coming from files in dBase (:file:`.dbf`) or Comma-Separated Values
   (:file:`.csv`) formats.
-* An option, to choose from a selection list of possible options.
-* A numerical value, to be introduced in a text box. You will find a button by
-  its side. Clicking on it, you will see a dialog that allows you to enter a
+* An **option**, to choose from a selection list of possible options.
+* A **numerical value**, to be introduced in a spin box. You will find a
+  button by its side. Clicking on it, you will open the expression builder
+  that allows you to enter a
   mathematical expression, so you can use it as a handy calculator. Some useful
   variables related to data loaded into QGIS can be added to your expression, so
   you can select a value derived from any of these variables, such as the cell size
@@ -137,20 +140,21 @@ processed separately.
 .. figure:: /static/user_manual/processing/number_selector.png
    :align: center
 
-   Number Selector
+   Expression based input
 
-* A range, with min and max values to be introduced in two text boxes.
-* A text string, to be introduced in a text box.
-* A field, to choose from the attributes table of a vector layer or a single
+* A **range**, with min and max values to be introduced in two text boxes.
+* A **text string**, to be introduced in a text box.
+* A **field**, to choose from the attributes table of a vector layer or a single
   table selected in another parameter.
-* A coordinate reference system. You can type the EPSG code directly in the text
-  box, or select it from the CRS selection dialog that appears when you click on
-  the button on the right-hand side.
-* An extent, to be entered by four numbers representing its ``xmin``, ``xmax``,
-  ``ymin``, ``ymax`` limits. Clicking on the button on the right-hand side of the
-  value selector, a pop-up menu will appear, giving you two options: to select the
-  value from a layer or the current canvas extent, or to define it by dragging
-  directly onto the map canvas.
+* A **coordinate reference system**. You can type the EPSG code directly in the
+  text box, or select it from the CRS selection dialog that appears when you
+  click on the button on the right-hand side.
+* An **extent**, to be entered by four numbers representing its ``xmin``,
+  ``xmax``, ``ymin``, ``ymax`` limits. Clicking on the button on the
+  right-hand side of the value selector, a pop-up menu will appear, giving
+  you three options: to select the value from a layer or the current canvas
+  extent, to define it by dragging directly onto the map canvas, or to use
+  the minimum coverage from all input layers.
 
   .. _figure_extent:
 
@@ -180,10 +184,10 @@ processed separately.
 
      Extent Drag
 
-* A list of elements (whether raster layers, vector layers or tables), to select
-  from the list of such layers available in QGIS. To make the selection, click on
-  the small button on the left side of the corresponding row to see a dialog like
-  the following one.
+* A **list of elements** (whether raster layers, vector layers or tables), to
+  select from the list of such layers available in QGIS. To make the selection,
+  click on the small button on the left side of the corresponding row to see
+  a dialog like the following one.
 
   .. _figure_multiple_selection:
 
@@ -192,8 +196,8 @@ processed separately.
 
      Multiple Selection
 
-* A small table to be edited by the user. These are used to define parameters like
-  lookup tables or convolution kernels, among others.
+* A **small table** to be edited by the user. These are used to define
+  parameters like lookup tables or convolution kernels, among others.
 
   Click on the button on the right side to see the table and edit its values.
 
@@ -207,27 +211,28 @@ processed separately.
   Depending on the algorithm, the number of rows can be modified or not by using
   the buttons on the right side of the window.
 
-Along with the parameters tab, you will find another tab named 'Log'. Information
-provided by the algorithm during its execution is written in this tab, and allow
-you to track the execution and be aware and have more details about the algorithm
-as it runs. Notice that not all algorithms write information to this tab, and many
-of them might run silently without producing any output other than the final files.
+Along with the :guilabel:`Parameters` tab, you will find another tab named
+:guilabel:`Log`. Information provided by the algorithm during its execution is
+written in this tab, and allow you to track the execution and be aware and have
+more details about the algorithm as it runs. Notice that not all algorithms
+write information to this tab, and many of them might run silently without
+producing any output other than the final files.
 
 On the right hand side of the dialog you wil find a short description of the
 algorithm, which will help you understand its purpose and its basic ideas.
 If such a description is not available, the description panel will not be shown.
 
-Some algorithms might have a more detailed help file, which might include description
-of every parameter it uses, or examples. In that case, you will
+Some algorithms might have a more detailed help file, which might include
+description of every parameter it uses, or examples. In that case, you will
 find a :guilabel:`Help` tab in the  parameters dialog.
 
 
 A note on projections
 .....................
 
-Algorithms that are run from the processing framework --- this is also true of
+Algorithms that are run from the processing framework --- this is also true for
 most of the external applications whose algorithms are
-exposed through it--- do not perform any reprojection on input layers and
+exposed through it --- do not perform any reprojection on input layers and
 assume that all of them are already in a common coordinate system and ready to
 be analyzed. Whenever you use more than one layer as input to an algorithm,
 whether vector or raster, it is up to you to make sure that they are all in the
@@ -345,13 +350,13 @@ Along with the aforementioned :guilabel:`Output folder` entry, the
 style for output layers (that is, layers generated by using algorithms from
 any of the framework GUI components). Just create the style you want using QGIS, save
 it to a file, and then enter the path to that file in the settings so the algorithms
-can use it. Whenever a layer is loaded by SEXTANTE and added to the QGIS canvas,
-it will be rendered with that style.
+can use it. Whenever a layer is loaded by Processing and added to the
+QGIS canvas, it will be rendered with that style.
 
 Rendering styles can be configured individually for each algorithm and each one
 of its outputs. Just right-click on the name of the algorithm in the toolbox and
-select :guilabel:`Edit rendering styles`. You will see a dialog like the one shown
-next.
+select :guilabel:`Edit rendering styles for outputs`. You will see a dialog like
+the one shown next.
 
 .. _figure_rendering_styles:
 
