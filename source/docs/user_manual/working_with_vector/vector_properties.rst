@@ -1339,13 +1339,68 @@ to create simple and very complex expressions to label your data in QGIS. See
 Using data-defined override for labeling
 ----------------------------------------
 
-With the data-defined override functions, the settings for the labeling
-are overridden by entries in the attribute table.
-You can activate and deactivate the function with the right-mouse button.
-Hover over the symbol and you see the information about the data-defined override,
-including the current definition field.
+With the |dataDefined| :sup:`Data defined override` functions, the settings for
+the labeling are overridden by entries in the attribute table. It can be used to
+set values for most of the labeling options described above. See the widget's
+description and manipulation in :ref:`data_defined` section. 
+
+.. _label_toolbar:
+
+The Label Toolbar
+.................
+
+The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
+:ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
+properties, but only if the corresponding data-defined option is indicated
+(otherwise, buttons are disabled). Layer might also need to be in edit mode.
+
+.. _figure_labels_tools:
+
+.. figure:: /static/user_manual/working_with_vector/diagram_toolbar.png
+   :align: center
+
+   The Label toolbar
+
+These tools allow to specifically work on each label or diagram to:
+
+* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
+  position. By clicking or draging an area, you pin label(s). If you click or
+  drag an area holding :kbd:`Shift`, label(s) are unpinned. Finally, you can
+  also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
+  label(s).
+* |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
+  vector layer of the label is editable, then the highlighting is green,
+  otherwise it's blue.
+* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
+  position. You just have to drag the label to the desired place.
+* |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
+  data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
+  then label(s) are hidden. When a label is hidden, you just have to click
+  or drag an area around the feature's point to restore its visibility.
+* |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
+  you get the text rotated.
+* |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
+  clicked label properties; it can be the label itself, its coordinates, angle,
+  font, size... as long as this property has been mapped to a field.
+  
+.. warning:: **Label tools overwrites current field values**
+
+  Using the :guilabel:`Label toolbar` to customize the labeling actually writes
+  the new value of the property in the mapped field. Hence, be careful to not
+  inadvertently replace and corrupt data you may need!
+
+.. note:: While for readability, ``label`` has been used in the above tools
+ description, note that when mentioned in their name, they work almost the
+ same way with diagram.
+
+
+Customize the labels from the map canvas
+........................................
+
+Combined with the :guilabel:`Label Toolbar`, the data defined override setting
+helps you manipulate labels in the map canvas (move, edit, rotate).
 We now describe an example using the data-defined override function for the
-|moveLabel|:sup:`Move label` function (see figure_labels_data_defined_ ).
+|moveLabel|:sup:`Move label` function (see figure_labels_data_defined_).
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -1353,6 +1408,14 @@ We now describe an example using the data-defined override function for the
 #. Look for the :guilabel:`Data defined` entries. Click the |dataDefined| icon
    to define the field type for the :guilabel:`Coordinate`. Choose ``xlabel``
    for X and ``ylabel`` for Y. The icons are now highlighted in yellow.
+
+   .. _figure_labels_data_defined:
+
+   .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
+      :align: center
+
+      Labeling of vector polygon layers with data-defined override
+
 #. Zoom into a lake.
 #. Set editable the layer using the |toggleEditing| :sup:`Toggle Editing` button.
 #. Go to the Label toolbar and click the |moveLabel| icon.
@@ -1366,20 +1429,13 @@ We now describe an example using the data-defined override function for the
    
       make_line( centroid( $geometry ), make_point( "xlabel", "ylabel" ) )
 
-.. _figure_labels_data_defined:
 
-.. figure:: /static/user_manual/working_with_vector/label_data_defined.png
-   :align: center
+   .. _figure_labels_move:
 
-   Labeling of vector polygon layers with data-defined override
+   .. figure:: /static/user_manual/working_with_vector/move_label.png
+      :align: center
 
-
-.. _figure_labels_move:
-
-.. figure:: /static/user_manual/working_with_vector/move_label.png
-   :align: center
-
-   Moved labels
+      Moved labels
 
 .. _rule_based_labeling:
 
@@ -1927,33 +1983,7 @@ rendering:
 * position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
 * visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
 
-Some tools to manipulate these notions are available through the label toolbar,
-but only if the corresponding data-defined is indicated (otherwise, buttons are
-disabled).
-
-.. _figure_diagrams_tools:
-
-.. figure:: /static/user_manual/working_with_vector/diagram_toolbar.png
-   :align: center
-
-   Diagram/Label toolbar
-
-These tools allow to specifically work on each diagram to:
-
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
-  position. By clicking or draging an area, you pin diagram(s). If you click or
-  drag an area holding :kbd:`Shift`, diagram(s) are unpinned. Finally, you can
-  also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
-  diagram(s).
-* |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
-  vector layer of the diagram is editable, then the highlighting is green,
-  otherwise it's blue.
-* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
-  position. You just have to drag the diagram to the desired place.
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
-  data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
-  then diagram(s) are hidden. When a diagram is hidden, you just have to click
-  or drag an area around the feature's point to restore the chart.
+See :ref:`data_defined_labeling` for more information.
 
 .. index:: Tab; Actions
 .. _actions_menu:
