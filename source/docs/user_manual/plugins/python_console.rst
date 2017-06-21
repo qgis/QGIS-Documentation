@@ -32,34 +32,28 @@ package.
 The Interactive Console
 =======================
 
-Below a slight set of tools, the console is split in two main panels, top and
-bottom one resizable by using the horizontal splitter:
-
-* Input area panel is the interactive python shell for input commands.
-* Output area panel is a widget read-only which shows the commands output.
-  You can drag and drop or copy and paste text into input area and execute code
-  snippets from the output panel by selecting some text and clicking on the
-  :guilabel:`Enter selected` command from the context menu. No matter if selected text
-  contains the interpreter prompt (``>>>``, ``...``).
+The interactive console is composed of a toolbar, an input area and an output one.
 
 Toolbar
 -------
 
-Toolbar propose the following tools:
+The toolbar proposes the following tools:
 
-* |iconClearConsole| :guilabel:`Clear console`
+* |iconClearConsole| :guilabel:`Clear console` to wipe the output area;
 * |iconClassConsole| :guilabel:`Import class`: **Processing**, **PyQt4.QtCore**
-  or **PyQt4.QtGui** class
-* |iconRunConsole| :guilabel:`Run command` (like Enter key pressed)
-* |iconeShowEditorConsole| :guilabel:`Show editor`: see :ref:`console_editor`
-* |iconSettingsConsole| :guilabel:`Options`
-* |iconHelpConsole| :guilabel:`Help`
+  or **PyQt4.QtGui** class;
+* |iconRunConsole| :guilabel:`Run command` available in the input area: same as
+  pressing :kbd:`Enter`;
+* |iconeShowEditorConsole| :guilabel:`Show editor`: toggles :ref:`console_editor`
+  visibility;
+* |iconSettingsConsole| :guilabel:`Options...`;
+* |iconHelpConsole| :guilabel:`Help...`.
 
 
 Console
 -------
 
-Main features are:
+The console main features are:
 
 * Code completion, highlighting syntax and calltips for the following APIs:
 
@@ -69,14 +63,28 @@ Main features are:
   * QScintilla2
   * osgeo-gdal-ogr
 
-* :kbd:`Ctrl+Alt+Space` to view the auto-completion list.
-* :kbd:`Ctrl+Shift+Space` to view the command history list.
-* Execute code snippets with the :guilabel:`Enter selected` command from output panel.
-* Open QGIS API documentation by typing ``_api``.
+* :kbd:`Ctrl+Alt+Space` to view the auto-completion list if enabled in the
+  :ref:`console_options`;
+* Execute code snippets from the input area by typing and pressing :kbd:`Enter`
+  or :guilabel:`Run Command`;
+* Execute code snippets from the output area using the :guilabel:`Enter selected`
+  from the contextual menu or pressing :kbd:`Ctrl+E`;
+* Browse the command history from the input area using the :kbd:`Up` and
+  :kbd:`Down` arrow keys and execute the command you want;
+* :kbd:`Ctrl+Shift+Space` to view the command history: double-clicking a row
+  will execute the command. The :guilabel:`Command History` dialog can also be
+  accessed from context menu of input area;
+* Save and clear the command history. The history will be saved into the file
+  :file:`~/.qgis2/console_history.txt`;
+* Open QGIS API documentation by typing ``_api``;
 * Open PyQGIS Cookbook by typing ``_pyqgis``.
-* Save and clear the command history accessing from context menu of input panel.
-  The history will be saved into the file :file:`~/.qgis2/console_history.txt`.
 
+.. tip:: **Reuse executed commands from the output panel**
+
+ You can execute code snippets from the output panel by selecting some text and
+ pressing :kbd:`Ctrl+E`. No matter if selected text contains the interpreter
+ prompt (``>>>``, ``...``).
+  
 .. _figure_python_console:
 
 .. figure:: /static/user_manual/plugins/python_console.png
@@ -109,16 +117,21 @@ share the code via codepad.org and much more). Main features are:
   :kbd:`Ctrl+F`):
 
   * Use the default Desktop Environment shortcut to find next/previous
-    (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`).
-  * Automatically find first match when typing in find box.
-  * Set initial find string to selection when opening find
-  * Pressing :kbd:`Esc` closes the find bar
+    (:kbd:`Ctrl+G` and :kbd:`Shift+Ctrl+G`);
+  * Automatically find first match when typing in find box;
+  * Set initial find string to selection when opening find;
+  * Pressing :kbd:`Esc` closes the find bar.
 
-* Object inspector: a class and function browser.
-* Go to an object definition with a mouse click (from Object inspector).
-* Execute code snippets with the :guilabel:`Enter selected` command.
+* Object inspector: a class and function browser;
+* Go to an object definition with a mouse click (from Object inspector);
+* Execute code snippets with the :guilabel:`Enter selected` command;
 * Execute the whole script with the :guilabel:`Run script` command (this
   creates a byte-compiled file with the extension :file:`.pyc`).
+
+.. note::
+
+ Running partially or totally a script from the :guilabel:`Code Editor`
+ outputs the result in the Console output area.
 
 .. _figure_python_console_editor:
 
@@ -126,6 +139,8 @@ share the code via codepad.org and much more). Main features are:
    :align: center
 
    The Python Console editor
+
+.. _console_options:
 
 Options
 =======
