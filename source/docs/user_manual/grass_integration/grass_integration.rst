@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: GRASS
 .. _sec_grass:
 
 *********************
@@ -13,7 +14,7 @@ GRASS GIS Integration
    .. contents::
       :local:
 
-:index:`GRASS` integration provides access to GRASS GIS databases and functionalities
+GRASS integration provides access to GRASS GIS databases and functionalities
 (see GRASS-PROJECT in :ref:`literature_and_web`). The integration consists of two parts:
 provider and plugin. The provider allows to browse, manage and visualize GRASS raster
 and vector layers. The plugin can be used to create new GRASS locations and mapsets,
@@ -69,23 +70,23 @@ This section gives an example of how to import raster and vector data into a GRA
 #. In QGIS browser find a layer you want to import to GRASS, note that you can
    open another instance of the browser (:guilabel:`Browser Panel (2)`) if
    source data are too far from the mapset in the tree.
-#. Drag a layer and drop it on the target mapset. The imported may take some time for
+#. Drag a layer and drop it on the target mapset. The import may take some time for
    larger layers, you will see animated icon |import| in front of new layer item
    until the import finishes.
 
-Where raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate`
+When raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate`
 (fast) or :guilabel:`Exact` (precise) transformation. If a link to the source raster
-is created (using r.external), the source data are in the same CRS and the format
+is created (using ``r.external``), the source data are in the same CRS and the format
 is known to GDAL, the source data CRS will be used. You can set these options in the
 :guilabel:`Browser` tab in :ref:`grass_options`.
 
-If a source raster has more bands, a new GRASS map is created for each layer with **.<band number>**
-suffix and group of all maps with |rasterGroup| icon is created. External rasters
-have a different icon |rasterLink|.
+If a source raster has more bands, a new GRASS map is created for each layer with
+**.<band number>** suffix and group of all maps with |rasterGroup| icon is created.
+External rasters have a different icon |rasterLink|.
 
 .. _managing_grass_data:
 
-Managing GRASS data in QGIS browser
+Managing GRASS data in QGIS Browser
 ===================================
 
 * Copying maps: GRASS maps may be copied between mapsets within the same location using drag and drop.
@@ -242,8 +243,8 @@ install the dataset on your computer (see :ref:`label_sampledata`).
    :file:`alaska.shp` as the GRASS default region extent.
 #. Click **[Next]**.
 #. We also need to define a :file:`MAPSET` within our new :file:`LOCATION` (this
-   is necessary when creating a new :file:`LOCATION`).  You
-   can name it whatever you like - we used 'demo'. GRASS automatically creates a special :file:`MAPSET` called
+   is necessary when creating a new :file:`LOCATION`). You can name it whatever you
+   like - we used 'demo'. GRASS automatically creates a special :file:`MAPSET` called
    :file:`PERMANENT`, designed to store the core data for the project, its default
    spatial extent and coordinate system definitions (see Neteler & Mitasova 2008
    in :ref:`literature_and_web`).
