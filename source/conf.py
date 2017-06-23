@@ -525,8 +525,6 @@ rst_epilog = """
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |expressionEditorOpen| image:: /static/common/mIconExpressionEditorOpen.png
-   :width: 1.5 em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
