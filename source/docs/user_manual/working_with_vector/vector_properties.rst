@@ -264,8 +264,8 @@ features from a layer, using an user-defined symbol whose aspect reflects the
 value of a selected feature's attribute. The Categorized menu allows
 you to select:
 
-* The attribute (using the Column listbox or the |expressionEditorOpen|
-  :guilabel:`Set column expression` function, see :ref:`vector_expressions` chapter)
+* The attribute (using the Column listbox or the |expression|
+  :sup:`Set column expression` function, see :ref:`vector_expressions` chapter)
 * The symbol (using the :ref:`symbol-selector` dialog) which will be used as
   default for each class
 * The range of colors (using the Color ramp listbox) from which color applied
@@ -324,8 +324,8 @@ to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
 
-* The attribute (using the Column listbox or the |expressionEditorOpen|
-  :guilabel:`Set column expression` function)
+* The attribute (using the Column listbox or the |expression|
+  :sup:`Set column expression` function)
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
 * The method to use to change the symbol: color or size
@@ -384,8 +384,7 @@ the rivers layer of the QGIS sample dataset.
 
    Categorized and graduated thematic maps can be created using the result
    of an expression. In the properties dialog for vector layers, the attribute
-   chooser is extended with a |expressionEditorOpen|
-   :guilabel:`Set column expression` function.
+   chooser is extended with a |expression| :sup:`Set column expression` function.
    So you don't need to write the classification attribute
    to a new column in your attribute table if you want the classification
    attribute to be a composite of multiple fields, or a formula of some sort.
@@ -423,8 +422,8 @@ to help you define size expression.
 
 The assistant lets you define:
 
-* The attribute to represent, using the Field listbox or the |expressionEditorOpen|
-  :guilabel:`Set column expression` function (see :ref:`vector_expressions`)
+* The attribute to represent, using the Field listbox or the |expression|
+  :sup:`Set column expression` function (see :ref:`vector_expressions`)
 * the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
 * The minimum and maximum size of the symbol
 * The range of values to represent: The down pointing arrow helps you
@@ -895,7 +894,7 @@ are four options available:
 
 Select the **Show labels for this layer** option and then select an attribute
 column to use for labeling from the **Label with** drop-down list. Click
-|expressionEditorOpen| if you want to define labels based on
+|expression| if you want to define labels based on
 expressions - See :ref:`labeling_with_expressions`.
 
 The following steps describe simple labeling without using the
@@ -1234,7 +1233,7 @@ Define labels based on expressions
 ----------------------------------
 
 QGIS allows using expressions to label features. Just click the
-|expressionEditorOpen| icon in the |labeling| :sup:`Labels` tab of the
+|expression| icon in the |labeling| :guilabel:`Labels` tab of the
 properties dialog. In figure_labels_expression_, you see a sample expression to
 label the alaska regions with name and area size, based on the field 'NAME_2',
 some descriptive text, and the function ``$area`` in combination with
@@ -1915,7 +1914,7 @@ to define the position of the diagram.
 You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
 
 The size and the attributes can also be an expression.
-Use the |expressionEditorOpen| button to add an expression.
+Use the |expression| button to add an expression.
 See :ref:`vector_expressions` chapter for more information and example.
 
 Using data-defined override
