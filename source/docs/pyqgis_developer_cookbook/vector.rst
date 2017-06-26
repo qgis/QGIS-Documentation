@@ -1233,4 +1233,4 @@ Further Topics
 * exploring symbol layer and renderer registries
 
 
-.. _supported formats by OGR: http://www.gdal.org/ogr/ogr_formats.html
+.. _supported formats by OGR: http://www.gdal.org/ogr_formats.html
