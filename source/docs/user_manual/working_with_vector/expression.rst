@@ -1048,7 +1048,7 @@ Here's a short example on how to create your own functions:
    def myfunc(value1, value2, feature, parent):
        pass
 
-The short example creates a function 'myfunc' that will give you a function
+The short example creates a function ``myfunc`` that will give you a function
 with two values.
 When using the ``args='auto'`` function argument the number of function
 arguments required will be calculated by the number of arguments the function
