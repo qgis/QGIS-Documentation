@@ -863,3 +863,65 @@ This is a list of the variables supported by QGIS server:
   the ID in the :file:`srs.db`. Look at attribute **coord_op_code** of table
   **tbl_datum_transform** in :file:`srs.db` to find the correct entry.
 
+.. index:: nginx
+
+QGIS Server with NGINX
+======================
+
+You can use QGIS Server with `nginx <http://nginx.org/>`_.
+
+On Debian based systems:
+
+.. code-block:: bash
+
+ apt-get install nginx fcgiwrap
+
+Introduce the following in your nginx server block configuration:
+
+.. code-block:: nginx
+   :linenos:
+
+     location ~ ^/cgi-bin/.*\.fcgi$ {
+         gzip           off;
+         include fastcgi_params;
+         fastcgi_pass   unix:/var/run/fcgiwrap.socket;/
+         fastcgi_param SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
+
+         fastcgi_param  QGIS_SERVER_LOG_FILE /logs/qgisserver.log;
+         fastcgi_param  QGIS_SERVER_LOG_LEVEL 0;
+         fastcgi_param  QGIS_DEBUG 1;
+     }
+
+As you can see from lines ``7-9`` you can add parameters in your location block
+in the form of ``fastcgi_param param_name param_value``,
+e.g. ``fastcgi_param  DISPLAY ":99";``.
+
+The ``include fastcgi_params;`` is important as it adds the parameters from
+:file:`/etc/nginx/fastcgi_params`:
+
+.. code-block:: nginx
+
+ fastcgi_param  QUERY_STRING       $query_string;
+ fastcgi_param  REQUEST_METHOD     $request_method;
+ fastcgi_param  CONTENT_TYPE       $content_type;
+ fastcgi_param  CONTENT_LENGTH     $content_length;
+
+ fastcgi_param  SCRIPT_NAME        $fastcgi_script_name;
+ fastcgi_param  REQUEST_URI        $request_uri;
+ fastcgi_param  DOCUMENT_URI       $document_uri;
+ fastcgi_param  DOCUMENT_ROOT      $document_root;
+ fastcgi_param  SERVER_PROTOCOL    $server_protocol;
+ fastcgi_param  REQUEST_SCHEME     $scheme;
+ fastcgi_param  HTTPS              $https if_not_empty;
+
+ fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;
+ fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;
+
+ fastcgi_param  REMOTE_ADDR        $remote_addr;
+ fastcgi_param  REMOTE_PORT        $remote_port;
+ fastcgi_param  SERVER_ADDR        $server_addr;
+ fastcgi_param  SERVER_PORT        $server_port;
+ fastcgi_param  SERVER_NAME        $server_name;
+
+ # PHP only, required if PHP was built with --enable-force-cgi-redirect
+ fastcgi_param  REDIRECT_STATUS    200;
