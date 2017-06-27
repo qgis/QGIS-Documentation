@@ -865,23 +865,15 @@ mode, then it will use the original source symbol from the layers properties
 Labels Properties
 =================
 
-The |labeling| :sup:`Labels` core application provides smart
-labeling for vector point, line and polygon layers, and only requires a
-few parameters. This application also supports on-the-fly transformed layers.
-The following tabs are used to configure the labeling of vector layers:
+The |labeling| :guilabel:`Labels` properties provides you with all the needed
+and appropriate capabilities to configure smart labeling on vector layers. This
+dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
+the |labeling| :sup:`Layer Labeling Options` icon of the **Labels toolbar**.
 
-* Text
-* Formatting
-* Buffer
-* Background
-* Shadow
-* Placement
-* Rendering
+.. _showlabels:
 
-To label a layer start QGIS and load a vector layer. Activate the layer
-in the legend and click on the |labeling| :sup:`Layer Labeling Options`
-icon in the QGIS toolbar menu or activate the :guilabel:`Labels` tab in the
-layer properties dialog.
+Setting a label
+---------------
 
 The first step is to choose the labeling method from the drop-down list. There
 are four options available:
@@ -892,14 +884,24 @@ are four options available:
 * and **Blocking**: allows to set a layer as just an obstacle for other layer's
   labels without rendering any labels of its own.
 
-Select the **Show labels for this layer** option and then select an attribute
-column to use for labeling from the **Label with** drop-down list. Click
-|expression| if you want to define labels based on
-expressions - See :ref:`labeling_with_expressions`.
+The next steps assume you select the **Show labels for this layer** option,
+enabling following tabs that help you configure the labeling:
+
+* :ref:`Text <labels_text>`
+* :ref:`Formatting <labels_formatting>`
+* :ref:`Buffer <labels_buffer>`
+* :ref:`Background <labels_background>`
+* :ref:`Shadow <labels_shadow>`
+* :ref:`Placement <labels_placement>`
+* :ref:`Rendering <labels_rendering>`
+
+It also enables the **Label with** drop-down list, from which you can select an
+attribute column to use. Click |expression| if you want to define
+labels based on expressions - See :ref:`labeling_with_expressions`.
 
 The following steps describe simple labeling without using the
 :guilabel:`Data defined override` functions, which are situated next to
-the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
+the drop-down menus - see :ref:`data_defined_labeling` for a use case.
 
 .. _figure_labels:
 
@@ -908,8 +910,10 @@ the drop-down menus - see :ref:`data_defined_labeling` for an use-case.
 
    Layer labeling settings - Text tab
 
+.. _labels_text:
+
 Text tab
---------
+........
 
 In the :guilabel:`Text` tab, you can define the :guilabel:`Font`,
 :guilabel:`Style`, and :guilabel:`Size` of your labels' text (see
@@ -928,8 +932,10 @@ types). Replacement texts are thus used to display labels in the map canvas.
 Users can also export and import lists of substitutes to make reuse and
 sharing easier.
 
+.. _labels_formatting:
+
 Formatting tab
---------------
+..............
 
 In the :guilabel:`Formatting` tab, you can define a character for a line break
 in the labels with the :guilabel:`Wrap on character` option. You can also
@@ -952,8 +958,10 @@ labels. You can set the number of :guilabel:`Decimal places`. By default, 3
 decimal places will be used. Use the |checkbox| :guilabel:`Show plus sign` if
 you want to show the plus sign in positive numbers.
 
+.. _labels_buffer:
+
 Buffer tab
-----------
+..........
 
 To create a buffer around the labels, activate the |checkbox|
 :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` tab. You can
@@ -966,8 +974,10 @@ modes, which will allow seeing behind the label's text. Deactivating
 |checkbox| :guilabel:`color buffer's fill` checkbox (while using totally
 transparent labels) will allow you to create outlined text labels.
 
+.. _labels_background:
+
 Background tab
---------------
+..............
 
 In the :guilabel:`Background` tab, you can define with :guilabel:`Size X` and
 :guilabel:`Size Y` the shape of your background.
@@ -983,8 +993,10 @@ rounded corners.
 Again, it is possible to mix the background with the underlying layers in the
 map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
 
+.. _labels_shadow:
+
 Shadow tab
-----------
+..........
 
 Use the :guilabel:`Shadow` tab for a user-defined :guilabel:`Drop shadow`.
 The drawing of the background is very variable.
@@ -1015,8 +1027,10 @@ can also be altered by choosing a blend mode.
    top of the shadow (depending upon the shadow's color), when that setting is
    used.
 
+.. _labels_placement:
+
 Placement tab
--------------
+.............
 
 Choose the :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
@@ -1025,7 +1039,7 @@ type of vector layer, namely point, line or polygon.
 .. _cartographic:
 
 Placement for point layers
-..........................
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
 point labels are generated with a better visual relationship with the
@@ -1066,7 +1080,7 @@ setting. Thus, placement in a selected quadrant with a defined rotation is
 possible.
 
 Placement for line layers
-.........................
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Label options for line layers include |radioButtonOn| :guilabel:`Parallel`,
 |radioButtonOff| :guilabel:`Curved` or |radioButtonOff| :guilabel:`Horizontal`.
@@ -1092,7 +1106,7 @@ minimum distance for repeating labels. The distance can be in ``mm`` or in
 ``map units``.
 
 Placement for polygon layers
-............................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can choose one of the following options for placing labels in polygons
 (see figure_labels_placement_polygon_):
@@ -1150,8 +1164,10 @@ the map canvas. If there are labels from different layers in the same
 location, the label with the higher priority will be displayed and the
 others will be left out.
 
+.. _labels_rendering:
+
 Rendering tab
--------------
+.............
 
 In the :guilabel:`Rendering` tab, you can tune when the labels can be rendered
 and their interaction with other labels and features.
@@ -1225,19 +1241,57 @@ by minimising the labels placement:
   placing labels within these features, and it looks much better to avoid
   placing them over the boundaries between features.
 
+.. _rule_based_labeling:
 
+Rule-based labeling
+-------------------
+
+With rule-based labeling multiple label configurations can be defined
+and applied selectively on the base of expression filters and scale range, as in
+:ref:`Rule-based rendering <rule_based_rendering>`.
+
+To create a rule, select the **Rule-based labeling** option in the main
+drop-down list from the :guilabel:`Labels` tab and click the |signPlus| button
+at the bottom  of the dialog. Then fill the new dialog with a description and an
+expression to filter features. You can also set a :ref:`scale range
+<label_scaledepend>` in which the label rule should be applied. The other
+options available in this dialog are the :ref:`common settings <showlabels>`
+seen beforehand.
+
+.. _figure_labels_rule_settings:
+
+.. figure:: /static/user_manual/working_with_vector/label_rule_settings.png
+   :align: center
+
+   Rule settings
+
+A summary of existing rules is shown in the main dialog (see figure_labels_rule_based_).
+You can add multiple rules, reorder or imbricate them with a drag-and-drop.
+You can as well remove them with the |signMinus| button or edit them with
+|projectProperties| button or a double-click.
+
+.. _figure_labels_rule_based:
+
+.. figure:: /static/user_manual/working_with_vector/label_rules_panel.png
+   :align: center
+
+   Rule based labeling panel
+
+
+.. index::
+   pair: Expression; Labels
 .. _labeling_with_expressions:
-
 
 Define labels based on expressions
 ----------------------------------
 
-QGIS allows using expressions to label features. Just click the
-|expression| icon in the |labeling| :guilabel:`Labels` tab of the
-properties dialog. In figure_labels_expression_, you see a sample expression to
-label the alaska regions with name and area size, based on the field 'NAME_2',
-some descriptive text, and the function ``$area`` in combination with
-``format_number()`` to make it look nicer.
+Whether you choose simple or rule-based labeling type, QGIS allows using
+expressions to label features. Click the |expression| icon near the
+:guilabel:`Label with` drop-down list in the |labeling| :guilabel:`Labels` tab
+of the properties dialog. In figure_labels_expression_, you see a sample
+expression to label the alaska regions with name and area size, based on the
+field 'NAME_2', some descriptive text, and the function ``$area`` in combination
+with ``format_number()`` to make it look nicer.
 
 .. _figure_labels_expression:
 
@@ -1333,6 +1387,9 @@ As you can see in the expression builder, you have hundreds of functions availab
 to create simple and very complex expressions to label your data in QGIS. See
 :ref:`vector_expressions` chapter for more information and examples on expressions.
 
+.. index::
+   single: Labels; Custom placement
+   pair: Data-defined override; Labels
 .. _data_defined_labeling:
 
 Using data-defined override for labeling
@@ -1379,37 +1436,6 @@ We now describe an example using the data-defined override function for the
    :align: center
 
    Moved labels
-
-.. _rule_based_labeling:
-
-Rule-based labeling
--------------------
-
-With rule-based labeling multiple label configurations can be defined
-and applied selectively on the base of expression filters, as in
-:ref:`Rule-based rendering <rule_based_rendering>`.
-
-Rules can be set selecting the corresponding option at the top of the
-Labels panel (see figure_labels_rule_based_).
-
-.. _figure_labels_rule_based:
-
-.. figure:: /static/user_manual/working_with_vector/label_rules_panel.png
-   :align: center
-
-   Rule based labeling panel
-
-To create a rule, activate an existing row by double-clicking on it,
-or click on ‘+’ and click on the new rule.
-Within the panel you can set the filter expression and the related label
-configurations.
-
-.. _figure_labels_rule_settings:
-
-.. figure:: /static/user_manual/working_with_vector/label_rule_settings.png
-   :align: center
-
-   Rule settings
 
 .. index:: Fields, Forms
 .. _vector_attributes_menu:
