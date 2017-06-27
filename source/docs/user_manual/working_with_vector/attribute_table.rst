@@ -216,7 +216,7 @@ by preview expression` option.
 Conditional formatting of Table Cells
 --------------------------------------
 
-The conditional formatting setting can be used to highlight in the attribute
+The conditional formatting settings can be used to highlight in the attribute
 table features you may want to put a particular focus on, using custom
 conditions on feature's:
 
