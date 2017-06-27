@@ -1208,9 +1208,8 @@ Parameters that can be used with data-defined tools are:
 
 .. tip:: **Use right-click to (de)activate the data overriding**
 
- Once you set a parameter using the |dataDefined| data-defined override button,
- you can enable or disable it by simply clicking the widget with the mouse right
- button. 
+ You can enable or disable a configured |dataDefined| :sup:`data-defined
+ override` button by simply clicking the widget with the mouse right button.
 
 .. note:: When the data-defined override option is setup correctly the
    icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
