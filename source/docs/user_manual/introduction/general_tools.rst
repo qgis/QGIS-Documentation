@@ -1189,26 +1189,32 @@ this tool allows you to set dynamic value for the concerned parameter. When enab
 the value returned by this widget is applied to the parameter regardless its normal
 value (checkbox, textbox, slider...).
 
-Clicking the |dataDefined| :sup:`Data defined override` icon shows:
+Clicking the |dataDefined| :sup:`Data defined override` icon shows following entries:
 
-* a :guilabel:`Description ...` that indicates if it is enabled, which input
-  expected, valid input type and the current definition,
-* an entry to list the :guilabel:`Field type` available,
-* an entry to list the :guilabel:`Variable` available,
-* :guilabel:`Edit ...` button to create or edit the expression to use,
-* :guilabel:`Paste` and :guilabel:`Copy` buttons,
+* :guilabel:`Description...` that indicates if the option is enabled, which input is
+  expected, the valid input type and the current definition. Hovering over the
+  widget also pops up these information;
+* :guilabel:`Field type`: an entry to select from the layer's fields that match the
+  valid input type;
+* an entry to list the :guilabel:`Variable` available;
+* :guilabel:`Edit...` button to create or edit the expression to use;
+* :guilabel:`Paste` and :guilabel:`Copy` buttons;
 * :guilabel:`Clear` button to remove the setup.
-
-.. tip:: When the data-defined override option is setup correctly the
-   icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
-   the icon is red |dataDefineError| or |dataDefineExpressionError|.
-
 
 Parameters that can be used with data-defined tools are:
 
 * Style and symbols parameters
 * Labels parameters
 * Composer parameters
+
+.. tip:: **Use right-click to (de)activate the data overriding**
+
+ You can enable or disable a configured |dataDefined| :sup:`data-defined
+ override` button by simply clicking the widget with the mouse right button.
+
+.. note:: When the data-defined override option is setup correctly the
+   icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
+   the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
 
 .. index::
