@@ -1038,7 +1038,7 @@ The function editor will create new Python files in :file:`.qgis2\\python\\expre
 folder and will auto load all functions defined when starting QGIS. Be aware
 that new functions are only saved in the :file:`expressions` folder and not in
 the project file. If you have a project that uses one of your custom functions
-you will need to also share the .py file in the expressions folder.
+you will need to also share the :file:`.py` file in the expressions folder.
 
 Here's a short example on how to create your own functions:
 
@@ -1050,9 +1050,9 @@ Here's a short example on how to create your own functions:
 
 The short example creates a function 'myfunc' that will give you a function
 with two values.
-When using the args='auto' function argument the number of function
-arguments required will be calculated by the number of arguments the
-function has been defined with in Python (minus 2 - feature, and parent).
+When using the ``args='auto'`` function argument the number of function
+arguments required will be calculated by the number of arguments the function
+has been defined with in Python (minus 2 - ``feature``, and ``parent``).
 
 This function then can be used with the following expression:
 
