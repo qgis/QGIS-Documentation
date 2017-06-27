@@ -1361,7 +1361,9 @@ properties, but only if the corresponding data-defined option is indicated
 
    The Label toolbar
 
-These tools allow to specifically work on each label or diagram to:
+While for readability, ``label`` has been used below to describe the Label
+toolbar, note that when mentioned in their name, the tools work almost the
+same way with diagrams:
 
 * |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
   position. By clicking or draging an area, you pin label(s). If you click or
@@ -1383,15 +1385,11 @@ These tools allow to specifically work on each label or diagram to:
   clicked label properties; it can be the label itself, its coordinates, angle,
   font, size... as long as this property has been mapped to a field.
   
-.. warning:: **Label tools overwrites current field values**
+.. warning:: **Label tools overwrite current field values**
 
   Using the :guilabel:`Label toolbar` to customize the labeling actually writes
   the new value of the property in the mapped field. Hence, be careful to not
-  inadvertently replace and corrupt data you may need!
-
-.. note:: While for readability, ``label`` has been used in the above tools
- description, note that when mentioned in their name, they work almost the
- same way with diagram.
+  inadvertently replace data you may need later!
 
 
 Customize the labels from the map canvas
