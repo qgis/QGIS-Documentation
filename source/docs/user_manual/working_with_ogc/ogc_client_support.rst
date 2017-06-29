@@ -35,7 +35,7 @@ Important OGC specifications supported by QGIS are:
 * **WFS-T** --- Web Feature Service - Transactional (:ref:`ogc-wfs`)
 * **WCS** --- Web Coverage Service (:ref:`ogc-wcs`)
 * **WPS** --- Web Processing Service
-* **CSW** --- Catalogue Service for the Web
+* **CSW** --- Catalog Service for the Web
 * **SFS** --- Simple Features for SQL (:ref:`label_postgis`)
 * **GML** --- Geography Markup Language
 

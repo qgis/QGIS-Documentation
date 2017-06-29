@@ -33,7 +33,7 @@ Icon                    Plugin                        Description               
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
 |heatmap|               Heatmap                       Create heatmap rasters from input vector points         :ref:`heatmap_plugin`
 |interpolation|         Interpolation plugin          Interpolation on base of vertices of a vector layer     :ref:`interpol`
-|metasearch|            Metasearch Catalogue Client   Interact with metadata catalogue services (CSW)         :ref:`metasearch`
+|metasearch|            Metasearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
 |oracleRaster|          Oracle Spatial Georaster      Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
 |pluginInstaller|       Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`

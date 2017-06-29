@@ -335,7 +335,7 @@ You can overlay watermarks over the maps produced by your WMS by adding text
 annotations or SVG annotations to the project file.
 See the :ref:`sec_annotations` section for instructions on
 creating annotations. For annotations to be displayed as watermarks on the WMS
-output, the :guilabel:`Fixed map position` check box in the
+output, the :guilabel:`Fixed map position` checkbox in the
 :guilabel:`Annotation text` dialog must be unchecked.
 This can be accessed by double clicking the annotation while one of the
 annotation tools is active.

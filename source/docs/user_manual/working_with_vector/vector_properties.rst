@@ -2377,13 +2377,13 @@ of the layer. This can provide a quick way to get useful information about the l
 Additionally, you can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
 :guilabel:`Keyword list` here. These keyword lists can be used in a
-metadata catalogue. If you want to use a title from an XML metadata file,
+metadata catalog. If you want to use a title from an XML metadata file,
 you have to fill in a link in the :guilabel:`DataUrl` field.
 
-Use :guilabel:`Attribution` to get attribute data from an XML metadata catalogue.
+Use :guilabel:`Attribution` to get attribute data from an XML metadata catalog.
 
 In :guilabel:`MetadataUrl`, you can define the general path to the XML metadata
-catalogue. This information will be saved in the QGIS project file for subsequent
+catalog. This information will be saved in the QGIS project file for subsequent
 sessions and will be used for QGIS server.
 
 In the :guilabel:`LegendUrl` section, you can provide the url of a legend image
