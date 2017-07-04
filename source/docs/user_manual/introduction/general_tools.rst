@@ -926,18 +926,19 @@ QGIS provides four means of measuring geometries:
 Measuring works within projected coordinate systems (e.g., UTM) and unprojected
 data. The first three measuring tools behave equally to global project settings:
 
-If "on the fly" CRS transformation is enabled, the default measurement metric is
-- different from most other GIS - ellipsoidal, using the ellipsoid defined in
-:menuselection:`File --> Project properties --> General`. This is true both
-when geographic and projected coordinate systems are defined for the project.
-If you want to calculate the projected / planimetric area or distance using cartesian
-maths, the measurement ellipsoid has to be set to "None / Planimetric"
-(:menuselection:`File --> Project properties --> CRS`). However,
-with a geographic (= unprojected) CRS defined for the data and project, area and
-distance measurement will be ellipsoidal.
-If "on the fly" CRS transformation is disabled, the measurement metric is planimetric
-when the project coordinate system is projected and ellipsoidal when the project
-coordinate system is unprojected / geographic.
+* If :guilabel:`"on the fly" CRS transformation` (see :ref:`otf_transformation`)
+  is enabled, the default measurement metric is
+  - different from most other GIS - ellipsoidal, using the ellipsoid defined in
+  :menuselection:`File --> Project properties --> General`. This is true both
+  when geographic and projected coordinate systems are defined for the project.
+* If you want to calculate the projected / planimetric area or distance using cartesian
+  maths, the measurement ellipsoid has to be set to "None / Planimetric"
+  (:menuselection:`File --> Project properties --> CRS`). However,
+  with a geographic (= unprojected) CRS defined for the data and project, area and
+  distance measurement will be ellipsoidal.
+* If :guilabel:`"on the fly" CRS transformation` is disabled, the measurement
+  metric is planimetric when the project coordinate system is projected and
+  ellipsoidal when the project coordinate system is unprojected / geographic.
 
 However, neither the identify tool nor the field calculator will transform your
 data to the project CRS before measuring. If you want to achieve this, you have
