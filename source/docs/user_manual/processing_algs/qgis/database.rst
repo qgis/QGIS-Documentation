@@ -16,9 +16,6 @@ Database
 Import into PostGIS
 -------------------
 
-Description
-...........
-
 Imports a vector layer currently loaded in QGIS into a PostGIS database.
 Prior to this a connection between QGIS and the PostGIS database has to
 be created (for example with the DB Manager).
@@ -112,9 +109,6 @@ Console usage
 PostGIS execute SQL
 -------------------
 
-Description
-...........
-
 Allows a SQL database query to be performed on a PostGIS database connected to QGIS.
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
@@ -177,9 +171,6 @@ Console usage
 
 Import into Spatialite
 ----------------------
-
-Description
-...........
 
 Imports a vector layer currently loaded in QGIS into a Spatialite database.
 Prior to this a connection between QGIS and the Spatialite database has to
@@ -267,9 +258,6 @@ Console usage
 
 Spatialite execute SQL
 ----------------------
-
-Description
-...........
 
 Allows a SQL database query to be performed on a SpatiLite database connected to QGIS.
 The algorithm **won't** create any new layer: it is designed to run queries on
