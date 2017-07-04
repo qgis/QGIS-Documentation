@@ -1535,6 +1535,9 @@ The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow
 and the Scale Bar. They are used to 'decorate' the map by adding cartographic
 elements.
 
+.. index:: Grid
+.. _grid_decoration:
+
 Grid
 ----
 
@@ -1555,6 +1558,9 @@ annotations to the map canvas.
 #. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
    annotation definitions according to the layers loaded in the map canvas.
 #. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+
+.. index:: Copyright
+.. _copyright_decoration:
 
 Copyright Label
 ---------------
@@ -1587,6 +1593,7 @@ In the example above, which is the default, QGIS places a copyright symbol
 followed by the date in the lower right-hand corner of the map canvas.
 
 .. index:: North arrow
+.. _northarrow_decoration:
 
 North Arrow
 -----------
@@ -1610,6 +1617,7 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
    The North Arrow Dialog
 
 .. index:: Scale bar
+.. _scalebar_decoration:
 
 Scale Bar
 ---------
