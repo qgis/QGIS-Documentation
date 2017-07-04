@@ -11,6 +11,8 @@ Database
       :local:
       :depth: 1
 
+.. _qgis_import_into_postgis:
+
 Import into PostGIS
 -------------------
 
@@ -105,6 +107,8 @@ Console usage
   processing.run('qgis:importintopostgis', input, database, schema, tablename, primary_key, geometry_column, encoding, overwrite, createindex, lowercase_names, drop_string_length, create_single_parts)
 
 
+.. _qgis_postgis_execute_sql:
+
 PostGIS execute SQL
 -------------------
 
@@ -115,7 +119,7 @@ Allows a SQL database query to be performed on a PostGIS database connected to Q
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
 
-.. _postgis_query_example:
+.. _qgis_postgis_execute_sql_example:
 
 Example
 .......
@@ -168,6 +172,8 @@ Console usage
 
   processing.run('qgis:postgisexecutesql', database, sql)
 
+
+.. _qgis_import_into_spatialite:
 
 Import into Spatialite
 ----------------------
@@ -257,6 +263,7 @@ Console usage
 
   processing.run('qgis:importintosptaialite', input, database, tablename, primary_key, geometry_column, encoding, overwrite, createindex, lowercase_names, drop_string_length, create_single_parts)
 
+.. _qgis_spatialite_execute_sql:
 
 Spatialite execute SQL
 ----------------------
@@ -298,4 +305,4 @@ Console usage
 
 See also
 ........
-For some SQL query examples see :ref:`PostGIS SQL Query Examples <postgis_query_example>`
+For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
