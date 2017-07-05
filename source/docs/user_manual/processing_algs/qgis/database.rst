@@ -24,7 +24,8 @@ Parameters
 ..........
 
 ``Layer to import`` [vector: any]
-  Existing vector layer in QGIS.
+  One of the loaded layer in QGIS. If you want to import another layer you have
+  to load it in QGIS before to import.
 
 ``Database (connection name)`` [selection]
   Name of the database connection (not the database name).
@@ -41,7 +42,7 @@ Parameters
   Optional.
 
   Defines a table name for the imported vector file.
-  If nothing is added, the layer name will be chosen.
+  If nothing is added, the layer name will be used.
 
   Default: *(not set)*
 
@@ -169,11 +170,11 @@ Console usage
 
 .. _qgis_import_into_spatialite:
 
-Import into Spatialite
+Import into SpatiaLite
 ----------------------
 
-Imports a vector layer currently loaded in QGIS into a Spatialite database.
-Prior to this a connection between QGIS and the Spatialite database has to
+Imports a vector layer currently loaded in QGIS into a SpatiaLite database.
+Prior to this a connection between QGIS and the SpatiaLite database has to
 be created (for example with the DB Manager).
 
 
@@ -181,7 +182,8 @@ Parameters
 ..........
 
 ``Layer to import`` [vector: any]
-  Existing vector layer in QGIS.
+  One of the loaded layer in QGIS. If you want to import another layer you have
+  to load it in QGIS before to import.
 
 ``File database`` [selection]
   Name of the database connection. The combobox will show all the databases of
@@ -192,7 +194,7 @@ Parameters
   Optional.
 
   Defines a table name for the imported vector file.
-  If nothing is added, the layer name will be chosen.
+  If nothing is added, the layer name will be used.
 
   Default: *(not set)*
 
@@ -256,10 +258,10 @@ Console usage
 
 .. _qgis_spatialite_execute_sql:
 
-Spatialite execute SQL
+SpatiaLite execute SQL
 ----------------------
 
-Allows a SQL database query to be performed on a SpatiLite database connected to QGIS.
+Allows a SQL database query to be performed on a SpatiaLite database connected to QGIS.
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
 
