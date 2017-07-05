@@ -1997,9 +1997,8 @@ Both vector layers are part of the QGIS sample dataset (see section
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
    :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab, activate |checkbox| :guilabel:`Show
-   diagrams for this layer`, and from the :guilabel:`Diagram type` |selectString|
-   combo box, select 'Text diagram'.
+#. Click on the :guilabel:`Diagrams` tab and from the :guilabel:`Diagram type`
+   |selectString| combo box, select 'Text diagram'.
 #. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
    and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
 #. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
