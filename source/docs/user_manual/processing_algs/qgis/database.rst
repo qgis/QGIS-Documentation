@@ -34,7 +34,7 @@ Parameters
   Optional.
 
   An existing schema of the selected database can be chosen.
-  By default this is the `public` schema.
+  By default this is the ``public`` schema.
 
   Default: *public*
 
