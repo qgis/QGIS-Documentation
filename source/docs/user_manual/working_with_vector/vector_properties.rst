@@ -260,16 +260,22 @@ Categorized Renderer
 ....................
 
 The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render all
-features from a layer, using an user-defined symbol whose aspect reflects the
-value of a selected feature's attribute. The Categorized menu allows
-you to select:
+features from a layer, using a user-defined symbol whose aspect reflects the
+attribute(s) of a selected feature. The Categorized menu allows you to select:
 
-* The attribute (using the Column listbox or the |expression|
-  :sup:`Set column expression` function, see :ref:`vector_expressions` chapter)
-* The symbol (using the :ref:`symbol-selector` dialog) which will be used as
-  default for each class
-* The range of colors (using the Color ramp listbox) from which color applied
-  to the symbol is selected
+* an existing field (using the Column listbox) or type/build an :ref:`expression
+  <vector_expressions>` using the |expression| :sup:`Set column expression`
+  returning values to compare features attributes with, and classify them.
+  Expression can return:
+  
+  * values: ``myfield``, ``concat( field1, ' ', field2 )``,  ``myfield % 2``;
+  * boolean: ``myfield >= 100``. ``myfield % 2 = 0``, ``$id = @atlas_featureid``
+    ``within( $geometry, @atlas_geometry )``.
+
+* the symbol (using the :ref:`symbol-selector` dialog) which will be used as
+  base symbol for each class;
+* the range of colors (using the Color ramp listbox) from which color applied
+  to the symbol is selected.
 
 Then click on Classify button to create classes from the distinct
 value of the attribute column. Each class can be disabled unchecking the
