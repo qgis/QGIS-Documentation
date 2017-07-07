@@ -1858,8 +1858,16 @@ The current core implementation of diagrams provides support for:
    diagram, when designing your diagram, you can easily change the diagram type
    and check which one is more appropriate to your data without any loss.
 
-For each type of diagram, the Diagram properties are divided into five
-tabs:
+For each type of diagram, the properties are divided into several tabs:
+
+* :ref:`Attributes <diagram_attributes>`
+* :ref:`Appearance <diagram_appearance>`
+* :ref:`Size <diagram_size>`
+* :ref:`Placement <diagram_placement>`
+* :ref:`Options <diagram_options>`
+* :ref:`Legend <diagram_legend>`
+
+.. _diagram_attributes:
 
 Attributes
 ----------
@@ -1882,6 +1890,8 @@ or of the layer tree.
    :align: center
 
    Vector properties dialog with diagram tab
+
+.. _diagram_appearance:
 
 Appearance
 ----------
@@ -1910,6 +1920,8 @@ In this tab, you can also manage the diagram visibility:
 
    Vector properties dialog with diagram properties, Appearance tab
 
+.. _diagram_size:
+
 Size
 ----
 
@@ -1930,6 +1942,7 @@ You can use :
 
    Vector properties dialog with diagram properties, Size tab
 
+.. _diagram_placement:
 
 Placement
 ---------
@@ -1962,6 +1975,7 @@ the **Priority** slider or the **z-index** value.
 
    Vector properties dialog with diagram properties, Placement tab
 
+.. _diagram_options:
 
 Options
 -------
@@ -1970,6 +1984,8 @@ The :guilabel:`Options` tab has settings only in case of histogram. You can
 choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
+
+.. _diagram_legend:
 
 Legend
 -------
