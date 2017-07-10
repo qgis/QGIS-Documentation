@@ -2,59 +2,47 @@
 
    |updatedisclaimer|
 
-.. index:: Vector, OGR, Raster, GDAL
+.. index:: Vector, OGR, Raster, GDAL, Data, Format
+.. index:: PostGreSQL, PostGIS, GeoPackage, SpatiaLite, GRASS, DXF
 .. index:: ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF, Erdas Imagine
 
 .. _opening_data:
 
-*****************
- Connecting Data
-*****************
-
-.. other possible titles: "Opening Data", "Managing Data Source" (given the
- unified add layer interface) or "Exploring Data Loaders"...?
+**************
+ Opening Data
+**************
 
 .. only:: html
 
    .. contents::
       :local:
 
+As a part of an Open Source Software ecosystem, QGIS is built upon different
+libraries that offer capabilities to read and/or write a lot of formats:
 
-QGIS uses the `GDAL/OGR library <http://www.gdal.org/>`_ to read and write:
+* the main one is `GDAL/OGR library <http://www.gdal.org/>`_. As of the date
+  of this document, 84 vector and more than 140 raster formats are supported by
+  the GDAL/OGR library (see OGR-SOFTWARE-SUITE in :ref:`literature_and_web`):
 
-* vector data formats, including ESRI shapefiles, MapInfo and MicroStation file 
-  formats, AutoCAD DXF, PostGIS, SpatiaLite, DB2, Oracle Spatial and MSSQL
-  Spatial databases, and many more; read the complete list of `OGR supported
-  formats <http://www.gdal.org/ogr/ogr_formats.html>`_.
-* raster data formats, including ArcInfo Binary Grid, ArcInfo ASCII Grid,
-  GeoTIFF, ERDAS IMAGINE, and many more; read the complete list of `GDAL
-  supported formats <http://www.gdal.org/formats_list.html>`_.
-  
-As of the date of this document, 69 vector and more than 100 raster formats are
-supported by the GDAL/OGR library (see OGR-SOFTWARE-SUITE in
-:ref:`literature_and_web`). 
+  * vector formats include ESRI formats (shapefiles, geodatabases...), MapInfo
+    and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON, GRASS,
+    SQLite, GPX, KML, Comma Separated Values, OGC WFS or CSW, and many more.
+    Read the complete list of `OGR supported formats
+    <http://www.gdal.org/ogr_formats.html>`_
+  * raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
+    GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
+    GDAL Virtual, SRTM, Sentinel Data, OGC WMS or WCS and many more.
+    Read the complete list of `GDAL supported formats
+    <http://www.gdal.org/formats_list.html>`_.
 
-.. Either we update the number of formats or remove the above sentence ???
+* many other libraries or native providers to support, customize and/or extend
+  capabilities of GDAL/OGR for formats like PostGIS (``libpq``), GRASS
+  (``libgrass``), SpatiaLite (``libsqlite3`` or ``libspatialite``), Oracle
+  Spatial (``oci``), DB2 or MSSQL Spatial (``odbc``), archive files
+  (zip or gzip formats) and many more...
+* Support of web data services (WM(T)S, WFS, WCS, ArcGIS Servers...) are also
+  handled by QGIS native providers (see :ref:`working_with_ogc`).
 
-QGIS also supply native data providers plugins to support GRASS vector and
-PostgreSQL data.
-Data can also be loaded in read mode from zip and gzip archives
-into QGIS. 
-
-.. Is the _"QGIS also supply native data providers plugins to support GRASS
-   vector and PostgreSQL data"_ sentence needed? And are they the only formats
-   concerned (I'm a bit questioned by all the native providers we have and
-   wonder if it's the same thing)? What does GDAL/OGR and what providers are
-   native to QGIS?
-   
-   Also what's the provider that helps to load files from archives?
-   still GDAL/OGR?
-
-Support of web data services (WM(T)S, WFS, WCS, ArcGIS FeatureServer/MapServer ...)
-are also handled by QGIS native providers (see :ref:`working_with_ogc`).
-
-.. native providers, really? Someone to write more on the last paragraph? note
- that there's nothing documented about the ArcGIS web stuffs...
 
 .. note::
 
@@ -189,7 +177,7 @@ providers.
 
   Some :ref:`external plugins <plugins>` also propose tools to open specific
   format files in QGIS.
-  
+
 .. index:: Loading vector, Loading raster
 .. _loading_file:
 
@@ -207,7 +195,7 @@ To load a layer from a file, you can:
   also select the encoding for the file if desired.
 
   .. _figure_vector_add:
-	
+
   .. figure:: /static/user_manual/connecting_data/addvectorlayerdialog.png
      :align: center
 
@@ -255,7 +243,7 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 .. index:: ArcInfo Binary Coverage, Tiger Format, UK National Transfer Format
 .. index:: US Census Bureau
 
-Using the |addOgrLayer| :sup:`Add Vector Layer` tool, you can also load 
+Using the |addOgrLayer| :sup:`Add Vector Layer` tool, you can also load
 specific format like ArcInfo Binary Coverage, UK. National Transfer Format, as
 well as the raw TIGER format of the US Census Bureau or OpenfileGDB. To do that,
 you'd need to select |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source
@@ -353,7 +341,7 @@ Browser Panel. You'll be prompted to select the sublayers you'd like to add
 to the project. Layers are added with random style properties.
 
 .. note:: DXF files containing several geometry types (point, line and/or
-   polygon), the name of the layer will be made from 
+   polygon), the name of the layer will be made from
    *<filename.dxf> entities <geometry type>*.
 
 .. need to be tested with dwg. How does dwg format behave when added to QGIS?
@@ -647,7 +635,7 @@ Connecting to Oracle Spatial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The spatial features in Oracle Spatial aid users in managing geographic and
-location data in a native type within an Oracle database. 
+location data in a native type within an Oracle database.
 In addition to some of the options in :ref:`vector_create_stored_connection`,
 the connection dialog proposes:
 
@@ -769,7 +757,7 @@ To load a layer from a database, you can perform the following steps:
      filter features to load from the layers? Any example of expression could
      be nice in this case. For what I experience, it filters layers from the
      database.
- 
+
 
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
@@ -801,7 +789,7 @@ QGIS Custom formats
 ===================
 
 QGIS proposes two custom formats you can load in the application using their own
-loading tool: 
+loading tool:
 
 * Temporary Scratch Layer: a memory layer that is bound to the project it's
   opened with (see :ref:`vector_new_scratch_layer` for more information)
@@ -813,6 +801,6 @@ Connecting to web services?
 ===========================
 
 .. Should the OGC Data Client chapter be moved here? By moving I mean split it
- here and in data and fields chapter 
- 
- 
+ here and in data and fields chapter
+
+
