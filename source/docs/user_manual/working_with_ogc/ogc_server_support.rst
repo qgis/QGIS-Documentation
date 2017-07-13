@@ -40,7 +40,6 @@ For user contributed installation instructions on other platforms or
 distributions, we recommend reading one of the following URLs:
 
 * http://hub.qgis.org/projects/quantum-gis/wiki/QGIS_Server_Tutorial
-* http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
 * http://www.itopen.it/qgis-server-python-plugins-ubuntu-setup/
 
 .. index:: apache, apache2, Debian_Squeeze
