@@ -70,9 +70,14 @@ To add a layer into a project:
    (or |kde| :menuselection:`Settings --> Panels`);
 #. a browser tree with your filesystem, databases and web services is displayed;
 #. find the layer in the list;
-#. and add your data into the :ref:`map canvas <label_mapview>` or the
-   :ref:`Layers Panel <label_legend>` with a **simple drag-and-drop or
-   double-click**.
+#. right-click on its name and select **Add selected layer(s)**. Your layer is
+   now added to the :ref:`Layers Panel <label_legend>` and can be viewed in the
+   :ref:`map canvas <label_mapview>`.
+
+.. note::
+
+  You can also add a layer or open a QGIS project directly from the Browser
+  panel by double-clicking its name or by drag-and-drop into the map canvas.
 
 Once a file is loaded, you can zoom around it using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
@@ -81,8 +86,6 @@ legend and choosing :menuselection:`Properties` from the context menu. See
 section :ref:`vector_style_menu` for more information on setting symbology of
 vector layers.
 
-.. note:: You can also open a QGIS project directly from the Browser panel by
-  double-clicking its name or by drag-and-drop into the map canvas.
 
 At the top of the Browser panel, you find some icons that help you to:
 
@@ -132,17 +135,15 @@ drag-and-drop from one panel to the other.
 
    You can also add file(s) to the project by drag-and-dropping them from your
    operating system file browser to the :guilabel:`Layers Panel` or the map
-   canvas. If the layer contains several geometry types, a new dialog will ask
-   you to select sublayer(s). This often occurs with GPX, Mapinfo or DXF files
-   format.
+   canvas.
 
 .. index:: DB Manager
 
 The DB Manager
 ==============
 
-Officially part of the QGIS Core, the :guilabel:`DB Manager` Plugin is one of
-the main tools to integrate and manage spatial database formats supported by
+The :guilabel:`DB Manager` Plugin is another one of the main and native tools
+to integrate and manage spatial database formats supported by
 QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, DB2, Virtual
 layers) in one user interface. It can be activated from the
 :menuselection:`Plugins --> Manage and Install Plugins...` menu.
@@ -459,7 +460,7 @@ of them and load their tables:
 
 These tools are accessible either from the :guilabel:`Manage Layers Toolbar` or
 the :menuselection:`Layer --> Add Layer -->` menu. Connecting to SpatiaLite
-database is described at :ref:`label_spatialite`
+database is described at :ref:`label_spatialite`.
 
 .. tip:: **Create connection to database from the QGIS Browser Panel**
 
@@ -471,25 +472,29 @@ below using the PostGreSQL database tool as example.
 
 The first time you use a PostGIS data source, you must create a connection to a
 database that contains the data. Begin by clicking the appropriate button as
-exposed above, opening a :guilabel:`Add PostGIS Table(s)` dialog
-(see screenshot).
-
-
-.. TODO: Add a screenshot showing the Add PostGIS table(s) dialog
-
-
+exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog
+(see figure_add_postgis_tables_).
 To access the connection manager, click on the **[New]** button to display the
-:guilabel:`Create a New PostGIS Connection` dialog. The parameters required for
-a PostGIS connection are (for other database types, see differences at
-:ref:`db_requirements`):
+:guilabel:`Create a New PostGIS Connection` dialog.
+
+.. _figure_new_postgis_connection:
+
+.. figure:: /static/user_manual/connecting_data/newpostgisconnection.png
+   :align: center
+
+   Create a New PostGIS Connection Dialog
+
+
+The parameters required for a PostGIS connection are (for other database types,
+see the differences at :ref:`db_requirements`):
 
 * **Name**: A name for this connection. It can be the same as *Database*.
 * **Service**: Service parameter to be used alternatively to hostname/port (and
   potentially database). This can be defined in :file:`pg_service.conf`.
   Check the :ref:`pg-service-file` section for more details.
 * **Host**: Name of the database host. This must be a resolvable host name
-  such as would be used to open a telnet connection or ping the host. If the
-  database is on the same computer as QGIS, simply enter *'localhost'* here.
+  such as would be used to open a TCP/IP connection or ping the host. If the
+  database is on the same computer as QGIS, simply enter *localhost* here.
 * **Port**: Port number the PostgreSQL database server listens on. The default
   port for PostGIS is ``5432``.
 * **Database**: Name of the database.
@@ -521,8 +526,6 @@ checkboxes:
   document it as it was neither the case in current documentation. I guess that
   this will be fixed for 3.0
 
-Once all parameters and options are set, you can test the connection by
-clicking on the **[Test connection]** button.
 
 .. warning:: **QGIS User Settings and Security**
 
@@ -546,6 +549,13 @@ clicking on the **[Test connection]** button.
    of filtered layers will not be accurately determined) and may even cause
    strange behaviour in case columns that are supposed to be unique actually
    are not.
+
+Once all parameters and options are set, you can test the connection by
+clicking on the **[Test connection]** button or apply it hitting **[OK]**.
+From the :guilabel:`Add PostGIS Table(s)`, click now on **[Connect]** and the
+dialog is filled with tables from the selected database (as shown in
+figure_add_postgis_tables_).
+
 
 .. _db_requirements:
 
@@ -693,8 +703,8 @@ A driver/host/port connection requires:
 
 * **Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC DRIVER.
 * **DB2 Host**: Name of the database host. This must be a resolvable host name
-  such as would be used to open a telnet connection or ping the host. If the
-  database is on the same computer as QGIS, simply enter *'localhost'* here.
+  such as would be used to open a TCP/IP connection or ping the host. If the
+  database is on the same computer as QGIS, simply enter *localhost* here.
 * **DB2 Port**: Port number the DB2 database server listens on. The default
   DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``.
 
@@ -737,38 +747,42 @@ name. You can also display available databases.
 Loading a Database Layer
 ........................
 
-Once you have one or more connections defined to a database, you can load layers
-from it. Of course, this requires having available data. See e.g. section
-:ref:`vector_import_data_in_postgis` for a discussion on importing data into a
-PostGIS database.
+Once you have one or more connections defined to a database (see section
+vector_create_stored_connection_), you can load layers from it. Of course, this
+requires having available data. See e.g. section :ref:`vector_import_data_in_postgis`
+for a discussion on importing data into a PostGIS database.
 
 To load a layer from a database, you can perform the following steps:
 
-#. open the "Add database table(s)" dialog
+#. Open the "Add <database> table(s)" dialog
    (see :ref:`vector_create_stored_connection`),
 #. Choose the connection from the drop-down list and click **[Connect]**.
 #. Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.
-#. Optionally, use some |checkbox| :guilabel:`Search Options` to define
-   which features to load from the layer, or use the **[Build query]** button
-   to start the :guilabel:`Query builder` dialog.
-
-   .. Unable to find a "Build Query" button in this dialog and not sure that the
-     "Search Options" capabilities are really what is described. Does it really
-     filter features to load from the layers? Any example of expression could
-     be nice in this case. For what I experience, it filters layers from the
-     database.
-
-
+#. Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the
+   list of tables to those matching your search. You can also set this option
+   before you hit the **[Connect]** button, speeding this way the database
+   fetching.
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
-   down the :kbd:`Shift` key while clicking. See section
-   :ref:`vector_query_builder` for information on using the PostgreSQL
-   Query Builder to further define the layer.
-
-   .. Again a comment on Query Builder...
-
+   down the :kbd:`Shift` key while clicking.
+#. If applicable, use the **[Set Filter]** button (or double-click the layer)
+   to start the :guilabel:`Query builder` dialog (See section
+   :ref:`vector_query_builder`) and define which features to load from the
+   selected layer. The filter expression appears in the ``sql`` column.
+   This restriction can be removed or edited in the :menuselection:`Layer
+   Properties --> General --> Provider Feature Filter` frame.
+#. The checkbox in the ``Select at id`` column that is activated by default
+   gets the features ids without the attributes and speed in most cases the
+   data loading.
 #. Click on the **[Add]** button to add the layer to the map.
 
+
+.. _figure_add_postgis_tables:
+
+.. figure:: /static/user_manual/connecting_data/addpostgistables.png
+   :align: center
+
+   Add PostGIS Table(s) Dialog
 
 .. could be nice to address what the "select at id" does and complaints from
  people that have single layer shown multiple times in the list with missing
