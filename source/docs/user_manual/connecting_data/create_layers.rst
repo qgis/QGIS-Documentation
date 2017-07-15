@@ -256,19 +256,33 @@ decide whether to:
 
 For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 
-.. note:: **About DXF files**
+.. index:: DXF Export
+.. _create_dxf_files:
 
-   Vector layers can be exported to DXF files using another tool, the
-   :guilabel:`DXF Export...` in :menuselection:`Project` menu. The windows allow
-   the  user to choose the layer file, the symbology mode (see the `OGR Feature
-   Styles <ogr_features_note>`_ note), the symbology scale, the encoding, the
-   visibility preset and the layers to include in the DXF file.
-  
-   As an option, you can |checkbox| :guilabel:`Use the layer title as name if
-   set` or :guilabel:`Export features intersecting the current map extent`.
+Create DXF files
+================
 
-.. if a DXF Export chapter is added this note could be removed or shrunk...
-  
+Besides the :guilabel:`Save As...` dialog which provides options to export a
+single layer to another format, including :file:`*.DXF`, QGIS provides another
+tool to export multiple layers as a single DXF layers. It's accessible in the
+:menuselection:`Project --> DXF Export...` menu.
+
+The :guilabel:`DXF Export` dialog allows the user to:
+
+* indicate the destination layer file;
+* choose the symbology mode and scale (see the `OGR Feature Styles
+  <ogr_features_note>`_ note);
+* select the encoding and CRS;
+* check the loaded layers to include in the DXF files or pick them from an
+  existing :ref:`visibility preset <preset_visibility>`.
+
+  For each layer, you can choose a field whose values are used to split features
+  in generated destination layers in the DXF output. You can also choose to
+  |checkbox| :guilabel:`Use the layer title as name if set` and keep features
+  grouped.
+* choose to only :guilabel:`Export features intersecting the current map extent`.
+
+
 .. _paste_into_layer:
 
 Create layer from a clipboard
@@ -471,8 +485,4 @@ box. Example:
 Spatial binary predicates like ``ST_Intersects`` are significantly sped up when
 used in conjunction with this spatial index syntax.
 
-
-.. there are other tools to generate a new layer:
- - Project --> Export DXF (not documented? relation with dxf2shp converter plugin)
- - Project --> DWG/DXF Import (proposed to place in the opening_data file)
 
