@@ -296,8 +296,6 @@ restore will work.
 
    SET XML OPTION DOCUMENT;
 
-.. %FIXME: Add missing information
-.. % When dealing with views, QGIS parses the view definition and
 
 Filter database side
 ....................
@@ -323,8 +321,6 @@ Array data types are not supported.
 
 Importing Data into PostgreSQL
 ------------------------------
-
-.. should this be moved to the layer creation section?
 
 Data can be imported into PostgreSQL/PostGIS using several tools, including the
 DB Manager plugin and the command line tools shp2pgsql and ogr2ogr.

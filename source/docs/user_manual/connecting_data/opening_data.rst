@@ -250,9 +250,6 @@ well as the raw TIGER format of the US Census Bureau or OpenfileGDB. To do that,
 you'd need to select |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source
 type`.
 
-.. There are also undocummented ``database`` and ``protocol`` source types in
-   the "Add Vector Layer" dialog.
-   (see https://github.com/qgis/QGIS-Documentation/issues/1950)
 
 .. _tip_load_from_external_drive_OSX:
 
@@ -396,15 +393,11 @@ GPS
 Loading GPS data in QGIS can be done using the core plugin: ``GPS Tools``.
 Instructions are described in Section :ref:`plugin_gps`.
 
-.. or should we move the related section here?
 
 GRASS
 -----
 
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
-
-.. or should we move the related text here? Things are a bit complicated here;
-   I fail to find the right section if ever there's one dedicated to that
 
 
 .. index:: Spatialite, SQLite
@@ -521,10 +514,6 @@ checkboxes:
 * |checkbox| :guilabel:`Only look in the 'public' schema`
 * |checkbox| :guilabel:`Also list tables with no geometry`
 * |checkbox| :guilabel:`Use estimated table metadata`
-
-.. actually, MSSQL connection dialog is very different from the others. didn't
-  document it as it was neither the case in current documentation. I guess that
-  this will be fixed for 3.0
 
 
 .. warning:: **QGIS User Settings and Security**
@@ -654,8 +643,6 @@ the connection dialog proposes:
   port is ``1521``;
 * **Workspace**: Workspace to switch to.
 
-.. there's also a not documented "Options" parameter. What's it?
-
 Optionally, you can activate following checkboxes:
 
 * |checkbox| :guilabel:`Only look in metadata table`: restricts the displayed
@@ -737,10 +724,6 @@ In addition to some of the options in :ref:`vector_create_stored_connection`,
 creating a new MSSQL connection dialog proposes you to fill a **Provider/DSN**
 name. You can also display available databases.
 
-.. I added that section to have MSSQL appear in the toc. The MSSQL dialog is
- quite different from other providers and wasn't documented yet (and I know
- nothing about it)
-
 
 .. _vector_loading_postgis:
 
@@ -784,9 +767,6 @@ To load a layer from a database, you can perform the following steps:
 
    Add PostGIS Table(s) Dialog
 
-.. could be nice to address what the "select at id" does and complaints from
- people that have single layer shown multiple times in the list with missing
- geometry or primary id or the sql column
 
 .. tip:: **Load database table(s) from the Browser Panel**
 
