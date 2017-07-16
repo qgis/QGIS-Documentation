@@ -52,7 +52,7 @@ with X,Y,Z coordinates).
 
 .. _figure_create_shapefile:
 
-.. figure:: /static/user_manual/connecting_data/editNewVector.png
+.. figure:: /static/user_manual/managing_data_source/editNewVector.png
    :align: center
 
    Creating a new Shapefile layer dialog
@@ -84,7 +84,7 @@ be displayed as shown in Figure_create_spatialite_.
 
 .. _figure_create_spatialite:
 
-.. figure:: /static/user_manual/connecting_data/editNewSpatialite.png
+.. figure:: /static/user_manual/managing_data_source/editNewSpatialite.png
    :align: center
 
    Creating a New SpatiaLite layer dialog
@@ -176,7 +176,7 @@ Raster specific parameters
 
 .. _figure_save_raster:
 
-.. figure:: /static/user_manual/connecting_data/saveasraster.png
+.. figure:: /static/user_manual/managing_data_source/saveasraster.png
    :align: center
 
    Saving as a new raster layer
@@ -236,7 +236,7 @@ Depending on the format of export, some of these options are available or not:
 
 .. _figure_save_vector:
 
-.. figure:: /static/user_manual/connecting_data/saveasvector.png
+.. figure:: /static/user_manual/managing_data_source/saveasvector.png
    :align: center
 
    Saving as a new vector layer
@@ -339,7 +339,7 @@ The SQL query will be executed, whatever the underlying provider of the
 ``airports`` layer is and even if this provider does not directly support SQL
 queries.
 
-.. figure:: /static/user_manual/connecting_data/create_virtual_layers.png
+.. figure:: /static/user_manual/managing_data_source/create_virtual_layers.png
    :align: center
 
    Create virtual layers dialog

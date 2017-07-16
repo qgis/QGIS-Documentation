@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-.. _connect_data:
+.. _manage_data_source:
 
 **********************
  Managing Data Source
