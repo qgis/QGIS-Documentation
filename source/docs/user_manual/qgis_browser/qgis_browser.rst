@@ -17,14 +17,14 @@ QGIS Browser is available as a standalone application and as a panel in QGIS
 Desktop. It lets you easily navigate in your filesystem and manage geodata.
 You can have access to common vector files (e.g., ESRI shapefiles or MapInfo files),
 databases (e.g., PostGIS, Oracle, SpatiaLite or MS SQL Spatial) and
-OWS/WCS|WMS|WFS connections. You can also view your GRASS data (to get the data
+OWS/WCS|WMS|WFS connections. You can also view GRASS data (to get the data
 into QGIS, see :ref:`sec_grass`).
 
 QGIS Browser Panel description is available at :ref:`browser_panel` section so
 only the standalone browser is treated below.
 
 Like the Browser panel, the standalone Browser helps you navigate through your
-filesystem and manage your geodata. It also helps you preview or create them
+filesystem and manage geodata. It also helps you preview or create them
 and open them in a QGIS project by drag-and-drop.
 
 **Start the QGIS browser**
