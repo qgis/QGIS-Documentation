@@ -811,10 +811,12 @@ loading tool:
   (see :ref:`vector_virtual_layers` for more information)
 
 
-Connecting to web services?
-===========================
+Connecting to web services
+==========================
 
-.. Should the OGC Data Client chapter be moved here? By moving I mean split it
- here and in data and fields chapter
+With QGIS you can have access to different types of OGC web services (WM(T)S,
+WFS(-T), CSW ...). Thanks to QGIS Server, you can also publish these services.
+Description of these capabilities and how-to are provided in chapter
+:ref:`sec_ogc`.
 
 
