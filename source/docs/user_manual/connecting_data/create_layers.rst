@@ -105,8 +105,6 @@ legend, and you can edit it in the same way as described in section
 Further management of SpatiaLite layers can be done with the DB Manager. See
 :ref:`dbmanager`.
 
-.. TODO: Add a Create "New GeoPackage Layer" section
-
 
 .. index:: New GPX layer
 .. _vector_create_gpx:
@@ -311,9 +309,6 @@ added to map canvas if asked.
 
 Virtual layers
 ==============
-
-.. Should we move here the "Create virtual layers" chapter? or keep it in Vector
- chapter?
 
 A special kind of vector layer allows you to define a layer as the result of an
 advanced query, using the SQL language on any number of other vector layers that
