@@ -22,7 +22,6 @@ QGIS User Guide
     introduction/qgis_configuration
     working_with_projections/working_with_projections
     connecting_data/index
-    qgis_browser/qgis_browser
     working_with_vector/index
     working_with_raster/index
     print_composer/index
