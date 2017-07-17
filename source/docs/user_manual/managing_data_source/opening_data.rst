@@ -17,39 +17,40 @@
    .. contents::
       :local:
 
-As a part of an Open Source Software ecosystem, QGIS is built upon different
-libraries that offer capabilities to read and/or write a lot of formats:
+As part of an Open Source Software ecosystem, QGIS is built upon different
+libraries that, combined with its own providers, offer capabilities to read
+and often write a lot of formats:
 
-* the main one is `GDAL/OGR library <http://www.gdal.org/>`_. As of the date
-  of this document, 84 vector and more than 140 raster formats are supported by
-  the GDAL/OGR library (see OGR-SOFTWARE-SUITE in :ref:`literature_and_web`):
+* Vector data formats include ESRI formats (shapefiles, geodatabases...),
+  MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
+  GRASS, GPX, KML, Comma Separated Values, and many more...
+  Read the complete list of `OGR vector supported formats
+  <http://www.gdal.org/ogr_formats.html>`_;
+* Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
+  GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
+  GDAL Virtual, SRTM, Sentinel Data, and many more...
+  Read the complete list of `raster supported formats
+  <http://www.gdal.org/formats_list.html>`_;
+* Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
+  or MSSQL Spatial, MySQL...;
+* Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
+  also handled by QGIS providers (see :ref:`working_with_ogc`);
+* You can also read supported files from archived folders and use QGIS native
+  formats such as virtual and memory layers.
 
-  * vector formats include ESRI formats (shapefiles, geodatabases...), MapInfo
-    and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON, GRASS,
-    SQLite, GPX, KML, Comma Separated Values, OGC WFS or CSW, and many more.
-    Read the complete list of `OGR supported formats
-    <http://www.gdal.org/ogr_formats.html>`_
-  * raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
-    GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
-    GDAL Virtual, SRTM, Sentinel Data, OGC WMS or WCS and many more.
-    Read the complete list of `GDAL supported formats
-    <http://www.gdal.org/formats_list.html>`_.
-
-* many other libraries or native providers to support, customize and/or extend
-  capabilities of GDAL/OGR for formats like PostGIS (``libpq``), GRASS
-  (``libgrass``), SpatiaLite (``libsqlite3`` or ``libspatialite``), Oracle
-  Spatial (``oci``), DB2 or MSSQL Spatial (``odbc``), archive files
-  (zip or gzip formats) and many more...
-* Support of web data services (WM(T)S, WFS, WCS, ArcGIS Servers...) are also
-  handled by QGIS native providers (see :ref:`working_with_ogc`).
-
+As of the date of this document, more than 80 vector and 140 raster formats are
+supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
    Not all of the listed formats may work in QGIS for various reasons. For
-   example, some require external commercial libraries, or the GDAL/OGR
+   example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
-   want to use.
+   want to use. To have a list of available formats, run the command line
+   ``ogrinfo --formats`` (for vector) or check :menuselection:`settings -->
+   Options --> GDAL` menu (for raster) in QGIS.
+   
+.. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 
 .. index:: Browse data, Add layers
