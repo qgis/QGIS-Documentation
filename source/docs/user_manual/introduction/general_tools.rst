@@ -1076,6 +1076,8 @@ For the other tools, different behaviors can be performed holding:
   Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
   features to/from the current selection.
 
+.. _automatic_selection:
+
 Automatic selection
 --------------------
 
