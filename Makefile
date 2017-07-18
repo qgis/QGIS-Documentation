@@ -14,6 +14,9 @@ BUILDDIR      = output
 SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
 VERSION       = testing
 
+# needed for python2 -> python3 migration?
+export LC_ALL=C.UTF-8
+
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
@@ -80,7 +83,7 @@ localizeresources: clean
 	fi
 
 html: localizeresources
-	$(SPHINXINTL) build -l $(LANG) -c $(SOURCEDIR)/conf.py
+	$(SPHINXINTL) --config $(SOURCEDIR)/conf.py build --language=$(LANG)
 	# ONLY in the english version run in nit-picky mode, so source errors/warnings will fail in Travis
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.

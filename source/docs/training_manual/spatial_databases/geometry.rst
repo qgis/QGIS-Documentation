@@ -91,7 +91,7 @@ For this exercise you should do the following:
 
 Your updated people schema should look something like this:
 
-.. code-block:: sql
+.. code-block:: none
 
   \d people
 

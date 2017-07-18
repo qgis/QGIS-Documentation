@@ -25,7 +25,8 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.pngmath']
+extensions = ['sphinx.ext.imgmath']
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../themes/qgis-theme']
@@ -176,7 +177,7 @@ html_sidebars = {
 #html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
@@ -1240,7 +1241,7 @@ rst_epilog = """
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-latex_paper_size = 'a4'
+# latex_paper_size = 'a4'  # depricated, now in latex_elements
 
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '10pt'
@@ -1499,3 +1500,4 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
                   ]
+

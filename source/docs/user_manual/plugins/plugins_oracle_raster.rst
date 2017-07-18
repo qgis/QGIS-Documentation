@@ -118,7 +118,7 @@ The following is an example using ``gdaladdo``:
 
 This is an example using PL/SQL:
 
-.. code-block:: plpgsql
+.. code-block:: none
 
    $ sqlplus scott/tiger
    SQL> DECLARE
