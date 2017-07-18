@@ -144,9 +144,9 @@ Data Sources Settings
 * |checkbox| :guilabel:`Open attribute table in a dock window`
 * :guilabel:`Copy features as` 'Plain text, no geometry', 'Plain text, WKT geometry',
   or 'GeoJSON' when pasting features in other applications.
-* :guilabel:`Attribute table behavior` |selectString|. There are three
-  possibilities: 'Show all features', 'Show selected features' and 'Show
-  features visible on map'.
+* :guilabel:`Attribute table behavior` |selectString|: set filter on the attribute
+  table at the opening. There are three possibilities: 'Show all features',
+  'Show selected features' and 'Show features visible on map'.
 * :guilabel:`Default view`: define the view mode of the attribute table at every
   opening. It can be 'Remember last view', 'Table view' or 'Form view'.
 * :guilabel:`Attribute table row cache` |selectNumber|. This row cache makes
@@ -155,6 +155,23 @@ Data Sources Settings
   attribute table.
 * :guilabel:`Representation for NULL values`. Here, you can define a value for
   data fields containing a NULL value.
+
+.. _tip_table_filtering:
+
+.. tip:: **Improve opening of big data attribute table**
+
+ When working with layers with big amount of records, opening the attribute table
+ may be slow as the dialog request all the rows in the layer. Setting the
+ :guilabel:`Attribute table behavior` to **Show features visible on map** will
+ make QGIS request only the features in the current map canvas when opening the
+ table, allowing a quick data loading.
+
+ Note that data in this attribute table instance will be always tied to the canvas
+ extent it was opened with, meaning that selecting **Show All Features** within
+ such a table will not display new features. You can however update the set of
+ displayed features by changing the canvas extent and selecting **Show Features
+ Visible On Map** option in the attribute table. 
+
 
 **Data source handling**
 
