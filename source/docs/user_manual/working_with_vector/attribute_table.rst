@@ -421,21 +421,6 @@ and CRS (see section :ref:`general_saveas`). To save the selection ensure
 that the |checkbox| :menuselection:`Save only selected features` is selected.
 It is also possible to specify OGR creation options within the dialog.
 
-.. _paste_into_layer:
-
-Paste into new layer
----------------------
-
-Features that are on the clipboard may be pasted into a new
-layer.  To do this, first make a layer editable.  Select some features, copy
-them to the clipboard, and then paste them into a new layer using
-:menuselection:`Edit --> Paste Features as` and choosing
-:menuselection:`New vector layer` or :menuselection:`New memory
-layer`.
-
-This applies to features selected and copied within QGIS and
-also to features from another source defined using well-known text (WKT).
-
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:

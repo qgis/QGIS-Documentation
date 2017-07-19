@@ -255,7 +255,7 @@ Vector
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`OpenStreetMap -->`                              \                     see :ref:`open_street_map`                  \
+:menuselection:`OpenStreetMap -->`                              \                     see :ref:`openstreetmap`                    \
 |analysis| :menuselection:`Analysis Tools -->`                  \                     see :ref:`vector_menu`                      \
 |sampling| :menuselection:`Research Tools -->`                  \                     see :ref:`vector_menu`                      \
 |geoprocessing| :menuselection:`Geoprocessing Tools -->`        \                     see :ref:`vector_menu`                      \
@@ -461,7 +461,7 @@ Also called **Map canvas**, this is the "business end" of QGIS ---
 maps are displayed in this area. The map displayed in this window
 will depend on the vector and raster layers you have chosen to load.
 
-When you add a layer (see e.g. :ref:`vector_loading_file`), QGIS automatically
+When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically
 looks for its Coordinate Reference System (CRS) and zooms to its extent if you
 work in a blank QGIS project. The layer's CRS is then applied to the project.
 If there are already layers in the project, and in the case the new layer has
