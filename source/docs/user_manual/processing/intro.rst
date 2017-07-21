@@ -56,7 +56,7 @@ and will be explained later in this chapter).
 
    Processing History
 
-* The :guilabel:`Batch processing interface. This interface allows you to
+* The :guilabel:`Batch processing interface`. This interface allows you to
   execute batch processes and automate the execution of a single algorithm on
   multiple datasets.
 
