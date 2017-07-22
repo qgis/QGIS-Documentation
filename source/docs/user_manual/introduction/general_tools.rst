@@ -633,7 +633,7 @@ converting styles to rule-based.
 Save in database
 .................
 
-Layer style can also be stored in a database if the layer datasource is a 
+Vector layer style can also be stored in a database if the layer datasource is a 
 database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
 and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
 of the database. Click on :menuselection:`Save Style --> Save in database` item
