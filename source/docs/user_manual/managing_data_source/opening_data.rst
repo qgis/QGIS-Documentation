@@ -195,6 +195,16 @@ To load a layer from a file, you can:
   This will bring up a new window (see figure_vector_add_) from which you can
   check |radioButtonOn| :guilabel:`File` and click on **[Browse]**. You can
   also select the encoding for the file if desired.
+  Beside file you can select |radioButtonOn| :guilabel:`Directory` for example
+  to load OpenFileGDB or Arc/Info binary coverage. This case a directory can be
+  selected in the dialog after pressing **[Browse]**. Using the
+  |radioButtonOn| :guilabel:`Database` radiobutton you can select an existing
+  database connection or create one to the selected database type.
+  Pressing **[Open]** you can select from the available tables for example
+  of the PosGIS enabled database.
+  The last |radioButtonOn| :guilabel:`Protocol` enables to open data from the
+  web using for example GeoJSON format. After selecting the type you have to
+  fill URI of the source.
 
   .. _figure_vector_add:
 
