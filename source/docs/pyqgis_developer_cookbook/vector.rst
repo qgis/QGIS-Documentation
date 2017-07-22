@@ -324,6 +324,11 @@ then it changes the feature's geometry
     the :class:`QgsVectorLayerEditUtils` which provides some of useful
     methods to edit geometries (translate, insert or move vertex etc.)
 
+.. tip::
+
+	Using :func:`with` the changes will be commited automaticly calling 
+	commitChanges() at the end. If any exception occurs, it will 
+	rollBack() all the changes. See editing-buffer_
 
 Adding and Removing Fields
 --------------------------
