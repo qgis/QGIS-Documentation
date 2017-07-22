@@ -521,7 +521,7 @@ Just open a terminal cd in ``your_plugin/i18n`` directory and type::
 
 now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s).
 
-Traninsate using Makefile
+Translate using Makefile
 -------------------------
 
 Alternatively you can use the makefile to extract messages from python code and 
