@@ -128,14 +128,6 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
-.. tip:: **Skip WKT geometry**
-
-   If you want to use attribute data in external programs (such as Excel), use the
-   |copySelected| :sup:`Copy selected rows to clipboard` button.
-   You can copy the information without vector geometries if you deactivate the
-   |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
-   option in :menuselection:`Settings --> Options --> Data Sources` menu.
-
 Table view vs Form view
 -----------------------
 
@@ -386,8 +378,8 @@ To clear the filter, either select :guilabel:`Show all features` option
 mentioned in :ref:`filter_features`, or click the clear the expression and
 click **[Apply]**.
 
-Action on cells
----------------
+Action on features
+==================
 
 Users have several possibilities to manipulate feature with the contextual menu
 like:
@@ -405,6 +397,20 @@ like:
 
     Copy cell content button
 
+If you want to use attribute data in external programs (such as Excel,
+LibreOffice, QGIS or a custom web application), select one or more row(s) and
+use the |copySelected| :sup:`Copy selected rows to clipboard` button or press
+:kbd:`Ctrl+C`.
+
+.. _geometry_format:
+
+In :menuselection:`Settings --> Options --> Data Sources` menu you can
+define the format to paste to with :guilabel:`Copy features as` dropdown
+list:
+
+* Plain text, no geometry,
+* Plain text, WKT geometry,
+* GeoJSON
 
 You can also display a list of actions in this contextual menu. This is enabled
 in the :menuselection:`Layer properties --> Actions` tab.
@@ -420,7 +426,6 @@ contextual menu of the layer, from the :guilabel:`Layers Panel`, click on
 and CRS (see section :ref:`general_saveas`). To save the selection ensure
 that the |checkbox| :menuselection:`Save only selected features` is selected.
 It is also possible to specify OGR creation options within the dialog.
-
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
 .. _calculate_fields_values:
