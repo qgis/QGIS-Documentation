@@ -521,6 +521,33 @@ Just open a terminal cd in ``your_plugin/i18n`` directory and type::
 
 now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s).
 
+Traninsate using Makefile
+-------------------------
+
+Alternatively you can use the makefile to extract messages from python code and 
+Qt dialogs, if you created your plugin with Plugin Builder.
+At the beginning of the Makefile there is a LOCALES variable::
+
+	LOCALES = en
+
+Add the abreviation of the a language to this variable, for example for
+Hungarian language::
+
+	LOCALES = en hu
+
+Now you can generate or update the hu.ts file (and the ts.en too) from the sources by::
+
+	make transup
+
+After this you have updated .ts file for all languages set in the LOCALES
+variable.
+Use Qt4 Linguist to translate the program messages.
+Finishing the translation the .qm files can be created by the transcompile::
+
+	make transcompile
+
+You have to distribute .ts files with your plugin.
+
 Load the plugin
 ---------------
 
