@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.7">
+<qgis projectname="" version="2.18.9">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
@@ -19,7 +19,7 @@
       <ymax>7853663.12941623944789171</ymax>
     </extent>
     <rotation>0</rotation>
-    <projections>0</projections>
+    <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
         <proj4>+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</proj4>
@@ -33,7 +33,9 @@
       </spatialrefsys>
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
-    <layer_coordinate_transform_info/>
+    <layer_coordinate_transform_info>
+      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="alaska20131027003237883"/>
+    </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
@@ -290,7 +292,7 @@
       <editform>../../Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -364,6 +366,28 @@
     <WFSLayersPrecision>
       <alaska20131027003237883 type="int">8</alaska20131027003237883>
     </WFSLayersPrecision>
+    <Digitizing>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+      <LayerSnappingList type="QStringList">
+        <value>alaska20131027003237883</value>
+      </LayerSnappingList>
+      <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+      </LayerSnappingEnabledList>
+      <SnappingMode type="QString">advanced</SnappingMode>
+      <AvoidIntersectionsList type="QStringList"/>
+      <LayerSnappingToleranceUnitList type="QStringList">
+        <value>2</value>
+      </LayerSnappingToleranceUnitList>
+      <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+      </LayerSnapToList>
+      <DefaultSnapType type="QString">off</DefaultSnapType>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
+      <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+      </LayerSnappingToleranceList>
+    </Digitizing>
     <Identify>
       <disabledLayers type="QStringList"/>
     </Identify>
@@ -372,7 +396,7 @@
     </Macros>
     <GRASS>
       <WorkingLocation type="QString">alaska</WorkingLocation>
-      <WorkingGisdbase type="QString">/home/alexandre/Dropbox/Trabalho/QGIS/qgis_sample_data/grassdata</WorkingGisdbase>
+      <WorkingGisdbase type="QString">../../../../Dropbox/Trabalho/QGIS/qgis_sample_data/grassdata</WorkingGisdbase>
       <WorkingMapset type="QString">demo</WorkingMapset>
     </GRASS>
     <WMSAccessConstraints type="QString"></WMSAccessConstraints>
@@ -384,7 +408,7 @@
       <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
       <ProjectCrs type="QString">EPSG:2964</ProjectCrs>
       <ProjectCRSID type="int">932</ProjectCRSID>
-      <ProjectionsEnabled type="int">0</ProjectionsEnabled>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
     <DefaultStyles>
       <Fill type="QString"></Fill>

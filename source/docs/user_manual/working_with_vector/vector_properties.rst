@@ -1856,7 +1856,7 @@ or of the layer tree.
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
    :align: center
 
-   Vector properties dialog with diagram tab, Attributes
+   Diagram properties  - Attributes tab
 
 .. _diagram_appearance:
 
@@ -2072,7 +2072,7 @@ Defining Actions
 
 To define an attribute action, open the vector :guilabel:`Layer
 Properties` dialog and click on the :guilabel:`Actions` tab. In the
-:guilabel:`Actions`tab, click the |plus_sign| :sup:`Add a new action`
+:guilabel:`Actions` tab, click the |signPlus| :sup:`Add a new action`
 to open the :guilabel:`Edit Action` dialog.
 
 Select the action :guilabel:`Type` and provide a descriptive name

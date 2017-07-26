@@ -103,15 +103,15 @@ table can be of one of the following types.
   selected, since they need to be open so as to retrieve the list of field names
   available.
 
-  You will see a iterator button by each vector layer selector, as shown in the
+  You will see an iterator button by each vector layer selector, as shown in the
   figure below.
 
   .. _figure_vector_iterator:
 
-   .. figure:: /static/user_manual/processing/vector_iterator.png
-      :align: center
+  .. figure:: /static/user_manual/processing/vector_iterator.png
+     :align: center
 
-      Vector iterator button
+     Vector iterator button
 
   If the algorithm contains several of them, you will be able to toggle just
   one of them. If the button corresponding to a vector input is toggled, the
@@ -152,9 +152,11 @@ table can be of one of the following types.
 * An **extent**, to be entered by four numbers representing its ``xmin``,
   ``xmax``, ``ymin``, ``ymax`` limits. Clicking on the button on the
   right-hand side of the value selector, a pop-up menu will appear, giving
-  you three options: to select the value from a layer or the current canvas
-  extent, to define it by dragging directly onto the map canvas, or to use
-  the minimum coverage from all input layers.
+  you three options:
+
+  * to select the value from a layer or the current canvas extent,
+  * to define it by dragging directly onto the map canvas, or
+  * to use the minimum coverage from all input layers.
 
   .. _figure_extent:
 
