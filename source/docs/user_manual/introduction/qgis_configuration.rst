@@ -45,6 +45,9 @@ The tabs where you can customize your options are described below.
  .. comment: Would be nice to link in the future to a place in the PyQGIS Cookbook
    showing the code to use to implement plugin options in standard dialog 
 
+
+.. _general_options:
+
 General Settings
 ----------------
 
@@ -135,6 +138,7 @@ source code.
 
    System environment variables in QGIS
 
+.. _datasources_options:
 
 Data Sources Settings
 ---------------------
@@ -205,6 +209,7 @@ This widget lists all the folder you chose to hide from the Browser panel.
 Removing a folder from the list will make it available in the Browser panel.
 
 .. index:: Rendering
+.. _rendering_options:
 
 Rendering Settings
 ------------------
@@ -282,6 +287,7 @@ Rendering Settings
 * |checkbox| :guilabel:`Map canvas refresh`
 
 .. index:: Colors
+.. _colors_options:
 
 Colors Settings
 ---------------
@@ -292,6 +298,7 @@ delete or edit all of them. Moreover you can add the color you want and perform 
 and paste operations. Finally you can export the color set as a :file:`gpl` file or import
 them.
 
+.. _canvas_legend_options:
 
 Canvas and Legend Settings
 --------------------------
@@ -315,6 +322,7 @@ Canvas and Legend Settings
   * you can also set the :guilabel:`WMS getLegendGraphic Resolution`
 
 .. index:: Map tools
+.. _maptools_options:
 
 Map tools Settings
 ------------------
@@ -358,6 +366,8 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
+.. _composer_options:
+
 Composer Settings
 -----------------
 
@@ -384,6 +394,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
   with custom composer templates to use while creating new one.
 
 .. index:: Digitizing configuration
+.. _digitizing_options:
 
 Digitizing Settings
 -------------------
@@ -434,6 +445,8 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
+.. _gdal_options:
+
 GDAL Settings
 -------------
 
@@ -443,6 +456,7 @@ raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
 .. index:: CRS, Datum transformation, On-the-fly reprojection
+.. _crs_options:
 
 CRS Settings
 ------------
@@ -483,6 +497,7 @@ or when a layer without a CRS is loaded.
 
 
 .. index:: Overwrite language
+.. _locale_options:
 
 Locale Settings
 ---------------
@@ -498,6 +513,7 @@ and manage PKI certificates. See :ref:`authentication_index` for more
 details.
 
 .. index:: Proxy, Network
+.. _network_options:
 
 Network Settings
 ----------------

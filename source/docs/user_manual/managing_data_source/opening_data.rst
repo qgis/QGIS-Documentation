@@ -331,6 +331,7 @@ Additionally, you can enable:
 * |checkbox| :guilabel:`Watch file` to watch for changes to the file by other
   applications while QGIS is running.
 
+.. _import_dxfdwg:
 
 Importing a DXF or DWG file
 ---------------------------
@@ -479,8 +480,8 @@ To access the connection manager, click on the **[New]** button to display the
    Create a New PostGIS Connection Dialog
 
 
-The parameters required for a PostGIS connection are (for other database types,
-see the differences at :ref:`db_requirements`):
+The parameters required for a PostGIS connection are exposed below. For the
+other database types, see their differences at :ref:`db_requirements`.
 
 * **Name**: A name for this connection. It can be the same as *Database*.
 * **Service**: Service parameter to be used alternatively to hostname/port (and
@@ -608,10 +609,10 @@ environment variable (e.g. run the ``export PGSERVICEFILE=/home/web/.pg_service.
 command under your \*nix OS to temporarily set the ``PGSERVICEFILE`` variable)
 
 You can also make the service file available system-wide (all users) either by
-placing it at ``pg_config --sysconfdir``**/.pg_service.conf**  or by adding the
-``PGSYSCONFDIR`` environment variable to specify the directory containing
-the service file. If service definitions with the same name exist in the user
-and the system file, the user file takes precedence.
+placing the :file:`.pg_service.conf` file at ``pg_config --sysconfdir`` or by
+adding the ``PGSYSCONFDIR`` environment variable to specify the directory
+containing the service file. If service definitions with the same name exist
+in the user and the system file, the user file takes precedence.
 
 .. warning::
 
@@ -625,7 +626,7 @@ and the system file, the user file takes precedence.
   * You can add environmental variables in various ways; a tested one, known to
     work reliably, is :menuselection:`Control Panel --> System and Security -->
     System --> Advanced system settings --> Environment Variables` adding
-    ``PGSERVICEFILE`` and the path of the type :file:`C:\Users\John\pg_service.conf`
+    ``PGSERVICEFILE`` and the path of the type :file:`C:\\Users\\John\\pg_service.conf`
   * After adding an environment variable you may also need to restart the computer.
 
 
@@ -711,8 +712,8 @@ A driver/host/port connection requires:
   characteristic.
 
   It is also helpful for the spatial column to be registered with a specific
-  spatial reference identifier (most often 4326 for WGS84 coordinates).
-  A spatial column can be registered by calling the ST_Register_Spatial_Column
+  spatial reference identifier (most often ``4326`` for WGS84 coordinates).
+  A spatial column can be registered by calling the ``ST_Register_Spatial_Column``
   stored procedure.
 
 
@@ -732,9 +733,10 @@ Loading a Database Layer
 ........................
 
 Once you have one or more connections defined to a database (see section
-vector_create_stored_connection_), you can load layers from it. Of course, this
-requires having available data. See e.g. section :ref:`vector_import_data_in_postgis`
-for a discussion on importing data into a PostGIS database.
+:ref:`vector_create_stored_connection`), you can load layers from it.
+Of course, this requires having available data. See e.g. section
+:ref:`vector_import_data_in_postgis` for a discussion on importing data into a
+PostGIS database.
 
 To load a layer from a database, you can perform the following steps:
 

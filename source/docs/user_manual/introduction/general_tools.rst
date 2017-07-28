@@ -198,9 +198,8 @@ Editing vector layer style
 ...........................
 
 From the Layers panel, you have shortcuts to easily and quickly edit the layer
-rendering.
-Right-click on a vector layer and select :guilabel:`Styles -->` in the list
-in order to:
+rendering. Right-click on a vector layer and select :menuselection:`Styles -->`
+in the list in order to:
 
 * see the currently applied :ref:`styles <manage_custom_style>` to the layer. In
   case you defined many styles for the layer, you can switch from one to another
@@ -395,6 +394,7 @@ Undo/Redo Panel
 
 For each layer being edited, this panel shows the list of actions done, allowing
 to quickly undo a set of actions by simply selecting the action listed above.
+More details at :ref:`Undo and Redo edits <undoredo_edits>`.
 
 
 .. index:: Rendering
@@ -1007,8 +1007,8 @@ is displayed in a pop-up dialog.
 
 .. _`sec_selection`:
 
-Select and deselect features
-============================
+Selecting features
+==================
 
 QGIS provides several tools to select features in the map canvas. Selection
 tools are available in :menuselection:`View --> Select` menu or in the

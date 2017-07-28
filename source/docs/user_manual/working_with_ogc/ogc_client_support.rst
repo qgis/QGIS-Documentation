@@ -380,8 +380,8 @@ When using WMTS (Cached WMS) services like
 you are able to browse through the :guilabel:`Tilesets` tab given by the server.
 Additional information like tile size, formats and supported CRS are listed in
 this table. In combination with this feature, you can use the tile scale slider
-by selecting :menuselection:`Settings --> Panels` (KDE) or :menuselection:`View --> Panels`
-(Gnome, Windows and MacOSX), then choosing `Tile Scale Panel`. This gives you the
+by selecting :menuselection:`View --> Panels` ( or |kde| :menuselection:`Settings
+--> Panels`), then choosing :guilabel:`Tile Scale Panel`. This gives you the
 available scales from the tile server with a nice slider docked in.
 
 .. _`ogc-wms-identify`:

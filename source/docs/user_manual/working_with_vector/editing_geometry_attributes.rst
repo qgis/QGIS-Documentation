@@ -596,16 +596,17 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 .. index::
    single: Digitizing tools; Undo
    single: Digitizing tools; Redo
+.. _undoredo_edits:
 
 Undo and Redo
 -------------
 
-The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you
-to undo or redo vector editing operations. There is also a dockable
-widget, which shows all operations in the undo/redo history (see
-Figure_edit_undo_). This widget is not displayed by default; it can be
-displayed by right clicking on the toolbar and activating the Undo/Redo
-checkbox. Undo/Redo is however active, even if the widget is not displayed.
+The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you to undo or redo
+vector editing operations. There is also a dockable widget, which shows all
+operations in the undo/redo history (see Figure_edit_undo_). This widget is not
+displayed by default; it can be displayed by right-clicking on the toolbar and
+activating the :guilabel:`Undo/Redo Panel` checkbox. The Undo/Redo capability
+is however active, even if the widget is not displayed.
 
 .. _figure_edit_undo:
 
@@ -849,6 +850,7 @@ the |splitParts| :sup:`Split Parts` icon.
 
 .. index::
    single: Digitizing tools; Merge Selected Features
+.. _mergeselectedfeatures:
 
 Merge selected features
 -----------------------
@@ -872,6 +874,7 @@ apply to each field of the new feature. That value can be:
 
 .. index::
    single: Digitizing tools; Merge Attributes
+.. _mergeattributesfeatures:
 
 Merge attributes of selected features
 -------------------------------------

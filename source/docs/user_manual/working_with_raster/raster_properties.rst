@@ -302,15 +302,17 @@ matrix through a geometric transformation.
    Raster Style - Color rendering and Resampling settings
 
 
-When applying the 'Nearest neighbour' method, the map can have a pixelated structure
-when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method, which cause sharp features
-to be blurred. The effect is a smoother image. This method can be applied, for instance, to digital
-topographic raster maps.
+When applying the 'Nearest neighbour' method, the map can have a pixelated
+structure when zooming in. This appearance can be improved by using the
+'Bilinear' or 'Cubic' method, which cause sharp features to be blurred.
+The effect is a smoother image. This method can be applied, for instance,
+to digital topographic raster maps.
 
 At the bottom of the :guilabel:`Style` tab, you can see a thumbnail of the layer,
 its legend symbol, and the palette.
 
 .. index:: Transparency
+.. _raster_transparency:
 
 Transparency Properties
 -----------------------
@@ -354,6 +356,7 @@ applies them to the current raster layer.
 
 
 .. index:: Pyramids
+.. _raster_pyramids:
 
 Pyramids Properties
 -------------------
@@ -427,6 +430,7 @@ you have chosen the :guilabel:`Min/max options`.
    Raster Histogram
 
 .. index:: Metadata
+.. _raster_metadata:
 
 Metadata Properties
 -------------------
@@ -447,6 +451,7 @@ collected.
    Raster Metadata
 
 .. index:: Legend, Embedded widget
+.. _raster_legend:
 
 Legend Properties
 -----------------
