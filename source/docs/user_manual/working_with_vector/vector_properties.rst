@@ -2066,6 +2066,7 @@ concept is used in the following discussion.
 
 .. index:: Actions, Attribute Actions
    single: Actions; Define an action
+.. _adding_actions:
 
 Defining Actions
 ----------------
@@ -2350,6 +2351,7 @@ in map canvas.
 
 
 .. index:: Generalisation, Feature simplification, Rasterisation
+.. _vectorrenderingmenu:
 
 Rendering Properties
 ====================
@@ -2440,7 +2442,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    representations of your data.
 
 .. index:: Variables
-.. _vectorvariables_menu:
+.. _vectorvariablesmenu:
 
 Variables Properties
 ====================
@@ -2457,7 +2459,7 @@ More information on variables usage in the General Tools
 :ref:`general_tools_variables` section.
 
 .. index:: Legend, Embedded widget
-.. _vectorlegend_menu:
+.. _vectorlegendmenu:
 
 Legend Properties
 =================

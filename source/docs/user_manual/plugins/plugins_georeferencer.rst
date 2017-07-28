@@ -151,7 +151,7 @@ transformation settings for the georeferencing process.
 
 
 Available Transformation algorithms
-...................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Depending on how many ground control points you have captured, you may want
 to use different transformation algorithms. Choice of transformation
@@ -179,7 +179,7 @@ Currently, the following :guilabel:`Transformation types` are available:
    of coordinates.
 
 Define the Resampling method
-............................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The type of resampling you choose will likely depending on your input data
 and the ultimate objective of the exercise. If you don't want to change
@@ -195,7 +195,7 @@ It is possible to choose between five different resampling methods:
 #. Lanczos
 
 Define the transformation settings
-..................................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are several options that need to be defined for the georeferenced output
 raster.
@@ -225,8 +225,11 @@ raster.
 Show and adapt raster properties
 ................................
 
-Clicking on the :guilabel:`Raster properties` dialog in the :guilabel:`Settings`
-menu opens the raster properties of the layer that you want to georeference.
+Clicking on the :guilabel:`Raster properties` option in the :guilabel:`Settings`
+menu opens the :ref:`Layer properties <raster_properties_dialog>` dialog of the
+raster file that you want to georeference.
+
+.. _configure_georeferencer:
 
 Configure the georeferencer
 ...........................

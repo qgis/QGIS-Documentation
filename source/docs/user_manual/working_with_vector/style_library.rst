@@ -38,6 +38,8 @@ to be used in several QGIS projects. You can open it with the :menuselection:`Se
    The Style Manager
 
 
+.. _group_symbols:
+
 Groups and smart groups
 ------------------------
 
@@ -101,6 +103,8 @@ The symbol list can be modified by adding new symbols with |signPlus|
 :sup:`Add item` button or modifying existing ones with |symbologyEdit|
 :sup:`Edit item`.
 See :ref:`symbol-selector` for further information.
+
+.. _share_symbols:
 
 Share symbols
 --------------
