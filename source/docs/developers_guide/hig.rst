@@ -11,7 +11,7 @@ guidelines are followed in layout and design of GUIs.
    Try to identify elements that can be grouped together and then use group
    boxes with a label to identify the topic of that group. Avoid using group
    boxes with only a single widget / item inside.
-#. Capitalise first letter only in labels (including group box labels), tool
+#. Capitalise first letter only in labels, tool
    tips, descriptive text, and other non-heading or title text:
    These should be written as a phrase with leading capital letter, and all
    remaining words written with lower case first letters, unless they are nouns
@@ -40,7 +40,7 @@ guidelines are followed in layout and design of GUIs.
    layouts and inexplicable (to the user) resizing of dialogs to accommodate
    widgets that are not visible.
 #. Try to avoid technical terms and rather use a laymans equivalent e.g. use
-   the word 'Transparency' rather than 'Alpha Channel' (contrived example),
+   the word 'Opacity' rather than 'Alpha Channel' (contrived example),
    'Text' instead of 'String' and so on.
 #. Use consistent iconography. If you need an icon or icon elements, please
    contact Robert Szczepanek on the mailing list for assistance.
@@ -52,8 +52,9 @@ guidelines are followed in layout and design of GUIs.
    should either be located below a dividing line, or placed onto a separate tab.
 #. Don't add options for the sake of having lots of options. Strive to keep the
    user interface minimalistic and use sensible defaults.
-#. If clicking a button will spawn a new dialog, an ellipsis (...) should be
-   suffixed to the button text.
+#. If clicking a button will spawn a new dialog, an ellipsis char (…) should be
+   suffixed to the button text. Note, make sure to use the U+2026 Horizontal
+   Ellipsis char instead of three periods.
 
 
 Authors
