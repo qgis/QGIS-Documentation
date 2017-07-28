@@ -23,7 +23,7 @@ The following list
 
 ## Working with Vector Chapter
 
- * `label_examples.qgs`
+ * `label_examples.qgs` (needs memory layer saver plugin)
  * `multivariate_examples.qgs`
  * `working_with_vector_supported_data.qgs`
  * `working_with_vector_02.qgs`
@@ -32,6 +32,7 @@ The following list
  * `effects_examples.qgs`
  * `orange.svg`
  * `point_sample_effects.geosjson`
+ * `drag_n_drop_form_designer.qgs`
  
 
 ## Working with Raster Chapter
