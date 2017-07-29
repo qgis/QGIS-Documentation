@@ -716,10 +716,6 @@ described above.
     Note that you can (de)activate this option only if no layer is being edited
     in the project.
 
-* Besides the list of global-level variables, The :guilabel:`Variables` tab
-  lists and helps you create project-level variables.
-  More information about variables at section :ref:`general_tools_variables`.
-
 * The :guilabel:`Variables` tab lists all the variables available at
   the project's level (which includes all global variables). Besides, it
   also allows the user to manage project-level variables. Click the |signPlus|
