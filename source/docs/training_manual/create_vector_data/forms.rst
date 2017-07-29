@@ -211,7 +211,7 @@ layer, thereby minimizing misunderstandings and unnecessary errors.
 -------------------------------------------------------------------------------
 
 If you completed the advanced section above and have knowledge of Python, you
-may want to check out `this blog entry <http://tinyurl.com/6tr42rb>`_ about
+may want to check out `this blog entry <https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/>`_ about
 creating custom feature forms with Python logic, which allows advanced
 functions including data validation, autocompletion, etc.
 
