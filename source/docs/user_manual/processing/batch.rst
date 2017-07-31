@@ -28,7 +28,7 @@ that will appear.
 .. figure:: /static/user_manual/processing/batch_processing_right_click.png
    :align: center
 
-   Batch Processing From Right Click
+   Batch Processing from right-click
 
 If you have the execution dialog of the algorithm open, you can also start the
 batch processing interface from there, clicking on the :guilabel:`Run as batch

@@ -111,14 +111,15 @@ Plugin Manager. To do this, go to the menu :menuselection:`Plugins -->` |showPlu
 :menuselection:`Manage and Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click
 **[OK]**.
 
-The following main features are provided with the toolbar menu when you start the GRASS plugin:
+The following main features are provided with the GRASS menu
+(:menuselection:`Plugins --> GRASS`) when you start the GRASS plugin:
 
 * |grassOpenMapset| :sup:`Open Mapset`
 * |grassNewMapset| :sup:`New Mapset`
 * |grassCloseMapset| :sup:`Close Mapset`
 * |grassTools| :sup:`Open GRASS Tools`
 * |grassRegion| :sup:`Display Current GRASS Region`
-* |options| :sup:`GRASS Options`
+* |general| :sup:`GRASS Options`
 
 Opening GRASS mapset
 ====================

@@ -330,7 +330,7 @@ Also, analogous to the Categorized Renderer, it allows you to select:
 * The legend format and the precision
 * The method to use to change the symbol: color or size
 * The colors (using the color Ramp list) if the color method is selected
-* The size (using the size domain and its unit
+* The size (using the size domain and its unit)
 
 Then you can use the Histogram tab which shows an interactive histogram of the
 values from the assigned field or expression. Class breaks can be moved or
@@ -1561,6 +1561,13 @@ The dialog also lists read-only characteristics of the field such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
 layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
 
+.. _figure_fields_tab:
+
+.. figure:: /static/user_manual/working_with_vector/fields_properties.png
+   :align: center
+
+   Field properties tab
+
 
 .. index:: Edit widget, Field configuration
 .. _configure_field:
@@ -1877,9 +1884,9 @@ Use |signPlus| :sup:`add item` button to select the desired fields into
 the 'Assigned Attributes' panel. Generated attributes with :ref:`vector_expressions`
 can also be used.
 
-You can move up and down any row with click and drag, sorting how atributes
+You can move up and down any row with click and drag, sorting how attributes
 are displayed. You can also change the label in the 'Legend' column
-or the attibute color by double-clicking the item.
+or the attribute color by double-clicking the item.
 
 This label is the default text displayed in the legend of the print composer
 or of the layer tree.
@@ -1889,7 +1896,7 @@ or of the layer tree.
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
    :align: center
 
-   Vector properties dialog with diagram tab
+   Diagram properties  - Attributes tab
 
 .. _diagram_appearance:
 
@@ -1918,7 +1925,7 @@ In this tab, you can also manage the diagram visibility:
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
    :align: center
 
-   Vector properties dialog with diagram properties, Appearance tab
+   Diagram properties - Appearance tab
 
 .. _diagram_size:
 
@@ -1940,7 +1947,7 @@ You can use :
 .. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
    :align: center
 
-   Vector properties dialog with diagram properties, Size tab
+   Diagram properties - Size tab
 
 .. _diagram_placement:
 
@@ -2093,8 +2100,9 @@ divided into six types and can be used like this:
   see and execute the one 'Edit' action for their platform to run the editor).
 
 There are several examples included in the dialog. You can load them by clicking
-on **[Add default actions]**. One example is performing a search based on an
-attribute value. This concept is used in the following discussion.
+on **[Create default actions]**. To edit any of the examples, double-click
+its row. One example is performing a search based on an attribute value. This
+concept is used in the following discussion.
 
 .. index:: Actions, Attribute Actions
    single: Actions; Define an action
@@ -2102,12 +2110,14 @@ attribute value. This concept is used in the following discussion.
 Defining Actions
 ----------------
 
-Attribute actions are defined from the vector :guilabel:`Layer Properties`
-dialog. To define an action, open the vector :guilabel:`Layer Properties`
-dialog and click on the :guilabel:`Actions` tab. Go to the :guilabel:`Action properties`.
-Select 'Generic' as type and provide a descriptive name for the action.
-The action itself must contain
-the name of the application that will be executed when the action is invoked.
+To define an attribute action, open the vector :guilabel:`Layer
+Properties` dialog and click on the :guilabel:`Actions` tab. In the
+:guilabel:`Actions` tab, click the |signPlus| :sup:`Add a new action`
+to open the :guilabel:`Edit Action` dialog.
+
+Select the action :guilabel:`Type` and provide a descriptive name
+for the action. The action itself must contain the name of the application
+that will be executed when the action is invoked.
 You can add one or more attribute field values as arguments to the application.
 When the action is invoked, any set of characters that start with a ``%``
 followed by the name of a field will be replaced by the value of that field.
@@ -2215,6 +2225,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    layer in the legend, or right-click and choose :menuselection:`Properties`
    from the pop-up menu.
 #. Click on the :guilabel:`Actions` tab.
+#. click |signPlus| :sup:`Add a new action`.
 #. Enter a name for the action, for example ``Google Search``.
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
@@ -2225,13 +2236,19 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. The text in the :guilabel:`Action` field should now look like this:
    ``firefox http://google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
-   layer. It's located just to the left of the **[Insert Field]** button.
-#. From the drop-down box, select 'NAMES' and click **[Insert Field]**.
+   layer. It's located just to the left of the **[Insert]** button.
+#. From the drop-down box, select 'NAMES' and click **[Insert]**.
 #. Your action text now looks like this:
 
    ``firefox http://google.com/search?q=%NAMES``
-#. To finalize the action, click the **[Add to action list]** button.
+#. To finalize and add the action, click the **[OK]** button.
 
+.. _figure_add_action:
+
+.. figure:: /static/user_manual/working_with_vector/add_action_edit.png
+   :align: center
+
+   Edit action dialog configured with the example
 
 This completes the action, and it is ready to use. The final text of the
 action should look like this:
