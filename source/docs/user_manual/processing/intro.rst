@@ -23,7 +23,7 @@ see) can be accessed from the :menuselection:`Processing` menu item. (You will
 see more than four entries. The remaining ones are not used to execute algorithms
 and will be explained later in this chapter).
 
-* The toolbox. The main element of the GUI, it is used to
+* The :guilabel:`Toolbox`. The main element of the GUI, it is used to
   execute a single algorithm or run a batch process based on that algorithm.
 
 .. _figure_toolbox_dialog:
@@ -33,9 +33,9 @@ and will be explained later in this chapter).
 
    Processing Toolbox
 
-* The graphical modeler. Several algorithms can be combined graphically
-  using the modeler to define a workflow, creating a single process that involves
-  several subprocesses.
+* The :guilabel:`Graphical modeler`. Several algorithms can be combined
+  graphically using the modeler to define a workflow, creating a single
+  process that involves several subprocesses.
 
 
 .. _figure_model_dialog:
@@ -45,7 +45,7 @@ and will be explained later in this chapter).
 
    Processing Modeler
 
-* The history manager. All actions performed using any of the
+* The :guilabel:`History manager`. All actions performed using any of the
   aforementioned elements are stored in a history file and can be later easily
   reproduced using the history manager.
 
@@ -56,7 +56,7 @@ and will be explained later in this chapter).
 
    Processing History
 
-* The batch processing interface. This interface allows you to
+* The :guilabel:`Batch processing interface`. This interface allows you to
   execute batch processes and automate the execution of a single algorithm on
   multiple datasets.
 

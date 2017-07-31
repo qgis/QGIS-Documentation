@@ -1,18 +1,18 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.16.1-Nødebo">
+<qgis projectname="" version="2.18.9">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="airports20160823084816113" name="airports">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="airports20160823084816113" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/airports.shp" name="airports">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-group expanded="0" checked="Qt::Checked" name="Boundaries Group">
       <customproperties>
         <property key="embedded" value="1"/>
         <property key="embedded-invisible-layers"/>
-        <property key="embedded_project" value="/home/alex/Repos/QGIS-Documentation/qgis-projects/user_manual/working_with_vector_02.qgs"/>
+        <property key="embedded_project" value="../../../../../alex/Repos/QGIS-Documentation/qgis-projects/user_manual/working_with_vector_02.qgs"/>
       </customproperties>
     </layer-tree-group>
   </layer-tree-group>
@@ -44,8 +44,6 @@
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>regions20130517221648766</item>
-      <item>alaska20130517221648216</item>
       <item>airports20160823084816113</item>
     </custom-order>
   </layer-tree-canvas>
@@ -55,12 +53,12 @@
         <legendlayerfile isInOverview="0" layerid="airports20160823084816113" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup embedded="1" open="false" checked="Qt::Checked" name="Boundaries Group" project="/home/alex/Repos/QGIS-Documentation/qgis-projects/user_manual/working_with_vector_02.qgs"/>
+    <legendgroup embedded="1" open="false" checked="Qt::Checked" name="Boundaries Group" project="../../../../../alex/Repos/QGIS-Documentation/qgis-projects/user_manual/working_with_vector_02.qgs"/>
   </legend>
   <projectlayers>
-    <maplayer simplifyAlgorithm="0" minimumScale="100000" maximumScale="1e+08" simplifyDrawingHints="0" readOnly="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="100000" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>airports20160823084816113</id>
-      <datasource>/home/alex/Repos/qgis_sample_data/shapefiles/airports.shp</datasource>
+      <datasource>../../../../Geodata/qgis_sample_data/shapefiles/airports.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -78,7 +76,6 @@
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>COALESCE( "NAME", '&lt;NULL>' )</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields>
@@ -248,8 +245,6 @@
             </layer>
           </symbol>
         </source-symbol>
-        <colorramp type="randomcolors" name="[source]"/>
-        <invertedcolorramp value="0"/>
         <rotation/>
         <sizescale scalemethod="diameter"/>
       </renderer-v2>
@@ -423,6 +418,7 @@
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="100000">
           <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -448,9 +444,14 @@
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
+        <alias field="ID" index="0" name=""/>
+        <alias field="fk_region" index="1" name=""/>
         <alias field="ELEV" index="2" name="Passengers"/>
+        <alias field="NAME" index="3" name=""/>
+        <alias field="USE" index="4" name=""/>
+        <alias field="passengers" index="5" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -466,10 +467,10 @@
           <column width="-1" hidden="0" type="field" name="passengers"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -494,6 +495,15 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
+      <defaults>
+        <default field="ID" expression=""/>
+        <default field="fk_region" expression=""/>
+        <default field="ELEV" expression=""/>
+        <default field="NAME" expression=""/>
+        <default field="USE" expression=""/>
+        <default field="passengers" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "NAME", '&lt;NULL>' )</previewExpression>
     </maplayer>
   </projectlayers>
   <properties>

@@ -124,7 +124,7 @@ to MinMax' and 'Clip to min max'.
 .. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
    :align: center
 
-   Raster Renderer - Multiband color
+   Raster Style - Multiband color rendering
 
 This selection offers you a wide range of options to modify the appearance
 of your raster layer. First of all, you have to get the data range from your
@@ -173,7 +173,7 @@ The label appears in the legend of the raster layer then.
 .. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
    :align: center
 
-   Raster Renderer - Paletted
+   Raster Style - Paletted Rendering
 
 .. index:: Contrast enhancement
 
@@ -199,7 +199,7 @@ the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
    :align: center
 
-   Raster Renderer - Singleband gray
+   Raster Style - Singleband gray rendering
 
 
 With the :guilabel:`Load min/max values` section, scaling of the color table
@@ -228,7 +228,7 @@ You can also create individual color maps for the single bands here.
 .. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
    :align: center
 
-   Raster Renderer - Singleband pseudocolor
+   Raster Style - Singleband pseudocolor rendering
 
 
 Three types of color interpolation are available:
@@ -299,7 +299,7 @@ matrix through a geometric transformation.
 .. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
    :align: center
 
-   Raster Rendering - Resampling
+   Raster Style - Color rendering and Resampling settings
 
 
 When applying the 'Nearest neighbour' method, the map can have a pixelated structure
@@ -366,7 +366,23 @@ level of zoom.
 You must have write access in the directory where the original data is stored
 to build pyramids.
 
-Several resampling methods can be used to calculate the pyramids:
+From the :guilabel:`Resolutions` list, select resolutions for which you want to
+create pyramid by clicking on them.
+
+If you choose **Internal (if possible)** from the :guilabel:`Overview format`
+drop-down menu, QGIS tries to build pyramids internally.
+
+.. note::
+
+   Please note that building pyramids may alter the original data file, and once
+   created they cannot be removed. If you wish to preserve a 'non-pyramided'
+   version of your raster, make a backup copy prior to building pyramids.
+
+If you choose **External** and **External (Erdas Imagine)** the pyramids will
+be created in a file next to the original raster with the same name and a
+:file:`.ovr` extension.
+
+Several :guilabel:`Resampling methods` can be used to calculate the pyramids:
 
 * Nearest Neighbour
 * Average
@@ -375,20 +391,15 @@ Several resampling methods can be used to calculate the pyramids:
 * Mode
 * None
 
-If you choose 'Internal (if possible)' from the :guilabel:`Overview format`
-drop-down menu, QGIS tries to build pyramids internally. You can also choose
-'External' and 'External (Erdas Imagine)'.
+Finally, click **[Build pyramids]** to start the process.
 
 .. _figure_raster_pyramids:
 
 .. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
    :align: center
 
-   The Pyramids Tab
+   Raster Pyramids
 
-Please note that building pyramids may alter the original data file, and once
-created they cannot be removed. If you wish to preserve a 'non-pyramided'
-version of your raster, make a backup copy prior to building pyramids.
 
 .. index:: Histogram
 .. _label_histogram:

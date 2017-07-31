@@ -29,8 +29,7 @@ and open them in a QGIS project by drag-and-drop.
 
 **Start the QGIS browser**
 
-* |nix| Type in "qbrowser" at a command prompt.
-* |win| Start the QGIS Browser using the Start menu or desktop shortcut.
+* |win| |nix| Start the QGIS Browser using the Start menu or desktop shortcut.
 * |osx| The QGIS Browser is available from your Applications folder.
 
 
