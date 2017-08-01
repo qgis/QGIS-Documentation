@@ -259,25 +259,49 @@ symbols with totally transparent fill/border to achieve this.
 Categorized Renderer
 ....................
 
-The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render all
-features from a layer, using a user-defined symbol whose aspect reflects the
-attribute(s) of a selected feature. The Categorized menu allows you to select:
+The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render the
+features of a layer, using a user-defined symbol whose aspect reflects the
+discrete values of a field or an expression. The Categorized menu allows you to
 
-* an existing field (using the Column listbox) or type/build an :ref:`expression
-  <vector_expressions>` using the |expression| :sup:`Set column expression`
-  returning values to compare features attributes with, and classify them.
-  Expression can return:
-  
-  * values: ``myfield``, ``concat( field1, ' ', field2 )``,  ``myfield % 2``;
-  * boolean: ``myfield >= 100``. ``myfield % 2 = 0``, ``$id = @atlas_featureid``
-    ``within( $geometry, @atlas_geometry )``.
+* select an existing field (using the Column listbox) or
+* type or build an :ref:`expression <vector_expressions>` using the
+  |expression| :sup:`Set column expression`.
+  Expression used to classify features can be of any type; it can for example:
+
+  * be a comparison: e.g. ``myfield >= 100``, ``$id = @atlas_featureid``,
+    ``myfield % 2 = 0``, ``within( $geometry, @atlas_geometry )``. In this case,
+    QGIS returns values ``1`` (**True**) and ``0`` (**False**).
+  * combine different fields, e.g. ``concat( field1, ' ', field2 )`` particularly
+    useful when you want to process classification on two or more fields
+    simultaneously.
+  * be a calculation on fields: e.g. ``myfield % 2``, ``year( myfield )``
+    `` field_1 + field_2``.
+  * be used to transform linear values in discrete classes, e.g.:
+
+    ::
+
+     CASE WHEN x > 1000 THEN 'Big' ELSE 'Small' END``
+
+  * combine several discrete values in one single category.
+
+    ::
+
+     CASE
+     WHEN building IN ('residence', 'mobile home') THEN 'residential'
+     WHEN building IN ('commercial', 'industrial') THEN 'Commercial and Industrial'
+     END
+
+
+  .. note:: While you can use any kind of expression to categorize features,
+    for some complex expressions it might be simpler to use :ref:`rule-based
+    rendering <rule_based_rendering>`.
 
 * the symbol (using the :ref:`symbol-selector` dialog) which will be used as
   base symbol for each class;
 * the range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected.
 
-Then click on Classify button to create classes from the distinct
+Then click on **[Classify]** button to create classes from the distinct
 value of the attribute column. Each class can be disabled unchecking the
 checkbox at the left of the class name.
 
@@ -1404,7 +1428,7 @@ Using data-defined override for labeling
 With the |dataDefined| :sup:`Data defined override` functions, the settings for
 the labeling are overridden by entries in the attribute table. It can be used to
 set values for most of the labeling options described above. See the widget's
-description and manipulation in :ref:`data_defined` section. 
+description and manipulation in :ref:`data_defined` section.
 
 .. _label_toolbar:
 
@@ -1446,7 +1470,7 @@ same way with diagrams:
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
   font, size... as long as this property has been mapped to a field.
-  
+
 .. warning:: **Label tools overwrite current field values**
 
   Using the :guilabel:`Label toolbar` to customize the labeling actually writes
@@ -1484,9 +1508,9 @@ We now describe an example using the data-defined override function for the
    of the attribute table.
 #. Using :ref:`geometry_generator_symbol` with the expression below, you can
    also add a linestring symbol layer to connect each lake to its moved label:
-   
+
    ::
-   
+
       make_line( centroid( $geometry ), make_point( "xlabel", "ylabel" ) )
 
 
