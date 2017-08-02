@@ -3,6 +3,7 @@
 
 .. _server_env_variables:
 
+**********************
 Advanced configuration
 **********************
 
