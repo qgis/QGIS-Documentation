@@ -266,23 +266,23 @@ discrete values of a field or an expression. The Categorized menu allows you to
 * select an existing field (using the Column listbox) or
 * type or build an :ref:`expression <vector_expressions>` using the
   |expression| :sup:`Set column expression`.
-  Expression used to classify features can be of any type; it can for example:
+  The expression used to classify features can be of any type; it can for example:
 
-  * be a comparison: e.g. ``myfield >= 100``, ``$id = @atlas_featureid``,
+  * be a comparison, e.g. ``myfield >= 100``, ``$id = @atlas_featureid``,
     ``myfield % 2 = 0``, ``within( $geometry, @atlas_geometry )``. In this case,
     QGIS returns values ``1`` (**True**) and ``0`` (**False**).
   * combine different fields, e.g. ``concat( field1, ' ', field2 )`` particularly
     useful when you want to process classification on two or more fields
     simultaneously.
-  * be a calculation on fields: e.g. ``myfield % 2``, ``year( myfield )``
-    `` field_1 + field_2``.
+  * be a calculation on fields, e.g. ``myfield % 2``, ``year( myfield )``
+    ``field_1 + field_2``.
   * be used to transform linear values in discrete classes, e.g.:
 
     ::
 
-     CASE WHEN x > 1000 THEN 'Big' ELSE 'Small' END``
+     CASE WHEN x > 1000 THEN 'Big' ELSE 'Small' END
 
-  * combine several discrete values in one single category.
+  * combine several discrete values in one single category, e.g.:
 
     ::
 
