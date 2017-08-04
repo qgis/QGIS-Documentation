@@ -254,7 +254,10 @@ is still there::
             else:
                 QgsMessageLog.logMessage("FAIL    - ParamsFilter.responseComplete", 'plugin', QgsMessageLog.CRITICAL)
 
-This is an extract of what you see in the log file::
+This is an extract of what you see in the log file:
+
+.. code-block:: guess
+   :emphasize-lines: 13
 
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloServerServer - loading filter ParamsFilter
     src/core/qgsmessagelog.cpp: 45: (logMessage) [1ms] 2014-12-12T12:39:29 Server[0] Server plugin HelloServer loaded!
@@ -273,7 +276,7 @@ This is an extract of what you see in the log file::
     src/mapserver/qgshttprequesthandler.cpp: 158: (sendResponse) [0ms] Sending HTTP response
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloFilter.sendResponse
 
-On line 13 the “SUCCESS” string indicates that the plugin passed the test.
+On the highlighted line the “SUCCESS” string indicates that the plugin passed the test.
 
 The same technique can be exploited to use a custom service instead of a core
 one: you could for example skip a **WFS** **SERVICE** request or any other core
