@@ -42,20 +42,6 @@ Now, install QGIS Server:
 
   $ sudo apt-get install qgis-server python-qgis
 
-Installation of a HelloWorld example plugin for testing the servers. You create
-a directory to hold server plugins. This will be specified in the virtual host
-configuration and passed on to the server through an environment variable:
-
-.. code-block:: bash
-
-  $ sudo mkdir -p /opt/qgis-server/plugins
-  $ cd /opt/qgis-server/plugins
-  $ sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
-  # In case unzip was not installed before:
-  $ sudo apt-get install unzip
-  $ sudo unzip master.zip
-  $ sudo mv qgis-helloserver-master HelloServer
-
 HTTP Server configuration
 =========================
 
