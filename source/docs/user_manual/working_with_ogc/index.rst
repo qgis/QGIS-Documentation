@@ -12,5 +12,4 @@ Working with OGC Data
 	:maxdepth: 2
 
 	ogc_client_support
-	ogc_server_support
-
+	server/index
