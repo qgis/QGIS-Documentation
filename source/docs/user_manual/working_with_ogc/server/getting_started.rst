@@ -19,7 +19,7 @@ At this point, we will give a short and simple sample installation how-to for
 a minimal working configuration using Apache2 on Debian Squeeze (or with
 negligible variations on Ubuntu 14.04).
 Many other OSs provide packages for QGIS Server, too. If you have to build it
-all from source, please refer to the URLs above.
+all from source, please refer to the URLs given in :ref:`label_qgisserver`.
 
 Firstly, add the following debian GIS repository:
 
@@ -48,7 +48,7 @@ HTTP Server configuration
 Apache
 ------
 
-Install the Apache server in a separate virtual host listening on port 80.
+Install the Apache server in a separate virtual host listening on port ``80``.
 Enable the rewrite module to pass HTTP BASIC auth headers:
 
 .. code-block:: bash
@@ -117,15 +117,15 @@ Introduce the following in your nginx server block configuration:
      location ~ ^/cgi-bin/.*\.fcgi$ {
          gzip           off;
          include fastcgi_params;
-         fastcgi_pass   unix:/var/run/fcgiwrap.socket;/
-         fastcgi_param SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
+         fastcgi_pass   unix:/var/run/fcgiwrap.socket;
 
+         fastcgi_param  SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
          fastcgi_param  QGIS_SERVER_LOG_FILE /logs/qgisserver.log;
          fastcgi_param  QGIS_SERVER_LOG_LEVEL 0;
          fastcgi_param  QGIS_DEBUG 1;
      }
 
-As you can see from lines ``7-9`` you can add parameters in your location block
+As you can see from lines ``6-9`` you can add parameters in your location block
 in the form of ``fastcgi_param param_name param_value``,
 e.g. ``fastcgi_param  DISPLAY ":99";``.
 
@@ -189,11 +189,11 @@ located in the :file:`cgi-bin` folder.
 
  If you're using the QGIS project with styling based on SVG files using
  relative paths then you should know that the server considers the path
- relative to its `qgis_mapserv.fcgi` file (not to the `qgs` file).
+ relative to its :file:`qgis_mapserv.fcgi` file (not to the :file:`qgs` file).
  So, if you deploy a project on the server and the SVG files are not placed
  accordingly, the output images may not respect the Desktop styling.
  To ensure this doesn't happen, you can simply copy the SVG files relative
- to the `qgis_mapserv.fcgi`. You can also create a symbolic link in the
+ to the :file:`qgis_mapserv.fcgi`. You can also create a symbolic link in the
  directory where the fcgi file resides that points to the directory containing
  the SVG files (on Linux/Unix).
 
@@ -242,7 +242,7 @@ Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
 
-If one of your layers uses the Map Tip display (i.e. to show text using
+If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to show text using
 expressions) this will be listed inside the GetFeatureInfo output. If the
 layer uses a Value Map for one of its attributes, this information will also
 be shown in the GetFeatureInfo output.
