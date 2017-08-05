@@ -11,9 +11,10 @@ Plugins
 Installation
 ============
 
-Installation of a HelloWorld example plugin for testing the servers. You create
-a directory to hold server plugins. This will be specified in the virtual host
-configuration and passed on to the server through an environment variable:
+To install the HelloWorld example plugin for testing the servers, you firstly
+have to create a directory to hold server plugins. This will be specified in
+the virtual host configuration and passed on to the server through an
+environment variable:
 
 .. code-block:: bash
 
