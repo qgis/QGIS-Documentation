@@ -45,7 +45,9 @@ Here is a pseudo code showing a typical server session and when the filter’s c
     * if there is not a response
         * if SERVICE is WMS/WFS/WCS
             * create WMS/WFS/WCS server
-                * call server’s :func:`executeRequest` and possibily call :func:`sendResponse` plugin filters when streaming output or store the byte stream output and content type in the request handler
+                * call server’s :func:`executeRequest` and possibly call :func:`sendResponse`
+                  plugin filters when streaming output or store the byte stream output
+                  and content type in the request handler
         * call plugins :func:`responseComplete` filters
     * call plugins :func:`sendResponse` filters
     * request handler output the response
@@ -56,37 +58,62 @@ The following paragraphs describe the available callbacks in details.
 requestReady
 ------------
 
-This is called when the request is ready: incoming URL and data have been parsed and before entering the core services (WMS, WFS etc.) switch, this is the point where you can manipulate the input and perform actions like:
+This is called when the request is ready: incoming URL and data have been parsed
+and before entering the core services (WMS, WFS etc.) switch, this is the point
+where you can manipulate the input and perform actions like:
 
 * authentication/authorization
 * redirects
 * add/remove certain parameters (typenames for example)
 * raise exceptions
 
-You could even substitute a core service completely by changing **SERVICE** parameter and hence bypassing the core service completely (not that this make much sense though).
+You could even substitute a core service completely by changing **SERVICE**
+parameter and hence bypassing the core service completely (not that this make
+much sense though).
 
 
 sendResponse
 ------------
 
 
-This is called whenever output is sent to **FCGI** `stdout` (and from there, to the client), this is normally done after core services have finished their process and after responseComplete hook was called, but in a few cases XML can become so huge that a streaming XML implementation was needed (WFS GetFeature is one of them), in this case, :func:`sendResponse` is called multiple times before the response is complete (and before :func:`responseComplete` is called). The obvious consequence is that :func:`sendResponse` is normally called once but might be exceptionally called multiple times and in that case (and only in that case) it is also called before :func:`responseComplete`.
+This is called whenever output is sent to **FCGI** ``stdout`` (and from there, to
+the client), this is normally done after core services have finished their process
+and after responseComplete hook was called, but in a few cases XML can become so
+huge that a streaming XML implementation was needed (WFS GetFeature is one of them),
+in this case, :func:`sendResponse` is called multiple times before the response
+is complete (and before :func:`responseComplete` is called). The obvious consequence
+is that :func:`sendResponse` is normally called once but might be exceptionally
+called multiple times and in that case (and only in that case) it is also called
+before :func:`responseComplete`.
 
-:func:`sendResponse` is the best place for direct manipulation of core service’s output and while :func:`responseComplete` is typically also an option, :func:`sendResponse` is the only viable option  in case of streaming services.
+:func:`sendResponse` is the best place for direct manipulation of core service’s
+output and while :func:`responseComplete` is typically also an option,
+:func:`sendResponse` is the only viable option  in case of streaming services.
 
 responseComplete
 ----------------
 
-This is called once when core services (if hit) finish their process and the request is ready to be sent to the client. As discussed above, this is  normally called before :func:`sendResponse` except for streaming services (or other plugin filters) that might have called :func:`sendResponse` earlier.
+This is called once when core services (if hit) finish their process and the
+request is ready to be sent to the client. As discussed above, this is normally
+called before :func:`sendResponse` except for streaming services (or other plugin
+filters) that might have called :func:`sendResponse` earlier.
 
-:func:`responseComplete` is the ideal place to provide new services implementation (WPS or custom services) and to perform direct manipulation of the output coming from core services (for example to add a watermark upon a WMS image).
+:func:`responseComplete` is the ideal place to provide new services implementation
+(WPS or custom services) and to perform direct manipulation of the output coming
+from core services (for example to add a watermark upon a WMS image).
 
 Raising exception from a plugin
 ===============================
 
-Some work has still to be done on this topic: the current implementation can distinguish between handled and unhandled exceptions by setting a :class:`QgsRequestHandler` property to an instance of :class:`QgsMapServiceException`, this way the main C++ code can catch handled python exceptions and ignore unhandled exceptions (or better: log them).
+Some work has still to be done on this topic: the current implementation can
+distinguish between handled and unhandled exceptions by setting a
+:class:`QgsRequestHandler` property to an instance of :class:`QgsMapServiceException`,
+this way the main C++ code can catch handled python exceptions and ignore
+unhandled exceptions (or better: log them).
 
-This approach basically works but it is not very "pythonic": a better approach would be to raise exceptions from python code and see them bubbling up into C++ loop for being handled there.
+This approach basically works but it is not very "pythonic": a better approach
+would be to raise exceptions from python code and see them bubbling up into C++
+loop for being handled there.
 
 
 .. index:: server plugins; metadata.txt, metadata, metadata.txt
@@ -183,16 +210,28 @@ The filters must be registered into the **serverIface** as in the following exam
             self.serverIface = serverIface
             serverIface.registerFilter( HelloFilter, 100 )
 
-The second parameter of :func:`registerFilter` allows to set a priority which defines the order for the callbacks with the same name (the lower priority is invoked first).
+The second parameter of :func:`registerFilter` allows to set a priority which
+defines the order for the callbacks with the same name (the lower priority is
+invoked first).
 
-By using the three callbacks, plugins can manipulate the input and/or the output of the server in many different ways. In every moment, the plugin instance has access to the :class:`QgsRequestHandler` through the :class:`QgsServerInterface`, the :class:`QgsRequestHandler` has plenty of methods that can be used to alter the input parameters before entering the core processing of the server (by using :func:`requestReady`) or after the request has been processed by the core services (by using :func:`sendResponse`).
+By using the three callbacks, plugins can manipulate the input and/or the output
+of the server in many different ways. In every moment, the plugin instance has
+access to the :class:`QgsRequestHandler` through the :class:`QgsServerInterface`,
+the :class:`QgsRequestHandler` has plenty of methods that can be used to alter
+the input parameters before entering the core processing of the server (by using
+:func:`requestReady`) or after the request has been processed by the core services
+(by using :func:`sendResponse`).
 
 The following examples cover some common use cases:
 
 Modifying the input
 -------------------
 
-The example plugin contains a test example that changes input parameters coming from the query string, in this example a new parameter is injected into the (already parsed) `parameterMap`, this parameter is then visible by core services (WMS etc.), at the end of core services processing we check that the parameter is still there::
+The example plugin contains a test example that changes input parameters coming
+from the query string, in this example a new parameter is injected into the
+(already parsed) ``parameterMap``, this parameter is then visible by core services
+(WMS etc.), at the end of core services processing we check that the parameter
+is still there::
 
     from qgis.server import *
     from qgis.core import *
@@ -215,7 +254,10 @@ The example plugin contains a test example that changes input parameters coming 
             else:
                 QgsMessageLog.logMessage("FAIL    - ParamsFilter.responseComplete", 'plugin', QgsMessageLog.CRITICAL)
 
-This is an extract of what you see in the log file::
+This is an extract of what you see in the log file:
+
+.. code-block:: guess
+   :emphasize-lines: 13
 
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloServerServer - loading filter ParamsFilter
     src/core/qgsmessagelog.cpp: 45: (logMessage) [1ms] 2014-12-12T12:39:29 Server[0] Server plugin HelloServer loaded!
@@ -234,15 +276,23 @@ This is an extract of what you see in the log file::
     src/mapserver/qgshttprequesthandler.cpp: 158: (sendResponse) [0ms] Sending HTTP response
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloFilter.sendResponse
 
-On line 13 the “SUCCESS” string indicates that the plugin passed the test.
+On the highlighted line the “SUCCESS” string indicates that the plugin passed the test.
 
-The same technique can be exploited to use a custom service instead of a core one: you could for example skip a **WFS** **SERVICE** request or any other core request just by changing the **SERVICE** parameter to something different and the core service will be skipped, then you can inject your custom results into the output and send them to the client (this is explained here below).
+The same technique can be exploited to use a custom service instead of a core
+one: you could for example skip a **WFS** **SERVICE** request or any other core
+request just by changing the **SERVICE** parameter to something different and
+the core service will be skipped, then you can inject your custom results into
+the output and send them to the client (this is explained here below).
 
 
 Modifying or replacing the output
 ---------------------------------
 
-The watermark filter example shows how to replace the WMS output with a new image obtained by adding a watermark image on the top of the WMS image generated by the WMS core service::
+The watermark filter example shows how to replace the WMS output with a new
+image obtained by adding a watermark image on the top of the WMS image generated
+by the WMS core service:
+
+::
 
     import os
 
@@ -281,7 +331,13 @@ The watermark filter example shows how to replace the WMS output with a new imag
                 request.clearBody()
                 request.appendBody(ba)
 
-In this example the **SERVICE** parameter value is checked and if the incoming request is a **WMS** **GETMAP** and no exceptions have been set by a previously executed plugin or by the core service (WMS in this case), the WMS generated image is retrieved from the output buffer and the watermark image is added. The final step is to clear the output buffer and replace it with the newly generated image. Please note that in a real-world situation we should also check for the requested image type instead of returning PNG in any case.
+In this example the **SERVICE** parameter value is checked and if the incoming
+request is a **WMS** **GETMAP** and no exceptions have been set by a previously
+executed plugin or by the core service (WMS in this case), the WMS generated
+image is retrieved from the output buffer and the watermark image is added.
+The final step is to clear the output buffer and replace it with the newly
+generated image. Please note that in a real-world situation we should also check
+for the requested image type instead of returning PNG in any case.
 
 Access control plugin
 =====================
