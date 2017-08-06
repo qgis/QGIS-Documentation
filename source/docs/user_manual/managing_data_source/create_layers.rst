@@ -38,12 +38,15 @@ is supported within the GRASS plugin.
 Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
 
+
+.. _vector_create_shapefile:
+
 Creating a new Shapefile layer
 ------------------------------
 
 To create a new shape layer for editing, choose :menuselection:`Create
 Layer -->` |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
-:menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
+:menuselection:`Layer` menu. The :guilabel:`New Shapefile Layer` dialog will be
 displayed as shown in figure_create_shapefile_. Choose the type of layer
 (point, line or polygon) and the CRS (coordinate reference system).
 
@@ -68,10 +71,10 @@ the width and precision of the new attribute column. Once you are happy with the
 attributes, click **[OK]** and provide a name for the shapefile. QGIS will
 automatically add a :file:`.shp` extension to the name you specify. Once the
 layer has been created, it will be added to the map, and you can edit it in the
-same way as described in section :ref:`sec_edit_existing_layer` above.
+same way as described in section :ref:`sec_edit_existing_layer`.
+
 
 .. index:: New SpatiaLite layer
-
 .. _vector_create_spatialite:
 
 Creating a new SpatiaLite layer
@@ -100,7 +103,7 @@ the attribute columns you want to create with the corresponding column type, and
 click on the **[Add to attribute list]** button. Once you are happy with the
 attributes, click **[OK]**. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
-:ref:`sec_edit_existing_layer` above.
+:ref:`sec_edit_existing_layer`.
 
 Further management of SpatiaLite layers can be done with the DB Manager. See
 :ref:`dbmanager`.
@@ -112,14 +115,18 @@ Further management of SpatiaLite layers can be done with the DB Manager. See
 Creating a new GPX layer
 -------------------------
 
-To create a new GPX file, you need to load the GPS plugin first. :menuselection:`Plugins -->`
-|showPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
-Activate the |checkbox| :guilabel:`GPS Tools` checkbox.
+To create a new GPX file, you need to load the GPS plugin first.
+:menuselection:`Plugins -->` |showPluginManager| :menuselection:`Plugin
+Manager...` opens the Plugin Manager Dialog. Activate the |checkbox|
+:guilabel:`GPS Tools` checkbox.
 
 When this plugin is loaded, choose :menuselection:`New -->` |createGPX|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
-In the :guilabel:`Save new GPX file as` dialog, you can choose where to save the
-new GPX layer.
+In the :guilabel:`Save new GPX file as` dialog, choose where to save the
+new file and press **[Save]**. Three new layers are added to the
+:guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks`` with
+predefined structure.
+
 
 .. index:: New Temporary Scratch layer
 .. _vector_new_scratch_layer:
