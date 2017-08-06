@@ -507,7 +507,7 @@
   <projectlayers>
     <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>alaska20130517221648216</id>
-      <datasource>../../../../Geodata/qgis_sample_data/shapefiles/alaska.shp</datasource>
+      <datasource>../../../qgis_sample_data/shapefiles/alaska.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -767,7 +767,7 @@
         <ymax>7728392.25806913338601589</ymax>
       </extent>
       <id>climate20170517232337515</id>
-      <datasource>../../../../Geodata/qgis_sample_data/climate/climate.shp</datasource>
+      <datasource>../../../qgis_sample_data/climate/climate.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1096,7 +1096,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>climate_copy20170517234712106</id>
-      <datasource>../../../../Geodata/qgis_sample_data/climate/climate.shp</datasource>
+      <datasource>../../../qgis_sample_data/climate/climate.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1533,10 +1533,10 @@ def my_form_open(dialog, layer, feature):
     pass
 
 def saveProject():
-	msgbar = iface.messageBar()
-	msgbar.PushMessage("WARNING","Project contains sensitive data."
-	                   " Do not publish.",
-					   QgsMessageBar.WARNING, 10)
+    msgbar = iface.messageBar()
+    msgbar.PushMessage("WARNING","Project contains sensitive data."
+                       " Do not publish.",
+                       QgsMessageBar.WARNING, 10)
     pass
 
 def closeProject():
