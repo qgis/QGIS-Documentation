@@ -62,6 +62,7 @@
         // IMPORTANT: space, -, _ etc replacing below must be 100% inline with
         // code in scripts/create_transifex_resources.sh !!
         // https://github.com/qgis/QGIS-Website/blob/master/scripts/create_transifex_resources.sh
+        /*
         fix_translation_link = 'https://www.transifex.com/projects/p/qgis-documentation/translate/#' + 
             currentLang.slice(1) + currentPage.replace(/_/g, "-").replace(/ /g, "-").replace(/\//g, "_").replace(/\.html/g, "").replace(/\./g, "-")
         if ('/en/' != currentLang) {
@@ -73,7 +74,7 @@
         if (true){
             $('#fix_text_link').attr('href', fix_text_link);
         }
-
+        */
         $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
 
         $("#languages").change(function() {
