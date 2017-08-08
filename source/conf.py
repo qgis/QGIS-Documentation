@@ -220,7 +220,7 @@ latex_elements = {
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS 2.18'. Visit http://docs.qgis.org/2.14 for QGIS 2.14 docs and translations.`
+.. |updatedisclaimer| replace:: ` `
 """
 
 # Substitutions below are sorted and should be in lowerCamelCase
@@ -236,7 +236,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.14
+.. |CURRENT| replace:: 2.18
 
 .. |degrees| unicode:: 0x00B0
    :ltrim:

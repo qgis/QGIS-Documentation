@@ -1,0 +1,532 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-08 13:23+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:7
+msgid "Services"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:14
+msgid ""
+"QGIS Server supports some vendor parameters and requests that greatly "
+"enhance the possibilities of customising its behavior. The following "
+"paragraphs list the vendor parameters and the environment variables "
+"supported by the server."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:19
+msgid "Web Map Service (WMS)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:22
+msgid "GetMap"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:24
+msgid ""
+"In the WMS GetMap request, QGIS Server accepts a couple of extra parameters "
+"in addition to the standard parameters according to the OGC WMS 1.3.0 "
+"specification:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:29
+msgid ""
+"**DPI** parameter: The ``DPI`` parameter can be used to specify the "
+"requested output resolution."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:32
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:61
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:77
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:92
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:276
+msgid "Example::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:36
+msgid ""
+"**IMAGE_QUALITY** parameter is only used for JPEG images. By default, the "
+"JPEG compression is ``-1``. You can change the default per QGIS project in "
+"the :menuselection:`OWS Server --> WMS capabilities` menu of the "
+":menuselection:`Project --> Project Properties` dialog. If you want to "
+"override it in a ``GetMap`` request you can do it using the "
+"``IMAGE_QUALITY`` parameter:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:48
+msgid ""
+"**image/png; mode=** can be used to override the png format. You can choose "
+"between ``image/png; mode=16bit``, ``image/png; mode=8bit`` and ``image/png;"
+" mode=1bit``. This can shrink the output image size quite a bit. Example:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:58
+msgid ""
+"**OPACITIES** parameter: Opacity can be set on layer or group level. Allowed"
+" values range from 0 (fully transparent) to 255 (fully opaque)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:66
+msgid ""
+"**FILTER** parameter: Subsets of layers can be selected with the ``FILTER`` "
+"parameter. Syntax is basically the same as for the QGIS subset string. "
+"However, there are some restrictions to avoid SQL injections into databases "
+"via QGIS server:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:70
+msgid ""
+"Text strings need to be enclosed with quotes (single quotes for strings, "
+"double quotes for attributes) A space between each word / special character "
+"is mandatory. Allowed Keywords and special characters are "
+"'AND','OR','IN','=','<','>=', '>','>=','!=*,'(',')'. Semicolons in string "
+"expressions are not allowed"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:83
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS server then returns info about the "
+"matching features and generates a combined bounding box in the xml output."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:88
+msgid ""
+"**SELECTION** parameter: The ``SELECTION`` parameter can highlight features "
+"from one or more layers. Vector features can be selected by passing comma "
+"separated lists with feature ids in ``GetMap`` and ``GetPrint``."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:96
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"**SELECTION** option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``. As those features "
+"id's correspond in the source dataset to **France** and **Romania** they're "
+"highlighted in yellow."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:105
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:107
+msgid ""
+"It is possible to export layers in the DXF format using the GetMap Request. "
+"Only layers that have read access in the WFS service are exported in the DXF"
+" format. Here is a valid REQUEST and a documentation of the available "
+"parameters::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:113
+msgid "Parameters:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:115
+msgid "FORMAT=application/dxf"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:116
+msgid "FILE_NAME=yoursuggested_file_name_for_download.dxf"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:117
+msgid ""
+"FORMAT_OPTIONS=see options below, key:value pairs separated by Semicolon"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:119
+msgid "FORMAT_OPTIONS Parameters:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:121
+msgid ""
+"**SCALE:scale** to be used for symbology rules, filters and styles (not an "
+"actual scaling of the data - data remains in the original scale)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:123
+msgid ""
+"**MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY** corresponds to "
+"the three export options offered in the QGIS Desktop DXF export dialog."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:125
+msgid ""
+"**LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames** - "
+"if not specified, the original QGIS layer names are used."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:127
+msgid ""
+"**USE_TITLE_AS_LAYERNAME** if enabled, the title of the layer will be used "
+"as layer name."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:132
+msgid "GetFeatureInfo"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:134
+msgid ""
+"QGIS Server WMS GetFeatureInfo requests supports the following extra "
+"optional parameters to define the tolerance for point, line and polygon "
+"layers:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:137
+msgid ""
+"**FI_POINT_TOLERANCE** parameter: Tolerance for point layers "
+"*GetFeatureInfo* request, in pixels."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:139
+msgid ""
+"**FI_LINE_TOLERANCE** parameter: Tolerance for linestring layers "
+"*GetFeatureInfo* request, in pixels."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:141
+msgid ""
+"**FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers "
+"*GetFeatureInfo* request, in pixels."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:148
+msgid "GetPrint"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:150
+msgid ""
+"QGIS server has the capability to create print composer output in pdf or "
+"pixel format. Print composer windows in the published project are used as "
+"templates. In the GetPrint request, the client has the possibility to "
+"specify parameters of the contained composer maps and labels."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:155
+msgid "Example:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:157
+msgid ""
+"The published project has two composer maps. In the `GetProjectSettings` "
+"response, they are listed as possible print templates:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:172
+msgid "The client has now the information to request a print output::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:176
+msgid "Parameters in the GetPrint request are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:178
+msgid ""
+"**<map_id>:EXTENT** gives the extent for a composer map as "
+"xmin,ymin,xmax,ymax."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:179
+msgid "**<map_id>:ROTATION** map rotation in degrees"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:180
+msgid ""
+"**<map_id>:GRID_INTERVAL_X**, **<map_id>:GRID_INTERVAL_Y** Grid line density"
+" for a composer map in x- and y-direction"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:182
+msgid ""
+"**<map_id>:SCALE** Sets a mapscale to a composer map. This is useful to "
+"ensure scale based visibility of layers and labels even if client and server"
+" may have different algorithms to calculate the scale denominator"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:185
+msgid ""
+"**<map_id>:LAYERS**, **<map_id>:STYLES** possibility to give layer and "
+"styles list for composer map (useful in case of overview maps which should "
+"have only a subset of layers)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:191
+msgid "GetLegendGraphics"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:193
+msgid ""
+"Several additional parameters are available to change the size of the legend"
+" elements:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:196
+msgid "**BOXSPACE** space between legend frame and content (mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:197
+msgid "**LAYERSPACE** versical space between layers (mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:198
+msgid ""
+"**LAYERTITLESPACE** vertical space between layer title and items following "
+"(mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:200
+msgid "**SYMBOLSPACE** vertical space between symbol and item following (mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:201
+msgid "**ICONLABELSPACE** horizontal space between symbol and label text (mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:202
+msgid "**SYMBOLWIDTH** width of the symbol preview (mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:203
+msgid "**SYMBOLHEIGHT** height of the symbol preview (mm)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:205
+msgid ""
+"These parameters change the font properties for layer titles and item "
+"labels:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:207
+msgid ""
+"**LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:208
+msgid "**LAYERFONTBOLD / ITEMFONTBOLD** 'TRUE' to use a bold font"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:209
+msgid "**LAYERFONTSIZE / ITEMFONTSIZE** Font size in point"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:210
+msgid "**LAYERFONTITALIC / ITEMFONTITALIC** 'TRUE' to use italic font"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:211
+msgid ""
+"**LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. #FF0000 for red)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:212
+msgid ""
+"**LAYERTITLE / RULELABEL** (from QGIS 2.4) set them to 'FALSE' to get only "
+"the legend graphics without labels"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:215
+msgid ""
+"Contest based legend. These parameters let the client request a legend "
+"showing only the symbols for the features falling into the requested area:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:218
+msgid "**BBOX** the geographical area for which the legend should be built"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:219
+msgid ""
+"**CRS / SRS** the coordinate reference system adopted to define the BBOX "
+"coordinates"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:221
+msgid ""
+"**WIDTH / HEIGHT** if set these should match those defined for the GetMap "
+"request, to let QGIS Server scale symbols according to the map view image "
+"size."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:225
+msgid ""
+"Contest based legend features are based on the `UMN MapServer "
+"implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:229
+msgid "GetProjectSettings"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:231
+msgid ""
+"This request type works similar to **GetCapabilities**, but it is more "
+"specific to QGIS Server and allows a client to read additional information "
+"which is not available in the GetCapabilities output:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:235
+msgid "initial visibility of layers"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:236
+msgid "information about vector attributes and their edit types"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:237
+msgid "information about layer order and drawing order"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:238
+msgid "list of layers published in WFS"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:242
+msgid "Web Feature Service (WFS)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:245
+msgid "GetFeature"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:247
+msgid ""
+"In the WFS GetFeature request, QGIS Server accepts two extra parameters in "
+"addition to the standard parameters according to the OGC WFS 1.0.0 "
+"specification:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:251
+msgid ""
+"**GeometryName** parameter: this parameter can be used to get the *extent* "
+"or the *centroid* as the geometry or no geometry if *none* if used (ie "
+"attribute only). Allowed values are *extent*, *centroid* or *none*."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:254
+msgid ""
+"**StartIndex** parameter: STARTINDEX is standard in WFS 2.0, but it's an "
+"extension for WFS 1.0.0 which is the only version implemented in QGIS "
+"Server. STARTINDEX can be used to skip some features in the result set and "
+"in combination with MAXFEATURES will provide for the ability to use WFS "
+"GetFeature to page through results. Note that STARTINDEX=0 means start with"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:264
+msgid "Extra parameters supported by all request types"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:266
+msgid ""
+"**FILE_NAME** parameter: if set, the server response will be sent to the "
+"client as a file attachment with the specified file name."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:269
+msgid ""
+"**MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used "
+"to specify the path to the QGIS project file. You can specify an absolute "
+"path or a path relative to the location of the server executable "
+"(:file:`qgis_mapserv.fcgi`). If not specified, QGIS Server searches for .qgs"
+" files in the directory where the server executable is located."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:283
+msgid ""
+"You can define a **QGIS_PROJECT_FILE** as an environment variable to tell "
+"the server executable where to find the QGIS project file. This variable "
+"will be the location where QGIS will look for the project file. If not "
+"defined it will use the MAP parameter in the request and finally look at the"
+" server executable directory."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:289
+msgid "the first feature, skipping none."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:294
+msgid "REDLINING"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:296
+msgid ""
+"This feature is available and can be used with ``GetMap`` and ``GetPrint`` "
+"requests."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:298
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:303
+msgid "The request is in the format::"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:316
+msgid ""
+"Here is the image outputed by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:324
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:326
+msgid "You can see there are several parameters in this request:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:328
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example:  "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:332
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:335
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:337
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:339
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:341
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/services.rst:343
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr ""

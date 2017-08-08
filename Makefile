@@ -12,7 +12,7 @@ BUILDDIR      = output
 # using the -A flag, we create a python variable named 'language', which
 # we then can use in html templates to create language dependent switches
 SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
-VERSION       = testing
+VERSION       = 2.18
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -201,14 +201,23 @@ pdf: html
 	mv $(BUILDDIR)/latex/$(LANG)/QGISDevelopersGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide.pdf
 
 full:  
-#	@-if [ $(LANG) != "en" ]; then \
-#		echo; \
-#		echo Pulling $$LANG from transifex; \
-#		# --minimum-perc=1 so only files which have at least 1% translation are pulled \
-#		# -f to force, --skip to not stop with errors \
-#		# -l lang \
-#		echo tx pull --minimum-perc=1 --skip -f -l $$LANG; \
-#        fi
+	@-if [ $(LANG) = "en" ]; then \
+		echo; \
+	elif [ $(LANG) = "zh_CN" ]; then \
+		echo; \
+		echo Pulling zh-Hans from transifex but renaming it to zh_CN; \
+		tx pull --minimum-perc=1 --skip -f -l zh-Hans; \
+		mv i18n/zh-Hans i18n/zh_CN; \
+	elif [ $(LANG) = "zh_TW" ]; then \
+		echo; \
+		echo Pulling zh-Hant from transifex but renaming it to zh_TW; \
+		echo tx pull --minimum-perc=1 --skip -f -l zh-Hant; \
+		mv i18n/zh-Hant i18n/zh_TW; \
+	else \
+		echo; \
+		echo Pulling $$LANG from transifex; \
+		tx pull --minimum-perc=1 --skip -f -l $$LANG; \
+	fi
 	make pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
@@ -245,12 +254,14 @@ gettext:
 # the english source resources
 # 1) make springclean (removing all building cruft)
 # 2) make pretranslate (getting all strings from sources and create new pot files)
-# 3) tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
+# 3) run scripts/create_transifex_resources.sh to renew .tx/config (first clear all entries from it)
+# 4) tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
 #
 # SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
 #transifex_push:
 #	make springclean
 #	make pretranslate
+#	scripts/create_transifex_resources.sh
 #	tx push -f -s --no-interactive
 
 fasthtml:
