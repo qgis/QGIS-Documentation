@@ -6,14 +6,15 @@
 # Choro <u.ko.kubot@gmail.com>, 2013
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # OKANO Takayoshi <kano@na.rim.or.jp>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:37+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-08 06:59+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +33,7 @@ msgid ""
 "The Query Builder allows you to define a subset of a table using a SQL-like "
 "WHERE clause and display the result in the main window. The query result "
 "then can be saved as a new vector layer."
-msgstr ""
+msgstr "クエリビルダを使用すると、SQLのようなWHERE句を使用してテーブルのサブセットを定義し、メインウィンドウに結果を表示することができます。クエリ結果は、新しいベクタレイヤーとして保存することができます。"
 
 # afb64070e6a142fea2866aab499a0653
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:19
@@ -52,7 +53,7 @@ msgid ""
 "double click its name in the Fields list. Generally you can use the various "
 "fields, values and operators to construct the query or you can just type it "
 "into the SQL box."
-msgstr ""
+msgstr "**フィールドリストは**検索される属性テーブルのすべての属性列が含まれています。SQL WHERE句のフィールドに属性の列を追加するには、二重のフィールド]リストでその名前をクリックします。一般的にクエリを構築するために様々なフィールド、値と演算子を使用することができるか、あなただけのSQLボックスにそれを入力することができます。"
 
 # 3a2e3411349d46198139fd1cf5e4ea22
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:47
@@ -63,7 +64,7 @@ msgid ""
 "attribute column, select the attribute column in the Fields list and click "
 "the **[Sample]** button. To add a value to the SQL where clause field, "
 "double click its name in the Values list."
-msgstr ""
+msgstr "**値のリストは**属性テーブルの値を示します。属性のすべての可能な値を一覧表示するには、[フィールド]リストで属性を選択して、[すべて] **ボタン**をクリックしてください。属性列の最初の25個のユニークな値を一覧表示するには、[フィールド]リスト内の属性の列を選択し、** [サンプル] **ボタンをクリックしてください。SQL WHERE句のフィールドに値を追加するには、二重の値のリストでその名前をクリックします。"
 
 # 740de509f84a482bbae9d98ac4651a1a
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:54
@@ -72,12 +73,12 @@ msgid ""
 "to the SQL where clause field, click the appropriate button. Relational "
 "operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
 "logical operators (``AND``, ``OR``, ...) are available."
-msgstr ""
+msgstr "**演算子セクション**は、使用可能なすべての演算子が含まれています。SQL WHERE句のフィールドに演算子を追加するには、適切なボタンをクリックしてください。リレーショナル演算子（ `=` `` `>` `、...）、文字列比較演算子（` LIKE``）、論理演算子（ `AND``、` `OR``、...）ご利用いただけます。"
 
 # 2f9d6b5ad019431f94237b796f81dd72
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:72
 msgid "Save selected features as new layer"
-msgstr ""
+msgstr "新しいレイヤーとして選択した機能を保存"
 
 # 3ac26dabd8cf4581aefed03cb3f6c7d7
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:74
@@ -88,7 +89,7 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
-msgstr ""
+msgstr "任意OGRは、ベクトル形式をサポートし、また別の座標参照系（CRS）に形質転換したように選択された特徴を節約することができます。ちょうど層の右マウスメニューを開き、上のクリック：menuselection： `として保存選択 - >`出力ファイルの名前、そのフォーマットおよびCRSを定義すると（は：ref： `label_legend`セクションを参照してください）。ダイアログ内OGR作成オプションを指定することも可能です。"
 
 # 0cc8d9d1b7d2479eb71cf16c87866daa
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:7
@@ -108,7 +109,7 @@ msgid ""
 " text field. The **[OK]** button closes the window and selects the features "
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
-msgstr ""
+msgstr "** [テスト] **ボタンは、クエリ構築のプロセスで使用可能な現在のクエリを満たす機能の数を示すメッセージボックスを示しています。** [クリア]ボタン**は、SQL WHERE句のテキストフィールド内のテキストをクリアします。** [OK] **ボタンは、ウィンドウを閉じ、クエリを満たす機能を選択します。** ** [キャンセル]ボタンは、現在の選択を変更せずにウィンドウを閉じます。"
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
 msgid ""
@@ -121,7 +122,7 @@ msgid ""
 "example of the Query builder populated with the regions.shp layer from the "
 "|qg| sample data. The Fields, Values and Operators sections help the user to"
 " construct the SQL-like query."
-msgstr ""
+msgstr "レイヤーのプロパティを開いて** **クエリビルダを開き、に行く：guilabel： `General`メニュー。以下の下：guilabel：guilabel： `クエリbuilder``機能が開くように** [クエリビルダ] **ボタンをクリックしますsubset`。guilabel： `クエリビルダのプロバイダ固有のフィルタexpression`ボックス` `TYPE_2``フィールドと` `regions``層を持っている場合たとえば、で` `borough``ある領域のみを選択できます。| QG | Figure_attributes_2_はからregions.shp層で占めクエリビルダーの一例を示しています サンプルデータ。フィールド、値と演算子のセクションでは、SQLに似たクエリを構築するためにユーザーを助けます。"
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

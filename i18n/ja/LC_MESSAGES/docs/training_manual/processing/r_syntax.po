@@ -1,0 +1,325 @@
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>, 2017\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:9
+msgid "R Syntax in Processing scripts"
+msgstr "処理スクリプトでRの構文"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:11
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+"water-management>`_"
+msgstr ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+"water-management>`_"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:13
+msgid ""
+"Writing R scripts in Processing could be quite tricky because of the syntax "
+"that has to be adopted."
+msgstr "[処理]でRスクリプトを記述するために採用されている構文はかなりトリッキーである可能性があります。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:16
+msgid ""
+"Each script starts with the **Input** and **Output** preceded with ``##``."
+msgstr "各スクリプトは``##``で始まる **入力** と **出力** で始ま ります。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:19
+msgid "Inputs"
+msgstr "入力"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:21
+msgid ""
+"Before you specify teh inputs you can also set the algorithm group in which "
+"your script will be put. If the group already exists, the algorithm will be "
+"added to the other, else a new group will be automatically created:"
+msgstr ""
+"tehの入力を指定する前に、スクリプトが置かれるているアルゴリズムのグループを設定することもできます。グループがすでに存在する場合は、アルゴリズムが自動的に作成される他、他の新しいグループに追加されます。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:25
+msgid "group creation, ``##My Group=group``"
+msgstr "group creation, ``##My Group=group``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:30
+msgid "vector, ``##Layer = vector``"
+msgstr "ベクトル、 `` ##層= vector``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:31
+msgid ""
+"vector Field, ``##F = Field Layer`` (where Layer is the name of the input "
+"Layer)"
+msgstr "ベクトルフィールド、 `` ## F =フィールドLayer``（レイヤは、入力レイヤの名前です）"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:32
+msgid "table, ``##Layer = raster``"
+msgstr "テーブル、 `` ##層= raster``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:33
+msgid "number, ``##Num = number``"
+msgstr "number, ``##Num = number``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:34
+msgid "string, ``##Str = string``"
+msgstr "string, ``##Str = string``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:35
+msgid "boolean, ``##Bol = boolean``"
+msgstr "boolean, ``##Bol = boolean``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:37
+msgid ""
+"you can also have a dropdown menu with all the parameters you want; the "
+"items must be separated with semi columns ``;``:"
+msgstr "また、必要なすべてのパラメータを使用してドロップダウンメニューを持つことができます。項目は ``半列に分離されなければなりません; ``："
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:40
+msgid "``##type=selection point;lines;point+lines``"
+msgstr "``##type=selection point;lines;point+lines``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:43
+msgid "Outputs"
+msgstr "出力"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:44
+msgid ""
+"As for the inputs, each output has to be defined at the beginning of the "
+"script:"
+msgstr "入力のように、各出力は、スクリプトの先頭で定義する必要があります。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:46
+msgid "vector, ``##output= output vector``"
+msgstr "ベクター、 `` ##の出力=出力vector``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:47
+msgid "raster, ``##output= output raster``"
+msgstr "ラスタ、 `` ##の出力=出力raster``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:50
+msgid ""
+"R output in the *Result Viewer*, just put **inside** the script ``>`` "
+"**before** the output you want to display"
+msgstr "表示したいだけ入れ*結果ビューアー*のR出力、**スクリプト**内部の ``> `` **前**出力"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:55
+msgid "Script body"
+msgstr "スクリプト本体"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:57
+msgid ""
+"The script body follows an R style syntax and the **Log** panel can help you"
+" if something went wrong with your script."
+msgstr "スクリプト本体はR形式の構文に従い、 **ログ** パネルは何かがスクリプトで間違っていた場合に助けになりえます。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:60
+msgid ""
+"**Remember** that in the script you have to load all the additional "
+"libraries::"
+msgstr "スクリプトでは、すべての追加のライブラリをロードする必要があることを **忘れないでください** ::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:66
+msgid "Example with vector output"
+msgstr "ベクトル出力の例"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:81
+msgid "and get through the lines:"
+msgstr "そして、線を介して取得します："
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:83
+msgid "``Point pattern analysis`` is the group of the algorithm"
+msgstr "``ポイントパターン分析`` は、アルゴリズムのグループ"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:84
+msgid "``Layer`` is the input **vector** layer"
+msgstr "`` Layer`` は入力 **ベクトル** レイヤ"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:85
+msgid "``Size`` is the **numerical** parameter with a default value of 10"
+msgstr "`` Size`` は10のデフォルト値を持つ **数値** パラメータ、"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:86
+msgid ""
+"``Output`` is the **vector** layer that will be created by the algorithm"
+msgstr "``Output`` はアルゴリズムによって作成される **ベクトル** レイヤ、"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:88
+msgid ""
+"``library(sp)`` loads the **sp** library (that should be already installed "
+"in your computer and that installation has to be made **in R**)"
+msgstr ""
+"``ライブラリー(sp) `` は **sp** ライブラリをロード（既にコンピュータにインストールされている必要があり、そのインストールは "
+"**R内で** されている必要があります） "
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:92
+msgid "create the output vector with the ``SpatialPointsDataFrame`` function"
+msgstr "`` SpatialPointsDataFrame`` 機能で出力ベクトルを作成します"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:94
+msgid ""
+"That's it! Just run the algorithm with a vector layer you have in the QGIS "
+"Legend, choose a number of the random point and you will get them in the "
+"QGIS Map Canvas."
+msgstr ""
+"それでおしまい！QGIS凡例中に持っているベクタレイヤでアルゴリズムを実行し、多数のランダムポイントを選択するだけで、QGIS地図キャンバスにそれらが得られるでしょう。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:99
+msgid "Example with raster output"
+msgstr "ラスタ出力の例"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:101
+msgid ""
+"The following script will perform a basic ordinary kriging and will create a"
+" raster map of the interpolated values::"
+msgstr "次のスクリプトは、基本的な通常のクリギングを実行し、補間値のラスター地図を作成します::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:120
+msgid ""
+"from a vector and its field in input the algorithm will use the "
+"``autoKrige`` function of the ``automap`` R package and it will first "
+"calculate the kriging model and then create a raster."
+msgstr ""
+"入力中のベクトルおよびそのフィールドからアルゴリズムは、 ``automap`` のRパッケージの ``autoKrige`` "
+"関数を使用し、最初にクリギングモデルを計算し、次にラスタを作成します。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:124
+msgid ""
+"The raster is created with the ``raster`` function of the raster R package."
+msgstr "ラスタは、ラスタRパッケージの ``raster`` 機能を使用して作成されます。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:128
+msgid "Example with table output"
+msgstr "テーブル出力の例"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:130
+msgid ""
+"Let's edit the ``Summary Statistics`` algorithm so that the output is a "
+"table file (csv)."
+msgstr "出力は、テーブルファイル（CSV）になるようにのが ``概要Statistics``アルゴリズムを編集してみましょう。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:132
+msgid "The script body is the following::"
+msgstr "スクリプトの本文は以下の通りです::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:152
+msgid ""
+"The third line specifies the **Vector Field** in input and the fourth line "
+"tells the algorithm that the output should be a table."
+msgstr "３行目は入力に **ベクトル場** を指定し、４行目は出力テーブルであるべきであるアルゴリズムを伝えます。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:155
+msgid ""
+"The last line will take the ``Stat`` object created in the script and "
+"convert it into a ``csv`` table."
+msgstr "最後の行は、スクリプトで作成された `` Stat``オブジェクトを取得し、 `` csv``テーブルに変換します。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:159
+msgid "Example with console output"
+msgstr "コンソール出力の例"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:161
+msgid ""
+"We can take the previous example and instead of creating a table, print the "
+"result in the **Result Viewer**::"
+msgstr "前の例を取り、テーブルを作成する代わりに、 **結果ビューア** で結果を印刷できます::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:181
+msgid "The script is exactly the same of above with just 2 edits:"
+msgstr "スクリプトはわずか2箇所編集する以外は上記とまったく同じです。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:183
+msgid "no more output specified (the fourth line has been removed)"
+msgstr "出力はもはや指定されない（第４行は除去されました）"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:184
+msgid ""
+"the last line begins with ``>`` that tells Processing to print the object in"
+" the result viewer"
+msgstr "最後の行は、 ``> ``それは結果ビューアでオブジェクトを印刷するための処理を指示することから始まります"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:189
+msgid "Example with plot"
+msgstr "プロットと例"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:202
+msgid ""
+"the script takes a field of the vector layer in input and creates a *QQ "
+"Plot* to test the normality of the distribution."
+msgstr "スクリプトは入力にベクトルレイヤのフィールドを取り、分布の正規性をテストするために *QQプロット* を作成します。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:205
+msgid "The plot is automatically added to the *Result Viewer* of Processing."
+msgstr "プロットは自動的に処理の *結果ビューアー* に追加されます。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:27
+msgid ""
+"Then you have to specify all the input types and eventually the additional "
+"parameters. You can have different inputs:"
+msgstr "それから、すべての入力タイプと最終的には追加のパラメータを指定する必要があります。異なる入力にすることができます。"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:48
+msgid "table, ``##output= output table``"
+msgstr "テーブル、 `` ##の出力=出力TABLE``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:49
+msgid "plots, ``##showplots``"
+msgstr "プロット、 `` ## showplots``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:68
+msgid ""
+"Let's take an algorithm from the online collection that creates random "
+"points from the extent of an input layer::"
+msgstr "入力レイヤの範囲からランダムな点を作成するオンラインコレクションからのアルゴリズムを見てみましょう::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:91
+msgid ""
+"call the ``spsample`` function of the ``sp`` library and pass it to all the "
+"input defined above"
+msgstr "``sp`` ライブラリの ``spsample`` 関数を呼び出し、上記で定義されたすべての入力に渡します"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:190
+msgid ""
+"Creating plots is very simple. You have to use the ``##showplots`` parameter"
+" as the following script shows::"
+msgstr ""
+"プロットを作成することは非常に簡単です。次のスクリプトに示すように、 `` ## showplots`` パラメータを使用する必要があります::"
+
+#~ msgid ""
+#~ "Then you have to specify the all the input types and eventually the "
+#~ "additional parameters. You can have different inputs:"
+#~ msgstr "そして、すべての入力タイプと最終的には追加のパラメータを指定する必要があります。異なる入力を持つことができます。"
+
+#~ msgid "table, ``##output= output raster``"
+#~ msgstr "table, ``##output= output raster``"
+
+#~ msgid "plots, ``##showplot``"
+#~ msgstr "plots, ``##showplot``"
+
+#~ msgid ""
+#~ "Let's take an algorithm from the online collection that creates random "
+#~ "points from the extend of an input layer::"
+#~ msgstr "入力レイヤの延長からのランダムな点を作成し、オンラインコレクションからのアルゴリズムを見てみましょう::"
+
+#~ msgid ""
+#~ "call the ``spsample`` function of the ``sp`` library and pass to it all the "
+#~ "input defined above"
+#~ msgstr "`` sp``ライブラリの ``spsample`` 関数を呼び出すと、すべての入力が上記で定義され、それに渡します"
+
+#~ msgid ""
+#~ "Creating plots is very simple. You have to use the ``##showplot`` parameter "
+#~ "as the following script shows::"
+#~ msgstr ""
+#~ "プロットを作成することは非常に簡単です。次のスクリプトに示すように、 ``## showplot`` パラメータを使用する必要があります::"

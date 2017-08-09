@@ -1,0 +1,79 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-07-28 03:14+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:6
+msgid "Predicting landslides"
+msgstr "地滑りを予測"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:8
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+msgstr "Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:10
+msgid ""
+"This chapter shows how to create an oversimplified model to predict the "
+"probability of landslides."
+msgstr "この章では、地滑りの可能性を予測するために単純化しすぎのモデルを作成する方法を示します。"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:12
+msgid ""
+"First, we calculate slope (choose among various backends; the interested "
+"reader can calculate the difference between the outputs):"
+msgstr "まず、傾斜を計算します（様々なバックエンドの中から選択し、興味のある読者は、出力の差分を計算できます）。"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:14
+msgid ":menuselection:`GRASS --> r.slope`"
+msgstr ":menuselection:`GRASS --> r.slope`"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:15
+msgid ":menuselection:`SAGA --> Slope, Aspect, Curvature`"
+msgstr ":menuselection:`SAGA --> Slope, Aspect, Curvature`"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:16
+msgid ":menuselection:`GDAL Slope`"
+msgstr ":menuselection:`GDAL Slope`"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:18
+msgid ""
+"Then we create a model of predicted rainfall, based on the interpolation of "
+"rainfall values at meteo stations:"
+msgstr "それから、気象衛星局での降雨値の補間に基づいて、予測雨量のモデルを作成します。"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:20
+msgid ":menuselection:`GRASS --> v.surf.rst` (resolution: 500 m)"
+msgstr ":menuselection:`GRASS --> v.surf.rst` （解像度：500メートル）"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:22
+msgid ""
+"The probability of a landslide will be very roughly related to both rainfall"
+" and slope (of course a real model will use more layers, and appropriate "
+"parameters), let's say ``(rainfall * slope )/100``:"
+msgstr "地すべりの確率は非常に大ざっぱには降雨と斜面の両方に関連します（もちろん、現実のモデルは、より多くのレイヤー、および適切なパラメータを使用します）、 ``（降雨*スロープ）/ 100`` としましょう。"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:24
+msgid ""
+":menuselection:`SAGA --> Raster calculator` rain, slope: ``(a*b)/100`` (or: "
+":menuselection:`GRASS --> r.mapcalc`)"
+msgstr ":menuselection:`SAGA --> ラスター計算機` rain, slope: ``(a*b)/100`` (または: :menuselection:`GRASS --> r.mapcalc`)"
+
+#: ../../source/docs/training_manual/processing/geomorpho.rst:25
+msgid ""
+"then let's calculate what are the municipalities with the greates predicted "
+"risk of rainfall: :menuselection:`SAGA --> Raster statistics with polygons` "
+"(the parameters of interest are *Maximum* and *Mean*)"
+msgstr "その後、予測される降雨の危険性が最大である自治体がどこか計算してみましょう： :menuselection:`SAGA -->ポリゴンでのラスター統計` （関心のパラメータは *最大* と *平均* ） 。"

@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Guido Barbaglia <guido.barbaglia@geobricks.org>, 2015
+# Marco Grisolia <marco.grisolia5@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-11-12 12:35+0000\n"
+"Last-Translator: Marco Grisolia <marco.grisolia5@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/qgis/qgis-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,23 +50,23 @@ msgstr "Modificare i Vettori"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:260
 msgid "Add Features"
-msgstr ""
+msgstr "Aggiungi Geometrie"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:283
 msgid "Delete Features"
-msgstr ""
+msgstr "Elimina Geometrie"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:293
 msgid "Modify Features"
-msgstr ""
+msgstr "Modifica Geometrie"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:320
 msgid "Adding and Removing Fields"
-msgstr ""
+msgstr "Aggiungere e Rimuovere Campi"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:343
 msgid "Modifying Vector Layers with an Editing Buffer"
-msgstr ""
+msgstr "Modificare i Vettori con un Buffer di Modifica"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:345
 msgid ""
@@ -79,41 +80,41 @@ msgid ""
 "layer editing, since this will allow user to decide whether to "
 "commit/rollback and allows the usage of undo/redo. When committing changes, "
 "all changes from the editing buffer are saved to data provider."
-msgstr ""
+msgstr "Quando modifichi i vettori contenti in QGIS, devi prima attivare la modalità di modifica per un particolare layer, successivamente eseguire alcune modifiche e alla fine applicare (o annullare) i cambiamenti. Tutte le modifiche che fai non vengono scritte fino a quando non le applichi  --- si trovano in un buffer di modifica in memoria del vettore. È possibile usare questa funzionalità anche programmaticamente --- è solo un altro metodo per modificare il vettore che è complementare all'uso diretto delle sorgenti dati. Usa questa opzione quando si forniscono alcuni strumenti dell'interfaccia grafica per la modifica del vettore, siccome questo permetterà all'utente di applicare/annullare e permetter l'uso di annulla/ripristina. Quando si applicano le modifiche, tutte le modifiche dal buffer di modifica sono salvate nella sorgente dati."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:426
 msgid "Using Spatial Index"
-msgstr ""
+msgstr "Usare l'Indice Spaziale"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:474
 msgid "Writing Vector Layers"
-msgstr ""
+msgstr "Scrivere Vettori"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:476
 msgid ""
 "You can write vector layer files using :class:`QgsVectorFileWriter` class. "
 "It supports any other kind of vector file that OGR supports (shapefiles, "
 "GeoJSON, KML and others)."
-msgstr ""
+msgstr "Puoi scrivere file vettoriali usando la classe :class:`QgsVectorFileWriter`. Essa supporta qualsiasi altro tipo di file vettoriale che supporta OGR (shapefile, GeoJSON, KML e altri)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:480
 msgid "There are two possibilities how to export a vector layer:"
-msgstr ""
+msgstr "Ci sono due possibilità per esportare un vettore:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:543
 msgid "Memory Provider"
-msgstr ""
+msgstr "Provider in Memoria"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:545
 msgid ""
 "Memory provider is intended to be used mainly by plugin or 3rd party app "
 "developers. It does not store data on disk, allowing developers to use it as"
 " a fast backend for some temporary layers."
-msgstr ""
+msgstr "Il provider in memoria è previsto per essere usato principalmente da sviluppatori di plugin o applicazioni di terze parti. Esso non memorizza dati sul disco, permettendo agli sviluppatori di usarlo come backend veloce per alcuni layer temporanei."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:549
 msgid "The provider supports string, int and double fields."
-msgstr ""
+msgstr "Il provider supporta campi di tipo string, int e double."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:551
 msgid ""
@@ -122,59 +123,59 @@ msgid ""
 " index is created you will be able to iterate over features within smaller "
 "regions faster (since it's not necessary to traverse all the features, only "
 "those in specified rectangle)."
-msgstr ""
+msgstr "Il provider in memoria supporta anche l'indicizzazione spaziale, che si abilita richiamando la funzione :func:`createSpatialIndex` del provider. Una volta creato l'indice spaziale sarai in grado di iterare più velocemente sugli elementi contenuti in regioni più piccole (poiché non è necessario scorrere tutti gli elementi, ma solo quelli nel rettangolo specificato)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:557
 msgid ""
 "A memory provider is created by passing ``\"memory\"`` as the provider "
 "string to the :class:`QgsVectorLayer` constructor."
-msgstr ""
+msgstr "Un provider in memoria è creato passando ``\"memory\"`` come stringa sorgente al costruttore :class:`QgsVectorLayer`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:560
 msgid ""
 "The constructor also takes a URI defining the geometry type of the layer, "
 "one of: ``\"Point\"``, ``\"LineString\"``, ``\"Polygon\"``, "
 "``\"MultiPoint\"``, ``\"MultiLineString\"``, or ``\"MultiPolygon\"``."
-msgstr ""
+msgstr "Il costruttore inoltre accetta un URI che definisce il tipo di geometria del vettore, una tra: ``\"Point\"``, ``\"LineString\"``, ``\"Polygon\"``, ``\"MultiPoint\"``, ``\"MultiLineString\"``, o ``\"MultiPolygon\"``."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:564
 msgid ""
 "The URI can also specify the coordinate reference system, fields, and "
 "indexing of the memory provider in the URI. The syntax is:"
-msgstr ""
+msgstr "L'URI può anche specificare il sistema di riferimento delle coordinate, i campi e l'indicizzazione del provider in memoria nell'URI. La sintassi è:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:569
 msgid "crs=definition"
-msgstr ""
+msgstr "crs=definizione"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:568
 msgid ""
 "Specifies the coordinate reference system, where definition may be any of "
 "the forms accepted by :func:`QgsCoordinateReferenceSystem.createFromString`"
-msgstr ""
+msgstr "Specifica il sistema di riferimento delle coordinate dove la definizione può essere una qualsiasi delle forme accettate da :func:`QgsCoordinateReferenceSystem.createFromString`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:572
 msgid "index=yes"
-msgstr ""
+msgstr "index=yes"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:572
 msgid "Specifies that the provider will use a spatial index"
-msgstr ""
+msgstr "Specifica che il provider userà un indice spaziale"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:577
 msgid "field=name:type(length,precision)"
-msgstr ""
+msgstr "field=nome:tipo(lunghezza,precisione)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:575
 msgid ""
 "Specifies an attribute of the layer.  The attribute has a name, and "
 "optionally a type (integer, double, or string), length, and precision. There"
 " may be multiple field definitions."
-msgstr ""
+msgstr "Specifica un attributo del vettore. L'attributo ha un nome, e facoltativamente un tipo (intero, double, o string), lunghezza, e precisione. Ci sono possono essere definizioni di campo multiple"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:628
 msgid "Appearance (Symbology) of Vector Layers"
-msgstr ""
+msgstr "Apparenza (Simbologia) dei Vettori"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:630
 msgid ""
@@ -182,23 +183,23 @@ msgid ""
 "by **renderer** and **symbols** associated with the layer.  Symbols are "
 "classes which take care of drawing of visual representation of features, "
 "while renderers determine what symbol will be used for a particular feature."
-msgstr ""
+msgstr "Quando un vettore deve essere visualizzato, l'aspetto dei dati è dato dal **visualizzatore** e dai **simboli** associati al vettore. I simboli sono classi che si occupano del disegno di rappresentazione visiva delle geometrie, mentre i visualizzatori determinano quale simbolo sarà usato per una particolare geometria."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:635
 msgid "The renderer for a given layer can obtained as shown below:"
-msgstr ""
+msgstr "Il visualizzatore per un dato vettore può essere ottenuto come mostrato sotto:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:647
 msgid "There are several known renderer types available in QGIS core library:"
-msgstr ""
+msgstr "Ci sono vari tipi di visualizzatori noti disponibili nella libreria di base di QGIS:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:650
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:650
 msgid "Class"
-msgstr ""
+msgstr "Classe"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:650
 msgid "Description"
@@ -206,73 +207,73 @@ msgstr "Descrizione"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:652
 msgid "singleSymbol"
-msgstr ""
+msgstr "singleSymbol"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:652
 msgid ":class:`QgsSingleSymbolRendererV2`"
-msgstr ""
+msgstr ":class:`QgsSingleSymbolRendererV2`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:652
 msgid "Renders all features with the same symbol"
-msgstr ""
+msgstr "Visualizza tutte le geometria con lo stesso simbolo"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:653
 msgid "categorizedSymbol"
-msgstr ""
+msgstr "categorizedSymbol"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:653
 msgid ":class:`QgsCategorizedSymbolRendererV2`"
-msgstr ""
+msgstr ":class:`QgsCategorizedSymbolRendererV2`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:653
 msgid "Renders features using a different symbol for each category"
-msgstr ""
+msgstr "Visualizza le geometria usando un simbolo diverso per ogni categoria"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:654
 msgid "graduatedSymbol"
-msgstr ""
+msgstr "graduatedSymbol"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:654
 msgid ":class:`QgsGraduatedSymbolRendererV2`"
-msgstr ""
+msgstr ":class:`QgsGraduatedSymbolRendererV2`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:654
 msgid "Renders features using a different symbol for each range of values"
-msgstr ""
+msgstr "Visualizza le geometrie usando un simbolo diverso per ogni intervallo di valori"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:683
 msgid ""
 "You can get the symbol used for rendering by calling :func:`symbol` method "
 "and change it with :func:`setSymbol` method (note for C++ devs: the renderer"
 " takes ownership of the symbol.)"
-msgstr ""
+msgstr "Puoi ottenere il simbolo usato per la visualizzazione chiamando il metodo :func:`symbol` e cambiarlo con il metodo :func:`setSymbol` (nota per gli sviluppatori C++: il visualizzatore assume la proprietà del simbolo.) "
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:761
 msgid ""
 "You can query and set attribute name which is used for classification: use "
 ":func:`classAttribute` and :func:`setClassAttribute` methods."
-msgstr ""
+msgstr "Puoi interrogare e impostare il nome dell'attributo che è usato per la classificazione: usa i metodi :func:`classAttribute` e :func:`setClassAttribute`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:771
 msgid ""
 "Where :func:`value` is the value used for discrimination between categories,"
 " :func:`label` is a text used for category description and :func:`symbol` "
 "method returns assigned symbol."
-msgstr ""
+msgstr "Dove :func:`value` è il valore usato per la distinzione tra le categorie, :func:`label` è un testo usato per la descrizione della categoria e il metodo :func:`symbol` restituisce il simbolo assegnato."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:775
 msgid ""
 "The renderer usually stores also original symbol and color ramp which were "
 "used for the classification: :func:`sourceColorRamp` and "
 ":func:`sourceSymbol` methods."
-msgstr ""
+msgstr "Il visualizzatore di solito memorizza anche il simbolo di origine e la scala di colori utilizzati per la classificazione: metodi :func:`sourceColorRamp` e :func:`sourceSymbol`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:783
 msgid ""
 "This renderer is very similar to the categorized symbol renderer described "
 "above, but instead of one attribute value per class it works with ranges of "
 "values and thus can be used only with numerical attributes."
-msgstr ""
+msgstr "Questo visualizzatore è molto simile al visualizzatore simbolo categorizzato descritto sopra, ma invece di un valore di attributo per classe esso lavora con intervalli di valori e quindi può essere usato solo con attributi di tipo numerico."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:799
 msgid ""
@@ -280,20 +281,20 @@ msgid ""
 "attribute name, :func:`sourceSymbol` and :func:`sourceColorRamp` methods.  "
 "Additionally there is :func:`mode` method which determines how the ranges "
 "were created: using equal intervals, quantiles or some other method."
-msgstr ""
+msgstr "puoi usare di nuovo :func:`classAttribute` per trovare il nome attributo di classificazione, i metodi :func:`sourceSymbol` e :func:`sourceColorRamp`. Inoltre, è presente il metodo :func:`mode` che determina come gli intervalli siano creati: usando intervalli uguali, quantili o qualche altro metodo."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:850
 msgid ""
 "For representation of symbols, there is :class:`QgsSymbolV2` base class with"
 " three derived classes:"
-msgstr ""
+msgstr "Per la rappresentazione di simboli, è presente la classe di base :class:`QgsSymbolV2` con tre classi derivate:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:857
 msgid ""
 "**Every symbol consists of one or more symbol layers** (classes derived from"
 " :class:`QgsSymbolLayerV2`). The symbol layers do the actual rendering, the "
 "symbol class itself serves only as a container for the symbol layers."
-msgstr ""
+msgstr "**Ogni simbolo consiste in uno o più vettori simbolo** (classi derivate da :class:`QgsSymbolLayerV2`). I vettori simbolo creano la visualizzazione effettiva, la classe simbolo stessa serve solo come contenitore per i vettori simbolo."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:872
 msgid ""
@@ -301,11 +302,11 @@ msgid ""
 "change its color. With marker symbols additionally you can query for the "
 "symbol size and rotation with :func:`size` and :func:`angle` methods, for "
 "line symbols there is :func:`width` method returning line width."
-msgstr ""
+msgstr "Per trovare il colore del simbolo usa il metodo :func:`color` e :func:`setColor` per cambiarlo. Con i simboli singoli inoltre è possibile interrogare per la dimensione del simbolo e la rotazione con i metodi :func:`size` e :func:`angle`, per i simboli linea è presente il metodo :func:`width` che restituisce la larghezza della linea."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:877
 msgid "Size and width are in millimeters by default, angles are in degrees."
-msgstr ""
+msgstr "La dimensione e la larghezza sono in millimetri per impostazione predefinita, gli angoli sono in gradi."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:884
 msgid ""
@@ -316,13 +317,13 @@ msgid ""
 ":func:`layerType` method uniquely identifies the symbol layer class --- the "
 "basic and default ones are SimpleMarker, SimpleLine and SimpleFill symbol "
 "layers types."
-msgstr ""
+msgstr "Come detto prima, i vettori simbolo (sottoclassi di :class:`QgsSymbolLayerV2`) determinano l'aspetto delle geometrie. Ci sono sono diverse classi di vettori simbolo di base per un uso generale. È possibile implementare nuovi tipi di vettori simbolo e quindi personalizzare arbitrariamente il modo con cui le geometria saranno visualizzate. Il metodo :func:`layerType` identifica unicamente la classe di vettore simbolo --- quelli di base e di default sono i tipi di vettori simbolo SimpleMarker, SimpleLine e SimpleFill."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:912
 msgid ""
 ":class:`QgsSymbolLayerV2Registry` class manages a database of all available "
 "symbol layer types."
-msgstr ""
+msgstr "La classe :class:`QgsSymbolLayerV2Registry` gestisce un database di tutti i tipi di vettore simbolo disponibili."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:915
 msgid ""
@@ -333,7 +334,7 @@ msgid ""
 ":func:`angle`, :func:`width` with their setter counterparts. Of course size "
 "and angle is available only for marker symbol layers and width for line "
 "symbol layers."
-msgstr ""
+msgstr "Per accedere ai dati di vettore simbolo, usa il suo metodo :func:`properties` che restituisce un dizionario chiave-valore di proprietà che determinano l'aspetto. Ogni tipo di vettore simbolo ha un set specifico di proprietà che usa. Inoltre, ci sono i metodi generali :func:`color`, :func:`size`, :func:`angle`, :func:`width` con i loro set corrispondenti. Naturalmente la dimensione e l'angolo sono disponibili solo per vettori simbolo singolo e lo spessore per vettori simbolo linea."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:964
 msgid ""
@@ -345,7 +346,7 @@ msgid ""
 ":func:`stopRender` when rendering is done. And :func:`renderPoint` method "
 "which does the rendering. The coordinates of the point(s) are already "
 "transformed to the output coordinates."
-msgstr ""
+msgstr "Il metodo :func:`layerType` determina il nome del vettore simbolo e deve essere unico tra tutti i vettori simbolo. Le proprietà sono usate per la persistenza degli attributi. Il metodo :func:`clone` deve restituire una copia del vettore simbolo con tutti gli stessi esatti attributi. Infine ci sono i metodi di visualizzazione: :func:`startRender è chiamato prima della visualizzazione della prima geoemtria, :func:`stopRender` quando la visualizzazione è stata fatta. E il metodo :func:`renderPoint` che fa la visualizzazione. Le coordinate del punto(i) sono già trasformate nelle coordinate in uscita."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:973
 msgid ""

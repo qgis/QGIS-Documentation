@@ -1,0 +1,252 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-07-27 03:16+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:9
+msgid "MetaSearch Catalogue Client"
+msgstr "メタサーチカタログのクライアント"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:18
+msgid "Introduction"
+msgstr "前書き"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:20
+msgid ""
+"MetaSearch is a QGIS plugin to interact with metadata catalogue services, "
+"supporting the OGC Catalogue Service for the Web (CSW) standard."
+msgstr "メタサーチは、Web（CSW）の標準のためのOGCカタログ・サービスをサポートする、メタデータカタログ・サービスと対話するQGISプラグインです。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:23
+msgid ""
+"MetaSearch provides an easy and intuitive approach and user-friendly "
+"interface to searching metadata catalogues within QGIS."
+msgstr "メタサーチはQGIS内のメタデータ・カタログの検索に簡単で直感的なアプローチでユーザーフレンドリーなインターフェースを提供します。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:30
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:32
+msgid ""
+"MetaSearch is included by default with QGIS 2.0 and higher. All dependencies"
+" are included within MetaSearch."
+msgstr "メタサーチはQGIS 2.0以降にデフォルトで含まれています。すべての依存関係は、メタサーチの中に含まれています。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:35
+msgid ""
+"Install MetaSearch from the QGIS plugin manager, or manually from "
+"http://plugins.qgis.org/plugins/MetaSearch."
+msgstr "QGISプラグインマネージャからメタサーチをインストールする、または手動でhttp://plugins.qgis.org/plugins/MetaSearchから。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:39
+msgid "Working with Metadata Catalogues in QGIS"
+msgstr "QGISでメタデータカタログを使用した作業"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:42
+msgid "CSW (Catalogue Service for the Web)"
+msgstr "CSW（Web用カタログサービス）"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:44
+msgid ""
+"`CSW (Catalogue Service for the Web)`_ is an `OGC (Open Geospatial "
+"Consortium)`_ specification, that defines common interfaces to discover, "
+"browse and query metadata about data, services, and other potential "
+"resources."
+msgstr "`CSW（Web用カタログサービス）`_ を発見するために、共通のインタフェースを定義し `OGC（オープン地理空間コンソーシアム）`_ 仕様、閲覧やデータ、サービス、およびその他の潜在的なリソースに関するクエリのメタデータです。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:50
+msgid "Startup"
+msgstr "起動"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:52
+msgid ""
+"To start MetaSearch, click |metasearch| icon or select :menuselection:`Web "
+"--> MetaSearch --> MetaSearch` via the QGIS main menu. The MetaSearch dialog"
+" will appear.  The main GUI consists of three tabs: :guilabel:`Services`, "
+":guilabel:`Search` and :guilabel:`Settings`."
+msgstr "MetaSearchを開始するには、 |metasearch| をクリックします。アイコンを選択するか、QGISメインメニューから :menuselection:`Web-> MetaSearch-> MetaSearch` を選択します。 MetaSearchダイアログが表示されます。メインGUIは、 :guilabel:`Services` 、 :guilabel:`Search` 、 :guilabel:`Settings` の3つのタブで構成されています。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:58
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:63
+msgid "Managing Catalogue Services"
+msgstr "カタログサービスの管理"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:65
+msgid ""
+"The :guilabel:`Services` tab allows the user to manage all available "
+"catalogue services.  MetaSearch provides a default list of Catalogue "
+"Services, which can be added by pressing **[Add default services]** button."
+msgstr ":guilabel:`Services` タブでは、利用者が利用可能なすべてのカタログ・サービスを管理できます。メタサーチは、 **[デフォルトのサービスを追加]** ボタンを押して追加できる、カタログサービスのデフォルトのリストを提供します。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:69
+msgid ""
+"To all listed Catalogue Service entries, click the dropdown select box."
+msgstr "表示されているすべてのカタログ・サービス・エントリには、ドロップダウン選択ボックスをクリックしてください。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:71
+msgid ""
+"To add a Catalogue Service entry, click the **[New]** button, and enter a "
+":guilabel:`Name` for the service, as well as the :guilabel:`URL` (endpoint)."
+" Note that only the base URL is required (not a full GetCapabilities URL). "
+"Clicking **[OK]** will add the service to the list of entries."
+msgstr "カタログ・サービス・エントリを追加するには、 **[新規]** ボタンをクリックし、 :guilabel:`URL` （エンドポイント）サービス、などのために :guilabel:`NAME` を入力します。唯一のベースURLが必要であることに注意してください（GetCapabilitiesの完全URLではない）。 **[OK]** をクリックするとエントリのリストにサービスを追加します。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:76
+msgid ""
+"To edit an existing Catalogue Service entry, select the entry you would like"
+" to edit and click the **[Edit]** button, and modify the :guilabel:`Name` or"
+" :guilabel:`URL` values, then click **[OK]**."
+msgstr "既存のカタログ・サービス・エントリを編集するには、変更したい項目を選択し、 **[編集]** ボタンをクリックして、 :guilabel:`name` か :guilabel:`URL` 値を編集し、 **[OK]** をクリックします。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:80
+msgid ""
+"To delete a Catalogue Service entry, select the entry you would like to "
+"delete and click the **[Delete]** button. You will be asked to confirm "
+"deleting the entry."
+msgstr "カタログ・サービス・エントリを削除するには、削除したい項目を選択して、 **[削除]** ボタンをクリックします。エントリの削除を確認するメッセージが表示されます。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:84
+msgid ""
+"MetaSearch allows for loading and saving connections to an XML file. This is"
+" useful when you need to share settings between applications. Below is an "
+"example of the XML file format."
+msgstr "メタサーチは、読み込みとXMLファイルへの接続を保存できます。アプリケーション間で設定を共有する必要がある場合に便利です。以下は、XMLファイル形式の一例です。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:103
+msgid ""
+"To load a list of entries, click the **[Load]** button. A new window will "
+"appear; click the **[Browse]** button and navigate to the XML file of "
+"entries you wish to load and click **[Open]**. The list of entries will be "
+"displayed. Select the entries you wish to add from the list and click "
+"**[Load]**."
+msgstr "エントリのリストをロードするには、 **[読み込み]** ボタンをクリックしてください。新しいウィンドウが表示されます。 **[参照]** ボタンをクリックし、 **[開く]** をロードし、クリックしたいエントリのXMLファイルに移動します。エントリのリストが表示されます。リストから追加したい項目を選択し、 **[読み込み]** をクリックします。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:108
+msgid ""
+"Click the **[Service info]** button to displays information about the "
+"selected Catalogue Service such as service identification, service provider "
+"and contact information. If you would like to view the raw XML response, "
+"click the **[GetCapabilities response]** button. A separate window will open"
+" displaying Capabilities XML."
+msgstr "**[サービス情報]** ボタンをクリックすると、サービスID、サービスプロバイダ、連絡先情報など、選択したカタログサービスに関する情報が表示されます。生のXMLレスポンスを表示するには、 **[GetCapabilitiesレスポンス]** ボタンをクリックします。 Capabilities XMLを表示する別のウィンドウが開きます。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:115
+msgid "Searching Catalogue Services"
+msgstr "検索カタログサービス"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:120
+msgid "Searching catalogue services"
+msgstr "カタログサービスの検索"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:122
+msgid ""
+"The :guilabel:`Search` tab allows the user to query Catalogue Services for "
+"data and services, set various search parameters and view results."
+msgstr ":guilabel:`Search` タブでは、ユーザーがデータやサービス、設定された各種検索パラメータと表示結果のカタログサービスを照会できます。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:125
+msgid "The following search parameters are available:"
+msgstr "次の検索パラメータを使用できます。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:127
+msgid ":guilabel:`Keywords`: free text search keywords"
+msgstr ":guilabel:`Keywords` ：フリーテキスト検索キーワード"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:128
+msgid ":guilabel:`From`: the Catalogue Service to perform the query against"
+msgstr ":guilabel:`From` ：カタログ・サービスはに対してクエリを実行します"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:129
+msgid ""
+"**Bounding box**: the spatial area of interest to filter on defined by "
+":guilabel:`Xmax`, :guilabel:`Xmin`, guilabel:`Ymax`, and guilabel:`Ymin`. "
+"Click **[Set global]** to do a  global search, click **[Map extent]** to do "
+"a search on the visible area only or manually enter custom values as desired"
+msgstr "**バウンディングボックス** ：フィルタを適用するために、:guilabel:`Xmax`、 :guilabel:`Xmin` 、 :guilabel:`Ymax` 、および :guilabel:`Ymin` によって定義された関心の空間領域 。のみ表示エリアで検索を行うか、手動で必要に応じてカスタム値を入力する、グローバル検索を行う **[地図の範囲]** をクリックして ** [グローバル設定]** をクリックしてください"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:134
+msgid ""
+"Clicking the **[Search]** button will search the selected Metadata "
+"Catalogue. Search results are displayed in a list and are sortable by "
+"clicking on the column title. You can navigate through search results with "
+"the directional buttons below the search results. Clicking the **[View "
+"search results as XML]** button opens a window with the service response in "
+"raw XML format."
+msgstr "**[検索]** ボタンをクリックすると、選択したメタデータ・カタログを検索します。検索結果がリストに表示され、列のタイトルをクリックすることでソート可能です。検索結果の下の方向ボタンと、検索結果をナビゲートできます。 **[XMLとして表示検索結果]** ボタンをクリックすると、未加工のXML形式のサービス応答とウィンドウが開きます。"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:140
+msgid "Clicking a result will provides the following options:"
+msgstr "結果をクリックすると、以下のオプションが用意されています："
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:142
+msgid ""
+"if the metadata record has an associated bounding box, a footprint of the "
+"bounding box will be displayed on the map"
+msgstr "メタデータレコードは、関連するバウンディングボックスを持っている場合は、バウンディングボックスのフットプリントは、地図上に表示されます"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:144
+msgid ""
+"double-clicking the record displays the record metadata with any associated "
+"access links.  Clicking the links opens the link in the user's web browser"
+msgstr "ダブルクリックするレコードは、関連するアクセスリンクを持つレコードのメタデータを表示します。リンクをクリックすると、ユーザのWebブラウザでリンクを開きます"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:146
+msgid ""
+"if the record is an OGC web service (WMS/WMTS, WFS, WCS), the appropriate "
+"**[Add to WMS/WMTS|WFS|WCS]** buttons will be enabled for the user to add to"
+" QGIS.  When clicking this button, MetaSearch will verify if this is a valid"
+" OWS.  The OWS will then be added to the appropriate QGIS connection list, "
+"and the appropriate WMS/WMTS|WFS|WCS connection dialogue will then appear"
+msgstr "レコードはOGCウェブサービス（WMS/WMTS、WFS、WCS）、適切な **[WMS/WMTS|WFS|WCSに追加]** ボタンがQGISに追加するユーザーのために有効になります。このボタンをクリックすると、これは有効なOWSであれば、メタサーチを確認します。OWSは、適切なQGISの接続リストに追加され、適切なWMS/WMTS|WFS|WCS接続ダイアログは、表示されます"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:155
+msgid "Metadata record display"
+msgstr "メタデータレコードの表示"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:158
+msgid "Settings"
+msgstr "設定"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:163
+msgid "Metasearch setting"
+msgstr "メタサーチの設定"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:165
+msgid "You can fine tune MetaSearch with the following :guilabel:`settings`:"
+msgstr ":guilabel:`settings` 以下でチューニングメタサーチを細かくすることができます："
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:167
+msgid ""
+":guilabel:`Connection naming`: when adding an OWS connection "
+"(WMS/WMTS|WFS|WCS), the connection is stored with the various QGIS layer "
+"provider. Use this setting to set whether to use the name provided from "
+"MetaSearch, whether to overwrite or to use a temporary name"
+msgstr ":guilabel:`接続naming` ：OWSの接続を追加（WMS/WMTS|WFS|WCS）、接続は、様々なQGISレイヤープロバイダに格納されています。上書きするかどうかを、メタサーチから提供された名前を使用するか、一時的な名前を使用するかどうかを設定するには、この設定を使用します"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:171
+msgid ""
+":guilabel:`Results paging`: when searching metadata catalogues, the number "
+"of results to show per page. Default value is 10"
+msgstr ":guilabel:`結果はpaging` ：メタデータカタログを検索するときに、結果の数は、ページごとに表示するように。デフォルト値は10です"
+
+#: ../../source/docs/user_manual/plugins/plugins_metasearch.rst:173
+msgid ""
+":guilabel:`Timeout`: when searching metadata catalogues, the number of "
+"seconds for blocking connection attempt. Default value is 10"
+msgstr ":guilabel:`Timeout`：メタデータカタログの検索、接続の試みを阻止するための秒数。デフォルト値は10です"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

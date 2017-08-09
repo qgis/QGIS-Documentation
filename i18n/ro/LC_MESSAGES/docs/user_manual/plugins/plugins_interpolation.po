@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-08-17 17:21+0000\n"
-"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"PO-Revision-Date: 2016-10-22 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,50 +19,46 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
 # 9010db584ee74e0f967128bfe44b9d4a
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:10
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:62
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:9
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:61
 msgid "Interpolation Plugin"
 msgstr "Plugin-ul de Interpolare"
 
 # e212ad9b62bb43fd835892b206e7088d
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:43
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:42
 msgid "**Output file**: Specify a name for the output raster file."
-msgstr "**Fișierul de ieșire**: Specificați un nume pentru fișierul de ieșire raster."
+msgstr "**Fișierul de ieșire**: Specificați un nume pentru fișierul raster generat."
 
 # 7928a39eeefe4fb7a2bde0e85390ff5c
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:68
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:67
 msgid "Using the plugin"
-msgstr "Utilizarea plugin-ului"
+msgstr "Modul de utilizare a plugin-ului"
 
 # 77f17582982e4fabbd5f494190a7a449
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:81
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:80
 msgid "Click **[OK]**."
 msgstr "Clic pe **[OK]**."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:44
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:43
 msgid ""
 "|checkbox| :guilabel:`Add result to project` to load the result into the map"
 " canvas."
-msgstr "|checkbox| :guilabel:`Add result to project` pentru a încărca rezultatul în canevasul hărții."
+msgstr "|checkbox| :guilabel:`Adăugați rezultatul în proiect` pentru a-l vedea pe canevasul hărții."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:70
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:69
 msgid "Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`)."
 msgstr "Lansați QGIS și încărcați un strat vectorial de tip punct (cum ar fi :file:`elevp.csv`)."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:11
 msgid ""
 "The Interpolation plugin can be used to generate a TIN or IDW interpolation "
 "of a point vector layer. It is very simple to handle and provides an "
 "intuitive graphical user interface for creating interpolated raster layers "
 "(see Figure_interpolation_1_). The plugin requires the following parameters "
 "to be specified before running:"
-msgstr "Plugin-ul de Interpolare poate fi folosit pentru a genera o interpolare TIN sau IDW a unui strat vectorial de tip punct. Este foarte simplu de manevrat și oferă o interfață cu utilizatorul grafică, intuitivă, pentru crearea de straturi raster interpolate (v. Figure_interpolation_1_). Plugin-ul necesită specificarea următorilor parametri, înainte de a rula:"
+msgstr "Plugin-ul de Interpolare poate fi folosit pentru a genera o interpolare TIN sau IDW, a unui strat vectorial de tip punct. Este foarte simplu de manevrat și oferă o interfață cu utilizatorul grafică, intuitivă, pentru crearea de straturi raster interpolate (v. Figure_interpolation_1_). Plugin-ul necesită specificarea următorilor parametri, înainte de a rula:"
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:17
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:16
 msgid ""
 "Input **Vector layers**: Specify the input point vector layer(s) from a list"
 " of loaded point layers. If several layers are specified, then data from all"
@@ -70,16 +66,16 @@ msgid ""
 "polygons as constraints for the triangulation, by specifying either "
 "\"points\", \"structure lines\" or \"break lines\" in the :guilabel:`Type` "
 "|selectString| combo box."
-msgstr "**Straturile vectoriale** de intrare: Specificați strat(urile) vectoriale de intrare, de tip punct, dintr-o listă de straturi încărcate. În cazul în care sunt specificate mai multe straturi, atunci vor fi folosite pentru interpolare datele din toate straturile. Notă: Este posibilă introducerea liniilor sau poligoanelor ca și constrângeri pentru triangulare, prin specificarea \"punctelor\", a \"liniilor de structură\" sau a \"liniilor de întrerupere\" din caseta :guilabel:`Type` |selectString|."
+msgstr "**Straturile vectoriale** de intrare: Specificați strat(urile) vectoriale de intrare, de tip punct, dintr-o listă de straturi încărcate. În cazul în care sunt specificate mai multe straturi, atunci vor fi folosite pentru interpolare datele din toate straturile. Notă: Este posibilă introducerea liniilor sau poligoanelor ca și constrângeri pentru triangulare, prin specificarea \"punctelor\", a \"liniilor de structură\" sau a \"liniilor de întrerupere\" în caseta :guilabel:`Tip` |selectString|."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:22
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:21
 msgid ""
 "**Interpolation attribute**: Select the attribute column to be used for "
 "interpolation or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox"
 " to use the layer's stored Z values."
-msgstr "**Atributul de interpolare**: Selectați coloana atributului care va fi utilizat pentru interpolare, sau activați caseta |checkbox| :guilabel:`Use Z-Coordinate` pentru a utiliza valorile Z stocate, ale stratului."
+msgstr "**Atributul de interpolare**: Selectați coloana atributului care se va utiliza pentru interpolare, sau activați caseta de |checkbox| :guilabel:`Utilizare a Coordonatei Z`, pentru a folosi valorile Z stocate în strat."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:25
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:24
 msgid ""
 "**Interpolation Method**: Select the interpolation method. This can be "
 "either 'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted "
@@ -95,24 +91,24 @@ msgid ""
 "points is uneven. Furthermore, maximum and minimum values in the "
 "interpolated surface can only occur at sample data points. This often "
 "results in small peaks and pits around the sample data points."
-msgstr "**Metoda de Interpolare**: Selectați metoda de interpolare. Aceasta poate fi ori 'Rețea Neregulată Triangulată (TIN)', ori 'Distanța Inversă Ponderată (IDW)'. Cu ajutorul metodei TIN puteți crea o suprafață formată din triunghiuri ale celor mai apropiate puncte învecinate. Pentru a face acest lucru, sunt create cercuri în jurul punctelor de eșantionare selectate, iar intersecțiile lor sunt conectate la o rețea de triunghiuri, pe cât posibil, nesuprapuse și compacte. Suprafețele rezultate nu sunt netede. Atunci când se utilizează metoda IDW, punctele de eșantionare sunt ponderate pe durata interpolării, astfel încât influența unui punct în raport cu altul, scade o dată cu distanța față de punctul necunoscut pe care doriți să-l creați. Metoda de interpolare IDW are, de asemenea, unele dezavantaje: calitatea rezultatului interpolării poate scădea, în cazul în care distribuția datelor eșantion de tip punct este inegală. Mai mult, valorile maxime și minime ale suprafeței interpolate pot apărea numai pentru datele de tip punct ale eșantionului. Acest fapt conduce la  mici vârfuri și gropi în jurul punctelor din eșantion."
+msgstr "**Metoda de Interpolare**: Selectați metoda de interpolare. Aceasta poate fi ori 'Rețea Neregulată Triangulată (TIN)', ori 'Distanța Inversă Ponderată (IDW)'. Cu ajutorul metodei TIN puteți crea o suprafață alcătuită din triunghiuri, cu ajutorul celor mai apropiate puncte învecinate. Pentru a face acest lucru, sunt create cercuri în jurul punctelor selectate, iar intersecțiile lor sunt conectate la o rețea de triunghiuri, pe cât posibil, nesuprapuse și compacte. Suprafețele rezultate nu sunt netede. Atunci când se utilizează metoda IDW, punctele sunt ponderate pe durata interpolării, în așa fel încât influența unui punct în raport cu altul, scade o dată cu distanța față de punctul necunoscut, pe care doriți să-l creați. Metoda de interpolare IDW are și unele dezavantaje: calitatea rezultatului interpolării poate scădea în cazul în care distribuția punctelor este inegală. Mai mult, valorile maxime și minime ale suprafeței interpolate pot apărea numai pentru datele de tip punct. Rezultatul constă în mici vârfuri și gropi, în jurul punctelor din eșantion."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:37
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:36
 msgid ""
 "|options| **Configure Interpolation Method**: Configure the interpolation "
 "method you have chosen. For the TIN method you can choose between Linear and"
 " Clough Toucher (cubic) interpolation methods. You can also save the "
 "triangulation in shapefile format. For IDW interpolation you can set the "
 "distance coefficient."
-msgstr "|options| **Configurarea Metodei de Interpolare**: Asigură configurarea metodei de interpolare pe care ați ales-o. Pentru metoda TIN puteți alege între metodele de interpolare Liniară și Clough Toucher (cubică). De asemenea, puteți salva triangulația în format de fișier shape. Pentru interpolarea IDW puteți seta coeficientul de distanță."
+msgstr "|options| **Configurarea Metodei de Interpolare**: Asigură configurarea metodei de interpolare pe care ați ales-o. Pentru metoda TIN puteți alege între metodele de interpolare Liniară și Clough Toucher (cubică). De asemenea, puteți salva triangulația în format de fișier shape. Pentru interpolarea IDW se poate seta coeficientul de distanță."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:41
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:40
 msgid ""
 "**Number of columns/rows**: Specify the number of rows and columns for the "
 "output raster file."
 msgstr "**Numărul de coloane/rânduri**: Specificați numărul de rânduri și coloane pentru fișierul de ieșire raster."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:46
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:45
 msgid ""
 "Note that using lines as constraints for the interpolation the triangulation"
 " (TIN method) you can either use 'structure lines' or 'break lines'. When "
@@ -120,9 +116,9 @@ msgid ""
 "'structure lines' you produce continuous breaks. The triangulation is "
 "modified by both methods such that no edge crosses a breakline or structure "
 "line."
-msgstr "Rețineți că dacă utilizați liniile ca și constrângeri pentru interpolarea triangulării (metoda TIN), puteți folosi fie 'linii de structură' fie 'linii de întrerupere'. Atunci când se utilizează 'linii de întrerupere' veți produce treceri bruște pe suprafață, în timp ce dacă utilizați 'linii de structură' veți obține treceri continue. Triangularea este modificată de către ambele metode, astfel încât nici o muchie nu traversează o linie de linie de întrerupere sau de structură."
+msgstr "Rețineți că dacă utilizați liniile ca și constrângeri pentru interpolarea triangulării (metoda TIN), puteți folosi fie 'linii de structură' fie 'linii de întrerupere'. Atunci când folosiți 'linii de întrerupere' veți produce treceri bruște pe suprafață, în timp ce 'liniile de structură' vor produce treceri continue. Triangularea este modificată de către ambele metode, astfel încât nici o muchie nu traversează o linie de întrerupere sau de structură."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:71
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:70
 msgid ""
 "Load the Interpolation plugin in the Plugin Manager (see "
 ":ref:`managing_plugins`) and click on the :menuselection:`Raster --> "
@@ -131,18 +127,21 @@ msgid ""
 "shown in Figure_interpolation_1_."
 msgstr "Încărcați plugin-ul de Interpolare din Managerul de Plugin-uri (a se vedea :ref:`managing_plugins`), apoi faceți clic pe meniul :menuselection:`Raster --> Interpolare -->` |rasterInterpolate| :guilabel:`Interpolare`, care apare în bara de meniu a QGIS. Dialogul Plugin-ului de Interpolare apare așa cum se arată în Figure_interpolation_1_."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:76
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:75
 msgid ""
 "Select an input layer (e.g., :guilabel:`elevp` |selectString|) and column "
 "(e.g., ``ELEV``) for interpolation."
-msgstr "Selectați un strat de intrare (cum ar fi :guilabel:`elevp` |selectString|) și o coloană (de ex.: ``ELEV``) "
+msgstr "Selectați un strat de intrare (cum ar fi :guilabel:`elevp` |selectString|) și o coloană (de ex.: ``ELEV``) pentru interpolare."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:78
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:77
 msgid ""
 "Select an interpolation method (e.g., 'Triangulated Irregular Network "
 "(TIN)'), and specify a cell size of 5000 as well as the raster output "
 "filename (e.g., :file:`elevation_tin`)."
 msgstr "Selectați o metodă de interpolare (de exemplu, 'Rețea Neregulată Triangulată (TIN)'), și specificați o dimensiune a celulelor de 5000, precum și numele fișierului de ieșire raster (de exemplu, :file:`elevation_tin`)."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "The Interplation plugin can be used to generate a TIN or IDW interpolation "

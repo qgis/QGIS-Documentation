@@ -1,0 +1,457 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-07-26 03:54+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:6
+msgid "|LS| Using DB Manager to work with Spatial Databases in QGIS"
+msgstr " |LS| DB Managerを使用してQGISで空間データベースと連携する"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:8
+msgid ""
+"We have already seen how to perform many database operations with QGIS as "
+"well as with other tools, but now it's time to look at the DB Manager tool "
+"which provides much of this same functionality as well as more management "
+"oriented tools."
+msgstr "すでにQGISや他のツールで多くのデータベース操作を実行する方法を見てきましたが、今度は、この同じ機能の多くに加えてさらに管理指向のツールを提供するDB管理者ツールを検討します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:13
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatial "
+"databases using the QGIS DB Manager."
+msgstr "**このレッスンの目標：** QGIS DB Managerを使用して、空間データベースと対話する方法を学びます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:17
+msgid "|basic| |FA| Managing PostGIS Databases with DB Manager"
+msgstr "|basic| |FA|  DB ManagerでのPostGISデータベースの管理"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:19
+msgid ""
+"You should first open the DB Manager interface by selecting "
+":guilabel:`Database --> DB Manager --> DB Manager` on the menu or by "
+"selecting the DB Manager icon on the toolbar."
+msgstr "最初に DBマネージャのインターフェースを開く必要があります。それには :guilabel:`データベース->DBマネージャ->DBマネージャ` メニューを選択するか、ツールバー上のDBマネージャアイコンを選択します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:23
+msgid "|dbManager|"
+msgstr "|dbManager|"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:25
+msgid ""
+"You should already see the previous connections we have configured and be "
+"able to expand the :kbd:`myPG` section and its :kbd:`public` schema to see "
+"the tables we have worked with in previous sections."
+msgstr "すでに設定した以前の接続が見えているはずであり、前のセクションで作業したテーブルを見るために :kbd:`myPG` セクションとその :kbd:`public` スキーマを展開できるはずです。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:29
+msgid ""
+"The first thing you may notice is that you can now see some metadata about "
+"the Schemas contained in your database."
+msgstr "気づくかもしれない最初の事は、今データベースに含まれるスキーマに関するいくつかのメタデータを見ることができることです。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:35
+msgid ""
+"Schemas are a way of grouping data tables and other objects in a PostgreSQL "
+"database and a container for permissions and other constraints. Managing "
+"PostgreSQL schemas is beyond the scope of this manual, but you can find more"
+" information about them in the `PostgreSQL documentation on Schemas "
+"<http://www.postgresql.org/docs/9.1/static/ddl-schemas.html>`_. You can use "
+"the DB Manager to create new Schemas, but will need to use a tool like "
+"pgAdmin III or the command line interface to manage them effectively."
+msgstr "スキーマは、データテーブルおよびPostgreSQLデータベース内の他のオブジェクトと権限および他の制約のコンテナをグループ化する方法です。PostgreSQLのスキーマを管理することはこのマニュアルの範囲外ですが、それらについての詳細な情報は`スキーマに関するPostgreSQLのドキュメント<http://www.postgresql.org/docs/9.1/static/ddl-schemas.html> ` _に見つけることができます。DB Managerを使用して新しいスキーマを作成できますが、それらを効果的に管理するにはpgAdmin IIIのようなツールやコマンドライン・インタフェースを使用する必要があるでしょう。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:43
+msgid ""
+"DB Manager can also be used to manage the tables within your database. We "
+"have already looked at various ways to create and manage tables on the "
+"command line, but now lets look at how to do this in DB Manager."
+msgstr "DB Managerは、データベース内のテーブルを管理するために使用できます。すでに、コマンドライン上でテーブルを作成し、管理するためのさまざまな方法を見て、今はDBマネージャでこれを行う方法を見てみましょいます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:47
+msgid ""
+"First, its useful to just look at a table's metadata by clicking on its name"
+" in tree and looking in the :guilabel:`Info` tab."
+msgstr "まず、ツリー内の名前をクリックし :guilabel:`Info` タブの中を見ることで、テーブルのメタデータをただ見ることは有用です。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:53
+msgid ""
+"In this panel you can see the :guilabel:`General Info` about the table as "
+"well the information that the PostGIS extension maintains about the geometry"
+" and spatial reference system."
+msgstr "このパネルでは、テーブルについての :guilabel:`一般Info` も、幾何学と空間参照システムに関してPostGISの拡張子が維持している情報を見ることができます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:57
+msgid ""
+"If you scroll down in the :guilabel:`Info` tab, you can see more information"
+" about the :guilabel:`Fields`, :guilabel:`Constraints` and "
+":guilabel:`Indexes` for the table you are viewing."
+msgstr ":guilabel:`Info` タブで下にスクロールした場合、表示しているテーブルに対して、 :guilabel:`fields` 、 :guilabel:`Constraints` 、 :guilabel:`Indexes` についての詳細な情報を見ることができます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:64
+msgid ""
+"Its also very useful to use DB Manager to simply look at the records in the "
+"database in much the same way you might do this by viewing the attribute "
+"table of a layer in the Layer Tree. You can browse the data by selecting the"
+" :guilabel:`Table` tab."
+msgstr "単にレイヤーツリーにレイヤの属性テーブルを表示することによって、これを行う可能性がありますほとんど同じ方法でデータベース内のレコードを見てDB Managerを使用することも非常に便利。 :guilabel:`Table` タブを選択して、データを閲覧できます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:72
+msgid ""
+"There is also a :guilabel:`Preview` tab which will show you the layer data "
+"in a map preview."
+msgstr "地図プレビューでレイヤーのデータが表示される :guilabel:`Preview` タブもあります。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:75
+msgid ""
+"Right-clicking on a layer in the tree and clicking :guilabel:`Add to Canvas`"
+" will add this layer to your map."
+msgstr "ツリー中のレイヤーを右クリックし、 :guilabel:`キャンバスに追加` をクリックすると地図にこのレイヤーが追加されます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:78
+msgid ""
+"So far we have only been viewing the database its schemas and tables and "
+"their metadata, but what if we wanted to alter the table to add an "
+"additional column perhaps? DB Manager allows you to do this directly."
+msgstr "これまでのところは唯一のデータベースのスキーマとテーブルとそのメタデータを閲覧されているが、おそらく追加の列を追加するテーブルを変更したい場合はどう？DB Managerは、直接これを行うことができます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:82
+msgid "Select the table you want to edit in the tree"
+msgstr "ツリーで、編集するテーブルを選択します"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:83
+msgid ""
+"Select :guilabel:`Table --> Edit Table` from the menu to open the "
+":guilabel:`Table Properties` dialog."
+msgstr "メニューから :guilabel:`表->表を編集` を選択し :guilabel:`表のプロパティ` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:89
+msgid ""
+"You can use this dialog to Add Columns, Add geometry columns, edit existing "
+"columns or to remove a column completely."
+msgstr "列を追加するには、このダイアログを使用してジオメトリ列を追加し、既存の列を編集したり、列を完全に削除できます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:92
+msgid ""
+"Using the :guilabel:`Constraints` tab, you can manage which fields are used "
+"as the primary key or to drop existing constraints."
+msgstr ":guilabel:`Constraints` タブを使用、どのフィールドが主キーとして使用されるか、既存の制約を削除するために管理できます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:98
+msgid ""
+"The :guilabel:`Indexes` tab can be used to add and delete both spatial and "
+"normal indexes."
+msgstr ":guilabel:`Indexes` タブは、空間インデックスと通常のインデックスの両方を追加および削除するために使用できます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:105
+msgid "|basic| |FA| Creating a New Table"
+msgstr "|basic| |FA|  新しいテーブルを作成する"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:107
+msgid ""
+"Now that we have gone through the process of working with existing tables in"
+" our database, let's use DB Manager to create a new table."
+msgstr "データベース内の既存のテーブルでの作業のプロセスを一通り終えましたので、ここでDB マネージャを使用して新しいテーブルを作成してみましょう。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:110
+msgid ""
+"If it is not already open, open the DB Manager window, and expand the tree "
+"until you see the list of tables already in your databse."
+msgstr "まだ開いていない場合は、DBマネージャウィンドウを開き、すでにデータベース内にあるテーブルのリストが表示されるまでツリーを展開します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:112
+msgid ""
+"From the menu select :guilabel:`Table --> Create Table` to bring up the "
+"Create Table dialog."
+msgstr "メニューから :guilabel:`表 - >Tableを作成` を選択し、 [表の作成]ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:114
+msgid "Use the default :kbd:`Public` schema and name the table :kbd:`places`."
+msgstr "デフォルトの :kbd:`Public` スキーマを使用し 、テーブル :kbd:`places` に名前を付けてください。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:115
+msgid ""
+"Add the :kbd:`id`, :kbd:`place_name`, and :kbd:`elevation` fields as shown "
+"below"
+msgstr ":kbd:`id` 、 :kbd:`place_name` 、および :kbd:`elevation` フィールドを以下に示すように追加します"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:117
+msgid "Make sure the :kbd:`id` field is set as the primary key."
+msgstr ":kbd:`id` フィールドが主キーとして設定されていることを確認してください。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:118
+msgid ""
+"Click the checkbox to :guilabel:`Create geometry column` and make sure it is"
+" set to a :kbd:`POINT` type and leave it named :kbd:`geom` and specify "
+":kbd:`4326` as the :guilabel:`SRID`."
+msgstr ":guilabel:`ジオメトリCOLUMNを作成` の横にあるチェックボックスをクリックし、それが :kbd:`POINT` のタイプと設定されていることを確認し、名前は :kbd:`geom` のまま、 :guilabel:`SRID` として :kbd:`4326` を指定します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:121
+msgid ""
+"Click the checkbox to :guilabel:`Create spatial index` and click "
+":guilabel:`Create` to create the table."
+msgstr ":guilabel:`空間インデックスを作成` の横にあるチェックボックスをクリックし、:guilabel:`作成` をクリックしてテーブルを作成します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:127
+msgid ""
+"Dismiss the dialog letting you know that the table was created and click "
+":guilabel:`Close` to close the Create Table Dialog."
+msgstr "テーブルが作成されたことを知らせるダイアログを閉じ、 :guilabel:`Close` をクリックして「表を作成」ダイアログを閉じます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:130
+msgid ""
+"You can now inspect your table in the DB Manager and you will of course find"
+" that there is no data in it. From here you can :guilabel:`Toggle Editing` "
+"on the layer menu and begin to add places to your table."
+msgstr "これで、DBマネージャで、テーブルを検査できますし、もちろんその中にデータがないことがわかります。ここからレイヤーのメニューで :guilabel:`編集を切替` できます、テーブルに場所の追加を開始します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:135
+msgid "|basic| |FA| Basic Database Administration"
+msgstr "|basic| |FA| 基本的なデータベース管理"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:137
+msgid ""
+"The DB Manager will also let you do some basic Database Administration "
+"tasks. It is certainly not a substitute for a more complete Database "
+"Administration tool, but it does provide some functionality that you can use"
+" to maintain your database."
+msgstr "DB マネージャによって、いくつかの基本的なデータベース管理タスクを実行できるようにもなります。それは確かにより完全なデータベース管理ツールに代わるものではありませんが、それはデータベースを維持するために使用できるいくつかの機能を提供します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:142
+msgid ""
+"Database tables can often become quite large and tables which are being "
+"modified frequently can end up leaving around remnants of records that are "
+"no longer needed by PostgreSQL. The *VACUUM* command takes care of doing a "
+"kind of garbage collection to compact and optional analyze your tables for "
+"better performance."
+msgstr "データベーステーブルは、多くの場合、非常に大きくなることができ、頻繁に変更されているテーブルは、もはやPostgreSQLで必要とされてないレコードの残党を中心に残して終わることがあります。 *VACUUM* コマンドでは、圧縮し、オプションのパフォーマンス向上のために、テーブルを分析するためのガベージコレクションのようなものをやってくれます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:148
+msgid ""
+"Lets take a look at how we can perform a *VACUUM ANALYZE* command from "
+"within DB Manager."
+msgstr "DB Manager内から *VACUUM ANALYZE* コマンドを実行する方法を見てみましょう。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:151
+msgid "Select one of your tables in the DB Manager Tree."
+msgstr "DBマネージャツリーでテーブルのいずれかを選択します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:152
+msgid "Select :guilabel:`Table --> Run Vacuum Analyze` from the menu."
+msgstr "メニューから :guilabel:`表 - >実行してくださいバキュームAnalyze` 選択します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:154
+msgid ""
+"Thats it! PostgreSQL will perform the operation. Depending on how big your "
+"table is, this may take some time to complete."
+msgstr "それでおしまい！PostgreSQLは操作を実行します。テーブルの大きさに応じて、これは完了するまでに時間がかかる場合があります。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:157
+msgid ""
+"You can find more information about the VACUUM ANALYZE process in the "
+"`PostgreSQL Documentation on VACUUM ANALYZE "
+"<http://www.postgresql.org/docs/9.1/static/sql-vacuum.html>`_"
+msgstr "`ANALYZE VACUUMについてのPostgreSQLのドキュメント<http://www.postgresql.org/docs/9.1/static/sql-vacuum.html> ` _ANALYZE VACUUMの処理に関する詳細な情報を見つけることができます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:162
+msgid "|basic| |FA| Executing SQL Queries with DB Manager"
+msgstr "|basic| |FA|  DB ManagerとSQLクエリの実行"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:164
+msgid ""
+"DB Manager also provides a way for you to write queries against your "
+"database tables and to view the results. We have already seen this type of "
+"functionality in the :guilabel:`Browser` panel, but lets look at it again "
+"here with DB Manager."
+msgstr "DB Managerはまた、データベーステーブルに対してクエリを記述し、結果を表示するための方法を提供します。すでにこの種の機能見てきた :guilabel:`Browser` パネルを、しかし、DBマネージャで再びここでそれを見てみましょう。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:169
+msgid "Select the :kbd:`lines` table in the tree."
+msgstr "ツリー内で :kbd:`lines` テーブルを選択してください。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:170
+msgid "Select the :guilabel:`SQL window` button in the DB Manager toolbar."
+msgstr "DB Managerツールバーで :guilabel:`SQLのwindow` ボタンを選択します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:175
+msgid "Compose the following :guilabel:`SQL query` in the space provided::"
+msgstr "次の :guilabel:`SQLクエリ` を与えられたスペースに構成します ::"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:179
+msgid "Click the :guilabel:`Execute (F5)` button to run the query."
+msgstr "クエリを実行するには、 :guilabel:`実行（F5）` ボタンをクリックします。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:180
+msgid ""
+"You should now see the records that match in the :guilabel:`Result` panel."
+msgstr ":guilabel:`Result` パネルに一致するレコードが表示されているはずです。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:185
+msgid ""
+"Click the checkbox for :guilabel:`Load as new layer` to add the results to "
+"your map."
+msgstr ":guilabel:`新しいlayerとしてロード` のチェックボックスをクリックして地図に結果を追加します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:186
+msgid ""
+"Select the :kbd:`id` column as the :guilabel:`Column with unique integer "
+"values` and the :kbd:`geom` column as the :guilabel:`Geometry column`."
+msgstr ":kbd:`id` 列を :guilabel:`一意の整数値を持つ列` として、 :kbd:`geom` 列を :guilabel:`ジオメトリCOLUMN` として選択します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:188
+msgid "Enter :kbd:`roads_primary` as the :guilabel:`Layer name (prefix)`."
+msgstr ":guilabel:`レイヤ名（接頭辞）` を :kbd:`roads_primary` と入力します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:189
+msgid ""
+"Click :guilabel:`Load now!` to load the results as a new layer into your "
+"map."
+msgstr ":guilabel:`今すぐロード！` をクリックして地図に新しいレイヤーとして結果をロードします。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:194
+msgid ""
+"The layers that matched your query are now displayed on your map. You can of"
+" course use this query tool to execute any arbitrary SQL command including "
+"many of the ones we looked at in previous modules and sections."
+msgstr "クエリと一致したレイヤーは今、地図上に表示されます。もちろんこのクエリツールは、以前のモジュールとセクション中で見たものなど、任意のSQLコマンドを実行するために使用できます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:199
+msgid "Importing Data into a Database with DB Manager"
+msgstr "DBマネージャを使用したデータベースへのデータのインポート"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:201
+msgid ""
+"We have already looked at how to import data into a spatial database using "
+"command line tools and also looked at how to use the SPIT plugin, so now "
+"lets learn how to use DB Manager to do imports."
+msgstr "コマンドラインツールを使用して空間データベースにデータを読み込みする方法はすでに見てきており、またSPITプラグインを使用する方法も見てきましたので、今は読み込みを行うためにDB Managerを使用する方法を学ぶことができます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:205
+msgid ""
+"Click the :guilabel:`Import layer/file` button on the toolbar in the DB "
+"Manager dialog."
+msgstr "[DBマネージャ]ダイアログボックスのツールバー上の :guilabel:`レイヤー/ ファイルを読み込み` ボタンをクリックしてください。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:211
+msgid ""
+"Select the :kbd:`urban_33S.shp` file from "
+":kbd:`exercise_data/projected_data` as the input dataset."
+msgstr ":kbd:`exercise_data / projected_data` から :kbd:`urban_33S.shp` ファイルを入力データセットとして選択します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:213
+msgid ""
+"Click the :guilabel:`Update Options` button to pre-fill some of the form "
+"values."
+msgstr "フォームの値の一部を事前に埋めるために、 :guilabel:`更新Options` ボタンをクリックしてください。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:215
+msgid "Make sure that the :guilabel:`Create new table` option is selected"
+msgstr ":guilabel:`新しいtableを作成` オプションが選択されていることを確認してください"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:216
+msgid ""
+"Specify the :guilabel:`Source SRID` as :kbd:`32722` and the "
+":guilabel:`Target SRID` as :kbd:`4326`."
+msgstr ":guilabel:`元SRID` を :kbd:`32722` 、 :guilabel:`先SRID` を :kbd:`4326` として指定します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:218
+msgid "Enable the checkbox to :guilabel:`Create Spatial Index`"
+msgstr ":guilabel:`空間Indexを作成` の横にあるチェックボックスをオンにします。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:219
+msgid "Click :guilabel:`OK` to perform the import."
+msgstr ":guilabel:`OK` をクリックして読み込みを実行します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:224
+msgid "Dismiss the dialog letting you know that the import was successful"
+msgstr "読み込みが成功したことを知らせるダイアログを閉じます"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:225
+msgid "Click the :guilabel:`Refresh` button on the DB Manager Toolbar."
+msgstr "DBマネージャのツールバー上の :guilabel:`Refresh` ボタンをクリックしてください。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:227
+msgid ""
+"You can now inspect the table in your database by clicking on it in the "
+"Tree. Verify that the data has been reprojected by checking that the "
+":guilabel:`Spatial ref:` is listed as :kbd:`WGS 84 (4326)`"
+msgstr "今の木でそれをクリックすることで、データベース内のテーブルを調べることができます。:guilabel:`空間REF` は :kbd:`WGS 84（4326）` のように表示されているデータは、そのチェックすることによって再投影されていることを確認し"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:234
+msgid ""
+"Right clicking on the table in the Tree and a selecting :guilabel:`Add to "
+"Canvas` will add the table as a layer in your map."
+msgstr "右ツリーと選択して、テーブルをクリックして :guilabel:`Canvas` に追加する地図内のレイヤとしてテーブルを追加します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:239
+msgid "Exporting Data from a Database with DB Manager"
+msgstr "DBマネージャを使用したデータベースからのデータの書き出し"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:241
+msgid ""
+"Of course DB Manager can also be used to export data from your spatial "
+"databases, so lets take a look at how that is done."
+msgstr "もちろん、DB Managerは空間データベースからデータを書き出すために使用できます。そこで、それがどのように行われるかを見てみましょう。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:244
+msgid ""
+"Select the :kbd:`lines` layer in the Tree and click the :guilabel:`Export to"
+" File` button on the toolbar to open the :guilabel:`Export to vector file` "
+"dialog."
+msgstr "ツリーで :kbd:`lines` レイヤーを選択し、ツールバー上の :guilabel:`Fileに書出` ボタンをクリック :guilabel:`ベクトルファイルを書き出し` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:247
+msgid ""
+"Click the :guilabel:`...` button to select the :guilabel:`Output file` and "
+"save the data to your :kbd:`exercise_data` directory as :kbd:`urban_4326`."
+msgstr ":guilabel:` ... `ボタンがクリック :guilabel:`出力file` とデータを保存 選択し の :kbd:`exercise_data` ディレクトリとして :kbd:`urban_4326` 。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:249
+msgid "Set the :guilabel:`Target SRID` as :kbd:`4326`."
+msgstr ":guilabel:`ターゲットSRID` を :kbd:`4326` と設定します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:250
+msgid "Click :guilabel:`OK` to initialize the export."
+msgstr ":guilabel:`OK` をクリックして書き出しを初期化します。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:255
+msgid ""
+"Dismiss the dialog letting you know the export was successful and close the "
+"DB Manager."
+msgstr "書き出しが成功したことを知らせるダイアログを閉じ、DBマネージャを閉じます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:258
+msgid "You can now inspect the shapefile you created with the Browser panel."
+msgstr "ブラウザパネルで作成したシェープファイルを検査できます。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:264
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:266
+msgid ""
+"You have now seen how to use the DB Manager interface in QGIS to Manage your"
+" spatial databases, to execute sql queries against your data and how to "
+"import and export data."
+msgstr "今まで、QGISで空間データベースを管理するためのDBマネージャインターフェースを使用して、データに対してSQLクエリを実行する方法、およびデータを読み込んだり書き出しする方法を見てきました。"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:271
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/databases/db_manager.rst:273
+msgid ""
+"Next, we will look at how to use many of these same techniques with "
+"*spatialite* databases."
+msgstr "次は *spatialite* データベースでこれらの同じ技術の多くを使用する方法を見ていきます。"

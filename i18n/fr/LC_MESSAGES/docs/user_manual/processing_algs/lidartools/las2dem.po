@@ -1,12 +1,13 @@
 # Translators:
 # MarieSilvestre <marie.silvestre@gmail.com>, 2016
+# Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 2.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>, 2016\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +17,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:6
 msgid "las2dem"
-msgstr ""
+msgstr "las2dem"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:9
 msgid "Description"
@@ -30,6 +31,12 @@ msgid ""
 "<http://rapidlasso.com/las2dem>`_ page and its online `README "
 "<http://lastools.org/download/las2dem_README.txt>`_ file."
 msgstr ""
+"Cet outil peut transformer des points (jusqu'à un maximum de 20 millions par"
+" fichier) en rasters d'élévation, d'intensité ou RGB à l'aide d'une "
+"triangulation temporaire de Delaunay, selon un pas défini par l'utilisateur."
+" Pour plus d'information, consultez la page `las2dem "
+"<http://rapidlasso.com/las2dem>`_ et son fichier `README "
+"<http://lastools.org/download/las2dem_README.txt>`_ en ligne."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:14
 msgid "Parameters"
@@ -41,7 +48,7 @@ msgstr "``verbose`` [booléen]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:17
 msgid "Generates more textual control output to the console."
-msgstr ""
+msgstr "Génère une sortie vers la console avec davantage de texte."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:19
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:24
@@ -51,11 +58,13 @@ msgstr "Par défaut : *Faux*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:24
 msgid "``open LAStools GUI`` [boolean]"
-msgstr ""
+msgstr "``Ouvrir l'interface de LAStools`` [booléen]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:22
 msgid "Starts the GUI of LAStools with pre-populated input files."
 msgstr ""
+"Lance l'interface graphique de LAStools avec les fichiers d'entrée pré-"
+"renseignés."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:27
 msgid "``input LAS/LAZ file`` [points]"
@@ -64,16 +73,20 @@ msgstr "``fichier d'entrée LAS/LAZ`` [points]"
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:27
 msgid "The file containing the points to be rastered in LAS/LAZ format."
 msgstr ""
+"Le fichier contenant les points qui seront transformés en raster, au format "
+"LAS/LAZ."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:32
 msgid "``filter`` [selection]"
-msgstr ""
+msgstr "``filtre`` [sélection]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:30
 msgid ""
 "Specifies which points to use to construct the temporary TIN that is then "
 "rastered."
 msgstr ""
+"Indique quels points utiliser pour construire le TIN temporaire qui sera "
+"rasterisé par la suite."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:32
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:57
@@ -82,11 +95,12 @@ msgstr "Par défaut : *---*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:37
 msgid "``step size / pixel size`` [number]"
-msgstr ""
+msgstr "``taille de pas/pixel`` [nombre]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:35
 msgid "Specifies the size of the cells of the grid the TIN is rastered onto."
 msgstr ""
+"Indique la taille des cellules de la grille pour le TIN qui sera rasterisé."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:37
 msgid "Default: *1.0*"
@@ -94,37 +108,39 @@ msgstr "Par défaut : *1.0*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:42
 msgid "``Attribute`` [selection]"
-msgstr ""
+msgstr "``Attribut`` [sélection]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:40
 msgid "Specifies the attribute that is to be rastered."
-msgstr ""
+msgstr "Indique l'attribut qui sera utilisé pour construire le raster."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:42
 msgid "Default: *elevation*"
-msgstr ""
+msgstr "Par défaut: *élévation*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:47
 msgid "``Product`` [selection]"
-msgstr ""
+msgstr "``Produit`` [sélection]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:45
 msgid "Specifies how the attribute is to be turned into raster values."
-msgstr ""
+msgstr "Indique comment l'attribut sera transformé en valeurs de raster."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:47
 msgid "Default: *actual values*"
-msgstr ""
+msgstr "Par défaut : *valeurs actuelles*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:52
 msgid "``use tile bounding box`` [boolean]"
-msgstr ""
+msgstr "``utiliser une emprise de tuile`` [booléen]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:50
 msgid ""
 "Specifies to limit the rastered area to the tile bounding box (only "
 "meaningful for input LAS/LAZ tiles that were created with lastile)."
 msgstr ""
+"Paramètre la limite de la surface raster à l'emprise de tuile (uniquement "
+"utilise pour les tuiles au format LAS/LAZ créées avec lastile)."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:57
 msgid "``additional command line parameter(s)`` [string]"
@@ -135,6 +151,8 @@ msgid ""
 "Specifies other command-line switches not available via this menu but known "
 "to the (advanced) LAStools user."
 msgstr ""
+"Indique les autres options de ligne de commande non disponibles via ce menu "
+"mais connues des utilisateurs (avancés) de LAStools."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:60
 msgid "Outputs"
@@ -150,6 +168,10 @@ msgid ""
 "PNG, and JPG for false color, gray ramps, and hillshades. Use value rasters "
 "like TIF, BIL, IMG, ASC, DTM, FLT, XYZ, and CSV for actual values."
 msgstr ""
+"Indique l'emplacement de stockage du raster de sortie. Utilisez des rasters "
+"images au format TIF, PNG et JPG pour les fausses couleurs, les rampes de "
+"niveaux de gris ou l'ombrage. Utilisez des rasters de valeurs au format TIF,"
+" BIL, IMG, ASC, DTM, FLT, XYZ et CSV pour des valeurs discrètes."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2dem.rst:66
 msgid "Console usage"
@@ -160,3 +182,6 @@ msgid ""
 "See also the `las2dem <http://rapidlasso.com/las2dem>`_ page and its online "
 "`README <http://lastools.org/download/las2dem_README.txt>`_ file."
 msgstr ""
+"Consultez également la page `las2dem <http://rapidlasso.com/las2dem>`_ et le"
+" fichier `README <http://lastools.org/download/las2dem_README.txt>`_ en "
+"ligne."

@@ -1,0 +1,635 @@
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2017\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:9
+msgid "Documentation Guidelines"
+msgstr "문서 작성 지침"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:15
+msgid "Introduction"
+msgstr "소개"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:17
+msgid ""
+"QGIS Documentation will be built automatically on the server at 0, 8am, 4pm "
+"PDT (Pacific Daylight Time). The current status is available at "
+"http://docs.qgis.org."
+msgstr ""
+"QGIS 문서는 태평양 일광 절약 시간(Pacific Daylight Time) 기준 0시, 오전 8시, 오후 4시마다 서버 상에서 "
+"자동으로 문서화됩니다. http://docs.qgis.org 에서 현재 상태를 알아볼 수 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:21
+msgid ""
+"QGIS Documentation is mainly written using the reStructuredText (reST) "
+"format syntax, coupled with some scripts from the Sphinx toolset to post-"
+"process the HTML output. See "
+"http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html or "
+"http://sphinx.pocoo.org/markup/inline.html."
+msgstr ""
+"QGIS 문서는 주로 reST(reStructuredText) 포맷 문법을 따라 작성되며, HTML 산출물을 후처리하기 위해 Sphinx"
+" 도구모음의 몇몇 스크립트를 이용합니다. "
+"http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html 또는 "
+"http://sphinx.pocoo.org/markup/inline.html 을 참고하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:26
+msgid ""
+"In general, when creating rst documentation for the QGIS project, please "
+"follow the `Python documentation style guidelines "
+"<http://docs.python.org/devguide/documenting.html>`_. Below are exposed some"
+" general guidelines to follow when using reST for the QGIS documentation "
+"writing."
+msgstr ""
+"일반적인 경우, QGIS 프로젝트를 위한 reST 문서를 작성할 때 `파이썬 문서 작성 스타일 지침서 "
+"<http://docs.python.org/devguide/documenting.html>`_ 를 따라주시기 바랍니다. 다음 절부터 "
+"QGIS 문서 작성을 위해 reST를 이용할 경우 따라야 할 몇몇 일반적인 지침을 보여주고 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:32
+msgid ""
+"If you are looking for general rules on contributing to QGIS project or "
+"managing repositories, you may find help at `Get Involved in the QGIS "
+"Community <http://qgis.org/en/site/getinvolved/index.html>`_."
+msgstr ""
+"QGIS 프로젝트에 참여하거나 저장소를 관리하는 데 대한 일반적인 규칙을 찾고 있다면, `QGIS 커뮤니티에 관여하기 "
+"<http://qgis.org/en/site/getinvolved/index.html>`_ 에서 관련 도움말을 찾을 수 있을 겁니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:38
+msgid "Writing Documentation"
+msgstr "문서 작성"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:42
+msgid "Headlines"
+msgstr "표제"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:44
+msgid "To each webpage of the documentation corresponds a ``.rst`` file."
+msgstr "문서의 ``.rst`` 파일 하나가 웹페이지 하나와 대응합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:46
+msgid ""
+"Sections used to structure the text are identified through their title which"
+" is underlined (and overlined for the first level). Same level titles must "
+"use same character for underline adornment. In QGIS Documentation, you "
+"should use following styles for chapter, section, subsection and minisec."
+msgstr ""
+"밑줄(1단계 제목의 경우 윗줄도 포함) 그어진 제목을 통해 텍스트의 구조를 구성하는 절(section)을 식별합니다. 동일한 단계의 "
+"제목은 반드시 동일한 특수문자로 밑줄을 작성해야 합니다. QGIS 문서의 경우, 장(chapter), 절(section), "
+"항(subsection), 목(minisec)에 대해 다음과 같은 스타일을 사용해야 합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:71
+msgid "Inline tags"
+msgstr "내부 처리 태그"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:73
+msgid "You can use some tags inside the text to emphasize some items."
+msgstr "일부 항목을 강조하기 위해 텍스트 내부에서 몇몇 태그를 사용할 수 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:75
+msgid ""
+"**Menu gui**: to mark a complete sequence of menu selections, including "
+"selecting submenus and choosing a specific operation, or any subsequence of "
+"such a sequence."
+msgstr ""
+"**메뉴 GUI** : 일련의 완전한 메뉴 선택 순서를 표시합니다. 하위 메뉴를 선택해서 특정한 작업을 수행하는 순서, 또는 해당 순서의"
+" 하위 순서를 포함합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:83
+msgid ""
+"**Dialog and Tab title**: Labels presented as part of an interactive user "
+"interface including window title, tab title and option labels."
+msgstr ""
+"**대화창 및 탭 제목** : 창 제목, 탭 제목, 그리고 옵션 라벨을 포함하는 대화형 사용자 인터페이스의 일부로 라벨을 표시합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:90
+msgid "**Button labels**"
+msgstr "**버튼 라벨**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:96
+msgid "**Filename or directory**"
+msgstr "**파일명 또는 디렉터리**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:102
+msgid "**Icon with popup text belonging to Icon**"
+msgstr "**팝업 텍스트를 보유한 아이콘**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:108
+msgid "(see `image`_ below)."
+msgstr "(다음 `image`_ 를 참조하십시오)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:110
+msgid "**Shorcut keyboard**"
+msgstr "**단축키**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:116
+msgid "will show :kbd:`Ctrl B`"
+msgstr ":kbd:`Ctrl B` 와 같이 보일 겁니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:119
+msgid "**User text**"
+msgstr "**사용자 텍스트**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:129
+msgid "Label/reference"
+msgstr "라벨/참조"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:131
+msgid ""
+"References are used to place anchors inside the text. It then helps you "
+"create and call hyperlinks between sections or page."
+msgstr ""
+"텍스트 내부에 앵커(anchor)를 삽입하는 데 참조를 이용합니다. 이 앵커를 통해 절 또는 페이지 사이의 하이퍼링크를 생성하고 호출할 "
+"수 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:134
+msgid ""
+"The example below creates the anchor of a section (e.g., Label/reference "
+"title)"
+msgstr "다음은 절(예: 라벨/참조 제목)의 앵커를 생성하는 예시입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:143
+msgid "To call the reference in the **same page**, use"
+msgstr "**동일 페이지** 안에서 참조를 호출하려면 다음과 같이 작성합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:149
+msgid "which will return:"
+msgstr "다음과 같은 내용을 반환할 것입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:151
+msgid "see my_anchor_ for more information."
+msgstr "see my_anchor_ for more information."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:153
+msgid ""
+"Notice how it will jump to the following line/thing following the 'anchor'. "
+"Normally to declare this label you do not need to use apastroph's but you do"
+" need to use empty lines before and after the anchor."
+msgstr ""
+"'앵커'가 가리키는 라인/객체로 어떻게 넘어가는지 아시겠습니까? 일반적으로 이 라벨을 선언할 때 아포스트로피를 쓸 필요는 없지만 앵커 "
+"전후에 반드시 공백을 넣어야 합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:157
+msgid ""
+"Another way to jump to the same place **from anywhere in the documentation**"
+" is to use the ``:ref:`` role."
+msgstr "**문서 어디에서든** 동일한 장소로 넘어가는 또다른 방법은 ``:ref:`` 기능을 이용하는 것입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:164
+msgid ""
+"which will display the caption instead (in this case the title of this "
+"section!):"
+msgstr "앵커 대신 캡션을 (이 경우 현재 절의 제목을) 표시할 것입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:166
+msgid "see :ref:`my_anchor` for more information."
+msgstr "see :ref:`my_anchor` for more information."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:168
+msgid ""
+"So reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`). Because the "
+"reference often displays a full caption, there is not really the need to use"
+" the word *section*. Note that you can also use a custom caption to describe"
+" the reference"
+msgstr ""
+"이렇게 참조 1(my_anchor_)과 참조 2(:ref:`my_anchor`)라는 방법이 있습니다. 참조가 완전한 캡션을 표시하는 "
+"경우가 많기 때문에, *절* 이라는 단어를 따로 작성할 필요는 없습니다. 또한 참조를 설명하는 데 사용자 지정 캡션을 쓸 수도 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:177
+msgid "returning:"
+msgstr "다음과 같이 반환됩니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:179
+msgid "see :ref:`Label and reference <my_anchor>` for more information."
+msgstr "see :ref:`Label and reference <my_anchor>` for more information."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:185
+msgid "Figure and image"
+msgstr "도형과 이미지"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:189
+msgid "Pictures"
+msgstr "그림"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:191
+msgid "To insert an image, use"
+msgstr "다음은 이미지를 삽입하는 예시입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:198
+msgid "which returns"
+msgstr "다음과 같은 그림을 반환합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:204
+msgid "Replacement"
+msgstr "별명"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:206
+msgid ""
+"You can put an image inside text or add an alias to use everywhere. To use "
+"an image inside a paragraph, just create an alias somewhere."
+msgstr ""
+"텍스트 안에 이미지를 삽입할 수도 있고, 또는 다른 곳에서도 쓰기 위해 별명(alias)을 추가할 수도 있습니다. 문단 안에 이미지를 "
+"삽입하려면, 다른 곳에 별명을 생성하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:215
+msgid "and call it in your paragraph:"
+msgstr "그 다음 사용자의 문장에 별명을 호출하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:221
+msgid "Here is how this example become:"
+msgstr "이 예시가 다음과 같이 표시됩니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:226
+msgid "my paragraph begins here with a nice logo |nice_logo|."
+msgstr "my paragraph begins here with a nice logo |nice_logo|."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:230
+msgid ""
+"Currently, to ensure consistency and help in the use of QGIS icons a list of"
+" alias is built and available in :ref:`substitutions` chapter."
+msgstr ""
+"현재, 일관성을 보장하고 QGIS 아이콘 이용을 돕기 위해 :ref:`substitutions` 장에 사용자가 쓸 수 있는 별명 목록을 "
+"생성해 놓았습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:234
+msgid "Figure"
+msgstr "도형"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:251
+msgid "The result looks like this:"
+msgstr "결과는 다음과 같습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:263
+msgid "A caption: A logo I like"
+msgstr "A caption: A logo I like"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:265
+msgid ""
+"Use ``.. only:: html`` to make the number to the figure (**Figure Readme "
+"1**) visible only in the html files. The scripts will insert an automatical "
+"generated number before the caption of the figure in pdf."
+msgstr ""
+"``.. only:: html`` 은 도형에 붙는 번호(**Figure Readme 1**)가 HTML 파일 안에서만 보이도록 하는 "
+"기능입니다. 스크립트가 자동적으로 번호를 생성해서 PDF에 있는 도형의 캡션 앞에 삽입할 것입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:270
+msgid ""
+"To use a caption (see My caption) just insert indented text after a blank "
+"line in the figure block."
+msgstr ""
+"캡션을 쓰려면 (my_anchor_ 참조) ``.. figure::`` 단락의 빈 줄 다음에 원하는 텍스트를 삽입하면 됩니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:273
+msgid ""
+"Referencing to the figure can be done using the reference label like this"
+msgstr "도형에 대한 참조는 다음과 같이 참조 라벨을 사용해서 작성할 수 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:280
+msgid ""
+"It will show the anchor Figure_Readme_1_. You can use uppercase if you want."
+" It can be used in the same :file:`.rst` document but not in other .rst "
+"documents."
+msgstr ""
+"이렇게 하면 Figure_Readme_1_ 앵커를 표시할 것입니다. 원한다면 대문자를 쓸 수도 있습니다. 동일한 :file:`.rst` "
+"문서 내에서는 이 참조를 쓸 수 있지만, 다른 :file:`.rst` 문서에서 쓸 수는 없습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:284
+msgid ""
+"You can not use the ``:ref:`` role for reference anymore, because in html "
+"the reference to the caption is lost (it now refers to the place before "
+"**Figure Readme 1:**)"
+msgstr ""
+"이 때 더 이상 ``:ref:`` 기능을 사용할 수는 없습니다. HTML 문서 안에서 캡션에 대한 참조가 사라지기 때문입니다. (해당 "
+"참조가 **Figure Readme 1:** 앞의 장소를 가리키게 됩니다.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:294
+msgid "Tables"
+msgstr "도표"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:296
+msgid "To create a simple table"
+msgstr "다음은 단순한 표를 생성하는 예시입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:307
+msgid "Use a ``\\`` followed by an empty space to leave an empty space."
+msgstr "공백을 남기려면 ``\\`` 뒤에 공백을 삽입하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:309
+msgid ""
+"You can also use more complicated tables by drawing them using references "
+"and all"
+msgstr "참조 등을 이용, 표를 직접 그려서 좀 더 복잡한 표를 작성할 수도 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:327
+msgid "The result:"
+msgstr "결과물은 다음과 같습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:332
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:332
+msgid "Mac OSX"
+msgstr "Mac OSX"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:334
+msgid "|win|"
+msgstr "|win|"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:334
+msgid "|osx|"
+msgstr "|osx|"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:336
+msgid "and of course not to forget |nix|"
+msgstr "and of course not to forget |nix|"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:339
+msgid "My drawn table, mind you this is unfortunately not regarded a caption"
+msgstr "My drawn table, mind you this is unfortunately not regarded a caption"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:341
+msgid "You can reference to it like this my_drawn_table_1_."
+msgstr "You can reference to it like this my_drawn_table_1_."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:345
+msgid "Index"
+msgstr "색인"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:347
+msgid ""
+"Several index tag exists in RST. To be able to translate the index, it is "
+"necessary to integrate it into the normal text. In this case use this "
+"syntax:"
+msgstr ""
+"RST는 색인 태그를 몇 개 보유하고 있습니다. 번역이 필요한 용어일 경우, 일반 텍스트 안에 색인을 통합해야 합니다. 이 경우 다음 "
+"문법을 쓰십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:354
+msgid "If the term does not have to be translated, please use this syntax:"
+msgstr "꼭 번역할 필요가 없는 용어일 경우, 다음 문법을 쓰십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:361
+msgid "Footnotes"
+msgstr "주석"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:363
+msgid ""
+"Please note: Footnotes are not recognized by any translation software and it"
+" is also not converted to pdf format properly. So, if possible don't use "
+"footnotes within any documentation."
+msgstr ""
+"어떤 번역 소프트웨어도 주석을 식별하지 못 하며, 또 주석은 PDF 포맷으로 제대로 변환되지도 않습니다. 따라서 가능하다면 어떤 문서에도"
+" 주석을 쓰지 마십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:367
+msgid "This is for creating a footnote"
+msgstr "다음은 주석을 생성하는 예시입니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:373
+msgid "Which will point to:"
+msgstr "다음을 가리키게 됩니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:375
+msgid "Updates of core plugins"
+msgstr "Updates of core plugins"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:378
+msgid "Managing Screnshots"
+msgstr "스크린샷 관리"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:381
+msgid "Add new Screenshots"
+msgstr "새 스크린샷 추가"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:383
+msgid ""
+"Here are some hints to create new, nice looking screenshots. For the user "
+"guide they go into :file:`./resources/en/user_manual/`"
+msgstr ""
+"보기 좋은 새 스크린샷을 생성할 수 있는 몇 가지 힌트를 드리겠습니다. 사용자 설명서의 경우 스크린샷은 "
+":file:`./resources/en/user_manual/` 안에 들어갑니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:386
+msgid ""
+"same environment for all the screen caps (same OS, same decoration, same "
+"font size). We have used Ubuntu with Unity and the default \"ambience\" "
+"theme. For screenshots of QGIS main window and composer we have set it to "
+"show menus on the window (not the default in unity)."
+msgstr ""
+"모든 스크린 캡처 환경은 동일해야 (동일한 OS, 동일한 테마, 동일한 폰트 크기) 합니다. 우리는 우분투 Unity 환경에서 기본 "
+"\"ambience\" 테마를 이용했습니다. QGIS 메인 창 및 작성자의 스크린샷의 경우 창에 메뉴가 보이도록 (Unity 환경에서는 "
+"기본적으로 메뉴가 보이지 않습니다) 설정했습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:390
+msgid ""
+"reduce the window to the minimal space needed to show the feature (taking "
+"the all screen for a small modal window > overkill)"
+msgstr ""
+"모습을 보여주는 데 필요한 최소한의 공간을 차지하도록 창 크기를 줄입니다. (작은 대화창을 화면 전체 크기로 캡처할 필요는 없겠죠.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:392
+#: ../../source/docs/documentation_guidelines/writing.rst:437
+msgid "the less clutter, the better (no need to activate all the toolbars)"
+msgstr "직관적이고 단순할수록 좋습니다. (모든 툴바를 활성화시킬 필요는 없습니다.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:393
+msgid ""
+"don't resize them in an image editor, the size will be set into the rst "
+"files if necessary (downscaling the dimensions without properly upping the "
+"resolution > ugly)"
+msgstr ""
+"스크린샷의 크기를 이미지 편집기로 조정하지 마십시오. 필요할 경우 :file:`.rst` 파일 내부에서 이미지 크기를 설정하면 됩니다. "
+"(해상도를 제대로 높이지 않고 크기를 줄일 경우 보기에 안 좋은 이미지가 됩니다.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:395
+#: ../../source/docs/documentation_guidelines/writing.rst:440
+msgid "cut the background"
+msgstr "배경을 잘라내십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:396
+msgid ""
+"Set print size resolution to 135 dpi, eg in Gimp set the print resolution "
+"(image > print size) and save. This way, if no size is set in the rst files,"
+" images will be at original size in html and at a good print resolution in "
+"the PDF. You can use ImageMagick convert command to do a batch of images:"
+msgstr ""
+"인쇄 해상도를 135dpi로 조정하십시오. 예를 들어 Gimp를 사용할 경우 인쇄 해상도를 조정한 다음 (Image > Print "
+"Size) 저장하십시오. 이렇게 하면 :file:`.rst` 파일 내부에서 크기를 설정하지 않더라도 이미지가 HTML에서는 원래 크기로,"
+" PDF에서는 훌륭한 인쇄 해상도로 나올 겁니다. 다음과 같이 ImageMagick 변환 명령어를 써서 여러 이미지들을 배치 작업할 수 "
+"있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:405
+#: ../../source/docs/documentation_guidelines/writing.rst:441
+msgid "save them in png (no jpeg artifacts)"
+msgstr "스크린샷을 PNG 포맷으로 저장하십시오. (JPEG 압축을 사용하지 마십시오.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:406
+#: ../../source/docs/documentation_guidelines/writing.rst:442
+msgid ""
+"the screenshot should show the content according to what is described in the"
+" text"
+msgstr "스크린샷은 텍스트가 설명하는 내용을 보여주어야 합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:407
+msgid ""
+"you can find some prepared QGIS-projects that were used before to create "
+"screenshots in :file:`./qgis-projects`. This makes it easier to reproduce "
+"screenshots for the next version of QGIS. These projects use the QGIS "
+"`Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset), which"
+" should be placed in the same folder as the QGIS-Documentation Repository."
+msgstr ""
+"스크린샷을 캡처하기 위해 이전에 사용된 기존 QGIS 프로젝트 몇 개를 :file:`./qgis-projects` 에서 찾아볼 수 "
+"있습니다. QGIS 다음 버전에서 스크린샷을 다시 캡처하는 데 도움이 될 것입니다. 이 프로젝트들은 QGIS `샘플 데이터 "
+"<http://qgis.org/downloads/data/>`_ (일명 알래스카 데이터셋)을 이용하는데, 이 데이터셋은 QGIS 문서 "
+"저장소와 동일한 폴더에 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:413
+msgid ""
+"Use the following command to remove the global menu function in Ubuntu to "
+"create smaller application screens with menu's:"
+msgstr "우분투에서 글로벌 메뉴 기능을 제거해서 더 작은 응용 프로그램 스크린샷을 생성하려면 다음 명령어를 사용하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:422
+msgid "Translate Screenshots"
+msgstr "스크린샷 번역"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:424
+msgid ""
+"Here are some hints to create screenshots for your translated user guide. "
+"They will go into :file:`./resources/<your language>/user_manual/`"
+msgstr ""
+"번역된 사용자 설명서를 위한 스크린샷을 생성할 수 있는 몇 가지 힌트를 드리겠습니다. 이 스크린샷들은 "
+":file:`./resources/1/user_manual/` 안에 들어갑니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:427
+msgid ""
+"same environment for all the screen caps (same OS, same decoration, same "
+"font size)"
+msgstr "모든 스크린 캡처 환경은 동일해야 (동일한 OS, 동일한 테마, 동일한 폰트 크기) 합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:428
+msgid ""
+"use the QGIS -projects included in QGIS-Documentation repository (in "
+":file:`./qgis_projects` ). These were used to produce the 'original' "
+"screenshots in the manual. The QGIS `Sample Data "
+"<http://qgis.org/downloads/data/>`_ (aka Alaska Dataset) should be placed in"
+" the same folder as the QGIS-Documentation Repository."
+msgstr ""
+"QGIS 문서 저장소( :file:`./qgis_projects` )에 포함된 QGIS 프로젝트들을 이용하십시오. 설명서에 있는 '원본'"
+" 스크린샷들을 캡처하는 데 쓰인 프로젝트들입니다. QGIS `샘플 데이터 <http://qgis.org/downloads/data/>`_"
+" (일명 알래스카 데이터셋)은 QGIS 문서 저장소와 동일한 폴더에 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:432
+msgid ""
+"same size as the english 'original' screenshots, otherwise they will be "
+"stretched and look ugly. If you need to have a different size due to longer "
+"ui strings, don't forget to change the dimension in the rst code of your "
+"language."
+msgstr ""
+"영어 '원본' 스크린샷과 동일한 크기로 생성하십시오. 크기가 다르면 가로 세로가 조정되어 보기에 좋지 않습니다. UI 문자열 길이가 달라"
+" 다른 크기가 필요한 경우, 번역 언어의 reST 코드에서 이미지 크기를 변경해야 합니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:435
+msgid ""
+"reduce the window to the minimal space needed to show the feature (taking "
+"all the screen for a small modal window > overkill)"
+msgstr ""
+"모습을 보여주는 데 필요한 최소한의 공간을 차지하도록 창 크기를 줄입니다. (작은 대화창을 화면 전체 크기로 캡처할 필요는 없겠죠.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:438
+msgid ""
+"don't resize them in an image editor, the size will be set into the rst "
+"files (downscaling the dimensions without properly upping the resolution > "
+"ugly)"
+msgstr ""
+"스크린샷의 크기를 이미지 편집기로 조정하지 마십시오. :file:`.rst` 파일 내부에서 이미지 크기를 설정하면 됩니다. (해상도를 "
+"제대로 높이지 않고 크기를 줄일 경우 보기에 안 좋은 이미지가 됩니다.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:446
+msgid "Documenting Processing algorithms"
+msgstr "공간 처리 알고리즘 문서 작성"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:448
+msgid ""
+"If you want to write documentation for Processing algorithms consider these "
+"guidelines:"
+msgstr "공간 처리 알고리즘을 위한 문서를 작성하고자 할 경우, 다음과 같은 지침들을 고려하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:450
+msgid ""
+"don't overwrite existing help files by files from other sources (e.g. QGIS "
+"source tree or Processing-Help repository), this files have different "
+"formats"
+msgstr ""
+"기존 도움말 파일을 다른 소스(예: QGIS 소스 트리 또는 공간 처리 도움말 저장소)의 파일로 덮어 쓰지 마십시오. 다른 소스의 파일은"
+" 포맷이 다릅니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:452
+msgid ""
+"Processing algorithm help files are part of QGIS User Guide, so use same "
+"formatting as User Guide and other documentation"
+msgstr ""
+"공간 처리 알고리즘 도움말 파일은 QGIS 사용자 설명서의 일부입니다. 따라서 사용자 설명서 및 기타 문서들과 동일한 포맷을 "
+"이용하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:454
+msgid ""
+"avoid use \"This algoritm does this and that...\" as first sentence in "
+"algorithm description. Try to use more general words like in TauDEM or GRASS"
+" algoritms help"
+msgstr ""
+"알고리즘 설명의 첫 문장으로 \"이 알고리즘은 이런 기능을 하고 저런 기능도...\" 같은 문장을 피하십시오. TauDEM 또는 "
+"GRASS 알고리즘 도움말에 있는 보다 일반적인 단어를 써보세요."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:457
+msgid ""
+"add images if needed. Use PNG format and follow general guidelines for "
+"documentation."
+msgstr "필요할 경우 이미지를 추가하십시오. PNG 포맷을 사용해서 문서 작성을 위한 일반 지침을 따르십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:458
+msgid ""
+"if necessary add links to additional information (e.g. publications or web-"
+"pages) to the \"See also\" section"
+msgstr "필요할 경우 \"참고\" 절에 추가적인 정보(예: 출판물 또는 웹페이지)의 링크를 추가하십시오."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:460
+msgid ""
+"give clear explanation for algorithm parameters and outputs (again GRASS and"
+" TauDEM are good examples)."
+msgstr "알고리즘 파라미터와 산출물에 대한 명확한 설명을 하십시오. (역시 GRASS 및 TauDEM이 훌륭한 예시입니다.)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:462
+msgid ""
+"don't edit parameter or output names. If you found typo or wrong spelling "
+"--- report this in bugracker, so developers can fix this in Processing code "
+"too"
+msgstr ""
+"파라미터 또는 산출물 명칭을 편집하지 마십시오. 오타 또는 철자 오류를 발견했을 경우, 버그 신고를 해주십시오. 그래야 개발자들이 공간 "
+"처리 코드도 함께 수정할 수 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:464
+msgid ""
+"don't list available options in algorithm description, options already "
+"listed in parameter description."
+msgstr "알고리즘 설명에 사용 가능한 옵션들을 나열하지 마십시오. 옵션은 이미 파라미터 설명에 나열되어 있습니다."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:466
+msgid ""
+"don't add information vector geometry type in algorithm or parameter "
+"description without compelling reason as this information already available "
+"in parameter description"
+msgstr ""
+"분명한 이유 없이는 알고리즘 또는 파라미터 설명에 벡터 도형 유형 정보를 추가하지 마십시오. 이미 파라미터 설명에서 해당 정보를 볼 수 "
+"있습니다."

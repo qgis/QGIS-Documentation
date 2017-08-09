@@ -14,15 +14,11 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:12
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:11
 msgid "Virtual layers"
 msgstr "Straturi virtuale"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:19
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:18
 msgid ""
 "A special kind of vector layer allows you to define a layer as the result of"
 " an advanced query, using the SQL language on any number of other vector "
@@ -30,12 +26,17 @@ msgid ""
 "they do not carry data by themselves and can be seen as views to other "
 "layers."
 msgstr ""
+"Un tip special de strat vectorial permite definirea unui strat ca rezultat "
+"al unei interogări avansate, folosind limbajul SQL asupra oricărui număr de "
+"alte straturi vectoriale pe care QGIS este capabil să le deschidă. Aceste "
+"straturi sunt denumite straturi virtuale: ele însele nu transportă date și "
+"pot fi văzute ca vederi ale altor straturi."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:25
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:24
 msgid "Creating a virtual layer"
 msgstr "Crearea unui strat virtual"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:27
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:26
 msgid ""
 "Open the virtual layer creation dialog by clicking on :guilabel:`Add Virtual"
 " Layer` in the :guilabel:`Layer` menu or from the corresponding toolbar."
@@ -44,13 +45,16 @@ msgstr ""
 ":guilabel:`Adăugare Strat Virtual` din meniul :guilabel:`Strat` sau din bara"
 " de instrumente corespunzătoare."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:31
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:30
 msgid ""
 "The dialog allows you to specify an SQL query. The query can use the name "
 "(or id) of existing vector layers as well as field names of these layers."
 msgstr ""
+"Caseta de dialog vă permite să specificați o interogare SQL. Interogarea "
+"poate utiliza numele (sau ID-ul) straturilor vectoriale existente, precum și"
+" numele câmpurilor din aceste straturi."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:34
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:33
 msgid ""
 "For example, if you have a layer called ``regions``, you can create a new "
 "virtual layer with an SQL query like ``SELECT * FROM regions WHERE id < "
@@ -59,27 +63,27 @@ msgid ""
 " SQL queries."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:40
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:39
 msgid ""
 "Joins and complex queries can also be created simply by directly using the "
 "names of the layers that are to be joined."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:44
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:43
 msgid "Supported language"
 msgstr "Limbaje acceptate"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:46
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:45
 msgid "The underlying engine uses SQLite and Spatialite to operate."
-msgstr ""
+msgstr "Motorul de bază folosește SQLite și Spatialite pentru a opera."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:48
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:47
 msgid ""
 "It means you can use all of the SQL your local installation of SQLite "
 "understands."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:51
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:50
 msgid ""
 "Functions from SQLite and spatial functions from Spatialite can also be used"
 " in a virtual layer query. For instance, creating a point layer out of a "
@@ -87,35 +91,35 @@ msgid ""
 "MakePoint(x, y, 4326) as geometry FROM coordinates``"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:56
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:55
 msgid ""
 ":ref:`Functions of QGIS expressions<functions_list>` can also be used in a "
 "virtual layer query."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:59
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:58
 msgid "To refer the geometry column of a layer, use the name ``geometry``."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:61
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:60
 msgid ""
 "Contrary to a pure SQL query, all the fields of a virtual layer query must "
 "be named. Don't forget to use the ``as`` keyword to name your columns if "
 "they are the result of a computation or function call."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:66
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:65
 msgid "Performance issues"
 msgstr "Probleme legate de performanță"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:68
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:67
 msgid ""
 "With default parameters set, the virtual layer engine will try its best to "
 "detect the type of the different columns of the query, including the type of"
 " the geometry column if one is present."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:72
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:71
 msgid ""
 "This is done by introspecting the query when possible or by fetching the "
 "first row of the query (LIMIT 1) at last resort. Fetching the first row of "
@@ -123,11 +127,11 @@ msgid ""
 "reasons."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:77
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:76
 msgid "The creation dialog allows to specify different parameters:"
 msgstr "Dialogul de creare vă permite să specificați diverși parametri:"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:79
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:78
 msgid ""
 "**unique identifier column**: this option allows to specify which field of "
 "the query represents unique integer values that QGIS can use as row "
@@ -136,59 +140,61 @@ msgid ""
 "by id."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:85
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:84
 msgid ""
 "**no geometry**: this option forces the virtual layer to ignore any geometry"
 " field. The resulting layer is an attribute-only layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:88
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:87
 msgid ""
 "**geometry column**: this option allows to specify the name of the column "
 "that is to be used as the geometry of the layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:91
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:90
 msgid ""
 "**geometry type**: this option allows to specify the type of the geometry of"
 " the virtual layer."
 msgstr ""
+"**tipul geometriei**: această opțiune permite specificarea tipului de "
+"geometrie al stratului virtual."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:94
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:93
 msgid ""
 "**geometry CRS**: this option allows to specify the coordinate reference "
 "system of the virtual layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:98
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:97
 msgid "Special comments"
 msgstr "Comentarii speciale"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:100
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:99
 msgid ""
 "The virtual layer engine tries to determine the type of each column of the "
 "query. If it fails, the first row of the query is fetched to determine "
 "column types."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:104
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:103
 msgid ""
 "The type of a particular column can be specified directly in the query by "
 "using some special comments."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:107
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:106
 msgid ""
 "The syntax is the following: ``/*:type*/``. It has to be placed just after "
 "the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
 "for floating point numbers or ``text``."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:111
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:110
 msgid "For instance: ``SELECT id+1 as nid /*:int*/ FROM table``"
 msgstr "De exemplu: ``SELECT id+1 as nid /*:int*/ FROM table``"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:114
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:113
 msgid ""
 "The type and coordinate reference system of the geometry column can also be "
 "set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
@@ -198,23 +204,25 @@ msgid ""
 "system."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:121
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:120
 msgid "Use of indexes"
 msgstr "Folosirea indecșilor:"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:123
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:122
 msgid ""
 "When requesting a layer through a virtual layer, indexes of this source "
 "layer will be used in the following ways:"
 msgstr ""
+"Atunci când se solicită un strat prin intermediul unui strat virtual, "
+"indecșii acestui strat sursă vor fi utilizați în următoarele moduri:"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:126
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:125
 msgid ""
 "if an ``=`` predicate is used on the primary key column of the layer, the "
 "underlying data provider will be asked for a particular id (FilterFid)"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:129
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:128
 msgid ""
 "for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
 "without primary key, a request built from an expression will be used to "
@@ -222,7 +230,7 @@ msgid ""
 " database providers if they exist."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:134
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:133
 msgid ""
 "A specific syntax exists to handle spatial predicates in requests and "
 "trigger the use of a spatial index: a hidden column named ``_search_frame_``"
@@ -231,12 +239,15 @@ msgid ""
 "_search_frame_=BuildMbr(-2.10,49.38,-1.3,49.99,4326)``"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:140
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:139
 msgid ""
 "Spatial binary predicates like ``ST_Intersects`` are greatly sped up when "
 "used in conjunction with this spatial index syntax."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:7
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:6
 msgid "Virtual_Layers"
 msgstr "Virtual_Layers"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr "|updatedisclaimer|"

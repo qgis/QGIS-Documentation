@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-08-25 20:46+0000\n"
-"Last-Translator: YoViajo\n"
+"PO-Revision-Date: 2016-09-22 23:06+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
 "Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -336,15 +336,15 @@ msgid ""
 "only as an example, it creates a lots of `QgsRubberBand "
 "<http://qgis.org/api/classQgsRubberBand.html>`_ objects and may be slow on "
 "large data-sets."
-msgstr ""
+msgstr "Aquí hay algunos sencillos ejemplos de código para mostrar el árbol de la ruta más corta usando el grafo creado con el método :func:`shortestTree` (seleccione la capa de linestring en TOC y reemplace las coordenadas con las propias). **Advertencia**: utilice este código sólo como ejemplo, cree muchos objetos `QgsRubberBand <http://qgis.org/api/classQgsRubberBand.html>`_  y puede ser lento en grandes conjuntos de datos ."
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:270
 msgid "Same thing but using :func:`dijkstra` method"
-msgstr ""
+msgstr "La misma cosa pero utilizando el método :func:`dijkstra`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:307
 msgid "Finding shortest paths"
-msgstr ""
+msgstr "Encontrar la ruta más corta"
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:309
 msgid ""
@@ -354,25 +354,25 @@ msgid ""
 " shortest path tree with root in the start point A. In the same tree we also"
 " find the end point B and start to walk through the tree from point B to "
 "point A. The whole algorithm can be written as"
-msgstr ""
+msgstr "Para encontrar la ruta optima entre dos puntos, el siguiente enfoque se utiliza. Ambos puntos (inicio A y fin B) son \"tied\" al grafo cuando es construido. Entonces utiliza los métodos :func:`shortestTree` o :func:`dijkstra`, nosotros construiremos el árbol de la ruta más corta  con raiz en el punto inicial A. En el mismo árbol también encontramos el punto final B y comenzamos a avanzar a través del árbol del punto B al punto A. Todo el algoritmo se puede escribir como"
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:326
 msgid ""
 "At this point we have the path, in the form of the inverted list of vertexes"
 " (vertexes are listed in reversed order from end point to start point) that "
 "will be visited during traveling by this path."
-msgstr ""
+msgstr "En este punto tenemos la ruta, en el formulario de la lista invertida de vértices (los vértices están listados en orden invertida del punto final al punto inicial) que serán visitados durante el viaje por este camino."
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:330
 msgid ""
 "Here is the sample code for QGIS Python Console (you will need to select "
 "linestring layer in TOC and replace coordinates in the code with yours) that"
 " uses method :func:`shortestTree`"
-msgstr ""
+msgstr "Aquí esta el código de ejemplo para la consola Python de QGIS (deberá seleccionar la capa linestring en TOC y en el código reemplazar las coordenadas por las suyas) que usa el método :func:`shortestTree`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:384
 msgid "And here is the same sample but using :func:`dijkstra` method"
-msgstr ""
+msgstr "Y aquí esta el mismo ejemplo pero sin utilizar el método :func:`dijkstra`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:434
 msgid "Areas of availability"
@@ -383,7 +383,7 @@ msgid ""
 "The area of availability for vertex A is the subset of graph vertexes that "
 "are accessible from vertex A and the cost of the paths from A to these "
 "vertexes are not greater that some value."
-msgstr ""
+msgstr "El área de la disponibilidad para el vértice A es el subconjunto de vértices del grafo que son accesibles desde el vértice A y el costo de los caminos de la A a estos vértices son no es mayor que cierto valor."
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:440
 msgid ""
@@ -391,7 +391,7 @@ msgid ""
 " station. Which parts of city can a fire truck reach in 5 minutes? 10 "
 "minutes? 15 minutes?\". Answers to these questions are fire station's areas "
 "of availability."
-msgstr ""
+msgstr "Más claramente esto se puede demostrar con el siguiente ejemplo: \"Hay una estación de bomberos ¿Qué partes de la ciudad puede un camión de bomberos alcanzar en 5 minutos? 10 minutos? 15 minutos?\". Las respuestas a estas preguntas son las zonas de la estación de bomberos de la disponibilidad."
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:445
 msgid ""
@@ -400,7 +400,7 @@ msgid ""
 " cost array with a predefined value. If cost[i] is less than or equal to a "
 "predefined value, then vertex i is inside the area of availability, "
 "otherwise it is outside."
-msgstr ""
+msgstr "Para encontrar las zonas de disponibilidad podemos utilizar el método :func:`dijkstra` de la clase :class:`QgsGraphAnalyzer`. Es suficiente para comparar los elementos del array de costos con un valor predefinido. Si el costo [i] es menor que o igual a un valor predefinido, entonces el vértice i esta dentro de la zona de disponibilidad, de lo contrario esta fuera."
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:451
 msgid ""
@@ -410,7 +410,7 @@ msgid ""
 "simple: it is the availability border based on the edges of the shortest "
 "path tree for which the source vertex of the edge is accessible and the "
 "target vertex of the edge is not."
-msgstr ""
+msgstr "Un problema más difícil es conseguir los límites de la zona de disponibilidad. El borde inferior es el conjunto de vértices que son todavía accesibles, y el borde superior es el conjunto de vértices que no son accesibles. De hecho esto es simple: es la frontera disponibilidad basado en los bordes del árbol de ruta más corta para los que el vértice origen del contorno es más accesible y el vértice destino del borde no lo es."
 
 #: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:458
 msgid "Here is an example"

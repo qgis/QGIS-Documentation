@@ -1,0 +1,939 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-07-18 03:57+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:6
+msgid "|LS| Creating Detailed Maps with the Atlas Tool"
+msgstr "|LS| アトラスツールで詳細な地図を作成します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:8
+msgid ""
+"The systematic sampling design is ready and the field teams have loaded the "
+"GPS coordinates in their navigation devices. They also have a field data "
+"form where they will collect the information measured at every sample plot. "
+"To easier find their way to every sample plot, they have requested a number "
+"of detail maps where some ground information can be clearly seen along with "
+"a smaller subset of sample plots and some information about the map area. "
+"You can use the Atlas tool to automatically generate a number of maps with a"
+" common format."
+msgstr "体系的なサンプリングのデザインが準備できて、野外チームがナビゲーションデバイスにGPS座標をロードしました。彼らはまた、すべてのサンプルプロットで測定された情報を収集するフィールドのデータ形式を持っています。野外チームは、すべてのサンプルプロットに自分の道が簡単に見つかるよう、いくつかの地上情報をサンプルプロットの小さいサブセットや地図エリアに関する情報と一緒にはっきり見ることができるたくさんの詳細地図を要求してきました。アトラスツールを使用することで、たくさんの地図を共通のフォーマットで自動的に作成できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:10
+msgid ""
+"**The goal for this lesson:** Learn to use the Atlas tool in QGIS to "
+"generate detailed printable maps to assist in the field inventory work."
+msgstr "**このレッスンの目標：** QGISでアトラスツールを使用して、野外目録作業を支援するための詳細な印刷可能な地図を作成することを学びます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:13
+msgid "|basic| |FA| Preparing the Map Composer"
+msgstr "|basic| |FA| 地図コンポーザを準備"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:15
+msgid ""
+"Before we can automate the detailed maps of the forest area and our sampling"
+" plots, we need to create a map template with all the elements we consider "
+"useful for the field work. Of course the most important will be a properly "
+"styled but, as you have seen before, you will also need to add lots of other"
+" elements that complete the printed map."
+msgstr "森林地域と私たちのサンプリングプロットの詳細な地図を自動化できるようになるには、まずフィールドワークのために有用と考えるすべての要素が入った地図テンプレートを作成する必要があります。もちろん、最も重要なのは、前に見てきたように、適切にスタイルされることですが、印刷された地図を完成する他の要素の多くを追加する必要もあります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:17
+msgid ""
+"Open the QGIS project from the previous lesson :kbd:`forest_inventory.qgs`. "
+"You should have at least the following layers:"
+msgstr "前のレッスンからQGISプロジェクトを開きます :kbd:`forest_inventory.qgs` 。少なくとも以下のレイヤーを持っている必要があります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:19
+msgid ""
+":kbd:`forest_stands_2012` (with a 50% transparency, green fill and darker "
+"green border lines)."
+msgstr ":kbd:`forest_stands_2012` （50％の透明度、緑塗りつぶしと暗緑色の境界線を有する）。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:20
+msgid ":kbd:`systematic_plots_clip`."
+msgstr ":kbd:`systematic_plots_clip` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:21
+msgid ":kbd:`rautjarvi_aerial`."
+msgstr ":kbd:`rautjarvi_aerial` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:23
+msgid "Save the project with a new name, :kbd:`map_creation.qgs`."
+msgstr "プロジェクトを新しい名前 :kbd:`map_creation.qgs` で保存します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:25
+msgid ""
+"To create a printable map, remember that you use the :guilabel:`Composer "
+"Manager`:"
+msgstr "印刷可能なマップを作成するには、 :guilabel:`コンポーザマネージャー` を使用することを思い出してください："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:27
+msgid "Open :menuselection:`Project --> Composer Manager...`."
+msgstr ":menuselection:`プロジェクト->コンポーザマネージャー...` を開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:28
+msgid "In the :guilabel:`Composer manager` dialog."
+msgstr ":guilabel:`コンポーザマネジャー` ダイアログで。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:29
+msgid ""
+"Click the :guilabel:`Add` button and name your composer :kbd:`forest_map`."
+msgstr ":guilabel:`追加` ボタンをクリックして、コンポーザに :kbd:`forest_map` と名前を付けます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:30
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:290
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:31
+msgid "Click the :guilabel:`Show` button."
+msgstr ":guilabel:`表示` ボタンをクリックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:33
+msgid ""
+"Set up the printer options so that your maps will suit your paper and "
+"margins, for an A4 paper:"
+msgstr "地図がA4用紙のために、紙や余白に合うように、プリンタオプションを設定します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:35
+msgid "Open menuselection:`Composer --> Page Setup`."
+msgstr ":menuselection:`コンポーザ->ページ設定` を開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:36
+msgid ":guilabel:`Size` is :guilabel:`A4 (217 x 297 mm)`."
+msgstr ":guilabel:`サイズ` は :guilabel:`A4（217 X 297ミリメートル）` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:37
+msgid ":guilabel:`Orientation` is :guilabel:`Landscape`."
+msgstr ":guilabel:`向き` は :guilabel:`風景` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:38
+msgid ":guilabel:`Margins (milimeters)` are all set to :kbd:`5`."
+msgstr ":guilabel:`マージン（milimeters）` はすべて :kbd:`5` に設定。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:40
+msgid ""
+"In the :guilabel:`Print Composer` window, go to the :guilabel:`Composition` "
+"tab (on the right panel) and make sure that these settings for "
+":guilabel:`Paper and quality` are the same you defined for the printer:"
+msgstr ":guilabel:`印刷組版` ウィンドウで、 :guilabel:`Composition` タブ(右のパネル)に行き、 :guilabel:`紙と品質` に対するこれらの設定がプリンタ用に定義されたものと同じであることを確認してください："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:42
+msgid ":guilabel:`Size`: :kbd:`A4 (210x297mm)`."
+msgstr ":guilabel:`Size` ： :kbd:`A4（210x297mm）` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:43
+msgid ":guilabel:`Orientation`: :kbd:`Landscape`."
+msgstr ":guilabel:`Orientation`：:kbd:`Landscape` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:44
+msgid ":guilabel:`Quality`: :kbd:`300dpi`."
+msgstr ":guilabel:`品質` ：:kbd:`300dpi` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:46
+msgid ""
+"Composing a map is easier if you make use of the canvas grid to position the"
+" different elements. Review the settings for the composer grid:"
+msgstr "さまざまな要素を配置するキャンバスのグリッドを利用する場合はマップを構成することは簡単です。コンポーザグリッドの設定を確認します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:48
+msgid "In the :guilabel:`Composition` tab expand the :guilabel:`Grid` region."
+msgstr ":guilabel:`Composition` タブ中で :guilabel:`Grid` 地域を展開します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:49
+msgid "Check that :guilabel:`Spacing` is set to :kbd:`10 mm`."
+msgstr ":guilabel:`余白` が :kbd:`10 mm` に設定されていることを確認してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:50
+msgid "And that :guilabel:`Tolerance` is set to :kbd:`2 mm`."
+msgstr "そして :guilabel:`Tolerance` は :kbd:`2mm` に設定されています。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:52
+msgid "You need to activate the use of the grid:"
+msgstr "グリッドの使用を有効にする必要があります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:54
+msgid "Open the :menuselection:`View` menu."
+msgstr ":menuselection:`表示` メニューを開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:55
+msgid "Check :guilabel:`Show grid`."
+msgstr ":guilabel:`gridを表示` をチェックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:56
+msgid "Check :guilabel:`Snap to grid`."
+msgstr ":guilabel:`gridにスナップ` をチェックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:57
+msgid ""
+"Notice that options for using :guilabel:`guides` are checked by default, "
+"which allows you to see red guiding lines when you are moving elements in "
+"the composer."
+msgstr ":guilabel:`guides` を使用するためのオプションがデフォルトでチェックされていて、コンポーザ内の要素を移動しているときに赤いガイドラインを見ることができることに注意してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:59
+msgid ""
+"Now you can start to add elements to your map canvas. Add first a map "
+"element so you can review how it looks as you will be making changes in the "
+"layers symbology:"
+msgstr "今すぐ地図キャンバスへの要素の追加を開始できます。レイヤーシンボルに変更を加えるとそれがどのように見えるか確認できるよう、最初にマップ要素を追加します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:61
+msgid "Click on the :guilabel:`Add New Map` button: |addMap|."
+msgstr ":guilabel:`新しい地図を追加` ボタンをクリックします |addMap| 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:62
+msgid ""
+"Click and drag a box on the canvas so that the map occupies most of it."
+msgstr "地図はそれのほとんどを占めるようにキャンバス上のボックスをクリックしてドラッグします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:67
+msgid ""
+"Notice how the mouse cursor snaps to the canvas grid. Use this function when"
+" you add other elements. If you want to have more accuracy, change the grid "
+":guilabel:`Spacing` setting. If for some reason you don't want to snap to "
+"the grid at some point, you can always check or uncheck it in the "
+":menuselection:`View` menu."
+msgstr "マウスカーソルがキャンバスのグリッドにスナップされるに注意してください。他の要素を追加したときに、この機能を使用してください。より多くの精度を持つようにしたい場合は、グリッドを変更 :guilabel:`Spacing` 設定。何らかの理由でいくつかの点でグリッドにスナップしたくない場合は、常にそれを :menuselection:`View` メニューでチェックをオンオフできます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:72
+msgid "|basic| |FA| Adding Background Map"
+msgstr "|basic| |FA| 背景マップを追加します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:74
+msgid ""
+"Leave the composer open but go back to the map. Lets add some background "
+"data and create some styling so that the map content is as clear as "
+"possible."
+msgstr "コンポーザを開いたまま、地図に戻ります。地図の内容ができるだけ明確になるように、いくつか背景データを追加したり、いくつかスタイルを作成したりできます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:76
+msgid ""
+"Add the background raster :kbd:`basic_map.tif` that you can find in the "
+":kbd:`exercise_data\\\\forestry\\\\` folder."
+msgstr "背景 ラスタ :kbd:`basic_map.tif` 、:kbd:`exercise_data\\\\林業\\\\` フォルダに見つけることができる、を追加します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:77
+msgid ""
+"When prompted select the :kbd:`ETRS89 / ETRS-TM35FIN` CRS for the raster."
+msgstr "プロンプトが表示されたら :kbd:`ETRS89/ETRS-TM35FIN` CRS をラスタのために選択します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:79
+msgid ""
+"As you can see the background map is already styled. This type of ready to "
+"use cartography raster is very common. It is created from vector data, "
+"styled in a standard format and stored as a raster so that you don't have to"
+" bother styling several vector layers and worrying about getting a good "
+"result."
+msgstr "見ることができるように背景地図にはすでにスタイルが付いています。地図作成のラスタを使用する準備ができてのこのタイプは非常に一般的です。いくつかのベクトルレイヤーをスタイリングして良い結果を得ることを心配気にする必要がないようにそれは、ベクターデータから作成された標準形式でスタイルとラスタとして格納されています。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:81
+msgid ""
+"Now zoom to your sample plots, so that you can see only about four or five "
+"lines of plots."
+msgstr "今、プロットの約4または5行を見ることができるようにサンプルプロットにズームします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:83
+msgid ""
+"The current styling of the sample plots is not the best, but how does it "
+"look in the map composer?:"
+msgstr "サンプルプロットの現在のスタイリングは最高ではありませんが、それはどのようにマップの作曲に見えるん？："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:88
+msgid ""
+"While during the last exercises, the white buffer was OK on top of the "
+"aerial image, now that the background image is mostly white you barely can "
+"see the labels. You can also check how it looks like on the composer:"
+msgstr "最後の演習中に、白いバッファは空撮画像の上ではOKでしたが、今で背景画像はほとんどが白であり、かろうじてラベルを見ることができます。コンポーザでどのように見えるか確認もできます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:90
+msgid "Go to the :guilabel:`Print Composer` window."
+msgstr ":guilabel:`印刷Composer` ウィンドウに行きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:91
+msgid "Use the |select| button to select the map element in the composer."
+msgstr "コンポーザの地図要素を選択するため |select| ボタン を使用します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:92
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:235
+msgid "Go to the :guilabel:`Item properties` tab."
+msgstr ":guilabel:`項目properties` タブに移動します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:93
+msgid ""
+"Under :guilabel:`Extents` click on :guilabel:`Set to map canvas extent`."
+msgstr ":guilabel:`範囲` の下で :guilabel`地図キャンバス範囲に設定` をクリックしてください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:94
+msgid ""
+"If you need to refresh the element, under :guilabel:`Main properties` click "
+"on the :guilabel:`Update preview`."
+msgstr "要素を再描画する必要がある場合は、 :guilabel:`メインproperties` 下の :guilabel:`プレビューを更新` をクリックしてください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:96
+msgid ""
+"Obviously this is not good enough, you want to make the plot numbers as "
+"clearly visible as possible for the field teams."
+msgstr "野外チームのためにプロット番号ができるだけはっきり見えるようにしたい、これは明らかに十分ではありません。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:100
+msgid "|basic| |TY| Changing the Symbology of the Layers"
+msgstr "|basic| |TY| レイヤーのシンボルを変更します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:102
+msgid ""
+"You have been working in :doc:`../basic_map/index` with symbology and in "
+":doc:`../vector_classification/index` with labeling. Go back to those "
+"modules if you need to refresh about some of the available options and "
+"tools. Your goal is to get the plots locations and their name to be as "
+"clearly visible as possible but always allowing to see the background map "
+"elements. You can take some guidance from this image:"
+msgstr "作業してきた :doc:`../basic_map/index` シンボルとし、中 :doc:`ラベル付き../vector_classification/index` 。利用可能なオプションとツールのいくつかについて、リフレッシュする必要がある場合は、それらのモジュールに戻ります。目標は、のようにはっきりと見える可能のようにプロットの位置と自分の名前を取得することですが、常に背景地図要素を参照できます。この画像からいくつかのガイダンスを取ることができます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:107
+msgid ""
+"You will use later the the green styling of the :kbd:`forest_stands_2012` "
+"layer. In order to keep it, and have a visualization of it that shows only "
+"the stand borders:"
+msgstr "後で :kbd:`forest_stands_2012` レイヤーの緑のスタイリングを使用するでしょう。それを維持し、林分の境界だけを表示するようそれを可視化するには："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:109
+msgid ""
+"Right click on :kbd:`forest_stands_2012` and select :guilabel:`Duplicate`"
+msgstr ":kbd:`forest_stands_2012` を右クリックし :guilabel:`Duplicate` を選択します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:110
+msgid ""
+"you get a new layer named :kbd:`forest_stands_2012 copy` that you can use to"
+" define a different style, for example with no filling and red borders."
+msgstr "たとえば充填と赤のボーダーがない別のスタイルを定義するために使用できる、:kbd:`forest_stands_2012  copy` という名前の新しいレイヤーを取得します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:112
+msgid ""
+"Now you have two different visualizations of the forest stands and you can "
+"decide which one to display for your detail map."
+msgstr "今、林分にはの二つの異なる視覚化があり、詳細地図にどちらを表示するか決定できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:114
+msgid ""
+"Go back to the :guilabel:`Print composer` window often to see what the map "
+"would look like. For the purposes of creating detailed maps, you are looking"
+" for a symbology that looks good not at the scale of the whole forest area "
+"(left image below) but at a closer scale (right image below). Remember to "
+"use :guilabel:`Update preview` and :guilabel:`Set to map canvas extent` "
+"whenever you change the zoom in your map or the composer."
+msgstr ":guilabel:`プリントコンポーザ` ウィンドウに何度も戻り、地図がどのように見えるかを確認します。詳細地図を作成する目的のために、全体の森林地域の縮尺(下の左画像)ではなくより近い縮尺(下の右画像)で良く見えるシンボルを探しています。地図やコンポーザでズームを変更するたびに、 :guilabel:`プレビューを更新` と :guilabel:`地図キャンバスextent設定` を使用することを忘れないでください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:120
+msgid "|basic| |TY| Create a Basic Map Template"
+msgstr "|basic| |TY| 基本地図テンプレートを作成する"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:122
+msgid ""
+"Once you have a symbology your happy with, you are ready to add some more "
+"information to your printed map. Add at least the following elements:"
+msgstr "満足なシンボル体系を得たら、印刷された地図にいくつかのより多くの情報を追加する準備が整いました。少なくとも次の要素を追加します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:124
+msgid "Title."
+msgstr "タイトル。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:125
+msgid "A scale bar."
+msgstr "スケールバー。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:126
+msgid "Grid frame for your map."
+msgstr "マップのグリッドフレーム。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:127
+msgid "Coordinates on the sides of the grid."
+msgstr "グリッドの両側に調整します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:129
+msgid ""
+"You have created a similar composition already in "
+":doc:`../map_composer/index`. Go back to that module as you need. You can "
+"look at this example image for reference:"
+msgstr ":doc:`../map_composer/index` 既に同様の組成を作成しました。必要とするように、そのモジュールに戻ります。参考のために、この例の画像を見ることができます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:134
+msgid "Export your map as an image and look at it."
+msgstr "地図を画像として書き出し、それを見てください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:136
+msgid ":menuselection:`Composer --> Export as Image`."
+msgstr ":menuselection:`コンポーザ- > 画像として書き出し` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:137
+msgid "Use for example the :kbd:`JPG format`."
+msgstr "例えば :kbd:`JPGフォーマット` を使用してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:139
+msgid "That is what it will look like when printed."
+msgstr "これは、印刷されたときに、それがどのように見えるかです。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:142
+msgid "|basic| |FA| Adding More Elements to the Composer"
+msgstr "|basic| |FA| コンポーザに多くの要素を追加します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:144
+msgid ""
+"As you probably noticed in the suggested map template images, there are "
+"plenty of room on the right side of the canvas. Lets see what else could go "
+"in there. For the purposes of our map, a legend is not really necessary, but"
+" an overview map and some text boxes could add value to the map."
+msgstr "提案された地図テンプレート画像でおそらくお気づきのように、キャンバスの右側に空間がたくさんあります。そこに行くことができる他に何見てみましょう。ここでの地図の目的のためには凡例は本当は必要はありませんが、概要地図といくつかのテキストボックスには、地図に値を追加することができます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:146
+msgid ""
+"The overview map will help the field teams place the detail map inside the "
+"general forest area:"
+msgstr "概観マップは、フィールドのチームは、一般的な森林エリア内の詳細マップを置くのに役立ちます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:148
+msgid "Add another map element to the canvas, right under the title text."
+msgstr "タイトルテキストのすぐ下で、キャンバスに別の地図要素を追加します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:149
+msgid ""
+"In the :guilabel:`Item properties` tab, open the :guilabel:`Overview` "
+"dropdown."
+msgstr ":guilabel:`アイテムのプロパティ` タブで、 :guilabel:`Overview` ドロップダウンを開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:150
+msgid ""
+"Set the :guilabel:`Overview frame` to :guilabel:`Map 0`. This creates a "
+"shadowed rectangle over the smaller map representing the extent visible in "
+"the bigger map."
+msgstr ":guilabel:`概要フレーム` を地図:guilabel:`Map 0` に設定してください。これは小さい地図上に大きい地図に表示された範囲を表す影の矩形を作成します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:151
+msgid ""
+"Check also the :guilabel:`Frame` option with a black color and a "
+":guilabel:`Thickness` of :kbd:`0.30`."
+msgstr ":guilabel:`Frame` オプションが黒色で、  :guilabel:`Thickness` が :kbd:`0.30` であることもチェックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:156
+msgid ""
+"Notice that your overview map is not really giving an overview of the forest"
+" area which is what you want. You want this map to represent the whole "
+"forest area and you want it to show only the background map and the "
+":kbd:`forest_stands_2012` layer, and not display the sample plots. And also "
+"you want to lock its view so it does not change anymore whenever you change "
+"the visibility or order of the layers."
+msgstr "概観地図は本当に望むものである森林地域の概観を与えていないことに注意してください。この地図が全体の森林面積を表現したいとそれが唯一の背景地図と表示したい :kbd:`forest_stands_2012` レイヤーを、サンプルプロットを表示しません。そしてまた、レイヤーの可視性や順序を変更するたびに、それはもう変更されないように、そのビューをロックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:158
+msgid "Go back to the map, but don't close the :guilabel:`Print composer`."
+msgstr "地図に戻りますが、:guilabel:`印刷composer` を閉じないでください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:159
+msgid ""
+"Right click the :kbd:`forest_stands_2012` layer and click on :guilabel:`Zoom"
+" to Layer Extent`."
+msgstr ":kbd:`forest_stands_2012` レイヤーを右クリックし 、:guilabel:`レイヤー範囲にズーム` をクリックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:160
+msgid ""
+"Deactivate all layers except for :kbd:`basic_map` and "
+":kbd:`forest_stands_2012`."
+msgstr ":kbd:`basic_map` と :kbd:`forest_stands_2012` 以外のすべてのレイヤーを無効にします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:161
+msgid "Go back to the :guilabel:`Print composer`."
+msgstr ":guilabel:`印刷composer` に戻ります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:162
+msgid ""
+"With the small map selected, click the :guilabel:`Set to map canvas extent` "
+"to set its extents to what you can see in the map window."
+msgstr "選択された小地図では、 :guilabel:`地図キャンバスextentを設定` をクリックし 、その範囲を地図ウィンドウで見えるものに設定してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:163
+msgid ""
+"Lock the view for the overview map by checking :guilabel:`Lock layers for "
+"map item` under :guilabel:`Main properties`."
+msgstr ":guilabel:`メインproperties` 下の :guilabel:`地図itemのためにレイヤーをロック` をチェックすることにより、概観マップのビューをロックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:165
+msgid ""
+"Now your overview map is more what you expected and its view will not change"
+" anymore. But, of course, now your detail map is not showing anymore the "
+"stand borders nor the sample plots. Lets fix that:"
+msgstr "今概観地図は、予想するより以上のものであり、そのビューはもう変更しないでしょう。しかし、もちろん、詳細地図は今まだ林分境界もサンプルのプロットも表示していません。修正しましょう："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:167
+msgid ""
+"Go to the map window again and select the layers you want to be visible "
+"(:kbd:`systematic_plots_clip`, :kbd:`forest_stands_2012 copy` and "
+":kbd:`Basic_map`)."
+msgstr "再度、地図ウィンドウに移動し、見えるようにしたいレイヤーを選択します（:kbd:`systematic_plots_clip`、:kbd:`forest_stands_2012 copy`、:kbd:`Basic_map`）。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:168
+msgid "Zoom again to have only a few lines of sample plots visible."
+msgstr "目に見えるサンプルプロットの数行を持って再び拡大します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:169
+msgid "Go back to the :guilabel:`Print composer` window."
+msgstr ":guilabel:`プリントコンポーザ` ウィンドウに戻ります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:170
+msgid "Select the bigger map in your composer (|select|)."
+msgstr "コンポーザで大きな地図を選択します(|select|)。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:171
+msgid ""
+"In :guilabel:`Item properties` click on :guilabel:`Update preview` and "
+":guilabel:`Set to map canvas extent`."
+msgstr ":guilabel:`項目properties` 中で :guilabel:`プレビューを更新` と :guilabel:`地図キャンバス範囲に設定` をクリックしてください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:173
+msgid ""
+"Notice that only the bigger map is displaying the current map view, and the "
+"small overview map is keeping the same view you had when you locked it."
+msgstr "大きな地図だけが、現在の地図ビューを表示している、小さな索引地図は、それをロックしたときに持っていた同じ景色を保っていることに注意してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:175
+msgid ""
+"Note also that the overview is showing a shaded frame for the extent shown "
+"in the detail map."
+msgstr "索引図は、詳細地図に示されている範囲の陰影付の枠を表示していることにも注意。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:180
+msgid ""
+"Your template map is almost ready. Add now two text boxes below the map, one"
+" containing the text 'Detailed map zone: ' and the other one 'Remarks: '. "
+"Place them as you can see in the image above."
+msgstr "テンプレート地図はほぼ準備ができています。ここで2つのテキストボックスを地図の下に追加します、一方はテキスト「詳細地図ゾーン：」含む、もう一方は「備考：」。それらが上の画像で見えるように配置してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:182
+msgid "You can also add a North arrow to the overview map:"
+msgstr "また、概観マップに北矢印を追加できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:184
+msgid "Use the :guilabel:`Add image` tool, |addImage|."
+msgstr ":guilabel:`imageを追加` ツールを使用してください |addImage| 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:185
+msgid "Click at the upper right corner of the overview map."
+msgstr "概観マップの右上にクリックしてください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:186
+msgid ""
+"In :guilabel:`Item properties` open :guilabel:`Search directories` and "
+"browse for an arrow image."
+msgstr ":guilabel:`アイテムのプロパティ` で :guilabel:`検索ディレクトリ` を開き、矢印画像を参照します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:187
+msgid ""
+"Under :guilabel:`Image rotation`, check the :guilabel:`Sync with map` and "
+"select :kbd:`Map 1` (the overview map)."
+msgstr ":guilabel:`画像回転` の下で :guilabel:`地図でSync` をチェックし、 :kbd:`Map 1` （概要地図）を選択します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:188
+msgid "Uncheck :guilabel:`Background`."
+msgstr ":guilabel:`背景` のチェックを外します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:189
+msgid "Resize the arrow image to a size that looks good on the small map."
+msgstr "小さな地図上良く見えるサイズに矢印画像のサイズを変更します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:191
+msgid ""
+"The basic map composer is ready, now you want to make use of the Atlas tool "
+"to generate as many detail maps in this format as you consider necessary."
+msgstr "基本的な地図コンポーザーが準備できたところで、今度はアトラスツールを利用してこの形式で必要と考えるだけ多くの詳細地図を作成したいですね。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:195
+msgid "|basic| |FA| Creating an Atlas Coverage"
+msgstr "|basic| |FA| アトラスカバレッジを作成します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:197
+msgid ""
+"The Atlas coverage is just a vector layer that will be used to generate the "
+"detail maps, one map for every feature in the coverage. To get an idea of "
+"what you will do next, here is a full set of detail maps for the forest "
+"area:"
+msgstr "アトラスカバレッジは、カバレッジ内のすべての機能の1枚の地図を詳細地図を生成するために使用されるだけでベクトルレイヤーです。次に何をしますかのアイデアを取得するには、ここでは詳細地図のフルセットは、森林面積のためであります："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:202
+msgid ""
+"The coverage could be any existing layer, but usually it makes more sense to"
+" create one for the specific purpose. Let's create a grid of polygons "
+"covering the forest area:"
+msgstr "カバレッジでは、既存のレイヤーかもしれないが、通常は特定の目的のための1つを作成するために、より多くの意味があります。のは、森林面積をカバーするポリゴンのグリッドを作成してみましょう："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:204
+msgid ""
+"In the QGIS map view, open :menuselection:`Vector --> Research Tools --> "
+"Vector grid`."
+msgstr "QGIS地図ビューで :menuselection:`ベクトル - >研究のツール - >ベクトルgrid` を開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:205
+msgid "Set the tool as shown in this image:"
+msgstr "この画像に示すようにツールを設定します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:210
+msgid "Save the output as :kbd:`atlas_coverage.shp`."
+msgstr ":kbd:`atlas_coverage.shp` として出力を保存します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:211
+msgid ""
+"Style the new :kbd:`atlas_coverage` layer so that the polygons have no "
+"filling."
+msgstr "新しい :kbd:`atlas_coverage` レイヤーを、ポリゴンが塗りを持たないようにスタイル設定します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:213
+msgid ""
+"The new polygons are covering the whole forest area and they give you an "
+"idea of what each map (created from each polygon) will contain."
+msgstr "新しいポリゴンが全体の森林地域をカバーしていると、彼らは（各ポリゴンから作成された）各地図の何が含まれているかのアイデアを与えます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:219
+msgid "|basic| |FA| Setting Up the Atlas Tool"
+msgstr "|basic| |FA| アトラスツールの設定"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:221
+msgid "The last step is to set up the Atlas tool:"
+msgstr "最後のステップは、アトラスツールを設定することです："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:223
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:284
+msgid "Go back to the :guilabel:`Print Composer`."
+msgstr ":guilabel:`プリントコンポーザ` に戻ります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:224
+msgid "In the panel on the right, go to the :guilabel:`Atlas generation` tab."
+msgstr "右側のパネルで :guilabel:`アトラスgeneration` タブに行きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:225
+msgid "Set the options as follows:"
+msgstr "次のようにオプションを設定します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:230
+msgid ""
+"That tells the Atlas tool to use the features (polygons) inside "
+":kbd:`atlas_coverage` as the focus for every detail map. It will output one "
+"map for every feature in the layer. The :guilabel:`Hidden coverage layer` "
+"tells the Atlas to not show the polygons in the output maps."
+msgstr "細部マップの焦点として :kbd:`atlas_coverage` 内部のそれは地物（ポリゴン）を使用するアトラスツールに指示します。これは、レイヤー内のすべての地物の出力1つの地図になります。:guilabel:`隠しカバレッジレイヤー` は出力地図でポリゴンを表示しないようにアトラスに伝えます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:232
+msgid ""
+"One more thing needs to be done. You need to tell the Atlas tool what map "
+"element is going to be updated for every output map. By now, you probably "
+"can guess that the map to be changed for every feature is the one you have "
+"prepared to contain detail views of the sample plots, that is the bigger map"
+" element in your canvas:"
+msgstr "もう一つする必要があります。すべての出力地図に対してどの地図要素が更新されるつもりかをアトラスツールに伝える必要があります。今までは、おそらく、すべての地物のために変更される地図は、サンプルプロットの詳細ビューを含むように準備したものであると推測でき、それがキャンバスでより大きい地図要素であります："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:234
+msgid "Select the bigger map element."
+msgstr "より大きな地図要素を選択します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:236
+msgid "In the list, check :guilabel:`Controlled by atlas`."
+msgstr "リストで、:guilabel:`atlasによって制御` をチェックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:237
+msgid ""
+"And set the :guilabel:`Marging around feature` to :kbd:`10%`. The view "
+"extent will be 10% bigger than the polygons, which means that your detail "
+"maps will have a 10% overlap."
+msgstr "そして :guilabel:`地物周りにマージンg` を :kbd:`10％` と設定します。ビューの範囲は多角形よりも10％大きくなります、これは詳細地図が10% overlapを持っていることを意味します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:242
+msgid ""
+"Now you can use the preview tool for Atlas maps to review what your maps "
+"will look like:"
+msgstr "今、地図がどのように見えるか確認するためにアトラスマップのプレビューツールを使用できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:244
+msgid ""
+"Activate the Atlas previews using the button |atlas| or if your Atlas "
+"toolbar is not visible, via :menuselection:`Atlas --> Preview Atlas`."
+msgstr "ボタン |atlas| を使用して、アトラスのプレビューを有効に、またはアトラス ツールバー が表示されていない場合は  :menuselection:`アトラス - >プレビューAtlas` を通じて。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:245
+msgid ""
+"You can use the arrows in the Atlas tool bar or in the "
+":menuselection:`Atlas` menu to move through maps that will be created."
+msgstr "作成される地図を移動するには、アトラス・ツール・バーまたは :menuselection:`Atlas` メニューの矢印を使用できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:247
+msgid ""
+"Note that some of them cover areas that are not interesting. Lets do "
+"something about it and save some trees by not printing those useless maps."
+msgstr "それらのいくつかは関心のない領域をカバーすることに注意してください。それについて何かをして、それらの無用な地図を印刷しないことで、木をいくらか節約しましょう。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:250
+msgid "|basic| |FA| Editing the Coverage Layer"
+msgstr "|basic| |FA| カバレッジレイヤーの編集"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:252
+msgid ""
+"Besides removing the polygons for those areas that are not interesting, you "
+"can also customize the text labels in your map to be generated with content "
+"from the :guilabel:`Attribute table` of your coverage layer:"
+msgstr "それらの領域のために関心のないポリゴンを削除するだけでなく、カバレッジ レイヤ の :guilabel:`属性テーブル` からのコンテンツを生成するように、地図内のテキストラベルもカスタマイズできます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:254
+msgid "Go back to the map view."
+msgstr "マップビューに戻ります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:255
+msgid "Enable editing for the :kbd:`atlas_coverage` layer."
+msgstr ":kbd:`atlas_coverage` レイヤーの編集を有効にします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:256
+msgid "Select the polygons that are selected (in yellow) in the image below."
+msgstr "下の画像に（黄色で）選択されたポリゴンを選択します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:257
+msgid "Remove the selected polygons."
+msgstr "選択したポリゴンを削除します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:258
+msgid "Disable editing and save the edits."
+msgstr "編集を無効にして、編集内容を保存します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:263
+msgid ""
+"You can go back to the :guilabel:`Print Composer` and check that the "
+"previews of the Atlas use only the polygons you left in the layer."
+msgstr ":guilabel:`印刷Composer` に戻って、アトラスのプレビューがレイヤーに残された唯一のポリゴンを使用することを確認できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:265
+msgid ""
+"The coverage layer you are using does not yet have useful information that "
+"you could use to customize the content of the labels in your map. The first "
+"step is to create them, you can add for example a zone code for the polygon "
+"areas and a field with some remarks for the field teams to have into "
+"account:"
+msgstr "使用しているカバレッジレイヤーは、まだ地図内のラベルの内容をカスタマイズするために使用できる有用な情報を持っていません。最初のステップは、アカウントに持っている野外チームのためのいくつかの発言で、たとえばポリゴン領域のゾーンコードとフィールドを追加でき、それらを作成することです："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:267
+msgid ""
+"Open the :guilabel:`Attribute table` for the :kbd:`atlas_coverage` layer."
+msgstr ":kbd:`atlas_coverage` レイヤーのための :guilabel:`属性テーブル` を開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:268
+msgid "Enable editing."
+msgstr "編集を有効に。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:269
+msgid ""
+"Use the |calculateField| calculator to create and populate the following two"
+" fields."
+msgstr "以下の二つのフィールドを作成し、移入する |calculateField| 電卓を使用します 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:270
+msgid ""
+"Create a field named :kbd:`Zone` and type :kbd:`Whole number (integer)`."
+msgstr ":kbd:`Zone` という名前の、タイプ :kbd:`整数（整数）` のフィールドを作成します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:271
+msgid "In the :guilabel:`Expression` box write/copy/construct :kbd:`$rownum`."
+msgstr ":guilabel:`Expression` ボックスで :kbd:`$rownum` を書き込み/コピー/構築します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:272
+msgid ""
+"Create another field named :kbd:`Remarks`, of type :kbd:`Text (string)` and "
+"a width of :kbd:`255`."
+msgstr "名前が :kbd:`Remarks` 、タイプが :kbd:`テキスト（文字列）` 、幅が :kbd:`255` の別のフィールドを作成します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:273
+msgid ""
+"In the :guilabel:`Expression` box write :kbd:`'No remarks.'`. This will set "
+"all the default value for all the polygons."
+msgstr ":guilabel:`Expression` ボックスで :kbd:`'NO remarks.'` と書き込みます。これは、すべてのポリゴンに対してすべてデフォルト値を設定します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:275
+msgid ""
+"The forest manager will have some information about the area that might be "
+"useful when visiting the area. For example, the existence of a bridge, a "
+"swamp or the location of a protected species. The :kbd:`atlas_coverage` "
+"layer is probably in edit mode still, add the following text in the "
+":kbd:`Remarks` field to the corresponding polygons (double click the cell to"
+" edit it):"
+msgstr "森林管理は、地域を訪れる際に役に立つかもしれない地域に関するいくつかの情報を持っています。例えば、橋の有無、湿地や保護種の位置。 :kbd:`atlas_coverage` レイヤーはおそらくまだ編集モードです、 :kbd:`Remarks` フィールド中に次のテキストを対応するポリゴンに追加します（セルを編集するにはそのセルをダブルクリックしてください）："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:277
+msgid ""
+"For the :kbd:`Zone` 2: :kbd:`Bridge to the North of plot 19. Siberian "
+"squirrel between p_13 and p_14.`."
+msgstr ":kbd:`Zone` 2：:kbd:`プロット19の北に橋。p_13とp_14間にシベリアリス。` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:278
+msgid ""
+"For the :kbd:`Zone` 6: :kbd:`Difficult to transit in swamp to the North of "
+"the lake.`."
+msgstr ":kbd:`Zone` 6：の場合:kbd:`湖の北へ沼に移するのは困難` 。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:279
+msgid ""
+"For the :kbd:`Zone` 7: :kbd:`Siberian squirrel to the South East of p_94.`."
+msgstr ":kbd:`Zone` 7：の場合:kbd:`シベリアリスをp_94.`南東に。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:280
+msgid "Disable editing and save your edits."
+msgstr "編集を無効にして、編集内容を保存します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:282
+msgid ""
+"Almost ready, now you have to tell the Atlas tool that you want some of the "
+"text labels to use the information from the :kbd:`atlas_coverage` layer's "
+"attribute table."
+msgstr ":kbd:`atlas_coverage` レイヤーの属性テーブルはほぼ準備ができて、今、テキストラベルの一部がそこから情報を使用したいアトラスツールを伝える必要があります。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:285
+msgid "Select the text label containing :kbd:`Detailed map...`."
+msgstr ":kbd:`詳細な地図を...` を含むテキストラベルを選択します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:286
+msgid "Set the :guilabel:`Font` size to :kbd:`12`."
+msgstr ":guilabel:`フォント` サイズを :kbd:`12` に設定してください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:287
+msgid "Set the cursor at the end of the text in the label."
+msgstr "ラベル内のテキストの末尾にカーソルを設定します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:288
+msgid ""
+"In  the :guilabel:`Item properties` tab, inside the :guilabel:`Main "
+"properties` click on :guilabel:`Insert an expression`."
+msgstr ":guilabel:`項目properties` タブで、 :guilabel:`メインproperties` の内側で :guilabel:`式を挿入` をクリックしてください。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:289
+msgid ""
+"In the :guilabel:`Function list` double click on the field :kbd:`Zone` under"
+" :guilabel:`Field and Values`."
+msgstr ":guilabel:`機能list` で :guilabel:`フィールドとValues` の下のフィールド :kbd:`Zone` をダブルクリックします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:291
+msgid ""
+"The text inside the box in the :guilabel:`Item properties` should show "
+":kbd:`Detail map inventory zone: [% \"Zone\" %]`. Note that the :kbd:`[% "
+"\"Zone\" %]` will be substituted by the value of the field :kbd:`Zone` for "
+"the corresponding feature from the layer :kbd:`atlas_coverage`."
+msgstr ":guilabel:`項目プロパティ` 中のボックス内にテキストは :kbd:`詳細マップの調査ゾーン：[％ \"ゾーン\" ％]` が表示されるはずです。:kbd: `[％「ゾーン」％]` は :kbd:`atlas_coverage` レイヤーからの対応する地物について、フィールド :kbd:`Zone` の値によって置換されることに注意。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:293
+msgid ""
+"Test the contents of the label by looking at the different Atlas preview "
+"maps."
+msgstr "異なるアトラスプレビューマップを見て、ラベルの内容をテストします。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:295
+msgid ""
+"Do the same for the labels with the text :kbd:`Remarks:` using the field "
+"whit the zone information. You can leave a break line before you enter the "
+"expression. You can see the result for the preview of zone 2 in the image "
+"below:"
+msgstr "テキストとラベルに同じ操作を行います :kbd:`備考：` フィールドを使用して、ゾーン情報を聖霊降臨祭。式を入力する前に、破断線を残すことができます。下の画像では、ゾーン2のプレビューのために結果を見ることができます："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:300
+msgid ""
+"Use the Atlas preview to browse through all the maps you will be creating "
+"soon and enjoy!"
+msgstr "すぐに作成されるすべてのマップを閲覧して楽しむことがアトラスプレビューを使用してください！"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:303
+msgid "|basic| |FA| Printing the Maps"
+msgstr "|basic| |FA| 地図を印刷します"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:305
+msgid ""
+"Last but not least, printing or exporting your maps to image files or PDF "
+"files. You can use the :menuselection:`Atlas --> Export Atlas as Images...` "
+"or :menuselection:`Atlas --> Export Atlas as PDF...`. Currently the SVG "
+"export format is not working properly and will give a poor result."
+msgstr "最後になりましたが、印刷や画像ファイルやPDFファイルに地図をエクスポートします。 :menuselection:`アトラス - ->アトラスをPDFとして書き出し...` や :menuselection:`アトラス>アトラスを画像として書き出し...` を使用できます。現在、SVGのエクスポート形式は正常に動作せず、貧しい結果が得られます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:307
+msgid ""
+"Lets print the maps as a single PDF that you can send to the field office "
+"for printing:"
+msgstr "現地事務所に印刷用に送付できるよう、単一のPDFとして地図を印刷しましょう："
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:309
+msgid "Go to the :guilabel:`Atlas generation` tab on the right panel."
+msgstr "右パネルの :guilabel:`アトラス作成` タブに移動します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:310
+msgid ""
+"Under the :guilabel:`Output` check the :guilabel:`Single file export when "
+"possible`. This will put all the maps together into a PDF file, if this "
+"option is not checked you will get one file for every map."
+msgstr ":guilabel:`出力` の下で :guilabel:`可能ならば単一ファイルに書き出し` をチェックします。このオプションを使用すると、すべての地図に1つのファイルを取得するチェックされていない場合、これは、PDFファイルにまとめ、すべての地図を配置します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:311
+msgid "Open :menuselection:`Composer --> Export as PDF...`."
+msgstr ":menuselection:`コンポーザ->PDFとして書き出し...` を開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:312
+msgid ""
+"Save the PDF file as :kbd:`inventory_2012_maps.pdf` in your "
+":kbd:`exercise_data\\\\forestry\\\\samplig\\\\map_creation\\\\` folder."
+msgstr "PDF ファイルを :kbd:`exercise_data\\\\林業\\\\samplig\\\\ map_creation\\\\` フォルダ中に :kbd: `inventory_2012_maps.pdf` として保存します。保存"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:314
+msgid "Open the PDF file to check that everything went as expected."
+msgstr "すべてが期待どおりに行ったことを確認するためにPDFファイルを開きます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:316
+msgid ""
+"You could just as easily create separate images for every map (remember to "
+"uncheck the single file creation), here you can see the thumbnails of the "
+"images that would be created:"
+msgstr "同じように簡単にすべての地図（単一ファイルの作成をオフにすることを忘れないでください）、ここに作成される画像のサムネイルを見ることができるために別々の画像を作成できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:321
+msgid ""
+"In the :guilabel:`Print Composer`, save your map as a composer template as "
+":kbd:`forestry_atlas.qpt` in your "
+":kbd:`exercise_data\\\\forestry\\\\map_creation\\\\` folder. Use "
+":menuselection:`Composer --> Save as Template`. You will be able to use this"
+" template again and again."
+msgstr ":guilabel:`印刷コンポーザ` で、組版テンプレートとして :kbd:` forestry_atlas.qpt` として :kbd:`exercise_data\\\\林業\\\\map_creation\\\\` フォルダ中に地図を保存します。 :menuselection: `Composer->Templateとして保存` を使用します。何度も何度もこのテンプレートを使用できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:323
+msgid "Close the :guilabel:`Print Composer` and save your QGIS project."
+msgstr ":guilabel:`印刷Composer` を閉じ、QGIS プロジェクトを保存します。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:327
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:329
+msgid ""
+"You have managed to create a template map that can be used to automatically "
+"generate detail maps to be used in the field to help navigate to the "
+"different plots. As you noticed, this was not an easy task but the benefit "
+"will come when you need to create similar maps for other regions and you can"
+" use the template you just saved."
+msgstr "自動的に別のプロットに移動を助けるためにフィールドで使用されるように、詳細マップを生成するために使用できるテンプレート・マップを作成するために管理しています。お気づきのように、これは簡単な作業ではありませんでしたが、他の地域についても同様の地図を作成する必要がある場合に利益が来ると、先ほど保存したテンプレートを使用できます。"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:332
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/forestry/forest_maps.rst:334
+msgid ""
+"In the next lesson, you will see how you can use LiDAR data to create a DEM "
+"and then use it to your enhance your data and maps visibility."
+msgstr "次のレッスンではレーザー測量データを使用してDEMを作成し、それからそれを使用してデータや地図の視認性を高める方法を示します。"

@@ -1,12 +1,13 @@
 # Translators:
 # MarieSilvestre <marie.silvestre@gmail.com>, 2016
+# Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 2.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>, 2016\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +17,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:6
 msgid "las2iso"
-msgstr ""
+msgstr "las2iso"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:9
 msgid "Description"
@@ -30,6 +31,11 @@ msgid ""
 "<http://rapidlasso.com/las2iso>`_ page and its online `README "
 "<http://lastools.org/download/las2iso_README.txt>`_ file."
 msgstr ""
+"Cet outil peut transformer des nuages de points (jusqu'à un maximum de 20 "
+"millions par fichier) en courbes de niveau à l'aide d'une triangulation "
+"temporaire de Delaunay. Pour plus d'information, consultez la page `las2iso "
+"<http://rapidlasso.com/las2iso>`_ et son fichier `README "
+"<http://lastools.org/download/las2iso_README.txt>`_ en ligne."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:14
 msgid "Parameters"
@@ -41,7 +47,7 @@ msgstr "``verbose`` [booléen]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:17
 msgid "Generates more textual control output to the console."
-msgstr ""
+msgstr "Génère une sortie vers la console avec davantage de texte."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:19
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:24
@@ -50,11 +56,13 @@ msgstr "Par défaut : *Faux*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:24
 msgid "``open LAStools GUI`` [boolean]"
-msgstr ""
+msgstr "``Ouvrir l'interface de LAStools`` [booléen]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:22
 msgid "Starts the GUI of LAStools with pre-populated input files."
 msgstr ""
+"Lance l'interface graphique de LAStools avec les fichiers d'entrée pré-"
+"renseignés."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:27
 msgid "``input LAS/LAZ file`` [points]"
@@ -63,65 +71,76 @@ msgstr "``fichier d'entrée LAS/LAZ`` [points]"
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:27
 msgid "The file containing the points to be rastered in LAS/LAZ format."
 msgstr ""
+"Le fichier contenant les points qui seront transformés en raster, au format "
+"LAS/LAZ."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:32
 msgid "``smooth`` [integer]"
-msgstr ""
+msgstr "``lisser`` [entier]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:30
 msgid ""
 "Specifies if and with how many passes the temporary TIN should be smoothed."
-msgstr ""
+msgstr "Indique si et en combien de passes le TIN temporaire doit être lissé."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:32
 msgid "Default: *0*"
-msgstr ""
+msgstr "Par défaut : *0*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:37
 msgid "``extract isoline with spacing of`` [number]"
-msgstr ""
+msgstr "``extraire la courbe de niveau avec un espacement de`` [nombre]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:35
 msgid "Specifies spacing at which iso-contour lines are getting extracted."
 msgstr ""
+"Indique l'espacement avec lequel les courbes de niveau sont extraites."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:37
 msgid "Default: *10.0*"
-msgstr ""
+msgstr "Par défaut : *10.0*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:42
 msgid "``clean isolines shorter than`` [number]"
-msgstr ""
+msgstr "``nettoyer les courbes de niveau moins longues que`` [nombre]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:40
 msgid "Omits iso-contour lines that are shorter than the specified length."
 msgstr ""
+"Ne pas inclure les courbes de niveau qui sont plus courtes que la longueur "
+"indiquée."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:42
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:47
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:52
 msgid "Default: *0.0*"
-msgstr ""
+msgstr "Par défaut : *0.0*"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:47
 msgid "``simplify segments shorter than`` [number]"
-msgstr ""
+msgstr "``simplifier les segments plus courts que`` [nombre]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:45
 msgid ""
 "Rudimentary simplification of iso-contour line segments that are shorter "
 "than the specified length."
 msgstr ""
+"Simplification basique des segments de courbes de niveau plus courts que la "
+"longueur indiquée."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:52
 msgid "``simplify segment pairs with area less than`` [number]"
 msgstr ""
+"``simplifier les paires de segments dont la surface est inférieure à`` "
+"[nombre]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:50
 msgid ""
 "Rudimentary simplification of bumps formed by consecutive line segments "
 "whose area is smaller than the specified size."
 msgstr ""
+"Simplification basique des bosses formées par des segments de lignes "
+"consécutifs dont la surface est inférieure à celle indiquée."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:57
 msgid "``additional command line parameter(s)`` [string]"
@@ -132,6 +151,8 @@ msgid ""
 "Specifies other command-line switches not available via this menu but known "
 "to the (advanced) LAStools user."
 msgstr ""
+"Indique les autres options de ligne de commande non disponibles via ce menu "
+"mais connues des utilisateurs (avancés) de LAStools."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:57
 msgid "Default: *---*"
@@ -143,7 +164,7 @@ msgstr "Sorties"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:63
 msgid "``Output vector file`` [raster]"
-msgstr ""
+msgstr "``Fichier vecteur en sortie`` [vecteur]"
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:63
 msgid ""
@@ -152,6 +173,11 @@ msgid ""
 "referencing information (but only then) you can also create a KML output "
 "file."
 msgstr ""
+"Indique l'emplacement de la sortie vecteur. Utilisez des fichiers au format "
+"SHP ou WKT. Si votre fichier LIDAR en entrée dispose de coordonnées "
+"géographiques (long/lat) ou dispose d'une information géo-référencée (et "
+"seulement si), vous pouvez également créer un fichier de sortie au format "
+"KML."
 
 #: ../../source/docs/user_manual/processing_algs/lidartools/las2iso.rst:66
 msgid "Console usage"
@@ -162,3 +188,6 @@ msgid ""
 "See also the `las2iso <http://rapidlasso.com/las2iso>`_ page and its online "
 "`README <http://lastools.org/download/las2iso_README.txt>`_ file."
 msgstr ""
+"Consultez également la page `las2iso <http://rapidlasso.com/las2iso>`_ et le"
+" fichier `README <http://lastools.org/download/las2iso_README.txt>`_ en "
+"ligne."

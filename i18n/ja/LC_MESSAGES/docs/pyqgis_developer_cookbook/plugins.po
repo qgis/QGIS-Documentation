@@ -1,14 +1,16 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # Minoru Akagi <akaginch@gmail.com>, 2014
+# Taro Matsuzawa <taro@georepublic.co.jp>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-05-29 14:07+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -367,19 +369,19 @@ msgstr "コードスニペット"
 msgid ""
 "Python plugins are listed together with C++ plugins in QGIS plugin manager. "
 "They are searched for in these paths:"
-msgstr ""
+msgstr "PythonのプラグインはQGISプラグインマネージャで、C++プラグインと一緒にリストされています。それらはこれらのパスの中から検索されています:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:24
 msgid ""
 "UNIX/Mac: :file:`~/.qgis2/python/plugins` and "
 ":file:`(qgis_prefix)/share/qgis/python/plugins`"
-msgstr ""
+msgstr "UNIX/Mac: :file:`~/.qgis2/python/plugins` および :file:`(qgis_prefix)/share/qgis/python/plugins`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:25
 msgid ""
 "Windows: :file:`~/.qgis2/python/plugins` and "
 ":file:`(qgis_prefix)/python/plugins`"
-msgstr ""
+msgstr "Windows: :file:`~/.qgis2/python/plugins` および :file:`(qgis_prefix)/python/plugins`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:27
 msgid ""
@@ -388,13 +390,13 @@ msgid ""
 "earlier) or :file:`C:\\\\Users\\\\(user)`. Since QGIS is using Python 2.7, "
 "subdirectories of these paths have to contain an __init__.py file to be "
 "considered Python packages that can be imported as plugins."
-msgstr ""
+msgstr "Windowsでのホームディレクトリ(上の :file:`~` で示される)は通常 :file:`C:\\\\Documents and Settings\\\\(user)` (Windows XPまたはそれ以前) や :file:`C:\\\\Users\\\\(user)` のようなものです。QGISはPython 2.7を使用しているのでこれらのパスのサブディレクトリは、プラグインとしてインポートできるPythonパッケージと見なされるには __init__.py を含む必要があります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:35
 msgid ""
 "By setting `QGIS_PLUGINPATH` to an existing directory path, you can add this"
 " path to the list of paths that are searched for plugins."
-msgstr ""
+msgstr "既存のディレクトリのパスを `QGIS_PLUGINPATH` にセットすることによって、このパスをプラグインを検索するパスのリストに追加することができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:45
 msgid ""
@@ -402,7 +404,7 @@ msgid ""
 "(:file:`__init__.py`). Fill in the :ref:`plugin_metadata` "
 "(:file:`metadata.txt`) A main python plugin body (:file:`mainplugin.py`). A "
 "form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`."
-msgstr ""
+msgstr "*ファイルの作成*: 次に説明するファイルを作成します。開始点は(:file:`__init__.py`)。 :ref:`plugin_metadata` (:file:`metadata.txt`)に記入します。Pythonプラグインの本体 (:file:`mainplugin.py`)。QTデザイナのフォーム (:file:`form.ui`)とその :file:`resources.qrc` 。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:50
 msgid "*Write code*: Write the code inside the :file:`mainplugin.py`"
@@ -412,7 +414,7 @@ msgstr "*コードを書く*: :file:`mainplugin.py` 内にコードを記述す�
 msgid ""
 "*Publish*: Publish your plugin in QGIS repository or make your own "
 "repository as an \"arsenal\" of personal \"GIS weapons\"."
-msgstr ""
+msgstr "*発行*: あなたのプラグインをQGISリポジトリに発行するか、個人的な\"GISの武器\"の\"武器庫\"として独自のリポジトリを作ります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:61
 msgid ""
@@ -425,17 +427,17 @@ msgid ""
 "plugin but no idea what to do? `Python Plugin Ideas wiki page "
 "<http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the "
 "community!"
-msgstr ""
+msgstr "QGISにPythonプラグインが導入されてから、いくつものプラグインが `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ に登場しています。あなたはそれらのいくつかを見つけることができますし、PyQGISのプログラミングを学ぶためにソースを利用できます。また、開発の努力が重複していないか調べることができます。QGISチームは :ref:`official_pyqgis_repository` を保持しています。プラグインを作成する準備はできたけれど何をすべきかについてのアイデアがありませんか? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ にはコミュニティからの願いが並べられています!"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:73
 msgid "Here's the directory structure of our example plugin"
-msgstr ""
+msgstr "これらはサンプルプラグインのディレクトリ構造です"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:89
 msgid ""
 ":file:`__init__.py` = The starting point of the plugin. It has to have the "
 ":func:`classFactory` method and may have any other initialisation code."
-msgstr ""
+msgstr ":file:`__init__.py` = プラグインの開始点。 :func:`classFactory` メソッドを持つ必要があります。その他の初期化コードを持つこともできます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:91
 msgid ""
@@ -447,11 +449,11 @@ msgstr ":file:`mainPlugin.py` = プラグインの主なワーキングコード
 msgid ""
 ":file:`resources.qrc` = The .xml document created by Qt Designer. Contains "
 "relative paths to resources of the forms."
-msgstr ""
+msgstr ":file:`resources.qrc` = Qtデザイナによって作成された.xmlドキュメント。フォームのリソースへの相対パスが含まれています。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:97
 msgid ":file:`form.ui` = The GUI created by Qt Designer."
-msgstr ""
+msgstr ":file:`form.ui` = Qtデザイナで作成されたGUI"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:99
 msgid ""
@@ -459,7 +461,7 @@ msgid ""
 "version, name and some other metadata used by plugins website and plugin "
 "infrastructure. Since QGIS 2.0 the metadata from :file:`__init__.py` are not"
 " accepted anymore and the :file:`metadata.txt` is required."
-msgstr ""
+msgstr ":file:`metadata.txt` = QGIS >= 1.8.0 で必要です。全般情報やバージョン、名前、そしてプラグインのウェブサイトやインフラストラクチャによって使用されるいくつかのメタデータが含まれます。QGIS 2.0 以降では :file:`__init__.py` からのメタデータは受け付けられず、 :file:`metadata.txt` が必要です。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:104
 msgid ""
@@ -480,7 +482,7 @@ msgid ""
 "If you plan to upload the plugin to the :ref:`official_pyqgis_repository` "
 "you must check that your plugin follows some additional rules, required for "
 "plugin :ref:`official_pyqgis_repository_validation`"
-msgstr ""
+msgstr "あなたのプラグインを :ref:`official_pyqgis_repository` へアップロードするつもりなら、プラグインがプラグイン :ref:`official_pyqgis_repository_validation` で要求されるいくつかの追加の規則に従っていることをチェックする必要があります"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:133
 msgid ""
@@ -506,17 +508,17 @@ msgid ""
 "email of the author, not shown in the QGIS plugin manager or in the website "
 "unless by a registered logged in user, so only visible to other plugin "
 "authors and plugin website administrators"
-msgstr ""
+msgstr "作者のメールアドレスで、 ユーザがログインしなければ QGIS プラグインマネージャやwebsiteで表示されることはありません、つまり他のプラグイン作者やプラグイン website の管理者のみが見ることができます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:157
 msgid "comma separated list, spaces are allowed inside individual tags"
-msgstr ""
+msgstr "コンマ区切りのリスト。個々のタグの内部にスペースを入れることは可能です。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:161
 msgid ""
 "a file name or a relative path (relative to the base folder of the plugin's "
 "compressed package) of a web friendly image (PNG, JPEG)"
-msgstr ""
+msgstr "webに親和性の高い画像(PNG, JPEG)のファイル名または相対パス (プラグインの圧縮されたパッケージのベースフォルダに対する)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:167
 msgid ""
@@ -524,7 +526,7 @@ msgid ""
 "next section  how to add a menu entry for your plugin) but they can also be "
 "placed the  into :menuselection:`Raster`, :menuselection:`Vector`, "
 ":menuselection:`Database` and :menuselection:`Web` menus."
-msgstr ""
+msgstr "デフォルトではプラグインは `プラグイン` メニューに配置されます(次のセクションでプラグインのメニューエントリを追加する方法を見ます)が :menuselection:`ラスタ` や :menuselection:`ベクタ`, :menuselection:`データベース`, :menuselection:`Web` メニューに配置することもできます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:172
 msgid ""
@@ -534,11 +536,11 @@ msgid ""
 " values for \"category\" are: Vector, Raster, Database or Web. For example, "
 "if your plugin will be available from `Raster` menu, add this to "
 ":file:`metadata.txt`"
-msgstr ""
+msgstr "\"category\"のメタデータエントリはそれを明記するためにあります。プラグインはそれに応じて分類することができます。このメタデータエントリはユーザーのためのヒントとして使用され、どこに(どのメニューに)プラグインがあるかを示しています。\"category\"として指定できる値は Vector, Raster, Database, Web です。たとえば、あなたのプラグインが `ラスタ` メニューから利用できる場合は、 これを :file:`metadata.txt` に追加します"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:187
 msgid "An example for this metadata.txt"
-msgstr ""
+msgstr "metadata.txtの例"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:241
 msgid "__init__.py"
@@ -552,7 +554,7 @@ msgid ""
 ":class:`QgisInterface` and must return instance of your plugin's class from "
 "the :file:`mainplugin.py` --- in our case it's called ``TestPlugin`` (see "
 "below). This is how :file:`__init__.py` should look like"
-msgstr ""
+msgstr "このファイルはPythonのインポートシステムに必要とされます。QGISにプラグインが読み込まれる時に呼ばれる :func:`classFactory()` 関数がこのファイルに含まれている必要があります。それは :class:`QgisInterface` のインスタンスへの参照を受け取って、 :file:`mainplugin.py` のプラグインクラスのインスタンスを返す必要があります --- 私たちの場合はそれは ``TestPlugin`` という名前のクラスです(下記参照)。 :file:`__init__.py` はこんな感じに見えるべきです::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:260
 msgid "mainPlugin.py"
@@ -562,25 +564,25 @@ msgstr "mainPlugin.py"
 msgid ""
 "This is where the magic happens and this is how magic looks like: (e.g. "
 ":file:`mainPlugin.py`)"
-msgstr ""
+msgstr "これが魔法が起きるところで、魔法はこのように見えます: (例えば :file:`mainPlugin.py`)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:313
 msgid ""
 "The only plugin functions that must exist in the main plugin source file "
 "(e.g. :file:`mainPlugin.py`) are:"
-msgstr ""
+msgstr "メインのプラグインのソースファイル(例.  :file:`mainPlugin.py`) に含まれる必要があるプラグイン用の関数は:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:316
 msgid "``__init__``    --> which gives access to QGIS interface"
-msgstr ""
+msgstr "``__init__`` --> QGIS のインターフェイスとのアクセスを与えます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:317
 msgid "``initGui()``   --> called when the plugin is loaded"
-msgstr ""
+msgstr "``initGui()`` --> プラグインがロードされたときに呼び出されます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:318
 msgid "``unload()``    --> called when the plugin is unloaded"
-msgstr ""
+msgstr "``unload()`` --> プラグインがアンロードされたときに呼び出されます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:320
 msgid ""
@@ -588,19 +590,19 @@ msgid ""
 "This will add the corresponding menu action to the :menuselection:`Plugins` "
 "menu. Alternative methods exist to add the action to a different menu. Here "
 "is a list of those methods:"
-msgstr ""
+msgstr "上記の例では :func:`addPluginToMenu` が使用されています。これは対応するメニューアクションを :menuselection:`Plugins` メニューに追加します。別のメニューにアクションを追加する他の方法も存在します。それらのメソッドの一覧です:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:356
 msgid ""
 "Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a "
 "name specific to your plugin so that it can be customized."
-msgstr ""
+msgstr "カスタマイズを可能にするために :class:`QAction` と :class:`QMenu` の``objectName`` をプラグイン固有の名前に設定することを忘れないで下さい。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:364
 msgid ""
 "You can see that in :func:`initGui()` we've used an icon from the resource "
 "file (called :file:`resources.qrc` in our case)"
-msgstr ""
+msgstr " :func:`initGui()` でリソースファイル(この場合 :file:`resources.qrc` )からアイコンを使用していることがわかります"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:375
 msgid ""
@@ -608,7 +610,7 @@ msgid ""
 "parts of QGIS, otherwise you might get resources you did not want. Now you "
 "just need to generate a Python file that will contain the resources. It's "
 "done with :command:`pyrcc4` command:"
-msgstr ""
+msgstr "他のプラグインやQGISのいずれかの部分と衝突しない接頭辞を使用するのが良いです。そうでなければあなたが望んでいないリソースを得るかもしれません。そして、リソースを格納するPythonファイルを生成する必要があります。 :command:`pyrcc4` コマンドで行います:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:386
 msgid ""
@@ -619,18 +621,18 @@ msgid ""
 "modifying the PATH environment variable or specifiying the path to the "
 "executable explicitly you should be able to find it at :file:`<Your QGIS "
 "Install Directory>\\\\bin\\\\pyrcc4.exe`."
-msgstr ""
+msgstr "Windows 環境では、 :command:`pyrcc4` をコマンドプロンプトまたは Powershell から実行しようとするとたぶん \"Windows cannot access the specified device, path, or file [...]\" というエラーを受け取るでしょう。簡単な解決法はたぶん OSGeo4W Shell を使うことですが、あなたがもし PATH 環境変数を書き換えたり実行ファイルのパスをはっきりと指定するのが苦でなければ :file:`<Your QGIS Install Directory>\\\\bin\\\\pyrcc4.exe` で見つける事ができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:394
 msgid "And that's all... nothing complicated :)"
-msgstr ""
+msgstr "これで以上です... なにも複雑なものはありません :)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:396
 msgid ""
 "If you've done everything correctly you should be able to find and load your"
 " plugin in the plugin manager and see a message in console when toolbar icon"
 " or appropriate menu item is selected."
-msgstr ""
+msgstr "すべてうまくいったらプラグインマネージャであなたのプラグインを見つけてロードすることができるはずです。そしてツールバーアイコンや適切なメニューアイテムが選択された時にコンソールにメッセージが表示されるはずです。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:413
 msgid ""
@@ -640,150 +642,150 @@ msgid ""
 "en_us.html` and :file:`index.html`, displaying whichever it finds first. "
 "Here ``ll_cc`` is the QGIS locale. This allows multiple translations of the "
 "documentation to be included with the plugin."
-msgstr ""
+msgstr ":func:`showPluginHelp` 関数は呼び出し元のモジュールと同じディレクトリでヘルプファイルを探します。 :file:`index-ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`, :file:`index-en_us.html`, :file:`index.html` の順に探し、はじめに見つけたものを表示します。ここで ``ll_cc`` はQGISのロケールです。ドキュメントの複数の翻訳をプラグインに含めることができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:429
 msgid "Translation"
-msgstr ""
+msgstr "翻訳"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:431
 msgid ""
 "With a few steps you can set up the environment for the plugin localization "
 "so that depending on the locale settings of your computer the plugin will be"
 " loaded in different languages."
-msgstr ""
+msgstr "いくつかのステップでプラグインの翻訳をするための環境がセットアップでき、あなたのコンピュータの言語設定に依存していたプラグインが他の言語環境でも読むことができるでしょう。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:436
 msgid "Software requirements"
-msgstr ""
+msgstr "必要なソフトウェア"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:438
 msgid ""
 "The easiest way to create and manage all the translation files is to install"
 " `Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_. In a Linux "
 "like environment you can install it typing::"
-msgstr ""
+msgstr "翻訳ファイルを作成及び管理するもっとも簡単な方法は `Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_ をインストールすることです。Linux のような環境では次をタイプすることでインストールできます::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:446
 msgid "Files and directory"
-msgstr ""
+msgstr "ファイルとディレクトリ"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:448
 msgid ""
 "When you create the plugin you will find the ``i18n`` folder within the main"
 " plugin directory."
-msgstr ""
+msgstr "プラグインを作成したときにプラグインのメインのディレクトリに ``i18n`` フォルダがあるのを見つけることができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:451
 msgid "**All the translation files have to be within this directory.**"
-msgstr ""
+msgstr "**全ての翻訳ファイルはこのディレクトリにあります。**"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:454
 msgid ".pro file"
-msgstr ""
+msgstr ".PROファイル"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:456
 msgid ""
 "First you should create a ``.pro`` file, that is a *project* file that can "
 "be managed by Qt Linguist."
-msgstr ""
+msgstr "まず、 `` .pro``ファイルを作成する必要があり、それはQtLinguistによって管理できる*プロジェクト*ファイルです。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:459
 msgid ""
 "In this ``.pro`` file you have to specify all the files and forms you want "
 "to translate. This file is used to set up the localization files and "
 "variables. An example of the pro file is::"
-msgstr ""
+msgstr "この ``.pro`` はあなたが翻訳したい全てのファイルとフォームを含めなければいけません。このファイルは翻訳ファイルや変数をセットアップするのに使われます。 pro ファイルの例です::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:469
 msgid ""
 "In this particular case all your UIs are placed in the ``../ui`` folder and "
 "you want to translate all of them."
-msgstr ""
+msgstr "今回のケースでは全ての UI は ``../ui`` に配置され、あなたはこれらの全てを翻訳しようとしています。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:472
 msgid ""
 "Furthermore, the ``your_plugin.py`` file is the file that *calls* all the "
 "menu and sub-menus of your plugin in the QGIS toolbar and you want to "
 "translate them all."
-msgstr ""
+msgstr "さらに、 ``your_plugin.py`` ファイルは QGIS ツールバーにあるあなたのプラグインの全てのメニューとサブメニューから *呼び出され* 、これらも全て翻訳しようとしています。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:476
 msgid ""
 "Finally with the *TRANSLATIONS* variable you can specify the translation "
 "languages you want."
-msgstr ""
+msgstr "最後に *TRANSLATIONS* 変数で翻訳したい言語を特定します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:481
 msgid ""
 "Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + "
 "``.ts`` otherwise the language loading will fail! Use 2 letters shortcut for"
 " the language (**it** for Italian, **de** for German, etc...)"
-msgstr ""
+msgstr "``ts`` ファイルの名前は ``your_plugin_`` + ``言語`` + ``.ts`` となるように命名するよう気をつけてください、そうでなければ言語の読み込みに失敗するでしょう！2文字の短縮形の言語を使います(**it** はイタリア語、 **de** はドイツ語、などなど...)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:486
 msgid ".ts file"
-msgstr ""
+msgstr ".ts ファイル"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:488
 msgid ""
 "Once you have created the ``.pro`` you are ready to generate the ``.ts`` "
 "file(s) of the language(s) of your plugin."
-msgstr ""
+msgstr "一度 ``.pro`` を作ったら、あなたのプラグインの言語(ごと)の ``.ts`` ファイル(たち)を生成する準備ができました。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:491
 msgid "Open a terminal, go to ``your_plugin/i18n`` directory and type::"
-msgstr ""
+msgstr "ターミナルを開いて、 ``your_plugin/i18n`` に移動して次のように入力します::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:495
 msgid "you should see the ``your_plugin_language.ts`` file(s)."
-msgstr ""
+msgstr "``your_plugin_language.ts`` ファイル(ら)がみつかるはずです。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:497
 msgid "Open the ``.ts`` file with **Qt Linguist** and start to translate."
-msgstr ""
+msgstr "``.ts`` を **Qt Linguist** で開いて翻訳を開始します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:500
 msgid ".qm file"
-msgstr ""
+msgstr ".qm ファイル"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:502
 msgid ""
 "When you finish to translate your plugin (if some strings are not completed "
 "the source language for those strings will be used) you have to create the "
 "``.qm`` file (the compiled ``.ts`` file that will be used by QGIS)."
-msgstr ""
+msgstr "あなたのプラグインの翻訳が終わったら (もしいくつかの文字列が終わっていなかったらソースの言語の文字列が使われるでしょう) ``.qm`` ファイルを作る必要があります (``.ts`` ファイルをコンパイルしたもので、 QGIS で使われます)。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:506
 msgid "Just open a terminal cd in ``your_plugin/i18n`` directory and type::"
-msgstr ""
+msgstr "ターミナルを開いて ``your_plugin/i18n`` ディレクトリに cd して、次のように入力します::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:510
 msgid ""
 "now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s)."
-msgstr ""
+msgstr "これで、 ``i18n`` ディレクトリに ``your_plugin.qm`` ファイル(たち)が見つかるでしょう。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:513
 msgid "Load the plugin"
-msgstr ""
+msgstr "プラグインの読み込み"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:515
 msgid ""
 "In order to see the translation of your plugin just open QGIS, change the "
 "language (:menuselection:`Settings --> Options --> Language`) and restart "
 "QGIS."
-msgstr ""
+msgstr "QGISを開いてあなたのプラグインの翻訳を確認するには、言語を変更して (:menuselection:`Settings --> Options --> Language`) QGIS を再起動します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:518
 msgid "You should see your plugin in the correct language."
-msgstr ""
+msgstr "これで的確な言語であなたのプラグインを見ることができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:522
 msgid ""
 "If you change something in your plugin (new UIs, new menu, etc..) you have "
 "to **generate again** the update version of both ``.ts`` and ``.qm`` file, "
 "so run again the command of above."
-msgstr ""
+msgstr "プラグインで何かを変更した場合（新しいUIに、新しいメニュー、など。）** `` .ts``と `` .qm``ファイルの両方の**更新バージョンを再度生成する必要がありますので、上記のコマンド再度実行します。"
 
 #~ msgid ""
 #~ "Python plugins are listed together with C++ plugins in QGIS plugin manager. "

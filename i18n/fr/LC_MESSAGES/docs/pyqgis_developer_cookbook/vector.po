@@ -3,13 +3,14 @@
 # Benoît de Cabissole, 2015
 # Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2014-2015
 # Sant-anna <delazj@gmail.com>, 2014-2016
+# Tahir Tamba <tahir.tamba@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-08-04 10:52+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>\n"
+"PO-Revision-Date: 2017-03-28 23:45+0000\n"
+"Last-Translator: Tahir Tamba <tahir.tamba@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -566,7 +567,7 @@ msgstr "Vous pouvez récupérer les informations relatives aux champs associés 
 msgid ""
 "Starting from QGIS 2.12 there is also a :func:`fields()` in "
 ":class:`QgsVectorLayer` which is an alias to :func:`pendingFields`."
-msgstr ""
+msgstr "À partir de QGIS 2.12, il existe aussi une: func: `fields ()` dans: class: `QgsVectorLayer` qui est un alias de: func:` pendingFields`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:38
 msgid "Selecting features"
@@ -649,7 +650,7 @@ msgstr "Si vous avez besoin d'un filtre basé sur les attributs à la place (ou 
 msgid ""
 "See :ref:`expressions` for the details about the syntax supported by "
 ":class:`QgsExpression`."
-msgstr ""
+msgstr "Voir :ref:`Expressions` pour les détails sur la syntaxe supportée par: class:` QgsExpression`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:186
 msgid ""
@@ -664,7 +665,7 @@ msgid ""
 "information, you can significantly increase the **speed** of the features "
 "request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a "
 "subset of attributes (possibly empty) like shown in the example above."
-msgstr ""
+msgstr "Si vous avez besoin uniquement d'un sous-ensemble des attributs ou si vous n'avez pas besoin des informations géométriques, vous pouvez augmenter considérablement la ** vitesse ** de la requête de fonctionnalités en utilisant l'indicateur QgsFeatureRequest NoGeometry ou en spécifiant un sous-ensemble d'attributs (éventuellement vide) comme montré dans l'exemple ci-dessus."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:214
 msgid ""
@@ -679,13 +680,13 @@ msgid ""
 "For a list of all available capabilities, please refer to the `API "
 "Documentation of QgsVectorDataProvider "
 "<http://qgis.org/api/classQgsVectorDataProvider.html>`_"
-msgstr ""
+msgstr "Pour obtenir une liste de toutes les fonctionnalités disponibles, reportez-vous à la «Documentation API de QgsVectorDataProvider\n<http://qgis.org/api/classQgsVectorDataProvider.html>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:228
 msgid ""
 "To print layer's capabilities textual description in a comma separated list "
 "you can use :func:`capabilitiesString` as in the following example::"
-msgstr ""
+msgstr "Pour afficher la description textuelle des capacités du calque dans une liste séparée par des virgules, vous pouvez utiliser: func: `capabilitiesString` comme dans l'exemple suivant ::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:238
 msgid ""
@@ -708,14 +709,14 @@ msgid ""
 "Create some :class:`QgsFeature` instances and pass a list of them to "
 "provider's :func:`addFeatures` method. It will return two values: result "
 "(true/false) and list of added features (their ID is set by the data store)."
-msgstr ""
+msgstr "Créez quelques classes: `QgsFeature` et passez une liste de celles-ci au fournisseur: func:` addFeatures`. Il renverra deux valeurs: result (true / false) et liste des fonctionnalités ajoutées (leur ID est défini par le magasin de données)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:266
 msgid ""
 "To set up the attributes you can either initialize the feature passing a "
 ":class:`QgsFields` instance or call :func:`initAttributes` passing the "
 "number of fields you want to be added."
-msgstr ""
+msgstr "Pour configurer les attributs, vous pouvez soit initialiser la fonction en passant par une: class: `QgsFields` instance ou appel: func:` initAttributes` en passant par le nombre de champs que vous souhaitez ajouter."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:285
 msgid "To delete some features, just provide a list of their feature IDs"
@@ -752,7 +753,7 @@ msgid ""
 "To find out whether a layer is in editing mode, use :func:`isEditable` --- "
 "the editing functions work only when the editing mode is turned on. Usage of"
 " editing functions"
-msgstr ""
+msgstr "Pour savoir si une couche est en mode d'édition, utilisez: func: `isEditable` --- les fonctions d'édition ne fonctionnent que lorsque le mode d'édition est activé. Utilisation des fonctions d'édition."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:377
 msgid ""
@@ -779,13 +780,13 @@ msgid ""
 "editing there are :func:`commitChanges()` and :func:`rollBack()` --- however"
 " normally you should not need these methods and leave this functionality to "
 "be triggered by the user."
-msgstr ""
+msgstr "Pour démarrer le mode d'édition, il y a: func: `startEditing ()` méthode, pour arrêter l'édition il y a: func: `commitChanges ()` et: func: `rollBack ()` --- Cependant, normalement vous ne devriez pas avoir besoin de ces méthodes, elle laisser devrait être déclenchée par l'utilisateur."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:408
 msgid ""
 "You can also use the :code:`with edit(layer)`-statement to wrap commit and "
 "rollback into a more semantic code block as shown in the example below:"
-msgstr ""
+msgstr "Vous pouvez également utiliser le: code: `with edit (layer)` -déclaration pour envelopper l'acceptation et l'annulation dans un bloc de code plus sémantique comme illustré dans l'exemple ci-dessous:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:419
 msgid ""
@@ -793,7 +794,7 @@ msgid ""
 "exception occurs, it will :func:`rollBack()` all the changes. In case a "
 "problem is encountered within :func:`commitChanges()` (when the method "
 "returns False) a :class:`QgsEditError` exception will be raised."
-msgstr ""
+msgstr "Cela va automatiquement appeler: func: `commitChanges ()` à la fin. Si une exception se produit, : func: `rollBack ()` fera toutes les modifications. Dans le cas où un problème est rencontré dans: func: `commitChanges ()` (quand la méthode renvoie False) a: class: `QgsEditError` exception sera levée."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:428
 msgid ""
@@ -821,7 +822,7 @@ msgstr "Vous pouvez vous représenter une couche sans index spatial comme un ann
 msgid ""
 "Spatial indexes are not created by default for a QGIS vector layer, but you "
 "can create them easily. This is what you have to do:"
-msgstr ""
+msgstr "Les index spatiaux ne sont pas créés par défaut pour une couche vectorielle QGIS, mais vous pouvez les créer facilement. C'est ce que vous devez faire:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:446
 msgid "create spatial index --- the following code creates an empty index"
@@ -830,13 +831,13 @@ msgstr "créez l'index spatial --- le code qui suit créé un index vide"
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:454
 msgid ""
 "add features to index --- index takes :class:`QgsFeature` object and adds it"
-msgstr ""
+msgstr "Ajouter des fonctionnalités à index --- index prend: class: `QgsFeature` objet et l'ajoute."
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:453
 msgid ""
 "to the internal data structure. You can create the object manually or use "
 "one from previous call to provider's :func:`nextFeature()`"
-msgstr ""
+msgstr "Dans la structure de données interne. Vous pouvez créer l'objet manuellement ou utiliser un créé lors de l'appel précédent au fournisseur: func: `nextFeature ()`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:460
 msgid "once spatial index is filled with some values, you can do some queries"
@@ -906,7 +907,7 @@ msgid ""
 "For example you can replace the symbol used by a particular **point** layer "
 "by calling :func:`setSymbol()` passing an instance of a "
 ":class:`QgsMarkerSymbolV2` as in the following code example::"
-msgstr ""
+msgstr "Par exemple, vous pouvez remplacer le symbole utilisé par une couche ** point ** particulière en appelant: func: `setSymbol ()` passer une instance d'une classe: `QgsMarkerSymbolV2` comme dans l'exemple de code suivant ::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:704
 msgid ""
@@ -969,11 +970,11 @@ msgstr "``x``"
 msgid ""
 "To get the full list of properties for the first symbol layer of a simbol "
 "instance you can follow the example code::"
-msgstr ""
+msgstr "Pour obtenir la liste complète des propriétés de la première couche de symbole d'une instance de symbole, vous pouvez suivre l'exemple de code::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:744
 msgid "This can be useful if you want to alter some properties::"
-msgstr ""
+msgstr "Cela peut être utile si vous souhaitez modifier certaines propriétés:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/vector.rst:759
 msgid "Categorized Symbol Renderer"

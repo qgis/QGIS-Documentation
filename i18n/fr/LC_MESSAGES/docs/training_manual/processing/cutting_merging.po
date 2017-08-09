@@ -3,13 +3,14 @@
 # Benoît de Cabissole, 2015
 # Julien Francois <julien.francois1@hotmail.fr>, 2014
 # MarieAude <marie-aude.aeby@camptocamp.com>, 2014
-# Sant-anna <delazj@gmail.com>, 2016
+# MarieSilvestre, 2016
+# Sant-anna <delazj@gmail.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-08-04 10:52+0000\n"
+"PO-Revision-Date: 2017-03-20 11:10+0000\n"
 "Last-Translator: Sant-anna <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +37,7 @@ msgid ""
 "an area much larger than that around the city that we want to work with. If "
 "you open the project corresponding to this lesson, you will see something "
 "like this."
-msgstr "Pour cette leçon, nous allons calculer une couche de pente pour une zone entourant une zone de ville, qui est donnée dans une couche vecteur avec un seul polygone. Le MNE de base est divisé en deux couches raster qui, ensemble, couvrent une zone beaucoup plus grande que celle autour de la ville avec laquelle nous voulons travailler. Si vous ouvrez le projet correspondant à cette leçon, vous verrez quelque chose comme ça."
+msgstr "Pour cette leçon, nous allons calculer une couche de pente pour une zone entourant une zone de ville, qui est donnée dans une couche vecteur avec un seul polygone. Le MNT de base est divisé en deux couches raster qui, ensemble, couvrent une zone beaucoup plus grande que celle autour de la ville avec laquelle nous voulons travailler. Si vous ouvrez le projet correspondant à cette leçon, vous verrez quelque chose comme ça."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:14
 msgid "These layers have two problems:"
@@ -64,29 +65,29 @@ msgid ""
 "create a layer containing the bounding box of the layer with the limits of "
 "the city area, and then we buffer it, so as to have a raster layer that "
 "covers a bit more that the strictly necessary."
-msgstr "Premièrement, nous créons un rectangle définissant la zone que nous voulons. Pour faire cela, nous créons une couche contenant la boîte englobante de la couche avec les limites de la zone de la ville, et ensuite nous lui mettons un tampon, afin d'obtenir une couche raster qui couvre un peu plus que le strict nécessaire."
+msgstr "Premièrement, nous créons un rectangle définissant la zone que nous voulons. Pour faire cela, nous créons une couche contenant l'emprise rectangulaire de la couche avec les limites de la zone de la ville, et ensuite nous lui ajoutons un tampon, afin d'obtenir une couche raster qui couvre un peu plus que le strict nécessaire."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:23
 msgid ""
 "To calculate the bounding box , we can use the *Polygon from layer extent* "
 "algorithm"
-msgstr "Pour calculer la boîte englobante, nous pouvons utiliser l'algorithme *Créer un polygone à partir de l'emprise de la couche*."
+msgstr "Pour calculer l'emprise rectangulaire, nous pouvons utiliser l'algorithme *Créer un polygone à partir de l'emprise d'une couche*."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:27
 msgid ""
 "To buffer it, we use the *Fixed distance buffer* algorithm, with the "
 "following parameter values."
-msgstr "Pour lui mettre un tampon, nous utilisons l'algorithme *Tampon à distance fixe*, avec les valeurs de paramètres suivantes."
+msgstr "Pour lui ajouter un tampon, nous utilisons l'algorithme *Tampon à distance fixe*, avec les valeurs de paramètres suivantes."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:31
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
-msgstr ""
+msgstr "La syntaxe a changé dans les récentes versions; définissez la Distance et l'Arc de vertex à .25"
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:33
 msgid ""
 "Here is the resulting bounding box obtained using the parameters shown above"
-msgstr "Voici la boîte englobante de résultat obtenue en utilisant les paramètres montrés au-dessus."
+msgstr "Voici l'emprise résultante obtenue en utilisant les paramètres montrés au-dessus."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:37
 msgid ""
@@ -94,27 +95,27 @@ msgid ""
 "angles, by running the *Polygon from layer extent* algorithm on it. We could"
 " have buffered the city limits first, and then calculate the extent "
 "rectangle, saving one step."
-msgstr "C'est une boîte ronde, mais nous pouvons facilement obtenir la boîte équivalente avec des angles droits, en lançant pour elle l'algorithme *Créer un polygone à partir de l'emprise de la couche*. Nous pourrions avoir fait un tampon sur les limites de la ville d'abord, et ensuite calculer l'emprise du rectangle, en sauvegardant à chaque étape."
+msgstr "Il s'agit d'un rectangle arrondi, mais nous pouvons facilement obtenir l'emprise équivalente avec des angles droits, en lançant sur elle l'algorithme *Créer un polygone à partir de l'emprise de la couche*. Nous aurions pu créer un tampon sur les limites de la ville d'abord et ensuite calculer l'emprise rectangulaire, ce qui nous aurait économisé une étape."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:41
 msgid ""
 "You will notice that the rasters has a different projection from the vector."
 " We should therefore reproject them before proceeding further, using the "
 "*Warp (reproject)* tool."
-msgstr "Vous remarquerez que les rasters ont une projection différente que celle du vecteur. Nous devons donc les reprojeter avant de poursuivre, en utilisant l'outil *Projection (reprojection)*."
+msgstr "Vous remarquerez que les rasters ont une projection différente de celle du vecteur. Nous devons donc les reprojeter avant de poursuivre, en utilisant l'outil *Projection (reprojection)*."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:45
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
 "compression method is selected."
-msgstr ""
+msgstr "Les versions récentes ont des interfaces plus complexes. Sélectionnez au moins une méthode de compression."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:47
 msgid ""
 "With this layer that contains the bounding box of the raster layer that we "
 "want to obtain, we can crop both of the raster layers, using the *Clip "
 "raster with polygon* algorithm."
-msgstr ""
+msgstr "Avec cette couche qui contient l'emprise rectangulaire de la couche raster que nous voulons obtenir, nous pouvons recadrer les deux couches rasters, en utilisant l'algorithme *Découper un raster selon une couche de masque*."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:51
 msgid ""
@@ -136,7 +137,7 @@ msgstr "Vous pouvez gagner du temps en fusionnant d'abord et en recadrant ensuit
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:57
 msgid "With that, we get the final DEM we want."
-msgstr "Avec cela, nous obtenons le MNE final que nous voulons."
+msgstr "Avec cela, nous obtenons le MNT final que nous voulons."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:61
 msgid "Now it is time to compute the slope layer."
@@ -151,11 +152,11 @@ msgid ""
 "reproject a raster layer, the *Warp (reproject)* algorithm can be used "
 "again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
 "then correctly calculate the slope, with either SAGA or GDAL."
-msgstr "Une couche de pente peut être calculée avec l'algorithme *Pente, Aspect, Courbes*, mais le MNE obtenu dans la dernière étape n'est pas approprié comme entrée, puisque les valeurs d'élévation sont en mètre mais la taille de cellule n'est pas exprimée en mètre (la couche utilise un SCR avec des coordonnées géographiques). Une reprojection est nécessaire. Pour reprojeter une couche raster, l'algorithme *Projection (reprojection)* peut encore être utilisé. Nous reprojetons dans un SCR avec des mètres comme unités (par exemple 3857), donc nous pouvons ensuite calculer correctement la pente, avec soit SAGA soit GDAL."
+msgstr "Une couche de pente peut être calculée avec l'algorithme *Pente, Aspect, Courbes*, mais le MNT obtenu dans la dernière étape n'est pas approprié comme entrée, puisque les valeurs d'élévation sont en mètre mais la taille de cellule n'est pas exprimée en mètre (la couche utilise un SCR avec des coordonnées géographiques). Une reprojection est nécessaire. Pour reprojeter une couche raster, l'algorithme *Projection (reprojection)* peut encore être utilisé. Nous reprojetons dans un SCR avec des mètres comme unités (par exemple 3857), donc nous pouvons ensuite calculer correctement la pente, avec soit SAGA soit GDAL."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:65
 msgid "With the new DEM, slope can now be computed."
-msgstr "Avec ce nouveau MNE, la pente peut maintenant être calculée."
+msgstr "Avec ce nouveau MNT, la pente peut maintenant être calculée."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:69
 msgid "And here is the resulting slope layer."
@@ -169,7 +170,7 @@ msgid ""
 "algorithm will help us to do the conversion (but in case you didn't know "
 "that algorithm existed, you could use the raster calculator that we have "
 "already used)."
-msgstr ""
+msgstr "La pente produite par l'algorithme *Pente, Aspect, Courbes* peut être exprimée en radians, mais les degrés sont une unité plus pratique et plus commune. L'algorithme *Conversions métriques* nous aidera à faire la conversion (mais dans le cas où vous ne sauriez pas que cet algorithme existe, vous pouvez toujours utiliser la calculatrice raster que nous avons déjà manipulée)."
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:77
 msgid ""
@@ -186,4 +187,4 @@ msgid ""
 "The reprojection processes might have caused the final layer to contain data"
 " outside the bounding box that we calculated in one of the first steps. This"
 " can be solved by clipping it again, as we did to obtain the base DEM."
-msgstr ""
+msgstr "Les processus de reprojection ont peut-être généré une couche finale qui contient des données en dehors de l'emprise que nous avons calculée dans une des premières étapes. Cela peut être résolu en la découpant à nouveau, comme nous l'avons fait pour obtenir le MNT de base."

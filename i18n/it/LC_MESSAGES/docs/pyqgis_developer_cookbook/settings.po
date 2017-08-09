@@ -1,0 +1,154 @@
+# 
+# Translators:
+# Marco Grisolia <marco.grisolia5@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-05 22:35\n"
+"PO-Revision-Date: 2017-06-14 15:32+0000\n"
+"Last-Translator: Marco Grisolia <marco.grisolia5@gmail.com>\n"
+"Language-Team: Italian (http://www.transifex.com/qgis/qgis-documentation/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:11
+msgid "Reading And Storing Settings"
+msgstr "Leggere E Memorizzare Impostazioni"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:13
+msgid ""
+"Many times it is useful for a plugin to save some variables so that the user"
+" does not have to enter or select them again next time the plugin is run."
+msgstr "Molte volte è utile per un plugin salvare alcune variabili in modo tale che l'utente non debba inserirle o selezionarle di nuovo la volta successiva che il plugin è eseguito."
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:21
+msgid "We can make difference between several types of settings:"
+msgstr "Possiamo fare una differenza tra diversi tipi di impostazioni:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:49
+msgid ""
+"The second parameter of the :func:`value()` method is optional and specifies"
+" the default value if there is no previous value set for the passed setting "
+"name."
+msgstr "Il secondo parametro del metodo :func:`value()` è opzionale e specifica il valore predefinito se non c'è nessun altro valore precedentemente impostato per il nome di impostazione passato."
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:75
+msgid ""
+"As you can see, the :func:`writeEntry` method is used for all data types, "
+"but several methods exist for reading the setting value back, and the "
+"corresponding one has to be selected for each data type."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:5
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:23
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:53
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:79
+msgid "settings"
+msgstr "impostazioni"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:5
+msgid "reading"
+msgstr "lettura"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:5
+msgid "storing"
+msgstr "memorizzazione"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:23
+msgid "global"
+msgstr "globale"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:53
+msgid "project"
+msgstr "progetto"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:79
+msgid "map layer"
+msgstr "layer di mappa"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:16
+msgid ""
+"These variables can be saved and retrieved with help of Qt and QGIS API. For"
+" each variable, you should pick a key that will be used to access the "
+"variable --- for user's favourite color you could use key "
+"\"favourite_color\" or any other meaningful string. It is recommended to "
+"give some structure to naming of keys."
+msgstr "Questa variabili possono essere salvate e recuperate con l'aiuto delle API di Qt e QGIS. Per ogni variabile, dovresti scegliere una chiave che sarà usata per accedere alla variabile --- per il colore preferito dell'utente potresti usare la chiave \"favourite_color\" o una qualunque altra stringa significativa. È raccomandabile dare una qualche struttura alla denominazione delle chiavi."
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:25
+msgid ""
+"**global settings** --- they are bound to the user at particular machine. "
+"QGIS itself stores a lot of global settings, for example, main window size "
+"or default snapping tolerance. This functionality is provided directly by Qt"
+" framework by the means of :class:`QSettings` class. By default, this class "
+"stores settings in system's \"native\" way of storing settings, that is --- "
+"registry (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The"
+" `QSettings documentation <http://doc.qt.io/qt-4.8/qsettings.html>`_ is "
+"comprehensive, so we will provide just a simple example"
+msgstr "**impostazioni globali** --- sono legate all'utente per una specifica macchina. QGIS stesso memorizza un sacco di impostazioni globali, per esempio, la dimensione della finestra principale o la tolleranza predefinita di aggancio. Questa funzionalità è fornita direttamente dall'ambiente Qt per mezzo della classe :class:`QSettings`. Per impostazione predefinita, questa classe memorizza le impostazioni nella maniera \"nativa\" del sistema di memorizzare le impostazioni, che è --- il registro (su Windows), il file .plist (su Mac OS X) o il file .ini (su Unix). La `documentazione di QSettings <http://doc.qt.io/qt-4.8/qsettings.html>`_ è completa, per cui forniremo solo un semplice esempio"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:55
+msgid ""
+"**project settings** --- vary between different projects and therefore they "
+"are connected with a project file. Map canvas background color or "
+"destination coordinate reference system (CRS) are examples --- white "
+"background and WGS84 might be suitable for one project, while yellow "
+"background and UTM projection are better for another one. An example of "
+"usage follows"
+msgstr "**impostazioni di progetto** --- variano da progetto a progetto e inoltre sono collegate a un file di progetto. Il colore di sfondo della mappa o il sistema di riferimento delle coordinate (CRS) di destinazione ne sono un esempio --- lo sfondo bianco e il WGS84 possono essere adatti per un progetto, mentre lo sfondo giallo e la proiezione UTM lo sono per un altro. Segue un esempio"
+
+#: ../../source/docs/pyqgis_developer_cookbook/settings.rst:81
+msgid ""
+"**map layer settings** --- these settings are related to a particular "
+"instance of a map layer with a project. They are *not* connected with "
+"underlying data source of a layer, so if you create two map layer instances "
+"of one shapefile, they will not share the settings. The settings are stored "
+"in project file, so if the user opens the project again, the layer-related "
+"settings will be there again. This functionality has been added in QGIS "
+"v1.4. The API is similar to QSettings --- it takes and returns QVariant "
+"instances"
+msgstr ""
+
+#~ msgid ""
+#~ "These variables can be saved a retrieved with help of Qt and QGIS API. For "
+#~ "each variable, you should pick a key that will be used to access the "
+#~ "variable --- for user's favourite color you could use key "
+#~ "\"favourite_color\" or any other meaningful string. It is recommended to "
+#~ "give some structure to naming of keys."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**global settings** --- they are bound to the user at particular machine. "
+#~ "QGIS itself stores a lot of global settings, for example, main window size "
+#~ "or default snapping tolerance. This functionality is provided directly by Qt"
+#~ " framework by the means of QSettings class. By default, this class stores "
+#~ "settings in system's \"native\" way of storing settings, that is --- "
+#~ "registry (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The"
+#~ " `QSettings documentation <http://doc.qt.nokia.com/stable/qsettings.html>`_ "
+#~ "is comprehensive, so we will provide just a simple example::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**project settings** --- vary between different projects and therefore they "
+#~ "are connected with a project file. Map canvas background color or "
+#~ "destination coordinate reference system (CRS) are examples --- white "
+#~ "background and WGS84 might be suitable for one project, while yellow "
+#~ "background and UTM projection are better for another one. An example of "
+#~ "usage follows::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**map layer settings** --- these settings are related to a particular "
+#~ "instance of a map layer with a project. They are *not* connected with "
+#~ "underlying data source of a layer, so if you create two map layer instances "
+#~ "of one shapefile, they will not share the settings. The settings are stored "
+#~ "in project file, so if the user opens the project again, the layer-related "
+#~ "settings will be there again. This functionality has been added in QGIS "
+#~ "v1.4. The API is similar to QSettings --- it takes and returns QVariant "
+#~ "instances::"
+#~ msgstr ""

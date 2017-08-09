@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2015
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:41+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-02 06:56+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,13 +18,13 @@ msgstr ""
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:6
 msgid "Interpolation"
-msgstr "データ補完"
+msgstr "データ補間"
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:8
 msgid ""
 "This chapter shows how to interpolate point data, and will show you another "
 "real example of performing spatial analysis"
-msgstr "この章では、ポイントデータの補完方法について示し、空間分析の実際の実行例を示します。"
+msgstr "この章では、ポイントデータの補間方法について示し、空間分析の実際の実行例を示します。"
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:10
 msgid ""
@@ -31,7 +32,7 @@ msgid ""
 "layer. Before doing it, we will have to do some data preparation, and after "
 "interpolating we will add some extra processing to modify the resulting "
 "layer, so we will have a complete analysis routine."
-msgstr "このレッスンでは、我々は、ラスタレイヤを得るためにポイントデータを補完します。その前に、我々は若干のデータ準備をしなければなりません、そして、補完後に、結果として生じるレイヤを修正するためにいくらかの余分の処理を加えるため、我々には完全な分析ルーチンがあります。"
+msgstr "このレッスンでは、ポイントデータを補間してラスタレイヤを得ます。それをする前には、若干のデータ準備をしなければならず、そして補間後に結果として生じるレイヤを修正する追加の処理をいくらか加えますから、完全な分析ルーチンになるでしょう。"
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:12
 msgid "Open the example data for this lesson, which should look like this."
@@ -54,7 +55,7 @@ msgid ""
 "filter* algorithm will be useful for this. We will use it twice, to remove "
 "points that can be considered outliers both in the upper and lower part of "
 "the distribution."
-msgstr "最初にやることは、ポイントが冗長なポイントを含むため、レイヤをクリーンアップすることです。それが何らかの理由で変更しなければならない、または変更する場所では、これらは収穫者の動きに起因します。*Points filter*アルゴリズムは、これに役立ちます。我々は二回それを使い、分布の上位または下位のパートの両方でアウトライアーとみなされるポイントを除外します。"
+msgstr "最初にやることは、ポイントが冗長なポイントを含むため、レイヤをクリーンアップすることです。それが何らかの理由で変更しなければならない、または変更する場所では、これらは収穫者の動きに起因します。*Points filter*アルゴリズムは、これに役立ちます。二回それを使い、分布の上位または下位の部分の両方で外れ値とみなされるポイントを除外します。"
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:20
 msgid "For the first execution, use the following parameter values."
@@ -79,7 +80,7 @@ msgstr "最終的なフィルタレイヤはポイントのセットが減って
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:32
 msgid "Now let's rasterize the layer using the *Rasterize* algorithm."
-msgstr ""
+msgstr "では *Rasterize* アルゴリズムを使用してレイヤーをラスタライズしましょう。"
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:36
 msgid ""
@@ -119,7 +120,7 @@ msgid ""
 "And for a smoother result (less accurate but better for rendering in the "
 "background as a support layer), we can apply a *Gaussian filter* to the "
 "layer."
-msgstr "スムーズな結果（精度は低いがサポートレイヤとして背景にレンダリングされる）として、レイヤに*Gaussian filter*を適用します。"
+msgstr "スムーズな結果（精度は低いがサポートレイヤとして背景にレンダリングされる）として、レイヤに *Gaussian filter* を適用します。"
 
 #: ../../source/docs/training_manual/processing/interpolation.rst:58
 msgid "With the above parameters you will get the following result"

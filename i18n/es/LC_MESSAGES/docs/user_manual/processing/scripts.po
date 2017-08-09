@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:37+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-09-22 22:37+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
 "Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is created "
 "from the filename, removing its extension and replacing underscores with "
 "blank spaces."
-msgstr ""
+msgstr "El nombre del algoritmo (el que podrá ver en la caja de herramientas) se crea a partir del nombre de archivo, elimine su extensión y sustituya los guiones bajos con espacios en blanco."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:27
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 "last one of them calculates the TWI, but it needs a slope layer and a flow "
 "accumulation layer. We do not have these, but since we have the DEM, we can "
 "calculate them by calling the corresponding SAGA algorithms."
-msgstr ""
+msgstr "Como se puede ver, se trata de 3 algoritmos, todos ellos procedentes de SAGA. El último de ellos calcula el TWI, pero necesita una capa de pendiente y una capa de acumulación de flujo. Nosotros no tenemos estos, pero ya tenemos el DEM, podemos calcularlos llamando a los algoritmos de SAGA correspondientes."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:46
 msgid ""
@@ -72,7 +72,7 @@ msgstr "Estas líneas comienzan con un doble símbolo de comentario en Python (`
 msgid ""
 "Here is a list of all the parameter types that are supported in processing "
 "scripts, their syntax and some examples."
-msgstr ""
+msgstr "Aquí esta una lista de todos los tipos de parámetros que se admiten en scripts de procesamiento, su sintaxis y algunos ejemplos."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:62
 msgid "``raster``. A raster layer"
@@ -129,7 +129,7 @@ msgstr "``field``. Un campo en la tabla de atruibutos de una capa vectorial. El 
 
 #: ../../source/docs/user_manual/processing/scripts.rst:79
 msgid "``extent``. A spatial extent defined by xmin, xmax, ymin, ymax"
-msgstr ""
+msgstr "``extent``. Una extensión espacial definida por xmin, xmax, ymin, ymax"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:80
 msgid "``folder``. A folder"
@@ -147,20 +147,20 @@ msgstr "``crs``. Un Sistema de Referencia de Coordenadas"
 msgid ""
 "``selection``. A dropdown menu that allows the user to select from a pre-"
 "populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``"
-msgstr ""
+msgstr "``selection``. Un menú desplegable que permite al usuario seleccionar desde una lista prepoblada. Por ejemplo ``units=selection sq_km;sq_miles;sq_degrees``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:85
 msgid ""
 "``name``. Name of the script. This will be displayed as the algorithm name "
 "in the processing toolbox. For example ``My Algorithm Name=name``"
-msgstr ""
+msgstr "``name``. Nombre del script. Este se desplegará como el nombre del algoritmo en la caja de herramientas de procesado. Por ejemplo ``El nombre de mi algoritmo=name``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:87
 msgid ""
 "``group``. Folder name where the script will appear in the Processing "
 "Toolbox. For Example, adding ``Utils=groups`` will put the script within a "
 "``Utils`` folder within Scripts."
-msgstr ""
+msgstr "``group``. EL nombre de la carpeta donde el script aparece en la caja de herramientas de procesado. Por ejemplo, añadir ``Utils=groups`` poner el script dentro de la carpeta ``Utils``, dentro del los Scripts."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:91
 msgid ""
@@ -176,7 +176,7 @@ msgid ""
 "to improve its appearance, replacing underscores with spaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
 "value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
+msgstr "Cuando muestra el nombre del parámetro al usuario, el nombre será editado para mejorar su apariencia, en sustitución de guiones bajos con espacios. Así, por ejemplo, si desea que el usuario vea un parámetro llamado ``Un valor numérico``, puede utilizar el nombre de la variable ``A_numerical_value``."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:100
 msgid ""
@@ -185,7 +185,7 @@ msgid ""
 "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
 "string value, which contains the filepaths to all selected objects, "
 "separated by semicolons (``;``)."
-msgstr ""
+msgstr "Los valores de capas y tablas son cadenas que contienen la ruta del archivo del objeto correspondiente. Para convertirlos en un objeto QGIS, puede utilizar la función ``processing.getObjectFromUri()``. Las múltiples entradas también tienen un valor de cadena, que contiene las rutas de los archivos a todos los objetos seleccionados, separados por punto y coma (``;``)."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:105
 msgid "Outputs are defined in a similar manner, using the following tags:"
@@ -256,7 +256,7 @@ msgid ""
 "reason why, although the ``runalg()`` method does not load the layers it "
 "produces, the final *TWI* layer will be loaded, since it is saved to the "
 "file entered by the user, which is the value of the corresponding output."
-msgstr ""
+msgstr "Cuando se declara una representación de salida, una capa (raster, vector o tabla), el algoritmo intentará agregarlo a QGIS una vez que esté terminado. Esa es la razón por la cual, aunque el método ``runalg()`` no carga las capas que produce, la capa final *TWI* se cargará, ya que se guarda en el archivo introducido por el usuario, que es el valor de la salida correspondiente."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:138
 msgid ""
@@ -319,7 +319,7 @@ msgid ""
 "dialog you will find a **[Edit script help]** button. Click on it and it "
 "will take you to the help editing dialog. Check the chapter about the "
 "graphical modeler to find out more about this dialog and how to use it."
-msgstr ""
+msgstr "Al igual que en el caso de los modelos, se pueden crear documentación adicional para su script, para explicar qué hacen y cómo utilizarlos. En el diálogo de edición de scripts, encontrará un botón ** [Ayudar en la edición de scripts] **. Haga clic en él y le llevará al cuadro de diálogo de edición de ayuda. Compruebe el capítulo sobre el modelador gráfica para saber más acerca de este cuadro de diálogo y cómo usarlo."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:188
 msgid ""
@@ -329,7 +329,7 @@ msgid ""
 "script editing dialog without saving the script (i.e. you discard it), the "
 "help content you wrote will be lost. If your script was already saved and is"
 " associated with a filename, saving is done automatically."
-msgstr ""
+msgstr "Los archivos de ayuda se guardan en la misma capa como el script mismo, añadiendo la extensión :file:`.help` al nombre del archivo. Tenga en cuenta que puede editar la ayuda de su script antes de guardarlo la primera vez. Si después cierra el diálogo de edición de script sin guardarlo (es decir, descartarlo), el contenido de la ayuda que escribió se perderá. Si su script ya fue guardado y tiene asociado un nombre de archivo, se guardara automáticamente."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:197
 msgid "Example scripts"

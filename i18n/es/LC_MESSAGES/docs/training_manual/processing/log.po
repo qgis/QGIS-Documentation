@@ -1,13 +1,13 @@
 # 
 # Translators:
-# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:42+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2016-11-11 19:39+0000\n"
+"Last-Translator: Minerva Durán Martínez <mine_tod@yahoo.com.mx>\n"
 "Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgid ""
 "the processing tools, to solve problems when they happen, and also to re--"
 "run previous operations, since the logging system also implements some "
 "interactivity."
-msgstr ""
+msgstr "Todo el análisis realizado con el marco de procesamiento se registra en el sistema de registro de QGIS. Esto le permite saber más sobre lo que se ha hecho con las herramientas de procesamiento, para resolver los problemas cuando se producen, y también para re-ejecutar las operaciones anteriores, ya que el sistema de registro también implementa cierta interactividad."
 
 #: ../../source/docs/training_manual/processing/log.rst:12
 msgid ""
@@ -41,7 +41,7 @@ msgid ""
 "have a look at it, you will see that the output of the SAGA algorithm that "
 "we just run (and that fail to execute because input data was not correct) is"
 " stored here."
-msgstr ""
+msgstr "Para abrir el registro, haga clic sobre el globo inferior derecho en la barra de estado de QGIS. Algunos algoritmos pueden dejar aquí información sobre su ejecución. Por ejemplo, estos algoritmos que llaman a una aplicación externa normalmente registran la salida de la consola de esa aplicación a esta entrada. Si tiene una vista, verá que la salida del algoritmo SAGA que sólo se ejecuta (y que falla al ejecutar porque los datos de entrada fueron incorrectos) se almacena aquí."
 
 #: ../../source/docs/training_manual/processing/log.rst:14
 msgid ""
@@ -61,7 +61,7 @@ msgid ""
 "not be correct, since more points should be used. It's a good idea to "
 "regularly check for this type of warnings if you are not sure about some "
 "aspect of a given algorithm."
-msgstr ""
+msgstr "Incluso si el algoritmo pueden ser ejecutados, algunos de ellos pueden dejar advertencias en caso de que los resultados no sean correctos. Por ejemplo, cuando ejecuta un algoritmo de interpolación con una pequeña cantidad de puntos, el algoritmo puede ejecutar y producir un resultado, pero es probable que no sea correcto, ya que se deben utilizar más puntos. Es una buena idea revisar regularmente este tipo de advertencias si no esta seguro acerca de algunos aspectos de un algoritmo dado."
 
 #: ../../source/docs/training_manual/processing/log.rst:18
 msgid ""
@@ -72,7 +72,7 @@ msgid ""
 "everytime you run an algorithm, a console command is added to the log, and "
 "you have the full history of your working session. Here is how that history "
 "looks like:"
-msgstr ""
+msgstr "Del menú *Procesos*, bajo la sección *Historial*, encontrará *Algoritmos*. Todos los algoritmos que se ejecutan, incluso si se ejecutan desde la interfaz de usuario y no desde la consola (que será explicada después en este manual) se almacena en la sección como una llamada de consola. Eso significa que todo el tiempo que ejecuta un algoritmo, una comando de consola se agrega al registro, y tiene el historial lleno de su sesión de trabajo. Así es como se ve el historial."
 
 #: ../../source/docs/training_manual/processing/log.rst:22
 msgid ""
@@ -110,4 +110,4 @@ msgid ""
 "change the text at will. To display the resulting file, type "
 ":kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', "
 "'ogr')`. Otherwise, you can use :kbd:`processing.runandload`."
-msgstr ""
+msgstr "También puede modificar el algoritmo. Solo cópielo, abra el :menuselection:`Complementos --> consola de Python`, haga clic en :menuselection:`Importar clase --> Importar clase de procesos`, a continuación peguelo para re-ejecutar el análisis; cambie el texto a voluntad. Para desplegar el archivo de resultado, escriba :kbd:`iface.addVectorLayer('/path/filename.shp', 'Nombre de la capa en la leyenda', 'ogr')`. De otra manera, se puede utilizar :kbd:`processing.runandload`."

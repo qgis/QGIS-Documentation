@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:39+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-01 12:34+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +65,7 @@ msgid ""
 " dealing with wildlife point locations and their relationship to the "
 "environment. Each user will have different things they are interested in "
 "depending on the kind of work they do."
-msgstr ""
+msgstr "**空間解析** は、元のデータから新しい情報と意味を抽出するために空間情報を操作する処理です。ふつうは空間解析は地理情報システム（GIS）を使用して実行されます。 GISにはたいてい、図形統計を計算し、データ補間としてジオプロセシングアクティビティを実行するための空間解析ツールがあります。水文学では、ユーザーは地形解析と水文学モデリング（水の移動をモデル化すること）の重要性を強調するでしょう。野生生物管理の世界では、ユーザは、野生生物の点位置およびそれらの環境との関係を扱う分析機能に関心があります。それぞれのユーザーは、自分が行っている仕事の種類に応じて、関心を持つものはさまざまに異なるでしょう。"
 
 # 46e8c45b2aaf4df3923cfe0d401e6f6b
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:33
@@ -84,7 +85,7 @@ msgid ""
 "a **statistical surface**. Elevation data, precipitation, snow accumulation,"
 " water table and population density are other types of data that can be "
 "computed using interpolation."
-msgstr ""
+msgstr "空間補間は、既知の値を持つ点を使用して、他の未知の点の値を推定するプロセスです。たとえば、国内の降水量（降雨量）図を作成するには、全域をカバーするために十分に均等に広がる気象観測所を見つけることはできません。空間補間では、近くの気象観測所での既知の温度測定値を使用して、記録されていない場所の温度を推定できます（figure_temperature_map_を参照）。このタイプの補間された表面は、しばしば **統計的表面** と呼ばれます。補間を使用して計算できるデータには他にも、標高データ、降水量、積雪量、水位表および人口密度があります。"
 
 # fe026245f2b4463db3c51c9917b0f9dd
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:55
@@ -109,7 +110,7 @@ msgid ""
 "where no samples or measurements were taken. The results of the "
 "interpolation analysis can then be used for analyses that cover the whole "
 "area and for modelling."
-msgstr ""
+msgstr "連続的な地図を、例えばGPS装置で計測された高度地点からのデジタル標高地図を生成するためには、適切な補間方法を使用して、サンプルまたは計測が行われなかった場所の値を最適に推定しなければなりません。補間解析の結果はその後、全領域をカバーする解析やモデリングに使用できます。"
 
 # 271afd72e471462ba17b8a91f8946825
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:68
@@ -119,7 +120,7 @@ msgid ""
 "(IDW) and **Triangulated Irregular Networks** (TIN). If you are looking for "
 "additional interpolation methods, please refer to the 'Further Reading' "
 "section at the end of this topic."
-msgstr ""
+msgstr "多くの補間方法があります。本稿では、**逆距離加重** （IDW）と**不規則三角ネットワーク** （TIN）と呼ばれる2つの広く使用される補間方法を紹介します。その他の補間方法をお探しの場合は、このトピックの末尾にある「さらに読む」セクションを参照してください。"
 
 # cd0629ca8f8645be87140abf4d12ec7f
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:75
@@ -152,7 +153,7 @@ msgid ""
 "the less the effect points will have if they are far from the unknown point "
 "during the interpolation process. As the coefficient increases, the value of"
 " the unknown point approaches the value of the nearest observational point."
-msgstr ""
+msgstr "重み付けが、新しい点からの距離が増加するにつれて重み付けの影響がどのように低下​​するかを制御する重み付け係数を使用して、サンプル点に割り当てられます。重み付け係数が大きくなるほど、補間処理に与える効果はその未知の点から遠い点ほど小さくなります。係数が増加するにつれ、未知の点の値は最も近い観測点の値に近づきます。"
 
 # f81b5801a4c74b9f8ab292e61c86db1f
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:103
@@ -163,7 +164,7 @@ msgid ""
 "minimum values in the interpolated surface can only occur at sample data "
 "points. This often results in small peaks and pits around the sample data "
 "points as shown in figure_idw_interpolation_."
-msgstr ""
+msgstr "IDW補間法にもいくつかの欠点があることに注意することが重要です。サンプルデータ点の分布が不均一な場合、補間結果の品質が低下する可能性があります。さらに、補間されたサーフェスの最大値と最小値は、サンプルデータポイントでのみ発生する可能性があります。これにより、figure_idw_interpolation_に示すように、サンプルデータポイントの周りに小さなでっぱりとへこみが生じることがよくあります。"
 
 # 15f1a630423347e088053242ba77d2ae
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:110
@@ -195,7 +196,7 @@ msgid ""
 "selected sample points are created and their intersections are connected to "
 "a network of non overlapping and as compact as possible triangles (see "
 "figure_tin_interpolation_)."
-msgstr ""
+msgstr "TIN補間はGISにおけるもう一つの一般的なツールです。一般的なTINアルゴリズムは**ドロネー三角形分割** と呼ばれ、最近傍点の三角形で形成されたサーフェスを作成しようとします。これを行うために、選択されたサンプル点の周りの外接円が作成され、それらの交点は、重複せず、可能な限りコンパクトなネットワークに連結されます（figure_tin_interpolation_を参照）。"
 
 # 4ad02f139261421680a643e1f5d538bf
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:146
@@ -213,7 +214,7 @@ msgid ""
 "slopes at the triangle edges and sample data points. In addition, "
 "triangulation is generally not suitable for extrapolation beyond the area "
 "with collected sample data points (see  )."
-msgstr ""
+msgstr "TIN補間の主な欠点は、サーフェスがスムーズではなく、ギザギザの外観になることです。これは、三角形の辺とサンプルのデータ点で傾きが不連続であるせいで起こります。さらに、三角形分割は一般に、収集されたサンプルデータ点を含む領域を超える外挿には適しません（参照）。"
 
 # 1d3dfdb2df904f0c87bdfd560b6b80ed
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:166
@@ -237,7 +238,7 @@ msgid ""
 "should depend upon the sample data, the type of surfaces to be generated and"
 " tolerance of estimation errors. Generally, a three step procedure is "
 "recommended:"
-msgstr ""
+msgstr "すべての状況に適用できる単一の補間方法はないことを覚えておくことが重要です。いくつかは他より正確で有用ですが、計算に時間がかかります。それらには長所と短所があります。実際には、どの補間方法を選択するかは、サンプルデータ、生成されるべき表面のタイプおよび推定誤差の許容誤差に応じて変えるべきです。一般的に、3つのステップの手順が推奨されます。"
 
 # d9a7dfe618b341aca6e8dbec4df0a8fd
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:179
@@ -263,7 +264,7 @@ msgid ""
 "you gain experience and knowledge of different interpolation methods, the "
 "time required for generating the most suitable surface will be greatly "
 "reduced."
-msgstr ""
+msgstr "結果を比較し、最良の結果と最も適切な方法を見つけます。これは、最初は時間のかかるプロセスのように見えるかもしれません。しかし、さまざまな補間方法の経験と知識を得ると、最適なサーフェスを生成するために必要な時間が大幅に短縮されます。"
 
 # 332ed64f90ca4740b71cab4d514a9b87
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:190
@@ -277,7 +278,7 @@ msgid ""
 "worksheet, there are more spatial interpolation methods provided in GIS, "
 "such as Regularized Splines with Tension (RST), Kriging or Trend Surface "
 "interpolation. See the additional reading section below for a web link."
-msgstr ""
+msgstr "このワークシートではIDWおよびTIN補間法だけを取り上げましたが、GISには、張力付正規スプライン法（RST）、クリギングまたはTrend Surface補間など、より多くの空間補間方法が用意されています。 Webリンクについては、以下の追加の読解セクションを参照してください。"
 
 # 57649c52d37b4842869e885ad2fd5f72
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:198
@@ -294,19 +295,19 @@ msgstr "ここでは以下のことを学びました:"
 msgid ""
 "**Interpolation** uses vector points with known values to estimate values at"
 " unknown locations to create a raster surface covering an entire area."
-msgstr "**補間**は 全領域をカバーするラスタサーフェスを作成することを目的とし未知の場所で値を推定するために、既知の値を持つベクタポイントを使用しています。"
+msgstr "**補間** は 全領域をカバーするラスタサーフェスを作成することを目的とし未知の場所で値を推定するために、既知の値を持つベクタポイントを使用しています。"
 
 # 9a1bfe172e3846bb8e6d1a9a38c5bd81
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:204
 msgid "The interpolation result is typically a **raster** layer."
-msgstr "補間結果は典型的な **ラスタ**レイヤです。"
+msgstr "補間結果は典型的な **ラスタ** レイヤです。"
 
 # 19f87a3a2a704eb8a8f494a5fd50ca9c
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:205
 msgid ""
 "It is important to **find a suitable interpolation method** to optimally "
 "estimate values for unknown locations."
-msgstr "最適未知の場所の値を推定するための**適切な補間法を見つける**ことが重要です。"
+msgstr "最適未知の場所の値を推定するための **適切な補間法を見つける** ことが重要です。"
 
 # f27dff24bb1148aba02dc3ad108c103e
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:207
@@ -342,7 +343,7 @@ msgid ""
 " from a few weather stations around the area. Create an interpolated surface"
 " with your learners that shows which areas are likely to receive the highest"
 " rainfall."
-msgstr ""
+msgstr "農業省があなたの地域の新しい土地を耕すことを計画していますが、土壌の特性とは別に、降雨量が十分に収穫できるかどうかを知りたいと考えています。利用可能なすべての情報は、周辺のいくつかの気象観測所から得られます。最高の降雨量を受け取る可能性が高いエリアを示す学習者との補間サーフェスを作成します。"
 
 # 5dbadec3012d42e4a44f9f2b7dd036e5
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:223
@@ -353,7 +354,7 @@ msgid ""
 " will probably have optimal weather conditions with mild temperatures, no "
 "rainfall and little wind strength. Can you identify the areas in your region"
 " that meet these criteria?"
-msgstr ""
+msgstr "観光局は、1月と2月に気象条件に関する情報を公開したいと考えています。彼らは気温、降雨量、風力データを持っており、気温や雨量、風の強さなどの気象条件が最適な場所を推測するためにデータを補間するよう求めます。これらの基準を満たす地域を特定できますか？"
 
 # ae786d94cc9e42a280207452b1e9278d
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:231
@@ -369,7 +370,7 @@ msgid ""
 "station A is 50 mm per month and at weather station B it is 90 mm, you can "
 "estimate, that the rainfall at half the distance between weather station A "
 "and B is 70 mm."
-msgstr ""
+msgstr "コンピュータを使用できない場合は、toposheetと定規を使用して架空の気象観測所間の等高線または降雨値の標高値を推定できます。たとえば、気象局Aの降雨量が50 mmで、気象観測所Bの気温が90 mmの場合、気象観測所AとBの半分の降雨量は70 mmと推定できます。"
 
 # 9f10079fa100496ebdc747c866245c3a
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:240
@@ -445,7 +446,7 @@ msgstr "これは、このシリーズの最後のワークシートです。私
 
 #: ../../source/docs/gentle_gis_introduction/spatial_analysis_interpolation.rst:13
 msgid "|gentleLogo|"
-msgstr ""
+msgstr "|gentleLogo|"
 
 #~ msgid "|gentlelogo|"
 #~ msgstr ""

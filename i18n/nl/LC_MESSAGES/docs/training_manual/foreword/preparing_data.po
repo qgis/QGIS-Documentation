@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-09-02 16:21+0000\n"
+"PO-Revision-Date: 2016-10-23 12:38+0000\n"
 "Last-Translator: Dick Groskamp\n"
 "Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -44,12 +44,6 @@ msgid ""
 "these instructions if you wish to replace the default data sets."
 msgstr "Dit proces is bedoeld voor makers van cursussen, of meer ervaren gebruikers van QGIS die gelokaliseerde voorbeeldgegevens voor hun cursus willen maken. Standaard voorbeeldgegevens worden met de trainingshandleiding verschaft, maar u kunt deze instructies volgens als u de standaard gegevenssets wilt vervangen."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:23
-msgid ""
-"The sample data used throughout the manual can be downloaded here: "
-"http://qgis.org/downloads/data/training_manual_exercise_data.zip"
-msgstr "De voorbeeldgegevens die bij het volgen van de handleiding worden gebruikt, zijn hier te downloaden: http://qgis.org/downloads/data/training_manual_exercise_data.zip"
-
 #: ../../source/docs/training_manual/foreword/preparing_data.rst:28
 msgid "|hard| |TY|"
 msgstr "|hard| |TY|"
@@ -85,75 +79,69 @@ msgid ""
 "Choose a location to save the resulting .osm file and click :guilabel:`Ok`:"
 msgstr "Kies een locatie om het resulterende bestand .osm op te slaan en klik op :guilabel:`Ok`:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:49
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:51
 msgid ""
 "You can then open the .osm file using the :guilabel:`Add Vector Layer` "
 "button. You may need to select :guilabel:`All files` in the browser window. "
 "Alternatively, you can drag and drop the file into the QGIS window."
 msgstr "U kunt dan het bestand .osm openen met behulp van de knop :guilabel:`Vectorlaag toevoegen`. U zou misschien :guilabel:`Alle bestanden` moeten selecteren in het browservenster. Als alternatief kunt u het bestand in het venster van QGIS slepen en neerzetten."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:52
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:54
 msgid ""
 "In the dialog which opens, select all the layers, *except* the "
 ":kbd:`other_relations` and :kbd:`multilinestrings` layer:"
 msgstr "Selecteer, in het dialoogvenster dat opent, alle lagen, *behalve* de lagen :kbd:`other_relations` en :kbd:`multilinestrings`:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:58
-msgid ""
-"This will load four layers into your map which relate to OSM's naming "
-"conventions (you may need to zoom in/out to see the vector data)."
-msgstr "Dit zal de vier lagen, die relateren aan de conventies voor namen van OSM, in uw kaart laden (u moet misschien in-/uitzoomen om de vectorgegevens te zien)."
-
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:64
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:66
 msgid ""
 "We need to extract the useful data from these layers, rename them and create"
 " corresponding shape files:"
 msgstr "We moeten de bruikbare gegevens uit deze lagen halen, hernoem ze en maak overeenkomende shapefiles:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:67
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:69
 msgid ""
 "First, double-click the :kbd:`multipolygons` layer to open the "
 ":guilabel:`Layer properties` dialog."
 msgstr "Als eerste, dubbelklik op de laag :kbd:`multipolygons` om het dialoogvenster :guilabel:`Laag eigenschappen` te openen."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:69
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:71
 msgid ""
 "In the :guilabel:`General` tab, click :guilabel:`Query Builder` to open the "
 ":guilabel:`Query builder` window."
 msgstr "Klik, op de tab :guilabel:`Algemeen`, op :guilabel:`Querybouwer` om het venster :guilabel:`Querybouwer` te openen."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:72
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:74
 msgid ""
 "This layer contains three fields whose data we will need to extract for use "
 "throughout the Training Manual:"
 msgstr "Deze laag bevat drie velden waaruit we de gegevens moeten halen omdat we die nodig hebben om ze te kunnen gebruiken in de trainingshandleiding:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:75
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:77
 msgid ":kbd:`building`"
 msgstr ":kbd:`building`"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:76
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:78
 msgid ":kbd:`natural` (specifically, water)"
 msgstr ":kbd:`natural` (specifiek water)"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:77
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:79
 msgid ":kbd:`landuse`"
 msgstr ":kbd:`landuse`"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:79
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:81
 msgid ""
 "You can sample the data your region contains in order to see what kind of "
 "results your region will yield. If you find that \"landuse\" returns no "
 "results, then feel free to exclude it."
 msgstr "U kunt een monster nemen van de gegevens die uw regio bevat om te zien welke resultaten uw regio zal opleveren. Als u merkt dat \"landuse\" geen resultaten oplevert, dan staat het u vrij om die weg te laten."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:83
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:85
 msgid ""
 "You'll need to write filter expressions for each field to extract the data "
 "we need. We'll use the \"building\" field as an example here:"
 msgstr "U zult filterexpressies moeten schrijven voor elk veld waarvan we de gegevens willen extraheren die we nodig hebben. We zullen het veld \"building\" hier als voorbeeld gebruiken:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:86
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:88
 msgid ""
 "Enter the following expression into the text area: :kbd:`building != "
 "\"NULL\"` and click :guilabel:`Test` to see how many results the query will "
@@ -162,159 +150,143 @@ msgid ""
 "for your region:"
 msgstr "Voer de volgende expressie in in het tekstgebied: :kbd:`building != \"NULL\"` en klik op :guilabel:`Test` om te zien hoeveel resultaten de query zal teruggeven. Als het aantal resultaten klein is, wilt u misschien in de :guilabel:`Attributentabel` van de laag kijken om te zien welke gegevens OSM heeft teruggegeven voor uw regio:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:95
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:97
 msgid ""
 "Click :guilabel:`Ok` and you'll see that the layer elements which are not "
 "buildings have been removed from the map."
 msgstr "Klik op :guilabel:`Ok` en u zult zien dat de laagelementen die geen gebouwen zijn, uit de kaart zijn verwijderd."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:98
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:100
 msgid ""
 "We now need to save the resulting data as a shapefile for you to use during "
 "your course:"
 msgstr "We moeten nu de resulterende gegevens als een shapefile opslaan om te kunnen gebruiken gedurende de cursus:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:101
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:103
 msgid ""
 "Right-click the :guilabel:`multipolygons` layer and select :guilabel:`Save "
 "As...`"
 msgstr "Klik met rechts op de laag :guilabel:`multipolygons` en selecteer :guilabel:`Opslaan als...`"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:103
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:105
 msgid ""
 "Make sure the file type is :kbd:`ESRI Shapefile` and save the file in your "
 "new :kbd:`exercise_data` directory, under a directory called \"epsg4326\"."
 msgstr "Overtuig u ervan dat het bestandstype :kbd:`ESRI-shape gegevens` is en sla het bestand op in uw nieuwe map :kbd:`exercise_data`, in een map genaamd \"epsg4326\"."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:105
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:107
 msgid ""
 "Make sure :menuselection:`No Symbology` is selected (we'll add symbology as "
 "part of the course later on)."
 msgstr "Zorg er voor dat :menuselection:`Geen symbologie` is geselecteerd (we zullen later, als deel van de cursus, symbologie toevoegen)."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:107
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:109
 msgid "You can also select :guilabel:`Add saved file to map`."
 msgstr "U kunt ook selecteren :guilabel:`Voeg opgeslagen bestand toe aan kaart`."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:109
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:111
 msgid ""
 "Once the :guilabel:`buildings` layer has been added to the map, you can "
 "repeat the process for the :kbd:`natural` and :kbd:`landuse` fields using "
 "the following expressions:"
 msgstr "Als de laag :guilabel:`buildings` eenmaal is toegevoegd aan de kaart kunt u het proces herhalen voor de velden :kbd:`natural` en :kbd:`landuse` met behulp van de volgende expressies:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:113
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:115
 msgid ""
 "Make sure you clear the previous filter (via the :guilabel:`Layer "
 "properties` dialog) from the :guilabel:`multipolygons` layer before "
 "proceeding with the next filter expression!"
 msgstr "Zorg er voor dat u het eerdere filter van de laag :guilabel:`multipolygons` verwijdert (via het dialoogvenster :guilabel:`Laag eigenschappen`) voordat u doorgaat met de volgende filterexpressie!"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:118
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:120
 msgid ":kbd:`natural`: \"natural = 'water'\""
 msgstr ":kbd:`natural`: \"natural = 'water'\""
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:119
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:121
 msgid ":kbd:`landuse`: \"landuse != 'NULL'\""
 msgstr ":kbd:`landuse`: \"landuse != 'NULL'\""
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:121
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:123
 msgid ""
 "Each resulting data set should be saved in the \"epsg4326\" directory in "
 "your new :kbd:`exercise_data` directory (i.e. \"water\", \"landuse\")."
 msgstr "Elke resulterende gegevensset zou moeten worden opgeslagen in de map \"epsg4326\" in uw nieuwe map :kbd:`exercise_data` (d.i. \"water\", \"landuse\")."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:124
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:126
 msgid ""
 "You should then extract and save the following fields from the :kbd:`lines` "
 "and :kbd:`points` layers to their corresponding directories:"
 msgstr "U zou dan de volgende velden uit de lagen :kbd:`lines` en :kbd:`points` naar hun overeenkomende mappen moeten extraheren:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:127
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:129
 msgid ""
 ":kbd:`lines`: \"highway != 'NULL'\" to :kbd:`roads`, and \"waterway != "
 "'NULL'\" to :kbd:`rivers`"
 msgstr ":kbd:`lines`: \"highway != 'NULL'\" naar :kbd:`roads` en \"waterway != 'NULL'\" naar :kbd:`rivers`"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:130
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:132
 msgid ":kbd:`points`: \"place != 'NULL'\" to :kbd:`places`"
 msgstr ":kbd:`points`: \"place != 'NULL'\" naar :kbd:`places`"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:133
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:135
 msgid ""
 "Once you have finished extracting the above data, you can remove the "
 ":guilabel:`multipolygons`, :guilabel:`lines` and :guilabel:`points` layers."
 msgstr "Als u eenmaal het extraheren van de hierboven vermelde gegevens heeft voltooid, kunt u de lagen  :guilabel:`multipolygons`, :guilabel:`lines` en :guilabel:`points` verwijderen."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:136
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:138
 msgid ""
 "You should now have a map which looks something like this (the symbology "
 "will certainly be very different, but that is fine):"
 msgstr "U zou nu een kaart moeten hebben die er ongeveer uitziet zoals deze (de symbologie zal zeker heel anders zijn, maar dat is prima):"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:142
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:144
 msgid ""
 "The important thing is that you have 6 layers matching those shown above and"
 " that all those layers have some data."
 msgstr "Het belangrijkste is dat u 6 lagen heeft die overeenkomen met die hierboven en dat al deze lagen enkele gegevens hebben."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:145
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:147
 msgid ""
 "The last step is to create a spatiallite file from the :kbd:`landuse` layer "
 "for use during the course:"
 msgstr "De laatste stap is om een bestand voor Spatiallite te maken uit de laag :kbd:`landuse` om te gebruiken tijdens de cursus:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:148
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:150
 msgid ""
 "Right-click the :kbd:`landuse` layer and select :menuselection:`Save as...`"
 msgstr "Klik met rechts op de laag :kbd:`landuse` en selecteer :menuselection:`Opslaan als...`"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:149
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:151
 msgid ""
 "Select :menuselection:`SpatialLite` as the format and save the file as "
 ":kbd:`landuse` under the \"epsg4326\" directory."
 msgstr "Selecteer :menuselection:`SpatialLite` als de indeling en sla het bestand op als :kbd:`landuse` in de map \"epsg4326\"."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:151
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:153
 msgid "Click :menuselection:`Ok`."
 msgstr "Klik op :menuselection:`Ok`."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:152
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:154
 msgid "Delete the :kbd:`landuse.shp` and its related files (if created)."
 msgstr "Verwijder :kbd:`landuse.shp` en de daaraan gerelateerde bestanden (indien gemaakt)."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:156
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:158
 msgid "|hard| |TY| Create SRTM DEM tiff Files"
 msgstr "|hard| |TY| SRTM DEM tiff-bestanden maken"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:158
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:160
 msgid ""
 "For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need"
 " raster images (SRTM DEM) which cover the region you have selected for your "
 "course."
 msgstr "Voor module 6 (Vectorgegevens maken) en module 8 (Rasters), heeft u ook rasterfabeeldingen nodig (SRTM DEM) die de regio bedekken die u heeft geselecteerd voor uw cursus."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:162
-msgid ""
-"SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/"
-msgstr "SRTM DEM kan worden gedownload vanaf CGIAR-CGI: http://srtm.csi.cgiar.org/"
-
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:164
-msgid ""
-"You'll need images which cover the entire region you have chosen to use."
-msgstr "U heeft afbeeldingen nodig die de gehele regio bedekken die u heeft gekozen te gebruiken."
-
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:166
-msgid ""
-"Once you have downloaded the required file(s), they should be saved in the "
-"\"exercise_data\" directory under \"raster/SRTM/\"."
-msgstr "Als u eenmaal de vereiste bestand(en) heeft gedownload, zouden zij moeten worden opgeslagen in de map \"exercise_data\" onder \"raster/SRTM/\"."
-
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:170
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:177
 msgid "|hard| |TY| Create imagery tiff Files"
 msgstr "|hard| |TY| TIFF afbeeldingsbestanden maken"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:173
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:180
 msgid ""
 "In Module 6, Lesson 1.2 shows close-up images of three school sports fields "
 "which students are asked to digitize. You'll therefore need to reproduce "
@@ -323,51 +295,108 @@ msgid ""
 " different school buildings, playgrounds or car parks)."
 msgstr "In module 6 toont les 1.2 close-up afbeeldingen van drie sportvelden van een school waarvan studenten wordt gevraagd die te digitaliseren. U zult daarom die drie afbeeldingen dienen te reproduceren met behulp van uw new SRTM DEM tiff-bestand(en). Het is geen verplichting om sportvelden van de school te gebruiken: alle drie types landuse voor school kunnen worden gebruikt (bijv. verschillende schoolgebouwen, speelplaatsen of parkeerplaatsen)."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:179
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:186
 msgid "For reference, the images in the example data are:"
 msgstr "Ter verwijzing, de afbeeldingen in de voorbeeldgegevens zijn:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:190
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:197
 msgid "|basic| |TY| Replace Tokens"
 msgstr "|basic| |TY| Tokens vervangen"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:192
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:199
 msgid ""
 "Having created your localised dataset, the final step is to replace the "
 "tokens in the :kbd:`conf.py` file so that the appropriate names will appear "
 "in your localised version of the Training Manual."
 msgstr "Nadat u uw gelokaliseerde gegevensset heeft gemaakt, is de laatste stap om de tokens in het bestand :kbd:`conf.py` te evrvangen zodat de toepasselijke namen zullen verschijnen in uw gelokaliseerde versie van de trainingshandleiding."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:196
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:203
 msgid "The tokens you need to replace are as follows:"
 msgstr "De tokens die u dient te vervangen zijn de volgende:"
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:198
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:205
 msgid ""
 ":kbd:`majorUrbanName`: this defaults to \"Swellendam\". Replace with the "
 "name of the major town in your region."
 msgstr ":kbd:`majorUrbanName`: dit is standaard \"Swellendam\". Vervang die door de belangrijkste stad in uw regio."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:200
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:207
 msgid ""
 ":kbd:`schoolAreaType1`: this defaults to \"athletics field\". Replace with "
 "the name of the largest school area type in your region."
 msgstr ":kbd:`schoolAreaType1`: dit is standaard \"athletics field\". Vervang die door de naam van het grootste type schoolgebied in uw regio."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:202
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:209
 msgid ""
 ":kbd:`largeLandUseArea`: this defaults to \"Bontebok National Park\". "
 "Replace with the name of a large landuse polygon in your region."
 msgstr ":kbd:`largeLandUseArea`: dit is standaard \"Bontebok National Park\". Vervang dit door de naam van de grootste polygoon landuse in uw regio."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:204
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:211
 msgid ""
 ":kbd:`srtmFileName`: this defaults to :kbd:`srtm_41_19.tif`. Replace this "
 "with the filename of your SRTM DEM file."
 msgstr ":kbd:`srtmFileName`: dit is standaard :kbd:`srtm_41_19.tif`. Vervang deze door de naam van uw SRTM DEM-bestand."
 
-#: ../../source/docs/training_manual/foreword/preparing_data.rst:206
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:213
 msgid ""
 ":kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should "
 "replace this with the correct CRS for your region."
 msgstr ":kbd:`localCRS`: dit is standaard :kbd:`WGS 84 / UTM 34S`. U zou deze moeten vervangen door het juiste CRS voor uw regio."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:23
+msgid ""
+"The sample data used throughout the manual can be downloaded here: "
+"https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-"
+"Data-v1.0.zip. You can save the files in a folder named **exercise_data**."
+msgstr "De voorbeeldgegevens die bij het volgen van de handleiding worden gebruikt, kunnen hier worden gedownload: https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip. U mag de bestanden opslaan in een map, genaamd **exercise_data**."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:60
+msgid ""
+"This will load three layers into your map which relate to OSM's naming "
+"conventions (you may need to zoom in/out to see the vector data)."
+msgstr "Dit zal drie lagen, die relateren aan de conventies voor namen van OSM, in uw kaart laden (u moet misschien in-/uitzoomen om de vectorgegevens te zien)."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:164
+msgid ""
+"The CGIAR-CGI (http://srtm.csi.cgiar.org/) provides some SRTM DEM you can "
+"download from http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp."
+msgstr "De CGIAR-CGI (http://srtm.csi.cgiar.org/) verschaft enkele SRTM DEM die u kunt downloaden vanaf http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:167
+msgid ""
+"You'll need images which cover the entire region you have chosen to use. If "
+"you kept same data as the training manual, you can use the extent shown in "
+"the set_osm_region_ figure above, otherwise adapt your extent. Keep the "
+":file:`GeoTiff` format. Once the form is filled, click on the "
+":guilabel:`Click here to Begin Search >>` button and download the file(s)."
+msgstr "U zult afbeeldingen nodig hebben die de gehele regio bedekken die u heeft gekozen om te gebruiken. Als u de gegevens hebt behouden zoals in de trainingshandleiding, kunt u het bereik gebruiken dat wordt weergegeven in de set_osm_region_ afbeelding hierboven, pas anders uw bereik aan. Behoude de indeling :file:`GeoTiff`. Als het formulier helemaal is ingevuld, klik dan op de knop :guilabel:`Click here to Begin Search >>` en download het/de bestand(en)."
+
+#: ../../source/docs/training_manual/foreword/preparing_data.rst:173
+msgid ""
+"Once you have downloaded the required file(s), they should be saved in the "
+":file:`exercise_data` directory, under :file:`raster/SRTM` subfolders."
+msgstr "Als u eenmaal de vereiste bestand(en) heeft gedownload, zouden zij moeten worden opgeslagen in de map \"exercise_data\" in de submappen van \"raster/SRTM\"."
+
+#~ msgid ""
+#~ "The sample data used throughout the manual can be downloaded here: "
+#~ "http://qgis.org/downloads/data/training_manual_exercise_data.zip"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This will load four layers into your map which relate to OSM's naming "
+#~ "conventions (you may need to zoom in/out to see the vector data)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You'll need images which cover the entire region you have chosen to use."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once you have downloaded the required file(s), they should be saved in the "
+#~ "\"exercise_data\" directory under \"raster/SRTM/\"."
+#~ msgstr ""

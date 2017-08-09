@@ -1,0 +1,566 @@
+# Translators:
+# Ana Maria Oliveira <anapais1974@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ana Maria Oliveira <anapais1974@gmail.com>, 2016\n"
+"Language-Team: Portuguese (Portugal) (https://www.transifex.com/qgis/teams/6144/pt_PT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:9
+msgid "Documentation Guidelines"
+msgstr "Orientação da Documentação"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:15
+msgid "Introduction"
+msgstr "Introdução"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:17
+msgid ""
+"QGIS Documentation will be built automatically on the server at 0, 8am, 4pm "
+"PDT (Pacific Daylight Time). The current status is available at "
+"http://docs.qgis.org."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:21
+msgid ""
+"QGIS Documentation is mainly written using the reStructuredText (reST) "
+"format syntax, coupled with some scripts from the Sphinx toolset to post-"
+"process the HTML output. See "
+"http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html or "
+"http://sphinx.pocoo.org/markup/inline.html."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:26
+msgid ""
+"In general, when creating rst documentation for the QGIS project, please "
+"follow the `Python documentation style guidelines "
+"<http://docs.python.org/devguide/documenting.html>`_. Below are exposed some"
+" general guidelines to follow when using reST for the QGIS documentation "
+"writing."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:32
+msgid ""
+"If you are looking for general rules on contributing to QGIS project or "
+"managing repositories, you may find help at `Get Involved in the QGIS "
+"Community <http://qgis.org/en/site/getinvolved/index.html>`_."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:38
+msgid "Writing Documentation"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:42
+msgid "Headlines"
+msgstr "títulos"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:44
+msgid "To each webpage of the documentation corresponds a ``.rst`` file."
+msgstr "Para cada página web da documentação corresponde um arquivo ``.rst``."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:46
+msgid ""
+"Sections used to structure the text are identified through their title which"
+" is underlined (and overlined for the first level). Same level titles must "
+"use same character for underline adornment. In QGIS Documentation, you "
+"should use following styles for chapter, section, subsection and minisec."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:71
+msgid "Inline tags"
+msgstr "Etiquetas embutidas"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:73
+msgid "You can use some tags inside the text to emphasize some items."
+msgstr ""
+"Pode usar algumas etiquetas dentro do texto para destacar alguns itens."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:75
+msgid ""
+"**Menu gui**: to mark a complete sequence of menu selections, including "
+"selecting submenus and choosing a specific operation, or any subsequence of "
+"such a sequence."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:83
+msgid ""
+"**Dialog and Tab title**: Labels presented as part of an interactive user "
+"interface including window title, tab title and option labels."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:90
+msgid "**Button labels**"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:96
+msgid "**Filename or directory**"
+msgstr "**Nome do ficheiro ou diretoria**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:102
+msgid "**Icon with popup text belonging to Icon**"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:108
+msgid "(see `image`_ below)."
+msgstr "(veja a  `imagem`_ abaixo)."
+
+#: ../../source/docs/documentation_guidelines/writing.rst:110
+msgid "**Shorcut keyboard**"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:116
+msgid "will show :kbd:`Ctrl B`"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:119
+msgid "**User text**"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:129
+msgid "Label/reference"
+msgstr "Etiqueta/ referência"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:131
+msgid ""
+"References are used to place anchors inside the text. It then helps you "
+"create and call hyperlinks between sections or page."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:134
+msgid ""
+"The example below creates the anchor of a section (e.g., Label/reference "
+"title)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:143
+msgid "To call the reference in the **same page**, use"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:149
+msgid "which will return:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:151
+msgid "see my_anchor_ for more information."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:153
+msgid ""
+"Notice how it will jump to the following line/thing following the 'anchor'. "
+"Normally to declare this label you do not need to use apastroph's but you do"
+" need to use empty lines before and after the anchor."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:157
+msgid ""
+"Another way to jump to the same place **from anywhere in the documentation**"
+" is to use the ``:ref:`` role."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:164
+msgid ""
+"which will display the caption instead (in this case the title of this "
+"section!):"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:166
+msgid "see :ref:`my_anchor` for more information."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:168
+msgid ""
+"So reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`). Because the "
+"reference often displays a full caption, there is not really the need to use"
+" the word *section*. Note that you can also use a custom caption to describe"
+" the reference"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:177
+msgid "returning:"
+msgstr "regressar:"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:179
+msgid "see :ref:`Label and reference <my_anchor>` for more information."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:185
+msgid "Figure and image"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:189
+msgid "Pictures"
+msgstr "Imagens"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:191
+msgid "To insert an image, use"
+msgstr "Para inserir uma imagem, use"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:198
+msgid "which returns"
+msgstr "o que devolverá"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:204
+msgid "Replacement"
+msgstr "Substituição"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:206
+msgid ""
+"You can put an image inside text or add an alias to use everywhere. To use "
+"an image inside a paragraph, just create an alias somewhere."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:215
+msgid "and call it in your paragraph:"
+msgstr "e chame-o para o seu parágrafo"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:221
+msgid "Here is how this example become:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:226
+msgid "my paragraph begins here with a nice logo |nice_logo|."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:230
+msgid ""
+"Currently, to ensure consistency and help in the use of QGIS icons a list of"
+" alias is built and available in :ref:`substitutions` chapter."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:234
+msgid "Figure"
+msgstr "Figura"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:251
+msgid "The result looks like this:"
+msgstr "O resultado é parecido com isto:"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:263
+msgid "A caption: A logo I like"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:265
+msgid ""
+"Use ``.. only:: html`` to make the number to the figure (**Figure Readme "
+"1**) visible only in the html files. The scripts will insert an automatical "
+"generated number before the caption of the figure in pdf."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:270
+msgid ""
+"To use a caption (see My caption) just insert indented text after a blank "
+"line in the figure block."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:273
+msgid ""
+"Referencing to the figure can be done using the reference label like this"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:280
+msgid ""
+"It will show the anchor Figure_Readme_1_. You can use uppercase if you want."
+" It can be used in the same :file:`.rst` document but not in other .rst "
+"documents."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:284
+msgid ""
+"You can not use the ``:ref:`` role for reference anymore, because in html "
+"the reference to the caption is lost (it now refers to the place before "
+"**Figure Readme 1:**)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:294
+msgid "Tables"
+msgstr "Tabelas"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:296
+msgid "To create a simple table"
+msgstr "Criar uma tabela simples"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:307
+msgid "Use a ``\\`` followed by an empty space to leave an empty space."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:309
+msgid ""
+"You can also use more complicated tables by drawing them using references "
+"and all"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:327
+msgid "The result:"
+msgstr "O resultado:"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:332
+msgid "Windows"
+msgstr "Janelas"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:332
+msgid "Mac OSX"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:334
+msgid "|win|"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:334
+msgid "|osx|"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:336
+msgid "and of course not to forget |nix|"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:339
+msgid "My drawn table, mind you this is unfortunately not regarded a caption"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:341
+msgid "You can reference to it like this my_drawn_table_1_."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:345
+msgid "Index"
+msgstr "Índice"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:347
+msgid ""
+"Several index tag exists in RST. To be able to translate the index, it is "
+"necessary to integrate it into the normal text. In this case use this "
+"syntax:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:354
+msgid "If the term does not have to be translated, please use this syntax:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:361
+msgid "Footnotes"
+msgstr "Notas de rodapé"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:363
+msgid ""
+"Please note: Footnotes are not recognized by any translation software and it"
+" is also not converted to pdf format properly. So, if possible don't use "
+"footnotes within any documentation."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:367
+msgid "This is for creating a footnote"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:373
+msgid "Which will point to:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:375
+msgid "Updates of core plugins"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:378
+msgid "Managing Screnshots"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:381
+msgid "Add new Screenshots"
+msgstr "Adicione novas Capturas de Ecrã"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:383
+msgid ""
+"Here are some hints to create new, nice looking screenshots. For the user "
+"guide they go into :file:`./resources/en/user_manual/`"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:386
+msgid ""
+"same environment for all the screen caps (same OS, same decoration, same "
+"font size). We have used Ubuntu with Unity and the default \"ambience\" "
+"theme. For screenshots of QGIS main window and composer we have set it to "
+"show menus on the window (not the default in unity)."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:390
+msgid ""
+"reduce the window to the minimal space needed to show the feature (taking "
+"the all screen for a small modal window > overkill)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:392
+#: ../../source/docs/documentation_guidelines/writing.rst:437
+msgid "the less clutter, the better (no need to activate all the toolbars)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:393
+msgid ""
+"don't resize them in an image editor, the size will be set into the rst "
+"files if necessary (downscaling the dimensions without properly upping the "
+"resolution > ugly)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:395
+#: ../../source/docs/documentation_guidelines/writing.rst:440
+msgid "cut the background"
+msgstr "cortar o fundo"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:396
+msgid ""
+"Set print size resolution to 135 dpi, eg in Gimp set the print resolution "
+"(image > print size) and save. This way, if no size is set in the rst files,"
+" images will be at original size in html and at a good print resolution in "
+"the PDF. You can use ImageMagick convert command to do a batch of images:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:405
+#: ../../source/docs/documentation_guidelines/writing.rst:441
+msgid "save them in png (no jpeg artifacts)"
+msgstr "guarda-los como png (sem artefactos jpeg)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:406
+#: ../../source/docs/documentation_guidelines/writing.rst:442
+msgid ""
+"the screenshot should show the content according to what is described in the"
+" text"
+msgstr ""
+"a captura de ecrã deve mostrar o conteúdo de acordo com o que está descrito "
+"no texto"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:407
+msgid ""
+"you can find some prepared QGIS-projects that were used before to create "
+"screenshots in :file:`./qgis-projects`. This makes it easier to reproduce "
+"screenshots for the next version of QGIS. These projects use the QGIS "
+"`Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset), which"
+" should be placed in the same folder as the QGIS-Documentation Repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:413
+msgid ""
+"Use the following command to remove the global menu function in Ubuntu to "
+"create smaller application screens with menu's:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:422
+msgid "Translate Screenshots"
+msgstr "Traduzir Capturas de Ecrã"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:424
+msgid ""
+"Here are some hints to create screenshots for your translated user guide. "
+"They will go into :file:`./resources/<your language>/user_manual/`"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:427
+msgid ""
+"same environment for all the screen caps (same OS, same decoration, same "
+"font size)"
+msgstr ""
+"o mesmo ambiente para todas as capturas de ecrã (o mesmo SO, a mesma "
+"decoração, e o mesmo tamanho de letra)"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:428
+msgid ""
+"use the QGIS -projects included in QGIS-Documentation repository (in "
+":file:`./qgis_projects` ). These were used to produce the 'original' "
+"screenshots in the manual. The QGIS `Sample Data "
+"<http://qgis.org/downloads/data/>`_ (aka Alaska Dataset) should be placed in"
+" the same folder as the QGIS-Documentation Repository."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:432
+msgid ""
+"same size as the english 'original' screenshots, otherwise they will be "
+"stretched and look ugly. If you need to have a different size due to longer "
+"ui strings, don't forget to change the dimension in the rst code of your "
+"language."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:435
+msgid ""
+"reduce the window to the minimal space needed to show the feature (taking "
+"all the screen for a small modal window > overkill)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:438
+msgid ""
+"don't resize them in an image editor, the size will be set into the rst "
+"files (downscaling the dimensions without properly upping the resolution > "
+"ugly)"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:446
+msgid "Documenting Processing algorithms"
+msgstr "Documentando os algoritmos do Processamento"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:448
+msgid ""
+"If you want to write documentation for Processing algorithms consider these "
+"guidelines:"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:450
+msgid ""
+"don't overwrite existing help files by files from other sources (e.g. QGIS "
+"source tree or Processing-Help repository), this files have different "
+"formats"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:452
+msgid ""
+"Processing algorithm help files are part of QGIS User Guide, so use same "
+"formatting as User Guide and other documentation"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:454
+msgid ""
+"avoid use \"This algoritm does this and that...\" as first sentence in "
+"algorithm description. Try to use more general words like in TauDEM or GRASS"
+" algoritms help"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:457
+msgid ""
+"add images if needed. Use PNG format and follow general guidelines for "
+"documentation."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:458
+msgid ""
+"if necessary add links to additional information (e.g. publications or web-"
+"pages) to the \"See also\" section"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:460
+msgid ""
+"give clear explanation for algorithm parameters and outputs (again GRASS and"
+" TauDEM are good examples)."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:462
+msgid ""
+"don't edit parameter or output names. If you found typo or wrong spelling "
+"--- report this in bugracker, so developers can fix this in Processing code "
+"too"
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:464
+msgid ""
+"don't list available options in algorithm description, options already "
+"listed in parameter description."
+msgstr ""
+
+#: ../../source/docs/documentation_guidelines/writing.rst:466
+msgid ""
+"don't add information vector geometry type in algorithm or parameter "
+"description without compelling reason as this information already available "
+"in parameter description"
+msgstr ""

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-01-27 18:20+0000\n"
+"PO-Revision-Date: 2016-10-11 18:43+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgid ""
 " Continuing the example from previous lesson, you will use the inventory "
 "information gathered in the field to calculate the forest parameters, for "
 "the whole forest first, and then for the stands you digitized before."
-msgstr ""
+msgstr "Estimarea parametrilor unei păduri reprezintă scopul inventarului forestier. Continuând exemplul din lecția precedentă, vom utiliza informațiile de inventar adunate din teren pentru a calcula parametrii, mai întâi pentru întreaga pădure, iar ulterior pentru pâlcurile digitizate anterior."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:10
 msgid ""
@@ -41,14 +41,14 @@ msgstr "|basic| |FA| Adăugarea Rezultatelor Inventarului"
 msgid ""
 "The field teams visited the forest and with the help of the information you "
 "provided, gathered information about the forest at every sample plot."
-msgstr ""
+msgstr "Echipele din teren au vizitat pădurea și, cu ajutorul informațiilor pe care le-ați furnizate dvs., au adunate informații despre fiecare parcelă de pădure."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:17
 msgid ""
 "Most often the information will be collected into paper forms in the field, "
 "then typed to a spreadsheet. The sample plots information has been condensed"
 " into a :kbd:`.csv` file that can be easily open in QGIS."
-msgstr ""
+msgstr "Pe teren, cel mai adesea informațiile, vor fi colectate pe hârtie, iar apoi sunt transferate într-o foaie de calcul. Informațiile despre parcele au fost condensate într-un fișier :kbd:`.csv`, care poate fi deschis cu ușurință în QGIS."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:19
 msgid ""
@@ -102,7 +102,7 @@ msgid ""
 "You can read the type of data that is contained in the sample plots "
 "measurements in the text file :kbd:`legend_2012_inventorydata.txt` located "
 "in the :kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
-msgstr ""
+msgstr "Puteți vedea tipurile de date care sunt colectate la măsurătorile suprafețelor în fișierul text :kbd:`legend_2012_inventorydata.txt` localizat în :kbd:`exercise_data\\\\forestry\\\\results\\\\` folder."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:33
 msgid ""
@@ -110,7 +110,7 @@ msgid ""
 "just a virtual representation of the text information in the :kbd:`.csv` "
 "file. Before you continue, convert the inventory results to a real "
 "shapefile:"
-msgstr ""
+msgstr "Stratul :kbd:`systematic_inventory_results`, pe care tocmai l-ați adăugat, reprezintă de fapt doar o reprezentare virtuală a informațiilor de tip text din fișierul :kbd:`.csv`. Înainte de a continua, convertiți rezultatele inventarierii într-un fișier shape real:"
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:35
 msgid "Right click on the :kbd:`systematic_inventory_results` layer."
@@ -144,7 +144,7 @@ msgid ""
 " of stems per hectare. Since the systematic sample plots represent equal "
 "areas, you can directly calculate the averages of the volumes and number of "
 "stems per hectare from the :kbd:`sample_plots_results` layer."
-msgstr ""
+msgstr "Folosind rezultatele inventarului, se pot calcula mediile întregii suprafețe de pădure, pentru unii parametri interesanți, cum ar fi volumul și numărul de tulpini de pe un hectar. Având în vedere că parcelele au suprafețe egale, puteți calcula în mod direct mediile volumelor și numărul de tulpini de pe un hectar, din stratul :kbd:`strat sample_plots_results`."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:46
 msgid ""
@@ -192,14 +192,14 @@ msgid ""
 "field team later to get estimates of the missing forest stands to complete "
 "the stand inventory. Nevertheless, you will get information for a good "
 "number of stands just using the planned plots."
-msgstr ""
+msgstr "Puteți folosi același eșantion de date pentru a calcula estimări pentru diferitele pâlcuri de pădure digitizate anterior. Despre unele pâlcuri nu există date și, de aceea, pentru ele nu se vor obține informații. S-ar fi putut prevedea o culegere de date suplimentară, la momentul planificării inventarului sistematic, în cadrul căreia echipele din teren să fi efectuat măsurători. Sau, ar putut fi trimisă ulterior o echipă în teren pentru a estima pâlcurile omise, în scopul completării inventarul. Chiar și așa, veți obține informații pentru un număr bun de pâlcuri folosind doar parcelele planificate."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:65
 msgid ""
 "What you need is to get the averages of the sample plots that are falling "
 "within each of the forest stands. When you want to combine information based"
 " on their relative locations, you perform a spatial join:"
-msgstr ""
+msgstr "Trebuie să obțineți media parcelelor care se încadrează în fiecare pâlc forestier. Atunci când doriți să combinați informațiile, în funcție de locațiile relative ale acestora, veți efectua o îmbinare spațială:"
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:67
 msgid ""
@@ -254,7 +254,7 @@ msgid ""
 ":kbd:`NULL` as the value for the calculations, those are the ones having no "
 "sample plots. Select them all review them in the map, they are some of the "
 "smaller stands:"
-msgstr ""
+msgstr "Deschideți :guilabel:`Tabela de atribute` pentru :kbd:`forest_stands_2012_results` și analizați rezultatele obținute. Rețineți că o serie de pâlcuri forestiere au :kbd:`NULL` ca valoare pentru calcule, acestea fiind cele care nu dispun de schițe. Selectați-le și identificați-le pe hartă, ele fiind unele dintre cele mai mici pâlcuri:"
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:83
 msgid ""
@@ -265,7 +265,7 @@ msgid ""
 "to consider the area of each of the stands individually instead. That way, "
 "again, the average values of the parameters that are in, for example, m3/ha "
 "for the volumes are converted to total volumes for the stands."
-msgstr ""
+msgstr "Haideți să calculăm acum aceleași medii pentru întreaga pădure, așa cum ați făcut mai înainte, doar că de data aceasta vom utiliza mediile pe care le-ați obținut ca bază de calcul pentru pâlcuri. Amintiți-vă că, în situația anterioară, fiecare parcelă eșantion a reprezentat un pâlc teoretic de :kbd:`80x80 m`. De această dată, trebuie să luați în considerare suprafața fiecăruia dintre pâlcuri, în mod individual. În acest fel, încă o dată, valorile medii ale parametrilor care sunt date, de exemplu în m3/ha pentru volume, sunt convertite în volume totale, în cazul pâlcurilor."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:85
 msgid ""
@@ -335,7 +335,7 @@ msgid ""
 " to calculate the estimates, you need to divide the sum of the stands "
 "volumes or number of stems by the sum of the areas of the stands containing "
 "information."
-msgstr ""
+msgstr "În situația anterioară, zonele reprezentate de fiecare parcelă eșantion au fost aceleași, astfel încât a fost suficientă calcularea mediei parcelelor eșantion. Acum, pentru a calcula estimările, trebuie să împărțim suma volumelor pâlcurilor, sau numărul de tulpini, la suma suprafețelor acelor pâlcuri care conțin informații."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:105
 msgid ""
@@ -361,13 +361,13 @@ msgstr "Bifați :guilabel:`Use only selected features`"
 msgid ""
 "As you can see, the total sum of the stands' areas is :kbd:`66.04 ha`. Note "
 "that the area of the missing forest stands is only about :kbd:`7 ha`."
-msgstr ""
+msgstr "După cum se poate vedea, suma totală a suprafețelor cu pâlcuri este de :kbd:`66.04 ha`. Rețineți că suprafața pădurii, neacoperită de pâlcuri, este de numai :kbd:`7 ha`."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:117
 msgid ""
 "In the same way, you can calculate that the total volume for these stands is"
 " :kbd:`8908 m3/ha` and the total number of stems is :kbd:`179594 stems`."
-msgstr ""
+msgstr "În același mod, se poate calcula că volumul total al acestor pâlcuri este de :kbd:`8908 m3/ha`, numărul total de tulpini fiind :kbd:`179594`."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:119
 msgid ""
@@ -399,7 +399,7 @@ msgid ""
 "image into forest stands. And you also got some valuable information about "
 "the particular stands, which could be used to plan the management of the "
 "forest in the coming years."
-msgstr ""
+msgstr "Ați reușit să efectuați estimări pentru întreaga pădure, folosind informațiile din parcelele de probă, fără a ține seama de caracteristicile forestiere, precum și utilizând interpretarea imaginilor aeriene ale pâlcurilor forestiere. De asemenea, ați primit informații valoroase despre anumite pâlcuri, care pot fi utilizate pentru gestionarea pădurilor în anii următori."
 
 #: ../../source/docs/training_manual/forestry/parameters_calculation.rst:132
 msgid "|WN|"
@@ -410,4 +410,4 @@ msgid ""
 "In the following lesson, you will first create a hillshade background from a"
 " LiDAR dataset which you will use to prepare a map presentation with the "
 "forest results you just calculated."
-msgstr ""
+msgstr "În lecția următoare, veți crea mai întâi un fundal reliefat, dintr-un set de date LiDAR, care va fi folosit pentru a pregăti prezentarea pe hartă a rezultatelor forestiere, pe care tocmai le-ați calculat."

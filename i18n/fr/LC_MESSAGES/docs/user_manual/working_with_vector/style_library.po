@@ -3,15 +3,16 @@
 # Benoît de Cabissole, 2015
 # Jacolin <yjacolin@free.fr>, 2015
 # Jean-Francois Malet <jean-francois.malet@epycart.com>, 2014
-# MarieSilvestre, 2015
-# Sant-anna <delazj@gmail.com>, 2014-2015
+# MarieSilvestre, 2015-2016
+# Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017
+# Sant-anna <delazj@gmail.com>, 2014-2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:37+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-04-18 09:27+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.fr>\n"
 "Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,60 +20,56 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:10
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:9
 msgid "The Symbol Library"
 msgstr "Le Gestionnaire de symboles"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:23
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:43
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:22
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:42
 msgid "The Style Manager"
-msgstr ""
+msgstr "Le Gestionnaire de style"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:25
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:24
 msgid ""
 "The Symbol Library is the place where users can manage and create generic "
 "symbols to be used in several QGIS projects. You can open it with the "
 ":menuselection:`Settings --> Style Manager` or from the **Style** tab in the"
 " vector layer's :menuselection:`Properties`. It allows users to:"
-msgstr ""
+msgstr "Le Gestionnaire de symboles permet aux utilisateurs de créer des symboles génériques à utiliser dans différents projets QGIS. Il s'ouvre via le menu :menuselection:`Préférences --> Gestionnaire de symboles` ou depuis l'onglet **Style** de la fenêtre des :menuselection:`Propriétés` d'une couche vectorielle. Il permet de:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:29
+msgid "create, edit and remove symbols"
+msgstr "ajouter, éditer et supprimer des symboles"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:30
-msgid "create, edit and remove symbols"
-msgstr ""
+msgid "organize symbols in custom groups"
+msgstr "organiser les symboles en groupes"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:31
-msgid "organize symbols in custom groups"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:32
 msgid "export and import symbols."
-msgstr ""
+msgstr "exporter et importer des symboles."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:47
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:46
 msgid "Groups and smart groups"
 msgstr "Groupes et groupes intelligents"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:49
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:48
 msgid ""
 "You can organize symbols into different categories. These categories, listed"
 " in the panel at the left, can be static (called **Group**) or dynamic "
 "(named **Smart Group**). A group is smart when its symbols are dynamically "
 "fetched according to conditions set. See figure_symbol_2_:"
-msgstr ""
+msgstr "Vous pouvez organiser les symboles en différentes catégories. Ces catégories, listées dans le panneau sur la gauche, peuvent être statiques (appellées **Groupe**) ou dynamique (nommées **Group Intelligent**). Un groupe est intelligent lorsque ses symboles sont récupérés dynamiquement selon un ensemble de conditions. Voir figure_symbol_2_:"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:54
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:53
 msgid ""
 "To create a group, right click on an existing group or on the main "
 "**Groups** directory in the left of the dialog. You can also select a group "
 "and click the |signPlus| :sup:`Add Group` button. The new group will be a "
 "sub-group of the selected one."
-msgstr ""
+msgstr "Pour créer un groupe, faites un clic-droit sur un groupe existant ou sur **Groupes** sur la gauche du gestionnaire. Vous pouvez également sélectionner un groupe et cliquer sur le bouton |signPlus| :sup:`Ajouter un groupe`. Le nouveau groupe sera un sous-groupe de celui qui est sélectionné."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:59
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:58
 msgid ""
 "Create **Smart Group** is similar to creating group, but instead select "
 "**Smart Groups**. The dialog box allows user to choose the expression to "
@@ -80,20 +77,20 @@ msgid ""
 "member of a group, have a string in its name, etc.). Any symbol that "
 "satisfies the entered condition(s) is automatically added to the smart "
 "group."
-msgstr ""
+msgstr "La création de **Groupes Intelligents** est similaire à la création de groupes mais en sélectionnant l'entrée **Groupes Intelligents**. La boîte de dialogue permet à utilisateur de choisir une expression permettant de sélectionner les symboles à intégrer au groupe (via un tag, l'appartenance à un groupe, un mot dans le nom du symbole, etc.). Tout symbole qui satisfait à la/aux condition(s) est automatiquement ajouté au groupe intelligent."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:74
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:73
 msgid "Creating a Smart Group"
-msgstr ""
+msgstr "Créer un Groupe Intelligent"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:76
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:75
 msgid ""
 "To remove a group or a smart group, right click on the group and select "
 ":menuselection:`Remove Group` or select it and push |signMinus| :sup:`Remove"
 " Group` button."
-msgstr ""
+msgstr "Pour supprimer un groupe ou un groupe intelligent, faites un clic-droit sur le groupe et sélectionnez :menuselection:`Supprimer le groupe` ou sélectionnez-le et cliquez sur le bouton |signMinus| :sup:`Supprimer le groupe`."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:80
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:79
 msgid ""
 "Unlike the smart groups that automatically fetch their belonged symbols, "
 "simple groups are filled by the user. To add a symbol into a group, you can "
@@ -103,71 +100,71 @@ msgid ""
 ":menuselection:`Group Symbols`. All symbols display a checkbox that allows "
 "you to add the symbol into the selected groups. When selection is finished, "
 "you can click the same button, and choose :menuselection:`Finish Grouping`."
-msgstr ""
+msgstr "Contrairement aux groupes intelligents qui récupèrent automatiquement leurs symboles, les groupes simples sont gérés par l'utilisateur. Pour ajouter un symbole au groupe, vous pouvez soit faire un clic droit sur un symbole, choisir :menuselection:`Ajouter au groupe` puis le nom du groupe. Il existe une autre méthode pour ajouter plusieurs symboles dans un groupe: sélectionnez le groupe et cliquez sur |changeLabelProperties| puis sur :menuselection:`Grouper les symboles`. Tous les symboles affichent une boîte à cocher qui vous permet d'ajouter le symbole dans les groupes sélectionnés. Lorsque la sélection est terminée, vous pouvez cliquer sur le même bouton et choisir :menuselection:`Terminer le regroupement`."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:90
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:89
 msgid ""
 "All the symbols that are not placed under a custom group belong to a default"
 " group named **Ungrouped**."
-msgstr ""
+msgstr "Tous les symboles qui ne sont pas placés directement sous un groupe personnalisé appartient au groupe par défaut nommé **Non groupés**."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:94
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:93
 msgid "Add, Edit, Remove Symbol"
-msgstr ""
+msgstr "Ajouter, éditer et supprimer des symboles"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:96
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:95
 msgid ""
 "Selecting a group returns in the right panel, if applicable, the list of "
 "symbols of the group (including its subgroups). These symbols are organized "
 "in four different tabs:"
-msgstr ""
+msgstr "Sélectionner un groupe affiche dans le panneau de droite, si possible, la liste des symboles du groupe (en incluant ceux de ses sous-groupes). Ces symboles sont organisés en quatre onglets différents."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:99
+msgid "**Marker** for point symbols"
+msgstr "**Marqueur** pour les symboles ponctuels"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:100
-msgid "**Marker** for point symbols"
-msgstr ""
+msgid "**Line** for linear symbols"
+msgstr "**Ligne** pour les symboles linéaires"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:101
-msgid "**Line** for linear symbols"
-msgstr ""
+msgid "**Fill** for surface symbols"
+msgstr "**Remplissage** pour les symboles surfaciques"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:102
-msgid "**Fill** for surface symbols"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:103
 msgid "and `Color Ramp`_"
-msgstr ""
+msgstr "et :ref:`color-ramp`."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:105
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:104
 msgid ""
 "To delete a symbol you no longer need, just select it and click |signMinus| "
 ":sup:`Remove item` (also available through right-click). The symbol will be "
 "deleted from the local symbols database."
-msgstr ""
+msgstr "Pour supprimer un symbole dont vous n'avez plus besoin, sélectionnez-le et cliquez sur |signMinus| :sup:`Supprimer l'objet` (disponible également via un clic droit). Le symbole sera alors supprimé de la base de données locale des symboles."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:109
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:108
 msgid ""
 "The symbol list can be modified by adding new symbols with |signPlus| "
 ":sup:`Add item` button or modifying existing ones with |symbologyEdit| "
 ":sup:`Edit item`. See `The Symbol Selector`_ for further information."
-msgstr ""
+msgstr "La liste des symboles peut être modifiée en ajoutant de nouveaux symboles avec le bouton |signPlus| :sup:`Ajouter objet`  ou en modifiant les symboles existants avec |symbologyEdit| :sup:`Editer l'objet`. Voir ``The Symbol Selector`_ pour plus d'informations."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:115
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:114
 msgid "Share symbols"
-msgstr ""
+msgstr "Partager des symboles"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:117
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:116
 msgid ""
 "The |sharing| :sup:`Share item` tool, at the right bottom of the Style "
 "Library dialog, offers options to easily share symbols with others: users "
 "can indeed export their symbols and import symbols to their library."
-msgstr ""
+msgstr "L'outil |sharing| :sup:`Partage d'objet` en bas à droite de la boîte de dialogue de la bibliothèque de styles offre des options pour partager facilement des symboles avec d'autres utilisateurs: les utilisateurs peuvent en effet exporter leurs symboles et en importer d'autres dans leur bibliothèque."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:121
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:120
 msgid "**Exporting symbols**"
-msgstr ""
+msgstr "**Export de symboles**"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:123
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:122
 msgid ""
 "You can export the selected symbols to PNG, SVG or XML file formats. "
 "Exporting to PNG or SVG (both not available for color ramp symbols) creates "
@@ -176,425 +173,425 @@ msgid ""
 "on a network. The XML format generates a single file containing all the "
 "selected symbols. This file can then be imported in another user's style "
 "library."
-msgstr ""
+msgstr "Vous pouvez exporter les symboles sélectionnés aux formats PNG, SVG ou XML. Exporter en PNG ou en SVG (non disponibles pour les rampes de couleur) créé un fichier pour chaque symbole sélectionné et le répertoire SVG peut être ajouté aux chemins SVG dans :menuselection:`Préférences --> Options`, pour par exemple partager ces symboles sur le réseau. Le format XML génère un seul fichier XML contenant tous les symboles sélectionnés. Ce fichier peut ensuite être importé dans la bibliothèque d'un autre utilisateur."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:130
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:129
 msgid "**Importing symbols**"
-msgstr ""
+msgstr "**Import de symboles**"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:132
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:131
 msgid ""
 "You can extend your symbols library by importing new symbols. Just select "
 "|sharing| :menuselection:`Import` from the drop-down list at the right "
 "bottom of the dialog. In the new dialog, you'll need to :"
-msgstr ""
+msgstr "Vous pouvez étoffer votre bibliothèque de symboles en en important de nouveaux. Sélectionnez |sharing| :menuselection:`Import...` depuis le menu contextuel en bas à droite de la boîte de dialogue. Dans la nouvelle boîte de dialogue, vous devrez:"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:136
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:135
 msgid ""
 "indicate the source of the symbols (it can be a ``.xml`` file on the disk or"
 " an url),"
-msgstr ""
+msgstr "indiquer la source des symboles (cela peut être un fichier :file:`.xml` sur le disque ou un lien url),"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:136
+msgid "give the name of the group under which the symbols will be put"
+msgstr "nommer le groupe dans lequel les symboles seront placés"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:137
-msgid "give the name of the group under which the symbols will be put"
-msgstr ""
+msgid "select the symbols you want to add to your library"
+msgstr "sélectionner les symboles à ajouter à la bibliothèque"
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:138
-msgid "select the symbols you want to add to your library"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:139
 msgid "and press **Import**."
-msgstr ""
+msgstr "et appuyer sur **Importer**."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:141
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:140
 msgid ""
 "Note that import and export options are also available through right-click."
-msgstr ""
+msgstr "A noter que les options d'import et d'export sont également accessibles via un clic droit."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:152
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:151
 msgid "Importing symbols"
-msgstr ""
+msgstr "Importer des symboles"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:158
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:157
 msgid "Color Ramp"
-msgstr ""
+msgstr "Palettes de couleur"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:162
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:161
 msgid ""
 "The Color ramp tab in the Style Manager presents different types of color "
 "ramps you can use to style layers."
-msgstr ""
+msgstr "L'ongle Palette de couleurs du Gestionnaire de Style affiche plusieurs types de palettes de couleurs utilisables pour représenter des couches."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:165
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:164
 msgid ""
 "To create a custom color ramp, activate the Color ramp tab and click the "
 "|signPlus| :sup:`Add item` button. The button reveals a drop-down list to "
 "choose the ramp type: Gradient, Random, colorBrewer, or cpt-city."
-msgstr ""
+msgstr "Pour créer une rampe de couleur personnalisée, activez l'onglet Palette de couleur et cliquez sur le bouton |signPlus| :sup:`Ajouter objet`. Le bouton affiche alors un menu contextuel pour choisir le type de palette de couleur: Dégradé, Aléatoire, Mélange de couleur ou cpt-city."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:169
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:168
 msgid ""
 "The first three have options for number of steps and/or multiple stops in "
 "the color ramp. You can use the |checkbox| :guilabel:`Invert` option while "
 "classifying the data with a color ramp. See figure_symbol_4_ for an example "
 "of custom color ramp and figure_symbol_4a_ for the cpt-city dialog."
-msgstr ""
+msgstr "Les trois premiers permettent de choisir le nombre de couleurs et leurs positions dans la palette. Vous pouvez utiliser la case |checkbox| :guilabel:`Inverser` au moment de choisir les classes. Voir figure_symbol_4_ pour un de ces exemples de palette et figure_symbol_4a_ pour les palettes de type cpt-city."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:184
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:183
 msgid "Example of custom gradient color ramp with multiple stops"
-msgstr ""
+msgstr "Exemple de personnalisation de palette de couleurs graduées avec arrêts multiples"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:186
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:185
 msgid ""
 "The cpt-city option opens a new dialog with hundreds of themes included 'out"
 " of the box'."
 msgstr "Le type cpt-city ouvre une fenêtre qui permet de choisir parmi des centaines de palettes prédéfinies."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:197
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:196
 msgid "cpt-city dialog with hundreds of color ramps"
-msgstr ""
+msgstr "Fenêtre cpt-city et ses centaines de palettes de couleur"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:203
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:202
 msgid "The symbol Selector"
-msgstr ""
+msgstr "Le Créateur de symboles"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:205
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:204
 msgid ""
 "The Symbol selector is the main dialog to design a symbol. You can create or"
 " edit Marker, Line or Fill Symbols."
-msgstr ""
+msgstr "Le sélecteur de symbole est la boîte de dialogue principale pour construire un symbole. Vous pouvez créer ou éditer des marqueurs, des lignes ou des symboles de remplissage."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:217
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:216
 msgid "Designing a Marker symbol"
-msgstr ""
+msgstr "Créer un symbole ponctuel"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:220
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:219
 msgid ""
 "For each kind of symbols, you will find always the same dialog structure:"
 msgstr "Pour chaque type de symboles, vous trouverez toujours le même type de fenêtre :"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:222
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:221
 msgid ""
 "at the top left side a dynamic symbol representation, updated as soon as "
 "symbol properties evolve"
-msgstr ""
+msgstr "En haut à gauche, une représentation dynamique du symbole, mise à jour dès que les propriétés du symbole évoluent."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:224
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:223
 msgid ""
 "under the symbol representation, the symbol tree shows symbol layers that "
 "are combined afterwards to shape a new global symbol. A symbol can consist "
 "of several :guilabel:`Symbol layers`. Settings will be shown later in this "
 "chapter."
-msgstr ""
+msgstr "Sous la représentation du symbole, l'arbre du symbole affiche les couches de symbole qui sont combinées pour former un nouveau symbole global. Un symbole consiste en plusieurs :guilabel:`Couches de sybmoles`. Les paramètres seront détaillés dans la suite de ce chapître."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:228
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:227
 msgid ""
 "at the right you can setup some parameters that apply to the global symbol:"
-msgstr ""
+msgstr "Sur la droite, vous pouvez paramétrer certaines valeurs s'appliquant au symbole global:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:229
+msgid "**unit**: it can be millimeter, pixel or map unit"
+msgstr "**Unité**: elle peut être en millimètre, pixel ou unité de carte."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:230
-msgid "**unit**: it can be millimeter, pixel or map unit"
-msgstr ""
+msgid "**transparency**"
+msgstr "**Transparence**."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:231
-msgid "**transparency**"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:232
 msgid ""
 "**color**: when this parameter is changed by the user, its value is echoed "
 "to all unlocked sub-symbols color"
-msgstr ""
+msgstr "**Couleur**: lorsque ce paramètre est modifié par l'utilisateur, sa valeur est transmise à toutes les couleurs des couches de symboles non vérouillées."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:233
+msgid "**size** and **rotation** for marker symbol"
+msgstr "**Taille** et **rotation** du marqueur de symbole."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:234
-msgid "**size** and **rotation** for marker symbol"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:235
 msgid "**width** for line symbol"
-msgstr ""
+msgstr "**Largeur** pour le symbole linéaire."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:237
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:236
 msgid ""
 "Note that the :guilabel:`Data-defined override` button beside the last "
 "layer-related parameters is inactive until the symbol is applied to a layer."
 " Once the symbol is connected to a layer, this button offers access to the "
 ":ref:`size assistant <size_assistant>` dialog which helps to create "
 "proportional or multivariate analysis rendering."
-msgstr ""
+msgstr "Veuillez prendre note que bouton :guilabel:`Valeurs définies par les données` situé à côté de chaque paramètre de couche de symbole est désactivé tant que le symbole n'est pas relié à une couche vecteur. Une fois que le symbole est appliqué à une couche vecteur, le bouton offre accès à l':ref:`assistant de taille <size_assistant>` qui facilite la création d'un rendu par une analyse proportionnelle ou multi-variables."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:243
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:242
 msgid ""
 "under these parameters are displayed items of the symbols library you can "
 "choose from. This list of symbols can be filtered by selecting a group in "
 "the drop-down list just above."
-msgstr ""
+msgstr "En dessous de ces paramètres sont affichés les objets de la bibliothèque de symboles que vous pouvez choisir. Cette liste de symboles peut être filtrée en sélectionnant un groupe dans le menu contextuel juste au dessus."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:247
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:246
 msgid ""
 "According to the level selected in the symbol tree, you'll get enabled "
 "different tools at the bottom of the dialog to :"
-msgstr ""
+msgstr "Selon le niveau sélectionné dans l'arbre des symboles, vous pouvez activer différents outils en bas de la boîte de dialogue pour:"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:250
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:249
 msgid ""
 "|signPlus| add new symbol layer: you can imbricate as many symbols as you "
 "want"
-msgstr ""
+msgstr "|signPlus| Ajouter une nouvelle couche de symbole: vous pouvez imbriquer autant de symboles que vous voulez."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:250
+msgid "|signMinus| remove the selected symbol layer"
+msgstr "|signMinus| Supprimer la couche de symbole sélectionnée."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:251
-msgid "|signMinus| remove the selected symbol layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:252
 msgid ""
 "lock colors of symbol layer: a |locked| locked color stays unchanged when "
 "user changes the color at the global (or upper) symbol level"
-msgstr ""
+msgstr "Verrouiller les couleurs d'une couche de symbole: |locked|  une couleur verrouillée reste non modifiée lorsque l'utilisateur modifie la couleur du symbole global (ou supérieur)."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:253
+msgid "|duplicateLayer| duplicate a (group of) symbol layer(s)"
+msgstr "|duplicateLayer| Dupliquer une (un groupe de) couche(s) de symbole."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:254
-msgid "|duplicateLayer| duplicate a (group of) symbol layer(s)"
-msgstr ""
+msgid "move up or down the symbol layer"
+msgstr "Déplacer en haut ou en bas la couche de symbole."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:255
-msgid "move up or down the symbol layer"
-msgstr ""
+msgid "apply :ref:`special effects <draw_effects>` to the symbol layer"
+msgstr "Appliquer :ref:`effets <draw_effects>` à la couche de symbole."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:256
-msgid "apply :ref:`special effects <draw_effects>` to the symbol layer"
-msgstr ""
+msgid "save the designed symbol into your symbol library"
+msgstr "Sauvegarder le symbole sélectionné dans la bibliothèque de symbole."
 
 #: ../../source/docs/user_manual/working_with_vector/style_library.rst:257
-msgid "save the designed symbol into your symbol library"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:258
 msgid ""
 "or choose in the :guilabel:`Advanced` |selectString| drop-down list, to "
 "**clip features to canvas extent**."
-msgstr ""
+msgstr "Ou choisir le menu contextuel |selectString| :guilabel:`Avancé` pour **découper les entités selon l'emprise**."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:265
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:264
 msgid ""
 "Note that once you have set the size in the lower levels of the "
 ":guilabel:`Symbol layers` dialog, the size of the whole symbol can be "
 "changed with the :guilabel:`Size` (for marker symbol) or the "
 ":guilabel:`Width` (for line symbol) menu in the first level again. The size "
 "of the lower levels changes accordingly, while the size ratio is maintained."
-msgstr ""
+msgstr "Merci de prendre note qu'une fois que vous avez paramétré la taille dans les couches basses de la boîte de dialogue des :guilabel:`Couches de symbole`, la taille du symbole global peut être modifiée par l'entrée :guilabel:`Taille` (pour les symboles de type marqueur) ou par l'entrée :guilabel:`Largeur` (pour les symboles linéaires) au niveau du premier niveau. La taille des couches plus basses sera modifiée en conséquence en maintenant le ratio de taille."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:271
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:270
 msgid ""
 "More detailed settings can be made when clicking on the lower level in the "
 "Symbol tree. You can change each :guilabel:`Symbol layers` properties and "
 "according to the symbol type, you get different settings."
-msgstr ""
+msgstr "Davantage de paramètres de détails peuvent être modifiés en cliquant sur le niveau le plus bas de l'arbre des sybmoles. Vous pouvez modifier les propriétés de chaque :guilabel:`Couche de symbole`  et selon le type de symbole, vous aurez différents paramètres."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:280
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:279
 msgid "Marker Symbols"
 msgstr "Symboles ponctuels"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:282
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:281
 msgid "Marker symbols have several symbol layer types:"
 msgstr "Les symboles ponctuels peuvent être de plusieurs types :"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:284
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:283
 msgid "Ellipse marker"
 msgstr "Symbole d'ellipse"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:285
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:284
 msgid "Font marker"
 msgstr "Symbole de police"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:286
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:285
 msgid "Simple marker (default)"
 msgstr "Symbole simple (par défaut)"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:287
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:286
 msgid "SVG marker"
 msgstr "Symbole SVG"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:288
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:287
 msgid "Vector Field marker"
 msgstr "Symbole de champ vectoriel"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:290
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:289
 msgid "For each marker symbol, you can set the following properties:"
-msgstr ""
+msgstr "Pour chaque symbole de marqueur, vous pouvez modifier les propriétés suivantes:"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:292
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:291
 msgid ""
 ":guilabel:`Symbol layer type`: You have the option to use Ellipse markers, "
 "Font markers, Simple markers, SVG markers and Vector Field markers."
 msgstr ":guilabel:`Type de symbole` : Vous avez le choix entre Symbole d'ellipse, Symbole de police, Symbole simple, Symbole SVG et Symbole de champ vectoriel."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:294
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:293
 msgid ":guilabel:`colors`"
 msgstr ":guilabel:`Couleurs`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:295
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:294
 msgid ":guilabel:`Size`"
 msgstr ":guilabel:`Taille`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:296
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:295
 msgid ":guilabel:`Outline style`"
 msgstr ":guilabel:`Style de bordure externe`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:297
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:296
 msgid ":guilabel:`Outline width`"
 msgstr ":guilabel:`Largeur de bordure externe`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:298
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:297
 msgid ":guilabel:`Angle`"
 msgstr ":guilabel:`Angle`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:299
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:298
 msgid ""
 ":guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction."
 msgstr ":guilabel:`Décalage X,Y` : vous pouvez déplacer les symboles en x ou y."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:300
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:299
 msgid ":guilabel:`Anchor point`"
 msgstr ":guilabel:`Point d'ancrage`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:301
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:329
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:355
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:300
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:328
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:354
 msgid ":guilabel:`Data defined properties ...`"
 msgstr ":guilabel:`Source de définition des propriétés ...`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:305
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:304
 msgid "Line Symbols"
 msgstr "Symboles de ligne"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:307
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:306
 msgid "Line marker symbols have only two symbol layer types:"
 msgstr "Les symboles de ligne n'ont que de deux types possibles :"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:309
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:308
 msgid "Marker line"
 msgstr "Ligne de symboles"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:310
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:309
 msgid "Simple line (default)"
 msgstr "Ligne simple (par défaut)"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:312
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:311
 msgid ""
 "The default symbol layer type draws a simple line whereas the other display "
 "a marker point regularly on the line. You can choose different location: "
 "vertex, last and first vertex, interval, central point or on every curve "
 "point. Marker line can have offset along the line or offset line. Finally, "
 ":guilabel:`rotation` allows you to change the orientation of the symbol."
-msgstr ""
+msgstr "Le type de couche de symbole linéaire par défaut est une ligne simple alors que l'autre type consiste en un marqueur ponctuel distribué de manière régulière le long de la ligne. Vous pouvez choisir différents emplacements: sur les sommets, premier et dernier sommets, intervalle, point central ou sur chaque point de la courbe. La ligne de symboles peut être décalée sur la longueur de la ligne ou suivant sa largeur. Enfin, la :guilabel:`rotation` vous permet de modifier l'orientation du marqueur."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:319
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:348
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:318
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:347
 msgid "The following settings are available:"
-msgstr ""
+msgstr "Les paramètres suivants sont disponibles:"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:321
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:320
 msgid ":guilabel:`colour`"
 msgstr ":guilabel:`couleur`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:322
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:321
 msgid ":guilabel:`Pen width`"
 msgstr ":guilabel:`Épaisseur`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:323
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:322
 msgid ":guilabel:`Offset`"
 msgstr ":guilabel:`Décalage`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:324
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:323
 msgid ":guilabel:`Pen style`"
 msgstr ":guilabel:`Style de ligne`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:325
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:324
 msgid ":guilabel:`Join style`"
 msgstr ":guilabel:`Style de jointure`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:326
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:325
 msgid ":guilabel:`Cap style`"
 msgstr ":guilabel:`Style de fin de ligne`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:327
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:326
 msgid "|checkbox| :guilabel:`Use custom dash pattern`"
 msgstr "|checkbox| :guilabel:`Utiliser un modèle de tiret personnalisé`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:328
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:327
 msgid ":guilabel:`Dash pattern unit`"
 msgstr ":guilabel:`Unité du tiret`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:333
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:332
 msgid "Polygon Symbols"
 msgstr "Symboles de polygone"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:335
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:334
 msgid "Polygon marker symbols have also several symbol layer types:"
 msgstr "Les symboles de polygones peuvent également être de plusieurs types :"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:337
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:336
 msgid "Centroid fill"
 msgstr "Remplissage de centroïde"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:338
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:337
 msgid "Gradient fill"
 msgstr "Remplissage en dégradé"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:339
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:338
 msgid "Line pattern fill"
 msgstr "Motif de ligne "
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:340
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:339
 msgid "Point pattern fill"
 msgstr "Motif de point"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:341
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:340
 msgid "Raster image fill"
 msgstr "Remplissage image raster"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:342
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:341
 msgid "SVG fill"
 msgstr "Remplissage SVG"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:343
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:342
 msgid "Shapeburst fill"
 msgstr "Remplissage dégradé suivant la forme"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:344
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:343
 msgid "Simple fill (default)"
 msgstr "Remplissage simple (par défaut)"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:345
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:344
 msgid "Outline: Marker line (same as line marker)"
 msgstr "Bordure : Ligne de symboles (même principe que pour les symboles de ligne)"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:346
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:345
 msgid "Outline: simple line (same as line marker)"
 msgstr "Bordure : Ligne simple (même principe que pour les symboles de ligne)"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:350
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:349
 msgid ":guilabel:`Colors` for the border and the fill."
 msgstr ":guilabel:`Couleurs` : pour la bordure et le remplissage."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:351
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:350
 msgid ":guilabel:`Fill style`"
 msgstr ":guilabel:`Style de remplissage`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:352
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:351
 msgid ":guilabel:`Border style`"
 msgstr ":guilabel:`Style de la bordure`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:353
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:352
 msgid ":guilabel:`Border width`"
 msgstr ":guilabel:`Largeur de bordure`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:354
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:353
 msgid ":guilabel:`Offset X,Y`"
 msgstr ":guilabel:`Décalage X, Y`"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:357
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:356
 msgid ""
 "Using the color combo box, you can drag and drop color for one color button "
 "to another button, copy-paste color, pick color from somewhere, choose a "
@@ -602,16 +599,16 @@ msgid ""
 "allows you to fill in the feature with transparency. You can also just click"
 " the button to open the palette dialog. Note that you can import color from "
 "some external software like GIMP."
-msgstr ""
+msgstr "Avec les boutons de couleur, vous pouvez faire glisser une couleur depuis un bouton vers un autre, copier-coller une couleur, piocher une couleur, choisir une couleur dans une palette ou dans une liste de couleurs récentes ou standard. Vous pouvez également directement choisir un remplissage transparent. En cliquant sur le bouton, vous ouvrez la fenêtre de sélecteur de couleur. Notez que vous pouvez importer une couleur depuis un autre logiciel comme GIMP."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:364
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:363
 msgid ""
 "With the 'Raster image fill' you can fill polygons with a tiled raster "
 "image. Options include (data defined) file name, opacity, image size (in "
 "pixels, mm or map units), coordinate mode (feature or view) and rotation."
 msgstr "Avec le 'Remplissage image par raster' vous pouvez remplir les polygones avec une image raster tuilée. Les options comprennent le nom de fichier, l'opacité, la taille de l'image (en pixels, mm ou unités cartographiques), le mode de coordonnées (entité ou vue) et la rotation (toutes pouvant être définies par les données)."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:368
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:367
 msgid ""
 "'Gradient Fill' :guilabel:`Symbol layer type` allows you to select between a"
 " |radioButtonOn| :guilabel:`Two color` and |radioButtonOff| :guilabel:`Color"
@@ -620,48 +617,51 @@ msgid ""
 "layer type` is also available through the :guilabel:`Symbol` menu of the "
 "Categorized and Graduated Renderer and through the :guilabel:`Rule "
 "properties` menu of the Rule-based renderer."
-msgstr ""
+msgstr "L'option 'Remplissage en dégradé' du :guilabel:`Type de symbole` vous permet de choisir une configuration sur |radioButtonOn| :guilabel:`Deux couleurs` ou sur une |radioButtonOff| :guilabel:`Palette de couleurs`. Vous pouvez utiliser |checkbox| :guilabel:`Centroïde de l'entité` comme :guilabel:`Point de référence`. Tous les remplissages de :guilabel:`Type de symbole` sont également accessibles via le menu :guilabel:`Symbole` du rendu Catégorisé ou Gradué et via les :guilabel:`Propriétés de la règle` du rendu Ensemble de règles."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:377
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:376
 msgid ""
 "Other possibility is to choose a 'shapeburst fill' which is a buffered "
 "gradient fill, where a gradient is drawn from the boundary of a polygon "
 "towards the polygon's centre. Configurable parameters include distance from "
 "the boundary to shade, use of color ramps or simple two color gradients, "
 "optional blurring of the fill and offsets."
-msgstr ""
+msgstr "L'autre possibilité est de choisir un remplissage 'dégradé suivant la forme' qui est un remplissage par dégradé avec tampon où le dégradé est dessiné depuis l'extérieur d'un polygone vers le centre du polygone. Les paramètres de configuration incluent la distance d'ombrage à partir de l'enveloppe extérieure, l'utilisation de palettes de couleurs ou d'un simple dégradé à deux couleurs, un floutage optionnel du remplissage ainsi que des décalages."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:383
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:382
 msgid ""
 "It is possible to only draw polygon borders inside the polygon. Using "
 "'Outline: Simple line' select |checkbox| :guilabel:`Draw line only inside "
 "polygon`."
 msgstr "Il est possible de ne tracer les bordures d'un polygone qu'à l'intérieur du polygone. En utilisant 'Bordure : Ligne simple' sélectionnez |checkbox| :guilabel:`Dessiner la ligne seulement dans le polygone`."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:387
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:386
 msgid ""
 "**Note:** When geometry type is polygon, you can choose to disable the "
 "automatic clipping of lines/polygons to the canvas extent. In some cases "
 "this clipping results in unfavourable symbology (eg centroid fills where the"
 " centroid must always be the actual feature's centroid)."
-msgstr ""
+msgstr "**Note:** Lorsque la géométrie est de type polygone, vous pouvez choisir de désactiver le découpage automatique des lignes/polygones selon l'emprise du canevas de carte. Dans certains cas, ce découpage entraîne des erreurs dans la représentation (ex: remplissages de centroïdes où le centroïde doit rester au niveau du centroïde réel de l'entité)."
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:17
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:16
 msgid "Style"
-msgstr ""
+msgstr "Style"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
 msgid "color_Ramp"
 msgstr "Palette de couleur"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
 msgid "Gradient_color_Ramp"
 msgstr "Palette de couleur en dégradé"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
 msgid "colorBrewer"
 msgstr "Mélangeur de couleur"
 
-#: ../../source/docs/user_manual/working_with_vector/style_library.rst:160
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
 msgid "Custom_color_Ramp"
 msgstr "Palette de couleur personnalisée"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

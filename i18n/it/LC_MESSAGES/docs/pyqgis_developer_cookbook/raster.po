@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Guido Barbaglia <guido.barbaglia@geobricks.org>, 2015
+# Marco Grisolia <marco.grisolia5@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-06-14 13:29+0000\n"
+"Last-Translator: Marco Grisolia <marco.grisolia5@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/qgis/qgis-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,44 +144,44 @@ msgstr "Un raster consiste di una o piú bande --- puó essere sia a banda singo
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:49
 msgid "Renderer"
-msgstr ""
+msgstr "Visualizzatore"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:51
 msgid ""
 "When a raster layer is loaded, it gets a default renderer based on its type."
 " It can be altered either in raster layer properties or programmatically."
-msgstr ""
+msgstr "Quando un raster viene caricato, esso ottiene un visualizzatore predefinito basato sul suo tipo. Può essere modificato sia attraverso le proprietà del raster che programmaticamente."
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:54
 msgid "To query the current renderer::"
-msgstr ""
+msgstr "Per interrogare il visualizzatore corrente::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:61
 msgid ""
 "To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer`."
 " There are several available renderer classes (derived from "
 ":class:`QgsRasterRenderer`):"
-msgstr ""
+msgstr "Per impostare un visualizzatore usa il metodo :func:`setRenderer` della classe :class:`QgsRasterLayer`. Esistono diversi classi di visualizzatori disponibili (derivanti da :class:`QgsRasterRenderer`):"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:64
 msgid "QgsMultiBandColorRenderer"
-msgstr ""
+msgstr "QgsMultiBandColorRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:65
 msgid "QgsPalettedRasterRenderer"
-msgstr ""
+msgstr "QgsPalettedRasterRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:66
 msgid "QgsSingleBandColorDataRenderer"
-msgstr ""
+msgstr "QgsSingleBandColorDataRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:67
 msgid "QgsSingleBandGrayRenderer"
-msgstr ""
+msgstr "QgsSingleBandGrayRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:68
 msgid "QgsSingleBandPseudoColorRenderer"
-msgstr ""
+msgstr "QgsSingleBandPseudoColorRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:82
 msgid "**TODO:**"
@@ -198,25 +199,25 @@ msgid ""
 "colors ranging from green to yellow (for pixel values from 0 to 255). In the"
 " first stage we will prepare ``QgsRasterShader`` object and configure its "
 "shader function:"
-msgstr ""
+msgstr "Ipotizziamo di voler visualizzare il nostro raster (assumendo che abbia una sola banda) con dei colori che vadano dal verde al giallo (per valori del pixel da 0 a 255), Nella prima fase prepareremo l'oggetto ``QgsRasterShader`` e configureremo la sua funzione shader:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:102
 msgid ""
 "The shader maps the colors as specified by its color map. The color map is "
 "provided as a list of items with pixel value and its associated color. There"
 " are three modes of interpolation of values:"
-msgstr ""
+msgstr "Lo shader mappa i colori così come specificato dalla sua mappa colore. La mappa colore è fornita come una lista di elementi avente il valore del pixel e il suo colore associato. Esistono tre modalità di interpolazione dei valori:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:113
 msgid ""
 "In the second step we will associate this shader with the raster layer::"
-msgstr ""
+msgstr "Nella seconda fase assoceremo questo shader al raster::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:118
 msgid ""
 "The number 1 in the code above is band number (raster bands are indexed from"
 " one)."
-msgstr ""
+msgstr "Il numero 1 nel codice qui sopra è il numero della banda (le bande raster sono indicizzate a partire da uno)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:126
 msgid ""
@@ -230,7 +231,7 @@ msgstr "Come impostazione predefinita, QGIS mappa le prime tre bande con i valor
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
 "band drawing can be chosen --- either gray levels or pseudocolor."
-msgstr ""
+msgstr "Nel caso in cui sia necessaria solo una banda per la visualizzazione del raster, si può scegliere la rappresentazione a banda singola --- o a scala di grigi o falso colore."
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:145
 msgid ""
@@ -265,7 +266,7 @@ msgstr "Il metodo ``results``in questo caso restituisce un dizionario, usando gl
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:46
 msgid "renderer"
-msgstr ""
+msgstr "visualizzatore"
 
 #~ msgid ""
 #~ "A raster layer consists of one or more raster bands - it is referred to as "

@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2015-05-22 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-05-22 14:36+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -78,7 +79,7 @@ msgid ""
 "variable --- for user's favourite color you could use key "
 "\"favourite_color\" or any other meaningful string. It is recommended to "
 "give some structure to naming of keys."
-msgstr ""
+msgstr "これらの変数は保存され、QtとQGIS APIの助けを借りて取得できます。各変数について、変数にアクセスするために使用されるキーを選択する必要があります---ユーザの好みの色のためにキー「favourite_color」またはその他の意味のある文字列を使用できます。キーの名前をつけるときは何らかの構造を持たせることをお勧めします。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/settings.rst:25
 msgid ""
@@ -90,7 +91,7 @@ msgid ""
 "registry (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The"
 " `QSettings documentation <http://doc.qt.io/qt-4.8/qsettings.html>`_ is "
 "comprehensive, so we will provide just a simple example"
-msgstr ""
+msgstr "**グローバル設定は** ---彼らは、特定のマシンのユーザにバインドされています。QGIS自体がグローバル設定の多くを保存し、例えば、メインウィンドウのサイズまたはデフォルトでは許容範囲をスナップ。クラス：： `QSettings`クラスこの機能は、によってQtフレームワークによって直接提供されます。デフォルトでは、（Mac OS Xの）（Windowsの場合）---レジストリ、の.plistファイルまたは（Unix上）.iniファイルで保存する設定のシステムの「ネイティブ」な方法でこのクラスを格納設定。`QSettingsのドキュメント<http://doc.qt.io/qt-4.8/qsettings.html>` _包括的であるので、我々は単純な例を提供します"
 
 #: ../../source/docs/pyqgis_developer_cookbook/settings.rst:55
 msgid ""
@@ -100,7 +101,7 @@ msgid ""
 "background and WGS84 might be suitable for one project, while yellow "
 "background and UTM projection are better for another one. An example of "
 "usage follows"
-msgstr ""
+msgstr "**プロジェクト設定** ---異なるプロジェクト間で変動し、したがって、それらは、プロジェクトファイルに接続されています。地図キャンバスの背景色または先座標参照系（CRS）の例である黄色の背景とUTMの突起が別のもののために優れていながら---白背景とWGS84は、一つのプロジェクトに適しているかもしれません。使い方の例は次のとおり"
 
 #: ../../source/docs/pyqgis_developer_cookbook/settings.rst:81
 msgid ""
@@ -112,7 +113,7 @@ msgid ""
 "settings will be there again. This functionality has been added in QGIS "
 "v1.4. The API is similar to QSettings --- it takes and returns QVariant "
 "instances"
-msgstr ""
+msgstr "**マップレイヤの設定** ---これらの設定は、プロジェクトでのマップレイヤの特定のインスタンスに関連しています。彼らは、* *層の基礎となるデータソースに接続されていないので、あなたは1つのシェープファイルの2つのマップレイヤのインスタンスを作成した場合、彼らは設定を共有することはありません。設定はプロジェクトファイルに保存されているので、ユーザは、プロジェクトを再度開いた場合、層関連の設定が再び存在します。この機能は、QGIS v1.4以降に追加されました。APIは、それが取る--- QSettingsに似ており、QVariantインスタンスを返します。"
 
 #~ msgid ""
 #~ "These variables can be saved a retrieved with help of Qt and QGIS API. For "

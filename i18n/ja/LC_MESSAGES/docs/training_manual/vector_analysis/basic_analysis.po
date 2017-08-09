@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:41+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-14 03:58+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +26,7 @@ msgid ""
 "with each other in space. There are many different analysis-related "
 "functions in GIS, so we won't go through them all. Rather, we'll pose a "
 "question and try to solve it using the tools that QGIS provides."
-msgstr ""
+msgstr "ベクトルデータは、さまざまな地物が空間内でどのように相互作用するかを明らかにするために分析できます。GISには多くの異なった分析関連機能があるので、それらすべてを見ていくことはしません。むしろ、問題を提起し、QGISが提供するツールを使用してそれを解決しようとするでしょう。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:13
 msgid ""
@@ -68,7 +69,7 @@ msgid ""
 "Let's start off the process by deciding on a problem to solve. For example, "
 "you are an estate agent and you are looking for a residential property in "
 "|majorUrbanName| for clients who have the following criteria:"
-msgstr ""
+msgstr "解決する問題を決定することからプロセスを開始してみましょう。たとえば、不動産業者が以下の基準を持っている顧客のために |majorUrbanName| にある居住用の不動産を探しています："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:35
 msgid "It needs to be in |majorUrbanName|."
@@ -120,14 +121,14 @@ msgid ""
 "dataset you have been using throughout this manual can also be used for this"
 " lesson. However, in order to ensure we have the complete data, we will re-"
 "download the data from OSM using QGIS' built-in OSM download tool."
-msgstr ""
+msgstr "このデータはすべてOSMを通して利用可能であり、このマニュアル全体で使用されているデータセットがこのレッスンのためにも使用できることがわかるはずです。しかし、完全なデータを持っていることを確認するために、QGIS内蔵のOSMのダウンロードツールを使ってOSMからデータを再ダウンロードします。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:56
 msgid ""
 "Although OSM downloads have consistent data fields, the coverage and detail "
 "does vary. If you find that your chosen region does not contain information "
 "on restaurants, for example, you may need to chose a different region."
-msgstr ""
+msgstr "OSMのダウンロードは一貫したデータフィールドを持っていますが、範囲と詳細は多様になってしまいます。たとえば選択した領域にレストランについての情報が含まれていないとわかった場合は、別の地域を選択することが必要な場合があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:62
 msgid "|basic| |FA| Start a Project"
@@ -141,7 +142,7 @@ msgstr "新規のQGISプロジェクトの開始"
 msgid ""
 "Use the OpenStreetMap data download tool found in the :menuselection:`Vector"
 " --> OpenStreetMap` menu to download the data for your chosen region."
-msgstr ""
+msgstr "選択した地域のデータをダウンロードするには、:menuselection:`ベクトル-> OpenStreetMap` メニューで見つかるOpenStreetMapデータダウンロードツールを使用します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:67
 msgid ""
@@ -154,7 +155,7 @@ msgid ""
 " as a vector layer as usually :menuselection:`Layer --> Add vector "
 "layer...`, browse to the new :kbd:`osm_data.osm` file you just downloaded. "
 "You may need to select :guilabel:`Show All Files` as the file format."
-msgstr ""
+msgstr ":guilabel:`osm` 形式ベクトルデータのタイプであることに留意されたいです。通常通り、このデータをベクトルレイヤーとして追加します :menuselection:`レイヤー - >ベクトルレイヤーを追加...` 、ちょうどダウンロードした新しい :kbd:`osm_data.osm` ファイルを参照します。ファイル形式として :guilabel:`すべてのファイルを表示` を選択する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:73
 msgid "Select :kbd:`osm_data.osm` and click :guilabel:`Open`"
@@ -164,7 +165,7 @@ msgstr ":kbd:`osm_data.osm` を選択し :guilabel:`開く` をクリックし�
 msgid ""
 "In the dialog which opens, select all the layers, *except* the "
 ":kbd:`other_relations` and :kbd:`multilinestrings` layer:"
-msgstr "表示されたダイアログで、 *except* the :kbd:`other_relations` と :kbd:`multilinestrings` layer: のすべてのレイヤを選択します。"
+msgstr "表示されたダイアログで、:kbd:`other_relations` と :kbd:`multilinestrings` レイヤー *を除く* すべてのレイヤを選択します："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:80
 msgid "This will import the OSM data as separate layers into your map."
@@ -178,13 +179,13 @@ msgid ""
 "need to work with a projected coordinate system. Start by setting your "
 "project's coordinate system to a suitable :guilabel:`CRS` for your data, in "
 "the case of |majorUrbanName|, :guilabel:`WGS 84 / UTM zone 34S`:"
-msgstr ""
+msgstr "先ほどOSMからダウンロードされたデータは、前のレッスンから知っているように、地理座標系、WGS84、であり、緯​​度と経度の座標を使用します。メーターで距離を計算するためには投影座標系で作業する必要があることも学びましたね。プロジェクトの座標系をデータに適した :guilabel:`CRS` に設定することから開始してください。 |majorUrbanName| の場合には :guilabel:`WGS 84 / UTMゾーン34S` です："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:89
 msgid ""
 "Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter"
 " the list to find :guilabel:`WGS 84 / UTM zone 34S`."
-msgstr ""
+msgstr ":kbd:`プロジェクトProperties`ダイアログを開き、:guilabel:` CRS`を選択して、:guilabel: `WGS 84 / UTMゾーン34S`を見つけるためにリストをフィルタをかけます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:91
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:352
@@ -200,13 +201,13 @@ msgid ""
 ":guilabel:`multipolygons` layer and can be extracted using the information "
 "in its :guilabel:`Attribute Table`. We'll start with the :kbd:`schools` "
 "layer:"
-msgstr ""
+msgstr "ここで、OSMデータセットから必要な情報を抽出する必要があります。地域のすべての住宅、学校、レストラン、道路を表すレイヤーで終わる必要があります。その情報は :guilabel:`multipolygons` レイヤーの中にあり、その :guilabel:`属性Table` 内にある情報を使用して抽出できます。 :kbd:`schools` レイヤーで始めましょう"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:98
 msgid ""
 "Right-click on the :guilabel:`multipolygons` layer in the :guilabel:`Layers "
 "list` and open the :guilabel:`Layer Properties`."
-msgstr ""
+msgstr ":guilabel:`レイヤーリスト` 中の:guilabel:`マルチポリゴン` レイヤーを右クリックし、:guilabel:`レイヤープロパティ` を開きます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:100
 msgid "Go to the :guilabel:`General` menu."
@@ -216,13 +217,13 @@ msgstr ":guilabel:`一般情報` メニューに進みます。"
 msgid ""
 "Under :guilabel:`Feature subset` click on the **[Query Builder]** button to "
 "open the :guilabel:`Query builder` dialog."
-msgstr ""
+msgstr ":guilabel:`地物subset` の下で **[クエリビルダ]** ボタンをクリックし :guilabel:`クエリビルダ` ダイアログを開きます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:103
 msgid ""
 "In the :guilabel:`Fields` list on the left of this dialog until you see the "
 "field :kbd:`amenity`."
-msgstr ""
+msgstr "このダイアログの左側にある:guilabel:`フィールド` リストで、フィールド:kbd:`amenity` が表示されるまで。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:105
 msgid "Click on it once."
@@ -231,7 +232,7 @@ msgstr "それを１回だけクリックします。"
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:106
 msgid ""
 "Click the :guilabel:`All` button underneath the :guilabel:`Values` list:"
-msgstr ":guilabel:`値`リストで:guilabel:`すべて`ボタンをクリックします:"
+msgstr ":guilabel:`値` リストで:guilabel:`すべて` ボタンをクリックします:"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:108
 msgid ""
@@ -247,15 +248,15 @@ msgstr ":guilabel:`フィールド` リストの :kbd:`amenity` をダブルク�
 msgid ""
 "Watch what happens in the :guilabel:`Provider specific filter expression` "
 "field below:"
-msgstr ""
+msgstr "以下の :guilabel:`プロバイダ固有のフィルタ式` フィールドで何が起こるか見ます："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:118
 msgid "The word :kbd:`\"amenity\"` has appeared. To build the rest of the query:"
-msgstr " :kbd:`\"amenity\"` のワードが表示されました。残りのクエリを作成します:"
+msgstr "語 :kbd:`\"amenity\"` が表示されました。クエリの残りを作成するには:"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:120
 msgid "Click the :guilabel:`=` button (under :guilabel:`Operators`)."
-msgstr "（:guilabel:`演算子`から） :guilabel:`=`ボタンをクリックします。"
+msgstr "（:guilabel:`演算子`から） :guilabel:`=` ボタンをクリックします。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:121
 msgid "Double-click the value :kbd:`school` in the :guilabel:`Values` list."
@@ -269,29 +270,29 @@ msgstr ":kbd:`OK` を２回クリックします。"
 msgid ""
 "This will filter OSM's :kbd:`multipolygons` layer to only show the schools "
 "in your region. You can now either:"
-msgstr ""
+msgstr "これは、唯一のお住まいの地域の学校を表示するためにOSMの :kbd:`multipolygons` レイヤーをフィルタリングします。今いずれかを行うことができます"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:127
 msgid ""
 "Rename the filtered OSM layer to :kbd:`schools` and re-import the "
 ":kbd:`multipolygons` layer from :kbd:`osm_data.osm`, OR"
-msgstr ""
+msgstr "フィルターされたOSMレイヤーの名前を :kbd:`schools` と変更し、 :kbd:`osm_data.osm` から :kbd:`multipolygons` レイヤーを再インポートする、または"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:129
 msgid ""
 "Duplicate the filtered layer, rename the copy, clear the :kbd:`Query "
 "Builder` and create your new query in the :guilabel:`Query Builder`."
-msgstr ""
+msgstr "フィルタされたレイヤーを複製し、コピーの名前を変更し、 :guilabel:`クエリビルダ` をクリアし、 :kbd:`クエリビルダ` で新しいクエリを作成します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:135
 msgid "|moderate| |TY| Extract Required Layers from OSM"
-msgstr "|moderate| |TY|OSMからの必要なレイヤの抽出"
+msgstr "|moderate| |TY| OSMからの必要なレイヤの抽出"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:136
 msgid ""
 "Using the above technique, use the :kbd:`Query Builder` tool to extract the "
 "remaining data from OSM to create the following layers:"
-msgstr ""
+msgstr "上記の技術を使用して、以下のレイヤーを作成するために、OSMからの残りのデータを抽出する :kbd:`クエリビルダ` ツールを使用します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:139
 msgid ":kbd:`roads` (from OSM's :kbd:`lines` layer)"
@@ -319,7 +320,7 @@ msgstr ":ref:`結果の確認  <vector-analysis-basic-1>`"
 msgid ""
 "Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs` (this "
 "map will be used in future modules)."
-msgstr ""
+msgstr ":guilabel:`exercise_data` 下に :kbd:`analysis.qgs` として地図を保存します（この地図は、将来のモジュールで使用されます）。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:149
 msgid ""
@@ -327,7 +328,7 @@ msgid ""
 ":guilabel:`exercise_data` and call it :kbd:`residential_development`. This "
 "is where you'll save the datasets that will be the results of the analysis "
 "functions."
-msgstr ""
+msgstr "お使いのオペレーティングシステムのファイルマネージャで、 :guilabel:`exercise_data` 下に新しいフォルダを作成してそれを :kbd:`residential_development` と名付けます。ここが分析関数の結果になるデータセットを保存する場所です。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:157
 msgid "|basic| |TY| Find important roads"
@@ -338,26 +339,26 @@ msgid ""
 "Some of the roads in OSM's dataset are listed as :kbd:`unclassified`, "
 ":kbd:`tracks`, :kbd:`path` and :kbd:`footway`. We want to exclude these from"
 " our roads dataset."
-msgstr ""
+msgstr "OSMのデータセット内の道路の一部は、:kbd:`未分類` 、:kbd:`tracks` 、:kbd:`PATH` 、:kbd:`footway` とリストされています。道路データセットからこれらを除外したいです。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:163
 msgid ""
 "Open the :kbd:`Query Builder` for the :kbd:`roads` layer, click "
 ":guilabel:`Clear` and build the following query:"
-msgstr ""
+msgstr ":kbd:`roads` レイヤー:kbd:`のためのクエリBuilder`開き:guilabel:`Clear`クリックし、次のクエリを構築します："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:166
 msgid ""
 ":kbd:`\"highway\"  != 'NULL' AND \"highway\" != 'unclassified' AND "
 "\"highway\" != 'track' AND \"highway\" != 'path' AND \"highway\" != "
 "'footway'`"
-msgstr ""
+msgstr ":kbd: ` \"高速道路\"!= 'NULL' AND \"高速道路\"!= '未分類' AND \"高速道路\"!= 'トラック' AND \"高速道路\"!= 'パス' AND \"高速道路\"!='footway'`"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:168
 msgid ""
 "You can either use the approach above, where you double-clicked values and "
 "clicked buttons, or you can copy and paste the command above."
-msgstr ""
+msgstr "上記の方法、値をダブルクリックしてボタンをクリックする、を使用するか、上記のコマンドをコピーして貼り付けできます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:171
 msgid "This should immediately reduce the number of roads on your map:"
@@ -373,13 +374,13 @@ msgid ""
 " change the layers' CRS. To do this, we need to select each layer in turn, "
 "save the layer to a new shapefile with our new projection, then import that "
 "new layer into our map."
-msgstr ""
+msgstr "レイヤー内で距離を測定しようとしているので、レイヤのCRSを変更する必要があります。これを行うために、私たちは順番に各レイヤーを選択する必要があり、地図にその新しいレイヤーをインポートし、新しい投影で新しいシェープファイルにレイヤーを保存します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:184
 msgid ""
 "In this example, we are using the :guilabel:`WGS 84 / UTM zone 34S` CRS, but"
 " you may use a UTM CRS which is more appropriate for your region."
-msgstr ""
+msgstr ":guilabel:この例では、使用している `WGS 84 / UTMゾーン34S` CRSをしていますが、お住まいの地域のためのより適切なUTM CRSを使用できます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:188
 msgid "Right click the :kbd:`roads` layer in the :kbd:`Layers` panel."
@@ -393,12 +394,12 @@ msgstr ":kbd:`Save as...` をクリックします。"
 msgid ""
 "In the :kbd:`Save Vector As` dialog, choose the following settings and click"
 " :guilabel:`Ok` (making sure you select :kbd:`Add saved file to map`):"
-msgstr ""
+msgstr ":kbd:`名前をつけてベクトルを保存` ダイアログで、以下の設定を選択し、 :guilabel:`Ok` をクリックしてください（ :kbd:`保存したファイルを地図に追加` を選択したことを確かめて）："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:196
 msgid ""
 "The new shapefile will be created and the resulting layer added to your map."
-msgstr "新しいシェープファイルが作成され、あなたのマップに結果のレイヤとして追加されます。"
+msgstr "新しいシェープファイルが作成され、地図に結果のレイヤとして追加されます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:198
 msgid ""
@@ -409,7 +410,7 @@ msgid ""
 "this case, you can focus the map on any of the layers by right click on any "
 "layer and click :guilabel:`Zoom to layer extent`, or just enable any of the "
 "mentioned 'on the fly' options."
-msgstr ""
+msgstr " :guilabel:`「その場で」CRS変換を有効にする` か :guilabel:`レイヤーが異なるCRS設定である場合は自動的に「その場で」再投影を有効にする` を有効にしていない場合は（前のレッスンを参照）、たった今地図に追加された新しいレイヤーを見ることができないかもしれません。この場合は、任意のレイヤーの上に、右クリックでのレイヤーのいずれかの地図を集中し、 :guilabel:`ズーム範囲` レイヤーをクリックできます、あるいは単に今述べた「その場で」オプションのいずれかを有効にします。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:205
 msgid "Remove the old :kbd:`roads` layer."
@@ -419,20 +420,20 @@ msgstr "古い :kbd:`roads` レイヤを削除します。"
 msgid ""
 "Repeat this process for each layer, creating a new shapefile and layer with "
 "\"_34S\" appended to the original name and removing each of the old layers."
-msgstr ""
+msgstr "「_34S」元の名前に追加され、古い層のそれぞれを削除して新しいシェープファイルやレイヤーを作成し、レイヤごとにこのプロセスを繰り返します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:210
 msgid ""
 "Once you have completed the process for each layer, right click on any layer"
 " and click :guilabel:`Zoom to layer extent` to focus the map to the area of "
 "interest."
-msgstr ""
+msgstr "それぞれのレイヤーに対してプロセスが完了したら、いずれかのレイヤーの上で右クリックして、 :guilabel:`レイヤー範囲にズーム` をクリックして関心領域に地図を集中してください。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:213
 msgid ""
 "Now that we have converted OSM's data to a UTM projection, we can begin our "
 "calculations."
-msgstr ""
+msgstr "今、UTM投影にOSMのデータを変換したので、計算を開始できます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:217
 msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
@@ -446,7 +447,7 @@ msgstr "QGISはいかなるベクタからの距離を計算することがで�
 msgid ""
 "Make sure that only the :guilabel:`roads_34S` and :guilabel:`houses_34S` "
 "layers are visible, to simplify the map while you're working."
-msgstr ""
+msgstr "作業中に地図を簡単にするために、 :guilabel:`roads_34S` と :guilabel:`houses_34S` レイヤーだけ表示されていることを確認してください。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:224
 msgid ""
@@ -469,13 +470,13 @@ msgid ""
 "The :guilabel:`Buffer distance` is in meters because our input dataset is in"
 " a Projected Coordinate System that uses meter as its basic measurement "
 "unit. This is why we needed to use projected data."
-msgstr ""
+msgstr "私達の入力データセットは、その基本的な計測単位としてメートルを使用する投影座標系であるため、 :guilabel:`バッファdistance`はメートル単位です。投影されたデータを使用する必要があるのはこのためです。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:238
 msgid ""
 "Save the resulting layer under :kbd:`exercise_data/residential_development/`"
 " as :kbd:`roads_buffer_50m.shp`."
-msgstr ""
+msgstr ":kbd:`exercise_data/residential_development/` 下に結果のレイヤーを :kbd:`roads_buffer_50m.shp` として保存します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:240
 msgid "Click :guilabel:`OK` and it will create the buffer."
@@ -486,7 +487,7 @@ msgid ""
 "When it asks you if it should \"add the new layer to the TOC\", click "
 ":guilabel:`Yes`. (\"TOC\" stands for \"Table of Contents\", by which it "
 "means the :guilabel:`Layers list`)."
-msgstr ""
+msgstr "それは「TOCに新しいレイヤーを追加する」必要がある場合、それはあなたを要求すると、クリックしてください：guilabel： `Yes`を。（：guilabel： `レイヤーlist`「TOC」は、それが意味していることで、「目次」の略）。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:244
 msgid "Close the :guilabel:`Buffer(s)` dialog."
@@ -501,14 +502,14 @@ msgid ""
 "If your new layer is at the top of the :kbd:`Layers` list, it will probably "
 "obscure much of your map, but this gives us all the areas in your region "
 "which are within 50m of a road."
-msgstr ""
+msgstr "新しいレイヤーが :kbd:`Layers` リストの最上にある場合は、おそらく地図の多くを不明瞭にしますが、これは道の50メートルの範囲内にある、地域内のすべての領域を提供しています。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:255
 msgid ""
 "However, you'll notice that there are distinct areas within our buffer, "
 "which correspond to all the individual roads. To get rid of this problem, "
 "remove the layer and re-create the buffer using the settings shown here:"
-msgstr ""
+msgstr "ただし、すべての個々の道路に対応し、当社のバッファ内の別個の領域があることに気づくでしょう。この問題を取り除くために、層を除去し、ここに示した設定を使用してバッファを再作成します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:262
 msgid ""
@@ -519,7 +520,7 @@ msgstr ":guilabel:`バッファのディゾルブ結果` ボックスを今チ�
 msgid ""
 "Save the output under the same name as before (click :guilabel:`Yes` when it"
 " asks your permission to overwrite the old one)."
-msgstr ""
+msgstr "前と同じ名前の下に出力を保存します（古いものを上書きする許可を求めてきたときは :guilabel:`はい` をクリック）。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:265
 msgid "Click :guilabel:`OK` and close the :guilabel:`Buffer(s)` dialog again."
@@ -541,13 +542,13 @@ msgstr "|basic| |TY| 学校からの距離"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:280
 msgid "Use the same approach as above and create a buffer for your schools."
-msgstr ""
+msgstr "上記と同じアプローチを使用し、学校のためのバッファを作成します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:282
 msgid ""
 "It needs to be :kbd:`1 km` in radius, and saved under the usual directory as"
 " :kbd:`schools_buffer_1km.shp`."
-msgstr ""
+msgstr "それは半径 :kbd:`1 km` 、そしていつものようにディレクトリの下に :kbd:`schools_buffer_1km.shp` として保存する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:285
 msgid ":ref:`Check your results <vector-analysis-basic-2>`"
@@ -564,7 +565,7 @@ msgid ""
 "areas where both of these criteria are satisfied. To do that, we'll need to "
 "use the :guilabel:`Intersect` tool. Find it under :menuselection:`Vector -->"
 " Geoprocessing Tools --> Intersect`. Set it up like this:"
-msgstr ""
+msgstr "今、道路が50メートル離れている領域を得ており、学校は1キロ以内にあります（直線距離で、道路でなく）。しかし明らかに、これらの基準の両方が満たされる領域を希望しているだけです。そのためには、 :guilabel:`Intersect` ツールを使用する必要があります。 :menuselection:`ベクトル - >ジオプロセシングツール - > Intersect` の下でそれを見つける。このようにそれを設定します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:300
 msgid ""
@@ -572,19 +573,19 @@ msgid ""
 " the file name is :kbd:`road_school_buffers_intersect.shp`. Once it's set up"
 " like this, click :guilabel:`OK` and add the layer to the :guilabel:`Layers "
 "list` when prompted."
-msgstr ""
+msgstr "二つの入力層は、二つのバッファです。保存場所は、いつものようにあります。ファイル名は次のとおりです。 :kbd:`road_school_buffers_intersect.shp` 。それは次のようにセットアップしたら、クリックしてください :guilabel:`OK` とにレイヤを追加します :guilabel:`プロンプトが表示されたら、レイヤーlist` 。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:305
 msgid ""
 "In the image below, the blue areas show us where both distance criteria are "
 "satisfied at once!"
-msgstr ""
+msgstr "両方の距離基準が一度に満たされている場所の下の画像では、青色の領域が私たちを見ます！"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:311
 msgid ""
 "You may remove the two buffer layers and only keep the one that shows where "
 "they overlap, since that's what we really wanted to know in the first place:"
-msgstr ""
+msgstr "2つのバッファレイヤーを除去しそれらが重なる場所を示すものだけを維持しても良いです、それが最初の場所で本当に知りたいと思ったものですので："
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:320
 msgid "|basic| |FA| Select the Buildings"
@@ -594,13 +595,13 @@ msgstr "|basic| |FA| 建物の選択"
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "select the buildings in that area."
-msgstr ""
+msgstr "これで建物がオーバーラップしなければならない領域が得られました。次は、その地域の建物を選択します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:325
 msgid ""
 "Click on the menu entry :menuselection:`Vector --> Research Tools --> Select"
 " by location`. A dialog will appear."
-msgstr ""
+msgstr ":menuselection:`ベクトル - >研究のツール - > locationで選択` メニュー項目をクリックします。ダイアログが表示されます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:332
 msgid "Click :guilabel:`OK`, then :guilabel:`Close`."
@@ -611,24 +612,24 @@ msgid ""
 "You'll probably find that not much seems to have changed. If so, move the "
 ":kbd:`school_roads_intersect` layer to the bottom of the layers list, then "
 "zoom in:"
-msgstr ""
+msgstr "おそらくあまり変更されているように見えないと思われることでしょう。その場合は、レイヤーリストの一番下に :kbd:`school_roads_intersect` レイヤーを移動し、次いでズームインします。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:340
 msgid ""
 "The buildings highlighted in yellow are those which match our criteria and "
 "are selected, while the buildings in green are those which do not. We can "
 "now save the selected buildings as a new layer."
-msgstr ""
+msgstr "基準に一致して選択される建物は黄色でハイライトされる一方、緑色の建物は選択されないものです。今、選択された建物を新しいレイヤーとして保存できます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:344
 msgid ""
 "Right-click on the :guilabel:`houses_34S` layer in the :guilabel:`Layers "
 "list`."
-msgstr ""
+msgstr ":guilabel:`レイヤーリスト` 中の :guilabel:`houses_34S` レイヤー上で右クリックします。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:345
 msgid "Select :guilabel:`Save Selection As...`."
-msgstr ""
+msgstr ":guilabel:`選択を別名保存...` を選択します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:346
 msgid "Set the dialog up like this:"
@@ -642,18 +643,18 @@ msgstr "ファイル名は :kbd:`well_located_houses.shp` です。"
 msgid ""
 "Now you have the selection as a separate layer and can remove the "
 ":kbd:`houses_34S` layer."
-msgstr ""
+msgstr "今、選択を別のレイヤーとしてしているし、:kbd:`houses_34S` レイヤーを削除できます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:360
 msgid "|moderate| |TY| Further Filter our Buildings"
-msgstr ""
+msgstr "|moderate| |TY|さらに、当社の建物をフィルター"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:362
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
 "and within 50m of a road. We now need to reduce that selection to only show "
 "buildings which are within 500m of a restaurant."
-msgstr ""
+msgstr "今、私たちの学校の1キロ内や道路の50メートル内のすべての建物を表示するレイヤーを持っています。今その選択を、レストランの500メートル内にある建物を表示するだけに削減する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:366
 msgid ""
@@ -661,7 +662,7 @@ msgid ""
 ":kbd:`houses_restaurants_500m` which further filters your "
 ":kbd:`well_located_houses` layer to show only those which are within 500m of"
 " a restaurant."
-msgstr ""
+msgstr "上記のプロセスを使用して :kbd:`houses_restaurants_500m` という名前の新しいレイヤーを作成し、さらにこれで :kbd:`well_located_houses` レイヤーをフィルタして、レストランの500メートル内にあるものだけ表示します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:371
 msgid ":ref:`Check your results <vector-analysis-basic-3>`"
@@ -675,12 +676,12 @@ msgstr "|basic| |FA| 正しいサイズの建物の選択"
 msgid ""
 "To see which buildings are the correct size (more than 100 square meters), "
 "we first need to calculate their size."
-msgstr ""
+msgstr "正しいサイズ（以上100平方メートル）である建物を参照するには、まず自分のサイズを計算する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:379
 msgid ""
 "Open the attribute table for the :guilabel:`houses_restaurants_500m` layer."
-msgstr ""
+msgstr ":guilabel:`houses_restaurants_500m` レイヤーの属性テーブルを開きます。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:380
 msgid "Enter edit mode and open the field calculator."
@@ -690,31 +691,31 @@ msgstr "編集モードにし、フィールド演算を開きます。"
 msgid ""
 "If you can't find :guilabel:`AREA` in the list, try creating a new field as "
 "you did in the previous lesson of this module."
-msgstr ""
+msgstr ":guilabel:`リストでAREA` を見つけることができない場合、このモジュールの前のレッスンで行ったように新しいフィールドを作成してみてください。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:389
 msgid ""
 "Scroll to the right of the attribute table; your :kbd:`AREA` field now has "
 "areas in metres for all the buildings in your "
 ":guilabel:`houses_restaurants_500m` layer."
-msgstr ""
+msgstr "属性テーブルの右側にスクロールします。今、:kbd:`AREA` フィールドには :guilabel:`houses_restaurants_500m` レイヤーのすべての建物についてメートルでの面積があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:392
 msgid ""
 "Click the edit mode button again to finish editing, and save your edits when"
 " prompted."
-msgstr ""
+msgstr "編集を終了し、プロンプトが表示されたら、編集内容を保存するには、再度編集モードボタンをクリックします。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:394
 msgid "Build a query as earlier in this lesson:"
-msgstr ""
+msgstr "このレッスンでは、以前のようにクエリを構築します。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:399
 msgid ""
 "Click :guilabel:`OK`. Your map should now only show you those buildings "
 "which match our starting criteria and which are more than 100m squared in "
 "size."
-msgstr ""
+msgstr ":guilabel:`OK` をクリックします。地図には今、私達の開始条件に一致し、100メートル四方のサイズ以上である建物だけが表示されるはずです。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:404
 msgid "|basic| |TY|"
@@ -725,7 +726,7 @@ msgid ""
 "Save your solution as a new layer, using the approach you learned above for "
 "doing so. The file should be saved under the usual directory, with the name "
 ":kbd:`solution.shp`."
-msgstr ""
+msgstr "そうするために上記学んだ手法を用いて、新しいレイヤーとしてソリューションを保存します。ファイルは名前 :kbd:`solution.shp` で、通常のディレクトリに保存する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:411
 msgid "|IC|"
@@ -736,7 +737,7 @@ msgid ""
 "Using the GIS problem-solving approach together with QGIS vector analysis "
 "tools, you were able to solve a problem with multiple criteria quickly and "
 "easily."
-msgstr ""
+msgstr "QGISベクトル解析ツールと一緒にGISの問題解決のアプローチを使用して、迅速かつ容易に複数の条件での問題を解決することができました。"
 
 #: ../../source/docs/training_manual/vector_analysis/basic_analysis.rst:418
 msgid "|WN|"
@@ -746,4 +747,4 @@ msgstr "|WN|"
 msgid ""
 "In the next lesson, we'll look at how to calculate the shortest distance "
 "along the road from one point to another."
-msgstr ""
+msgstr "次のレッスンでは、ある地点から別の地点への道に沿って最短距離を計算する方法を見ていきます。"

@@ -55,20 +55,12 @@ msgid ""
 msgstr ""
 "Vóórdat u de invoer specificeert kunt u de groep algoritmen instellen waarin"
 " u het script wilt plaatsen. Als de groep al bestaat zal het algoritme aan "
-"die groep wordne toegevoegd, anders zal automatisch een nieuwe groep worden "
+"die groep worden toegevoegd, anders zal automatisch een nieuwe groep worden "
 "gemaakt:"
 
 #: ../../source/docs/training_manual/processing/r_syntax.rst:25
 msgid "group creation, ``##My Group=group``"
 msgstr "maken van een groep, ``##My Group=group``"
-
-#: ../../source/docs/training_manual/processing/r_syntax.rst:27
-msgid ""
-"Then you have to specify the all the input types and eventually the "
-"additional parameters. You can have different inputs:"
-msgstr ""
-"daarna dient u alle typen invoer te specificeren en eventueel de aanvullende"
-" parameters. U kunt verschillende invoer hebben:"
 
 #: ../../source/docs/training_manual/processing/r_syntax.rst:30
 msgid "vector, ``##Layer = vector``"
@@ -130,14 +122,6 @@ msgstr "vector, ``##output= output vector``"
 msgid "raster, ``##output= output raster``"
 msgstr "raster, ``##output= output raster``"
 
-#: ../../source/docs/training_manual/processing/r_syntax.rst:48
-msgid "table, ``##output= output raster``"
-msgstr "table, ``##output= output raster``"
-
-#: ../../source/docs/training_manual/processing/r_syntax.rst:49
-msgid "plots, ``##showplot``"
-msgstr "plots, ``##showplot``"
-
 #: ../../source/docs/training_manual/processing/r_syntax.rst:50
 msgid ""
 "R output in the *Result Viewer*, just put **inside** the script ``>`` "
@@ -170,14 +154,6 @@ msgstr ""
 msgid "Example with vector output"
 msgstr "Voorbeeld met uitvoer als vector"
 
-#: ../../source/docs/training_manual/processing/r_syntax.rst:68
-msgid ""
-"Let's take an algorithm from the online collection that creates random "
-"points from the extend of an input layer::"
-msgstr ""
-"Laten we een algoritme nemen uit de online collectie dat willekeurige punten"
-" maakt uit het bereik van een invoerlaag::"
-
 #: ../../source/docs/training_manual/processing/r_syntax.rst:81
 msgid "and get through the lines:"
 msgstr "en dan gaan we door de regels:"
@@ -199,7 +175,7 @@ msgstr ""
 msgid ""
 "``Output`` is the **vector** layer that will be created by the algorithm"
 msgstr ""
-"``Output`` is de **vector**laag die zal wordne gemaakt door het algoritme"
+"``Output`` is de **vector**laag die zal worden gemaakt door het algoritme"
 
 #: ../../source/docs/training_manual/processing/r_syntax.rst:88
 msgid ""
@@ -208,14 +184,6 @@ msgid ""
 msgstr ""
 "``library(sp)`` laadt de bibliotheek **sp** (die al op uw computer zou "
 "moeten zijn geïnstalleerd en welke installatie **in R** zou moeten zijn)"
-
-#: ../../source/docs/training_manual/processing/r_syntax.rst:91
-msgid ""
-"call the ``spsample`` function of the ``sp`` library and pass to it all the "
-"input defined above"
-msgstr ""
-"roep de functie ``spsample`` aan van de bibliotheek ``sp`` en geef die door "
-"aan alle hierboven gedefinieerde invoer"
 
 #: ../../source/docs/training_manual/processing/r_syntax.rst:92
 msgid "create the output vector with the ``SpatialPointsDataFrame`` function"
@@ -325,14 +293,6 @@ msgstr ""
 msgid "Example with plot"
 msgstr "Voorbeeld met plot"
 
-#: ../../source/docs/training_manual/processing/r_syntax.rst:190
-msgid ""
-"Creating plots is very simple. You have to use the ``##showplot`` parameter "
-"as the following script shows::"
-msgstr ""
-"het maken van plots is erg eenvoudig. U moet de parameter ``##showplot`` "
-"gebruiken, zoals in het volgende script is weergegeven::"
-
 #: ../../source/docs/training_manual/processing/r_syntax.rst:202
 msgid ""
 "the script takes a field of the vector layer in input and creates a *QQ "
@@ -346,3 +306,77 @@ msgid "The plot is automatically added to the *Result Viewer* of Processing."
 msgstr ""
 "Het plot wordt automatisch toegevoegd aan *Resultaten bekijken* van "
 "Processing."
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:27
+msgid ""
+"Then you have to specify all the input types and eventually the additional "
+"parameters. You can have different inputs:"
+msgstr ""
+"Daarna dient u alle typen invoer te specificeren en eventueel de aanvullende"
+" parameters. U kunt verschillende invoer hebben:"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:48
+msgid "table, ``##output= output table``"
+msgstr "table, ``##output= output table``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:49
+msgid "plots, ``##showplots``"
+msgstr "plots, ``##showplots``"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:68
+msgid ""
+"Let's take an algorithm from the online collection that creates random "
+"points from the extent of an input layer::"
+msgstr ""
+"Laten we een algoritme nemen uit de online collectie dat willekeurige punten"
+" maakt uit het bereik van een invoerlaag::"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:91
+msgid ""
+"call the ``spsample`` function of the ``sp`` library and pass it to all the "
+"input defined above"
+msgstr ""
+"roep de functie ``spsample`` aan van de bibliotheek ``sp`` en geef die door "
+"aan alle hierboven gedefinieerde invoer"
+
+#: ../../source/docs/training_manual/processing/r_syntax.rst:190
+msgid ""
+"Creating plots is very simple. You have to use the ``##showplots`` parameter"
+" as the following script shows::"
+msgstr ""
+"Het maken van plots is erg eenvoudig. U moet de parameter ``##showplots`` "
+"gebruiken, zoals in het volgende script is weergegeven::"
+
+#~ msgid ""
+#~ "Then you have to specify the all the input types and eventually the "
+#~ "additional parameters. You can have different inputs:"
+#~ msgstr ""
+#~ "daarna dient u alle typen invoer te specificeren en eventueel de aanvullende"
+#~ " parameters. U kunt verschillende invoer hebben:"
+
+#~ msgid "table, ``##output= output raster``"
+#~ msgstr "table, ``##output= output raster``"
+
+#~ msgid "plots, ``##showplot``"
+#~ msgstr "plots, ``##showplot``"
+
+#~ msgid ""
+#~ "Let's take an algorithm from the online collection that creates random "
+#~ "points from the extend of an input layer::"
+#~ msgstr ""
+#~ "Laten we een algoritme nemen uit de online collectie dat willekeurige punten"
+#~ " maakt uit het bereik van een invoerlaag::"
+
+#~ msgid ""
+#~ "call the ``spsample`` function of the ``sp`` library and pass to it all the "
+#~ "input defined above"
+#~ msgstr ""
+#~ "roep de functie ``spsample`` aan van de bibliotheek ``sp`` en geef die door "
+#~ "aan alle hierboven gedefinieerde invoer"
+
+#~ msgid ""
+#~ "Creating plots is very simple. You have to use the ``##showplot`` parameter "
+#~ "as the following script shows::"
+#~ msgstr ""
+#~ "het maken van plots is erg eenvoudig. U moet de parameter ``##showplot`` "
+#~ "gebruiken, zoals in het volgende script is weergegeven::"

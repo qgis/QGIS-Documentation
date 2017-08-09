@@ -1,6 +1,7 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # natsumi_irimura <nirimura@gmail.com>, 2014
 # natsumi_irimura <nirimura@gmail.com>, 2014
 msgid ""
@@ -8,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2014-10-13 05:28+0000\n"
-"Last-Translator: Minoru Akagi <akaginch@gmail.com>\n"
+"PO-Revision-Date: 2017-07-06 03:30+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,7 +90,7 @@ msgstr "|TY| |moderate|"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:87
 msgid "Modify the cities table so its geometry column is spatially indexed."
-msgstr ""
+msgstr "そのジオメトリ列が空間索引付けされたように、都市のテーブルを変更します。"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:89
 msgid ":ref:`Check your results <spatial-queries-2>`"
@@ -120,19 +121,19 @@ msgid ""
 "that you'll need to create a new PostGIS connection to the new database. You"
 " can import \\ from the terminal or via SPIT. Import the files into the "
 "following database tables:"
-msgstr ""
+msgstr "次に、提供されたデータを:kbd: `exercise_data / PostGISの/`ディレクトリの中にインポートします。手順については前のレッスンを参照していただきますが、新しいデータベースへの新しいPostGISの接続を作成する必要があることを覚えておいてください。端末から、または、SPITを経由して、インポートできます。次のデータベーステーブルにファイルをインポートします："
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:112
 msgid ":kbd:`points.shp` into :kbd:`building`"
-msgstr ""
+msgstr ":kbd:`points.shp` を :kbd:`building` に"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:113
 msgid ":kbd:`lines.shp` into :kbd:`road`"
-msgstr ""
+msgstr ":kbd:`lines.shp` を :kbd:`road` に"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:114
 msgid ":kbd:`polygons.shp` into :kbd:`region`"
-msgstr ""
+msgstr ":kbd:`polygons.shp` を :kbd:`region` に"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:116
 msgid ""
@@ -140,19 +141,19 @@ msgid ""
 "Layers` dialog, as usual. When you open their attribute tables, you'll note "
 "that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
 " PostGIS import."
-msgstr ""
+msgstr "いつものように、 :guilabel:`PostGISのレイヤーを追加` ダイアログでこれらの3つのデータベースレイヤーをQGISにロードします。それらの属性テーブルを開くと、 :kbd:`id` フィールドとPostGISのインポートによって作成された :kbd:`gid` フィールドの両方があることに注意。"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:121
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
 "back to your terminal (command line) and enter the psql prompt by running::"
-msgstr ""
+msgstr "テーブルはインポートされていますので、データを照会するためのPostGISを使用できます。端末（コマンドライン）に戻って以下を実行することによりpsqlのプロンプトを入力してください::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:126
 msgid ""
 "We'll demo some of these select statements by creating views from them, so "
 "that you can open them in QGIS and see the results."
-msgstr ""
+msgstr "QGISでそれらを開き、結果を見ることができるように、それらからのビューを作成することによってこれらのselect文の一部をデモします。"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:130
 msgid "Select by location"
@@ -160,15 +161,15 @@ msgstr "場所による選択"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:132
 msgid "Get all the buildings in the KwaZulu region::"
-msgstr ""
+msgstr "クワズール地域のすべての建物を取得する::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:150
 msgid "Or, if we create a view from it::"
-msgstr ""
+msgstr "あるいは、それからビューを作成する場合::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:158
 msgid "Add the view as a layer and view it in QGIS:"
-msgstr ""
+msgstr "レイヤーとしてビューを追加し、QGISで表示："
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:164
 msgid "Select neighbors"
@@ -194,7 +195,7 @@ msgid ""
 "Artifacts such as this can alert us to potential problems in the data. To "
 "solve this enigma without getting caught up in the anomalies the data may "
 "have, we could use a buffer intersect instead::"
-msgstr ""
+msgstr "不足している地域（クイーンズランド州）に注意してください。これは、トポロジエラーに起因する可能性があります。このようなアーティファクトは、データの潜在的な問題のために警告することがあります。データが持つかもしれない異常に巻き込まれることなく、この謎を解決するために、代わりにバッファ交差を使用できます::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:205
 msgid "This creates a buffer of 100 meters around the region Hokkaido."
@@ -206,7 +207,7 @@ msgstr "暗いエリアがバッファです::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:212
 msgid "Select using the buffer::"
-msgstr ""
+msgstr "バッファを使用して選択します::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:225
 msgid ""
@@ -215,22 +216,22 @@ msgid ""
 "is used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) "
 "that intersects it. However, Hokkaido itself is excluded from this select "
 "statement, because we don't want it; we only want the regions adjoining it."
-msgstr ""
+msgstr "このクエリでは、元のバッファ・ビューは、他のテーブルがされるように使用されます。これは別名 :kbd:`a` を与えられ、その幾何形状フィールド :kbd:`region` テーブル（別名 :kbd:`b` ） :kbd:`a.the_geom` が、それと交差するすべての多角形を選択するために使用されます。しかし北海道自体はこのselect文から除外されます。必要なのは北海道自体ではなく、それに隣接する領域だけなので。"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:236
 msgid ""
 "It is also possible to select all objects within a given distance, without "
 "the extra step of creating a buffer::"
-msgstr ""
+msgstr "バッファを作成するための余分な工程を経ることなく、与えられた距離内のすべてのオブジェクトを選択することも可能である::"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:246
 msgid ""
 "This achieves the same result, without need for the interim buffer step:"
-msgstr ""
+msgstr "これは、中間バッファステップを必要とせずに、同じ結果を達成します："
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:253
 msgid "Select unique values"
-msgstr ""
+msgstr "一意の値を選択する"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:255
 msgid ""
@@ -250,7 +251,7 @@ msgstr "|IC|"
 msgid ""
 "You have seen how to query spatial objects using the new database functions "
 "from PostGIS."
-msgstr ""
+msgstr "PostGISのから新しいデータベース機能を使用して、空間オブジェクトを照会する方法を見てきました。"
 
 #: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:338
 msgid "|WN|"
@@ -260,4 +261,4 @@ msgstr "|WN|"
 msgid ""
 "Next we're going to investigate the structures of more complex geometries "
 "and how to create them using PostGIS."
-msgstr ""
+msgstr "次は、より複雑な幾何形状の構造と、それらをPostGISを使用して作成する方法を調査するつもりです。"

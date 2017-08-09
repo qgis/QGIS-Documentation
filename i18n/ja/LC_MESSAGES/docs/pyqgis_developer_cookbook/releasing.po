@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2015-05-22 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-06-08 03:17+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +18,7 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:7
 msgid "Releasing your plugin"
-msgstr "あなたのプラグインのリリース"
+msgstr "プラグインをリリースする"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:12
 msgid ""
@@ -28,7 +29,7 @@ msgid ""
 " set up your own plugin repository, create a simple XML file that will list "
 "the plugins and their metadata, for examples see other `plugin repositories "
 "<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_."
-msgstr ""
+msgstr "プラグインの準備ができ、そのプラグインが誰かのために役立つことあると思ったら、躊躇わずに:ref: `official_pyqgis_repository`にアップロードしてください。そのページでは、プラグインのインストーラでうまく動作するプラグインを準備する方法についてパッケージ化のガイドラインも見つかります。あるいは、独自のプラグインのリポジトリを設定したい場合は、プラグインとそのメタデータの一覧を表示する単純なXMLファイルを作成してください。例は他の `プラグインリポジトリ<http://www.qgis.org/wiki/Python_Plugin_Repositories> `_を参照してください。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:46
 msgid "Official python plugin repository"
@@ -72,20 +73,20 @@ msgstr "*スタッフ*は全てのプラグインバージョンの承認と非�
 msgid ""
 "users which have the special permission `plugins.can_approve` get the "
 "versions they upload automatically approved"
-msgstr ""
+msgstr "特別な権限 `plugins.can_approve`を持つユーザーがアップロードしたバージョンは自動的に承認されます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:72
 msgid ""
 "users which have the special permission `plugins.can_approve` can approve "
 "versions uploaded by others as long as they are in the list of the plugin "
 "*owners*"
-msgstr ""
+msgstr "特別な権限`plugins.can_approve`を持つユーザーは、彼らがプラグイン*所有者*のリスト中にある限り、他人によってアップロードされたバージョンを承認できます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:75
 msgid ""
 "a particular plugin can be deleted and edited only by *staff* users and "
 "plugin *owners*"
-msgstr "特定のプラグインは *staff*ユーザまたはプラグイン *owners*によって削除または編集できます。"
+msgstr "特定のプラグインは *スタッフ*ユーザまたはプラグイン *所有者*によって削除または編集できます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:77
 msgid ""
@@ -101,13 +102,13 @@ msgstr "運用の信託"
 msgid ""
 "Staff members can grant *trust* to selected plugin creators setting "
 "`plugins.can_approve` permission through the front-end application."
-msgstr ""
+msgstr "スタッフはフロントエンドアプリケーションを介して `plugins.can_approve`許可を設定し、選択したプラグインの作成者に*信頼*を付与することができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:87
 msgid ""
 "The plugin details view offers direct links to grant trust to the plugin "
 "creator or the plugin *owners*."
-msgstr ""
+msgstr "プラグインの詳細ビューには、プラグインの作成者やプラグイン*所有者*への信頼を付与するために直接リンクを提供しています。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:93
 msgid "Validation"
@@ -117,27 +118,27 @@ msgstr "検証"
 msgid ""
 "Plugin's metadata are automatically imported and validated from the "
 "compressed package when the plugin is uploaded."
-msgstr ""
+msgstr "プラグインのメタデータを自動的にインポートし、プラグインがアップロードされたときに圧縮されたパッケージから検証されます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:98
 msgid ""
 "Here are some validation rules that you should aware of when you want to "
 "upload a plugin on the official repository:"
-msgstr ""
+msgstr "公式リポジトリ上にプラグインをアップロードするときに注意するべき検証規則がいくつかあります："
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:104
 msgid ":file:`metadata.txt` is required"
-msgstr ":file:`metadata.txt` が要求されます。"
+msgstr ":file:`metadata.txt` が必要です"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:105
 msgid ""
 "all required metadata listed in :ref:`metadata table<plugin_metadata_table>`"
 " must be present"
-msgstr ""
+msgstr "REF：に記載されているすべての必要なメタデータ `メタデータテーブル1`存在している必要があります"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:107
 msgid "the `version` metadata field must be unique"
-msgstr ""
+msgstr "`VERSION`メタデータフィールドは一意である必要があります"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:20
 msgid "plugins;"
@@ -153,65 +154,65 @@ msgstr "公式のpythonプラグインリポジトリ"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:22
 msgid "Please take special care to the following suggestions:"
-msgstr ""
+msgstr "次の提案に特別な注意してください："
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:25
 msgid "Metadata and names"
-msgstr ""
+msgstr "メタデータと名前"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:27
 msgid "avoid using a name too similar to existing plugins"
-msgstr ""
+msgstr "既存のプラグインとあまりにも類似した名前を使用しないよう"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:28
 msgid ""
 "if your plugin has a similar functionality to an existing plugin, please "
 "explain the differences in the About field, so the user will know which one "
 "to use without the need to install and test it"
-msgstr ""
+msgstr "プラグインが既存のプラグインと類似の機能を持っている場合は、「このプラグインについて」フィールドに違いを説明し、ユーザーがインストールして試さなくてもどれを使用するべきかわかるようにしてください"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:29
 msgid "avoid repeating \"plugin\" in the name of the plugin itself"
-msgstr ""
+msgstr "プラグイン自体の名前に「プラグイン」を繰り返さないよう"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:30
 msgid ""
 "use the description field in metadata for a 1 line description, the About "
 "field for more detailed instructions"
-msgstr ""
+msgstr "より詳細な手順については、1行の説明のためのメタデータでは約フィールドを説明フィールドを使用します"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:31
 msgid ""
 "include a code repository, a bug tracker, and a home page; this will greatly"
 " enhance the possibility of collaboration, and can be done very easily with "
 "one of the available web infrastructures (GitHub, GitLab, Bitbucket, etc.)"
-msgstr ""
+msgstr "コードリポジトリ、バグトラッカー、およびホーム・ページが含まれます。これは非常にコラボレーションの可能性を向上させます、そして利用可能なWebインフラストラクチャの1つ（GitHubの、GitLab、のBitbucketなど）で非常に簡単に行うことができます"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:32
 msgid ""
 "choose tags with care: avoid the uninformative ones (e.g. vector) and prefer"
 " the ones already used by others (see the plugin website)"
-msgstr ""
+msgstr "注意してタグを選択します（例：ベクトル）情報価値のないものを避け、すでに他のユーザーによって使用されるものを好む（プラグインのWebサイトを参照してください）"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:33
 msgid ""
 "add a proper icon, do not leave the default one; see QGIS interface for a "
 "suggestion of the style to be used"
-msgstr ""
+msgstr "適切なアイコンを追加、デフォルトの1のままにしないでください。使用するスタイルの提案のためのQGISインターフェースを参照してください"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:36
 msgid "Code and help"
-msgstr ""
+msgstr "コードとヘルプ"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:38
 msgid ""
 "do not include generated file (ui_*.py, resources_rc.py, generated help "
 "files…) and useless stuff (e.g. .gitignore) in repository"
-msgstr ""
+msgstr "リポジトリに（例えば.gitignore）生成されたファイル（UI _ *。PY、resources_rc.py、生成されたヘルプファイル...）と役に立たないものを含みません"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:39
 msgid "add the plugin to the appropriate menu (Vector, Raster, Web, Database)"
-msgstr ""
+msgstr "適切なメニューにプラグインを追加（ベクター、ラスター、ウェブ、データベース）"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:40
 msgid ""
@@ -219,28 +220,28 @@ msgid ""
 "as a subplugin of Processing framework: this will allow users to run it in "
 "batch, to integrate it in more complex workflows, and will free you from the"
 " burden of designing an interface"
-msgstr ""
+msgstr "適切な場合（解析を実行するプラグイン）、処理フレームワークのsubpluginとしてプラグインを追加することを検討：これは、ユーザーがバッチでそれを実行できるようになり、より複雑なワークフローでそれを統合するために、インターフェイスを設計する負担からあなたを解放します"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:41
 msgid ""
 "include at least minimal documentation and, if useful for testing and "
 "understanding, sample data."
-msgstr ""
+msgstr "最低限のドキュメンテーションと、テストと理解に役立つ場合はサンプルデータを含めてください。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:58
 msgid "**TODO:**"
-msgstr ""
+msgstr "**TODO:**"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:58
 msgid "Insert a link to the governance document"
-msgstr ""
+msgstr "ガバナンスのドキュメントへのリンクを挿入"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:101
 msgid ""
 "the name of the main folder containing your plugin must contain only ASCII "
 "characters (A-Z and a-z), digits and the characters underscore (_) and minus"
 " (-), also it cannot start with a digit"
-msgstr ""
+msgstr "プラグインを含むメインフォルダの名前は、ASCII文字（A-Zおよびa-z）、数字、アンダースコア（_）とマイナス（ - ）しか含んではならず、また数字で始めることはできません。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/releasing.rst:110
 msgid "Plugin structure"
@@ -256,7 +257,7 @@ msgid ""
 "would be nice to have a :file:`README` and of course an icon to represent "
 "the plugin (:file:`resources.qrc`). Following is an example of how a "
 "plugin.zip should look like."
-msgstr ""
+msgstr "検証に続いて、プラグインの圧縮（.zipファイル）パッケージは、機能プラグインとして検証する特定の構造を持たなければならないルール。プラグインは、プラグインフォルダをユーザーの内部で解凍されるように、それは他のプラグインに干渉しないように.zipファイル内の独自のディレクトリです持っている必要があります。必須ファイルは、次のとおりです：ファイル： `metadata.txt`と：ファイル：` __init __ py`。（：ファイル： `resources.qrc`）プラグインを表現するために` README`そしてもちろんアイコン：ファイル：しかし、持っていいだろう。以下はplugin.zipがどのように見えるべきかの一例です。"
 
 #~ msgid ""
 #~ "the name of the main folder containing your plugin must contain only "

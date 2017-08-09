@@ -1,0 +1,65 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-05-21 13:48+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:9
+msgid "Loading Projects"
+msgstr "プロジェクトをロード"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:11
+msgid ""
+"Sometimes you need to load an existing project from a plugin or (more often)"
+" when developing a stand-alone QGIS Python application (see: "
+":ref:`pythonapplications`)."
+msgstr "スタンドアロンの開発時に時々、（多くの場合）プラグインから既存のプロジェクトをロードする必要がありますか（参照：は：ref： `pythonapplications`）PythonアプリケーションをQGIS。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:18
+msgid ""
+"To load a project into the current QGIS application you need a "
+":class:`QgsProject` :func:`instance()` object and call its :func:`read()` "
+"method passing to it a :class:`QFileInfo` object that contains the path from"
+" where the project will be loaded::"
+msgstr "クラス：： `QgsProject`：FUNC：あなたが必要とする現在のQGISアプリケーションにプロジェクトをロードするには、`インスタンス（） `オブジェクトを、その呼び出し：FUNC：`読んで（） `メソッドそれに渡す：クラス：` QFileInfo`オブジェクトをそれは、プロジェクトがロードされる場所からのパスが含まれています::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:38
+msgid ""
+"In case you need to make some modifications to the project (for example add "
+"or remove some layers) and save your changes, you can call the "
+":func:`write()` method of your project instance. The :func:`write()` method "
+"also accepts an optional :class:`QFileInfo` that allows you to specify a "
+"path where the project will be saved::"
+msgstr "FUNC：プロジェクトインスタンスの `書き込み（）`メソッドは、プロジェクトにいくつかの変更を加える（例えば、いくつかのレイヤーを追加または削除）して、変更を保存する必要がある場合は、あなたが呼び出すことができます。：FUNC：クラス：： `書き込みは（）`メソッドは、オプションの受け入れプロジェクトを保存するパスを指定することができます `QFileInfo`を::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:48
+msgid ""
+"Both :func:`read()` and :func:`write()` funtions return a boolean value that"
+" you can use to check if the operation was successful."
+msgstr "両方：FUNC： `読んで（）`と：FUNC： `書き込み（）` funtionsは、操作が成功したかどうかをチェックするために使用できるブール値を返します。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:53
+msgid ""
+"If you are writing a QGIS standalone application, in order to synchronise "
+"the loaded project with the canvas you need to instanciate a "
+":class:`QgsLayerTreeMapCanvasBridge` as in the example below::"
+msgstr "クラス：：あなたがインスタンス化する必要がキャンバスと、ロードされたプロジェクト同期させるために、QGISスタンドアロンアプリケーションを作成している場合は、以下の例のように `QgsLayerTreeMapCanvasBridge`を::"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:15
+msgid "projects"
+msgstr "プロジェクト"
+
+#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:15
+msgid "loading"
+msgstr "ロード"

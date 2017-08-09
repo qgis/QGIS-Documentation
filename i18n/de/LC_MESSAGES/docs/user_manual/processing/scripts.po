@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-09-01 06:25+0000\n"
+"PO-Revision-Date: 2016-10-10 00:07+0000\n"
 "Last-Translator: Kevin M\n"
 "Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgid ""
 "``longstring``. Same as string, but a larger text box will be shown, so it "
 "is better suited for long strings, such as for a script expecting a small "
 "code snippet."
-msgstr ""
+msgstr "``longstring``. Das gleiche wie String, nur ein größeres Textfeld wird angezeigt, so ist es besser geeignet für lange Strings, wie zum Beispiel für ein Skript, um einen kleinen Code-Schnipsel zu schreiben."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:71
 msgid ""
@@ -148,20 +148,20 @@ msgstr "``crs``. Ein Koordinatensystem"
 msgid ""
 "``selection``. A dropdown menu that allows the user to select from a pre-"
 "populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``"
-msgstr ""
+msgstr "``Auswahl``. Ein Drop-down-Menü, dass dem Benutzer erlaubt aus einer vorgefertigten liste zu wählen. Zum Beispiel ``units=selection sq_km;sq_miles;sq_degrees``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:85
 msgid ""
 "``name``. Name of the script. This will be displayed as the algorithm name "
 "in the processing toolbox. For example ``My Algorithm Name=name``"
-msgstr ""
+msgstr "``Name``. Name des Skripts. Dies wird als Algorithmusname gezeigt in der Verarbeitungstoolbox. Zum Beispiel ``My Algorithm Name=name``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:87
 msgid ""
 "``group``. Folder name where the script will appear in the Processing "
 "Toolbox. For Example, adding ``Utils=groups`` will put the script within a "
 "``Utils`` folder within Scripts."
-msgstr ""
+msgstr "``Gruppe``. Ordername, in dem das Skript in der Verarbeitungstoolbox erscheint. Zum Beispiel, hinzufügen von ``Utils=groups`` setzt das Skript in den ``Utils`` Ordner innerhalb des Skripts."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:91
 msgid ""
@@ -244,11 +244,11 @@ msgid ""
 "This should be used for algorithms that do not have a clear syntax (for "
 "instance, if the number of layers to be created is not known in advance, at "
 "design time), which make them unsuitable for the graphical modeler"
-msgstr ""
+msgstr "Das letzte Tag, dass Sie in Ihrem Skript-Header verwenden können, ist ``##nomodeler``. Verwenden Sie dass, wenn Sie nicht wollen, dass Ihr Algorithmus in dem Modellierer-Fenster angezeigt wird. Dies sollte für Algorithmen verwendet werden, die nicht über eine klare Syntax verfügen (zum Beispiel, wenn die Anzahl der erstellten Layer im Voraus nicht bekannt werden soll, zur Design-Zeit), die sie ungeeignet für die grafische Modellierer machen"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:130
 msgid "Handing data produced by the algorithm"
-msgstr ""
+msgstr "Umgang mit Daten die durch den Algorithmus erzeugt wurden"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:132
 msgid ""
@@ -257,7 +257,7 @@ msgid ""
 "reason why, although the ``runalg()`` method does not load the layers it "
 "produces, the final *TWI* layer will be loaded, since it is saved to the "
 "file entered by the user, which is the value of the corresponding output."
-msgstr ""
+msgstr "Wenn Sie eine Ausgabe (Raster, Vektor oder Tabelle) deklarieren wird der Algorithmus versuchen ihn zu QGIS hinzuzufügen nachdem sie beendet wurde. Darum wird auch, trotz dessen die ``runalg()`` Methode nicht die Layer, die sie produziert, lädt, der endgültige TWI Layer geladen, da er in die Datei gespeichert wird, die von Anwender eingegeben wird, welche der Wert der entsprechenden Ausgabe ist."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:138
 msgid ""
@@ -282,7 +282,7 @@ msgstr "die folgende Zeile setzt den Wert der Ausgabe auf 5:"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:161
 msgid "Communicating with the user"
-msgstr ""
+msgstr "Die Kommunikation mit dem Benutzer"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:163
 msgid ""
@@ -297,7 +297,7 @@ msgid ""
 "If you have to provide some information to the user, not related to the "
 "progress of the algorithm, you can use the ``setInfo(text)`` method, also "
 "from the ``progress`` object."
-msgstr ""
+msgstr "Wenn Sie einige Informationen für den Benutzer zur Verfügung stellen, die nicht den Fortschritt des Algorithmus zeigen, können Sie die ``setinfo(text)`` Methode verwenden, auch aus dem ``progress`` Objekt."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:172
 msgid ""
@@ -307,7 +307,7 @@ msgid ""
 "will take care of handling it and communicating with the user, depending on "
 "where the algorithm is being executed from (toolbox, modeler, Python "
 "console...)"
-msgstr ""
+msgstr "Wenn Ihr Skript irgendein Problem hat, ist der richtige Weg zu propagieren seine Ausnahme vom Typ ``GeoAlgorithmExecutionException()`` zu erhöhen. Sie können eine Nachricht als Argument für den Konstruktor der Ausnahme übergeben. Die Verarbeitung kümmert sich um die Handhabung und steht in Verbindung mit dem Benutzer, je nachdem, wo der Algorithmus aus ausgeführt wird (Toolbox, Modellierer, Python Konsole...)"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:180
 msgid "Documenting your scripts"
@@ -341,7 +341,7 @@ msgid ""
 "Several examples are available in the on-line collection of scripts, which "
 "you can access by selecting the *Get script from on-line script collection* "
 "tool under the *Scripts/tools* entry in the toolbox."
-msgstr ""
+msgstr "Einige Beispiele stehen in der Online-Sammlung von Skripten zur Verfügung, die Sie durch die Auswahl des *Get script from on-line script collection* Werkzeugs unter dem * Skripte/Werkzeuge* Eintrag in der Toolbox zugreifen können."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:207
 msgid ""
@@ -353,7 +353,7 @@ msgstr "Bitte gehen Sie sie durch um anhand von echten Beispielen zu erfahren wi
 
 #: ../../source/docs/user_manual/processing/scripts.rst:213
 msgid "Best practices for writing script algorithms"
-msgstr ""
+msgstr "Bewährte Verfahren für das Schreiben von Skript-Algorithmen"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:215
 msgid ""
@@ -362,13 +362,13 @@ msgid ""
 "Following these simple rules will ensure consistency across the different "
 "Processing elements such as the toolbox, the modeler or the batch processing"
 " interface."
-msgstr ""
+msgstr "Hier ist eine kurze Zusammenfassung von Ideen zum Berücksichtigen, wenn Sie Skript Algorithmen schaffen und vor allem, wenn Sie diese mit anderen QGIS Benutzern teilen möchten. Im Anschluss an diese einfachen Regeln, wird die Konsistenz zwischen den verschiedenen Verarbeitungselemente gewährleistet, wie die der Toolbox, des Modellierers oder der Batch-Verarbeitung-Schnittstelle."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:220
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load "
 "your layers if needed."
-msgstr ""
+msgstr "Laden Sie keine Ergebnislayer. Lassen Sie die Verarbeitung Ihrer Ergebnisse abarbeiten und laden Sie Ihre Layer, wenn nötig."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:221
 msgid ""
@@ -378,20 +378,20 @@ msgid ""
 " of the algorithm and make it impossible to use it safely in the modeler. If"
 " you have to write an algorithm like that, make sure you add the "
 "``##nomodeler`` tag."
-msgstr ""
+msgstr "Erklären Sie immer die Ausgänge Ihres erzeugten Algorithmus. Vermeiden Sie Dinge, wie zum Beispiel eine Ausgabe deklarieren und dann mit dem Zieldateinamen für die Ausgabe eine Sammlung von ihnen zu erstellen. Das wird die richtige Semantik des Algorithmus brechen und macht es unmöglich, sie in dem Modellierer sicher zu verwenden. Wenn Sie einen Algorithmus, so schreiben, stellen Sie sicher, dass Sie die ``## nomodeler``-Tag hinzufügen."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:226
 msgid ""
 "Do not show message boxes or use any GUI element from the script. If you "
 "want to communicate with the user, use the ``setInfo()`` method or throw an "
 "``GeoAlgorithmExecutionException``"
-msgstr ""
+msgstr "Zeige keine Meldungsfelder oder GUI-Element aus dem Skript mehr. Wenn Sie mit dem Benutzer kommunizieren möchten, verwenden Sie die ``setinfo()`` Methode oder einen ``Geo-AlgorithmusExecutionException``"
 
 #: ../../source/docs/user_manual/processing/scripts.rst:229
 msgid ""
 "As a rule of thumb, do not forget that your algorithm might be executed in a"
 " context other than the Processing toolbox."
-msgstr ""
+msgstr "Als Faustregel gilt: vergessen Sie nicht, dass Ihr Algorithmus in einem anderen Kontext ausgeführt werden könnte als der Verarbeitungswerkzeugleiste."
 
 #: ../../source/docs/user_manual/processing/scripts.rst:234
 msgid "Pre- and post-execution script hooks"

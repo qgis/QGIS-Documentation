@@ -1,12 +1,15 @@
 # Translators:
 # Sant-anna <delazj@gmail.com>, 2016
+# Christophe55 <christophe.maginot@gmail.com>, 2017
+# Benoît de Cabissole <benoit-3@bc-consult.com>, 2017
+# Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 2.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2016\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +19,7 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:9
 msgid "Writing a Processing plugin"
-msgstr ""
+msgstr "Créer une extensions Processing"
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:14
 msgid ""
@@ -27,12 +30,22 @@ msgid ""
 "the modeler or the batch processing interface), and a quicker development "
 "time (since Processing will take of a large part of the work)."
 msgstr ""
+"Suivant le type d'extension que vous voulez développer, il sera parfois plus"
+" judicieux d'ajouter sa fonctionnalité sous forme d'un algorithme Processing"
+" (ou un ensemble d'algorithmes). Cela vous apportera une meilleure "
+"intégration au sein de QGIS, des fonctionnalités supplémentaires "
+"(puisqu'elle pourra être également lancée dans les composants de Processing "
+"comme le modeleur ou l'interface de traitements par lots), ainsi qu'un temps"
+" de développement plus court (puisque Processing va gérer une grande partie "
+"du travail)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:21
 msgid ""
 "This document describes how to create a new plugin that adds its "
 "functionality as Processing algorithms."
 msgstr ""
+"Ce document décrit comment créer un plugin pour ajouter de nouvelles "
+"fonctionnalités en tant qu'algorithme de traitement."
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:24
 msgid "There are two main mechanisms for doing that:"
@@ -83,6 +96,11 @@ msgid ""
 "information about how to modify the provider and add additional algorithms. "
 "Refer to them for more information."
 msgstr ""
+"L'extension créée contient un fournisseur disposant d'un seul algorithme. "
+"Les fichiers du fournisseur et de l'algorithme sont correctement commentés "
+"et contiennent de l'information sur comment modifier le fournisseur et "
+"comment ajouter de nouveaux algorithmes. S'y référerer pour plus "
+"d'informations."
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:44
 msgid "Creating a plugin that contains a set of processing scripts"
@@ -98,6 +116,9 @@ msgid ""
 "that you want to add, you should have them available in the Processing "
 "toolbox."
 msgstr ""
+"Créez vos scripts comme décrit dans le livre de recette PyQGIS. Tous les "
+"scripts que vous souhaitez devraient être disponibles dans la boîte à outils"
+" Processing."
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:50
 msgid ""
@@ -107,6 +128,12 @@ msgid ""
 "ones in the toolbox), and some additional information needed for the plugin "
 "metadata."
 msgstr ""
+"Dans le groupe *Scripts/Outils* de la boîte à outils Processing, double-"
+"cliquez sur l'entrée *Créer une extension de collection de scripts*. Une "
+"fenêtre s'affichera où vous pourrez sélectionner les scripts que vous voulez"
+" ajouter à l'extension (à partir du jeu disponible dans la boîte à outils) "
+"ainsi que certaines informations supplémentaires requises pour les "
+"métadonnées de l'extension."
 
 #: ../../source/docs/pyqgis_developer_cookbook/processing.rst:54
 msgid "Click on OK and the plugin will be created."
@@ -117,3 +144,6 @@ msgid ""
 "You can add additional scripts to the plugin by adding scripts python files "
 "to the *scripts* folder in the resulting plugin folder."
 msgstr ""
+"Vous pouvez ajouter des scripts additionnels à l'extension en ajoutant des "
+"fichiers de script python dans le répertoire *scripts* dans le répertoire de"
+" l'extension concernée."

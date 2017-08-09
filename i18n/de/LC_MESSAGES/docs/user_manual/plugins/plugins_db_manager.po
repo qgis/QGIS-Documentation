@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-09-01 15:23+0000\n"
-"Last-Translator: Kevin M\n"
+"PO-Revision-Date: 2016-10-22 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,15 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # a79e4b6f56b34f77944f6aa91b76586d
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:10
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:9
 msgid "DB Manager Plugin"
 msgstr "DB Manager Plugin"
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:11
 msgid ""
 "The DB Manager Plugin is officially part of the QGIS core and is intended to"
 " be the main tool to integrate and manage spatial database formats supported"
@@ -38,13 +34,13 @@ msgid ""
 "several features. You can drag layers from the QGIS Browser into the DB "
 "Manager, and it will import your layer into your spatial database. You can "
 "drag and drop tables between spatial databases and they will get imported."
-msgstr ""
+msgstr "Das DB-Manager Plugin ist offizieller Teil des QGIS Kerns und soll das Hauptinstrument sein, räumliche Datenbankformate die von QGIS unterstützt werden (PostGIS, SpatiaLite, Geopackage, Oracle Spatial, virtuelle Schichten) in einer Benutzeroberfläche zu integrieren und zu verwalten. Das |dbManager| :sup:`DB Manager` Plugin bietet verschiedene Funktionen. Sie können Layer von dem QGIS-Browser in den DB-Manager ziehen und Ihre Layer werden in Ihre räumliche Datenbank importiert. Sie können auch Tabellen zwischen räumlichen Datenbanken hin- und herziehen und sie werden importiert werden."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:29
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:28
 msgid "DB Manager dialog"
 msgstr "DB Manager Dialog"
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:32
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:31
 msgid ""
 "The :menuselection:`Database` menu allows you to connect to an existing "
 "database, to start the SQL window and to exit the DB Manager Plugin. Once "
@@ -52,14 +48,14 @@ msgid ""
 " and :menuselection:`Table` additionally appear."
 msgstr "Das :menuselection:`Datenbank` Menü ermöglicht es Ihnen sicht mit einer bestehenden Datenbank zu verbinden, das SQL Fenster zu starten und die DB Manager Erweiterung zu verlassen. Nachdem Sie mit einer bestehenden Datenbank verbunden sind, erscheinen zusätzlich die Menüs :menuselection:`Schema` und :menuselection:`Tabelle`."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:37
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:36
 msgid ""
 "The :menuselection:`Schema` menu includes tools to create and delete (empty)"
 " schemas and, if topology is available (e.g., PostGIS 2), to start a "
 ":guilabel:`TopoViewer`."
 msgstr "Das :menuselection:`Schema` Menü enthält Werkzeuge zum Erstellen und löschen von (leeren) Schemata und, falls es eine Topologie gibt (z.B. PostGIS 2), eins zum Starten von :guilabel:`TopoViewer`."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:41
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:40
 msgid ""
 "The :menuselection:`Table` menu allows you to create and edit tables and to "
 "delete tables and views. It is also possible to empty tables and to move "
@@ -69,17 +65,17 @@ msgid ""
 "to determine the most efficient way to execute a query. Finally, you can "
 "import layers/files, if they are loaded in QGIS or exist in the file system."
 " And you can export database tables to shape with the Export File feature."
-msgstr ""
+msgstr "Das :menuselection:`Tabelle` Menü ermöglicht es Ihnen Tabellen zu erstellen und zu bearbeiten und Tabellen und Views zu löschen. Als weitere Funktionalität können Sie ein VACUUM und dann ein ANALYZE für jede ausgewählte Tabelle durchführen. Ein einfaches VACUUM fordet einfach Platz und stellt ihn für das erneute Anwenden zu Verfügung. ANALYZE updatet Statistiken um den effizientesten Weg eine Abfrage durchzuführen zu bestimmen. Schließlich können Sie Layer/Dateien importieren, wenn diese in QGIS geladen sind oder im Dateisystem existieren. Und Sie können Datenbanktabellen nach Shape mit der Export File Funktion exportieren."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:50
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:49
 msgid ""
 "The :guilabel:`Tree` window lists all existing databases supported by QGIS. "
 "With a double-click, you can connect to the database. With the right mouse "
 "button, you can rename and delete existing schemas and tables. Tables can "
 "also be added to the QGIS canvas with the context menu."
-msgstr ""
+msgstr "Das :guilabel:`Tree` Fenster listet alle existierenden Datenbanken auf, die in QGIS integriert wurden. Mit einem Doppelklick können Sie sich mit der jeweiligen Datenbank verbinden. Mit der rechten Maustaste können Sie eine existierende Tabelle oder Schema umbenennen oder löschen oder eine neue Tabellen hinzugefügen."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:55
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:54
 msgid ""
 "If connected to a database, the **main** window of the DB Manager offers "
 "three tabs. The :guilabel:`Info` tab provides information about the table "
@@ -90,22 +86,25 @@ msgid ""
 "preview."
 msgstr "Wenn Sie mit einer Datenbank verbunden sind, bietet das **Hauptfenster** des DB Managers drei Reiter. Der :guilabel:`Info` Reiter zeigt Information zur Tabelle und Geometrie, zu existierenden Spalten, Constraints und Indices. Ausserdem kann man die Vacuum Analyze Funktion starten und einen räumlichen Index für eine ausgewählte Tabelle erzeugen. Der :guilabel:`Tabelle` Reiter zeigt die Attribute und der Reiter :guilabel:`Vorschau` zeigt eine Vorschau der Tabelle."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:63
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:62
 msgid "Working with the SQL Window"
-msgstr ""
+msgstr "Arbeiten mit dem SQL-Fenster"
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:65
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:64
 msgid ""
 "You can also use the DB Manager to execute SQL queries against your spatial "
 "database and then view the spatial output for queries by adding the results "
 "to QGIS as a query layer. It is possible to highlight a portion of the SQL "
 "and only that portion will be executed when you press :kbd:`F5` or click the"
 " :guilabel:`Execute (F5)` button."
-msgstr ""
+msgstr "Sie können auch den DB-Manager verwenden, um SQL-Abfragen gegen Ihre räumliche Datenbank ausführen und dann die räumliche Ausgabe für Abfragen anzuzeigen, indem die Ergebnisse zu QGIS als Abfrage-Layer hinzugefügt werden. Es ist möglich, einen Teil des SQL-Ausdrucks zu markieren, und nur dieser Teil wird ausgeführt, wenn Sie die Taste :kbd:`F5` drücken oder den  :guilabel:`Ausführen (F5)` Knopf anklicken."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:80
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:79
 msgid "Executing SQL queries in the DB Manager SQL window"
-msgstr ""
+msgstr "Ausführen von SQL-Abfragen in dem DB Manager SQL-Fenster"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "If connected to a database, the **main** window of the DB Manager offers "

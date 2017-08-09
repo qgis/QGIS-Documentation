@@ -1,5 +1,6 @@
 # 
 # Translators:
+# Francisco Raga <FRANKA1986@gmail.com>, 2017
 # Ivan Cortez <cicat@hotmail.es>, 2016
 # YoViajo, 2016
 msgid ""
@@ -7,8 +8,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-09-01 20:13+0000\n"
-"Last-Translator: YoViajo\n"
+"PO-Revision-Date: 2017-07-16 12:19+0000\n"
+"Last-Translator: Francisco Raga <FRANKA1986@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,1397 +17,1396 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:8
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:7
 msgid "Learning"
 msgstr "Aprendizaje"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:11
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:10
 msgid "Classification Map Regularization"
-msgstr ""
+msgstr "Regularización de mapa de clasificación"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:14
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:69
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:121
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:180
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:215
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:279
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:328
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:376
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:479
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:641
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:726
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:838
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:958
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1063
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1153
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1260
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1380
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1518
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:13
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:68
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:120
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:179
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:214
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:278
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:327
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:375
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:478
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:640
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:725
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:837
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:957
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1062
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1152
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1259
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1379
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1517
 msgid "Description"
 msgstr "Descripción"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:16
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:71
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:123
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:182
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:217
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:281
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:330
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:378
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:481
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:643
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:728
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:840
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:960
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1065
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1155
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1262
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1382
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1520
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:15
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:70
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:122
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:181
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:216
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:280
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:329
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:377
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:480
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:642
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:727
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:839
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:959
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1064
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1154
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1261
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1381
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1519
 msgid "<put algorithm description here>"
 msgstr "<colocar la descripción del algoritmo aquí>"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:19
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:74
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:126
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:185
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:220
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:284
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:333
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:381
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:484
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:646
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:731
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:843
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:963
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1068
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1158
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1265
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1385
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1523
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:18
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:73
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:125
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:184
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:219
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:283
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:332
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:380
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:483
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:645
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:730
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:842
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:962
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1067
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1157
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1264
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1384
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1522
 msgid "Parameters"
 msgstr "Parametros "
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:22
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:21
 msgid "``Input classification image`` [raster]"
-msgstr ""
+msgstr "``Imagen de clasificación de entrada`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:22
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:25
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:30
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:35
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:40
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:45
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:77
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:80
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:89
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:92
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:97
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:129
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:132
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:141
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:146
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:151
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:156
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:188
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:191
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:223
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:226
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:235
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:238
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:250
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:255
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:287
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:290
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:299
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:304
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:336
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:341
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:344
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:349
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:352
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:384
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:389
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:392
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:397
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:402
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:407
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:412
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:417
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:422
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:427
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:432
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:437
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:442
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:447
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:452
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:487
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:490
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:495
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:498
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:503
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:508
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:513
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:518
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:523
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:528
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:537
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:547
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:552
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:563
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:568
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:573
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:578
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:583
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:588
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:593
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:604
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:609
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:614
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:649
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:652
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:657
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:660
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:665
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:670
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:675
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:680
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:685
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:690
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:699
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:734
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:737
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:742
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:745
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:750
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:755
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:760
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:765
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:770
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:775
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:784
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:796
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:801
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:806
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:811
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:846
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:849
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:854
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:857
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:862
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:867
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:872
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:877
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:882
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:887
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:896
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:901
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:906
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:911
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:916
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:921
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:926
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:931
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:966
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:969
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:974
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:977
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:982
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:987
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:992
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:997
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1002
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1007
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1016
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1021
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1026
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1031
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1036
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1071
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1074
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1079
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1082
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1087
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1092
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1097
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1102
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1107
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1112
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1121
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1126
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1161
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1164
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1169
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1172
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1177
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1182
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1187
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1192
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1197
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1202
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1211
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1223
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1228
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1233
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1268
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1271
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1276
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1279
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1284
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1289
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1294
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1299
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1304
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1309
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1318
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1323
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1328
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1333
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1338
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1343
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1348
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1353
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1388
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1391
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1396
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1399
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1404
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1409
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1414
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1419
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1424
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1429
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1438
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1449
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1461
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1466
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1471
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1476
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1481
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1486
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1491
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1526
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1529
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1536
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1539
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1544
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1549
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1554
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:21
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:24
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:29
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:34
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:39
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:44
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:76
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:79
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:88
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:91
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:96
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:128
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:131
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:140
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:145
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:150
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:155
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:187
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:190
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:222
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:225
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:234
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:237
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:249
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:254
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:286
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:289
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:298
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:303
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:335
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:340
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:343
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:348
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:351
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:383
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:388
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:391
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:396
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:401
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:406
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:411
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:416
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:421
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:426
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:431
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:436
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:441
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:446
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:451
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:486
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:489
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:494
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:497
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:502
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:507
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:512
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:517
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:522
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:527
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:536
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:546
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:551
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:562
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:567
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:572
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:577
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:582
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:587
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:592
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:603
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:608
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:613
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:648
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:651
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:656
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:659
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:664
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:669
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:674
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:679
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:684
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:689
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:698
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:733
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:736
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:741
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:744
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:749
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:754
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:759
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:764
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:769
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:774
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:783
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:795
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:800
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:805
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:810
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:845
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:848
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:853
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:856
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:861
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:866
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:871
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:876
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:881
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:886
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:895
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:900
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:905
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:910
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:915
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:920
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:925
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:930
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:965
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:968
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:973
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:976
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:981
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:986
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:991
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:996
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1001
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1006
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1015
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1020
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1025
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1030
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1035
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1070
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1073
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1078
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1081
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1086
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1091
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1096
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1101
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1106
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1111
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1120
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1125
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1160
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1163
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1168
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1171
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1176
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1181
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1186
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1191
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1196
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1201
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1210
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1222
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1227
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1232
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1267
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1270
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1275
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1278
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1283
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1288
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1293
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1298
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1303
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1308
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1317
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1322
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1327
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1332
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1337
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1342
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1347
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1352
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1387
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1390
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1395
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1398
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1403
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1408
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1413
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1418
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1423
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1428
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1437
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1448
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1460
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1465
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1470
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1475
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1480
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1485
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1490
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1525
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1528
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1535
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1538
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1543
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1548
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1553
 msgid "<put parameter description here>"
 msgstr "<colocar la descripción de parámetros aquí>"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:27
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:26
 msgid "``Structuring element radius (in pixels)`` [number]"
-msgstr ""
+msgstr "``Estructuración del radio del elemento (en píxeles)`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:27
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:394
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:434
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:560
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:565
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:570
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:793
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:808
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1225
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1463
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1478
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1483
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:26
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:393
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:433
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:559
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:564
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:569
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:792
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:807
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1224
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1462
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1477
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1482
 msgid "Default: *1*"
 msgstr "Predeterminado: *1*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:32
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:31
 msgid "``Multiple majority: Undecided(X)/Original`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:32
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:515
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:677
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:762
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:874
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:923
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:928
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:994
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1099
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1189
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1230
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1296
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1416
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1488
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:31
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:514
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:676
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:761
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:873
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:922
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:927
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:993
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1098
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1188
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1229
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1295
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1415
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1487
 msgid "Default: *True*"
 msgstr "Por defecto: *True*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:37
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:252
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:301
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:36
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:251
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:300
 msgid "``Label for the NoData class`` [number]"
-msgstr ""
+msgstr "``Etiqueta para la clase sin dato`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:37
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:42
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:86
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:94
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:138
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:153
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:232
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:247
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:252
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:257
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:296
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:301
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:306
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:399
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:404
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:444
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:454
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:500
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:534
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:544
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:616
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:662
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:696
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:701
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:747
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:781
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:813
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:859
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:893
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:933
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:979
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1013
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1038
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1084
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1118
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1128
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1174
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1208
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1220
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1235
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1281
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1315
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1330
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1340
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1355
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1401
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1435
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1446
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1458
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1468
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1473
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1493
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:36
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:41
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:85
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:93
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:137
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:152
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:231
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:246
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:251
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:256
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:295
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:300
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:305
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:398
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:403
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:443
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:453
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:499
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:533
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:543
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:615
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:661
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:695
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:700
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:746
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:780
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:812
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:858
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:892
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:932
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:978
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1012
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1037
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1083
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1117
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1127
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1173
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1207
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1219
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1234
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1280
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1314
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1329
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1339
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1354
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1400
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1434
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1445
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1457
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1467
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1472
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1492
 msgid "Default: *0*"
 msgstr "Predeterminado: *0*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:42
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:257
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:306
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:41
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:256
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:305
 msgid "``Label for the Undecided class`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:47
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:99
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:158
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:354
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:449
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1531
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:46
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:98
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:157
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:353
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:448
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1530
 msgid "``Available RAM (Mb)`` [number]"
 msgstr "\"RAM disponible (Mb)\" [número]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:47
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:99
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:158
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:354
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:449
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1531
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:46
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:98
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:157
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:353
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:448
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1530
 msgid "Default: *128*"
 msgstr "Predeterminado: \"128\""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:50
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:102
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:161
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:196
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:260
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:309
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:357
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:457
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:619
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:704
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:816
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:936
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1041
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1131
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1238
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1358
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1496
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1559
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:49
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:101
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:160
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:195
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:259
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:308
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:356
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:456
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:618
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:703
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:815
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:935
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1040
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1130
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1237
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1357
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1495
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1558
 msgid "Outputs"
 msgstr "Salidas"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:53
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:52
 msgid "``Output regularized image`` [raster]"
-msgstr ""
+msgstr "``Imagen regularizada de salida`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:53
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:105
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:164
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:199
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:263
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:312
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:360
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:460
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:463
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:622
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:625
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:707
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:710
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:819
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:822
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:939
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:942
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1044
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1047
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1134
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1137
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1241
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1244
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1361
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1364
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1499
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1502
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1562
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1565
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:52
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:104
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:163
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:198
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:262
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:311
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:359
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:459
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:462
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:621
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:624
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:706
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:709
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:818
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:821
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:938
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:941
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1043
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1046
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1133
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1136
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1240
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1243
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1360
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1363
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1498
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1501
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1561
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1564
 msgid "<put output description here>"
 msgstr "<colocar aquí la descripción de la salida>"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:56
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:108
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:167
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:202
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:266
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:315
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:363
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:466
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:628
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:713
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:825
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:945
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1050
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1140
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1247
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1367
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1505
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1568
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:55
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:107
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:166
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:201
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:265
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:314
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:362
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:465
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:627
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:712
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:824
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:944
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1049
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1139
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1246
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1366
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1504
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1567
 msgid "Console usage"
 msgstr "Uso de la consola"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:63
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:115
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:174
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:209
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:273
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:322
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:370
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:473
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:635
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:720
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:832
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:952
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1057
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1147
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1254
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1374
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1512
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1575
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:62
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:114
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:173
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:208
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:272
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:321
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:369
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:472
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:634
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:719
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:831
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:951
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1056
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1146
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1253
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1373
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1511
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1574
 msgid "See also"
 msgstr "Ver también "
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:66
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:65
 msgid "ComputeConfusionMatrix (raster)"
-msgstr ""
+msgstr "ProcesarMatrizDeConfusión (ráster)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:77
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:129
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:336
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1526
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:76
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:128
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:335
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1525
 msgid "``Input Image`` [raster]"
-msgstr ""
+msgstr "``Imagen de entrada`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:86
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:138
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:85
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:137
 msgid "``Ground truth`` [selection]"
-msgstr ""
+msgstr "``Realidad del terreno`` [selection]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:82
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:134
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:228
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:240
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:292
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:530
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:539
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:554
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:595
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:692
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:777
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:786
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:889
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1009
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1114
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1204
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1213
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1311
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1431
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1440
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1451
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:81
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:133
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:227
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:239
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:291
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:529
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:538
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:553
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:594
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:691
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:776
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:785
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:888
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1008
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1113
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1203
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1212
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1310
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1430
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1439
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1450
 msgid "Options:"
 msgstr "Opciones:"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:84
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:83
 msgid "0 --- raster"
-msgstr ""
+msgstr "0 --- raster"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:89
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:88
 msgid "``Input reference image`` [raster]"
-msgstr ""
+msgstr "``Imagen de referencia de entrada`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:94
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:153
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:93
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:152
 msgid "``Value for nodata pixels`` [number]"
-msgstr ""
+msgstr "``Valor para píxeles sin dato`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:105
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:164
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:104
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:163
 msgid "``Matrix output`` [file]"
-msgstr ""
+msgstr "``Matriz de salida`` [file]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:118
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:117
 msgid "ComputeConfusionMatrix (vector)"
-msgstr ""
+msgstr "ProcesarMatrizDeConfusión (vectorial)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:136
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:135
 msgid "0 --- vector"
-msgstr ""
+msgstr "0 --- vector"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:141
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:140
 msgid "``Input reference vector data`` [file]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:148
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:147
 msgid "``Field name`` [string]"
-msgstr ""
+msgstr "``Nombre del campo`` [string]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:144
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:339
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:347
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:387
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:493
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:655
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:740
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:852
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:972
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1077
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1167
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1274
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1394
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1534
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:143
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:338
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:346
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:386
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:492
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:654
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:739
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:851
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:971
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1076
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1166
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1273
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1393
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1533
 msgid "Optional."
 msgstr "Opcional"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:148
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:525
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:687
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:772
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:884
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1004
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1109
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1199
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1306
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1426
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:147
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:524
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:686
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:771
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:883
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1003
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1108
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1198
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1305
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1425
 msgid "Default: *Class*"
-msgstr ""
+msgstr "Por defecto: *Clase*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:177
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:176
 msgid "Compute Images second order statistics"
-msgstr ""
+msgstr "Estadísticas de segundo orden de procesamiento de imágenes"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:188
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:187
 msgid "``Input images`` [multipleinput: rasters]"
-msgstr ""
+msgstr "``Imágenes de entrada`` [multipleinput: rasters]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:193
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:192
 msgid "``Background Value`` [number]"
 msgstr "\"Valor de Respaldo\" [número]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:193
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:192
 msgid "Default: *0.0*"
 msgstr "Por defecto: *0.0*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:199
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:198
 msgid "``Output XML file`` [file]"
 msgstr "``Archivo XML de salida`` [file]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:212
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:211
 msgid "FusionOfClassifications (dempstershafer)"
-msgstr ""
+msgstr "FusiónDeClasificaciones (dempstershafer)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:223
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:287
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:222
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:286
 msgid "``Input classifications`` [multipleinput: rasters]"
-msgstr ""
+msgstr "``Clasificaciones de entrada`` [multipleinput: rasters]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:232
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:296
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:231
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:295
 msgid "``Fusion method`` [selection]"
-msgstr ""
+msgstr "``Método Fusión`` [selection]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:230
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:229
 msgid "0 --- dempstershafer"
-msgstr ""
+msgstr "0 --- dempstershafer"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:235
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:234
 msgid "``Confusion Matrices`` [multipleinput: files]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:247
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:246
 msgid "``Mass of belief measurement`` [selection]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:242
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:241
 msgid "0 --- precision"
-msgstr ""
+msgstr "0 --- precisión"
+
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:242
+msgid "1 --- recall"
+msgstr "1 --- recall"
 
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:243
-msgid "1 --- recall"
-msgstr ""
+msgid "2 --- accuracy"
+msgstr "2 --- accuracy"
 
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:244
-msgid "2 --- accuracy"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:245
 msgid "3 --- kappa"
-msgstr ""
+msgstr "3 --- kappa"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:263
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:312
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:262
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:311
 msgid "``The output classification image`` [raster]"
-msgstr ""
+msgstr "``La imagen de clasificación de salida`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:276
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:275
 msgid "FusionOfClassifications (majorityvoting)"
 msgstr "FusiónDeClasificaciones (votomayoritario)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:294
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:293
 msgid "0 --- majorityvoting"
-msgstr ""
+msgstr "0 --- majorityvoting"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:325
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:324
 msgid "Image Classification"
-msgstr ""
+msgstr "Clasificación de imágenes"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:341
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:340
 msgid "``Input Mask`` [raster]"
-msgstr ""
+msgstr "``Máscara de entrada`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:344
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:343
 msgid "``Model file`` [file]"
-msgstr ""
+msgstr "``Archivo de modelo`` [file]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:349
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:348
 msgid "``Statistics file`` [file]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:360
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1562
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:359
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1561
 msgid "``Output Image`` [raster]"
-msgstr ""
+msgstr "``Imagen de salida`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:373
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:372
 msgid "SOM Classification"
 msgstr "Clasificación SOM"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:384
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:383
 msgid "``InputImage`` [raster]"
-msgstr ""
+msgstr "``InputImage`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:389
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:388
 msgid "``ValidityMask`` [raster]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:394
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:393
 msgid "``TrainingProbability`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:399
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:398
 msgid "``TrainingSetSize`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:404
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:403
 msgid "``StreamingLines`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:409
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:408
 msgid "``SizeX`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:409
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:414
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1123
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:408
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:413
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1122
 msgid "Default: *32*"
 msgstr "Predeterminado: *32*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:414
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:413
 msgid "``SizeY`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:419
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:418
 msgid "``NeighborhoodX`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:419
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:424
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:903
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:913
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:918
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1325
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1335
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:418
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:423
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:902
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:912
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:917
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1324
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1334
 msgid "Default: *10*"
 msgstr "Predeterminado: *10*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:424
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:423
 msgid "``NeighborhoodY`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:429
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:428
 msgid "``NumberIteration`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:429
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1320
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1546
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:428
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1319
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1545
 msgid "Default: *5*"
 msgstr "Predeterminado: *5*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:434
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:433
 msgid "``BetaInit`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:439
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:438
 msgid "``BetaFinal`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:439
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:575
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:580
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:585
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:438
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:574
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:579
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:584
 msgid "Default: *0.1*"
 msgstr "Por defecto: *0.1*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:444
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:443
 msgid "``InitialValue`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:454
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:616
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:701
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:813
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:933
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1038
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1128
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1235
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1355
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1493
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:453
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:615
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:700
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:812
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:932
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1037
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1127
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1234
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1354
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1492
 msgid "``set user defined seed`` [number]"
-msgstr ""
+msgstr "``Establecer semillas definidas por el usuario`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:460
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:459
 msgid "``OutputImage`` [raster]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:463
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:462
 msgid "``SOM Map`` [raster]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:476
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:475
 msgid "TrainImagesClassifier (ann)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:487
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:649
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:734
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:846
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:966
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1071
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1161
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1268
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1388
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:486
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:648
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:733
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:845
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:965
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1070
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1160
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1267
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1387
 msgid "``Input Image List`` [multipleinput: rasters]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:490
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:652
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:737
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:849
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:969
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1074
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1164
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1271
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1391
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:489
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:651
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:736
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:848
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:968
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1073
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1163
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1270
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1390
 msgid "``Input Vector Data List`` [multipleinput: any vectors]"
 msgstr "\"Lista de Datos del Vector de Entrada\" [Entrada múltiple: vectores]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:495
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:657
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:742
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:854
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:974
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1079
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1169
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1276
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1396
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:494
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:656
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:741
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:853
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:973
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1078
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1168
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1275
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1395
 msgid "``Input XML image statistics file`` [file]"
 msgstr "\"Ingresar archivo de estadísticas de imagen XML\" [archivo]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:500
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:662
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:747
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:859
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:979
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1084
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1174
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1281
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1401
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:499
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:661
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:746
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:858
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:978
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1083
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1173
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1280
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1400
 msgid "``Default elevation`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:505
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:667
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:752
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:864
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:984
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1089
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1179
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1286
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1406
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:504
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:666
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:751
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:863
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:983
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1088
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1178
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1285
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1405
 msgid "``Maximum training sample size per class`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:505
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:510
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:611
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:667
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:672
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:752
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:757
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:864
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:869
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:984
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:989
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1089
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1094
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1179
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1184
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1286
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1291
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1406
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1411
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1551
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:504
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:509
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:610
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:666
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:671
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:751
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:756
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:863
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:868
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:983
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:988
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1088
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1093
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1178
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1183
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1285
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1290
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1405
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1410
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1550
 msgid "Default: *1000*"
 msgstr "Predeterminado: *1000*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:510
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:672
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:757
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:869
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:989
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1094
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1184
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1291
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1411
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:509
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:671
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:756
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:868
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:988
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1093
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1183
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1290
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1410
 msgid "``Maximum validation sample size per class`` [number]"
-msgstr ""
+msgstr "``Tamaño máximo de la muestra de validación por clase`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:515
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:677
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:762
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:874
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:994
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1099
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1189
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1296
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1416
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:514
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:676
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:761
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:873
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:993
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1098
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1188
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1295
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1415
 msgid "``On edge pixel inclusion`` [boolean]"
-msgstr ""
+msgstr "``Inclusión de píxeles de borde`` [boolean]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:520
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:682
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:767
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:879
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:999
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1104
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1194
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1301
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1421
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:519
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:681
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:766
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:878
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:998
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1103
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1193
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1300
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1420
 msgid "``Training and validation sample ratio`` [number]"
-msgstr ""
+msgstr "``Proporción de muestreo de entrenamiento y validación`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:520
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:682
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:767
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:879
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:999
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1104
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1194
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1301
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1421
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:519
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:681
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:766
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:878
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:998
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1103
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1193
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1300
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1420
 msgid "Default: *0.5*"
 msgstr "Predeterminado: *0.5*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:525
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:687
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:772
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:884
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1004
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1109
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1199
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1306
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1426
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:524
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:686
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:771
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:883
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1003
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1108
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1198
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1305
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1425
 msgid "``Name of the discrimination field`` [string]"
-msgstr ""
+msgstr "``Nombre del campo de discriminación`` [string]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:534
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:696
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:781
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:893
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1013
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1118
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1208
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1315
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1435
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:533
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:695
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:780
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:892
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1012
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1117
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1207
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1314
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1434
 msgid "``Classifier to use for the training`` [selection]"
-msgstr ""
+msgstr "``Clasificador a utilizar para la formación`` [selection]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:532
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:531
 msgid "0 --- ann"
 msgstr "0 --- ann"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:544
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:543
 msgid "``Train Method Type`` [selection]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:541
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:540
 msgid "0 --- reg"
 msgstr "0 --- reg"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:542
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:541
 msgid "1 --- back"
 msgstr "1 --- atrás"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:549
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:548
 msgid "``Number of neurons in each intermediate layer`` [string]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:549
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:548
 msgid "Default: *None*"
 msgstr "Predeterminado: *Ninguno*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:560
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:559
 msgid "``Neuron activation function type`` [selection]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:556
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:555
 msgid "0 --- ident"
-msgstr ""
+msgstr "0 --- ident"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:557
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:556
 msgid "1 --- sig"
 msgstr "1 --- sig"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:558
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:557
 msgid "2 --- gau"
 msgstr "2 --- gau"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:565
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:564
 msgid "``Alpha parameter of the activation function`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:570
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:569
 msgid "``Beta parameter of the activation function`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:575
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:574
 msgid ""
 "``Strength of the weight gradient term in the BACKPROP method`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:580
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:579
 msgid ""
 "``Strength of the momentum term (the difference between weights on the 2 "
 "previous iterations)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:585
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:584
 msgid ""
 "``Initial value Delta_0 of update-values Delta_{ij} in RPROP method`` "
 "[number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:590
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:589
 msgid "``Update-values lower limit Delta_{min} in RPROP method`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:590
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:589
 msgid "Default: *1e-07*"
 msgstr "Predeterminado: *1e-07*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:601
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:600
 msgid "``Termination criteria`` [selection]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:597
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:596
 msgid "0 --- iter"
-msgstr ""
+msgstr "0 --- iter"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:598
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:597
 msgid "1 --- eps"
 msgstr "1 --- eps"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:599
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:598
 msgid "2 --- all"
 msgstr "2 --- todos"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:601
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:600
 msgid "Default: *2*"
 msgstr "Predeterminado: *2*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:606
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:605
 msgid "``Epsilon value used in the Termination criteria`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:606
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:908
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1023
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1350
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:605
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:907
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1022
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1349
 msgid "Default: *0.01*"
 msgstr "Predeterminado: *0.01*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:611
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:610
 msgid ""
 "``Maximum number of iterations used in the Termination criteria`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:622
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:707
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:819
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:939
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1044
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1134
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1241
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1361
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1499
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:621
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:706
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:818
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:938
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1043
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1133
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1240
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1360
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1498
 msgid "``Output confusion matrix`` [file]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:625
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:710
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:822
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:942
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1047
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1137
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1244
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1364
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1502
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:624
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:709
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:821
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:941
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1046
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1136
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1243
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1363
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1501
 msgid "``Output model`` [file]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:638
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:637
 msgid "TrainImagesClassifier (bayes)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:694
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:693
 msgid "0 --- bayes"
 msgstr "0 --- bayes"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:723
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:722
 msgid "TrainImagesClassifier (boost)"
-msgstr ""
+msgstr "TrainImagesClassifier (boost)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:779
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:778
 msgid "0 --- boost"
-msgstr ""
+msgstr "0 --- aumentar"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:793
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:792
 msgid "``Boost Type`` [selection]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:788
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:787
 msgid "0 --- discrete"
 msgstr "0 --- discreto"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:789
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:788
 msgid "1 --- real"
 msgstr "1 --- real"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:790
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:789
 msgid "2 --- logit"
 msgstr "2 --- logit"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:791
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:790
 msgid "3 --- gentle"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:798
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:797
 msgid "``Weak count`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:798
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1345
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1541
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:797
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1344
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1540
 msgid "Default: *100*"
 msgstr "Predeterminado: *100*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:803
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:802
 msgid "``Weight Trim Rate`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:803
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:802
 msgid "Default: *0.95*"
-msgstr ""
+msgstr "Predeterminado: *0.95*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:808
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:898
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1033
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1320
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:807
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:897
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1032
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1319
 msgid "``Maximum depth of the tree`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:835
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:834
 msgid "TrainImagesClassifier (dt)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:891
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:890
 msgid "0 --- dt"
-msgstr ""
+msgstr "0 --- dt"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:898
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:897
 msgid "Default: *65535*"
-msgstr ""
+msgstr "Predeterminado: *65535*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:903
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1325
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:902
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1324
 msgid "``Minimum number of samples in each node`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:908
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:907
 msgid "``Termination criteria for regression tree`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:913
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1335
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:912
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1334
 msgid ""
 "``Cluster possible values of a categorical variable into K <= cat clusters "
 "to find a suboptimal split`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:918
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:917
 msgid "``K-fold cross-validations`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:923
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:922
 msgid "``Set Use1seRule flag to false`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:928
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:927
 msgid "``Set TruncatePrunedTree flag to false`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:955
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:954
 msgid "TrainImagesClassifier (gbt)"
-msgstr ""
+msgstr "TrainImagesClassifier (gbt)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1011
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1010
 msgid "0 --- gbt"
-msgstr ""
+msgstr "0 --- gbt"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1018
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1017
 msgid "``Number of boosting algorithm iterations`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1018
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1017
 msgid "Default: *200*"
-msgstr ""
+msgstr "Predeterminado: *200*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1023
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1022
 msgid "``Regularization parameter`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1028
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1027
 msgid ""
 "``Portion of the whole training set used for each algorithm iteration`` "
 "[number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1028
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1027
 msgid "Default: *0.8*"
-msgstr ""
+msgstr "Predeterminado: *0.8*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1033
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1032
 msgid "Default: *3*"
-msgstr ""
+msgstr "Predeterminado: *3*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1060
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1059
 msgid "TrainImagesClassifier (knn)"
-msgstr ""
+msgstr "TrainImagesClassifier (knn)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1116
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1115
 msgid "0 --- knn"
-msgstr ""
+msgstr "0 --- knn"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1123
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1122
 msgid "``Number of Neighbors`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1150
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1149
 msgid "TrainImagesClassifier (libsvm)"
-msgstr ""
+msgstr "TrainImagesClassifier (libsvm)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1206
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1205
 msgid "0 --- libsvm"
-msgstr ""
+msgstr "0 --- libsvm"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1220
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1458
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1219
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1457
 msgid "``SVM Kernel Type`` [selection]"
 msgstr ""
 
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1214
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1452
+msgid "0 --- linear"
+msgstr "0 --- lineal"
+
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1215
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1453
-msgid "0 --- linear"
-msgstr ""
+msgid "1 --- rbf"
+msgstr "1 --- rbf"
 
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1216
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1454
-msgid "1 --- rbf"
-msgstr ""
+msgid "2 --- poly"
+msgstr "2 --- poly"
 
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1217
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1455
-msgid "2 --- poly"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1218
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1456
 msgid "3 --- sigmoid"
-msgstr ""
+msgstr "3 --- sigmoide"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1225
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1463
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1224
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1462
 msgid "``Cost parameter C`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1230
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1488
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1229
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1487
 msgid "``Parameters optimization`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1257
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1256
 msgid "TrainImagesClassifier (rf)"
-msgstr ""
+msgstr "TrainImagesClassifier (rf)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1313
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1312
 msgid "0 --- rf"
-msgstr ""
+msgstr "0 --- rf"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1330
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1329
 msgid "``Termination Criteria for regression tree`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1340
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1339
 msgid ""
 "``Size of the randomly selected subset of features at each tree node`` "
 "[number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1345
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1344
 msgid "``Maximum number of trees in the forest`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1350
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1349
 msgid "``Sufficient accuracy (OOB error)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1377
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1376
 msgid "TrainImagesClassifier (svm)"
-msgstr ""
+msgstr "TrainImagesClassifier (svm)"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1433
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1432
 msgid "0 --- svm"
-msgstr ""
+msgstr "0 --- svm"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1446
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1445
 msgid "``SVM Model Type`` [selection]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1442
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1441
 msgid "0 --- csvc"
-msgstr ""
+msgstr "0 --- csvc"
+
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1442
+msgid "1 --- nusvc"
+msgstr "1 --- nusvc"
 
 #: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1443
-msgid "1 --- nusvc"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1444
 msgid "2 --- oneclass"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1468
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1467
 msgid ""
 "``Parameter nu of a SVM optimization problem (NU_SVC / ONE_CLASS)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1473
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1472
 msgid "``Parameter coef0 of a kernel function (POLY / SIGMOID)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1478
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1477
 msgid ""
 "``Parameter gamma of a kernel function (POLY / RBF / SIGMOID)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1483
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1482
 msgid "``Parameter degree of a kernel function (POLY)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1515
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1514
 msgid "Unsupervised KMeans image classification"
-msgstr ""
+msgstr "Clasificación de imágenes KMeans sin supervisión"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1536
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1535
 msgid "``Validity Mask`` [raster]"
-msgstr ""
+msgstr "``Mascara de validación`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1541
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1540
 msgid "``Training set size`` [number]"
-msgstr ""
+msgstr "``Tamaño establecido de entrenamiento`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1546
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1545
 msgid "``Number of classes`` [number]"
-msgstr ""
+msgstr "``Número de clases`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1551
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1550
 msgid "``Maximum number of iterations`` [number]"
-msgstr ""
+msgstr "``Número máximo de iteraciones`` [number]"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1556
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1555
 msgid "``Convergence threshold`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1556
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1555
 msgid "Default: *0.0001*"
-msgstr ""
+msgstr "Predeterminado: *0.0001*"
 
-#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1565
+#: ../../source/docs/user_manual/processing_algs/otb/learning.rst:1564
 msgid "``Centroid filename`` [file]"
 msgstr ""
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

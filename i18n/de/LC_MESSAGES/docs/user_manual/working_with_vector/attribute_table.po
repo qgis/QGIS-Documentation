@@ -145,6 +145,8 @@ msgid ""
 "|editPaste| :sup:`Paste from clipboard to a new row` (also with "
 ":kbd:`Ctrl+v`)"
 msgstr ""
+"|editPaste| :sup:`Paste from clipboard to a new row` (also with "
+":kbd:`Ctrl+v`)"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:67
 msgid ""
@@ -175,6 +177,11 @@ msgid ""
 "expressions as the |calculateField| :sup:`Field Calculator` (see "
 ":ref:`vector_field_calculator`)."
 msgstr ""
+"Unter diesen Knöpfen ist die Feldrechnerleiste (aktiv nur im "
+"Bearbeitungsmodus), die Berechnungen, die schnell auf Attribute angewendet "
+"werden sollen, ermöglicht. Diese Leiste verwendet die gleichen Ausdrücke, "
+"wie der |calculateField| :sup:`Feldrechner` (siehe "
+":ref:`vector_field_calculator`)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:78
 msgid "**Skip WKT geometry**"
@@ -335,10 +342,13 @@ msgid ""
 "rows only. For example, you can alter the number of the ID field of the "
 "layer :file:`regions.shp` with the expression"
 msgstr ""
+"Die Feldrechnerleiste erlaubt es Ihnen, Berechnungen nur auf der "
+"ausgewählten Reihe durchzuführen. Zum Beispiel, können Sie die Nummer des ID"
+" Felds des Layers :file:`regions.shp` mit dem Ausdruck, ändern."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:154
 msgid "as shown in figure_attributes_1_ ."
-msgstr ""
+msgstr "wie in figure_attributes_1_ gezeigt."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:157
 msgid "Filter features"
@@ -349,6 +359,8 @@ msgid ""
 "At the bottom of the attribute table, you have a dropdown list of different "
 "filter:"
 msgstr ""
+"Am unteren Ende der Attributtabelle, haben Sie eine Drop-down-Liste der "
+"verschiedenen Filter:"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:162
 msgid "Show All Features;"
@@ -383,22 +395,35 @@ msgid ""
 ":guilabel:`Advanced filter`. The last kind of filter will open an expression"
 " window, see :ref:`vector_expressions` for more information."
 msgstr ""
+"Die ersten vier selbsterklärend sind, die beiden letzten sind "
+"Ausdrucksfilter. Feld Filter ermöglichen dem Benutzer einen Spaltennamen in "
+"der Liste zu wählen und ein einfaches Formular auf der rechten Seite der "
+"Drop-down-Liste hinzufügen mit dem Ausdrucksparameter *like*. Dieser Filter "
+"wird einen Ausdrucksfilter als :guilabel:`Erweiterter Filter` erstellen. Die"
+" letzte Art von Filter wird ein Ausdrucksfenster öffnen, siehe "
+":ref:`vector_expressions` für weitere Informationen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:178
 msgid "Tab/form mode"
-msgstr ""
+msgstr "Reiter/Formular-Modus"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:180
 msgid ""
 "By default the attribute window displays a table layout. In some case one "
 "should prefer to use a form layout to help edit some features more easily."
 msgstr ""
+"Standardmäßig zeigt das Attributfenster ein Tabellenlayout. In einigen "
+"Fällen sollte man lieber ein Formularlayout verwenden, um einige Funktionen "
+"leichter zu bearbeiten."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:183
 msgid ""
 "You can switch to form layout by clicking in the bottom right, on |openForm|"
 " and switch back to table layout with |openTable|."
 msgstr ""
+"Sie können zum Formularlayout wechseln, indem Sie in der unteren rechten "
+"Ecke auf |openForm| klicken und wechseln Sie zurück zum Tabellenlayout mit "
+"|openTable|."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:187
 msgid "Zoom to feature"
@@ -410,6 +435,9 @@ msgid ""
 "feature you want to zoom in, within the attribute table, and select "
 ":guilabel:`Zoom to feature`."
 msgstr ""
+"Zum zoomen auf ein Objekt, ohne es ausgewählt zu haben, rechtsklicken Sie "
+"auf das gewünschte Objekt innerhalb der Attributtabelle und wählen Sie "
+":guilabel:`Auf Objekt zoomen`."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:193
 msgid "Save selected features as new layer"
@@ -493,22 +521,37 @@ msgid ""
 "digitize features or to automatically calculate a duration between dates "
 "that may change (e.g., using ``now()`` function)."
 msgstr ""
+"Ein :index:`Virtuelles Feld` ist ein Feld, das auf einem Ausdruck basiert "
+"und on-the-fly berechnet wird, das bedeutet, dass seine Werte automatisch "
+"aktualisiert werden, wenn sich die Werte der zugrunde liegenden Parameter "
+"ändern. Der Ausdruck wird einmal eingestellt; Sie müssen das Feld nicht neu "
+"berechnen, wenn sich zugrunde liegende Werte ändern. Zum Beispiel können Sie"
+" ein virtuelles Feld verwenden, wenn Bereiche ausgewertet werden müssen, wie"
+" Sie Features digitalisieren oder um automatisch eine Dauer zwischen Daten "
+"zu berechnen, die sich ändern kann (zum Beispiel unter Verwendung der "
+"``now()`` Funktion)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:240
 msgid "**Use of Virtual Fields**"
-msgstr ""
+msgstr "**Virtuelle Felder benutzen**"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:242
 msgid ""
 "Virtual fields are not permanent in the layer attributes, meaning that "
 "they're only saved and available in the project file they've been created."
 msgstr ""
+"Virtuelle Felder sind nicht dauerhaft in den Layerattributen, was bedeutet, "
+"dass sie in der Projektdatei gespeichert und verfügabr sind, in der sie "
+"gespeichert wurden."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:244
 msgid ""
 "A field can be set virtual only at its creation and the expression used "
 "can't be changed later: you'll need to delete and recreate that field."
 msgstr ""
+"Ein Feld kann nur bei der Erzeugung als virtuell eingestellt werden und der "
+"Ausdruck kann später nicht mehr geändert werden: Sie müssen es löschen und "
+"ein neues erstellen."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:247
 msgid ""
@@ -561,6 +604,12 @@ msgid ""
 "selected features, create a new attribute field where the results of the "
 "calculation will be added or update an existing field."
 msgstr ""
+"Basierend auf dem Dialog :ref:`Expression Builder <functions_list>`, bietet "
+"der Feldrechner Dialog ein komplettes Interface um Ausdrücke zu definieren "
+"und auf ein neues oder existierendes Feld anzuwenden. Wenn Sie den "
+"Feldrechner Dialog verwenden möchten, müssen Sie zunächst auswählen, ob Sie "
+"ein vorhandenes ausgewähltes Merkmal aktualisieren möchten, ein neues Feld "
+"erstellen oder ein existierendes Feld aktualisieren möchten."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:284
 msgid ""
@@ -583,6 +632,9 @@ msgid ""
 ":guilabel:`Expression` tab. We want to calculate the length in km of the "
 "``railroads`` layer from the QGIS sample dataset:"
 msgstr ""
+"Ein kurzes Beispiel zeigt wie der Feldrechner arbeitet, wenn Sie den Reiter "
+":guilabel:`Ausdruck` verwenden. Wir wollen die Länge des 'railroads' Layers "
+"aus dem QGIS Beispieldatensatz in km berechnen: "
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:294
 msgid ""
@@ -685,6 +737,9 @@ msgid ""
 "|rendererAttributeTable| at the top right of the attributes window in table "
 "view (not available in form view)."
 msgstr ""
+"Sie können das :index:`Bedingte Formatierung` Bedienfeld aktiveren, indem "
+"Sie auf |rendererAttributeTable| oben rechts des Attributfensters in der "
+"Tabellenansicht klicken (nicht verfügbar in der Formularansicht)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:336
 msgid ""
@@ -692,22 +747,27 @@ msgid ""
 "field or full row in regard of the expression on field. Adding new rule open"
 " a form to define:"
 msgstr ""
+"Das neue Bedienfeld ermöglicht es dem Benutzer neue Regeln zum bedingten "
+"Formatieren von Feldern hinzuzufügen oder ganze Reihen im Bezug auf den "
+"Ausdruck des Felds. Neue Regeln öffnet ein Formular in dem Sie einstellen "
+"können:"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:340
 msgid "the name of the rule,"
-msgstr "der Name der Regel,"
+msgstr "den Namen der Regel,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:341
 msgid "a condition from expression window,"
-msgstr ""
+msgstr "eine Bedingung aus dem Ausdrucksfenster,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:342
 msgid "a preset formatting"
-msgstr ""
+msgstr "eine voreingestellte Formatierung"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:343
 msgid "some other parameters to improve, change or setup the formatting:"
 msgstr ""
+"einige andere Parameter um die Formatierung zu verbessern oder ändern:"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:345
 msgid "background and text colors,"
@@ -715,11 +775,11 @@ msgstr "Hintergrund- und Textfarbe,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid "use of icon,"
-msgstr ""
+msgstr "Icons benutzen,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:347
 msgid "bold, italic underline, or strikeout,"
-msgstr ""
+msgstr "fett, kursiv, unterstrichen oder durchgestrichen,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:348
 msgid "text field,"
@@ -1035,7 +1095,7 @@ msgstr "Feldrechner"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Derived Fields"
-msgstr ""
+msgstr "Abgeleitete Felder"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Virtual Fields"

@@ -366,27 +366,27 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:162
 msgid "Show All Features;"
-msgstr "Montrer toutes les entités;"
+msgstr "Montrer toutes les entités ;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:163
 msgid "Show Selected Features;"
-msgstr "Ne montrer que les entités sélectionnées;"
+msgstr "Ne montrer que les entités sélectionnées ;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:164
 msgid "Show Features visible on map;"
-msgstr "Ne montrer que les entités visibles sur la carte;"
+msgstr "Ne montrer que les entités visibles sur la carte ;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:165
 msgid "Show Edited and New Features;"
-msgstr "Ne montrer que les entités nouvelles ou éditées;"
+msgstr "Ne montrer que les entités nouvelles ou éditées ;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:166
 msgid "Field Filter;"
-msgstr "Filtre de colonne;"
+msgstr "Filtre de champ ;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:167
 msgid "Advanced filter (Expression);"
-msgstr "Filtre avancé (expression);"
+msgstr "Filtre avancé (expression) ;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:169
 msgid ""
@@ -397,6 +397,14 @@ msgid ""
 ":guilabel:`Advanced filter`. The last kind of filter will open an expression"
 " window, see :ref:`vector_expressions` for more information."
 msgstr ""
+"Les quatre premiers sont assez explicites, les deux derniers sont des "
+"filtres basés sur une expression. Le Filtre de champ permet à l'utilisateur "
+"de choisir un nom de champ dans la liste, ce qui ajoute un formulaire sur la"
+" droite qui permet de rentrer un paramètre de filtre sur ce champ, évalué "
+"par l'opérateur *like*. Ce filtre va générer une expression tel un "
+":guilabel:`Filtre avancé`. Cliquer sur le dernier type de filtre ouvre une "
+"fenêtre pour écrire une expression, voir :ref:`vector_expressions` pour plus"
+" d'information."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:178
 msgid "Tab/form mode"
@@ -514,6 +522,15 @@ msgid ""
 "digitize features or to automatically calculate a duration between dates "
 "that may change (e.g., using ``now()`` function)."
 msgstr ""
+"Un :index:`Champ virtuel` est un champ basé sur une expression et calculé à "
+"la volée, c'est-à-dire que sa valeur est mise à jour automatiquement dès que"
+" l'un des paramètres utilisés dans l'expression change. L'expression est "
+"définie une fois pour toute, il n'est donc pas nécessaire de recalculer le "
+"champ à chaque fois qu'un paramètre change. Par exemple, vous pouvez "
+"utiliser un champ virtuel pour calculer la superficie des entités qui "
+"viennent d'être numérisées ou pour calculer automatiquement un intervalle de"
+" temps entre des dates qui changent (par ex. en utilisant la fonction "
+"``now()``)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:240
 msgid "**Use of Virtual Fields**"
@@ -524,12 +541,17 @@ msgid ""
 "Virtual fields are not permanent in the layer attributes, meaning that "
 "they're only saved and available in the project file they've been created."
 msgstr ""
+"Les champs virtuels ne sont pas des attributs permanents, ils ne sont "
+"sauvegardés et disponibles que dans le projet dans lequel ils ont été créés."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:244
 msgid ""
 "A field can be set virtual only at its creation and the expression used "
 "can't be changed later: you'll need to delete and recreate that field."
 msgstr ""
+"Un champ est défini comme virtuel uniquement à sa création et l'expression "
+"utilisée pour le générer ne peut pas être modifiée par la suite : pour le "
+"faire, vous devez supprimer et recréer le champ."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:247
 msgid ""
@@ -561,6 +583,11 @@ msgid ""
 "directly in the field then click on **[Update All]**, **[Update Selected]** "
 "or **[Update Filtered]** button according to your need."
 msgstr ""
+"Dans la :index:`barre de calcul` de champ, vous sélectionnez d'abord le "
+"champ à éditer puis ouvrez le calculateur d'expressions pour saisir "
+"l'expression ou écrivez directement dans le champ de saisie et enfin cliquez"
+" sur le bouton **[Tout mettre à jour]**, **[Mettre à jour la sélection]** ou"
+" **[Mise à jour filtrée]** selon votre besoin."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:264
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:282
@@ -577,6 +604,13 @@ msgid ""
 "selected features, create a new attribute field where the results of the "
 "calculation will be added or update an existing field."
 msgstr ""
+"Basé sur le :ref:`Constructeur d'expression <functions_list>`, la "
+"Calculatrice de champ propose une interface complète de création "
+"d'expression pour l'appliquer à un champ existant ou à créer. Pour utiliser "
+"cette calculatrice de champ, vous devez tout d'abord choisir si vous voulez "
+"mettre à jour uniquement une éventuelle sélection, créer un nouveau champ où"
+" les résultats de l'expression seront enregistrés ou mettre à jour un champ "
+"existant."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:284
 msgid ""
@@ -694,7 +728,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:330
 msgid "Conditional formatting of Table Cells"
-msgstr ""
+msgstr "Mise en forme conditionnelle des cellules de la table d’attributs"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:332
 msgid ""
@@ -702,6 +736,10 @@ msgid ""
 "|rendererAttributeTable| at the top right of the attributes window in table "
 "view (not available in form view)."
 msgstr ""
+"Vous pouvez afficher le panneau de :index:`Mise en forme conditionnelle` en "
+"cliquant sur |rendererAttributeTable| en haut à droite de la fenêtre de la "
+"table d'attributs en vue tabulaire (bouton non disponible en vue "
+"formulaire)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:336
 msgid ""
@@ -709,46 +747,51 @@ msgid ""
 "field or full row in regard of the expression on field. Adding new rule open"
 " a form to define:"
 msgstr ""
+"Ce nouveau panneau permet à l'utilisateur d'ajouter des règles pour la mise "
+"en forme de champs ou de lignes complètes en fonction d'une expression. "
+"Ajouter une nouvelle règle ouvre un formulaire pour définir :"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:340
 msgid "the name of the rule,"
-msgstr ""
+msgstr "le nom de la règle,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:341
 msgid "a condition from expression window,"
-msgstr ""
+msgstr "la condition basée sur une expression,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:342
 msgid "a preset formatting"
-msgstr ""
+msgstr "un formatage prédéfini,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:343
 msgid "some other parameters to improve, change or setup the formatting:"
 msgstr ""
+"quelques autres paramètres pour améliorer, modifier ou définir le formatage "
+":"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:345
 msgid "background and text colors,"
-msgstr ""
+msgstr "couleurs d'arrière-plan et du texte,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid "use of icon,"
-msgstr ""
+msgstr "utilisation d'une Icône,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:347
 msgid "bold, italic underline, or strikeout,"
-msgstr ""
+msgstr "texte en gras, italique, souligné ou barré,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:348
 msgid "text field,"
-msgstr ""
+msgstr "texte,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:349
 msgid "font."
-msgstr ""
+msgstr "police."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:360
 msgid "Conditional Formatting of an attribute table"
-msgstr ""
+msgstr "Mise en forme conditionnelle des cellules de la table d’attributs"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:367
 msgid "Creating one to many relations"
@@ -941,8 +984,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:468
 msgid "Identification dialog regions with relation to airports"
 msgstr ""
-"Formulaire de la couche des régions affichant la relations avec les "
-"aéroports"
+"Formulaire de la couche des régions affichant la relation avec les aéroports"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:470
 msgid ""
@@ -1065,7 +1107,7 @@ msgstr "Tables d'attributs non spatiales"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:327
 msgid "conditional_formatting"
-msgstr ""
+msgstr "mise en forme conditionnelle"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:363
 msgid "Relations"

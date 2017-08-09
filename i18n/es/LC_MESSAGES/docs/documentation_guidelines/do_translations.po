@@ -3,15 +3,20 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# Cris C <cristina.calvoguinea@gmail.com>, 2017
+# Fernando Herranz <fdjherranz@gmail.com>, 2017
+# Joyce Silva <jesilva1000@gmail.com>, 2017
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2017
 # Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2014-2015
 # Morphyne <cirrosis60@gmail.com>, 2014
+# YoViajo, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:39+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-03-08 05:06+0000\n"
+"Last-Translator: Fernando Herranz <fdjherranz@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,12 +42,12 @@ msgstr "Para explicar cómo funciona la traducción, vamos a usar el componente 
 msgid ""
 "These \"originals\" are copied by the script to the i18n folders for other "
 "languages."
-msgstr "Estos \"originales\" son copiados por un script a el forder i18n para otros idiomas."
+msgstr "Estos \"originales\" son copiados mediante un script al directorio i18n para otros idiomas."
 
 # 2e587af8b1b34dc19d928297ce2127e4
 #: ../../source/docs/documentation_guidelines/do_translations.rst:88
 msgid "So why did I choose this document?"
-msgstr "Entonces, ¿Por qué elegí este documento?"
+msgstr "Entonces, ¿por qué elegí este documento?"
 
 # c8395ba3445e42cd8f2ca768be3cc689
 #: ../../source/docs/documentation_guidelines/do_translations.rst:90
@@ -50,7 +55,7 @@ msgid ""
 "It is considered finished for the current release. If it is not yet "
 "completed the following statement followed by an empty line can be found in "
 "the top of the document."
-msgstr "Se considera finalizado para la actual versión. Si todavía no se ha completado la siguiente sentencia seguido por una línea vacía puede ser encontrado al inicio del documento."
+msgstr "Se considera finalizado para la actual versión. Si aún no se ha completado, se encontrará la siguiente sentencia al inicio del documento, seguida por una línea vacía."
 
 # 9eb91aefb0d04c54a50a752de5d05677
 #: ../../source/docs/documentation_guidelines/do_translations.rst:96
@@ -196,31 +201,31 @@ msgid ""
 "how technically a translation is done is explained. Later the translation is"
 " explained from an actual English rst document that is translated to Dutch. "
 "Finally a summary of `Rules of translation <translation_summary>`_ is given."
-msgstr ""
+msgstr "El objetivo de este manual es servir de ayuda al traductor. En primer lugar, se explica el proceso general de cómo se lleva a cabo una traducción desde el punto de vista técnico. Después, se explica la traducción en sí, a partir del documento rst en inglés que se traduce a holandés. Por último, se dan una serie de `Reglas de traducción <translation_summary>`."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:20
 msgid ""
 "Although these guidelines focus on QGIS documentation, the methods and the "
 "rules described below are also applicable to QGIS applications and website "
 "translation."
-msgstr ""
+msgstr "Aunque estas directrices están enfocadas a la documentación de QGIS, los procedimientos y reglas descritas también son aplicables a la traducción de aplicaciones y sitio web de QGIS."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:27
 msgid "Translation process"
-msgstr ""
+msgstr "Proceso de traducción"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:29
 msgid ""
 "To create documentation first ``.rst`` documents are created. A prebuild "
 "script creates translation files named ``.po`` files for the english "
 "language in the folder :file:`/QGIS-Documentation/i18n/en`."
-msgstr ""
+msgstr "Para crear documentación, en primer lugar se crean los documentos ``.rst``. Un script pre-compilado crea los archivos de traducción, denominados archivos ``.po`` correspondientes al idioma inglés en el directorio :file:`/QGIS-Documentation/i18n/en`."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:35
 msgid ""
 "The sentences in the ``.po`` files need to be translated from english to the"
 " language with a translation tool editor."
-msgstr ""
+msgstr "Es necesario traducir los archivos ``.po`` del inglés a otro idioma con la herramienta de edición de traducción."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:38
 msgid ""
@@ -229,7 +234,7 @@ msgid ""
 "file is placed back in the right place and during the next build the build "
 "script now creates ``.mo`` files next to the ``.po`` files. These ``.mo`` "
 "files are actually used by the script to create translated output."
-msgstr ""
+msgstr "Cuando quieras contribuir, en primer lugar elige un archivo ``.po``, y traduce las frases de dicho archivo. Cuando hayas terminado, el archivo ``.po`` se guarda de nuevo en el lugar correspondiente, y la siguiente vez que se ejecute el script de compilación se crearán los archivos ``.mo`` junto a los archivo ``.po``. Estos archivos ``.mo`` serán empleados por el script para crear el resultado final traducido."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:45
 msgid ""
@@ -240,11 +245,11 @@ msgid ""
 "sentences are added in the translated ``.po`` file and needs to be "
 "translated. The amount of work for updating translations for next versions "
 "of QGIS should be relative small."
-msgstr ""
+msgstr "Cada vez que se actualiza un documento rst, se crea un nuevo archivo ``.po`` en la parte correspondiente al idioma inglés. El contenido de este nuevo archivo se fusionará con el que ya existía en los archivos ``.po`` de cada idioma. Esto significa que, cada vez que se añade una nueva línea a un documento rst ya traducido, solo se añaden las frases nuevas/actualizadas al documento ``.po`` traducido, para que sean traducidas. La cantidad de trabajo necesaria par actualizar las traducciones de las siguientes versiones de QGIS debería ser relativamente pequeña."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:53
 msgid "Two different tools are currently used to do translations in QGIS:"
-msgstr ""
+msgstr "En la actualidad, para realizar las traducciones de QGIS se utilizan dos herramientas distintas:"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:55
 msgid ""
@@ -252,18 +257,18 @@ msgid ""
 "QGIS, transparently does the process described above and pulls all the "
 "translatable texts in one place for the translator. He then just picks the "
 "files he wants and does the translation"
-msgstr ""
+msgstr "la plataforma web Transifex, el modo más fácil y recomendable para realizar la traducción de QGIS, lleva a cabo el proceso descrito en los anteriore párrafos de forma transparente, poniendo a disposición del traductor todos los textos pendientes de traducción en un único lugar. De este modo, el traductor puede elegir los archivos deseados y realizar la traducción."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:59
 msgid ""
 "Qt Linguist, a Qt development tool that requires the translator to pick and "
 "replace the ``.po`` files from the source code."
-msgstr ""
+msgstr "Qt Linguist, un herramienta de desarrollo de Qt development tool that requires the translator to pick and replace the ``.po`` files from the source code."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:62
 msgid ""
 "Note that whatever tool you choose, rules of translations are the same."
-msgstr ""
+msgstr "Recuerda que, independientemente de la herramienta que elijas, las reglas de traducción son las mismas."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:66
 msgid ""
@@ -272,40 +277,40 @@ msgid ""
 " are always translation branches available, once a document is fully updated"
 " in english for a certain version. As an example, to translate the manual of"
 " QGIS 2.8, you have to use the manual_en_v2.8 branch."
-msgstr ""
+msgstr "**Una observación importante:** Si deseas traducir contenido de la carpeta docs (no la carpeta web), no lo hagas jamás en la rama principal. Para las distintas traducciones, siempre hay ramas específicas de traducción disponibles, cada vez que un documento se actualiza en inglés para una versión determinada. Por ejemplo, para traducir el manual de QGIS 2.8, es necesario utilizar la rama manual_en_v2.8. "
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:76
 msgid "Translate a file"
-msgstr ""
+msgstr "Traducir un archivo"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:82
 msgid "The source of the document can be found here:"
-msgstr ""
+msgstr "El documento original puede localizarse aquí:"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:94
 msgid "``|updatedisclaimer|``"
-msgstr ""
+msgstr "``|updatedisclaimer|``"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:103
 msgid ""
 "The build process has created the English ``.po`` file which can be found "
 "here::"
-msgstr ""
+msgstr "El proceso de construcción ha creado el archivo en inglés ``.po`` el cual puede encontrarse aquí::"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:107
 msgid ""
 "The equivalent Dutch ``.po`` file (basically a copy) can be found here::"
-msgstr ""
+msgstr "El archivo holandés equivalente ``.po`` (básicamente una copia) se puede encontrar aquí::"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:111
 msgid ""
 "Along this file you will see a tiny ``.mo`` file which indicates that it "
 "does not hold any translations yet."
-msgstr ""
+msgstr "A lo largo de este archivo verá un pequeño archivo ``.mo`` que indica que aún no tiene traducciones."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:118
 msgid "Translation in Transifex"
-msgstr ""
+msgstr "Traducción en Transifex"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:120
 msgid ""
@@ -319,30 +324,30 @@ msgid ""
 "to download the file and translate it with tools like Qt Linguist. The next "
 "page lists all the sentences in the file. All you need to do is select the "
 "text and translate following the `guidelines <translate_manual>`_."
-msgstr ""
+msgstr "Para traducir QGIS con Transifex, en primer lugar debes `unirte al proyecto <http://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Una vez tienes un equipo, haz clic en el proyecto correspondiente, y dentro de este en tu idioma. Verás una lista de todos los archivos ``.po`` disponibles para traducir. Haz clic en el documento ``docs_user-manual_plugins_plugins-heatmap`` para seleccionar el archivo correspondiente al complemento de mapas de calor, y elige \"Traducir\" en el cuadro de diálogo. Alternativamente, puedes elegir descargar el documento y traducirlo con herramientas como Qt Linguist. La siguiente página contiene una lista con todas las frases del archivo. Todo lo que tienes que hacer para comenzar a traducir es seleccionar el texto y traducir, siguiendo las `directrices <translate_manual>`_."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:131
 msgid ""
 "For further information on the use of Transifex Web Editor, see "
 "http://docs.transifex.com/tutorials/txeditor/."
-msgstr ""
+msgstr "Para mayor información sobre el uso del Editor Web Transifex, vea http://docs.transifex.com/tutorials/txeditor/."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:140
 msgid ""
 "With Qt Linguist, you need to manually grab the ``.po`` file. When you open "
 "the file in Qt Linguist for the first time you will see the following "
 "dialog:"
-msgstr ""
+msgstr "Con Qt Linguist, es necesario que cojas manualmente el archivo ``.po``. Al abrir el archivo en Qt Linguist por primera vez, verás el siguiente cuadro de diálogo:"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:159
 msgid ""
 "When you press the **[OK]** button Qt Linguist is filled with sentences and "
 "you can start translating, see Figure_translation_2_."
-msgstr ""
+msgstr "Al hacer clic en el botón **[OK]**, aparecen en Qt Linguist las frases, y puedes empezar a traducir, ver Figure_translation_2_."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:173
 msgid "Translate using the linguist menu"
-msgstr ""
+msgstr "Traducir usando el menú linguist"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:189
 msgid ""
@@ -351,18 +356,18 @@ msgid ""
 "field, then hit this button. If the item does not need translation just "
 "leave the text field for translation empty and also hit this button which "
 "indicates the item is done and you continue with the next item."
-msgstr ""
+msgstr "|linguist_done_next| El botón de siguiente Traducción hecha, es el más importante. Si los elementos necesitan traducción, ingrese una traducción en la caja de texto, entonces pulse este botón. Si los elementos no necesitan traducción solo deje el campo de texto vacío para la traducción y también pulse este botón que indica que los elementos se hicieron y continúe con el siguiente elemento."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:216
 msgid ""
 "Translating most of the sentences should be straightforward. During this "
 "translation session I will point out which parts (rst statements) need "
 "special translation."
-msgstr ""
+msgstr "Traduciendo la mayoria de las sentencias debería ser sencillo. Durante esta sesión de traducción, señalaré que partes (primeras afirmaciones) necesitan una traducción especial. "
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:220
 msgid "Below we see an interesting sentence to translate:"
-msgstr ""
+msgstr "Abajo vemos una oración interesante a traducir:"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:234
 msgid ""
@@ -371,7 +376,7 @@ msgid ""
 "texts that appear when you hover above the toolbar item and this may be "
 "different when it is actually translated in the QGIS application. In the "
 "Dutch case it is not!"
-msgstr ""
+msgstr "``:sup:`Heatmap```, la``:sup:`` instrucción es una sentencia de superposición e imprime el siguiente texto un poco más alto. Esto se utiliza para mostrar los textos emergentes que aparecen cuando pasa por encima de algún elemento de la barra de herramientas y esto puede ser diferente cuando en realidad es traducido en la aplicación QGIS. ¡En el caso del holandés no lo es!"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:242
 msgid ""
@@ -379,7 +384,7 @@ msgid ""
 "used to refer to another section somewhere in the manual! The text following"
 " a ``:ref:`` statement should never be changed because it is a unique "
 "identifier!"
-msgstr ""
+msgstr "El siguiente elemento de traducción contiene la instrucción ``:ref:`` que es comúnmente utilizado para referirse a otra sección en algún lugar del manual. El siguiente texto una sentencia ``:ref:`` nunca se debe cambiar porque es un identificador único."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:253
 msgid ""
@@ -388,7 +393,7 @@ msgid ""
 "with the text of the header and turned into a hyperlink. When the header "
 "this reference is refering to is translated, all references to this header "
 "will be automatically translated as well."
-msgstr ""
+msgstr "En este caso ``load_core_plugin`` es un identificador de referencia única colocado antes de un elemento rst que tiene un título. La instrucción ref será reemplazada con el texto de título y se convierte en un hiperenlace. Cuando se traduce el encabezado al que hace referencia esta referencia, todas las referencias a este encabezado también se traducirán automáticamente."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:278
 msgid ""
@@ -399,27 +404,27 @@ msgid ""
 "translated. When HTML is created you will see ``figure_heatmap_2``. When a "
 "PDF document is created ``figure_heatmap_2_`` is replaced with a figure "
 "number."
-msgstr ""
+msgstr "Mantiene una referencia a una figura '' figure_heatmap_2_'' y como una referencia a la sección, ¡esta referencia no se debe cambiar! La propia definición de referencia del documento rst no está incluida en el archivo '' .po '' y por lo tanto no puede ser cambiada. Esto significa que la referencia a figuras no puede ser traducida. Cuando se crea el HTML se verá '' figure_heatmap_2''. Cuando se crea un documento PDF, '' figure_heatmap_2_'' se sustituye por un número de figura."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:291
 msgid ""
 "Do not remove the stars in above line. It will print the text it holds in "
 "bold. The text itself is often text included in the dialog itself and may "
 "well be translated in the application."
-msgstr ""
+msgstr "No quite las estrellas en la línea anterior. Se imprimirá el texto que lleva en negrilla. El texto es a menudo texto incluido en el cuadro de diálogo y podrá traducirse en la aplicación."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:302
 msgid ""
 "The text ``Advanced`` of the guilabel tag may well be translated in the QGIS"
 " application and probably needs to be changed!"
-msgstr ""
+msgstr "El texto ''Advanced '' de la etiqueta de guilabel puede también ser traducido en la aplicación de QGIS y, ¡probablemente hay que cambiarlo!"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:305
 msgid ""
 "The following translation item contains \\``airports\\``. The quotes are "
 "used to give the text another text font. In this case it is a literal value "
 "and does not need translation."
-msgstr ""
+msgstr "El siguiente elemento de traducción contiene \\'' airports\\''. Las comillas se utilizan para dar al texto otra fuente tipográfica. En este caso es un valor literal y no necesita traducción."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:318
 msgid ""
@@ -428,71 +433,71 @@ msgid ""
 "change the external text ``http://qgis.spatialthoughts.com`` which is "
 "visible by the reader. Never remove the underscore at the end of the "
 "hyperlink which forms an essential part of it!!"
-msgstr ""
+msgstr "Este elemento también incluye un enlace con la dirección web y una presentación externa. La dirección web debe dejarse intacto por supuesto. Pero se puede cambiar el texto externo '' http://qgis.spatialthoughts.com'' que es visible por el lector. ¡Nunca quite la raya al final del enlace que forma parte esencial de él!"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:330
 msgid ""
 "Do not change text between two ``|`` characters like ``|bronze|``, "
 "``|checkbox|``, ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These "
 "are special tags used to replace images"
-msgstr ""
+msgstr "No cambie el texto entre dos caracteres ``|`` como ``|bronze|``, ``|checkbox|``, ``|labels|``, ``|selectString|``, ``|addLayer|``… Estas son etiquetas especiales que se utilizan para sustituir imágenes."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:333
 msgid ""
 "Do not change references that start with the tag ``:ref:`` or ``:file:``"
-msgstr ""
+msgstr "No cambie las referencias que empiecen con la etiqueta  \":ref:'"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:334
 msgid ""
 "Do not change references that end with an underscore like "
 "``figure_labels_1_``"
-msgstr ""
+msgstr "No cambie las referencias que terminan con subrayado como \"figure_1_\""
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:335
 msgid ""
 "Do not change the url in hyperlinks, but you may change the external "
 "description. Leave the underscore at the end of the hyperlink, without "
 "additional spacing (``>`_``)"
-msgstr ""
+msgstr "No cambie la URL de los hipervínculos, pero se puede cambiar la descripción externa. Deje el subrayado al final del hipervínculo, sin poner espacio addicional (\">'_\")"
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:338
 msgid ""
 "Change the text inside quotes following ``:index:``, ``:sup:``, "
 "``:guilabel:`` and ``:menuselection:`` tags. Check if/how it is translated "
 "in the QGIS Application. Do not change the tag itself."
-msgstr ""
+msgstr "Cambie el texto dentro de Comillas siguiendo las etiquetas '': índex:'', '': sup:'', '': guilabel:'' y '': menuselection:''. Verifique si o cómo se tradujo en la aplicación de QGIS. No cambie la etiqueta por si mismo."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:341
 msgid ""
 "Text between double stars and double quotes often indicate values or "
 "fieldnames, sometimes they need translation sometimes not."
-msgstr ""
+msgstr "El texto entre doble estrellas y comillas indican a menudo valores o nombres de campos. A veces necesitan traducción y a veces no."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:343
 msgid ""
 "Be aware to use exactly the same (number of) special characters of the "
 "source text such as `````, ``````, ``*``, ``**``, ``::``. These contribute "
 "to the cosmetics of the information provided"
-msgstr ""
+msgstr "Ten en cuenta de utilizar exactamente el mismo tipo y número de caracteres especiales del texto original como ''', ''', '' *'', '' **'', ''::''. Estos contribuyen a la cosmética de la información proporcionada."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:346
 msgid ""
 "Do not begin nor end the text hold by special characters or tags with a "
 "space"
-msgstr ""
+msgstr "No comenzar ni acabar con la retención de texto por caracteres especiales o las etiquetas con un espacio."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:347
 msgid ""
 "Do not end the translated strings with a new paragraph, otherwise the text "
 "will not be translated during the html generation."
-msgstr ""
+msgstr "No finalice las cadenas traducidas con un nuevo párrafo, de lo contrario el texto no será traducido durante la generación del HTML."
 
 #: ../../source/docs/documentation_guidelines/do_translations.rst:352
 msgid ""
 "For any question, please contact the `QGIS Community Team <qgis-community-"
 "team@lists.osgeo.org>`_ or the `QGIS Translation Team <qgis-"
 "tr@lists.osgeo.org>`_."
-msgstr ""
+msgstr "Comunique sus preguntas al `QGIS Community Team <qgis-community-team@lists.osgeo.org>`_ o el `QGIS Translation Team <qgis-tr@lists.osgeo.org>`_."
 
 #~ msgid ""
 #~ "This manual is aiming to help the translator. First the general process of "

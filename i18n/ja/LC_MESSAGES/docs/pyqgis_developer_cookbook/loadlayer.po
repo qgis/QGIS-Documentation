@@ -2,6 +2,7 @@
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # OKANO Takayoshi <kano@na.rim.or.jp>, 2014
 # Taro Matsuzawa <taro@georepublic.co.jp>, 2013
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-02 05:17+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -126,34 +127,34 @@ msgstr "adding a layer"
 msgid ""
 "To load a vector layer, specify layer's data source identifier, name for the"
 " layer and provider's name:"
-msgstr ""
+msgstr "ベクトルレイヤーをロードするには、レイヤのデータソース識別子、レイヤーの名前、およびプロバイダの名前を指定します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:38
 msgid ""
 "The quickest way to open and display a vector layer in QGIS is the "
 "addVectorLayer function of the :class:`QgisInterface`:"
-msgstr ""
+msgstr "QGISでベクトルレイヤーを開き、表示する最も簡単な方法は、:class:`QgisInterface` のaddVectorLayer関数です："
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:47
 msgid ""
 "This creates a new layer and adds it to the map layer registry (making it "
 "appear in the layer list) in one step. The function returns the layer "
 "instance or `None` if the layer couldn't be loaded."
-msgstr ""
+msgstr "これは1つのステップで、新しいレイヤーを作成し、マップレイヤーレジストリに追加（レイヤリストに表示される）します。関数が返すのはレイヤーインスタンス、レイヤーをロードできなかった場合は `NONE`です。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:57
 msgid ""
 "OGR library (shapefiles and many other file formats) --- data source is the "
 "path to the file:"
-msgstr ""
+msgstr "OGRライブラリ（シェープファイルや他の多くのファイル形式）---データソースがファイルへのパスです。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:60
 msgid "for shapefile::"
-msgstr ""
+msgstr "シェープファイルについて::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:65
 msgid "for dxf (note the internal options in data source uri)::"
-msgstr ""
+msgstr "DXF用（データソースURI内の内部オプションに注意してください）::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:74
 msgid ""
@@ -161,14 +162,14 @@ msgid ""
 "create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class "
 "can generate this string for you. Note that QGIS has to be compiled with "
 "Postgres support, otherwise this provider isn't available:"
-msgstr ""
+msgstr "PostGISのデータベース --- データソースは、PostgreSQLデータベースへの接続を作成するために必要なすべての情報を持つ文字列です。 :class:`QgsDataSourceURI` クラスではあなたのためにこの文字列を生成できます。QGISはPostgresのサポート付きでコンパイルする必要があることに注意してください、そうでない場合は、このプロバイダが使用できません。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:93
 msgid ""
 "CSV or other delimited text files --- to open a file with a semicolon as a "
 "delimiter, with field \"x\" for x-coordinate and field \"y\" with "
 "y-coordinate you would use something like this:"
-msgstr ""
+msgstr "CSVや他の区切りのテキストファイル---区切り文字としてセミコロンを使用してファイルを開くには、x座標およびフィールド「Y」の欄の「x」とy座標を持つあなたはこのようなものを使用します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:102
 msgid ""
@@ -176,44 +177,44 @@ msgid ""
 "the path must be prefixed with *file://*. Also it allows WKT (well known "
 "text) formatted geometries as an alternative to \"x\" and \"y\" fields, and "
 "allows the coordinate reference system to be specified. For example:"
-msgstr ""
+msgstr "注意：QGISバージョン1.7からプロバイダ文字列をURLとして構成されているので、パスの先頭に *file://* を付ける必要があります。また、それは「X」と「Y」フィールドに代わるものとしてWKT（周知のテキスト）フォーマットされたジオメトリを可能にし、座標参照系を指定することを可能にします。例えば："
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:114
 msgid ""
 "GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
 "from gpx files. To open a file, the type (track/route/waypoint) needs to be "
 "specified as part of the url:"
-msgstr ""
+msgstr "GPXファイル---「GPX」データプロバイダは、GPXファイルからトラック、ルートやウェイポイントを読み込みます。ファイルを開くには、タイプ（トラック/ルート/ウェイポイント）は、URLの一部として指定する必要があります："
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:126
 msgid ""
 "SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS "
 "databases, :class:`QgsDataSourceURI` can be used for generation of data "
 "source identifier:"
-msgstr ""
+msgstr "QGIS v1.1のサポートからSpatiaLiteデータベース---。クラス：同様のPostGISデータベースに `QgsDataSourceURI`は、データソース識別子の生成のために使用することができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:145
 msgid ""
 "MySQL WKB-based geometries, through OGR --- data source is the connection "
 "string to the table:"
-msgstr ""
+msgstr "OGR介してMySQLのWKBベースジオメトリ、---データソースがテーブルへの接続文字列です。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:156
 msgid ""
 "WFS connection:. the connection is defined with a URI and using the ``WFS`` "
 "provider:"
-msgstr ""
+msgstr "WFS接続:. 接続は、URIと `` WFS``プロバイダを使用して定義されます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:163
 msgid "The uri can be created using the standard ``urllib`` library:"
-msgstr ""
+msgstr "URIは標準の `` urllib``ライブラリを使用して作成することができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:179
 msgid ""
 "You can change the data source of an existing layer by calling "
 ":func:`setDataSource()` on a :class:`QgsVectorLayer` instance, as in the "
 "following example: ::"
-msgstr ""
+msgstr "既存のレイヤのデータソースを変更するには、次の例のように：クラス： `QgsVectorLayer`インスタンス上の：FUNC： `setDataSource（）`を呼び出します::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:189
 msgid ""
@@ -222,50 +223,50 @@ msgid ""
 "whether your GDAL has support for the particular format (not all formats are"
 " available by default). To load a raster from a file, specify its file name "
 "and base name:"
-msgstr ""
+msgstr "ラスターファイルへのアクセスについては、GDALライブラリが使用されます。これは、広い範囲のファイルフォーマットをサポートしています。何かのファイルを開くときにトラブルがある場合は、GDALがそのフォーマットをサポートしているか確認してください（デフォルトではすべてのフォーマットが使用可能ではない）。ファイルからラスタをロードするには、そのファイル名とベース名を指定します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:206
 msgid ""
 "Similarly to vector layers, raster layers can be loaded using the "
 "addRasterLayer function of the :class:`QgisInterface`:"
-msgstr ""
+msgstr "クラス： `QgisInterface`同様ベクター層に、ラスタレイヤはaddRasterLayer関数を使用してロードすることができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:213
 msgid ""
 "This creates a new layer and adds it to the map layer registry (making it "
 "appear in the layer list) in one step."
-msgstr ""
+msgstr "これは、新しいレイヤーを作成し、1つのステップで（それはレイヤリストに表示されて作る）マップレイヤーレジストリに追加します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:216
 msgid "Raster layers can also be created from a WCS service:"
-msgstr ""
+msgstr "ラスターレイヤーも、WCSサービスから作成することができます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:226
 msgid ""
 "detailed URI settings can be found in `provider documentation "
 "<https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI>`_"
-msgstr ""
+msgstr "詳細なURIの設定は`プロバイダのマニュアルに記載されています。<https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI> ` _"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:229
 msgid ""
 "Alternatively you can load a raster layer from WMS server. However currently"
 " it's not possible to access GetCapabilities response from API --- you have "
 "to know what layers you want:"
-msgstr ""
+msgstr "別の方法としては、WMSサーバからラスタレイヤを読み込むことができます。しかし現在では、 APIからGetCapabilitiesレスポンスにアクセスすることはできません---それは何をしたいレイヤーか知っている必要があります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:252
 msgid "Adding a layer to the registry:"
-msgstr ""
+msgstr "レジストリにレイヤーを追加します："
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:258
 msgid ""
 "Layers are destroyed automatically on exit, however if you want to delete "
 "the layer explicitly, use:"
-msgstr ""
+msgstr "レイヤーは終了時に自動的に破棄されますが、明示的にレイヤーを削除したい場合には次を使用します。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:265
 msgid "For a list of loaded layers and layer ids, use:"
-msgstr ""
+msgstr "ロードされたレイヤーとレイヤーIDのリストについては、以下を使用します。"
 
 #~ msgid ""
 #~ "To load a vector layer, specify layer's data source identifier, name for the"

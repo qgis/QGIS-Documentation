@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-08-18 16:30+0000\n"
+"PO-Revision-Date: 2016-10-17 16:51+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:6
 msgid "|LS| Digitizing Forest Stands"
-msgstr "|LS| Digitizarea Pâlcurilor de Pădure"
+msgstr "|LS| Digitizarea Arboretului Forestier"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:8
 msgid ""
@@ -28,17 +28,17 @@ msgid ""
 "school fields. In this lesson, you are going to digitize the forest stands' "
 "borders that appear in the map as green lines but instead of doing it using "
 "an aerial image, you will use your georeferenced map."
-msgstr ""
+msgstr "Cu excepția cazului în care aveți de gând să utilizați harta georeferențiată ca simplă imagine de fundal, următorul pas natural este de a-i digitiza elementele componente. Ați făcut deja acest lucru în exercițiile privitoare la crearea de date vectoriale din :doc:`../create_vector_data/create_new_vector`, unde ați digitizat terenurile unei școli. În această lecție, veți digitiza limitele arboretului forestier, care apar pe hartă sub formă de linii verzi, dar în loc de a face acest lucru cu ajutorul unei imagini aeriene, veți utiliza harta georeferențiată de către dumneavoastră."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:10
 msgid ""
 "**The goal for this lesson:** Learn a technique to help the digitizing task,"
 " digitizing forest stands and finally adding the inventory data to them."
-msgstr "**Scopul acestei lecții:** Învățarea unei tehnici pentru a ajuta activitatea de digitizare a pâlcurilor forestiere și, în cele din urmă, adunarea datelor de inventar în acestea."
+msgstr "**Scopul acestei lecții:** Învățarea unei tehnici pentru a ajuta activitatea de digitizare a arboretului forestier și, în cele din urmă, adunarea din acesta a datelor de inventar."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:13
 msgid "|basic| |FA| Extracting the Forest Stands Borders"
-msgstr "|basic| |FA| Extragerea Limitelor pentru Pâlcurile Pădurilor"
+msgstr "|basic| |FA| Extragerea Limitelor Arboretului Forestier"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:15
 msgid ""
@@ -52,7 +52,7 @@ msgid ""
 " directly by looking at the image as a guide. That would most likely be the "
 "way to go if the image you are going to digitize from is, for example, an "
 "aerial photograph."
-msgstr "O dată ce ați scanat și georeferențiat harta, ați putea începe digitizarea, folosind imaginea ca ghid. Acesta ar fi, probabil, cel mai potrivit mod de lucru, dacă imaginea pe care trebuie să o digitzați este, de exemplu, o fotografie aeriană."
+msgstr "O dată ce ați scanat și georeferențiat harta, ați putea începe digitizarea, folosind imaginea drept ghid. Acesta ar fi, probabil, cel mai potrivit mod de lucru, atunci când imaginea pe care trebuie să o digitizați reprezintă, de fapt, o fotografie aeriană."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:19
 msgid ""
@@ -62,7 +62,7 @@ msgid ""
 "extracted as individual images using an image processing software like `GIMP"
 " <http://www.gimp.org/>`_. Such separate images can be used to assist the "
 "digitizing, as you will see below."
-msgstr ""
+msgstr "Dacă în procesul de digitizare utilizați o hartă bună, lucru valabil în cazul nostru, este posibil ca informațiile să fie clar afișate, cu linii de culori diferite pentru fiecare tip de element. Acele culori pot fi relativ ușor de extras sub formă de imagini individuale, cu ajutorul unui software de procesare a imaginii de genul aplicației `GIMP <http://www.gimp.org/>`_. Aceste imagini pot fi folosite pentru a asista digitizarea, după cum se va vedea în continuare."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:21
 msgid ""
@@ -83,13 +83,13 @@ msgid ""
 ":kbd:`rautjarvi_map.tif` in the :kbd:`exercise_data/forestry` folder. Note "
 "that the forest stands are represented as green lines (with the number of "
 "the stand also in green inside each polygon)."
-msgstr ""
+msgstr "Deschideți imaginea hărții originale, :menuselection:`Fișier --> Deschidere`, :kbd:`rautjarvi_map.tif` din  folderul :kbd:`exercise_data/forestry`. Rețineți că arboretul forestier este reprezentat cu linii verzi (conținând numărul parcelei, de asemenea, în verde, în interiorul fiecărui poligon)."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:29
 msgid ""
 "Now you can select the pixels in the image that are making up the forest "
 "stands' borders (the greenish pixels):"
-msgstr "Acum puteți selecta pixelii din imagine, care reprezintă granițele pâlcurilor forestiere (pixelii verzui):"
+msgstr "Acum puteți selecta pixelii din imagine, care reprezintă limitele parcelelor forestiere (pixelii verzui):"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:31
 msgid "Open the tool :menuselection:`Select --> By color`."
@@ -100,7 +100,7 @@ msgid ""
 "With the tool active, zoom into the image (:guilabel:`Ctrl + mouse wheel`) "
 "so that a forest stand line is close enough to differentiate the pixels "
 "forming the line. See the left image below."
-msgstr ""
+msgstr "Cu instrumentul activ, măriți imaginea (:guilabel:`Ctrl + rotița mouse-ului`) astfel încât liniile dintre parcelele cu arboret forestier se fie suficient de clare, pentru a se diferenția pixelii care compun linia. A se vedea imaginea din stânga, de mai jos."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:33
 msgid ""
@@ -112,7 +112,7 @@ msgstr "Faceți clic și glisați cursorul mouse-ului în partea din mijloc a li
 msgid ""
 "Release the mouse click and wait a few seconds. The pixels matching the "
 "colors collected by the tool will be selected through the whole image."
-msgstr ""
+msgstr "Eliberați butonul mouse-ului și așteptați câteva secunde. Din întreaga imagine vor fi selectați pixelii care se potrivesc culorilor colectate de către instrument."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:35
 msgid ""
@@ -123,17 +123,17 @@ msgstr "Micșorați, pentru a vedea cum au fost selectați pixelii verzui din î
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:36
 msgid ""
 "If you are not happy with the result, repeat the click and drag operation."
-msgstr "Dacă nu sunteți mulțumiți de rezultat, repetați operațiunea de clic și glisare."
+msgstr "Dacă rezultatul nu vă mulțumește, repetați operațiunea de clic și glisare."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:37
 msgid "Your pixel selection should look something like the right image below."
-msgstr "Selecția dumneavoastră de pixeli ar trebui să arate în genul imaginii din dreapta-jos."
+msgstr "Pixelii selectați de către dumneavoastră ar trebui să arate în genul imaginii din dreapta-jos."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:42
 msgid ""
 "Once you are done with the selection you need to copy this selection as a "
 "new layer and then save it as separate image file:"
-msgstr ""
+msgstr "O dată ce ați terminat selecția, trebuie să o copiați sub forma unui nou strat, care se va salva ulterior ca fișier de tip imagine:"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:44
 msgid "Copy (:guilabel:`Ctr+C`) the selected pixels."
@@ -144,17 +144,17 @@ msgid ""
 "And paste the pixels directly (:guilabel:`Ctr+V`), GIMP will display the "
 "pasted pixels as a new temporary layer in the :guilabel:`Layers - Brushes` "
 "panel as a :guilabel:`Floating Selection (Pasted Layer)`."
-msgstr ""
+msgstr "Apoi lipiți direct pixelii (:guilabel:`Ctr+V`), GIMP afișând pixelii sub forma unui nou strat temporar, din panoul :guilabel:`Straturi - Pensule` sub formă de :guilabel:`Selecție flotantă (Stratul Lipit)`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:46
 msgid "Right click that temporary layer and select :guilabel:`To New Layer`."
-msgstr "Faceți clic dreapta pe stratul temporar și selectați :guilabel:`Către Noul Strat`."
+msgstr "Faceți clic dreapta pe stratul temporar, apoi selectați :guilabel:`Către Noul Strat`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:47
 msgid ""
 "Click the \"eye\" icon next to the original image layer to switch it off, so"
 " that only the :guilabel:`Pasted Layer` is visible:"
-msgstr ""
+msgstr "Faceți clic pe pictograma \"ochiului\" de lângă stratul de imagine original pentru a-l dezactiva, astfel încât numai :guilabel:`Stratul Lipit` va fi vizibil:"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:52
 msgid ""
@@ -162,7 +162,7 @@ msgid ""
 "File Type (By Extension)` as a :guilabel:`TIFF image`, select the "
 ":kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`. Select "
 "no compression when asked."
-msgstr ""
+msgstr "În cele din urmă, accesați :menuselection:`Fișier --> Export...`, la :guilabel:`Selectarea Tipului Fișierului (După Extensie)` alegeți :guilabel:`Imagine TIFF`, apoi selectați folderul de :kbd:`digitizare` și denumiți-l :kbd:`rautjarvi_map_green.tif`. Nu alegeți compresia, atunci când vi se va pune întrebarea."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:54
 msgid ""
@@ -170,7 +170,7 @@ msgid ""
 "extracting the black lines that represent roads or the brown ones that "
 "represent the terrain' contour lines. But for us, the forest stands is "
 "enough."
-msgstr ""
+msgstr "Ați putea face același proces cu alte elemente din imagine, de exemplu, extrăgând liniile negre care reprezintă drumurile, sau cele maro care reprezintă liniile de contur ale terenului. Dar pentru noi, arboretul forestier este suficient."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:57
 msgid "|basic| |TY| Georeference the Green Pixels Image"
@@ -180,7 +180,7 @@ msgstr "|basic| |TY| Georeferențiați Imaginea Pixelilor Verzi"
 msgid ""
 "As you did in the previous lesson, you need to georeference this new image "
 "to be able to use it with the rest of your data."
-msgstr ""
+msgstr "Ca și în lecția anterioară, trebuie să georeferențiați această nouă imagine pentru a o putea folosi cu restul de date."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:61
 msgid ""
@@ -188,17 +188,17 @@ msgid ""
 "because this image is basically the same image as the original map image, as"
 " far as the Georeferencer tool is concerned. Here are some things you should"
 " remember:"
-msgstr ""
+msgstr "Observați că nu mai trebuie să digitizați punctele de control din teren, deoarece această imagine este, în principiu, aceeași ca și imaginea hărții originale, în măsura în care instrumentul de Georeferențiere nu este afectat. Iată câteva lucruri pe care trebuie să le rețineți:"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:63
 msgid "This image is also, of course, in :kbd:`KKJ / Finland zone 2` CRS."
-msgstr "Această imagine este, de asemenea, în CRS-ul :kbd:`KKJ / Finland zone 2`."
+msgstr "Această imagine se află, desigur, în CRS-ul :kbd:`KKJ / Finland zone 2`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:64
 msgid ""
 "You should use the ground control points you saved, :menuselection:`File -->"
 " Load GCP points`."
-msgstr "Ar trebui să utilizați punctele de control de la sol salvate, :menuselection:`File --> Load GCP points`."
+msgstr "Ar trebui să utilizați punctele de control din teren salvate, :menuselection:`Fișier --> Încărcare puncte GCP`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:65
 msgid "Remember to review the :guilabel:`Transformation settings`."
@@ -208,15 +208,15 @@ msgstr "Amintiți-vă să revizuiți :guilabel:`Setările de Transformare`."
 msgid ""
 "Name the output raster as :kbd:`rautjarvi_green_georef.tif` in the "
 ":kbd:`digitizing` folder."
-msgstr "Denumiți stratul de ieșire :kbd:`green_centroids.shp`, din folderul :kbd:`digitizing`."
+msgstr "Denumiți stratul rezultat :kbd:`green_centroids.shp`, din folderul :kbd:`digitizing`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:68
 msgid "Check that the new raster is fitting nicely with the original map."
-msgstr "Verificați dacă noul raster se potrivește bine cu harta originală."
+msgstr "Verificați dacă noul raster se potrivește cu harta originală."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:72
 msgid "|basic| |FA| Creating Supporting Points for Digitizing"
-msgstr "|basic| |FA| Crearea Punctelor Suport pentru Digitizare."
+msgstr "|basic| |FA| Crearea Punctelor de Sprijin pentru Digitizare"
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:74
 msgid ""
@@ -225,7 +225,7 @@ msgid ""
 "That is precisely what you are going to do next create points from those "
 "pixels to use them later to help you follow the forest stands' borders when "
 "digitizing, by using the snapping tools available in QGIS."
-msgstr ""
+msgstr "Având în vedere instrumentele de digitizare din QGIS, v-ați putea gândi că ar fi de ajutor acroșarea la pixelii verzi, pe durata digitizării. Exact acest lucru îl veți face în continuare: veți crea puncte din acei pixeli, pentru a le folosi mai târziu ca ghidaje în digitizarea arboretelor forestiere, când se vor utiliza instrumentele de acroșare disponibile în QGIS."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:76
 msgid ""
@@ -233,13 +233,13 @@ msgid ""
 "Vector)` tool to vectorize your green lines to polygons. If you don't "
 "remember how, you can review it in "
 ":doc:`../complete_analysis/raster_to_vector`."
-msgstr ""
+msgstr "Folosiți instrumentul :menuselection:`Raster --> Conversie --> Poligonizare (Din Raster în Vector)` pentru a vectoriza liniile verzi în poligoane. Dacă nu vă mai amintiți cum se efectuează acest lucru, puteți să reexaminați :doc:`../complete_analysis/raster_to_vector`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:77
 msgid ""
 "Save as :kbd:`rautjarvi_green_polygon.shp` inside the :kbd:`digitizing` "
 "folder."
-msgstr "Salvați-l ca :kbd:`rautjarvi_green_polygon.shp`, în interiorul folderului :kbd:`digitizing`."
+msgstr "Salvați rezultatul ca :kbd:`rautjarvi_green_polygon.shp`, în interiorul folderului :kbd:`digitizing`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:79
 msgid ""
@@ -269,7 +269,7 @@ msgstr "Denumiți rezultatul ca :kbd:`green_centroids.shp`, în folderul :kbd:`d
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:89
 msgid "Check :menuselection:`Add result to canvas`."
-msgstr "Bifați :menuselection:`Add result to canvas`."
+msgstr "Bifați :menuselection:`Adăugare rezultat în canevas`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:90
 msgid "Run the tool to calculate the centroids for the polygons."
@@ -279,7 +279,7 @@ msgstr "Folosiți instrumentul pentru a calcula centroizii poligoanelor."
 msgid ""
 "Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the "
 "TOC."
-msgstr "Acum puteți elimina stratul :guilabel:`rautjarvi_green_polygon` din TOC."
+msgstr "Acum puteți elimina stratul :guilabel:`rautjarvi_green_polygon` din Cuprins."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:97
 msgid "Change the symbology of the centroids layer as:"
@@ -291,7 +291,7 @@ msgstr "Deschideți :guilabel:`Proprietățile Stratului` pentru :guilabel:`gree
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:100
 msgid "Go to the :guilabel:`Style` tab."
-msgstr "Mergeți la fila :guilabel:`Stil` tab."
+msgstr "Mergeți la fila :guilabel:`Stil`."
 
 #: ../../source/docs/training_manual/forestry/stands_digitazing.rst:101
 msgid "Set the :guilabel:`Unit` to Map unit."

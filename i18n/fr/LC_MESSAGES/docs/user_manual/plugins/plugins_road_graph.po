@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-08-02 15:37+0000\n"
-"Last-Translator: MarieSilvestre\n"
+"PO-Revision-Date: 2016-10-22 19:15+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,51 +21,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # fe239c12a1ed4f87a3158bcb2340a6a4
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:10
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:24
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:9
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:23
 msgid "Road Graph Plugin"
 msgstr "Extension Graphe routier"
 
 # 95ae448adde64b3a86b4bcd1f7062a8f
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:26
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:25
 msgid "Main features:"
 msgstr "Fonctionnalités principales:"
 
 # b40de58fedf2445dbe2556642416ad36
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:51
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:50
 msgid "Using the plugin"
 msgstr "Usage"
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:11
 msgid ""
 "The Road Graph Plugin is a C++ plugin for QGIS that calculates the shortest "
 "path between two points on any polyline layer and plots this path over the "
 "road network."
 msgstr "L'extension Graphe routier est une extension C++ pour QGIS, qui calcule le chemin le plus court entre deux points sur n'importe quelle couche de polylignes et trace ce chemin au-dessus du réseau routier."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:28
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
 msgid "Calculates path, as well as length and travel time."
 msgstr "Calcule le chemin, sa longueur et le temps de trajet."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:28
 msgid "Optimizes by length or by travel time."
 msgstr "Optimise par la longueur ou par le temps de trajet."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:30
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
 msgid "Exports path to a vector layer."
 msgstr "Exporte le chemin en couche vectorielle."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:30
 msgid ""
 "Highlights roads directions (this is slow and used mainly for debug purposes"
 " and for the settings testing)."
 msgstr "Met en couleur les directions de la route (cette option est lente et surtout utile pour déboguer et pour tester le paramétrage)."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:34
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:33
 msgid ""
 "As a roads layer, you can use any polyline vector layer in any QGIS-"
 "supported format. Two lines with a common point are considered connected. "
@@ -75,29 +71,29 @@ msgid ""
 "discontinuities, even when 'snapping' is used."
 msgstr "Vous pouvez utiliser n'importe quelle couche polylignes comme couche route dans n'importe quel format géré par QGIS. Deux lignes avec un point commun sont considérées comme connectées. Notez qu'il est obligatoire d'utiliser la projection de la couche comme projection du projet lors de l'édition de la couche route. Cela est dû au fait que le calcul de transformation des coordonnées entre différentes projections introduit des erreurs qui peuvent créer des discontinuités, même quand l'accrochage est utilisé."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:41
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:40
 msgid "In the layer attribute table, the following fields can be used:"
 msgstr "Dans la table attributaire de la couche, les champs suivants peuvent être utilisés:"
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:43
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:42
 msgid "Speed on road section (numeric field)."
 msgstr "Vitesse sur la section de route (champ numérique)."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:43
 msgid ""
 "Direction (any type that can be cast to string). Forward and reverse "
 "directions correspond to a one-way road, both directions indicate a two-way "
 "road."
 msgstr "Direction (n'importe quel type qui peut être écrit en chaîne de caractères). Les directions avant et arrière de la géométrie correspondent à une route à sens unique, les deux directions à une route à double sens."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:47
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:46
 msgid ""
 "If some fields don't have any value or do not exist, default values are "
 "used. You can change defaults and some plugin settings in the plugin "
 "settings dialog."
 msgstr "Si des champs n'ont pas de valeur ou n'existent pas, les valeurs par défaut sont utilisées. Vous pouvez modifier ces valeurs par défaut ainsi que d'autres options dans la fenêtre de paramétrage de l'extension."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:53
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:52
 msgid ""
 "After plugin activation, you will see an additional panel on the left side "
 "of the main QGIS window. Now, enter some parameters into the :guilabel:`Road"
@@ -105,11 +101,11 @@ msgid ""
 " menu (see figure_road_graph_2_)."
 msgstr "Après activation de l'extension, vous verrez un panneau supplémentaire sur la gauche de la fenêtre principale de QGIS. Maintenant, configurez l'extension dans la fenêtre :guilabel:`Paramétrage` du menu :menuselection:`Extension -> Graphe routier` (voir figure_road_graph_2_)."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:67
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:66
 msgid "Road graph plugin settings"
 msgstr "Paramètres de l'extension de graphes routiers"
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:69
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:68
 msgid ""
 "After setting the :guilabel:`Time unit`, :guilabel:`Distance unit` and "
 ":guilabel:`Topology tolerance`, you can choose the vector layer in the "
@@ -119,11 +115,14 @@ msgid ""
 "the calculation."
 msgstr "Après avoir configuré :guilabel:`Unité de temps`, :guilabel:`Unité de distance` et :guilabel:`Tolérance topologique`, vous pouvez choisir la couche vectorielle dans l'onglet :guilabel:`Couche de transport`. Là, vous pouvez aussi indiquer le :guilabel:`Champ de direction` et le :guilabel:`Champ de vitesse`. Dans l'onglet :guilabel:`Paramètres par défaut`, vous pouvez indiquer la :guilabel:`Direction` pour les calculs."
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:76
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:75
 msgid ""
 "Finally, in the :guilabel:`Shortest Path` panel, select a Start and a Stop "
 "point in the road network layer and click on **[Calculate]**."
 msgstr "Enfin, dans le panneau :guilabel:`Chemin le plus court`, sélectionnez un point d'origine et un point de destination sur la couche du réseau routier et cliquez sur bouton **[Calculer]**."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid "Road Graph Plugin |nix|"
 #~ msgstr ""

@@ -6,14 +6,15 @@
 # Choro <u.ko.kubot@gmail.com>, 2013
 # Choro <u.ko.kubot@gmail.com>, 2013
 # Hiroyuki Kimura <z_kimura@k-side.net>, 2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # Shu Higashi <higa432@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-07-08 07:07+0000\n"
-"Last-Translator: Hiroyuki Kimura <z_kimura@k-side.net>\n"
+"PO-Revision-Date: 2017-07-05 03:52+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,7 +61,7 @@ msgid ""
 "start using the MapServer Export Plugin, you need to arrange the raster and "
 "vector layers you want to use in MapServer and save this status in a QGIS "
 "project file."
-msgstr ""
+msgstr "MapServer Export Pluginは、保存されたQGISプロジェクトファイルで動作し、マップキャンバスと凡例の現在の内容には**ありません**。これは多くのユーザーにとって混乱の原因となっています。以下で説明するように、MapServer Export Pluginを使用する前に、MapServerで使用するラスタレイヤーとベクターレイヤーを配置し、このステータスをQGISプロジェクトファイルに保存する必要があります。"
 
 # ba508e8d60db42fe818112c97a9eeec7
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:43
@@ -236,7 +237,7 @@ msgid ""
 "required to create a map file, however by omitting the other parameters, you"
 " may end up creating a non-functional map file, depending on your intended "
 "use."
-msgstr ""
+msgstr "地図ファイルを作成するには、入力 :guilabel:`Map file` と :guilabel:`QGIS project file`のみが必要ですが、他のパラメータを省略すると、つかいます意図していない地図ファイルが作成されることがあります。"
 
 # 0fcffefc2acc44ea88f5a5dace70ed06
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:110
@@ -245,26 +246,26 @@ msgid ""
 "require some tweaking to get the results you want. For this example, we will"
 " create a map file using the project file :file:`mapserverproject.qgs` we "
 "just created (see Figure_mapserver_export_2_):"
-msgstr ""
+msgstr "QGISはプロジェクトファイルからマップファイルを作成するのには優れていますが、必要な結果を得るには調整が必要な場合があります。この例では、作成したプロジェクトファイルfile： `mapserverproject.qgs`を使ってマップファイルを作成します（Figure_mapserver_export_2_を参照）。"
 
 # 755eef0162c0447992281582942844d2
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:116
 msgid ""
 "Click the |mapserver_export| :sup:`MapServer Export` icon in the toolbar "
 "menu to start the MapServer dialog (see Figure_mapserver_export_2_)."
-msgstr ""
+msgstr "ツールバーメニューで|mapserver_export| :sup:`MapServerのExport` アイコンをクリック してMapServerのダイアログを起動します（Figure_mapserver_export_2_を参照）。"
 
 # 396aad1bac744a818957eb0c50de71de
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:118
 msgid "Enter the name (e.g., :file:`qgisproject.map`) for your new map file."
-msgstr ""
+msgstr "新しいマップファイルのためにの名前を入力します（ :file:`qgisproject.map` など）。"
 
 # 3069105ad128426c833ef59e39dffdaa
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:119
 msgid ""
 "Browse and find the QGIS project file (e.g., :file:`mapserverproject.qgs`) "
 "you previously saved."
-msgstr ""
+msgstr "以前に保存したQGISプロジェクトファイルをブラウズと見つける（例えば :file:`mapserverproject.qgs` ）。"
 
 # 5d3e7e8fb0084ae78e22101b8fbd8bf7
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:121
@@ -276,31 +277,31 @@ msgstr "マップ用の名前(例：``MyMap``) を入力してください。"
 msgid ""
 "Enter the width and height (e.g., ``600`` for the width and ``400`` for the "
 "height) for your output image."
-msgstr ""
+msgstr "出力画像のために幅と高さを入力します（例えば、幅に `` 600``と高さに `` 400``）。"
 
 # bc93ad3fae754b149d93a0e8dda41d6f
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:124
 msgid ""
 "For this example, the layers are in meters, so we change the units to "
 "meters."
-msgstr ""
+msgstr "この例では、レイヤは、メートル単位であるので、メートル単位を変更します。"
 
 # cda75d3c13dc49278a227c0d888cf9fc
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:125
 msgid "Choose :guilabel:`png` for the image type."
-msgstr ""
+msgstr "画像タイプのための :guilabel:`png`を選択してください。"
 
 # edad4fe3b50948ea9abdac704fe3f42a
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:126
 msgid ""
 "Click **[OK]** to generate the new map file :file:`qgisproject.map`. QGIS "
 "displays the success of your efforts."
-msgstr ""
+msgstr ":file:`qgisproject.map`新しい地図ファイルを生成するために **[OK]** をクリックしてください。QGISは努力の成功を表示します。"
 
 # b39cd40be23c4c0f9f3635152a8c8567
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:140
 msgid "Export to MapServer Succesfull Dialog |nix|"
-msgstr ""
+msgstr "MapServerのsuccesfullのダイアログへのエクスポート|nix|"
 
 # 556f9bfef01c4d32834d2d1d62363795
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:143
@@ -308,17 +309,17 @@ msgid ""
 "You can view the map file in any text editor or visualizer. If you take a "
 "look, you'll notice that the export tool adds the metadata needed to enable "
 "our map file for WMS."
-msgstr ""
+msgstr "任意のテキストエディタまたはビジュアライザで地図ファイルを表示できます。一見すると、WMSのマップファイルを有効にするために必要なメタデータがエクスポートツールによって追加されています。"
 
 # 009ed97fa45a4dd482d36665b6da5906
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:150
 msgid "Troubleshooting"
-msgstr ""
+msgstr "トラブルシューティング"
 
 # 20c86886f2be4a1ea595d353caaeb029
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:152
 msgid "If you get error messages from mapserver like:"
-msgstr ""
+msgstr "MapServerのからのエラーメッセージを取得した場合のように："
 
 # e2e6f01c84e04fa6bbb908fff1bac310
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:158
@@ -330,7 +331,7 @@ msgstr "あるいは："
 msgid ""
 "This means that that the map file is requesting for fonts or symbol "
 "definition files but that Mapserver cannot find those."
-msgstr ""
+msgstr "これは、マップファイルは、フォントまたはシンボル定義ファイルのためではなく、Mapserverのは、それらを見つけることができないことを要求していることを意味します。"
 
 # 77f889fc9a444288a20658ecfcbf8da5
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:167
@@ -338,21 +339,21 @@ msgid ""
 "Either comment the lines containing those names in the map file (this is "
 "possible if you do not have labels or use styles from the "
 ":file:`symbols.txt`). Or create those files (see below)."
-msgstr ""
+msgstr "これらの名前を含む行をマップファイルにコメントするか（これは、ラベルがないか、 :file:`symbols.txt` のスタイルを使用する場合に可能です）。またはこれらのファイルを作成します（下記参照）。"
 
 # ae4a70d51560490f90989d93550cf856
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:171
 msgid ""
 "The most simple :file:`fonts.txt` file (because arial is used in the QGIS "
 "generated map files) contains the following line"
-msgstr ""
+msgstr "最も簡単 :file:`fonts.txt` ファイル（ArialのはQGISで使用されているので、地図ファイルを生成した）次の行が含まれています"
 
 # 3dead180cf5744308a39aa3513b9d55f
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:179
 msgid ""
 "The most simple :file:`symbols.txt` file contains the definition of a circle"
 " symbol (because a circle symbol is used for point layers)"
-msgstr ""
+msgstr "最も簡単 :file:`symbols.txt`ファイルには、円記号の定義が含まれています（円記号がポイントレイヤに使用されるため）"
 
 # 40b6ef07b3fa4179adfcc07de6a71f6f
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:197
@@ -369,7 +370,7 @@ msgstr "これで作成したものをテストできます。"
 msgid ""
 "If the map file is accessible for you mapserver cgi you can use the one of "
 "the URL's from the success dialog."
-msgstr ""
+msgstr "地図ファイルがMapServerCGIからアクセス可能である場合、URLの成功ダイアログからいずれかを使用できます。"
 
 # de8ca882b70844028d4be63adc5fe5a3
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:204
@@ -377,7 +378,7 @@ msgid ""
 "Another option is using the **shp2img** tool to create an image from the map"
 " file. The **shp2img** utility is part of MapServer and FWTools. To create "
 "an image from our map:"
-msgstr ""
+msgstr "別のオプションは、マップファイルから画像を作成するために** shp2img **ツールを使用しています。** shp2img **ユーティリティは、MapServerのとFWToolsの一部です。私たちのマップからイメージを作成するには："
 
 # c1d05942cd4f4a5c92a8daf71f0c4bb2
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:208
@@ -405,12 +406,12 @@ msgid ""
 " addition, the extent of the PNG will be the same as when we saved the "
 "project. As you can see in figure_mapserver_export_4_, all information "
 "except the airport symbols are included."
-msgstr ""
+msgstr "これは、すべての層がQGISプロジェクトファイルに含まれてPNGを作成します。また、PNGの程度は、我々はプロジェクトを保存したときと同じになります。あなたがfigure_mapserver_export_4_で見ることができるように、空港のシンボルを除くすべての情報が含まれています。"
 
 # ceba8e15d2ad4c7aa61695d59df4ca35
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:228
 msgid "Test PNG created by shp2img with all MapServer Export layers |nix|"
-msgstr ""
+msgstr "すべてのMapServer書出レイヤでshp2imgによって作成されたテストPNG |nix|"
 
 # 691054cd33d644cfbb9841377c794036
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:232
@@ -428,7 +429,7 @@ msgid ""
 "<http://openlayers.org/presentations/mappingyourdata/>`_. He used an older "
 "version of QGIS (version 0.8), but the demo applies equally well to newer "
 "versions."
-msgstr ""
+msgstr "WMSリクエストを提供するためにマップファイルを使用する予定の場合は、おそらく何かを微調整する必要はありません。マッピングテンプレートまたはカスタムインターフェイスでそれを使用する場合は、手作業のビットがしなければならないことがあります。それは、ウェブ上のマップを提供するQGISから行くことがいかに簡単かを確認するには、クリストファー・シュミットの5分 `フラッシュビデオを見てみましょう<http://openlayers.org/presentations/mappingyourdata/>` _。彼はQGISの古いバージョン（バージョン0.8）を使用したが、デモは、新しいバージョンにも同様に適用されます。"
 
 # d4cca103df4146988792003b6243efef
 #: ../../source/docs/user_manual/plugins/plugins_mapserver_export.rst:9

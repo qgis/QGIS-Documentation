@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-09-01 09:03+0000\n"
-"Last-Translator: Kevin M\n"
+"PO-Revision-Date: 2016-10-22 19:15+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,43 +25,39 @@ msgstr ""
 # 9f7bde34492e433b90f878e9671dab37
 # 1990bada9830481c9cd668bded0fee45
 # a46b776c6ca743398e44f2a6a34d4621
-#: ../../source/docs/user_manual/plugins/plugins.rst:7
+#: ../../source/docs/user_manual/plugins/plugins.rst:6
 msgid "plugins"
 msgstr "Erweiterungen "
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:14
+#: ../../source/docs/user_manual/plugins/plugins.rst:13
 msgid "QGIS Plugins"
 msgstr "QGIS Plugins"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:21
+#: ../../source/docs/user_manual/plugins/plugins.rst:20
 msgid ""
 "QGIS has been designed with a plugin architecture. This allows many new "
 "features and functions to be easily added to the application. Many of the "
 "features in QGIS are actually implemented as plugins."
 msgstr "QGIS wurde mit einer Plugin-Architektur geplant. Dies erlaubt das einfache Einfügen weiterer Funktionalitäten in das Programm. Viele der Funktionalitäten in QGIS sind als Plugins implementiert."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:26
+#: ../../source/docs/user_manual/plugins/plugins.rst:25
 msgid "Core and External plugins"
 msgstr "Kernerweiterungen und externe Erweiterungen"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:28
+#: ../../source/docs/user_manual/plugins/plugins.rst:27
 msgid ""
 "QGIS plugins are implemented either as **Core Plugins** or **External "
 "Plugins**."
-msgstr ""
+msgstr "QGIS Plugins sind entweder als **Core-Plugins** oder **Externe Plugins** implementiert."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:30
+#: ../../source/docs/user_manual/plugins/plugins.rst:29
 msgid ""
 ":ref:`Core Plugins <core_plugins>` are maintained by the QGIS Development "
 "Team and are automatically part of every QGIS distribution. They are written"
 " in one of two languages: C++ or Python."
 msgstr ":ref:`Kernerweiterungen <core_plugins>` werden vom QGIS-Entwicklungsteam gepflegt und sind automatisch Teil der QGIS-Distribution. Sie sind in einer von zwei Sprachen verfasst: C++ oder Python."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:34
+#: ../../source/docs/user_manual/plugins/plugins.rst:33
 msgid ""
 "Most of External Plugins are currently written in Python. They are stored "
 "either in the 'Official' QGIS Repository at http://plugins.qgis.org/plugins/"
@@ -71,84 +67,84 @@ msgid ""
 " Official repository. For other external repositories, documentation might "
 "be available with the external plugins themselves. In general, external "
 "plugins documentation is not included in this manual."
-msgstr ""
+msgstr "Die meisten externen Plugins sind derzeit in Python geschrieben. Sie werden entweder in den \"offiziellen\" QGIS Repository bei http://plugins.qgis.org/plugins/ oder in externen Repositories bereitgestellt und von den einzelnen Autoren gepflegt. Eine ausführliche Dokumentation über die Nutzung, mindeste QGIS Version, Homepage, Autoren und andere wichtige Informationen werden für die Plugins im offiziellen Repository zur Verfügung gestellt. Bei anderen externen Repositories könnte eine Dokumentation mit den externen Plugins selbst zur Verfügung stehen. In der Regel ist externe Plugin Dokumentation in diesem Handbuch nicht enthalten."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:43
+#: ../../source/docs/user_manual/plugins/plugins.rst:42
 msgid ""
 "Installed external python plugins are placed under "
 ":file:`~/.qgis2/python/plugins` folder. Home directory (denoted by above "
 "``~``) on Windows is usually something like :file:`C:\\\\Documents and "
 "Settings\\\\(user)` (on Windows XP or earlier) or "
 ":file:`C:\\\\Users\\\\(user)`."
-msgstr ""
+msgstr "Installierte externe Python-Plugins sind unter :file:`~/.qgis2/python/plugins` diesem Ordner zu finden. Home-Verzeichnis (bezeichnet mit über ``~``) unter Windows ist in der Regel so etwas wie:file:`C:\\\\Dokumente und Einstellungen\\\\(Benutzer)` (unter Windows XP oder früher) oder :file:`C:\\\\Users\\\\(Benutzer)`."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:48
+#: ../../source/docs/user_manual/plugins/plugins.rst:47
 msgid ""
 "Paths to Custom C++ plugins libraries can also be added under "
 ":menuselection:`Settings --> Options --> System`."
-msgstr ""
+msgstr "Pfade zu benutzerdefinierten C ++ Plugins Bibliotheken können auch unter :menuselection:`Einstellungen --> Optionen --> System` hinzugefgt werden."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:51
+#: ../../source/docs/user_manual/plugins/plugins.rst:50
 msgid ""
 "You can manage your plugins in the plugin dialog which can be opened with "
 ":guilabel:`Plugins > Manage and install plugins ...`."
 msgstr "Sie können Ihre Erweiterungen im Erweiterungen Dialog, der mit :guilabel:`Erweiterungen > Erweiterungen verwalten und installieren ...` geöffnet werden kann, verwalten."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:54
+#: ../../source/docs/user_manual/plugins/plugins.rst:53
 msgid ""
 "When a plugin needs to be updated, and if plugins settings have been set up "
 "accordingly, QGIS main interface will display a blue link in the status bar "
 "to inform you that there are updates for your plugins waiting to be applied."
 msgstr "Wenn eine Erweiterung geupdatet werden muss und die Erweiterungseinstellungen dementsprechend vorgenommen wurden kann das QGIS Hauptfenster einen blauen Link in der Statusleiste anzeigen um Ihnen mitzuteilen, dass Erweiterungsupdates angewendet werden können."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:64
+#: ../../source/docs/user_manual/plugins/plugins.rst:63
 msgid "The Plugins Dialog"
 msgstr "Der Erweiterungen Dialog"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:66
+#: ../../source/docs/user_manual/plugins/plugins.rst:65
 msgid ""
 "The menus in the Plugins dialog allow the user to install, uninstall and "
 "upgrade plugins in different ways. Each plugin has some metadata displayed "
 "in the right panel:"
 msgstr "Die Menüs im Erweiterungen Dialog ermöglichen es dem Anwender Erweiterungen auf verschiedene Arten zu installieren und zu aktualisieren. Für jede Erweiterung werden Metadaten im rechten Bedienfeld angezeigt:"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:69
+#: ../../source/docs/user_manual/plugins/plugins.rst:68
 msgid "information on whether the plugin is experimental"
-msgstr ""
+msgstr "Informationen darüber, ob das Plugin experimentell ist"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:70
+#: ../../source/docs/user_manual/plugins/plugins.rst:69
 msgid "description"
 msgstr "Beschreibung"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:71
+#: ../../source/docs/user_manual/plugins/plugins.rst:70
 msgid "rating vote(s) (you can vote for your preferred plugin!)"
 msgstr "Bewertungen (Sie können eine Bewertung für Ihre bevorzugte Erweiterung abgeben!)"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:72
+#: ../../source/docs/user_manual/plugins/plugins.rst:71
 msgid "tags"
 msgstr "Elemente"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:73
+#: ../../source/docs/user_manual/plugins/plugins.rst:72
 msgid "some useful links to the home page, tracker and code repository"
 msgstr "einige nützliche Links wie die Homepage, die Fehlerverfolgung und das Quellcode-Repositum"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:74
+#: ../../source/docs/user_manual/plugins/plugins.rst:73
 msgid "author(s)"
 msgstr "Autoren"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:75
+#: ../../source/docs/user_manual/plugins/plugins.rst:74
 msgid "version available"
 msgstr "verfügbare Version"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:77
+#: ../../source/docs/user_manual/plugins/plugins.rst:76
 msgid "You can use the filter to find a specific plugin."
 msgstr "Sie können den Filter benutzen um eine bestimmte Erweiterung zu finden."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:79
+#: ../../source/docs/user_manual/plugins/plugins.rst:78
 msgid "|showPluginManager| :guilabel:`All`"
 msgstr "|showPluginManager| :guilabel:`Alle`"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:81
+#: ../../source/docs/user_manual/plugins/plugins.rst:80
 msgid ""
 "Here, all the available plugins are listed, including both core and external"
 " plugins. Use **[Upgrade all]** to look for new versions of the plugins. "
@@ -158,44 +154,44 @@ msgid ""
 "using the checkbox."
 msgstr "Hier sind alle zur Verfügung stehenden Plugins aufgelistet, darunter sowohl Kern- als auch externe Plugins. Verwenden Sie **[Alle aktualisieren]** um nach neuen Versionen für die Plugins zu schauen. Des weiteren können Sie **[Erweiterung installieren]** verwenden wenn ein Plugin aufgelistet aber nicht installiert ist und **[Gewählte Erweiterung deinstallieren]** genauso wie **[Erweiterung erneut installieren]** wenn ein Plugin installiert ist. Wenn ein Plugin installiert ist kann es anhand des Kontrollkästchens de/aktiviert werden. "
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:96
+#: ../../source/docs/user_manual/plugins/plugins.rst:95
 msgid "The |showPluginManager| :guilabel:`All` menu"
 msgstr "Das |showPluginManager| :guilabel:`Alle` Menü"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:99
+#: ../../source/docs/user_manual/plugins/plugins.rst:98
 msgid "|pluginInstalled| :guilabel:`Installed`"
 msgstr "|pluginInstalled| :guilabel:`Installiert`"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:101
+#: ../../source/docs/user_manual/plugins/plugins.rst:100
 msgid ""
 "In this menu, you can find only the installed plugins. The external plugins "
 "can be uninstalled and reinstalled using the **[Uninstall plugin]** and "
 "**[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well."
 msgstr "In diesem Menü können Sie nur die installierten Plugins finden. Die externen Plugins können deinstalliert und erneut installiert werden mit den **[Gewählte Erweiterung deinstallieren]** und **[Erweiterung erneut installieren]**. Sie können hier auch **[Alle aktualisieren]**."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:114
+#: ../../source/docs/user_manual/plugins/plugins.rst:113
 msgid "The |pluginInstalled| :guilabel:`Installed` menu"
 msgstr "Das |pluginInstalled| :guilabel:`Installiert` Menü"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:117
+#: ../../source/docs/user_manual/plugins/plugins.rst:116
 msgid "|plugin| :guilabel:`Not installed`"
 msgstr "|plugin| :guilabel:`Nicht installiert`"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:119
+#: ../../source/docs/user_manual/plugins/plugins.rst:118
 msgid ""
 "This menu lists all plugins available that are not installed. You can use "
 "the **[Install plugin]** button to implement a plugin into QGIS."
 msgstr "Dieses Menü listet alle zur Verfügung stehenden Plugins, die nicht installiert sind, auf. Sie können den **[Erweiterung installieren]** Knopf um eine Erweiterung in QGIS zu implementieren."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:131
+#: ../../source/docs/user_manual/plugins/plugins.rst:130
 msgid "The |plugin| :guilabel:`Not installed` menu"
 msgstr "Das |plugin| :guilabel:`Nicht installiert` Menü"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:134
+#: ../../source/docs/user_manual/plugins/plugins.rst:133
 msgid "|pluginUpgrade| :guilabel:`Upgradeable`"
 msgstr "|pluginUpgrade| :guilabel:`Erweiterbar`"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:136
+#: ../../source/docs/user_manual/plugins/plugins.rst:135
 msgid ""
 "If you activated |checkbox| :guilabel:`Show also experimental plugins` in "
 "the |transformSettings| :guilabel:`Settings` menu, you can use this menu to "
@@ -203,19 +199,19 @@ msgid ""
 "plugin]** or **[Upgrade all]** buttons."
 msgstr "Wenn Sie |checkbox| :guilabel:`Auch experimentelle Erweiterungen anzeigen` im |transformSettings| :guilabel:`Einstellungen` Menü aktivieren können Sie dieses Menü zum Suchen nach weiteren aktuellen Pluginversionen verwenden. Dies kann mit den **[Erweiterung erneut installieren]** oder **[Alle aktualisieren]** Knöpfen getan werden."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:150
+#: ../../source/docs/user_manual/plugins/plugins.rst:149
 msgid "The |pluginUpgrade| :guilabel:`Upgradeable` menu"
 msgstr "Das |pluginUpgrade| :guilabel:`Erweiterbar` Menü"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:154
+#: ../../source/docs/user_manual/plugins/plugins.rst:153
 msgid "|transformSettings| :guilabel:`Settings`"
 msgstr "|transformSettings| :guilabel:`Einstellungen`"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:156
+#: ../../source/docs/user_manual/plugins/plugins.rst:155
 msgid "In this menu, you can use the following options:"
 msgstr "In diesem Menü können Sie die folgenden Optionen verwenden:"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:158
+#: ../../source/docs/user_manual/plugins/plugins.rst:157
 msgid ""
 "|checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin "
 "or a plugin update is available, QGIS will inform you 'every time QGIS "
@@ -223,20 +219,20 @@ msgid ""
 "'every month'."
 msgstr "|checkbox| :guilabel:`Beim Start nach Aktualisierungen suchen`. Wann  immer ein neues Plugin oder ein Pluginupdate zur Verfügung steht wird QGIS Sie 'bei jedem QGIS-Start', 'einmal am Tag', 'alle drei Tage', 'jede Woche', 'alle zwei Wochen' oder 'jeden Monat' informieren."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:161
+#: ../../source/docs/user_manual/plugins/plugins.rst:160
 msgid ""
 "|checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you "
 "plugins in early stages of development, which are generally unsuitable for "
 "production use."
 msgstr "|checkbox| :guilabel:`Auch experimentelle Erweiterungen zeigen`. QGIS wird Ihnen Plugins in frühen Entwicklungsphasen zeigen, die im Allgemeinen für den Produktiveinsatz ungeeignet sind."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:164
+#: ../../source/docs/user_manual/plugins/plugins.rst:163
 msgid ""
 "|checkbox| :guilabel:`Show also deprecated plugins`. These plugins are "
 "deprecated and generally unsuitable for production use."
 msgstr "|checkbox| :guilabel:`Auch veraltete Erweiterungen anzeigen`. Diese Erweiterungen sind veraltet und im Allgemeinen für den Produktiveinsatz ungeeignet."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:167
+#: ../../source/docs/user_manual/plugins/plugins.rst:166
 msgid ""
 "To add external author repositories, click **[Add...]** in the "
 ":guilabel:`Plugin repositories` section. If you do not want one or more of "
@@ -244,25 +240,28 @@ msgid ""
 "or completely removed with the **[Delete]** button."
 msgstr "Um ein externes Anwender-Repository hinzuzufügen, klicken Sie **[Hinzufügen...]** im :guilabel:`Erweiterungsrepositorien` Abschnitt. Wenn Sie eins oder mehrere hinzugefügte Repositories nicht haben wollen können diese über den **[Bearbeiten...]** Knopf deaktiviert werden oder vollständig gelöscht mit dem **[Löschen]** Knopf werden."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:172
+#: ../../source/docs/user_manual/plugins/plugins.rst:171
 msgid ""
 "Note that you can use an authentication (basic authentication, PKI) to "
 "access to a plugin repository. The default QGIS repository is an open "
 "repository and you don't need any authentication. You should deploy your own"
 " plugin repository. You can get more information on QGIS authentication "
 "support in :ref:`authentication` chapter."
-msgstr ""
+msgstr "Beachten Sie, dass Sie eine Authentifizierung (Basic-Authentifizierung, PKI) verwenden können, um auf ein Plugin-Repository zugreifen. Der Standard QGIS-Repository ist ein offenes Repository und Sie brauchen keine Authentifizierung. Sie sollten Ihr eigenes Plugin-Repository bereitstellen. Sie können weitere Informationen über QGIS Authentifizierungsunterstützung im Kapitel :ref:`Authentifikation` erhalten."
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:187
+#: ../../source/docs/user_manual/plugins/plugins.rst:186
 msgid "The |transformSettings| :guilabel:`Settings` menu"
 msgstr "Das |transformSettings| :guilabel:`Einstellungen` Menü"
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:189
+#: ../../source/docs/user_manual/plugins/plugins.rst:188
 msgid ""
 "The :guilabel:`Search` function is available in nearly every menu (except "
 "|transformSettings| :guilabel:`Settings`). Here, you can look for specific "
 "plugins."
 msgstr "Die :guilabel:`Suchen` Funktion steht in fast jedem Menü zur Verfügung (mit Ausnahme von |transformSettings| :guilabel:`Einstellungen`). Hier können Sie nach bestimmten Erweiterungen suchen."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid "Managing Plugins"
 #~ msgstr ""

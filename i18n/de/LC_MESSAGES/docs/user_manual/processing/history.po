@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-08-17 14:07+0000\n"
-"Last-Translator: Kevin M\n"
+"PO-Revision-Date: 2016-10-22 19:18+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # 02b3944a2c66472987012e7baf3cd6c3
-#: ../../source/docs/user_manual/processing/history.rst:10
+#: ../../source/docs/user_manual/processing/history.rst:9
 msgid "The history manager"
 msgstr "Das Protokoll"
 
 # 41d20576ac484c2481faf54539cc8833
-#: ../../source/docs/user_manual/processing/history.rst:18
+#: ../../source/docs/user_manual/processing/history.rst:17
 msgid "The processing history"
 msgstr "Das Verarbeitung Protokoll"
 
 # 739c3d84315d4565a8eeb2853ea81048
-#: ../../source/docs/user_manual/processing/history.rst:20
+#: ../../source/docs/user_manual/processing/history.rst:19
 msgid ""
 "Every time you execute an algorithm, information about the process is stored"
 " in the history manager. Along with the parameters used, the date and time "
@@ -39,12 +39,12 @@ msgid ""
 msgstr "Jedes mal wenn Sie einen Algorithmus ausführen werden Informationen über den Prozess im Protokoll gespeichert. Zusammen mit den verwendeten Parametern werden auch das Datum und die Zeit der Ausführung gespeichert."
 
 # bf4aaa7764a54b9f8d66c66703d4a30f
-#: ../../source/docs/user_manual/processing/history.rst:40
+#: ../../source/docs/user_manual/processing/history.rst:39
 msgid "History |win|"
 msgstr "Protokoll |win|"
 
 # 23f057e07f7c4925991f2a2da5bc396a
-#: ../../source/docs/user_manual/processing/history.rst:42
+#: ../../source/docs/user_manual/processing/history.rst:41
 msgid ""
 "Process information is kept as a command-line expression, even if the "
 "algorithm was launched from the toolbox. This makes it also useful for those"
@@ -53,41 +53,37 @@ msgid ""
 "that same algorithm could be called from the command line."
 msgstr "Prozessinformationen werden als Kommandozeilen-Ausdruck gespeichert, auch wenn der Algorithmus aus der Toolbox gestartet wurde. Dies macht es auch nützlich zu lernen, wie man die Kommandozeilen-Schnittstelle verwendet, da man damit auch einen Algorithmus mit der Toolbox anrufen und dann im History Manager sehen und prüfen kann, wie der Algorithmus von der Kommandozeile aus aufgerufen werden kann."
 
-#: ../../source/docs/user_manual/processing/history.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/processing/history.rst:24
+#: ../../source/docs/user_manual/processing/history.rst:23
 msgid ""
 "This way, it is easy to track and control all the work that has been "
 "developed using the Processing framework, and to reproduce it."
 msgstr "Auf diese Weise ist es einfach alle Arbeiten, die entwickelt wurden anhand der Verarbeiten Umgebung, zu verfolgen und zu kontrollieren und sie auf einfache Art und Weise zu reproduzieren."
 
-#: ../../source/docs/user_manual/processing/history.rst:27
+#: ../../source/docs/user_manual/processing/history.rst:26
 msgid ""
 "The history manager is a set of registry entries grouped according to their "
 "date of execution, making it easier to find information about an algorithm "
 "executed at any particular moment."
 msgstr "Das Protokoll ist ein Satz von Registryeinträgen, die entsprechend ihres Ausführungsdatums gruppiert werden, um leichert Informationen über einen Algorithmus, der zu einem bestimmten Moment ausgeführt wurde, zu finden. "
 
-#: ../../source/docs/user_manual/processing/history.rst:48
+#: ../../source/docs/user_manual/processing/history.rst:47
 msgid ""
 "Apart from browsing the entries in the registry, you can also re-execute "
 "processes by simply double-clicking on the corresponding entry."
 msgstr "Abgesehen vom Durchsuchen der Einträge in der Registry können Sie auch Prozesse wiederausführen, indem Sie auf den entsprechenden Eintrag doppelklicken."
 
-#: ../../source/docs/user_manual/processing/history.rst:52
+#: ../../source/docs/user_manual/processing/history.rst:51
 msgid "The processing log"
 msgstr "Das Verarbeitung Log"
 
-#: ../../source/docs/user_manual/processing/history.rst:54
+#: ../../source/docs/user_manual/processing/history.rst:53
 msgid ""
 "The history dialog only contains the execution calls, but not the "
 "information produced by the algorithm when executed. That information is "
 "written to the QGIS log, in a :guilabel:`Processing` tab."
-msgstr ""
+msgstr "Der Dialog Historie enthält nur die ausgeführten Abfragen, aber nicht die produzierten Abfragen des Algorithmus bei der Ausführung. Diese Information ist im QGIS Log geschrieben, im Reiter :guilabel:`Verarbeitung`."
 
-#: ../../source/docs/user_manual/processing/history.rst:56
+#: ../../source/docs/user_manual/processing/history.rst:55
 msgid ""
 "Third-party algorithms are usually executed by calling their command-line "
 "interfaces, which communicate with the user via the console. Although that "
@@ -95,15 +91,18 @@ msgid ""
 "run one of those algorithms. To avoid cluttering the log with that "
 "information, you can disable it for each provider, looking for the "
 "corresponding option in the provider entry of the settings dialog."
-msgstr ""
+msgstr "Algorithmen von Drittanbietern werden normalerweise ausgeführt, indem ihre Kommandozeilenschnittstellen, die mit dem Anwender über die Konsole kommunizieren, aufgerufen werden. Trotz dessen diese Konsole nicht gezeigt wird, wird ein vollständiger Auszug davon im Log geschrieben, jedes mal, wenn der Algorithmus ausgeführt wird. Um zu verhindern, dass das Protokoll überladen wird, können Sie es für jeden Anbieter deaktivieren, suchen Sie den entsprechenden Eintrag in den zugehörigen Anbieter Optionen des Einstellungsdialogs."
 
-#: ../../source/docs/user_manual/processing/history.rst:60
+#: ../../source/docs/user_manual/processing/history.rst:59
 msgid ""
 "Some algorithms, even if they can produce a result with the given input "
 "data, might add comments or additional information to log if they detect "
 "potential problems with the data, in order to warn you. Make sure you check "
 "those messages in the log if you are having unexpected results."
 msgstr "Einige Algorithmen können, selbst wenn Sie ein Ergebnis mit den gegebenen Eingabedaten erzeugen können, einen Kommentar oder zusätzliche Informationen hinzufügen, wenn sie potentielle Probleme mit den Daten auffinden, um Sie zu warnen. Vergewissern Sie sich, dass Sie diese Nachrichten überprüfen, wenn Sie unerwartete Ergebnisse erhalten."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "This way, it is easy to track the and control all the work that has been "

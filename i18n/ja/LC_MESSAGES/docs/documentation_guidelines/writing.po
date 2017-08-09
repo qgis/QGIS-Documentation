@@ -1,0 +1,614 @@
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.14\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>, 2017\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:9
+msgid "Documentation Guidelines"
+msgstr "ドキュメント作成のガイドライン"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:15
+msgid "Introduction"
+msgstr "はじめに"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:17
+msgid ""
+"QGIS Documentation will be built automatically on the server at 0, 8am, 4pm "
+"PDT (Pacific Daylight Time). The current status is available at "
+"http://docs.qgis.org."
+msgstr ""
+"QGISドキュメントはPDT（太平洋夏時間）0時、午前8時、午後4時に、サーバー上で自動的に構築されます。現在の状況はhttp://docs.qgis.orgで入手可能です。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:21
+msgid ""
+"QGIS Documentation is mainly written using the reStructuredText (reST) "
+"format syntax, coupled with some scripts from the Sphinx toolset to post-"
+"process the HTML output. See "
+"http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html or "
+"http://sphinx.pocoo.org/markup/inline.html."
+msgstr ""
+"QGISドキュメントは、HTML出力を後処理するスフィンクスツールセットからいくつかのスクリプトと相まって、主にreStructuredTextの(reST)"
+" "
+"形式の構文を使用して書かれています。http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.htmlまたはhttp://sphinx.pocoo.org/markup/inline.htmlを参照してください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:26
+msgid ""
+"In general, when creating rst documentation for the QGIS project, please "
+"follow the `Python documentation style guidelines "
+"<http://docs.python.org/devguide/documenting.html>`_. Below are exposed some"
+" general guidelines to follow when using reST for the QGIS documentation "
+"writing."
+msgstr ""
+"QGISプロジェクトの最初の文書を作成する際に一般的には、 "
+"`Pythonのドキュメントのスタイルガイドライン<http://docs.python.org/devguide/documenting.html> "
+"` _に従ってください。以下では、QGISのドキュメントを書くためにreSTを使用する際に従うべきいくつかの一般的なガイドラインを公開しています。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:32
+msgid ""
+"If you are looking for general rules on contributing to QGIS project or "
+"managing repositories, you may find help at `Get Involved in the QGIS "
+"Community <http://qgis.org/en/site/getinvolved/index.html>`_."
+msgstr ""
+"QGISプロジェクトに貢献したりリポジトリを管理する上での一般的な規則をお探しであれば、`QGISコミュニティーに関わる<http://qgis.org/en/site/getinvolved/index.html>"
+" ` _に助けが見つかります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:38
+msgid "Writing Documentation"
+msgstr "ドキュメントを書く"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:42
+msgid "Headlines"
+msgstr "見出し"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:44
+msgid "To each webpage of the documentation corresponds a ``.rst`` file."
+msgstr "ドキュメントの各ウェブページに `` .rst``ファイルが対応しています。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:46
+msgid ""
+"Sections used to structure the text are identified through their title which"
+" is underlined (and overlined for the first level). Same level titles must "
+"use same character for underline adornment. In QGIS Documentation, you "
+"should use following styles for chapter, section, subsection and minisec."
+msgstr ""
+"テキストを構造化するために使用されるセクションはそれらのタイトルを通じて同定されます。タイトルには下線（及び第1レベルに対して上線）が引かれます。同じレベルのタイトルは下線装飾のために同じ文字を使用する必要があります。QGISドキュメントでは、章、セクション、サブセクションとminisecに対して以下のスタイルを使用する必要があります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:71
+msgid "Inline tags"
+msgstr "行内タグ"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:73
+msgid "You can use some tags inside the text to emphasize some items."
+msgstr "いくつかの項目を強調するために、テキスト内のいくつかのタグを使用できます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:75
+msgid ""
+"**Menu gui**: to mark a complete sequence of menu selections, including "
+"selecting submenus and choosing a specific operation, or any subsequence of "
+"such a sequence."
+msgstr ""
+"**メニューGUI**：サブメニューを選択し、特定の操作、またはこのような配列のいずれかのサブシーケンスを選択するなど、メニュー選択、の完全な配列をマークします。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:83
+msgid ""
+"**Dialog and Tab title**: Labels presented as part of an interactive user "
+"interface including window title, tab title and option labels."
+msgstr ""
+"**ダイアログおよびタブのタイトル**：ラベルは、ウィンドウのタイトル、タブのタイトルとオプションのラベルを含むインタラクティブなユーザインターフェースの一部として提示しました。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:90
+msgid "**Button labels**"
+msgstr "**ボタンのラベル**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:96
+msgid "**Filename or directory**"
+msgstr "**ファイル名またはディレクトリ**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:102
+msgid "**Icon with popup text belonging to Icon**"
+msgstr "**アイコンに属するポップアップテキストを持つアイコン**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:108
+msgid "(see `image`_ below)."
+msgstr "（ 以下の`image`_を参照してください）。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:110
+msgid "**Shorcut keyboard**"
+msgstr "**ショートカットキーボード**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:116
+msgid "will show :kbd:`Ctrl B`"
+msgstr ":kbd:`CtrlキーB`と表示されます"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:119
+msgid "**User text**"
+msgstr "**ユーザーテキスト**"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:129
+msgid "Label/reference"
+msgstr "ラベル/参照"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:131
+msgid ""
+"References are used to place anchors inside the text. It then helps you "
+"create and call hyperlinks between sections or page."
+msgstr "テキスト内にアンカーを配置するために参照が使用されます。セクションやページ間のハイパーリンクを作成し呼び出しできます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:134
+msgid ""
+"The example below creates the anchor of a section (e.g., Label/reference "
+"title)"
+msgstr "以下の例は、セクション（例えば、ラベル/参照タイトル）のアンカーを作成します"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:143
+msgid "To call the reference in the **same page**, use"
+msgstr "**同じページ**中の参照を呼び出すために使用するのは"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:149
+msgid "which will return:"
+msgstr "これが返すのは："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:151
+msgid "see my_anchor_ for more information."
+msgstr "詳細についてはmy_anchor_を参照してください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:153
+msgid ""
+"Notice how it will jump to the following line/thing following the 'anchor'. "
+"Normally to declare this label you do not need to use apastroph's but you do"
+" need to use empty lines before and after the anchor."
+msgstr ""
+"それはアンカー "
+"'は次の次の行/事にジャンプします注意してください。通常、このラベルを宣言するために、アポストロフィを使用する必要はありませんが、アンカーの前後に空行を使用する必要があります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:157
+msgid ""
+"Another way to jump to the same place **from anywhere in the documentation**"
+" is to use the ``:ref:`` role."
+msgstr "**文書内のどこからでも** 同じ場所にジャンプする別の方法は、``:ref:`` 役割を使用することです。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:164
+msgid ""
+"which will display the caption instead (in this case the title of this "
+"section!):"
+msgstr "その代わりに、キャプションが表示されます（この場合は、このセクションのタイトルを！）："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:166
+msgid "see :ref:`my_anchor` for more information."
+msgstr "詳細については :ref:`my_anchor` を参照。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:168
+msgid ""
+"So reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`). Because the "
+"reference often displays a full caption, there is not really the need to use"
+" the word *section*. Note that you can also use a custom caption to describe"
+" the reference"
+msgstr ""
+"だから参照1（my_anchor_）と参照2（:ref:`my_anchor`）。参照は多くの場合キャプションを完全に表示しているので、語*セクション*"
+" を使用する必要は本当はありません。参照を記述するためにカスタムのキャプションも使用できます"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:177
+msgid "returning:"
+msgstr "返します："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:179
+msgid "see :ref:`Label and reference <my_anchor>` for more information."
+msgstr "詳細については :ref:`ラベルや参照<my_anchor> ` を参照。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:185
+msgid "Figure and image"
+msgstr "図形及び画像"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:189
+msgid "Pictures"
+msgstr "ピクチャー"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:191
+msgid "To insert an image, use"
+msgstr "画像を挿入するには、使用します"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:198
+msgid "which returns"
+msgstr "これを返します"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:204
+msgid "Replacement"
+msgstr "置換"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:206
+msgid ""
+"You can put an image inside text or add an alias to use everywhere. To use "
+"an image inside a paragraph, just create an alias somewhere."
+msgstr "テキスト内の画像を置くか、どこにでも使用するエイリアスを追加できます。段落内の画像を使用するには、どこかのエイリアスを作成します。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:215
+msgid "and call it in your paragraph:"
+msgstr "そして、あなたの段落でそれを呼び出します："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:221
+msgid "Here is how this example become:"
+msgstr "ここでは、この例になる方法です。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:226
+msgid "my paragraph begins here with a nice logo |nice_logo|."
+msgstr "私の段落は、ここで素敵なロゴ|nice_logo|から始まります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:230
+msgid ""
+"Currently, to ensure consistency and help in the use of QGIS icons a list of"
+" alias is built and available in :ref:`substitutions` chapter."
+msgstr ""
+"現在、QGISのアイコンを使用することに一貫性と支援を確保するために、エイリアスのリストが :ref:`substitutions` "
+"章の中で構築され使用可能です。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:234
+msgid "Figure"
+msgstr "図"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:251
+msgid "The result looks like this:"
+msgstr "結果は以下のようになります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:263
+msgid "A caption: A logo I like"
+msgstr "キャプション：私の好きなロゴ"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:265
+msgid ""
+"Use ``.. only:: html`` to make the number to the figure (**Figure Readme "
+"1**) visible only in the html files. The scripts will insert an automatical "
+"generated number before the caption of the figure in pdf."
+msgstr ""
+"HTMLファイルだけで見える図（**図のReadme 1 **）に番号を作成するには、``.. only:: "
+"html``を使用します。スクリプトによって、PDFの図のキャプションの前に自動的に生成された番号が挿入されます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:270
+msgid ""
+"To use a caption (see My caption) just insert indented text after a blank "
+"line in the figure block."
+msgstr "キャプションを使用するには、図形ブロック内の空白行の後にインデントテキストを挿入するだけです（私のキャプションを参照してください）。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:273
+msgid ""
+"Referencing to the figure can be done using the reference label like this"
+msgstr "図への参照は、このような参照ラベルを使用して実現できます"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:280
+msgid ""
+"It will show the anchor Figure_Readme_1_. You can use uppercase if you want."
+" It can be used in the same :file:`.rst` document but not in other .rst "
+"documents."
+msgstr ""
+"これは、アンカーFigure_Readme_1_が表示されます。大文字を使用したければ使用できます。同じ :file:`.rst` "
+"文書では使用できますが、その他の.rstの文書ではできません。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:284
+msgid ""
+"You can not use the ``:ref:`` role for reference anymore, because in html "
+"the reference to the caption is lost (it now refers to the place before "
+"**Figure Readme 1:**)"
+msgstr ""
+"もはや参照のための ``:ref:``役割を使用できません、HTMLのキャプションへの参照が失われているので（それは今は **図Readme 1:** "
+"の前の場所を参照する）"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:294
+msgid "Tables"
+msgstr "テーブル"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:296
+msgid "To create a simple table"
+msgstr "簡単な表を作成するには"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:307
+msgid "Use a ``\\`` followed by an empty space to leave an empty space."
+msgstr "空きスペースを残すためには、空きスペースの前に``\\`` を使用してください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:309
+msgid ""
+"You can also use more complicated tables by drawing them using references "
+"and all"
+msgstr "彼らは参照を使用し、すべての描画することで、より複雑なテーブルも使用できます"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:327
+msgid "The result:"
+msgstr "結果："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:332
+msgid "Windows"
+msgstr "ウィンドウズ"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:332
+msgid "Mac OSX"
+msgstr "MacOSX"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:334
+msgid "|win|"
+msgstr "|win|"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:334
+msgid "|osx|"
+msgstr "|osx|"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:336
+msgid "and of course not to forget |nix|"
+msgstr "そしてもちろん |nix| を忘れないように"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:339
+msgid "My drawn table, mind you this is unfortunately not regarded a caption"
+msgstr "私の描かれたテーブル、これは残念ながらキャプションを考えていない心"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:341
+msgid "You can reference to it like this my_drawn_table_1_."
+msgstr "それはこのようにmy_drawn_table_1_で参照できます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:345
+msgid "Index"
+msgstr "インデックス"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:347
+msgid ""
+"Several index tag exists in RST. To be able to translate the index, it is "
+"necessary to integrate it into the normal text. In this case use this "
+"syntax:"
+msgstr ""
+"いくつかのインデックスタグは、RSTに存在します。インデックスを翻訳できるようにするには、通常のテキストに統合する必要があります。この場合、次の構文を使用します。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:354
+msgid "If the term does not have to be translated, please use this syntax:"
+msgstr "語を翻訳する必要がない場合は、この構文を使用してください："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:361
+msgid "Footnotes"
+msgstr "脚注"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:363
+msgid ""
+"Please note: Footnotes are not recognized by any translation software and it"
+" is also not converted to pdf format properly. So, if possible don't use "
+"footnotes within any documentation."
+msgstr ""
+"ご注意：脚注は翻訳ソフトでは認識されず、またPDF形式に適切に変換されません。だから、可能であればドキュメント内では脚注は使用しないでください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:367
+msgid "This is for creating a footnote"
+msgstr "これは、脚注を作成するためのものです"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:373
+msgid "Which will point to:"
+msgstr "どちらを指しています："
+
+#: ../../source/docs/documentation_guidelines/writing.rst:375
+msgid "Updates of core plugins"
+msgstr "コアプラグインのアップデート"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:378
+msgid "Managing Screnshots"
+msgstr "スクリーンショットを管理する"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:381
+msgid "Add new Screenshots"
+msgstr "新しいスクリーンショットを追加"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:383
+msgid ""
+"Here are some hints to create new, nice looking screenshots. For the user "
+"guide they go into :file:`./resources/en/user_manual/`"
+msgstr ""
+"ここでは、新たな、見栄えの良いスクリーンショットを作成するためのいくつかのヒントです。ファイル：ユーザーガイドについて、彼らが入る。 `/リソース/ "
+"EN / user_manual /`"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:386
+msgid ""
+"same environment for all the screen caps (same OS, same decoration, same "
+"font size). We have used Ubuntu with Unity and the default \"ambience\" "
+"theme. For screenshots of QGIS main window and composer we have set it to "
+"show menus on the window (not the default in unity)."
+msgstr ""
+"すべての画面のキャップのための同じ環境（同じOS、同じ装飾、同じフォントサイズ）。私たちは、Unityとデフォルトの「雰囲気」をテーマとUbuntuのを使用しました。QGISのメインウィンドウとコンポーザのスクリーンショットのためには、ウィンドウ（ユニティではないデフォルト）のメニューを表示するように設定しています。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:390
+msgid ""
+"reduce the window to the minimal space needed to show the feature (taking "
+"the all screen for a small modal window > overkill)"
+msgstr "機能を表示するために必要な最小限のスペースにウィンドウを縮小（小さなモーダルウィンドウのために、すべての画面を撮る>行き過ぎ）"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:392
+#: ../../source/docs/documentation_guidelines/writing.rst:437
+msgid "the less clutter, the better (no need to activate all the toolbars)"
+msgstr "ごちゃごちゃしていないほど良い（すべてのツールバーをアクティブにする必要はありません）"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:393
+msgid ""
+"don't resize them in an image editor, the size will be set into the rst "
+"files if necessary (downscaling the dimensions without properly upping the "
+"resolution > ugly)"
+msgstr ""
+"イメージエディタでそれらのサイズを変更していない、必要であれば、サイズは（適切に醜い解像度>を増額せずに寸法をダウンスケーリング）最初のファイルに設定されます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:395
+#: ../../source/docs/documentation_guidelines/writing.rst:440
+msgid "cut the background"
+msgstr "背景をカット"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:396
+msgid ""
+"Set print size resolution to 135 dpi, eg in Gimp set the print resolution "
+"(image > print size) and save. This way, if no size is set in the rst files,"
+" images will be at original size in html and at a good print resolution in "
+"the PDF. You can use ImageMagick convert command to do a batch of images:"
+msgstr ""
+"例えばGimpの中に135 "
+"dpiの、に設定して印刷サイズ解像度は、印刷解像度（画像>印刷サイズ）を設定して保存します。何のサイズが最初のファイルに設定されていない場合は、この方法は、画像がHTMLにし、PDFでの良好な印刷解像度で元のサイズになります。画像のバッチを実行するためにコマンドを変換ImageMagickのを使用できます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:405
+#: ../../source/docs/documentation_guidelines/writing.rst:441
+msgid "save them in png (no jpeg artifacts)"
+msgstr "PNGに保存（JPEG損失なし）"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:406
+#: ../../source/docs/documentation_guidelines/writing.rst:442
+msgid ""
+"the screenshot should show the content according to what is described in the"
+" text"
+msgstr "スクリーンショットは、テキストに記載されているものによってコンテンツを表示する必要があります"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:407
+msgid ""
+"you can find some prepared QGIS-projects that were used before to create "
+"screenshots in :file:`./qgis-projects`. This makes it easier to reproduce "
+"screenshots for the next version of QGIS. These projects use the QGIS "
+"`Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset), which"
+" should be placed in the same folder as the QGIS-Documentation Repository."
+msgstr ""
+":file:`/qgis-projects` 中には、スクリーンショットを作成するために前に使用されていたいくつかの準備QGIS-"
+"プロジェクトを見つけることができます。このため、簡単にQGISの次のバージョンのスクリーンショットを再現できます。これらのプロジェクトは、QGIS "
+"`サンプルデータ<http://qgis.org/downloads/data/>`_ （別名アラスカデータセット） を使用し、QGIS-"
+"ドキュメントリポジトリと同じフォルダに配置する必要があります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:413
+msgid ""
+"Use the following command to remove the global menu function in Ubuntu to "
+"create smaller application screens with menu's:"
+msgstr ""
+"メニューの持つ小さなアプリケーション画面を作成するために、Ubuntuの中でグローバルメニューの機能を削除するには、次のコマンドを使用します。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:422
+msgid "Translate Screenshots"
+msgstr "スクリーンショットを翻訳"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:424
+msgid ""
+"Here are some hints to create screenshots for your translated user guide. "
+"They will go into :file:`./resources/<your language>/user_manual/`"
+msgstr ""
+"ここには翻訳されたユーザーガイド用のスクリーンショットを作成するためのいくつかのヒントがあります。それらは "
+":file:`./resources/<your language>/user_manual/` になります"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:427
+msgid ""
+"same environment for all the screen caps (same OS, same decoration, same "
+"font size)"
+msgstr "すべての画面のキャップのための同じ環境（同じOS、同じ装飾、同じフォントサイズ）"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:428
+msgid ""
+"use the QGIS -projects included in QGIS-Documentation repository (in "
+":file:`./qgis_projects` ). These were used to produce the 'original' "
+"screenshots in the manual. The QGIS `Sample Data "
+"<http://qgis.org/downloads/data/>`_ (aka Alaska Dataset) should be placed in"
+" the same folder as the QGIS-Documentation Repository."
+msgstr ""
+"QGIS-ドキュメントリポジトリ（ :file:`./qgis_projects` で）に含まれるQGIS-"
+"projectsを使用してください。これらは、マニュアルの「元」のスクリーンショットを生成するために使用されました。QGIS "
+"`サンプルデータ<http://qgis.org/downloads/data/>` _ （別名アラスカデータセット）は、QGIS-"
+"ドキュメントリポジトリと同じフォルダに配置する必要があります。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:432
+msgid ""
+"same size as the english 'original' screenshots, otherwise they will be "
+"stretched and look ugly. If you need to have a different size due to longer "
+"ui strings, don't forget to change the dimension in the rst code of your "
+"language."
+msgstr ""
+"英語のオリジナル "
+"\"スクリーンショットと同じサイズです。そうでない場合は延伸され見栄えが悪くなるでしょう。長いUI文字列のために異なるサイズを持っている必要がある場合は、ご自身の言語のrstコードの寸法を変更することを忘れないでください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:435
+msgid ""
+"reduce the window to the minimal space needed to show the feature (taking "
+"all the screen for a small modal window > overkill)"
+msgstr "地物を表示するために必要な最小限のスペースにウィンドウを縮小（小さなモーダルウィンドウのために、すべての画面を撮る>行き過ぎ）"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:438
+msgid ""
+"don't resize them in an image editor, the size will be set into the rst "
+"files (downscaling the dimensions without properly upping the resolution > "
+"ugly)"
+msgstr ""
+"画像エディタでそれらのサイズを変更しないでください、サイズがrstファイルに設定されます（解像度を適切に増やさずに寸法をダウンスケーリング>醜い）。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:446
+msgid "Documenting Processing algorithms"
+msgstr "処理アルゴリズムの文書化"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:448
+msgid ""
+"If you want to write documentation for Processing algorithms consider these "
+"guidelines:"
+msgstr "アルゴリズムを処理するための文書をお書きになる場合は次のガイドラインを考慮してください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:450
+msgid ""
+"don't overwrite existing help files by files from other sources (e.g. QGIS "
+"source tree or Processing-Help repository), this files have different "
+"formats"
+msgstr ""
+"他の情報源（例えばQGISソースツリーや処理 - "
+"ヘルプリポジトリ）からファイルで、既存のヘルプファイルを上書きしない、このファイルには、異なるフォーマットを持っています"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:452
+msgid ""
+"Processing algorithm help files are part of QGIS User Guide, so use same "
+"formatting as User Guide and other documentation"
+msgstr ""
+"処理アルゴリズムのヘルプファイルには、QGISユーザーガイドの一部であるので、ユーザガイドとその他のドキュメントと同じフォーマットを使用します"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:454
+msgid ""
+"avoid use \"This algoritm does this and that...\" as first sentence in "
+"algorithm description. Try to use more general words like in TauDEM or GRASS"
+" algoritms help"
+msgstr ""
+"「これはそのアルゴリズムはこれとそれを行う...」アルゴリズム記述の最初の文として使用を避けます。TauDEMまたはGRASS "
+"algoritmsヘルプのような、より一般的な言葉を使用してみてください"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:457
+msgid ""
+"add images if needed. Use PNG format and follow general guidelines for "
+"documentation."
+msgstr "必要に応じて画像を追加します。PNG形式を使用して文書化のための一般的なガイドラインに従ってください。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:458
+msgid ""
+"if necessary add links to additional information (e.g. publications or web-"
+"pages) to the \"See also\" section"
+msgstr "必要ならば「も参照してください」セクションに追加情報へのリンク（例えば出版物やウェブページ）を追加します"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:460
+msgid ""
+"give clear explanation for algorithm parameters and outputs (again GRASS and"
+" TauDEM are good examples)."
+msgstr "（再びGRASSとTauDEMが良い例です）アルゴリズムパラメータおよび出力のための明確な説明を与えます。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:462
+msgid ""
+"don't edit parameter or output names. If you found typo or wrong spelling "
+"--- report this in bugracker, so developers can fix this in Processing code "
+"too"
+msgstr ""
+"パラメータまたは出力名は編集しないでください。タイプミスや間違ったスペルを見つけられた場合は、開発者が処理コードでも修正できるように、bugrackerでご報告ください"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:464
+msgid ""
+"don't list available options in algorithm description, options already "
+"listed in parameter description."
+msgstr "アルゴリズム記述、すでにパラメータの説明に記載されているオプションで利用可能なオプションの一覧を表示しません。"
+
+#: ../../source/docs/documentation_guidelines/writing.rst:466
+msgid ""
+"don't add information vector geometry type in algorithm or parameter "
+"description without compelling reason as this information already available "
+"in parameter description"
+msgstr ""
+"パラメータの説明ではすでに利用可能な情報として、説得力のある理由なしに、アルゴリズムやパラメータの説明に情報ベクトルジオメトリタイプを追加しないでください"

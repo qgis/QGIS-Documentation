@@ -1,0 +1,662 @@
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-07-27 01:59+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:9
+msgid "The Symbol Library"
+msgstr "심볼 라이브러리"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:22
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:42
+msgid "The Style Manager"
+msgstr "스타일 관리자"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:24
+msgid ""
+"The Symbol Library is the place where users can manage and create generic "
+"symbols to be used in several QGIS projects. You can open it with the "
+":menuselection:`Settings --> Style Manager` or from the **Style** tab in the"
+" vector layer's :menuselection:`Properties`. It allows users to:"
+msgstr "심볼 라이브러리에서 QGIS 프로젝트에 쓰이는 일반 심볼들을 관리하고 생성할 수 있습니다. :menuselection:`Settings --> Style Manager` 메뉴 또는 벡터 레이어의 :menuselection:`Properties` 대화창의 :guilabel:`Style` 탭에서 심볼 라이브러리를 열 수 있습니다. 사용자는 이를 통해:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:29
+msgid "create, edit and remove symbols"
+msgstr "심볼을 생성, 편집 및 제거하고"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:30
+msgid "organize symbols in custom groups"
+msgstr "사용자 지정 그룹으로 심볼을 체계화하고"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:31
+msgid "export and import symbols."
+msgstr "심볼을 내보내거나 불러들일 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:46
+msgid "Groups and smart groups"
+msgstr "그룹 및 스마트 그룹"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:48
+msgid ""
+"You can organize symbols into different categories. These categories, listed"
+" in the panel at the left, can be static (called **Group**) or dynamic "
+"(named **Smart Group**). A group is smart when its symbols are dynamically "
+"fetched according to conditions set. See figure_symbol_2_:"
+msgstr "사용자가 서로 다른 범주로 심볼을 체계화할 수 있습니다. 패널 왼쪽에 정렬된 이 범주들은 정적일 수도 (**그룹**) 있고 동적일 수도 (**스마트 그룹**) 있습니다. 설정된 조건에 따라 심볼들을 동적으로 가지고 오는 경우를 스마트 그룹이라고 합니다. :ref:`figure_symbol_2_` 그림을 살펴보세요:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:53
+msgid ""
+"To create a group, right click on an existing group or on the main "
+"**Groups** directory in the left of the dialog. You can also select a group "
+"and click the |signPlus| :sup:`Add Group` button. The new group will be a "
+"sub-group of the selected one."
+msgstr "그룹을 생성하려면, 기존 그룹 또는 대화창 왼쪽에 있는 **Groups** 디렉터리를 오른쪽 클릭하십시오. 그룹을 선택한 다음 |signPlus| :sup:`Add Group` 버튼을 클릭해도 됩니다. 선택한 그룹의 하위 그룹으로 새 그룹을 생성할 것입니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:58
+msgid ""
+"Create **Smart Group** is similar to creating group, but instead select "
+"**Smart Groups**. The dialog box allows user to choose the expression to "
+"select symbols in order to appear in the smart group (contains some tags, "
+"member of a group, have a string in its name, etc.). Any symbol that "
+"satisfies the entered condition(s) is automatically added to the smart "
+"group."
+msgstr "**스마트 그룹** 을 생성하는 작업은 그룹을 생성하는 작업과 비슷하지만, Groups 대신 **Smart Groups** 를 선택하십시오. 사용자가 대화창을 통해 심볼을 스마트 그룹에 포함시키기 위한 표현식을 선택할 수 있습니다. (태그를 포함한다거나, 어떤 그룹에 속해 있다거나, 명칭에 어떤 문자열이 포함돼 있다거나 등등의 표현식 말입니다.) 입력한 조건(들)을 만족하는 심볼을 자동적으로 스마트 그룹에 추가할 겁니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:73
+msgid "Creating a Smart Group"
+msgstr "스마트 그룹 생성하기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:75
+msgid ""
+"To remove a group or a smart group, right click on the group and select "
+":menuselection:`Remove Group` or select it and push |signMinus| :sup:`Remove"
+" Group` button."
+msgstr "그룹 또는 스마트 그룹을 제거하려면, 그룹을 오른쪽 클릭한 다음 :menuselection:`Remove Group` 옵션을 선택하거나, 그룹을 선택한 다음 |signMinus| :sup:`Remove Group` 버튼을 클릭하십시오."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:79
+msgid ""
+"Unlike the smart groups that automatically fetch their belonged symbols, "
+"simple groups are filled by the user. To add a symbol into a group, you can "
+"either right click on a symbol, choose :menuselection:`Apply Group` and then"
+" the group name. There is a second way to add several symbols into a group: "
+"just select the group, click |changeLabelProperties| and choose "
+":menuselection:`Group Symbols`. All symbols display a checkbox that allows "
+"you to add the symbol into the selected groups. When selection is finished, "
+"you can click the same button, and choose :menuselection:`Finish Grouping`."
+msgstr "조건에 맞는 심볼들을 자동적으로 가져오는 스마트 그룹과 달리, 단순 그룹은 사용자가 심볼을 선택해야 합니다. 그룹에 심볼을 추가하려면, 심볼을 오른쪽 클릭해서 :menuselection:`Apply Group` 옵션을 선택한 다음 그룹명을 선택하십시오. 그룹에 심볼 여러 개를 한 번에 추가할 수 있는 두 번째 방법도 있습니다: 그룹을 선택한 다음, |changeLabelProperties| 버튼을 클릭하고 :menuselection:`Group Symbols` 옵션을 선택하십시오. 모든 심볼에 선택한 그룹으로 심볼들을 추가할 수 있는 체크박스가 표시됩니다. 심볼 선택이 끝나면 같은 버튼을 클릭하고 :menuselection:`Finish Grouping` 옵션을 선택하십시오."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:89
+msgid ""
+"All the symbols that are not placed under a custom group belong to a default"
+" group named **Ungrouped**."
+msgstr "사용자 지정 그룹 아래 속하지 않은 모든 심볼은 **Ungrouped** 라는 기본 그룹에 속해 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:93
+msgid "Add, Edit, Remove Symbol"
+msgstr "심볼 추가, 편집, 제거"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:95
+msgid ""
+"Selecting a group returns in the right panel, if applicable, the list of "
+"symbols of the group (including its subgroups). These symbols are organized "
+"in four different tabs:"
+msgstr "그룹을 선택하면, 가능할 경우, 오른쪽 패널에 해당 그룹의 심볼 목록을 (하위 그룹도 포함해서) 반환합니다. 이 심볼들은 다음 서로 다른 탭 4개로 체계화돼 있습니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:99
+msgid "**Marker** for point symbols"
+msgstr "**마커**: 포인트 모양의 심볼"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:100
+msgid "**Line** for linear symbols"
+msgstr "**선**: 직선 모양의 심볼"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:101
+msgid "**Fill** for surface symbols"
+msgstr "**채우기**: 면 모양의 심볼"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:102
+msgid "and `Color Ramp`_"
+msgstr "그리고 :ref:`color-ramp`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:104
+msgid ""
+"To delete a symbol you no longer need, just select it and click |signMinus| "
+":sup:`Remove item` (also available through right-click). The symbol will be "
+"deleted from the local symbols database."
+msgstr "더 이상 필요하지 않는 심볼을 삭제하려면, 심볼을 선택한 다음 |signMinus| :sup:`Remove item` 을 클릭하십시오. (오른쪽 클릭을 통해서도 가능합니다.) 로컬 심볼 데이터베이스에서 심볼을 삭제할 것입니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:108
+msgid ""
+"The symbol list can be modified by adding new symbols with |signPlus| "
+":sup:`Add item` button or modifying existing ones with |symbologyEdit| "
+":sup:`Edit item`. See `The Symbol Selector`_ for further information."
+msgstr "|signPlus| :sup:`Add item` 버튼으로 새 심볼을 추가하거나 |symbologyEdit| :sup:`Edit item` 버튼으로 기존 심볼을 수정해서 심볼 목록을 수정할 수 있습니다. 더 자세한 내용은 `The Symbol Selector`_ 를 참조하세요."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:114
+msgid "Share symbols"
+msgstr "심볼 공유"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:116
+msgid ""
+"The |sharing| :sup:`Share item` tool, at the right bottom of the Style "
+"Library dialog, offers options to easily share symbols with others: users "
+"can indeed export their symbols and import symbols to their library."
+msgstr "스타일 라이브러리 대화창 우하단에 있는 |sharing| :sup:`Share item` 도구는 다른 사용자와 쉽게 심볼을 공유할 수 있는 옵션을 제공합니다. 사용자가 실제로 자기 심볼들을 내보내고 자기 라이브러리에 심볼들을 불러들일 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:120
+msgid "**Exporting symbols**"
+msgstr "**심볼 내보내기**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:122
+msgid ""
+"You can export the selected symbols to PNG, SVG or XML file formats. "
+"Exporting to PNG or SVG (both not available for color ramp symbols) creates "
+"a file for each selected symbol, and the SVG folder can be added to SVG "
+"Paths in :menuselection:`Settings --> Options` to e.g. share these symbols "
+"on a network. The XML format generates a single file containing all the "
+"selected symbols. This file can then be imported in another user's style "
+"library."
+msgstr "선택한 심볼을 PNG, SVG 또는 XML 파일 유형으로 내보낼 수 있습니다. PNG 또는 SVG로 내보내면 (색상표 심볼의 경우 둘 다 불가능합니다) 선택한 심볼마다 각각 파일을 생성합니다. :menuselection:`Settings --> Options` 메뉴에 있는 SVG 경로에 SVG 폴더를 추가하면, 예를 들어 네트워크 상에서, 이렇게 내보낸 심볼을 공유할 수도 있습니다. XML 유형은 선택한 모든 심볼을 담고 있는 파일 1개를 생성합니다. 이 파일을 다른 사용자의 스타일 라이브러리로 불러들일 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:129
+msgid "**Importing symbols**"
+msgstr "**심볼 불러오기**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:131
+msgid ""
+"You can extend your symbols library by importing new symbols. Just select "
+"|sharing| :menuselection:`Import` from the drop-down list at the right "
+"bottom of the dialog. In the new dialog, you'll need to :"
+msgstr "새 심볼을 불러와서 사용자의 심볼 라이브러리를 확장할 수 있습니다. 대화창 우하단의 드롭다운 목록에서 |sharing| :menuselection:`Import` 옵션을 선택하기만 하면 됩니다. 새로 열리는 대화창에서, 다음 작업을 해야 합니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:135
+msgid ""
+"indicate the source of the symbols (it can be a ``.xml`` file on the disk or"
+" an url),"
+msgstr "심볼의 소스를 설정합니다. (디스크 상의 :file:`.xml` 파일일 수도 있고 URL일 수도 있습니다.)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:136
+msgid "give the name of the group under which the symbols will be put"
+msgstr "심볼이 속하게 될 그룹명을 선택합니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:137
+msgid "select the symbols you want to add to your library"
+msgstr "사용자 라이브러리에 추가하고자 하는 심볼을 선택합니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:138
+msgid "and press **Import**."
+msgstr "마지막으로 **[Import]** 를 클릭하십시오."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:140
+msgid ""
+"Note that import and export options are also available through right-click."
+msgstr "오른쪽 클릭을 통해서도 불러오기 및 내보내기 옵션을 사용할 수 있다는 사실을 기억하세요."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:151
+msgid "Importing symbols"
+msgstr "심볼 불러오기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:157
+msgid "Color Ramp"
+msgstr "색상표"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:161
+msgid ""
+"The Color ramp tab in the Style Manager presents different types of color "
+"ramps you can use to style layers."
+msgstr ":guilabel:`Style Manager` 의 :guilabel:`Color ramp` 탭은 레이어 스타일에 적용할 수 있는 서로 다른 색상표 유형들을 제공합니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:164
+msgid ""
+"To create a custom color ramp, activate the Color ramp tab and click the "
+"|signPlus| :sup:`Add item` button. The button reveals a drop-down list to "
+"choose the ramp type: Gradient, Random, colorBrewer, or cpt-city."
+msgstr "사용자 지정 색상표를 생성하려면, :guilabel:`Color ramp` 탭으로 가서 |signPlus| :sup:`Add item` 버튼을 클릭하십시오. 드롭다운 목록에서 Gradient, Random, colorBrewer, 또는 cpt-city 색상표 유형 가운데 하나를 선택하십시오."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:168
+msgid ""
+"The first three have options for number of steps and/or multiple stops in "
+"the color ramp. You can use the |checkbox| :guilabel:`Invert` option while "
+"classifying the data with a color ramp. See figure_symbol_4_ for an example "
+"of custom color ramp and figure_symbol_4a_ for the cpt-city dialog."
+msgstr "처음 탭 3개는 색상표에서 색상의 개수 그리고/또는 복수의 시작/끝 색상을 위한 옵션을 가지고 있습니다. 색상표로 데이터를 분류하는 작업 중에 |checkbox| :guilabel:`Invert` 옵션을 이용할 수 있습니다. 사용자 지정 색상표의 예시는 :ref:`figure_symbol_4_` 를 그리고 cpt-city 대화창의 예시는 :ref:`figure_symbol_4a_` 그림을 참조하세요."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:183
+msgid "Example of custom gradient color ramp with multiple stops"
+msgstr "복수의 색상을 지정한 사용자 지정 그레이디언트 색상표의 예시"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:185
+msgid ""
+"The cpt-city option opens a new dialog with hundreds of themes included 'out"
+" of the box'."
+msgstr "cpt-city 옵션은 최신 견본을 포함한 테마 수백 개를 보유한 새 대화창을 엽니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:196
+msgid "cpt-city dialog with hundreds of color ramps"
+msgstr "색상표 수백 개를 보유한 cpt-city 대화창"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:202
+msgid "The symbol Selector"
+msgstr "심볼 선택자"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:204
+msgid ""
+"The Symbol selector is the main dialog to design a symbol. You can create or"
+" edit Marker, Line or Fill Symbols."
+msgstr "심볼 선택자는 심볼을 디자인할 수 있는 주 대화창입니다. 마커, 선 또는 채우기 심볼을 생성하거나 편집할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:216
+msgid "Designing a Marker symbol"
+msgstr "마커 심볼 디자인하기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:219
+msgid ""
+"For each kind of symbols, you will find always the same dialog structure:"
+msgstr "각 심볼 유형에 대해 항상 동일한 구조의 대화창이 열릴 겁니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:221
+msgid ""
+"at the top left side a dynamic symbol representation, updated as soon as "
+"symbol properties evolve"
+msgstr "좌상단에 동적으로 심볼을 표현합니다. 심볼 속성이 변경될 때마다 업데이트됩니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:223
+msgid ""
+"under the symbol representation, the symbol tree shows symbol layers that "
+"are combined afterwards to shape a new global symbol. A symbol can consist "
+"of several :guilabel:`Symbol layers`. Settings will be shown later in this "
+"chapter."
+msgstr "심볼 표현 아래에, 새 일반 심볼을 형성할 때 모두 합쳐지는 심볼 레이어들을 보여주는 심볼 트리가 있습니다. 심볼은 :guilabel:`Symbol layers` 몇 개로 이루어질 수 있습니다. 이 단락 후반에서 관련 설정을 설명하겠습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:227
+msgid ""
+"at the right you can setup some parameters that apply to the global symbol:"
+msgstr "오른쪽에서, 일반 심볼에 적용할 다음 몇몇 파라미터를 설정할 수 있습니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:229
+msgid "**unit**: it can be millimeter, pixel or map unit"
+msgstr "**단위**: 밀리미터, 픽셀, 맵 단위 가운데 하나를 선택할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:230
+msgid "**transparency**"
+msgstr "**투명도**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:231
+msgid ""
+"**color**: when this parameter is changed by the user, its value is echoed "
+"to all unlocked sub-symbols color"
+msgstr "**색상**: 사용자가 이 파라미터를 변경하면, 잠기지 않은 모든 하위 심볼 색상에 그 색상값을 반영합니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:233
+msgid "**size** and **rotation** for marker symbol"
+msgstr "**크기** 및 **회전**: 마커 심볼 전용 파라미터입니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:234
+msgid "**width** for line symbol"
+msgstr "**폭**: 선 심볼 전용 파라미터입니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:236
+msgid ""
+"Note that the :guilabel:`Data-defined override` button beside the last "
+"layer-related parameters is inactive until the symbol is applied to a layer."
+" Once the symbol is connected to a layer, this button offers access to the "
+":ref:`size assistant <size_assistant>` dialog which helps to create "
+"proportional or multivariate analysis rendering."
+msgstr "심볼을 레이어에 적용하기 전엔 **크기**, **회전**, **폭** 등 레이어 관련 파라미터 옆에 있는 :guilabel:`데이터 정의 무시` 버튼이 비활성화된 상태라는 점을 기억하십시오. 심볼이 레이어와 연결된 다음에야, 이 버튼으로 비례 또는 다변량 분석 렌더링 생성을 도와주는 :ref:`크기 도우미 <size_assistant>` 대화창에 접근할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:242
+msgid ""
+"under these parameters are displayed items of the symbols library you can "
+"choose from. This list of symbols can be filtered by selecting a group in "
+"the drop-down list just above."
+msgstr "이 파라미터들 아래에 사용자가 심볼을 선택할 수 있는 심볼 라이브러리를 표시합니다. 라이브러리 바로 위에 있는 드롭다운 목록에서 그룹을 선택하면 심볼 목록을 필터링할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:246
+msgid ""
+"According to the level selected in the symbol tree, you'll get enabled "
+"different tools at the bottom of the dialog to :"
+msgstr "심볼 트리에서 선택한 수준에 따라, 대화창 하단에 서로 다른 다음 도구들이 활성화될 것입니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:249
+msgid ""
+"|signPlus| add new symbol layer: you can imbricate as many symbols as you "
+"want"
+msgstr "|signPlus| 새 심볼 레이어 추가: 원하는 대로 심볼들을 겹칠 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:250
+msgid "|signMinus| remove the selected symbol layer"
+msgstr "|signMinus| 선택한 심볼 레이어 제거"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:251
+msgid ""
+"lock colors of symbol layer: a |locked| locked color stays unchanged when "
+"user changes the color at the global (or upper) symbol level"
+msgstr "심볼 레이어의 색상 잠금: |locked| 잠긴 색상은 사용자가 일반 (또는 그 이상) 심볼 수준에서 색상을 변경하더라도 영향을 받지 않습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:253
+msgid "|duplicateLayer| duplicate a (group of) symbol layer(s)"
+msgstr "|duplicateLayer| 심볼 레이어(들) (그룹) 복사"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:254
+msgid "move up or down the symbol layer"
+msgstr "심볼 레이어를 위 또는 아래로 이동"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:255
+msgid "apply :ref:`special effects <draw_effects>` to the symbol layer"
+msgstr "심볼 레이어에 :ref:`특수 효과 <draw_effects>` 적용"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:256
+msgid "save the designed symbol into your symbol library"
+msgstr "디자인한 심볼을 사용자 심볼 라이브러리에 저장"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:257
+msgid ""
+"or choose in the :guilabel:`Advanced` |selectString| drop-down list, to "
+"**clip features to canvas extent**."
+msgstr "또는 :guilabel:`Advanced` |selectString| 드롭다운 목록에서 **캔버스 범위로 피처 잘라내기** 선택"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:264
+msgid ""
+"Note that once you have set the size in the lower levels of the "
+":guilabel:`Symbol layers` dialog, the size of the whole symbol can be "
+"changed with the :guilabel:`Size` (for marker symbol) or the "
+":guilabel:`Width` (for line symbol) menu in the first level again. The size "
+"of the lower levels changes accordingly, while the size ratio is maintained."
+msgstr ":guilabel:`심볼 레이어` 창의 낮은 수준에서 크기를 설정하고 나서도, 최고 수준에 있는 (마커 심볼 용) :guilabel:`크기` 또는 (선 심볼 용) :guilabel:`폭` 메뉴로 전체 심볼의 크기를 변경할 수 있다는 사실을 기억하십시오. 낮은 수준의 크기가 비율을 유지한 채 알맞게 변경됩니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:270
+msgid ""
+"More detailed settings can be made when clicking on the lower level in the "
+"Symbol tree. You can change each :guilabel:`Symbol layers` properties and "
+"according to the symbol type, you get different settings."
+msgstr "심볼 트리에서 낮은 수준을 클릭하면 더 자세하게 설정할 수 있습니다. 각 :guilabel:`심볼 레이어` 의 속성을 변경할 수 있는데, 심볼 유형에 따라 서로 다른 설정 옵션이 제공됩니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:279
+msgid "Marker Symbols"
+msgstr "마커 심볼"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:281
+msgid "Marker symbols have several symbol layer types:"
+msgstr "마커 심볼은 다음 심볼 레이어 유형을 지원합니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:283
+msgid "Ellipse marker"
+msgstr "타원 마커"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:284
+msgid "Font marker"
+msgstr "글꼴 마커"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:285
+msgid "Simple marker (default)"
+msgstr "단순 마커 (기본값)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:286
+msgid "SVG marker"
+msgstr "SVG 마커"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:287
+msgid "Vector Field marker"
+msgstr "벡터 필드 마커"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:289
+msgid "For each marker symbol, you can set the following properties:"
+msgstr "각 마커 심볼마다 다음과 같은 속성을 설정할 수 있습니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:291
+msgid ""
+":guilabel:`Symbol layer type`: You have the option to use Ellipse markers, "
+"Font markers, Simple markers, SVG markers and Vector Field markers."
+msgstr ":guilabel:`심볼 레이어 유형`: 타원 마커, 글꼴 마커, 단순 마커, SVG 마커 및 벡터 필드 마커 가운데 하나를 선택할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:293
+msgid ":guilabel:`colors`"
+msgstr ":guilabel:`색상`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:294
+msgid ":guilabel:`Size`"
+msgstr ":guilabel:`크기`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:295
+msgid ":guilabel:`Outline style`"
+msgstr ":guilabel:`외곽선 스타일`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:296
+msgid ":guilabel:`Outline width`"
+msgstr ":guilabel:`외곽선 폭`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:297
+msgid ":guilabel:`Angle`"
+msgstr ":guilabel:`회전 각도`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:298
+msgid ""
+":guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction."
+msgstr ":guilabel:`오프셋 X,Y`: 심볼을 X 또는 Y 방향으로 옮길 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:299
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`앵커 포인트`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:300
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:328
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:354
+msgid ":guilabel:`Data defined properties ...`"
+msgstr ":guilabel:`데이터 정의 속성...`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:304
+msgid "Line Symbols"
+msgstr "선 심볼"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:306
+msgid "Line marker symbols have only two symbol layer types:"
+msgstr "선 마커 심볼은 다음 심볼 레이어 유형 2개만 지원합니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:308
+msgid "Marker line"
+msgstr "마커 선"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:309
+msgid "Simple line (default)"
+msgstr "단순 선 (기본값)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:311
+msgid ""
+"The default symbol layer type draws a simple line whereas the other display "
+"a marker point regularly on the line. You can choose different location: "
+"vertex, last and first vertex, interval, central point or on every curve "
+"point. Marker line can have offset along the line or offset line. Finally, "
+":guilabel:`rotation` allows you to change the orientation of the symbol."
+msgstr "기본 심볼 레이어 유형은 단순 라인을 그리는 반면 다른 유형은 라인 위에 마커 포인트를 규칙적으로 표시합니다. 마커의 위치로 꼭짓점, 마지막 및 첫 꼭짓점, 일정 간격, 중점 또는 모든 만곡 포인트 가운데 하나를 선택할 수 있습니다. 마지막으로, :guilabel:`회전` 옵션을 이용하면 심볼의 방향을 변경할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:318
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:347
+msgid "The following settings are available:"
+msgstr "다음 속성을 설정할 수 있습니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:320
+msgid ":guilabel:`colour`"
+msgstr ":guilabel:`색상`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:321
+msgid ":guilabel:`Pen width`"
+msgstr ":guilabel:`펜 굵기`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:322
+msgid ":guilabel:`Offset`"
+msgstr ":guilabel:`오프셋`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:323
+msgid ":guilabel:`Pen style`"
+msgstr ":guilabel:`펜 스타일`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:324
+msgid ":guilabel:`Join style`"
+msgstr ":guilabel:`연결 스타일`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:325
+msgid ":guilabel:`Cap style`"
+msgstr ":guilabel:`선 끝 스타일`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:326
+msgid "|checkbox| :guilabel:`Use custom dash pattern`"
+msgstr "|checkbox| :guilabel:`사용자 지정 점선 패턴 사용`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:327
+msgid ":guilabel:`Dash pattern unit`"
+msgstr ":guilabel:`점선 패턴 단위`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:332
+msgid "Polygon Symbols"
+msgstr "폴리곤 심볼"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:334
+msgid "Polygon marker symbols have also several symbol layer types:"
+msgstr "폴리곤 마커 심볼도 다음 심볼 레이어 유형을 지원합니다:"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:336
+msgid "Centroid fill"
+msgstr "중심점 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:337
+msgid "Gradient fill"
+msgstr "그레이디언트 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:338
+msgid "Line pattern fill"
+msgstr "라인 패턴 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:339
+msgid "Point pattern fill"
+msgstr "포인트 패턴 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:340
+msgid "Raster image fill"
+msgstr "래스터 이미지 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:341
+msgid "SVG fill"
+msgstr "SVG 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:342
+msgid "Shapeburst fill"
+msgstr "shapeburst 채우기"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:343
+msgid "Simple fill (default)"
+msgstr "단순 채우기 (기본값)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:344
+msgid "Outline: Marker line (same as line marker)"
+msgstr "외곽선: 마커 라인 (선 마커와 동일)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:345
+msgid "Outline: simple line (same as line marker)"
+msgstr "외곽선: 단순 라인 (선 마커와 동일)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:349
+msgid ":guilabel:`Colors` for the border and the fill."
+msgstr ":guilabel:`색상`: 경계선 및 면의 색상을 설정"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:350
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`면 스타일`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:351
+msgid ":guilabel:`Border style`"
+msgstr ":guilabel:`경계선 스타일`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:352
+msgid ":guilabel:`Border width`"
+msgstr ":guilabel:`경계선 폭`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:353
+msgid ":guilabel:`Offset X,Y`"
+msgstr ":guilabel:`오프셋 X,Y`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:356
+msgid ""
+"Using the color combo box, you can drag and drop color for one color button "
+"to another button, copy-paste color, pick color from somewhere, choose a "
+"color from the palette or from  recent or standard color. The combo box "
+"allows you to fill in the feature with transparency. You can also just click"
+" the button to open the palette dialog. Note that you can import color from "
+"some external software like GIMP."
+msgstr "색상 콤보 상자를 이용하면, 한 색상 버튼에서 다른 색상 버튼으로 색상을 드래그&드롭할 수 있고, 색상을 복사/붙여넣기 할 수 있고, 다른 곳에서 색상을 추출할 수 있으며, 팔레트에서 색상을 선택하거나 최신 또는 표준 색상에서 선택할 수 있습니다. 콤보 상자를 통해 피처를 투명하게 채울 수도 있습니다. 버튼을 클릭하기만 하면 색상 팔레트 대화창을 열 수도 있습니다. GIMP 같은 일부 외부 소프트웨어에서 색상을 불러올 수 있다는 사실을 기억하십시오."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:363
+msgid ""
+"With the 'Raster image fill' you can fill polygons with a tiled raster "
+"image. Options include (data defined) file name, opacity, image size (in "
+"pixels, mm or map units), coordinate mode (feature or view) and rotation."
+msgstr "'래스터 이미지 채우기' 심볼 레이어 유형은 폴리곤을 래스터 이미지 타일로 채울 수 있습니다. (데이터 정의) 파일명, 투명도, 이미지 크기(픽셀, 밀리미터 또는 맵 단위), 좌표 모드(피처 또는 뷰) 그리고 회전 옵션을 설정할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:367
+msgid ""
+"'Gradient Fill' :guilabel:`Symbol layer type` allows you to select between a"
+" |radioButtonOn| :guilabel:`Two color` and |radioButtonOff| :guilabel:`Color"
+" ramp` setting. You can use the |checkbox| :guilabel:`Feature centroid` as "
+":guilabel:`Referencepoint`. All fills 'Gradient Fill` :guilabel:`Symbol "
+"layer type` is also available through the :guilabel:`Symbol` menu of the "
+"Categorized and Graduated Renderer and through the :guilabel:`Rule "
+"properties` menu of the Rule-based renderer."
+msgstr "'그레이디언트 채우기' 심볼 레이어 유형은 |radioButtonOn| :guilabel:`두 색상` 과 |radioButtonOff| :guilabel:`색상표` 설정 가운데 하나를 선택할 수 있습니다. :guilabel:`참조 포인트` 로 |checkbox| :guilabel:`피처 중심점` 을 이용할 수 있습니다. 분류 및 등급 렌더링 작업자의 :guilabel:`심볼` 메뉴 그리고 규칙 기반 렌더링 작업자의 :guilabel:`규칙 속성` 메뉴를 통해 '그레이디언트 채우기' 심볼 레이어 유형을 모두 채울 수도 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:376
+msgid ""
+"Other possibility is to choose a 'shapeburst fill' which is a buffered "
+"gradient fill, where a gradient is drawn from the boundary of a polygon "
+"towards the polygon's centre. Configurable parameters include distance from "
+"the boundary to shade, use of color ramps or simple two color gradients, "
+"optional blurring of the fill and offsets."
+msgstr "완충 그레이디언트 채우기인 'shapeburst 채우기'를 선택할 수도 있는데, 이 유형은 폴리곤의 경계선에서 중심을 향해 그레이디언트를 그립니다. 경계선에서 음영까지의 거리, 색상표 사용 또는 단순한 두 색상 그레이디언트 사용, (선택적인) 채우기의 번짐 효과, 그리고 오프셋 옵션을 설정할 수 있습니다."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:382
+msgid ""
+"It is possible to only draw polygon borders inside the polygon. Using "
+"'Outline: Simple line' select |checkbox| :guilabel:`Draw line only inside "
+"polygon`."
+msgstr "폴리곤 안쪽으로만 경계선을 그릴 수 있습니다. '외곽선: 단순 라인' 유형을 선택하고 |checkbox| :guilabel:`폴리곤 안쪽으로만 라인 그리기` 를 체크하세요."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:386
+msgid ""
+"**Note:** When geometry type is polygon, you can choose to disable the "
+"automatic clipping of lines/polygons to the canvas extent. In some cases "
+"this clipping results in unfavourable symbology (eg centroid fills where the"
+" centroid must always be the actual feature's centroid)."
+msgstr "**참고:** 도형 유형이 폴리곤일 경우, 라인/폴리곤을 자동적으로 캔버스 범위에 맞춰 자르는 옵션을 비활성화할 수 있습니다. 어떤 경우 이 옵션이 심볼 스타일에 방해가 되기도 하기 때문입니다. (예를 들어 '중심점 채우기' 유형은 중심점이 언제나 실제 피처의 중심점이어야만 합니다.)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:16
+msgid "Style"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "color_Ramp"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "Gradient_color_Ramp"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "colorBrewer"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "Custom_color_Ramp"
+msgstr ""
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

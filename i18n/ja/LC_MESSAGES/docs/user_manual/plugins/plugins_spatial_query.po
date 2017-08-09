@@ -6,14 +6,15 @@
 # Choro <u.ko.kubot@gmail.com>, 2013
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # OKANO Takayoshi <kano@na.rim.or.jp>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:34+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-20 03:38+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,140 +23,139 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 447bd34af03f4f8186690d1399fa1c4d
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:10
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:9
 msgid "Spatial Query Plugin"
 msgstr "空間検索プラグイン"
 
 # 6bdc91487c4641ad9d84453f2f08bc79
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:17
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:16
 msgid "Possible operators are:"
 msgstr "利用可能な演算子："
 
 # 4167741a83104e31b5b3fe40665e10fd
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:19
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:18
 msgid "Contains"
 msgstr "含む"
 
 # e01bf4d2a1ff4037ab9312a1e5e055f1
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:20
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:19
 msgid "Equals"
 msgstr "一致する"
 
 # 387d88f3465d423b826adbb466ce3cb9
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:21
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:20
 msgid "Overlap"
 msgstr "重複する"
 
 # f9e20b06970549e3b9fc5709b441f4bd
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:22
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:21
 msgid "Crosses"
 msgstr "横切る"
 
 # 154bbd0872c9416bab56a57fe88f2f13
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:23
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:22
 msgid "Intersects"
 msgstr "交差する"
 
 # 758d8e324d5745f58868a1fad5033bf4
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:24
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:23
 msgid "Is disjoint"
 msgstr "離れている"
 
 # 8238e0cdf6ed456985ecf4cfc4f8a96d
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:25
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:24
 msgid "Touches"
 msgstr "接する"
 
 # 9d6feefeca2f4a5a8b791e05839f8432
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:26
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:25
 msgid "Within"
 msgstr "範囲内"
 
 # a62aa0fe98754c3bbd9d07c04f205148
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:29
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:28
 msgid "Using the plugin"
 msgstr "プラグインの利用"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:34
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:33
 msgid ""
 "Start QGIS and load the vector layers :file:`regions.shp` and "
 ":file:`airports.shp`."
-msgstr ""
+msgstr "QGISを起動し、ベクターレイヤー :file:`regions.shp` と :file:`airports.shp` を読み込みます。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:11
 msgid ""
 "The |spatialQuery| :sup:`Spatial Query Plugin` allows you to make a spatial "
 "query (i.e., select features) in a target layer with reference to another "
 "layer. The functionality is based on the GEOS library and depends on the "
 "selected source feature layer."
-msgstr ""
+msgstr "|spatialQuery| :sup:`空間検索プラグイン` により、対象レイヤーで他のレイヤーを基準として空間検索（すなわち地物選択）できます。この機能は、GEOSライブラリに基づいており、選択された元地物レイヤに依存しています。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:30
 msgid ""
 "As an example, we want to find regions in the Alaska dataset that contain "
 "airports. The following steps are necessary:"
 msgstr "例として、我々は空港が含まれているアラスカのデータセット内の領域を見つけたい。次の手順が必要です："
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:36
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:35
 msgid ""
 "Load the Spatial Query plugin in the Plugin Manager (see "
 ":ref:`managing_plugins`) and click on the |spatialQuery| :sup:`Spatial "
 "Query` icon, which appears in the QGIS toolbar menu. The plugin dialog "
 "appears."
-msgstr ""
+msgstr "プラグインマネージャーで空間検索プラグインをロードし（ :ref:`managing_plugins` 参照）、QGISのツールバーメニューに現れる |spatialQuery| :sup:`空間Query` アイコンをクリックしてください。プラグインのダイアログが表示されます。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:40
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:39
 msgid ""
 "Select the layer ``regions`` as the source layer and ``airports`` as the "
 "reference feature layer."
-msgstr "ソースのレイヤとして ``regions``レイヤを選択し、参照する地物レイヤとして``airports`` を選択します。"
+msgstr "ソースのレイヤとして ``regions`` レイヤを選択し、参照する地物レイヤとして ``airports`` を選択します。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:42
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:41
 msgid "Select 'Contains' as the operator and click **[Apply]**."
-msgstr "地物の場所で '範囲内'を選択し**[Apply]**をクリックします。"
+msgstr "地物の場所で '範囲内'を選択し **[Apply]** をクリックします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:44
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:43
 msgid ""
 "Now you get a list of feature IDs from the query and you have several "
 "options, as shown in figure_spatial_query_1_."
 msgstr "ここで検索結果の地物IDのリストが得られます.そして figure_spatial_query_1_  に表示されている様々なオプションが利用できます."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:47
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:46
 msgid "Click on |selectSubsetLayer| :sup:`Create layer with list of items`."
-msgstr ""
+msgstr "|selectSubsetLayer| :sup:`itemsのリストでレイヤーを作成` をクリックします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:48
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:47
 msgid ""
 "Select an ID from the list and click on |selectCreateLayer| :sup:`Create "
 "layer with selected`."
-msgstr ""
+msgstr "リストからIDを選択し、 |selectCreateLayer | :sup:`選択からレイヤーを作成` をクリックします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:50
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:49
 msgid ""
 "Select 'Remove from current selection' in the field :guilabel:`And use the "
 "result to` |selectString|."
-msgstr ""
+msgstr "フィールド :guilabel:`に結果を使用` |selectString| 中で「現在の選択から削除」を選択します。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:52
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:51
 msgid ""
 "You can |checkbox| :guilabel:`Zoom to item` or display |checkbox| "
 ":guilabel:`Log messages`."
-msgstr ""
+msgstr "|checkbox| :guilabel:`アイテムにズーム` できます、または |checkbox| :guilabel:`messagesログ` を表示できます。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:54
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:53
 msgid ""
 "Additionally in :guilabel:`Result Feature ID's` with the options 'Invalid "
 "source' and 'Invalid reference' you can have a look at features with "
 "geometry errors. These features aren't used for the query."
-msgstr ""
+msgstr "さらに、 :guilabel:`結果フィーチャーID's` オプション「無効なソース」と「無効な参照」中で、トポロジエラーがある地物を見ることができます。これらの地物は、クエリのために使用されません。"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:67
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:66
 msgid "Spatial Query analysis - regions contain airports"
-msgstr ""
+msgstr "空間クエリの分析 - 地域には空港が含まれています"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "The |spatialquery| :sup:`Spatial Query` plugin allows to make a spatial "

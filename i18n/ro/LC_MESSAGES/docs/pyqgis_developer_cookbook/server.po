@@ -67,7 +67,7 @@ msgstr ""
 ":class:`QgsServerFilter` (din acest punct, ar fi util să aruncați o privire "
 "rapidă la `Documentația API a plugin-urilor pentru server "
 "<http://qgis.org/api/group__server.html>`_). Fiecare filtru ar trebui să "
-"implementeze cel puțin unul dintre cele trei callback-uri:"
+"implementeze cel puțin una dintre cele trei funcții de reapelare:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:35
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:157
@@ -92,8 +92,8 @@ msgid ""
 "we’ll see below)."
 msgstr ""
 "Toate filtrele au acces la obiectul cerere/răspuns "
-"(:class:`QgsRequestHandler`), putându-i manipula toate proprietățile "
-"(input/output) și tratându-i excepțiile (deși într-un anumit mod, cu totul "
+"(:class:`QgsRequestHandler`), putându-i manipula toate proprietățile (de "
+"intrare/ieșire) și tratându-i excepțiile (deși într-un mod cu totul "
 "particular, după cum vom vedea mai jos)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:43
@@ -102,11 +102,11 @@ msgid ""
 " callbacks are called:"
 msgstr ""
 "Mai jos se află un pseudocod care prezintă o sesiune tipică de server și "
-"apelurile callback ale filtrelor:"
+"reapelarea filtrelor:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:56
 msgid "Get the incoming request"
-msgstr "Se obține cererea de intrare"
+msgstr "se obține cererea de intrare"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:46
 msgid "create GET/POST/SOAP request handler"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:48
 msgid "call plugins :func:`requestReady` filters"
-msgstr "se apelează funcția :func:`requestReady` a filtrelor plugin-urillor"
+msgstr "se apelează filtrele :func:`requestReady` ale plugin-urillor"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:52
 msgid "if there is not a response"
@@ -146,12 +146,11 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:53
 msgid "call plugins :func:`responseComplete` filters"
-msgstr ""
-"se apelează funcția :func:`responseComplete` a filtrelor plugin-urillor"
+msgstr "se apelează filtrele :func:`responseComplete` ale plugin-urillor"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:54
 msgid "call plugins :func:`sendResponse` filters"
-msgstr "se apelează funcția :func:`sendResponse` a filtrelor plugin-urillor"
+msgstr "se apelează filtrele :func:`sendResponse` ale plugin-urillor"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:55
 msgid "request handler output the response"
@@ -160,7 +159,8 @@ msgstr " rutina de tratare a cererii generează răspunsul"
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:58
 msgid "The following paragraphs describe the available callbacks in details."
 msgstr ""
-"Următoarele paragrafe descriu, în detaliu, funcțiile callback disponibile."
+"Următoarele paragrafe descriu, în detaliu, funcțiile de reapelare "
+"disponibile."
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:61
 msgid "requestReady"
@@ -175,7 +175,7 @@ msgstr ""
 "Este apelată atunci când cererea este pregătită: adresa și datele primite au"
 " fost analizate și, înainte de a intra în comutatorul serviciilor de bază "
 "(WMS, WFS, etc), acesta este punctul în care se poate interveni asupra "
-"datelor de intrare și se pot efectua acțiuni de genul:"
+"datelor de intrare, putându-se efectua acțiuni de genul:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:65
 msgid "authentication/authorization"
@@ -201,8 +201,8 @@ msgid ""
 "make much sense though)."
 msgstr ""
 "Ați putea chiar să substituiți în întregime un serviciu de bază, prin "
-"schimbarea parametrului **SERVICE**, ocolind complet, prin urmare, serviciul"
-" de bază (deși, acest lucru nu ar avea prea mult sens)."
+"schimbarea parametrului **SERVICE**, astfel, ocolindu-se complet serviciul "
+"de bază (deși, acest lucru nu ar avea prea mult sens)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/server.rst:74
 msgid "sendResponse"

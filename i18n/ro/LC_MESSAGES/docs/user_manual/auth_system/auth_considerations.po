@@ -27,6 +27,13 @@ msgid ""
 "downloads/installs a malicious PyQGIS plugin or standalone app that gains "
 "access to authentication credentials."
 msgstr ""
+"O dată ce este introdusă parola de master, API-ul este deschis pentru a vă "
+"oferi acces la baza datelor de autentificare, similar modului în care "
+"funcționează Firefox. Cu toate acestea, la implementarea inițială, nu sunt "
+"definit piedici împotriva accesului PyQGIS. Acest lucru poate conduce la "
+"probleme, în cazul în care un utilizator descarcă/instalează un plugin "
+"PyQGIS rău intenționat, sau o aplicație de sine stătătoare, care obține "
+"acces la prerogativele de autentificare."
 
 #: ../../source/docs/user_manual/auth_system/auth_considerations.rst:16
 msgid ""
@@ -43,6 +50,9 @@ msgid ""
 ":menuselection:`Settings --> Options --> Authentication` (defaults to "
 "\"never\"):"
 msgstr ""
+"O altă modalitate simplă, deși nu robustă, este de a adăuga un ComboBox prin"
+" :menuselection:`Setări --> Opțiuni --> Autentificare` (implicit "
+"\"niciodată\"):"
 
 #: ../../source/docs/user_manual/auth_system/auth_considerations.rst:27
 msgid ""
@@ -50,10 +60,15 @@ msgid ""
 " to Python, e.g. the authentication database, and encrypted with the master "
 "password."
 msgstr ""
+"Setarea unei asemenea opțiuni ar trebui să fie salvată într-o locație de "
+"bază inaccesibilă pentru Python, cum ar fi baza de date de autentificare, și"
+" să fie criptată cu parola principală."
 
 #: ../../source/docs/user_manual/auth_system/auth_considerations.rst:31
 msgid "Another option may be to track which plugins the user has specifically"
 msgstr ""
+"O altă opțiune ar putea consta în urmărirea plugin-urilor specifice "
+"utilizatorului"
 
 #: ../../source/docs/user_manual/auth_system/auth_considerations.rst:32
 msgid ""

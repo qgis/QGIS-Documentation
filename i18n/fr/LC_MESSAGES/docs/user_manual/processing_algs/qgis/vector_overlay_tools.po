@@ -2,13 +2,15 @@
 # Translators:
 # Benoît de Cabissole, 2015
 # Jenny Dupuy <dupuy.jen@gmail.com>, 2015
+# MarieSilvestre, 2016
+# Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-18 09:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-04-10 08:10+0000\n"
+"Last-Translator: Médéric RIBREUX <mederic.ribreux@medspx.fr>\n"
 "Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,28 +18,24 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:8
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:7
 msgid "Vector overlay"
 msgstr "Recouvrement de vecteur"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:11
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:10
 msgid "Clip"
 msgstr "Couper"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:14
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:60
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:99
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:139
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:179
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:217
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:13
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:59
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:98
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:138
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:178
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:216
 msgid "Description"
 msgstr "Description"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:16
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:15
 msgid ""
 "This algorithm extracts features from the Input Layer that fall within, or "
 "partially within, the boundaries of features in the Clip Layer. Input Layer "
@@ -46,91 +44,91 @@ msgid ""
 "the Input and Clip Layers, then only those features are used in the clip "
 "operation. If no features are selected then the clip operation is performed "
 "using all features. The clip function is also known as the cookie-cutter."
-msgstr ""
+msgstr "Cet algorithme extrait les entités de la couche en entrée qui sont situées à l'intérieur ou partiellement à l'intérieur des enveloppes de la/des entité(s) de la couche de découpage. Les entités de la couche en entrée qui sont situées partiellement à l'intérieur de la couche de découpage sont découpées par l'enveloppe de la/des entité(s) de la couche de découpage. Lorsque des entités sont sélectionnées dans les couches d'entrée et de découpage, seules ces entités sont utilisées dans l'opération de découpage. Si aucune entité n'est sélectionnée alors l'opération de découpage est réalisée sur l'ensemble des entités. La fonction de découpage est également connue sont le nom d'emporte-pièce."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:25
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:70
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:110
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:144
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:188
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:226
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:24
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:69
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:109
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:143
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:187
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:225
 msgid "Parameters"
 msgstr "Paramètres"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:28
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:73
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:113
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:191
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:229
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:27
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:72
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:112
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:190
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:228
 msgid "``Input layer`` [vector: any]"
 msgstr "``Couche en entrée`` [vecteur : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:28
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:27
 msgid "The layer containing the features to be clipped."
-msgstr ""
+msgstr "La couche contenant les entités à découper."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:32
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:31
 msgid "``Clip layer`` [vector: any]"
 msgstr "``Couche de découpe`` [vecteur : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:31
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:30
 msgid ""
 "The layer containing the features that are used to clip the features in the "
 "input layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:36
-msgid "``Open output file after running algorithm``"
-msgstr ""
+msgstr "La couche contenant les entités utilisées pour découper les entités de la couche en entrée."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:35
+msgid "``Open output file after running algorithm``"
+msgstr "``Ouvrir le fichier en sortie après l'exécution de l'algorithme``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:34
 msgid ""
 "Choose whether to load the clipped layer to the map canvas once the clip "
 "operation has been completed."
-msgstr ""
+msgstr "Choisir si la couche découpée doit être chargée dans le canevas de carte une fois l'opération de découpage réalisée."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:39
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:79
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:119
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:159
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:197
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:235
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:38
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:78
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:118
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:158
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:196
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:234
 msgid "Outputs"
 msgstr "Sorties"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:43
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:42
 msgid "``Clipped`` [vector]"
 msgstr "``Découpé`` [vecteur]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:42
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:41
 msgid ""
 "Where to save the clipped layer. Can be saved to file, a temporary file or a"
 " memory layer."
-msgstr ""
+msgstr "Où sauvegarder la couche découpée. Cela peut être un fichier, un fichier temporaire ou une couche en mémoire."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:46
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:86
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:126
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:166
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:204
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:242
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:45
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:85
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:125
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:165
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:203
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:241
 msgid "Console usage"
 msgstr "Utilisation dans la console"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:53
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:93
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:133
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:173
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:211
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:249
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:52
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:92
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:132
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:172
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:210
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:248
 msgid "See also"
 msgstr "Voir également"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:56
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:55
 msgid "Difference"
 msgstr "Différence"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:61
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:60
 msgid ""
 "This algorithm extracts features from the Input layer that don't fall within"
 " the boundaries of the Difference layer. Input Layer Features that are "
@@ -138,36 +136,36 @@ msgid ""
 " the clip layer feature(s). If any features are selected in the Input and "
 "Difference Layers, then only those features are used in the operation. If no"
 " features are selected, then the operation is performed using all features."
-msgstr ""
+msgstr "Cet algorithme extrait les entités de la couche en entrée qui ne sont pas situées à l'intérieur des enveloppes de la couche de différence. Les entités qui sont situées partiellement à l'intérieur de la/des entité(s) de la couche de différence sont découpées selon l'enveloppe de la/des entité(s) de la couche de différence. Lorsque des entités sont sélectionnées dans les couches d'entrée et de différence, seules ces entités sont utilisées dans l'opération. Si aucune entité n'est sélectionnée alors l'opération est réalisée sur l'ensemble des entités."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:73
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:72
 msgid "The layer containing the features that will be reduced."
-msgstr ""
+msgstr "La couche contenant les entités qui seront réduites."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:76
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:194
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:75
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:193
 msgid "``Difference layer`` [vector: any]"
 msgstr "``Couche de différenciation`` [vecteur : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:76
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:75
 msgid "The layer containing the features used to reduce the Input Layer."
-msgstr ""
+msgstr "La couche contenant les entités utilisées pour réduire la couche en entrée."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:83
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:82
 msgid "``Difference`` [vector]"
 msgstr "``Différence`` [vecteur]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:82
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:81
 msgid ""
 "Where to save the difference layer. Can be saved to file, a temporary file "
 "or a memory layer."
-msgstr ""
+msgstr "Où sauvegarder la couche différenciée. Cela peut être un fichier, un fichier temporaire ou une couche en mémoire."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:96
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:95
 msgid "Intersection"
 msgstr "Intersection"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:101
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:100
 msgid ""
 "This algorithm combines features from the Input layer and the Intersect "
 "Layer, resulting in features that cover both layers' features. Input "
@@ -176,76 +174,76 @@ msgid ""
 "are selected in the Input and Intersect Layers, then only those features are"
 " used in the operation. If no features are selected then the operation is "
 "performed using all features."
-msgstr ""
+msgstr "Cet algorithme combine les entités de la couche en entrée et de la couche d'intersection pour donner des entités qui recouvrent les entités des deux couches. La/les entité(s) en entrée qui sont situées partiellement à l'intérieur de la/des entité(s) de l'autre couche sont découpées selon l'enveloppe de la/des entité(s) de l'autre couche. Lorsque des entités sont sélectionnées dans les couches d'entrée et d'intersection, seules ces entités sont utilisées dans l'opération. Si aucune entité n'est sélectionnée alors l'opération est réalisée sur l'ensemble des entités."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:113
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:112
 msgid "One layer containing feature(s) to be combined."
-msgstr ""
+msgstr "Une couche contenant une/des entité(s) à combiner."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:116
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:115
 msgid "``Intersect layer`` [vector: any]"
 msgstr "``Couche d'intersection`` [vecteur : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:116
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:115
 msgid "Second layer containing the feature(s) to be combined."
-msgstr ""
+msgstr "Deuxième couche contenant une/des entité(s) à combiner."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:123
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:122
 msgid "``Intersection`` [vector]"
 msgstr "``Intersection`` [vecteur]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:122
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:121
 msgid ""
 "Where to save the intersection layer. Can be saved to file, a temporary file"
 " or a memory layer."
-msgstr ""
+msgstr "Où sauvegarder la couche d'intersection. Cela peut être un fichier, un fichier temporaire ou une couche en mémoire."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:136
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:135
 msgid "Line intersections"
 msgstr "Intersections de lignes"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:141
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:140
 msgid "<put algorithm description here>"
 msgstr "<entrer ici la description de l'algorithme>"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:147
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:146
 msgid "``Input layer`` [vector: line]"
 msgstr "``Couche en entrée`` [vecteur : ligne]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:147
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:150
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:153
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:156
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:146
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:149
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:152
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:155
 msgid "<put parameter description here>"
 msgstr "<entrer ici la description du paramètre>"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:150
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:149
 msgid "``Intersect layer`` [vector: line]"
 msgstr "``Couche d'intersection`` [vecteur : ligne]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:153
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:152
 msgid "``Input unique ID field`` [tablefield: any]"
 msgstr "``Champ de l'identifiant unique en entrée`` [champ : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:156
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:155
 msgid "``Intersect unique ID field`` [tablefield: any]"
 msgstr "``Champ de l'identifiant unique de l'intersection`` [champ : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:163
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:162
 msgid "``Output layer`` [vector]"
 msgstr "``Couche en sortie`` [vecteur]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:162
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:161
 msgid ""
 "Where to save the line intersection layer. Can be saved to file, a temporary"
 " file or a memory layer."
-msgstr ""
+msgstr "Où sauvegarder la couche de ligne d'intersection. Cela peut être un fichier, un fichier temporaire ou une couche en mémoire."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:176
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:175
 msgid "Symmetrical difference"
-msgstr ""
+msgstr "Différence symétrique"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:180
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:179
 msgid ""
 "This algorithm creates a layer that includes all feature(s) that are in only"
 " one of the two input layers. Feature(s) that only partially lie within the "
@@ -253,31 +251,31 @@ msgid ""
 "feature(s). If any features are selected in the Input and Difference Layers,"
 " then only those features are used in the operation. If no features are "
 "selected then the operation is performed using all features."
-msgstr ""
+msgstr "Cet algorithme créé une couche contenant la/les entité(s) qui sont situées dans une seule des deux couches en entrée. La/les entité(s) qui sont situées partiellement à l'intérieur de la/des entité(s) de l'autre couche sont découpées selon l'enveloppe de la/des entité(s) de l'autre couche. Lorsque des entités sont sélectionnées dans les couches d'entrée et de différence, seules ces entités sont utilisées dans l'opération. Si aucune entité n'est sélectionnée alors l'opération est réalisée sur l'ensemble des entités."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:191
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:190
 msgid "One layer containing feature(s) to be compared."
-msgstr ""
+msgstr "Une couche contenant une/des entité(s) à comparer."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:194
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:193
 msgid "Second layer containing feature(s) to be compared."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:201
-msgid "``Symmetrical difference`` [vector]"
-msgstr ""
+msgstr "Deuxième couche contenant une/des entité(s) à comparer."
 
 #: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:200
+msgid "``Symmetrical difference`` [vector]"
+msgstr "``Différence symétrique`` [vecteur]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:199
 msgid ""
 "Where to save the symmetrical difference layer. Can be saved to file, a "
 "temporary file or a memory layer."
-msgstr ""
+msgstr "Où sauvegarder la couche de différence symétrique. Cela peut être un fichier, un fichier temporaire ou une couche en mémoire."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:214
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:213
 msgid "Union"
 msgstr "Union"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:218
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:217
 msgid ""
 "This algorithm combines the feature(s) of both layers. Features that lie "
 "partially within the other layer's features will be split. Areas that lie "
@@ -285,26 +283,29 @@ msgid ""
 "selected in either of the layers, then only those features are used in the "
 "operation. If no features are selected then the operation is performed using"
 " all features."
-msgstr ""
+msgstr "Cet algorithme fusionne la/les entité(s) des deux couches. Les entités qui sont situées partiellement à l'intérieur des entités de l'autre couche seront découpées. Les surfaces qui sont situées à l'intérieur des deux couches seront ajoutées en tant que nouvelles entités. Lorsque des entités sont sélectionnées dans l'une des deux couches seules ces entités sont utilisées dans l'opération. Si aucune entité n'est sélectionnée alors l'opération est réalisée sur l'ensemble des entités."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:229
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:228
 msgid "One layer containing feature(s) to be unioned."
-msgstr ""
+msgstr "Une couche contenant une/des entité(s) à fusionner."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:232
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:231
 msgid "``Input layer 2`` [vector: any]"
 msgstr "``Couche en entrée 2`` [vecteur : n'importe lequel]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:232
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:231
 msgid "Second layer containing feature(s) to be unioned."
-msgstr ""
+msgstr "Deuxième couche contenant une/des entité(s) à fusionner."
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:239
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:238
 msgid "``Union`` [vector]"
 msgstr "``Union`` [vecteur]"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:238
+#: ../../source/docs/user_manual/processing_algs/qgis/vector_overlay_tools.rst:237
 msgid ""
 "Where to save the union layer. Can be saved to file, a temporary file or a "
 "memory layer."
-msgstr ""
+msgstr "Où sauvegarder la couche fusionnée. Cela peut être un fichier, un fichier temporaire ou une couche en mémoire."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

@@ -1,13 +1,14 @@
 # 
 # Translators:
-# Choro <u.ko.kubot@gmail.com>, 2014
+# Choro <u.ko.kubot@gmail.com>, 2014,2016
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2014-10-13 05:25+0000\n"
-"Last-Translator: Minoru Akagi <akaginch@gmail.com>\n"
+"PO-Revision-Date: 2017-07-24 03:14+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,37 +27,37 @@ msgid ""
 "various analysis methods unique to these two forms of geographic data. This "
 "increases the flexibility you have when considering data sources and "
 "processing methods for solving a GIS problem."
-msgstr ""
+msgstr "ラスタ形式とベクタ形式の間で変換できると、GISの問題を解決するときに、またこれら二つの地理データの形式に特有の様々な分析方法を使用するときに、ラスターとベクターデータの両方を利用できます。これは、GISの問題を解決するためのデータソースと処理方法を検討する際に持っている柔軟性を向上させます。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:14
 msgid ""
 "To combine a raster and vector analysis, you need to convert the one type of"
 " data to the other. Let's convert the raster result of the previous lesson "
 "to a vector."
-msgstr "ラスタとベクタの分析を結びつけるために、データのタイプをもう一方のものに変換する必要があります。ベクタのレッスンの前にラスタを変換してみましょう。"
+msgstr "ラスタとベクタの分析を組み合わせるには、データのタイプを一方からもう一方に変換する必要があります。前のレッスンのラスタ結果をベクタに変換してみましょう。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:18
 msgid ""
 "**The goal for this lesson:** To get the raster result into a vector that "
 "can be used to complete the analysis."
-msgstr "**このレッスンの目標:**分析を完結するためにラスタをベクタにすること。"
+msgstr "**このレッスンの目標:**分析を完了するためにラスタ結果をベクタにすること。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:22
 msgid "|moderate| |FA| The :guilabel:`Raster to Vector` Tool"
-msgstr ""
+msgstr "|moderate| |FA|  :guilabel:`ラスターからベクタ` ツール"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:24
 msgid ""
 "Start with the map from the last module, :kbd:`raster_analysis.qgs`. There "
 "you should have the :kbd:`all_conditions_simple.tif` calculated during the "
 "previous exercises."
-msgstr ""
+msgstr "最新のモジュール :kbd:`raster_analysis.qgs` から地図を起動します 。前の練習中に :kbd:`all_conditions_simple.tif` が計算されているはずです。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:28
 msgid ""
 "Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
 "Vector)`. The tool dialog will appear."
-msgstr ""
+msgstr ":menuselection:`ラスター->変換->ポリゴン化（ラスターからベクトル）` をクリックします。ツールのダイアログが表示されます。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:30
 msgid "Set it up like this:"
@@ -66,13 +67,13 @@ msgstr "このように設定します:"
 msgid ""
 "Change the field name (describing the values of the raster) to "
 ":kbd:`suitable`."
-msgstr ""
+msgstr "フィールド名を :kbd:`適切` に（ラスタの値を記述する）変更します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:37
 msgid ""
 "Save the shapefile under :kbd:`exercise_data/residential_development` as "
 ":kbd:`all_terrain.shp`."
-msgstr ""
+msgstr ":kbd:`exercise_data/residential_development` 下に :kbd:`all_terrain.shp` として保存します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:40
 msgid ""
@@ -80,7 +81,7 @@ msgid ""
 "the only areas you're interested in are those that are suitable; i.e., those"
 " polygons where the value of :kbd:`suitable` is :kbd:`1`. You can change the"
 " style of this layer if you want to have a clearer visualization of it."
-msgstr ""
+msgstr "今、ラスタのすべての値を含むベクトルファイルを持っていますが、興味ある領域は適当なものだけです。すなわち、それらのポリゴンの :kbd:`適当` の値が :kbd:`1` であるもの。このレイヤーのスタイルを変更すればそれを明確に可視化できます。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:48
 msgid "|moderate| |TY|"
@@ -94,13 +95,13 @@ msgstr "ベクタ分析のモジュールに戻って参照ください。"
 msgid ""
 "Create a new vector file that contains only the polygons where "
 ":kbd:`suitable` has the value of :kbd:`1`."
-msgstr ""
+msgstr ":kbd:`suitable` が値 :kbd:`1` であるポリゴンのみを含む新しいベクトルファイルを作成します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:54
 msgid ""
 "Save the new file as :kbd:`exercise_data/residential_development/` as "
 ":kbd:`suitable_terrain.shp`."
-msgstr ""
+msgstr "新しいファイルを :kbd:`exercise_data/residential_development/` に :kbd:`suitable_terrain.shp` として保存します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:57
 msgid ":ref:`Check your results <complete-analysis-1>`"
@@ -108,30 +109,30 @@ msgstr ":ref:`結果の確認 <complete-analysis-1>`"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:60
 msgid "|moderate| |FA| The :guilabel:`Vector to Raster` Tool"
-msgstr ""
+msgstr "|moderate| |FA| :guilabel:`ベクタをラスタに` ツール"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:62
 msgid ""
 "Although unnecessary for our current problem, it's useful to know about the "
 "opposite conversion from the one performed above. Convert to raster the "
 ":kbd:`suitable_terrain.shp` vector file you just created in previous step."
-msgstr ""
+msgstr "現在の問題には不必要ではありますが、上記で実行されるものとは反対の変換について知っておくと便利です。 ちょうど前のステップで作成した :kbd:`suitable_terrain.shp` ベクトルファイルをラスタに変換します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:66
 msgid ""
 "Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to "
 "Raster)` to start this tool, then set it up as in the screenshot below:"
-msgstr ""
+msgstr ":menuselection:`ラスター->変換->ラスタライズ（ベクトルからラスター）` をクリックしてこのツールを起動し、その後、下のスクリーンショットのようにそれを設定します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:72
 msgid ":guilabel:`Input file` is :guilabel:`all_terrain`;"
-msgstr ":guilabel:`入力ファイル` は :guilabel:`all_terrain`;"
+msgstr ":guilabel:`入力ファイル` は :guilabel:`all_terrain` ;"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:73
 msgid ""
 ":guilabel:`Output file...` is "
 ":kbd:`exercise_data/residential_development/raster_conversion.tif`;"
-msgstr ""
+msgstr ":guilabel:`出力ファイル...` は :kbd:`exercise_data/residential_development/raster_conversion.tif` です。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:75
 msgid ""
@@ -145,17 +146,17 @@ msgid ""
 "original raster which was vectorized. To view the dimensions of an image, "
 "open its metadata (:guilabel:`Metadata` tab in the :guilabel:`Layer "
 "Properties`)."
-msgstr ""
+msgstr "出力画像のサイズは、ここではベクトル化された元のラスタと同じになるように指定されています。画像の大きさを表示するには、そのメタデータを開きます（ :guilabel:`レイヤーのプロパティ` 中の :guilabel:`Metadata` タブ）。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:83
 msgid "Click :guilabel:`OK` on the dialog to begin the conversion process."
-msgstr ""
+msgstr ":guilabel:`OK` をクリックして変換処理を開始します。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:84
 msgid ""
 "When it is complete, gauge its success by comparing the new raster with the "
 "original one.  They should match up exactly, pixel for pixel."
-msgstr ""
+msgstr "完了したら、新たなラスタを元のものと比較することによって、その成功を測ります。両者は正確にピクセル単位で一致する必要があります。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:88
 msgid "|IC|"
@@ -165,7 +166,7 @@ msgstr "|IC|"
 msgid ""
 "Converting between raster and vector formats allows you to widen the "
 "applicability of data, and need not lead to data degradation."
-msgstr ""
+msgstr "ラスタとベクタ形式の間で変換すると、データの適用可能性を広げることができ、データの劣化につながる必要はありません。"
 
 #: ../../source/docs/training_manual/complete_analysis/raster_to_vector.rst:94
 msgid "|WN|"
@@ -176,4 +177,4 @@ msgid ""
 "Now that we have the results of the terrain analysis available in vector "
 "format, they can be used to solve the problem of which buildings we should "
 "consider for the residential development."
-msgstr ""
+msgstr "今はベクトル形式で利用可能な地形解析の結果がありますので、どの建物を住宅開発のために検討すべきかの問題を解決するためにそれらを使用できます。"

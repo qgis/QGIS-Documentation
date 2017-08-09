@@ -1,0 +1,419 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-07-02 13:03+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:12
+msgid "Writing new Processing algorithms as python scripts"
+msgstr "Pythonスクリプトなどの新しい処理アルゴリズムを書く"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:14
+msgid ""
+"You can create your own algorithms by writing the corresponding Python code "
+"and adding a few extra lines to supply additional information needed to "
+"define the semantics of the algorithm. You can find a :guilabel:`Create new "
+"script` menu under the :guilabel:`Tools` group in the :guilabel:`Script` "
+"algorithms block of the toolbox. Double-click on it to open the script "
+"edition dialog. That's where you should type your code. Saving the script "
+"from there in the :file:`scripts` folder (the default one when you open the "
+"save file dialog), with :file:`.py` extension, will automatically create the"
+" corresponding algorithm."
+msgstr "対応するPythonのコードを書き、アルゴリズムの意味を定義するのに必要な追加情報を提供するためにいくつかの余分な行を追加することで、独自のアルゴリズムを作成できます。 :guilabel:`新しいスクリプトを作成` メニューは :guilabel:`Tools` グループ :guilabel:`Script` ツールボックスのアルゴリズムの下にあります。スクリプト版]ダイアログボックスを開くには、それをダブルクリックします。それはコードを入力しなければならないところです。そこからスクリプトを :file:`scripts` フォルダ（　ファイル保存ダイアログを開くときデフォルトのもの）に保存すると、拡張子が :file:`.py` で、自動的に対応するアルゴリズムを作成します。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:24
+msgid ""
+"The name of the algorithm (the one you will see in the toolbox) is created "
+"from the filename, removing its extension and replacing underscores with "
+"blank spaces."
+msgstr "アルゴリズム（ツールボックスに表示される）の名前は、ファイル名からその拡張子を削除し、空白とアンダースコアを置き換えることで作成されます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:27
+msgid ""
+"Let's have the following code, which calculates the Topographic Wetness "
+"Index (TWI) directly from a DEM"
+msgstr "次のコードをとってみましょう、DEMから直接に地形湿り指数（TWI）を算出するものです。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:41
+msgid ""
+"As you can see, it involves 3 algorithms, all of them coming from SAGA. The "
+"last one of them calculates the TWI, but it needs a slope layer and a flow "
+"accumulation layer. We do not have these, but since we have the DEM, we can "
+"calculate them by calling the corresponding SAGA algorithms."
+msgstr "おわかりになるように、それは3つのアルゴリズムを必要とし、それらはすべてがSAGAから来ます。それらの最後の一つはTWIを計算するもので、傾斜レイヤーと流れ蓄積レイヤーを必要とします。これらのレイヤーはありませんが、DEMはありますので、対応するSAGAアルゴリズムを呼び出すことによってそれらを計算できます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:46
+msgid ""
+"The part of the code where this processing takes place is not difficult to "
+"understand if you have read the previous chapter. The first lines, however, "
+"need some additional explanation. They provide the information that is "
+"needed to turn your code into an algorithm that can be run from any of the "
+"GUI components, like the toolbox or the graphical modeler."
+msgstr "前の章を読んでいる方であれば、この処理が行われるコードの一部を理解することは難しくありません。しかしながら、最初の数行にはいくらか説明を追加することが必要でしょう。それらは、ツールボックスまたはグラフィックモデラーのように、GUIコンポーネントのいずれかから実行できるアルゴリズムにコードを変えるために必要な情報を提供しています。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:52
+msgid ""
+"These lines start with a double Python comment symbol (``##``) and have the "
+"following structure"
+msgstr "これらの行はPythonの二重コメントシンボル（ `` ## ``）で始まり、以下の構造を持ちます"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:59
+msgid ""
+"Here is a list of all the parameter types that are supported in processing "
+"scripts, their syntax and some examples."
+msgstr "処理スクリプトでサポートされているすべてのパラメータタイプのリスト、構文、およびいくつかの例を示します。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:62
+msgid "``raster``. A raster layer"
+msgstr "`` raster``。ラスターレイヤー"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:63
+msgid "``vector``. A vector layer"
+msgstr "`` ベクトル ``。ベクトルレイヤー"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:64
+msgid "``table``. A table"
+msgstr "`` TABLE``。テーブル"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:65
+msgid ""
+"``number``. A numerical value. A default value must be provided. For "
+"instance, ``depth=number 2.4``"
+msgstr "`` number``。数値。デフォルト値が提供されなければなりません。例えば、 ``深さ=数2.4``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:67
+msgid ""
+"``string``. A text string. As in the case of numerical values, a default "
+"value must be added. For instance, ``name=string Victor``"
+msgstr "`` string``。テキスト文字列。数値の場合と同様に、デフォルト値を追加する必要があります。たとえば、 `` name = string Victor``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:69
+msgid ""
+"``longstring``. Same as string, but a larger text box will be shown, so it "
+"is better suited for long strings, such as for a script expecting a small "
+"code snippet."
+msgstr "「長文字列」。文字列と同じですが、大きなテキストボックスが表示されるため、小さなコードスニペットが必要なスクリプトなど、長い文字列に適しています。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:71
+msgid ""
+"``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the "
+"default value. For example, ``verbose=boolean True``."
+msgstr "`` boolean``。ブール値。デフォルト値を設定するために `` True``または `` False``を追加してください。たとえば、 `` verbose = boolean True``とします。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:73
+msgid "``multiple raster``. A set of input raster layers."
+msgstr "``複数raster``。入力されたラスタレイヤのセット。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:74
+msgid "``multiple vector``. A set of input vector layers."
+msgstr "``複数vector``。入力ベクトルレイヤーのセット。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:75
+msgid ""
+"``field``. A field in the attributes table of a vector layer. The name of "
+"the layer has to be added after the ``field`` tag. For instance, if you have"
+" declared a vector input with ``mylayer=vector``, you could use "
+"``myfield=field mylayer`` to add a field from that layer as parameter."
+msgstr "`` field``。ベクトルレイヤーの属性テーブル内のフィールド。レイヤーの名前を `` field``タグの後に追加する必要があります。たとえば、 `` mylayer = vector``とベクトル入力を宣言している場合、`` myField=フィールドmylayer``を使用するとそのレイヤーからのフィールドをパラメータとして追加できます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:79
+msgid "``extent``. A spatial extent defined by xmin, xmax, ymin, ymax"
+msgstr "`` extent``。XMIN、XMAX、YMIN、YMAXによって規定された空間的広がり"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:80
+msgid "``folder``. A folder"
+msgstr "`` folder``。フォルダ"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:81
+msgid "``file``. A filename"
+msgstr "`` file``。ファイル"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:82
+msgid "``crs``. A Coordinate Reference System"
+msgstr "`` crs``。座標参照系"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:83
+msgid ""
+"``selection``. A dropdown menu that allows the user to select from a pre-"
+"populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``"
+msgstr "`` selection``。ユーザーが事前にリストから選択できるようにするドロップダウンメニュー。例えば、 ``単位=選択sq_km; sq_miles; sq_degrees``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:85
+msgid ""
+"``name``. Name of the script. This will be displayed as the algorithm name "
+"in the processing toolbox. For example ``My Algorithm Name=name``"
+msgstr "`` name``。スクリプトの名前。これにより、処理ツールボックスのアルゴリズム名として表示されます。例えば、 ``私のアルゴリズム名= name``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:87
+msgid ""
+"``group``. Folder name where the script will appear in the Processing "
+"Toolbox. For Example, adding ``Utils=groups`` will put the script within a "
+"``Utils`` folder within Scripts."
+msgstr "`` group``。スクリプトが処理ツールボックスに表示されるフォルダ名。例えば、 `Utilsの= groups``は、スクリプト内` `Utils``フォルダ内のスクリプトを入れます`加えます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:91
+msgid ""
+"The parameter name is the name that will be shown to the user when executing"
+" the algorithm, and also the variable name to use in the script code. The "
+"value entered by the user for that parameter will be assigned to a variable "
+"with that name."
+msgstr "パラメータ名は、スクリプトコードで使用するアルゴリズムを実行する際にユーザーに表示される名前、また、変数名です。そのパラメータのために、ユーザが入力した値は、その名前の変数に代入されます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:95
+msgid ""
+"When showing the name of the parameter to the user, the name will be edited "
+"to improve its appearance, replacing underscores with spaces. So, for "
+"instance, if you want the user to see a parameter named ``A numerical "
+"value``, you can use the variable name ``A_numerical_value``."
+msgstr "ユーザーにパラメータの名前を示す場合には、名前は見栄えを改善するためにスペースがアンダースコアに置き換える編集がされます。ですから、たとえばユーザーが名前付きパラメータ ```A numerical value``を見たい場合、変数名 `` A_numerical_value``を使用できます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:100
+msgid ""
+"Layers and tables values are strings containing the filepath of the "
+"corresponding object. To turn them into a QGIS object, you can use the "
+"``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+"string value, which contains the filepaths to all selected objects, "
+"separated by semicolons (``;``)."
+msgstr "レイヤとテーブル値は、対応するオブジェクトのファイルパスを含む文字列です。QGISオブジェクトにそれらを有効にするには、 ``processing.getObjectFromUri()`` 関数を使用できます。複数の入力はまた、セミコロン（`;`）で区切られたすべての選択されたオブジェクトにファイルパスを含む文字列値を有します。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:105
+msgid "Outputs are defined in a similar manner, using the following tags:"
+msgstr "出力は、次のタグを使用して同様の方法で定義されます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:107
+msgid "``output raster``"
+msgstr "``出力raster``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:108
+msgid "``output vector``"
+msgstr "``出力vector``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:109
+msgid "``output table``"
+msgstr "``出力TABLE``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:110
+msgid "``output html``"
+msgstr "``出力html``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:111
+msgid "``output file``"
+msgstr "``出力file``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:112
+msgid "``output number``"
+msgstr "``出力number``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:113
+msgid "``output string``"
+msgstr "``出力string``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:114
+msgid "``output extent``"
+msgstr "``出力extent``"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:116
+msgid ""
+"The value assigned to the output variables is always a string with a "
+"filepath. It will correspond to a temporary filepath in case the user has "
+"not entered any output filename."
+msgstr "出力変数に割り当てられた値は、常にファイルパスの文字列です。これは、ユーザーが任意の出力ファイル名を入力していない場合には、一時的なファイルパスに対応します。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:120
+msgid ""
+"In addition to the tags for parameters and outputs, you can also define the "
+"group under which the algorithm will be shown, using the ``group`` tag."
+msgstr "パラメータおよび出力用のタグに加えて、アルゴリズムが `` group``タグを使用して、表示されるグループも定義できます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:123
+msgid ""
+"The last tag that you can use in your script header is ``##nomodeler``. Use "
+"that when you do not want your algorithm to be shown in the modeler window. "
+"This should be used for algorithms that do not have a clear syntax (for "
+"instance, if the number of layers to be created is not known in advance, at "
+"design time), which make them unsuitable for the graphical modeler"
+msgstr "スクリプトのヘッダーで使用できる最後のタグは `` ## nomodeler``です。アルゴリズムをモデラーウィンドウに表示したくないときに使用します。これは、明確な構文を持っていないアルゴリズム（例えば、設計時には作成されるレイヤーの数が予め知られていない場合）に使用する必要があります。グラフィカルモデラーに使用することは不適切です。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:130
+msgid "Handing data produced by the algorithm"
+msgstr "アルゴリズムによって作成されたデータの扱い"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:132
+msgid ""
+"When you declare an output representing a layer (raster, vector or table), "
+"the algorithm will try to add it to QGIS once it is finished. That is the "
+"reason why, although the ``runalg()`` method does not load the layers it "
+"produces, the final *TWI* layer will be loaded, since it is saved to the "
+"file entered by the user, which is the value of the corresponding output."
+msgstr "レイヤー（ラスタ、ベクタまたはテーブル）を表す出力を宣言するときは、このアルゴリズムでは終了時にレイヤーをQGISに追加しようとします。ですから、``runalg()``メソッドはそれが生成するレイヤーをロードしなにもかかわらず最終 *TWI* レイヤーはロードされるでしょう。それはユーザによって入力されたファイル に保存されるからです、それは対応する出力の値である。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:138
+msgid ""
+"Do not use the ``load()`` method in your script algorithms, but just when "
+"working with the console line. If a layer is created as output of an "
+"algorithm, it should be declared as such. Otherwise, you will not be able to"
+" properly use the algorithm in the modeler, since its syntax (as defined by "
+"the tags explained above) will not match what the algorithm really creates."
+msgstr " ``load() ``メソッドはスクリプトアルゴリズムの中では使用しないでください。単にコンソールラインで作業する場合だけにしてください。レイヤーがアルゴリズムの出力として作成された場合は、そのように宣言する必要があります。そうしないと、（上記で説明するようにタグによって定義される）その構文がアルゴリズムが実際に作成したものと一致しないので、モデラーの中でアルゴリズムを適切に使用できなくなるでしょう。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:144
+msgid ""
+"Hidden outputs (numbers and strings) do not have a value. Instead, it is you"
+" who has to assign a value to them. To do so, just set the value of a "
+"variable with the name you used to declare that output. For instance, if you"
+" have used this declaration,"
+msgstr "隠された出力（数値と文字列）は値を持ちません。代わりに、それらには値を割り当てる必要があります。それをするには、その出力を宣言するために使用した名前を持つ変数の値を設定するだけです。たとえば、この宣言を使用している場合は、"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:153
+msgid "the following line will set the value of the output to 5:"
+msgstr "次の行は、出力の値を5に設定します："
+
+#: ../../source/docs/user_manual/processing/scripts.rst:161
+msgid "Communicating with the user"
+msgstr "ユーザーとのやりとり"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:163
+msgid ""
+"If your algorithm takes a long time to process, it is a good idea to inform "
+"the user. You have a global named ``progress`` available, with two available"
+" methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the "
+"progress text and the progress bar."
+msgstr "アルゴリズムの処理に時間がかかる場合は、ユーザーに通知することをお勧めします。進行状況テキストとプログレスバーを修正するための2つの利用可能なメソッド：``setText（テキスト）``と``setPercentage（パーセント）``をもつ`` progress``という名前のグローバルが利用可能です。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:168
+msgid ""
+"If you have to provide some information to the user, not related to the "
+"progress of the algorithm, you can use the ``setInfo(text)`` method, also "
+"from the ``progress`` object."
+msgstr "アルゴリズムの進行に関連していない、ユーザーにいくつかの情報を提供する必要がある場合は、 `` progress``オブジェクトから `` SETINFO（テキスト） ``メソッドを使用できます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:172
+msgid ""
+"If your script has some problem, the correct way of propagating it is to "
+"raise an exception of type ``GeoAlgorithmExecutionException()``. You can "
+"pass a message as argument to the constructor of the exception. Processing "
+"will take care of handling it and communicating with the user, depending on "
+"where the algorithm is being executed from (toolbox, modeler, Python "
+"console...)"
+msgstr "スクリプトに何らかの問題がある場合、伝播する正し​​い方法は、 タイプ``GeoAlgorithmExecutionException()``の例外を発生させることです。メッセージを例外のコンストラクタに引数として渡すことができます。処理は、アルゴリズムが（ツールボックス、モデラー、Pythonのコンソール...）から実行されている場所に応じて、それを処理し、ユーザーとの通信の世話をします"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:180
+msgid "Documenting your scripts"
+msgstr "スクリプトの文書化"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:182
+msgid ""
+"As in the case of models, you can create additional documentation for your "
+"script, to explain what they do and how to use them. In the script editing "
+"dialog you will find a **[Edit script help]** button. Click on it and it "
+"will take you to the help editing dialog. Check the chapter about the "
+"graphical modeler to find out more about this dialog and how to use it."
+msgstr "モデルの場合のように、スクリプトの追加ドキュメントを作成することができ、彼らが何をすべきかを説明し、それらを使用する方法。スクリプトの編集ダイアログには** [スクリプト編集のヘルプ] **ボタンがあります。それをクリックすると、ヘルプ編集のダイアログボックスが表示されます。このダイアログとその使用方法についての詳細を調べるには、グラフィカルモデラーについての章をチェックしてください。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:188
+msgid ""
+"Help files are saved in the same folder as the script itself, adding the "
+":file:`.help` extension to the filename. Note that you can edit your "
+"script's help before saving it for the first time. If you later close the "
+"script editing dialog without saving the script (i.e. you discard it), the "
+"help content you wrote will be lost. If your script was already saved and is"
+" associated with a filename, saving is done automatically."
+msgstr "ヘルプファイルは、ファイル名に拡張子 :file:`.help` を追加して、スクリプト自体と同じフォルダに保存されます。スクリプトのヘルプは初めてそれを保存する前でも編集できます。後でスクリプトを保存せずにスクリプト編集ダイアログを閉じた（つまり、それを捨てた）場合、今書いたヘルプコンテンツは失われます。スクリプトがすでに保存されたファイル名に関連付けられている場合は、保存が自動的に実行されます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:197
+msgid "Example scripts"
+msgstr "サンプルスクリプト"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:199
+msgid ""
+"Several examples are available in the on-line collection of scripts, which "
+"you can access by selecting the *Get script from on-line script collection* "
+"tool under the *Scripts/tools* entry in the toolbox."
+msgstr "いくつかの例は、ツールボックス内の *スクリプト/ツール* の下 *オンライン・スクリプトのコレクションからスクリプトを取得する* ツール項目を選択することでアクセスできるスクリプトのオンラインコレクションでご利用いただけます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:207
+msgid ""
+"Please, check them to see real examples of how to create algorithms using "
+"the processing framework classes. You can right-click on any script "
+"algorithm and select :guilabel:`Edit script` to edit its code or just to see"
+" it."
+msgstr "それらをチェックして、処理フレームワーククラスを使用してアルゴリズムを作成する方法の実際の例を参照してください。スクリプトアルゴリズムを右クリックして、 :guilabel:`Edit script`を選択すると、コードを編集できますし、単に見るだけでもできます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:213
+msgid "Best practices for writing script algorithms"
+msgstr "スクリプトアルゴリズムを書くためのベストプラクティス"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:215
+msgid ""
+"Here's a quick summary of ideas to consider when creating your script "
+"algorithms and, especially, if you want to share with other QGIS users. "
+"Following these simple rules will ensure consistency across the different "
+"Processing elements such as the toolbox, the modeler or the batch processing"
+" interface."
+msgstr "ここでは、他のQGISのユーザーと共有したい場合は、特に、スクリプトのアルゴリズムを作成したときに考慮すべきアイデアの簡単な要約です。これらの単純なルールに従うことで、このようなツールボックス、モデラーまたはバッチ処理インターフェースとして異なる処理要素間の整合性を保証します。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:220
+msgid ""
+"Do not load resulting layers. Let Processing handle your results and load "
+"your layers if needed."
+msgstr "結果のレイヤーはロードしないでください。処理に結果を処理させ、必要であれば、レイヤーをロードしてください。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:221
+msgid ""
+"Always declare the outputs your algorithm creates. Avoid things such as "
+"declaring one output and then using the destination filename set for that "
+"output to create a collection of them. That will break the correct semantics"
+" of the algorithm and make it impossible to use it safely in the modeler. If"
+" you have to write an algorithm like that, make sure you add the "
+"``##nomodeler`` tag."
+msgstr "必ずアルゴリズムが作成する出力を宣言してください。そのような1つの出力を宣言し、それらのコレクションを作成するために、その出力に設定された宛先ファイル名を使用するようなものは避けてください。これは、アルゴリズムの正しいセマンティクスを壊し、モデラーで安全にそれを使用することが不可能になります。そのようなアルゴリズムを記述する必要がある場合は、必ず `` ## nomodeler``タグを追加してください。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:226
+msgid ""
+"Do not show message boxes or use any GUI element from the script. If you "
+"want to communicate with the user, use the ``setInfo()`` method or throw an "
+"``GeoAlgorithmExecutionException``"
+msgstr "メッセージボックスを表示したり、スクリプトから任意のGUI要素を使用しないでください。ユーザと通信したい場合は、 `` SETINFO（） ``メソッドを使用するか、 `` GeoAlgorithmExecutionException``を投げます"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:229
+msgid ""
+"As a rule of thumb, do not forget that your algorithm might be executed in a"
+" context other than the Processing toolbox."
+msgstr "経験則として、アルゴリズムは、処理ツールボックス以外のコンテキストで実行される可能性があることを忘れないでください。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:234
+msgid "Pre- and post-execution script hooks"
+msgstr "実行前および実行後スクリプトフック"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:236
+msgid ""
+"Scripts can also be used to set pre- and post-execution hooks that are run "
+"before and after an algorithm is run. This can be used to automate tasks "
+"that should be performed whenever an algorithm is executed."
+msgstr "スクリプトはアルゴリズムが実行される前後に実行される実行前と実行後のフックを設定するためにも使用できます。これは、アルゴリズムが実行されるたびに実行されるべきタスクを自動化するために使用できます。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:240
+msgid ""
+"The syntax is identical to the syntax explained above, but an additional "
+"global variable named ``alg`` is available, representing the algorithm that "
+"has just been (or is about to be) executed."
+msgstr "構文構文は、上記の説明と同じであるが、名前の追加のグローバル変数 `` alg``は単にされ（又はれようとしている）実行されたアルゴリズムを表す、利用可能です。"
+
+#: ../../source/docs/user_manual/processing/scripts.rst:244
+msgid ""
+"In the :guilabel:`General` group of the processing config dialog you will "
+"find two entries named :guilabel:`Pre-execution script file` and :guilabel"
+":`Post-execution script file` where the filename of the scripts to be run in"
+" each case can be entered."
+msgstr "処理の設定]ダイアログボックスの :guilabel:`General` グループの中に :guilabel:`実行前スクリプトファイル` と :guilabel:`実行後スクリプトファイル` という名前の2つの入力欄があり、それぞれの場合に実行されるスクリプトのファイル名を入力できます。"

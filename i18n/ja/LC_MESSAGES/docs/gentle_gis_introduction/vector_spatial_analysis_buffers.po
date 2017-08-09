@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Choro <u.ko.kubot@gmail.com>, 2013-2014,2016
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-02 07:07+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +66,7 @@ msgid ""
 "locations and their relationship to the environment. In this topic we will "
 "discuss buffering as an example of a useful spatial analysis that can be "
 "carried out with vector data."
-msgstr ""
+msgstr "**空間分析** は、 GISデータから新たな追加的な意味を抽出するために、空間情報を使用します。空間分析はたいていGISアプリケーションを使用して行われます。GISアプリケーションには、図形統計（例えばこのポリラインはいくつの頂点で構成されるか？）または図形バッファリングなどのジオプロセシングのための空間分析ツールがあるのが普通です。使用される空間分析の種類は、対象領域に応じて変化します。水の管理や研究（水文学）で働く人々は、等高線の分析と、それを横切って移動する水をモデル化することに興味がありそうです。野生生物管理ではユーザーは、野生生物のポイントでの位置と環境との関係を扱う分析機能に興味があります。このトピックにおいてはバッファリングを、ベクトルデータで行うことができる便利な空間分析の例として説明します。"
 
 # c6770c09cb184e2d9510585784d071e6
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:32
@@ -79,7 +80,7 @@ msgid ""
 "specified distance to selected real world features and the other area that "
 "is **beyond**. The area that is within the specified distance is called the "
 "**buffer zone**."
-msgstr "**バッファリング**は通常２つのエリアを作成します:１つは **内部に含まれる**で選択した現実世界の地物との距離を示し、もう１つは **離れている**です。特定の距離以内のエリアを**バッファゾーン**といいます。"
+msgstr "**バッファリング** は通常２つのエリアを作成します:１つは、選択した現実世界の地物から指定距離 **内** のエリア、もう１つは **外** のエリアです。特定の距離内の領域を **バッファゾーン** といいます。"
 
 # 7205fd1024104d2184cf1ea3583ebedc
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:38
@@ -91,7 +92,7 @@ msgid ""
 "buffer zones may be greenbelts between residential and commercial areas, "
 "border zones between countries (see figure_buffer_zone_), noise protection "
 "zones around airports, or pollution protection zones along rivers."
-msgstr ""
+msgstr "**バッファゾーン** とは、現実世界の地物を互いから離しておくという目的に資する何らかの領域です。バッファゾーンは、多くの場合、環境を保護する、産業事故や自然災害から住宅や商業ゾーンを保護する、または暴力を防ぐために設定されます。バッファゾーンの一般的なタイプは、住宅地と商業地間の緑地帯、国間の国境地帯、空港周りの騒音防止ゾーン、川沿いの汚染保護ゾーンであったりします（figure_buffer_zone_参照）。"
 
 # cf4c484467d14ae6ace462675f81bd76
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:56
@@ -106,7 +107,7 @@ msgid ""
 "In a GIS Application, **buffer zones are** always represented as **vector "
 "polygons** enclosing other polygon, line or point features (see "
 "figure_point_buffer_, figure_line_buffer_, )."
-msgstr "GISアプリケーションでは、**バッファゾーンエリア**は他のポリゴン、ラインまたは他の点地物を包含するような**ベクタポリゴン**に代表されます( figure_point_buffer_, figure_line_buffer_ を参照 )。"
+msgstr "GISアプリケーションでは、 **バッファゾーンエリア** は他のポリゴン、ラインまたは他の点地物を包含するような **ベクタポリゴン** に代表されます( figure_point_buffer_, figure_line_buffer_ を参照 )。"
 
 # e32010795a60471a818f207d6a9a64ff
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:73
@@ -118,7 +119,7 @@ msgstr "ベクタポイント周辺のバッファゾーン。"
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:85
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:97
 msgid "A buffer zone around vector polylines."
-msgstr "ベクタポイント周辺のバッファゾーン。"
+msgstr "ベクタポリライン周辺のバッファゾーン。"
 
 # 811b3b23fd5d4255a826ffeace918079
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:100
@@ -137,7 +138,7 @@ msgid ""
 "intensive cultivation the buffer distance may be bigger than for organic "
 "farming (see Figure figure_variable_buffer_ and Table "
 "table_buffer_attributes_)."
-msgstr ""
+msgstr "バッファリングにはいくつかのバリエーションがあります。 **バッファ距離** またはバッファサイズは各図形のベクトルレイヤ属性テーブルに設けられた数値に応じて**変化**させることができます。数値データで使用される座標参照系（CRS）に係る地図単位で定義されなければなりません。例えば、川の土手に沿ったバッファゾーンの幅は、隣接する土地利用の強さに応じて変化させることができます。集中栽培用のバッファ距離は有機農業用よりも大きくするとか（図figure_variable_buffer_及び表table_buffer_attributes_を参照）。"
 
 # 46f6db5204a94d6197fe878eab288500
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:121
@@ -218,7 +219,7 @@ msgstr "テレ川"
 msgid ""
 "Table Buffer Attributes 1: Attribute table with different buffer distances "
 "to rivers based on information about the adjacent land use."
-msgstr ""
+msgstr "テーブルバッファ属性1：隣接する土地利用に関する情報に基き河川までのバッファ距離が異なる属性テーブル。"
 
 # 2e9aed96c67c40bb9ae8a1ff1168aed4
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:140
@@ -228,7 +229,7 @@ msgid ""
 "right side of the line feature. In these cases the left or right side is "
 "determined by the direction from the starting point to the end point of line"
 " during digitising."
-msgstr ""
+msgstr "こうしたポリライン図形、河川や道路など、の周りのバッファは、ラインの両側にある必要はありません。それらはライン図形の左側または右側のいずれかにすることができます。これらの場合に左側か右側かは、デジタル化の間のラインの始点から終点までの方向によって決定されます。"
 
 # b3032e0e021d4f1e82ab938d0ac8f128
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:146
@@ -242,7 +243,7 @@ msgid ""
 " be buffered with distances of 10, 15, 25 and 30 km, thus forming multiple "
 "rings around the plant as part of an evacuation plan (see "
 "figure_multiple_buffers_)."
-msgstr ""
+msgstr "図形は複数のバッファゾーンを持つことができます。原子力発電所には10、15、25、30キロの距離のバッファを持つことができ、したがって避難計画の一環として工場の周囲に複数の環を形成します（figure_multiple_buffers_参照）。"
 
 # 1a079dd94be740dab57e93ba8365aa34
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:162
@@ -262,7 +263,7 @@ msgid ""
 "also be useful for boundaries of buffer zones to remain intact, so that each"
 " buffer zone is a separate polygon and you can identify the overlapping "
 "areas (see Figure figure_buffer_dissolve_)."
-msgstr ""
+msgstr "バッファゾーンの間に重複領域が存在しないよう、バッファゾーンは多くの場合に境界をディゾルブします。しかし、バッファーゾーンの境界をそのままにしておき、各バッファゾーンは別個の多角形であり重複領域を特定できる方が有用である場合もあります（図figure_buffer_dissolve_を参照）。"
 
 # 015a8c20b63142d892d11511a7b5d0f2
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:183
@@ -286,7 +287,7 @@ msgid ""
 " road is at least 200 meters inward from the coast line. They could use an "
 "inward buffer to find the 200 m line inland and then plan their road not to "
 "go beyond that line."
-msgstr ""
+msgstr "ポリゴンフィーチャの周囲のバッファゾーンは、通常、ポリゴンの境界から外側に広がりますが、ポリゴンの境界から内側にバッファゾーンを作成することも可能です。例えば、観光省がロベン島の周りに新しい道路を計画したくて、環境法では道路は海岸線から少なくとも200メートル内側にあることが要求されるとします。観光省は海岸線から内への200メートルラインを見つけるために、内側にバッファを使用して、その線を越えないように自分たちの道路を計画できます。"
 
 # 22473a2dc87744f8857cd03744fb158a
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:197
@@ -301,7 +302,7 @@ msgid ""
 " allow you to buffer on either the left side or the right side of a line "
 "feature, to dissolve the boundaries of buffer zones or to buffer inward from"
 " a polygon boundary."
-msgstr ""
+msgstr "ほとんどのGISアプリケーションは、分析ツールとしてバッファ作成を提供していますが、バッファを作成するためのオプションはいろいろです。たとえば、ライン図形の左右両側へバッファリングすること、バッファゾーンの境界をディゾルブすること、ポリゴンの境界から内側にバッファリングすることが、すべてのGISアプリケーションでできるわけではありません。"
 
 # 9f42867d46c649829e34333d21501e85
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:204
@@ -310,7 +311,7 @@ msgid ""
 "decimal number (floating point value). This value is defined in map units "
 "(meters, feet, decimal degrees) according to the Coordinate Reference System"
 " (CRS) of the vector layer."
-msgstr ""
+msgstr "バッファ距離は常に整数（整数）または小数（浮動小数点値）として定義されなければなりません。この値は、ベクトルレイヤーの座標参照系（CRS）に従った地図単位（メートル、フィート、小数の度）で定義されています。"
 
 # 519582ef298c40ec9a40b3a323fc6d52
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:210
@@ -322,7 +323,7 @@ msgstr "さらなる空間分析ツール"
 msgid ""
 "Buffering is a an important and often used spatial analysis tool but there "
 "are many others that can be used in a GIS and explored by the user."
-msgstr ""
+msgstr "バッファリングは重要かつ頻繁に使用される空間解析ツールですが、ユーザがGISで使用して検討できるものは他にも多くあります。"
 
 # de7b7022b29344b0bead161440a0d20d
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:215
@@ -331,14 +332,14 @@ msgid ""
 "relationships between two polygon features that share all or part of the "
 "same area. The output vector layer is a combination of the input features "
 "information (see figure_overlay_operations_)."
-msgstr ""
+msgstr "**空間オーバーレイ**は、同じ領域の全部または一部を共有する2つのポリゴンフィーチャ間の関係を特定することを可能にするプロセスです。出力されるベクトルレイヤーは入力図形情報の組み合わせです（figure_overlay_operations_参照）。"
 
 # bab8cfa262884c9aa435679bd907bdc8
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:230
 msgid ""
 "Spatial overlay with two input vector layers (a_input = rectangle, b_input ="
 " circle). The resulting vector layer is displayed green."
-msgstr "２つのベクタレイヤ (a_input = rectangle, b_input = circle)の空間的なオーバーレイ。結果のベクタレイヤは緑で表示されます。"
+msgstr "２つのベクタレイヤ (a_input = 方形, b_input = 円)の空間オーバーレイ。結果のベクタレイヤは緑で表示されます。"
 
 # 7ffb627603de4577a368a8f65c9bc1c7
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:233
@@ -350,7 +351,7 @@ msgstr "典型的な空間オーバーレイの例："
 msgid ""
 "**Intersection**: The output layer contains all areas where both layers "
 "overlap (intersect)."
-msgstr "**インターセクション**: 出力レイヤは重なる（交差した）レイヤのすべての領域に含まれます。"
+msgstr "**インターセクション**: 出力レイヤは２つのレイヤの重なる（交わる）すべての領域を含みます。"
 
 # 617675b4d75d4a8198f80d2f61d84e79
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:237
@@ -364,14 +365,14 @@ msgstr "**ユニオン**：出力レイヤは組み合わせた2つの入力レ�
 msgid ""
 "**Symmetrical difference**: The output layer contains all areas of the input"
 " layers except those areas where the two layers overlap (intersect)."
-msgstr ""
+msgstr "**対称差**：出力レイヤーには、入力レイヤーのすべての領域が含まれます。ただし、2つのレイヤーが重なる（交わる）領域は除きます。"
 
 # fbe8075efc1f44c7b957926b28f3a36b
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:240
 msgid ""
 "**Difference**: The output layer contains all areas of the first input layer"
 " that do not overlap (intersect) with the second input layer."
-msgstr ""
+msgstr "**差分**：出力レイヤには、第2の入力レイヤと重ならない（交わらない）、第1の入力レイヤのすべての領域が含まれます。"
 
 # 4cda697cf6e84de087c5f4bb77a8a33c
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:244
@@ -386,17 +387,17 @@ msgstr "ここでは以下のことを学びました:"
 # 03402ca6476a407fa5924b553e8437de
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:248
 msgid "**Buffer zones** describe areas around real world features."
-msgstr "**バッファゾーン**は、現実世界の地物の周りの領域を示します。"
+msgstr "**バッファゾーン** は、現実世界の地物の周りの領域を示します。"
 
 # 593c5eb8d7134a09b5d1d736654070a7
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:249
 msgid "Buffer zones are always **vector polygons**."
-msgstr "バッファゾーンは常に**ベクタポリゴン**です。"
+msgstr "バッファゾーンは常に **ベクタポリゴン** です。"
 
 # 221664a854f847cb8a2780c3e166bafd
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:250
 msgid "A feature can have **multiple** buffer zones."
-msgstr "地物は**複数の**バッファゾーンを持ちえます。"
+msgstr "地物は **複数の** バッファゾーンを持ちえます。"
 
 # b4069a2348a845e38b8161675eafd25f
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:251
@@ -407,7 +408,7 @@ msgstr "バッファゾーンのサイズは**バッファ距離**によって�
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:252
 msgid ""
 "A buffer distance has to be an **integer** or **floating point** value."
-msgstr "バッファ距離は**整数**または**小数点**の値でなければいけません。"
+msgstr "バッファ距離は **整数** または **小数点** の値でなければいけません。"
 
 # 994c9f0980894621a00204a3edd21a87
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:253
@@ -420,7 +421,7 @@ msgstr "バッファ距離は、ベクトルレイヤ内の各地物ごとに異
 msgid ""
 "Polygons can be buffered **inward** or **outward** from the polygon "
 "boundary."
-msgstr "ポリゴンは、その境界から**内側へ**または**外側へ**バッファを作成できます。"
+msgstr "ポリゴンは、その境界から **内側へ** または **外側へ** バッファを作成できます。"
 
 # 0b234340200f4beeaa1ad503e7983dbe
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:255
@@ -451,7 +452,7 @@ msgid ""
 "Because of dramatic traffic increase, the town planners want to widen the "
 "main road and add a second lane. Create a buffer around the road to find "
 "properties that fall within the buffer zone (see figure_buffer_road_)."
-msgstr ""
+msgstr "交通量が劇的に増加したため、都市計画担当者は主要道路を拡幅して2車線目を追加したいと思っています。バッファゾーンに入る資産を見つけるために道路の周りにバッファを作成します(figure_buffer_road_を参照)。"
 
 # 1154808654b54cdab76ef6f468003503
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:267
@@ -460,7 +461,7 @@ msgid ""
 "zone to keep protesters at least 100 meters from a building. Create a buffer"
 " around a building and colour it so that event planners can see where the "
 "buffer area is."
-msgstr ""
+msgstr "抗議グループを制御するために、警察は抗議者を建物から少なくとも100メートル離しておくために中立ゾーンを設置したいと思っています。建物の周りにバッファを作成し、バッファ領域がどこにあるかイベントプランナーにわかるように色付けします。"
 
 # 14d14a36ab4146c781e65d5eb5b82cae
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:271
@@ -468,7 +469,7 @@ msgid ""
 "A truck factory plans to expand. The siting criteria stipulate that a "
 "potential site must be within 1 km of a heavy-duty road. Create a buffer "
 "along a main road so that you can see where potential sites are."
-msgstr ""
+msgstr "トラック工場が拡張を計画しています。立地基準には、敷地候補は大型道路の1キロ以内でなければならないと規定されています。敷地候補がどこにあるかわかるように、主要道路に沿ってバッファを作成します。"
 
 # 910116d15f6143fa88dd1f9a4d5182e0
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:274
@@ -477,7 +478,7 @@ msgid ""
 "stores may be within a 1000 meter buffer zone of a school or a church. "
 "Create a 1 km buffer around your school and then go and see if there would "
 "be any bottle stores too close to your school."
-msgstr ""
+msgstr "市が、ボトル店舗は学校や教会の千メートルバッファゾーン内にあってはいけないと規定する法律を導入したいと思っていると想像してみてください。学校の周りに1キロのバッファを作成し、それから学校に近すぎるボトル店舗がないか見に行ってください。"
 
 # 73805a856fa14445bd46b8f13e44bf49
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:289
@@ -485,7 +486,7 @@ msgid ""
 "Buffer zone (green) around a roads map (brown). You can see which houses "
 "fall within the buffer zone, so now you could contact the owner and talk to "
 "him about the situation."
-msgstr "道路マップ（茶）周辺のバッファゾーン（緑）。どの家がバッファゾーンに入るかについて見ることができるので、今、所有者に連絡することができ、状況について語ることができました。"
+msgstr "道路地図（茶）周辺のバッファゾーン（緑）。どの家がバッファゾーンに入るかについて見ることができるので、今、所有者に連絡して状況について話すことができるでしょう。"
 
 # 1ce39b5599a84b449c9bc5f21fefea08
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:294
@@ -559,11 +560,11 @@ msgstr "次は?"
 msgid ""
 "In the section that follows we will take a closer look at **interpolation** "
 "as an example of spatial analysis you can do with raster data."
-msgstr "次のセクションでは、ラスタデータを使った空間解析の例として**補間**について詳しく見ましょう。 "
+msgstr "次のセクションでは、ラスタデータを使った空間解析の例として **補間** について詳しく見ましょう。 "
 
 #: ../../source/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.rst:11
 msgid "|gentleLogo|"
-msgstr ""
+msgstr "|gentlelogo|"
 
 #~ msgid "|gentlelogo|"
 #~ msgstr ""

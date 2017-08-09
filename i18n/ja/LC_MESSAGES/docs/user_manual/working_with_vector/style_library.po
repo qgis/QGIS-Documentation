@@ -1,0 +1,662 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-08-01 03:35+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:9
+msgid "The Symbol Library"
+msgstr "シンボルライブラリ"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:22
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:42
+msgid "The Style Manager"
+msgstr "スタイル・マネージャ"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:24
+msgid ""
+"The Symbol Library is the place where users can manage and create generic "
+"symbols to be used in several QGIS projects. You can open it with the "
+":menuselection:`Settings --> Style Manager` or from the **Style** tab in the"
+" vector layer's :menuselection:`Properties`. It allows users to:"
+msgstr "シンボルライブラリは、ユーザーが複数のQGISプロジェクトで使用される一般的なシンボルを管理し、作成できる場所です。それは :menuselection:`設定]  - > [スタイルManager` から、またはベクトルレイヤーの :menuselection:`Properties` 中の **スタイル** タブから開くことができます。これにより、ユーザーは以下をのことができます："
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:29
+msgid "create, edit and remove symbols"
+msgstr "作成、編集、および記号を削除"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:30
+msgid "organize symbols in custom groups"
+msgstr "カスタムグループ内のシンボルを整理"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:31
+msgid "export and import symbols."
+msgstr "エクスポートとインポートのシンボル。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:46
+msgid "Groups and smart groups"
+msgstr "グループおよびスマートグループ"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:48
+msgid ""
+"You can organize symbols into different categories. These categories, listed"
+" in the panel at the left, can be static (called **Group**) or dynamic "
+"(named **Smart Group**). A group is smart when its symbols are dynamically "
+"fetched according to conditions set. See figure_symbol_2_:"
+msgstr "異なるカテゴリにシンボルを整理できます。左側のパネルにリストされているこれらのカテゴリは、静的（ **グループ** と呼ばれる）または動的（ **スマートグループ** という名前）にできます。そのシンボルを動的に設定された条件に応じてフェッチされたときにグループがスマートです。 figure_symbol_2_ を参照："
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:53
+msgid ""
+"To create a group, right click on an existing group or on the main "
+"**Groups** directory in the left of the dialog. You can also select a group "
+"and click the |signPlus| :sup:`Add Group` button. The new group will be a "
+"sub-group of the selected one."
+msgstr "グループを作成するには、右のダイアログの左側にディレクトリ既存のグループまたはメイン **グループ** をクリックしてください。また、グループを選択し、クリックできます |signPlus| :sup:`Group` ボタンを追加します。新しいグループが選択された一つのサブグループになります。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:58
+msgid ""
+"Create **Smart Group** is similar to creating group, but instead select "
+"**Smart Groups**. The dialog box allows user to choose the expression to "
+"select symbols in order to appear in the smart group (contains some tags, "
+"member of a group, have a string in its name, etc.). Any symbol that "
+"satisfies the entered condition(s) is automatically added to the smart "
+"group."
+msgstr "**スマートグループ** はグループを作成することに似て作成しますが、代わりに **スマートグループ** を選択します。ダイアログボックスが（など、その名前の文字列を持っている、いくつかのタグ、グループのメンバーが含まれている）ユーザーがスマートグループに表示するために、シンボルを選択するために、式を選択することができます。入力された条件（複数可）を満たす任意のシンボルは、自動的にスマートグループに追加されます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:73
+msgid "Creating a Smart Group"
+msgstr "スマートグループを作成します"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:75
+msgid ""
+"To remove a group or a smart group, right click on the group and select "
+":menuselection:`Remove Group` or select it and push |signMinus| :sup:`Remove"
+" Group` button."
+msgstr "グループまたはスマートグループを削除、右のグループをクリックして選択するには :menuselection:`Group` を削除するか、それを選択し、プッシュ |signMinus| :sup:`Group削除` ボタンを押します。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:79
+msgid ""
+"Unlike the smart groups that automatically fetch their belonged symbols, "
+"simple groups are filled by the user. To add a symbol into a group, you can "
+"either right click on a symbol, choose :menuselection:`Apply Group` and then"
+" the group name. There is a second way to add several symbols into a group: "
+"just select the group, click |changeLabelProperties| and choose "
+":menuselection:`Group Symbols`. All symbols display a checkbox that allows "
+"you to add the symbol into the selected groups. When selection is finished, "
+"you can click the same button, and choose :menuselection:`Finish Grouping`."
+msgstr "自動的に属していたシンボルをフェッチスマートグループとは異なり、簡単なグループは、ユーザーによって入力されます。グループにシンボルを追加するには、いずれかの右の選択、シンボルをクリックできます:menuselection:`その後、グループ名をGroup`を適用し。グループに複数のシンボルを追加する2番目の方法があります：クリックするだけで、グループを選択して |changeLabelProperties| をクリックし :menuselection:`グループSymbols` を選択するだけ。すべてのシンボルは、選択したグループにシンボルを追加できるチェックボックスを表示します。選択が終了したら、同じボタンをクリックして、 :menuselection:`完了Grouping` を選択できます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:89
+msgid ""
+"All the symbols that are not placed under a custom group belong to a default"
+" group named **Ungrouped**."
+msgstr "カスタムグループの下に配置されていないすべてのシンボルが **グループ化されていない** という名前の既定のグループに属している。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:93
+msgid "Add, Edit, Remove Symbol"
+msgstr "編集、シンボルを削除、追加"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:95
+msgid ""
+"Selecting a group returns in the right panel, if applicable, the list of "
+"symbols of the group (including its subgroups). These symbols are organized "
+"in four different tabs:"
+msgstr "該当する場合は、グループを選択すると、右側のパネルで（そのサブグループを含む）グループのシンボルのリストを返します。これらのシンボルは、4つの異なるタブで編成されています。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:99
+msgid "**Marker** for point symbols"
+msgstr "ポイントシンボルの**マーカー**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:100
+msgid "**Line** for linear symbols"
+msgstr "リニアシンボルの**ライン**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:101
+msgid "**Fill** for surface symbols"
+msgstr "表面シンボルの**塗りつぶし**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:102
+msgid "and `Color Ramp`_"
+msgstr "そして、 `色Ramp`_"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:104
+msgid ""
+"To delete a symbol you no longer need, just select it and click |signMinus| "
+":sup:`Remove item` (also available through right-click). The symbol will be "
+"deleted from the local symbols database."
+msgstr "不要になったシンボルを削除するには、それを選択して |signMinus| :sup:`itemを削除` をクリックします（右クリックからも利用可能）。シンボルは、ローカルシンボルのデータベースから削除されます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:108
+msgid ""
+"The symbol list can be modified by adding new symbols with |signPlus| "
+":sup:`Add item` button or modifying existing ones with |symbologyEdit| "
+":sup:`Edit item`. See `The Symbol Selector`_ for further information."
+msgstr "シンボルリストは、 |signPlus| :sup:`item追加` ボタンで新しいシンボルを追加したり、 |symbologyEdit| :sup:`編集item` によって既存のものを修正することで、変更できます。詳細については `シンボルSelector`_ を参照してください。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:114
+msgid "Share symbols"
+msgstr "共有シンボル"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:116
+msgid ""
+"The |sharing| :sup:`Share item` tool, at the right bottom of the Style "
+"Library dialog, offers options to easily share symbols with others: users "
+"can indeed export their symbols and import symbols to their library."
+msgstr "|sharing| :sup:`共有item` ツールは、スタイルライブラリダイアログの右下に、簡単に他の人とシンボルを共有するためのオプションを提供しています：ユーザーが実際に自分のライブラリにシンボルをインポートしたりエクスポートできます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:120
+msgid "**Exporting symbols**"
+msgstr "**エクスポートシンボル**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:122
+msgid ""
+"You can export the selected symbols to PNG, SVG or XML file formats. "
+"Exporting to PNG or SVG (both not available for color ramp symbols) creates "
+"a file for each selected symbol, and the SVG folder can be added to SVG "
+"Paths in :menuselection:`Settings --> Options` to e.g. share these symbols "
+"on a network. The XML format generates a single file containing all the "
+"selected symbols. This file can then be imported in another user's style "
+"library."
+msgstr "PNG、SVGやXMLファイル形式に選択したシンボルをエクスポートできます。PNGまたはSVG（カラーランプのシンボルのために利用可能なの両方ではない）にエクスポートすると、選択した各シンボルのためのファイルを作成し、SVGのフォルダがでSVGパスに追加できます :menuselection:`設定 - > Options` に例えば上のこれらのシンボルを共有しますネットワーク。XML形式は、選択したすべてのシンボルを含む単一のファイルを生成します。このファイルは、他のユーザーのスタイルライブラリにインポートできます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:129
+msgid "**Importing symbols**"
+msgstr "**シンボルをインポート**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:131
+msgid ""
+"You can extend your symbols library by importing new symbols. Just select "
+"|sharing| :menuselection:`Import` from the drop-down list at the right "
+"bottom of the dialog. In the new dialog, you'll need to :"
+msgstr "新しいシンボルをインポートすることによって、シンボルライブラリを拡張することができます。ダイアログの右下部にあるドロップダウンリストから|sharing| :menuselection:`Import` を選択するだけ。新しいダイアログで、次の操作が必要です。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:135
+msgid ""
+"indicate the source of the symbols (it can be a ``.xml`` file on the disk or"
+" an url),"
+msgstr "（それは、ディスク上の ``.xml`` ファイルやURLを指定できます）シンボルのソースを示し、"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:136
+msgid "give the name of the group under which the symbols will be put"
+msgstr "シンボルが配置されるグループの名前を与えます"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:137
+msgid "select the symbols you want to add to your library"
+msgstr "ライブラリに追加したいシンボルを選択"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:138
+msgid "and press **Import**."
+msgstr "そして、 **インポート** を押し​​てください。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:140
+msgid ""
+"Note that import and export options are also available through right-click."
+msgstr "そのインポートとエクスポートのオプションは、右クリックからも利用可能であることに注意してください。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:151
+msgid "Importing symbols"
+msgstr "シンボルのインポート"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:157
+msgid "Color Ramp"
+msgstr "カラーランプ"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:161
+msgid ""
+"The Color ramp tab in the Style Manager presents different types of color "
+"ramps you can use to style layers."
+msgstr "スタイル・マネージャでのカラーランプ]タブでは、スタイルレイヤーに使用できるカラーランプの種類を提示します。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:164
+msgid ""
+"To create a custom color ramp, activate the Color ramp tab and click the "
+"|signPlus| :sup:`Add item` button. The button reveals a drop-down list to "
+"choose the ramp type: Gradient, Random, colorBrewer, or cpt-city."
+msgstr "カスタムカラーランプを作成するには、カラーランプ]タブをアクティブにし、 |signPlus| :sup:`itemを追加` ボタンをクリックします。グラデーション、ランダム、colorBrewer、またはCPT-市：ボタンは、ランプ・タイプを選択するドロップダウンリストを明らかにする。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:168
+msgid ""
+"The first three have options for number of steps and/or multiple stops in "
+"the color ramp. You can use the |checkbox| :guilabel:`Invert` option while "
+"classifying the data with a color ramp. See figure_symbol_4_ for an example "
+"of custom color ramp and figure_symbol_4a_ for the cpt-city dialog."
+msgstr "最初の3つはカラーランプのステップおよび/または複数の停止回数のオプションを持っています。使用できます |checkbox| :guilabel:`Invert` オプションカラーランプを使用してデータを分類しています。カスタムカラーランプの例としては figure_symbol_4_ 、CPT-市ダイアログの例としては figure_symbol_4a_ を参照してください。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:183
+msgid "Example of custom gradient color ramp with multiple stops"
+msgstr "複数の停止でカスタムグラデーションのカラーランプの例"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:185
+msgid ""
+"The cpt-city option opens a new dialog with hundreds of themes included 'out"
+" of the box'."
+msgstr "CPT-市のオプションは「箱の外」に含まテーマの何百もの新しいダイアログを開きます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:196
+msgid "cpt-city dialog with hundreds of color ramps"
+msgstr "カラーランプの何百ものCPT-都市ダイアログ"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:202
+msgid "The symbol Selector"
+msgstr "シンボル選択"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:204
+msgid ""
+"The Symbol selector is the main dialog to design a symbol. You can create or"
+" edit Marker, Line or Fill Symbols."
+msgstr "シンボルセレクタは記号を設計するメインダイアログです。作成または編集マーカー、ラインのか、記号を記入することができます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:216
+msgid "Designing a Marker symbol"
+msgstr "マーカーシンボルの設計"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:219
+msgid ""
+"For each kind of symbols, you will find always the same dialog structure:"
+msgstr "シンボルの各種類について、常に同じダイアログの構造があります："
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:221
+msgid ""
+"at the top left side a dynamic symbol representation, updated as soon as "
+"symbol properties evolve"
+msgstr "左上側のダイナミックシンボル表現とすぐシンボル特性が進化するように更新"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:223
+msgid ""
+"under the symbol representation, the symbol tree shows symbol layers that "
+"are combined afterwards to shape a new global symbol. A symbol can consist "
+"of several :guilabel:`Symbol layers`. Settings will be shown later in this "
+"chapter."
+msgstr "シンボル表現の下、シンボルツリーが新しいグローバルシンボルを形成するために後で結合されたシンボルのレイヤーを示しています。 :guilabel:`シンボルlayers` シンボルは、いくつかで構成できます。設定は、この章の後半で表示されます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:227
+msgid ""
+"at the right you can setup some parameters that apply to the global symbol:"
+msgstr "右のセットアップグローバルシンボルに適用されるいくつかのパラメータでできます："
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:229
+msgid "**unit**: it can be millimeter, pixel or map unit"
+msgstr "**単位** ：それはミリメートル、ピクセルまたは地図単位とすることができる"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:230
+msgid "**transparency**"
+msgstr "**透明性**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:231
+msgid ""
+"**color**: when this parameter is changed by the user, its value is echoed "
+"to all unlocked sub-symbols color"
+msgstr "**色** ：このパラメータは、ユーザによって変更されたとき、その値は全てアンロックサブシンボルの色にエコーされます"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:233
+msgid "**size** and **rotation** for marker symbol"
+msgstr "マーカーシンボルの **サイズ** と **回転**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:234
+msgid "**width** for line symbol"
+msgstr "ラインシンボルの **幅**"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:236
+msgid ""
+"Note that the :guilabel:`Data-defined override` button beside the last "
+"layer-related parameters is inactive until the symbol is applied to a layer."
+" Once the symbol is connected to a layer, this button offers access to the "
+":ref:`size assistant <size_assistant>` dialog which helps to create "
+"proportional or multivariate analysis rendering."
+msgstr "シンボルがレイヤーに適用されるまで最後の層に関連するパラメータの横にある :guilabel:`データ定義のoverride` ボタン非アクティブであることに注意してください。シンボルがレイヤーに接続されると、このボタンは :ref:`サイズのアシスタント<size_assistant>` ダイアログへのアクセスを提供しています、比例または多変量解析のレンダリングを作成するのに役立ちます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:242
+msgid ""
+"under these parameters are displayed items of the symbols library you can "
+"choose from. This list of symbols can be filtered by selecting a group in "
+"the drop-down list just above."
+msgstr "これらのパラメータの下で、選択できるシンボルライブラリの項目を表示しています。シンボルのこのリストは、すぐ上のドロップダウンリスト内のグループを選択することによってフィルタリングすることができます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:246
+msgid ""
+"According to the level selected in the symbol tree, you'll get enabled "
+"different tools at the bottom of the dialog to :"
+msgstr "シンボルツリーで選択したレベルに応じて、ダイアログの下部にあるさまざまなツールを有効に得られます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:249
+msgid ""
+"|signPlus| add new symbol layer: you can imbricate as many symbols as you "
+"want"
+msgstr "|signPlus| 新しいシンボルレイヤを追加します。好きなだけシンボルを重ねることができます"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:250
+msgid "|signMinus| remove the selected symbol layer"
+msgstr "|signMinus| 選択されたシンボルレイヤーを除去"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:251
+msgid ""
+"lock colors of symbol layer: a |locked| locked color stays unchanged when "
+"user changes the color at the global (or upper) symbol level"
+msgstr "シンボルレイヤのロック色：|ロック| ユーザは、グローバル（または上部）シンボルレベルで色を変更したときにロックされた色が変化しないまま"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:253
+msgid "|duplicateLayer| duplicate a (group of) symbol layer(s)"
+msgstr "|duplicateLayer| duplicate a (group of) symbol layer(s)"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:254
+msgid "move up or down the symbol layer"
+msgstr "シンボルレイヤを上または下に移動"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:255
+msgid "apply :ref:`special effects <draw_effects>` to the symbol layer"
+msgstr "apply :ref:`special effects <draw_effects>` to the symbol layer"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:256
+msgid "save the designed symbol into your symbol library"
+msgstr "シンボルライブラリに設計されたシンボルを保存"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:257
+msgid ""
+"or choose in the :guilabel:`Advanced` |selectString| drop-down list, to "
+"**clip features to canvas extent**."
+msgstr "または |selectString| :guilabel:`Advanced` ドロップダウンリストで選択して、 **キャンバスの範囲で地物をクリップ** します。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:264
+msgid ""
+"Note that once you have set the size in the lower levels of the "
+":guilabel:`Symbol layers` dialog, the size of the whole symbol can be "
+"changed with the :guilabel:`Size` (for marker symbol) or the "
+":guilabel:`Width` (for line symbol) menu in the first level again. The size "
+"of the lower levels changes accordingly, while the size ratio is maintained."
+msgstr ":guilabel:`シンボルlayers` ダイアログより低いレベルのサイズを設定した後、シンボル全体のサイズは再び第1レベルの :guilabel:`Size` （マーカーシンボルの場合）または :guilabel:`Width`（ラインシンボルの場合）メニューで変更できることに注意してください。サイズ比を維持しながら、低いレベルの大きさは、それに応じて変化します。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:270
+msgid ""
+"More detailed settings can be made when clicking on the lower level in the "
+"Symbol tree. You can change each :guilabel:`Symbol layers` properties and "
+"according to the symbol type, you get different settings."
+msgstr "シンボルツリーの下位レベルをクリックすると、より詳細な設定を行うことができます。 :guilabel:`シンボルlayers` プロパティそれぞれを変更できます、そしてシンボル・タイプに応じて異なる設定を得ます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:279
+msgid "Marker Symbols"
+msgstr "マーカーシンボル"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:281
+msgid "Marker symbols have several symbol layer types:"
+msgstr "マーカーシンボルは複数のシンボルレイヤの種類があります。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:283
+msgid "Ellipse marker"
+msgstr "楕円形のマーカー"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:284
+msgid "Font marker"
+msgstr "フォントのマーカー"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:285
+msgid "Simple marker (default)"
+msgstr "シンプルマーカー（デフォルト）"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:286
+msgid "SVG marker"
+msgstr "SVGマーカー"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:287
+msgid "Vector Field marker"
+msgstr "ベクトルフィールドのマーカー"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:289
+msgid "For each marker symbol, you can set the following properties:"
+msgstr "各マーカーシンボルについては、次のプロパティを設定できます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:291
+msgid ""
+":guilabel:`Symbol layer type`: You have the option to use Ellipse markers, "
+"Font markers, Simple markers, SVG markers and Vector Field markers."
+msgstr "：guilabel： `記号層type`が：楕円マーカー、フォントマーカー、シンプルマーカー、SVGマーカーとベクトル場のマーカーを使用するオプションを持っています。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:293
+msgid ":guilabel:`colors`"
+msgstr ":guilabel:`colors`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:294
+msgid ":guilabel:`Size`"
+msgstr ":guilabel:`Size`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:295
+msgid ":guilabel:`Outline style`"
+msgstr ":guilabel:`Outline style`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:296
+msgid ":guilabel:`Outline width`"
+msgstr ":guilabel:`Outline width`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:297
+msgid ":guilabel:`Angle`"
+msgstr ":guilabel:`Angle`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:298
+msgid ""
+":guilabel:`Offset X,Y`: You can shift the symbol in the x- or y-direction."
+msgstr "：guilabel： `オフセットX、Y`：x軸またはy方向にシンボルを平行移動できます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:299
+msgid ":guilabel:`Anchor point`"
+msgstr ":guilabel:`Anchor point`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:300
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:328
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:354
+msgid ":guilabel:`Data defined properties ...`"
+msgstr ":guilabel:`Data defined properties ...`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:304
+msgid "Line Symbols"
+msgstr "ラインシンボル"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:306
+msgid "Line marker symbols have only two symbol layer types:"
+msgstr "ラインマーカーシンボルは唯一の2つのシンボルレイヤタイプがあります。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:308
+msgid "Marker line"
+msgstr "マーカーライン"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:309
+msgid "Simple line (default)"
+msgstr "シンプルライン（デフォルト）"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:311
+msgid ""
+"The default symbol layer type draws a simple line whereas the other display "
+"a marker point regularly on the line. You can choose different location: "
+"vertex, last and first vertex, interval, central point or on every curve "
+"point. Marker line can have offset along the line or offset line. Finally, "
+":guilabel:`rotation` allows you to change the orientation of the symbol."
+msgstr "デフォルトのシンボルレイヤタイプは、定期的にライン上の他の表示マーカ点に対し、シンプルなラインを描きます。頂点、最後と最初の頂点、間隔、中心点または全てのカーブポイント上：別の場所を選択できます。マーカーラインは、ラインやオフセット線に沿ってオフセットしていることができます。最後に、：guilabel： `rotation`あなたは、シンボルの向きを変更することができます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:318
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:347
+msgid "The following settings are available:"
+msgstr "次の設定を使用できます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:320
+msgid ":guilabel:`colour`"
+msgstr ":guilabel:`colour`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:321
+msgid ":guilabel:`Pen width`"
+msgstr ":guilabel:`Pen width`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:322
+msgid ":guilabel:`Offset`"
+msgstr ":guilabel:`Offset`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:323
+msgid ":guilabel:`Pen style`"
+msgstr ":guilabel:`Pen style`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:324
+msgid ":guilabel:`Join style`"
+msgstr ":guilabel:`Join style`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:325
+msgid ":guilabel:`Cap style`"
+msgstr ":guilabel:`Cap style`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:326
+msgid "|checkbox| :guilabel:`Use custom dash pattern`"
+msgstr "|checkbox| :guilabel:`Use custom dash pattern`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:327
+msgid ":guilabel:`Dash pattern unit`"
+msgstr ":guilabel:`Dash pattern unit`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:332
+msgid "Polygon Symbols"
+msgstr "ポリゴンのシンボル"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:334
+msgid "Polygon marker symbols have also several symbol layer types:"
+msgstr "ポリゴンのマーカーシンボルはまた、いくつかのシンボルレイヤの種類があります。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:336
+msgid "Centroid fill"
+msgstr "重心塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:337
+msgid "Gradient fill"
+msgstr "グラデーション塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:338
+msgid "Line pattern fill"
+msgstr "ラインパターンの塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:339
+msgid "Point pattern fill"
+msgstr "ポイントパターンの塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:340
+msgid "Raster image fill"
+msgstr "ラスター画像の塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:341
+msgid "SVG fill"
+msgstr "SVGの塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:342
+msgid "Shapeburst fill"
+msgstr "Shapeburst塗りつぶし"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:343
+msgid "Simple fill (default)"
+msgstr "シンプル塗りつぶし（デフォルト）"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:344
+msgid "Outline: Marker line (same as line marker)"
+msgstr "概要：マーカーライン（ラインマーカーと同じ）"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:345
+msgid "Outline: simple line (same as line marker)"
+msgstr "概要：シンプルなライン（ラインマーカーと同じ）"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:349
+msgid ":guilabel:`Colors` for the border and the fill."
+msgstr ":guilabel:`Colors` for the border and the fill."
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:350
+msgid ":guilabel:`Fill style`"
+msgstr ":guilabel:`Fill style`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:351
+msgid ":guilabel:`Border style`"
+msgstr ":guilabel:`Border style`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:352
+msgid ":guilabel:`Border width`"
+msgstr ":guilabel:`Border width`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:353
+msgid ":guilabel:`Offset X,Y`"
+msgstr ":guilabel:`Offset X,Y`"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:356
+msgid ""
+"Using the color combo box, you can drag and drop color for one color button "
+"to another button, copy-paste color, pick color from somewhere, choose a "
+"color from the palette or from  recent or standard color. The combo box "
+"allows you to fill in the feature with transparency. You can also just click"
+" the button to open the palette dialog. Note that you can import color from "
+"some external software like GIMP."
+msgstr "カラーコンボボックスを使用して、ドラッグして別のボタンに一つの色ボタンの色をドロップ、コピー＆ペーストの色、どこかから色を選択、パレットからか、最近または標準色から色を選択することができます。コンボボックスでは、透明性と機能に記入することができます。また、単にパレットダイアログを開くためのボタンをクリックすることができます。GIMPのようないくつかの外部ソフトウェアから色をインポートできることに注意してください。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:363
+msgid ""
+"With the 'Raster image fill' you can fill polygons with a tiled raster "
+"image. Options include (data defined) file name, opacity, image size (in "
+"pixels, mm or map units), coordinate mode (feature or view) and rotation."
+msgstr "「ラスター画像の塗りつぶし」を使用すると、タイル状のラスタイメージでポリゴンを埋めることができます。オプションは、（ピクセル、MMまたはマップ単位）（定義されたデータ）ファイル名、不透明度、画像サイズを含み、モード（機能又は図）および回転座標。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:367
+msgid ""
+"'Gradient Fill' :guilabel:`Symbol layer type` allows you to select between a"
+" |radioButtonOn| :guilabel:`Two color` and |radioButtonOff| :guilabel:`Color"
+" ramp` setting. You can use the |checkbox| :guilabel:`Feature centroid` as "
+":guilabel:`Referencepoint`. All fills 'Gradient Fill` :guilabel:`Symbol "
+"layer type` is also available through the :guilabel:`Symbol` menu of the "
+"Categorized and Graduated Renderer and through the :guilabel:`Rule "
+"properties` menu of the Rule-based renderer."
+msgstr "「グラデーション塗りつぶし」：guilabel： `記号層type`がの間を選択することができます| radioButtonOn | ：guilabel： `二color`と| radioButtonOff | ：guilabel： `色ramp`設定。チェックボックス|あなたが使用することができます| ：guilabel： `フィーチャーcentroid`として：guilabel：` Referencepoint`。すべての塗りつぶし「グラデーションFill`：guilabel：guilabel： `カテゴリ別のSymbol`メニューと卒業レンダラと通過：ルールベースのレンダラーの`ルールproperties`メニュー：guilabel `記号層type`がでても利用可能です。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:376
+msgid ""
+"Other possibility is to choose a 'shapeburst fill' which is a buffered "
+"gradient fill, where a gradient is drawn from the boundary of a polygon "
+"towards the polygon's centre. Configurable parameters include distance from "
+"the boundary to shade, use of color ramps or simple two color gradients, "
+"optional blurring of the fill and offsets."
+msgstr "他の可能性は、勾配は、多角形の中心に向かってポリゴンの境界線から引き出され、バッファグラデーション塗りつぶし、ある「shapeburst塗りつぶし」を選択することです。設定可能なパラメータは、シェードの境界からの距離、色ランプ又は単純な二色のグラデーション、充填およびオフセットの任意ボケの使用を含みます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:382
+msgid ""
+"It is possible to only draw polygon borders inside the polygon. Using "
+"'Outline: Simple line' select |checkbox| :guilabel:`Draw line only inside "
+"polygon`."
+msgstr "唯一の多角形の内側にポリゴンの境界線を描画することが可能です。「概要：シンプルなライン」を使用して|チェックボックスを選択し| ：guilabel： `だけpolygon`の内側に線を引きます。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:386
+msgid ""
+"**Note:** When geometry type is polygon, you can choose to disable the "
+"automatic clipping of lines/polygons to the canvas extent. In some cases "
+"this clipping results in unfavourable symbology (eg centroid fills where the"
+" centroid must always be the actual feature's centroid)."
+msgstr "**注：**ジオメトリタイプはポリゴンであるとき、あなたはキャンバスの範囲にライン/ポリゴンの自動クリッピングを無効にすることもできます。いくつかのケースでは不利な記号で、このクリッピング結果（重心が常に実際の機能の重心でなければならない場所例えば重心がいっぱい）。"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:16
+msgid "Style"
+msgstr "スタイル"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "color_Ramp"
+msgstr "color_Ramp"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "Gradient_color_Ramp"
+msgstr "Gradient_color_Ramp"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "colorBrewer"
+msgstr "colorBrewer"
+
+#: ../../source/docs/user_manual/working_with_vector/style_library.rst:159
+msgid "Custom_color_Ramp"
+msgstr "Custom_color_Ramp"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

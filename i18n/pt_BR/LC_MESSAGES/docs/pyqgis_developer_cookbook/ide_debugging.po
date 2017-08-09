@@ -1,6 +1,7 @@
 # 
 # Translators:
 # Armando Vulcano Junior <vulcano@uol.com.br>, 2015
+# Djonathan Goulart <d.goulart@outlook.com.br>, 2017
 # Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2014
 # Narcélio de Sá <narceliosapereira@gmail.com>, 2014
 msgid ""
@@ -8,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-02-25 02:38+0000\n"
+"Last-Translator: Djonathan Goulart <d.goulart@outlook.com.br>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/qgis/qgis-documentation/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,14 +160,14 @@ msgid ""
 " on Windows you need to make sure you that you have the same environment "
 "settings and use the same libraries and interpreter as QGIS. The fastest way"
 " to do this, is to modify the startup batch file of QGIS."
-msgstr ""
+msgstr "No Linux não é necessária configuração adicional para desenvolver complementos. Se você estiver utilizando Windows, certifique-se de possuir as mesmas configurações de ambiente e utilizar as mesmas bibliotecas e interpretador utilizados pelo QGIS. A forma mais rápida de fazer isso, é modificar o arquivo em lote de inicialização do QGIS."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:25
 msgid ""
 "If you used the OSGeo4W Installer, you can find this under the ``bin`` "
 "folder of your OSGeo4W install. Look for something like "
 ":file:`C:\\\\OSGeo4W\\\\bin\\\\qgis-unstable.bat`."
-msgstr ""
+msgstr "Se você utilizou o instalador OSGeo4W, o arquivo de inicialização pode ser encontrado dentro da pasta ``bin`` do diretório de instalação do OSGeo4W. Procure por algo como  :file:`C:\\\\OSGeo4W\\\\bin\\\\qgis-unstable.bat`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:29
 msgid ""
@@ -177,7 +178,7 @@ msgstr "Para usar `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, eis o
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:32
 msgid ""
 "Make a copy of :file:`qgis-unstable.bat` and rename it ``pyscripter.bat``."
-msgstr ""
+msgstr "Faça uma cópia do arquivo :file:`qgis-unstable.bat` e renomeie para ``pyscripter.bat``."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:33
 msgid ""
@@ -189,7 +190,7 @@ msgid ""
 "Add a line that points to your Pyscripter executable and add the commandline"
 " argument that sets the version of Python to be used (2.7 in the case of "
 "QGIS >= 2.0)"
-msgstr ""
+msgstr "Adicione uma linha que aponte para o seu executável Pyscripter e adicione o argumento  de linha de comando que define a versão do Phyton a ser utilizada (2.7 no caso do QGIS >= 2.0)."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:37
 msgid ""
@@ -211,11 +212,11 @@ msgid ""
 "developing and testing plugins. To prepare your environment for using "
 "Eclipse in Windows, you should also create a batch file and use it to start "
 "Eclipse."
-msgstr ""
+msgstr "Mais popular que o Pyscripter, o Eclipse é uma escolha comum entre os desenvolvedores. Nas seções seguintes, nós iremos explicar como configurá-lo para desenvolver e testar complementos. No Windows, para preparar o ambiente para a utilização do Eclipse, você também precisará criar um arquivo em lote para iniciá-lo."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:59
 msgid "To create that batch file, follow these steps:"
-msgstr ""
+msgstr "Para criar o arquivo em lote, siga os passos a seguir:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:61
 msgid ""
@@ -223,7 +224,7 @@ msgid ""
 ":file:`C:\\\\OSGeo4W\\\\apps\\\\qgis\\\\bin`, but if you compiled your own "
 "QGIS application this is in your build folder in "
 ":file:`output/bin/RelWithDebInfo`"
-msgstr ""
+msgstr "Localize a pasta onde está o arquivo :file:`qgis_core.dll`. Normalmente ele pode ser encontrado em :file:`C:\\\\OSGeo4W\\\\apps\\\\qgis\\\\bin`, mas se você compilou seu próprio QGIS, o arquivo estará na sua pasta de compilação em :file:`output/bin/RelWithDebInfo`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:64
 msgid "Locate your :file:`eclipse.exe` executable."
@@ -237,35 +238,35 @@ msgstr "Crie o seguinte script e use para iniciar eclipse quando estiver desenvo
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:82
 msgid "`Eclipse <https://eclipse.org>`_"
-msgstr ""
+msgstr "`Eclipse <https://eclipse.org>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:83
 msgid ""
 "`Aptana Eclipse Plugin "
 "<http://www.aptana.com/products/studio3/success_plugin.html>`_ or `PyDev "
 "<http://www.pydev.org>`_"
-msgstr ""
+msgstr "`Aptana Eclipse Plugin <http://www.aptana.com/products/studio3/success_plugin.html>`_ ou `PyDev <http://www.pydev.org>`_"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:84
 msgid "QGIS 2.x"
-msgstr ""
+msgstr "QGIS 2.x"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:89
 msgid ""
 "There is some preparation to be done on QGIS itself. Two plugins are of "
 "interest: **Remote Debug** and **Plugin reloader**."
-msgstr ""
+msgstr "É preciso fazer uma preparação no próprio QGIS. Existem dois complementos necessários: **Remote Debug** e **Plugin reloader**."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:92
 msgid "Go to :menuselection:`Plugins --> Manage and Install plugins...`"
-msgstr ""
+msgstr "Vá para :menuselection:`Complementos --> Gerenciar e Instalar Complementos...`"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:93
 msgid ""
 "Search for *Remote Debug* ( at the moment it's still experimental, so enable"
 " experimental plugins under the :guilabel:`Options` tab in case it does not "
 "show up). Install it."
-msgstr ""
+msgstr "Procure por *Remote Debug* (no memento este complemento ainda é experimental, portanto você precisa habilitar a exibição de complementos experimentais em :guilabel:`Opções` no menu à esquerda caso ele não apareça) . Instale ele."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:103
 msgid ""
@@ -277,7 +278,7 @@ msgstr "Em Eclipse, crie um novo projeto. Você pode selecionar*General Project*
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:112
 msgid ""
 "Now right-click your new project and choose :menuselection:`New --> Folder`."
-msgstr ""
+msgstr "Agora clique com o botão direito no seu novo projeto e selecione :menuselection:`New --> Folder`."
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:114
 msgid ""
@@ -391,11 +392,11 @@ msgstr "Primeiro adicione este código no local onde você gostaria de depurar"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:238
 msgid "On Linux do::"
-msgstr ""
+msgstr "No Linux faça::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:242
 msgid "On Mac OS X do::"
-msgstr ""
+msgstr "On Max OS X faça::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/ide_debugging.rst:251
 msgid "**TODO:**"

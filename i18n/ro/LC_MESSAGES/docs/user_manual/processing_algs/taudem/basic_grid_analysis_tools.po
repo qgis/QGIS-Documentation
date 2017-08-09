@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2016-07-24 19:29+0000\n"
-"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"PO-Revision-Date: 2016-10-22 19:13+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,29 +15,25 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:8
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:7
 msgid "Basic Grid Analysis"
 msgstr "Analiza de Bază a Grilei"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:11
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:10
 msgid "D8 Contributing Area"
 msgstr "Arealul de Contribuție D8"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:14
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:101
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:178
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:296
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:380
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:483
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:529
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:13
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:100
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:177
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:295
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:379
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:482
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:528
 msgid "Description"
 msgstr "Descriere"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:16
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:15
 msgid ""
 "Calculates a grid of contributing areas using the single direction D8 flow "
 "model. The contribution of each grid cell is taken as one (or when the "
@@ -47,15 +43,15 @@ msgid ""
 " D8 flow model."
 msgstr "Calculează o grilă a zonelor de contribuție, folosind modelul de curgere într-o singură direcție D8. Contribuția fiecărei celule din rețea este considerată ca fiind unitară (sau atunci când se utilizează grila de greutate opțională, valoarea din grila de greutate). Aria de contribuție pentru fiecare celulă din rețea este alcătuită din propria contribuție plus contribuția vecinilor din panta ascendentă, care drenează la acesta, în conformitate cu modelul de curgere D8."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:22
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:410
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:21
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:409
 msgid ""
 "If the optional outlet point shapefile is used, only the outlet cells and "
 "the cells upslope (by the D8 flow model) of them are in the domain to be "
 "evaluated."
 msgstr "Dacă se optează pentru utilizarea fișierului shape de tip punct al evacuărilor, numai celulele de evacuare și celulele pantei ascendente (prin modelul de curgere D8) care se află în domeniu vor fi evaluate."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:25
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:24
 msgid ""
 "By default, the tool checks for edge contamination. This is defined as the "
 "possibility that a contributing area value may be underestimated due to grid"
@@ -71,24 +67,24 @@ msgid ""
 " example, the DEM has been clipped along a watershed outline."
 msgstr "În mod implicit, instrumentul face verificarea de contaminare a marginii. Aceasta reprezină posibilitatea ca valoarea unei zone care contribuie să fie subestimată din cauză că celulele de rețea din afara domeniului nu sunt numărate. Acest lucru se întâmplă atunci când drenajul are loc în interior, dinspre limite sau dinspre ariile cu valori \"fărădate\" pentru altitudine. Algoritmul recunoaște acest lucru și raportează valori \"fărădate\", pentru arealul de contribuție. Este obișnuită prezența dungilor de valori \"fărădate\" extinse în interior dinspre granițe, de-a lungul căilor de curgere care intră în domeniu dinspre o limită. Acesta este efectul dorit și indică faptul că zona care contribuie la aceste celule din rețea este necunoscută, fiind dependentă de terenul din afara domeniului de date disponibile. Verificarea de contaminare a marginii poate fi oprită în cazul în care știți că acest lucru nu este o problemă sau când puteți ignora aceste probleme, ca de exemplu, atunci când DEM-ul a fost decupat de-a lungul conturului unui bazin hidrografic."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:39
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:135
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:226
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:339
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:414
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:501
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:539
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:38
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:134
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:225
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:338
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:413
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:500
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:538
 msgid "Parameters"
 msgstr "Parametri"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:45
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:159
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:420
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:44
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:158
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:419
 msgid "``D8 Flow Direction Grid`` [raster]"
 msgstr "``Raster D8,  pe Direcția de Curgere a Fluxului`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:42
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:417
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:41
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:416
 msgid ""
 "A grid of D8 flow directions which are defined, for each cell, as the "
 "direction of the one of its eight adjacent or diagonal neighbors with the "
@@ -96,36 +92,36 @@ msgid ""
 "**\"D8 Flow Directions\"** tool."
 msgstr "O grilă a direcțiilor fluxului D8 care este definită, pentru fiecare celulă, ca fiind direcția unuia dintre cei opt vecini ai săi, adiacenți sau din diagonală, care are cea mai abruptă pantă descendentă. Această grilă poate fi obținută ca rezultat al utilizării instrumentului **\"D8 Flow Directions\"**."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:52
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:243
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:427
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:51
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:242
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:426
 msgid "``Outlets Shapefile`` [vector: point]"
 msgstr "``Fișierele shape ale captărilor`` [vector: point]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:48
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:55
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:239
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:246
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:423
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:430
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:47
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:54
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:238
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:245
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:422
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:429
 msgid "Optional."
 msgstr "Opțional."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:50
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:241
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:425
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:49
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:240
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:424
 msgid ""
 "A point shapefile defining the outlets of interest. If this input file is "
 "used, only the cells upslope of these outlet cells are considered to be "
 "within the domain being evaluated."
 msgstr "Un fișier shape de tip punct, care definește deversările de interes. Dacă se utilizează acest fișier de intrare, numai celulele pantei ascendente a deversărilor  sunt considerate ca făcând parte din domeniul evaluat."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:60
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:253
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:59
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:252
 msgid "``Weight Grid`` [raster]"
 msgstr "``Grila Ponderată`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:57
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:56
 msgid ""
 "A grid giving contribution to flow for each cell. These contributions (also "
 "sometimes referred to as weights or loadings) are used in the contributing "
@@ -133,13 +129,13 @@ msgid ""
 "will assumed to be one for each grid cell."
 msgstr "O grilă a contribuției la flux, pentru fiecare celulă. Aceste contribuții (de asemenea, uneori denumite ca greutăți sau sarcini) sunt utilizate în acumularea din zona de contribuție. Dacă acest fișier de intrare nu este folosit,  se va presupune că există câte o contribuție către flux pentru fiecare celulă de rețea."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:77
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:270
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:76
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:269
 msgid "``Check for edge contamination`` [boolean]"
 msgstr "``Verificarea contaminării marginilor`` [boolean]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:63
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:256
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:62
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:255
 msgid ""
 "A flag that indicates whether the tool should check for edge contamination. "
 "Edge contamination is defined as the possibility that a contributing area "
@@ -156,57 +152,57 @@ msgid ""
 "been clipped along a watershed outline."
 msgstr "Un fanion care indică dacă instrumentul ar trebui să verifice contaminarea marginii. Contaminarea marginii este definită ca posibilitatea ca valoarea unei zone care contribuie să fie subestimată din cauza faptului că celulele de rețea din afara domeniului nu au fost evaluate. Acest lucru se întâmplă atunci când drenajul are loc în interior, dinspre limite sau dinspre ariile cu valori \"fărădate\" pentru altitudine. Algoritmul recunoaște acest lucru și raportează valori \"fărădate\", pentru arealul de contribuție. Este obișnuită prezența dungilor de valori \"fărădate\" extinse în interior dinspre granițe, de-a lungul căilor de curgere care intră în domeniu dinspre o limită. Acesta este efectul dorit și indică faptul că zona care contribuie la aceste celule din rețea este necunoscută, fiind dependentă de terenul din afara domeniului de date disponibile. Verificarea de contaminare a marginii poate fi oprită în cazul în care știți că acest lucru nu este o problemă sau când puteți ignora aceste probleme, ca de exemplu, atunci când DEM-ul a fost decupat de-a lungul conturului unui bazin hidrografic."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:77
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:270
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:76
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:269
 msgid "Default: *True*"
 msgstr "Implicit: *True*"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:80
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:154
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:273
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:346
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:446
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:508
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:550
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:79
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:153
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:272
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:345
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:445
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:507
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:549
 msgid "Outputs"
 msgstr "Rezultate"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:85
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:84
 msgid "``D8 Contributing Area Grid`` [raster]"
 msgstr "``Grila Arealului de Contribuție D8`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:83
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:82
 msgid ""
 "A grid of contributing area values calculated as the cells own contribution "
 "plus the contribution from upslope neighbors that drain in to it according "
 "to the D8 flow model."
 msgstr "O grilă a valorilor zonelor de contribuție, calculând propria contribuție, plus contribuția vecinilor din panta ascendentă care drenează la acesta, în conformitate cu modelul de curgere D8."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:88
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:165
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:283
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:367
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:470
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:515
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:556
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:87
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:164
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:282
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:366
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:469
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:514
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:555
 msgid "Console usage"
 msgstr "Utilizarea consolei"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:95
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:172
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:290
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:374
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:477
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:522
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:563
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:94
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:171
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:289
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:373
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:476
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:521
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:562
 msgid "See also"
 msgstr "Vedeți și"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:98
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:97
 msgid "D8 Flow Directions"
 msgstr "Direcții de Scurgere D8"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:103
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:102
 msgid ""
 "Creates 2 grids. The first contains the flow direction from each grid cell "
 "to one of its adjacent or diagonal neighbors, calculated using the direction"
@@ -221,43 +217,43 @@ msgid ""
 "slope at the lowest point of each pit."
 msgstr "Creează 2 grile. Prima conține direcția fluxului din fiecare celulă de rețea înspre unul dintre vecinii săi adiacenți sau din diagonală, calculată cu ajutorul direcției celei mai abrupte pante. A doua conține panta, evaluată în direcția de coborâre vea mai abruptă, și este raportată ca pantă/distanță, adică tangenta unghiului. Direcția de curgere este raportată ca FĂRĂDATE pentru oricare dintre celulele rețelei adiacente de la marginea domeniului DEM, sau adiacentă la o valoare FĂRĂDATE din DEM. În zonele plate, direcțiile de curgere sunt stabilite dinspre un teren mai înalt înspre unul aflat mai jos, folosindu-se metoda lui Garbrecht și Martz (1997). Algoritmul direcției de curgere D8 se poate aplica unui DEM care nu a avut depresiunile umplute, dar care va genera valori NODATA pentru direcția de curgere și pantă, în punctul cel mai de jos al fiecărei depresiuni."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:114
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:113
 msgid "D8 Flow Direction Coding:"
 msgstr "Codificarea Direcțiilor de Scurgere D8:"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:116
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:115
 msgid "1 --- East"
 msgstr "1 --- Est"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:117
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:116
 msgid "2 --- Northeast"
 msgstr "2 --- Nord-Est"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:118
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:117
 msgid "3 --- North"
 msgstr "3 --- Nord"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:119
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:118
 msgid "4 --- Northwest"
 msgstr "4 --- Nord-Vest"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:120
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:119
 msgid "5 --- West"
 msgstr "5 --- Vest"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:121
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:120
 msgid "6 --- Southwest"
 msgstr "6 --- Sud-Vest"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:122
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:121
 msgid "7 --- South"
 msgstr "7 --- Sud"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:123
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:122
 msgid "8 --- Southeast"
 msgstr "8 --- Sud-Vest"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:129
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:128
 msgid ""
 "The flow direction routing across flat areas is performed according to the "
 "method described by Garbrecht, J. and L. W. Martz, (1997), \"The Assignment "
@@ -265,12 +261,12 @@ msgid ""
 "Models\", Journal of Hydrology, 193: 204-213."
 msgstr "Rutarea direcției de curgere pe suprafețele plate se efectuează în conformitate cu metoda descrisă de Garbrecht, J. și LW Martz, (1997), \"Atribuirea Direcției de Scurgere Pentru Suprafețe Plate în Modelele Digitale Raster de Elevație\", Jurnalul de Hidrologie, 193: 204 -213."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:151
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:343
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:150
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:342
 msgid "``Pit Filled Elevation Grid`` [raster]"
 msgstr "``Grilă de Altitudine cu Depresiuni Umplute`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:138
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:137
 msgid ""
 "A grid of elevation values. This is usually the output of the **\"Pit "
 "Remove\"** tool, in which case it is elevations with pits removed. Pits are "
@@ -288,28 +284,28 @@ msgid ""
 "from being removed, if necessary."
 msgstr "O grilă a valorilor elevației. Aceasta este, de obicei, generată de instrumentul **\"Pit Remove\"**, caz în care sunt eliminate elevațiile gropilor. Gropile sunt zonele de joasă altitudine din modelele digitale de elevație (DEM), care sunt complet înconjurate de teren mai înalt. Ele sunt, în general, considerate a fi artefacte ale procesului de digitizare, care interferează cu procesarea curgerii prin DEM. Ele sunt eliminate prin creșterea altitudinii lor, până la punctul în care are loc curgerea pe domeniu. Acest pas nu este esențial, dacă aveți motive să credeți că gropile din DEM-ul dumneavoastră sunt reale. Dacă unele gropi există de fapt și nu ar trebui să fie eliminate, în timp ce, simultan, considerați că altele sunt artefacte și ar trebui să fie eliminate, gropile reale vor trebui să aibă valori de elevație FĂRĂDATE introduse la cel mai joase puncte ale sale. Valorile FĂRĂDATE servesc la definirea marginilor domeniului în aria de curgere, iar elevațiile sunt ridicate până la punctul în care fluxul depășește marginea, astfel încât o valoare FĂRĂDATE internă va opri eliminarea unei gropi, dacă este necesar."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:157
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:156
 msgid ""
 "A grid of D8 flow directions which are defined, for each cell, as the "
 "direction of the one of its eight adjacent or diagonal neighbors with the "
 "steepest downward slope."
 msgstr "O grilă a direcțiilor fluxului D8 care este definită, pentru fiecare celulă, ca fiind direcția unuia dintre cei opt vecinii ai săi adiacenți sau din diagonală, care are cea mai mare pantă descendentă."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:162
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:161
 msgid "``D8 Slope Grid`` [raster]"
 msgstr "``Grila de Drenaj D8`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:162
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:161
 msgid ""
 "A grid giving slope in the D8 flow direction. This is measured as "
 "drop/distance."
 msgstr "O rețea care prezintă panta în direcția de curgere D8. Aceasta este măsurată sub formă de picătură/distanță."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:175
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:174
 msgid "D-Infinity Contributing Area"
 msgstr "Arealul de Contribuție D-Infinity"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:180
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:179
 msgid ""
 "Calculates a grid of specific catchment area which is the contributing area "
 "per unit contour length using the multiple flow direction D-infinity "
@@ -329,7 +325,7 @@ msgid ""
 "catchment area are length units the same as those of the grid cell size."
 msgstr "Calculează o grilă a ariei specifice a bazinului hidrografic, care reprezintă zona care contribuie pe unitatea de lungime a conturului, folosind abordarea direcției de curgere multiplă D-infinity. Direcția de curgere D-infinity este definită ca fiind panta descendentă cea mai abruptă pe fațetele triunghiulare centrat pe o grilă bloc. Contribuția la fiecare celulă de rețea este luată ca lungimea celulelor rețelei (sau când este utilizată grila opțională de intrare a ponderilor, de la grila ponderilor). Zona care contribuie fiecare celulă de rețea este luată apoi ca propria contribuție, la care se adaugă contribuția la vecinii curbei ascendente, care au unele fracțiuni de scurgere conform modelului de curgere D-infinity. Fluxurile din fiecare celulă, fie toate se scurg spre un vecin, dacă unghiul cade de-a lungul un cardinal (0, π/2, π, 3π/2) sau a unei direcții (π/4, 3π/4, 5π/4, 7π/4), sau se situează pe un unghi care se încadrează în unghiul direct către doi vecini adiacenți. În acest din urmă caz, ​​fluxul este proporționat între aceste două celule vecine în funcție de cât de aproape este unghiul direcției de curgere față de unghiul direct la aceste celule. Lungimea conturului folosit aici reprezintă dimensiunea celulei de rețea. Unitățile care rezultă din bazinul hidrografic specific, sunt unități de lungime identice cu cele ale mărimii celulelor de rețea."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:199
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:198
 msgid ""
 "When the optional weight grid is not used, the result is reported in terms "
 "of specific catchment area, the upslope area per unit contour length, taken "
@@ -341,14 +337,14 @@ msgid ""
 "directly as a summation of weights, without any scaling."
 msgstr "În cazul în care grila opțională de greutate nu este folosită, rezultatul este raportat în termeni specifici ariei de captare, aria pantei ascendente pe unitatea de lungime de contur, luată aici ca numărul de celule înmulțit cu lungimea celulelor din rețea (zona de celule împărțită la lungimea celulelor). Se presupune că lungimea celulelor din rețea este lungimea conturului efectiv, în definiția ariei de captare specifice și nu distinge nici o diferență pentru lungimea conturului dependent de direcția de curgere. Când se utilizează grila opțională de greutate, rezultatul este raportat direct ca o însumare a greutăților, fără nici o scalare."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:208
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:207
 msgid ""
 "If the optional outlet point shapefile is used, only the outlet cells and "
 "the cells upslope (by the D-infinity flow model) of them are in the domain "
 "to be evaluated."
 msgstr "Dacă se optează pentru utilizarea fișierului shape de tip punct al evacuărilor, numai celulele de evacuare și celulele pantei ascendente (prin modelul de curgere D-infinity) care se află în domeniu vor fi evaluate."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:212
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:211
 msgid ""
 "By default, the tool checks for edge contamination. This is defined as the "
 "possibility that a contributing area value may be underestimated due to grid"
@@ -364,12 +360,12 @@ msgid ""
 "example, the DEM has been clipped along a watershed outline."
 msgstr "În mod implicit, instrumentul face verificarea de contaminare a marginii. Aceasta reprezină posibilitatea ca valoarea unei zone care contribuie să fie subestimată din cauză că celulele de rețea din afara domeniului nu sunt numărate. Acest lucru se întâmplă atunci când drenajul are loc în interior, dinspre limite sau dinspre ariile cu valori \"fărădate\" pentru altitudine. Algoritmul recunoaște acest lucru și raportează valori \"fărădate\", pentru arealul de contribuție. Este obișnuită prezența dungilor de valori \"fărădate\" extinse în interior dinspre granițe, de-a lungul căilor de curgere care intră în domeniu dinspre o limită. Acesta este efectul dorit și indică faptul că zona care contribuie la aceste celule din rețea este necunoscută, fiind dependentă de terenul din afara domeniului de date disponibile. Verificarea de contaminare a marginii poate fi oprită în cazul în care știți că acest lucru nu este o problemă sau când puteți ignora aceste probleme, ca de exemplu, atunci când DEM-ul a fost decupat de-a lungul conturului unui bazin hidrografic."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:236
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:235
 msgid "``D-Infinity Flow Direction Grid`` [raster]"
 msgstr "``Grila Direcțiilor de Scurgere D-Infinity`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:229
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:349
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:228
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:348
 msgid ""
 "A grid of flow directions based on the D-infinity flow method using the "
 "steepest slope of a triangular facet. Flow direction is determined as the "
@@ -381,7 +377,7 @@ msgid ""
 "triangular facet with the steepest downward slope."
 msgstr "O rețea a direcțiilor de curgere, bazată pe metoda fluxului D-infinity folosind cea mai abruptă pantă a unei fațete triunghiulare. Direcția de curgere se determină ca direcția celei mai abrupte pante descendente pe 8 fațete triunghiulare ale unei grile bloc, 3x3, centrată. Direcția de curgere este codificată ca un unghi în radiani, în sens contrar acelor de ceasornic, dinspre est, sub formă de cantitate continuă (în virgulă mobilă)  între 0 și 2π. Ulterior, fluxul rezultat dintr-o grilă este, de obicei, interpretat ca fiind proporționat între cele două celule învecinate, care definesc fațeta triunghiulară cu cea mai abruptă pantă descendentă."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:248
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:247
 msgid ""
 "A grid giving contribution to flow for each cell. These contributions (also "
 "sometimes referred to as weights or loadings) are used in the contributing "
@@ -391,11 +387,11 @@ msgid ""
 "cell length)."
 msgstr "O grilă a contribuției la flux, pentru fiecare celulă. Aceste contribuții (de asemenea, uneori denumite ca greutăți sau sarcini) sunt utilizate în acumularea din zona de contribuție. Dacă acest fișier de intrare nu este folosit, rezultatul este raportat în termeni specifici ariei de captare (aria pantei ascendente per unitatea de lungime a conturului) considerată ca numărul de celule înmulțit cu lungimea celulelor din rețea (suprafața celulei împărțită la lungimea celulei)."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:280
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:279
 msgid "``D-Infinity Specific Catchment Area Grid`` [raster]"
 msgstr "``Grila Ariei Specifice de Captare D-Infinity`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:276
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:275
 msgid ""
 "A grid of specific catchment area which is the contributing area per unit "
 "contour length using the multiple flow direction D-infinity approach. The "
@@ -404,11 +400,11 @@ msgid ""
 "draining to it according to the D-infinity flow model."
 msgstr "O rețea a ariei de captare specifice care este zona care contribuie pe unitatea de lungime de contur, folosind abordarea direcției de curgere multiplă D-infinity. Aria de contribuție pentru fiecare celulă din rețea este alcătuită din propria contribuție, plus contribuția vecinilor din panta ascendentă care au câteva fracțiuni care drenează în aceasta, în conformitate cu modelul de curgere D-infinity."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:293
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:292
 msgid "D-Infinity Flow Directions"
 msgstr "Direcții de Scurgere D-Infinity"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:298
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:297
 msgid ""
 "Assigns a flow direction based on the D-infinity flow method using the "
 "steepest slope of a triangular facet (Tarboton, 1997, \"A New Method for the"
@@ -425,7 +421,7 @@ msgid ""
 "downward slope."
 msgstr "Atribuie o direcție de curgere, pe baza metodei fluxurilor D-infinity, folosind cea mai abruptă pantă a unei fațete triunghiular (Tarboton, 1997, \"O nouă metodă pentru determinarea Direcțiilor Fluxului și a Ariilor de Contribuție la Modelul Digital de Elevație\", Cercetare asupra Resurselor de apă, 33(2): 309-319). Direcția de curgere este definită ca fiind cea mai abruptă pantă descendentă pe fațete triunghiulare plane pe o grilă bloc centrată. Direcția de curgere este codificată ca un unghi în radiani, în sens contrar acelor de ceasornic, dinspe est, sub formă de cantitate continuă (în virgulă mobilă) între 0 și 2π. Unghiul direcției de curgere se determină ca fiind direcția celei mai abrupte pante descendente, pe cele opt fațete triunghiulare, formate într-o fereastră a unei grile de celule  3 x 3, centrată pe grila celulelor de interes. Fluxul rezultat într-o grilă este ulterior interpretat ca fiind proporționat între cele două celule învecinate, care definesc fațeta triunghiulară cu cea mai abruptă panta descendentă."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:314
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:313
 msgid ""
 "A block-centered representation is used with each elevation value taken to "
 "represent the elevation of the center of the corresponding grid cell. Eight "
@@ -442,7 +438,7 @@ msgid ""
 "angle."
 msgstr "O reprezentare centratată-bloc este utilizată cu fiecare valoare de elevație, folosită pentru a reprezenta cota centrului corespunzător grilei de celule. Opt fațete triunghiulare, plane, sunt formate între fiecare celulă de rețea și cele opt celule învecinate. Fiecare dintre acestea are o pantă descendentă vectorială care, atunci când este desenată în exterior, dinspre centru, poate fi la un unghi mai mic sau mai mare de intervalul de unghiuri de 45 de grade (π/4 radiani) ale fațetei, la punctul central. Dacă unghiul pantei vectoriale este în interiorul fațetei, atunci el reprezintă cea mai abruptă direcție de curgere de pe fațetă. Dacă unghiul pantei vectoriale este în afara fațetei, cea mai abruptă direcție de curgere asociată cu fațeta este luată de-a lungul marginii cele mai abrupte. Direcția pantei și fluxul asociat cu o celulă de rețea sunt luate ca amploarea și direcția celei mai abrupte pante descendente vectoriale, de pe toate cele opt fațete. Panta este măsurată ca înălțime/distanță, adică tangenta unghiului pantei."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:327
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:326
 msgid ""
 "In the case where no slope vectors are positive (downslope), the flow "
 "direction is set using the method of Garbrecht and Martz (1997) for the "
@@ -452,7 +448,7 @@ msgid ""
 "precedence over elevations for the setting of flow directions."
 msgstr "În cazul în care nici o pantă vectorială nu este pozitivă (descendentă), direcția de curgere este setată folosind metoda lui Garbrecht și Martz (1,997) pentru determinarea curgerii pe suprafețele plane. Acest lucru va face ca zonele plate să se scurgă dinspre terenul înalt înspre cel cu altitudine scăzută. Grila căii de curgere care va forța drenajul de-a lungul fluxurilor existente reprezintă o intrare opțională, iar dacă este folosită, are prioritate față de elevațiile de setare a direcțiilor de curgere."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:334
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:333
 msgid ""
 "The D-infinity flow direction algorithm may be applied to a DEM that has not"
 " had its pits filled, but it will then result in \"no data\" values for the "
@@ -460,21 +456,21 @@ msgid ""
 "pit."
 msgstr "Algoritmul direcției de curgere D-infinity poate fi aplicat la un DEM care nu a avut gropile umplute, dar va genera apoi valori \"fărădate\" pentru direcția de curgere D-infinity și panta asociat cu punctul cel mai jos al gropii."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:342
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:341
 msgid ""
 "A grid of elevation values. This is usually the output of the **\"Pit "
 "Remove\"** tool, in which case it is elevations with pits removed."
 msgstr "O grilă de valori de elevație. Aceasta este generată, de obicei, în urma folosirii instrumentului **\"Pit Remove\"**, reprezentând de fapt elevațiile din care s-au eliminat gropile."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:356
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:355
 msgid "``D-Infinity Flow Directions Grid`` [raster]"
 msgstr "``Grila Direcțiilor de Scurgere D-Infinity`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:364
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:363
 msgid "``D-Infinity Slope Grid`` [raster]"
 msgstr "``Grila de Drenaj D-Infinity`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:359
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:358
 msgid ""
 "A grid of slope evaluated using the D-infinity method described in Tarboton,"
 " D. G., (1997), \"A New Method for the Determination of Flow Directions and "
@@ -484,18 +480,18 @@ msgid ""
 "drop/distance, i.e. tan of the slope angle."
 msgstr "O grilă a pantei evaluate prin folosirea metodei D-infinity, descrisă în Tarboton, D. G., (1997), \"O nouă metodă pentru determinarea Direcțiilor Fluxului și a Ariilor de Contribuție la Modelul Digital de Elevație\", Cercetare asupra Resurselor de apă, 33(2): 309-319). Aceasta este cea mai abruptă pantă descendentă a uneia dintre cele opt fațete triunghiulare, centrate pe fiecare celulă din grilă, și măsurată ca înălțime/distanță, adică tangenta unghiului pantei."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:377
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:376
 msgid "Grid Network"
 msgstr "Rețeaua de Grile"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:382
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:381
 msgid ""
 "Creates 3 grids that contain for each grid cell: 1) the longest path, 2) the"
 " total path, and 3) the Strahler order number. These values are derived from"
 " the network defined by the D8 flow model."
 msgstr "Creează 3 grile care conțin, pentru fiecare celulă de rețea: 1) cel mai lung drum, 2) calea totală, și 3) numărul de ordine Strahler. Aceste valori sunt derivate din rețeaua definită de modelul de curgere D8."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:386
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:385
 msgid ""
 "The longest upslope length is the length of the flow path from the furthest "
 "cell that drains to each cell. The total upslope path length is the length "
@@ -504,7 +500,7 @@ msgid ""
 " is adjacent or diagonal."
 msgstr "Lungimea celei mai lungi pante ascendente reprezintă lungimea traseului de curgere din cea mai îndepărtată celulă care drenează în fiecare celulă. Lungimea totală a pantei ascendente reprezintă lungimea întregii rețele de pante ascendente ale fiecărei celule de rețea. Lungimile sunt măsurate între centrele celulelor, ținând cont de dimensiunea celulelor, și dacă direcția este adiacentă sau diagonală."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:392
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:391
 msgid ""
 "Strahler order is defined as follows: A network of flow paths is defined by "
 "the D8 Flow Direction grid. Source flow paths have a Strahler order number "
@@ -517,7 +513,7 @@ msgid ""
 "common definition to cases where more than two flow paths join at a point."
 msgstr "Ordinea Strahler este definită după cum urmează: O rețea de trasee de curgere este definită de grila Direcția de Curgere D8. Căile fluxului sursă au ca număr de ordine Strahler cifra unu. Când două căi de curgere cu numere de ordine diferite se îmbină, atunci ordinea traseului de curgere din aval este reprezentată de ordinea celui mai înalt traseu de curgere. Când se îmbină două trasee de curgere cu numere de ordine egale, atunci ordinul traseului de curgere din aval este crescut cu 1. Când se îmbină mai mult de două căi de curgere, atunci ordinea traseului de curgere din aval se calculează ca ordinul maxim al celui mai înalt traseu de curgere, sau ca al doilea ordin ca mărime al traseului de curgere + 1. Aceasta generalizează definiția comună, la cazurile în care mai mult de două căi de curgere se îmbină într-un punct."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:402
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:401
 msgid ""
 "Where the optional mask grid and threshold value are input, the function is "
 "evaluated only considering grid cells that lie in the domain with mask grid "
@@ -529,11 +525,11 @@ msgid ""
 " threshold."
 msgstr "În cazul în care sunt introduse grila mască opțională și valoarea pragului, funcția este evaluată luând în considerare numai celulele de rețea care se află în domeniu, cu valoarea grilei mască mai mare sau egală cu valoarea de prag. Celulele de rețea sursă (de primul ordin)  sunt cele care nu au nici o celulă de rețea din interiorul domeniului care să dreneze în ele, și numai atunci când două dintre aceste căi de curgere se îmbină, ordinea sa este propagată în conformitate cu regulile de ordonare. Lungimile sunt de asemenea evaluate, numărându-se numai căile din cadrul domeniului, mai mari sau egale cu pragul."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:437
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:436
 msgid "``Mask Grid`` [raster]"
 msgstr "``Grila Mască`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:432
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:431
 msgid ""
 "A grid that is used to determine the domain do be analyzed. If the mask grid"
 " value >= mask threshold (see below), then the cell will be included in the "
@@ -543,36 +539,36 @@ msgid ""
 "used to achieve the same result."
 msgstr "O grilă care este utilizată pentru a determina domeniul de analizat. Dacă valoarea grilei mască >= pragul măștii (a se vedea mai jos), atunci celula va fi inclusă în domeniu. În timp ce acest instrument nu are un fanion de contaminare a marginii, în cazul în care analiza de contaminare a marginii este necesară, atunci o grilă mască dintr-o funcție, cum ar fi **\"D8 Contributing Area\"**, care suportă contaminarea marginii, poate fi folosită pentru a obține același rezultat."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:443
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:442
 msgid "``Mask Threshold`` [number]"
 msgstr "``Pragul Măștii`` [numeric]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:440
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:439
 msgid ""
 "This input parameter is used in the calculation mask grid value >= mask "
 "threshold to determine if the grid cell is in the domain to be analyzed."
 msgstr "Acest parametru de intrare este utilizat la calcularea valorii măștii de rețea >= pragul măștii, pentru a determina dacă celula grilei se află în domeniul de analizat."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:443
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:442
 msgid "Default: *100*"
 msgstr "Implicit: *100*"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:451
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:450
 msgid "``Longest Upslope Length Grid`` [raster]"
 msgstr "``Grila celei mai lungi pante din amonte`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:449
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:448
 msgid ""
 "A grid that gives the length of the longest upslope D8 flow path terminating"
 " at each grid cell. Lengths are measured between cell centers taking into "
 "account cell size and whether the direction is adjacent or diagonal."
 msgstr "O grilă care dă lungimea celui mai lung traseu de curgere al pantei ascendente D8, care se termină la fiecare celulă de rețea. Lungimi sunt măsurate între centrele celulelor, ținând cont de mărimea celulelor și dacă direcția este adiacentă sau diagonală."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:456
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:455
 msgid "``Total Upslope Length Grid`` [raster]"
 msgstr "``Grila celor mai lungi pante din amonte`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:454
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:453
 msgid ""
 "The total upslope path length is the length of the entire D8 flow grid "
 "network upslope of each grid cell. Lengths are measured between cell centers"
@@ -580,11 +576,11 @@ msgid ""
 "diagonal."
 msgstr "Lungimea totală a panrei ascendente reprezintă lungimea întregului flux D8 al pantei ascendente, pentru fiecare celulă de rețea. Lungimile sunt măsurate între centrele celulelor, ținând cont de mărimea celulelor și dacă direcția este adiacentă sau diagonală."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:467
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:466
 msgid "``Strahler Network Order Grid`` [raster]"
 msgstr "``Grila Rețelei Ierarhizate în sistem Strahler`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:459
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:458
 msgid ""
 "A grid giving the Strahler order number for each cell. A network of flow "
 "paths is defined by the D8 Flow Direction grid. Source flow paths have a "
@@ -598,11 +594,11 @@ msgid ""
 "join at a point."
 msgstr "O rețea care oferă numărul de ordine Strahler, pentru fiecare celulă. O rețea de trasee de curgere este definită prin grila direcției de curgere D8. Căile de curgere sursă au ca număr Strahler ordine cifra unu. Când două căi de curgere de ordine diferite adera la ordinea traseului de curgere din aval este ordinea de cea mai mare traseul de curgere de intrare. Când două trasee de curgere ordinii egală alătura aval ordinea traseu de curgere este crescut cu 1. Când mai mult de două căi de curgere se alăture aval ordinea traseu de curgere se calculează ca maximul de cel mai înalt intrare ordinea traseu de curgere sau al doilea mare de curgere intrare ordinea cale + 1. Aceasta generalizează definiția comună la cazurile în care mai mult de două căi de curgere adera la un punct."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:480
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:479
 msgid "Pit Remove"
 msgstr "Eliminarea Depresiunilor"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:485
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:484
 msgid ""
 "Identifies all pits in the DEM and raises their elevation to the level of "
 "the lowest pour point around their edge. Pits are low elevation areas in "
@@ -620,57 +616,60 @@ msgid ""
 "NODATA value will stop a pit from being removed, if necessary."
 msgstr "Identifică toate depresiunile din DEM, ridicându-le cota la nivelul celui mai scăzut punct din jur. Depresiunile din modelele digitale de elevatie (DEM) reprezintă zonele de joasă altitudine, care sunt complet înconjurate de teren mai înalt. Ele sunt, în general, considerate a fi artefacte care interferează cu rutele fluxului din DEM, așa că vor fi eliminate prin creșterea elevației lor până la punctul în care acestea vor deversa peste marginea domeniului. Punctul de curgere reprezintă cel mai de jos punct de pe marginea \"ariei de captare\" care se varsă în depresiune. Acest pas nu este esențial atunci când aveți convingerea că depresiunile din DEM-ul dumneavoastră sunt reale. Dacă există doar unele depresiuni care nu ar trebui să fie eliminate, în timp ce restul sunt considerate a fi artefacte bune de eliminat, depresiunile reale ar trebui să aibă valori de elevație  FărăDate în punctul cel mai scăzut. Valorile FărăDate servesc pentru a defini marginile din domeniu, elevațiile fiind ridicate numai în cazul în care fluxul nu se află situat pe o margine; în acest fel, o valoare FărăDate internă va opri eliminarea depresiunilor, acolo unde este cazul."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:505
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:542
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:504
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:541
 msgid "``Elevation Grid`` [raster]"
 msgstr "``Grila de Elevaţie`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:504
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:503
 msgid ""
 "A digital elevation model (DEM) grid to serve as the base input for the "
 "terrain analysis and stream delineation."
 msgstr "Un model digital al elevațiilor dintr-o grilă (DEM), care va servi ca intrare de bază pentru analiza terenului și delimitarea fluxului."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:512
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:511
 msgid "``Pit Removed Elevation Grid`` [raster]"
 msgstr "``Grilă de Altitudine cu Depresiunile Eliminate`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:511
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:510
 msgid ""
 "A grid of elevation values with pits removed so that flow is routed off of "
 "the domain."
 msgstr "O scară de valori ale elevației, având depresiunile îndepărtate, astfel încât fluxul să fie direcționat în afara domeniului."
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:526
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:525
 msgid "Select GT Threshold"
 msgstr "Selectare Prag GT"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:531
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:530
 msgid ""
 "Select only data values from a grid that are greater than a given threshold."
 " The rest are converted to no data. This tool uses next logic"
 msgstr "Selectați doar acele valori dintr-o grilă, care sunt mai mari decât un anumit prag. Restul sunt convertite în fărădate. Acest instrument utilizează următoarea logică"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:542
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:541
 msgid "Input grid"
 msgstr "Grila de intrare"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:547
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:546
 msgid "``Threshold`` [number]"
 msgstr "``Pragul`` [numeric]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:545
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:544
 msgid "Threshold value"
 msgstr "Valoarea pragului"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:547
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:546
 msgid "Default: *0.0*"
 msgstr "Implicit: *0.0*"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:553
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:552
 msgid "``Output Grid`` [raster]"
 msgstr "``Grila de Ieșire`` [raster]"
 
-#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:553
+#: ../../source/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools.rst:552
 msgid "Output grid"
 msgstr "Grila de Ieșire"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

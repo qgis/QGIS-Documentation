@@ -1,13 +1,15 @@
 # Translators:
 # Sant-anna <delazj@gmail.com>, 2016
 # MarieSilvestre <marie.silvestre@gmail.com>, 2016
+# Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2016
+# FERRATON <alain.ferraton@developpement-durable.gouv.fr>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 2.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>, 2016\n"
+"Last-Translator: FERRATON <alain.ferraton@developpement-durable.gouv.fr>, 2017\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,15 +17,11 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:12
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:11
 msgid "Virtual layers"
 msgstr "Couches virtuelles"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:19
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:18
 msgid ""
 "A special kind of vector layer allows you to define a layer as the result of"
 " an advanced query, using the SQL language on any number of other vector "
@@ -31,24 +29,35 @@ msgid ""
 "they do not carry data by themselves and can be seen as views to other "
 "layers."
 msgstr ""
+"Un type particulier de couche vecteur vous permet de définir une couche "
+"résultant d'une requête complexe en utilisant le langage SQL sur une ou "
+"plusieurs couches vectorielles que QGIS est capable de charger. Ce type de "
+"couches est appelé couches virtuelles : elles correspondent à des vues sur "
+"d'autres couches et ne stockent donc pas de donnée. "
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:25
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:24
 msgid "Creating a virtual layer"
 msgstr "Créer une couche virtuelle"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:27
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:26
 msgid ""
 "Open the virtual layer creation dialog by clicking on :guilabel:`Add Virtual"
 " Layer` in the :guilabel:`Layer` menu or from the corresponding toolbar."
 msgstr ""
+"Ouvrez la fenêtre de création de couche virtuelle en cliquant sur "
+":guilabel:`Ajouter/Editer une couche virtuelle...` depuis le menu "
+":guilabel:`Couche` ou la barre d'outils correspondante."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:31
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:30
 msgid ""
 "The dialog allows you to specify an SQL query. The query can use the name "
 "(or id) of existing vector layers as well as field names of these layers."
 msgstr ""
+"La fenêtre vous permet de spécifier une requête SQL. La requête peut faire "
+"appel aux noms (ou identifiants, id) de couches vectorielles existantes "
+"ainsi qu'aux noms de champs de ces couches."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:34
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:33
 msgid ""
 "For example, if you have a layer called ``regions``, you can create a new "
 "virtual layer with an SQL query like ``SELECT * FROM regions WHERE id < "
@@ -56,76 +65,105 @@ msgid ""
 "the ``regions`` layer is and even if this provider does not directly support"
 " SQL queries."
 msgstr ""
+"Par exemple, si vous avez une couche nommée ``regions``, vous pouvez créer "
+"une nouvelle couche virtuelle avec cette requête SQL : ``SELECT * FROM "
+"regions WHERE id < 100``. La requête SQL sera exécutée quel que soit le "
+"fournisseur de la couche ``regions`` et même si ce fournisseur ne gère pas "
+"les requêtes SQL."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:40
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:39
 msgid ""
 "Joins and complex queries can also be created simply by directly using the "
 "names of the layers that are to be joined."
 msgstr ""
+"Des jointures et des requêtes complexes peuvent être crées en utilisant "
+"directement les noms des couches à joindre."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:44
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:43
 msgid "Supported language"
 msgstr "Langage supporté"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:46
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:45
 msgid "The underlying engine uses SQLite and Spatialite to operate."
-msgstr ""
+msgstr "Le moteur sous-jacent utilise SQLite et Spatialite pour fonctionner."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:48
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:47
 msgid ""
 "It means you can use all of the SQL your local installation of SQLite "
 "understands."
 msgstr ""
+"Cela signifie que vous pouvez utiliser tous les ordres SQL que comprend "
+"votre installation locale de SQLite."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:51
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:50
 msgid ""
 "Functions from SQLite and spatial functions from Spatialite can also be used"
 " in a virtual layer query. For instance, creating a point layer out of a "
 "attribute-only layer can be done with a query similar to: ``SELECT id, "
 "MakePoint(x, y, 4326) as geometry FROM coordinates``"
 msgstr ""
+"Les fonctions de SQLite et les fonctions spatiales de Spatialite peuvent "
+"également être utilisées dans une requête de couche virtuelle. Par exemple, "
+"créer une couche de points à partir d'une couche purement attributaires, "
+"peut être effectuée avec une requête ressemblant à: ``SELECT id, MakePoint "
+"(x, y, 4326) as geometry FROM coordonnées``"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:56
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:55
 msgid ""
 ":ref:`Functions of QGIS expressions<functions_list>` can also be used in a "
 "virtual layer query."
 msgstr ""
+":ref:`Les fonctions des expressions de QGIS<functions_list>` peuvent aussi "
+"être utilisées dans une requête de couche virtuelle."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:59
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:58
 msgid "To refer the geometry column of a layer, use the name ``geometry``."
 msgstr ""
+"Pour référencer la colonne géométrique d'une couche, utilisez le nom "
+"``geometry``."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:61
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:60
 msgid ""
 "Contrary to a pure SQL query, all the fields of a virtual layer query must "
 "be named. Don't forget to use the ``as`` keyword to name your columns if "
 "they are the result of a computation or function call."
 msgstr ""
+"Contrairement à une requête SQL pure, tous les champs d'une requête de "
+"couche virtuelle doivent être nommés. N'oubliez pas d'utiliser le mot-clé "
+"``as`` pour nommer vos colonnes si elles sont le résultat d'un calcul ou "
+"d'une fonction."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:66
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:65
 msgid "Performance issues"
 msgstr "Problèmes de performance"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:68
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:67
 msgid ""
 "With default parameters set, the virtual layer engine will try its best to "
 "detect the type of the different columns of the query, including the type of"
 " the geometry column if one is present."
 msgstr ""
+"Avec les paramètres définis par défaut, le moteur de couche virtuelle fera "
+"de son mieux pour détecter le type des différentes colonnes de la requête, y"
+" compris le type de la colonne de géométrie si elle est présente."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:72
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:71
 msgid ""
 "This is done by introspecting the query when possible or by fetching the "
 "first row of the query (LIMIT 1) at last resort. Fetching the first row of "
 "the result just to create the layer may be undesirable for performance "
 "reasons."
 msgstr ""
+"Ceci est réalisé par examen de la requête lorsque cela est possible ou en "
+"récupérant la première ligne de la requête (LIMIT 1) en dernier recours. "
+"Obtenir la première ligne du résultat juste pour créer la couche peut être "
+"indésirable pour des raisons de performance."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:77
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:76
 msgid "The creation dialog allows to specify different parameters:"
-msgstr ""
+msgstr "Le dialogue de création permet de spécifier différents paramètres:"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:79
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:78
 msgid ""
 "**unique identifier column**: this option allows to specify which field of "
 "the query represents unique integer values that QGIS can use as row "
@@ -133,60 +171,82 @@ msgid ""
 "Specifying a unique identifier column allows to speed up selection of rows "
 "by id."
 msgstr ""
+"**colonne avec des valeurs uniques**: cette option permet de spécifier quel "
+"champ de la requête représente des valeurs entières uniques que QGIS peut "
+"utiliser comme identifiants de ligne. Par défaut, une valeur entière auto-"
+"incrémentée est utilisée. La spécification d'une colonne avec des valeurs "
+"uniques permet d'accélérer la sélection des lignes par id."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:85
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:84
 msgid ""
 "**no geometry**: this option forces the virtual layer to ignore any geometry"
 " field. The resulting layer is an attribute-only layer."
 msgstr ""
+"**pas de géométrie**: cette option oblige la couche virtuelle à ignorer tout"
+" champ géométrique. La couche résultante est une couche uniquement "
+"d'attributs."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:88
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:87
 msgid ""
 "**geometry column**: this option allows to specify the name of the column "
 "that is to be used as the geometry of the layer."
 msgstr ""
+"**colonne géométrique**: cette option permet de spécifier le nom de la "
+"colonne à utiliser comme géométrie de la couche."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:91
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:90
 msgid ""
 "**geometry type**: this option allows to specify the type of the geometry of"
 " the virtual layer."
 msgstr ""
+"**Type**: cette option permet de spécifier le type de la géométrie de la "
+"couche virtuelle."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:94
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:93
 msgid ""
 "**geometry CRS**: this option allows to specify the coordinate reference "
 "system of the virtual layer."
 msgstr ""
+"**SCR**: cette option permet de spécifier le système de coordonnées de "
+"référence de la couche virtuelle."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:98
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:97
 msgid "Special comments"
-msgstr ""
+msgstr "Commentaires spéciaux"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:100
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:99
 msgid ""
 "The virtual layer engine tries to determine the type of each column of the "
 "query. If it fails, the first row of the query is fetched to determine "
 "column types."
 msgstr ""
+"Le moteur de couche virtuelle essaie de déterminer le type de chaque champ "
+"de la requête. S'il n'y arrive pas, la première ligne de la requête est "
+"récupérée pour déterminer les types des champs."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:104
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:103
 msgid ""
 "The type of a particular column can be specified directly in the query by "
 "using some special comments."
 msgstr ""
+"Le type d'un champ particulier peut être spécifié directement dans la "
+"requête en utilisant des commentaires spéciaux."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:107
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:106
 msgid ""
 "The syntax is the following: ``/*:type*/``. It has to be placed just after "
 "the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
 "for floating point numbers or ``text``."
 msgstr ""
+"La syntaxe est la suivante : ``/*:type*/``. Il doit être placé juste après "
+"le nom du champ. ``type`` peut correspondre soit à ``int`` pour des entiers,"
+" ``real`` pour des nombres réels ou ``text`` pour du texte."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:111
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:110
 msgid "For instance: ``SELECT id+1 as nid /*:int*/ FROM table``"
-msgstr ""
+msgstr "Par exemple : ``SELECT id+1 as nid /*:int*/ FROM table``"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:114
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:113
 msgid ""
 "The type and coordinate reference system of the geometry column can also be "
 "set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
@@ -195,32 +255,47 @@ msgid ""
 "``srid`` an integer representing the EPSG code of a coordinate reference "
 "system."
 msgstr ""
+"Le type et le système de coordonnées d'un champ géométrie peuvent également "
+"être précisés grâce au commentaires spéciaux suivants : ``/*:gtype:srid*/`` "
+"où ``gtype`` est le type de géométrie (``point``, ``linestring``, "
+"``polygon``, ``multipoint``, ``multilinestring`` ou ``multipolygon``) et "
+"``srid``, un entier correspondant au code EPSG du système de coordonnées."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:121
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:120
 msgid "Use of indexes"
 msgstr "Utilisation des index"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:123
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:122
 msgid ""
 "When requesting a layer through a virtual layer, indexes of this source "
 "layer will be used in the following ways:"
 msgstr ""
+"Lorsque vous utilisez une couche dans une couche virtuelle, les index de "
+"cette couche source seront utilisés de la manière suivante:"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:126
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:125
 msgid ""
 "if an ``=`` predicate is used on the primary key column of the layer, the "
 "underlying data provider will be asked for a particular id (FilterFid)"
 msgstr ""
+"Si un prédicat ``=`` est utilisé sur la colonne de la clé primaire de la "
+"couche, le fournisseur de données sous-jacent sera interrogé  avec un id "
+"particulier (FilterFid)"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:129
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:128
 msgid ""
 "for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
 "without primary key, a request built from an expression will be used to "
 "request the underlying vector data provider. It means indexes may be used on"
 " database providers if they exist."
 msgstr ""
+"Pour tous les autres prédicats (``>``, ``<=``, ``!=``, etc.) ou sur une "
+"colonne sans clé primaire, une demande construite à partir d'une expression "
+"sera utilisée pour interroger le fournisseur de données vectoriel sous-"
+"jacent. Cela signifie que les index peuvent être utilisés sur les "
+"fournisseurs de base de données s'ils existent."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:134
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:133
 msgid ""
 "A specific syntax exists to handle spatial predicates in requests and "
 "trigger the use of a spatial index: a hidden column named ``_search_frame_``"
@@ -228,13 +303,25 @@ msgid ""
 "a bounding box. Example: ``select * from vtab where "
 "_search_frame_=BuildMbr(-2.10,49.38,-1.3,49.99,4326)``"
 msgstr ""
+"Une syntaxe spécifique existe pour gérer les prédicats spatiaux et "
+"déclencher l'utilisation d'un index spatial: une colonne cachée nommée "
+"`_search_frame_` existe pour chaque couche virtuelle. Cette colonne peut "
+"être comparée pour l'égalité à un rectangle d'encombrement. Exemple: "
+"``select * from vtab where _search_frame_=BuildMbr(-2.10,49.38, "
+"-1.3,49.99,4326)``"
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:140
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:139
 msgid ""
 "Spatial binary predicates like ``ST_Intersects`` are greatly sped up when "
 "used in conjunction with this spatial index syntax."
 msgstr ""
+"Les prédicats spatiaux comme ``ST_Intersects`` sont considérablement "
+"accélérés lorsqu'ils sont utilisés conjointement avec cette syntaxe d'index "
+"spatial."
 
-#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:7
+#: ../../source/docs/user_manual/working_with_vector/virtual_layers.rst:6
 msgid "Virtual_Layers"
 msgstr "Couches virtuelles"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr "|updatedisclaimer|"

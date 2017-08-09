@@ -1,13 +1,14 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2014-12-02 14:12+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-07-22 22:10+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,14 +54,14 @@ msgstr ":kbd:`exercise_data/world/world.qgs` で確認できる世界地図を�
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:23
 msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool."
-msgstr " :guilabel:`Zoom In` ツールを使って南アフリカにズームします。"
+msgstr ":guilabel:`Zoom In` ツールを使って南アフリカにズームします。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:24
 msgid ""
 "Try setting a scale in the :guilabel:`Scale` field, which is in the "
 ":guilabel:`Status Bar` along the bottom of the screen. While over South "
 "Africa, set this value to :kbd:`1:5000000` (one to five million)."
-msgstr ""
+msgstr ":guilabel:`縮尺` フィールドで縮尺を設定してみてください。このフィールドは画面の下部に沿って:guilabel:`ステータスバー` 中にあります。南アフリカ上している間、この値を:kbd:`1:5000000`（1対５百万）に設定します。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:27
 msgid ""
@@ -72,14 +73,14 @@ msgid ""
 "Notice the scale changing? That's because you're moving away from the one "
 "point that you zoomed into at :kbd:`1:5000000`, which was at the center of "
 "your screen. All around that point, the scale is different."
-msgstr ""
+msgstr "縮尺が変化していることに気づきます？それはに:kbd:`1:5000000`でズームインした一点、画面の中央にあった、から離れて移動しているためです。すべてのその点を中心に、縮尺が異なっています。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:33
 msgid ""
 "To understand why, think about a globe of the Earth. It has lines running "
 "along it from North to South. These longitude lines are far apart at the "
 "equator, but they meet at the poles."
-msgstr ""
+msgstr "理由を理解するために、地球の世界を考えます。それは北から南に沿って引かれる線があります。これらの経線は赤道で遠く離れますが、極で出会います。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:37
 msgid ""
@@ -91,7 +92,7 @@ msgid ""
 "This means that, as you travel away from the equator on your map, the scale "
 "of the objects that you see gets larger and larger. What this means for us, "
 "practically, is that there is no constant scale on our map!"
-msgstr ""
+msgstr "GCSでは、この球に取り組んでいるが、画面は平坦です。平らな面に球を表現しようとすると、歪みが発生し、テニスボールを開いてカットし、それを平らにしようとした場合に何が起こるかに似ています。これは地図上の意味は、経線も（それらは会うことになっている）の極で、互いに均等に離れて滞在するということです。これは、地図上の離れた赤道から旅行として、見る対象の規模が大きくなると大きくなる、ということを意味します。これが私たちのために何を意味するのか、事実上、私たちの地図には一定の縮尺はないことです！"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:46
 msgid ""
@@ -99,7 +100,7 @@ msgid ""
 "\"projects\" or converts the data in a way that makes allowance for the "
 "scale change and corrects it. Therefore, to keep the scale constant, we "
 "should reproject our data to use a PCS."
-msgstr ""
+msgstr "この問題を解決するには、のではなく、システム（PCS）を投影座標を使用してみましょう。PCS「プロジェクト」や縮尺変更のための手当を作り、それを修正する方法でデータを変換します。そのため、一定の規模を維持するために、我々は、PCSを使用するために私たちのデータを投影変換する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:52
 msgid "|basic| |FA| \"On the Fly\" Reprojection"
@@ -110,25 +111,25 @@ msgid ""
 "QGIS allows you to reproject data \"on the fly\". What this means is that "
 "even if the data itself is in another CRS, QGIS can project it as if it were"
 " in a CRS of your choice."
-msgstr ""
+msgstr "QGISではデータを「その場で」再投影できます。これが意味することは、データ自体は別のCRSである場合でも、選択されたCRSのものであるかのように、QGISではそれを投影できるということです。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:58
 msgid ""
 "To enable \"on the fly\" projection, click on the :guilabel:`CRS Status` "
 "button in the :guilabel:`Status Bar` along the bottom of the QGIS window:"
-msgstr ""
+msgstr "「その場で」投影を有効にするには、QGISウィンドウの下部に沿った :guilabel:`ステータスBar` にある :guilabel:`CRS Status` ボタンをクリックしてください："
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:64
 msgid ""
 "In the dialog that appears, check the box next to :guilabel:`Enable 'on the "
 "fly' CRS transformation`."
-msgstr ""
+msgstr "表示されたダイアログで :guilabel:`「その場で」CRS変換を有効にする` の隣のボックスをチェックします。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:66
 msgid ""
 "Type the word :kbd:`global` into the :guilabel:`Filter` field. One CRS "
 "(:guilabel:`NSIDC EASE-Grid Global`) should appear in the list below."
-msgstr ""
+msgstr ":guilabel:`Filter`フィールド に語 :kbd:`global` を入力します。1つのCRS（:guilabel: `NSIDCのEASE-グリッドGlobal`）が下のリストに表示されます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:68
 msgid ""
@@ -181,7 +182,7 @@ msgid ""
 "In QGIS 2.0, the 'on the fly' reprojection is automatically activated when "
 "layers with different CRSs are loaded in the map. To understand what 'on the"
 " fly' reprojection does, deactivate this automatic setting:"
-msgstr ""
+msgstr "別のCRSを有するレイヤーが地図にロードされたときにQGIS 2.0では、「その場で」再投影が自動的に起動されます。「その場で」再投影がすることは何かを理解するため、この自動設定を無効にします："
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:89
 msgid "Go to :menuselection:`Settings --> Options...`"
@@ -195,7 +196,7 @@ msgstr " ダイアログの左のパネルで、 :guilabel:`CRS` を選択しま
 msgid ""
 "Un-check :guilabel:`Automatically enable 'on the fly' reprojection if layers"
 " have different CRS`."
-msgstr ""
+msgstr ":guilabel:`レイヤーが異なるCRSを持つ場合に自動的に「その場で」再投影を有効にする` のチェックを外します。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:93
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:191
@@ -207,7 +208,7 @@ msgstr " :guilabel:`OK` をクリックします。"
 msgid ""
 "Add another vector layer to your map which has the data for South Africa "
 "only.  You'll find it as :kbd:`exercise_data/world/RSA.shp`."
-msgstr ""
+msgstr "南アフリカのデータだけを持っている地図に別のベクトルレイヤーを追加します。:kbd:`exercise_data/世界/RSA.shp` としてそれを見つけることができます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:98
 msgid "What do you notice?"
@@ -239,7 +240,7 @@ msgid ""
 " in Cape Town in the :guilabel:`RSA` dataset is about :kbd:`4 100 000` "
 "meters away from the equator. But in the :guilabel:`continents` dataset, "
 "that same point is about :kbd:`33.9` degrees away from the equator."
-msgstr ""
+msgstr "これらの二つのレイヤーの間でズームできることが判明したが、これまでそれらを同時に見ることができていません。その座標参照系は非常に異なっているからです。:guilabel:`continents` データセットは *度* であるが、:guilabel:`RSA` データセットは *メートル* です。それでは、ケープタウンの与えられた点としましょう :guilabel:`RSA` データセットは、およそ次のとおりです。:kbd:`4 100 000` メートル離れた赤道から。しかし、中に :guilabel:`continents` データセット、その同じポイントは約 :kbd:`33.9` 度離れた赤道から。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:115
 msgid ""
@@ -249,7 +250,7 @@ msgid ""
 "correct distance of :kbd:`4 100 000` meters from the equator. But in the "
 ":guilabel:`continents` dataset, Cape Town is only :kbd:`33.9` *meters* away "
 "from the equator! You can see why this is a problem."
-msgstr ""
+msgstr "これは、同じ距離である - しかし、QGISはそれを知りません。データを再投影することを告げていません。だから、限り、それが関係だとして、私たちが見南アフリカのバージョン :guilabel:`RSA` データセットは、正しい距離でケープタウンがありますの赤道から :kbd:`4 100 000` メートル。しかし、 :guilabel:`continents` データセット中で、ケープタウンは赤道からわずか :kbd:`33.9` *メートル* 離れたです！これが問題である理由を見ることができます"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:122
 msgid ""
@@ -257,7 +258,7 @@ msgid ""
 " should be telling it. If the data tells QGIS that Cape Town is :kbd:`34` "
 "meters away from the equator and that South Africa is only about :kbd:`12` "
 "meters from north to south, then that is what QGIS will draw."
-msgstr ""
+msgstr "ケープタウンがあると *想定* されるところをQGISは知りません -それはデータがQGISに伝えるべきことだ。QGISにケープタウンが赤道から :kbd:`34` メートル離れていて、南アフリカが北から南へ約 :kbd:`12` メートルしかないとデータが伝えた場合、それがQGISが描画するだろうものです。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:127
 msgid "To correct this:"
@@ -267,30 +268,30 @@ msgstr "これを正すには:"
 msgid ""
 "Click on the :guilabel:`CRS Status` button again and switch "
 ":guilabel:`Enable 'on the fly' CRS transformation` on again as before."
-msgstr ""
+msgstr "もう一度:guilabel:`CRS Status` ボタンをクリックして:guilabel:`「その場で」CRS変換を有効にする` を再び以前のように切り替える。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:131
 msgid "Zoom to the extents of the :guilabel:`RSA` dataset."
-msgstr ""
+msgstr ":guilabel:`RSA` データセットの範囲にズームします。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:133
 msgid ""
 "Now, because they're made to project in the same CRS, the two datasets fit "
 "perfectly:"
-msgstr ""
+msgstr "同じCRSに投影しているので、今、2つのデータセットは、完璧に合致します："
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:139
 msgid ""
 "When combining data from different sources, it's important to remember that "
 "they might not be in the same CRS. \"On the fly\" reprojection helps you to "
 "display them together."
-msgstr ""
+msgstr "異なるソースからのデータを結合すると、それは彼らが同じCRSでないかもしれないことを覚えておくことが重要です。「オンザフライ」再投影は、あなたがそれらを一緒に表示することができます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:143
 msgid ""
 "Before you go on, you probably want to have the 'on the fly' reprojection to"
 " be automatically activated whenever you open datasets having different CRS:"
-msgstr ""
+msgstr "続ける前に、おそらく、オープンデータセットが異なるCRSを持つたび「オンザフライ」再投影が自動的にアクティブにする必要がありますする必要は："
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:146
 msgid ""
@@ -313,7 +314,7 @@ msgid ""
 "Remember when you calculated areas for the buildings in the "
 ":guilabel:`Classification` lesson? You did it so that you could classify the"
 " buildings according to area."
-msgstr ""
+msgstr ":guilabel:`Classification`レッスンで建物のための領域を計算したときを覚えていますか？それは地域に応じて建物を分類できるようにやりました。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:157
 msgid "Open your usual map again (containing the |majorUrbanName| data)."
@@ -325,7 +326,7 @@ msgstr " :guilabel:`buildings` レイヤの属性テーブルを開きます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:159
 msgid "Scroll to the right until you see the :kbd:`AREA` field."
-msgstr ":kbd:`AREA`フィールドが見えるまで右側にスクロールします。"
+msgstr ":kbd:`AREA` フィールドが見えるまで右側にスクロールします。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:161
 msgid ""
@@ -333,7 +334,7 @@ msgid ""
 "these areas are given in degrees - the data isn't in a Projected Coordinate "
 "System. In order to calculate the area for the farms in square meters, the "
 "data has to be in square meters as well. So, we'll need to reproject it."
-msgstr ""
+msgstr "エリアはすべて非常に小さく、注意してください。おそらくゼロ。これらの領域は、度で与えられているので、これはです - データが投影座標系ではありません。平方メートルでファームの面積を計算するために、データは、同様に平方メートルでなければなりません。だから、我々はそれを再投影する必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:166
 msgid ""
@@ -341,19 +342,19 @@ msgid ""
 "what it says - it doesn't change the data, it just reprojects the layers as "
 "they appear on the map. To truly reproject the data itself, you need to "
 "export it to a new file using a new projection."
-msgstr ""
+msgstr "しかし、それだけで再投影「その場で」を使用する助けにはなりません。「オンザフライ」が言うん - それは、彼らが地図に表示されてそれだけでレイヤーを再投影、データは変更されません。真のデータ自体を再投影するには、新しい投影を使用して新しいファイルにエクスポートする必要があります。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:171
 msgid ""
 "Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers "
 "list`."
-msgstr ""
+msgstr ":guilabel:`レイヤーlist` 中で:guilabel:`buildings` レイヤーを右クリックします。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:172
 msgid ""
 "Select :guilabel:`Save As...` in the menu that appears. You will be shown "
 "the :guilabel:`Save vector layer as...` dialog."
-msgstr ""
+msgstr "表示されるメニューで:guilabel:`名前を付けて保存...` を選択します。:guilabel:`ベクトルレイヤーを...として保存` ダイアログが表示されます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:174
 msgid ""
@@ -365,7 +366,7 @@ msgstr " :guilabel:`保存`:guilabel:フィールドの隣にある`ブラウズ
 msgid ""
 "Navigate to :kbd:`exercise_data/` and specify the name of the new layer as "
 ":kbd:`buildings_reprojected.shp`."
-msgstr ""
+msgstr ":kbd:`exercise_data/` に移動し、新しいレイヤーの名前を:kbd:`buildings_reprojected.shp` と指定します。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:177
 msgid "Leave the :guilabel:`Encoding` unchanged."
@@ -375,7 +376,7 @@ msgstr ":guilabel:`エンコーディング` はそのままにしておきま�
 msgid ""
 "Change the value of the :guilabel:`Layer CRS` dropdown to "
 ":guilabel:`Selected CRS`."
-msgstr ""
+msgstr ":guilabel:`レイヤーCRS`ドロップダウンの値を:guilabel:`選択されたCRS` に変更します。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:180
 msgid "Click the :guilabel:`Browse` button beneath the dropdown."
@@ -399,35 +400,35 @@ msgstr " :guilabel:`シンボロジー出力`はそのままにしておきま�
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:186
 msgid "The :guilabel:`Save vector layer as...` dialog now looks like this:"
-msgstr ""
+msgstr ":guilabel: ``ダイアログは次のようになります...とベクトル層を保存"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:193
 msgid "Start a new map and load the reprojected layer you just created."
-msgstr ""
+msgstr "新しい地図を起動し、作成したばかりの再投影レイヤーをロードします。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:195
 msgid ""
 "Refer back to the lesson on :guilabel:`Classification` to remember how you "
 "calculated areas."
-msgstr ""
+msgstr "領域を計算する方法を思い出すには、以前の:guilabel:`Classification` についてのレッスンを参照してください。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:198
 msgid ""
 "Update (or add) the :kbd:`AREA` field by running the same expression as "
 "before:"
-msgstr ""
+msgstr "前と同じ式を実行することによって :kbd:`面積` フィールドを更新（または追加）します："
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:203
 msgid ""
 "This will add an :kbd:`AREA` field with the size of each building in square "
 "meters"
-msgstr ""
+msgstr "平方メートルで各建物の大きさを持つ:kbd:`面積` フィールドが追加されます"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:206
 msgid ""
 "To calculate the area in another unit of measurement, for example hectares, "
 "use the :kbd:`AREA` field to create a second column:"
-msgstr ""
+msgstr "測定の他の単位で面積を計算するには、第二列を作成するために:kbd:`AREA`フィールド例えばヘクタールのために、使用："
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:212
 msgid ""
@@ -436,7 +437,7 @@ msgid ""
 "it's a good idea to reproject your data, if necessary, before calculating "
 "areas, distances, and other values that are dependent on the spatial "
 "properties of the layer."
-msgstr ""
+msgstr "属性テーブルに新規の値を見てください。人々が実際にない度に、メートルで、建物の大きさを引用し、これは、はるかに便利です。それは、必要に応じて層の空間特性に依存している地域、距離、および他の値を計算する前に、あなたのデータを再投影することをお勧めします理由です。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:219
 msgid "|hard| |FA| Creating Your Own Projection"
@@ -446,7 +447,7 @@ msgstr "|hard| |FA| 独自の投影法の作成"
 msgid ""
 "There are many more projections than just those included in QGIS by default."
 " You can also create your own projections."
-msgstr ""
+msgstr "デフォルトでは、QGISに含まれたものだけよりも多くの突起があります。また、あなた自身の投影を作成することができます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:224
 msgid "Start a new map."
@@ -460,16 +461,16 @@ msgstr " :kbd:`world/oceans.shp`データセットを読み込みます。"
 msgid ""
 "Go to :menuselection:`Settings --> Custom CRS...` and you'll see this "
 "dialog:"
-msgstr ""
+msgstr ":menuselection:`Settings --> Custom CRS...` に行くと、このダイアログが表示されるでしょう:"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:231
 msgid ""
 "Click on the :guilabel:`Add new CRS` button to create a new projection."
-msgstr ""
+msgstr ":guilabel:`Add new CRS` ボタンをクリックして新しい投影法を作成します。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:233
 msgid "An interesting projection to use is called :kbd:`Van der Grinten I`."
-msgstr ""
+msgstr "使用すると興味深い投影法は:kbd:`Van der Grinten I` と呼ばれるものです。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:235
 msgid "Enter its name in the :guilabel:`Name` field."
@@ -479,7 +480,7 @@ msgstr ":guilabel:`名称` フィールドでその名称を入力します。"
 msgid ""
 "This projection represents the Earth on a circular field instead of a "
 "rectangular one, as most other projections do."
-msgstr ""
+msgstr "他のほとんどの突起がそうであるように、この突起は、代わりに長方形の一方の円形フィールドに地球を表します。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:240
 msgid "For its parameters, use the following string:"
@@ -499,7 +500,7 @@ msgstr "\"オンザフライ\"再投影を有効にします。"
 msgid ""
 "Choose your newly defined projection (search for its name in the "
 ":guilabel:`Filter` field)."
-msgstr ""
+msgstr "新しく定義された投影を選択してください（：guilabel： `Filter`フィールドにその名前を検索）。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:251
 msgid "On applying this projection, the map will be reprojected thus:"
@@ -514,7 +515,7 @@ msgid ""
 "Different projections are useful for different purposes. By choosing the "
 "correct projection, you can ensure that the features on your map are being "
 "represented accurately."
-msgstr ""
+msgstr "異なる投影は、異なる目的のために有用です。正しい投影を選択することにより、あなたはマップ上の機能が正確に表現されていることを確認することができます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:264
 msgid "|FR|"
@@ -524,13 +525,13 @@ msgstr "|FR|"
 msgid ""
 "Materials for the *Advanced* section of this lesson were taken from `this "
 "article <http://tinyurl.com/75b92np>`_."
-msgstr ""
+msgstr "このレッスンの*Advanced* セクションの材料は`この記事 <http://tinyurl.com/75b92np>`_ からとりました。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:269
 msgid ""
 "Further information on Coordinate Reference Systems is available `here "
 "<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_."
-msgstr ""
+msgstr "座標系についてさらに詳細な情報は`こちら<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_ で入手できます。"
 
 #: ../../source/docs/training_manual/vector_analysis/reproject_transform.rst:273
 msgid "|WN|"

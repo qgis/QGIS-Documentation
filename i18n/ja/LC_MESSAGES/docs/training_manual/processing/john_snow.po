@@ -1,0 +1,132 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-06-27 04:00+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:6
+msgid "First analysis example"
+msgstr "最初の分析例"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:9
+msgid ""
+"In this lesson we will perform some real analysis using just the toolbox, so"
+" you can get more familiar with the processing framework elements."
+msgstr "処理フレームワークの要素により精通できるので、このレッスンでは、ツールボックスだけを使用していくつかの実際の分析を実行します。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:11
+msgid ""
+"Now that everything is configured and we can use external algorithms, we "
+"have a very powerful tool to perform spatial analysis. It is time to work "
+"out a larger exercise with some real--world data."
+msgstr "これですべてが設定されていて、私たちは外部のアルゴリズムを使用できることを、空間分析を実行するための非常に強力なツールを持っています。世界のデータ - いくつかの本当の持つ大規模な運動を仕事する時間です。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:13
+msgid ""
+"We will be using the well-known dataset that John Snow used in 1854, in his "
+"groundbreaking work "
+"(http://en.wikipedia.org/wiki/John_Snow_%28physician%29), and we will get "
+"some interesting results. The analysis of this dataset is pretty obvious and"
+" there is no need for sofisticated GIS techniques to end up with good "
+"results and conclusions, but it is a good way of showing how these spatial "
+"problems can be analyzed and solved by using different processing tools."
+msgstr "ここではジョン・スノーが 1854年に使用した有名なデータセットを使用することになります、彼の画期的な作品（http://en.wikipedia.org/wiki/John_Snow_で、％の28Physician％29）、そしていくつかの興味深い結果が得られます。このデータセットの分析はかなり明白であり、良好な結果と結論で終わるための高度利用GIS技術は必要ありませんが、それはこれらの空間の問題を分析し、異なる処理ツールを使用することによって解決できるかを示すのに良い方法です。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:15
+msgid ""
+"The dataset contains shapefiles with cholera deaths and pump locations, and "
+"an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
+"this lesson."
+msgstr "データセットは、コレラによる死亡とポンプの位置、およびTIFFフォーマットでOSMレンダリングされたマップでシェープファイルが含まれています。このレッスンのための対応QGISプロジェクトを開きます。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:19
+msgid ""
+"The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+"*Voronoi Diagram* algorithm can be used for that."
+msgstr "まず最初に行うべきは、各ポンプの影響ゾーンを取得するためにポンプレイヤーのボロノイ図（別名ティーセンポリゴン）を計算することです。そのために*ボロノイ図*アルゴリズムを使用できます。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:24
+msgid "Pretty easy, but it will already give us interesting information."
+msgstr "かなり簡単ですが、それですでに興味深い情報が得られます。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:28
+msgid "Clearly, most cases are within one of the polygons"
+msgstr "明らかに、ほとんどの場合は、多角形の1の範囲内にあります"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:30
+msgid ""
+"To get a more quantitative result, we can count the number of deaths in each"
+" polygon. Since each point represents a building where deaths occured, and "
+"the number of deaths is stored in an attribute, we cannot just count the "
+"points. We need a weighted count, so we will use the *Count points in "
+"polygon (weighted)* tool."
+msgstr "より定量的な結果を得るためには、各ポリゴンにおける死亡者数をカウントできます。各ポイントは、死亡が発生した建物を表しており、死亡者数は、属性に格納されているので、ポイントをカウントすることはできません。私たちは、重み付けされた回数を必要とするので、 *ポリゴンカウントポイント（加重）* ツールを使用します。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:34
+msgid ""
+"The new field will be called *DEATHS*, and we use the *COUNT* field as "
+"weighting field. The resulting table clearly reflects that the number of "
+"deaths in the polygon corresponding to the first pump is much larger than "
+"the other ones."
+msgstr "新しいフィールドは、* *死亡と呼ばれる、と我々は重みフィールドとして* COUNT *フィールドを使用します。結果のテーブルは、明らかに第一のポンプに対応するポリゴンにおける死亡者数が他のものよりもはるかに大きいことを反映しています。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:38
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the *Distance to nearest hub*"
+" tool, and using the configuration shown next."
+msgstr "`` Pumps``レイヤーにおけるポイントと `` Cholera_deaths``レイヤーの各点の依存性を視覚化するもう一つの良い方法は、最も近いものに線を描画することです。これは、最寄のハブ*ツールへ*距離で行われ、次のような構成を使用することができます。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:42
+msgid "The result looks like this:"
+msgstr "これの結果は次の通りです:"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:46
+msgid ""
+"Although the number of lines is larger in the case of the central pump, do "
+"not forget that this does not represent the number of deaths, but the number"
+" of locations where cholera cases were found. It is a representative "
+"parameter, but it is not considering that some locations might have more "
+"cases than other."
+msgstr "行数は、中央ポンプの場合の方が大きいが、これは死亡数が、コレラの症例が発見された場所の数を表すものではないことを忘れないでください。それは、代表的なパラメータであるが、いくつかの場所が他よりも多くの例があるかもしれないことを考慮されていません。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:48
+msgid ""
+"A density layer will also give us a very clear view of what is happening. We"
+" can create it with the *Kernel density* algorithm. Using the "
+"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
+"100, the extent and cellsize of the streets raster layer, we get something "
+"like this."
+msgstr "密度レイヤーはまた、何が起こっているかの非常にクリアな視界を提供します。それは*カーネル密度*アルゴリズムで作成できます。* Cholera_deaths *層、100の半径と重みフィールドとしての*数*フィールドを使用して、街のラスタレイヤの範囲とセルサイズは、このような何かを得ます。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:52
+msgid ""
+"Remember that, to get the output extent, you do not have to type it. Click "
+"on the button on the right-hand side and select *Use layer/canvas extent*."
+msgstr "出力範囲を取得するには、入力する必要はありません。右側のボタンをクリックし、* Use layer / canvas extent *を選択します。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:56
+msgid ""
+"Select the streets raster layer and its extent will be automatically added "
+"to the text field. You must do the same with the cellsize, selecting the "
+"cellsize of that layer as well."
+msgstr "街のラスターレイヤーを選択し、その範囲は、自動的にテキストフィールドに追加されます。あなたにもそのレイヤーのセルサイズを選択し、セルサイズと同じことを行う必要があります。"
+
+#: ../../source/docs/training_manual/processing/john_snow.rst:58
+msgid ""
+"Combining with the pumps layer, we see that there is one pump clearly in the"
+" hotspot where the maximum density of death cases is found."
+msgstr "ポンプレイヤーと組み合わせることで、死亡例最高濃度が検出されたホットスポットで明確に一つのポンプがあることを参照してください。"

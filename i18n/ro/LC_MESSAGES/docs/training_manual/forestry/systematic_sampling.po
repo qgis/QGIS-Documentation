@@ -1,12 +1,12 @@
 # 
 # Translators:
-# Sorin Călinică <scalinica@gmail.com>, 2015
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2015-11-09 18:38+0000\n"
+"PO-Revision-Date: 2016-10-28 15:46+0000\n"
 "Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid ""
 "purpose you can design a survey to inventory the whole forest area and then "
 "estimate its parameters. In this lesson you will create a systematic set of "
 "sampling plots."
-msgstr ""
+msgstr "Ați digitizat deja un set de poligoane care reprezintă arboretul, totuși, încă nu aveți informații despre pădure. Pentru aceasta, puteți programa o achiziție de date pentru a inventaria întreaga pădure și pentru a-i estima parametrii. În această lecție veți crea un set sistematic de suprafețe de probă."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:10
 msgid ""
@@ -37,13 +37,13 @@ msgid ""
 "and should be carefully planned by someone with forestry knowledge. In this "
 "lesson, you will implement a theoretical inventory based on a systematic "
 "sampling plot design."
-msgstr ""
+msgstr "Atunci când începeți planificarea inventarului forestier, este important să vă definiți în mod clar obiectivele, tipurile de suprafețe de probă care vor fi utilizate, precum și datele care vor fi colectate în vederea atingerii obiectivelor. Pentru fiecare caz în parte, acestea vor depinde de tipul pădurii și de scopul managementului; ar trebui să fie planificate cu atenție de către cineva cu cunoștințe forestiere. În această lecție, veți crea un inventar teoretic, bazat pe un design sistematic al suprafețelor de probă."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:12
 msgid ""
 "**The goal for this lesson:** To create a systematic sampling plot design to"
 " survey the forest area."
-msgstr "**Scopul acestei lecții:** De a crea un grafic de eșantionare sistematic, proiectat pentru o vedere de ansamblu a zonei de pădure."
+msgstr "**Scopul acestei lecții:** Crearea planului sistematic al suprafețelor de probă, pentru o vedere de ansamblu a zonei de pădure."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:15
 msgid "Inventorying the Forest"
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:22
 msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
-msgstr "|LS| Implementarea unui Plan de Eșantionare Sistematică"
+msgstr "|LS| Implementarea unui Plan Sistematic al Suprafețelor de Probă"
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:24
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 msgid ""
 "In practice, you simply need to represented the sample plots as points that "
 "will be used by the field teams later:"
-msgstr "În practică, trebuie pur și simplu să reprezentăm parcelele eșantion ca puncte care vor fi folosite ulterior de către echipele din teren:"
+msgstr "În practică, trebuie pur și simplu să reprezentăm suprafețele de probă sub formă de puncte, care vor fi folosite ulterior de către echipele din teren:"
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:28
 msgid "Open your :kbd:`digitizing_2012.qgs` project from the previous lesson."
@@ -124,7 +124,7 @@ msgstr "În definițiile :guilabel:`Ariei`, selectați :guilabel:`Input Boundary
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:36
 msgid "And as input layer set the :kbd:`forest_stands_2012` layer."
-msgstr "Iar ca și strat de intrare setați :kbd:`forest_stands_2012`."
+msgstr "Iar ca și strat de intrare alegeți :kbd:`forest_stands_2012`."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:37
 msgid ""
@@ -166,7 +166,7 @@ msgid ""
 "You notice that the tool has used the whole extent of your stands layer to "
 "generate a rectangular grid of points. But you are only interested on those "
 "points that are actually inside your forest area (see the images below):"
-msgstr ""
+msgstr "Observați că instrumentul a folosit întreaga extindere a stratului de arboret, pentru a genera o grilă dreptunghiulară de puncte. Însă, vă interesează doar acele puncte care se află în interiorul suprafeței de pădure (a se vedea imaginile de mai jos):"
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:49
 msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`."
@@ -218,7 +218,7 @@ msgstr "Bifați :guilabel:`Label this layer with`, apoi selectați câmpul :kbd:
 msgid ""
 "Go to the :guilabel:`Buffer` options and check the :guilabel:`Draw text "
 "buffer`, set the :guilabel:`Size` to :kbd:`1`."
-msgstr ""
+msgstr "Mergeți la opțiunile :guilabel:`Tamponului` și bifați :guilabel:`Desenare tampon în jurul textului`, apoi setați :guilabel:`Mărimea` la :kbd:`1`."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:65
 msgid ""
@@ -228,14 +228,14 @@ msgid ""
 "is following also that pattern. Unless you would have a reason to name the "
 "sample plots in a different way, naming them in a West-East/North-South "
 "fashion follows a logical order and is a good option."
-msgstr ""
+msgstr "Acum, priviți etichetele de pe hartă. Puteți vedea că punctele au fost create și numerotate mai întâi de la vest înspre est și apoi de la nord înspre sud. Dacă priviți iarăși la tabela de atribute, veți observa că ordinea din tabel urmează, de asemenea, acest model. Numai dacă aveți un alt motiv pentru a denumi suprafețele de probă într-un mod diferit, modul de denumire Vest-Est/Nord-Sud urmează o ordine logică și reprezintă o opțiune bună."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:67
 msgid ""
 "If you would like to order or name them in a different way, you could use a "
 "spreadsheet to be able to order and combine rows and columns in any "
 "different way."
-msgstr ""
+msgstr "În cazul în care doriți să le ordonați sau să le denumiți într-un mod diferit, ați putea folosi o foaie de calcul pentru a ordona și combina rândurile și coloanele în oricare alt mod."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:69
 msgid ""
@@ -247,7 +247,7 @@ msgstr ""
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:71
 msgid ""
 "Go to the :guilabel:`Attribute table` for :kbd:`systematic_plots_clip`."
-msgstr "Mergeți la :guilabel:`Tabelul de atribute` pentru :kbd:`systematic_plots_clip`."
+msgstr "Deschideți :guilabel:`Tabelul de atribute` pentru :kbd:`systematic_plots_clip`."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:72
 msgid "Enable the edit mode."
@@ -285,7 +285,7 @@ msgstr ""
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:85
 msgid "|basic| |FA| Exporting Sample Plots as GPX format"
-msgstr "|basic| |FA| Exportați Graficele în format GPX"
+msgstr "|basic| |FA| Exportați Suprafețele de Probă în format GPX"
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:87
 msgid ""
@@ -324,7 +324,7 @@ msgstr "Alegeți :kbd:`WGS 84 (EPSG:4326)`."
 msgid ""
 "..note:: The :kbd:`GPX` format accepts only this CRS, if you select a "
 "different one, QGIS will give no error but you will get an empty file."
-msgstr ""
+msgstr "..notă: Formatul :kbd:`GPX` acceptă numai acest CRS; dacă veți selecta altul, QGIS nu va semnala nici o eroare, însă veți primi un fișier vid."
 
 #: ../../source/docs/training_manual/forestry/systematic_sampling.rst:98
 msgid ""

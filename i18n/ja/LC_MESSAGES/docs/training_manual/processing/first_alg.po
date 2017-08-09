@@ -1,0 +1,131 @@
+# 
+# Translators:
+# Kohei Tomita <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-18 10:41+0200\n"
+"PO-Revision-Date: 2017-06-30 13:45+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:6
+msgid "Running our first algorithm. The  toolbox"
+msgstr "最初のアルゴリズムを実行します。ツールボックス"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:9
+msgid ""
+"In this lesson we will run our first algorithm, and get our first result "
+"from it."
+msgstr "このレッスンでは、最初のアルゴリズムを実行し、それから、最初の結果を取得します。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:11
+msgid ""
+"As we have already mentioned, the processing framework can run algorithms "
+"from other applications, but it also contains native algorithms that need no"
+" external software to be run. To start exploring the processing framework, "
+"we are going to run one of those native algorithms. In particular, we are "
+"going to calculate the centroids of set of polygons."
+msgstr "すでに述べたように、処理フレームワークは、他のアプリケーションからのアルゴリズムを実行できますが、それはまた、実行すべき外部ソフトウェアを必要としないネイティブのアルゴリズムが含まれています。処理フレームワークの探索を開始するために、それらのネイティブのアルゴリズムのいずれかを実行するつもりです。特に、ポリゴンの集合の重心を計算するつもりです。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:13
+msgid ""
+"First, open the QGIS project corresponding to this lesson. It contains just "
+"a single layer with two polygons"
+msgstr "まず、このレッスンに対応するQGISプロジェクトを開きます。これは、2つのポリゴンを持つだけの単層が含まれています"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:17
+msgid ""
+"Now go to the text box at the top of the toolbox. That is the search box, "
+"and if you type text in it, it will filter the list of algorithms so just "
+"those ones contaning the entered text are shown. Type ``centroids`` and you "
+"should see something like this."
+msgstr "今、ツールボックスの上部にあるテキストボックスにアクセスしてください。これは検索ボックスで、それにテキストを入力すると、入力したテキストを含むものだけが表示されるので、アルゴリズムのリストをフィルタします。`` centroids``を入力するとこのようなものが表示されるはずです。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:21
+msgid ""
+"The search box is a very practical way of finding the algorithm you are "
+"looking for."
+msgstr "検索ボックスは、探しているアルゴリズムを見つける非常に実用的な方法です。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:23
+msgid ""
+"To execute an algorithm, you just have to double-click on its name in the "
+"toolbox. When you double-click on the *Centroids* algorithm, you will see "
+"the following dialog."
+msgstr "アルゴリズムを実行するには、ツールボックスでその名前をダブルクリックする必要があるだけです。 *重心* アルゴリズムをダブルクリックすると、次のダイアログが表示されます。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:27
+msgid ""
+"All algorithms have a similar interface, which basically contains input "
+"parameters that you have to fill, and outputs that you have to select where "
+"to store. In this case, the only input we have is a vector layer with "
+"polygons."
+msgstr "アルゴリズムはすべて同様のインタフェースを持っていて、基本的に記入しなければならない入力パラメータと、どこに保存するか選択する必要がある出力が含まれています。この場合は、持っている唯一の入力はポリゴンでのベクトルレイヤーです。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:29
+msgid ""
+"Select the *Polygons* layer as input. The algorithm has a single output, "
+"which is the centroids layer. There are two options to define where a data "
+"output is saved: enter a filepath or save it to a temporary filename"
+msgstr "入力として *ポリゴン* レイヤーを選択します。アルゴリズムは、重心レイヤーである単一の出力を有しています。ファイルパスを入力するか、一時的なファイル名に保存：データ出力が保存されている定義するための2つのオプションがあります。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:31
+msgid ""
+"In case you want to set a destination and not save the result in a temporary"
+" file, the format of the output is defined by the filename extension. To "
+"select a format, just select the corresponding file extension (or add it if "
+"you are directly typing the filepath instead). If the extension of the "
+"filepath you entered does not match any of the supported ones, a default "
+"extension (usually ``.dbf`` for tables, ``.tif`` for raster layers and "
+"``.shp`` for vector ones) will be appended to the filepath and the file "
+"format corresponding to that extension will be used to save the layer or "
+"table."
+msgstr "目的地を設定し、一時ファイルに結果を保存しないようにしたい場合には、出力の形式は、ファイル名の拡張子によって定義されます。形式を選択するには、単に対応するファイルの拡張子を選択します（または、あなたが代わりに、直接ファイルパスを入力している場合は、それを追加します）。入力したファイルパスの拡張子は、サポートされているもののいずれか、デフォルトの拡張子（ベクトルもののため、通常はラスタレイヤのための ``テーブル用.dbf``、 `` .tif``と `` .shp``と一致しない場合）ファイルパスに追加され、その拡張子に対応するファイル形式は、レイヤまたはテーブルを保存するために使用されます。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:35
+msgid ""
+"In all the exercises in this guide, we will be saving results to a temporary"
+" file, since there is no need to save them for a later use. Feel free to "
+"save them to a permament location if you want to."
+msgstr "後で使用するためにそれらを保存する必要がないので、このガイドのすべての演習では、我々は、一時ファイルに結果を保存します。したい場合はpermament場所に保存して自由に感じます。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:37
+msgid ""
+"Temporary files are deleted once you close QGIS. If you create a project "
+"with an output that was saved as a temporary output, QGIS will complain when"
+" you try to open back the project later, since that output file will not "
+"exist."
+msgstr "QGISを閉じると一時ファイルが削除されます。一時的な出力として保存された出力を持つプロジェクトを作成する場合は、後でプロジェクトをバック開こうとすると、出力ファイルが存在しないので、QGISは、文句を言うでしょう。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:39
+msgid ""
+"Once you have configured the algorithm dialog, press *Run* to run the "
+"algorithm."
+msgstr "アルゴリズムを実行するためのアルゴリズムダイアログを設定したら、 *実行* を押します。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:41
+msgid "You will get the following output."
+msgstr "次のような出力が得られます。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:45
+msgid ""
+"The output has the same CRS as the input. Geoalgorithms assumes all input "
+"layers share the same CRS and do not perform any reprojection. Except in the"
+" case of some special algorithms (for instance, reprojection ones), the "
+"outputs will also have that same CRS. We will see more about this soon."
+msgstr "出力が入力と同じCRSを有しています。Geoalgorithmsは、すべての入力層が同じCRSを共有し、任意の再投影を行わない前提としています。いくつかの特別なアルゴリズム（例えば、再投影のもの）の場合を除き、出力も同じCRSことがあります。我々はすぐにこの詳細が表示されます。"
+
+#: ../../source/docs/training_manual/processing/first_alg.rst:47
+msgid ""
+"Try yourself saving it using different file formats (use, for instance, "
+"``shp`` and ``geojson`` as extensions). Also, if you do not want the layer "
+"to be loaded in QGIS after it is generated, you can check off the check box "
+"that is found below the output path box."
+msgstr "さまざまなファイル形式を使用（例えば、拡張子として ``shp``と `` geojson``を使用）してそれを保存し、自分自身を試してみてください。それが生成された後レイヤーはQGISにロードしたくない場合にも、出力パスボックスの下に発見されるチェックボックスをオフにチェックできます。"

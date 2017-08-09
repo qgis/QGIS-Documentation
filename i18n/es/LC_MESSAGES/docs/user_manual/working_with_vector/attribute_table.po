@@ -1,12 +1,13 @@
 # Translators:
 # YoViajo <rcrmj@hotmail.com>, 2016
+# Francisco Raga <FRANKA1986@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 2.14\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: YoViajo <rcrmj@hotmail.com>, 2016\n"
+"Last-Translator: Francisco Raga <FRANKA1986@gmail.com>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +17,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:10
 msgid "Working with the Attribute Table"
-msgstr ""
+msgstr "Trabajar con la tabla de atributos"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:17
 msgid ""
@@ -25,6 +26,11 @@ msgid ""
 "particular piece of information about the feature. Features in the table can"
 " be searched, selected, moved or even edited."
 msgstr ""
+"Los objetos espaciales mostrados :index:`tabla de atributos` de una capa "
+"seleccionada. Cada fila en la tabla representa un objeto espacial en el "
+"mapa, y cada columna contiene una pieza importante de información acerca del"
+" objeto espacial. Los objetos espaciales en la tabla se pueden buscar, "
+"seleccionar y mover o incluso editar."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:22
 msgid ""
@@ -92,6 +98,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:58
 msgid "|unselectAttributes| :sup:`Unselect all` (also with :kbd:`Ctrl+u`)"
 msgstr ""
+"|unselectAttributes| :sup:`Deseleccionar todo` (también con :kbd:`Ctrl+u`)"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:59
 msgid "|selectedToTop| :sup:`Move selected to top` (also with :kbd:`Ctrl+t`)"
@@ -102,6 +109,8 @@ msgid ""
 "|panToSelected| :sup:`Pan map to the selected rows` (also with "
 ":kbd:`Ctrl+p`)"
 msgstr ""
+"|panToSelected| :sup:`Desplazar el mapa a las filas seleccionadas` (también "
+"con :kbd:`Ctrl+P`)"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:61
 msgid ""
@@ -137,6 +146,8 @@ msgstr ""
 msgid ""
 "|calculateField| :sup:`Open field calculator` (also with :kbd:`Ctrl+i`)"
 msgstr ""
+"|calculateField| :sup:`Abrir calculadora de campos` (también con "
+":kbd:`Ctrl+I`)"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:73
 msgid ""
@@ -149,7 +160,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:78
 msgid "**Skip WKT geometry**"
-msgstr ""
+msgstr "**Omitir geometría WKT**"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:80
 msgid ""
@@ -159,10 +170,16 @@ msgid ""
 ":menuselection:`Settings --> Options -->` Data sources menu |checkbox| "
 ":guilabel:`Copy geometry in WKT representation from attribute table`."
 msgstr ""
+"Si desea utilizar los datos de atributos en programas externos (como Excel),"
+" utilice el botón |copySelected| :sup:`Copiar filas seleccionadas al "
+"portapapeles`. Se puede copiar la información sin geometrías vectoriales si "
+"se desactiva  :menuselection:`Configuración --> Opciones -->`Fuente de "
+"datos`  |checkbox| :guilabel:`Copiar la geometría en la representación WKT "
+"de la tabla de atributos`."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:90
 msgid "Selecting features in an attribute table"
-msgstr ""
+msgstr "Seleccionar elementos en una tabla de atributos"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:92
 msgid ""
@@ -172,6 +189,12 @@ msgid ""
 "Likewise, if the set of rows selected in the attribute table is changed, the"
 " set of features selected in the main window will be updated."
 msgstr ""
+"**Cada registro seleccionado** en la tabla de atributos mostrar los "
+"atributos de un objeto espacial seleccionado en la capa. Si el conjunto de "
+"objetos espaciales seleccionados en la ventana principal se cambia, la "
+"selección también se actualiza en la tabla de atributos. Igualmente, si el "
+"conjunto de registros seleccionados en la tabla cambian, el conjunto de "
+"objetos espaciales seleccionados en la ventana principal se actualizaran."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:98
 msgid ""
@@ -184,6 +207,16 @@ msgid ""
 "table, does not change the row selection. Changing the selection in the main"
 " canvas does not move the cursor position in the attribute table."
 msgstr ""
+"Los registros se pueden seleccionar haciendo clic en el número de registros "
+"del lado izquierdo del registro. **Múltiples registros** se pueden marcar al"
+" mantener la tecla :kbd:`Ctrl`. Una **selección continua** se puede hacer al"
+" mantener la tecla :kbd:`Shift` y haciendo clic en varios encabezados de "
+"registros del lado izquierdo del registro. Todos los registros entre la "
+"posición actual del cursos y el registro donde se hace clic son "
+"seleccionados. Mover la posición del cursos en la tabla de atributos, al "
+"hacer clic en una celda de la tabla, no cambia el registro seleccionado. "
+"Cambiar la selección en el lienzo principal no mueve la posición del cursos "
+"en la tabla de atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:107
 msgid ""
@@ -192,6 +225,11 @@ msgid ""
 "values from the top row down, upward pointing means ascending values from "
 "the top row down)."
 msgstr ""
+"La tabla se puede ordenar por cualquier columna, al hacer clic en el "
+"encabezado de la columna. Una pequeña flecha indica el tipo de orden (que "
+"apunta hacia abajo significa descender los valores de la fila de arriba "
+"hacia abajo, apuntando hacia arriba significa que los valores ascendentes de"
+" la fila de arriba hacia abajo)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:112
 msgid ""
@@ -201,6 +239,12 @@ msgid ""
 "drop-down menu, and hit the **[Apply]** button. Then, only the matching "
 "features are shown in the attribute table."
 msgstr ""
+"Para una **búsqueda simple por atributos** en una sola columna, elija del "
+"menú :menuselection:`Filtro de columna -->` en la esquina inferior "
+"izquierda. Seleccione el campo (columna) en la que la búsqueda debe "
+"realizarse desde el menú desplegable, y pulse el botón **[Aplicar]**. "
+"entonces sólo los objetos espaciales coincidentes se muestran en la tabla de"
+" atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:118
 msgid ""
@@ -224,6 +268,9 @@ msgid ""
 "(Selection)` to make a selection that you used before. The expression "
 "builder remembers the last 20 used expressions."
 msgstr ""
+"Aquí también se puede utilizar la  :menuselection:`Lista de funciones --> "
+"Reciente (Selection)` para hacer una selección que utilizo antes. El "
+"constructor de expresiones recuerda las últimas 20 expresiones utilizadas."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:138
 msgid ""
@@ -233,6 +280,11 @@ msgid ""
 "features on the map, use the Query Builder described in section "
 ":ref:`vector_query_builder`."
 msgstr ""
+"Las filas coincidentes serán seleccionadas, y el número total de filas "
+"coincidentes aparecerán en la barra de título de la tabla de atributos, así "
+"como en la barra de estado de la ventana principal. Para búsquedas que "
+"muestran sólo objetos espaciales seleccionados en el mapa, utilice el "
+"Generador de consultas descrito en la sección :ref:`vector_query_builder`."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:143
 msgid ""
@@ -247,14 +299,17 @@ msgid ""
 "rows only. For example, you can alter the number of the ID field of the "
 "layer :file:`regions.shp` with the expression"
 msgstr ""
+"La barra de calculadora de campos le permite hacer calculos sólo en las "
+"filas seleccionadas. Por ejemplo, se puede alterar el número del campo ID "
+"del archivo :`regions.shp` con la expresión"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:154
 msgid "as shown in figure_attributes_1_ ."
-msgstr ""
+msgstr "como muestra en figure_attributes_1_ ."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:157
 msgid "Filter features"
-msgstr ""
+msgstr "Filtar objetos"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:159
 msgid ""
@@ -264,11 +319,11 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:162
 msgid "Show All Features;"
-msgstr ""
+msgstr "Mostrar todos los objetos espaciales"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:163
 msgid "Show Selected Features;"
-msgstr ""
+msgstr "Mostrar objetos espaciales seleccionados;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:164
 msgid "Show Features visible on map;"
@@ -280,7 +335,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:166
 msgid "Field Filter;"
-msgstr ""
+msgstr "Filtro de campos;"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:167
 msgid "Advanced filter (Expression);"
@@ -314,7 +369,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:187
 msgid "Zoom to feature"
-msgstr ""
+msgstr "Acercamiento a objeto espacial"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:189
 msgid ""
@@ -325,7 +380,7 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:193
 msgid "Save selected features as new layer"
-msgstr ""
+msgstr "Guardar objetos espaciales seleccionados como nueva capa"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:195
 msgid ""
@@ -337,6 +392,15 @@ msgid ""
 ":menuselection:`Save only selected features` is selected. It is also "
 "possible to specify OGR creation options within the dialog."
 msgstr ""
+"Los objetos espaciales seleccionados se pueden guardar como algún formato "
+"vectorial OGR- reconocido y también transformar en otro sistema de "
+"referencia de coordenadas (SRC). Solamente abra con el clic derecho del "
+"ratón la capa y haga clic en :menuselection:`Guardar como` para definir el "
+"nombre de salida del archivo, su formato y SRC (vea también "
+":ref:`label_legend`). Para guardar la selección asegúrese que "
+":menuselection:`Guardar sólo los objetos espaciales seleccionados` este "
+"seleccionado. También es posible especificar opciones de creación de OGR "
+"dentro del diálogo."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:206
 msgid "Paste into new layer"
@@ -350,6 +414,12 @@ msgid ""
 "--> Paste Features as` and choosing :menuselection:`New vector layer` or "
 ":menuselection:`New memory layer`."
 msgstr ""
+"Los objetos espaciales que están en el portapapeles se pueden pegar en una "
+"nueva capa. Para esto, primero se hace una capa editable. Se seleccionan "
+"algunos objetos espaciales, se copian al portapapeles y se pegan en la nueva"
+" capa utilizando :menuselection:`Edición--> Pegar objetos espaciales como` y"
+" elige menuselection:`Nueva capa vectorial` o :menuselection:`Nueva capa "
+"borrado temporal`."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:215
 msgid ""
@@ -396,6 +466,9 @@ msgid ""
 "A field can be set virtual only at its creation and the expression used "
 "can't be changed later: you'll need to delete and recreate that field."
 msgstr ""
+"Un campo puede definirse como virtual sólo al momento de su creación y la "
+"expresión usado no puede cambiarse luego: necesitará borrar y recrear el "
+"campo."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:247
 msgid ""
@@ -424,7 +497,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:282
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Field Calculator"
-msgstr ""
+msgstr "Calculadora de Campo"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:266
 msgid ""
@@ -491,6 +564,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:306
 msgid "You can now find a new field ``length`` in the attribute table."
 msgstr ""
+"Ahora puede encontrar un nuevo campo ``length`` en la tabla de atributos."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:312
 msgid "Working with non spatial attribute tables"
@@ -547,11 +621,11 @@ msgstr "un formateo preestablecido"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:343
 msgid "some other parameters to improve, change or setup the formatting:"
-msgstr ""
+msgstr "algunos otros parámetros para mejorar, cambiar o definir el formateo:"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:345
 msgid "background and text colors,"
-msgstr ""
+msgstr "colores de fondo y texto,"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:346
 msgid "use of icon,"
@@ -571,7 +645,7 @@ msgstr "tipo de letra."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:360
 msgid "Conditional Formatting of an attribute table"
-msgstr ""
+msgstr "Formateo Condicional de una tabla de atributos"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:367
 msgid "Creating one to many relations"
@@ -582,6 +656,9 @@ msgid ""
 "Relations are a technique often used in databases. The concept is, that "
 "features (rows) of different layers (tables) can belong to each other."
 msgstr ""
+"Las relaciones son una técnica que a menudo se utiliza en base de datos. El "
+"concepto es, que los objetos espaciales (filas) de diferentes capas (tablas)"
+" pueden pertenecer a uno al otro."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:372
 msgid ""
@@ -602,6 +679,11 @@ msgid ""
 "relation using foreign keys, because there are several airports in most "
 "regions."
 msgstr ""
+"A continuación, le da otra capa de punto o tabla con información sobre "
+"aeropuertos que se encuentran en las regiones y también se desea hacer un "
+"seguimiento de los mismos. Si desea agregarlos a la capa de la región, es "
+"necesario crear una relación de uno a muchos utilizando una clave foránea, "
+"porque hay varios aeropuertos de la mayoría de las regiones."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:393
 msgid "Alaska region with airports"
@@ -613,6 +695,9 @@ msgid ""
 "table another field fk_region which acts as a foreign key (if you have a "
 "database, you will probably want to define a constraint on it)."
 msgstr ""
+"Además de los atributos ya existentes en la tabla de atributos de "
+"aeropuertos, otro campo fk_region que actúa como una clave externa (si tiene"
+" una base de datos, es probable que desee definir una restricción en él)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:399
 msgid ""
@@ -622,6 +707,12 @@ msgid ""
 "different providers (so you can also use it with shape and csv files) and "
 "all you have to do is to tell QGIS the relations between your tables."
 msgstr ""
+"Este campo fk_region siempre contendrá un identificador de una región. Se "
+"puede ver como un puntero a la región que pertenece. Y se puede diseñar un "
+"formulario de edición personalizada para la edición y QGIS se encarga de la "
+"instalación. Se trabaja con diferentes proveedores (por lo que también se "
+"puede utilizar con archivos de formas y csv) y todo lo que tiene que hacer "
+"es decirle a QGIS las relaciones entre las tablas."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:406
 msgid "Layers"
@@ -637,6 +728,14 @@ msgid ""
 "exactly one region while each region can have any number of airports (a "
 "typical one to many relation)."
 msgstr ""
+"QGIS no hace diferencia entre una tabla y una capa vectorial. Básicamente, "
+"una capa vectorial es una table con una geometría. Por lo que puede añadir "
+"su tabla como una capa vectorial. Para demostrar se puede cargar el archivo "
+"shape 'region' (con geometrías) y la tabla csv 'airport' (sin geometrías) y "
+"una llave foránea (fk_region) a la capa región. Esto quiere decir, que cada "
+"aeropuerto pertenece a exactamente una región, mientras que cada región "
+"puede tener cualquier número de aeropuertos (una típica relación uno a "
+"muchos)."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:417
 msgid "Definition (Relation Manager)"
@@ -656,18 +755,25 @@ msgid ""
 "string, describing, what the relation is used for. We will just call say "
 "\"Airports\" in this case."
 msgstr ""
+"**nombre** va a ser utilizado como un título. Debe ser una cadena legible "
+"por humanos, que describe, para lo que la relación se utiliza. Lo llamaremos"
+" \"Aeropuertos\" en este caso."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:425
 msgid ""
 "**referencing layer** is the one with the foreign key field on it. In our "
 "case this is the airports layer"
 msgstr ""
+"**Capa de referencia** es la que tiene el campo de llave foránea. En nuestro"
+" caso este es la capa de aeropuertos."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:427
 msgid ""
 "**referencing field** will say, which field points to the other layer so "
 "this is fk_region in this case"
 msgstr ""
+"**Campo de referencia** dirá que los puntos de campo a la otra capa por lo "
+"que este es fk_region en este caso."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:429
 msgid ""
@@ -679,6 +785,8 @@ msgstr ""
 msgid ""
 "**referenced field** is the primary key of the referenced layer so it is ID"
 msgstr ""
+"**Campo referenciado** es la llave primaria en la capa referenciada  por lo "
+"que es ID"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:432
 msgid ""
@@ -687,10 +795,14 @@ msgid ""
 " will be generated for you but you can assign one yourself to get one that "
 "is easier to handle."
 msgstr ""
+"**Id** se utilizará para propósitos internos y tiene que ser único. Se puede"
+" necesitar para construir formularios personalizados una vez que esto es "
+"implementado. Si se deja vacío, uno será generado para que se pueda asignar "
+"uno a si mismo para obtener uno que sea más fácil de manejar."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:446
 msgid "Relation Manager"
-msgstr ""
+msgstr "Administrador de Relaciones"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:450
 msgid "Forms"
@@ -705,6 +817,13 @@ msgid ""
 "form might open directly or you will have to choose to open it in the "
 "identification dialog under actions."
 msgstr ""
+"Ahora que QGIS conoce acerca de las relaciones, se utilizará para mejorar el"
+" formulario generado. Como no hemos cambiado el método de formulario "
+"predeterminado (autogenerado) se acaba de añadir un nuevo widget de nuestro "
+"formulario. Así que vamos a seleccionar la zona de la capa en la leyenda y "
+"utilizar la herramienta de identificación. Dependiendo de la configuración, "
+"la forma puede abrir directamente o se tendrá que elegir para abrirlo en el "
+"diálogo de identificación dentro de las acciones."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:468
 msgid "Identification dialog regions with relation to airports"
@@ -754,6 +873,9 @@ msgid ""
 "The two buttons to the right switch between table view and form view where "
 "the later let's you view all the airports in their respective form."
 msgstr ""
+"Los dos botones situados a la derecha del interruptor entre la vista de "
+"tabla y vista de formulario en el que más tarde le permite ver todos los "
+"aeropuertos en su forma respectiva."
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:488
 msgid ""
@@ -777,15 +899,15 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:5
 msgid "Work_with_Attribute_Table"
-msgstr ""
+msgstr "Work_with_Attribute_Table"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:87
 msgid "Attribute_Table_Selection"
-msgstr ""
+msgstr "Attribute_Table_Selection"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Calculator Field"
-msgstr ""
+msgstr "Campo Calculadora"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:218
 msgid "Derived Fields"
@@ -797,7 +919,7 @@ msgstr "Campos Virtuales"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:309
 msgid "Non_Spatial_Attribute_Tables"
-msgstr ""
+msgstr "Non_Spatial_Attribute_Tables"
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:327
 msgid "conditional_formatting"
@@ -805,4 +927,4 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/attribute_table.rst:363
 msgid "Relations"
-msgstr ""
+msgstr "Relaciones"

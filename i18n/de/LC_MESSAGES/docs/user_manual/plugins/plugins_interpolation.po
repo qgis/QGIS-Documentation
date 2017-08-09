@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2016-09-01 09:18+0000\n"
-"Last-Translator: Kevin M\n"
+"PO-Revision-Date: 2016-10-22 19:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
 "Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,41 +20,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # 9010db584ee74e0f967128bfe44b9d4a
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:10
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:62
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:9
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:61
 msgid "Interpolation Plugin"
 msgstr "Interpolationsplugin"
 
 # e212ad9b62bb43fd835892b206e7088d
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:43
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:42
 msgid "**Output file**: Specify a name for the output raster file."
 msgstr "**Ausgabedatei**: Legen Sie einen Namen für den Ausgabelayer fest."
 
 # 7928a39eeefe4fb7a2bde0e85390ff5c
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:68
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:67
 msgid "Using the plugin"
 msgstr "Das Plugin anwenden"
 
 # 77f17582982e4fabbd5f494190a7a449
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:81
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:80
 msgid "Click **[OK]**."
 msgstr "Klicken Sie auf **[OK]**."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:44
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:43
 msgid ""
 "|checkbox| :guilabel:`Add result to project` to load the result into the map"
 " canvas."
 msgstr "|checkbox| :guilabel:`Ergebnis zum Projekt hinzufügen` um das Ergebnis in die Kartenansicht zu laden."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:70
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:69
 msgid "Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`)."
 msgstr "Starten Sie QGIS und laden Sie die CVS Tabelle elevp.csv mit Höheninformationen aus dem QGIS Beispieldatensatz."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:5
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:11
 msgid ""
 "The Interpolation plugin can be used to generate a TIN or IDW interpolation "
 "of a point vector layer. It is very simple to handle and provides an "
@@ -63,7 +59,7 @@ msgid ""
 "to be specified before running:"
 msgstr "Die Interpolationserweiterung kann verwendet werden um eine TIN oder IDW Interpolation aus einem Punktvektorlayer zu erzeugen. Es ist sehr einfach zu bedienen und stell eine intuitive Benutzeroberfläche zum Erstellen von interpolierten Rasterlayern bereit (siehe Figure_interpolation_1_). Die Erweiterung benötigt die folgenden Parameter, die vor dem Ausführen angegeben werden müssen:"
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:17
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:16
 msgid ""
 "Input **Vector layers**: Specify the input point vector layer(s) from a list"
 " of loaded point layers. If several layers are specified, then data from all"
@@ -73,14 +69,14 @@ msgid ""
 "|selectString| combo box."
 msgstr "**Eingabevektor**: Wählen Sie einen in QGIS geladenen Vektor Punktlayer(s). Wenn mehrere Layer angegeben werden, werden die Daten aller Layer für die Interpolation verwendet. Beachten Sie auch, dass es möglich ist, Linien und Polygone als Randbedingungen für die Triangulation zu verwenden, indem Sie in der Kombobox  |selectString| :guilabel`Typ` des geladenen Layers entweder \"Punkte\", \"Strukturlinien\" oder \"Bruchkanten\" auswählen."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:22
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:21
 msgid ""
 "**Interpolation attribute**: Select the attribute column to be used for "
 "interpolation or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox"
 " to use the layer's stored Z values."
 msgstr "**Interpolationsattribut**: Wählen Sie die Attributspalte für die Interpolation oder aktivieren Sie |checkbox| :guilabel:`Z-Koordinate für Interpolation verwenden` um die im Layer gespeicherten Z-Werte zu verwenden."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:25
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:24
 msgid ""
 "**Interpolation Method**: Select the interpolation method. This can be "
 "either 'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted "
@@ -96,24 +92,24 @@ msgid ""
 "points is uneven. Furthermore, maximum and minimum values in the "
 "interpolated surface can only occur at sample data points. This often "
 "results in small peaks and pits around the sample data points."
-msgstr ""
+msgstr "**Interpolationsmethode**: Wählen Sie die Interpolationsmethode. Dies kann entweder 'Unregelmäßiges Dreiecksnetz (TIN)' oder 'Inverse Distanzwichtung (IDW)'. Mit der TIN Methode können Sie eine Oberfläche erzeugen, die durch Dreiecke der nächsten Nachbarn erzeugt wird. Um dies zu tun, werden im Umkreis ausgewählte Beispielpunkte erzeugt und deren Überschneidungen werden zu einem nicht überlappenden Netzwerk verbunden und als kompakte mögliche Dreiecke dargestellt. Diese Darstellung ist nicht eben. Wenn die IDW Methode genutzt wird, werden die Beispielpunkte bei der Interpolation gewichtet, sodass der Einfluss eines Punkts  zu einem anderen abnimmt mit dem Abstand des zu erzeugenden, unbekannten Punkts. Die IDW Interpolation hat ebenfalls einige Nachteile: die Qualität des Interpolationsergebnisses abnehmen kann, wenn die Verteilung von Datenpunkten Probe uneben ist. Weiterhin können Maximal- und Minimalwerte in der interpolierten Oberfläche nur an Beispieldatenpunkten auftreten. Dies führt oft zu kleinen Spitzen und Vertiefungen um die Beispieldatenpunkte."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:37
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:36
 msgid ""
 "|options| **Configure Interpolation Method**: Configure the interpolation "
 "method you have chosen. For the TIN method you can choose between Linear and"
 " Clough Toucher (cubic) interpolation methods. You can also save the "
 "triangulation in shapefile format. For IDW interpolation you can set the "
 "distance coefficient."
-msgstr ""
+msgstr "|options| **Konfiguriere Interpolationsmethode**: Konfiguriere die ausgewählte Interpolationsmethode. Für die TIN-Methode können Sie zwischen Linear und Clough Toucher (kubisch) Interpolationsmethode wählen. Sie können die Triangulation auch als Shapedatei Format speichern. Für die IDW Interpolation können Sie den Abstandskoeffizienten einstellen. "
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:41
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:40
 msgid ""
 "**Number of columns/rows**: Specify the number of rows and columns for the "
 "output raster file."
 msgstr "**Spalten-/Zeilenanzahl**: Geben Sie die Anzahl von Zeilen und Spalten für die Ausgaberasterdatei an."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:46
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:45
 msgid ""
 "Note that using lines as constraints for the interpolation the triangulation"
 " (TIN method) you can either use 'structure lines' or 'break lines'. When "
@@ -121,9 +117,9 @@ msgid ""
 "'structure lines' you produce continuous breaks. The triangulation is "
 "modified by both methods such that no edge crosses a breakline or structure "
 "line."
-msgstr ""
+msgstr "Beachten Sie, dass wenn Sie Linien als Bedingung für die TIN Interpolationsmethode wählen, können Sie zwischen 'Strukturinien' und 'Bruchlinien' wählen. Wenn Sie 'Bruchlinien' nutzen, werden scharfe Brüche in der Oberfläche produziert während bei 'Strukturlinien' kontinuierliche Brüche produziert werden. Die Triangulation wird durch beide Verfahren so modifiziert, dass keine Kante eine Bruchlinie oder Strukturlinie kreuzt. "
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:71
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:70
 msgid ""
 "Load the Interpolation plugin in the Plugin Manager (see "
 ":ref:`managing_plugins`) and click on the :menuselection:`Raster --> "
@@ -132,18 +128,21 @@ msgid ""
 "shown in Figure_interpolation_1_."
 msgstr "Laden Sie die Interpolationserweiterung in den Plugin Manager (siehe :ref:`managing_plugins`) und klicken Sie auf :menuselection:`Raster --> Interpolation -->` |rasterInterpolate| :guilabel:`Interpolation`, was in der QGIS Menüleiste erscheint. Der Interpolationserweitertungsdialog erscheint wie in Figure_interpolation_1_ gezeigt."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:76
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:75
 msgid ""
 "Select an input layer (e.g., :guilabel:`elevp` |selectString|) and column "
 "(e.g., ``ELEV``) for interpolation."
 msgstr "Wählen Sie den Layer 'elevp' als Eingabevektorlayer und Spalte 'ELEV' als Interpolationsattribut."
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:78
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:77
 msgid ""
 "Select an interpolation method (e.g., 'Triangulated Irregular Network "
 "(TIN)'), and specify a cell size of 5000 as well as the raster output "
 "filename (e.g., :file:`elevation_tin`)."
 msgstr "Wählen Sie eine Interpolationsmethode (z.B. 'Unregelmäßiges Dreiecksnetz (TIN)'), und geben Sie eine Zellgröße von 5000 genauso wie den Ausgabedateinamen (z.B. :file:`elevation_tin`) an."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "The Interplation plugin can be used to generate a TIN or IDW interpolation "

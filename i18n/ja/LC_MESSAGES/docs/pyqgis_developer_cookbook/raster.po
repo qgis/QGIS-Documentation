@@ -1,6 +1,7 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2013-2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # Takayuki Nuimura <nuimura@nagoya-u.jp>, 2013
 # OKANO Takayoshi <kano@na.rim.or.jp>, 2015
 # Takayuki Nuimura <nuimura@nagoya-u.jp>, 2013
@@ -9,8 +10,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-07-18 09:38+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2017-06-23 14:09+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -142,48 +143,48 @@ msgid ""
 "continuous variables (e.g. elevation) or discrete variables (e.g. land use)."
 " In some cases, a raster layer comes with a palette and raster values refer "
 "to colors stored in the palette::"
-msgstr ""
+msgstr "ラスタレイヤは、1つまたは複数のラスタバンドで構成されています。それらはシングルバンドまたはマルチバンドラスタと呼ばれます。 1つのバンドは値のマトリックスを表します。通常のカラー画像（例えば、空中写真）は、赤、青、緑のバンドからなるラスタです。単一バンドレイヤーは、通常、連続変数（例えば高度）または離散変数（例えば土地利用）のいずれかを表します。場合によっては、ラスタレイヤにパレットが付属し、ラスタ値はパレットに保存されている色を参照します::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:49
 msgid "Renderer"
-msgstr ""
+msgstr "レンダラ"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:51
 msgid ""
 "When a raster layer is loaded, it gets a default renderer based on its type."
 " It can be altered either in raster layer properties or programmatically."
-msgstr ""
+msgstr "ラスターレイヤーがロードされると、そのタイプに基づいてデフォルトのレンダラーが取得されます。ラスターレイヤのプロパティまたはプログラムで変更できます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:54
 msgid "To query the current renderer::"
-msgstr ""
+msgstr "現在のレンダラを照会する::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:61
 msgid ""
 "To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer`."
 " There are several available renderer classes (derived from "
 ":class:`QgsRasterRenderer`):"
-msgstr ""
+msgstr "レンダラを設定するためには:class:`QgsRasterLayer` の:func:`setRenderer` メソッドを使用します。利用可能なレンダラークラス（:class:`QgsRasterRenderer` から派生）はいくつかあります："
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:64
 msgid "QgsMultiBandColorRenderer"
-msgstr ""
+msgstr "QgsMultiBandColorRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:65
 msgid "QgsPalettedRasterRenderer"
-msgstr ""
+msgstr "QgsPalettedRasterRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:66
 msgid "QgsSingleBandColorDataRenderer"
-msgstr ""
+msgstr "QgsSingleBandColorDataRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:67
 msgid "QgsSingleBandGrayRenderer"
-msgstr ""
+msgstr "QgsSingleBandGrayRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:68
 msgid "QgsSingleBandPseudoColorRenderer"
-msgstr ""
+msgstr "QgsSingleBandGrayRenderer"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:82
 msgid "**TODO:**"
@@ -201,25 +202,25 @@ msgid ""
 "colors ranging from green to yellow (for pixel values from 0 to 255). In the"
 " first stage we will prepare ``QgsRasterShader`` object and configure its "
 "shader function:"
-msgstr ""
+msgstr "ラスターレイヤー（バンドは１つだけと仮定）（0から255までのピクセル値に対して）緑から黄までの色でレンダリングしたいとしましょう。第一段階では、 ``QgsRasterShader``オブジェクトを作成し、そのシェーダ機能を設定します："
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:102
 msgid ""
 "The shader maps the colors as specified by its color map. The color map is "
 "provided as a list of items with pixel value and its associated color. There"
 " are three modes of interpolation of values:"
-msgstr ""
+msgstr "シェーダは、そのカラーマップによって指定された色をマッピングします。カラーマップは、画素値とそれに関連する色を持つ項目のリストとなっています。値の補間のモードは3つあります。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:113
 msgid ""
 "In the second step we will associate this shader with the raster layer::"
-msgstr ""
+msgstr "第二段階では、ラスタレイヤにこのシェーダを関連付けます::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:118
 msgid ""
 "The number 1 in the code above is band number (raster bands are indexed from"
 " one)."
-msgstr ""
+msgstr "上記のコード中の数1はバンド番号です（ラスタバンドは、1からインデックス付けされている）。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:126
 msgid ""
@@ -227,25 +228,25 @@ msgid ""
 " create a color image (this is the ``MultiBandColor`` drawing style. In some"
 " cases you might want to override these setting. The following code "
 "interchanges red band (1) and green band (2)::"
-msgstr ""
+msgstr "デフォルトでは、QGISは最初の3つのバンドを赤、緑、青の値にマッピングしてカラー画像を作成します（これは ``MultiBandColor``描画スタイルです）場合によっては、これらの設定をオーバーライドすることもできます。 次のコードは、赤のバンド（1）と緑のバンド（2）を交換します::"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:134
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
 "band drawing can be chosen --- either gray levels or pseudocolor."
-msgstr ""
+msgstr "ラスタを視覚化するために必要な帯域が1つだけの場合は、グレーレベルまたは疑似カラーのいずれかのシングルバンド描画を選択できます。"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:145
 msgid ""
 "If you do change layer symbology and would like ensure that the changes are "
 "immediately visible to the user, call these methods"
-msgstr ""
+msgstr "レイヤシンボルを変更し、変更がユーザーにすぐに表示されていることを確認したい場合、これらのメソッドを呼び出します"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:163
 msgid ""
 "With WMS raster layers, these commands do not work. In this case, you have "
 "to do it explicitly"
-msgstr ""
+msgstr "WMSのラスタレイヤと、これらのコマンドは動作しません。このケースでは、明示的にそれをしなければなりません"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:171
 msgid ""
@@ -253,12 +254,12 @@ msgid ""
 "vector layers on how to do that), you might want to force QGIS to update the"
 " layer symbology in the layer list (legend) widget. This can be done as "
 "follows (``iface`` is an instance of :class:`QgisInterface`)"
-msgstr ""
+msgstr "レイヤシンボルを変更している（それを行う方法については、ラスタとベクタレイヤーに関するセクションを参照）ケースでは、レイヤーリスト（凡例）ウィジェット内のレイヤシンボルを更新することをQGISに強制させたい場合があります。これは以下のように行うことができます（`iface` は:class:`QgisInterface` のインスタンスです）"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:186
 msgid ""
 "To do a query on value of bands of raster layer at some specified point"
-msgstr ""
+msgstr "いくつかの指定された時点で、ラスタレイヤのバンドの値のクエリを実行するには"
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:195
 msgid ""
@@ -268,7 +269,7 @@ msgstr "この場合の ``results`` メソッドは、キーとしてバンド�
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:46
 msgid "renderer"
-msgstr ""
+msgstr "レンダラ"
 
 #~ msgid ""
 #~ "A raster layer consists of one or more raster bands - it is referred to as "

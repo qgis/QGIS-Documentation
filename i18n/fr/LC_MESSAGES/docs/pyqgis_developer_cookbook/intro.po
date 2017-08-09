@@ -1,16 +1,19 @@
 # 
 # Translators:
 # Benoît de Cabissole, 2015
+# christophe bocquet <christophe.bocquet@developpement-durable.gouv.fr>, 2017
 # Médéric RIBREUX <mederic.ribreux@medspx.fr>, 2015
+# Nicolas Boisteault <nboisteault@gmail.com>, 2017
+# Akia35 <philippe.boulinguiez@inrap.fr>, 2017
 # Robin PREST, 2014
-# Sant-anna <delazj@gmail.com>, 2014-2016
+# Sant-anna <delazj@gmail.com>, 2014-2017
 # Vincent Picavet <vincent.ml@oslandia.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-05 22:35\n"
-"PO-Revision-Date: 2016-08-04 10:44+0000\n"
+"PO-Revision-Date: 2017-03-20 10:46+0000\n"
 "Last-Translator: Sant-anna <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -274,20 +277,20 @@ msgstr "exécuter automatiquement un programme Python quand QGIS démarre"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:35
 msgid "Python bindings are also available for QGIS Server:"
-msgstr ""
+msgstr "Les dépendances Python sont aussi disponibles pour QGIS Server:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:37
 msgid ""
 "starting from 2.8 release, Python plugins are also available on QGIS Server "
 "(see: `Server Python Plugins <server_plugins>`_)"
-msgstr ""
+msgstr "à partir de la version 2.8, les extensions Python sont également disponibles pour QGIS Server (see: `Server Python Plugins <server_plugins>`_)"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:38
 msgid ""
 "starting from 2.11 version (Master at 2015-08-11), QGIS Server library has "
 "Python bindings that can be used to embed QGIS Server into a Python "
 "application."
-msgstr ""
+msgstr "depuis la version 2.11 (Master du 11-08-2015), la librairie QGIS Server possède des dépendances Python qui peuvent être utilisées pour intégrer QGIS Server dans une application Python"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:47
 msgid ""
@@ -296,7 +299,7 @@ msgid ""
 "Also, the ``python/plugins/`` folder in your QGIS installation contains some"
 " plugin that you can use to learn how to develop such plugin and how to "
 "perform some of the most common tasks."
-msgstr ""
+msgstr "Pour vous familiariser avec les extensions, vous pouvez en télécharger depuis `le Dépôt des Extensions Python <http://plugins.qgis.org/>`_ et examiner leur code. Aussi, le répertoire ``python/plugins/`` dans votre installation de QGIS contient des extensions que vous pouvez utiliser pour apprendre à développer les vôtres et à effectuer quelques-unes des tâches les plus courantes."
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:57
 msgid "Run Python code when QGIS starts"
@@ -350,7 +353,7 @@ msgstr "A la convenance de l'utilisateur, les déclarations qui suivent sont ex�
 msgid ""
 "Python plugins are also available in QGIS server (:ref:`label_qgisserver`), "
 "see :ref:`server_plugins` for further details."
-msgstr ""
+msgstr "Les extensions Python sont aussi disponibles dans QGIS Server (:ref:`label_qgisserver`), voyez :ref:`server_plugins` pour plus d'information."
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:173
 msgid ""
@@ -360,17 +363,17 @@ msgid ""
 "adding a few lines to the beginning of your application or script. The code "
 "to initialize QGIS for custom applications and standalone scripts is "
 "similar, but examples of each are provided below."
-msgstr ""
+msgstr "Les applications personnalisées de PyQGIS ou les scripts"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:186
 msgid "Using PyQGIS in standalone scripts"
-msgstr ""
+msgstr "Utiliser PyQGIS dans des scripts indépendants"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:188
 msgid ""
 "To start a standalone script, initialize the QGIS resources at the beginning"
 " of the script similar to the following code:"
-msgstr ""
+msgstr "Pour commencer un script indépendant, initialisez les ressources QGIS au début du script tel que dans le code suivant:"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:211
 msgid ""
@@ -379,14 +382,14 @@ msgid ""
 " system. It is configured in the script by calling the ``setPrefixPath`` "
 "method. The second argument of ``setPrefixPath`` is set to :const:`True`, "
 "which controls whether the default paths are used."
-msgstr ""
+msgstr "Nous commençons par importer le module :mod:`qgis.core` et ensuite configurons le chemin du préfixe. Le chemin du préfixe est l'endroit où QGIS est installé sur votre système. Il est configuré dans le script en faisant appel à la méthode ``setPrefixPath``. Le second argument de la méthode ``setPrefixPath`` est mis à :const:`True`, ce qui contrôle si les chemins par défaut sont utilisés."
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:217
 msgid ""
 "The QGIS install path varies by platform; the easiest way to find it for "
 "your your system is to use the :ref:`pythonconsole` from within QGIS and "
 "look at the output from running ``QgsApplication.prefixPath()``."
-msgstr ""
+msgstr "Le chemin d'installation de QGIS varie suivant XXXXX ; le moyen le plus simple pour trouver celle qui correspond à votre système est d'utiliser la :ref:`pythonconsole` "
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:221
 msgid ""
@@ -398,7 +401,7 @@ msgid ""
 "``qgs.initQgis()`` method. With QGIS initialized, we are ready to write the "
 "rest of the script. Finally, we wrap up by calling ``qgs.exitQgis()`` to "
 "remove the data providers and layer registry from memory."
-msgstr ""
+msgstr "Une fois la configuration du chemin faite, nous sauvegardons une références à ``QgsApplication`` dans la variable ``qgs``. Le second argument est défini à ``False``, indiquant que nous n'envisageons pas d'utiliser une interface graphique étant donné que nous écrivons un script indépendant. ``QgsApplication`` étant configuré, nous chargeons les fournisseurs de données de QGIS et le registre de couches via la méthode ``qgs.initQgis()``. Avec l'initialisation de QGIS, nous sommes désormais prêts à écrire le reste de notre script. A la fin, nous utilisons ``qgs.exitQgis()`` pour nous assurer de supprimer de la mémoire les fournisseurs de données et le registre de couches."
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:232
 msgid "Using PyQGIS in custom applications"
@@ -410,7 +413,7 @@ msgid ""
 "application is the second argument when instantiating the "
 "``QgsApplication``. Pass :const:`True` instead of ``False`` to indicate that"
 " we plan to use a GUI."
-msgstr ""
+msgstr "La seule différence entre :ref:`standalonescript` et une application PyQGIS personnalisée réside dans le second argument lors de l'initialisation de ``QgsApplication``. Passer :const:`True` au lieu de ``False`` pour indiquer que nous allons utiliser une interface graphique."
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:53
 msgid "startup"
@@ -430,7 +433,7 @@ msgstr "startup.py"
 
 #: ../../source/docs/pyqgis_developer_cookbook/intro.rst:153
 msgid "custom applications; standalone scripts"
-msgstr ""
+msgstr "applications personnalisées, scripts indépendants"
 
 #~ msgid "**TODO:**"
 #~ msgstr ""

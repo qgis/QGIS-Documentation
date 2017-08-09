@@ -1,14 +1,15 @@
 # 
 # Translators:
 # Choro <u.ko.kubot@gmail.com>, 2014
+# Kohei Tomita <fairtommy@gmail.com>, 2017
 # Shimpei Matsuura <Pemugi@chizuwota.net>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-18 10:41+0200\n"
-"PO-Revision-Date: 2014-12-21 12:16+0000\n"
-"Last-Translator: Choro <u.ko.kubot@gmail.com>\n"
+"PO-Revision-Date: 2017-07-06 03:40+0000\n"
+"Last-Translator: Kohei Tomita <fairtommy@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +45,7 @@ msgid ""
 "Going back to our :kbd:`address` database, let's get our streets table "
 "matching the others; i.e., having a constraint on the geometry, an index and"
 " an entry in the geometry_columns table."
-msgstr ""
+msgstr ":kbd:`address` データベースに戻って、他に一致する街路テーブルを取得してみましょう。すなわち、ジオメトリ、インデックスとGEOMETRY_COLUMNSテーブル中のエントリに制約を持ちます。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:27
 msgid "|TY| |moderate|"
@@ -54,18 +55,18 @@ msgstr "|TY| |moderate|"
 msgid ""
 "Modify the :kbd:`streets` table so that it has a geometry column of type "
 "ST_LineString."
-msgstr ""
+msgstr "タイプST_LineStringのジオメトリ列を持つように :kbd:`街路` テーブルを修正します。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:31
 msgid ""
 "Don't forget to do the accompanying update to the geometry columns table!"
-msgstr ""
+msgstr "ジオメトリ列のテーブルに伴う更新を行うことを忘れないでください！"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:33
 msgid ""
 "Also add a constraint to prevent any geometries being added that are not "
 "LINESTRINGS or null."
-msgstr ""
+msgstr "また、ラインストリングまたはnullではありません追加されているすべてのジオメトリを防止するための制約を追加します。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:35
 msgid "Create a spatial index on the new geometry column"
@@ -109,14 +110,14 @@ msgid ""
 "A polygon requires double brackets around its coordinate list; this is to "
 "allow you to add complex polygons with multiple unconnected areas. For "
 "instance"
-msgstr ""
+msgstr "ポリゴンは、その座標リストの周りに二重括弧を必要とします。これにより、複数の連結していない領域を持つ複雑なポリゴンを追加できるようなります。例えば"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:71
 msgid ""
 "If you followed this step, you can check what it did by loading the cities "
 "dataset into QGIS, opening its attribute table, and selecting the new entry."
 " Note how the two new polygons behave like one polygon."
-msgstr ""
+msgstr "この手順に従った場合、QGISに都市データセットをロードし、属性テーブルを開き、新しいエントリを選択することで、何をしたか確認できます。二つの新しいポリゴンが1つのポリゴンのように振る舞うかに注意してください。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:78
 msgid "Exercise: Linking Cities to People"
@@ -124,7 +125,7 @@ msgstr "練習:CitiesをPeopleにリンクする"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:80
 msgid "For this exercise you should do the following:"
-msgstr ""
+msgstr "この演習では次のことを行う必要があります。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:82
 msgid "Delete all data from your people table."
@@ -134,21 +135,21 @@ msgstr "peopleテーブルからすべてのデータを削除します。"
 msgid ""
 "Add a foreign key column to people that references the primary key of the "
 "cities table."
-msgstr ""
+msgstr "都市テーブルの主キーを参照する人々への外部キー列を追加します。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:85
 msgid "Use QGIS to capture some cities."
-msgstr "いくつかの年をキャプチャするためQGISを使います。"
+msgstr "QGISを使用していくつかの都市をキャプチャします。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:86
 msgid ""
 "Use SQL to insert some new people records, ensuring that each has an "
 "associated street and city."
-msgstr ""
+msgstr "それぞれが関連付けられている通り、街を持っていることを確認して、いくつかの新しい人々のレコードを挿入するSQLを使用してください。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:89
 msgid "Your updated people schema should look something like this::"
-msgstr ""
+msgstr "更新された人々のスキーマは次のようになります::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:115
 msgid ":ref:`Check your results <geometry-2>`"
@@ -170,7 +171,7 @@ msgstr "|TY| |hard|"
 msgid ""
 "Create city boundaries by computing the minimum convex hull of all addresses"
 " for that city and computing a buffer around that area."
-msgstr ""
+msgstr "その都市のすべてのアドレスの最小凸包を計算し、その領域の周りのバッファを計算することにより、都市の境界線を作成します。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:135
 msgid "Access Sub-Objects"
@@ -182,15 +183,15 @@ msgid ""
 "sub-objects of SFS Geometries. When you want to select the first vertex "
 "point of every polygon geometry in the table myPolygonTable, you have to do "
 "this in this way:"
-msgstr ""
+msgstr "SFS-モデルの機能を使用すると、SFSジオメトリのサブオブジェクトにアクセスするためのさまざまなオプションを持っています。テーブルmyPolygonTable内のすべてのポリゴンジオメトリの最初の頂点を選択したいときは、このような方法でこれを実行する必要があります："
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:142
 msgid "Transform the polygon boundary to a linestring::"
-msgstr ""
+msgstr "ラインストリングにポリゴン境界を変換する::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:147
 msgid "Select the first vertex point of the resultant linestring::"
-msgstr ""
+msgstr "その結果ラインストリングの最初の頂点を選択します::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:156
 msgid "Data Processing"
@@ -200,7 +201,7 @@ msgstr "データプロセッシング"
 msgid ""
 "PostGIS supports all OGC SFS/MM standard conform functions. All these "
 "functions start with ``ST_``."
-msgstr ""
+msgstr "PostGISには、すべてのOGC SFS / MM標準では機能に準拠サポートしています。すべてのこれらの関数は `` ST_``で始まります。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:162
 msgid "Clipping"
@@ -210,11 +211,11 @@ msgstr "クリッピング"
 msgid ""
 "To clip a subpart of your data you can use the :kbd:`ST_INTERSECT()` "
 "function. To avoid empty geometries, use::"
-msgstr ""
+msgstr "データのサブパートをクリップするには、 :kbd:`ST_INTERSECT()` 関数を使用できます。空のジオメトリを回避するために、以下を使用::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Building Geometries from Other Geometries"
-msgstr ""
+msgstr "他の形状から建物のジオメトリ"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:185
 msgid ""
@@ -222,20 +223,20 @@ msgid ""
 "the points is defined by their :kbd:`id`. Another ordering method could be a"
 " timestamp, such as the one you get when you capture waypoints with a GPS "
 "receiver."
-msgstr ""
+msgstr "与えられたポイントテーブルから、ラインストリングを生成します。ポイントの順序は、その :kbd:`id` によって定義されます。別の並べ方は、GPS受信機でウェイポイントをキャプチャするときに得るような、タイムスタンプになりうるかもしれません。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:193
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
 "the following command::"
-msgstr ""
+msgstr "「ポイント」と呼ばれる新しいポイントレイヤーからラインストリングを作成するため、次のコマンドを実行できます::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:203
 msgid ""
 "To see how it works without creating a new layer, you could also run this "
 "command on the 'people' layer, although of course it would make little real-"
 "world sense to do this."
-msgstr ""
+msgstr "もちろん、これを行うのは現実世界の意味はほとんどないでしょうが、どのように機能するかを確認するには、「人」レイヤーにもこのコマンドを実行できます。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:211
 msgid "Geometry Cleaning"
@@ -245,7 +246,7 @@ msgstr "ジオメトリクリーニング"
 msgid ""
 "You can get more information for this topic in `this blog entry "
 "<http://linfiniti.com/?s=cleangeometry>`_."
-msgstr ""
+msgstr " `_ <http://linfiniti.com/?s=cleangeometry>このブログのエントリ`で、このトピックのためのより多くの情報を得ることができます。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:217
 msgid "Differences between tables"
@@ -255,13 +256,13 @@ msgstr "テーブル間の違い"
 msgid ""
 "To detect the difference between two tables with the same structure, you can"
 " use the PostgreSQL keyword :kbd:`EXCEPT`::"
-msgstr ""
+msgstr "同じ構造を持つ2つのテーブル間の差を検出するには、PostgreSQLの :kbd:`EXCEPT` キーワードを使用できます::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:226
 msgid ""
 "As the result, you will get all records from table_a which are not stored in"
 " table_b."
-msgstr ""
+msgstr "結果として、table_aからtable_bに格納されていないすべてのレコードが得られるでしょう。"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:230
 msgid "Tablespaces"
@@ -271,13 +272,13 @@ msgstr "表領域"
 msgid ""
 "You can define where postgres should store its data on disk by creating "
 "tablespaces::"
-msgstr ""
+msgstr "Postgresは表領域を作成することにより、ディスク上のデータを保存する場所を定義できます::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:237
 msgid ""
 "When you create a database, you can then specify which tablespace to use "
 "e.g.::"
-msgstr ""
+msgstr "データベースを作成するときは、その後、例えば、使用する表領域を指定することができます::"
 
 #: ../../source/docs/training_manual/spatial_databases/geometry.rst:242
 msgid "|IC|"
@@ -291,4 +292,4 @@ msgid ""
 " won't need to actually enter these statements manually, but having a "
 "general idea of their structure will help you when using a GIS, especially "
 "if you encounter errors that would otherwise seem cryptic."
-msgstr ""
+msgstr "PostGISの文を使用して、より複雑な形状を作成する方法を学びました。これはGISのフロントエンドを通じて地理対応データベースを操作する場合、暗黙知を向上させることがほとんどであることに留意してください。通常、実際に手動でこれらのステートメントを入力する必要はありませんが、そうでなければ不可解なと思われるエラーが発生した場合は特に、GISを使用した場合、その構造の一般的な考えを持つことに役立ちます。"
