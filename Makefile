@@ -1,7 +1,6 @@
 # Makefile for Sphinx documentation
 #
 
-# as long as this branch is testing, we only build for english:
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
