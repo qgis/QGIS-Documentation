@@ -727,7 +727,7 @@ creating a new MSSQL connection dialog proposes you to fill a **Provider/DSN**
 name. You can also display available databases.
 
 
-.. _vector_loading_postgis:
+.. _vector_loading_database:
 
 Loading a Database Layer
 ........................
