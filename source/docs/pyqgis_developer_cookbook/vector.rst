@@ -200,7 +200,7 @@ iterator returns all features, but returns partial data for each of them.
   request.setFlags(QgsFeatureRequest.NoGeometry)
 
 
-.. tip::
+.. tip:: **Speed features request**
 
     If you only need a subset of the attributes or you don't need the geometry
     information, you can significantly increase the **speed** of the features
@@ -318,17 +318,17 @@ then it changes the feature's geometry
       layer.dataProvider().changeGeometryValues({ fid : geom })
 
 
-.. tip::
+.. tip:: **Favor QgsVectorLayerEditUtils class for geometry-only edits**
 
     If you only need to change geometries, you might consider using
     the :class:`QgsVectorLayerEditUtils` which provides some of useful
-    methods to edit geometries (translate, insert or move vertex etc.)
+    methods to edit geometries (translate, insert or move vertex etc.).
 
-.. tip::
+.. tip:: **Directly save changes using** ``with`` **based command**
 
-	Using :func:`with` the changes will be commited automaticly calling 
-	commitChanges() at the end. If any exception occurs, it will 
-	rollBack() all the changes. See editing-buffer_
+    Using ``with edit(layer):`` the changes will be commited automatically 
+    calling :func:`commitChanges()` at the end. If any exception occurs, it will 
+    :func:`rollBack()` all the changes. See :ref:`editing-buffer`.
 
 Adding and Removing Fields
 --------------------------
