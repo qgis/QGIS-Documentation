@@ -248,7 +248,7 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
 Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
 
-* you can also load specific formats like ``ArcInfo Binary Coverage``,
+* You can also load specific formats like ``ArcInfo Binary Coverage``,
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
   ``US Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select
   |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this case
