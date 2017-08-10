@@ -327,7 +327,7 @@ then it changes the feature's geometry
 .. tip:: **Directly save changes using** ``with`` **based command**
 
     Using ``with edit(layer):`` the changes will be commited automatically 
-    calling:func:`commitChanges()` at the end. If any exception occurs, it will 
+    calling :func:`commitChanges()` at the end. If any exception occurs, it will 
     :func:`rollBack()` all the changes. See :ref:`editing-buffer`.
 
 Adding and Removing Fields
