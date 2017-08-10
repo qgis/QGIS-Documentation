@@ -181,6 +181,7 @@ providers.
   format files in QGIS.
 
 .. index:: Loading vector, Loading raster
+.. index:: ODBC, OGDI, Esri Personal Geodatabase, MySQL
 .. _loading_file:
 
 Loading a layer from a file
@@ -191,20 +192,10 @@ To load a layer from a file, you can:
 * for vector data (like Shapefile, Mapinfo or dxf layer), click on
   |addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the
   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
-  Layer` menu option or type :kbd:`Ctrl+Shift+V`.
+  Layer` menu option or press :kbd:`Ctrl+Shift+V`.
   This will bring up a new window (see figure_vector_add_) from which you can
   check |radioButtonOn| :guilabel:`File` and click on **[Browse]**. You can
-  also select the encoding for the file if desired.
-  Beside file you can select |radioButtonOn| :guilabel:`Directory` for example
-  to load OpenFileGDB or Arc/Info binary coverage. This case a directory can be
-  selected in the dialog after pressing **[Browse]**. Using the
-  |radioButtonOn| :guilabel:`Database` radiobutton you can select an existing
-  database connection or create one to the selected database type.
-  Pressing **[Open]** you can select from the available tables for example
-  of the PosGIS enabled database.
-  The last |radioButtonOn| :guilabel:`Protocol` enables to open data from the
-  web using for example GeoJSON format. After selecting the type you have to
-  fill URI of the source.
+  also specify the encoding for the file if desired.
 
   .. _figure_vector_add:
 
@@ -255,11 +246,26 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 .. index:: ArcInfo Binary Coverage, Tiger Format, UK National Transfer Format
 .. index:: US Census Bureau
 
-Using the |addOgrLayer| :sup:`Add Vector Layer` tool, you can also load
-specific format like ArcInfo Binary Coverage, UK. National Transfer Format, as
-well as the raw TIGER format of the US Census Bureau or OpenfileGDB. To do that,
-you'd need to select |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source
-type`.
+Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
+
+* you can also load specific formats like ``ArcInfo Binary Coverage``,
+  ``UK. National Transfer Format``, as well as the raw TIGER format of the
+  ``US Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select
+  |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this case
+  a directory can be selected in the dialog after pressing **[Browse]**.
+* With the |radioButtonOn| :guilabel:`Database` source type you can select an
+  existing database connection or create one to the selected database type.
+  Available database types are ``ODBC``, ``OGDI Vectors``, ``Esri Personal
+  Geodatabase``, ``MySQL`` as well as ``PostgreSQL`` or ``MSSQL``.
+    
+  Pressing the **[New]** button opens the :guilabel:`Create a New OGR Database
+  Connection` dialog whose parameters are among the ones you can find in
+  :ref:`vector_create_stored_connection`.
+  Pressing **[Open]** you can select from the available tables for example
+  of the PostGIS enabled database.
+* The last source type, |radioButtonOn| :guilabel:`Protocol`, enables to open
+  data from the web using for example ``GeoJSON`` or ``CouchDB`` format. After
+  selecting the type you have to fill URI of the source.
 
 
 .. _tip_load_from_external_drive_OSX:

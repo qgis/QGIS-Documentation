@@ -112,9 +112,9 @@ Creating a new GeoPackage layer
 -------------------------------
 
 To create a new GeoPackage layer choose :menuselection:`New -->`
- |newGeoPackageLayer| :menuselection:`New GeoPackage Layer...` from the
- :menuselection:`Layer` menu. The :guilabel:`New GeoPackage Layer` dialog will
- be displayed as shonw in figure_create_geopackage_.
+|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...` from the
+:menuselection:`Layer` menu. The :guilabel:`New GeoPackage Layer` dialog will
+be displayed as shown in figure_create_geopackage_.
 
 .. _figure_create_geopackage:
 
@@ -123,9 +123,9 @@ To create a new GeoPackage layer choose :menuselection:`New -->`
 
    Creating a New GeoPackage layer dialog
 
-The first step is to select an existing GeoPackage or create a new one. This 
-can be done by pressing the ellipses |...| button to the right of the 
-Database field. Then, give a name for the new layer, define the layer type and 
+The first step is to select an existing GeoPackage or create a new one. This
+can be done by pressing the ellipses **[...]** button at the right of the
+Database field. Then, give a name for the new layer, define the layer type and
 specify the coordinate reference system with **[Specify CRS]**.
 
 To define an attribute table for the new GeoPackage layer, add the names of
@@ -133,7 +133,7 @@ the attribute columns you want to create with the corresponding column type,
 and click on the **[Add to fields list]** button. Once you are happy with the
 attributes, click **[OK]**. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
-:ref:`sec_edit_existing_layer` above.
+:ref:`sec_edit_existing_layer`.
 
 .. index:: New GPX layer
 .. _vector_create_gpx:
