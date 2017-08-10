@@ -530,12 +530,12 @@ At the beginning of the Makefile there is a LOCALES variable::
 
 	LOCALES = en
 
-Add the abreviation of the language to this variable, for example for
+Add the abbreviation of the language to this variable, for example for
 Hungarian language::
 
 	LOCALES = en hu
 
-Now you can generate or update the :file:`hu.ts` file (and the `en.ts` too)
+Now you can generate or update the :file:`hu.ts` file (and the :file:`en.ts` too)
 from the sources by::
 
 	make transup
