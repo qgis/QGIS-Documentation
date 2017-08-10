@@ -13,8 +13,8 @@ Introduction
 This repository is meant to write and manage the Official Documentation of 
 `QGIS <https://qgis.org>`_, an Open Source GIS Software.
 
-Latest stable documentation is on http://docs.qgis.org/2.14 and its PDF versions
-are available at http://docs.qgis.org/2.14/pdf.
+Latest stable documentation is on http://docs.qgis.org/2.18 and its PDF versions
+are available at http://docs.qgis.org/2.18/pdf.
 
 The ongoing work for future releases is published as QGIS Testing Documentation.
 It's built from the ``master`` branch and NOT translated. QGIS Testing Documentation
@@ -22,7 +22,7 @@ is on http://docs.qgis.org/testing and http://docs.qgis.org/testing/pdf/
 
 Previous releases are also available:
 
-- QGIS 2.8 docs http://docs.qgis.org/2.8 and http://docs.qgis.org/2.8/pdf/
+- QGIS 2.14 docs http://docs.qgis.org/2.14 and http://docs.qgis.org/2.14/pdf/
 - QGIS 2.6 docs http://docs.qgis.org/2.6 and http://docs.qgis.org/2.6/pdf/
 - QGIS 2.2 docs http://docs.qgis.org/2.2 and http://docs.qgis.org/2.2/pdf/
 - QGIS 2.0 docs http://docs.qgis.org/2.0 and http://docs.qgis.org/2.0/pdf/
