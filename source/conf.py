@@ -29,6 +29,7 @@ extensions = [
     'sphinx.ext.imgmath',
     'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
+    'sphinx.ext.extlinks',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -109,7 +110,15 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/master/', None)}
+intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/{}/'.format(version if version != 'testing' else 'master'), None)}
+
+# This config value must be a dictionary of external sites, mapping unique short
+# alias names to a base URL and a prefix.
+extlinks = {'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
+            'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(version if version != 'testing' else 'master'), None),
+            'qgissource': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(
+                ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'), None)
+           }
 
 # -- Options for HTML output ---------------------------------------------------
 
