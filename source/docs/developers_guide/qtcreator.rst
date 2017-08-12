@@ -139,7 +139,7 @@ configuration to using a custom one.
 
 .. image:: images/image10.jpeg
 
-Do do that, click the 'Add v' combo button next to the Run configuration
+To do that, click the 'Add v' combo button next to the Run configuration
 combo and choose 'Custom Executable' from the top of the list.
 
 .. image:: images/image11.jpeg
