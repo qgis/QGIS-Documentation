@@ -276,7 +276,7 @@ process is illustrated in table_graduated_.
 | 9               | Class 3          |
 +-----------------+------------------+
 
-Table Graduaded: Graduated colour breaks up the attribute value ranges into the
+Table Graduated: Graduated colour breaks up the attribute value ranges into the
 number of classes you select. Each class is represented by a different colour.
 
 Continuous Colour Symbols
