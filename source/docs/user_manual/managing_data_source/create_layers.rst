@@ -114,9 +114,9 @@ Further management of SpatiaLite layers can be done with the DB Manager. See
 Creating a new GeoPackage layer
 -------------------------------
 
-To create a new GeoPackage layer choose :menuselection:`New -->`
-|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...` from the
-:menuselection:`Layer` menu. The :guilabel:`New GeoPackage Layer` dialog will
+To create a new GeoPackage layer go to :menuselection:`Layer --> New -->`
+|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...`.
+The :guilabel:`New GeoPackage Layer` dialog will
 be displayed as shown in figure_create_geopackage_.
 
 .. _figure_create_geopackage:
