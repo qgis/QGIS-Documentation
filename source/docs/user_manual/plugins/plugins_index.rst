@@ -23,7 +23,6 @@ Plugins
    plugins_georeferencer
    plugins_metasearch
    plugins_offline_editing
-   plugins_road_graph
    plugins_spatial_query
    plugins_topology_checker
    plugins_zonal_statistics

@@ -122,7 +122,6 @@ Core plugins include:
 #.  GRASS (Integrate GRASS GIS)
 #.  Metasearch Catalogue Client
 #.  Offline Editing (Allow offline editing and synchronizing with databases)
-#.  Road Graph Plugin (Analyze a shortest-path network)
 #.  Processing
 #.  Spatial Query Plugin
 #.  Topology Checker (Find topological errors in vector layers)
