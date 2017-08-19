@@ -120,7 +120,6 @@ Core plugins include:
 #.  Georeferencer GDAL (Add projection information to rasters using GDAL)
 #.  GPS Tools (Load and import GPS data)
 #.  GRASS (Integrate GRASS GIS)
-#.  Interpolation Plugin (Interpolate based on vertices of a vector layer)
 #.  Metasearch Catalogue Client
 #.  Offline Editing (Allow offline editing and synchronizing with databases)
 #.  Oracle Spatial GeoRaster

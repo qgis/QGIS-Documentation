@@ -30,7 +30,6 @@ Icon                    Plugin                        Description               
 |georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
-|interpolation|         Interpolation plugin          Interpolation on base of vertices of a vector layer     :ref:`interpol`
 |metasearch|            Metasearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
 |oracleRaster|          Oracle Spatial Georaster      Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
