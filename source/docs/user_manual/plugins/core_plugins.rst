@@ -23,7 +23,6 @@ Icon                    Plugin                        Description               
 ======================  ============================  ======================================================  ===============================
 |coordinateCapture|     Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
-|dxf2shpConverter|      DXF2Shape Converter           Converts from DXF to SHP file format                    :ref:`dxf2shape`
 |eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
 |rasterInfo|            GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`

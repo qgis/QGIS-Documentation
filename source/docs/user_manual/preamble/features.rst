@@ -115,7 +115,6 @@ Core plugins include:
 
 #.  Coordinate Capture (Capture mouse coordinates in different CRSs)
 #.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  Dxf2Shp Converter (Convert DXF files to shapefiles)
 #.  eVIS (Visualize events)
 #.  GDALTools (Integrate GDAL Tools into QGIS)
 #.  Georeferencer GDAL (Add projection information to rasters using GDAL)

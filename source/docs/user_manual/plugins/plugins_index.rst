@@ -16,7 +16,6 @@ Plugins
    core_plugins
    plugins_coordinate_capture
    plugins_db_manager
-   plugins_dxf2shape_converter
    plugins_evis
    plugins_gdaltools
    plugins_geometry_checker
