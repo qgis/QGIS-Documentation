@@ -21,7 +21,6 @@ Plugins
    plugins_geometry_checker
    plugins_geometry_snapper
    plugins_georeferencer
-   plugins_heatmap
    plugins_interpolation
    plugins_metasearch
    plugins_offline_editing
