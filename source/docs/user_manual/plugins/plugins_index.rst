@@ -19,7 +19,6 @@ Plugins
    plugins_evis
    plugins_gdaltools
    plugins_geometry_checker
-   plugins_geometry_snapper
    plugins_georeferencer
    plugins_metasearch
    plugins_offline_editing

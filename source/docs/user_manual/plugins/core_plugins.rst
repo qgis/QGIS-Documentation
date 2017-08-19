@@ -26,7 +26,6 @@ Icon                    Plugin                        Description               
 |eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
 |rasterInfo|            GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
-|geometrySnapper|       Geometry Snapper              Snap geometries to a reference layer                    :ref:`geometry_snapper`
 |georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
