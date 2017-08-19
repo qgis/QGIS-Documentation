@@ -23,7 +23,6 @@ Plugins
    plugins_georeferencer
    plugins_metasearch
    plugins_offline_editing
-   plugins_oracle_raster
    plugins_raster_terrain
    plugins_road_graph
    plugins_spatial_query

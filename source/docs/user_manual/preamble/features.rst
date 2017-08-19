@@ -122,7 +122,6 @@ Core plugins include:
 #.  GRASS (Integrate GRASS GIS)
 #.  Metasearch Catalogue Client
 #.  Offline Editing (Allow offline editing and synchronizing with databases)
-#.  Oracle Spatial GeoRaster
 #.  Raster Terrain Analysis (Analyze raster-based terrain)
 #.  Road Graph Plugin (Analyze a shortest-path network)
 #.  Processing

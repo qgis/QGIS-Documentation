@@ -32,7 +32,6 @@ Icon                    Plugin                        Description               
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
 |metasearch|            Metasearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
-|oracleRaster|          Oracle Spatial Georaster      Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
 |pluginInstaller|       Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
 |rasterTerrain|         Raster Terrain Analysis       Compute geomorphological features from DEMs             :ref:`rasterrain`
