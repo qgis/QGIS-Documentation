@@ -13,7 +13,7 @@ QGIS as OGC Data Server
 
 QGIS Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1 1.1.1
 implementation that, in addition, implements advanced cartographic features for
-thematic mapping. The QGIS Server is a FastCGI/CGI (Common Gateway Interface)
+thematic mapping. QGIS Server is a FastCGI/CGI (Common Gateway Interface)
 application written in C++ that works together with a web server (e.g., Apache,
 Lighttpd). It has Python plugin support allowing for fast and efficient
 development and deployment of new features.
