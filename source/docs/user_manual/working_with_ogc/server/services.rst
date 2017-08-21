@@ -10,24 +10,24 @@ Services
 
 
 QGIS Server is able to serve data according to standard protocols as described
-by the **Open Geopatial Consortium (OGC)**:
+by the **Open Geospatial Consortium (OGC)**:
 
 - WMS 1.1.0 and 1.3.0
 - WFS 1.0.0
 - WCS 1.1.1
 
-Moreover, some vendor parameters and requests are supported in addition to the
-original standard that greatly enhance the possibilities of customising its
+Extra vendor parameters and requests are supported in addition to the
+original standard that greatly enhance the possibilities of customizing its
 behavior thanks to the QGIS rendering engine.
 
 
 Web Map Service (WMS)
 =====================
 
-The WMS standards **1.1.0** and **1.3.0** implemented in QGIS Server provides
+The **1.1.0** and **1.3.0** WMS standards implemented in QGIS Server provide
 a HTTP interface to request map or legend images generated from a QGIS project.
-A typical WMS request defines the QGIS project to use, layers to render as well
-as the image format to generate. A basic support is also available for the
+A typical WMS request defines the QGIS project to use, the layers to render as
+well as the image format to generate. Basic support is also available for the
 **Styled Layer Descriptor (SLD)** standard.
 
 Specifications document according to the version number of the service:
@@ -56,13 +56,15 @@ Vendor requests provided by QGIS Server:
 +---------------------+---------------------------------------------------+
 | Request             |  Description                                      |
 +=====================+===================================================+
-| GetPrint            | Returns a QGS composition                         |
+| GetPrint            | Returns a QGIS composition                        |
 +---------------------+---------------------------------------------------+
-| GetProjectSettings  | Returns specific information about QGIS server    |
+| GetProjectSettings  | Returns specific information about QGIS Server    |
 +---------------------+---------------------------------------------------+
 | GetDxf              | Export layers in DXF format                       |
 +---------------------+---------------------------------------------------+
 
+
+.. _`qgisserver-wms-getmap`:
 
 GetMap
 ------
@@ -98,14 +100,14 @@ and 1.3.0 specifications:
 
 |
 
-QGIS Server also accepts a couple of extra parameters in addition to the
-standard parameters:
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
 
 
 +---------------+----------+----------------------------------+
 | Parameter     | Required | Description                      |
 +===============+==========+==================================+
-| MAP           | Yes      | Specify the QGS project file     |
+| MAP           | Yes      | Specify the QGIS project file    |
 +---------------+----------+----------------------------------+
 | BGCOLOR       | No       | Specify the background color     |
 +---------------+----------+----------------------------------+
@@ -195,7 +197,7 @@ URL example:
   &LAYERS=mylayer1,mylayer2
   &...
 
-Moreover, the QGIS server introduced some options to select layers by:
+In addition, QGIS Server introduced some options to select layers by:
 
 * a short name
 * the layer id
@@ -215,7 +217,7 @@ defined, then it's used by default instead of the layer's name:
 Moreover, there's a project option allowing to select layers by their id in
 :menuselection:`OWS Server --> WMS capabilities` menu of the
 :menuselection:`Project --> Project Properties` dialog. To activate this
-option, the checkbox `Use layer ids as names` has to be selected.
+option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
 
 .. code-block:: none
 
@@ -428,7 +430,7 @@ URL example:
 MAP
 ^^^
 
-This parameter allows to define the QGS project file to use.
+This parameter allows to define the QGIS project file to use.
 
 URL example:
 
@@ -440,6 +442,13 @@ URL example:
   &VERSION=1.3.0
   &MAP=/home/user/project.qgs
   &...
+
+As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
+is mandatory because a request needs a QGIS project to actually work. However,
+the ``QGIS_PROJECT_FILE`` environment variable may be used to define a default
+QGIS project. In this specific case, ``MAP`` is not longer a required
+parameter. For further information you may refer to
+:ref:`server_env_variables`.
 
 
 BGCOLOR
@@ -533,10 +542,10 @@ URL example:
 FILTER
 ^^^^^^
 
-A subsets of layers can be selected with the ``FILTER`` parameter. Syntax is
+A subset of layers can be selected with the ``FILTER`` parameter. Syntax is
 basically the same as for the QGIS subset string. However, there are some
-restrictions to avoid SQL injections into databases via QGIS server. If a
-dangerous string is found in the parameter, QGIS server will return the next
+restrictions to avoid SQL injections into databases via QGIS Server. If a
+dangerous string is found in the parameter, QGIS Server will return the next
 error:
 
 .. code-block:: none
@@ -558,7 +567,7 @@ URL example:
 .. note::
 
   It is possible to make attribute searches via GetFeatureInfo and omit
-  the X/Y parameter if a FILTER is there. QGIS server then returns info
+  the X/Y parameter if a FILTER is there. QGIS Server then returns info
   about the matching features and generates a combined bounding box in the
   xml output.
 
@@ -638,7 +647,7 @@ define the tolerance for point, line and polygon layers:
 GetPrint
 --------
 
-QGIS server has the capability to create print composer output in pdf or pixel
+QGIS Server has the capability to create print composer output in pdf or pixel
 format. Print composer windows in the published project are used as templates.
 In the GetPrint request, the client has the possibility to specify parameters
 of the contained composer maps and labels.
