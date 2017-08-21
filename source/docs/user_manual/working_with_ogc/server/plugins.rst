@@ -44,7 +44,7 @@ have to modify the Apache configuration file to indicate the
     FcgidInitialEnv QGIS_PLUGINPATH "/opt/qgis-server/plugins"
 
 Moreover, a basic HTTP authorization is necessary to play with the HelloWorld
-plugin previously introduced. So we have to update the Pache configuration file
+plugin previously introduced. So we have to update the Apache configuration file
 a last time:
 
 .. code-block:: apache
