@@ -63,7 +63,7 @@ Parameters
 Outputs
 --------
 
-``output_layer`` [vector: poylgon]
+``output_layer`` [vector: polygon]
   Output bounding boxes from input layer.
 
 Console usage
