@@ -7,9 +7,10 @@
 Authentication System Overview
 ==============================
 
-\
+.. only:: html
 
-\
+   .. contents::
+      :local:
 
 .. _figure_authsystem:
 
