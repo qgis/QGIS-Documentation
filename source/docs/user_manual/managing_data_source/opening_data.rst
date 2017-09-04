@@ -507,11 +507,12 @@ other database types, see their differences at :ref:`db_requirements`.
 * **Password**: Password used with *Username* to connect to the database.
 
   You can save any or both of the ``username`` and ``password`` parameters, in
-  which case they will be used by default for next connections. If not saved,
-  you'll be prompted to fill the missing credentials to connect to the database
-  in next QGIS sessions. Note that these connection parameters are stored
-  in a temporary internal cache lasting for lifetime of the current QGIS process
-  and returned whenever a username/password for the same connection is requested.
+  which case they will be used by default each time you need to connect to this
+  database. If not saved, you'll be prompted to fill the missing credentials to
+  connect to the database in next QGIS sessions; meanwhile the connection
+  parameters you entered are stored in a temporary internal cache and returned
+  whenever a username/password for the same database is requested, until you
+  close the current QGIS process.
 
   .. warning:: **QGIS User Settings and Security**
 
