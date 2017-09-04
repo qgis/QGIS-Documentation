@@ -522,19 +522,15 @@ other database types, see their differences at :ref:`db_requirements`.
 * **Username**: User name used to log in to the database.
 * **Password**: Password used with *Username* to connect to the database.
 
-Optionally, depending on the type of database, you can activate the following
-checkboxes:
+  You can save any or both of the ``username`` and ``password`` parameters, in
+  which case they will be used by default each time you need to connect to this
+  database. If not saved, you'll be prompted to fill the missing credentials to
+  connect to the database in next QGIS sessions; meanwhile the connection
+  parameters you entered are stored in a temporary internal cache and returned
+  whenever a username/password for the same database is requested, until you
+  close the current QGIS process.
 
-* |checkbox| :guilabel:`Save Username`
-* |checkbox| :guilabel:`Save Password`
-* |checkbox| :guilabel:`Only show layers in the layer registries`
-* |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
-* |checkbox| :guilabel:`Only look in the 'public' schema`
-* |checkbox| :guilabel:`Also list tables with no geometry`
-* |checkbox| :guilabel:`Use estimated table metadata`
-
-
-.. warning:: **QGIS User Settings and Security**
+  .. warning:: **QGIS User Settings and Security**
 
    In the :guilabel:`Authentication` tab, saving **username** and **password**
    will keep unprotected credentials in the connection configuration. Those
@@ -544,6 +540,14 @@ checkboxes:
    See :ref:`authentication_index` for more details) or in a service connection
    file (see :ref:`pg-service-file` for example).
 
+Optionally, depending on the type of database, you can activate the following
+checkboxes:
+
+* |checkbox| :guilabel:`Only show layers in the layer registries`
+* |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
+* |checkbox| :guilabel:`Only look in the 'public' schema`
+* |checkbox| :guilabel:`Also list tables with no geometry`
+* |checkbox| :guilabel:`Use estimated table metadata`
 
 .. tip:: **Use estimated table metadata to speed up operations**
 
