@@ -7,9 +7,10 @@
 User Authentication Workflows
 =============================
 
-\
+.. only:: html
 
-\
+   .. contents::
+      :local:
 
 .. _figure_authusage:
 

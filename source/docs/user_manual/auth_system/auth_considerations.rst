@@ -7,6 +7,11 @@
 Security Considerations
 =======================
 
+.. only:: html
+
+   .. contents::
+      :local:
+
 Once the master password is entered, the API is open to access authentication
 configs in the authentication database, similar to how Firefox works. However,
 in the initial implementation, no wall against PyQGIS access has been defined.
