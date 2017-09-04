@@ -17,17 +17,18 @@ QGIS Python console
       :local:
 
 As you will see later in this chapter, QGIS has been designed with a plugin
-architecture. Plugins are written in Python, a very famous language in the
+architecture. Plugins can be written in Python, a very famous language in the
 geospatial world.
 
-QGIS brings a Python API to let the user interact with its objects (layers,
-feature or interface). To help the user, QGIS has a Python console. To open the
-console go to :menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`).
+QGIS brings a Python API (see :ref:`PyQGIS Developer Cookbook <PyQGIS-Developer-Cookbook>`
+for some code sample) to let the user interact with its objects (layers,
+feature or interface). QGIS also has a Python console.
 
 The QGIS Python Console is an interactive shell for the python command
 executions. It also has a python file editor that allows you to edit and save
 your python scripts. Both console and editor are based on PyQScintilla2
-package.
+package. To open the console go to :menuselection:`Plugins --> Python Console`
+(:kbd:`Ctrl+Alt+P`).
 
 The Interactive Console
 =======================
@@ -76,8 +77,8 @@ The console main features are:
   accessed from context menu of input area;
 * Save and clear the command history. The history will be saved into the file
   :file:`~/.qgis2/console_history.txt`;
-* Open QGIS API documentation by typing ``_api``;
-* Open PyQGIS Cookbook by typing ``_pyqgis``.
+* Open `QGIS API <http://qgis.org/api>`_ documentation by typing ``_api``;
+* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_pyqgis``.
 
 .. tip:: **Reuse executed commands from the output panel**
 
