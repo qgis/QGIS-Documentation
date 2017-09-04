@@ -40,11 +40,11 @@ upon connection.
 Database authentication
 -----------------------
 
-Connections to database resources are generally stored as key=value pairs, which
+Connections to database resources are generally stored as ``key=value`` pairs, which
 will expose usernames and (optionally) passwords, if *not* using an
 authentication configuration. When configuring with the new auth system, the
-key=value will be an abstracted representation of the credentials, e.g.
-`authfg=81t21b9`
+``key=value`` will be an abstracted representation of the credentials, e.g.
+``authfg=81t21b9``.
 
 .. _figure_auth_database:
 
@@ -82,7 +82,7 @@ Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 
    Opening the Certificate Manager
 
-In the **Certificate manager**, there are editors for **Identities**,
+In the :guilabel:`Certificate Manager`, there are editors for **Identities**,
 **Servers** and **Authorities**. Each of these are contained in their own tabs,
 and are described below in the order they are encountered in the workflow chart
 above. The tab order is relative to frequently accessed editors once you are
@@ -272,10 +272,10 @@ Occasionally, you will need to change the authenticationn configuration ID that
 is associated with accessing a resource. There are instances where this is
 useful:
 
-* *Resource auth config ID is no longer valid* - This can occur when you have
+* **Resource auth config ID is no longer valid**: This can occur when you have
   switched auth databases add need to *align* a new configuration to the ID
   already associated with a resource.
-* *Shared project files* - If you intended to share projects between users, e.g.
+* **Shared project files**: If you intended to share projects between users, e.g.
   via a shared file server, you can *predefine* a 7-character (containing
   **a-z** and/or **0-9**) that is associated with the resource. Then, individual
   users change the ID of an authentication configuration that is specific to
@@ -322,7 +322,7 @@ web-accessible directories.
 .. note::
 
    ``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server
-   environment immediately after accessing
+   environment immediately after accessing.
 
 SSL server exceptions
 ---------------------
@@ -330,6 +330,7 @@ SSL server exceptions
 \
 
 \
+
 .. _figure_auth_server:
 
 .. figure:: /static/user_manual/auth_system/auth-ssl-config.png
