@@ -767,7 +767,7 @@ as explained above:
 * and a second one between ``airports`` table and the pivot table.
 
 When we add a new child (i.e. a company to an airport), QGIS will add a new row
-in the pivot table and in the ``airlines`` table. If we link a compagny to an
+in the pivot table and in the ``airlines`` table. If we link a company to an
 airport, QGIS will only add a row in the pivot table.
 
 In case you want to remove a link, an airline or an airport, QGIS won't remove
