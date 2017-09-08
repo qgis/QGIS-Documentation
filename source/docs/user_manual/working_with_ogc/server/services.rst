@@ -378,6 +378,10 @@ values are:
 - ``jpg``
 - ``jpeg``
 - ``image/jpeg``
+- ``image/png``
+- ``image/png; mode=1bit``
+- ``image/png; mode=8bit``
+- ``image/png; mode=16bit``
 
 If the ``FORMAT`` parameter is different from one of these values, then the
 default format PNG is used instead.
@@ -390,17 +394,8 @@ URL example:
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.3.0
-  &FORMAT=image/jpeg
+  &FORMAT=image/png; mode=8bit
   &...
-
-.. TODO: this ``mode`` parameter does not seem to be working
-   ``mode=`` may be used to override the png format. You can choose between
-   ``image/png; mode=16bit``, ``image/png; mode=8bit`` and
-   ``image/png; mode=1bit``. This can shrink the output image size quite a bit.
-   Example:
-   .. code-block:: none
-   http://localhost/cgi-bin/qgis_mapserv.fcgi?\
-    REQUEST=GetMap&FORMAT=image/png; mode=8bit&...
 
 
 TRANSPARENT
