@@ -28,13 +28,13 @@ Parameters
   to load it in QGIS before to import.
 
 ``Database (connection name)`` [selection]
-  Name of the database connection (not the database name).
+  Name of the database connection (not the database name). Existing connections
+  will be shown in the combobox.
 
 ``Schema (schema name)`` [string]
-  Optional.
+  Optional. Existing schemas will be listed in the combobox.
 
   An existing schema of the selected database can be chosen.
-  By default this is the ``public`` schema.
 
   Default: *public*
 
@@ -44,10 +44,9 @@ Parameters
   Defines a table name for the imported vector file.
   If nothing is added, the layer name will be used.
 
-  Default: *(not set)*
-
 ``Primary key field`` [tablefield: any]
-  Optional.
+  Optional. A column with **unique** values can be used as Primary key for the
+  database.
 
   Sets the primary key field from an existing field in the vector layer.
 
@@ -70,22 +69,19 @@ Parameters
   Default: *True*
 
 ``Create spatial index`` [boolean]
-  Specify whether to create a spatial index or not. By default a spatial
-  index is created.
+  Specify whether to create a spatial index or not.
 
   Default: *True*
 
 ``Convert field names to lowercase`` [boolean]
   If activated this prevents the field names of the input vector layer from
   being converted to lowercase.
-  By default field names will be lowercase after the import.
 
   Default: *True*
 
 ``Drop length constraints on character fields`` [boolean]
   Specify whether the length constraints on character fields should be dropped
   or not.
-  By default the length constraints are applied.
 
   Default: *False*
 
@@ -102,7 +98,15 @@ Console usage
 
 ::
 
-  processing.run('qgis:importintopostgis', input, database, schema, tablename, primary_key, geometry_column, encoding, overwrite, createindex, lowercase_names, drop_string_length, create_single_parts)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = { 'DROP_STRING_LENGTH' : False, 'INPUT' : '/home/matteo/example_layer.shp',
+  'OVERWRITE' : True, 'TABLENAME' : '', 'SCHEMA' : 'public', 'GEOMETRY_COLUMN' : 'geom',
+  'DATABASE' : 'your_database_name', 'LOWERCASE_NAMES' : True, 'ENCODING' : 'UTF-8',
+  'PRIMARY_KEY' : '', 'CREATEINDEX' : True, 'FORCE_SINGLEPART' : False }
+  # run the algorithm
+  processing.run('qgis:importintopostgis', parameters)
 
 
 .. _qgis_postgis_execute_sql:
@@ -147,12 +151,9 @@ Parameters
   By default you don't have to fill in the name, the current database
   connection will be chosen.
 
-  Default: *(not set)*
-
 ``SQL query`` [string]
   Defines the SQL query, for example ``UPDATE my_table SET field=10``.
 
-  Default: *(not set)*
 
 Outputs
 .......
@@ -165,7 +166,12 @@ Console usage
 
 ::
 
-  processing.run('qgis:postgisexecutesql', database, sql)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'DATABASE':'your_database','SQL':'ALTER TABLE your_table ADD COLUMN area2 double precision'}
+  # run the algorithm
+  processing.run('qgis:postgisexecutesql', parameters)
 
 
 .. _qgis_import_into_spatialite:
@@ -196,8 +202,6 @@ Parameters
   Defines a table name for the imported vector file.
   If nothing is added, the layer name will be used.
 
-  Default: *(not set)*
-
 ``Primary key field`` [tablefield: any]
   Optional.
 
@@ -212,7 +216,7 @@ Parameters
 ``Encoding`` [string]
   Optional.
 
-  Defines the encoding of the layer in the new SpatiLite table.
+  Defines the encoding of the layer in the new SpatiaLite table.
 
   Default: *UTF-8*
 
@@ -222,22 +226,19 @@ Parameters
   Default: *True*
 
 ``Create spatial index`` [boolean]
-  Specify whether to create a spatial index or not. By default a spatial
-  index is created.
+  Specify whether to create a spatial index or not.
 
   Default: *True*
 
 ``Convert field names to lowercase`` [boolean]
   If activated this prevents the field names of the input vector layer from
   being converted to lowercase.
-  By default field names will be lowercase after the import.
 
   Default: *True*
 
 ``Drop length constraints on character fields`` [boolean]
   Specify whether the length constraints on character fields should be dropped
   or not.
-  By default the length constraints are applied.
 
   Default: *False*
 
