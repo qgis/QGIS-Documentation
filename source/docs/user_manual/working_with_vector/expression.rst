@@ -240,7 +240,7 @@ This group contains math functions (e.g., square root, sin and cos).
  abs                Returns the absolute value of a number
  acos               Returns the inverse cosine of a value in radians
  asin               Returns the inverse sine of a value in radians
- atan               Returns the inverse cosine of a value in radians
+ atan               Returns the inverse tangent of a value in radians
  atan2(y,x)         Returns the inverse tangent of y/x by using the signs
                     of the two arguments to determine the quadrant of the
                     result
