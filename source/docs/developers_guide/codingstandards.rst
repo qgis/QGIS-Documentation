@@ -125,7 +125,7 @@ and give hints about other interfaces he could be looking for, best best
 practice and code samples.
 
 Methods
-.......
+-------
 
 Method descriptions should be written in a descriptive form, using the 3rd
 person. Methods require a ``\since`` tag that defines when they have been
@@ -148,7 +148,7 @@ that were introduced later on.
    */
 
 Members Variables
-.................
+-----------------
 
 Member variables should normally be in the ``private`` section and made
 available via getters and setters. One exception to this is for data
