@@ -101,13 +101,82 @@ Function Return Values
 
 Return small and trivially copied objects as values. Larger objects
 should be returned by const reference. The one exception to this
-is implicitly shared objects, which are always returned by value.
+is implicitly shared objects, which are always returned by value. Return
+``QObject`` or subclassed objects as pointers.
 
 * ``int maximumValue() const``
 * ``const LayerSet& layers() const``
-* ``QString title() const`` (QString is implicitly shared)
-* ``QList< QgsMapLayer* > layers() const`` (QList is implicitly shared)
+* ``QString title() const`` (``QString`` is implicitly shared)
+* ``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)
+* ``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)
+* ``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is
+  abstract and will probably need to be casted)
 
+
+API Documentation
+=================
+
+It is required to write API documentation for every class, method, enum and
+other code that is available in the public API.
+
+QGIS uses Doxygen for documentation. Write descriptive and meaningful comments
+that give a reader information about what to expect, what happens in edge cases
+and give hints about other interfaces he could be looking for, best best
+practice and code samples.
+
+Methods
+-------
+
+Method descriptions should be written in a descriptive form, using the 3rd
+person. Methods require a ``\since`` tag that defines when they have been
+introduced. You should add additional ``\since`` tags for important changes
+that were introduced later on.
+
+.. code-block:: cpp
+
+  /**
+   * Cleans the laundry by using water and fast rotation.
+   * It will use the provided \a detergent during the washing programme.
+   *
+   * \returns True if everything was successful. If false is returned, use
+   * \link error() \endlink to get more information.
+   *
+   * \note Make sure to manually call dry() after this method.
+   *
+   * \since QGIS 3.0
+   * \see dry()
+   */
+
+Members Variables
+-----------------
+
+Member variables should normally be in the ``private`` section and made
+available via getters and setters. One exception to this is for data
+containers like for error reporting. In such cases do not prefix the member
+with an ``m``.
+
+.. code-block:: cpp
+
+  /**
+   * \ingroup core
+   * Represents points on the way along the journey to a destination.
+   *
+   * \since QGIS 2.20
+   */
+  class QgsWaypoint
+  {
+    /**
+     * Holds information about results of an operation on a QgsWaypoint.
+     *
+     * \since QGIS 3.0
+     */
+    struct OperationResult
+    {
+      QgsWaypoint::ResultCode resultCode; //!< Indicates if the operation completed successfully.
+      QString message; //!< A human readable localized error message. Only set if the resultCode is not QgsWaypoint::Success.
+      QVariant result; //!< The result of the operation. The content depends on the method that returned it. \since QGIS 3.2
+    };
+  };
 
 
 Qt Designer
@@ -296,29 +365,33 @@ should be done in a manner similar to the Qt sourcecode e.g.
   class Foo
   {
     public:
-      /** This method will be deprecated, you are encouraged to use
-       *  doSomethingBetter() rather.
-       *  @deprecated doSomethingBetter()
+      /**
+       * This method will be deprecated, you are encouraged to use
+       * doSomethingBetter() rather.
+       * \deprecated doSomethingBetter()
        */
       Q_DECL_DEPRECATED bool doSomething();
 
-      /** Does something a better way.
-       *  @note added in 1.1
+      /**
+       * Does something a better way.
+       * \note added in 1.1
        */
       bool doSomethingBetter();
 
     signals:
-      /** This signal will be deprecated, you are encouraged to
-       *  connect to somethingHappenedBetter() rather.
-       * @deprecated use somethingHappenedBetter()
+      /**
+       * This signal will is deprecated, you are encouraged to
+       * connect to somethingHappenedBetter() rather.
+       * \deprecated use somethingHappenedBetter()
        */
   #ifndef Q_MOC_RUN
       Q_DECL_DEPRECATED
   #endif
       bool somethingHappened();
 
-      /** Something happened
-       *  @note added in 1.1
+      /**
+       * Something happened
+       * \note added in 1.1
        */
       bool somethingHappenedBetter();
   }
