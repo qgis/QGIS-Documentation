@@ -322,7 +322,7 @@ left of the attribute table dialog. This list offers the following filters:
   Then, only the matching features are shown in the attribute table.
 * :guilabel:`Advanced filter (Expression)` - Opens the expression builder
   dialog. Within it, you can create complex expressions to match table rows.
-  For example, you can filter the table using more that one field.
+  For example, you can filter the table using more than one field.
   See :ref:`vector_expressions` for more information.
 
 It is also possible to filter features using the :ref:`filter_select_form`.
