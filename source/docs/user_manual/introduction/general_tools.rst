@@ -299,6 +299,15 @@ You no longer need to hit the **[Apply]** button.
 
     Defining a layer symbology from the layer styling panel
 
+.. tip:: **Add custom tabs to the Layer Styling panel**
+
+  Using :ref:`PyQGIS <PyQGIS-Developer-Cookbook>`, you can set new tabs to manage
+  layer properties in the Layer Styling Panel. See
+  https://nathanw.net/2016/06/29/qgis-style-dock-part-2-plugin-panels/ for an example.
+
+.. Actually, what could be nice is to provide example in the Cookbook to have an
+ internal and always guaranteed link (see #2071)
+
 .. index::
    single: Panels; Statistic
    single: Statistic
