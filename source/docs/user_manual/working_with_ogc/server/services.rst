@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 ********
 Services
 ********

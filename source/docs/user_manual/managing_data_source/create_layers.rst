@@ -10,8 +10,8 @@
 
 .. only:: html
 
-.. contents::
-   :local:
+   .. contents::
+      :local:
 
 
 Creating a layer can be processed in many ways in QGIS; it can be done:

@@ -7,9 +7,10 @@
 Authentication System Overview
 ==============================
 
-\
+.. only:: html
 
-\
+   .. contents::
+      :local:
 
 .. _figure_authsystem:
 
@@ -148,8 +149,8 @@ HTTP(S) or database, and whether there is support in both QGIS code and a
 plugin. As such, some authentication method plugins may not be applicable
 everywhere an authentication configuration selector is shown. A list of
 available authentication method plugins and their compatible resource/providers
-can be accessed going to :menuselection:`Settings -- > Option` and, in the
-:guilabel:`Authentication` tab, click the |options| **Installed plugins**
+can be accessed going to :menuselection:`Settings --> Options` and, in the
+:guilabel:`Authentication` tab, click the |options| **[Installed plugins]**
 button.
 
 .. _figure_authmethod:
@@ -213,24 +214,27 @@ authentication database and configurations:
 
    Utilities menu
 
-* *Input master password* — Opens the master password input dialog, independent
-  of performing any auth db command. Clear cached master password—Unsets the
-  master password if it has been set via input dialog. Reset master
-  password—Opens a dialog to change the master password (the current password
-  must be known) and optionally back up the current database.
+* **Input master password**:
+  
+  * Opens the master password input dialog, independent of performing any
+    authentication database command. Clear cached master password
+  * Unsets the master password if it has been set via input dialog. Reset master
+    password
+  * Opens a dialog to change the master password (the current password
+    must be known) and optionally back up the current database.
 
-* *Clear cached authentication configurations* — Clears the internal lookup cache
+* **Clear cached authentication configurations**: Clears the internal lookup cache
   for configurations used to speed up network connections. This does not clear
   QGIS’s core network access manager’s cache, which requires a relaunch of QGIS.
 
-* *Reset master password* - Replaces the current master password for a new one.
+* **Reset master password**: Replaces the current master password for a new one.
   The current master password will be needed prior to resetting and a backup of
   database can be done.
 
-* *Remove all authentication configurations* — Clears the database of all
+* **Remove all authentication configurations**: Clears the database of all
   configuration records, without removing other stored records.
 
-* *Erase authentication database* — Schedules a backup of the current database
+* **Erase authentication database**: Schedules a backup of the current database
   and complete rebuild of the database table structure. These actions are
   scheduled for a later time, so as to ensure other operations like project
   loading do not interrupt the operation or cause errors due to a temporarily
@@ -263,14 +267,14 @@ config’s ID respectively.
 .. figure:: /static/user_manual/auth_system/auth-selector-no-authentication.png
    :align: center
 
-   Auth config selector with no autentication
+   Authentication configuration selector with no authentication
 
 .. _figure_authconfigselector_pkcs:
 
 .. figure:: /static/user_manual/auth_system/auth-selector-pkcs12-authentication.png
    :align: center
 
-   Auth config selector with config selected
+   Authentication configuration selector with selected config
 
 Python bindings
 ---------------
