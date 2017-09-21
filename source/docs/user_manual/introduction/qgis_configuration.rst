@@ -495,6 +495,8 @@ or when a layer without a CRS is loaded.
   its parameters (source and destination ellipsoids and the numbers from the
   transformation table). You then need to manually enter each setting.
 
+.. note:: For more information on how QGIS handles layers projection, please
+  read the dedicated section at :ref:`label_projections`.
 
 .. index:: Overwrite language
 .. _locale_options:
@@ -679,7 +681,8 @@ described above.
 
 * The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
-  vector layers when displaying layers from a different CRS.
+  vector layers when displaying layers from a different CRS. For more information
+  on projection's handling in QGIS, please read :ref:`label_projections` section.
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
@@ -695,8 +698,10 @@ described above.
   There is also an additional section where you can define specific colors for the
   running project. You can find the added colors in the drop down menu of the color dialog
   window present in each renderer.
-* The tab :guilabel:`OWS Server` allows you to define information about the QGIS
-  Server WMS and WFS capabilities, extent and CRS restrictions.
+* The tab :guilabel:`OWS Server` allows you to configure your project in order
+  to publish it online. Here you can define information about the QGIS
+  Server WMS and WFS capabilities, extent and CRS restrictions. More information
+  available in section :ref:`Creatingwmsfromproject` and subsequent.
 * The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
   only three macros are available: ``openProject()``, ``saveProject()`` and
   ``closeProject()``.
