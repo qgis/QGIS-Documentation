@@ -223,7 +223,7 @@ future QGIS sessions.
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
    *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See ref:`authentication_index` for more details.
+   See :ref:`authentication_index` for more details.
 
 .. _`ogc-wms-layers`:
 
