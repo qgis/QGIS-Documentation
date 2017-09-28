@@ -255,7 +255,7 @@ layer and re-create the buffer using the settings shown here:
 .. image:: /static/training_manual/vector_analysis/dissolve_buffer_setup.png
    :align: center
 
-* Note that we're now checking the :guilabel:`Disolve result` box.
+* Note that we're now checking the :guilabel:`Dissolve result` box.
 * Save the output under the same name as before (click :guilabel:`Yes` when it
   asks your permission to overwrite the old one).
 * Click :guilabel:`OK` and close the :guilabel:`Fixed distance buffer` dialog again.
