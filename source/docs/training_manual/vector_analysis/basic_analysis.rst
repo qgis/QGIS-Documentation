@@ -227,7 +227,7 @@ This gives you a new dialog.
 .. image:: /static/training_manual/vector_analysis/vector_buffer_setup.png
    :align: center
 
-The :guilabel:`Buffer distance` is in meters because our input dataset is in a
+The :guilabel:`Distance` is in meters because our input dataset is in a
 Projected Coordinate System that uses meter as its basic measurement unit.
 This is why we needed to use projected data.
 
@@ -255,7 +255,7 @@ layer and re-create the buffer using the settings shown here:
 .. image:: /static/training_manual/vector_analysis/dissolve_buffer_setup.png
    :align: center
 
-* Note that we're now checking the :guilabel:`Dissolve buffer results` box.
+* Note that we're now checking the :guilabel:`Disolve result` box.
 * Save the output under the same name as before (click :guilabel:`Yes` when it
   asks your permission to overwrite the old one).
 * Click :guilabel:`OK` and close the :guilabel:`Fixed distance buffer` dialog again.
