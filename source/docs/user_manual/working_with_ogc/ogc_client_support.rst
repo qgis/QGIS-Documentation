@@ -598,7 +598,7 @@ supports selection of time position, if temporal domain is offered by the server
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
    *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See ref:`authentication_index` for more details.
+   See :ref:`authentication_index` for more details.
 
 .. _`ogc-wfs`:
 
@@ -645,7 +645,7 @@ downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS
    **credentials will be visible** if, for instance, you shared the project file
    with someone. Therefore, it's advisable to save your credentials in a
    *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See ref:`authentication_index` for more details.
+   See :ref:`authentication_index` for more details.
 
 .. _figure_OGC_add_wfs:
 
