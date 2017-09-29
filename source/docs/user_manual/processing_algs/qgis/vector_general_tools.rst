@@ -11,25 +11,30 @@ Vector general
       :local:
       :depth: 1
 
-Delete duplicate geometries
----------------------------
 
-Description
-...........
+.. _qgis_build_virtual_vector:
 
-<put algorithm description here>
+Build virtual vector
+--------------------
+This algorithm creates a virtual layer that contains a set of vector layer.
+The output virtual layer will not be open in the current project.
+
+This algorithm is especially useful in case another algorithm needs multiple
+layers but accept only one vrt in which the layers are specified
 
 Parameters
 ..........
+``Input datasources`` [selection: vector any]
+  Select the vector layers you want to use to build the virtual vector
 
-``Input layer`` [vector: any]
-  <put parameter description here>
+``Create "unioned" VRT`` [boolean]
+  Check if you want to unite all the vectors
+  Default: *False*
 
 Outputs
 .......
-
-``Output`` [vector]
-  <put output description here>
+``Virtual vector``
+  The final virtual vector made by all the source vector chosen
 
 Console usage
 .............
@@ -38,203 +43,443 @@ Console usage
 
   processing.runalg('qgis:deleteduplicategeometries', input, output)
 
-See also
-........
+
+.. _qgis_create_attribute_index:
+
+Create attribute index
+----------------------
+Creates an index against a field of the attribute table to speed up queries.
+The support for index creation depends on both the layer's data provider and the
+field type.
+
+No outputs are created: the index is stored on the layer itself.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer
+
+``Attribute to index`` [tablefield: any]
+  Field of the vector layer
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+
+.. _qgis_create_spatial_index:
+
+Create spatial index
+--------------------
+Creates an index to speed up queries made against a field in a table. Support for
+index creation is dependent on the layer's data provider and the field type.
+
+No new output layers are created.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer in input
+
+``Attribute to index`` [tablefield: any]
+  Choose the attribute you want to index in order to speed up future queries.
+
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+.. _qgis_define_current_projection:
+
+Define current projection
+-------------------------
+Useful when a layer is missing the `proj` file and you know the correct projection.
+
+Final results are not visible directly on QGIS but the `prj` file is written in
+the same directory of the input layer.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer with missing projection information
+
+``Output CRS`` [projection]
+  The combo box will show the last CRS used in QGIS. If the desired CRS is missing
+  you can search by clicking on the button
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+.. _qgis_delete_duplicate_geometries:
+
+Delete duplicate geometries
+---------------------------
+This algorithm finds duplicated geometries and removes them.
+
+Attributes are not checked, so in case two features have identical geometries
+but different attributes, only one of them will be added to the result layer.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  The layer with duplicate geometries you want to clean
+
+
+Output
+......
+``Cleaned`` [vector]
+  The final layer without any duplicated geometries
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+.. _qgis_drop_geometries:
+
+Drop geometries
+---------------
+Creates a simple geometryless copy of the input layer attribute table. It keeps
+the attribute table of the source layer.
+
+If the file is save in a local folder, the output will be a ``dbf`` file.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer
+
+Outputs
+.......
+
+``Dropped geometry`` [table]
+  Geometryless table as a copy of the original attribute table.
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+
+.. _qgis_execute_sql:
 
 Execute SQL
 -----------
+Run a simple or complex query with SQL syntax on the source layer.
 
-Description
-...........
-
-This algorithm allows to execute an SQL query on a set of input
-vector layers thanks to the virtual layer provider.
+The resulting query will be added as new layer.
 
 Parameters
 ..........
+``Additional input datasource`` [selection: vector any]
+  Here you can choose a single layer to query or many different layers. In the
+  SQL editor you can refer this layers with their **real** name or also with
+  **input1**, **input2**, **inputN** depending on how many layer have been choosen
 
-``Input layer`` [vector: any]
-  <put parameter description here>
+``SQL query`` [text]
+  Type here the string of your SQL query
 
-``Additional data sources`` [vector] 
-  Data sources that have to be loaded for reference in the SQL query.
-  Any layer already loaded in QGIS is available in the query through its name or id. But for use of this
-  algorithm in a script, input sources should be set here. Each input data source can be referred to as
-  input1 ... inputN as layer names in the query.
+``Unique identifier field`` (optional)
+  Specify the column with unique ID
 
-``Query`` [string]
-  The SQL query. SQLite, Spatialite and QGIS expression functions can be used here.
+``Geometry field`` (optional)
+  Specify the geometry field
 
-``Unique identifier field`` [string]
-  Optional parameter to specify which field of the query should be used as a unique id.
+``Geometry type`` (optional)
+  Choose the final geometry of the result. By default the algorith will autodetect
+  it
 
-``Geometry field`` [string]
-  Optional parameter to specify which field should be considered as the geometry
-  field, if one wants to avoid possibly slow autodetection.
+  Default: *Autodetect*
 
-``Geometry type`` [selection]
-  Optional parameter to specify the type of the geometry if one wants to avoid possibly slow autodetection.
+``CRS`` (optional)
+  Forse the output layer to be reprojected to another CRS
 
-Geometry types:
 
-* 0 --- Autodetect
-* 1 --- NoGeometry
-* 2 --- Point
-* 3 --- LineString
-* 4 --- Polygon
-* 5 --- MultiPoint
-* 6 --- MultiLineString
-* 7 --- MultiPolygon
+Output
+......
+``SQL Output`` [vector]
+  Vector layer created by the query
 
-``Geometry CRS`` [crs]
-  Optional parameter to specify the coordinate system of the geometry
-  if one wants to avoid possibly slow autodetection.
-
-Outputs
-.......
-
-``Output`` [vector]
-  Output vector
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('qgis:executesql', inputs, query, uid, geom_field, geom_type, crs)
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
 
-See also
-........
 
+
+.. _qgis_find_projection:
+
+Find projection
+---------------
+This algorithm allows creation of a shortlist of possible candidate coordinate
+reference systems for a layer with an unknown projection.
+
+The expected area which the layer should reside in must be specified via the
+target area parameter. Additionally, the coordinate reference system for this
+target area must also be set.
+
+The algorithm operates by testing the layer's extent in every known reference
+system and listing any in which the bounds would fall near the target area if the
+layer was in this projection.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Layer with unknown projection
+
+``Target area for layer`` [extent]
+  This is the area in which the layer is expected to be
+
+``Target area CRS`` [crs]
+  Choose the target CRS of the target area selected
+
+Output
+......
+``CRS candidates`` [table]
+  The algorithm writes a table with all the CRS (EPSG codes) of the matching
+  criteria
+
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+
+.. _qgis_join_attributes_by_location:
 
 Join attributes by location
 ---------------------------
+This algorithm takes an input vector layer and creates a new vector layer that is
+an extended version of the input one, with additional attributes in its attribute
+table.
 
-Description
-...........
-
-<put algorithm description here>
+The additional attributes and their values are taken from a second vector layer.
+A spatial criteria is applied to select the values from the second layer that are
+added to each feature from the first layer in the resulting one.
 
 Parameters
 ..........
+``Input layer`` [vector: any]
+  Source vector layer
 
-``Target vector layer`` [vector: any]
-  <put parameter description here>
+``Join layer`` [vector: any]
+  the attributes of this vector layer will be **added** to the source layer
+  attribute table
 
-``Join vector layer`` [vector: any]
-  <put parameter description here>
-
-``Geometric predicate`` [geometrypredicate]
-  Predicate name or list of predicate names interpreted in an OR like manner.
-
-  Possible values: *['intersects', 'contains', 'equals', 'touches', 'overlaps', 'within', 'crosses']*
-
-  Default: *[]*
-
-``Attribute summary`` [selection]
-  <put parameter description here>
+``Geometric predicate`` [checkbox]
+  Check the geometric criteria.
 
   Options:
 
-  * 0 --- Take attributes of the first located feature
-  * 1 --- Take summary of intersecting features
+  * intersect
+  * contains
+  * equals
+  * touches
+  * overlaps
+  * within
+  * crossed
 
-  Default: *0*
+``Fields to add`` (optional) [tablefield]
+  Select the specific fields you want to add. By defaul all the fields are added
 
-``Statistics for summary (comma separated)`` [string]
-  Optional.
+``Join type`` [combobox]
+  Choose the type of the final joined layer. If you want you can create one feature
+  for each located feature or you can take the attributes of only the first feature
+  located
 
-  <put parameter description here>
+``Discard records which could not be joined`` [boolean]
+  Check if you don't want to add the features that cannot be joined
 
-  Default: *sum,mean,min,max,median*
-
-``Joined table`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- Only keep matching records
-  * 1 --- Keep all records (including non-matching target records)
-
-  Default: *0*
-
-Outputs
-.......
-
+Output
+......
 ``Joined layer`` [vector]
-  <put output description here>
+  The final vector with all the joined features.
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('qgis:joinattributesbylocation', target, join, predicate, summary, stats, keep, output)
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
 
-See also
-........
+
+
+.. _qgis_join_attributes_by_location_summary:
+
+Join attributes by location (summary)
+-------------------------------------
+This algorithm takes an input vector layer and creates a new vector layer that is
+an extended version of the input one, with additional attributes in its attribute
+table.
+
+The additional attributes and their values are taken from a second vector layer.
+A spatial criteria is applied to select the values from the second layer that are
+added to each feature from the first layer in the resulting one.
+
+The algorithm calculates a statistical summary for the values from matching
+features in the second layer (e.g. maximum value, mean value, etc).
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Source vector layer
+
+``Join layer`` [vector: any]
+  the attributes of this vector layer will be **added** to the source layer
+  attribute table
+
+``Geometric predicate`` [checkbox]
+  Check the geometric criteria.
+
+  Options:
+
+  * intersect
+  * contains
+  * equals
+  * touches
+  * overlaps
+  * within
+  * crossed
+
+``Fields to summarize`` (optional) [tablefield]
+  Select the specific fields you want to add. By defaul all the fields are added
+
+``Summaries to calculate`` (optional) [selection]
+  Choose with type of summary you want to add to each field and for each fature.
+
+  * count
+  * unique
+  * min
+  * max
+  * range
+  * sum
+  * mean
+  * median
+  * stddev
+  * minority
+  * majority
+  * q1
+  * q3
+  * iqr
+  * empty
+  * filled
+  * min_length
+  * max_length
+  * mean_length
+
+``Discard records which could not be joined`` [boolean]
+  Check if you don't want to add the features that cannot be joined
+
+Output
+......
+``Joined layer`` [vector]
+  The final vector with all the joined features.
+
+Console usage
+.............
+
+::
+
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
+
+
+
+.. _qgis_join_attributes_table:
 
 Join attributes table
 ---------------------
+This algorithm takes an input vector layer and creates a new vector layer that
+is an extended version of the input one, with additional attributes in its attribute
+table.
 
-Description
-...........
-
-<put algorithm description here>
+The additional attributes and their values are taken from a second vector layer.
+An attribute is selected in each of them to define the join criteria.
 
 Parameters
 ..........
-
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Source input vector layer. The final attribute table will be appended to **this**
+  vector layer
 
-``Input layer 2`` [table]
-  <put parameter description here>
+``Input layer 2`` [vector: any]
+  Layer with the attribute table to join
 
-``Table field`` [tablefield: any]
-  <put parameter description here>
+``Table field`` [tablefield]
+  Field of the source layer with the unique identifier
 
-``Table field 2`` [tablefield: any]
-  <put parameter description here>
+``Table field 2`` [tablefield]
+  Table of the joining layer with the common unique field identifier
 
-Outputs
-.......
+Output
+......
+``Joined layer`` [vector]
+  Final vector layer with the attribute table as result of the joining
 
-``Output layer`` [vector]
-  <put output description here>
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('qgis:joinattributestable', input_layer, input_layer_2, table_field, table_field_2, output_layer)
+  processing.runalg('qgis:deleteduplicategeometries', input, output)
 
-See also
-........
+
+
+.. _qgis_merge_vector_layers:
 
 Merge vector layers
 -------------------
+This algorithm combines multiple vector layers of the **same geometry** type into
+a single one.
 
-Description
-...........
+If attributes tables are different, the attribute table of the resulting layer
+will contain the attributes from all input layers. New attributes will be added
+for the original layer name and source.
 
-<put algorithm description here>
+The layers will all be reprojected to match the coordinate reference system of
+the first input layer.
+
+.. figure:: /static/user_manual/processing_algs/qgis/merge_vector_layers.png
+   :align: center
 
 Parameters
 ..........
 
-``Input layer 1`` [vector: any]
-  <put parameter description here>
-
-``Input layer 2`` [vector: any]
-  <put parameter description here>
+``Layers to merge`` [multipleinput: vector]
+  All the layers that have to be merged into a single layer.
 
 Outputs
 .......
 
-``Output`` [vector]
-  <put output description here>
+``Merged`` [vector]
+  Merged vector layer.
 
 Console usage
 .............
@@ -243,91 +488,15 @@ Console usage
 
   processing.runalg('qgis:mergevectorlayers', layer1, layer2, output)
 
-See also
-........
 
-Merge datasources in VRT
-------------------------
-Description
-...........
 
-This algorithm merge the layers of different data sources in a single vrt file
-This algorithm is especially useful in case another algorithm needs multiple
-layers but accept only one vrt in which the layers are specified
-
-Parameters
-...........
-
-``Input datasources`` [multipleinput: any vectors]
-  Input datasources to merge in a single VRT
-  input_datasources is a single string with all path ";" separated as "path1;path2;....;pathN"
-
-``Overwrite output vrt`` [boolean]
-  Overwrite VRT if it's already exist
-
-  Default: *False*
-
-Outputs
-........
-
-``Output vrt filename`` [file]
-  VRT output filename
-
-``Output vrt string`` [string]
-  VRT content returned as string
-
-Console usage
-..............
-
-::
-
-  processing.runalg('qgis:mergedatasourcesinvrt', input_datasources, input_overwrite_flag, output_vrt_file)
-
-See also
-.........
-
-Polygon from layer extent
--------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  <put parameter description here>
-
-``Calculate extent for each feature separately`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
-
-Outputs
-.......
-
-``Output layer`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:polygonfromlayerextent', input_layer, by_feature, output)
-
-See also
-........
+.. _qgis_reproject_layer:
 
 Reproject layer
 ---------------
 
-Description
-...........
-
-Reprojects a vector layer in a different CRS.
+Reprojects a vector layer in a different CRS. The reprojected layer will have
+the same features and attributes of the input layer.
 
 Parameters
 ..........
@@ -344,7 +513,7 @@ Outputs
 .......
 
 ``Reprojected layer`` [vector]
-  The resulting layer.
+  The resulting reprojected layer.
 
 Console usage
 .............
@@ -353,28 +522,24 @@ Console usage
 
   processing.runalg('qgis:reprojectlayer', input, target_crs, output)
 
-See also
-........
+
+.. _qgis_save_selected_features:
 
 Save selected features
 ----------------------
-
-Description
-...........
-
 Saves the selected features as a new layer.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Layer to process.
+  Layer to save the selection from.
 
 Outputs
 .......
 
-``Output layer with selected features`` [vector]
-  The resulting layer.
+``Selection`` [vector]
+  Vector layer with just the selected features.
 
 Console usage
 .............
@@ -383,104 +548,72 @@ Console usage
 
   processing.runalg('qgis:saveselectedfeatures', input_layer, output_layer)
 
-See also
-........
+
+
+.. _qgis_set_style_for_vector_layer:
 
 Set style for vector layer
 --------------------------
+Sets the style of a vector layer. The style must be defined in a
+QML file.
 
-Description
-...........
+This algorithm could be particularly useful in Processing models: if you have
+some `qml` files saved in your computer you can easily assign them to the output
+of the model.
 
-<put algorithm description here>
+No new output are created: the source layer is immediatly style with the `qml`
+rules.
 
 Parameters
 ..........
-
 ``Vector layer`` [vector: any]
-  <put parameter description here>
+  The layer you want to change the style
 
 ``Style file`` [file]
-  <put parameter description here>
+  `qml` file of the style
 
-Outputs
-.......
-
-``Styled layer`` [vector]
-  <put output description here>
 
 Console usage
 .............
 
 ::
 
-  processing.runalg('qgis:setstyleforvectorlayer', input, style)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT' : 'path_of_your_layer', 'STYLE': 'path_to_your_style'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:setstyleforvectorlayer', parameters)
 
-See also
-........
 
-Snap points to grid
--------------------
 
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input Layer`` [vector: any]
-  <put parameter description here>
-
-``Horizontal spacing`` [number]
-  <put parameter description here>
-
-  Default: *0.1*
-
-``Vertical spacing`` [number]
-  <put parameter description here>
-
-  Default: *0.1*
-
-Outputs
-.......
-
-``Output`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:snappointstogrid', input, hspacing, vspacing, output)
-
-See also
-........
+.. _qgis_split_vector_layer:
 
 Split vector layer
 ------------------
+Creates a set of vectors in an output folder from an input layer and an attribute.
+Each layer in the output folder contain all the features from the input layer that
+matches the unique attribute chosen.
 
-Description
-...........
+The number of files generated is equal to the number of different values found
+for the specified attribute.
 
-<put algorithm description here>
+It is the opposite operation of *merging*.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Vector layer
 
 ``Unique ID field`` [tablefield: any]
-  <put parameter description here>
+  Field of the attribute table on witch the layer will be split.
 
 Outputs
 .......
 
 ``Output directory`` [directory]
-  <put output description here>
+  Directory where all the split layer will be saved.
 
 Console usage
 .............
@@ -489,41 +622,30 @@ Console usage
 
   processing.runalg('qgis:splitvectorlayer', input, field, output)
 
-See also
-........
 
-Oriented minimum bounding box
------------------------------
 
-Description
-...........
+.. _qgis_truncate_table:
 
-Return an oriented minimum bounding Box layer by using the rotating calipers algorithm.
+Truncate table
+--------------
+This algorithm truncates a layer, by deleting all features from within the layer.
+
+**Warning** - this algorithm modifies the layer in place, and deleted features cannot
+be restored!
 
 Parameters
 ..........
-
 ``Input layer`` [vector: any]
-  <put parameter description here>
-
-``Calculate OMBB for each feature separately`` [boolean]
-  <put parameter description here>
-
-  Default: *True*
-
-Outputs
-.......
-
-``Oriented_MBBox`` [vector]
-  The resulting layer.
+  Vector layer in input
 
 Console usage
 .............
 
 ::
 
-  processing.runalg("qgis:orientedminimumboundingbox", input , by_feature, output)
-
-See also
-........
-
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT' : 'path_of_your_layer'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:truncatetable', parameters)
