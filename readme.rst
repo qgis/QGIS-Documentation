@@ -39,7 +39,7 @@ and html (jinja2) templates.
 Most sources are in source/docs. Only frontpage and landing pages are in theme/qgis-theme
 
 Styling is in theme/qgis-theme. This theme is used for website and documentation builds. 
-The Website version is the canonical one.
+The website version is the canonical one.
 
 Partial / faster building
 -------------------------
@@ -48,7 +48,7 @@ Because of the size of the documentation, the building of the full docs can take
 
 You can decide to only build certain parts of the documentation by editing the source/conf.py file.
 
-Uncomment the lines for the modules that you NOT want to build in this part of source/conf.py::
+Uncomment the lines for the modules that you do NOT want to build in this part of source/conf.py::
 
  # List of patterns, relative to source directory, that match files and           
  # directories to ignore when looking for source files.                           
@@ -96,7 +96,7 @@ Now always activate your environment before building. To deactivate, you can do:
 
     deactivate
 
-You can install all tools in on go via the REQUIREMENTS.txt here in root of this repo::
+You can install all the tools in one go via the REQUIREMENTS.txt here in root of this repo::
 
     pip install -r REQUIREMENTS.txt
 
