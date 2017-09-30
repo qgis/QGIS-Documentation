@@ -18,8 +18,7 @@ Extract layer extent
 Generates a vector layer with the minimum bounding box (rectangle with N-S orientation)
 that covers all the input features.
 
-The output layer can contain a single bounding box for the whole input layer or
-one for each feature, representing the bounding box of each of them.
+The output layer contains a single bounding box for the whole input layer.
 
 Parameters
 ..........
@@ -43,7 +42,7 @@ Console usage
 
 ::
 
-  # import processing
+  # import the processing class
   import processing
   # define the parameters dictionary with all the input
   parameters = {'INPUT' : 'path_of_your_layer', 'OUTPUT' : 'memory:'}
