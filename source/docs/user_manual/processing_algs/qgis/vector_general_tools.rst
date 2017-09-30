@@ -68,7 +68,12 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:deleteduplicategeometries', input, output)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT':'path_to_layer','FIELD':'field_name'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:createattributeindex', parameters)
 
 
 
@@ -95,7 +100,13 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:deleteduplicategeometries', input, output)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT':'path_to_layer'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:createspatialindex', parameters)
+
 
 
 .. _qgis_define_current_projection:
@@ -121,7 +132,13 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:deleteduplicategeometries', input, output)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  # in the following example the target CRS is 4326
+  parameters = {'INPUT':'path_to_layer', 'CRS':'EPSG:4326'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:definecurrentprojection', parameters)
 
 
 .. _qgis_delete_duplicate_geometries:
@@ -139,8 +156,8 @@ Parameters
   The layer with duplicate geometries you want to clean
 
 
-Output
-......
+Outputs
+.......
 ``Cleaned`` [vector]
   The final layer without any duplicated geometries
 
@@ -149,7 +166,12 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:deleteduplicategeometries', input, output)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT':'path_to_layer', 'OUTPUT':'memory:'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:deleteduplicategeometries', parameters)
 
 
 .. _qgis_drop_geometries:
@@ -177,8 +199,12 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:deleteduplicategeometries', input, output)
-
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT':'path_to_layer', 'OUTPUT':'memory:'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:dropgeometries', parameters)
 
 
 .. _qgis_execute_sql:
@@ -215,8 +241,8 @@ Parameters
   Forse the output layer to be reprojected to another CRS
 
 
-Output
-......
+Outputs
+.......
 ``SQL Output`` [vector]
   Vector layer created by the query
 
@@ -226,7 +252,14 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:deleteduplicategeometries', input, output)
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'INPUT_DATASOURCES':['path_to_your_layer'],'INPUT_QUERY':
+  'SELECT * FROM province','INPUT_UID_FIELD':'','INPUT_GEOMETRY_FIELD':'',
+  'INPUT_GEOMETRY_TYPE':0,'INPUT_GEOMETRY_CRS':'','OUTPUT':'memory:'})
+  # run the algorithm
+  processing.runAndLoadResults('qgis:executesql', parameters)
 
 
 
@@ -256,8 +289,8 @@ Parameters
 ``Target area CRS`` [crs]
   Choose the target CRS of the target area selected
 
-Output
-......
+Outputs
+.......
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
   criteria
@@ -317,8 +350,8 @@ Parameters
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
 
-Output
-......
+Outputs
+.......
 ``Joined layer`` [vector]
   The final vector with all the joined features.
 
@@ -397,8 +430,8 @@ Parameters
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
 
-Output
-......
+Outputs
+.......
 ``Joined layer`` [vector]
   The final vector with all the joined features.
 
@@ -437,8 +470,8 @@ Parameters
 ``Table field 2`` [tablefield]
   Table of the joining layer with the common unique field identifier
 
-Output
-......
+Outputs
+.......
 ``Joined layer`` [vector]
   Final vector layer with the attribute table as result of the joining
 
@@ -486,8 +519,12 @@ Console usage
 
 ::
 
-  processing.runalg('qgis:mergevectorlayers', layer1, layer2, output)
-
+  # import processing
+  import processing
+  # define the parameters dictionary with all the input
+  parameters = {'LAYER': ['path_to_first_layer', 'path_to_second_layer'], 'OUTPUT':'memory:'}
+  # run the algorithm
+  processing.runAndLoadResults('qgis:mergevectorlayers', parameters)
 
 
 .. _qgis_reproject_layer:
