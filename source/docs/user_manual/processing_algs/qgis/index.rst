@@ -17,6 +17,7 @@ algorithms.
      :maxdepth: 2
 
      database
+     layer_tools
      raster_general_tools
      raster_tools
      table
