@@ -13,7 +13,6 @@ Processing providers and algorithms
 
      gdalogr/index
      lidartools/lastools
-     modelertools/modeleronly_tools
      otb/index
      qgis/index
      r/index
