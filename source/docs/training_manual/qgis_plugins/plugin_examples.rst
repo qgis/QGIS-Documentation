@@ -95,7 +95,7 @@ properly:
      :align: center
 
 * Now use the plugin to give you a Google map of the area. You can click on
-  :menuselection:`Plugins --> OpenLayers Plugin --> Add Google Hybrid Layer` to
+  :menuselection:`Web --> OpenLayers Plugin --> Add Google Hybrid Layer` to
   add it: 
 
   .. image:: /static/training_manual/qgis_plugins/add_google_hybrid.png
