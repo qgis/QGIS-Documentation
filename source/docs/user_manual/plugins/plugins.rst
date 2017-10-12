@@ -67,7 +67,7 @@ Paths to Custom C++ plugins libraries can also be added under
 The Plugins Dialog
 ===================
 
-The menus in the Plugins dialog allow the user to install, uninstall and upgrade
+The tabs in the Plugins dialog allow the user to install, uninstall and upgrade
 plugins in different ways. Each plugin has some metadata displayed in the right
 panel:
 
@@ -81,15 +81,16 @@ panel:
 
 At the top of the dialog, a :guilabel:`Search` function helps you find any
 plugin using metadata information (author, name, description...). It is
-available in nearly every menu (except |transformSettings| :guilabel:`Settings`).
+available in nearly every tab (except |transformSettings| :guilabel:`Settings`).
 
 .. _setting_plugins:
 
 The Settings tab
 ----------------
 
-In the |transformSettings| :guilabel:`Settings` tab, you can use the following
-options:
+The |transformSettings| :guilabel:`Settings` tab is the main place you can
+configure which plugins can be displayed in your application.
+You can use the following options:
 
 * |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
   a plugin update is available, QGIS will inform you 'every time QGIS starts',
@@ -102,8 +103,10 @@ options:
   deprecated and generally unsuitable for production use. They appear among
   invalid plugins list.
 
-To add external author repositories, click **[Add...]** in the :guilabel:`Plugin
-repositories` section.
+By default, QGIS provides you with its official plugin repository with the URL
+https://plugins.qgis.org/plugins/plugins.xml?qgis=2.18 (in case of QGIS 2.18)
+in the :guilabel:`Plugin repositories` section. To add external author repositories,
+click **[Add...]** and fill in the form with a name and the URL.
 If you do not want one or more of the added repositories, they can be disabled
 via the **[Edit...]** button, or completely removed with the **[Delete]** button.
 
@@ -203,4 +206,3 @@ another compatible plugin or help to upgrade the broken one).
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab
-
