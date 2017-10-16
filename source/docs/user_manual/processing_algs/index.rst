@@ -11,10 +11,10 @@ Processing providers and algorithms
 .. toctree::
      :maxdepth: 2
 
+     qgis/index
      gdalogr/index
      lidartools/lastools
      otb/index
-     qgis/index
      r/index
      saga/index
      taudem/index
