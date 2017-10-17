@@ -30,7 +30,7 @@ including each type of map item described in the previous section.
 .. index:: Export as image, Export as PDF, Export as SVG
 
 Before printing a layout you have the possibility to view your composition
-without bounding boxes. This can be enabled by deactivating :guilabel:`View -->`
+without bounding boxes. This can be enabled by deactivating :menuselection:`View -->`
 |checkbox| :guilabel:`Show bounding boxes` or pressing the shortcut
 :kbd:`Ctrl+Shift+B`.
 
@@ -205,7 +205,7 @@ Once checked, you can set:
   Its value is meaningful only when using the auto-scaling mode.
 * A |radioButtonOff| :guilabel:`Predefined scale` (best fit). It will use the best
   fitting option from the list of predefined scales in your project properties settings
-  (see :guilabel:`Project --> Project Properties --> General --> Project Scales`
+  (see :menuselection:`Project --> Project Properties --> General --> Project Scales`
   to configure these predefined scales).
 * A |radioButtonOff| :guilabel:`Fixed scale` that allows you to toggle between
   auto-scale and fixed-scale mode.
