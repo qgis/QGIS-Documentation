@@ -140,7 +140,7 @@ You can:
   on selected map.
 * Activate |checkbox| :guilabel:`Show only features intersecting Atlas feature` is only
   available when |checkbox| :guilabel:`Generate an atlas` is activated. When activated it will
-  show a table with only the features shown on the map of that particular page of the atlas.
+  show a table with only the features which intersect the current atlas feature.
 * Activate |checkbox| :guilabel:`Filter with` and provide a filter by typing in the input line
   or insert a regular expression using the given |expression| expression button.
   A few examples of filtering statements you can use when you have loaded the airports
