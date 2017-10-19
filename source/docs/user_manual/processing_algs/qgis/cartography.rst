@@ -19,18 +19,7 @@ This algorithm assigns a color index to polygon features in such a way that no
 adjacent polygons share the same color index, whilst minimizing the number of
 colors required.
 
-The algorithm allows choice of method to use when assigning colors. The default
-method ``by feature count`` attempts to assign colors so that the count of features
-assigned to each individual color index is balanced.
-
-The by ``assigned area`` mode instead assigns colors so that the total area of
-features assigned to each color is balanced. This mode can be useful to help
-avoid large features resulting in one of the colors appearing more dominant on a
-colored map.
-
-The ``by distance between colors`` mode will assign colors in order to maximize the
-distance between features of the same color. This mode helps to create a more
-uniform distribution of colors across a map.
+The algorithm allows choice of method to use when assigning colors.
 
 A minimum number of colors can be specified if desired. The color index is saved
 to a new attribute named **color_id**.
@@ -50,6 +39,7 @@ Parameters
   Polygon vector layer
 
 ``Minimum number of colors`` [number]
+  enter here the minimum colors number
 
 ``Minimum distance between features`` [number]
   prevent nearby (but non-touching) features from being assigned equal colors
@@ -57,21 +47,23 @@ Parameters
 ``Balance color assignment`` [selection]
   Options:
 
-  * by feature count
+  * by feature count (default)
 
-    each color index contains the same amount of features
-
+    attempts to assign colors so that the count of features assigned to each
+    individual color index is balanced
 
   * by assigned area
 
-    the total area assigned to each class is balanced
+    assigns colors so that the total area of features assigned to each color is
+    balanced. This mode can be useful to help avoid large features resulting in
+    one of the colors appearing more dominant on a colored map.
 
 
   * by distance between colors
 
-    maximizes the distance of features having the same color
-
-  Default: *by feature count*
+    assigns colors in order to maximize the distance between features of the same
+    color. This mode helps to create a more uniform distribution of colors across
+    a map.
 
 Outputs
 .......
@@ -82,7 +74,7 @@ Outputs
 Console usage
 .............
 
-::
+.. code-block:: python
 
   # import the processing class
   import processing
