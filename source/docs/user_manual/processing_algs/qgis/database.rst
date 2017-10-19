@@ -96,7 +96,7 @@ Parameters
 Console usage
 .............
 
-::
+.. code-block:: python
 
   # import processing
   import processing
@@ -122,8 +122,10 @@ the layer itself.
 
 Example
 .......
-1. Set all the values of an existing filed to a fixed value. The SQL query string
-will be::
+1. Set all the values of an existing field to a fixed value. The SQL query string
+will be:
+
+.. code-block:: sql
 
   UPDATE your_table SET field_to_update=20;
 
@@ -133,12 +135,16 @@ in the example above, the values of the field ``field_to_update`` of the table
 2. Create a new ``area`` column and calculate the area of each feature with the
 ``ST_AREA`` PostGIS function.
 
-Run the first query and create the new column ``area`` on the table ``my_table``::
+Run the first query and create the new column ``area`` on the table ``my_table``:
+
+.. code-block:: sql
 
   ALTER TABLE my_table ADD COLUMN area double precision;
 
 Run the second query and update the `area` column and calculate the area of each
-feature::
+feature:
+
+.. code-block:: sql
 
   UPDATE my_table SET area=ST_AREA(geom);
 
@@ -164,7 +170,7 @@ the results.
 Console usage
 .............
 
-::
+.. code-block:: python
 
   # import processing
   import processing
