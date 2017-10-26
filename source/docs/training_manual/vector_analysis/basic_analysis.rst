@@ -217,7 +217,7 @@ QGIS allows you to calculate distances from any vector object.
 * Make sure that only the :guilabel:`roads_34S` and
   :guilabel:`houses_34S` layers are visible, to simplify the map while
   you're working.
-* Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)`
+* Click on the :menuselection:`Vector --> Geoprocessing Tools --> Fixed distance buffer`
   tool:
 
 This gives you a new dialog.
@@ -227,7 +227,7 @@ This gives you a new dialog.
 .. image:: /static/training_manual/vector_analysis/vector_buffer_setup.png
    :align: center
 
-The :guilabel:`Buffer distance` is in meters because our input dataset is in a
+The :guilabel:`Distance` is in meters because our input dataset is in a
 Projected Coordinate System that uses meter as its basic measurement unit.
 This is why we needed to use projected data.
 
@@ -237,7 +237,7 @@ This is why we needed to use projected data.
 * When it asks you if it should "add the new layer to the TOC", click
   :guilabel:`Yes`. ("TOC" stands for "Table of Contents", by which it means the
   :guilabel:`Layers list`).
-* Close the :guilabel:`Buffer(s)` dialog.
+* Close the :guilabel:`Fixed distance buffer` dialog.
 
 Now your map will look something like this:
 
@@ -255,10 +255,10 @@ layer and re-create the buffer using the settings shown here:
 .. image:: /static/training_manual/vector_analysis/dissolve_buffer_setup.png
    :align: center
 
-* Note that we're now checking the :guilabel:`Dissolve buffer results` box.
+* Note that we're now checking the :guilabel:`Dissolve result` box.
 * Save the output under the same name as before (click :guilabel:`Yes` when it
   asks your permission to overwrite the old one).
-* Click :guilabel:`OK` and close the :guilabel:`Buffer(s)` dialog again.
+* Click :guilabel:`OK` and close the :guilabel:`Fixed distance buffer` dialog again.
   
 Once you've added the layer to the :guilabel:`Layers list`, it will look like
 this:
