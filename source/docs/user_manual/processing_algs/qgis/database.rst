@@ -98,8 +98,8 @@ Console usage
 
 .. code-block:: python
 
-  # import processing
-  import processing class
+  # import processing class
+  import processing
   # define the parameters dictionary with all the input
   parameters = { 'DROP_STRING_LENGTH' : False, 'INPUT' : '/home/matteo/example_layer.shp',
   'OVERWRITE' : True, 'TABLENAME' : '', 'SCHEMA' : 'public', 'GEOMETRY_COLUMN' : 'geom',
@@ -172,8 +172,8 @@ Console usage
 
 .. code-block:: python
 
-  # import processing
-  import processing class
+  # import processing class
+  import processing
   # define the parameters dictionary with all the input
   parameters = {'DATABASE':'your_database','SQL':'ALTER TABLE your_table ADD COLUMN area2 double precision'}
   # run the algorithm
