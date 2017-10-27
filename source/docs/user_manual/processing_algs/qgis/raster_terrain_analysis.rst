@@ -289,7 +289,7 @@ Console usage
   # import the processing class
   import processing
   # define the path of the output relief raster as string
-  relief_path = '/home/matteo/lavori/grants/grant_data/relief.tif'
+  relief_path = '/home/user/relief.tif'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT' : 'path_of_dtm_layer',
