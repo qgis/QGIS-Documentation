@@ -15,17 +15,16 @@ Cartography
 
 Topological coloring
 --------------------
-This algorithm assigns a color index to polygon features in such a way that no
-adjacent polygons share the same color index, whilst minimizing the number of
-colors required.
+Assigns a color index to polygon features in such a way that no adjacent polygons
+share the same color index, whilst minimizing the number of colors required.
 
 The algorithm allows choice of method to use when assigning colors.
 
 A minimum number of colors can be specified if desired. The color index is saved
 to a new attribute named **color_id**.
 
-The following example shows the algorithm with 10 different colors chosen: as you
-can see each color class has the same amount of features:
+The following example shows the algorithm with 10 different colors chosen, as you
+can see each color class has the same amount of features.
 
 .. figure:: /static/user_manual/processing_algs/qgis/topological_color.png
   :align: center
@@ -39,7 +38,7 @@ Parameters
   Polygon vector layer
 
 ``Minimum number of colors`` [number]
-  enter here the minimum colors number
+  minimum colors number to assign
 
 ``Minimum distance between features`` [number]
   prevent nearby (but non-touching) features from being assigned equal colors
@@ -47,7 +46,7 @@ Parameters
 ``Balance color assignment`` [selection]
   Options:
 
-  * by feature count (default)
+  * by feature count
 
     attempts to assign colors so that the count of features assigned to each
     individual color index is balanced
@@ -64,6 +63,8 @@ Parameters
     assigns colors in order to maximize the distance between features of the same
     color. This mode helps to create a more uniform distribution of colors across
     a map.
+
+  Default: *by feature count*
 
 Outputs
 .......
