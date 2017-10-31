@@ -79,6 +79,12 @@ Console usage
   # import the processing class
   import processing
   # define the parameters dictionary with all the input
-  parameters = {'INPUT' : 'path_of_your_layer', 'MIN_COLORS':4,'MIN_DISTANCE':0,'BALANCE':0,'OUTPUT':'memory:'}
+  parameters = {
+    'INPUT' : 'path_of_your_layer',
+    'MIN_COLORS': 4,
+    'MIN_DISTANCE': 0,
+    'BALANCE': 0,
+    'OUTPUT':'memory:'
+  }
   # run the algorithm and load the result
   processing.runAndLoadResults('qgis:topologicalcoloring', parameters)
