@@ -60,12 +60,12 @@ Console usage
   # import the processing class
   import processing
   # define the path of the output aspect raster as string
-  aspect_output = '/home/user/aspect.tif'
+  aspect_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
-    'INPUT' : 'path_of_your_raster',
-    'Z_FACTOR':10,
-    'OUTPUT' : aspect_output
+    'INPUT': 'path_of_your_raster',
+    'Z_FACTOR': 10,
+    'OUTPUT': aspect_output
   }
   # run the algorithm and load the results
   processing.runAndLoadResults('qgis:aspect', parameters)
@@ -94,7 +94,7 @@ The hillshade map contains values from 0 (complete shadow) to 255 (complete sun)
 
  Hillshade map with azimuth 300 and vertical angle 45
 
-Particularly interesting is to give the hillshade map a transparency value and
+Particularly interesting is to give the hillshade layer a transparency value and
 overlap it with the elevation raster:
 
 .. figure:: /static/user_manual/processing_algs/qgis/hillshade_2.png
@@ -144,7 +144,7 @@ Console usage
   # import the processing class
   import processing
   # define the path of the output aspect raster as string
-  hillshade_output = '/home/user/hillshade.tif'
+  hillshade_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT' : 'path_of_your_layer',
@@ -198,7 +198,7 @@ Outputs
   Directory where output will be saved. For each feature from input vector layer
   CSV file with area and altitude values will be created.
 
-  File name consists of prefix hystogram_ followed by layer name and feature ID.
+  File name consists of prefix ``hystogram_`` followed by layer name and feature ID.
 
 
 Console usage
@@ -209,16 +209,16 @@ Console usage
   # import the processing class
   import processing
   # define the path of the boundary layer
-  boundary_layer = '/home/user/boundary.shp'
+  boundary_layer = 'path_of_your_boundary_layer'
   # define the path of the output folder
-  hypsometric_folder = '/home/user/hypsometric'
+  hypsometric_folder = 'path_of_your_output_directory'
   # define the parameters dictionary with all the input
   parameters = {
-    'INPUT' : 'path_of_your_layer',
+    'INPUT': 'path_of_your_layer',
     'BOUNDARY_LAYER': boundary_layer,
-    'STEP':100,
-    'USE_PERCENTAGE':False ,
-    'OUTPUT' : hypsometric_folder
+    'STEP': 100,
+    'USE_PERCENTAGE': False ,
+    'OUTPUT': hypsometric_folder
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:hypsometriccurves', parameters)
@@ -278,8 +278,8 @@ Parameters
 Outputs
 .......
 
-``Extent`` [vector]
-  Polygon vector layer.
+``Relief`` [raster]
+  Relief raster layer.
 
 Console usage
 .............
@@ -289,14 +289,15 @@ Console usage
   # import the processing class
   import processing
   # define the path of the output relief raster as string
-  relief_path = '/home/user/relief.tif'
+  relief_path = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
-    'INPUT' : 'path_of_dtm_layer',
-    'Z_FACTOR':1,
-    'AUTO_COLORS':True,
-    'COLORS':'',
-    'OUTPUT' : relief_path
+    'INPUT': 'path_of_dtm_layer',
+    'Z_FACTOR': 1,
+    'AUTO_COLORS': True,
+    # COLORS variable is empty because colors are auto-generated
+    'COLORS': '',
+    'OUTPUT': relief_path
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:polygonfromlayerextent', parameters)
@@ -306,7 +307,7 @@ Console usage
 
 Ruggedness index
 ----------------
-A quantitative measurement of terrain heterogeneity as described by Riley et al.
+Quantitative measurement of terrain heterogeneity described by Riley et al.
 (1999). It is calculated for every location, by summarizing the change in elevation
 within the 3x3 pixel grid.
 
@@ -335,8 +336,8 @@ Parameters
 Outputs
 .......
 
-``Extent`` [vector]
-  Polygon vector layer.
+``Ruggedness`` [raster]
+  Ruggedness raster layer.
 
 Console usage
 .............
@@ -346,12 +347,12 @@ Console usage
   # import the processing class
   import processing class
   # define the path of the output aspect raster as string
-  ruggedness_output = '/home/user/ruggedness_.tif'
+  ruggedness_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
-    'INPUT' : 'path_of_your_layer',
-    'Z_FACTOR':1,
-    'OUTPUT' : ruggedness_output
+    'INPUT': 'path_of_your_layer',
+    'Z_FACTOR': 1,
+    'OUTPUT': ruggedness_output
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:ruggednessindex', parameters)
@@ -362,7 +363,7 @@ Console usage
 Slope
 -----
 Calculates the slope from an input raster layer. The slope is the angle of inclination
-of thee terrain and is expressed in **degrees**.
+of the terrain and is expressed in **degrees**.
 
 In the following picture you can see to the left the DTM layer with the elevation
 of the terrain while to the right the calculated slope:
@@ -389,8 +390,8 @@ Parameters
 Outputs
 .......
 
-``Extent`` [vector]
-  Polygon vector layer.
+``Slope`` [raster]
+  Slope raster layer.
 
 
 Console usage
@@ -401,12 +402,12 @@ Console usage
   # import the processing class
   import processing
   # define the path of the output aspect raster as string
-  slope_output = '/home/user/slope.tif'
+  slope_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
-    'INPUT' : 'path_of_your_layer',
-    'Z_FACTOR':1,
-    'OUTPUT' : slope_output
+    'INPUT': 'path_of_your_layer',
+    'Z_FACTOR': 1,
+    'OUTPUT': slope_output
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:slope', parameters)
