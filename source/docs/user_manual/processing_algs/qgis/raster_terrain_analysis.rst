@@ -37,7 +37,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Raster layer
+  Digital Terrain model raster layer
 
 ``Z factor`` [number]
   Vertical exaggeration. This parameter is useful when the Z units differ from
@@ -59,13 +59,11 @@ Console usage
 
   # import the processing class
   import processing
-  # define the path of the output aspect raster as string
-  aspect_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT': 'path_of_your_raster',
     'Z_FACTOR': 10,
-    'OUTPUT': aspect_output
+    'OUTPUT': 'path_of_your_output'
   }
   # run the algorithm and load the results
   processing.runAndLoadResults('qgis:aspect', parameters)
@@ -75,7 +73,7 @@ Console usage
 
 Hillshade
 ---------
-Given a Digital Terrain Model in input calculates the hillshade raster layer.
+Calculates the hillshade raster layer given a Digital Terrain Model in input .
 
 The shading of the layer is calculated according to the sun position: you have
 the options to change both the horizontal angle (azimuth) and the vertical angle
@@ -108,10 +106,10 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Raster layer
+  Digital Terrain model raster layer
 
 ``Z factor`` [number]
-  You can use this parameter to exaggerate the final result   in order to give it
+  You can use this parameter to exaggerate the final result in order to give it
   a stronger output.
 
   Default: *1.0*
@@ -142,15 +140,13 @@ Console usage
 
   # import the processing class
   import processing
-  # define the path of the output aspect raster as string
-  hillshade_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT' : 'path_of_your_layer',
-    'Z_FACTOR':1,
-    'AZIMUTH':300,
-    'V_ANGLE':40,
-    'OUTPUT' : hillshade_output
+    'Z_FACTOR': 1,
+    'AZIMUTH': 300,
+    'V_ANGLE': 40,
+    'OUTPUT' : 'path_of_your_output'
   }
   # run the algorithm and load the results
   processing.runAndLoadResults('qgis:hillshade', parameters)
@@ -160,7 +156,7 @@ Console usage
 
 Hypsometric curves
 ------------------
-This algorithm computes hypsometric curves for an input Digital Elevation Model.
+Calculates hypsometric curves for an input Digital Elevation Model.
 Curves are produced as csv file in an output folder specified by the user.
 
 Hypsometric curves are a histogram of the cumulative distribution of elevation
@@ -172,7 +168,7 @@ Parameters
 ..........
 
 ``DEM to analyze`` [raster]
-  DEM to use for calculating altitudes.
+  Digital Terrain model raster layer to use for calculating altitudes.
 
 ``Boundary layer``
   Polygonal vector layer with boundaries of areas used to calculate hypsometric
@@ -210,17 +206,13 @@ Console usage
 
   # import the processing class
   import processing
-  # define the path of the boundary layer
-  boundary_layer = 'path_of_your_boundary_layer'
-  # define the path of the output folder
-  hypsometric_folder = 'path_of_your_output_directory'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT': 'path_of_your_layer',
-    'BOUNDARY_LAYER': boundary_layer,
+    'BOUNDARY_LAYER': 'path_of_your_boundary_layer'
     'STEP': 100,
     'USE_PERCENTAGE': False ,
-    'OUTPUT': hypsometric_folder
+    'OUTPUT': 'path_of_your_output_directory'
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:hypsometriccurves', parameters)
@@ -244,10 +236,10 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Raster layer
+  Digital Terrain model raster layer
 
 ``Z factor`` [number]
-  You can use this parameter to exaggerate the final result   in order to give it
+  You can use this parameter to exaggerate the final result in order to give it
   a stronger output.
 
   Default: *1.0*
@@ -288,28 +280,44 @@ Console usage
 
   # import the processing class
   import processing
-  # define the path of the output relief raster as string
-  relief_path = 'path_of_your_output'
   # define the parameters dictionary with all the input
+  # example with auto-generated colors
   parameters = {
     'INPUT': 'path_of_dtm_layer',
     'Z_FACTOR': 1,
     'AUTO_COLORS': True,
-    # COLORS variable is empty because colors are auto-generated
     'COLORS': '',
-    'OUTPUT': relief_path
+    'OUTPUT': 'path_of_your_output'
+  }
+  # example with manual color classes
+  parameters = {
+    'INPUT': 'path_of_dtm_layer',
+    'Z_FACTOR': 1,
+    'AUTO_COLORS': False,
+    # color classes are defined by lower value, upper values, rgb color codes
+    'COLORS': '0.000000, 200.000000, 0, 255, 0;
+              200.000000, 400.000000, 255, 170, 0;
+              400.000000, 600.000000, 255, 85, 0;
+              600.000000, 1000.000000, 170, 85, 0',
+    'OUTPUT': 'path_of_your_output'
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:polygonfromlayerextent', parameters)
+
+
+
+
+
+
 
 
 .. _qgis_ruggedness_index:
 
 Ruggedness index
 ----------------
-Quantitative measurement of terrain heterogeneity described by Riley et al.
-(1999). It is calculated for every location, by summarizing the change in elevation
-within the 3x3 pixel grid.
+Calculates the quantitative measurement of terrain heterogeneity described by Riley
+et al. (1999). It is calculated for every location, by summarizing the change in
+elevation within the 3x3 pixel grid.
 
 Each pixel contains the difference in elevation from a center cell and the 8 cells
 surrounding it.
@@ -323,7 +331,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Raster layer
+  Digital Terrain model raster layer
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -344,13 +352,11 @@ Console usage
 
   # import the processing class
   import processing class
-  # define the path of the output aspect raster as string
-  ruggedness_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT': 'path_of_your_layer',
     'Z_FACTOR': 1,
-    'OUTPUT': ruggedness_output
+    'OUTPUT': 'path_of_your_output'
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:ruggednessindex', parameters)
@@ -375,7 +381,7 @@ Parameters
 ..........
 
 ``Elevation raster`` [raster]
-  Raster layer
+  Digital Terrain model raster layer
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -397,13 +403,11 @@ Console usage
 
   # import the processing class
   import processing
-  # define the path of the output aspect raster as string
-  slope_output = 'path_of_your_output'
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT': 'path_of_your_layer',
     'Z_FACTOR': 1,
-    'OUTPUT': slope_output
+    'OUTPUT': 'path_of_your_output'
   }
   # run the algorithm
   processing.runAndLoadResults('qgis:slope', parameters)
