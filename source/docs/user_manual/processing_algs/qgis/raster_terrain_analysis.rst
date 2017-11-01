@@ -15,22 +15,23 @@ Raster terrain analysis
 
 Aspect
 ------
-Calculates the aspect of a raster in input. The final aspect raster layer contains
-values from 0 to 360 that express the slope direction: starting from North (0°)
-and continuing clockwise to East (90°), South (180°) and West (270°):
+Calculates the aspect of the Digital Terrain Model in input. The final aspect
+raster layer contains values from 0 to 360 that express the slope direction:
+starting from North (0°) and continuing clockwise:
 
 .. figure:: /static/user_manual/processing_algs/qgis/aspect.png
- :align: center
- :scale: 50%
+   :align: center
+   :scale: 50%
 
- Aspect values
 
-The following pictures shows the aspect map reclassified with a color ramp:
+   Aspect values
+
+The following picture shows the aspect layer reclassified with a color ramp:
 
 .. figure:: /static/user_manual/processing_algs/qgis/aspect_2.png
-  :align: center
+   :align: center
 
-  Aspect map reclassified
+   Aspect layer reclassified
 
 Parameters
 ..........
@@ -39,10 +40,9 @@ Parameters
   Raster layer
 
 ``Z factor`` [number]
-  Vertical exaggeration. This parameter is useful when you are working with a
-  raster in **geographic coordinate system** (X and Y are in degrees) while the
-  elevation information is expressed in numbers. You can use the *Z factor* to
-  correctly handle the final result without reprojecting the final raster.
+  Vertical exaggeration. This parameter is useful when the Z units differ from
+  the X and Y ones, for example miles and meters. You can use this parameter to
+  adjust the final result
 
   Default: *1.0*
 
@@ -75,32 +75,33 @@ Console usage
 
 Hillshade
 ---------
-Given a DTM in input calculates the hillshade raster layer.
+Given a Digital Terrain Model in input calculates the hillshade raster layer.
 
 The shading of the layer is calculated according to the sun position: you have
 the options to change both the horizontal angle (azimuth) and the vertical angle
-of the sun:
+(sun elevation) of the sun:
 
 .. figure:: /static/user_manual/processing_algs/qgis/azimuth.png
- :align: center
- :scale: 50%
+   :align: center
+   :scale: 50%
 
- Azimuth and vertical angle
+   Azimuth and vertical angle
 
-The hillshade map contains values from 0 (complete shadow) to 255 (complete sun).
+The hillshade layer contains values from 0 (complete shadow) to 255 (complete sun).
+Hillshade is used usually to better understand the relief of the area.
 
 .. figure:: /static/user_manual/processing_algs/qgis/hillshade.png
- :align: center
+   :align: center
 
- Hillshade map with azimuth 300 and vertical angle 45
+   Hillshade layer with azimuth 300 and vertical angle 45
 
 Particularly interesting is to give the hillshade layer a transparency value and
 overlap it with the elevation raster:
 
 .. figure:: /static/user_manual/processing_algs/qgis/hillshade_2.png
- :align: center
+   :align: center
 
- Overlapping the hillshade with the elevation map
+   Overlapping the hillshade with the elevation layer
 
 
 Parameters
@@ -110,22 +111,20 @@ Parameters
   Raster layer
 
 ``Z factor`` [number]
-  Vertical exaggeration. This parameter is useful when you are working with a
-  raster in **geographic coordinate system** (X and Y are in degrees) while the
-  elevation information is expressed in numbers. You can use the *Z factor* to
-  correctly handle the final result without reprojecting the final raster.
+  You can use this parameter to exaggerate the final result   in order to give it
+  a stronger output.
 
   Default: *1.0*
 
 ``Azimuth (horizontal angle)`` [number]
-  Set the horizontal angle of the sun. The range of these values can go from 0
-  (North) through 90 (East), 180 (South), 270 (West) and finally 360 (North).
+  Set the horizontal angle (in degrees) of the sun. The range of these values can
+  go from 0 (North) continuing clockwise.
 
   Default: *300*
 
 ``Vertical angle`` [number]
-  Set the vertical angle of the sun, that is the height of the sun. Values can
-  go from 0 to 90.
+  Set the vertical angle (in degrees) of the sun, that is the height of the sun.
+  Values can go from 0 (minimum elevation) to 90 (maximum elevation).
 
   Default: *40*
 
@@ -162,7 +161,7 @@ Console usage
 Hypsometric curves
 ------------------
 This algorithm computes hypsometric curves for an input Digital Elevation Model.
-Curves are produced as table files in an output folder specified by the user.
+Curves are produced as csv file in an output folder specified by the user.
 
 Hypsometric curves are a histogram of the cumulative distribution of elevation
 values in a geographical area. You can use hypsometric curves to detect differences
@@ -200,6 +199,9 @@ Outputs
 
   File name consists of prefix ``hystogram_`` followed by layer name and feature ID.
 
+.. figure:: /static/user_manual/processing_algs/qgis/hypsometric.png
+   :align: center
+   :scale: 50%
 
 Console usage
 .............
@@ -229,14 +231,14 @@ Console usage
 
 Relief
 ------
-Creates a shaded relief map from digital elevation data. You can specify manually
+Creates a shaded relief layer from digital elevation data. You can specify manually
 all the relief color or you can let the algorithm choose automatically all the
 relief classes.
 
 .. figure:: /static/user_manual/processing_algs/qgis/relief.png
- :align: center
+   :align: center
 
- Relief map
+   Relief layer
 
 Parameters
 ..........
@@ -245,10 +247,8 @@ Parameters
   Raster layer
 
 ``Z factor`` [number]
-  Vertical exaggeration. This parameter is useful when you are working with a
-  raster in **geographic coordinate system** (X and Y are in degrees) while the
-  elevation information is expressed in numbers. You can use the *Z factor* to
-  correctly handle the final result without reprojecting the final raster.
+  You can use this parameter to exaggerate the final result   in order to give it
+  a stronger output.
 
   Default: *1.0*
 
@@ -267,9 +267,9 @@ Parameters
   the color thanks to the color widget.
 
   .. figure:: /static/user_manual/processing_algs/qgis/relief_table.png
-   :align: center
+     :align: center
 
-   Manually relief color classes
+     Manually relief color classes
 
   All the buttons of the right side panel give you the chance to: add or remove
   color classes, change the order of the color classes already defined, open an
@@ -317,7 +317,7 @@ surrounding it.
 .. figure:: /static/user_manual/processing_algs/qgis/ruggedness.png
    :align: center
 
-   Ruggedness map from low (red) to high values (green)
+   Ruggedness layer from low (red) to high values (green)
 
 Parameters
 ..........
@@ -326,10 +326,8 @@ Parameters
   Raster layer
 
 ``Z factor`` [number]
-  Vertical exaggeration. This parameter is useful when you are working with a
-  raster in **geographic coordinate system** (X and Y are in degrees) while the
-  elevation information is expressed in numbers. You can use the *Z factor* to
-  correctly handle the final result without reprojecting the final raster.
+  You can use this parameter to exaggerate the final result in order to give it
+  a stronger output.
 
   Default: *1.0*
 
@@ -380,10 +378,8 @@ Parameters
   Raster layer
 
 ``Z factor`` [number]
-  Vertical exaggeration. This parameter is useful when you are working with a
-  raster in **geographic coordinate system** (X and Y are in degrees) while the
-  elevation information is expressed in numbers. You can use the *Z factor* to
-  correctly handle the final result without reprojecting the final raster.
+  You can use this parameter to exaggerate the final result in order to give it
+  a stronger output.
 
   Default: *1.0*
 
