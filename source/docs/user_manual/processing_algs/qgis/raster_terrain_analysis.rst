@@ -17,7 +17,7 @@ Aspect
 ------
 Calculates the aspect of the Digital Terrain Model in input. The final aspect
 raster layer contains values from 0 to 360 that express the slope direction:
-starting from North (0°) and continuing clockwise:
+starting from North (0°) and continuing clockwise.
 
 .. figure:: /static/user_manual/processing_algs/qgis/aspect.png
    :align: center
@@ -37,12 +37,12 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain model raster layer
+  Digital Terrain Model raster layer
 
 ``Z factor`` [number]
   Vertical exaggeration. This parameter is useful when the Z units differ from
   the X and Y ones, for example miles and meters. You can use this parameter to
-  adjust the final result
+  adjust the final result.
 
   Default: *1.0*
 
@@ -50,7 +50,7 @@ Outputs
 .......
 
 ``Aspect`` [raster]
-  Aspect raster layer.
+  Aspect raster layer
 
 Console usage
 .............
@@ -59,8 +59,8 @@ Console usage
 
   # import the processing class
   import processing
-  # define the parameters dictionary with all the input
-  parameters = {
+  # define the parameters dictionary with all the inputs
+  parameters = {
     'INPUT': 'path_of_your_raster',
     'Z_FACTOR': 10,
     'OUTPUT': 'path_of_your_output'
@@ -73,11 +73,11 @@ Console usage
 
 Hillshade
 ---------
-Calculates the hillshade raster layer given a Digital Terrain Model in input .
+Calculates the hillshade raster layer given a Digital Terrain Model in input.
 
 The shading of the layer is calculated according to the sun position: you have
 the options to change both the horizontal angle (azimuth) and the vertical angle
-(sun elevation) of the sun:
+(sun elevation) of the sun.
 
 .. figure:: /static/user_manual/processing_algs/qgis/azimuth.png
    :align: center
@@ -106,7 +106,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain model raster layer
+  Digital Terrain Model raster layer
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -131,7 +131,7 @@ Outputs
 .......
 
 ``Hillshade`` [raster]
-  Hillshade raster layer.
+  Hillshade raster layer
 
 Console usage
 .............
@@ -140,8 +140,8 @@ Console usage
 
   # import the processing class
   import processing
-  # define the parameters dictionary with all the input
-  parameters = {
+  # define the parameters dictionary with all the inputs
+  parameters = {
     'INPUT' : 'path_of_your_layer',
     'Z_FACTOR': 1,
     'AZIMUTH': 300,
@@ -168,7 +168,7 @@ Parameters
 ..........
 
 ``DEM to analyze`` [raster]
-  Digital Terrain model raster layer to use for calculating altitudes.
+  Digital Terrain Model raster layer to use for calculating altitudes.
 
 ``Boundary layer``
   Polygonal vector layer with boundaries of areas used to calculate hypsometric
@@ -206,8 +206,8 @@ Console usage
 
   # import the processing class
   import processing
-  # define the parameters dictionary with all the input
-  parameters = {
+  # define the parameters dictionary with all the inputs
+  parameters = {
     'INPUT': 'path_of_your_layer',
     'BOUNDARY_LAYER': 'path_of_your_boundary_layer'
     'STEP': 100,
@@ -236,7 +236,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain model raster layer
+  Digital Terrain Model raster layer
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -271,7 +271,7 @@ Outputs
 .......
 
 ``Relief`` [raster]
-  Relief raster layer.
+  Relief raster layer
 
 Console usage
 .............
@@ -305,12 +305,6 @@ Console usage
   processing.runAndLoadResults('qgis:polygonfromlayerextent', parameters)
 
 
-
-
-
-
-
-
 .. _qgis_ruggedness_index:
 
 Ruggedness index
@@ -331,7 +325,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain model raster layer
+  Digital Terrain Model raster layer
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -343,7 +337,7 @@ Outputs
 .......
 
 ``Ruggedness`` [raster]
-  Ruggedness raster layer.
+  Ruggedness raster layer
 
 Console usage
 .............
@@ -381,7 +375,7 @@ Parameters
 ..........
 
 ``Elevation raster`` [raster]
-  Digital Terrain model raster layer
+  Digital Terrain Model raster layer
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -393,7 +387,7 @@ Outputs
 .......
 
 ``Slope`` [raster]
-  Slope raster layer.
+  Slope raster layer
 
 
 Console usage
@@ -403,8 +397,8 @@ Console usage
 
   # import the processing class
   import processing
-  # define the parameters dictionary with all the input
-  parameters = {
+  # define the parameters dictionary with all the inputs
+  parameters = {
     'INPUT': 'path_of_your_layer',
     'Z_FACTOR': 1,
     'OUTPUT': 'path_of_your_output'
