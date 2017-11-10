@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-Raster
-======
+Raster tools
+============
 
 .. only:: html
 
@@ -11,168 +11,102 @@ Raster
       :local:
       :depth: 1
 
-Hypsometric curves
-------------------
+.. _qgis_convert_map_to_raster:
 
-Description
-...........
+Convert map to raster
+---------------------
+Creates a raster image of map canvas content.
 
-Calculate hypsometric curves for features of polygon layer and save them as
-CSV file for further processing.
+A map theme can be selected to render a predetermined set of layers with a defined
+style for each layer.
 
-Parameters
-..........
+Alternatively, a single layer can be selected if no map theme is set.
 
-``DEM to analyze`` [raster]
-  DEM to use for calculating altitudes.
-
-``Boundary layer`` [vector: polygon]
-  Polygonal vector layer with boundaries of areas used to calculate hypsometric
-  curves.
-
-``Step`` [number]
-  Distance between curves.
-
-  Default: *100.0*
-
-``Use % of area instead of absolute value`` [boolean]
-  Write area percentage to "Area" field of the CSV file instead of absolute
-  area value.
-
-  Default: *False*
-
-Outputs
-.......
-
-``Output directory`` [directory]
-  Directory where output will be saved. For each feature from input vector
-  layer CSV file with area and altitude values will be created.
-
-  File name consists of prefix :file:`hystogram_` followed by layer name and feature
-  ID.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:hypsometriccurves', input_dem, boundary_layer, step, use_percentage, output_directory)
-
-See also
-........
-
-Raster layer statistics
------------------------
-
-Description
-...........
-
-Calculates basic statistics of the raster layer.
+If neither map theme nor layer is set, the current map content will be rendered.
+The minimum extent entered will internally be extended to be a multiple of the
+tile size.
 
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster to analyze.
+``Minimum extent to render (xmin, xmax, ymin, ymax)`` [extent]
+  Extent of the output raster layer
+
+``Tile size`` [number]
+  Size of the tile of the output raster layer
+
+  Default: *1024*
+
+``Map units per pixel`` [number]
+  Pixel size (in map units)
+
+  Default: *100*
+
+``Map theme to render`` [selection]
+  Optional
+
+  If you have some theme set, you can choose one of them for the final raster
+  layer
+
+``Single layer to render`` [selection]
+  Optional
+
+  Choose a single layer for the output raster layer
 
 Outputs
 .......
 
-``Statistics`` [html]
-  Analysis results in HTML format.
+``Output layer`` [raster]
+  Output raster layer
 
-``Minimum value`` [number]
-  Minimum cell value.
+.. _qgis_create_constant_raster_layer:
 
-``Maximum value`` [number]
-  Maximum cell value.
+Create constant raster layer
+----------------------------
+Given an extent and a value, generates a raster layer with all the pixels having
+the same value choosen.
 
-``Sum`` [number]
-  Sum of all cells values.
+Parameters
+..........
 
-``Mean value`` [number]
-  Mean cell value.
+``Desired extent (xmin, xmax, ymin, ymax)`` [extent]
+  Extent for the raster layer
 
-``valid cells count`` [number]
-  Number of cells with data.
+``Target CRS`` [crs]
+  CRS for the output raster layer
 
-``No-data cells count`` [number]
-  Number of NODATA cells.
+  Default: *project CRS*
 
-``Standard deviation`` [number]
-  Standard deviation of cells values.
+``Pixel size`` [number]
+  Pixel size (X=Y) in map units
 
-Console usage
-.............
+  Default: *0.1*
 
-::
+``Constant value`` [number]
+  Constant pixel value for the raster layer
 
-  processing.runalg('qgis:rasterlayerstatistics', input, output_html_file)
+  Default: *1*
 
-See also
-........
+Outputs
+.......
 
-Zonal Statistics
-----------------
+``Constant`` [raster]
+  Raster covering the desired extent with pixel size and value chosen
 
-Description
-...........
 
-Calculates some statistics values for pixels of input raster inside certain
-zones, defined as polygon layer.
+.. _qgis_set_style_for_raster_layer:
 
-Following values calculated for each zone:
+Set style for raster layer
+--------------------------
+Sets the style of a raster layer. The style must be defined in a QML file.
 
-* minimum
-* maximum
-* sum
-* count
-* mean
-* standard deviation
-* number of unique values
-* range
-* variance
+No new output are created: the QML style is assigned to the raster layer chosen.
 
 Parameters
 ..........
 
 ``Raster layer`` [raster]
-  Raster to analyze.
+  Raster layer
 
-``Raster band`` [number]
-  Number of raster band to analyze.
-
-  Default: *1*
-
-``Vector layer containing zones`` [vector: polygon]
-  Layer with zones boundaries.
-
-``Output column prefix`` [string]
-  Prefix for output fields.
-
-  Default: *_*
-
-``Load whole raster in memory`` [boolean]
-  Determines if raster band will be loaded in memory (``True``) or readed by
-  chunks (``False``). Useful only when disk IO or raster scanning inefficiencies
-  are your limiting factor.
-
-  Default: *True*
-
-Outputs
-.......
-
-``Output layer`` [vector]
-  The resulting layer. Basically this is same layer as zones layer with new
-  columns containing statistics added.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:zonalstatistics', input_raster, raster_band, input_vector, column_prefix, global_extent, output_layer)
-
-See also
-........
-
+``Style file`` [file]
+  Path of the ``QML`` style file.
