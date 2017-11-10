@@ -38,29 +38,29 @@ Parameters
   Polygon vector layer
 
 ``Minimum number of colors`` [number]
-  minimum colors number to assign
+  Minimum colors number to assign
 
 ``Minimum distance between features`` [number]
-  prevent nearby (but non-touching) features from being assigned equal colors
+  Prevent nearby (but non-touching) features from being assigned equal colors
 
 ``Balance color assignment`` [selection]
   Options:
 
   * by feature count
 
-    attempts to assign colors so that the count of features assigned to each
+    Attempts to assign colors so that the count of features assigned to each
     individual color index is balanced
 
   * by assigned area
 
-    assigns colors so that the total area of features assigned to each color is
+    Assigns colors so that the total area of features assigned to each color is
     balanced. This mode can be useful to help avoid large features resulting in
     one of the colors appearing more dominant on a colored map.
 
 
   * by distance between colors
 
-    assigns colors in order to maximize the distance between features of the same
+    Assigns colors in order to maximize the distance between features of the same
     color. This mode helps to create a more uniform distribution of colors across
     a map.
 
