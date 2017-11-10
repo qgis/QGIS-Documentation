@@ -83,7 +83,7 @@ Console usage
   import processing
   # define the parameters dictionary with all the inputs
   parameters = {
-    'EXPRESSION': ' ( dtm@1  > 1000) AND  ( dtm@1 < 2000)',
+    'EXPRESSION': ' ( layer_name@1  > 1000) AND  ( layer_name@1 < 2000)',
     'CELLSIZE': 0,
     'OUTPUT': 'path_of_your_output'
   }
