@@ -345,7 +345,7 @@ Console usage
 .. code-block:: python
 
   # import the processing class
-  import processing class
+  import processing
   # define the parameters dictionary with all the input
   parameters = {
     'INPUT': 'path_of_your_layer',
