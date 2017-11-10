@@ -369,7 +369,7 @@ of the terrain while to the right the calculated slope:
 .. figure:: /static/user_manual/processing_algs/qgis/slope.png
    :align: center
 
-   Left the elevation layer, right the calculated slope
+   Flat areas in red, steep areas in blue
 
 Parameters
 ..........
