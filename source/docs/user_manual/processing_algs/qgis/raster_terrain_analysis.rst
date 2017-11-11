@@ -11,6 +11,9 @@ Raster terrain analysis
       :local:
       :depth: 1
 
+.. note:: Each algorithm can be use in the python console using internal Processing
+  API. Refer to the section :ref:`processing_console`
+
 .. _qgis_aspect:
 
 Aspect
@@ -51,22 +54,6 @@ Outputs
 
 ``Aspect`` [raster]
   Aspect raster layer
-
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT': 'path_of_your_raster',
-    'Z_FACTOR': 10,
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm and load the results
-  processing.runAndLoadResults('qgis:aspect', parameters)
 
 
 .. _qgis_hillshade:
@@ -133,24 +120,6 @@ Outputs
 ``Hillshade`` [raster]
   Hillshade raster layer
 
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT' : 'path_of_your_layer',
-    'Z_FACTOR': 1,
-    'AZIMUTH': 300,
-    'V_ANGLE': 40,
-    'OUTPUT' : 'path_of_your_output'
-  }
-  # run the algorithm and load the results
-  processing.runAndLoadResults('qgis:hillshade', parameters)
-
 
 .. _qgis_hypsometric_curves:
 
@@ -198,25 +167,6 @@ Outputs
 .. figure:: /static/user_manual/processing_algs/qgis/hypsometric.png
    :align: center
    :scale: 50%
-
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT': 'path_of_your_layer',
-    'BOUNDARY_LAYER': 'path_of_your_boundary_layer'
-    'STEP': 100,
-    'USE_PERCENTAGE': False ,
-    'OUTPUT': 'path_of_your_output_directory'
-  }
-  # run the algorithm
-  processing.runAndLoadResults('qgis:hypsometriccurves', parameters)
-
 
 
 .. _qgis_relief:
@@ -273,37 +223,6 @@ Outputs
 ``Relief`` [raster]
   Relief raster layer
 
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the input
-  # example with auto-generated colors
-  parameters = {
-    'INPUT': 'path_of_dtm_layer',
-    'Z_FACTOR': 1,
-    'AUTO_COLORS': True,
-    'COLORS': '',
-    'OUTPUT': 'path_of_your_output'
-  }
-  # example with manual color classes
-  parameters = {
-    'INPUT': 'path_of_dtm_layer',
-    'Z_FACTOR': 1,
-    'AUTO_COLORS': False,
-    # color classes are defined by lower value, upper values, rgb color codes
-    'COLORS': '0.000000, 200.000000, 0, 255, 0;
-              200.000000, 400.000000, 255, 170, 0;
-              400.000000, 600.000000, 255, 85, 0;
-              600.000000, 1000.000000, 170, 85, 0',
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm
-  processing.runAndLoadResults('qgis:polygonfromlayerextent', parameters)
-
 
 .. _qgis_ruggedness_index:
 
@@ -339,22 +258,6 @@ Outputs
 ``Ruggedness`` [raster]
   Ruggedness raster layer
 
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the input
-  parameters = {
-    'INPUT': 'path_of_your_layer',
-    'Z_FACTOR': 1,
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm
-  processing.runAndLoadResults('qgis:ruggednessindex', parameters)
-
 
 .. _qgis_slope:
 
@@ -388,20 +291,3 @@ Outputs
 
 ``Slope`` [raster]
   Slope raster layer
-
-
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT': 'path_of_your_layer',
-    'Z_FACTOR': 1,
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm
-  processing.runAndLoadResults('qgis:slope', parameters)
