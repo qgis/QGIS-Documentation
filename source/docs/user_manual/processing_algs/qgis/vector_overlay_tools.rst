@@ -11,17 +11,17 @@ Vector overlay
       :local:
       :depth: 1
 
+
+.. _qgis_overlay:
+
 Clip
 ----
+Clips a vector layer using the polygons of an additional polygon layer.
 
-Description
-...........
+Only the parts of the features in the input layer that falls within the polygons
+of the clipping layer will be added to the resulting layer.
 
-This algorithm clips a vector layer using the polygons of an additional
-polygon layer. Only the parts of the features in the input layer that falls
-within the polygons of the clipping layer will be added to the resulting layer.
-
-The attributes of the features are not modified, although properties such as
+The attributes of the features are **not modified**, although properties such as
 area or length of the features will be modified by the clipping operation. If
 such properties are stored as attributes, those attributes will have to be
 manually updated.
@@ -30,171 +30,195 @@ This algorithm uses spatial indexes on the providers, prepared geometries and
 apply an intersection operation if the geometry isn't wholly contained by the
 mask geometry.
 
+.. figure:: /static/user_manual/processing_algs/qgis/clip.png
+  :align: center
+
+  Clipping operation
+
+
 Parameters
 ..........
-
 ``Input layer`` [vector: any]
-  The layer containing the features to be clipped.
+  Layer containing the features to be clipped
 
-``Clip layer`` [vector: any]
-  The layer containing the features that are used to clip the features in the input 
-  layer.
-
-``Open output file after running algorithm``
-  Choose whether to load the clipped layer to the map canvas once the clip operation 
-  has been completed.
+``Clip layer`` [vector: line or polygon]
+  Layer containing the features that are used to clip the features
 
 Outputs
 .......
 
 ``Clipped`` [vector]
-  Where to save the clipped layer. Can be saved to file, a temporary file or a memory 
-  layer.
+  Final clipped vector layer
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:clip', input, overlay, output)
-
-See also
-........
+.. _qgis_difference:
 
 Difference
 ----------
+Extracts features from the input layer that don't fall within the boundaries of
+the difference layer.
 
+Input layer features that are partially within difference layer feature(s) are
+split along the boundary of the clip layer feature(s) and only the portions outside
+the difference layer features are retained.
 
-Description
-...........
-This algorithm extracts features from the Input layer that don't fall within the 
-boundaries of the Difference layer. Input Layer Features that are partially within
-Difference layer feature(s) are split along the boundary of the clip layer 
-feature(s). If any features are selected in the Input and Difference Layers, then 
-only those features are used in the operation. If no features are selected, then 
-the operation is performed using all features. 
+Attributes are not modified.
 
+.. figure:: /static/user_manual/processing_algs/qgis/difference.png
+  :align: center
+
+  Difference operation
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  The layer containing the features that will be reduced. 
+  Layer containing the features that will be reduced
 
 ``Difference layer`` [vector: any]
-  The layer containing the features used to reduce the Input Layer.
+  Layer containing the features used to in the difference operation
 
 Outputs
 .......
 
 ``Difference`` [vector]
-  Where to save the difference layer. Can be saved to file, a temporary file 
-  or a memory layer.
+  Final difference vector layer
 
-Console usage
-.............
 
-::
+.. _qgis_extract_by_extent:
 
-  processing.runalg('qgis:difference', input, overlay, output)
+Clip/extract by extent
+----------------------
+This algorithm creates a new vector layer that only contains features which fall
+within a specified extent.
 
-See also
-........
-
-Intersection
-------------
-
-Description
-...........
-
-This algorithm combines features from the Input layer and the Intersect Layer, 
-resulting in features that cover both layers' features. Input Feature(s) that
-only partially lie within the other layer's feature(s) are split along the 
-boundary of the other layer's feature(s). 
-If any features are selected in the Input and Intersect Layers, then only 
-those features are used in the operation. If no features are selected then the 
-operation is performed using all features. 
+Any features which intersect the extent will be included.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  One layer containing feature(s) to be combined.
+  Input layer to be clipped
 
-``Intersect layer`` [vector: any]
-  Second layer containing the feature(s) to be combined.
+``Extent (xmin, xmax, ymin, ymax)`` [extent]
+  Extent of the clipping
+
+``Clip feature to the extent`` [boolean]
+  If checked, output geometries will automatically converted to multi geometries
+  to ensure uniform output types
+
+Outputs
+.......
+
+``Extracted`` [vector]
+  Final clipped vector layer
+
+
+.. _qgis_intersection:
+
+Intersection
+------------
+Extracts the overlapping portions of features in the input and intersect layers.
+
+Features in the intersection layer are assigned the attributes of the overlapping
+features from both the Input and Intersect layers
+
+Attributes are not modified.
+
+.. figure:: /static/user_manual/processing_algs/qgis/intersection.png
+  :align: center
+
+  Intersection operation
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input layer
+
+``Intersection layer`` [vector: any]
+  Layer to use in the intersection operation
+
+``Input fields to keep`` [multipleinput]
+  Optional
+
+  Choose here the field of the input layer to be kept. If no fields are chosen
+  all fields are taken
+
+``Intersect fields to keep`` [multipleinput]
+  Optional
+
+  Choose here the field of the intersection layer to be kept. If no fields are
+  chosen all fields are taken
 
 Outputs
 .......
 
 ``Intersection`` [vector]
-  Where to save the intersection layer. Can be saved to file, a temporary file 
-  or a memory layer.
+  Final intersected vector layer
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:intersection', input, input2, output)
-
-See also
-........
+.. _qgis_line_intersection:
 
 Line intersections
 ------------------
+Creates point features where the lines in the intersect layer intersect the lines
+in the input layer.
 
-Description
-...........
 
-<put algorithm description here>
+.. figure:: /static/user_manual/processing_algs/qgis/line_intersection.png
+  :align: center
+
+  Points of intersection
+
 
 Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  <put parameter description here>
+  Input layer
 
-``Intersect layer`` [vector: line]
-  <put parameter description here>
+``Intersection layer`` [vector: line]
+  Layer to use in the intersection operation
 
-``Input unique ID field`` [tablefield: any]
-  <put parameter description here>
+``Input fields to keep`` [multipleinput]
+  Optional
 
-``Intersect unique ID field`` [tablefield: any]
-  <put parameter description here>
+  Choose here the field of the input layer to be kept. If no fields are chosen
+  all fields are taken
+
+``Intersect fields to keep`` [multipleinput]
+  Optional
+
+  Choose here the field of the intersection layer to be kept. If no fields are
+  chosen all fields are taken
 
 Outputs
 .......
 
-``Output layer`` [vector]
-  Where to save the line intersection layer. Can be saved to file, a temporary 
-  file or a memory layer.
+``Intersection`` [vector: point]
 
-Console usage
-.............
 
-::
+.. _qgis_split_with_lines:
 
-  processing.runalg('qgis:lineintersections', input_a, input_b, field_a, field_b, output)
+Split with lines
+----------------
+Splits the lines or polygons in one layer using the lines in another layer to
+define the breaking points. Intersection between geometries in both layers are
+considered as split points.
 
-See also
-........
+Output will contain multi geometries for split features.
 
-Split lines with lines
-----------------------
+.. figure:: /static/user_manual/processing_algs/qgis/split_with_lines.png
+  :align: center
 
-Description
-...........
-
-This algorithm splits the lines in a line layer using the lines in another line layer to define the breaking points.
-Intersection between geometries in both layers are considered as split points.
+  Split lines
 
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line layer containing the lines to be split.
+``Input layer`` [vector: polygon or line]
+  Line layer containing the lines or polygon to be split.
 
 ``Split layer`` [vector: line]
   Line layer whose lines are used to define the breaking points.
@@ -202,30 +226,24 @@ Parameters
 Outputs
 .......
 
-``Splitted`` [vector]
-  Output layer with split lines from input layer.
+``Split`` [vector]
+  Output layer with split lines or polygon from input layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:splitlineswithlines', input_layer, split_layer, splitted)
-
-See also
-........
+.. _qgis_symmetrical_difference:
 
 Symmetrical difference
 -----------------------
+Creates a layer containing features from both the input and difference layers but
+with the overlapping areas between the two layers removed.
 
-Description
-...........
-This algorithm creates a layer that includes all feature(s) that are in only 
-one of the two input layers. Feature(s) that only partially lie within the 
-other layer's feature(s) are split along the boundary of the other layer's 
-feature(s). If any features are selected in the Input and Difference Layers, 
-then only those features are used in the operation. If no features are selected 
-then the operation is performed using all features. 
+The attribute table of the symmetrical difference layer contains attributes from
+both the input and difference layers.
+
+.. figure:: /static/user_manual/processing_algs/qgis/symmetrical_difference.png
+  :align: center
+
+  Symmetrical difference operation
 
 Parameters
 ..........
@@ -234,60 +252,46 @@ Parameters
   One layer containing feature(s) to be compared.
 
 ``Difference layer`` [vector: any]
-  Second layer containing feature(s) to be compared.
+  Layer containing the features used to in the symmetrical difference operation
 
 Outputs
 .......
 
 ``Symmetrical difference`` [vector]
-  Where to save the symmetrical difference layer. Can be saved to file, 
-  a temporary file or a memory layer.
+  Final symmetrical difference vector layer
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:symetricaldifference', input, overlay, output)
-
-See also
-........
+.. _qgis_union:
 
 Union
 -----
+Creates a layer containing all the features from both input layers.
 
-Description
-...........
-This algorithm combines the feature(s) of both layers. Features that lie 
-partially within the other layer's features will be split. Areas that lie 
-within both layers will be added as new features. If any features are 
-selected in either of the layers, then only those features are used in the 
-operation. If no features are selected then the operation is performed using 
-all features. 
+In the case of polygon layers, separate features are created for overlapping and
+non-overlapping features.
+
+The attribute table of the union layer contains attribute
+values from the respective input layer for non-overlapping features, and attribute
+values from both input layers for overlapping features.
+
+
+.. figure:: /static/user_manual/processing_algs/qgis/union.png
+  :align: center
+
+  Union operation
+
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  One layer containing feature(s) to be unioned.
+  Input vector layer
 
-``Input layer 2`` [vector: any]
-  Second layer containing feature(s) to be unioned.
+``Union layer`` [vector: any]
+  Layer that will be united to the first one
 
 Outputs
 .......
 
 ``Union`` [vector]
-  Where to save the union layer. Can be saved to file, a temporary file or a 
-  memory layer.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:union', input, input2, output)
-
-See also
-........
-
+  Final union vector layer
