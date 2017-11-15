@@ -174,7 +174,7 @@ Vector data in layers
 
 Now that we have described what vector data is, let's look at how vector data is
 managed and used in a GIS environment. Most GIS applications group vector features
-into **layers**. Features in a layer have the the same geometry type (e.g. they
+into **layers**. Features in a layer have the same geometry type (e.g. they
 will all be points) and the same kinds of attributes (e.g. information about what
 species a tree is for a trees layer). For example if you have recorded the
 positions of all the footpaths in your school, they will usually be stored
