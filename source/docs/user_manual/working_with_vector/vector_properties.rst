@@ -1595,14 +1595,16 @@ properties you can set to control whether and how a field can be edited:
 * **Label on top**: places the field name above or beside the widget in the
   feature form
 * **Default value**: for new features, automatically populates by default the
-  field with a predefined value or an expression-based one. For example, you can:
+  field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
+  For example, you can:
 
   * use ``$x``, ``$length``, ``$area`` to populate a field with the feature's x
     coordinate, length, area or any geometric information at its creation;
   * incremente a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
-  * use variables in expressions, making it easier to e.g. insert the operator
-    name (``@user_full_name``), the project file path (``@project_path``), ...
+  * use :ref:`variables <general_tools_variables>` in expressions, making it
+    easier to e.g. insert the operator name (``@user_full_name``), the project
+    file path (``@project_path``), ...
     
   A preview of the resulting default value is displayed at the bottom of the widget.
   
