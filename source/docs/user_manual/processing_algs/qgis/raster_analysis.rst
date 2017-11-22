@@ -74,22 +74,6 @@ Outputs
 ``Output`` [raster]
   Output raster file containing calculated values.
 
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'EXPRESSION': ' ( layer_name@1  > 1000) AND  ( layer_name@1 < 2000)',
-    'CELLSIZE': 0,
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm and load the results
-  processing.runAndLoadResults('qgis:rastercalculator', parameters)
-
 
 .. _qgis_raster_layer_statistics:
 
@@ -124,22 +108,6 @@ Outputs
   - Standard deviation: standard deviation of the values
   - Sum of the squares: sum of the squared differences of each observation from
     the overall mean
-
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT': 'path_of_your_raster',
-    'BAND':1,
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm and load the results
-  processing.runAndLoadResults('qgis:rasterlayerstatistics', parameters)
 
 
 .. _qgis_raster_layer_unique_values_report:
@@ -177,22 +145,6 @@ Outputs
     - Value: unique value of each pixel
     - Pixel count: count of how many pixels belons to each value
     - Area (m :sup:`2`): square meters of the area for each pixel class
-
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT': 'path_of_your_raster',
-    'BAND': 1,
-    'OUTPUT': 'path_of_your_output'
-  }
-  # run the algorithm and load the results
-  processing.runAndLoadResults('native:rasterlayeruniquevaluesreport', parameters)
 
 
 .. _qgis_zonal_statistics:
@@ -240,21 +192,3 @@ Parameters
   * Variety
   * Variance
   * All
-
-Console usage
-.............
-
-.. code-block:: python
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the inputs
-  parameters = {
-    'INPUT': 'path_of_your_raster',
-    'RASTER_BAND':1,
-    'INPUT_VECTOR':': 'path_of_your_vector',
-    'COLUMN_PREFIX':'_',
-    'STATS':[0,1,2]
-  }
-  # run the algorithm and load the results
-  processing.runAndLoadResults('qgis:zonalstatistics', parameters)
