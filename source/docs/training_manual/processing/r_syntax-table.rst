@@ -42,7 +42,7 @@ Input parameters
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
 | selection      | S = selection first;second;third | string of the selected item chosen in the dropdown menu                       |
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
-| crs            | C = crs                          | string of the resulting CRS chosen, in the format: ``"EPGS:4326"``            |
+| crs            | C = crs                          | string of the resulting CRS chosen, in the format: ``"EPSG:4326"``            |
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
 | extent         | E = extent                       | Extent object of the ``raster`` package, you can extract values as ``E@xmin`` |
 +----------------+----------------------------------+-------------------------------------------------------------------------------+
