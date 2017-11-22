@@ -29,22 +29,10 @@ Parameters
   .. figure:: /static/user_manual/processing_algs/qgis/extract_layer_extent.png
      :align: center
 
-     In red the bounding box of the light blue layer
+     In red the bounding box of the source layer
 
 Outputs
 .......
 
 ``Extent`` [vector]
-  Polygon vector layer.
-
-Console usage
-.............
-
-::
-
-  # import the processing class
-  import processing
-  # define the parameters dictionary with all the input
-  parameters = {'INPUT' : 'path_of_your_layer', 'OUTPUT' : 'memory:'}
-  # run the algorithm
-  processing.runAndLoadResults('qgis:polygonfromlayerextent', parameters)
+  Polygon vector layer
