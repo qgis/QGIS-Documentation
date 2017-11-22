@@ -48,7 +48,14 @@ Count points in polygon
 Takes a points layer and a polygon layer and counts the number of points from the
 first one in each polygons of the second one.
 
-A new polygons layer is generated, with the exact same content as the input polygons layer, but containing an additional field with the points count corresponding to each polygon.
+A new polygons layer is generated, with the exact same content as the input polygons
+layer, but containing an additional field with the points count corresponding to
+each polygon.
+
+.. figure:: /static/user_manual/processing_algs/qgis/count_points_polygon.png
+  :align: center
+
+  The labels identify the point count
 
 An optional weight field can be used to assign weights to each point. Alternatively,
 a unique class field can be specified. If both options are used, the weight field
@@ -62,16 +69,16 @@ Parameters
 ``Points`` [vector: point]
   Points layer
 
-``Weight field`` [tablefield]
+``Weight field`` [tablefield: any]
   Optional
 
   The count generated will be the sum of the weight field for each point contained
   by the polygon.
 
-``Class field`` [tablefield]
+``Class field`` [tablefield: any]
   Optional
 
-  Points are classified based on the selected attribute, and if several points with
+  Points are classified based on the selected attribute and if several points with
   the same attribute value are within the polygon, only one of them is counted.
   The final count of the point in a polygon is, therefore, the count of different
   classes that are found in it.
@@ -476,13 +483,11 @@ Parameters
   Polygon vector layer
 
 ``Lines length field name`` [string]
-
   Name of the field of the lines length
 
   Default: *LENGTH*
 
 ``Lines count field name`` [string]
-
   Name of the field of the lines count
 
   Default: *COUNT*
