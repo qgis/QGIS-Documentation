@@ -11,9 +11,59 @@ Vector geometry
       :local:
       :depth: 1
 
+
+
+
+.. _qgis_aggregate:
+
+Aggregate
+---------
+Takes a vector or table layer and aggregate features based on a group by expression.
+
+Features for which group by expression return the same value are grouped together.
+
+It is possible to group all source features together using constant value in group
+by parameter, example: NULL.
+
+It is also possible to group features using multiple fields using Array function,
+example: Array("Field1", "Field2").
+
+Geometries (if present) are combined into one multipart geometry for each group.
+Output attributes are computed depending on each given aggregate definition.
+
+This algorithm allows to use the default aggregation functions of the QGIS field
+calculator.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer in input
+
+``Group by expression`` [tablefield: any]
+  Choose the grouping field. In *NULL* all features will be grouped
+
+  Default: *NULL*
+
+``Aggregates`` [fieldsmapping]
+  Summary of all fields of the source layer, aggregation function available,
+  delimiter and output field name
+
+``Load fields from layer`` [vector: any]
+  You can load the fields from another layer
+
+Output
+......
+
+``Aggregated`` [vector]
+  Multigeometry vector layer with the aggregated values
+
+
+.. _qgis_boundary:
+
 Boundary
 ---------
-Returns the closure of the combinatorial boundary of the input geometries (ie
+Returns the closure of the combinatorial boundary of the input geometries (i.e.
 the topological boundary of the geometry).
 
 For **polygon geometries** , the boundary consists of all the line strings for
@@ -27,7 +77,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line, polygon]
-  Source layer to use.
+  Input vector layer
 
 Output
 ......
@@ -43,24 +93,16 @@ Output
 .. figure:: /static/user_manual/processing_algs/qgis/boundary_polygon.png
    :align: center
 
-   Boundary for polygon. In light blue the polygon and in dark blue the boundary
+   Boundary for polygon. In green the polygon and in black the boundary
 
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:boundary', input_layer, output_layer)
 
 
 .. _qgis_bounding_boxes:
 
 Bounding boxes
 ---------------
-
-This algorithm calculates the bounding box (envelope) of each feature in an
-input layer. Polygon and line geometries are supported.
+Calculates the bounding box (envelope) of each feature in an input layer.
+Polygon and line geometries are supported.
 
 
 .. figure:: /static/user_manual/processing_algs/qgis/bounding_box.png
@@ -73,7 +115,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Vector layer
+  Input vector layer
 
 Outputs
 .......
@@ -81,72 +123,83 @@ Outputs
 ``Bounds`` [vector: poylgon]
   Bounding boxes of input layer.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:boundingboxes', input_layer, output_layer)
-
 
 .. _qgis_buffer:
 
 Buffer
 ------
-This algorithm computes a buffer area for all the features in an input layer,
-using a fixed or dynamic distance.
+Computes a buffer area for all the features in an input layer, using a fixed distance.
 
-The segments parameter controls the number of line segments to use to approximate
- a quarter circle when creating rounded offsets.
+It is possible to define also a negative distance for polygon input layers: in this
+case the buffer will result in a smaller polygon.
 
-The end cap style parameter controls how line endings are handled in the buffer.
-The join style parameter specifies whether round, mitre or beveled joins should
-be used when offsetting corners in a line.
+Buffer always results in a polygon layer: in the following picture the buffer
+for points, lines and polygons;
 
-The mitre limit parameter is only applicable for mitre join styles, and controls
-the maximum distance from the offset curve to use when creating a mitred join.
+.. figure:: /static/user_manual/processing_algs/qgis/buffer.png
+   :align: center
+
+   Points, lines and polygons buffer
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
 ``Distance`` [number]
-  <put parameter description here>
+  Distance radius of the buffer
 
   Default: *10.0*
 
 ``Segments`` [number]
-  <put parameter description here>
+  Controls the number of line segments to use to approximate a quarter circle when
+  creating rounded offsets
 
   Default: *5*
 
+``End cap style`` [selection]
+  Controls how line endings are handled in the buffer.
+
+  .. figure:: /static/user_manual/processing_algs/qgis/buffer_cap_style.png
+     :align: center
+
+     Round, flat and square cap styles
+
+``Join style`` [selection]
+  Specifies whether round, miter or beveled joins should be used when offsetting
+  corners in a line.
+
+``Miter limit`` [number]
+  Only applicable for miter join styles, and controls the maximum distance from
+  the offset curve to use when creating a mitered join
+
+  Default: *2.0*
+
 ``Dissolve result`` [boolean]
-  <put parameter description here>
+  Choose to dissolve the final buffer
 
   Default: *False*
+
+  .. figure:: /static/user_manual/processing_algs/qgis/buffer_dissolve.png
+     :align: center
+
+     Normal and dissolved buffer
+
 
 Outputs
 .......
 
-``Buffer`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:fixeddistancebuffer', input, distance, segments, dissolve, output)
+``Buffer`` [vector: polygon]
+  Buffer polygon vector layer
 
 
 .. _qgis_centroids:
 
 Centroids
 ---------
-This algorithm creates a new point layer, with points representing the centroid
-of the geometries of the inpu layer.
+Creates a new point layer, with points representing the centroid of the geometries
+of the input layer.
 
 The attributes associated to each point in the output layer are the same ones
 associated to the original features.
@@ -169,20 +222,12 @@ Outputs
 ``Centroids`` [vector: point]
   Points vector layer in output.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:fixeddistancebuffer', input, distance, segments, dissolve, output)
-
-
 
 .. _qgis_check_validity:
 
 Check validity
 --------------
-This algorithm performs a validity check on the geometries of a vector layer.
+Performs a validity check on the geometries of a vector layer.
 
 The geometries are classified in three groups (valid, invalid and error) and a
 vector layer is generated with the features in each of these categories.
@@ -193,8 +238,8 @@ information:
 .. figure:: /static/user_manual/processing_algs/qgis/check_validity.png
    :align: center
 
-   Left the input layer. Right: in blue the valid layer, in green the invalid layer
-   and the red point identifies the exact error coordinates.
+   Left the input layer. Right: in green the valid layer, in red the invalid layer:
+   black refer to the invalid points
 
 Parameters
 ..........
@@ -227,12 +272,204 @@ Outputs
   Point layer of the exact position of the validity problems detected with the
   ``message`` field describing the errors founded.
 
-Console usage
-.............
 
-::
+.. _qgis_collect_geometries:
 
-  processing.runalg('qgis:checkvalidity', input_layer, method, valid_output, invalid_output, error_output)
+Collect geometries
+------------------
+Takes a vector layer and collects its geometries into new multipart geometries.
+
+One or more attributes can be specified to collect only geometries belonging to
+the same class (having the same value for the specified attributes), alternatively
+all geometries can be collected.
+
+All output geometries will be converted to multi geometries, even those with just
+a single part. This algorithm does not dissolve overlapping geometries - they will
+be collected together without modifying the shape of each geometry part.
+
+See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer to be transformed
+
+``Unique ID fields`` [multipleinput]
+  Optional
+
+  Choose one or more attributes to collect the geometries
+
+
+Output
+......
+
+``Collected`` [vector]
+
+
+See also
+........
+:ref:`qgis_aggregate` and :ref:`qgis_promote_to_multipart`
+
+
+
+.. _qgis_concave_hull:
+
+Concave hull
+------------
+Computes the concave hull of the features in an input point layer.
+
+
+Parameters
+..........
+``Input point layer`` [vector: point]
+  Point vector layer to calculate the concave hull
+
+``Threshold`` [number]
+  Number from 0 (maximum concave hull) to 1 (convex hull)
+
+
+  .. figure:: /static/user_manual/processing_algs/qgis/concave_hull_threshold.png
+     :align: center
+
+     Different thresholds used (0.3, 0.6, 0.9)
+
+  Default: *0.3*
+
+``Allow holes`` [boolean]
+  Choose whether to allow holes in the final concave hull
+
+  Default: *True*
+
+``Split multipart geometry into singlepart geometries`` [boolean]
+  Check if you want to have singlepart geometries instead of multipart ones
+
+  Default: *False*
+
+Output
+......
+``Concave hull`` [vector: polygon]
+  Output concave hull
+
+See also
+........
+:ref:`qgis_convex_hull`
+
+
+
+.. _qgis_convert_geometry_type:
+
+Convert geometry type
+---------------------
+Generates a new layer based on an existing one, with a different type of geometry.
+
+Not all conversions are possible. For instance, a line layer can be converted to
+a point layer, but a point layer cannot be converted to a line layer.
+
+See the "Polygonize" or "Lines to polygons" algorithm for alternative options.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Input vector layer to transform
+
+``New geometry type`` [selection]
+  List of all the conversions supported:
+
+  * Centroids
+  * Nodes
+  * Linestrings
+  * Multilinestrings
+  * Polygons
+
+  .. note:: conversion types depends on the input layer and the conversion chosen:
+    it is not possible to convert a point to a line
+
+Output
+......
+
+``Converted`` [vector]
+  Converted vector layer depending on the parameters chosen
+
+See also
+........
+:ref:`qgis_polygonize`, :ref:`qgis_lines_to_polygon`
+
+
+.. _qgis_convex_hull:
+
+Convex hull
+-----------
+Calculates the convex hull for each feature in an input layer.
+
+See the 'Minimum bounding geometry' algorithm for a convex hull calculation which
+covers the whole layer or grouped subsets of features.
+
+.. figure:: /static/user_manual/processing_algs/qgis/convex_hull.png
+   :align: center
+
+   Black lines identify the convex hull for each layer feature
+
+Parameters
+..........
+``Input point layer`` [vector: any]
+  Point vector layer to calculate the convex hull
+
+Output
+......
+``Convex hull`` [vector: polygon]
+  Output convex hull
+
+See also
+........
+:ref:`qgis_minimum_bounding_geometry`, :ref:`qgis_concave_hull`
+
+
+.. _qgis_create_layer_from_extent:
+
+Create layer from extent
+------------------------
+Creates a new vector layer that contains a single feature with geometry matching
+an extent parameter.
+
+It can be used in models to convert an extent into a layer which can be used for
+other algorithms which require a layer based input.
+
+Parameters
+..........
+
+``Extent`` [extent]
+  Choose the extent of the layer
+
+Output
+......
+
+``Extent``
+  Final extent of the layer
+
+
+.. _qgis_dalaunay_triangulation:
+
+Delaunay triangulation
+----------------------
+Creates a polygon layer with the delaunay triangulation corresponding to a points
+layer.
+
+.. figure:: /static/user_manual/processing_algs/qgis/delaunay.png
+   :align: center
+
+   Delaunay triangulation on points
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer to compute the triangulation on
+
+Output
+......
+``Delaunay triangulation`` [vector: polygon]
+  Resulting polygon layer of delaunay triangulation
 
 
 
@@ -241,9 +478,9 @@ Console usage
 
 Delete holes
 ------------
-This algorithm takes a polygon layer and removes holes in polygons. It creates a
-new vector layer in which polygons with holes have been replaced by polygons with
-only their external ring. Attributes are not modified.
+Takes a polygon layer and removes holes in polygons. It creates a new vector layer
+in which polygons with holes have been replaced by polygons with only their external
+ring. Attributes are not modified.
 
 An optional minimum area parameter allows removing only holes which are smaller
 than a specified area threshold. Leaving this parameter as 0.0 results in all
@@ -273,20 +510,56 @@ Outputs
 ``Cleaned`` [vector: polygon]
   Vector layer without holes.
 
-Console usage
-.............
 
-::
+.. _qgis_densify_geometries:
 
-  processing.runalg('qgis:densifygeometriesgivenaninterval', input, interval, output)
+Densify geometries
+------------------
+Takes a polygon or line layer and generates a new one in which the geometries have
+a larger number of vertices than the original one.
+
+Vertices will be added to each segment of the layer.
+
+If the geometries have z or m values present then these will be linearly interpolated
+at the added nodes.
+
+The number of new vertices to add to each feature geometry is specified as an
+input parameter.
+
+.. figure:: /static/user_manual/processing_algs/qgis/densify_geometry.png
+   :align: center
+
+   Red points show the vertices before and after the densify
+
+Parameters
+..........
+
+``Input layer`` [vector: polygon, line]
+  Polygon or line vector layer.
+
+``Vertices to add`` [number]
+  Number of vertices to add.
+
+  Default: *1*
+
+Outputs
+.......
+
+``Densified`` [vector: polygon, line]
+  Densified layer with vertices added.
+
+
+See also
+........
+To add vertices at specific intervals look at :ref:`qgis_densify_geometry_interval`.
 
 
 .. _qgis_densify_geometry_interval:
 
 Densify geometries given an interval
 ------------------------------------
-This algorithm takes a polygon or line layer and generates a new one in which the
-geometries have a larger number of vertices than the original one.
+Takes a polygon or line layer and generates a new one in which the geometries have
+a larger number of vertices than the original one.
 
 The geometries are densified by adding regularly placed extra nodes inside each
 segment so that the maximum distance between any two nodes does not exceed the
@@ -326,73 +599,22 @@ Outputs
 ``Densified`` [vector: plygon, line]
   Densified layer with vertices added at specified intervals
 
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:densifygeometriesgivenaninterval', input, interval, output)
 
 See also
 ........
 To add a specific number of vertices, look at :ref:`qgis_densify_geometries`.
 
 
-.. _qgis_densify_geometries:
-
-Densify geometries
-------------------
-This algorithm takes a polygon or line layer and generates a new one in which the
-geometries have a larger number of vertices than the original one.
-
-Vertices will be added to each segment of the layer.
-
-If the geometries have z or m values present then these will be linearly interpolated
-at the added nodes.
-
-The number of new vertices to add to each feature geometry is specified as an
-input parameter.
-
-.. figure:: /static/user_manual/processing_algs/qgis/densify_geometry.png
-   :align: center
-
-   Red points show the vertices before and after the densify
-
-Parameters
-..........
-
-``Input layer`` [vector: polygon, line]
-  Polygon or line vector layer.
-
-``Vertices to add`` [number]
-  Number of vertices to add.
-
-  Default: *1*
-
-Outputs
-.......
-
-``Densified`` [vector: polygon, line]
-  Densified layer with vertices added.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:densifygeometries', input, vertices, output)
-
-See also
-........
-To add vertices at specific intervals look at :ref:`qgis_densify_geometry_interval`.
-
+.. _qgis_dissolve:
 
 Dissolve
 --------
-This algorithm takes a polygon or line vector layer and combines their geometries
-into new geometries. One or more attributes can be specified to dissolve only
-geometries belonging to the same class (having the same value for the specified
-attributes), alternatively all geometries can be dissolved.
+Takes a polygon or line vector layer and combines their geometries into new
+geometries.
+
+One or more attributes can be specified to dissolve only geometries belonging to
+the same class (having the same value for the specified attributes), alternatively
+all geometries can be dissolved.
 
 If the geometries to be dissolved are spatially separated from each other the output
 will be multi geometries. In case the input is a polygon layer, common boundaries
@@ -404,7 +626,7 @@ the features are truncated.
 .. figure:: /static/user_manual/processing_algs/qgis/dissolve.png
    :align: center
 
-   Dissolve the whole polygon layer
+   Dissolve the polygon layer on a common attribute
 
 Parameters
 ..........
@@ -429,12 +651,233 @@ Outputs
 ``Dissolved`` [vector: polygon, line]
   Output layer, either (multi) line or (multi) polygon
 
-Console usage
-.............
 
-::
+.. _qgis_drop_mz_values:
 
-  processing.runalg('qgis:dissolve', input, dissolve_all, field, output)
+Drop m/z values
+---------------
+Removes any measure (M) or Z values from input geometries.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Input vector layer to clean
+
+``Drop M Values`` [boolean]
+  Check to remove the M values
+
+  Default: *False*
+
+``Drop Z Values`` [boolean]
+  Check to remove the Z values
+
+  Default: *False*
+
+Output
+......
+``Z/M Dropped`` [vector]
+  Cleaned vector laye without M or Z values
+
+
+.. _qgis_eliminate_selected_polygons:
+
+Eliminate selected polygons
+---------------------------
+Combines selected polygons of the input layer with certain adjacent polygons by
+erasing their common boundary. The adjacent polygon can be either the one with
+the largest or smallest area or the one sharing the largest common boundary with
+the polygon to be eliminated.
+
+The selected features will always be eliminated whether the option "Use only selected features"
+is set or not. Eliminate is normally used to get rid of sliver polygons, i.e.
+tiny polygons that are a result of polygon intersection processes where boundaries
+of the inputs are similar but not identical.
+
+Parameters
+..........
+``Input layer`` [vector: polygon]
+  Input polygon vector layer to clean
+
+``Merge selection with the neighboring polygon with the`` [selection]
+  Choose the parameter to use in order to get rid of the selected polygons:
+
+  * Largest Area
+  * Smallest Area
+  * Largest Common Boundary
+
+Output
+......
+``Eliminated`` [vector: polygon]
+  Cleaned vector layer as result of the parameters chosen
+
+
+
+.. _qgis_explode_lines:
+
+Explode lines
+-------------
+Takes a lines layer and creates a new one in which each line is replaced by a set
+of lines representing the segments in the original line.
+
+Each line in the resulting layer contains only a start and an end point, with no
+intermediate nodes between them.
+
+
+.. figure:: /static/user_manual/processing_algs/qgis/explode_lines.png
+   :align: center
+
+   The original line layer and the exploded one
+
+Parameters
+..........
+``Input layer`` [vector: line]
+  Line vector layer in input to explode
+
+Output
+......
+
+``Exploded`` [vector: line]
+
+
+
+.. _qgis_export_geometry_columns:
+
+Export geometry columns
+-----------------------
+Computes geometric properties of the features in a vector layer.
+
+It generates a new vector layer with the same content as the input one, but with
+additional attributes in its attributes table, containing geometric measurements.
+
+Depending on the geometry type of the vector layer, the attributes added to the
+table will be different:
+
+* for point layers: x and y coordinates
+* for line layers: length
+* for polygon layers: perimeter and area
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer in input
+
+``Calculate using`` [selection]
+  Choose different calculation type for the coordinates:
+
+  * Layer CRS
+  * Project CRS
+  * Ellipsoidal
+
+Output
+......
+
+``Added gom info`` [vector]
+  Copy of the input vector layer with the addition of the coordinates fields
+
+
+
+.. _qgis_extend_lines:
+
+Extend lines
+------------
+Extends line geometries by a specified amount at the start and end of the line.
+
+Lines are extended using the bearing of the first and last segment in the line.
+
+.. figure:: /static/user_manual/processing_algs/qgis/extend_lines.png
+   :align: center
+
+   The red dashes represent the initial and final extension of the original layer
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer to extend
+
+``Start distance`` [number]
+  Starting distance of the extension
+
+``End distance`` [number]
+  Ending distance of the extension
+
+Output
+......
+
+``Extended`` [vector: line]
+  Extended vector line layer
+
+
+.. _qgis_extract_nodes:
+
+Extract nodes
+-------------
+Takes a line or polygon layer and generates a point layer with points representing
+the nodes in the input lines or polygons.
+
+The attributes associated to each point are the same ones associated to the line
+or polygon that the point belongs to.
+
+Additional fields are added to the nodes indicating the node index (beginning at 0),
+the node’s part and its index within the part (as well as its ring for polygons),
+distance along original geometry and bisector angle of node for original geometry.
+
+.. figure:: /static/user_manual/processing_algs/qgis/extract_nodes.png
+   :align: center
+
+   Nodes extracted for line and polygon layer
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer in input to extract the nodes from
+
+Output
+......
+
+``Nodes`` [vector: point]
+  Extracted nodes
+
+
+.. _qgis_extract_specific_nodes:
+
+Extract specific nodes
+----------------------
+Takes a line or polygon layer and generates a point layer with points representing
+specific nodes in the input lines or polygons.
+
+For instance, this algorithm can be used to extract the first or last nodes in
+the geometry. The attributes associated to each point are the same ones associated
+to the line or polygon that the point belongs to.
+
+The node indices parameter accepts a comma separated string specifying the indices
+of the nodes to extract. The first node corresponds to an index of 0, the second
+node has an index of 1, etc. Negative indices can be used to find nodes at the
+end of the geometry, e.g., an index of -1 corresponds to the last node, -2
+corresponds to the second last node, etc.
+
+Additional fields are added to the nodes indicating the specific node position
+(e.g., 0, -1, etc), the original node index, the node’s part and its index within
+the part (as well as its ring for polygons), distance along the original geometry
+and bisector angle of node for the original geometry.
+
+Parameters
+..........
+``Input layer`` [vector]
+  Vector layer in input to extract the nodes from
+
+``Node indices`` [number]
+  Type the indices of the nodes to extract. The algorithm accepts comma separated
+  values for many nodes to extract (e.g. ``-2, 3, 5, 7``)
+
+  Default: *0*
+
+Output
+......
+
+``Nodes`` [vector: point]
+  Extracted nodes of input layer
 
 
 .. _qgis_fix_geometry:
@@ -460,12 +903,54 @@ Outputs
 ``Fixed geometries`` [vector: polygon, line]
   Layer with fixed geometries.
 
-Console usage
-.............
 
-::
+.. _qgis_geometry_by_expression:
 
-  processing.runalg('qgis:keepnbiggestparts', polygons, to_keep, results)
+Geometry by expression
+----------------------
+Updates existing geometries (or creates new geometries) for input features by use
+of a QGIS expression.
+
+This allows complex geometry modifications which can utilize all the flexibility
+of the QGIS expression engine to manipulate and create geometries for output features.
+
+For help with QGIS expression functions, see the inbuilt help for specific functions
+which is available in the expression builder.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector input layer
+
+``Output geometry type`` [selection]
+  The output geometry strongly depends on the expression you will choose: for
+  instance, if you want to create a buffer than the geometry type has to be
+  a polygon
+
+  * Polygon
+  * Line
+  * Point
+
+``Output geometry has z dimension`` [boolean]
+  Choose if the output geometry should have the z dimension
+
+  Default: *False*
+
+``Output geometry has m dimension`` [boolean]
+  Choose if the output geometry should have the z dimension
+
+  Default: *False*
+
+``Geometry expression`` [expression]
+  Add the geometry expression you want to use. You can use the button to open
+  the Expression Dialog: the dialog has a lists of all the usable expression
+  together with their help and guide
+
+  Default: *$geometry*
+
+``Modified geometry`` [vector]
+  Vector layer resulting from the expression added
+
 
 
 .. _qgis_keep_n_biggest:
@@ -500,14 +985,127 @@ Outputs
 ``Biggest parts`` [vector: polygon]
   Resulting polygon layer with the biggest parts chosen.
 
-Console usage
-.............
 
-::
+.. _qgis_lines_to_polygon:
 
-  processing.runalg('qgis:keepnbiggestparts', polygons, to_keep, results)
+Lines to polygon
+----------------
+Generates a polygon layer using as polygon rings the lines from an input line layer.
+
+The attribute table of the output layer is the same as the one from of the input
+line layer.
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer to convert
+
+Output
+......
+
+``Polygons`` [vector: polygon]
+  Polygon vector layer from the line input vector layer
 
 
+.. _qgis_merge_lines:
+
+Merge lines
+-----------
+Joins all connected parts of MultiLineString geometries into single LineString
+geometries.
+
+If any parts of the input MultiLineString geometries are not connected, the
+resultant geometry will be a MultiLineString containing any lines which could be
+merged and any non-connected line parts.
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  MultiLineString vector layer
+
+Output
+......
+
+``Merged`` [vector: lines]
+  Single Linestring vector layer
+
+
+.. _qgis_minimum_bounding_geometry:
+
+Minimum bounding geometry
+-------------------------
+Creates geometries which enclose the features from an input layer.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
+
+``Field`` [tablefield: any]
+  Optional
+
+  Features can be grouped by a field. If set, this causes the output
+  layer to contain one feature per grouped value with a minimal geometry covering
+  just the features with matching values
+
+``Geometry type`` [selection]
+  Numerous enclosing geometry types are supported:
+
+  * Envelopes (bounding boxes)
+  * Minimum oriented rectangle
+  * Minimum enclosing circles
+  * Convex hulls
+
+  .. figure:: /static/user_manual/processing_algs/qgis/minimum_bounding.png
+     :align: center
+
+     Clockwise from left-up: envelopes, oriented rectangle, circle, convex hull
+
+Output
+......
+
+``Bounding geometry`` [vector: polygon]
+  Bounding polygon layer
+
+
+
+.. _qgis_minimum_enclosing_circles:
+
+Minimum enclosing circles
+-------------------------
+Calculates the minimum enclosing circle which covers each feature in an input layer.
+
+.. figure:: /static/user_manual/processing_algs/qgis/minimum_enclosing_circles.png
+   :align: center
+
+   Enclosing circles for each feature
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
+
+``Number of segment in circles`` [number]
+  Choose the number of segment for each circle
+
+  Default: *72*
+
+Output
+......
+
+``Minimum enclosing circles`` [vector: polygon]
+  Enclosing circles for each polygon feature
+
+See also
+........
+:ref:`qgis_minimum_bounding_geometry`
+
+
+.. _qgis_multipart_to_single:
 
 Multipart to singleparts
 ------------------------
@@ -525,7 +1123,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Multiparts input layer.
+  Multipart input layer.
 
 Outputs
 .......
@@ -533,13 +1131,142 @@ Outputs
 ``Single parts`` [vector: any]
   Singlepart layer in output with updated attribute table.
 
-Console usage
-.............
+See also
+........
+:ref:`qgis_collect_geometries` and :ref:`qgis_promote_to_multipart`
 
-::
 
-  processing.runalg('qgis:multiparttosingleparts', input, output)
+.. _qgis_offset_line:
 
+Offset line
+-----------
+Offsets lines by a specified distance. Positive distances will offset lines to
+the left, and negative distances will offset to the right of lines.
+
+.. figure:: /static/user_manual/processing_algs/qgis/offset_lines.png
+   :align: center
+
+   In blue the source layer, in red the offset one
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer in input to elaborate the offset on
+
+``Distance`` [number]
+  Distance of the offset. Negative distances are also supported: for instance a
+  negative distance will create the offset to the other part of the layer
+
+  Default: *10.0*
+
+``Segment`` [number]
+  Number of line segments to use to approximate a quarter circle when creating
+  rounded offsets
+
+  Default: *8*
+
+``Join style`` [selection]
+  Specify whether round, miter or beveled joins should be used when offsetting
+  corners in a line
+
+  Default: *Round*
+
+``Miter limit`` [number]
+  Only applicable for miter join styles, and controls the maximum distance from
+  the offset curve to use when creating a mitered join
+
+  Default: *2.0*
+
+Output
+......
+
+``Offset`` [vector: line]
+  Offset line layer
+
+
+.. _qgis_oriented_minimum_bounding_box:
+
+Oriented minimum bounding box
+-----------------------------
+Calculates the minimum area rotated rectangle which covers each feature in an input layer.
+
+.. figure:: /static/user_manual/processing_algs/qgis/oriented_minimum_bounding_box.png.png
+   :align: center
+
+   Oriented minimum bounding box
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
+
+Output
+......
+
+``Bounding boxes`` [vector: polygon]
+  Oriented minimum bounding boxes for each polygon feature
+
+See also
+........
+:ref:`qgis_minimum_bounding_geometry`
+
+
+.. _qgis_orthogonalize:
+
+Orthogonalize
+-------------
+Takes a line or polygon layer and attempts to orthogonalize all the geometries
+in the layer. This process shifts the nodes in the geometries to try to make every
+angle in the geometry either a right angle or a straight line.
+
+
+.. figure:: /static/user_manual/processing_algs/qgis/orthogonize.png
+   :align: center
+
+   In blue the source layer while the red line is the orthogonalized result
+
+Parameters
+..........
+
+``Input layer`` [vector: polygon, line]
+  Input vector layer
+
+``Maximum angle tolerance (degrees)`` [number]
+  Specify the maximum deviation from a right angle or straight line a node can
+  have for it to be adjusted. Smaller tolerances mean that only nodes which are
+  already closer to right angles will be adjusted, and larger tolerances mean
+  that nodes which deviate further from right angles will also be adjusted.
+
+``Maximum algorithm iterations`` [number]
+  Setting a larger number for the maximum iterations will result in a more
+  orthogonal geometry at the cost of extra processing time
+
+Output
+......
+
+``Orthogonalized`` [vector]
+  Final layer with angles adjusted depending on the parameters chosen
+
+
+.. _qgis_point_on_surface:
+
+Point on surface
+----------------
+Returns a point guaranteed to lie on the surface of a geometry.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
+
+Output
+......
+
+``Point`` [vector: point]
+  Point vector layer
 
 
 .. _qgis_simplify_geometries:
