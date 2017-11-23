@@ -1594,13 +1594,26 @@ properties you can set to control whether and how a field can be edited:
   doesn't override any edit limitation from the provider.
 * **Label on top**: places the field name above or beside the widget in the
   feature form
-* **Default value**: for new features, populates by default the field with the
-  same value or an expression-based one. For example, you can use
-  ``maximum("field")+1`` to generate a field that increments by 1 for each
-  new feature. Variables can also be used in default value expressions, making
-  it easier to e.g. insert a user's name, current datetime, project path...
-  A preview of the default value is displayed
-* **Constraints**: you can constrain the value in the field. This constraint
+* **Default value**: for new features, automatically populates by default the
+  field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
+  For example, you can:
+
+  * use ``$x``, ``$length``, ``$area`` to populate a field with the feature's x
+    coordinate, length, area or any geometric information at its creation;
+  * incremente a field by 1 for each new feature using ``maximum("field")+1``;
+  * save the feature creation datetime using ``now()``;
+  * use :ref:`variables <general_tools_variables>` in expressions, making it
+    easier to e.g. insert the operator name (``@user_full_name``), the project
+    file path (``@project_path``), ...
+    
+  A preview of the resulting default value is displayed at the bottom of the widget.
+  
+  .. note:: The ``Default value`` option is not aware of the values in any other
+    field of the feature being created so it won't be possible to use an expression
+    combining any of those values i.e using an expression like ``concat(field1, field2)``
+    may not work.
+
+* **Constraints**: you can constrain the value to insert in the field. This constraint
   can be:
 
   * |checkbox| :guilabel:`Not null`: force the user to provide a value
