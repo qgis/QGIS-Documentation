@@ -1349,11 +1349,42 @@ Output
   Point vector layer
 
 
+.. _qgis_pole_of_inaccessibility:
+
+Pole of inaccessibility
+-----------------------
+Calculates the pole of inaccessibility for a polygon layer, which is the most
+distant internal point from the boundary of the surface.
+
+This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin, 2016), which
+is an iterative approach guaranteed to find the true pole of inaccessibility within
+a specified tolerance (in layer units). More precise tolerances require more iterations
+and will take longer to calculate.
+
+The distance from the calculated pole to the polygon boundary will be stored as
+a new attribute in the output layer.
+
+.. figure:: /static/user_manual/processing_algs/qgis/pole_inaccessibility.png
+   :align: center
+
+   Pole of inaccessibility
+
+Parameters
+..........
+
+``Input layer`` [vector: polygon]
+  Input polygon vector layer
+
+``Tolerance (layer units)`` [number]
+  Set the tolerance for the calculation
+
+  Default: *1.0*
+
 Output
 ......
 
 ``Point`` [vector: point]
-  Point vector layer
+  Point as pole of inaccessibility for the source polygon vector layer
 
 
 .. _qgis_simplify_geometries:
