@@ -93,7 +93,7 @@ Output
 .. figure:: /static/user_manual/processing_algs/qgis/boundary_polygon.png
    :align: center
 
-   Boundary for polygon. In green the polygon and in black the boundary
+   Black dash lines the polygon boundary
 
 
 
@@ -1191,7 +1191,7 @@ Oriented minimum bounding box
 -----------------------------
 Calculates the minimum area rotated rectangle which covers each feature in an input layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/oriented_minimum_bounding_box.png.png
+.. figure:: /static/user_manual/processing_algs/qgis/oriented_minimum_bounding_box.png
    :align: center
 
    Oriented minimum bounding box
@@ -1261,6 +1261,93 @@ Parameters
 
 ``Input layer`` [vector: any]
   Input vector layer
+
+Output
+......
+
+``Point`` [vector: point]
+  Point vector layer
+
+
+.. _qgis_points_along_lines:
+
+Points along lines
+------------------
+Creates points at regular intervals along line or polygon geometries. Created
+points will have new attributes added for the distance along the geometry and the
+angle of the line at the point.
+
+An optional start and end offset can be specified, which controls how far from
+the start and end of the geometry the points should be created.
+
+.. figure:: /static/user_manual/processing_algs/qgis/points_along_line.png
+   :align: center
+
+   Points created along the source line layer
+
+Parameters
+..........
+
+``Input layer`` [vector: line, polygon]
+  Input vector layer
+
+``Distance`` [number]
+  Set the distance between each point
+
+  Default: *100*
+
+``Start offset`` [number]
+  Specify an eventual offset where the first point should start
+
+  Default: *0*
+
+``End offset`` [number]
+  Specify an eventual offset where the last point should end
+
+  Default: *0*
+
+Output
+......
+
+``Points`` [vector: point]
+  Point vector layer
+
+
+.. _qgis_points_displacement:
+
+Points displacement
+-------------------
+Offsets nearby point features by moving nearby points by a preset amount to minimize
+overlapping features.
+
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Input point vector layer
+
+``Minimum distance to other points`` [number]
+  Set the distance between each point
+
+  Default: *0,000150*
+
+``Displacement distance`` [number]
+  Specify an eventual offset where the first point should start
+
+  Default: *0,000150*
+
+``Horizontal distribution for two point case`` [boolean]
+  Specify an eventual offset where the last point should end
+
+  Default: *False*
+
+Output
+......
+
+``Displaced`` [vector: point]
+  Point vector layer
+
 
 Output
 ......
