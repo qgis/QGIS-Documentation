@@ -11,8 +11,6 @@ Raster terrain analysis
       :local:
       :depth: 1
 
-.. note:: Each algorithm can be use in the python console using internal Processing
-  API. Refer to the section :ref:`processing_console`
 
 .. _qgis_aspect:
 
