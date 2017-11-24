@@ -22,10 +22,10 @@ The expression can contain numerical values, operators and references to any of
 the layers in the current project.
 
 .. note:: When using the calculator in the batch interface or from the console,
-  the files to use have to be specified. The corresponding layers are referred
-  using the base name of the file (without the full path). For instance, if using
-  a layer at ``path/to/my/rasterfile.tif``, the first band of that layer will be
-  referred as ``rasterfile.tif@1``.
+  (see :ref:`processing_batch`) the files to use have to be specified. The
+  corresponding layers are referred using the base name of the file (without the
+  full path). For instance, if using a layer at ``path/to/my/rasterfile.tif``,
+  the first band of that layer will be referred as ``rasterfile.tif@1``.
 
 Parameters
 ..........
@@ -37,13 +37,13 @@ Parameters
 
 ``Values and operators`` [calculator]
   Contains some calculator like buttons that can be used to fill the expression
-  box. Besides the visible buttons also the the following functions are supported:
+  box. Besides the visible buttons also the following functions are supported:
   ``sin()``, ``cos()``, ``tan()``, ``atan2()``, ``ln()``, ``log10()``.
 
 
 ``Expression`` [string]
   Expression that will be used to calculate the output raster layer. You can use
-  the operator buttons provided of type directly the expression in this box.
+  the operator buttons provided to type directly the expression in this box.
 
 ``Predefined expressions`` [selection]
   You can use the existing ``NDVI`` expression or you can define new expressions
@@ -99,10 +99,10 @@ Outputs
 ``Statistics`` [html]
   The output file contains the following information:
 
-  - Analyzed file: the path of the raster layer
+  - Analyzed file: path of the raster layer
   - Minimum value: minimum value of the raster
   - Maximum value: maximum value of the raster
-  - Range: maximum values minus the minimum values
+  - Range: difference between the maximum and minimum values
   - Sum: total sum of the values
   - Mean value: mean of the values
   - Standard deviation: standard deviation of the values
@@ -143,7 +143,7 @@ Outputs
   - Final table with 3 different columns:
 
     - Value: unique value of each pixel
-    - Pixel count: count of how many pixels belons to each value
+    - Pixel count: count of how many pixels belong to each value
     - Area (m :sup:`2`): square meters of the area for each pixel class
 
 
@@ -154,7 +154,7 @@ Raster zonal statistics
 Calculates statistics of a raster layer for each feature of an overlapping polygon
 vector layer.
 
-.. warning:: no new output file will be created. The algorithms adds new columns
+.. warning:: no new output file will be created. The algorithm adds new columns
   to the source vector layer
 
 Parameters
