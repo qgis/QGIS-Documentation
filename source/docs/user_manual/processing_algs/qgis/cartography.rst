@@ -29,7 +29,7 @@ can see each color class has the same amount of features.
 .. figure:: /static/user_manual/processing_algs/qgis/topological_color.png
   :align: center
 
-  Color classes and feature count
+  Topological colors example
 
 Parameters
 ..........
