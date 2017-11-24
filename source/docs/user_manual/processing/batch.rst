@@ -2,6 +2,9 @@
 
    |updatedisclaimer|
 
+
+.. _processing_batch:
+
 The batch processing interface
 ===============================
 
