@@ -139,7 +139,7 @@ Outputs
   - Width in pixels: number of columns and pixel width size
   - Height in pixels: number of rows and pixel width size
   - Total pixel count: count of all the pixels
-  - NODATA pixel count: count of pixel with NODATA value
+  - NODATA pixel count: count of pixels with NODATA value
   - Final table with 3 different columns:
 
     - Value: unique value of each pixel
