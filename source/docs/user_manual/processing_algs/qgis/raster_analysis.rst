@@ -22,9 +22,9 @@ The expression can contain numerical values, operators and references to any of
 the layers in the current project.
 
 .. note:: When using the calculator in the batch interface or from the console,
-  (see :ref:`processing_batch`) the files to use have to be specified. The
-  corresponding layers are referred using the base name of the file (without the
-  full path). For instance, if using a layer at ``path/to/my/rasterfile.tif``,
+  (see :ref:`processing_batch` and :ref:`console`) the files to use have to be
+  specified. The corresponding layers are referred using the base name of the
+  file (without the full path). For instance, if using a layer at ``path/to/my/rasterfile.tif``,
   the first band of that layer will be referred as ``rasterfile.tif@1``.
 
 Parameters
