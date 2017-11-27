@@ -88,12 +88,12 @@ Output
 .. figure:: /static/user_manual/processing_algs/qgis/boundary_lines.png
    :align: center
 
-   Boundary layer for lines. In yellow one selected features
+   Boundary layer for lines. In yellow a selected features
 
 .. figure:: /static/user_manual/processing_algs/qgis/boundary_polygon.png
    :align: center
 
-   Black dash lines the polygon boundary
+   Black dash boundary lines of the source polygon layer
 
 
 
@@ -108,8 +108,7 @@ Polygon and line geometries are supported.
 .. figure:: /static/user_manual/processing_algs/qgis/bounding_box.png
    :align: center
 
-   In green with light red strokes the features of the polygon, the black strokes
-   represent the bounding boxes of each feature
+   Black lines represent the bounding boxes of each polygon feature
 
 Parameters
 ..........
@@ -139,7 +138,7 @@ for points, lines and polygons:
 .. figure:: /static/user_manual/processing_algs/qgis/buffer.png
    :align: center
 
-   Points, lines and polygons buffer
+   In yellow the buffer of point, line and polygon layer
 
 Parameters
 ..........
@@ -238,8 +237,7 @@ information:
 .. figure:: /static/user_manual/processing_algs/qgis/check_validity.png
    :align: center
 
-   Left the input layer. Right: in green the valid layer, in red the invalid layer:
-   black refer to the invalid points
+   Left the input layer. Right: in green the valid layer, in orange the invalid layer
 
 Parameters
 ..........
@@ -328,13 +326,15 @@ Parameters
 ``Threshold`` [number]
   Number from 0 (maximum concave hull) to 1 (convex hull)
 
+  Default: *0.3*
+
 
   .. figure:: /static/user_manual/processing_algs/qgis/concave_hull_threshold.png
      :align: center
 
      Different thresholds used (0.3, 0.6, 0.9)
 
-  Default: *0.3*
+
 
 ``Allow holes`` [boolean]
   Choose whether to allow holes in the final concave hull
@@ -366,8 +366,6 @@ Generates a new layer based on an existing one, with a different type of geometr
 Not all conversions are possible. For instance, a line layer can be converted to
 a point layer, but a point layer cannot be converted to a line layer.
 
-See the "Polygonize" or "Lines to polygons" algorithm for alternative options.
-
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -383,7 +381,7 @@ Parameters
   * Polygons
 
   .. note:: conversion types depends on the input layer and the conversion chosen:
-    it is not possible to convert a point to a line
+    e.g. it is not possible to convert a point to a line
 
 Output
 ......
