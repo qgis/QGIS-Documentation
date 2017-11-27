@@ -11,99 +11,133 @@ Vector table
       :local:
       :depth: 1
 
+
+.. _qgis_add_autoincremental_field:
+
 Add autoincremental field
 -------------------------
+Adds a new integer field to a vector layer, with a sequential value for each feature.
 
-Description
-...........
+This field can be used as a unique ID for features in the layer. The new attribute
+is not added to the input layer but a new layer is generated instead.
 
-<put algorithm description here>
+The initial starting value for the incremental series can be specified.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
-Outputs
-.......
+``Field name`` [string]
+  Name of the field with autoincremental values
 
-``Output layer`` [vector]
-  <put output description here>
+  Default: *AUTO*
 
-Console usage
-.............
+``Start values at`` [number]
+  Optional
 
-::
+  Choose the number of the initial incremental count
 
-  processing.runalg('qgis:addautoincrementalfield', input, output)
+  Default: *0*
 
-See also
-........
+Output
+......
+
+``Incremented`` [vector]
+  Vector layer with additional field
+
+
+.. _qgis_add_field_to_attribute_table:
 
 Add field to attributes table
 -----------------------------
+Adds a new attribute to a vector layer.
 
-Description
-...........
+The name and characteristics of the attribute are defined as parameters.
 
-<put algorithm description here>
+The new attribute is not added to the input layer but a new layer is generated
+instead.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
 ``Field name`` [string]
-  <put parameter description here>
+  Name of the new field
 
   Default: *(not set)*
 
 ``Field type`` [selection]
-  <put parameter description here>
+  Type of the new field. You can choose between:
 
-  Options:
+  * Integer
+  * Float
+  * String
 
-  * 0 --- Integer
-  * 1 --- Float
-  * 2 --- String
-
-  Default: *0*
+  Default: *Integer*
 
 ``Field length`` [number]
-  <put parameter description here>
+  Length of the field
 
   Default: *10*
 
 ``Field precision`` [number]
-  <put parameter description here>
+  Precision of the field. Useful with Float field type
 
   Default: *0*
 
-Outputs
-.......
+Output
+......
 
-``Output layer`` [vector]
-  <put output description here>
+``Added`` [vector]
+  Vector layer with new field added
 
-Console usage
-.............
 
-::
+.. _qgis_add_unique_value_index_field:
 
-  processing.runalg('qgis:addfieldtoattributestable', input_layer, field_name, field_type, field_length, field_precision, output_layer)
+Add unique value index field
+----------------------------
+Takes a vector layer and an attribute and adds a new numeric field.
 
-See also
-........
+Values in this field correspond to values in the specified attribute, so features
+with the same value for the attribute will have the same value in the new numeric
+field.
+
+This creates a numeric equivalent of the specified attribute, which defines the
+same classes.
+
+The new attribute is not added to the input layer but a new layer is generated
+instead.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
+
+``Class field`` [tablefield: any]
+  Name of the new field
+
+  Default: *(not set)*
+
+Output
+......
+
+``Layer with index index field``
+  Vector layer with the field ``NUM_FIELD`` containing indexes
+
+
+.. _qgis_advanced_python_calculator:
 
 Advanced Python field calculator
 --------------------------------
+Adds a new attribute to a vector layer, with values resulting from applying an
+expression to each feature.
 
-Description
-...........
-
-<put algorithm description here>
+The expression is defined as a Python function.
 
 Parameters
 ..........
@@ -112,538 +146,150 @@ Parameters
   <put parameter description here>
 
 ``Result field name`` [string]
-  <put parameter description here>
+  name of the new field
 
   Default: *NewField*
 
 ``Field type`` [selection]
-  <put parameter description here>
+  Type of the new field. You can choose between:
 
-  Options:
+  * Integer
+  * Float
+  * String
 
-  * 0 --- Integer
-  * 1 --- Float
-  * 2 --- String
-
-  Default: *0*
+  Default: *Integer*
 
 ``Field length`` [number]
-  <put parameter description here>
+  Length of the field
 
   Default: *10*
 
 ``Field precision`` [number]
-  <put parameter description here>
+  Precision of the field. Useful with Float field type
 
   Default: *0*
 
 ``Global expression`` [string]
   Optional.
 
-  <put parameter description here>
+  Option to add a global expression
 
   Default: *(not set)*
 
 ``Formula`` [string]
-  <put parameter description here>
+  Add here the Python formula to evaluate. For example to calculate the area of
+  an input polygon layer you can add:
+
+  .. code-block:: python
+
+    value  = $geom.area()
 
   Default: *value =*
 
-Outputs
-.......
+Outpu
+.....
 
-``Output layer`` [vector]
-  <put output description here>
+``Calculated`` [vector]
+  Vector layer with the new calculated field
 
-Console usage
-.............
 
-::
 
-  processing.runalg('qgis:advancedpythonfieldcalculator', input_layer, field_name, field_type, field_length, field_precision, global, formula, output_layer)
+.. _qgis_dropfield:
 
-See also
-........
-
-Basic statistics for numeric fields
------------------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input vector layer`` [vector: any]
-  <put parameter description here>
-
-``Field to calculate statistics on`` [tablefield: numeric]
-  <put parameter description here>
-
-Outputs
-.......
-
-``Statistics for numeric field`` [html]
-  <put output description here>
-
-``Coefficient of Variation`` [number]
-  <put output description here>
-
-``Minimum value`` [number]
-  <put output description here>
-
-``Maximum value`` [number]
-  <put output description here>
-
-``Sum`` [number]
-  <put output description here>
-
-``Mean value`` [number]
-  <put output description here>
-
-``Count`` [number]
-  <put output description here>
-
-``Range`` [number]
-  <put output description here>
-
-``Median`` [number]
-  <put output description here>
-
-``Number of unique values`` [number]
-  <put output description here>
-
-``Standard deviation`` [number]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:basicstatisticsfornumericfields', input_layer, field_name, output_html_file)
-
-See also
-........
-
-Basic statistics for text fields
---------------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input vector layer`` [vector: any]
-  <put parameter description here>
-
-``Field to calculate statistics on`` [tablefield: string]
-  <put parameter description here>
-
-Outputs
-.......
-
-``Statistics for text field`` [html]
-  <put output description here>
-
-``Minimum length`` [number]
-  <put output description here>
-
-``Maximum length`` [number]
-  <put output description here>
-
-``Mean length`` [number]
-  <put output description here>
-
-``Count`` [number]
-  <put output description here>
-
-``Number of empty values`` [number]
-  <put output description here>
-
-``Number of non-empty values`` [number]
-  <put output description here>
-
-``Number of unique values`` [number]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:basicstatisticsfortextfields', input_layer, field_name, output_html_file)
-
-See also
-........
-
-Create equivalent numerical field
----------------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  <put parameter description here>
-
-``Class field`` [tablefield: any]
-  <put parameter description here>
-
-Outputs
-.......
-
-``Output layer`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:createequivalentnumericalfield', input, field, output)
-
-See also
-........
-
-Delete column
+Drop field(s)
 -------------
-
-Description
-...........
-
-<put algorithm description here>
+Takes a vector layer and generates a new one that has the exact same content but
+without the selected columns..
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
-``Field to delete`` [tablefield: any]
-  <put parameter description here>
+``Fields to drop`` [multiselection]
+  Select the field to drop
 
-Outputs
-.......
+Output
+......
 
-``Output`` [vector]
-  <put output description here>
+``Fields dropped``
+  Vector layer without the field(s) chosen
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:deletecolumn', input, column, output)
-
-See also
-........
-
-Export/Add geometry columns
----------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  <put parameter description here>
-
-``Calculate using`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- Layer CRS
-  * 1 --- Project CRS
-  * 2 --- Ellipsoidal
-
-  Default: *0*
-
-Outputs
-.......
-
-``Output layer`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:exportaddgeometrycolumns', input, calc_method, output)
-
-See also
-........
+.. _qgis_field_calculator:
 
 Field calculator
 ----------------
+Opens the field calculator (see :ref:`vector_expressions`). You can use all the
+supported expressions and functions.
 
-Description
-...........
+A new layer is created with the result of the expression.
 
-<put algorithm description here>
+The field calculator is very useful when used in :ref:`processing.modeler`.
 
-Parameters
-..........
+.. figure:: /static/user_manual/processing_algs/qgis/field_calculator.png
+  :align: center
 
-``Input layer`` [vector: any]
-  <put parameter description here>
+  Field calculator dialog
 
-``Result field name`` [string]
-  <put parameter description here>
 
-  Default: *(not set)*
-
-``Field type`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- Float
-  * 1 --- Integer
-  * 2 --- String
-  * 3 --- Date
-
-  Default: *0*
-
-``Field length`` [number]
-  <put parameter description here>
-
-  Default: *10*
-
-``Field precision`` [number]
-  <put parameter description here>
-
-  Default: *3*
-
-``Create new field`` [boolean]
-  <put parameter description here>
-
-  Default: *True*
-
-``Formula`` [string]
-  <put parameter description here>
-
-  Default: *(not set)*
-
-Outputs
-.......
-
-``Output layer`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:fieldcalculator', input_layer, field_name, field_type, field_length, field_precision, new_field, formula, output_layer)
-
-See also
-........
-
-List unique values
-------------------
-
-Description
-...........
-
-Lists unique values of an attribute table field and counts their number.
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  Layer to analyze.
-
-``Target field`` [tablefield: any]
-  Field to analyze.
-
-Outputs
-.......
-
-``Unique values`` [html]
-  Analysis results in HTML format.
-
-``Total unique values`` [number]
-  Total number of unique values in given field.
-
-``Unique values`` [string]
-  List of all unique values in given field.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:listuniquevalues', input_layer, field_name, output)
-
-See also
-........
-
-Number of unique values in classes
-----------------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``input`` [vector: any]
-  <put parameter description here>
-
-``class field`` [tablefield: any]
-  <put parameter description here>
-
-``value field`` [tablefield: any]
-  <put parameter description here>
-
-Outputs
-.......
-
-``output`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:numberofuniquevaluesinclasses', input, class_field, value_field, output)
-
-See also
-........
+.. _qgis_refactor_fields:
 
 Refactor fields
 ---------------
+Allows editing the structure of the attributes table of a vector layer.
 
-Description
-...........
+Fields can be modified in their type and name, using a fields mapping.
 
-Refactor layer fields:
+The original layer is not modified. A new layer is generated, which contains a
+modified attribute table, according to the provided fields mapping.
 
-* Change field names and types.
-* Add and remove fields.
-* Reorder fields.
-* Calculate new fields based on expressions.
-* Load field list from another layer.
+Refactor layer fields allows to:
+
+* Change field names and types
+* Add and remove fields
+* Reorder fields
+* Calculate new fields based on expressions
+* Load field list from another layer
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Source layer.
+  Input source layer
 
 ``Fields mapping`` [fieldsmapping]
   Output fields definitions
 
-Outputs
-.......
+``Load fields from layer`` [vector: any]
+  Load fields from another vector layer to update the field list
 
-``Output layer`` [vector]
-  Destination layer
+Output
+......
 
-Console usage
-.............
+``Refactored`` [vector]
+  Output layer with refactored fields
 
-::
 
-  processing.runalg("qgis:refactorfields",
-                    input,
-                    [{'name': output_field_name,
-                      'type': output_field_type,
-                      'length': output_field_length,
-                      'precision': output_field_precision,
-                      'expression': expression_based_on_input_layer
-                    }],
-                    output)
-
-See also
-........
-
-Statistics by categories
-------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input vector layer`` [vector: any]
-  <put parameter description here>
-
-``Field to calculate statistics on`` [tablefield: numeric]
-  <put parameter description here>
-
-``Field with categories`` [tablefield: any]
-  <put parameter description here>
-
-Outputs
-.......
-
-``Statistics`` [table]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:statisticsbycategories', input_layer, values_field_name, categories_field_name, output)
-
-See also
-........
+.. _qgis_text_to_float:
 
 Text to float
 -------------
-
-Description
-...........
-
-<put algorithm description here>
+Modifies the type of a given attribute in a vector layer, converting a text attribute
+containing numeric strings into a numeric attribute.
 
 Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
 ``Text attribute to convert to float`` [tablefield: string]
-  <put parameter description here>
+  String field to convert in a floating field type
 
-Outputs
-.......
+Output
+......
 
-``Output`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:texttofloat', input, field, output)
-
-See also
-........
-
+``Float from text`` [vector]
+  Output vector layer with string field converted into float
