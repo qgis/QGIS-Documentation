@@ -574,6 +574,5 @@ Well that concludes this section on writing unit tests in QGIS. We hope you
 will get into the habit of writing test to test new functionality and to check
 for regressions. Some aspects of the test system (in particular the
 CMakeLists.txt parts) are still being worked on so that the testing framework
-works in a truly platform way. I will update this document as things
-progress.
+works in a truly platform independent way.
 
