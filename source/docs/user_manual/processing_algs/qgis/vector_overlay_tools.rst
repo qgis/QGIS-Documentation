@@ -44,8 +44,8 @@ Parameters
 ``Clip layer`` [vector: line or polygon]
   Layer containing the features that are used to clip the features
 
-Outputs
-.......
+Output
+......
 
 ``Clipped`` [vector]
   Final clipped vector layer
@@ -78,8 +78,8 @@ Parameters
 ``Difference layer`` [vector: any]
   Layer containing the features used to in the difference operation
 
-Outputs
-.......
+Output
+......
 
 ``Difference`` [vector]
   Final difference vector layer
@@ -107,8 +107,8 @@ Parameters
   If checked, output geometries will automatically converted to multi geometries
   to ensure uniform output types
 
-Outputs
-.......
+Output
+......
 
 ``Extracted`` [vector]
   Final clipped vector layer
@@ -151,8 +151,8 @@ Parameters
   Choose here the field of the intersection layer to be kept. If no fields are
   chosen all fields are taken
 
-Outputs
-.......
+Output
+......
 
 ``Intersection`` [vector]
   Final intersected vector layer
@@ -193,8 +193,8 @@ Parameters
   Choose here the field of the intersection layer to be kept. If no fields are
   chosen all fields are taken
 
-Outputs
-.......
+Output
+......
 
 ``Intersection`` [vector: point]
 
@@ -223,8 +223,8 @@ Parameters
 ``Split layer`` [vector: line]
   Line layer whose lines are used to define the breaking points.
 
-Outputs
-.......
+Output
+......
 
 ``Split`` [vector]
   Output layer with split lines or polygon from input layer.
@@ -254,8 +254,8 @@ Parameters
 ``Difference layer`` [vector: any]
   Layer containing the features used to in the symmetrical difference operation
 
-Outputs
-.......
+Output
+......
 
 ``Symmetrical difference`` [vector]
   Final symmetrical difference vector layer
@@ -290,8 +290,8 @@ Parameters
 ``Union layer`` [vector: any]
   Layer that will be united to the first one
 
-Outputs
-.......
+Output
+......
 
 ``Union`` [vector]
   Final union vector layer
