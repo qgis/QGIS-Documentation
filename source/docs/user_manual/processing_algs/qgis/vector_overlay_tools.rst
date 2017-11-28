@@ -167,6 +167,10 @@ Output
 ``Intersection`` [vector]
   Layer containing the intersected features
 
+See also
+........
+:ref:`qgis_clip`
+
 
 .. _qgis_line_intersection:
 
