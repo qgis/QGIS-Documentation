@@ -65,8 +65,8 @@ Extracts features from the input layer that don't fall within the boundaries of
 the difference layer.
 
 Input layer features that are partially within difference layer feature(s) are
-split along the boundary of the clip layer feature(s) and only the portions outside
-the difference layer features are retained.
+split along the boundary of the difference layer feature(s) and only the portions
+outside the difference layer features are retained.
 
 Attributes are not modified see warning_difference_
 
