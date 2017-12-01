@@ -33,8 +33,8 @@ for LANG in en
     #time rsync -hvrzc -e ssh --progress output/pdf/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html/pdf
     #time rsync -hvrzc -e ssh --progress output/html/$LANG qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation/live/html
     # 1 dec 2017 local rsync (moving site to qgis2)
-    time rsync -hvrzc -e ssh --progress output/pdf/$LANG /var/www/qgisdata/QGIS-Documentation/live/html/pdf
-    time rsync -hvrzc -e ssh --progress output/html/$LANG /var/www/qgisdata/QGIS-Documentation/live/html
+    time rsync -hvrzc --progress output/pdf/$LANG /var/www/qgisdata/QGIS-Documentation/live/html/pdf
+    time rsync -hvrzc --progress output/html/$LANG /var/www/qgisdata/QGIS-Documentation/live/html
   done
 
 now=`date`
