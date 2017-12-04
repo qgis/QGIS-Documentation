@@ -60,21 +60,24 @@ exported image dimensions.
 .. _crop_to_content:
 
 By checking |checkbox| :guilabel:`Crop to content` option, the images
-outputted by the composer will include only the area of the composition with
-content.
-There's also an option for margins to add around the item bounds if required.
+output by the composer will include only the area of the composition with
+content:
 
-If the composition includes a single page, then the output will
-be sized to include EVERYTHING on the composition. If it's a
-multi-page composition, then each page will be cropped to only
-include the area of that page with items.
+* If the composition includes a single page, then the output is resized to
+  include EVERYTHING on the composition. The page can then be reduced or extended
+  to all items depending on their position (on, above, below or besides the page).
+* In case of a multi-page composition, each page will be cropped to include
+  items in its area (both sides for all pages, plus top for first page and
+  bottom for last page). Each resized page is exported to a separate file.
+
+There's also an option for margins to add around the item bounds if required.
 
 .. _figure_composer_output_image:
 
 .. figure:: /static/user_manual/print_composer/image_export_options.png
    :align: center
 
-   Image Export Options
+   Image Export Options, output is resized to items extent
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
