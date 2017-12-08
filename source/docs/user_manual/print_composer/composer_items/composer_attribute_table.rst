@@ -103,7 +103,7 @@ following functionalities (see figure_composer_table_ppt_):
     value or create an attribute via a regular expression.
   * Remove an attribute with the |signMinus| button. Multiple rows can be
     selected and removed at any one time.
-  * Reset the attribute table back to its default state with the **[Reset]” button.
+  * Reset the attribute table back to its default state with the **[Reset]** button.
   * Clear the table using the **[Clear]** button. This is useful when you have a
     large table but only want to show a small number of attributes. Instead of
     manually removing each row, it may be quicker to clear the table and add
@@ -116,7 +116,7 @@ following functionalities (see figure_composer_table_ppt_):
   In the :guilabel:`Sorting` section you can:
 
   * Add an attribute to sort the table with. Select an attribute and set the
-    sorting order to 'Ascending' or 'Descending' and press the |signPlus| button.
+    sorting order to *Ascending* or *Descending* and press the |signPlus| button.
     A new line is added to the sort order list.
   * select a row in the list and use the |arrowUp| and |arrowDown| buttons to
     change the sort priority on attribute level. Selecting a cell in the
