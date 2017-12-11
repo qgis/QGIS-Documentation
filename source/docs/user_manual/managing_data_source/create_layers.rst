@@ -379,7 +379,7 @@ queries.
    Create virtual layers dialog
 
 Joins and complex queries can also be created, for example, to join airports
-and county information:
+and country information:
 
 .. code-block:: sql
 
