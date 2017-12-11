@@ -162,7 +162,7 @@ Creating a new Temporary Scratch Layer
 --------------------------------------
 
 Empty, editable temporary scratch layers can be defined using :menuselection:`Layer -->
-Create Layer --> New Temporary Scratch Layer`. Here you can  create
+Create Layer --> New Temporary Scratch Layer`. Here you can create
 |radioButtonOff|:guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
 and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath
 |radioButtonOn|:guilabel:`Point`, |radioButtonOff|:guilabel:`Line` and
@@ -319,8 +319,8 @@ The :guilabel:`DXF Export` dialog allows the user to:
 
 .. _paste_into_layer:
 
-Createing new layers from the clipboard
-=======================================
+Creating new layers from the clipboard
+======================================
 
 Features that are on the clipboard can be pasted into a new layer. To do this,
 Select some features, copy them to the clipboard, and then paste them into a
