@@ -15,6 +15,7 @@ Advanced configuration
 
    .. contents::
       :local:
+      :depth: 1
 
 .. index::
     pair: Logging; QGIS Server
@@ -24,77 +25,158 @@ Advanced configuration
 Logging
 =======
 
-To log requests sent to the server, set the following environment variables:
+To log requests sent to the server, you have to set the following environment
+variables:
 
-* **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that the
-  server has proper permissions for writing to file. File should be created
-  automatically, just send some requests to server. If it's not there, check
-  permissions.
-* **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. Available values are:
+- **QGIS_SERVER_LOG_LEVEL**
+- **QGIS_SERVER_LOG_FILE**
 
-  * 0 INFO (log all requests),
-  * 1 WARNING,
-  * 2 CRITICAL (log just critical errors, suitable for production purposes).
+Take a look on :ref:`qgis-server-envvar` to understand their meanings.
 
-  Example:
 
-  .. code-block:: apache
-
-    SetEnv QGIS_SERVER_LOG_FILE /var/tmp/qgislog.txt
-    SetEnv QGIS_SERVER_LOG_LEVEL 0
-
-.. note::
-
-    * When using Fcgid module use ``FcgidInitialEnv`` instead of ``SetEnv``!
-    * Server logging is also enabled if executable is compiled in release mode.
+.. _`qgis-server-envvar`:
 
 Environment variables
 =====================
 
-You can configure some aspects of QGIS server by setting **environment
-variables**. For example, to set QGIS server on Apache to use
-/path/to/config/QGIS/QGIS2.ini settings file, add to Apache config:
+You can configure some aspects of QGIS Server by setting **environment
+variables**.
 
-.. code-block:: apache
-
-  SetEnv QGIS_OPTIONS_PATH "/path/to/config/"
-
-or, if using fcgi:
-
-.. code-block:: apache
-
-  FcgidInitialEnv QGIS_OPTIONS_PATH "/path/to/config/"
+According to the HTTP server and how you run QGIS Server, there's
+several ways to define these variables. This is fully described in
+:ref:`httpserver`.
 
 
-This is a list of the variables supported by QGIS server:
+QGIS_OPTIONS_PATH
+^^^^^^^^^^^^^^^^^
 
-* **QGIS_OPTIONS_PATH**: Specifies the path to the directory with settings.
-  It works the same way as QGIS application --optionspath option. It is looking
-  for settings file in <QGIS_OPTIONS_PATH>/QGIS/QGIS2.ini.
-* **QUERY_STRING**: The query string, normally passed by the web server. This
-  variable can be useful while testing QGIS server binary from the command line.
-* **QGIS_PROJECT_FILE**: the `.qgs` project file, normally passed as a parameter
-  in the query string, you can also set it as an environment variable (for
-  example by using `mod_rewrite` Apache module).
-* **QGIS_SERVER_LOG_FILE**: Specify path and filename. Make sure that server
-  has proper permissions for writing to file. File should be created
-  automatically, just send some requests to server. If it's not there, check
-  permissions.
-* **QGIS_SERVER_LOG_LEVEL**: Specify desired log level. See :ref:`qgis-server-logging`
-* **MAX_CACHE_LAYERS**: Specify the maximum number of cached layers (default:
-  100).
-* **DISPLAY**: This is used to pass (fake) X server display number (needed on
-  Unix-like systems).
-* **QGIS_PLUGINPATH**: Useful if you are using Python plugins for the server,
-  this sets the folder that is searched for Python plugins.
-* **DEFAULT_DATUM_TRANSFORM**: Define datum transformations between two projections,
-  e.g. ``EPSG:21781/EPSG:2056/100001/-1;EPSG:2056/EPSG:21781/-1/100001`` sets the
-  transformation between CH1903 LV03 (EPSG:21781) and CH1903 LV95 (EPSG:2056) and
-  vice versa. You also need to place grid shift :file:`.gsb` files in the
-  directory where proj4 stores the grid shift files, e.g. in :file:`/usr/share/proj`.
-  You need to run ``crssync`` after you added new :file:`.gsb` files and look up
-  the ID in the :file:`srs.db`. Look at attribute **coord_op_code** of table
-  **tbl_datum_transform** in :file:`srs.db` to find the correct entry.
+Specifies the path to the directory with settings. It works the same way as
+QGIS application `--optionspath` option. It is looking for settings file in
+``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``.
+
+
+QUERY_STRING
+^^^^^^^^^^^^
+
+The query string, normally passed by the web server. This variable can be
+useful while testing QGIS server binary from the command line.
+
+
+QGIS_PROJECT_FILE
+^^^^^^^^^^^^^^^^^
+
+The `.qgs` project file, normally passed as a parameter in the query string
+(with *MAP*), you can also set it as an environment variable (for example by
+using `mod_rewrite` Apache module).
+
+
+QGIS_SERVER_LOG_FILE
+^^^^^^^^^^^^^^^^^^^^
+
+Specify path and filename. Make sure that server has proper permissions for
+writing to file. File should be created automatically, just send some requests
+to server. If it's not there, check permissions.
+
+
+MAX_CACHE_LAYERS
+^^^^^^^^^^^^^^^^
+
+Specify the maximum number of cached layers (default: 100).
+
+
+DISPLAY
+^^^^^^^
+
+This is used to pass (fake) X server display number (needed on Unix-like systems).
+
+
+QGIS_PLUGINPATH
+^^^^^^^^^^^^^^^
+
+Useful if you are using Python plugins for the server, this sets the folder
+that is searched for Python plugins.
+
+
+DEFAULT_DATUM_TRANSFORM
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Define datum transformations between two projections,
+e.g. ``EPSG:21781/EPSG:2056/100001/-1;EPSG:2056/EPSG:21781/-1/100001`` sets the
+transformation between CH1903 LV03 (EPSG:21781) and CH1903 LV95 (EPSG:2056) and
+vice versa. You also need to place grid shift :file:`.gsb` files in the
+directory where proj4 stores the grid shift files, e.g. in :file:`/usr/share/proj`.
+You need to run ``crssync`` after you added new :file:`.gsb` files and look up
+the ID in the :file:`srs.db`. Look at attribute **coord_op_code** of table
+**tbl_datum_transform** in :file:`srs.db` to find the correct entry.
+
+
+QGIS_SERVER_LOG_LEVEL
+^^^^^^^^^^^^^^^^^^^^^
+
+Specify desired log level. Available values are:
+
+* 0 INFO (log all requests),
+* 1 WARNING,
+* 2 CRITICAL (log just critical errors, suitable for production purposes).
+
+
+QGIS_SERVER_PARALLEL_RENDERING
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Activate parallel rendering for WMS GetMap requests. It's disabled by default.
+
+
+QGIS_SERVER_MAX_THREADS
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Number of threads to use when parallel rendering is activated. Default value
+is `-1` to use the number of processor cores.
+
+
+Settings summary
+================
+
+When QGIS Server is starting, you have a summary of all configurable parameters
+thanks to environment variables. Moreover, the value currently used and
+the origin is also displayed.
+
+For example with spawn-fcgi:
+
+.. code-block:: bash
+
+  $ export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
+  $ export QGIS_SERVER_LOG_FILE=/home/user/qserv.log
+  $ export QGIS_SERVER_LOG_LEVEL=2
+  $ spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
+
+  QGIS Server Settings:
+
+    - QGIS_OPTIONS_PATH / '' (Override the default path for user configuration): '/home/user/.local/share/QGIS/QGIS3/profiles/default/' (read from ENVIRONMENT_VARIABLE)
+
+    - QGIS_SERVER_PARALLEL_RENDERING / '/qgis/parallel_rendering' (Activate/Deactivate parallel rendering for WMS getMap request): 'true' (read from INI_FILE)
+
+    - QGIS_SERVER_MAX_THREADS / '/qgis/max_threads' (Number of threads to use when parallel rendering is activated): '4' (read from INI_FILE)
+
+    - QGIS_SERVER_LOG_LEVEL / '' (Log level): '2' (read from ENVIRONMENT_VARIABLE)
+
+    - QGIS_SERVER_LOG_FILE / '' (Log file): '/home/blottiere/qserv.log' (read from ENVIRONMENT_VARIABLE)
+
+    - QGIS_PROJECT_FILE / '' (QGIS project file): '' (read from DEFAULT_VALUE)
+
+    - MAX_CACHE_LAYERS / '' (Specify the maximum number of cached layers): '100' (read from DEFAULT_VALUE)
+
+    - QGIS_SERVER_CACHE_DIRECTORY / '/cache/directory' (Specify the cache directory): '/root/.local/share/QGIS/QGIS3/profiles/default/cache' (read from DEFAULT_VALUE)
+
+    - QGIS_SERVER_CACHE_SIZE / '/cache/size' (Specify the cache size): '52428800' (read from INI_FILE)
+
+  Ini file used to initialize settings: /home/user/.local/share/QGIS/QGIS3/profiles/default/QGIS/QGIS3.ini
+
+In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and
+**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found in
+**QGIS_OPTIONS_PATH** directory (which is defined through an environment variable).
+The corresponding entries in the ini file are **/qgis/max_threads** and
+**/qgis/parallel_rendering** and their values are **true** and **4** threads.
+
 
 Short name for layers, groups and project
 =========================================
@@ -196,4 +278,3 @@ For linux, if you don't have a desktop environment installed (or you prefer the 
 
    $ chown root *
    $ cd .. && fc-cache -f -v
-
