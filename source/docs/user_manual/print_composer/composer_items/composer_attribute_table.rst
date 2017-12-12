@@ -95,27 +95,34 @@ following functionalities (see figure_composer_table_ppt_):
 
   In the :guilabel:`Columns` section you can:
 
-  * Remove an attribute, just select an attribute row by clicking anywhere in the row
-    and press the minus button to remove the selected attribute.
-  * Add a new attribute use the plus button. At the end a new empty row appears and you can
-    select empty cell of the column :guilabel:`Attribute`. You can select a field attribute from
-    the list or you can select to build a new attribute using a regular expression
-    (|expression| button). Of course you can modify every already existing attribute
-    by means of a regular expression.
-  * Use the up and down arrows to change the order of the attributes in the table.
-  * Select a cell in the Headings column and, to change the heading, just type in a new name.
-  * set a precise Alignment (mixing vertical and horizontal alignment options) for each column.
-  * Select a cell in the Width column and change it from Automatic to a width in mm, just
-    type a number. When you want to change it back to Automatic, use the cross.
-  * The **[Reset]** button can always be used to restore it to the original attribute settings.
+  * Move attributes up or down the list by selecting the rows and then using the
+    the |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can
+    be selected and moved at any one time.
+  * Add an attribute with the |signPlus| button. This will add an empty row at
+    the bottom of the table where you can select a field to be the attribute
+    value or create an attribute via a regular expression.
+  * Remove an attribute with the |signMinus| button. Multiple rows can be
+    selected and removed at any one time.
+  * Reset the attribute table back to its default state with the **[Reset]** button.
+  * Clear the table using the **[Clear]** button. This is useful when you have a
+    large table but only want to show a small number of attributes. Instead of
+    manually removing each row, it may be quicker to clear the table and add
+    the rows needed.
+  * Cell headings can be altered by adding the custom text in the :guilabel:`Heading` column.
+  * Cell alignment can be managed with the :guilabel:`Alignment` column which will
+    dictate the texts position within the table cell.
+  * Cell width can be manually managed by adding custom values to the :guilabel:`width` column.
 
   In the :guilabel:`Sorting` section you can:
 
-  * Add an attribute to sort the table with. Select an attribute and set the sorting order
-    to 'Ascending' or 'Descending' and press the plus button. A new line is added to the sort order list.
-  * select a row in the list and use the up and down button to change the sort priority on attribute level.
-    Selecting a cell in the Sort Order column helps you change the sorting order of the attribute field.
-  * use the minus button to remove an attribute from the sort order list.
+  * Add an attribute to sort the table with. Select an attribute and set the
+    sorting order to *Ascending* or *Descending* and press the |signPlus| button.
+    A new line is added to the sort order list.
+  * select a row in the list and use the |arrowUp| and |arrowDown| buttons to
+    change the sort priority on attribute level. Selecting a cell in the
+    :guilabel:`Sort Order` column helps you change the sorting order of the
+    attribute field.
+  * use the |signMinus| button to remove an attribute from the sort order list.
 
 
 Feature filtering
