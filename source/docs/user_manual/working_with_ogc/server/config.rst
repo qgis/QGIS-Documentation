@@ -51,7 +51,7 @@ QGIS_OPTIONS_PATH
 ^^^^^^^^^^^^^^^^^
 
 Specifies the path to the directory with settings. It works the same way as
-QGIS application `--optionspath` option. It is looking for settings file in
+QGIS application ``--optionspath`` option. It is looking for settings file in
 ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``.
 
 
@@ -65,9 +65,9 @@ useful while testing QGIS server binary from the command line.
 QGIS_PROJECT_FILE
 ^^^^^^^^^^^^^^^^^
 
-The `.qgs` project file, normally passed as a parameter in the query string
+The ``.qgs`` project file, normally passed as a parameter in the query string
 (with *MAP*), you can also set it as an environment variable (for example by
-using `mod_rewrite` Apache module).
+using ``mod_rewrite`` Apache module).
 
 
 QGIS_SERVER_LOG_FILE
@@ -123,14 +123,18 @@ Specify desired log level. Available values are:
 QGIS_SERVER_PARALLEL_RENDERING
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Activate parallel rendering for WMS GetMap requests. It's disabled by default.
+Activates parallel rendering for WMS GetMap requests. It's disabled (``false``)
+by default. Available values are:
+
+* ``0`` or ``false`` (case insensitive)
+* ``1`` or ``true`` (case insensitive)
 
 
 QGIS_SERVER_MAX_THREADS
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Number of threads to use when parallel rendering is activated. Default value
-is `-1` to use the number of processor cores.
+is ``-1`` to use the number of processor cores.
 
 
 Settings summary

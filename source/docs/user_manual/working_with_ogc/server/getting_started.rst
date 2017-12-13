@@ -255,7 +255,7 @@ example:
 .. code-block:: nginx
 
     include fastcgi_params;
-    fastcgi_param SEVER_NAME domain.name.eu;
+    fastcgi_param SERVER_NAME domain.name.eu;
 
 
 Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
@@ -270,9 +270,9 @@ variables as shown below:
 
 .. note::
 
-  * When using spawn-fcgi, you may directly defined environment variables
+  * When using spawn-fcgi, you may directly define environment variables
     before running the server. For example:
-    `export QGIS_SERVER_LOG_FILE=/home/user/qgis.log`
+    ``export QGIS_SERVER_LOG_FILE=/home/user/qgis.log``
 
 
 Xvfb
