@@ -364,15 +364,18 @@ This group contains functions to create and manipulate arrays.
  array_distinct         Returns an array containing distinct values of the given array
  array_find             Returns the index (0 for the first one) of a value
                         within an array. Returns -1 if the value is not found.
+ array_first            Returns the first value of an array
  array_get              Returns the Nth value (0 for the first one) of an array
  array_insert           Returns an array with the given value added at the
                         given position
  array_intersect        Returns true if any element of array1 exists in array2
+ array_last             Returns the last element of an array 
  array_length           Returns the number of elements of an array
  array_prepend          Returns an array with the given value added at the beginning
  array_remove_all       Returns an array with all the entries of the given
                         value removed
  array_remove_at        Returns an array with the given index removed
+ array_reverse          Returns the given array with array values in reversed order
  array_slice            Returns the values of the array from the start_pos argument up
                         to and including the end_pos argument
  array_to_string        Concatenates array elements into a string separated by
