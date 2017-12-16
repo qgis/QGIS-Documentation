@@ -47,8 +47,11 @@ Creating a new Shapefile layer
 To create a new Shapefile layer, choose :menuselection:`Create
 Layer -->` |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Shapefile Layer` dialog will be
-displayed as shown in figure_create_shapefile_. Choose the type of layer
-(point, line or polygon) and the CRS (coordinate reference system).
+displayed as shown in figure_create_shapefile_. 
+The first step is to provide a path and name for the Shapefile. QGIS will
+automatically add the :file:`.shp` extension to the name you specify
+Next, choose the type of layer (point, line or polygon) and optional Z or M 
+dimensions, as well as the CRS (coordinate reference system).
 
 .. _figure_create_shapefile:
 
@@ -66,10 +69,9 @@ removed, if not wanted. Only :guilabel:`Decimal number` |selectString|,
 |selectString| and :guilabel:`Date` |selectString| attributes are
 supported. Additionally, depending on the attribute type, you can also define
 the length and precision of the new attribute column. Once you are happy with the
-attributes, click **[OK]** and provide a name for the Shapefile. QGIS will
-automatically add the :file:`.shp` extension to the name you specify. Once the
-Shapefile has been created, it will be added to the map as a new layer, and you can 
-edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
+attributes, click **[OK]**. 
+Once the Shapefile has been created, it will be added to the map as a new layer,
+and you can edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
 
 
 .. index:: New SpatiaLite layer
