@@ -604,9 +604,9 @@ Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
-at a time. Combined to layer visibility preset, this offers a quick and powerful
-way to manage complex projects with few layers (no need to duplicate any layer
-in the map legend).
+at a time. In combination with Map Themes (see :ref:`preset_visibility`), 
+this offers a quick and powerful way to manage complex projects without the need 
+to duplicate any layer in the map legend.
 
 .. tip:: **Manage styles from layer context menu**
 
