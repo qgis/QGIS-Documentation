@@ -163,14 +163,15 @@ predefined structure.
 Creating a new Temporary Scratch Layer
 --------------------------------------
 
+Temporary Scratch Layers only exist in memory. This means that they are not saved 
+and will be discarded when QGIS is closed. 
+See also :ref:`paste_into_layer`.
 Empty, editable temporary scratch layers can be defined using :menuselection:`Layer -->
 Create Layer --> New Temporary Scratch Layer`. Here you can create
 |radioButtonOff|:guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
 and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath
 |radioButtonOn|:guilabel:`Point`, |radioButtonOff|:guilabel:`Line` and
-|radioButtonOff|:guilabel:`Polygon` layers. Temporary Scratch Layers only exist in
-memory. This means that they are not saved and will be discarded when QGIS is closed. 
-See also :ref:`paste_into_layer`.
+|radioButtonOff|:guilabel:`Polygon` layers. 
 
 
 .. index:: Save layer
