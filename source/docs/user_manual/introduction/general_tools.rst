@@ -87,10 +87,10 @@ At the top of the Layers panel, a toolbar allows you to:
    Tools to manage the layers panel are also available to layout the map
    and legend items of the print composer
 
-.. index:: Preset visibility
-.. _preset_visibility:
+.. index:: Map themes
+.. _map_themes:
 
-Configuring Map Themes
+Configuring map themes
 ......................
 
 The button |showPresets| allows you to configure **Map Themes** in the legend.
@@ -604,7 +604,7 @@ Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
-at a time. In combination with Map Themes (see :ref:`preset_visibility`), 
+at a time. In combination with Map Themes (see :ref:`map_themes`), 
 this offers a quick and powerful way to manage complex projects without the need 
 to duplicate any layer in the map legend.
 
