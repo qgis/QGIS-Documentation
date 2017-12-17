@@ -371,11 +371,12 @@ default for new projects (see section :ref:`gui_options`). QGIS can save the
 state of your workspace into a project file using the menu options
 :menuselection:`Project -->` |fileSave| :menuselection:`Save`
 or :menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`.
-(If the project you loaded has been modified in the meantime, by default, QGIS will
+
+.. note:: If the project you loaded has been modified in the meantime, by default, QGIS will
 ask you if you want to overwrite the changes. This behavior
 is controlled by the |checkbox| :guilabel:`Prompt to save project and data source
 changes when required` setting under :menuselection:`Settings --> Options --> General`
-menu.)
+menu.
 
 You can load existing projects into QGIS using :menuselection:`Project -->`
 |fileOpen| :menuselection:`Open...`,
@@ -414,13 +415,15 @@ The information saved in a project file includes:
 The project file is saved in XML format. This means that it is possible to edit the file
 outside of QGIS if you know what you are doing. The file format has been updated several
 times compared with earlier QGIS versions. Project files from older QGIS versions
-may not work properly any more. (By default, QGIS will warn you of version differeces. 
+may not work properly any more. 
+
+.. note:: By default, QGIS will warn you of version differences. 
 This behavior is controlled in :menuselection:`Settings --> Options`. On the 
 :guilabel:`General` tab, you should tick |checkbox| 
-:guilabel:`Warn when opening a project file saved with an older version of QGIS`.)
+:guilabel:`Warn when opening a project file saved with an older version of QGIS`.
 
 Whenever you save a project in QGIS a backup of the project file is created with the
-extension ``.qgs~``.
+extension ``.qgs~`` and stored in the same directory as the project file.
 
 The default extension for QGIS projects is ``.qgs`` but a project may be
 zipped in a ``.qgz`` file too. Actually, the ``.qgs`` file is just embedded
