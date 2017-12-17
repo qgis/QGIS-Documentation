@@ -177,8 +177,8 @@ and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath
 .. index:: Save layer
 .. _general_saveas:
 
-Creating new layers from an existing layers
-===========================================
+Creating new layers from an existing layer
+==========================================
 
 Both raster and vector layers can be saved in a different format and/or reprojected
 to a different coordinate reference system (CRS)
