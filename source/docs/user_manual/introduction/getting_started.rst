@@ -384,7 +384,7 @@ You can load existing projects into QGIS using :menuselection:`Project -->`
 :menuselection:`Project --> Open Recent -->`.
 
 At startup, a list of recently opened project including screenshots, names and file paths 
-(for up to ten project) is displayed. This is a handy quick way to access recently used projects.
+(for up to ten projects) is displayed. This is a handy quick way to access recently used projects.
 Double-click an entry in this list to open the corresponding project.
 If you instead want to create a new project, just add any layer and the list disappears, giving
 way to the map canvas.
