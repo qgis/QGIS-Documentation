@@ -376,6 +376,8 @@ This group contains functions to create and manipulate arrays.
                         value removed
  array_remove_at        Returns an array with the given index removed
  array_reverse          Returns the given array with array values in reversed order
+ array_slice            Returns the values of the array from the start_pos argument up
+                        to and including the end_pos argument
  array_to_string        Concatenates array elements into a string separated by
                         a delimiter using and optional string for empty values.
  regexp_matches         Returns an array of all strings captured by capturing
