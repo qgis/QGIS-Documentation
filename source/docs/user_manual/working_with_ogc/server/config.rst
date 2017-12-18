@@ -42,7 +42,7 @@ Environment variables
 You can configure some aspects of QGIS Server by setting **environment
 variables**.
 
-According to the HTTP server and how you run QGIS Server, there's
+According to the HTTP server and how you run QGIS Server, there are
 several ways to define these variables. This is fully described in
 :ref:`httpserver`.
 
@@ -81,7 +81,7 @@ to server. If it's not there, check permissions.
 MAX_CACHE_LAYERS
 ^^^^^^^^^^^^^^^^
 
-Specify the maximum number of cached layers (default: 100).
+Specify the maximum number of cached layers (default: ``100``).
 
 
 DISPLAY
@@ -97,27 +97,14 @@ Useful if you are using Python plugins for the server, this sets the folder
 that is searched for Python plugins.
 
 
-DEFAULT_DATUM_TRANSFORM
-^^^^^^^^^^^^^^^^^^^^^^^
-
-Define datum transformations between two projections,
-e.g. ``EPSG:21781/EPSG:2056/100001/-1;EPSG:2056/EPSG:21781/-1/100001`` sets the
-transformation between CH1903 LV03 (EPSG:21781) and CH1903 LV95 (EPSG:2056) and
-vice versa. You also need to place grid shift :file:`.gsb` files in the
-directory where proj4 stores the grid shift files, e.g. in :file:`/usr/share/proj`.
-You need to run ``crssync`` after you added new :file:`.gsb` files and look up
-the ID in the :file:`srs.db`. Look at attribute **coord_op_code** of table
-**tbl_datum_transform** in :file:`srs.db` to find the correct entry.
-
-
 QGIS_SERVER_LOG_LEVEL
 ^^^^^^^^^^^^^^^^^^^^^
 
 Specify desired log level. Available values are:
 
-* 0 INFO (log all requests),
-* 1 WARNING,
-* 2 CRITICAL (log just critical errors, suitable for production purposes).
+* ``0`` or ``INFO`` (log all requests)
+* ``1`` or ``WARNING``
+* ``2`` or ``CRITICAL`` (log just critical errors, suitable for production purposes)
 
 
 QGIS_SERVER_PARALLEL_RENDERING
@@ -135,6 +122,19 @@ QGIS_SERVER_MAX_THREADS
 
 Number of threads to use when parallel rendering is activated. Default value
 is ``-1`` to use the number of processor cores.
+
+
+QGIS_SERVER_CACHE_DIRECTORY
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Specifies the network cache directory on the filesystem. The default
+directory is named ``cache`` and located in the profile directory.
+
+
+QGIS_SERVER_CACHE_SIZE
+^^^^^^^^^^^^^^^^^^^^^^
+
+Sets the network cache size in MB. The default value is ``50`` MB.
 
 
 Settings summary
@@ -163,7 +163,7 @@ For example with spawn-fcgi:
 
     - QGIS_SERVER_LOG_LEVEL / '' (Log level): '2' (read from ENVIRONMENT_VARIABLE)
 
-    - QGIS_SERVER_LOG_FILE / '' (Log file): '/home/blottiere/qserv.log' (read from ENVIRONMENT_VARIABLE)
+    - QGIS_SERVER_LOG_FILE / '' (Log file): '/tmp/qserv.log' (read from ENVIRONMENT_VARIABLE)
 
     - QGIS_PROJECT_FILE / '' (QGIS project file): '' (read from DEFAULT_VALUE)
 

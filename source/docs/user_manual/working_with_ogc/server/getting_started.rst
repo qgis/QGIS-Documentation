@@ -270,7 +270,7 @@ variables as shown below:
 
 .. note::
 
-  * When using spawn-fcgi, you may directly define environment variables
+    When using spawn-fcgi, you may directly define environment variables
     before running the server. For example:
     ``export QGIS_SERVER_LOG_FILE=/home/user/qgis.log``
 
@@ -305,7 +305,7 @@ display number thanks to **Xvfb**:
 
   $ /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
 
-Then we just have to set the *DISPLAY* environment variable in the HTTP server
+Then we just have to set the **DISPLAY** environment variable in the HTTP server
 configuration. For example with NGINX:
 
 .. code-block:: nginx
