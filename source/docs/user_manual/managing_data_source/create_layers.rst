@@ -168,7 +168,6 @@ on disk and will be discarded when QGIS is closed. They can be handy to store
 features you temporarily need or as intermediate layers during geoprocessing
 operations. 
 
-See also :ref:`paste_into_layer`.
 Empty, editable temporary scratch layers can be defined using :menuselection:`Layer -->
 Create Layer --> New Temporary Scratch Layer`. Here you can create
 |radioButtonOff|:guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
