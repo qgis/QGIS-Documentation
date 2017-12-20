@@ -10,22 +10,23 @@ Getting Started
 
    .. contents::
       :local:
+      :depth: 2
 
 Installation
 ============
 
-.. index:: Apache, Debian Squeeze
+
+At this point, we will give a short and simple installation how-to for
+a minimal working configuration on Debian based systems. However, many other
+distributions and OSs provide packages for QGIS Server.
+
+
+.. index:: Debian, Ubuntu
 
 Debian/Ubuntu
 -------------
 
-At this point, we will give a short and simple sample installation how-to for
-a minimal working configuration using Apache2 on Debian Squeeze (or with
-negligible variations on Ubuntu 14.04).
-Many other OSs provide packages for QGIS Server, too. If you have to build it
-all from source, please refer to the URLs given in :ref:`label_qgisserver`.
-
-Firstly, add the following debian GIS repository:
+Firstly, add the following Debian GIS repository:
 
 .. code-block:: bash
 
@@ -34,8 +35,8 @@ Firstly, add the following debian GIS repository:
   deb-src http://qgis.org/debian trusty main
 
   # Add keys
-  $ sudo gpg --keyserver keyserver.ubuntu.com --recv-key 3FF5FFCAD71472C4
-  $ sudo gpg --export --armor 3FF5FFCAD71472C4 | sudo apt-key add -
+  $ sudo gpg --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
+  $ sudo gpg --export --armor CAEB3DC3BDF7FB45 | apt-key add -
 
   # Update package list
   $ sudo apt-get update && sudo apt-get upgrade
@@ -46,11 +47,19 @@ Now, install QGIS Server:
 
   $ sudo apt-get install qgis-server python-qgis
 
+
+.. _`httpserver`:
+
 HTTP Server configuration
 =========================
 
+.. index:: Apache
+
 Apache
 ------
+
+Configuration
+^^^^^^^^^^^^^
 
 Install the Apache server in a separate virtual host listening on port ``80``.
 Enable the rewrite module to pass HTTP BASIC auth headers:
@@ -79,9 +88,6 @@ This is the virtual host configuration, stored in
     FcgidInitialEnv LC_ALL "en_US.UTF-8"
     FcgidInitialEnv PYTHONIOENCODING UTF-8
     FcgidInitialEnv LANG "en_US.UTF-8"
-    FcgidInitialEnv QGIS_DEBUG 1
-    FcgidInitialEnv QGIS_SERVER_LOG_FILE /tmp/qgis-000.log
-    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
     ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
     <Directory "/usr/lib/cgi-bin">
@@ -93,6 +99,21 @@ This is the virtual host configuration, stored in
     </Directory>
    </VirtualHost>
 
+
+Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
+With Apache as HTTP Server, you have to use ``FcgidInitialEnv`` to define these
+variables as shown below:
+
+.. code-block:: apache
+
+    FcgidInitialEnv QGIS_DEBUG 1
+    FcgidInitialEnv QGIS_SERVER_LOG_FILE /tmp/qgis-000.log
+    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+
+
+Start
+^^^^^
+
 Now enable the virtual host and restart Apache:
 
 .. code-block:: bash
@@ -100,41 +121,105 @@ Now enable the virtual host and restart Apache:
   $ sudo a2ensite 001-qgis-server
   $ sudo service apache2 restart
 
-.. index:: nginx
+QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
+
+
+.. index:: nginx, spawn-fcgi, fcgiwrap
 
 NGINX
 -----
 
-You can use QGIS Server with `nginx <http://nginx.org/>`_.
+You can also use QGIS Server with `NGINX <http://nginx.org/>`_. Unlike Apache,
+NGINX does not automatically spawn a FastCGI process. Actually, you have to use
+another component to start these processes.
 
-On Debian based systems:
+To do that on Debian based systems, you may use **fcgiwrap** or **spawn-fcgi**
+based on your preferences to run QGIS Server. In both case, you have to install
+NGINX:
 
 .. code-block:: bash
 
- apt-get install nginx fcgiwrap
+  $ sudo apt-get install nginx
 
-Introduce the following in your nginx server block configuration:
+
+fcgiwrap
+^^^^^^^^
+
+If you want to use fcgiwrap to run QGIS Server, you firstly have to install
+the corresponding package:
+
+.. code-block:: bash
+
+  $ sudo apt-get install fcgiwrap
+
+
+Then, introduce the following block in your NGINX server configuration:
 
 .. code-block:: nginx
    :linenos:
 
-     location ~ ^/cgi-bin/.*\.fcgi$ {
+     location /qgisserver {
          gzip           off;
-         include fastcgi_params;
+         include        fastcgi_params;
          fastcgi_pass   unix:/var/run/fcgiwrap.socket;
-
          fastcgi_param  SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
-         fastcgi_param  QGIS_SERVER_LOG_FILE /logs/qgisserver.log;
-         fastcgi_param  QGIS_SERVER_LOG_LEVEL 0;
-         fastcgi_param  QGIS_DEBUG 1;
      }
 
-As you can see from lines ``6-9`` you can add parameters in your location block
-in the form of ``fastcgi_param param_name param_value``,
-e.g. ``fastcgi_param  DISPLAY ":99";``.
+Finally, restart NGINX and fcgiwrap to take into account the new configuration:
 
-The ``include fastcgi_params;`` is important as it adds the parameters from
-:file:`/etc/nginx/fastcgi_params`:
+.. code-block:: bash
+
+  $ sudo service nginx restart
+  $ sudo service fcgiwrap restart
+
+QGIS Server is now available at http://localhost/qgisserver.
+
+spawn-fcgi
+^^^^^^^^^^
+
+If you prefer to use spawn-fcgi instead of fcgiwrap, the first step is to
+install the package:
+
+.. code-block:: bash
+
+  sudo apt-get install spawn-fcgi
+
+
+Then, introduce the following block in your NGINX server configuration:
+
+.. code-block:: nginx
+
+     location /qgisserver {
+         gzip           off;
+         include        fastcgi_params;
+         fastcgi_pass   unix:/var/run/qgisserver.socket;
+     }
+
+And restart NGINX to take into account the new configuration:
+
+.. code-block:: bash
+
+  $ sudo service nginx restart
+
+Finally, considering that there is no default service file for spawn-fcgi, you
+have to manually start QGIS Server in your terminal:
+
+.. code-block:: bash
+
+  $ sudo spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+                    -s /var/run/qgisserver.socket \
+                    -U www-data -G www-data -n
+
+Of course, you may write an init script (like a ``qgisserver.service`` file
+with Systemd) to start QGIS Server at boot time or whenever you want.
+
+QGIS Server is now available at http://localhost/qgisserver.
+
+Configuration
+^^^^^^^^^^^^^
+
+The **include fastcgi_params;** used in previous configuration is important
+as it adds the parameters from ``/etc/nginx/fastcgi_params``:
 
 .. code-block:: nginx
 
@@ -163,15 +248,153 @@ The ``include fastcgi_params;`` is important as it adds the parameters from
  # PHP only, required if PHP was built with --enable-force-cgi-redirect
  fastcgi_param  REDIRECT_STATUS    200;
 
+
+Of course, you may override these variables in your own configuration. For
+example:
+
+.. code-block:: nginx
+
+    include fastcgi_params;
+    fastcgi_param SERVER_NAME domain.name.eu;
+
+
+Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
+With NGINX as HTTP Server, you have to use ``fastcgi_param`` to define these
+variables as shown below:
+
+.. code-block:: nginx
+
+    fastcgi_param  QGIS_DEBUG              1;
+    fastcgi_param  QGIS_SERVER_LOG_FILE    /tmp/qgis-000.log;
+    fastcgi_param  QGIS_SERVER_LOG_LEVEL   0;
+
+.. note::
+
+    When using spawn-fcgi, you may directly define environment variables
+    before running the server. For example:
+    ``export QGIS_SERVER_LOG_FILE=/home/user/qgis.log``
+
+
+Xvfb
+====
+
+QGIS Server needs a running X Server to be fully usable. But if you don't have
+one, you may use xvfb to have a virtual X environment.
+
+To install the package:
+
+.. code-block:: bash
+
+  $ sudo apt-get install xvfb
+
+Then, according to your HTTP server, you should configure the **DISPLAY**
+parameter or directly use **xvfb-run**.
+
+For example with NGINX and spawn-fcgi using xvfb-run:
+
+.. code-block:: bash
+
+  $ xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+                                 -s /tmp/qgisserver.socket \
+                                 -G www-data -U www-data -n
+
+The other option is to start a virtual X server environment with a specific
+display number thanks to **Xvfb**:
+
+.. code-block:: bash
+
+  $ /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+
+Then we just have to set the **DISPLAY** environment variable in the HTTP server
+configuration. For example with NGINX:
+
+.. code-block:: nginx
+
+  fastcgi_param  DISPLAY       ":99";
+
+Or with Apache:
+
+.. code-block:: apache
+
+  FcgidInitialEnv DISPLAY       ":99"
+
+
+
+Serve a project
+===============
+
+Now that QGIS Server is installed and running, we just have to use it.
+
+Obviously, we need a QGIS project to work on. Of course, you can fully
+customize your project by defining contact information, precise some
+restrictions on CRS or even exclude some layers. Everything you need to know
+about that is described later in :ref:`Creatingwmsfromproject`.
+
+But for now, we are going to use a simple project already configured. To
+retrieve the project:
+
+.. code-block:: bash
+
+  $ cd /home/user/
+  $ wget https://github.com/tudorbarascu/qgis-server-tutorial-data/archive/master.zip -O qgis-server-tutorial-data-master.zip
+  $ unzip qgis-server-tutorial-data-master.zip
+
+The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of course,
+you can use your favorite GIS software to open this file and take a look on the
+configuration and available layers.
+
+By opening the project and taking a quick look on layers, we know that 4
+layers are currently available:
+
+- airports
+- places
+- countries
+- countries_shapeburst
+
+You don't have to understand the full request for now but you may retrieve
+a map with some of the previous layers thanks to QGIS Server by doing something
+like this in your web browser to retrieve the *countries* layer:
+
+.. code-block:: bash
+
+  http://localhost/qgisserver?
+    MAP=/home/user/qgis-server-tutorial-data-master/world.qgs&
+    LAYERS=countries&
+    SERVICE=WMS&
+    REQUEST=GetMap&
+    CRS=EPSG:4326&
+    WIDTH=400&
+    HEIGHT=200
+
+If you obtain the next image, then QGIS Server is running correctly:
+
+.. figure:: /static/user_manual/working_with_ogc/server_basic_getmap.png
+  :align: center
+
+  Server response to a basic GetMap request
+
+Note that you may define **PROJECT_FILE** environment variable to use a project
+by default instead of giving a **MAP** parameter (see :ref:`qgis-server-envvar`).
+
+For example with spawn-fcgi:
+
+.. code-block:: bash
+
+  $ export PROJECT_FILE=/home/user/qgis-server-tutorial-data-master/world.qgs
+  $ spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+               -s /var/run/qgisserver.socket \
+               -U www-data -G www-data -n
+
+
+
 .. _`Creatingwmsfromproject`:
 
-Prepare a project to serve
-==========================
+Configure your project
+======================
 
-To provide a new QGIS Server WMS, WFS or WCS, we have to create a QGIS project
-file with some data. Here, we use the 'Alaska' shapefile from the QGIS sample
-dataset. Define the colors and styles of the layers in QGIS and the project CRS,
-if not already defined.
+To provide a new QGIS Server WMS, WFS or WCS, you have to create a QGIS project
+file with some data or use one of your current project. Define the colors and
+styles of the layers in QGIS and the project CRS, if not already defined.
 
 .. _figure_server_definitions:
 
@@ -180,7 +403,7 @@ if not already defined.
 
    Definitions for a QGIS Server WMS/WFS/WCS project
 
-Then, go to the :guilabel:`OWS Server` menu of the
+Then, go to the :guilabel:`QGIS Server` menu of the
 :menuselection:`Project --> Project Properties` dialog and provide
 some information about the OWS in the fields under
 :guilabel:`Service Capabilities`.
@@ -291,19 +514,3 @@ For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Project Properties` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
-
-Serve the project
------------------
-
-Now, save the session in a project file :file:`alaska.qgs`. To provide the
-project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` with
-admin privileges and add the project file :file:`alaska.qgs` and a copy of the
-:file:`qgis_mapserv.fcgi` file - that's all.
-
-Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described
-in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to QGIS and load
-the data. The URL is:
-
-::
-
- http://localhost/cgi-bin/project/qgis_mapserv.fcgi
