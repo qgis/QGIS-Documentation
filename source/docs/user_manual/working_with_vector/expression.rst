@@ -989,6 +989,8 @@ This group contains functions that operate on record identifiers.
                       feature
  get_feature          Returns the first feature of a layer matching a
                       given attribute value
+ get_feature_by_id    Returns the feature of a layer matching the given 
+                      feature ID
  is_selected          Returns if a feature is selected
  num_selected         Returns the number of selected features on a given layer
  uuid                 Generates a Universally Unique Identifier (UUID)
