@@ -417,6 +417,7 @@ This group contains functions for manipulating colors.
                     its red, green, and blue components
  color_rgba         Returns a string representation of a color based on
                     its red, green, blue, and alpha (transparency) components
+ create_ramp        Returns a gradient ramp from a map of color strings and steps
  darker             Returns a darker (or lighter) color string
  lighter            Returns a lighter (or darker) color string
  project_color      Returns a color from the project's color scheme
