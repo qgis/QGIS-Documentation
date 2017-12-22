@@ -360,25 +360,24 @@ obscure reasons.
 
 When the tests run on Travis and fails you might have a link to a dash page where
 you can see the rendered images and the diff images, but those diff images shouldn't be used anymore
-we use "masks" now instead, a mask is a black image the same size as the reference image
+we use "masks" now instead.
+A mask is a black image the same size as the reference image
 with pixel values indicating how much that individual pixel can differ from the reference image
-so a white pixel = ignore a pixel of (2,2,2) can vary by up to 2 in the r/g/b values,
-there's a utility to generate them `scripts/generate_test_mask_image.py`
-you use it by going `scripts/generate_test_mask_image.py test_name` `/tmp/path_to_rendered_image.png`,
+you use it by going ``scripts/generate_test_mask_image.py test_name`` ``/tmp/path_to_rendered_image.png``,
 if it complains about multiple matches, you've gotta give it the full path to the reference image).
-`scripts/generate_test_mask_image.py tests/testdata/control_images/....png` `/tmp/remndered.png`,
-`generate_test_mask_image.py` can accept http urls so you can pass it rendered image urls directly 
+``scripts/generate_test_mask_image.py tests/testdata/control_images/....png /tmp/rendered.png``.
+``generate_test_mask_image.py`` can accept http urls so you can pass it rendered image urls directly 
 from the dash results pages.
 
-To compare images in the tests you can use the class `QgsMultiRenderChecker` or one if its subclasses.
+To compare images in the tests you can use the class ``QgsMultiRenderChecker`` or one if its subclasses.
 
 To improve tests robustness here are few tips and information:
 
-1. disable antialiasing if you can
-2. make sure the reference images are "chunky"... ie. don't have 1 px wide lines or other fine features
-3. sometimes things generate slightly different sized images (e.g. legend rendering tests, where the image size is dependent on font rendering size). There's a method you can call on the render checker to allow size tolerance
-4. don't use transparent backgrounds - dash doesn't like it. there's a method in the render checker which will add a "checkerboard" background to a QImage which should be done instead
-5. use the font specified in `QgsFontUtils::standardTestFontFamily()` ("QGIS Vera Sans")
+#. disable antialiasing if you can
+#. make sure the reference images are "chunky"... ie. don't have 1 px wide lines or other fine features
+#. sometimes things generate slightly different sized images (e.g. legend rendering tests, where the image size is dependent on font rendering size). There's a method you can call on the render checker to allow size tolerance
+#. don't use transparent backgrounds - dash doesn't like it. there's a method in the render checker which will add a "checkerboard" background to a QImage which should be done instead
+#. use the font specified in ``QgsFontUtils::standardTestFontFamily()`` "QGIS Vera Sans"
 
 
 Adding your unit test to CMakeLists.txt
