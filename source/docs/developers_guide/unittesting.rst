@@ -355,29 +355,43 @@ Comparing images for rendering tests
 ====================================
 
 Rendering images on different environments can produce subtle differences due to
-platform-specific implementations, to the fonts available on the system and to other
-obscure reasons.
+platform-specific implementations (e.g. different font rendering and antialiasing algorithms), to the fonts available on the system and for other obscure reasons.
 
-When the tests run on Travis and fails you might have a link to a dash page where
-you can see the rendered images and the diff images, but those diff images shouldn't be used anymore
-we use "masks" now instead.
-A mask is a black image the same size as the reference image
-with pixel values indicating how much that individual pixel can differ from the reference image
-you use it by going ``scripts/generate_test_mask_image.py test_name`` ``/tmp/path_to_rendered_image.png``,
-if it complains about multiple matches, you've gotta give it the full path to the reference image).
-``scripts/generate_test_mask_image.py tests/testdata/control_images/....png /tmp/rendered.png``.
-``generate_test_mask_image.py`` can accept http urls so you can pass it rendered image urls directly 
-from the dash results pages.
+When a rendering test runs on Travis and fails, look for the dash link at the very bottom of the Travis log. This link will take you to a cdash page where you can see the rendered vs expected images, along with a "difference" image which highlights in red any pixels which did not match the reference image.
 
-To compare images in the tests you can use the class ``QgsMultiRenderChecker`` or one if its subclasses.
+The QGIS unit test system has support for adding "mask" images, which are used to indicate when a rendered image may differ from the reference image. A mask image is an image (with the same name as the reference image, but including a "_mask.png" suffix), and should be the same dimensions as the reference image. In a mask image the pixel values indicate how much that individual pixel can differ from the reference image, so a black pixel indicates that the pixel in the rendered image must exactly match the same pixel in the reference image. A pixel with RGB 2, 2, 2 means that the rendered image can vary by up to 2 in its RGB values from the reference image, and a fully white pixel (255, 255, 255) means that the pixel is effectively ignored when comparing the reference and rendered images.
 
-To improve tests robustness here are few tips and information:
+A utility script to generate mask images is available as ``scripts/generate_test_mask_image.py``. This script is used by passing it the path of a reference image (e.g. ``tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png``) and the path to your rendered image.
 
-#. disable antialiasing if you can
-#. make sure the reference images are "chunky"... ie. don't have 1 px wide lines or other fine features
-#. sometimes things generate slightly different sized images (e.g. legend rendering tests, where the image size is dependent on font rendering size). There's a method you can call on the render checker to allow size tolerance
-#. don't use transparent backgrounds - dash doesn't like it. there's a method in the render checker which will add a "checkerboard" background to a QImage which should be done instead
-#. use the font specified in ``QgsFontUtils::standardTestFontFamily()`` "QGIS Vera Sans"
+E.g.
+
+.. code-block:: bash
+
+  scripts/generate_test_mask_image.py tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png /tmp/path_to_rendered_image.png
+
+You can shortcut the path to the reference image by passing a partial part of the test name instead, e.g.
+
+.. code-block:: bash
+
+  scripts/generate_test_mask_image.py annotation_fillstyle /tmp/path_to_rendered_image.png
+
+(This shortcut only works if a single matching reference image is found. If multiple matches are found you will need to provide the full path to the reference image.) 
+
+The script also accepts http urls for the rendered image, so you can directly copy a rendered image url from the cdash results page and pass it to the script.
+
+Be careful when generating mask images - you should always view the generated mask image and review any white areas in the image. Since these pixels are ignored, make sure that these white images do not cover any important portions of the reference image -- otherwise your unit test will be meaningless! 
+
+Similarly, you can manually "white out" portions of the mask if you deliberately want to exclude them from the test. This can be useful e.g. for tests which mix symbol and text rendering (such as legend tests), where the unit test is not designed to test the rendered text and you don't want the test to be subject to cross-platform text rendering differences.
+
+To compare images in QGIS unit tests you should use the class ``QgsMultiRenderChecker`` or one of its subclasses.
+
+To improve tests robustness here are few tips:
+
+#. Disable antialiasing if you can, as this minimizes cross-platform rendering differences.
+#. Make sure your reference images are "chunky"... i.e. don't have 1 px wide lines or other fine features, and use large, bold fonts (14 points or more is recommended).
+#. Sometimes tests generate slightly different sized images (e.g. legend rendering tests, where the image size is dependent on font rendering size - which is subject to cross-platform differences). To account for this, use ``QgsMultiRenderChecker::setSizeTolerance()`` and specify the maximum number of pixels that the rendered image width and height differ from the reference image.
+#. Don't use transparent backgrounds in reference images (CDash does not support them). Instead, use ``QgsMultiRenderChecker::drawBackground()`` to draw a checkboard pattern for the reference image background.
+#. When fonts are required, use the font specified in ``QgsFontUtils::standardTestFontFamily()`` ("QGIS Vera Sans").
 
 
 Adding your unit test to CMakeLists.txt
