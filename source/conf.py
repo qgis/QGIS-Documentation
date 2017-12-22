@@ -177,7 +177,7 @@ html_sidebars = {
 #html_domain_indices = True
 
 # If false, no index is generated.
-html_use_index = False
+#html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
@@ -1242,7 +1242,7 @@ rst_epilog = """
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-# latex_paper_size = 'a4'  # depricated, now in latex_elements
+# latex_paper_size = 'a4'  # deprecated, now in latex_elements
 
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '10pt'
