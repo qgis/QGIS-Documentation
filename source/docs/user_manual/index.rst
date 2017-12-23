@@ -12,8 +12,8 @@ QGIS User Guide
     :maxdepth: 2
 
     preamble/preamble
-    preamble/conventions
     preamble/foreword
+    preamble/conventions
     preamble/features
     preamble/whats_new
     introduction/getting_started
