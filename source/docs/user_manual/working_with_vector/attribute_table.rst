@@ -208,6 +208,16 @@ using multiple columns you can write ``concat(col0, col1)``.
 In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
 by preview expression` option.
 
+.. _tip_sortcolumns:
+
+.. tip:: **Sorting based on columns of different types**
+
+  Trying to sort an attribute table based on columns of string and numeric types
+  may lead to unexpected result because of the ``concat`` function returning
+  string values (ie, ``'Borough105' < 'Borough6'``).
+  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))``
+  returning ``'Borough105' > 'Borough006'``. 
+
 .. index:: Conditional formatting
 .. _conditional_formatting:
 
