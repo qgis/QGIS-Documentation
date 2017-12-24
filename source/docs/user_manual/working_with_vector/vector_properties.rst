@@ -1557,8 +1557,6 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
    :align: center
 
    Field properties tab
-   
-The QGIS trainings tutorial provides a tutorial: :ref:`ls-forms`.
 
 
 .. index:: Edit widget, Field configuration
@@ -1765,8 +1763,9 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
-For detailed information, see
-http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. The QGIS trainings manual also provides a tutorial :ref:`hard-fa-creating-a-new-form` .
+You'll find some example in the :ref:`Creating a new form <creating-new-form>`
+lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
+see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. 
 
 Enhance your form with custom functions
 .......................................
