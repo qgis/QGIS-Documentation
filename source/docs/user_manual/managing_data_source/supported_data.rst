@@ -71,7 +71,7 @@ ESRI Shapefiles
 
 The ESRI shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
-not (like Geopackage, spatialite). Support is provided by the
+not (like GeoPackage, SpatiaLite). Support is provided by the
 `OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
 
 A shapefile actually consists of several files. The following three are
@@ -101,7 +101,7 @@ Use these steps to create the index:
    :menuselection:`Properties` from the context menu.
 *  In the :guilabel:`General` tab, click the **[Create Spatial Index]** button.
 
-**Problem loading a shape .prj file**
+**Problem loading a .prj file**
 
 If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
 coordinate reference system from that file, you will need to define the proper
@@ -124,26 +124,23 @@ file, it will be used instead of the :file:`.prj`.
 Delimited Text Files
 --------------------
 
-Tabular data is a very common and widely used format because of its simplicity
+Delimited text file is a very common and widely used format because of its simplicity
 and readability -- data can be viewed and edited even in a plain text editor.
-A delimited text file is an attribute table with each column separated by a
+A delimited text file is a tabular data with each column separated by a
 defined character and each row separated by a line break. The first row usually
 contains the column names. A common type of delimited text file is a CSV
 (Comma Separated Values), with each column separated by a comma.
+Such data files can also contain positional information (see :ref:`csv_geometry`). 
 
-Such data files can also contain positional information in two main forms:
-
-* As point coordinates in separate columns
-* As well-known text (WKT) representation of geometry
-
-QGIS allows you to load a delimited text file as a layer or ordinal table. But
+QGIS allows you to load a delimited text file as a layer or ordinal table
+(see :ref:`browser_panel` or :ref:`vector_loading_csv`). But
 first check that the file meets the following requirements:
 
 #. The file must have a delimited header row of field names. This must be the
-   first line in the text file.
-#. The header row must contain field(s) with geometry definition. These field(s)
-   can have any name.
-#. The X and Y coordinates (if geometry is defined by coordinates) must be
+   first line of the data (ideally the first row in the text file).
+#. If geometry should be enabled, the header row must contain field(s) with
+   geometry definition. These field(s) can have any name.
+#. The X and Y coordinates fields (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
 #. If you have any data that is not a string (text) and the file is a CSV file,
    you must have a CSVT file (see section :ref:`csvt_files`).
@@ -170,17 +167,43 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
+.. _csv_geometry:
+
+Storing geometry information in delimited text file
+...................................................
+
+Delimited text files can contain geometry information in two main forms:
+
+* As coordinates in separate columns (eg. ``Xcol``, ``Ycol``... ),
+  compatible with point geometry data;
+* As well-known text (WKT) representation of geometry in a single column,
+  for any geometry type.
+
+Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
+supported. Here are some examples of such geometry types as a delimited text
+with WKT geometries::
+
+  Label;WKT_geom
+  LineString;LINESTRING(10.0 20.0, 11.0 21.0, 13.0 25.5)
+  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
+  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
+  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
+    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
+
+Delimited Text supports also Z and M coordinates in geometries::
+
+   LINESTRINGZ(10.0 20.0 30.0, 11.0 21.0 31.0, 11.0 22.0 30.0)
+
 
 .. index:: CSV, CSVT
 .. _csvt_files:
 
-CSVT Files
-..........
+Using CSVT file to control field formatting
+...........................................
 
 When loading CSV files, the OGR driver assumes all fields are strings (i.e. text)
 unless it is told otherwise. You can create a CSVT file to tell OGR (and QGIS)
 what data type the different columns are:
-
 
 .. csv-table::
     :header: "Type", "Name", "Example"
@@ -204,23 +227,6 @@ This file is saved in the same folder as the :file:`.csv` file, with the same
 name, but :file:`.csvt` as the extension.
 
 *You can find more information at* `GDAL CSV Driver <http://www.gdal.org/drv_csv.html>`_.
-
-Others valuable informations for advanced users
-...............................................
-
-Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
-supported. Here are three examples of such geometry types as a delimited text
-with WKT geometries::
-
-  Label;WKT_geom
-  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
-  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
-  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
-    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
-
-Delimited Text supports also Z and M coordinates in geometries::
-
-   LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
 
 
 .. index:: PostGIS, PostgreSQL
