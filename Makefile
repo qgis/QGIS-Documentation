@@ -233,7 +233,7 @@ createlang: springclean
 
 pretranslate: gettext
 	@echo "Generating the pot files for the QGIS-Documentation project"
-	$(SPHINXINTL) update -p i18n/pot -c $(SOURCEDIR)/conf.py -l $(LANG)
+	$(SPHINXINTL) update -p i18n/pot -l $(LANG)
 
 gettext:
 	# something in i18n/pot dir creates havoc when using gettext: remove it
