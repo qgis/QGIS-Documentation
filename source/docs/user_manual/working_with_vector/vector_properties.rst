@@ -512,21 +512,40 @@ feature's attribute to a class. The rules are based on SQL statements.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
-To create a rule, activate an existing row by double-clicking on it, or
-click on '+' and click on the new rule. In the :guilabel:`Rule properties` dialog,
-you can define a label for the rule. Press the |browseButton| button to open the
-expression string builder.
-In the **Function List**, click on :guilabel:`Fields and Values` to view all
-attributes of the attribute table to be searched.
-To add an attribute to the field calculator **Expression** field,
-double click on its name in the :guilabel:`Fields and Values` list. Generally, you
-can use the various fields, values and functions to construct the calculation
-expression, or you can just type it into the box (see :ref:`vector_expressions`).
-You can create a new rule by copying and pasting an existing rule with the right
-mouse button. You can also use the 'ELSE' rule that will be run if none of the other
-rules on that level matches.
-Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just
-double-click the rules in the map legend and the Style tab of the layer
+To create a rule:
+
+* Activate an existing row by double-clicking it (by default, QGIS adds a
+  symbol without a rule when the rendering mode is enabled) or click the
+  |projectProperties| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button;
+* In the :guilabel:`Edit Rule` dialog that opens, you can define a label
+  to help you identify each rule. This is the label that will be displayed
+  in the :guilabel:`Layers Panel` and also in the print composer legend;
+* Press the |expression| button to open the expression string builder dialog;
+* Use the provided functions and the layer attributes to build an :ref:`expression
+  <vector_expressions>` to filter the features you'd like to retrieve;
+* A longer label can then be used to complete the rule description;
+* You can use the |checkbox| :guilabel:`Scale Range` option to set when the
+  rule should be applied;
+* Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
+  and press **[OK]**;
+* A new row summarizing the rule is added to the Layer Properties dialog.
+
+You can create as many rules as necessary following the steps above or copy
+pasting an existing one with the right mouse button. You can also use the
+``ELSE`` rule that will be run if none of the other rules on that level matches.
+
+Selecting a rule, you can organize its features in subclasses using the
+:guilabel:`Refine selected rules` drop-down menu. Rule refinement can be based on:
+
+* **scales**;
+* **categories**: applying a :ref:`categorized renderer <categorized_renderer>`;
+* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`. 
+
+Refined classes appear like sub-items of the rule, in a tree hierarchy and like
+above, you can set symbology of each class.
+
+The created rules also appear in a tree hierarchy in the map legend.
+Double-click the rules in the map legend and the Symbology tab of the layer
 properties appears showing the rule that is the background for the symbol in
 the tree.
 
