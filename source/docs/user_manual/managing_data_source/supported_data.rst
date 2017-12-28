@@ -555,7 +555,7 @@ The client running QGIS needs to have one of the following installed:
 * IBM Data Server Client
 
 To open a DB2 data in QGIS, you can refer to :ref:`browser_panel` or
-:ref:`vector_create_stored_connection` section. 
+:ref:`vector_loading_database` section. 
 
 If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as
 a client, the DB2 executables and supporting files need to be included in the
