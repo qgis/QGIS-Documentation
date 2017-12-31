@@ -206,3 +206,29 @@ another compatible plugin or help to upgrade the broken one).
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
+   :width: 1.5em
+.. |plugin| image:: /static/common/plugin.png
+   :width: 1.5em
+.. |pluginInstalled| image:: /static/common/plugin-installed.png
+   :width: 1.5em
+.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+   :width: 1.5em
+.. |pluginNew| image:: /static/common/plugin-new.png
+   :width: 1.5em
+.. |pluginUpgrade| image:: /static/common/plugin-upgrade.png
+   :width: 1.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |transformSettings| image:: /static/common/mActionTransformSettings.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -160,18 +160,6 @@ you can start translating, see Figure_translation_menu_.
 
    Translate using the linguist menu
 
-
-.. |linguist_done_next| image:: img/linguist_done_next.png
-   :width: 2em
-.. |linguist_next| image:: img/linguist_next.png
-   :width: 2em
-.. |linguist_previous| image:: img/linguist_previous.png
-   :width: 2em
-.. |linguist_next_todo| image:: img/linguist_next_todo.png
-   :width: 2em
-.. |linguist_previous_todo| image:: img/linguist_previous_todo.png
-   :width: 2em
-
 In the menu you see the following buttons which are convenient to use.
 
 * |linguist_done_next| The Translation Done Next button, is the most important
@@ -341,3 +329,28 @@ For any question, please contact the `QGIS Community Team
 <qgis-community-team@lists.osgeo.org>`_ or the
 `QGIS Translation Team <qgis-tr@lists.osgeo.org>`_.
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |heatmap| image:: /static/common/heatmap.png
+   :width: 1.5em
+.. |linguist_done_next| image:: img/linguist_done_next.png
+   :width: 2em
+.. |linguist_next| image:: img/linguist_next.png
+   :width: 2em
+.. |linguist_next_todo| image:: img/linguist_next_todo.png
+   :width: 2em
+.. |linguist_previous| image:: img/linguist_previous.png
+   :width: 2em
+.. |linguist_previous_todo| image:: img/linguist_previous_todo.png
+   :width: 2em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -328,3 +328,37 @@ make your map a lot more informative and stylish!
 Now that you know how attributes can make a visual difference for your map, how
 about using them to change the symbology of objects themselves? That's the
 topic for the next lesson!
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |attributes| image:: /static/common/attributes.png
+   :width: 2em
+.. |basic| image:: /static/global/basic.png
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
+   :width: 1.5em
+.. |hard| image:: /static/global/hard.png
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
+.. |pinLabels| image:: /static/common/mActionPinLabels.png
+   :width: 1.5em
+.. |rotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
+.. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
+.. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em

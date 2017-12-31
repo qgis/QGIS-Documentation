@@ -63,3 +63,19 @@ Now you're familiar with the function of the :guilabel:`Add Vector Layer`
 button, but what about all the others? How does this interface work? Before we
 go on with the more involved stuff, let's first take a good look at the general
 layout of the QGIS interface. This is the topic of the next lesson.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em

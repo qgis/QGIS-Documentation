@@ -912,7 +912,7 @@ effects except for the transform one.
 
 One or more draw effects can used at the same time. You activate/deactivate an effect
 using its checkbox in the effects list. You can change the selected effect type by
-using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects
+using the |selectString| :guilabel:`Effect type` option. You can reorder the effects
 using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
 buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
 and |signMinus| :sup:`Remove effect` buttons.
@@ -2840,3 +2840,129 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :align: center
 
    QGIS Server tab in vector layers properties dialog
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |25dSymbol| image:: /static/common/renderer25dSymbol.png
+   :width: 1.5em
+.. |action| image:: /static/common/action.png
+   :width: 2em
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowRight| image:: /static/common/mActionArrowRight.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |attributes| image:: /static/common/attributes.png
+   :width: 2em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
+   :width: 1.5em
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |colorWheel| image:: /static/common/mIconColorWheel.png
+   :width: 1.5em
+.. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |degrees| unicode:: 0x00B0
+   :ltrim:
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |diagram| image:: /static/common/diagram.png
+   :width: 2em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
+   :width: 2em
+.. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
+   :width: 1.5em
+.. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
+   :width: 1.5em
+.. |iconJoinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |iconJoinNotEditable| image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |iconJoinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
+   :width: 1.5em
+.. |join| image:: /static/common/join.png
+   :width: 2em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |nullSymbol| image:: /static/common/rendererNullSymbol.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |paintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
+.. |pinLabels| image:: /static/common/mActionPinLabels.png
+   :width: 1.5em
+.. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
+   :width: 1.5em
+.. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
+   :width: 1.5em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |rotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
+.. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
+.. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
+   :width: 1.5em
+.. |slider| image:: /static/common/slider.png
+.. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -141,7 +141,7 @@ request.
    branch along.
 
    .. tip:: Though released and being translated, the documentation of QGIS
-      |current| is still maintained and existing issues are fixed. If you plan
+      |CURRENT| is still maintained and existing issues are fixed. If you plan
       to fix the issues in the current released doc, replace ``master`` branch
       by the appropriate ``manual_en_...`` branch in any of the steps exposed
       earlier.
@@ -313,7 +313,7 @@ contribution.
 For released doc (``manual_en_`` branch)
 ........................................
 
-Along the testing documentation, we continue to fix issues in QGIS |current| doc,
+Along the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
 meaning that you can also contribute to it. Following the previous section sample code,
 you can easily do that by selecting the corresponding branch.
 
@@ -404,3 +404,12 @@ of unuseful branches. So keep your repository clean this way:
   $ git push origin :myNewBranch
 
 And do not forget to update the ``master`` branch in your local repository!
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |CURRENT| replace:: 2.18
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png

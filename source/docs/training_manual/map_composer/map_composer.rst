@@ -291,3 +291,45 @@ Congratulations on your first completed QGIS map project!
 
 On the next page, you will be given an assignment to complete. This will allow
 you to practice the techniques you have learned so far.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addLegend| image:: /static/common/mActionAddLegend.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |alignLeft| image:: /static/common/mActionAlignLeft.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em

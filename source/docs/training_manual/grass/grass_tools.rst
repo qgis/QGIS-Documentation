@@ -124,3 +124,17 @@ explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS
 Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more
 structured approach, look under the :guilabel:`Modules Tree` tab, which
 organizes tools by type.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |basic| image:: /static/global/basic.png
+.. |grassRegionEdit| image:: /static/common/grass_region_edit.png
+   :width: 1.5em
+.. |moderate| image:: /static/global/moderate.png

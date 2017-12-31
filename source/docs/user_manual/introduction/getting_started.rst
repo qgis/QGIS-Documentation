@@ -346,7 +346,7 @@ a raster and a vector layer. We will use:
    in the new :guilabel:`Add vector layer` dialog. Now click **[Browse]** to
    select the vector layer.
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select **Geography Markup
-   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectstring|
+   Language [GML] [OGR] (*.gml *.GML)** from the :guilabel:`Filter` |selectString|
    combo box, then select the GML file :file:`lakes.gml` and
    click **[Open]**. In the :guilabel:`Add vector layer` dialog, click **[OK]**.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with
@@ -470,3 +470,38 @@ Here is a sampling of other ways to produce output files:
 * Menu option :menuselection:`Project -->` |newComposer|
   :menuselection:`New Print Composer...` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printcomposer`).
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |fileNew| image:: /static/common/mActionFileNew.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |newComposer| image:: /static/common/mActionNewComposer.png
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em

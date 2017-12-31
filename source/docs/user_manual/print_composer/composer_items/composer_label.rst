@@ -51,3 +51,16 @@ Appearance
   that when e.g. using the :guilabel:`Horizontal alignment` in |radioButtonOn|
   :guilabel:`Center` Position the :guilabel:`Horizontal margin` feature is
   disabled.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

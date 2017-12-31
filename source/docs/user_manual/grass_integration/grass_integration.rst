@@ -885,3 +885,57 @@ The parser reads this definition and creates a new tab inside the Toolbox when
 you select the module. A more detailed description for adding new modules, changing
 a module's group, etc., can be found at 
 https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |CURRENT| replace:: 2.18
+.. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
+   :width: 1.5em
+.. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png
+   :width: 1.5em
+.. |captureLine| image:: /static/common/mActionCaptureLine.png
+   :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+   :width: 1.5em
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |general| image:: /static/common/general.png
+   :width: 2em
+.. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
+   :width: 1.5em
+.. |grassLocation| image:: /static/common/grass_location.png
+   :width: 1.5em
+.. |grassNewMapset| image:: /static/common/grass_new_mapset.png
+   :width: 1.5em
+.. |grassOpenMapset| image:: /static/common/grass_open_mapset.png
+   :width: 1.5em
+.. |grassRegion| image:: /static/common/grass_region.png
+   :width: 1.5em
+.. |grassTools| image:: /static/common/grass_tools.png
+   :width: 1.5em
+.. |import| image:: /static/common/mIconImport.gif
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |rasterGroup| image:: /static/common/mIconRasterGroup.png
+   :width: 1.5em
+.. |rasterLink| image:: /static/common/mIconRasterLink.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

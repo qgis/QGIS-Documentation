@@ -353,5 +353,11 @@ In the sections that follow we are going to go into more detail, showing you how
 to use a GIS Application. All of the tutorials will be done using QGIS. Next up,
 let's look at vectors!
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em

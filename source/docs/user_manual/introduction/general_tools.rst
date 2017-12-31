@@ -1720,3 +1720,146 @@ variables overwritten by lower level ones are strike through.
    and `part 3 <http://nyalldawson
    .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
    blog posts.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
+.. |allEdits| image:: /static/common/mActionAllEdits.png
+   :width: 1.5em
+.. |annotation| image:: /static/common/mActionAnnotation.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
+.. |colorBox| image:: /static/common/mIconColorBox.png
+   :width: 1.5em
+.. |colorPicker| image:: /static/common/mIconColorPicker.png
+   :width: 1.5em
+.. |colorSwatches| image:: /static/common/mIconColorSwatches.png
+   :width: 1.5em
+.. |colorWheel| image:: /static/common/mIconColorWheel.png
+   :width: 1.5em
+.. |copyrightLabel| image:: /static/common/copyright_label.png
+   :width: 1.5em
+.. |dataDefineError| image:: /static/common/mIconDataDefineError.png
+   :width: 1.5em
+.. |dataDefineExpressionError| image:: /static/common/mIconDataDefineExpressionError.png
+   :width: 1.5em
+.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
+   :width: 1.5em
+.. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
+   :width: 1.5em
+.. |expandTree| image:: /static/common/mActionExpandTree.png
+   :width: 1.5em
+.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
+.. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |folder| image:: /static/common/mActionFolder.png
+   :width: 1.5em
+.. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
+   :width: 1.5em
+.. |formSelect| image:: /static/common/mIconFormSelect.png
+   :width: 1.5em
+.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
+.. |measureAngle| image:: /static/common/mActionMeasureAngle.png
+   :width: 1.5em
+.. |measureArea| image:: /static/common/mActionMeasureArea.png
+   :width: 1.5em
+.. |messageLog| image:: /static/common/mMessageLog.png
+   :width: 1.5em
+.. |northArrow| image:: /static/common/north_arrow.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |propertyItem| image:: /static/common/mActionPropertyItem.png
+   :width: 1.5em
+.. |removeLayer| image:: /static/common/mActionRemoveLayer.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |selectColor| image:: /static/common/selectcolor.png
+.. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
+   :width: 1.5em
+.. |selectRadius| image:: /static/common/mActionSelectRadius.png
+   :width: 1.5em
+.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
+.. |showMapTheme| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |transformed| image:: /static/common/transformed.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |zoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em

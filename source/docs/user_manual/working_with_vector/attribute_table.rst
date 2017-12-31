@@ -794,3 +794,81 @@ one-to-many relation. The :guilabel:`Relations` panel in the :guilabel:`Fields`
 properties of the vector layer will let the user add the relation in the form.
 It will appear as a **Many to many relation**.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
+   :width: 1.5em
+.. |copySelected| image:: /static/common/mActionCopySelected.png
+   :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |formSelect| image:: /static/common/mIconFormSelect.png
+   :width: 1.5em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |link| image:: /static/common/mActionLink.png
+   :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |multiEditChangedValues| image:: /static/common/multieditChangedValues.png
+   :width: 1.5em
+.. |multiEditMixedValues| image:: /static/common/multieditMixedValues.png
+   :width: 1.5em
+.. |multiEditSameValues| image:: /static/common/multieditSameValues.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |remove| image:: /static/common/mActionRemove.png
+   :width: 1.5em
+.. |saveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |unlink| image:: /static/common/mActionUnlink.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
+   :width: 1.5em

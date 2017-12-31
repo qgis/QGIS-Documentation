@@ -228,3 +228,24 @@ The live tracking works both with GPSD
 
 or without it, by connecting the QGIS live tracking tool directly to the device
 (for example ``/dev/rfcomm0``).
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
+   :width: 1.5em
+.. |gpsTrackPolarChart| image:: /static/common/gpstrack_polarchart.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |slider| image:: /static/common/slider.png
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

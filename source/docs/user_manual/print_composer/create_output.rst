@@ -212,7 +212,7 @@ item, you need to check |checkbox|:guilabel:`Controlled by Atlas` under the item
 properties of the map item.
 Once checked, you can set:
 
-* A |radiobuttonon| :guilabel:`Margin around feature` that allows you to select
+* A |radioButtonOn| :guilabel:`Margin around feature` that allows you to select
   the amount of space added around each geometry within the allocated map.
   Its value is meaningful only when using the auto-scaling mode.
 * A |radioButtonOff| :guilabel:`Predefined scale` (best fit). It will use the best
@@ -375,3 +375,37 @@ an image or SVG file.
 
 
 .. _Multiple_format_map_series_using_QGIS_2.6: http://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |atlas| image:: /static/common/mIconAtlas.png
+   :width: 1.5em
+.. |atlasFirst| image:: /static/common/mActionAtlasFirst.png
+   :width: 1.5em
+.. |atlasLast| image:: /static/common/mActionAtlasLast.png
+   :width: 1.5em
+.. |atlasNext| image:: /static/common/mActionAtlasNext.png
+   :width: 1.5em
+.. |atlasPrev| image:: /static/common/mActionAtlasPrev.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

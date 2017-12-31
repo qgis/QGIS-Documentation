@@ -247,7 +247,7 @@ Refactor layer fields allows to:
 * Calculate new fields based on expressions
 * Load field list from another layer
 
-.. figure:: /static/user_manual/processing_algs/qgis/refactor_fields.png
+.. figure:: img/refactor_fields.png
   :align: center
 
   Refactor fields dialog
@@ -303,3 +303,22 @@ Output
 
 ``Float from text`` [vector]
   Output vector layer with string field converted into float
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |clearText| image:: /static/common/mIconClearText.png
+   :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

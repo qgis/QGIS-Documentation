@@ -494,3 +494,15 @@ For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Project Properties` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

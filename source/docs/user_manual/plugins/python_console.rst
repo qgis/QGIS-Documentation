@@ -176,3 +176,23 @@ the Python console behavior:
    To save the state of console's widgets you have to close the Python
    Console from the close button. This allows you to save the geometry to be
    restored to the next start.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |iconClassConsole| image:: /static/common/iconClassConsole.png
+   :width: 1.5em
+.. |iconClearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |iconHelpConsole| image:: /static/common/iconHelpConsole.png
+   :width: 1.5em
+.. |iconRunConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
+.. |iconSettingsConsole| image:: /static/common/iconSettingsConsole.png
+   :width: 1.5em
+.. |iconeShowEditorConsole| image:: /static/common/iconShowEditorConsole.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

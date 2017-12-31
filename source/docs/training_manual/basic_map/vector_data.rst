@@ -153,3 +153,19 @@ Using the random palette automatically assigned when loading the layers, your
 current map is probably not easy to read. It would be preferable to assign your
 own choice of colors and symbols. This is what you'll learn to do in the next
 lesson.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |attributes| image:: /static/common/attributes.png
+   :width: 2em
+.. |basic| image:: /static/global/basic.png

@@ -214,3 +214,16 @@ The tokens you need to replace are as follows:
   the filename of your SRTM DEM file.
 * :kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should replace
   this with the correct CRS for your region.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |TY| replace:: Try Yourself
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |majorUrbanName| replace:: Swellendam
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em

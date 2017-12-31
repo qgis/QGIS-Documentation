@@ -283,3 +283,19 @@ All classes and public functions have sip bindings, except ``QgsAuthCrypto``,
 since management of the master password hashing and auth database encryption
 should be handled by the main app, and not via Python.
 See :ref:`authentication_security_considerations` concerning Python access.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

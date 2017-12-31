@@ -135,3 +135,13 @@ To select a color you can use the list option using the dropdown arrow to open
 a simple color selection option or the more advanced color selection option,
 that is started when you click in the colored box in the dialog.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

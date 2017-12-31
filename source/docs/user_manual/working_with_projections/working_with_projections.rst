@@ -254,3 +254,30 @@ displaying PROJ.4 text describing the source and destination
 transforms. Further information may be found by hovering over a
 transform. User defaults can be saved by selecting
 |radioButtonOn| :guilabel:`Remember selection`.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
+.. |geographic| image:: /static/common/geographic.png
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

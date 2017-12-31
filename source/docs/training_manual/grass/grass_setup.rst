@@ -176,3 +176,21 @@ easier by using existing layers in QGIS as data sources for GRASS.
 
 Now that the data is imported into GRASS, we can look at the advanced analysis
 operations that GRASS offers.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |grassNewMapset| image:: /static/common/grass_new_mapset.png
+   :width: 1.5em
+.. |grassTools| image:: /static/common/grass_tools.png
+   :width: 1.5em
+.. |hard| image:: /static/global/hard.png
+.. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`

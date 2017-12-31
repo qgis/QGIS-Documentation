@@ -253,3 +253,16 @@ It has taken a few clicks of the mouse but you now have your old inventory data 
 
 You could start doing different analysis with your brand new dataset, but you might be more interested in performing analysis in a dataset more up to date. The topic of the next lesson will be the creation of forest stands using current aerial photos and the addition of some relevant information to your dataset.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png

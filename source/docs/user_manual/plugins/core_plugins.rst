@@ -33,5 +33,41 @@ Icon                    Plugin                        Description               
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
 |pluginInstaller|       Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
-|topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
+|topologyChecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 ======================  ============================  ======================================================  ===============================
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |coordinateCapture| image:: /static/common/coordinate_capture.png
+   :width: 1.5em
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |eventId| image:: /static/common/event_id.png
+   :width: 1.5em
+.. |geometryChecker| image:: /static/common/geometrychecker.png
+   :width: 1.5em
+.. |geoprocessing| image:: /static/common/geoprocessing.png
+   :width: 1.5em
+.. |georefRun| image:: /static/common/mGeorefRun.png
+   :width: 1.5em
+.. |gpsImporter| image:: /static/common/gps_importer.png
+   :width: 1.5em
+.. |grass| image:: /static/common/grasslogo.png
+   :width: 1.5em
+.. |metasearch| image:: /static/common/MetaSearch.png
+   :width: 1.5em
+.. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
+   :width: 1.5em
+.. |pluginInstaller| image:: /static/common/plugin_installer.png
+   :width: 1.5em
+.. |rasterInfo| image:: /static/common/raster-info.png
+   :width: 1.5em
+.. |spatialQuery| image:: /static/common/spatialquery.png
+   :width: 1.5em
+.. |topologyChecker| image:: /static/common/topol.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

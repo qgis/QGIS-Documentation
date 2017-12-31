@@ -54,4 +54,3 @@ And for a smoother result (less accurate but better for rendering in the backgro
 With the above parameters you will get the following result
 
 .. image:: img/interpolation/filtered_raster.png
-

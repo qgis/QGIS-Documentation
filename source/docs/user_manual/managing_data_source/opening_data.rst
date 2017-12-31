@@ -828,3 +828,47 @@ Description of these capabilities and how-to are provided in chapter
 :ref:`sec_ogc`.
 
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
+.. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
+   :width: 1.5em
+.. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |delimitedText| image:: /static/common/delimited_text.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |propertiesWidget| image:: /static/common/mActionPropertiesWidget.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

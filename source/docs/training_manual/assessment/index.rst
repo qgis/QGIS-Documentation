@@ -153,3 +153,14 @@ Final Map
   map has become too visually busy due to the added layer(s), deselect the
   layers which you feel are the least necessary.
 * Your map must include a title and a legend.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |MOD| replace:: Module:
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png

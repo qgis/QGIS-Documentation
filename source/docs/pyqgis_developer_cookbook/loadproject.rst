@@ -53,4 +53,3 @@ use to check if the operation was successful.
                QgsProject.instance().layerTreeRoot(), canvas)
       # Now you can safely load your project and see it in the canvas
       project.read(QFileInfo('/home/user/projects/my_other_qgis_project.qgs'))
-
