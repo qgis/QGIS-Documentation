@@ -11,7 +11,7 @@ Topology Checker Plugin
 
 .. _figure_topology_checker:
 
-.. figure:: /static/user_manual/plugins/topology_checker.png
+.. figure:: img/topology_checker.png
    :align: center
 
    The Topology Checker Plugin

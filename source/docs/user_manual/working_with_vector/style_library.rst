@@ -32,7 +32,7 @@ to be used in several QGIS projects. You can open it with the :menuselection:`Se
 
 .. _figure_style_manager:
 
-.. figure:: /static/user_manual/working_with_vector/stylemanager.png
+.. figure:: img/stylemanager.png
    :align: center
 
    The Style Manager
@@ -61,7 +61,7 @@ the entered condition(s) is automatically added to the smart group.
 
 .. _figure_smart_group:
 
-.. figure:: /static/user_manual/working_with_vector/create_smartgroup.png
+.. figure:: img/create_smartgroup.png
    :align: center
 
    Creating a Smart Group
@@ -137,7 +137,7 @@ Note that import and export options are also available through right-click.
 
 .. _figure_symbol_import:
 
-.. figure:: /static/user_manual/working_with_vector/import_styles.png
+.. figure:: img/import_styles.png
    :align: center
 
    Importing symbols
@@ -187,7 +187,7 @@ example of a custom color ramp and figure_color_cpt_city_ for the cpt-city Color
 
 .. _figure_color_custom_ramp:
 
-.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
+.. figure:: img/customColorRampGradient.png
    :align: center
 
    Example of custom gradient color ramp with multiple stops
@@ -196,7 +196,7 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
 .. _figure_color_cpt_city:
 
-.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
+.. figure:: img/cpt-cityColorRamps.png
    :align: center
 
    cpt-city dialog with hundreds of color ramps
@@ -212,7 +212,7 @@ You can create or edit Marker, Line or Fill Symbols.
 
 .. _figure_symbol_marker:
 
-.. figure:: /static/user_manual/working_with_vector/symbolselector.png
+.. figure:: img/symbolselector.png
    :align: center
 
    Designing a Marker symbol

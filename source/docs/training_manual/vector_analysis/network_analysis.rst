@@ -22,7 +22,7 @@ To activate the :guilabel:`Road Graph` plugin:
   menu item :menuselection:`Plugins --> Manage and Install Plugins...`. A dialog appears.
 * Select the plugin like this:
 
-.. image:: /static/training_manual/vector_analysis/select_road_graph_plugin.png
+.. image:: img/select_road_graph_plugin.png
    :align: center
 
 * Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog.
@@ -33,7 +33,7 @@ To activate the :guilabel:`Road Graph` plugin:
 
 This panel will appear in your interface:
 
-.. image:: /static/training_manual/vector_analysis/shortest_path_panel.png
+.. image:: img/shortest_path_panel.png
    :align: center
 
 
@@ -53,7 +53,7 @@ won't do anything at all if you don't set it up first.
   dialog will appear.
 * Make sure it's set up like this (use defaults unless otherwise specified):
 
-.. image:: /static/training_manual/vector_analysis/road_graph_settings.png
+.. image:: img/road_graph_settings.png
    :align: center
 
 - :guilabel:`Time unit`: :guilabel:`hour`
@@ -61,7 +61,7 @@ won't do anything at all if you don't set it up first.
 - :guilabel:`Layer`: :guilabel:`roads_34S`
 - :guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`
 
-.. image:: /static/training_manual/vector_analysis/road_graph_settings_two.png
+.. image:: img/road_graph_settings_two.png
    :align: center
 
 - :guilabel:`Direction`: :guilabel:`Two-way direction`
@@ -75,13 +75,13 @@ Find two points, on roads, on your map. They do not need to have any
 significance, but they should be connected by roads and separated by a
 reasonable distance:
 
-.. image:: /static/training_manual/vector_analysis/road_points.png
+.. image:: img/road_points.png
    :align: center
 
 * In the plugin panel, click on the :guilabel:`Capture Point` button next to
   the :guilabel:`Start` field:
 
-.. image:: /static/training_manual/vector_analysis/capture_point_start.png
+.. image:: img/capture_point_start.png
    :align: center
 
 * Click on your chosen start point.
@@ -89,7 +89,7 @@ reasonable distance:
   and capture your chosen end point.
 * Click on the :guilabel:`Calculate` button to see the solution:
 
-.. image:: /static/training_manual/vector_analysis/path_result.png
+.. image:: img/path_result.png
    :align: center
 
 |moderate| |FA| Using Criteria
@@ -107,12 +107,12 @@ reasonable distance:
 * In the main window, activate the :guilabel:`Select Features by Rectangle`
   tool:
 
-.. image:: /static/training_manual/vector_analysis/select_by_rectangle.png
+.. image:: img/select_by_rectangle.png
    :align: center
 
 * Select any main roads in urban - but not residential - areas:
 
-.. image:: /static/training_manual/vector_analysis/60_roads_selected.png
+.. image:: img/60_roads_selected.png
    :align: center
 
 (To select more than one road, hold the :kbd:`ctrl` button and drag a box
@@ -120,12 +120,12 @@ across any road that you want to include in the selection.)
 
 * In the attribute table, select :guilabel:`Show selected features`.
 
-    .. image:: /static/training_manual/vector_analysis/show_selected.png
+    .. image:: img/show_selected.png
        :align: center
 
 * Set the :kbd:`SPEED` value for all the selected streets to :kbd:`60`:
 
-.. image:: /static/training_manual/vector_analysis/60_roads_edited.png
+.. image:: img/60_roads_edited.png
    :align: center
 
 In context, this means that you're setting the speed limit on those roads to
@@ -133,7 +133,7 @@ In context, this means that you're setting the speed limit on those roads to
 
 * Select any highways or major roads outside urban areas:
 
-.. image:: /static/training_manual/vector_analysis/highways_selected.png
+.. image:: img/highways_selected.png
    :align: center
 
 * Set the :kbd:`SPEED` value for all the selected streets to :kbd:`120`.
@@ -146,7 +146,7 @@ In context, this means that you're setting the speed limit on those roads to
 * Set the starting point on a minor road on one side of |majorUrbanName| and the
   end point on a major road on the other side of town:
 
-.. image:: /static/training_manual/vector_analysis/speed_start_end.png
+.. image:: img/speed_start_end.png
    :align: center
 
 * In the :guilabel:`Criterion` drop-down list in the :guilabel:`Shortest path`
@@ -154,7 +154,7 @@ In context, this means that you're setting the speed limit on those roads to
 * Click :guilabel:`Calculate`. The route will be calculated for the shortest
   distance:
 
-.. image:: /static/training_manual/vector_analysis/length_result.png
+.. image:: img/length_result.png
    :align: center
 
 Notice the values of :guilabel:`Length` and :guilabel:`Time` in the
@@ -164,7 +164,7 @@ Notice the values of :guilabel:`Length` and :guilabel:`Time` in the
 * Click :guilabel:`Calculate` again. The route will be calculated for the
   shortest time:
 
-.. image:: /static/training_manual/vector_analysis/time_result.png
+.. image:: img/time_result.png
    :align: center
 
 You can switch back and forth between these criteria, recalculating each time,

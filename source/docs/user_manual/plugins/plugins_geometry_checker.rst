@@ -46,7 +46,7 @@ shapefile. At the left, you have the number of the errors and the fixed errors.
 
 .. _figure_geometry_checker:
 
-.. figure:: /static/user_manual/plugins/check_geometries.png
+.. figure:: img/check_geometries.png
    :align: center
 
    The Geometry Checker Plugin
@@ -70,7 +70,7 @@ The following figure shows the different checks made by the plugin.
 
 .. _figure_geometry_checker_options:
 
-.. figure:: /static/user_manual/plugins/geometry_checker_scheme.png
+.. figure:: img/geometry_checker_scheme.png
    :align: center
 
    The Differents checks supported by the plugin

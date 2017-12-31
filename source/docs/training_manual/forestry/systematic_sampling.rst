@@ -39,7 +39,7 @@ Now you need to create a rectangular grid of points separated 80 meters from eac
 
 You notice that the tool has used the whole extent of your stands layer to generate a rectangular grid of points. But you are only interested on those points that are actually inside your forest area (see the images below):
 
-.. image:: /static/training_manual/forestry/grid_full_and_clip.png
+.. image:: img/grid_full_and_clip.png
    :align: center	
 
 * Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`.
@@ -74,7 +74,7 @@ Nevertheless, the number values in the :kbd:`id` field are not so good. It would
 
 Now you have a new column with plot names that are meaningful to you. For the :kbd:`systematic_plots_clip` layer, change the field used for labeling to your new :kbd:`Plot_id` field.
 
-.. image:: /static/training_manual/forestry/labelled_plots.png
+.. image:: img/labelled_plots.png
    :align: center
 
 |basic| |FA| Exporting Sample Plots as GPX format
@@ -93,7 +93,7 @@ The field teams will be probably using a GPS device to locate the sample plots y
 * Click :guilabel:`OK`.
 * In the dialog that opens, select only the :kbd:`waypoints` layer (the rest of the layers are empty).
 
-.. image:: /static/training_manual/forestry/gpx_creation.png
+.. image:: img/gpx_creation.png
    :align: center
 
 The inventory sample plots are now in a standard format that can be managed by most of the GPS software. The field teams can now upload the locations of the sample plots to their devices. That would be done by using the specific devices own software and the :kbd:`plots_wgs84.gpx` file you just saved. Other option would be to use the :guilabel:`GPS Tools` plugin but it would most likely involve setting the tool to work with your specific GPS device. If you are working with your own data and want to see how the tool works you can find out information about it in the section `Working with GPS Data <http://docs.qgis.org/2.2/en/docs/user_manual/working_with_gps/index.html>`_ in the :guilabel:`QGIS User Manual`.

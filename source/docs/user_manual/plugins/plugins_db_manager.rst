@@ -18,7 +18,7 @@ and they will get imported.
 
 .. _figure_db_manager:
 
-.. figure:: /static/user_manual/plugins/db_manager.png
+.. figure:: img/db_manager.png
    :align: center
 
    DB Manager dialog
@@ -65,7 +65,7 @@ and only that portion will be executed when you press :kbd:`F5` or click the
 
 .. _figure_db_manager_queries:
 
-.. figure:: /static/user_manual/plugins/db_manager_sql.png
+.. figure:: img/db_manager_sql.png
    :align: center
 
    Executing SQL queries in the DB Manager SQL window

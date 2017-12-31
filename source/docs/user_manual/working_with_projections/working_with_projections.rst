@@ -71,7 +71,7 @@ sessions.
 
 .. _figure_projection_options:
 
-.. figure:: /static/user_manual/working_with_projections/crsdialog.png
+.. figure:: img/crsdialog.png
    :align: center
 
    CRS tab in the QGIS Options Dialog
@@ -138,7 +138,7 @@ layers will be OTF projected to the CRS shown next to the icon.
 
 .. _figure_projection_project:
 
-.. figure:: /static/user_manual/working_with_projections/projectionDialog.png
+.. figure:: img/projectionDialog.png
    :align: center
 
    Project Properties Dialog
@@ -198,7 +198,7 @@ database also contains your spatial bookmarks and other custom data.
 
 .. _figure_projection_custom:
 
-.. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
+.. figure:: img/customProjectionDialog.png
    :align: center
 
    Custom CRS Dialog

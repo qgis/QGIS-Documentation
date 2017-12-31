@@ -18,7 +18,7 @@ Background, Item ID, Variables and Rendering (See figure_composer_common_).
 
 .. _Figure_composer_common:
 
-.. figure:: /static/user_manual/print_composer/common_properties.png
+.. figure:: img/common_properties.png
    :align: center
 
    Common Item Properties Dialogs
@@ -68,7 +68,7 @@ raster layers.
 
 .. _figure_composer_common_rendering:
 
-.. figure:: /static/user_manual/print_composer/rendering_mode.png
+.. figure:: img/rendering_mode.png
    :align: center
 
    Rendering mode
@@ -143,7 +143,7 @@ in this list.
 
 .. _figure_composer_common_align:
 
-.. figure:: /static/user_manual/print_composer/alignment_lines.png
+.. figure:: img/alignment_lines.png
    :align: center
 
    Alignment helper lines in the Print Composer

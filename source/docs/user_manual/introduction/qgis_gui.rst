@@ -24,7 +24,7 @@ numbers 1 through 5 in yellow circles are discussed below).
 
 .. _figure_startup:
 
-.. figure:: /static/user_manual/introduction/startup.png
+.. figure:: img/startup.png
    :align: center
 
    QGIS GUI with Alaska sample data
@@ -398,7 +398,7 @@ holding the mouse over the toolbars.
 
 .. _figure_toolbars:
 
-.. figure:: /static/user_manual/introduction/toolbars.png
+.. figure:: img/toolbars.png
    :align: center
 
    The Toolbars menu
@@ -428,7 +428,7 @@ filling values...) in order to perform a more complex task.
 
 .. _figure_panels:
 
-.. figure:: /static/user_manual/introduction/panels.png
+.. figure:: img/panels.png
    :align: center
 
    The Panels menu

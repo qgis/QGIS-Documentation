@@ -32,7 +32,7 @@ Let's get started right away!
 
 * Click on it to open the following dialog:
 
-.. image:: /static/training_manual/interface/add_vector_dialog.png
+.. image:: img/add_vector_dialog.png
    :align: center
 
 * Click on the :guilabel:`Browse` button and navigate to the file

@@ -348,7 +348,7 @@ like this in your web browser to retrieve the *countries* layer:
 
 If you obtain the next image, then QGIS Server is running correctly:
 
-.. figure:: /static/user_manual/working_with_ogc/server_basic_getmap.png
+.. figure:: img/server_basic_getmap.png
   :align: center
 
   Server response to a basic GetMap request
@@ -378,7 +378,7 @@ styles of the layers in QGIS and the project CRS, if not already defined.
 
 .. _figure_server_definitions:
 
-.. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
+.. figure:: img/ows_server_definition.png
    :align: center
 
    Definitions for a QGIS Server WMS/WFS/WCS project

@@ -105,7 +105,7 @@ This diagram illustrates the concept of tile sets:
 
 .. _figure_wmts_tiles:
 
-.. figure:: /static/user_manual/working_with_ogc/concept_wmts.png
+.. figure:: img/concept_wmts.png
    :align: center
 
    Concept of WMTS tile sets
@@ -244,7 +244,7 @@ provided by the European Soil Portal WMS server.
 
 .. _figure_OGC_add_wms:
 
-.. figure:: /static/user_manual/working_with_ogc/connection_wms.png
+.. figure:: img/connection_wms.png
    :align: center
 
    Dialog for adding a WMS server, showing its available layers
@@ -345,7 +345,7 @@ Within QGIS, you can search for WMS servers. Figure_OGC_search_ shows the
 
 .. _Figure_OGC_search:
 
-.. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
+.. figure:: img/wms_server_search.png
    :align: center
 
    Dialog for searching WMS servers after some keywords
@@ -649,7 +649,7 @@ downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS
 
 .. _figure_OGC_add_wfs:
 
-.. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
+.. figure:: img/connection_wfs.png
    :align: center
 
    Adding a WFS layer

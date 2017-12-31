@@ -26,7 +26,7 @@ to a new attribute named **color_id**.
 The following example shows the algorithm with four different colors chosen; as you
 can see each color class has the same amount of features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/topological_color.png
+.. figure:: img/topological_color.png
   :align: center
 
   Topological colors example

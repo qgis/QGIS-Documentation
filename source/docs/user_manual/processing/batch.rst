@@ -28,7 +28,7 @@ that will appear.
 
 .. _figure_processing_batch_start:
 
-.. figure:: /static/user_manual/processing/batch_processing_right_click.png
+.. figure:: img/batch_processing_right_click.png
    :align: center
 
    Batch Processing from right-click
@@ -39,7 +39,7 @@ process...` button.
 
 .. _figure_processing_batch_start2:
 
-.. figure:: /static/user_manual/processing/batch_processing_params_dialog.png
+.. figure:: img/batch_processing_params_dialog.png
    :align: center
 
    Batch Processing From Algorithm Dialog
@@ -55,7 +55,7 @@ one shown next.
 
 .. _figure_processing_bath_parameters:
 
-.. figure:: /static/user_manual/processing/batch_processing.png
+.. figure:: img/batch_processing.png
    :align: center
 
    Batch Processing
@@ -104,7 +104,7 @@ other cells in the same column (same parameter).
 
 .. _figure_processing_save:
 
-.. figure:: /static/user_manual/processing/batch_processing_save.png
+.. figure:: img/batch_processing_save.png
    :align: center
 
    Batch Processing Save
@@ -121,7 +121,7 @@ particularly useful for naming output data objects according to input ones.
 
 .. _figure_processing_file:
 
-.. figure:: /static/user_manual/processing/batch_processing_filepath.png
+.. figure:: img/batch_processing_filepath.png
    :align: center
 
    Batch Processing File Path

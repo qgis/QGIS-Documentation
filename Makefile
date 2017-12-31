@@ -7,7 +7,7 @@ SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
 PAPER         =
 SOURCEDIR     = source
-RESOURCEDIR   = resources
+RESOURCEDIR   = static
 BUILDDIR      = output
 # using the -A flag, we create a python variable named 'language', which
 # we then can use in html templates to create language dependent switches
@@ -60,29 +60,12 @@ springclean: clean
 	# rm -f $(SOURCEDIR)/docs_conf.py*
 	# rm -rf $(SOURCEDIR)/docs/*/
 
-# remove all resources from source/static directory
-# copy english resources from resources/en to source/static directory
-# IF we have a localized build (LANG != en) then
-# overwrite with potentially available LANG resources by
-# copy LANG resources from resources/LANG to source/static directory
-# TODO: check if LANG != en, for now: unnecessary copy for english
-localizeresources: clean
+updatestatic:
 	@echo
-	@echo "Removing all static content from $(SOURCEDIR)/static."
-	rm -rf $(SOURCEDIR)/static
-	@echo "Copy 'en' (base) static content to $(SOURCEDIR)/static."
-	mkdir $(SOURCEDIR)/static
-	# historically the images for the docs sub project are not in a separate docs folder
-	# that is why we copy into root in separate steps
-	@if [ -d "$(RESOURCEDIR)/en/docs" ]; then \
-		cp -r $(RESOURCEDIR)/en/docs/* $(SOURCEDIR)/static; \
-	fi
-	@echo "Copy localized '$(LANG)' static content to $(SOURCEDIR)/static."
-	@if [ -d "$(RESOURCEDIR)/$(LANG)/docs" ]; then \
-		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
-	fi
+	@echo "Updating static content into $(SOURCEDIR)/static."
+	rsync -uthvr --delete $(RESOURCEDIR)/ $(SOURCEDIR)/static
 
-html: localizeresources
+html: updatestatic
 	$(SPHINXINTL) --config $(SOURCEDIR)/conf.py build --language=$(LANG)
 	# ONLY in the english version run in nit-picky mode, so source errors/warnings will fail in Travis
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
@@ -256,9 +239,9 @@ gettext:
 #	make pretranslate
 #	tx push -f -s --no-interactive
 
-fasthtml:
+fasthtml: updatestatic
 	# This build is just for fast previewing changes in EN documentation
-	# Instead of fully copy the english images to static folder, it syncs it
+	# It runs in non-nit-picky mode allowing to check all warnings without
+	# cancelling the build
 	# No internationalization is performed
-	rsync -uthvr --delete $(RESOURCEDIR)/en/docs/ $(SOURCEDIR)/static
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)

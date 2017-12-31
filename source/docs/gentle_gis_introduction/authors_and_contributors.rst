@@ -34,8 +34,8 @@ About the authors & contributors
 |                | time Sibongile used a computer.                                      |
 +----------------+----------------------------------------------------------------------+
 
-.. |tim| image:: /static/gentle_gis_introduction/authors/tim_sutton.png
-.. |otto| image:: /static/gentle_gis_introduction/authors/otto_dassau.png
-.. |marcelle| image:: /static/gentle_gis_introduction/authors/marcelle_sutton.png
-.. |lerato| image:: /static/gentle_gis_introduction/authors/lerato_nsibande.png
-.. |sibongile| image:: /static/gentle_gis_introduction/authors/sibongile_mthombeni.png
+.. |tim| image:: img/tim_sutton.png
+.. |otto| image:: img/otto_dassau.png
+.. |marcelle| image:: img/marcelle_sutton.png
+.. |lerato| image:: img/lerato_nsibande.png
+.. |sibongile| image:: img/sibongile_mthombeni.png

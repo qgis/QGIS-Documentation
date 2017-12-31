@@ -21,7 +21,7 @@ including each type of map item described in the previous section.
 
 .. _figure_composer_output:
 
-.. figure:: /static/user_manual/print_composer/print_composer_complete.png
+.. figure:: img/print_composer_complete.png
    :align: center
 
    Print Composer with map view, legend, image, scale bar, coordinates, text and
@@ -79,7 +79,7 @@ the cropped bounds.
 
 .. _figure_composer_output_image:
 
-.. figure:: /static/user_manual/print_composer/image_export_options.png
+.. figure:: img/image_export_options.png
    :align: center
 
    Image Export Options, output is resized to items extent
@@ -117,7 +117,7 @@ The SVG export options dialog also allows to:
 
 .. _figure_composer_output_svg:
 
-.. figure:: /static/user_manual/print_composer/svg_export_options.png
+.. figure:: img/svg_export_options.png
    :align: center
 
    SVG Export Options
@@ -169,7 +169,7 @@ panel.This panel contains the following widgets (see figure_composer_atlas_):
 
 .. _figure_composer_atlas:
 
-.. figure:: /static/user_manual/print_composer/atlas_properties.png
+.. figure:: img/atlas_properties.png
    :align: center
 
    Atlas Generation Panel
@@ -329,7 +329,7 @@ Preview and generate
 
 .. _figure_composer_atlas_preview:
 
-.. figure:: /static/user_manual/print_composer/atlas_preview.png
+.. figure:: img/atlas_preview.png
    :align: center
 
    Atlas Preview toolbar

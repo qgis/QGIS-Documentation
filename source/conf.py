@@ -131,7 +131,7 @@ html_title = ""
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = '../resources/en/common/logo.png'
+html_logo = '../static/common/logo.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -622,8 +622,6 @@ rst_epilog = """
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 2em
-.. |gentleLogo| image:: /static/gentle_gis_introduction/gentlelogo.png
-   :width: 3em
 .. |geographic| image:: /static/common/geographic.png
 .. |geometry| image:: /static/common/geometry.png
    :width: 1.5em
@@ -1220,10 +1218,10 @@ rst_epilog = """
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
 
-.. |basic| image:: /static/training_manual/global/basic.png
-.. |moderate| image:: /static/training_manual/global/moderate.png
-.. |hard| image:: /static/training_manual/global/hard.png
-.. |note| image:: /static/training_manual/global/comment.png
+.. |basic| image:: /static/global/basic.png
+.. |moderate| image:: /static/global/moderate.png
+.. |hard| image:: /static/global/hard.png
+.. |note| image:: /static/global/comment.png
 .. |MOD| replace:: Module:
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
@@ -1313,6 +1311,8 @@ texinfo_documents = [
 
 locale_dirs = ['../i18n/']
 gettext_compact = False
+
+figure_language_filename = '{path}{language}/{basename}{ext}'
 
 # adding this because in pycookbook a lot of text is referencing classes, which cannot be found by sphinx
 # eg: Map canvas is implemented as :class:`QgsMapCanvas` ...

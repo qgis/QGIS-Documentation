@@ -460,7 +460,7 @@ New Zealand main islands.
 
 .. _figure_vector_crossing:
 
-.. figure:: /static/user_manual/managing_data_source/vectorNotWrapping.png
+.. figure:: img/vectorNotWrapping.png
    :align: center
 
    Map in lat/lon crossing the 180 |degrees| longitude line
@@ -473,7 +473,7 @@ version of the data to be plotted in a 180 |degrees|-centric map.
 
 .. _figure_vector_crossing_map:
 
-.. figure:: /static/user_manual/managing_data_source/vectorWrapping.png
+.. figure:: img/vectorWrapping.png
    :align: center
    :width: 25em
 

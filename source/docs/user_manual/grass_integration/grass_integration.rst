@@ -150,7 +150,7 @@ this functionality will not be described here.)
 
 .. _figure_grass_location:
 
-.. figure:: /static/user_manual/grass_integration/grass_location.png
+.. figure:: img/grass_location.png
    :align: center
 
    GRASS data in the alaska LOCATION
@@ -258,7 +258,7 @@ install the dataset on your computer (see :ref:`label_sampledata`).
 
 .. _figure_grass_new_location:
 
-.. figure:: /static/user_manual/grass_integration/create_grass_location.png
+.. figure:: img/create_grass_location.png
    :align: center
 
    Creating a new GRASS LOCATION or a new MAPSET in QGIS
@@ -583,7 +583,7 @@ need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`
 
 .. _figure_grass_toolbox:
 
-.. figure:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
+.. figure:: img/grass_toolbox_moduletree.png
    :align: center
 
    GRASS Toolbox and Module Tree
@@ -620,7 +620,7 @@ further module-specific parameters to run the module.
 
 .. _figure_grass_module:
 
-.. figure:: /static/user_manual/grass_integration/grass_module_option.png
+.. figure:: img/grass_module_option.png
    :align: center
 
    GRASS Toolbox Module Options
@@ -640,7 +640,7 @@ to switch to the GRASS shell.
 
 .. _figure_grass_module_output:
 
-.. figure:: /static/user_manual/grass_integration/grass_module_output.png
+.. figure:: img/grass_module_output.png
    :align: center
 
    GRASS Toolbox Module Output
@@ -654,7 +654,7 @@ all works well, you will finally see a ``Successfully finished`` message.
 
 .. _figure_grass_module_manual:
 
-.. figure:: /static/user_manual/grass_integration/grass_module_manual.png
+.. figure:: img/grass_module_manual.png
    :align: center
 
    GRASS Toolbox Module Manual
@@ -742,7 +742,7 @@ causing it to load even more slowly.
 
 .. _figure_grass_module_generalize:
 
-.. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
+.. figure:: img/grass_toolbox_vgeneralize.png
    :align: center
    :width: 35em
 
@@ -796,7 +796,7 @@ parameters. This example demonstrates the use of an additional option in the
 
 .. _figure_grass_module_shell:
 
-.. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
+.. figure:: img/grass_toolbox_shell.png
    :align: center
 
    The GRASS shell, r.shaded.relief module
@@ -818,7 +818,7 @@ effect is even more pronounced.
 
 .. _figure_grass_module_display:
 
-.. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
+.. figure:: img/grass_toolbox_shadedrelief.png
    :align: center
    :width: 35em
 

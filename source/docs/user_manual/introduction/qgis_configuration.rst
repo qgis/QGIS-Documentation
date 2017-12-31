@@ -143,7 +143,7 @@ source code.
 
 .. _figure_environment_variables:
 
-.. figure:: /static/user_manual/introduction/sys-env-options.png
+.. figure:: img/sys-env-options.png
    :align: center
 
    System environment variables in QGIS
@@ -269,7 +269,7 @@ Rendering Settings
 
 .. _figure_rendering_menu:
 
-.. figure:: /static/user_manual/introduction/rendering_menu.png
+.. figure:: img/rendering_menu.png
    :align: center
 
    Rendering tab of Project Properties dialog
@@ -549,7 +549,7 @@ Network Settings
 
 .. _figure_network_tab:
 
-.. figure:: /static/user_manual/introduction/proxy-settings.png
+.. figure:: img/proxy-settings.png
    :align: center
 
    Proxy-settings in QGIS
@@ -673,7 +673,7 @@ dialog described above.
 
 .. _figure_general_tab:
 
-.. figure:: /static/user_manual/introduction/project_general.png
+.. figure:: img/project_general.png
    :align: center
 
    General tab of Project Properties dialog
@@ -764,7 +764,7 @@ user interface. This can be very useful if you want to provide your end-users wi
 
 .. _figure_customization:
 
-.. figure:: /static/user_manual/introduction/customization.png
+.. figure:: img/customization.png
    :align: center
 
    The Customization dialog
@@ -827,7 +827,7 @@ ones to QGIS features.
 
 .. _figure_shortcuts:
 
-.. figure:: /static/user_manual/introduction/shortcuts.png
+.. figure:: img/shortcuts.png
    :align: center
 
    Define shortcut options

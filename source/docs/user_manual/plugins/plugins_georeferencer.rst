@@ -86,7 +86,7 @@ http://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz.
 
 .. _figure_georeferencer_dialog:
 
-.. figure:: /static/user_manual/plugins/georefplugin.png
+.. figure:: img/georefplugin.png
    :align: center
 
    Georeferencer Plugin Dialog
@@ -120,7 +120,7 @@ Entering ground control points (GCPs)
 
 .. _figure_georeferencer_add_points:
 
-.. figure:: /static/user_manual/plugins/choose_points.png
+.. figure:: img/choose_points.png
    :align: center
 
    Add points to the raster image
@@ -144,7 +144,7 @@ transformation settings for the georeferencing process.
 
 .. _figure_georeferencer_transform:
 
-.. figure:: /static/user_manual/plugins/transformation_settings.png
+.. figure:: img/transformation_settings.png
    :align: center
 
    Defining the georeferencer transformation settings

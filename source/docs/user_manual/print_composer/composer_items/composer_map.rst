@@ -56,7 +56,7 @@ panel provides the following functionalities (see figure_composer_map_):
 
 .. _Figure_composer_map:
 
-.. figure:: /static/user_manual/print_composer/map_mainproperties.png
+.. figure:: img/map_mainproperties.png
    :align: center
 
    Map Item Properties Panel
@@ -81,7 +81,7 @@ functionality (see figure_composer_map_layers_):
 
 .. _Figure_composer_map_layers:
 
-.. figure:: /static/user_manual/print_composer/map_layers.png
+.. figure:: img/map_layers.png
    :align: center
 
    Map Layers Dialog
@@ -134,7 +134,7 @@ functionalities (see figure_composer_map_extents_):
 
 .. _Figure_composer_map_extents:
 
-.. figure:: /static/user_manual/print_composer/map_extents.png
+.. figure:: img/map_extents.png
    :align: center
 
    Map Extents Dialog
@@ -169,7 +169,7 @@ When you double-click the added grid you can give it another name.
 
 .. _Figure_composer_map_grid:
 
-.. figure:: /static/user_manual/print_composer/map_grids.png
+.. figure:: img/map_grids.png
    :align: center
 
    Map Grids Dialog
@@ -180,7 +180,7 @@ to provide a lot of configuration options, see Figure_composer_map_grid_draw_.
 
 .. _Figure_composer_map_grid_draw:
 
-.. figure:: /static/user_manual/print_composer/map_draw_grid.png
+.. figure:: img/map_draw_grid.png
    :align: center
 
    Draw Grid Dialog
@@ -196,7 +196,7 @@ and the width used for the cross or line grid type.
 
 .. _Figure_composer_map_frame:
 
-.. figure:: /static/user_manual/print_composer/map_grid_frame.png
+.. figure:: img/map_grid_frame.png
    :align: center
 
    Grid Frame Dialog
@@ -226,7 +226,7 @@ and the width used for the cross or line grid type.
 
 .. _Figure_composer_map_coord:
 
-.. figure:: /static/user_manual/print_composer/map_grid_draw_coordinates.png
+.. figure:: img/map_grid_draw_coordinates.png
    :align: center
 
    Grid Draw Coordinates dialog
@@ -240,7 +240,7 @@ provides the following functionalities:
 
 .. _Figure_composer_map_overview:
 
-.. figure:: /static/user_manual/print_composer/map_overview.png
+.. figure:: img/map_overview.png
    :align: center
 
    Map Overviews Dialog

@@ -76,7 +76,7 @@ to view geocoded photographs and their associated attribute data.
 
 .. _figure_eVis:
 
-.. figure:: /static/user_manual/plugins/evisdisplay.png
+.. figure:: img/evisdisplay.png
    :align: center
 
    The *eVis* display window
@@ -105,7 +105,7 @@ Understanding the Options window
 
 .. _figure_eVis_options:
 
-.. figure:: /static/user_manual/plugins/evisoptions.png
+.. figure:: img/evisoptions.png
    :align: center
 
    The *eVis* Options window
@@ -152,7 +152,7 @@ Understanding the Configure External Applications window
 
 .. _figure_eVis_app:
 
-.. figure:: /static/user_manual/plugins/evisexternal.png
+.. figure:: img/evisexternal.png
    :align: center
 
    The *eVis* External Applications window
@@ -325,7 +325,7 @@ above.
 
 .. _figure_eVis_db:
 
-.. figure:: /static/user_manual/plugins/evisdatabase.png
+.. figure:: img/evisdatabase.png
    :align: center
 
    The *eVis* Database connection window
@@ -373,7 +373,7 @@ Layer` textbox.
 
 .. _figure_eVis_sql:
 
-.. figure:: /static/user_manual/plugins/evissql_query.png
+.. figure:: img/evissql_query.png
    :align: center
 
    The eVis SQL query tab
@@ -438,7 +438,7 @@ appear in the :guilabel:`Output Console` window.
 
 .. _figure_eVis_queries:
 
-.. figure:: /static/user_manual/plugins/evispredefined.png
+.. figure:: img/evispredefined.png
    :align: center
 
    The *eVis* Predefined Queries tab

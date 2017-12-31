@@ -24,7 +24,7 @@ following functionalities (see figure_composer_table_):
 
 .. _Figure_composer_table:
 
-.. figure:: /static/user_manual/print_composer/attribute_properties.png
+.. figure:: img/attribute_properties.png
    :align: center
 
    Attribute table Item Properties Panel
@@ -38,7 +38,7 @@ following functionalities (see figure_composer_table_ppt_):
 
 .. _Figure_composer_table_ppt:
 
-.. figure:: /static/user_manual/print_composer/attribute_mainproperties.png
+.. figure:: img/attribute_mainproperties.png
    :align: center
 
    Attribute table Main properties Dialog
@@ -66,7 +66,7 @@ following functionalities (see figure_composer_table_ppt_):
 
 .. _Figure_composer_table_atlas:
 
-.. figure:: /static/user_manual/print_composer/attribute_mainatlas.png
+.. figure:: img/attribute_mainatlas.png
    :align: center
 
    Attribute table Main properties for 'Current atlas feature'
@@ -74,7 +74,7 @@ following functionalities (see figure_composer_table_ppt_):
 
 .. _Figure_composer_table_relation:
 
-.. figure:: /static/user_manual/print_composer/attribute_mainrelation.png
+.. figure:: img/attribute_mainrelation.png
    :align: center
 
    Attribute table Main properties for 'Relation children'
@@ -88,7 +88,7 @@ following functionalities (see figure_composer_table_ppt_):
 
   .. _Figure_composer_table_select:
 
-  .. figure:: /static/user_manual/print_composer/attribute_select.png
+  .. figure:: img/attribute_select.png
      :align: center
 
      Attribute table Select attributes Dialog
@@ -133,7 +133,7 @@ the following functionalities (see figure_composer_table_filter_):
 
 .. _Figure_composer_table_filter:
 
-.. figure:: /static/user_manual/print_composer/attribute_filter.png
+.. figure:: img/attribute_filter.png
    :align: center
 
    Attribute table Feature filtering Dialog
@@ -169,7 +169,7 @@ the following functionalities  (see figure_composer_table_appearance_):
 
 .. _Figure_composer_table_appearance:
 
-.. figure:: /static/user_manual/print_composer/attribute_appearance.png
+.. figure:: img/attribute_appearance.png
    :align: center
 
    Attribute table appearance Dialog
@@ -198,7 +198,7 @@ the following functionalities  (see figure_composer_table_appearance_):
 
 .. _Figure_composer_table_background:
 
-.. figure:: /static/user_manual/print_composer/attribute_background.png
+.. figure:: img/attribute_background.png
    :align: center
 
    Attribute table Advanced Background Dialog
@@ -217,7 +217,7 @@ the following functionalities (see figure_composer_table_grid_):
 
 .. _Figure_composer_table_grid:
 
-.. figure:: /static/user_manual/print_composer/attribute_grid.png
+.. figure:: img/attribute_grid.png
    :align: center
 
    Attribute table Show grid Dialog
@@ -236,7 +236,7 @@ provides the following functionalities (see figure_composer_table_fonts_):
 
 .. _Figure_composer_table_fonts:
 
-.. figure:: /static/user_manual/print_composer/attribute_fonts.png
+.. figure:: img/attribute_fonts.png
    :align: center
 
    Attribute table Fonts and text styling Dialog
@@ -257,7 +257,7 @@ the following functionalities (see figure_composer_table_frames_):
 
 .. _Figure_composer_table_frames:
 
-.. figure:: /static/user_manual/print_composer/attribute_frame.png
+.. figure:: img/attribute_frame.png
    :align: center
 
    Attribute table Frames Dialog

@@ -22,7 +22,7 @@ position and customize the appearance in the :guilabel:`Item Properties` panel
 
 .. _Figure_composer_html:
 
-.. figure:: /static/user_manual/print_composer/html_properties.png
+.. figure:: img/html_properties.png
    :align: center
 
    HTML Frame, the Item Properties Panel
@@ -40,7 +40,7 @@ panel provides the following functionalities (see figure_composer_html_ppt_):
 
 .. _Figure_composer_html_ppt:
 
-.. figure:: /static/user_manual/print_composer/html_source.png
+.. figure:: img/html_source.png
    :align: center
 
    HTML frame, the HTML Source properties
@@ -72,7 +72,7 @@ panel provides the following functionalities (see figure_composer_html_frames_):
 
 .. _Figure_composer_html_frames:
 
-.. figure:: /static/user_manual/print_composer/html_frame.png
+.. figure:: img/html_frame.png
    :align: center
 
    HTML frame, the Frames properties
@@ -111,7 +111,7 @@ following functionalities (see figure_composer_html_breaks_):
 
 .. _Figure_composer_html_breaks:
 
-.. figure:: /static/user_manual/print_composer/html_breaks.png
+.. figure:: img/html_breaks.png
    :align: center
 
    HTML frame, Use smart page breaks and User stylesheet properties

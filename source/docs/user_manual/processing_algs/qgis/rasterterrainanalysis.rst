@@ -20,7 +20,7 @@ Calculates the aspect of the Digital Terrain Model in input. The final aspect
 raster layer contains values from 0 to 360 that express the slope direction:
 starting from North (0°) and continuing clockwise.
 
-.. figure:: /static/user_manual/processing_algs/qgis/aspect.png
+.. figure:: img/aspect.png
    :align: center
    :scale: 50%
 
@@ -29,7 +29,7 @@ starting from North (0°) and continuing clockwise.
 
 The following picture shows the aspect layer reclassified with a color ramp:
 
-.. figure:: /static/user_manual/processing_algs/qgis/aspect_2.png
+.. figure:: img/aspect_2.png
    :align: center
 
    Aspect layer reclassified
@@ -64,7 +64,7 @@ The shading of the layer is calculated according to the sun position: you have
 the options to change both the horizontal angle (azimuth) and the vertical angle
 (sun elevation) of the sun.
 
-.. figure:: /static/user_manual/processing_algs/qgis/azimuth.png
+.. figure:: img/azimuth.png
    :align: center
    :scale: 50%
 
@@ -73,7 +73,7 @@ the options to change both the horizontal angle (azimuth) and the vertical angle
 The hillshade layer contains values from 0 (complete shadow) to 255 (complete sun).
 Hillshade is used usually to better understand the relief of the area.
 
-.. figure:: /static/user_manual/processing_algs/qgis/hillshade.png
+.. figure:: img/hillshade.png
    :align: center
 
    Hillshade layer with azimuth 300 and vertical angle 45
@@ -81,7 +81,7 @@ Hillshade is used usually to better understand the relief of the area.
 Particularly interesting is to give the hillshade layer a transparency value and
 overlap it with the elevation raster:
 
-.. figure:: /static/user_manual/processing_algs/qgis/hillshade_2.png
+.. figure:: img/hillshade_2.png
    :align: center
 
    Overlapping the hillshade with the elevation layer
@@ -162,7 +162,7 @@ Outputs
 
   File name consists of prefix ``hystogram_`` followed by layer name and feature ID.
 
-.. figure:: /static/user_manual/processing_algs/qgis/hypsometric.png
+.. figure:: img/hypsometric.png
    :align: center
    :scale: 50%
 
@@ -175,7 +175,7 @@ Creates a shaded relief layer from digital elevation data. You can specify manua
 all the relief color or you can let the algorithm choose automatically all the
 relief classes.
 
-.. figure:: /static/user_manual/processing_algs/qgis/relief.png
+.. figure:: img/relief.png
    :align: center
 
    Relief layer
@@ -206,7 +206,7 @@ Parameters
   the lower and upper bound and finally by clicking on the color row you can choose
   the color thanks to the color widget.
 
-  .. figure:: /static/user_manual/processing_algs/qgis/relief_table.png
+  .. figure:: img/relief_table.png
      :align: center
 
      Manually relief color classes
@@ -233,7 +233,7 @@ elevation within the 3x3 pixel grid.
 Each pixel contains the difference in elevation from a center cell and the 8 cells
 surrounding it.
 
-.. figure:: /static/user_manual/processing_algs/qgis/ruggedness.png
+.. figure:: img/ruggedness.png
    :align: center
 
    Ruggedness layer from low (red) to high values (green)
@@ -267,7 +267,7 @@ of the terrain and is expressed in **degrees**.
 In the following picture you can see to the left the DTM layer with the elevation
 of the terrain while to the right the calculated slope:
 
-.. figure:: /static/user_manual/processing_algs/qgis/slope.png
+.. figure:: img/slope.png
    :align: center
 
    Flat areas in red, steep areas in blue

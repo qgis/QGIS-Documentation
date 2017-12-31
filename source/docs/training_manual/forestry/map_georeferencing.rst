@@ -21,7 +21,7 @@ For this exercise you will use a previously scanned map, you can find it as :kbd
 
 Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in :menuselection:`Project --> Project Properties --> CRS`, which is the currently used CRS in Finland. Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is checked, since we will be working with old data that is another CRS.
 
-.. image:: /static/training_manual/forestry/f_1.png
+.. image:: img/f_1.png
    :align: center
 
 Save the QGIS project as :kbd:`map_digitizing.qgs`.
@@ -41,7 +41,7 @@ Next you should define the transformation settings for georeferencing the map:
 * Click the icon next to the :kbd:`Output raster` box, go to the folder and create the folder :kbd:`exercise_data\\forestry\\digitizing` and name the file as :kbd:`rautjarvi_georef.tif`.
 * Set the rest of parameters as shown below.
 
-.. image:: /static/training_manual/forestry/Clipboard10.png
+.. image:: img/Clipboard10.png
    :align: center
    
 * Click :guilabel:`OK`.
@@ -59,7 +59,7 @@ Look for other cross-hairs in the black lines image, they are separated 1000 met
 
 Zoom out in the image and move to the right until you find other cross-hair, and estimate how many kilometres you have moved. Try to get ground control points as far from each other as possible. Digitize at least three more ground control points in the same way you did the first one. You should end up with something similar to this:
 
-.. image:: /static/training_manual/forestry/Clipboard09.png
+.. image:: img/Clipboard09.png
    :align: center
    
 With already three digitized ground control points you will be able to see the georeferencing error as a red line coming out of the points. The error in pixels can be seen also in the :guilabel:`GCP table` in the :guilabel:`dX[pixels]` and :guilabel:`dY[pixels]` columns. The error in pixels should not be higher than 10 pixels, if it is you should review the points you have digitized and the coordinates you have entered to find what the problem is. You can use the image above as a guide.
@@ -78,7 +78,7 @@ Now you can see the map in QGIS project as a georeferenced raster. Note that the
 
 To check that your data is properly georeferenced you can open the aerial image in the :kbd:`exercise_data\\forestry` folder, named :kbd:`rautjarvi_aerial.tif`. Your map and this image should match quite well. Set the map transparency to 50% and compare it to the aerial image.
 
-.. image:: /static/training_manual/forestry/Clipboard14.png
+.. image:: img/Clipboard14.png
    :align: center
 
 Save the changes to your QGIS project, you will continue from this point for the next lesson.

@@ -62,7 +62,7 @@ attribute table title, as well as if the layer is spatially limited.
 
 .. _figure_attributes_table:
 
-.. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
+.. figure:: img/vectorAttributeTable.png
    :align: center
 
    Attribute Table for regions layer
@@ -148,7 +148,7 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 
 .. _figure_attribute_table_views:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_table_views.png
+.. figure:: img/attribute_table_views.png
    :align: center
 
    Attribute table in form view (top) vs table view (bottom)
@@ -253,7 +253,7 @@ Adding new rule opens a form to define:
 
 .. _figure_conditional_format:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
+.. figure:: img/attribute_table_conditional_formating.png
    :align: center
 
    Conditional Formatting of an attribute table
@@ -372,7 +372,7 @@ creating an Advanced Filter (Expression) for the user).
 
 .. _figure_filter_select_form:
 
-.. figure:: /static/user_manual/working_with_vector/tableFilteredForm.png
+.. figure:: img/tableFilteredForm.png
     :align: center
 
     Attribute table filtered by the filter form
@@ -401,7 +401,7 @@ like:
 
 .. _figure_copy_cell:
 
-.. figure:: /static/user_manual/working_with_vector/copyCellContent.png
+.. figure:: img/copyCellContent.png
     :align: center
 
     Copy cell content button
@@ -480,7 +480,7 @@ of the calculation will be added or update an existing field.
 
 .. _figure_field_calculator:
 
-.. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
+.. figure:: img/fieldcalculator.png
    :align: center
 
    Field Calculator
@@ -602,7 +602,7 @@ changes for all selected features at once.
  
 .. _figure_field_multiedit:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_multiedit.png
+.. figure:: img/attribute_multiedit.png
    :align: center
 
    Editing fields of multiple features
@@ -638,7 +638,7 @@ relation using foreign keys, because there are several airports in most regions.
 
 .. _figure_relations_map:
 
-.. figure:: /static/user_manual/working_with_vector/relations1.png
+.. figure:: img/relations1.png
    :align: center
 
    Alaska region with airports
@@ -691,7 +691,7 @@ Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
 
 .. _figure_relations_manager:
 
-.. figure:: /static/user_manual/working_with_vector/relations2.png
+.. figure:: img/relations2.png
    :align: center
 
    Relation Manager
@@ -710,7 +710,7 @@ under actions.
 
 .. _figure_embedded_form:
 
-.. figure:: /static/user_manual/working_with_vector/relations3.png
+.. figure:: img/relations3.png
    :align: center
 
    Identification dialog regions with relation to airports
@@ -745,7 +745,7 @@ you to assign the current airport to another region.
 
 .. _figure_linked_forms:
 
-.. figure:: /static/user_manual/working_with_vector/relations4.png
+.. figure:: img/relations4.png
    :align: center
 
    Identification dialog airport with relation to regions

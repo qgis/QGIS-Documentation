@@ -28,7 +28,7 @@ executed at any particular moment.
 
 .. _figure_history:
 
-.. figure:: /static/user_manual/processing/history.png
+.. figure:: img/history.png
    :align: center
 
    History

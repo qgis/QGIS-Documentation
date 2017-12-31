@@ -19,7 +19,7 @@ functionality for the label item (see Figure_composer_label_):
 
 .. _Figure_composer_label:
 
-.. figure:: /static/user_manual/print_composer/label_mainproperties.png
+.. figure:: img/label_mainproperties.png
    :align: center
 
    Label Item Properties Panel

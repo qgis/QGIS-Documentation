@@ -117,7 +117,7 @@ information on QGIS authentication support in :ref:`authentication` chapter.
 
 .. _figure_plugins_settings:
 
-.. figure:: /static/user_manual/plugins/plugins_settings.png
+.. figure:: img/plugins_settings.png
    :align: center
 
    The |transformSettings| :guilabel:`Settings` tab
@@ -135,7 +135,7 @@ checkbox.
 
 .. _figure_plugins_all:
 
-.. figure:: /static/user_manual/plugins/plugins_all.png
+.. figure:: img/plugins_all.png
    :align: center
 
    The |showPluginManager| :guilabel:`All` tab
@@ -151,7 +151,7 @@ can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 
 .. _figure_plugins_installed:
 
-.. figure:: /static/user_manual/plugins/plugins_installed.png
+.. figure:: img/plugins_installed.png
    :align: center
 
    The |pluginInstalled| :guilabel:`Installed` tab
@@ -165,7 +165,7 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
 
 .. _figure_plugins_not_installed:
 
-.. figure:: /static/user_manual/plugins/plugins_not_installed.png
+.. figure:: img/plugins_not_installed.png
    :align: center
 
    The |plugin| :guilabel:`Not installed` tab
@@ -185,7 +185,7 @@ Installation can be done with the **[Install plugin]**, **[Upgrade plugin]** or
 
 .. _figure_plugins_upgradeable:
 
-.. figure:: /static/user_manual/plugins/plugins_upgradeable.png
+.. figure:: img/plugins_upgradeable.png
    :align: center
 
    The |pluginUpgrade| :guilabel:`Upgradeable` tab
@@ -202,7 +202,7 @@ another compatible plugin or help to upgrade the broken one).
 
 .. _figure_plugins_invalid:
 
-.. figure:: /static/user_manual/plugins/plugins_invalid.png
+.. figure:: img/plugins_invalid.png
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab

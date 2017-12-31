@@ -61,7 +61,7 @@ or the  :ref:`ogc-wms-servers` section on how to do it.
 By adding the ``countries`` WMS layer to your QGIS project you should get an image
 like the one below:
 
-.. figure:: /static/training_manual/qgis_server/qgis_getmap_request.png
+.. figure:: img/qgis_getmap_request.png
    :align: center
 
    QGIS Desktop consuming the QGIS Server countries layer WMS service
@@ -91,7 +91,7 @@ out. You can also use the ``tail`` command in a terminal:
 This will continuously output in the terminal what's written in that log file.
 You can also have three terminals opened for each of the log files like so:
 
-.. figure:: /static/training_manual/qgis_server/terminal_tail_log.jpg
+.. figure:: img/terminal_tail_log.jpg
    :align: center
 
    Using the ``tail`` command to visualise QGIS Server logs output
@@ -133,7 +133,7 @@ The above request should output the following image:
 
 **Figure: simple GetMap request to QGIS Server**
 
-.. figure:: /static/training_manual/qgis_server/getmap_simple_request.jpg
+.. figure:: img/getmap_simple_request.jpg
    :align: center
 
    Qgis Server response after a simple GetMap request
@@ -188,7 +188,7 @@ uses the standard STYLES parameter.
 
 The above request should output the following image:
 
-.. figure:: /static/training_manual/qgis_server/getmap_filter_opacities.jpg
+.. figure:: img/getmap_filter_opacities.jpg
    :align: center
 
    Response to a GetMap request with FILTER and OPACITIES parameters
@@ -227,7 +227,7 @@ feature and of the **SELECTION** parameter detailed in the
 
 Pasting the above request in your web browser should output the following image:
 
-.. figure:: /static/training_manual/qgis_server/getmap_redlining_selection.jpg
+.. figure:: img/getmap_redlining_selection.jpg
    :align: center
 
    Response to a request with the REDLINING feature and SELECTION parameter
@@ -262,7 +262,7 @@ request that exemplifies this amazing feature is:
  &map0:extent=-432786,4372992,3358959,7513746
  &LAYERS=countries
 
-.. figure:: /static/training_manual/qgis_server/getprint.jpg
+.. figure:: img/getprint.jpg
    :align: center
 
    Shows the pdf resulted from the above GetPrint request
@@ -287,7 +287,7 @@ You can install it like this:
 
 Now you should be able to see the Map as in the following figure:
 
-.. figure:: /static/training_manual/qgis_server/qwc.jpg
+.. figure:: img/qwc.jpg
    :align: center
 
    QGIS Web Client consuming the world.qgs project

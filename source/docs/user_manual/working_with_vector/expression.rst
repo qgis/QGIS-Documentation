@@ -110,7 +110,7 @@ using functions, layer's fields and values. It contains widgets to:
 
 .. _figure_expression_tab:
 
-.. figure:: /static/user_manual/working_with_vector/function_list.png
+.. figure:: img/function_list.png
    :align: center
 
    The Expression tab
@@ -1177,7 +1177,7 @@ functions in a comfortable way.
 
 .. _figure_expression_function:
 
-.. figure:: /static/user_manual/working_with_vector/function_editor.png
+.. figure:: img/function_editor.png
    :align: center
 
    The Function Editor tab

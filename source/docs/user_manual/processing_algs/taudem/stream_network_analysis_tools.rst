@@ -441,7 +441,7 @@ where the exact watershed characteristic(s) that were accumulated in the
 accumulated stream source grid vary based on the method being used to determine
 the stream network raster.
 
-.. figure:: /static/user_manual/processing_algs/taudem/streamdrops.jpg
+.. figure:: img/streamdrops.jpg
    :align: center
 
 The constant stream drop "law" was identified by Broscoe (1959). For the science

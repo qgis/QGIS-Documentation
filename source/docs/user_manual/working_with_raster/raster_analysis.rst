@@ -28,7 +28,7 @@ The results are written to a new raster layer with a GDAL-supported format.
 
 .. _figure_raster_calculator:
 
-.. figure:: /static/user_manual/working_with_raster/raster_calculator.png
+.. figure:: img/raster_calculator.png
    :align: center
 
    Raster Calculator
@@ -133,7 +133,7 @@ to the cell size`. The resampling method can be (see figure_raster_align_edit_):
 
 .. _figure_raster_align_edit:
 
-.. figure:: /static/user_manual/working_with_raster/raster_align_edit.png
+.. figure:: img/raster_align_edit.png
    :align: center
 
    Select Raster Resampling Options
@@ -152,7 +152,7 @@ layers. You can also choose one or more other options (see figure_raster_align_)
 
 .. _figure_raster_align:
 
-.. figure:: /static/user_manual/working_with_raster/raster_align.png
+.. figure:: img/raster_align.png
    :align: center
 
    Raster Alignment

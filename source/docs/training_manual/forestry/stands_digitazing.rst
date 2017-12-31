@@ -19,7 +19,7 @@ The first step will be to use GIMP to obtain an image that contains only the for
 * Open GIMP (if you don't have it installed yet, download it from the internet or ask your teacher).
 * Open the original map image, :menuselection:`File --> Open`, :kbd:`rautjarvi_map.tif` in the :kbd:`exercise_data/forestry` folder. Note that the forest stands are represented as green lines (with the number of the stand also in green inside each polygon). 
 
-.. image:: /static/training_manual/forestry/gimp_map.png
+.. image:: img/gimp_map.png
    :align: center
 
 Now you can select the pixels in the image that are making up the forest stands' borders (the greenish pixels):
@@ -32,7 +32,7 @@ Now you can select the pixels in the image that are making up the forest stands'
 * If you are not happy with the result, repeat the click and drag operation.
 * Your pixel selection should look something like the right image below.
 
-.. image:: /static/training_manual/forestry/green_px_selected.png
+.. image:: img/green_px_selected.png
    :align: center
 
 Once you are done with the selection you need to copy this selection as a new layer and then save it as separate image file:
@@ -42,7 +42,7 @@ Once you are done with the selection you need to copy this selection as a new la
 * Right click that temporary layer and select :guilabel:`To New Layer`.
 * Click the "eye" icon next to the original image layer to switch it off, so that only the :guilabel:`Pasted Layer` is visible:
 
-.. image:: /static/training_manual/forestry/saving_green_px.png
+.. image:: img/saving_green_px.png
    :align: center
    
 * Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select File Type (By Extension)` as a :guilabel:`TIFF image`, select the :kbd:`digitizing` folder and name it :kbd:`rautjarvi_map_green.tif`. Select no compression when asked.
@@ -74,7 +74,7 @@ Having in mind the digitizing tools in QGIS, you might already be thinking that 
 
 Zoom in and see what the polygons look like. You will get something like this:
 
-.. image:: /static/training_manual/forestry/green_polygons.png
+.. image:: img/green_polygons.png
    :align: center
 
 Next one option to get points out of those polygons is to get their centroids:
@@ -85,7 +85,7 @@ Next one option to get points out of those polygons is to get their centroids:
 * Check :menuselection:`Add result to canvas`.
 * Run the tool to calculate the centroids for the polygons.
 
-.. image:: /static/training_manual/forestry/green_points.png
+.. image:: img/green_points.png
    :align: center
 
 Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the TOC.
@@ -104,7 +104,7 @@ It is not necessary to differentiate points from each other, you just need them 
 
 Now you are ready to start with the actual digitizing work. You would start by creating a vector file of :guilabel:`polygon type`, but for this exercise, there is a shapefile with part of the area of interest already digitized. You will just finish digitizing the half of the forest stands that are left between the main roads (wide pink lines) and the lake:
 
-.. image:: /static/training_manual/forestry/forest_stands_to_digitize.png
+.. image:: img/forest_stands_to_digitize.png
    :align: center
 
 * Go to the :kbd:`digitizing` folder using your file manager browser.
@@ -125,7 +125,7 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 * Check :guilabel:`Enable topological editing`.
 * Click :guilabel:`Apply`.
 
-.. image:: /static/training_manual/forestry/snapping_settings_forest.png
+.. image:: img/snapping_settings_forest.png
    :align: center
 
 With these snapping settings, whenever you are digitizing and get close enough to one of the points in the centroids layer or any vertex of your digitized polygons, a pink cross will appear on the point that will be snapped to. 
@@ -149,7 +149,7 @@ Now you can start digitizing:
 * Start digitizing the stand :kbd:`357` by connecting some of the dots.
 * Note the pink crosses indicating the snapping.
 
-.. image:: /static/training_manual/forestry/dgitizing_357_1.png
+.. image:: img/dgitizing_357_1.png
    :align: center
 
 * When you are done, right click to end digitizing that polygon.
@@ -160,7 +160,7 @@ If you were not prompted for the polygon :kbd:`id` when you finished digitizing 
 
 Your digitized polygon will look like this:
 
-.. image:: /static/training_manual/forestry/dgitizing_357_3.png
+.. image:: img/dgitizing_357_3.png
    :align: center
 
 Now for the second polygon, pick up the stand number 358. Make sure that the :guilabel:`Avoid int.` is checked for the :kbd:`forest_stands` layer. This option does not allow intersecting polygons at digitizing, so that if you digitize  over an existing polygon, the new polygon will be trimmed to meet the border of the already existing polygons. You can use this characteristic to automatically obtain a common border.
@@ -172,7 +172,7 @@ Now for the second polygon, pick up the stand number 358. Make sure that the :gu
 * Enter the :kbd:`id` as 358.
 * Click :guilabel:`OK`, your new polygon should show a common border with the stand 357 as you can seen in the image on the right.
 
-.. image:: /static/training_manual/forestry/dgitizing_358_5.png
+.. image:: img/dgitizing_358_5.png
    :align: center
 
 The part of the polygon that was overlapping the existing polygon has been automatically trimmed out and you are left with a common border, as you intended it to be.
@@ -191,7 +191,7 @@ Remember that having :guilabel:`Enable topological editing` activated, allows yo
 
 Your result will look like this:
 
-.. image:: /static/training_manual/forestry/stands_fully_digitized.png
+.. image:: img/stands_fully_digitized.png
    :align: center
 
 |basic| |FA| Joining the Forest Stand Data
@@ -203,7 +203,7 @@ Open the :kbd:`rautjarvi_1994.csv` file from the :kbd:`exercise_data\\forestry` 
 
 * Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add Delimited Text Layer...` tool. In the dialog, set it as follows:
 
-.. image:: /static/training_manual/forestry/inventory_csv_import.png
+.. image:: img/inventory_csv_import.png
    :align: center
 
 To add the data from the :kbd:`.csv` file:
@@ -230,7 +230,7 @@ Open your new :kbd:`forest_stands_1994.shp` in your map if you did not added yet
 * Then, go to :menuselection:`Vector --> Table Manager --> Table manager`.
 * Use the dialogue box to edit the names of the columns to match the ones in the :kbd:`.csv` file.
 
-.. image:: /static/training_manual/forestry/forestry_table_manager.png
+.. image:: img/forestry_table_manager.png
    :align: center
 
 * Click on :guilabel:`Save`.

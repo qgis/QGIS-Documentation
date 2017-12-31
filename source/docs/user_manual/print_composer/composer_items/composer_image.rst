@@ -18,7 +18,7 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 
 .. _Figure_composer_image:
 
-.. figure:: /static/user_manual/print_composer/image_mainproperties.png
+.. figure:: img/image_mainproperties.png
    :align: center
 
    Image Item Properties panel
@@ -94,7 +94,7 @@ the north arrow from the list as displayed in figure_composer_image_north_.
 
 .. _Figure_composer_image_north:
 
-.. figure:: /static/user_manual/print_composer/north_arrows.png
+.. figure:: img/north_arrows.png
    :align: center
 
    North arrows available for selection in provided SVG library

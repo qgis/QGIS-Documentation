@@ -95,7 +95,7 @@ For scripting, it is possible to take advantage of integrated Python console.
 It can be opened from menu: :menuselection:`Plugins --> Python Console`.
 The console opens as a non-modal utility window:
 
-.. figure:: /static/pyqgis_developer_cookbook/console.png
+.. figure:: img/console.png
    :align: center
    :width: 40em
 

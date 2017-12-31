@@ -23,7 +23,7 @@ the course, or just start a new map and load some existing layers into it. For
 this example, we used a new map and loaded the original :guilabel:`places` and
 :guilabel:`landuse` layers and adjusted the symbology:
 
-.. image:: /static/training_manual/online_resources/new_map.png
+.. image:: img/new_map.png
    :align: center
 
 * Load these layers into a new map, or use your original map with only these
@@ -51,7 +51,7 @@ available on the Internet. One of these is `terrestris
 
 * To make use of this WMS, set it up in your current dialog, like this:
 
-  .. image:: /static/training_manual/online_resources/new_wms_connection.png
+  .. image:: img/new_wms_connection.png
      :align: center
 
 * The value of the :guilabel:`Name` field should be :kbd:`terrestris`.
@@ -59,13 +59,13 @@ available on the Internet. One of these is `terrestris
   :kbd:`http://ows.terrestris.de/osm/service`.
 * Click :guilabel:`OK`. You should see the new WMS server listed:
 
-  .. image:: /static/training_manual/online_resources/new_connection_listed.png
+  .. image:: img/new_connection_listed.png
      :align: center
 
 * Click :guilabel:`Connect`. In the list below, you should now see these
   new entries loaded:
 
-  .. image:: /static/training_manual/online_resources/new_wms_entries.png
+  .. image:: img/new_wms_entries.png
      :align: center
 
   These are all the layers hosted by this WMS server.
@@ -73,7 +73,7 @@ available on the Internet. One of these is `terrestris
 * Click once on the :guilabel:`OSM-WMS` layer. This will display its
   :guilabel:`Coordinate Reference System`:
 
-  .. image:: /static/training_manual/online_resources/osm_wms_selected.png
+  .. image:: img/osm_wms_selected.png
      :align: center
 
 Since we're not using :kbd:`WGS 84` for our map, let's see all the CRSs we have
@@ -84,7 +84,7 @@ to choose from.
 * We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo
   Mercator`.
 
-  .. image:: /static/training_manual/online_resources/pseudo_mercator_selected.png
+  .. image:: img/pseudo_mercator_selected.png
      :align: center
 
 * Click :guilabel:`OK`.
@@ -101,7 +101,7 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 * In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
   value :kbd:`pseudo` in the :guilabel:`Filter` field:
 
-  .. image:: /static/training_manual/online_resources/enable_projection.png
+  .. image:: img/enable_projection.png
      :align: center
 
 * Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
@@ -110,7 +110,7 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
   click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
   area:
 
-  .. image:: /static/training_manual/online_resources/wms_result.png
+  .. image:: img/wms_result.png
      :align: center
 
 Note how the WMS layer's streets and our own streets overlap. That's a good
@@ -158,7 +158,7 @@ layer from the :guilabel:`terrestris` WMS server.
   :guilabel:`Tile size` option to :kbd:`200` by :kbd:`200`, so that it loads
   faster:
 
-  .. image:: /static/training_manual/online_resources/bedrock_geology_layer.png
+  .. image:: img/bedrock_geology_layer.png
      :align: center
 
 :ref:`Check your results <wms-1>`

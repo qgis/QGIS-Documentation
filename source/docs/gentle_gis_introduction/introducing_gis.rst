@@ -64,7 +64,7 @@ patterns of illness:
 
 .. _figure_gis_application:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/patterns_of_illness.png
+.. figure:: img/patterns_of_illness.png
    :align: center
    :width: 30em
 
@@ -96,7 +96,7 @@ the GIS Application what you want to do. For example you may use the menus to te
 the GIS Application to add a new layer to the display output.
 
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/menus.png
+.. figure:: img/menus.png
    :align: center
 
    Application menus, when clicked with the mouse, expand to show a list of
@@ -107,7 +107,7 @@ sit just below the menus and provide a quicker way to use frequently needed
 actions.
 
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/toolbars.png
+.. figure:: img/toolbars.png
    :align: center
 
    Toolbars provide quick access to commonly used functions. Holding your mouse
@@ -128,7 +128,7 @@ zoom out to see a greater area and move around (panning) in the map.
 
 .. _figure_map_view_towns:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_towns.png
+.. figure:: img/map_view_towns.png
    :align: center
    :width: 30em
 
@@ -137,7 +137,7 @@ zoom out to see a greater area and move around (panning) in the map.
 
 .. _figure_map_view_schools:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_schools.png
+.. figure:: img/map_view_schools.png
    :align: center
    :width: 30em
 
@@ -147,7 +147,7 @@ zoom out to see a greater area and move around (panning) in the map.
 
 .. _figure_map_view_railways:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_railways.png
+.. figure:: img/map_view_railways.png
    :align: center
    :width: 30em
 
@@ -156,7 +156,7 @@ zoom out to see a greater area and move around (panning) in the map.
 
 .. _figure_map_view_rivers:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_rivers.png
+.. figure:: img/map_view_rivers.png
    :align: center
    :width: 30em
 
@@ -176,7 +176,7 @@ of below them.
 
 .. _figure_map_symbology:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/symbology.png
+.. figure:: img/symbology.png
    :align: center
    :width: 30em
 
@@ -185,7 +185,7 @@ of below them.
 
 .. _figure_map_legend_before:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_legend_before.png
+.. figure:: img/map_legend_before.png
    :align: center
    :width: 30em
 
@@ -194,7 +194,7 @@ of below them.
 
 .. _figure_map_legend_after:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_legend_after.png
+.. figure:: img/map_legend_after.png
    :align: center
    :width: 30em
 
@@ -252,7 +252,7 @@ tutorials that follow we will be exploring vector data in more detail.
 
 .. _figure_vector_data:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/vector_data.png
+.. figure:: img/vector_data.png
    :align: center
    :width: 30em
 
@@ -269,7 +269,7 @@ We will be looking at raster data in greater detail in later tutorials.
 
 .. _figure_raster_data:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/raster_data.png
+.. figure:: img/raster_data.png
    :align: center
    :width: 30em
 
@@ -278,7 +278,7 @@ We will be looking at raster data in greater detail in later tutorials.
 
 .. _figure_raster_data_zoom:
 
-.. figure:: /static/gentle_gis_introduction/introducing_gis/raster_data_zoomed.png
+.. figure:: img/raster_data_zoomed.png
    :align: center
    :width: 30em
 
@@ -352,3 +352,6 @@ What's next?
 In the sections that follow we are going to go into more detail, showing you how
 to use a GIS Application. All of the tutorials will be done using QGIS. Next up,
 let's look at vectors!
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

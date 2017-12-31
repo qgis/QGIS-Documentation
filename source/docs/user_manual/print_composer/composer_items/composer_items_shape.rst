@@ -33,7 +33,7 @@ so it can rotate automatically with the map (see :ref:`image_item`).
 
 .. _figure_composer_arrow:
 
-.. figure:: /static/user_manual/print_composer/arrow_properties.png
+.. figure:: img/arrow_properties.png
    :align: center
 
    Arrow Item Properties Panel
@@ -89,7 +89,7 @@ you can create a perfect square, circle or triangle.
 
 .. _figure_composer_basic_shape:
 
-.. figure:: /static/user_manual/print_composer/shape_properties.png
+.. figure:: img/shape_properties.png
    :align: center
 
    Shape Item Properties Panel
@@ -127,7 +127,7 @@ panel.
 
 .. _figure_composer_nodes_shape:
 
-.. figure:: /static/user_manual/print_composer/shape_nodes_properties.png
+.. figure:: img/shape_nodes_properties.png
    :align: center
 
    Nodes Shape Item Properties Panel

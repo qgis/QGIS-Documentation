@@ -84,7 +84,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
 
 .. _figure_edit_snapping:
 
-.. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
+.. figure:: img/editProjectSnapping.png
    :align: center
 
    Edit snapping options on a layer basis (Advanced mode)
@@ -315,7 +315,7 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 
 .. _figure_edit_values:
 
-.. figure:: /static/user_manual/working_with_vector/editDigitizing.png
+.. figure:: img/editDigitizing.png
    :align: center
 
    Enter Attribute Values Dialog after digitizing a new vector feature
@@ -462,7 +462,7 @@ them altogether.
 
 .. _figure_edit_vertex:
 
-.. figure:: /static/user_manual/working_with_vector/vertex_editor_panel.png
+.. figure:: img/vertex_editor_panel.png
    :align: center
 
    Vertex editor panel showing selected nodes
@@ -658,7 +658,7 @@ is however active, even if the widget is not displayed.
 
 .. _figure_edit_undo:
 
-.. figure:: /static/user_manual/working_with_vector/redo_undo.png
+.. figure:: img/redo_undo.png
    :align: center
 
    Redo and Undo digitizing steps
@@ -808,7 +808,7 @@ part from the first to the last intersection with the original line.
 
 .. _figure_reshape_line:
 
-.. figure:: /static/user_manual/working_with_vector/reshape_lines.png
+.. figure:: img/reshape_lines.png
    :align: center
 
    Reshape line
@@ -829,7 +829,7 @@ extend it.
 
 .. _figure_reshape_polygon:
 
-.. figure:: /static/user_manual/working_with_vector/reshape_polygon.png
+.. figure:: img/reshape_polygon.png
    :align: center
 
    Reshape polygon
@@ -957,7 +957,7 @@ field are hence used to rotate each feature's symbol accordingly.
 
 .. _figure_rotate_point:
 
-.. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
+.. figure:: img/rotatepointsymbol.png
    :align: center
 
    Rotate Point Symbols
@@ -1052,7 +1052,7 @@ definition of your new geometry.
 
 .. _figure_advanced_digitizing:
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing.png
+.. figure:: img/advanced_digitizing.png
    :align: center
 
    The Advanced Digitizing panel
@@ -1137,7 +1137,7 @@ Two blue dotted lines and a green cross identify the exact coordinates you
 entered. Start digitizing by clicking on the map canvas; the mouse position is
 locked at the green cross.
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_coordinates.png
+.. figure:: img/advanced_digitizing_coordinates.png
    :align: center
 
    Start drawing at given coordinates
@@ -1152,7 +1152,7 @@ lock the mouse in the map canvas to the length of the segment.
 In the map canvas, the clicked point is surrounded by a circle whose radius is
 the value entered in the distance text box.
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance.png
+.. figure:: img/advanced_digitizing_distance.png
    :align: center
 
    Fixed length segment
@@ -1162,7 +1162,7 @@ click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`a`), type the
 angle value (in degrees), and press :kbd:`Enter` or click the |locked| buttons
 on the right to lock it. In this way the segment will follow the desired angle:
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_angle.png
+.. figure:: img/advanced_digitizing_angle.png
    :align: center
 
    Fixed angle segment
@@ -1207,7 +1207,7 @@ click on the segment of an existing feature that you want to be perpendicular
 to (the line of the existing feature will be colored in light orange); you
 should see a blue dotted line where your feature will be snapped:
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_perpendicular.png
+.. figure:: img/advanced_digitizing_perpendicular.png
    :align: center
 
    Perpendicular digitizing
@@ -1216,7 +1216,7 @@ To draw a *parallel* feature, the steps are the same: click on the
 |cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`p` twice), click on
 the segment you want to use as reference and start drawing your feature:
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_parallel.png
+.. figure:: img/advanced_digitizing_parallel.png
    :align: center
 
    Parallel digitizing
@@ -1246,7 +1246,7 @@ Click next to the point from which you want to calculate the distance and click
 on the :guilabel:`d` box (:kbd:`d` shortcut) type the desired distance and press
 :kbd:`Enter` to lock the mouse position in the map canvas:
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point.png
+.. figure:: img/advanced_digitizing_distance_point.png
    :align: center
 
    Distance from point
@@ -1265,7 +1265,7 @@ point, and then the other one to set a direction segment. Then, click on the
 angle you want and press :kbd:`Enter`. The mouse position will be locked both in
 distance and angle.
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_angle_point.png
+.. figure:: img/advanced_digitizing_distance_angle_point.png
    :align: center
 
    Distance and angle from points
@@ -1274,7 +1274,7 @@ Before adding the new point, press :kbd:`c` to exit the construction mode. Now,
 you can click on the map canvas, and the point will be placed at the distance
 and angle entered. Repeating the process, several points can be added.
 
-.. figure:: /static/user_manual/working_with_vector/advanced_digitizing_distance_point_final.png
+.. figure:: img/advanced_digitizing_distance_point_final.png
    :align: center
 
    Points at given distance and angle

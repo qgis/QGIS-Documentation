@@ -28,7 +28,7 @@ and will be explained later in this chapter).
 
 .. _figure_toolbox_dialog:
 
-.. figure:: /static/user_manual/processing/toolbox.png
+.. figure:: img/toolbox.png
    :align: center
 
    Processing Toolbox
@@ -40,7 +40,7 @@ and will be explained later in this chapter).
 
 .. _figure_model_dialog:
 
-.. figure:: /static/user_manual/processing/models.png
+.. figure:: img/models.png
    :align: center
 
    Processing Modeler
@@ -51,7 +51,7 @@ and will be explained later in this chapter).
 
 .. _figure_history_dialog:
 
-.. figure:: /static/user_manual/processing/history.png
+.. figure:: img/history.png
    :align: center
 
    Processing History
@@ -63,7 +63,7 @@ and will be explained later in this chapter).
 
 .. _figure_batchprocess_dialog:
 
-.. figure:: /static/user_manual/processing/batch_processing.png
+.. figure:: img/batch_processing.png
    :align: center
 
    Batch Processing interface

@@ -78,7 +78,7 @@ At the top of the Layers panel, a toolbar allows you to:
 
 .. _figure_layer_toolbar:
 
-.. figure:: /static/user_manual/introduction/layer_toolbar.png
+.. figure:: img/layer_toolbar.png
    :align: center
 
    Layer Toolbar in Layers Panel
@@ -252,7 +252,7 @@ the list of layers will cause a revert to default behavior.
 
 .. _figure_layer_order:
 
-.. figure:: /static/user_manual/introduction/layer_order.png
+.. figure:: img/layer_order.png
     :align: center
 
     Define a legend independent layer order
@@ -295,7 +295,7 @@ You no longer need to hit the **[Apply]** button.
 
 .. _figure_layer_styling:
 
-.. figure:: /static/user_manual/introduction/layer_styling.png
+.. figure:: img/layer_styling.png
     :align: center
 
     Defining a layer symbology from the layer styling panel
@@ -356,7 +356,7 @@ Table: Statistics available for each field type
 
 .. _figure_statistical_summary:
 
-.. figure:: /static/user_manual/introduction/statistical_summary.png
+.. figure:: img/statistical_summary.png
     :align: center
 
     Show statistics on a field
@@ -580,7 +580,7 @@ pyramids, histogram ...) for raster.
 
 .. _figure_manage_style:
 
-.. figure:: /static/user_manual/introduction/style_combobox.png
+.. figure:: img/style_combobox.png
    :align: center
 
    Vector layer style combobox options
@@ -660,7 +660,7 @@ directory (where QGIS stores its local settings).
 
 .. _figure_save_style_database:
 
-.. figure:: /static/user_manual/introduction/save_style_database.png
+.. figure:: img/save_style_database.png
    :align: center
 
    Save Style in database Dialog
@@ -744,7 +744,7 @@ an easy access.
 
 .. _figure_color_selector_ramp:
 
-.. figure:: /static/user_manual/introduction/color_selector_ramp.png
+.. figure:: img/color_selector_ramp.png
    :align: center
 
    Color selector ramp tab
@@ -772,7 +772,7 @@ options to:
 
 .. _figure_color_selector_switcher:
 
-.. figure:: /static/user_manual/introduction/color_selector_recent_colors.png
+.. figure:: img/color_selector_recent_colors.png
    :align: center
 
    Color selector switcher tab
@@ -793,7 +793,7 @@ that the color picker is OS dependent and is currently not supported by macOS.
 
 .. _figure_color_selector:
 
-.. figure:: /static/user_manual/introduction/quick_color_selector.png
+.. figure:: img/quick_color_selector.png
    :align: center
 
    Quick color selector menu
@@ -974,7 +974,7 @@ according to CRS settings available.
 
 .. _figure_measure_length:
 
-.. figure:: /static/user_manual/introduction/measure_line.png
+.. figure:: img/measure_line.png
    :align: center
 
    Measure Distance
@@ -986,7 +986,7 @@ different area units.
 
 .. _figure_measure_area:
 
-.. figure:: /static/user_manual/introduction/measure_area.png
+.. figure:: img/measure_area.png
    :align: center
 
    Measure Area
@@ -998,7 +998,7 @@ is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
 
-.. figure:: /static/user_manual/introduction/measure_angle.png
+.. figure:: img/measure_angle.png
    :align: center
 
    Measure Angle
@@ -1117,7 +1117,7 @@ and the operation that should be used.
 
 .. _figure_filter_form:
 
-.. figure:: /static/user_manual/introduction/select_by_value.png
+.. figure:: img/select_by_value.png
    :align: center
 
    Filter/Select features using form dialog
@@ -1276,7 +1276,7 @@ default it will display three kinds of information:
    
 .. _figure_identify:
 
-.. figure:: /static/user_manual/introduction/identify_features.png
+.. figure:: img/identify_features.png
    :align: center
 
    Identify Results dialog
@@ -1356,7 +1356,7 @@ map canvas.
 
 .. _figure_annotation:
 
-.. figure:: /static/user_manual/introduction/annotation.png
+.. figure:: img/annotation.png
    :align: center
 
    Annotation text dialog
@@ -1404,7 +1404,7 @@ Tim Sutton for more information.
 
 .. _figure_custom_annotation:
 
-.. figure:: /static/user_manual/introduction/custom_annotation.png
+.. figure:: img/custom_annotation.png
    :align: center
 
    Customized qt designer annotation form
@@ -1494,7 +1494,7 @@ If you want to embed content from other project files into your project, select
 
 .. _figure_embed_dialog:
 
-.. figure:: /static/user_manual/introduction/embed_dialog.png
+.. figure:: img/embed_dialog.png
    :align: center
 
    Select layers and groups to embed
@@ -1531,7 +1531,7 @@ annotations to the map canvas.
 
 .. _figure_decorations_grid:
 
-.. figure:: /static/user_manual/introduction/grid_dialog.png
+.. figure:: img/grid_dialog.png
    :align: center
 
    The Grid Dialog
@@ -1555,7 +1555,7 @@ you prefer to the map.
 
 .. _figure_decorations_copyright:
 
-.. figure:: /static/user_manual/introduction/copyright.png
+.. figure:: img/copyright.png
    :align: center
 
    The Copyright Dialog
@@ -1596,7 +1596,7 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
 
 .. _figure_decorations_north:
 
-.. figure:: /static/user_manual/introduction/north_arrow_dialog.png
+.. figure:: img/north_arrow_dialog.png
    :align: center
 
    The North Arrow Dialog
@@ -1612,7 +1612,7 @@ can control the style and placement, as well as the labelling of the bar.
 
 .. _figure_decorations_scale:
 
-.. figure:: /static/user_manual/introduction/scale_bar_dialog.png
+.. figure:: img/scale_bar_dialog.png
    :align: center
 
    The Scale Bar Dialog
@@ -1708,7 +1708,7 @@ variables overwritten by lower level ones are strike through.
 
 .. _figure_variables_dialog:
 
-.. figure:: /static/user_manual/introduction/options_variables.png
+.. figure:: img/options_variables.png
    :align: center
 
    Variables editor at the project's level

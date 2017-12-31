@@ -26,7 +26,7 @@ to searching metadata catalogs within QGIS.
 
 .. _figure_metasearch_results:
 
-.. figure:: /static/user_manual/plugins/metasearch-splash.png
+.. figure:: img/metasearch-splash.png
    :align: center
 
    Search and results of Services in Metasearch
@@ -64,7 +64,7 @@ Managing Catalog Services
 
 .. _figure_metasearch_catalog:
 
-.. figure:: /static/user_manual/plugins/metasearch-services.png
+.. figure:: img/metasearch-services.png
    :align: center
 
    Managing Catalog Services
@@ -125,7 +125,7 @@ Searching Catalog Services
 
 .. _figure_metasearch_search:
 
-.. figure:: /static/user_manual/plugins/metasearch-search.png
+.. figure:: img/metasearch-search.png
    :align: center
 
    Searching catalog services
@@ -162,7 +162,7 @@ Clicking a result will provides the following options:
 
 .. _figure_metasearch_metadata:
 
-.. figure:: /static/user_manual/plugins/metasearch-record-metadata.png
+.. figure:: img/metasearch-record-metadata.png
   :align: center
 
   Metadata record display
@@ -172,7 +172,7 @@ Settings
 
 .. _figure_metasearch_setting:
 
-.. figure:: /static/user_manual/plugins/metasearch-settings.png
+.. figure:: img/metasearch-settings.png
    :align: center
 
    Metasearch setting

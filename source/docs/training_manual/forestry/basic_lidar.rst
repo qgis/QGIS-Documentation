@@ -19,7 +19,7 @@ You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then
 * An old lidar plugin might be installed by default in your system in the folder :file:`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.
 * If you have a folder named :kbd:`lidar`, delete it. This is valid for some installations of QGIS 2.2 and 2.4.
 
-.. image:: /static/training_manual/forestry/remove_lidar_folder.png
+.. image:: img/remove_lidar_folder.png
    :align: center
 
 * Go to the :kbd:`exercise_data\\forestry\\lidar\\` folder, there you can find the file :kbd:`QGIS_2_2_toolbox.zip`. Open it and extract the :kbd:`lidar` folder to replace the one you just deleted.
@@ -42,7 +42,7 @@ To setup the LAStools in QGIS:
 * Check :guilabel:`Activate`.
 * For :guilabel:`LAStools folder` set :kbd:`c:\\lastools\\` (or the folder you extracted LAStools to).
 
-.. image:: /static/training_manual/forestry/processing_options.png
+.. image:: img/processing_options.png
    :align: center
 
 |basic| |FA| Calculating a DEM with LAStools
@@ -54,21 +54,21 @@ You have already used the :menuselection:`Processing` toolbox in :doc:`../vector
 * In the dropdown menu at the bottom, select :guilabel:`Advanced interface`.
 * You should see the :guilabel:`Tools for LiDAR data` category.
 
-.. image:: /static/training_manual/forestry/processing_toolbox.png
+.. image:: img/processing_toolbox.png
    :align: center
 
 * Expand it to see the tools available, and expand also the :guilabel:`LAStools` category (the number of algorithms may vary).
 * Scroll down until you find the :guilabel:`lasview` algorithm, double click it to open.
 * At :guilabel:`Input LAS/LAZ file`, browse to :kbd:`exercise_data\\forestry\\lidar\\` and select the :kbd:`rautjarvi_lidar.laz` file.
 
-.. image:: /static/training_manual/forestry/lasview_dialog.png
+.. image:: img/lasview_dialog.png
    :align: center
 
 * Click :guilabel:`Run`.
 
 Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ viewer` dialog window:
 
-.. image:: /static/training_manual/forestry/full_lidar.png
+.. image:: img/full_lidar.png
    :align: center
 
 There are many things you can do within this viewer, but for now you can just click and drag on the viewer to pan the LiDAR point cloud to see what it looks like.
@@ -83,14 +83,14 @@ Creating a DEM with LAStools can be done in two steps, first one to classify the
 * Note the :guilabel:`Search...` box, write :kbd:`lasground`.
 * Double click to open the :guilabel:`lasground` tool and set it as shown in this image:
 
-.. image:: /static/training_manual/forestry/lasground_dialog.png
+.. image:: img/lasground_dialog.png
    :align: center
 
 * The output file is saved to the same folder where the :kbd:`rautjarvi_lidar.laz` is located and it is named :kbd:`rautjarvi_lidar_1.las`.
 
 You can open it with :guilabel:`lasview` if you want to check it.
 
-.. image:: /static/training_manual/forestry/lasground_result.png
+.. image:: img/lasground_result.png
    :align: center
 
 The brown points are the points classified as ground and the gray ones are the rest, you can click the letter :kbd:`g` to visualize only the ground points or the letter :kbd:`u` to see only the unclassified points. Click the letter :kbd:`a` to see all the points again. Check the :kbd:`lasview_README.txt` file for more commands. If you are interested, also this `tutorial <http://www.rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_ about editing LiDAR points manually will show you different operations within the viewer.
@@ -99,7 +99,7 @@ The brown points are the points classified as ground and the gray ones are the r
 * In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`.
 * Open the :guilabel:`las2dem` tool and set it as shown in this image:
 
-.. image:: /static/training_manual/forestry/las2dem_dialog.png
+.. image:: img/las2dem_dialog.png
    :align: center
 
 The result DEM is added to your map with the generic name :kbd:`Output raster file`.
@@ -115,14 +115,14 @@ For visualization purposes, a hillshade generated from a DEM gives a better visu
 * As the :guilabel:`Output layer`, browse to :kbd:`exercise_data\\forestry\\lidar\\` and name the file :kbd:`hillshade.tif`.
 * Leave the rest of parameters with the default settings.
 
-.. image:: /static/training_manual/forestry/dem_hillshade.png
+.. image:: img/dem_hillshade.png
    :align: center
 
 * Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted.
 
 Despite the diagonal lines remaining in the hillshade raster result, you can clearly see an accurate relief of the area. You can even see the different soil drains that have been dug in the forests.
  
-.. image:: /static/training_manual/forestry/hillshade_result.png
+.. image:: img/hillshade_result.png
    :align: center
 
 

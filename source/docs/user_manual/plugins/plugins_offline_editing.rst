@@ -36,7 +36,7 @@ Using the plugin
 
 .. _figure_offline_editing:
 
-.. figure:: /static/user_manual/plugins/create_offline_project.png
+.. figure:: img/create_offline_project.png
    :align: center
 
    Create an offline project from PostGIS or WFS layers

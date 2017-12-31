@@ -139,7 +139,7 @@ following dialog:
 
 .. _figure_translation_language:
 
-.. figure:: /static/documentation_guidelines/linguist_choose_language.png
+.. figure:: img/linguist_choose_language.png
    :align: center
 
    Select language for translation in linguist menu
@@ -154,22 +154,22 @@ you can start translating, see Figure_translation_menu_.
 
 .. _figure_translation_menu:
 
-.. figure:: /static/documentation_guidelines/linguist_menu.png
+.. figure:: img/linguist_menu.png
    :align: center
    :width: 50em
 
    Translate using the linguist menu
 
 
-.. |linguist_done_next| image:: /static/documentation_guidelines/linguist_done_next.png
+.. |linguist_done_next| image:: img/linguist_done_next.png
    :width: 2em
-.. |linguist_next| image:: /static/documentation_guidelines/linguist_next.png
+.. |linguist_next| image:: img/linguist_next.png
    :width: 2em
-.. |linguist_previous| image:: /static/documentation_guidelines/linguist_previous.png
+.. |linguist_previous| image:: img/linguist_previous.png
    :width: 2em
-.. |linguist_next_todo| image:: /static/documentation_guidelines/linguist_next_todo.png
+.. |linguist_next_todo| image:: img/linguist_next_todo.png
    :width: 2em
-.. |linguist_previous_todo| image:: /static/documentation_guidelines/linguist_previous_todo.png
+.. |linguist_previous_todo| image:: img/linguist_previous_todo.png
    :width: 2em
 
 In the menu you see the following buttons which are convenient to use.

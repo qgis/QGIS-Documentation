@@ -358,7 +358,7 @@ If it's necessary to select a :term:`Authentication Configuration` from the set
 stored in the :term:`Authentication DB` it is available in the GUI class
 `QgsAuthConfigSelect <https://qgis.org/api/classQgsAuthConfigSelect.html>`_
 
-.. figure:: /static/pyqgis_developer_cookbook/QgsAuthConfigSelect.png
+.. figure:: img/QgsAuthConfigSelect.png
    :align: center
 
 and can be used as in the following snippet:
@@ -387,7 +387,7 @@ The complete GUI used to manage credentials, authorities and to access to
 Authentication utilities is managed by the class
 `QgsAuthEditorWidgets <https://qgis.org/api/classQgsAuthEditorWidgets.html>`_
 
-.. figure:: /static/pyqgis_developer_cookbook/QgsAuthEditorWidgets.png
+.. figure:: img/QgsAuthEditorWidgets.png
    :align: center
 
 and can be used as in the following snippet:
@@ -408,7 +408,7 @@ Authorities Editor GUI
 
 A GUI used to manage only authorities is managed by the class `QgsAuthAuthoritiesEditor <http://www2.qgis.org/api/classQgsAuthAuthoritiesEditor.html>`_
 
-.. figure:: /static/pyqgis_developer_cookbook/QgsAuthAuthoritiesEditor.png
+.. figure:: img/QgsAuthAuthoritiesEditor.png
    :align: center
 
 and can be used as in the following snippet:

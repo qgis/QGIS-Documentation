@@ -202,7 +202,7 @@ under the *Scripts/tools* entry in the toolbox.
 
 .. _figure_script_online:
 
-.. figure:: /static/user_manual/processing/script_online.png
+.. figure:: img/script_online.png
    :align: center
 
    Processing Get Script

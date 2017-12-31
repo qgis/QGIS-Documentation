@@ -88,7 +88,7 @@ it. To open the composer manager dialog, click on the |composerManager|
 
 .. _figure_composer_manager:
 
-.. figure:: /static/user_manual/print_composer/print_composer_manager.png
+.. figure:: img/print_composer_manager.png
    :align: center
 
    The Print Composer Manager
@@ -138,7 +138,7 @@ any elements are added.
 
 .. _Figure_composer_overview:
 
-.. figure:: /static/user_manual/print_composer/print_composer_blank.png
+.. figure:: img/print_composer_blank.png
    :align: center
 
    Print Composer
@@ -380,7 +380,7 @@ current composition.
 
 .. _figure_composition:
 
-.. figure:: /static/user_manual/print_composer/composition_settings.png
+.. figure:: img/composition_settings.png
    :align: center
 
    Composition settings in the Print Composer
@@ -434,7 +434,7 @@ and contains information to georeference it easily.
 
 .. _figure_composition_export:
 
-.. figure:: /static/user_manual/print_composer/composition_export.png
+.. figure:: img/composition_export.png
    :align: center
 
    Export Settings in the Print Composer
@@ -461,7 +461,7 @@ to a grid or a guide.
 
 .. _figure_composition_grid:
 
-.. figure:: /static/user_manual/print_composer/composition_guides.png
+.. figure:: img/composition_guides.png
    :align: center
 
    Snapping to grids in the Print Composer
@@ -487,7 +487,7 @@ More information on variables usage in the General Tools
 
 .. _figure_composition_variables:
 
-.. figure:: /static/user_manual/print_composer/composition_variables.png
+.. figure:: img/composition_variables.png
    :align: center
 
    Variables editor in the Print Composer
@@ -511,7 +511,7 @@ the actions done after the selected one will be removed.
 
 .. _figure_composer:
 
-.. figure:: /static/user_manual/print_composer/command_hist.png
+.. figure:: img/command_hist.png
    :align: center
 
    Command history in the Print Composer

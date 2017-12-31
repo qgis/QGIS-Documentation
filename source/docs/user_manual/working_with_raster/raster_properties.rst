@@ -31,7 +31,7 @@ There are several tabs in the dialog:
 
 .. _figure_raster_properties:
 
-.. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
+.. figure:: img/rasterPropertiesDialog.png
    :align: center
 
    Raster Layers Properties Dialog
@@ -112,7 +112,7 @@ to MinMax' and 'Clip to min max'.
 
 .. _figure_raster_multiband:
 
-.. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
+.. figure:: img/rasterMultibandColor.png
    :align: center
 
    Raster Style - Multiband color rendering
@@ -161,7 +161,7 @@ The label appears in the legend of the raster layer then.
 
 .. _figure_raster_paletted:
 
-.. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
+.. figure:: img/rasterPaletted.png
    :align: center
 
    Raster Style - Paletted Rendering
@@ -187,7 +187,7 @@ the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 
 .. _figure_raster_gray:
 
-.. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
+.. figure:: img/rasterSingleBandGray.png
    :align: center
 
    Raster Style - Singleband gray rendering
@@ -216,7 +216,7 @@ You can also create individual color maps for the single bands here.
 
 .. _figure_raster_pseudocolor:
 
-.. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
+.. figure:: img/rasterSingleBandPseudocolor.png
    :align: center
 
    Raster Style - Singleband pseudocolor rendering
@@ -287,7 +287,7 @@ matrix through a geometric transformation.
 
 .. _figure_raster_resampling:
 
-.. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
+.. figure:: img/rasterRenderAndRessampling.png
    :align: center
 
    Raster Style - Color rendering and Resampling settings
@@ -432,7 +432,7 @@ Finally, click **[Build pyramids]** to start the process.
 
 .. _figure_raster_pyramids:
 
-.. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
+.. figure:: img/rasterPyramids.png
    :align: center
 
    Raster Pyramids
@@ -470,7 +470,7 @@ collected.
 
 .. _figure_raster_metadata:
 
-.. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
+.. figure:: img/rasterMetadata.png
    :align: center
 
    QGIS Server in Raster Properties

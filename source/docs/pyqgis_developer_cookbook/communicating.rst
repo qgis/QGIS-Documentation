@@ -26,7 +26,7 @@ message bar with the following code
   iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=QgsMessageBar.CRITICAL)
 
 
-.. figure:: /static/pyqgis_developer_cookbook/errorbar.png
+.. figure:: img/errorbar.png
    :align: center
    :width: 40em
 
@@ -39,7 +39,7 @@ You can set a duration to show it for a limited time
     iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=QgsMessageBar.CRITICAL, duration=3)
 
 
-.. figure:: /static/pyqgis_developer_cookbook/errorbar-timed.png
+.. figure:: img/errorbar-timed.png
    :align: center
    :width: 40em
 
@@ -49,7 +49,7 @@ The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
 ``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively.
 
-.. figure:: /static/pyqgis_developer_cookbook/infobar.png
+.. figure:: img/infobar.png
    :align: center
    :width: 40em
 
@@ -71,7 +71,7 @@ more info
     iface.messageBar().pushWidget(widget, QgsMessageBar.WARNING)
 
 
-.. figure:: /static/pyqgis_developer_cookbook/bar-button.png
+.. figure:: img/bar-button.png
    :align: center
    :width: 40em
 
@@ -97,7 +97,7 @@ message box, or if it doesn't make sense to show it in the main QGIS window
         def run(self):
             self.bar.pushMessage("Hello", "World", level=QgsMessageBar.INFO)
 
-.. figure:: /static/pyqgis_developer_cookbook/dialog-with-bar.png
+.. figure:: img/dialog-with-bar.png
    :align: center
    :width: 40em
 

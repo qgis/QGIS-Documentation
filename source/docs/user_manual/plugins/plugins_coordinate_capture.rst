@@ -12,7 +12,7 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 
 .. _figure_coordinate_capture:
 
-.. figure:: /static/user_manual/plugins/coordinate_capture_dialog.png
+.. figure:: img/coordinate_capture_dialog.png
    :align: center
 
    Coordinate Capture Plugin

@@ -88,7 +88,7 @@ The console main features are:
   
 .. _figure_python_console:
 
-.. figure:: /static/user_manual/plugins/python_console.png
+.. figure:: img/python_console.png
    :align: center
 
    The Python Console
@@ -136,7 +136,7 @@ share the code via codepad.org and much more). Main features are:
 
 .. _figure_python_console_editor:
 
-.. figure:: /static/user_manual/plugins/python_console_editor.png
+.. figure:: img/python_console_editor.png
    :align: center
 
    The Python Console editor

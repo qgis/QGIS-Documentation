@@ -46,7 +46,7 @@ attributes.
 
 .. _figure_gps_position:
 
-.. figure:: /static/user_manual/working_with_gps/gpstrack_main.png
+.. figure:: img/gpstrack_main.png
    :align: center
 
    GPS tracking position and additional attributes
@@ -59,7 +59,7 @@ are receiving signals from.
 
 .. _figure_gps_strength:
 
-.. figure:: /static/user_manual/working_with_gps/gpstrack_stren.png
+.. figure:: img/gpstrack_stren.png
    :align: center
 
    GPS tracking signal strength
@@ -74,7 +74,7 @@ ID numbers of the satellites you are receiving signals from.
 
 .. _figure_gps_polar:
 
-.. figure:: /static/user_manual/working_with_gps/gpstrack_polar.png
+.. figure:: img/gpstrack_polar.png
    :align: center
 
    GPS tracking polar window
@@ -94,7 +94,7 @@ A click on **[Connect]** again initiates the connection to the GPS receiver.
 
 .. _figure_gps_options:
 
-.. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
+.. figure:: img/gpstrack_options.png
    :align: center
 
    GPS tracking options window

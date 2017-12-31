@@ -126,7 +126,7 @@ drag-and-drop from one panel to the other.
 
 .. _figure_browser_panels:
 
-.. figure:: /static/user_manual/managing_data_source/browser_panels.png
+.. figure:: img/browser_panels.png
    :align: center
 
    QGIS Browser panels side-by-side
@@ -162,7 +162,7 @@ More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
 
 .. _figure_db_manager_bis:
 
-.. figure:: /static/user_manual/plugins/db_manager.png
+.. figure:: img/db_manager.png
    :align: center
 
    DB Manager dialog
@@ -199,7 +199,7 @@ To load a layer from a file, you can:
 
   .. _figure_vector_add:
 
-  .. figure:: /static/user_manual/managing_data_source/addvectorlayerdialog.png
+  .. figure:: img/addvectorlayerdialog.png
      :align: center
 
      Add Vector Layer Dialog
@@ -218,7 +218,7 @@ selecting ``All files (*.*)``.
 
 .. _figure_vector_open:
 
-.. figure:: /static/user_manual/managing_data_source/shapefileopendialog.png
+.. figure:: img/shapefileopendialog.png
    :align: center
 
    Open an OGR Supported Vector Layer Dialog
@@ -230,7 +230,7 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
 .. _figure_vector_loaded:
 
-.. figure:: /static/user_manual/managing_data_source/shapefileloaded.png
+.. figure:: img/shapefileloaded.png
    :align: center
 
    QGIS with Shapefile of Alaska loaded
@@ -299,7 +299,7 @@ Delimited Text File` dialog, as shown in figure_delimited_text_.
 
 .. _figure_delimited_text:
 
-.. figure:: /static/user_manual/managing_data_source/delimited_text_dialog.png
+.. figure:: img/delimited_text_dialog.png
    :align: center
 
    Delimited Text Dialog
@@ -495,7 +495,7 @@ To access the connection manager, click on the **[New]** button to display the
 
 .. _figure_new_postgis_connection:
 
-.. figure:: /static/user_manual/managing_data_source/newpostgisconnection.png
+.. figure:: img/newpostgisconnection.png
    :align: center
 
    Create a New PostGIS Connection Dialog
@@ -790,7 +790,7 @@ To load a layer from a database, you can perform the following steps:
 
 .. _figure_add_postgis_tables:
 
-.. figure:: /static/user_manual/managing_data_source/addpostgistables.png
+.. figure:: img/addpostgistables.png
    :align: center
 
    Add PostGIS Table(s) Dialog

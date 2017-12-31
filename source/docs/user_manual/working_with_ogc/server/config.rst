@@ -208,7 +208,7 @@ QGIS Server supports:
 
   .. _figure_group_wms_data:
 
-  .. figure:: /static/user_manual/working_with_ogc/set_group_wms_data.png
+  .. figure:: img/set_group_wms_data.png
      :align: center
 
      Set group WMS data dialog

@@ -60,7 +60,7 @@ you would need to give the person :file:`trees.shp`, :file:`trees.shx`,
 
 .. _figure_shapefile:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/shapefile_on_disk.png
+.. figure:: img/shapefile_on_disk.png
    :align: center
    :width: 30em
 
@@ -108,7 +108,7 @@ layers might look on a map if we used all three geometry types.
 
 .. _figure_tourism:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/tourism_map.png
+.. figure:: img/tourism_map.png
    :align: center
    :width: 30em
 
@@ -166,7 +166,7 @@ polygon for the geometry.
 
 .. _figure_new_shapefile:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/new_shapefile.png
+.. figure:: img/new_shapefile.png
    :align: center
    :width: 30em
 
@@ -196,7 +196,7 @@ name. Good examples are 'rivers', 'watersamples' and so on.
 
 .. _figure_save_shapefile:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/save_shapefile.png
+.. figure:: img/save_shapefile.png
    :align: center
    :width: 30em
 
@@ -235,7 +235,7 @@ useful map from your data!
 
 .. _figure_attribute_dialog:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/attribute_dialog.png
+.. figure:: img/attribute_dialog.png
    :align: center
    :width: 30em
 
@@ -256,7 +256,7 @@ This process is shown in figure_capture_polyline_.
 
 .. _figure_capture_polyline:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/capture_polyline.png
+.. figure:: img/capture_polyline.png
    :align: center
    :width: 30em
 
@@ -297,7 +297,7 @@ shown in figure_headsup_digitizing_.
 
 .. _figure_headsup_digitizing:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/headsup_digitizing.png
+.. figure:: img/headsup_digitizing.png
    :align: center
    :width: 30em
 
@@ -319,7 +319,7 @@ puck looks like in figure_digitizing_table_.
 
 .. _figure_digitizing_table:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/digitizing_table.jpg
+.. figure:: img/digitizing_table.jpg
    :align: center
    :width: 30em
 
@@ -346,7 +346,7 @@ figure_georeference_issue_.
 
 .. _figure_georeference_issue:
 
-.. figure:: /static/gentle_gis_introduction/data_capture/georeferencing_issue.png
+.. figure:: img/georeferencing_issue.png
    :align: center
    :width: 30em
 
@@ -430,3 +430,6 @@ What's next?
 
 In the section that follows we will take a closer look at **raster data** to learn
 all about how image data can be used in a GIS.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

@@ -14,7 +14,7 @@ and :guilabel:`Plugin Manager`.
   :menuselection:`Plugins --> Manage and Install Plugins`.
 * In the dialog that opens, find the :guilabel:`Processing` plugin:
 
-  .. image:: /static/training_manual/qgis_plugins/select_processing_plugin.png
+  .. image:: img/select_processing_plugin.png
      :align: center
 
 * Click in the box next to this plugin and uncheck it to uninstall it.
@@ -41,13 +41,13 @@ that you currently have installed.
   will be listed here. This list will vary depending on your existing system
   setup.
 
-  .. image:: /static/training_manual/qgis_plugins/get_more_plugins.png
+  .. image:: img/get_more_plugins.png
      :align: center
 
 * You can find information about each plugin by selecting it in the list of
   plugins displayed.
 
-  .. image:: /static/training_manual/qgis_plugins/plugin_details.png
+  .. image:: img/plugin_details.png
      :align: center
 
 * A plugin can be installed by clicking the :guilabel:`Install Plugin` button
@@ -70,7 +70,7 @@ you want to configure additional repositories. To do this:
 * Open the :guilabel:`Settings` tab in the :guilabel:`Plugin Manager`
   dialog:
   
-  .. image:: /static/training_manual/qgis_plugins/plugin_manager_settings.png
+  .. image:: img/plugin_manager_settings.png
      :align: center
 
 * Click :guilabel:`Add` to find and add a new repository.
@@ -78,13 +78,13 @@ you want to configure additional repositories. To do this:
 * Provide a Name and URL for the new repository you want to configure and make
   sure the :guilabel:`Enabled` checkbox is selected. 
 
-  .. image:: /static/training_manual/qgis_plugins/new_plugins_setting.png
+  .. image:: img/new_plugins_setting.png
      :align: center
 
 * You will now see the new plugin repo listed in the list of configured
   Plugin Repositories
 
-  .. image:: /static/training_manual/qgis_plugins/new_plugin_added.png
+  .. image:: img/new_plugin_added.png
      :align: center
 
 * You can also select the option to display Experimental Plugins by selecting

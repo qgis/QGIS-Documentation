@@ -22,7 +22,7 @@ functionalities (see figure_composer_legend_):
 
 .. _Figure_composer_legend:
 
-.. figure:: /static/user_manual/print_composer/legend_properties.png
+.. figure:: img/legend_properties.png
    :align: center
 
    Legend Item Properties Panel
@@ -35,7 +35,7 @@ panel provides the following functionalities (see figure_composer_legend_ppt_):
 
 .. _Figure_composer_legend_ppt:
 
-.. figure:: /static/user_manual/print_composer/legend_mainproperties.png
+.. figure:: img/legend_mainproperties.png
    :align: center
 
    Legend Main properties Dialog
@@ -61,7 +61,7 @@ panel provides the following functionalities (see figure_composer_legend_items_)
 
 .. _Figure_composer_legend_items:
 
-.. figure:: /static/user_manual/print_composer/legend_items.png
+.. figure:: img/legend_items.png
    :align: center
 
    Legend Items Dialog
@@ -120,7 +120,7 @@ legend :guilabel:`Item Properties` panel provide the following functionalities
 
 .. _Figure_composer_legend_fonts:
 
-.. figure:: /static/user_manual/print_composer/legend_fonts.png
+.. figure:: img/legend_fonts.png
    :align: center
 
    Legend Fonts, Columns and Symbol Dialogs
@@ -151,7 +151,7 @@ figure_composer_legend_wms_):
 
 .. _Figure_composer_legend_wms:
 
-.. figure:: /static/user_manual/print_composer/legend_wms.png
+.. figure:: img/legend_wms.png
    :align: center
 
    WMS LegendGraphic and Spacing Dialogs

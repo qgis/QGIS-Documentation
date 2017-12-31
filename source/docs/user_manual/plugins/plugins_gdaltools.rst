@@ -40,7 +40,7 @@ List of GDAL tools
 
 .. _figure_GDAL_Tools:
 
-.. figure:: /static/user_manual/plugins/raster_menu.png
+.. figure:: img/raster_menu.png
    :align: center
 
    The *GDALTools* menu list

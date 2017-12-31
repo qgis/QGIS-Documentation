@@ -30,7 +30,7 @@ by circles that show connectivity.
 
 .. _figure_topology_london:
 
-.. figure:: /static/gentle_gis_introduction/topology/london_underground.png
+.. figure:: img/london_underground.png
    :align: center
    :width: 30em
 
@@ -50,7 +50,7 @@ figure_topology_errors_).
 
 .. _figure_topology_errors:
 
-.. figure:: /static/gentle_gis_introduction/topology/topology_errors.png
+.. figure:: img/topology_errors.png
    :align: center
    :width: 30em
 
@@ -116,7 +116,7 @@ boundary.
 
 .. _figure_topological_tools:
 
-.. figure:: /static/gentle_gis_introduction/topology/topological_tools.png
+.. figure:: img/topological_tools.png
    :align: center
    :width: 30em
 
@@ -137,7 +137,7 @@ and / or segment (see figure_snapping_distance_).
 
 .. _figure_snapping_distance:
 
-.. figure:: /static/gentle_gis_introduction/topology/snapping_distance.png
+.. figure:: img/snapping_distance.png
    :align: center
    :width: 30em
 
@@ -222,3 +222,6 @@ What's next?
 In the section that follows we will take a closer look at **Coordinate Reference
 Systems** to understand how we relate data from our spherical earth onto flat
 maps!
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

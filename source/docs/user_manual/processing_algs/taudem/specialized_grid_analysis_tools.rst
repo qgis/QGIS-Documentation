@@ -84,7 +84,7 @@ All points downslope from the source area are potentially in the affected area,
 but not beyond a point where the slope from the source to the affected area is
 less than a threshold angle called the Alpha Angle.
 
-.. figure:: /static/user_manual/processing_algs/taudem/arexample.gif
+.. figure:: img/arexample.gif
    :align: center
 
 Slope is to be measured using the straight line distance from source point to
@@ -247,7 +247,7 @@ Discharge Grid. Over the substance supply area concentration is at the threshold
 where ``L(x)`` denotes the load being carried by the flow. At remaining locations,
 the load is determined by load accumulation and the concentration by dilution:
 
-.. figure:: /static/user_manual/processing_algs/taudem/claeqn.gif
+.. figure:: img/claeqn.gif
    :align: center
 
 Here ``d(x) = d(i, j)`` is a decay multiplier giving the fractional (first order)
@@ -258,7 +258,7 @@ order decay parameter. The Concentration grid output is ``C(x)``. If the outlets
 shapefile is used, the tool only evaluates the part of the domain that contributes
 flow to the locations given by the shapefile.
 
-.. figure:: /static/user_manual/processing_algs/taudem/clafig.gif
+.. figure:: img/clafig.gif
    :align: center
 
 Useful for a tracking a contaminant released or partitioned to flow at a fixed
@@ -346,7 +346,7 @@ with the flow field but is subject to first order decay in moving from cell to
 cell. The output is the accumulated mass at each location ``DA(x)``. The
 accumulation of ``m`` at each grid cell can be numerically evaluated.
 
-.. figure:: /static/user_manual/processing_algs/taudem/decayeqn.gif
+.. figure:: img/decayeqn.gif
    :align: center
 
 Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first order)
@@ -358,7 +358,7 @@ order decay parameter. The weight grid is used to represent the mass loading
 the function is only evaluated on that part of the domain that contributes flow
 to the locations given by the shapefile.
 
-.. figure:: /static/user_manual/processing_algs/taudem/decay.gif
+.. figure:: img/decay.gif
    :align: center
 
 Useful for a tracking contaminant or compound subject to decay or attenuation.
@@ -651,7 +651,7 @@ reverse of the flow directions to accumulate the quantity of weight loading
 downslope from each grid cell. The function also reports the maximum value of
 the weight loading downslope from each grid cell in the Maximum Downslope grid.
 
-.. figure:: /static/user_manual/processing_algs/taudem/raccfig.gif
+.. figure:: img/raccfig.gif
    :align: center
 
 This function is designed to evaluate and map the hazard due to activities that
@@ -712,7 +712,7 @@ a grid cell is calculated as the sum of the transport in from upslope grid cells
 ``Tin``, plus the local supply contribution, ``E`` (e.g. erosion). This function
 also outputs deposition, ``D``, calculated as total supply minus actual transport.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaeqn.gif
+.. figure:: img/tlaeqn.gif
    :align: center
 
 Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for downslope
@@ -721,31 +721,31 @@ is deposition (``tdep``). The function provides the option to evaluate
 concentration of a compound (contaminant) adhered to the transported substance.
 This is evaluated as follows:
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn1.gif
+.. figure:: img/tlaceqn1.gif
    :align: center
 
 Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``
 refer to the Concentration and Transport entering from each upslope grid cell.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn2.gif
+.. figure:: img/tlaceqn2.gif
    :align: center
 
 If
 
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn3.gif
+.. figure:: img/tlaceqn3.gif
    :align: center
 
 else
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn4.gif
+.. figure:: img/tlaceqn4.gif
    :align: center
 
 where ``Cs`` is the concentration supplied locally and the difference in the
 second term on the right represents the additional supply from the local grid
 cell. Then,
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn5.gif
+.. figure:: img/tlaceqn5.gif
    :align: center
 
 ``Cout`` at each grid cell comprises is the concentration grid output from this
@@ -843,7 +843,7 @@ a grid cell is calculated as the sum of the transport in from upslope grid cells
 ``Tin``, plus the local supply contribution, ``E`` (e.g. erosion). This function
 also outputs deposition, ``D``, calculated as total supply minus actual transport.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaeqn.gif
+.. figure:: img/tlaeqn.gif
    :align: center
 
 Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for downslope
@@ -852,31 +852,31 @@ is deposition (``tdep``). The function provides the option to evaluate
 concentration of a compound (contaminant) adhered to the transported substance.
 This is evaluated as follows:
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn1.gif
+.. figure:: img/tlaceqn1.gif
    :align: center
 
 Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``
 refer to the Concentration and Transport entering from each upslope grid cell.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn2.gif
+.. figure:: img/tlaceqn2.gif
    :align: center
 
 If
 
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn3.gif
+.. figure:: img/tlaceqn3.gif
    :align: center
 
 else
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn4.gif
+.. figure:: img/tlaceqn4.gif
    :align: center
 
 where ``Cs`` is the concentration supplied locally and the difference in the
 second term on the right represents the additional supply from the local grid
 cell. Then,
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn5.gif
+.. figure:: img/tlaceqn5.gif
    :align: center
 
 ``Cout`` at each grid cell comprises is the concentration grid output from this
@@ -969,7 +969,7 @@ weighted contributing area function is denoted ``I(y; x)`` giving the weighted
 contribution using a unit value (1) from specific grid cells ``y`` to grid cells
 ``x``, then the upslope dependence is: ``D(x; y) = I(y; x)``.
 
-.. figure:: /static/user_manual/processing_algs/taudem/dependence.gif
+.. figure:: img/dependence.gif
    :align: center
 
 This is useful for example to track where flow or a flow related substance or
