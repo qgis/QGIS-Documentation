@@ -1645,9 +1645,9 @@ properties you can set to control whether and how a field can be edited:
   * use :ref:`variables <general_tools_variables>` in expressions, making it
     easier to e.g. insert the operator name (``@user_full_name``), the project
     file path (``@project_path``), ...
-    
+
   A preview of the resulting default value is displayed at the bottom of the widget.
-  
+
   .. note:: The ``Default value`` option is not aware of the values in any other
     field of the feature being created so it won't be possible to use an expression
     combining any of those values i.e using an expression like ``concat(field1, field2)``
@@ -1864,6 +1864,29 @@ As a result of the join, all information from the join layer and the target laye
 are displayed in the attribute table of the target layer as joined information.
 If you specified a subset of fields only these fields are displayed in the attribute
 table of the target layer.
+
+If the target layer is editable, then some icons will be displayed in the
+attribute table next to fields, in order to inform their status:
+
+* |iconJoinNotEditable|: the join layer is not configured to be
+  editable. If you want to be able to edit join features within the target
+  attribute table, then you have to check the option
+  |checkbox| :guilabel:`Editable join layer`.
+* |iconJoinedLayerNotEditable|: the join layer is well configured to be
+  editable, but it's current status is read only.
+* |iconJoinHasNotUpsertOnEdit|: the join layer is editable but synchronization
+  mechanisms are not activated. If you want to automatically add a feature in
+  the join layer when a feature is created in the target layer, then you have
+  to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, the
+  option |checkbox| :guilabel:`Delete cascade` may be activated if you want to
+  automatically delete join features.
+
+Moreover, an option is available to synchronize join fields on the fly,
+according to the :guilabel:`Target field`. This way, constraints for join
+fields are also correctly updated. The aforesaid option is
+|checkbox| :guilabel:`Dynamic form`. Note that it's deactivated by default
+because it may be very time consuming if you have a lot of features or a
+myriad of joins.
 
 .. FIXME: are table joins also possible with MSSQL and ORACLE tables?
 
