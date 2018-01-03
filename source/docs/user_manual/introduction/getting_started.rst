@@ -433,14 +433,13 @@ extension ``.qgs~``.
 
 The default extension for QGIS projects is ``.qgs`` but a project may be
 zipped in a ``.qgz`` file too. Actually, the ``.qgs`` file is just embedded
-in an archive, so you still have the possibility to unzip it in order to edit
-XML information. To zip a project, the corresponding extension has just to
-be selected in
+in an archive, so you still have the possibility to unzip it in order to
+manually edit XML information in a text editor. These ``.qgz`` files can also
+be opened like default ``.qgs`` files. To zip a project, the corresponding
+extension has just to be selected in
 :menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`. Once
 zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
-automatically zip your current project. These ``.qgz`` files can also be openned
-like default ``.qgs`` files.
-
+automatically zip your current project.
 
 .. _`sec_output`:
 
