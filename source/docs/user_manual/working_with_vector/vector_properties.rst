@@ -1869,11 +1869,11 @@ If the target layer is editable, then some icons will be displayed in the
 attribute table next to fields, in order to inform their status:
 
 * |iconJoinNotEditable|: the join layer is not configured to be
-  editable. If you want to be able to edit join features within the target
+  editable. If you want to be able to edit join features from the target
   attribute table, then you have to check the option
   |checkbox| :guilabel:`Editable join layer`.
 * |iconJoinedLayerNotEditable|: the join layer is well configured to be
-  editable, but it's current status is read only.
+  editable, but its current status is read only.
 * |iconJoinHasNotUpsertOnEdit|: the join layer is editable but synchronization
   mechanisms are not activated. If you want to automatically add a feature in
   the join layer when a feature is created in the target layer, then you have
@@ -1881,12 +1881,15 @@ attribute table next to fields, in order to inform their status:
   option |checkbox| :guilabel:`Delete cascade` may be activated if you want to
   automatically delete join features.
 
-Moreover, an option is available to synchronize join fields on the fly,
-according to the :guilabel:`Target field`. This way, constraints for join
-fields are also correctly updated. The aforesaid option is
-|checkbox| :guilabel:`Dynamic form`. Note that it's deactivated by default
-because it may be very time consuming if you have a lot of features or a
-myriad of joins.
+Moreover, the |checkbox| :guilabel:`Dynamic form` option helps to synchronize
+join fields on the fly, according to the :guilabel:`Target field`. This way,
+constraints for join fields are also correctly updated. Note that it's
+deactivated by default because it may be very time consuming if you have a lot
+of features or a myriad of joins.
+
+Otherwise, the |checkbox| :guilabel:`Cache join layer in virtual memory` option
+allows to cache values in memory (without geometries) from the joined layer in
+order to speed up lookups.
 
 .. FIXME: are table joins also possible with MSSQL and ORACLE tables?
 
@@ -1903,7 +1906,6 @@ QGIS currently has support for joining non-spatial table formats supported by OG
 
 Additionally, the add vector join dialog allows you to:
 
-* |checkbox| :guilabel:`Cache join layer in virtual memory`
 * |checkbox| :guilabel:`Create attribute index on the join field`
 * |checkbox| :guilabel:`Choose which fields are joined`
 * Create a |checkbox| :guilabel:`Custom field name prefix`
