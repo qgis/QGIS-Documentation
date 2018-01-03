@@ -16,4 +16,4 @@
    expression
    attribute_table
    editing_geometry_attributes
-
+   auxiliary_storage
