@@ -1891,8 +1891,6 @@ Otherwise, the |checkbox| :guilabel:`Cache join layer in virtual memory` option
 allows to cache values in memory (without geometries) from the joined layer in
 order to speed up lookups.
 
-.. FIXME: are table joins also possible with MSSQL and ORACLE tables?
-
 QGIS currently has support for joining non-spatial table formats supported by OGR
 (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider
 (see figure_joins_).
