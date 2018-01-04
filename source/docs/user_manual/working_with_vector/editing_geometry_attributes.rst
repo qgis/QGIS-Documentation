@@ -110,16 +110,16 @@ Search radius
 Search radius is the distance QGIS uses to ``search`` for the closest vertex
 you are trying to select when you click on the map. If you aren't within the
 search radius, QGIS won't find and select any vertex for editing.
-Snap tolerance and search radius are set in map units or pixels, so you may
+The search radius for vertex edits can be defined under :menuselection:`Settings -->`
+|options| :menuselection:`Options --> Digitizing` tab. This is the same
+place where you define the general, project-wide snapping tolerance.
+
+Snap tolerance and search radius are set in ``map units`` or ``pixels``, so you may
 find you need to experiment to get them set right. If you specify too big of
 a tolerance, QGIS may snap to the wrong vertex, especially if you are dealing
 with a large number of vertices in close proximity. Set search radius too
 small, and it won't find anything to move.
 
-The search radius for vertex edits in layer units can be defined in the
-:guilabel:`Digitizing` tab under :menuselection:`Settings -->` |options|
-:menuselection:`Options`. This is the same place where you define the general,
-project-wide snapping tolerance.
 
 
 .. index:: Topological editing
