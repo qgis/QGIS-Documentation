@@ -1816,8 +1816,9 @@ combobox...) to the layer's fields, you need to give them the same name.
 
 Use the :guilabel:`Edit UI` to define the path to the file to use.
 
-For detailed information, see
-https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+You'll find some example in the :ref:`Creating a new form <creating-new-form>`
+lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
+see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. 
 
 Enhance your form with custom functions
 .......................................

@@ -124,6 +124,8 @@ You can also design your own custom form completely from scratch.
 .. image:: /static/training_manual/create_vector_data/new_point_entry.png
    :align: center
 
+.. _creating-new-form:
+
 |hard| |FA| Creating a New Form
 -------------------------------------------------------------------------------
 
