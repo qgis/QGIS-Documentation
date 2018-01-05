@@ -186,7 +186,7 @@ The renderer is responsible for drawing a feature together with the correct
 symbol. Regardless layer geometry type, there are four common types of
 renderers: single symbol, categorized, graduated and rule-based. For point
 layers, there are a point displacement and a heatmap renderers available while
-polygon layers can also be rendered with the inverted renderer.
+polygon layers can also be rendered with the inverted polygons and 2.5 D renderers.
 
 There is no continuous color renderer, because it is in fact only a special
 case of the graduated renderer. The categorized and graduated renderers can be
