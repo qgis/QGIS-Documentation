@@ -213,10 +213,10 @@ by preview expression` option.
 .. tip:: **Sorting based on columns of different types**
 
   Trying to sort an attribute table based on columns of string and numeric types
-  may lead to unexpected result because of the ``concat`` function returning
-  string values (ie, ``'Borough105' < 'Borough6'``).
-  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))``
-  returning ``'Borough105' > 'Borough006'``. 
+  may lead to unexpected result because of the ``concat("USE", "ID")`` expression
+  returning string values (ie, ``'Borough105' < 'Borough6'``).
+  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
+  returns ``'Borough105' > 'Borough006'``. 
 
 .. index:: Conditional formatting
 .. _conditional_formatting:
