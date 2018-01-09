@@ -23,13 +23,15 @@ of the clipping layer will be added to the resulting layer.
 
 .. _warning_difference:
 
-.. warning:: The attributes of the features are **not modified**, although properties
+.. warning:: **Feature modification**
+
+  The attributes of the features are **not modified**, although properties
   such as area or length of the features will be modified by the clipping operation.
   If such properties are stored as attributes, those attributes will have to be
   manually updated.
 
 This algorithm uses spatial indexes on the providers, prepared geometries and
-apply an intersection operation if the geometry isn't wholly contained by the
+apply a clipping operation if the geometry isn't wholly contained by the
 mask geometry.
 
 .. figure:: /static/user_manual/processing_algs/qgis/clip.png
@@ -68,7 +70,7 @@ Input layer features that are partially within difference layer feature(s) are
 split along the boundary of the difference layer feature(s) and only the portions
 outside the difference layer features are retained.
 
-Attributes are not modified see warning_difference_
+Attributes are not modified (see warning_difference_)
 
 .. figure:: /static/user_manual/processing_algs/qgis/difference.png
   :align: center
@@ -97,7 +99,7 @@ See also
 
 .. _qgis_extract_by_extent:
 
-Clip/extract by extent
+Extract/clip by extent
 ----------------------
 Creates a new vector layer that only contains features which fall within a specified
 extent.
@@ -115,7 +117,8 @@ Parameters
 
 ``Clip feature to the extent`` [boolean]
   If checked, output geometries will be automatically converted to multi geometries
-  to ensure uniform output types
+  to ensure uniform output types. Moreover the geometries will be clipped to the
+  extent chosen instead of taking the whole geometry as output
 
 Output
 ......
@@ -128,7 +131,7 @@ Output
 
 Intersection
 ------------
-Extracts the overlapping portions of features in the input and intersection layers.
+Extracts the portions of features from the input layer that overlap features in the intersection layer.
 
 Features in the intersection layer are assigned the attributes of the overlapping
 features from both the input and intersection layers
@@ -197,7 +200,7 @@ Parameters
 ``Input fields to keep`` [multipleinput]
   Optional
 
-  Choose here the field of the input layer to be kept. If no fields are chosen
+  Choose here the fields of the input layer to be kept. If no fields are chosen
   all fields are taken
 
 ``Intersect fields to keep`` [multipleinput]
@@ -232,7 +235,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon or line]
-  Layer containing the lines or polygon to split.
+  Layer containing the lines or polygons to split.
 
 ``Split layer`` [vector: line]
   Line layer whose lines are used to define the breaking points.
