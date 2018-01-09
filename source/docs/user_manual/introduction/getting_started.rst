@@ -333,7 +333,7 @@ We will use:
 
 
 #. Start QGIS as seen in :ref:`label_startingqgis`.
-#. To load the landcover data, click on the |openDataSourceManager| :sup:`Open Data Source Manager` icon.
+#. To load the landcover data, click on the |dataSourceManager| :sup:`Open Data Source Manager` icon.
 #. The Data Source Manager should open in Browser mode.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
    the ERDAS IMG file :file:`landcover.img` and double-click to open it. 
@@ -372,11 +372,12 @@ state of your workspace into a project file using the menu options
 :menuselection:`Project -->` |fileSave| :menuselection:`Save`
 or :menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`.
 
-.. note:: If the project you loaded has been modified in the meantime, by default, QGIS will
-ask you if you want to overwrite the changes. This behavior
-is controlled by the |checkbox| :guilabel:`Prompt to save project and data source
-changes when required` setting under :menuselection:`Settings --> Options --> General`
-menu.
+.. note::
+  
+  If the project you loaded has been modified in the meantime, by default, QGIS
+  will ask you if you want to overwrite the changes. This behavior is controlled
+  by the |checkbox| :guilabel:`Prompt to save project and data source changes when
+  required` setting under :menuselection:`Settings --> Options --> General` menu.
 
 You can load existing projects into QGIS using :menuselection:`Project -->`
 |fileOpen| :menuselection:`Open...`,
@@ -417,10 +418,12 @@ outside of QGIS if you know what you are doing. The file format has been updated
 times compared with earlier QGIS versions. Project files from older QGIS versions
 may not work properly any more. 
 
-.. note:: By default, QGIS will warn you of version differences. 
-This behavior is controlled in :menuselection:`Settings --> Options`. On the 
-:guilabel:`General` tab, you should tick |checkbox| 
-:guilabel:`Warn when opening a project file saved with an older version of QGIS`.
+.. note::
+
+  By default, QGIS will warn you of version differences. 
+  This behavior is controlled in :menuselection:`Settings --> Options`. On the 
+  :guilabel:`General` tab, you should tick |checkbox| 
+  :guilabel:`Warn when opening a project file saved with an older version of QGIS`.
 
 Whenever you save a project in QGIS a backup of the project file is created with the
 extension ``.qgs~`` and stored in the same directory as the project file.
@@ -461,7 +464,8 @@ Other ways to produce output files are:
 * Exporting DXF files: :menuselection:`Project --> DXF Export...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
-  from the original QGIS Symbology can be exported with high fidelity.
+  from the original QGIS Symbology can be exported with high fidelity
+  (see section :ref:`create_dxf_files`).
 * Designing print maps: :menuselection:`Project -->` |newLayout|
   :menuselection:`New Print Layout` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printlayout`).
