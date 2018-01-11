@@ -626,6 +626,10 @@ This group  contains general assorted functions.
  raster_statistic      Returns statistics from a raster layer
  var                   Returns the value stored within a specified
                        variable. See variable functions below
+ with_variable         Creates and sets a variable for any expression code 
+                       that will be provided as a third argument. Useful to
+                       avoid repetition in expressions where the same value 
+                       needs to be used more than once.
 ====================  =======================================================
 
 
