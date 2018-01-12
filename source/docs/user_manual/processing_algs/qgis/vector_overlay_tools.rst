@@ -70,7 +70,7 @@ Input layer features that are partially within difference layer feature(s) are
 split along the boundary of the difference layer feature(s) and only the portions
 outside the difference layer features are retained.
 
-Attributes are not modified (see warning_difference_)
+Attributes are not modified (see warning_difference_).
 
 .. figure:: /static/user_manual/processing_algs/qgis/difference.png
   :align: center
@@ -136,7 +136,7 @@ Extracts the portions of features from the input layer that overlap features in 
 Features in the intersection layer are assigned the attributes of the overlapping
 features from both the input and intersection layers
 
-Attributes are not modified see warning_difference_
+Attributes are not modified (see warning_difference_).
 
 .. figure:: /static/user_manual/processing_algs/qgis/intersection.png
   :align: center
@@ -256,6 +256,8 @@ with the overlapping areas between the two layers removed.
 
 The attribute table of the symmetrical difference layer contains attributes from
 both the input and difference layers.
+
+Attributes are not modified (see warning_difference_).
 
 .. figure:: /static/user_manual/processing_algs/qgis/symmetrical_difference.png
   :align: center
