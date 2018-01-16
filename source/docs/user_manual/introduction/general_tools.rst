@@ -1176,6 +1176,8 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
 * :guilabel:`Description...` that indicates if the option is enabled, which input is
   expected, the valid input type and the current definition. Hovering over the
   widget also pops up these information;
+* :guilabel:`Store data in the project`: a button allowing to store the property
+  thanks to the :ref:`vector_auxiliary_storage` mechanism;
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type;
 * an entry to list the :guilabel:`Variable` available;
