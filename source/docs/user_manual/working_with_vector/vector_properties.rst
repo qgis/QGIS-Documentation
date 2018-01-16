@@ -1568,7 +1568,7 @@ We now describe an example using the data-defined override function for the
 .. note::
 
   The :ref:`vector_auxiliary_storage` mechanism may be used with data-defined
-  properties without having and editable data source.
+  properties without having an editable data source.
 
 
 .. index:: Fields, Forms
