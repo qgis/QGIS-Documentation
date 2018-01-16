@@ -18,7 +18,7 @@ To make topological editing easier, it's best if you enable snapping. This will
 allow your mouse cursor to snap to other objects while you digitize. To set
 snapping options:
 
-* Navigate to the menu entry :menuselection:`Settings --> Snapping Options...`.
+* Navigate to the menu entry :menuselection:`Project --> Snapping Options...`.
 * Set up your :guilabel:`Snapping options` dialog as shown:
 
 .. image:: /static/training_manual/create_vector_data/set_snapping_options.png
