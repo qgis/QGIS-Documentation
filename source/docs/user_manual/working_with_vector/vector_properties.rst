@@ -1645,9 +1645,9 @@ properties you can set to control whether and how a field can be edited:
   * use :ref:`variables <general_tools_variables>` in expressions, making it
     easier to e.g. insert the operator name (``@user_full_name``), the project
     file path (``@project_path``), ...
-    
+
   A preview of the resulting default value is displayed at the bottom of the widget.
-  
+
   .. note:: The ``Default value`` option is not aware of the values in any other
     field of the feature being created so it won't be possible to use an expression
     combining any of those values i.e using an expression like ``concat(field1, field2)``
@@ -1866,7 +1866,31 @@ are displayed in the attribute table of the target layer as joined information.
 If you specified a subset of fields only these fields are displayed in the attribute
 table of the target layer.
 
-.. FIXME: are table joins also possible with MSSQL and ORACLE tables?
+If the target layer is editable, then some icons will be displayed in the
+attribute table next to fields, in order to inform their status:
+
+* |iconJoinNotEditable|: the join layer is not configured to be
+  editable. If you want to be able to edit join features from the target
+  attribute table, then you have to check the option
+  |checkbox| :guilabel:`Editable join layer`.
+* |iconJoinedLayerNotEditable|: the join layer is well configured to be
+  editable, but its current status is read only.
+* |iconJoinHasNotUpsertOnEdit|: the join layer is editable but synchronization
+  mechanisms are not activated. If you want to automatically add a feature in
+  the join layer when a feature is created in the target layer, then you have
+  to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, the
+  option |checkbox| :guilabel:`Delete cascade` may be activated if you want to
+  automatically delete join features.
+
+Moreover, the |checkbox| :guilabel:`Dynamic form` option helps to synchronize
+join fields on the fly, according to the :guilabel:`Target field`. This way,
+constraints for join fields are also correctly updated. Note that it's
+deactivated by default because it may be very time consuming if you have a lot
+of features or a myriad of joins.
+
+Otherwise, the |checkbox| :guilabel:`Cache join layer in virtual memory` option
+allows to cache values in memory (without geometries) from the joined layer in
+order to speed up lookups.
 
 QGIS currently has support for joining non-spatial table formats supported by OGR
 (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider
@@ -1881,7 +1905,6 @@ QGIS currently has support for joining non-spatial table formats supported by OG
 
 Additionally, the add vector join dialog allows you to:
 
-* |checkbox| :guilabel:`Cache join layer in virtual memory`
 * |checkbox| :guilabel:`Create attribute index on the join field`
 * |checkbox| :guilabel:`Choose which fields are joined`
 * Create a |checkbox| :guilabel:`Custom field name prefix`

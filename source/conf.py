@@ -727,6 +727,12 @@ rst_epilog = """
    :width: 1.5em
 .. |iconIfaceConsole|  image:: /static/common/iconIfaceConsole.png
    :width: 1.5em
+.. |iconJoinHasNotUpsertOnEdit|   image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |iconJoinNotEditable|   image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |iconJoinedLayerNotEditable|   image:: /static/common/mIconJoinedLayerNotEditable.png
+   :width: 1.5em
 .. |iconMethodTreeWidgetConsole|  image:: /static/common/iconMethodTreeWidgetConsole.png
    :width: 1.5em
 .. |iconNewTabEditorConsole|  image:: /static/common/iconNewTabEditorConsole.png
