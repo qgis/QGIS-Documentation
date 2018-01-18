@@ -431,9 +431,9 @@ a more semantic code block as shown in the example below:
 .. code-block:: python
 
   with edit(layer):
-    f = layer.getFeatures().next()
+    fet = layer.getFeatures().next()
     f[0] = 5
-    layer.updateFeature(f)
+    layer.updateFeature(fet)
 
 
 This will automatically call :func:`commitChanges()` in the end.
@@ -649,8 +649,8 @@ Finally, let's check whether everything went well
 
   # iterate over features
   features = vl.getFeatures()
-  for f in features:
-      print "F:", f.id(), f.attributes(), f.geometry().asPoint()
+  for fet in features:
+      print "F:", fet.id(), fet.attributes(), fet.geometry().asPoint()
 
 .. index:: Vector layers; Symbology
 
