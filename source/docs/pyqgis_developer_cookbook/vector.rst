@@ -648,7 +648,6 @@ Finally, let's check whether everything went well
   print "extent:", e.xMiniminum(), e.yMinimum(), e.xMaximum(), e.yMaximum()
 
   # iterate over features
-  f = QgsFeature()
   features = vl.getFeatures()
   for f in features:
       print "F:", f.id(), f.attributes(), f.geometry().asPoint()
