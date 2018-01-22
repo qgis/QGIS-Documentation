@@ -16,7 +16,8 @@ Vector selection
 
 Extract by attribute
 --------------------
-Creates a new vector layer that only contains matching features from an input layer.
+Creates two vector layers from an input layer: one will contain only matching
+features while the second will contain all the non-matching features.
 
 The criteria for adding features to the resulting layer is defined based on the
 values of an attribute from the input layer.
@@ -25,10 +26,10 @@ Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Input vector layer
+  Vector layer to extract features from
 
 ``Selection attribute`` [tablefield: any]
-  Choose the field to filter
+  Filtering field of the layer
 
 ``Operator`` [selection]
   Many different operators are available:
@@ -47,7 +48,7 @@ Parameters
 ``Value`` [string]
   Optional
 
-  Values to be evaluated
+  Value to be evaluated
 
 Outputs
 .......
@@ -63,8 +64,8 @@ Outputs
 
 Extract by expression
 ---------------------
-Creates a new vector layer that only contains matching features from an input
-layer.
+Creates two vector layers from an input layer: one will contain only matching
+features while the second will contain all the non-matching features.
 
 The criteria for adding features to the resulting layer is based on a QGIS expression.
 
@@ -77,7 +78,7 @@ Parameters
   Input vector layer
 
 ``Expression`` [expression]
-  Type the expression to filter the vector layer
+  Expression to filter the vector layer
 
 Outputs
 .......
@@ -86,7 +87,7 @@ Outputs
   Vector layer with matching features
 
 ``Non-matching`` [vector]
-  Vector layer with matching features
+  Vector layer with not matching features
 
 
 .. _qgis_extract_by_location:
@@ -102,7 +103,7 @@ Parameters
 ..........
 
 ``Extract features from`` [vector: any]
-  Source vector layer
+  Input vector layer
 
 ``Where the features intersect (geometric predicate)`` [multiple selection]
   Spatial condition for the selection:
@@ -144,7 +145,7 @@ Parameters
   Source vector layer to select the features from
 
 ``Method`` [selection]
-  Choose the method of the random selection:
+  Method of the random selection:
 
   * Number of selected features
   * Percentage of selected features
@@ -152,7 +153,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Choose the number or the percentage of the feature to select
+  Number or the percentage of the features to select
 
   Default: *10*
 
@@ -160,7 +161,7 @@ Output
 ......
 
 ``Extracted (random)`` [vector]
-  Random vector layer
+  Vector layer containing random selected features
 
 
 .. _qgis_random_extract_within_subsets:
@@ -172,12 +173,8 @@ features in the input layer.
 
 The subset is defined randomly, using a percentage or count value to define the
 total number of features in the subset.
-
 The percentage/count value is not applied to the whole layer, but instead to each
-category.
-
-Categories are defined according to a given attribute, which is also specified as
-an input parameter for the algorithm.
+category. Categories are defined according to a given attribute.
 
 Parameters
 ..........
@@ -186,10 +183,10 @@ Parameters
   Source vector layer to select the features from
 
 ``ID field`` [tablefield: any]
-  Category of the source vector layer
+  Category of the source vector layer to select the features from
 
 ``Method`` [selection]
-  Choose the method of the random selection:
+  Method of the random selection:
 
   * Number of selected features
   * Percentage of selected features
@@ -197,7 +194,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Choose the number or the percentage of the feature to select
+  Number or the percentage of the feature to select
 
   Default: *10*
 
@@ -218,8 +215,6 @@ by this algorithm.
 The subset is defined randomly, using a percentage or count value to define the
 total number of features in the subset.
 
-No new outputs are created.
-
 Parameters
 ..........
 
@@ -227,7 +222,7 @@ Parameters
   Source vector layer to select the features from
 
 ``Method`` [selection]
-  Choose the method of the random selection:
+  Method of the random selection:
 
   * Number of selected features
   * Percentage of selected features
@@ -235,7 +230,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Choose the number or the percentage of the feature to select
+  Number or the percentage of the feature to select
 
   Default: *10*
 
@@ -268,7 +263,7 @@ Parameters
   Category of the source vector layer
 
 ``Method`` [selection]
-  Choose the method of the random selection:
+  Method of the random selection:
 
   * Number of selected features
   * Percentage of selected features
@@ -276,7 +271,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Choose the number or the percentage of the feature to select
+  Number or the percentage of the feature to select
 
   Default: *10*
 
@@ -289,7 +284,7 @@ Removes any features which do not have a geometry from a vector layer.
 
 All other features will be copied unchanged.
 
-Optionally, the features with null geometries can be saved to a separate output.
+The features with null geometries can be saved to a separate layer.
 
 Parameters
 ..........
@@ -324,7 +319,7 @@ Parameters
   Input vector layer
 
 ``Selection attribute`` [tablefield: any]
-  Choose the field to filter
+  Filtering field of the layer
 
 ``Operator`` [selection]
   Many different operators are available:
@@ -351,9 +346,8 @@ Parameters
 Select by expression
 --------------------
 Creates a selection in a vector layer. The criteria for selecting
-features is based on a QGIS expression.
-
-For more information about expressions see the :ref:`vector_expressions`
+features is based on a QGIS expression. For more information about expressions
+see the :ref:`vector_expressions`
 
 No new outputs are created.
 
@@ -364,10 +358,10 @@ Parameters
   Input vector layer
 
 ``Expression`` [expression]
-  Type the expression to filter the vector layer
+  Expression to filter the vector layer
 
 ``Modify current selection by`` [selection]
-  Choose how to handle the selection of the algorithm. You have many chances:
+  How the selection of the algorithm should be managed. You have many options:
 
   * creating new selection
   * adding to current selection
@@ -409,7 +403,7 @@ Parameters
   Intersection vector layer
 
 ``Modify current selection by`` [selection]
-  Choose how to handle the selection of the algorithm. You have many chances:
+  How the selection of the algorithm should be managed. You have many options:
 
   * creating new selection
   * adding to current selection
