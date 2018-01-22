@@ -674,7 +674,7 @@ And with that reference, let us explore it a bit
 
   print "Type:", renderer.type()
 
-There are several known renderer types available in QGIS core library:
+There are several known renderer types available in the QGIS core library:
 
 =================  =======================================  ===================================================================
 Type               Class                                    Description
@@ -705,7 +705,7 @@ useful for debugging
 
 ::
 
-  print rendererV2.dump()
+  print renderer.dump()
 
 .. index:: Single symbol renderer, Symbology; Single symbol renderer
 
