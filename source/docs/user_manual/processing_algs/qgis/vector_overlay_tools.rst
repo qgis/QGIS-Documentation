@@ -43,16 +43,16 @@ mask geometry.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Layer containing the features to be clipped
+  Layer containing the features to be clipped.
 
 ``Clip layer`` [vector: line or polygon]
-  Layer containing the clipping features
+  Layer containing the clipping features.
 
 Output
 ......
 
 ``Clipped`` [vector]
-  Layer containing features from the input layer split by the clip layer
+  Layer containing features from the input layer split by the clip layer.
 
 See also
 ........
@@ -90,7 +90,7 @@ Output
 ......
 
 ``Difference`` [vector]
-  Layer containing the differences feature of the input layer
+  Layer containing the differences feature of the input layer.
 
 See also
 ........
@@ -110,7 +110,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input layer to be clipped
+  Input layer to be clipped.
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the clipping
@@ -118,13 +118,13 @@ Parameters
 ``Clip feature to the extent`` [boolean]
   If checked, output geometries will be automatically converted to multi geometries
   to ensure uniform output types. Moreover the geometries will be clipped to the
-  extent chosen instead of taking the whole geometry as output
+  extent chosen instead of taking the whole geometry as output.
 
 Output
 ......
 
 ``Extracted`` [vector]
-  Layer containing the clipped features
+  Layer containing the clipped features.
 
 
 .. _qgis_intersection:
@@ -150,25 +150,25 @@ Parameters
   Input layer
 
 ``Intersection layer`` [vector: any]
-  Layer containing the intersecting features
+  Layer containing the intersecting features.
 
 ``Input fields to keep`` [multipleinput]
   Optional
 
   Choose here the field(s) of the input layer to be kept. If no fields are chosen
-  all fields are taken
+  all fields are taken.
 
 ``Intersect fields to keep`` [multipleinput]
   Optional
 
   Choose here the field(s) of the intersection layer to be kept. If no fields are
-  chosen all fields are taken
+  chosen all fields are taken.
 
 Output
 ......
 
 ``Intersection`` [vector]
-  Layer containing the intersected features
+  Layer containing the intersected features.
 
 See also
 ........
@@ -195,19 +195,19 @@ Parameters
   Input layer
 
 ``Intersection layer`` [vector: line]
-  Layer to use in the intersection operation
+  Layer to use in the intersection operation.
 
 ``Input fields to keep`` [multipleinput]
   Optional
 
   Choose here the fields of the input layer to be kept. If no fields are chosen
-  all fields are taken
+  all fields are taken.
 
 ``Intersect fields to keep`` [multipleinput]
   Optional
 
   Choose here the field of the intersection layer to be kept. If no fields are
-  chosen all fields are taken
+  chosen all fields are taken.
 
 Output
 ......
@@ -254,8 +254,8 @@ Symmetrical difference
 Creates a layer containing features from both the input and difference layers but
 with the overlapping areas between the two layers removed.
 
-The attribute table of the symmetrical difference layer contains attributes from
-both the input and difference layers.
+The attribute table of the symmetrical difference layer contains attributes and fields
+from both the input and difference layers.
 
 Attributes are not modified (see warning_difference_).
 
@@ -277,7 +277,7 @@ Output
 ......
 
 ``Symmetrical difference`` [vector]
-  Layer containing the symmetrical differences feature of the input layer
+  Layer containing the symmetrical differences feature of the input layer.
 
 See also
 ........
@@ -311,7 +311,7 @@ Parameters
   Input vector layer
 
 ``Union layer`` [vector: any]
-  Layer that will be combined to the first one
+  Layer that will be combined to the first one.
 
 Output
 ......
