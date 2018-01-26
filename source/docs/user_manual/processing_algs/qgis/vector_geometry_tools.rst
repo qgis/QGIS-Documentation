@@ -1094,13 +1094,14 @@ Voronoi polygons
 Description
 ...........
 
-<put algorithm description here>
+Partitions the plane into polygons surrounding each point in the ``Input layer``.  Each polygon contains only one point from the ``Input layer`` and has the property that every location within that polygon is closer to the point enclosed than any other input point.  Also known as Theissen polygons.
+
 
 Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  <put parameter description here>
+  Points for which to compute Voronoi polygons.
 
 ``Buffer region`` [number]
   <put parameter description here>
@@ -1111,7 +1112,7 @@ Outputs
 .......
 
 ``Voronoi polygons`` [vector]
-  <put output description here>
+  Vector layer containing voronoi polygons.
 
 Console usage
 .............
@@ -1122,4 +1123,4 @@ Console usage
 
 See also
 ........
-
+Steven Fortune. A sweepline algorithm for Voronoi diagrams. Proceedings of the second annual symposium on Computational geometry. Yorktown Heights, New York, United States, pp.313–322. 1986.
