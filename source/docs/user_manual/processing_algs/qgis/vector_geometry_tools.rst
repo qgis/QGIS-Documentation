@@ -13,17 +13,17 @@ Vector geometry
 
 
 
-
 .. _qgis_aggregate:
 
 Aggregate
 ---------
-Takes a vector or table layer and aggregate features based on a group by expression.
+Takes a vector or table layer and creates a new layer by aggregating features based
+on a ``group by`` expression.
 
-Features for which group by expression return the same value are grouped together.
+Features for which ``group by`` expression returns the same value are grouped together.
 
-It is possible to group all source features together using constant value in group
-by parameter, example: NULL.
+It is possible to group all source features together using constant value in ``group
+by`` parameter, example: NULL.
 
 It is also possible to group features using multiple fields using Array function,
 example: Array("Field1", "Field2").
@@ -31,17 +31,17 @@ example: Array("Field1", "Field2").
 Geometries (if present) are combined into one multipart geometry for each group.
 Output attributes are computed depending on each given aggregate definition.
 
-This algorithm allows to use the default aggregation functions of the QGIS field
-calculator.
+This algorithm allows to use the default aggregation functions of the QGIS Expression
+engine.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input to aggregate the features from
 
 ``Group by expression`` [tablefield: any]
-  Choose the grouping field. In *NULL* all features will be grouped
+  Choose the grouping field. If *NULL* all features will be grouped
 
   Default: *NULL*
 
@@ -50,13 +50,19 @@ Parameters
   delimiter and output field name
 
 ``Load fields from layer`` [vector: any]
-  You can load the fields from another layer
+  You can also load the fields from another layer and use these fields for the
+  aggregation.
 
 Output
 ......
 
 ``Aggregated`` [vector]
   Multigeometry vector layer with the aggregated values
+
+See also
+........
+For a  complete description of the aggregates function, refer to the dedicated
+:ref:`aggregates_function` chapter.
 
 
 .. _qgis_boundary:
@@ -66,12 +72,23 @@ Boundary
 Returns the closure of the combinatorial boundary of the input geometries (i.e.
 the topological boundary of the geometry).
 
+Only valid for polygon or line layers.
+
 For **polygon geometries** , the boundary consists of all the line strings for
 each ring of the polygon.
 
+.. figure:: /static/user_manual/processing_algs/qgis/boundary_polygon.png
+   :align: center
+
+   Black dash boundary lines of the source polygon layer
+
 For **lines geometries**, the boundaries are the nodes between each features.
 
-Only valid for polygon or line layers.
+.. figure:: /static/user_manual/processing_algs/qgis/boundary_lines.png
+   :align: center
+
+   Boundary layer for lines. In yellow a selected features
+
 
 Parameters
 ..........
@@ -84,17 +101,6 @@ Output
 
 ``Boundary`` [vector: point, line]
   Boundary from the input layer (point for line, and line for polygon).
-
-.. figure:: /static/user_manual/processing_algs/qgis/boundary_lines.png
-   :align: center
-
-   Boundary layer for lines. In yellow a selected features
-
-.. figure:: /static/user_manual/processing_algs/qgis/boundary_polygon.png
-   :align: center
-
-   Black dash boundary lines of the source polygon layer
-
 
 
 .. _qgis_bounding_boxes:
@@ -119,8 +125,12 @@ Parameters
 Outputs
 .......
 
-``Bounds`` [vector: poylgon]
+``Bounds`` [vector: polygon]
   Bounding boxes of input layer.
+
+See also
+........
+:ref:`qgis_minimum_bounding_geometry`
 
 
 .. _qgis_buffer:
@@ -147,7 +157,10 @@ Parameters
   Input vector layer
 
 ``Distance`` [number]
-  Distance radius of the buffer
+  Distance radius of the buffer calculated from the boundary of each feature.
+  Moreover you can use the Data Defined button on the right to choose a field of
+  from which the radius will be calculated: this way you can have different radius
+  for each feature (see :ref:`qgis_variable_distance_buffer`)
 
   Default: *10.0*
 
@@ -170,20 +183,20 @@ Parameters
   corners in a line.
 
 ``Miter limit`` [number]
-  Only applicable for miter join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join
+  Only applicable for miter join styles
 
   Default: *2.0*
 
 ``Dissolve result`` [boolean]
-  Choose to dissolve the final buffer
+  Choose to dissolve the final buffer. If chosen each buffer that overlaps with
+  another one will be dissolved and an unique feature will be created.
 
   Default: *False*
 
   .. figure:: /static/user_manual/processing_algs/qgis/buffer_dissolve.png
      :align: center
 
-     Normal and dissolved buffer
+     Standard and dissolved buffer
 
 
 Outputs
@@ -207,7 +220,10 @@ associated to the original features.
    :align: center
 
    The red stars represent the centroids of each feature of the input layer.
-   In yellow a single feature of the input layer is highlighted.
+
+In case of a multigeometry layer a single centroid will be calculated for each
+feature. The resulting centroid represents the barycenter of all parts, so the
+centroid can be outside the feature borders.
 
 Parameters
 ..........
@@ -229,10 +245,14 @@ Check validity
 Performs a validity check on the geometries of a vector layer.
 
 The geometries are classified in three groups (valid, invalid and error) and a
-vector layer is generated with the features in each of these categories.
+vector layer is generated with the features in each of these categories:
+
+* the **valid** layer contains only the valid features (without topological errors)
+* the **invalid** layer contains all the invalid features found by the algorithm
+* the **error** layer is the point layer where the invalid features have been found
 
 The attribute table of each generated vector layer will contain some additional
-information:
+information (numbers of error found and type of error):
 
 .. figure:: /static/user_manual/processing_algs/qgis/check_validity.png
    :align: center
@@ -260,15 +280,15 @@ Outputs
 .......
 
 ``Valid output`` [vector: any]
-  An exact copy of the valid feature of the source layer.
+  Vector layer containing copy of the valid features of the source layer.
 
 ``Invalid output`` [vector: any]
-  Layer with a copy of the attributes of the source layer plus the field ``_errors``
-  with a summary of the error founded.
+  Vector layer containing copy of the invalid features of the source layer with
+  the field  ``_errors`` listing the summary of the error found.
 
 ``Error output`` [vector: point]
   Point layer of the exact position of the validity problems detected with the
-  ``message`` field describing the errors founded.
+  ``message`` field describing the error(s) found.
 
 
 .. _qgis_collect_geometries:
@@ -380,8 +400,8 @@ Parameters
   * Multilinestrings
   * Polygons
 
-  .. note:: conversion types depends on the input layer and the conversion chosen:
-    e.g. it is not possible to convert a point to a line
+  .. note:: Conversion types availability depends on the input layer and the conversion
+    chosen: e.g. it is not possible to convert a point to a line
 
 Output
 ......
@@ -428,16 +448,17 @@ See also
 Create layer from extent
 ------------------------
 Creates a new vector layer that contains a single feature with geometry matching
-an extent parameter.
+the extent of the input layer.
 
-It can be used in models to convert an extent into a layer which can be used for
-other algorithms which require a layer based input.
+It can be used in models to convert an literal extent (``xmin``, ``xmax``, ``ymin``,
+``ymax`` format) into a layer which can be used for other algorithms which require
+a layer based input.
 
 Parameters
 ..........
 
-``Extent`` [extent]
-  Choose the extent of the layer
+``Extent (xmin, xmax, ymin, ymax)`` [extent]
+  Output layer as result of the chosen extent
 
 Output
 ......
@@ -446,7 +467,7 @@ Output
   Final extent of the layer
 
 
-.. _qgis_dalaunay_triangulation:
+.. _qgis_delaunay_triangulation:
 
 Delaunay triangulation
 ----------------------
@@ -481,7 +502,7 @@ in which polygons with holes have been replaced by polygons with only their exte
 ring. Attributes are not modified.
 
 An optional minimum area parameter allows removing only holes which are smaller
-than a specified area threshold. Leaving this parameter as 0.0 results in all
+than a specified area threshold. Leaving this parameter at ``0.0`` results in all
 holes being removed.
 
 .. figure:: /static/user_manual/processing_algs/qgis/delete_holes.png
@@ -500,13 +521,13 @@ Parameters
   Only holes with an area less than this threshold will be deleted. If ``0.0`` is
   added, **all** the holes will be deleted.
 
-  Defalut: *0.0*
+  Default: *0.0*
 
 Outputs
 .......
 
 ``Cleaned`` [vector: polygon]
-  Vector layer without holes.
+  Vector layer without holes or holes larger than specified area
 
 
 .. _qgis_densify_geometries:
@@ -516,13 +537,13 @@ Densify geometries
 Takes a polygon or line layer and generates a new one in which the geometries have
 a larger number of vertices than the original one.
 
-Vertices will be added to each segment of the layer.
-
 If the geometries have z or m values present then these will be linearly interpolated
 at the added nodes.
 
 The number of new vertices to add to each feature geometry is specified as an
 input parameter.
+
+Vertices will be added to each segment of the layer.
 
 .. figure:: /static/user_manual/processing_algs/qgis/densify_geometry.png
    :align: center
@@ -563,10 +584,10 @@ The geometries are densified by adding regularly placed extra nodes inside each
 segment so that the maximum distance between any two nodes does not exceed the
 specified distance.
 
+The distance is expressed in the same units used by the layer CRS.
+
 If the geometries have z or m values present then these will be linearly interpolated
 at the added nodes.
-
-The distance is expressed in the same units used by the layer CRS.
 
 Example
 .......
@@ -608,18 +629,18 @@ To add a specific number of vertices, look at :ref:`qgis_densify_geometries`.
 Dissolve
 --------
 Takes a polygon or line vector layer and combines their geometries into new
-geometries.
+geometries creating a new layer.
 
 One or more attributes can be specified to dissolve only geometries belonging to
 the same class (having the same value for the specified attributes), alternatively
 all geometries can be dissolved.
 
-If the geometries to be dissolved are spatially separated from each other the output
-will be multi geometries. In case the input is a polygon layer, common boundaries
-of adjacent polygons being dissolved will get erased.
+All output geometries will be converted to multi geometries. In case the input is
+a polygon layer, common boundaries of adjacent polygons being dissolved will get
+erased.
 
 The resulting attribute table will have the same fields of the input layer while
-the features are truncated.
+the features are *aggregated*.
 
 .. figure:: /static/user_manual/processing_algs/qgis/dissolve.png
    :align: center
@@ -654,7 +675,7 @@ Outputs
 
 Drop m/z values
 ---------------
-Removes any measure (M) or Z values from input geometries.
+Removes any M (measure) or Z (altitude) values from input geometries.
 
 Parameters
 ..........
@@ -674,7 +695,7 @@ Parameters
 Output
 ......
 ``Z/M Dropped`` [vector]
-  Cleaned vector laye without M or Z values
+  Cleaned vector layer without M and/or Z values
 
 
 .. _qgis_eliminate_selected_polygons:
@@ -686,10 +707,9 @@ erasing their common boundary. The adjacent polygon can be either the one with
 the largest or smallest area or the one sharing the largest common boundary with
 the polygon to be eliminated.
 
-The selected features will always be eliminated whether the option "Use only selected features"
-is set or not. Eliminate is normally used to get rid of sliver polygons, i.e.
-tiny polygons that are a result of polygon intersection processes where boundaries
-of the inputs are similar but not identical.
+Eliminate is normally used to get rid of sliver polygons, i.e. tiny polygons that
+are a result of polygon intersection processes where boundaries of the inputs are
+similar but not identical.
 
 Parameters
 ..........
@@ -714,8 +734,8 @@ Output
 
 Explode lines
 -------------
-Takes a lines layer and creates a new one in which each line is replaced by a set
-of lines representing the segments in the original line.
+Takes a lines layer and creates a new one in which each line layer is replaced by
+a set of lines representing the segments in the original line.
 
 Each line in the resulting layer contains only a start and an end point, with no
 intermediate nodes between them.
@@ -745,7 +765,7 @@ Export geometry columns
 Computes geometric properties of the features in a vector layer.
 
 It generates a new vector layer with the same content as the input one, but with
-additional attributes in its attributes table, containing geometric measurements.
+additional attributes, containing geometric measurements.
 
 Depending on the geometry type of the vector layer, the attributes added to the
 table will be different:
@@ -778,7 +798,7 @@ Output
 
 Extend lines
 ------------
-Extends line geometries by a specified amount at the start and end of the line.
+Extends line geometry by a specified amount at the start and end of the line.
 
 Lines are extended using the bearing of the first and last segment in the line.
 
@@ -794,7 +814,7 @@ Parameters
   Line vector layer to extend
 
 ``Start distance`` [number]
-  Starting distance of the extension
+  Starting distance to extend the line by (starting point)
 
 ``End distance`` [number]
   Ending distance of the extension
