@@ -16,9 +16,11 @@ algorithms.
 .. toctree::
      :maxdepth: 2
 
+     cartography
      database
      layer_tools
      raster_general_tools
+     raster_terrain_analysis
      raster_tools
      table
      vector_analysis_tools

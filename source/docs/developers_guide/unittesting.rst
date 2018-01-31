@@ -570,10 +570,40 @@ and ``-V`` to get verbose output:
   ## 1- qgis_applicationtest (Failed)
   Errors while running CTest
 
+Debugging unit tests
+--------------------
+
+For C++ unit tests, QtCreator automatically adds run targets, so you can start
+them in the debugger.
+
+It's also possible to start Python unit tests from QtCreator with GDB. For
+this, you need to go to ``Projects`` and choose ``Run`` under ``Build & Run``.
+Then add a new ``Run configuration`` with the executable ``/usr/bin/python3``
+and the Command line arguments set to the path of the unit test python file,
+e.g.
+``/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py``.
+
+Now also change the ``Run Environment`` and add 3 new variables:
+
++------------------+--------------------------------------------------------------------------------+
+| Variable         | Value                                                                          |
++------------------+--------------------------------------------------------------------------------+
+| PYTHONPATH       | [build]/output/python/:[build]/output/python/plugins:[source]/tests/src/python |
++------------------+--------------------------------------------------------------------------------+
+| QGIS_PREFIX_PATH | [build]/output                                                                 |
++------------------+--------------------------------------------------------------------------------+
+| LD_LIBRARY_PATH  | [build]/output/lib                                                             |
++------------------+--------------------------------------------------------------------------------+
+
+Replace ``[build]`` with your build directory and ``[source]`` with
+your source directory.
+
+Have fun
+--------
+
 Well that concludes this section on writing unit tests in QGIS. We hope you
 will get into the habit of writing test to test new functionality and to check
 for regressions. Some aspects of the test system (in particular the
 CMakeLists.txt parts) are still being worked on so that the testing framework
-works in a truly platform way. I will update this document as things
-progress.
+works in a truly platform independent way.
 
