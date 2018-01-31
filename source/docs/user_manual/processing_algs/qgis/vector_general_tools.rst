@@ -404,8 +404,13 @@ If attributes tables are different, the attribute table of the resulting layer
 will contain the attributes from all input layers. New attributes will be added
 for the original layer name and source.
 
-The layers will all be reprojected to match the coordinate reference system of
-the first input layer.
+If any input layers contain Z or M values, then the output layer will also contain
+these values. Similarly, if any of the input layers are multi-part, the output layer
+will also be a multi-part layer.
+
+Optionally, the destination coordinate reference system (CRS) for the merged layer
+can be set. If it is not set, the CRS will be taken from the first input layer.
+All layers will all be reprojected to match this CRS.
 
 .. figure:: /static/user_manual/processing_algs/qgis/merge_vector_layers.png
    :align: center
@@ -415,6 +420,12 @@ Parameters
 
 ``Layers to merge`` [multipleinput: vector]
   All the layers that have to be merged into a single layer.
+
+``Destination CRS`` [projection]
+  Optional
+
+  Optional parameter to choose the CRS of the output layer. If not specified the
+  CRS of the first input layer is taken.
 
 Outputs
 .......
