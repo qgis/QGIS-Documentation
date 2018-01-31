@@ -423,6 +423,43 @@ Outputs
   Merged vector layer.
 
 
+.. _qgis_order_by_expression:
+
+Order by expression
+-------------------
+Sorts a vector layer according to an expression: changes the geometry index
+according to an expression.
+
+Be careful, it might not work as expected with some providers, the order might
+not be kept every time.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer to sort
+
+``Expression`` [expression]
+  Expression to use for the vector sorting
+
+``Ascending`` [boolean]
+  If checked the sorted vector layer will be sorted from the smallest to the
+  biggest values found.
+
+  Default: *True*
+
+``Nulls first`` [boolean]
+  If checked Null values are placed at the beginning of the sorted layer.
+
+  Default: *False*
+
+Outputs
+.......
+
+``Output layer`` [vector]
+  Sorted vector layer
+
+
 .. _qgis_reproject_layer:
 
 Reproject layer
