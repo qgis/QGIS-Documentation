@@ -18,6 +18,7 @@ algorithms.
 
      cartography
      database
+     file_tools
      layer_tools
      raster_general_tools
      raster_analysis
