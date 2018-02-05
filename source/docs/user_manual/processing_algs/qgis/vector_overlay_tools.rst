@@ -244,7 +244,7 @@ Output
 ......
 
 ``Split`` [vector]
-  Output layer with split lines or polygon from input layer.
+  Output layer with split lines or polygons from input layer.
 
 
 .. _qgis_symmetrical_difference:
