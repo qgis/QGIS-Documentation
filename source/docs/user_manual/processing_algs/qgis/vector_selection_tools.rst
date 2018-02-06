@@ -11,83 +11,102 @@ Vector selection
       :local:
       :depth: 1
 
+
+.. _qgis_extract_by_attribute:
+
 Extract by attribute
 --------------------
+Creates two vector layers from an input layer: one will contain only matching
+features while the second will contain all the non-matching features.
 
-Description
-...........
-
-Creates new vector layer that only contains certain features from an input layer.
-The criteria for adding features to the resulting layer is defined based on
-the values of an attribute from the input layer.
+The criteria for adding features to the resulting layer is defined based on the
+values of an attribute from the input layer.
 
 Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  <put parameter description here>
+  Vector layer to extract features from
 
 ``Selection attribute`` [tablefield: any]
-  <put parameter description here>
+  Filtering field of the layer
 
 ``Operator`` [selection]
-  <put parameter description here>
+  Many different operators are available:
 
-  Options:
+  * ``=``
+  * ``!=``
+  * ``>``
+  * ``>=``
+  * ``<``
+  * ``<=``
+  * ``begins with``
+  * ``contains``
 
-  * 0 --- =
-  * 1 --- !=
-  * 2 --- >
-  * 3 --- >=
-  * 4 --- <
-  * 5 --- <=
-  * 6 --- begins with
-  * 7 --- contains
-
-  Default: *0*
+  Default: ``=``
 
 ``Value`` [string]
-  <put parameter description here>
+  Optional
 
-  Default: *(not set)*
+  Value to be evaluated
 
 Outputs
 .......
 
 ``Extracted (attribute)`` [vector]
-  <put output description here>
+  Vector layer with matching features
 
-Console usage
-.............
+``Extracted (non-matching)`` [vector]
+  Vector layer with not matching features
 
-::
 
-  processing.runalg('qgis:extractbyattribute', input, field, operator, value, output)
+.. _qgis_extract_by_expression:
 
-See also
-........
+Extract by expression
+---------------------
+Creates two vector layers from an input layer: one will contain only matching
+features while the second will contain all the non-matching features.
 
-Extract by location
--------------------
+The criteria for adding features to the resulting layer is based on a QGIS expression.
 
-Description
-...........
-
-Creates new vector layer that only contains certain features from an input layer.
-The criteria for adding features to the resulting layer is defined based on
-the spatial relationship between each feature and the features in an additional layer.
+For more information about expressions see the :ref:`vector_expressions`
 
 Parameters
 ..........
 
-``Layer to select from`` [vector: any]
-  <put parameter description here>
+``Input Layer`` [vector: any]
+  Input vector layer
 
-``Additional layer (intersection layer)`` [vector: any]
-  <put parameter description here>
+``Expression`` [expression]
+  Expression to filter the vector layer
 
-``Predicate`` [array of Unicode strings]
-  Condition for the selection. Array of one or more of the following predicates:
+Outputs
+.......
+
+``Matching features`` [vector]
+  Vector layer with matching features
+
+``Non-matching`` [vector]
+  Vector layer with not matching features
+
+
+.. _qgis_extract_by_location:
+
+Extract by location
+-------------------
+Creates a new vector layer that only contains matching features from an input layer.
+
+The criteria for adding features to the resulting layer is defined based on the
+spatial relationship between each feature and the features in an additional layer.
+
+Parameters
+..........
+
+``Extract features from`` [vector: any]
+  Input vector layer
+
+``Where the features intersect (geometric predicate)`` [multiple selection]
+  Spatial condition for the selection:
 
   * disjoint
   * intersects
@@ -98,413 +117,278 @@ Parameters
   * within
   * crosses
 
-  For console usage the predicates must be defined as an array of Unicode
-  strings, eg. [u'intersects',u'contains']
+``By comparing to the features from`` [vector: any]
+  Intersection vector layer
 
-``Precision`` [number]
-  <put parameter description here>
-  
-Outputs
-.......
+
+Output
+......
 
 ``Extracted (location)``
-  <put output description here>
+  Vector layer of the spatial intersection
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:extractbylocation', input, intersect, predicates, precision, output)
-
-See also
-........
+.. _qgis_random_extract:
 
 Random extract
 --------------
+Takes a vector layer and generates a new one that contains only a subset of the
+features in the input layer.
 
-Description
-...........
-
-Takes a vector layer and generates a new one that contains only a subset of the features in the input layer.
-The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Source vector layer to select the features from
 
 ``Method`` [selection]
-  <put parameter description here>
+  Method of the random selection:
 
-  Options:
+  * Number of selected features
+  * Percentage of selected features
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
-
-  Default: *0*
+  Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  <put parameter description here>
+  Number or the percentage of the features to select
 
   Default: *10*
 
-Outputs
-.......
+Output
+......
 
 ``Extracted (random)`` [vector]
-  <put output description here>
+  Vector layer containing random selected features
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:randomextract', input, method, number, output)
-
-See also
-........
+.. _qgis_random_extract_within_subsets:
 
 Random extract within subsets
 -----------------------------
+Takes a vector layer and generates a new one that contains only a subset of the
+features in the input layer.
 
-Description
-...........
-
-Takes a vector layer and generates a new one that contains only a subset of the features in the input layer.
-The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.
-The percentage/count value is not applied to the whole layer, but instead to each category.
-Categories are defined according to a given attribute, which is also specified as an input parameter for the algorithm.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
+The percentage/count value is not applied to the whole layer, but instead to each
+category. Categories are defined according to a given attribute.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Source vector layer to select the features from
 
-``ID Field`` [tablefield: any]
-  <put parameter description here>
+``ID field`` [tablefield: any]
+  Category of the source vector layer to select the features from
 
 ``Method`` [selection]
-  <put parameter description here>
+  Method of the random selection:
 
-  Options:
+  * Number of selected features
+  * Percentage of selected features
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
-
-  Default: *0*
+  Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  <put parameter description here>
+  Number or the percentage of the feature to select
 
   Default: *10*
 
-Outputs
-.......
+Output
+......
 
-````Extracted (random stratified)`` [vector]
-  <put output description here>
+``Extracted (random stratified)`` [vector]
+  Random vector layer
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:randomextractwithinsubsets', input, field, method, number, output)
-
-See also
-........
+.. _qgis_random_selection:
 
 Random selection
 ----------------
+Takes a vector layer and selects a subset of its features. No new layer is generated
+by this algorithm.
 
-Description
-...........
-
-Takes a vector layer and selects a subset of its features. No new layer is generated by this algorithm.
-The subset is defined randomly, using a percentage or count value to define the total number of
-features in the subset.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Source vector layer to select the features from
 
 ``Method`` [selection]
-  <put parameter description here>
+  Method of the random selection:
 
-  Options:
+  * Number of selected features
+  * Percentage of selected features
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
-
-  Default: *0*
+  Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  <put parameter description here>
+  Number or the percentage of the feature to select
 
   Default: *10*
 
-Outputs
-.......
 
-Same vector input layer with selected features
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:randomselection', input, method, number)
-
-See also
-........
+.. _qgis_random_selection_within_subsets:
 
 Random selection within subsets
 -------------------------------
+Takes a vector layer and selects a subset of its features. No new layer is generated
+by this algorithm.
 
-Description
-...........
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 
-Takes a vector layer and selects a subset of its features. No new layer is generated by this algorithm.
-The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.
-The percentage/count value is not applied to the whole layer, but instead to each category.
-Categories are defined according to a given attribute, which is also specified as an input parameter for the algorithm.
+The percentage/count value is not applied to the whole layer, but instead to each
+category.
+
+Categories are defined according to a given attribute, which is also specified as
+an input parameter for the algorithm.
+
+No new outputs are created.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Source vector layer to select the features from
 
-``ID Field`` [tablefield: any]
-  <put parameter description here>
+``ID field`` [tablefield: any]
+  Category of the source vector layer
 
 ``Method`` [selection]
-  <put parameter description here>
+  Method of the random selection:
 
-  Options:
+  * Number of selected features
+  * Percentage of selected features
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
-
-  Default: *0*
+  Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  <put parameter description here>
+  Number or the percentage of the feature to select
 
   Default: *10*
 
-Outputs
-.......
 
-Same vector input layer with selected features
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:randomselectionwithinsubsets', input, field, method, number)
-
-See also
-........
+.. _qgis_remove_null_geometries:
 
 Remove null geometries
 ----------------------
-
-Description
-...........
-
 Removes any features which do not have a geometry from a vector layer.
+
 All other features will be copied unchanged.
+
+The features with null geometries can be saved to a separate layer.
 
 Parameters
 ..........
-
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer with NULL geometries
 
 Outputs
 .......
 
-``Selection`` [vector]
-  <put output description here>
+``Non null geometries`` [vector]
+  Vector layer without NULL geometries
 
-Console usage
-.............
+``Null geometries`` [vector]
+  Vector layer with only NULL geometries
 
-::
 
-  processing.runalg('qgis:removenullgeometries', input, output)
-
-See also
-........
+.. _qgis_select_by_attribute:
 
 Select by attribute
 -------------------
+Creates a selection in a vector layer.
 
-Description
-...........
+The criteria for selected features is defined based on the values of an attribute
+from the input layer.
 
-Creates a selection in a vector layer. The criteria for selected features is defined
-based on the values of an attribute from the input layer.
+No new outputs are created.
 
 Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Layer to process.
+  Input vector layer
 
 ``Selection attribute`` [tablefield: any]
-  Field on which perform the selection.
+  Filtering field of the layer
 
 ``Operator`` [selection]
-  Comparison operator.
+  Many different operators are available:
 
-  Options:
+  * ``=``
+  * ``!=``
+  * ``>``
+  * ``>=``
+  * ``<``
+  * ``<=``
+  * ``begins with``
+  * ``contains``
 
-  * 0 --- =
-  * 1 --- !=
-  * 2 --- >
-  * 3 --- >=
-  * 4 --- <
-  * 5 --- <=
-  * 6 --- begins with
-  * 7 --- contains
-
-  Default: *0*
+  Default: ``=``
 
 ``Value`` [string]
-  Value to compare.
+  Optional
 
-  Default: *(not set)*
+  Values to be evaluated
 
-Outputs
-.......
 
-Same vector input layer with selected features
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:selectbyattribute', input, field, operator, value)
-
-See also
-........
-
-Select by attribute sum
-------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input Layer`` [vector: any]
-  <put parameter description here>
-
-``Selection attribute`` [tablefield: number]
-  <put parameter description here>
-
-``Value`` [number]
-  Value to compare.
-
-  Default: *0*
-
-Outputs
-.......
-
-``Output`` [vector]
-  <put parameter description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:selectbyattributesum', input, field, value)
-
-See also
-........
-
+.. _qgis_select_by_expression:
 
 Select by expression
 --------------------
-
-Description
-...........
-
 Creates a selection in a vector layer. The criteria for selecting
-features is based on a QGIS expression.
+features is based on a QGIS expression. For more information about expressions
+see the :ref:`vector_expressions`
+
+No new outputs are created.
 
 Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
-``Expression`` [string]
-  <put parameter description here>
-
-  Default: *(not set)*
+``Expression`` [expression]
+  Expression to filter the vector layer
 
 ``Modify current selection by`` [selection]
-  <put parameter description here>
+  How the selection of the algorithm should be managed. You have many options:
 
-  Options:
+  * creating new selection
+  * adding to current selection
+  * removing from current selection
+  * selecting within current selection
 
-  * 0 --- creating new selection
-  * 1 --- adding to current selection
-  * 2 --- removing from current selection
-  * 3 --- selecting within current selection
+  Default: *creating new selection*
 
-  Default: *0*
 
-Outputs
-.......
-
-Same vector input layer with selected features
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:selectbyexpression', layername, expression, method)
-
-See also
-........
+.. _qgis_select_by_location:
 
 Select by location
 ------------------
-
-Description
-...........
-
 Creates a selection in a vector layer. The criteria for selecting
 features is based on the spatial relationship between each feature and
 the features in an additional layer.
 
+No new outputs are created.
+
 Parameters
 ..........
 
-``Layer to select from`` [vector: any]
-  <put parameter description here>
+``Extract features from`` [vector: any]
+  Source vector layer
 
-``Additional layer (intersection layer)`` [vector: any]
-  <put parameter description here>
-
-``Predicate`` [array of Unicode strings]
-  Condition for the selection. Array of one or more of the following predicates:
+``Where the features intersect (geometric predicate)`` [multiple selection]
+  Spatial condition for the selection:
 
   * disjoint
   * intersects
@@ -515,33 +399,15 @@ Parameters
   * within
   * crosses
 
-  For console usage the predicates must be defined as an array of Unicode strings,
-  eg. [u'intersects',u'contains']
-
+``By comparing to the features from`` [vector: any]
+  Intersection vector layer
 
 ``Modify current selection by`` [selection]
-  <put parameter description here>
+  How the selection of the algorithm should be managed. You have many options:
 
-  Options:
+  * creating new selection
+  * adding to current selection
+  * removing from current selection
+  * selecting within current selection
 
-  * 0 --- creating new selection
-  * 1 --- adding to current selection
-  * 2 --- removing from current selection
-
-  Default: *0*
-
-Outputs
-.......
-
-Same vector input layer with selected features
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:selectbylocation', input, intersect, predicate, precision, method)
-
-See also
-........
-
+  Default: *creating new selection*
