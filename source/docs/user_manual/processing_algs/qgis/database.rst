@@ -166,7 +166,7 @@ Parameters
   All the vector layers to import into the GeoPackage database
 
 ``Overwrite existing GeoPackage`` [boolean]
-  Check this option replace an existing database with the new file
+  Replaces an existing database with a new one
 
   Default: *False*
 
