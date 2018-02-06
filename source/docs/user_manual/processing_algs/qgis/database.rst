@@ -93,22 +93,6 @@ Parameters
   Default: *False*
 
 
-Console usage
-.............
-
-.. code-block:: python
-
-  # import processing class
-  import processing
-  # define the parameters dictionary with all the input
-  parameters = { 'DROP_STRING_LENGTH' : False, 'INPUT' : '/home/matteo/example_layer.shp',
-  'OVERWRITE' : True, 'TABLENAME' : '', 'SCHEMA' : 'public', 'GEOMETRY_COLUMN' : 'geom',
-  'DATABASE' : 'your_database_name', 'LOWERCASE_NAMES' : True, 'ENCODING' : 'UTF-8',
-  'PRIMARY_KEY' : '', 'CREATEINDEX' : True, 'FORCE_SINGLEPART' : False }
-  # run the algorithm
-  processing.run('qgis:importintopostgis', parameters)
-
-
 .. _qgis_postgis_execute_sql:
 
 PostGIS execute SQL
@@ -167,17 +151,29 @@ No new outputs will be created. The layer chosen will be updated with the execut
 SQL query. By opening the table (for example with Data Manager) you will see
 the results.
 
-Console usage
-.............
 
-.. code-block:: python
+.. _qgis_package_layers:
 
-  # import processing class
-  import processing
-  # define the parameters dictionary with all the input
-  parameters = {'DATABASE':'your_database','SQL':'ALTER TABLE your_table ADD COLUMN area2 double precision'}
-  # run the algorithm
-  processing.run('qgis:postgisexecutesql', parameters)
+Package layers
+--------------
+Collects a number of existing layers and packages them together into a single
+GeoPackage database.
+
+Parameters
+..........
+
+``Input layers`` [multipleinput]
+  All the vector layers to import into the GeoPackage database
+
+``Overwrite existing GeoPackage`` [boolean]
+  Replaces an existing database with a new one
+
+  Default: *False*
+
+Outputs
+.......
+``Destination GeoPackage``
+  If not specified the GeoPackage database will be save in the temporary folder.
 
 
 .. _qgis_import_into_spatialite:
@@ -256,13 +252,6 @@ Parameters
   Default: *False*
 
 
-Console usage
-.............
-
-::
-
-  processing.run('qgis:importintosptaialite', input, database, tablename, primary_key, geometry_column, encoding, overwrite, createindex, lowercase_names, drop_string_length, create_single_parts)
-
 .. _qgis_spatialite_execute_sql:
 
 SpatiaLite execute SQL
@@ -292,13 +281,6 @@ Outputs
 No new outputs will be created. The layer chosen will be updated with the executed
 SQL query. By opening the table (for example with Data Manager) you will see
 the results.
-
-Console usage
-.............
-
-::
-
-  processing.run('qgis:spatialiteexecutesql', database, sql)
 
 See also
 ........
