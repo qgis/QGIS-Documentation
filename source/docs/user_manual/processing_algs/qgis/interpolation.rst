@@ -113,9 +113,9 @@ the QGIS sample dataset (see :ref:`label_sampledata`). Another excellent QGIS
 tutorial on making heatmaps can be found at `http://qgistutorials.com
 <http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
-In Figure_Heatmap_dataset_, the airports of Alaska are shown.
+In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 
-.. _figure_heatmap_dataset:
+.. _figure_heatmap_data_processing:
 
 .. figure:: /static/user_manual/processing_algs/qgis/heatmap_start.png
    :align: center
@@ -129,9 +129,9 @@ In Figure_Heatmap_dataset_, the airports of Alaska are shown.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
 #. Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size Y`,
     :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
-#. Click on **[Run in Background]**  to create and load the airports heatmap (see Figure_Heatmap_created_).
+#. Click on **[Run in Background]**  to create and load the airports heatmap (see Figure_Heatmap_created_processing_).
 
-.. _figure_heatmap_settings:
+.. _figure_heatmap_settings_processing:
 
 .. figure:: /static/user_manual/processing_algs/qgis/heatmap_dialog.png
    :align: center
@@ -142,7 +142,7 @@ QGIS will generate the heatmap and add the results to your map window. By defaul
 is shaded in greyscale, with lighter areas showing higher concentrations of airports. The heatmap
 can now be styled in QGIS to improve its appearance.
 
-.. _figure_heatmap_created:
+.. _figure_heatmap_created_processing:
 
 .. figure:: /static/user_manual/processing_algs/qgis/heatmap_loaded_grey.png
    :align: center
@@ -160,9 +160,9 @@ can now be styled in QGIS to improve its appearance.
    then click the **[Classify]** button.
 #. Press **[OK]** to update the layer.
 
-The final result is shown in Figure_Heatmap_styled_.
+The final result is shown in Figure_Heatmap_styled_processing_.
 
-.. _figure_heatmap_styled:
+.. _figure_heatmap_styled_processing:
 
 .. figure:: /static/user_manual/processing_algs/qgis/heatmap_loaded_colour.png
    :align: center
