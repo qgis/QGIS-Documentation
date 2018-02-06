@@ -135,8 +135,8 @@ Random extract
 Takes a vector layer and generates a new one that contains only a subset of the
 features in the input layer.
 
-The subset is defined randomly, using a percentage or count value to define the
-total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 
 Parameters
 ..........
@@ -171,8 +171,8 @@ Random extract within subsets
 Takes a vector layer and generates a new one that contains only a subset of the
 features in the input layer.
 
-The subset is defined randomly, using a percentage or count value to define the
-total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 The percentage/count value is not applied to the whole layer, but instead to each
 category. Categories are defined according to a given attribute.
 
@@ -212,8 +212,8 @@ Random selection
 Takes a vector layer and selects a subset of its features. No new layer is generated
 by this algorithm.
 
-The subset is defined randomly, using a percentage or count value to define the
-total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 
 Parameters
 ..........
@@ -242,8 +242,8 @@ Random selection within subsets
 Takes a vector layer and selects a subset of its features. No new layer is generated
 by this algorithm.
 
-The subset is defined randomly, using a percentage or count value to define the
-total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a percentage or count
+value to define the total number of features in the subset.
 
 The percentage/count value is not applied to the whole layer, but instead to each
 category.
