@@ -121,7 +121,7 @@ Parameters
   output attribute table
 
 ``Output matrix type`` [selection]
-  You can choose between 3 different types of calculation:
+  Three different types of calculation are available:
 
   * Linear (N*k x 3) distance matrix
   * Standard (N x T) distance matrix
@@ -171,7 +171,7 @@ Parameters
   Destination layer to calculate the nearest point
 
 ``Hub layer name attribute`` [tablefield: any]
-  Choose the attribute of the destination layer that will be copied into the
+  Attribute of the destination layer that will be copied into the
   output
 
 ``Measurement unit`` [selection]
@@ -209,11 +209,11 @@ Parameters
   Destination layer to calculate the nearest point
 
 ``Hub layer name attribute`` [tablefield: any]
-  Choose the attribute of the destination layer that will be copied into the
+  Attribute of the destination layer that will be copied into the
   output
 
 ``Measurement unit`` [selection]
-  The distance filed in the output attribute table will be calculated according
+  The distance field in the output attribute table will be calculated according
   to this choice:
 
   * Meters
@@ -228,28 +228,6 @@ Outputs
 .......
 ``Hub distance`` [vector: point]
   Point vector layer with distance values
-
-.. _qgis_frequency_analysis:
-
-Frequency analysis
-------------------
-
-Parameters
-..........
-
-``input`` [vector: any]
-  <put parameter description here>
-
-``fields`` [string]
-  <put parameter description here>
-
-  Default: *(not set)*
-
-Outputs
-.......
-
-``output`` [table]
-  <put output description here>
 
 
 .. _qgis_join_lines:
@@ -285,7 +263,7 @@ Parameters
   all fields are taken
 
 ``Spoke point layer`` [vector: any]
-  <put parameter description here>
+  Additional spoke point layer
 
 ``Spoke ID field`` [tablefield: any]
   Field of the spoke layer with ID to join
@@ -293,7 +271,7 @@ Parameters
 ``Spoke layer fields to copy``
   Optional
 
-  Choose here the field of the spoke layer to be copy. If no fields are chosen
+  Field(s) of the spoke layer to be copy. If no fields are chosen
   all fields are taken
 
 Outputs
@@ -389,34 +367,6 @@ Outputs
   HTML file in output with the computed statistics
 
 
-.. _qgis_unique_values_classes:
-
-Number of unique values in classes
-----------------------------------
-Given a field with classes, counts the unique values of another field for each
-class.
-
-The output vector layer is the same of the input but with the additional column
-``UNIQ_COUNT`` that contain the count number.
-
-Parameters
-..........
-
-``Input`` [vector: any]
-  Input vector layer with unique classes and values
-
-``Class field`` [tablefield: any]
-  Field of classes
-
-``Value field`` [tablefield: numeric]
-  Field with numerical values
-
-Outputs
-.......
-``N unique values`` [vector]
-  Vector layer with additional column of unique count
-
-
 .. _qgis_statistics_by_categories:
 
 Statistics by categories
@@ -452,7 +402,7 @@ Parameters
   If empty only the count will be calculated
 
 ``Field(s) with categories`` [multiselection]
-  Choose the field (or fields) of the categories
+  Field(s) of the categories
 
 Outputs
 .......
@@ -462,8 +412,8 @@ Outputs
 
 .. _qgis_sum_line_length:
 
-Sum line length
----------------
+Sum line lengths
+----------------
 Takes a polygon layer and a line layer and measures the total length of lines and
 the total number of them that cross each polygon.
 
