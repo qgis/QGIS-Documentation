@@ -113,9 +113,9 @@ the QGIS sample dataset (see :ref:`label_sampledata`). Another excellent QGIS
 tutorial on making heatmaps can be found at `http://qgistutorials.com
 <http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
-In Figure_Heatmap_data_, the airports of Alaska are shown.
+In Figure_Heatmap_dataset_, the airports of Alaska are shown.
 
-.. _figure_heatmap_data:
+.. _figure_heatmap_dataset:
 
 .. figure:: /static/user_manual/processing_algs/qgis/heatmap_start.png
    :align: center
