@@ -199,7 +199,7 @@ Outpu
 Drop field(s)
 -------------
 Takes a vector layer and generates a new one that has the exact same content but
-without the selected columns..
+without the selected columns.
 
 Parameters
 ..........
