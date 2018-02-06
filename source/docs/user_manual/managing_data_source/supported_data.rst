@@ -545,7 +545,6 @@ and `DB2 DashDB KnowledgeCenter`_.
 For more information about working with the DB2 spatial capabilities, check out
 the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks.
 
-
 The DB2 provider currently only supports the Windows environment through the
 Windows ODBC driver.
 
@@ -554,6 +553,9 @@ The client running QGIS needs to have one of the following installed:
 * DB2 LUW
 * IBM Data Server Driver Package
 * IBM Data Server Client
+
+To open a DB2 data in QGIS, you can refer to :ref:`browser_panel` or
+:ref:`vector_loading_database` section. 
 
 If you are accessing a DB2 LUW database on the same machine or using DB2 LUW as
 a client, the DB2 executables and supporting files need to be included in the
@@ -568,5 +570,4 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
 	REM This should usually be ok - modify if necessary
 	SET gskpath=C:\Program Files (x86)\ibm\gsk8
 	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
-
 

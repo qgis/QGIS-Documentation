@@ -457,17 +457,17 @@ Creating a stored Connection
 In order to read and write tables from the many database formats QGIS supports
 you'll need to create a connection to that database. While :ref:`QGIS Browser
 Panel <browser_panel>` is the simplest and recommanded way to connect and use
-databases within, QGIS provides specific tools you can use to connect to each
+databases, QGIS provides other tools to connect to each
 of them and load their tables:
 
 * |addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing
-  :kbd:`Ctrl+Shift+D`
+  :kbd:`Ctrl+Shift+D`;
 * |addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer` or by typing
-  :kbd:`Ctrl+Shift+M`
-* |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...`  or typing
-  :kbd:`Ctrl+Shift+O`
-* |addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or typing
-  :kbd:`Ctrl+Shift+2`
+  :kbd:`Ctrl+Shift+M`;
+* |addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing
+  :kbd:`Ctrl+Shift+O`;
+* |addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or by typing
+  :kbd:`Ctrl+Shift+2`.
 
 These tools are accessible either from the :guilabel:`Manage Layers Toolbar` or
 the :menuselection:`Layer --> Add Layer -->` menu. Connecting to SpatiaLite
@@ -479,7 +479,12 @@ database is described at :ref:`label_spatialite`.
    and choose connect will provide you with the database connection dialog.
 
 Most of the connection dialogs follow a common basis that will be described
-below using the PostGreSQL database tool as example.
+below using the PostGreSQL database tool as example. For additional settings
+specific to other providers, you can find corresponding description at:
+
+* :ref:`create_mssql_connection`;
+* :ref:`create_oracle_connection`;
+* :ref:`create_db2_connection`.
 
 The first time you use a PostGIS data source, you must create a connection to a
 database that contains the data. Begin by clicking the appropriate button as
