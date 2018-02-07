@@ -86,7 +86,7 @@ functionality (see figure_composer_map_layers_):
 
    Map Layers Dialog
 
-If you want to keep the map item consistent with an exiting map theme, 
+If you want to keep the map item consistent with an existing map theme, 
 use |selectString| :guilabel:`Follow map theme` and select the desired theme. 
 (See :ref:`map_themes` to find out how to configure map themes.)
 Any changes applied to the theme in QGIS' main window (using the replace theme
