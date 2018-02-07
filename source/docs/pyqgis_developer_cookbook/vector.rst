@@ -662,7 +662,7 @@ When a vector layer is being rendered, the appearance of the data is given by
 which take care of drawing of visual representation of features, while
 renderers determine what symbol will be used for a particular feature.
 
-The renderer for a given layer can obtained as shown below:
+The renderer for a given layer can be obtained as shown below:
 
 ::
 
@@ -672,9 +672,9 @@ And with that reference, let us explore it a bit
 
 ::
 
-  print "Type:", rendererV2.type()
+  print "Type:", renderer.type()
 
-There are several known renderer types available in QGIS core library:
+There are several known renderer types available in the QGIS core library:
 
 =================  =======================================  ===================================================================
 Type               Class                                    Description
@@ -705,7 +705,7 @@ useful for debugging
 
 ::
 
-  print rendererV2.dump()
+  print renderer.dump()
 
 .. index:: Single symbol renderer, Symbology; Single symbol renderer
 
