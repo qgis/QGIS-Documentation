@@ -102,8 +102,8 @@ the desired layer styles. Then press the |showPresets| button and choose
 The new theme is listed at the bottom of the drop-down menu and can be restored by
 clicking on it.
 
-The :menuselection:`Replace Theme -->` option allows you overwrite an existing theme
-with the currently enable layers and their styles while the 
+The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
+with the currently enabled layers and their styles while the 
 :menuselection:`Remove Current Theme` button deletes the active theme.
 
 All configured themes are also accessible in the Print Composer. This allows you
