@@ -32,7 +32,7 @@ Attributes are not modified by this algorithm.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer with wrong or missing CRS
 
 ``Assigned CRS`` [projection]
   Select the new CRS to assign to the vector layer
@@ -53,7 +53,7 @@ Creates a virtual vector layer that contains a set of vector layer.
 The output virtual vector layer will not be open in the current project.
 
 This algorithm is especially useful in case another algorithm needs multiple
-layers but accept only one ``vrt`` in which the layers are specified
+layers but accept only one ``vrt`` in which the layers are specified.
 
 Parameters
 ..........
@@ -61,7 +61,7 @@ Parameters
   Select the vector layers you want to use to build the virtual vector
 
 ``Create "unioned" VRT`` [boolean]
-  Check if you want to unite all the vectors
+  Check if you want to unite all the vectors in a single ``vrt`` file.
 
   Default: *False*
 
@@ -95,8 +95,8 @@ Parameters
 
 Create spatial index
 --------------------
-Creates an index to speed up queries made against a field in a table. Support for
-index creation is dependent on the layer's data provider and the field type.
+Creates a spatial index to speed up queries made against a field in a table. Support
+for index creation is dependent on the layer's data provider and the field type.
 
 No new output layers are created.
 
@@ -113,9 +113,10 @@ Parameters
 
 Define current projection
 -------------------------
-Useful when a layer is missing the `proj` file and you know the correct projection.
+Takes a vector layer and changes the associated CRS. It is very useful when a layer
+is missing the ``proj`` file and you know the correct projection.
 
-Final results are not visible directly on QGIS but the `prj` file is written in
+Final results are not visible directly on QGIS but the ``prj`` file is written in
 the same directory of the input layer.
 
 Parameters
@@ -124,8 +125,8 @@ Parameters
   Vector layer with missing projection information
 
 ``Output CRS`` [projection]
-  The combo box will show the last CRS used in QGIS. If the desired CRS is missing
-  you can search by clicking on the button
+  Output CRS associated with the source vector layer. The CRS information are
+  written in the ``proj`` file.
 
 
 .. _qgis_delete_duplicate_geometries:
@@ -156,7 +157,7 @@ Drop geometries
 Creates a simple *geometryless* copy of the input layer attribute table. It keeps
 the attribute table of the source layer.
 
-If the file is save in a local folder, the output will be a ``dbf`` file.
+If the file is save in a local folder, you can choose between many file formats.
 
 Parameters
 ..........
@@ -174,19 +175,19 @@ Outputs
 
 Execute SQL
 -----------
-Run a simple or complex query with ``SQL`` syntax on the source layer.
+Runs a simple or complex query with ``SQL`` syntax on the source layer.
 
-The resulting query will be added as new layer.
+The result of the query will be added as new layer.
 
 Parameters
 ..........
 ``Additional input datasource`` [selection: vector]
-  Here you can choose a single layer to query or many different layers. In the
-  SQL editor you can refer this layers with their **real** name or also with
-  **input1**, **input2**, **inputN** depending on how many layer have been choosen
+  List of layers to query. In the   SQL editor you can refer this layers with their
+  **real** name or also with   **input1**, **input2**, **inputN** depending on
+  how many layer have been chosen.
 
 ``SQL query`` [text]
-  Type here the string of your SQL query
+  Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
 
 ``Unique identifier field`` (optional)
   Specify the column with unique ID
@@ -252,7 +253,7 @@ version of the input one, with additional attributes in its attribute table.
 
 The additional attributes and their values are taken from a second vector layer.
 A spatial criteria is applied to select the values from the second layer that are
-added to each feature from the first layer in the resulting one.
+added to each feature from the first layer.
 
 Parameters
 ..........
@@ -301,7 +302,7 @@ version of the input one, with additional attributes in its attribute table.
 
 The additional attributes and their values are taken from a second vector layer.
 A spatial criteria is applied to select the values from the second layer that are
-added to each feature from the first layer in the resulting one.
+added to each feature from the first layer.
 
 The algorithm calculates a statistical summary for the values from matching
 features in the second layer (e.g. maximum value, mean value, etc).
@@ -332,7 +333,7 @@ Parameters
   Select the specific fields you want to add. By default all the fields are added
 
 ``Summaries to calculate`` (optional) [selection]
-  Choose with type of summary you want to add to each field and for each feature.
+  Choose which type of summary you want to add to each field and for each feature.
 
   * count
   * unique
@@ -371,7 +372,8 @@ Takes an input vector layer and creates a new vector layer that is an extended
 version of the input one, with additional attributes in its attribute table.
 
 The additional attributes and their values are taken from a second vector layer.
-An attribute is selected in each of them to define the join criteria.
+An attribute is selected in each of them to define the join criteria (one-to-one
+relation).
 
 Parameters
 ..........
@@ -401,8 +403,8 @@ Merge vector layers
 Combines multiple vector layers of the **same geometry** type into a single one.
 
 If attributes tables are different, the attribute table of the resulting layer
-will contain the attributes from all input layers. New attributes will be added
-for the original layer name and source.
+will contain the attributes from all input layers. Non-matching fields will be
+appended at the end of the attribute table.
 
 If any input layers contain Z or M values, then the output layer will also contain
 these values. Similarly, if any of the input layers are multi-part, the output layer
@@ -410,7 +412,7 @@ will also be a multi-part layer.
 
 Optionally, the destination coordinate reference system (CRS) for the merged layer
 can be set. If it is not set, the CRS will be taken from the first input layer.
-All layers will all be reprojected to match this CRS.
+All layers will be reprojected to match this CRS.
 
 .. figure:: /static/user_manual/processing_algs/qgis/merge_vector_layers.png
    :align: center
@@ -431,14 +433,14 @@ Outputs
 .......
 
 ``Merged`` [vector]
-  Merged vector layer.
+  Merged vector layer containing all the features and attributes from input layers
 
 
 .. _qgis_order_by_expression:
 
 Order by expression
 -------------------
-Sorts a vector layer according to an expression: changes the geometry index
+Sorts a vector layer according to an expression: changes the feature index
 according to an expression.
 
 Be careful, it might not work as expected with some providers, the order might
@@ -475,7 +477,6 @@ Outputs
 
 Reproject layer
 ---------------
-
 Reprojects a vector layer in a different CRS. The reprojected layer will have
 the same features and attributes of the input layer.
 
@@ -538,9 +539,9 @@ Parameters
 
 Split vector layer
 ------------------
-Creates a set of vectors in an output folder from an input layer and an attribute.
-Each layer in the output folder contain all the features from the input layer that
-matches the unique attribute chosen.
+Creates a set of vectors in an output folder based on an input layer and an attribute.
+The output folder will contain as many layers as the unique values found in the
+desired field.
 
 The number of files generated is equal to the number of different values found
 for the specified attribute.
@@ -554,13 +555,17 @@ Parameters
   Vector layer
 
 ``Unique ID field`` [tablefield: any]
-  Field of the attribute table on witch the layer will be split.
+  Field of the attribute table on which the layer will be split.
 
 Outputs
 .......
 
 ``Output directory`` [directory]
   Directory where all the split layer will be saved.
+
+See also
+........
+:ref:`qgis_merge_vector_layers`
 
 
 .. _qgis_truncate_table:
