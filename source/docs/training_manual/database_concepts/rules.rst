@@ -7,8 +7,8 @@ usage is to implement views, including updatable view. *- Wikipedia*
 **The goal for this lesson:** To learn how to create new rules for the
 database.
 
-Materialised Views (Rule based views)
--------------------------------------------------------------------------------
+Creating a logging rule
+-----------------------
 
 Say you want to log every change of phone_no in your people table in to a
 people_log table. So you set up a new table:
