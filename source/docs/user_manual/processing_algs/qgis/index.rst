@@ -20,7 +20,6 @@ algorithms.
      database
      filetools
      layertools
-     raster_general_tools
      rasteranalysis
      rasterterrainanalysis
      rastertools
