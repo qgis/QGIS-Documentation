@@ -254,7 +254,7 @@ symbols with totally transparent fill/border to achieve this.
 
 .. index:: Classes
    single: Symbology; Categorized renderer
-.. _categorized_rendered:
+.. _categorized_renderer:
 
 Categorized Renderer
 ....................
