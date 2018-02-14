@@ -629,7 +629,7 @@ features (rows) of different layers (tables) can belong to each other.
 
 .. _one_to_many_relation:
 
-Introcuding 1-N relations
+Introducing 1-N relations
 -------------------------
 
 As an example you have a layer with all regions of alaska (polygon)
