@@ -102,9 +102,9 @@ the Composer's map item. Nevertheless, style and labels of locked
 layers are still refreshed according to QGIS' main window.
 You can prevent this by using :guilabel:`Lock styles for layers`.
 
-Using the |showPresets| button, you can lock the map item's layers to one of
+Using the |showMapTheme| button, you can lock the map item's layers to one of
 the map themes you have prepared (see :ref:`map_themes`).
-Clicking the |showPresets| button will show the list of all themes. 
+Clicking the |showMapTheme| button will show the list of all themes. 
 Select the theme you want to display. The map canvas will lock the
 theme layers automatically by enabling the |checkbox| :guilabel:`Lock
 layers`. You can release the theme by unchecking the |checkbox|

@@ -1099,7 +1099,7 @@ rst_epilog = """
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |showPresets| image:: /static/common/mActionShowPresets.png
+.. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em

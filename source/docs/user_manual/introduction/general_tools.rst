@@ -60,7 +60,7 @@ At the top of the Layers panel, a toolbar allows you to:
 * |symbology| :sup:`Open the layer styling dock`: toggle the layer styling
   panel on and off.
 * |addGroup| :sup:`Add new group`
-* |showPresets| :sup:`Manage Map Themes`: control visibility of layers and 
+* |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and 
   arrange them in different map themes. 
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
   visible and whose features intersect the current map canvas have their style
@@ -93,11 +93,11 @@ At the top of the Layers panel, a toolbar allows you to:
 Configuring map themes
 ......................
 
-The button |showPresets| allows you to configure **Map Themes** in the legend.
+The button |showMapTheme| allows you to configure **Map Themes** in the legend.
 These themes are helpful to quickly switch between different preconfigured layer 
 combinations and can also be used in Print Composer. 
 To create a map theme, activate the layers you want to include and configure 
-the desired layer styles. Then press the |showPresets| button and choose 
+the desired layer styles. Then press the |showMapTheme| button and choose 
 :menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
 The new theme is listed at the bottom of the drop-down menu and can be restored by
 clicking on it.

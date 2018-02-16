@@ -90,7 +90,7 @@ Icon                            Substitution                        Icon        
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
-|showPresets|                   ``|showPresets|``                   |showSelectedLayers|            ``|showSelectedLayers|``
+|showMapTheme|                  ``|showMapTheme|``                  |showSelectedLayers|            ``|showSelectedLayers|``
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``                      |zip|                           ``|zip|``
 ==============================  ==================================  ==============================  ==================================
