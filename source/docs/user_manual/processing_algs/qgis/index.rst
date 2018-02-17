@@ -19,6 +19,7 @@ algorithms.
      cartography
      database
      filetools
+     interpolation
      layertools
      rasteranalysis
      rasterterrainanalysis
