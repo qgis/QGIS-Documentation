@@ -17,8 +17,8 @@ Convert map to raster
 ---------------------
 Creates a raster image of map canvas content.
 
-A map theme can be selected to render a predetermined set of layers with a defined
-style for each layer.
+A :ref:`map theme <map_themes>` can be selected to render a predetermined set of
+layers with a defined style for each layer.
 
 Alternatively, a single layer can be selected if no map theme is set.
 
@@ -30,7 +30,8 @@ Parameters
 ..........
 
 ``Minimum extent to render (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the output raster layer
+  Extent of the output raster layer. It will internally be extended to be a multiple
+  of the tile size.
 
 ``Tile size`` [number]
   Size of the tile of the output raster layer
@@ -45,8 +46,8 @@ Parameters
 ``Map theme to render`` [selection]
   Optional
 
-  If you have some theme set, you can choose one of them for the final raster
-  layer
+  If you have some map theme set, you can choose one of them for the final raster
+  layer.
 
 ``Single layer to render`` [selection]
   Optional
