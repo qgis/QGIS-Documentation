@@ -67,7 +67,7 @@ Paths to Custom C++ plugins libraries can also be added under
 The Plugins Dialog
 ===================
 
-The menus in the Plugins dialog allow the user to install, uninstall and upgrade
+The tabs in the Plugins dialog allow the user to install, uninstall and upgrade
 plugins in different ways. Each plugin has some metadata displayed in the right
 panel:
 
@@ -81,7 +81,46 @@ panel:
 
 At the top of the dialog, a :guilabel:`Search` function helps you find any
 plugin using metadata information (author, name, description...). It is
-available in nearly every menu (except |transformSettings| :guilabel:`Settings`).
+available in nearly every tab (except |transformSettings| :guilabel:`Settings`).
+
+.. _setting_plugins:
+
+The Settings tab
+----------------
+
+The |transformSettings| :guilabel:`Settings` tab is the main place you can
+configure which plugins can be displayed in your application.
+You can use the following options:
+
+* |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
+  a plugin update is available, QGIS will inform you 'every time QGIS starts',
+  'once a day', 'every 3 days', 'every week', 'every 2 weeks' or 'every month'.
+* |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you
+  plugins in early stages of development, which are generally unsuitable for
+  production use.
+* |checkbox| :guilabel:`Show also deprecated plugins`. Because they use
+  functions that are no longer available in QGIS, these plugins are set
+  deprecated and generally unsuitable for production use. They appear among
+  invalid plugins list.
+
+By default, QGIS provides you with its official plugin repository with the URL
+https://plugins.qgis.org/plugins/plugins.xml?qgis=2.18 (in case of QGIS 2.18)
+in the :guilabel:`Plugin repositories` section. To add external author repositories,
+click **[Add...]** and fill in the form with a name and the URL.
+If you do not want one or more of the added repositories, they can be disabled
+via the **[Edit...]** button, or completely removed with the **[Delete]** button.
+
+The default QGIS repository is an open repository and you don't need any
+authentication to access it. You can however deploy your own plugin repository
+and require an authentication (basic authentication, PKI). You can get more
+information on QGIS authentication support in :ref:`authentication` chapter.
+
+.. _figure_plugins_settings:
+
+.. figure:: /static/user_manual/plugins/plugins_settings.png
+   :align: center
+
+   The |transformSettings| :guilabel:`Settings` tab
 
 The All tab
 -----------
@@ -167,40 +206,3 @@ another compatible plugin or help to upgrade the broken one).
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab
-
-.. _setting_plugins:
-
-The Settings tab
-----------------
-
-In the |transformSettings| :guilabel:`Settings` tab, you can use the following
-options:
-
-* |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
-  a plugin update is available, QGIS will inform you 'every time QGIS starts',
-  'once a day', 'every 3 days', 'every week', 'every 2 weeks' or 'every month'.
-* |checkbox| :guilabel:`Show also experimental plugins`. QGIS will show you
-  plugins in early stages of development, which are generally unsuitable for
-  production use.
-* |checkbox| :guilabel:`Show also deprecated plugins`. Because they use
-  functions that are no longer available in QGIS, these plugins are set
-  deprecated and generally unsuitable for production use. They appear among
-  invalid plugins list.
-
-To add external author repositories, click **[Add...]** in the :guilabel:`Plugin
-repositories` section.
-If you do not want one or more of the added repositories, they can be disabled
-via the **[Edit...]** button, or completely removed with the **[Delete]** button.
-
-The default QGIS repository is an open repository and you don't need any
-authentication to access it. You can however deploy your own plugin repository
-and require an authentication (basic authentication, PKI). You can get more
-information on QGIS authentication support in :ref:`authentication` chapter.
-
-.. _figure_plugins_settings:
-
-.. figure:: /static/user_manual/plugins/plugins_settings.png
-   :align: center
-
-   The |transformSettings| :guilabel:`Settings` tab
-

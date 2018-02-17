@@ -331,10 +331,10 @@ An even more flexible way to customize the transparency can be done in the
 :guilabel:`Custom transparency options` section. The transparency of every pixel
 can be set here.
 
-As an example, we want to set the water of our example raster file :file:`landcover.tif`
+As an example, we want to set the water of our example raster file :file:`landcover.img`
 to a transparency of 20%. The following steps are necessary:
 
-#. Load the raster file :file:`landcover.tif`.
+#. Load the raster file :file:`landcover.img`.
 #. Open the :guilabel:`Properties` dialog by double-clicking on the raster
    name in the legend, or by right-clicking and choosing :menuselection:`Properties`
    from the pop-up menu.

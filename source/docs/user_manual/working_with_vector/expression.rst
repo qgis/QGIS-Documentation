@@ -365,15 +365,20 @@ This group contains functions to create and manipulate arrays.
  array_distinct         Returns an array containing distinct values of the given array
  array_find             Returns the index (0 for the first one) of a value
                         within an array. Returns -1 if the value is not found.
+ array_first            Returns the first value of an array
  array_get              Returns the Nth value (0 for the first one) of an array
  array_insert           Returns an array with the given value added at the
                         given position
  array_intersect        Returns true if any element of array1 exists in array2
+ array_last             Returns the last element of an array 
  array_length           Returns the number of elements of an array
  array_prepend          Returns an array with the given value added at the beginning
  array_remove_all       Returns an array with all the entries of the given
                         value removed
  array_remove_at        Returns an array with the given index removed
+ array_reverse          Returns the given array with array values in reversed order
+ array_slice            Returns the values of the array from the start_pos argument up
+                        to and including the end_pos argument
  array_to_string        Concatenates array elements into a string separated by
                         a delimiter using and optional string for empty values.
  regexp_matches         Returns an array of all strings captured by capturing
@@ -413,6 +418,7 @@ This group contains functions for manipulating colors.
                     its red, green, and blue components
  color_rgba         Returns a string representation of a color based on
                     its red, green, blue, and alpha (transparency) components
+ create_ramp        Returns a gradient ramp from a map of color strings and steps
  darker             Returns a darker (or lighter) color string
  lighter            Returns a lighter (or darker) color string
  project_color      Returns a color from the project's color scheme
@@ -621,6 +627,10 @@ This group  contains general assorted functions.
  raster_statistic      Returns statistics from a raster layer
  var                   Returns the value stored within a specified
                        variable. See variable functions below
+ with_variable         Creates and sets a variable for any expression code 
+                       that will be provided as a third argument. Useful to
+                       avoid repetition in expressions where the same value 
+                       needs to be used more than once.
 ====================  =======================================================
 
 
@@ -985,6 +995,8 @@ This group contains functions that operate on record identifiers.
                       feature
  get_feature          Returns the first feature of a layer matching a
                       given attribute value
+ get_feature_by_id    Returns the feature of a layer matching the given 
+                      feature ID
  is_selected          Returns if a feature is selected
  num_selected         Returns the number of selected features on a given layer
  uuid                 Generates a Universally Unique Identifier (UUID)

@@ -431,6 +431,22 @@ version of QGIS`.
 Whenever you save a project in QGIS a backup of the project file is made with the
 extension ``.qgs~``.
 
+The default extension for QGIS projects is ``.qgs`` but a project may be
+zipped in a ``.qgz`` file too. Actually, the ``.qgs`` file is just embedded
+in an archive, so you still have the possibility to unzip it in order to
+manually edit XML information in a text editor. These ``.qgz`` files can also
+be opened like default ``.qgs`` files. To zip a project, the corresponding
+extension has just to be selected in
+:menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`. Once
+zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
+automatically zip your current project.
+
+.. note::
+
+  A zipped project may be particularly useful with the
+  :ref:`vector_auxiliary_storage` mechanism in order to embed the underlying
+  database.
+
 .. _`sec_output`:
 
 Output

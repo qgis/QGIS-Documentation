@@ -8,7 +8,7 @@
 **********************************
 
 The attribute table displays information on features of a selected layer. Each
-row in the table represents a feature (with geometry or not), and each column
+row in the table represents a feature (with or without geometry), and each column
 contains a particular piece of information about the feature.
 Features in the table can be searched, selected, moved or even edited.
 
@@ -20,45 +20,44 @@ Features in the table can be searched, selected, moved or even edited.
 .. index:: Non Spatial Attribute Tables, Geometryless Data
 .. _non_spatial_attribute_tables:
 
-Non spatial tables
-==================
+Foreword: Spatial and non-spatial tables
+========================================
 
 QGIS allows you to load spatial and non-spatial layers. This currently includes
 tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
-SpatiaLite, DB2 and Oracle provider. When loaded in QGIS, they are listed in
-the :guilabel:`Layers Panel`. Whether the layer you are working with is
-spatially enabled or not doesn't change features you can have access to,
-except map canvas interaction.
+SpatiaLite, DB2 and Oracle provider. All loaded layers are listed in
+the :guilabel:`Layers Panel`. Whether a layer is spatially enabled or not 
+determines whether you can interact with it on the map.
 
-Non spatial tables can be used for field lookups or just generally browsed and
-edited using the table view. 
-As an example, you can use columns of the non-spatial table to define attribute
+Non-spatial tables can be browsed and edited using the attribute table view. 
+Furthermore, they can be used for field lookups.
+For example, you can use columns of a non-spatial table to define attribute
 values, or a range of values that are allowed, to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
 :ref:`vector_attributes_menu` to find out more.
 
 .. _attribute_table_overview:
 
-Manipulate the Attribute table interface
+Introducing the attribute table interface
 =========================================
 
-Dialog overview
-----------------
-
-To open the attribute table for a vector layer, make the layer active by
+To open the attribute table for a vector layer, activate the layer by
 clicking on it in the :ref:`label_legend`. Then, from the main
 :menuselection:`Layer` menu, choose |openTable| :menuselection:`Open Attribute
 Table`. It is also possible to right-click on the layer and choose
 |openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
 or to click on the |openTable| :guilabel:`Open Attribute Table` button
-in the Attributes toolbar.
+in the Attributes toolbar. 
+If you prefer shortcuts, :kbd:`F6` will open the attribute table. 
+:kbd:`Shift+F6` will open the attribute table filtered to selected features and 
+:kbd:`Ctrl+F6` will open the attribute table filtered to visible features.
 
 This will open a new window that displays the feature attributes for the
 layer (figure_attributes_table_). According to the setting in
 :menuselection:`Settings --> Options --> Data sources` menu, the attribute table
-will open in a docked window or not. The total number of features in the layer
+will open in a docked window or a regular window. The total number of features in the layer
 and the number of currently selected/filtered features are shown in the
-attribute table title as well as if the layer is spatially limited.
+attribute table title, as well as if the layer is spatially limited.
 
 
 .. _figure_attributes_table:
@@ -158,14 +157,14 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 .. index:: Sort columns, Add actions
    pair: Attributes; Columns
 
-Configure the columns
-----------------------
+Configuring the columns
+-----------------------
 
 Right-click in a column header when in table view to have access to tools that
 help you configure what can be displayed in the attribute table and how.
 
-Hide, organize columns and enable actions
-.........................................
+Hiding and organizing columns and enabling actions
+..................................................
 
 By right-clicking in a column header, you can choose to hide it from the
 attribute table. To change several columns behavior at once, unhide a column or
@@ -180,8 +179,8 @@ In the new dialog, you can:
   drop-down box or button list of actions for each row, see :ref:`actions_menu`
   for more information about actions.
 
-Resize columns width
-.....................
+Resizing columns widths
+.......................
 
 Columns width can be set through a right-click on the column header and
 select either:
@@ -194,8 +193,8 @@ It can also be changed by dragging the boundary on the right of the column
 heading. The new size of the column is maintained for the layer, and restored at
 the next opening of the attribute table.
 
-Sort columns
-.............
+Sorting columns
+...............
 
 The table can be sorted by any column, by clicking on the column header. A
 small arrow indicates the sort order (downward pointing means descending
@@ -208,13 +207,23 @@ using multiple columns you can write ``concat(col0, col1)``.
 In form view, features identifier can be sorted using the |sort| :guilabel:`Sort
 by preview expression` option.
 
+.. _tip_sortcolumns:
+
+.. tip:: **Sorting based on columns of different types**
+
+  Trying to sort an attribute table based on columns of string and numeric types
+  may lead to unexpected result because of the ``concat("USE", "ID")`` expression
+  returning string values (ie, ``'Borough105' < 'Borough6'``).
+  You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
+  returns ``'Borough105' > 'Borough006'``. 
+
 .. index:: Conditional formatting
 .. _conditional_formatting:
 
-Conditional formatting of Table Cells
---------------------------------------
+Formatting of table cells using conditions
+------------------------------------------
 
-The conditional formatting settings can be used to highlight in the attribute
+Conditional formatting settings can be used to highlight in the attribute
 table features you may want to put a particular focus on, using custom
 conditions on feature's:
 
@@ -346,8 +355,8 @@ It is also possible to filter features using the :ref:`filter_select_form`.
 
 .. _filter_select_form:
 
-Filter/Select features using form
----------------------------------
+Filtering and selecting features using forms
+--------------------------------------------
 
 Clicking the |filterMap| :sup:`Filter/Select features using form` or
 pressing :kbd:`Ctrl+F` the attribute table dialog will switch to form view
@@ -378,8 +387,8 @@ To clear the filter, either select :guilabel:`Show all features` option
 mentioned in :ref:`filter_features`, or click the clear the expression and
 click **[Apply]**.
 
-Action on features
-==================
+Using action on features
+========================
 
 Users have several possibilities to manipulate feature with the contextual menu
 like:
@@ -416,8 +425,8 @@ You can also display a list of actions in this contextual menu. This is enabled
 in the :menuselection:`Layer properties --> Actions` tab.
 See :ref:`actions_menu` for more information on actions.
 
-Save selected features as new layer
-------------------------------------
+Saving selected features as new layer
+-------------------------------------
 
 The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). In the
@@ -447,8 +456,8 @@ Editing attribute values can be done by:
 
 .. _vector_field_calculator:
 
-Field Calculator
-----------------
+Using the Field Calculator
+--------------------------
 
 The |calculateField| :sup:`Field Calculator` button in the attribute table
 allows you to perform calculations on the basis of existing attribute values or
@@ -502,8 +511,8 @@ A short example illustrates how field calculator works when using the
 
 .. _virtual_field:
 
-Create a Virtual Field
------------------------
+Creating a Virtual Field
+------------------------
 
 A virtual field is a field based on an expression calculated on the fly, meaning
 that its value is automatically updated as soon as the underlying parameter
@@ -522,8 +531,8 @@ that may change (e.g., using ``now()`` function).
 
 .. _quick_field_calculation_bar:
 
-The Quick Field Calculation Bar
--------------------------------
+Using the Quick Field Calculation Bar
+-------------------------------------
 
 While Field calculator is always available, the quick field calculation bar on
 top of the attribute table is only visible if the layer is in edit mode. Thanks
@@ -541,8 +550,8 @@ In quick field calculation bar, you simply need to:
 .. index:: Multi edit
 .. _multi_edit_fields:
 
-Edit multiple fields
----------------------
+Editing multiple fields
+-----------------------
 
 Unlike the previous tools, multi edit mode allows multiple attributes of
 different features to be edited simultaneously. When the layer is toggled to
@@ -615,8 +624,8 @@ features (rows) of different layers (tables) can belong to each other.
 
 .. _one_to_many_relation:
 
-1-N relation
-------------
+Introducing 1-N relations
+-------------------------
 
 As an example you have a layer with all regions of alaska (polygon)
 which provides some attributes about its name and region type and a
@@ -634,8 +643,8 @@ relation using foreign keys, because there are several airports in most regions.
 
    Alaska region with airports
 
-Layers
-......
+Layers in 1-N relations
+.......................
 
 QGIS makes no difference between a table and a vector layer. Basically, a vector
 layer is a table with a geometry. So you can add your table as a vector layer.
@@ -645,8 +654,8 @@ the layer regions. This means, that each airport belongs to exactly one region
 while each region can have any number of airports (a typical one to many
 relation).
 
-Foreign keys
-............
+Foreign keys in 1-N relations
+.............................
 
 In addition to the already existing attributes in the airports attribute table,
 you'll need another field ``fk_region`` which acts as a foreign key (if you have
@@ -658,8 +667,8 @@ for editing and QGIS takes care of the setup. It works with different
 providers (so you can also use it with shape and csv files) and all you have
 to do is to tell QGIS the relations between your tables.
 
-Definition (Relation Manager)
-.............................
+Defining 1-N relations (Relation Manager)
+.........................................
 
 The first thing we are going to do is to let QGIS know about the relations
 between the layers. This is done in :menuselection:`Project --> Project Properties...`.
@@ -689,8 +698,8 @@ Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
 
 .. index:: Feature form, Linked forms, Embedded form
 
-Forms
-.....
+Forms for 1-N relations
+.......................
 
 Now that QGIS knows about the relation, it will be used to improve the
 forms it generates. As we did not change the default form method (autogenerated)
@@ -744,10 +753,10 @@ you to assign the current airport to another region.
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
 
-N-M relation
--------------
+Introducing many-to-many (N-M) relations
+----------------------------------------
 
-N-M relation is a many-to-many relation between two tables. For instance, the
+N-M relations are many-to-many relation between two tables. For instance, the
 ``airports`` and ``airlines`` layers: an airport receives several airline
 companies and an airline company flies to several airports.
 
@@ -774,7 +783,7 @@ CASCADE* instruction in the foreign key constraint:
          REFERENCES location.airports(id)
             ON DELETE CASCADE;
 
-.. note:: **Combine N-M relation with automatic transaction group**
+.. note:: **Combining N-M relation with automatic transaction group**
 
   You should enable the transaction mode in :menuselection:`Project Properties
   --> Data Sources -->` when working on such context. QGIS should be able to

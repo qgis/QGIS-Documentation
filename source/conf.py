@@ -71,17 +71,17 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 # uncomment to exclude the processing algs from build
 #exclude_patterns += ['docs/user_manual/processing_algs/*']
 # uncomment to exclude the user manual from build
-#exclude_patterns += ['docs/user_manual/*']
+# exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
-#exclude_patterns += ['docs/training_manual/*']
+# exclude_patterns += ['docs/training_manual/*']
 # uncomment to exclude developer guides from build
-#exclude_patterns += ['docs/developers_guide/*']
+# exclude_patterns += ['docs/developers_guide/*']
 # uncomment to exclude doc guides from build
-#exclude_patterns += ['docs/documentation_guidelines/*']
+# exclude_patterns += ['docs/documentation_guidelines/*']
 # uncomment to exclude gentle intro  from build
-#exclude_patterns += ['docs/gentle_gis_introduction/*']
+# exclude_patterns += ['docs/gentle_gis_introduction/*']
 # uncomment to exclude pyqgis dev book from build
-#exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
+# exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -177,7 +177,7 @@ html_sidebars = {
 #html_domain_indices = True
 
 # If false, no index is generated.
-html_use_index = False
+#html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
@@ -238,7 +238,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.14
+.. |CURRENT| replace:: 2.18
 
 .. |degrees| unicode:: 0x00B0
    :ltrim:
@@ -383,6 +383,8 @@ rst_epilog = """
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
+   :width: 1.5em
+.. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |clip| image:: /static/common/clip.png
    :width: 1.5em
@@ -726,6 +728,12 @@ rst_epilog = """
 .. |iconHideToolConsole|  image:: /static/common/iconHideToolConsole.png
    :width: 1.5em
 .. |iconIfaceConsole|  image:: /static/common/iconIfaceConsole.png
+   :width: 1.5em
+.. |iconJoinHasNotUpsertOnEdit|   image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |iconJoinNotEditable|   image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |iconJoinedLayerNotEditable|   image:: /static/common/mIconJoinedLayerNotEditable.png
    :width: 1.5em
 .. |iconMethodTreeWidgetConsole|  image:: /static/common/iconMethodTreeWidgetConsole.png
    :width: 1.5em
@@ -1099,7 +1107,7 @@ rst_epilog = """
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |showPresets| image:: /static/common/mActionShowPresets.png
+.. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
@@ -1242,7 +1250,7 @@ rst_epilog = """
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-# latex_paper_size = 'a4'  # depricated, now in latex_elements
+# latex_paper_size = 'a4'  # deprecated, now in latex_elements
 
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '10pt'
@@ -1501,4 +1509,3 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
                   ]
-

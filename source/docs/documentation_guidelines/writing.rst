@@ -415,7 +415,7 @@ Please note: Footnotes are not recognized by any translation software and
 it is also not converted to pdf format properly.
 So, if possible don't use footnotes within any documentation.
 
-This is for creating a footnote
+This is for creating a footnote (showing as example [1]_)
 
 .. code-block:: rst
 

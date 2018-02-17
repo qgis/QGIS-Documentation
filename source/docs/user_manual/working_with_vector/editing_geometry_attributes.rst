@@ -64,10 +64,10 @@ The snapping tolerance setting affects all tools that work with tolerance.
    snapping units in feet. Your results may vary, but something on the order
    of 300 ft at a scale of 1:10000 should be a reasonable setting.
 #. A layer-based snapping tolerance that overrides the global snapping options
-   can be defined by choosing :menuselection:`Settings --> Snapping options`.
-   It enables and adjusts snapping mode
-   and tolerance on a layer basis (see figure_edit_snapping_ ). This dialog offers
-   three different modes to select the layer(s) to snap to:
+   can be defined by choosing :menuselection:`Project --> Snapping options`.
+   It helps to enable and adjust snapping mode and tolerance on a layer basis
+   (see figure_edit_snapping_). This dialog offers three different modes to
+   select the layer(s) to snap to:
 
    * :guilabel:`Current layer`: only the active layer is used, a convenient way
      to ensure topology within the layer being edited
@@ -110,16 +110,16 @@ Search radius
 Search radius is the distance QGIS uses to ``search`` for the closest vertex
 you are trying to select when you click on the map. If you aren't within the
 search radius, QGIS won't find and select any vertex for editing.
-Snap tolerance and search radius are set in map units or pixels, so you may
+The search radius for vertex edits can be defined under :menuselection:`Settings -->`
+|options| :menuselection:`Options --> Digitizing` tab. This is the same
+place where you define the general, project-wide snapping tolerance.
+
+Snap tolerance and search radius are set in ``map units`` or ``pixels``, so you may
 find you need to experiment to get them set right. If you specify too big of
 a tolerance, QGIS may snap to the wrong vertex, especially if you are dealing
 with a large number of vertices in close proximity. Set search radius too
 small, and it won't find anything to move.
 
-The search radius for vertex edits in layer units can be defined in the
-:guilabel:`Digitizing` tab under :menuselection:`Settings -->` |options|
-:menuselection:`Options`. This is the same place where you define the general,
-project-wide snapping tolerance.
 
 
 .. index:: Topological editing

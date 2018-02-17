@@ -17,5 +17,5 @@ enhancements over |QGIS_CURRENT|_ that will be described in this manual.
 You may also review the visual changelogs at http://qgis.org/en/site/forusers/visualchangelogs.html.
 
 
-.. |QGIS_CURRENT| replace:: QGIS 2.14
-.. _QGIS_CURRENT: http://docs.qgis.org/2.14/en/docs/
+.. |QGIS_CURRENT| replace:: QGIS 2.18
+.. _QGIS_CURRENT: http://docs.qgis.org/2.18/en/docs/

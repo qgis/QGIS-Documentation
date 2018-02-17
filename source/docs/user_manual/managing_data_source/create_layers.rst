@@ -14,29 +14,60 @@
       :local:
 
 
-Creating a layer can be processed in many ways in QGIS; it can be done:
+Layers can be created in many ways, including:
 
-* from scratch, creating an empty layer;
-* from an existing layer;
-* from the clipboard;
-* as a result of an SQL-like query based on one or many layers: the
+* empty layers from scratch;
+* layers from existing layers;
+* layers from the clipboard;
+* layers as a result of an SQL-like query based on one or many layers: the
   :ref:`virtual layer <vector_virtual_layers>`.
 
-QGIS also provides particular tools to import/export different formats.
+QGIS also provides tools to import/export different formats.
 
 .. index:: Create new layers
 .. index:: Shapefile, SpatiaLite, GPX
 
 .. _sec_create_vector:
 
-Creating new Vector layers
+Creating new vector layers
 ==========================
 
-QGIS allows you to create new shapefile layers, new SpatiaLite layers, new
-GPX layers and New Temporary Scratch Layers. Creation of a new GRASS layer
+QGIS allows you to create new Shapefile layers, new SpatiaLite layers, new
+GPX layers and new Temporary Scratch layers. Creation of a new GRASS layer
 is supported within the GRASS plugin.
-Please refer to section :ref:`creating_new_grass_vectors` for more information
-on creating GRASS vector layers.
+(Please refer to section :ref:`creating_new_grass_vectors` for more information
+on creating GRASS vector layers.)
+
+
+.. index:: New GeoPackage layer
+.. _vector_create_geopackage:
+
+Creating a new GeoPackage layer
+-------------------------------
+
+To create a new GeoPackage layer go to :menuselection:`Layer --> New -->`
+|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...`.
+The :guilabel:`New GeoPackage Layer` dialog will
+be displayed as shown in figure_create_geopackage_.
+
+.. _figure_create_geopackage:
+
+.. figure:: /static/user_manual/managing_data_source/editNewGeoPackage.png
+   :align: center
+
+   Creating a New GeoPackage layer dialog
+
+The first step is to select an existing GeoPackage or create a new one. This
+can be done by pressing the ellipses **[...]** button at the right of the
+Database field. Then, give a name for the new layer, define the layer type and
+specify the coordinate reference system with **[Specify CRS]**.
+
+To define an attribute table for the new GeoPackage layer, add the names of
+the attribute columns you want to create with the corresponding column type, 
+and click on the **[Add to fields list]** button. Once you are happy with the
+attributes, click **[OK]**. QGIS will automatically add the new layer to the
+legend, and you can edit it in the same way as described in section
+:ref:`sec_edit_existing_layer`.
 
 
 .. _vector_create_shapefile:
@@ -44,14 +75,14 @@ on creating GRASS vector layers.
 Creating a new Shapefile layer
 ------------------------------
 
-To create a new shape layer for editing, choose :menuselection:`Create
+To create a new Shapefile layer, choose :menuselection:`Create
 Layer -->` |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Shapefile Layer` dialog will be
-displayed as shown in figure_create_shapefile_. Choose the type of layer
-(point, line or polygon) and the CRS (coordinate reference system).
-
-Note that QGIS does not yet support creation of 2.5D features (i.e., features
-with X,Y,Z coordinates).
+displayed as shown in figure_create_shapefile_. 
+The first step is to provide a path and name for the Shapefile. QGIS will
+automatically add the :file:`.shp` extension to the name you specify
+Next, choose the type of layer (point, line or polygon) and optional Z or M 
+dimensions, as well as the CRS (coordinate reference system).
 
 .. _figure_create_shapefile:
 
@@ -60,18 +91,18 @@ with X,Y,Z coordinates).
 
    Creating a new Shapefile layer dialog
 
-To complete the creation of the new shapefile layer, add the desired attributes
-by clicking on the **[Add to attributes list]** button and specifying a name and
-type for the attribute. A first 'id' column is added as default but can be
-removed, if not wanted. Only :guilabel:`Type: real` |selectString|,
-:guilabel:`Type: integer` |selectString|, :guilabel:`Type: string`
-|selectString| and :guilabel:`Type:date` |selectString| attributes are
-supported. Additionally and according to the attribute type, you can also define
-the width and precision of the new attribute column. Once you are happy with the
-attributes, click **[OK]** and provide a name for the shapefile. QGIS will
-automatically add a :file:`.shp` extension to the name you specify. Once the
-layer has been created, it will be added to the map, and you can edit it in the
-same way as described in section :ref:`sec_edit_existing_layer`.
+To complete the creation of the new Shapefile layer, add the desired attributes
+by specifying a name and type for each attribute and clicking on the 
+**[Add to fields list]** button. 
+A first 'id' column is added by default but can be
+removed, if not wanted. Only :guilabel:`Decimal number` |selectString|,
+:guilabel:`Whole number` |selectString|, :guilabel:`Text data`
+|selectString| and :guilabel:`Date` |selectString| attributes are
+supported. Additionally, depending on the attribute type, you can also define
+the length and precision of the new attribute column. Once you are happy with the
+attributes, click **[OK]**. 
+Once the Shapefile has been created, it will be added to the map as a new layer,
+and you can edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
 
 
 .. index:: New SpatiaLite layer
@@ -108,35 +139,6 @@ legend, and you can edit it in the same way as described in section
 Further management of SpatiaLite layers can be done with the DB Manager. See
 :ref:`dbmanager`.
 
-.. index:: New GeoPackage layer
-.. _vector_create_geopackage:
-
-Creating a new GeoPackage layer
--------------------------------
-
-To create a new GeoPackage layer go to :menuselection:`Layer --> New -->`
-|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...`.
-The :guilabel:`New GeoPackage Layer` dialog will
-be displayed as shown in figure_create_geopackage_.
-
-.. _figure_create_geopackage:
-
-.. figure:: /static/user_manual/managing_data_source/editNewGeoPackage.png
-   :align: center
-
-   Creating a New GeoPackage layer dialog
-
-The first step is to select an existing GeoPackage or create a new one. This
-can be done by pressing the ellipses **[...]** button at the right of the
-Database field. Then, give a name for the new layer, define the layer type and
-specify the coordinate reference system with **[Specify CRS]**.
-
-To define an attribute table for the new GeoPackage layer, add the names of
-the attribute columns you want to create with the corresponding column type, 
-and click on the **[Add to fields list]** button. Once you are happy with the
-attributes, click **[OK]**. QGIS will automatically add the new layer to the
-legend, and you can edit it in the same way as described in section
-:ref:`sec_edit_existing_layer`.
 
 .. index:: New GPX layer
 .. _vector_create_gpx:
@@ -163,23 +165,30 @@ predefined structure.
 Creating a new Temporary Scratch Layer
 --------------------------------------
 
-Empty, editable memory layers can be defined using :menuselection:`Layer -->
-Create Layer --> New Temporary Scratch Layer`. Here you can even create
+Temporary Scratch Layers are in-memory layers, meaning that they are not saved
+on disk and will be discarded when QGIS is closed. They can be handy to store
+features you temporarily need or as intermediate layers during geoprocessing
+operations. 
+
+Empty, editable temporary scratch layers can be defined using :menuselection:`Layer -->
+Create Layer --> New Temporary Scratch Layer`. Here you can create
 |radioButtonOff|:guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
 and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath
 |radioButtonOn|:guilabel:`Point`, |radioButtonOff|:guilabel:`Line` and
-|radioButtonOff|:guilabel:`Polygon` Layers. Temporary Scratch Layers are not
-saved and will be discarded when QGIS is closed. See also :ref:`paste_into_layer`.
+|radioButtonOff|:guilabel:`Polygon` layers. 
 
+You can also create Temporary Scratch Layers from the clipboard. See
+:ref:`paste_into_layer`.
 
 .. index:: Save layer
 .. _general_saveas:
 
-Save layer from an existing file
-================================
+Creating new layers from an existing layer
+==========================================
 
-Layers (raster or vector) or subset of layers can be saved in another format
-with the :guilabel:`Save As...` feature in the layer contextual menu (by
+Both raster and vector layers can be saved in a different format and/or reprojected
+to a different coordinate reference system (CRS)
+using the :guilabel:`Save As...` function in the layer context menu (by
 right-clicking in the layer in the layer tree) or in the :menuselection:`Layer
 --> Save As...` menu.
 
@@ -187,11 +196,11 @@ Common parameters
 -----------------
 
 The :guilabel:`Save As` dialog shows several parameters to change the behavior
-when saving the layer. Common parameters (raster and vector) are:
+when saving the layer. Common parameters for raster and vector are:
 
 * :guilabel:`Format`
 * :guilabel:`File name`
-* :guilabel:`CRS`
+* :guilabel:`CRS` can be changed to reproject the data
 * :guilabel:`Add saved file to map` to add the new layer to the canvas
 * :guilabel:`Extent` (possible values are **layer**, **Map view** or
   **user-defined** extent)
@@ -293,8 +302,8 @@ For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 .. index:: DXF Export
 .. _create_dxf_files:
 
-Create DXF files
-================
+Creating new DXF files
+======================
 
 Besides the :guilabel:`Save As...` dialog which provides options to export a
 single layer to another format, including :file:`*.DXF`, QGIS provides another
@@ -308,7 +317,7 @@ The :guilabel:`DXF Export` dialog allows the user to:
   <ogr_features_note>`_ note);
 * select the encoding and CRS;
 * check the loaded layers to include in the DXF files or pick them from an
-  existing :ref:`visibility preset <preset_visibility>`.
+  existing :ref:`map theme <map_themes>`.
 
   For each layer, you can choose a field whose values are used to split features
   in generated destination layers in the DXF output. You can also choose to
@@ -319,8 +328,8 @@ The :guilabel:`DXF Export` dialog allows the user to:
 
 .. _paste_into_layer:
 
-Create layer from a clipboard
-=============================
+Creating new layers from the clipboard
+======================================
 
 Features that are on the clipboard can be pasted into a new layer. To do this,
 Select some features, copy them to the clipboard, and then paste them into a
@@ -343,24 +352,22 @@ added to map canvas if asked.
 .. index:: Virtual layers
 .. _vector_virtual_layers:
 
-Virtual layers
-==============
+Creating virtual layers
+=======================
 
-A special kind of vector layer allows you to define a layer as the result of an
-advanced query, using the SQL language on any number of other vector layers that
-QGIS is able to open. These layers are called virtual layers: they do not carry
+Virtual layers are a special kind of vector layer.
+They allow you to define a layer as the result of an
+SQL query involving any number of other vector layers that
+QGIS is able to open. Virtual layers do not carry
 data by themselves and can be seen as views to other layers.
 
-Creating a virtual layer
-------------------------
-
-Open the virtual layer creation dialog by clicking on
+To create a virtual layer, open the virtual layer creation dialog by clicking on
 :guilabel:`Add Virtual Layer` in the :guilabel:`Layer` menu or from the
 corresponding toolbar.
 
-The dialog allows you to specify a :guilabel:`Layer name` and a SQL
+The dialog allows you to specify a :guilabel:`Layer name` and an SQL
 :guilabel:`Query`. The query can use the name (or id) of loaded vector
-layers as tables, as well as their fields' name as columns.
+layers as tables, as well as their field names as columns.
 
 For example, if you have a layer called ``airports``, you can create a new
 virtual layer called ``public_airports`` with an SQL query like:
@@ -371,8 +378,8 @@ virtual layer called ``public_airports`` with an SQL query like:
    FROM airports
    WHERE USE = "Civilian/Public"
 
-The SQL query will be executed, whatever the underlying provider of the
-``airports`` layer is and even if this provider does not directly support SQL
+The SQL query will be executed, regardless of the underlying provider of the
+``airports`` layer, even if this provider does not directly support SQL
 queries.
 
 .. figure:: /static/user_manual/managing_data_source/create_virtual_layers.png
@@ -380,16 +387,23 @@ queries.
 
    Create virtual layers dialog
 
-Joins and complex queries can also be created simply by directly using the
-names of the layers that are to be joined.
+Joins and complex queries can also be created, for example, to join airports
+and country information:
+
+.. code-block:: sql
+
+   SELECT airports.*, country.population
+   FROM airports
+   JOIN country
+   ON airports.country = country.name
 
 .. note::
 
    It's also possible to create virtual layers using the SQL window of
    :ref:`dbmanager`.
 
-Embedded layers
----------------
+Embedding layers for use in queries
+-----------------------------------
 
 Besides the vector layers available in the map canvas, the user can add layers
 to the :guilabel:`Embedded layers` list, which he can use in queries
@@ -403,8 +417,8 @@ The :guilabel:`Import` button allows adding layers loaded in the map canvas into
 the Embedded layers list. This allows to later remove those layers from the
 Layers panel without breaking any existent query.
 
-Supported language
-------------------
+Supported query language
+------------------------
 
 The underlying engine uses SQLite and SpatiaLite to operate.
 

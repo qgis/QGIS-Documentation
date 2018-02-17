@@ -118,8 +118,8 @@ Change the new layer's symbology so that it will be easier to see what polygons 
 
 Now, if you remember past modules, we have to set up and activate the snapping options:
 
-* Go to :menuselection:`Settings --> Snapping options...`.
-* Activate the snapping the  :kbd:`green_centroids` and the :kbd:`forest_stands` layers.
+* Go to :menuselection:`Project --> Snapping options...`.
+* Activate the snapping for the :kbd:`green_centroids` and the :kbd:`forest_stands` layers.
 * Set their :guilabel:`Tolerance` to 5 map units.
 * Check the :guilabel:`Avoid Int.` box for the :kbd:`forest_stands` layer.
 * Check :guilabel:`Enable topological editing`.
