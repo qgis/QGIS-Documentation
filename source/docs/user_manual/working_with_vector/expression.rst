@@ -73,7 +73,7 @@ The Expression builder dialog offers access to the:
 
   Likewise, the previous expression could also be used to define which features
   should be labeled or shown in the map.
-  
+
 Using expressions offers you a lot of possibilities.
 
 .. index:: Named parameters
@@ -107,7 +107,7 @@ using functions, layer's fields and values. It contains widgets to:
   Double-clicking on the item's name adds it to the expression being written.
 * display help for each function selected. When a field is selected, this widget
   shows a sample of its values. Double-clicking a value adds it to the expression.
-  
+
 .. _figure_expression_tab:
 
 .. figure:: /static/user_manual/working_with_vector/function_list.png
@@ -274,6 +274,7 @@ This group contains math functions (e.g., square root, sin and cos).
  tan                Returns the tangent of an angle
 =================  ==========================================================
 
+.. _aggregates_function:
 
 Aggregates Functions
 --------------------
