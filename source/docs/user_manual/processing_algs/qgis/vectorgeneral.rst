@@ -11,8 +11,6 @@ Vector general
       :local:
       :depth: 1
 
-.. note:: Each algorithm can be use in the python console using internalProcessing
-  API. Refer to the section :ref:`processing_console`
 
 .. _qgis_assign_projection:
 
@@ -43,6 +41,10 @@ Outputs
 .......
 ``Assigned CRS`` [vector: any]
   Vector layer with assigned projection.
+
+See also
+........
+:ref:`qgis_find_projection`, :ref:`qgis_reproject_layer`
 
 
 .. _qgis_build_virtual_vector:
@@ -95,8 +97,9 @@ Parameters
 
 Create spatial index
 --------------------
-Creates a spatial index to speed up queries made against a field in a table. Support
-for index creation is dependent on the layer's data provider and the field type.
+Creates an index to speed up access to the features in a layer based on their
+spatial location. Support for spatial index creation is dependent on the layer's
+data provider.
 
 No new output layers are created.
 
@@ -104,9 +107,6 @@ Parameters
 ..........
 ``Input layer`` [vector: any]
   Vector layer in input
-
-``Attribute to index`` [tablefield: any]
-  Choose the attribute you want to index in order to speed up future queries.
 
 
 .. _qgis_define_current_projection:
@@ -157,7 +157,7 @@ Drop geometries
 Creates a simple *geometryless* copy of the input layer attribute table. It keeps
 the attribute table of the source layer.
 
-If the file is save in a local folder, you can choose between many file formats.
+If the file is saved in a local folder, you can choose between many file formats.
 
 Parameters
 ..........
@@ -182,9 +182,9 @@ The result of the query will be added as new layer.
 Parameters
 ..........
 ``Additional input datasource`` [selection: vector]
-  List of layers to query. In the   SQL editor you can refer this layers with their
-  **real** name or also with   **input1**, **input2**, **inputN** depending on
-  how many layer have been chosen.
+  List of layers to query. In the   SQL editor you can refer this layers with
+  their **real** name or also with   **input1**, **input2**, **inputN** depending
+  on how many layers have been chosen.
 
 ``SQL query`` [text]
   Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
@@ -202,7 +202,7 @@ Parameters
   Default: *Autodetect*
 
 ``CRS`` (optional)
-  The output layer to be reprojected to another CRS
+  The CRS to or assign to the output layer
 
 
 Outputs
@@ -242,6 +242,10 @@ Outputs
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
   criteria
+
+See also
+........
+:ref:`qgis_assign_projection`, :ref:`qgis_reproject_layer`
 
 
 .. _qgis_join_attributes_by_location:
@@ -497,6 +501,10 @@ Outputs
 ``Reprojected layer`` [vector]
   The resulting reprojected layer.
 
+See also
+........
+:ref:`qgis_assign_projection`, :ref:`qgis_find_projection`
+
 
 .. _qgis_save_selected_features:
 
@@ -532,7 +540,7 @@ Parameters
   The layer you want to change the style
 
 ``Style file`` [file]
-  `qml` file of the style
+  ``qml`` file of the style
 
 
 .. _qgis_split_vector_layer:
