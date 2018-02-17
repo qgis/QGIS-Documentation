@@ -308,7 +308,7 @@ The :guilabel:`DXF Export` dialog allows the user to:
   <ogr_features_note>`_ note);
 * select the encoding and CRS;
 * check the loaded layers to include in the DXF files or pick them from an
-  existing :ref:`visibility preset <preset_visibility>`.
+  existing :ref:`map theme <map_themes>`.
 
   For each layer, you can choose a field whose values are used to split features
   in generated destination layers in the DXF output. You can also choose to

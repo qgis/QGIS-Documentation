@@ -60,8 +60,8 @@ At the top of the Layers panel, a toolbar allows you to:
 * |symbology| :sup:`Open the layer styling dock`: toggle the layer styling
   panel on and off.
 * |addGroup| :sup:`Add new group`
-* |showPresets| :sup:`Manage Visibility`: control visibility of layers and
-  preset layers combination.
+* |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and 
+  arrange them in different map themes. 
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
   visible and whose features intersect the current map canvas have their style
   rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
@@ -87,26 +87,27 @@ At the top of the Layers panel, a toolbar allows you to:
    Tools to manage the layers panel are also available to layout the map
    and legend items of the print composer
 
-.. index:: Preset visibility
-.. _preset_visibility:
+.. index:: Map themes
+.. _map_themes:
 
-Preset the layers visibility
-............................
+Configuring map themes
+......................
 
-The button |showPresets| allows you to add **Presets** views in the legend.
-Presets are a way to save and easily restore a combination of layers with their
-current style. To add a preset view, just set visible the layers you want, with
-their desired symbology, and click on |showPresets| button.
-Choose :menuselection:`Add Preset...` from the drop-down menu and give a name to the preset.
-The added preset is listed at the bottom of the drop-down menu and is recalled by
+The button |showMapTheme| allows you to configure **Map Themes** in the legend.
+These themes are helpful to quickly switch between different preconfigured layer 
+combinations and can also be used in Print Composer. 
+To create a map theme, activate the layers you want to include and configure 
+the desired layer styles. Then press the |showMapTheme| button and choose 
+:menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
+The new theme is listed at the bottom of the drop-down menu and can be restored by
 clicking on it.
 
-The :menuselection:`Replace Preset -->` option helps you overwrite a preset content
-with the current map view while the :menuselection:`Remove Current Preset` button
-deletes the active preset.
+The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
+with the currently enabled layers and their styles while the 
+:menuselection:`Remove Current Theme` button deletes the active theme.
 
-All the added presets are also present in the map composer in order to allow you
-to create a map layout based on your specific views (see :ref:`composer_main_properties`).
+All configured themes are also accessible in the Print Composer. This allows you
+to create a map layout based on specific themes (see :ref:`composer_main_properties`).
 
 Overview of the context menu of the Layers panel
 ................................................
@@ -603,9 +604,9 @@ Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
-at a time. Combined to layer visibility preset, this offers a quick and powerful
-way to manage complex projects with few layers (no need to duplicate any layer
-in the map legend).
+at a time. In combination with Map Themes (see :ref:`map_themes`), 
+this offers a quick and powerful way to manage complex projects without the need 
+to duplicate any layer in the map legend.
 
 .. tip:: **Manage styles from layer context menu**
 
