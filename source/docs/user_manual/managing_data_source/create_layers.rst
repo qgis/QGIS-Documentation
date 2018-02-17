@@ -171,14 +171,25 @@ features you temporarily need or as intermediate layers during geoprocessing
 operations. 
 
 Empty, editable temporary scratch layers can be defined using :menuselection:`Layer -->
-Create Layer --> New Temporary Scratch Layer`. Here you can create
-|radioButtonOff|:guilabel:`Multipoint`, |radioButtonOff|:guilabel:`Multiline`
-and |radioButtonOff|:guilabel:`Multipolygon` Layers beneath
-|radioButtonOn|:guilabel:`Point`, |radioButtonOff|:guilabel:`Line` and
-|radioButtonOff|:guilabel:`Polygon` layers. 
+Create Layer --> New Temporary Scratch Layer` or |createMemory| :sup:`New temporary
+scratch layer` button from the :guilabel:`Manage Layers Toolbar`. Here you can
+create a:
 
-You can also create Temporary Scratch Layers from the clipboard. See
-:ref:`paste_into_layer`.
+* ``No geometry`` type layer, served as simple table,
+* ``Point`` or ``Multipoint`` layer,
+* ``LineString/CompoundCurve`` or ``MultilineString/MultiCurve`` layer,
+* ``Polygon/CurvePolygon`` or ``Multipolygon/MultiSurface`` layer.
+
+.. _figure_create_temporary:
+
+.. figure:: /static/user_manual/managing_data_source/editNewTemporaryLayer.png
+   :align: center
+
+   Creating a new Temporary Scratch layer dialog
+
+By default, a new temporary scratch layer is created without any attribute. But
+you can also create prepopulated temporary scratch layers using e.g. the clipboard.
+See :ref:`paste_into_layer`.
 
 .. index:: Save layer
 .. _general_saveas:
