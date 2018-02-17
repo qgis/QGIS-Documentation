@@ -181,9 +181,7 @@ Parameters
 
 ``Formula`` [string]
   Add here the Python formula to evaluate. For example to calculate the area of
-  an input polygon layer you can add:
-
-  .. code-block:: python
+  an input polygon layer you can add::
 
     value = $geom.area()
 
