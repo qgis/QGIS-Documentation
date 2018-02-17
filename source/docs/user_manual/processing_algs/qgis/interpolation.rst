@@ -13,8 +13,8 @@ Interpolation
 
 .. _qgis_heatmap:
 
-Heatmap
--------
+Heatmap (kernel density estimation)
+-----------------------------------
 Creates a density (heatmap) raster of an input point vector layer using kernel
 density estimation.
 
@@ -30,7 +30,7 @@ Parameters
   Point vector layer to use for the heatmap
 
 ``Radius (layer units)`` [number]
-  Heatmap search radius (or kernel bandwidth) in meters or map units. The radius
+  Heatmap search radius (or kernel bandwidth) in map units. The radius
   specifies the distance around a point at which the influence of the point will
   be felt.
   Larger values result in greater smoothing, but smaller values may show finer
@@ -41,9 +41,9 @@ Parameters
   **or** the X and Y pixel size.
 
   Increasing the number of rows or columns will decrease the cell size and increase
-  the file size of the output file. The values in ``Rows`` and ``Columns`` are also
-  linked, so doubling the number of rows will automatically double the number of
-  columns and the cell sizes will also be halved.
+  the file size of the output file. At the same time, the values in ``Rows`` and
+  ``Columns`` will also be updated, so doubling the number of rows will automatically
+  double the number of columns and the cell sizes will also be halved.
   The extent of the output raster will remain the same.
 
 ``Radius from field`` [tablefield: numeric]
@@ -153,11 +153,10 @@ can now be styled in QGIS to improve its appearance.
 #. Open the properties dialog of the ``heatmap_airports`` layer (select the layer
    ``heatmap_airports``, open the context menu with the right mouse button and select
    :guilabel:`Properties`).
-#. Select the :guilabel:`Style` tab.
+#. Select the :guilabel:`Symbology` tab.
 #. Change the :guilabel:`Render type` |selectString| to 'Singleband pseudocolor'.
 #. Select a suitable :guilabel:`Color map` |selectString|, for instance ``YlOrRed``.
-#. Click the **[Load]** button to fetch the minimum and maximum values from the raster,
-   then click the **[Classify]** button.
+#. Click the **[Classify]** button.
 #. Press **[OK]** to update the layer.
 
 The final result is shown in Figure_Heatmap_styled_processing_.
@@ -191,17 +190,20 @@ Parameters
 ..........
 
 ``Vector layer`` [vector: point]
-  Point vector layer to use for the heatmap
+  Point vector layer to use for the interpolation
 
 ``Interpolation attribute`` [tablefield: numeric]
   Field used for the interpolation. Once you have chosen the layer and the field
   click on the |signPlus| button to add the layer and the field to the list.
   Click on the |signMinus| button to remove the layer from the list.
+  It is possible to insert lines or polygons as constraints for the interpolation,
+  by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
+  ``Type`` column of the table.
 
-``Use-Z-coordinate for interpolation`` [checkbox]
+``Use Z-coordinate for interpolation`` [checkbox]
   Uses the layer's stored Z values
 
-``Distance coefficient P`` [number]
+``Distance coefficient Power`` [number]
   Sets the distance coefficient for the interpolation
 
   Default: *2.0*
@@ -210,11 +212,12 @@ Parameters
   Total number of columns of the output raster layer.
 
 ``Number of rows`` [number]
-  Total number of columns of the output raster layer.
+  Total number of rows of the output raster layer.
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas of selecting it from another layer.
+  either choosing it from the map canvas, electing it from another layer or type
+  it manually.
 
 Output
 ......
@@ -240,14 +243,17 @@ Parameters
 ..........
 
 ``Vector layer`` [vector: point]
-  Point vector layer to use for the heatmap
+  Point vector layer to use for the interpolation
 
 ``Interpolation attribute`` [tablefield: numeric]
   Field used for the interpolation. Once you have chosen the layer and the field
   click on the |signPlus| button to add the layer and the field to the list.
   Click on the |signMinus| button to remove the layer from the list.
+  It is possible to insert lines or polygons as constraints for the triangulation,
+  by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
+  ``Type`` column of the table.
 
-``Use-Z-coordinate for interpolation`` [checkbox]
+``Use Z-coordinate for interpolation`` [checkbox]
   Uses the layer's stored Z values
 
 ``Interpolation method`` [selection]
@@ -262,11 +268,12 @@ Parameters
   Total number of columns of the output raster layer.
 
 ``Number of rows`` [number]
-  Total number of columns of the output raster layer.
+  Total number of rows of the output raster layer.
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas of selecting it from another layer.
+  either choosing it from the map canvas, electing it from another layer or type
+  it manually.
 
 Output
 ......
