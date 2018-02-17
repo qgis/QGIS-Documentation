@@ -16,21 +16,20 @@ Vector analysis
 
 Basic statistics for numeric fields
 -----------------------------------
-Generates basic statistics from the analysis of a values in a field in the attribute
-table of a vector layer.
+Generates basic statistics for a field of the attribute table of a vector layer.
 
 Numeric, date, time and string fields are supported.
 
 The statistics returned will depend on the field type.
 
-Statistics are generated as an HTML file and is available in the
+Statistics are generated as an HTML file and are available in the
 :menuselection:`Processing --> Results viewer`
 
 Parameters
 ..........
 
 ``Input vector`` [vector: any]
-  Vector layer to calculated the statistic on
+  Vector layer to calculate the statistic on
 
 ``Field to calculate statistics on`` [tablefield: any]
   Any supported table field to calculate the statistics
@@ -38,15 +37,15 @@ Parameters
 Outputs
 .......
 ``Statistics`` [html]
-  HTML file with calculated statistics.
+  HTML file with calculated statistics
 
 
 .. _qgis_count_points_polygon:
 
 Count points in polygon
 -----------------------
-Takes a points layer and a polygon layer and counts the number of points from the
-first one in each polygons of the second one.
+Takes a point and a polygon layer and counts the number of points from the
+first one in each polygon of the second one.
 
 A new polygons layer is generated, with the exact same content as the input polygons
 layer, but containing an additional field with the points count corresponding to
@@ -84,7 +83,7 @@ Parameters
   classes that are found in it.
 
 ``Count field name`` [string]
-  The field name that contains the points count can be edited
+  The name of the field to store the count of points
 
   Default: *NUMPOINTS*
 
@@ -111,14 +110,14 @@ Parameters
 
 ``Input unique ID field`` [tablefield: any]
   Define the field of the input layer with unique ID that will be copied in the
-  output attribute table
+  output attribute table.
 
 ``Target point layer`` [vector: point]
   Destination point vector layer
 
 ``Target unique ID field`` [tablefield: any]
   Define the field of the target layer with unique ID that will be copied in the
-  output attribute table
+  output attribute table.
 
 ``Output matrix type`` [selection]
   Three different types of calculation are available:
@@ -131,7 +130,7 @@ Parameters
 
 ``Use only the nearest (k) target points`` [number]
   You can choose to calculate the distance between all points or to stop the
-  calculation at a chosen point number
+  calculation at a chosen point number.
 
   Default: *0* all points are used
 
@@ -175,7 +174,7 @@ Parameters
   output
 
 ``Measurement unit`` [selection]
-  The distance filed in the output attribute table will be calculated according
+  The distance field in the output attribute table will be calculated according
   to this choice:
 
   * Meters
@@ -259,8 +258,8 @@ Parameters
 ``Hub layer fields to copy``
   Optional
 
-  Choose here the field of the hub layer to be copy. If no fields are chosen
-  all fields are taken
+  Choose here the field(s) of the hub layer to copy. If no field(s) are chosen
+  all fields are taken.
 
 ``Spoke point layer`` [vector: any]
   Additional spoke point layer
@@ -271,8 +270,8 @@ Parameters
 ``Spoke layer fields to copy``
   Optional
 
-  Field(s) of the spoke layer to be copy. If no fields are chosen
-  all fields are taken
+  Field(s) of the spoke layer to be copied. If no fields are chosen all fields
+  are taken.
 
 Outputs
 .......
