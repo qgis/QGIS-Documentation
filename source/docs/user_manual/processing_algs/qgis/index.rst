@@ -18,16 +18,17 @@ algorithms.
 
      cartography
      database
-     layer_tools
-     raster_general_tools
-     raster_analysis
-     raster_terrain_analysis
-     raster_tools
+     filetools
+     interpolation
+     layertools
+     rasteranalysis
+     rasterterrainanalysis
+     rastertools
      table
-     vector_analysis_tools
-     vector_creation_tools
-     vector_general_tools
-     vector_geometry_tools
-     vector_overlay_tools
-     vector_selection_tools
-     vector_table_tools
+     vectoranalysis
+     vectorcreation
+     vectorgeneral
+     vectorgeometry
+     vectoroverlay
+     vectorselection
+     vectortable

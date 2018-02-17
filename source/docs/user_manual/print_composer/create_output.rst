@@ -54,27 +54,33 @@ enter the filename to use to export composition: in the case of multi-page
 composition, each page will be exported to a file with the given name
 appended with the page number.
 
-You can then override the print resolution (set in Composition panel) and resize
-exported image dimensions.
+You can then override the print resolution and the exported image dimensions
+(set in Composition panel).
 
+.. index:: Crop layout to content
 .. _crop_to_content:
 
-By checking |checkbox| :guilabel:`Crop to content` option, the images
-outputted by the composer will include only the area of the composition with
-content.
-There's also an option for margins to add around the item bounds if required.
+By checking |checkbox| :guilabel:`Crop to content` option, the image output
+by the composer includes the minimal area enclosing all the items (map,
+legend, scale bar, shapes, label, image...) of each page of the composition:
 
-If the composition includes a single page, then the output will
-be sized to include EVERYTHING on the composition. If it's a
-multi-page composition, then each page will be cropped to only
-include the area of that page with items.
+* If the composition includes a single page, then the output is resized to
+  include EVERYTHING on the composition. The page can then be reduced or
+  extended to all items depending on their position (on, above, below, left or
+  right of the page).
+* In case of a multi-page composition, each page will be resized to include
+  items in its area (left and right sides for all pages, plus top for the first page
+  and bottom for the last page). Each resized page is exported to a separate file.
+
+The :guilabel:`Crop to content` dialog also allows to add some margins around
+the cropped bounds.
 
 .. _figure_composer_output_image:
 
 .. figure:: /static/user_manual/print_composer/image_export_options.png
    :align: center
 
-   Image Export Options
+   Image Export Options, output is resized to items extent
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
@@ -97,7 +103,7 @@ Export as SVG
 =============
 
 With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
-(used as a basename for all files in case of multi_page composition) and then
+(used as a basename for all files in case of multi-page composition) and then
 can apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`.
 
 The SVG export options dialog also allows to:

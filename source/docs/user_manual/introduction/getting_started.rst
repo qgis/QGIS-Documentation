@@ -441,6 +441,12 @@ extension has just to be selected in
 zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
 automatically zip your current project.
 
+.. note::
+
+  A zipped project may be particularly useful with the
+  :ref:`vector_auxiliary_storage` mechanism in order to embed the underlying
+  database.
+
 .. _`sec_output`:
 
 Output

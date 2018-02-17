@@ -71,17 +71,17 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 # uncomment to exclude the processing algs from build
 #exclude_patterns += ['docs/user_manual/processing_algs/*']
 # uncomment to exclude the user manual from build
-#exclude_patterns += ['docs/user_manual/*']
+# exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
-#exclude_patterns += ['docs/training_manual/*']
+# exclude_patterns += ['docs/training_manual/*']
 # uncomment to exclude developer guides from build
-#exclude_patterns += ['docs/developers_guide/*']
+# exclude_patterns += ['docs/developers_guide/*']
 # uncomment to exclude doc guides from build
-#exclude_patterns += ['docs/documentation_guidelines/*']
+# exclude_patterns += ['docs/documentation_guidelines/*']
 # uncomment to exclude gentle intro  from build
-#exclude_patterns += ['docs/gentle_gis_introduction/*']
+# exclude_patterns += ['docs/gentle_gis_introduction/*']
 # uncomment to exclude pyqgis dev book from build
-#exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
+# exclude_patterns += ['docs/pyqgis_developer_cookbook/*']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -383,6 +383,8 @@ rst_epilog = """
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
+   :width: 1.5em
+.. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |clip| image:: /static/common/clip.png
    :width: 1.5em
@@ -1105,7 +1107,7 @@ rst_epilog = """
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |showPresets| image:: /static/common/mActionShowPresets.png
+.. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
@@ -1507,4 +1509,3 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
                   ]
-
