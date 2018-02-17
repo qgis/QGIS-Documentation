@@ -64,7 +64,7 @@ Parameters
   Epanechnikov kernel does. Consequently, triweight results in “sharper” hotspots
   and Epanechnikov results in “smoother” hotspots.
 
-  There are many shapes available (plese see the `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
+  There are many shapes available (please see the `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
   for further information):
 
   * Quartic
