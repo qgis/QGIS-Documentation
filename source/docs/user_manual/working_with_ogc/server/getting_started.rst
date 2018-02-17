@@ -10,37 +10,12 @@ Getting Started
 Installation
 ============
 
-.. index:: Apache, Debian Squeeze
-
-Debian/Ubuntu
--------------
+.. index:: Apache, Debian, Ubuntu
 
 At this point, we will give a short and simple sample installation how-to for
-a minimal working configuration using Apache2 on Debian Squeeze (or with
-negligible variations on Ubuntu 14.04).
-Many other OSs provide packages for QGIS Server, too. If you have to build it
-all from source, please refer to the URLs given in :ref:`label_qgisserver`.
-
-Firstly, add the following debian GIS repository:
-
-.. code-block:: bash
-
-  $ cat /etc/apt/sources.list.d/debian-gis.list
-  deb http://qgis.org/debian trusty main
-  deb-src http://qgis.org/debian trusty main
-
-  # Add keys
-  $ sudo gpg --keyserver keyserver.ubuntu.com --recv-key 3FF5FFCAD71472C4
-  $ sudo gpg --export --armor 3FF5FFCAD71472C4 | sudo apt-key add -
-
-  # Update package list
-  $ sudo apt-get update && sudo apt-get upgrade
-
-Now, install QGIS Server:
-
-.. code-block:: bash
-
-  $ sudo apt-get install qgis-server python-qgis
+a minimal working configuration using Apache2 on Debian/Ubuntu.
+The first step is QGIS Server installation whose instructions are provided
+in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
 
 HTTP Server configuration
 =========================
