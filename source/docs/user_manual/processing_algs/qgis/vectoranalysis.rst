@@ -11,368 +11,318 @@ Vector analysis
       :local:
       :depth: 1
 
-Count points in polygon
------------------------
 
-Description
-...........
+.. _qgis_basic_statistics:
 
-Counts the number of points present in each feature of a polygon layer.
+Basic statistics for numeric fields
+-----------------------------------
+Generates basic statistics for a field of the attribute table of a vector layer.
+
+Numeric, date, time and string fields are supported.
+
+The statistics returned will depend on the field type.
+
+Statistics are generated as an HTML file and are available in the
+:menuselection:`Processing --> Results viewer`
 
 Parameters
 ..........
 
+``Input vector`` [vector: any]
+  Vector layer to calculate the statistic on
+
+``Field to calculate statistics on`` [tablefield: any]
+  Any supported table field to calculate the statistics
+
+Outputs
+.......
+``Statistics`` [html]
+  HTML file with calculated statistics
+
+
+.. _qgis_count_points_polygon:
+
+Count points in polygon
+-----------------------
+Takes a point and a polygon layer and counts the number of points from the
+first one in each polygon of the second one.
+
+A new polygons layer is generated, with the exact same content as the input polygons
+layer, but containing an additional field with the points count corresponding to
+each polygon.
+
+.. figure:: /static/user_manual/processing_algs/qgis/count_points_polygon.png
+  :align: center
+
+  The labels identify the point count
+
+An optional weight field can be used to assign weights to each point. Alternatively,
+a unique class field can be specified. If both options are used, the weight field
+will take precedence and the unique class field will be ignored.
+
+Parameters
+..........
 ``Polygons`` [vector: polygon]
-  Polygons layer.
+  Polygons layer
 
 ``Points`` [vector: point]
-  Points layer.
+  Points layer
+
+``Weight field`` [tablefield: any]
+  Optional
+
+  The count generated will be the sum of the weight field for each point contained
+  by the polygon.
+
+``Class field`` [tablefield: any]
+  Optional
+
+  Points are classified based on the selected attribute and if several points with
+  the same attribute value are within the polygon, only one of them is counted.
+  The final count of the point in a polygon is, therefore, the count of different
+  classes that are found in it.
 
 ``Count field name`` [string]
-  The name of the attribute table column containing the points number.
+  The name of the field to store the count of points
 
   Default: *NUMPOINTS*
 
 Outputs
 .......
 
-``Result`` [vector]
+``Count`` [vector: polygon]
   Resulting layer with the attribute table containing the new column of the
   points count.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:countpointsinpolygon', polygons, points, field, output)
-
-See also
-........
-
-Count points in polygon (weighted)
-----------------------------------
-
-Description
-...........
-
-Counts the number of points in each feature of a polygon layer and calculates
-the mean of the selected field for each feature of the polygon layer. These
-values will be added to the attribute table of the resulting polygon layer.
-
-Parameters
-..........
-
-``Polygons`` [vector: polygon]
-  Polygons layer.
-
-``Points`` [vector: point]
-  Points layer.
-
-``Weight field`` [tablefield: any]
-  Weight field of the points attribute table.
-
-``Count field name`` [string]
-  Name of the column for the new weighted field.
-
-  Default: *NUMPOINTS*
-
-Outputs
-.......
-
-``Result`` [vector]
-  The resulting polygons layer.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:countpointsinpolygonweighted', polygons, points, weight, field, output)
-
-See also
-........
-
-Count unique points in polygon
-------------------------------
-
-Description
-...........
-
-Counts the number of unique values of a points in a polygons layer. Creates
-a new polygons layer with an extra column in the attribute table containing
-the count of unique values for each feature.
-
-Parameters
-..........
-
-``Polygons`` [vector: polygon]
-  Polygons layer.
-
-``Points`` [vector: point]
-  Points layer.
-
-``Class field`` [tablefield: any]
-  Points layer column name of the unique value chosen.
-
-``Count field name`` [string]
-  Column name containing the count of unique values in the resulting polygons
-  layer.
-
-  Default: *NUMPOINTS*
-
-Outputs
-.......
-
-``Result`` [vector]
-  The resulting polygons layer.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:countuniquepointsinpolygon', polygons, points, classfield, field, output)
-
-See also
-........
+.. _qgis_distance_matrix:
 
 Distance matrix
 ---------------
-
-Description
-...........
-
-<put algorithm description here>
+Creates a table containing a distance matrix, with distances between all the points
+in a points layer.
 
 Parameters
 ..........
 
 ``Input point layer`` [vector: point]
-  <put parameter description here>
+  Input point vector layer
 
 ``Input unique ID field`` [tablefield: any]
-  <put parameter description here>
+  Define the field of the input layer with unique ID that will be copied in the
+  output attribute table.
 
 ``Target point layer`` [vector: point]
-  <put parameter description here>
+  Destination point vector layer
 
 ``Target unique ID field`` [tablefield: any]
-  <put parameter description here>
+  Define the field of the target layer with unique ID that will be copied in the
+  output attribute table.
 
 ``Output matrix type`` [selection]
-  <put parameter description here>
+  Three different types of calculation are available:
 
-  Options:
+  * Linear (N*k x 3) distance matrix
+  * Standard (N x T) distance matrix
+  * Summary distance matrix (mean, std. dev., min, max)
 
-  * 0 --- Linear (N*k x 3) distance matrix
-  * 1 --- Standard (N x T) distance matrix
-  * 2 --- Summary distance matrix (mean, std. dev., min, max)
-
-  Default: *0*
+  Default: *Linear (N*k x 3) distance matrix*
 
 ``Use only the nearest (k) target points`` [number]
-  <put parameter description here>
+  You can choose to calculate the distance between all points or to stop the
+  calculation at a chosen point number.
 
-  Default: *0*
+  Default: *0* all points are used
 
 Outputs
 .......
 
-``Distance matrix`` [table]
-  <put output description here>
+``Distance matrix`` [vector: point]
+  Point vector layer with attribute table composed by:
 
-Console usage
-.............
+  * *InputID*: the unique ID of the input layer
+  * *TargetID*: the unique ID of the target layer
+  * *Distance*: the distance between the points
 
-::
 
-  processing.runalg('qgis:distancematrix', input_layer, input_field, target_layer, target_field, matrix_type, nearest_points, distance_matrix)
+.. _qgis_distance_to_nearest_hub_line:
 
-See also
-........
+Distance to nearest hub (line to hub)
+-------------------------------------
+Links each feature of the input vector with the nearest feature of the destination
+layer. The output is a line vector layer with all the attributes of the input layer,
+one attribute of the destination layer and the distance.
 
-Distance to nearest hub
------------------------
 
-Description
-...........
+.. figure:: /static/user_manual/processing_algs/qgis/distance_hub.png
+  :align: center
 
-<put algorithm description here>
+  Distance to nearest hub example
+
 
 Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer
 
 ``Destination hubs layer`` [vector: any]
-  <put parameter description here>
+  Destination layer to calculate the nearest point
 
 ``Hub layer name attribute`` [tablefield: any]
-  <put parameter description here>
-
-``Output shape type`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- Point
-  * 1 --- Line to hub
-
-  Default: *0*
+  Attribute of the destination layer that will be copied into the
+  output
 
 ``Measurement unit`` [selection]
-  <put parameter description here>
+  The distance field in the output attribute table will be calculated according
+  to this choice:
 
-  Options:
+  * Meters
+  * Feet
+  * Miles
+  * Kilometers
+  * Layer units
 
-  * 0 --- Meters
-  * 1 --- Feet
-  * 2 --- Miles
-  * 3 --- Kilometers
-  * 4 --- Layer units
-
-  Default: *0*
+  Default: *Meters*
 
 Outputs
 .......
+``Hub distance`` [vector: line]
+  Line vector layer with distance values
 
-``Output`` [vector]
-  <put output description here>
 
-Console usage
-.............
+.. _qgis_distance_to_nearest_hub_points:
 
-::
-
-  processing.runalg('qgis:distancetonearesthub', points, hubs, field, geometry, unit, output)
-
-See also
-........
-
-Generate points (pixel centroids) along line
---------------------------------------------
-
-Description
-...........
-
-<put algorithm description here>
+Distance to nearest hub (points)
+--------------------------------
+Creates a copy of the input layer with the addition of two fields containing the
+attribute of the destination layer and the distance between points.
 
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  <put parameter description here>
+``Source points layer`` [vector: any]
+  Input vector layer
 
-``Vector layer`` [vector: line]
-  <put parameter description here>
+``Destination hubs layer`` [vector: any]
+  Destination layer to calculate the nearest point
 
-Outputs
-.......
+``Hub layer name attribute`` [tablefield: any]
+  Attribute of the destination layer that will be copied into the
+  output
 
-``Output layer`` [vector]
-  <put output description here>
+``Measurement unit`` [selection]
+  The distance field in the output attribute table will be calculated according
+  to this choice:
 
-Console usage
-.............
+  * Meters
+  * Feet
+  * Miles
+  * Kilometers
+  * Layer units
 
-::
-
-  processing.runalg('qgis:generatepointspixelcentroidsalongline', input_raster, input_vector, output_layer)
-
-See also
-........
-
-Generate points (pixel centroids) inside polygons
--------------------------------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Raster layer`` [raster]
-  <put parameter description here>
-
-``Vector layer`` [vector: polygon]
-  <put parameter description here>
+  Default: *Meters*
 
 Outputs
 .......
+``Hub distance`` [vector: point]
+  Point vector layer with distance values
 
-``Output layer`` [vector]
-  <put output description here>
 
-Console usage
-.............
+.. _qgis_join_lines:
 
-::
+Join by lines (hub lines)
+-------------------------
+Creates hub and spoke diagrams by connecting lines from points on the spoke layer
+to matching points in the hub layer.
 
-  processing.runalg('qgis:generatepointspixelcentroidsinsidepolygons', input_raster, input_vector, output_layer)
+Determination of which hub goes with each point is based on a match between the
+Hub ID field on the hub points and the Spoke ID field on the spoke points.
 
-See also
-........
+If input layers are not point layers, a point on the surface of the geometries will be taken as the connecting location.
 
-Hub lines
----------
+.. figure:: /static/user_manual/processing_algs/qgis/join_lines.png
+  :align: center
 
-Description
-...........
-
-Creates hub and spoke diagrams with lines drawn from points on the ``Spoke Point``
-layer to matching points in the ``Hub Point`` layer. Determination of which
-hub goes with each point is based on a match between the ``Hub ID field``
-on the hub points and the ``Spoke ID field`` on the spoke points.
+  Join points on common field
 
 Parameters
 ..........
 
 ``Hub point layer`` [vector: any]
-  <put parameter description here>
+  Input layer
 
 ``Hub ID field`` [tablefield: any]
-  <put parameter description here>
+  Field of the hub layer with ID to join
+
+``Hub layer fields to copy``
+  Optional
+
+  Choose here the field(s) of the hub layer to copy. If no field(s) are chosen
+  all fields are taken.
 
 ``Spoke point layer`` [vector: any]
-  <put parameter description here>
+  Additional spoke point layer
 
 ``Spoke ID field`` [tablefield: any]
-  <put parameter description here>
+  Field of the spoke layer with ID to join
+
+``Spoke layer fields to copy``
+  Optional
+
+  Field(s) of the spoke layer to be copied. If no fields are chosen all fields
+  are taken.
 
 Outputs
 .......
+``Hub lines`` [vector: lines]
+  The resulting line layer
 
-``Output`` [vector]
-  The resulting layer.
 
-Console usage
-.............
+.. _qgis_list_unique:
 
-::
-
-  processing.runalg('qgis:hublines', hubs, hub_field, spokes, spoke_field, output)
-
-See also
-........
-
-Mean coordinate(s)
+List unique values
 ------------------
-
-Description
-...........
-
-Calculates the mean of the coordinates of a layer starting from a field of the
-attribute table.
+Lists unique values of an attribute table field and counts their number.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Layer to analyze.
+
+``Target field`` [tablefield: any]
+  Field to analyze.
+
+Outputs
+.......
+
+``Unique values`` [table]
+  Summary table layer with unique values
+
+``HTML report`` [html]
+  HTML report of unique values in the :menuselection:`Processing --> Results viewer`
+
+
+.. _qgis_mean_coordinate:
+
+Mean coordinate(s)
+------------------
+Computes a point layer with the center of mass of geometries in an input layer.
+
+An attribute can be specified as containing weights to be applied to each feature
+when computing the center of mass.
+
+If an attribute is selected in the parameter, features will be grouped according
+to values in this field. Instead of a single point with the center of mass of the
+whole layer, the output layer will contain a center of mass for the features in
+each category.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
 
 ``Weight field`` [tablefield: numeric]
   Optional.
@@ -386,105 +336,112 @@ Parameters
 
 Outputs
 .......
+``Mean coordinates`` [vector: point]
+  Resulting point(s) layer.
 
-``Result`` [vector]
-  The resulting points layer.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:meancoordinates', points, weight, uid, output)
-
-See also
-........
+.. _qgis_nearest_neighbour:
 
 Nearest neighbour analysis
 --------------------------
+Performs nearest neighbor analysis for a point layer.
 
-Description
-...........
+Output is generated as an HTML file with the computed statistical values:
 
-<put algorithm description here>
+* Observed mean distance
+* Expected mean distance
+* Nearest neighbour index
+* Number of points
+* Z-Score
 
 Parameters
 ..........
 
 ``Points`` [vector: point]
-  <put parameter description here>
+  Point vector layer to calculate the statistics on
 
 Outputs
 .......
+``Nearest neighbour`` [html]
+  HTML file in output with the computed statistics
 
-``Result`` [html]
-  <put output description here>
 
-``Observed mean distance`` [number]
-  <put output description here>
+.. _qgis_statistics_by_categories:
 
-``Expected mean distance`` [number]
-  <put output description here>
+Statistics by categories
+------------------------
+Calculates statistics of fields depending on a parent class.
 
-``Nearest neighbour index`` [number]
-  <put output description here>
+The output is a table layer with the following statistics calculated:
 
-``Number of points`` [number]
-  <put output description here>
+* count
+* unique
+* min
+* max
+* range
+* sum
+* mean
+* median
+* stdev
+* minority
+* majority
+* q1
+* q3
+* iqr
 
-``Z-Score`` [number]
-  <put output description here>
+Parameters
+..........
 
-Console usage
-.............
+``Input vector layer`` [vector: any]
+  Input vector layer with unique classes and values
 
-::
+``Field to calculate the statistics on`` [tablefield: any]
+  Optional
 
-  processing.runalg('qgis:nearestneighbouranalysis', points, output)
+  If empty only the count will be calculated
 
-See also
-........
+``Field(s) with categories`` [multiselection]
+  Field(s) of the categories
+
+Outputs
+.......
+``N unique values`` [table]
+  Table with statistics field
+
+
+.. _qgis_sum_line_length:
 
 Sum line lengths
 ----------------
+Takes a polygon layer and a line layer and measures the total length of lines and
+the total number of them that cross each polygon.
 
-Description
-...........
+The resulting layer has the same features as the input polygon layer, but with two
+additional attributes containing the length and count of the lines across each
+polygon.
 
-<put algorithm description here>
+The names of these two fields can be configured in the algorithm parameters.
 
 Parameters
 ..........
 
 ``Lines`` [vector: line]
-  <put parameter description here>
+  Input vector line layer
 
 ``Polygons`` [vector: polygon]
-  <put parameter description here>
+  Polygon vector layer
 
 ``Lines length field name`` [string]
-  <put parameter description here>
+  Name of the field of the lines length
 
   Default: *LENGTH*
 
 ``Lines count field name`` [string]
-  <put parameter description here>
+  Name of the field of the lines count
 
   Default: *COUNT*
 
 Outputs
 .......
-
-``Result`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:sumlinelengths', lines, polygons, len_field, count_field, output)
-
-See also
-........
-
+``Line length`` [vector: polygon]
+  Polygon output layer with fields of lines length and line count
