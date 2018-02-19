@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-GDAL conversion
-===============
+Raster conversion
+=================
 
 .. only:: html
 
