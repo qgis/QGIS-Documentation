@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-GDAL extraction
-===============
+Raster extraction
+=================
 
 .. only:: html
 
