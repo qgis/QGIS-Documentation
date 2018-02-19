@@ -1617,6 +1617,31 @@ See also
 :ref:`qgis_rectangels_ovals_diamonds_variable`
 
 
+.. _qgis_remove_null_geometries:
+
+Remove null geometries
+----------------------
+Removes any features which do not have a geometry from a vector layer.
+
+All other features will be copied unchanged.
+
+The features with null geometries can be saved to a separate layer.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Input vector layer with NULL geometries
+
+Outputs
+.......
+
+``Non null geometries`` [vector]
+  Vector layer without NULL geometries
+
+``Null geometries`` [vector]
+  Vector layer with only NULL geometries
+
+
 .. _qgis_reverse_line:
 
 Reverse line
