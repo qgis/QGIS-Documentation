@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 Raster projections
-================
+==================
 
 .. only:: html
 
