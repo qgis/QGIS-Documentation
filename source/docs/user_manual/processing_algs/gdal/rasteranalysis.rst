@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-GDAL analysis
-=============
+Raster analysis
+===============
 
 .. only:: html
 
