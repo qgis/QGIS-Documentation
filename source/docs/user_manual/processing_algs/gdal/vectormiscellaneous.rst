@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-OGR miscellaneous
-=================
+Vector miscellaneous
+====================
 
 .. only:: html
 
