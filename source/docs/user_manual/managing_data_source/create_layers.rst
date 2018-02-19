@@ -176,9 +176,9 @@ scratch layer` button from the :guilabel:`Manage Layers Toolbar`. Here you can
 create a:
 
 * ``No geometry`` type layer, served as simple table,
-* ``Point`` or ``Multipoint`` layer,
-* ``LineString/CompoundCurve`` or ``MultilineString/MultiCurve`` layer,
-* ``Polygon/CurvePolygon`` or ``Multipolygon/MultiSurface`` layer.
+* ``Point`` or ``MultiPoint`` layer,
+* ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
+* ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
 
 .. _figure_create_temporary:
 
