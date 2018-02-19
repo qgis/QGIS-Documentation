@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-GDAL projections
+Raster projections
 ================
 
 .. only:: html
