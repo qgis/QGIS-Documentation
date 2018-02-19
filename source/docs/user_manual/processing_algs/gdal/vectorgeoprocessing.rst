@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-OGR geoprocessing
-=================
+Vector geoprocessing
+====================
 
 .. only:: html
 

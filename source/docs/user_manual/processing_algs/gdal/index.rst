@@ -14,11 +14,11 @@ and `GDAL/OGR vector utilities <http://www.gdal.org/ogr_utilities.html>`_ .
 .. toctree::
      :maxdepth: 2
 
-     gdal_analysis
-     gdal_conversion
-     gdal_extraction
-     gdal_miscellaneous
-     gdal_projections
-     ogr_conversion
-     ogr_geoprocessing
-     ogr_miscellaneous
+     rasteranalysis
+     rasterconversion
+     rasterextraction
+     rastermiscellaneous
+     rasterprojections
+     vectorconversion
+     vectorgeoprocessing
+     vectormiscellaneous

@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-OGR conversion
-==============
+Vector conversion
+=================
 
 .. only:: html
 
