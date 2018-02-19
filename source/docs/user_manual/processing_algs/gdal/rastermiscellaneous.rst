@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-GDAL miscellaneous
-==================
+Raster miscellaneous
+====================
 
 .. only:: html
 
