@@ -23,7 +23,6 @@ algorithms.
      rasteranalysis
      rasterterrainanalysis
      rastertools
-     table
      vectoranalysis
      vectorcreation
      vectorgeneral
