@@ -22,13 +22,13 @@ environment variable:
 
 .. code-block:: bash
 
-  $ sudo mkdir -p /opt/qgis-server/plugins
-  $ cd /opt/qgis-server/plugins
-  $ sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
-  # In case unzip was not installed before:
-  $ sudo apt-get install unzip
-  $ sudo unzip master.zip
-  $ sudo mv qgis-helloserver-master HelloServer
+ sudo mkdir -p /opt/qgis-server/plugins
+ cd /opt/qgis-server/plugins
+ sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
+ In case unzip was not installed before:
+ sudo apt-get install unzip
+ sudo unzip master.zip
+ sudo mv qgis-helloserver-master HelloServer
 
 
 HTTP Server configuration
@@ -64,8 +64,8 @@ Then, restart Apache:
 
 .. code-block:: bash
 
-  $ sudo a2ensite 001-qgis-server
-  $ sudo service apache2 restart
+ sudo a2ensite 001-qgis-server
+ sudo service apache2 restart
 
 .. tip::
 
@@ -87,9 +87,8 @@ Test the server with the HelloWorld plugin:
 
 .. code-block:: bash
 
-  $ wget -q -O - "http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=HELLO"
+ wget -q -O - "http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=HELLO"
   HelloServer!
-
 
 You can have a look at the default GetCapabilities of the QGIS server at:
 :file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`

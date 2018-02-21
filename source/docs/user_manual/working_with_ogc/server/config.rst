@@ -148,10 +148,10 @@ For example with spawn-fcgi:
 
 .. code-block:: bash
 
-  $ export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
-  $ export QGIS_SERVER_LOG_FILE=/home/user/qserv.log
-  $ export QGIS_SERVER_LOG_LEVEL=2
-  $ spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
+ export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
+ export QGIS_SERVER_LOG_FILE=/home/user/qserv.log
+ export QGIS_SERVER_LOG_LEVEL=2
+ spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
 
   QGIS Server Settings:
 
@@ -261,24 +261,24 @@ For linux, if you don't have a desktop environment installed (or you prefer the 
 
   .. code-block:: bash
 
-   $ sudo su
-   $ mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
+   sudo su
+   mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
 
    # copy the fonts from their location
-   $ cp /fonts_location/* .
+   cp /fonts_location/* .
 
-   $ chown root *
-   $ cd .. && fc-cache -f -v
+   chown root *
+   cd .. && fc-cache -f -v
 
 * On Fedora based systems:
 
   .. code-block:: bash
 
-   $ sudo su
-   $ mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
+   sudo su
+   mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
 
    # copy the fonts from their location
-   $ cp /fonts_location/* .
+   cp /fonts_location/* .
 
-   $ chown root *
-   $ cd .. && fc-cache -f -v
+   chown root *
+   cd .. && fc-cache -f -v
