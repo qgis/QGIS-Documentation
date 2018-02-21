@@ -21,7 +21,7 @@ integrated Python console.
 View data
 ---------
 
-more changes where
+More changes where.
 
 You can view and overlay vector and raster data in different formats
 and projections without conversion to an internal or common
