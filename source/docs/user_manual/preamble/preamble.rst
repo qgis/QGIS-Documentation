@@ -46,7 +46,12 @@ form, the browser displays and handles both identically.
 The list of the persons who contribute on writing, reviewing and translating
 the following documentation is available at :ref:`doc_contributors`.
 
-my change
+my change is here
+
+.. figure:: /static/user_manual/preamble/function_list.png
+   :align: center
+
+   The Expression tab
 
 Copyright (c) 2004 - 2017 QGIS Development Team
 
