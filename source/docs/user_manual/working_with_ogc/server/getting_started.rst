@@ -316,8 +316,9 @@ retrieve the project:
 .. code-block:: bash
 
   $ cd /home/user/
-  $ wget https://github.com/tudorbarascu/qgis-server-tutorial-data/archive/master.zip -O qgis-server-tutorial-data-master.zip
-  $ unzip qgis-server-tutorial-data-master.zip
+  $ wget https://github.com/qgis/QGIS-Training-Data/archive/master.zip -O qgis-server-tutorial.zip
+  $ unzip qgis-server-tutorial.zip
+  $ mv QGIS-Training-Data-master/training_manual_data/qgis-server-tutorial-data ~
 
 The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of course,
 you can use your favorite GIS software to open this file and take a look on the
