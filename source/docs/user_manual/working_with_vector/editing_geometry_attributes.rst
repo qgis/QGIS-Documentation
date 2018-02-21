@@ -229,7 +229,7 @@ Using the basic digitizing tools, you can perform the following functions:
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |circularStringCurvePoint|   | Add Circular String               | |circularStringRadius|   | Add Circular String By Radius    |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |nodeTool|                   | Node Tool                         | |deleteSelected|         | Delete Selected                  |
+| |nodeTool|                   | Vertex tool                       | |deleteSelected|         | Delete Selected                  |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |editCut|                    | Cut Features                      | |editCopy|               | Copy Features                    |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
@@ -324,24 +324,24 @@ With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
 move existing features.
 
 
-.. index:: Node tool
+.. index:: Vertex tool
 
-Node Tool
+Rertex tool
 ---------
 
 .. note:: **QGIS 3 major changes**
 
-    In QGIS 3, the node tool has been fully redesigned. It was previously
+    In QGIS 3, the vertex tool has been fully redesigned. It was previously
     working with "click and drag" ergonomy, and now uses a "click - click"
     workflow. This allows major improvements like taking profit of the advanced
-    digitizing panel with the node tool while digitizing or editing objects of
+    digitizing panel with the vertex tool while digitizing or editing objects of
     multiple layers at the same time.
 
 For any editable vector layer, the
-|nodeTool| :sup:`Node Tool` provides manipulation capabilities of
+|nodeTool| :sup:`Vertex tool` provides manipulation capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
-The node tool also works with 'on the fly' projection turned on and supports
+The vertex tool also works with 'on the fly' projection turned on and supports
 the topological editing feature. This tool is, unlike other tools in
 QGIS, persistent, so when some operation is done, selection stays
 active for this feature and tool.
@@ -366,7 +366,7 @@ Basic operations
 
 .. index:: Nodes, Vertices, Vertex, Geometryless feature
 
-Start by activating the |nodeTool| :sup:`Node Tool`. Red circles will appear
+Start by activating the |nodeTool| :sup:`Vertex tool`. Red circles will appear
 when hovering vertices.
 
 * **Selecting vertices**: You can select vertices by clicking on them one
@@ -417,16 +417,16 @@ when hovering vertices.
   Digitizing Panel constraints for distance, angles, exact X Y location
   before the second click.
 
-Each change made with the node tool is stored as a separate entry in the
+Each change made with the vertex  is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
 this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
 .. _move_all_vertex:
 
-.. tip:: **Move features with node tool**
+.. tip:: **Move features with vertex tool**
 
-   Using the |nodeTool| :sup:`Node Tool` is a way of moving a whole feature,
+   Using the |nodeTool| :sup:`Vertex tool` is a way of moving a whole feature,
    select ALL the vertices of the feature, click a vertex, drag and snap it to a
    target vertex: the whole feature is moved and snapped to the other feature.
    In QGIS 2, the |moveFeature| :guilabel:`Move Feature` tool didn't support
@@ -434,12 +434,12 @@ tool provides tooltips to identify a vertex by hovering the pointer over it.
    ergonomy, allowing interactive constraints and snapping of features while
    moving.
 
-.. index:: Vertex editor
+.. index:: Vertex editor Panel
 
-The Vertex Editor
+The Vertex Editor Panel
 ..................
 
-When using the :guilabel:`Node Tool` on a feature, it is possible to right click to open the
+When using the :guilabel:`Vertex tool` on a feature, it is possible to right click to open the
 :guilabel:`Vertex Editor` panel listing all the vertices of the feature with
 their x, y (z, m if applicable) coordinates and r (for the radius, in case of
 circular geometry). Simply select a row in the table does select the corresponding
@@ -449,7 +449,7 @@ them altogether.
 
 .. note:: **Changed behavior in QGIS3**
 
-  In QGIS 2.x, the panel was opening each time the node tool was used which was
+  In QGIS 2.x, the panel was opening each time the vertex tool was used which was
   slow and confusing when editing big features. Now, just invoke it with a
   right - click.
 
@@ -980,7 +980,7 @@ property of the symbol, field which will then be populated with the offset
 coordinates while moving the symbol in the map canvas.
 
 .. note:: The |offsetPointSymbols| :sup:`Offset Point Symbols` tool doesn't
-   move the point feature itself; you should use the |nodeTool| :sup:`Node Tool`
+   move the point feature itself; you should use the |nodeTool| :sup:`Vertex tool`
    or |moveFeature| :sup:`Move Feature` tool for this purpose.
 
 .. warning:: **Ensure to assign the same field to all symbol layers**
