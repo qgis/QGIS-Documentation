@@ -127,7 +127,7 @@ A simple request looks like:
  &WIDTH=665
  &HEIGHT=551
  &LAYERS=countries
- &FORMAT=image/jpg
+ &FORMAT=image/jpeg
 
 The above request should output the following image:
 
@@ -180,7 +180,7 @@ uses the standard STYLES parameter.
  &SRS=EPSG:3857
  &WIDTH=665
  &HEIGHT=551
- &FORMAT=image/jpg
+ &FORMAT=image/jpeg
  &LAYERS=countries,countries_shapeburst
  &STYLES=classified_by_name,default
  &OPACITIES=255,30
@@ -215,7 +215,7 @@ feature and of the **SELECTION** parameter detailed in the
  &WIDTH=665
  &HEIGHT=551
  &LAYERS=countries,countries_shapeburst
- &FORMAT=image/jpg
+ &FORMAT=image/jpeg
  &HIGHLIGHT_GEOM=POLYGON((590000 6900000, 590000 7363000, 2500000 7363000, 2500000 6900000, 590000 6900000))
  &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%233a093a</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
  &HIGHLIGHT_LABELSTRING=QGIS Tutorial
