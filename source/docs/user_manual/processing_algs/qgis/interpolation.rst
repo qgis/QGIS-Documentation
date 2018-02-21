@@ -216,7 +216,7 @@ Parameters
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas, electing it from another layer or type
+  either choosing it from the map canvas, selecting it from another layer or type
   it manually.
 
 Output
@@ -272,7 +272,7 @@ Parameters
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas, electing it from another layer or type
+  either choosing it from the map canvas, selecting it from another layer or type
   it manually.
 
 Output
