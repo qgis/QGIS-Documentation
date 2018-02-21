@@ -329,8 +329,15 @@ move existing features.
 Node Tool
 ---------
 
-For shapefile-based or MapInfo layers as well as SpatiaLite, PostgreSQL/PostGIS,
-MSSQL Spatial, and Oracle Spatial tables, the
+.. note:: **QGIS 3 major changes**
+
+    In QGIS 3, the node tool has been fully redesigned. It was previously
+    working with "click and drag" ergonomy, and now uses a "click - click"
+    workflow. This allows major improvements like taking profit of the advanced
+    digitizing panel with the node tool while digitizing or editing objects of
+    multiple layers at the same time.
+
+For any editable vector layer, the
 |nodeTool| :sup:`Node Tool` provides manipulation capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
@@ -359,31 +366,56 @@ Basic operations
 
 .. index:: Nodes, Vertices, Vertex, Geometryless feature
 
-Start by activating the |nodeTool| :sup:`Node Tool` and selecting a
-feature by clicking on it. Red boxes will appear at each vertex of this feature.
-
+Start by activating the |nodeTool| :sup:`Node Tool`. Red circles will appear
+when hovering vertices.
 
 * **Selecting vertices**: You can select vertices by clicking on them one
-  at a time, by clicking on an edge to select the vertices at both ends, or
-  by clicking and dragging a rectangle around some vertices. When a vertex
-  is selected, its color changes to blue. To add more vertices to the current
-  selection, hold down the :kbd:`Ctrl` key while clicking. Hold down
-  :kbd:`Ctrl` when clicking to toggle the selection state of
-  vertices (vertices that are currently unselected will be selected as usual,
-  but also vertices that are already selected will become unselected).
-* **Adding vertices**: To add a vertex, simply double click near an edge and
-  a new vertex will appear on the edge near to the cursor. Note that the
-  vertex will appear on the edge, not at the cursor position; therefore, it
-  should be moved if necessary.
-* **Deleting vertices**: Select the vertices and click the
-  :kbd:`Delete` key. Deleting all the vertices of a feature generates, if
-  compatible with the datasource, a geometryless feature. Note that
-  this doesn't delete the complete feature, just the geometry part;
+  at a time holding :kbd:`Shift` key pressed, or by clicking and dragging a
+  rectangle around some vertices. When a vertex is selected, its color changes
+  to blue. To add more vertices to the current selection, hold down
+  the :kbd:`Shift` key while clicking. To remove vertices from the selection,
+  hold down :kbd:`Ctrl`.
+
+* **Batch vertex selection mode**:
+  The batch selection mode can be activated by pressing :kbd:`Shift + R`.
+  Select a first node with one single click, and then hover **without clicking**
+  another vertex. This will dynamically select all the nodes in
+  between using the shortest path (for polygons).
+
+  .. _figure_batch_select_vertex:
+
+  .. figure:: /static/user_manual/working_with_vector/vertex_batch_selection_mode.png
+     :align: center
+
+     Batch vertex selection using :kbd:`Shift + R`
+
+
+  Press :kbd:`Ctrl` will invert the selection, selecting the longest path
+  along the feature boundary. Ending your node selection with a second click, or pressing :kbd:`Esc` will escape the batch mode.
+
+* **Adding vertices**: To add a vertex, a virtual new node appears on the segment
+  center. Simply grab it to add a new vertex. Double click on any location of the boundary
+  also creates a new node. For lines, a virtual node is also proposed at both
+  extremities of a line to extend it.
+
+  .. _figure_vertex_add_node:
+
+  .. figure:: /static/user_manual/working_with_vector/vertex_add_node.png
+     :align: center
+
+     Virtual nodes for adding vertices
+
+* **Deleting vertices**: Select the vertices and click the :kbd:`Delete` key.
+  Deleting all the vertices of a feature generates, if compatible with the datasource,
+  a geometryless feature. Note that this doesn't delete the complete feature, just the geometry part;
   To delete a complete feature use the |deleteSelected| :sup:`Delete Selected` tool.
+
 * **Moving vertices**: Select all the vertices you want to move, click on
-  a selected vertex or edge and drag in the direction you wish to move. All
+  a selected vertex or edge, and click again on the desired new location. All
   the selected vertices will move together. If snapping is enabled, the whole
-  selection can jump to the nearest vertex or line.
+  selection can jump to the nearest vertex or line. You can use Advanced
+  Digitizing Panel constraints for distance, angles, exact X Y location
+  before the second click.
 
 Each change made with the node tool is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
@@ -392,25 +424,34 @@ tool provides tooltips to identify a vertex by hovering the pointer over it.
 
 .. _move_all_vertex:
 
-.. tip:: **Move features with precision**
+.. tip:: **Move features with node tool**
 
-   The |moveFeature| :guilabel:`Move Feature` tool doesn't currently allow to
-   snap features while moving. Using the |nodeTool| :sup:`Node Tool`, select ALL
-   the vertices of the feature, click a vertex, drag and snap it to a target vertex:
-   the whole feature is moved and snapped to the other feature.
+   Using the |nodeTool| :sup:`Node Tool` is a way of moving a whole feature,
+   select ALL the vertices of the feature, click a vertex, drag and snap it to a
+   target vertex: the whole feature is moved and snapped to the other feature.
+   In QGIS 2, the |moveFeature| :guilabel:`Move Feature` tool didn't support
+   snapping. This is now fixed since it takes advantage of the new click-click
+   ergonomy, allowing interactive constraints and snapping of features while
+   moving.
 
 .. index:: Vertex editor
 
 The Vertex Editor
 ..................
 
-With activating the :guilabel:`Node Tool` on a feature, QGIS opens the
+When using the :guilabel:`Node Tool` on a feature, it is possible to right click to open the
 :guilabel:`Vertex Editor` panel listing all the vertices of the feature with
 their x, y (z, m if applicable) coordinates and r (for the radius, in case of
 circular geometry). Simply select a row in the table does select the corresponding
 vertex in the map canvas, and vice versa. Simply change a coordinate in the table
 and your vertex position is updated. You can also select multiple rows and delete
 them altogether.
+
+.. note:: **Changed behavior in QGIS3**
+
+  In QGIS 2.x, the panel was opening each time the node tool was used which was
+  slow and confusing when editing big features. Now, just invoke it with a
+  right - click.
 
 .. _figure_edit_vertex:
 
@@ -850,6 +891,7 @@ the |splitParts| :sup:`Split Parts` icon.
 
 .. index::
    single: Digitizing tools; Merge Selected Features
+
 .. _mergeselectedfeatures:
 
 Merge selected features
@@ -1229,4 +1271,3 @@ and angle entered. Repeating the process, several points can be added.
    :align: center
 
    Points at given distance and angle
-
