@@ -326,12 +326,12 @@ move existing features.
 
 .. index:: Vertex tool
 
-Rertex tool
----------
+Vertex tool
+-----------
 
 .. note:: **QGIS 3 major changes**
 
-    In QGIS 3, the vertex tool has been fully redesigned. It was previously
+    In QGIS 3, the node tool has been fully redesigned and renamed. It was previously
     working with "click and drag" ergonomy, and now uses a "click - click"
     workflow. This allows major improvements like taking profit of the advanced
     digitizing panel with the vertex tool while digitizing or editing objects of
@@ -342,9 +342,8 @@ For any editable vector layer, the
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
 The vertex tool also works with 'on the fly' projection turned on and supports
-the topological editing feature. This tool is, unlike other tools in
-QGIS, persistent, so when some operation is done, selection stays
-active for this feature and tool.
+the topological editing feature. This tool is selection persistent, so when some
+operation is done, selection stays active for this feature and tool.
 
 It is important to set the property :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Digitizing -->` :guilabel:`Search Radius:`
@@ -434,10 +433,10 @@ tool provides tooltips to identify a vertex by hovering the pointer over it.
    ergonomy, allowing interactive constraints and snapping of features while
    moving.
 
-.. index:: Vertex editor Panel
+.. index:: Vertex editor panel
 
 The Vertex Editor Panel
-..................
+.......................
 
 When using the :guilabel:`Vertex tool` on a feature, it is possible to right click to open the
 :guilabel:`Vertex Editor` panel listing all the vertices of the feature with
@@ -452,6 +451,14 @@ them altogether.
   In QGIS 2.x, the panel was opening each time the vertex tool was used which was
   slow and confusing when editing big features. Now, just invoke it with a
   right - click.
+
+  .. _figure_right_click_button_vertex_editor_panel:
+
+  .. figure:: /static/user_manual/working_with_vector/vertex_editor_panel_contextual_button.png
+     :align: center
+
+     Button to open the vertex editor panel via right-click
+
 
 .. _figure_edit_vertex:
 
@@ -485,8 +492,8 @@ features are represented in CSV format, with the geometry data appearing in
 the OGC Well-Known Text (WKT) format. WKT and GeoJSON features from outside QGIS
 can also be pasted to a layer within QGIS.
 
-When would the copy and paste function come
-in handy? Well, it turns out that you can edit more than one layer at a time
+When would the copy and paste function come in handy? Well, it turns out that
+you can edit more than one layer at a time
 and copy/paste features between layers. Why would we want to do this? Say
 we need to do some work on a new layer but only need one or two lakes, not
 the 5,000 on our ``big_lakes`` layer. We can create a new layer and use
