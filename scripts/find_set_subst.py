@@ -2,19 +2,19 @@
 from  os import path, walk
 import re
 
-def find_by_ext(folder, extention):
+def find_by_ext(folder, extension):
     """
-    create list with absolute paths to all *.extention files inside
+    create list with absolute paths to all *.extension files inside
     folder and its sub-folders
     """
     found_files = [path.join(dirpath, f)
         for dirpath, dirnames, files in walk(folder)
-        for f in files if f.endswith('.' + extention)]
+        for f in files if f.endswith('.' + extension)]
     return found_files
 
 def get_subst_from_file(file):
     """
-    Returns sorted list of existing substituitions on a file
+    Returns sorted list of existing substitutions on a file
     :param file: string with path to file
     :return: list
     """
@@ -43,9 +43,9 @@ def get_subst_from_file(file):
 def get_subst_definition(subst_list, s_dict):
     """
     returns substitution definition from list
-    :param subst_list: list of necessary subtitutions
-    :param s_dict: dictionary with all substituitions
-    :return: string with substitution definitons needed to add in rst file
+    :param subst_list: list of necessary substitutions
+    :param s_dict: dictionary with all substitutions
+    :return: string with substitution definitions needed to add in rst file
     """
     global file
 
@@ -80,9 +80,9 @@ def get_subst_definition(subst_list, s_dict):
 
 def read_subst(file):
     """
-    Returns dictionary of with all available substituitions
+    Returns dictionary with all available substitutions
     :param file: file with substitutions in sphinx format
-    :return: dictionary with substituitions in more scriptable format
+    :return: dictionary with substitutions in more scriptable format
     """
 
     subs_dict = dict()
