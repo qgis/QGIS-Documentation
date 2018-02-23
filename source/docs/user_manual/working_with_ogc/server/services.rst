@@ -640,9 +640,9 @@ define the tolerance for point, line and polygon layers:
 * **FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers
   *GetFeatureInfo* request, in pixels.
 
-QGIS Server also permits to make GetFeatureInfo requests and select all
-the features that intersect a geometry with the help of the **FILTER_GEOM**
-parameter that takes a geometry in WKT format as argument:
+QGIS Server also permits to make advanced GetFeatureInfo requests and select all
+the features that intersect any given WKT geometry. It does that with the help
+of the **FILTER_GEOM** parameter.
 
 .. code-block:: guess
 
