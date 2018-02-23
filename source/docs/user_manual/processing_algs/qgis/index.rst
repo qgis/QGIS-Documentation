@@ -21,6 +21,7 @@ algorithms.
      filetools
      interpolation
      layertools
+     modelertools
      rasteranalysis
      rasterterrainanalysis
      rastertools
