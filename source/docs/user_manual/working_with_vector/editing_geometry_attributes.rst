@@ -383,7 +383,7 @@ when hovering vertices.
 
   .. _figure_batch_select_vertex:
 
-  .. figure:: /static/user_manual/working_with_vector/vertex_batch_selection_mode.png
+  .. figure:: img/vertex_batch_selection_mode.png
      :align: center
 
      Batch vertex selection using :kbd:`Shift + R`
@@ -399,7 +399,7 @@ when hovering vertices.
 
   .. _figure_vertex_add_node:
 
-  .. figure:: /static/user_manual/working_with_vector/vertex_add_node.png
+  .. figure:: img/vertex_add_node.png
      :align: center
 
      Virtual nodes for adding vertices
@@ -454,7 +454,7 @@ them altogether.
 
   .. _figure_right_click_button_vertex_editor_panel:
 
-  .. figure:: /static/user_manual/working_with_vector/vertex_editor_panel_contextual_button.png
+  .. figure:: img/vertex_editor_panel_contextual_button.png
      :align: center
 
      Button to open the vertex editor panel via right-click
