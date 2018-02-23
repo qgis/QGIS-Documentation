@@ -33,6 +33,5 @@ Icon                    Plugin                        Description               
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
 |pluginInstaller|       Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
-|spatialQuery|          Spatial Query                 Spatial queries on vectors                              :ref:`spatial_query`
 |topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 ======================  ============================  ======================================================  ===============================
