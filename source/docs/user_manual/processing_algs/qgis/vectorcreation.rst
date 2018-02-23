@@ -11,88 +11,82 @@ Vector creation
       :local:
       :depth: 1
 
+
+.. _creategrid:
+
 Create grid
 -----------
+Creates a vector layer with a grid covering a given extent. Grid cells can have
+different shapes:
 
-Description
-...........
+.. figure:: /static/user_manual/processing_algs/qgis/create_grid.png
+  :align: center
 
-Creates a grid.
+  Different grid cell shapes
+
+The size of each element in the grid is defined using a horizontal and vertical
+spacing.
+
+The CRS of the output layer must be defined.
+
+The grid extent and the spacing values must be expressed in the coordinates and
+units of this CRS.
 
 Parameters
 ..........
 
-``Grid type`` [selection]
-  Grid type.
+``Grid type`` [combobox]
+  Shape of the grid. Many options available:
 
-  Options:
+  * Point
+  * Line
+  * Rectangle (polygon)
+  * Diamond (polygon)
+  * Hexagon (polygon)
 
-  * 0 --- Rectangle (line)
-  * 1 --- Rectangle (polygon)
-  * 2 --- Diamond (polygon)
-  * 3 --- Hexagon (polygon)
-
-  Default: *0*
-
-``Width`` [number]
-  Horizontal extent of the grid.
-
-  Default: *360.0*
-
-``Height`` [number]
-  Vertical extent of the grid.
-
-  Default: *180.0*
+``Grid extent`` [extent]
+  Extent of the grid
 
 ``Horizontal spacing`` [number]
-  X-axes spacing between the lines.
+  X-axis spacing between the lines.
 
-  Default: *10.0*
+  Default: *0.000100*
 
 ``Vertical spacing`` [number]
-  Y-axes spacing between the lines.
+  Y-axis spacing between the lines.
 
-  Default: *10.0*
+  Default: *0.000100*
 
-``Center X`` [number]
-  X-coordinate of the grid center.
-
-  Default: *0.0*
-
-``Center Y`` [number]
-  Y-coordinate of the grid center.
+``Horizontal overlay`` [number]
+  X-axis overlay
 
   Default: *0.0*
 
-``Output CRS`` [crs]
-  Coordinate reference system for grid.
+``Vertical overlay`` [number]
+  Y-axis overlay
 
-  Default: *EPSG:4326*
+  Default: *0.0*
+
+``Grid CRS`` [crs]
+  Coordinate reference system for grid
+
+  Default: *Project CRS*
 
 Outputs
 .......
 
-``Output`` [vector]
-  The resulting grid layer (lines or polygons).
+``Grid`` [vector]
+  Resulting grid layer
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:creategrid', type, width, height, hspacing, vspacing, centerx, centery, crs, output)
-
-See also
-........
+.. _createpointslayerfromtable:
 
 Points layer from table
 -----------------------
+Creates points layer from geometryless table with columns that contain coordinates
+fields.
 
-Description
-...........
-
-Creates points layer from geometryless table with columns that contain point
-coordinates.
+Besides X and Y coordinates you can also specify Z and M field.
 
 Parameters
 ..........
@@ -101,10 +95,19 @@ Parameters
   Input table
 
 ``X field`` [tablefield: any]
-  Table column containing the X coordinate.
+  Table field containing the X coordinate.
 
 ``Y field`` [tablefield: any]
-  Table column containing the Y coordinate.
+  Table field containing the Y coordinate.
+
+``Z field`` [tablefield: any]
+  Optional
+  Table field containing the Z coordinate.
+
+``M field`` [tablefield: any]
+  Optional
+
+  Table field containing the M coordinate.
 
 ``Target CRS`` [crs]
   Coordinate reference system to use for layer.
@@ -114,203 +117,236 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Points from table`` [vector: points]
   The resulting layer.
 
-Console usage
-.............
 
-::
+.. _generatepointspixelcentroidsalongline:
 
-  processing.runalg('qgis:pointslayerfromtable', input, xfield, yfield, target_crs, output)
+Generate points (pixel centroids) along line
+--------------------------------------------
+Generates a point vector layer from an input raster and line layer.
 
-See also
-........
+The points correspond to the pixel centroids that intersect the line layer
+
+
+.. figure:: /static/user_manual/processing_algs/qgis/points_centroids.png
+  :align: center
+
+  Points of the pixel centroids
+
+Parameters
+..........
+
+``Raster layer`` [raster]
+  Raster layer in input
+
+``Vector layer`` [vector: line]
+  Line vector layer
+
+Outputs
+.......
+
+``Points from polygons`` [vector: points]
+  Resulting point layer of pixel centroid
+
+
+
+.. _generatepointspixelcentroidinsiedepolygon:
+
+Generate points (pixel centroids) inside polygon
+------------------------------------------------
+Generates a point vector layer from an input raster and polygon layer.
+
+The points correspond to the pixel centroids that intersect the polygon layer
+
+
+.. figure:: /static/user_manual/processing_algs/qgis/points_centroids_polygon.png
+  :align: center
+
+  Points of the pixel centroids
+
+Parameters
+..........
+
+``Raster layer`` [raster]
+  Raster layer in input
+
+``Vector layer`` [vector: polygon]
+  Polygon vector layer
+
+Outputs
+.......
+
+``Points from polygons`` [vector: points]
+  Resulting point layer of pixel centroid
+
+
+.. _pointstopath:
 
 Points to path
 --------------
+Converts a point layer to a line layer, by joining points in a defined order.
 
-Description
-...........
-
-<put algorithm description here>
+Points can be grouped by a field to output individual line features per group.
 
 Parameters
 ..........
 
 ``Input point layer`` [vector: point]
-  <put parameter description here>
-
-``Group field`` [tablefield: any]
-  <put parameter description here>
+  point vector layer to be converted
 
 ``Order field`` [tablefield: any]
-  <put parameter description here>
+  Table field containing the order of the points
+
+``Group field`` [tablefield: any]
+  Optional
+
+  Table field containing the group field of the points
 
 ``Date format (if order field is DateTime)`` [string]
   Optional.
 
-  <put parameter description here>
+  Choose this option if the points are ordered in a DateTime field
 
   Default: *(not set)*
 
 Outputs
 .......
 
-``Paths`` [vector]
-  <put output description here>
+``Paths`` [vector: line]
+  Line vector layer of the path
 
-``Directory`` [directory]
-  <put output description here>
+``Directory for text output`` [directory]
+  Directory containing description files of points and paths
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:pointstopath', vector, group_field, order_field, date_format, output_lines, output_text)
-
-See also
-........
+.. _randompointsalongline:
 
 Random points along line
 ------------------------
+Creates a new point layer, with points placed in the lines of another layer.
 
-Description
-...........
+For each line in the input layer, a given number of points is added to the resulting
+layer.
 
-<put algorithm description here>
+A minimum distance can be specified to avoid point being too close to each other.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  <put parameter description here>
+  Line vector layer in input
 
 ``Number of points`` [number]
-  <put parameter description here>
+  Number of point to create
 
   Default: *1*
 
 ``Minimum distance`` [number]
-  <put parameter description here>
+  A minimum distance that points must respect
 
   Default: *0.0*
 
 Outputs
 .......
 
-``Random points`` [vector]
-  <put output description here>
+``Random points`` [vector: point]
+  Final random point layer along line
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:randompointsalongline', vector, point_number, min_distance, output)
-
-See also
-........
+.. _randompointsinextent:
 
 Random points in extent
 -----------------------
+Creates a new point layer with a given number of random points, all of them within
+a given extent.
 
-Description
-...........
-
-<put algorithm description here>
+A distance factor can be specified, to avoid points being too close to each other.
 
 Parameters
 ..........
 
 ``Input extent`` [extent]
-  <put parameter description here>
-
-  Default: *0,1,0,1*
+  Map extent for the random points
 
 ``Points number`` [number]
-  <put parameter description here>
+  Number of point to create
 
   Default: *1*
 
 ``Minimum distance`` [number]
-  <put parameter description here>
+  A minimum distance that points must respect
 
   Default: *0.0*
+
+``Target CRS`` [crs]
+  CRS of the random points layer
 
 Outputs
 .......
 
-``Random points`` [vector]
-  <put output description here>
+``Random points`` [vector: point]
+  Final random point layer in extent
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:randompointsinextent', extent, point_number, min_distance, output)
-
-See also
-........
+.. _randompointsinlayerbounds:
 
 Random points in layer bounds
 -----------------------------
+Creates a new point layer with a given number of random points, all of them within
+the extent of a given layer.
 
-Description
-...........
+A distance factor can be specified, to avoid points being too close to each other.
 
-<put algorithm description here>
 
 Parameters
 ..........
 
 ``Input layer`` [vector: polygon]
-  <put parameter description here>
+  Input polygon layer for the extent
 
 ``Points number`` [number]
-  <put parameter description here>
+  Number of point to create
 
   Default: *1*
 
 ``Minimum distance`` [number]
-  <put parameter description here>
+  A minimum distance that points must respect
 
-  Default: *0.0*
+  default: *0.0*
+
 
 Outputs
 .......
 
-``Random points`` [vector]
-  <put output description here>
+``Random points`` [vector: point]
+  Final random point layer in layer bounds
 
-Console usage
-.............
 
-::
+.. _randompointsinsidepolygons:
 
-  processing.runalg('qgis:randompointsinlayerbounds', vector, point_number, min_distance, output)
+Random points inside polygons
+-----------------------------
+Creates a new point layer with a given number of random points, all of them within
+a given layer.
 
-See also
-........
+Together with the point number. two different sampling strategies can be chosen.
 
-Random points inside polygons (fixed)
--------------------------------------
-
-Description
-...........
-
-<put algorithm description here>
+A distance factor can be specified, to avoid points being too close to each other.
 
 Parameters
 ..........
 
 ``Input layer`` [vector: polygon]
-  <put parameter description here>
+  Polygon vector layer in input. All the points will be created withing each
+  feature of this layer.
 
 ``Sampling strategy`` [selection]
-  <put parameter description here>
+  Choose between:
+
+  * Points count: number of points for each feature
+  * points density: density of points for each feature
 
   Options:
 
@@ -319,181 +355,62 @@ Parameters
 
   Default: *0*
 
-``Number or density of points`` [number]
-  <put parameter description here>
+``Number or density of points`` [expression]
+  You can choose the points number also with an expression
 
   Default: *1.0*
 
 ``Minimum distance`` [number]
-  <put parameter description here>
+  A minimum distance that points must respect
 
-  Default: *0.0*
-
-Outputs
-.......
-
-``Random points`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:randompointsinsidepolygonsfixed', vector, strategy, value, min_distance, output)
-
-See also
-........
-
-Random points inside polygons (variable)
-----------------------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Input layer`` [vector: polygon]
-  <put parameter description here>
-
-``Sampling strategy`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- Points count
-  * 1 --- Points density
-
-  Default: *0*
-
-``Number field`` [tablefield: numeric]
-  <put parameter description here>
-
-``Minimum distance`` [number]
-  <put parameter description here>
-
-  Default: *0.0*
+  default: *0.0*
 
 Outputs
 .......
 
-``Random points`` [vector]
-  <put output description here>
+``Random points`` [vector: point]
+  Final random point layer inside polygon
 
-Console usage
-.............
 
-::
-
-  processing.runalg('qgis:randompointsinsidepolygonsvariable', vector, strategy, field, min_distance, output)
-
-See also
-........
+.. _regularpoints:
 
 Regular points
 --------------
+Creates a new point layer with a given number of regular points, all of them within
+a given extent.
 
-Description
-...........
+Together with the point number. two different sampling strategies can be chosen.
 
-<put algorithm description here>
+A distance factor can be specified, to avoid points being too close to each other.
 
 Parameters
 ..........
 
 ``Input extent`` [extent]
-  <put parameter description here>
-
-  Default: *0,1,0,1*
+  Map extent for the random points
 
 ``Point spacing/count`` [number]
-  <put parameter description here>
+  Spacing between the points
 
-  Default: *0.0001*
+  Default: *100*
 
 ``Initial inset from corner (LH side)`` [number]
-  <put parameter description here>
+  Choose to move the initial points coordinate from the left upper corner
 
   Default: *0.0*
 
 ``Apply random offset to point spacing`` [boolean]
-  <put parameter description here>
+  If checked the points will have a random spacing
 
   Default: *False*
 
 ``Use point spacing`` [boolean]
-  <put parameter description here>
+  In unchecked the point spacing is not taken inot account
 
   Default: *True*
 
 Outputs
 .......
 
-``Regular points`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:regularpoints', extent, spacing, inset, randomize, is_spacing, output)
-
-See also
-........
-
-Vector grid
------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``Grid extent`` [extent]
-  <put parameter description here>
-
-  Default: *0,1,0,1*
-
-``X spacing`` [number]
-  <put parameter description here>
-
-  Default: *0.0001*
-
-``Y spacing`` [number]
-  <put parameter description here>
-
-  Default: *0.0001*
-
-``Grid type`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- Output grid as polygons
-  * 1 --- Output grid as lines
-
-  Default: *0*
-
-Outputs
-.......
-
-``Grid`` [vector]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('qgis:vectorgrid', extent, step_x, step_y, type, output)
-
-See also
-........
-
+``Regular points`` [vector: point]
+  Regular point layer in output
