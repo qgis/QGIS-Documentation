@@ -521,8 +521,6 @@ rst_epilog = """
    :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
-.. |exportMapServer| image:: /static/common/mActionExportMapServer.png
-   :width: 1.5em
 .. |exportGeometry| image:: /static/common/export_geometry.png
    :width: 1.5em
 .. |exportProjection| image:: /static/common/export_projection.png
@@ -828,7 +826,6 @@ rst_epilog = """
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
-.. |mapserverExport| image:: /static/common/mapserver_export.png
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |matrix| image:: /static/common/matrix.png

@@ -115,24 +115,16 @@ Core plugins include:
 
 #.  Coordinate Capture (Capture mouse coordinates in different CRSs)
 #.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  Dxf2Shp Converter (Convert DXF files to shapefiles)
 #.  eVIS (Visualize events)
 #.  GDALTools (Integrate GDAL Tools into QGIS)
 #.  Georeferencer GDAL (Add projection information to rasters using GDAL)
 #.  GPS Tools (Load and import GPS data)
 #.  GRASS (Integrate GRASS GIS)
-#.  Heatmap (Generate raster heatmaps from point data)
-#.  Interpolation Plugin (Interpolate based on vertices of a vector layer)
 #.  Metasearch Catalogue Client
 #.  Offline Editing (Allow offline editing and synchronizing with databases)
-#.  Oracle Spatial GeoRaster
-#.  Processing (formerly SEXTANTE)
-#.  Raster Terrain Analysis (Analyze raster-based terrain)
-#.  Road Graph Plugin (Analyze a shortest-path network)
+#.  Processing
 #.  Spatial Query Plugin
 #.  Topology Checker (Find topological errors in vector layers)
-#.  Zonal Statistics Plugin (Calculate count, sum, and mean of a raster for each
-    polygon of a vector layer)
 
 
 External Python Plugins

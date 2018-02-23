@@ -46,10 +46,10 @@ Enable the rewrite module to pass HTTP BASIC auth headers:
 
 .. code-block:: bash
 
-  $ sudo a2enmod rewrite
-  $ cat /etc/apache2/conf-available/qgis-server-port.conf
-  Listen 80
-  $ sudo a2enconf qgis-server-port
+ sudo a2enmod rewrite
+ cat /etc/apache2/conf-available/qgis-server-port.conf
+ Listen 80
+ sudo a2enconf qgis-server-port
 
 This is the virtual host configuration, stored in
 :file:`/etc/apache2/sites-available/001-qgis-server.conf`:
@@ -98,8 +98,8 @@ Now enable the virtual host and restart Apache:
 
 .. code-block:: bash
 
-  $ sudo a2ensite 001-qgis-server
-  $ sudo service apache2 restart
+ sudo a2ensite 001-qgis-server
+ sudo service apache2 restart
 
 QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
 
@@ -119,7 +119,7 @@ NGINX:
 
 .. code-block:: bash
 
-  $ sudo apt-get install nginx
+ sudo apt-get install nginx
 
 
 fcgiwrap
@@ -130,8 +130,7 @@ the corresponding package:
 
 .. code-block:: bash
 
-  $ sudo apt-get install fcgiwrap
-
+ sudo apt-get install fcgiwrap
 
 Then, introduce the following block in your NGINX server configuration:
 
@@ -149,8 +148,8 @@ Finally, restart NGINX and fcgiwrap to take into account the new configuration:
 
 .. code-block:: bash
 
-  $ sudo service nginx restart
-  $ sudo service fcgiwrap restart
+ sudo service nginx restart
+ sudo service fcgiwrap restart
 
 QGIS Server is now available at http://localhost/qgisserver.
 
@@ -179,16 +178,16 @@ And restart NGINX to take into account the new configuration:
 
 .. code-block:: bash
 
-  $ sudo service nginx restart
+ sudo service nginx restart
 
 Finally, considering that there is no default service file for spawn-fcgi, you
 have to manually start QGIS Server in your terminal:
 
 .. code-block:: bash
 
-  $ sudo spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-                    -s /var/run/qgisserver.socket \
-                    -U www-data -G www-data -n
+ sudo spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+                 -s /var/run/qgisserver.socket \
+                 -U www-data -G www-data -n
 
 Of course, you may write an init script (like a ``qgisserver.service`` file
 with Systemd) to start QGIS Server at boot time or whenever you want.
@@ -265,7 +264,7 @@ To install the package:
 
 .. code-block:: bash
 
-  $ sudo apt-get install xvfb
+ sudo apt-get install xvfb
 
 Then, according to your HTTP server, you should configure the **DISPLAY**
 parameter or directly use **xvfb-run**.
@@ -274,29 +273,29 @@ For example with NGINX and spawn-fcgi using xvfb-run:
 
 .. code-block:: bash
 
-  $ xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-                                 -s /tmp/qgisserver.socket \
-                                 -G www-data -U www-data -n
+ xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+                              -s /tmp/qgisserver.socket \
+                              -G www-data -U www-data -n
 
 The other option is to start a virtual X server environment with a specific
 display number thanks to **Xvfb**:
 
 .. code-block:: bash
 
-  $ /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+ /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
 
 Then we just have to set the **DISPLAY** environment variable in the HTTP server
 configuration. For example with NGINX:
 
 .. code-block:: nginx
 
-  fastcgi_param  DISPLAY       ":99";
+ fastcgi_param  DISPLAY       ":99";
 
 Or with Apache:
 
 .. code-block:: apache
 
-  FcgidInitialEnv DISPLAY       ":99"
+ FcgidInitialEnv DISPLAY       ":99"
 
 
 
@@ -315,9 +314,10 @@ retrieve the project:
 
 .. code-block:: bash
 
-  $ cd /home/user/
-  $ wget https://github.com/tudorbarascu/qgis-server-tutorial-data/archive/master.zip -O qgis-server-tutorial-data-master.zip
-  $ unzip qgis-server-tutorial-data-master.zip
+ cd /home/user/
+ wget https://github.com/qgis/QGIS-Training-Data/archive/master.zip -O qgis-server-tutorial.zip
+ unzip qgis-server-tutorial.zip
+ mv QGIS-Training-Data-master/training_manual_data/qgis-server-tutorial-data ~
 
 The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of course,
 you can use your favorite GIS software to open this file and take a look on the
@@ -360,10 +360,10 @@ For example with spawn-fcgi:
 
 .. code-block:: bash
 
-  $ export PROJECT_FILE=/home/user/qgis-server-tutorial-data-master/world.qgs
-  $ spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-               -s /var/run/qgisserver.socket \
-               -U www-data -G www-data -n
+ export PROJECT_FILE=/home/user/qgis-server-tutorial-data-master/world.qgs
+ spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+            -s /var/run/qgisserver.socket \
+            -U www-data -G www-data -n
 
 
 
