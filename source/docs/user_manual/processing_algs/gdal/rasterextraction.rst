@@ -11,12 +11,11 @@ Raster extraction
       :local:
       :depth: 1
 
+
+.. _cliprasterbyextent:
+
 Clip raster by extent
 ---------------------
-
-Description
-...........
-
 Clips any GDAL-supported raster file to a given extent.
 The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
 
@@ -51,22 +50,11 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:cliprasterbyextent', input, no_data, projwin, extra, output)
-
-See also
-........
+.. _cliprasterbymasklayer:
 
 Clip raster by mask layer
 -------------------------
-
-Description
-...........
-
 Clips any GDAL-supported raster by a vector mask layer.
 The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
 
@@ -108,22 +96,11 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:cliprasterbymasklayer', input, mask, no_data, alpha_band, keep_resolution, extra, output)
-
-See also
-........
+.. _coutour:
 
 Contour
 -------
-
-Description
-...........
-
 Extracts contour lines from any GDAL-supported elevation raster.
 The algorithm is derived from the `GDAL contour utility <http://www.gdal.org/gdal_contour.html>`_ .
 
@@ -159,14 +136,3 @@ Outputs
 
 ``Output file for contour lines (vector)`` [vector]
   <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:contour', input_raster, interval, field_name, extra, output_vector)
-
-See also
-........
-

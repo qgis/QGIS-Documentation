@@ -11,12 +11,11 @@ Raster analysis
       :local:
       :depth: 1
 
+
+.. _aspect:
+
 Aspect
 ------
-
-Description
-...........
-
 Generates an aspect map from any GDAL-supported elevation raster.
 Aspect is the compass direction that a slope faces. The pixels will
 have a value from 0-360° measured in degrees from north indicating the azimuth.
@@ -61,23 +60,11 @@ Outputs
 ``Output file`` [raster]
   Output raster with angle values in degrees.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:aspect', input, band, compute_edges, zevenbergen, trig_angle, zero_flat, output)
-
-See also
-........
-
+.. _colorrelief:
 
 Color relief
 ------------
-
-Description
-...........
-
 Generates a color relief map from any GDAL-supported elevation raster.
 Color reliefs can particularly be used to depict elevations.
 The Algorithm outputs a 4-band raster with values computed from the elevation
@@ -123,23 +110,11 @@ Outputs
 ``Output file`` [raster]
   A 4-band output raster.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:colorrelief', input, band, compute_edges, color_table, match_mode, output)
-
-See also
-........
-
+.. _fillnodata:
 
 Fill nodata
 -----------
-
-Description
-...........
-
 Fill raster regions with no data values by interpolation from edges. The values for
 the no-data regions are calculated by the sourrounding pixel values using inverse distance
 weighting. After the interpolation a smoothing of the results takes placce.
@@ -188,23 +163,11 @@ Outputs
 ``Output layer`` [raster]
   Output raster in any GDAL-supported format.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:fillnodata', input, distance, iterations, band, mask, no_default_mask, output)
-
-See also
-........
-
+.. _gridaverage:
 
 Grid (Moving average)
 ---------------------
-
-Description
-...........
-
 The Moving Average is a simple data averaging algorithm. It uses a moving window of elliptic form to search values
 and averages all data points within the window. Search ellipse can be rotated by specified angle, the center of ellipse
 located at the grid node. Also the minimum number of data points to average can be set, if there are not enough points
@@ -273,24 +236,16 @@ Outputs
 
 Interpolated raster file
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:gridaverage', input, z_field, radius_1, radius_2, min_points, angle, nodata, rtype, output)
-
 See also
 ........
 
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
+
+.. _griddatametrics:
+
 Grid (Data metrics)
 -------------------
-
-Description
-...........
-
 This algorithm computes some data metrics using the specified window and output grid geometry.
 
 Parameters
@@ -368,23 +323,15 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:griddatametrics', input, z_field, metric, radius_1, radius_2, min_points, angle, nodata, rtype, output)
-
 See also
 ........
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
+
+.. _gridinversedistance:
+
 Grid (Inverse distance to a power)
 ----------------------------------
-
-Description
-...........
-
 The Inverse Distance to a Power gridding method is a weighted average interpolator.
 
 You should supply the input arrays with the scattered data values including coordinates of every data point and output
@@ -471,24 +418,16 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:gridinvdist', input, z_field, power, smothing, radius_1, radius_2, max_points, min_points, angle, nodata, rtype, output)
-
 See also
 .........
 
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
+
+.. _gridinversedistancenearestneighbor:
+
 Grid (Nearest neighbor)
 -----------------------
-
-Description
-...........
-
 The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point
 found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
 will be returned.
@@ -548,24 +487,16 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:gridnearestneighbor', input, z_field, radius_1, radius_2, angle, nodata, rtype, output)
-
 See also
 ........
 
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
+
+.. _hillshade:
+
 Hillshade
 ---------
-
-Description
-...........
-
 Outputs a raster with a nice shaded relief effect. It’s very useful for visualizing
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
@@ -621,23 +552,11 @@ Outputs
 ``Output file`` [raster]
   Output raster.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:hillshade', input, band, compute_edges, zevenbergen, z_factor, scale, azimuth, altitude, output)
-
-See also
-........
-
+.. _nearblack:
 
 Near black
 ----------
-
-Description
-...........
-
 Convert nearly black/white borders to black.
 
 This utility will scan an image and try to set all pixels that are nearly or exactly black, white or one or more custom
@@ -666,24 +585,16 @@ Outputs
 ``Output layer`` [raster]
   Raster file in output
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:nearblack', input, near, white, output)
-
 See also
 ........
 
 `GDAL nearblack <http://www.gdal.org/nearblack.html>`_
 
+
+.. _proximity:
+
 Proximity (raster distance)
 ---------------------------
-
-Description
-...........
-
 The proximity algorithm generates a raster proximity map indicating the distance from the center of each pixel
 to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which
 the raster pixel value is in the set of target pixel values.
@@ -755,24 +666,16 @@ Outputs
 ``Output layer`` [raster]
   Raster file in output
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:proximity', input, values, units, max_dist, nodata, buf_val, rtype, output)
-
 See also
 ........
 
 `GDAL proximity algorithm <http://www.gdal.org/gdal_proximity.html>`_
 
+
+.. _roughness:
+
 Roughness
 ---------
-
-Description
-...........
-
 Outputs a single-band raster with values computed from the elevation. Roughness
 is the degree of irregularity of the surface. It's calculated by the largest inter-cell
 difference of a central pixel and its surrounding cell.
@@ -804,22 +707,11 @@ Outputs
 ``Output file`` [raster]
   Single-band output raster. The value -9999 is used as the output nodata value.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:roughness', input, band, compute_edges, output)
-
-See also
-........
+.. _sieve:
 
 Sieve
 -----
-
-Description
-...........
-
 Removes raster polygons smaller than a provided threshold size (in pixels) and
 replaces them with the pixel value of the largest neighbour polygon. It is
 useful if you have a large amount of small areas on your raster map.
@@ -852,22 +744,11 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:sieve', input, threshold, connections, output)
-
-See also
-........
+.. _slope:
 
 Slope
 -----
-
-Description
-...........
-
 Generate a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
 type of slope value you want: degrees or percent slope.
@@ -910,22 +791,12 @@ Outputs
 ``Output file`` [raster]
   32-bit float output raster.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:slope', input, band, compute_edges, zevenbergen, as_percent, scale, output)
-
-See also
-........
+.. _tpitopographicpositionindex:
 
 TPI (Topographic Position Index)
 --------------------------------
-
-Description
-...........
-This command outputs a single-band raster with values computed from the elevation.
+Outputs a single-band raster with values computed from the elevation.
 TPI stands for Topographic Position Index, which is defined as the difference between a central pixel and the mean
 of its surrounding cells
 
@@ -951,26 +822,17 @@ Outputs
 ``Output file`` [raster]
   TPI raster in output
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:tpitopographicpositionindex', input, band, compute_edges, output)
-
 See also
 ........
 
 `GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`__
 
 
+.. _triterrainruggednessindex:
+
 TRI (Terrain Ruggedness Index)
 ------------------------------
-
-Description
-...........
-
-This command outputs a single-band raster with values computed from the elevation.
+Outputs a single-band raster with values computed from the elevation.
 TRI stands for Terrain Ruggedness Index, which is defined as the mean difference between a central pixel and its
 surrounding cells
 
@@ -995,13 +857,6 @@ Outputs
 
 ``Output file`` [raster]
   TRI raster file
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:triterrainruggednessindex', input, band, compute_edges, output)
 
 See also
 ........

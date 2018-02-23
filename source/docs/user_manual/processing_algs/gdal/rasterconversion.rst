@@ -11,14 +11,11 @@ Raster conversion
       :local:
       :depth: 1
 
+
+.. _gdal2xyz:
+
 gdal2xyz
 --------
-
-Description
-...........
-
-<put algorithm description here>
-
 Parameters
 ..........
 
@@ -36,21 +33,11 @@ Outputs
 ``Output file`` [table]
   <put output description here>
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:gdal2xyz', input, band, output)
-
-See also
-........
+.. _pcttorgb:
 
 PCT to RGB
 ----------
-
-Description
-...........
 Convert an 8bit paletted image to 24bit RGB
 
 This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.
@@ -100,23 +87,15 @@ Outputs
 ``Output layer`` [raster]
   24bit RGB raster image
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:pcttorgb', input, nband, output)
-
 See also
 ........
 `GDAL pct2rgb utility <http://www.gdal.org/pct2rgb.html>`_
 
+
+.. _polygonize:
+
 Polygonize (raster to vector)
 -----------------------------
-
-Description
-...........
-
 Creates vector polygons for all connected regions of pixels in the
 raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
@@ -138,27 +117,15 @@ Outputs
 .......
 
 ``Output layer`` [vector]
-  Output vector layer. Default format is \*.shp. 
+  Output vector layer. Default format is \*.shp.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:polygonize', input, field, output)
-
-See also
-........
+.. _rasterize:
 
 Rasterize (vector to raster)
 ----------------------------
-
-Description
-...........
-
 Converts vector geometries (points, lines and polygons) into a raster image.
 The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
-
 
 Parameters
 ..........
@@ -222,22 +189,11 @@ Outputs
   Output raster layer. Give in here the name of the raster layer in which the results should be written
   (if this option is used).
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:rasterize', input, field, writeover, dimensions, width, height, rtype, output)
-
-See also
-........
+.. _rgbtopct:
 
 RGB to PCT
 ----------
-
-Description
-...........
-
 Converts a 24bit RGB image into a 8bit paletted. Computes an optimal pseudo-color
 table for the given RGB-image using a median cut algorithm on a downsampled RGB
 histogram. Then it converts the image into a pseudo-colored image using the color
@@ -264,23 +220,11 @@ Outputs
 ``Output layer`` [raster]
   8-bit output raster.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:rgbtopct', input, ncolors, output)
-
-See also
-........
+.. _translate:
 
 Translate (convert format)
 --------------------------
-
-Description
-...........
-
-<put algorithm description here>
 
 Parameters
 ..........
@@ -361,14 +305,3 @@ Outputs
 
 ``Output layer`` [raster]
   <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:translate', input, outsize, outsize_perc, no_data, expand, srs, projwin, sds, extra, rtype, output)
-
-See also
-........
-

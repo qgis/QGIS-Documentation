@@ -11,12 +11,11 @@ Vector conversion
       :local:
       :depth: 1
 
+
+.. _convertformat:
+
 Convert format
 --------------
-
-Description
-...........
-
 Converts any OGR-supported vector layer into another OGR-supported
 format.
 This algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
@@ -69,14 +68,3 @@ Outputs
 
 ``Output layer`` [vector]
   Output vector layer.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:convertformat', input_layer, format, options, output_layer)
-
-See also
-........
-
