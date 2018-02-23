@@ -11,7 +11,7 @@ Interpolation
       :local:
       :depth: 1
 
-.. _qgis_heatmap:
+.. _heatmapkerneldensityestimation:
 
 Heatmap (kernel density estimation)
 -----------------------------------
@@ -171,7 +171,7 @@ The final result is shown in Figure_Heatmap_styled_processing_.
 .. _Wikipedia: http://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
 
 
-.. _qgis_idw_interpolation:
+.. _idwinterpolation:
 
 IDW Interpolation
 -----------------
@@ -225,7 +225,7 @@ Output
   Raster layer of interpolated values
 
 
-.. _qgis_tin_interpolation:
+.. _tininterpolation:
 
 TIN Interpolation
 -----------------
