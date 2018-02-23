@@ -130,7 +130,7 @@ Outputs
 
 See also
 ........
-:ref:`qgis_minimum_bounding_geometry`
+:ref:`minimumboundinggeometry`
 
 
 .. _qgis_buffer:
@@ -160,7 +160,7 @@ Parameters
   Distance radius of the buffer calculated from the boundary of each feature.
   Moreover you can use the Data Defined button on the right to choose a field of
   from which the radius will be calculated: this way you can have different radius
-  for each feature (see :ref:`qgis_variable_distance_buffer`)
+  for each feature.
 
   Default: *10.0*
 
@@ -440,7 +440,7 @@ Output
 
 See also
 ........
-:ref:`qgis_minimum_bounding_geometry`, :ref:`concavehull`
+:ref:`minimumboundinggeometry`, :ref:`concavehull`
 
 
 .. _extenttolayer:
@@ -1115,7 +1115,7 @@ Output
 
 See also
 ........
-:ref:`qgis_minimum_bounding_geometry`
+:ref:`minimumboundinggeometry`
 
 
 .. _multiparttosingleparts:
@@ -1146,7 +1146,7 @@ Outputs
 
 See also
 ........
-:ref:`qgis_collect_geometries` and :ref:`promotetomulti`
+:ref:`collect` and :ref:`promotetomulti`
 
 
 .. _offsetline:
@@ -1223,7 +1223,7 @@ Output
 
 See also
 ........
-:ref:`qgis_minimum_bounding_geometry`
+:ref:`minimumboundinggeometry`
 
 
 .. _qgis_orthogonalize:
@@ -1486,7 +1486,7 @@ Output
 
 See also
 ........
-:ref:`qgis_aggregate` and :ref:`qgis_collect_geometries`
+:ref:`qgis_aggregate` and :ref:`collect`
 
 
 .. _rectanglesovalsdiamondsfixed:
@@ -1613,7 +1613,7 @@ See also
 :ref:`rectanglesovalsdiamondsfixed`
 
 
-.. _qgis_remove_null_geometries:
+.. _removenullgeometries:
 
 Remove null geometries
 ----------------------
