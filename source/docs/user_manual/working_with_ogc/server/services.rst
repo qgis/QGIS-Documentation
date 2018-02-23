@@ -738,6 +738,12 @@ only the symbols for the features falling into the requested area:
 Contest based legend features are based on the
 `UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
 
+* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
+  feature count of the features like in the following image:
+
+  .. figure:: /static/user_manual/working_with_ogc/getfeaturecount_legend.png
+    :align: center
+
 GetProjectSettings
 ------------------
 
