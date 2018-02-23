@@ -103,7 +103,7 @@ Output
   Boundary from the input layer (point for line, and line for polygon).
 
 
-.. _qgis_bounding_boxes:
+.. _boundingboxes:
 
 Bounding boxes
 ---------------
@@ -238,7 +238,7 @@ Outputs
   Points vector layer in output.
 
 
-.. _qgis_check_validity:
+.. _checkvalidity:
 
 Check validity
 --------------
@@ -291,7 +291,7 @@ Outputs
   ``message`` field describing the error(s) found.
 
 
-.. _qgis_collect_geometries:
+.. _collect:
 
 Collect geometries
 ------------------
@@ -327,11 +327,11 @@ Output
 
 See also
 ........
-:ref:`qgis_aggregate` and :ref:`qgis_promote_to_multipart`
+:ref:`qgis_aggregate` and :ref:`promotetomulti`
 
 
 
-.. _qgis_concave_hull:
+.. _concavehull:
 
 Concave hull
 ------------
@@ -373,11 +373,11 @@ Output
 
 See also
 ........
-:ref:`qgis_convex_hull`
+:ref:`convexhull`
 
 
 
-.. _qgis_convert_geometry_type:
+.. _convertgeometrytype:
 
 Convert geometry type
 ---------------------
@@ -411,10 +411,10 @@ Output
 
 See also
 ........
-:ref:`qgis_polygonize`, :ref:`qgis_lines_to_polygon`
+:ref:`qgis_polygonize`, :ref:`linestopolygons`
 
 
-.. _qgis_convex_hull:
+.. _convexhull:
 
 Convex hull
 -----------
@@ -440,10 +440,10 @@ Output
 
 See also
 ........
-:ref:`qgis_minimum_bounding_geometry`, :ref:`qgis_concave_hull`
+:ref:`qgis_minimum_bounding_geometry`, :ref:`concavehull`
 
 
-.. _qgis_create_layer_from_extent:
+.. _extenttolayer:
 
 Create layer from extent
 ------------------------
@@ -467,7 +467,7 @@ Output
   Final extent of the layer
 
 
-.. _qgis_delaunay_triangulation:
+.. _delaunaytriangulation:
 
 Delaunay triangulation
 ----------------------
@@ -491,9 +491,7 @@ Output
   Resulting polygon layer of delaunay triangulation
 
 
-
-
-.. _qgis_delete_holes:
+.. _deleteholes:
 
 Delete holes
 ------------
@@ -530,7 +528,7 @@ Outputs
   Vector layer without holes or holes larger than specified area
 
 
-.. _qgis_densify_geometries:
+.. _densifygeometries:
 
 Densify geometries
 ------------------
@@ -570,10 +568,10 @@ Outputs
 
 See also
 ........
-To add vertices at specific intervals look at :ref:`qgis_densify_geometry_interval`.
+To add vertices at specific intervals look at :ref:`densifygeometriesgivenaninterval`.
 
 
-.. _qgis_densify_geometry_interval:
+.. _densifygeometriesgivenaninterval:
 
 Densify geometries given an interval
 ------------------------------------
@@ -621,7 +619,7 @@ Outputs
 
 See also
 ........
-To add a specific number of vertices, look at :ref:`qgis_densify_geometries`.
+To add a specific number of vertices, look at :ref:`densifygeometries`.
 
 
 .. _qgis_dissolve:
@@ -671,7 +669,7 @@ Outputs
   Output layer, either (multi) line or (multi) polygon
 
 
-.. _qgis_drop_mz_values:
+.. _dropmzvalues:
 
 Drop m/z values
 ---------------
@@ -698,7 +696,7 @@ Output
   Cleaned vector layer without M and/or Z values
 
 
-.. _qgis_eliminate_selected_polygons:
+.. _eliminateselectedpolygons:
 
 Eliminate selected polygons
 ---------------------------
@@ -730,7 +728,7 @@ Output
 
 
 
-.. _qgis_explode_lines:
+.. _explodelines:
 
 Explode lines
 -------------
@@ -757,8 +755,7 @@ Output
 ``Exploded`` [vector: line]
 
 
-
-.. _qgis_export_geometry_columns:
+.. _exportaddgeometrycolumns:
 
 Export geometry columns
 -----------------------
@@ -793,8 +790,7 @@ Output
   Copy of the input vector layer with the addition of the coordinates fields
 
 
-
-.. _qgis_extend_lines:
+.. _extendlines:
 
 Extend lines
 ------------
@@ -826,39 +822,7 @@ Output
   Extended vector line layer
 
 
-.. _qgis_extract_vertices:
-
-Extract vertices
-----------------
-Takes a line or polygon layer and generates a point layer with points representing
-the vertices in the input lines or polygons.
-
-The attributes associated to each point are the same ones associated to the line
-or polygon that the point belongs to.
-
-Additional fields are added to the vertices indicating the vertex index (beginning at 0),
-the feature’s part and its index within the part (as well as its ring for polygons),
-distance along original geometry and bisector angle of vertex for original geometry.
-
-.. figure:: /static/user_manual/processing_algs/qgis/extract_nodes.png
-   :align: center
-
-   Vertices extracted for line and polygon layer
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  Vector layer in input to extract the vertices from
-
-Output
-......
-
-``Vertices`` [vector: point]
-  Vector layer of extracted vertices
-
-
-.. _qgis_extract_specific_vertices:
+.. _extractspecificvertices:
 
 Extract specific vertices
 -------------------------
@@ -898,7 +862,39 @@ Output
   Extracted vertices of input layer
 
 
-.. _qgis_fix_geometry:
+.. _extractvertices:
+
+Extract vertices
+----------------
+Takes a line or polygon layer and generates a point layer with points representing
+the vertices in the input lines or polygons.
+
+The attributes associated to each point are the same ones associated to the line
+or polygon that the point belongs to.
+
+Additional fields are added to the vertices indicating the vertex index (beginning at 0),
+the feature’s part and its index within the part (as well as its ring for polygons),
+distance along original geometry and bisector angle of vertex for original geometry.
+
+.. figure:: /static/user_manual/processing_algs/qgis/extract_nodes.png
+   :align: center
+
+   Vertices extracted for line and polygon layer
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer in input to extract the vertices from
+
+Output
+......
+
+``Vertices`` [vector: point]
+  Vector layer of extracted vertices
+
+
+.. _fixgeometries:
 
 Fix geometry
 ------------
@@ -922,7 +918,7 @@ Outputs
   Layer with fixed geometries.
 
 
-.. _qgis_geometry_by_expression:
+.. _geometrybyexpression:
 
 Geometry by expression
 ----------------------
@@ -970,8 +966,7 @@ Parameters
   Vector layer resulting from the expression added
 
 
-
-.. _qgis_keep_n_biggest:
+.. _keepnbiggestparts:
 
 Keep n biggest parts
 --------------------
@@ -1004,7 +999,7 @@ Outputs
   Resulting polygon layer with the biggest parts chosen.
 
 
-.. _qgis_lines_to_polygon:
+.. _linestopolygons:
 
 Lines to polygon
 ----------------
@@ -1026,7 +1021,7 @@ Output
   Polygon vector layer from the line input vector layer
 
 
-.. _qgis_merge_lines:
+.. _mergelines:
 
 Merge lines
 -----------
@@ -1050,7 +1045,7 @@ Output
   Single Linestring vector layer
 
 
-.. _qgis_minimum_bounding_geometry:
+.. _minimumboundinggeometry:
 
 Minimum bounding geometry
 -------------------------
@@ -1090,7 +1085,7 @@ Output
 
 
 
-.. _qgis_minimum_enclosing_circles:
+.. _minimumenclosingcircles:
 
 Minimum enclosing circles
 -------------------------
@@ -1123,7 +1118,7 @@ See also
 :ref:`qgis_minimum_bounding_geometry`
 
 
-.. _qgis_multipart_to_single:
+.. _multiparttosingleparts:
 
 Multipart to singleparts
 ------------------------
@@ -1151,10 +1146,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_collect_geometries` and :ref:`qgis_promote_to_multipart`
+:ref:`qgis_collect_geometries` and :ref:`promotetomulti`
 
 
-.. _qgis_offset_line:
+.. _offsetline:
 
 Offset line
 -----------
@@ -1203,7 +1198,7 @@ Output
   Offset line layer
 
 
-.. _qgis_oriented_minimum_bounding_box:
+.. _orientedminimumboundingbox:
 
 Oriented minimum bounding box
 -----------------------------
@@ -1268,7 +1263,7 @@ Output
   Final layer with angles adjusted depending on the parameters chosen
 
 
-.. _qgis_point_on_surface:
+.. _pointonsurface:
 
 Point on surface
 ----------------
@@ -1287,7 +1282,7 @@ Output
   Point vector layer
 
 
-.. _qgis_points_along_lines:
+.. _pointsalonglines:
 
 Points along lines
 ------------------
@@ -1331,7 +1326,7 @@ Output
   Point vector layer
 
 
-.. _qgis_points_displacement:
+.. _pointsdisplacement:
 
 Points displacement
 -------------------
@@ -1367,7 +1362,7 @@ Output
   Point vector layer
 
 
-.. _qgis_pole_of_inaccessibility:
+.. _poleofinaccessibility:
 
 Pole of inaccessibility
 -----------------------
@@ -1439,7 +1434,8 @@ Output
 ``Polygons from lines`` [vector: polygon]
   Vector layer with polygonized features
 
-.. _qgis_polygons_to_lines:
+
+.. _polygonstolines:
 
 Polygons to lines
 -----------------
@@ -1464,7 +1460,7 @@ Output
   Lines from the polygon layer
 
 
-.. _qgis_promote_to_multipart:
+.. _promotetomulti:
 
 Promote to multipart
 --------------------
@@ -1493,7 +1489,7 @@ See also
 :ref:`qgis_aggregate` and :ref:`qgis_collect_geometries`
 
 
-.. _qgis_rectangles_ovals_diamonds_fixed:
+.. _rectanglesovalsdiamondsfixed:
 
 Rectangles, ovals, diamonds (fixed)
 -----------------------------------
@@ -1552,10 +1548,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_rectangels_ovals_diamonds_variable`
+:ref:`rectanglesovalsdiamondsvariable`
 
 
-.. _qgis_rectangels_ovals_diamonds_variable:
+.. _rectanglesovalsdiamondsvariable:
 
 Rectangles, ovals, diamonds (variable)
 --------------------------------------
@@ -1614,7 +1610,7 @@ Outputs
 
 See also
 ........
-:ref:`qgis_rectangels_ovals_diamonds_variable`
+:ref:`rectanglesovalsdiamondsfixed`
 
 
 .. _qgis_remove_null_geometries:
@@ -1642,7 +1638,7 @@ Outputs
   Vector layer with only NULL geometries
 
 
-.. _qgis_reverse_line:
+.. _reverselinedirection:
 
 Reverse line
 ------------
@@ -1666,7 +1662,7 @@ Output
   Inverted line vector layer
 
 
-.. _qgis_set_m_value:
+.. _setmvalue:
 
 Set M value
 -----------
@@ -1693,7 +1689,7 @@ Output
   Vector layer in output with M value
 
 
-.. _qgis_set_z_value:
+.. _setzvalue:
 
 Set Z value
 -----------
@@ -1720,7 +1716,7 @@ Output
   Vector layer in output with Z value
 
 
-.. _qgis_simplify_geometries:
+.. _simplifygeometries:
 
 Simplify geometries
 -------------------
@@ -1769,7 +1765,7 @@ Outputs
   Simplified vector layers in output.
 
 
-.. _qgis_single_side_buffer:
+.. _singlesidedbuffer:
 
 Single side buffer
 ------------------
@@ -1831,7 +1827,7 @@ Outputs
   One side buffer polygon vector layer
 
 
-.. _qgis_smooth_geometry:
+.. _smoothgeometry:
 
 Smooth geometry
 ---------------
@@ -1891,7 +1887,7 @@ Outputs
   The smoothed vector layer.
 
 
-.. _qgis_snap_geometry:
+.. _snapgeometries:
 
 Snap geometry
 -------------
@@ -1936,7 +1932,7 @@ Outputs
   Snapped geometry in output
 
 
-.. _qgis_snap_points_to_grid:
+.. _snappointstogrid:
 
 Snap points to grid
 -------------------
@@ -2077,7 +2073,7 @@ Outputs
   Transect of the source line vector layer
 
 
-.. _qgis_translate_geometry:
+.. _translategeometry:
 
 Translate geometry
 ------------------
@@ -2111,72 +2107,7 @@ Outputs
   Translated (offset) vector layer
 
 
-.. _qgis_variable_distance_buffer:
-
-Variable distance buffer
-------------------------
-Computes a buffer area for all the features in an input layer.
-
-The size of the buffer for a given feature is defined by an attribute, so it allows
-different features to have different buffer sizes.
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  Input vector layer
-
-``Distance field`` [tablefield: numeric]
-  Attribute for the distance radius of the buffer
-
-``Segments`` [number]
-  Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets
-
-  Default: *5*
-
-``Dissolve result`` [boolean]
-  Choose to dissolve the final buffer, resulting in a single feature covering all
-  input features.
-
-  Default: *False*
-
-  .. figure:: /static/user_manual/processing_algs/qgis/buffer_dissolve.png
-     :align: center
-
-     Normal and dissolved buffer
-
-``End cap style`` [selection]
-  Controls how line endings are handled in the buffer.
-
-  .. figure:: /static/user_manual/processing_algs/qgis/buffer_cap_style.png
-     :align: center
-
-     Round, flat and square cap styles
-
-``Join style`` [selection]
-  Specifies whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
-
-``Miter limit`` [number]
-  Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join
-
-  Default: *2.0*
-
-
-Outputs
-.......
-
-``Buffer`` [vector: polygon]
-  Buffer polygon vector layer
-
-See also
-........
-:ref:`qgis_buffer`
-
-
-.. _qgis_voronoi_polygons:
+.. _voronoipolygons:
 
 Voronoi polygons
 ----------------
