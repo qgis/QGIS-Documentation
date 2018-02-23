@@ -640,6 +640,20 @@ define the tolerance for point, line and polygon layers:
 * **FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers
   *GetFeatureInfo* request, in pixels.
 
+QGIS Server also permits to make advanced GetFeatureInfo requests and select all
+the features that intersect any given WKT geometry. It does that with the help
+of the **FILTER_GEOM** parameter.
+
+.. code-block:: guess
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetFeatureInfo
+  &LAYERS=countries
+  &QUERY_LAYERS=countries
+  &INFO_FORMAT:text/xml
+  &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
+  &...
 
 .. _server_getprint:
 
