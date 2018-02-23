@@ -11,7 +11,7 @@ Raster tools
       :local:
       :depth: 1
 
-.. _qgis_convert_map_to_raster:
+.. _qgis_rasterize:
 
 Convert map to raster
 ---------------------
@@ -60,7 +60,7 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer
 
-.. _qgis_create_constant_raster_layer:
+.. _createconstantrasterlayer:
 
 Create constant raster layer
 ----------------------------
@@ -95,7 +95,7 @@ Outputs
   Raster covering the desired extent with pixel size and value chosen
 
 
-.. _qgis_set_style_for_raster_layer:
+.. _setstyleforrasterlayer:
 
 Set style for raster layer
 --------------------------
