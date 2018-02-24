@@ -12,7 +12,7 @@ Vector general
       :depth: 1
 
 
-.. _nativeassignprojection:
+.. _qgisassignprojection:
 
 Assign projection
 -----------------
@@ -44,7 +44,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisfindprojection`, :ref:`nativereprojectlayer`
+:ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisbuildvirtualvector:
@@ -150,7 +150,7 @@ Outputs
   The final layer without any duplicated geometries
 
 
-.. _nativedropgeometries:
+.. _qgisdropgeometries:
 
 Drop geometries
 ---------------
@@ -245,7 +245,7 @@ Outputs
 
 See also
 ........
-:ref:`nativeassignprojection`, :ref:`nativereprojectlayer`
+:ref:`qgisassignprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisjoinattributesbylocation:
@@ -368,7 +368,7 @@ Outputs
   The final vector with all the joined features.
 
 
-.. _nativejoinattributestable:
+.. _qgisjoinattributestable:
 
 Join attributes table
 ---------------------
@@ -400,7 +400,7 @@ Outputs
   Final vector layer with the attribute table as result of the joining
 
 
-.. _nativemergevectorlayers:
+.. _qgismergevectorlayers:
 
 Merge vector layers
 -------------------
@@ -440,7 +440,7 @@ Outputs
   Merged vector layer containing all the features and attributes from input layers
 
 
-.. _nativeorderbyexpression:
+.. _qgisorderbyexpression:
 
 Order by expression
 -------------------
@@ -477,7 +477,7 @@ Outputs
   Sorted vector layer
 
 
-.. _nativereprojectlayer:
+.. _qgisreprojectlayer:
 
 Reproject layer
 ---------------
@@ -503,10 +503,10 @@ Outputs
 
 See also
 ........
-:ref:`nativeassignprojection`, :ref:`qgisfindprojection`
+:ref:`qgisassignprojection`, :ref:`qgisfindprojection`
 
 
-.. _nativesaveselectedfeatures:
+.. _qgissaveselectedfeatures:
 
 Save selected features
 ----------------------
@@ -573,7 +573,7 @@ Outputs
 
 See also
 ........
-:ref:`nativemergevectorlayers`
+:ref:`qgismergevectorlayers`
 
 
 .. _qgistruncatetable:

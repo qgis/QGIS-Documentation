@@ -12,7 +12,7 @@ Vector selection
       :depth: 1
 
 
-.. _nativeextractbyattribute:
+.. _qgisextractbyattribute:
 
 Extract by attribute
 --------------------
@@ -60,7 +60,7 @@ Outputs
   Vector layer with not matching features
 
 
-.. _nativeextractbyexpression:
+.. _qgisextractbyexpression:
 
 Extract by expression
 ---------------------
@@ -90,7 +90,7 @@ Outputs
   Vector layer with not matching features
 
 
-.. _nativeextractbylocation:
+.. _qgisextractbylocation:
 
 Extract by location
 -------------------
@@ -346,7 +346,7 @@ Parameters
   Default: *creating new selection*
 
 
-.. _nativeselectbylocation:
+.. _qgisselectbylocation:
 
 Select by location
 ------------------

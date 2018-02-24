@@ -152,7 +152,7 @@ SQL query. By opening the table (for example with Data Manager) you will see
 the results.
 
 
-.. _nativepackage:
+.. _qgispackage:
 
 Package layers
 --------------
