@@ -167,6 +167,15 @@ following dialog structure: in the upper part, you have a widget that helps
 you prepare the classification and the symbol to use for features and at
 the bottom the:ref:`layer_rendering` widget.
 
+.. tip:: **Switch quickly between different layer representations**
+
+   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
+   :guilabel:`Layer Properties` dialog, you can save as many combinations of
+   layer properties settings (symbology, labeling, diagram, fields form,
+   actions...) as you want. Then, simply switch between styles from the context
+   menu of the layer in :guilabel:`Layers Panel` to automatically get different
+   representations of your data.
+
 .. tip:: **Export vector symbology**
 
    You have the option to export vector symbology from QGIS into Google \*.kml,
@@ -2548,15 +2557,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
    Metadata tab in vector layers properties dialog
 
-
-.. tip:: **Switch quickly between different layer representations**
-
-   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
-   :guilabel:`Layer Properties` dialog, you can save as many combinations of
-   layer properties settings (symbology, labeling, diagram, fields form,
-   actions...) as you want. Then, simply switch between styles from the context
-   menu of the layer in :guilabel:`Layers Panel` to automatically get different
-   representations of your data.
 
 .. index:: Variables
 .. _vectorvariablesmenu:
