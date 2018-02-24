@@ -97,7 +97,7 @@ Outputs
   Output raster layer.
 
 
-.. _gdalcoutour:
+.. _gdalcontour:
 
 Contour
 -------
