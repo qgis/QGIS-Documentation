@@ -11,7 +11,7 @@ Raster miscellaneous
       :local:
       :depth: 1
 
-.. _buildvirtualraster:
+.. _gdalbuildvirtualraster:
 
 Build Virtual Raster
 --------------------
@@ -56,7 +56,7 @@ Outputs
   Output raster file.
 
 
-.. _merge:
+.. _gdalmerge:
 
 Merge
 -----
@@ -108,7 +108,7 @@ Outputs
   Output raster layer.
 
 
-.. _overviews:
+.. _gdaloverviews:
 
 Build overviews (pyramids)
 --------------------------
@@ -167,7 +167,7 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer with overviews.
 
-.. _gdalinfo:
+.. _gdalgdalinfo:
 
 Information
 -----------

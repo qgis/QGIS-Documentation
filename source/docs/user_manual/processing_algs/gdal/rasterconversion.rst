@@ -12,7 +12,7 @@ Raster conversion
       :depth: 1
 
 
-.. _gdal2xyz:
+.. _gdalgdal2xyz:
 
 gdal2xyz
 --------
@@ -34,7 +34,7 @@ Outputs
   <put output description here>
 
 
-.. _pcttorgb:
+.. _gdalpcttorgb:
 
 PCT to RGB
 ----------
@@ -92,7 +92,7 @@ See also
 `GDAL pct2rgb utility <http://www.gdal.org/pct2rgb.html>`_
 
 
-.. _polygonize:
+.. _gdalpolygonize:
 
 Polygonize (raster to vector)
 -----------------------------
@@ -120,7 +120,7 @@ Outputs
   Output vector layer. Default format is \*.shp.
 
 
-.. _rasterize:
+.. _gdalrasterize:
 
 Rasterize (vector to raster)
 ----------------------------
@@ -190,7 +190,7 @@ Outputs
   (if this option is used).
 
 
-.. _rgbtopct:
+.. _gdalrgbtopct:
 
 RGB to PCT
 ----------
@@ -221,7 +221,7 @@ Outputs
   8-bit output raster.
 
 
-.. _translate:
+.. _gdaltranslate:
 
 Translate (convert format)
 --------------------------

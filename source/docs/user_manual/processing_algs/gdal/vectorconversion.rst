@@ -12,7 +12,7 @@ Vector conversion
       :depth: 1
 
 
-.. _convertformat:
+.. _gdalconvertformat:
 
 Convert format
 --------------

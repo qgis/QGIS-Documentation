@@ -12,7 +12,7 @@ Raster analysis
       :depth: 1
 
 
-.. _aspect:
+.. _gdalaspect:
 
 Aspect
 ------
@@ -61,7 +61,7 @@ Outputs
   Output raster with angle values in degrees.
 
 
-.. _colorrelief:
+.. _gdalcolorrelief:
 
 Color relief
 ------------
@@ -111,7 +111,7 @@ Outputs
   A 4-band output raster.
 
 
-.. _fillnodata:
+.. _gdalfillnodata:
 
 Fill nodata
 -----------
@@ -164,7 +164,7 @@ Outputs
   Output raster in any GDAL-supported format.
 
 
-.. _gridaverage:
+.. _gdalgridaverage:
 
 Grid (Moving average)
 ---------------------
@@ -242,7 +242,7 @@ See also
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
 
-.. _griddatametrics:
+.. _gdalgriddatametrics:
 
 Grid (Data metrics)
 -------------------
@@ -328,7 +328,7 @@ See also
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
 
-.. _gridinversedistance:
+.. _gdalgridinversedistance:
 
 Grid (Inverse distance to a power)
 ----------------------------------
@@ -424,7 +424,7 @@ See also
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
 
-.. _gridinversedistancenearestneighbor:
+.. _gdalgridinversedistancenearestneighbor:
 
 Grid (Nearest neighbor)
 -----------------------
@@ -493,7 +493,7 @@ See also
 `GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
 
 
-.. _hillshade:
+.. _gdalhillshade:
 
 Hillshade
 ---------
@@ -553,7 +553,7 @@ Outputs
   Output raster.
 
 
-.. _nearblack:
+.. _gdalnearblack:
 
 Near black
 ----------
@@ -591,7 +591,7 @@ See also
 `GDAL nearblack <http://www.gdal.org/nearblack.html>`_
 
 
-.. _proximity:
+.. _gdalproximity:
 
 Proximity (raster distance)
 ---------------------------
@@ -672,7 +672,7 @@ See also
 `GDAL proximity algorithm <http://www.gdal.org/gdal_proximity.html>`_
 
 
-.. _roughness:
+.. _gdalroughness:
 
 Roughness
 ---------
@@ -708,7 +708,7 @@ Outputs
   Single-band output raster. The value -9999 is used as the output nodata value.
 
 
-.. _sieve:
+.. _gdalsieve:
 
 Sieve
 -----
@@ -745,7 +745,7 @@ Outputs
   Output raster layer.
 
 
-.. _slope:
+.. _gdalslope:
 
 Slope
 -----
@@ -792,7 +792,7 @@ Outputs
   32-bit float output raster.
 
 
-.. _tpitopographicpositionindex:
+.. _gdaltpitopographicpositionindex:
 
 TPI (Topographic Position Index)
 --------------------------------
@@ -828,7 +828,7 @@ See also
 `GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`__
 
 
-.. _triterrainruggednessindex:
+.. _gdaltriterrainruggednessindex:
 
 TRI (Terrain Ruggedness Index)
 ------------------------------

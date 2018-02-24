@@ -12,7 +12,7 @@ Raster projections
       :depth: 1
 
 
-.. _assignprojection:
+.. _gdalassignprojection:
 
 Extract projection
 ------------------
@@ -36,7 +36,7 @@ Outputs
 .......
 
 
-.. _warpreproject:
+.. _gdalwarpreproject:
 
 Warp (reproject)
 ----------------

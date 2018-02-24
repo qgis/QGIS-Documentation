@@ -12,7 +12,7 @@ Vector geoprocessing
       :depth: 1
 
 
-.. _clipvectorbyextent:
+.. _gdalclipvectorbyextent:
 
 Clip vectors by extent
 ----------------------
@@ -45,7 +45,7 @@ Outputs
   Output vector layer.
 
 
-.. _clipvectorbypolygon:
+.. _gdalclipvectorbypolygon:
 
 Clip vectors by polygon
 -----------------------

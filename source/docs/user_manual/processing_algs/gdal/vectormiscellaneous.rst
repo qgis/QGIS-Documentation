@@ -12,7 +12,7 @@ Vector miscellaneous
       :depth: 1
 
 
-.. _executesql:
+.. _gdalexecutesql:
 
 Execute SQL
 -----------
@@ -402,7 +402,7 @@ Outputs
 .......
 
 
-.. _ogrinfo:
+.. _gdalogrinfo:
 
 Information
 -----------

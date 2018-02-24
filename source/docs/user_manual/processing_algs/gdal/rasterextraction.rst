@@ -12,7 +12,7 @@ Raster extraction
       :depth: 1
 
 
-.. _cliprasterbyextent:
+.. _gdalcliprasterbyextent:
 
 Clip raster by extent
 ---------------------
@@ -51,7 +51,7 @@ Outputs
   Output raster layer.
 
 
-.. _cliprasterbymasklayer:
+.. _gdalcliprasterbymasklayer:
 
 Clip raster by mask layer
 -------------------------
@@ -97,7 +97,7 @@ Outputs
   Output raster layer.
 
 
-.. _coutour:
+.. _gdalcoutour:
 
 Contour
 -------
