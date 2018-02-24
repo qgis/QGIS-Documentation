@@ -12,7 +12,7 @@ Vector overlay
       :depth: 1
 
 
-.. _qgis_clip:
+.. _nativeclip:
 
 Clip
 ----
@@ -56,10 +56,10 @@ Output
 
 See also
 ........
-:ref:`qgis_intersection`
+:ref:`qgisintersection`
 
 
-.. _qgis_difference:
+.. _qgisdifference:
 
 Difference
 ----------
@@ -94,10 +94,10 @@ Output
 
 See also
 ........
-:ref:`symmetricaldifference`
+:ref:`qgissymmetricaldifference`
 
 
-.. _extractbyextent:
+.. _nativeextractbyextent:
 
 Extract/clip by extent
 ----------------------
@@ -127,7 +127,7 @@ Output
   Layer containing the clipped features.
 
 
-.. _qgis_intersection:
+.. _qgisintersection:
 
 Intersection
 ------------
@@ -172,10 +172,10 @@ Output
 
 See also
 ........
-:ref:`qgis_clip`
+:ref:`nativeclip`
 
 
-.. _lineintersections:
+.. _nativelineintersections:
 
 Line intersections
 ------------------
@@ -216,7 +216,7 @@ Output
   Point vector layer of the intersection
 
 
-.. _splitwithlines:
+.. _nativesplitwithlines:
 
 Split with lines
 ----------------
@@ -247,7 +247,7 @@ Output
   Output layer with split lines or polygons from input layer.
 
 
-.. _symmetricaldifference:
+.. _qgissymmetricaldifference:
 
 Symmetrical difference
 -----------------------
@@ -281,10 +281,10 @@ Output
 
 See also
 ........
-:ref:`qgis_difference`
+:ref:`qgisdifference`
 
 
-.. _qgis_union:
+.. _qgisunion:
 
 Union
 -----

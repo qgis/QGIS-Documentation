@@ -12,7 +12,7 @@ File Tools
       :depth: 1
 
 
-.. _filedownloader:
+.. _nativefiledownloader:
 
 Download file
 --------------

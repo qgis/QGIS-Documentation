@@ -13,7 +13,7 @@ Vector geometry
 
 
 
-.. _qgis_aggregate:
+.. _qgisaggregate:
 
 Aggregate
 ---------
@@ -65,7 +65,7 @@ For a  complete description of the aggregates function, refer to the dedicated
 :ref:`aggregates_function` chapter.
 
 
-.. _qgis_boundary:
+.. _nativeboundary:
 
 Boundary
 ---------
@@ -103,7 +103,7 @@ Output
   Boundary from the input layer (point for line, and line for polygon).
 
 
-.. _boundingboxes:
+.. _nativeboundingboxes:
 
 Bounding boxes
 ---------------
@@ -130,10 +130,10 @@ Outputs
 
 See also
 ........
-:ref:`minimumboundinggeometry`
+:ref:`qgisminimumboundinggeometry`
 
 
-.. _qgis_buffer:
+.. _nativebuffer:
 
 Buffer
 ------
@@ -206,7 +206,7 @@ Outputs
   Buffer polygon vector layer
 
 
-.. _qgis_centroids:
+.. _nativecentroids:
 
 Centroids
 ---------
@@ -238,7 +238,7 @@ Outputs
   Points vector layer in output.
 
 
-.. _checkvalidity:
+.. _qgischeckvalidity:
 
 Check validity
 --------------
@@ -291,7 +291,7 @@ Outputs
   ``message`` field describing the error(s) found.
 
 
-.. _collect:
+.. _nativecollect:
 
 Collect geometries
 ------------------
@@ -327,11 +327,11 @@ Output
 
 See also
 ........
-:ref:`qgis_aggregate` and :ref:`promotetomulti`
+:ref:`qgisaggregate` and :ref:`nativepromotetomulti`
 
 
 
-.. _concavehull:
+.. _qgisconcavehull:
 
 Concave hull
 ------------
@@ -373,11 +373,10 @@ Output
 
 See also
 ........
-:ref:`convexhull`
+:ref:`nativeconvexhull`
 
 
-
-.. _convertgeometrytype:
+.. _qgisconvertgeometrytype:
 
 Convert geometry type
 ---------------------
@@ -411,10 +410,10 @@ Output
 
 See also
 ........
-:ref:`qgis_polygonize`, :ref:`linestopolygons`
+:ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
 
-.. _convexhull:
+.. _nativeconvexhull:
 
 Convex hull
 -----------
@@ -440,10 +439,10 @@ Output
 
 See also
 ........
-:ref:`minimumboundinggeometry`, :ref:`concavehull`
+:ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
 
 
-.. _extenttolayer:
+.. _nativeextenttolayer:
 
 Create layer from extent
 ------------------------
@@ -467,7 +466,7 @@ Output
   Final extent of the layer
 
 
-.. _delaunaytriangulation:
+.. _qgisdelaunaytriangulation:
 
 Delaunay triangulation
 ----------------------
@@ -491,7 +490,7 @@ Output
   Resulting polygon layer of delaunay triangulation
 
 
-.. _deleteholes:
+.. _qgisdeleteholes:
 
 Delete holes
 ------------
@@ -528,7 +527,7 @@ Outputs
   Vector layer without holes or holes larger than specified area
 
 
-.. _densifygeometries:
+.. _qgisdensifygeometries:
 
 Densify geometries
 ------------------
@@ -568,10 +567,10 @@ Outputs
 
 See also
 ........
-To add vertices at specific intervals look at :ref:`densifygeometriesgivenaninterval`.
+To add vertices at specific intervals look at :ref:`qgisdensifygeometriesgivenaninterval`.
 
 
-.. _densifygeometriesgivenaninterval:
+.. _qgisdensifygeometriesgivenaninterval:
 
 Densify geometries given an interval
 ------------------------------------
@@ -619,10 +618,10 @@ Outputs
 
 See also
 ........
-To add a specific number of vertices, look at :ref:`densifygeometries`.
+To add a specific number of vertices, look at :ref:`qgisdensifygeometries`.
 
 
-.. _qgis_dissolve:
+.. _nativedissolve:
 
 Dissolve
 --------
@@ -669,7 +668,7 @@ Outputs
   Output layer, either (multi) line or (multi) polygon
 
 
-.. _dropmzvalues:
+.. _nativedropmzvalues:
 
 Drop m/z values
 ---------------
@@ -696,7 +695,7 @@ Output
   Cleaned vector layer without M and/or Z values
 
 
-.. _eliminateselectedpolygons:
+.. _qgiseliminateselectedpolygons:
 
 Eliminate selected polygons
 ---------------------------
@@ -728,7 +727,7 @@ Output
 
 
 
-.. _explodelines:
+.. _qgisexplodelines:
 
 Explode lines
 -------------
@@ -755,7 +754,7 @@ Output
 ``Exploded`` [vector: line]
 
 
-.. _exportaddgeometrycolumns:
+.. _qgisexportaddgeometrycolumns:
 
 Export geometry columns
 -----------------------
@@ -790,7 +789,7 @@ Output
   Copy of the input vector layer with the addition of the coordinates fields
 
 
-.. _extendlines:
+.. _qgisextendlines:
 
 Extend lines
 ------------
@@ -822,7 +821,7 @@ Output
   Extended vector line layer
 
 
-.. _extractspecificvertices:
+.. _qgisextractspecificvertices:
 
 Extract specific vertices
 -------------------------
@@ -862,7 +861,7 @@ Output
   Extracted vertices of input layer
 
 
-.. _extractvertices:
+.. _nativeextractvertices:
 
 Extract vertices
 ----------------
@@ -894,7 +893,7 @@ Output
   Vector layer of extracted vertices
 
 
-.. _fixgeometries:
+.. _nativefixgeometries:
 
 Fix geometry
 ------------
@@ -918,7 +917,7 @@ Outputs
   Layer with fixed geometries.
 
 
-.. _geometrybyexpression:
+.. _qgisgeometrybyexpression:
 
 Geometry by expression
 ----------------------
@@ -966,7 +965,7 @@ Parameters
   Vector layer resulting from the expression added
 
 
-.. _keepnbiggestparts:
+.. _qgiskeepnbiggestparts:
 
 Keep n biggest parts
 --------------------
@@ -999,7 +998,7 @@ Outputs
   Resulting polygon layer with the biggest parts chosen.
 
 
-.. _linestopolygons:
+.. _qgislinestopolygons:
 
 Lines to polygon
 ----------------
@@ -1021,7 +1020,7 @@ Output
   Polygon vector layer from the line input vector layer
 
 
-.. _mergelines:
+.. _nativemergelines:
 
 Merge lines
 -----------
@@ -1045,7 +1044,7 @@ Output
   Single Linestring vector layer
 
 
-.. _minimumboundinggeometry:
+.. _qgisminimumboundinggeometry:
 
 Minimum bounding geometry
 -------------------------
@@ -1084,8 +1083,7 @@ Output
   Bounding polygon layer
 
 
-
-.. _minimumenclosingcircles:
+.. _nativeminimumenclosingcircle:
 
 Minimum enclosing circles
 -------------------------
@@ -1115,10 +1113,10 @@ Output
 
 See also
 ........
-:ref:`minimumboundinggeometry`
+:ref:`qgisminimumboundinggeometry`
 
 
-.. _multiparttosingleparts:
+.. _nativemultiparttosingleparts:
 
 Multipart to singleparts
 ------------------------
@@ -1146,10 +1144,10 @@ Outputs
 
 See also
 ........
-:ref:`collect` and :ref:`promotetomulti`
+:ref:`nativecollect` and :ref:`nativepromotetomulti`
 
 
-.. _offsetline:
+.. _qgisoffsetline:
 
 Offset line
 -----------
@@ -1198,7 +1196,7 @@ Output
   Offset line layer
 
 
-.. _orientedminimumboundingbox:
+.. _nativeorientedminimumboundingbox:
 
 Oriented minimum bounding box
 -----------------------------
@@ -1223,10 +1221,10 @@ Output
 
 See also
 ........
-:ref:`minimumboundinggeometry`
+:ref:`qgisminimumboundinggeometry`
 
 
-.. _qgis_orthogonalize:
+.. _qgisorthogonalize:
 
 Orthogonalize
 -------------
@@ -1263,7 +1261,7 @@ Output
   Final layer with angles adjusted depending on the parameters chosen
 
 
-.. _pointonsurface:
+.. _qgispointonsurface:
 
 Point on surface
 ----------------
@@ -1282,7 +1280,7 @@ Output
   Point vector layer
 
 
-.. _pointsalonglines:
+.. _qgispointsalonglines:
 
 Points along lines
 ------------------
@@ -1326,7 +1324,7 @@ Output
   Point vector layer
 
 
-.. _pointsdisplacement:
+.. _qgispointsdisplacement:
 
 Points displacement
 -------------------
@@ -1362,7 +1360,7 @@ Output
   Point vector layer
 
 
-.. _poleofinaccessibility:
+.. _qgispoleofinaccessibility:
 
 Pole of inaccessibility
 -----------------------
@@ -1400,7 +1398,7 @@ Output
   Point as pole of inaccessibility for the source polygon vector layer
 
 
-.. _qgis_polygonize:
+.. _qgispolygonize:
 
 Polygonize
 ----------
@@ -1435,7 +1433,7 @@ Output
   Vector layer with polygonized features
 
 
-.. _polygonstolines:
+.. _qgispolygonstolines:
 
 Polygons to lines
 -----------------
@@ -1460,7 +1458,7 @@ Output
   Lines from the polygon layer
 
 
-.. _promotetomulti:
+.. _nativepromotetomulti:
 
 Promote to multipart
 --------------------
@@ -1486,10 +1484,10 @@ Output
 
 See also
 ........
-:ref:`qgis_aggregate` and :ref:`collect`
+:ref:`qgisaggregate` and :ref:`nativecollect`
 
 
-.. _rectanglesovalsdiamondsfixed:
+.. _qgisrectanglesovalsdiamondsfixed:
 
 Rectangles, ovals, diamonds (fixed)
 -----------------------------------
@@ -1548,10 +1546,10 @@ Outputs
 
 See also
 ........
-:ref:`rectanglesovalsdiamondsvariable`
+:ref:`qgisrectanglesovalsdiamondsvariable`
 
 
-.. _rectanglesovalsdiamondsvariable:
+.. _qgisrectanglesovalsdiamondsvariable:
 
 Rectangles, ovals, diamonds (variable)
 --------------------------------------
@@ -1610,10 +1608,10 @@ Outputs
 
 See also
 ........
-:ref:`rectanglesovalsdiamondsfixed`
+:ref:`qgisrectanglesovalsdiamondsfixed`
 
 
-.. _removenullgeometries:
+.. _nativeremovenullgeometries:
 
 Remove null geometries
 ----------------------
@@ -1638,7 +1636,7 @@ Outputs
   Vector layer with only NULL geometries
 
 
-.. _reverselinedirection:
+.. _qgisreverselinedirection:
 
 Reverse line
 ------------
@@ -1662,7 +1660,7 @@ Output
   Inverted line vector layer
 
 
-.. _setmvalue:
+.. _qgissetmvalue:
 
 Set M value
 -----------
@@ -1689,7 +1687,7 @@ Output
   Vector layer in output with M value
 
 
-.. _setzvalue:
+.. _qgissetzvalue:
 
 Set Z value
 -----------
@@ -1716,7 +1714,7 @@ Output
   Vector layer in output with Z value
 
 
-.. _simplifygeometries:
+.. _nativesimplifygeometries:
 
 Simplify geometries
 -------------------
@@ -1765,7 +1763,7 @@ Outputs
   Simplified vector layers in output.
 
 
-.. _singlesidedbuffer:
+.. _qgissinglesidedbuffer:
 
 Single side buffer
 ------------------
@@ -1827,7 +1825,7 @@ Outputs
   One side buffer polygon vector layer
 
 
-.. _smoothgeometry:
+.. _nativesmoothgeometry:
 
 Smooth geometry
 ---------------
@@ -1887,7 +1885,7 @@ Outputs
   The smoothed vector layer.
 
 
-.. _snapgeometries:
+.. _qgissnapgeometries:
 
 Snap geometry
 -------------
@@ -1932,7 +1930,7 @@ Outputs
   Snapped geometry in output
 
 
-.. _snappointstogrid:
+.. _nativesnappointstogrid:
 
 Snap points to grid
 -------------------
@@ -1980,7 +1978,7 @@ Outputs
   Snapped geometry in output
 
 
-.. _qgis_subdivide:
+.. _nativesubdivide:
 
 Subdivide
 ---------
@@ -2018,7 +2016,7 @@ Outputs
   Output vector with *sub-parts*.
 
 
-.. _qgis_transect:
+.. _nativetransect:
 
 Transect
 --------
@@ -2073,7 +2071,7 @@ Outputs
   Transect of the source line vector layer
 
 
-.. _translategeometry:
+.. _nativetranslategeometry:
 
 Translate geometry
 ------------------
@@ -2107,7 +2105,7 @@ Outputs
   Translated (offset) vector layer
 
 
-.. _voronoipolygons:
+.. _qgisvoronoipolygons:
 
 Voronoi polygons
 ----------------

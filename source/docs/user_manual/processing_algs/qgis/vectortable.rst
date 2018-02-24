@@ -12,7 +12,7 @@ Vector table
       :depth: 1
 
 
-.. _addautoincrementalfield:
+.. _nativeaddautoincrementalfield:
 
 Add autoincremental field
 -------------------------
@@ -48,7 +48,7 @@ Output
   Vector layer with additional field
 
 
-.. _addfieldtoattributestable:
+.. _qgisaddfieldtoattributestable:
 
 Add field to attributes table
 -----------------------------
@@ -96,7 +96,7 @@ Output
   Vector layer with new field added
 
 
-.. _adduniquevalueindexfield:
+.. _nativeadduniquevalueindexfield:
 
 Add unique value index field
 ----------------------------
@@ -130,7 +130,7 @@ Output
   Vector layer with the numeric field containing indexes
 
 
-.. _advancedpythonfieldcalculator:
+.. _qgisadvancedpythonfieldcalculator:
 
 Advanced Python field calculator
 --------------------------------
@@ -193,7 +193,7 @@ Output
   Vector layer with the new calculated field
 
 
-.. _deletecolumn:
+.. _qgisdeletecolumn:
 
 Drop field(s)
 -------------
@@ -216,7 +216,7 @@ Output
   Vector layer without the field(s) chosen
 
 
-.. _fieldcalculator:
+.. _qgisfieldcalculator:
 
 Field calculator
 ----------------
@@ -228,7 +228,7 @@ A new layer is created with the result of the expression.
 The field calculator is very useful when used in :ref:`processing.modeler`.
 
 
-.. _refactorfields:
+.. _qgisrefactorfields:
 
 Refactor fields
 ---------------
@@ -278,7 +278,7 @@ Output
   Output layer with refactored fields
 
 
-.. _texttofloat:
+.. _qgistexttofloat:
 
 Text to float
 -------------

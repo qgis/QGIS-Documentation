@@ -12,7 +12,7 @@ Raster terrain analysis
       :depth: 1
 
 
-.. _qgis_aspect:
+.. _qgisaspect:
 
 Aspect
 ------
@@ -54,7 +54,7 @@ Outputs
   Aspect raster layer
 
 
-.. _qgis_hillshade:
+.. _qgishillshade:
 
 Hillshade
 ---------
@@ -119,7 +119,7 @@ Outputs
   Hillshade raster layer
 
 
-.. _hypsometriccurves:
+.. _qgishypsometriccurves:
 
 Hypsometric curves
 ------------------
@@ -167,7 +167,7 @@ Outputs
    :scale: 50%
 
 
-.. _qgis_relief:
+.. _qgisrelief:
 
 Relief
 ------
@@ -222,7 +222,7 @@ Outputs
   Relief raster layer
 
 
-.. _ruggednessindex:
+.. _qgisruggednessindex:
 
 Ruggedness index
 ----------------
@@ -257,7 +257,7 @@ Outputs
   Ruggedness raster layer
 
 
-.. _qgis_slope:
+.. _qgisslope:
 
 Slope
 -----
