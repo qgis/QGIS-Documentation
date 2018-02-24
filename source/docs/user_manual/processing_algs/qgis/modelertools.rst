@@ -12,7 +12,7 @@ Modeler tools
       :depth: 1
 
 
-.. _loadlayer:
+.. _nativeloadlayer:
 
 Load layer into project
 =======================
@@ -28,7 +28,7 @@ Parameters
   Name of the loaded layer
 
 
-.. _renamelayer:
+.. _nativerenamelayer:
 
 Rename layer
 ============
