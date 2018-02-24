@@ -11,7 +11,7 @@ Database
       :local:
       :depth: 1
 
-.. _qgis_import_into_postgis:
+.. _importintopostgis:
 
 Import into PostGIS
 -------------------
@@ -93,7 +93,7 @@ Parameters
   Default: *False*
 
 
-.. _qgis_postgis_execute_sql:
+.. _postgisexecutesql:
 
 PostGIS execute SQL
 -------------------
@@ -152,7 +152,7 @@ SQL query. By opening the table (for example with Data Manager) you will see
 the results.
 
 
-.. _qgis_package_layers:
+.. _package:
 
 Package layers
 --------------
@@ -176,7 +176,7 @@ Outputs
   If not specified the GeoPackage database will be save in the temporary folder.
 
 
-.. _qgis_import_into_spatialite:
+.. _importintospatialite:
 
 Import into SpatiaLite
 ----------------------
@@ -252,7 +252,7 @@ Parameters
   Default: *False*
 
 
-.. _qgis_spatialite_execute_sql:
+.. _spatialiteexecutesql:
 
 SpatiaLite execute SQL
 ----------------------

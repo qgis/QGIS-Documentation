@@ -94,10 +94,10 @@ Output
 
 See also
 ........
-:ref:`qgis_symmetrical_difference`
+:ref:`symmetricaldifference`
 
 
-.. _qgis_extract_by_extent:
+.. _extractbyextent:
 
 Extract/clip by extent
 ----------------------
@@ -175,7 +175,7 @@ See also
 :ref:`qgis_clip`
 
 
-.. _qgis_line_intersection:
+.. _lineintersections:
 
 Line intersections
 ------------------
@@ -216,7 +216,7 @@ Output
   Point vector layer of the intersection
 
 
-.. _qgis_split_with_lines:
+.. _splitwithlines:
 
 Split with lines
 ----------------
@@ -247,7 +247,7 @@ Output
   Output layer with split lines or polygons from input layer.
 
 
-.. _qgis_symmetrical_difference:
+.. _symmetricaldifference:
 
 Symmetrical difference
 -----------------------
