@@ -223,7 +223,7 @@ feature and of the **SELECTION** parameter detailed in the
  &HIGHLIGHT_LABELCOLOR=%23000000
  &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &HIGHLIGHT_LABELBUFFERSIZE=3
- &SELECTION=countries:171,6
+ &SELECTION=countries:171,65
 
 Pasting the above request in your web browser should output the following image:
 
