@@ -20,13 +20,14 @@ dialog (see figure_raster_properties_).
 
 There are several tabs in the dialog:
 
-* :guilabel:`General`
+* :guilabel:`Source`
 * :guilabel:`Style`
 * :guilabel:`Transparency`
-* :guilabel:`Pyramids`
 * :guilabel:`Histogram`
-* :guilabel:`Metadata`
+* :guilabel:`Rendering`
+* :guilabel:`Pyramids`
 * :guilabel:`Legend`
+* :guilabel:`QGIS Server`
 
 .. _figure_raster_properties:
 
@@ -50,15 +51,15 @@ There are several tabs in the dialog:
    project file and to avoid changes that may break this behavior, the layer
    properties dialog is made unavailable for these layers.
 
-.. _label_generaltab:
+.. _label_sourcetab:
 
-General Properties
-------------------
+Source Properties
+-----------------
 
 Layer Info
 ..........
 
-The :guilabel:`General` tab displays basic information about the selected
+The :guilabel:`Source` tab displays basic information about the selected
 raster, including the layer source path, the display name in the legend
 (which can be modified), and the number of columns, rows and no-data values
 of the raster.
@@ -73,16 +74,6 @@ Use this process only if the CRS applied to the layer is a wrong one or if none
 was applied. If you wish to reproject your data into another CRS, rather use
 layer reprojection algorithms from Processing or :ref:`Save it into another
 layer <general_saveas>`.
-
-Scale dependent visibility
---------------------------
-
-You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-(exclusive)` scale, defining a range of scale in which the layer will be
-visible. Out of this range, it's hidden. The |mapIdentification|
-:sup:`Set to current canvas scale` button helps you use the current map
-canvas scale as boundary of the range visibility.
-See :ref:`label_scaledepend` for more information.
 
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
@@ -355,6 +346,49 @@ quite a lot of work. Therefore, you can use the button |fileSave|
 applies them to the current raster layer.
 
 
+.. index:: Histogram
+.. _label_histogram:
+
+Histogram Properties
+--------------------
+
+The :guilabel:`Histogram` tab allows you to view the distribution of the bands
+or colors in your raster. The histogram is generated automatically when you open the
+:guilabel:`Histogram` tab. All existing bands will be displayed together. You
+can save the histogram as an image with the |fileSave| button.
+With the :guilabel:`Visibility` option in the |actionRun| :guilabel:`Prefs/Actions` menu,
+you can display histograms of the individual bands. You will need to select the option
+|radioButtonOff| :guilabel:`Show selected band`.
+The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
+to min/max' and to 'Update style to min/max'.
+With the :guilabel:`Actions` option, you can 'Reset' and 'Recompute histogram' after
+you have chosen the :guilabel:`Min/max options`.
+
+.. _figure_raster_histogram:
+
+.. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
+   :align: center
+
+   Raster Histogram
+
+
+.. index:: Rendering
+.. _raster_rendering:
+
+Rendering
+---------
+
+Scale dependent visibility
+..........................
+
+You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+(exclusive)` scale, defining a range of scale in which the layer will be
+visible. Out of this range, it's hidden. The |mapIdentification|
+:sup:`Set to current canvas scale` button helps you use the current map
+canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
+
+
 .. index:: Pyramids
 .. _raster_pyramids:
 
@@ -404,52 +438,6 @@ Finally, click **[Build pyramids]** to start the process.
    Raster Pyramids
 
 
-.. index:: Histogram
-.. _label_histogram:
-
-Histogram Properties
---------------------
-
-The :guilabel:`Histogram` tab allows you to view the distribution of the bands
-or colors in your raster. The histogram is generated automatically when you open the
-:guilabel:`Histogram` tab. All existing bands will be displayed together. You
-can save the histogram as an image with the |fileSave| button.
-With the :guilabel:`Visibility` option in the |actionRun| :guilabel:`Prefs/Actions` menu,
-you can display histograms of the individual bands. You will need to select the option
-|radioButtonOff| :guilabel:`Show selected band`.
-The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
-to min/max' and to 'Update style to min/max'.
-With the :guilabel:`Actions` option, you can 'Reset' and 'Recompute histogram' after
-you have chosen the :guilabel:`Min/max options`.
-
-.. _figure_raster_histogram:
-
-.. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
-   :align: center
-
-   Raster Histogram
-
-.. index:: Metadata
-.. _raster_metadata:
-
-Metadata Properties
--------------------
-
-The :guilabel:`Metadata` tab displays a wealth of information about the raster
-layer, including statistics about each band in the current raster layer.
-From this tab, entries may be made for the :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataUrl` and :guilabel:`Properties`.
-In :guilabel:`Properties`, statistics are gathered on a 'need to know'
-basis, so it may well be that a given layer's statistics have not yet been
-collected.
-
-.. _figure_raster_metadata:
-
-.. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
-   :align: center
-
-   Raster Metadata
-
 .. index:: Legend, Embedded widget
 .. _raster_legend:
 
@@ -464,3 +452,25 @@ transparency, filtering, selection, style or other stuff...).
 By default, QGIS provides transparency widget but this can be extended by
 plugins registering their own widgets and assign custom actions to layers
 they manage.
+
+
+.. index:: QGIS Server
+.. _raster_server:
+
+QGIS Server Properties
+----------------------
+
+The :guilabel:`QGIS Server` tab displays a wealth of information about the raster
+layer, including statistics about each band in the current raster layer.
+From this tab, entries may be made for the :guilabel:`Description`,
+:guilabel:`Attribution`, :guilabel:`MetadataUrl` and :guilabel:`Properties`.
+In :guilabel:`Properties`, statistics are gathered on a 'need to know'
+basis, so it may well be that a given layer's statistics have not yet been
+collected.
+
+.. _figure_raster_metadata:
+
+.. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
+   :align: center
+
+   QGIS Server in Raster Properties
