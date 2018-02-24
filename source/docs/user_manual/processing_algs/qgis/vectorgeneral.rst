@@ -12,7 +12,7 @@ Vector general
       :depth: 1
 
 
-.. _qgis_assign_projection:
+.. _assignprojection:
 
 Assign projection
 -----------------
@@ -44,10 +44,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_find_projection`, :ref:`qgis_reproject_layer`
+:ref:`findprojection`, :ref:`reprojectlayer`
 
 
-.. _qgis_build_virtual_vector:
+.. _buildvirtualvector:
 
 Build virtual vector
 --------------------
@@ -73,7 +73,7 @@ Outputs
   The final virtual vector made by all the source vector chosen
 
 
-.. _qgis_create_attribute_index:
+.. _createattributeindex:
 
 Create attribute index
 ----------------------
@@ -93,7 +93,7 @@ Parameters
   Field of the vector layer
 
 
-.. _qgis_create_spatial_index:
+.. _createspatialindex:
 
 Create spatial index
 --------------------
@@ -109,7 +109,7 @@ Parameters
   Vector layer in input
 
 
-.. _qgis_define_current_projection:
+.. _definecurrentprojection:
 
 Define current projection
 -------------------------
@@ -129,7 +129,7 @@ Parameters
   written in the ``proj`` file.
 
 
-.. _qgis_delete_duplicate_geometries:
+.. _deleteduplicategeometries:
 
 Delete duplicate geometries
 ---------------------------
@@ -150,7 +150,7 @@ Outputs
   The final layer without any duplicated geometries
 
 
-.. _qgis_drop_geometries:
+.. _dropgeometries:
 
 Drop geometries
 ---------------
@@ -171,7 +171,7 @@ Outputs
   Geometryless table as a copy of the original attribute table.
 
 
-.. _qgis_execute_sql:
+.. _executesql:
 
 Execute SQL
 -----------
@@ -211,7 +211,7 @@ Outputs
   Vector layer created by the query
 
 
-.. _qgis_find_projection:
+.. _findprojection:
 
 Find projection
 ---------------
@@ -245,10 +245,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_assign_projection`, :ref:`qgis_reproject_layer`
+:ref:`assignprojection`, :ref:`reprojectlayer`
 
 
-.. _qgis_join_attributes_by_location:
+.. _joinattributesbylocation:
 
 Join attributes by location
 ---------------------------
@@ -297,7 +297,7 @@ Outputs
 ``Joined layer`` [vector]
   The final vector with all the joined features.
 
-.. _qgis_join_attributes_by_location_summary:
+.. _joinbylocationsummary:
 
 Join attributes by location (summary)
 -------------------------------------
@@ -368,7 +368,7 @@ Outputs
   The final vector with all the joined features.
 
 
-.. _qgis_join_attributes_table:
+.. _joinattributestable:
 
 Join attributes table
 ---------------------
@@ -400,7 +400,7 @@ Outputs
   Final vector layer with the attribute table as result of the joining
 
 
-.. _qgis_merge_vector_layers:
+.. _mergevectorlayers:
 
 Merge vector layers
 -------------------
@@ -440,7 +440,7 @@ Outputs
   Merged vector layer containing all the features and attributes from input layers
 
 
-.. _qgis_order_by_expression:
+.. _orderbyexpression:
 
 Order by expression
 -------------------
@@ -477,7 +477,7 @@ Outputs
   Sorted vector layer
 
 
-.. _qgis_reproject_layer:
+.. _reprojectlayer:
 
 Reproject layer
 ---------------
@@ -503,10 +503,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_assign_projection`, :ref:`qgis_find_projection`
+:ref:`assignprojection`, :ref:`findprojection`
 
 
-.. _qgis_save_selected_features:
+.. _saveselectedfeatures:
 
 Save selected features
 ----------------------
@@ -525,7 +525,7 @@ Outputs
   Vector layer with just the selected features.
 
 
-.. _qgis_set_style_for_vector_layer:
+.. _setstyleforvectorlayerr:
 
 Set style for vector layer
 --------------------------
@@ -543,7 +543,7 @@ Parameters
   ``qml`` file of the style
 
 
-.. _qgis_split_vector_layer:
+.. _splitvectorlayer:
 
 Split vector layer
 ------------------
@@ -573,10 +573,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_merge_vector_layers`
+:ref:`mergevectorlayers`
 
 
-.. _qgis_truncate_table:
+.. _truncatetable:
 
 Truncate table
 --------------

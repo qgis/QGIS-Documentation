@@ -12,7 +12,7 @@ File Tools
       :depth: 1
 
 
-.. _qgis_download_file:
+.. _filedownloader:
 
 Download file
 --------------

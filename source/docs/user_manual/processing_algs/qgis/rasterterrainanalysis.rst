@@ -119,7 +119,7 @@ Outputs
   Hillshade raster layer
 
 
-.. _qgis_hypsometric_curves:
+.. _hypsometriccurves:
 
 Hypsometric curves
 ------------------
@@ -222,7 +222,7 @@ Outputs
   Relief raster layer
 
 
-.. _qgis_ruggedness_index:
+.. _ruggednessindex:
 
 Ruggedness index
 ----------------

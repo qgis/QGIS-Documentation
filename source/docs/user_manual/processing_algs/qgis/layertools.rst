@@ -11,7 +11,7 @@ Layer Tools
       :local:
       :depth: 1
 
-.. _qgis_extract_layer_extent:
+.. _polygonfromlayerextent:
 
 Extract layer extent
 --------------------

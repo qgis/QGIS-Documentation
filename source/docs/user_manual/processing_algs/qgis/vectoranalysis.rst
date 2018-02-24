@@ -12,7 +12,7 @@ Vector analysis
       :depth: 1
 
 
-.. _qgis_basic_statistics:
+.. _basicstatisticsforfields:
 
 Basic statistics for numeric fields
 -----------------------------------
@@ -40,7 +40,7 @@ Outputs
   HTML file with calculated statistics
 
 
-.. _qgis_count_points_polygon:
+.. _countpointsinpolygon:
 
 Count points in polygon
 -----------------------
@@ -95,7 +95,7 @@ Outputs
   points count.
 
 
-.. _qgis_distance_matrix:
+.. _distancematrix:
 
 Distance matrix
 ---------------
@@ -145,7 +145,7 @@ Outputs
   * *Distance*: the distance between the points
 
 
-.. _qgis_distance_to_nearest_hub_line:
+.. _distancetonearesthublinetohub:
 
 Distance to nearest hub (line to hub)
 -------------------------------------
@@ -191,7 +191,7 @@ Outputs
   Line vector layer with distance values
 
 
-.. _qgis_distance_to_nearest_hub_points:
+.. _distancetonearesthubpoints:
 
 Distance to nearest hub (points)
 --------------------------------
@@ -229,7 +229,7 @@ Outputs
   Point vector layer with distance values
 
 
-.. _qgis_join_lines:
+.. _hublines:
 
 Join by lines (hub lines)
 -------------------------
@@ -279,7 +279,7 @@ Outputs
   The resulting line layer
 
 
-.. _qgis_list_unique:
+.. _listuniquevalues:
 
 List unique values
 ------------------
@@ -304,7 +304,7 @@ Outputs
   HTML report of unique values in the :menuselection:`Processing --> Results viewer`
 
 
-.. _qgis_mean_coordinate:
+.. _meancoordinates:
 
 Mean coordinate(s)
 ------------------
@@ -340,7 +340,7 @@ Outputs
   Resulting point(s) layer.
 
 
-.. _qgis_nearest_neighbour:
+.. _nearestneighbouranalysis:
 
 Nearest neighbour analysis
 --------------------------
@@ -366,7 +366,7 @@ Outputs
   HTML file in output with the computed statistics
 
 
-.. _qgis_statistics_by_categories:
+.. _statisticsbycategories:
 
 Statistics by categories
 ------------------------
@@ -409,7 +409,7 @@ Outputs
   Table with statistics field
 
 
-.. _qgis_sum_line_length:
+.. _sumlinelengths:
 
 Sum line lengths
 ----------------
