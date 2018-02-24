@@ -229,7 +229,7 @@ Outputs
   Point vector layer with distance values
 
 
-.. _nativehublines:
+.. _qgishublines:
 
 Join by lines (hub lines)
 -------------------------
@@ -304,7 +304,7 @@ Outputs
   HTML report of unique values in the :menuselection:`Processing --> Results viewer`
 
 
-.. _nativemeancoordinates:
+.. _qgismeancoordinates:
 
 Mean coordinate(s)
 ------------------

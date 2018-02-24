@@ -65,7 +65,7 @@ For a  complete description of the aggregates function, refer to the dedicated
 :ref:`aggregates_function` chapter.
 
 
-.. _nativeboundary:
+.. _qgisboundary:
 
 Boundary
 ---------
@@ -103,7 +103,7 @@ Output
   Boundary from the input layer (point for line, and line for polygon).
 
 
-.. _nativeboundingboxes:
+.. _qgisboundingboxes:
 
 Bounding boxes
 ---------------
@@ -133,7 +133,7 @@ See also
 :ref:`qgisminimumboundinggeometry`
 
 
-.. _nativebuffer:
+.. _qgisbuffer:
 
 Buffer
 ------
@@ -206,7 +206,7 @@ Outputs
   Buffer polygon vector layer
 
 
-.. _nativecentroids:
+.. _qgiscentroids:
 
 Centroids
 ---------
@@ -291,7 +291,7 @@ Outputs
   ``message`` field describing the error(s) found.
 
 
-.. _nativecollect:
+.. _qgiscollect:
 
 Collect geometries
 ------------------
@@ -327,7 +327,7 @@ Output
 
 See also
 ........
-:ref:`qgisaggregate` and :ref:`nativepromotetomulti`
+:ref:`qgisaggregate` and :ref:`qgispromotetomulti`
 
 
 
@@ -373,7 +373,7 @@ Output
 
 See also
 ........
-:ref:`nativeconvexhull`
+:ref:`qgisconvexhull`
 
 
 .. _qgisconvertgeometrytype:
@@ -413,7 +413,7 @@ See also
 :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
 
-.. _nativeconvexhull:
+.. _qgisconvexhull:
 
 Convex hull
 -----------
@@ -442,7 +442,7 @@ See also
 :ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
 
 
-.. _nativeextenttolayer:
+.. _qgisextenttolayer:
 
 Create layer from extent
 ------------------------
@@ -621,7 +621,7 @@ See also
 To add a specific number of vertices, look at :ref:`qgisdensifygeometries`.
 
 
-.. _nativedissolve:
+.. _qgisdissolve:
 
 Dissolve
 --------
@@ -668,7 +668,7 @@ Outputs
   Output layer, either (multi) line or (multi) polygon
 
 
-.. _nativedropmzvalues:
+.. _qgisdropmzvalues:
 
 Drop m/z values
 ---------------
@@ -861,7 +861,7 @@ Output
   Extracted vertices of input layer
 
 
-.. _nativeextractvertices:
+.. _qgisextractvertices:
 
 Extract vertices
 ----------------
@@ -893,7 +893,7 @@ Output
   Vector layer of extracted vertices
 
 
-.. _nativefixgeometries:
+.. _qgisfixgeometries:
 
 Fix geometry
 ------------
@@ -1020,7 +1020,7 @@ Output
   Polygon vector layer from the line input vector layer
 
 
-.. _nativemergelines:
+.. _qgismergelines:
 
 Merge lines
 -----------
@@ -1083,7 +1083,7 @@ Output
   Bounding polygon layer
 
 
-.. _nativeminimumenclosingcircle:
+.. _qgisminimumenclosingcircle:
 
 Minimum enclosing circles
 -------------------------
@@ -1116,7 +1116,7 @@ See also
 :ref:`qgisminimumboundinggeometry`
 
 
-.. _nativemultiparttosingleparts:
+.. _qgismultiparttosingleparts:
 
 Multipart to singleparts
 ------------------------
@@ -1144,7 +1144,7 @@ Outputs
 
 See also
 ........
-:ref:`nativecollect` and :ref:`nativepromotetomulti`
+:ref:`qgiscollect` and :ref:`qgispromotetomulti`
 
 
 .. _qgisoffsetline:
@@ -1196,7 +1196,7 @@ Output
   Offset line layer
 
 
-.. _nativeorientedminimumboundingbox:
+.. _qgisorientedminimumboundingbox:
 
 Oriented minimum bounding box
 -----------------------------
@@ -1458,7 +1458,7 @@ Output
   Lines from the polygon layer
 
 
-.. _nativepromotetomulti:
+.. _qgispromotetomulti:
 
 Promote to multipart
 --------------------
@@ -1484,7 +1484,7 @@ Output
 
 See also
 ........
-:ref:`qgisaggregate` and :ref:`nativecollect`
+:ref:`qgisaggregate` and :ref:`qgiscollect`
 
 
 .. _qgisrectanglesovalsdiamondsfixed:
@@ -1611,7 +1611,7 @@ See also
 :ref:`qgisrectanglesovalsdiamondsfixed`
 
 
-.. _nativeremovenullgeometries:
+.. _qgisremovenullgeometries:
 
 Remove null geometries
 ----------------------
@@ -1714,7 +1714,7 @@ Output
   Vector layer in output with Z value
 
 
-.. _nativesimplifygeometries:
+.. _qgissimplifygeometries:
 
 Simplify geometries
 -------------------
@@ -1825,7 +1825,7 @@ Outputs
   One side buffer polygon vector layer
 
 
-.. _nativesmoothgeometry:
+.. _qgissmoothgeometry:
 
 Smooth geometry
 ---------------
@@ -1930,7 +1930,7 @@ Outputs
   Snapped geometry in output
 
 
-.. _nativesnappointstogrid:
+.. _qgissnappointstogrid:
 
 Snap points to grid
 -------------------
@@ -1978,7 +1978,7 @@ Outputs
   Snapped geometry in output
 
 
-.. _nativesubdivide:
+.. _qgissubdivide:
 
 Subdivide
 ---------
@@ -2016,7 +2016,7 @@ Outputs
   Output vector with *sub-parts*.
 
 
-.. _nativetransect:
+.. _qgistransect:
 
 Transect
 --------
@@ -2071,7 +2071,7 @@ Outputs
   Transect of the source line vector layer
 
 
-.. _nativetranslategeometry:
+.. _qgistranslategeometry:
 
 Translate geometry
 ------------------

@@ -12,7 +12,7 @@ Vector table
       :depth: 1
 
 
-.. _nativeaddautoincrementalfield:
+.. _qgisaddautoincrementalfield:
 
 Add autoincremental field
 -------------------------
@@ -96,7 +96,7 @@ Output
   Vector layer with new field added
 
 
-.. _nativeadduniquevalueindexfield:
+.. _qgisadduniquevalueindexfield:
 
 Add unique value index field
 ----------------------------

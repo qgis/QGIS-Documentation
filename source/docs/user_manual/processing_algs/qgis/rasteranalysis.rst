@@ -110,7 +110,7 @@ Outputs
     the overall mean
 
 
-.. _nativerasterlayeruniquevaluesreport:
+.. _qgisrasterlayeruniquevaluesreport:
 
 Raster layer unique values report
 ---------------------------------

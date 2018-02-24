@@ -12,7 +12,7 @@ Modeler tools
       :depth: 1
 
 
-.. _nativeloadlayer:
+.. _qgisloadlayer:
 
 Load layer into project
 =======================
@@ -28,7 +28,7 @@ Parameters
   Name of the loaded layer
 
 
-.. _nativerenamelayer:
+.. _qgisrenamelayer:
 
 Rename layer
 ============
