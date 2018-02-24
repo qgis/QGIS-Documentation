@@ -1,4 +1,4 @@
-.. _loadlayer:
+.. _loadlayerpy:
 
 **************
 Loading Layers
@@ -272,4 +272,3 @@ For a list of loaded layers and layer ids, use:
 ::
 
   QgsMapLayerRegistry.instance().mapLayers()
-
