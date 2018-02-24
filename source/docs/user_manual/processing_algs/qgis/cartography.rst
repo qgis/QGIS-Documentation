@@ -11,7 +11,7 @@ Cartography
       :local:
       :depth: 1
 
-.. _topologicalcoloring:
+.. _qgistopologicalcoloring:
 
 Topological coloring
 --------------------

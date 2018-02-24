@@ -12,7 +12,7 @@ Vector creation
       :depth: 1
 
 
-.. _creategrid:
+.. _qgiscreategrid:
 
 Create grid
 -----------
@@ -79,7 +79,7 @@ Outputs
   Resulting grid layer
 
 
-.. _createpointslayerfromtable:
+.. _qgiscreatepointslayerfromtable:
 
 Points layer from table
 -----------------------
@@ -121,7 +121,7 @@ Outputs
   The resulting layer.
 
 
-.. _generatepointspixelcentroidsalongline:
+.. _qgisgeneratepointspixelcentroidsalongline:
 
 Generate points (pixel centroids) along line
 --------------------------------------------
@@ -152,7 +152,7 @@ Outputs
 
 
 
-.. _generatepointspixelcentroidinsiedepolygon:
+.. _qgisgeneratepointspixelcentroidsinsidepolygons:
 
 Generate points (pixel centroids) inside polygon
 ------------------------------------------------
@@ -182,7 +182,7 @@ Outputs
   Resulting point layer of pixel centroid
 
 
-.. _pointstopath:
+.. _qgispointstopath:
 
 Points to path
 --------------
@@ -221,7 +221,7 @@ Outputs
   Directory containing description files of points and paths
 
 
-.. _randompointsalongline:
+.. _qgisrandompointsalongline:
 
 Random points along line
 ------------------------
@@ -255,7 +255,7 @@ Outputs
   Final random point layer along line
 
 
-.. _randompointsinextent:
+.. _qgisrandompointsinextent:
 
 Random points in extent
 -----------------------
@@ -290,7 +290,7 @@ Outputs
   Final random point layer in extent
 
 
-.. _randompointsinlayerbounds:
+.. _qgisrandompointsinlayerbounds:
 
 Random points in layer bounds
 -----------------------------
@@ -324,7 +324,7 @@ Outputs
   Final random point layer in layer bounds
 
 
-.. _randompointsinsidepolygons:
+.. _qgisrandompointsinsidepolygons:
 
 Random points inside polygons
 -----------------------------
@@ -372,7 +372,7 @@ Outputs
   Final random point layer inside polygon
 
 
-.. _regularpoints:
+.. _qgisregularpoints:
 
 Regular points
 --------------

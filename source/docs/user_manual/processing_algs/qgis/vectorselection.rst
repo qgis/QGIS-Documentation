@@ -12,7 +12,7 @@ Vector selection
       :depth: 1
 
 
-.. _extractbyattribute:
+.. _nativeextractbyattribute:
 
 Extract by attribute
 --------------------
@@ -60,7 +60,7 @@ Outputs
   Vector layer with not matching features
 
 
-.. _extractbyexpression:
+.. _nativeextractbyexpression:
 
 Extract by expression
 ---------------------
@@ -90,7 +90,7 @@ Outputs
   Vector layer with not matching features
 
 
-.. _extractbylocation:
+.. _nativeextractbylocation:
 
 Extract by location
 -------------------
@@ -128,7 +128,7 @@ Output
   Vector layer of the spatial intersection
 
 
-.. _randomextract:
+.. _qgisrandomextract:
 
 Random extract
 --------------
@@ -164,7 +164,7 @@ Output
   Vector layer containing random selected features
 
 
-.. _randomextractwithinsubsets:
+.. _qgisrandomextractwithinsubsets:
 
 Random extract within subsets
 -----------------------------
@@ -205,7 +205,7 @@ Output
   Random vector layer
 
 
-.. _randomselection:
+.. _qgisrandomselection:
 
 Random selection
 ----------------
@@ -235,7 +235,7 @@ Parameters
   Default: *10*
 
 
-.. _randomselectionwithinsubsets:
+.. _qgisrandomselectionwithinsubsets:
 
 Random selection within subsets
 -------------------------------
@@ -276,7 +276,7 @@ Parameters
   Default: *10*
 
 
-.. _selectbyattribute:
+.. _qgisselectbyattribute:
 
 Select by attribute
 -------------------
@@ -316,7 +316,7 @@ Parameters
   Values to be evaluated
 
 
-.. _selectbyexpression:
+.. _qgisselectbyexpression:
 
 Select by expression
 --------------------
@@ -346,7 +346,7 @@ Parameters
   Default: *creating new selection*
 
 
-.. _selectbylocation:
+.. _nativeselectbylocation:
 
 Select by location
 ------------------

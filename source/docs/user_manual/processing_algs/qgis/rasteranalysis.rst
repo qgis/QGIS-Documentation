@@ -11,7 +11,7 @@ Raster analysis
       :local:
       :depth: 1
 
-.. _rastercalculator:
+.. _qgisrastercalculator:
 
 Raster calculator
 -----------------
@@ -75,7 +75,7 @@ Outputs
   Output raster file containing calculated values.
 
 
-.. _rasterlayerstatistics:
+.. _qgisrasterlayerstatistics:
 
 Raster layer statistics
 -----------------------
@@ -110,7 +110,7 @@ Outputs
     the overall mean
 
 
-.. _rasterlayeruniquevaluesreport:
+.. _nativerasterlayeruniquevaluesreport:
 
 Raster layer unique values report
 ---------------------------------
@@ -147,7 +147,7 @@ Outputs
     - Area (m :sup:`2`): square meters of the area for each pixel class
 
 
-.. _zonalstatistics:
+.. _qgiszonalstatistics:
 
 Raster zonal statistics
 -----------------------
