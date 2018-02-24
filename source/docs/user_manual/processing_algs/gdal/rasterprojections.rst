@@ -11,12 +11,11 @@ Raster projections
       :local:
       :depth: 1
 
+
+.. _gdalassignprojection:
+
 Extract projection
 ------------------
-
-Description
-...........
-
 Extracts the projection of a raster file and writes it into a
 world-file.
 The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
@@ -36,22 +35,11 @@ Parameters
 Outputs
 .......
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:extractprojection', input, prj_file)
-
-See also
-........
+.. _gdalwarpreproject:
 
 Warp (reproject)
 ----------------
-
-Description
-...........
-
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
 The algorithm is derived from the `GDAL warp utility <http://www.gdal.org/gdalwarp.html>`_ .
@@ -123,14 +111,3 @@ Outputs
 
 ``Output layer`` [raster]
   <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:warpreproject', input, source_srs, dest_srs, tr, method, extra, rtype, output)
-
-See also
-........
-
