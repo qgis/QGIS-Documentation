@@ -11,12 +11,10 @@ Raster miscellaneous
       :local:
       :depth: 1
 
+.. _gdalbuildvirtualraster:
+
 Build Virtual Raster
 --------------------
-
-Description
-...........
-
 Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 The algorithm is derived from the `GDAL buildvrt utility <http://www.gdal.org/gdalbuildvrt.html>`_ .
@@ -57,22 +55,11 @@ Outputs
 ``Output layer`` [raster]
   Output raster file.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:buildvirtualraster', input, resolution, separate, proj_difference, output)
-
-See also
-........
+.. _gdalmerge:
 
 Merge
 -----
-
-Description
-...........
-
 Merges raster files in a simple way. Here you can use a pseudocolor
 table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
@@ -120,22 +107,11 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:merge', input, pct, separate, rtype, output)
-
-See also
-........
+.. _gdaloverviews:
 
 Build overviews (pyramids)
 --------------------------
-
-Description
-...........
-
 To speed up rendering time of raster layers overviews (pyramids) can
 be created. Overviews are lower resolution copies of the data which
 QGIS uses depending of the level of zoom.
@@ -191,21 +167,10 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer with overviews.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:overviews', input, levels, clean, resampling_method, format)
-
-See also
-........
+.. _gdalgdalinfo:
 
 Information
 -----------
-
-Description
-...........
 The gdalinfo program lists various information about a GDAL supported raster dataset.
 
 Parameters
@@ -230,23 +195,15 @@ Outputs
 ``Layer information`` [html]
   Raster information in output
 
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalorg:rasterinfo', input, nogcp, nometadata, output)
-
 See also
 ........
 `GDAL info <http://www.gdal.org/gdalinfo.html>`_
 
+
+.. _tileindex:
+
 Tile Index
 ----------
-
-Description
-...........
-
 This tool builds a shapefile with a record for each input raster file, an
 attribute containing the filename, and a polygon geometry outlining the raster.
 This output is suitable for use with MapServer as a raster tileindex.
@@ -277,14 +234,3 @@ Outputs
   The name of the output file to create/append to. The default shapefile will
   be created if it doesn't already exist, otherwise it will append to the
   existing file.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:tileindex', input, field_name, proj_difference, output)
-
-See also
-........
-

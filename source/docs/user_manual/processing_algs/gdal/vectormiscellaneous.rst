@@ -11,13 +11,11 @@ Vector miscellaneous
       :local:
       :depth: 1
 
+
+.. _gdalexecutesql:
+
 Execute SQL
 -----------
-
-Description
-...........
-
-<put algorithm description here>
 
 Parameters
 ..........
@@ -36,22 +34,11 @@ Outputs
 ``SQL result`` [vector]
   <put output description here>
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:executesql', input, sql, output)
-
-See also
-........
+.. _importvectorintopostgisdatabaseavailableconnection:
 
 Import Vector into PostGIS database (available connections)
 -----------------------------------------------------------
-
-Description
-...........
-
 Imports vector layers inside a PostGIS database on the basis of
 an available connection. The connection has to be defined properly
 with the 'Add PostGIS Table(s)' dialog before. Use the 'Edit' button
@@ -230,22 +217,11 @@ Parameters
 Outputs
 .......
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:importvectorintopostgisdatabaseavailableconnections', database, input_layer, gtype, s_srs, t_srs, schema, table, pk, geocolumn, dim, simplify, segmentize, spat, clip, where, gt, overwrite, append, addfields, launder, index, skipfailures, options)
-
-See also
-........
+.. _importvectorintopostgisdatabasenewconnection:
 
 Import Vector into PostGIS database (new connection)
 ----------------------------------------------------
-
-Description
-...........
-
 Imports vector layers inside a PostGIS database. A new connection
 to the PostGIS database must be created.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
@@ -425,22 +401,11 @@ Parameters
 Outputs
 .......
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:importvectorintopostgisdatabasenewconnection', input_layer, gtype, s_srs, t_srs, host, port, user, dbname, password, schema, table, pk, geocolumn, dim, simplify, segmentize, spat, clip, where, gt, overwrite, append, addfields, launder, index, skipfailures, options)
-
-See also
-........
+.. _gdalogrinfo:
 
 Information
 -----------
-
-Description
-...........
-
 Creates an information file that lists information about an OGR-supported
 data source. The output will be shown in a 'Result' window and can be written
 into a HTML-file.
@@ -459,14 +424,3 @@ Outputs
 ``Layer information`` [html]
   Name of the output HTML-file that includes the file information.
   If no HTML-file is defined the output will be written into a temporary file.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:information', input, output)
-
-See also
-........
-

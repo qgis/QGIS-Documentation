@@ -11,12 +11,11 @@ Vector geoprocessing
       :local:
       :depth: 1
 
+
+.. _gdalclipvectorbyextent:
+
 Clip vectors by extent
 ----------------------
-
-Description
-...........
-
 Clips any OGR-supported vector file to a given extent.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
@@ -45,22 +44,11 @@ Outputs
 ``Output layer`` [vector]
   Output vector layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:clipvectorsbyextent', input_layer, clip_extent, options, output_layer)
-
-See also
-........
+.. _gdalclipvectorbypolygon:
 
 Clip vectors by polygon
 -----------------------
-
-Description
-...........
-
 Clips any OGR-supported vector layer by a polygon.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
@@ -85,14 +73,3 @@ Outputs
 
 ``Output layer`` [vector]
   Output vector layer. By default this is an ESRI Shapefile.
-
-Console usage
-.............
-
-::
-
-  processing.runalg('gdalogr:clipvectorsbypolygon', input_layer, clip_layer, options, output_layer)
-
-See also
-........
-
