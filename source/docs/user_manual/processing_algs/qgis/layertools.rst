@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-Layer Tools
+Layer tools
 ===========
 
 .. only:: html

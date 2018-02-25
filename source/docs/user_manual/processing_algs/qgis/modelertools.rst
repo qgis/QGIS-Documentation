@@ -31,7 +31,7 @@ Parameters
 .. _qgisrenamelayer:
 
 Rename layer
-============
+------------
 
 Parameters
 ..........
@@ -46,7 +46,7 @@ Parameters
 .. _qgisstringconcatenation:
 
 String concatenation
-====================
+--------------------
 Concatenates two strings into a single one in the Processing Modeler.
 
 Parameters
