@@ -15,7 +15,7 @@ Modeler tools
 .. _qgisloadlayer:
 
 Load layer into project
-=======================
+-----------------------
 Loads a layer to the current project.
 
 Parameters
@@ -32,7 +32,6 @@ Parameters
 
 Rename layer
 ============
-Renames a layer in the legend. No new output are created.
 
 Parameters
 ..........
