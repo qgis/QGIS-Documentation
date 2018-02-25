@@ -35,7 +35,7 @@ Output
 ......
 
 ``Bar plot`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -71,7 +71,7 @@ Output
 ......
 
 ``Box plot`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -98,7 +98,7 @@ Output
 ......
 
 ``Plot`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -128,7 +128,7 @@ Output
 ......
 
 ``Polar plot`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -156,7 +156,7 @@ Output
 ......
 
 ``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -186,7 +186,7 @@ Output
 ......
 
 ``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -213,7 +213,7 @@ Output
 ......
 
 ``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
 
 
 
@@ -243,4 +243,4 @@ Output
 ......
 
 ``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselecion:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
