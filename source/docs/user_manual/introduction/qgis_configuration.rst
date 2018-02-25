@@ -630,11 +630,9 @@ Project Properties
 ==================
 
 In the properties window for the project under :menuselection:`Project -->
-Project Properties` (or |kde| :menuselection:`Settings --> Project Properties`),
-you can set project-specific options.
-
-The project-specific options overwrite their equivalent in the options
-described above.
+Project Properties`, you can set project-specific options.
+The project-specific options overwrite their equivalent in the :guilabel:`Options`
+dialog described above.
 
 * In the :guilabel:`General` tab, the **general settings** let you:
 
@@ -683,6 +681,15 @@ described above.
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS. For more information
   on projection's handling in QGIS, please read :ref:`label_projections` section.
+
+* The :guilabel:`Default Styles` tab lets you control how new layers will be
+  drawn when they do not have an existing :file:`.qml` style defined. You can
+  also set the default transparency level for new layers and whether symbols
+  should have random colors assigned to them.
+  There is also an additional section where you can define specific colors for the
+  running project. You can find the added colors in the drop down menu of the color dialog
+  window present in each renderer.
+
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
@@ -691,35 +698,7 @@ described above.
   it can not be edited by the user, regardless of the data provider's
   capabilities. Although this is a weak protection, it remains a quick and handy
   configuration to avoid end-users modifying data when working with file-based layers.
-* The :guilabel:`Default Styles` tab lets you control how new layers will be
-  drawn when they do not have an existing :file:`.qml` style defined. You can
-  also set the default transparency level for new layers and whether symbols
-  should have random colors assigned to them.
-  There is also an additional section where you can define specific colors for the
-  running project. You can find the added colors in the drop down menu of the color dialog
-  window present in each renderer.
-* The tab :guilabel:`OWS Server` allows you to configure your project in order
-  to publish it online. Here you can define information about the QGIS
-  Server WMS and WFS capabilities, extent and CRS restrictions. More information
-  available in section :ref:`Creatingwmsfromproject` and subsequent.
-* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
-  only three macros are available: ``openProject()``, ``saveProject()`` and
-  ``closeProject()``.
 
-.. _figure_macro_tab:
-
-.. figure:: /static/user_manual/introduction/macro.png
-   :align: center
-
-   Macro settings in QGIS
-
-
-* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
-  are defined in the project properties dialog. Once relations exist for a layer,
-  a new user interface element in the form view (e.g. when identifying a feature
-  and opening its form) will list the related entities. This provides a powerful
-  way to express e.g. the inspection history on a length of pipeline or road segment.
-  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
 * In the :guilabel:`Data Sources` tab, you can:
 
   * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
@@ -737,6 +716,13 @@ described above.
     Note that you can (de)activate this option only if no layer is being edited
     in the project.
 
+* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
+  are defined in the project properties dialog. Once relations exist for a layer,
+  a new user interface element in the form view (e.g. when identifying a feature
+  and opening its form) will list the related entities. This provides a powerful
+  way to express e.g. the inspection history on a length of pipeline or road segment.
+  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+
 * The :guilabel:`Variables` tab lists all the variables available at
   the project's level (which includes all global variables). Besides, it
   also allows the user to manage project-level variables. Click the |signPlus|
@@ -745,6 +731,22 @@ described above.
   remove it.
   More information on variables usage in the General Tools
   :ref:`general_tools_variables` section.
+
+* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
+  only three macros are available: ``openProject()``, ``saveProject()`` and
+  ``closeProject()``.
+
+.. _figure_macro_tab:
+
+.. figure:: /static/user_manual/introduction/macro.png
+   :align: center
+
+   Macro settings in QGIS
+
+* The tab :guilabel:`QGIS Server` allows you to configure your project in order
+  to publish it online. Here you can define information about the QGIS
+  Server WMS and WFS capabilities, extent and CRS restrictions. More information
+  available in section :ref:`Creatingwmsfromproject` and subsequent.
 
 .. index:: Customization
 .. _sec_customization:
