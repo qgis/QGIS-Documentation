@@ -16,6 +16,7 @@ Overview
 earth on a flat piece of paper or computer screen. In a lay man's term, map projections
 tries to transform the earth from its spherical shape (3D) to a planar shape (2D) so that
 maps can be made on flat layers e.g maps.
+
 A **coordinate reference system** (CRS) then defines, with the help of coordinates, 
 how the two-dimensional, projected map in your GIS is related to real places on the earth. 
 The decision as to which map projection and coordinate reference system to use, depends on
