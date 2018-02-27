@@ -13,10 +13,13 @@ Overview
 ========
 
 **Map projections** try to portray the surface of the earth or a portion of the
-earth on a flat piece of paper or computer screen. A **coordinate reference
-system** (CRS) then defines, with the help of coordinates, how the two-dimensional,
-projected map in your GIS is related to real places on the earth. The decision
-as to which map projection and coordinate reference system to use, depends on
+earth on a flat piece of paper or computer screen. In a lay man's term, map projections
+tries to transform the earth from its spherical shape (3D) to a planar shape (2D) so that
+maps can be made on flat layers e.g maps.
+
+A **coordinate reference system** (CRS) then defines, with the help of coordinates, 
+how the two-dimensional, projected map in your GIS is related to real places on the earth. 
+The decision as to which map projection and coordinate reference system to use, depends on
 the regional extent of the area you want to work in, on the analysis you want to
 do and often on the availability of data.
 
@@ -53,7 +56,7 @@ extent.
 The three families of map projections
 =====================================
 
-The process of creating map projections can be visualised by positioning a light
+The process of creating map projections is best illustrated by positioning a light
 source inside a transparent globe on which opaque earth features are placed. Then
 project the feature outlines onto a two-dimensional flat piece of paper.
 Different ways of projecting can be produced by surrounding the globe in a
@@ -85,8 +88,8 @@ of angular conformity, distance and area**. A map projection may combine several
 of these characteristics, or may be a compromise that distorts all the properties
 of area, distance and angular conformity, within some acceptable limit. Examples
 of compromise projections are the **Winkel Tripel projection** and the **Robinson
-projection** (see figure_robinson_projection_), which are often used for world
-maps.
+projection** (see figure_robinson_projection_), which are often used for producing
+and visualizing world maps.
 
 .. _figure_robinson_projection:
 

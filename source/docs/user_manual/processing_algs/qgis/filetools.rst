@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-File Tools
+File tools
 ==========
 
 .. only:: html

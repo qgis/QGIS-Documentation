@@ -42,14 +42,14 @@ from the pop-up menu.
 
 .. _vectorgeneralmenu:
 
-General Properties
+Source Properties
 ==================
 
 |general| Use this tab to make general settings for the vector layer.
 There are several options available:
 
-Layer Info
-----------
+Settings
+--------
 
 * Set the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`
 * Display the :guilabel:`Layer source` of the vector layer
@@ -68,25 +68,6 @@ Coordinate Reference System
   algorithms from Processing or :ref:`Save it into another layer <general_saveas>`.
 * Create a :guilabel:`Spatial Index` (only for OGR-supported formats)
 * :guilabel:`Update Extents` information for a layer
-
-
-Scale dependent visibility
---------------------------
-
-You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-(exclusive)` scale, defining a range of scale in which features will be
-visible. Out of this range, they are hidden. The |mapIdentification|
-:sup:`Set to current canvas scale` button helps you use the current map
-canvas scale as boundary of the range visibility.
-See :ref:`label_scaledepend` for more information.
-
-
-.. _figure_vector_general:
-
-.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
-   :align: center
-
-   General tab in vector layers properties dialog
 
 .. index:: Query builder
 .. _vector_query_builder:
@@ -151,15 +132,21 @@ The only exception is that unless your layer is part of a database, using a
 subset will prevent you from editing the layer.
 
 
+.. _figure_vector_general:
+
+.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
+   :align: center
+
+   Source tab in vector layers properties dialog
+
 
 .. index:: Style, Symbology, Renderer
 .. _vector_style_menu:
 
+Symbology Properties
+====================
 
-Style Properties
-================
-
-|symbology| The Style tab provides you with a comprehensive tool for
+|symbology| The Symbology tab provides you with a comprehensive tool for
 rendering and symbolizing your vector data. You can use tools that are
 common to all vector data, as well as special symbolizing tools that were
 designed for the different kinds of vector data. However all types share the
@@ -175,6 +162,7 @@ the bottom the:ref:`layer_rendering` widget.
    actions...) as you want. Then, simply switch between styles from the context
    menu of the layer in :guilabel:`Layers Panel` to automatically get different
    representations of your data.
+
 
 .. tip:: **Export vector symbology**
 
@@ -739,6 +727,7 @@ features of the layer:
    :align: center
 
    Layer rendering options
+
 
 Other Settings
 --------------
@@ -1580,13 +1569,242 @@ We now describe an example using the data-defined override function for the
   properties without having an editable data source.
 
 
+.. index:: Diagrams
+.. _`sec_diagram`:
+
+Diagrams Properties
+===================
+
+|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
+a vector layer (see figure_diagrams_attributes_).
+
+The current core implementation of diagrams provides support for:
+
+* **pie charts**, a circular statistical graphic divided into slices to illustrate
+  numerical proportion. The arc length of each slice is proportional to the
+  quantity it represents,
+* **text diagrams**, a horizontaly divided circle showing statistics values inside
+* and **histograms**.
+
+.. tip:: **Switch quickly between types of diagrams**
+
+   Given that the settings are almost common to the different types of
+   diagram, when designing your diagram, you can easily change the diagram type
+   and check which one is more appropriate to your data without any loss.
+
+For each type of diagram, the properties are divided into several tabs:
+
+* :ref:`Attributes <diagram_attributes>`
+* :ref:`Appearance <diagram_appearance>`
+* :ref:`Size <diagram_size>`
+* :ref:`Placement <diagram_placement>`
+* :ref:`Options <diagram_options>`
+* :ref:`Legend <diagram_legend>`
+
+.. _diagram_attributes:
+
+Attributes
+----------
+
+:guilabel:`Attributes` defines which variables to display in the diagram.
+Use |signPlus| :sup:`add item` button to select the desired fields into
+the 'Assigned Attributes' panel. Generated attributes with :ref:`vector_expressions`
+can also be used.
+
+You can move up and down any row with click and drag, sorting how attributes
+are displayed. You can also change the label in the 'Legend' column
+or the attribute color by double-clicking the item.
+
+This label is the default text displayed in the legend of the print composer
+or of the layer tree.
+
+.. _figure_diagrams_attributes:
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
+   :align: center
+
+   Diagram properties  - Attributes tab
+
+.. _diagram_appearance:
+
+Appearance
+----------
+
+:guilabel:`Appearance` defines how the diagram looks like. It provides
+general settings that do not interfere with the statistic values such as:
+
+* the graphic transparency, its outline width and color
+* the width of the bar in case of histogram
+* the circle background color in case of text diagram, and the font used for texts
+* the orientation of the left line of the first slice represented in pie chart.
+  Note that slices are displayed clockwise.
+
+In this tab, you can also manage the diagram visibility:
+
+* by removing diagrams that overlap others or :guilabel:`Show all diagrams`
+  even if they overlap each other
+* by selecting a field with :guilabel:`Data defined visibility` to precisely
+  tune which diagrams should be rendered
+* by setting the :ref:`scale visibility <label_scaledepend>`
+
+.. _figure_diagrams_appearance:
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
+   :align: center
+
+   Diagram properties - Appearance tab
+
+.. _diagram_size:
+
+Size
+----
+
+:guilabel:`Size` is the main tab to set how the selected statistics are
+represented. The diagram size units can be 'Map Units' or 'Millimeters'.
+You can use :
+
+* :guilabel:`Fixed size`, an unique size to represent the graphic of all the
+  features, except when displaying histogram
+* or :guilabel:`Scaled size`, based on an expression using layer attributes.
+
+.. ToDo: better explain the scale behaviour of the different diagram types
+
+.. _figure_diagrams_size:
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
+   :align: center
+
+   Diagram properties - Size tab
+
+.. _diagram_placement:
+
+Placement
+---------
+
+:guilabel:`Placement` helps to define diagram position.
+According to the layer geometry type, it offers different options for the placement:
+
+* 'Over the point' or 'Around the point' for point geometry.
+  The latter variable requires a radius to follow.
+* 'Over the line' or 'Around the line' for line geometry. Like point feature,
+  the last variable requires a distance to respect and user can specify the
+  diagram placement relative to the feature ('above', 'on' and/or 'below' the line)
+  It's possible to select several options at once.
+  In that case, QGIS will look for the optimal position of the diagram. Remember that
+  here you can also use the line orientation for the position of the diagram.
+* 'Over the centroid', 'Around the centroid' (with a distance set),
+  'Perimeter' and anywhere 'Inside polygon' are the options for polygon features.
+
+The diagram can also be placed using feature data by filling the ``X``
+and ``Y`` fields with an attribute of the feature.
+
+The placement of the diagrams can interact with the labeling, so you can
+detect and solve position conflicts between diagrams and labels by setting
+the **Priority** slider or the **z-index** value.
+
+.. _figure_diagrams_placement:
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
+   :align: center
+
+   Vector properties dialog with diagram properties, Placement tab
+
+.. _diagram_options:
+
+Options
+-------
+
+The :guilabel:`Options` tab has settings only in case of histogram. You can
+choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
+
+.. ToDo: explain the behaviour of this option
+
+.. _diagram_legend:
+
+Legend
+-------
+
+From the :guilabel:`Legend` tab, you can choose to display items of the diagram
+in the :ref:`label_legend`, besides the layer symbology. It can be:
+
+* the represented attributes: color and legend text set in :guilabel:`Attributes` tab
+* and if applicable, the diagram size, whose symbol you can customize.
+
+When set, the diagram legend items are also available in the print composer legend,
+besides the layer symbology.
+
+
+Case Study
+----------
+
+We will demonstrate an example and overlay on the Alaska boundary layer a
+text diagram showing temperature data from a climate vector layer.
+Both vector layers are part of the QGIS sample dataset (see section
+:ref:`label_sampledata`).
+
+#. First, click on the |addOgrLayer| :sup:`Load Vector` icon, browse
+   to the QGIS sample dataset folder, and load the two vector shape layers
+   :file:`alaska.shp` and :file:`climate.shp`.
+#. Double click the ``climate`` layer in the map legend to open the
+   :guilabel:`Layer Properties` dialog.
+#. Click on the :guilabel:`Diagrams` tab and from the :guilabel:`Diagram type`
+   |selectString| combo box, select 'Text diagram'.
+#. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
+   and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
+#. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
+#. In the diagram, we want to display the values of the three columns
+   ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
+   first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
+   ``T_F_JUL`` and finally ``T_F_MEAN``.
+#. Now click **[Apply]** to display the diagram in the QGIS main window.
+#. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
+   |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
+   the basis of the :guilabel:`maximum value` of an attribute and the
+   :guilabel:`Size` option.
+   If the diagrams appear too small on the screen, you can activate the
+   |checkbox| :guilabel:`Increase size of small diagrams` checkbox and define
+   the minimum size of the diagrams.
+#. Change the attribute colors by double clicking on the color values in the
+   :guilabel:`Assigned attributes` field.
+   Figure_diagrams_mapped_ gives an idea of the result.
+#. Finally, click **[Ok]**.
+
+.. _figure_diagrams_mapped:
+
+.. figure:: /static/user_manual/working_with_vector/climate_diagram.png
+   :align: center
+   :width: 25em
+
+   Diagram from temperature data overlayed on a map
+
+Remember that in the :guilabel:`Position` tab, a |checkbox| :guilabel:`Data
+defined position` of the diagrams is possible. Here, you can use attributes
+to define the position of the diagram.
+You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
+
+The size and the attributes can also be an expression.
+Use the |expression| button to add an expression.
+See :ref:`vector_expressions` chapter for more information and example.
+
+Using data-defined override
+---------------------------
+
+As mentioned above, you can use some custom data-defined to tune the diagrams
+rendering:
+
+* position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
+* visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
+
+See :ref:`data_defined_labeling` for more information.
+
+
 .. index:: Fields, Forms
 .. _vector_attributes_menu:
 
-Fields Properties
-=================
+Source Fields Properties
+========================
 
-|attributes| The :guilabel:`Fields` tab helps you organize the fields of
+|attributes| The :guilabel:`Source Fields` tab helps you organize the fields of
 the selected dataset and the way you can interact with
 the feature's attributes. The buttons |newAttribute|
 :sup:`New field` and |deleteAttribute| :sup:`Delete field`
@@ -1618,19 +1836,19 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
    Field properties tab
 
 
+Attributes Form Properties
+==========================
+
 .. index:: Edit widget, Field configuration
 .. _configure_field:
 
 Configure the field behavior
 ----------------------------
 
-Within the :guilabel:`Fields` tab, you also find an **Edit widget** column.
-This column can be used to define values or a range of values that are allowed
-to be added to the specific attribute table column. It also helps to set the
+The :guilabel:`Attributes Form` tab helps you set the
 type of widget used to fill or display values of the field, in the attribute
-table or the feature form. If you click on the **[Edit widget]** button, a dialog
-opens, where you can define different widgets.
-
+table or the feature form: you can define how user interacts with each field
+and the values or range of values that are allowed to be added to each.
 
 .. _figure_fields_widget:
 
@@ -1928,233 +2146,212 @@ Additionally, the add vector join dialog allows you to:
 * |checkbox| :guilabel:`Choose which fields are joined`
 * Create a |checkbox| :guilabel:`Custom field name prefix`
 
-.. index:: Diagrams
-.. _`sec_diagram`:
 
-Diagrams Properties
-===================
+.. _vector_auxiliary_storage:
 
-|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to
-a vector layer (see figure_diagrams_attributes_).
+Auxiliary storage
+=================
 
-The current core implementation of diagrams provides support for:
+The regular way to customize styling and labeling is to use data-defined
+properties as described in :ref:`data_defined`. However, it may not be
+possible if the underlying data is read only. Moreover, configuring these
+data-defined properties may be very time consuming or not desirable! For
+example, if you want to fully use map tools coming with :ref:`label_toolbar`,
+then you need to add and configure more than 20 fields in your original data
+source (x and y positions, rotation angle, font style, color and so on).
 
-* **pie charts**, a circular statistical graphic divided into slices to illustrate
-  numerical proportion. The arc length of each slice is proportional to the
-  quantity it represents,
-* **text diagrams**, a horizontaly divided circle showing statistics values inside
-* and **histograms**.
+The Auxiliary Storage mechanism provides the solution to these limitations
+and awkward configurations. Actually, auxiliary fields are a roundabout
+mean to automatically manage and store these data-defined properties (labels,
+diagram, symbology...) in a SQLite database thanks to editable joins. This way,
+data source doesn't even need to be editable!
 
-.. tip:: **Switch quickly between types of diagrams**
+A tab is available in vector layer properties dialog to manage auxiliary
+storage:
 
-   Given that the settings are almost common to the different types of
-   diagram, when designing your diagram, you can easily change the diagram type
-   and check which one is more appropriate to your data without any loss.
-
-For each type of diagram, the properties are divided into several tabs:
-
-* :ref:`Attributes <diagram_attributes>`
-* :ref:`Appearance <diagram_appearance>`
-* :ref:`Size <diagram_size>`
-* :ref:`Placement <diagram_placement>`
-* :ref:`Options <diagram_options>`
-* :ref:`Legend <diagram_legend>`
-
-.. _diagram_attributes:
-
-Attributes
-----------
-
-:guilabel:`Attributes` defines which variables to display in the diagram.
-Use |signPlus| :sup:`add item` button to select the desired fields into
-the 'Assigned Attributes' panel. Generated attributes with :ref:`vector_expressions`
-can also be used.
-
-You can move up and down any row with click and drag, sorting how attributes
-are displayed. You can also change the label in the 'Legend' column
-or the attribute color by double-clicking the item.
-
-This label is the default text displayed in the legend of the print composer
-or of the layer tree.
-
-.. _figure_diagrams_attributes:
-
-.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tab.png
    :align: center
 
-   Diagram properties  - Attributes tab
+   Auxiliary Storage tab
 
-.. _diagram_appearance:
+.. _vector_auxiliary_storage_key:
 
-Appearance
-----------
+Labeling
+--------
 
-:guilabel:`Appearance` defines how the diagram looks like. It provides
-general settings that do not interfere with the statistic values such as:
+Considering that the data source may be customized thanks to data-defined
+properties without being editable, labeling map tools described in
+:ref:`label_toolbar` are always available as soon as labeling is activated.
 
-* the graphic transparency, its outline width and color
-* the width of the bar in case of histogram
-* the circle background color in case of text diagram, and the font used for texts
-* the orientation of the left line of the first slice represented in pie chart.
-  Note that slices are displayed clockwise.
+Actually, the auxiliary storage system needs an auxiliary layer to store these
+properties in a SQLite database (see :ref:`vector_auxiliary_storage_database`).
+Its creation process is run the first time you click on the map while a
+labeling map tool is currently activated. Then, a window is displayed, allowing
+to indicate the primary key to use for joining (to ensure that features are
+uniquely identified):
 
-In this tab, you can also manage the diagram visibility:
+.. _figure_auxiliary_layer_creation:
 
-* by removing diagrams that overlap others or :guilabel:`Show all diagrams`
-  even if they overlap each other
-* by selecting a field with :guilabel:`Data defined visibility` to precisely
-  tune which diagrams should be rendered
-* by setting the :ref:`scale visibility <label_scaledepend>`
-
-.. _figure_diagrams_appearance:
-
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_key.png
    :align: center
 
-   Diagram properties - Appearance tab
+   Auxiliary Layer creation dialog
 
-.. _diagram_size:
 
-Size
-----
+As soon as an auxiliary layer is configured for the current data source, you can
+retrieve its information in the tab:
 
-:guilabel:`Size` is the main tab to set how the selected statistics are
-represented. The diagram size units can be 'Map Units' or 'Millimeters'.
-You can use :
-
-* :guilabel:`Fixed size`, an unique size to represent the graphic of all the
-  features, except when displaying histogram
-* or :guilabel:`Scaled size`, based on an expression using layer attributes.
-
-.. ToDo: better explain the scale behaviour of the different diagram types
-
-.. _figure_diagrams_size:
-
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tabkey.png
    :align: center
 
-   Diagram properties - Size tab
+   Auxiliary Layer key
 
-.. _diagram_placement:
 
-Placement
+For now, we can see that:
+
+* the primary key used is well ``id``
+* there's ``0`` feature using an auxiliary field
+* there's ``0`` auxiliary field
+
+Now that the auxiliary layer is well created, we just have to edit our labels.
+If we click on a label while the |changeLabelProperties| :sup:`Change Label`
+map tool is activated, then we're able to update styling properties like sizes,
+colors and so on. Then, the corresponding data-defined properties are created
+and can be retrieved:
+
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_fields.png
+   :align: center
+
+   Auxiliary Fields
+
+
+As we are seeing in the previous figure, ``21`` fields have been automatically
+created and configured for labeling. For example, the ``Color``
+auxiliary field type is a ``String`` and is named ``labeling_color`` in the
+underlying SQLite database. Moreover, we observe that there's ``1`` entity
+which is currently using these auxiliary fields (according to the current
+example).
+
+By the way, considering that auxiliary fields are linked to data-defined
+properties, we can observe that data-defined override options are setup
+correctly because of the icon |dataDefineOn| in the labeling tab:
+
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_dd.png
+   :align: center
+
+   Data-defined properties automatically created
+
+
+Otherwise, there's another way to create an auxiliary field for a specific
+property thanks to the |dataDefined| :sup:`data-defined override` button. By
+clicking on :guilabel:`Store data in the project`, an auxiliary field is
+automatically created for the :guilabel:`Opacity` field. If you click on this
+button whereas the auxiliary layer is not created yet, then the window
+:ref:`figure_auxiliary_layer_creation` is firstly displayed to select the
+primary key to use for joining.
+
+
+Symbology
 ---------
 
-:guilabel:`Placement` helps to define diagram position.
-According to the layer geometry type, it offers different options for the placement:
+In the same way than for customizing labels, auxiliary fields may be used to
+stylize symbols too. To do this, you just have to click on
+:guilabel:`Store data in the project` for a specific symbol property. For
+example for the :guilabel:`Fill color` field:
 
-* 'Over the point' or 'Around the point' for point geometry.
-  The latter variable requires a radius to follow.
-* 'Over the line' or 'Around the line' for line geometry. Like point feature,
-  the last variable requires a distance to respect and user can specify the
-  diagram placement relative to the feature ('above', 'on' and/or 'below' the line)
-  It's possible to select several options at once.
-  In that case, QGIS will look for the optimal position of the diagram. Remember that
-  here you can also use the line orientation for the position of the diagram.
-* 'Over the centroid', 'Around the centroid' (with a distance set),
-  'Perimeter' and anywhere 'Inside polygon' are the options for polygon features.
-
-The diagram can also be placed using feature data by filling the ``X``
-and ``Y`` fields with an attribute of the feature.
-
-The placement of the diagrams can interact with the labeling, so you can
-detect and solve position conflicts between diagrams and labels by setting
-the **Priority** slider or the **z-index** value.
-
-.. _figure_diagrams_placement:
-
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol.png
    :align: center
 
-   Vector properties dialog with diagram properties, Placement tab
-
-.. _diagram_options:
-
-Options
--------
-
-The :guilabel:`Options` tab has settings only in case of histogram. You can
-choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
-
-.. ToDo: explain the behaviour of this option
-
-.. _diagram_legend:
-
-Legend
--------
-
-From the :guilabel:`Legend` tab, you can choose to display items of the diagram
-in the :ref:`label_legend`, besides the layer symbology. It can be:
-
-* the represented attributes: color and legend text set in :guilabel:`Attributes` tab
-* and if applicable, the diagram size, whose symbol you can customize.
-
-When set, the diagram legend items are also available in the print composer legend,
-besides the layer symbology.
+   Data-defined property menu for symbol
 
 
-Case Study
-----------
+Because you may customize same property for different (levels of) symbols,
+each setting requires a unique name to avoid conflict. Thus, by clicking on
+:guilabel:`Store data in the project`, a window is displayed, indicating the
+:guilabel:`Type` of the field and providing a way to give the unique name. For
+the :guilabel:`Fill color` field, the next window is opened:
 
-We will demonstrate an example and overlay on the Alaska boundary layer a
-text diagram showing temperature data from a climate vector layer.
-Both vector layers are part of the QGIS sample dataset (see section
-:ref:`label_sampledata`).
-
-#. First, click on the |addOgrLayer| :sup:`Load Vector` icon, browse
-   to the QGIS sample dataset folder, and load the two vector shape layers
-   :file:`alaska.shp` and :file:`climate.shp`.
-#. Double click the ``climate`` layer in the map legend to open the
-   :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab and from the :guilabel:`Diagram type`
-   |selectString| combo box, select 'Text diagram'.
-#. In the :guilabel:`Appearance` tab, we choose a light blue as background color,
-   and in the :guilabel:`Size` tab, we set a fixed size to 18 mm.
-#. In the :guilabel:`Position` tab, placement could be set to 'Around Point'.
-#. In the diagram, we want to display the values of the three columns
-   ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
-   first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
-   ``T_F_JUL`` and finally ``T_F_MEAN``.
-#. Now click **[Apply]** to display the diagram in the QGIS main window.
-#. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
-   |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
-   the basis of the :guilabel:`maximum value` of an attribute and the
-   :guilabel:`Size` option.
-   If the diagrams appear too small on the screen, you can activate the
-   |checkbox| :guilabel:`Increase size of small diagrams` checkbox and define
-   the minimum size of the diagrams.
-#. Change the attribute colors by double clicking on the color values in the
-   :guilabel:`Assigned attributes` field.
-   Figure_diagrams_mapped_ gives an idea of the result.
-#. Finally, click **[Ok]**.
-
-.. _figure_diagrams_mapped:
-
-.. figure:: /static/user_manual/working_with_vector/climate_diagram.png
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_name.png
    :align: center
-   :width: 25em
 
-   Diagram from temperature data overlayed on a map
+   Name of the auxiliary field for a symbol
 
-Remember that in the :guilabel:`Position` tab, a |checkbox| :guilabel:`Data
-defined position` of the diagrams is possible. Here, you can use attributes
-to define the position of the diagram.
-You can also set a scale-dependent visibility in the :guilabel:`Appearance` tab.
 
-The size and the attributes can also be an expression.
-Use the |expression| button to add an expression.
-See :ref:`vector_expressions` chapter for more information and example.
+Once created, the auxiliary field can be retrieved in the auxiliary storage
+tab:
 
-Using data-defined override
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_field.png
+   :align: center
+
+   Auxiliary field symbol
+
+
+Attribute table and widgets
 ---------------------------
 
-As mentioned above, you can use some custom data-defined to tune the diagrams
-rendering:
+Once created, auxiliary fields may be edited through the
+:ref:`attribute table <sec_attribute_table>`. However, there's some subtlety
+about widgets of auxiliary fields.
 
-* position in :guilabel:`Placement` tab by filling ``X`` and ``Y`` fields
-* visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
+For example, auxiliary fields which may be edited through an external tool
+are not visible in the attribute table. This way, as the :guilabel:`Rotation`
+may be edited through |changeLabelProperties| :sup:`Change Label` or
+|rotateLabel| :sup:`Rotate Label`, the auxiliary widget is **Hidden** by
+default (see :ref:`edit_widgets`). However, as the :guilabel:`Opacity`
+field cannot be edited thanks to map tools, the corresponding widget is not
+**Hidden**. Moreover, auxiliary fields representing a ``Color`` have a
+widget **Color** set by default.
 
-See :ref:`data_defined_labeling` for more information.
+Then, the underlying form will look like the next figure:
+
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_widgets.png
+   :align: center
+
+   Form with auxiliary fields
+
+
+Management
+----------
+
+Some actions are available to manage auxiliary layers thanks to the next
+combobox:
+
+.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_actions.png
+   :align: center
+
+   Auxiliary layer management
+
+
+The first item :guilabel:`Create` is disabled in this case because the auxiliary
+layer is already created. But in case of a fresh work, you can use this action to
+create an auxiliary layer. As explained in :ref:`vector_auxiliary_storage_key`,
+a primary key will be needed then.
+
+The :guilabel:`Clear` action allows to keep all auxiliary fields, but remove
+their contents. This way, the number of features using these fields will fall to
+``0``.
+
+The :guilabel:`Delete` action completely removes the auxiliary layer. In other
+words, the corresponding table is deleted from the underlying SQLite database
+and properties customization are lost.
+
+Finally, the :guilabel:`Export` action allows to save the auxiliary layer as a
+:ref:`new vector layer <general_saveas>`. Note that geometries are not stored
+in auxiliary storage. However, in this case, geometries are exported from the
+original data source too.
+
+.. _vector_auxiliary_storage_database:
+
+Auxiliary storage database
+--------------------------
+
+When you save your project with the ``.qgs`` format, the SQLite database
+used for auxiliary storage is saved at the same place but with the extension
+``.qgd``.
+
+For convenience, an archive may be used instead thanks to the ``.qgz`` format.
+In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the archive.
+
 
 .. index:: Tab; Actions
 .. _actions_menu:
@@ -2482,6 +2679,19 @@ in map canvas.
 Rendering Properties
 ====================
 
+Scale dependent visibility
+--------------------------
+
+You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+(exclusive)` scale, defining a range of scale in which features will be
+visible. Out of this range, they are hidden. The |mapIdentification|
+:sup:`Set to current canvas scale` button helps you use the current map
+canvas scale as boundary of the range visibility.
+See :ref:`label_scaledepend` for more information.
+
+Simplify geometry
+-----------------
+
 |rendering| QGIS offers support for on-the-fly feature generalisation. This can
 improve rendering times when drawing many complex features at small scales.
 This feature can be enabled or disabled in the layer settings using the
@@ -2516,14 +2726,49 @@ You can also do this by forcing the composer to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
-.. index:: Metadata, Keyword
 
-.. _vectormetadatamenu:
+.. index:: Variables
+.. _vectorvariablesmenu:
 
-Metadata Properties
-===================
+Variables Properties
+====================
 
-|metadata| The :guilabel:`Metadata` tab consists of :guilabel:`Description`,
+|expression| The :guilabel:`Variables` tab lists all the variables available at
+the layer's level (which includes all global and project's variables).
+
+It also allows the user to manage layer-level variables. Click the |signPlus|
+button to add a new custom layer-level variable. Likewise, select a custom
+layer-level variable from the list and click the |signMinus| button to remove
+it.
+
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
+
+
+.. index:: Legend, Embedded widget
+.. _vectorlegendmenu:
+
+Legend Properties
+=================
+
+|legend| The :guilabel:`Legend` tab provides you with a list of widgets you
+can embed within the layer tree in the Layers panel. The idea is to have a
+way to quickly access some actions that are often used with the layer (setup
+transparency, filtering, selection, style or other stuff...).
+
+By default, QGIS provides transparency widget but this can be extended by
+plugins registering their own widgets and assign custom actions to layers
+they manage.
+
+
+.. index:: Metadata, Keyword, QGIS Server
+
+.. _vectorservermenu:
+
+QGIS Server Properties
+======================
+
+|metadata| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
 and :guilabel:`Properties` sections.
 
@@ -2550,247 +2795,9 @@ In the :guilabel:`LegendUrl` section, you can provide the url of a legend image
 in the url field. You can use the Format drop-down option to apply the appropriate
 format of the image. Currently png, jpg and jpeg image formats are supported.
 
-.. _figure_metadata_vector:
+.. _figure_server_vector:
 
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
    :align: center
 
-   Metadata tab in vector layers properties dialog
-
-
-.. index:: Variables
-.. _vectorvariablesmenu:
-
-Variables Properties
-====================
-
-|expression| The :guilabel:`Variables` tab lists all the variables available at
-the layer's level (which includes all global and project's variables).
-
-It also allows the user to manage layer-level variables. Click the |signPlus|
-button to add a new custom layer-level variable. Likewise, select a custom
-layer-level variable from the list and click the |signMinus| button to remove
-it.
-
-More information on variables usage in the General Tools
-:ref:`general_tools_variables` section.
-
-.. index:: Legend, Embedded widget
-.. _vectorlegendmenu:
-
-Legend Properties
-=================
-
-|legend| The :guilabel:`Legend` tab provides you with a list of widgets you
-can embed within the layer tree in the Layers panel. The idea is to have a
-way to quickly access some actions that are often used with the layer (setup
-transparency, filtering, selection, style or other stuff...).
-
-By default, QGIS provides transparency widget but this can be extended by
-plugins registering their own widgets and assign custom actions to layers
-they manage.
-
-.. _vector_auxiliary_storage:
-
-Auxiliary storage
-=================
-
-The regular way to customize styling and labeling is to use data-defined
-properties as described in :ref:`data_defined`. However, it may not be
-possible if the underlying data is read only. Moreover, configuring these
-data-defined properties may be very time consuming or not desirable! For
-example, if you want to fully use map tools coming with :ref:`label_toolbar`,
-then you need to add and configure more than 20 fields in your original data
-source (x and y positions, rotation angle, font style, color and so on).
-
-The Auxiliary Storage mechanism provides the solution to these limitations
-and awkward configurations. Actually, auxiliary fields are a roundabout
-mean to automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This way,
-data source doesn't even need to be editable!
-
-A tab is available in vector layer properties dialog to manage auxiliary
-storage:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tab.png
-   :align: center
-
-   Auxiliary Storage tab
-
-.. _vector_auxiliary_storage_key:
-
-Labeling
---------
-
-Considering that the data source may be customized thanks to data-defined
-properties without being editable, labeling map tools described in
-:ref:`label_toolbar` are always available as soon as labeling is activated.
-
-Actually, the auxiliary storage system needs an auxiliary layer to store these
-properties in a SQLite database (see :ref:`vector_auxiliary_storage_database`).
-Its creation process is run the first time you click on the map while a
-labeling map tool is currently activated. Then, a window is displayed, allowing
-to indicate the primary key to use for joining (to ensure that features are
-uniquely identified):
-
-.. _figure_auxiliary_layer_creation:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_key.png
-   :align: center
-
-   Auxiliary Layer creation dialog
-
-
-As soon as an auxiliary layer is configured for the current data source, you can
-retrieve its information in the tab:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tabkey.png
-   :align: center
-
-   Auxiliary Layer key
-
-
-For now, we can see that:
-
-* the primary key used is well ``id``
-* there's ``0`` feature using an auxiliary field
-* there's ``0`` auxiliary field
-
-Now that the auxiliary layer is well created, we just have to edit our labels.
-If we click on a label while the |changeLabelProperties| :sup:`Change Label`
-map tool is activated, then we're able to update styling properties like sizes,
-colors and so on. Then, the corresponding data-defined properties are created
-and can be retrieved:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_fields.png
-   :align: center
-
-   Auxiliary Fields
-
-
-As we are seeing in the previous figure, ``21`` fields have been automatically
-created and configured for labeling. For example, the ``Color``
-auxiliary field type is a ``String`` and is named ``labeling_color`` in the
-underlying SQLite database. Moreover, we observe that there's ``1`` entity
-which is currently using these auxiliary fields (according to the current
-example).
-
-By the way, considering that auxiliary fields are linked to data-defined
-properties, we can observe that data-defined override options are setup
-correctly because of the icon |dataDefineOn| in the labeling tab:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_dd.png
-   :align: center
-
-   Data-defined properties automatically created
-
-
-Otherwise, there's another way to create an auxiliary field for a specific
-property thanks to the |dataDefined| :sup:`data-defined override` button. By
-clicking on :guilabel:`Store data in the project`, an auxiliary field is
-automatically created for the :guilabel:`Opacity` field. If you click on this
-button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is firstly displayed to select the
-primary key to use for joining.
-
-
-Symbology
----------
-
-In the same way than for customizing labels, auxiliary fields may be used to
-stylize symbols too. To do this, you just have to click on
-:guilabel:`Store data in the project` for a specific symbol property. For
-example for the :guilabel:`Fill color` field:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol.png
-   :align: center
-
-   Data-defined property menu for symbol
-
-
-Because you may customize same property for different (levels of) symbols,
-each setting requires a unique name to avoid conflict. Thus, by clicking on
-:guilabel:`Store data in the project`, a window is displayed, indicating the
-:guilabel:`Type` of the field and providing a way to give the unique name. For
-the :guilabel:`Fill color` field, the next window is opened:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_name.png
-   :align: center
-
-   Name of the auxiliary field for a symbol
-
-
-Once created, the auxiliary field can be retrieved in the auxiliary storage
-tab:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_field.png
-   :align: center
-
-   Auxiliary field symbol
-
-
-Attribute table and widgets
----------------------------
-
-Once created, auxiliary fields may be edited through the
-:ref:`attribute table <sec_attribute_table>`. However, there's some subtlety
-about widgets of auxiliary fields.
-
-For example, auxiliary fields which may be edited through an external tool
-are not visible in the attribute table. This way, as the :guilabel:`Rotation`
-may be edited through |changeLabelProperties| :sup:`Change Label` or
-|rotateLabel| :sup:`Rotate Label`, the auxiliary widget is **Hidden** by
-default (see :ref:`edit_widgets`). However, as the :guilabel:`Opacity`
-field cannot be edited thanks to map tools, the corresponding widget is not
-**Hidden**. Moreover, auxiliary fields representing a ``Color`` have a
-widget **Color** set by default.
-
-Then, the underlying form will look like the next figure:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_widgets.png
-   :align: center
-
-   Form with auxiliary fields
-
-
-Management
-----------
-
-Some actions are available to manage auxiliary layers thanks to the next
-combobox:
-
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_actions.png
-   :align: center
-
-   Auxiliary layer management
-
-
-The first item :guilabel:`Create` is disabled in this case because the auxiliary
-layer is already created. But in case of a fresh work, you can use this action to
-create an auxiliary layer. As explained in :ref:`vector_auxiliary_storage_key`,
-a primary key will be needed then.
-
-The :guilabel:`Clear` action allows to keep all auxiliary fields, but remove
-their contents. This way, the number of features using these fields will fall to
-``0``.
-
-The :guilabel:`Delete` action completely removes the auxiliary layer. In other
-words, the corresponding table is deleted from the underlying SQLite database
-and properties customization are lost.
-
-Finally, the :guilabel:`Export` action allows to save the auxiliary layer as a
-:ref:`new vector layer <general_saveas>`. Note that geometries are not stored
-in auxiliary storage. However, in this case, geometries are exported from the
-original data source too.
-
-.. _vector_auxiliary_storage_database:
-
-Auxiliary storage database
---------------------------
-
-When you save your project with the ``.qgs`` format, the SQLite database
-used for auxiliary storage is saved at the same place but with the extension
-``.qgd``.
-
-For convenience, an archive may be used instead thanks to the ``.qgz`` format.
-In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the archive.
+   QGIS Server tab in vector layers properties dialog
