@@ -189,12 +189,6 @@ upstream repo, you can push your repo up to the QGIS official repo by doing:
   git rebase master
 
 
-Documentation on wiki
-----------------------
-
-It is also recommended to document the intended changes and the current status
-of the work on a wiki page.
-
 Testing before merging back to master
 --------------------------------------
 
