@@ -160,13 +160,13 @@ Parameters
   Distance radius of the buffer calculated from the boundary of each feature.
   Moreover you can use the Data Defined button on the right to choose a field of
   from which the radius will be calculated: this way you can have different radius
-  for each feature.
+  for each feature (see :ref:`qgisvariabledistancebuffer`).
 
   Default: *10.0*
 
 ``Segments`` [number]
   Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets
+  creating rounded offsets.
 
   Default: *5*
 
@@ -204,6 +204,10 @@ Outputs
 
 ``Buffer`` [vector: polygon]
   Buffer polygon vector layer
+
+See also
+........
+:ref:`qgisvariabledistancebuffer`
 
 
 .. _qgiscentroids:
