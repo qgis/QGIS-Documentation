@@ -190,7 +190,6 @@ Menu Option                                              Shortcut              R
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
 menu.
-:menuselection:`Preview mode -->` is not available under |osx| macOS.
 
 Layer
 -----
@@ -237,7 +236,7 @@ Menu Option                                                       Shortcut      
 ================================================================  ====================  ==========================================  ===============================
 
 Under |kde| Linux KDE, you'll find more tools in :menuselection:`Settings`
-menu such as :guilabel:`Project Properties`, :menuselection:`Panels -->`,
+menu such as :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
 
 Plugins
