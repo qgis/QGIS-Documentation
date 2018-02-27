@@ -31,7 +31,7 @@ QGIS User Guide
     grass_integration/grass_integration
     processing/index
     processing_algs/index
-    plugins/plugins_index
+    plugins/index
     preamble/help_and_support
     preamble/contributors
     appendices/appendices
