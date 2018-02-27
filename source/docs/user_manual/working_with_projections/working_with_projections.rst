@@ -89,7 +89,7 @@ The options shown in figure_projection_options_ are:
 
 If you want to define the coordinate reference system for a certain layer
 without CRS information, you can also do that in the :guilabel:`General` tab
-of the raster and vector properties dialog (see :ref:`label_generaltab` for
+of the raster and vector properties dialog (see :ref:`label_sourcetab` for
 rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already has a CRS
 defined, it will be displayed as shown in :ref:`figure_vector_general`.
 
