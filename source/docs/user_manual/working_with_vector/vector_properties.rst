@@ -140,10 +140,8 @@ subset will prevent you from editing the layer.
    Source tab in vector layers properties dialog
 
 
-
 .. index:: Style, Symbology, Renderer
 .. _vector_style_menu:
-
 
 Symbology Properties
 ====================
@@ -155,6 +153,16 @@ designed for the different kinds of vector data. However all types share the
 following dialog structure: in the upper part, you have a widget that helps
 you prepare the classification and the symbol to use for features and at
 the bottom the:ref:`layer_rendering` widget.
+
+.. tip:: **Switch quickly between different layer representations**
+
+   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
+   :guilabel:`Layer Properties` dialog, you can save as many combinations of
+   layer properties settings (symbology, labeling, diagram, fields form,
+   actions...) as you want. Then, simply switch between styles from the context
+   menu of the layer in :guilabel:`Layers Panel` to automatically get different
+   representations of your data.
+
 
 .. tip:: **Export vector symbology**
 
@@ -2793,13 +2801,3 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :align: center
 
    QGIS Server tab in vector layers properties dialog
-
-
-.. tip:: **Switch quickly between different layer representations**
-
-   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
-   :guilabel:`Layer Properties` dialog, you can save as many combinations of
-   layer properties settings (symbology, labeling, diagram, fields form,
-   actions...) as you want. Then, simply switch between styles from the context
-   menu of the layer in :guilabel:`Layers Panel` to automatically get different
-   representations of your data.
