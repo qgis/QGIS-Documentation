@@ -338,6 +338,8 @@ rst_epilog = """
    :width: 1.5em
 .. |attributes| image:: /static/common/attributes.png
    :width: 2em
+.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
+   :width: 1.5em
 .. |basicStatistics| image:: /static/common/basic_statistics.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
