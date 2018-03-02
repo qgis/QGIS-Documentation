@@ -1316,7 +1316,7 @@ Setting the automated placement engine
 ......................................
 
 In the top right corner of the :guilabel:`Labels` tab, you can use the
-|autoPlacement| :sup:`Automated placement settings (apply to all layers)` to
+|autoPlacement| :sup:`Automated placement settings (applies to all layers)` to
 configure a global and automated behavior of the labels. Clicking the
 |autoPlacement| button provides you with the following options:
 
