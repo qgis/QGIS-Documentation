@@ -99,15 +99,15 @@ Use these steps to create the index:
 *  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
    :menuselection:`Properties` from the context menu.
-*  In the :guilabel:`General` tab, click the **[Create Spatial Index]** button.
+*  In the :guilabel:`Source` tab, click the **[Create Spatial Index]** button.
 
 **Problem loading a shape .prj file**
 
 If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
 coordinate reference system from that file, you will need to define the proper
-projection manually within the :guilabel:`General` tab of the
-:guilabel:`Layer Properties` dialog of the layer by clicking the
-**[Specify...]**  button. This is due to the fact that :file:`.prj` files
+projection manually within the :menuselection:`Layer Properties --> Source` tab
+of the layer by clicking the |setProjection| :sup:`Select CRS` button.
+This is due to the fact that :file:`.prj` files
 often do not provide the complete projection parameters as used in QGIS and
 listed in the :guilabel:`CRS` dialog.
 

@@ -578,7 +578,8 @@ Your results:
 ...............................................................................
 
 * Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers list`, select the :guilabel:`General` tab.
+  layer in the :guilabel:`Layers list`, and selecting the :menuselection:`Properties
+  --> Source` tab.
 * Then build the query :kbd:`"suitable" = 1`.
 * Click :guilabel:`OK` to filter out all the polygons where this condition
   isn't met.

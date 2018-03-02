@@ -70,7 +70,7 @@ and create corresponding shape files:
 
 * First, double-click the :kbd:`multipolygons` layer to open the
   :guilabel:`Layer properties` dialog.
-* In the :guilabel:`General` tab, click :guilabel:`Query Builder` to open the
+* In the :guilabel:`Source` tab, click :guilabel:`Query Builder` to open the
   :guilabel:`Query builder` window.
 
 This layer contains three fields whose data we will need to extract for use

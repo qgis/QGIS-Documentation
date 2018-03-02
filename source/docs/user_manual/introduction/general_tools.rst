@@ -432,7 +432,7 @@ Scale Dependent Rendering
 Scale-dependent rendering allows you to specify the minimum and maximum scales
 at which a layer (raster or vector) will be visible. To set scale-dependent rendering,
 open the :guilabel:`Properties` dialog by double-clicking on the layer in the legend.
-On the :guilabel:`General` tab, tick the |checkbox| :guilabel:`Scale
+On the :guilabel:`Rendering` tab, tick the |checkbox| :guilabel:`Scale
 dependent visibility` checkbox and enter the :guilabel:`Minimum (exclusive)` and
 :guilabel:`Maximum (inclusive)` scale values.
 

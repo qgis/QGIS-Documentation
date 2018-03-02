@@ -58,6 +58,8 @@ Provided information are :
   of fields, characteristics of each...)
 
 
+.. _vectorsourcemenu:
+
 Source Properties
 =================
 
@@ -98,7 +100,7 @@ active, only the features corresponding to its result are available in the
 project. The query result can be saved as a new vector layer.
 
 The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`General` tab in the Layer Properties. Under :guilabel:`Feature
+the :guilabel:`Source` tab in the Layer Properties. Under :guilabel:`Feature
 subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
 builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
 field, you could select only regions that are ``borough`` in the
