@@ -61,8 +61,8 @@ Provided information are :
 Source Properties
 =================
 
-|general| Use this tab to make general settings for the vector layer.
-There are several options available:
+|system| Use this tab to define general settings for the vector layer.
+Available options are:
 
 Settings
 --------
@@ -1859,7 +1859,7 @@ See :ref:`data_defined_labeling` for more information.
 Source Fields Properties
 ========================
 
-|attributes| The :guilabel:`Source Fields` tab helps you organize the fields of
+|sourceFields| The :guilabel:`Source Fields` tab helps you organize the fields of
 the selected dataset and the way you can interact with
 the feature's attributes. The buttons |newAttribute|
 :sup:`New field` and |deleteAttribute| :sup:`Delete field`
@@ -1900,7 +1900,7 @@ Attributes Form Properties
 Configure the field behavior
 ----------------------------
 
-The :guilabel:`Attributes Form` tab helps you set the
+|formView| The :guilabel:`Attributes Form` tab helps you set the
 type of widget used to fill or display values of the field, in the attribute
 table or the feature form: you can define how user interacts with each field
 and the values or range of values that are allowed to be added to each.
@@ -2844,7 +2844,7 @@ they manage.
 QGIS Server Properties
 ======================
 
-|metadata| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+|overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
 and :guilabel:`Properties` sections.
 

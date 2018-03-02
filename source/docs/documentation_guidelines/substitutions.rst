@@ -266,6 +266,7 @@ Icon                         Substitution                     Icon              
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |formView|               ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
+|attributes|                 ``|attributes|``                 \                        \
 ============================ ===============================  =======================  ===========================
 
 
@@ -317,11 +318,13 @@ Layer Properties
 Icon                                Substitution                            Icon                           Substitution
 ==================================  ======================================  =============================  ================================
 |symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
-|attributes|                        ``|attributes|``                        |general|                      ``|general|``
+|sourceFields|                      ``|sourceFields|``                      |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |mapTips|                           ``|mapTips|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
-|legend|                            ``|legend|``                            |dependencies|                            ``|dependencies|``
+|legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
+|3d|                                ``|3d|``                                |system|                       ``|system|``
+|editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
