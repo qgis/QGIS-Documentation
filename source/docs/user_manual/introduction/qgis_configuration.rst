@@ -71,9 +71,10 @@ General Settings
   |radioButtonOn| :guilabel:`Qt default` or a user-defined one.
 * Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|.
 * |checkbox| :guilabel:`Hide splash screen at startup`
-* |checkbox| :guilabel:`Show tips at startup`
 * |checkbox| :guilabel:`Check QGIS version at startup` to keep you informed
   if a newer version is released
+* |checkbox| :guilabel:`Modeless data source manager dialog` to allow interaction with
+  QGIS interface while adding layers to project
 * |checkbox| :guilabel:`QGIS-styled group boxes`
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`)
 * |checkbox| :guilabel:`Use live-updating color chooser dialogs` (see :ref:`color-selector`)
@@ -93,10 +94,12 @@ General Settings
   |checkbox| :guilabel:`Create new project from default project` and then save
   a project in the project templates folder.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
-  required`
+  required` to avoid losing changes you made.
 * |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
-  version of QGIS`
+  version of QGIS`. You can always open projects created with older version of
+  QGIS but once the project is saved, trying to open with older release may fail
+  because of features not available in that version.
 * :guilabel:`Enable macros` |selectString|. This option was created to handle
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
@@ -114,11 +117,19 @@ Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
 symbols`. These SVG files are then available to symbolize features or
 decorate your map composition.
 
-
 **Plugin paths**
 
 Add or Remove :guilabel:`Path(s) to search for additional C++
 plugin libraries`
+
+**Documentation paths**
+
+Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
+a link to the official online User Manual corresponding to the version being used
+is added. You can however add other links and prioritize them from top to bottom:
+each time you click on a **[Help]** button in a dialog, the topmost link
+is checked and if no corresponding page is found, the next one is tried,
+and so on.
 
 **QSettings**
 
@@ -235,7 +246,9 @@ Data Sources Settings
 * :guilabel:`Scan for valid items in the browser dock` |selectString|. You can
   choose between 'Check extension' and 'Check file contents'.
 * :guilabel:`Scan for contents of compressed files (.zip) in browser dock`
-  |selectString|. 'No', 'Basic scan' and 'Full scan' are possible.
+  |selectString| defines how detailed is the widget information at the bottom
+  of the Browser panel when querying such files. 'No', 'Basic scan' and 'Full scan'
+  are possible options.
 * :guilabel:`Prompt for raster sublayers when opening`. Some rasters support
   sublayers --- they are called subdatasets in GDAL. An example is netCDF files
   --- if there are many netCDF variables, GDAL sees every variable as a
@@ -254,11 +267,15 @@ Data Sources Settings
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
 * |checkbox| :guilabel:`Execute expressions on server-side if possible`
+* |checkbox| :guilabel:`Evaluate default values` defines whether default values
+  from database provider should be calculated when digitizing the new feature
+  (checked status) or when saving the changes.
 
 
 **Hidden Browser Path**
 
-This widget lists all the folder you chose to hide from the Browser panel.
+This widget lists all the folder you chose to hide from the :ref:`Browser panel
+<browser_panel>`.
 Removing a folder from the list will make it available in the Browser panel.
 
 .. index:: Rendering
@@ -316,28 +333,30 @@ Rendering Settings
   straight line** segments will be used during rendering.
 * :guilabel:`Tolerance type`: it can be 'Maximum angle' or 'Maximum distance'
 
-  **Rasters**
+**Rasters**
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
 
 *Contrast enhancement*
 
-* :guilabel:`Single band gray` |selectString|. A single band gray can have
-  'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also
-  'Clip to MinMax'.
-* :guilabel:`Multi band color (byte/band)` |selectString|. Options are 'No stretch',
-  'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Multi band color (>byte/band)` |selectString|. Options are 'No stretch',
-  'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Limits (minimum/maximum)` |selectString|. Options are
-  'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
+Contrast enhancement options can be applied to :guilabel:`Single band gray`,
+:guilabel:`Multi band color (byte/band)` or :guilabel:`Multi band color (>byte/band)`.
+For each, you can set:
+
+* the :guilabel:`Algorithm` to use, whose values can be 'No stretch',
+  'Stretch to MinMax', 'Stretch and Clip to MinMax' or 'Clip to MinMax'
+* the :guilabel:`Limits (minimum/maximum)` to apply, with values such as 'Cumulative
+  pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
+
+For rasters rendering, you can also define the following options:
+
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
 
 **Debugging**
 
-* |checkbox| :guilabel:`Map canvas refresh`
+* |checkbox| :guilabel:`Map canvas refresh` to debug rendering duration.
 
 .. _canvas_legend_options:
 
@@ -350,17 +369,15 @@ Canvas and Legend Settings
 
 **Layer legend**
 
+The following :guilabel:`Legend item styles` are possible:
+
 * :guilabel:`Double click action in legend` |selectString|. You can either
   'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
   with the double click.
-* The following :guilabel:`Legend item styles` are possible:
-
-  * |checkbox| :guilabel:`Capitalise layer names`
-  * |checkbox| :guilabel:`Bold layer names`
-  * |checkbox| :guilabel:`Bold group names`
-  * |checkbox| :guilabel:`Display classification attribute names`
-  * |checkbox| :guilabel:`Create raster icons (may be slow)`
-  * you can also set the :guilabel:`WMS getLegendGraphic Resolution`
+* |checkbox| :guilabel:`Display classification attribute names` in the Layers
+  panel, e.g. when applying a categorized or rule-based renderer
+  (see :ref:`vector_style_menu` for more information).
+* you can also set the :guilabel:`WMS getLegendGraphic Resolution`
 
 .. index:: Map tools
 .. _maptools_options:
@@ -413,11 +430,13 @@ the possibility to remove your changes and reset to the predefined list.
 Colors Settings
 ---------------
 
-This menu allows you to add some custom color that you can find in each color dialog
-window of the renderers. You will see a set of predefined colors in the tab: you can
-delete or edit all of them. Moreover you can add the color you want and perform some copy
-and paste operations. Finally you can export the color set as a :file:`gpl` file or import
-them.
+This menu allows you to add some custom colors that you can later find in each
+:ref:`color selector dialog <color-selector>`, as standard colors.
+
+You will see a set of predefined colors in the tab: you can |signMinus| delete or
+edit (by doucle-clicking) any of them. Moreover you can add the color you want and
+perform some copy and paste operations. Finally you can export the color set as a
+:file:`gpl` file or import them.
 
 .. index:: Digitizing configuration
 .. _digitizing_options:
@@ -438,6 +457,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
   is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
   switch it off. GEOS geometry validation is much faster, but the disadvantage
   is that only the first geometry problem will be reported.
+* :guilabel:`Default Z value` to use when creating new 3D features.
 
 **Rubberband**
 
@@ -447,11 +467,16 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Snapping**
 
-* |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
-* Define :guilabel:`Default snap mode` |selectString| ('To vertex', 'To segment',
-  'To vertex and segment', 'Off')
+* |checkbox| :guilabel:`Enable snapping by default`
+* Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Vertex and segment',
+  'Segment')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
+* :guilabel:`Display main dialog as (restart required)`: set whether the
+  Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'.
+* :guilabel:`Snapping marker color`
+* |checkbox| :guilabel:`Show snapping tooltips`
+
 
 **Vertex markers**
 
@@ -473,8 +498,8 @@ from GEOS 3.3.
 
 .. _layout_options:
 
-Layout Settings
----------------
+Layouts Settings
+----------------
 
 **Composition defaults**
 
@@ -556,14 +581,17 @@ Network Settings
 
 **Cache settings**
 
-Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
+Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
+Also offers tools to :guilabel:`automatically clear the connection authentication
+cache on SSL errors (recommanded)`.
 
-* |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
-  and 'Password'.
-* Set the :guilabel:`Proxy type` |selectString| according to your needs.
+**Proxy for web access**
 
-  * :menuselection:`Default Proxy`: Proxy is determined based on the application
-    proxy set using
+* |checkbox| :guilabel:`Use proxy for web access`
+* Set the :guilabel:`Proxy type` |selectString| according to your needs and
+  define 'Host' and 'Port'. Available proxy types are:
+
+  * :menuselection:`Default Proxy`: Proxy is determined based on system's proxy
   * :menuselection:`Socks5Proxy`: Generic proxy for any kind of connection.
     Supports TCP, UDP, binding to a port (incoming connections) and authentication.
   * :menuselection:`HttpProxy`: Implemented using the "CONNECT" command, supports
@@ -573,12 +601,14 @@ Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
   * :menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is
     useful only in the context of FTP requests.
 
+Credentials of proxy are set using the :ref:`authentication widget <authentication>`.
+
 Excluding some URLs can be added to the text box below the proxy settings (see
 Figure_Network_Tab_).
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
-http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
+http://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 
 .. tip:: **Using Proxies**
 
