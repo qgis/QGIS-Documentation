@@ -387,8 +387,7 @@ Icon                            Substitution                        Icon        
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |delimitedText|                 ``|delimitedText|``                 \                               \
 |gdalScript|                    ``|gdalScript|``                    |dxf2shpConverter|              ``|dxf2shpConverter|``
-|spatialQuery|                  ``|spatialQuery|``                  |selectSubsetLayer|             ``|selectSubsetLayer|``
-|selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``
+|metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
 |topologychecker|               ``|topologychecker|``               |oracleRaster|                  ``|oracleRaster|``
 ==============================  ==================================  ==============================  ==================================

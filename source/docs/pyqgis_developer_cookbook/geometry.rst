@@ -63,7 +63,7 @@ There are several options for creating a geometry:
     >>> g = QgsGeometry()
     >>> wkb = bytes.fromhex("010100000000000000000045400000000000001440")
     >>> g.fromWkb(wkb)
-    >>> g.exportToWkt()
+    >>> g.asWkt()
     'Point (42 5)'
 
 

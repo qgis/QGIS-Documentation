@@ -51,11 +51,21 @@ The tabs where you can customize your options are described below.
 General Settings
 ----------------
 
+.. index:: Overwrite language
+.. _locale_options:
+
+**Locale Settings**
+
+* Check |checkbox| :guilabel:`Override system locale` if you want to use a language
+  different from your system's and pick the replacement in :guilabel:`Locale to use
+  instead` combobox.
+* Information about active system locale are provided.
+
 **Application**
 
 * Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
   between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks'.
-* Define the :guilabel:`Icon theme` |selectString|. It can be 'default' or 'Night Mapping'.
+* Define the :guilabel:`UI theme` |selectString|. It can be 'default' or 'Night Mapping'.
 * Define the :guilabel:`Icon size` |selectString|.
 * Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be
   |radioButtonOn| :guilabel:`Qt default` or a user-defined one.
@@ -137,6 +147,49 @@ source code.
    :align: center
 
    System environment variables in QGIS
+
+.. index:: CRS, Datum transformation, On-the-fly reprojection
+.. _crs_options:
+
+CRS Settings
+------------
+
+**Default CRS for new projects**
+
+* |radioButtonOff| :guilabel:`Don't enable 'on the fly' reprojection`
+* |radioButtonOn| :guilabel:`Automatically enable 'on the fly' reprojection if
+  layers have different CRS`
+* |radioButtonOff| :guilabel:`Enable 'on the fly' reprojection by default`
+* Select a CRS and :guilabel:`Always start new projects with this CRS`
+
+**CRS for new layers**
+
+This area allows you to define the action to take when a new layer is created,
+or when a layer without a CRS is loaded.
+
+* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOff| :guilabel:`Use project CRS`
+* |radioButtonOff| :guilabel:`Use default CRS`
+
+**Default datum transformations**
+
+* |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
+* With the 'on-the-fly' CRS transformation enabled and the above option checked,
+  adding layers of different CRS opens the :guilabel:`Select datum transformations`
+  dialog. This offers you to select the most appropriate transformation settings.
+  Validating this dialog with the 'Remember selection' option checked populates
+  the table under :menuselection:`CRS --> Default datum transformations` with
+  information about 'Source CRS' and 'Destination CRS' as well as 'Source datum
+  transform' and 'Destination datum transform'. From now, QGIS automatically
+  uses the selected datum transformation for further transformation between
+  these two CRSs until you |signMinus| remove it from the list.
+
+  You can use the |signPlus| button to add a datum transformation if you know
+  its parameters (source and destination ellipsoids and the numbers from the
+  transformation table). You then need to manually enter each setting.
+
+.. note:: For more information on how QGIS handles layers projection, please
+  read the dedicated section at :ref:`label_projections`.
 
 .. _datasources_options:
 
@@ -286,18 +339,6 @@ Rendering Settings
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
-.. index:: Colors
-.. _colors_options:
-
-Colors Settings
----------------
-
-This menu allows you to add some custom color that you can find in each color dialog
-window of the renderers. You will see a set of predefined colors in the tab: you can
-delete or edit all of them. Moreover you can add the color you want and perform some copy
-and paste operations. Finally you can export the color set as a :file:`gpl` file or import
-them.
-
 .. _canvas_legend_options:
 
 Canvas and Legend Settings
@@ -366,32 +407,17 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
-.. _composer_options:
+.. index:: Colors
+.. _colors_options:
 
-Composer Settings
------------------
+Colors Settings
+---------------
 
-**Composition defaults**
-
-You can define the :guilabel:`Default font` used within the :ref:`print composer
-<label_printcomposer>`.
-
-**Grid appearance**
-
-* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
-* Define the :guilabel:`Grid color`
-
-**Grid and guide defaults**
-
-* Define the :guilabel:`Grid spacing` |selectNumber|
-* Define the :guilabel:`Grid offset` |selectNumber| for x and y
-* Define the :guilabel:`Snap tolerance` |selectNumber|
-
-
-**Composer Paths**
-
-* Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
-  with custom composer templates to use while creating new one.
+This menu allows you to add some custom color that you can find in each color dialog
+window of the renderers. You will see a set of predefined colors in the tab: you can
+delete or edit all of them. Moreover you can add the color you want and perform some copy
+and paste operations. Finally you can export the color set as a :file:`gpl` file or import
+them.
 
 .. index:: Digitizing configuration
 .. _digitizing_options:
@@ -417,7 +443,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 * Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
   and :guilabel:`Fill color`
-* :guilabel:`Don't update rubberband during node editing`
+* :guilabel:`Don't update rubberband during vertex editing`
 
 **Snapping**
 
@@ -445,6 +471,33 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
+.. _layout_options:
+
+Layout Settings
+---------------
+
+**Composition defaults**
+
+You can define the :guilabel:`Default font` used within the :ref:`print composer
+<label_printcomposer>`.
+
+**Grid appearance**
+
+* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
+* Define the :guilabel:`Grid color`
+
+**Grid and guide defaults**
+
+* Define the :guilabel:`Grid spacing` |selectNumber|
+* Define the :guilabel:`Grid offset` |selectNumber| for x and y
+* Define the :guilabel:`Snap tolerance` |selectNumber|
+
+
+**Composer Paths**
+
+* Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
+  with custom composer templates to use while creating new one.
+
 .. _gdal_options:
 
 GDAL Settings
@@ -455,57 +508,21 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
-.. index:: CRS, Datum transformation, On-the-fly reprojection
-.. _crs_options:
+.. index:: Variables
 
-CRS Settings
-------------
+Variables Settings
+------------------
 
-**Default CRS for new projects**
+The :guilabel:`Variables` tab lists all the variables available at the
+global-level.
 
-* |radioButtonOff| :guilabel:`Don't enable 'on the fly' reprojection`
-* |radioButtonOn| :guilabel:`Automatically enable 'on the fly' reprojection if
-  layers have different CRS`
-* |radioButtonOff| :guilabel:`Enable 'on the fly' reprojection by default`
-* Select a CRS and :guilabel:`Always start new projects with this CRS`
+It also allows the user to manage global-level variables. Click the |signPlus|
+button to add a new custom global-level variable. Likewise, select a custom
+global-level variable from the list and click the |signMinus| button to remove
+it.
 
-**CRS for new layers**
-
-This area allows you to define the action to take when a new layer is created,
-or when a layer without a CRS is loaded.
-
-* |radioButtonOn| :guilabel:`Prompt for CRS`
-* |radioButtonOff| :guilabel:`Use project CRS`
-* |radioButtonOff| :guilabel:`Use default CRS`
-
-**Default datum transformations**
-
-* |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
-* With the 'on-the-fly' CRS transformation enabled and the above option checked,
-  adding layers of different CRS opens the :guilabel:`Select datum transformations`
-  dialog. This offers you to select the most appropriate transformation settings.
-  Validating this dialog with the 'Remember selection' option checked populates
-  the table under :menuselection:`CRS --> Default datum transformations` with
-  information about 'Source CRS' and 'Destination CRS' as well as 'Source datum
-  transform' and 'Destination datum transform'. From now, QGIS automatically
-  uses the selected datum transformation for further transformation between
-  these two CRSs until you |signMinus| remove it from the list.
-
-  You can use the |signPlus| button to add a datum transformation if you know
-  its parameters (source and destination ellipsoids and the numbers from the
-  transformation table). You then need to manually enter each setting.
-
-.. note:: For more information on how QGIS handles layers projection, please
-  read the dedicated section at :ref:`label_projections`.
-
-.. index:: Overwrite language
-.. _locale_options:
-
-Locale Settings
----------------
-
-* |checkbox| :guilabel:`Override system locale` and :guilabel:`Locale to use instead`
-* Information about active system locale
+More information about variables in the :ref:`general_tools_variables`
+section.
 
 Authentication Settings
 -----------------------
@@ -568,34 +585,6 @@ http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
 
-.. index:: Variables
-
-Variables Settings
-------------------
-
-The :guilabel:`Variables` tab lists all the variables available at the
-global-level.
-
-It also allows the user to manage global-level variables. Click the |signPlus|
-button to add a new custom global-level variable. Likewise, select a custom
-global-level variable from the list and click the |signMinus| button to remove
-it.
-
-More information about variables in the :ref:`general_tools_variables`
-section.
-
-Processing
-----------
-
-The |processing| :guilabel:`Processing` tab provides you with general settings
-of tools and data providers that are used in the QGIS Processing framework.
-More information at :ref:`label_processing`.
-
-.. comment for writers:
- Actually, there seems to not be a real section describing the Processing options
- dialog. So the link above should be redirected if ever such a section is
- created, preferably in Processing chapter.
-
 .. _optionsadvanced:
 
 Advanced Settings
@@ -619,6 +608,18 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
+Processing
+----------
+
+The |processing| :guilabel:`Processing` tab provides you with general settings
+of tools and data providers that are used in the QGIS Processing framework.
+More information at :ref:`label_processing`.
+
+.. comment for writers:
+ Actually, there seems to not be a real section describing the Processing options
+ dialog. So the link above should be redirected if ever such a section is
+ created, preferably in Processing chapter.
+
 
 .. index:: Project properties
    single: Project; Properties
@@ -630,11 +631,9 @@ Project Properties
 ==================
 
 In the properties window for the project under :menuselection:`Project -->
-Project Properties` (or |kde| :menuselection:`Settings --> Project Properties`),
-you can set project-specific options.
-
-The project-specific options overwrite their equivalent in the options
-described above.
+Project Properties`, you can set project-specific options.
+The project-specific options overwrite their equivalent in the :guilabel:`Options`
+dialog described above.
 
 * In the :guilabel:`General` tab, the **general settings** let you:
 
@@ -683,6 +682,15 @@ described above.
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS. For more information
   on projection's handling in QGIS, please read :ref:`label_projections` section.
+
+* The :guilabel:`Default Styles` tab lets you control how new layers will be
+  drawn when they do not have an existing :file:`.qml` style defined. You can
+  also set the default transparency level for new layers and whether symbols
+  should have random colors assigned to them.
+  There is also an additional section where you can define specific colors for the
+  running project. You can find the added colors in the drop down menu of the color dialog
+  window present in each renderer.
+
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
@@ -691,35 +699,7 @@ described above.
   it can not be edited by the user, regardless of the data provider's
   capabilities. Although this is a weak protection, it remains a quick and handy
   configuration to avoid end-users modifying data when working with file-based layers.
-* The :guilabel:`Default Styles` tab lets you control how new layers will be
-  drawn when they do not have an existing :file:`.qml` style defined. You can
-  also set the default transparency level for new layers and whether symbols
-  should have random colors assigned to them.
-  There is also an additional section where you can define specific colors for the
-  running project. You can find the added colors in the drop down menu of the color dialog
-  window present in each renderer.
-* The tab :guilabel:`OWS Server` allows you to configure your project in order
-  to publish it online. Here you can define information about the QGIS
-  Server WMS and WFS capabilities, extent and CRS restrictions. More information
-  available in section :ref:`Creatingwmsfromproject` and subsequent.
-* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
-  only three macros are available: ``openProject()``, ``saveProject()`` and
-  ``closeProject()``.
 
-.. _figure_macro_tab:
-
-.. figure:: /static/user_manual/introduction/macro.png
-   :align: center
-
-   Macro settings in QGIS
-
-
-* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
-  are defined in the project properties dialog. Once relations exist for a layer,
-  a new user interface element in the form view (e.g. when identifying a feature
-  and opening its form) will list the related entities. This provides a powerful
-  way to express e.g. the inspection history on a length of pipeline or road segment.
-  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
 * In the :guilabel:`Data Sources` tab, you can:
 
   * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
@@ -737,6 +717,13 @@ described above.
     Note that you can (de)activate this option only if no layer is being edited
     in the project.
 
+* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
+  are defined in the project properties dialog. Once relations exist for a layer,
+  a new user interface element in the form view (e.g. when identifying a feature
+  and opening its form) will list the related entities. This provides a powerful
+  way to express e.g. the inspection history on a length of pipeline or road segment.
+  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+
 * The :guilabel:`Variables` tab lists all the variables available at
   the project's level (which includes all global variables). Besides, it
   also allows the user to manage project-level variables. Click the |signPlus|
@@ -745,6 +732,22 @@ described above.
   remove it.
   More information on variables usage in the General Tools
   :ref:`general_tools_variables` section.
+
+* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
+  only three macros are available: ``openProject()``, ``saveProject()`` and
+  ``closeProject()``.
+
+.. _figure_macro_tab:
+
+.. figure:: /static/user_manual/introduction/macro.png
+   :align: center
+
+   Macro settings in QGIS
+
+* The tab :guilabel:`QGIS Server` allows you to configure your project in order
+  to publish it online. Here you can define information about the QGIS
+  Server WMS and WFS capabilities, extent and CRS restrictions. More information
+  available in section :ref:`Creatingwmsfromproject` and subsequent.
 
 .. index:: Customization
 .. _sec_customization:

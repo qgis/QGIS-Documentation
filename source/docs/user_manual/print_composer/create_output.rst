@@ -46,6 +46,8 @@ possible to define the resolution (print quality) and paper size:
 * The |saveAsPDF| :sup:`Export as PDF` icon saves the defined Print Composer
   canvas directly as a PDF.
 
+.. _export_layout_image:
+
 Export as Image
 ===============
 
@@ -99,6 +101,8 @@ with the exported image.
    Exporting large rasters can sometimes fail, even if there seems to be
    enough memory. This is a problem with the underlying Qt management of rasters.
 
+.. _export_layout_svg:
+
 Export as SVG
 =============
 
@@ -123,6 +127,8 @@ The SVG export options dialog also allows to:
    Currently, the SVG output is very basic. This is not a QGIS problem, but a
    problem with the underlying Qt library. This will hopefully be sorted out
    in future versions.
+   
+.. _export_layout_pdf:
 
 Export as PDF
 =============

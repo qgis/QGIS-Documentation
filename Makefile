@@ -49,11 +49,11 @@ help:
 
 clean:
 	rm -rf $(SOURCEDIR)/static
+	rm -rf $(BUILDDIR)/*
 
 springclean: clean
 	# something in i18n/pot dir creates havoc when using gettext: remove it
 	rm -rf i18n/pot
-	rm -rf $(BUILDDIR)/*
 	# all .mo files
 	find i18n/*/LC_MESSAGES/ -type f -name '*.mo' -delete
 	# rm -rf i18n/*/LC_MESSAGES/docs/*/
