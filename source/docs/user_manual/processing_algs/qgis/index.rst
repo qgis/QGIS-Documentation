@@ -19,6 +19,7 @@ algorithms.
      cartography
      database
      filetools
+     graphics
      interpolation
      layertools
      modelertools
