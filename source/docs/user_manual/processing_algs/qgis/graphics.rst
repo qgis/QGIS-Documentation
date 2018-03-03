@@ -35,7 +35,7 @@ Output
 ......
 
 ``Bar plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -71,7 +71,7 @@ Output
 ......
 
 ``Box plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -98,7 +98,7 @@ Output
 ......
 
 ``Plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -108,8 +108,8 @@ Polar plot
 ----------
 Generates a polar plot based on the value of an input vector layer.
 
-Two fields must be entered as parameters: one that define the category each feature
-two (to group features) and another one with the variable to plot (this has to be
+Two fields must be entered as parameters: one that defines the category each feature
+(to group features) and another one with the variable to plot (this has to be
 a numeric one).
 
 Parameters
@@ -128,7 +128,7 @@ Output
 ......
 
 ``Polar plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -156,7 +156,7 @@ Output
 ......
 
 ``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -186,7 +186,7 @@ Output
 ......
 
 ``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -213,7 +213,7 @@ Output
 ......
 
 ``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
 
 
 
@@ -243,4 +243,4 @@ Output
 ......
 
 ``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing -> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
