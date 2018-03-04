@@ -76,8 +76,6 @@ General Settings
   if a newer version is released
 * |checkbox| :guilabel:`QGIS-styled group boxes`
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`)
-* |checkbox| :guilabel:`Use live-updating color chooser dialogs` (see :ref:`color-selector`)
-* |checkbox| :guilabel:`Canvas rotation support (restart required)`
 
 **Project files**
 
