@@ -205,7 +205,7 @@ Icon                     Substitution                 Icon                     S
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
-|svgAnnotation|          ``|svgAnnotation|``          \                        \
+|svgAnnotation|          ``|svgAnnotation|``          |autoPlacement|          ``|autoPlacement|``
 =======================  ===========================  =======================  ===========================
 
 Help

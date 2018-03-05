@@ -1309,6 +1309,45 @@ by minimising the labels placement:
   placing labels within these features, and it looks much better to avoid
   placing them over the boundaries between features.
 
+.. index:: Labels; Automated placement
+.. _automated_placement:
+
+Setting the automated placement engine
+......................................
+
+In the top right corner of the :guilabel:`Labels` tab, you can use the
+|autoPlacement| :sup:`Automated placement settings (applies to all layers)` to
+configure a global and automated behavior of the labels. Clicking the
+|autoPlacement| button provides you with the following options:
+
+* The :guilabel:`Search method` combobox provides you with different placement methods
+  for finding good placement solutions for point, line and polygon labeling.
+* The :guilabel:`Number of candidates` controls set how many label placement
+  candidates should be generated for each feature type. The more candidates generated,
+  the better the labeling will be - but at a cost of rendering speed. Smaller number
+  of candidates results in less labels placed but faster redraws.
+* |checkbox| :guilabel:`Draw text as outlines`: controls whether text labels are
+  drawn (and exported) as either proper text objects OR as paths only. If they
+  are exported as text objects then they can be edited in external applications
+  (e.g. Inkscape) as normal text. BUT the side effect is that the rendering
+  quality is decreased, AND there's issues with rendering when certain text settings
+  like buffers are in place. That's why drawing as outlines is recommended. Note
+  that when :ref:`exporting a layout to svg <export_layout_svg>` there's actually
+  an override for this setting - so you can leave the project rendering as outlines
+  but for a :file:`.svg` export export the labels as text.
+* |checkbox| :guilabel:`Show partial labels`: controls whether labels which fall partially
+  outside of the map extent should be rendered. If checked, these labels will be shown
+  (when there's no way to place them fully within the visible area). If unchecked then
+  partial visible labels will be skipped.
+* |checkbox| :guilabel:`show all labels for all layers (i.e. including colliding objects)`.
+  Note that this option can be also set per layer (see :ref:`labels_rendering`)
+* |checkbox| :guilabel:`show candidates (for debugging)`: controls whether boxes
+  should be drawn on the map showing all the candidates generated for label placement.
+  Like the label says, it's useful only for debugging and testing the effect different
+  labeling settings have. This could be handy for a better manual placement with
+  tools from the :ref:`label toolbar <label_toolbar>`.
+
+
 .. _rule_based_labeling:
 
 Rule-based labeling
