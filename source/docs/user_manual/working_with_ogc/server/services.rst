@@ -17,7 +17,7 @@ QGIS Server is able to serve data according to standard protocols as described
 by the **Open Geospatial Consortium (OGC)**:
 
 - WMS 1.1.0 and 1.3.0
-- WFS 1.0.0
+- WFS 1.0.0 and 1.1.0
 - WCS 1.1.1
 
 Extra vendor parameters and requests are supported in addition to the
@@ -758,7 +758,7 @@ GetFeature
 ----------
 
 In the WFS GetFeature request, QGIS Server accepts two extra parameters in
-addition to the standard parameters according to the OGC WFS 1.0.0
+addition to the standard parameters according to the OGC WFS 1.0.0 and 1.1.0
 specification:
 
 * **GeometryName** parameter: this parameter can be used to get the *extent*
