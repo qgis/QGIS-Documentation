@@ -35,12 +35,14 @@ There are several options for creating a geometry:
 
   .. code-block:: python
 
-    gPnt = QgsGeometry.fromPoint(QgsPoint(1,1))
+    gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygon([[QgsPoint(1, 1), QgsPoint(2, 2),
-                                        QgsPoint(2, 1)]])
+    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), QgsPointXY(2, 2),
+                                        QgsPointXY(2, 1)]])
 
-  Coordinates are given using :class:`QgsPoint` class.
+  Coordinates are given using :class:`QgsPoint` class or :class:`QgsPointXY`
+  class. The difference between these classes is that :class:`QgsPoint`
+  supports M and Z dimensions.
 
   Polyline (Linestring) is represented by a list of points. Polygon is
   represented by a list of linear rings (i.e. closed linestrings). First ring
