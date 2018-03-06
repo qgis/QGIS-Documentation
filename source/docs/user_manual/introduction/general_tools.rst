@@ -84,8 +84,8 @@ At the top of the Layers panel, a toolbar allows you to:
    Layer Toolbar in Layers Panel
 
 .. note::
-   Tools to manage the layers panel are also available to layout the map
-   and legend items of the print composer
+   Tools to manage the layers panel are also available for map
+   and legend items of the print layout
 
 .. index:: Map themes
 .. _map_themes:
@@ -95,7 +95,7 @@ Configuring map themes
 
 The button |showMapTheme| allows you to configure **Map Themes** in the legend.
 These themes are helpful to quickly switch between different preconfigured layer 
-combinations and can also be used in Print Composer. 
+combinations and can also be used in print layout. 
 To create a map theme, activate the layers you want to include and configure 
 the desired layer styles. Then press the |showMapTheme| button and choose 
 :menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
@@ -106,8 +106,8 @@ The :menuselection:`Replace Theme -->` option allows you to overwrite an existin
 with the currently enabled layers and their styles while the 
 :menuselection:`Remove Current Theme` button deletes the active theme.
 
-All configured themes are also accessible in the Print Composer. This allows you
-to create a map layout based on specific themes (see :ref:`composer_main_properties`).
+All configured themes are also accessible in the print layout. This allows you
+to create a map layout based on specific themes (see :ref:`layout_main_properties`).
 
 Overview of the context menu of the Layers panel
 ................................................
@@ -807,7 +807,7 @@ Blending Modes
 
 QGIS offers different options for special rendering effects with these tools that
 you may previously only know from graphics programs. Blending modes can be applied
-on layers, on features but also on print composer items:
+on layers, on features but also on print layout items:
 
 * **Normal**: This is the standard blend mode, which uses the alpha channel of the top
   pixel to blend with the pixel beneath it. The colors aren't mixed.
@@ -1165,7 +1165,7 @@ Data defined override setup
 ===========================
 
 Beside many options in the vector layer properties dialog or settings in the print
-composer, you can find a |dataDefined| :sup:`Data defined override` icon.
+layout, you can find a |dataDefined| :sup:`Data defined override` icon.
 Thanks to :ref:`expressions <vector_expressions>` based on layer attributes or item
 settings, prebuild or custom functions and :ref:`variables <general_tools_variables>`,
 this tool allows you to set dynamic value for the concerned parameter. When enabled,
@@ -1190,7 +1190,7 @@ Parameters that can be used with data-defined tools are:
 
 * Style and symbols parameters
 * Labels parameters
-* Composer parameters
+* Layout parameters
 
 .. tip:: **Use right-click to (de)activate the data overriding**
 
@@ -1673,12 +1673,12 @@ Variables
 In QGIS, you can use variables to store useful recurrent values (e.g. the
 project's title, or the user's full name) that can be used in expressions.
 Variables can be defined at the application's global level, project level,
-layer level, composition level, and composer's item level. Just like CSS
+layer level, composition level, and layout item's level. Just like CSS
 cascading rules, variables can be overwritten - e.g., a project level
 variable will overwrite any application's global level variables set with
 the same name. You can use these variables to build text strings or other
 custom expressions using the @ character before the variable name. For
-example in composer creating a label with this content::
+example in print layout creating a label with this content::
 
   This map was made using QGIS [% @qgis_version %]. The project file for this
   map is: [% @project_path %]
@@ -1698,9 +1698,9 @@ manage:
 * **vector layer's variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
 * **composition's variables** from the :guilabel:`Composition` panel in the
-  Print composer (see :ref:`composer_composition_tab`);
-* and **composer item's variables** from the :guilabel:`Item properties`
-  panel in the Print composer (see :ref:`composer_item_options`).
+  Print layout (see :ref:`layout_composition_tab`);
+* and **layout item's variables** from the :guilabel:`Item properties`
+  panel in the Print layout (see :ref:`layout_item_options`).
 
 To differentiate from editable variables, read-only variable's names and
 values are emphasized in italic. On the other hand, higher level

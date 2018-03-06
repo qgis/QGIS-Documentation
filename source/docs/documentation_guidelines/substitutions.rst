@@ -285,14 +285,14 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 
 
-Print Composer
-==============
+Print Layout
+============
 
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
-|newComposer|            ``|newComposer|``            |composerManager|        ``|composerManager|``
-|duplicateComposer|      ``|duplicateComposer|``      \                        \
+|newLayout|              ``|newLayout|``              |layoutManager|          ``|layoutManager|``
+|duplicateLayout|        ``|duplicateLayout|``        \                        \
 |atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
@@ -436,6 +436,7 @@ Icon                            Substitution                        Icon        
 |evisConnect|                   ``|evisConnect|``                   |evisFile|                      ``|evisFile|``
 ==============================  ==================================  ==============================  ==================================
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -570,8 +571,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
-.. |composerManager| image:: /static/common/mActionComposerManager.png
-   :width: 1.5em
 .. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
@@ -632,7 +631,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |duplicateComposer| image:: /static/common/mActionDuplicateComposer.png
+.. |duplicateLayout| image:: /static/common/mActionDuplicateComposer.png
    :width: 1.5em
 .. |dxf2shpConverter| image:: /static/common/dxf2shp_converter.png
    :width: 1.5em
@@ -795,6 +794,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |layerExtent| image:: /static/common/layer_extent.png
    :width: 1.5em
+.. |layoutManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.5em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
@@ -851,9 +852,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
-.. |newComposer| image:: /static/common/mActionNewComposer.png
-   :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newLayout| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em

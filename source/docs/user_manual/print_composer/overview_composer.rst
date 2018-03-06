@@ -2,18 +2,18 @@
 
    |updatedisclaimer|
 
-.. _overview_composer:
+.. _overview_layout:
 
-********************************
- Overview of the Print Composer
-********************************
+******************************
+ Overview of the Print Layout
+******************************
 
 .. only:: html
 
    .. contents::
       :local:
 
-The Print Composer provides growing layout and printing capabilities. It allows
+The print layout provides growing layout and printing capabilities. It allows
 you to add elements such as the QGIS map canvas, text labels, images, legends,
 scale bars, basic shapes, arrows, attribute tables and HTML frames. You can size,
 group, align, position and rotate each element and adjust their properties to
@@ -25,17 +25,17 @@ Finally, generating several maps based on a template can be done through the
 atlas generator.
 
 
-.. index:: Composer template, Map template
+.. index:: Layout template, Map template
 
 Sample Session
 ==============
 
-Before you start to work with the Print Composer, you need to load some raster
+Before you start to work with the print layout, you need to load some raster
 or vector layers in the QGIS map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
-click the |newComposer| :sup:`New Print Composer` icon in the toolbar or
-choose :menuselection:`File --> New Print Composer`. You will be prompted to
-choose a title for the new Composer.
+click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
+choose :menuselection:`File --> New Print Layout`. You will be prompted to
+choose a title for the new layout.
 
 
 To demonstrate how to create a map please follow the next instructions.
@@ -44,7 +44,7 @@ To demonstrate how to create a map please follow the next instructions.
    and draw a rectangle on the canvas holding down the left mouse button.
    Inside the drawn rectangle the QGIS map view to the canvas.
 #. Select the |scaleBar| :sup:`Add new scalebar` toolbar button and click
-   with the left mouse button on the Print Composer canvas. A scalebar will be
+   with the left mouse button on the print layout canvas. A scalebar will be
    added to the canvas.
 #. Select the |addLegend| :sup:`Add new legend` toolbar button and draw a
    rectangle on the canvas holding down the left mouse button.
@@ -59,89 +59,89 @@ To demonstrate how to create a map please follow the next instructions.
    the setting for the orientation. Change the value of the setting
    :guilabel:`Map orientation` to '15.00\ |degrees| '. You should see the
    orientation of the map item change.
-#. Now, you can print or export your print composition to image formats, PDF or
-   to SVG with the export tools in Composer menu.
-#. Finally, you can save your print composition within the project file with the
+#. Now, you can print or export your print layout to image formats, PDF or
+   to SVG with the export tools in :menuselection:`Layout` menu.
+#. Finally, you can save your print layout within the project file with the
    |fileSave| :sup:`Save Project` button.
 
 
-You can add multiple elements to the Composer. It is also possible to have more
-than one map view or legend or scale bar in the Print Composer canvas, on one or
+You can add multiple elements to the print layout. It is also possible to have more
+than one map view or legend or scale bar in the print layout canvas, on one or
 several pages. Each element has its own properties and, in the case of the map,
-its own extent. If you want to remove any elements from the Composer canvas you
+its own extent. If you want to remove any elements from the layout canvas you
 can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 
-.. index:: Composer manager
-.. _composer_manager:
+.. index:: Layout manager
+.. _layout_manager:
 
-The Composer Manager
+The Layout Manager
 ====================
 
-The Composer Manager is the main window to manage print composers in the project.
-It helps you add new print composer, duplicate an existing one, rename or delete
-it. To open the composer manager dialog, click on the |composerManager|
-:sup:`Composer Manager` button in the toolbar or choose :menuselection:`Composer
---> Composer Manager`. It can also be reached from the main window of QGIS with
-:menuselection:`Project --> Composer Manager`.
+The :guilabel:`Layout Manager` is the main window to manage print layouts in the project.
+It helps you add new print layout, duplicate an existing one, rename or delete
+it. To open the layout manager dialog, click on the |layoutManager|
+:sup:`Layout Manager` button in the toolbar or choose :menuselection:`Layout
+--> Layout Manager`. It can also be reached from the main window of QGIS with
+:menuselection:`Project --> Layout Manager...`.
 
 
-.. _figure_composer_manager:
+.. _figure_layout_manager:
 
 .. figure:: img/print_composer_manager.png
    :align: center
 
-   The Print Composer Manager
+   The Print Layout Manager
 
 
-The composer manager lists in its upper part all the available print composers
+The layout manager lists in its upper part all the available print layouts
 in the project. The bottom part shows tools that help to:
 
-* show the selected composer(s): you can open multiple print composers in
+* show the selected print layout(s): you can open multiple print layouts in
   one-click
-* duplicate the selected composer (available only if one print composer is
-  selected): it creates a new composer using the selected composer as template.
-  You'll be prompted to choose a new title for the new composer
-* rename the composer (also available only if one print composer is selected):
-  You'll be prompted to choose a new title for the composer. Note that you can
-  also rename the composer by double-clicking on its title in the upper part
-* remove the composer: the selected print composer(s) will be deleted from the
+* duplicate the selected print layout (available only if one print layout is
+  selected): it creates a new layout using the selected one as template.
+  You'll be prompted to choose a new title for the new layout
+* rename the layout (available only if one print layout is selected):
+  You'll be prompted to choose a new title for the layout. Note that you can
+  also rename the print layout by double-clicking on its title in the upper part
+* remove the layout: the selected print layout(s) will be deleted from the
   project.
 
-With the Composer Manager, it's also possible to create new print composers as
-an empty composer or from a saved template. By default, QGIS will look for
-templates in user directory (:file:`~/.qgis2/composer_templates`) or
+With the layout manager, it's also possible to create new print layouts as
+an empty layout or from a saved template. By default, QGIS will look for
+templates in user profile folder (:file:`~/.qgis2/composer_templates`) or
 application's one (:file:`ApplicationFolder/composer_templates`).
 QGIS will retrieve all the available templates and propose them in the combobox.
-The selected template will be used to create a new composer when clicking
+The selected template will be used to create a new print layout when clicking
 :guilabel:`Add` button.
-You can also save composer templates in another folder.
+You can also save layout templates in another folder.
 Choosing *specific* in the template list offers the ability to select such
-template and use it to create a new print composer.
+template and use it to create a new print layout.
 
 .. _print_composer_menus:
 
-Menus, tools and panels of the print composer
+Menus, tools and panels of the print layout
 =============================================
 
-Opening the Print Composer provides you with a blank canvas that represents the
+Opening the print layout provides you with a blank canvas that represents the
 paper surface when using the print option. Initially you find buttons on the
-left beside the canvas to add map composer items: the current QGIS map canvas,
+left beside the canvas to add print layout items: the current QGIS map canvas,
 text labels, images, legends, scale bars, basic shapes, arrows, attribute tables
-and HTML frames. In this toolbar you also find toolbar buttons to navigate,
-zoom in on an area and pan the view on the composer and toolbar buttons to
-select a map composer item and to move the contents of the map item.
+and HTML frames. In this toolbar you also find buttons to navigate,
+zoom in on an area and pan the view on the layout a well as buttons to
+select any layout item and to move the contents of the map item.
 
 
-Figure_composer_overview_ shows the initial view of the Print Composer before
+figure_layout_overview_ shows the initial view of the print layout before
 any elements are added.
 
-.. _Figure_composer_overview:
+.. _figure_layout_overview:
 
 .. figure:: img/print_composer_blank.png
    :align: center
 
-   Print Composer
+   Print Layout
 
 
 On the right beside the canvas you find two set of panels. The upper one holds
@@ -149,10 +149,10 @@ the panels :guilabel:`Items` and :guilabel:`Command History` and the lower holds
 the panels :guilabel:`Composition`, :guilabel:`Item properties`
 and :guilabel:`Atlas generation`.
 
-* The :guilabel:`Items` panel provides a list of all map composer items added to
+* The :guilabel:`Items` panel provides a list of all the print layout items added to
   the canvas.
 * The :guilabel:`Command history` panel displays a history of all changes applied
-  to the Print Composer layout. With a mouse click, it is possible to undo and
+  to the layout. With a mouse click, it is possible to undo and
   redo layout steps back and forth to a certain status.
 * The :guilabel:`Composition` panel allows you to set paper size, orientation, the
   page background, number of pages and print quality for the output file in dpi.
@@ -164,22 +164,22 @@ and :guilabel:`Atlas generation`.
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
   :guilabel:`Item Properties` panel and customize the settings for the selected
-  item (see :ref:`composer_items` for detailed information on each item
+  item (see :ref:`layout_items` for detailed information on each item
   settings).
 * The :guilabel:`Atlas generation` panel allows you to enable the generation of an
-  atlas for the current Composer and gives access to its parameters
+  atlas for the current layout and gives access to its parameters
   (see :ref:`atlas_generation` for detailed information on atlas
   generation usage).
 
 
-In the bottom part of the Print Composer window, you can find a status bar with
+In the bottom part of the print layout window, you can find a status bar with
 mouse position, current page number, a combo box to set the zoom level,
 the number of selected items if applicable and, in the case of atlas generation,
 the number of features.
 
-In the upper part of the Print composer window, you can find menus and other
-toolbars. All Print Composer tools are available in menus and as icons in a
-toolbar. See a list of tools in table_composer_tools_.
+In the upper part of the print layout window, you can find menus and other
+toolbars. All print layout tools are available in menus and as icons in a
+toolbar. See a list of tools in table_layout_tools_.
 
 The toolbars and the panels can be switched off and on using the right mouse
 button over any toolbar or through :menuselection:`View --> Toolbars` or
@@ -187,21 +187,21 @@ button over any toolbar or through :menuselection:`View --> Toolbars` or
 
 
 .. index::
-   single: Print composer; Tools
+   single: Print layout; Tools
 
-.. _composer_tools:
+.. _layout_tools:
 
 Tools
 -----
 
-.. _table_composer_tools:
+.. _table_layout_tools:
 
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | Icon                  | Purpose                               | Icon                | Purpose                                  |
 +=======================+=======================================+=====================+==========================================+
-| |fileSave|            | Save Project                          | |newComposer|       | New Composer                             |
+| |fileSave|            | Save Project                          | |newLayout|         | New Layout                               |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |duplicateComposer|   | Duplicate Composer                    | |composerManager|   | Composer Manager                         |
+| |duplicateLayout|     | Duplicate Layout                      | |layoutManager|     | Layout Manager                           |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | |fileOpen|            | Load from template                    | |fileSaveAs|        | Save as template                         |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
@@ -256,39 +256,39 @@ Tools
 | |saveMapAsImage|      | Export Atlas as Image                 |  |atlasSettings|    | Atlas Settings                           |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 
-Table Composer 1: Print Composer Tools
+Table Layout 1: Print Layout Tools
 
-Composer Menu
--------------
+Layout Menu
+-----------
 
-With the :menuselection:`Composer --> Save Project` action, you can save
-the project file directly from the print composer window.
-The :menuselection:`Composer` menu also provides actions to:
+With the :menuselection:`Layout --> Save Project` action, you can save
+the project file directly from the print layout window.
+The :menuselection:`Layout` menu also provides actions to:
 
-* Create a new and blank print composer with |newComposer| :sup:`New Composer...`
-* |duplicateComposer| :sup:`Duplicate Composer...` : Create a new print composer
+* Create a new and blank print layout with |newLayout| :guilabel:`New Layout...`
+* |duplicateLayout| :guilabel:`Duplicate Layout...` : Create a new print layout
   by duplicating the current one
-* Open the |composerManager| :sup:`Composer Manager...`
-* :guilabel:`Print Composers...` : Open an existing print composer
+* Open the |layoutManager| :guilabel:`Layout Manager...`
+* :menuselection:`Layouts -->` : Open an existing print layout
 
-Once the layout is designed, with |fileSaveAs| :sup:`Save as template`
-and |fileOpen| :sup:`Add items from template` icons, you can save
-the current state of a Print Composer session as a :file:`.qpt` template
+Once the layout is designed, with |fileSaveAs| :guilabel:`Save as template`
+and |fileOpen| :guilabel:`Add items from template` icons, you can save
+the current state of a print layout session as a :file:`.qpt` template
 and load its item again in another session.
 
-In the :menuselection:`Composer` menu, there are also powerful ways to share
+In the :menuselection:`Layout` menu, there are also powerful ways to share
 geographical information produced with QGIS that can be included in reports or
-published. These tools are |saveMapAsImage| :sup:`Export as Image...`,
-|saveAsPDF| :sup:`Export as PDF...`, |saveAsSVG| :sup:`Export as
-SVG...` and |filePrint| :sup:`Print...`.
+published. These tools are |saveMapAsImage| :guilabel:`Export as Image...`,
+|saveAsPDF| :guilabel:`Export as PDF...`, |saveAsSVG| :guilabel:`Export as
+SVG...` and |filePrint| :guilabel:`Print...`.
 
 Settings Menu
 -------------
 
-From :menuselection:`Settings --> Composer Options` you can set some options
-that will be used as default on any composer during your work.
+From :menuselection:`Settings --> Layout Options...` you can set some options
+that will be used as default on any layout during your work.
 
-* :guilabel:`Compositions defaults` let you specify the default font to use.
+* :guilabel:`Layout defaults` let you specify the default font to use.
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
   There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of
@@ -301,7 +301,7 @@ Edit Menu
 Copy/Cut and Paste Items
 ........................
 
-The print composer includes actions to use the common Copy/Cut/Paste functionality
+The print layout includes actions to use the common Copy/Cut/Paste functionality
 for the items in the layout. As usual first you need to select the items using
 one of the options seen above; at this point the actions can be found in the
 :menuselection:`Edit` menu.
@@ -322,7 +322,7 @@ View Menu
 Navigation Tools
 ................
 
-To navigate in the canvas layout, the Print Composer provides some general tools:
+To navigate in the canvas layout, the print layout provides some general tools:
 
 * |zoomIn| :sup:`Zoom In`
 * |zoomOut| :sup:`Zoom Out`
@@ -335,23 +335,23 @@ To navigate in the canvas layout, the Print Composer provides some general tools
   click in the rule (above or at the left side of the layout) and drag and drop
   to the desired location.
 * `Snap Guides`: allows user to snap items to the guides,
-* `Smart Guides`: uses other composer items as guides to dynamically snap to as
+* `Smart Guides`: uses other layout items as guides to dynamically snap to as
   user moves or reshapes an item.
 * `Clear Guides` to remove all current guides.
 * `Show Bounding box` around the items.
 * `Show Rules` around the layout.
-* `Show Pages` or set up pages to transparent. Often composer is used
+* `Show Pages` or set up pages to transparent. Often layout is used
   to create non-print layouts, e.g. for inclusion in presentations or other
   documents, and it's desirable to export the composition using a totally
   transparent background. It's sometimes referred to as "infinite canvas" in
   other editing packages.
-* `Toggle Full Screen` makes the composer window to full screen.
+* `Toggle Full Screen` makes the layout window to full screen.
 * `Hide Panels` hides/shows the right panel
 * `Panels` lists all panels available to hide/show them.
 * `Toolbars` same as above for toolbars.
 
 You can change the zoom level also using the mouse wheel or the combo box in
-the status bar. If you need to switch to pan mode while working in the Composer
+the status bar. If you need to switch to pan mode while working in the layout
 area, you can hold the :kbd:`Spacebar` or the mouse wheel.
 With :kbd:`Ctrl+Spacebar`, you can temporarily switch to Zoom In mode,
 and with :kbd:`Ctrl+Shift+Spacebar`, to Zoom Out mode.
@@ -370,7 +370,7 @@ To maximise the space available to interact with a composition you can use
    interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox|
    :guilabel:`Toggle full screen`.
 
-.. _composer_composition_tab:
+.. _layout_composition_tab:
 
 Composition Panel
 -----------------
@@ -383,7 +383,7 @@ current composition.
 .. figure:: img/composition_settings.png
    :align: center
 
-   Composition settings in the Print Composer
+   Composition Settings in the Print Layout
 
 General settings
 ................
@@ -395,7 +395,7 @@ Set the :guilabel:`Number of pages` to the desired value. You can also
 custom the :guilabel:`Page Background` with the color or the symbol you want.
 
 The :guilabel:`reference map` select the map item to be used as the
-composition's master map. The map composer will use this map in any
+composition's master map. The layout will use this map in any
 properties and variable calculating units or scale. This includes exporting
 the composition to georeferenced formats.
 
@@ -437,7 +437,7 @@ and contains information to georeference it easily.
 .. figure:: img/composition_export.png
    :align: center
 
-   Export Settings in the Print Composer
+   Export Settings in the Print Layout
 
 Grid and guides
 ...............
@@ -449,11 +449,11 @@ place some items. These marks can be:
   ensure that :guilabel:`Show Rulers` and :guilabel:`Show Guides` in :menuselection:`View`
   menu are checked. Then, click and drag from within the ruler to the paper sheet.
   A vertical or horizontal line is added to the paper and you can set its position
-  following the coordinates displayed at the left bottom of the composer dialog.
+  following the coordinates displayed at the left bottom of the print layout dialog.
 * or regular **Grid**.
 
 Whether grids or guides should be shown is set in :menuselection:`View` menu.
-There, you can also decide if they might be used to snap composer items. The
+There, you can also decide if they might be used to snap layout items. The
 :guilabel:`Grid and guides` section lets you customize grid settings like
 :guilabel:`Grid spacing`, :guilabel:`Grid offset` and :guilabel:`Snap tolerance`
 to your need. The tolerance is the maximum distance below which an item is snapped
@@ -464,11 +464,11 @@ to a grid or a guide.
 .. figure:: img/composition_guides.png
    :align: center
 
-   Snapping to grids in the Print Composer
+   Snapping to Grids in the Print Layout
 
-In the :menuselection:`Options --> Composer` menu in QGIS main canvas, you can
+In the :menuselection:`Options --> Layout` menu in QGIS main canvas, you can
 also set the spacing, offset and snap tolerance of the grid as much as its style
-and color. These options are applied by default to any new print composer.
+and color. These options are applied by default to any new print layout.
 
 
 Variables
@@ -490,7 +490,7 @@ More information on variables usage in the General Tools
 .. figure:: img/composition_variables.png
    :align: center
 
-   Variables editor in the Print Composer
+   Variables Editor in the Print Layout
 
 .. index:: Revert layout actions
 
@@ -504,28 +504,28 @@ This can be done with the revert and restore tools:
 * |redo| :sup:`Restore last change`
 
 This can also be done by mouse click within the :guilabel:`Command history`
-panel (see figure_composer_). The History panel lists the last actions done
-within the composer.
+panel (see figure_layout_). The History panel lists the last actions done
+within the print layout.
 Just select the point you want to revert to and once you do new action all
 the actions done after the selected one will be removed.
 
-.. _figure_composer:
+.. _figure_layout:
 
 .. figure:: img/command_hist.png
    :align: center
 
-   Command history in the Print Composer
+   Command History in the Print Layout
 
-.. _composer_items_tab:
+.. _layout_items_tab:
 
 Items Panel
 -----------
 
 The :guilabel:`Items` panel offers some options to manage selection and
 visibility of items.
-All the items added to the print composer canvas are shown in a list and
+All the items added to the print layout canvas are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
-selecting a row does select the corresponding item in the print composer canvas.
+selecting a row does select the corresponding item in the print layout canvas.
 This is thus a handy way to select an item placed behind another one.
 Note that a selected row is shown as bold.
 
@@ -535,7 +535,7 @@ For any selected item, you can :
 * |locked| lock or unlock its position,
 * order its Z position. You can move up and down each item in the list with a
   click and drag. The upper item in the list will be brought to the foreground
-  in the print composer canvas.
+  in the print layout canvas.
   By default, a newly created item is placed in the foreground.
 * change the name by double-clicking the text.
 
@@ -543,6 +543,7 @@ Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 panel and unchecking the tickbox or you can use the icons on the toolbar.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -590,13 +591,11 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |composerManager| image:: /static/common/mActionComposerManager.png
-   :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |duplicateComposer| image:: /static/common/mActionDuplicateComposer.png
+.. |duplicateLayout| image:: /static/common/mActionDuplicateComposer.png
    :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
@@ -612,6 +611,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
+.. |layoutManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
@@ -622,7 +623,7 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
-.. |newComposer| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em

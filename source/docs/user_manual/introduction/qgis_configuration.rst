@@ -478,8 +478,8 @@ Layout Settings
 
 **Composition defaults**
 
-You can define the :guilabel:`Default font` used within the :ref:`print composer
-<label_printcomposer>`.
+You can define the :guilabel:`Default font` used within the :ref:`print layout
+<label_printlayout>`.
 
 **Grid appearance**
 
@@ -493,10 +493,10 @@ You can define the :guilabel:`Default font` used within the :ref:`print composer
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
 
-**Composer Paths**
+**Layout Paths**
 
 * Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
-  with custom composer templates to use while creating new one.
+  with custom layout templates to use while creating new one.
 
 .. _gdal_options:
 

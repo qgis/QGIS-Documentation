@@ -2,7 +2,7 @@
 |MOD| Creating Maps
 *******************************************************************************
 
-In this module, you'll learn how to use the QGIS Map Composer to produce
+In this module, you'll learn how to use the QGIS print layout to produce
 quality maps with all the requisite map components.
 
 .. toctree::

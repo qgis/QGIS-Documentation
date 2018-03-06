@@ -408,9 +408,9 @@ The kinds of information saved in a project file include:
 * Layer properties, including symbolization and styles
 * Projection for the map view
 * Last viewed extent
-* Print Composers
-* Print Composer elements with settings
-* Print Composer atlas settings
+* Print layouts
+* Print layout elements with settings
+* Print layout atlas settings
 * Digitizing settings
 * Table Relations
 * Project Macros
@@ -452,7 +452,7 @@ automatically zip your current project.
 Output
 ======
 
-.. index:: Print composer, Quick print, World file
+.. index:: Print layout, Quick print, World file
    single: Output; Save as image
 
 There are several ways to generate output from your QGIS session. We have
@@ -467,9 +467,11 @@ Here is a sampling of other ways to produce output files:
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity.
-* Menu option :menuselection:`Project -->` |newComposer|
-  :menuselection:`New Print Composer...` opens a dialog where you can layout and
-  print the current map canvas (see section :ref:`label_printcomposer`).
+* Menu option :menuselection:`Project -->` |newLayout|
+  :menuselection:`New Print Layout` opens a dialog where you can layout and
+  print the current map canvas (see section :ref:`label_printlayout`).
+
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -491,7 +493,7 @@ Here is a sampling of other ways to produce output files:
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
-.. |newComposer| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em

@@ -5,7 +5,7 @@ The systematic sampling design is ready and the field teams have loaded the GPS 
 
 **The goal for this lesson:** Learn to use the Atlas tool in QGIS to generate detailed printable maps to assist in the field inventory work.
 
-|basic| |FA| Preparing the Map Composer
+|basic| |FA| Preparing the Print Layout
 -------------------------------------------------------------------------------
 
 Before we can automate the detailed maps of the forest area and our sampling plots, we need to create a map template with all the elements we consider useful for the field work. Of course the most important will be a properly styled but, as you have seen before, you will also need to add lots of other elements that complete the printed map.
@@ -18,28 +18,29 @@ Open the QGIS project from the previous lesson :kbd:`forest_inventory.qgs`. You 
 
 Save the project with a new name, :kbd:`map_creation.qgs`.
 
-To create a printable map, remember that you use the :guilabel:`Composer Manager`:
+To create a printable map, remember that you use the :guilabel:`Layout Manager`:
 
-* Open :menuselection:`Project --> Composer Manager...`.
-* In the :guilabel:`Composer manager` dialog.
-* Click the :guilabel:`Add` button and name your composer :kbd:`forest_map`.
+* Open :menuselection:`Project --> Layout Manager...`.
+* In the :guilabel:`Layout manager` dialog.
+* Click the :guilabel:`Add` button and name your print layout :kbd:`forest_map`.
 * Click :guilabel:`OK`.
 * Click the :guilabel:`Show` button.
 
 Set up the printer options so that your maps will suit your paper and margins, for an A4 paper:
 
-* Open menuselection:`Composer --> Page Setup`.
+* Open menuselection:`Layout --> Page Setup...`.
 * :guilabel:`Size` is :guilabel:`A4 (217 x 297 mm)`.
 * :guilabel:`Orientation` is :guilabel:`Landscape`.
-* :guilabel:`Margins (milimeters)` are all set to :kbd:`5`.
+* :guilabel:`Margins (millimeters)` are all set to :kbd:`5`.
 
-In the :guilabel:`Print Composer` window, go to the :guilabel:`Composition` tab (on the right panel) and make sure that these settings for :guilabel:`Paper and quality` are the same you defined for the printer:
+In the :guilabel:`Print Layout` window, go to the :guilabel:`Composition` tab (on the right panel) and make sure that these settings for :guilabel:`Paper and quality` are the same you defined for the printer:
 
 * :guilabel:`Size`: :kbd:`A4 (210x297mm)`.
 * :guilabel:`Orientation`: :kbd:`Landscape`.
 * :guilabel:`Quality`: :kbd:`300dpi`.
 
-Composing a map is easier if you make use of the canvas grid to position the different elements. Review the settings for the composer grid:
+Composing a map is easier if you make use of the canvas grid to position the
+different elements. Review the settings for the layout grid:
 
 * In the :guilabel:`Composition` tab expand the :guilabel:`Grid` region.
 * Check that :guilabel:`Spacing` is set to :kbd:`10 mm`.
@@ -50,9 +51,11 @@ You need to activate the use of the grid:
 * Open the :menuselection:`View` menu.
 * Check :guilabel:`Show grid`.
 * Check :guilabel:`Snap to grid`.
-* Notice that options for using :guilabel:`guides` are checked by default, which allows you to see red guiding lines when you are moving elements in the composer.
+* Notice that options for using :guilabel:`guides` are checked by default, which
+  allows you to see red guiding lines when you are moving elements in the layout.
 
-Now you can start to add elements to your map canvas. Add first a map element so you can review how it looks as you will be making changes in the layers symbology:
+Now you can start to add elements to your map canvas. Add first a map element so
+you can review how it looks as you will be making changes in the layers symbology:
 
 * Click on the :guilabel:`Add New Map` button: |addMap|.
 * Click and drag a box on the canvas so that the map occupies most of it.
@@ -67,7 +70,7 @@ Notice how the mouse cursor snaps to the canvas grid. Use this function when you
 |basic| |FA| Adding Background Map
 -------------------------------------------------------------------------------
 
-Leave the composer open but go back to the map. Lets add some background data and create some styling so that the map content is as clear as possible.
+Leave the layout open but go back to the map. Lets add some background data and create some styling so that the map content is as clear as possible.
 
 * Add the background raster :kbd:`basic_map.tif` that you can find in the :kbd:`exercise_data\\forestry\\` folder.
 * When prompted select the :kbd:`ETRS89 / ETRS-TM35FIN` CRS for the raster.
@@ -76,15 +79,15 @@ As you can see the background map is already styled. This type of ready to use c
 
 * Now zoom to your sample plots, so that you can see only about four or five lines of plots.
 
-The current styling of the sample plots is not the best, but how does it look in the map composer?:
+The current styling of the sample plots is not the best, but how does it look in the print layout?:
 
 .. image:: img/plots_zoom1-2.png
    :align: center
 
-While during the last exercises, the white buffer was OK on top of the aerial image, now that the background image is mostly white you barely can see the labels. You can also check how it looks like on the composer:
+While during the last exercises, the white buffer was OK on top of the aerial image, now that the background image is mostly white you barely can see the labels. You can also check how it looks like on the layout:
 
-* Go to the :guilabel:`Print Composer` window.
-* Use the |select| button to select the map element in the composer.
+* Go to the :guilabel:`Print Layout` window.
+* Use the |select| button to select the map element in the layout.
 * Go to the :guilabel:`Item properties` tab.
 * Under :guilabel:`Extents` click on :guilabel:`Set to map canvas extent`.
 * If you need to refresh the element, under :guilabel:`Main properties` click on the :guilabel:`Update preview`.
@@ -100,14 +103,22 @@ You have been working in :doc:`../basic_map/index` with symbology and in :doc:`.
 .. image:: img/plots_zoom2_symbology.png
    :align: center
 
-You will use later the the green styling of the :kbd:`forest_stands_2012` layer. In order to keep it, and have a visualization of it that shows only the stand borders:
+You will use later the the green styling of the :kbd:`forest_stands_2012` layer.
+In order to keep it, and have a visualization of it that shows only the stand borders:
 
 * Right click on :kbd:`forest_stands_2012` and select :guilabel:`Duplicate`
-* you get a new layer named :kbd:`forest_stands_2012 copy` that you can use to define a different style, for example with no filling and red borders.
+* you get a new layer named :kbd:`forest_stands_2012 copy` that you can use to
+  define a different style, for example with no filling and red borders.
 
-Now you have two different visualizations of the forest stands and you can decide which one to display for your detail map.
+Now you have two different visualizations of the forest stands and you can decide
+which one to display for your detail map.
 
-Go back to the :guilabel:`Print composer` window often to see what the map would look like. For the purposes of creating detailed maps, you are looking for a symbology that looks good not at the scale of the whole forest area (left image below) but at a closer scale (right image below). Remember to use :guilabel:`Update preview` and :guilabel:`Set to map canvas extent` whenever you change the zoom in your map or the composer.
+Go back to the :guilabel:`Print Layout` window often to see what the map would
+look like. For the purposes of creating detailed maps, you are looking for a
+symbology that looks good not at the scale of the whole forest area (left image
+below) but at a closer scale (right image below). Remember to use
+:guilabel:`Update preview` and :guilabel:`Set to map canvas extent` whenever
+you change the zoom in your map or the layout.
 
 .. image:: img/composer_2-3.png
    :align: center
@@ -115,26 +126,28 @@ Go back to the :guilabel:`Print composer` window often to see what the map would
 |basic| |TY| Create a Basic Map Template
 -------------------------------------------------------------------------------
 
-Once you have a symbology your happy with, you are ready to add some more information to your printed map. Add at least the following elements:
+Once you have a symbology your happy with, you are ready to add some more information
+to your printed map. Add at least the following elements:
 
 * Title.
 * A scale bar.
 * Grid frame for your map.
 * Coordinates on the sides of the grid.
 
-You have created a similar composition already in :doc:`../map_composer/index`. Go back to that module as you need. You can look at this example image for reference:
+You have created a similar composition already in :doc:`../map_composer/index`.
+Go back to that module as you need. You can look at this example image for reference:
 
 .. image:: img/map_template1.png
    :align: center
 
 Export your map as an image and look at it.
 
-* :menuselection:`Composer --> Export as Image`.
+* :menuselection:`Layout --> Export as Image...`.
 * Use for example the :kbd:`JPG format`.
 
 That is what it will look like when printed.
 
-|basic| |FA| Adding More Elements to the Composer
+|basic| |FA| Adding More Elements to the Print Layout
 -------------------------------------------------------------------------------
 
 As you probably noticed in the suggested map template images, there are plenty of room on the right side of the canvas. Lets see what else could go in there. For the purposes of our map, a legend is not really necessary, but an overview map and some text boxes could add value to the map.
@@ -151,10 +164,10 @@ The overview map will help the field teams place the detail map inside the gener
 
 Notice that your overview map is not really giving an overview of the forest area which is what you want. You want this map to represent the whole forest area and you want it to show only the background map and the :kbd:`forest_stands_2012` layer, and not display the sample plots. And also you want to lock its view so it does not change anymore whenever you change the visibility or order of the layers.
 
-* Go back to the map, but don't close the :guilabel:`Print composer`.
+* Go back to the map, but don't close the :guilabel:`Print Layout`.
 * Right click the :kbd:`forest_stands_2012` layer and click on :guilabel:`Zoom to Layer Extent`.
 * Deactivate all layers except for :kbd:`basic_map` and :kbd:`forest_stands_2012`.
-* Go back to the :guilabel:`Print composer`.
+* Go back to the :guilabel:`Print Layout`.
 * With the small map selected, click the :guilabel:`Set to map canvas extent` to set its extents to what you can see in the map window.
 * Lock the view for the overview map by checking :guilabel:`Lock layers for map item` under :guilabel:`Main properties`.
 
@@ -162,8 +175,8 @@ Now your overview map is more what you expected and its view will not change any
 
 * Go to the map window again and select the layers you want to be visible (:kbd:`systematic_plots_clip`, :kbd:`forest_stands_2012 copy` and :kbd:`Basic_map`).
 * Zoom again to have only a few lines of sample plots visible.
-* Go back to the :guilabel:`Print composer` window.
-* Select the bigger map in your composer (|select|).
+* Go back to the :guilabel:`Print Layout` window.
+* Select the bigger map in your layout (|select|).
 * In :guilabel:`Item properties` click on :guilabel:`Update preview` and :guilabel:`Set to map canvas extent`.
 
 Notice that only the bigger map is displaying the current map view, and the small overview map is keeping the same view you had when you locked it.
@@ -184,7 +197,8 @@ You can also add a North arrow to the overview map:
 * Uncheck :guilabel:`Background`.
 * Resize the arrow image to a size that looks good on the small map.
 
-The basic map composer is ready, now you want to make use of the Atlas tool to generate as many detail maps in this format as you consider necessary.
+The basic map layout is ready, now you want to make use of the Atlas tool to
+generate as many detail maps in this format as you consider necessary.
 
 
 |basic| |FA| Creating an Atlas Coverage
@@ -216,7 +230,7 @@ The new polygons are covering the whole forest area and they give you an idea of
 
 The last step is to set up the Atlas tool:
 
-* Go back to the :guilabel:`Print Composer`.
+* Go back to the :guilabel:`Print Layout`.
 * In the panel on the right, go to the :guilabel:`Atlas generation` tab.
 * Set the options as follows:
 
@@ -256,7 +270,7 @@ Besides removing the polygons for those areas that are not interesting, you can 
 .. image:: img/remove_polygons.png
    :align: center
 
-You can go back to the :guilabel:`Print Composer` and check that the previews of the Atlas use only the polygons you left in the layer.
+You can go back to the :guilabel:`Print Layout` and check that the previews of the Atlas use only the polygons you left in the layer.
 
 The coverage layer you are using does not yet have useful information that you could use to customize the content of the labels in your map. The first step is to create them, you can add for example a zone code for the polygon areas and a field with some remarks for the field teams to have into account:
 
@@ -284,7 +298,7 @@ corresponding polygons (double click the cell to edit it):
 Almost ready, now you have to tell the Atlas tool that you want some of the text
 labels to use the information from the :kbd:`atlas_coverage` layer's attribute table.
 
-* Go back to the :guilabel:`Print Composer`.
+* Go back to the :guilabel:`Print Layout`.
 * Select the text label containing :kbd:`Detailed map...`.
 * Set the :guilabel:`Font` size to :kbd:`12`.
 * Set the cursor at the end of the text in the label.
@@ -324,7 +338,7 @@ Lets print the maps as a single PDF that you can send to the field office for pr
 * Under the :guilabel:`Output` check the :guilabel:`Single file export when
   possible`. This will put all the maps together into a PDF file, if this option
   is not checked you will get one file for every map.
-* Open :menuselection:`Composer --> Export as PDF...`. 
+* Open :menuselection:`Layout --> Export as PDF...`. 
 * Save the PDF file as :kbd:`inventory_2012_maps.pdf` in your
   :kbd:`exercise_data\\forestry\\samplig\\map_creation\\` folder.
 
@@ -337,12 +351,12 @@ images that would be created:
 .. image:: img/maps_as_images.png
    :align: center
 
-In the :guilabel:`Print Composer`, save your map as a composer template as
+In the :guilabel:`Print Layout`, save your map as a layout template as
 :kbd:`forestry_atlas.qpt` in your :kbd:`exercise_data\\forestry\\map_creation\\`
-folder. Use :menuselection:`Composer --> Save as Template`. You will be able to
+folder. Use :menuselection:`Layout --> Save as Template`. You will be able to
 use this template again and again.
 
-Close the :guilabel:`Print Composer` and save your QGIS project.
+Close the :guilabel:`Print Layout` and save your QGIS project.
 
 
 |IC|

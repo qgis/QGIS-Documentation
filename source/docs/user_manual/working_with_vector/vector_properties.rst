@@ -479,7 +479,7 @@ The assistant lets you define:
 To the right side of the dialog, you can preview the features representation
 within a live-update widget. This representation is added to the layer tree in
 the layer legend and is also used to shape the layer representation in the
-print composer legend item.
+print layout legend item.
 
 The values presented in the varying size assistant above will set the size
 'Data-defined override' with:
@@ -503,7 +503,7 @@ option either on size (for point layer) or width (for line layer).
 
 Like the proportional symbol, the size-related symbol is added to the layer tree,
 at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print composer legend item.
+are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
 
@@ -1691,7 +1691,7 @@ You can move up and down any row with click and drag, sorting how attributes
 are displayed. You can also change the label in the 'Legend' column
 or the attribute color by double-clicking the item.
 
-This label is the default text displayed in the legend of the print composer
+This label is the default text displayed in the legend of the print layout
 or of the layer tree.
 
 .. _figure_diagrams_attributes:
@@ -1806,7 +1806,7 @@ in the :ref:`label_legend`, besides the layer symbology. It can be:
 * the represented attributes: color and legend text set in :guilabel:`Attributes` tab
 * and if applicable, the diagram size, whose symbol you can customize.
 
-When set, the diagram legend items are also available in the print composer legend,
+When set, the diagram legend items are also available in the print layout legend,
 besides the layer symbology.
 
 
@@ -2781,7 +2781,7 @@ setting that enables generalisation by default for newly added layers (see
 
 
 While rendering extremely detailed layers (e.g. polygon layers with a huge number
-of nodes), this can cause composer exports in PDF/SVG format to be huge as all
+of nodes), this can cause layout exports in PDF/SVG format to be huge as all
 nodes are included in the exported file. This can also make the resultant file
 very slow to work with/open in other programs.
 
@@ -2789,7 +2789,7 @@ Checking |checkbox| :guilabel:`Force layer to render as raster` forces these
 layers to be rasterised so that the exported files won't have to include all
 the nodes contained in these layers and the rendering is therefore sped up.
 
-You can also do this by forcing the composer to export as a raster,
+You can also do this by forcing the layout to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
@@ -2900,6 +2900,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    QGIS Server tab in vector layers properties dialog
 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2922,8 +2923,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
