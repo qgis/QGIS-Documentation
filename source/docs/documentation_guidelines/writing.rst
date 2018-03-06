@@ -276,7 +276,7 @@ keep in mind that this returns the full caption of the image.
 .. code-block:: rst
 
    see :ref:`figure_logo`
-   
+
 returns:
 
 see :ref:`figure_logo`
@@ -339,20 +339,20 @@ Index
 
 An index is a handy way to help the reader easily find an information in a doc.
 QGIS documentation provides some essential indices.
-There are few rules to follow in order to keep a set of indices that are really 
+There are few rules to follow in order to keep a set of indices that are really
 useful (coherent, consistent and really connected to each other):
 
 * Index should be human readable, understandable and translatable; an index can
   be made from many words but you should avoid any unneeded ``_``, ``-``...
   characters to link them i.e., ``Loading layers`` instead of ``loading_layers``
-  or ``loadingLayers``. 
+  or ``loadingLayers``.
 * Always capitalize only the first letter of the index unless the word has a
   particular spelling, in which case keep using its spelling e.g., ``Loading layers``,
   ``Atlas generation``, ``WMS``, ``pgsql2shp``
 * Keep an eye on the existing `Index list <http://docs.qgis.org/testing/en/genindex.html>`_
   in order to reuse the most convenient expression with the right spelling
   and avoid wrong duplicates.
- 
+
 Several index tags exist in RST. You can either use the inline ``:index:`` tag
 within the normal text.
 
@@ -387,7 +387,7 @@ A clear and appropriate title is required for both warnings and tips.
 .. code-block:: rst
 
  .. tip:: **Always use a meaningful title for tips**
-   
+
   Begin tips with a title that summarizes what it is about. This helps
   users to quickly overview the message you want to give them, and
   decide on its relevance.
@@ -500,43 +500,3 @@ the same folder as the rst file.
 * save them in png (no jpeg artifacts)
 * the screenshot should show the content according to what is described in the
   text
-
-
-Documenting Processing algorithms
-=================================
-
-If you want to write documentation for Processing algorithms consider these
-guidelines:
-
-* don't overwrite existing help files by files from other sources (e.g. QGIS
-  source tree or Processing-Help repository), this files have different formats
-* Processing algorithm help files are part of QGIS User Guide, so use same
-  formatting as User Guide and other documentation
-* avoid use "This algoritm does this and that..." as first sentence in algorithm
-  description. Try to use more general words like in TauDEM or GRASS algoritms
-  help
-* add images if needed. Use PNG format and follow general guidelines for documentation.
-* if necessary add links to additional information (e.g. publications or web-pages)
-  to the "See also" section
-* give clear explanation for algorithm parameters and outputs (again GRASS and
-  TauDEM are good examples).
-* don't edit parameter or output names. If you found typo or wrong spelling ---
-  report this in bugracker, so developers can fix this in Processing code too
-* don't list available options in algorithm description, options already listed
-  in parameter description.
-* don't add information vector geometry type in algorithm or parameter description
-  without compelling reason as this information already available in parameter
-  description.
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |nix| image:: /static/common/nix.png
-   :width: 1em
-.. |osx| image:: /static/common/osx.png
-   :width: 1em
-.. |win| image:: /static/common/win.png
-   :width: 1em
