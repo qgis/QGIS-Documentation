@@ -14,8 +14,8 @@ Vector analysis
 
 .. _qgisbasicstatisticsforfields:
 
-Basic statistics for numeric fields
------------------------------------
+Basic statistics for fields
+---------------------------
 Generates basic statistics for a field of the attribute table of a vector layer.
 
 Numeric, date, time and string fields are supported.
