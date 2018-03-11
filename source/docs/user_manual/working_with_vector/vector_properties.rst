@@ -1625,12 +1625,6 @@ The available widgets are:
 * **Web View**: Field contains a URL. The width and height of the field is variable.
 
 
-.. note::
-
-   QGIS has an advanced 'hidden' option to define your own field
-   widget using python and add it to this impressive list of widgets.
-
-
 .. tip:: **Relative Path in widgets**
 
    If the path which is selected with the file browser is located in the same
