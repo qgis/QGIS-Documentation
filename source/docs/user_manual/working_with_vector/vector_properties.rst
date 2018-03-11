@@ -2800,8 +2800,7 @@ Metadata Properties
 ===================
 
 |editMetadata| The :guilabel:`Metadata` tab provides you with options to create
-and edit a standards compliant metadata report on your layer. Information to
-fill concern:
+and edit a metadata report on your layer. Information to fill concern:
 
 * the :guilabel:`Data identification`: basic attribution of the dataset (parent,
   identifier, title, abstract, language...);
