@@ -655,6 +655,23 @@ of the **FILTER_GEOM** parameter.
   &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
   &...
 
+The content of map tips can be added to the GetFeatureInfo response by
+passing the **WITH_MAPTIP** vendor parameter.
+
+.. code-block:: guess
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetFeatureInfo
+  &LAYERS=countries
+  &QUERY_LAYERS=countries
+  &INFO_FORMAT:text/xml
+  &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
+  &WITH_MAPTIP=true
+  &...
+
+
+
 .. _server_getprint:
 
 GetPrint
