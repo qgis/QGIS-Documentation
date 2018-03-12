@@ -1,9 +1,5 @@
 .. _processing_algorithms_guidelines:
 
-********************************
-Processing Algorithms Guidelines
-********************************
-
 .. contents::
    :local:
 
@@ -14,12 +10,12 @@ If you want to write documentation for Processing algorithms consider these
 guidelines:
 
 * Processing algorithm help files are part of QGIS User Guide, so use same
-  formatting as User Guide and other documentation
+  formatting as User Guide and other documentation.
 
-* each algorithm should be placed in the corresponding **provider** and **group**
-  folder: e.g. the algorithm `Voronoi polygon` belongs to `QGIS` provider and to
-  the group `vector_geometry`. So the correct file to add the description is:
-  ``source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst``.
+* each algorithm documentation should be placed in the corresponding **provider**
+  folder and **group** file: e.g. the algorithm `Voronoi polygon` belongs to `QGIS`
+  provider and to the group `vectorgeometry`. So the correct file to add the
+  description is: ``source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst``.
 
   .. note:: before starting to write the guide, check if the algorithm is already
     described: in this case you can enhance the existing description.
@@ -55,12 +51,19 @@ guidelines:
 * don't edit parameter or output names. If you found typo or wrong spelling ---
   report this in bugracker, so developers can fix this in Processing code too
 
-* don't list available options in algorithm description, options already listed
-  in parameter description
+* avoid to duplicate algorithm options detailed description: choose whether to
+  describe it in the algorithm description or in the in the parameter description
 
 * don't add information vector geometry type in algorithm or parameter description
-  without compelling reason as this information already available in parameter
+  without compelling reason as this information is already available in parameter
   description
+
+* add the default value if the parameter in *italic*, e.g.::
+
+  ``Number of points`` [number]
+    Number of point to create
+
+    Default: *1*
 
 * it should be also described the *type* of the parameters. There several types
   available but avoid to invent new ones and pick one of these:
