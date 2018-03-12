@@ -722,7 +722,7 @@ These parameters change the font properties for layer titles and item labels:
 * **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
 * **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
 * **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)
-* **LAYERTITLE / RULELABEL** (from QGIS 2.4) set them to ``FALSE`` to get only
+* **LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only
   the legend graphics without labels
 
 Contest based legend. These parameters let the client request a legend showing
