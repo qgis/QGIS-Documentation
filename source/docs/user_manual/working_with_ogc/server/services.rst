@@ -718,11 +718,11 @@ elements:
 These parameters change the font properties for layer titles and item labels:
 
 * **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text
-* **LAYERFONTBOLD / ITEMFONTBOLD** 'TRUE' to use a bold font
+* **LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font
 * **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
-* **LAYERFONTITALIC / ITEMFONTITALIC** 'TRUE' to use italic font
-* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. #FF0000 for red)
-* **LAYERTITLE / RULELABEL** (from QGIS 2.4) set them to 'FALSE' to get only
+* **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
+* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)
+* **LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only
   the legend graphics without labels
 
 Contest based legend. These parameters let the client request a legend showing
@@ -737,6 +737,12 @@ only the symbols for the features falling into the requested area:
 
 Contest based legend features are based on the
 `UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
+
+* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
+  feature count of the features like in the following image:
+
+  .. figure:: /static/user_manual/working_with_ogc/getfeaturecount_legend.png
+    :align: center
 
 GetProjectSettings
 ------------------
