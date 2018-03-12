@@ -363,9 +363,34 @@ to the project. Layers are added with random style properties.
 .. need to be tested with dwg. How does dwg format behave when added to QGIS?
 
 To keep the dxf/dwg structure and its symbology in QGIS, you may want to
-use the dedicated :menuselection:`DWG/DXF Import...` tool.
+use the dedicated :menuselection:`Project --> DWG/DXF Import...` tool. Indeed,
+the :guilabel:`DWG/DXF Import` dialog offers you to import in a GeoPackage
+database any element of the drawing file.
 
-.. TODO: Add here the fix for https://github.com/qgis/QGIS-Documentation/issues/1579
+In the dialog, you have to:
+
+* Input a location for a GeoPackage file, that will be created to store the
+  DWG/DXF content to.
+* Specify which coordinate system the data in the DWG data is in.
+* Then use the **[Import]** button to select the DWG/DXF file to use (one per
+  geopackage). The GeoPackage database will be automatically populated with the
+  drawing file content.
+* The |checkbox| :guilabel:`Expand block references` helps you copy the
+  transformed contents of the corresponding block for each block reference.
+* the |checkbox| :guilabel:`Use curves` promotes the layers geometry type to a
+  ``curved`` one.
+
+After the :file:`.dwg` or :file:`.dxf` data is imported into the GeoPackage
+database the list in the lower half of the dialog is populated with the layer
+list from the imported file. There you can select which layers to import into
+the QGIS project. A top level group is set for the drawing file and inside,
+another group for each of the selected layers in the list. Each subgroup
+contains vector layers for the point, line, label and area features of the
+respective layer. The style of each layer is setup so that it resembles the look
+it originally had in *CAD.
+Alternatively using the option |checkbox| :guilabel:`Merge layers` places all
+layers in one group.
+
 
 .. index:: OSM (OpenStreetMap)
 .. _openstreetmap:
