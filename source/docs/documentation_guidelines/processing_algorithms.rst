@@ -55,7 +55,7 @@ guidelines:
 ``Fix me`` button at the end of the web-page and submit a Pull Request.
 
 * avoid to duplicate algorithm options detailed description: choose whether to
-  describe it in the algorithm description or in the in the parameter description
+  describe it in the algorithm description or in the in the parameter description.
 
 * don't add information vector geometry type in algorithm or parameter description
   without compelling reason as this information is already available in parameter
