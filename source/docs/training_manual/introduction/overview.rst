@@ -13,7 +13,7 @@ interface.
 
 .. _figure_gui_numbered:
 
-.. image:: /static/training_manual/interface/gui_numbered.png
+.. image:: img/gui_numbered.png
    :align: center
 
 The elements identified in the figure above are:
@@ -108,7 +108,7 @@ Try to find each of these tools on your screen. What is their purpose?
 
 3. |whatsThis|
 
-4. .. image:: /static/training_manual/interface/toggle_render.png
+4. .. image:: img/toggle_render.png
 
 5. |measure|
 
@@ -126,3 +126,22 @@ Try to find each of these tools on your screen. What is their purpose?
 
 Now you've seen how the QGIS interface works, you can use the tools available
 to you and start improving on your map! This is the topic of the next lesson.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
+.. |whatsThis| image:: /static/common/whats_this.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em

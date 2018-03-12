@@ -68,7 +68,7 @@ figure_projection_families_)
 
 .. _figure_projection_families:
 
-.. figure:: /static/gentle_gis_introduction/projections/projection_families.png
+.. figure:: img/projection_families.png
    :align: center
    :width: 30em
 
@@ -93,7 +93,7 @@ and visualizing world maps.
 
 .. _figure_robinson_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/robinson_projection.png
+.. figure:: img/robinson_projection.png
    :align: center
    :width: 30em
 
@@ -130,7 +130,7 @@ many of its topographic maps.
 
 .. _figure_mercator_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/mercator_projection.png
+.. figure:: img/mercator_projection.png
    :align: center
    :width: 30em
 
@@ -155,7 +155,7 @@ figure_azimuthal_equidistant_projection_).
 
 .. _figure_plate_caree_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/plate_carree_projection.png
+.. figure:: img/plate_carree_projection.png
    :align: center
    :width: 30em
 
@@ -164,7 +164,7 @@ figure_azimuthal_equidistant_projection_).
 
 .. _figure_azimuthal_equidistant_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/azimuthal_equidistant_projection.png
+.. figure:: img/azimuthal_equidistant_projection.png
    :align: center
    :width: 30em
 
@@ -192,7 +192,7 @@ are often encountered in GIS work.
 
 .. _figure_mollweide_equal_area_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/mollweide_equal_area_projection.png
+.. figure:: img/mollweide_equal_area_projection.png
    :align: center
    :width: 30em
 
@@ -236,7 +236,7 @@ for a pictorial view.
 
 .. _figure_geographic_crs:
 
-.. figure:: /static/gentle_gis_introduction/projections/geographic_crs.png
+.. figure:: img/geographic_crs.png
    :align: center
    :width: 30em
 
@@ -284,7 +284,7 @@ coordinate.
 
 .. _figure_projected_crs:
 
-.. figure:: /static/gentle_gis_introduction/projections/projected_crs.png
+.. figure:: img/projected_crs.png
    :align: center
    :width: 30em
 
@@ -317,7 +317,7 @@ in figure_utm_zones_.
 
 .. _figure_utm_zones:
 
-.. figure:: /static/gentle_gis_introduction/projections/utm_zones.png
+.. figure:: img/utm_zones.png
    :align: center
    :width: 30em
 
@@ -331,7 +331,7 @@ means that the UTM zones are located **south of the equator**.
 
 .. _figure_utm_for_sa:
 
-.. figure:: /static/gentle_gis_introduction/projections/utm_for_sa.png
+.. figure:: img/utm_for_sa.png
    :align: center
    :width: 30em
 
@@ -485,3 +485,14 @@ What's next?
 ============
 
 In the section that follows we will take a closer look at **Map Production**.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

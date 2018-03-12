@@ -208,7 +208,7 @@ QGIS Server supports:
 
   .. _figure_group_wms_data:
 
-  .. figure:: /static/user_manual/working_with_ogc/set_group_wms_data.png
+  .. figure:: img/set_group_wms_data.png
      :align: center
 
      Set group WMS data dialog
@@ -282,3 +282,11 @@ For linux, if you don't have a desktop environment installed (or you prefer the 
 
    chown root *
    cd .. && fc-cache -f -v
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -24,4 +24,3 @@ Michael John De Smith, Michael F. Goodchild, Paul A. Longley
 
 It is available online `here <http://www.spatialanalysisonline.com/>`_
 
-

@@ -26,7 +26,7 @@ to a new attribute named **color_id**.
 The following example shows the algorithm with four different colors chosen; as you
 can see each color class has the same amount of features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/topological_color.png
+.. figure:: img/topological_color.png
   :align: center
 
   Topological colors example
@@ -71,3 +71,11 @@ Outputs
 
 ``Colored`` [vector: polygon]
   Polygon vector layer with the addition of the ``color_id`` column.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

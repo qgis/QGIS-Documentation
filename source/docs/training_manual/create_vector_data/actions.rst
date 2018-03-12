@@ -29,24 +29,24 @@ property yet. First we'll create a field for this purpose.
 * Click on the :guilabel:`Fields` tab.
 * Toggle editing mode:
 
-.. image:: /static/training_manual/create_vector_data/toggle_editing_mode.png
+.. image:: img/toggle_editing_mode.png
    :align: center
 
 * Add a new column:
 
-.. image:: /static/training_manual/create_vector_data/add_new_column.png
+.. image:: img/add_new_column.png
    :align: center
 
 * Enter the values below:
 
-.. image:: /static/training_manual/create_vector_data/column_settings.png
+.. image:: img/column_settings.png
    :align: center
 
 * After the field has been created, click on the :guilabel:`Line edit` button
   next to the new field.
 * Set it up for a :guilabel:`File name`:
 
-.. image:: /static/training_manual/create_vector_data/select_file_name.png
+.. image:: img/select_file_name.png
    :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
@@ -56,7 +56,7 @@ property yet. First we'll create a field for this purpose.
 Since you're still in edit mode, the dialog should be active and look like
 this:
 
-.. image:: /static/training_manual/create_vector_data/school_property_no_image.png
+.. image:: img/school_property_no_image.png
    :align: center
 
 * Click on the browse button (the :guilabel:`...` next to the :guilabel:`image`
@@ -76,7 +76,7 @@ this:
 * In the :kbd:`Action properties` panel, enter the words :kbd:`Show Image` into
   the :guilabel:`Name` field:
 
-.. image:: /static/training_manual/create_vector_data/show_image_action.png
+.. image:: img/show_image_action.png
    :align: center
 
 What to do next varies according to your operating system, so choose the
@@ -114,7 +114,7 @@ is.
 
 * Select :guilabel:`image` from the list:
 
-.. image:: /static/training_manual/create_vector_data/select_image.png
+.. image:: img/select_image.png
    :align: center
 
 * Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%
@@ -203,12 +203,12 @@ Now you want QGIS to tell the browser to tell Google to search for the value of
 * Select the :guilabel:`name` field.
 * Click :guilabel:`Insert field`:
 
-.. image:: /static/training_manual/create_vector_data/google_search_action.png
+.. image:: img/google_search_action.png
    :align: center
 
 This will tell QGIS to add the phrase next:
 
-.. image:: /static/training_manual/create_vector_data/google_search_entry.png
+.. image:: img/google_search_entry.png
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the
@@ -274,7 +274,7 @@ To create the layer action:
   * :guilabel:`Action` (all on one line):
     :kbd:`from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('http://wikipedia.org/wiki/[% "name" %]')); myWV.show()`
 
-.. image:: /static/training_manual/create_vector_data/python_action_example.png
+.. image:: img/python_action_example.png
    :align: center
 
 There are a couple of things going on here:
@@ -312,3 +312,19 @@ the functions you could incorporate!
 
 Now that you've done all kinds of vector data creation, you'll learn how to
 analyze this data to solve problems. That's the topic of the next module.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png

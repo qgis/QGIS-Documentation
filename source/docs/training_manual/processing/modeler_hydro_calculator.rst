@@ -48,4 +48,3 @@ We are not using the numeric input that we added to the model, so it can be remo
 Our new model is now finished.
 
 
-

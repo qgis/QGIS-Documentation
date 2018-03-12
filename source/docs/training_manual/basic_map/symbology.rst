@@ -35,7 +35,7 @@ In the :guilabel:`Properties` window:
 
 * Select the :guilabel:`Style` tab at the extreme left:
 
-.. image:: /static/training_manual/symbology/layer_properties_style.png
+.. image:: img/layer_properties_style.png
    :align: center
 
 * Click the color select button next to the :guilabel:`Color` label.
@@ -75,7 +75,7 @@ color.
   (if necessary) and select the :guilabel:`Simple fill` option:
 
 
-.. image:: /static/training_manual/symbology/simple_fill_selected.png
+.. image:: img/simple_fill_selected.png
    :align: center
 
 
@@ -110,7 +110,7 @@ dataset at inappropriate scales.
 In our case, we may decide to hide the buildings from view at small scales. This
 map, for example ...
 
-.. image:: /static/training_manual/symbology/buildings_small_scale.png
+.. image:: img/buildings_small_scale.png
    :align: center
 
 ... is not very useful. The buildings are hard to distinguish at that scale.
@@ -123,7 +123,7 @@ To enable scale-based rendering:
 * Enable scale-based rendering by clicking on the checkbox labelled
   :guilabel:`Scale dependent visibility`:
 
-.. image:: /static/training_manual/symbology/scale_dependent_visibility.png
+.. image:: img/scale_dependent_visibility.png
    :align: center
 
 * Change the :guilabel:`Minimum` value to :kbd:`1:10,000`.
@@ -154,12 +154,12 @@ In this example, the current symbol has no outline (i.e., it uses the
 Select the :guilabel:`Fill` in the :guilabel:`Symbol layers` panel. Then click
 the :guilabel:`Add symbol layer` button:
 
-.. image:: /static/training_manual/symbology/add_symbol_layer_button.png
+.. image:: img/add_symbol_layer_button.png
    :align: center
 
 * Click on it and the dialog will change to look somewhat like this:
 
-.. image:: /static/training_manual/symbology/new_symbol_layer.png
+.. image:: img/new_symbol_layer.png
    :align: center
 
 (It may appear somewhat different in color, for example, but you're going to
@@ -181,7 +181,7 @@ With the new :guilabel:`Simple Fill` layer selected:
 * Change the fill style to something other than :guilabel:`Solid` or
   :guilabel:`No brush`. For example:
 
-.. image:: /static/training_manual/symbology/new_fill_settings.png
+.. image:: img/new_fill_settings.png
    :align: center
 
 * Click :guilabel:`OK`. Now you can see your results and tweak them as needed.
@@ -189,7 +189,7 @@ With the new :guilabel:`Simple Fill` layer selected:
 You can even add multiple extra symbol layers and create a kind of texture for
 your layer that way.
 
-.. image:: /static/training_manual/symbology/multiple_symbol_layers.png
+.. image:: img/multiple_symbol_layers.png
    :align: center
 
 It's fun! But it probably has too many colors to use in a real map...
@@ -221,7 +221,7 @@ having many symbol layers in one symbol can cause unexpected results.
 
 You'll notice that this happens:
 
-.. image:: /static/training_manual/symbology/bad_roads_symbology.png
+.. image:: img/bad_roads_symbology.png
    :align: center
 
 Well that's not what we want at all!
@@ -234,7 +234,7 @@ the :guilabel:`Symbol layers` panel, then click
 :menuselection:`Advanced --> Symbol levels...` in the
 bottom right-hand corner of the window. This will open a dialog like this:
 
-.. image:: /static/training_manual/symbology/symbol_levels_dialog.png
+.. image:: img/symbol_levels_dialog.png
    :align: center
 
 Select :guilabel:`Enable symbol levels`. You can then set the layer ordering
@@ -243,7 +243,7 @@ layer.
 
 In our case, we want to reverse the ordering, like this:
 
-.. image:: /static/training_manual/symbology/correct_symbol_layers.png
+.. image:: img/correct_symbol_layers.png
    :align: center
 
 This will render the dashed, white line above the thick black line.
@@ -252,7 +252,7 @@ This will render the dashed, white line above the thick black line.
 
 The map will now look like this:
 
-.. image:: /static/training_manual/symbology/better_roads_symbology.png
+.. image:: img/better_roads_symbology.png
    :align: center
 
 Also note that the meeting points of roads are now "merged", so that one road is
@@ -280,7 +280,7 @@ The roads must be narrow and mid-gray, with a thin, pale yellow outline. Remembe
 that you may need to change the layer rendering order via the
 :menuselection:`Advanced --> Symbol levels...` dialog.
 
-.. image:: /static/training_manual/symbology/target_road_symbology.png
+.. image:: img/target_road_symbology.png
    :align: center
 
 :ref:`Check your results <symbology-levels-1>`
@@ -302,7 +302,7 @@ rudimentary pre-classified data.
 * Using symbol layers, ensure that the outlines of layers flow into one another
   as per the image below:
 
-.. image:: /static/training_manual/symbology/correct_advanced_levels.png
+.. image:: img/correct_advanced_levels.png
    :align: center
 
 :ref:`Check your results <symbology-levels-2>`
@@ -325,7 +325,7 @@ Point Symbol Layer Types
 * Open your :guilabel:`basic_map` project.
 * Change the symbol properties for the :guilabel:`places` layer:
 
-.. image:: /static/training_manual/symbology/places_layer_properties.png
+.. image:: img/places_layer_properties.png
      :align: center
 
 * You can access the various symbol layer types by selecting the
@@ -333,7 +333,7 @@ Point Symbol Layer Types
   click the :guilabel:`Symbol layer type` dropdown:
 
 
-.. image:: /static/training_manual/symbology/marker_type_dropdown.png
+.. image:: img/marker_type_dropdown.png
    :align: center
 
 
@@ -352,7 +352,7 @@ To see the various options available for line data:
 * Change the symbol layer type for the :guilabel:`roads` layer's topmost
   symbol layer to :guilabel:`Marker line`:
 
-.. image:: /static/training_manual/symbology/change_to_marker_line.png
+.. image:: img/change_to_marker_line.png
    :align: center
 
 
@@ -360,14 +360,14 @@ To see the various options available for line data:
   panel. Change the symbol properties to match this dialog:
 
 
-.. image:: /static/training_manual/symbology/simple_marker_line_properties.png
+.. image:: img/simple_marker_line_properties.png
    :align: center
 
 
 * Change the interval to :kbd:`1,00`:
 
 
-.. image:: /static/training_manual/symbology/marker_line_interval.png
+.. image:: img/marker_line_interval.png
    :align: center
 
 
@@ -394,10 +394,10 @@ To see the various options available for polygon data:
 * If in doubt, use the :guilabel:`Point pattern fill` with the following
   options:
 
-.. image:: /static/training_manual/symbology/pattern_fill_size.png
+.. image:: img/pattern_fill_size.png
    :align: center
 
-.. image:: /static/training_manual/symbology/pattern_fill_distances.png
+.. image:: img/pattern_fill_distances.png
    :align: center
 
 * Add a new symbol layer with a normal :guilabel:`Simple fill`.
@@ -405,7 +405,7 @@ To see the various options available for polygon data:
 * Move it underneath the point pattern symbol layer with the :guilabel:`Move
   down` button:
 
-.. image:: /static/training_manual/symbology/simple_fill_move_down.png
+.. image:: img/simple_fill_move_down.png
    :align: center
 
 As a result, you have a textured symbol for the water layer, with the added
@@ -422,7 +422,7 @@ that make up the texture.
 
 You will see the following interface:
 
-.. image:: /static/training_manual/symbology/inkscape_default.png
+.. image:: img/inkscape_default.png
    :align: center
 
 You should find this familiar if you have used other vector image editing
@@ -439,7 +439,7 @@ First, we'll change the canvas to a size appropriate for a small texture.
   page you are working with.
 * Select the :guilabel:`Circle` tool:
 
-.. image:: /static/training_manual/symbology/inkscape_circle_tool.png
+.. image:: img/inkscape_circle_tool.png
    :align: center
 
 * Click and drag on the page to draw an ellipse. To make the ellipse turn into
@@ -451,7 +451,7 @@ First, we'll change the canvas to a size appropriate for a small texture.
   * Assign to the border a darker color in :guilabel:`Stroke paint` tab,
   * And reduce the border thickness under :guilabel:`Stroke style` tab.
 
-.. image:: /static/training_manual/symbology/inkscape_stroke_fill.png
+.. image:: img/inkscape_stroke_fill.png
    :align: center
 
 * Draw a line using the :guilabel:`Pencil` tool:
@@ -465,7 +465,7 @@ First, we'll change the canvas to a size appropriate for a small texture.
   * Change the color and width of the triangle symbol to match the circle's stroke
     and move it around as necessary, so that you end up with a symbol like this one:
 
-.. image:: /static/training_manual/symbology/inkscape_final_symbol.png
+.. image:: img/inkscape_final_symbol.png
    :align: center
 
 * If the symbol you get satisfies you, then save it as :guilabel:`landuse_symbol`
@@ -482,12 +482,12 @@ In QGIS:
   characteristics (colors, angle, effects, units...).
 
 
-.. image:: /static/training_manual/symbology/svg_symbol_settings.png
+.. image:: img/svg_symbol_settings.png
    :align: center
 
 You may also wish to update the svg layer's border (see below):
 
-.. image:: /static/training_manual/symbology/svg_layer_border.png
+.. image:: img/svg_layer_border.png
    :align: center
 
 Once you validate the dialog, features in :file:`landuse` layer should now
@@ -495,7 +495,7 @@ be covered by a set of symbols, showing a texture like the one on the
 following map. If textures are not visible, you may need to zoom in the map
 canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 
-.. image:: /static/training_manual/symbology/svg_symbol_result.png
+.. image:: img/svg_symbol_result.png
    :align: center
 
 |IC|
@@ -521,3 +521,26 @@ still hidden. The next lesson will explain how to represent this data on your
 map.
 
 .. note::  Did you remember to save your map recently?
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |FR| replace:: Further Reading
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |hard| image:: /static/global/hard.png
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em

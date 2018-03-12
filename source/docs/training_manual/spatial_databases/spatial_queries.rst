@@ -167,7 +167,7 @@ Or, if we create a view from it:
 
 Add the view as a layer and view it in QGIS:
 
-.. image:: /static/training_manual/spatial_databases/kwazulu_view_result.png
+.. image:: img/kwazulu_view_result.png
    :align: center
 
 Select neighbors
@@ -205,7 +205,7 @@ As a view:
 
 In QGIS:
 
-.. image:: /static/training_manual/spatial_databases/adjoining_result.png
+.. image:: img/adjoining_result.png
    :align: center
 
 Note the missing region (Queensland). This may be due to a topology error.
@@ -224,7 +224,7 @@ This creates a buffer of 100 meters around the region Hokkaido.
 
 The darker area is the buffer:
 
-.. image:: /static/training_manual/spatial_databases/hokkaido_buffer.png
+.. image:: img/hokkaido_buffer.png
    :align: center
 
 Select using the buffer:
@@ -250,7 +250,7 @@ because we don't want it; we only want the regions adjoining it.
 
 In QGIS:
 
-.. image:: /static/training_manual/spatial_databases/hokkaido_buffer_select.png
+.. image:: img/hokkaido_buffer_select.png
    :align: center
 
 It is also possible to select all objects within a given distance, without the
@@ -267,7 +267,7 @@ extra step of creating a buffer:
 
 This achieves the same result, without need for the interim buffer step:
 
-.. image:: /static/training_manual/spatial_databases/hokkaido_distance_select.png
+.. image:: img/hokkaido_distance_select.png
    :align: center
 
 
@@ -367,3 +367,15 @@ from PostGIS.
 
 Next we're going to investigate the structures of more complex geometries and
 how to create them using PostGIS.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png

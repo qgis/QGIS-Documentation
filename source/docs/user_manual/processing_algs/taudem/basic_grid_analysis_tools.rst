@@ -126,7 +126,7 @@ D8 Flow Direction Coding:
 * 7 --- South
 * 8 --- Southeast
 
-.. figure:: /static/user_manual/processing_algs/taudem/d8index.gif
+.. figure:: img/d8index.gif
    :align: center
    :width: 30em
 
@@ -197,7 +197,7 @@ the flow direction angle is to the direct angle to those cells. The contour
 length used here is the grid cell size. The resulting units of the specific
 catchment area are length units the same as those of the grid cell size.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tardemfig.gif
+.. figure:: img/tardemfig.gif
    :align: center
 
 When the optional weight grid is not used, the result is reported in terms of
@@ -312,7 +312,7 @@ interest. The resulting flow in a grid is then usually interpreted as being
 proportioned between the two neighboring cells that define the triangular facet
 with the steepest downward slope.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tardemfig.gif
+.. figure:: img/tardemfig.gif
    :align: center
 
 A block-centered representation is used with each elevation value taken to
@@ -565,3 +565,11 @@ Console usage
 
 See also
 ........
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

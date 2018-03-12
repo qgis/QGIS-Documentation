@@ -22,7 +22,7 @@ position and customize the appearance in the :guilabel:`Item Properties` panel
 
 .. _Figure_composer_html:
 
-.. figure:: /static/user_manual/print_composer/html_properties.png
+.. figure:: img/html_properties.png
    :align: center
 
    HTML Frame, the Item Properties Panel
@@ -40,7 +40,7 @@ panel provides the following functionalities (see figure_composer_html_ppt_):
 
 .. _Figure_composer_html_ppt:
 
-.. figure:: /static/user_manual/print_composer/html_source.png
+.. figure:: img/html_source.png
    :align: center
 
    HTML frame, the HTML Source properties
@@ -72,7 +72,7 @@ panel provides the following functionalities (see figure_composer_html_frames_):
 
 .. _Figure_composer_html_frames:
 
-.. figure:: /static/user_manual/print_composer/html_frame.png
+.. figure:: img/html_frame.png
    :align: center
 
    HTML frame, the Frames properties
@@ -111,7 +111,7 @@ following functionalities (see figure_composer_html_breaks_):
 
 .. _Figure_composer_html_breaks:
 
-.. figure:: /static/user_manual/print_composer/html_breaks.png
+.. figure:: img/html_breaks.png
    :align: center
 
    HTML frame, Use smart page breaks and User stylesheet properties
@@ -139,3 +139,17 @@ following functionalities (see figure_composer_html_breaks_):
      }
 
 * Use the **[Update HTML]** button to see the result of the stylesheet settings.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addHtml| image:: /static/common/mActionAddHtml.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

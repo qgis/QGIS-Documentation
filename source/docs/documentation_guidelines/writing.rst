@@ -432,7 +432,8 @@ Add new Screenshots
 -------------------
 
 Here are some hints to create new, nice looking screenshots.
-For the user guide they go into :file:`./resources/en/user_manual/`
+The images should be placed  in a :file:`img/` folder, in the same folder as the
+rst file.
 
 * same environment for all the screen caps (same OS, same decoration, same font
   size). We have used Ubuntu with Unity and the default "ambience" theme.
@@ -476,7 +477,8 @@ Translate Screenshots
 ---------------------
 
 Here are some hints to create screenshots for your translated user guide.
-They will go into :file:`./resources/<your language>/user_manual/`
+Translated images should be placed in a :file:`img/<your_language>/` folder, in
+the same folder as the rst file.
 
 * same environment for all the screen caps (same OS, same decoration, same font
   size)
@@ -488,6 +490,7 @@ They will go into :file:`./resources/<your language>/user_manual/`
 * same size as the english 'original' screenshots, otherwise they will be stretched
   and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
+* same filename as the english 'original' screenshot.
 * reduce the window to the minimal space needed to show the feature
   (taking all the screen for a small modal window > overkill)
 * the less clutter, the better (no need to activate all the toolbars)
@@ -523,5 +526,17 @@ guidelines:
   in parameter description.
 * don't add information vector geometry type in algorithm or parameter description
   without compelling reason as this information already available in parameter
-  description
+  description.
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |win| image:: /static/common/win.png
+   :width: 1em

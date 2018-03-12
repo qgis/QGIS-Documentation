@@ -88,3 +88,13 @@ Using views, you can save a query and access its results as if it were a table.
 
 Sometimes, when changing data, you want your changes to have effects elsewhere
 in the database. The next lesson will show you how to do this.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?

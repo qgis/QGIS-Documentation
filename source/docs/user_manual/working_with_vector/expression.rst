@@ -110,7 +110,7 @@ using functions, layer's fields and values. It contains widgets to:
 
 .. _figure_expression_tab:
 
-.. figure:: /static/user_manual/working_with_vector/function_list.png
+.. figure:: img/function_list.png
    :align: center
 
    The Expression tab
@@ -1177,7 +1177,7 @@ functions in a comfortable way.
 
 .. _figure_expression_function:
 
-.. figure:: /static/user_manual/working_with_vector/function_editor.png
+.. figure:: img/function_editor.png
    :align: center
 
    The Function Editor tab
@@ -1216,3 +1216,19 @@ Further information about creating Python code can be found in the
 
 The function editor is not only limited to working with the field calculator,
 it can be found whenever you work with expressions.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

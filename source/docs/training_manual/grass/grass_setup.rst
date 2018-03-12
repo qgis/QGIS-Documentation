@@ -15,12 +15,12 @@ plugin. First, open a new QGIS project.
 
 * In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
 
-  .. image:: /static/training_manual/grass/enable_grass.png
+  .. image:: img/enable_grass.png
      :align: center
 
 The GRASS toolbar will appear:
 
-.. image:: /static/training_manual/grass/grass_toolbar.png
+.. image:: img/grass_toolbar.png
    :align: center
 
 Before you can use GRASS, you need to create a **mapset**. GRASS always works
@@ -36,7 +36,7 @@ data you want to use into a GRASS database.
 * Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`.
 * Set it as the directory that will be used by GRASS to set up its database:
 
-  .. image:: /static/training_manual/grass/grass_folder.png
+  .. image:: img/grass_folder.png
      :align: center
 
 * Click :guilabel:`Next`.
@@ -46,26 +46,26 @@ geographic area you'll be working in.
 
 * Call the new location :kbd:`South_Africa`:
 
-  .. image:: /static/training_manual/grass/new_location.png
+  .. image:: img/new_location.png
      :align: center
 
 * Click :guilabel:`Next`.
 * We'll be working with :kbd:`WGS 84`, so search for and select this CRS:
 
-  .. image:: /static/training_manual/grass/wgs_84_selected.png
+  .. image:: img/wgs_84_selected.png
      :align: center
 
 * Click :guilabel:`Next`.
 * Now select the region :guilabel:`South Africa` from the dropdown and click
   :guilabel:`Set`:
 
-  .. image:: /static/training_manual/grass/set_south_africa.png
+  .. image:: img/set_south_africa.png
      :align: center
 
 * Click :guilabel:`Next`.
 * Create a mapset, which is the map file that you'll be working with.
 
-  .. image:: /static/training_manual/grass/grass_mapset.png
+  .. image:: img/grass_mapset.png
      :align: center
 
 Once you're done, you'll see a dialog asking you to confirm that the settings
@@ -97,13 +97,13 @@ vectors already loaded into QGIS.
 
 * Once you've found this tool, click on it to bring up the tool itself:
 
-  .. image:: /static/training_manual/grass/grass_tool_selected.png
+  .. image:: img/grass_tool_selected.png
      :align: center
 
 * Set the loaded layer to :guilabel:`roads` and its GRASS version's name to
   :kbd:`g_roads` to prevent confusion.
 
-  .. image:: /static/training_manual/grass/g_roads_selected.png
+  .. image:: img/g_roads_selected.png
      :align: center
 
 .. note::  |hard| Note the extra import options provided under
@@ -134,7 +134,7 @@ DEM first.
 * Re-project it using GDAL Warp tool (:menuselection:`Raster --> Projections -->
   Warp (Reproject)`), setting it up as shown:
 
-  .. image:: /static/training_manual/grass/warp_settings.png
+  .. image:: img/warp_settings.png
      :align: center
 
 * Save the raster under the same folder as the original, but with the file name
@@ -150,7 +150,7 @@ Now that it's reprojected, you can load it into your GRASS database.
 * Set it up so that the input layer is :guilabel:`DEM_WGS84` and the output is
   :kbd:`g_dem`.
 
-  .. image:: /static/training_manual/grass/g_dem_settings.png
+  .. image:: img/g_dem_settings.png
      :align: center
 
 * Click :guilabel:`Run`.
@@ -158,7 +158,7 @@ Now that it's reprojected, you can load it into your GRASS database.
 * :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
   dialog.
 
-  .. image:: /static/training_manual/grass/g_roads_g_dem_result.png
+  .. image:: img/g_roads_g_dem_result.png
      :align: center
 
 * You may now remove the original :guilabel:`DEM_WGS84` layer.
@@ -176,3 +176,21 @@ easier by using existing layers in QGIS as data sources for GRASS.
 
 Now that the data is imported into GRASS, we can look at the advanced analysis
 operations that GRASS offers.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |grassNewMapset| image:: /static/common/grass_new_mapset.png
+   :width: 1.5em
+.. |grassTools| image:: /static/common/grass_tools.png
+   :width: 1.5em
+.. |hard| image:: /static/global/hard.png
+.. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`

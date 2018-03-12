@@ -70,7 +70,7 @@ data from OSM using QGIS' built-in OSM download tool.
 * In the dialog which opens, select all the layers, *except* the
   :kbd:`other_relations` and :kbd:`multilinestrings` layer:
 
-.. image:: /static/training_manual/foreword/select_osm_layers.png
+.. image:: img/select_osm_layers.png
    :align: center
 
 This will import the OSM data as separate layers into your map.
@@ -108,7 +108,7 @@ Now we need to tell QGIS to only show us the polygons where the value of
 * Watch what happens in the :guilabel:`Provider specific filter expression`
   field below:
 
-.. image:: /static/training_manual/vector_analysis/schools_query.png
+.. image:: img/schools_query.png
    :align: center
 
 The word :kbd:`"amenity"` has appeared. To build the rest of the query:
@@ -166,7 +166,7 @@ clicked buttons, or you can copy and paste the command above.
 
 This should immediately reduce the number of roads on your map:
 
-.. image:: /static/training_manual/vector_analysis/correct_roads_filter.png
+.. image:: img/correct_roads_filter.png
    :align: center
 
 |basic| |TY| Convert Layers' CRS
@@ -186,7 +186,7 @@ layer into our map.
 * In the :kbd:`Save Vector As` dialog, choose the following settings and click
   :guilabel:`Ok` (making sure you select :kbd:`Add saved file to map`):
 
-.. image:: /static/training_manual/vector_analysis/save_roads_34S.png
+.. image:: img/save_roads_34S.png
    :align: center
 
 The new shapefile will be created and the resulting layer added to your map.
@@ -224,7 +224,7 @@ This gives you a new dialog.
 
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/vector_buffer_setup.png
+.. image:: img/vector_buffer_setup.png
    :align: center
 
 The :guilabel:`Distance` is in meters because our input dataset is in a
@@ -241,7 +241,7 @@ This is why we needed to use projected data.
 
 Now your map will look something like this:
 
-.. image:: /static/training_manual/vector_analysis/roads_buffer_result.png
+.. image:: img/roads_buffer_result.png
    :align: center
 
 If your new layer is at the top of the :kbd:`Layers` list, it will probably obscure
@@ -252,7 +252,7 @@ However, you'll notice that there are distinct areas within our buffer, which
 correspond to all the individual roads. To get rid of this problem, remove the
 layer and re-create the buffer using the settings shown here:
 
-.. image:: /static/training_manual/vector_analysis/dissolve_buffer_setup.png
+.. image:: img/dissolve_buffer_setup.png
    :align: center
 
 * Note that we're now checking the :guilabel:`Dissolve result` box.
@@ -263,7 +263,7 @@ layer and re-create the buffer using the settings shown here:
 Once you've added the layer to the :guilabel:`Layers list`, it will look like
 this:
 
-.. image:: /static/training_manual/vector_analysis/dissolve_buffer_results.png
+.. image:: img/dissolve_buffer_results.png
    :align: center
 
 Now there are no unnecessary subdivisions.
@@ -290,7 +290,7 @@ both of these criteria are satisfied. To do that, we'll need to use the
 :menuselection:`Vector --> Geoprocessing Tools --> Intersect`. Set it up like
 this:
 
-.. image:: /static/training_manual/vector_analysis/school_roads_intersect.png
+.. image:: img/school_roads_intersect.png
    :align: center
 
 The two input layers are the two buffers; the save location is as usual; and
@@ -301,13 +301,13 @@ like this, click :guilabel:`OK` and add the layer to the
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
 
-.. image:: /static/training_manual/vector_analysis/intersect_result.png
+.. image:: img/intersect_result.png
    :align: center
 
 You may remove the two buffer layers and only keep the one that shows where
 they overlap, since that's what we really wanted to know in the first place:
 
-.. image:: /static/training_manual/vector_analysis/final_intersect_result.png
+.. image:: img/final_intersect_result.png
    :align: center
 
 .. _select-by-location:
@@ -322,7 +322,7 @@ select the buildings in that area.
   by location`. A dialog will appear.
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/location_select_dialog.png
+.. image:: img/location_select_dialog.png
    :align: center
 
 * Click :guilabel:`OK`, then :guilabel:`Close`.
@@ -330,7 +330,7 @@ select the buildings in that area.
   :kbd:`school_roads_intersect` layer to the bottom of the layers list, then
   zoom in:
 
-.. image:: /static/training_manual/vector_analysis/select_zoom_result.png
+.. image:: img/select_zoom_result.png
    :align: center
 
 The buildings highlighted in yellow are those which match our criteria and are
@@ -341,7 +341,7 @@ the selected buildings as a new layer.
 * Select :guilabel:`Save Selection As...`.
 * Set the dialog up like this:
 
-.. image:: /static/training_manual/vector_analysis/save_selection_as.png
+.. image:: img/save_selection_as.png
    :align: center
 
 * The file name is :kbd:`well_located_houses.shp`.
@@ -376,7 +376,7 @@ first need to calculate their size.
 * Enter edit mode and open the field calculator.
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/buildings_area_calculator.png
+.. image:: img/buildings_area_calculator.png
    :align: center
 
 * If you can't find :guilabel:`AREA` in the list, try creating a new field as
@@ -389,7 +389,7 @@ first need to calculate their size.
   when prompted.
 * Build a query as earlier in this lesson:
 
-.. image:: /static/training_manual/vector_analysis/buildings_area_query.png
+.. image:: img/buildings_area_query.png
    :align: center
 
 * Click :guilabel:`OK`. Your map should now only show you those buildings which
@@ -415,3 +415,18 @@ easily.
 
 In the next lesson, we'll look at how to calculate the shortest distance along
 the road from one point to another.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png

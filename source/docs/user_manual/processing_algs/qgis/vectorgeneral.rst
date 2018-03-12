@@ -418,7 +418,7 @@ Optionally, the destination coordinate reference system (CRS) for the merged lay
 can be set. If it is not set, the CRS will be taken from the first input layer.
 All layers will be reprojected to match this CRS.
 
-.. figure:: /static/user_manual/processing_algs/qgis/merge_vector_layers.png
+.. figure:: img/merge_vector_layers.png
    :align: center
 
 Parameters
@@ -589,3 +589,12 @@ Parameters
 ..........
 ``Input layer`` [vector: any]
   Vector layer in input
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

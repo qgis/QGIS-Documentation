@@ -24,7 +24,7 @@ The Simple Feature for SQL (SFS) Model is a *non-topological* way to store
 geospatial data in a database and defines functions for accessing, operating,
 and constructing these data.
 
-.. image:: /static/training_manual/spatial_databases/ogc_sfs.png
+.. image:: img/ogc_sfs.png
    :align: center
 
 The model defines geospatial data from Point, Linestring, and Polygon types
@@ -150,12 +150,12 @@ Layers` menu option or toolbar button:
 
 This will open the dialog:
 
-.. image:: /static/training_manual/spatial_databases/add_postgis_layer_dialog.png
+.. image:: img/add_postgis_layer_dialog.png
    :align: center
 
 Click on the :guilabel:`New` button to open this dialog:
 
-.. image:: /static/training_manual/spatial_databases/new_postgis_connection.png
+.. image:: img/new_postgis_connection.png
    :align: center
 
 Then define a new connection, e.g.::
@@ -194,3 +194,19 @@ software.
 -------------------------------------------------------------------------------
 
 Next you'll see how to import data into, and export data from, your database.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png

@@ -24,7 +24,7 @@ numbers 1 through 5 in yellow circles are discussed below).
 
 .. _figure_startup:
 
-.. figure:: /static/user_manual/introduction/startup.png
+.. figure:: img/startup.png
    :align: center
 
    QGIS GUI with Alaska sample data
@@ -398,7 +398,7 @@ holding the mouse over the toolbars.
 
 .. _figure_toolbars:
 
-.. figure:: /static/user_manual/introduction/toolbars.png
+.. figure:: img/toolbars.png
    :align: center
 
    The Toolbars menu
@@ -428,7 +428,7 @@ filling values...) in order to perform a more complex task.
 
 .. _figure_panels:
 
-.. figure:: /static/user_manual/introduction/panels.png
+.. figure:: img/panels.png
    :align: center
 
    The Panels menu
@@ -581,3 +581,198 @@ loading, processing tools...)
    the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
 
    Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
+   :width: 1.5em
+.. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
+.. |addRing| image:: /static/common/mActionAddRing.png
+   :width: 2em
+.. |allEdits| image:: /static/common/mActionAllEdits.png
+   :width: 1.5em
+.. |analysis| image:: /static/common/analysis.png
+   :width: 1.5em
+.. |captureLine| image:: /static/common/mActionCaptureLine.png
+   :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+   :width: 1.5em
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |checkQgisVersion| image:: /static/common/mActionCheckQgisVersion.png
+   :width: 1.5em
+.. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
+   :width: 1.5em
+.. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
+   :width: 1.5em
+.. |composerManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
+.. |deletePart| image:: /static/common/mActionDeletePart.png
+   :width: 2em
+.. |deleteRing| image:: /static/common/mActionDeleteRing.png
+   :width: 2em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |extents| image:: /static/common/extents.png
+   :width: 1.5em
+.. |fileExit| image:: /static/common/mActionFileExit.png
+.. |fileNew| image:: /static/common/mActionFileNew.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |fillRing| image:: /static/common/mActionFillRing.png
+   :width: 1.5em
+.. |geometry| image:: /static/common/geometry.png
+   :width: 1.5em
+.. |geoprocessing| image:: /static/common/geoprocessing.png
+   :width: 1.5em
+.. |helpAbout| image:: /static/common/mActionHelpAbout.png
+   :width: 1.5em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |helpSponsors| image:: /static/common/mActionHelpSponsors.png
+   :width: 1.5em
+.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
+   :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
+   :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |management| image:: /static/common/management.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
+   :width: 1.5em
+.. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+   :width: 1.5em
+.. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |messageLog| image:: /static/common/mMessageLog.png
+   :width: 1.5em
+.. |moveFeature| image:: /static/common/mActionMoveFeature.png
+   :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
+.. |newComposer| image:: /static/common/mActionNewComposer.png
+   :width: 1.5em
+.. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
+.. |nodeTool| image:: /static/common/mActionNodeTool.png
+   :width: 1.5em
+.. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
+   :width: 1.5em
+.. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingHistory| image:: /static/common/history.png
+   :width: 2em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingResult| image:: /static/common/processingResult.png
+   :width: 1.5em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
+   :width: 1.5em
+.. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
+   :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
+   :width: 1.5em
+.. |removeLayer| image:: /static/common/mActionRemoveLayer.png
+   :width: 1.5em
+.. |reshape| image:: /static/common/mActionReshape.png
+   :width: 1.5em
+.. |rotateFeature| image:: /static/common/mActionRotateFeature.png
+   :width: 1.5em
+.. |rotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
+   :width: 1.5em
+.. |sampling| image:: /static/common/sampling.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
+.. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
+   :width: 1.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+   :width: 2em
+.. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
+   :width: 1.5em
+.. |splitParts| image:: /static/common/mActionSplitParts.png
+   :width: 1.5em
+.. |sum| image:: /static/common/mActionSum.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |tracking| image:: /static/common/tracking.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |whatsThis| image:: /static/common/whats_this.png
+   :width: 1.5em
+.. |zoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomLast| image:: /static/common/mActionZoomLast.png
+   :width: 1.5em
+.. |zoomNext| image:: /static/common/mActionZoomNext.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em
+.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
+   :width: 1.5em

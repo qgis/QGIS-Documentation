@@ -105,7 +105,7 @@ This diagram illustrates the concept of tile sets:
 
 .. _figure_wmts_tiles:
 
-.. figure:: /static/user_manual/working_with_ogc/concept_wmts.png
+.. figure:: img/concept_wmts.png
    :align: center
 
    Concept of WMTS tile sets
@@ -244,7 +244,7 @@ provided by the European Soil Portal WMS server.
 
 .. _figure_OGC_add_wms:
 
-.. figure:: /static/user_manual/working_with_ogc/connection_wms.png
+.. figure:: img/connection_wms.png
    :align: center
 
    Dialog for adding a WMS server, showing its available layers
@@ -345,7 +345,7 @@ Within QGIS, you can search for WMS servers. Figure_OGC_search_ shows the
 
 .. _Figure_OGC_search:
 
-.. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
+.. figure:: img/wms_server_search.png
    :align: center
 
    Dialog for searching WMS servers after some keywords
@@ -649,7 +649,7 @@ downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS
 
 .. _figure_OGC_add_wfs:
 
-.. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
+.. figure:: img/connection_wfs.png
    :align: center
 
    Adding a WFS layer
@@ -671,3 +671,25 @@ two and view the attribute table.
    You can find additional WFS servers by using Google or your favourite search
    engine. There are a number of lists with public URLs, some of them maintained
    and some not.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |wcs| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
+.. |wfs| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |wms| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em

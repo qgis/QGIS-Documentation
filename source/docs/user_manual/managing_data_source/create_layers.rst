@@ -52,7 +52,7 @@ be displayed as shown in figure_create_geopackage_.
 
 .. _figure_create_geopackage:
 
-.. figure:: /static/user_manual/managing_data_source/editNewGeoPackage.png
+.. figure:: img/editNewGeoPackage.png
    :align: center
 
    Creating a New GeoPackage layer dialog
@@ -86,7 +86,7 @@ dimensions, as well as the CRS (coordinate reference system).
 
 .. _figure_create_shapefile:
 
-.. figure:: /static/user_manual/managing_data_source/editNewVector.png
+.. figure:: img/editNewVector.png
    :align: center
 
    Creating a new Shapefile layer dialog
@@ -118,7 +118,7 @@ be displayed as shown in Figure_create_spatialite_.
 
 .. _figure_create_spatialite:
 
-.. figure:: /static/user_manual/managing_data_source/editNewSpatialite.png
+.. figure:: img/editNewSpatialite.png
    :align: center
 
    Creating a New SpatiaLite layer dialog
@@ -182,7 +182,7 @@ create a:
 
 .. _figure_create_temporary:
 
-.. figure:: /static/user_manual/managing_data_source/editNewTemporaryLayer.png
+.. figure:: img/editNewTemporaryLayer.png
    :align: center
 
    Creating a new Temporary Scratch layer dialog
@@ -232,7 +232,7 @@ Raster specific parameters
 
 .. _figure_save_raster:
 
-.. figure:: /static/user_manual/managing_data_source/saveasraster.png
+.. figure:: img/saveasraster.png
    :align: center
 
    Saving as a new raster layer
@@ -292,7 +292,7 @@ Depending on the format of export, some of these options are available or not:
 
 .. _figure_save_vector:
 
-.. figure:: /static/user_manual/managing_data_source/saveasvector.png
+.. figure:: img/saveasvector.png
    :align: center
 
    Saving as a new vector layer
@@ -393,7 +393,7 @@ The SQL query will be executed, regardless of the underlying provider of the
 ``airports`` layer, even if this provider does not directly support SQL
 queries.
 
-.. figure:: /static/user_manual/managing_data_source/create_virtual_layers.png
+.. figure:: img/create_virtual_layers.png
    :align: center
 
    Create virtual layers dialog
@@ -542,3 +542,31 @@ Spatial binary predicates like ``ST_Intersects`` are significantly sped up when
 used in conjunction with this spatial index syntax.
 
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |createGPX| image:: /static/common/create_gpx.png
+   :width: 1.5em
+.. |createMemory| image:: /static/common/mActionCreateMemory.png
+   :width: 1.5em
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
+   :width: 1.5em
+.. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -756,3 +756,11 @@ appealing raster of your choice (such as the :guilabel:`DEM` or the
 :guilabel:`slope` raster, for example). Also include the polygon of the closest
 solution area(s), as well as your house. Follow all the best practices for
 cartography in creating your output map.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |LS| replace:: Lesson:

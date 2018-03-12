@@ -441,7 +441,7 @@ where the exact watershed characteristic(s) that were accumulated in the
 accumulated stream source grid vary based on the method being used to determine
 the stream network raster.
 
-.. figure:: /static/user_manual/processing_algs/taudem/streamdrops.jpg
+.. figure:: img/streamdrops.jpg
    :align: center
 
 The constant stream drop "law" was identified by Broscoe (1959). For the science
@@ -824,3 +824,11 @@ Console usage
 
 See also
 ........
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

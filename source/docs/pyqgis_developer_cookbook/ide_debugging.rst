@@ -102,7 +102,7 @@ In Eclipse, create a new project. You can select *General Project* and link
 your real sources later on, so it does not really matter where you place this
 project.
 
-.. figure:: /static/pyqgis_developer_cookbook/eclipsenewproject.png
+.. figure:: img/eclipsenewproject.png
    :align: center
 
    Eclipse project
@@ -136,7 +136,7 @@ stop and you can inspect the current state of your plugin. (The breakpoint is
 the green dot in the image below, set one by double clicking in the white space
 left to the line you want the breakpoint to be set).
 
-.. figure:: /static/pyqgis_developer_cookbook/breakpoint.png
+.. figure:: img/breakpoint.png
    :align: center
 
    Breakpoint
@@ -154,7 +154,7 @@ Choose *PyDev Debug Console*. In case its greyed out and tells you to Start the
 debugger and select the valid frame, make sure that you've got the remote
 debugger attached and are currently on a breakpoint.
 
-.. figure:: /static/pyqgis_developer_cookbook/console-buttons.png
+.. figure:: img/console-buttons.png
    :align: center
 
    PyDev Debug Console
@@ -185,7 +185,7 @@ You will see your configured python interpreter in the upper part of the window
 (at the moment python2.7 for QGIS) and some tabs in the lower part. The
 interesting tabs for us are *Libraries* and *Forced Builtins*.
 
-.. figure:: /static/pyqgis_developer_cookbook/interpreter-libraries.png
+.. figure:: img/interpreter-libraries.png
    :align: center
 
    PyDev Debug Console
@@ -249,5 +249,4 @@ And when the application hits your breakpoint you can type in the console!
 
 **TODO:**
     Add testing information
-
 

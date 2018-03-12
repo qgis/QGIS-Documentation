@@ -270,7 +270,7 @@ people and streets have a logical relationship. To express this relationship,
 we have to define a foreign key that points to the primary key of the streets
 table.
 
-.. image:: /static/training_manual/database_concepts/er-people-streets.png
+.. image:: img/er-people-streets.png
    :align: center
 
 There are two ways to do this:
@@ -405,3 +405,15 @@ scratch.
 -------------------------------------------------------------------------------
 
 Next you'll learn how to use the DBMS to add new data.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png

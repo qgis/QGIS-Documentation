@@ -34,7 +34,7 @@ This algorithm uses spatial indexes on the providers, prepared geometries and
 apply a clipping operation if the geometry isn't wholly contained by the
 mask geometry.
 
-.. figure:: /static/user_manual/processing_algs/qgis/clip.png
+.. figure:: img/clip.png
   :align: center
 
   Clipping operation
@@ -72,7 +72,7 @@ outside the difference layer features are retained.
 
 Attributes are not modified (see warning_difference_).
 
-.. figure:: /static/user_manual/processing_algs/qgis/difference.png
+.. figure:: img/difference.png
   :align: center
 
   Difference operation
@@ -138,7 +138,7 @@ features from both the input and intersection layers
 
 Attributes are not modified (see warning_difference_).
 
-.. figure:: /static/user_manual/processing_algs/qgis/intersection.png
+.. figure:: img/intersection.png
   :align: center
 
   Intersection operation
@@ -182,7 +182,7 @@ Line intersections
 Creates point features where the lines from both layers intersect.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/line_intersection.png
+.. figure:: img/line_intersection.png
   :align: center
 
   Points of intersection
@@ -226,7 +226,7 @@ considered as split points.
 
 Output will contain multi geometries for split features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/split_with_lines.png
+.. figure:: img/split_with_lines.png
   :align: center
 
   Split lines
@@ -259,7 +259,7 @@ from both the input and difference layers.
 
 Attributes are not modified (see warning_difference_).
 
-.. figure:: /static/user_manual/processing_algs/qgis/symmetrical_difference.png
+.. figure:: img/symmetrical_difference.png
   :align: center
 
   Symmetrical difference operation
@@ -298,7 +298,7 @@ input layer for non-overlapping features and attribute values from both input
 layers for overlapping features.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/union.png
+.. figure:: img/union.png
   :align: center
 
   Union operation
@@ -318,3 +318,12 @@ Output
 
 ``Union`` [vector]
   Layer containing the union of the layers
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

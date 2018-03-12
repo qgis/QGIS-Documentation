@@ -30,7 +30,7 @@ suitable plots.
 You should now have a layer showing certain buildings as your solution, for
 example:
 
-.. image:: /static/training_manual/complete_analysis/new_solution_example.png
+.. image:: img/new_solution_example.png
    :align: center
 
 .. note:: If you find that the :guilabel:`Intersect` tool does not produce any
@@ -82,3 +82,16 @@ property to develop.
 -------------------------------------------------------------------------------
 
 Next you will present these results as part of your second assignment.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
+.. |moderate| image:: /static/global/moderate.png

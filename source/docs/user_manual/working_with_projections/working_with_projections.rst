@@ -71,7 +71,7 @@ sessions.
 
 .. _figure_projection_options:
 
-.. figure:: /static/user_manual/working_with_projections/crsdialog.png
+.. figure:: img/crsdialog.png
    :align: center
 
    CRS tab in the QGIS Options Dialog
@@ -138,7 +138,7 @@ layers will be OTF projected to the CRS shown next to the icon.
 
 .. _figure_projection_project:
 
-.. figure:: /static/user_manual/working_with_projections/projectionDialog.png
+.. figure:: img/projectionDialog.png
    :align: center
 
    Project Properties Dialog
@@ -198,7 +198,7 @@ database also contains your spatial bookmarks and other custom data.
 
 .. _figure_projection_custom:
 
-.. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
+.. figure:: img/customProjectionDialog.png
    :align: center
 
    Custom CRS Dialog
@@ -254,3 +254,30 @@ displaying PROJ.4 text describing the source and destination
 transforms. Further information may be found by hovering over a
 transform. User defaults can be saved by selecting
 |radioButtonOn| :guilabel:`Remember selection`.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
+.. |geographic| image:: /static/common/geographic.png
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

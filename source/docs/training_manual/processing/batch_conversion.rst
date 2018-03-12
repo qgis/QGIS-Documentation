@@ -42,4 +42,3 @@ If you select the first option, only the current cell will be filled. If you sel
 The last column sets whether or not to add the resulting layers to the current QGIS project. Leave the default *Yes* option, so you can see your results in this case.
 
 Click on *OK* and the batch process will be run. If everything went fine, all your layers will have been processed, and 3 new layers would have been created.
-

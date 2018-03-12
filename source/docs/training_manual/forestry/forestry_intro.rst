@@ -24,3 +24,11 @@ The general sample data (aerial images, LiDAR data, basic maps) has been obtaine
    deleting and altering GIS datasets. We have provided training datasets for this purpose.
    Before using the techniques described here on your own data, always ensure you have
    proper backups!
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |LS| replace:: Lesson:

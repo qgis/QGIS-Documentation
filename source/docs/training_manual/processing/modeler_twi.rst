@@ -108,4 +108,3 @@ As you can see, the parameters dialog, contain the input that you added to the m
 Run it using the DEM as input and you will get the TWI layer in just one single step.
 
 
-

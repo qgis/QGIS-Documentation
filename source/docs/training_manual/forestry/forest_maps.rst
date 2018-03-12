@@ -57,7 +57,7 @@ Now you can start to add elements to your map canvas. Add first a map element so
 * Click on the :guilabel:`Add New Map` button: |addMap|.
 * Click and drag a box on the canvas so that the map occupies most of it.
 
-.. image:: /static/training_manual/forestry/composer_1.png
+.. image:: img/composer_1.png
    :align: center
 
 Notice how the mouse cursor snaps to the canvas grid. Use this function when you add other elements. If you want to have more accuracy, change the grid :guilabel:`Spacing` setting. If for some reason you don't want to snap to the grid at some point, you can always check or uncheck it in the :menuselection:`View` menu.
@@ -78,7 +78,7 @@ As you can see the background map is already styled. This type of ready to use c
 
 The current styling of the sample plots is not the best, but how does it look in the map composer?:
 
-.. image:: /static/training_manual/forestry/plots_zoom1-2.png
+.. image:: img/plots_zoom1-2.png
    :align: center
 
 While during the last exercises, the white buffer was OK on top of the aerial image, now that the background image is mostly white you barely can see the labels. You can also check how it looks like on the composer:
@@ -97,7 +97,7 @@ Obviously this is not good enough, you want to make the plot numbers as clearly 
 
 You have been working in :doc:`../basic_map/index` with symbology and in :doc:`../vector_classification/index` with labeling. Go back to those modules if you need to refresh about some of the available options and tools. Your goal is to get the plots locations and their name to be as clearly visible as possible but always allowing to see the background map elements. You can take some guidance from this image:
 
-.. image:: /static/training_manual/forestry/plots_zoom2_symbology.png
+.. image:: img/plots_zoom2_symbology.png
    :align: center
 
 You will use later the the green styling of the :kbd:`forest_stands_2012` layer. In order to keep it, and have a visualization of it that shows only the stand borders:
@@ -109,7 +109,7 @@ Now you have two different visualizations of the forest stands and you can decid
 
 Go back to the :guilabel:`Print composer` window often to see what the map would look like. For the purposes of creating detailed maps, you are looking for a symbology that looks good not at the scale of the whole forest area (left image below) but at a closer scale (right image below). Remember to use :guilabel:`Update preview` and :guilabel:`Set to map canvas extent` whenever you change the zoom in your map or the composer.
 
-.. image:: /static/training_manual/forestry/composer_2-3.png
+.. image:: img/composer_2-3.png
    :align: center
 
 |basic| |TY| Create a Basic Map Template
@@ -124,7 +124,7 @@ Once you have a symbology your happy with, you are ready to add some more inform
 
 You have created a similar composition already in :doc:`../map_composer/index`. Go back to that module as you need. You can look at this example image for reference:
 
-.. image:: /static/training_manual/forestry/map_template1.png
+.. image:: img/map_template1.png
    :align: center
 
 Export your map as an image and look at it.
@@ -146,7 +146,7 @@ The overview map will help the field teams place the detail map inside the gener
 * Set the :guilabel:`Overview frame` to :guilabel:`Map 0`. This creates a shadowed rectangle over the smaller map representing the extent visible in the bigger map.
 * Check also the :guilabel:`Frame` option with a black color and a :guilabel:`Thickness` of :kbd:`0.30`.
 
-.. image:: /static/training_manual/forestry/more_elements1.png
+.. image:: img/more_elements1.png
    :align: center
 
 Notice that your overview map is not really giving an overview of the forest area which is what you want. You want this map to represent the whole forest area and you want it to show only the background map and the :kbd:`forest_stands_2012` layer, and not display the sample plots. And also you want to lock its view so it does not change anymore whenever you change the visibility or order of the layers.
@@ -170,7 +170,7 @@ Notice that only the bigger map is displaying the current map view, and the smal
 
 Note also that the overview is showing a shaded frame for the extent shown in the detail map.
 
-.. image:: /static/training_manual/forestry/more_elements2.png
+.. image:: img/more_elements2.png
    :align: center
 
 Your template map is almost ready. Add now two text boxes below the map, one containing the text 'Detailed map zone: ' and the other one 'Remarks: '. Place them as you can see in the image above.
@@ -192,7 +192,7 @@ The basic map composer is ready, now you want to make use of the Atlas tool to g
 
 The Atlas coverage is just a vector layer that will be used to generate the detail maps, one map for every feature in the coverage. To get an idea of what you will do next, here is a full set of detail maps for the forest area:
 
-.. image:: /static/training_manual/forestry/preview_atlas_results.png
+.. image:: img/preview_atlas_results.png
    :align: center
 
 The coverage could be any existing layer, but usually it makes more sense to create one for the specific purpose. Let's create a grid of polygons covering the forest area:
@@ -200,7 +200,7 @@ The coverage could be any existing layer, but usually it makes more sense to cre
 * In the QGIS map view, open :menuselection:`Vector --> Research Tools --> Vector grid`.
 * Set the tool as shown in this image:
 
-.. image:: /static/training_manual/forestry/coverage_polygons.png
+.. image:: img/coverage_polygons.png
    :align: center
 
 * Save the output as :kbd:`atlas_coverage.shp`.
@@ -208,7 +208,7 @@ The coverage could be any existing layer, but usually it makes more sense to cre
 
 The new polygons are covering the whole forest area and they give you an idea of what each map (created from each polygon) will contain.
 
-.. image:: /static/training_manual/forestry/atlas_coverage.png
+.. image:: img/atlas_coverage.png
    :align: center
 
 |basic| |FA| Setting Up the Atlas Tool
@@ -220,7 +220,7 @@ The last step is to set up the Atlas tool:
 * In the panel on the right, go to the :guilabel:`Atlas generation` tab.
 * Set the options as follows:
 
-.. image:: /static/training_manual/forestry/atlas_settings.png
+.. image:: img/atlas_settings.png
    :align: center
 
 That tells the Atlas tool to use the features (polygons) inside :kbd:`atlas_coverage` as the focus for every detail map. It will output one map for every feature in the layer. The :guilabel:`Hidden coverage layer` tells the Atlas to not show the polygons in the output maps.
@@ -232,7 +232,7 @@ One more thing needs to be done. You need to tell the Atlas tool what map elemen
 * In the list, check :guilabel:`Controlled by atlas`.
 * And set the :guilabel:`Marging around feature` to :kbd:`10%`. The view extent will be 10% bigger than the polygons, which means that your detail maps will have a 10% overlap.
 
-.. image:: /static/training_manual/forestry/controlled_by_atlas.png
+.. image:: img/controlled_by_atlas.png
    :align: center
 
 Now you can use the preview tool for Atlas maps to review what your maps will look like:
@@ -253,7 +253,7 @@ Besides removing the polygons for those areas that are not interesting, you can 
 * Remove the selected polygons.
 * Disable editing and save the edits.
 
-.. image:: /static/training_manual/forestry/remove_polygons.png
+.. image:: img/remove_polygons.png
    :align: center
 
 You can go back to the :guilabel:`Print Composer` and check that the previews of the Atlas use only the polygons you left in the layer.
@@ -304,7 +304,7 @@ Do the same for the labels with the text :kbd:`Remarks:` using the field with
 the zone information. You can leave a break line before you enter the expression.
 You can see the result for the preview of zone 2 in the image below:
 
-.. image:: /static/training_manual/forestry/preview_zone2.png
+.. image:: img/preview_zone2.png
    :align: center
 
 Use the Atlas preview to browse through all the maps you will be creating soon
@@ -334,7 +334,7 @@ You could just as easily create separate images for every map (remember to
 uncheck the single file creation), here you can see the thumbnails of the
 images that would be created:
 
-.. image:: /static/training_manual/forestry/maps_as_images.png
+.. image:: img/maps_as_images.png
    :align: center
 
 In the :guilabel:`Print Composer`, save your map as a composer template as
@@ -360,3 +360,26 @@ you just saved.
 In the next lesson, you will see how you can use LiDAR data to create a DEM and
 then use it to your enhance your data and maps visibility.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |addImage| image:: /static/common/mActionAddImage.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |atlas| image:: /static/common/mIconAtlas.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |select| image:: /static/common/mActionSelect.png
+   :width: 1.5em

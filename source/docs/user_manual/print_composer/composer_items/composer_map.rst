@@ -56,7 +56,7 @@ panel provides the following functionalities (see figure_composer_map_):
 
 .. _Figure_composer_map:
 
-.. figure:: /static/user_manual/print_composer/map_mainproperties.png
+.. figure:: img/map_mainproperties.png
    :align: center
 
    Map Item Properties Panel
@@ -81,7 +81,7 @@ functionality (see figure_composer_map_layers_):
 
 .. _Figure_composer_map_layers:
 
-.. figure:: /static/user_manual/print_composer/map_layers.png
+.. figure:: img/map_layers.png
    :align: center
 
    Map Layers Dialog
@@ -134,7 +134,7 @@ functionalities (see figure_composer_map_extents_):
 
 .. _Figure_composer_map_extents:
 
-.. figure:: /static/user_manual/print_composer/map_extents.png
+.. figure:: img/map_extents.png
    :align: center
 
    Map Extents Dialog
@@ -169,7 +169,7 @@ When you double-click the added grid you can give it another name.
 
 .. _Figure_composer_map_grid:
 
-.. figure:: /static/user_manual/print_composer/map_grids.png
+.. figure:: img/map_grids.png
    :align: center
 
    Map Grids Dialog
@@ -180,7 +180,7 @@ to provide a lot of configuration options, see Figure_composer_map_grid_draw_.
 
 .. _Figure_composer_map_grid_draw:
 
-.. figure:: /static/user_manual/print_composer/map_draw_grid.png
+.. figure:: img/map_draw_grid.png
    :align: center
 
    Draw Grid Dialog
@@ -196,7 +196,7 @@ and the width used for the cross or line grid type.
 
 .. _Figure_composer_map_frame:
 
-.. figure:: /static/user_manual/print_composer/map_grid_frame.png
+.. figure:: img/map_grid_frame.png
    :align: center
 
    Grid Frame Dialog
@@ -226,7 +226,7 @@ and the width used for the cross or line grid type.
 
 .. _Figure_composer_map_coord:
 
-.. figure:: /static/user_manual/print_composer/map_grid_draw_coordinates.png
+.. figure:: img/map_grid_draw_coordinates.png
    :align: center
 
    Grid Draw Coordinates dialog
@@ -240,7 +240,7 @@ provides the following functionalities:
 
 .. _Figure_composer_map_overview:
 
-.. figure:: /static/user_manual/print_composer/map_overview.png
+.. figure:: img/map_overview.png
    :align: center
 
    Map Overviews Dialog
@@ -275,3 +275,41 @@ When you select the overview item in the list you can customize it.
 * The |checkbox| :guilabel:`Center on overview` puts the extent of the overview
   frame in the center of the overview map. You can only activate one overview
   item to center, when you have added several overviews.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
+   :width: 1.5em
+.. |select| image:: /static/common/mActionSelect.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |showMapTheme| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |unlocked| image:: /static/common/unlocked.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
