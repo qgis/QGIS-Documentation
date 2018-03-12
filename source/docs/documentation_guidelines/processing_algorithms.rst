@@ -23,7 +23,7 @@ guidelines:
 * it is **extremely** important that each algorithm has an *anchor* that corresponds
   to the provider name + the unique name of the algorithm itself. This allows the
   Help button to open the Help page to the correct section. The anchor should be
-  placed **above** the title, e.g.::
+  placed **above** the title, e.g. (see also the :ref:`my_anchor` section)::
 
     .. _qgisvoronoipolygons:
 
@@ -33,23 +33,26 @@ guidelines:
   To find out the algorithm name you can just hover the mouse on the algorithm in
   the Processing toolbox.
 
-* avoid use "This algoritm does this and that..." as first sentence in algorithm
-  description. Try to use more general words like in TauDEM or GRASS algoritms
+* avoid use "This algorithm does this and that..." as first sentence in algorithm
+  description. Try to use more general words like in TauDEM or GRASS algorithms
   help
 
-* add images if needed. Use PNG format and follow general guidelines for documentation.
+* add images! A picture is worth a thousand words! Use PNG format and follow general
+  guidelines for documentation (see the :ref:`image` section for more info).
   Put the picture in the correct folder: it depends on the provider, e.g. for QGIS::
 
-    /static/user_manual/processing_algs/qgis/myPicture.png
+    /resources/user_manual/processing_algs/qgis/myPicture.png
 
 * if necessary add links to additional information (e.g. publications or web-pages)
-  to the "See also" section
+  to the "See also" section. Only add the "See also" section if there is really
+  something to see. As a good practice, the "See also" section can be filled
+  with links to similar algorithms.
 
 * give clear explanation for algorithm parameters and outputs (again GRASS and
   TauDEM are good examples).
 
-* don't edit parameter or output names. If you found typo or wrong spelling ---
-  report this in bugracker, so developers can fix this in Processing code too
+* don't edit parameter or output names. If you found typo or wrong spelling use
+``Fix me`` button at the end of the web-page and submit a Pull Request.
 
 * avoid to duplicate algorithm options detailed description: choose whether to
   describe it in the algorithm description or in the in the parameter description
@@ -60,10 +63,10 @@ guidelines:
 
 * add the default value if the parameter in *italic*, e.g.::
 
-  ``Number of points`` [number]
-    Number of point to create
+    ``Number of points`` [number]
+      Number of point to create
 
-    Default: *1*
+      Default: *1*
 
 * it should be also described the *type* of the parameters. There several types
   available but avoid to invent new ones and pick one of these:
