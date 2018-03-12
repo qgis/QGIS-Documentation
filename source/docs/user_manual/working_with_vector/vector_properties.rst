@@ -1991,15 +1991,6 @@ The available widgets are:
 * **Web View**: Field contains a URL. The width and height of the field is variable.
 
 
-.. note::
-
-   QGIS has an advanced 'hidden' option to define your own field
-   widget using python and add it to this impressive list of widgets.
-   It is tricky but it is very well explained in following excellent blog that
-   explains how to create a real time validation widget that can be used like
-   described widgets.
-   See http://blog.vitu.ch/10142013-1847/write-your-own-qgis-form-elements
-
 .. tip:: **Relative Path in widgets**
 
    If the path which is selected with the file browser is located in the same
