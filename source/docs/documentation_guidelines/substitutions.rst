@@ -515,6 +515,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |attributes| image:: /static/common/attributes.png
    :width: 2em
+.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
+   :width: 1.5em
 .. |basicStatistics| image:: /static/common/basic_statistics.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
@@ -991,8 +993,6 @@ Icon                            Substitution                        Icon        
 .. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
-.. |selectCreateLayer| image:: /static/common/selectcreatelayer.png
-   :width: 1.5em
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |selectLocation| image:: /static/common/select_location.png
@@ -1007,8 +1007,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |selectSubsetLayer| image:: /static/common/selectsubsetlayer.png
-   :width: 1.5em
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
@@ -1043,8 +1041,6 @@ Icon                            Substitution                        Icon        
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
-   :width: 1.5em
-.. |spatialQuery| image:: /static/common/spatialquery.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em

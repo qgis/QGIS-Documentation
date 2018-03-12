@@ -134,7 +134,7 @@ subset will prevent you from editing the layer.
 
 .. _figure_vector_general:
 
-.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
+.. figure:: img/vector_general_menu.png
    :align: center
 
    Source tab in vector layers properties dialog
@@ -1659,7 +1659,7 @@ or of the layer tree.
 
 .. _figure_diagrams_attributes:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
+.. figure:: img/diagram_tab.png
    :align: center
 
    Diagram properties  - Attributes tab
@@ -1688,7 +1688,7 @@ In this tab, you can also manage the diagram visibility:
 
 .. _figure_diagrams_appearance:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
+.. figure:: img/diagram_tab_appearance.png
    :align: center
 
    Diagram properties - Appearance tab
@@ -1710,7 +1710,7 @@ You can use :
 
 .. _figure_diagrams_size:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
+.. figure:: img/diagram_tab_size.png
    :align: center
 
    Diagram properties - Size tab
@@ -1743,7 +1743,7 @@ the **Priority** slider or the **z-index** value.
 
 .. _figure_diagrams_placement:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
+.. figure:: img/diagram_tab_placement.png
    :align: center
 
    Vector properties dialog with diagram properties, Placement tab
@@ -1810,7 +1810,7 @@ Both vector layers are part of the QGIS sample dataset (see section
 
 .. _figure_diagrams_mapped:
 
-.. figure:: /static/user_manual/working_with_vector/climate_diagram.png
+.. figure:: img/climate_diagram.png
    :align: center
    :width: 25em
 
@@ -2208,7 +2208,7 @@ data source doesn't even need to be editable!
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tab.png
+.. figure:: img/auxiliary_storage_tab.png
    :align: center
 
    Auxiliary Storage tab
@@ -2231,7 +2231,7 @@ uniquely identified):
 
 .. _figure_auxiliary_layer_creation:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_key.png
+.. figure:: img/auxiliary_storage_key.png
    :align: center
 
    Auxiliary Layer creation dialog
@@ -2240,7 +2240,7 @@ uniquely identified):
 As soon as an auxiliary layer is configured for the current data source, you can
 retrieve its information in the tab:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tabkey.png
+.. figure:: img/auxiliary_storage_tabkey.png
    :align: center
 
    Auxiliary Layer key
@@ -2258,7 +2258,7 @@ map tool is activated, then we're able to update styling properties like sizes,
 colors and so on. Then, the corresponding data-defined properties are created
 and can be retrieved:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_fields.png
+.. figure:: img/auxiliary_storage_fields.png
    :align: center
 
    Auxiliary Fields
@@ -2275,7 +2275,7 @@ By the way, considering that auxiliary fields are linked to data-defined
 properties, we can observe that data-defined override options are setup
 correctly because of the icon |dataDefineOn| in the labeling tab:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_dd.png
+.. figure:: img/auxiliary_storage_dd.png
    :align: center
 
    Data-defined properties automatically created
@@ -2298,7 +2298,7 @@ stylize symbols too. To do this, you just have to click on
 :guilabel:`Store data in the project` for a specific symbol property. For
 example for the :guilabel:`Fill color` field:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol.png
+.. figure:: img/auxiliary_storage_symbol.png
    :align: center
 
    Data-defined property menu for symbol
@@ -2310,7 +2310,7 @@ each setting requires a unique name to avoid conflict. Thus, by clicking on
 :guilabel:`Type` of the field and providing a way to give the unique name. For
 the :guilabel:`Fill color` field, the next window is opened:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_name.png
+.. figure:: img/auxiliary_storage_symbol_name.png
    :align: center
 
    Name of the auxiliary field for a symbol
@@ -2319,7 +2319,7 @@ the :guilabel:`Fill color` field, the next window is opened:
 Once created, the auxiliary field can be retrieved in the auxiliary storage
 tab:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_field.png
+.. figure:: img/auxiliary_storage_symbol_field.png
    :align: center
 
    Auxiliary field symbol
@@ -2343,7 +2343,7 @@ widget **Color** set by default.
 
 Then, the underlying form will look like the next figure:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_widgets.png
+.. figure:: img/auxiliary_storage_widgets.png
    :align: center
 
    Form with auxiliary fields
@@ -2355,7 +2355,7 @@ Management
 Some actions are available to manage auxiliary layers thanks to the next
 combobox:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_actions.png
+.. figure:: img/auxiliary_storage_actions.png
    :align: center
 
    Auxiliary layer management
@@ -2836,7 +2836,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_server_vector:
 
-.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
+.. figure:: img/vector_metadata_tab.png
    :align: center
 
    QGIS Server tab in vector layers properties dialog
@@ -2864,6 +2864,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |attributes| image:: /static/common/attributes.png
    :width: 2em
+.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
+   :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png

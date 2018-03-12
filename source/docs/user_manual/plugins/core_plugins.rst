@@ -66,8 +66,6 @@ Icon                    Plugin                        Description               
    :width: 1.5em
 .. |rasterInfo| image:: /static/common/raster-info.png
    :width: 1.5em
-.. |spatialQuery| image:: /static/common/spatialquery.png
-   :width: 1.5em
 .. |topologyChecker| image:: /static/common/topol.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

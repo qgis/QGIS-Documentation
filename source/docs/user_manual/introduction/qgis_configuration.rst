@@ -739,7 +739,7 @@ dialog described above.
 
 .. _figure_macro_tab:
 
-.. figure:: /static/user_manual/introduction/macro.png
+.. figure:: img/macro.png
    :align: center
 
    Macro settings in QGIS
@@ -859,8 +859,6 @@ and **[Load]** them into another QGIS installation.
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
-   :width: 1.5em
-.. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em

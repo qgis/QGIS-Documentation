@@ -19,7 +19,7 @@ Create grid
 Creates a vector layer with a grid covering a given extent. Grid cells can have
 different shapes:
 
-.. figure:: /static/user_manual/processing_algs/qgis/create_grid.png
+.. figure:: img/create_grid.png
   :align: center
 
   Different grid cell shapes
@@ -130,7 +130,7 @@ Generates a point vector layer from an input raster and line layer.
 The points correspond to the pixel centroids that intersect the line layer
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/points_centroids.png
+.. figure:: img/points_centroids.png
   :align: center
 
   Points of the pixel centroids
@@ -161,7 +161,7 @@ Generates a point vector layer from an input raster and polygon layer.
 The points correspond to the pixel centroids that intersect the polygon layer
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/points_centroids_polygon.png
+.. figure:: img/points_centroids_polygon.png
   :align: center
 
   Points of the pixel centroids

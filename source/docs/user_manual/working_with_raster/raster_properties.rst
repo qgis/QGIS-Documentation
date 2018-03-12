@@ -366,7 +366,7 @@ you have chosen the :guilabel:`Min/max options`.
 
 .. _figure_raster_histogram:
 
-.. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
+.. figure:: img/rasterHistogram.png
    :align: center
 
    Raster Histogram

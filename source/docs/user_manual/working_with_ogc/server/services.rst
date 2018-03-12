@@ -741,7 +741,7 @@ Contest based legend features are based on the
 * **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
   feature count of the features like in the following image:
 
-  .. figure:: /static/user_manual/working_with_ogc/getfeaturecount_legend.png
+  .. figure:: img/getfeaturecount_legend.png
     :align: center
 
 GetProjectSettings

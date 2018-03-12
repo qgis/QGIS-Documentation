@@ -229,8 +229,6 @@ rst_prolog = """
 # Substitutions below are sorted and should be in lowerCamelCase
 # NOTE that for inline images (like button and menu icons inline in text) you HAVE TO make a substitution
 # so ONLY use common for this kind of images
-.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
-   :width: 1.5em
 
 # rst_epilog = ""
 

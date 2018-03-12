@@ -879,7 +879,7 @@ Additional fields are added to the vertices indicating the vertex index (beginni
 the feature’s part and its index within the part (as well as its ring for polygons),
 distance along original geometry and bisector angle of vertex for original geometry.
 
-.. figure:: /static/user_manual/processing_algs/qgis/extract_nodes.png
+.. figure:: img/extract_nodes.png
    :align: center
 
    Vertices extracted for line and polygon layer
