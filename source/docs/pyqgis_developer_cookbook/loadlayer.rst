@@ -72,7 +72,7 @@ providers:
   pair: Loading; PostGIS layers
 
 * PostGIS database --- data source is a string with all information needed to
-  create a connection to PostgreSQL database. ``QgsDataSourceUri`` class
+  create a connection to PostgreSQL database. :class:`QgsDataSourceUri` class
   can generate this string for you. Note that QGIS has to be compiled with
   Postgres support, otherwise this provider isn't available:
 
@@ -128,7 +128,7 @@ providers:
   pair: Loading; SpatiaLite layers
 
 * SpatiaLite database --- Similarly to PostGIS databases,
-  ``QgsDataSourceUri`` can be used for generation of data
+  :class:`QgsDataSourceUri` can be used for generation of data
   source identifier:
 
   .. code-block:: python
@@ -275,4 +275,4 @@ For a list of loaded layers and layer ids, use:
 
 .. code-block:: python
 
-    QgsMapLayQgsProjecterRegistry.instance().mapLayers()
+    QgsProject.instance().mapLayers()
