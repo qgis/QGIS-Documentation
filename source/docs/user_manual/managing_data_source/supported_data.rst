@@ -99,15 +99,15 @@ Use these steps to create the index:
 *  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
    :menuselection:`Properties` from the context menu.
-*  In the :guilabel:`General` tab, click the **[Create Spatial Index]** button.
+*  In the :guilabel:`Source` tab, click the **[Create Spatial Index]** button.
 
 **Problem loading a shape .prj file**
 
 If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
 coordinate reference system from that file, you will need to define the proper
-projection manually within the :guilabel:`General` tab of the
-:guilabel:`Layer Properties` dialog of the layer by clicking the
-**[Specify...]**  button. This is due to the fact that :file:`.prj` files
+projection manually within the :menuselection:`Layer Properties --> Source` tab
+of the layer by clicking the |setProjection| :sup:`Select CRS` button.
+This is due to the fact that :file:`.prj` files
 often do not provide the complete projection parameters as used in QGIS and
 listed in the :guilabel:`CRS` dialog.
 
@@ -572,7 +572,6 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
 	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -589,4 +588,6 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

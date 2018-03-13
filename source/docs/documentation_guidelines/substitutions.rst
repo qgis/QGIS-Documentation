@@ -266,6 +266,7 @@ Icon                         Substitution                     Icon              
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |formView|               ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
+|attributes|                 ``|attributes|``                 \                        \
 ============================ ===============================  =======================  ===========================
 
 
@@ -317,11 +318,13 @@ Layer Properties
 Icon                                Substitution                            Icon                           Substitution
 ==================================  ======================================  =============================  ================================
 |symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
-|attributes|                        ``|attributes|``                        |general|                      ``|general|``
+|sourceFields|                      ``|sourceFields|``                      |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |mapTips|                           ``|mapTips|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
-|legend|                            ``|legend|``                            |dependencies|                            ``|dependencies|``
+|legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
+|3d|                                ``|3d|``                                |system|                       ``|system|``
+|editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
@@ -440,6 +443,8 @@ Icon                            Substitution                        Icon        
    source folder.
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
+   :width: 1.5em
+.. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
@@ -634,6 +639,8 @@ Icon                            Substitution                        Icon        
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
@@ -912,6 +919,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |pan| image:: /static/common/mActionPan.png
@@ -1042,6 +1051,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitLayer| image:: /static/common/split_layer.png
@@ -1066,6 +1077,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |tab| image:: /static/common/tab.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png

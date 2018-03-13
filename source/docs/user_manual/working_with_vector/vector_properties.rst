@@ -40,13 +40,31 @@ from the pop-up menu.
    project file and to avoid changes that may break this behavior, the layer
    properties dialog is made unavailable for these layers.
 
-.. _vectorgeneralmenu:
+
+.. _vectorinformationmenu:
+
+Information Properties
+======================
+
+|metadata| The :guilabel:`Information` tab is read-only and represents an interesting
+place to quickly grab summarized information and metadata on the current layer.
+Provided information are :
+
+* based on the provider of the layer (format of storage, path, geometry type
+  encoding, extent...);
+* picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
+  contacts, history...) ;
+* or related to its geometry (spatial extent, CRS...) or its attributes (number
+  of fields, characteristics of each...)
+
+
+.. _vectorsourcemenu:
 
 Source Properties
-==================
+=================
 
-|general| Use this tab to make general settings for the vector layer.
-There are several options available:
+|system| Use this tab to define general settings for the vector layer.
+Available options are:
 
 Settings
 --------
@@ -82,7 +100,7 @@ active, only the features corresponding to its result are available in the
 project. The query result can be saved as a new vector layer.
 
 The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`General` tab in the Layer Properties. Under :guilabel:`Feature
+the :guilabel:`Source` tab in the Layer Properties. Under :guilabel:`Feature
 subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
 builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
 field, you could select only regions that are ``borough`` in the
@@ -1862,7 +1880,7 @@ See :ref:`data_defined_labeling` for more information.
 Source Fields Properties
 ========================
 
-|attributes| The :guilabel:`Source Fields` tab helps you organize the fields of
+|sourceFields| The :guilabel:`Source Fields` tab helps you organize the fields of
 the selected dataset and the way you can interact with
 the feature's attributes. The buttons |newAttribute|
 :sup:`New field` and |deleteAttribute| :sup:`Delete field`
@@ -1903,7 +1921,7 @@ Attributes Form Properties
 Configure the field behavior
 ----------------------------
 
-The :guilabel:`Attributes Form` tab helps you set the
+|formView| The :guilabel:`Attributes Form` tab helps you set the
 type of widget used to fill or display values of the field, in the attribute
 table or the feature form: you can define how user interacts with each field
 and the values or range of values that are allowed to be added to each.
@@ -2794,6 +2812,36 @@ More information on variables usage in the General Tools
 :ref:`general_tools_variables` sectionf.
 
 
+.. index:: Metadata, Metadata editor, Keyword
+.. _vectormetadatamenu:
+
+Metadata Properties
+===================
+
+|editMetadata| The :guilabel:`Metadata` tab provides you with options to create
+and edit a metadata report on your layer. Information to fill concern:
+
+* the :guilabel:`Data identification`: basic attribution of the dataset (parent,
+  identifier, title, abstract, language...);
+* the :guilabel:`Categories` the data belongs to. Alongside the **ISO** categories,
+  you can add custom ones;
+* the :guilabel:`Keywords` to retrieve the data and associated concepts following
+  a standard based vocabulary;
+* the :guilabel:`Access` to the dataset (licenses, rights, fees, and constraints);
+* the :guilabel:`Extent` of the dataset, either spatial one (CRS, map extent,
+  altitudes) or temporal;
+* the :guilabel:`Contact` of the owner(s) of the dataset;
+* the :guilabel:`Links` to ancillary resources and related information;
+* the :guilabel:`History` of the dataset.
+
+A summary of the filled information is provided in the :guilabel:`Validation`
+tab and helps you identify potential issues related to the form. You can then
+either fix them or ignore them.
+
+Metadata are currently saved in the project file. It can also be saved as an
+:file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
+database for remote layers (e.g. PostGIS).
+
 .. index:: Legend, Embedded widget
 .. _vectorlegendmenu:
 
@@ -2817,7 +2865,7 @@ they manage.
 QGIS Server Properties
 ======================
 
-|metadata| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+|overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
 and :guilabel:`Properties` sections.
 
@@ -2872,8 +2920,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
-.. |attributes| image:: /static/common/attributes.png
-   :width: 2em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
@@ -2896,10 +2942,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |general| image:: /static/common/general.png
-   :width: 2em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
@@ -2938,6 +2986,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
@@ -2973,8 +3023,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |slider| image:: /static/common/slider.png
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
