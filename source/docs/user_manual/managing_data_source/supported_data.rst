@@ -572,7 +572,6 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
 	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -589,4 +588,6 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

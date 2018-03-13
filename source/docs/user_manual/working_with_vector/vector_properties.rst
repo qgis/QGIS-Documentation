@@ -2901,8 +2901,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
-.. |attributes| image:: /static/common/attributes.png
-   :width: 2em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
@@ -2925,10 +2923,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |general| image:: /static/common/general.png
-   :width: 2em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
@@ -2967,6 +2967,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
@@ -3002,8 +3004,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |slider| image:: /static/common/slider.png
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

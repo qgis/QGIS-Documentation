@@ -444,6 +444,8 @@ Icon                            Substitution                        Icon        
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
@@ -637,6 +639,8 @@ Icon                            Substitution                        Icon        
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
@@ -915,6 +919,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |pan| image:: /static/common/mActionPan.png
@@ -1045,6 +1051,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitLayer| image:: /static/common/split_layer.png
@@ -1069,6 +1077,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |tab| image:: /static/common/tab.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
