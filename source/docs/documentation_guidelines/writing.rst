@@ -655,3 +655,17 @@ Here an example of an existing algorithm to help you with the layout and the des
     ``Count`` [vector: polygon]
       Resulting layer with the attribute table containing the new column of the
       points count.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |win| image:: /static/common/win.png
+   :width: 1em
