@@ -31,7 +31,7 @@ There are several tabs in the dialog:
 
 .. _figure_raster_properties:
 
-.. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
+.. figure:: img/rasterPropertiesDialog.png
    :align: center
 
    Raster Layers Properties Dialog
@@ -112,7 +112,7 @@ to MinMax' and 'Clip to min max'.
 
 .. _figure_raster_multiband:
 
-.. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
+.. figure:: img/rasterMultibandColor.png
    :align: center
 
    Raster Style - Multiband color rendering
@@ -161,7 +161,7 @@ The label appears in the legend of the raster layer then.
 
 .. _figure_raster_paletted:
 
-.. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
+.. figure:: img/rasterPaletted.png
    :align: center
 
    Raster Style - Paletted Rendering
@@ -187,7 +187,7 @@ the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 
 .. _figure_raster_gray:
 
-.. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
+.. figure:: img/rasterSingleBandGray.png
    :align: center
 
    Raster Style - Singleband gray rendering
@@ -216,7 +216,7 @@ You can also create individual color maps for the single bands here.
 
 .. _figure_raster_pseudocolor:
 
-.. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
+.. figure:: img/rasterSingleBandPseudocolor.png
    :align: center
 
    Raster Style - Singleband pseudocolor rendering
@@ -287,7 +287,7 @@ matrix through a geometric transformation.
 
 .. _figure_raster_resampling:
 
-.. figure:: /static/user_manual/working_with_raster/rasterRenderAndRessampling.png
+.. figure:: img/rasterRenderAndRessampling.png
    :align: center
 
    Raster Style - Color rendering and Resampling settings
@@ -366,7 +366,7 @@ you have chosen the :guilabel:`Min/max options`.
 
 .. _figure_raster_histogram:
 
-.. figure:: /static/user_manual/working_with_raster/rasterHistogram.png
+.. figure:: img/rasterHistogram.png
    :align: center
 
    Raster Histogram
@@ -432,7 +432,7 @@ Finally, click **[Build pyramids]** to start the process.
 
 .. _figure_raster_pyramids:
 
-.. figure:: /static/user_manual/working_with_raster/rasterPyramids.png
+.. figure:: img/rasterPyramids.png
    :align: center
 
    Raster Pyramids
@@ -470,7 +470,44 @@ collected.
 
 .. _figure_raster_metadata:
 
-.. figure:: /static/user_manual/working_with_raster/rasterMetadata.png
+.. figure:: img/rasterMetadata.png
    :align: center
 
    QGIS Server in Raster Properties
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |slider| image:: /static/common/slider.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

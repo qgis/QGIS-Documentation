@@ -93,7 +93,7 @@ and Operators sections help you to construct the SQL-like query.
 
 .. _figure_vector_querybuilder:
 
-.. figure:: /static/user_manual/working_with_vector/queryBuilder.png
+.. figure:: img/queryBuilder.png
    :align: center
 
    Query Builder
@@ -134,7 +134,7 @@ subset will prevent you from editing the layer.
 
 .. _figure_vector_general:
 
-.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
+.. figure:: img/vector_general_menu.png
    :align: center
 
    Source tab in vector layers properties dialog
@@ -213,7 +213,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
 .. _figure_single_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
+.. figure:: img/singlesymbol_ng_line.png
    :align: center
 
    Single symbol line properties
@@ -313,7 +313,7 @@ for the rivers layer of the QGIS sample dataset.
 
 .. _figure_categorized_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
+.. figure:: img/categorysymbol_ng_line.png
    :align: center
 
    Categorized Symbolizing options
@@ -402,7 +402,7 @@ the rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
+.. figure:: img/graduatesymbol_ng_line.png
    :align: center
 
    Graduated Symbolizing options
@@ -442,7 +442,7 @@ to help you define size expression.
 
 .. _figure_symbology_size_assistant:
 
-.. figure:: /static/user_manual/working_with_vector/varying_size_assistant.png
+.. figure:: img/varying_size_assistant.png
    :align: center
 
    Varying size assistant
@@ -489,7 +489,7 @@ are also available in the print composer legend item.
 
 .. _figure_symbology_multivariate:
 
-.. figure:: /static/user_manual/working_with_vector/multivariate_example.png
+.. figure:: img/multivariate_example.png
    :align: center
 
    Multivariate example
@@ -532,7 +532,7 @@ dialog for the rivers layer of the QGIS sample dataset.
 
 .. _figure_rule_based_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
+.. figure:: img/rulesymbol_ng_line.png
    :align: center
 
    Rule-based Symbolizing options
@@ -551,7 +551,7 @@ around one center symbol or on several concentric circles.
 
 .. _figure_displacement_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/poi_displacement.png
+.. figure:: img/poi_displacement.png
    :align: center
 
    Point displacement dialog
@@ -590,7 +590,7 @@ From the main dialog, you can:
 
 .. _figure_cluster_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/cluster_symbol.png
+.. figure:: img/cluster_symbol.png
    :align: center
 
    Point Cluster dialog
@@ -615,7 +615,7 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5D renderer.
 
 .. _figure_inverted_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/inverted_polygon_symbol.png
+.. figure:: img/inverted_polygon_symbol.png
    :align: center
 
    Inverted Polygon dialog
@@ -637,7 +637,7 @@ the heatmap renderer updates the heatmap style automatically.
 
 .. _figure_heatmap_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/heatmap_symbol.png
+.. figure:: img/heatmap_symbol.png
    :align: center
 
    Heatmap dialog
@@ -663,7 +663,7 @@ units).
 
 .. _figure_25d_symbology:
 
-.. figure:: /static/user_manual/working_with_vector/2_5dsymbol.png
+.. figure:: img/2_5dsymbol.png
    :align: center
 
    2.5D dialog
@@ -723,7 +723,7 @@ features of the layer:
 
 .. _figure_layer_rendering:
 
-.. figure:: /static/user_manual/working_with_vector/layer_rendering_options.png
+.. figure:: img/layer_rendering_options.png
    :align: center
 
    Layer rendering options
@@ -757,7 +757,7 @@ higher values are drawn last, on top of the others.
 
 .. _figure_symbol_levels:
 
-.. figure:: /static/user_manual/working_with_vector/symbol_levels.png
+.. figure:: img/symbol_levels.png
    :align: center
 
    Symbol levels dialog
@@ -771,7 +771,7 @@ higher values are drawn last, on top of the others.
 
 .. _figure_symbol_levels_example:
 
-.. figure:: /static/user_manual/working_with_vector/symbol_levels_examples.png
+.. figure:: img/symbol_levels_examples.png
    :align: center
 
    Symbol levels activated (A) and deactivated (B) difference
@@ -802,7 +802,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_source:
 
-  .. figure:: /static/user_manual/working_with_vector/source.png
+  .. figure:: img/source.png
      :align: center
 
      Draw Effects: Source dialog
@@ -813,7 +813,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_blur:
 
-  .. figure:: /static/user_manual/working_with_vector/blur.png
+  .. figure:: img/blur.png
      :align: center
 
      Draw Effects: Blur dialog
@@ -829,7 +829,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_colorize:
 
-  .. figure:: /static/user_manual/working_with_vector/colorise.png
+  .. figure:: img/colorise.png
      :align: center
 
      Draw Effects: Colorize dialog
@@ -843,7 +843,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_drop_shadow:
 
-  .. figure:: /static/user_manual/working_with_vector/drop_shadow.png
+  .. figure:: img/drop_shadow.png
      :align: center
 
      Draw Effects: Drop Shadow dialog
@@ -855,7 +855,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_inner_shadow:
 
-  .. figure:: /static/user_manual/working_with_vector/inner_shadow.png
+  .. figure:: img/inner_shadow.png
      :align: center
 
      Draw Effects: Inner Shadow dialog
@@ -869,7 +869,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_inner_glow:
 
-  .. figure:: /static/user_manual/working_with_vector/inner_glow.png
+  .. figure:: img/inner_glow.png
      :align: center
 
      Draw Effects: Inner Glow dialog
@@ -881,7 +881,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_outer_glow:
 
-  .. figure:: /static/user_manual/working_with_vector/outer_glow.png
+  .. figure:: img/outer_glow.png
      :align: center
 
      Draw Effects: Outer Glow dialog
@@ -900,7 +900,7 @@ effect types, with custom options are available:
 
   .. _figure_effects_transform:
 
-  .. figure:: /static/user_manual/working_with_vector/transform.png
+  .. figure:: img/transform.png
      :align: center
 
      Draw Effects: Transform dialog
@@ -912,7 +912,7 @@ effects except for the transform one.
 
 One or more draw effects can used at the same time. You activate/deactivate an effect
 using its checkbox in the effects list. You can change the selected effect type by
-using the |selectstring| :guilabel:`Effect type` option. You can reorder the effects
+using the |selectString| :guilabel:`Effect type` option. You can reorder the effects
 using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
 buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
 and |signMinus| :sup:`Remove effect` buttons.
@@ -973,7 +973,7 @@ the drop-down menus - see :ref:`data_defined_labeling` for a use case.
 
 .. _figure_labels:
 
-.. figure:: /static/user_manual/working_with_vector/label_menu_text.png
+.. figure:: img/label_menu_text.png
    :align: center
 
    Layer labeling settings - Text tab
@@ -1164,7 +1164,7 @@ angle between curved characters` when selecting the |radioButtonOff|
 
 .. _figure_labels_placement_line:
 
-.. figure:: /static/user_manual/working_with_vector/line_label_placement.png
+.. figure:: img/line_label_placement.png
    :align: center
 
    Label placement examples in lines
@@ -1220,7 +1220,7 @@ or outside.
 
 .. _figure_labels_placement_polygon:
 
-.. figure:: /static/user_manual/working_with_vector/polygon_label_placement.png
+.. figure:: img/polygon_label_placement.png
    :align: center
 
    Label placement examples in polygons
@@ -1367,7 +1367,7 @@ seen beforehand.
 
 .. _figure_labels_rule_settings:
 
-.. figure:: /static/user_manual/working_with_vector/label_rule_settings.png
+.. figure:: img/label_rule_settings.png
    :align: center
 
    Rule settings
@@ -1379,7 +1379,7 @@ You can as well remove them with the |signMinus| button or edit them with
 
 .. _figure_labels_rule_based:
 
-.. figure:: /static/user_manual/working_with_vector/label_rules_panel.png
+.. figure:: img/label_rules_panel.png
    :align: center
 
    Rule based labeling panel
@@ -1402,7 +1402,7 @@ with ``format_number()`` to make it look nicer.
 
 .. _figure_labels_expression:
 
-.. figure:: /static/user_manual/working_with_vector/label_expression.png
+.. figure:: img/label_expression.png
    :align: center
 
    Using expressions for labeling
@@ -1519,7 +1519,7 @@ properties, but only if the corresponding data-defined option is indicated
 
 .. _figure_labels_tools:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_toolbar.png
+.. figure:: img/diagram_toolbar.png
    :align: center
 
    The Label toolbar
@@ -1576,7 +1576,7 @@ We now describe an example using the data-defined override function for the
 
    .. _figure_labels_data_defined:
 
-   .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
+   .. figure:: img/label_data_defined.png
       :align: center
 
       Labeling of vector polygon layers with data-defined override
@@ -1597,7 +1597,7 @@ We now describe an example using the data-defined override function for the
 
    .. _figure_labels_move:
 
-   .. figure:: /static/user_manual/working_with_vector/move_label.png
+   .. figure:: img/move_label.png
       :align: center
 
       Moved labels
@@ -1659,7 +1659,7 @@ or of the layer tree.
 
 .. _figure_diagrams_attributes:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
+.. figure:: img/diagram_tab.png
    :align: center
 
    Diagram properties  - Attributes tab
@@ -1688,7 +1688,7 @@ In this tab, you can also manage the diagram visibility:
 
 .. _figure_diagrams_appearance:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_appearance.png
+.. figure:: img/diagram_tab_appearance.png
    :align: center
 
    Diagram properties - Appearance tab
@@ -1710,7 +1710,7 @@ You can use :
 
 .. _figure_diagrams_size:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_size.png
+.. figure:: img/diagram_tab_size.png
    :align: center
 
    Diagram properties - Size tab
@@ -1743,7 +1743,7 @@ the **Priority** slider or the **z-index** value.
 
 .. _figure_diagrams_placement:
 
-.. figure:: /static/user_manual/working_with_vector/diagram_tab_placement.png
+.. figure:: img/diagram_tab_placement.png
    :align: center
 
    Vector properties dialog with diagram properties, Placement tab
@@ -1810,7 +1810,7 @@ Both vector layers are part of the QGIS sample dataset (see section
 
 .. _figure_diagrams_mapped:
 
-.. figure:: /static/user_manual/working_with_vector/climate_diagram.png
+.. figure:: img/climate_diagram.png
    :align: center
    :width: 25em
 
@@ -1869,7 +1869,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 
 .. _figure_fields_tab:
 
-.. figure:: /static/user_manual/working_with_vector/fields_properties.png
+.. figure:: img/fields_properties.png
    :align: center
 
    Field properties tab
@@ -1891,7 +1891,7 @@ and the values or range of values that are allowed to be added to each.
 
 .. _figure_fields_widget:
 
-.. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
+.. figure:: img/editwidgetsdialog.png
    :align: center
 
    Dialog to select an edit widget for an attribute column
@@ -1991,15 +1991,6 @@ The available widgets are:
 * **Web View**: Field contains a URL. The width and height of the field is variable.
 
 
-.. note::
-
-   QGIS has an advanced 'hidden' option to define your own field
-   widget using python and add it to this impressive list of widgets.
-   It is tricky but it is very well explained in following excellent blog that
-   explains how to create a real time validation widget that can be used like
-   described widgets.
-   See http://blog.vitu.ch/10142013-1847/write-your-own-qgis-form-elements
-
 .. tip:: **Relative Path in widgets**
 
    If the path which is selected with the file browser is located in the same
@@ -2028,7 +2019,7 @@ an editor with several tabs and named groups to present the attribute fields.
 
 .. _figure_fields_form:
 
-.. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
+.. figure:: img/resulting_feature_form.png
    :align: center
 
    Resulting built-in form with tabs and named groups
@@ -2053,7 +2044,7 @@ You can use the same fields many times.
 
 .. _figure_fields_layout:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
+.. figure:: img/attribute_editor_layout.png
    :align: center
 
    Dialog to create categories with the **Attribute editor layout**
@@ -2174,7 +2165,7 @@ QGIS currently has support for joining non-spatial table formats supported by OG
 
 .. _figure_joins:
 
-.. figure:: /static/user_manual/working_with_vector/join_attributes.png
+.. figure:: img/join_attributes.png
    :align: center
 
    Join an attribute table to an existing vector layer
@@ -2208,7 +2199,7 @@ data source doesn't even need to be editable!
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tab.png
+.. figure:: img/auxiliary_storage_tab.png
    :align: center
 
    Auxiliary Storage tab
@@ -2231,7 +2222,7 @@ uniquely identified):
 
 .. _figure_auxiliary_layer_creation:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_key.png
+.. figure:: img/auxiliary_storage_key.png
    :align: center
 
    Auxiliary Layer creation dialog
@@ -2240,7 +2231,7 @@ uniquely identified):
 As soon as an auxiliary layer is configured for the current data source, you can
 retrieve its information in the tab:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_tabkey.png
+.. figure:: img/auxiliary_storage_tabkey.png
    :align: center
 
    Auxiliary Layer key
@@ -2258,7 +2249,7 @@ map tool is activated, then we're able to update styling properties like sizes,
 colors and so on. Then, the corresponding data-defined properties are created
 and can be retrieved:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_fields.png
+.. figure:: img/auxiliary_storage_fields.png
    :align: center
 
    Auxiliary Fields
@@ -2275,7 +2266,7 @@ By the way, considering that auxiliary fields are linked to data-defined
 properties, we can observe that data-defined override options are setup
 correctly because of the icon |dataDefineOn| in the labeling tab:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_dd.png
+.. figure:: img/auxiliary_storage_dd.png
    :align: center
 
    Data-defined properties automatically created
@@ -2298,7 +2289,7 @@ stylize symbols too. To do this, you just have to click on
 :guilabel:`Store data in the project` for a specific symbol property. For
 example for the :guilabel:`Fill color` field:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol.png
+.. figure:: img/auxiliary_storage_symbol.png
    :align: center
 
    Data-defined property menu for symbol
@@ -2310,7 +2301,7 @@ each setting requires a unique name to avoid conflict. Thus, by clicking on
 :guilabel:`Type` of the field and providing a way to give the unique name. For
 the :guilabel:`Fill color` field, the next window is opened:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_name.png
+.. figure:: img/auxiliary_storage_symbol_name.png
    :align: center
 
    Name of the auxiliary field for a symbol
@@ -2319,7 +2310,7 @@ the :guilabel:`Fill color` field, the next window is opened:
 Once created, the auxiliary field can be retrieved in the auxiliary storage
 tab:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_symbol_field.png
+.. figure:: img/auxiliary_storage_symbol_field.png
    :align: center
 
    Auxiliary field symbol
@@ -2343,7 +2334,7 @@ widget **Color** set by default.
 
 Then, the underlying form will look like the next figure:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_widgets.png
+.. figure:: img/auxiliary_storage_widgets.png
    :align: center
 
    Form with auxiliary fields
@@ -2355,7 +2346,7 @@ Management
 Some actions are available to manage auxiliary layers thanks to the next
 combobox:
 
-.. figure:: /static/user_manual/working_with_vector/auxiliary_storage_actions.png
+.. figure:: img/auxiliary_storage_actions.png
    :align: center
 
    Auxiliary layer management
@@ -2405,7 +2396,7 @@ passing parameters to a web reporting tool.
 
 .. _figure_actions:
 
-.. figure:: /static/user_manual/working_with_vector/action_dialog.png
+.. figure:: img/action_dialog.png
    :align: center
 
    Overview action dialog with some sample actions
@@ -2568,7 +2559,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 .. _figure_add_action:
 
-.. figure:: /static/user_manual/working_with_vector/add_action_edit.png
+.. figure:: img/add_action_edit.png
    :align: center
 
    Edit action dialog configured with the example
@@ -2586,7 +2577,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 
 .. _figure_actions_selection:
 
-.. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
+.. figure:: img/action_identifyaction.png
    :align: center
 
    Select feature and choose action
@@ -2698,7 +2689,7 @@ in map canvas.
 
 .. _figure_display_code:
 
-.. figure:: /static/user_manual/working_with_vector/display_html.png
+.. figure:: img/display_html.png
    :align: center
 
    HTML code for map tip
@@ -2706,7 +2697,7 @@ in map canvas.
 
 .. _figure_display_mapped:
 
-.. figure:: /static/user_manual/working_with_vector/map_tip.png
+.. figure:: img/map_tip.png
    :align: center
 
    Map tip made with HTML code
@@ -2740,7 +2731,7 @@ setting that enables generalisation by default for newly added layers (see
 
 .. _figure_rendering:
 
-.. figure:: /static/user_manual/working_with_vector/simplify_rendering.png
+.. figure:: img/simplify_rendering.png
    :align: center
 
    Layer Geometry Simplification dialog
@@ -2781,7 +2772,7 @@ layer-level variable from the list and click the |signMinus| button to remove
 it.
 
 More information on variables usage in the General Tools
-:ref:`general_tools_variables` section.
+:ref:`general_tools_variables` sectionf.
 
 
 .. index:: Legend, Embedded widget
@@ -2836,7 +2827,135 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_server_vector:
 
-.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
+.. figure:: img/vector_metadata_tab.png
    :align: center
 
    QGIS Server tab in vector layers properties dialog
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |25dSymbol| image:: /static/common/renderer25dSymbol.png
+   :width: 1.5em
+.. |action| image:: /static/common/action.png
+   :width: 2em
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowRight| image:: /static/common/mActionArrowRight.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |attributes| image:: /static/common/attributes.png
+   :width: 2em
+.. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
+   :width: 1.5em
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |colorWheel| image:: /static/common/mIconColorWheel.png
+   :width: 1.5em
+.. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |degrees| unicode:: 0x00B0
+   :ltrim:
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |diagram| image:: /static/common/diagram.png
+   :width: 2em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
+   :width: 2em
+.. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
+   :width: 1.5em
+.. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
+   :width: 1.5em
+.. |iconJoinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |iconJoinNotEditable| image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |iconJoinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
+   :width: 1.5em
+.. |join| image:: /static/common/join.png
+   :width: 2em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.5em
+.. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |mapTips| image:: /static/common/mActionMapTips.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |nullSymbol| image:: /static/common/rendererNullSymbol.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |paintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
+.. |pinLabels| image:: /static/common/mActionPinLabels.png
+   :width: 1.5em
+.. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
+   :width: 1.5em
+.. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
+   :width: 1.5em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |rotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
+.. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
+.. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
+   :width: 1.5em
+.. |slider| image:: /static/common/slider.png
+.. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

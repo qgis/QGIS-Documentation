@@ -382,4 +382,3 @@ will appear and you should make a comment at the top of the file (above the
 area that says 'don't change this'). Put a descriptive comment and rather do
 several small commits if the changes across a number of files are unrelated.
 Conversely we prefer you to group related changes into a single commit.
-

@@ -294,7 +294,7 @@ We can then link the two tables using the 'keys' :kbd:`streets.id` and
 If we draw an ER Diagram for these two tables it would look something like
 this:
 
-.. image:: /static/training_manual/database_concepts/er-people-streets.png
+.. image:: img/er-people-streets.png
    :align: center
 
 The ER Diagram helps us to express 'one to many' relationships. In this case
@@ -377,3 +377,16 @@ structures.
 
 Now that we've looked at how databases work in theory, let's create a new
 database to implement the theory we've covered.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |moderate| image:: /static/global/moderate.png

@@ -22,7 +22,7 @@ functionalities (see figure_composer_legend_):
 
 .. _Figure_composer_legend:
 
-.. figure:: /static/user_manual/print_composer/legend_properties.png
+.. figure:: img/legend_properties.png
    :align: center
 
    Legend Item Properties Panel
@@ -35,7 +35,7 @@ panel provides the following functionalities (see figure_composer_legend_ppt_):
 
 .. _Figure_composer_legend_ppt:
 
-.. figure:: /static/user_manual/print_composer/legend_mainproperties.png
+.. figure:: img/legend_mainproperties.png
    :align: center
 
    Legend Main properties Dialog
@@ -61,7 +61,7 @@ panel provides the following functionalities (see figure_composer_legend_items_)
 
 .. _Figure_composer_legend_items:
 
-.. figure:: /static/user_manual/print_composer/legend_items.png
+.. figure:: img/legend_items.png
    :align: center
 
    Legend Items Dialog
@@ -120,7 +120,7 @@ legend :guilabel:`Item Properties` panel provide the following functionalities
 
 .. _Figure_composer_legend_fonts:
 
-.. figure:: /static/user_manual/print_composer/legend_fonts.png
+.. figure:: img/legend_fonts.png
    :align: center
 
    Legend Fonts, Columns and Symbol Dialogs
@@ -151,7 +151,7 @@ figure_composer_legend_wms_):
 
 .. _Figure_composer_legend_wms:
 
-.. figure:: /static/user_manual/print_composer/legend_wms.png
+.. figure:: img/legend_wms.png
    :align: center
 
    WMS LegendGraphic and Spacing Dialogs
@@ -167,3 +167,35 @@ width` and the :guilabel:`Legend height` of the WMS legend raster image.
 Spacing around title, group, subgroup, symbol, icon label, box space
 or column space can be customized through this dialog.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
+.. |addLegend| image:: /static/common/mActionAddLegend.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |sum| image:: /static/common/mActionSum.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

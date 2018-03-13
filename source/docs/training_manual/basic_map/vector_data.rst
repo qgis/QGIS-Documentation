@@ -91,7 +91,7 @@ database file on your computer.
 * Click the :guilabel:`Connect` button. You should see this in the previously
   empty box:
 
-.. image:: /static/training_manual/vector/spatiallite_dialog_connected.png
+.. image:: img/spatiallite_dialog_connected.png
    :align: center
 
 * Click on the :kbd:`landuse` layer to select it, then click
@@ -124,7 +124,7 @@ because other layers are on top of it.
 
 For example, this layer order...
 
-.. image:: /static/training_manual/vector/incorrect_layer_order.png
+.. image:: img/incorrect_layer_order.png
    :align: center
 
 ... would result in roads and places being hidden as they run *underneath*
@@ -135,7 +135,7 @@ To resolve this problem:
 * Click and drag on a layer in the Layers list.
 * Reorder them to look like this:
 
-.. image:: /static/training_manual/vector/correct_layer_order.png
+.. image:: img/correct_layer_order.png
    :align: center
 
 You'll see that the map now makes more sense visually, with roads and buildings
@@ -153,3 +153,19 @@ Using the random palette automatically assigned when loading the layers, your
 current map is probably not easy to read. It would be preferable to assign your
 own choice of colors and symbols. This is what you'll learn to do in the next
 lesson.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |attributes| image:: /static/common/attributes.png
+   :width: 2em
+.. |basic| image:: /static/global/basic.png

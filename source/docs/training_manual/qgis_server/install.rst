@@ -329,3 +329,15 @@ how to configure Apache with QGIS Server, on Debian based Linux distros.
 Now that you've installed QGIS Server and it's accesible through the HTTP
 protocol, we need to learn how to access some of the services it can offer.
 The topic of the next lesson is to learn how to access QGIS Server WMS services.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png

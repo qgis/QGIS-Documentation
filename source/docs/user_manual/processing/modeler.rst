@@ -29,7 +29,7 @@ be used to add new elements to the model.
 
 .. _figure_modeler:
 
-.. figure:: /static/user_manual/processing/modeler_canvas.png
+.. figure:: img/modeler_canvas.png
    :align: center
 
    Modeler
@@ -70,7 +70,7 @@ default value and a range of valid values.
 
 .. _figure_model_parameter:
 
-.. figure:: /static/user_manual/processing/models_parameters.png
+.. figure:: img/models_parameters.png
    :align: center
 
    Model Parameters Definition
@@ -79,7 +79,7 @@ For each added input, a new element is added to the modeler canvas.
 
 .. _figure_model_parameter_canvas:
 
-.. figure:: /static/user_manual/processing/models_parameters2.png
+.. figure:: img/models_parameters2.png
    :align: center
 
    Model Parameters in canvas
@@ -96,7 +96,7 @@ in the same way as they are in the toolbox.
 
 .. _figure_model_parameter_inputs:
 
-.. figure:: /static/user_manual/processing/models_parameters3.png
+.. figure:: img/models_parameters3.png
    :align: center
 
    Model Inputs
@@ -110,7 +110,7 @@ corresponds to the SAGA 'Convergence index' algorithm.
 
 .. _figure_model_parameter_alg:
 
-.. figure:: /static/user_manual/processing/models_parameters4.png
+.. figure:: img/models_parameters4.png
    :align: center
 
    Model Algorithm parameters
@@ -207,7 +207,7 @@ see a context menu like the one shown next:
 
 .. _figure_model_right_click:
 
-.. figure:: /static/user_manual/processing/modeler_right_click.png
+.. figure:: img/modeler_right_click.png
    :align: center
 
    Modeler Right Click
@@ -220,7 +220,7 @@ a warning message like the one you can see below will be shown:
 
 .. _figure_cannot_delete_alg:
 
-.. figure:: /static/user_manual/processing/cannot_delete_alg.png
+.. figure:: img/cannot_delete_alg.png
    :align: center
 
    Cannot Delete Algorithm
@@ -244,7 +244,7 @@ as part of the model.
 
 .. _figure_cannot_model_deactivate:
 
-.. figure:: /static/user_manual/processing/deactivated.png
+.. figure:: img/deactivated.png
    :align: center
 
    Model With Deactivated Algorithms
@@ -260,7 +260,7 @@ button and a dialog like the one shown next will appear.
 
 .. _figure_help_edition:
 
-.. figure:: /static/user_manual/processing/help_edition.png
+.. figure:: img/help_edition.png
    :align: center
 
    Help Edition
@@ -298,3 +298,11 @@ well-defined semantic (for instance, if the number of output layers cannot be
 known in advance), then it is not possible to use it within a model, and thus, it does
 not appear in the list of algorithms that you can find in the modeler dialog.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

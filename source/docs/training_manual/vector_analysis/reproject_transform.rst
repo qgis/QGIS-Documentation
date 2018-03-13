@@ -54,7 +54,7 @@ of your choice.
 * To enable "on the fly" projection, click on the :guilabel:`CRS Status` button
   in the :guilabel:`Status Bar` along the bottom of the QGIS window:
 
-.. image:: /static/training_manual/vector_analysis/crs_status_button.png
+.. image:: img/crs_status_button.png
    :align: center
 
 * In the dialog that appears, check the box next to :guilabel:`Enable 'on the
@@ -129,7 +129,7 @@ To correct this:
 Now, because they're made to project in the same CRS, the two datasets fit
 perfectly:
 
-.. image:: /static/training_manual/vector_analysis/with_reprojection.png
+.. image:: img/with_reprojection.png
    :align: center
 
 When combining data from different sources, it's important to remember that
@@ -181,7 +181,7 @@ a new file using a new projection.
 
 The :guilabel:`Save vector layer as...` dialog now looks like this:
 
-.. image:: /static/training_manual/vector_analysis/save_vector_dialog.png
+.. image:: img/save_vector_dialog.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -193,7 +193,7 @@ calculated areas.
 
 * Update (or add) the :kbd:`AREA` field by running the same expression as before:
 
-.. image:: /static/training_manual/vector_analysis/new_area_field.png
+.. image:: img/new_area_field.png
    :align: center
 
 This will add an :kbd:`AREA` field with the size of each building
@@ -202,7 +202,7 @@ in square meters
 * To calculate the area in another unit of measurement, for example hectares,
   use the :kbd:`AREA` field to create a second column:
 
-.. image:: /static/training_manual/vector_analysis/new_hectare_field.png
+.. image:: img/new_hectare_field.png
    :align: center
 
 Look at the new values in your attribute table. This is much more useful, as
@@ -221,7 +221,7 @@ You can also create your own projections.
 * Load the :kbd:`world/oceans.shp` dataset.
 * Go to :menuselection:`Settings --> Custom CRS...` and you'll see this dialog:
 
-.. image:: /static/training_manual/vector_analysis/custom_crs.png
+.. image:: img/custom_crs.png
    :align: center
 
 * Click on the :guilabel:`Add new CRS` button to create a new projection.
@@ -237,7 +237,7 @@ rectangular one, as most other projections do.
 
 :kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs`
 
-.. image:: /static/training_manual/vector_analysis/new_crs_parameters.png
+.. image:: img/new_crs_parameters.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -246,7 +246,7 @@ rectangular one, as most other projections do.
   :guilabel:`Filter` field).
 * On applying this projection, the map will be reprojected thus:
 
-.. image:: /static/training_manual/vector_analysis/van_grinten_projection.png
+.. image:: img/van_grinten_projection.png
    :align: center
 
 |IC|
@@ -270,3 +270,19 @@ Further information on Coordinate Reference Systems is available `here
 
 In the next lesson you'll learn how to analyze vector data using QGIS' various
 vector analysis tools.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |FR| replace:: Further Reading
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png

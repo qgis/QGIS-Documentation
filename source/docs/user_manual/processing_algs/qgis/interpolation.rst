@@ -117,7 +117,7 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 
 .. _figure_heatmap_data_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_start.png
+.. figure:: img/heatmap_start.png
    :align: center
 
    Airports of Alaska
@@ -133,7 +133,7 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 
 .. _figure_heatmap_settings_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_dialog.png
+.. figure:: img/heatmap_dialog.png
    :align: center
 
    The Heatmap Dialog
@@ -144,7 +144,7 @@ can now be styled in QGIS to improve its appearance.
 
 .. _figure_heatmap_created_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_loaded_grey.png
+.. figure:: img/heatmap_loaded_grey.png
    :align: center
 
    The heatmap after loading looks like a grey surface
@@ -163,7 +163,7 @@ The final result is shown in Figure_Heatmap_styled_processing_.
 
 .. _figure_heatmap_styled_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_loaded_colour.png
+.. figure:: img/heatmap_loaded_colour.png
    :align: center
 
    Styled heatmap of airports of Alaska
@@ -282,3 +282,18 @@ Output
 
 ``Triangulation`` [vector: lines]
   Triangulation lines as vector layer
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -51,4 +51,3 @@ To create a set of processing scripts, follow these steps:
 * Click on OK and the plugin will be created.
 * You can add additional scripts to the plugin by adding scripts python files to the *scripts*
   folder in the resulting plugin folder.
-

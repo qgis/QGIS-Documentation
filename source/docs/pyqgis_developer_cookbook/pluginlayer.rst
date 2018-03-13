@@ -68,4 +68,3 @@ You can also add code for displaying custom information in the layer properties
 
     def showLayerProperties(self, layer):
       pass
-

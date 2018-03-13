@@ -25,7 +25,7 @@ exercises.
   Vector)`. The tool dialog will appear.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/polygonize_raster.png
+  .. image:: img/polygonize_raster.png
      :align: center
 
 * Change the field name (describing the values of the raster) to
@@ -62,7 +62,7 @@ opposite conversion from the one performed above. Convert to raster the
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
 
-.. image:: /static/training_manual/complete_analysis/vector_to_raster.png
+.. image:: img/vector_to_raster.png
    :align: center
 
 * :guilabel:`Input file` is :guilabel:`all_terrain`;
@@ -92,3 +92,16 @@ applicability of data, and need not lead to data degradation.
 Now that we have the results of the terrain analysis available in vector
 format, they can be used to solve the problem of which buildings we should consider
 for the residential development.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png

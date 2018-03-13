@@ -22,7 +22,7 @@ functionalities (see figure_composer_scalebar_):
 
 .. _Figure_composer_scalebar:
 
-.. figure:: /static/user_manual/print_composer/scalebar_properties.png
+.. figure:: img/scalebar_properties.png
    :align: center
 
    Scale Bar Item Properties Panel
@@ -36,7 +36,7 @@ The :guilabel:`Main properties` dialog of the scale bar
 
 .. _Figure_composer_scalebar_ppt:
 
-.. figure:: /static/user_manual/print_composer/scalebar_mainproperties.png
+.. figure:: img/scalebar_mainproperties.png
    :align: center
 
    Scale Bar Main properties Dialog
@@ -58,7 +58,7 @@ The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar
 
 .. _Figure_composer_scalebar_units:
 
-.. figure:: /static/user_manual/print_composer/scalebar_units.png
+.. figure:: img/scalebar_units.png
    :align: center
 
    Scale Bar Units and Segments Dialogs
@@ -91,7 +91,7 @@ figure_composer_scalebar_display_):
 
 .. _Figure_composer_scalebar_display:
 
-.. figure:: /static/user_manual/print_composer/scalebar_display.png
+.. figure:: img/scalebar_display.png
    :align: center
 
    Scale Bar Display
@@ -117,7 +117,7 @@ The :guilabel:`Fonts and colors` dialog of the scale bar
 
 .. _Figure_composer_scalebar_fonts:
 
-.. figure:: /static/user_manual/print_composer/scalebar_fonts.png
+.. figure:: img/scalebar_fonts.png
    :align: center
 
    Scale Bar Fonts and colors Dialogs
@@ -135,3 +135,13 @@ To select a color you can use the list option using the dropdown arrow to open
 a simple color selection option or the more advanced color selection option,
 that is started when you click in the colored box in the dialog.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

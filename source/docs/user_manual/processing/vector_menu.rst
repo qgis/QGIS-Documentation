@@ -286,3 +286,85 @@ Data management tools
 
 Table Tools 5: Default tools in Data management group
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |basicStatistics| image:: /static/common/basic_statistics.png
+   :width: 1.5em
+.. |buffer| image:: /static/common/buffer.png
+   :width: 1.5em
+.. |centroids| image:: /static/common/centroids.png
+   :width: 1.5em
+.. |checkGeometry| image:: /static/common/check_geometry.png
+   :width: 1.5em
+.. |clip| image:: /static/common/clip.png
+   :width: 1.5em
+.. |convexHull| image:: /static/common/convex_hull.png
+   :width: 1.5em
+.. |defineProjection| image:: /static/common/define_projection.png
+   :width: 1.5em
+.. |delaunay| image:: /static/common/delaunay.png
+   :width: 1.5em
+.. |difference| image:: /static/common/difference.png
+   :width: 1.5em
+.. |dissolve| image:: /static/common/dissolve.png
+   :width: 1.5em
+.. |eliminate| image:: /static/common/eliminate.png
+   :width: 1.5em
+.. |exportGeometry| image:: /static/common/export_geometry.png
+   :width: 1.5em
+.. |extractNodes| image:: /static/common/extract_nodes.png
+   :width: 1.5em
+.. |intersect| image:: /static/common/intersect.png
+   :width: 1.5em
+.. |intersections| image:: /static/common/intersections.png
+   :width: 1.5em
+.. |joinLocation| image:: /static/common/join_location.png
+   :width: 1.5em
+.. |layerExtent| image:: /static/common/layer_extent.png
+   :width: 1.5em
+.. |matrix| image:: /static/common/matrix.png
+   :width: 1.5em
+.. |mean| image:: /static/common/mean.png
+   :width: 1.5em
+.. |mergeShapes| image:: /static/common/merge_shapes.png
+   :width: 1.5em
+.. |multiToSingle| image:: /static/common/multi_to_single.png
+   :width: 1.5em
+.. |neighbor| image:: /static/common/neighbour.png
+   :width: 1.5em
+.. |randomPoints| image:: /static/common/random_points.png
+   :width: 1.5em
+.. |randomSelection| image:: /static/common/random_selection.png
+   :width: 1.5em
+.. |regularPoints| image:: /static/common/regular_points.png
+   :width: 1.5em
+.. |selectLocation| image:: /static/common/select_location.png
+   :width: 1.5em
+.. |simplify| image:: /static/common/simplify.png
+   :width: 1.5em
+.. |singleToMulti| image:: /static/common/single_to_multi.png
+   :width: 1.5em
+.. |splitLayer| image:: /static/common/split_layer.png
+   :width: 1.5em
+.. |subSelection| image:: /static/common/sub_selection.png
+   :width: 1.5em
+.. |sumLines| image:: /static/common/sum_lines.png
+   :width: 1.5em
+.. |sumPoints| image:: /static/common/sum_points.png
+   :width: 1.5em
+.. |symDifference| image:: /static/common/sym_difference.png
+   :width: 1.5em
+.. |toLines| image:: /static/common/to_lines.png
+   :width: 1.5em
+.. |union| image:: /static/common/union.png
+   :width: 1.5em
+.. |unique| image:: /static/common/unique.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em

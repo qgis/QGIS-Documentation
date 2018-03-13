@@ -77,14 +77,14 @@ Only valid for polygon or line layers.
 For **polygon geometries** , the boundary consists of all the line strings for
 each ring of the polygon.
 
-.. figure:: /static/user_manual/processing_algs/qgis/boundary_polygon.png
+.. figure:: img/boundary_polygon.png
    :align: center
 
    Black dash boundary lines of the source polygon layer
 
 For **lines geometries**, the boundaries are the vertices between each features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/boundary_lines.png
+.. figure:: img/boundary_lines.png
    :align: center
 
    Boundary layer for lines. In yellow a selected features
@@ -111,7 +111,7 @@ Calculates the bounding box (envelope) of each feature in an input layer.
 Polygon and line geometries are supported.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/bounding_box.png
+.. figure:: img/bounding_box.png
    :align: center
 
    Black lines represent the bounding boxes of each polygon feature
@@ -145,7 +145,7 @@ case the buffer will result in a smaller polygon.
 Buffer always results in a polygon layer: in the following picture the buffer
 for points, lines and polygons:
 
-.. figure:: /static/user_manual/processing_algs/qgis/buffer.png
+.. figure:: img/buffer.png
    :align: center
 
    In yellow the buffer of point, line and polygon layer
@@ -173,7 +173,7 @@ Parameters
 ``End cap style`` [selection]
   Controls how line endings are handled in the buffer.
 
-  .. figure:: /static/user_manual/processing_algs/qgis/buffer_cap_style.png
+  .. figure:: img/buffer_cap_style.png
      :align: center
 
      Round, flat and square cap styles
@@ -193,7 +193,7 @@ Parameters
 
   Default: *False*
 
-  .. figure:: /static/user_manual/processing_algs/qgis/buffer_dissolve.png
+  .. figure:: img/buffer_dissolve.png
      :align: center
 
      Standard and dissolved buffer
@@ -220,7 +220,7 @@ of the input layer.
 The attributes associated to each point in the output layer are the same ones
 associated to the original features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/centroids.png
+.. figure:: img/centroids.png
    :align: center
 
    The red stars represent the centroids of each feature of the input layer.
@@ -258,7 +258,7 @@ vector layer is generated with the features in each of these categories:
 The attribute table of each generated vector layer will contain some additional
 information (numbers of error found and type of error):
 
-.. figure:: /static/user_manual/processing_algs/qgis/check_validity.png
+.. figure:: img/check_validity.png
    :align: center
 
    Left the input layer. Right: in green the valid layer, in orange the invalid layer
@@ -353,7 +353,7 @@ Parameters
   Default: *0.3*
 
 
-  .. figure:: /static/user_manual/processing_algs/qgis/concave_hull_threshold.png
+  .. figure:: img/concave_hull_threshold.png
      :align: center
 
      Different thresholds used (0.3, 0.6, 0.9)
@@ -426,7 +426,7 @@ Calculates the convex hull for each feature in an input layer.
 See the 'Minimum bounding geometry' algorithm for a convex hull calculation which
 covers the whole layer or grouped subsets of features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/convex_hull.png
+.. figure:: img/convex_hull.png
    :align: center
 
    Black lines identify the convex hull for each layer feature
@@ -477,7 +477,7 @@ Delaunay triangulation
 Creates a polygon layer with the delaunay triangulation corresponding to a points
 layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/delaunay.png
+.. figure:: img/delaunay.png
    :align: center
 
    Delaunay triangulation on points
@@ -506,7 +506,7 @@ An optional minimum area parameter allows removing only holes which are smaller
 than a specified area threshold. Leaving this parameter at ``0.0`` results in all
 holes being removed.
 
-.. figure:: /static/user_manual/processing_algs/qgis/delete_holes.png
+.. figure:: img/delete_holes.png
    :align: center
 
    Before and after the cleaning
@@ -546,7 +546,7 @@ input parameter.
 
 Vertices will be added to each segment of the layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/densify_geometry.png
+.. figure:: img/densify_geometry.png
    :align: center
 
    Red points show the vertices before and after the densify
@@ -597,7 +597,7 @@ to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``, since 3 extra vertices ar
 on the segment and spacing these at 2.5 increments allows them to be evenly spaced
 over the segment.
 
-.. figure:: /static/user_manual/processing_algs/qgis/densify_geometry_interval.png
+.. figure:: img/densify_geometry_interval.png
    :align: center
 
    Densify geometry at a given interval
@@ -643,7 +643,7 @@ erased.
 The resulting attribute table will have the same fields of the input layer while
 the features are *aggregated*.
 
-.. figure:: /static/user_manual/processing_algs/qgis/dissolve.png
+.. figure:: img/dissolve.png
    :align: center
 
    Dissolve the polygon layer on a common attribute
@@ -742,7 +742,7 @@ Each line in the resulting layer contains only a start and an end point, with no
 intermediate vertices between them.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/explode_lines.png
+.. figure:: img/explode_lines.png
    :align: center
 
    The original line layer and the exploded one
@@ -801,7 +801,7 @@ Extends line geometry by a specified amount at the start and end of the line.
 
 Lines are extended using the bearing of the first and last segment in the line.
 
-.. figure:: /static/user_manual/processing_algs/qgis/extend_lines.png
+.. figure:: img/extend_lines.png
    :align: center
 
    The red dashes represent the initial and final extension of the original layer
@@ -879,7 +879,7 @@ Additional fields are added to the vertices indicating the vertex index (beginni
 the feature’s part and its index within the part (as well as its ring for polygons),
 distance along original geometry and bisector angle of vertex for original geometry.
 
-.. figure:: /static/user_manual/processing_algs/qgis/extract_nodes.png
+.. figure:: img/extract_nodes.png
    :align: center
 
    Vertices extracted for line and polygon layer
@@ -978,7 +978,7 @@ Cuts the n biggest parts of the input layer.
 This algorithm is particularly useful if a single layer is very complicated and
 made of many different parts.
 
-.. figure:: /static/user_manual/processing_algs/qgis/n_biggest.png
+.. figure:: img/n_biggest.png
    :align: center
 
    Clockwise from left-up: source layer, one, tow and three biggest parts to keep
@@ -1075,7 +1075,7 @@ Parameters
   * Minimum enclosing circles
   * Convex hulls
 
-  .. figure:: /static/user_manual/processing_algs/qgis/minimum_bounding.png
+  .. figure:: img/minimum_bounding.png
      :align: center
 
      Clockwise from left-up: envelopes, oriented rectangle, circle, convex hull
@@ -1093,7 +1093,7 @@ Minimum enclosing circles
 -------------------------
 Calculates the minimum enclosing circle which covers each feature in an input layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/minimum_enclosing_circles.png
+.. figure:: img/minimum_enclosing_circles.png
    :align: center
 
    Enclosing circles for each feature
@@ -1129,7 +1129,7 @@ Splits the multipart input layers into single features.
 The attributes of the output layers are the same of the original ones but divided
 into single features.
 
-.. figure:: /static/user_manual/processing_algs/qgis/multipart.png
+.. figure:: img/multipart.png
    :align: center
 
    Left the multipart source layer and right the single part output result
@@ -1158,7 +1158,7 @@ Offset line
 Offsets lines by a specified distance. Positive distances will offset lines to
 the left, and negative distances will offset to the right of lines.
 
-.. figure:: /static/user_manual/processing_algs/qgis/offset_lines.png
+.. figure:: img/offset_lines.png
    :align: center
 
    In blue the source layer, in red the offset one
@@ -1206,7 +1206,7 @@ Oriented minimum bounding box
 -----------------------------
 Calculates the minimum area rotated rectangle which covers each feature in an input layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/oriented_minimum_bounding_box.png
+.. figure:: img/oriented_minimum_bounding_box.png
    :align: center
 
    Oriented minimum bounding box
@@ -1237,7 +1237,7 @@ in the layer. This process shifts the vertices in the geometries to try to make 
 angle in the geometry either a right angle or a straight line.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/orthogonize.png
+.. figure:: img/orthogonize.png
    :align: center
 
    In blue the source layer while the red line is the orthogonalized result
@@ -1295,7 +1295,7 @@ angle of the line at the point.
 An optional start and end offset can be specified, which controls how far from
 the start and end of the geometry the points should be created.
 
-.. figure:: /static/user_manual/processing_algs/qgis/points_along_line.png
+.. figure:: img/points_along_line.png
    :align: center
 
    Points created along the source line layer
@@ -1379,7 +1379,7 @@ and will take longer to calculate.
 The distance from the calculated pole to the polygon boundary will be stored as
 a new attribute in the output layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/pole_inaccessibility.png
+.. figure:: img/pole_inaccessibility.png
    :align: center
 
    Pole of inaccessibility
@@ -1412,7 +1412,7 @@ line layer features.
 .. note:: the line layer must have closed shapes in order to be transformed into
   a polygon
 
-.. figure:: /static/user_manual/processing_algs/qgis/polygonize.png
+.. figure:: img/polygonize.png
    :align: center
 
    The yellow polygons generated from the closed lines
@@ -1444,7 +1444,7 @@ Polygons to lines
 Takes a polygon layer and creates a line layer, with lines representing the boundaries
 of the polygons in the input layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/polygon_to_lines.png
+.. figure:: img/polygon_to_lines.png
    :align: center
 
    Black lines as the result of the algorithm
@@ -1500,7 +1500,7 @@ choice.
 
 Parameters can vary depending on the shape chosen.
 
-.. figure:: /static/user_manual/processing_algs/qgis/rectangles_ovals_diamond.png
+.. figure:: img/rectangles_ovals_diamond.png
    :align: center
 
    Different buffer shapes
@@ -1562,7 +1562,7 @@ choice.
 
 Buffer shape parameters are specified through attribute of the input layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/rectangles_ovals_diamond_variable.png
+.. figure:: img/rectangles_ovals_diamond_variable.png
    :align: center
 
    Different buffer shapes with different parameters
@@ -1646,7 +1646,7 @@ Reverse line
 ------------
 Inverts the direction of a line layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/reverse_line.png
+.. figure:: img/reverse_line.png
    :align: center
 
    Before and after the direction inversion
@@ -1730,7 +1730,7 @@ The algorithm gives a choice of simplification methods, including distance based
 (the "Douglas-Peucker" algorithm), area based ("Visvalingam" algorithm) and
 snapping geometries to grid.
 
-.. figure:: /static/user_manual/processing_algs/qgis/simplify_geometries.png
+.. figure:: img/simplify_geometries.png
    :align: center
 
    Clockwise from left-up: source layer and different simplification tolerances
@@ -1776,7 +1776,7 @@ Computes a buffer on lines by a specified distance on one side of the line only.
 
 Buffer always results in a polygon layer.
 
-.. figure:: /static/user_manual/processing_algs/qgis/single_side_buffer.png
+.. figure:: img/single_side_buffer.png
    :align: center
 
    Left versus right side buffer on the same vector line layer
@@ -1861,7 +1861,7 @@ Parameters
 
   Default: *1*
 
-  .. figure:: /static/user_manual/processing_algs/qgis/smooth_geometry_1.png
+  .. figure:: img/smooth_geometry_1.png
      :align: center
 
      Different number of iterations cause smoother geometries
@@ -1871,7 +1871,7 @@ Parameters
 
   Default: *0.25*
 
-  .. figure:: /static/user_manual/processing_algs/qgis/smooth_geometry_2.png
+  .. figure:: img/smooth_geometry_2.png
      :align: center
 
      In blue the input layer. Offset value of 0.25 results in the red line while
@@ -1996,7 +1996,7 @@ parts may not be valid and may contain self-intersections.
 
 Curved geometries will be segmentized before subdivision.
 
-.. figure:: /static/user_manual/processing_algs/qgis/subdivide.png
+.. figure:: img/subdivide.png
    :align: center
 
    Left the input layer, middle maximum nodes value is 100 and right maximum value
@@ -2038,7 +2038,7 @@ Field(s) from feature(s) are returned in the transect with these new fields:
 * TR_LENGTH: Total length of the transect returned
 * TR_ORIENT: Side of the transect (only on the left or right of the line, or both side)
 
-.. figure:: /static/user_manual/processing_algs/qgis/transect.png
+.. figure:: img/transect.png
    :align: center
 
    Dashed red lines represent the transect of the input line layer
@@ -2081,7 +2081,7 @@ Translate geometry
 ------------------
 Creates an offset of the source layer depending on the parameters chosen.
 
-.. figure:: /static/user_manual/processing_algs/qgis/translate_geometry.png
+.. figure:: img/translate_geometry.png
    :align: center
 
    Dashed lines represent the translated geometry of the input layer
@@ -2119,7 +2119,7 @@ Takes a points layer and generates a polygon layer containing the Voronoi polygo
 Any location within a Voronoi polygon is closer to the associated point than to
 any other point.
 
-.. figure:: /static/user_manual/processing_algs/qgis/voronoi.png
+.. figure:: img/voronoi.png
    :align: center
 
    Voronoi polygons
@@ -2140,3 +2140,14 @@ Outputs
 
 ``Voronoi polygons`` [vector: polygon]
   Voronoi polygons of the input point vector layer
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

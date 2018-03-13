@@ -20,7 +20,7 @@ of the same algorithm on different sets of inputs.
 
 .. _figure_toolbox:
 
-.. figure:: /static/user_manual/processing/toolbox.png
+.. figure:: img/toolbox.png
    :align: center
 
    Processing Toolbox
@@ -48,7 +48,7 @@ not active, an additional label will be shown in the lower part of the toolbox.
 
 .. _figure_toolbox_search:
 
-.. figure:: /static/user_manual/processing/toolbox_search.png
+.. figure:: img/toolbox_search.png
    :align: center
 
    Processing Toolbox showing search results
@@ -60,7 +60,7 @@ is also shown.
 
 .. _figure_toolbox_searchresult:
 
-.. figure:: /static/user_manual/processing/toolbox_search2.png
+.. figure:: img/toolbox_search2.png
    :align: center
 
    Processing Toolbox showing search results
@@ -76,7 +76,7 @@ corresponds to the 'Polygon centroids' algorithm).
 
 .. _figure_parameters_dialog:
 
-.. figure:: /static/user_manual/processing/parameters_dialog.png
+.. figure:: img/parameters_dialog.png
    :align: center
 
    Parameters Dialog
@@ -108,7 +108,7 @@ table can be of one of the following types.
 
   .. _figure_vector_iterator:
 
-  .. figure:: /static/user_manual/processing/vector_iterator.png
+  .. figure:: img/vector_iterator.png
      :align: center
 
      Vector iterator button
@@ -137,7 +137,7 @@ table can be of one of the following types.
 
 .. _figure_number_selector:
 
-.. figure:: /static/user_manual/processing/number_selector.png
+.. figure:: img/number_selector.png
    :align: center
 
    Expression based input
@@ -160,7 +160,7 @@ table can be of one of the following types.
 
   .. _figure_extent:
 
-  .. figure:: /static/user_manual/processing/extent.png
+  .. figure:: img/extent.png
      :align: center
 
      Extent selector
@@ -169,7 +169,7 @@ table can be of one of the following types.
 
   .. _figure_extent_list:
 
-  .. figure:: /static/user_manual/processing/extent_list.png
+  .. figure:: img/extent_list.png
      :align: center
 
      Extent List
@@ -181,7 +181,7 @@ table can be of one of the following types.
 
   .. _figure_extent_drag:
 
-  .. figure:: /static/user_manual/processing/extent_drag.png
+  .. figure:: img/extent_drag.png
      :align: center
 
      Extent Drag
@@ -193,7 +193,7 @@ table can be of one of the following types.
 
   .. _figure_multiple_selection:
 
-  .. figure:: /static/user_manual/processing/multiple_selection.png
+  .. figure:: img/multiple_selection.png
      :align: center
 
      Multiple Selection
@@ -205,7 +205,7 @@ table can be of one of the following types.
 
   .. _figure_fixed_table:
 
-  .. figure:: /static/user_manual/processing/fixed_table.png
+  .. figure:: img/fixed_table.png
      :align: center
 
      Fixed Table
@@ -362,7 +362,7 @@ the one shown next.
 
 .. _figure_rendering_styles:
 
-.. figure:: /static/user_manual/processing/rendering_styles.png
+.. figure:: img/rendering_styles.png
    :align: center
 
    Rendering Styles
@@ -399,3 +399,11 @@ find a block for algorithm providers. Each entry in this block contains an :guil
 that you can use to make algorithms appear or not in the toolbox. Also, some
 algorithm providers have their own configuration items, which we will explain later
 when covering particular algorithm providers.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

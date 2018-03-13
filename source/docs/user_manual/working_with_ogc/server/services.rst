@@ -596,7 +596,7 @@ As those features id's correspond in the source dataset to **France** and
 
 .. _figure_server_selection:
 
-.. figure:: /static/user_manual/working_with_ogc/server_selection_parameter.png
+.. figure:: img/server_selection_parameter.png
   :align: center
 
   Server response to a GetMap request with SELECTION parameter
@@ -741,7 +741,7 @@ Contest based legend features are based on the
 * **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
   feature count of the features like in the following image:
 
-  .. figure:: /static/user_manual/working_with_ogc/getfeaturecount_legend.png
+  .. figure:: img/getfeaturecount_legend.png
     :align: center
 
 GetProjectSettings
@@ -837,7 +837,7 @@ are drawn on top of the normal map:
 
 .. _figure_server_redlining:
 
-.. figure:: /static/user_manual/working_with_ogc/server_redlining.png
+.. figure:: img/server_redlining.png
    :align: center
 
    Server response to a GetMap request with redlining parameters
@@ -860,3 +860,11 @@ You can see there are several parameters in this request:
 * **HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer color.
 
 * **HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer size.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

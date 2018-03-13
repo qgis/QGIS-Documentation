@@ -85,7 +85,7 @@ nice yet though (we'll fix the ugly colors later).
 * It is enough to change only the :guilabel:`water` layer for now. An example
   is below, but may look different depending on the color you chose.
 
-.. image:: /static/training_manual/symbology/answer_water_blue.png
+.. image:: img/answer_water_blue.png
    :align: center
 
 .. note::  If you want to work on only one layer at a time and don't want the
@@ -103,7 +103,7 @@ nice yet though (we'll fix the ugly colors later).
 
 Your map should now look like this:
 
-.. image:: /static/training_manual/symbology/answer_symbology1.png
+.. image:: img/answer_symbology1.png
    :align: center
 
 If you are a Beginner-level user, you may stop here.
@@ -128,7 +128,7 @@ If you are a Beginner-level user, you may stop here.
 
 Here's an example:
 
-.. image:: /static/training_manual/symbology/answer_buildings_symbology.png
+.. image:: img/answer_buildings_symbology.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-layers-1>`
@@ -141,7 +141,7 @@ Here's an example:
 
 To make the required symbol, you need two symbol layers:
 
-.. image:: /static/training_manual/symbology/answer_road_symbology.png
+.. image:: img/answer_road_symbology.png
    :align: center
 
 The lowest symbol layer is a broad, solid yellow line. On top of it there is a
@@ -150,12 +150,12 @@ slightly thinner solid gray line.
 * If your symbol layers resemble the above but you're not getting the result
   you want, check that your symbol levels look something like this:
 
-  .. image:: /static/training_manual/symbology/answer_road_symbol_levels.png
+  .. image:: img/answer_road_symbol_levels.png
      :align: center
 
 * Now your map should look like this:
 
-  .. image:: /static/training_manual/symbology/target_road_symbology.png
+  .. image:: img/target_road_symbology.png
      :align: center
 
 :ref:`Back to text <backlink-symbology-levels-1>`
@@ -168,7 +168,7 @@ slightly thinner solid gray line.
 
 * Adjust your symbol levels to these values:
 
-.. image:: /static/training_manual/symbology/answer_road_symbol_layers.png
+.. image:: img/answer_road_symbol_layers.png
    :align: center
 
 * Experiment with different values to get different results.
@@ -205,7 +205,7 @@ Your map should now show the marker points and the labels should be offset by
 :kbd:`2.0 mm`: The style of the markers and labels should allow both to be
 clearly visible on the map:
 
-.. image:: /static/training_manual/labels/customised_labels_one.png
+.. image:: img/customised_labels_one.png
    :align: center
 
 :ref:`Back to text <backlink-label-tool-1>`
@@ -218,7 +218,7 @@ clearly visible on the map:
 
 One possible solution has this final product:
 
-.. image:: /static/training_manual/labels/possible_outcome_map.png
+.. image:: img/possible_outcome_map.png
    :align: center
 
 To arrive at this result:
@@ -229,7 +229,7 @@ To arrive at this result:
 * In addition, this example uses the :guilabel:`Wrap label on character`
   option:
 
-  .. image:: /static/training_manual/labels/wrap_character_settings.png
+  .. image:: img/wrap_character_settings.png
      :align: center
 
 * Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
@@ -253,12 +253,12 @@ To arrive at this result:
   layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
   font size data override dropdown:
 
-  .. image:: /static/training_manual/labels/font_size_override.png
+  .. image:: img/font_size_override.png
      :align: center
 
   Your results, if using the above values, should be this:
 
-  .. image:: /static/training_manual/labels/font_override_results.png
+  .. image:: img/font_override_results.png
      :align: center
 
 :ref:`Back to text <backlink-label-data-defined-1>`
@@ -275,14 +275,14 @@ To arrive at this result:
 * Use the same method as in the first exercise of the lesson to get rid of the
   borders:
 
-  .. image:: /static/training_manual/classification/gradient_map_no_pen.png
+  .. image:: img/gradient_map_no_pen.png
      :align: center
 
 The settings you used might not be the same, but with the values
 :guilabel:`Classes` = :kbd:`6` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
-.. image:: /static/training_manual/classification/gradient_map_new_mode.png
+.. image:: img/gradient_map_new_mode.png
    :align: center
 
 :ref:`Back to text <backlink-classification-refine-1>`
@@ -299,7 +299,7 @@ The settings you used might not be the same, but with the values
 The symbology doesn't matter, but the results should look more or less like
 this:
 
-.. image:: /static/training_manual/create_vector_data/routes_layer_result.png
+.. image:: img/routes_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-create-vector-digitize-1>`
@@ -313,7 +313,7 @@ this:
 The exact shape doesn't matter, but you should be getting a hole in the middle
 of your feature, like this one:
 
-.. image:: /static/training_manual/create_vector_data/ring_tool_result.png
+.. image:: img/ring_tool_result.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -328,12 +328,12 @@ of your feature, like this one:
 
 * First select the |largeLandUseArea|:
 
-.. image:: /static/training_manual/create_vector_data/park_selected.png
+.. image:: img/park_selected.png
    :align: center
 
 * Now add your new part:
 
-.. image:: /static/training_manual/create_vector_data/new_park_area.png
+.. image:: img/new_park_area.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -356,7 +356,7 @@ of your feature, like this one:
    original polygon's :guilabel:`OGC_FID` will not be :kbd:`1`. Just choose the
    feature which has an :guilabel:`OGC_FID`.
 
-  .. image:: /static/training_manual/create_vector_data/merge_feature_dialog.png
+  .. image:: img/merge_feature_dialog.png
      :align: center
 
 .. Note:: Using the :guilabel:`Merge Attributes of Selected Features` tool
@@ -380,14 +380,14 @@ that they are predefined.
   :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
   options:
 
-  .. image:: /static/training_manual/create_vector_data/value_map_settings.png
+  .. image:: img/value_map_settings.png
      :align: center
 
 * Click :guilabel:`Ok` three times.
 * If you use the :guilabel:`Identify` tool on a street now while edit mode is
   active, the dialog you get should look like this:
 
-  .. image:: /static/training_manual/create_vector_data/highway_as_value_map.png
+  .. image:: img/highway_as_value_map.png
      :align: center
 
 :ref:`Back to text <backlink-create-vector-forms-1>`
@@ -407,20 +407,20 @@ the data we need in order to produce the :kbd:`houses`, :kbd:`schools` and
 
 The :guilabel:`Query Builder` is found in the layer properties:
 
-  .. image:: /static/training_manual/vector_analysis/query_builder.png
+  .. image:: img/query_builder.png
      :align: center
 
 Using the :guilabel:`Query Builder` against the :kbd:`multipolygons` layer,
 create the following queries for the :kbd:`houses`, :kbd:`schools`,
 :kbd:`restaurants` and :kbd:`residential` layers:
 
-  .. image:: /static/training_manual/vector_analysis/houses_query.png
+  .. image:: img/houses_query.png
      :align: center
 
-  .. image:: /static/training_manual/vector_analysis/schools_query.png
+  .. image:: img/schools_query.png
      :align: center
 
-  .. image:: /static/training_manual/vector_analysis/restaurants_query.png
+  .. image:: img/restaurants_query.png
      :align: center
 
 Once you have entered each query, click :guilabel:`OK`. You'll see that the map
@@ -442,13 +442,13 @@ the following methods:
 To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
 layer:
 
-  .. image:: /static/training_manual/vector_analysis/roads_query.png
+  .. image:: img/roads_query.png
      :align: center
 
 
 You should end up with a map which looks similar to the following:
 
-  .. image:: /static/training_manual/vector_analysis/osm_queries_result.png
+  .. image:: img/osm_queries_result.png
      :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-1>`
@@ -460,7 +460,7 @@ You should end up with a map which looks similar to the following:
 
 * Your buffer dialog should look like this:
 
-  .. image:: /static/training_manual/vector_analysis/schools_buffer_setup.png
+  .. image:: img/schools_buffer_setup.png
      :align: center
 
   The :guilabel:`Buffer distance` is :kbd:`1000` meters (i.e., :kbd:`1`
@@ -470,12 +470,12 @@ You should end up with a map which looks similar to the following:
   optional, but it's recommended, because it makes the output buffers look
   smoother. Compare this:
 
-  .. image:: /static/training_manual/vector_analysis/schools_buffer_5.png
+  .. image:: img/schools_buffer_5.png
      :align: center
 
   To this:
 
-  .. image:: /static/training_manual/vector_analysis/schools_buffer_20.png
+  .. image:: img/schools_buffer_20.png
      :align: center
 
 The first image shows the buffer with the :guilabel:`Segments to approximate`
@@ -496,26 +496,26 @@ process:
 * First, create a buffer of 500m around the restaurants and add the layer to
   the map:
 
-  .. image:: /static/training_manual/vector_analysis/restaurants_buffer.png
+  .. image:: img/restaurants_buffer.png
      :align: center
 
-  .. image:: /static/training_manual/vector_analysis/restaurants_buffer_result.png
+  .. image:: img/restaurants_buffer_result.png
      :align: center
 
 * Next, select buildings within that buffer area:
 
-  .. image:: /static/training_manual/vector_analysis/select_within_restaurants.png
+  .. image:: img/select_within_restaurants.png
      :align: center
 
 * Now save that selection to our new :kbd:`houses_restaurants_500m` layer:
 
-  .. image:: /static/training_manual/vector_analysis/save_selection_restaurants.png
+  .. image:: img/save_selection_restaurants.png
      :align: center
 
 Your map should now show only those buildings which are within 50m of a road,
 1km of a school and 500m of a restaurant:
 
-  .. image:: /static/training_manual/vector_analysis/restaurant_buffer_result.png
+  .. image:: img/restaurant_buffer_result.png
      :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-3>`
@@ -530,12 +530,12 @@ Your map should now show only those buildings which are within 50m of a road,
 
 * Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/answer_dem_aspect.png
+  .. image:: img/answer_dem_aspect.png
      :align: center
 
 Your result:
 
-.. image:: /static/training_manual/rasters/answer_aspect_result.png
+.. image:: img/answer_aspect_result.png
    :align: center
 
 :ref:`Back to text <backlink-raster-analysis-1>`
@@ -548,7 +548,7 @@ Your result:
 
 * Set your :guilabel:`Raster calculator` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/answer_raster_calculator_slope.png
+  .. image:: img/answer_raster_calculator_slope.png
      :align: center
 
 * For the 5 degree version, replace the :kbd:`2` in the expression and file
@@ -558,12 +558,12 @@ Your results:
 
 * 2 degrees:
 
-  .. image:: /static/training_manual/rasters/answer_2degree_result.png
+  .. image:: img/answer_2degree_result.png
      :align: center
 
 * 5 degrees:
 
-  .. image:: /static/training_manual/rasters/answer_5degree_result.png
+  .. image:: img/answer_5degree_result.png
      :align: center
 
 :ref:`Back to text <backlink-raster-analysis-2>`
@@ -585,7 +585,7 @@ Your results:
 
 When viewed over the original raster, the areas should overlap perfectly:
 
-.. image:: /static/training_manual/complete_analysis/polygonize_raster.png
+.. image:: img/polygonize_raster.png
    :align: center
 
 * You can save this layer by right-clicking on the :guilabel:`all_terrain`
@@ -615,19 +615,19 @@ We can therefore sensibly eliminate those buildings from our dataset
 
 At the moment, your analysis should look something like this:
 
-.. image:: /static/training_manual/complete_analysis/new_solution_example.png
+.. image:: img/new_solution_example.png
    :align: center
 
 Consider a circular area, continuous for 100 meters in all directions.
 
-.. image:: /static/training_manual/complete_analysis/circle_100.png
+.. image:: img/circle_100.png
    :align: center
 
 If it is greater than 100 meters in radius, then subtracting 100 meters from
 its size (from all directions) will result in a part of it being left in the
 middle.
 
-.. image:: /static/training_manual/complete_analysis/circle_with_remainder.png
+.. image:: img/circle_with_remainder.png
    :align: center
 
 Therefore, you can run an *interior buffer* of 100 meters on your existing
@@ -641,7 +641,7 @@ To demonstrate:
   the Buffer(s) dialog.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/suitable_terrain_buffer.png
+  .. image:: img/suitable_terrain_buffer.png
      :align: center
 
 * Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
@@ -654,14 +654,14 @@ To demonstrate:
 
 Your results will look like something like this:
 
-.. image:: /static/training_manual/complete_analysis/suitable_buffer_results.png
+.. image:: img/suitable_buffer_results.png
    :align: center
 
 * Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
   Research Tools --> Select by location`).
 * Set up like this:
 
-  .. image:: /static/training_manual/complete_analysis/select_by_location.png
+  .. image:: img/select_by_location.png
      :align: center
 
 * Select features in :guilabel:`new_solution` that intersect features in
@@ -669,7 +669,7 @@ Your results will look like something like this:
 
 This is the result:
 
-.. image:: /static/training_manual/complete_analysis/buffer_select_result.png
+.. image:: img/buffer_select_result.png
    :align: center
 
 The yellow buildings are selected. Although some of the buildings fall partly
@@ -693,7 +693,7 @@ requirements.
 
 Your map should look like this (you may need to re-order the layers):
 
-.. image:: /static/training_manual/online_resources/geology_layer_result.png
+.. image:: img/geology_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-wms-1>`
@@ -707,16 +707,16 @@ Your map should look like this (you may need to re-order the layers):
 * Use the same approach as before to add the new server and the appropriate
   layer as hosted on that server:
 
-  .. image:: /static/training_manual/online_resources/add_ogc_server.png
+  .. image:: img/add_ogc_server.png
      :align: center
 
-  .. image:: /static/training_manual/online_resources/add_bluemarble_layer.png
+  .. image:: img/add_bluemarble_layer.png
      :align: center
 
 * If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
   low resolution:
 
-.. image:: /static/training_manual/online_resources/low_resolution_dataset.png
+.. image:: img/low_resolution_dataset.png
    :align: center
 
 Therefore, it's better not to use this data for the current map. The Blue
@@ -829,7 +829,7 @@ linking them to our `people` table via 'one to many' relationships::
 
 An ER Diagram to represent this would look like this:
 
-.. image:: /static/training_manual/database_concepts/er-people-normalised-example.png
+.. image:: img/er-people-normalised-example.png
    :align: center
 
 :ref:`Back to text <backlink-database-concepts-3>`
@@ -1118,3 +1118,16 @@ Result::
 As you can see, our constraint allows nulls to be added into the database.
 
 :ref:`Back to text <backlink-simple-feature-3>`
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |RF| replace:: Results For
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |largeLandUseArea| replace:: Bontebok National Park
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png

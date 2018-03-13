@@ -117,7 +117,7 @@ information on QGIS authentication support in :ref:`authentication` chapter.
 
 .. _figure_plugins_settings:
 
-.. figure:: /static/user_manual/plugins/plugins_settings.png
+.. figure:: img/plugins_settings.png
    :align: center
 
    The |transformSettings| :guilabel:`Settings` tab
@@ -135,7 +135,7 @@ checkbox.
 
 .. _figure_plugins_all:
 
-.. figure:: /static/user_manual/plugins/plugins_all.png
+.. figure:: img/plugins_all.png
    :align: center
 
    The |showPluginManager| :guilabel:`All` tab
@@ -151,7 +151,7 @@ can be uninstalled and reinstalled using the **[Uninstall plugin]** and
 
 .. _figure_plugins_installed:
 
-.. figure:: /static/user_manual/plugins/plugins_installed.png
+.. figure:: img/plugins_installed.png
    :align: center
 
    The |pluginInstalled| :guilabel:`Installed` tab
@@ -165,7 +165,7 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
 
 .. _figure_plugins_not_installed:
 
-.. figure:: /static/user_manual/plugins/plugins_not_installed.png
+.. figure:: img/plugins_not_installed.png
    :align: center
 
    The |plugin| :guilabel:`Not installed` tab
@@ -185,7 +185,7 @@ Installation can be done with the **[Install plugin]**, **[Upgrade plugin]** or
 
 .. _figure_plugins_upgradeable:
 
-.. figure:: /static/user_manual/plugins/plugins_upgradeable.png
+.. figure:: img/plugins_upgradeable.png
    :align: center
 
    The |pluginUpgrade| :guilabel:`Upgradeable` tab
@@ -202,7 +202,33 @@ another compatible plugin or help to upgrade the broken one).
 
 .. _figure_plugins_invalid:
 
-.. figure:: /static/user_manual/plugins/plugins_invalid.png
+.. figure:: img/plugins_invalid.png
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
+   :width: 1.5em
+.. |plugin| image:: /static/common/plugin.png
+   :width: 1.5em
+.. |pluginInstalled| image:: /static/common/plugin-installed.png
+   :width: 1.5em
+.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+   :width: 1.5em
+.. |pluginNew| image:: /static/common/plugin-new.png
+   :width: 1.5em
+.. |pluginUpgrade| image:: /static/common/plugin-upgrade.png
+   :width: 1.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |transformSettings| image:: /static/common/mActionTransformSettings.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

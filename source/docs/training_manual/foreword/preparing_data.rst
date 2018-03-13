@@ -42,7 +42,7 @@ water, such as streams and rivers.
 
 .. _figure_set_osm_region:
 
-.. image:: /static/training_manual/foreword/set_osm_region.png
+.. image:: img/set_osm_region.png
    :align: center
 
 * You can then open the .osm file using the :guilabel:`Add Vector Layer` button.
@@ -53,7 +53,7 @@ water, such as streams and rivers.
 
 .. _figure_select_osm_layers:
 
-.. image:: /static/training_manual/foreword/select_osm_layers.png
+.. image:: img/select_osm_layers.png
    :align: center
 
 This will load three layers into your map which relate to OSM's naming
@@ -62,7 +62,7 @@ vector data).
 
 .. _figure_osm_data_loaded:
 
-.. image:: /static/training_manual/foreword/osm_data_loaded.png
+.. image:: img/osm_data_loaded.png
    :align: center
 
 We need to extract the useful data from these layers, rename them
@@ -93,7 +93,7 @@ need. We'll use the "building" field as an example here:
   have a look at the layer's :guilabel:`Attribute Table` to see what data OSM
   has returned for your region:
 
-.. image:: /static/training_manual/foreword/building_query_builder.png
+.. image:: img/building_query_builder.png
    :align: center
 
 * Click :guilabel:`Ok` and you'll see that the layer elements which are not
@@ -140,7 +140,7 @@ Once you have finished extracting the above data, you can remove the
 You should now have a map which looks something like this (the symbology will
 certainly be very different, but that is fine):
 
-.. image:: /static/training_manual/foreword/post_osm_import.png
+.. image:: img/post_osm_import.png
    :align: center
 
 The important thing is that you have 6 layers matching those shown above and
@@ -187,11 +187,11 @@ school buildings, playgrounds or car parks).
 
 For reference, the images in the example data are:
 
-.. image:: /static/training_manual/create_vector_data/field_outlines.png
+.. image:: img/field_outlines.png
    :align: center
 
 
-.. image:: /static/training_manual/create_vector_data/school_area_one.png
+.. image:: img/school_area_one.png
    :align: center
 
 
@@ -214,3 +214,16 @@ The tokens you need to replace are as follows:
   the filename of your SRTM DEM file.
 * :kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should replace
   this with the correct CRS for your region.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |TY| replace:: Try Yourself
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |majorUrbanName| replace:: Swellendam
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em

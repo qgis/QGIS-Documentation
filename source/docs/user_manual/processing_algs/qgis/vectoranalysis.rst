@@ -51,7 +51,7 @@ A new polygons layer is generated, with the exact same content as the input poly
 layer, but containing an additional field with the points count corresponding to
 each polygon.
 
-.. figure:: /static/user_manual/processing_algs/qgis/count_points_polygon.png
+.. figure:: img/count_points_polygon.png
   :align: center
 
   The labels identify the point count
@@ -154,7 +154,7 @@ layer. The output is a line vector layer with all the attributes of the input la
 one attribute of the destination layer and the distance.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/distance_hub.png
+.. figure:: img/distance_hub.png
   :align: center
 
   Distance to nearest hub example
@@ -241,7 +241,7 @@ Hub ID field on the hub points and the Spoke ID field on the spoke points.
 
 If input layers are not point layers, a point on the surface of the geometries will be taken as the connecting location.
 
-.. figure:: /static/user_manual/processing_algs/qgis/join_lines.png
+.. figure:: img/join_lines.png
   :align: center
 
   Join points on common field
@@ -445,3 +445,12 @@ Outputs
 .......
 ``Line length`` [vector: polygon]
   Polygon output layer with fields of lines length and line count
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

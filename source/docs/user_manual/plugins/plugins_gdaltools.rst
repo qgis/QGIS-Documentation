@@ -40,7 +40,7 @@ List of GDAL tools
 
 .. _figure_GDAL_Tools:
 
-.. figure:: /static/user_manual/plugins/raster_menu.png
+.. figure:: img/raster_menu.png
    :align: center
 
    The *GDALTools* menu list
@@ -225,3 +225,51 @@ Use this dialog to embed your GDAL variables.
 
 .. maybe simpler rewording of the description is necessary
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gdalAssignProjection| image:: /static/common/projection-add.png
+   :width: 1.5em
+.. |gdalContour| image:: /static/common/contour.png
+   :width: 1.5em
+.. |gdalDem| image:: /static/common/gdal_dem.png
+   :width: 1.5em
+.. |gdalExtractProjection| image:: /static/common/projection-export.png
+   :width: 1.5em
+.. |gdalFillNoData| image:: /static/common/fillnodata.png
+   :width: 1.5em
+.. |gdalGrid| image:: /static/common/grid.png
+   :width: 1.5em
+.. |gdalMerge| image:: /static/common/merge.png
+   :width: 1.5em
+.. |gdalNearblack| image:: /static/common/nearblack.png
+   :width: 1.5em
+.. |gdalPolygonize| image:: /static/common/polygonize.png
+   :width: 1.5em
+.. |gdalProximity| image:: /static/common/proximity.png
+   :width: 1.5em
+.. |gdalRasterClip| image:: /static/common/raster-clip.png
+   :width: 1.5em
+.. |gdalRasterOverview| image:: /static/common/raster-overview.png
+   :width: 1.5em
+.. |gdalRasterRGB| image:: /static/common/raster-rgb.png
+   :width: 1.5em
+.. |gdalRasterize| image:: /static/common/rasterize.png
+   :width: 1.5em
+.. |gdalSieve| image:: /static/common/sieve.png
+   :width: 1.5em
+.. |gdalTileindex| image:: /static/common/tileindex.png
+   :width: 1.5em
+.. |gdalTranslate| image:: /static/common/translate.png
+   :width: 1.5em
+.. |gdalVrt| image:: /static/common/vrt.png
+   :width: 1.5em
+.. |gdalWarp| image:: /static/common/warp.png
+   :width: 1.5em
+.. |rasterInfo| image:: /static/common/raster-info.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

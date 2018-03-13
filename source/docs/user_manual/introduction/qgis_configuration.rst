@@ -143,7 +143,7 @@ source code.
 
 .. _figure_environment_variables:
 
-.. figure:: /static/user_manual/introduction/sys-env-options.png
+.. figure:: img/sys-env-options.png
    :align: center
 
    System environment variables in QGIS
@@ -269,7 +269,7 @@ Rendering Settings
 
 .. _figure_rendering_menu:
 
-.. figure:: /static/user_manual/introduction/rendering_menu.png
+.. figure:: img/rendering_menu.png
    :align: center
 
    Rendering tab of Project Properties dialog
@@ -297,7 +297,7 @@ Rendering Settings
   are simplified by the provider (PostGIS, Oracle...) and unlike the
   local-side simplification, geometry-based calculations may be affected
 * :guilabel:`Maximum scale at which the layer should be simplified`
-* |doublespinbox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
+* |doubleSpinBox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
 .. note:: Besides the global setting, feature simplification can be set for any
    specific layer from its :menuselection:`Layer properties --> Rendering` menu.
@@ -549,7 +549,7 @@ Network Settings
 
 .. _figure_network_tab:
 
-.. figure:: /static/user_manual/introduction/proxy-settings.png
+.. figure:: img/proxy-settings.png
    :align: center
 
    Proxy-settings in QGIS
@@ -673,7 +673,7 @@ dialog described above.
 
 .. _figure_general_tab:
 
-.. figure:: /static/user_manual/introduction/project_general.png
+.. figure:: img/project_general.png
    :align: center
 
    General tab of Project Properties dialog
@@ -739,7 +739,7 @@ dialog described above.
 
 .. _figure_macro_tab:
 
-.. figure:: /static/user_manual/introduction/macro.png
+.. figure:: img/macro.png
    :align: center
 
    Macro settings in QGIS
@@ -764,7 +764,7 @@ user interface. This can be very useful if you want to provide your end-users wi
 
 .. _figure_customization:
 
-.. figure:: /static/user_manual/introduction/customization.png
+.. figure:: img/customization.png
    :align: center
 
    The Customization dialog
@@ -827,7 +827,7 @@ ones to QGIS features.
 
 .. _figure_shortcuts:
 
-.. figure:: /static/user_manual/introduction/shortcuts.png
+.. figure:: img/shortcuts.png
    :align: center
 
    Define shortcut options
@@ -843,3 +843,49 @@ Proceed as above for any other tools you wish to customize. Once you have
 finished your configuration, simply **[Close]** the dialog to have your changes
 applied. You can also **[Save]** the changes as an :file:`.XML` file
 and **[Load]** them into another QGIS installation.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |doubleSpinBox| image:: /static/common/doublespinbox.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |select| image:: /static/common/mActionSelect.png
+   :width: 1.5em
+.. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em

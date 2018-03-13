@@ -175,4 +175,3 @@ Now launch QGIS under the debugger by clicking the icon with a bug on it in the
 bottom left of the window.
 
 .. image:: images/image13.jpeg
-

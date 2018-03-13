@@ -18,7 +18,7 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 
 .. _Figure_composer_image:
 
-.. figure:: /static/user_manual/print_composer/image_mainproperties.png
+.. figure:: img/image_mainproperties.png
    :align: center
 
    Image Item Properties panel
@@ -94,9 +94,25 @@ the north arrow from the list as displayed in figure_composer_image_north_.
 
 .. _Figure_composer_image_north:
 
-.. figure:: /static/user_manual/print_composer/north_arrows.png
+.. figure:: img/north_arrows.png
    :align: center
 
    North arrows available for selection in provided SVG library
 
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addImage| image:: /static/common/mActionAddImage.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

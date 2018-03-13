@@ -50,7 +50,7 @@ The average volume in the forest is :kbd:`135.2 m3/ha`.
 
 You can calculate the average for the number of stems in the same way, :kbd:`2745 stems/ha`.
 
-.. image:: /static/training_manual/forestry/statistics_pvol-pstem.png
+.. image:: img/statistics_pvol-pstem.png
    :align: center
 
 |basic| |FA| Estimating Stand Parameters
@@ -73,7 +73,7 @@ What you need is to get the averages of the sample plots that are falling within
 
 Open the :guilabel:`Attribute table` for :kbd:`forest_stands_2012_results` and review the results you got. Note that a number of forest stands have :kbd:`NULL` as the value for the calculations, those are the ones having no sample plots. Select them all review them in the map, they are some of the smaller stands:
 
-.. image:: /static/training_manual/forestry/stands_no_info.png
+.. image:: img/stands_no_info.png
    :align: center
 
 Lets calculate now the same averages for the whole forest as you did before, only this time you will use the averages you got for the stands as the bases for the calculation. Remember that in the previous situation, each sample plot represented a theoretical stand of :kbd:`80x80 m`. Now you have to consider the area of each of the stands individually instead. That way, again, the average values of the parameters that are in, for example, m3/ha for the volumes are converted to total volumes for the stands.
@@ -105,7 +105,7 @@ In the previous situation, the areas represented by every sample plot were the s
 * Check the :guilabel:`Use only selected features`
 * Click :guilabel:`OK`.
 
-.. image:: /static/training_manual/forestry/stands_area_stats.png
+.. image:: img/stands_area_stats.png
    :align: center
 
 As you can see, the total sum of the stands' areas is :kbd:`66.04 ha`. Note that the area of the missing forest stands is only about :kbd:`7 ha`.
@@ -128,3 +128,15 @@ You managed to calculate forest estimates for the whole forest using the informa
 -------------------------------------------------------------------------------
 
 In the following lesson, you will first create a hillshade background from a LiDAR dataset which you will use to prepare a map presentation with the forest results you just calculated.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png

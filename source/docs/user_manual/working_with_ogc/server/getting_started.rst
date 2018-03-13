@@ -348,7 +348,7 @@ like this in your web browser to retrieve the *countries* layer:
 
 If you obtain the next image, then QGIS Server is running correctly:
 
-.. figure:: /static/user_manual/working_with_ogc/server_basic_getmap.png
+.. figure:: img/server_basic_getmap.png
   :align: center
 
   Server response to a basic GetMap request
@@ -378,7 +378,7 @@ styles of the layers in QGIS and the project CRS, if not already defined.
 
 .. _figure_server_definitions:
 
-.. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
+.. figure:: img/ows_server_definition.png
    :align: center
 
    Definitions for a QGIS Server WMS/WFS/WCS project
@@ -494,3 +494,15 @@ For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Project Properties` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

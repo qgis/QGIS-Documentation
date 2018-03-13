@@ -12,12 +12,12 @@ capabilities of GRASS.
   :guilabel:`Filter` field of the :guilabel:`Modules List` tab.
 * Open the tool and set it up like this:
 
-  .. image:: /static/training_manual/grass/colors_table_setup.png
+  .. image:: img/colors_table_setup.png
      :align: center
 
 When you run the tool, it will recolor your raster:
 
-.. image:: /static/training_manual/grass/colors_table_result.png
+.. image:: img/colors_table_result.png
    :align: center
 
 |basic| |FA| Visualize Data in 3D
@@ -40,12 +40,12 @@ QGIS map canvas.
   done.
 * Search for the :kbd:`nviz` tool:
 
-  .. image:: /static/training_manual/grass/nviz_search.png
+  .. image:: img/nviz_search.png
      :align: center
 
 * Set it up as shown:
 
-  .. image:: /static/training_manual/grass/nviz_setup.png
+  .. image:: img/nviz_setup.png
      :align: center
 
 * Remember to enable both :guilabel:`Use region of this map` buttons to the
@@ -57,7 +57,7 @@ NVIZ will set up a 3D environment using the raster and vector selected. This
 may take some time, depending on your hardware. When it's done, you will see
 the map rendered in 3D in a new window:
 
-.. image:: /static/training_manual/grass/nviz_result.png
+.. image:: img/nviz_result.png
    :align: center
 
 Experiment with the :guilabel:`height`, :guilabel:`z-exag`, and :guilabel:`View
@@ -79,7 +79,7 @@ The Mapcalc dialog allows you to construct a sequence of analyses to be
 performed on a raster, or collection of rasters. You will use these tools to do
 so:
 
-.. image:: /static/training_manual/grass/map_calc_tools.png
+.. image:: img/map_calc_tools.png
    :align: center
 
 In order, they are:
@@ -100,17 +100,17 @@ Using these tools:
 
 * Construct the following algorithm:
 
-  .. image:: /static/training_manual/grass/altitude_range_settings.png
+  .. image:: img/altitude_range_settings.png
      :align: center
 
 * When you click :guilabel:`Run`, your output should look like this:
 
-  .. image:: /static/training_manual/grass/altitude_range_result.png
+  .. image:: img/altitude_range_result.png
      :align: center
 
 * Click :guilabel:`View output` to see the output displayed in your map:
 
-  .. image:: /static/training_manual/grass/altitude_range_output.png
+  .. image:: img/altitude_range_output.png
      :align: center
 
 This shows all the areas where the terrain is lower than 500 meters or higher
@@ -124,3 +124,17 @@ explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS
 Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more
 structured approach, look under the :guilabel:`Modules Tree` tab, which
 organizes tools by type.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |basic| image:: /static/global/basic.png
+.. |grassRegionEdit| image:: /static/common/grass_region_edit.png
+   :width: 1.5em
+.. |moderate| image:: /static/global/moderate.png

@@ -29,13 +29,13 @@ reason, it has a tool called the :guilabel:`Composer Manager`.
 (You could also close the dialog and navigate to a composer via the
 :menuselection:`File --> Print Composers` menus, as in the image below.)
 
-.. image:: /static/training_manual/map_composer/print_composer_menu.png
+.. image:: img/print_composer_menu.png
    :align: center
 
 Whichever route you take to get there, you will now see the :guilabel:`Print
 Composer` window:
 
-.. image:: /static/training_manual/map_composer/print_composer_dialog.png
+.. image:: img/print_composer_dialog.png
    :align: center
 
 
@@ -61,19 +61,19 @@ With this tool activated, you'll be able to place a map on the page.
 
 * Click and drag a box on the blank page:
 
-.. image:: /static/training_manual/map_composer/drag_add_map.png
+.. image:: img/drag_add_map.png
    :align: center
 
 The map will appear on the page.
 
 * Move the map by clicking and dragging it around:
 
-.. image:: /static/training_manual/map_composer/move_map.png
+.. image:: img/move_map.png
    :align: center
 
 * Resize it by clicking and dragging the boxes in the corners:
 
-.. image:: /static/training_manual/map_composer/resize_map.png
+.. image:: img/resize_map.png
    :align: center
 
 .. note::  Your map may look a lot different, of course! This depends on how
@@ -98,7 +98,7 @@ be at the wrong resolution and will look ugly or unreadable.
 
 * Force the map to refresh by clicking this button:
 
-.. image:: /static/training_manual/map_composer/refresh_button.png
+.. image:: img/refresh_button.png
    :align: center
 
 Remember that the size and position you've given the map doesn't need to be
@@ -139,7 +139,7 @@ However, there is also a tool to help position the title relative to the map
   dropdown arrow next to it to reveal the positioning options and click
   :guilabel:`Align center`:
 
-.. image:: /static/training_manual/map_composer/align_center_dropdown.png
+.. image:: img/align_center_dropdown.png
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
@@ -161,7 +161,7 @@ contents of the label:
 
 * Use this interface to set the font and alignment options:
 
-.. image:: /static/training_manual/map_composer/title_font_alignment.png
+.. image:: img/title_font_alignment.png
    :align: center
 
 * Choose a large but sensible font (the example will use the default font with
@@ -181,7 +181,7 @@ you wish to add a frame, you can do so:
 
 In this example, we won't enable the frame, so here is our page so far:
 
-.. image:: /static/training_manual/map_composer/page_so_far.png
+.. image:: img/page_so_far.png
    :align: center
 
 |basic| |FA| Adding a Legend
@@ -196,7 +196,7 @@ add a new legend.
 
 * Click on the page to place the legend, and move it to where you want it:
 
-.. image:: /static/training_manual/map_composer/legend_added.png
+.. image:: img/legend_added.png
    :align: center
 
 |moderate| |FA| Customizing Legend Items
@@ -220,13 +220,13 @@ You can also rename items.
 * Set :kbd:`landuse` to :guilabel:`Hidden`, then click the down arrow and edit
   each category to name them on the legend. You can also reorder the items:
 
-.. image:: /static/training_manual/map_composer/categories_reordered.png
+.. image:: img/categories_reordered.png
    :align: center
 
 As the legend will likely be widened by the new layer names, you may wish to
 move and resize the legend and or map. This is the result:
 
-.. image:: /static/training_manual/map_composer/map_composer_result.png
+.. image:: img/map_composer_result.png
    :align: center
 
 |basic| |FA| Exporting Your Map
@@ -291,3 +291,45 @@ Congratulations on your first completed QGIS map project!
 
 On the next page, you will be given an assignment to complete. This will allow
 you to practice the techniques you have learned so far.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addLegend| image:: /static/common/mActionAddLegend.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |alignLeft| image:: /static/common/mActionAlignLeft.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em

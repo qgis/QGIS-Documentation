@@ -22,7 +22,7 @@ QGIS, and so you don't need to install it separately.
 * Open the :guilabel:`Plugin Manager` and check that the Raster Terrain
   Analysis plugin is enabled:
 
-  .. image:: /static/training_manual/qgis_plugins/raster_terrain_enabled.png
+  .. image:: img/raster_terrain_enabled.png
      :align: center
 
 * Open the :menuselection:`Raster` menu. You should see a
@@ -30,7 +30,7 @@ QGIS, and so you don't need to install it separately.
 * Click on :menuselection:`Terrain analysis --> Relief` and input the following
   options:
 
-  .. image:: /static/training_manual/qgis_plugins/terrain_analysis_dialog.png
+  .. image:: img/terrain_analysis_dialog.png
      :align: center
 
 * Save the new file under :kbd:`exercise_data/plugins/relief.tif` (create a new
@@ -40,7 +40,7 @@ QGIS, and so you don't need to install it separately.
 * Click the :guilabel:`Create automatically` button. The list below will be
   populated:
 
-  .. image:: /static/training_manual/qgis_plugins/terrain_analysis_list.png
+  .. image:: img/terrain_analysis_list.png
      :align: center
 
   These are the colors that the plugin will use to create the relief.
@@ -48,12 +48,12 @@ QGIS, and so you don't need to install it separately.
 * If you like, you can change these colors by double-clicking on each row's
   color bar. For example:
 
-  .. image:: /static/training_manual/qgis_plugins/color_changes.png
+  .. image:: img/color_changes.png
      :align: center
 
 * Click :guilabel:`OK` and the relief will be created:
 
-  .. image:: /static/training_manual/qgis_plugins/relief_created.png
+  .. image:: img/relief_created.png
      :align: center
 
 This achieves a similar effect to when you used the semi-transparent hillshade
@@ -69,7 +69,7 @@ it creates this effect using only one layer.
   :kbd:`OpenLayers` in the :guilabel:`Filter` field.
 * Select the OpenLayers plugin from the filtered list:
 
-  .. image:: /static/training_manual/qgis_plugins/select_openlayers.png
+  .. image:: img/select_openlayers.png
      :align: center
 
 * Click the :guilabel:`Install plugin` button to install.
@@ -83,7 +83,7 @@ properly:
 * Use the panel to choose a map type you want. In this example, we'll use the
   "Hybrid" type map, but you can choose any others if you want.
 
-  .. image:: /static/training_manual/qgis_plugins/hybrid_map_selected.png
+  .. image:: img/hybrid_map_selected.png
      :align: center
 
 * Open the :guilabel:`Project Properties` Dialog by selecting 
@@ -91,21 +91,21 @@ properly:
 
 * Enable "on the fly" projection and use the Google Mercator projection:
 
-  .. image:: /static/training_manual/qgis_plugins/google_mercator_crs.png
+  .. image:: img/google_mercator_crs.png
      :align: center
 
 * Now use the plugin to give you a Google map of the area. You can click on
   :menuselection:`Web --> OpenLayers Plugin --> Add Google Hybrid Layer` to
   add it: 
 
-  .. image:: /static/training_manual/qgis_plugins/add_google_hybrid.png
+  .. image:: img/add_google_hybrid.png
      :align: center
 
 This will load a new raster image in from Google that you can use as a
 backdrop, or to help you find out where you are on the map. Here is such a
 layer, with our own vector road layer as overlay:
 
-.. image:: /static/training_manual/qgis_plugins/google_hybrid_result.png
+.. image:: img/google_hybrid_result.png
    :align: center
 
 .. note:: You may need to drag your roads layer above the Google layer to make
@@ -120,7 +120,7 @@ layer, with our own vector road layer as overlay:
 * Open the :guilabel:`Plugin Manager` and filter for the GeoSearch Plugin 
   and click :guilabel:`Install Plugin` to install it.
 
-  .. image:: /static/training_manual/qgis_plugins/find_geosearch_plugin.png
+  .. image:: img/find_geosearch_plugin.png
      :align: center
 
 * Close the :guilabel:`Plugin Manager`.
@@ -128,12 +128,12 @@ layer, with our own vector road layer as overlay:
   :menuselection:`Plugins --> GeoSearch Plugin --> GeoSearch` to open the
   GeoSearch dialog.
 
-  .. image:: /static/training_manual/qgis_plugins/geosearch_menu.png
+  .. image:: img/geosearch_menu.png
      :align: center
 
 * Search for |majorUrbanName| in the GeoSearch Dialog to locate it on your map:
 
-  .. image:: /static/training_manual/qgis_plugins/city_search.png
+  .. image:: img/city_search.png
      :align: center
  
 |IC|
@@ -148,3 +148,17 @@ optimum use of them.
 
 Next we'll look at how to use layers that are hosted on remote servers in real
 time.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png

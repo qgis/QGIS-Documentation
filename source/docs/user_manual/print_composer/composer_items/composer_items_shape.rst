@@ -33,7 +33,7 @@ so it can rotate automatically with the map (see :ref:`image_item`).
 
 .. _figure_composer_arrow:
 
-.. figure:: /static/user_manual/print_composer/arrow_properties.png
+.. figure:: img/arrow_properties.png
    :align: center
 
    Arrow Item Properties Panel
@@ -89,7 +89,7 @@ you can create a perfect square, circle or triangle.
 
 .. _figure_composer_basic_shape:
 
-.. figure:: /static/user_manual/print_composer/shape_properties.png
+.. figure:: img/shape_properties.png
    :align: center
 
    Shape Item Properties Panel
@@ -127,7 +127,7 @@ panel.
 
 .. _figure_composer_nodes_shape:
 
-.. figure:: /static/user_manual/print_composer/shape_nodes_properties.png
+.. figure:: img/shape_nodes_properties.png
    :align: center
 
    Nodes Shape Item Properties Panel
@@ -143,3 +143,21 @@ Moreover, in this mode, you are able to add nodes to an existing shape. You
 just have to do a left click near a segment and if you are not too far from the
 shape, a node is added. Finally, you can remove the currently selected node by
 hitting the :kbd:`DEL` key.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addArrow| image:: /static/common/mActionAddArrow.png
+   :width: 1.5em
+.. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
+   :width: 1.5em
+.. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
+   :width: 1.5em
+.. |degrees| unicode:: 0x00B0
+   :ltrim:
+.. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

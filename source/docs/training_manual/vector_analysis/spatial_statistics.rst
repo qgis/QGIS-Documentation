@@ -35,7 +35,7 @@ We'll use the area covered by streets.
   :menuselection:`Vector --> Geoprocessing Tools`) to generate an area
   enclosing all the roads:
 
-.. image:: /static/training_manual/vector_analysis/roads_hull_setup.png
+.. image:: img/roads_hull_setup.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
@@ -48,14 +48,14 @@ Creating random points
 * Create random points in this area using the tool at :menuselection:`Vector
   --> Research Tools --> Random points`:
 
-.. image:: /static/training_manual/vector_analysis/random_points_setup.png
+.. image:: img/random_points_setup.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
 * Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
 
-.. image:: /static/training_manual/vector_analysis/random_points_result.png
+.. image:: img/random_points_result.png
    :align: center
 
 Sampling the data
@@ -70,7 +70,7 @@ Sampling the data
   will find the tool under :menuselection:`Plugins --> Analyses --> Point
   sampling tool`:
 
-.. image:: /static/training_manual/vector_analysis/sampling_plugin_dialog.png
+.. image:: img/sampling_plugin_dialog.png
    :align: center
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
@@ -85,7 +85,7 @@ named |srtmFileName|.
 
 A possible sample layer is shown here:
 
-.. image:: /static/training_manual/vector_analysis/random_samples_result.png
+.. image:: img/random_samples_result.png
    :align: center
 
 The sample points are classified by their value such that darker points are at
@@ -106,13 +106,13 @@ Now get the basic statistics for this layer.
   which is the field you will calculate statistics for.
 * Click :guilabel:`OK`. You'll get results like this:
 
-.. image:: /static/training_manual/vector_analysis/basic_statistics_results.png
+.. image:: img/basic_statistics_results.png
    :align: center
 
 .. note:: You can copy and paste the results into a spreadsheet. The data uses
    a (colon :kbd:`:`) separator.
 
-.. image:: /static/training_manual/vector_analysis/paste_to_spreadsheet.png
+.. image:: img/paste_to_spreadsheet.png
    :align: center
 
 * Close the plugin dialog when done.
@@ -174,14 +174,14 @@ To generate a distance matrix using these points:
   :guilabel:`random_samples` layer as the target layer.
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/distance_matrix_setup.png
+.. image:: img/distance_matrix_setup.png
    :align: center
    
 * Save the result as :kbd:`distance_matrix.csv`.
 * Click :guilabel:`OK` to generate the distance matrix.
 * Open it in a spreadsheet program to see the results. Here is an example:
 
-.. image:: /static/training_manual/vector_analysis/distance_matrix_example.png
+.. image:: img/distance_matrix_example.png
    :align: center
 
 |basic| |FA| Nearest Neighbor Analysis
@@ -195,7 +195,7 @@ To do a nearest neighbor analysis:
   click :guilabel:`OK`.
 * The results will appear in the dialog's text window, for example:
 
-.. image:: /static/training_manual/vector_analysis/nearest_neighbour_example.png
+.. image:: img/nearest_neighbour_example.png
    :align: center
 
 .. note:: You can copy and paste the results into a spreadsheet. The data uses
@@ -226,7 +226,7 @@ create the random sample.
 As you can see from the example below, the mean coordinates and the center of
 the study area (in orange) don't necessarily coincide:
 
-.. image:: /static/training_manual/vector_analysis/polygon_centroid_mean.png
+.. image:: img/polygon_centroid_mean.png
    :align: center
 
 |basic| |FA| Image Histograms
@@ -243,7 +243,7 @@ way to demonstrate this in QGIS is via the image histogram, available in the
   graph describing the frequency of values in the image.
 * You can export it as an image:
 
-.. image:: /static/training_manual/vector_analysis/histogram_export.png
+.. image:: img/histogram_export.png
    :align: center
    
 * Select the :guilabel:`Metadata` tab, you can see more detailed information
@@ -290,7 +290,7 @@ Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
 the location of the sample points.
 
-.. image:: /static/training_manual/vector_analysis/interpolation_comparison.png
+.. image:: img/interpolation_comparison.png
    :align: center
 
 As you can see, 100 sample points aren't really enough to get a detailed
@@ -313,7 +313,7 @@ can see that the sample dataset is not representative of the terrain.
 The results (depending on the positioning of your random points) will look more
 or less like this:
 
-.. image:: /static/training_manual/vector_analysis/interpolation_comparison_1000.png
+.. image:: img/interpolation_comparison_1000.png
    :align: center
 
 The border shows the :guilabel:`roads_hull` layer (which represents the
@@ -323,7 +323,7 @@ the much greater density of sample points.
 
 Here is an example of what it looks like with :kbd:`10 000` sample points:
 
-.. image:: /static/training_manual/vector_analysis/011.png
+.. image:: img/011.png
    :align: center
 
 .. note:: It's not recommended that you try doing this with 10 000 sample
@@ -342,7 +342,7 @@ tools from within a single interface.
 * Activate this set of tools by enabling the :menuselection:`Processing --> Toolbox`
   menu entry. The toolbox looks like this:
 
-.. image:: /static/training_manual/vector_analysis/sextante_toolbox.png
+.. image:: img/sextante_toolbox.png
    :align: center
 
 You will probably see it docked in QGIS to the right of the map. Note that the
@@ -426,12 +426,12 @@ Using SAGA
 * Save these three outputs under :kbd:`exercise_data/spatial_statistics/`,
   using whatever file names you find appropriate.
 
-.. image:: /static/training_manual/spatial_statistics/002.png
+.. image:: img/002.png
    :align: center
 
 The output will look like this (the symbology was changed for this example):
 
-.. image:: /static/training_manual/spatial_statistics/003.png
+.. image:: img/003.png
    :align: center
 
 The red dot is the mean center; the large circle is the standard distance,
@@ -458,7 +458,7 @@ to be analyzed.
 * Select it, then open its attribute table. Although the figures may vary, your
   results will be in this format:
 
-.. image:: /static/training_manual/vector_analysis/min_distance_results.png
+.. image:: img/min_distance_results.png
    :align: center
 
 |IC|
@@ -472,3 +472,19 @@ of datasets.
 
 Now that we've covered vector analysis, why not see what can be done with
 rasters? That's what we'll do in the next module!
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
+.. |moderate| image:: /static/global/moderate.png
+.. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`

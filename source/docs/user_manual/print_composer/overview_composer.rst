@@ -88,7 +88,7 @@ it. To open the composer manager dialog, click on the |composerManager|
 
 .. _figure_composer_manager:
 
-.. figure:: /static/user_manual/print_composer/print_composer_manager.png
+.. figure:: img/print_composer_manager.png
    :align: center
 
    The Print Composer Manager
@@ -138,7 +138,7 @@ any elements are added.
 
 .. _Figure_composer_overview:
 
-.. figure:: /static/user_manual/print_composer/print_composer_blank.png
+.. figure:: img/print_composer_blank.png
    :align: center
 
    Print Composer
@@ -380,7 +380,7 @@ current composition.
 
 .. _figure_composition:
 
-.. figure:: /static/user_manual/print_composer/composition_settings.png
+.. figure:: img/composition_settings.png
    :align: center
 
    Composition settings in the Print Composer
@@ -434,7 +434,7 @@ and contains information to georeference it easily.
 
 .. _figure_composition_export:
 
-.. figure:: /static/user_manual/print_composer/composition_export.png
+.. figure:: img/composition_export.png
    :align: center
 
    Export Settings in the Print Composer
@@ -461,7 +461,7 @@ to a grid or a guide.
 
 .. _figure_composition_grid:
 
-.. figure:: /static/user_manual/print_composer/composition_guides.png
+.. figure:: img/composition_guides.png
    :align: center
 
    Snapping to grids in the Print Composer
@@ -487,7 +487,7 @@ More information on variables usage in the General Tools
 
 .. _figure_composition_variables:
 
-.. figure:: /static/user_manual/print_composer/composition_variables.png
+.. figure:: img/composition_variables.png
    :align: center
 
    Variables editor in the Print Composer
@@ -511,7 +511,7 @@ the actions done after the selected one will be removed.
 
 .. _figure_composer:
 
-.. figure:: /static/user_manual/print_composer/command_hist.png
+.. figure:: img/command_hist.png
    :align: center
 
    Command history in the Print Composer
@@ -543,3 +543,127 @@ Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 panel and unchecking the tickbox or you can use the icons on the toolbar.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addArrow| image:: /static/common/mActionAddArrow.png
+   :width: 1.5em
+.. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
+   :width: 1.5em
+.. |addHtml| image:: /static/common/mActionAddHtml.png
+   :width: 1.5em
+.. |addImage| image:: /static/common/mActionAddImage.png
+   :width: 1.5em
+.. |addLegend| image:: /static/common/mActionAddLegend.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
+   :width: 1.5em
+.. |alignBottom| image:: /static/common/mActionAlignBottom.png
+   :width: 1.5em
+.. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
+   :width: 1.5em
+.. |alignLeft| image:: /static/common/mActionAlignLeft.png
+   :width: 1.5em
+.. |alignRight| image:: /static/common/mActionAlignRight.png
+   :width: 1.5em
+.. |alignTop| image:: /static/common/mActionAlignTop.png
+   :width: 1.5em
+.. |alignVCenter| image:: /static/common/mActionAlignVCenter.png
+   :width: 1.5em
+.. |atlas| image:: /static/common/mIconAtlas.png
+   :width: 1.5em
+.. |atlasFirst| image:: /static/common/mActionAtlasFirst.png
+   :width: 1.5em
+.. |atlasLast| image:: /static/common/mActionAtlasLast.png
+   :width: 1.5em
+.. |atlasNext| image:: /static/common/mActionAtlasNext.png
+   :width: 1.5em
+.. |atlasPrev| image:: /static/common/mActionAtlasPrev.png
+   :width: 1.5em
+.. |atlasSettings| image:: /static/common/mActionAtlasSettings.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |composerManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
+.. |degrees| unicode:: 0x00B0
+   :ltrim:
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |duplicateComposer| image:: /static/common/mActionDuplicateComposer.png
+   :width: 1.5em
+.. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |lowerItems| image:: /static/common/mActionLowerItems.png
+   :width: 1.5em
+.. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
+   :width: 1.5em
+.. |moveItemsToBottom| image:: /static/common/mActionMoveItemsToBottom.png
+   :width: 1.5em
+.. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
+   :width: 1.5em
+.. |newComposer| image:: /static/common/mActionNewComposer.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |raiseItems| image:: /static/common/mActionRaiseItems.png
+   :width: 1.5em
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |select| image:: /static/common/mActionSelect.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |ungroupItems| image:: /static/common/mActionUngroupItems.png
+   :width: 1.5em
+.. |unlocked| image:: /static/common/unlocked.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |zoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToArea| image:: /static/common/mActionZoomToArea.png
+   :width: 1.5em
