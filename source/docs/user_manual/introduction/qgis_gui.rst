@@ -82,14 +82,17 @@ Menu Option                                              Shortcut              R
 |fileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`Project`
 :menuselection:`New from template -->`                   \                     see :ref:`sec_projects`                     \
 :menuselection:`Open Recent -->`                         \                     see :ref:`sec_projects`                     \
+:guilabel:`Close Project`                                \                     see :ref:`sec_projects`                     \
 |fileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
 |fileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
-|saveMapAsImage| :guilabel:`Save as Image...`            \                     see :ref:`sec_output`                       \
+|saveMapAsImage| :guilabel:`Save Map as Image...`        \                     see :ref:`sec_output`                       \
+|saveAsPDF| :guilabel:`Save Map as PDF...`               \                     see :ref:`sec_output`                       \
 :guilabel:`DXF Export...`                                \                     see :ref:`sec_output`                       \
 :guilabel:`DWG/DXF Import...`                            \                     \                                           \
 :guilabel:`Snapping Options...`                          :kbd:`S`              see :ref:`snapping_tolerance`               \
 |projectProperties| :guilabel:`Project Properties...`    :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |newLayout| :guilabel:`New Print Layout`                 :kbd:`Ctrl+P`         see :ref:`label_printlayout`                :guilabel:`Project`
+|newReport| :guilabel:`New Report`                       \                     see :ref:`label_printlayout`                \
 |layoutManager| :guilabel:`Layout Manager...`            \                     see :ref:`label_printlayout`                :guilabel:`Project`
 :menuselection:`Layouts -->`                             \                     see :ref:`label_printlayout`                \
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                                           \
@@ -104,8 +107,8 @@ Edit
 ====================================================================  ====================  ==========================================  ===============================
 Menu Option                                                           Shortcut              Reference                                   Toolbar
 ====================================================================  ====================  ==========================================  ===============================
-|undo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|redo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|undo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|redo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |editCut| :guilabel:`Cut Features`                                    :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |editCopy| :guilabel:`Copy Features`                                  :kbd:`Ctrl+C`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |editPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
@@ -114,6 +117,10 @@ Menu Option                                                           Shortcut  
 |capturePoint| :guilabel:`Add Feature`                                :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |circularStringCurvePoint| :guilabel:`Add Circular String`            \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |circularStringRadius| :guilabel:`Add Circular String by Radius`      \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+:menuselection:`Add Circle -->`                                       \                     \                                           :guilabel:`Shape Digitizing`
+:menuselection:`Add Rectangle -->`                                    \                     \                                           :guilabel:`Shape Digitizing`
+:menuselection:`Add Regular Polygon -->`                              \                     \                                           :guilabel:`Shape Digitizing`
+:menuselection:`Add Ellipse -->`                                      \                     \                                           :guilabel:`Shape Digitizing`
 |moveFeature| :guilabel:`Move Feature(s)`                             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |deleteSelected| :guilabel:`Delete Selected`                          \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |multiEdit| :guilabel:`Modify Attributes of Selected Features`        \                     see :ref:`calculate_fields_values`          :guilabel:`Digitizing`
@@ -130,7 +137,7 @@ Menu Option                                                           Shortcut  
 |splitParts| :guilabel:`Split Parts`                                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mergeFeatures| :guilabel:`Merge Selected Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|nodeTool| :guilabel:`Node Tool`                                      \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|nodeTool| :guilabel:`Vertex Tool`                                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 ====================================================================  ====================  ==========================================  ===============================
@@ -157,6 +164,7 @@ View
 Menu Option                                              Shortcut              Reference                                   Toolbar
 =======================================================  ====================  ==========================================  ===============================
 |newMap| :guilabel:`New Map View`                        :kbd:`Ctrl+M`         \                                           :guilabel:`Map Navigation`
+:guilabel:`New 3D Map View`                              :kbd:`Ctrl+Shift+M`   \                                           \
 |pan| :guilabel:`Pan Map`                                \                     see :ref:`zoom_pan`                         :guilabel:`Map Navigation`
 |panToSelected| :guilabel:`Pan Map to Selection`         \                     \                                           :guilabel:`Map Navigation`
 |zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl+Alt++`     see :ref:`zoom_pan`                         :guilabel:`Map Navigation`
@@ -197,7 +205,8 @@ Layer
 ============================================================  ====================  ==========================================  ===============================
 Menu Option                                                   Shortcut              Reference                                   Toolbar
 ============================================================  ====================  ==========================================  ===============================
-:menuselection:`Create Layer -->`                             \                     see :ref:`sec_create_vector`                :guilabel:`Manage Layers`
+|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         \                                           :guilabel:`Data Source Manager`
+:menuselection:`Create Layer -->`                             \                     see :ref:`sec_create_vector`                :guilabel:`Data Source Manager`
 :menuselection:`Add Layer -->`                                \                     see :ref:`supported_format`                 :guilabel:`Manage Layers`
 :guilabel:`Embed Layers and Groups...`                        \                     see :ref:`nesting_projects`                 \
 :guilabel:`Add from Layer Definition File...`                 \                     \                                           \
@@ -228,6 +237,7 @@ Settings
 ================================================================  ====================  ==========================================  ===============================
 Menu Option                                                       Shortcut              Reference                                   Toolbar
 ================================================================  ====================  ==========================================  ===============================
+:menuselection:`User Profiles -->`                                \                     \                                           \
 |symbology| :guilabel:`Style Manager...`                          \                     see :ref:`vector_style_manager`             \
 |customProjection| :guilabel:`Custom Projections...`              \                     see :ref:`sec_custom_projections`           \
 |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`             \                     see :ref:`shortcuts`                        \
@@ -246,8 +256,7 @@ Plugins
 Menu Option                                                             Shortcut              Reference                            Toolbar
 ======================================================================  ====================  ===================================  ===============================
 |showPluginManager| :guilabel:`Manage and Install Plugins...`           \                     see :ref:`managing_plugins`          \
-|installPluginFromZip| :guilabel:`Install Plugins from ZIP...`          \                     see :ref:`managing_plugins`          \
-:guilabel:`Python Console`                                              :kbd:`Ctrl+Alt+P`     \                                    \
+|pythonFile| :guilabel:`Python Console`                                 :kbd:`Ctrl+Alt+P`     \                                    \
 ======================================================================  ====================  ===================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.
@@ -613,6 +622,8 @@ loading, processing tools...)
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
 .. |deletePart| image:: /static/common/mActionDeletePart.png
    :width: 2em
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
@@ -658,8 +669,6 @@ loading, processing tools...)
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
-.. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
-   :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
@@ -690,6 +699,8 @@ loading, processing tools...)
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em
+.. |newReport| image:: /static/common/mActionNewReport.png
+   :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
@@ -718,6 +729,8 @@ loading, processing tools...)
    :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
+.. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
@@ -733,6 +746,8 @@ loading, processing tools...)
 .. |rotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
    :width: 1.5em
 .. |sampling| image:: /static/common/sampling.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
