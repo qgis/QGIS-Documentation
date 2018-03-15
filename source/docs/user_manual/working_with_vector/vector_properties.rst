@@ -1940,19 +1940,33 @@ Common settings
 ...............
 
 Regardless the type of widget applied to the field, there are some common
-properties you can set to control whether and how a field can be edited:
+properties you can set to control whether and how a field can be edited.
 
+General options
+^^^^^^^^^^^^^^^
+
+* **Alias**: a human readable name to use for fields. The alias will be displayed
+  in the feature form, the attribute table, or in the :ref:`Identify results` panel.
+  It can also be used as field name replacement in the :ref:`expression builder
+  <vector_expressions>`, easing expressions understanding and reviews.
+  Alias are saved in project file.
+* **Comment**: displays the field's comment set in the :guilabel:`Source Fields`
+  tab, in a read-only state.
 * **Editable**: uncheck this to set the field read-only (not manually
-  modifiable) when the layer is in edit mode. Note that checking this setting
+  modifiable) even when the layer is in edit mode. Note that checking this setting
   doesn't override any edit limitation from the provider.
 * **Label on top**: places the field name above or beside the widget in the
-  feature form
+  feature form.
+
+Default values
+^^^^^^^^^^^^^^
+
 * **Default value**: for new features, automatically populates by default the
   field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
   For example, you can:
 
-  * use ``$x``, ``$length``, ``$area`` to populate a field with the feature's x
-    coordinate, length, area or any geometric information at its creation;
+  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
+    feature's x coordinate, length, area or any geometric information at its creation;
   * incremente a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
