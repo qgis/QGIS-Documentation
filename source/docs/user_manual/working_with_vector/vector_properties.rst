@@ -1984,26 +1984,24 @@ Edit widgets
 
 The available widgets are:
 
-* **Checkbox**: Displays a checkbox, and you can define what attribute is
-  added to the column when the checkbox is activated or not.
-* **Classification**: Displays a combo box with the values used for
-  classification, if you have chosen 'unique value' as legend type in
-  the :guilabel:`Style` tab of the properties dialog.
-* **Color**: Displays a color button allowing user to choose a color from the
-  color dialog window.
+* **Checkbox**: Displays a checkbox whose state defines the value to insert;
+* **Classification**: only available when a :ref:`categorized symbology
+  <categorized_renderer>` is applied to the layer, displays a combo box with
+  the values of the classes.
+* **Color**: Displays a :ref:`color widget <color-selector>` allowing to select
+  a color; the color value is stored as a html notation in the attribute table.
 * **Date/Time**: Displays a line field which can open a calendar widget to enter
   a date, a time or both. Column type must be text. You can select a custom
   format, pop-up a calendar, etc.
 * **Enumeration**: Opens a combo box with values that can be used within
   the columns type. This is currently only supported by the PostgreSQL provider.
-* **External Resource**: Uses a "Open file" dialog to store file path in a
+* **Attachment**: Uses a "Open file" dialog to store file path in a
   relative or absolute mode. It can also be used to display a hyperlink (to
   document path), a picture or a web page.
-* **File Name**: Simplifies the selection by adding a file chooser dialog.
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
-* **Photo**: Field contains a filename for a picture. The width and height of
-  the field can be defined.
+* **Key/Value**
+* **List**
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
 * **Relation Reference**: This widget lets you embed the feature form of the
@@ -2015,26 +2013,24 @@ The available widgets are:
 * **Unique Values**: You can select one of the values already used in
   the attribute table. If 'Editable' is activated, a line edit is shown with
   autocompletion support, otherwise a combo box is used.
-* **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
+* **Uuid Generator**: Generates a read-only UUID (Universally Unique Identifiers)
   field, if empty.
 * **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
 * **Value Relation**: Offers values from a related table in a combobox. You can
   select layer, key column and value column. Several options are available to
-  change the standard behaviours: allow null value, order by value, allow
-  multiple selections and use of autocompleter. The forms will display either
+  change the standard behaviors: allow null value, order by value, allow
+  multiple selections and use of auto-completer. The forms will display either
   a drop-down list or a line edit field when completer checkbox is enabled.
-* **Web View**: Field contains a URL. The width and height of the field is variable.
 
 
-.. tip:: **Relative Path in widgets**
+.. tip:: **Relative Path in Attachment widget**
 
    If the path which is selected with the file browser is located in the same
    directory as the :file:`.qgs` project file or below, paths are converted to
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
-   This is enabled only for File Name, Photo and Web View at this moment.
 
 .. index:: Form, Built-in form, Custom form
 .. _customize_form:
