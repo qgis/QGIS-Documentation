@@ -1980,16 +1980,18 @@ Default values
     combining any of those values i.e using an expression like ``concat(field1, field2)``
     may not work.
 
-* **Constraints**: you can constrain the value to insert in the field. This constraint
-  can be:
+Constraints
+^^^^^^^^^^^
 
-  * |checkbox| :guilabel:`Not null`: force the user to provide a value
-  * based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
-    that the value of the field *col0* has only alphabetical letter.
+You can constrain the value to insert in the field. This constraint can be:
 
-    A short description of the constraint can be added and will be displayed at
-    the top of the form as a warning message when the value supplied does not
-    match the constraint.
+* |checkbox| :guilabel:`Not null`: force the user to provide a value
+* based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
+  that the value of the field *col0* has only alphabetical letter.
+
+A short description of the constraint can be added and will be displayed at
+the top of the form as a warning message when the value supplied does not
+match the constraint.
 
 .. _edit_widgets:
 
