@@ -73,7 +73,7 @@ Parameters
   Extent of the output raster layer. If the extent is not specified, the minimum
   extent that covers selected reference layer(s) will be used.
 
-``Output CRS `` [crs]
+``Output CRS`` [crs]
   Optional
 
   CRS of the output raster layer. If the output CRS is not specified, the CRS of
