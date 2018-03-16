@@ -11,7 +11,7 @@ This section shows some methods and elements that should be used to communicate
 with the user, in order to keep consistency in the User Interface.
 
 Showing messages. The QgsMessageBar class
-==================================================
+=========================================
 
 Using message boxes can be a bad idea from a user experience point of view. For
 showing a small info line or a warning/error messages, the QGIS message bar is
@@ -104,7 +104,7 @@ message box, or if it doesn't make sense to show it in the main QGIS window
             self.bar.pushMessage("Hello", "World", level=Qgis.MessageLevel(0))
 
     myDlg = MyDialog()
-    myDlg,show()
+    myDlg.show()
 
 .. figure:: img/dialog-with-bar.png
    :align: center
