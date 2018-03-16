@@ -107,7 +107,7 @@ You can use the following options:
   invalid plugins list.
 
 By default, QGIS provides you with its official plugin repository with the URL
-https://plugins.qgis.org/plugins/plugins.xml?qgis=2.18 (in case of QGIS 2.18)
+https://plugins.qgis.org/plugins/plugins.xml?qgis=3.0 (in case of QGIS 3.0)
 in the :guilabel:`Plugin repositories` section. To add external author repositories,
 click **[Add...]** and fill in the :guilabel:`Repository Details` form with a
 name and the URL. The URL can be of ``http://`` or ``file://`` protocol type.
@@ -150,7 +150,7 @@ checkbox.
 The Installed tab
 -----------------
 
-In |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
+In the |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
 plugins, that you can not uninstall. You can extend this list with external
 plugins that can be uninstalled and reinstalled any time, using the **[Uninstall
 plugin]** and **[Reinstall plugin]** buttons. You can **[Upgrade all]** the
