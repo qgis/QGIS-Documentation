@@ -51,7 +51,7 @@ Installed external python plugins are placed under the
 
   * |nix| :file:`.local/share/QGIS/QGIS3/profiles/default`;
   * |win| :file:`AppData\Roaming\QGIS\QGIS3\profiles\default`;
-  * |macos| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
+  * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
@@ -109,14 +109,17 @@ You can use the following options:
 By default, QGIS provides you with its official plugin repository with the URL
 https://plugins.qgis.org/plugins/plugins.xml?qgis=2.18 (in case of QGIS 2.18)
 in the :guilabel:`Plugin repositories` section. To add external author repositories,
-click **[Add...]** and fill in the form with a name and the URL.
-If you do not want one or more of the added repositories, they can be disabled
-via the **[Edit...]** button, or completely removed with the **[Delete]** button.
+click **[Add...]** and fill in the :guilabel:`Repository Details` form with a
+name and the URL. The URL can be of ``http://`` or ``file://`` protocol type.
 
 The default QGIS repository is an open repository and you don't need any
 authentication to access it. You can however deploy your own plugin repository
 and require an authentication (basic authentication, PKI). You can get more
 information on QGIS authentication support in :ref:`authentication` chapter.
+
+If you do not want one or more of the added repositories, they can be disabled
+from the Settings tab via the **[Edit...]** button, or completely removed with
+the **[Delete]** button.
 
 .. _figure_plugins_settings:
 
@@ -147,10 +150,11 @@ checkbox.
 The Installed tab
 -----------------
 
-In |pluginInstalled| :guilabel:`Installed` tab,
-you can find only the installed plugins. The external plugins
-can be uninstalled and reinstalled using the **[Uninstall plugin]** and
-**[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
+In |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
+plugins, that you can not uninstall. You can extend this list with external
+plugins that can be uninstalled and reinstalled any time, using the **[Uninstall
+plugin]** and **[Reinstall plugin]** buttons. You can **[Upgrade all]** the
+plugins here as well.
 
 .. _figure_plugins_installed:
 
@@ -228,6 +232,10 @@ directly from their repository.
    :width: 1.3em
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
 .. |pluginInstalled| image:: /static/common/plugin-installed.png
@@ -243,3 +251,5 @@ directly from their repository.
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em
