@@ -87,6 +87,12 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |deleteSelected|        | Delete selected features            | Remove selected features from the layer    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |editCut|               | Cut selected features to clipboard  |                                            | :kbd:`Ctrl+X`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |copySelected|          | Copy selected features to clipboard |                                            | :kbd:`Ctrl+C`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |expressionSelect|      | Select features using an Expression |                                            |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |selectAll|             | Select All                          | Select all features in the layer           | :kbd:`Ctrl+A`       |
@@ -102,10 +108,6 @@ following functionality:
 | |panToSelected|         | Pan map to the selected rows        |                                            | :kbd:`Ctrl+P`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |zoomToSelected|        | Zoom map to the selected rows       |                                            | :kbd:`Ctrl+J`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |copySelected|          | Copy selected rows to clipboard     |                                            | :kbd:`Ctrl+C`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |newAttribute|          | New field                           | Add a new field to the data source         | :kbd:`Ctrl+W`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
@@ -816,6 +818,8 @@ It will appear as a **Many to many relation**.
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
