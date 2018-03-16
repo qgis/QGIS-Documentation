@@ -393,11 +393,13 @@ Using action on features
 Users have several possibilities to manipulate feature with the contextual menu
 like:
 
-* Select all (:kbd:`Ctrl+A`) the features
-* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`.
-* :guilabel:`Zoom to feature` without having to select it beforehand
-* Open form. It toggles attribute table into form view with a focus on the
-  clicked feature
+* :guilabel:`Select all` (:kbd:`Ctrl+A`) the features;
+* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`;
+* :guilabel:`Zoom to feature` without having to select it beforehand;
+* :guilabel:`Pan to feature` without having to select it beforehand;
+* :guilabel:`Flash feature`, to highlight it in the map canvas;
+* :guilabel:`Open form`: it toggles attribute table into form view with a focus
+  on the clicked feature.
 
 .. _figure_copy_cell:
 
