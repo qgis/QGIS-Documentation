@@ -1946,7 +1946,7 @@ General options
 ^^^^^^^^^^^^^^^
 
 * :guilabel:`Alias`: a human readable name to use for fields. The alias will be
-  displayed in the feature form, the attribute table, or in the :ref:`Identify
+  displayed in the feature form, the attribute table, or in the :guilabel:`Identify
   results` panel.
   It can also be used as field name replacement in the :ref:`expression builder
   <vector_expressions>`, easing expressions understanding and reviews.
