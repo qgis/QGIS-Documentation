@@ -37,18 +37,21 @@ repository. For other external repositories, documentation might be available
 with the external plugins themselves. External plugins documentation is not
 included in this manual.
 
-To install or activate a plugin, go to :menuselection:`Plugins` menu and select:
+To install or activate a plugin, go to :menuselection:`Plugins` menu and select
+|showPluginManager| :menuselection:`Manage and install plugins...`.
 
-* |showPluginManager| :menuselection:`Manage and install plugins...` using
-  online repositories;
-* or |installPluginFromZip| :menuselection:`Install plugin from ZIP...` using a
-  local compressed file.
+Installed external python plugins are placed under the  
+:file:`~/(UserProfile)/python/plugins` folder where:
 
-Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
-folder. Home directory (denoted by above ``~``) on Windows is usually something
-like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-or :file:`C:\\Users\\(user)`. On some platforms (e.g., macOS), the :file:`.qgis2`
-folder is hidden by default.
+* ``~`` represents the HOME directory which on |win| Windows is usually something
+  like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
+  or :file:`C:\\Users\\(user)`;
+* and ``(UserProfile)`` represents the active profile folder, which for the
+  QGIS ``default`` user profile is:
+
+  * |nix| :file:`.local/share/QGIS/QGIS3/profiles/default`;
+  * |win| :file:`AppData\Roaming\QGIS\QGIS3\profiles\default`;
+  * |macos| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
@@ -56,8 +59,8 @@ Paths to Custom C++ plugins libraries can also be added under
 .. note::
 
  According to the :ref:`plugin manager settings <setting_plugins>`, QGIS main
- interface can display a blue link in the status bar to inform you that there
- are updates for your installed plugins or new plugins available.
+ interface can display an icon on the right of the status bar to inform you
+ that there are updates for your installed plugins or new plugins available.
 
 .. index::
    single: Plugins; Plugin manager
@@ -206,6 +209,14 @@ another compatible plugin or help to upgrade the broken one).
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab
+
+The Install from ZIP tab
+------------------------
+
+The |installPluginFromZip| :guilabel:`Install from ZIP` tab provides a file
+selector widget to import plugins in a zipped format, e.g. plugins downloaded
+directly from their repository. 
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
