@@ -27,11 +27,10 @@ and items. If not, please make sure to read the `overview of the framework
 
 Whenever the map has been panned, zoomed in/out (or some other action triggers
 a refresh), the map is rendered again within the current extent. The layers are
-rendered to an image (using :class:`QgsMapRenderer` class) and that image is
-then displayed in the canvas. The graphics item (in terms of the Qt graphics
-view framework) responsible for showing the map is :class:`QgsMapCanvasMap`
-class. This class also controls refreshing of the rendered map. Besides this
-item which acts as a background, there may be more **map canvas items**.
+rendered to an image (using :class:`QgsMapRendererJob` class) and that image is
+then displayed in the canvas. The :class:`QgsMapCanvas` class also controls refreshing
+of the rendered map. Besides this item which acts as a background, there may be
+more **map canvas items**.
 Typical map canvas items are rubber bands (used for measuring, vector editing
 etc.) or vertex markers. The canvas items are usually used to give some visual
 feedback for map tools, for example, when creating a new polygon, the map tool
@@ -55,7 +54,7 @@ Embedding Map Canvas
 Map canvas is a widget like any other Qt widget, so using it is as simple as
 creating and showing it
 
-::
+.. code-block:: python
 
   canvas = QgsMapCanvas()
   canvas.show()
@@ -63,7 +62,7 @@ creating and showing it
 This produces a standalone window with map canvas. It can be also embedded into
 an existing widget or window. When using .ui files and Qt Designer, place a
 ``QWidget`` on the form and promote it to a new class: set ``QgsMapCanvas`` as
-class name and set ``qgis.gui`` as header file. The ``pyuic4`` utility will
+class name and set ``qgis.gui`` as header file. The ``pyuic5`` utility will
 take care of it. This is a very convenient way of embedding the canvas. The
 other possibility is to manually write the code to construct map canvas and
 other widgets (as children of a main window or dialog) and create a layout.
@@ -71,32 +70,32 @@ other widgets (as children of a main window or dialog) and create a layout.
 By default, map canvas has black background and does not use anti-aliasing. To
 set white background and enable anti-aliasing for smooth rendering
 
-::
+.. code-block:: python
 
   canvas.setCanvasColor(Qt.white)
   canvas.enableAntiAliasing(True)
 
-(In case you are wondering, ``Qt`` comes from ``PyQt4.QtCore`` module and
+(In case you are wondering, ``Qt`` comes from ``PyQt5.QtCore`` module and
 ``Qt.white`` is one of the predefined ``QColor`` instances.)
 
 Now it is time to add some map layers. We will first open a layer and add it to
 the map layer registry. Then we will set the canvas extent and set the list of
 layers for canvas
 
-::
+.. code-block:: python
 
   layer = QgsVectorLayer(path, name, provider)
   if not layer.isValid():
     raise IOError, "Failed to open the layer"
 
   # add layer to the registry
-  QgsMapLayerRegistry.instance().addMapLayer(layer)
+  QgsProject.instance().addMapLayer(layer)
 
   # set extent to the extent of our layer
   canvas.setExtent(layer.extent())
 
   # set the map canvas layer set
-  canvas.setLayerSet([QgsMapCanvasLayer(layer)])
+  canvas.setLayers([layer])
 
 After executing these commands, the canvas should show the layer you have
 loaded.
@@ -115,73 +114,73 @@ state of the actions -- when a map tool gets activated, its action is marked as
 selected and the action of the previous map tool is deselected. The map tools
 are activated using :func:`setMapTool` method.
 
-::
+.. code-block:: python
 
   from qgis.gui import *
-  from PyQt4.QtGui import QAction, QMainWindow
-  from PyQt4.QtCore import SIGNAL, Qt, QString
+  from PyQt5.QtGui import QAction, QMainWindow
+  from PyQt5.QtCore import Signal, Qt
 
   class MyWnd(QMainWindow):
-    def __init__(self, layer):
-      QMainWindow.__init__(self)
+      def __init__(self, layer):
+          QMainWindow.__init__(self)
 
-      self.canvas = QgsMapCanvas()
-      self.canvas.setCanvasColor(Qt.white)
+          self.canvas = QgsMapCanvas()
+          self.canvas.setCanvasColor(Qt.white)
 
-      self.canvas.setExtent(layer.extent())
-      self.canvas.setLayerSet([QgsMapCanvasLayer(layer)])
+          self.canvas.setExtent(layer.extent())
+          self.canvas.setLayers([layer])
 
-      self.setCentralWidget(self.canvas)
+          self.setCentralWidget(self.canvas)
 
-      actionZoomIn = QAction(QString("Zoom in"), self)
-      actionZoomOut = QAction(QString("Zoom out"), self)
-      actionPan = QAction(QString("Pan"), self)
+          self.actionZoomIn = QAction("Zoom in", self)
+          self.actionZoomOut = QAction("Zoom out", self)
+          self.actionPan = QAction("Pan", self)
 
-      actionZoomIn.setCheckable(True)
-      actionZoomOut.setCheckable(True)
-      actionPan.setCheckable(True)
+          self.actionZoomIn.setCheckable(True)
+          self.actionZoomOut.setCheckable(True)
+          self.actionPan.setCheckable(True)
 
-      self.connect(actionZoomIn, SIGNAL("triggered()"), self.zoomIn)
-      self.connect(actionZoomOut, SIGNAL("triggered()"), self.zoomOut)
-      self.connect(actionPan, SIGNAL("triggered()"), self.pan)
+          self.actionZoomIn.triggered.connect(self.zoomIn)
+          self.actionZoomOut.triggered.connect(self.zoomOut)
+          self.actionPan.triggered.connect(self.pan)
 
-      self.toolbar = self.addToolBar("Canvas actions")
-      self.toolbar.addAction(actionZoomIn)
-      self.toolbar.addAction(actionZoomOut)
-      self.toolbar.addAction(actionPan)
+          self.toolbar = self.addToolBar("Canvas actions")
+          self.toolbar.addAction(self.actionZoomIn)
+          self.toolbar.addAction(self.actionZoomOut)
+          self.toolbar.addAction(self.actionPan)
 
-      # create the map tools
-      self.toolPan = QgsMapToolPan(self.canvas)
-      self.toolPan.setAction(actionPan)
-      self.toolZoomIn = QgsMapToolZoom(self.canvas, False) # false = in
-      self.toolZoomIn.setAction(actionZoomIn)
-      self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
-      self.toolZoomOut.setAction(actionZoomOut)
+          # create the map tools
+          self.toolPan = QgsMapToolPan(self.canvas)
+          self.toolPan.setAction(self.actionPan)
+          self.toolZoomIn = QgsMapToolZoom(self.canvas, False) # false = in
+          self.toolZoomIn.setAction(self.actionZoomIn)
+          self.toolZoomOut = QgsMapToolZoom(self.canvas, True) # true = out
+          self.toolZoomOut.setAction(self.actionZoomOut)
 
-      self.pan()
+          self.pan()
 
-    def zoomIn(self):
-      self.canvas.setMapTool(self.toolZoomIn)
+      def zoomIn(self):
+          self.canvas.setMapTool(self.toolZoomIn)
 
-    def zoomOut(self):
-      self.canvas.setMapTool(self.toolZoomOut)
+      def zoomOut(self):
+          self.canvas.setMapTool(self.toolZoomOut)
 
-    def pan(self):
-      self.canvas.setMapTool(self.toolPan)
+      def pan(self):
+          self.canvas.setMapTool(self.toolPan)
 
 
 You can put the above code to a file, e.g. :file:`mywnd.py` and try it out in
 Python console within QGIS. This code will put the currently selected layer
 into newly created canvas
 
-::
+.. code-block:: python
 
   import mywnd
   w = mywnd.MyWnd(qgis.utils.iface.activeLayer())
   w.show()
 
 Just make sure that the :file:`mywnd.py` file is located within Python search
-path (``sys.path``). If it isn't, you can simply add it: ``sys.path.insert(0,
+path (``sys.path``). If it isn't, you can simply add it: ``sys.path.append(
 '/my/path')`` --- otherwise the import statement will fail, not finding the
 module.
 
@@ -200,7 +199,7 @@ being panned or zoomed.
 
 To show a polyline
 
-::
+.. code-block:: python
 
   r = QgsRubberBand(canvas, False)  # False = not a polygon
   points = [QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]
@@ -208,7 +207,7 @@ To show a polyline
 
 To show a polygon
 
-::
+.. code-block:: python
 
   r = QgsRubberBand(canvas, True)  # True = a polygon
   points = [[QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]]
@@ -221,7 +220,7 @@ further (optional) rings correspond to holes in the polygon.
 Rubber bands allow some customization, namely to change their color and line
 width
 
-::
+.. code-block:: python
 
   r.setColor(QColor(0, 0, 255))
   r.setWidth(3)
@@ -230,7 +229,7 @@ The canvas items are bound to the canvas scene. To temporarily hide them (and
 show again, use the :func:`hide` and :func:`show` combo. To completely remove
 the item, you have to remove it from the scene of the canvas
 
-::
+.. code-block:: python
 
   canvas.scene().removeItem(r)
 
@@ -243,15 +242,15 @@ Rubber band can be also used for drawing points, however
 (:class:`QgsRubberBand` would only draw a rectangle around the desired point).
 How to use the vertex marker
 
-::
+.. code-block:: python
 
   m = QgsVertexMarker(canvas)
-  m.setCenter(QgsPoint(0, 0))
+  m.setCenter(QgsPointXY(0, 0))
 
 This will draw a red cross on position [0,0]. It is possible to customize the
 icon type, size, color and pen width
 
-::
+.. code-block:: python
 
   m.setColor(QColor(0, 255, 0))
   m.setIconSize(5)
@@ -266,7 +265,7 @@ applies as for the rubber bands.
 Writing Custom Map Tools
 ========================
 
-You can write your custom tools, to implement a custom behaviour to actions
+You can write your custom tools, to implement a custom behavior to actions
 performed by users on the canvas.
 
 Map tools should inherit from the :class:`QgsMapTool` class or any derived
@@ -278,13 +277,13 @@ clicking and dragging on the canvas. When the rectangle is defined, it prints
 its boundary coordinates in the console. It uses the rubber band elements
 described before to show the selected rectangle as it is being defined.
 
-::
+.. code-block:: python
 
   class RectangleMapTool(QgsMapToolEmitPoint):
     def __init__(self, canvas):
         self.canvas = canvas
         QgsMapToolEmitPoint.__init__(self, self.canvas)
-        self.rubberBand = QgsRubberBand(self.canvas, QGis.Polygon)
+        self.rubberBand = QgsRubberBand(self.canvas, True)
         self.rubberBand.setColor(Qt.red)
         self.rubberBand.setWidth(1)
         self.reset()
@@ -292,7 +291,7 @@ described before to show the selected rectangle as it is being defined.
     def reset(self):
         self.startPoint = self.endPoint = None
         self.isEmittingPoint = False
-        self.rubberBand.reset(QGis.Polygon)
+        self.rubberBand.reset(True)
 
     def canvasPressEvent(self, e):
         self.startPoint = self.toMapCoordinates(e.pos())
@@ -304,7 +303,7 @@ described before to show the selected rectangle as it is being defined.
         self.isEmittingPoint = False
         r = self.rectangle()
         if r is not None:
-          print "Rectangle:", r.xMinimum(), r.yMinimum(), r.xMaximum(), r.yMaximum()
+          print("Rectangle:", r.xMinimum(), r.yMinimum(), r.xMaximum(), r.yMaximum())
 
     def canvasMoveEvent(self, e):
         if not self.isEmittingPoint:
@@ -352,7 +351,7 @@ Writing Custom Map Canvas Items
 
 .. TODO - custom application example?
 
-::
+.. code-block:: python
 
   import sys
   from qgis.core import QgsApplication
