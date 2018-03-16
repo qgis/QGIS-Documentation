@@ -55,18 +55,29 @@ Parameters
 
   Default: *NDVI*
 
+``Reference layers(s)(used for automated extent, cellsize and CRS) [multipleinput]
+
+  Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the
+  layer in this box avoids to fill all the other parameter by hand.
+
 ``Cell size (use 0 or empty to set it automatically)`` [number]
   Optional.
 
   Cell size of the output raster layer. If the cell size is not specified, the
-  minimum cell size of all input layers will be used. The cell size is assumed to
-  be the same in both X and Y axes.
+  minimum cell size of selected reference layer(s) will be used. The cell size is
+  assumed to be the same in both X and Y axes.
 
 ``Output extent (xmin, xmax, ymin, ymax)`` [extent]
   Optional.
 
   Extent of the output raster layer. If the extent is not specified, the minimum
-  extent that covers the input layers will be used.
+  extent that covers selected reference layer(s) will be used.
+
+``Output CRS `` [crs]
+  Optional
+
+  CRS of the output raster layer. If the output CRS is not specified, the CRS of
+  the first reference layer will be used.
 
 Outputs
 .......
