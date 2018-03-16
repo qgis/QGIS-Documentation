@@ -55,7 +55,7 @@ Parameters
 
   Default: *NDVI*
 
-``Reference layers(s)(used for automated extent, cellsize and CRS) [multipleinput]
+``Reference layers(s)(used for automated extent, cellsize and CRS)`` [multipleinput]
 
   Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the
   layer in this box avoids to fill all the other parameter by hand.
