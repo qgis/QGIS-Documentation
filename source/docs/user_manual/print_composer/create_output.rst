@@ -16,15 +16,15 @@
    .. contents::
       :local:
 
-Figure_composer_output_ shows the Print Composer with an example print layout,
+figure_layout_output_ shows the print layout with an example print layout,
 including each type of map item described in the previous section.
 
-.. _figure_composer_output:
+.. _figure_layout_output:
 
 .. figure:: img/print_composer_complete.png
    :align: center
 
-   Print Composer with map view, legend, image, scale bar, coordinates, text and
+   Print Layout with map view, legend, image, scale bar, coordinates, text and
    HTML frame added
 
 .. index:: Export as image, Export as PDF, Export as SVG
@@ -34,16 +34,16 @@ without bounding boxes. This can be enabled by deactivating :menuselection:`View
 |checkbox| :guilabel:`Show bounding boxes` or pressing the shortcut
 :kbd:`Ctrl+Shift+B`.
 
-The Print Composer allows you to create several output formats, and it is
+The print layout allows you to create several output formats, and it is
 possible to define the resolution (print quality) and paper size:
 
 * The |filePrint| :sup:`Print` icon allows you to print the layout to a
   connected printer or a PostScript file, depending on installed printer drivers.
-* The |saveMapAsImage| :sup:`Export as image` icon exports the Composer
+* The |saveMapAsImage| :sup:`Export as image` icon exports the layout
   canvas in several image formats, such as PNG, BPM, TIF, JPG,...
-* The |saveAsSVG| :sup:`Export as SVG` icon saves the Print Composer canvas
+* The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout canvas
   as an SVG (Scalable Vector Graphic).
-* The |saveAsPDF| :sup:`Export as PDF` icon saves the defined Print Composer
+* The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout
   canvas directly as a PDF.
 
 .. _export_layout_image:
@@ -63,7 +63,7 @@ You can then override the print resolution and the exported image dimensions
 .. _crop_to_content:
 
 By checking |checkbox| :guilabel:`Crop to content` option, the image output
-by the composer includes the minimal area enclosing all the items (map,
+by the layout includes the minimal area enclosing all the items (map,
 legend, scale bar, shapes, label, image...) of each page of the composition:
 
 * If the composition includes a single page, then the output is resized to
@@ -77,7 +77,7 @@ legend, scale bar, shapes, label, image...) of each page of the composition:
 The :guilabel:`Crop to content` dialog also allows to add some margins around
 the cropped bounds.
 
-.. _figure_composer_output_image:
+.. _figure_layout_output_image:
 
 .. figure:: img/image_export_options.png
    :align: center
@@ -86,7 +86,7 @@ the cropped bounds.
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
-:ref:`composer_composition_tab`.
+:ref:`layout_composition_tab`.
 
 If the output format is a TIFF format, all you need to do is making sure to
 select the correct map item to use in |selectString|
@@ -115,7 +115,7 @@ The SVG export options dialog also allows to:
 * :guilabel:`export map layers as svg groups`:
 * render map labels as outlines
 
-.. _figure_composer_output_svg:
+.. _figure_layout_output_svg:
 
 .. figure:: img/svg_export_options.png
    :align: center
@@ -139,13 +139,13 @@ single PDF file.
 If you applied to your composition or any shown layer an advanced effect such as
 blend modes, transparency or symbol effects, these cannot be printed
 as vectors, and the effects may be lost. Checking :guilabel:`Print as a
-raster` in the :ref:`composer_composition_tab` helps to keep the effects but
+raster` in the :ref:`layout_composition_tab` helps to keep the effects but
 rasterize the composition. Note that the :guilabel:`Force layer to render as
 raster` in the Rendering tab of Layer Properties dialog is a layer-level
 alternative that avoids global composition rasterization.
 
 If you need to export your layout as a **georeferenced PDF**, in the
-:ref:`composer_composition_tab`, make sure to select the correct map item to
+:ref:`layout_composition_tab`, make sure to select the correct map item to
 use in |selectString| :guilabel:`Reference map`.
 
 
@@ -156,7 +156,7 @@ use in |selectString| :guilabel:`Reference map`.
 Generate an Atlas
 =================
 
-The Print Composer includes generation functions that allow you to create map
+The print layout includes generation functions that allow you to create map
 books in an automated way. The concept is to use a coverage layer, which contains
 geometries and fields. For each geometry in the coverage layer, a new output will
 be generated where the content of some canvas maps will be moved to highlight the
@@ -165,9 +165,9 @@ labels.
 
 Every page will be generated with each feature. To enable the generation
 of an atlas and access generation parameters, refer to the `Atlas generation`
-panel.This panel contains the following widgets (see figure_composer_atlas_):
+panel.This panel contains the following widgets (see figure_layout_atlas_):
 
-.. _figure_composer_atlas:
+.. _figure_layout_atlas:
 
 .. figure:: img/atlas_properties.png
    :align: center
@@ -285,7 +285,7 @@ opens. Enter the following expression:
    THEN 'Landscape' ELSE 'Portrait' END
 
 Now the paper orients itself automatically. For each Region you need to
-reposition the location of the composer item as well. For the map item you can
+reposition the location of the layout item as well. For the map item you can
 use the |dataDefined| button of field :guilabel:`Width` to set it
 dynamically using following expression:
 
@@ -313,7 +313,7 @@ You can provide the following expression for field :guilabel:`X` :
    (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
    THEN 297 ELSE 210 END) / 2
 
-For all other composer items you can set the position in a similar way so they
+For all other layout items you can set the position in a similar way so they
 are correctly positioned when the page is automatically rotated in portrait or
 landscape.
 
@@ -327,14 +327,14 @@ This is just one example of how you can use the Data Defined Override option.
 Preview and generate
 --------------------
 
-.. _figure_composer_atlas_preview:
+.. _figure_layout_atlas_preview:
 
 .. figure:: img/atlas_preview.png
    :align: center
 
    Atlas Preview toolbar
 
-Once the atlas settings have been configured and composer items (map, table,
+Once the atlas settings have been configured and layout items (map, table,
 image...) linked to it, you can create a preview of all the pages by clicking
 :menuselection:`Atlas --> Preview Atlas` or |atlas| :sup:`Preview Atlas` icon.
 You can then use the arrows in the same toolbar to navigate through all the
@@ -351,7 +351,7 @@ atlas :guilabel:`Page name` option.
 
 
 As for simple compositions, an atlas can be generated in different ways (see
-:ref:`create-output` for more information). Instead of :menuselection:`Composer`
+:ref:`create-output` for more information). Instead of :menuselection:`Layout`
 menu, rather use tools from :menuselection:`Atlas` menu or Atlas toolbar.
 
 This means that you can directly print your compositions with :menuselection:`Atlas --> Print Atlas`.
@@ -370,7 +370,7 @@ an image or SVG file.
 
   If you want to print or export the composition of only one feature of the atlas,
   simply start the preview, select the desired feature in the drop-down list
-  and click on :menuselection:`Composer --> Print` (or :menuselection:`export...`
+  and click on :menuselection:`Layout --> Print` (or :menuselection:`Export...`
   to any supported file format).
 
 

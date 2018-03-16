@@ -437,7 +437,7 @@ rst file.
 
 * same environment for all the screen caps (same OS, same decoration, same font
   size). We have used Ubuntu with Unity and the default "ambience" theme.
-  For screenshots of QGIS main window and composer we have set it to show menus
+  For screenshots of QGIS main window and layouts we have set it to show menus
   on the window (not the default in unity).
 * reduce the window to the minimal space needed to show the feature (taking the
   all screen for a small modal window > overkill)

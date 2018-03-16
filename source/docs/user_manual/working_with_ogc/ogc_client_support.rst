@@ -510,11 +510,11 @@ definitions:
 
 .. _`ogc-wms-legend`:
 
-Show WMS legend graphic in table of contents and composer
+Show WMS legend graphic in table of contents and layout
 ---------------------------------------------------------
 
 The QGIS WMS data provider is able to display a legend graphic in the table of
-contents' layer list and in the map composer. The WMS legend will be shown only
+contents' layer list and in the print layout. The WMS legend will be shown only
 if the WMS server has GetLegendGraphic capability and the layer has
 getCapability url specified, so you additionally have to select a styling for the
 layer.
@@ -524,7 +524,7 @@ you have to click on it to open it in real dimension (due to QgsLegendInterface
 architectural limitation). Clicking on the layer's legend will open a frame with
 the legend at full resolution.
 
-In the print composer, the legend will be integrated at it's original (downloaded)
+In the print layout, the legend will be integrated at it's original (downloaded)
 dimension. Resolution of the legend graphic can be set in the item properties
 under :guilabel:`Legend --> WMS LegendGraphic` to match your printing requirements
 

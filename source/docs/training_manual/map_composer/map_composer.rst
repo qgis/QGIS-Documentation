@@ -1,4 +1,4 @@
-|LS| Using Map Composer
+|LS| Using Print Layout
 ===============================================================================
 
 Now that you've got a map, you need to be able to print it or to export it to a
@@ -8,32 +8,32 @@ colors, etc. So for someone who doesn't have the data or the same GIS program
 (such as QGIS), the map file will be useless. Luckily, QGIS can export its map
 file to a format that anyone's computer can read, as well as printing out the
 map if you have a printer connected. Both exporting and printing is handled via
-the Map Composer.
+the print layout.
 
-**The goal for this lesson:** To use the QGIS Map Composer to create a basic
+**The goal for this lesson:** To use the QGIS print layout to create a basic
 map with all the required settings.
 
-|basic| |FA| The Composer Manager
+|basic| |FA| The Layout Manager
 -------------------------------------------------------------------------------
 
 QGIS allows you to create multiple maps using the same map file. For this
-reason, it has a tool called the :guilabel:`Composer Manager`.
+reason, it has a tool called the :guilabel:`Layout Manager`.
 
-* Click on the :menuselection:`Project --> Composer Manager` menu entry to open
-  this tool.  You'll see a blank :guilabel:`Composer manager` dialog appear.
-* Click the :guilabel:`Add` button and give the new composer the name of
+* Click on the :menuselection:`Project --> Layout Manager` menu entry to open
+  this tool.  You'll see a blank :guilabel:`Layout manager` dialog appear.
+* Click the :guilabel:`Add` button and give the new layout the name of
   |majorUrbanName|.
 * Click :guilabel:`OK`.
 * Click the :guilabel:`Show` button.
 
-(You could also close the dialog and navigate to a composer via the
-:menuselection:`File --> Print Composers` menus, as in the image below.)
+(You could also close the dialog and navigate to a layout via the
+:menuselection:`Project --> Layouts -->` menu, as in the image below.)
 
 .. image:: img/print_composer_menu.png
    :align: center
 
 Whichever route you take to get there, you will now see the :guilabel:`Print
-Composer` window:
+Layout` window:
 
 .. image:: img/print_composer_dialog.png
    :align: center
@@ -45,7 +45,7 @@ Composer` window:
 In this example, the composition was already the way we wanted it. Ensure that
 yours is as well.
 
-* In the :guilabel:`Print Composer` window, check that the values under
+* In the :guilabel:`Print Layout` window, check that the values under
   :menuselection:`Composition --> Paper and Quality` are set to the following:
 
 - :guilabel:`Size`: :kbd:`A4 (210x297mm)`
@@ -104,7 +104,7 @@ be at the wrong resolution and will look ugly or unreadable.
 Remember that the size and position you've given the map doesn't need to be
 final. You can always come back and change it later if you're not satisfied.
 For now, you need to ensure that you've saved your work on this map. Because a
-:guilabel:`Composer` in QGIS is part of the main map file, you'll need to save
+:guilabel:`Layout` in QGIS is part of the main map file, you'll need to save
 your main project. Go to the main QGIS window (the one with the
 :guilabel:`Layers list` and all the other familiar elements you were working
 with before), and save your project from there as usual.
@@ -156,7 +156,7 @@ contents of the label:
 
 * Select the label by clicking on it.
 * Click on the :guilabel:`Item Properties` tab in the side panel of the
-  :guilabel:`Composer` window.
+  :guilabel:`Layout` window.
 * Change the text of the label to "|majorUrbanName|":
 
 * Use this interface to set the font and alignment options:
@@ -235,7 +235,7 @@ move and resize the legend and or map. This is the result:
 .. note::  Did you remember to save your work often?
 
 Finally the map is ready for export! You'll see the export buttons near the top
-left corner of the :guilabel:`Composer` window:
+left corner of the :guilabel:`Layout` window:
 
   |filePrint| |saveMapAsImage| |saveAsSVG|
   |saveAsPDF|
@@ -278,7 +278,7 @@ For our purposes, we're going to use PDF.
 |IC|
 -------------------------------------------------------------------------------
 
-* Close the :guilabel:`Composer` window.
+* Close the :guilabel:`Layout` window.
 * Save your map.
 * Find your exported PDF using your operating system's file manager.
 * Open it.

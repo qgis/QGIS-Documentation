@@ -3,14 +3,14 @@
    |updatedisclaimer|
 
 .. index:: Create maps, Map layout, Output map
-.. _label_printcomposer:
+.. _label_printlayout:
 
-**************
-Print Composer
-**************
+*******************
+Laying out the maps
+*******************
 
-With the Print Composer you can create nice maps and atlasses that can be printed
-or saved as PDF-file, an image or an SVG-file. This is a powerful way to share
+With the Map Layout you can create nice maps and atlasses that can be printed
+or saved as image, PDF or SVG file. This is a powerful way to share
 geographical information produced with QGIS that can be included in reports or published.
 
 

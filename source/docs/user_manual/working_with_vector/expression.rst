@@ -18,7 +18,7 @@ Expressions
 Based on layer data and prebuilt or user defined functions, **Expressions**
 offer a powerful way to manipulate attribute value, geometry and variables
 in order to dynamically change the geometry style, the content or position
-of the label, the value for diagram, the height of a composer item,
+of the label, the value for diagram, the height of a layout item,
 select some features, create virtual field ...
 
 .. _expression_builder:
@@ -34,7 +34,7 @@ is available from many parts in QGIS and, can particularly be accessed when:
   :sup:`Select By Expression...` tool;
 * :ref:`editing attributes <calculate_fields_values>` with e.g. the
   |calculateField| :sup:`Field calculator` tool;
-* manipulating symbology, label or composer item parameters with the |dataDefined|
+* manipulating symbology, label or layout item parameters with the |dataDefined|
   :sup:`Data defined override` tool (see :ref:`data_defined`);
 * building a :ref:`geometry generator <geometry_generator_symbol>` symbol layer;
 * doing some :ref:`geoprocessing <label_processing>`.
@@ -431,18 +431,18 @@ This group contains functions for manipulating colors.
 Composition Functions
 ---------------------
 
-This group contains functions to manipulate print composer items properties.
+This group contains functions to manipulate print layout items properties.
 
 ==================  ========================================================
  Function            Description
 ==================  ========================================================
- item_variables      Returns a map of variables from a composer item inside
+ item_variables      Returns a map of variables from a layout item inside
                      this composition
 ==================  ========================================================
 
 **Some example:**
 
-* Get the scale of the 'Map 0' in the current print composer::
+* Get the scale of the 'Map 0' in the current print layout::
 
     map_get( item_variables('Map 0'), 'map_scale')
 
@@ -1088,7 +1088,7 @@ It means that some functions may not be available according to the context:
 - from the |expressionSelect| :sup:`Select by expression` dialog
 - from the |calculateField| :sup:`Field calculator` dialog
 - from the layer properties dialog
-- from the print composer
+- from the print layout
 
 To use these functions in an expression, they should be preceded by @ character
 (e.g, @row_number). Are concerned:
@@ -1113,15 +1113,15 @@ To use these functions in an expression, they should be preceded by @ character
  grid_axis               Returns the current grid annotation axis
                          (eg, 'x' for longitude, 'y' for latitude)
  grid_number             Returns the current grid annotation value
- item_id                 Returns the composer item user ID
+ item_id                 Returns the layout item user ID
                          (not necessarily unique)
- item_uuid               Returns the composer item unique ID
+ item_uuid               Returns the layout item unique ID
  layer                   Returns the current layer
  layer_id                Returns the ID of current layer
  layer_name              Returns the name of current layer
  layout_dpi              Returns the composition resolution (DPI)
  layout_numpages         Returns the number of pages in the composition
- layout_page             Returns the current page of the composer item
+ layout_page             Returns the current page of the layout item
  layout_pageheight       Returns the composition height in mm
  layout_pagewidth        Returns the composition width in mm
  map_crs                 Returns the Coordinate reference system of the current map
@@ -1133,7 +1133,7 @@ To use these functions in an expression, they should be preceded by @ character
  map_extent_width        Returns the current width of the map
  map_id                  Returns the ID of current map destination.
                          This will be 'canvas' for canvas renders, and
-                         the item ID for composer map renders
+                         the item ID for layout map renders
  map_rotation            Returns the current rotation of the map
  map_scale               Returns the current scale of the map
  map_units               Returns the units of map measurements

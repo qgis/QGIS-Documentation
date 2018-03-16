@@ -1,7 +1,7 @@
 Assignment
 ===============================================================================
 
-Using the Map Composer, make a new map representing the results of your
+Using the print layout, make a new map representing the results of your
 analysis. Include these layers:
 
 - :guilabel:`places` (with labels),

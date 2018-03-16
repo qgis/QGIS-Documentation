@@ -677,14 +677,14 @@ passing the **WITH_MAPTIP** vendor parameter.
 GetPrint
 --------
 
-QGIS Server has the capability to create print composer output in pdf or pixel
-format. Print composer windows in the published project are used as templates.
+QGIS Server has the capability to create print layout output in pdf or pixel
+format. Print layout windows in the published project are used as templates.
 In the GetPrint request, the client has the possibility to specify parameters
-of the contained composer maps and labels.
+of the contained layout maps and labels.
 
 Example:
 
-The published project has two composer maps. In the `GetProjectSettings` response,
+The published project has two print layouts. In the `GetProjectSettings` response,
 they are listed as possible print templates:
 
 .. code-block:: xml
@@ -705,15 +705,15 @@ The client has now the information to request a print output::
 
 Parameters in the GetPrint request are:
 
-* **<map_id>:EXTENT** gives the extent for a composer map as xmin,ymin,xmax,ymax.
+* **<map_id>:EXTENT** gives the extent for a layout map item as xmin,ymin,xmax,ymax.
 * **<map_id>:ROTATION** map rotation in degrees
 * **<map_id>:GRID_INTERVAL_X**, **<map_id>:GRID_INTERVAL_Y** Grid line density for a
-  composer map in x- and y-direction
-* **<map_id>:SCALE** Sets a mapscale to a composer map. This is useful to ensure
+  map in x- and y-direction
+* **<map_id>:SCALE** Sets a map scale to a layout map item. This is useful to ensure
   scale based visibility of layers and labels even if client and server may
   have different algorithms to calculate the scale denominator
 * **<map_id>:LAYERS**, **<map_id>:STYLES** possibility to give layer and styles
-  list for composer map (useful in case of overview maps which should have only
+  list for layout map item (useful in case of overview maps which should have only
   a subset of layers)
 
 
