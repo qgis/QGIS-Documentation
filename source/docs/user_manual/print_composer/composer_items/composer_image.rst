@@ -8,13 +8,17 @@
 The Picture Item
 ================
 
-To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle
-onto the layout canvas with the left mouse button. You can then position and
-customize its appearance in the image :guilabel:`Item Properties` panel.
+The :guilabel:`Picture` item is a tool that helps decorate your map with
+pictures, logos... It's also the one that provides the in-built north arrows.
+You can add a picture with the |addImage| :sup:`Add Picture` following
+:ref:`items creation instructions <create_layout_item>` and manipulate it the
+same way as exposed in :ref:`interact_layout_item`.
 
 .. index:: Picture database, Rotated north arrow
 
-The image :guilabel:`Item Properties` tab provides the following functionalities
+By default, the picture item is a blank frame that you can customize using its
+:guilabel:`Item Properties` panel. Other than the :ref:`items common properties
+<item_common_properties>`, this feature has the following functionalities
 (see figure_layout_image_):
 
 .. _figure_layout_image:
@@ -22,47 +26,48 @@ The image :guilabel:`Item Properties` tab provides the following functionalities
 .. figure:: img/image_mainproperties.png
    :align: center
 
-   Image Item Properties panel
+   Picture Item Properties panel
 
 
 You first have to select the image you want to display. There are several ways
-to set the :guilabel:`image source` in the **Main properties** area.
+to set the :guilabel:`Image source`:
 
-#. Use the browse button |browseButton| of :guilabel:`image source` to select a
-   file on your computer using the browse dialog. The browser will start in the
+#. In the :guilabel:`Main properties` group, use the |browseButton|
+   :sup:`Browse` button of :guilabel:`image source` to
+   select a file on your computer. The browser will start in the
    SVG-libraries provided with QGIS. Besides :file:`SVG`, you can also select
    other image formats like :file:`.png` or :file:`.jpg`.
-#. You can enter the source directly in the :guilabel:`image source` text field.
-   You can even provide a remote URL-address to an image.
-#. From the **Search directories** area you can also select an image from
-   :guilabel:`loading previews ...` to set the image source.
-#. Use the data defined button |dataDefined| to set the image source from a
-   record or using a regular expression.
+#. You can enter the source directly in the :guilabel:`Image source` text field.
+   You can even provide a remote URL-address to a picture.
+#. From the :guilabel:`Search directories` area you can also select an image
+   from the loaded previews to set the image source. These images are by default
+   provided    by folders set in :menuselection:`Settings --> Options --> System
+   --> SVG Paths`.
+#. Use the |dataDefined| :sup:`data defined override` button to set the image
+   source from a feature attribute or using a regular expression.
+
+.. note:: In the :guilabel:`Search directories` group, you can use the **[Add]**
+  and **[Remove]** buttons in the group to customize the list of folders to fetch
+  and preview images from.
 
 With the :guilabel:`Resize mode` option, you can set how the image is displayed
-when the frame is changed, or choose to resize the frame of the image item so
-it matches the original size of the image.
+when the frame is resized:
 
-You can select one of the following modes:
+* ``Zoom``: enlarges/reduces the image to the frame while maintaining aspect
+  ratio of picture;
+* ``Stretch``: etretches image to fit inside the frame, ignores aspect ratio;
+* ``Clip``: use this mode for raster images only, it sets the size of the image
+  to original image size without scaling and the frame is used to clip the image,
+  so only the part of the image inside the frame is visible;
+* ``Zoom and resize frame``: enlarges image to fit frame, then resizes frame to
+  fit resultant image;
+* ``Resize frame to image size``: sets size of frame to match original size of
+  image without scaling.
 
-* Zoom: Enlarges the image to the frame while maintaining aspect ratio of picture.
-* Stretch: Stretches image to fit inside the frame, ignores aspect ratio.
-* Clip: Use this mode for raster images only, it sets the size of the image to
-  original image size without scaling and the frame is used to clip the image,
-  so only the part of the image inside the frame is visible.
-* Zoom and resize frame: Enlarges image to fit frame, then resizes frame to fit
-  resultant image.
-* Resize frame to image size: Sets size of frame to match original size of image
-  without scaling.
+Depending on the selected :guilabel:`Resize mode`, the :guilabel:`Placement` and
+:guilabel:`Image rotation` options are disabled or not. With :guilabel:`Placement`
+you can select the position of the image inside its frame.
 
-Selected resize mode can disable the item options 'Placement' and 'Image rotation'.
-The :guilabel:`Image rotation` is active for the resize mode 'Zoom' and 'Clip'.
-
-With :guilabel:`Placement` you can select the position of the image inside its
-frame. The **Search directories** area allows you to add and remove directories
-with images in SVG format to the picture database. A preview of the pictures
-found in the selected directories is shown in a pane and can be used to select
-and set the image source.
 
 .. _parameterized_svg:
 
@@ -79,13 +84,15 @@ to see an example.
 
 Images can be rotated with the :guilabel:`Image rotation` field.
 Activating the |checkbox| :guilabel:`Sync with map` checkbox synchronizes the
-rotation of the image (i.e., a rotated north arrow) with the rotation applied to
-the selected map item.
+rotation of the image with the rotation applied to a selected map item; this
+is a convenient feature for north arrows that you can align with either:
 
-It is also possible to select a north arrow directly. If you first select a
-north arrow image from **Search directories** and then use the browse button
-|browseButton| of the field :guilabel:`Image source`, you can now select one of
-the north arrow from the list as displayed in figure_layout_image_north_.
+* the **Grid north**: direction of a grid line which is parallel to the
+  central meridian on the national/local grid;
+* or the **True north**: direction of a meridian of longitude which converges
+  on the North Pole.
+
+You can also apply a declination :guilabel:`Offset` to the picture rotation.
 
 .. note::
 
@@ -99,7 +106,6 @@ the north arrow from the list as displayed in figure_layout_image_north_.
    :align: center
 
    North arrows available for selection in provided SVG library
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
