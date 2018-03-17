@@ -115,165 +115,8 @@ using functions, layer's fields and values. It contains widgets to:
 
    The Expression tab
 
-Operators
-----------
 
-This group contains operators (e.g., +, -, \*).
-Note that for most of the mathematical functions below,
-if one of the inputs is NULL then the result is NULL.
-
-
-=========================== ===================================================
- Function                    Description
-=========================== ===================================================
- a + b                       Addition of two values (a plus b)
- a - b                       Subtraction of two values (a minus b).
- a * b                       Multiplication of two values (a multiplied by b)
- a / b                       Division of two values (a divided by b)
- a % b                       Remainder of division of a by b
-                             (eg, 7 % 2 = 1, or 2 fits into 7 three times
-                             with remainder 1)
- a ^ b                       Power of two values (for example, 2^2=4 or 2^3=8)
- a < b                       Compares two values and evaluates to 1 if the
-                             left value is less than the right value
-                             (a is smaller than b)
- a <= b                      Compares two values and evaluates to 1 if the
-                             left value isless than or equal to the right
-                             value
- a <> b                      Compares two values and evaluates to 1
-                             if they are not equal
- a = b                       Compares two values and evaluates to 1
-                             if they are equal
- a != b                      a and b are not equal
- a > b                       Compares two values and evaluates to 1
-                             if the left value is greater than the right
-                             value (a is larger than b)
- a >= b                      Compares two values and evaluates to 1
-                             if the left value is greater than or equal to
-                             the right value
- a ~ b                       a matches the regular expression b
- ||                          Joins two values together into a string.
-                             If one of the values is NULL the result will
-                             be NULL
- '\\n'                       Inserts a new line in a string
- LIKE                        Returns 1 if the first parameter matches the
-                             supplied pattern
- ILIKE                       Returns 1 if the first parameter matches
-                             case-insensitive the supplied pattern (ILIKE
-                             can be used instead of LIKE to make the match
-                             case-insensitive)
- a IS b                      Tests whether two values are identical.
-                             Returns 1 if a is the same as b
- a OR b                      Returns 1 when condition a or condition b is true
- a AND b                     Returns 1 when conditions a and b are true
- NOT                         Negates a condition
- column name "column name"   Value of the field column name, take care to
-                             not be confused with simple quote, see below
- 'string'                    a string value, take care to not be confused
-                             with double quote, see above
- NULL                        null value
- a IS NULL                   a has no value
- a IS NOT NULL               a has a value
- a IN (value[,value])        a is below the values listed
- a NOT IN (value[,value])    a is not below the values listed
-=========================== ===================================================
-
-.. note:: **About fields concatenation**
-
-  You can concatenate strings using either `||` or ``+``. The latter also means
-  sum up expression. So if you have an integer (field or numeric value) this can
-  be error prone. In this case, you should use `||`. If you concatenate two
-  string values, you can use both.
-
-**Some examples:**
-
-* Joins a string and a value from a column name::
-
-    'My feature''s id is: ' || "gid"
-    'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
-    "country_name" + '(' + "country_code" + ')'
-    "country_name" || '(' || "country_code" || ')'
-
-
-* Test if the "description" attribute field starts with the 'Hello' string
-  in the value (note the position of the % character)::
-
-    "description" LIKE 'Hello%'
-
-Conditionals
--------------
-
-This group contains functions to handle conditional checks in expressions.
-
-===================================== =========================================
- Function                              Description
-===================================== =========================================
- CASE WHEN ... THEN ... END           Evaluates an expression and returns a
-                                      result if true. You can test multiple
-                                      conditions
- CASE WHEN ... THEN ... ELSE ... END  Evaluates an expression and returns a
-                                      different result whether it's true or
-                                      false. You can test multiple conditions
- coalesce                             Returns the first non-NULL value from
-                                      the expression list
- if                                   Tests a condition and returns a
-                                      different result depending on the
-                                      conditional check
-===================================== =========================================
-
-**Some example:**
-
-* Send back a value if the first condition is true, else another value::
-
-    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other' END
-
-Mathematical Functions
------------------------
-
-This group contains math functions (e.g., square root, sin and cos).
-
-=================  ==========================================================
- Function           Description
-=================  ==========================================================
- abs                Returns the absolute value of a number
- acos               Returns the inverse cosine of a value in radians
- asin               Returns the inverse sine of a value in radians
- atan               Returns the inverse tangent of a value in radians
- atan2(y,x)         Returns the inverse tangent of y/x by using the signs
-                    of the two arguments to determine the quadrant of the
-                    result
- azimuth(a,b)       Returns the north-based azimuth as the angle in radians
-                    measured clockwise from the vertical on point a
-                    to point b
- ceil               Rounds a number upwards
- clamp              Restricts an input value to a specified range
- cos                Returns the cosine of a value in radians
- degrees            Converts from radians to degrees
- exp                Returns exponential of a value
- floor              Rounds a number downwards
- ln                 Returns the natural logarithm of the passed expression
- log                Returns the value of the logarithm of the passed
-                    value and base
- log10              Returns the value of the base 10 logarithm of the
-                    passed expression
- max                Returns the largest value in a set of values
- min                Returns the smallest value in a set of values
- pi                 Returns the value of pi for calculations
- radians            Converts from degrees to radians
- rand               Returns the random integer within the range specified
-                    by the minimum and maximum argument (inclusive)
- randf              Returns the random float within the range specified
-                    by the minimum and maximum argument (inclusive)
- round              Rounds to number of decimal places
- scale_exp          Transforms a given value from an input domain
-                    to an output range using an exponential curve
- scale_linear       Transforms a given value from an input domain
-                    to an output range using linear interpolation
- sin                Returns the sine of an angle
- sqrt               Returns the square root of a value
- tan                Returns the tangent of an angle
-=================  ==========================================================
-
+.. index:: Aggregates
 .. _aggregates_function:
 
 Aggregates Functions
@@ -447,6 +290,34 @@ This group contains functions to manipulate print layout items properties.
     map_get( item_variables('Map 0'), 'map_scale')
 
 
+Conditional Functions
+---------------------
+
+This group contains functions to handle conditional checks in expressions.
+
+===================================== =========================================
+ Function                              Description
+===================================== =========================================
+ CASE WHEN ... THEN ... END           Evaluates an expression and returns a
+                                      result if true. You can test multiple
+                                      conditions
+ CASE WHEN ... THEN ... ELSE ... END  Evaluates an expression and returns a
+                                      different result whether it's true or
+                                      false. You can test multiple conditions
+ coalesce                             Returns the first non-NULL value from
+                                      the expression list
+ if                                   Tests a condition and returns a
+                                      different result depending on the
+                                      conditional check
+===================================== =========================================
+
+**Some example:**
+
+* Send back a value if the first condition is true, else another value::
+
+    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other' END
+
+
 .. _conversion_functions:
 
 Conversions Functions
@@ -561,6 +432,7 @@ Adding or subtracting an interval to dates, datetimes or times, using the
    one of the date extraction functions (e.g., ``day()`` to get the interval
    expressed in days)
 
+.. _fields_values:
 
 Fields and Values
 ------------------
@@ -974,6 +846,139 @@ This group contains functions to create or manipulate keys and values of maps.
 ==================== =========================================================
 
 
+Mathematical Functions
+-----------------------
+
+This group contains math functions (e.g., square root, sin and cos).
+
+=================  ==========================================================
+ Function           Description
+=================  ==========================================================
+ abs                Returns the absolute value of a number
+ acos               Returns the inverse cosine of a value in radians
+ asin               Returns the inverse sine of a value in radians
+ atan               Returns the inverse tangent of a value in radians
+ atan2(y,x)         Returns the inverse tangent of y/x by using the signs
+                    of the two arguments to determine the quadrant of the
+                    result
+ azimuth(a,b)       Returns the north-based azimuth as the angle in radians
+                    measured clockwise from the vertical on point a
+                    to point b
+ ceil               Rounds a number upwards
+ clamp              Restricts an input value to a specified range
+ cos                Returns the cosine of a value in radians
+ degrees            Converts from radians to degrees
+ exp                Returns exponential of a value
+ floor              Rounds a number downwards
+ ln                 Returns the natural logarithm of the passed expression
+ log                Returns the value of the logarithm of the passed
+                    value and base
+ log10              Returns the value of the base 10 logarithm of the
+                    passed expression
+ max                Returns the largest value in a set of values
+ min                Returns the smallest value in a set of values
+ pi                 Returns the value of pi for calculations
+ radians            Converts from degrees to radians
+ rand               Returns the random integer within the range specified
+                    by the minimum and maximum argument (inclusive)
+ randf              Returns the random float within the range specified
+                    by the minimum and maximum argument (inclusive)
+ round              Rounds to number of decimal places
+ scale_exp          Transforms a given value from an input domain
+                    to an output range using an exponential curve
+ scale_linear       Transforms a given value from an input domain
+                    to an output range using linear interpolation
+ sin                Returns the sine of an angle
+ sqrt               Returns the square root of a value
+ tan                Returns the tangent of an angle
+=================  ==========================================================
+
+
+Operators
+----------
+
+This group contains operators (e.g., +, -, \*).
+Note that for most of the mathematical functions below,
+if one of the inputs is NULL then the result is NULL.
+
+=========================== ===================================================
+ Function                    Description
+=========================== ===================================================
+ a + b                       Addition of two values (a plus b)
+ a - b                       Subtraction of two values (a minus b).
+ a * b                       Multiplication of two values (a multiplied by b)
+ a / b                       Division of two values (a divided by b)
+ a % b                       Remainder of division of a by b
+                             (eg, 7 % 2 = 1, or 2 fits into 7 three times
+                             with remainder 1)
+ a ^ b                       Power of two values (for example, 2^2=4 or 2^3=8)
+ a < b                       Compares two values and evaluates to 1 if the
+                             left value is less than the right value
+                             (a is smaller than b)
+ a <= b                      Compares two values and evaluates to 1 if the
+                             left value isless than or equal to the right
+                             value
+ a <> b                      Compares two values and evaluates to 1
+                             if they are not equal
+ a = b                       Compares two values and evaluates to 1
+                             if they are equal
+ a != b                      a and b are not equal
+ a > b                       Compares two values and evaluates to 1
+                             if the left value is greater than the right
+                             value (a is larger than b)
+ a >= b                      Compares two values and evaluates to 1
+                             if the left value is greater than or equal to
+                             the right value
+ a ~ b                       a matches the regular expression b
+ ||                          Joins two values together into a string.
+                             If one of the values is NULL the result will
+                             be NULL
+ '\\n'                       Inserts a new line in a string
+ LIKE                        Returns 1 if the first parameter matches the
+                             supplied pattern
+ ILIKE                       Returns 1 if the first parameter matches
+                             case-insensitive the supplied pattern (ILIKE
+                             can be used instead of LIKE to make the match
+                             case-insensitive)
+ a IS b                      Tests whether two values are identical.
+                             Returns 1 if a is the same as b
+ a OR b                      Returns 1 when condition a or condition b is true
+ a AND b                     Returns 1 when conditions a and b are true
+ NOT                         Negates a condition
+ column name "column name"   Value of the field column name, take care to
+                             not be confused with simple quote, see below
+ 'string'                    a string value, take care to not be confused
+                             with double quote, see above
+ NULL                        null value
+ a IS NULL                   a has no value
+ a IS NOT NULL               a has a value
+ a IN (value[,value])        a is below the values listed
+ a NOT IN (value[,value])    a is not below the values listed
+=========================== ===================================================
+
+.. note:: **About fields concatenation**
+
+  You can concatenate strings using either `||` or ``+``. The latter also means
+  sum up expression. So if you have an integer (field or numeric value) this can
+  be error prone. In this case, you should use `||`. If you concatenate two
+  string values, you can use both.
+
+**Some examples:**
+
+* Joins a string and a value from a column name::
+
+    'My feature''s id is: ' || "gid"
+    'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
+    "country_name" + '(' + "country_code" + ')'
+    "country_name" || '(' || "country_code" || ')'
+
+
+* Test if the "description" attribute field starts with the 'Hello' string
+  in the value (note the position of the % character)::
+
+    "description" LIKE 'Hello%'
+
+
 Record Functions
 -----------------
 
@@ -1069,13 +1074,6 @@ This group contains functions that operate on strings
 =====================  ======================================================
 
 
-Recent Functions
------------------
-
-This group contains recently used functions. Any expression used in the
-Expression dialog is added to the list, sorted from the more recent to
-the less one. This helps to quickly retrieve any previous expression.
-
 .. _variables_functions:
 
 Variables Functions
@@ -1164,6 +1162,14 @@ To use these functions in an expression, they should be preceded by @ character
  row_number              Stores the number of the current row
  value                   Returns the current value
 ======================= =======================================================
+
+
+Recent Functions
+-----------------
+
+This group contains recently used functions. Any expression used in the
+Expression dialog is added to the list, sorted from the more recent to
+the less one. This helps to quickly retrieve any previous expression.
 
 
 .. index:: Custom functions
