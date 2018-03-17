@@ -2809,7 +2809,7 @@ layer-level variable from the list and click the |signMinus| button to remove
 it.
 
 More information on variables usage in the General Tools
-:ref:`general_tools_variables` sectionf.
+:ref:`general_tools_variables` section.
 
 
 .. index:: Metadata, Metadata editor, Keyword
