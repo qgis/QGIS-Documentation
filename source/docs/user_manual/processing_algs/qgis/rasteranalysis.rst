@@ -21,6 +21,10 @@ The resulting layer will have its values computed according to an expression.
 The expression can contain numerical values, operators and references to any of
 the layers in the current project.
 
+.. note:: you have to choose one (or more) layer(s) in the ``Reference layers``
+  option or you have to type the extent, cell size and CRS manually. If both
+  layer and options are chosen, the latter will overwrite the layer's properties.
+
 .. note:: When using the calculator in :ref:`processing_batch` or from the
   :ref:`console` the files to use have to be specified. The corresponding layers
   are referred using the base name of the file (without the full path). For instance,
@@ -56,6 +60,7 @@ Parameters
   Default: *NDVI*
 
 ``Reference layers(s)(used for automated extent, cellsize and CRS)`` [multipleinput]
+  Optional.
 
   Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the
   layer in this box avoids to fill all the other parameter by hand.
