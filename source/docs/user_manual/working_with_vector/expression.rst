@@ -129,6 +129,8 @@ This group contains functions which aggregate values over layers and fields.
 ====================== =======================================================
  aggregate              Returns an aggregate value calculated using
                         features from another layer
+ array_agg              Returns an array of aggregated values from a field
+                        or expression
  collect                Returns the multipart geometry of aggregated
                         geometries from an expression
  concatenate            Returns the all aggregated strings from a field
@@ -192,10 +194,16 @@ This group contains functions which aggregate values over layers and fields.
      expression := "field_from_related_table")
 
 
+.. index:: Array, List data structure
+.. _array_functions:
+
 Array Functions
 ---------------
 
-This group contains functions to create and manipulate arrays.
+This group contains functions to create and manipulate arrays (also known as
+list data structures). The order of values within the array matters, unlike the
+:ref:`'map' data structure <maps_functions>`, where the order of key-value pairs
+is irrelevant and values are identified by their keys.
 
 ====================== =======================================================
  Function               Description
@@ -212,7 +220,7 @@ This group contains functions to create and manipulate arrays.
  array_get              Returns the Nth value (0 for the first one) of an array
  array_insert           Returns an array with the given value added at the
                         given position
- array_intersect        Returns true if any element of array1 exists in array2
+ array_intersect        Returns true if any element of array_1 exists in array_2
  array_last             Returns the last element of an array 
  array_length           Returns the number of elements of an array
  array_prepend          Returns an array with the given value added at the beginning
@@ -269,25 +277,6 @@ This group contains functions for manipulating colors.
  set_color_part     Sets a specific color component for a color string,
                     eg the red component or alpha component
 ================== ==========================================================
-
-
-Composition Functions
----------------------
-
-This group contains functions to manipulate print layout items properties.
-
-==================  ========================================================
- Function            Description
-==================  ========================================================
- item_variables      Returns a map of variables from a layout item inside
-                     this composition
-==================  ========================================================
-
-**Some example:**
-
-* Get the scale of the 'Map 0' in the current print layout::
-
-    map_get( item_variables('Map 0'), 'map_scale')
 
 
 Conditional Functions
@@ -506,6 +495,8 @@ This group  contains general assorted functions.
 ====================  =======================================================
 
 
+.. _geometry_functions:
+
 Geometry Functions
 ------------------
 
@@ -627,6 +618,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | collection, or null if the input geometry         |
 |                        | is not a collection                               |
 +------------------------+---------------------------------------------------+
+| hausdorff_distance     | Returns basically a measure of how similar or     |
+|                        | dissimilar 2 geometries are, with a lower         |
+|                        | distance indicating more similar geometries       |
++------------------------+---------------------------------------------------+
+| inclination            | Returns the inclination measured from the zenith  |
+|                        | (0) to the nadir (180) on point_a to point_b      |
++------------------------+---------------------------------------------------+
 | interior_ring_n        | Returns the geometry of the nth interior ring     |
 |                        | from a polygon geometry, or null if the geometry  |
 |                        | is not a polygon                                  |
@@ -670,6 +668,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | m                      | Returns the m value of a point geometry           |
 +------------------------+---------------------------------------------------+
+| make_circle            | Creates a circular geometry based on center point |
+|                        | and radius                                        |
++------------------------+---------------------------------------------------+
+| make_ellipse           | Creates an elliptical geometry based on center    |
+|                        | point, axes and azimuth                           |
++------------------------+---------------------------------------------------+
 | make_line              | Creates a line geometry from a series of point    |
 |                        | geometries                                        |
 +------------------------+---------------------------------------------------+
@@ -681,6 +685,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | make_polygon           | Creates a polygon geometry from an outer ring and |
 |                        | optional series of inner ring geometries          |
++------------------------+---------------------------------------------------+
+| make_regular_polygon   | Creates a regular polygon                         |
++------------------------+---------------------------------------------------+
+| make_triangle          | Creates a triangle polygon                        |
++------------------------+---------------------------------------------------+
+| minimal_circle         | Returns the minimal enclosing circle of an input  |
+|                        | geometry                                          |
 +------------------------+---------------------------------------------------+
 | nodes_to_points        | Returns a multipoint geometry consisting of every |
 |                        | node in the input geometry                        |
@@ -706,6 +717,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | order_parts            | Orders the parts of a MultiGeometry by a given    |
 |                        | criteria                                          |
++------------------------+---------------------------------------------------+
+| oriented_bbox          | Returns a geometry representing the minimal       |
+|                        | oriented bounding box of an input geometry        |
 +------------------------+---------------------------------------------------+
 | overlaps               | Tests whether a geometry overlaps another.        |
 |                        | Returns 1 (true) if the geometries share space,   |
@@ -823,10 +837,44 @@ This group contains functions that operate on geometry objects (e.g., length, ar
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
 
-Map Functions
+Layout Functions
+----------------
+
+This group contains functions to manipulate print layout items properties.
+
+==================  ========================================================
+ Function            Description
+==================  ========================================================
+ item_variables      Returns a map of variables from a layout item inside
+                     this print layout
+==================  ========================================================
+
+**Some example:**
+
+* Get the scale of the 'Map 0' in the current print layout::
+
+    map_get( item_variables('Map 0'), 'map_scale')
+
+
+Map Layers
+----------
+
+This group contains a list of the available layers in the current project.
+This offers a convenient way to write expressions referring to multiple layers,
+such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
+<record_attributes>` or :ref:`spatial <geometry_functions>` queries.
+
+.. index:: Map data structure, Dictionary, Key-value pairs, Associative arrays
+.. _maps_functions:
+
+Maps Functions
 --------------
 
-This group contains functions to create or manipulate keys and values of maps.
+This group contains functions to create or manipulate keys and values of map
+data structures (also known as dictionary objects, key-value pairs, or associative
+arrays). Unlike the :ref:`list data structure <array_functions>` where values
+order matters, the order of the key-value pairs in the map object is not relevant
+and values are identified by their keys.
 
 ==================== =========================================================
  Function             Description
@@ -870,6 +918,8 @@ This group contains math functions (e.g., square root, sin and cos).
  degrees            Converts from radians to degrees
  exp                Returns exponential of a value
  floor              Rounds a number downwards
+ inclination        Returns the inclination measured from the zenith (0) to
+                    the nadir (180) on point_a to point_b.
  ln                 Returns the natural logarithm of the passed expression
  log                Returns the value of the logarithm of the passed
                     value and base
@@ -979,8 +1029,10 @@ if one of the inputs is NULL then the result is NULL.
     "description" LIKE 'Hello%'
 
 
-Record Functions
------------------
+.. _record_attributes:
+
+Record and Attributes Functions
+-------------------------------
 
 This group contains functions that operate on record identifiers.
 
@@ -1004,6 +1056,9 @@ This group contains functions that operate on record identifiers.
                       feature ID
  is_selected          Returns if a feature is selected
  num_selected         Returns the number of selected features on a given layer
+ represent_value      Returns the configured representation value for a
+                      field value (convenient with some :ref:`widget types
+                      <edit_widgets>`)
  uuid                 Generates a Universally Unique Identifier (UUID)
                       for each row. Each UUID is 38 characters long.
 ==================== =========================================================
@@ -1044,8 +1099,8 @@ This group contains functions that operate on strings
  length                 Returns length of a string
                         (or length of a line geometry feature)
  lower                  converts a string to lower case
- lpad                   Returns a string with supplied width padded
-                        using the fill character
+ lpad                   Returns a string padded on the left to the specified
+                        width, using the fill character
  regexp_match           Returns the first matching position matching a regular
                         expression within a string, or 0 if the substring is
                         not found
@@ -1058,8 +1113,8 @@ This group contains functions that operate on strings
                         or paired values
  right(string, n)       Returns a substring that contains the n
                         rightmost characters of the string
- rpad                   Returns a string with supplied width padded
-                        using the fill character
+ rpad                   Returns a string padded on the right to the specified
+                        width, using the fill character
  strpos                 Returns the first matching position of a substring within
                         another string, or 0 if the substring is not found
  substr                 Returns a part of a string
@@ -1135,6 +1190,7 @@ To use these functions in an expression, they should be preceded by @ character
  map_rotation            Returns the current rotation of the map
  map_scale               Returns the current scale of the map
  map_units               Returns the units of map measurements
+ names                   \
  project_crs             Returns the Coordinate reference system of the project
  project_crs_definition  Returns the full definition of the Coordinate reference
                          system of the project
@@ -1161,15 +1217,18 @@ To use these functions in an expression, they should be preceded by @ character
                          user name
  row_number              Stores the number of the current row
  value                   Returns the current value
+ values                  \
 ======================= =======================================================
 
 
 Recent Functions
 -----------------
 
-This group contains recently used functions. Any expression used in the
-Expression dialog is added to the list, sorted from the more recent to
-the less one. This helps to quickly retrieve any previous expression.
+This group contains recently used functions. Depending on the context of its
+usage (feature selection, field calculator, generic), any applied expression
+is added to the corresponding list (up to ten expressions), sorted from the
+more recent to the less one.
+This helps to quickly retrieve and reapply any previously used expression.
 
 
 .. index:: Custom functions
