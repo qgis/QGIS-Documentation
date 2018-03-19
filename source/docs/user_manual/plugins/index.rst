@@ -17,7 +17,6 @@ Plugins
    plugins_coordinate_capture
    plugins_db_manager
    plugins_evis
-   plugins_gdaltools
    plugins_geometry_checker
    plugins_georeferencer
    plugins_metasearch

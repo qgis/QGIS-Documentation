@@ -24,7 +24,6 @@ Icon                    Plugin                        Description               
 |coordinateCapture|     Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
 |eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
-|rasterInfo|            GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`

@@ -296,17 +296,23 @@ Menu Option                                                 Toolbar             
 ==========================================================  ====================  ==================================
 |showRasterCalculator| :guilabel:`Raster calculator...`     \                     see :ref:`label_raster_calc`
 :guilabel:`Align Raster...`                                 \                     see :ref:`label_raster_align`
-:menuselection:`Analysis -->`                               \                     see :ref:`label_plugingdaltools`
-:menuselection:`Projection -->`                             \                     see :ref:`label_plugingdaltools`
-:menuselection:`Conversion -->`                             \                     see :ref:`label_plugingdaltools`
-:menuselection:`Miscellaneous -->`                          \                     see :ref:`label_plugingdaltools`
-:menuselection:`Extraction -->`                             \                     see :ref:`label_plugingdaltools`
+:menuselection:`Analysis -->`                               \                     see :ref:`processing.options`
+:menuselection:`Projection -->`                             \                     see :ref:`processing.options`
+:menuselection:`Conversion -->`                             \                     see :ref:`processing.options`
+:menuselection:`Miscellaneous -->`                          \                     see :ref:`processing.options`
+:menuselection:`Extraction -->`                             \                     see :ref:`processing.options`
 |georefRun| :guilabel:`Georeferencer`                       :guilabel:`Raster`    see :ref:`georef`
 ==========================================================  ====================  ==================================
 
-When starting QGIS for the first time not all core plugins are loaded.
-Many of the above-mentioned sub-menus require the core plugin Processing
-to be activated.
+By default, QGIS adds to the :guilabel:`Raster` menu some :ref:`Processing
+<sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
+for many common raster-based GIS tasks picked from different providers.
+If not all aforementioned sub-menus are available, then you would need to enable
+the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
+
+Note that the list of the :guilabel:`Raster` menu tools can be extended with
+any Processing algorithms or some external :ref:`plugins <plugins>`.
+
 
 Database
 --------

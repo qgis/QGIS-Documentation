@@ -116,7 +116,6 @@ Core plugins include:
 #.  Coordinate Capture (Capture mouse coordinates in different CRSs)
 #.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
 #.  eVIS (Visualize events)
-#.  GDALTools (Integrate GDAL Tools into QGIS)
 #.  Georeferencer GDAL (Add projection information to rasters using GDAL)
 #.  GPS Tools (Load and import GPS data)
 #.  GRASS (Integrate GRASS GIS)

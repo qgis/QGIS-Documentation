@@ -14,7 +14,7 @@ and get acquainted with some useful plugins.
   (look in :kbd:`exercise_data/raster/SRTM`).
 
 From the lesson on raster analysis, you're already familiar with raster
-analysis functions. You used GDAL tools (accessible via
+analysis functions. You used Processing tools (accessible via
 :menuselection:`Raster --> Analysis`) for this. However, you should also know about
 the Raster Terrain Analysis plugin. This ships standard with newer versions of
 QGIS, and so you don't need to install it separately.
