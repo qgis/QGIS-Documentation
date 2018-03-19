@@ -23,7 +23,7 @@ message bar with the following code
 .. code-block:: python
 
   from qgis.gui import QgsMessageBar
-  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.MessageLevel(2))
+  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.Critical)
 
 
 .. figure:: img/errorbar.png
@@ -36,7 +36,7 @@ You can set a duration to show it for a limited time
 
 .. code-block:: python
 
-    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=Qgis.MessageLevel(2), duration=3)
+    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=Qgis.Critical, duration=3)
 
 
 .. figure:: img/errorbar-timed.png
@@ -47,13 +47,12 @@ You can set a duration to show it for a limited time
 
 The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
-``Qgis.MessageLevel``. You can use up to 5 different levels:
+``Qgis.MessageLevel``. You can use up to 4 different levels:
 
 0. Info
 1. Warning
 2. Critical
 3. Success
-4. None
 
 .. figure:: img/infobar.png
    :align: center
@@ -74,7 +73,7 @@ more info
     button.setText("Show Me")
     button.pressed.connect(showError)
     widget.layout().addWidget(button)
-    iface.messageBar().pushWidget(widget, Qgis.MessageLevel(1))
+    iface.messageBar().pushWidget(widget, Qgis.Warning)
 
 
 .. figure:: img/bar-button.png
@@ -101,7 +100,7 @@ message box, or if it doesn't make sense to show it in the main QGIS window
             self.layout().addWidget(self.bar, 0, 0, 1, 1)
 
         def run(self):
-            self.bar.pushMessage("Hello", "World", level=Qgis.MessageLevel(0))
+            self.bar.pushMessage("Hello", "World", level=Qgis.Info)
 
     myDlg = MyDialog()
     myDlg.show()
@@ -129,7 +128,7 @@ it accepts widgets. Here is an example that you can try in the console.
     progress.setMaximum(10)
     progress.setAlignment(Qt.AlignLeft|Qt.AlignVCenter)
     progressMessageBar.layout().addWidget(progress)
-    iface.messageBar().pushWidget(progressMessageBar, Qgis.MessageLevel(0))
+    iface.messageBar().pushWidget(progressMessageBar, Qgis.Info)
     for i in range(10):
         time.sleep(1)
         progress.setValue(i + 1)
@@ -157,6 +156,6 @@ save about the execution of your code.
 .. code-block:: python
 
     # You can optionally pass a 'tag' and a 'level' parameters
-    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.MessageLevel(0))
-    QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.MessageLevel(1))
-    QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.MessageLevel(2))
+    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
+    QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
+    QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)
