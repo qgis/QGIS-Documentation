@@ -50,7 +50,7 @@ Installed external python plugins are placed under the
   QGIS ``default`` user profile is:
 
   * |nix| :file:`.local/share/QGIS/QGIS3/profiles/default`;
-  * |win| :file:`AppData\Roaming\QGIS\QGIS3\profiles\default`;
+  * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default`;
   * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
 
 Paths to Custom C++ plugins libraries can also be added under
