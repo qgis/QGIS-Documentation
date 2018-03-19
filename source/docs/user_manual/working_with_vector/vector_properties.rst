@@ -1936,6 +1936,121 @@ default when creating new features. This can be configured per layer or globally
 with the :guilabel:`Suppress attribute form pop-up after feature creation` in
 the :menuselection:`Settings --> Options --> Digitizing` menu.
 
+.. index:: Form, Built-in form, Custom form
+.. _customize_form:
+
+Customize a form for your data
+------------------------------
+
+By default, when you click on a feature with the |identify| :sup:`Identify
+Features` tool or switch the attribute table to the *form view* mode, QGIS
+displays a form with tabulated textboxes (one per field). This rendering is
+the result of the default ``Autogenerate`` value of the :menuselection:`Layer
+properties --> Fields --> Attribute editor layout` setting. Thanks to the
+:ref:`widget setting <configure_field>`, you can improve this dialog.
+
+You can furthermore define built-in forms (see figure_fields_form_),
+e.g. when you have objects with many attributes, you can create
+an editor with several tabs and named groups to present the attribute fields.
+
+
+.. _figure_fields_form:
+
+.. figure:: img/resulting_feature_form.png
+   :align: center
+
+   Resulting built-in form with tabs and named groups
+
+.. _drag_drop_designer:
+
+The drag and drop designer
+..........................
+
+Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
+combobox to layout the features form within QGIS. Then, drag and drop rows
+from the :guilabel:`Fields` frame to the :guilabel:`Label` panel to have fields
+added to your custom form.
+
+You can also use categories (tab or group frames) to better structure the form.
+The first step is to use the |signPlus| icon to create a tab in which fields
+and groups will be displayed (see figure_fields_layout_). You can create as many
+categories as you want.
+The next step will be to assign to each category the relevant fields, using the
+|arrowRight| icon. You'd need to select the targeted category beforehand.
+You can use the same fields many times.
+
+.. _figure_fields_layout:
+
+.. figure:: img/attribute_editor_layout.png
+   :align: center
+
+   Dialog to create categories with the **Attribute editor layout**
+
+
+You can configure tabs or groups with a double-click. QGIS opens a form in which
+you can:
+
+* choose to hide or show the item label
+* rename the category
+* set over how many columns the fields under the category should be distributed
+* enter an expression to control the category visibility. The expression will be
+  re-evaluated everytime values in the form change and the tab or groupbox
+  shown/hidden accordingly.
+* show the category as a group box (only available for tabs)
+
+With a double-click on a field label, you can also specify whether the label of
+its widget should be visible or not in the form.
+
+In case the layer is involved in ``one to many relations`` (see :ref:`vector_relations`),
+referencing layers are listed in the :guilabel:`Relations` frame and their form
+can be embedded in the current layer form by drag-and-drop. Like the other
+items, double-click the relation label to configure some options:
+
+* choose to hide or show the item label
+* show the link button
+* show the unlink button
+
+Provide an ui-file
+..................
+
+The ``Provide ui-file`` option allows you to use complex dialogs made with
+Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
+dialog. Note that, in order to link the graphical objects (textbox,
+combobox...) to the layer's fields, you need to give them the same name.
+
+Use the :guilabel:`Edit UI` to define the path to the file to use.
+
+You'll find some example in the :ref:`Creating a new form <creating-new-form>`
+lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
+see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. 
+
+Enhance your form with custom functions
+.......................................
+
+QGIS forms can have a Python function that is called when the dialog is opened.
+Use this function to add extra logic to your dialogs. The form code can be
+specified in three different ways:
+
+* ``load from the environment``: use a function, for example in
+  :file:`startup.py` or from an installed plugin)
+* ``load from an external file``: a file chooser will appear in that case to
+  allow you to select a Python file from your filesystem
+* ``provide code in this dialog``: a Python editor will appear where you can
+  directly type the function to use.
+
+In all cases you must enter the name of the function that will be called
+(``open`` in the example below).
+
+An example is (in module MyForms.py):
+
+::
+
+  def open(dialog,layer,feature):
+      geom = feature.geometry()
+      control = dialog.findChild(QWidged,"My line edit")
+
+Reference in Python Init Function like so: ``open``
+
 .. index:: Edit widget, Field configuration
 .. _configure_field:
 
@@ -2098,123 +2213,6 @@ with the field type. The available widgets are:
    directory as the :file:`.qgs` project file or below, paths are converted to
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
-
-.. index:: Form, Built-in form, Custom form
-.. _customize_form:
-
-Customize a form for your data
-------------------------------
-
-By default, when you click on a feature with the |identify| :sup:`Identify
-Features` tool or switch the attribute table to the *form view* mode, QGIS
-displays a form with tabulated textboxes (one per field). This rendering is
-the result of the default ``Autogenerate`` value of the :menuselection:`Layer
-properties --> Fields --> Attribute editor layout` setting. Thanks to the
-:ref:`widget setting <configure_field>`, you can improve this dialog.
-
-You can furthermore define built-in forms (see figure_fields_form_),
-e.g. when you have objects with many attributes, you can create
-an editor with several tabs and named groups to present the attribute fields.
-
-
-.. _figure_fields_form:
-
-.. figure:: img/resulting_feature_form.png
-   :align: center
-
-   Resulting built-in form with tabs and named groups
-
-.. _drag_drop_designer:
-
-The drag and drop designer
-..........................
-
-Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
-combobox to layout the features form within QGIS. Then, drag and drop rows
-from the :guilabel:`Fields` frame to the :guilabel:`Label` panel to have fields
-added to your custom form.
-
-You can also use categories (tab or group frames) to better structure the form.
-The first step is to use the |signPlus| icon to create a tab in which fields
-and groups will be displayed (see figure_fields_layout_). You can create as many
-categories as you want.
-The next step will be to assign to each category the relevant fields, using the
-|arrowRight| icon. You'd need to select the targeted category beforehand.
-You can use the same fields many times.
-
-.. _figure_fields_layout:
-
-.. figure:: img/attribute_editor_layout.png
-   :align: center
-
-   Dialog to create categories with the **Attribute editor layout**
-
-
-You can configure tabs or groups with a double-click. QGIS opens a form in which
-you can:
-
-* choose to hide or show the item label
-* rename the category
-* set over how many columns the fields under the category should be distributed
-* enter an expression to control the category visibility. The expression will be
-  re-evaluated everytime values in the form change and the tab or groupbox
-  shown/hidden accordingly.
-* show the category as a group box (only available for tabs)
-
-With a double-click on a field label, you can also specify whether the label of
-its widget should be visible or not in the form.
-
-In case the layer is involved in ``one to many relations`` (see :ref:`vector_relations`),
-referencing layers are listed in the :guilabel:`Relations` frame and their form
-can be embedded in the current layer form by drag-and-drop. Like the other
-items, double-click the relation label to configure some options:
-
-* choose to hide or show the item label
-* show the link button
-* show the unlink button
-
-.. _provide_ui_file:
-
-Provide an ui-file
-..................
-
-The ``Provide ui-file`` option allows you to use complex dialogs made with
-Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
-dialog. Note that, in order to link the graphical objects (textbox,
-combobox...) to the layer's fields, you need to give them the same name.
-
-Use the :guilabel:`Edit UI` to define the path to the file to use.
-
-You'll find some example in the :ref:`Creating a new form <creating-new-form>`
-lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. 
-
-Enhance your form with custom functions
-.......................................
-
-QGIS forms can have a Python function that is called when the dialog is opened.
-Use this function to add extra logic to your dialogs. The form code can be
-specified in three different ways:
-
-* ``load from the environment``: use a function, for example in
-  :file:`startup.py` or from an installed plugin)
-* ``load from an external file``: a file chooser will appear in that case to
-  allow you to select a Python file from your filesystem
-* ``provide code in this dialog``: a Python editor will appear where you can
-  directly type the function to use.
-
-In all cases you must enter the name of the function that will be called
-(``open`` in the example below).
-
-An example is (in module MyForms.py):
-
-::
-
-  def open(dialog,layer,feature):
-      geom = feature.geometry()
-      control = dialog.findChild(QWidged,"My line edit")
-
-Reference in Python Init Function like so: ``open``
 
 
 .. index:: Jointure, Join layers
