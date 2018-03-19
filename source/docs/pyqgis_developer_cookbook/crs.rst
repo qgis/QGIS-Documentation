@@ -83,15 +83,15 @@ Projections
 You can do transformation between different spatial reference systems by using
 :class:`QgsCoordinateTransform` class. The easiest way to use it is to create
 source and destination CRS and construct :class:`QgsCoordinateTransform`
-instance with them. Then just repeatedly call :func:`transform` function to do
-the transformation. By default it does forward transformation, but it is
-capable to do also inverse transformation
+instance with them and the current project. Then just repeatedly call
+:func:`transform` function to do the transformation. By default it does forward
+transformation, but it is capable to do also inverse transformation.
 
 ::
 
   crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
   crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
-  xform = QgsCoordinateTransform(crsSrc, crsDest)
+  xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
 
   # forward transformation: src -> dest
   pt1 = xform.transform(QgsPoint(18,5))
