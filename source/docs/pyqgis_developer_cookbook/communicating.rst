@@ -122,8 +122,8 @@ it accepts widgets. Here is an example that you can try in the console.
 .. code-block:: python
 
     import time
-    from PyQt4.QtGui import QProgressBar
-    from PyQt4.QtCore import *
+    from qgis.PyQt.QtGui import QProgressBar
+    from qgis.PyQt.QtCore import *
     progressMessageBar = iface.messageBar().createMessage("Doing something boring...")
     progress = QProgressBar()
     progress.setMaximum(10)
