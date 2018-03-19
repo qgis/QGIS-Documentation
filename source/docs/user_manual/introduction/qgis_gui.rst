@@ -267,20 +267,26 @@ Vector
 ==============================================================  =======================  ===============================
 Menu Option                                                     Toolbar                  Reference
 ==============================================================  =======================  ===============================
-:menuselection:`Analysis Tools -->`                             \                        see :ref:`vector_menu`
-:menuselection:`Research Tools -->`                             \                        see :ref:`vector_menu`
-:menuselection:`Geoprocessing Tools -->`                        \                        see :ref:`vector_menu`
-:menuselection:`Geometry Tools -->`                             \                        see :ref:`vector_menu`
-:menuselection:`Data Management Tools -->`                      \                        see :ref:`vector_menu`
+:menuselection:`Analysis Tools -->`                             \                        see :ref:`processing.options`
+:menuselection:`Research Tools -->`                             \                        see :ref:`processing.options`
+:menuselection:`Geoprocessing Tools -->`                        \                        see :ref:`processing.options`
+:menuselection:`Geometry Tools -->`                             \                        see :ref:`processing.options`
+:menuselection:`Data Management Tools -->`                      \                        see :ref:`processing.options`
 |coordinateCapture| :guilabel:`Coordinate Capture`              :guilabel:`Vector`       see :ref:`coordcapt`
 |geometryChecker| :guilabel:`Geometry Checker`                  :guilabel:`Vector`       see :ref:`geometry_checker`
 |gpsImporter| :guilabel:`GPS Tools`                             :guilabel:`Vector`       see :ref:`plugin_gps`
 |topologyChecker| :guilabel:`Topology Checker`                  :guilabel:`Vector`       see :ref:`topology`
 ==============================================================  =======================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
-Many of the above-mentioned sub-menus require the core plugin Processing
-to be activated.
+By default, QGIS adds to the :guilabel:`Vector` menu some :ref:`Processing
+<sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
+for many common vector-based GIS tasks picked from different providers.
+If not all aforementioned sub-menus are available, then you would need to enable
+the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
+
+Note that the list of the :guilabel:`Vector` menu tools can be extended with
+any Processing algorithms or some external :ref:`plugins <plugins>`.
+
 
 Raster
 ------
