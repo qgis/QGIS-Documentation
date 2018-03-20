@@ -264,19 +264,19 @@ When starting QGIS for the first time not all core plugins are loaded.
 Vector
 ------
 
-==============================================================  =======================  ===============================
-Menu Option                                                     Toolbar                  Reference
-==============================================================  =======================  ===============================
-:menuselection:`Analysis Tools -->`                             \                        see :ref:`processing.options`
-:menuselection:`Research Tools -->`                             \                        see :ref:`processing.options`
-:menuselection:`Geoprocessing Tools -->`                        \                        see :ref:`processing.options`
-:menuselection:`Geometry Tools -->`                             \                        see :ref:`processing.options`
-:menuselection:`Data Management Tools -->`                      \                        see :ref:`processing.options`
-|coordinateCapture| :guilabel:`Coordinate Capture`              :guilabel:`Vector`       see :ref:`coordcapt`
-|geometryChecker| :guilabel:`Geometry Checker`                  :guilabel:`Vector`       see :ref:`geometry_checker`
-|gpsImporter| :guilabel:`GPS Tools`                             :guilabel:`Vector`       see :ref:`plugin_gps`
-|topologyChecker| :guilabel:`Topology Checker`                  :guilabel:`Vector`       see :ref:`topology`
-==============================================================  =======================  ===============================
+==============================================================  =======================  =======================  ===============================
+Menu Option                                                     Shortcut                 Toolbar                  Reference
+==============================================================  =======================  =======================  ===============================
+:menuselection:`Analysis Tools -->`                             :kbd:`Alt+O` + :kbd:`A`  \                        see :ref:`processing.options`
+:menuselection:`Research Tools -->`                             :kbd:`Alt+O` + :kbd:`R`  \                        see :ref:`processing.options`
+:menuselection:`Geoprocessing Tools -->`                        :kbd:`Alt+O` + :kbd:`G`  \                        see :ref:`processing.options`
+:menuselection:`Geometry Tools -->`                             :kbd:`Alt+O` + :kbd:`E`  \                        see :ref:`processing.options`
+:menuselection:`Data Management Tools -->`                      :kbd:`Alt+O` + :kbd:`D`  \                        see :ref:`processing.options`
+|coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       see :ref:`coordcapt`
+|geometryChecker| :guilabel:`Geometry Checker`                  \                        :guilabel:`Vector`       see :ref:`geometry_checker`
+|gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       see :ref:`plugin_gps`
+|topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       see :ref:`topology`
+==============================================================  =======================  =======================  ===============================
 
 By default, QGIS adds to the :guilabel:`Vector` menu some :ref:`Processing
 <sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
