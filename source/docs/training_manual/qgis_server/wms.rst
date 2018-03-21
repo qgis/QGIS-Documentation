@@ -241,10 +241,10 @@ GetPrint requests
 -----------------
 
 One very nice feature of QGIS Server is that it makes use of the QGIS Desktop
-print composers. You can learn about it in the :ref:`server_getprint` section.
+print layouts. You can learn about it in the :ref:`server_getprint` section.
 
 If you open the :file:`world.qgs` project with QGIS Desktop you will find a
-print composer named ``Population distribution``. A simplified ``GetPrint``
+print layout named ``Population distribution``. A simplified ``GetPrint``
 request that exemplifies this amazing feature is:
 
 .. code-block:: guess

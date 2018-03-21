@@ -89,9 +89,9 @@ Menu Option                                              Shortcut              R
 :guilabel:`DWG/DXF Import...`                            \                     \                                           \
 :guilabel:`Snapping Options...`                          :kbd:`S`              see :ref:`snapping_tolerance`               \
 |projectProperties| :guilabel:`Project Properties...`    :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
-|newComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
-|composerManager| :guilabel:`Composer manager...`        \                     see :ref:`label_printcomposer`              :guilabel:`Project`
-:menuselection:`Print Composers -->`                     \                     see :ref:`label_printcomposer`              \
+|newLayout| :guilabel:`New Print Layout`                 :kbd:`Ctrl+P`         see :ref:`label_printlayout`                :guilabel:`Project`
+|layoutManager| :guilabel:`Layout Manager...`            \                     see :ref:`label_printlayout`                :guilabel:`Project`
+:menuselection:`Layouts -->`                             \                     see :ref:`label_printlayout`                \
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                                           \
 =======================================================  ====================  ==========================================  ===============================
 
@@ -582,6 +582,7 @@ loading, processing tools...)
 
    Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -609,8 +610,6 @@ loading, processing tools...)
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
-   :width: 1.5em
-.. |composerManager| image:: /static/common/mActionComposerManager.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
@@ -669,6 +668,8 @@ loading, processing tools...)
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
+.. |layoutManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
 .. |management| image:: /static/common/management.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
@@ -685,7 +686,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
-.. |newComposer| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em

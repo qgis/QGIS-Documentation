@@ -88,9 +88,9 @@ The options shown in figure_projection_options_ are:
 * |radioButtonOff| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain layer
-without CRS information, you can also do that in the :guilabel:`General` tab
+without CRS information, you can also do that in the :guilabel:`Source` tab
 of the raster and vector properties dialog (see :ref:`label_sourcetab` for
-rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already has a CRS
+rasters and :ref:`vectorsourcemenu` for vectors). If your layer already has a CRS
 defined, it will be displayed as shown in :ref:`figure_vector_general`.
 
 .. tip:: **CRS in the Layers Panel**
@@ -169,7 +169,7 @@ layer, provided a set of projection databases. Items in the dialog are:
 
    Sometimes, you receive a layer and you don't know its projection. Assuming that you
    have another layer with a valid crs that should overlaps with it, enable the
-   OTF reprojection and, in the :guilabel:`General` tab of the Layer properties
+   OTF reprojection and, in the :guilabel:`Source` tab of the Layer properties
    dialog, use the Coordinate Reference System selector to assign a projection.
    Your layer position is then moved accordingly. You may have to do some trial
    and error in order to find the right position, hence its original CRS.
@@ -254,6 +254,7 @@ displaying PROJ.4 text describing the source and destination
 transforms. Further information may be found by hovering over a
 transform. User defaults can be saved by selecting
 |radioButtonOn| :guilabel:`Remember selection`.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

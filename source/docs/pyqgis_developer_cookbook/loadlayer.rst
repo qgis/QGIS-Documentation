@@ -275,4 +275,4 @@ For a list of loaded layers and layer ids, use:
 
 .. code-block:: python
 
-    QgsMapLayQgsProjecterRegistry.instance().mapLayers()
+    QgsProject.instance().mapLayers()

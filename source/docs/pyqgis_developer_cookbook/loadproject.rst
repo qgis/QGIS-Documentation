@@ -19,7 +19,7 @@ be loaded::
     # If you are not inside a QGIS console you first need to import
     # qgis and PyQt4 classes you will use in this script as shown below:
     from qgis.core import QgsProject
-    from PyQt4.QtCore import QFileInfo
+    from qgis.PyQt.QtCore import QFileInfo
     # Get the project instance
     project = QgsProject.instance()
     # Print the current project file name (might be empty in case no projects have been loaded)

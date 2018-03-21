@@ -40,13 +40,31 @@ from the pop-up menu.
    project file and to avoid changes that may break this behavior, the layer
    properties dialog is made unavailable for these layers.
 
-.. _vectorgeneralmenu:
+
+.. _vectorinformationmenu:
+
+Information Properties
+======================
+
+|metadata| The :guilabel:`Information` tab is read-only and represents an interesting
+place to quickly grab summarized information and metadata on the current layer.
+Provided information are :
+
+* based on the provider of the layer (format of storage, path, geometry type
+  encoding, extent...);
+* picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
+  contacts, history...) ;
+* or related to its geometry (spatial extent, CRS...) or its attributes (number
+  of fields, characteristics of each...)
+
+
+.. _vectorsourcemenu:
 
 Source Properties
-==================
+=================
 
-|general| Use this tab to make general settings for the vector layer.
-There are several options available:
+|system| Use this tab to define general settings for the vector layer.
+Available options are:
 
 Settings
 --------
@@ -82,7 +100,7 @@ active, only the features corresponding to its result are available in the
 project. The query result can be saved as a new vector layer.
 
 The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`General` tab in the Layer Properties. Under :guilabel:`Feature
+the :guilabel:`Source` tab in the Layer Properties. Under :guilabel:`Feature
 subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
 builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
 field, you could select only regions that are ``borough`` in the
@@ -251,7 +269,7 @@ symbols with totally transparent fill/border to achieve this.
 
 .. index:: Classes
    single: Symbology; Categorized renderer
-.. _categorized_rendered:
+.. _categorized_renderer:
 
 Categorized Renderer
 ....................
@@ -461,7 +479,7 @@ The assistant lets you define:
 To the right side of the dialog, you can preview the features representation
 within a live-update widget. This representation is added to the layer tree in
 the layer legend and is also used to shape the layer representation in the
-print composer legend item.
+print layout legend item.
 
 The values presented in the varying size assistant above will set the size
 'Data-defined override' with:
@@ -485,7 +503,7 @@ option either on size (for point layer) or width (for line layer).
 
 Like the proportional symbol, the size-related symbol is added to the layer tree,
 at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print composer legend item.
+are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
 
@@ -509,21 +527,40 @@ feature's attribute to a class. The rules are based on SQL statements.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
-To create a rule, activate an existing row by double-clicking on it, or
-click on '+' and click on the new rule. In the :guilabel:`Rule properties` dialog,
-you can define a label for the rule. Press the |browseButton| button to open the
-expression string builder.
-In the **Function List**, click on :guilabel:`Fields and Values` to view all
-attributes of the attribute table to be searched.
-To add an attribute to the field calculator **Expression** field,
-double click on its name in the :guilabel:`Fields and Values` list. Generally, you
-can use the various fields, values and functions to construct the calculation
-expression, or you can just type it into the box (see :ref:`vector_expressions`).
-You can create a new rule by copying and pasting an existing rule with the right
-mouse button. You can also use the 'ELSE' rule that will be run if none of the other
-rules on that level matches.
-Since QGIS 2.8 the rules appear in a tree hierarchy in the map legend. Just
-double-click the rules in the map legend and the Style tab of the layer
+To create a rule:
+
+* Activate an existing row by double-clicking it (by default, QGIS adds a
+  symbol without a rule when the rendering mode is enabled) or click the
+  |projectProperties| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button;
+* In the :guilabel:`Edit Rule` dialog that opens, you can define a label
+  to help you identify each rule. This is the label that will be displayed
+  in the :guilabel:`Layers Panel` and also in the print composer legend;
+* Press the |expression| button to open the expression string builder dialog;
+* Use the provided functions and the layer attributes to build an :ref:`expression
+  <vector_expressions>` to filter the features you'd like to retrieve;
+* A longer label can then be used to complete the rule description;
+* You can use the |checkbox| :guilabel:`Scale Range` option to set when the
+  rule should be applied;
+* Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
+  and press **[OK]**;
+* A new row summarizing the rule is added to the Layer Properties dialog.
+
+You can create as many rules as necessary following the steps above or copy
+pasting an existing one with the right mouse button. You can also use the
+``ELSE`` rule that will be run if none of the other rules on that level matches.
+
+Selecting a rule, you can organize its features in subclasses using the
+:guilabel:`Refine selected rules` drop-down menu. Rule refinement can be based on:
+
+* **scales**;
+* **categories**: applying a :ref:`categorized renderer <categorized_renderer>`;
+* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`. 
+
+Refined classes appear like sub-items of the rule, in a tree hierarchy and like
+above, you can set symbology of each class.
+
+The created rules also appear in a tree hierarchy in the map legend.
+Double-click the rules in the map legend and the Symbology tab of the layer
 properties appears showing the rule that is the background for the symbol in
 the tree.
 
@@ -1654,7 +1691,7 @@ You can move up and down any row with click and drag, sorting how attributes
 are displayed. You can also change the label in the 'Legend' column
 or the attribute color by double-clicking the item.
 
-This label is the default text displayed in the legend of the print composer
+This label is the default text displayed in the legend of the print layout
 or of the layer tree.
 
 .. _figure_diagrams_attributes:
@@ -1769,7 +1806,7 @@ in the :ref:`label_legend`, besides the layer symbology. It can be:
 * the represented attributes: color and legend text set in :guilabel:`Attributes` tab
 * and if applicable, the diagram size, whose symbol you can customize.
 
-When set, the diagram legend items are also available in the print composer legend,
+When set, the diagram legend items are also available in the print layout legend,
 besides the layer symbology.
 
 
@@ -1843,7 +1880,7 @@ See :ref:`data_defined_labeling` for more information.
 Source Fields Properties
 ========================
 
-|attributes| The :guilabel:`Source Fields` tab helps you organize the fields of
+|sourceFields| The :guilabel:`Source Fields` tab helps you organize the fields of
 the selected dataset and the way you can interact with
 the feature's attributes. The buttons |newAttribute|
 :sup:`New field` and |deleteAttribute| :sup:`Delete field`
@@ -1884,7 +1921,7 @@ Attributes Form Properties
 Configure the field behavior
 ----------------------------
 
-The :guilabel:`Attributes Form` tab helps you set the
+|formView| The :guilabel:`Attributes Form` tab helps you set the
 type of widget used to fill or display values of the field, in the attribute
 table or the feature form: you can define how user interacts with each field
 and the values or range of values that are allowed to be added to each.
@@ -2744,7 +2781,7 @@ setting that enables generalisation by default for newly added layers (see
 
 
 While rendering extremely detailed layers (e.g. polygon layers with a huge number
-of nodes), this can cause composer exports in PDF/SVG format to be huge as all
+of nodes), this can cause layout exports in PDF/SVG format to be huge as all
 nodes are included in the exported file. This can also make the resultant file
 very slow to work with/open in other programs.
 
@@ -2752,7 +2789,7 @@ Checking |checkbox| :guilabel:`Force layer to render as raster` forces these
 layers to be rasterised so that the exported files won't have to include all
 the nodes contained in these layers and the rendering is therefore sped up.
 
-You can also do this by forcing the composer to export as a raster,
+You can also do this by forcing the layout to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
@@ -2772,8 +2809,38 @@ layer-level variable from the list and click the |signMinus| button to remove
 it.
 
 More information on variables usage in the General Tools
-:ref:`general_tools_variables` sectionf.
+:ref:`general_tools_variables` section.
 
+
+.. index:: Metadata, Metadata editor, Keyword
+.. _vectormetadatamenu:
+
+Metadata Properties
+===================
+
+|editMetadata| The :guilabel:`Metadata` tab provides you with options to create
+and edit a metadata report on your layer. Information to fill concern:
+
+* the :guilabel:`Data identification`: basic attribution of the dataset (parent,
+  identifier, title, abstract, language...);
+* the :guilabel:`Categories` the data belongs to. Alongside the **ISO** categories,
+  you can add custom ones;
+* the :guilabel:`Keywords` to retrieve the data and associated concepts following
+  a standard based vocabulary;
+* the :guilabel:`Access` to the dataset (licenses, rights, fees, and constraints);
+* the :guilabel:`Extent` of the dataset, either spatial one (CRS, map extent,
+  altitudes) or temporal;
+* the :guilabel:`Contact` of the owner(s) of the dataset;
+* the :guilabel:`Links` to ancillary resources and related information;
+* the :guilabel:`History` of the dataset.
+
+A summary of the filled information is provided in the :guilabel:`Validation`
+tab and helps you identify potential issues related to the form. You can then
+either fix them or ignore them.
+
+Metadata are currently saved in the project file. It can also be saved as an
+:file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
+database for remote layers (e.g. PostGIS).
 
 .. index:: Legend, Embedded widget
 .. _vectorlegendmenu:
@@ -2798,7 +2865,7 @@ they manage.
 QGIS Server Properties
 ======================
 
-|metadata| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+|overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
 and :guilabel:`Properties` sections.
 
@@ -2833,6 +2900,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    QGIS Server tab in vector layers properties dialog
 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2853,12 +2921,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
-.. |attributes| image:: /static/common/attributes.png
-   :width: 2em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
@@ -2877,10 +2941,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |general| image:: /static/common/general.png
-   :width: 2em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
@@ -2919,6 +2985,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
@@ -2954,8 +3022,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |slider| image:: /static/common/slider.png
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -338,7 +338,7 @@ For deletion of fields just provide a list of field indexes.
 
 .. code-block:: python
 
-  from PyQt4.QtCore import QVariant
+  from qgis.PyQt.QtCore import QVariant
 
   if caps & QgsVectorDataProvider.AddAttributes:
       res = layer.dataProvider().addAttributes(
@@ -377,7 +377,7 @@ editing functions
 
 .. code-block:: python
 
-  from PyQt4.QtCore import QVariant
+  from qgis.PyQt.QtCore import QVariant
 
   # add two features (QgsFeature instances)
   layer.addFeatures([feat1,feat2])
@@ -536,7 +536,7 @@ There are two possibilities how to export a vector layer:
 
   .. code-block:: python
 
-    from PyQt4.QtCore import QVariant
+    from qgis.PyQt.QtCore import QVariant
 
     # define fields for feature attributes. A QgsFields object is needed
     fields = QgsFields()
@@ -615,7 +615,7 @@ The following example code illustrates creating and populating a memory provider
 
 .. code-block:: python
 
-  from PyQt4.QtCore import QVariant
+  from qgis.PyQt.QtCore import QVariant
 
   # create layer
   vl = QgsVectorLayer("Point", "temporary_points", "memory")

@@ -266,6 +266,7 @@ Icon                         Substitution                     Icon              
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |formView|               ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
+|attributes|                 ``|attributes|``                 \                        \
 ============================ ===============================  =======================  ===========================
 
 
@@ -284,14 +285,14 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 
 
-Print Composer
-==============
+Print Layout
+============
 
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
-|newComposer|            ``|newComposer|``            |composerManager|        ``|composerManager|``
-|duplicateComposer|      ``|duplicateComposer|``      \                        \
+|newLayout|              ``|newLayout|``              |layoutManager|          ``|layoutManager|``
+|duplicateLayout|        ``|duplicateLayout|``        \                        \
 |atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
@@ -317,11 +318,13 @@ Layer Properties
 Icon                                Substitution                            Icon                           Substitution
 ==================================  ======================================  =============================  ================================
 |symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
-|attributes|                        ``|attributes|``                        |general|                      ``|general|``
+|sourceFields|                      ``|sourceFields|``                      |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
 |mapTips|                           ``|mapTips|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
-|legend|                            ``|legend|``                            |dependencies|                            ``|dependencies|``
+|legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
+|3d|                                ``|3d|``                                |system|                       ``|system|``
+|editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
@@ -433,6 +436,7 @@ Icon                            Substitution                        Icon        
 |evisConnect|                   ``|evisConnect|``                   |evisFile|                      ``|evisFile|``
 ==============================  ==================================  ==============================  ==================================
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -440,6 +444,8 @@ Icon                            Substitution                        Icon        
    source folder.
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
+   :width: 1.5em
+.. |3d| image:: /static/common/3d.png
    :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
@@ -565,8 +571,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
-.. |composerManager| image:: /static/common/mActionComposerManager.png
-   :width: 1.5em
 .. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
@@ -627,13 +631,15 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |duplicateComposer| image:: /static/common/mActionDuplicateComposer.png
+.. |duplicateLayout| image:: /static/common/mActionDuplicateComposer.png
    :width: 1.5em
 .. |dxf2shpConverter| image:: /static/common/dxf2shp_converter.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
@@ -788,6 +794,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |layerExtent| image:: /static/common/layer_extent.png
    :width: 1.5em
+.. |layoutManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.5em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
@@ -844,9 +852,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
-.. |newComposer| image:: /static/common/mActionNewComposer.png
-   :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newLayout| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em
@@ -912,6 +920,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |pan| image:: /static/common/mActionPan.png
@@ -1042,6 +1052,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitLayer| image:: /static/common/split_layer.png
@@ -1066,6 +1078,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 1.5em
 .. |tab| image:: /static/common/tab.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png

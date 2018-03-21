@@ -10,8 +10,8 @@ Communicating with the user
 This section shows some methods and elements that should be used to communicate
 with the user, in order to keep consistency in the User Interface.
 
-Showing messages. The :class:`QgsMessageBar` class
-==================================================
+Showing messages. The QgsMessageBar class
+=========================================
 
 Using message boxes can be a bad idea from a user experience point of view. For
 showing a small info line or a warning/error messages, the QGIS message bar is
@@ -20,10 +20,10 @@ usually a better option.
 Using the reference to the QGIS interface object, you can show a message in the
 message bar with the following code
 
-::
+.. code-block:: python
 
   from qgis.gui import QgsMessageBar
-  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=QgsMessageBar.CRITICAL)
+  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.Critical)
 
 
 .. figure:: img/errorbar.png
@@ -34,9 +34,9 @@ message bar with the following code
 
 You can set a duration to show it for a limited time
 
-::
+.. code-block:: python
 
-    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=QgsMessageBar.CRITICAL, duration=3)
+    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=Qgis.Critical, duration=3)
 
 
 .. figure:: img/errorbar-timed.png
@@ -47,7 +47,12 @@ You can set a duration to show it for a limited time
 
 The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
-``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively.
+``Qgis.MessageLevel``. You can use up to 4 different levels:
+
+0. Info
+1. Warning
+2. Critical
+3. Success
 
 .. figure:: img/infobar.png
    :align: center
@@ -58,7 +63,7 @@ to creating warning messages or info messages, using the
 Widgets can be added to the message bar, like for instance a button to show
 more info
 
-::
+.. code-block:: python
 
     def showError():
         pass
@@ -68,7 +73,7 @@ more info
     button.setText("Show Me")
     button.pressed.connect(showError)
     widget.layout().addWidget(button)
-    iface.messageBar().pushWidget(widget, QgsMessageBar.WARNING)
+    iface.messageBar().pushWidget(widget, Qgis.Warning)
 
 
 .. figure:: img/bar-button.png
@@ -80,7 +85,7 @@ more info
 You can even use a message bar in your own dialog so you don't have to show a
 message box, or if it doesn't make sense to show it in the main QGIS window
 
-::
+.. code-block:: python
 
     class MyDialog(QDialog):
         def __init__(self):
@@ -95,7 +100,10 @@ message box, or if it doesn't make sense to show it in the main QGIS window
             self.layout().addWidget(self.bar, 0, 0, 1, 1)
 
         def run(self):
-            self.bar.pushMessage("Hello", "World", level=QgsMessageBar.INFO)
+            self.bar.pushMessage("Hello", "World", level=Qgis.Info)
+
+    myDlg = MyDialog()
+    myDlg.show()
 
 .. figure:: img/dialog-with-bar.png
    :align: center
@@ -110,17 +118,17 @@ Showing progress
 Progress bars can also be put in the QGIS message bar, since, as we have seen,
 it accepts widgets. Here is an example that you can try in the console.
 
-::
+.. code-block:: python
 
     import time
-    from PyQt4.QtGui import QProgressBar
-    from PyQt4.QtCore import *
+    from qgis.PyQt.QtGui import QProgressBar
+    from qgis.PyQt.QtCore import *
     progressMessageBar = iface.messageBar().createMessage("Doing something boring...")
     progress = QProgressBar()
     progress.setMaximum(10)
     progress.setAlignment(Qt.AlignLeft|Qt.AlignVCenter)
     progressMessageBar.layout().addWidget(progress)
-    iface.messageBar().pushWidget(progressMessageBar, iface.messageBar().INFO)
+    iface.messageBar().pushWidget(progressMessageBar, Qgis.Info)
     for i in range(10):
         time.sleep(1)
         progress.setValue(i + 1)
@@ -129,7 +137,7 @@ it accepts widgets. Here is an example that you can try in the console.
 Also, you can use the built-in status bar to report progress, as in the next
 example
 
-::
+.. code-block:: python
 
     count = layers.featureCount()
     for i, feature in enumerate(features):
@@ -145,9 +153,9 @@ Logging
 You can use the QGIS logging system to log all the information that you want to
 save about the execution of your code.
 
-::
+.. code-block:: python
 
     # You can optionally pass a 'tag' and a 'level' parameters
-    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', QgsMessageLog.INFO)
-    QgsMessageLog.logMessage("Your plugin code might have some problems", level=QgsMessageLog.WARNING)
-    QgsMessageLog.logMessage("Your plugin code has crashed!", level=QgsMessageLog.CRITICAL)
+    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
+    QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
+    QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)

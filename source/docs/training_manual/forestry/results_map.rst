@@ -55,15 +55,15 @@ is using the :kbd:`Hard light` mode for the :guilabel:`Layer blending mode`. Not
 Try with different modes and see the differences in your map. Then choose the one you like better for your final map.
 
 
-|basic| |TY| Using a Composer Template to Create the Map result
+|basic| |TY| Using a Layout Template to Create the Map result
 -------------------------------------------------------------------------------
 
-Use a template prepared in advanced to present the results. The template :kbd:`forest_map.qpt` is located in the :kbd:`exercise_data\\forestry\\results\\` folder. Load it using the :menuselection:`Project --> Composer Manager...` dialog.
+Use a template prepared in advanced to present the results. The template :kbd:`forest_map.qpt` is located in the :kbd:`exercise_data\\forestry\\results\\` folder. Load it using the :menuselection:`Project --> Layout Manager...` dialog.
 
 .. image:: img/final_map_template.png
    :align: center
 
-Open the map composer and edit the final map to get a result you are happy with.
+Open the print layout and edit the final map to get a result you are happy with.
 
 The map template you are using will give a map similar to this one:
 
