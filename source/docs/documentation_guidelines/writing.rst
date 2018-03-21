@@ -508,18 +508,18 @@ Documenting Processing algorithms
 If you want to write documentation for Processing algorithms consider these
 guidelines:
 
-* Processing algorithm help files are part of QGIS User Guide, so use same
+* Processing algorithm help files are part of QGIS User Guide, so use the same
   formatting as User Guide and other documentation.
 
-* each algorithm documentation should be placed in the corresponding **provider**
-  folder and **group** file: e.g. the algorithm `Voronoi polygon` belongs to `QGIS`
-  provider and to the group `vectorgeometry`. So the correct file to add the
-  description is: ``source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst``.
+* Each algorithm documentation should be placed in the corresponding **provider**
+  folder and **group** file, e.g. the algorithm `Voronoi polygon` belongs to the
+  `QGIS` provider and to the group `vectorgeometry`. So the correct file to add
+  the description is: ``source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst``.
 
   .. note:: before starting to write the guide, check if the algorithm is already
-    described: in this case you can enhance the existing description.
+    described. In this case, you can enhance the existing description.
 
-* it is **extremely** important that each algorithm has an *anchor* that corresponds
+* It is **extremely** important that each algorithm has an *anchor* that corresponds
   to the provider name + the unique name of the algorithm itself. This allows the
   Help button to open the Help page to the correct section. The anchor should be
   placed **above** the title, e.g. (see also the :ref:`my_anchor` section)::
@@ -532,44 +532,49 @@ guidelines:
   To find out the algorithm name you can just hover the mouse on the algorithm in
   the Processing toolbox.
 
-* avoid use "This algorithm does this and that..." as first sentence in algorithm
+* Avoid use "This algorithm does this and that..." as first sentence in algorithm
   description. Try to use more general words like in TauDEM or GRASS algorithms
   help
 
-* add images! A picture is worth a thousand words! Use PNG format and follow general
+* Avoid to describe what the algorithm does by replicating its name and please
+  don't replicate the name of the parameter in the description of the parameter
+  itself. For example if the algorithm is ``Voronoi polygon`` consider to describe
+  the ``Input layer`` like ``Layer to calculate the polygon from``.
+
+* Add images! A picture is worth a thousand words! Use PNG format and follow general
   guidelines for documentation (see the :ref:`image` section for more info).
-  Put the picture in the correct folder: it depends on the provider, e.g. for QGIS::
+  Put the file in the correct folder: it depends on the provider, e.g. for QGIS::
 
     /source/docs/user_manual/processing_algs/qgis/img/myPicture.png
 
-* if necessary add links to additional information (e.g. publications or web-pages)
-  to the "See also" section. Only add the "See also" section if there is really
-  something to see. As a good practice, the "See also" section can be filled
-  with links to similar algorithms.
+* If necessary, add links to the "See also" section that provides additional information
+  about the algorithm  (e.g., publications or web-pages).  Only add the "See also"
+  section if there is really something to see. As a good practice, the "See also"
+  section can be filled with links to similar algorithms.
 
-* give clear explanation for algorithm parameters and outputs (again GRASS and
+* Give clear explanation for algorithm parameters and outputs (again GRASS and
   TauDEM are good examples).
 
-* avoid to duplicate algorithm options detailed description: choose whether to
-  describe it in the algorithm description or in the parameter description.
+* Avoid to duplicate algorithm options detailed description. Add these information
+  in the parameter description.
 
-* don't add information vector geometry type in algorithm or parameter description
-  without compelling reason as this information is already available in parameter
-  description
+* Avoid to add information about the vector geometry type in algorithm or parameter
+  description without compelling reason as this information is already available
+  in parameter description.
 
-* add the default value if the parameter in *italic*, e.g.::
+* Add the default value if the parameter in *italic*, e.g.::
 
     ``Number of points`` [number]
       Number of point to create
 
       Default: *1*
 
-* it should be also described the *type* of the parameters. There several types
+* It should be also described the *type* of the parameters. There are several types
   available but avoid to invent new ones and pick one of these:
 
-  ========================================  ===============
+  ========================================  ====================
   Parameter/Output type                     Description
-  ========================================  ===============
+  ========================================  ====================
   Point vector                              vector: point
   Line vector                               vector: line
   Polygon vector                            vector: polygon
@@ -579,10 +584,10 @@ guidelines:
   Vector field generic                      tablefield: any
   Raster layer                              raster
   Raster band                               raster band
-  HTML file                                 html
+  HTML file                                 HTML
   Table layer                               table
   Extent                                    extent
-  CRS                                       projection
+  CRS                                       crs
   Combobox                                  selection
   Multiple selection                        multipleinput
   Number                                    number
@@ -590,7 +595,7 @@ guidelines:
   Boolean                                   boolean
   Fields and values (Refactor Fields)       fieldsmapping
   Values and operators (Raster Calculator)  calculator
-  ========================================  ===============
+  ========================================  ====================
 
 * the best option is studying an existing and well documented algorithm and copy
   all the useful layouts
