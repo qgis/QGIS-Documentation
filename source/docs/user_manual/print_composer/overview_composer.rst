@@ -179,7 +179,7 @@ the number of features.
 
 In the upper part of the print layout window, you can find menus and other
 toolbars. All print layout tools are available in menus and as icons in a
-toolbar. See a list of tools in table_layout_tools_.
+toolbar.
 
 The toolbars and the panels can be switched off and on using the right mouse
 button over any toolbar or through :menuselection:`View --> Toolbars` or
@@ -194,67 +194,157 @@ button over any toolbar or through :menuselection:`View --> Toolbars` or
 Tools
 -----
 
+Layout menu
+...........
+
 .. _table_layout_tools:
+
+
+================================================= ========================== ========================== =====================================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== =====================================
+ |fileSave| :guilabel:`Save Project`               :kbd:`Ctrl+S`              :guilabel:`Layout`
+ |newLayout| :guilabel:`New Layout`                :kbd:`Ctrl+N`              :guilabel:`Layout`
+ |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`
+ |deleteSelected| :guilabel:`Delete Layout`
+ |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
+ :menuselection:`Layouts —>`
+ :guilabel:`Layout Properties...`                                                                        :ref:`layout_tab`
+ :guilabel:`Rename Layout...`
+ |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`
+ |fileOpen| :guilabel:`Add Items from Template`
+ |fileSaveAs| :guilabel:`Save as Template...`
+ |saveMapAsImage| :guilabel:`Export as Image...`                              :guilabel:`Layout`         :ref:`export_layout_image`
+ |saveAsSVG| :guilabel:`Export as SVG...`                                     :guilabel:`Layout`         :ref:`export_layout_svg`
+ |saveAsPDF| :guilabel:`Export as PDF...`                                     :guilabel:`Layout`         :ref:`export_layout_pdf`
+ :guilabel:`Page Setup...`                         :kbd:`Ctrl+Shift+P`
+ |filePrint| :guilabel:`Print...`                  :kbd:`Ctrl+P`              :guilabel:`Layout`         :ref:`create-output`
+ :guilabel:`Close`                                 :kbd:`Ctrl+Q`
+================================================= ========================== ========================== =====================================
+
+Edit menu
+.........
+
+================================================= ========================== ========================== =====================================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== =====================================
+ |undo| :guilabel:`Undo (last change)`             :kbd:`Ctrl+Z`              :guilabel:`Layout`         :ref:`layout_undo_panel`
+ |redo| :guilabel:`Redo (last reverted change)`    :kbd:`Ctrl+Y`              :guilabel:`Layout`         :ref:`layout_undo_panel`
+ |deleteSelected| :guilabel:`Delete`               :kbd:`Del`
+ |editCut| :guilabel:`Cut`                         :kbd:`Ctrl+X`
+ |editCopy| :guilabel:`Copy`                       :kbd:`Ctrl+C`
+ |editPaste| :guilabel:`Paste`                     :kbd:`Ctrl+V`
+ :guilabel:`Paste in place`                        :kbd:`Ctrl+Shift+V`
+ |selectAll| :guilabel:`Select All`                :kbd:`Ctrl+A`
+ |deselectAll| :guilabel:`Deselect all`            :kbd:`Ctrl+Shift+A`
+ |invertSelection| :guilabel:`Invert Selection`
+ :guilabel:`Select Next Item Below`                :kbd:`Ctrl+Alt+[`
+ :guilabel:`Select Next Item above`                :kbd:`Ctrl+Alt+]`
+ |pan| :guilabel:`Pan Layout`                      :kbd:`P`                   :guilabel:`Toolbox`
+ |zoomToArea| :guilabel:`Zoom`                     :kbd:`Z`                   :guilabel:`Toolbox`
+ |select| :guilabel:`Select/Move Item`             :kbd:`V`                   :guilabel:`Toolbox`
+ |moveItemContent| :guilabel:`Move Content`        :kbd:`C`                   :guilabel:`Toolbox`
+ |editNodesShape| :guilabel:`Edit Nodes Item`                                 :guilabel:`Toolbox`
+================================================= ========================== ========================== =====================================
+
+
+View menu
+.........
+
+================================================= ========================== ========================== =====================================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== =====================================
+ |draw| :guilabel:`Refresh`                        :kbd:`F5`                  :guilabel:`Navigation`
+ :menuselection:`Preview -->`
+ |zoomIn| :guilabel:`Zoom In`                      :kbd:`Ctrl++`              :guilabel:`Navigation`
+ |zoomOut| :guilabel:`Zoom Out`                    :kbd:`Ctrl+-`              :guilabel:`Navigation`
+ |zoomActual| :guilabel:`Zoom to 100%`             :kbd:`Ctrl+1`              :guilabel:`Navigation`
+ |zoomFullExtent| :guilabel:`Zoom Full`            :kbd:`Ctrl+0`              :guilabel:`Navigation`
+ :guilabel:`Zoom to Width`
+ |vectorGrid| :guilabel:`Show Grid`                :kbd:`Ctrl+'`                                         :ref:`grid_guides`
+ |unchecked| :guilabel:`Snap to Grid`              :kbd:`Ctrl+Shift+'`                                   :ref:`grid_guides`
+ |checkbox| :guilabel:`Show Guides`                :kbd:`Ctrl+;`                                         :ref:`grid_guides`
+ |checkbox| :guilabel:`Snap to Guides`             :kbd:`Ctrl+Shift+;`                                   :ref:`grid_guides`
+ |checkbox| :guilabel:`Smart Guides`               :kbd:`Ctrl+Alt+;`
+ :guilabel:`Manage Guides...`
+ :guilabel:`Clear Guides`
+ |checkbox| :guilabel:`Show Rulers`                :kbd:`Ctrl+R`
+ |checkbox| :guilabel:`Show Bounding Boxes`        :kbd:`Ctrl+Shift+B`
+ |checkbox| :guilabel:`Show Pages`
+ :menuselection:`Toolbars -->`
+ :menuselection:`Panels -->`
+ |unchecked| :guilabel:`Toggle Full Screen`        :kbd:`F11`
+ |unchecked| :guilabel:`Toggle Panel Visibility`   :kbd:`Ctrl+Tab`
+================================================= ========================== ========================== =====================================
+
+Items menu
+..........
+
+
+================================================= ========================== ==========================
+ Tool                                              Shortcut                   Toolbar
+================================================= ========================== ==========================
+ |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`
+ |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`
+ |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`
+ |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`
+ |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`
+ |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`
+ |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`
+ |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`
+ :menuselection:`Align Items -->`                                             :guilabel:`Actions`
+ :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`
+ :menuselection:`Resize -->`                                                  :guilabel:`Actions`
+================================================= ========================== ==========================
+
+Add Item menu
+.............
+
+================================================= ========================== =====================================
+ Tool                                              Toolbar                    Reference
+================================================= ========================== =====================================
+ |addMap| :guilabel:`Add Map`                      :guilabel:`Toolbox`        :ref:`layout_map_item`
+ |addImage| :guilabel:`Add Picture`                :guilabel:`Toolbox`        :ref:`layout_picture_item`
+ |label| :guilabel:`Add Label`                     :guilabel:`Toolbox`        :ref:`layout_label_item`
+ |addLegend| :guilabel:`Add Legend`                :guilabel:`Toolbox`        :ref:`layout_legend_item`
+ |scaleBar| :guilabel:`Add Scale Bar`              :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
+ |addBasicShape| :menuselection:`Add Shape -->`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addArrow| :guilabel:`Add Arrow`                  :guilabel:`Toolbox`        :ref:`layout_arrow_item`
+ |addNodesShape| :guilabel:`Add Node Item -->`     :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+ |addHtml| :guilabel:`Add HTML`                    :guilabel:`Toolbox`        :ref:`layout_html_item`
+ |openTable| :guilabel:`Add Attribute Table`       :guilabel:`Toolbox`        :ref:`layout_table_item`
+================================================= ========================== =====================================
+
+
+Atlas menu
+..........
+
+======================================================== ========================== ========================== =====================================
+ Tool                                                     Shortcut                   Toolbar                    Reference
+======================================================== ========================== ========================== =====================================
+ |atlas| :guilabel:`Preview Atlas`                        :kbd:`Ctrl+ALt+/`          :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasFirst| :guilabel:`First Feature`                   :kbd:`Ctrl+<`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasPrev| :guilabel:`Previous Feature`                 :kbd:`Ctrl+,`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasNext| :guilabel:`Next Feature`                     :kbd:`Ctrl+.`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasLast| :guilabel:`Last feature`                     :kbd:`Ctrl+>`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |filePrint| :guilabel:`Print Atlas...`                                              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |saveMapAsImage| :guilabel:`Export Atlas as Images...`                              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |saveAsSVG| :guilabel:`Export Atlas as SVG...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
+ |saveAsPDF| :guilabel:`Export Atlas as PDF...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasSettings| :guilabel:`Atlas Settings`                                          :guilabel:`Atlas`          :ref:`atlas_generation`
+======================================================== ========================== ========================== =====================================
+
 
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | Icon                  | Purpose                               | Icon                | Purpose                                  |
 +=======================+=======================================+=====================+==========================================+
-| |fileSave|            | Save Project                          | |newLayout|         | New Layout                               |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |duplicateLayout|     | Duplicate Layout                      | |layoutManager|     | Layout Manager                           |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |fileOpen|            | Load from template                    | |fileSaveAs|        | Save as template                         |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |filePrint|           | Print or export as PostScript         | |saveMapAsImage|    | Export to an image format                |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |saveAsSVG|           | Export print composition to SVG       | |saveAsPDF|         | Export as PDF                            |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |undo|                | Revert last change                    | |redo|              | Restore last change                      |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |zoomFullExtent|      | Zoom to full extent                   | |zoomActual|        | Zoom to 100%                             |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |zoomIn|              | Zoom in                               | |zoomIn|            | Zoom out                                 |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |draw|                | Refresh View                          |                     |                                          |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |pan|                 | Pan                                   | |zoomToArea|        | Zoom to specific region                  |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |select|              | Select/Move item in print composition | |moveItemContent|   | Move content within an item              |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |addMap|              | Add new map from QGIS map canvas      | |addImage|          | Add image to print composition           |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |label|               | Add label to print composition        | |addLegend|         | Add new legend to print composition      |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |scaleBar|            | Add scale bar to print composition    | |addBasicShape|     | Add basic shape to print composition     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |addArrow|            | Add arrow to print composition        | |openTable|         | Add attribute table to print composition |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |addHtml|             | Add an HTML frame                     | |addNodesShape|     | Add nodes shape to print composition     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |editNodesShape|      | Edit a nodes shape                    |                     |                                          |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |groupItems|          | Group items of print composition      | |ungroupItems|      | Ungroup items of print composition       |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |locked|              | Lock Selected Items                   | |unlocked|          | Unlock All items                         |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |raiseItems|          | Raise selected items                  | |lowerItems|        | Lower selected items                     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |moveItemsToTop|      | Move selected items to top            | |moveItemsToBottom| | Move selected items to bottom            |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | |alignLeft|           | Align selected items left             | |alignRight|        | Align selected items right               |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | |alignHCenter|        | Align selected items center           | |alignVCenter|      | Align selected items center vertical     |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
 | |alignTop|            | Align selected items top              | |alignBottom|       | Align selected items bottom              |
 +-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |atlas|               | Preview Atlas                         | |atlasFirst|        | First Feature                            |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |atlasPrev|           | Previous Feature                      |  |atlasNext|        | Next Feature                             |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |atlasLast|           | Last feature                          |  |filePrint|        | Print Atlas                              |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |saveMapAsImage|      | Export Atlas as Image                 |  |atlasSettings|    | Atlas Settings                           |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
+
 
 Table Layout 1: Print Layout Tools
 
@@ -594,11 +684,21 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.3em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
@@ -609,6 +709,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
@@ -625,6 +727,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
@@ -644,6 +748,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
@@ -659,6 +765,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
