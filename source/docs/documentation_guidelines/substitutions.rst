@@ -79,6 +79,7 @@ Manage Layers and overview
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
+|dataSourceManager|             ``|dataSourceManager|``             \                               \
 |addOgrLayer|                   ``|addOgrLayer|``                   |addDb2Layer|                   ``|addDb2Layer|``
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
 |addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
@@ -293,6 +294,7 @@ Icon                     Substitution                 Icon                     S
 =======================  ===========================  =======================  ===========================
 |newLayout|              ``|newLayout|``              |layoutManager|          ``|layoutManager|``
 |duplicateLayout|        ``|duplicateLayout|``        \                        \
+|newReport|              ``|newReport|``              |newPage|                ``|newPage|``
 |atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
@@ -387,7 +389,7 @@ Standard provided with basic install, but not loaded with initial install
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |showPluginManager|             ``|showPluginManager|``             |pluginInstaller|               ``|pluginInstaller|``
-|installPluginFromZip|          ``|installPluginFromZip|``          \                               \
+|installPluginFromZip|          ``|installPluginFromZip|``          |pythonFile|                    ``|pythonFile|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |delimitedText|                 ``|delimitedText|``                 \                               \
@@ -599,6 +601,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |defineProjection| image:: /static/common/define_projection.png
@@ -631,7 +635,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |duplicateLayout| image:: /static/common/mActionDuplicateComposer.png
+.. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
 .. |dxf2shpConverter| image:: /static/common/dxf2shp_converter.png
    :width: 1.5em
@@ -794,7 +798,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |layerExtent| image:: /static/common/layer_extent.png
    :width: 1.5em
-.. |layoutManager| image:: /static/common/mActionComposerManager.png
+.. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.5em
@@ -854,9 +858,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
-.. |newLayout| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
+   :width: 1.5em
+.. |newReport| image:: /static/common/mActionNewReport.png
    :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
@@ -949,6 +957,8 @@ Icon                            Substitution                        Icon        
 .. |propertiesWidget| image:: /static/common/mActionPropertiesWidget.png
    :width: 1.5em
 .. |propertyItem| image:: /static/common/mActionPropertyItem.png
+   :width: 1.5em
+.. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
