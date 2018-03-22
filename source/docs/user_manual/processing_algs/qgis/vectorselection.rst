@@ -42,6 +42,9 @@ Parameters
   * ``<=``
   * ``begins with``
   * ``contains``
+  * ``is null``
+  * ``is not null``
+  * ``does not contain``
 
   Default: ``=``
 

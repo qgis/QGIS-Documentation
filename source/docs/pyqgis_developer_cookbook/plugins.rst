@@ -264,9 +264,9 @@ This is where the magic happens and this is how magic looks like:
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
   from qgis.core import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   # initialize Qt resources from file resources.py
   import resources

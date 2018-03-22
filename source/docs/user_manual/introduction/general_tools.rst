@@ -716,12 +716,6 @@ checkbox in :menuselection:`Settings --> Options --> General` menu.
 When checked, the color dialog used is the one of the OS being used. Otherwise,
 QGIS custom color chooser is used.
 
-.. tip:: **Dynamically change the color with the live-updating option**
-
-   Check the :guilabel:`Use live-updating color chooser dialogs` option in
-   the :menuselection:`Settings --> Options --> General` menu to have the
-   color applied to your items as soon as you pick it in the color chooser dialog.
- 
 The custom color chooser dialog has four different tabs which allow you to
 select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
 |colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`

@@ -231,12 +231,11 @@ objects and may be slow on large data-sets.
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -267,12 +266,11 @@ Same thing but using :func:`dijkstra` method
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -329,12 +327,11 @@ uses method :func:`shortestTree`
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -381,12 +378,11 @@ And here is the same sample but using :func:`dijkstra` method
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -455,12 +451,11 @@ Here is an example
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)

@@ -117,8 +117,9 @@ are activated using :func:`setMapTool` method.
 .. code-block:: python
 
   from qgis.gui import *
-  from PyQt5.QtGui import QAction, QMainWindow
-  from PyQt5.QtCore import Signal, Qt
+  from qgis.PyQt.QtGui import QAction
+  from qgis.PyQt.QtCore import SIGNAL, Qt, QString
+  from qgis.PyQt.QtWidgets import QMainWindow
 
   class MyWnd(QMainWindow):
       def __init__(self, layer):

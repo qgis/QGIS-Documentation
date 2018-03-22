@@ -1880,16 +1880,18 @@ See :ref:`data_defined_labeling` for more information.
 Source Fields Properties
 ========================
 
-|sourceFields| The :guilabel:`Source Fields` tab helps you organize the fields of
-the selected dataset and the way you can interact with
-the feature's attributes. The buttons |newAttribute|
-:sup:`New field` and |deleteAttribute| :sup:`Delete field`
-can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
+|sourceFields| The :guilabel:`Source Fields` tab provides information on
+fields related to the layer and helps you organize them.
 
-You can rename fields by double-clicking in the fields name (note that you
-should switch to editing mode to edit the field name). This is only supported
+
+The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
+:sup:`Toggle editing mode`. At this moment, you can modify its structure using
+the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
+buttons.
+
+You can also rename fields by double-clicking its name. This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
-depending the OGR data format and version.
+depending on the OGR data format and version.
 
 You can define some alias to display human readable fields in the feature form
 or the attribute table. In this case, you don't need to switch to editing mode.
@@ -1900,7 +1902,12 @@ you are using a PostgreSQL layer, comment of the column could be the one in
 the PostgreSQL table if set. Comments are saved in the QGIS project file as for
 the alias.
 
-The dialog also lists read-only characteristics of the field such as
+Other than the fields contained in the dataset, the :guilabel:`Source Fields`
+tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
+<vector_relations>`. And depending on the origin of the field, a different
+background color is applied to it.
+
+For each listed field, the dialog also lists read-only characteristics such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
 layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
 
@@ -2809,7 +2816,7 @@ layer-level variable from the list and click the |signMinus| button to remove
 it.
 
 More information on variables usage in the General Tools
-:ref:`general_tools_variables` sectionf.
+:ref:`general_tools_variables` section.
 
 
 .. index:: Metadata, Metadata editor, Keyword
