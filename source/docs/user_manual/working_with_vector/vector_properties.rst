@@ -1973,16 +1973,34 @@ properties you can set to control whether and how a field can be edited:
     combining any of those values i.e using an expression like ``concat(field1, field2)``
     may not work.
 
-* **Constraints**: you can constrain the value to insert in the field. This constraint
-  can be:
+Constraints
+^^^^^^^^^^^
 
-  * |checkbox| :guilabel:`Not null`: force the user to provide a value
-  * based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
-    that the value of the field *col0* has only alphabetical letter.
+You can constrain the value to insert in the field. This constraint can be:
 
-    A short description of the constraint can be added and will be displayed at
-    the top of the form as a warning message when the value supplied does not
-    match the constraint.
+* |checkbox| :guilabel:`Not null`: requires the user to provide a value;
+* |checkbox| :guilabel:`Unique`: guarantee the inserted value to be unique
+  throughout the field;
+* based on a custom :guilabel:`expression`: e.g. ``regexp_match(col0,'A-Za-z')``
+  to ensure that the value of the field *col0* has only alphabetical letter.
+  A short description can be added to help you remember the constraint.
+
+Whenever a value is added or edited in a field, it's submitted to the existing
+constraints and:
+
+* if it meets all the requirements, a green check is shown beside the field
+  in the form;
+* if it does not meet all the requirements, then a yellow or red cross is
+  displayed near the field. You can hover over the cross to remind which
+  constraints are applied to the field and fix the value:
+  
+  * A yellow cross appears when the unmet constraint is an unenforced one
+    and it does not prevent you to save the changes with the "wrong"
+    values;
+  * A red cross can not be ignored and does not allow you to save your
+    modifications until they meet the constraints. It appears when the
+    |checkbox| :guilabel:`Enforce constraint` option is checked.
+
 
 .. _edit_widgets:
 
