@@ -335,17 +335,6 @@ Atlas menu
 ======================================================== ========================== ========================== =====================================
 
 
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| Icon                  | Purpose                               | Icon                | Purpose                                  |
-+=======================+=======================================+=====================+==========================================+
-| |alignLeft|           | Align selected items left             | |alignRight|        | Align selected items right               |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |alignHCenter|        | Align selected items center           | |alignVCenter|      | Align selected items center vertical     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |alignTop|            | Align selected items top              | |alignBottom|       | Align selected items bottom              |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-
-
 Table Layout 1: Print Layout Tools
 
 Layout Menu
@@ -655,18 +644,6 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
-   :width: 1.5em
-.. |alignBottom| image:: /static/common/mActionAlignBottom.png
-   :width: 1.5em
-.. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
-   :width: 1.5em
-.. |alignLeft| image:: /static/common/mActionAlignLeft.png
-   :width: 1.5em
-.. |alignRight| image:: /static/common/mActionAlignRight.png
-   :width: 1.5em
-.. |alignTop| image:: /static/common/mActionAlignTop.png
-   :width: 1.5em
-.. |alignVCenter| image:: /static/common/mActionAlignVCenter.png
    :width: 1.5em
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
