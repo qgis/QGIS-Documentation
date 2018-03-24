@@ -2,7 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: Map item
+.. index:: Layout; Map item
+.. _layout_map_item:
 
 The Map Item
 =============

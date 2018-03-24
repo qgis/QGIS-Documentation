@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-.. index::
-   single: Scalebar; Map scalebar
+.. index:: Layout; Scale bar, Map scalebar
+.. _layout_scalebar_item:
 
 The Scale Bar Item
 ==================

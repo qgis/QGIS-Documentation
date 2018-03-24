@@ -2,10 +2,11 @@
 
    |updatedisclaimer|
 
-.. _image_item:
+.. index:: Image, Picture, Layout; Image item, Layout; North arrow
+.. _layout_picture_item:
 
-The Image Item
-===============
+The Picture Item
+================
 
 To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle
 onto the layout canvas with the left mouse button. You can then position and

@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Attribute table
-
+.. _layout_table_item:
 
 The Attribute Table Item
 ========================

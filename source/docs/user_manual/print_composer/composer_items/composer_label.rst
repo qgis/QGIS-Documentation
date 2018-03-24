@@ -2,6 +2,9 @@
 
    |updatedisclaimer|
 
+.. index:: Layout; Label item
+.. _layout_label_item:
+
 The Label Item
 ===============
 

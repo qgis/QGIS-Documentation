@@ -70,7 +70,7 @@ legend, scale bar, shapes, label, image...) of each page of the composition:
   include EVERYTHING on the composition. The page can then be reduced or
   extended to all items depending on their position (on, above, below, left or
   right of the page).
-* In case of a multi-page composition, each page will be resized to include
+* In case of a multi-page layout, each page will be resized to include
   items in its area (left and right sides for all pages, plus top for the first page
   and bottom for the last page). Each resized page is exported to a separate file.
 
@@ -86,13 +86,12 @@ the cropped bounds.
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
-:ref:`layout_composition_tab`.
+:ref:`layout_tab`.
 
 If the output format is a TIFF format, all you need to do is making sure to
-select the correct map item to use in |selectString|
-:guilabel:`Reference map`, and the output will always be a GeoTIFF. For other
-image formats, you also need to check the |checkbox| :guilabel:`Save world
-file` option.
+select the correct map item to use in |selectString| :guilabel:`Reference
+map`, and the output will always be a GeoTIFF. For other image formats,
+you also need to check the |checkbox| :guilabel:`Save world file` option.
 With this option, the 'Export as image' action will create a world file along
 with the exported image.
 
@@ -112,8 +111,9 @@ can apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`
 
 The SVG export options dialog also allows to:
 
-* :guilabel:`export map layers as svg groups`:
-* render map labels as outlines
+* :guilabel:`Export map layers as SVG groups`: may affect label placement;
+* :guilabel:`Render map labels as outlines`;
+* :guilabel:`Always export as vectors`.
 
 .. _figure_layout_output_svg:
 
@@ -136,16 +136,16 @@ Export as PDF
 The |saveAsPDF| :sup:`Export as PDF` exports all the composition into a
 single PDF file.
 
-If you applied to your composition or any shown layer an advanced effect such as
+If you applied to your layout or any shown layer an advanced effect such as
 blend modes, transparency or symbol effects, these cannot be printed
-as vectors, and the effects may be lost. Checking :guilabel:`Print as a
-raster` in the :ref:`layout_composition_tab` helps to keep the effects but
+as vectors, and the effects may be lost. Checking :guilabel:`Print as
+raster` in the :ref:`layout_tab` helps to keep the effects but
 rasterize the composition. Note that the :guilabel:`Force layer to render as
 raster` in the Rendering tab of Layer Properties dialog is a layer-level
 alternative that avoids global composition rasterization.
 
 If you need to export your layout as a **georeferenced PDF**, in the
-:ref:`layout_composition_tab`, make sure to select the correct map item to
+:ref:`layout_tab`, make sure you select the correct map item to
 use in |selectString| :guilabel:`Reference map`.
 
 
@@ -324,8 +324,8 @@ This is just one example of how you can use the Data Defined Override option.
 
 .. _atlas_preview:
 
-Preview and generate
---------------------
+Preview and generate an atlas
+-----------------------------
 
 .. _figure_layout_atlas_preview:
 
@@ -352,11 +352,11 @@ atlas :guilabel:`Page name` option.
 
 As for simple compositions, an atlas can be generated in different ways (see
 :ref:`create-output` for more information). Instead of :menuselection:`Layout`
-menu, rather use tools from :menuselection:`Atlas` menu or Atlas toolbar.
+menu, rather use tools from :menuselection:`Atlas` menu or toolbar.
 
 This means that you can directly print your compositions with :menuselection:`Atlas --> Print Atlas`.
 You can also create a PDF using :menuselection:`Atlas --> Export Atlas as PDF...`:
-The user will be asked for a directory to save all the generated PDF files,
+You will be asked for a directory to save all the generated PDF files,
 except if the |checkbox| :guilabel:`Single file export when possible` has been
 selected. In that case, you'll be prompted to give a filename.
 
