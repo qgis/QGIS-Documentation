@@ -668,7 +668,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
-.. |layoutManager| image:: /static/common/mActionComposerManager.png
+.. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |management| image:: /static/common/management.png
    :width: 1.5em
@@ -686,7 +686,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
-.. |newLayout| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em

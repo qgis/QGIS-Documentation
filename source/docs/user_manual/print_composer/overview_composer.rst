@@ -595,7 +595,7 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :ltrim:
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |duplicateLayout| image:: /static/common/mActionDuplicateComposer.png
+.. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
@@ -611,7 +611,7 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
-.. |layoutManager| image:: /static/common/mActionComposerManager.png
+.. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
@@ -623,7 +623,7 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
-.. |newLayout| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em

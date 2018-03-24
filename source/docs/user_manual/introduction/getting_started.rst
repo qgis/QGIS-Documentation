@@ -472,7 +472,6 @@ Here is a sampling of other ways to produce output files:
   print the current map canvas (see section :ref:`label_printlayout`).
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -493,7 +492,7 @@ Here is a sampling of other ways to produce output files:
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
-.. |newLayout| image:: /static/common/mActionNewComposer.png
+.. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
