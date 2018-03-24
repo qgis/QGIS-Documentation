@@ -3,6 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Legend item, Map legend
+.. _layout_legend_item:
 
 The Legend Item
 ================

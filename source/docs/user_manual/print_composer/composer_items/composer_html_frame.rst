@@ -3,6 +3,7 @@
    |updatedisclaimer|
 
 .. index:: HTML frame
+.. _layout_html_item:
 
 The HTML Frame Item
 ====================

@@ -145,16 +145,16 @@ any elements are added.
 
 
 On the right beside the canvas you find two set of panels. The upper one holds
-the panels :guilabel:`Items` and :guilabel:`Command History` and the lower holds
-the panels :guilabel:`Composition`, :guilabel:`Item properties`
+the panels :guilabel:`Items` and :guilabel:`Undo History` and the lower holds
+the panels :guilabel:`Layout`, :guilabel:`Item properties`
 and :guilabel:`Atlas generation`.
 
 * The :guilabel:`Items` panel provides a list of all the print layout items added to
   the canvas.
-* The :guilabel:`Command history` panel displays a history of all changes applied
+* The :guilabel:`Undo history` panel displays a history of all changes applied
   to the layout. With a mouse click, it is possible to undo and
   redo layout steps back and forth to a certain status.
-* The :guilabel:`Composition` panel allows you to set paper size, orientation, the
+* The :guilabel:`Layout` panel allows you to set paper size, orientation, the
   page background, number of pages and print quality for the output file in dpi.
   Furthermore, you can also activate the |checkbox| :guilabel:`Print as raster`
   checkbox. This means all items will be converted to raster before printing or
@@ -271,8 +271,8 @@ The :menuselection:`Layout` menu also provides actions to:
 * Open the |layoutManager| :guilabel:`Layout Manager...`
 * :menuselection:`Layouts -->` : Open an existing print layout
 
-Once the layout is designed, with |fileSaveAs| :guilabel:`Save as template`
-and |fileOpen| :guilabel:`Add items from template` icons, you can save
+Once the layout is designed, with |fileSaveAs| :guilabel:`Save as Template`
+and |fileOpen| :guilabel:`Add Items from Template` icons, you can save
 the current state of a print layout session as a :file:`.qpt` template
 and load its item again in another session.
 
@@ -370,12 +370,12 @@ To maximise the space available to interact with a composition you can use
    interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox|
    :guilabel:`Toggle full screen`.
 
-.. _layout_composition_tab:
+.. _layout_tab:
 
-Composition Panel
+Layout Panel
 -----------------
 
-In the :guilabel:`Composition` panel, you can define the global settings of the
+In the :guilabel:`Layout` panel, you can define the global settings of the
 current composition.
 
 .. _figure_composition:
@@ -383,18 +383,18 @@ current composition.
 .. figure:: img/composition_settings.png
    :align: center
 
-   Composition Settings in the Print Layout
+   Layout Settings in the Print Layout
 
 General settings
 ................
 
-Composition can be divided into several pages. For instance, a first page can show
+A layout can be divided into several pages. For instance, a first page can show
 a map canvas, and a second page can show the attribute table associated with a
 layer, while a third one shows an HTML frame linking to your organization website.
 Set the :guilabel:`Number of pages` to the desired value. You can also
 custom the :guilabel:`Page Background` with the color or the symbol you want.
 
-The :guilabel:`reference map` select the map item to be used as the
+The :guilabel:`Reference map` selects the map item to be used as the
 composition's master map. The layout will use this map in any
 properties and variable calculating units or scale. This includes exporting
 the composition to georeferenced formats.
@@ -475,15 +475,15 @@ Variables
 .........
 
 The :guilabel:`Variables` lists all the variables available at
-the composition's level (which includes all global and project's variables).
+the layout's level (which includes all global and project's variables).
 
-It also allows the user to manage composition-level variables. Click the
+It also allows the user to manage layout-level variables. Click the
 |signPlus| button to add a new custom composition-level variable. Likewise,
-select a custom composition-level variable from the list and click the
+select a custom layout-level variable from the list and click the
 |signMinus| button to remove it.
 
-More information on variables usage in the General Tools
-:ref:`general_tools_variables` section.
+More information on variables usage in the 
+:ref:`General Tools <general_tools_variables>` section.
 
 .. _figure_composition_variables:
 
@@ -493,8 +493,9 @@ More information on variables usage in the General Tools
    Variables Editor in the Print Layout
 
 .. index:: Revert layout actions
+.. _layout_undo_panel:
 
-Command History Panel: Revert and Restore actions
+Undo History Panel: Revert and Restore actions
 -------------------------------------------------
 
 During the layout process, it is possible to revert and restore changes.
@@ -503,7 +504,7 @@ This can be done with the revert and restore tools:
 * |undo| :sup:`Revert last change`
 * |redo| :sup:`Restore last change`
 
-This can also be done by mouse click within the :guilabel:`Command history`
+This can also be done by mouse click within the :guilabel:`Undo history`
 panel (see figure_layout_). The History panel lists the last actions done
 within the print layout.
 Just select the point you want to revert to and once you do new action all
@@ -514,7 +515,7 @@ the actions done after the selected one will be removed.
 .. figure:: img/command_hist.png
    :align: center
 
-   Command History in the Print Layout
+   Undo History in the Print Layout
 
 .. _layout_items_tab:
 

@@ -12,7 +12,7 @@ Shape Items
 
 .. index:: 
    single: Layout item; Arrow
-.. _arrow_item:
+.. _layout_arrow_item:
 
 The Arrow Item
 --------------
@@ -29,7 +29,7 @@ The arrow item can be used to add a line or a simple arrow that can be used,
 for example, to show the relation between other print layout items. To create
 a north arrow, the image item should be considered first. QGIS has a set of
 North arrows in SVG format. Furthermore you can connect an image item with a map
-so it can rotate automatically with the map (see :ref:`image_item`).
+so it can rotate automatically with the map (see :ref:`layout_picture_item`).
 
 .. _figure_layout_arrow:
 
@@ -75,7 +75,7 @@ SVG may require some tags following this :ref:`instruction <parameterized_svg>`.
 
 .. index:: 
    single: Layout item; Basic shape
-.. _basic_shape_item:
+.. _layout_basic_shape_item:
 
 The Basic Shape Items
 ---------------------
@@ -109,7 +109,7 @@ the corners.
 
 .. index:: 
    single: Layout item; Node-based shape
-.. _node_based_shape_item:
+.. _layout_node_based_shape_item:
 
 The Node-Based Shape Items
 --------------------------
