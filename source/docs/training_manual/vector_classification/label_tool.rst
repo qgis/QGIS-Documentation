@@ -241,7 +241,7 @@ on what you think seems more useful or what looks better.
 
 * Deactivate labeling for the :guilabel:`Streets` layer.
 * Reactivate labeling for the :guilabel:`Places` layer.
-* Open the attribute table for :guilabel:`Places` via the |attributes| button.
+* Open the attribute table for :guilabel:`Places` via the |openTable| button.
 
 It has one fields which is of interest to us now: :kbd:`place` which defines the
 type of urban area for each object. We can use this data to influence the label
@@ -340,8 +340,6 @@ topic for the next lesson!
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |attributes| image:: /static/common/attributes.png
-   :width: 2em
 .. |basic| image:: /static/global/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
@@ -351,6 +349,8 @@ topic for the next lesson!
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em

@@ -18,9 +18,9 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
    Coordinate Capture Plugin
 
 #. Start QGIS, select |options| :guilabel:`Project Properties` from the
-   :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, macOS) menu
+   :guilabel:`File` menu
    and click on the :guilabel:`Projection` tab. As an alternative, you can also
-   click on the |projectionEnabled| :sup:`CRS status` icon in the lower
+   click on the |crs| :sup:`CRS` icon in the lower
    right-hand corner of the status bar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select
    a projected coordinate system of your choice (see also :ref:`label_projections`).
@@ -41,6 +41,8 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
    icon.
 #. You can also copy selected coordinates to the clipboard.
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -49,11 +51,11 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
 .. |geographic| image:: /static/common/geographic.png
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
-   :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

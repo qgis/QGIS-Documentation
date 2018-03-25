@@ -23,7 +23,7 @@ roads.
 To see all the data available to you, with the :guilabel:`roads` layer
 selected in the Layers panel:
 
-* Click on this button: |attributes|
+* Click on this button: |openTable|
 
 It will show you a table with more data about the :guilabel:`roads` layer.
 This extra data is called *attribute data*. The lines that you can see on your
@@ -166,6 +166,6 @@ lesson.
 .. |WN| replace:: What's Next?
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
-.. |attributes| image:: /static/common/attributes.png
-   :width: 2em
 .. |basic| image:: /static/global/basic.png
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em

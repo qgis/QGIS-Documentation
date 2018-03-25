@@ -105,7 +105,7 @@ At the top of the Browser panel, you find some icons that help you to:
   * using a **regular expression**.
 
 * |collapseTree| :sup:`Collapse All` the whole tree;
-* |propertiesWidget| :sup:`Enable/disable properties widget`: when toggled on,
+* |metadata| :sup:`Enable/disable properties widget`: when toggled on,
   a new widget is added at the bottom of the panel showing, if applicable,
   metadatas of the selected item.
 
@@ -829,6 +829,7 @@ Description of these capabilities and how-to are provided in chapter
 
 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -865,8 +866,8 @@ Description of these capabilities and how-to are provided in chapter
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
-.. |propertiesWidget| image:: /static/common/mActionPropertiesWidget.png
-   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |selectString| image:: /static/common/selectstring.png

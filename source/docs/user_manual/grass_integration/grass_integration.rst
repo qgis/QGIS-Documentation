@@ -45,7 +45,7 @@ http://grass.osgeo.org/download/sample-data/.
 Loading GRASS raster and vector layers
 ======================================
 
-If the provider is loaded in QGIS, the location item with GRASS |grassLocation|
+If the provider is loaded in QGIS, the location item with GRASS |grass|
 icon is added in the browser tree under each folder item which contains GRASS location.
 Go to the folder :file:`grassdata` and expand location :file:`alaska` and
 mapset :file:`demo`.
@@ -886,6 +886,7 @@ you select the module. A more detailed description for adding new modules, chang
 a module's group, etc., can be found at 
 https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -907,9 +908,9 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    :width: 1.3em
 .. |general| image:: /static/common/general.png
    :width: 2em
-.. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
+.. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
-.. |grassLocation| image:: /static/common/grass_location.png
+.. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
    :width: 1.5em
 .. |grassNewMapset| image:: /static/common/grass_new_mapset.png
    :width: 1.5em
