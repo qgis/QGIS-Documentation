@@ -120,7 +120,7 @@ decorate your map composition.
 **Plugin paths**
 
 Add or Remove :guilabel:`Path(s) to search for additional C++
-plugin libraries`
+plugin libraries`.
 
 **Documentation paths**
 
@@ -130,6 +130,12 @@ is added. You can however add other links and prioritize them from top to bottom
 each time you click on a **[Help]** button in a dialog, the topmost link
 is checked and if no corresponding page is found, the next one is tried,
 and so on.
+
+.. note::
+  Documentation is versioned and translated only for QGIS Long Term Releases (LTR),
+  meaning that if you are running a regular release (eg, QGIS 3.0), help button will
+  open the *testing* manual page, which may contain description of features
+  in newer release (3.2 and 3.4) or in development (3.1 and 3.3). 
 
 **QSettings**
 
