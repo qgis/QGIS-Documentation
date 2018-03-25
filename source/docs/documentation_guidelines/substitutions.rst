@@ -129,7 +129,7 @@ Icon                            Substitution                        Icon        
 |expandTree|                    ``|expandTree|``                    |collapseTree|                  ``|collapseTree|``
 |expandNewTree|                 ``|expandNewTree|``                 |propertyItem|                  ``|propertyItem|``
 |deselectAll|                   ``|deselectAll|``                   |editCopy|                      ``|editCopy|``
-|filePrint|                     ``|filePrint|``                     |propertiesWidget|              ``|propertiesWidget|``
+|filePrint|                     ``|filePrint|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -244,7 +244,7 @@ Icon                            Substitution                        Icon        
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
-|scaleBar|                      ``|scaleBar|``                      |locale|                        ``|locale|``
+|scaleBar|                      ``|scaleBar|``
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
@@ -267,7 +267,6 @@ Icon                         Substitution                     Icon              
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |formView|               ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
-|attributes|                 ``|attributes|``                 \                        \
 ============================ ===============================  =======================  ===========================
 
 
@@ -388,7 +387,7 @@ Standard provided with basic install, but not loaded with initial install
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|showPluginManager|             ``|showPluginManager|``             |pluginInstaller|               ``|pluginInstaller|``
+|showPluginManager|             ``|showPluginManager|``
 |installPluginFromZip|          ``|installPluginFromZip|``          |pythonFile|                    ``|pythonFile|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
@@ -521,8 +520,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |atlasSettings| image:: /static/common/mActionAtlasSettings.png
    :width: 1.5em
-.. |attributes| image:: /static/common/attributes.png
-   :width: 2em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |basicStatistics| image:: /static/common/basic_statistics.png
@@ -806,8 +803,6 @@ Icon                            Substitution                        Icon        
    :width: 2.5em
 .. |linkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
    :width: 2.5em
-.. |locale| image:: /static/common/locale.png
-   :width: 2em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedRepeat| image:: /static/common/lock_repeating.png
@@ -942,8 +937,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
-.. |pluginInstaller| image:: /static/common/plugin_installer.png
-   :width: 1.5em
 .. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
    :width: 1.5em
 .. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
@@ -953,8 +946,6 @@ Icon                            Substitution                        Icon        
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
-   :width: 1.5em
-.. |propertiesWidget| image:: /static/common/mActionPropertiesWidget.png
    :width: 1.5em
 .. |propertyItem| image:: /static/common/mActionPropertyItem.png
    :width: 1.5em
@@ -1100,7 +1091,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |topologyChecker| image:: /static/common/topol.png
+.. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |touch| image:: /static/common/mActionTouch.png
    :width: 1.5em
