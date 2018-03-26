@@ -129,6 +129,7 @@ def append_subst(file, subst_definition):
     if subst_definition is not None:
         with open(file, 'a') as f:
             f.write(subst_definition)
+            f.write('\n')
 
 if __name__ == '__main__':
     src_path =  path.abspath(path.join(__file__ ,"../../source"))
