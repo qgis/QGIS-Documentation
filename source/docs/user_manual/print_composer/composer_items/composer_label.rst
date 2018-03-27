@@ -2,6 +2,9 @@
 
    |updatedisclaimer|
 
+.. index:: Layout; Label item
+.. _layout_label_item:
+
 The Label Item
 ===============
 
@@ -11,13 +14,13 @@ The Label Item
       :local:
 
 To add a label, click the |label| :sup:`Add label` icon, place the element
-with the left mouse button on the Print Composer canvas and position and
+with the left mouse button on the print layout canvas and position and
 customize its appearance in the label :guilabel:`Item Properties` panel.
 
 The :guilabel:`Item Properties` panel of a label item provides the following
-functionality for the label item (see Figure_composer_label_):
+functionality for the label item (see figure_layout_label_):
 
-.. _Figure_composer_label:
+.. _figure_layout_label:
 
 .. figure:: img/label_mainproperties.png
    :align: center
@@ -28,7 +31,7 @@ Main properties
 ----------------
 
 * The main properties dialog is where the text (HTML or not) or the expression
-  needed to fill the label is added to the Composer canvas.
+  needed to fill the label is added to the layout canvas.
 * Labels can be interpreted as HTML code: check |checkbox|
   :guilabel:`Render as HTML`. You can now insert a URL, a clickable image that
   links to a web page or something more complex.
@@ -44,7 +47,7 @@ Appearance
 * Define :guilabel:`Font` by clicking on the **[Font...]** button or a
   :guilabel:`Font color` selecting a color using the color selection tool.
 * You can specify different horizontal and vertical margins in ``mm``. This is
-  the margin from the edge of the composer item. The label can be positioned
+  the margin from the edge of the layout item. The label can be positioned
   outside the bounds of the label e.g. to align label items with other items.
   In this case you have to use negative values for the margin.
 * Using the :guilabel:`Alignment` is another way to position your label. Note

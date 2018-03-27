@@ -3,6 +3,7 @@
    |updatedisclaimer|
 
 .. index:: HTML frame
+.. _layout_html_item:
 
 The HTML Frame Item
 ====================
@@ -16,11 +17,11 @@ It is possible to add a frame that displays the contents of a website or even
 create and style your own HTML page and display it!
 
 Click the |addHtml| :sup:`Add HTML frame` icon, place the element by dragging a
-rectangle holding down the left mouse button on the Print Composer canvas and
+rectangle holding down the left mouse button on the Print Layout canvas and
 position and customize the appearance in the :guilabel:`Item Properties` panel
-(see figure_composer_html_).
+(see figure_layout_html_).
 
-.. _Figure_composer_html:
+.. _figure_layout_html:
 
 .. figure:: img/html_properties.png
    :align: center
@@ -36,9 +37,9 @@ enter the HTML source directly in the textbox provided and activate the Source
 radiobutton.
 
 The :guilabel:`HTML Source` dialog of the HTML frame :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_composer_html_ppt_):
+panel provides the following functionalities (see figure_layout_html_ppt_):
 
-.. _Figure_composer_html_ppt:
+.. _figure_layout_html_ppt:
 
 .. figure:: img/html_source.png
    :align: center
@@ -68,9 +69,9 @@ Frames
 -------
 
 The :guilabel:`Frames` dialog of the HTML frame :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_composer_html_frames_):
+panel provides the following functionalities (see figure_layout_html_frames_):
 
-.. _Figure_composer_html_frames:
+.. _figure_layout_html_frames:
 
 .. figure:: img/html_frame.png
    :align: center
@@ -96,7 +97,7 @@ panel provides the following functionalities (see figure_composer_html_frames_):
   :guilabel:`Use existing frames`.
 * Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents
   the map layout from being exported when the frame has no HTML contents. This
-  means all other composer items,
+  means all other layout items,
   maps, scalebars, legends etc. will not be visible in the result.
 * Activate |checkbox| :guilabel:`Don't draw background if frame is empty`
   prevents the HTML frame being drawn if the frame is empty.
@@ -107,9 +108,9 @@ Use smart page breaks and User style sheet
 
 The :guilabel:`Use smart page breaks` dialog and :guilabel:`Use style sheet`
 dialog of the HTML frame :guilabel:`Item Properties` panel provides the
-following functionalities (see figure_composer_html_breaks_):
+following functionalities (see figure_layout_html_breaks_):
 
-.. _Figure_composer_html_breaks:
+.. _figure_layout_html_breaks:
 
 .. figure:: img/html_breaks.png
    :align: center

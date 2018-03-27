@@ -123,7 +123,7 @@ settings, especially if your OS root CAs have had their policies adjusted. Any
 certificate that is expired will be set to untrusted and will not be used in
 secure server connections, unless you specifically override its trust policy. To
 see the QGIS-discoverable trust chain for any certificate, select it and click
-the |propertiesWidget| :sup:`Show information for certificate`.
+the |metadata| :sup:`Show information for certificate`.
 
 .. _figure_auth_pki_info:
 
@@ -405,6 +405,7 @@ the **Python Console** by running the following code (replace
 This will open an SSL error dialog if any errors occur, where you can choose to
 save the configuration to the database.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -413,8 +414,8 @@ save the configuration to the database.
 
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
-.. |propertiesWidget| image:: /static/common/mActionPropertiesWidget.png
-   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

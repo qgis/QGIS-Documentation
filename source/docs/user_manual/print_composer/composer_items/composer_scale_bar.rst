@@ -2,8 +2,8 @@
 
    |updatedisclaimer|
 
-.. index::
-   single: Scalebar; Map scalebar
+.. index:: Layout; Scale bar, Map scalebar
+.. _layout_scalebar_item:
 
 The Scale Bar Item
 ==================
@@ -14,13 +14,13 @@ The Scale Bar Item
       :local:
 
 To add a scale bar, click the |scaleBar| :sup:`Add new scalebar` icon, place
-the element with the left mouse button on the Print Composer canvas and position
+the element with the left mouse button on the print layout canvas and position
 and customize the appearance in the scale bar :guilabel:`Item Properties` panel.
 
 The :guilabel:`Item properties` of a scale bar item tab provides the following
-functionalities (see figure_composer_scalebar_):
+functionalities (see figure_layout_scalebar_):
 
-.. _Figure_composer_scalebar:
+.. _figure_layout_scalebar:
 
 .. figure:: img/scalebar_properties.png
    :align: center
@@ -32,9 +32,9 @@ Main properties
 
 The :guilabel:`Main properties` dialog of the scale bar
 :guilabel:`Item Properties` panel provides the following functionalities
-(see figure_composer_scalebar_ppt_):
+(see figure_layout_scalebar_ppt_):
 
-.. _Figure_composer_scalebar_ppt:
+.. _figure_layout_scalebar_ppt:
 
 .. figure:: img/scalebar_mainproperties.png
    :align: center
@@ -54,9 +54,9 @@ Units and Segments
 
 The :guilabel:`Units` and :guilabel:`Segments` dialogs of the scale bar
 :guilabel:`Item Properties` panel provide the following functionalities
-(see figure_composer_scalebar_units_):
+(see figure_layout_scalebar_units_):
 
-.. _Figure_composer_scalebar_units:
+.. _figure_layout_scalebar_units:
 
 .. figure:: img/scalebar_units.png
    :align: center
@@ -87,9 +87,9 @@ Display
 
 The :guilabel:`Display` dialog of the scale bar :guilabel:`Item Properties`
 panel provides the following functionalities (see
-figure_composer_scalebar_display_):
+figure_layout_scalebar_display_):
 
-.. _Figure_composer_scalebar_display:
+.. _figure_layout_scalebar_display:
 
 .. figure:: img/scalebar_display.png
    :align: center
@@ -113,9 +113,9 @@ Fonts and colors
 
 The :guilabel:`Fonts and colors` dialog of the scale bar
 :guilabel:`Item Properties` panel provides the following functionalities
-(see figure_composer_scalebar_fonts_):
+(see figure_layout_scalebar_fonts_):
 
-.. _Figure_composer_scalebar_fonts:
+.. _figure_layout_scalebar_fonts:
 
 .. figure:: img/scalebar_fonts.png
    :align: center

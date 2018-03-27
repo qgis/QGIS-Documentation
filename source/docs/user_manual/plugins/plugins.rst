@@ -37,18 +37,21 @@ repository. For other external repositories, documentation might be available
 with the external plugins themselves. External plugins documentation is not
 included in this manual.
 
-To install or activate a plugin, go to :menuselection:`Plugins` menu and select:
+To install or activate a plugin, go to :menuselection:`Plugins` menu and select
+|showPluginManager| :menuselection:`Manage and install plugins...`.
 
-* |showPluginManager| :menuselection:`Manage and install plugins...` using
-  online repositories;
-* or |installPluginFromZip| :menuselection:`Install plugin from ZIP...` using a
-  local compressed file.
+Installed external python plugins are placed under the  
+:file:`~/(UserProfile)/python/plugins` folder where:
 
-Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
-folder. Home directory (denoted by above ``~``) on Windows is usually something
-like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-or :file:`C:\\Users\\(user)`. On some platforms (e.g., macOS), the :file:`.qgis2`
-folder is hidden by default.
+* ``~`` represents the HOME directory which on |win| Windows is usually something
+  like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
+  or :file:`C:\\Users\\(user)`;
+* and ``(UserProfile)`` represents the active profile folder, which for the
+  QGIS ``default`` user profile is:
+
+  * |nix| :file:`.local/share/QGIS/QGIS3/profiles/default`;
+  * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default`;
+  * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
@@ -56,8 +59,8 @@ Paths to Custom C++ plugins libraries can also be added under
 .. note::
 
  According to the :ref:`plugin manager settings <setting_plugins>`, QGIS main
- interface can display a blue link in the status bar to inform you that there
- are updates for your installed plugins or new plugins available.
+ interface can display an icon on the right of the status bar to inform you
+ that there are updates for your installed plugins or new plugins available.
 
 .. index::
    single: Plugins; Plugin manager
@@ -104,16 +107,19 @@ You can use the following options:
   invalid plugins list.
 
 By default, QGIS provides you with its official plugin repository with the URL
-https://plugins.qgis.org/plugins/plugins.xml?qgis=2.18 (in case of QGIS 2.18)
+https://plugins.qgis.org/plugins/plugins.xml?qgis=3.0 (in case of QGIS 3.0)
 in the :guilabel:`Plugin repositories` section. To add external author repositories,
-click **[Add...]** and fill in the form with a name and the URL.
-If you do not want one or more of the added repositories, they can be disabled
-via the **[Edit...]** button, or completely removed with the **[Delete]** button.
+click **[Add...]** and fill in the :guilabel:`Repository Details` form with a
+name and the URL. The URL can be of ``http://`` or ``file://`` protocol type.
 
 The default QGIS repository is an open repository and you don't need any
 authentication to access it. You can however deploy your own plugin repository
 and require an authentication (basic authentication, PKI). You can get more
 information on QGIS authentication support in :ref:`authentication` chapter.
+
+If you do not want one or more of the added repositories, they can be disabled
+from the Settings tab via the **[Edit...]** button, or completely removed with
+the **[Delete]** button.
 
 .. _figure_plugins_settings:
 
@@ -144,10 +150,11 @@ checkbox.
 The Installed tab
 -----------------
 
-In |pluginInstalled| :guilabel:`Installed` tab,
-you can find only the installed plugins. The external plugins
-can be uninstalled and reinstalled using the **[Uninstall plugin]** and
-**[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
+In the |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
+plugins, that you can not uninstall. You can extend this list with external
+plugins that can be uninstalled and reinstalled any time, using the **[Uninstall
+plugin]** and **[Reinstall plugin]** buttons. You can **[Upgrade all]** the
+plugins here as well.
 
 .. _figure_plugins_installed:
 
@@ -207,6 +214,14 @@ another compatible plugin or help to upgrade the broken one).
 
    The |pluginInvalid| :guilabel:`Invalid` tab
 
+The Install from ZIP tab
+------------------------
+
+The |installPluginFromZip| :guilabel:`Install from ZIP` tab provides a file
+selector widget to import plugins in a zipped format, e.g. plugins downloaded
+directly from their repository. 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -217,6 +232,10 @@ another compatible plugin or help to upgrade the broken one).
    :width: 1.3em
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
 .. |pluginInstalled| image:: /static/common/plugin-installed.png
@@ -232,3 +251,5 @@ another compatible plugin or help to upgrade the broken one).
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em

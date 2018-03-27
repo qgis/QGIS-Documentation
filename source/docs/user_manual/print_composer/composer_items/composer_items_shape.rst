@@ -11,27 +11,27 @@ Shape Items
       :local:
 
 .. index:: 
-   single: Composer Item; Arrow
-.. _arrow_item:
+   single: Layout item; Arrow
+.. _layout_arrow_item:
 
 The Arrow Item
 --------------
 
 To add an arrow, click the |addArrow| :sup:`Add Arrow` icon, place the element
 holding down the left mouse button and drag a line to draw the arrow on the
-Print Composer canvas and position and customize the appearance in the scale bar
+print layout canvas and position and customize the appearance in the scale bar
 :guilabel:`Item Properties` panel.
 
 When you also hold down the :kbd:`Shift` key while placing the arrow, it is
 placed in an angle of exactly 45\ |degrees| .
 
 The arrow item can be used to add a line or a simple arrow that can be used,
-for example, to show the relation between other print composer items. To create
+for example, to show the relation between other print layout items. To create
 a north arrow, the image item should be considered first. QGIS has a set of
 North arrows in SVG format. Furthermore you can connect an image item with a map
-so it can rotate automatically with the map (see :ref:`image_item`).
+so it can rotate automatically with the map (see :ref:`layout_picture_item`).
 
-.. _figure_composer_arrow:
+.. _figure_layout_arrow:
 
 .. figure:: img/arrow_properties.png
    :align: center
@@ -74,8 +74,8 @@ QGIS predefined SVG images can be changed using the corresponding options. Custo
 SVG may require some tags following this :ref:`instruction <parameterized_svg>`.
 
 .. index:: 
-   single: Composer Item; Basic shape
-.. _basic_shape_item:
+   single: Layout item; Basic shape
+.. _layout_basic_shape_item:
 
 The Basic Shape Items
 ---------------------
@@ -87,7 +87,7 @@ Customize the appearance in the :guilabel:`Item Properties` panel.
 When you also hold down the :kbd:`Shift` key while placing the basic shape
 you can create a perfect square, circle or triangle.
 
-.. _figure_composer_basic_shape:
+.. _figure_layout_basic_shape:
 
 .. figure:: img/shape_properties.png
    :align: center
@@ -108,8 +108,8 @@ the corners.
    the frame.
 
 .. index:: 
-   single: Composer Item; Node-based shape
-.. _node_based_shape_item:
+   single: Layout item; Node-based shape
+.. _layout_node_based_shape_item:
 
 The Node-Based Shape Items
 --------------------------
@@ -125,7 +125,7 @@ add nodes to your current shape. When you're done, a simple right click
 terminates the shape. Customize the appearance in the :guilabel:`Item Properties`
 panel.
 
-.. _figure_composer_nodes_shape:
+.. _figure_layout_nodes_shape:
 
 .. figure:: img/shape_nodes_properties.png
    :align: center

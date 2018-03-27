@@ -420,15 +420,15 @@ Use the |signPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
-If you have print composers defined in your project, they will be listed in the
+If you have print layouts defined in your project, they will be listed in the
 `GetProjectSettings` response, and they can be used by the GetPrint request to
-create prints, using one of the print composer layouts as a template.
+create prints, using one of the print layout layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
-If you want to exclude any print composer from being published by the WMS,
-check |checkbox| :guilabel:`Exclude composers` and click the
+If you want to exclude any print layout from being published by the WMS,
+check |checkbox| :guilabel:`Exclude layouts` and click the
 |signPlus| button below.
-Then, select a print composer from the :guilabel:`Select print composer` dialog
-in order to add it to the excluded composers list.
+Then, select a print layout from the :guilabel:`Select print layout` dialog
+in order to add it to the excluded layouts list.
 
 If you want to exclude any layer or layer group from being published by the
 WMS, check |checkbox| :guilabel:`Exclude Layers` and click the

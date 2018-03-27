@@ -147,7 +147,7 @@ Analyze the data
 Final Map
 ===============================================================================
 
-* Use the :guilabel:`Map Composer` to create a final map, which incorporates
+* Use the :guilabel:`Print Layout` to create a final map, which incorporates
   your analysis results.
 * Include this map in a document along with your documented criteria. If the
   map has become too visually busy due to the added layer(s), deselect the

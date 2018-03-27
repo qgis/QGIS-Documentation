@@ -479,7 +479,7 @@ The assistant lets you define:
 To the right side of the dialog, you can preview the features representation
 within a live-update widget. This representation is added to the layer tree in
 the layer legend and is also used to shape the layer representation in the
-print composer legend item.
+print layout legend item.
 
 The values presented in the varying size assistant above will set the size
 'Data-defined override' with:
@@ -503,7 +503,7 @@ option either on size (for point layer) or width (for line layer).
 
 Like the proportional symbol, the size-related symbol is added to the layer tree,
 at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print composer legend item.
+are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
 
@@ -1691,7 +1691,7 @@ You can move up and down any row with click and drag, sorting how attributes
 are displayed. You can also change the label in the 'Legend' column
 or the attribute color by double-clicking the item.
 
-This label is the default text displayed in the legend of the print composer
+This label is the default text displayed in the legend of the print layout
 or of the layer tree.
 
 .. _figure_diagrams_attributes:
@@ -1806,7 +1806,7 @@ in the :ref:`label_legend`, besides the layer symbology. It can be:
 * the represented attributes: color and legend text set in :guilabel:`Attributes` tab
 * and if applicable, the diagram size, whose symbol you can customize.
 
-When set, the diagram legend items are also available in the print composer legend,
+When set, the diagram legend items are also available in the print layout legend,
 besides the layer symbology.
 
 
@@ -1880,16 +1880,17 @@ See :ref:`data_defined_labeling` for more information.
 Source Fields Properties
 ========================
 
-|sourceFields| The :guilabel:`Source Fields` tab helps you organize the fields of
-the selected dataset and the way you can interact with
-the feature's attributes. The buttons |newAttribute|
-:sup:`New field` and |deleteAttribute| :sup:`Delete field`
-can be used when the dataset is in |toggleEditing| :sup:`Editing mode`.
+|sourceFields| The :guilabel:`Source Fields` tab provides information on
+fields related to the layer and helps you organize them.
 
-You can rename fields by double-clicking in the fields name (note that you
-should switch to editing mode to edit the field name). This is only supported
+The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
+:sup:`Toggle editing mode`. At this moment, you can modify its structure using
+the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
+buttons.
+
+You can also rename fields by double-clicking its name. This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
-depending the OGR data format and version.
+depending on the OGR data format and version.
 
 You can define some alias to display human readable fields in the feature form
 or the attribute table. In this case, you don't need to switch to editing mode.
@@ -1900,7 +1901,12 @@ you are using a PostgreSQL layer, comment of the column could be the one in
 the PostgreSQL table if set. Comments are saved in the QGIS project file as for
 the alias.
 
-The dialog also lists read-only characteristics of the field such as
+Other than the fields contained in the dataset, the :guilabel:`Source Fields`
+tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
+<vector_relations>`. And depending on the origin of the field, a different
+background color is applied to it.
+
+For each listed field, the dialog also lists read-only characteristics such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
 layer as ``WMS`` or ``WFS``, you can also check here which fields could be retrieved.
 
@@ -1934,7 +1940,7 @@ and the values or range of values that are allowed to be added to each.
    Dialog to select an edit widget for an attribute column
 
 
-.. index:: Default values, Fields constraints
+.. index:: Default values, Fields constraints, Alias
 
 Common settings
 ...............
@@ -1992,13 +1998,29 @@ Constraints
 
 You can constrain the value to insert in the field. This constraint can be:
 
-* |checkbox| :guilabel:`Not null`: force the user to provide a value
-* based on a custom expression: e.g. ``regexp_match(col0,'A-Za-z')`` to ensure
-  that the value of the field *col0* has only alphabetical letter.
+* |checkbox| :guilabel:`Not null`: requires the user to provide a value;
+* |checkbox| :guilabel:`Unique`: guarantee the inserted value to be unique
+  throughout the field;
+* based on a custom :guilabel:`expression`: e.g. ``regexp_match(col0,'A-Za-z')``
+  to ensure that the value of the field *col0* has only alphabetical letter.
+  A short description can be added to help you remember the constraint.
 
-A short description of the constraint can be added and will be displayed at
-the top of the form as a warning message when the value supplied does not
-match the constraint.
+Whenever a value is added or edited in a field, it's submitted to the existing
+constraints and:
+
+* if it meets all the requirements, a green check is shown beside the field
+  in the form;
+* if it does not meet all the requirements, then a yellow or red cross is
+  displayed near the field. You can hover over the cross to remind which
+  constraints are applied to the field and fix the value:
+  
+  * A yellow cross appears when the unmet constraint is an unenforced one
+    and it does not prevent you to save the changes with the "wrong"
+    values;
+  * A red cross can not be ignored and does not allow you to save your
+    modifications until they meet the constraints. It appears when the
+    |checkbox| :guilabel:`Enforce constraint` option is checked.
+
 
 .. _edit_widgets:
 
@@ -2804,7 +2826,7 @@ setting that enables generalisation by default for newly added layers (see
 
 
 While rendering extremely detailed layers (e.g. polygon layers with a huge number
-of nodes), this can cause composer exports in PDF/SVG format to be huge as all
+of nodes), this can cause layout exports in PDF/SVG format to be huge as all
 nodes are included in the exported file. This can also make the resultant file
 very slow to work with/open in other programs.
 
@@ -2812,7 +2834,7 @@ Checking |checkbox| :guilabel:`Force layer to render as raster` forces these
 layers to be rasterised so that the exported files won't have to include all
 the nodes contained in these layers and the rendering is therefore sped up.
 
-You can also do this by forcing the composer to export as a raster,
+You can also do this by forcing the layout to export as a raster,
 but that is an all-or-nothing solution, given that the rasterisation
 is applied to all layers.
 
@@ -2832,7 +2854,7 @@ layer-level variable from the list and click the |signMinus| button to remove
 it.
 
 More information on variables usage in the General Tools
-:ref:`general_tools_variables` sectionf.
+:ref:`general_tools_variables` section.
 
 
 .. index:: Metadata, Metadata editor, Keyword
@@ -2923,6 +2945,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    QGIS Server tab in vector layers properties dialog
 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2945,8 +2968,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png

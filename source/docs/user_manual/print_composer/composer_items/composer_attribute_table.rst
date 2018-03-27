@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Attribute table
-
+.. _layout_table_item:
 
 The Attribute Table Item
 ========================
@@ -13,16 +13,16 @@ The Attribute Table Item
    .. contents::
       :local:
 
-It is possible to add parts of a vector attribute table to the Print Composer
+It is possible to add parts of a vector attribute table to the Print Layout
 canvas: Click the |openTable| :sup:`Add attribute table` icon, click and drag
-with the left mouse button on the Print Composer canvas to place and size the
+with the left mouse button on the Print Layout canvas to place and size the
 item. You can better position and customize its appearance in the
 :guilabel:`Item Properties` panel.
 
 The :guilabel:`Item properties` panel of an attribute table provides the
-following functionalities (see figure_composer_table_):
+following functionalities (see figure_layout_table_):
 
-.. _Figure_composer_table:
+.. _figure_layout_table:
 
 .. figure:: img/attribute_properties.png
    :align: center
@@ -34,9 +34,9 @@ Main properties
 ---------------
 
 The :guilabel:`Main properties` dialog of the attribute table provides the
-following functionalities (see figure_composer_table_ppt_):
+following functionalities (see figure_layout_table_ppt_):
 
-.. _Figure_composer_table_ppt:
+.. _figure_layout_table_ppt:
 
 .. figure:: img/attribute_mainproperties.png
    :align: center
@@ -50,10 +50,10 @@ following functionalities (see figure_composer_table_ppt_):
   the :guilabel:`Atlas generation` panel, there are two additional
   :guilabel:`Source` possible:
 
-  * **Current atlas feature** (see figure_composer_table_atlas_): you won't see
+  * **Current atlas feature** (see figure_layout_table_atlas_): you won't see
     any option to choose the layer, and the table item will only show a row with
     the attributes from the current feature of the atlas coverage layer.
-  * and **Relation children** (see figure_composer_table_relation_): an option
+  * and **Relation children** (see figure_layout_table_relation_): an option
     with the relation names will show up. This feature can only be used if you
     have defined a relation using your atlas coverage layer as parent, and the
     table will show the children rows of the atlas coverage layer's current
@@ -64,7 +64,7 @@ following functionalities (see figure_composer_table_ppt_):
   actual contents of the table has changed.
 
 
-.. _Figure_composer_table_atlas:
+.. _figure_layout_table_atlas:
 
 .. figure:: img/attribute_mainatlas.png
    :align: center
@@ -72,7 +72,7 @@ following functionalities (see figure_composer_table_ppt_):
    Attribute table Main properties for 'Current atlas feature'
 
 
-.. _Figure_composer_table_relation:
+.. _figure_layout_table_relation:
 
 .. figure:: img/attribute_mainrelation.png
    :align: center
@@ -81,12 +81,12 @@ following functionalities (see figure_composer_table_ppt_):
 
 
 * The button **[Attributes...]** starts the :guilabel:`Select attributes` menu,
-  see figure_composer_table_select_, that can be used to change the visible
+  see figure_layout_table_select_, that can be used to change the visible
   contents of the table. After making changes use the **[OK]** button to apply
   changes to the table. The upper part of the window shows the list of the
   attributes to display and the lower part helps to set the way the data is sorted.
 
-  .. _Figure_composer_table_select:
+  .. _figure_layout_table_select:
 
   .. figure:: img/attribute_select.png
      :align: center
@@ -129,9 +129,9 @@ Feature filtering
 -----------------
 
 The :guilabel:`Feature filtering` dialog of the attribute table provides
-the following functionalities (see figure_composer_table_filter_):
+the following functionalities (see figure_layout_table_filter_):
 
-.. _Figure_composer_table_filter:
+.. _figure_layout_table_filter:
 
 .. figure:: img/attribute_filter.png
    :align: center
@@ -143,8 +143,7 @@ You can:
 * Define the :guilabel:`Maximum rows` to be displayed.
 * Activate |checkbox| :guilabel:`Remove duplicate rows from table` to show unique records only.
 * Activate |checkbox| :guilabel:`Show only visible features within a map` and select the
-  corresponding :guilabel:`Composer map` to display the attributes of features only visible
-  on selected map.
+  corresponding :guilabel:`Linked map` whose visible features attributes will be displayed.
 * Activate |checkbox| :guilabel:`Show only features intersecting Atlas feature` is only
   available when |checkbox| :guilabel:`Generate an atlas` is activated. When activated it will
   show a table with only the features which intersect the current atlas feature.
@@ -165,9 +164,9 @@ Appearance
 ----------
 
 The :guilabel:`Appearance` dialog of the attribute table provides
-the following functionalities  (see figure_composer_table_appearance_):
+the following functionalities  (see figure_layout_table_appearance_):
 
-.. _Figure_composer_table_appearance:
+.. _figure_layout_table_appearance:
 
 .. figure:: img/attribute_appearance.png
    :align: center
@@ -194,9 +193,9 @@ the following functionalities  (see figure_composer_table_appearance_):
   the table in the first row, when the result is an empty table.
 * With :guilabel:`Background color` you can set the background color of the table.
   The :guilabel:`Advanced customization` option helps you define different background colors
-  for each cell (see figure_composer_table_background_)
+  for each cell (see figure_layout_table_background_)
 
-.. _Figure_composer_table_background:
+.. _figure_layout_table_background:
 
 .. figure:: img/attribute_background.png
    :align: center
@@ -213,9 +212,9 @@ Show grid
 ---------
 
 The :guilabel:`Show grid` dialog of the attribute table provides
-the following functionalities (see figure_composer_table_grid_):
+the following functionalities (see figure_layout_table_grid_):
 
-.. _Figure_composer_table_grid:
+.. _figure_layout_table_grid:
 
 .. figure:: img/attribute_grid.png
    :align: center
@@ -232,9 +231,9 @@ Fonts and text styling
 ----------------------
 
 The :guilabel:`Fonts and text styling` dialog of the attribute table
-provides the following functionalities (see figure_composer_table_fonts_):
+provides the following functionalities (see figure_layout_table_fonts_):
 
-.. _Figure_composer_table_fonts:
+.. _figure_layout_table_fonts:
 
 .. figure:: img/attribute_fonts.png
    :align: center
@@ -246,16 +245,16 @@ provides the following functionalities (see figure_composer_table_fonts_):
 * For :guilabel:`Table heading` you can additionally set the :guilabel:`Alignment`
   to `Follow column alignment` or override this setting by choosing `Left`,
   `Center` or `Right`. The column alignment is set using the :guilabel:`Select
-  Attributes` dialog (see Figure_composer_table_select_ ).
+  Attributes` dialog (see figure_layout_table_select_ ).
 
 
 Frames
 -------
 
 The :guilabel:`Frames` dialog of the attribute table provides
-the following functionalities (see figure_composer_table_frames_):
+the following functionalities (see figure_layout_table_frames_):
 
-.. _Figure_composer_table_frames:
+.. _figure_layout_table_frames:
 
 .. figure:: img/attribute_frame.png
    :align: center
@@ -279,7 +278,7 @@ the following functionalities (see figure_composer_table_frames_):
   will continue in the next frame when you use the Resize mode `Use existing frames`.
 * Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents
   the page to be exported when the table frame has no contents. This means all
-  other composer items, maps, scalebars, legends etc. will not be visible in the result.
+  other layout items, maps, scalebars, legends etc. will not be visible in the result.
 * Activate |checkbox| :guilabel:`Don't draw background if frame is empty`
   prevents the background to be drawn when the table frame has no contents.
 

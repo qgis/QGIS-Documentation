@@ -1,6 +1,6 @@
 .. index:: Map rendering, Map printing
 
-.. _composer:
+.. _layout:
 
 **************************
 Map Rendering and Printing
@@ -85,26 +85,26 @@ part is reported)
     ...
 
 
-.. index:: Output; Using Map Composer
+.. index:: Output; Using print layout
 
-Output using Map Composer
+Output using print layout
 =========================
 
-Map composer is a very handy tool if you would like to do a more sophisticated
-output than the simple rendering shown above. Using the composer it is possible
+Print layout is a very handy tool if you would like to do a more sophisticated
+output than the simple rendering shown above. It is possible
 to create complex map layouts consisting of map views, labels, legend, tables
 and other elements that are usually present on paper maps. The layouts can be
 then exported to PDF, raster images or directly printed on a printer.
 
-The composer consists of a bunch of classes. They all belong to the core
+The layout consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
 `Qt Graphics View framework <http://doc.qt.io/qt-4.8/qgraphicsview.html>`_,
-then you are encouraged to check the documentation now, because the composer
+then you are encouraged to check the documentation now, because the layout
 is based on it. Also check the `Python documentation of the implementation of QGraphicView
 <http://pyqt.sourceforge.net/Docs/PyQt4/qgraphicsview.html>`_.
 
-The central class of the composer is :class:`QgsComposition` which is derived
+The central class of the layout is :class:`QgsComposition` which is derived
 from :class:`QGraphicsScene`. Let us create one
 
 ::
@@ -117,7 +117,7 @@ Note that the composition takes an instance of :class:`QgsMapRenderer`. In the
 code we expect we are running within QGIS application and thus use the map
 renderer from map canvas. The composition uses various parameters from the map
 renderer, most importantly the default set of map layers and the current extent.
-When using composer in a standalone application, you can create your own map
+When using a layout in a standalone application, you can create your own map
 renderer instance the same way as shown in the section above and pass it to
 the composition.
 
@@ -192,7 +192,7 @@ Currently supported items are:
 
 * table
 
-By default the newly created composer items have zero position (top left corner
+By default the newly created layout items have zero position (top left corner
 of the page) and zero size. The position and size are always measured in
 millimeters
 
@@ -209,12 +209,12 @@ A frame is drawn around each item by default. How to remove the frame
 
   composerLabel.setFrame(False)
 
-Besides creating the composer items by hand, QGIS has support for composer
+Besides creating the layout items by hand, QGIS has support for layout
 templates which are essentially compositions with all their items saved to a
 .qpt file (with XML syntax). Unfortunately this functionality is not yet
 available in the API.
 
-Once the composition is ready (the composer items have been created and added
+Once the composition is ready (the layout items have been created and added
 to the composition), we can proceed to produce a raster and/or vector output.
 
 The default output settings for composition are page size A4 and resolution 300

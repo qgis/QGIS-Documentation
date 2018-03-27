@@ -2,7 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: Legend composer, Map legend
+.. index:: Legend item, Map legend
+.. _layout_legend_item:
 
 The Legend Item
 ================
@@ -13,14 +14,14 @@ The Legend Item
       :local:
 
 To add a map legend, click the |addLegend| :sup:`Add new legend` icon,
-place the element with the left mouse button on the Print Composer canvas and
+place the element with the left mouse button on the print layout canvas and
 position and customize the appearance in the legend :guilabel:`Item Properties`
 panel.
 
 The :guilabel:`Item properties` panel of a legend item provides the following
-functionalities (see figure_composer_legend_):
+functionalities (see figure_layout_legend_):
 
-.. _Figure_composer_legend:
+.. _figure_layout_legend:
 
 .. figure:: img/legend_properties.png
    :align: center
@@ -31,9 +32,9 @@ Main properties
 ---------------
 
 The :guilabel:`Main properties` dialog of the legend :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_composer_legend_ppt_):
+panel provides the following functionalities (see figure_layout_legend_ppt_):
 
-.. _Figure_composer_legend_ppt:
+.. _figure_layout_legend_ppt:
 
 .. figure:: img/legend_mainproperties.png
    :align: center
@@ -57,9 +58,9 @@ Legend items
 ------------
 
 The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_composer_legend_items_):
+panel provides the following functionalities (see figure_layout_legend_items_):
 
-.. _Figure_composer_legend_items:
+.. _figure_layout_legend_items:
 
 .. figure:: img/legend_items.png
    :align: center
@@ -92,7 +93,7 @@ panel provides the following functionalities (see figure_composer_legend_items_)
     that has different legend items (e.g., from a rule-based or categorized
     symbology), you can specify a boolean expression to remove from the legend
     tree, styles that have no feature satisfying a condition. Note that the
-    features are nevertheless kept and shown in the composer map item.
+    features are nevertheless kept and shown in the layout map item.
 
   While the default behavior of the legend item is to mimic the
   :guilabel:`Layers panel` tree, displaying the same groups, layers and classes
@@ -102,8 +103,8 @@ panel provides the following functionalities (see figure_composer_legend_items_)
   contextual menu.
 
   After changing the symbology in the QGIS main window, you can click on
-  **[Update All]** to adapt the changes in the legend element of the Print
-  Composer.
+  **[Update All]** to adapt the changes in the legend element of the print
+  layout.
 
 * While generating an atlas with polygon features, you can filter out legend
   items that lie outside the current atlas feature. To do that, check the
@@ -116,9 +117,9 @@ Fonts, Columns, Symbol
 
 The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` dialogs of the
 legend :guilabel:`Item Properties` panel provide the following functionalities
-(see figure_composer_legend_fonts_):
+(see figure_layout_legend_fonts_):
 
-.. _Figure_composer_legend_fonts:
+.. _figure_layout_legend_fonts:
 
 .. figure:: img/legend_fonts.png
    :align: center
@@ -147,16 +148,16 @@ WMS LegendGraphic and Spacing
 
 The :guilabel:`WMS LegendGraphic` and :guilabel:`Spacing` dialogs of the legend
 :guilabel:`Item Properties` panel provide the following functionalities (see
-figure_composer_legend_wms_):
+figure_layout_legend_wms_):
 
-.. _Figure_composer_legend_wms:
+.. _figure_layout_legend_wms:
 
 .. figure:: img/legend_wms.png
    :align: center
 
    WMS LegendGraphic and Spacing Dialogs
 
-When you have added a WMS layer and you insert a legend composer item, a request
+When you have added a WMS layer and you insert a legend item, a request
 will be sent to the WMS server to provide a WMS legend. This Legend will only be
 shown if the WMS server provides the GetLegendGraphic capability.
 The WMS legend content will be provided as a raster image.

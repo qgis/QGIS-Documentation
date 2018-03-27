@@ -2,21 +2,21 @@
 
    |updatedisclaimer|
 
-.. _composer_item_options:
+.. _layout_item_options:
 
-Composer Items Common Options
-=============================
+Layout Items Common Options
+===========================
 
 .. only:: html
 
    .. contents::
       :local:
 
-Composer items have a set of common properties you will find at the bottom of
+Layout items have a set of common properties you will find at the bottom of
 the :guilabel:`Item Properties` panel: Position and size, Rotation, Frame,
-Background, Item ID, Variables and Rendering (See figure_composer_common_).
+Background, Item ID, Variables and Rendering (See figure_layout_common_).
 
-.. _Figure_composer_common:
+.. _figure_layout_common:
 
 .. figure:: img/common_properties.png
    :align: center
@@ -36,7 +36,7 @@ Background, Item ID, Variables and Rendering (See figure_composer_common_).
   Click on the [Color...] button to display a dialog where you can pick a color
   or choose from a custom setting.
   Transparency can be adjusted through atlering the alpha field settings.
-* Use the :guilabel:`Item ID` to create a relationship to other Print Composer
+* Use the :guilabel:`Item ID` to create a relationship to other print layout
   items. This is used with QGIS server and other potential web clients. You can
   set an ID on an item (for example, a map or a label), and then the web client
   can send data to set a property (e.g., label text) for that specific item.
@@ -47,26 +47,22 @@ Background, Item ID, Variables and Rendering (See figure_composer_common_).
 
 .. note::
 
-   * If you checked |checkbox| :guilabel:`Use live-updating color chooser dialogs`
-     in the QGIS general options, the color button will update as soon as you
-     choose a new color from **Color Dialog** windows. If not, you need to
-     close the **Color Dialog**.
-   * The |dataDefined| :sup:`Data defined override` icon next to a field
-     means that you can associate the field with data in the map item or use
-     expressions. These are particularly helpful with atlas generation
-     (See :ref:`atlas_data_defined_override`).
+   The |dataDefined| :sup:`Data defined override` icon next to a field
+   means that you can associate the field with data in the map item or use
+   expressions. These are particularly helpful with atlas generation
+   (See :ref:`atlas_data_defined_override`).
 
 
 .. index:: Rendering mode
-.. _Composer_Rendering_Mode:
+.. _layout_Rendering_Mode:
 
 Rendering mode
 --------------
 
-QGIS now allows advanced rendering for Composer items just like vector and
+QGIS allows advanced rendering for layout items just like vector and
 raster layers.
 
-.. _figure_composer_common_rendering:
+.. _figure_layout_common_rendering:
 
 .. figure:: img/rendering_mode.png
    :align: center
@@ -78,7 +74,7 @@ raster layers.
   your overlaying and underlaying items can be mixed according to the mode set
   (see :ref:`blend-modes` for description of each effect).
 * :guilabel:`Transparency` |slider|: You can make the underlying item in the
-  Composer visible with this tool.
+  layout visible with this tool.
   Use the slider to adapt the visibility of your item to your needs.
   You can also make a precise definition of the percentage of visibility in the
   menu beside the slider.
@@ -91,7 +87,7 @@ raster layers.
 Size and position
 -----------------
 
-Each item inside the Composer can be moved and resized to create a perfect
+Each item inside the print layout can be moved and resized to create a perfect
 layout.For both operations the first step is to activate the |select|
 :sup:`Select/Move item` tool and to click on the item; you can then move it
 using the mouse while holding the left button. If you need to constrain the
@@ -134,32 +130,32 @@ Alignment
 ---------
 
 Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
-:sup:`Raise selected items` pull-down menu. Choose an element on the Print Composer
+:sup:`Raise selected items` pull-down menu. Choose an element on the print layout
 canvas and select the matching functionality to raise or lower the selected
 element compared to the other elements. This order is
 shown in the :menuselection:`Items` panel. You can also raise or lower objects
 in the :menuselection:`Items` panel by clicking and dragging an object's label
 in this list.
 
-.. _figure_composer_common_align:
+.. _figure_layout_common_align:
 
 .. figure:: img/alignment_lines.png
    :align: center
 
-   Alignment helper lines in the Print Composer
+   Alignment helper lines in the print layout
 
 There are several alignment options available within the |alignLeft|
-:sup:`Align selected items` pull-down menu (see figure_composer_common_align_).
+:sup:`Align selected items` pull-down menu (see figure_layout_common_align_).
 To use an alignment function, you first select the elements then click on the
 matching alignment icon. All selected elements will then be aligned to their
-common bounding box. When moving items on the Composer canvas, alignment helper
+common bounding box. When moving items on the layout canvas, alignment helper
 lines appear when borders, centers or corners are aligned.
 
 Variables
 ---------
 
 The :guilabel:`Variables` lists all the variables available at
-the composer item's level (which includes all global, project and
+the layout item's level (which includes all global, project and
 composition's variables). Map items also include Map settings variables that
 provide easy access to values like the map's scale, extent, and so on.
 

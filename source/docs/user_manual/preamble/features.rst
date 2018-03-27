@@ -47,7 +47,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  QGIS browser
 *  On-the-fly reprojection
 *  DB Manager
-*  Map composer
+*  Print layout
 *  Overview panel
 *  Spatial bookmarks
 *  Annotation tools

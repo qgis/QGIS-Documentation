@@ -2,21 +2,22 @@
 
    |updatedisclaimer|
 
-.. _image_item:
+.. index:: Image, Picture, Layout; Image item, Layout; North arrow
+.. _layout_picture_item:
 
-The Image Item
-===============
+The Picture Item
+================
 
-To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle onto the Composer
-canvas with the left mouse button. You can then position and customize
-its appearance in the image :guilabel:`Item Properties` panel.
+To add an image, click the |addImage| :sup:`Add image` icon and drag a rectangle
+onto the layout canvas with the left mouse button. You can then position and
+customize its appearance in the image :guilabel:`Item Properties` panel.
 
 .. index:: Picture database, Rotated north arrow
 
 The image :guilabel:`Item Properties` tab provides the following functionalities
-(see figure_composer_image_):
+(see figure_layout_image_):
 
-.. _Figure_composer_image:
+.. _figure_layout_image:
 
 .. figure:: img/image_mainproperties.png
    :align: center
@@ -84,7 +85,7 @@ the selected map item.
 It is also possible to select a north arrow directly. If you first select a
 north arrow image from **Search directories** and then use the browse button
 |browseButton| of the field :guilabel:`Image source`, you can now select one of
-the north arrow from the list as displayed in figure_composer_image_north_.
+the north arrow from the list as displayed in figure_layout_image_north_.
 
 .. note::
 
@@ -92,7 +93,7 @@ the north arrow from the list as displayed in figure_composer_image_north_.
    done on purpose for languages that do not use an 'N' for North, so they can
    use another letter.
 
-.. _Figure_composer_image_north:
+.. _figure_layout_image_north:
 
 .. figure:: img/north_arrows.png
    :align: center

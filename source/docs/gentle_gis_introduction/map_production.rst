@@ -266,10 +266,10 @@ Here are some ideas for you to try with your learners:
   or buildings. Create a list of legend elements and define what the icons should
   look like, so a reader can most easily figure out their meaning in the map.
 * Create a map layout with your learners on a sheet of paper. Decide on the title
-  of the map, what GIS layers you want to show and what colours and icons to have
+  of the map, what GIS layers you want to show and what colors and icons to have
   on the map. Use the techniques you learned in Topics :ref:`gentle_gis_vector_data`
   and :ref:`gentle_gis_attributes` to adjust the symbology accordingly. When you
-  have a template, open the QGIS Map Composer and try to arrange a map layout as
+  have a template, open the QGIS print layout and try to arrange a map layout as
   planned.
 
 Something to think about

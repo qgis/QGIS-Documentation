@@ -1277,6 +1277,11 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer
 
+``Create point on surface for each part`` [boolean]
+  If checked a point for each different part of the geometry will be created.
+
+  Default: *False*
+
 Output
 ......
 

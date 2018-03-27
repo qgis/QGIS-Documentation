@@ -3,12 +3,12 @@
    |updatedisclaimer|
 
 
-.. index:: Composer items, Create maps, Layout maps, Compose maps
-.. _composer_items:
+.. index:: Layout items, Create maps, Layout maps, Compose maps
+.. _layout_items:
 
 
-Composer Items
-==============
+Layout Items
+============
 
 .. toctree::
    :maxdepth: 1
