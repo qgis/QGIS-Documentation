@@ -276,7 +276,7 @@ keep in mind that this returns the full caption of the image.
 .. code-block:: rst
 
    see :ref:`figure_logo`
-   
+
 returns:
 
 see :ref:`figure_logo`
@@ -339,20 +339,20 @@ Index
 
 An index is a handy way to help the reader easily find an information in a doc.
 QGIS documentation provides some essential indices.
-There are few rules to follow in order to keep a set of indices that are really 
+There are few rules to follow in order to keep a set of indices that are really
 useful (coherent, consistent and really connected to each other):
 
 * Index should be human readable, understandable and translatable; an index can
   be made from many words but you should avoid any unneeded ``_``, ``-``...
   characters to link them i.e., ``Loading layers`` instead of ``loading_layers``
-  or ``loadingLayers``. 
+  or ``loadingLayers``.
 * Always capitalize only the first letter of the index unless the word has a
   particular spelling, in which case keep using its spelling e.g., ``Loading layers``,
   ``Atlas generation``, ``WMS``, ``pgsql2shp``
 * Keep an eye on the existing `Index list <http://docs.qgis.org/testing/en/genindex.html>`_
   in order to reuse the most convenient expression with the right spelling
   and avoid wrong duplicates.
- 
+
 Several index tags exist in RST. You can either use the inline ``:index:`` tag
 within the normal text.
 
@@ -387,7 +387,7 @@ A clear and appropriate title is required for both warnings and tips.
 .. code-block:: rst
 
  .. tip:: **Always use a meaningful title for tips**
-   
+
   Begin tips with a title that summarizes what it is about. This helps
   users to quickly overview the message you want to give them, and
   decide on its relevance.
@@ -503,30 +503,164 @@ the same folder as the rst file.
 
 
 Documenting Processing algorithms
-=================================
+---------------------------------
 
 If you want to write documentation for Processing algorithms consider these
 guidelines:
 
-* don't overwrite existing help files by files from other sources (e.g. QGIS
-  source tree or Processing-Help repository), this files have different formats
-* Processing algorithm help files are part of QGIS User Guide, so use same
-  formatting as User Guide and other documentation
-* avoid use "This algoritm does this and that..." as first sentence in algorithm
-  description. Try to use more general words like in TauDEM or GRASS algoritms
+* Processing algorithm help files are part of QGIS User Guide, so use the same
+  formatting as User Guide and other documentation.
+
+* Each algorithm documentation should be placed in the corresponding **provider**
+  folder and **group** file, e.g. the algorithm `Voronoi polygon` belongs to the
+  `QGIS` provider and to the group `vectorgeometry`. So the correct file to add
+  the description is: ``source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst``.
+
+  .. note:: before starting to write the guide, check if the algorithm is already
+    described. In this case, you can enhance the existing description.
+
+* It is **extremely** important that each algorithm has an *anchor* that corresponds
+  to the provider name + the unique name of the algorithm itself. This allows the
+  Help button to open the Help page to the correct section. The anchor should be
+  placed **above** the title, e.g. (see also the :ref:`my_anchor` section)::
+
+    .. _qgisvoronoipolygons:
+
+    Voronoi polygons
+    ----------------
+
+  To find out the algorithm name you can just hover the mouse on the algorithm in
+  the Processing toolbox.
+
+* Avoid use "This algorithm does this and that..." as first sentence in algorithm
+  description. Try to use more general words like in TauDEM or GRASS algorithms
   help
-* add images if needed. Use PNG format and follow general guidelines for documentation.
-* if necessary add links to additional information (e.g. publications or web-pages)
-  to the "See also" section
-* give clear explanation for algorithm parameters and outputs (again GRASS and
+
+* Avoid to describe what the algorithm does by replicating its name and please
+  don't replicate the name of the parameter in the description of the parameter
+  itself. For example if the algorithm is ``Voronoi polygon`` consider to describe
+  the ``Input layer`` like ``Layer to calculate the polygon from``.
+
+* Add images! A picture is worth a thousand words! Use PNG format and follow general
+  guidelines for documentation (see the :ref:`image` section for more info).
+  Put the file in the correct folder: it depends on the provider, e.g. for QGIS::
+
+    /source/docs/user_manual/processing_algs/qgis/img/myPicture.png
+
+* If necessary, add links to the "See also" section that provides additional information
+  about the algorithm  (e.g., publications or web-pages).  Only add the "See also"
+  section if there is really something to see. As a good practice, the "See also"
+  section can be filled with links to similar algorithms.
+
+* Give clear explanation for algorithm parameters and outputs (again GRASS and
   TauDEM are good examples).
-* don't edit parameter or output names. If you found typo or wrong spelling ---
-  report this in bugracker, so developers can fix this in Processing code too
-* don't list available options in algorithm description, options already listed
+
+* Avoid to duplicate algorithm options detailed description. Add these information
+  in the parameter description.
+
+* Avoid to add information about the vector geometry type in algorithm or parameter
+  description without compelling reason as this information is already available
   in parameter description.
-* don't add information vector geometry type in algorithm or parameter description
-  without compelling reason as this information already available in parameter
-  description.
+
+* Add the default value if the parameter in *italic*, e.g.::
+
+    ``Number of points`` [number]
+      Number of point to create
+
+      Default: *1*
+
+* It should be also described the *type* of the parameters. There are several types
+  available but avoid to invent new ones and pick one of these:
+
+  ========================================  ====================
+  Parameter/Output type                     Description
+  ========================================  ====================
+  Point vector                              vector: point
+  Line vector                               vector: line
+  Polygon vector                            vector: polygon
+  Generic vector                            vector: any
+  Vector field numeric                      tablefield: numeric
+  Vector field string                       tablefield: string
+  Vector field generic                      tablefield: any
+  Raster layer                              raster
+  Raster band                               raster band
+  HTML file                                 HTML
+  Table layer                               table
+  Extent                                    extent
+  CRS                                       crs
+  Combobox                                  selection
+  Multiple selection                        multipleinput
+  Number                                    number
+  String                                    string
+  Boolean                                   boolean
+  Fields and values (Refactor Fields)       fieldsmapping
+  Values and operators (Raster Calculator)  calculator
+  ========================================  ====================
+
+* the best option is studying an existing and well documented algorithm and copy
+  all the useful layouts
+
+* if the algorithm does not provide any output just skip that section
+
+* when you are finished just follow the guidelines described in :ref:`step_by_step`
+  to commit your changes and make a Pull Request
+
+Here an example of an existing algorithm to help you with the layout and the description::
+
+    .. _qgiscountpointsinpolygon:
+
+    Count points in polygon
+    -----------------------
+    Takes a point and a polygon layer and counts the number of points from the
+    first one in each polygon of the second one.
+
+    A new polygons layer is generated, with the exact same content as the input polygons
+    layer, but containing an additional field with the points count corresponding to
+    each polygon.
+
+    .. figure:: /static/user_manual/processing_algs/qgis/count_points_polygon.png
+      :align: center
+
+      The labels identify the point count
+
+    An optional weight field can be used to assign weights to each point. Alternatively,
+    a unique class field can be specified. If both options are used, the weight field
+    will take precedence and the unique class field will be ignored.
+
+    Parameters
+    ..........
+    ``Polygons`` [vector: polygon]
+      Polygons layer
+
+    ``Points`` [vector: point]
+      Points layer
+
+    ``Weight field`` [tablefield: any]
+      Optional
+
+      The count generated will be the sum of the weight field for each point contained
+      by the polygon.
+
+    ``Class field`` [tablefield: any]
+      Optional
+
+      Points are classified based on the selected attribute and if several points with
+      the same attribute value are within the polygon, only one of them is counted.
+      The final count of the point in a polygon is, therefore, the count of different
+      classes that are found in it.
+
+    ``Count field name`` [string]
+      The name of the field to store the count of points
+
+      Default: *NUMPOINTS*
+
+    Outputs
+    .......
+
+    ``Count`` [vector: polygon]
+      Resulting layer with the attribute table containing the new column of the
+      points count.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
