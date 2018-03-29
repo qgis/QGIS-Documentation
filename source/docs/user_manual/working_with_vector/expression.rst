@@ -1151,7 +1151,7 @@ To use these functions in an expression, they should be preceded by @ character
 ======================= =======================================================
  atlas_feature           Returns the current atlas feature (as feature object)
  atlas_featureid         Returns the current atlas feature ID
- atlas_featurenumber     Returns the number of pages in composition
+ atlas_featurenumber     Returns the current atlas feature number in the layout
  atlas_filename          Returns the current atlas file name
  atlas_geometry          Returns the current atlas feature geometry
  atlas_pagename          Returns the current atlas page name
@@ -1173,10 +1173,11 @@ To use these functions in an expression, they should be preceded by @ character
  layer_id                Returns the ID of current layer
  layer_name              Returns the name of current layer
  layout_dpi              Returns the composition resolution (DPI)
- layout_numpages         Returns the number of pages in the composition
- layout_page             Returns the current page of the layout item
- layout_pageheight       Returns the composition height in mm
- layout_pagewidth        Returns the composition width in mm
+ layout_name             Returns the layout name
+ layout_numpages         Returns the number of pages in the layout
+ layout_page             Returns the page number of the current item in the layout
+ layout_pageheight       Returns the active page height in the layout (in mm)
+ layout_pagewidth        Returns the active page width in the layout (in mm)
  map_crs                 Returns the Coordinate reference system of the current map
  map_crs_definition      Returns the full definition of the Coordinate reference
                          system of the current map
@@ -1190,7 +1191,6 @@ To use these functions in an expression, they should be preceded by @ character
  map_rotation            Returns the current rotation of the map
  map_scale               Returns the current scale of the map
  map_units               Returns the units of map measurements
- names                   \
  project_crs             Returns the Coordinate reference system of the project
  project_crs_definition  Returns the full definition of the Coordinate reference
                          system of the project
@@ -1217,7 +1217,6 @@ To use these functions in an expression, they should be preceded by @ character
                          user name
  row_number              Stores the number of the current row
  value                   Returns the current value
- values                  \
 ======================= =======================================================
 
 
