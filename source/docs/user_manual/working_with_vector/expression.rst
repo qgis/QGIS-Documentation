@@ -567,23 +567,20 @@ Fields and Values
 
 Contains a list of fields from the layer.
 
-Generally, you can use the various fields,
-values and functions to construct the calculation expression, or you can just
-type it into the box.
+Double-click a field name to have it added to your expression. You can also
+type the field name (preferably inside double quotes) or its :ref:`alias
+<configure_field>`.
 
-To display the values of a field, you just click on the
-appropriate field and choose between :guilabel:`Load top 10 unique values`
-and :guilabel:`Load all unique values`. On the right side, the **Field Values**
-list opens with the unique values. At the top of the list, a search box helps
-filtering the values. To add a value to the expression you are writing,
-double click its name in the list.
+To retrieve fields values to use in an expression, select the appropriate field
+and, in the shown widget, choose between **[10 sample]** and **[all unique
+values]**. Requested values are then displayed and you can use the :guilabel:`Search`
+box at the top of the list to filter the result.
+Sample values can also be accessed via right-clicking on a field.
 
-Sample values can also be accessed via right-click.
-Select the field name from the list, then right-click to access a context menu
-with options to load sample values from the selected field.
+To add a value to the expression you are writing, double-click on it in the list.
+If the value is of a string type, it should be simple quoted, otherwise no quote
+is needed.
 
-Fields name should be double-quoted in the expression.
-Values or string should be simple-quoted.
 
 Fuzzy Matching Functions
 -------------------------
