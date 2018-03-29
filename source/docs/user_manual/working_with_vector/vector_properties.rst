@@ -2548,15 +2548,16 @@ the value of the selected field in the identify results or attribute table.
 Using Actions
 -------------
 
-Actions can be invoked from either the :guilabel:`Identify Results` dialog,
-an :guilabel:`Attribute Table` dialog or from :guilabel:`Run Feature Action`
-(recall that these dialogs can be opened by clicking |identify|
-:sup:`Identify Features` or |openTable| :sup:`Open Attribute Table` or
-|actionRun| :sup:`Run Feature Action`). To invoke an action, right
-click on the feature and choose the action from the pop-up menu (they should
-have been enabled to be displayed in the attribute table). Actions are
-listed in the popup menu by the name you assigned when defining the action.
-Click on the action you wish to invoke.
+QGIS offers many ways to execute actions you enabled on a layer. Depending on
+their settings, they can be available:
+
+* in the drop-down menu of |actionRun| :sup:`Run Feature Action` button from
+  the :guilabel:`Attributes toolbar` or :guilabel:`Attribute table` dialog;
+* when right-clicking a feature with the |identify| :sup:`Identify Features` tool
+  (see :ref:`identify` for more information);
+* from the :guilabel:`Identify Results` panel, under the :guilabel:`Actions` section;
+* as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table`
+  dialog. 
 
 If you are invoking an action that uses the ``%%`` notation, right-click on the
 field value in the :guilabel:`Identify Results` dialog or the

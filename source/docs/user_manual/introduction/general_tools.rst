@@ -1222,7 +1222,7 @@ QGIS offers two ways to identify features with the |identify|
   :guilabel:`Identify Results` panel
 * **right click** will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
-  features to identify.
+  features to identify or the action to execute on it.
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
