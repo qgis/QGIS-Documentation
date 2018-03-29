@@ -268,11 +268,11 @@ Vector
  Menu Option                                                     Toolbar                  Reference
 ==============================================================  =======================  ===========================
  :menuselection:`OpenStreetMap -->`                              \                        see :ref:`openstreetmap`
- |analysis| :menuselection:`Analysis Tools -->`                  \                        see :ref:`vector_menu`
- |sampling| :menuselection:`Research Tools -->`                  \                        see :ref:`vector_menu`
- |geoprocessing| :menuselection:`Geoprocessing Tools -->`        \                        see :ref:`vector_menu`
- |geometry| :menuselection:`Geometry Tools -->`                  \                        see :ref:`vector_menu`
- |management| :menuselection:`Data Management Tools -->`         \                        see :ref:`vector_menu`
+ :menuselection:`Analysis Tools -->`                             \                        see :ref:`vector_menu`
+ :menuselection:`Research Tools -->`                             \                        see :ref:`vector_menu`
+ :menuselection:`Geoprocessing Tools -->`                        \                        see :ref:`vector_menu`
+ :menuselection:`Geometry Tools -->`                             \                        see :ref:`vector_menu`
+ :menuselection:`Data Management Tools -->`                      \                        see :ref:`vector_menu`
  |coordinateCapture| :guilabel:`Coordinate Capture`              :guilabel:`Vector`       see :ref:`coordcapt`
  |geometryChecker| :guilabel:`Geometry Checker`                  :guilabel:`Vector`       see :ref:`geometry_checker`
  |gpsImporter| :guilabel:`GPS Tools`                             :guilabel:`Vector`       see :ref:`plugin_gps`
@@ -291,11 +291,11 @@ Raster
 ==========================================================  ====================  ==================================
  |showRasterCalculator| :guilabel:`Raster calculator...`     \                     see :ref:`label_raster_calc`
  :guilabel:`Align Raster...`                                 \                     see :ref:`label_raster_align`
- |analysis| :menuselection:`Analysis -->`                    \                     see :ref:`label_plugingdaltools`
- |sampling| :menuselection:`Projection -->`                  \                     see :ref:`label_plugingdaltools`
- |geoprocessing| :menuselection:`Conversion -->`             \                     see :ref:`label_plugingdaltools`
- |geometry| :menuselection:`Miscellaneous -->`               \                     see :ref:`label_plugingdaltools`
- |management| :menuselection:`Extraction -->`                \                     see :ref:`label_plugingdaltools`
+ :menuselection:`Analysis -->`                               \                     see :ref:`label_plugingdaltools`
+ :menuselection:`Projection -->`                             \                     see :ref:`label_plugingdaltools`
+ :menuselection:`Conversion -->`                             \                     see :ref:`label_plugingdaltools`
+ :menuselection:`Miscellaneous -->`                          \                     see :ref:`label_plugingdaltools`
+ :menuselection:`Extraction -->`                             \                     see :ref:`label_plugingdaltools`
  |georefRun| :guilabel:`Georeferencer`                       :guilabel:`Raster`    see :ref:`georef`
 ==========================================================  ====================  ==================================
 
@@ -615,8 +615,6 @@ loading, processing tools...)
    :width: 2em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
-.. |analysis| image:: /static/common/analysis.png
-   :width: 1.5em
 .. |captureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
@@ -666,11 +664,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
    :width: 1.5em
-.. |geometry| image:: /static/common/geometry.png
-   :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
-   :width: 1.5em
-.. |geoprocessing| image:: /static/common/geoprocessing.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
@@ -697,8 +691,6 @@ loading, processing tools...)
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
-   :width: 1.5em
-.. |management| image:: /static/common/management.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
@@ -763,8 +755,6 @@ loading, processing tools...)
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
 .. |rotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
-   :width: 1.5em
-.. |sampling| image:: /static/common/sampling.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
