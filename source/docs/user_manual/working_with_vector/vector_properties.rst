@@ -1883,7 +1883,6 @@ Source Fields Properties
 |sourceFields| The :guilabel:`Source Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
-
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
 :sup:`Toggle editing mode`. At this moment, you can modify its structure using
 the |newAttribute| :sup:`New field` and |deleteAttribute| :sup:`Delete field`
@@ -1941,25 +1940,40 @@ and the values or range of values that are allowed to be added to each.
    Dialog to select an edit widget for an attribute column
 
 
-.. index:: Default values, Fields constraints
+.. index:: Default values, Fields constraints, Alias
 
 Common settings
 ...............
 
 Regardless the type of widget applied to the field, there are some common
-properties you can set to control whether and how a field can be edited:
+properties you can set to control whether and how a field can be edited.
 
-* **Editable**: uncheck this to set the field read-only (not manually
-  modifiable) when the layer is in edit mode. Note that checking this setting
-  doesn't override any edit limitation from the provider.
-* **Label on top**: places the field name above or beside the widget in the
-  feature form
-* **Default value**: for new features, automatically populates by default the
-  field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
+General options
+^^^^^^^^^^^^^^^
+
+* :guilabel:`Alias`: a human readable name to use for fields. The alias will be
+  displayed in the feature form, the attribute table, or in the :guilabel:`Identify
+  results` panel.
+  It can also be used as field name replacement in the :ref:`expression builder
+  <vector_expressions>`, easing expressions understanding and reviews.
+  Alias are saved in project file.
+* :guilabel:`Comment`: displays the field's comment set in the :guilabel:`Source
+  Fields` tab, in a read-only state.
+* |checkbox| :guilabel:`Editable`: uncheck this option to set the field read-only
+  (not manually modifiable) even when the layer is in edit mode. Note that
+  checking this setting doesn't override any edit limitation from the provider.
+* |checkbox| :guilabel:`Label on top`: places the field name above or beside
+  the widget in the feature form.
+
+Default values
+^^^^^^^^^^^^^^
+
+* :guilabel:`Default value`: for new features, automatically populates by default
+  the field with a predefined value or an :ref:`expression-based one <vector_expressions>`.
   For example, you can:
 
-  * use ``$x``, ``$length``, ``$area`` to populate a field with the feature's x
-    coordinate, length, area or any geometric information at its creation;
+  * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
+    feature's x coordinate, length, area or any geometric information at its creation;
   * incremente a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
@@ -1972,6 +1986,12 @@ properties you can set to control whether and how a field can be edited:
     field of the feature being created so it won't be possible to use an expression
     combining any of those values i.e using an expression like ``concat(field1, field2)``
     may not work.
+
+* |checkbox| :guilabel:`Apply default value on update`: whenever the feature
+  attribute or geometry is changed, the default value is recalculated. This
+  could be handy to save values like last user that modifies data, last time it
+  was changed...
+
 
 Constraints
 ^^^^^^^^^^^
