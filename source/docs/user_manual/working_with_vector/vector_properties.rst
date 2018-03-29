@@ -1982,7 +1982,9 @@ properties you can set to control whether and how a field can be edited:
 Edit widgets
 ............
 
-The available widgets are:
+Based on the field type, QGIS automatically determines and assigns a default
+widget type to it. You can then replace the widget with any other compatible
+with the field type. The available widgets are:
 
 * **Checkbox**: Displays a checkbox whose state defines the value to insert;
 * **Classification**: only available when a :ref:`categorized symbology
@@ -1993,15 +1995,20 @@ The available widgets are:
 * **Date/Time**: Displays a line field which can open a calendar widget to enter
   a date, a time or both. Column type must be text. You can select a custom
   format, pop-up a calendar, etc.
-* **Enumeration**: Opens a combo box with values that can be used within
-  the columns type. This is currently only supported by the PostgreSQL provider.
+* **Enumeration**: Opens a combo box with predefined values fetched from the
+  database. This is currently only supported by the PostgreSQL provider, for
+  fields of ``enum`` type.
 * **Attachment**: Uses a "Open file" dialog to store file path in a
   relative or absolute mode. It can also be used to display a hyperlink (to
   document path), a picture or a web page.
 * **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
-* **Key/Value**
-* **List**
+* **Key/Value**: Displays a two-columns table to store sets of key/value
+  pairs within a single field. This is currently supported by the PostgreSQL
+  provider, for fields of ``hstore`` type. 
+* **List**: Displays a single column table to add different values within a
+  single field. This is currently supported by the PostgreSQL provider,
+  for fields of ``array`` type.
 * **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
 * **Relation Reference**: This widget lets you embed the feature form of the
