@@ -1340,63 +1340,25 @@ example, from the context menu you can:
 
 .. index::
    single: Annotation
+   see: Annotation; Form annotation
 .. _sec_annotations:
 
 Annotation Tools
 ================
 
-The |textAnnotation| :sup:`Text Annotation` tool in the attribute
-toolbar provides the possibility to place formatted text in a balloon on the
-QGIS map canvas. Use the :guilabel:`Text Annotation` tool and click into the
-map canvas.
+Annotations are information added to the map canvas and shown within a
+balloon. These information can be of different types and annotations are 
+added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
-.. _figure_annotation:
-
-.. figure:: img/annotation.png
-   :align: center
-
-   Annotation text dialog
-
-Double clicking on the item opens a dialog with various options. There is the
-text editor to enter the formatted text and other item settings. For instance,
-there is the choice of having the item placed on a map position (displayed by
-a marker symbol) or to have the item on a screen position (not related to the
-map). The item can be moved by map position (by dragging the map marker) or by
-moving only the balloon. The icons are part of the GIS theme, and they are used
-by default in the other themes, too.
-
-The |annotation| :sup:`Move Annotation` tool allows you to move the
-annotation on the map canvas.
-
-Html annotations
-----------------
-
-The |formAnnotation| :sup:`Html Annotation` tools in the attribute
-toolbar provides the possibility to place the content of an html file in a
-balloon on the QGIS map canvas. Using the :guilabel:`Html Annotation` tool,
-click into the map canvas and add the path to the html file into the dialog.
-
-SVG annotations
----------------
-
-The |saveAsSVG| :sup:`SVG Annotation` tool in the attribute toolbar
-provides the possibility to place an SVG symbol in a balloon on the QGIS map
-canvas. Using the :guilabel:`SVG Annotation` tool, click into the map canvas and
-add the path to the SVG file into the dialog.
-
-Form annotations
-----------------
-
-.. index::`annotations`
-.. index::`form annotation|\see{annotations}`
-
-Additionally, you can also create your own annotation forms. The
-|formAnnotation| :sup:`Form Annotation` tool is useful to display
-attributes of a vector layer in a customized Qt Designer form (see
-figure_custom_annotation_). This is similar to the designer forms for the
-:guilabel:`Identify features` tool, but displayed in an annotation item.
-Also see this video https://youtu.be/0pDBuSbQ02o?t=2m25s from
-Tim Sutton for more information.
+* |textAnnotation| :sup:`Text Annotation` for custom formatted text;
+* |formAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
+  file ;
+* |saveAsSVG| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
+* |formAnnotation| :sup:`Form Annotation`: useful to display attributes
+  of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
+  This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
+  but displayed in an annotation item. Also see this video
+  https://youtu.be/0pDBuSbQ02o?t=2m25s from Tim Sutton for more information.
 
 .. _figure_custom_annotation:
 
@@ -1405,11 +1367,58 @@ Tim Sutton for more information.
 
    Customized qt designer annotation form
 
-.. note::
-   If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool is active
-   (move annotation, text annotation, form annotation), the visibility states
-   of the items are inverted.
+.. Todo: Ideally, to sync with the text, this screenshot should not show the
+ dialog of form annotation but instead different forms in action, this will be all
+ about showing what an annotation looks like.
+ Annotation dialog will need to be shown only when it's described (which is done below)
+ 
+To add an annotation, select the corresponding tool and click on the map canvas.
+An empty balloon is added. Double-click on it and a dialog opens with various
+options. This dialog is almost the same for all the annotation types:
 
+* at the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
+  or :file:`ui` file depending on the type of annotation. For text annotation,
+  you have instead to enter your message in a textbox and set its rendering with
+  provided font tools;
+* |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
+  is based on a screen position (instead of the map), meaning that it's always shown
+  regardless the map canvas extent;
+* :guilabel:`Linked layer`: allows the annotation to be associated with a map layer
+  and visible only when that layer is visible; 
+* :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, allows to
+  set the symbol to display at the balloon anchor position (shown only when
+  :guilabel:`Fixed map position` is checked);
+* :guilabel:`Frame style`: Allows to set the frame background color, transparency,
+  stroke color or width... of the balloon using QGIS symbols;
+* :guilabel:`Contents margins`: set interior margins of the annotation frame.
+
+.. _figure_annotation:
+
+.. figure:: img/annotation.png
+   :align: center
+
+   Annotation text dialog
+
+Annotation can be selected when an annotation tool is enabled. Then it can be
+moved by map position (by dragging the map marker) or by moving only the balloon.
+Also the |annotation| :sup:`Move Annotation` tool allows you to move the
+balloon on the map canvas.
+
+To delete an annotation, select it and either press the :kbd:`DEL` or :kbd:`Backspace`
+button or either double-clik and press the **[Delete]** button in its properties dialog.
+
+.. note::
+   If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool (move annotation,
+   text annotation, form annotation) is active, the visibility states of the items
+   are inverted.
+
+.. tip:: **Layout the map with annotations**
+
+  You can print or export annotations with your map to various formats using:
+
+  * map canvas export tools available in :menuselection:`Project` menu;
+  * or :ref:`print layout <create-output>`: in that case you need to check the
+    :guilabel:`Draw map canvas items` in the corresponding map item properties.
 
 .. index::
    single: Bookmarks
