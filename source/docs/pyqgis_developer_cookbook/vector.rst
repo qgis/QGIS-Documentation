@@ -16,15 +16,12 @@ Retrieving information about attributes
 ========================================
 
 You can retrieve information about the fields associated with a vector layer
-by calling :func:`pendingFields` on a :class:`QgsVectorLayer` instance::
+by calling :func:`fields` on a :class:`QgsVectorLayer` instance::
 
     # "layer" is a QgsVectorLayer instance
-    for field in layer.pendingFields():
-        print field.name(), field.typeName()
+    for field in layer.fields():
+        print(field.name(), field.typeName())
 
-.. note::
-  Starting from QGIS 2.12 there is also a :func:`fields()` in
-  :class:`QgsVectorLayer` which is an alias to :func:`pendingFields`.
 
 
 .. index:: Selecting features
