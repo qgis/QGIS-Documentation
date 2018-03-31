@@ -40,14 +40,17 @@ toolbox and then check the history manager to see how that same algorithm could
 be called from the command line.
 
 Apart from browsing the entries in the registry, you can also re-execute processes by
-simply double-clicking on the corresponding entry.
+simply double-clicking on the corresponding entry: the algorithm dialog opens
+with parameters already filled; you can then change any of them to fit your
+needs and re-run the algorithm.
 
 The processing log
 -------------------
 
 The history dialog only contains the execution calls, but not the information
 produced by the algorithm when executed. That information is written to the QGIS
-log, in a :guilabel:`Processing` tab.
+log (:menuselection:`View --> Panels --> Log Messages Panel`), in a
+:guilabel:`Processing` tab.
 
 Third-party algorithms are usually executed by calling their
 command-line interfaces, which communicate with the user via the console.
