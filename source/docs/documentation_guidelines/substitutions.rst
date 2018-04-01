@@ -308,8 +308,12 @@ Icon                     Substitution                 Icon                     S
 |alignLeft|              ``|alignLeft|``              |alignRight|             ``|alignRight|``
 |alignHCenter|           ``|alignHCenter|``           |alignVCenter|           ``|alignVCenter|``
 |alignTop|               ``|alignTop|``               |alignBottom|            ``|alignBottom|``
+|resizeShortest|         ``|resizeShortest|``         |resizeTallest|          ``|resizeTallest|``
+|resizeNarrowest|        ``|resizeNarrowest|``        |resizeWidest|           ``|resizeWidest|``
+|resizeSquare|           ``|resizeSquare|``           \                        \
 |locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
-|lockedRepeat|           ``|lockedRepeat|``           |groupItems|             ``|groupItems|``
+|lockedRepeat|           ``|lockedRepeat|``           |lockedGray|             ``|lockedGray|``
+|groupItems|             ``|groupItems|``             \                        \
 =======================  ===========================  =======================  ===========================
 
 Layer Properties
@@ -805,6 +809,8 @@ Icon                            Substitution                        Icon        
    :width: 2.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
+.. |lockedGray| image:: /static/common/lockedGray.png
+   :width: 1.5em
 .. |lockedRepeat| image:: /static/common/lock_repeating.png
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
@@ -980,6 +986,16 @@ Icon                            Substitution                        Icon        
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
+   :width: 1.5em
+.. |resizeNarrowest| image:: /static/common/mActionResizeNarrowest.png
+   :width: 1.5em
+.. |resizeShortest| image:: /static/common/mActionResizeShortest.png
+   :width: 1.5em
+.. |resizeSquare| image:: /static/common/mActionResizeSquare.png
+   :width: 1.5em
+.. |resizeTallest| image:: /static/common/mActionResizeTallest.png
+   :width: 1.5em
+.. |resizeWidest| image:: /static/common/mActionResizeWidest.png
    :width: 1.5em
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
