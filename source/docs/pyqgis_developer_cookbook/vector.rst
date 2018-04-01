@@ -23,6 +23,38 @@ by calling :func:`fields` on a :class:`QgsVectorLayer` instance::
         print(field.name(), field.typeName())
 
 
+.. index:: Iterating features
+
+Iterating over Vector Layer
+===========================
+
+Iterating over the features in a vector layer is one of the most common tasks.
+Below is an example of the simple basic code to perform this task and showing
+some information about each feature. the ``layer`` variable is assumed to have
+a :class:`QgsVectorLayer` object
+
+.. code-block:: python
+
+ layer = iface.activeLayer()
+ iter = layer.getFeatures()
+
+ for feature in iter:
+     # retrieve every feature with its geometry and attributes
+     # fetch geometry
+     geom = feature.geometry()
+     print("Feature ID: ", feature.id())
+     # show some information about the feature
+     if geom.wkbType() == 1:  # Point
+         x = geom.asPoint()
+         print("Point:", x)
+     elif geom.wkbType() == 2:  # Line
+         x = geom.asPolyline()
+         print('Line:', x, 'points', 'length:', geom.length())
+     elif geom.wkbType() == 3:  # Polygon
+         x = geom.asPolygon()
+         print("Polygon:", x, "Area: ", geom.area())
+     else:
+         print("Unknown")
 
 .. index:: Selecting features
 
@@ -55,48 +87,6 @@ can call :func:`setSelectedFeatures()` passing to it the list of features IDs::
 To clear the selection, just pass an empty list::
 
     layer.setSelectedFeatures([])
-
-
-.. index:: Iterating features
-
-Iterating over Vector Layer
-===========================
-
-Iterating over the features in a vector layer is one of the most common tasks.
-Below is an example of the simple basic code to perform this task and showing
-some information about each feature. the ``layer`` variable is assumed to have
-a :class:`QgsVectorLayer` object
-
-::
-
-  iter = layer.getFeatures()
-  for feature in iter:
-      # retrieve every feature with its geometry and attributes
-      # fetch geometry
-      geom = feature.geometry()
-      print "Feature ID %d: " % feature.id()
-
-      # show some information about the feature
-      if geom.type() == QGis.Point:
-          x = geom.asPoint()
-          print "Point: " + str(x)
-      elif geom.type() == QGis.Line:
-          x = geom.asPolyline()
-          print "Line: %d points" % len(x)
-      elif geom.type() == QGis.Polygon:
-          x = geom.asPolygon()
-          numPts = 0
-          for ring in x:
-              numPts += len(ring)
-          print "Polygon: %d rings with %d points" % (len(x), numPts)
-      else:
-          print "Unknown"
-      
-      # fetch attributes
-      attrs = feature.attributes()
-
-      # attrs is a list. It contains all the attribute values of this feature
-      print attrs
 
 Accessing attributes
 --------------------
