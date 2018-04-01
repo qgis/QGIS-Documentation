@@ -2,6 +2,7 @@
 
    |updatedisclaimer|
 
+.. index:: Items properties
 .. _layout_item_options:
 
 Layout Items Common Options
@@ -11,6 +12,120 @@ Layout Items Common Options
 
    .. contents::
       :local:
+
+QGIS provides a large set of items to layout a map. They can be of map, legend,
+scale bar, picture, table, north arrow, image type... They however share some
+common options and behavior that are exposed below.
+
+.. _create_layout_item:
+
+Creating a layout item
+----------------------
+
+To create a layout item, select the corresponding tool either from the
+:menuselection:`Add Item` menu or the :guilabel:`Toolbox` bar. Then:
+
+* click-and-drag to define the initial size and placement of the item. You can
+  rely on :ref:`grids and guides <grid_guides>` snapping for a better position;
+* click on the page and make use of the :ref:`new items properties
+  <position_size>` dialog.
+* because they can have particular shapes, drawing node or arrow items does not
+  work with one-click nor click-and-drag methods; you need to click and
+  place each node of the item.
+
+.. _interact_layout_item:
+
+Interacting with layout items
+-----------------------------
+Each item inside the print layout can be moved and resized to create a perfect
+layout. For both operations the first step is to activate the |select|
+:sup:`Select/Move item` tool and click on the item.
+
+You can select multiple items with the |select| :sup:`Select/Move item` button:
+click and drag over the items or hold the :kbd:`Shift` button and click on each
+of the items you want.
+To deselect an item, click on it holding the :kbd:`Shift` button.
+
+Each time there's a selection, count of selected items is displayed on the
+status bar.
+Inside the :menuselection:`Edit` menu, you can find actions to select all the
+items, clear all selections, invert the current selection and more...
+
+Moving and resizing items
+.........................
+
+A selected item will show squares on its boundaries; moving one of them with
+the mouse will resize the item in the corresponding direction. While resizing,
+holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will
+resize from the item center.
+
+To move a layout item, select it with the mouse and move while holding the left
+button. If you need to constrain the movements to the horizontal or vertical
+axis, just hold the :kbd:`Shift` button on the keyboard while moving the mouse.
+You can also move a selected item using the :kbd:`Arrow keys` on the keyboard;
+if the movement is too slow, you can speed it up by holding :kbd:`Shift`.
+If you need better precision, use the :guilabel:`Position and size` properties,
+or grid/guides snapping.
+
+Resizing or moving several items at once is made the same way as for a single
+item. QGIS however provides some advanced tools to automatically resize a group
+of items following different rules:
+
+* each item height matches the |resizeTallest| tallest or the |resizeShortest|
+  shortest selected item;
+* each item width matches the |resizeWidest| widest or the |resizeNarrowest|
+  narrowest selected item;
+* resizes items to |resizeSquare| squares: each item is enlarged to form a
+  square.
+
+Likewise, automated tools are available to organize multiple items position
+by distributing equidistantly:
+
+* edges (left, right, top or bottom) of items;
+* centers of items either horizontally or vertically.
+
+Locking items
+.............
+
+Once you have found the correct position for an item, you can lock it by using
+the |locked| button on the :guilabel:`Actions` toolbar or ticking the box next
+to the item in the :menuselection:`Items` panel. Locked items are **not**
+selectable on the canvas.
+
+Locked items can be unlocked by selecting the item in the :menuselection:`Items`
+panel and unchecking the tickbox or you can use the icons on the toolbar.
+
+.. index:: Items alignment
+
+Alignment
+.........
+
+Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
+:sup:`Raise selected items` pull-down menu. Choose an element on the print layout
+canvas and select the matching functionality to raise or lower the selected
+element compared to the other elements. This order is
+shown in the :menuselection:`Items` panel. You can also raise or lower objects
+in the :menuselection:`Items` panel by clicking and dragging an object's label
+in this list.
+
+.. _figure_layout_common_align:
+
+.. figure:: img/alignment_lines.png
+   :align: center
+
+   Alignment helper lines in the print layout
+
+There are several alignment options available within the |alignLeft|
+:sup:`Align selected items` pull-down menu (see figure_layout_common_align_).
+To use an alignment function, you first select the elements then click on the
+matching alignment icon. All selected elements will then be aligned to their
+common bounding box. When moving items on the layout canvas, alignment helper
+lines appear when borders, centers or corners are aligned.
+
+.. _item_common_properties:
+
+Items Common Properties
+-----------------------
 
 Layout items have a set of common properties you will find at the bottom of
 the :guilabel:`Item Properties` panel: Position and size, Rotation, Frame,
@@ -26,16 +141,15 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 .. _Frame_Dialog:
 
 * The :guilabel:`Position and size` dialog lets you define the size and position
-  of the frame which contains the item.
-  You can also choose which :guilabel:`Reference point` will be set at the **X**
-  and **Y** coordinates previously defined.
+  of the frame which contains the item (see :ref:`position_size` for more
+  information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
   Click on the [Color] and [Thickness] buttons to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color
   or choose from a custom setting.
-  Transparency can be adjusted through atlering the alpha field settings.
+  Transparency can be adjusted through altering the alpha field settings.
 * Use the :guilabel:`Item ID` to create a relationship to other print layout
   items. This is used with QGIS server and other potential web clients. You can
   set an ID on an item (for example, a map or a label), and then the web client
@@ -52,12 +166,33 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
    expressions. These are particularly helpful with atlas generation
    (See :ref:`atlas_data_defined_override`).
 
+.. _position_size:
+
+Position and Size
+.................
+
+Based on the :guilabel:`New Item Properties` dialog, this group allows you to
+set:
+
+* the actual number of the page to place the item on;
+* the reference point of the item;
+* the :guilabel:`X` and :guilabel:`Y` coordinate of the reference map in
+  the selected page. The ratio between these values can be locked pressing the
+  |lockedGray| button beside. Changing any value using the widget or the
+  |select| :sup:`Select/Move item` tool onto the page will proportionally
+  update the other one;
+* the :guilabel:`Width` and :guilabel:`Height` of the item bounding box. Like
+  with coordinates, ratio between width and height can be locked and their
+  values updated with changes applied to the other one.
+
+.. Todo: Add screenshot showing the new item properties dialog (not the
+ position and size group)
 
 .. index:: Rendering mode
 .. _layout_Rendering_Mode:
 
 Rendering mode
---------------
+..............
 
 QGIS allows advanced rendering for layout items just like vector and
 raster layers.
@@ -83,76 +218,8 @@ raster layers.
   After activating this checkbox, the item will not be included in export to
   PDF, print etc..
 
-
-Size and position
------------------
-
-Each item inside the print layout can be moved and resized to create a perfect
-layout.For both operations the first step is to activate the |select|
-:sup:`Select/Move item` tool and to click on the item; you can then move it
-using the mouse while holding the left button. If you need to constrain the
-movements to the horizontal or the vertical axis, just hold the :kbd:`Shift`
-button on the keyboard while moving the mouse. If you need better precision,
-you can move a selected item using the :kbd:`Arrow keys` on the keyboard;
-if the movement is too slow, you can speed up it by holding :kbd:`Shift`.
-
-A selected item will show squares on its boundaries; moving one of them with
-the mouse, will resize the item in the corresponding direction. While resizing,
-holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will
-resize from the item center.
-
-The correct position for an item can be obtained using the grid snapping or
-smart guides. Guides are set by clicking and dragging within the ruler area.
-To move a guide, click on the ruler, level with the guide and drag it to a new
-position. To delete a guide move it off the canvas. If you need to disable the
-snap on the fly, hold :kbd:`Ctrl` while moving the mouse.
-
-You can choose multiple items with the |select| :sup:`Select/Move item` button.
-Just hold the :kbd:`Shift` button and click on all the items you need.
-You can then resize/move this group like a single item.
-
-Once you have found the correct position for an item, you can lock it by using
-the items on the toolbar or ticking the box next to the item in the
-:menuselection:`Items` panel. Locked items are **not** selectable on the canvas.
-
-Locked items can be unlocked by selecting the item in the :menuselection:`Items`
-panel and unchecking the tickbox or you can use the icons on the toolbar.
-
-To unselect an item, just click on it holding the :kbd:`Shift` button.
-
-Inside the :menuselection:`Edit` menu, you can find actions to select all the
-items, to clear all selections or to invert the current selection.
-
-
-.. index:: Items alignment
-
-Alignment
----------
-
-Raising or lowering the visual hierarchy for elements are inside the |raiseItems|
-:sup:`Raise selected items` pull-down menu. Choose an element on the print layout
-canvas and select the matching functionality to raise or lower the selected
-element compared to the other elements. This order is
-shown in the :menuselection:`Items` panel. You can also raise or lower objects
-in the :menuselection:`Items` panel by clicking and dragging an object's label
-in this list.
-
-.. _figure_layout_common_align:
-
-.. figure:: img/alignment_lines.png
-   :align: center
-
-   Alignment helper lines in the print layout
-
-There are several alignment options available within the |alignLeft|
-:sup:`Align selected items` pull-down menu (see figure_layout_common_align_).
-To use an alignment function, you first select the elements then click on the
-matching alignment icon. All selected elements will then be aligned to their
-common bounding box. When moving items on the layout canvas, alignment helper
-lines appear when borders, centers or corners are aligned.
-
 Variables
----------
+.........
 
 The :guilabel:`Variables` lists all the variables available at
 the layout item's level (which includes all global, project and
@@ -164,8 +231,7 @@ Click the |signPlus| button to add a new custom variable. Likewise, select any
 custom item-level variable from the list and click the |signMinus| button to
 remove it.
 
-More information on variables usage in the General Tools
-:ref:`general_tools_variables` section.
+More information on variables usage in the :ref:`general_tools_variables` section.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -179,7 +245,21 @@ More information on variables usage in the General Tools
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |lockedGray| image:: /static/common/lockedGray.png
+   :width: 1.5em
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
+   :width: 1.5em
+.. |resizeNarrowest| image:: /static/common/mActionResizeNarrowest.png
+   :width: 1.5em
+.. |resizeShortest| image:: /static/common/mActionResizeShortest.png
+   :width: 1.5em
+.. |resizeSquare| image:: /static/common/mActionResizeSquare.png
+   :width: 1.5em
+.. |resizeTallest| image:: /static/common/mActionResizeTallest.png
+   :width: 1.5em
+.. |resizeWidest| image:: /static/common/mActionResizeWidest.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
