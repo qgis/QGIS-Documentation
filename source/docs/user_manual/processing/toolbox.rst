@@ -27,7 +27,7 @@ of the same algorithm on different sets of inputs.
 
 The toolbox contains all the available algorithms, divided into so-called "Providers".
 
-Providers can be (de)activated in the settings dialog.
+Providers can be (de)activated in the :ref:`settings dialog <processing.options>`.
 A label in the bottom part of the toolbox will remind you of that whenever there
 are inactive providers. Use the link in the label to open the settings window and
 set up providers. We will discuss the settings dialog later in this manual.
@@ -35,16 +35,24 @@ set up providers. We will discuss the settings dialog later in this manual.
 By default, only providers that do not rely on third-party applications (that is,
 those that only require QGIS elements to be run) are active. Algorithms requiring
 external applications might need additional configuration. Configuring providers
-is explained in a later chapter in this manual.
+is explained in a :ref:`later chapter <processing.results>` in this manual.
 
-In the upper part of the toolbox, you will find a text box. To reduce the number
+In the upper part of the toolbox, you will find a set of tools to:
+
+* work with |processingModel| :sup:`Models`: :guilabel:`Create New Model...`,
+  :guilabel:`Open Existing Model...` and :guilabel:`Add Model from File...`;
+* work with |pythonFile| :sup:`Scripts`: :guilabel:`Create New Script...`,
+  :guilabel:`Create New Script from Template...` and :guilabel:`Add Script from
+  File...`;
+* open the |processingHistory| :sup:`History` panel;
+* open the |processingResult| :sup:`Results Viewer` panel;
+* open the |options| :sup:`Options` dialog.
+
+Below this toolbar is a search box. To reduce the number
 of algorithms shown in the toolbox and make it easier to find the one you need,
 you can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms in the toolbox is reduced to just those that contain the
-text you have entered in their names.
-
-If there are algorithms that match your search but belong to a provider that is
-not active, an additional label will be shown in the lower part of the toolbox.
+text you have entered in their names or keywords.
 
 .. _figure_toolbox_search:
 
@@ -53,17 +61,6 @@ not active, an additional label will be shown in the lower part of the toolbox.
 
    Processing Toolbox showing search results
 
-
-If you click on the link in that label, the list of algorithms will also include those from
-inactive providers, which will be shown in light gray. A link to active each inactive provider
-is also shown.
-
-.. _figure_toolbox_searchresult:
-
-.. figure:: img/toolbox_search2.png
-   :align: center
-
-   Processing Toolbox showing search results
 
 To execute an algorithm, just double-click on its name in the toolbox.
 
@@ -120,6 +117,13 @@ table can be of one of the following types.
   algorithm is executed. This allows for automating the process when all
   features in a layer have to be processed separately.
 
+.. note::
+
+ By default, the parameters dialog will show a description of the CRS of each layer along with
+ its name. If you do not want to see this additional information, you can
+ disable this functionality in the Processing Settings dialog, unchecking the
+ :menuselection:`General --> Show layer CRS definition in selection boxes` option.
+
 * A **table**, to select from a list of all available in QGIS. Non-spatial
   tables are loaded into QGIS like vector layers, and in fact they are treated as
   such by the program. Currently, the list of available tables that you will see
@@ -127,10 +131,11 @@ table can be of one of the following types.
   tables coming from files in dBase (:file:`.dbf`) or Comma-Separated Values
   (:file:`.csv`) formats.
 * An **option**, to choose from a selection list of possible options.
-* A **numerical value**, to be introduced in a spin box. You will find a
-  button by its side. Clicking on it, you will open the expression builder
-  that allows you to enter a
-  mathematical expression, so you can use it as a handy calculator. Some useful
+* A **numerical value**, to be introduced in a spin box. In some contexts (when
+  the parameter applies at the feature level and not at the layer's), you will
+  find a |dataDefined| :sup:`Data-defined override` button by its side, allowing
+  you to open the :ref:`expression builder <vector_expressions>` and enter a
+  mathematical expression to generate variable values for the parameter. Some useful
   variables related to data loaded into QGIS can be added to your expression, so
   you can select a value derived from any of these variables, such as the cell size
   of a layer or the northernmost coordinate of another one.
@@ -146,17 +151,16 @@ table can be of one of the following types.
 * A **text string**, to be introduced in a text box.
 * A **field**, to choose from the attributes table of a vector layer or a single
   table selected in another parameter.
-* A **coordinate reference system**. You can type the EPSG code directly in the
-  text box, or select it from the CRS selection dialog that appears when you
-  click on the button on the right-hand side.
+* A **coordinate reference system**. You can select it among the recently used
+  ones from the drop-down list or from the :ref:`CRS selection <crs_selector>`
+  dialog that appears when you click on the button on the right-hand side.
 * An **extent**, to be entered by four numbers representing its ``xmin``,
   ``xmax``, ``ymin``, ``ymax`` limits. Clicking on the button on the
   right-hand side of the value selector, a pop-up menu will appear, giving
-  you three options:
+  you options:
 
-  * to select the value from a layer or the current canvas extent,
-  * to define it by dragging directly onto the map canvas, or
-  * to use the minimum coverage from all input layers.
+  * to select the value from a layer or the current canvas extent;
+  * or to define it by dragging directly onto the map canvas.
 
   .. _figure_extent:
 
@@ -186,10 +190,11 @@ table can be of one of the following types.
 
      Extent Drag
 
-* A **list of elements** (whether raster layers, vector layers or tables), to
-  select from the list of such layers available in QGIS. To make the selection,
-  click on the small button on the left side of the corresponding row to see
-  a dialog like the following one.
+* A **list of elements** (whether raster or vector layers, tables, fields) to
+  select from. Click on the |browseButton| button at the left of the option to
+  see a dialog like the following one. Multiple selection is allowed and when
+  the dialog is closed, number of selected items is displayed in the parameter
+  text box widget.
 
   .. _figure_multiple_selection:
 
@@ -233,9 +238,11 @@ On the right hand side of the dialog you wil find a short description of the
 algorithm, which will help you understand its purpose and its basic ideas.
 If such a description is not available, the description panel will not be shown.
 
-Some algorithms might have a more detailed help file, which might include
-description of every parameter it uses, or examples. In that case, you will
-find a :guilabel:`Help` tab in the  parameters dialog.
+For a more detailed help file, which might include description of every
+parameter it uses, or examples, you will find a **[Help]** button at the
+bottom of the dialog bringing you to the :ref:`Processing algorithms
+documentation <processing_algs>` or to the provider documentation (for
+some third-party providers).
 
 
 A note on projections
@@ -291,11 +298,10 @@ you can type the output channel to use for saving it. An output channel contains
 the information needed to save the resulting object somewhere. In the most usual
 case, you will save it to a file, but in the case of vector layers, and when they
 are generated by native algorithms (algorithms not using external applications)
-you can also save to a PostGIS or Spatialite database, or a memory layer.
+you can also save to a PostGIS, GeoPackage or Spatialite database, or a memory layer.
 
 To select an output channel, just click on the button on the right side of the
 text box, and you will see a small context menu with the available options.
-
 
 In the most usual case, you will select saving to a file. If you select that option,
 you will be prompted with a save file dialog, where you can select the desired
@@ -309,17 +315,19 @@ the file path instead). If the extension of the file path you entered does not
 match any of the supported formats, a default extension will be
 appended to the file path, and the file format corresponding to that extension will
 be used to save the layer or table. Default extensions are :file:`.dbf` for
-tables, :file:`.tif` for raster layers and :file:`.shp` for vector layers. These
-can be modified in the setting dialog, selecting any other of the formats supported by QGIS.
+tables, :file:`.tif` for raster layers and :file:`.gpkg` for vector layers. These
+can be modified in the setting dialog, selecting any other of the formats supported
+by QGIS.
 
 If you do not enter any filename in the output text box (or select the corresponding
-option in the context menu), the result will be saved as a temporary file
+option in the context menu), the result will be saved as a :ref:`temporary file <vector_new_scratch_layer>`
 in the corresponding default file format, and it will be deleted once you exit
 QGIS (take care with that, in case you save your project and it contains temporary
 layers).
 
 You can set a default folder for output data objects. Go to the settings
-dialog (you can open it from the :menuselection:`Processing` menu), and in the
+dialog (you can open it from the :menuselection:`Settings --> Options --> Processing`
+menu), and in the
 :guilabel:`General` group, you will find a parameter named :guilabel:`Output folder`.
 This output folder is used as the default path in case you type just a filename
 with no path (i.e., :file:`myfile.shp`) when executing an algorithm.
@@ -333,7 +341,7 @@ Apart from raster layers and tables, algorithms also generate graphics and text
 as HTML files. These results are shown at the end of the algorithm execution in
 a new dialog. This dialog will keep the results produced by any algorithm during the
 current session, and can be shown at any time by selecting
-:menuselection:`Processing --> Results viewer` from the QGIS main menu.
+:menuselection:`Processing --> Results Viewer` from the QGIS main menu.
 
 Some external applications might have files (with no particular extension
 restrictions) as output, but they do not belong to any of the categories above.
@@ -354,10 +362,25 @@ layer is created anyway, but if you leave the text box empty, it will be saved
 to a temporary file and deleted once you exit QGIS).
 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |processingHistory| image:: /static/common/history.png
+   :width: 2em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingResult| image:: /static/common/processingResult.png
+   :width: 1.5em
+.. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
