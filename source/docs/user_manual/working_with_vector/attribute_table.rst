@@ -141,8 +141,8 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
   
-You can switch from one mode to the other by clicking the convenient icon at the
-bottom right of the dialog.
+You can switch from one mode to the other by clicking the corresponding icon at
+the bottom right of the dialog.
 
 You can also specify the :guilabel:`Default view` mode at the opening of the
 attribute table in :menuselection:`Settings --> Options --> Data Sources` menu.
