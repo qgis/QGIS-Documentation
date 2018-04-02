@@ -36,25 +36,31 @@ a :class:`QgsVectorLayer` object
 .. code-block:: python
 
  layer = iface.activeLayer()
- iter = layer.getFeatures()
+ features = layer.getFeatures()
 
- for feature in iter:
+ for feature in features:
      # retrieve every feature with its geometry and attributes
      # fetch geometry
      geom = feature.geometry()
      print("Feature ID: ", feature.id())
      # show some information about the feature
-     if geom.wkbType() == 1:  # Point
+     if geom.wkbType() == QgsWkbTypes.Point:
          x = geom.asPoint()
          print("Point:", x)
-     elif geom.wkbType() == 2:  # Line
+     elif geom.wkbType() == QgsWkbTypes.LineString:
          x = geom.asPolyline()
          print('Line:', x, 'points', 'length:', geom.length())
-     elif geom.wkbType() == 3:  # Polygon
+     elif geom.wkbType() == QgsWkbTypes.Polygon:
          x = geom.asPolygon()
          print("Polygon:", x, "Area: ", geom.area())
      else:
          print("Unknown")
+
+     # fetch attributes	
+     attrs = feature.attributes()
+
+     # attrs is a list. It contains all the attribute values of this feature	
+     print(attrs)
 
 .. index:: Selecting features
 
