@@ -23,6 +23,44 @@ by calling :func:`fields` on a :class:`QgsVectorLayer` instance::
         print(field.name(), field.typeName())
 
 
+.. index:: Iterating features
+
+Iterating over Vector Layer
+===========================
+
+Iterating over the features in a vector layer is one of the most common tasks.
+Below is an example of the simple basic code to perform this task and showing
+some information about each feature. The ``layer`` variable is assumed to have
+a :class:`QgsVectorLayer` object.
+
+.. code-block:: python
+
+ layer = iface.activeLayer()
+ features = layer.getFeatures()
+
+ for feature in features:
+     # retrieve every feature with its geometry and attributes
+     # fetch geometry
+     geom = feature.geometry()
+     print("Feature ID: ", feature.id())
+     # show some information about the feature
+     if geom.wkbType() == QgsWkbTypes.Point:
+         x = geom.asPoint()
+         print("Point:", x)
+     elif geom.wkbType() == QgsWkbTypes.LineString:
+         x = geom.asPolyline()
+         print('Line:', x, 'points', 'length:', geom.length())
+     elif geom.wkbType() == QgsWkbTypes.Polygon:
+         x = geom.asPolygon()
+         print("Polygon:", x, "Area: ", geom.area())
+     else:
+         print("Unknown")
+
+     # fetch attributes	
+     attrs = feature.attributes()
+
+     # attrs is a list. It contains all the attribute values of this feature	
+     print(attrs)
 
 .. index:: Selecting features
 
@@ -33,8 +71,17 @@ In QGIS desktop, features can be selected in different ways, the user can click
 on a feature, draw a rectangle on the map canvas or use an expression filter.
 Selected features are normally highlighted in a different color (default
 is yellow) to draw user's attention on the selection.
+
 Sometimes can be useful to programmatically select features or to change the
 default color.
+
+To select all the features:
+
+.. code-block:: python
+
+ # Get the active layer (must be a vector layer)
+ layer = iface.activeLayer()
+ layer.selectAll()
 
 To change the selection color you can use :func:`setSelectionColor()`
 method of :class:`QgsMapCanvas` as shown in the following example::
@@ -42,79 +89,37 @@ method of :class:`QgsMapCanvas` as shown in the following example::
     iface.mapCanvas().setSelectionColor( QColor("red") )
 
 
-To add add features to the selected features list for a given layer, you
-can call :func:`setSelectedFeatures()` passing to it the list of features IDs::
+To add features to the selected features list for a given layer, you
+can call :func:`select()` passing to it the list of features IDs:
 
-    # Get the active layer (must be a vector layer)
-    layer = iface.activeLayer()
-    # Get the first feature from the layer
-    feature = layer.getFeatures().next()
-    # Add this features to the selected list
-    layer.setSelectedFeatures([feature.id()])
+.. code-block:: python
 
-To clear the selection, just pass an empty list::
+ selected_fid = []
 
-    layer.setSelectedFeatures([])
+ # Get the first feature id from the layer
+ for feature in layer.getFeatures():
+     selected_fid.append(feature.id())
+     break
 
+ # Add this features to the selected list
+ layer.select(selected_fid)
 
-.. index:: Iterating features
+To clear the selection::
 
-Iterating over Vector Layer
-===========================
-
-Iterating over the features in a vector layer is one of the most common tasks.
-Below is an example of the simple basic code to perform this task and showing
-some information about each feature. the ``layer`` variable is assumed to have
-a :class:`QgsVectorLayer` object
-
-::
-
-  iter = layer.getFeatures()
-  for feature in iter:
-      # retrieve every feature with its geometry and attributes
-      # fetch geometry
-      geom = feature.geometry()
-      print "Feature ID %d: " % feature.id()
-
-      # show some information about the feature
-      if geom.type() == QGis.Point:
-          x = geom.asPoint()
-          print "Point: " + str(x)
-      elif geom.type() == QGis.Line:
-          x = geom.asPolyline()
-          print "Line: %d points" % len(x)
-      elif geom.type() == QGis.Polygon:
-          x = geom.asPolygon()
-          numPts = 0
-          for ring in x:
-              numPts += len(ring)
-          print "Polygon: %d rings with %d points" % (len(x), numPts)
-      else:
-          print "Unknown"
-      
-      # fetch attributes
-      attrs = feature.attributes()
-
-      # attrs is a list. It contains all the attribute values of this feature
-      print attrs
+ layer.removeSelection()
 
 Accessing attributes
 --------------------
 
-Attributes can be referred to by their name.
+Attributes can be referred to by their name::
 
-::
-
-  print feature['name']
+ print(feature['name'])
 
 Alternatively, attributes can be referred to by index.
 This is will be a bit faster than using the name.
-For example, to get the first attribute:
+For example, to get the first attribute::
 
-::
-
-  print feature[0]
-
+ print(feature[0])
 
 Iterating over selected features
 --------------------------------
@@ -125,7 +130,7 @@ method from vector layer:
 .. code-block:: python
 
   selection = layer.selectedFeatures()
-  print len(selection)
+  print(len(selection))
   for feature in selection:
       # do whatever you need with the feature
 
