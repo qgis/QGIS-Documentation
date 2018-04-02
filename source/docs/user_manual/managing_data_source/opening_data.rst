@@ -384,26 +384,6 @@ map canvas, in which case you'll get a dialog to select sublayers based on the
 geometry type. The loaded layers will contain all the data of that geometry type
 in the file and keep the :file:`osm` file data structure.
 
-To avoid working with a such complex data structure, and be able to select only
-features you need based on their tags, QGIS provides a core and fully integrated
-OpenStreetMap import tool:
-
-* To connect to the OSM server and download data, open the menu
-  :menuselection:`Vector --> OpenStreetMap --> Download data...`. You can skip
-  this step if you already obtained an :file:`.osm` XML file using JOSM,
-  Overpass API or any other source;
-* The menu :menuselection:`Vector --> OpenStreetMap --> Import Topology from
-  XML...` will convert your :file:`.osm` file into a SpatiaLite database
-  and create a corresponding database connection;
-* The menu :menuselection:`Vector --> OpenStreetMap --> Export Topology to
-  SpatiaLite...` then allows you to open the database connection, select the
-  type of data you want (points, lines, or polygons) and choose tags to import.
-  This creates a SpatiaLite geometry layer that you can add to your
-  project by clicking on the |addSpatiaLiteLayer|
-  :sup:`Add SpatiaLite Layer` toolbar button or by selecting the
-  |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
-  from the :menuselection:`Layer` menu (see section :ref:`label_spatialite`).
-
 
 GPS
 ---

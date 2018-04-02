@@ -414,23 +414,6 @@ Icon                            Substitution                        Icon        
 |grassRegion|                   ``|grassRegion|``                   |grassSetRegion|                ``|grassSetRegion|``
 ==============================  ==================================  ==============================  ==================================
 
-OpenStreetMap
-.............
-
-=============================  =================================  =============================  ==================================
-Icon                            Substitution                      Icon                           Substitution
-=============================  =================================  =============================  ==================================
-|osmLoad|                      ``|osmLoad|``                      |osmDownload|                  ``|osmDownload|``
-|osmFeatureManager|            ``|osmFeatureManager|``            |osmIdentify|                  ``|osmIdentify|``
-|osmImport|                    ``|osmImport|``                    |osmSave|                      ``|osmSave|``
-|osmCreatePoint|               ``|osmCreatePoint|``               |osmCreateLine|                ``|osmCreateLine|``
-|osmCreatePolygon|             ``|osmCreatePolygon|``             \                              \
-|osmMove|                      ``|osmMove|``                      |osmRemoveFeat|                ``|osmRemoveFeat|``
-|osmCreateRelation|            ``|osmCreateRelation|``            |osmAddRelation|               ``|osmAddRelation|``
-|osmEditRelation|              ``|osmEditRelation|``              |osmGenerateTags|              ``|osmGenerateTags|``
-|osmQuestionMark|              ``|osmQuestionMark|``              \                              \
-=============================  =================================  =============================  ==================================
-
 eVis plugin
 ...........
 
@@ -894,38 +877,6 @@ Icon                            Substitution                        Icon        
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |oracleRaster| image:: /static/common/oracleraster.png
-   :width: 1.5em
-.. |osmAddRelation| image:: /static/common/osm_addRelation.png
-   :width: 1.5em
-.. |osmCreateLine| image:: /static/common/osm_createLine.png
-   :width: 1.5em
-.. |osmCreatePoint| image:: /static/common/osm_createPoint.png
-   :width: 1.5em
-.. |osmCreatePolygon| image:: /static/common/osm_createPolygon.png
-   :width: 1.5em
-.. |osmCreateRelation| image:: /static/common/osm_createRelation.png
-   :width: 1.5em
-.. |osmDownload| image:: /static/common/osm_download.png
-   :width: 1.5em
-.. |osmEditRelation| image:: /static/common/osm_editRelation.png
-   :width: 1.5em
-.. |osmFeatureManager| image:: /static/common/osm_featureManager.png
-   :width: 1.5em
-.. |osmGenerateTags| image:: /static/common/osm_generateTags.png
-   :width: 1.5em
-.. |osmIdentify| image:: /static/common/osm_identify.png
-   :width: 1.5em
-.. |osmImport| image:: /static/common/osm_import.png
-   :width: 1.5em
-.. |osmLoad| image:: /static/common/osm_load.png
-   :width: 1.5em
-.. |osmMove| image:: /static/common/osm_move.png
-   :width: 1.5em
-.. |osmQuestionMark| image:: /static/common/osm_questionMark.png
-   :width: 1.5em
-.. |osmRemoveFeat| image:: /static/common/osm_removeFeat.png
-   :width: 1.5em
-.. |osmSave| image:: /static/common/osm_save.png
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
