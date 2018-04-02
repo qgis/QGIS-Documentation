@@ -131,6 +131,12 @@ You can also use layout templates from a custom folder; in that case, select
 *specific* in the templates drop-down list, browse to the template and press
 **[Create]**.
 
+.. tip:: **Opening template files from Browser panel**
+
+  Double-click a :file:`.qpt` file in the :ref:`Browser panel <browser_panel>`
+  or drag-and-drop it onto the map canvas generates a new print layout from the
+  template.
+
 .. Todo: Add a link to User profile section when it's ready
 
 .. _print_composer_menus:
