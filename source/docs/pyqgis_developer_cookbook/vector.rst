@@ -71,8 +71,17 @@ In QGIS desktop, features can be selected in different ways, the user can click
 on a feature, draw a rectangle on the map canvas or use an expression filter.
 Selected features are normally highlighted in a different color (default
 is yellow) to draw user's attention on the selection.
+
 Sometimes can be useful to programmatically select features or to change the
 default color.
+
+To select all the features:
+
+.. code-block:: python
+
+ # Get the active layer (must be a vector layer)
+ layer = iface.activeLayer()
+ layer.selectAll()
 
 To change the selection color you can use :func:`setSelectionColor()`
 method of :class:`QgsMapCanvas` as shown in the following example::
@@ -81,18 +90,23 @@ method of :class:`QgsMapCanvas` as shown in the following example::
 
 
 To add add features to the selected features list for a given layer, you
-can call :func:`setSelectedFeatures()` passing to it the list of features IDs::
+can call :func:`setSelectedFeatures()` passing to it the list of features IDs:
 
-    # Get the active layer (must be a vector layer)
-    layer = iface.activeLayer()
-    # Get the first feature from the layer
-    feature = layer.getFeatures().next()
-    # Add this features to the selected list
-    layer.setSelectedFeatures([feature.id()])
+.. code-block:: python
 
-To clear the selection, just pass an empty list::
+ selected_fid = []
 
-    layer.setSelectedFeatures([])
+ # Get the first feature id from the layer
+ for feature in layer.getFeatures():
+     selected_fid.append(feature.id())
+     break
+
+ # Add this features to the selected list
+ layer.select(selected_fid)
+
+To clear the selection::
+
+ layer.removeSelection()
 
 Accessing attributes
 --------------------
