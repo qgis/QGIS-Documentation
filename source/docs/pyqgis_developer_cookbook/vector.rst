@@ -154,17 +154,19 @@ Iterating over a subset of features
 
 If you want to iterate over a given subset of features in a layer, such as
 those within a given area, you have to add a :obj:`QgsFeatureRequest` object
-to the :func:`getFeatures()` call. Here's an example
+to the :func:`getFeatures()` call. Here's an example:
 
 .. code-block:: python
 
-  request = QgsFeatureRequest()
-  request.setFilterRect(areaOfInterest)
-  for feature in layer.getFeatures(request):
-      # do whatever you need with the feature
+ areaOfInterest = QgsRectangle(450290,400520, 450750,400780)
+
+ request = QgsFeatureRequest().setFilterRect(areaOfInterest)
+
+ for feature in layer.getFeatures(request):
+     # do whatever you need with the feature
 
 With :func:`setLimit()` you can limit the number of requested features. 
-Here's an example
+Here's an example:
 
 .. code-block:: python
 
@@ -197,7 +199,7 @@ iterator returns all features, but returns partial data for each of them.
   # Only return selected fields
   request.setSubsetOfAttributes([0,2])
   # More user friendly version
-  request.setSubsetOfAttributes(['name','id'],layer.pendingFields())
+  request.setSubsetOfAttributes(['name','id'],layer.fields())
   # Don't return geometry objects
   request.setFlags(QgsFeatureRequest.NoGeometry)
 
@@ -281,7 +283,7 @@ the number of fields you want to be added.
 .. code-block:: python
 
   if caps & QgsVectorDataProvider.AddFeatures:
-      feat = QgsFeature(layer.pendingFields())
+      feat = QgsFeature(layer.fields())
       feat.setAttributes([0, 'hello'])
       # Or set a single attribute by key or by index:
       feat.setAttribute('name', 'hello')
