@@ -76,7 +76,7 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 .. _layout_manager:
 
 The Layout Manager
-====================
+==================
 
 The :guilabel:`Layout Manager` is the main window to manage print layouts in the project.
 It helps you add new print layout, duplicate an existing one, rename or delete
@@ -151,7 +151,7 @@ and :guilabel:`Atlas generation`.
 
 * The :guilabel:`Items` panel provides a list of all the print layout items added to
   the canvas.
-* The :guilabel:`Undo history` panel displays a history of all changes applied
+* The :guilabel:`Undo History` panel displays a history of all changes applied
   to the layout. With a mouse click, it is possible to undo and
   redo layout steps back and forth to a certain status.
 * The :guilabel:`Layout` panel allows you to set paper size, orientation, the
@@ -166,7 +166,7 @@ and :guilabel:`Atlas generation`.
   :guilabel:`Item Properties` panel and customize the settings for the selected
   item (see :ref:`layout_items` for detailed information on each item
   settings).
-* The :guilabel:`Atlas generation` panel allows you to enable the generation of an
+* The :guilabel:`Atlas` panel allows you to enable the generation of an
   atlas for the current layout and gives access to its parameters
   (see :ref:`atlas_generation` for detailed information on atlas
   generation usage).
@@ -179,11 +179,11 @@ the number of features.
 
 In the upper part of the print layout window, you can find menus and other
 toolbars. All print layout tools are available in menus and as icons in a
-toolbar. See a list of tools in table_layout_tools_.
+toolbar.
 
 The toolbars and the panels can be switched off and on using the right mouse
-button over any toolbar or through :menuselection:`View --> Toolbars` or
-:menuselection:`View --> Panels`.
+button over any toolbar or through :menuselection:`View --> Toolbars -->` or
+:menuselection:`View --> Panels -->`.
 
 
 .. index::
@@ -191,90 +191,26 @@ button over any toolbar or through :menuselection:`View --> Toolbars` or
 
 .. _layout_tools:
 
-Tools
------
+Menus and Tools
+---------------
 
-.. _table_layout_tools:
+Layout menu
+...........
 
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| Icon                  | Purpose                               | Icon                | Purpose                                  |
-+=======================+=======================================+=====================+==========================================+
-| |fileSave|            | Save Project                          | |newLayout|         | New Layout                               |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |duplicateLayout|     | Duplicate Layout                      | |layoutManager|     | Layout Manager                           |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |fileOpen|            | Load from template                    | |fileSaveAs|        | Save as template                         |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |filePrint|           | Print or export as PostScript         | |saveMapAsImage|    | Export to an image format                |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |saveAsSVG|           | Export print composition to SVG       | |saveAsPDF|         | Export as PDF                            |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |undo|                | Revert last change                    | |redo|              | Restore last change                      |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |zoomFullExtent|      | Zoom to full extent                   | |zoomActual|        | Zoom to 100%                             |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |zoomIn|              | Zoom in                               | |zoomIn|            | Zoom out                                 |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |draw|                | Refresh View                          |                     |                                          |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |pan|                 | Pan                                   | |zoomToArea|        | Zoom to specific region                  |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |select|              | Select/Move item in print composition | |moveItemContent|   | Move content within an item              |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |addMap|              | Add new map from QGIS map canvas      | |addImage|          | Add image to print composition           |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |label|               | Add label to print composition        | |addLegend|         | Add new legend to print composition      |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |scaleBar|            | Add scale bar to print composition    | |addBasicShape|     | Add basic shape to print composition     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |addArrow|            | Add arrow to print composition        | |openTable|         | Add attribute table to print composition |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |addHtml|             | Add an HTML frame                     | |addNodesShape|     | Add nodes shape to print composition     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |editNodesShape|      | Edit a nodes shape                    |                     |                                          |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |groupItems|          | Group items of print composition      | |ungroupItems|      | Ungroup items of print composition       |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |locked|              | Lock Selected Items                   | |unlocked|          | Unlock All items                         |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |raiseItems|          | Raise selected items                  | |lowerItems|        | Lower selected items                     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |moveItemsToTop|      | Move selected items to top            | |moveItemsToBottom| | Move selected items to bottom            |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |alignLeft|           | Align selected items left             | |alignRight|        | Align selected items right               |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |alignHCenter|        | Align selected items center           | |alignVCenter|      | Align selected items center vertical     |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |alignTop|            | Align selected items top              | |alignBottom|       | Align selected items bottom              |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |atlas|               | Preview Atlas                         | |atlasFirst|        | First Feature                            |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |atlasPrev|           | Previous Feature                      |  |atlasNext|        | Next Feature                             |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |atlasLast|           | Last feature                          |  |filePrint|        | Print Atlas                              |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
-| |saveMapAsImage|      | Export Atlas as Image                 |  |atlasSettings|    | Atlas Settings                           |
-+-----------------------+---------------------------------------+---------------------+------------------------------------------+
+The :menuselection:`Layout` provides action to manage the layout:
 
-Table Layout 1: Print Layout Tools
-
-Layout Menu
------------
-
-With the :menuselection:`Layout --> Save Project` action, you can save
-the project file directly from the print layout window.
-The :menuselection:`Layout` menu also provides actions to:
-
-* Create a new and blank print layout with |newLayout| :guilabel:`New Layout...`
+* Save the project file directly from the print layout window;
+* Create a new and blank print layout with |newLayout| :guilabel:`New Layout...`;
 * |duplicateLayout| :guilabel:`Duplicate Layout...` : Create a new print layout
-  by duplicating the current one
+  by duplicating the current one;
+* Remove the current layout with |deleteSelected| :guilabel:`Delete Layout...`;  
 * Open the |layoutManager| :guilabel:`Layout Manager...`
-* :menuselection:`Layouts -->` : Open an existing print layout
+* :menuselection:`Layouts -->` : Open an existing print layout.
 
 Once the layout is designed, with |fileSaveAs| :guilabel:`Save as Template`
 and |fileOpen| :guilabel:`Add Items from Template` icons, you can save
-the current state of a print layout session as a :file:`.qpt` template
-and load its item again in another session.
+the current state of a print layout session as a :file:`.qpt` template file
+and load its items again in another session/print layout.
 
 In the :menuselection:`Layout` menu, there are also powerful ways to share
 geographical information produced with QGIS that can be included in reports or
@@ -282,8 +218,205 @@ published. These tools are |saveMapAsImage| :guilabel:`Export as Image...`,
 |saveAsPDF| :guilabel:`Export as PDF...`, |saveAsSVG| :guilabel:`Export as
 SVG...` and |filePrint| :guilabel:`Print...`.
 
+Below is a list of all the available tools in this menu with some convenient
+information.
+
+================================================= ========================== ========================== =====================================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== =====================================
+ |fileSave| :guilabel:`Save Project`               :kbd:`Ctrl+S`              :guilabel:`Layout`
+ |newLayout| :guilabel:`New Layout`                :kbd:`Ctrl+N`              :guilabel:`Layout`
+ |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`
+ |deleteSelected| :guilabel:`Delete Layout`
+ |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
+ :menuselection:`Layouts —>`
+ :guilabel:`Layout Properties...`                                                                        :ref:`layout_tab`
+ :guilabel:`Rename Layout...`
+ |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`
+ |fileOpen| :guilabel:`Add Items from Template`
+ |fileSaveAs| :guilabel:`Save as Template...`
+ |saveMapAsImage| :guilabel:`Export as Image...`                              :guilabel:`Layout`         :ref:`export_layout_image`
+ |saveAsSVG| :guilabel:`Export as SVG...`                                     :guilabel:`Layout`         :ref:`export_layout_svg`
+ |saveAsPDF| :guilabel:`Export as PDF...`                                     :guilabel:`Layout`         :ref:`export_layout_pdf`
+ :guilabel:`Page Setup...`                         :kbd:`Ctrl+Shift+P`
+ |filePrint| :guilabel:`Print...`                  :kbd:`Ctrl+P`              :guilabel:`Layout`         :ref:`create-output`
+ :guilabel:`Close`                                 :kbd:`Ctrl+Q`
+================================================= ========================== ========================== =====================================
+
+Edit menu
+.........
+
+The :menuselection:`Edit` menu offers tools to manipulate print layout items.
+It includes common actions like selection tools, Copy/Cut/Paste and undo/redo
+(see :ref:`layout_undo_panel`) functionality for the items in the layout.
+
+When using the Paste action, the elements will be pasted according to the current
+mouse position. Using the :menuselection:`Edit --> Paste in Place` action or
+pressing :kbd:`Ctrl+Shift+V` will paste the items into the current page, at the
+same position they were in their initial page. It ensures to copy/paste items at
+the same place, from page to page.
+
+Below is a list of all the available tools in this menu with some convenient
+information.
+
+================================================= ========================== ========================== =====================================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== =====================================
+ |undo| :guilabel:`Undo (last change)`             :kbd:`Ctrl+Z`              :guilabel:`Layout`         :ref:`layout_undo_panel`
+ |redo| :guilabel:`Redo (last reverted change)`    :kbd:`Ctrl+Y`              :guilabel:`Layout`         :ref:`layout_undo_panel`
+ |deleteSelected| :guilabel:`Delete`               :kbd:`Del`
+ |editCut| :guilabel:`Cut`                         :kbd:`Ctrl+X`
+ |editCopy| :guilabel:`Copy`                       :kbd:`Ctrl+C`
+ |editPaste| :guilabel:`Paste`                     :kbd:`Ctrl+V`
+ :guilabel:`Paste in place`                        :kbd:`Ctrl+Shift+V`
+ |selectAll| :guilabel:`Select All`                :kbd:`Ctrl+A`
+ |deselectAll| :guilabel:`Deselect all`            :kbd:`Ctrl+Shift+A`
+ |invertSelection| :guilabel:`Invert Selection`
+ :guilabel:`Select Next Item Below`                :kbd:`Ctrl+Alt+[`
+ :guilabel:`Select Next Item above`                :kbd:`Ctrl+Alt+]`
+ |pan| :guilabel:`Pan Layout`                      :kbd:`P`                   :guilabel:`Toolbox`
+ |zoomToArea| :guilabel:`Zoom`                     :kbd:`Z`                   :guilabel:`Toolbox`
+ |select| :guilabel:`Select/Move Item`             :kbd:`V`                   :guilabel:`Toolbox`
+ |moveItemContent| :guilabel:`Move Content`        :kbd:`C`                   :guilabel:`Toolbox`
+ |editNodesShape| :guilabel:`Edit Nodes Item`                                 :guilabel:`Toolbox`
+================================================= ========================== ========================== =====================================
+
+
+View menu
+.........
+
+The :menuselection:`View` menu  gives access to navigation tools and helps
+to configure general behavior of the print layout. Beside the common zoom
+tools, you have means to:
+
+* |draw| :sup:`Refresh view` (if you find the view in an inconsistent state);
+* enable a :ref:`grid <grid_guides>` you could snap items to when moving or
+  creating them. Grids setting is done in :menuselection:`Settings --> Layout
+  Options...`;
+* enable :ref:`guides <grid_guides>` you could snap items to when moving or
+  creating them. Guides are red lines that you can create by clicking in the
+  ruler (above or at the left side of the layout) and drag and drop to the
+  desired location;
+* :guilabel:`Smart Guides`: uses other layout items as guides to dynamically
+  snap to as you move or reshape an item;
+* :guilabel:`Clear Guides` to remove all current guides;
+* :guilabel:`Show Bounding box` around the items to better identify your
+  selection;
+* :guilabel:`Show Rules` around the layout;
+* :guilabel:`Show Pages` or set up pages to transparent. Often layout is used
+  to create non-print layouts, e.g. for inclusion in presentations or other
+  documents, and it's desirable to export the composition using a totally
+  transparent background. It's sometimes referred to as "infinite canvas" in
+  other editing packages.
+
+In the print layout, you can change the zoom level using the mouse wheel or
+the slider and combo box in
+the status bar. If you need to switch to pan mode while working in the layout
+area, you can hold the :kbd:`Spacebar` or the mouse wheel.
+With :kbd:`Ctrl+Spacebar`, you can temporarily switch to Zoom In mode,
+and with :kbd:`Ctrl+Alt+Spacebar`, to Zoom Out mode.
+
+Panels and toolbars can be enabled from the :menuselection:`View -->` menu.
+To maximise the space available to interact with a composition you can check
+the |checkbox| :menuselection:`View --> Toggle Panel Visibility` option or
+press :kbd:`Ctrl+Tab`; all panels are hidden and only previously visible
+panels are restored when unchecked.
+
+It's also possible to switch to a full screen mode to have more space to
+interact with by pressing :kbd:`F11` or using :menuselection:`View -->`
+|checkbox| :guilabel:`Toggle Full Screen`.
+   
+================================================= ========================== ========================== =====================================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== =====================================
+ |draw| :guilabel:`Refresh`                        :kbd:`F5`                  :guilabel:`Navigation`
+ :menuselection:`Preview -->`
+ |zoomIn| :guilabel:`Zoom In`                      :kbd:`Ctrl++`              :guilabel:`Navigation`
+ |zoomOut| :guilabel:`Zoom Out`                    :kbd:`Ctrl+-`              :guilabel:`Navigation`
+ |zoomActual| :guilabel:`Zoom to 100%`             :kbd:`Ctrl+1`              :guilabel:`Navigation`
+ |zoomFullExtent| :guilabel:`Zoom Full`            :kbd:`Ctrl+0`              :guilabel:`Navigation`
+ :guilabel:`Zoom to Width`
+ |vectorGrid| :guilabel:`Show Grid`                :kbd:`Ctrl+'`                                         :ref:`grid_guides`
+ |unchecked| :guilabel:`Snap to Grid`              :kbd:`Ctrl+Shift+'`                                   :ref:`grid_guides`
+ |checkbox| :guilabel:`Show Guides`                :kbd:`Ctrl+;`                                         :ref:`grid_guides`
+ |checkbox| :guilabel:`Snap to Guides`             :kbd:`Ctrl+Shift+;`                                   :ref:`grid_guides`
+ |checkbox| :guilabel:`Smart Guides`               :kbd:`Ctrl+Alt+;`
+ :guilabel:`Manage Guides...`
+ :guilabel:`Clear Guides`
+ |checkbox| :guilabel:`Show Rulers`                :kbd:`Ctrl+R`
+ |checkbox| :guilabel:`Show Bounding Boxes`        :kbd:`Ctrl+Shift+B`
+ |checkbox| :guilabel:`Show Pages`
+ :menuselection:`Toolbars -->`
+ :menuselection:`Panels -->`
+ |unchecked| :guilabel:`Toggle Full Screen`        :kbd:`F11`
+ |unchecked| :guilabel:`Toggle Panel Visibility`   :kbd:`Ctrl+Tab`
+================================================= ========================== ========================== =====================================
+
+Items menu
+..........
+
+The :menuselection:`Items` helps you configure items' position in the
+layout and the relations between them.
+
+================================================= ========================== ==========================
+ Tool                                              Shortcut                   Toolbar
+================================================= ========================== ==========================
+ |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`
+ |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`
+ |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`
+ |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`
+ |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`
+ |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`
+ |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`
+ |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`
+ :menuselection:`Align Items -->`                                             :guilabel:`Actions`
+ :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`
+ :menuselection:`Resize -->`                                                  :guilabel:`Actions`
+================================================= ========================== ==========================
+
+Add Item menu
+.............
+
+These are tools to create layout items. Each of them is deeply described
+in :ref:`layout_items` chapter.
+
+================================================= ========================== =====================================
+ Tool                                              Toolbar                    Reference
+================================================= ========================== =====================================
+ |addMap| :guilabel:`Add Map`                      :guilabel:`Toolbox`        :ref:`layout_map_item`
+ |addImage| :guilabel:`Add Picture`                :guilabel:`Toolbox`        :ref:`layout_picture_item`
+ |label| :guilabel:`Add Label`                     :guilabel:`Toolbox`        :ref:`layout_label_item`
+ |addLegend| :guilabel:`Add Legend`                :guilabel:`Toolbox`        :ref:`layout_legend_item`
+ |scaleBar| :guilabel:`Add Scale Bar`              :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
+ |addBasicShape| :menuselection:`Add Shape -->`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addArrow| :guilabel:`Add Arrow`                  :guilabel:`Toolbox`        :ref:`layout_arrow_item`
+ |addNodesShape| :guilabel:`Add Node Item -->`     :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+ |addHtml| :guilabel:`Add HTML`                    :guilabel:`Toolbox`        :ref:`layout_html_item`
+ |openTable| :guilabel:`Add Attribute Table`       :guilabel:`Toolbox`        :ref:`layout_table_item`
+================================================= ========================== =====================================
+
+
+Atlas menu
+..........
+
+======================================================== ========================== ========================== =====================================
+ Tool                                                     Shortcut                   Toolbar                    Reference
+======================================================== ========================== ========================== =====================================
+ |atlas| :guilabel:`Preview Atlas`                        :kbd:`Ctrl+ALt+/`          :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasFirst| :guilabel:`First Feature`                   :kbd:`Ctrl+<`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasPrev| :guilabel:`Previous Feature`                 :kbd:`Ctrl+,`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasNext| :guilabel:`Next Feature`                     :kbd:`Ctrl+.`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasLast| :guilabel:`Last feature`                     :kbd:`Ctrl+>`              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |filePrint| :guilabel:`Print Atlas...`                                              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |saveMapAsImage| :guilabel:`Export Atlas as Images...`                              :guilabel:`Atlas`          :ref:`atlas_preview`
+ |saveAsSVG| :guilabel:`Export Atlas as SVG...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
+ |saveAsPDF| :guilabel:`Export Atlas as PDF...`                                      :guilabel:`Atlas`          :ref:`atlas_preview`
+ |atlasSettings| :guilabel:`Atlas Settings`                                          :guilabel:`Atlas`          :ref:`atlas_generation`
+======================================================== ========================== ========================== =====================================
+
+
 Settings Menu
--------------
+.............
 
 From :menuselection:`Settings --> Layout Options...` you can set some options
 that will be used as default on any layout during your work.
@@ -293,86 +426,12 @@ that will be used as default on any layout during your work.
   There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of
   the grid.
+* guilabel:`Layout Paths` lists custom paths to search print templates.
 
-
-Edit Menu
----------
-
-Copy/Cut and Paste Items
-........................
-
-The print layout includes actions to use the common Copy/Cut/Paste functionality
-for the items in the layout. As usual first you need to select the items using
-one of the options seen above; at this point the actions can be found in the
-:menuselection:`Edit` menu.
-When using the Paste action, the elements will be pasted according to the current
-mouse position. Using the :menuselection:`Edit --> Paste in Place` action or
-pressing :kbd:`Ctrl+Shift+V` will paste the items into the current page, at the
-same position they were in their initial page. It ensures to copy/paste items at
-the same place, from page to page.
-
-.. note::
-   HTML items can not be copied in this way. As a workaround, use the
-   **[Add Frame]** button in the :menuselection:`Item Properties` panel.
-
-
-View Menu
----------
-
-Navigation Tools
-................
-
-To navigate in the canvas layout, the print layout provides some general tools:
-
-* |zoomIn| :sup:`Zoom In`
-* |zoomOut| :sup:`Zoom Out`
-* |zoomFullExtent| :sup:`Zoom Full`
-* |zoomActual| :sup:`Zoom to 100%`
-* |draw| :sup:`Refresh view` (if you find the view in an inconsistent state)
-* `Show Grid` behind items.
-* `Snap Grid` to snap items on the grid.
-* `Show Guides` to help user to align items. These are red line that you can
-  click in the rule (above or at the left side of the layout) and drag and drop
-  to the desired location.
-* `Snap Guides`: allows user to snap items to the guides,
-* `Smart Guides`: uses other layout items as guides to dynamically snap to as
-  user moves or reshapes an item.
-* `Clear Guides` to remove all current guides.
-* `Show Bounding box` around the items.
-* `Show Rules` around the layout.
-* `Show Pages` or set up pages to transparent. Often layout is used
-  to create non-print layouts, e.g. for inclusion in presentations or other
-  documents, and it's desirable to export the composition using a totally
-  transparent background. It's sometimes referred to as "infinite canvas" in
-  other editing packages.
-* `Toggle Full Screen` makes the layout window to full screen.
-* `Hide Panels` hides/shows the right panel
-* `Panels` lists all panels available to hide/show them.
-* `Toolbars` same as above for toolbars.
-
-You can change the zoom level also using the mouse wheel or the combo box in
-the status bar. If you need to switch to pan mode while working in the layout
-area, you can hold the :kbd:`Spacebar` or the mouse wheel.
-With :kbd:`Ctrl+Spacebar`, you can temporarily switch to Zoom In mode,
-and with :kbd:`Ctrl+Shift+Spacebar`, to Zoom Out mode.
-
-
-Hide and Show Panels
-.....................
-
-To maximise the space available to interact with a composition you can use
-:menuselection:`View -->` |checkbox| :guilabel:`Hide panels` or press :kbd:`F10`.
-
-
-.. note::
-
-   It's also possible to switch to a full screen mode to have more space to
-   interact by pressing :kbd:`F11` or using :menuselection:`View -->` |checkbox|
-   :guilabel:`Toggle full screen`.
 
 .. _layout_tab:
 
-Layout Panel
+The Layout Panel
 -----------------
 
 In the :guilabel:`Layout` panel, you can define the global settings of the
@@ -439,7 +498,9 @@ and contains information to georeference it easily.
 
    Export Settings in the Print Layout
 
-Grid and guides
+.. _grid_guides:
+
+Guides and Grid
 ...............
 
 You can put some reference marks on your composition paper sheet to help you
@@ -466,9 +527,10 @@ to a grid or a guide.
 
    Snapping to Grids in the Print Layout
 
-In the :menuselection:`Options --> Layout` menu in QGIS main canvas, you can
-also set the spacing, offset and snap tolerance of the grid as much as its style
-and color. These options are applied by default to any new print layout.
+.. note::
+ In the :menuselection:`Options --> Layout` menu in QGIS main canvas, you can
+ also set the spacing, offset and snap tolerance of the grid as much as its style
+ and color. These options are applied by default to any new print layout.
 
 
 Variables
@@ -495,8 +557,8 @@ More information on variables usage in the
 .. index:: Revert layout actions
 .. _layout_undo_panel:
 
-Undo History Panel: Revert and Restore actions
--------------------------------------------------
+The Undo History Panel: Revert and Restore actions
+--------------------------------------------------
 
 During the layout process, it is possible to revert and restore changes.
 This can be done with the revert and restore tools:
@@ -519,8 +581,8 @@ the actions done after the selected one will be removed.
 
 .. _layout_items_tab:
 
-Items Panel
------------
+The Items Panel
+---------------
 
 The :guilabel:`Items` panel offers some options to manage selection and
 visibility of items.
@@ -566,18 +628,6 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
    :width: 1.5em
-.. |alignBottom| image:: /static/common/mActionAlignBottom.png
-   :width: 1.5em
-.. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
-   :width: 1.5em
-.. |alignLeft| image:: /static/common/mActionAlignLeft.png
-   :width: 1.5em
-.. |alignRight| image:: /static/common/mActionAlignRight.png
-   :width: 1.5em
-.. |alignTop| image:: /static/common/mActionAlignTop.png
-   :width: 1.5em
-.. |alignVCenter| image:: /static/common/mActionAlignVCenter.png
-   :width: 1.5em
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
 .. |atlasFirst| image:: /static/common/mActionAtlasFirst.png
@@ -594,11 +644,21 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.3em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
@@ -609,6 +669,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
@@ -625,6 +687,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
+   :width: 1.5em
+.. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
@@ -644,6 +708,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
@@ -652,6 +718,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |ungroupItems| image:: /static/common/mActionUngroupItems.png
@@ -659,6 +727,8 @@ panel and unchecking the tickbox or you can use the icons on the toolbar.
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
