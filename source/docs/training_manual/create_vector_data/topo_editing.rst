@@ -169,9 +169,9 @@ South Africa but you haven't yet added the Prince Edward Islands, you'd use
 this tool to create them.
 
 * To use this tool, you must first select the polygon to which you wish to add
-  the part by using the :guilabel:`Select Single Feature` tool:
+  the part by using the :guilabel:`Select Features by area or single click` tool:
 
-  |select|
+  |selectRectangle|
 
 * Now try using the :guilabel:`Add Part` tool to add an outlying area to the
   |largeLandUseArea|.
@@ -303,7 +303,7 @@ so that attribute editing is simpler and more effective.
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
-.. |select| image:: /static/common/mActionSelect.png
+.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 2em
