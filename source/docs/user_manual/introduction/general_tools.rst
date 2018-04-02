@@ -1140,6 +1140,8 @@ For text fields, the additional options are:
 
 * :guilabel:`Contains`
 * :guilabel:`Does not contain`
+* :guilabel:`Starts with`
+* :guilabel:`Ends with`
 
 For the text options above, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.
@@ -1153,6 +1155,14 @@ button to select the matching features. The drop-down options are:
 * :guilabel:`Remove from current current selection`
 
 You can also clean all search options using the :guilabel:`Reset form` button.
+
+Once the conditions are set, you can also either:
+
+* :guilabel:`Zoom to features` in the map canvas without the need of a preselection;
+* or :guilabel:`Flash features`, highlighting the concerned features. This is a
+  handy way to identify a feature without selection or using the Identify tool.
+  Note that the flash does not alter the map canvas extent and would be visible only
+  if the feature resides in the current canvas.
 
 .. index:: Data-defined override
 .. _data_defined:
