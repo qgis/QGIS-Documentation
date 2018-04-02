@@ -115,165 +115,8 @@ using functions, layer's fields and values. It contains widgets to:
 
    The Expression tab
 
-Operators
-----------
 
-This group contains operators (e.g., +, -, \*).
-Note that for most of the mathematical functions below,
-if one of the inputs is NULL then the result is NULL.
-
-
-=========================== ===================================================
- Function                    Description
-=========================== ===================================================
- a + b                       Addition of two values (a plus b)
- a - b                       Subtraction of two values (a minus b).
- a * b                       Multiplication of two values (a multiplied by b)
- a / b                       Division of two values (a divided by b)
- a % b                       Remainder of division of a by b
-                             (eg, 7 % 2 = 1, or 2 fits into 7 three times
-                             with remainder 1)
- a ^ b                       Power of two values (for example, 2^2=4 or 2^3=8)
- a < b                       Compares two values and evaluates to 1 if the
-                             left value is less than the right value
-                             (a is smaller than b)
- a <= b                      Compares two values and evaluates to 1 if the
-                             left value isless than or equal to the right
-                             value
- a <> b                      Compares two values and evaluates to 1
-                             if they are not equal
- a = b                       Compares two values and evaluates to 1
-                             if they are equal
- a != b                      a and b are not equal
- a > b                       Compares two values and evaluates to 1
-                             if the left value is greater than the right
-                             value (a is larger than b)
- a >= b                      Compares two values and evaluates to 1
-                             if the left value is greater than or equal to
-                             the right value
- a ~ b                       a matches the regular expression b
- ||                          Joins two values together into a string.
-                             If one of the values is NULL the result will
-                             be NULL
- '\\n'                       Inserts a new line in a string
- LIKE                        Returns 1 if the first parameter matches the
-                             supplied pattern
- ILIKE                       Returns 1 if the first parameter matches
-                             case-insensitive the supplied pattern (ILIKE
-                             can be used instead of LIKE to make the match
-                             case-insensitive)
- a IS b                      Tests whether two values are identical.
-                             Returns 1 if a is the same as b
- a OR b                      Returns 1 when condition a or condition b is true
- a AND b                     Returns 1 when conditions a and b are true
- NOT                         Negates a condition
- column name "column name"   Value of the field column name, take care to
-                             not be confused with simple quote, see below
- 'string'                    a string value, take care to not be confused
-                             with double quote, see above
- NULL                        null value
- a IS NULL                   a has no value
- a IS NOT NULL               a has a value
- a IN (value[,value])        a is below the values listed
- a NOT IN (value[,value])    a is not below the values listed
-=========================== ===================================================
-
-.. note:: **About fields concatenation**
-
-  You can concatenate strings using either `||` or ``+``. The latter also means
-  sum up expression. So if you have an integer (field or numeric value) this can
-  be error prone. In this case, you should use `||`. If you concatenate two
-  string values, you can use both.
-
-**Some examples:**
-
-* Joins a string and a value from a column name::
-
-    'My feature''s id is: ' || "gid"
-    'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
-    "country_name" + '(' + "country_code" + ')'
-    "country_name" || '(' || "country_code" || ')'
-
-
-* Test if the "description" attribute field starts with the 'Hello' string
-  in the value (note the position of the % character)::
-
-    "description" LIKE 'Hello%'
-
-Conditionals
--------------
-
-This group contains functions to handle conditional checks in expressions.
-
-===================================== =========================================
- Function                              Description
-===================================== =========================================
- CASE WHEN ... THEN ... END           Evaluates an expression and returns a
-                                      result if true. You can test multiple
-                                      conditions
- CASE WHEN ... THEN ... ELSE ... END  Evaluates an expression and returns a
-                                      different result whether it's true or
-                                      false. You can test multiple conditions
- coalesce                             Returns the first non-NULL value from
-                                      the expression list
- if                                   Tests a condition and returns a
-                                      different result depending on the
-                                      conditional check
-===================================== =========================================
-
-**Some example:**
-
-* Send back a value if the first condition is true, else another value::
-
-    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other' END
-
-Mathematical Functions
------------------------
-
-This group contains math functions (e.g., square root, sin and cos).
-
-=================  ==========================================================
- Function           Description
-=================  ==========================================================
- abs                Returns the absolute value of a number
- acos               Returns the inverse cosine of a value in radians
- asin               Returns the inverse sine of a value in radians
- atan               Returns the inverse tangent of a value in radians
- atan2(y,x)         Returns the inverse tangent of y/x by using the signs
-                    of the two arguments to determine the quadrant of the
-                    result
- azimuth(a,b)       Returns the north-based azimuth as the angle in radians
-                    measured clockwise from the vertical on point a
-                    to point b
- ceil               Rounds a number upwards
- clamp              Restricts an input value to a specified range
- cos                Returns the cosine of a value in radians
- degrees            Converts from radians to degrees
- exp                Returns exponential of a value
- floor              Rounds a number downwards
- ln                 Returns the natural logarithm of the passed expression
- log                Returns the value of the logarithm of the passed
-                    value and base
- log10              Returns the value of the base 10 logarithm of the
-                    passed expression
- max                Returns the largest value in a set of values
- min                Returns the smallest value in a set of values
- pi                 Returns the value of pi for calculations
- radians            Converts from degrees to radians
- rand               Returns the random integer within the range specified
-                    by the minimum and maximum argument (inclusive)
- randf              Returns the random float within the range specified
-                    by the minimum and maximum argument (inclusive)
- round              Rounds to number of decimal places
- scale_exp          Transforms a given value from an input domain
-                    to an output range using an exponential curve
- scale_linear       Transforms a given value from an input domain
-                    to an output range using linear interpolation
- sin                Returns the sine of an angle
- sqrt               Returns the square root of a value
- tan                Returns the tangent of an angle
-=================  ==========================================================
-
+.. index:: Aggregates
 .. _aggregates_function:
 
 Aggregates Functions
@@ -286,6 +129,8 @@ This group contains functions which aggregate values over layers and fields.
 ====================== =======================================================
  aggregate              Returns an aggregate value calculated using
                         features from another layer
+ array_agg              Returns an array of aggregated values from a field
+                        or expression
  collect                Returns the multipart geometry of aggregated
                         geometries from an expression
  concatenate            Returns the all aggregated strings from a field
@@ -349,10 +194,16 @@ This group contains functions which aggregate values over layers and fields.
      expression := "field_from_related_table")
 
 
+.. index:: Array, List data structure
+.. _array_functions:
+
 Array Functions
 ---------------
 
-This group contains functions to create and manipulate arrays.
+This group contains functions to create and manipulate arrays (also known as
+list data structures). The order of values within the array matters, unlike the
+:ref:`'map' data structure <maps_functions>`, where the order of key-value pairs
+is irrelevant and values are identified by their keys.
 
 ====================== =======================================================
  Function               Description
@@ -369,7 +220,7 @@ This group contains functions to create and manipulate arrays.
  array_get              Returns the Nth value (0 for the first one) of an array
  array_insert           Returns an array with the given value added at the
                         given position
- array_intersect        Returns true if any element of array1 exists in array2
+ array_intersect        Returns true if any element of array_1 exists in array_2
  array_last             Returns the last element of an array 
  array_length           Returns the number of elements of an array
  array_prepend          Returns an array with the given value added at the beginning
@@ -428,23 +279,32 @@ This group contains functions for manipulating colors.
 ================== ==========================================================
 
 
-Composition Functions
+Conditional Functions
 ---------------------
 
-This group contains functions to manipulate print layout items properties.
+This group contains functions to handle conditional checks in expressions.
 
-==================  ========================================================
- Function            Description
-==================  ========================================================
- item_variables      Returns a map of variables from a layout item inside
-                     this composition
-==================  ========================================================
+===================================== =========================================
+ Function                              Description
+===================================== =========================================
+ CASE WHEN ... THEN ... END           Evaluates an expression and returns a
+                                      result if true. You can test multiple
+                                      conditions
+ CASE WHEN ... THEN ... ELSE ... END  Evaluates an expression and returns a
+                                      different result whether it's true or
+                                      false. You can test multiple conditions
+ coalesce                             Returns the first non-NULL value from
+                                      the expression list
+ if                                   Tests a condition and returns a
+                                      different result depending on the
+                                      conditional check
+===================================== =========================================
 
 **Some example:**
 
-* Get the scale of the 'Map 0' in the current print layout::
+* Send back a value if the first condition is true, else another value::
 
-    map_get( item_variables('Map 0'), 'map_scale')
+    CASE WHEN "software" LIKE '%QGIS%' THEN 'QGIS' ELSE 'Other' END
 
 
 .. _conversion_functions:
@@ -561,6 +421,7 @@ Adding or subtracting an interval to dates, datetimes or times, using the
    one of the date extraction functions (e.g., ``day()`` to get the interval
    expressed in days)
 
+.. _fields_values:
 
 Fields and Values
 ------------------
@@ -630,6 +491,8 @@ This group  contains general assorted functions.
                        needs to be used more than once.
 ====================  =======================================================
 
+
+.. _geometry_functions:
 
 Geometry Functions
 ------------------
@@ -752,6 +615,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | collection, or null if the input geometry         |
 |                        | is not a collection                               |
 +------------------------+---------------------------------------------------+
+| hausdorff_distance     | Returns basically a measure of how similar or     |
+|                        | dissimilar 2 geometries are, with a lower         |
+|                        | distance indicating more similar geometries       |
++------------------------+---------------------------------------------------+
+| inclination            | Returns the inclination measured from the zenith  |
+|                        | (0) to the nadir (180) on point_a to point_b      |
++------------------------+---------------------------------------------------+
 | interior_ring_n        | Returns the geometry of the nth interior ring     |
 |                        | from a polygon geometry, or null if the geometry  |
 |                        | is not a polygon                                  |
@@ -795,6 +665,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | m                      | Returns the m value of a point geometry           |
 +------------------------+---------------------------------------------------+
+| make_circle            | Creates a circular geometry based on center point |
+|                        | and radius                                        |
++------------------------+---------------------------------------------------+
+| make_ellipse           | Creates an elliptical geometry based on center    |
+|                        | point, axes and azimuth                           |
++------------------------+---------------------------------------------------+
 | make_line              | Creates a line geometry from a series of point    |
 |                        | geometries                                        |
 +------------------------+---------------------------------------------------+
@@ -806,6 +682,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | make_polygon           | Creates a polygon geometry from an outer ring and |
 |                        | optional series of inner ring geometries          |
++------------------------+---------------------------------------------------+
+| make_regular_polygon   | Creates a regular polygon                         |
++------------------------+---------------------------------------------------+
+| make_triangle          | Creates a triangle polygon                        |
++------------------------+---------------------------------------------------+
+| minimal_circle         | Returns the minimal enclosing circle of an input  |
+|                        | geometry                                          |
 +------------------------+---------------------------------------------------+
 | nodes_to_points        | Returns a multipoint geometry consisting of every |
 |                        | node in the input geometry                        |
@@ -831,6 +714,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | order_parts            | Orders the parts of a MultiGeometry by a given    |
 |                        | criteria                                          |
++------------------------+---------------------------------------------------+
+| oriented_bbox          | Returns a geometry representing the minimal       |
+|                        | oriented bounding box of an input geometry        |
 +------------------------+---------------------------------------------------+
 | overlaps               | Tests whether a geometry overlaps another.        |
 |                        | Returns 1 (true) if the geometries share space,   |
@@ -948,10 +834,44 @@ This group contains functions that operate on geometry objects (e.g., length, ar
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
 
-Map Functions
+Layout Functions
+----------------
+
+This group contains functions to manipulate print layout items properties.
+
+==================  ========================================================
+ Function            Description
+==================  ========================================================
+ item_variables      Returns a map of variables from a layout item inside
+                     this print layout
+==================  ========================================================
+
+**Some example:**
+
+* Get the scale of the 'Map 0' in the current print layout::
+
+    map_get( item_variables('Map 0'), 'map_scale')
+
+
+Map Layers
+----------
+
+This group contains a list of the available layers in the current project.
+This offers a convenient way to write expressions referring to multiple layers,
+such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
+<record_attributes>` or :ref:`spatial <geometry_functions>` queries.
+
+.. index:: Map data structure, Dictionary, Key-value pairs, Associative arrays
+.. _maps_functions:
+
+Maps Functions
 --------------
 
-This group contains functions to create or manipulate keys and values of maps.
+This group contains functions to create or manipulate keys and values of map
+data structures (also known as dictionary objects, key-value pairs, or associative
+arrays). Unlike the :ref:`list data structure <array_functions>` where values
+order matters, the order of the key-value pairs in the map object is not relevant
+and values are identified by their keys.
 
 ==================== =========================================================
  Function             Description
@@ -971,8 +891,145 @@ This group contains functions to create or manipulate keys and values of maps.
 ==================== =========================================================
 
 
-Record Functions
------------------
+Mathematical Functions
+-----------------------
+
+This group contains math functions (e.g., square root, sin and cos).
+
+=================  ==========================================================
+ Function           Description
+=================  ==========================================================
+ abs                Returns the absolute value of a number
+ acos               Returns the inverse cosine of a value in radians
+ asin               Returns the inverse sine of a value in radians
+ atan               Returns the inverse tangent of a value in radians
+ atan2(y,x)         Returns the inverse tangent of y/x by using the signs
+                    of the two arguments to determine the quadrant of the
+                    result
+ azimuth(a,b)       Returns the north-based azimuth as the angle in radians
+                    measured clockwise from the vertical on point a
+                    to point b
+ ceil               Rounds a number upwards
+ clamp              Restricts an input value to a specified range
+ cos                Returns the cosine of a value in radians
+ degrees            Converts from radians to degrees
+ exp                Returns exponential of a value
+ floor              Rounds a number downwards
+ inclination        Returns the inclination measured from the zenith (0) to
+                    the nadir (180) on point_a to point_b.
+ ln                 Returns the natural logarithm of the passed expression
+ log                Returns the value of the logarithm of the passed
+                    value and base
+ log10              Returns the value of the base 10 logarithm of the
+                    passed expression
+ max                Returns the largest value in a set of values
+ min                Returns the smallest value in a set of values
+ pi                 Returns the value of pi for calculations
+ radians            Converts from degrees to radians
+ rand               Returns the random integer within the range specified
+                    by the minimum and maximum argument (inclusive)
+ randf              Returns the random float within the range specified
+                    by the minimum and maximum argument (inclusive)
+ round              Rounds to number of decimal places
+ scale_exp          Transforms a given value from an input domain
+                    to an output range using an exponential curve
+ scale_linear       Transforms a given value from an input domain
+                    to an output range using linear interpolation
+ sin                Returns the sine of an angle
+ sqrt               Returns the square root of a value
+ tan                Returns the tangent of an angle
+=================  ==========================================================
+
+
+Operators
+----------
+
+This group contains operators (e.g., +, -, \*).
+Note that for most of the mathematical functions below,
+if one of the inputs is NULL then the result is NULL.
+
+=========================== ===================================================
+ Function                    Description
+=========================== ===================================================
+ a + b                       Addition of two values (a plus b)
+ a - b                       Subtraction of two values (a minus b).
+ a * b                       Multiplication of two values (a multiplied by b)
+ a / b                       Division of two values (a divided by b)
+ a % b                       Remainder of division of a by b
+                             (eg, 7 % 2 = 1, or 2 fits into 7 three times
+                             with remainder 1)
+ a ^ b                       Power of two values (for example, 2^2=4 or 2^3=8)
+ a < b                       Compares two values and evaluates to 1 if the
+                             left value is less than the right value
+                             (a is smaller than b)
+ a <= b                      Compares two values and evaluates to 1 if the
+                             left value isless than or equal to the right
+                             value
+ a <> b                      Compares two values and evaluates to 1
+                             if they are not equal
+ a = b                       Compares two values and evaluates to 1
+                             if they are equal
+ a != b                      a and b are not equal
+ a > b                       Compares two values and evaluates to 1
+                             if the left value is greater than the right
+                             value (a is larger than b)
+ a >= b                      Compares two values and evaluates to 1
+                             if the left value is greater than or equal to
+                             the right value
+ a ~ b                       a matches the regular expression b
+ ||                          Joins two values together into a string.
+                             If one of the values is NULL the result will
+                             be NULL
+ '\\n'                       Inserts a new line in a string
+ LIKE                        Returns 1 if the first parameter matches the
+                             supplied pattern
+ ILIKE                       Returns 1 if the first parameter matches
+                             case-insensitive the supplied pattern (ILIKE
+                             can be used instead of LIKE to make the match
+                             case-insensitive)
+ a IS b                      Tests whether two values are identical.
+                             Returns 1 if a is the same as b
+ a OR b                      Returns 1 when condition a or condition b is true
+ a AND b                     Returns 1 when conditions a and b are true
+ NOT                         Negates a condition
+ column name "column name"   Value of the field column name, take care to
+                             not be confused with simple quote, see below
+ 'string'                    a string value, take care to not be confused
+                             with double quote, see above
+ NULL                        null value
+ a IS NULL                   a has no value
+ a IS NOT NULL               a has a value
+ a IN (value[,value])        a is below the values listed
+ a NOT IN (value[,value])    a is not below the values listed
+=========================== ===================================================
+
+.. note:: **About fields concatenation**
+
+  You can concatenate strings using either `||` or ``+``. The latter also means
+  sum up expression. So if you have an integer (field or numeric value) this can
+  be error prone. In this case, you should use `||`. If you concatenate two
+  string values, you can use both.
+
+**Some examples:**
+
+* Joins a string and a value from a column name::
+
+    'My feature''s id is: ' || "gid"
+    'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
+    "country_name" + '(' + "country_code" + ')'
+    "country_name" || '(' || "country_code" || ')'
+
+
+* Test if the "description" attribute field starts with the 'Hello' string
+  in the value (note the position of the % character)::
+
+    "description" LIKE 'Hello%'
+
+
+.. _record_attributes:
+
+Record and Attributes Functions
+-------------------------------
 
 This group contains functions that operate on record identifiers.
 
@@ -996,6 +1053,9 @@ This group contains functions that operate on record identifiers.
                       feature ID
  is_selected          Returns if a feature is selected
  num_selected         Returns the number of selected features on a given layer
+ represent_value      Returns the configured representation value for a
+                      field value (convenient with some :ref:`widget types
+                      <edit_widgets>`)
  uuid                 Generates a Universally Unique Identifier (UUID)
                       for each row. Each UUID is 38 characters long.
 ==================== =========================================================
@@ -1036,8 +1096,8 @@ This group contains functions that operate on strings
  length                 Returns length of a string
                         (or length of a line geometry feature)
  lower                  converts a string to lower case
- lpad                   Returns a string with supplied width padded
-                        using the fill character
+ lpad                   Returns a string padded on the left to the specified
+                        width, using the fill character
  regexp_match           Returns the first matching position matching a regular
                         expression within a string, or 0 if the substring is
                         not found
@@ -1050,8 +1110,8 @@ This group contains functions that operate on strings
                         or paired values
  right(string, n)       Returns a substring that contains the n
                         rightmost characters of the string
- rpad                   Returns a string with supplied width padded
-                        using the fill character
+ rpad                   Returns a string padded on the right to the specified
+                        width, using the fill character
  strpos                 Returns the first matching position of a substring within
                         another string, or 0 if the substring is not found
  substr                 Returns a part of a string
@@ -1065,13 +1125,6 @@ This group contains functions that operate on strings
                         minimum number of characters
 =====================  ======================================================
 
-
-Recent Functions
------------------
-
-This group contains recently used functions. Any expression used in the
-Expression dialog is added to the list, sorted from the more recent to
-the less one. This helps to quickly retrieve any previous expression.
 
 .. _variables_functions:
 
@@ -1095,7 +1148,7 @@ To use these functions in an expression, they should be preceded by @ character
 ======================= =======================================================
  atlas_feature           Returns the current atlas feature (as feature object)
  atlas_featureid         Returns the current atlas feature ID
- atlas_featurenumber     Returns the number of pages in composition
+ atlas_featurenumber     Returns the current atlas feature number in the layout
  atlas_filename          Returns the current atlas file name
  atlas_geometry          Returns the current atlas feature geometry
  atlas_pagename          Returns the current atlas page name
@@ -1117,10 +1170,11 @@ To use these functions in an expression, they should be preceded by @ character
  layer_id                Returns the ID of current layer
  layer_name              Returns the name of current layer
  layout_dpi              Returns the composition resolution (DPI)
- layout_numpages         Returns the number of pages in the composition
- layout_page             Returns the current page of the layout item
- layout_pageheight       Returns the composition height in mm
- layout_pagewidth        Returns the composition width in mm
+ layout_name             Returns the layout name
+ layout_numpages         Returns the number of pages in the layout
+ layout_page             Returns the page number of the current item in the layout
+ layout_pageheight       Returns the active page height in the layout (in mm)
+ layout_pagewidth        Returns the active page width in the layout (in mm)
  map_crs                 Returns the Coordinate reference system of the current map
  map_crs_definition      Returns the full definition of the Coordinate reference
                          system of the current map
@@ -1161,6 +1215,16 @@ To use these functions in an expression, they should be preceded by @ character
  row_number              Stores the number of the current row
  value                   Returns the current value
 ======================= =======================================================
+
+
+Recent Functions
+-----------------
+
+This group contains recently used functions. Depending on the context of its
+usage (feature selection, field calculator, generic), any applied expression
+is added to the corresponding list (up to ten expressions), sorted from the
+more recent to the less one.
+This helps to quickly retrieve and reapply any previously used expression.
 
 
 .. index:: Custom functions
