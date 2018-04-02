@@ -89,8 +89,8 @@ method of :class:`QgsMapCanvas` as shown in the following example::
     iface.mapCanvas().setSelectionColor( QColor("red") )
 
 
-To add add features to the selected features list for a given layer, you
-can call :func:`setSelectedFeatures()` passing to it the list of features IDs:
+To add features to the selected features list for a given layer, you
+can call :func:`select()` passing to it the list of features IDs:
 
 .. code-block:: python
 
@@ -111,20 +111,15 @@ To clear the selection::
 Accessing attributes
 --------------------
 
-Attributes can be referred to by their name.
+Attributes can be referred to by their name::
 
-::
-
-  print feature['name']
+ print(feature['name'])
 
 Alternatively, attributes can be referred to by index.
 This is will be a bit faster than using the name.
-For example, to get the first attribute:
+For example, to get the first attribute::
 
-::
-
-  print feature[0]
-
+ print(feature[0])
 
 Iterating over selected features
 --------------------------------
@@ -135,7 +130,7 @@ method from vector layer:
 .. code-block:: python
 
   selection = layer.selectedFeatures()
-  print len(selection)
+  print(len(selection))
   for feature in selection:
       # do whatever you need with the feature
 
