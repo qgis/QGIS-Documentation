@@ -123,7 +123,7 @@ Handling errors
   if exp.hasEvalError():
     raise ValueError(exp.evalErrorString())
 
-  print value
+  print(value)
 
 Examples
 ========
@@ -134,7 +134,7 @@ matches a predicate.
 ::
 
   def where(layer, exp):
-    print "Where"
+    print("Where")
     exp = QgsExpression(exp)
     if exp.hasParserError():
       raise Exception(exp.parserErrorString())
@@ -148,4 +148,4 @@ matches a predicate.
 
   layer = qgis.utils.iface.activeLayer()
   for f in where(layer, 'Test > 1.0'):
-    print f + " Matches expression"
+    print(f + " Matches expression")

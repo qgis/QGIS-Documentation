@@ -131,8 +131,8 @@ geometries.
   features = layer.getFeatures()
   for f in features:
     geom = f.geometry()
-    print "Area:", geom.area()
-    print "Perimeter:", geom.length()
+    print("Area:", geom.area())
+    print("Perimeter:", geom.length())
 
 Areas and perimeters don't take CRS into account when computed using these
 methods from the :class:`QgsGeometry` class. For a more powerful area and
@@ -146,7 +146,7 @@ done on the ellipsoid.
   d.setEllipsoid('WGS84')
   d.setEllipsoidalMode(True)
 
-  print "distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11))
+  print("distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11)))
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code

@@ -356,7 +356,7 @@ uses method :func:`shortestTree`
   idStop = tree.findVertex(tStop)
 
   if idStop == -1:
-    print "Path not found"
+    print("Path not found")
   else:
     p = []
     while (idStart != idStop):
@@ -406,7 +406,7 @@ And here is the same sample but using :func:`dijkstra` method
   (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, idStart, 0)
 
   if tree[idStop] == -1:
-    print "Path not found"
+    print("Path not found")
   else:
     p = []
     curPos = idStop
