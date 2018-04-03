@@ -86,7 +86,7 @@ the cropped bounds.
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
-:ref:`layout_tab`.
+:ref:`layout_panel`.
 
 If the output format is a TIFF format, all you need to do is making sure to
 select the correct map item to use in |selectString| :guilabel:`Reference
@@ -139,13 +139,13 @@ single PDF file.
 If you applied to your layout or any shown layer an advanced effect such as
 blend modes, transparency or symbol effects, these cannot be printed
 as vectors, and the effects may be lost. Checking :guilabel:`Print as
-raster` in the :ref:`layout_tab` helps to keep the effects but
+raster` in the :ref:`layout_panel` helps to keep the effects but
 rasterize the composition. Note that the :guilabel:`Force layer to render as
 raster` in the Rendering tab of Layer Properties dialog is a layer-level
 alternative that avoids global composition rasterization.
 
 If you need to export your layout as a **georeferenced PDF**, in the
-:ref:`layout_tab`, make sure you select the correct map item to
+:ref:`layout_panel`, make sure you select the correct map item to
 use in |selectString| :guilabel:`Reference map`.
 
 
