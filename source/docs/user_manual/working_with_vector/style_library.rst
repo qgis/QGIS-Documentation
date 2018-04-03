@@ -441,12 +441,12 @@ symbol layer types:
   feature. The position of the marker may however not be the real centroid
   of the feature because calculation takes into account the polygon(s)
   clipped to area visible in map canvas for rendering and ignores holes.
-  Use :ref:`geometry_generator_symbol` if you want the exact centroid. 
+  Use the geometry generator symbol if you want the exact centroid. 
   
   The marker can be placed on every part of a multi-part feature or
   only on its biggest part, and forced to be inside the polygon;
 
-* **Geometry generator** (see geometry_generator_symbol_);
+* **Geometry generator** (see :ref:`geometry_generator_symbol`);
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
   simple two color gradients or a predefined :ref:`gradient color ramp
   <color-ramp>` to fill polygon layers. Gradient can be rotated and applied on
