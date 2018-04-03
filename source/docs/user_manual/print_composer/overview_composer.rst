@@ -455,8 +455,8 @@ layout:
 The Layout Panel
 -----------------
 
-In the :guilabel:`Layout` panel, you can define the global settings of the
-current composition.
+In the :guilabel:`Layout` panel, you can define the global settings of your
+print layout.
 
 .. _figure_composition:
 
@@ -468,78 +468,36 @@ current composition.
 General settings
 ................
 
-A layout can be divided into several pages. For instance, a first page can show
-a map canvas, and a second page can show the attribute table associated with a
-layer, while a third one shows an HTML frame linking to your organization website.
-Set the :guilabel:`Number of pages` to the desired value. You can also
-custom the :guilabel:`Page Background` with the color or the symbol you want.
-
-The :guilabel:`Reference map` selects the map item to be used as the
-composition's master map. The layout will use this map in any
+In a print layout, you can use more than one map item.
+The :guilabel:`Reference map` selects the map item to be used as the layout's
+master map. The layout will use this map in any
 properties and variable calculating units or scale. This includes exporting
-the composition to georeferenced formats.
-
-Page size and resize
-....................
-
-In the :guilabel:`Page size` group, you can choose one of the
-:guilabel:`Presets` formats for your paper sheet, or enter your custom
-:guilabel:`width`, :guilabel:`height` and :guilabel:`units`.
-You can also choose the page :guilabel:`Orientation` to use.
-
-The Page size options apply to all the pages in the composition. However,
-you can modify the values using the data defined override options (see
-:ref:`atlas_data_defined_override`).
-
-A custom page size can also be set, using the :guilabel:`Resize page` tool.
-This creates an unique page composition, resizes the page to fit the current
-contents of the composition (with optional margins).
-
-
-Export settings
-...............
-
-You can define a resolution to use for all exported maps in :guilabel:`Export
-resolution`. This setting can, however, be overridden each time you are
-exporting a map.
-
-When checked, |checkbox| :guilabel:`print as raster` means all elements will be
-rasterized before printing or saving as PostScript or PDF.
-
-While exporting to an image file format, you can choose to generate a world file
-by checking |checkbox| :guilabel:`Save world file` using the map selected in
-|selectString| :guilabel:`Reference map` in the :guilabel:`general settings`
-group. The world file is created beside the exported map, has the same name
-and contains information to georeference it easily.
-
-.. _figure_composition_export:
-
-.. figure:: img/composition_export.png
-   :align: center
-
-   Export Settings in the Print Layout
+the print layout to georeferenced formats.
 
 .. _grid_guides:
 
 Guides and Grid
 ...............
 
-You can put some reference marks on your composition paper sheet to help you
-place some items. These marks can be:
+You can put some reference marks on your paper sheet to help you
+accurately place some items. These marks can be:
 
-* simple lines (called **Guides**) put at the position you want. To do that,
-  ensure that :guilabel:`Show Rulers` and :guilabel:`Show Guides` in :menuselection:`View`
-  menu are checked. Then, click and drag from within the ruler to the paper sheet.
-  A vertical or horizontal line is added to the paper and you can set its position
-  following the coordinates displayed at the left bottom of the print layout dialog.
-* or regular **Grid**.
+* simple horizontal or vertical lines (called **Guides**) put at the position
+  you want (see :ref:`layout_guides_panel` for guides creation).
+* or regular **Grid**: a network of horizontal and vertical lines
+  superimposed over the layout.
 
-Whether grids or guides should be shown is set in :menuselection:`View` menu.
-There, you can also decide if they might be used to snap layout items. The
-:guilabel:`Grid and guides` section lets you customize grid settings like
-:guilabel:`Grid spacing`, :guilabel:`Grid offset` and :guilabel:`Snap tolerance`
-to your need. The tolerance is the maximum distance below which an item is snapped
-to a grid or a guide.
+Settings like :guilabel:`Grid spacing` or :guilabel:`Grid offset` can be
+adjusted in this group as well as the :guilabel:`Snap tolerance` to use for
+items. The tolerance is the maximum distance below which the mouse cursor is
+snapped to a grid or a guide, while moving, resizing or creating an item.
+
+Whether grid or guides should be shown is set in :menuselection:`View` menu.
+There, you can also decide if they might be used to snap layout items.
+When both a grid line and a guide line are within tolerance of a point, guides
+will always take precedence - since they have been manually set (hence,
+assumption that they have been explicitly placed at highly desirable snapping
+locations, and should be selected over the general grid).
 
 .. _figure_composition_grid:
 
@@ -548,11 +506,59 @@ to a grid or a guide.
 
    Snapping to Grids in the Print Layout
 
-.. note::
- In the :menuselection:`Options --> Layout` menu in QGIS main canvas, you can
- also set the spacing, offset and snap tolerance of the grid as much as its style
- and color. These options are applied by default to any new print layout.
+In the :menuselection:`Settings --> Layout Options` menu, you can also set
+the grid and guides parameters exposed above. However, these options will
+only apply as defaults to new print layouts.
 
+.. _layout_export_settings:
+
+Export settings
+...............
+
+You can define a resolution to use for all exported maps in :guilabel:`Export
+resolution`. This setting can then be overridden each time you export a map.
+
+Because of some advanced rendering options (:ref:`blending mode <blend-modes>`,
+:ref:`effects <draw_effects>`...), a layout item may need rasterization in
+order to be exported correctly. QGIS will individually rasterize it without
+forcing every other item to also be rasterized.
+This allows printing or saving as PostScript or PDF to keep items as much as
+possible as vectors, e.g. a map item with layer opacity won't force labels,
+scale bars, etc to be rasterized too.
+You can however:
+
+* force all the items to be rasterized checking the |checkbox| :guilabel:`Print
+  as raster` box;
+* or use the opposite option, i.e. :guilabel:`Always export as vectors`, to
+  force the export to keep items as vectors when exported to a compatible
+  format. Note that in some cases, this could cause the output to look
+  different to layout.
+
+Where the format makes it possible (e.g., :file:`.TIF`, :file:`.PDF`) exporting
+a print layout results by default in a georeferenced file (based on the
+:guilabel:`Reference map` item in the :guilabel:`General settings` group).
+For other formats, georeferenced output requires you to generate a world file
+by checking |checkbox| :guilabel:`Save world file`. The world file is created
+beside the exported map(s), has the name of the page output with the reference
+map item and contains information to georeference it easily.
+
+.. _figure_composition_export:
+
+.. figure:: img/composition_export.png
+   :align: center
+
+   Export Settings in the Print Layout
+
+Resize layout to content
+........................
+
+Using the :guilabel:`Resize page` tool in this group, you create a unique page
+composition whose extent covers the current contents of the print layout (with
+some optional :guilabel:`margins` around the cropped bounds).
+
+Note that this behavior is different from the :ref:`crop to content
+<crop_to_content>` option in that all the items are placed on a real and unique
+page in replacement of all the existing pages.
 
 Variables
 .........
@@ -565,7 +571,7 @@ It also allows the user to manage layout-level variables. Click the
 select a custom layout-level variable from the list and click the
 |signMinus| button to remove it.
 
-More information on variables usage in the 
+More information on variables usage in the
 :ref:`General Tools <general_tools_variables>` section.
 
 .. _figure_composition_variables:
@@ -617,6 +623,12 @@ panel. Right-click on a page and select :guilabel:`Page Properties...`. The
 
 .. Todo: Add page properties panel screenshot
 
+
+.. index:: Guides, Smart guides
+.. _layout_guides_panel:
+
+The Guides Panel
+----------------
 
 .. _layout_items_panel:
 
