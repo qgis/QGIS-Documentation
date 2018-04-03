@@ -426,7 +426,7 @@ that will be used as default on any layout during your work.
   There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
 * :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of
   the grid.
-* guilabel:`Layout Paths` lists custom paths to search print templates.
+* :guilabel:`Layout Paths` lists custom paths to search print templates.
 
 
 .. _layout_tab:
