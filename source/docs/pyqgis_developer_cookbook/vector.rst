@@ -227,8 +227,8 @@ to find out what set of functionality is supported
 
   caps = layer.dataProvider().capabilities()
   # Check if a particular capability is supported:
-  caps & QgsVectorDataProvider.DeleteFeatures
-  # Print 2 if DeleteFeatures is supported
+  if caps & layer.dataProvider().DeleteFeatures:
+      print('The layer supports DeleteFeatures')
 
 For a list of all available capabilities, please refer to the
 `API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_
@@ -240,10 +240,10 @@ can use :func:`capabilitiesString` as in the following example:
 
   caps_string = layer.dataProvider().capabilitiesString()
   # Print:
-  # u'Add Features, Delete Features, Change Attribute Values,
-  # Add Attributes, Delete Attributes, Create Spatial Index,
-  # Fast Access to Features at ID, Change Geometries,
-  # Simplify Geometries with topological validation'
+  # 'Add Features, Delete Features, Change Attribute Values, Add Attributes,
+  # Delete Attributes, Rename Attributes, Fast Access to Features at ID,
+  # Presimplify Geometries, Presimplify Geometries with Validity Check,
+  # Transactions, Curved Geometries'
 
 By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
