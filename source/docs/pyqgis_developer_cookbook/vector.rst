@@ -253,20 +253,18 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 
 .. note::
 
-    If you are working inside QGIS (either from the console or from a plugin),
-    it might be necessary to force a redraw of the map canvas in order to see
-    the changes you've done to the geometry, to the style or to the attributes:
+ If you are working inside QGIS (either from the console or from a plugin),
+ it might be necessary to force a redraw of the map canvas in order to see
+ the changes you've done to the geometry, to the style or to the attributes:
     
-    ::
+ ::
 
-      # If caching is enabled, a simple canvas refresh might not be sufficient
-      # to trigger a redraw and you must clear the cached image for the layer
-      if iface.mapCanvas().isCachingEnabled():
-          layer.setCacheImage(None)
-      else:
-          iface.mapCanvas().refresh()
-
-
+  # If caching is enabled, a simple canvas refresh might not be sufficient
+  # to trigger a redraw and you must clear the cached image for the layer
+  if iface.mapCanvas().isCachingEnabled():
+      QgsMapRendererCache().clearCacheImage(layer.id())
+  else:
+      iface.mapCanvas().refresh()
 
 
 Add Features
