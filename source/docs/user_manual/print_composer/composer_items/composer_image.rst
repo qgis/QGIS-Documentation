@@ -68,12 +68,17 @@ Depending on the selected :guilabel:`Resize mode`, the :guilabel:`Placement` and
 :guilabel:`Image rotation` options are disabled or not. With :guilabel:`Placement`
 you can select the position of the image inside its frame.
 
-
 .. _parameterized_svg:
 
-It is possible to change SVG fill/outline color and outline width when using
-parameterized SVG files such as those included with QGIS. If you add a SVG file
-you should add the following tags in order to add support for transparency:
+QGIS default provided :file:`.SVG` files are customizable, meaning that you can
+easily apply different :guilabel:`Fill color`, :guilabel:`Stroke color`
+(including opacity) and :guilabel:`Stroke width` than the original, using their
+corresponding feature in the :guilabel:`SVG Parameters` group. These properties
+can as well be :ref:`data-defined <data_defined>`.
+
+If you add a :file:`.SVG` file that does not enable these properties, you may
+need to add the following tags to the file in order to add support e.g. for
+transparency:
 
 * `fill-opacity="param(fill-opacity)"`
 * `stroke-opacity="param(outline-opacity)"`
