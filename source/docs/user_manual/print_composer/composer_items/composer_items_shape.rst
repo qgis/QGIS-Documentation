@@ -10,68 +10,6 @@ Shape Items
    .. contents::
       :local:
 
-.. index:: 
-   single: Layout item; Arrow
-.. _layout_arrow_item:
-
-The Arrow Item
---------------
-
-To add an arrow, click the |addArrow| :sup:`Add Arrow` icon, place the element
-holding down the left mouse button and drag a line to draw the arrow on the
-print layout canvas and position and customize the appearance in the scale bar
-:guilabel:`Item Properties` panel.
-
-When you also hold down the :kbd:`Shift` key while placing the arrow, it is
-placed in an angle of exactly 45\ |degrees| .
-
-The arrow item can be used to add a line or a simple arrow that can be used,
-for example, to show the relation between other print layout items. To create
-a north arrow, the image item should be considered first. QGIS has a set of
-North arrows in SVG format. Furthermore you can connect an image item with a map
-so it can rotate automatically with the map (see :ref:`layout_picture_item`).
-
-.. _figure_layout_arrow:
-
-.. figure:: img/arrow_properties.png
-   :align: center
-
-   Arrow Item Properties Panel
-
-Item Properties
-...............
-
-The :guilabel:`Arrow` item properties panel allows you to configure an arrow item.
-
-The  **[Line style...]** button can be used to set the line style using the line
-style symbol editor.
-
-In :guilabel:`Arrows markers` you can select one of three radio buttons.
-
-* :guilabel:`Default`: To draw a regular arrow, gives you options to style the
-  arrow head
-* :guilabel:`None`: To draw a line without arrow head
-* :guilabel:`SVG Marker`: To draw a line with an SVG :guilabel:`Start marker`
-  and/or :guilabel:`End marker`
-
-For :guilabel:`Default` Arrow marker you can use following options to style the
-arrow head.
-
-* :guilabel:`Arrow outline color`: Set the outline color of the arrow head
-* :guilabel:`Arrow fill color`: Set the fill color of the arrow head
-* :guilabel:`Arrow outline width`: Set the outline width of the arrow head
-* :guilabel:`Arrow head width`: Set the size of the arrow head
-
-For :guilabel:`SVG Marker` you can use following options.
-
-* :guilabel:`Start marker`: Choose an SVG image to draw at the beginning of the
-  line
-* :guilabel:`End marker`: Choose an SVG image to draw at the end of the line
-* :guilabel:`Arrow head width`: Set the size of Start and/or End marker
-
-SVG images are automatically rotated with the line. Outline and fill colors of
-QGIS predefined SVG images can be changed using the corresponding options. Custom
-SVG may require some tags following this :ref:`instruction <parameterized_svg>`.
 
 .. index:: 
    single: Layout item; Basic shape
@@ -107,41 +45,96 @@ the corners.
    Unlike other items, you can not style the frame or the background color of
    the frame.
 
-.. index:: 
+.. index::
    single: Layout item; Node-based shape
 .. _layout_node_based_shape_item:
 
 The Node-Based Shape Items
 --------------------------
 
-While arrow and basic shape items offer you simple and predefined geometric item
-to use, a node-based shape (polygon or polyline) helps you create a custom and
-more advanced geometric item. You can add as many lines or sides as you want to
-the item and independently and directly interact with each of its vertices.
+While the |addBasicShape| :guilabel:`Add Shape` tool provides way to create
+simple and predefined geometric item, the |addNodesShape| :guilabel:`Add Node
+Item` tool helps you create a custom and more advanced geometric item. For
+polylines or polygons, you can draw as many lines or sides as you want and
+vertices of the items can be independently and directly manipulated using the
+|editNodesShape| :guilabel:`Edit Nodes Item`. The item itself can be manipulated
+as exposed in :ref:`interact_layout_item`.
 
-To add a node-based shape, click the
-|addNodesShape| :sup:`Add nodes item` icon. Then perform left clicks to
-add nodes to your current shape. When you're done, a simple right click
-terminates the shape. Customize the appearance in the :guilabel:`Item Properties`
-panel.
+To add a node-based shape, click the |addNodesShape| :sup:`Add Node Item` icon
+and select either |addPolygon| :sup:`Add Polygon` or |addPolyline| :sup:`Add
+Polyline` tool. Then perform left clicks to add nodes to your current shape.
+If you hold down the :kbd:`Shift` key while drawing a segment, it is constrained
+to follow an orientation multiple of 45\ |degrees|.
+
+When you're done, a simple right click terminates the shape, allowing you to
+customize the appearance in the :guilabel:`Item Properties` panel.
 
 .. _figure_layout_nodes_shape:
 
 .. figure:: img/shape_nodes_properties.png
    :align: center
 
-   Nodes Shape Item Properties Panel
+   Polygon Node Shape Item Properties Panel
 
-You can set the style of the shape using the advanced symbol style dialog
-available thanks to the **[Change...]** button in :guilabel:`Main properties`.
+In the :guilabel:`Main properties`, you can set the style of the shape using
+the advanced :ref:`symbol <symbol-selector>` and :ref:`color <color-selector>`
+selector widget...
+
+For polyline node items, you can also parameterize the :guilabel:`Line markers`
+i.e. add:
+
+* start and/or end markers with options:
+
+  * :guilabel:`None`: draws a simple polyline;
+  * :guilabel:`Arrow`: adds a regular triangular arrow head that you can
+    customize;
+  * :guilabel:`SVG` marker: uses an :file:`SVG` file as arrow head of the
+    item.
+* customize the arrow head:
+
+  * :guilabel:`Arrow stroke color`: set the stroke color of the arrow head;
+  * :guilabel:`Arrow fill color`: set the fill color of the arrow head;
+  * :guilabel:`Arrow stroke width`: set the stroke width of the arrow head;
+  * :guilabel:`Arrow head width`: set the size of the arrow head.
+
+SVG images are automatically rotated with the line. Stroke and fill colors of
+QGIS predefined SVG images can be changed using the corresponding options. Custom
+SVG may require some tags following this :ref:`instruction <parameterized_svg>`.
+
+.. _figure_layout_arrow:
+
+.. figure:: img/arrow_properties.png
+   :align: center
+
+   Polyline Node Shape Item Properties Panel
+
+.. index:: 
+   single: Layout item; Arrow
+.. _layout_arrow_item:
+
+The Arrow Item
+..............
+
+The |addArrow| :sup:`Add Arrow` tool is a shortcut to create an arrow-enabled
+polyline by default and thus has same properties and behavior as a polyline
+node item.
+
+Actually, the arrow item can be used to add a simple arrow, for example, to
+show the relation between two different print layout items. However, to create
+a north arrow, the :ref:`image item <layout_picture_item>` should be considered
+first as it gives access to a set of north arrows in :file:`.SVG` format that
+you can sync with a map item so that it rotates automatically with it.
+
+Editing a node item geometry
+............................
 
 A specific tool is provided to edit node-based shapes through
 |editNodesShape| :sup:`Edit Nodes Item`. Within this mode, you can select
 a node by clicking on it (a marker is displayed on the selected node). A
 selected node can be moved either by dragging it or by using the arrow keys.
-Moreover, in this mode, you are able to add nodes to an existing shape. You
-just have to do a left click near a segment and if you are not too far from the
-shape, a node is added. Finally, you can remove the currently selected node by
+Moreover, in this mode, you are able to add nodes to an existing shape:
+double-click on a segment and a node is added at the place you click.
+Finally, you can remove the currently selected node by
 hitting the :kbd:`DEL` key.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -155,6 +148,10 @@ hitting the :kbd:`DEL` key.
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
+   :width: 1.5em
+.. |addPolygon| image:: /static/common/mActionAddPolygon.png
+   :width: 1.5em
+.. |addPolyline| image:: /static/common/mActionAddPolyline.png
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
