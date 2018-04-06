@@ -24,7 +24,8 @@ Context help
 .. index::
    single: Context help
 
-When you need help on a specific topic, you can access context help via the
+Whenever you need help on a specific topic, you can access the corresponding
+page in the current User Manual via the
 **[Help]** button available in most dialogs --- please note that third-party
 plugins can point to dedicated web pages.
 
