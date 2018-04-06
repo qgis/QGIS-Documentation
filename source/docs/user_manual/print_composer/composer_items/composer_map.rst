@@ -233,11 +233,18 @@ and the width used for the cross or line grid type.
    Grid Draw Coordinates dialog
 
 
+.. index:: Location map, Map overview
+
 Overviews
 ---------
 
-The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` panel
-provides the following functionalities:
+Sometimes you may have more than one map in the print layout and would like to
+locate the study area of one map item on another one. This could be for example
+to help map readers identify the area in relation with its larger geographic
+context shown in the second map.
+
+The :guilabel:`Overviews` group of the map panel helps you create the link
+between two different maps extent and provides the following functionalities:
 
 .. _figure_layout_map_overview:
 
@@ -246,26 +253,23 @@ provides the following functionalities:
 
    Map Overviews Dialog
 
-You can choose to create an overview map, which shows the extents of the other
-map(s) that are available in the layout. First you need to create the map(s)
-you want to include in the overview map and the map you want to use as the
-overview map, just like a normal map.
+To create an overview, select the map item on which you want to show the other
+map item's extent and expand the :guilabel:`Overviews` option in the
+:guilabel:`Item Properties` panel. Then press the |signPlus| button to add
+an overview.
 
-Then expand :guilabel:`Overviews` option and press the green plus icon-button to
-add an overview.
-Initially this overview is named 'Overview 1' (see Figure_layout_map_overview_).
-You can change the name when you double-click on the overview item in the list
-named 'Overview 1' and change it to another name.
+Initially this overview is named 'Overview 1' (see Figure_composer_map_overview_).
+You can:
 
-* With the plus and minus button you can add or remove an overview.
-* With the up and down button you can move an overview in the list and set the
-  drawing priority.
+* Rename it with a double-click;
+* With the |signPlus| and |signMinus| buttons, add or remove overviews;
+* With the |arrowUp| and |arrowDown| buttons, move up and down an overview in
+  the list and set the drawing priority among multiple overviews.
 
+Then select the overview item in the list and check the |checkbox|
+:guilabel:`Draw "<name_overview>" overview` to enable the overview
+drawing over the selected map frame. You can customize it with:
 
-When you select the overview item in the list you can customize it.
-
-* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be
-  activated to draw the extent of selected map frame.
 * The :guilabel:`Map frame` combo list can be used to select the map item whose
   extents will be drawn on the present map item.
 * The :guilabel:`Frame Style` allows you to change the style of the overview frame.
