@@ -303,11 +303,11 @@ This is where the magic happens and this is how magic looks like:
 
     def run(self):
       # create and show a configuration dialog or something similar
-      print "TestPlugin: run called!"
+      print("TestPlugin: run called!")
 
     def renderTest(self, painter):
       # use painter for drawing to map canvas
-      print "TestPlugin: renderTest called!"
+      print("TestPlugin: renderTest called!")
 
 
 The only plugin functions that must exist in the main plugin source file (e.g.

@@ -515,11 +515,11 @@ There are two possibilities how to export a vector layer:
     error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
 
     if error == QgsVectorFileWriter.NoError:
-        print "success!"
+        print("success!")
 
     error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", "utf-8", None, "GeoJSON")
     if error == QgsVectorFileWriter.NoError:
-        print "success again!"
+        print("success again!")
 
   The third parameter specifies output text encoding. Only some drivers need this
   for correct operation - shapefiles are one of those --- however in case you
@@ -557,7 +557,7 @@ There are two possibilities how to export a vector layer:
     writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
-        print "Error when creating shapefile: ",  w.errorMessage()
+        print("Error when creating shapefile: ",  w.errorMessage())
 
     # add a feature
     fet = QgsFeature()
@@ -644,15 +644,15 @@ Finally, let's check whether everything went well
 .. code-block:: python
 
   # show some stats
-  print "fields:", len(pr.fields())
-  print "features:", pr.featureCount()
+  print("fields:", len(pr.fields()))
+  print("features:", pr.featureCount())
   e = layer.extent()
-  print "extent:", e.xMiniminum(), e.yMinimum(), e.xMaximum(), e.yMaximum()
+  print("extent:", e.xMiniminum(), e.yMinimum(), e.xMaximum(), e.yMaximum())
 
   # iterate over features
   features = vl.getFeatures()
   for fet in features:
-      print "F:", fet.id(), fet.attributes(), fet.geometry().asPoint()
+      print("F:", fet.id(), fet.attributes(), fet.geometry().asPoint())
 
 .. index:: Vector layers; Symbology
 
@@ -674,7 +674,7 @@ And with that reference, let us explore it a bit
 
 ::
 
-  print "Type:", renderer.type()
+  print("Type:", renderer.type())
 
 There are several known renderer types available in the QGIS core library:
 
@@ -692,7 +692,7 @@ singleton to find out currently available renderers:
 
 .. code-block:: python
 
-    print QgsRendererV2Registry.instance().renderersList()
+    print(QgsRendererV2Registry.instance().renderersList())
     # Print:
     [u'singleSymbol',
     u'categorizedSymbol',
@@ -707,7 +707,7 @@ useful for debugging
 
 ::
 
-  print renderer.dump()
+  print(renderer.dump())
 
 .. index:: Single symbol renderer, Symbology; Single symbol renderer
 
@@ -759,7 +759,7 @@ instance you can follow the example code:
 
 .. code-block:: python
 
-    print layer.rendererV2().symbol().symbolLayers()[0].properties()
+    print(layer.rendererV2().symbol().symbolLayers()[0].properties())
     # Prints
     {u'angle': u'0',
     u'color': u'0,128,0,255',
@@ -806,7 +806,7 @@ To get a list of categories
 .. code-block:: python
 
   for cat in rendererV2.categories():
-      print "%s: %s :: %s" % (cat.value().toString(), cat.label(), str(cat.symbol()))
+      print("%s: %s :: %s" % (cat.value().toString(), cat.label(), str(cat.symbol())))
 
 Where :func:`value` is the value used for discrimination between categories,
 :func:`label` is a text used for category description and :func:`symbol` method
@@ -829,12 +829,12 @@ To find out more about ranges used in the renderer
 .. code-block:: python
 
   for ran in rendererV2.ranges():
-      print "%f - %f: %s %s" % (
+      print("%f - %f: %s %s" % (
           ran.lowerValue(),
           ran.upperValue(),
           ran.label(),
           str(ran.symbol())
-        )
+        ))
 
 you can again use :func:`classAttribute` to find out classification attribute
 name, :func:`sourceSymbol` and :func:`sourceColorRamp` methods.  Additionally
@@ -907,7 +907,7 @@ the symbol. To get a list of symbol layers
 
   for i in xrange(symbol.symbolLayerCount()):
       lyr = symbol.symbolLayer(i)
-      print "%d: %s" % (i, lyr.layerType())
+      print("%d: %s" % (i, lyr.layerType()))
 
 To find out symbol's color use :func:`color` method and :func:`setColor` to
 change its color. With marker symbols additionally you can query for the symbol
@@ -937,7 +937,7 @@ given symbol layer class like this
   myRegistry = QgsSymbolLayerV2Registry.instance()
   myMetadata = myRegistry.symbolLayerMetadata("SimpleFill")
   for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker):
-      print item
+      print(item)
 
 Output
 

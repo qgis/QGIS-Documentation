@@ -23,11 +23,11 @@ be loaded::
     # Get the project instance
     project = QgsProject.instance()
     # Print the current project file name (might be empty in case no projects have been loaded)
-    print project.fileName()
+    print(project.fileName())
     u'/home/user/projects/my_qgis_project.qgs'
     # Load another project
     project.read(QFileInfo('/home/user/projects/my_other_qgis_project.qgs'))
-    print project.fileName()
+    print(project.fileName())
     u'/home/user/projects/my_other_qgis_project.qgs'
 
 

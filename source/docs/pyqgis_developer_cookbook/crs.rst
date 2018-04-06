@@ -63,17 +63,17 @@ Accessing spatial reference system information
 
 ::
 
-  print "QGIS CRS ID:", crs.srsid()
-  print "PostGIS SRID:", crs.srid()
-  print "EPSG ID:", crs.epsg()
-  print "Description:", crs.description()
-  print "Projection Acronym:", crs.projectionAcronym()
-  print "Ellipsoid Acronym:", crs.ellipsoidAcronym()
-  print "Proj4 String:", crs.toProj4()
+  print("QGIS CRS ID:", crs.srsid())
+  print("PostGIS SRID:", crs.srid())
+  print("EPSG ID:", crs.epsg())
+  print("Description:", crs.description())
+  print("Projection Acronym:", crs.projectionAcronym())
+  print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
+  print("Proj4 String:", crs.toProj4())
   # check whether it's geographic or projected coordinate system
-  print "Is geographic:", crs.geographicFlag()
+  print("Is geographic:", crs.geographicFlag())
   # check type of map units in this CRS (values defined in QGis::units enum)
-  print "Map units:", crs.mapUnits()
+  print("Map units:", crs.mapUnits())
 
 .. index:: Projections
 
@@ -95,8 +95,8 @@ transformation, but it is capable to do also inverse transformation.
 
   # forward transformation: src -> dest
   pt1 = xform.transform(QgsPoint(18,5))
-  print "Transformed point:", pt1
+  print("Transformed point:", pt1)
 
   # inverse transformation: dest -> src
   pt2 = xform.transform(pt1, QgsCoordinateTransform.ReverseTransform)
-  print "Transformed back:", pt2
+  print("Transformed back:", pt2)
