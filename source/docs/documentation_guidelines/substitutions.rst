@@ -297,8 +297,11 @@ Icon                     Substitution                 Icon                     S
 |atlasSettings|          ``|atlasSettings|``          |atlas|                  ``|atlas|``
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
-|addArrow|               ``|addArrow|``               |addBasicShape|          ``|addBasicShape|``
+|addBasicShape|          ``|addBasicShape|``          |addBasicCircle|         ``|addBasicCircle|``
+|addBasicTriangle|       ``|addBasicTriangle|``       |addBasicRectangle|      ``|addBasicRectangle|``
 |addNodesShape|          ``|addNodesShape|``          |editNodesShape|         ``|editNodesShape|``
+|addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
+|addArrow|               ``|addArrow|``               \                        \
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
 |addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
@@ -445,7 +448,13 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
+.. |addBasicCircle| image:: /static/common/mActionAddBasicCircle.png
+   :width: 1.5em
+.. |addBasicRectangle| image:: /static/common/mActionAddBasicRectangle.png
+   :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
+   :width: 1.5em
+.. |addBasicTriangle| image:: /static/common/mActionAddBasicTriangle.png
    :width: 1.5em
 .. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em
@@ -468,6 +477,10 @@ Icon                            Substitution                        Icon        
 .. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
+.. |addPolygon| image:: /static/common/mActionAddPolygon.png
+   :width: 1.5em
+.. |addPolyline| image:: /static/common/mActionAddPolyline.png
    :width: 1.5em
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
