@@ -203,7 +203,7 @@ The :menuselection:`Layout` provides action to manage the layout:
 * Create a new and blank print layout with |newLayout| :guilabel:`New Layout...`;
 * |duplicateLayout| :guilabel:`Duplicate Layout...` : Create a new print layout
   by duplicating the current one;
-* Remove the current layout with |deleteSelected| :guilabel:`Delete Layout...`;  
+* Remove the current layout with |deleteSelected| :guilabel:`Delete Layout...`;
 * Open the |layoutManager| :guilabel:`Layout Manager...`
 * :menuselection:`Layouts -->` : Open an existing print layout.
 
@@ -325,7 +325,7 @@ panels are restored when unchecked.
 It's also possible to switch to a full screen mode to have more space to
 interact with by pressing :kbd:`F11` or using :menuselection:`View -->`
 |checkbox| :guilabel:`Toggle Full Screen`.
-   
+
 ================================================= ========================== ========================== =====================================
  Tool                                              Shortcut                   Toolbar                    Reference
 ================================================= ========================== ========================== =====================================
@@ -554,31 +554,6 @@ More information on variables usage in the
 
    Variables Editor in the Print Layout
 
-.. index:: Revert layout actions
-.. _layout_undo_panel:
-
-The Undo History Panel: Revert and Restore actions
---------------------------------------------------
-
-During the layout process, it is possible to revert and restore changes.
-This can be done with the revert and restore tools:
-
-* |undo| :sup:`Revert last change`
-* |redo| :sup:`Restore last change`
-
-This can also be done by mouse click within the :guilabel:`Undo history`
-panel (see figure_layout_). The History panel lists the last actions done
-within the print layout.
-Just select the point you want to revert to and once you do new action all
-the actions done after the selected one will be removed.
-
-.. _figure_layout:
-
-.. figure:: img/command_hist.png
-   :align: center
-
-   Undo History in the Print Layout
-
 .. _layout_items_tab:
 
 The Items Panel
@@ -606,6 +581,32 @@ Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
 Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 panel and unchecking the tickbox or you can use the icons on the toolbar.
+
+
+.. index:: Revert layout actions
+.. _layout_undo_panel:
+
+The Undo History Panel: Revert and Restore actions
+--------------------------------------------------
+
+During the layout process, it is possible to revert and restore changes.
+This can be done with the revert and restore tools:
+
+* |undo| :sup:`Revert last change`
+* |redo| :sup:`Restore last change`
+
+This can also be done by mouse click within the :guilabel:`Undo history`
+panel (see figure_layout_). The History panel lists the last actions done
+within the print layout.
+Just select the point you want to revert to and once you do new action all
+the actions done after the selected one will be removed.
+
+.. _figure_layout:
+
+.. figure:: img/command_hist.png
+   :align: center
+
+   Undo History in the Print Layout
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
