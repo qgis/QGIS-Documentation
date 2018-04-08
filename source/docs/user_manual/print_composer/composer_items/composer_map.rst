@@ -258,7 +258,7 @@ map item's extent and expand the :guilabel:`Overviews` option in the
 :guilabel:`Item Properties` panel. Then press the |signPlus| button to add
 an overview.
 
-Initially this overview is named 'Overview 1' (see Figure_composer_map_overview_).
+Initially this overview is named 'Overview 1' (see Figure_layout_map_overview_).
 You can:
 
 * Rename it with a double-click;
