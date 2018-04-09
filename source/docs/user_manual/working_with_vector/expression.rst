@@ -245,38 +245,43 @@ Color Functions
 
 This group contains functions for manipulating colors.
 
-================== ==========================================================
- Function           Description
-================== ==========================================================
- color_cmyk         Returns a string representation of a color based on
-                    its cyan, magenta, yellow and black components
- color_cmyka        Returns a string representation of a color based on
-                    its cyan, magenta, yellow, black and alpha (transparency)
-                    components
- color_hsl          Returns a string representation of a color based on
-                    its hue, saturation, and lightness attributes
- color_hsla         Returns a string representation of a color based on its
-                    hue, saturation, lightness and alpha (transparency)
-                    attributes
- color_hsv          Returns a string representation of a color based on
-                    its hue, saturation, and value attributes
- color_hsva         Returns a string representation of a color based on
-                    its hue, saturation, value and alpha (transparency)
-                    attributes
- color_part         Returns a specific component from a color string,
-                    eg the red component or alpha component
- color_rgb          Returns a string representation of a color based on
-                    its red, green, and blue components
- color_rgba         Returns a string representation of a color based on
-                    its red, green, blue, and alpha (transparency) components
- create_ramp        Returns a gradient ramp from a map of color strings and steps
- darker             Returns a darker (or lighter) color string
- lighter            Returns a lighter (or darker) color string
- project_color      Returns a color from the project's color scheme
- ramp_color         Returns a string representing a color from a color ramp
- set_color_part     Sets a specific color component for a color string,
-                    eg the red component or alpha component
-================== ==========================================================
+========================== ==========================================================
+ Function                   Description
+========================== ==========================================================
+ color_cmyk                 Returns a string representation of a color based on
+                            its cyan, magenta, yellow and black components
+ color_cmyka                Returns a string representation of a color based on
+                            its cyan, magenta, yellow, black and alpha (transparency)
+                            components
+ color_grayscale_average    Applies a grayscale filter and returns a string
+                            representation from a provided color
+ color_hsl                  Returns a string representation of a color based on
+                            its hue, saturation, and lightness attributes
+ color_hsla                 Returns a string representation of a color based on its
+                            hue, saturation, lightness and alpha (transparency)
+                            attributes
+ color_hsv                  Returns a string representation of a color based on
+                            its hue, saturation, and value attributes
+ color_hsva                 Returns a string representation of a color based on
+                            its hue, saturation, value and alpha (transparency)
+                            attributes
+ color_mix_rgb              Returns a string representing a color mixing the red,
+                            green, blue, and alpha values of two provided colors
+                            based on a given ratio
+ color_part                 Returns a specific component from a color string,
+                            eg the red component or alpha component
+ color_rgb                  Returns a string representation of a color based on
+                            its red, green, and blue components
+ color_rgba                 Returns a string representation of a color based on
+                            its red, green, blue, and alpha (transparency) components
+ create_ramp                Returns a gradient ramp from a map of color strings and steps
+ darker                     Returns a darker (or lighter) color string
+ lighter                    Returns a lighter (or darker) color string
+ project_color              Returns a color from the project's color scheme
+ ramp_color                 Returns a string representing a color from a color ramp
+ set_color_part             Sets a specific color component for a color string,
+                            eg the red component or alpha component
+========================== ==========================================================
 
 
 Conditional Functions
@@ -599,6 +604,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | extrude(geom,x,y)      | Returns an extruded version of the input (Multi-) |
 |                        | Curve or (Multi-)Linestring geometry with an      |
 |                        | extension specified by x and y                    |
++------------------------+---------------------------------------------------+
+| flip_coordinates       | Returns a copy of the geometry with the x and y   |
+|                        | coordinates swapped                               |
 +------------------------+---------------------------------------------------+
 | geom_from_gml          | Returns a geometry created from a GML             |
 |                        | representation of geometry                        |
@@ -1151,6 +1159,8 @@ To use these functions in an expression, they should be preceded by @ character
  atlas_featurenumber     Returns the current atlas feature number in the layout
  atlas_filename          Returns the current atlas file name
  atlas_geometry          Returns the current atlas feature geometry
+ atlas_layerid           Returns the current atlas coverage layer ID
+ atlas_layername         Returns the current atlas coverage layer name
  atlas_pagename          Returns the current atlas page name
  atlas_totalfeatures     Returns the total number of features in atlas
  cluster_color           Returns the color of symbols within a cluster, or NULL
@@ -1188,6 +1198,13 @@ To use these functions in an expression, they should be preceded by @ character
  map_rotation            Returns the current rotation of the map
  map_scale               Returns the current scale of the map
  map_units               Returns the units of map measurements
+ parent                  Returns attributes and geometry from the parent feature when
+                         in the filter of the "aggregate" expression function
+ project_abstract        Returns the project abstract, taken from project metadata
+ project_author          Returns the project author, taken from project metadata
+ project_creation_date   Returns the project creation date, taken from project metadata
+ project_identifier      Returns the project identifier, taken from project metadata
+ project_keywords        Returns the project keywords, taken from project metadata
  project_crs             Returns the Coordinate reference system of the project
  project_crs_definition  Returns the full definition of the Coordinate reference
                          system of the project
@@ -1204,6 +1221,8 @@ To use these functions in an expression, they should be preceded by @ character
  qgis_short_version      Returns current QGIS version short string
  qgis_version            Returns current QGIS version string
  qgis_version_no         Returns current QGIS version number
+ snapping_results        Gives access to snapping results while digitizing a
+                         feature (only available in add feature)
  symbol_angle            Returns the angle of the symbol used to render
                          the feature (valid for marker symbols only)
  symbol_color            Returns the color of the symbol used to render
@@ -1214,7 +1233,35 @@ To use these functions in an expression, they should be preceded by @ character
                          user name
  row_number              Stores the number of the current row
  value                   Returns the current value
+ with_variable           Allows setting a variable for usage within an expression
+                         and avoid recalculating the same value repeatedly
 ======================= =======================================================
+
+**Some examples:**
+
+* Return the x coordinate of a map item center to insert into a label in layout::
+
+   x( map_get( item_variables( 'map1'), 'map_extent_center' ) )
+
+* Return for each feature in the current layer the number of overlapping airports
+  features::
+  
+   aggregate( layer:='airport', aggregate:='count', expression:="code",
+                  filter:=intersects( $geometry, geometry( @parent ) ) )
+
+* Get the object_id of the first snapped point of a line::
+
+   with_variable(
+     'first_snapped_point',
+     array_first( @snapping_results ),
+     attribute(
+       get_feature_by_id(
+         map_get( @first_snapped_point, 'layer' ),
+         map_get( @first_snapped_point, 'feature_id' )
+       ),
+       'object_id'
+     )
+   )
 
 
 Recent Functions
