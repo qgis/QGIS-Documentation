@@ -434,7 +434,7 @@ a more semantic code block as shown in the example below:
 
   with edit(layer):
     fet = layer.getFeatures().next()
-    f[0] = 5
+    fet[0] = 5
     layer.updateFeature(fet)
 
 
