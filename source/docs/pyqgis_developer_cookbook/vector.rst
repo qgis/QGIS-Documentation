@@ -433,9 +433,9 @@ a more semantic code block as shown in the example below:
 .. code-block:: python
 
   with edit(layer):
-    fet = layer.getFeatures().next()
-    fet[0] = 5
-    layer.updateFeature(fet)
+    feat = layer.getFeatures().next()
+    feat[0] = 5
+    layer.updateFeature(feat)
 
 
 This will automatically call :func:`commitChanges()` in the end.
