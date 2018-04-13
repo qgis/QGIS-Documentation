@@ -158,7 +158,7 @@ button in the map :guilabel:`Item Properties` panel (see figure_layout_map_).
 Grids
 -----
 
-With grids, you can add over your map information relative to its extent or
+With grids, you can add, over your map, information relative to its extent or
 coordinates, either in the map item projection or a different one. The
 :guilabel:`Grids` group provides the possibility to add several grids to a
 map item.
@@ -166,7 +166,7 @@ map item.
 * With the |signPlus| and |signMinus| buttons you can add or remove a selected
   grid;
 * With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in
-  the list and set the drawing priority.
+  the list, hence move it on top or bottom of another one, over the map item.
 
 Double-click the added grid to rename it.
 
@@ -224,7 +224,7 @@ Also you can choose to set visible or not each side of the grid frame.
 
 When compatible, it's possible to set the :guilabel:`Frame size`,
 :guilabel:`Frame line thickness`, :guilabel:`Frame fill colors`.
-With ``Latitude/Y only`` and ``Longitude/X only`` setting in the divisions
+With ``Latitude/Y only`` and ``Longitude/X only`` settings in the divisions
 section you have the possibility to prevent a mix of latitude/y and longitude/x
 coordinates showing on a side when working with rotated maps or reprojected
 grids.
