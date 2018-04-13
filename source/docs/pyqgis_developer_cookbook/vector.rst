@@ -332,35 +332,10 @@ then it changes the feature's geometry
     calling :func:`commitChanges()` at the end. If any exception occurs, it will 
     :func:`rollBack()` all the changes. See :ref:`editing-buffer`.
 
-Adding and Removing Fields
---------------------------
-
-To add fields (attributes), you need to specify a list of field definitions.
-For deletion of fields just provide a list of field indexes.
-
-.. code-block:: python
-
-  from qgis.PyQt.QtCore import QVariant
-
-  if caps & QgsVectorDataProvider.AddAttributes:
-      res = layer.dataProvider().addAttributes(
-          [QgsField("mytext", QVariant.String),
-          QgsField("myint", QVariant.Int)])
-
-  if caps & QgsVectorDataProvider.DeleteAttributes:
-      res = layer.dataProvider().deleteAttributes([0])
-
-After adding or removing fields in the data provider the layer's fields need
-to be updated because the changes are not automatically propagated.
-
-.. code-block:: python
-
-  layer.updateFields()
-
 .. _editing-buffer:
 
 Modifying Vector Layers with an Editing Buffer
-==============================================
+----------------------------------------------
 
 When editing vectors within QGIS application, you have to first start editing
 mode for a particular layer, then do some modifications and finally commit (or
@@ -442,6 +417,32 @@ This will automatically call :func:`commitChanges()` in the end.
 If any exception occurs, it will :func:`rollBack()` all the changes.
 In case a problem is encountered within :func:`commitChanges()` (when the method
 returns False) a :class:`QgsEditError` exception will be raised.
+
+Adding and Removing Fields
+--------------------------
+
+To add fields (attributes), you need to specify a list of field definitions.
+For deletion of fields just provide a list of field indexes.
+
+.. code-block:: python
+
+ from qgis.PyQt.QtCore import QVariant
+
+ if caps & QgsVectorDataProvider.AddAttributes:
+     res = layer.dataProvider().addAttributes(
+         [QgsField("mytext", QVariant.String),
+         QgsField("myint", QVariant.Int)])
+
+ if caps & QgsVectorDataProvider.DeleteAttributes:
+     res = layer.dataProvider().deleteAttributes([0])
+
+After adding or removing fields in the data provider the layer's fields need
+to be updated because the changes are not automatically propagated.
+
+.. code-block:: python
+
+ layer.updateFields()
+
 
 .. index:: Spatial index
 
