@@ -335,7 +335,7 @@ then it changes the feature's geometry
 .. _editing-buffer:
 
 Modifying Vector Layers with an Editing Buffer
-==============================================
+----------------------------------------------
 
 When editing vectors within QGIS application, you have to first start editing
 mode for a particular layer, then do some modifications and finally commit (or
