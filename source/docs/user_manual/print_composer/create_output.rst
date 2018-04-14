@@ -225,8 +225,10 @@ Once checked, you can set:
   In auto-scale mode, the map's extents are computed in such a way that
   each geometry will appear in its entirety.
 
-Labels
-------
+.. _atlas_labels:
+
+Customize labels with expression
+--------------------------------
 
 In order to adapt labels to the feature the atlas plugin iterates over, you can
 include expressions. What you should take care of is to place expression part
@@ -255,72 +257,76 @@ generated atlas as::
 
 .. _atlas_data_defined_override:
 
-Data Defined Override Buttons
------------------------------
+Explore Data-defined override buttons with atlas
+------------------------------------------------
 
-There are several places where you can use a |dataDefined| :sup:`Data Defined
-Override` button to override the selected setting. These options are
-particularly useful with Atlas Generation.
+There are several places where you can use a |dataDefined| :sup:`Data defined
+override` button to override the selected setting. These options are
+particularly useful with atlas generation. See :ref:`data_defined` for more
+details on this widget.
 
-For the following examples the `Regions` layer of the QGIS sample dataset is
-used and selected for Atlas Generation.
-We also assume the paper format `A4 (210X297)` is selected in the
-:guilabel:`Composition` panel for field :guilabel:`Presets`.
+For the following examples the :file:`Regions` layer of the QGIS sample
+dataset is used and selected as coverage layer for the atlas generation.
+We also assume it's a single page layout containing a map and a label items.
 
-With a `Data Defined Override` button you can dynamically set the paper
-orientation. When the height (north-south) of the extents of a region is greater
-than its width (east-west), you rather want to use `portrait` instead of
-`landscape` orientation to optimize the use of paper.
+When the height (north-south) of the extents of a region is greater
+than its width (east-west), you rather want to use *Portrait* instead of
+*Landscape* orientation to optimize the use of paper. With a |dataDefined|
+:sup:`Data Defined Override` button you can dynamically set the paper
+orientation.
 
-In the :guilabel:`Composition` you can set the field :guilabel:`Orientation`
-and select `Landscape` or `Portrait`. We want to set the orientation dynamically
-using an expression depending on the region geometry.
-Press the |dataDefined| button of field :guilabel:`Orientation`, select
-:menuselection:`Edit...` so the :guilabel:`Expression string builder` dialog
-opens. Enter the following expression:
+Right-click on the page and select :guilabel:`Page Properties` to open the
+panel. We want to set the orientation dynamically, using an expression
+depending on the region geometry so press the |dataDefined| button of
+field :guilabel:`Orientation`, select :guilabel:`Edit...` to open the
+:guilabel:`Expression string builder` dialog and enter the following expression:
 
 .. code::
 
-   CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
+   CASE WHEN bounds_width(@atlas_geometry) > bounds_height(@atlas_geometry)
    THEN 'Landscape' ELSE 'Portrait' END
 
-Now the paper orients itself automatically. For each Region you need to
-reposition the location of the layout item as well. For the map item you can
-use the |dataDefined| button of field :guilabel:`Width` to set it
-dynamically using following expression:
+Now if you :ref:`preview the atlas <atlas_preview>`, the paper orients itself
+automatically but items placement may not be ideal. For each Region you need to
+reposition the location of the layout items as well. For the map item you can
+use the |dataDefined| button of its :guilabel:`Width` property to set it
+dynamic using following expression:
 
 .. code::
 
-   (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
-   THEN 297 ELSE 210 END) - 20
+   @layout_pagewidth - 20
 
-Use the |dataDefined| button of field :guilabel:`Height` to provide following
-expression:
-
-.. code::
-
-   (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
-   THEN 210 ELSE 297 END) - 20
-
-When you want to give a title above the map in the center of the page,
-insert a label item above the map. First use the item properties of the label
-item to set the horizontal alignment to |radioButtonOn| :guilabel:`Center`.
-Next activate from :guilabel:`Reference point` the upper middle checkbox.
-You can provide the following expression for field :guilabel:`X` :
+Likewise, use the |dataDefined| button of the :guilabel:`Height` property to
+provide following expression and constrain map item size:
 
 .. code::
 
-   (CASE WHEN bounds_width($atlasgeometry) > bounds_height($atlasgeometry)
-   THEN 297 ELSE 210 END) / 2
+   @layout_pageheight - 20
+
+To ensure the map item is centered in the page, set its :guilabel:`Reference
+point` to the upper left radio button and enter ``10`` for its :guilabel:`X`
+and :guilabel:`Y` positions.
+
+Let's add a title above the map in the center of the page. Select the label
+item and set the horizontal alignment to |radioButtonOn| :guilabel:`Center`.
+Next move the label to the right position, activate from :guilabel:`Reference
+point` any of the middle buttons, and provide the following expression for
+field :guilabel:`X`:
+
+.. code::
+
+   @layout_pagewidth / 2
 
 For all other layout items you can set the position in a similar way so they
 are correctly positioned when the page is automatically rotated in portrait or
-landscape.
+landscape. You can also do more tweaks such as customizing the title with
+feature attributes (see :ref:`atlas_labels` example), updating images with
+atlas feature, resizing the legend columns number according to page orientation...
 
-Information provided is derived from the excellent blog (in English and Portuguese)
+Information provided is an update of the excellent blog (in English and Portuguese)
 on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ .
 
-This is just one example of how you can use the Data Defined Override option.
+This is just one example of how you can use some advanced settings with atlas.
 
 .. _atlas_preview:
 
