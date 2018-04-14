@@ -16,8 +16,8 @@
    .. contents::
       :local:
 
-figure_layout_output_ shows the print layout with an example print layout,
-including each type of map item described in the previous section.
+The :ref:`figure below <figure_layout_output>` shows an example of print layout
+including each type of layout items described in the previous section.
 
 .. _figure_layout_output:
 
@@ -29,22 +29,35 @@ including each type of map item described in the previous section.
 
 .. index:: Export as image, Export as PDF, Export as SVG
 
-Before printing a layout you have the possibility to view your composition
-without bounding boxes. This can be enabled by deactivating :menuselection:`View -->`
-|checkbox| :guilabel:`Show bounding boxes` or pressing the shortcut
-:kbd:`Ctrl+Shift+B`.
-
-The print layout allows you to create several output formats, and it is
-possible to define the resolution (print quality) and paper size:
+From the :menuselection:`Layout` menu or toolbar, you can output the print
+layout to different file formats, and it is possible to modify the resolution
+(print quality) and paper size:
 
 * The |filePrint| :sup:`Print` icon allows you to print the layout to a
   connected printer or a PostScript file, depending on installed printer drivers.
-* The |saveMapAsImage| :sup:`Export as image` icon exports the layout
-  canvas in several image formats, such as PNG, BPM, TIF, JPG,...
-* The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout canvas
-  as an SVG (Scalable Vector Graphic).
+* The |saveMapAsImage| :sup:`Export as image` icon exports the print layout
+  in several image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`,
+  :file:`JPG`, and many others...
+* The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout
+  as an :file:`SVG` (Scalable Vector Graphic);
 * The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout
-  canvas directly as a PDF.
+  directly as a :file:`PDF`.
+
+Export settings
+===============
+
+Whenever you export a print layout, there are a bunch of export settings QGIS needs
+to check in order to return the most appropriate output. These configurations
+are in:
+
+* the :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
+  panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`,
+  :guilabel:`Always export as vectors` or :guilabel:`Save world file`;
+* the :guilabel:`Exclude page from exports` in the :ref:`page item properties
+  <page_properties>` panel;
+* the :guilabel:`Exclude item from exports` in the :ref:`item properties
+  <layout_Rendering_Mode>` panel;
+
 
 .. _export_layout_image:
 
@@ -52,27 +65,28 @@ Export as Image
 ===============
 
 Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to
-enter the filename to use to export composition: in the case of multi-page
-composition, each page will be exported to a file with the given name
-appended with the page number.
+select the image format and enter the filename to use to export the print layout:
+in the case of multi-page composition, each page will be exported to a file with
+the given name appended with the page number.
 
-You can then override the print resolution and the exported image dimensions
-(set in Composition panel).
+In the next :guilabel:`Image Export Options` dialog, you can optionally
+override the print layout resolution and the exported page dimensions
+(set in :guilabel:`Layout` panel).
 
 .. index:: Crop layout to content
 .. _crop_to_content:
 
 By checking |checkbox| :guilabel:`Crop to content` option, the image output
-by the layout includes the minimal area enclosing all the items (map,
+by the layout will include the minimal area enclosing all the items (map,
 legend, scale bar, shapes, label, image...) of each page of the composition:
 
 * If the composition includes a single page, then the output is resized to
   include EVERYTHING on the composition. The page can then be reduced or
   extended to all items depending on their position (on, above, below, left or
   right of the page).
-* In case of a multi-page layout, each page will be resized to include
-  items in its area (left and right sides for all pages, plus top for the first page
-  and bottom for the last page). Each resized page is exported to a separate file.
+* In case of a multi-page layout, each page will be resized to include items in
+  its area (left and right sides for all pages, plus top for the first page and
+  bottom for the last page). Each resized page is exported to a separate file.
 
 The :guilabel:`Crop to content` dialog also allows to add some margins around
 the cropped bounds.
@@ -85,35 +99,44 @@ the cropped bounds.
    Image Export Options, output is resized to items extent
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
-with other projects), you need to enable this feature under the
-:ref:`layout_panel`.
+with other projects), check the |unchecked| :guilabel:`Generate world file`
+option and a world file named like the page on which the map reference set in
+:guilabel:`Layout` panel is placed will be created along the export(s).
+This option can also be checked by default in the :ref:`layout panel
+<layout_panel>`.
 
-If the output format is a TIFF format, all you need to do is making sure to
-select the correct map item to use in |selectString| :guilabel:`Reference
-map`, and the output will always be a GeoTIFF. For other image formats,
-you also need to check the |checkbox| :guilabel:`Save world file` option.
-With this option, the 'Export as image' action will create a world file along
-with the exported image.
+When needed, images rendering can also be improved with the :guilabel:`Enable
+antialiasing` option.
 
 .. note::
 
-   Exporting large rasters can sometimes fail, even if there seems to be
-   enough memory. This is a problem with the underlying Qt management of rasters.
+   Exporting large rasters can sometimes fail, even if there seems to be enough
+   memory. This is a problem with the underlying Qt management of rasters.
+
+.. Is this still true with qt5?
 
 .. _export_layout_svg:
 
 Export as SVG
 =============
 
-With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename
-(used as a basename for all files in case of multi-page composition) and then
-can apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`.
+With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename (used
+as a basename for all files in case of multi-page composition) and then can
+apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`.
 
-The SVG export options dialog also allows to:
+The SVG export options dialog also allows to override the layout default export
+and offers other settings:
 
-* :guilabel:`Export map layers as SVG groups`: may affect label placement;
-* :guilabel:`Render map labels as outlines`;
-* :guilabel:`Always export as vectors`.
+* |unchecked|:guilabel:`Export map layers as SVG groups`: may affect label
+  placement;
+* |checkbox|:guilabel:`Render map labels as outlines`: unchecking this will
+  allow you to edit labels as texts in vector illustration software;
+* |unchecked|:guilabel:`Always export as vectors`: some rendering options
+  require items to be rasterized for a better rendering. Check this option to
+  keep the objects as vectors with the risk that the appearance of the output
+  file may not match the print layout preview (for more details, see
+  :ref:`layout_export_settings`);
+* |checkbox|:guilabel:`Export RDF metadata`.
 
 .. _figure_layout_output_svg:
 
@@ -127,27 +150,22 @@ The SVG export options dialog also allows to:
    Currently, the SVG output is very basic. This is not a QGIS problem, but a
    problem with the underlying Qt library. This will hopefully be sorted out
    in future versions.
-   
+
+.. What is the status of this bug with qt5?
+
 .. _export_layout_pdf:
 
 Export as PDF
 =============
 
-The |saveAsPDF| :sup:`Export as PDF` exports all the composition into a
-single PDF file.
+The |saveAsPDF| :sup:`Export as PDF` tool exports all the composition pages
+into a single PDF file you'd need to provide path and name.
+Unlike the other formats, exporting to :file:`.PDF` does not provide means to
+override the layout export settings. So check :ref:`these settings
+<layout_export_settings>` to ensure they are compatible with your needs.
 
-If you applied to your layout or any shown layer an advanced effect such as
-blend modes, transparency or symbol effects, these cannot be printed
-as vectors, and the effects may be lost. Checking :guilabel:`Print as
-raster` in the :ref:`layout_panel` helps to keep the effects but
-rasterize the composition. Note that the :guilabel:`Force layer to render as
-raster` in the Rendering tab of Layer Properties dialog is a layer-level
-alternative that avoids global composition rasterization.
-
-If you need to export your layout as a **georeferenced PDF**, in the
-:ref:`layout_panel`, make sure you select the correct map item to
-use in |selectString| :guilabel:`Reference map`.
-
+.. note:: Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF`
+  creates by default a georeferenced output (no world file needed).
 
 .. index:: Atlas generation
 
@@ -408,4 +426,6 @@ an image or SVG file.
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
