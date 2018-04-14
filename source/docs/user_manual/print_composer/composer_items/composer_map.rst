@@ -166,14 +166,16 @@ over the coverage layer, the map item extent is panned/zoomed to the atlas
 feature following:
 
 * |radioButtonOn| :guilabel:`Margin around features`: zoom to the feature at the
-  best scale, keeping around each the same margin representing a percentage of
-  the map item width or height;
-* |radioButtonOff| :guilabel:`Predefined scale (best fit)`: use the
-  :ref:`predefined scale <predefinedscales>` of the project where the atlas
+  best scale, keeping around each a margin representing a percentage of the map
+  item width or height. The margin can be the same for all features or :ref:`set
+  variable <data_defined>`, e.g., depending on map scale;
+* |radioButtonOff| :guilabel:`Predefined scale (best fit)`: zoom to the feature
+  at the project :ref:`predefined scale <predefinedscales>` where the atlas
   feature best fits;
-* |radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one to
-  another without map item rescaling. Ideal when working with features of same
-  size or willing to emphasize size differences among atlas features.
+* |radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one
+  to another, keeping the same scale of the map item. Ideal when working with
+  features of same size (e.g., a grid) or willing to highlight size differences
+  among atlas features.
 
 .. index:: Grids, Map grid
 
