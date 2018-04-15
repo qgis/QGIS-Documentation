@@ -22,7 +22,8 @@ def get_subst_from_file(file):
     # defines a pattern for a substitution
     # anything inside || except is preceded by ..
     s_pattern = re.compile(r"(?<!\.\. )\|([\w\d]+)\|")
-    s_title = re.compile(r"\.\. Substitutions definitions - AVOID EDITING PAST THIS LINE")
+    s_title = re.compile(r"\.\. Substitutions definitions - AVOID EDITING "
+                         r"PAST THIS LINE\n")
     subs = []
     with open(file, 'r+') as f:
         pos = f.tell()
@@ -36,6 +37,11 @@ def get_subst_from_file(file):
                 subs += s_pattern.findall(line)
                 pos = f.tell()
                 line = f.readline()
+                # Making sure there is a newline at the end of the file
+                if line == "" and len(subs)>0:
+                    f.seek(pos-1)
+                    if f.read() != "\n":
+                        f.write("\n")
     list_subs = list(set(subs))
     list_subs.sort()
     return list_subs
@@ -49,24 +55,26 @@ def get_subst_definition(subst_list, s_dict):
     """
     global file
 
-    s_def = "\n\n.. Substitutions definitions - AVOID EDITING PAST THIS LINE" \
-            "\n   This will be automatically updated by the find_set_subst.py script." \
-            "\n   If you need to create a new substitution manually," \
-            "\n   please add it also to the substitutions.txt file in the" \
-            "\n   source folder.\n"
+    s_def = "\n\n.. Substitutions definitions - AVOID EDITING PAST THIS " \
+            "LINE\n" \
+            "   This will be automatically updated by the find_set_subst.py " \
+            "script.\n" \
+            "   If you need to create a new substitution manually,\n" \
+            "   please add it also to the substitutions.txt file in the\n" \
+            "   source folder.\n\n"
     d = s_dict
     s_count = 0
     for subst in subst_list:
         if subst in d:
             s = d[subst]
             if 'image' in s:
-                s_def += '\n.. |{}| image:: {}'.format(subst, s['image'])
+                s_def += '.. |{}| image:: {}\n'.format(subst, s['image'])
                 if 'width' in s:
-                    s_def += '\n   :width: {}'.format(s['width'])
+                    s_def += '   :width: {}\n'.format(s['width'])
             elif 'replace' in s:
-                s_def += '\n.. |{}| replace:: {}'.format(subst, s['replace'])
+                s_def += '.. |{}| replace:: {}\n'.format(subst, s['replace'])
             elif 'unicode' in s:
-                s_def += '\n.. |{}| unicode:: {}\n   :ltrim:'.format(subst,
+                s_def += '.. |{}| unicode:: {}\n   :ltrim:\n'.format(subst,
                                                              s['unicode'])
             s_count += 1
         else:
