@@ -1704,7 +1704,7 @@ manage:
 * **vector layer's variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
 * **layout's variables** from the :guilabel:`Layout` panel in the
-  Print layout (see :ref:`layout_tab`);
+  Print layout (see :ref:`layout_panel`);
 * and **layout item's variables** from the :guilabel:`Item Properties`
   panel in the Print layout (see :ref:`layout_item_options`).
 

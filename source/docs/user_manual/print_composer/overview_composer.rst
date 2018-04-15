@@ -149,17 +149,15 @@ the panels :guilabel:`Items` and :guilabel:`Undo History` and the lower holds
 the panels :guilabel:`Layout`, :guilabel:`Item properties`
 and :guilabel:`Atlas generation`.
 
-* The :guilabel:`Items` panel provides a list of all the print layout items added to
-  the canvas.
+* The :guilabel:`Items` panel provides a list of all the print layout items
+  added to the canvas and ways to globally interact with them
+  (see :ref:`layout_items_panel` for more information).
 * The :guilabel:`Undo History` panel displays a history of all changes applied
   to the layout. With a mouse click, it is possible to undo and
   redo layout steps back and forth to a certain status.
-* The :guilabel:`Layout` panel allows you to set paper size, orientation, the
-  page background, number of pages and print quality for the output file in dpi.
-  Furthermore, you can also activate the |checkbox| :guilabel:`Print as raster`
-  checkbox. This means all items will be converted to raster before printing or
-  saving as PostScript or PDF.
-  In this panel, you can also customize settings for grid and smart guides.
+* The :guilabel:`Layout` panel allows you to set general parameters to apply to
+  the layout when exporting or working within (see :ref:`layout_panel` for more
+  details);
 * The :guilabel:`Item Properties` panel displays the properties for the selected
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
@@ -230,7 +228,7 @@ information.
  |deleteSelected| :guilabel:`Delete Layout`
  |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
  :menuselection:`Layouts —>`
- :guilabel:`Layout Properties...`                                                                        :ref:`layout_tab`
+ :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
  :guilabel:`Rename Layout...`
  |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`
  |fileOpen| :guilabel:`Add Items from Template`
@@ -292,7 +290,7 @@ tools, you have means to:
 * |draw| :sup:`Refresh view` (if you find the view in an inconsistent state);
 * enable a :ref:`grid <grid_guides>` you could snap items to when moving or
   creating them. Grids setting is done in :menuselection:`Settings --> Layout
-  Options...`;
+  Options...` or in the :ref:`Layout Panel <layout_panel>`;
 * enable :ref:`guides <grid_guides>` you could snap items to when moving or
   creating them. Guides are red lines that you can create by clicking in the
   ruler (above or at the left side of the layout) and drag and drop to the
@@ -418,18 +416,21 @@ Atlas menu
 Settings Menu
 .............
 
-From :menuselection:`Settings --> Layout Options...` you can set some options
-that will be used as default on any layout during your work.
+The :menuselection:`Settings --> Layout Options...` menu is a shortcut to
+:menuselection:`Settings --> Options --> Layouts` menu of QGIS main canvas.
+Here, you can set some options that will be used as default on any new print
+layout:
 
-* :guilabel:`Layout defaults` let you specify the default font to use.
+* :guilabel:`Layout defaults` let you specify the default font to use;
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
-  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
-* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of
-  the grid.
-* :guilabel:`Layout Paths` lists custom paths to search print templates.
+  There are three types of grid: **Dots**, **Solid** lines and **Crosses**;
+* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance
+  of the grid (see :ref:`grid_guides` for more details);
+* :guilabel:`Layout Paths`: to manage list of custom paths to search print
+  templates.
 
 
-.. _layout_tab:
+.. _layout_panel:
 
 The Layout Panel
 -----------------
@@ -540,7 +541,7 @@ The :guilabel:`Variables` lists all the variables available at
 the layout's level (which includes all global and project's variables).
 
 It also allows the user to manage layout-level variables. Click the
-|signPlus| button to add a new custom composition-level variable. Likewise,
+|signPlus| button to add a new custom layout-level variable. Likewise,
 select a custom layout-level variable from the list and click the
 |signMinus| button to remove it.
 
@@ -554,7 +555,8 @@ More information on variables usage in the
 
    Variables Editor in the Print Layout
 
-.. _layout_items_tab:
+
+.. _layout_items_panel:
 
 The Items Panel
 ---------------
