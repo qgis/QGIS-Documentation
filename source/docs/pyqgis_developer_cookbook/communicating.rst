@@ -155,7 +155,17 @@ save about the execution of your code.
 
 .. code-block:: python
 
-    # You can optionally pass a 'tag' and a 'level' parameters
-    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
-    QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
-    QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)
+ # You can optionally pass a 'tag' and a 'level' parameters
+ QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
+ QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
+ QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)
+
+.. warning::
+
+ You should always be using the thread safe qgis logger classes, e.g.
+ :class:`QgsMessageLog`, :class:`QgsLogger`. Using the Python ``print`` statement
+ isn't safe so **IT'S NOT RECOMMENDED**.
+
+.. note::
+
+ You can see the output of the :class:`QgsMessageLog` in the :ref:`log_message_panel`
