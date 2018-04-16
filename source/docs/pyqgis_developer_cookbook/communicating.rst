@@ -162,9 +162,11 @@ save about the execution of your code.
 
 .. warning::
 
- You should always be using the thread safe qgis logger classes, e.g.
- :class:`QgsMessageLog`, :class:`QgsLogger`. Using the Python ``print`` statement
- isn't safe so **IT'S NOT RECOMMENDED**.
+ Use of the Python ``print`` statement is unsafe to do in any code which may be
+ multithreaded. This includes **expression functions**, **renderers**,
+ **symbol layers** and **Processing algorithms** (amongst others). In these
+ cases you should always use thread safe classes (:class:`QgsLogger`
+ or :class:`QgsMessageLog`) instead.
 
 .. note::
 
