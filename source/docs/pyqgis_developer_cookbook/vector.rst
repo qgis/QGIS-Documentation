@@ -262,7 +262,7 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
   # If caching is enabled, a simple canvas refresh might not be sufficient
   # to trigger a redraw and you must clear the cached image for the layer
   if iface.mapCanvas().isCachingEnabled():
-      QgsMapRendererCache().clearCacheImage(layer.id())
+      layer.triggerRepaint()
   else:
       iface.mapCanvas().refresh()
 
