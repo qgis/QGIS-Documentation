@@ -108,12 +108,6 @@ This option can also be checked by default in the :ref:`layout panel
 When needed, images rendering can also be improved with the :guilabel:`Enable
 antialiasing` option.
 
-.. note::
-
-   Exporting large rasters can sometimes fail, even if there seems to be enough
-   memory. This is a problem with the underlying Qt management of rasters.
-
-.. Is this still true with qt5?
 
 .. _export_layout_svg:
 
@@ -151,7 +145,6 @@ and offers other settings:
    problem with the underlying Qt library. This will hopefully be sorted out
    in future versions.
 
-.. What is the status of this bug with qt5?
 
 .. _export_layout_pdf:
 
