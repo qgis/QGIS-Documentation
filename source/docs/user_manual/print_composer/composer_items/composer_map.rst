@@ -153,6 +153,30 @@ vector or raster properties, you can update the print layout view by selecting
 the map element in the print layout and clicking the **[Update preview]**
 button in the map :guilabel:`Item Properties` panel (see figure_layout_map_).
 
+.. index:: Atlas
+.. _controlled_atlas:
+
+Controlled by atlas
+-------------------
+
+The |checkbox| :guilabel:`Controlled by atlas` group properties is available
+only if an :ref:`atlas <atlas_generation>` is active in the print layout. Check
+this option if you want the map item being ruled by the atlas; when iterating
+over the coverage layer, the map item extent is panned/zoomed to the atlas
+feature following:
+
+* |radioButtonOn| :guilabel:`Margin around features`: zoom to the feature at the
+  best scale, keeping around each a margin representing a percentage of the map
+  item width or height. The margin can be the same for all features or :ref:`set
+  variable <data_defined>`, e.g., depending on map scale;
+* |radioButtonOff| :guilabel:`Predefined scale (best fit)`: zoom to the feature
+  at the project :ref:`predefined scale <predefinedscales>` where the atlas
+  feature best fits;
+* |radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one
+  to another, keeping the same scale of the map item. Ideal when working with
+  features of same size (e.g., a grid) or willing to highlight size differences
+  among atlas features.
+
 .. index:: Grids, Map grid
 
 Grids
@@ -299,6 +323,8 @@ When you select the overview item in the list you can customize it.
    :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
