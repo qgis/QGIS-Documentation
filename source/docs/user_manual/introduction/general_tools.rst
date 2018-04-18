@@ -721,8 +721,7 @@ QGIS custom color chooser is used.
 
 The custom color chooser dialog has four different tabs which allow you to
 select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
-|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`
-(not available under |osx|).
+|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`.
 
 Whatever method you use, the selected color is always described through color
 sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
@@ -775,9 +774,10 @@ options to:
    Color selector switcher tab
 
 Another option is to use the |colorPicker| :sup:`color picker` which allows
-you to sample a color from under your mouse pointer at any part of
-QGIS or even from another application by pressing the space bar. Please note
-that the color picker is OS dependent and is currently not supported by macOS.
+you to sample a color from under your mouse cursor at any part of QGIS or even
+from another application: press the space bar while the tab is active, move the
+mouse over the desired color and click on it or press again the space bar. You
+can also click the **[Sample color]** button to trigger the picker capability.
 
 .. _quick_color_modification:
 
