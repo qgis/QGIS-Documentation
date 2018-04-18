@@ -264,7 +264,7 @@ You can:
 * Rename it with a double-click;
 * With the |signPlus| and |signMinus| buttons, add or remove overviews;
 * With the |arrowUp| and |arrowDown| buttons, move up and down an overview in
-  the list and set the drawing priority among multiple overviews.
+  the list, hence move it on top or bottom of another one, over the map item.
 
 Then select the overview item in the list and check the |checkbox|
 :guilabel:`Draw "<name_overview>" overview` to enable the overview
