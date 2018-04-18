@@ -155,7 +155,19 @@ save about the execution of your code.
 
 .. code-block:: python
 
-    # You can optionally pass a 'tag' and a 'level' parameters
-    QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
-    QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
-    QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)
+ # You can optionally pass a 'tag' and a 'level' parameters
+ QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
+ QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
+ QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)
+
+.. warning::
+
+ Use of the Python ``print`` statement is unsafe to do in any code which may be
+ multithreaded. This includes **expression functions**, **renderers**,
+ **symbol layers** and **Processing algorithms** (amongst others). In these
+ cases you should always use thread safe classes (:class:`QgsLogger`
+ or :class:`QgsMessageLog`) instead.
+
+.. note::
+
+ You can see the output of the :class:`QgsMessageLog` in the :ref:`log_message_panel`
