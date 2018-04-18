@@ -182,15 +182,17 @@ feature following:
 Grids
 -----
 
-The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` panel
-provides the possibility to add several grids to a map item.
+With grids, you can add, over your map, information relative to its extent or
+coordinates, either in the map item projection or a different one. The
+:guilabel:`Grids` group provides the possibility to add several grids to a
+map item.
 
 * With the |signPlus| and |signMinus| buttons you can add or remove a selected
-  grid.
-* With the |arrowUp| and |arrowDown| buttons you can move a grid in the list
-  and set the drawing priority.
+  grid;
+* With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in
+  the list, hence move it on top or bottom of another one, over the map item.
 
-When you double-click the added grid you can give it another name.
+Double-click the added grid to rename it.
 
 .. _Figure_layout_map_grid:
 
@@ -199,9 +201,34 @@ When you double-click the added grid you can give it another name.
 
    Map Grids Dialog
 
-After you have added a grid, you can activate the checkbox |checkbox|
-:guilabel:`Draw grid` to overlay a grid onto the map element. Expand this option
-to provide a lot of configuration options, see Figure_layout_map_grid_draw_.
+After you add a grid, you can activate the checkbox |checkbox| :guilabel:`Draw
+grid` to allow overlaying the grid onto the map item. Press the **[Modify grid...]**
+button to access configuration options.
+
+Grid Appearance
+...............
+
+As grid type, you can specify to use a:
+
+* *Solid*: shows a line across the grid frame. The :guilabel:`Line style` can
+  be customized using :ref:`color <color-selector>` and :ref:`symbol
+  <symbol-selector>` selector widget;
+* *Cross*: displays segment at the grid lines intersection for which you can
+  set the :guilabel:`Line style` and the :guilabel:`Cross width`;
+* *Markers*: only displays customizable markers symbol at grid lines
+  intersection;
+* or *Frame and annotations only*.
+
+Other than the grid type, you can define:
+
+* the :guilabel:`CRS` which could not be the same as the map item's;
+* the :guilabel:`Interval` between two consecutive grid references in ``X``
+  and ``Y`` directions;
+* the :guilabel:`Interval Units` to use for the grid references, in ``Map
+  units``, ``Millimeters`` or ``Centimeters``;
+* an :guilabel:`Offset` from the map item edges, in ``X`` and ``Y`` directions;
+* and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
+  compatible.
 
 .. _Figure_layout_map_grid_draw:
 
@@ -210,14 +237,21 @@ to provide a lot of configuration options, see Figure_layout_map_grid_draw_.
 
    Draw Grid Dialog
 
-As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and
-annotations only'.
-'Frame and annotations only' is especially useful when working with rotated maps
-or reprojected grids. In the divisions section of the Grid Frame Dialog mentioned
-below you then have a corresponding setting. Symbology of the grid and its
-rendering mode can be chosen. See :ref:`layout_Rendering_Mode`. Furthermore,
-you can define an interval in the X and Y directions, an X and Y offset,
-and the width used for the cross or line grid type.
+Grid Frame
+..........
+
+There are different options to style the frame that holds the map.
+Following options are available: ``No Frame``, ``Zebra``, ``Interior ticks``,
+``Exterior ticks``, ``Interior and Exterior ticks`` and ``Line border``.
+Also you can choose to set visible or not each side of the grid frame.
+
+
+When compatible, it's possible to set the :guilabel:`Frame size`,
+:guilabel:`Frame line thickness`, :guilabel:`Frame fill colors`.
+With ``Latitude/Y only`` and ``Longitude/X only`` settings in the divisions
+section you have the possibility to prevent a mix of latitude/y and longitude/x
+coordinates showing on a side when working with rotated maps or reprojected
+grids.
 
 .. _Figure_layout_map_frame:
 
@@ -226,28 +260,22 @@ and the width used for the cross or line grid type.
 
    Grid Frame Dialog
 
-* There are different options to style the frame that holds the map.
-  Following options are available: No Frame, Zebra, Interior ticks, Exterior
-  ticks, Interior and Exterior ticks and Lineborder.
+Coordinates
+...........
 
-* With 'Latitude/Y only' and 'Longitude/X only' setting in the divisions section
-  you have the possibility to prevent a mix of latitude/y and longitude/x
-  coordinates showing on a side when working with rotated maps or reprojected
-  grids.
+The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add
+coordinates to the map frame. You can choose the annotation numeric format,
+the options range from decimal to degrees, minute and seconds, with or without
+suffix, aligned or not and a custom format using the expression dialog.
 
-* Advanced rendering mode is also available for grids.
+You can choose which annotation to show. The options are: show all, latitude
+only, longitude only, or disable(none). This is useful when the map is rotated.
+The annotation can be drawn inside or outside the map frame. The annotation
+direction can be defined as horizontal, vertical ascending or vertical
+descending.
 
-* The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add
-  coordinates to the map frame. You can choose the annotation numeric format,
-  the options range from decimal to degrees, minute and seconds, with or without
-  suffix, aligned or not and a custom format using the expression dialog.
-  You can choose which annotation to show. The options are: show all, latitude
-  only, longitude only, or disable(none). This is useful when the map is rotated.
-  The annotation can be drawn inside or outside the map frame. The annotation
-  direction can be defined as horizontal, vertical ascending or vertical
-  descending. Finally, you can define the annotation font, the annotation font
-  color, the annotation distance from the map frame and the precision of the
-  drawn coordinates.
+Finally, you can define the annotation font, font color, distance from the map
+frame and the precision of the drawn coordinates.
 
 .. _figure_layout_map_coord:
 
