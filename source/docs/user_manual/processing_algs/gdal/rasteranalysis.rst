@@ -180,9 +180,6 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer
 
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*)
-
 ``Radius 1`` [number]
   The first radius (X axis if rotation angle is 0) of search ellipse.
 
@@ -193,15 +190,15 @@ Parameters
 
   Default: *0.0*
 
-``Min points`` [number]
-  Minimum number of data points to average.
-  If less amount of points found the grid node considered empty and will be filled with NODATA marker.
-
-  Default: *0.0*
-
 ``Angle`` [number]
   Angle of ellipse rotation in degrees.
   Ellipse rotated counter clockwise.
+
+  Default: *0.0*
+
+``Min points`` [number]
+  Minimum number of data points to average.
+  If less amount of points found the grid node considered empty and will be filled with NODATA marker.
 
   Default: *0.0*
 
@@ -209,6 +206,9 @@ Parameters
   No data marker to fill empty points.
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*)
 
 ``Output raster type`` [selection]
   Raster file type
@@ -254,9 +254,6 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer
 
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*)
-
 ``Metrics`` [selection]
   List of available metrics:
 
@@ -281,6 +278,11 @@ Parameters
 
   Default: *0.0*
 
+``Angle`` [number]
+  Angle of search ellipse rotation in degrees (counter clockwise)
+
+  Default: *0.0*
+
 ``Min points`` [number]
   Minimum number of data points to use. If less amount of points found the grid node considered empty and will be filled with NODATA marker.
 
@@ -288,15 +290,13 @@ Parameters
 
   Default: *0.0*
 
-``Angle`` [number]
-  Angle of search ellipse rotation in degrees (counter clockwise)
-
-  Default: *0.0*
-
 ``Nodata`` [number]
   NODATA marker to fill empty points
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*)
 
 ``Output raster type`` [selection]
   Raster file type
@@ -343,9 +343,6 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer
 
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
-
 ``Power`` [number]
   Weighting power
 
@@ -366,21 +363,6 @@ Parameters
 
   Default: *0.0*
 
-``Max points`` [number]
-  Maximum number of data points to use.
-
-  Do not search for more points than this number. If less amount of points found the grid node considered empty and
-  will be filled with NODATA marker
-
-  Default: *0.0*
-
-``Min points`` [number]
-  Minimum number of data points to use.
-
-  If less amount of points found the grid node considered empty and will be filled with NODATA marker
-
-  Default: *0.0*
-
 ``Angle`` [number]
   Angle of ellipse rotation in degrees.
 
@@ -388,10 +370,29 @@ Parameters
 
   Default: *0.0*
 
+``Max points`` [number]
+  Maximum number of data points to use.
+
+  Do not search for more points than this number. If less amount of points found
+  the grid node is considered empty and will be filled with NODATA marker
+
+  Default: *0.0*
+
+``Min points`` [number]
+  Minimum number of data points to use.
+
+  If less amount of points found the grid node is considered empty and will be
+  filled with NODATA marker
+
+  Default: *0.0*
+
 ``Nodata`` [number]
   No data marker to fill empty points
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
 
 ``Output raster type`` [selection]
   Raster file type
@@ -426,6 +427,149 @@ See also
 
 .. _gdalgridinversedistancenearestneighbor:
 
+Grid (IDW with nearest neighbor searching)
+------------------------------------------
+
+Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
+Ideal when a maximum number of data points to use is required.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer
+
+``Power`` [number]
+  Weighting power
+
+  Default: *2.0*
+
+``Smothing`` [number]
+  Smoothing parameter
+
+  Default: *0.0*
+
+``Radius`` [number]
+  The radius of the search circle, which should be non-zero.
+
+  Default: *1.0*
+
+``max_points`` [number]
+  Maximum number of data points to use. Do not search for more points than this number.
+
+  Default: *12*
+
+``min_points`` [number]
+  Minimum number of data points to use. If less amount of points found the grid node is
+  considered empty and will be filled with NODATA marker.
+
+  Default: *0*
+
+``Nodata`` [number]
+  No data marker to fill empty points.
+
+  Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
+
+``Output raster type`` [selection]
+  Raster file type
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+Outputs
+.......
+
+``Output file`` [raster]
+  Interpolated raster file
+
+See also
+........
+
+`GDAL grid <http://www.gdal.org/gdal_grid.html>`_
+
+
+.. _gdalgridlinear:
+
+Grid (Linear)
+-------------
+The Linear method perform linear interpolation by computing a Delaunay
+triangulation of the point cloud, finding in which triangle of the triangulation
+the point is, and by doing linear interpolation from its barycentric coordinates
+within the triangle.
+If the point is not in any triangle, depending on the radius, the algorithm will
+use the value of the nearest point or the NODATA value.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer
+
+``Search distance`` [number]
+  In case the point to be interpolated does not fit into a triangle of the Delaunay
+  triangulation, use that maximum distance to search a nearest neighbour, or use
+  nodata otherwise. If set to ``-1``, the search distance is infinite.
+  If set to ``0``, no data value will be always used.
+
+  Default: *-1.0*
+
+``Nodata`` [number]
+  No data marker to fill empty points.
+
+  Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
+
+``Output raster type`` [selection]
+  Raster file type
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+Outputs
+.......
+
+``Output file`` [raster]
+  Interpolated raster file
+
+See also
+........
+
+`GDAL grid <http://www.gdal.org/gdal_grid.html>`_
+
+
+.. _gdalgridnearestneighbor:
+
 Grid (Nearest neighbor)
 -----------------------
 The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point
@@ -437,9 +581,6 @@ Parameters
 
 ``Input layer`` [vector: point]
   Point vector layer
-
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
 
 ``Radius 1`` [number]
   The first radius (X axis if rotation angle is 0) of search ellipse.
@@ -461,6 +602,9 @@ Parameters
   No data marker to fill empty points.
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
 
 ``Output raster type`` [selection]
   Raster file type
