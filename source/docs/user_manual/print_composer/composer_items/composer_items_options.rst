@@ -33,6 +33,21 @@ To create a layout item, select the corresponding tool either from the
   work with one-click nor click-and-drag methods; you need to click and
   place each node of the item.
 
+You can also use the :menuselection:`Edit` menu or :guilabel:`Layout` toolbar
+tools to copy an existing item and paste it at the mouse position as a new item.
+Use the :guilabel:`Paste in Place` (:kbd:`Ctrl+Shift+V`) to constrain the new item
+at the coordinates of the copied item, in the active page.
+
+Likewise, you can also create items using a print layout template (for details, see
+:ref:`layout_manager`) through :menuselection:`Layout --> Add Items from Template...`
+command.
+
+.. tip:: **Add layout items using the file browser**
+
+  From your file browser or using the :guilabel:`Browser` panel, drag-and-drop a
+  print layout template (:file:`.qpt` file) onto a print layout dialog and QGIS
+  automatically adds all items from that template to the layout.
+
 .. _interact_layout_item:
 
 Interacting with layout items
