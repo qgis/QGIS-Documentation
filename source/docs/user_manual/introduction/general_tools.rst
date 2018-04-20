@@ -309,7 +309,7 @@ You no longer need to hit the **[Apply]** button.
   layer properties in the Layer Styling Panel. See
   https://nathanw.net/2016/06/29/qgis-style-dock-part-2-plugin-panels/ for an example.
 
-.. Actually, what could be nice is to provide example in the Cookbook to have an
+.. Todo: Actually, what could be nice is to provide example in the Cookbook to have an
  internal and always guaranteed link (see #2071)
 
 .. index::
@@ -321,16 +321,14 @@ You no longer need to hit the **[Apply]** button.
 Statistical Summary Panel
 --------------------------
 
-This panel can show some statistics on a specific vector layers. The panel
-allows users to choose:
+The :guilabel:`Statistics` panel provides summarized information on any vector
+layer. This panel allows you to select:
 
-* the vector layer;
-* the column or the expression;
-* filter statistics to selected features;
-* refresh the informations;
-* the statistics information to display with the bottom right button.
-
-Statistic information available are (depending on the field's type):
+* the vector layer to compute the statistics on;
+* the column to use or enter any |expression| :ref:`expression <vector_expressions>`; 
+* the statistics to return using the drop-down button at the right bottom of the
+  dialog. Depending on the field's (or expression's values) type, available
+  statistics are:
 
 ================================== ============ ============  ============  ============
  Statistics                         String       Integer       Float         Date
@@ -356,6 +354,12 @@ Maximum Length                      |checkbox|
 ================================== ============ ============  ============  ============
 
 Table: Statistics available for each field type
+
+The statistical summary can then be:
+
+* returned for the whole layer or the |checkbox| :guilabel:`selected features only`;
+* recalculated using the |draw| button;
+* |editCopy| copied to the clipboard and pasted as table in another application.
 
 .. _figure_statistical_summary:
 
@@ -1774,11 +1778,15 @@ variables overwritten by lower level ones are strike through.
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
