@@ -1774,8 +1774,8 @@ Outputs
 
 .. _qgissinglesidedbuffer:
 
-Single side buffer
-------------------
+Single sided buffer
+-------------------
 Computes a buffer on lines by a specified distance on one side of the line only.
 
 
@@ -1896,12 +1896,12 @@ Outputs
 
 .. _qgissnapgeometries:
 
-Snap geometry
--------------
+Snap geometries to layer
+------------------------
 Snaps the geometries in a layer.
 
-Snapping can be done either to the geometries from another layer, or to geometries
-within the same layer.
+Given a tolerance distance, snapping can be done either to the geometries from
+another layer, or to geometries within the same layer.
 
 Vertices will be inserted or removed as required to make the geometries match the
 reference geometries.
@@ -1910,33 +1910,36 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to snap
+  Vector layer to align
 
 ``Reference layer`` [vector: any]
-  Input vector layer to snap
+  Vector layer to snap to
 
 ``Tolerance`` [number]
-  Control how close vertices need to be to the reference layer geometries before
-  they are snapped
+  Control how close input vertices need to be to the reference layer geometries
+  before they are snapped. This distance is specified in layer units.
 
   Default: *10.0*
 
 ``Behavior`` [selection]
+  Snapping can be done on an existing node or a segment (its closest point).
   Choose between different snapping options:
 
-  * Prefer aligning nodes
-  * Prefer closest point
+  * Prefer aligning nodes, insert extra vertices where required
+  * Prefer closest point, insert extra vertices where required
+  * Prefer aligning nodes, don't insert new vertices
+  * Prefer closest point, don't insert new vertices
   * Move end points only, prefer aligning nodes
   * Move end points only, prefer closest point
   * Snap end points to end points only
 
-  Default: *Prefer aligning nodes*
+  Default: *Prefer aligning nodes, insert extra vertices where required*
 
 Outputs
 .......
 
 ``Snapped geometry`` [vector]
-  Snapped geometry in output
+  Vector layer with snapped geometries
 
 
 .. _qgissnappointstogrid:
@@ -1984,7 +1987,7 @@ Outputs
 .......
 
 ``Snapped`` [vector]
-  Snapped geometry in output
+  Vector layer with snapped geometries
 
 
 .. _qgissubdivide:
