@@ -213,6 +213,15 @@ table can be of one of the following types.
   Depending on the algorithm, the number of rows can be modified or not by using
   the buttons on the right side of the window.
 
+.. _reference_layer_param:
+
+.. note:: Some algorithms require many parameter to run, e.g. in the
+  :ref:`qgisrastercalculator` you have to specify manually the cell size, the
+  extent and the CRS. You can avoid to choose all the parameters manually when
+  the algorithm has the ``Reference layers`` parameter. With this parameter you
+  can choose the reference layer and all its properties (cell size, extent, CRS)
+  will be used.
+
 Along with the :guilabel:`Parameters` tab, you will find another tab named
 :guilabel:`Log`. Information provided by the algorithm during its execution is
 written in this tab, and allow you to track the execution and be aware and have

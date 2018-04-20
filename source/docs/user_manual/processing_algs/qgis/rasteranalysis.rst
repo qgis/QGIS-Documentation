@@ -21,10 +21,6 @@ The resulting layer will have its values computed according to an expression.
 The expression can contain numerical values, operators and references to any of
 the layers in the current project.
 
-.. note:: you have to choose one (or more) layer(s) in the ``Reference layers``
-  option or you have to type the extent, cell size and CRS manually. If both
-  layer and options are chosen, the latter will overwrite the layer's properties.
-
 .. note:: When using the calculator in :ref:`processing_batch` or from the
   :ref:`console` the files to use have to be specified. The corresponding layers
   are referred using the base name of the file (without the full path). For instance,
@@ -44,7 +40,6 @@ Parameters
   box. Besides the visible buttons also the following functions are supported:
   ``sin()``, ``cos()``, ``tan()``, ``atan2()``, ``ln()``, ``log10()``.
 
-
 ``Expression`` [string]
   Expression that will be used to calculate the output raster layer. You can use
   the operator buttons provided to type directly the expression in this box.
@@ -63,7 +58,7 @@ Parameters
   Optional.
 
   Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the
-  layer in this box avoids to fill all the other parameter by hand.
+  layer in this box avoids to fill all the other parameters by hand.
 
 ``Cell size (use 0 or empty to set it automatically)`` [number]
   Optional.
