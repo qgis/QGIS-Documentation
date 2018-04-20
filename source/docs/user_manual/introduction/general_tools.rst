@@ -1498,6 +1498,78 @@ with name and description.
    case of vector, have the same geometry type (point, line or polygon).
 
 
+.. index:: Variables, Expressions
+.. _`general_tools_variables`:
+
+Storing values in Variables
+===========================
+
+In QGIS, you can use variables to store useful recurrent values (e.g. the
+project's title, or the user's full name) that can be used in expressions.
+Variables can be defined at the application's global level, project level,
+layer level, layout level, and layout item's level. Just like CSS
+cascading rules, variables can be overwritten - e.g., a project level
+variable will overwrite any application's global level variables set with
+the same name. You can use these variables to build text strings or other
+custom expressions using the ``@`` character before the variable name. For
+example in print layout creating a label with this content::
+
+  This map was made using QGIS [% @qgis_version %]. The project file for this
+  map is: [% @project_path %]
+
+Will render the label like this::
+
+  This map was made using QGIS 2.14. The project file for this map is:
+  /gis/qgis-user-conference-2015.qgs
+
+Besides the :ref:`preset read-only variables <variables_functions>`, you can
+define your own custom variables for any of the levels mentioned above. You can
+manage:
+
+* **global variables** from the :menuselection:`Settings --> Options` menu;
+* **project's variables** from :guilabel:`Project Properties` (see
+  :ref:`project_properties`);
+* **vector layer's variables** from the :guilabel:`Layer Properties` dialog
+  (see :ref:`vector_properties_dialog`);
+* **layout's variables** from the :guilabel:`Layout` panel in the
+  Print layout (see :ref:`layout_panel`);
+* and **layout item's variables** from the :guilabel:`Item Properties`
+  panel in the Print layout (see :ref:`layout_item_options`).
+
+To differentiate from editable variables, read-only variable's names and
+values are emphasized in italic. On the other hand, higher level
+variables overwritten by lower level ones are strike through.
+
+.. _figure_variables_dialog:
+
+.. figure:: img/options_variables.png
+   :align: center
+
+   Variables editor at the project's level
+
+.. note:: You can read more about variables and find some examples
+   in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1
+   <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
+   `part 2 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
+   and `part 3 <http://nyalldawson
+   .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
+   blog posts.
+
+.. _authentication:
+
+Authentication
+==============
+
+QGIS has facility to store/retrieve authentication credentials in a secure
+manner. Users can securely save credentials into authentication configurations,
+which are stored in a portable database, can be applied to server or database
+connections, and safely referenced by their ID tokens in project or settings
+files. For more information see :ref:`authentication_index`.
+
+A master password needs to be set up when initializing the authentication
+system and its portable database.
+
+
 .. _common_widgets:
 
 Common widgets
@@ -1680,78 +1752,6 @@ Parameters that can be used with data-defined tools are:
 .. note:: When the data-defined override option is setup correctly the
    icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
    the icon is red |dataDefineError| or |dataDefineExpressionError|.
-
-
-.. index:: Variables, Expressions
-.. _`general_tools_variables`:
-
-Variables
----------
-
-In QGIS, you can use variables to store useful recurrent values (e.g. the
-project's title, or the user's full name) that can be used in expressions.
-Variables can be defined at the application's global level, project level,
-layer level, layout level, and layout item's level. Just like CSS
-cascading rules, variables can be overwritten - e.g., a project level
-variable will overwrite any application's global level variables set with
-the same name. You can use these variables to build text strings or other
-custom expressions using the ``@`` character before the variable name. For
-example in print layout creating a label with this content::
-
-  This map was made using QGIS [% @qgis_version %]. The project file for this
-  map is: [% @project_path %]
-
-Will render the label like this::
-
-  This map was made using QGIS 2.14. The project file for this map is:
-  /gis/qgis-user-conference-2015.qgs
-
-Besides the :ref:`preset read-only variables <variables_functions>`, you can
-define your own custom variables for any of the levels mentioned above. You can
-manage:
-
-* **global variables** from the :menuselection:`Settings --> Options` menu;
-* **project's variables** from :guilabel:`Project Properties` (see
-  :ref:`project_properties`);
-* **vector layer's variables** from the :guilabel:`Layer Properties` dialog
-  (see :ref:`vector_properties_dialog`);
-* **layout's variables** from the :guilabel:`Layout` panel in the
-  Print layout (see :ref:`layout_panel`);
-* and **layout item's variables** from the :guilabel:`Item Properties`
-  panel in the Print layout (see :ref:`layout_item_options`).
-
-To differentiate from editable variables, read-only variable's names and
-values are emphasized in italic. On the other hand, higher level
-variables overwritten by lower level ones are strike through.
-
-.. _figure_variables_dialog:
-
-.. figure:: img/options_variables.png
-   :align: center
-
-   Variables editor at the project's level
-
-.. note:: You can read more about variables and find some examples
-   in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1
-   <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
-   `part 2 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
-   and `part 3 <http://nyalldawson
-   .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
-   blog posts.
-
-.. _authentication:
-
-Authentication
---------------
-
-QGIS has facility to store/retrieve authentication credentials in a secure
-manner. Users can securely save credentials into authentication configurations,
-which are stored in a portable database, can be applied to server or database
-connections, and safely referenced by their ID tokens in project or settings
-files. For more information see :ref:`authentication_index`.
-
-A master password needs to be set up when initializing the authentication
-system and its portable database.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
