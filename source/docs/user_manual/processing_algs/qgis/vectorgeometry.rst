@@ -1481,10 +1481,10 @@ Parameters
   Point vector layer to project
 
 ``Bearing (degrees from North)`` [number]
-  Clockwise degrees starting from North
+  Clockwise angle starting from North, in degree (°) unit
 
 ``Distance`` [number]
-  Distance in layer units
+  Distance to offset geometries, in layer units
 
 Output
 ......
@@ -1492,9 +1492,6 @@ Output
 ``Projected`` [vector: point]
   Projected layer at given degrees and distance
 
-
-
-The distance is specified in layer units, and the bearing in degrees clockwise from North.
 
 .. _qgispromotetomulti:
 
