@@ -285,9 +285,10 @@ Parameters
   Select the specific fields you want to add. By default all the fields are added
 
 ``Join type`` [combobox]
-  Choose the type of the final joined layer. If you want you can create one feature
-  for each located feature or you can take the attributes of only the first feature
-  located
+  Choose the type of the final joined layer. You can choose between:
+
+  * Create separate feature for each located features (one-to-many)
+  * Take attributes of the first located feature only (one-to-one)
 
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
