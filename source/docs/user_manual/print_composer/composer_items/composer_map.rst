@@ -13,47 +13,18 @@ The Map Item
    .. contents::
       :local:
 
-Click on the |addMap| :sup:`Add new map` toolbar button in the print layout
-toolbar to add the QGIS map canvas. Now, drag a rectangle onto the layout
-canvas with the left mouse button to add the map. To display the current map, you
-can choose between three different modes in the map :guilabel:`Item Properties`
-panel:
 
-* **Rectangle** is the default setting. It only displays an empty box with a
-  message 'Map will be printed here'.
-* **Cache** renders the map in the current screen resolution. If you zoom the
-  layout window in or out, the map is not rendered again but the image will
-  be scaled.
-* **Render** means that if you zoom the layout window in or out, the map will
-  be rendered again, but for space reasons, only up to a maximum resolution.
+The map item is the main frame that displays the map you've designed in the map
+canvas.
+Use the |addMap| :guilabel:`Add Map` tool following :ref:`items creation
+instructions <create_layout_item>` to add a new map item that you can later
+manipulate the same way as exposed in :ref:`interact_layout_item`.
 
-**Cache** is the default preview mode for newly added print layout maps.
-
-You can resize the map item by clicking on the |select| :sup:`Select/Move item`
-button, selecting the element, and dragging one of the blue handles in the
-corner of the map.  This button also helps to move the map to another place.
-Select the item and while holding the left mouse button, move to the new place
-and release the mouse button. After you have found the right place for an item,
-you can lock the item position within the print layout canvas. Select the
-map item and use the toolbar |locked| :sup:`Lock Selected Items` or the
-:menuselection:`Items` panel to Lock the item. A locked item can only be selected
-using the :menuselection:`Items` panel. Once selected you can use the
-:menuselection:`Items` panel to unlock individual items. The |unlocked|
-:sup:`Unlock All Items` icon will unlock all locked layout items. With the
-map selected, you can now adapt more properties in the map
-:guilabel:`Item Properties` panel.
-
-To move layers within the map element, select the map element, click the
-|moveItemContent| :sup:`Move item content` icon and move the layers within
-the map item frame with the left mouse button.
-
-.. _`layout_main_properties`:
-
-Main properties
----------------
-
-The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_layout_map_):
+By default, a new map item shows the current status of the :ref:`map canvas
+<label_mapview>` with its extent and visible layers. You can customize it
+thanks to the :guilabel:`Item Properties` panel. Other than the :ref:`items
+common properties <item_common_properties>`, this feature has the following
+functionalities:
 
 .. _figure_layout_map:
 
@@ -62,96 +33,113 @@ panel provides the following functionalities (see figure_layout_map_):
 
    Map Item Properties Panel
 
-* The **Preview** drop-down menu allows you to select one of the preview modes
-  'Rectangle', 'Cache' and 'Render', as described above. If you change the
-  view on the QGIS map canvas by changing vector or raster properties, you can
-  update the print layout view by selecting the map element and clicking
-  the **[Update preview]** button.
-* The field :guilabel:`Scale` |selectNumber| manually sets the map item scale.
-* The field :guilabel:`Map rotation` |selectNumber| allows you to rotate the
-  map element content clockwise in degrees. The rotation of the map
-  canvas can be imitated here.
-* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that
-  may be placed on the map canvas in the main QGIS window.
+
+.. _`layout_main_properties`:
+
+Main properties
+---------------
+
+In the :guilabel:`Main properties` group (see figure_layout_map_) of the map
+:guilabel:`Item Properties` panel, available options are:
+
+* The **[Update preview]** button to refresh the map item rendering if the view
+  in map canvas has been modified. Note that most of the time, the map item
+  refresh is automatically triggered by the changes;
+* The :guilabel:`Scale` to manually set the map item scale;
+* The :guilabel:`Map rotation` allows you to rotate the map item content
+  clockwise in degrees. The rotation of the map canvas can be imitated here;
+* The :guilabel:`CRS` allows you to display the map item content in any
+  :ref:`CRS <crs_selector>`. It defaults to ``Use project CRS``;
+* |checkbox| :guilabel:`Draw map canvas items` lets you show in the print
+  layout :ref:`annotations <sec_annotations>` that are placed on the main map
+  canvas.
 
 Layers
 ------
 
-The :guilabel:`Layers` dialog of the map item panel provides the following
-functionality (see figure_layout_map_layers_):
+By default, map item appearance is synced with the map canvas rendering meaning
+that toggling visibility of the layers or modifying their style in the
+:guilabel:`Layers Panel` is automatically applied to the map item. Because,
+like any other item, you may want to add multiple map items to a print layout,
+there's a need to break this synchronization in order to allow showing
+different areas, layer combinations, at different scales...
+The :guilabel:`Layers` properties group (see figure_layout_map_layers_) helps
+you do that.
 
 .. _figure_layout_map_layers:
 
 .. figure:: img/map_layers.png
    :align: center
 
-   Map Layers Dialog
+   Map Layers group
 
-If you want to keep the map item consistent with an existing map theme, 
-use |selectString| :guilabel:`Follow map theme` and select the desired theme. 
-(See :ref:`map_themes` to find out how to configure map themes.)
-Any changes applied to the theme in QGIS' main window (using the replace theme
-function) will automatically affect the map item. 
-If a map theme is selected, the :guilabel:`Lock styles for layers` option will
-be disabled because :guilabel:`Follow map theme` also updates the
+
+If you want to keep the map item consistent with an existing :ref:`map theme
+<map_themes>`, check |checkbox| :guilabel:`Follow map theme` and select the
+desired theme in the drop-down list. Any changes applied to the theme in QGIS'
+main window (using the replace theme function) will automatically affect the
+map item.
+If a map theme is selected, the :guilabel:`Lock styles for layers` option is
+disabled because :guilabel:`Follow map theme` also updates the
 style (symbology, labels, diagrams) of the layers.
 
-To lock the layers shown in a map item to the current map canvas check
-|checkbox| :guilabel:`Lock layers`. After this option is enabled, any
-changes on the layers' visibility in QGIS' main window won't affect
+To lock the layers shown in a map item to the current map canvas visibility,
+check |checkbox| :guilabel:`Lock layers`. When this option is enabled, any
+changes on the layers' visibility in QGIS' main window will not affect
 the layout's map item. Nevertheless, style and labels of locked
 layers are still refreshed according to QGIS' main window.
 You can prevent this by using :guilabel:`Lock styles for layers`.
 
-Using the |showMapTheme| button, you can lock the map item's layers to one of
-the map themes you have prepared (see :ref:`map_themes`).
-Clicking the |showMapTheme| button will show the list of all themes. 
-Select the theme you want to display. The map canvas will lock the
-theme layers automatically by enabling the |checkbox| :guilabel:`Lock
-layers`. You can release the theme by unchecking the |checkbox|
-:guilabel:`Lock layers` and press the |draw| button in the
-print layout's :guilabel:`Navigation` toolbar.
+Instead of using the current map canvas, you can also lock the layers of the
+map item to those of an existing map theme: select a map theme from the
+|showMapTheme| :sup:`Set layer list from a map theme` drop-down button, and the
+|checkbox| :guilabel:`Lock layers` is activated. The set of visible layers in
+the map theme is from now on used for the map item until you select another map
+theme or uncheck the |checkbox| :guilabel:`Lock layers` option. You then may
+need to refresh the view using the |draw| :sup:`Refresh view` button of the
+:guilabel:`Navigation` toolbar or the **[Update preview]** button seen above.
 
-Note that, unlike the :guilabel:`Follow map theme`, using the
-:guilabel:`Lock layers` option enabled and set to a theme, the map item
-layers won't be updated if the theme is changed (using the replace theme
-function) in QGIS' main window.
+Note that, unlike the :guilabel:`Follow map theme` option, if the
+:guilabel:`Lock layers` option is enabled and set to a map theme, the layers in
+the map item will not be refreshed even if the map theme is updated (using the
+replace theme function) in QGIS' main window.
 
-Locked layers in the map can also be :ref:`data-defined <data_defined>`, using
-the |dataDefined| icon beside the option. When used, this overrides the
+Locked layers in the map item can also be :ref:`data-defined <data_defined>`,
+using the |dataDefined| icon beside the option. When used, this overrides the
 selection set in the drop-down list. You need to pass a list of layers
 separated by ``|`` character.
 The following example locks the map item to use only layers ``layer 1`` and
 ``layer 2``::
 
-    concat ('layer 1', '|', 'layer 2')
+  concat ('layer 1', '|', 'layer 2')
 
 
 Extents
 -------
 
-The :guilabel:`Extents` dialog of the map item panel provides the following
-functionalities (see figure_layout_map_extents_):
+The :guilabel:`Extents` group of the map item properties panel provides the
+following functionalities (see figure_layout_map_extents_):
 
 .. _figure_layout_map_extents:
 
 .. figure:: img/map_extents.png
    :align: center
 
-   Map Extents Dialog
+   Map Extents group
 
-The **Map extents** area allows you to specify the map extent using ``X`` and
-``Y`` min/max values and by clicking the **[Set to map canvas extent]** button.
-This button sets the map extent of the layout map item to the extent of the
-current map view in the main QGIS application.
+The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown
+in the map item. Each of these values can be manually replaced, modifying the
+map canvas area displayed and/or map item size.
+Clicking the **[Set to map canvas extent]** button sets the extent of the
+layout map item to the extent of the main map canvas.
 The button **[View extent in map canvas]** does exactly the opposite; it
-updates the extent of the map view in the QGIS application to the extent
-of the layout map item.
+updates the extent of the main map canvas to the extent of the layout map item.
 
-If you change the view on the QGIS map canvas by changing
-vector or raster properties, you can update the print layout view by selecting
-the map element in the print layout and clicking the **[Update preview]**
-button in the map :guilabel:`Item Properties` panel (see figure_layout_map_).
+You can also alter a map item extent using the |moveItemContent| :sup:`Move
+item content` tool: click-and-drag within the map item to modify its current
+view, keeping the same scale. With the |moveItemContent| tool enabled, use the
+mouse wheel to zoom in or out, modifying the scale of the shown map. Combine
+the movement with :kbd:`Ctrl` key pressed to have a smaller zoom.
 
 .. index:: Atlas
 .. _controlled_atlas:
@@ -303,7 +291,7 @@ between two different maps extent and provides the following functionalities:
 .. figure:: img/map_overview.png
    :align: center
 
-   Map Overviews Dialog
+   Map Overviews group
 
 To create an overview, select the map item on which you want to show the other
 map item's extent and expand the :guilabel:`Overviews` option in the
