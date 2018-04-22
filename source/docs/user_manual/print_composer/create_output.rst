@@ -156,14 +156,11 @@ use in |selectString| :guilabel:`Reference map`.
 Generate an Atlas
 =================
 
-The print layout includes atlas functions that allow you to create map
-books in an automated way, based on features in a table or vector layer,
-called **coverage layer**. The concept is, for each feature in the coverage
-layer, a new output will be generated where the content of some layout
-items are updated to highlight the feature's properties (geometry and/or
-attributes). For example, it can be:
+Atlas functions allow you to create map books in an automated way. Atlas uses
+the features of a vector or table layer called **coverage layer** and creates
+an output for each **atlas feature**. The most common usage is to zoom a map
+item to the current atlas feature. Further use cases include:
 
-* a map item zooming to the extent of the atlas feature;
 * a map item showing, for another layer, only features that share the same
   attribute as the atlas feature or are within its geometry;
 * a label or html item whose text is replaced as features are iterated over;
