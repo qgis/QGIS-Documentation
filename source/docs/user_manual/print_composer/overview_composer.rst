@@ -556,6 +556,48 @@ More information on variables usage in the
    Variables Editor in the Print Layout
 
 
+.. index:: Layout pages, Page properties
+.. _page_properties:
+
+Page Properties Panel
+---------------------
+
+A layout can be composed of several pages. For instance, a first page can show
+a map canvas, and a second page can show the attribute table associated with a
+layer, while a third one shows an HTML frame linking to your organization website.
+Or you can add many types of items on each page.
+
+Futhermore, a layout can be made using different size and/or orientation of pages.
+To add a page, select the |newPage| :guilabel:`Add Pages...` tool from the
+:menuselection:`Layout` menu or :guilabel `Layout Toolbar`. The :guilabel:`Insert
+Pages` dialog opens and you are asked to fill:
+
+* the number of pages to insert;
+* the position of the page(s): before or after a given page or at the end of the
+  print layout;
+* The :guilabel:`Page size`: it could be of a preset format page, with
+  associated :guilabel:`Orientation` or of a custom format. In the latter case,
+  you'd need to enter page's :guilabel:`Width` and :guilabel:`Height` (with
+  locked size ratio if needed). Page size can also be set in different units.
+
+.. Todo: Add New page dialog screenshot
+
+Any page can be later customized through the Page :guilabel:`Item Properties`
+panel. Right-click on a page and select :guilabel:`Page Properties...`. The
+:guilabel:`Item Properties` panel opens with settings such as:
+
+* the :guilabel:`Page size` frame described above. You can modify each property
+  using the data defined override options (see :ref:`atlas_data_defined_override`
+  for a use case); 
+* the |unchecked| :guilabel:`Exclude page from exports` to control whether the
+  current page with its content should be included in the :ref:`layout output
+  <create-output>`;
+* the :guilabel:`Background` using the :ref:`color <color-selector>` or
+  :ref:`symbol <symbol-selector>` you want.
+
+.. Todo: Add page properties panel screenshot
+
+
 .. _layout_items_panel:
 
 The Items Panel
