@@ -579,8 +579,8 @@ More information on variables usage in the
 .. index:: Layout pages, Page properties
 .. _page_properties:
 
-Page Properties Panel
----------------------
+The Page Properties Panel
+-------------------------
 
 A layout can be composed of several pages. For instance, a first page can show
 a map canvas, and a second page can show the attribute table associated with a
@@ -616,6 +616,52 @@ panel. Right-click on a page and select :guilabel:`Page Properties...`. The
   :ref:`symbol <symbol-selector>` you want.
 
 .. Todo: Add page properties panel screenshot
+
+
+.. index:: Guides, Smart guides
+.. _layout_guides_panel:
+
+The Guides Panel
+----------------
+
+Guides are vertical or horizontal line references you can place on a layout
+page to assist you on items placement, when creating, moving or resizing them.
+To be active, guides require the :menuselection:`View --> Show Guides` and
+:menuselection:`View --> Snap to Guides` options to be checked.
+To create a guide, two ways:
+
+* assuming :menuselection:`View --> Show Rulers` option is set, drag out a
+  ruler and release the mouse button within the page area, at the desired
+  position.
+* more accurate and always available, use the :guilabel:`Guides` panel.
+
+The :guilabel:`Guides` panel allows creation of snap lines at specific
+locations: click the |signPlus| :sup:`Add new guide` button and enter
+coordinates of the  horizontal or vertical line. Different units are available
+for setting.
+The panel also allows adjusting position of existing guides to exact
+coordinates: double-click a guide coordinate and replace the value.
+
+To delete a guide, select it and press |signMinus| :sup:`Remove selected guide`
+button. Use **[Clear all guides]** to remove all the guides in the panel.
+
+Guides are single page only meaning that the :guilabel:`Guides` panel lists
+guides of the current page (whose number is shown at the top of the dialog).
+Likewise, it allows creation or removal of guides only in the current page.
+The **[Apply to all pages]** button allows you to setup the guide configuration
+on a single page and easily transfer it to all other pages in the layout.
+
+.. actually, I'm not sure what does mean current page for the guides panel as
+  when multiple pages are visible, the behavior is not predictable (see bug
+  report https://issues.qgis.org/issues/17804)
+
+.. tip:: **Snapping to existing layout items**
+
+  Other than guides and grids, you can use existing items as snapping
+  references when moving, resizing or creating new items; these are called
+  **smart guides** and require :menuselection:`View --> Smart Guides` option to
+  be checked. Anytime the mouse pointer is close to an item's bound, a snapping
+  cross appears.
 
 
 .. _layout_items_panel:
