@@ -131,11 +131,11 @@ You can also use layout templates from a custom folder; in that case, select
 *specific* in the templates drop-down list, browse to the template and press
 **[Create]**.
 
-.. tip:: **Opening template files from Browser panel**
+.. tip:: **Creating template-based print layouts from Browser panel**
 
-  Double-click a :file:`.qpt` file in the :ref:`Browser panel <browser_panel>`
-  or drag-and-drop it onto the map canvas generates a new print layout from the
-  template.
+  Drag-and-drop a print layout template :file:`.qpt` file from any file browser
+  onto the map canvas or double-click it in the :ref:`Browser panel <browser_panel>`
+  generates a new print layout from the template.
 
 .. Todo: Add a link to User profile section when it's ready
 
