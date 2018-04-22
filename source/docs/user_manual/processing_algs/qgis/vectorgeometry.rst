@@ -1467,6 +1467,32 @@ Output
   Lines from the polygon layer
 
 
+.. _qgisprojectpointcartesian:
+
+Project points (Cartesian)
+--------------------------
+Projects point geometries by a specified distance and bearing (azimuth), creating
+a new point layer with the projected points.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer to project
+
+``Bearing (degrees from North)`` [number]
+  Clockwise angle starting from North, in degree (°) unit
+
+``Distance`` [number]
+  Distance to offset geometries, in layer units
+
+Output
+......
+
+``Projected`` [vector: point]
+  Projected layer at given degrees and distance
+
+
 .. _qgispromotetomulti:
 
 Promote to multipart
