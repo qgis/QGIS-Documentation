@@ -10,20 +10,37 @@ Shape Items
    .. contents::
       :local:
 
+QGIS provides a couple of tools to draw regular or more complex shapes over the
+print layout.
+
+.. note::
+   Unlike other print layout items, you can not style the frame nor the
+   background color of the shapes bounding frame (set to transparent by default).
+
 
 .. index:: 
    single: Layout item; Basic shape
 .. _layout_basic_shape_item:
 
-The Basic Shape Items
----------------------
+The Regular Shape Item
+----------------------
 
-To add a basic shape (ellipse, rectangle, triangle), click the |addBasicShape|
-:sup:`Add basic shape` icon,  place the element holding down the left mouse.
-Customize the appearance in the :guilabel:`Item Properties` panel.
+The :guilabel:`Shape` item is a tool that helps to decorate your map with regular
+shapes like triangle, rectangle, ellipse...
+You can add a regular shape using the |addBasicShape| :sup:`Add Shape` tool which
+gives access to particular tools like |addBasicRectangle| :sup:`Add Rectangle`,
+|addBasicCircle| :sup:`Add Ellipse` and |addBasicTriangle| :sup:`Add Triangle`.
+Once you have selected the appropriate tool, you can draw the item following
+:ref:`items creation instructions <create_layout_item>`. Like other layout
+items, a regular shape can be manipulated the same way as exposed in
+:ref:`interact_layout_item`.
 
-When you also hold down the :kbd:`Shift` key while placing the basic shape
-you can create a perfect square, circle or triangle.
+.. note:: Holding down the :kbd:`Shift` key while drawing the basic shape with
+ the click and drag method helps you create a perfect square, circle or triangle.
+
+The default shape item can be customized using its :guilabel:`Item Properties`
+panel. Other than the :ref:`items common properties <item_common_properties>`,
+this feature has the following functionalities (see figure_layout_label):
 
 .. _figure_layout_basic_shape:
 
@@ -32,18 +49,15 @@ you can create a perfect square, circle or triangle.
 
    Shape Item Properties Panel
 
-The :guilabel:`Shape` item properties panel allows you to select if you want to
-draw an ellipse, rectangle or triangle inside the given frame.
+The :guilabel:`Main properties` group shows and allows you to switch the type of
+the shape item (**Ellipse**, **Rectangle** or **Triangle**) inside the given frame.
 
-You can set the style of the shape using the advanced symbol style dialog with
-which you can define its outline and fill color, fill pattern, use markers...
+You can set the style of the shape using the advanced :ref:`symbol <symbol-selector>`
+and :ref:`color <color-selector>` selector widget...
 
-For the rectangle shape, you can set the value of the corner radius to round of
-the corners.
+For the rectangle shape, you can set in different units the value of the
+:guilabel:`Corner radius` to round of the corners.
 
-.. note::
-   Unlike other items, you can not style the frame or the background color of
-   the frame.
 
 .. index::
    single: Layout item; Node-based shape
@@ -145,7 +159,13 @@ hitting the :kbd:`DEL` key.
 
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
+.. |addBasicCircle| image:: /static/common/mActionAddBasicCircle.png
+   :width: 1.5em
+.. |addBasicRectangle| image:: /static/common/mActionAddBasicRectangle.png
+   :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
+   :width: 1.5em
+.. |addBasicTriangle| image:: /static/common/mActionAddBasicTriangle.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
    :width: 1.5em
