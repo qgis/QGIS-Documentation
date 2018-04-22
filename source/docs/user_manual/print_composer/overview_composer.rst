@@ -78,12 +78,23 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 The Layout Manager
 ==================
 
-The :guilabel:`Layout Manager` is the main window to manage print layouts in the project.
-It helps you add new print layout, duplicate an existing one, rename or delete
-it. To open the layout manager dialog, click on the |layoutManager|
-:sup:`Layout Manager` button in the toolbar or choose :menuselection:`Layout
---> Layout Manager`. It can also be reached from the main window of QGIS with
-:menuselection:`Project --> Layout Manager...`.
+The :guilabel:`Layout Manager` is the main window to manage print layouts in the
+project. It gives you an overview of existing print layouts and reports in the
+project and offers tools to:
+
+* add new print layout or new report from scratch, template or duplicating an
+  existing one;
+* rename or delete any of them;
+* open them in the project.
+
+To open the layout manager dialog:
+
+* from the main QGIS dialog, select :menuselection:`Project --> Layout Manager...`
+  menu or click on the |layoutManager| :sup:`Layout Manager` button in
+  the :guilabel:`Project Toolbar`;
+* from a print layout or report dialog, select :menuselection:`Layout --> Layout
+  Manager...` menu or click on the |layoutManager| :sup:`Layout Manager` button
+  in the :guilabel:`Layout Toolbar`.
 
 
 .. _figure_layout_manager:
@@ -95,29 +106,38 @@ it. To open the layout manager dialog, click on the |layoutManager|
 
 
 The layout manager lists in its upper part all the available print layouts
-in the project. The bottom part shows tools that help to:
+or reports in the project with tools to:
 
-* show the selected print layout(s): you can open multiple print layouts in
-  one-click
-* duplicate the selected print layout (available only if one print layout is
-  selected): it creates a new layout using the selected one as template.
-  You'll be prompted to choose a new title for the new layout
-* rename the layout (available only if one print layout is selected):
-  You'll be prompted to choose a new title for the layout. Note that you can
-  also rename the print layout by double-clicking on its title in the upper part
+* show the selection: you can select multiple reports and/or print layout(s)
+  and open them in one-click. Double-click a name also opens it;
+* duplicate the selected print layout or report (available only if one item is
+  selected): it creates a new dialog using the selected one as template.
+  You'll be prompted to choose a new title for the new layout;
+* rename the report or layout (available only if one item is selected):
+  you'll be prompted to choose a new title for the layout;
 * remove the layout: the selected print layout(s) will be deleted from the
   project.
 
-With the layout manager, it's also possible to create new print layouts as
-an empty layout or from a saved template. By default, QGIS will look for
-templates in user profile folder (:file:`~/.qgis2/composer_templates`) or
-application's one (:file:`ApplicationFolder/composer_templates`).
-QGIS will retrieve all the available templates and propose them in the combobox.
-The selected template will be used to create a new print layout when clicking
-:guilabel:`Add` button.
-You can also save layout templates in another folder.
-Choosing *specific* in the template list offers the ability to select such
-template and use it to create a new print layout.
+In the lower part, it's possible to create new print layouts or reports from
+scratch or a template. By default, QGIS will look for templates in the user
+profile and the application template directories (accessible with the two
+buttons at the bottom of the frame) but also in any folder declared
+as :guilabel:`Path(s) to search for extra print templates` in
+:menuselection:`Settings --> Options --> Layouts`. Found templates are listed
+in the combobox. Select an item and press the **[Create]** button to generate
+a new report or print layout.
+
+You can also use layout templates from a custom folder; in that case, select
+*specific* in the templates drop-down list, browse to the template and press
+**[Create]**.
+
+.. tip:: **Creating template-based print layouts from Browser panel**
+
+  Drag-and-drop a print layout template :file:`.qpt` file from any file browser
+  onto the map canvas or double-click it in the :ref:`Browser panel <browser_panel>`
+  generates a new print layout from the template.
+
+.. Todo: Add a link to User profile section when it's ready
 
 .. _print_composer_menus:
 
