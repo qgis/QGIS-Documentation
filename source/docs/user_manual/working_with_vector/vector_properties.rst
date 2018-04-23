@@ -523,7 +523,8 @@ Rule-based rendering
 The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
 all the features from a layer,
 using rule-based symbols whose aspect reflects the assignment of a selected
-feature's attribute to a class. The rules are based on SQL statements.
+feature's attribute to a class. The rules are based on SQL statements and can
+be nested.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
@@ -535,29 +536,39 @@ To create a rule:
 * In the :guilabel:`Edit Rule` dialog that opens, you can define a label
   to help you identify each rule. This is the label that will be displayed
   in the :guilabel:`Layers Panel` and also in the print composer legend;
-* Press the |expression| button to open the expression string builder dialog;
+* Manually enter an expression in the text box next to the |radioButtonOn|
+  :guilabel:`Filter` option or press the |expression| button next to it to open
+  the expression string builder dialog;
 * Use the provided functions and the layer attributes to build an :ref:`expression
-  <vector_expressions>` to filter the features you'd like to retrieve;
+  <vector_expressions>` to filter the features you'd like to retrieve. Press
+  the **[Test]** button to check the result of the query;
 * A longer label can then be used to complete the rule description;
-* You can use the |checkbox| :guilabel:`Scale Range` option to set when the
-  rule should be applied;
+* You can use the |checkbox| :guilabel:`Scale Range` option to set scales at which
+  the rule should be applied;
 * Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
   and press **[OK]**;
-* A new row summarizing the rule is added to the Layer Properties dialog.
 
+A new row summarizing the rule is added to the Layer Properties dialog.
 You can create as many rules as necessary following the steps above or copy
-pasting an existing one with the right mouse button. You can also use the
-``ELSE`` rule that will be run if none of the other rules on that level matches.
+pasting an existing rule. Drag-and-drop the rules on top of each other to nest
+them and refine the upper rule features in subclasses.
 
-Selecting a rule, you can organize its features in subclasses using the
-:guilabel:`Refine selected rules` drop-down menu. Rule refinement can be based on:
+Selecting a rule, you can also organize its features in subclasses using the
+:guilabel:`Refine selected rules` drop-down menu. Automated rule refinement can be
+based on:
 
 * **scales**;
 * **categories**: applying a :ref:`categorized renderer <categorized_renderer>`;
-* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`. 
+* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`.
 
 Refined classes appear like sub-items of the rule, in a tree hierarchy and like
 above, you can set symbology of each class.
+
+In the :guilabel:`Edit rule` dialog, you can avoid writing all the rules and
+make use of the |radioButtonOff| :guilabel:`Else` option to catch all the
+features that do not match any of the other rules, at the same level. This
+can also be achieved by writing ``Else`` in the *Rule* column of the
+:menuselection:`Layer Properties --> Symbology --> Rule-based` dialog.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
