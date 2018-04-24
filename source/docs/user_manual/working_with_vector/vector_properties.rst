@@ -632,7 +632,7 @@ Point Cluster
 ..............
 
 Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
-which blows up overlaid point features placement, the |pointClusterSymbol|
+which blows up nearest or overlaid point features placement, the |pointClusterSymbol|
 :guilabel:`Point Cluster` renderer groups nearby points into a single
 rendered marker symbol. Based on a specified :guilabel:`Distance`, points
 that fall within from each others are merged into a single symbol.
@@ -661,9 +661,10 @@ From the main dialog, you can:
 
 .. note::
 
- Point displacement and cluster renderers do not alter feature geometry,
+ Point Cluster renderer does not alter feature geometry,
  meaning that points are not moved from their position. They are still located
  at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index::
    single: Symbology; Inverted polygon renderer
