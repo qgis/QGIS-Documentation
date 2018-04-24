@@ -236,34 +236,9 @@ as sub-item), the following options are available at layer level or class level:
     in case of vector, have the same geometry type (point, line or polygon).
 
 
-.. index:: Layers; Order
-
-.. _layer_order:
-
-Layer Order Panel
------------------
-
-There is a panel that allows you to define an independent drawing order for
-the layers panel. You can activate it in the menu :menuselection:`Settings
---> Panels --> Layer Order Panel`. This feature allows you to, for instance,
-order your layers in order of importance, but still display them in the
-correct order (see figure_layer_order_; you can notice that the ``airports``
-features are displayed over the ``alaska`` polygon despite their layers
-placement in the Layers panel).
-Unchecking the |checkbox| :guilabel:`Control rendering order` box underneath
-the list of layers will cause a revert to default behavior.
-
-.. _figure_layer_order:
-
-.. figure:: img/layer_order.png
-    :align: center
-
-    Define a legend independent layer order
-
 .. index::
    single: Layer properties
    single: Panels; Style
-   
 .. _layer_styling_panel:
 
 Layer Styling Panel
@@ -312,10 +287,32 @@ You no longer need to hit the **[Apply]** button.
 .. Todo: Actually, what could be nice is to provide example in the Cookbook to have an
  internal and always guaranteed link (see #2071)
 
+.. index:: Layers; Order
+.. _layer_order:
+
+Layer Order Panel
+-----------------
+
+There is a panel that allows you to define an independent drawing order for
+the layers panel. You can activate it in the menu :menuselection:`Settings
+--> Panels --> Layer Order Panel`. This feature allows you to, for instance,
+order your layers in order of importance, but still display them in the
+correct order (see figure_layer_order_; you can notice that the ``airports``
+features are displayed over the ``alaska`` polygon despite their layers
+placement in the Layers panel).
+Unchecking the |checkbox| :guilabel:`Control rendering order` box underneath
+the list of layers will cause a revert to default behavior.
+
+.. _figure_layer_order:
+
+.. figure:: img/layer_order.png
+    :align: center
+
+    Define a legend independent layer order
+
 .. index::
    single: Map; Overview
    single: Panels; Overview
-
 .. _`overview_panels`:
 
 Overview Panel
