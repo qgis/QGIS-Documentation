@@ -66,6 +66,15 @@ Source Properties
 |system| Use this tab to define general settings for the vector layer.
 Available options are:
 
+
+.. _figure_vector_general:
+
+.. figure:: img/vector_general_menu.png
+   :align: center
+
+   Source tab in vector Layer Properties dialog
+
+
 Settings
 --------
 
@@ -93,21 +102,21 @@ Coordinate Reference System
 Query Builder
 -------------
 
-Under the **Provider Feature Filter** frame, the Query Builder allows
+The :guilabel:`Query Builder` dialog is accessible through the eponym button
+at the bottom of the :guilabel:`Source` tab in the Layer Properties dialog,
+under the :guilabel:`Provider feature filter` group.
+
+The Query Builder provides an interface that allows
 you to define a subset of the features in the layer using a SQL-like WHERE
 clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
-project. The query result can be saved as a new vector layer.
+project.
+For example, using the ``TYPE_2`` field of the :file:`regions` layer from the
+QGIS sample data, you could constrain the file to display only regions that
+are of ``borough`` type in the project (see Figure_vector_querybuilder_ for
+such an example). The filter is made at the data provider (OGR, PostgreSQL,
+MSSQL...) level.
 
-The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`Source` tab in the Layer Properties. Under :guilabel:`Feature
-subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
-builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
-field, you could select only regions that are ``borough`` in the
-:guilabel:`Provider specific filter expression` box of the Query Builder.
-Figure_vector_querybuilder_ shows an example of the Query Builder populated with
-the :file:`regions.shp` layer from the QGIS sample data. The Fields, Values
-and Operators sections help you to construct the SQL-like query.
 
 .. _figure_vector_querybuilder:
 
@@ -116,46 +125,50 @@ and Operators sections help you to construct the SQL-like query.
 
    Query Builder
 
-The **Fields list** contains all attribute columns of the attribute table to be
-searched. To add an attribute column to the SQL WHERE clause field, double
-click its name in the Fields list. Generally, you can use the various fields,
-values and operators to construct the query, or you can just type it into the
-SQL box.
 
-The **Values list** lists the values of an attribute table. To list all
-possible values of an attribute, select the attribute in the Fields list and
-click the **[all]** button. To list the first 25 unique values of an attribute
-column, select the attribute column in the Fields list and click the
-**[Sample]** button. To add a value to the SQL WHERE clause field, double click
-its name in the Values list.
+You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
+option from the :menuselection:`View` menu or the layer contextual menu.
+The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
+the dialog help you to construct the SQL-like query exposed in the
+:guilabel:`Provider specific filter expression` box.
 
-The **Operators section** contains all usable operators. To add an operator to
+The **Fields** list contains all the fields of the layer. To add an attribute
+column to the SQL WHERE clause field, double-click its name or just type it into
+the SQL box.
+
+The **Values** frame lists the values of the currently selected field. To list all
+unique values of a field, click the **[All]** button. To instead list the first
+25 unique values of the column, click the **[Sample]** button. To add a value
+to the SQL WHERE clause field, double click its name in the Values list.
+You can use the search box at the top of the Values frame to easily browse and
+find attribute values in the list.
+
+The **Operators** section contains all usable operators. To add an operator to
 the SQL WHERE clause field, click the appropriate button. Relational operators
 ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
 operators (``AND``, ``OR``, ...) are available.
 
-The **[Test]** button shows a message box with the number of features
-satisfying the current query, which is useful in the process of query
-construction. The **[Clear]** button clears the text in the SQL WHERE clause
-text field. The **[OK]** button closes the window and selects the features
-satisfying the query. The **[Cancel]** button closes the window without
-changing the current selection.
+The **[Test]** button helps you check your query and displays a message box with
+the number of features satisfying the current query.
+Use the **[Clear]** button to wipe the SQL query and revert the layer to its
+original state (ie, fully load all the features).
 
+When a filter is applied,
 QGIS treats the resulting subset acts as if it were the entire layer. For
-example if you applied the filter above for 'Borough', you can not display,
-query, save or edit Anchorage, because that is a 'Municipality' and therefore
-not part of the subset.
+example if you applied the filter above for 'Borough' (``"TYPE_2" = 'Borough'``),
+you can not display, query, save or edit Anchorage, because that is a
+'Municipality' and therefore not part of the subset.
 
-The only exception is that unless your layer is part of a database, using a
-subset will prevent you from editing the layer.
+Because of the limitations on some :ref:`data providers <opening_data>` (eg, OGR),
+some data formats will prevent you from editing the layer when in a filtered
+state.
 
+.. tip:: **Filtered layers are indicated in the Layers Panel**
 
-.. _figure_vector_general:
-
-.. figure:: img/vector_general_menu.png
-   :align: center
-
-   Source tab in vector layers properties dialog
+  In the :guilabel:`Layers` panel, filtered layer is listed with a |indicatorFilter|
+  :sup:`Filter` icon next to it indicating the query used when the mouse hovers
+  over the button. Click the icon opens the :guilabel:`Query Builder` dialog
+  for edit.
 
 
 .. index:: Style, Symbology, Renderer
@@ -3024,6 +3037,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |iconJoinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
