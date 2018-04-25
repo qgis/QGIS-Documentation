@@ -50,93 +50,102 @@ and then a variable number of additional parameters depending on the requirement
 of the algorithm. So the first thing you need to know is the name of the algorithm
 to execute. That is not the name you see in the toolbox, but rather a unique
 command–line name. To find the right name for your algorithm, you can use the
-``algslist()`` method. Type the following line in your console:
+processingRegistry. Type the following line in your console:
 
 ::
 
-    >>> processing.alglist()
+    >>> for alg in QgsApplication.processingRegistry().algorithms(): print(alg.displayName(), "->", alg.id())
 
 You will see something like this.
 
 ::
 
-   Accumulated Cost (Anisotropic)-------->saga:accumulatedcost(anisotropic)
-   Accumulated Cost (Isotropic)---------->saga:accumulatedcost(isotropic)
-   Add Coordinates to points------------->saga:addcoordinatestopoints
-   Add Grid Values to Points------------->saga:addgridvaluestopoints
-   Add Grid Values to Shapes------------->saga:addgridvaluestoshapes
-   Add Polygon Attributes to Points------>saga:addpolygonattributestopoints
-   Aggregate----------------------------->saga:aggregate
-   Aggregate Point Observations---------->saga:aggregatepointobservations
-   Aggregation Index--------------------->saga:aggregationindex
-   Analytical Hierarchy Process---------->saga:analyticalhierarchyprocess
-   Analytical Hillshading---------------->saga:analyticalhillshading
-   Average With Mask 1------------------->saga:averagewithmask1
-   Average With Mask 2------------------->saga:averagewithmask2
-   Average With Thereshold 1------------->saga:averagewiththereshold1
-   Average With Thereshold 2------------->saga:averagewiththereshold2
-   Average With Thereshold 3------------->saga:averagewiththereshold3
-   B-Spline Approximation---------------->saga:b-splineapproximation
+   3d:tessellate -> Tessellate
+   gdal:aspect -> Aspect
+   gdal:assignprojection -> Assign projection
+   gdal:buffervectors -> Buffer vectors
+   gdal:buildvirtualraster -> Build Virtual Raster
+   gdal:cliprasterbyextent -> Clip raster by extent
+   gdal:cliprasterbymasklayer -> Clip raster by mask layer
+   gdal:clipvectorbyextent -> Clip vector by extent
+   gdal:clipvectorbypolygon -> Clip vector by mask layer
+   gdal:colorrelief -> Color relief
+   gdal:contour -> Contour
+   gdal:convertformat -> Convert format
+   gdal:dissolve -> Dissolve
    ...
 
-That's a list of all the available algorithms, alphabetically ordered, along with
-their corresponding command-line names.
-
-You can use a string as a parameter for this method. Instead of returning the
-full list of algorithms, it will only display those that include that string. If,
-for instance, you are looking for an algorithm to calculate slope from a DEM, type
-``alglist("slope")`` to get the following result::
-
-
-
- DTM Filter (slope-based)-------------->saga:dtmfilter(slope-based)
- Downslope Distance Gradient----------->saga:downslopedistancegradient
- Relative Heights and Slope Positions-->saga:relativeheightsandslopepositions
- Slope Length-------------------------->saga:slopelength
- Slope, Aspect, Curvature-------------->saga:slopeaspectcurvature
- Upslope Area-------------------------->saga:upslopearea
- Vegetation Index[slope based]--------->saga:vegetationindex[slopebased]
-
-This result might change depending on the algorithms you have available.
-
-It is easier now to find the algorithm you are looking for and its command-line
-name, in this case ``saga:slopeaspectcurvature``.
+That's a list of all the available algorithm IDs, along with
+their corresponding names.
 
 Once you know the command-line name of the algorithm, the next thing to do is to
 determine the right syntax to execute it. That means knowing which parameters are
-needed and the order in which they have to be passed when calling the ``runalg()``
+needed and the order in which they have to be passed when calling the ``run()``
 method. There is a method to describe an algorithm in detail, which can be
 used to get a list of the parameters that an algorithm requires and the outputs
-that it will generate. To get this information, you can use the ``alghelp(name_of_the_algorithm)``
-method. Use the command-line name of the algorithm, not the full descriptive name.
+that it will generate. To get this information, you can use the ``algorithmHelp(id_of_the_algorithm)``
+method. Use the ID of the algorithm, not the full descriptive name.
 
-Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get the
+Calling the method with ``qgis.buffer`` as parameter, you get the
 following description:
 
 ::
 
-    >>> processing.alghelp("saga:slopeaspectcurvature")
-    ALGORITHM: Slope, Aspect, Curvature
-       ELEVATION <ParameterRaster>
-       METHOD <ParameterSelection>
-       SLOPE <OutputRaster>
-       ASPECT <OutputRaster>
-       CURV <OutputRaster>
-       HCURV <OutputRaster>
-       VCURV <OutputRaster>
+     >>> processing.algorithmHelp("qgis.buffer")
+     Buffer (native:buffer)
+     
+     This algorithm computes a buffer area for all the features in an input layer, using a fixed or dynamic distance.
+     
+     The segments parameter controls the number of line segments to use to approximate a quarter circle when creating rounded offsets.
+     
+     The end cap style parameter controls how line endings are handled in the buffer.
+     
+     The join style parameter specifies whether round, miter or beveled joins should be used when offsetting corners in a line.
+     
+     The miter limit parameter is only applicable for miter join styles, and controls the maximum distance from the offset curve to use when creating a mitered join.
+     
+     ----------------
+     Input parameters
+     ----------------
+     
+     INPUT:  <QgsProcessingParameterFeatureSource>
+     	Input layer
+     
+     DISTANCE:  <QgsProcessingParameterNumber>
+     	Distance
+     
+     SEGMENTS:  <QgsProcessingParameterNumber>
+     	Segments
+     
+     END_CAP_STYLE:  <QgsProcessingParameterEnum>
+     	End cap style
+     		0 - Round
+     		1 - Flat
+     		2 - Square
+     
+     JOIN_STYLE:  <QgsProcessingParameterEnum>
+     	Join style
+     		0 - Round
+     		1 - Miter
+     		2 - Bevel
+     
+     MITER_LIMIT:  <QgsProcessingParameterNumber>
+     	Miter limit
 
 Now you have everything you need to run any algorithm. As we have already
-mentioned, there is only one single command to execute algorithms: ``runalg()``.
+mentioned, algorithms can be run using: ``run()``.
 Its syntax is as follows:
 
 ::
 
-    >>> processing.runalg(name_of_the_algorithm, param1, param2, ..., paramN,
-             Output1, Output2, ..., OutputN)
+    >>> processing.run(name_of_the_algorithm, parameters)
 
-The list of parameters and outputs to add depends on the algorithm you want to
-run, and is exactly the list that the ``alghelp()`` method gives you, in the same
+Where parameters is a dictionary of parameters that depend on the algorithm you want to
+run, and is exactly the list that the ``algorithmHelp()`` method gives you, in the same
 order as shown.
+
+No QGIS 3 updates beyond this point (ToDo)
+==========================================
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
