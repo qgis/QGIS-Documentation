@@ -100,13 +100,23 @@ The :guilabel:`Expression` tab provides the main interface to write expressions
 using functions, layer's fields and values. It contains widgets to:
 
 * type expressions using functions and/or fields. At the bottom of the dialog,
-  is displayed the result of the expression evaluated on the first feature of
-  the layer.
+  an :guilabel:`Output preview` displays the result of the expression evaluated
+  on the first feature of the layer.
 * select the appropriate function among a list, organized in groups. A search box
   is available to filter the list and quickly find a particular function or field.
   Double-clicking on the item's name adds it to the expression being written.
 * display help for each function selected. When a field is selected, this widget
   shows a sample of its values. Double-clicking a value adds it to the expression.
+
+As the expression is being written, QGIS checks its rightness and highlights
+all the errors using:
+
+* *Underline*: for unknown functions, wrong or invalid arguments;
+* *Marker*: for every other error (eg, missing parenthesis, unexpected 
+  character) at a single location.
+
+In case of error, the :guilabel:`Output preview` indicates it and you can access
+details with the provided hyperlink.
 
 .. _figure_expression_tab:
 
@@ -821,6 +831,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | y_max                  | Returns the maximum y coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
++------------------------+---------------------------------------------------+
+| wedge_buffer           | Returns a wedge shaped buffer originating from a  |
+|                        | point geometry given an angle and radii           |
 +------------------------+---------------------------------------------------+
 | z                      | Returns the z coordinate of a point geometry      |
 +------------------------+---------------------------------------------------+
