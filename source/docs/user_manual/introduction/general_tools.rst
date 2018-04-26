@@ -321,8 +321,8 @@ You no longer need to hit the **[Apply]** button.
 Statistical Summary Panel
 --------------------------
 
-The :guilabel:`Statistics` panel provides summarized information on any vector
-layer. This panel allows you to select:
+The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
+on any vector layer. This panel allows you to select:
 
 * the vector layer to compute the statistics on;
 * the column to use or enter any |expression| :ref:`expression <vector_expressions>`; 
