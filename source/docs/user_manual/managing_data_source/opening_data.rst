@@ -68,7 +68,7 @@ To add a layer into a project:
 
 #. right-click on QGIS toolbar and check |checkbox| :guilabel:`Browser Panel`
    to activate it or select it from the menu :menuselection:`View --> Panels`
-   (or |kde| :menuselection:`Settings --> Panels`);
+   (or |kde| :menuselection:`Settings --> Panels`) or press :kbd:`Ctrl+2`;
 #. a browser tree with your filesystem, databases and web services is displayed;
 #. find the layer in the list;
 #. right-click on its name and select **Add selected layer(s)**. Your layer is
