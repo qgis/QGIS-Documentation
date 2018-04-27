@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. _qgis_algorithms:
+
 ***********************
 QGIS algorithm provider
 ***********************
