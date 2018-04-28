@@ -122,6 +122,9 @@ Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 Edit
 ----
 
+The :menuselection:`Edit` menu presents most of the native tools needed to edit
+layers attributes or geometry (see :ref:`editingvector` for details).
+
 ====================================================================  ====================  =================================   ===================================
 Menu Option                                                           Shortcut              Toolbar                             Reference
 ====================================================================  ====================  =================================   ===================================
@@ -132,7 +135,10 @@ Menu Option                                                           Shortcut  
 |editPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 :menuselection:`Paste features as -->`                                \                     \                                   see :ref:`sec_attribute_table`
 :menuselection:`Select -->`                                           \                     :guilabel:`Attributes`              see :ref:`sec_selection`
-|capturePoint| :guilabel:`Add Feature`                                :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|newTableRow| :guilabel:`Add Record`                                  :kbd:`Ctrl+.`         :guilabel:`Digitizing`              \
+|capturePoint| :guilabel:`Add Point Feature`                          :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|capturePoint| :guilabel:`Add Line Feature`                           :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|capturePolygon| :guilabel:`Add Polygon Feature`                      :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 |circularStringCurvePoint| :guilabel:`Add Circular String`            \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 |circularStringRadius| :guilabel:`Add Circular String by Radius`      \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 :menuselection:`Add Circle -->`                                       \                     :guilabel:`Shape Digitizing`        \
@@ -140,6 +146,7 @@ Menu Option                                                           Shortcut  
 :menuselection:`Add Regular Polygon -->`                              \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Ellipse -->`                                      \                     :guilabel:`Shape Digitizing`        \
 |moveFeature| :guilabel:`Move Feature(s)`                             \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`                \                     :guilabel:`Digitizing`              \
 |deleteSelected| :guilabel:`Delete Selected`                          \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 |multiEdit| :guilabel:`Modify Attributes of Selected Features`        \                     :guilabel:`Digitizing`              see :ref:`calculate_fields_values`
 |rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
@@ -160,20 +167,16 @@ Menu Option                                                           Shortcut  
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
 ====================================================================  ====================  =================================   ===================================
 
-After activating |toggleEditing| :sup:`Toggle editing` mode for a layer,
-you will enable the ``Add Feature`` icon in the :menuselection:`Edit` menu
-depending on the layer type (point, line or polygon).
+Depending on the selected layer geometry type, some of the tools may look different:
 
-Edit (extra)
-------------
+.. :tabularcolumns: |l|c|c|c|
 
-=======================================================  ====================  =============================  =====================================
-Menu Option                                              Shortcut              Toolbar                        Reference
-=======================================================  ====================  =============================  =====================================
-|capturePoint| :guilabel:`Add Feature`                   \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
-|captureLine| :guilabel:`Add Feature`                    \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
-|capturePolygon| :guilabel:`Add Feature`                 \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
-=======================================================  ====================  =============================  =====================================
+=====================================  ========================  ========================  ==========================
+Menu Option                            Point                     Polyline                  Polygon
+=====================================  ========================  ========================  ==========================
+:guilabel:`Move Feature(s)`            |moveFeaturePoint|        |moveFeatureLine|         |moveFeature|
+:guilabel:`Copy and Move Feature(s)`   |moveFeatureCopyPoint|    |moveFeatureCopyLine|     |moveFeatureCopy|
+=====================================  ========================  ========================  ==========================
 
 .. _view_menu:
 
@@ -766,6 +769,16 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
+.. |moveFeatureCopy| image:: /static/common/mActionMoveFeatureCopy.png
+   :width: 1.5em
+.. |moveFeatureCopyLine| image:: /static/common/mActionMoveFeatureCopyLine.png
+   :width: 1.5em
+.. |moveFeatureCopyPoint| image:: /static/common/mActionMoveFeatureCopyPoint.png
+   :width: 1.5em
+.. |moveFeatureLine| image:: /static/common/mActionMoveFeatureLine.png
+   :width: 1.5em
+.. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
+   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
@@ -775,6 +788,8 @@ open the Plugin Manager dialog.
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em
 .. |newReport| image:: /static/common/mActionNewReport.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
