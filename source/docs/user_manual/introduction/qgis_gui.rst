@@ -244,16 +244,33 @@ menu.
 Layer
 -----
 
+The :menuselection:`Layer` menu provides a large set of tools to :ref:`create
+<sec_create_vector>` new data source, :ref:`add <opening_data>` it to a project
+or :ref:`save modifications <sec_edit_existing_layer>` done to it. Using the
+same data source, you can also:
+
+* :guilabel:`Duplicate` a layer, generating a copy you can modify within the
+  same project;
+* :guilabel:`Copy` and :guilabel:`Paste` layers or group from one project to
+  another, with their properties you can freely customize;
+* or :guilabel:`Embed Layers and Groups...` from another project, with their
+  unmodifiable properties (see :ref:`nesting_projects`).
+  
+The :menuselection:`Layer` menu  also gives access to tools to configure, copy
+or paste layer properties (style, scale, CRS...).
+
 ============================================================  ====================  ================================  =====================================
 Menu Option                                                   Shortcut              Toolbar                           Reference
 ============================================================  ====================  ================================  =====================================
 |dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    \
 :menuselection:`Create Layer -->`                             \                     :guilabel:`Data Source Manager`    see :ref:`sec_create_vector`
-:menuselection:`Add Layer -->`                                \                     :guilabel:`Manage Layers`          see :ref:`supported_format`
+:menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    see :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  see :ref:`nesting_projects`
 :guilabel:`Add from Layer Definition File...`                 \                     \                                  \
 |editCopy| :guilabel:`Copy style`                             \                     \                                  see :ref:`save_layer_property`
 |editPaste| :guilabel:`Paste style`                           \                     \                                  see :ref:`save_layer_property`
+|editCopy| :guilabel:`Copy Layer`                             \                     \                                  \
+|editPaste| :guilabel:`Paste Layer/Group`                     \                     \                                  \
 |openTable| :guilabel:`Open Attribute Table`                  :kbd:`F6`             :guilabel:`Attributes`             see :ref:`sec_attribute_table`
 |toggleEditing| :guilabel:`Toggle Editing`                    \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
 |fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
@@ -270,7 +287,7 @@ Menu Option                                                   Shortcut          
 |labeling| :guilabel:`Labeling`                               \                     \                                  see :ref:`vector_labels_tab`
 |inOverview| :guilabel:`Show in Overview`                     \                     \                                  see :ref:`overview_panels`
 |addAllToOverview| :guilabel:`Show All in Overview`           \                     \                                  see :ref:`overview_panels`
-|removeAllOVerview| :guilabel:`Hide All From Overview`        \                     \                                  see :ref:`overview_panels`
+|removeAllOVerview| :guilabel:`Hide All from Overview`        \                     \                                  see :ref:`overview_panels`
 ============================================================  ====================  ================================  =====================================
 
 Settings
