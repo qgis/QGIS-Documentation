@@ -20,6 +20,8 @@ Extracts the projection of a raster file and writes it into a
 world-file.
 The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Projections`
+
 Parameters
 ..........
 
@@ -43,6 +45,8 @@ Warp (reproject)
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
 The algorithm is derived from the `GDAL warp utility <http://www.gdal.org/gdalwarp.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
