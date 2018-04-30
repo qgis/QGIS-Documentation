@@ -86,7 +86,7 @@ the cropped bounds.
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), you need to enable this feature under the
-:ref:`layout_tab`.
+:ref:`layout_panel`.
 
 If the output format is a TIFF format, all you need to do is making sure to
 select the correct map item to use in |selectString| :guilabel:`Reference
@@ -139,13 +139,13 @@ single PDF file.
 If you applied to your layout or any shown layer an advanced effect such as
 blend modes, transparency or symbol effects, these cannot be printed
 as vectors, and the effects may be lost. Checking :guilabel:`Print as
-raster` in the :ref:`layout_tab` helps to keep the effects but
+raster` in the :ref:`layout_panel` helps to keep the effects but
 rasterize the composition. Note that the :guilabel:`Force layer to render as
 raster` in the Rendering tab of Layer Properties dialog is a layer-level
 alternative that avoids global composition rasterization.
 
 If you need to export your layout as a **georeferenced PDF**, in the
-:ref:`layout_tab`, make sure you select the correct map item to
+:ref:`layout_panel`, make sure you select the correct map item to
 use in |selectString| :guilabel:`Reference map`.
 
 
@@ -156,90 +156,95 @@ use in |selectString| :guilabel:`Reference map`.
 Generate an Atlas
 =================
 
-The print layout includes generation functions that allow you to create map
-books in an automated way. The concept is to use a coverage layer, which contains
-geometries and fields. For each geometry in the coverage layer, a new output will
-be generated where the content of some canvas maps will be moved to highlight the
-current geometry. Fields associated with this geometry can be used within text
-labels.
+Atlas functions allow you to create map books in an automated way. Atlas uses
+the features of a vector or table layer called **coverage layer** and creates
+an output for each **atlas feature**. The most common usage is to zoom a map
+item to the current atlas feature. Further use cases include:
 
-Every page will be generated with each feature. To enable the generation
-of an atlas and access generation parameters, refer to the `Atlas generation`
-panel.This panel contains the following widgets (see figure_layout_atlas_):
+* a map item showing, for another layer, only features that share the same
+  attribute as the atlas feature or are within its geometry;
+* a label or html item whose text is replaced as features are iterated over;
+* a table item showing attributes of associated :ref:`parent or children
+  <vector_relations>` features of the current atlas feature...
+
+For each feature, an output is processed for all pages and items according
+to their exports settings.
+
+.. tip:: **Use variables for more flexibility**
+
+  QGIS provides a large panel of functions and :ref:`variables <general_tools_variables>`,
+  including atlas related ones, that you can use to manipulate the layout
+  items but also the layers symbology according to atlas status.
+  Combining these features gives you a lot of flexibility and helps you
+  easily produce advanced mappings.
+
+To enable the generation of an atlas and access atlas parameters, refer to
+the :guilabel:`Atlas` panel. This panel contains the following functionalities
+(see figure_layout_atlas_):
 
 .. _figure_layout_atlas:
 
 .. figure:: img/atlas_properties.png
    :align: center
 
-   Atlas Generation Panel
+   Atlas Panel
 
 * |checkbox| :guilabel:`Generate an atlas`, which enables or disables the atlas
   generation.
 * A :guilabel:`Coverage layer` |selectString| combo box that allows you to
-  choose the (vector) layer containing the features on which to iterate over.
+  choose the table or vector layer containing the features to iterate over;
 * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
-  will hide the coverage layer (but not the other ones) during the generation.
+  will hide the coverage layer (but not the other layers) during the generation;
 * An optional :guilabel:`Page name` combo box to give a more explicit name to
-  each feature page(s) when previewing atlas. You can select an attribute of
-  the coverage layer or set an expression. If this option is empty, QGIS will
-  use an internal ID, according to the filter and/or the sort order applied to
-  the layer.
+  each feature page(s) when previewing atlas. You can select a field of
+  the coverage layer or set an :ref:`expression <vector_expressions>`. If this
+  option is empty, QGIS will use an internal ID, according to the filter and/or
+  the sort order applied to the layer;
 * An optional :guilabel:`Filter with` text area that allows you to specify an
   expression for filtering features from the coverage layer. If the expression
-  is not empty, only features that evaluate to ``True`` will be selected.
-  The button on the right allows you to display the expression builder.
-* An optional |checkbox| :guilabel:`Sort by` that, if checked, allows you to
-  sort features of the coverage layer. The associated combo box allows you to
-  choose which column will be used as the sorting key. Sort order (either
-  ascending or descending) is set by a two-state button that displays an up or
-  a down arrow.
+  is not empty, only features that evaluate to ``True`` will be processed;
+* An optional |checkbox| :guilabel:`Sort by` that allows you to
+  sort features of the coverage layer, using a field of the coverage layer or
+  an expression. The sort order (either ascending or descending) is set by the
+  two-state *Sort direction* button that displays an up or a down arrow.
 
 You also have options to set the output of the atlas:
 
 * An :guilabel:`Output filename expression` textbox that is used to generate
   a filename for each geometry if needed. It is based on expressions. This field
-  is meaningful only for rendering to multiple files.
+  is meaningful only for rendering to multiple files;
 * A |checkbox| :guilabel:`Single file export when possible` that allows you to
   force the generation of a single file if this is possible with the chosen output
   format (PDF, for instance). If this field is checked, the value of the
-  :guilabel:`Output filename expression` field is meaningless.
+  :guilabel:`Output filename expression` field is meaningless;
+* An :guilabel:`Image export format` drop-down list to select the output format
+  when using the |saveMapAsImage| :sup:`Export atlas as Images...` button.
 
+Control map by atlas
+--------------------
 
-You can use multiple map items with the atlas generation; each map will be rendered
-according to the coverage features. To enable atlas generation for a specific map
-item, you need to check |checkbox|:guilabel:`Controlled by Atlas` under the item
-properties of the map item.
-Once checked, you can set:
-
-* A |radioButtonOn| :guilabel:`Margin around feature` that allows you to select
-  the amount of space added around each geometry within the allocated map.
-  Its value is meaningful only when using the auto-scaling mode.
-* A |radioButtonOff| :guilabel:`Predefined scale` (best fit). It will use the best
-  fitting option from the list of predefined scales in your project properties settings
-  (see :menuselection:`Project --> Project Properties --> General --> Project Scales`
-  to configure these predefined scales).
-* A |radioButtonOff| :guilabel:`Fixed scale` that allows you to toggle between
-  auto-scale and fixed-scale mode.
-  In fixed-scale mode, the map will only be translated for each geometry to be centered.
-  In auto-scale mode, the map's extents are computed in such a way that
-  each geometry will appear in its entirety.
+The most common usage of atlas is with the map item, zooming to the current atlas
+feature, as iteration goes over the coverage layer. This behavior is set in
+the :guilabel:`Controlled by atlas` group properties of the map item. See
+:ref:`controlled_atlas` for different settings you can apply on map item.
 
 .. _atlas_labels:
 
 Customize labels with expression
 --------------------------------
 
-In order to adapt labels to the feature the atlas plugin iterates over, you can
+In order to adapt labels to the feature the atlas iterates over, you can
 include expressions. What you should take care of is to place expression part
-(including functions, fields or variables) between ``[%`` and ``%]``.
+(including functions, fields or variables) between ``[%`` and ``%]`` (see
+:ref:`layout_label_item` for more details).
+
 For example, for a city layer with fields CITY_NAME and ZIPCODE, you could
 insert this:
 
 .. code::
 
-   The area of [% upper(CITY_NAME) || ',' || ZIPCODE || ' is '
-   format_number($area/1000000,2) %] km2
+   The area of [% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',
+   format_number($area/1000000, 2) ) %] km2
 
 or, another combination:
 
@@ -248,7 +253,7 @@ or, another combination:
    The area of [% upper(CITY_NAME)%],[%ZIPCODE%] is
    [%format_number($area/1000000,2) %] km2
 
-The information ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) %]``
+The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  format_number($area/1000000, 2) ) %]``
 is an expression used inside the label. Both expressions would result in the
 generated atlas as::
 
@@ -369,7 +374,7 @@ selected. In that case, you'll be prompted to give a filename.
 With :menuselection:`Atlas --> Export Atlas as Images...` or
 :menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted to
 select a folder. Each page of each atlas feature composition is exported to
-an image or SVG file.
+the image file format set in :guilabel:`Atlas` panel or to SVG file.
 
 
 .. tip:: **Print a specific atlas feature**

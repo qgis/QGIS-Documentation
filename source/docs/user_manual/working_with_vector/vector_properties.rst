@@ -2173,6 +2173,8 @@ items, double-click the relation label to configure some options:
 * show the link button
 * show the unlink button
 
+.. _provide_ui_file:
+
 Provide an ui-file
 ..................
 

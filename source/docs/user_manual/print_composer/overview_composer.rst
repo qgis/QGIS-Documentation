@@ -78,12 +78,23 @@ can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 The Layout Manager
 ==================
 
-The :guilabel:`Layout Manager` is the main window to manage print layouts in the project.
-It helps you add new print layout, duplicate an existing one, rename or delete
-it. To open the layout manager dialog, click on the |layoutManager|
-:sup:`Layout Manager` button in the toolbar or choose :menuselection:`Layout
---> Layout Manager`. It can also be reached from the main window of QGIS with
-:menuselection:`Project --> Layout Manager...`.
+The :guilabel:`Layout Manager` is the main window to manage print layouts in the
+project. It gives you an overview of existing print layouts and reports in the
+project and offers tools to:
+
+* add new print layout or new report from scratch, template or duplicating an
+  existing one;
+* rename or delete any of them;
+* open them in the project.
+
+To open the layout manager dialog:
+
+* from the main QGIS dialog, select :menuselection:`Project --> Layout Manager...`
+  menu or click on the |layoutManager| :sup:`Layout Manager` button in
+  the :guilabel:`Project Toolbar`;
+* from a print layout or report dialog, select :menuselection:`Layout --> Layout
+  Manager...` menu or click on the |layoutManager| :sup:`Layout Manager` button
+  in the :guilabel:`Layout Toolbar`.
 
 
 .. _figure_layout_manager:
@@ -95,29 +106,38 @@ it. To open the layout manager dialog, click on the |layoutManager|
 
 
 The layout manager lists in its upper part all the available print layouts
-in the project. The bottom part shows tools that help to:
+or reports in the project with tools to:
 
-* show the selected print layout(s): you can open multiple print layouts in
-  one-click
-* duplicate the selected print layout (available only if one print layout is
-  selected): it creates a new layout using the selected one as template.
-  You'll be prompted to choose a new title for the new layout
-* rename the layout (available only if one print layout is selected):
-  You'll be prompted to choose a new title for the layout. Note that you can
-  also rename the print layout by double-clicking on its title in the upper part
+* show the selection: you can select multiple reports and/or print layout(s)
+  and open them in one-click. Double-click a name also opens it;
+* duplicate the selected print layout or report (available only if one item is
+  selected): it creates a new dialog using the selected one as template.
+  You'll be prompted to choose a new title for the new layout;
+* rename the report or layout (available only if one item is selected):
+  you'll be prompted to choose a new title for the layout;
 * remove the layout: the selected print layout(s) will be deleted from the
   project.
 
-With the layout manager, it's also possible to create new print layouts as
-an empty layout or from a saved template. By default, QGIS will look for
-templates in user profile folder (:file:`~/.qgis2/composer_templates`) or
-application's one (:file:`ApplicationFolder/composer_templates`).
-QGIS will retrieve all the available templates and propose them in the combobox.
-The selected template will be used to create a new print layout when clicking
-:guilabel:`Add` button.
-You can also save layout templates in another folder.
-Choosing *specific* in the template list offers the ability to select such
-template and use it to create a new print layout.
+In the lower part, it's possible to create new print layouts or reports from
+scratch or a template. By default, QGIS will look for templates in the user
+profile and the application template directories (accessible with the two
+buttons at the bottom of the frame) but also in any folder declared
+as :guilabel:`Path(s) to search for extra print templates` in
+:menuselection:`Settings --> Options --> Layouts`. Found templates are listed
+in the combobox. Select an item and press the **[Create]** button to generate
+a new report or print layout.
+
+You can also use layout templates from a custom folder; in that case, select
+*specific* in the templates drop-down list, browse to the template and press
+**[Create]**.
+
+.. tip:: **Creating template-based print layouts from Browser panel**
+
+  Drag-and-drop a print layout template :file:`.qpt` file from any file browser
+  onto the map canvas or double-click it in the :ref:`Browser panel <browser_panel>`
+  generates a new print layout from the template.
+
+.. Todo: Add a link to User profile section when it's ready
 
 .. _print_composer_menus:
 
@@ -149,17 +169,15 @@ the panels :guilabel:`Items` and :guilabel:`Undo History` and the lower holds
 the panels :guilabel:`Layout`, :guilabel:`Item properties`
 and :guilabel:`Atlas generation`.
 
-* The :guilabel:`Items` panel provides a list of all the print layout items added to
-  the canvas.
+* The :guilabel:`Items` panel provides a list of all the print layout items
+  added to the canvas and ways to globally interact with them
+  (see :ref:`layout_items_panel` for more information).
 * The :guilabel:`Undo History` panel displays a history of all changes applied
   to the layout. With a mouse click, it is possible to undo and
   redo layout steps back and forth to a certain status.
-* The :guilabel:`Layout` panel allows you to set paper size, orientation, the
-  page background, number of pages and print quality for the output file in dpi.
-  Furthermore, you can also activate the |checkbox| :guilabel:`Print as raster`
-  checkbox. This means all items will be converted to raster before printing or
-  saving as PostScript or PDF.
-  In this panel, you can also customize settings for grid and smart guides.
+* The :guilabel:`Layout` panel allows you to set general parameters to apply to
+  the layout when exporting or working within (see :ref:`layout_panel` for more
+  details);
 * The :guilabel:`Item Properties` panel displays the properties for the selected
   item. Click the |select| :sup:`Select/Move item` icon to select
   an item (e.g., legend, scale bar or label) on the canvas. Then click the
@@ -230,7 +248,7 @@ information.
  |deleteSelected| :guilabel:`Delete Layout`
  |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
  :menuselection:`Layouts —>`
- :guilabel:`Layout Properties...`                                                                        :ref:`layout_tab`
+ :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
  :guilabel:`Rename Layout...`
  |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`
  |fileOpen| :guilabel:`Add Items from Template`
@@ -292,7 +310,7 @@ tools, you have means to:
 * |draw| :sup:`Refresh view` (if you find the view in an inconsistent state);
 * enable a :ref:`grid <grid_guides>` you could snap items to when moving or
   creating them. Grids setting is done in :menuselection:`Settings --> Layout
-  Options...`;
+  Options...` or in the :ref:`Layout Panel <layout_panel>`;
 * enable :ref:`guides <grid_guides>` you could snap items to when moving or
   creating them. Guides are red lines that you can create by clicking in the
   ruler (above or at the left side of the layout) and drag and drop to the
@@ -380,20 +398,20 @@ Add Item menu
 These are tools to create layout items. Each of them is deeply described
 in :ref:`layout_items` chapter.
 
-================================================= ========================== =====================================
- Tool                                              Toolbar                    Reference
-================================================= ========================== =====================================
- |addMap| :guilabel:`Add Map`                      :guilabel:`Toolbox`        :ref:`layout_map_item`
- |addImage| :guilabel:`Add Picture`                :guilabel:`Toolbox`        :ref:`layout_picture_item`
- |label| :guilabel:`Add Label`                     :guilabel:`Toolbox`        :ref:`layout_label_item`
- |addLegend| :guilabel:`Add Legend`                :guilabel:`Toolbox`        :ref:`layout_legend_item`
- |scaleBar| :guilabel:`Add Scale Bar`              :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
- |addBasicShape| :menuselection:`Add Shape -->`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addArrow| :guilabel:`Add Arrow`                  :guilabel:`Toolbox`        :ref:`layout_arrow_item`
- |addNodesShape| :guilabel:`Add Node Item -->`     :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
- |addHtml| :guilabel:`Add HTML`                    :guilabel:`Toolbox`        :ref:`layout_html_item`
- |openTable| :guilabel:`Add Attribute Table`       :guilabel:`Toolbox`        :ref:`layout_table_item`
-================================================= ========================== =====================================
+=================================================== ======================== =====================================
+ Tool                                                Toolbar                    Reference
+=================================================== ======================== =====================================
+ |addMap| :guilabel:`Add Map`                        :guilabel:`Toolbox`        :ref:`layout_map_item`
+ |addImage| :guilabel:`Add Picture`                  :guilabel:`Toolbox`        :ref:`layout_picture_item`
+ |label| :guilabel:`Add Label`                       :guilabel:`Toolbox`        :ref:`layout_label_item`
+ |addLegend| :guilabel:`Add Legend`                  :guilabel:`Toolbox`        :ref:`layout_legend_item`
+ |scaleBar| :guilabel:`Add Scale Bar`                :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
+ |addBasicShape| :menuselection:`Add Shape -->`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addArrow| :guilabel:`Add Arrow`                    :guilabel:`Toolbox`        :ref:`layout_arrow_item`
+ |addNodesShape| :menuselection:`Add Node Item -->`  :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+ |addHtml| :guilabel:`Add HTML`                      :guilabel:`Toolbox`        :ref:`layout_html_item`
+ |openTable| :guilabel:`Add Attribute Table`         :guilabel:`Toolbox`        :ref:`layout_table_item`
+=================================================== ======================== =====================================
 
 
 Atlas menu
@@ -418,24 +436,27 @@ Atlas menu
 Settings Menu
 .............
 
-From :menuselection:`Settings --> Layout Options...` you can set some options
-that will be used as default on any layout during your work.
+The :menuselection:`Settings --> Layout Options...` menu is a shortcut to
+:menuselection:`Settings --> Options --> Layouts` menu of QGIS main canvas.
+Here, you can set some options that will be used as default on any new print
+layout:
 
-* :guilabel:`Layout defaults` let you specify the default font to use.
+* :guilabel:`Layout defaults` let you specify the default font to use;
 * With :guilabel:`Grid appearance`, you can set the grid style and its color.
-  There are three types of grid: **Dots**, **Solid** lines and **Crosses**.
-* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance of
-  the grid.
-* :guilabel:`Layout Paths` lists custom paths to search print templates.
+  There are three types of grid: **Dots**, **Solid** lines and **Crosses**;
+* :guilabel:`Grid and guide defaults` defines spacing, offset and tolerance
+  of the grid (see :ref:`grid_guides` for more details);
+* :guilabel:`Layout Paths`: to manage list of custom paths to search print
+  templates.
 
 
-.. _layout_tab:
+.. _layout_panel:
 
 The Layout Panel
 -----------------
 
-In the :guilabel:`Layout` panel, you can define the global settings of the
-current composition.
+In the :guilabel:`Layout` panel, you can define the global settings of your
+print layout.
 
 .. _figure_composition:
 
@@ -447,78 +468,36 @@ current composition.
 General settings
 ................
 
-A layout can be divided into several pages. For instance, a first page can show
-a map canvas, and a second page can show the attribute table associated with a
-layer, while a third one shows an HTML frame linking to your organization website.
-Set the :guilabel:`Number of pages` to the desired value. You can also
-custom the :guilabel:`Page Background` with the color or the symbol you want.
-
-The :guilabel:`Reference map` selects the map item to be used as the
-composition's master map. The layout will use this map in any
+In a print layout, you can use more than one map item.
+The :guilabel:`Reference map` selects the map item to be used as the layout's
+master map. The layout will use this map in any
 properties and variable calculating units or scale. This includes exporting
-the composition to georeferenced formats.
-
-Page size and resize
-....................
-
-In the :guilabel:`Page size` group, you can choose one of the
-:guilabel:`Presets` formats for your paper sheet, or enter your custom
-:guilabel:`width`, :guilabel:`height` and :guilabel:`units`.
-You can also choose the page :guilabel:`Orientation` to use.
-
-The Page size options apply to all the pages in the composition. However,
-you can modify the values using the data defined override options (see
-:ref:`atlas_data_defined_override`).
-
-A custom page size can also be set, using the :guilabel:`Resize page` tool.
-This creates an unique page composition, resizes the page to fit the current
-contents of the composition (with optional margins).
-
-
-Export settings
-...............
-
-You can define a resolution to use for all exported maps in :guilabel:`Export
-resolution`. This setting can, however, be overridden each time you are
-exporting a map.
-
-When checked, |checkbox| :guilabel:`print as raster` means all elements will be
-rasterized before printing or saving as PostScript or PDF.
-
-While exporting to an image file format, you can choose to generate a world file
-by checking |checkbox| :guilabel:`Save world file` using the map selected in
-|selectString| :guilabel:`Reference map` in the :guilabel:`general settings`
-group. The world file is created beside the exported map, has the same name
-and contains information to georeference it easily.
-
-.. _figure_composition_export:
-
-.. figure:: img/composition_export.png
-   :align: center
-
-   Export Settings in the Print Layout
+the print layout to georeferenced formats.
 
 .. _grid_guides:
 
 Guides and Grid
 ...............
 
-You can put some reference marks on your composition paper sheet to help you
-place some items. These marks can be:
+You can put some reference marks on your paper sheet to help you
+accurately place some items. These marks can be:
 
-* simple lines (called **Guides**) put at the position you want. To do that,
-  ensure that :guilabel:`Show Rulers` and :guilabel:`Show Guides` in :menuselection:`View`
-  menu are checked. Then, click and drag from within the ruler to the paper sheet.
-  A vertical or horizontal line is added to the paper and you can set its position
-  following the coordinates displayed at the left bottom of the print layout dialog.
-* or regular **Grid**.
+* simple horizontal or vertical lines (called **Guides**) put at the position
+  you want (see :ref:`layout_guides_panel` for guides creation).
+* or regular **Grid**: a network of horizontal and vertical lines
+  superimposed over the layout.
 
-Whether grids or guides should be shown is set in :menuselection:`View` menu.
-There, you can also decide if they might be used to snap layout items. The
-:guilabel:`Grid and guides` section lets you customize grid settings like
-:guilabel:`Grid spacing`, :guilabel:`Grid offset` and :guilabel:`Snap tolerance`
-to your need. The tolerance is the maximum distance below which an item is snapped
-to a grid or a guide.
+Settings like :guilabel:`Grid spacing` or :guilabel:`Grid offset` can be
+adjusted in this group as well as the :guilabel:`Snap tolerance` to use for
+items. The tolerance is the maximum distance below which the mouse cursor is
+snapped to a grid or a guide, while moving, resizing or creating an item.
+
+Whether grid or guides should be shown is set in :menuselection:`View` menu.
+There, you can also decide if they might be used to snap layout items.
+When both a grid line and a guide line are within tolerance of a point, guides
+will always take precedence - since they have been manually set (hence,
+assumption that they have been explicitly placed at highly desirable snapping
+locations, and should be selected over the general grid).
 
 .. _figure_composition_grid:
 
@@ -527,11 +506,59 @@ to a grid or a guide.
 
    Snapping to Grids in the Print Layout
 
-.. note::
- In the :menuselection:`Options --> Layout` menu in QGIS main canvas, you can
- also set the spacing, offset and snap tolerance of the grid as much as its style
- and color. These options are applied by default to any new print layout.
+In the :menuselection:`Settings --> Layout Options` menu, you can also set
+the grid and guides parameters exposed above. However, these options will
+only apply as defaults to new print layouts.
 
+.. _layout_export_settings:
+
+Export settings
+...............
+
+You can define a resolution to use for all exported maps in :guilabel:`Export
+resolution`. This setting can then be overridden each time you export a map.
+
+Because of some advanced rendering options (:ref:`blending mode <blend-modes>`,
+:ref:`effects <draw_effects>`...), a layout item may need rasterization in
+order to be exported correctly. QGIS will individually rasterize it without
+forcing every other item to also be rasterized.
+This allows printing or saving as PostScript or PDF to keep items as much as
+possible as vectors, e.g. a map item with layer opacity won't force labels,
+scale bars, etc to be rasterized too.
+You can however:
+
+* force all the items to be rasterized checking the |checkbox| :guilabel:`Print
+  as raster` box;
+* or use the opposite option, i.e. :guilabel:`Always export as vectors`, to
+  force the export to keep items as vectors when exported to a compatible
+  format. Note that in some cases, this could cause the output to look
+  different to layout.
+
+Where the format makes it possible (e.g., :file:`.TIF`, :file:`.PDF`) exporting
+a print layout results by default in a georeferenced file (based on the
+:guilabel:`Reference map` item in the :guilabel:`General settings` group).
+For other formats, georeferenced output requires you to generate a world file
+by checking |checkbox| :guilabel:`Save world file`. The world file is created
+beside the exported map(s), has the name of the page output with the reference
+map item and contains information to georeference it easily.
+
+.. _figure_composition_export:
+
+.. figure:: img/composition_export.png
+   :align: center
+
+   Export Settings in the Print Layout
+
+Resize layout to content
+........................
+
+Using the :guilabel:`Resize page` tool in this group, you create a unique page
+composition whose extent covers the current contents of the print layout (with
+some optional :guilabel:`margins` around the cropped bounds).
+
+Note that this behavior is different from the :ref:`crop to content
+<crop_to_content>` option in that all the items are placed on a real and unique
+page in replacement of all the existing pages.
 
 Variables
 .........
@@ -540,11 +567,11 @@ The :guilabel:`Variables` lists all the variables available at
 the layout's level (which includes all global and project's variables).
 
 It also allows the user to manage layout-level variables. Click the
-|signPlus| button to add a new custom composition-level variable. Likewise,
+|signPlus| button to add a new custom layout-level variable. Likewise,
 select a custom layout-level variable from the list and click the
 |signMinus| button to remove it.
 
-More information on variables usage in the 
+More information on variables usage in the
 :ref:`General Tools <general_tools_variables>` section.
 
 .. _figure_composition_variables:
@@ -554,7 +581,96 @@ More information on variables usage in the
 
    Variables Editor in the Print Layout
 
-.. _layout_items_tab:
+
+.. index:: Layout pages, Page properties
+.. _page_properties:
+
+The Page Properties Panel
+-------------------------
+
+A layout can be composed of several pages. For instance, a first page can show
+a map canvas, and a second page can show the attribute table associated with a
+layer, while a third one shows an HTML frame linking to your organization website.
+Or you can add many types of items on each page.
+
+Futhermore, a layout can be made using different size and/or orientation of pages.
+To add a page, select the |newPage| :guilabel:`Add Pages...` tool from the
+:menuselection:`Layout` menu or :guilabel `Layout Toolbar`. The :guilabel:`Insert
+Pages` dialog opens and you are asked to fill:
+
+* the number of pages to insert;
+* the position of the page(s): before or after a given page or at the end of the
+  print layout;
+* The :guilabel:`Page size`: it could be of a preset format page, with
+  associated :guilabel:`Orientation` or of a custom format. In the latter case,
+  you'd need to enter page's :guilabel:`Width` and :guilabel:`Height` (with
+  locked size ratio if needed). Page size can also be set in different units.
+
+.. Todo: Add New page dialog screenshot
+
+Any page can be later customized through the Page :guilabel:`Item Properties`
+panel. Right-click on a page and select :guilabel:`Page Properties...`. The
+:guilabel:`Item Properties` panel opens with settings such as:
+
+* the :guilabel:`Page size` frame described above. You can modify each property
+  using the data defined override options (see :ref:`atlas_data_defined_override`
+  for a use case); 
+* the |unchecked| :guilabel:`Exclude page from exports` to control whether the
+  current page with its content should be included in the :ref:`layout output
+  <create-output>`;
+* the :guilabel:`Background` using the :ref:`color <color-selector>` or
+  :ref:`symbol <symbol-selector>` you want.
+
+.. Todo: Add page properties panel screenshot
+
+
+.. index:: Guides, Smart guides
+.. _layout_guides_panel:
+
+The Guides Panel
+----------------
+
+Guides are vertical or horizontal line references you can place on a layout
+page to assist you on items placement, when creating, moving or resizing them.
+To be active, guides require the :menuselection:`View --> Show Guides` and
+:menuselection:`View --> Snap to Guides` options to be checked.
+To create a guide, two ways:
+
+* assuming :menuselection:`View --> Show Rulers` option is set, drag out a
+  ruler and release the mouse button within the page area, at the desired
+  position.
+* more accurate and always available, use the :guilabel:`Guides` panel.
+
+The :guilabel:`Guides` panel allows creation of snap lines at specific
+locations: click the |signPlus| :sup:`Add new guide` button and enter
+coordinates of the  horizontal or vertical line. Different units are available
+for setting.
+The panel also allows adjusting position of existing guides to exact
+coordinates: double-click a guide coordinate and replace the value.
+
+To delete a guide, select it and press |signMinus| :sup:`Remove selected guide`
+button. Use **[Clear all guides]** to remove all the guides in the panel.
+
+Guides are single page only meaning that the :guilabel:`Guides` panel lists
+guides of the current page (whose number is shown at the top of the dialog).
+Likewise, it allows creation or removal of guides only in the current page.
+The **[Apply to all pages]** button allows you to setup the guide configuration
+on a single page and easily transfer it to all other pages in the layout.
+
+.. actually, I'm not sure what does mean current page for the guides panel as
+  when multiple pages are visible, the behavior is not predictable (see bug
+  report https://issues.qgis.org/issues/17804)
+
+.. tip:: **Snapping to existing layout items**
+
+  Other than guides and grids, you can use existing items as snapping
+  references when moving, resizing or creating new items; these are called
+  **smart guides** and require :menuselection:`View --> Smart Guides` option to
+  be checked. Anytime the mouse pointer is close to an item's bound, a snapping
+  cross appears.
+
+
+.. _layout_items_panel:
 
 The Items Panel
 ---------------

@@ -154,17 +154,19 @@ Iterating over a subset of features
 
 If you want to iterate over a given subset of features in a layer, such as
 those within a given area, you have to add a :obj:`QgsFeatureRequest` object
-to the :func:`getFeatures()` call. Here's an example
+to the :func:`getFeatures()` call. Here's an example:
 
 .. code-block:: python
 
-  request = QgsFeatureRequest()
-  request.setFilterRect(areaOfInterest)
-  for feature in layer.getFeatures(request):
-      # do whatever you need with the feature
+ areaOfInterest = QgsRectangle(450290,400520, 450750,400780)
+
+ request = QgsFeatureRequest().setFilterRect(areaOfInterest)
+
+ for feature in layer.getFeatures(request):
+     # do whatever you need with the feature
 
 With :func:`setLimit()` you can limit the number of requested features. 
-Here's an example
+Here's an example:
 
 .. code-block:: python
 
@@ -197,7 +199,7 @@ iterator returns all features, but returns partial data for each of them.
   # Only return selected fields
   request.setSubsetOfAttributes([0,2])
   # More user friendly version
-  request.setSubsetOfAttributes(['name','id'],layer.pendingFields())
+  request.setSubsetOfAttributes(['name','id'],layer.fields())
   # Don't return geometry objects
   request.setFlags(QgsFeatureRequest.NoGeometry)
 
@@ -225,8 +227,8 @@ to find out what set of functionality is supported
 
   caps = layer.dataProvider().capabilities()
   # Check if a particular capability is supported:
-  caps & QgsVectorDataProvider.DeleteFeatures
-  # Print 2 if DeleteFeatures is supported
+  if caps & layer.dataProvider().DeleteFeatures:
+      print('The layer supports DeleteFeatures')
 
 For a list of all available capabilities, please refer to the
 `API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_
@@ -238,10 +240,10 @@ can use :func:`capabilitiesString` as in the following example:
 
   caps_string = layer.dataProvider().capabilitiesString()
   # Print:
-  # u'Add Features, Delete Features, Change Attribute Values,
-  # Add Attributes, Delete Attributes, Create Spatial Index,
-  # Fast Access to Features at ID, Change Geometries,
-  # Simplify Geometries with topological validation'
+  # 'Add Features, Delete Features, Change Attribute Values, Add Attributes,
+  # Delete Attributes, Rename Attributes, Fast Access to Features at ID,
+  # Presimplify Geometries, Presimplify Geometries with Validity Check,
+  # Transactions, Curved Geometries'
 
 By using any of the following methods for vector layer editing, the changes are
 directly committed to the underlying data store (a file, database etc). In case
@@ -251,20 +253,18 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 
 .. note::
 
-    If you are working inside QGIS (either from the console or from a plugin),
-    it might be necessary to force a redraw of the map canvas in order to see
-    the changes you've done to the geometry, to the style or to the attributes:
+ If you are working inside QGIS (either from the console or from a plugin),
+ it might be necessary to force a redraw of the map canvas in order to see
+ the changes you've done to the geometry, to the style or to the attributes:
     
-    ::
+ ::
 
-      # If caching is enabled, a simple canvas refresh might not be sufficient
-      # to trigger a redraw and you must clear the cached image for the layer
-      if iface.mapCanvas().isCachingEnabled():
-          layer.setCacheImage(None)
-      else:
-          iface.mapCanvas().refresh()
-
-
+  # If caching is enabled, a simple canvas refresh might not be sufficient
+  # to trigger a redraw and you must clear the cached image for the layer
+  if iface.mapCanvas().isCachingEnabled():
+      layer.triggerRepaint()
+  else:
+      iface.mapCanvas().refresh()
 
 
 Add Features
@@ -281,7 +281,7 @@ the number of fields you want to be added.
 .. code-block:: python
 
   if caps & QgsVectorDataProvider.AddFeatures:
-      feat = QgsFeature(layer.pendingFields())
+      feat = QgsFeature(layer.fields())
       feat.setAttributes([0, 'hello'])
       # Or set a single attribute by key or by index:
       feat.setAttribute('name', 'hello')

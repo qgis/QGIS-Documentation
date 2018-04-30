@@ -13,12 +13,17 @@ The Label Item
    .. contents::
       :local:
 
-To add a label, click the |label| :sup:`Add label` icon, place the element
-with the left mouse button on the print layout canvas and position and
-customize its appearance in the label :guilabel:`Item Properties` panel.
-
-The :guilabel:`Item Properties` panel of a label item provides the following
-functionality for the label item (see figure_layout_label_):
+The :guilabel:`Label` item is a tool that helps decorate your map with
+texts that would help to understand it; it can be the title, author, data
+sources or any other information...
+You can add a label with the |label| :guilabel:`Add Label` tool following
+:ref:`items creation instructions <create_layout_item>` and manipulate it the
+same way as exposed in :ref:`interact_layout_item`.
+ 
+By default, the label item provides a default text that you can customize using
+its :guilabel:`Item Properties` panel. Other than the :ref:`items common
+properties <item_common_properties>`, this feature has the following
+functionalities (see figure_layout_label_):
 
 .. _figure_layout_label:
 
@@ -30,30 +35,50 @@ functionality for the label item (see figure_layout_label_):
 Main properties
 ----------------
 
-* The main properties dialog is where the text (HTML or not) or the expression
-  needed to fill the label is added to the layout canvas.
+The :guilabel:`Main properties` group is the place to provide the text (it can
+be in HTML) or the expression to build the label. Expressions need to be
+surrounded by ``[%``and ``%]`` in order to be interpreted as such.
+
 * Labels can be interpreted as HTML code: check |checkbox|
   :guilabel:`Render as HTML`. You can now insert a URL, a clickable image that
   links to a web page or something more complex.
-* You can also insert an expression. Click on **[Insert an expression]** to open
-  a new dialog. Build an expression by clicking the functions available in the
-  left side of the panel. Two special categories can be useful, particularly
-  associated with the atlas functionality: **geometry** and **records**
-  functions. At the bottom, a preview of the expression is shown.
+* You can also use :ref:`expressions <expression_builder>`: click on **[Insert
+  an expression]** button, write your formula as usual and when the dialog is
+  applied, QGIS automatically adds the surrounding characters.
+  
+.. note:: Clicking the **[Insert an expression]** button when no selection is
+  made in the textbox will append the new expression to the existing text.
+  If you want to update an existing text, you need to select it the part of
+  interest beforehand.
+
+You can combine HTML rendering and expressions, leading to e.g. a text like:
+
+::
+
+ [% '<b>Check out the new logo for ' || '<a href="https://www.qgis.org" title="Nice logo" target="_blank">QGIS ' ||@qgis_short_version || '</a>' || ' : <img src="https://qgis.org/en/_downloads/qgis-icon128.png" alt="QGIS icon"/>' %]
+
+which will render:
+**Check out the new logo for `QGIS 3.0 <https://www.qgis.org>`_ :** |logo|
+
+.. Todo: it may be nice to provide some screenshot of some funnier/cooler/advanced
+ html label in action
 
 Appearance
 ----------
 
 * Define :guilabel:`Font` by clicking on the **[Font...]** button or a
-  :guilabel:`Font color` selecting a color using the color selection tool.
+  :guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`.
 * You can specify different horizontal and vertical margins in ``mm``. This is
   the margin from the edge of the layout item. The label can be positioned
   outside the bounds of the label e.g. to align label items with other items.
   In this case you have to use negative values for the margin.
-* Using the :guilabel:`Alignment` is another way to position your label. Note
-  that when e.g. using the :guilabel:`Horizontal alignment` in |radioButtonOn|
-  :guilabel:`Center` Position the :guilabel:`Horizontal margin` feature is
-  disabled.
+* Using the text alignment is another way to position your label. It can be:
+
+  * :guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right`or
+    :guilabel:`Justify` for :guilabel:`Horizontal alignment`
+  * and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for
+    :guilabel:`Vertical alignment`.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -64,6 +89,8 @@ Appearance
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |logo| image:: /static/common/logo.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
