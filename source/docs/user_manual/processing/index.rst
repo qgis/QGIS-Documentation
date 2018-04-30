@@ -12,7 +12,6 @@ QGIS processing framework
     :maxdepth: 2
 
     intro
-    vector_menu
     toolbox
     history
     modeler

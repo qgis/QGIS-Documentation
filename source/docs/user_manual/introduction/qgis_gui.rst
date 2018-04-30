@@ -264,23 +264,29 @@ When starting QGIS for the first time not all core plugins are loaded.
 Vector
 ------
 
-==============================================================  =======================  ===============================
-Menu Option                                                     Toolbar                  Reference
-==============================================================  =======================  ===============================
-:menuselection:`Analysis Tools -->`                             \                        see :ref:`vector_menu`
-:menuselection:`Research Tools -->`                             \                        see :ref:`vector_menu`
-:menuselection:`Geoprocessing Tools -->`                        \                        see :ref:`vector_menu`
-:menuselection:`Geometry Tools -->`                             \                        see :ref:`vector_menu`
-:menuselection:`Data Management Tools -->`                      \                        see :ref:`vector_menu`
-|coordinateCapture| :guilabel:`Coordinate Capture`              :guilabel:`Vector`       see :ref:`coordcapt`
-|geometryChecker| :guilabel:`Geometry Checker`                  :guilabel:`Vector`       see :ref:`geometry_checker`
-|gpsImporter| :guilabel:`GPS Tools`                             :guilabel:`Vector`       see :ref:`plugin_gps`
-|topologyChecker| :guilabel:`Topology Checker`                  :guilabel:`Vector`       see :ref:`topology`
-==============================================================  =======================  ===============================
+==============================================================  =======================  =======================  ===============================
+Menu Option                                                     Shortcut                 Toolbar                  Reference
+==============================================================  =======================  =======================  ===============================
+:menuselection:`Analysis Tools -->`                             :kbd:`Alt+O` + :kbd:`A`  \                        see :ref:`processing.options`
+:menuselection:`Research Tools -->`                             :kbd:`Alt+O` + :kbd:`R`  \                        see :ref:`processing.options`
+:menuselection:`Geoprocessing Tools -->`                        :kbd:`Alt+O` + :kbd:`G`  \                        see :ref:`processing.options`
+:menuselection:`Geometry Tools -->`                             :kbd:`Alt+O` + :kbd:`E`  \                        see :ref:`processing.options`
+:menuselection:`Data Management Tools -->`                      :kbd:`Alt+O` + :kbd:`D`  \                        see :ref:`processing.options`
+|coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       see :ref:`coordcapt`
+|geometryChecker| :guilabel:`Geometry Checker`                  \                        :guilabel:`Vector`       see :ref:`geometry_checker`
+|gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       see :ref:`plugin_gps`
+|topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       see :ref:`topology`
+==============================================================  =======================  =======================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
-Many of the above-mentioned sub-menus require the core plugin Processing
-to be activated.
+By default, QGIS adds to the :guilabel:`Vector` menu some :ref:`Processing
+<sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
+for many common vector-based GIS tasks picked from different providers.
+If not all aforementioned sub-menus are available, then you would need to enable
+the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
+
+Note that the list of the :guilabel:`Vector` menu tools can be extended with
+any Processing algorithms or some external :ref:`plugins <plugins>`.
+
 
 Raster
 ------
@@ -290,17 +296,23 @@ Menu Option                                                 Toolbar             
 ==========================================================  ====================  ==================================
 |showRasterCalculator| :guilabel:`Raster calculator...`     \                     see :ref:`label_raster_calc`
 :guilabel:`Align Raster...`                                 \                     see :ref:`label_raster_align`
-:menuselection:`Analysis -->`                               \                     see :ref:`label_plugingdaltools`
-:menuselection:`Projection -->`                             \                     see :ref:`label_plugingdaltools`
-:menuselection:`Conversion -->`                             \                     see :ref:`label_plugingdaltools`
-:menuselection:`Miscellaneous -->`                          \                     see :ref:`label_plugingdaltools`
-:menuselection:`Extraction -->`                             \                     see :ref:`label_plugingdaltools`
+:menuselection:`Analysis -->`                               \                     see :ref:`processing.options`
+:menuselection:`Projection -->`                             \                     see :ref:`processing.options`
+:menuselection:`Conversion -->`                             \                     see :ref:`processing.options`
+:menuselection:`Miscellaneous -->`                          \                     see :ref:`processing.options`
+:menuselection:`Extraction -->`                             \                     see :ref:`processing.options`
 |georefRun| :guilabel:`Georeferencer`                       :guilabel:`Raster`    see :ref:`georef`
 ==========================================================  ====================  ==================================
 
-When starting QGIS for the first time not all core plugins are loaded.
-Many of the above-mentioned sub-menus require the core plugin Processing
-to be activated.
+By default, QGIS adds to the :guilabel:`Raster` menu some :ref:`Processing
+<sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
+for many common raster-based GIS tasks picked from different providers.
+If not all aforementioned sub-menus are available, then you would need to enable
+the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
+
+Note that the list of the :guilabel:`Raster` menu tools can be extended with
+any Processing algorithms or some external :ref:`plugins <plugins>`.
+
 
 Database
 --------
