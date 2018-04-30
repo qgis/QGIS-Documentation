@@ -242,17 +242,17 @@ information.
 ================================================= ========================== ========================== =====================================
  Tool                                              Shortcut                   Toolbar                    Reference
 ================================================= ========================== ========================== =====================================
- |fileSave| :guilabel:`Save Project`               :kbd:`Ctrl+S`              :guilabel:`Layout`
- |newLayout| :guilabel:`New Layout`                :kbd:`Ctrl+N`              :guilabel:`Layout`
- |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`
+ |fileSave| :guilabel:`Save Project`               :kbd:`Ctrl+S`              :guilabel:`Layout`         :ref:`sec_projects`
+ |newLayout| :guilabel:`New Layout`                :kbd:`Ctrl+N`              :guilabel:`Layout`         :ref:`layout_manager`
+ |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`         :ref:`layout_manager`
  |deleteSelected| :guilabel:`Delete Layout`
  |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
  :menuselection:`Layouts —>`
  :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
  :guilabel:`Rename Layout...`
- |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`
- |fileOpen| :guilabel:`Add Items from Template`
- |fileSaveAs| :guilabel:`Save as Template...`
+ |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`         :ref:`page_properties`
+ |fileOpen| :guilabel:`Add Items from Template`                               :guilabel:`Layout`         :ref:`create_layout_item`
+ |fileSaveAs| :guilabel:`Save as Template...`                                 :guilabel:`Layout`         :ref:`layout_manager`
  |saveMapAsImage| :guilabel:`Export as Image...`                              :guilabel:`Layout`         :ref:`export_layout_image`
  |saveAsSVG| :guilabel:`Export as SVG...`                                     :guilabel:`Layout`         :ref:`export_layout_svg`
  |saveAsPDF| :guilabel:`Export as PDF...`                                     :guilabel:`Layout`         :ref:`export_layout_pdf`
@@ -294,9 +294,9 @@ information.
  :guilabel:`Select Next Item above`                :kbd:`Ctrl+Alt+]`
  |pan| :guilabel:`Pan Layout`                      :kbd:`P`                   :guilabel:`Toolbox`
  |zoomToArea| :guilabel:`Zoom`                     :kbd:`Z`                   :guilabel:`Toolbox`
- |select| :guilabel:`Select/Move Item`             :kbd:`V`                   :guilabel:`Toolbox`
- |moveItemContent| :guilabel:`Move Content`        :kbd:`C`                   :guilabel:`Toolbox`
- |editNodesShape| :guilabel:`Edit Nodes Item`                                 :guilabel:`Toolbox`
+ |select| :guilabel:`Select/Move Item`             :kbd:`V`                   :guilabel:`Toolbox`        :ref:`interact_layout_item`
+ |moveItemContent| :guilabel:`Move Content`        :kbd:`C`                   :guilabel:`Toolbox`        :ref:`layout_map_item`
+ |editNodesShape| :guilabel:`Edit Nodes Item`                                 :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
 ================================================= ========================== ========================== =====================================
 
 
@@ -359,22 +359,22 @@ interact with by pressing :kbd:`F11` or using :menuselection:`View -->`
  |checkbox| :guilabel:`Show Guides`                :kbd:`Ctrl+;`                                         :ref:`grid_guides`
  |checkbox| :guilabel:`Snap to Guides`             :kbd:`Ctrl+Shift+;`                                   :ref:`grid_guides`
  |checkbox| :guilabel:`Smart Guides`               :kbd:`Ctrl+Alt+;`
- :guilabel:`Manage Guides...`
- :guilabel:`Clear Guides`
+ :guilabel:`Manage Guides...`                      \                          \                          :ref:`layout_guides_panel`
+ :guilabel:`Clear Guides`                          \                          \                          :ref:`layout_guides_panel`
  |checkbox| :guilabel:`Show Rulers`                :kbd:`Ctrl+R`
  |checkbox| :guilabel:`Show Bounding Boxes`        :kbd:`Ctrl+Shift+B`
  |checkbox| :guilabel:`Show Pages`
- :menuselection:`Toolbars -->`
- :menuselection:`Panels -->`
- |unchecked| :guilabel:`Toggle Full Screen`        :kbd:`F11`
- |unchecked| :guilabel:`Toggle Panel Visibility`   :kbd:`Ctrl+Tab`
+ :menuselection:`Toolbars -->`                      \                         \                          :ref:`sec_panels_and_toolbars`
+ :menuselection:`Panels -->`                        \                         \                          :ref:`sec_panels_and_toolbars`
+ |unchecked| :guilabel:`Toggle Full Screen`        :kbd:`F11`                 \                          :ref:`view_menu`
+ |unchecked| :guilabel:`Toggle Panel Visibility`   :kbd:`Ctrl+Tab`            \                          :ref:`view_menu`
 ================================================= ========================== ========================== =====================================
 
 Items menu
 ..........
 
 The :menuselection:`Items` helps you configure items' position in the
-layout and the relations between them.
+layout and the relations between them (see :ref:`interact_layout_item`).
 
 ================================================= ========================== ==========================
  Tool                                              Shortcut                   Toolbar
