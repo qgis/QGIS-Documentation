@@ -138,6 +138,15 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 
    Common Item Properties Dialogs
 
+.. note::
+
+   The |dataDefined| :sup:`Data defined override` icon next to most of the
+   options means that you can associate that property with a layer or
+   features attributes or with any other layout item's property, using
+   :ref:`expressions <vector_expressions>` or :ref:`variables
+   <general_tools_variables>`. These are particularly helpful with atlas
+   generation (See eg, :ref:`atlas_data_defined_override`).
+
 .. _Frame_Dialog:
 
 * The :guilabel:`Position and size` dialog lets you define the size and position
@@ -145,7 +154,8 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
   information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
-  Click on the [Color] and [Thickness] buttons to adjust those properties.
+  Click on the :guilabel:`Color` and :guilabel:`Thickness` and :guilabel:`Join
+  style` widgets to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color
   or choose from a custom setting.
@@ -157,14 +167,8 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
   The GetProjectSettings command will list the items and IDs which are available
   in a layout.
 * :guilabel:`Rendering` mode helps you set whether and how the item can be
-  displayed.
-
-.. note::
-
-   The |dataDefined| :sup:`Data defined override` icon next to a field
-   means that you can associate the field with data in the map item or use
-   expressions. These are particularly helpful with atlas generation
-   (See :ref:`atlas_data_defined_override`).
+  displayed: you can, for instance, apply :ref:`blending mode <blend-modes>`,
+  adjust the opacity of the item or :guilabel:`Exclude item from exports`.
 
 .. _position_size:
 
