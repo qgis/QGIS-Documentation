@@ -157,7 +157,7 @@ statement for QGIS is::
 
 This returns::
 
-  QGIS - 2.16.1-Nødebo 'Nødebo' (8545b3b)
+  QGIS - 3.0.2-Girona 'Girona' (307d082e3d)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
   OPTION:
@@ -171,9 +171,8 @@ This returns::
     [--noversioncheck]	don't check for new version of QGIS at startup
     [--noplugins]	don't restore plugins on startup
     [--nocustomization]	don't apply GUI customization
-    [--customizationfile]	use the given ini file as GUI customization
-    [--optionspath path]	use the given QSettings path
-    [--configpath path]	use the given path for all user configuration
+    [--customizationfile path]	use the given ini file as GUI customization
+    [--globalsettingsfile path]	use the given ini file as Global settings (defaults)
     [--authdbdirectory path] use the given directory for authentication database
     [--code path]	run the given python file on load
     [--defaultui]	start by resetting user ui settings to default
@@ -182,7 +181,10 @@ This returns::
     [--dxf-symbology-mode none|symbollayer|feature]	symbology mode for dxf output
     [--dxf-scale-denom scale]	scale for dxf output
     [--dxf-encoding encoding]	encoding to use for dxf output
-    [--dxf-preset visiblity-preset]	layer visibility preset to use for dxf output
+    [--dxf-map-theme maptheme]	map theme to use for dxf output
+    [--profile name]	load a named profile from the user profiles folder
+    [--profiles-path path]	path to store user profile folders. Will create profile inside a {path}\profiles folder
+    [--version-migration]	forces the settings migration from older version if found
     [--help]		this text
     [--]		treat all following arguments as FILEs
 
@@ -314,10 +316,10 @@ options are available:
 * *--dxf-extent*: the extent of the final DXF file;
 * *--dxf-symbology-mode*: several values can be used here: none (no symbology),
   symbollayer (Symbol layer symbology), feature (feature symbology);
-* *--dxf-scale-deno*: the scale denominator of the symbology;
+* *--dxf-scale-denom*: the scale denominator of the symbology;
 * *--dxf-encoding*: the file encoding;
-* *--dxf-preset*: choose a visibility preset. These presets are defined in the
-  layer tree, see :ref:`label_legend`.
+* *--dxf-map-theme*: choose a :ref:`map theme <map_theme>` from the layer tree
+  configuration.
 
 .. _samplesession:
 
