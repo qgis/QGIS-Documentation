@@ -101,6 +101,7 @@ map view). While in the **Advanced** layer selection mode, it is possible to use
 a snapping tolerance that refers to ``layer units``, the units of the reprojected
 layer when 'on-the-fly' CRS transformation is on.
 
+By default, only visible features can be snapped (the features whose style is displayed, except for layers where the symbology is "No symbols"). You can enable the snapping on invisible features by checking "Enable features for invisible features" under :menuselection:`Settings -->` |options| :menuselection:`Options --> Digitizing` tab
 
 .. index:: Search radius
 
