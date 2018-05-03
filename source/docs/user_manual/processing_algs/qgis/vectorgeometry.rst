@@ -1277,7 +1277,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer
 
-``Create point on surface for each part`` [boolean]
+``Create point on surface for each part`` [boolean] |32|
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -1469,8 +1469,8 @@ Output
 
 .. _qgisprojectpointcartesian:
 
-Project points (Cartesian)
---------------------------
+Project points (Cartesian) |32|
+-------------------------------
 Projects point geometries by a specified distance and bearing (azimuth), creating
 a new point layer with the projected points.
 
@@ -2182,6 +2182,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
