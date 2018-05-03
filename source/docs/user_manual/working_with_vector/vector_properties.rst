@@ -1972,7 +1972,7 @@ the form. Select a field and you can configure its appearance and behavior in
 the right panel:
 
 * adding :ref:`custom label and automated checks <configure_field>` to the field;
-* setting a :ref:`particular widget <edit_widget>` to use.
+* setting a :ref:`particular widget <edit_widgets>` to use.
 
 .. TODO: we should insert a screenshot showing the default form here
 
