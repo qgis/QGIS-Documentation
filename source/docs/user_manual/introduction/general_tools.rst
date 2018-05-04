@@ -163,8 +163,8 @@ layers.
 
   Depending on settings, eg :ref:`a filter <vector_query_builder>` applied to
   the layer, an icon is displayed on the right of the layer name in the
-  :guilabel:`Layers` panel. Hover over the icon to get more details and/or
-  update the setting.
+  :guilabel:`Layers` panel. Hover over the icon to get more details and
+  double-click to update the setting.
 
 
 .. index:: Group, Layer
