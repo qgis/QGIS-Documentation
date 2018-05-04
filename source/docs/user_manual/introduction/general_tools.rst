@@ -1731,7 +1731,10 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type;
 * an entry to list the :guilabel:`Variable` available;
-* :guilabel:`Edit...` button to create or edit the expression to use;
+* :guilabel:`Edit...` button to create or edit the expression to apply, using
+  the :guilabel:`Expression String Builder` dialog. To help you correctly fill
+  in the expression, a reminder of the expected output's format is provided in
+  the dialog;
 * :guilabel:`Paste` and :guilabel:`Copy` buttons;
 * :guilabel:`Clear` button to remove the setup.
 
