@@ -167,7 +167,7 @@ state.
 
   In the :guilabel:`Layers` panel, filtered layer is listed with a |indicatorFilter|
   :sup:`Filter` icon next to it indicating the query used when the mouse hovers
-  over the button. Click the icon opens the :guilabel:`Query Builder` dialog
+  over the button. Double-click the icon opens the :guilabel:`Query Builder` dialog
   for edit.
 
 
