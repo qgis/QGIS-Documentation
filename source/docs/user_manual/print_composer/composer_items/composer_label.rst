@@ -92,5 +92,4 @@ Appearance
    :width: 1.5em
 .. |logo| image:: /static/common/logo.png
    :width: 1.5em
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

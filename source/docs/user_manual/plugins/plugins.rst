@@ -180,7 +180,7 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
 The Upgradeable and New tabs
 ----------------------------
 
-The |pluginUpgrade| :guilabel:`Upgradeable` and |pluginNew| :guilabel:`New` tabs
+The |plugin-upgrade| :guilabel:`Upgradeable` and |plugin-new| :guilabel:`New` tabs
 are enabled when new plugins are added to the repository or a new
 version of an installed plugin is released.
 If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
@@ -195,7 +195,7 @@ Installation can be done with the **[Install plugin]**, **[Upgrade plugin]** or
 .. figure:: img/plugins_upgradeable.png
    :align: center
 
-   The |pluginUpgrade| :guilabel:`Upgradeable` tab
+   The |plugin-upgrade| :guilabel:`Upgradeable` tab
 
 The Invalid tab
 ---------------
@@ -242,9 +242,9 @@ directly from their repository.
    :width: 1.5em
 .. |pluginInvalid| image:: /static/common/plugin-incompatible.png
    :width: 1.5em
-.. |pluginNew| image:: /static/common/plugin-new.png
+.. |plugin-new| image:: /static/common/plugin-new.png
    :width: 1.5em
-.. |pluginUpgrade| image:: /static/common/plugin-upgrade.png
+.. |plugin-upgrade| image:: /static/common/plugin-upgrade.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em

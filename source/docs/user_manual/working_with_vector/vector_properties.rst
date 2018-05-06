@@ -2966,7 +2966,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    QGIS Server tab in vector layers properties dialog
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -3046,8 +3045,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |nullSymbol| image:: /static/common/rendererNullSymbol.png
-   :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
