@@ -35,6 +35,7 @@ Icon                    Plugin                        Description               
 |topologyChecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 ======================  ============================  ======================================================  ===============================
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -60,8 +61,6 @@ Icon                    Plugin                        Description               
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
-   :width: 1.5em
-.. |rasterInfo| image:: /static/common/raster-info.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em

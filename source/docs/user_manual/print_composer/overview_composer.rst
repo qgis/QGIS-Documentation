@@ -827,8 +827,6 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png

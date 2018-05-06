@@ -495,11 +495,8 @@ Other ways to produce output files are:
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em
