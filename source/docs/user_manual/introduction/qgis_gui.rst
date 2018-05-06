@@ -157,6 +157,8 @@ Menu Option                                              Shortcut              T
 |capturePolygon| :guilabel:`Add Feature`                 \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
 =======================================================  ====================  =============================  =====================================
 
+.. _view_menu:
+
 View
 ----
 
