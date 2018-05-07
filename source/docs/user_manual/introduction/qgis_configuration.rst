@@ -626,8 +626,8 @@ http://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 Locator Settings
 ----------------
 
-The :guilabel:`Locator` tab allows to configure the **Locator bar**, a quick
-search widget available on the status bar that helps you perform searches
+|search| The :guilabel:`Locator` tab allows to configure the **Locator bar**, a
+quick search widget available on the status bar that helps you perform searches
 anywhere in the application. It provides some default filters (with read-only
 prefix) to use :
 
@@ -660,6 +660,13 @@ installed. They also appear as soon as each result is encountered by each
 filter, which means that e.g. a file search filter will show results one by one
 as the file tree is scanned. This ensures that the UI is always responsive even
 if a very slow search filter is present (e.g. one which uses an online service).
+
+.. tip:: **Quick access to the locator's configurations**
+
+  Click on the |search| icon inside the locator widget on the status bar to
+  display the list of filters you can use and a **[Configure]** entry that
+  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
+  Options` menu.
 
 
 .. _optionsadvanced:
@@ -951,6 +958,8 @@ and **[Load]** them into another QGIS installation.
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
