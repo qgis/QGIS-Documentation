@@ -742,8 +742,8 @@ an alphanumeric table) so the above steps will create an entry in the layer
 attribute table that has no corresponding geometric feature. To add the 
 geometry
 
-* Choose |openTable| :menuselection:`Open Attribute Table` for the refeencing layer
-* Select the record that has been added previosuly within the feature form of the 
+* Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer
+* Select the record that has been added previously within the feature form of the 
   referenced layer
 * Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the 
   selected attributes table record
