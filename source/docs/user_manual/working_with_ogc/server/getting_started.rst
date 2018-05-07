@@ -304,8 +304,8 @@ Installation on Windows
 .. index:: Windows
 
 QGIS Server can also be installed on Windows systems. While the QGIS Server
-package is avaliable in the 64 bit version of the OSGeo4W network installer 
-https://qgis.org/en/site/forusers/download.html there is no Apache (or other
+package is available in the 64 bit version of the OSGeo4W network installer 
+(https://qgis.org/en/site/forusers/download.html) there is no Apache (or other
 web server) package available, so this must be installed by other means.
 
 A simple procedure is the following:
@@ -316,14 +316,14 @@ A simple procedure is the following:
 .. figure:: img/qgis_server_windows1.png
   :align: center
   
-* Download the OSGeo4W installer, follow the "advanced install" and install
+* Download the OSGeo4W installer, follow the "Advanced Install" and install
   both the QGIS Desktop and QGIS Server packages
   
 .. figure:: img/qgis_server_windows2.png
   :align: center
   
-* Edit the httpd.conf file (:file:`C:\xampp\apache\httpd.conf`
-  if default installation paths have been used) and make the follwing changes:
+* Edit the httpd.conf file (:file:`C:\\xampp\\apache\\httpd.conf`
+  if the default installation paths have been used) and make the following changes:
 
 From:
 
@@ -378,7 +378,7 @@ To:
     AddHandler cgi-script .cgi .pl .asp .exe
 
 
-Then at the bottom of http.conf add:
+Then at the bottom of httpd.conf add:
 
 .. code-block:: apache
 
