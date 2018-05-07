@@ -480,6 +480,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
   Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'.
 * :guilabel:`Snapping marker color`
 * |checkbox| :guilabel:`Show snapping tooltips`
+* |checkbox| :guilabel:`Enable snapping on invisible features` 
 
 
 **Vertex markers**

@@ -101,6 +101,11 @@ map view). While in the **Advanced** layer selection mode, it is possible to use
 a snapping tolerance that refers to ``layer units``, the units of the reprojected
 layer when 'on-the-fly' CRS transformation is on.
 
+By default, only visible features (the features whose style is displayed,
+except for layers where the symbology is "No symbols") can be snapped. 
+You can enable the snapping on invisible features by checking 
+|unchecked| :guilabel:`Enable snapping on invisible features` under 
+:menuselection:`Settings -->` |options| :menuselection:`Options --> Digitizing` tab.
 
 .. index:: Search radius
 
@@ -1380,6 +1385,8 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
