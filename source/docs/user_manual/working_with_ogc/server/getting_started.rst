@@ -329,65 +329,65 @@ From:
 
 .. code-block:: apache
 
-ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
+    ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
 
 
 To:
 
 .. code-block:: apache
 
-ScriptAlias /cgi-bin/ "c:/OSGeo4W64/apps/qgis/bin/"
+    ScriptAlias /cgi-bin/ "c:/OSGeo4W64/apps/qgis/bin/"
 
 
 From:
 
 .. code-block:: apache
 
-<Directory "C:/xampp/cgi-bin"
-  AllowOverride None
-  Options None
-  Require all granted
-</Directory>
+    <Directory "C:/xampp/cgi-bin"
+    AllowOverride None
+    Options None
+    Require all granted
+    </Directory>
 
 
 To:
 
 .. code-block:: apache
 
-<Directory "c:/OSGeo4W64/apps/qgis/bin">
-  SetHandler cgi-script
-  AllowOverride None
-  Options ExecCGI
-  Order allow,deny
-  Allow from all
-  Require all granted
-</Directory>
+    <Directory "c:/OSGeo4W64/apps/qgis/bin">
+    SetHandler cgi-script
+    AllowOverride None
+    Options ExecCGI
+    Order allow,deny
+    Allow from all
+    Require all granted
+    </Directory>
 
 
 From:
 
 .. code-block:: apache
 
-AddHandler cgi-script .cgi .pl .asp
+    AddHandler cgi-script .cgi .pl .asp
 
 
 To:
 
 .. code-block:: apache
 
-AddHandler cgi-script .cgi .pl .asp .exe
+    AddHandler cgi-script .cgi .pl .asp .exe
 
 
 Then at the bottom of http.conf add:
 
 .. code-block:: apache
 
-SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
-SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
-SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python36"
-SetEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"
-SetEnv QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
-SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
+    SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
+    SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
+    SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python36"
+    SetEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"
+    SetEnv QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
+    SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
 
 
 Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
