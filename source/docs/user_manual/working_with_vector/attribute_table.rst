@@ -740,13 +740,13 @@ a table. And there are also some buttons available. Let's review them shortly
 In the above example the referencing layer has geometries (so it isn't just 
 an alphanumeric table) so the above steps will create an entry in the layer
 attribute table that has no corresponding geometric feature. To add the 
-geometry
+geometry:
 
-* Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer
+* Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
 * Select the record that has been added previously within the feature form of the 
-  referenced layer
+  referenced layer;
 * Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the 
-  selected attributes table record
+  selected attributes table record.
 
 If you work on the airport table, a new widget type is available which lets you
 embed the feature form of the referenced region on the feature form of the
@@ -816,6 +816,8 @@ It will appear as a **Many to many relation**.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
