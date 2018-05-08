@@ -443,6 +443,20 @@ automatically zip your current project.
   A zipped project may be particularly useful with the
   :ref:`vector_auxiliary_storage` mechanism in order to embed the underlying
   database.
+  
+Projects can also be saved/loaded to/from a PostgreSQL database using the
+following Project menu items:
+
+* :menuselection:`Project --> Open from`
+* :menuselection:`Project --> Save to`
+
+Both menu items have a sub-menu with list of extra project storage implementations 
+(currently just PostgreSQL). Clicking the action will open a dialog to pick
+a PostgreSQL connection name, schema name and project.
+
+Projects stored in PostgreSQL can be also loaded from the QGIS browser panel 
+(the entries are located within the schema they are stored in), either by 
+double-clicking them or by dragging them to the map canvas.
 
 .. _`sec_output`:
 
