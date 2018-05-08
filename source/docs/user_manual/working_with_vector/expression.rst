@@ -804,6 +804,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | union                  | Returns a geometry that represents the point set  |
 |                        | union of the geometries                           |
 +------------------------+---------------------------------------------------+
+| wedge_buffer |32|      | Returns a wedge shaped buffer originating from a  |
+|                        | point geometry given an angle and radii           |
++------------------------+---------------------------------------------------+
 | within (a,b)           | Tests whether a geometry is within another.       |
 |                        | Returns 1 (true) if geometry a is completely      |
 |                        | inside geometry b                                 |
@@ -831,9 +834,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | y_max                  | Returns the maximum y coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
-+------------------------+---------------------------------------------------+
-| wedge_buffer           | Returns a wedge shaped buffer originating from a  |
-|                        | point geometry given an angle and radii           |
 +------------------------+---------------------------------------------------+
 | z                      | Returns the z coordinate of a point geometry      |
 +------------------------+---------------------------------------------------+
@@ -1344,6 +1344,7 @@ it can be found whenever you work with expressions.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
