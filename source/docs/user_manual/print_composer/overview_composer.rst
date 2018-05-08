@@ -376,21 +376,21 @@ Items menu
 The :menuselection:`Items` helps you configure items' position in the
 layout and the relations between them (see :ref:`interact_layout_item`).
 
-================================================= ========================== ==========================
- Tool                                              Shortcut                   Toolbar
-================================================= ========================== ==========================
- |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`
- |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`
- |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`
- |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`
- |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`
- |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`
- |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`
- |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`
- :menuselection:`Align Items -->`                                             :guilabel:`Actions`
- :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`
- :menuselection:`Resize -->`                                                  :guilabel:`Actions`
-================================================= ========================== ==========================
+================================================= ========================== ========================== ==========================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== ==========================
+ |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`        :ref:`group_items`
+ |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`        :ref:`group_items`
+ |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`        :ref:`align_items`
+ |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`        :ref:`align_items`
+ |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`        :ref:`align_items`
+ |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`        :ref:`align_items`
+ |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`        :ref:`lock_items`
+ |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`        :ref:`lock_items`
+ :menuselection:`Align Items -->`                                             :guilabel:`Actions`        :ref:`align_items`
+ :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`        :ref:`move_resize`
+ :menuselection:`Resize -->`                                                  :guilabel:`Actions`        :ref:`move_resize`
+================================================= ========================== ========================== ==========================
 
 Add Item menu
 .............
@@ -703,7 +703,8 @@ The Items Panel
 
 The :guilabel:`Items` panel offers some options to manage selection and
 visibility of items.
-All the items added to the print layout canvas are shown in a list and
+All the items added to the print layout canvas (including :ref:`items group
+<group_items>`) are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
 selecting a row does select the corresponding item in the print layout canvas.
 This is thus a handy way to select an item placed behind another one.

@@ -66,10 +66,13 @@ status bar.
 Inside the :menuselection:`Edit` menu, you can find actions to select all the
 items, clear all selections, invert the current selection and more...
 
+.. _move_resize:
+
 Moving and resizing items
 .........................
 
-A selected item will show squares on its boundaries; moving one of them with
+Unless :menuselection:`View --> Show Bounding Boxes` option is unchecked, a
+selected item will show squares on its boundaries ; moving one of them with
 the mouse will resize the item in the corresponding direction. While resizing,
 holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will
 resize from the item center.
@@ -80,10 +83,10 @@ axis, just hold the :kbd:`Shift` button on the keyboard while moving the mouse.
 You can also move a selected item using the :kbd:`Arrow keys` on the keyboard;
 if the movement is too slow, you can speed it up by holding :kbd:`Shift`.
 If you need better precision, use the :guilabel:`Position and size` properties,
-or grid/guides snapping.
+or grid/guides snapping as explained above for item's creation.
 
 Resizing or moving several items at once is made the same way as for a single
-item. QGIS however provides some advanced tools to automatically resize a group
+item. QGIS however provides some advanced tools to automatically resize a selection
 of items following different rules:
 
 * each item height matches the |resizeTallest| tallest or the |resizeShortest|
@@ -99,11 +102,30 @@ by distributing equidistantly:
 * edges (left, right, top or bottom) of items;
 * centers of items either horizontally or vertically.
 
+.. _group_items:
+
+Grouping items
+--------------
+
+Grouping items allows you to manipulate a set of items like a single one: you
+can easily resize, move, delete, copy the items as a whole.
+
+To create a group of items, select more than one and press the |groupItems|
+:guilabel:`Group` button on the :menuselection:`View` menu or the
+:guilabel:`Actions` toolbar or from the right-click menu. A row named ``Group``
+is added to the :menuselection:`Items` panel and can be locked or hidden like
+any other :ref:`Items panel's object <layout_items_panel>`.
+Grouped items are **not individually** selectable on the canvas; use the Items panel
+for direct selection and access the item's properties panel.
+
+.. _lock_items:
+
 Locking items
 .............
 
 Once you have found the correct position for an item, you can lock it by using
-the |locked| button on the :guilabel:`Actions` toolbar or ticking the box next
+the |locked| :guilabel:`Lock selected items` button in the :menuselection:`View`
+menu or the :guilabel:`Actions` toolbar or ticking the box next
 to the item in the :menuselection:`Items` panel. Locked items are **not**
 selectable on the canvas.
 
@@ -111,6 +133,7 @@ Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 panel and unchecking the tickbox or you can use the icons on the toolbar.
 
 .. index:: Items alignment
+.. _align_items:
 
 Alignment
 .........
@@ -151,11 +174,11 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 .. figure:: img/common_properties.png
    :align: center
 
-   Common Item Properties Dialogs
+   Common Item Properties groups
 
 .. _Frame_Dialog:
 
-* The :guilabel:`Position and size` dialog lets you define the size and position
+* The :guilabel:`Position and size` group lets you define the size and position
   of the frame which contains the item (see :ref:`position_size` for more
   information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
@@ -259,6 +282,8 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
