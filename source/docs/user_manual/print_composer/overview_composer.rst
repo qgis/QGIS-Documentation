@@ -450,6 +450,32 @@ layout:
   templates.
 
 
+Contextual menus
+................
+
+Depending on where you right-click in the print layout dialog, you open a
+contextual menu with various features:
+
+* Right-click on the menu bar or any toolbar and you get the list of layout
+  panels and toolbars you can enable or disable in one-click;
+* Right-click over a ruler and you can |checkbox| :guilabel:`Show Guides`,
+  |checkbox| :guilabel:`Snap to Guides`, :guilabel:`Manage Guides...` opening
+  the :ref:`Guides panel <layout_guides_panel>` or :guilabel:`Clear Guides`.
+  It's also possible to hide the rulers.
+* Right-click in the print layout canvas and:
+
+  * you'll be able to :guilabel:`Undo` and :guilabel:`Redo` recent changes, or
+    :guilabel:`Paste` any copied item (only available if no item is selected);
+  * if you click over a page, you can additionally access the current :ref:`Page
+    Properties <page_properties>` panel or :guilabel:`Remove Page`;
+  * if you click on a selected item then you can cut or copy it as well as open
+    the :ref:`Item Properties <layout_item_options>` panel.
+  * if more than one item are selected, then you can either group them and/or
+    ungroup if at least one group is already in the selection.
+* Right-click inside a text box or spinbox widget of any layout panel provides
+  edit options to manipulate its content.
+
+
 .. _layout_panel:
 
 The Layout Panel
@@ -691,7 +717,9 @@ For any selected item, you can :
   click and drag. The upper item in the list will be brought to the foreground
   in the print layout canvas.
   By default, a newly created item is placed in the foreground.
-* change the name by double-clicking the text.
+* change the item ID by double-clicking the text;
+* right-click an item and copy or delete it or open its :ref:`properties panel
+  <layout_item_options>`.
 
 Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
@@ -706,7 +734,9 @@ The Undo History Panel: Revert and Restore actions
 --------------------------------------------------
 
 During the layout process, it is possible to revert and restore changes.
-This can be done with the revert and restore tools:
+This can be done with the revert and restore tools available in the
+:guilabel:`Edit` menu, the :guilabel:`Layout` toolbar or the contextual menu
+any time you right-click in the print layout area:
 
 * |undo| :sup:`Revert last change`
 * |redo| :sup:`Restore last change`
