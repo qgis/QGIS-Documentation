@@ -48,7 +48,7 @@ Layers Panel
 .. index::
    single: Legend
 
-The :guilabel:`layers Panel` (also enabled pressing :kbd:`Ctrl+1`) lists all
+The :guilabel:`Layers` panel (also enabled pressing :kbd:`Ctrl+1`) lists all
 the layers in the project and helps you
 manage their visibility. A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
@@ -330,8 +330,8 @@ Overview Panel
 
 The :guilabel:`Overview` panel (:kbd:`Ctrl+8`) can constantly display a map with
 full extent view of some of the layers. The Overview map is filled with layers
-using the :menuselection:`Layer --> Add to Overview` command or the
-:guilabel:`Show in Overview` option in the layer contextual menu. Within the view,
+using the :guilabel:`Show in Overview` option from the :menuselection:`Layer`
+menu or in the layer contextual menu. Within the view,
 a red rectangle shows the current map canvas extent, helping you to quickly
 determine which area of the whole map you are currently viewing. If you
 click-and-drag the red rectangle in the overview frame, the main map view

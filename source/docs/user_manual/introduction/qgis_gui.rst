@@ -226,9 +226,9 @@ Menu Option                                                   Shortcut          
 :guilabel:`Properties...`                                     \                     \                                  see :ref:`vector_properties_dialog`
 :guilabel:`Filter...`                                         :kbd:`Ctrl+F`         \                                  see :ref:`vector_query_builder`
 |labeling| :guilabel:`Labeling`                               \                     \                                  see :ref:`vector_labels_tab`
-|inOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   :guilabel:`Manage Layers`          \
-|addAllToOverview| :guilabel:`Add All To Overview`            \                     \                                  \
-|removeAllOVerview| :guilabel:`Remove All From Overview`      \                     \                                  \
+|inOverview| :guilabel:`Show in Overview`                     \                     \                                  see :ref:`overview_panels`
+|addAllToOverview| :guilabel:`Show All in Overview`           \                     \                                  see :ref:`overview_panels`
+|removeAllOVerview| :guilabel:`Hide All From Overview`        \                     \                                  see :ref:`overview_panels`
 ============================================================  ====================  ================================  =====================================
 
 Settings
