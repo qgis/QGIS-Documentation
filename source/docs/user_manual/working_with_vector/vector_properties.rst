@@ -984,12 +984,12 @@ The first step is to choose the labeling method from the drop-down list. There
 are four options available:
 
 * **No labels**
-* **Show labels for this layer**
+* **Single labels**, described below
 * :ref:`Rule-based labeling <rule_based_labeling>`
 * and **Blocking**: allows to set a layer as just an obstacle for other layer's
   labels without rendering any labels of its own.
 
-The next steps assume you select the **Show labels for this layer** option,
+The next steps assume you select the **Single labels** option,
 enabling following tabs that help you configure the labeling:
 
 * :ref:`Text <labels_text>`
