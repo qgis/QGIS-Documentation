@@ -718,6 +718,11 @@ dialog described above.
   categories, keywords, contact details, links, history. There is also a
   validation functionality that checks if specific fields were filled, anyway
   this is not enforced.
+  
+* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
+  System for this project, and to enable on-the-fly re-projection of raster and
+  vector layers when displaying layers from a different CRS. For more information
+  on projection's handling in QGIS, please read :ref:`label_projections` section.
 
 * The :guilabel:`Default Styles` tab lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
