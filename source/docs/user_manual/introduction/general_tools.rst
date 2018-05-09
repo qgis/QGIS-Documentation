@@ -358,7 +358,8 @@ Table: Statistics available for each field type
 The statistical summary can then be:
 
 * returned for the whole layer or the |checkbox| :guilabel:`selected features only`;
-* recalculated using the |draw| button;
+* recalculated using the |draw| button when the underlying data source changes
+  (eg, new or removed features/fields, attribute modification);
 * |editCopy| copied to the clipboard and pasted as table in another application.
 
 .. _figure_statistical_summary:
