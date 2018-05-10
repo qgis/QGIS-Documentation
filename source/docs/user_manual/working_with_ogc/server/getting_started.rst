@@ -540,7 +540,7 @@ From:
 
 .. code-block:: apache
 
-    <Directory "C:/xampp/cgi-bin"
+    <Directory "C:/xampp/cgi-bin">
     AllowOverride None
     Options None
     Require all granted
