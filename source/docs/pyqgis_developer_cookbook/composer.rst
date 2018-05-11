@@ -39,7 +39,7 @@ and do the rendering
   render = QgsMapRenderer()
 
   # set layer set
-  lst = [layer.getLayerID()]  # add ID of every layer
+  lst = [layer.id()]  # add ID of every layer
   render.setLayerSet(lst)
 
   # set extent
