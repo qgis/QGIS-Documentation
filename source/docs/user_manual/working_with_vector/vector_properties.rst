@@ -446,8 +446,6 @@ However with the **Size Assistant** options applied over any of the previous
 rendering options, QGIS allows you to display your point and line data with
 such representation.
 
-.. _size_assistant:
-
 **Creating proportional symbol**
 
 Proportional rendering is done by first applying to the layer the :ref:`single_symbol_renderer`.
@@ -455,37 +453,6 @@ Once you set the symbol, at the upper level of the symbol tree, the
 |dataDefined| :guilabel:`Data-defined override` button available beside
 :guilabel:`Size` or :guilabel:`Width` options (for point or line layers
 respectively) provides tool to create proportional symbology for the layer.
-An assistant is moreover accessible through the |dataDefined| menu
-to help you define size expression.
-
-.. _figure_symbology_size_assistant:
-
-.. figure:: img/varying_size_assistant.png
-   :align: center
-
-   Varying size assistant
-
-The assistant lets you define:
-
-* The attribute to represent, using the Field listbox or the |expression|
-  :sup:`Set column expression` function (see :ref:`vector_expressions`)
-* the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
-* The minimum and maximum size of the symbol
-* The range of values to represent: The down pointing arrow helps you
-  fill automatically these fields with the minimum (or zero) and maximum values
-  returned by the chosen attribute or the expression applied to your data.
-* An unique size to represent NULL values.
-
-To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in
-the layer legend and is also used to shape the layer representation in the
-print layout legend item.
-
-The values presented in the varying size assistant above will set the size
-'Data-defined override' with:
-::
-
- coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
 
 **Creating multivariate analysis**
 
