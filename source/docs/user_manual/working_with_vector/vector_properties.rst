@@ -442,17 +442,24 @@ Proportional Symbol and Multivariate Analysis
 
 Proportional Symbol and Multivariate Analysis are not
 rendering types available from the Style rendering drop-down list.
-However with the **Size Assistant** options applied over any of the previous
+However with the :ref:`data-defined override <data_defined>` options applied
+over any of the previous
 rendering options, QGIS allows you to display your point and line data with
 such representation.
 
 **Creating proportional symbol**
 
-Proportional rendering is done by first applying to the layer the :ref:`single_symbol_renderer`.
-Once you set the symbol, at the upper level of the symbol tree, the
-|dataDefined| :guilabel:`Data-defined override` button available beside
-:guilabel:`Size` or :guilabel:`Width` options (for point or line layers
-respectively) provides tool to create proportional symbology for the layer.
+Proportional rendering is done by first applying to the layer the :ref:`single
+symbol renderer <single_symbol_renderer>`. Then set the symbol to use for the
+features, select the item at the upper level of the symbol tree, and use the
+|dataDefined| :guilabel:`Data-defined override` button available beside the
+:guilabel:`Size` (for point layer) or :guilabel:`Width` option (for line layer).
+Select a field or enter an expression and for each feature, QGIS will apply the
+output value to the property and proportionally resize the symbol.
+
+You can also use the :guilabel:`Size assistant...` option of the |dataDefined|
+menu to apply some transformation (exponential, flannery...) to the symbol size
+rescaling (see :ref:`data_defined_assistant` for more details).
 
 **Creating multivariate analysis**
 
@@ -460,17 +467,14 @@ A multivariate analysis rendering helps you evaluate the relationship between
 two or more variables e.g., one can be represented by a color ramp while the
 other is represented by a size.
 
-
 The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
 for all the classes. Then, clicking on the symbol **[Change]** button above the
 classification frame, you get the :ref:`symbol-selector` dialog from which,
-as seen above, you can activate and set the :ref:`size assistant <size_assistant>`
-option either on size (for point layer) or width (for line layer).
-
-Like the proportional symbol, the size-related symbol is added to the layer tree,
-at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print layout legend item.
+as seen above, you can activate and set the |dataDefined| :sup:`Data-defined
+override` option either on size (for point layer) or width (for line layer).
+Likewise, you can rely on the data-defined assistant dialog to fine tune the
+symbol resizing.
 
 .. _figure_symbology_multivariate:
 
@@ -739,8 +743,8 @@ Other Settings
 .. index:: Symbols levels
 .. _Symbols_levels:
 
-Symbols levels
-..............
+Symbol levels
+.............
 
 For renderers that allow stacked symbol layers (only heatmap doesn't) there is
 an option to control the rendering order of each symbol's levels.
