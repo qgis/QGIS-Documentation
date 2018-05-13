@@ -1746,6 +1746,43 @@ Parameters that can be used with data-defined tools are:
  You can enable or disable a configured |dataDefined| :sup:`data-defined
  override` button by simply clicking the widget with the mouse right button.
 
+.. _data_defined_assistant:
+
+Using the data-defined assistant interface
+..........................................
+
+An assistant is moreover accessible through the |dataDefined| menu
+to help you define size expression.
+
+.. _figure_symbology_size_assistant:
+
+.. figure:: img/varying_size_assistant.png
+   :align: center
+
+   Varying size assistant
+
+The assistant lets you define:
+
+* The attribute to represent, using the Field listbox or the |expression|
+  :sup:`Set column expression` function (see :ref:`vector_expressions`)
+* the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
+* The minimum and maximum size of the symbol
+* The range of values to represent: The down pointing arrow helps you
+  fill automatically these fields with the minimum (or zero) and maximum values
+  returned by the chosen attribute or the expression applied to your data.
+* An unique size to represent NULL values.
+
+To the right side of the dialog, you can preview the features representation
+within a live-update widget. This representation is added to the layer tree in
+the layer legend and is also used to shape the layer representation in the
+print layout legend item.
+
+The values presented in the varying size assistant above will set the size
+'Data-defined override' with:
+::
+
+ coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
+
 .. note:: When the data-defined override option is setup correctly the
    icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
    the icon is red |dataDefineError| or |dataDefineExpressionError|.
