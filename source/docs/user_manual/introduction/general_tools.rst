@@ -1840,6 +1840,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png

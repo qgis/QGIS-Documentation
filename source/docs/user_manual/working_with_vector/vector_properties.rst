@@ -483,6 +483,16 @@ symbol resizing.
 
    Multivariate example
 
+.. tip:: **Add the size scaled symbols to the print layout legend**
+
+  Other than the layer symbol classes, you can also display the symbol scaled
+  sizes in the :guilabel:`Layers` panel and the :ref:`print layout legend
+  <layout_legend_item>`; unfold the **[Advanced]** drop-down list at the
+  bottom of the symbol selector dialog and select **Data-defined size
+  legend...** to configure the legend items (see :ref:`data_defined_size_legend`
+  for details).
+
+
 .. Index::
    single: Symbology; Rule-based renderer
    single: Rule-based renderer; Create a rule
@@ -783,6 +793,41 @@ higher values are drawn last, on top of the others.
    :align: center
 
    Symbol levels activated (A) and deactivated (B) difference
+
+.. _data_defined_size_legend:
+
+Data-defined size legend
+........................
+
+When a layer is rendered with the :ref:`proportional symbol or the multivariate
+rendering <proportional_symbols>`, you can allow the display of the scaled
+symbols in both the :ref:`Layers panel <label_legend>` and the :ref:`print
+layout legend <layout_legend_item>`. Click on the **[Advanced]** button below
+the saved symbols list and choose :guilabel:`Data-defined size legend...`
+opening a dialog with the following options to:
+
+* select the type of legend: |radioButtonOn| :guilabel:`Legend not enabled`,
+  |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
+  :guilabel:`Collapsed legend`. For the latter option, you can select whether
+  the legend items are aligned at the **Bottom** or at the **Center**;
+* set the :ref:`symbol to use <symbol-selector>` for legend representation;
+* insert the title in the legend;
+* resize the classes to use: by default, QGIS provides you with a legend of
+  five classes (based on natural pretty breaks) but you can apply your own
+  classification using the |checkbox| :guilabel:`Manual size classes` option.
+  Use the |signPlus| and |signMinus| buttons to set your custom classes
+  values and labels.
+
+A preview of the legend is displayed in the right panel of the dialog and
+updated as you set the parameters. For collapsed legend, a leader line from
+the horizontal center of the symbol to the corresponding legend text is drawn.
+
+.. note:: Currently, data-defined size legend for layer symbology can only be
+  applied to point layer using single, categorized or graduated symbology.
+
+.. note:: The data-defined size legend can also be used to render a scaled
+  diagram size in both the :guilabel:`Layers` panel and the print layout legend.
+
 
 .. index:: Paint effects
 .. _draw_effects:
@@ -1766,19 +1811,26 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
 
+.. index:: Size legend, Diagram legend
 .. _diagram_legend:
 
 Legend
 -------
 
 From the :guilabel:`Legend` tab, you can choose to display items of the diagram
-in the :ref:`label_legend`, besides the layer symbology. It can be:
+in the :ref:`label_legend`, and in the :ref:`print layout legend <layout_legend_item>`,
+next to the layer symbology:
 
-* the represented attributes: color and legend text set in :guilabel:`Attributes` tab
-* and if applicable, the diagram size, whose symbol you can customize.
+* check :guilabel:`Show legend entries for diagram attributes` to display in the
+  legends the ``Color`` and ``Legend`` properties, as previously assigned in the
+  :guilabel:`Attributes` tab;
+* and, when a :ref:`scaled size <diagram_size>` is being used for the diagrams,
+  push the **[Legend entries for diagram size...]** button to configure the
+  diagram symbol aspect in the legends. This opens the :guilabel:`Data-defined
+  Size Legend` dialog whose options are described in :ref:`data_defined_size_legend`.
 
-When set, the diagram legend items are also available in the print layout legend,
-besides the layer symbology.
+When set, the diagram legend items (attributes with color and diagram size)
+are also displayed in the print layout legend, next to the layer symbology.
 
 
 Case Study
