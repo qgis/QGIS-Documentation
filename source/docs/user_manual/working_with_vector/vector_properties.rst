@@ -465,7 +465,7 @@ The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
 for all the classes. Then, clicking on the symbol **[Change]** button above the
 classification frame, you get the :ref:`symbol-selector` dialog from which,
-as seen above, you can activate and set the :ref:`size assistant <size_assistant>`
+as seen above, you can activate and set the :ref:`size assistant <data_defined_assistant>`
 option either on size (for point layer) or width (for line layer).
 
 Like the proportional symbol, the size-related symbol is added to the layer tree,
