@@ -159,6 +159,14 @@ For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
 See section :ref:`grass_digitizing` for information on editing GRASS vector
 layers.
 
+.. tip:: **More information using indicator icons in the Layers Panel**
+
+  Depending on settings, eg :ref:`a filter <vector_query_builder>` applied to
+  the layer, an icon is displayed on the right of the layer name in the
+  :guilabel:`Layers` panel. Hover over the icon to get more details and
+  double-click to update the setting.
+
+
 .. index:: Group, Layer
 .. _group_layers_interact:
 
