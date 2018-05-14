@@ -218,6 +218,8 @@ by this algorithm.
 The subset is defined randomly, based on feature IDs, using a percentage or count
 value to define the total number of features in the subset.
 
+``Default menu``: :menuselection:`Vector --> Research Tools`
+
 Parameters
 ..........
 
@@ -255,6 +257,8 @@ Categories are defined according to a given attribute, which is also specified a
 an input parameter for the algorithm.
 
 No new outputs are created.
+
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -358,6 +362,8 @@ features is based on the spatial relationship between each feature and
 the features in an additional layer.
 
 No new outputs are created.
+
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........

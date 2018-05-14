@@ -26,6 +26,8 @@ The output layer contains a single bounding box for the whole input layer.
 
    In red the bounding box of the source layer
 
+``Default menu``: :menuselection:`Vector --> Research Tools`
+
 Parameters
 ..........
 

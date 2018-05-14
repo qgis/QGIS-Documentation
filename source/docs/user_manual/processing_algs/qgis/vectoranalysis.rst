@@ -25,6 +25,8 @@ The statistics returned will depend on the field type.
 Statistics are generated as an HTML file and are available in the
 :menuselection:`Processing --> Results viewer`
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 
@@ -59,6 +61,8 @@ each polygon.
 An optional weight field can be used to assign weights to each point. Alternatively,
 a unique class field can be specified. If both options are used, the weight field
 will take precedence and the unique class field will be ignored.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -101,6 +105,8 @@ Distance matrix
 ---------------
 Creates a table containing a distance matrix, with distances between all the points
 in a points layer.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -285,6 +291,8 @@ List unique values
 ------------------
 Lists unique values of an attribute table field and counts their number.
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 
@@ -317,6 +325,8 @@ If an attribute is selected in the parameter, features will be grouped according
 to values in this field. Instead of a single point with the center of mass of the
 whole layer, the output layer will contain a center of mass for the features in
 each category.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -353,6 +363,8 @@ Output is generated as an HTML file with the computed statistical values:
 * Nearest neighbour index
 * Number of points
 * Z-Score
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -421,6 +433,8 @@ additional attributes containing the length and count of the lines across each
 polygon.
 
 The names of these two fields can be configured in the algorithm parameters.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........

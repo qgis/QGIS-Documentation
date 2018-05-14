@@ -32,6 +32,8 @@ The CRS of the output layer must be defined.
 The grid extent and the spacing values must be expressed in the coordinates and
 units of this CRS.
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 
@@ -264,6 +266,8 @@ a given extent.
 
 A distance factor can be specified, to avoid points being too close to each other.
 
+``Default menu``: :menuselection:`Vector --> Research Tools`
+
 Parameters
 ..........
 
@@ -299,6 +303,7 @@ the extent of a given layer.
 
 A distance factor can be specified, to avoid points being too close to each other.
 
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -334,6 +339,8 @@ a given layer.
 Together with the point number. two different sampling strategies can be chosen.
 
 A distance factor can be specified, to avoid points being too close to each other.
+
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -382,6 +389,8 @@ a given extent.
 Together with the point number. two different sampling strategies can be chosen.
 
 A distance factor can be specified, to avoid points being too close to each other.
+
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
