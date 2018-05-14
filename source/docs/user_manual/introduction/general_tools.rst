@@ -36,7 +36,8 @@ Panels
 QGIS provides by default many panels to work with.
 Some of these panels are described below while others may be found in different
 parts of the document. A complete list of default panels provided by QGIS is
-available at :ref:`panels_tools`.
+available through :menuselection:`View --> Panels -->` menu and mentioned at
+:ref:`panels_tools`.
 
 .. index:: Panels; Layers
 .. _`label_legend`:
@@ -47,7 +48,8 @@ Layers Panel
 .. index::
    single: Legend
 
-The :guilabel:`layers Panel` lists all the layers in the project and helps you
+The :guilabel:`Layers` panel (also enabled pressing :kbd:`Ctrl+1`) lists all
+the layers in the project and helps you
 manage their visibility. A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
 top of the legend are drawn over layers listed lower down in the legend.
@@ -263,7 +265,8 @@ as sub-item), the following options are available at layer level or class level:
 Layer Styling Panel
 --------------------
 
-This panel is somehow a shortcut to some of the features of the layer properties
+The :guilabel:`Layer Styling` panel (also enabled with :kbd:`Ctrl+3`) is somehow
+a shortcut to some of the functionalities of the :guilabel:`Layer Properties`
 dialog. It indeed offers you a quick and handy way to define the rendering and the
 behavior of a layer, and to visualize its effects without opening the layer
 properties dialog.
@@ -312,15 +315,22 @@ You no longer need to hit the **[Apply]** button.
 Layer Order Panel
 -----------------
 
-There is a panel that allows you to define an independent drawing order for
-the layers panel. You can activate it in the menu :menuselection:`Settings
---> Panels --> Layer Order Panel`. This feature allows you to, for instance,
-order your layers in order of importance, but still display them in the
-correct order (see figure_layer_order_; you can notice that the ``airports``
+By default, layers shown in QGIS map canvas are drawn following their order
+in the :guilabel:`Layers` panel i.e., the higher a layer is in the panel, the
+upper (hence, more visible) it'll be in the map view.
+
+You can however choose another visibility logic and define an independent
+drawing order for the layers with the :guilabel:`Layer Order` panel enabled
+in :menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9` command.
+Check the |checkbox| :guilabel:`Control rendering order` box underneath
+the list of layers and reorganize the layers in the panel as you want. This
+order becomes the one applied to the map canvas.
+For example, in figure_layer_order_, you can notice that the ``airports``
 features are displayed over the ``alaska`` polygon despite their layers
-placement in the Layers panel).
-Unchecking the |checkbox| :guilabel:`Control rendering order` box underneath
-the list of layers will cause a revert to default behavior.
+placement in the Layers panel.
+
+Unchecking the |checkbox| :guilabel:`Control rendering order` box will cause
+a revert to default behavior.
 
 .. _figure_layer_order:
 
@@ -337,14 +347,17 @@ the list of layers will cause a revert to default behavior.
 Overview Panel
 --------------
 
-In QGIS, you can use an overview panel that provides a full extent view of
-layers added to it. Within the view is a rectangle showing the current map
-extent. This allows you to quickly determine which area of the map you are
-currently viewing. Note that labels are not rendered to the map overview even
-if the layers in the map overview have been set up for labelling. If you click
-and drag the red rectangle in the overview that shows your current extent, the
-main map view will update accordingly.
+The :guilabel:`Overview` panel (:kbd:`Ctrl+8`) can constantly display a map with
+full extent view of some of the layers. The Overview map is filled with layers
+using the :guilabel:`Show in Overview` option from the :menuselection:`Layer`
+menu or in the layer contextual menu. Within the view,
+a red rectangle shows the current map canvas extent, helping you to quickly
+determine which area of the whole map you are currently viewing. If you
+click-and-drag the red rectangle in the overview frame, the main map view
+extent will update accordingly.
 
+Note that labels are not rendered to the map overview even
+if the layers used in the map overview have been set up for labeling.
 
 .. index::
    single: Log messages
@@ -369,7 +382,8 @@ It can be activated using the most right icon in the bottom status bar.
 Undo/Redo Panel
 ---------------
 
-For each layer being edited, this panel shows the list of actions done, allowing
+For each layer being edited, the :guilabel:`Undo/Redo` (:kbd:`Ctrl+5`) panel
+shows the list of actions done, allowing
 to quickly undo a set of actions by simply selecting the action listed above.
 More details at :ref:`Undo and Redo edits <undoredo_edits>`.
 
@@ -696,8 +710,8 @@ Note that you can have multiple bookmarks with the same name.
 Working with Bookmarks
 ......................
 
-To use or manage bookmarks, select the menu option
-:menuselection:`View --> Show Bookmarks`. The :guilabel:`Spatial Bookmarks`
+To use or manage bookmarks, select the menu option :menuselection:`View --> Show
+Bookmarks` or press :kbd:`Ctrl+7`. The :guilabel:`Spatial Bookmarks`
 panel allows you to:
 
 * Zoom to a Bookmark: select the desired bookmark and then click

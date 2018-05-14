@@ -13,9 +13,9 @@ Live GPS tracking
    .. contents::
       :local:
 
-To activate live GPS tracking in QGIS, you need to select :menuselection:`Settings --> Panels`
-|checkbox| :guilabel:`GPS information`. You will get a new docked window on the
-left side of the canvas.
+To activate live GPS tracking in QGIS, you need to select :menuselection:`Settings
+--> Panels` |checkbox| :guilabel:`GPS Information Panel` or press :kbd:`Ctrl+0`.
+You will get a new docked window on the left side of the canvas.
 
 There are four possible screens in this GPS tracking window:
 
