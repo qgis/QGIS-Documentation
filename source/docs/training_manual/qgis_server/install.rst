@@ -264,9 +264,9 @@ should output:
 
 Apache is now configured.
 
-Also, from yur client, you can check the capabilities of the server:
+Also, from your web browser you can check the capabilities of the server:
 
-http://qgis.dem/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 |moderate| |FA| Create another virtual host
 -------------------------------------------------------------------------------
