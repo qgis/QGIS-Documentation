@@ -583,8 +583,32 @@ Point displacement
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer works to
 visualize all features of a point layer, even if they have the same location.
-To do this, the symbols of the points are placed on a displacement circle
-around one center symbol or on several concentric circles.
+To do this, the renderer takes the points falling in a given :guilabel:`Distance`
+tolerance from each other and places them around their barycenter following
+different :guilabel:`Placement methods`:
+
+* **Ring**: places all the features on a circle whose radius depends on the
+  number of features to display;
+* **Concentric rings**: uses a set of concentric circles to show the features;
+* **Grid**: generates a regular grid with a point symbol at each intersection.
+
+The :guilabel:`Center symbol` widget helps you customize the symbol and color
+of the middle point.
+For the distributed points symbols, you can apply any of the *No symbols*,
+*Single symbol*, *Categorized*, *Graduated* or *Rule-based* renderer using the
+:guilabel:`Renderer` drop-down list and customize them using the
+:guilabel:`Renderer Settings...` button.
+
+While the minimal spacing of the :guilabel:`Displacement lines` depends on the
+point symbol renderer's, you can still customize some of its settings such as
+the :guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size
+adjustment` (eg, to add more spacing between the rendered points).
+
+Use the :guilabel:`Labels` group options to perform points labeling: the labels
+are placed near the displaced position of the symbol, and not at the feature
+real position. Other than the :guilabel:`Label attribute`, :guilabel:`Label
+font` and :guilabel:`Label color`, you can set the :guilabel:`Minimum map
+scale` to display the labels.
 
 .. _figure_displacement_symbology:
 
@@ -593,9 +617,12 @@ around one center symbol or on several concentric circles.
 
    Point displacement dialog
 
-.. note:: You can still render features with other renderer like Single symbol,
-   Graduated, Categorized or Rule-Based renderer using the :guilabel:`Renderer`
-   drop-down list then the :guilabel:`Renderer Settings...` button.
+.. note::
+
+ Point Displacement renderer does not alter feature geometry,
+ meaning that points are not moved from their position. They are still located
+ at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index:: Cluster
    single: Symbology; Point cluster renderer
@@ -605,7 +632,7 @@ Point Cluster
 ..............
 
 Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
-which blows up overlaid point features placement, the |pointClusterSymbol|
+which blows up nearest or overlaid point features placement, the |pointClusterSymbol|
 :guilabel:`Point Cluster` renderer groups nearby points into a single
 rendered marker symbol. Based on a specified :guilabel:`Distance`, points
 that fall within from each others are merged into a single symbol.
@@ -634,9 +661,10 @@ From the main dialog, you can:
 
 .. note::
 
- Point displacement and cluster renderers do not alter feature geometry,
+ Point Cluster renderer does not alter feature geometry,
  meaning that points are not moved from their position. They are still located
  at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index::
    single: Symbology; Inverted polygon renderer
