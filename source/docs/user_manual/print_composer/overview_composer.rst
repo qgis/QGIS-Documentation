@@ -621,16 +621,22 @@ Or you can add many types of items on each page.
 
 Futhermore, a layout can be made using different size and/or orientation of pages.
 To add a page, select the |newPage| :guilabel:`Add Pages...` tool from the
-:menuselection:`Layout` menu or :guilabel `Layout Toolbar`. The :guilabel:`Insert
+:menuselection:`Layout` menu or :guilabel:`Layout Toolbar`. The :guilabel:`Insert
 Pages` dialog opens and you are asked to fill:
 
 * the number of pages to insert;
 * the position of the page(s): before or after a given page or at the end of the
   print layout;
-* The :guilabel:`Page size`: it could be of a preset format page, with
-  associated :guilabel:`Orientation` or of a custom format. In the latter case,
-  you'd need to enter page's :guilabel:`Width` and :guilabel:`Height` (with
-  locked size ratio if needed). Page size can also be set in different units.
+* The :guilabel:`Page size`: it could be of a preset format page (``A4``, ``B0``,
+  ``Legal``, ``Letter``, ``ANSI A``, ``Arch A`` and their derivatives as well as
+  a resolution type, such as ``1920x1080`` or ``1024x768``) with
+  associated :guilabel:`Orientation` (Portrait or Landscape).
+  
+  The page size can also be of a ``custom`` format; In that case, you'd need to
+  enter its :guilabel:`Width` and :guilabel:`Height` (with locked size ratio if
+  needed) and select the unit to use among ``mm``, ``cm``, ``px``, ``pt``, ``in``,
+  ``ft``... Conversion of entered values is automatically applied when switching
+  from one unit to another.
 
 .. Todo: Add New page dialog screenshot
 
