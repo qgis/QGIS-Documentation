@@ -118,40 +118,51 @@ frame listing vector or raster layers added to the project and, those layers
 can be organized in groups. Depending on the item selected in the panel, a
 right-click shows a dedicated set of options presented below.
 
-======================================================================  ==================  =================  =============
-Option                                                                  Vector Layer        Raster Layer       Group
-======================================================================  ==================  =================  =============
-|zoomToLayer| :menuselection:`Zoom to Layer/Group`                      |checkbox|          |checkbox|         |checkbox|
-|unchecked| :menuselection:`Show in Overview`                           |checkbox|          |checkbox|         \
-|zoomActual| :menuselection:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
-:menuselection:`Stretch Using Current Extent`                           \                   |checkbox|         \
-|removeLayer| :menuselection:`Remove`                                   |checkbox|          |checkbox|         |checkbox|
-|duplicateLayer| :menuselection:`Duplicate`                             |checkbox|          |checkbox|         \
-:menuselection:`Set Layer Scale Visibility`                             |checkbox|          |checkbox|         \
-:menuselection:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
-:menuselection:`Set Layer/Group CRS`                                    |checkbox|          |checkbox|         |checkbox|
-:menuselection:`Set Project CRS from Layer`                             |checkbox|          |checkbox|         \
-:menuselection:`Styles -->`                                             |checkbox|          |checkbox|         \
-:menuselection:`Copy Style`                                             |checkbox|          |checkbox|         \
-:menuselection:`Paste Style`                                            |checkbox|          |checkbox|         |checkbox|
-|openTable| :menuselection:`Open Attribute Table`                       |checkbox|          \                  \
-|toggleEditing| :menuselection:`Toggle Editing`                         |checkbox|          \                  \
-|allEdits| :menuselection:`Current Edits -->`                           |checkbox|          \                  \
-                                                                        (in Edit mode)
-:menuselection:`Save As...`                                             |checkbox|          |checkbox|         \
-:menuselection:`Save As Layer Definition File...`                       |checkbox|          |checkbox|         |checkbox|
-:menuselection:`Filter...`                                              |checkbox|          \                  \
-|unchecked| :menuselection:`Show Feature Count`                         |checkbox|          \                  \
-|dbManager| :menuselection:`Update SQL Layer...`                        |checkbox|          \                  \
-:menuselection:`Properties`                                             |checkbox|          |checkbox|         \
-:menuselection:`Move to Top-level`                                      |checkbox|          |checkbox|         \
-:menuselection:`Rename`                                                 |checkbox|          |checkbox|         |checkbox|
-:menuselection:`Group Selected`                                         |checkbox|          |checkbox|         \
-:menuselection:`Set Group WMS Data`                                     \                   \                  |checkbox|
-|unchecked| :menuselection:`Mutually Exclusive Group`                   \                   \                  |checkbox|
-|unchecked| :menuselection:`Uncheck and all its children (Ctrl+click)`  \                   \                  |checkbox|
-|addGroup| :menuselection:`Add Group`                                   \                   \                  |checkbox|
-======================================================================  ==================  =================  =============
+=================================================================  ==================  =================  =============
+Option                                                             Vector Layer        Raster Layer       Group
+=================================================================  ==================  =================  =============
+|zoomToLayer| :guilabel:`Zoom to Layer/Group`                      |checkbox|          |checkbox|         |checkbox|
+|zoomToLayer| :guilabel:`Zoom to Selection`                        |checkbox|          \                  \
+|inOverview| :guilabel:`Show in Overview`                          |checkbox|          |checkbox|         \
+:guilabel:`Show Feature Count`                                     |checkbox|          \                  \
+:guilabel:`Copy Layer/Group`                                       |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Rename Layer/Group`                                     |checkbox|          |checkbox|         |checkbox|
+|zoomActual| :guilabel:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
+:guilabel:`Stretch Using Current Extent`                           \                   |checkbox|         \
+|dbManager| :guilabel:`Update SQL Layer...`                        |checkbox|          \                  \
+|addGroup| :guilabel:`Add Group`                                   \                   \                  |checkbox|
+|duplicateLayer| :guilabel:`Duplicate Layer`                       |checkbox|          |checkbox|         \
+|removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Move to Top-level`                                      |checkbox|          |checkbox|         \
+:guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
+:guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
+|openTable| :guilabel:`Open Attribute Table`                       |checkbox|          \                  \
+|toggleEditing| :guilabel:`Toggle Editing`                         |checkbox|          \                  \
+|allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
+:guilabel:`Filter...`                                              |checkbox|          \                  \
+:guilabel:`Set Layer Scale Visibility...`                          |checkbox|          |checkbox|         \
+:guilabel:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
+:menuselection:`Set CRS -->`                                       |checkbox|          |checkbox|         \
+* :guilabel:`Set Layer/Group CRS...`                               |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Set Project CRS from Layer`                           |checkbox|          |checkbox|         \
+:guilabel:`Set Group WMS Data...`                                  \                   \                  |checkbox|
+|unchecked| :guilabel:`Mutually Exclusive Group`                   \                   \                  |checkbox|
+:guilabel:`Check and all its children (Ctrl-click)`                \                   \                  |checkbox|
+:guilabel:`Uncheck and all its children (Ctrl-click)`              \                   \                  |checkbox|
+:menuselection:`Export -->`                                        |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Save As...`                                           \                   |checkbox|         \
+* :guilabel:`Save Features As...`                                  |checkbox|          \                  \
+* :guilabel:`Save Selected Features As...`                         |checkbox|          \                  \
+* :guilabel:`Save As Layer Definition File...`                     |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Save As QGIS Layer Style File...`                     |checkbox|          |checkbox|         \
+:menuselection:`Styles -->`                                        |checkbox|          |checkbox|         \
+* :guilabel:`Copy Style`                                           |checkbox|          |checkbox|         \
+* :guilabel:`Paste Style`                                          |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Add...`                                               |checkbox|          |checkbox|         \
+* :guilabel:`Rename Current...`                                    |checkbox|          |checkbox|         \
+:guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
+=================================================================  ==================  =================  =============
 
 Table: Context menu from Layers Panel items
 
@@ -1828,6 +1839,8 @@ Parameters that can be used with data-defined tools are:
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
