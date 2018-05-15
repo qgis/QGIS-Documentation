@@ -12,6 +12,7 @@ QGIS processing framework
     :maxdepth: 2
 
     intro
+    configuration
     toolbox
     history
     modeler
