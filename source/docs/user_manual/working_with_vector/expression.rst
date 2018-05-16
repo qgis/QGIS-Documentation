@@ -1061,11 +1061,6 @@ This group contains functions that operate on record identifiers.
                       This can be used with the 'attribute' function
                       to evaluate attribute values from the current feature.
  $id                  Returns the feature id of the current row
- $map                 Returns the id of the current map item if the map
-                      is being drawn in a composition, or "canvas" if
-                      the map is being drawn within the main QGIS window
- $rownum              Returns the number of the current row
- $scale               Returns the current scale of the map canvas
  attribute            Returns the value of a specified attribute from a
                       feature
  get_feature          Returns the first feature of a layer matching a
