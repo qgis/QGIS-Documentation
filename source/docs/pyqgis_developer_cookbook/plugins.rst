@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: Plugins; Developing, Python; Developing plugins
 
 .. _developing_plugins:
@@ -562,3 +566,12 @@ You should see your plugin in the correct language.
    If you change something in your plugin (new UIs, new menu, etc..) you have to
    **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
    again the command of above.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
