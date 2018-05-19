@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Network Analysis
 ===============================================================================
 
@@ -216,3 +220,4 @@ Next you'll see how to run spatial statistics algorithms on vector datasets.
 .. |moderate| image:: /static/global/moderate.png
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

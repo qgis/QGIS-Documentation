@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Preparing Exercise Data
 =======================
 
@@ -225,5 +229,6 @@ The tokens you need to replace are as follows:
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em

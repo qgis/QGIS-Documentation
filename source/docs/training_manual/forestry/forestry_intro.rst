@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Forestry Module Presentation
 ===============================================================================
 
@@ -32,3 +36,4 @@ The general sample data (aerial images, LiDAR data, basic maps) has been obtaine
    source folder.
 
 .. |LS| replace:: Lesson:
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

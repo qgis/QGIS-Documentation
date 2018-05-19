@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Map Presentation
 ===============================================================================
 
@@ -88,3 +92,4 @@ Through this module you have seen how a basic forest inventory can be planned an
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |basic| image:: /static/global/basic.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

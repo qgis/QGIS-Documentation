@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 The processing log
 ====================
 
@@ -34,3 +38,4 @@ You can also modify the algorithm. Just copy it, open the :menuselection:`Plugin
    source folder.
 
 .. |hard| image:: /static/global/hard.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

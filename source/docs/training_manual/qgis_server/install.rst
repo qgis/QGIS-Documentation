@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: QGIS Server; WMS Server; WFS Server; WCS Server
 
 .. _`label_qgisserver_tutorial`:
@@ -341,3 +345,4 @@ The topic of the next lesson is to learn how to access QGIS Server WMS services.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

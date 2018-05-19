@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Working with Vector Data
 ===============================================================================
 
@@ -169,3 +173,4 @@ lesson.
 .. |basic| image:: /static/global/basic.png
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

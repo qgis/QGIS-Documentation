@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Spatial Statistics
 ===============================================================================
 
@@ -488,3 +492,4 @@ rasters? That's what we'll do in the next module!
 .. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
 .. |moderate| image:: /static/global/moderate.png
 .. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

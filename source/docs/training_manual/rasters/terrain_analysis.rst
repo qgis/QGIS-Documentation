@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Terrain Analysis
 ===============================================================================
 
@@ -318,3 +322,4 @@ problem? That's the topic for the next lesson, starting in the next module.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

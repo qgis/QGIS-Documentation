@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Changing Raster Symbology
 ===============================================================================
 
@@ -170,3 +174,4 @@ analyze it further.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

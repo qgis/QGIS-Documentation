@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Answer Sheet
 ===============================================================================
 
@@ -1132,3 +1136,4 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

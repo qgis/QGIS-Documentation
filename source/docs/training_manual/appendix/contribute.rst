@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 Appendix: Contributing To This Manual
 *******************************************************************************
@@ -382,3 +386,4 @@ more accessible to users and adding value to the QGIS project as a whole.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

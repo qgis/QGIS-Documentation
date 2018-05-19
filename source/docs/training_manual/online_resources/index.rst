@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 |MOD| Online Resources
 *******************************************************************************
@@ -23,3 +27,4 @@ Services (WMS) and Web Feature Services (WFS).
    source folder.
 
 .. |MOD| replace:: Module:
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

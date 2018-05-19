@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Assignment 1
 ===============================================================================
 
@@ -42,3 +46,4 @@ start to finish, using both raster and vector data sources.
 .. |IC| replace:: In Conclusion
 .. |basic| image:: /static/global/basic.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

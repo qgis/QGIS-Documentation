@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Interpolation
 ============================================================
 
@@ -54,3 +58,12 @@ And for a smoother result (less accurate but better for rendering in the backgro
 With the above parameters you will get the following result
 
 .. image:: img/interpolation/filtered_raster.png
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

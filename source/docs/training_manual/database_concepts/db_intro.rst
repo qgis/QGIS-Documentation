@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Introduction to Databases
 ===============================================================================
 
@@ -390,3 +394,4 @@ database to implement the theory we've covered.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

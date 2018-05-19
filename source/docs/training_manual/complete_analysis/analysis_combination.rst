@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Combining the Analyses
 ===============================================================================
 
@@ -95,3 +99,4 @@ Next you will present these results as part of your second assignment.
 .. |WN| replace:: What's Next?
 .. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

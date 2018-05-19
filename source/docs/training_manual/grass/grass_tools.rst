@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| GRASS Tools
 ===============================================================================
 
@@ -138,3 +142,4 @@ organizes tools by type.
 .. |grassRegionEdit| image:: /static/common/grass_region_edit.png
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

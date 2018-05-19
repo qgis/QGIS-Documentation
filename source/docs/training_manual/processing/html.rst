@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 HTML outputs
 ============================================================
 
@@ -23,5 +27,10 @@ This is the *Results viewer*. It keeps all the HTML result generated during the 
 Some algorithms generate text that cannot be divided into other more detailed outputs. That is the case if, for instance, the algorithm captures the text output from an external process. In other cases, the output is presented as text, but internally is divided into several smaller outputs, usually in the form of numeric values. The algorithm that we have just executed is one of them. Each one of those values is handled as a single output, and stored in a variable. This has no importance at all now, but once we move to the graphical modeler, you will see that it will allow us to use those values as numeric inputs for other algorithms. 
 
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
