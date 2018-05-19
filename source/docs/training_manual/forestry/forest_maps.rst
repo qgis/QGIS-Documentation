@@ -401,4 +401,4 @@ then use it to your enhance your data and maps visibility.
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

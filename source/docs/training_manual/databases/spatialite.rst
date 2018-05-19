@@ -70,6 +70,7 @@ and you can use this same technique to import data into your new spatialite DB.
 You have seen how to create spatialite databases and add tables to them and to
 use these tables as layers in QGIS. 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -82,4 +83,4 @@ use these tables as layers in QGIS.
 .. |basic| image:: /static/global/basic.png
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

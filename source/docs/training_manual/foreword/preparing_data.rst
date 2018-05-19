@@ -219,6 +219,7 @@ The tokens you need to replace are as follows:
 * :kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should replace
   this with the correct CRS for your region.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -229,6 +230,6 @@ The tokens you need to replace are as follows:
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em

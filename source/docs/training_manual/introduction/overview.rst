@@ -131,6 +131,7 @@ Try to find each of these tools on your screen. What is their purpose?
 Now you've seen how the QGIS interface works, you can use the tools available
 to you and start improving on your map! This is the topic of the next lesson.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -145,7 +146,7 @@ to you and start improving on your map! This is the topic of the next lesson.
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |whatsThis| image:: /static/common/whats_this.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png

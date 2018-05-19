@@ -761,6 +761,7 @@ appealing raster of your choice (such as the :guilabel:`DEM` or the
 solution area(s), as well as your house. Follow all the best practices for
 cartography in creating your output map.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -768,4 +769,4 @@ cartography in creating your output map.
    source folder.
 
 .. |LS| replace:: Lesson:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

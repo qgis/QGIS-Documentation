@@ -68,6 +68,7 @@ button, but what about all the others? How does this interface work? Before we
 go on with the more involved stuff, let's first take a good look at the general
 layout of the QGIS interface. This is the topic of the next lesson.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -83,4 +84,4 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |basic| image:: /static/global/basic.png
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
