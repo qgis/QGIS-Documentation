@@ -40,7 +40,7 @@ Toolbar
 
 The toolbar proposes the following tools:
 
-* |iconClearConsole| :sup:`Clear Cnsole` to wipe the output area;
+* |iconClearConsole| :sup:`Clear Console` to wipe the output area;
 * |iconRunConsole| :sup:`Run Command` available in the input area: same as
   pressing :kbd:`Enter`;
 * |iconeShowEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor`
