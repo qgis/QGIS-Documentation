@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Feature Topology
 ===============================================================================
 
@@ -277,6 +281,7 @@ Now you know how to digitize the shape of the objects easily, but adding in the
 attributes is still a bit of a headache! Next we'll show you how to use forms
 so that attribute editing is simpler and more effective.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -311,3 +316,4 @@ so that attribute editing is simpler and more effective.
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

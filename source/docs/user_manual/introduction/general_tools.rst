@@ -1921,7 +1921,7 @@ Parameters that can be used with data-defined tools are:
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
