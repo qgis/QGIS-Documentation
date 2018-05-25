@@ -33,7 +33,7 @@ If no replacement exists:
   .. |splitLayer| image:: /static/common/split_layer.png
      :width: 1.5em
 
-* run the :file:`scripts\find_set_subst.py` script to update the substitution
+* run the :file:`scripts/find_set_subst.py` script to update the substitution
   definitions in the rst files and include the new substitution(s).
 * (optional) add the reference to the icon and its substitution to the list below.
 
