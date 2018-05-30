@@ -76,8 +76,10 @@ The console main features are:
   accessed from context menu of input area;
 * Save and clear the command history. The history will be saved into the file
   :file:`~/.qgis2/console_history.txt`;
-* Open `QGIS API <http://qgis.org/api>`_ documentation by typing ``_api``;
-* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_pyqgis``.
+* Open `QGIS C++ API <https://qgis.org/api>`_ documentation by typing ``_api``;
+* Open `QGIS Python API <https://qgis.org/pyqgis>`_ documentation by typing ``_pyqgis``.
+* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_cookbook``.
+
 
 .. tip:: **Reuse executed commands from the output panel**
 
