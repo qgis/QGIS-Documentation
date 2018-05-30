@@ -455,50 +455,24 @@ Proportional Symbol and Multivariate Analysis
 
 Proportional Symbol and Multivariate Analysis are not
 rendering types available from the Style rendering drop-down list.
-However with the **Size Assistant** options applied over any of the previous
+However with the :ref:`data-defined override <data_defined>` options applied
+over any of the previous
 rendering options, QGIS allows you to display your point and line data with
 such representation.
 
-.. _size_assistant:
-
 **Creating proportional symbol**
 
-Proportional rendering is done by first applying to the layer the :ref:`single_symbol_renderer`.
-Once you set the symbol, at the upper level of the symbol tree, the
-|dataDefined| :guilabel:`Data-defined override` button available beside
-:guilabel:`Size` or :guilabel:`Width` options (for point or line layers
-respectively) provides tool to create proportional symbology for the layer.
-An assistant is moreover accessible through the |dataDefined| menu
-to help you define size expression.
+Proportional rendering is done by first applying to the layer the :ref:`single
+symbol renderer <single_symbol_renderer>`. Then set the symbol to use for the
+features, select the item at the upper level of the symbol tree, and use the
+|dataDefined| :guilabel:`Data-defined override` button available beside the
+:guilabel:`Size` (for point layer) or :guilabel:`Width` option (for line layer).
+Select a field or enter an expression and for each feature, QGIS will apply the
+output value to the property and proportionally resize the symbol.
 
-.. _figure_symbology_size_assistant:
-
-.. figure:: img/varying_size_assistant.png
-   :align: center
-
-   Varying size assistant
-
-The assistant lets you define:
-
-* The attribute to represent, using the Field listbox or the |expression|
-  :sup:`Set column expression` function (see :ref:`vector_expressions`)
-* the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
-* The minimum and maximum size of the symbol
-* The range of values to represent: The down pointing arrow helps you
-  fill automatically these fields with the minimum (or zero) and maximum values
-  returned by the chosen attribute or the expression applied to your data.
-* An unique size to represent NULL values.
-
-To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in
-the layer legend and is also used to shape the layer representation in the
-print layout legend item.
-
-The values presented in the varying size assistant above will set the size
-'Data-defined override' with:
-::
-
- coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
+You can also use the :guilabel:`Size assistant...` option of the |dataDefined|
+menu to apply some transformation (exponential, flannery...) to the symbol size
+rescaling (see :ref:`data_defined_assistant` for more details).
 
 **Creating multivariate analysis**
 
@@ -506,17 +480,14 @@ A multivariate analysis rendering helps you evaluate the relationship between
 two or more variables e.g., one can be represented by a color ramp while the
 other is represented by a size.
 
-
 The simplest way to create multivariate analysis in QGIS is to first apply
 a categorized or graduated rendering on a layer, using the same type of symbol
 for all the classes. Then, clicking on the symbol **[Change]** button above the
 classification frame, you get the :ref:`symbol-selector` dialog from which,
-as seen above, you can activate and set the :ref:`size assistant <size_assistant>`
-option either on size (for point layer) or width (for line layer).
-
-Like the proportional symbol, the size-related symbol is added to the layer tree,
-at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print layout legend item.
+as seen above, you can activate and set the |dataDefined| :sup:`Data-defined
+override` option either on size (for point layer) or width (for line layer).
+Likewise, you can rely on the data-defined assistant dialog to fine tune the
+symbol resizing.
 
 .. _figure_symbology_multivariate:
 
@@ -524,6 +495,16 @@ are also available in the print layout legend item.
    :align: center
 
    Multivariate example
+
+.. tip:: **Add the size scaled symbols to the print layout legend**
+
+  Other than the layer symbol classes, you can also display the symbol scaled
+  sizes in the :guilabel:`Layers` panel and the :ref:`print layout legend
+  <layout_legend_item>`; unfold the **[Advanced]** drop-down list at the
+  bottom of the symbol selector dialog and select **Data-defined size
+  legend...** to configure the legend items (see :ref:`data_defined_size_legend`
+  for details).
+
 
 .. Index::
    single: Symbology; Rule-based renderer
@@ -824,8 +805,8 @@ Other Settings
 .. index:: Symbols levels
 .. _Symbols_levels:
 
-Symbols levels
-..............
+Symbol levels
+.............
 
 For renderers that allow stacked symbol layers (only heatmap doesn't) there is
 an option to control the rendering order of each symbol's levels.
@@ -864,6 +845,41 @@ higher values are drawn last, on top of the others.
    :align: center
 
    Symbol levels activated (A) and deactivated (B) difference
+
+.. _data_defined_size_legend:
+
+Data-defined size legend
+........................
+
+When a layer is rendered with the :ref:`proportional symbol or the multivariate
+rendering <proportional_symbols>`, you can allow the display of the scaled
+symbols in both the :ref:`Layers panel <label_legend>` and the :ref:`print
+layout legend <layout_legend_item>`. Click on the **[Advanced]** button below
+the saved symbols list and choose :guilabel:`Data-defined size legend...`
+opening a dialog with the following options to:
+
+* select the type of legend: |radioButtonOn| :guilabel:`Legend not enabled`,
+  |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
+  :guilabel:`Collapsed legend`. For the latter option, you can select whether
+  the legend items are aligned at the **Bottom** or at the **Center**;
+* set the :ref:`symbol to use <symbol-selector>` for legend representation;
+* insert the title in the legend;
+* resize the classes to use: by default, QGIS provides you with a legend of
+  five classes (based on natural pretty breaks) but you can apply your own
+  classification using the |checkbox| :guilabel:`Manual size classes` option.
+  Use the |signPlus| and |signMinus| buttons to set your custom classes
+  values and labels.
+
+A preview of the legend is displayed in the right panel of the dialog and
+updated as you set the parameters. For collapsed legend, a leader line from
+the horizontal center of the symbol to the corresponding legend text is drawn.
+
+.. note:: Currently, data-defined size legend for layer symbology can only be
+  applied to point layer using single, categorized or graduated symbology.
+
+.. note:: The data-defined size legend can also be used to render a scaled
+  diagram size in both the :guilabel:`Layers` panel and the print layout legend.
+
 
 .. index:: Paint effects
 .. _draw_effects:
@@ -1847,19 +1863,26 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
 
+.. index:: Size legend, Diagram legend
 .. _diagram_legend:
 
 Legend
 -------
 
 From the :guilabel:`Legend` tab, you can choose to display items of the diagram
-in the :ref:`label_legend`, besides the layer symbology. It can be:
+in the :ref:`label_legend`, and in the :ref:`print layout legend <layout_legend_item>`,
+next to the layer symbology:
 
-* the represented attributes: color and legend text set in :guilabel:`Attributes` tab
-* and if applicable, the diagram size, whose symbol you can customize.
+* check :guilabel:`Show legend entries for diagram attributes` to display in the
+  legends the ``Color`` and ``Legend`` properties, as previously assigned in the
+  :guilabel:`Attributes` tab;
+* and, when a :ref:`scaled size <diagram_size>` is being used for the diagrams,
+  push the **[Legend entries for diagram size...]** button to configure the
+  diagram symbol aspect in the legends. This opens the :guilabel:`Data-defined
+  Size Legend` dialog whose options are described in :ref:`data_defined_size_legend`.
 
-When set, the diagram legend items are also available in the print layout legend,
-besides the layer symbology.
+When set, the diagram legend items (attributes with color and diagram size)
+are also displayed in the print layout legend, next to the layer symbology.
 
 
 Case Study
