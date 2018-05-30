@@ -2960,6 +2960,25 @@ Metadata are currently saved in the project file. It can also be saved as an
 :file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
 database for remote layers (e.g. PostGIS).
 
+.. index:: Dependencies
+.. _vectordependenciesmenu:
+
+Dependencies Properties
+=======================
+
+|dependencies| The :guilabel:`Dependencies` tab allows to declare data
+dependencies between layers. A data dependency occurs when a data modification
+in a layer, not by direct user manipulation, may modify data of other layers.
+This is the case for instance when geometry of a layer is updated by a
+database trigger or custom PyQGIS scripting after modification of another
+layer's geometry.
+
+In the :guilabel:`Dependencies` tab, you can select any layers which may externally
+alter the data in the current layer. Correctly specifying dependent layers
+allows QGIS to invalidate caches for this layer when the dependent layers are
+altered.
+
+
 .. index:: Legend, Embedded widget
 .. _vectorlegendmenu:
 
@@ -3055,6 +3074,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |dependencies| image:: /static/common/dependencies.png
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
