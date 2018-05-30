@@ -101,6 +101,11 @@ map view). While in the **Advanced** layer selection mode, it is possible to use
 a snapping tolerance that refers to ``layer units``, the units of the reprojected
 layer when 'on-the-fly' CRS transformation is on.
 
+By default, only visible features (the features whose style is displayed,
+except for layers where the symbology is "No symbols") can be snapped. 
+You can enable the snapping on invisible features by checking 
+|unchecked| :guilabel:`Enable snapping on invisible features` under 
+:menuselection:`Settings -->` |options| :menuselection:`Options --> Digitizing` tab.
 
 .. index:: Search radius
 
@@ -1057,13 +1062,12 @@ definition of your new geometry.
 
    The Advanced Digitizing panel
 
-.. note:: The tools are not enabled if the map view is in geographic coordinates.
+The :guilabel:`Advanced Digitizing` panel can be open either with a right-click
+on the toolbar, from :menuselection:`View --> Panels -->` menu or pressing
+:kbd:`Ctrl+4`. Once the panel is visible, click the |cad| :sup:`Enable advanced
+digitizing tools` button to activate the set of tools.
 
-The Advanced Digitizing panel can be open either with a right-click on the
-toolbar and choose Advanced Digitizing panel or in :menuselection:`View -->
-Panels --> Advanced Digitizing Panel`. Once the panel is visible, click the
-|cad| :sup:`enable advanced digitizing tool` button to activate the Advanced
-Digitizing tool.
+.. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 Concepts
 --------
@@ -1380,6 +1384,8 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

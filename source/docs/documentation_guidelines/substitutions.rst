@@ -33,7 +33,7 @@ If no replacement exists:
   .. |splitLayer| image:: /static/common/split_layer.png
      :width: 1.5em
 
-* run the :file:`scripts\find_set_subst.py` script to update the substitution
+* run the :file:`scripts/find_set_subst.py` script to update the substitution
   definitions in the rst files and include the new substitution(s).
 * (optional) add the reference to the icon and its substitution to the list below.
 
@@ -334,6 +334,7 @@ Icon                                Substitution                            Icon
 |3d|                                ``|3d|``                                |system|                       ``|system|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
+|search|                            ``|search|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
@@ -961,6 +962,8 @@ Icon                            Substitution                        Icon        
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em

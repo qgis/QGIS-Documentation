@@ -376,21 +376,21 @@ Items menu
 The :menuselection:`Items` helps you configure items' position in the
 layout and the relations between them (see :ref:`interact_layout_item`).
 
-================================================= ========================== ==========================
- Tool                                              Shortcut                   Toolbar
-================================================= ========================== ==========================
- |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`
- |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`
- |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`
- |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`
- |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`
- |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`
- |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`
- |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`
- :menuselection:`Align Items -->`                                             :guilabel:`Actions`
- :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`
- :menuselection:`Resize -->`                                                  :guilabel:`Actions`
-================================================= ========================== ==========================
+================================================= ========================== ========================== ==========================
+ Tool                                              Shortcut                   Toolbar                    Reference
+================================================= ========================== ========================== ==========================
+ |groupItems| :guilabel:`Group`                    :kbd:`Ctrl+G`              :guilabel:`Actions`        :ref:`group_items`
+ |ungroupItems| :guilabel:`Ungroup`                :kbd:`Ctrl+Shift+G`        :guilabel:`Actions`        :ref:`group_items`
+ |raiseItems| :guilabel:`Raise`                    :kbd:`Ctrl+]`              :guilabel:`Actions`        :ref:`align_items`
+ |lowerItems| :guilabel:`Lower`                    :kbd:`Ctrl+[`              :guilabel:`Actions`        :ref:`align_items`
+ |moveItemsToTop| :guilabel:`Bring to Front`       :kbd:`Ctrl+Shift+]`        :guilabel:`Actions`        :ref:`align_items`
+ |moveItemsToBottom| :guilabel:`Send to Back`      :kbd:`Ctrl+Shift+[`        :guilabel:`Actions`        :ref:`align_items`
+ |locked| :guilabel:`Lock Selected Items`          :kbd:`Ctrl+L`              :guilabel:`Actions`        :ref:`lock_items`
+ |unlocked| :guilabel:`Unlock All`                 :kbd:`Ctrl+Shift+L`        :guilabel:`Actions`        :ref:`lock_items`
+ :menuselection:`Align Items -->`                                             :guilabel:`Actions`        :ref:`align_items`
+ :menuselection:`Distribute Items -->`                                        :guilabel:`Actions`        :ref:`move_resize`
+ :menuselection:`Resize -->`                                                  :guilabel:`Actions`        :ref:`move_resize`
+================================================= ========================== ========================== ==========================
 
 Add Item menu
 .............
@@ -448,6 +448,32 @@ layout:
   of the grid (see :ref:`grid_guides` for more details);
 * :guilabel:`Layout Paths`: to manage list of custom paths to search print
   templates.
+
+
+Contextual menus
+................
+
+Depending on where you right-click in the print layout dialog, you open a
+contextual menu with various features:
+
+* Right-click on the menu bar or any toolbar and you get the list of layout
+  panels and toolbars you can enable or disable in one-click;
+* Right-click over a ruler and you can |checkbox| :guilabel:`Show Guides`,
+  |checkbox| :guilabel:`Snap to Guides`, :guilabel:`Manage Guides...` opening
+  the :ref:`Guides panel <layout_guides_panel>` or :guilabel:`Clear Guides`.
+  It's also possible to hide the rulers.
+* Right-click in the print layout canvas and:
+
+  * you'll be able to :guilabel:`Undo` and :guilabel:`Redo` recent changes, or
+    :guilabel:`Paste` any copied item (only available if no item is selected);
+  * if you click over a page, you can additionally access the current :ref:`Page
+    Properties <page_properties>` panel or :guilabel:`Remove Page`;
+  * if you click on a selected item then you can cut or copy it as well as open
+    the :ref:`Item Properties <layout_item_options>` panel.
+  * if more than one item are selected, then you can either group them and/or
+    ungroup if at least one group is already in the selection.
+* Right-click inside a text box or spinbox widget of any layout panel provides
+  edit options to manipulate its content.
 
 
 .. _layout_panel:
@@ -595,16 +621,22 @@ Or you can add many types of items on each page.
 
 Futhermore, a layout can be made using different size and/or orientation of pages.
 To add a page, select the |newPage| :guilabel:`Add Pages...` tool from the
-:menuselection:`Layout` menu or :guilabel `Layout Toolbar`. The :guilabel:`Insert
+:menuselection:`Layout` menu or :guilabel:`Layout Toolbar`. The :guilabel:`Insert
 Pages` dialog opens and you are asked to fill:
 
 * the number of pages to insert;
 * the position of the page(s): before or after a given page or at the end of the
   print layout;
-* The :guilabel:`Page size`: it could be of a preset format page, with
-  associated :guilabel:`Orientation` or of a custom format. In the latter case,
-  you'd need to enter page's :guilabel:`Width` and :guilabel:`Height` (with
-  locked size ratio if needed). Page size can also be set in different units.
+* The :guilabel:`Page size`: it could be of a preset format page (``A4``, ``B0``,
+  ``Legal``, ``Letter``, ``ANSI A``, ``Arch A`` and their derivatives as well as
+  a resolution type, such as ``1920x1080`` or ``1024x768``) with
+  associated :guilabel:`Orientation` (Portrait or Landscape).
+  
+  The page size can also be of a ``custom`` format; In that case, you'd need to
+  enter its :guilabel:`Width` and :guilabel:`Height` (with locked size ratio if
+  needed) and select the unit to use among ``mm``, ``cm``, ``px``, ``pt``, ``in``,
+  ``ft``... Conversion of entered values is automatically applied when switching
+  from one unit to another.
 
 .. Todo: Add New page dialog screenshot
 
@@ -677,7 +709,8 @@ The Items Panel
 
 The :guilabel:`Items` panel offers some options to manage selection and
 visibility of items.
-All the items added to the print layout canvas are shown in a list and
+All the items added to the print layout canvas (including :ref:`items group
+<group_items>`) are shown in a list and
 selecting an item makes the corresponding row selected in the list as well as
 selecting a row does select the corresponding item in the print layout canvas.
 This is thus a handy way to select an item placed behind another one.
@@ -691,7 +724,9 @@ For any selected item, you can :
   click and drag. The upper item in the list will be brought to the foreground
   in the print layout canvas.
   By default, a newly created item is placed in the foreground.
-* change the name by double-clicking the text.
+* change the item ID by double-clicking the text;
+* right-click an item and copy or delete it or open its :ref:`properties panel
+  <layout_item_options>`.
 
 Once you have found the correct position for an item, you can lock it by ticking
 the box in |locked| column. Locked items are **not** selectable on the canvas.
@@ -706,7 +741,9 @@ The Undo History Panel: Revert and Restore actions
 --------------------------------------------------
 
 During the layout process, it is possible to revert and restore changes.
-This can be done with the revert and restore tools:
+This can be done with the revert and restore tools available in the
+:guilabel:`Edit` menu, the :guilabel:`Layout` toolbar or the contextual menu
+any time you right-click in the print layout area:
 
 * |undo| :sup:`Revert last change`
 * |redo| :sup:`Restore last change`
@@ -841,7 +878,7 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |vectorGrid| image:: /static/common/vector_grid.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png

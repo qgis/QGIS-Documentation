@@ -23,6 +23,8 @@ On the northern hemisphere, the north side of slopes is often shaded (small azim
 while the southern side receives more solar radiation (higher azimuth from 180°-270°).
 The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Analysis`
+
 Parameters
 ..........
 
@@ -125,6 +127,8 @@ varying images (like airphotos). It is generally not so great for interpolating 
 from sparse point data.
 The algorithm is derived from the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`__ .
 
+``Default menu``: :menuselection:`Raster --> Analysis`
+
 Parameters
 ..........
 
@@ -173,15 +177,13 @@ and averages all data points within the window. Search ellipse can be rotated by
 located at the grid node. Also the minimum number of data points to average can be set, if there are not enough points
 in window, the grid node considered empty and will be filled with specified NODATA value.
 
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
 
 ``Input layer`` [vector: point]
   Point vector layer
-
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*)
 
 ``Radius 1`` [number]
   The first radius (X axis if rotation angle is 0) of search ellipse.
@@ -193,15 +195,15 @@ Parameters
 
   Default: *0.0*
 
-``Min points`` [number]
-  Minimum number of data points to average.
-  If less amount of points found the grid node considered empty and will be filled with NODATA marker.
-
-  Default: *0.0*
-
 ``Angle`` [number]
   Angle of ellipse rotation in degrees.
   Ellipse rotated counter clockwise.
+
+  Default: *0.0*
+
+``Min points`` [number]
+  Minimum number of data points to average.
+  If less amount of points found the grid node considered empty and will be filled with NODATA marker.
 
   Default: *0.0*
 
@@ -209,6 +211,9 @@ Parameters
   No data marker to fill empty points.
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*)
 
 ``Output raster type`` [selection]
   Raster file type
@@ -248,14 +253,13 @@ Grid (Data metrics)
 -------------------
 This algorithm computes some data metrics using the specified window and output grid geometry.
 
+``Default menu``: :menuselection:`Raster --> Analysis`
+
 Parameters
 ..........
 
 ``Input layer`` [vector: point]
   Point vector layer
-
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*)
 
 ``Metrics`` [selection]
   List of available metrics:
@@ -281,6 +285,11 @@ Parameters
 
   Default: *0.0*
 
+``Angle`` [number]
+  Angle of search ellipse rotation in degrees (counter clockwise)
+
+  Default: *0.0*
+
 ``Min points`` [number]
   Minimum number of data points to use. If less amount of points found the grid node considered empty and will be filled with NODATA marker.
 
@@ -288,15 +297,13 @@ Parameters
 
   Default: *0.0*
 
-``Angle`` [number]
-  Angle of search ellipse rotation in degrees (counter clockwise)
-
-  Default: *0.0*
-
 ``Nodata`` [number]
   NODATA marker to fill empty points
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*)
 
 ``Output raster type`` [selection]
   Raster file type
@@ -337,14 +344,13 @@ The Inverse Distance to a Power gridding method is a weighted average interpolat
 You should supply the input arrays with the scattered data values including coordinates of every data point and output
 grid geometry. The function will compute interpolated value for the given position in output grid.
 
+``Default menu``: :menuselection:`Raster --> Analysis`
+
 Parameters
 ..........
 
 ``Input layer`` [vector: point]
   Point vector layer
-
-``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
 
 ``Power`` [number]
   Weighting power
@@ -366,21 +372,6 @@ Parameters
 
   Default: *0.0*
 
-``Max points`` [number]
-  Maximum number of data points to use.
-
-  Do not search for more points than this number. If less amount of points found the grid node considered empty and
-  will be filled with NODATA marker
-
-  Default: *0.0*
-
-``Min points`` [number]
-  Minimum number of data points to use.
-
-  If less amount of points found the grid node considered empty and will be filled with NODATA marker
-
-  Default: *0.0*
-
 ``Angle`` [number]
   Angle of ellipse rotation in degrees.
 
@@ -388,10 +379,29 @@ Parameters
 
   Default: *0.0*
 
+``Max points`` [number]
+  Maximum number of data points to use.
+
+  Do not search for more points than this number. If less amount of points found
+  the grid node is considered empty and will be filled with NODATA marker
+
+  Default: *0.0*
+
+``Min points`` [number]
+  Minimum number of data points to use.
+
+  If less amount of points found the grid node is considered empty and will be
+  filled with NODATA marker
+
+  Default: *0.0*
+
 ``Nodata`` [number]
   No data marker to fill empty points
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
 
 ``Output raster type`` [selection]
   Raster file type
@@ -426,11 +436,11 @@ See also
 
 .. _gdalgridinversedistancenearestneighbor:
 
-Grid (Nearest neighbor)
------------------------
-The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point
-found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
-will be returned.
+Grid (IDW with nearest neighbor searching)
+------------------------------------------
+
+Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
+Ideal when a maximum number of data points to use is required.
 
 Parameters
 ..........
@@ -438,8 +448,150 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer
 
+``Power`` [number]
+  Weighting power
+
+  Default: *2.0*
+
+``Smothing`` [number]
+  Smoothing parameter
+
+  Default: *0.0*
+
+``Radius`` [number]
+  The radius of the search circle, which should be non-zero.
+
+  Default: *1.0*
+
+``max_points`` [number]
+  Maximum number of data points to use. Do not search for more points than this number.
+
+  Default: *12*
+
+``min_points`` [number]
+  Minimum number of data points to use. If less amount of points found the grid node is
+  considered empty and will be filled with NODATA marker.
+
+  Default: *0*
+
+``Nodata`` [number]
+  No data marker to fill empty points.
+
+  Default: *0.0*
+
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*).
+
+``Output raster type`` [selection]
+  Raster file type
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+Outputs
+.......
+
+``Output file`` [raster]
+  Interpolated raster file
+
+See also
+........
+
+`GDAL grid <http://www.gdal.org/gdal_grid.html>`_
+
+
+.. _gdalgridlinear:
+
+Grid (Linear)
+-------------
+The Linear method perform linear interpolation by computing a Delaunay
+triangulation of the point cloud, finding in which triangle of the triangulation
+the point is, and by doing linear interpolation from its barycentric coordinates
+within the triangle.
+If the point is not in any triangle, depending on the radius, the algorithm will
+use the value of the nearest point or the NODATA value.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer
+
+``Search distance`` [number]
+  In case the point to be interpolated does not fit into a triangle of the Delaunay
+  triangulation, use that maximum distance to search a nearest neighbour, or use
+  nodata otherwise. If set to ``-1``, the search distance is infinite.
+  If set to ``0``, no data value will be always used.
+
+  Default: *-1.0*
+
+``Nodata`` [number]
+  No data marker to fill empty points.
+
+  Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
+
+``Output raster type`` [selection]
+  Raster file type
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+Outputs
+.......
+
+``Output file`` [raster]
+  Interpolated raster file
+
+See also
+........
+
+`GDAL grid <http://www.gdal.org/gdal_grid.html>`_
+
+
+.. _gdalgridnearestneighbor:
+
+Grid (Nearest neighbor)
+-----------------------
+The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point
+found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
+will be returned.
+
+``Default menu``: :menuselection:`Raster --> Analysis`
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer
 
 ``Radius 1`` [number]
   The first radius (X axis if rotation angle is 0) of search ellipse.
@@ -461,6 +613,9 @@ Parameters
   No data marker to fill empty points.
 
   Default: *0.0*
+
+``Z field`` [tablefield: numeric]
+  Field for the interpolation (*Optional*).
 
 ``Output raster type`` [selection]
   Raster file type
@@ -501,6 +656,8 @@ Outputs a raster with a nice shaded relief effect. It’s very useful for visual
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
 The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
+
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -561,7 +718,9 @@ Convert nearly black/white borders to black.
 
 This utility will scan an image and try to set all pixels that are nearly or exactly black, white or one or more custom
 colors around the collar to black or white. This is often used to "fix up" lossy compressed airphotos so that color
-pixels can be treated as transparent when mosaicking
+pixels can be treated as transparent when mosaicking.
+
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -598,6 +757,8 @@ Proximity (raster distance)
 The proximity algorithm generates a raster proximity map indicating the distance from the center of each pixel
 to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which
 the raster pixel value is in the set of target pixel values.
+
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -684,6 +845,7 @@ it's useful for calculations of the river morphology, in climatology and physica
 in general.
 The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
 
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -716,6 +878,8 @@ Removes raster polygons smaller than a provided threshold size (in pixels) and
 replaces them with the pixel value of the largest neighbour polygon. It is
 useful if you have a large amount of small areas on your raster map.
 The algorithm is derived from the `GDAL sieve utility <http://www.gdal.org/gdal_sieve.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -753,6 +917,8 @@ Generate a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
 type of slope value you want: degrees or percent slope.
 The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
+
+``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -800,6 +966,8 @@ Outputs a single-band raster with values computed from the elevation.
 TPI stands for Topographic Position Index, which is defined as the difference between a central pixel and the mean
 of its surrounding cells
 
+``Default menu``: :menuselection:`Raster --> Analysis`
+
 Parameters
 ..........
 
@@ -836,6 +1004,8 @@ Outputs a single-band raster with values computed from the elevation.
 TRI stands for Terrain Ruggedness Index, which is defined as the mean difference between a central pixel and its
 surrounding cells
 
+``Default menu``: :menuselection:`Raster --> Analysis`
+
 Parameters
 ..........
 
@@ -862,10 +1032,11 @@ See also
 ........
 `GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TRI>`__
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

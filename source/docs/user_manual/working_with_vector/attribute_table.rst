@@ -726,8 +726,8 @@ a table. And there are also some buttons available. Let's review them shortly
   toggles the edit mode of the airport layer, although we are in the feature
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
-* The |signPlus| button will add a new feature to the airport layer. And it will
-  assign the new airport to the current region by default.
+* The |signPlus| button will add a new record to the airport layer attribute table. 
+  And it will assign the new airport to the current region by default.
 * The |remove| button will delete the selected airport permanently.
 * The |link| symbol will open a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
@@ -736,6 +736,17 @@ a table. And there are also some buttons available. Let's review them shortly
   leaving them unassigned (the foreign key is set to NULL) effectively.
 * The two buttons to the right switch between table view and form view where
   the later let's you view all the airports in their respective form.
+  
+In the above example the referencing layer has geometries (so it isn't just 
+an alphanumeric table) so the above steps will create an entry in the layer
+attribute table that has no corresponding geometric feature. To add the 
+geometry:
+
+* Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
+* Select the record that has been added previously within the feature form of the 
+  referenced layer;
+* Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the 
+  selected attributes table record.
 
 If you work on the airport table, a new widget type is available which lets you
 embed the feature form of the referenced region on the feature form of the
@@ -805,6 +816,8 @@ It will appear as a **Many to many relation**.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
@@ -875,6 +888,6 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

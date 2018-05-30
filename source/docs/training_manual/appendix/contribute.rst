@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 Appendix: Contributing To This Manual
 *******************************************************************************
@@ -367,6 +371,7 @@ Thank You!
 Thank you for contributing to this project! By so doing, you are making QGIS
 more accessible to users and adding value to the QGIS project as a whole.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -382,3 +387,4 @@ more accessible to users and adding value to the QGIS project as a whole.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Forestry Module Presentation
 ===============================================================================
 
@@ -25,6 +29,7 @@ The general sample data (aerial images, LiDAR data, basic maps) has been obtaine
    Before using the techniques described here on your own data, always ensure you have
    proper backups!
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -32,3 +37,4 @@ The general sample data (aerial images, LiDAR data, basic maps) has been obtaine
    source folder.
 
 .. |LS| replace:: Lesson:
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

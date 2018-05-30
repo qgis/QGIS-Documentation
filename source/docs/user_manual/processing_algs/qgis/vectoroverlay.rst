@@ -40,6 +40,8 @@ mask geometry.
   Clipping operation
 
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -76,6 +78,8 @@ Attributes are not modified (see warning_difference_).
   :align: center
 
   Difference operation
+
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
 Parameters
 ..........
@@ -143,6 +147,8 @@ Attributes are not modified (see warning_difference_).
 
   Intersection operation
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -187,6 +193,8 @@ Creates point features where the lines from both layers intersect.
 
   Points of intersection
 
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -264,6 +272,8 @@ Attributes are not modified (see warning_difference_).
 
   Symmetrical difference operation
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -304,6 +314,8 @@ layers for overlapping features.
   Union operation
 
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -326,4 +338,4 @@ Output
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

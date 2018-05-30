@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Models in the batch processing interface
 =========================================
 
@@ -18,3 +22,12 @@ Add rows up to a total of 5. Select the DEM file corresponding to this lesson as
 As you see the batch processing interface can be run not just to run the same process on different datasets but also on the same dataset with different parameters.
 
 Click on *OK* and you should get 5 new layers with watersheds corresponding to the specified 5 threshold values.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

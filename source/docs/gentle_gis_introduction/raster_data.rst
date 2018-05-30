@@ -359,6 +359,7 @@ In the section that follows we will take a closer look at **topology** to see
 how the relationship between vector features can be used to ensure the best data
 quality.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

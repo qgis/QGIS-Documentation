@@ -33,6 +33,21 @@ To create a layout item, select the corresponding tool either from the
   work with one-click nor click-and-drag methods; you need to click and
   place each node of the item.
 
+You can also use the :menuselection:`Edit` menu or :guilabel:`Layout` toolbar
+tools to copy an existing item and paste it at the mouse position as a new item.
+Use the :guilabel:`Paste in Place` (:kbd:`Ctrl+Shift+V`) to constrain the new item
+at the coordinates of the copied item, in the active page.
+
+Likewise, you can also create items using a print layout template (for details, see
+:ref:`layout_manager`) through :menuselection:`Layout --> Add Items from Template...`
+command.
+
+.. tip:: **Add layout items using the file browser**
+
+  From your file browser or using the :guilabel:`Browser` panel, drag-and-drop a
+  print layout template (:file:`.qpt` file) onto a print layout dialog and QGIS
+  automatically adds all items from that template to the layout.
+
 .. _interact_layout_item:
 
 Interacting with layout items
@@ -51,10 +66,13 @@ status bar.
 Inside the :menuselection:`Edit` menu, you can find actions to select all the
 items, clear all selections, invert the current selection and more...
 
+.. _move_resize:
+
 Moving and resizing items
 .........................
 
-A selected item will show squares on its boundaries; moving one of them with
+Unless :menuselection:`View --> Show Bounding Boxes` option is unchecked, a
+selected item will show squares on its boundaries ; moving one of them with
 the mouse will resize the item in the corresponding direction. While resizing,
 holding :kbd:`Shift` will maintain the aspect ratio. Holding :kbd:`Alt` will
 resize from the item center.
@@ -65,10 +83,10 @@ axis, just hold the :kbd:`Shift` button on the keyboard while moving the mouse.
 You can also move a selected item using the :kbd:`Arrow keys` on the keyboard;
 if the movement is too slow, you can speed it up by holding :kbd:`Shift`.
 If you need better precision, use the :guilabel:`Position and size` properties,
-or grid/guides snapping.
+or grid/guides snapping as explained above for item's creation.
 
 Resizing or moving several items at once is made the same way as for a single
-item. QGIS however provides some advanced tools to automatically resize a group
+item. QGIS however provides some advanced tools to automatically resize a selection
 of items following different rules:
 
 * each item height matches the |resizeTallest| tallest or the |resizeShortest|
@@ -84,11 +102,30 @@ by distributing equidistantly:
 * edges (left, right, top or bottom) of items;
 * centers of items either horizontally or vertically.
 
+.. _group_items:
+
+Grouping items
+--------------
+
+Grouping items allows you to manipulate a set of items like a single one: you
+can easily resize, move, delete, copy the items as a whole.
+
+To create a group of items, select more than one and press the |groupItems|
+:guilabel:`Group` button on the :menuselection:`View` menu or the
+:guilabel:`Actions` toolbar or from the right-click menu. A row named ``Group``
+is added to the :menuselection:`Items` panel and can be locked or hidden like
+any other :ref:`Items panel's object <layout_items_panel>`.
+Grouped items are **not individually** selectable on the canvas; use the Items panel
+for direct selection and access the item's properties panel.
+
+.. _lock_items:
+
 Locking items
 .............
 
 Once you have found the correct position for an item, you can lock it by using
-the |locked| button on the :guilabel:`Actions` toolbar or ticking the box next
+the |locked| :guilabel:`Lock selected items` button in the :menuselection:`View`
+menu or the :guilabel:`Actions` toolbar or ticking the box next
 to the item in the :menuselection:`Items` panel. Locked items are **not**
 selectable on the canvas.
 
@@ -96,6 +133,7 @@ Locked items can be unlocked by selecting the item in the :menuselection:`Items`
 panel and unchecking the tickbox or you can use the icons on the toolbar.
 
 .. index:: Items alignment
+.. _align_items:
 
 Alignment
 .........
@@ -136,16 +174,26 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 .. figure:: img/common_properties.png
    :align: center
 
-   Common Item Properties Dialogs
+   Common Item Properties groups
+
+.. note::
+
+   The |dataDefined| :sup:`Data defined override` icon next to most of the
+   options means that you can associate that property with a layer or
+   features attributes or with any other layout item's property, using
+   :ref:`expressions <vector_expressions>` or :ref:`variables
+   <general_tools_variables>`. These are particularly helpful with atlas
+   generation (See eg, :ref:`atlas_data_defined_override`).
 
 .. _Frame_Dialog:
 
-* The :guilabel:`Position and size` dialog lets you define the size and position
+* The :guilabel:`Position and size` group lets you define the size and position
   of the frame which contains the item (see :ref:`position_size` for more
   information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
-  Click on the [Color] and [Thickness] buttons to adjust those properties.
+  Click on the :guilabel:`Color` and :guilabel:`Thickness` and :guilabel:`Join
+  style` widgets to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color
   or choose from a custom setting.
@@ -157,14 +205,8 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
   The GetProjectSettings command will list the items and IDs which are available
   in a layout.
 * :guilabel:`Rendering` mode helps you set whether and how the item can be
-  displayed.
-
-.. note::
-
-   The |dataDefined| :sup:`Data defined override` icon next to a field
-   means that you can associate the field with data in the map item or use
-   expressions. These are particularly helpful with atlas generation
-   (See :ref:`atlas_data_defined_override`).
+  displayed: you can, for instance, apply :ref:`blending mode <blend-modes>`,
+  adjust the opacity of the item or :guilabel:`Exclude item from exports`.
 
 .. _position_size:
 
@@ -233,6 +275,7 @@ remove it.
 
 More information on variables usage in the :ref:`general_tools_variables` section.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -244,6 +287,8 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |groupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
@@ -268,4 +313,4 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

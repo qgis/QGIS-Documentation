@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: QGIS Server; WMS Server; WFS Server; WCS Server
 
 .. _`label_qgisserver_tutorial`:
@@ -330,6 +334,7 @@ Now that you've installed QGIS Server and it's accesible through the HTTP
 protocol, we need to learn how to access some of the services it can offer.
 The topic of the next lesson is to learn how to access QGIS Server WMS services.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -341,3 +346,4 @@ The topic of the next lesson is to learn how to access QGIS Server WMS services.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -66,6 +66,15 @@ Source Properties
 |system| Use this tab to define general settings for the vector layer.
 Available options are:
 
+
+.. _figure_vector_general:
+
+.. figure:: img/vector_general_menu.png
+   :align: center
+
+   Source tab in vector Layer Properties dialog
+
+
 Settings
 --------
 
@@ -93,21 +102,21 @@ Coordinate Reference System
 Query Builder
 -------------
 
-Under the **Provider Feature Filter** frame, the Query Builder allows
+The :guilabel:`Query Builder` dialog is accessible through the eponym button
+at the bottom of the :guilabel:`Source` tab in the Layer Properties dialog,
+under the :guilabel:`Provider feature filter` group.
+
+The Query Builder provides an interface that allows
 you to define a subset of the features in the layer using a SQL-like WHERE
 clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
-project. The query result can be saved as a new vector layer.
+project.
+For example, using the ``TYPE_2`` field of the :file:`regions` layer from the
+QGIS sample data, you could constrain the file to display only regions that
+are of ``borough`` type in the project (see Figure_vector_querybuilder_ for
+such an example). The filter is made at the data provider (OGR, PostgreSQL,
+MSSQL...) level.
 
-The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`Source` tab in the Layer Properties. Under :guilabel:`Feature
-subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
-builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
-field, you could select only regions that are ``borough`` in the
-:guilabel:`Provider specific filter expression` box of the Query Builder.
-Figure_vector_querybuilder_ shows an example of the Query Builder populated with
-the :file:`regions.shp` layer from the QGIS sample data. The Fields, Values
-and Operators sections help you to construct the SQL-like query.
 
 .. _figure_vector_querybuilder:
 
@@ -116,46 +125,50 @@ and Operators sections help you to construct the SQL-like query.
 
    Query Builder
 
-The **Fields list** contains all attribute columns of the attribute table to be
-searched. To add an attribute column to the SQL WHERE clause field, double
-click its name in the Fields list. Generally, you can use the various fields,
-values and operators to construct the query, or you can just type it into the
-SQL box.
 
-The **Values list** lists the values of an attribute table. To list all
-possible values of an attribute, select the attribute in the Fields list and
-click the **[all]** button. To list the first 25 unique values of an attribute
-column, select the attribute column in the Fields list and click the
-**[Sample]** button. To add a value to the SQL WHERE clause field, double click
-its name in the Values list.
+You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
+option from the :menuselection:`View` menu or the layer contextual menu.
+The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
+the dialog help you to construct the SQL-like query exposed in the
+:guilabel:`Provider specific filter expression` box.
 
-The **Operators section** contains all usable operators. To add an operator to
+The **Fields** list contains all the fields of the layer. To add an attribute
+column to the SQL WHERE clause field, double-click its name or just type it into
+the SQL box.
+
+The **Values** frame lists the values of the currently selected field. To list all
+unique values of a field, click the **[All]** button. To instead list the first
+25 unique values of the column, click the **[Sample]** button. To add a value
+to the SQL WHERE clause field, double click its name in the Values list.
+You can use the search box at the top of the Values frame to easily browse and
+find attribute values in the list.
+
+The **Operators** section contains all usable operators. To add an operator to
 the SQL WHERE clause field, click the appropriate button. Relational operators
 ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
 operators (``AND``, ``OR``, ...) are available.
 
-The **[Test]** button shows a message box with the number of features
-satisfying the current query, which is useful in the process of query
-construction. The **[Clear]** button clears the text in the SQL WHERE clause
-text field. The **[OK]** button closes the window and selects the features
-satisfying the query. The **[Cancel]** button closes the window without
-changing the current selection.
+The **[Test]** button helps you check your query and displays a message box with
+the number of features satisfying the current query.
+Use the **[Clear]** button to wipe the SQL query and revert the layer to its
+original state (ie, fully load all the features).
 
+When a filter is applied,
 QGIS treats the resulting subset acts as if it were the entire layer. For
-example if you applied the filter above for 'Borough', you can not display,
-query, save or edit Anchorage, because that is a 'Municipality' and therefore
-not part of the subset.
+example if you applied the filter above for 'Borough' (``"TYPE_2" = 'Borough'``),
+you can not display, query, save or edit Anchorage, because that is a
+'Municipality' and therefore not part of the subset.
 
-The only exception is that unless your layer is part of a database, using a
-subset will prevent you from editing the layer.
+Because of the limitations on some :ref:`data providers <opening_data>` (eg, OGR),
+some data formats will prevent you from editing the layer when in a filtered
+state.
 
+.. tip:: **Filtered layers are indicated in the Layers Panel**
 
-.. _figure_vector_general:
-
-.. figure:: img/vector_general_menu.png
-   :align: center
-
-   Source tab in vector layers properties dialog
+  In the :guilabel:`Layers` panel, filtered layer is listed with a |indicatorFilter|
+  :sup:`Filter` icon next to it indicating the query used when the mouse hovers
+  over the button. Double-click the icon opens the :guilabel:`Query Builder` dialog
+  for edit.
 
 
 .. index:: Style, Symbology, Renderer
@@ -523,7 +536,8 @@ Rule-based rendering
 The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
 all the features from a layer,
 using rule-based symbols whose aspect reflects the assignment of a selected
-feature's attribute to a class. The rules are based on SQL statements.
+feature's attribute to a class. The rules are based on SQL statements and can
+be nested.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
@@ -535,29 +549,39 @@ To create a rule:
 * In the :guilabel:`Edit Rule` dialog that opens, you can define a label
   to help you identify each rule. This is the label that will be displayed
   in the :guilabel:`Layers Panel` and also in the print composer legend;
-* Press the |expression| button to open the expression string builder dialog;
+* Manually enter an expression in the text box next to the |radioButtonOn|
+  :guilabel:`Filter` option or press the |expression| button next to it to open
+  the expression string builder dialog;
 * Use the provided functions and the layer attributes to build an :ref:`expression
-  <vector_expressions>` to filter the features you'd like to retrieve;
+  <vector_expressions>` to filter the features you'd like to retrieve. Press
+  the **[Test]** button to check the result of the query;
 * A longer label can then be used to complete the rule description;
-* You can use the |checkbox| :guilabel:`Scale Range` option to set when the
-  rule should be applied;
+* You can use the |checkbox| :guilabel:`Scale Range` option to set scales at which
+  the rule should be applied;
 * Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
   and press **[OK]**;
-* A new row summarizing the rule is added to the Layer Properties dialog.
 
+A new row summarizing the rule is added to the Layer Properties dialog.
 You can create as many rules as necessary following the steps above or copy
-pasting an existing one with the right mouse button. You can also use the
-``ELSE`` rule that will be run if none of the other rules on that level matches.
+pasting an existing rule. Drag-and-drop the rules on top of each other to nest
+them and refine the upper rule features in subclasses.
 
-Selecting a rule, you can organize its features in subclasses using the
-:guilabel:`Refine selected rules` drop-down menu. Rule refinement can be based on:
+Selecting a rule, you can also organize its features in subclasses using the
+:guilabel:`Refine selected rules` drop-down menu. Automated rule refinement can be
+based on:
 
 * **scales**;
 * **categories**: applying a :ref:`categorized renderer <categorized_renderer>`;
-* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`. 
+* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`.
 
 Refined classes appear like sub-items of the rule, in a tree hierarchy and like
 above, you can set symbology of each class.
+
+In the :guilabel:`Edit rule` dialog, you can avoid writing all the rules and
+make use of the |radioButtonOff| :guilabel:`Else` option to catch all the
+features that do not match any of the other rules, at the same level. This
+can also be achieved by writing ``Else`` in the *Rule* column of the
+:menuselection:`Layer Properties --> Symbology --> Rule-based` dialog.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
@@ -583,8 +607,32 @@ Point displacement
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer works to
 visualize all features of a point layer, even if they have the same location.
-To do this, the symbols of the points are placed on a displacement circle
-around one center symbol or on several concentric circles.
+To do this, the renderer takes the points falling in a given :guilabel:`Distance`
+tolerance from each other and places them around their barycenter following
+different :guilabel:`Placement methods`:
+
+* **Ring**: places all the features on a circle whose radius depends on the
+  number of features to display;
+* **Concentric rings**: uses a set of concentric circles to show the features;
+* **Grid**: generates a regular grid with a point symbol at each intersection.
+
+The :guilabel:`Center symbol` widget helps you customize the symbol and color
+of the middle point.
+For the distributed points symbols, you can apply any of the *No symbols*,
+*Single symbol*, *Categorized*, *Graduated* or *Rule-based* renderer using the
+:guilabel:`Renderer` drop-down list and customize them using the
+:guilabel:`Renderer Settings...` button.
+
+While the minimal spacing of the :guilabel:`Displacement lines` depends on the
+point symbol renderer's, you can still customize some of its settings such as
+the :guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size
+adjustment` (eg, to add more spacing between the rendered points).
+
+Use the :guilabel:`Labels` group options to perform points labeling: the labels
+are placed near the displaced position of the symbol, and not at the feature
+real position. Other than the :guilabel:`Label attribute`, :guilabel:`Label
+font` and :guilabel:`Label color`, you can set the :guilabel:`Minimum map
+scale` to display the labels.
 
 .. _figure_displacement_symbology:
 
@@ -593,9 +641,12 @@ around one center symbol or on several concentric circles.
 
    Point displacement dialog
 
-.. note:: You can still render features with other renderer like Single symbol,
-   Graduated, Categorized or Rule-Based renderer using the :guilabel:`Renderer`
-   drop-down list then the :guilabel:`Renderer Settings...` button.
+.. note::
+
+ Point Displacement renderer does not alter feature geometry,
+ meaning that points are not moved from their position. They are still located
+ at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index:: Cluster
    single: Symbology; Point cluster renderer
@@ -605,7 +656,7 @@ Point Cluster
 ..............
 
 Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
-which blows up overlaid point features placement, the |pointClusterSymbol|
+which blows up nearest or overlaid point features placement, the |pointClusterSymbol|
 :guilabel:`Point Cluster` renderer groups nearby points into a single
 rendered marker symbol. Based on a specified :guilabel:`Distance`, points
 that fall within from each others are merged into a single symbol.
@@ -634,9 +685,10 @@ From the main dialog, you can:
 
 .. note::
 
- Point displacement and cluster renderers do not alter feature geometry,
+ Point Cluster renderer does not alter feature geometry,
  meaning that points are not moved from their position. They are still located
  at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index::
    single: Symbology; Inverted polygon renderer
@@ -984,12 +1036,12 @@ The first step is to choose the labeling method from the drop-down list. There
 are four options available:
 
 * **No labels**
-* **Show labels for this layer**
+* **Single labels**, described below
 * :ref:`Rule-based labeling <rule_based_labeling>`
 * and **Blocking**: allows to set a layer as just an obstacle for other layer's
   labels without rendering any labels of its own.
 
-The next steps assume you select the **Show labels for this layer** option,
+The next steps assume you select the **Single labels** option,
 enabling following tabs that help you configure the labeling:
 
 * :ref:`Text <labels_text>`
@@ -3024,6 +3076,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+   :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
 .. |join| image:: /static/common/join.png
@@ -3093,4 +3147,4 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

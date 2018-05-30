@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 The batch processing interface
 ================================
 
@@ -42,3 +46,12 @@ If you select the first option, only the current cell will be filled. If you sel
 The last column sets whether or not to add the resulting layers to the current QGIS project. Leave the default *Yes* option, so you can see your results in this case.
 
 Click on *OK* and the batch process will be run. If everything went fine, all your layers will have been processed, and 3 new layers would have been created.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -228,9 +228,9 @@ Menu Option                                                   Shortcut          
 :guilabel:`Properties...`                                     \                     \                                  see :ref:`vector_properties_dialog`
 :guilabel:`Filter...`                                         :kbd:`Ctrl+F`         \                                  see :ref:`vector_query_builder`
 |labeling| :guilabel:`Labeling`                               \                     \                                  see :ref:`vector_labels_tab`
-|inOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   :guilabel:`Manage Layers`          \
-|addAllToOverview| :guilabel:`Add All To Overview`            \                     \                                  \
-|removeAllOVerview| :guilabel:`Remove All From Overview`      \                     \                                  \
+|inOverview| :guilabel:`Show in Overview`                     \                     \                                  see :ref:`overview_panels`
+|addAllToOverview| :guilabel:`Show All in Overview`           \                     \                                  see :ref:`overview_panels`
+|removeAllOVerview| :guilabel:`Hide All From Overview`        \                     \                                  see :ref:`overview_panels`
 ============================================================  ====================  ================================  =====================================
 
 Settings
@@ -801,7 +801,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |whatsThis| image:: /static/common/whats_this.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
