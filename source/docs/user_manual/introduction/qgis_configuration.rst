@@ -41,9 +41,9 @@ The tabs where you can customize your options are described below.
  by :ref:`installed plugins <plugins>` implementing their own options into the
  standard Options dialog. This avoids each plugin having their own config dialog
  with extra menu items just for them...
- 
- .. comment: Would be nice to link in the future to a place in the PyQGIS Cookbook
-   showing the code to use to implement plugin options in standard dialog 
+
+ .. Todo: Would be nice to link in the future to a place in the PyQGIS Cookbook
+   showing the code to use to implement plugin options in standard dialog
 
 
 .. _general_options:
@@ -135,7 +135,7 @@ and so on.
   Documentation is versioned and translated only for QGIS Long Term Releases (LTR),
   meaning that if you are running a regular release (eg, QGIS 3.0), help button will
   open the *testing* manual page, which may contain description of features
-  in newer release (3.2 and 3.4) or in development (3.1 and 3.3). 
+  in newer release (3.2 and 3.4) or in development (3.1 and 3.3).
 
 **QSettings**
 
@@ -244,7 +244,7 @@ Data Sources Settings
  extent it was opened with, meaning that selecting **Show All Features** within
  such a table will not display new features. You can however update the set of
  displayed features by changing the canvas extent and selecting **Show Features
- Visible On Map** option in the attribute table. 
+ Visible On Map** option in the attribute table.
 
 
 **Data source handling**
@@ -622,6 +622,56 @@ http://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
 
+.. index:: Search widget, Locator
+.. _locator_options:
+
+Locator Settings
+----------------
+
+|search| The :guilabel:`Locator` tab allows to configure the **Locator bar**, a
+quick search widget available on the status bar that helps you perform searches
+anywhere in the application. It provides some default filters (with prefix) to use:
+
+* Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
+  panel;
+* Project layouts (``pl``): finds and opens a print layout;
+* Actions (``.``): finds and executes a QGIS action; actions can be any tool
+  or menu in QGIS, opening a panel...
+* Active layer features  (``f``): searches for matching attributes in any field
+  from the current active layer and zoom to the feature
+* Calculator  (``=``): allows evaluation of any QGIS expression and, if valid,
+  gives an option to copy the result to the clipboard
+* Spatial bookmarks (``b``): finds and zooms to the bookmark extent;
+* Settings (``set``): browses and opens project and application-wide properties
+  dialogs;
+* Processing (``a``): searches and opens a Processing algorithm dialog.
+
+For each filter, you can customize the filter, set whether it is enabled by default or not.
+The set of default locator filters can be extended by plugins, eg for OSM
+nominatim searches, direct database searching, layer catalog searches.
+
+The locator search bar can be activated pressing :kbd:`Ctrl+K`. Type your text
+to perform a search. By default, results are returned for all enabled locator
+filters but you can limit the search to a certain filter by prefixing your
+text with the locator filter prefix, ie. typing ``l cad`` will return only the
+layers whose name contains ``cad``. Click on the result to execute the
+corresponding action, depending on the type of item.
+
+Searching is handled using threads, so that results always become available as
+quickly as possible, regardless of whether any slow search filters may be
+installed. They also appear as soon as each result is encountered by each
+filter, which means that e.g. a file search filter will show results one by one
+as the file tree is scanned. This ensures that the UI is always responsive even
+if a very slow search filter is present (e.g. one which uses an online service).
+
+.. tip:: **Quick access to the locator's configurations**
+
+  Click on the |search| icon inside the locator widget on the status bar to
+  display the list of filters you can use and a **[Configure]** entry that
+  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
+  Options` menu.
+
+
 .. _optionsadvanced:
 
 Advanced Settings
@@ -731,7 +781,7 @@ dialog described above.
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
-  
+
   You can also set whether a layer should appear as ``read-only``, meaning that
   it can not be edited by the user, regardless of the data provider's
   capabilities. Although this is a weak protection, it remains a quick and handy
@@ -920,6 +970,8 @@ and **[Load]** them into another QGIS installation.
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
 .. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
