@@ -753,6 +753,14 @@ dialog described above.
     gets committed when the user clicks save layer.
     Note that you can (de)activate this option only if no layer is being edited
     in the project.
+  * |checkbox| :guilabel:`Trust project when data source has no metadata`:
+    To speed up project loading by skipping data checks. Useful in QGIS Server context 
+    or in projects with huge database views/materialized views. The extent of layers
+    will be read from the QGIS project file (instead of data sources) and when 
+    using the PostgreSQL provider the primary key unicity will not be 
+    checked for views and materialized views.
+  * Define what layers are defined as **required**. Checked layers in this list 
+    are protected from inadvertent removal from the project.
 
 * The :guilabel:`Relations` tab is used to define 1:n relations. The relations
   are defined in the project properties dialog. Once relations exist for a layer,
