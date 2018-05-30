@@ -68,7 +68,7 @@ To add a layer into a project:
 
 #. right-click on QGIS toolbar and check |checkbox| :guilabel:`Browser Panel`
    to activate it or select it from the menu :menuselection:`View --> Panels`
-   (or |kde| :menuselection:`Settings --> Panels`);
+   (or |kde| :menuselection:`Settings --> Panels`) or press :kbd:`Ctrl+2`;
 #. a browser tree with your filesystem, databases and web services is displayed;
 #. find the layer in the list;
 #. right-click on its name and select **Add selected layer(s)**. Your layer is
@@ -882,4 +882,4 @@ Description of these capabilities and how-to are provided in chapter
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

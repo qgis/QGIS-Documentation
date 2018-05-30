@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 |MOD| Creating Vector Data
 *******************************************************************************
@@ -21,3 +25,4 @@ learn how to modify existing vector data and create new datasets entirely.
    source folder.
 
 .. |MOD| replace:: Module:
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

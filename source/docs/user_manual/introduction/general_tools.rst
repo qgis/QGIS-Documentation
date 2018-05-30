@@ -36,7 +36,8 @@ Panels
 QGIS provides by default many panels to work with.
 Some of these panels are described below while others may be found in different
 parts of the document. A complete list of default panels provided by QGIS is
-available at :ref:`panels_tools`.
+available through :menuselection:`View --> Panels -->` menu and mentioned at
+:ref:`panels_tools`.
 
 .. index:: Panels; Layers
 .. _`label_legend`:
@@ -47,7 +48,8 @@ Layers Panel
 .. index::
    single: Legend
 
-The :guilabel:`layers Panel` lists all the layers in the project and helps you
+The :guilabel:`Layers` panel (also enabled pressing :kbd:`Ctrl+1`) lists all
+the layers in the project and helps you
 manage their visibility. A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
 top of the legend are drawn over layers listed lower down in the legend.
@@ -118,46 +120,65 @@ frame listing vector or raster layers added to the project and, those layers
 can be organized in groups. Depending on the item selected in the panel, a
 right-click shows a dedicated set of options presented below.
 
-======================================================================  ==================  =================  =============
-Option                                                                  Vector Layer        Raster Layer       Group
-======================================================================  ==================  =================  =============
-|zoomToLayer| :menuselection:`Zoom to Layer/Group`                      |checkbox|          |checkbox|         |checkbox|
-|unchecked| :menuselection:`Show in Overview`                           |checkbox|          |checkbox|         \
-|zoomActual| :menuselection:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
-:menuselection:`Stretch Using Current Extent`                           \                   |checkbox|         \
-|removeLayer| :menuselection:`Remove`                                   |checkbox|          |checkbox|         |checkbox|
-|duplicateLayer| :menuselection:`Duplicate`                             |checkbox|          |checkbox|         \
-:menuselection:`Set Layer Scale Visibility`                             |checkbox|          |checkbox|         \
-:menuselection:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
-:menuselection:`Set Layer/Group CRS`                                    |checkbox|          |checkbox|         |checkbox|
-:menuselection:`Set Project CRS from Layer`                             |checkbox|          |checkbox|         \
-:menuselection:`Styles -->`                                             |checkbox|          |checkbox|         \
-:menuselection:`Copy Style`                                             |checkbox|          |checkbox|         \
-:menuselection:`Paste Style`                                            |checkbox|          |checkbox|         |checkbox|
-|openTable| :menuselection:`Open Attribute Table`                       |checkbox|          \                  \
-|toggleEditing| :menuselection:`Toggle Editing`                         |checkbox|          \                  \
-|allEdits| :menuselection:`Current Edits -->`                           |checkbox|          \                  \
-                                                                        (in Edit mode)
-:menuselection:`Save As...`                                             |checkbox|          |checkbox|         \
-:menuselection:`Save As Layer Definition File...`                       |checkbox|          |checkbox|         |checkbox|
-:menuselection:`Filter...`                                              |checkbox|          \                  \
-|unchecked| :menuselection:`Show Feature Count`                         |checkbox|          \                  \
-|dbManager| :menuselection:`Update SQL Layer...`                        |checkbox|          \                  \
-:menuselection:`Properties`                                             |checkbox|          |checkbox|         \
-:menuselection:`Move to Top-level`                                      |checkbox|          |checkbox|         \
-:menuselection:`Rename`                                                 |checkbox|          |checkbox|         |checkbox|
-:menuselection:`Group Selected`                                         |checkbox|          |checkbox|         \
-:menuselection:`Set Group WMS Data`                                     \                   \                  |checkbox|
-|unchecked| :menuselection:`Mutually Exclusive Group`                   \                   \                  |checkbox|
-|unchecked| :menuselection:`Uncheck and all its children (Ctrl+click)`  \                   \                  |checkbox|
-|addGroup| :menuselection:`Add Group`                                   \                   \                  |checkbox|
-======================================================================  ==================  =================  =============
+=================================================================  ==================  =================  =============
+Option                                                             Vector Layer        Raster Layer       Group
+=================================================================  ==================  =================  =============
+|zoomToLayer| :guilabel:`Zoom to Layer/Group`                      |checkbox|          |checkbox|         |checkbox|
+|zoomToLayer| :guilabel:`Zoom to Selection`                        |checkbox|          \                  \
+|inOverview| :guilabel:`Show in Overview`                          |checkbox|          |checkbox|         \
+:guilabel:`Show Feature Count`                                     |checkbox|          \                  \
+:guilabel:`Copy Layer/Group`                                       |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Rename Layer/Group`                                     |checkbox|          |checkbox|         |checkbox|
+|zoomActual| :guilabel:`Zoom to Native Resolution (100%)`          \                   |checkbox|         \
+:guilabel:`Stretch Using Current Extent`                           \                   |checkbox|         \
+|dbManager| :guilabel:`Update SQL Layer...`                        |checkbox|          \                  \
+|addGroup| :guilabel:`Add Group`                                   \                   \                  |checkbox|
+|duplicateLayer| :guilabel:`Duplicate Layer`                       |checkbox|          |checkbox|         \
+|removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Move to Top-level`                                      |checkbox|          |checkbox|         \
+:guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
+:guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
+|openTable| :guilabel:`Open Attribute Table`                       |checkbox|          \                  \
+|toggleEditing| :guilabel:`Toggle Editing`                         |checkbox|          \                  \
+|allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
+:guilabel:`Filter...`                                              |checkbox|          \                  \
+:guilabel:`Set Layer Scale Visibility...`                          |checkbox|          |checkbox|         \
+:guilabel:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
+:menuselection:`Set CRS -->`                                       |checkbox|          |checkbox|         \
+* :guilabel:`Set Layer/Group CRS...`                               |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Set Project CRS from Layer`                           |checkbox|          |checkbox|         \
+:guilabel:`Set Group WMS Data...`                                  \                   \                  |checkbox|
+|unchecked| :guilabel:`Mutually Exclusive Group`                   \                   \                  |checkbox|
+:guilabel:`Check and all its children (Ctrl-click)`                \                   \                  |checkbox|
+:guilabel:`Uncheck and all its children (Ctrl-click)`              \                   \                  |checkbox|
+:menuselection:`Export -->`                                        |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Save As...`                                           \                   |checkbox|         \
+* :guilabel:`Save Features As...`                                  |checkbox|          \                  \
+* :guilabel:`Save Selected Features As...`                         |checkbox|          \                  \
+* :guilabel:`Save As Layer Definition File...`                     |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Save As QGIS Layer Style File...`                     |checkbox|          |checkbox|         \
+:menuselection:`Styles -->`                                        |checkbox|          |checkbox|         \
+* :guilabel:`Copy Style`                                           |checkbox|          |checkbox|         \
+* :guilabel:`Paste Style`                                          |checkbox|          |checkbox|         |checkbox|
+* :guilabel:`Add...`                                               |checkbox|          |checkbox|         \
+* :guilabel:`Rename Current...`                                    |checkbox|          |checkbox|         \
+:guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
+=================================================================  ==================  =================  =============
 
 Table: Context menu from Layers Panel items
 
 For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
 See section :ref:`grass_digitizing` for information on editing GRASS vector
 layers.
+
+.. tip:: **More information using indicator icons in the Layers Panel**
+
+  Depending on settings, eg :ref:`a filter <vector_query_builder>` applied to
+  the layer, an icon is displayed on the right of the layer name in the
+  :guilabel:`Layers` panel. Hover over the icon to get more details and
+  double-click to update the setting.
+
 
 .. index:: Group, Layer
 .. _group_layers_interact:
@@ -244,7 +265,8 @@ as sub-item), the following options are available at layer level or class level:
 Layer Styling Panel
 --------------------
 
-This panel is somehow a shortcut to some of the features of the layer properties
+The :guilabel:`Layer Styling` panel (also enabled with :kbd:`Ctrl+3`) is somehow
+a shortcut to some of the functionalities of the :guilabel:`Layer Properties`
 dialog. It indeed offers you a quick and handy way to define the rendering and the
 behavior of a layer, and to visualize its effects without opening the layer
 properties dialog.
@@ -293,15 +315,22 @@ You no longer need to hit the **[Apply]** button.
 Layer Order Panel
 -----------------
 
-There is a panel that allows you to define an independent drawing order for
-the layers panel. You can activate it in the menu :menuselection:`Settings
---> Panels --> Layer Order Panel`. This feature allows you to, for instance,
-order your layers in order of importance, but still display them in the
-correct order (see figure_layer_order_; you can notice that the ``airports``
+By default, layers shown in QGIS map canvas are drawn following their order
+in the :guilabel:`Layers` panel i.e., the higher a layer is in the panel, the
+upper (hence, more visible) it'll be in the map view.
+
+You can however choose another visibility logic and define an independent
+drawing order for the layers with the :guilabel:`Layer Order` panel enabled
+in :menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9` command.
+Check the |checkbox| :guilabel:`Control rendering order` box underneath
+the list of layers and reorganize the layers in the panel as you want. This
+order becomes the one applied to the map canvas.
+For example, in figure_layer_order_, you can notice that the ``airports``
 features are displayed over the ``alaska`` polygon despite their layers
-placement in the Layers panel).
-Unchecking the |checkbox| :guilabel:`Control rendering order` box underneath
-the list of layers will cause a revert to default behavior.
+placement in the Layers panel.
+
+Unchecking the |checkbox| :guilabel:`Control rendering order` box will cause
+a revert to default behavior.
 
 .. _figure_layer_order:
 
@@ -318,14 +347,17 @@ the list of layers will cause a revert to default behavior.
 Overview Panel
 --------------
 
-In QGIS, you can use an overview panel that provides a full extent view of
-layers added to it. Within the view is a rectangle showing the current map
-extent. This allows you to quickly determine which area of the map you are
-currently viewing. Note that labels are not rendered to the map overview even
-if the layers in the map overview have been set up for labelling. If you click
-and drag the red rectangle in the overview that shows your current extent, the
-main map view will update accordingly.
+The :guilabel:`Overview` panel (:kbd:`Ctrl+8`) can constantly display a map with
+full extent view of some of the layers. The Overview map is filled with layers
+using the :guilabel:`Show in Overview` option from the :menuselection:`Layer`
+menu or in the layer contextual menu. Within the view,
+a red rectangle shows the current map canvas extent, helping you to quickly
+determine which area of the whole map you are currently viewing. If you
+click-and-drag the red rectangle in the overview frame, the main map view
+extent will update accordingly.
 
+Note that labels are not rendered to the map overview even
+if the layers used in the map overview have been set up for labeling.
 
 .. index::
    single: Log messages
@@ -350,7 +382,8 @@ It can be activated using the most right icon in the bottom status bar.
 Undo/Redo Panel
 ---------------
 
-For each layer being edited, this panel shows the list of actions done, allowing
+For each layer being edited, the :guilabel:`Undo/Redo` (:kbd:`Ctrl+5`) panel
+shows the list of actions done, allowing
 to quickly undo a set of actions by simply selecting the action listed above.
 More details at :ref:`Undo and Redo edits <undoredo_edits>`.
 
@@ -363,16 +396,14 @@ More details at :ref:`Undo and Redo edits <undoredo_edits>`.
 Statistical Summary Panel
 --------------------------
 
-This panel can show some statistics on a specific vector layers. The panel
-allows users to choose:
+The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
+on any vector layer. This panel allows you to select:
 
-* the vector layer;
-* the column or the expression;
-* filter statistics to selected features;
-* refresh the informations;
-* the statistics information to display with the bottom right button.
-
-Statistic information available are (depending on the field's type):
+* the vector layer to compute the statistics on;
+* the column to use or enter any |expression| :ref:`expression <vector_expressions>`; 
+* the statistics to return using the drop-down button at the right bottom of the
+  dialog. Depending on the field's (or expression's values) type, available
+  statistics are:
 
 ================================== ============ ============  ============  ============
  Statistics                         String       Integer       Float         Date
@@ -398,6 +429,13 @@ Maximum Length                      |checkbox|
 ================================== ============ ============  ============  ============
 
 Table: Statistics available for each field type
+
+The statistical summary can then be:
+
+* returned for the whole layer or the |checkbox| :guilabel:`selected features only`;
+* recalculated using the |draw| button when the underlying data source changes
+  (eg, new or removed features/fields, attribute modification);
+* |editCopy| copied to the clipboard and pasted as table in another application.
 
 .. _figure_statistical_summary:
 
@@ -458,6 +496,8 @@ right-click on the layer and choose |removeLayer| :sup:`Remove`.
  dependent to the original project. You can then safely remove the linked
  layer.
 
+
+.. _working_canvas:
 
 Working with map canvas
 =======================
@@ -677,8 +717,8 @@ Note that you can have multiple bookmarks with the same name.
 Working with Bookmarks
 ......................
 
-To use or manage bookmarks, select the menu option
-:menuselection:`View --> Show Bookmarks`. The :guilabel:`Spatial Bookmarks`
+To use or manage bookmarks, select the menu option :menuselection:`View --> Show
+Bookmarks` or press :kbd:`Ctrl+7`. The :guilabel:`Spatial Bookmarks`
 panel allows you to:
 
 * Zoom to a Bookmark: select the desired bookmark and then click
@@ -1731,7 +1771,10 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type;
 * an entry to list the :guilabel:`Variable` available;
-* :guilabel:`Edit...` button to create or edit the expression to use;
+* :guilabel:`Edit...` button to create or edit the expression to apply, using
+  the :guilabel:`Expression String Builder` dialog. To help you correctly fill
+  in the expression, a reminder of the expected output's format is provided in
+  the dialog;
 * :guilabel:`Paste` and :guilabel:`Copy` buttons;
 * :guilabel:`Clear` button to remove the setup;
 * and, for numeric and color properties, :guilabel:`Assistant...` to rescale
@@ -1847,6 +1890,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
@@ -1872,6 +1917,8 @@ The values presented in the varying size assistant above will set the size
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
@@ -1938,7 +1985,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Map Presentation
 ===============================================================================
 
@@ -77,6 +81,7 @@ Save your QGIS project for future references.
 
 Through this module you have seen how a basic forest inventory can be planned and presented with QGIS. Many more forest analysis are possible with the variety of tools that you can access, but hopefully this manual has given you a good starting point to explore how you could achieve the specific results you need.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -88,3 +93,4 @@ Through this module you have seen how a basic forest inventory can be planned an
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |basic| image:: /static/global/basic.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

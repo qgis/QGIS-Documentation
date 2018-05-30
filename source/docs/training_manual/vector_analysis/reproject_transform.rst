@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Reprojecting and Transforming Data
 ===============================================================================
 
@@ -271,6 +275,7 @@ Further information on Coordinate Reference Systems is available `here
 In the next lesson you'll learn how to analyze vector data using QGIS' various
 vector analysis tools.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -286,3 +291,4 @@ vector analysis tools.
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

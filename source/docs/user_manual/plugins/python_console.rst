@@ -40,15 +40,14 @@ Toolbar
 
 The toolbar proposes the following tools:
 
-* |iconClearConsole| :guilabel:`Clear console` to wipe the output area;
-* |iconClassConsole| :guilabel:`Import class`: **Processing**, **PyQt4.QtCore**
-  or **PyQt4.QtGui** class;
-* |iconRunConsole| :guilabel:`Run command` available in the input area: same as
+* |iconClearConsole| :sup:`Clear Console` to wipe the output area;
+* |iconRunConsole| :sup:`Run Command` available in the input area: same as
   pressing :kbd:`Enter`;
-* |iconeShowEditorConsole| :guilabel:`Show editor`: toggles :ref:`console_editor`
+* |iconeShowEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor`
   visibility;
-* |iconSettingsConsole| :guilabel:`Options...`;
-* |iconHelpConsole| :guilabel:`Help...`.
+* |options| :sup:`Options...`: opens a dialog to configure console
+  properties (see :ref:`console_options`);
+* |helpContents| :sup:`Help...`: browses the current documentation.
 
 
 Console
@@ -60,7 +59,7 @@ The console main features are:
 
   * Python
   * PyQGIS
-  * PyQt4
+  * PyQt5
   * QScintilla2
   * osgeo-gdal-ogr
 
@@ -68,7 +67,7 @@ The console main features are:
   :ref:`console_options`;
 * Execute code snippets from the input area by typing and pressing :kbd:`Enter`
   or :guilabel:`Run Command`;
-* Execute code snippets from the output area using the :guilabel:`Enter selected`
+* Execute code snippets from the output area using the :guilabel:`Enter Selected`
   from the contextual menu or pressing :kbd:`Ctrl+E`;
 * Browse the command history from the input area using the :kbd:`Up` and
   :kbd:`Down` arrow keys and execute the command you want;
@@ -77,8 +76,10 @@ The console main features are:
   accessed from context menu of input area;
 * Save and clear the command history. The history will be saved into the file
   :file:`~/.qgis2/console_history.txt`;
-* Open `QGIS API <http://qgis.org/api>`_ documentation by typing ``_api``;
-* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_pyqgis``.
+* Open `QGIS C++ API <https://qgis.org/api>`_ documentation by typing ``_api``;
+* Open `QGIS Python API <https://qgis.org/pyqgis>`_ documentation by typing ``_pyqgis``.
+* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_cookbook``.
+
 
 .. tip:: **Reuse executed commands from the output panel**
 
@@ -98,7 +99,7 @@ The console main features are:
 The Code Editor
 ===============
 
-Use the |iconeShowEditorConsole| :sup:`Show editor` button to enable the editor
+Use the |iconeShowEditorConsole| :sup:`Show Editor` button to enable the editor
 widget. It allows editing and saving Python files and offers advanced
 functionalities to manage your code (comment and uncomment code, check syntax,
 share the code via codepad.org and much more). Main features are:
@@ -107,7 +108,7 @@ share the code via codepad.org and much more). Main features are:
 
   * Python
   * PyQGIS
-  * PyQt4
+  * PyQt5
   * QScintilla2
   * osgeo-gdal-ogr
 
@@ -125,9 +126,10 @@ share the code via codepad.org and much more). Main features are:
 
 * Object inspector: a class and function browser;
 * Go to an object definition with a mouse click (from Object inspector);
-* Execute code snippets with the :guilabel:`Enter selected` command;
-* Execute the whole script with the :guilabel:`Run script` command (this
-  creates a byte-compiled file with the extension :file:`.pyc`).
+* Execute code snippets with the |iconRunConsole| :guilabel:`Run Selected`
+  command in contextual menu;
+* Execute the whole script with the |startGeoref| :guilabel:`Run Script`
+  command (this creates a byte-compiled file with the extension :file:`.pyc`).
 
 .. note::
 
@@ -177,22 +179,23 @@ the Python console behavior:
    Console from the close button. This allows you to save the geometry to be
    restored to the next start.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |iconClassConsole| image:: /static/common/iconClassConsole.png
-   :width: 1.5em
 .. |iconClearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
-.. |iconHelpConsole| image:: /static/common/iconHelpConsole.png
+.. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |iconRunConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
-.. |iconSettingsConsole| image:: /static/common/iconSettingsConsole.png
-   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |iconeShowEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |startGeoref| image:: /static/common/mActionStartGeoref.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

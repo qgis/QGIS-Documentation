@@ -75,22 +75,39 @@ and toolbars, see section :ref:`label_toolbars`.
 Project
 -------
 
+The :menuselection:`Project` menu is somehow the entrance and exit points of
+the :ref:`project file <sec_projects>`. It provides you with tools to:
+
+* Create :guilabel:`New` file from scratch or using another project file as
+  template (see :ref:`Project files options <projectfiles_options>` for
+  template configuration);
+* :guilabel:`Open...` project file from file browser or PostgreSQL database;
+* Close a project or revert it to its last saved state;
+* Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+  or within a PotgreSQL database;
+* Export the project rendering to different formats from the map canvas or
+  using a :ref:`print layout <label_printlayout>`;
+* Set the project properties and the snapping options when editing layers.
+
 =======================================================  ====================  =========================  ===============================
 Menu Option                                              Shortcut              Toolbar                    Reference
 =======================================================  ====================  =========================  ===============================
 |fileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         :guilabel:`Project`        see :ref:`sec_projects`
-|fileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         :guilabel:`Project`        see :ref:`sec_projects`
+|fileOpen| :guilabel:`Open...`                           :kbd:`Ctrl+O`         :guilabel:`Project`        see :ref:`sec_projects`
+:menuselection:`Open from --> PostgreSQL`                \                     \                          \
 :menuselection:`New from template -->`                   \                     \                          see :ref:`sec_projects`
 :menuselection:`Open Recent -->`                         \                     \                          see :ref:`sec_projects`
+:guilabel:`Revert Project...`                            \                     \                          \
 :guilabel:`Close Project`                                \                     \                          see :ref:`sec_projects`
 |fileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         :guilabel:`Project`        see :ref:`sec_projects`
 |fileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   :guilabel:`Project`        see :ref:`sec_projects`
+:menuselection:`Save to --> PostgreSQL`                  \                     \                          \
 |saveMapAsImage| :guilabel:`Save Map as Image...`        \                     \                          see :ref:`sec_output`
 |saveAsPDF| :guilabel:`Save Map as PDF...`               \                     \                          see :ref:`sec_output`
 :guilabel:`DXF Export...`                                \                     \                          see :ref:`sec_output`
 :guilabel:`DWG/DXF Import...`                            \                     \                          \
-:guilabel:`Snapping Options...`                          :kbd:`S`              \                          see :ref:`snapping_tolerance`
-|projectProperties| :guilabel:`Project Properties...`    :kbd:`Ctrl+Shift+P`   \                          see :ref:`sec_projects`
+:guilabel:`Snapping Options...`                          \                     \                          see :ref:`snapping_tolerance`
+:guilabel:`Project Properties...`                        :kbd:`Ctrl+Shift+P`   \                          see :ref:`project_properties`
 |newLayout| :guilabel:`New Print Layout`                 :kbd:`Ctrl+P`         :guilabel:`Project`        see :ref:`label_printlayout`
 |newReport| :guilabel:`New Report`                       \                     \                          see :ref:`label_printlayout`
 |layoutManager| :guilabel:`Layout Manager...`            \                     :guilabel:`Project`        see :ref:`label_printlayout`
@@ -162,40 +179,63 @@ Menu Option                                              Shortcut              T
 View
 ----
 
-=======================================================  ====================  ===============================  ==========================================
-Menu Option                                              Shortcut              Toolbar                          Reference
-=======================================================  ====================  ===============================  ==========================================
-|newMap| :guilabel:`New Map View`                        :kbd:`Ctrl+M`         :guilabel:`Map Navigation`       \
-:guilabel:`New 3D Map View`                              :kbd:`Ctrl+Shift+M`   \                                \
-|pan| :guilabel:`Pan Map`                                \                     :guilabel:`Map Navigation`       see :ref:`zoom_pan`
-|panToSelected| :guilabel:`Pan Map to Selection`         \                     :guilabel:`Map Navigation`       \
-|zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl+Alt++`     :guilabel:`Map Navigation`       see :ref:`zoom_pan`
-|zoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+Alt+-`     :guilabel:`Map Navigation`       see :ref:`zoom_pan`
-|identify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`   :guilabel:`Attributes`           see :ref:`identify`
-:menuselection:`Measure -->`                             \                     :guilabel:`Attributes`           see :ref:`sec_measure`
-|sum| :guilabel:`Statistical Summary`                    \                     :guilabel:`Attributes`           see :ref:`statistical_summary`
-|zoomFullExtent| :guilabel:`Zoom Full`                   :kbd:`Ctrl+Shift+F`   :guilabel:`Map Navigation`       \
-|zoomToLayer| :guilabel:`Zoom To Layer`                  \                     :guilabel:`Map Navigation`       \
-|zoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         :guilabel:`Map Navigation`       \
-|zoomLast| :guilabel:`Zoom Last`                         \                     :guilabel:`Map Navigation`       \
-|zoomNext| :guilabel:`Zoom Next`                         \                     :guilabel:`Map Navigation`       \
-|zoomActual| :guilabel:`Zoom To Native Resolution`       \                     :guilabel:`Map Navigation`       \
-:menuselection:`Decorations -->`                         \                     \                                see :ref:`decorations`
-:menuselection:`Preview mode -->`                        \                     \                                \
-|mapTips| :guilabel:`Map Tips`                           \                     :guilabel:`Attributes`           see :ref:`maptips`
-|newBookmark| :guilabel:`New Bookmark...`                :kbd:`Ctrl+B`         :guilabel:`Attributes`           see :ref:`sec_bookmarks`
-|showBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   :guilabel:`Attributes`           see :ref:`sec_bookmarks`
-|draw| :guilabel:`Refresh`                               :kbd:`F5`             :guilabel:`Map Navigation`       \
-|showAllLayers| :guilabel:`Show All Layers`              :kbd:`Ctrl+Shift+U`   :guilabel:`Manage Layers`        \
-|hideAllLayers| :guilabel:`Hide All Layers`              :kbd:`Ctrl+Shift+H`   :guilabel:`Manage Layers`        \
-|showAllLayers| :guilabel:`Show Selected Layers`         \                     \                                \
-|hideAllLayers| :guilabel:`Hide Selected Layers`         \                     \                                \
-|hideAllLayers| :guilabel:`Hide Deselected Layers`       \                     \                                \
-:menuselection:`Panels -->`                              \                     \                                see :ref:`sec_panels_and_toolbars`
-:menuselection:`Toolbars -->`                            \                     \                                see :ref:`sec_panels_and_toolbars`
-:guilabel:`Toggle Full Screen Mode`                      :kbd:`F11`            \                                \
-:guilabel:`Toggle Panel Visibility`                      :kbd:`Ctrl+Tab`       \                                \
-=======================================================  ====================  ===============================  ==========================================
+The map being designed is rendered in map views. You can interact with these
+interfaces using the :menuselection:`View` tools (see :ref:`working_canvas`
+for more information). For example, you can:
+
+* Create new map views, 2D or 3D, next to the main map canvas;
+* :ref:`Zoom or pan <zoom_pan>` to any place;
+* Query displayed features attributes or geometry;
+* Change the map view aspect using preview modes, annotations or decorations;
+* Access any panel or toolbar.
+
+Moreover the menu allows to reorganize QGIS interface itself using actions like:
+
+* :guilabel:`Toggle Full Screen Mode`: covers the whole screen with the
+  application items while hiding its title bar;
+* :guilabel:`Toggle Panel Visibility`: shows or hides enabled :ref:`panels
+  <panels_tools>`, quite useful when digitizing features (where you want
+  maximum canvas visibility) as well as when you do a (projected/recorded)
+  presentation using QGIS' main canvas;
+* :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status bar
+  and only shows the map canvas. Combined with full screen option, it makes
+  your screen display only the map.
+
+=======================================================  =======================  =============================  ==========================================
+Menu Option                                              Shortcut                 Toolbar                        Reference
+=======================================================  =======================  =============================  ==========================================
+|newMap| :guilabel:`New Map View`                        :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
+:guilabel:`New 3D Map View`                              :kbd:`Ctrl+Shift+M`      \                              \
+|pan| :guilabel:`Pan Map`                                \                        :guilabel:`Map Navigation`     see :ref:`zoom_pan`
+|panToSelected| :guilabel:`Pan Map to Selection`         \                        :guilabel:`Map Navigation`     \
+|zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     see :ref:`zoom_pan`
+|zoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+Alt+-`        :guilabel:`Map Navigation`     see :ref:`zoom_pan`
+|identify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`      :guilabel:`Attributes`         see :ref:`identify`
+:menuselection:`Measure -->`                             \                        :guilabel:`Attributes`         see :ref:`sec_measure`
+|sum| :guilabel:`Statistical Summary`                    \                        :guilabel:`Attributes`         see :ref:`statistical_summary`
+|zoomFullExtent| :guilabel:`Zoom Full`                   :kbd:`Ctrl+Shift+F`      :guilabel:`Map Navigation`     \
+|zoomToLayer| :guilabel:`Zoom To Layer`                  \                        :guilabel:`Map Navigation`     \
+|zoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`            :guilabel:`Map Navigation`     \
+|zoomLast| :guilabel:`Zoom Last`                         \                        :guilabel:`Map Navigation`     \
+|zoomNext| :guilabel:`Zoom Next`                         \                        :guilabel:`Map Navigation`     \
+|zoomActual| :guilabel:`Zoom To Native Resolution`       \                        :guilabel:`Map Navigation`     \
+:menuselection:`Decorations -->`                         \                        \                              see :ref:`decorations`
+:menuselection:`Preview mode -->`                        \                        \                              \
+|mapTips| :guilabel:`Map Tips`                           \                        :guilabel:`Attributes`         see :ref:`maptips`
+|newBookmark| :guilabel:`New Bookmark...`                :kbd:`Ctrl+B`            :guilabel:`Attributes`         see :ref:`sec_bookmarks`
+|showBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`      :guilabel:`Attributes`         see :ref:`sec_bookmarks`
+|draw| :guilabel:`Refresh`                               :kbd:`F5`                :guilabel:`Map Navigation`     \
+|showAllLayers| :guilabel:`Show All Layers`              :kbd:`Ctrl+Shift+U`      :guilabel:`Manage Layers`      \
+|hideAllLayers| :guilabel:`Hide All Layers`              :kbd:`Ctrl+Shift+H`      :guilabel:`Manage Layers`      \
+|showAllLayers| :guilabel:`Show Selected Layers`         \                        \                              \
+|hideAllLayers| :guilabel:`Hide Selected Layers`         \                        \                              \
+|hideAllLayers| :guilabel:`Hide Deselected Layers`       \                        \                              \
+:menuselection:`Panels -->`                              \                        \                              see :ref:`sec_panels_and_toolbars`
+:menuselection:`Toolbars -->`                            \                        \                              see :ref:`sec_panels_and_toolbars`
+:guilabel:`Toggle Full Screen Mode`                      :kbd:`F11`               \                              \
+:guilabel:`Toggle Panel Visibility`                      :kbd:`Ctrl+Tab`          \                              \
+:guilabel:`Toggle Map Only`                              :kbd:`Ctrl+Shift+Tab`    \                              \
+=======================================================  =======================  =============================  ==========================================
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
@@ -228,9 +268,9 @@ Menu Option                                                   Shortcut          
 :guilabel:`Properties...`                                     \                     \                                  see :ref:`vector_properties_dialog`
 :guilabel:`Filter...`                                         :kbd:`Ctrl+F`         \                                  see :ref:`vector_query_builder`
 |labeling| :guilabel:`Labeling`                               \                     \                                  see :ref:`vector_labels_tab`
-|inOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   :guilabel:`Manage Layers`          \
-|addAllToOverview| :guilabel:`Add All To Overview`            \                     \                                  \
-|removeAllOVerview| :guilabel:`Remove All From Overview`      \                     \                                  \
+|inOverview| :guilabel:`Show in Overview`                     \                     \                                  see :ref:`overview_panels`
+|addAllToOverview| :guilabel:`Show All in Overview`           \                     \                                  see :ref:`overview_panels`
+|removeAllOVerview| :guilabel:`Hide All From Overview`        \                     \                                  see :ref:`overview_panels`
 ============================================================  ====================  ================================  =====================================
 
 Settings
@@ -801,7 +841,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |whatsThis| image:: /static/common/whats_this.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png

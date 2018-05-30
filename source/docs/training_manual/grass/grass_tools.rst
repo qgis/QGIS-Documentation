@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| GRASS Tools
 ===============================================================================
 
@@ -125,6 +129,7 @@ Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more
 structured approach, look under the :guilabel:`Modules Tree` tab, which
 organizes tools by type.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -138,3 +143,4 @@ organizes tools by type.
 .. |grassRegionEdit| image:: /static/common/grass_region_edit.png
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

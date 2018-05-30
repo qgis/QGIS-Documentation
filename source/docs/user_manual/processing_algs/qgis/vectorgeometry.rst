@@ -150,6 +150,8 @@ for points, lines and polygons:
 
    In yellow the buffer of point, line and polygon layer
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -229,6 +231,8 @@ In case of a multigeometry layer a single centroid will be calculated for each
 feature. The resulting centroid represents the barycenter of all parts, so the
 centroid can be outside the feature borders.
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -262,6 +266,8 @@ information (numbers of error found and type of error):
    :align: center
 
    Left the input layer. Right: in green the valid layer, in orange the invalid layer
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -310,6 +316,8 @@ a single part. This algorithm does not dissolve overlapping geometries - they wi
 be collected together without modifying the shape of each geometry part.
 
 See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options.
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -431,6 +439,8 @@ covers the whole layer or grouped subsets of features.
 
    Black lines identify the convex hull for each layer feature
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 ``Input point layer`` [vector: any]
@@ -481,6 +491,8 @@ layer.
    :align: center
 
    Delaunay triangulation on points
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -550,6 +562,8 @@ Vertices will be added to each segment of the layer.
    :align: center
 
    Red points show the vertices before and after the densify
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -648,6 +662,8 @@ the features are *aggregated*.
 
    Dissolve the polygon layer on a common attribute
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -712,6 +728,8 @@ Eliminate is normally used to get rid of sliver polygons, i.e. tiny polygons tha
 are a result of polygon intersection processes where boundaries of the inputs are
 similar but not identical.
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 ``Input layer`` [vector: polygon]
@@ -773,6 +791,8 @@ table will be different:
 * for point layers: x and y coordinates
 * for line layers: length
 * for polygon layers: perimeter and area
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -883,6 +903,8 @@ distance along original geometry and bisector angle of vertex for original geome
    :align: center
 
    Vertices extracted for line and polygon layer
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -1011,6 +1033,8 @@ Generates a polygon layer using as polygon rings the lines from an input line la
 The attribute table of the output layer is the same as the one from of the input
 line layer.
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -1133,6 +1157,8 @@ into single features.
    :align: center
 
    Left the multipart source layer and right the single part output result
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -1277,7 +1303,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer
 
-``Create point on surface for each part`` [boolean]
+``Create point on surface for each part`` [boolean] |32|
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -1454,6 +1480,8 @@ of the polygons in the input layer.
 
    Black lines as the result of the algorithm
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -1469,8 +1497,8 @@ Output
 
 .. _qgisprojectpointcartesian:
 
-Project points (Cartesian)
---------------------------
+Project points (Cartesian) |32|
+-------------------------------
 Projects point geometries by a specified distance and bearing (azimuth), creating
 a new point layer with the projected points.
 
@@ -1765,6 +1793,8 @@ snapping geometries to grid.
    :align: center
 
    Clockwise from left-up: source layer and different simplification tolerances
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -2158,6 +2188,8 @@ any other point.
 
    Voronoi polygons
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -2182,6 +2214,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

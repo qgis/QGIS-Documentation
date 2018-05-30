@@ -1062,13 +1062,12 @@ definition of your new geometry.
 
    The Advanced Digitizing panel
 
-.. note:: The tools are not enabled if the map view is in geographic coordinates.
+The :guilabel:`Advanced Digitizing` panel can be open either with a right-click
+on the toolbar, from :menuselection:`View --> Panels -->` menu or pressing
+:kbd:`Ctrl+4`. Once the panel is visible, click the |cad| :sup:`Enable advanced
+digitizing tools` button to activate the set of tools.
 
-The Advanced Digitizing panel can be open either with a right-click on the
-toolbar and choose Advanced Digitizing panel or in :menuselection:`View -->
-Panels --> Advanced Digitizing Panel`. Once the panel is visible, click the
-|cad| :sup:`enable advanced digitizing tool` button to activate the Advanced
-Digitizing tool.
+.. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 Concepts
 --------
@@ -1389,4 +1388,4 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

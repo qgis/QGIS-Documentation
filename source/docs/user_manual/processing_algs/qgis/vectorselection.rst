@@ -218,6 +218,8 @@ by this algorithm.
 The subset is defined randomly, based on feature IDs, using a percentage or count
 value to define the total number of features in the subset.
 
+``Default menu``: :menuselection:`Vector --> Research Tools`
+
 Parameters
 ..........
 
@@ -255,6 +257,8 @@ Categories are defined according to a given attribute, which is also specified a
 an input parameter for the algorithm.
 
 No new outputs are created.
+
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -359,6 +363,8 @@ the features in an additional layer.
 
 No new outputs are created.
 
+``Default menu``: :menuselection:`Vector --> Research Tools`
+
 Parameters
 ..........
 
@@ -397,4 +403,4 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
