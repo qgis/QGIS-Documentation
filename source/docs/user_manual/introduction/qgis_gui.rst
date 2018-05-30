@@ -579,21 +579,27 @@ Status Bar
 ==========
 
 The status bar provides you with general information about the map view,
-and actions processed or available and offers you tools to manage the map view.
+processed or available actions and offers you tools to manage the map view.
 
-On the left side of the status bar, you can get a summary of actions you've done
+On the left side of the status bar, the locator bar, a quick search widget,
+helps you find and run any feature or options in QGIS. Simply write a text
+associated to the item you are looking for (name, tag, keyword...) and you get
+a list that updates as you write. You can also limit the search scope thanks to
+the :ref:`locator filters <locator_options>`. Click the |search| button to
+select any of them and press the **[Configure]** entry for global settings.
+
+In the area next to it, will be shown when needed summary of actions you've done
 (such as selecting features in a layer, removing layer) or a long description
 of the tool you are hovering over (not available for all tools).
-On startup, the bar status also informs you about availability of new or upgradeable
-plugins (if checked in :ref:`Plugin Manager settings <setting_plugins>`).
 
-In case of lengthy operations, such as gathering of statistics in raster layers
-or rendering several layers in map view, a progress bar is displayed in the
-status bar to show the current progress of the action.
+In case of lengthy operations, such as gathering of statistics in raster layers,
+Processing algorithms' execution or rendering several layers in map view, a
+progress bar is displayed in the status bar to show the current progress of the
+action.
 
 The |tracking| :guilabel:`Coordinate` option shows the current position of the mouse,
 following it while moving across the map view. You can set the unit (and precision)
-to use in the project properties, General tab.
+to use in the :menuselection:`Project properties --> General` tab.
 Click on the small button at the left of the textbox to toggle between
 the Coordinate option and the |extents| :guilabel:`Extents` option that displays
 in map units, the coordinates of the current lower leftmost and upper rightmost
@@ -607,51 +613,51 @@ current scale. There is a scale selector, which allows you to choose among
 .. index:: Magnification
 .. _magnifier:
 
-On the right side of the scale display you can define a current
-magnification level for your map view. This allows to zoom in to a map
-without altering the map scale, making it easier to accurately
+On the right side of the scale display, press the |lockedGray| button to lock
+the scale to use the magnifier to zoom in or out. The magnifier allows to zoom
+in to a map without altering the map scale, making it easier to accurately
 tweak the positions of labels and symbols. The magnification level is expressed as a
 percentage. If the :guilabel:`Magnifier` has a level of 100%, then the current
 map is not magnified. Additionally, a default magnification value can be defined
-within
-:menuselection:`Settings --> Options --> Rendering --> Rendering behaviour`,
+within :menuselection:`Settings --> Options --> Rendering --> Rendering behavior`,
 which is very useful for high resolution screen to avoid too small symbols.
 
-To the right of the magnifier tool you can define a current clockwise rotation for
+On the right of the magnifier tool you can define a current clockwise rotation for
 your map view in degrees.
 
 On the right side of the status bar, there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see section :ref:`redraw_events`).
 
-To the right of the render functions, you find the |projectionDisabled|
-:sup:`Current CRS:` icon with the EPSG code of the current
-project CRS. Clicking on this lets you :guilabel:`Enable 'on the fly' CRS
-transformation` properties for the current project and apply another CRS to the
-map view.
+To the right of the render functions, you find the |projectionEnabled|
+:guilabel:`EPSG:code` button mentioning the current project CRS. Clicking on
+this opens the :guilabel:`Project Properties` dialog and lets you apply another
+CRS to the map view.
 
-Finally, the |messageLog| :sup:`Messages` button opens the :guilabel:`Log
+The |messageLog| :sup:`Messages` button next to it opens the :guilabel:`Log
 Messages Panel` which informs you on underlying process (QGIS startup, plugins
 loading, processing tools...)
 
+Depending on the :ref:`Plugin Manager settings <setting_plugins>`, the status
+bar can sometimes show icons at the to right to inform you about availability
+of |pluginNew| new or |pluginUpgrade| upgradeable plugins. Click the icon to
+open the Plugin Manager dialog.
+
+.. index::
+   single: Scale calculate
 
 .. tip::
    **Calculating the Correct Scale of Your Map Canvas**
-
-   .. index::
-      single: Scale calculate
 
    When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and
    units are degrees. This means that QGIS will interpret any
    coordinate in your layer as specified in degrees. To get correct scale values,
    you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
    tab under :menuselection:`Project --> Project Properties`, or you can use
-   the |projectionDisabled| :sup:`Current CRS:` icon seen above. In the latter case,
+   the |projectionEnabled| :sup:`EPSG:code` icon seen above. In the latter case,
    the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
 
    Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
-
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -745,6 +751,8 @@ loading, processing tools...)
    :width: 1.5em
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
+.. |lockedGray| image:: /static/common/lockedGray.png
+   :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
@@ -783,6 +791,10 @@ loading, processing tools...)
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
+.. |pluginNew| image:: /static/common/pluginNew.png
+   :width: 1.5em
+.. |pluginUpgrade| image:: /static/common/pluginUpgrade.png
+   :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
@@ -793,7 +805,7 @@ loading, processing tools...)
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
-.. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
+.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
@@ -814,6 +826,8 @@ loading, processing tools...)
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
