@@ -1776,13 +1776,10 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
   in the expression, a reminder of the expected output's format is provided in
   the dialog;
 * :guilabel:`Paste` and :guilabel:`Copy` buttons;
-* :guilabel:`Clear` button to remove the setup.
-
-Parameters that can be used with data-defined tools are:
-
-* Style and symbols parameters
-* Labels parameters
-* Layout parameters
+* :guilabel:`Clear` button to remove the setup;
+* and, for numeric and color properties, :guilabel:`Assistant...` to rescale
+  how the feature data is applied to the property (more details :ref:`below
+  <data_defined_assistant>`).
 
 .. tip:: **Use right-click to (de)activate the data overriding**
 
@@ -1794,31 +1791,45 @@ Parameters that can be used with data-defined tools are:
 Using the data-defined assistant interface
 ..........................................
 
-An assistant is moreover accessible through the |dataDefined| menu
-to help you define size expression.
+When the |dataDefined| :sup:`Data-defined override` button is associated to a
+numeric or color parameter, it has an :guilabel:`Assistant...` option that
+allows you to modulate how the data is applied to the parameter, for each
+feature. The assistant lets you:
+
+* define the :guilabel:`Input` data, ie:
+
+  * the attribute to represent, using the Field listbox or the |expression|
+    :sup:`Set column expression` function (see :ref:`vector_expressions`)
+  * the range of values to represent: you can manually enter the values or use
+    the |draw| :sup:`Fetch value range from layer` button to automatically fill
+    these fields with the minimum and maximum values returned by the chosen
+    attribute or the expression applied to your data.
+* |unchecked| :guilabel:`Apply transform curve`: By default, output values (see
+  below for setting) are applied to input features following a linear scaling.
+  You can override this logic: enable the transform option, click on the
+  graphic to add break point(s) and drag the point(s) to apply a custom
+  distribution;
+* define the :guilabel:`Output` values: the options vary according to the
+  parameter to define. You can globally set:
+
+  * the minimum and maximum values to apply to the selected property. In case
+    of a color setting, you'll need to provide a :ref:`color ramp
+    <color-ramp>`;
+  * the :guilabel:`Scale method` of representation which can be **Flannery**,
+    **Exponential**, **Surface** or **Radius**;
+  * the :guilabel:`Exponent` to use for data scaling;
+  * the output value or :ref:`color <color-selector>` to represent features
+    with NULL values.
+
+When compatible with the property, a live-update preview is displayed on the
+right of the dialog and helps you control the value scaling.
 
 .. _figure_symbology_size_assistant:
 
 .. figure:: img/varying_size_assistant.png
    :align: center
 
-   Varying size assistant
-
-The assistant lets you define:
-
-* The attribute to represent, using the Field listbox or the |expression|
-  :sup:`Set column expression` function (see :ref:`vector_expressions`)
-* the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
-* The minimum and maximum size of the symbol
-* The range of values to represent: The down pointing arrow helps you
-  fill automatically these fields with the minimum (or zero) and maximum values
-  returned by the chosen attribute or the expression applied to your data.
-* An unique size to represent NULL values.
-
-To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in
-the layer legend and is also used to shape the layer representation in the
-print layout legend item.
+   The data-defined size assistant
 
 The values presented in the varying size assistant above will set the size
 'Data-defined override' with:
@@ -1875,9 +1886,9 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
-   :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
