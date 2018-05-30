@@ -497,6 +497,8 @@ right-click on the layer and choose |removeLayer| :sup:`Remove`.
  layer.
 
 
+.. _working_canvas:
+
 Working with map canvas
 =======================
 
