@@ -475,6 +475,7 @@ collected.
 
    QGIS Server in Raster Properties
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -510,4 +511,4 @@ collected.
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

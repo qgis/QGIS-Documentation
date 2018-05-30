@@ -282,6 +282,7 @@ What's next?
 In the section that follows we will take a closer look at **interpolation** as
 an example of spatial analysis you can do with raster data.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

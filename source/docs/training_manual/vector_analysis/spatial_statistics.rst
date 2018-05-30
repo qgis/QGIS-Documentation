@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Spatial Statistics
 ===============================================================================
 
@@ -473,6 +477,7 @@ of datasets.
 Now that we've covered vector analysis, why not see what can be done with
 rasters? That's what we'll do in the next module!
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -488,3 +493,4 @@ rasters? That's what we'll do in the next module!
 .. |localCRS| replace:: :kbd:`WGS 84 / UTM 34S`
 .. |moderate| image:: /static/global/moderate.png
 .. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Forms
 ===============================================================================
 
@@ -224,6 +228,7 @@ Opening a form on identifying a feature is one of the standard actions that
 QGIS can perform. However, you can also direct it to perform custom actions
 that you define. This is the subject of the next lesson.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -242,3 +247,4 @@ that you define. This is the subject of the next lesson.
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

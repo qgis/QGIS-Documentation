@@ -329,6 +329,7 @@ For any question, please contact the `QGIS Community Team
 <qgis-community-team@lists.osgeo.org>`_ or the
 `QGIS Translation Team <qgis-tr@lists.osgeo.org>`_.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -353,4 +354,4 @@ For any question, please contact the `QGIS Community Team
    :width: 2em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

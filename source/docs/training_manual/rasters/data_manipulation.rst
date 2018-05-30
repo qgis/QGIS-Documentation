@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Working with Raster Data
 ===============================================================================
 
@@ -150,6 +154,7 @@ QGIS makes it easy to include raster data into your existing projects.
 Next, we'll use raster data that isn't aerial imagery, and see how
 symbolization is useful in the case of rasters as well.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -164,3 +169,4 @@ symbolization is useful in the case of rasters as well.
    :width: 1.5em
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

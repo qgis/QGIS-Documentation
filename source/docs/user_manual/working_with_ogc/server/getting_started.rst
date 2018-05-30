@@ -12,8 +12,8 @@ Getting Started
       :local:
       :depth: 2
 
-Installation
-============
+Installation on Debian-based systems
+====================================
 
 .. index:: Debian, Ubuntu
 
@@ -29,12 +29,12 @@ Please refer to that section.
 .. _`httpserver`:
 
 HTTP Server configuration
-=========================
+-------------------------
 
 .. index:: Apache
 
 Apache
-------
+......
 
 Configuration
 ^^^^^^^^^^^^^
@@ -107,7 +107,7 @@ QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
 NGINX
------
+.....
 
 You can also use QGIS Server with `NGINX <http://nginx.org/>`_. Unlike Apache,
 NGINX does not automatically spawn a FastCGI process. Actually, you have to use
@@ -255,7 +255,7 @@ variables as shown below:
 
 
 Xvfb
-====
+----
 
 QGIS Server needs a running X Server to be fully usable. But if you don't have
 one, you may use xvfb to have a virtual X environment.
@@ -297,6 +297,103 @@ Or with Apache:
 
  FcgidInitialEnv DISPLAY       ":99"
 
+
+Installation on Windows
+=======================
+
+.. index:: Windows
+
+QGIS Server can also be installed on Windows systems. While the QGIS Server
+package is available in the 64 bit version of the OSGeo4W network installer 
+(https://qgis.org/en/site/forusers/download.html) there is no Apache (or other
+web server) package available, so this must be installed by other means.
+
+A simple procedure is the following:
+
+* Download the XAMPP installer (https://www.apachefriends.org/download.html)
+  for Windows and install Apache
+
+.. figure:: img/qgis_server_windows1.png
+  :align: center
+  
+* Download the OSGeo4W installer, follow the "Advanced Install" and install
+  both the QGIS Desktop and QGIS Server packages
+  
+.. figure:: img/qgis_server_windows2.png
+  :align: center
+  
+* Edit the httpd.conf file (:file:`C:\\xampp\\apache\\httpd.conf`
+  if the default installation paths have been used) and make the following changes:
+
+From:
+
+.. code-block:: apache
+
+    ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
+
+
+To:
+
+.. code-block:: apache
+
+    ScriptAlias /cgi-bin/ "c:/OSGeo4W64/apps/qgis/bin/"
+
+
+From:
+
+.. code-block:: apache
+
+    <Directory "C:/xampp/cgi-bin">
+    AllowOverride None
+    Options None
+    Require all granted
+    </Directory>
+
+
+To:
+
+.. code-block:: apache
+
+    <Directory "c:/OSGeo4W64/apps/qgis/bin">
+    SetHandler cgi-script
+    AllowOverride None
+    Options ExecCGI
+    Order allow,deny
+    Allow from all
+    Require all granted
+    </Directory>
+
+
+From:
+
+.. code-block:: apache
+
+    AddHandler cgi-script .cgi .pl .asp
+
+
+To:
+
+.. code-block:: apache
+
+    AddHandler cgi-script .cgi .pl .asp .exe
+
+
+Then at the bottom of httpd.conf add:
+
+.. code-block:: apache
+
+    SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
+    SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
+    SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python36"
+    SetEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"
+    SetEnv QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
+    SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
+
+
+Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
+a GetCapabilities request to QGIS Server
+
+http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 
 Serve a project
@@ -495,6 +592,7 @@ paths (in the :guilabel:`General` menu of the
 :menuselection:`Project --> Project Properties` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -505,4 +603,4 @@ the path to the SVG image so that it represents a valid relative path.
    :width: 1.3em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

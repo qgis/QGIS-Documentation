@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Web Feature Services
 ===============================================================================
 
@@ -153,6 +157,7 @@ instead of a WMS.
 
 Next, you'll see how to use QGIS Server to provide OGC services.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -165,5 +170,6 @@ Next, you'll see how to use QGIS Server to provide OGC services.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
