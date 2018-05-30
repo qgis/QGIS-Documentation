@@ -78,6 +78,8 @@ General Settings
 * |checkbox| :guilabel:`QGIS-styled group boxes`
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`)
 
+.. _projectfiles_options:
+
 **Project files**
 
 * :guilabel:`Open project on launch` |selectString| (choose between 'New',

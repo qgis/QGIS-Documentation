@@ -75,22 +75,39 @@ and toolbars, see section :ref:`label_toolbars`.
 Project
 -------
 
+The :menuselection:`Project` menu is somehow the entrance and exit points of
+the :ref:`project file <sec_projects>`. It provides you with tools to:
+
+* Create :guilabel:`New` file from scratch or using another project file as
+  template (see :ref:`Project files options <projectfiles_options>` for
+  template configuration);
+* :guilabel:`Open...` project file from file browser or PostgreSQL database;
+* Close a project or revert it to its last saved state;
+* Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+  or within a PotgreSQL database;
+* Export the project rendering to different formats from the map canvas or
+  using a :ref:`print layout <label_printlayout>`;
+* Set the project properties and the snapping options when editing layers.
+
 =======================================================  ====================  =========================  ===============================
 Menu Option                                              Shortcut              Toolbar                    Reference
 =======================================================  ====================  =========================  ===============================
 |fileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         :guilabel:`Project`        see :ref:`sec_projects`
-|fileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         :guilabel:`Project`        see :ref:`sec_projects`
+|fileOpen| :guilabel:`Open...`                           :kbd:`Ctrl+O`         :guilabel:`Project`        see :ref:`sec_projects`
+:menuselection:`Open from --> PostgreSQL`                \                     \                          \
 :menuselection:`New from template -->`                   \                     \                          see :ref:`sec_projects`
 :menuselection:`Open Recent -->`                         \                     \                          see :ref:`sec_projects`
+:guilabel:`Revert Project...`                            \                     \                          \
 :guilabel:`Close Project`                                \                     \                          see :ref:`sec_projects`
 |fileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         :guilabel:`Project`        see :ref:`sec_projects`
 |fileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   :guilabel:`Project`        see :ref:`sec_projects`
+:menuselection:`Save to --> PostgreSQL`                  \                     \                          \
 |saveMapAsImage| :guilabel:`Save Map as Image...`        \                     \                          see :ref:`sec_output`
 |saveAsPDF| :guilabel:`Save Map as PDF...`               \                     \                          see :ref:`sec_output`
 :guilabel:`DXF Export...`                                \                     \                          see :ref:`sec_output`
 :guilabel:`DWG/DXF Import...`                            \                     \                          \
-:guilabel:`Snapping Options...`                          :kbd:`S`              \                          see :ref:`snapping_tolerance`
-|projectProperties| :guilabel:`Project Properties...`    :kbd:`Ctrl+Shift+P`   \                          see :ref:`sec_projects`
+:guilabel:`Snapping Options...`                          \                     \                          see :ref:`snapping_tolerance`
+:guilabel:`Project Properties...`                        :kbd:`Ctrl+Shift+P`   \                          see :ref:`project_properties`
 |newLayout| :guilabel:`New Print Layout`                 :kbd:`Ctrl+P`         :guilabel:`Project`        see :ref:`label_printlayout`
 |newReport| :guilabel:`New Report`                       \                     \                          see :ref:`label_printlayout`
 |layoutManager| :guilabel:`Layout Manager...`            \                     :guilabel:`Project`        see :ref:`label_printlayout`
