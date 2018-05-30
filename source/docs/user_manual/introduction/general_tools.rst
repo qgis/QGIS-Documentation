@@ -396,16 +396,14 @@ More details at :ref:`Undo and Redo edits <undoredo_edits>`.
 Statistical Summary Panel
 --------------------------
 
-This panel can show some statistics on a specific vector layers. The panel
-allows users to choose:
+The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
+on any vector layer. This panel allows you to select:
 
-* the vector layer;
-* the column or the expression;
-* filter statistics to selected features;
-* refresh the informations;
-* the statistics information to display with the bottom right button.
-
-Statistic information available are (depending on the field's type):
+* the vector layer to compute the statistics on;
+* the column to use or enter any |expression| :ref:`expression <vector_expressions>`; 
+* the statistics to return using the drop-down button at the right bottom of the
+  dialog. Depending on the field's (or expression's values) type, available
+  statistics are:
 
 ================================== ============ ============  ============  ============
  Statistics                         String       Integer       Float         Date
@@ -431,6 +429,13 @@ Maximum Length                      |checkbox|
 ================================== ============ ============  ============  ============
 
 Table: Statistics available for each field type
+
+The statistical summary can then be:
+
+* returned for the whole layer or the |checkbox| :guilabel:`selected features only`;
+* recalculated using the |draw| button when the underlying data source changes
+  (eg, new or removed features/fields, attribute modification);
+* |editCopy| copied to the clipboard and pasted as table in another application.
 
 .. _figure_statistical_summary:
 
@@ -1833,11 +1838,15 @@ Parameters that can be used with data-defined tools are:
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
