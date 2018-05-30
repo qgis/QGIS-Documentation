@@ -628,8 +628,7 @@ Locator Settings
 
 |search| The :guilabel:`Locator` tab allows to configure the **Locator bar**, a
 quick search widget available on the status bar that helps you perform searches
-anywhere in the application. It provides some default filters (with read-only
-prefix) to use :
+anywhere in the application. It provides some default filters (with prefix) to use:
 
 * Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
   panel;
@@ -641,9 +640,11 @@ prefix) to use :
 * Calculator  (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard
 * Spatial bookmarks (``b``): finds and zooms to the bookmark extent;
+* Settings (``set``): browses and opens project and application-wide properties
+  dialogs;
 * Processing (``a``): searches and opens a Processing algorithm dialog.
 
-For each filter, you can set whether it is enabled by default or not.
+For each filter, you can customize the filter, set whether it is enabled by default or not.
 The set of default locator filters can be extended by plugins, eg for OSM
 nominatim searches, direct database searching, layer catalog searches.
 
