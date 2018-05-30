@@ -1890,8 +1890,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
