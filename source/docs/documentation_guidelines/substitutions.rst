@@ -147,15 +147,17 @@ Icon                          Substitution                       Icon           
 |captureLine|                 ``|captureLine|``                  \                              \
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
 |nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
-|moveFeature|                 ``|moveFeature|``                  |rotateFeature|                ``|rotateFeature|``
+|moveFeature|                 ``|moveFeature|``                  |moveFeatureCopy|              ``|moveFeatureCopy|``
+|moveFeatureLine|             ``|moveFeatureLine|``              |moveFeatureCopyLine|          ``|moveFeatureCopyLine|``
+|moveFeaturePoint|            ``|moveFeaturePoint|``             |moveFeatureCopyPoint|         ``|moveFeatureCopyPoint|``
+|rotateFeature|               ``|rotateFeature|``                |rotatePointSymbols|           ``|rotatePointSymbols|``
+|offsetCurve|                 ``|offsetCurve|``                  |offsetPointSymbols|           ``|offsetPointSymbols|``
 |simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
 |addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
 |fillRing|                    ``|fillRing|``                     \                              \
 |deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
 |mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
 |splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
-|offsetPointSymbols|          ``|offsetPointSymbols|``           |rotatePointSymbols|           ``|rotatePointSymbols|``
-|offsetCurve|                 ``|offsetCurve|``                  \                              \
 ============================  =================================  =============================  ================================
 
 
@@ -830,6 +832,16 @@ Icon                            Substitution                        Icon        
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
+   :width: 1.5em
+.. |moveFeatureCopy| image:: /static/common/mActionMoveFeatureCopy.png
+   :width: 1.5em
+.. |moveFeatureCopyLine| image:: /static/common/mActionMoveFeatureCopyLine.png
+   :width: 1.5em
+.. |moveFeatureCopyPoint| image:: /static/common/mActionMoveFeatureCopyPoint.png
+   :width: 1.5em
+.. |moveFeatureLine| image:: /static/common/mActionMoveFeatureLine.png
+   :width: 1.5em
+.. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
    :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
