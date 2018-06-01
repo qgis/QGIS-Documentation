@@ -228,17 +228,18 @@ Using the basic digitizing tools, you can perform the following functions:
 +==============================+===================================+==========================+==================================+
 | |allEdits|                   | Current edits                     | |toggleEditing|          | Toggle editing                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |capturePoint|               | Add Feature: Capture Point        | |captureLine|            | Add Feature: Capture Line        |
+| |saveEdits|                  | Save layer edits                  | |capturePoint|           | Add Feature: Capture Point       |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |capturePolygon|             | Add Feature: Capture Polygon      | |moveFeature|            | Move Feature                     |
+| |captureLine|                | Add Feature: Capture Line         | |capturePolygon|         | Add Feature: Capture Polygon     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |circularStringCurvePoint|   | Add Circular String               | |circularStringRadius|   | Add Circular String By Radius    |
+| |nodeTool|                   | Vertex tool                       | |multiEdit|              | Modify the attributes of all     |
+|                              |                                   |                          | selected features simultaneously |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |nodeTool|                   | Vertex tool                       | |deleteSelected|         | Delete Selected                  |
+| |deleteSelected|             | Delete Selected                   ||editCut|                 | Cut Features                     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |editCut|                    | Cut Features                      | |editCopy|               | Copy Features                    |
+| |editCopy|                   | Copy Features                     | |editPaste|              | Paste Features                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |editPaste|                  | Paste Features                    | |saveEdits|              | Save layer edits                 |
+| |undo|                       | Undo                              | |redo|                   | Redo                             |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
@@ -624,7 +625,9 @@ Advanced digitizing
 +===========================+=========================================+========================+=========================+
 | |cad|                     | Enable Advanced Digitizing Tools        | |tracing|              | Enable Tracing          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |undo|                    | Undo                                    | |redo|                 | Redo                    |
+| |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
+| |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
+| |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -1347,6 +1350,18 @@ and angle entered. Repeating the process, several points can be added.
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
+   :width: 1.5em
+.. |moveFeatureCopy| image:: /static/common/mActionMoveFeatureCopy.png
+   :width: 1.5em
+.. |moveFeatureCopyLine| image:: /static/common/mActionMoveFeatureCopyLine.png
+   :width: 1.5em
+.. |moveFeatureCopyPoint| image:: /static/common/mActionMoveFeatureCopyPoint.png
+   :width: 1.5em
+.. |moveFeatureLine| image:: /static/common/mActionMoveFeatureLine.png
+   :width: 1.5em
+.. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
+   :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
