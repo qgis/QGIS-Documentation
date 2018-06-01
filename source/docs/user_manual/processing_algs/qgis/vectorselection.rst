@@ -322,6 +322,15 @@ Parameters
 
   Values to be evaluated
 
+``Modify current selection by`` [selection] |32|
+  How the selection of the algorithm should be managed. You have many options:
+
+  * creating new selection
+  * adding to current selection
+  * removing from current selection
+  * selecting within current selection
+
+  Default: *creating new selection*
 
 .. _qgisselectbyexpression:
 
@@ -403,4 +412,5 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
