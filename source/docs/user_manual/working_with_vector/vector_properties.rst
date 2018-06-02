@@ -462,17 +462,35 @@ such representation.
 
 **Creating proportional symbol**
 
-Proportional rendering is done by first applying to the layer the :ref:`single
-symbol renderer <single_symbol_renderer>`. Then set the symbol to use for the
-features, select the item at the upper level of the symbol tree, and use the
-|dataDefined| :guilabel:`Data-defined override` button available beside the
-:guilabel:`Size` (for point layer) or :guilabel:`Width` option (for line layer).
-Select a field or enter an expression and for each feature, QGIS will apply the
-output value to the property and proportionally resize the symbol.
+Proportional rendering is done by:
 
-You can also use the :guilabel:`Size assistant...` option of the |dataDefined|
-menu to apply some transformation (exponential, flannery...) to the symbol size
-rescaling (see :ref:`data_defined_assistant` for more details).
+* first applying to the layer the :ref:`single symbol renderer
+  <single_symbol_renderer>`;
+* then set the symbol to apply to the features;
+* select the item at the upper level of the symbol tree, and use the
+  |dataDefined| :sup:`Data-defined override` :ref:`button <data_defined>` next
+  to the :guilabel:`Size` (for point layer) or :guilabel:`Width` (for line
+  layer) option;
+* select a field or enter an expression, and for each feature, QGIS will apply
+  the output value to the property and proportionally resize the symbol in the
+  map canvas.
+
+  If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
+  menu to apply some transformation (exponential, flannery...) to the symbol
+  size rescaling (see :ref:`data_defined_assistant` for more details).
+
+You can choose to display the proportional symbols in the :ref:`Layers panel
+<label_legend>` and the :ref:`print layout legend item <layout_legend_item>`:
+unfold the **[Advanced]** drop-down list at the bottom of the main dialog of
+the :guilabel:`Symbology` tab and select **Data-defined size legend...** to
+configure the legend items (see :ref:`data_defined_size_legend` for details).
+
+.. _figure_symbology_proportional:
+
+.. figure:: img/proportional_symbols.png
+   :align: center
+
+   Scaling airports size based on number of passengers
 
 **Creating multivariate analysis**
 
@@ -480,36 +498,31 @@ A multivariate analysis rendering helps you evaluate the relationship between
 two or more variables e.g., one can be represented by a color ramp while the
 other is represented by a size.
 
-The simplest way to create multivariate analysis in QGIS is to first apply
-a categorized or graduated rendering on a layer, using the same type of symbol
-for all the classes. Then, clicking on the symbol **[Change]** button above the
-classification frame, you get the :ref:`symbol-selector` dialog from which,
-as seen above, you can activate and set the :ref:`size assistant <data_defined_assistant>`
-option either on size (for point layer) or width (for line layer).
+The simplest way to create multivariate analysis in QGIS is to:
 
-Like the proportional symbol, the size-related symbol is added to the layer tree,
-at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print layout legend item.
+* first apply a categorized or graduated rendering on a layer, using the same
+  type of symbol for all the classes;
+* Then, apply a proportional symbology on the classes: click on the symbol
+  **[Change]** button above the classification frame: you get the
+  :ref:`symbol-selector` dialog from which, as seen above, you can rescale the
+  size or width using the |dataDefined| :ref:`data defined override` widget.
 
+Like the proportional symbol, the scaled symbology can be added to the layer
+tree, on top of the categorized or graduated classes symbols using the
+:ref:` data defined size legend <size data_defined_size_legend>` feature. And
+both representation are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
 
 .. figure:: img/multivariate_example.png
    :align: center
 
-   Multivariate example
+   Multivariate example with scaled size legend
 
 .. tip:: **Add the size scaled symbols to the print layout legend**
 
-  Other than the layer symbol classes, you can also display the symbol scaled
-  sizes in the :guilabel:`Layers` panel and the :ref:`print layout legend
-  <layout_legend_item>`; unfold the **[Advanced]** drop-down list at the
-  bottom of the symbol selector dialog and select **Data-defined size
-  legend...** to configure the legend items (see :ref:`data_defined_size_legend`
-  for details).
 
-
-.. Index::
+.. index::
    single: Symbology; Rule-based renderer
    single: Rule-based renderer; Create a rule
 .. _rule_based_rendering:
@@ -876,6 +889,13 @@ opening a dialog with the following options to:
 A preview of the legend is displayed in the right panel of the dialog and
 updated as you set the parameters. For collapsed legend, a leader line from
 the horizontal center of the symbol to the corresponding legend text is drawn.
+
+.. _figure_size_legend:
+
+.. figure:: img/data_defined_size_legend.png
+   :align: center
+
+   Setting size scaled legend
 
 .. note:: Currently, data-defined size legend for layer symbology can only be
   applied to point layer using single, categorized or graduated symbology.
