@@ -505,7 +505,8 @@ The simplest way to create multivariate analysis in QGIS is to:
 * Then, apply a proportional symbology on the classes: click on the symbol
   **[Change]** button above the classification frame: you get the
   :ref:`symbol-selector` dialog from which, as seen above, you can rescale the
-  size or width using the |dataDefined| :ref:`data defined override` widget.
+  size or width using the |dataDefined| :ref:`data defined override
+  <data_defined>` widget.
 
 Like the proportional symbol, the scaled symbology can be added to the layer
 tree, on top of the categorized or graduated classes symbols using the
