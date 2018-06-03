@@ -3053,9 +3053,12 @@ layout legend <layout_legend_item>`. These options include:
   button. Text appearance is handled through the font and color selector
   widgets of the **[Text format]** button.
 
-.. Todo: it could be helpful to add a (sample of) expression and/or a screenshot
-   showing legend tab, layers panel and print layout legend (see pull request
-   https://github.com/qgis/QGIS/pull/6817 for inspiration).
+.. _figure_legend_text_symbol:
+
+.. figure:: img/text_legend_symbols.png
+   :align: center
+
+   Setting text on symbols (left) and its rendering in Layers panel (right)
 
 * a list of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
