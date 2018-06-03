@@ -278,3 +278,31 @@ the data. The URL is:
 ::
 
  http://localhost/cgi-bin/project/qgis_mapserv.fcgi
+
+Cascading OGC layers
+-----------------
+
+The QGIS project we plan to use to publish WMS/WFS/WCS layers can of course
+contain layers coming from other (external) OGC servers (regardless of the underlying
+OGC server software used). This way we will effectively **cascade** those layers 
+through our OGC (QGIS Server based) services.
+
+If the external OGC layers are coming from services that make use of the **HTTPS**
+protocol we must take care of some extra QGIS Server configuration. Example for
+the Apache we server:
+
+.. code-block:: bash
+
+  $ mkdir /srv/qgis/.qgis2
+  $ chown www-data:www-data /srv/qgis/.qgis2
+  $ chmod 774 /srv/qgis/.qgis2
+  
+this ensure that the web server is able to write in some user defined folder. Then
+add the following line to the Apache virtual host file to ensure that Apache will use
+such folder
+
+.. code-block:: apache
+
+   FcgidInitialEnv HOME "/srv/qgis"
+   
+then restart Apache.
