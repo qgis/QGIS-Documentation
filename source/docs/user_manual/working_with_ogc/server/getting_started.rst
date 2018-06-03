@@ -17,11 +17,20 @@ a minimal working configuration using Apache2 on Debian/Ubuntu.
 The first step is QGIS Server installation whose instructions are provided
 in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
 
+
 HTTP Server configuration
 =========================
 
 Apache
 ------
+
+Create a writable HOME directory for QGIS server to store configurations such as SSL client configuration.
+
+.. code-block:: bash
+
+ $ sudo mkdir -p /srv/qgis/.qgis2
+ $ sudo chown www-data:www-data /srv/qgis/.qgis2
+
 
 Install the Apache server in a separate virtual host listening on port ``80``.
 Enable the rewrite module to pass HTTP BASIC auth headers:
@@ -53,6 +62,9 @@ This is the virtual host configuration, stored in
     FcgidInitialEnv QGIS_DEBUG 1
     FcgidInitialEnv QGIS_SERVER_LOG_FILE /tmp/qgis-000.log
     FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+
+    # set HOME directory for QGIS configurations
+    FcgidInitialEnv HOME "/srv/qgis"
 
     ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
     <Directory "/usr/lib/cgi-bin">
