@@ -69,7 +69,7 @@ Available options are:
 
 .. _figure_vector_general:
 
-.. figure:: img/vector_general_menu.png
+.. figure:: img/vector_source_menu.png
    :align: center
 
    Source tab in vector Layer Properties dialog
@@ -1427,6 +1427,13 @@ In the top right corner of the :guilabel:`Labels` tab, you can use the
 |autoPlacement| :sup:`Automated placement settings (applies to all layers)` to
 configure a global and automated behavior of the labels. Clicking the
 |autoPlacement| button provides you with the following options:
+
+.. _figure_automated_placement:
+
+.. figure:: img/placement_engine.png
+   :align: center
+
+   The labels automated placement engine
 
 * The :guilabel:`Search method` combobox provides you with different placement methods
   for finding good placement solutions for point, line and polygon labeling.
