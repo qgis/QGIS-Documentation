@@ -11,8 +11,7 @@ Geometry Handling
 
 Points, linestrings and polygons that represent a spatial feature are commonly
 referred to as geometries. In QGIS they are represented with the
-:class:`QgsGeometry` class. All possible geometry types are nicely shown in
-`JTS discussion page <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_.
+:class:`QgsGeometry` class.
 
 Sometimes one geometry is actually a collection of simple (single-part)
 geometries. Such a geometry is called a multi-part geometry. If it contains
@@ -23,6 +22,10 @@ represented as a multi-polygon.
 The coordinates of geometries can be in any coordinate reference system (CRS).
 When fetching features from a layer, associated geometries will have
 coordinates in CRS of the layer.
+
+Description and specifications of all possible geometries construction and
+relationships are available in the `OGC Simple Feature Access Standards
+<http://www.opengeospatial.org/standards/sfa>`_ for advanced details.
 
 .. index:: Geometry; Construction
 
