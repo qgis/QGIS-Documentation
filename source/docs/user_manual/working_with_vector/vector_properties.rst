@@ -3034,20 +3034,40 @@ allows QGIS to invalidate caches for this layer when the dependent layers are
 altered.
 
 
-.. index:: Legend, Embedded widget
+.. index:: Legend, Embedded widget, Text on symbol
 .. _vectorlegendmenu:
 
 Legend Properties
 =================
 
-|legend| The :guilabel:`Legend` tab provides you with a list of widgets you
-can embed within the layer tree in the Layers panel. The idea is to have a
-way to quickly access some actions that are often used with the layer (setup
-transparency, filtering, selection, style or other stuff...).
+|legend| The :guilabel:`Legend` properties tab provides you with advanced
+settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
+layout legend <layout_legend_item>`. These options include:
 
-By default, QGIS provides transparency widget but this can be extended by
-plugins registering their own widgets and assign custom actions to layers
-they manage.
+* |checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to add
+  extra information to the symbols in the legend. With this frame, you can
+  affect to any of the symbols used in the layer symbology a text that is
+  displayed over the symbol, in both :guilabel:`Layers` panel and print layout
+  legend. This mapping is done by typing each text next to the symbol in the
+  table widget or filling the table using the **[Set labels from expression]**
+  button. Text appearance is handled through the font and color selector
+  widgets of the **[Text format]** button.
+
+.. _figure_legend_text_symbol:
+
+.. figure:: img/text_legend_symbols.png
+   :align: center
+
+   Setting text on symbols (left) and its rendering in Layers panel (right)
+
+* a list of widgets you can embed within the layer tree in the Layers panel.
+  The idea is to have a way to quickly access some actions that are often used
+  with the layer (setup transparency, filtering, selection, style or other
+  stuff...).
+
+  By default, QGIS provides transparency widget but this can be extended by
+  plugins registering their own widgets and assign custom actions to layers
+  they manage.
 
 
 .. index:: Metadata, Keyword, QGIS Server
