@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: Geometry; Handling
 
 .. _geometry:
@@ -160,3 +164,12 @@ Additional information can be found in following sources:
 * Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/ReprojectLayer.py>`_
 * Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/PointDistance.py>`_
 * `Multi-part to single-part algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/MultipartToSingleparts.py>`_
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
