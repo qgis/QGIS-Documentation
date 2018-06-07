@@ -319,7 +319,7 @@ Creating new DXF files
 Besides the :guilabel:`Save As...` dialog which provides options to export a
 single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layers. It's accessible in the
-:menuselection:`Project --> DXF Export...` menu.
+:menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
 The :guilabel:`DXF Export` dialog allows the user to:
 

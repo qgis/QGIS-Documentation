@@ -82,7 +82,7 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
   template (see :ref:`Project files options <projectfiles_options>` for
   template configuration);
 * :guilabel:`Open...` project file from file browser or PostgreSQL database;
-* Close a project or revert it to its last saved state;
+* :guilabel:`Close` a project or revert it to its last saved state;
 * Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
   or within a PotgreSQL database;
 * Export the project rendering to different formats from the map canvas or
@@ -93,23 +93,24 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
 Menu Option                                              Shortcut              Toolbar                    Reference
 =======================================================  ====================  =========================  ===============================
 |fileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         :guilabel:`Project`        see :ref:`sec_projects`
+:menuselection:`New from template -->`                   \                     \                          see :ref:`sec_projects`
 |fileOpen| :guilabel:`Open...`                           :kbd:`Ctrl+O`         :guilabel:`Project`        see :ref:`sec_projects`
 :menuselection:`Open from --> PostgreSQL`                \                     \                          \
-:menuselection:`New from template -->`                   \                     \                          see :ref:`sec_projects`
 :menuselection:`Open Recent -->`                         \                     \                          see :ref:`sec_projects`
-:guilabel:`Revert Project...`                            \                     \                          \
-:guilabel:`Close Project`                                \                     \                          see :ref:`sec_projects`
+:guilabel:`Close`                                        \                     \                          see :ref:`sec_projects`
 |fileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         :guilabel:`Project`        see :ref:`sec_projects`
 |fileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   :guilabel:`Project`        see :ref:`sec_projects`
 :menuselection:`Save to --> PostgreSQL`                  \                     \                          \
-|saveMapAsImage| :guilabel:`Save Map as Image...`        \                     \                          see :ref:`sec_output`
-|saveAsPDF| :guilabel:`Save Map as PDF...`               \                     \                          see :ref:`sec_output`
-:guilabel:`DXF Export...`                                \                     \                          see :ref:`sec_output`
-:guilabel:`DWG/DXF Import...`                            \                     \                          \
+:guilabel:`Revert...`                                    \                     \                          \
+:guilabel:`Properties...`                                :kbd:`Ctrl+Shift+P`   \                          see :ref:`project_properties`
 :guilabel:`Snapping Options...`                          \                     \                          see :ref:`snapping_tolerance`
-:guilabel:`Project Properties...`                        :kbd:`Ctrl+Shift+P`   \                          see :ref:`project_properties`
-|newLayout| :guilabel:`New Print Layout`                 :kbd:`Ctrl+P`         :guilabel:`Project`        see :ref:`label_printlayout`
-|newReport| :guilabel:`New Report`                       \                     \                          see :ref:`label_printlayout`
+:menuselection:`Import/Export -->`                       \                     \                          \
+|saveMapAsImage| :guilabel:`Export Map to Image...`      \                     \                          see :ref:`sec_output`
+|saveAsPDF| :guilabel:`Export Map to PDF...`             \                     \                          see :ref:`sec_output`
+:guilabel:`Export Project to DXF...`                     \                     \                          see :ref:`sec_output`
+:guilabel:`Import Layers from DWG/DXF...`                \                     \                          \
+|newLayout| :guilabel:`New Print Layout...`              :kbd:`Ctrl+P`         :guilabel:`Project`        see :ref:`label_printlayout`
+|newReport| :guilabel:`New Report...`                    \                     \                          see :ref:`label_printlayout`
 |layoutManager| :guilabel:`Layout Manager...`            \                     :guilabel:`Project`        see :ref:`label_printlayout`
 :menuselection:`Layouts -->`                             \                     \                          see :ref:`label_printlayout`
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                          \

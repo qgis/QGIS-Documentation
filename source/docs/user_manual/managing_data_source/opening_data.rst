@@ -273,7 +273,7 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
 .. tip:: **Load layers and projects from mounted external drives on macOS**
 
    On macOS, portable drives that are mounted beside the primary hard drive
-   do not show up as expected under :menuselection:`File --> Open Project`.
+   do not show up as expected under :menuselection:`File --> Open...`.
    We are working on a more macOS-native open/save dialog to fix this.
    As a workaround, you can type ``/Volumes`` in the :guilabel:`File name` box
    and press :kbd:`Enter`. Then you can navigate to external drives and network
@@ -362,7 +362,8 @@ to the project. Layers are added with random style properties.
    *<filename.dxf> entities <geometry type>*.
 
 To keep the dxf/dwg structure and its symbology in QGIS, you may want to
-use the dedicated :menuselection:`Project --> DWG/DXF Import...` tool. Indeed,
+use the dedicated :menuselection:`Project --> Import/Export --> Import Layers
+from DWG/DXF...` tool. Indeed,
 the :guilabel:`DWG/DXF Import` dialog allows you to import into GeoPackage
 database any element of the drawing file.
 
