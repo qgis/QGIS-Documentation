@@ -118,6 +118,11 @@ all the errors using:
 In case of error, the :guilabel:`Output preview` indicates it and you can access
 details with the provided hyperlink.
 
+.. tip::
+
+ Press :kbd:`Ctrl+Click` when hovering over a function name in an expression to
+ automatically display its help in the dialog.
+
 .. _figure_expression_tab:
 
 .. figure:: img/function_list.png
