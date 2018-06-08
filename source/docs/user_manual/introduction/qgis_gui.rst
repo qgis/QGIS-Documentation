@@ -128,43 +128,43 @@ layers attributes or geometry (see :ref:`editingvector` for details).
 ====================================================================  ====================  =================================   ===================================
 Menu Option                                                           Shortcut              Toolbar                             Reference
 ====================================================================  ====================  =================================   ===================================
-|undo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|redo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|editCut| :guilabel:`Cut Features`                                    :kbd:`Ctrl+X`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|editCopy| :guilabel:`Copy Features`                                  :kbd:`Ctrl+C`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|editPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|undo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         :guilabel:`Digitizing`              see :ref:`undoredo_edits`
+|redo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   :guilabel:`Digitizing`              see :ref:`undoredo_edits`
+|editCut| :guilabel:`Cut Features`                                    :kbd:`Ctrl+X`         :guilabel:`Digitizing`              see :ref:`clipboard_feature`
+|editCopy| :guilabel:`Copy Features`                                  :kbd:`Ctrl+C`         :guilabel:`Digitizing`              see :ref:`clipboard_feature`
+|editPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         :guilabel:`Digitizing`              see :ref:`clipboard_feature`
 :menuselection:`Paste features as -->`                                \                     \                                   see :ref:`sec_attribute_table`
 :menuselection:`Select -->`                                           \                     :guilabel:`Attributes`              see :ref:`sec_selection`
 |newTableRow| :guilabel:`Add Record`                                  :kbd:`Ctrl+.`         :guilabel:`Digitizing`              \
-|capturePoint| :guilabel:`Add Point Feature`                          :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|capturePoint| :guilabel:`Add Line Feature`                           :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|capturePolygon| :guilabel:`Add Polygon Feature`                      :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|capturePoint| :guilabel:`Add Point Feature`                          :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`add_feature`
+|capturePoint| :guilabel:`Add Line Feature`                           :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`add_feature`
+|capturePolygon| :guilabel:`Add Polygon Feature`                      :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`add_feature`
 |circularStringCurvePoint| :guilabel:`Add Circular String`            \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 |circularStringRadius| :guilabel:`Add Circular String by Radius`      \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 :menuselection:`Add Circle -->`                                       \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Rectangle -->`                                    \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Regular Polygon -->`                              \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Ellipse -->`                                      \                     :guilabel:`Shape Digitizing`        \
-|moveFeature| :guilabel:`Move Feature(s)`                             \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`                \                     :guilabel:`Digitizing`              \
-|deleteSelected| :guilabel:`Delete Selected`                          \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|moveFeature| :guilabel:`Move Feature(s)`                             \                     :guilabel:`Advanced Digitizing`     see :ref:`move_feature`
+|moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`                \                     :guilabel:`Advanced Digitizing`     see :ref:`move_feature`
+|deleteSelected| :guilabel:`Delete Selected`                          \                     :guilabel:`Digitizing`              see :ref:`delete_feature`
 |multiEdit| :guilabel:`Modify Attributes of Selected Features`        \                     :guilabel:`Digitizing`              see :ref:`calculate_fields_values`
-|rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|simplifyFeatures| :guilabel:`Simplify Feature`                       \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|addRing| :guilabel:`Add Ring`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|addPart| :guilabel:`Add Part`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|fillRing| :guilabel:`Fill Ring`                                      \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|deleteRing| :guilabel:`Delete Ring`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|deletePart| :guilabel:`Delete Part`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|reshape| :guilabel:`Reshape Features`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|offsetCurve| :guilabel:`Offset Curve`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|splitFeatures| :guilabel:`Split Features`                            \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|splitParts| :guilabel:`Split Parts`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|mergeFeatures| :guilabel:`Merge Selected Features`                   \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|nodeTool| :guilabel:`Vertex Tool`                                    \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
+|rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     :guilabel:`Advanced Digitizing`     see :ref:`rotate_feature`
+|simplifyFeatures| :guilabel:`Simplify Feature`                       \                     :guilabel:`Advanced Digitizing`     see :ref:`simplify_feature`
+|addRing| :guilabel:`Add Ring`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`add_ring`
+|addPart| :guilabel:`Add Part`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`add_part`
+|fillRing| :guilabel:`Fill Ring`                                      \                     :guilabel:`Advanced Digitizing`     see :ref:`fill_ring`
+|deleteRing| :guilabel:`Delete Ring`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`delete_ring`
+|deletePart| :guilabel:`Delete Part`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`delete_part`
+|reshape| :guilabel:`Reshape Features`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`reshape_feature`
+|offsetCurve| :guilabel:`Offset Curve`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`offset_curve`
+|splitFeatures| :guilabel:`Split Features`                            \                     :guilabel:`Advanced Digitizing`     see :ref:`split_feature`
+|splitParts| :guilabel:`Split Parts`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`split_part`
+|mergeFeatures| :guilabel:`Merge Selected Features`                   \                     :guilabel:`Advanced Digitizing`     see :ref:`mergeselectedfeatures`
+|mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     :guilabel:`Advanced Digitizing`     see :ref:`mergeattributesfeatures`
+|nodeTool| :guilabel:`Vertex Tool`                                    \                     :guilabel:`Digitizing`              see :ref:`vertex_tool`
+|rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`rotate_symbol`
+|offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`offset_symbol`
 ====================================================================  ====================  =================================   ===================================
 
 Depending on the selected layer geometry type, some of the tools may look different:
@@ -260,8 +260,8 @@ Menu Option                                                   Shortcut          
 |editPaste| :guilabel:`Paste style`                           \                     \                                  see :ref:`save_layer_property`
 |openTable| :guilabel:`Open Attribute Table`                  :kbd:`F6`             :guilabel:`Attributes`             see :ref:`sec_attribute_table`
 |toggleEditing| :guilabel:`Toggle Editing`                    \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
-|fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
-|allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
+|fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             see :ref:`save_feature_edits`
+|allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             see :ref:`save_feature_edits`
 :menuselection:`Save As...`                                   \                     \                                  see :ref:`general_saveas`
 :menuselection:`Save As Layer Definition File...`             \                     \                                  \
 |removeLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                  \
