@@ -336,6 +336,13 @@ The :guilabel:`DXF Export` dialog allows the user to:
   grouped.
 * choose to only :guilabel:`Export features intersecting the current map extent`.
 
+.. _figure_create_dxf:
+
+.. figure:: img/export_dxf.png
+   :align: center
+
+   Exporting a project to DXF dialog
+
 
 .. _paste_into_layer:
 
