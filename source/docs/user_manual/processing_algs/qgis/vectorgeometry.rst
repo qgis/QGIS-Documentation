@@ -12,6 +12,42 @@ Vector geometry
       :depth: 1
 
 
+.. _qgisexportaddgeometrycolumns:
+
+Add geometry attributes
+-----------------------
+Computes geometric properties of the features in a vector layer.
+
+It generates a new vector layer with the same content as the input one, but with
+additional attributes, containing geometric measurements.
+
+Depending on the geometry type of the vector layer, the attributes added to the
+table will be different:
+
+* for point layers: x and y coordinates
+* for line layers: length
+* for polygon layers: perimeter and area
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer in input
+
+``Calculate using`` [selection]
+  Choose different calculation type for the geometric properties:
+
+  * Layer CRS
+  * Project CRS
+  * Ellipsoidal
+
+Output
+......
+
+``Added geom info`` [vector]
+  Copy of the input vector layer with the addition of the geometry fields
+
 
 .. _qgisaggregate:
 
@@ -774,43 +810,6 @@ Output
 ......
 
 ``Exploded`` [vector: line]
-
-
-.. _qgisexportaddgeometrycolumns:
-
-Export geometry columns
------------------------
-Computes geometric properties of the features in a vector layer.
-
-It generates a new vector layer with the same content as the input one, but with
-additional attributes, containing geometric measurements.
-
-Depending on the geometry type of the vector layer, the attributes added to the
-table will be different:
-
-* for point layers: x and y coordinates
-* for line layers: length
-* for polygon layers: perimeter and area
-
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
-
-Parameters
-..........
-``Input layer`` [vector: any]
-  Vector layer in input
-
-``Calculate using`` [selection]
-  Choose different calculation type for the coordinates:
-
-  * Layer CRS
-  * Project CRS
-  * Ellipsoidal
-
-Output
-......
-
-``Added gom info`` [vector]
-  Copy of the input vector layer with the addition of the coordinates fields
 
 
 .. _qgisextendlines:
