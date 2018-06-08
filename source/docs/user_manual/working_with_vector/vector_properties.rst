@@ -855,11 +855,15 @@ Data-defined size legend
 ........................
 
 When a layer is rendered with the :ref:`proportional symbol or the multivariate
-rendering <proportional_symbols>`, you can allow the display of the scaled
+rendering <proportional_symbols>` or when a :ref:`scaled size diagram
+<diagram_size>` is applied to the layer, you can allow the display of the scaled
 symbols in both the :ref:`Layers panel <label_legend>` and the :ref:`print
-layout legend <layout_legend_item>`. Click on the **[Advanced]** button below
-the saved symbols list and choose :guilabel:`Data-defined size legend...`
-opening a dialog with the following options to:
+layout legend <layout_legend_item>`.
+
+To enable the :guilabel:`Data-defined Size Legend` dialog to render symbology,
+select the eponym option in the **[Advanced]** button below the saved symbols
+list. For diagrams, the option is available under the :guilabel:`Legend` tab.
+The dialog provides the following options to:
 
 * select the type of legend: |radioButtonOn| :guilabel:`Legend not enabled`,
   |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
@@ -879,9 +883,6 @@ the horizontal center of the symbol to the corresponding legend text is drawn.
 
 .. note:: Currently, data-defined size legend for layer symbology can only be
   applied to point layer using single, categorized or graduated symbology.
-
-.. note:: The data-defined size legend can also be used to render a scaled
-  diagram size in both the :guilabel:`Layers` panel and the print layout legend.
 
 
 .. index:: Paint effects
