@@ -938,8 +938,22 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 Split Features
 --------------
 
-You can split features using the |splitFeatures| :sup:`Split Features`
-icon on the toolbar. Just draw a line across the feature you want to split.
+Use the |splitFeatures| :sup:`Split Features` tool to split a feature into two
+or more new and independent features, ie. each geometry corresponding to a new
+row in the attribute table.
+
+To split line or polygon features, select the |splitFeatures| :sup:`Split
+Features` tool and draw a line across the feature(s) you want to split.
+If a selection is active, only selected features are split. When set,
+:ref:`default values or clauses <configure_field>` are applied to corresponding
+fields and other attributes of the parent feature are by default copied to the
+new features. You can then as usual modify any of the attributes.
+
+.. tip:: **Split a polyline into new features in one-click**
+
+   Using the |splitFeatures| :sup:`Split Features` tool, snap and click on an
+   existing vertex of a polyline feature to split that feature into two new
+   features.
 
 
 .. index::
@@ -953,11 +967,11 @@ In QGIS it is possible to split the parts of a multi part feature so that the
 number of parts is increased. Just draw a line across the part you want to split using
 the |splitParts| :sup:`Split Parts` icon.
 
-.. tip:: **Split a polyline feature in one-click**
+.. tip:: **Split a polyline into new parts in one-click**
 
-   A single click on a **snapped vertex** of a line feature with the |splitFeatures|
-   :sup:`Split Features` or |splitParts| :sup:`Split Parts` tool is enough to have it
-   split into new features or parts.
+   Using the |splitParts| :sup:`Split Parts` tool, snap and click on an
+   existing vertex of a polyline feature to split the feature into two new
+   polylines belonging to the same feature.
 
 
 .. index::
