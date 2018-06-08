@@ -562,6 +562,39 @@ We could then use the |editPaste| :sup:`Paste Features` tool to put it back,
 giving us a one-level undo capability. Cut, copy, and paste work on the
 currently selected features, meaning we can operate on more than one at a time.
 
+.. index::
+   single: Digitizing tools; Undo
+   single: Digitizing tools; Redo
+.. _undoredo_edits:
+
+Undo and Redo
+-------------
+
+The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you to undo or redo
+vector editing operations. There is also a dockable widget, which shows all
+operations in the undo/redo history (see Figure_edit_undo_). This widget is not
+displayed by default; it can be displayed by right-clicking on the toolbar and
+activating the :guilabel:`Undo/Redo Panel` checkbox. The Undo/Redo capability
+is however active, even if the widget is not displayed.
+
+.. _figure_edit_undo:
+
+.. figure:: img/redo_undo.png
+   :align: center
+
+   Redo and Undo digitizing steps
+
+When Undo is hit or :kbd:`Ctrl+Z` (or :kbd:`Cmd+Z`) pressed, the state of all
+features and attributes are reverted to
+the state before the reverted operation happened. Changes other than normal
+vector editing operations (for example, changes done by a plugin) may or may
+not be reverted, depending on how the changes were performed.
+
+To use the undo/redo history widget, simply click to select an operation in
+the history list. All features will be reverted to the state they were in
+after the selected operation.
+
+
 Saving Edited Layers
 --------------------
 
@@ -647,39 +680,6 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
-
-
-.. index::
-   single: Digitizing tools; Undo
-   single: Digitizing tools; Redo
-.. _undoredo_edits:
-
-Undo and Redo
--------------
-
-The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you to undo or redo
-vector editing operations. There is also a dockable widget, which shows all
-operations in the undo/redo history (see Figure_edit_undo_). This widget is not
-displayed by default; it can be displayed by right-clicking on the toolbar and
-activating the :guilabel:`Undo/Redo Panel` checkbox. The Undo/Redo capability
-is however active, even if the widget is not displayed.
-
-.. _figure_edit_undo:
-
-.. figure:: img/redo_undo.png
-   :align: center
-
-   Redo and Undo digitizing steps
-
-When Undo is hit or :kbd:`Ctrl+Z` (or :kbd:`Cmd+Z`) pressed, the state of all
-features and attributes are reverted to
-the state before the reverted operation happened. Changes other than normal
-vector editing operations (for example, changes done by a plugin) may or may
-not be reverted, depending on how the changes were performed.
-
-To use the undo/redo history widget, simply click to select an operation in
-the history list. All features will be reverted to the state they were in
-after the selected operation.
 
 
 .. index::
