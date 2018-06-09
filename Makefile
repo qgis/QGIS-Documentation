@@ -210,7 +210,7 @@ full:
 	elif [ $(LANG) = "zh_TW" ]; then \
 		echo; \
 		echo Pulling zh-Hant from transifex but renaming it to zh_TW; \
-		echo tx pull --minimum-perc=1 --skip -f -l zh-Hant; \
+		tx pull --minimum-perc=1 --skip -f -l zh-Hant; \
 		mv i18n/zh-Hant i18n/zh_TW; \
 	else \
 		echo; \
