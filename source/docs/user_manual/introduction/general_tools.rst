@@ -197,8 +197,10 @@ do this:
    in a new group.
 
 To bring a layer out of a group, you can drag it out, or right click on it and
-choose :guilabel:`Move to top-level`; the layer is placed at the same level than
-the group it was inside. Groups can also be nested inside other groups.
+choose :guilabel:`Move Out of Group`; the layer is moved from the group and
+placed above the group. Groups can also be nested inside other groups. If a layer
+is placed in a nested group, this function will move the layer out of any of the
+nested groups.
 
 To move a group or a layer to the top of the layer panel, you can either drag it to
 the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
