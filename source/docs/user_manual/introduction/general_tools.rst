@@ -172,14 +172,6 @@ For GRASS vector layers, |toggleEditing| :sup:`Toggle editing` is not available.
 See section :ref:`grass_digitizing` for information on editing GRASS vector
 layers.
 
-.. tip:: **More information using indicator icons in the Layers Panel**
-
-  Depending on settings, eg :ref:`a filter <vector_query_builder>` applied to
-  the layer, an icon is displayed on the right of the layer name in the
-  :guilabel:`Layers` panel. Hover over the icon to get more details and
-  double-click to update the setting.
-
-
 .. index:: Group, Layer
 .. _group_layers_interact:
 
@@ -214,6 +206,19 @@ button. You can then move all selected layers to a new group at the same time.
 You may also delete more than one layer or group at once by selecting
 several items with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way, all selected layers or groups will be removed from the layers list.
+
+More information on layer or group using indicator icon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some circumstances, the :guilabel:`Layers` panel can display next to the
+layer or group an icon to advertize some properties. These symbols are:
+
+* |indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied
+  to the layer. Hover over the icon to see the filter expression and double-click
+  to update the setting;
+* |indicatorEmbedded| to identify an :ref:`embedded group or layer
+  <nesting_projects>` and the path to their original project file.
+
 
 .. index:: Style
 
@@ -1918,6 +1923,10 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
+.. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
