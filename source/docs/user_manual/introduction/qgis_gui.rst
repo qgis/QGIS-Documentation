@@ -122,58 +122,61 @@ Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 Edit
 ----
 
+The :menuselection:`Edit` menu presents most of the native tools needed to edit
+layers attributes or geometry (see :ref:`editingvector` for details).
+
 ====================================================================  ====================  =================================   ===================================
 Menu Option                                                           Shortcut              Toolbar                             Reference
 ====================================================================  ====================  =================================   ===================================
-|undo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|redo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|editCut| :guilabel:`Cut Features`                                    :kbd:`Ctrl+X`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|editCopy| :guilabel:`Copy Features`                                  :kbd:`Ctrl+C`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|editPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|undo| :guilabel:`Undo`                                               :kbd:`Ctrl+Z`         :guilabel:`Digitizing`              see :ref:`undoredo_edits`
+|redo| :guilabel:`Redo`                                               :kbd:`Ctrl+Shift+Z`   :guilabel:`Digitizing`              see :ref:`undoredo_edits`
+|editCut| :guilabel:`Cut Features`                                    :kbd:`Ctrl+X`         :guilabel:`Digitizing`              see :ref:`clipboard_feature`
+|editCopy| :guilabel:`Copy Features`                                  :kbd:`Ctrl+C`         :guilabel:`Digitizing`              see :ref:`clipboard_feature`
+|editPaste| :guilabel:`Paste Features`                                :kbd:`Ctrl+V`         :guilabel:`Digitizing`              see :ref:`clipboard_feature`
 :menuselection:`Paste features as -->`                                \                     \                                   see :ref:`sec_attribute_table`
 :menuselection:`Select -->`                                           \                     :guilabel:`Attributes`              see :ref:`sec_selection`
-|capturePoint| :guilabel:`Add Feature`                                :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|newTableRow| :guilabel:`Add Record`                                  :kbd:`Ctrl+.`         :guilabel:`Digitizing`              \
+|capturePoint| :guilabel:`Add Point Feature`                          :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`add_feature`
+|capturePoint| :guilabel:`Add Line Feature`                           :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`add_feature`
+|capturePolygon| :guilabel:`Add Polygon Feature`                      :kbd:`Ctrl+.`         :guilabel:`Digitizing`              see :ref:`add_feature`
 |circularStringCurvePoint| :guilabel:`Add Circular String`            \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 |circularStringRadius| :guilabel:`Add Circular String by Radius`      \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
 :menuselection:`Add Circle -->`                                       \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Rectangle -->`                                    \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Regular Polygon -->`                              \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Ellipse -->`                                      \                     :guilabel:`Shape Digitizing`        \
-|moveFeature| :guilabel:`Move Feature(s)`                             \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|deleteSelected| :guilabel:`Delete Selected`                          \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
+|moveFeature| :guilabel:`Move Feature(s)`                             \                     :guilabel:`Advanced Digitizing`     see :ref:`move_feature`
+|moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`                \                     :guilabel:`Advanced Digitizing`     see :ref:`move_feature`
+|deleteSelected| :guilabel:`Delete Selected`                          \                     :guilabel:`Digitizing`              see :ref:`delete_feature`
 |multiEdit| :guilabel:`Modify Attributes of Selected Features`        \                     :guilabel:`Digitizing`              see :ref:`calculate_fields_values`
-|rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|simplifyFeatures| :guilabel:`Simplify Feature`                       \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|addRing| :guilabel:`Add Ring`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|addPart| :guilabel:`Add Part`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|fillRing| :guilabel:`Fill Ring`                                      \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|deleteRing| :guilabel:`Delete Ring`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|deletePart| :guilabel:`Delete Part`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|reshape| :guilabel:`Reshape Features`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|offsetCurve| :guilabel:`Offset Curve`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|splitFeatures| :guilabel:`Split Features`                            \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|splitParts| :guilabel:`Split Parts`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|mergeFeatures| :guilabel:`Merge Selected Features`                   \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|nodeTool| :guilabel:`Vertex Tool`                                    \                     :guilabel:`Digitizing`              see :ref:`sec_edit_existing_layer`
-|rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
-|offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`sec_advanced_edit`
+|rotateFeature| :guilabel:`Rotate Feature(s)`                         \                     :guilabel:`Advanced Digitizing`     see :ref:`rotate_feature`
+|simplifyFeatures| :guilabel:`Simplify Feature`                       \                     :guilabel:`Advanced Digitizing`     see :ref:`simplify_feature`
+|addRing| :guilabel:`Add Ring`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`add_ring`
+|addPart| :guilabel:`Add Part`                                        \                     :guilabel:`Advanced Digitizing`     see :ref:`add_part`
+|fillRing| :guilabel:`Fill Ring`                                      \                     :guilabel:`Advanced Digitizing`     see :ref:`fill_ring`
+|deleteRing| :guilabel:`Delete Ring`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`delete_ring`
+|deletePart| :guilabel:`Delete Part`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`delete_part`
+|reshape| :guilabel:`Reshape Features`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`reshape_feature`
+|offsetCurve| :guilabel:`Offset Curve`                                \                     :guilabel:`Advanced Digitizing`     see :ref:`offset_curve`
+|splitFeatures| :guilabel:`Split Features`                            \                     :guilabel:`Advanced Digitizing`     see :ref:`split_feature`
+|splitParts| :guilabel:`Split Parts`                                  \                     :guilabel:`Advanced Digitizing`     see :ref:`split_part`
+|mergeFeatures| :guilabel:`Merge Selected Features`                   \                     :guilabel:`Advanced Digitizing`     see :ref:`mergeselectedfeatures`
+|mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     :guilabel:`Advanced Digitizing`     see :ref:`mergeattributesfeatures`
+|nodeTool| :guilabel:`Vertex Tool`                                    \                     :guilabel:`Digitizing`              see :ref:`vertex_tool`
+|rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`rotate_symbol`
+|offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     see :ref:`offset_symbol`
 ====================================================================  ====================  =================================   ===================================
 
-After activating |toggleEditing| :sup:`Toggle editing` mode for a layer,
-you will enable the ``Add Feature`` icon in the :menuselection:`Edit` menu
-depending on the layer type (point, line or polygon).
+Depending on the selected layer geometry type, some of the tools may look different:
 
-Edit (extra)
-------------
+.. :tabularcolumns: |l|c|c|c|
 
-=======================================================  ====================  =============================  =====================================
-Menu Option                                              Shortcut              Toolbar                        Reference
-=======================================================  ====================  =============================  =====================================
-|capturePoint| :guilabel:`Add Feature`                   \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
-|captureLine| :guilabel:`Add Feature`                    \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
-|capturePolygon| :guilabel:`Add Feature`                 \                     :guilabel:`Digitizing`         see :ref:`sec_edit_existing_layer`
-=======================================================  ====================  =============================  =====================================
+=====================================  ========================  ========================  ==========================
+Menu Option                            Point                     Polyline                  Polygon
+=====================================  ========================  ========================  ==========================
+:guilabel:`Move Feature(s)`            |moveFeaturePoint|        |moveFeatureLine|         |moveFeature|
+:guilabel:`Copy and Move Feature(s)`   |moveFeatureCopyPoint|    |moveFeatureCopyLine|     |moveFeatureCopy|
+=====================================  ========================  ========================  ==========================
 
 .. _view_menu:
 
@@ -274,8 +277,8 @@ Menu Option                                                   Shortcut          
 |editPaste| :guilabel:`Paste Layer/Group`                     \                     \                                  \
 |openTable| :guilabel:`Open Attribute Table`                  :kbd:`F6`             :guilabel:`Attributes`             see :ref:`sec_attribute_table`
 |toggleEditing| :guilabel:`Toggle Editing`                    \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
-|fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
-|allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             see :ref:`sec_edit_existing_layer`
+|fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             see :ref:`save_feature_edits`
+|allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             see :ref:`save_feature_edits`
 :menuselection:`Save As...`                                   \                     \                                  see :ref:`general_saveas`
 :menuselection:`Save As Layer Definition File...`             \                     \                                  \
 |removeLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                  \
@@ -783,6 +786,16 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
+.. |moveFeatureCopy| image:: /static/common/mActionMoveFeatureCopy.png
+   :width: 1.5em
+.. |moveFeatureCopyLine| image:: /static/common/mActionMoveFeatureCopyLine.png
+   :width: 1.5em
+.. |moveFeatureCopyPoint| image:: /static/common/mActionMoveFeatureCopyPoint.png
+   :width: 1.5em
+.. |moveFeatureLine| image:: /static/common/mActionMoveFeatureLine.png
+   :width: 1.5em
+.. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
+   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
@@ -792,6 +805,8 @@ open the Plugin Manager dialog.
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em
 .. |newReport| image:: /static/common/mActionNewReport.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em

@@ -264,6 +264,7 @@ unless :guilabel:`Show markers only for selected features` option under
    check that your data source can accept all the changes.
 
 .. index:: Adding features
+.. _add_feature:
 
 Adding Features
 ---------------
@@ -328,6 +329,7 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 
 
 .. index:: Vertex tool
+.. _vertex_tool:
 
 Vertex tool
 -----------
@@ -458,6 +460,7 @@ them altogether.
 
    Vertex editor panel showing selected nodes
 
+.. _clipboard_feature:
 
 Cutting, Copying and Pasting Features
 -------------------------------------
@@ -530,6 +533,8 @@ make sure the schemas match.
    the GDAL Shapefile driver starting with GDAL/OGR 1.10 knows to auto-extend string
    and integer fields to dynamically accommodate for the length of the data to be inserted.
 
+.. _delete_feature:
+
 Deleting Selected Features
 --------------------------
 
@@ -579,6 +584,7 @@ To use the undo/redo history widget, simply click to select an operation in
 the history list. All features will be reverted to the state they were in
 after the selected operation.
 
+.. _save_feature_edits:
 
 Saving Edited Layers
 --------------------
@@ -732,6 +738,7 @@ Feature(s)` icon.
 
 .. index::
    single: Digitizing tools; Simplify Feature
+.. _simplify_feature:
 
 Simplify Feature
 ----------------
@@ -761,6 +768,7 @@ To abort feature simplification, you need to click on |simplifyFeatures|
 
 .. index:: Geometryless feature, Multipoint, Multiline, Multipolygon
    single: Digitizing tools; Add Part
+.. _add_part:
 
 Add Part
 --------
@@ -776,6 +784,7 @@ geometry with the |addPart| :sup:`Add Part` tool.
 
 .. index::
    single: Digitizing tools; Delete Part
+.. _delete_part:
 
 Delete Part
 -----------
@@ -789,6 +798,7 @@ To delete a part, simply click within the target part.
 
 .. index::
    single: Digitizing tools; Add Ring
+.. _add_ring:
 
 Add Ring
 --------
@@ -806,6 +816,7 @@ as a ring polygon.
 
 .. index::
    single: Digitizing tools; Fill Ring
+.. _fill_ring:
 
 Fill Ring
 ---------
@@ -819,6 +830,7 @@ first use the |addRing| :sup:`Add Ring` icon and then the
 
 .. index::
    single: Digitizing tools; Delete Ring
+.. _delete_ring:
 
 Delete Ring
 -----------
@@ -831,6 +843,7 @@ change anything when it is used on the outer ring of the polygon.
 .. index::
    single: Digitizing tools; Reshape Feature
    single: Digitizing tools; Extend lines
+.. _reshape_feature:
 
 Reshape Features
 ----------------
@@ -881,6 +894,7 @@ invalid polygon.
 
 .. index::
    single: Digitizing tools; Offset Curves
+.. _offset_curve:
 
 Offset Curves
 -------------
@@ -904,6 +918,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 
 .. index::
    single: Digitizing tools; Split Features
+.. _split_feature:
 
 Split Features
 --------------
@@ -914,6 +929,7 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 
 .. index::
    single: Digitizing tools; Split Parts
+.. _split_part:
 
 Split parts
 -----------
@@ -970,6 +986,7 @@ attributes are made identical.
 
 .. index::
    single: Digitizing tools; Rotate Point Symbols
+.. _rotate_symbol:
 
 Rotate Point Symbols
 --------------------
@@ -1008,6 +1025,7 @@ field is updated in the layer's attribute table.
 
 .. index::
    single: Digitizing tools; Offset Point Symbols
+.. _offset_symbol:
 
 Offset Point Symbols
 --------------------
