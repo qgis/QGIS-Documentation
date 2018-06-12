@@ -100,10 +100,8 @@ What is the meaning of the files:
   Python.
 * :file:`form.ui` = The GUI created by Qt Designer.
 * :file:`form.py` = The translation of the form.ui described above to Python.
-* :file:`metadata.txt` = Required for QGIS >= 1.8.0. Contains general info,
-  version, name and some other metadata used by plugins website and plugin
-  infrastructure. Since QGIS 2.0 the metadata from :file:`__init__.py` are not
-  accepted anymore and the :file:`metadata.txt` is required.
+* :file:`metadata.txt` = Contains general info, version, name and some other
+  metadata used by plugins website and plugin infrastructure.
 
 `Here <http://www.dimitrisk.gr/qgis/creator/>`_
 is an online automated way of creating the basic files (skeleton) of a typical
