@@ -326,9 +326,6 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 
    Enter Attribute Values Dialog after digitizing a new vector feature
 
-With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
-move existing features.
-
 
 .. index:: Vertex tool
 
@@ -426,18 +423,6 @@ Each change made with the vertex  is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
 this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
-
-.. _move_all_vertex:
-
-.. tip:: **Move features with vertex tool**
-
-   Using the |nodeTool| :sup:`Vertex tool` is a way of moving a whole feature,
-   select ALL the vertices of the feature, click a vertex, drag and snap it to a
-   target vertex: the whole feature is moved and snapped to the other feature.
-   In QGIS 2, the |moveFeature| :guilabel:`Move Feature` tool didn't support
-   snapping. This is now fixed since it takes advantage of the new click-click
-   ergonomy, allowing interactive constraints and snapping of features while
-   moving.
 
 .. index:: Vertex editor panel
 
@@ -681,6 +666,46 @@ Advanced digitizing
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
+
+.. index::
+   single: Digitizing tools; Move feature
+   single: Digitizing tools; Move and copy feature
+.. _move_feature:
+
+Move Feature(s)
+---------------
+
+The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing features:
+
+#. Select the feature(s) to move;
+#. Click on the map canvas to indicate the origin point of the displacement; you
+   can rely on snapping capabilities to select an accurate point.
+
+   You can also take advantages of the :ref:`advanced digitizing constraints
+   <advanced_digitizing_panel>` to accurately set the origin point coordinates. In
+   that case:
+
+   * first click on the |cad| button to enable the panel;
+   * type ``x`` and enter the corresponding value for the origin point you'd like
+     to use. Then press the |locked| button next to the option to lock the value;
+   * do the same for the ``y`` coordinate;
+   * click on the map canvas and your origin point is placed at the indicated
+     coordinates.
+#. Move over the map canvas to indicate the destination point of the displacement,
+   still using snapping mode or, as above, use the advanced digitizing panel which
+   would provide complementary ``distance`` and ``angle`` placement constraints
+   to place the end point of the translation.
+#. Click on the map canvas: the whole features are moved to new location.
+
+Likewise, you can create a translated copy of the feature(s) using the |moveFeatureCopy|
+:sup:`Copy and Move Feature(s)` tool.
+
+.. note::
+
+   If no feature is selected when you first click on the map canvas with any of
+   the :guilabel:`Move Feature(s)` or :guilabel:`Copy and Move Feature(s)` tools,
+   then only the feature under the mouse is affected by the action. So, if you
+   want to move several features, they should be selected first.
 
 .. index::
    single: Digitizing tools; Rotate Feature
