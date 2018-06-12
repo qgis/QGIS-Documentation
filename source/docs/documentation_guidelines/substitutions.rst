@@ -96,6 +96,7 @@ Icon                            Substitution                        Icon        
 |showMapTheme|                  ``|showMapTheme|``                  |showSelectedLayers|            ``|showSelectedLayers|``
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``                      |zip|                           ``|zip|``
+|indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -759,6 +760,10 @@ Icon                            Substitution                        Icon        
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
