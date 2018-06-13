@@ -216,6 +216,13 @@ Position and Size
 Based on the :guilabel:`New Item Properties` dialog, this group allows you to
 set:
 
+.. _figure_layout_new_item:
+
+.. figure:: img/new_item_properties.png
+   :align: center
+
+   New Item properties dialog
+
 * the actual number of the page to place the item on;
 * the reference point of the item;
 * the :guilabel:`X` and :guilabel:`Y` coordinate of the reference map in
@@ -226,9 +233,6 @@ set:
 * the :guilabel:`Width` and :guilabel:`Height` of the item bounding box. Like
   with coordinates, ratio between width and height can be locked and their
   values updated with changes applied to the other one.
-
-.. Todo: Add screenshot showing the new item properties dialog (not the
- position and size group)
 
 .. index:: Rendering mode
 .. _layout_Rendering_Mode:
