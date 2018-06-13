@@ -135,7 +135,7 @@ Option                                                             Vector Layer 
 |addGroup| :guilabel:`Add Group`                                   \                   \                  |checkbox|
 |duplicateLayer| :guilabel:`Duplicate Layer`                       |checkbox|          |checkbox|         \
 |removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Move to Top-level`                                      |checkbox|          |checkbox|         \
+:guilabel:`Move Out of Group`                                      |checkbox|          |checkbox|         \
 :guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
 :guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
@@ -197,8 +197,14 @@ do this:
    in a new group.
 
 To bring a layer out of a group, you can drag it out, or right click on it and
-choose :guilabel:`Move to top-level`; the layer is placed at the same level than
-the group it was inside. Groups can also be nested inside other groups.
+choose :guilabel:`Move Out of Group`; the layer is moved from the group and
+placed above the group. Groups can also be nested inside other groups. If a layer
+is placed in a nested group, this function will move the layer out of any of the
+nested groups.
+
+To move a group or a layer to the top of the layer panel, you can either drag it to
+the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
+in a group, the layer is moved to the top in the current group.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
