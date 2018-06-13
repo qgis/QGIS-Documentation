@@ -135,7 +135,7 @@ Option                                                             Vector Layer 
 |addGroup| :guilabel:`Add Group`                                   \                   \                  |checkbox|
 |duplicateLayer| :guilabel:`Duplicate Layer`                       |checkbox|          |checkbox|         \
 |removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Move to Top-level`                                      |checkbox|          |checkbox|         \
+:guilabel:`Move Out of Group`                                      |checkbox|          |checkbox|         \
 :guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
 :guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
