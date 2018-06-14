@@ -44,7 +44,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+:ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisbuildvirtualvector:
@@ -69,7 +69,7 @@ Parameters
 
 Outputs
 .......
-``Virtual vector``
+``Virtual vector`` [vector]
   The final virtual vector made by all the source vector chosen
 
 
@@ -132,6 +132,10 @@ Parameters
   Output CRS associated with the source vector layer. The CRS information are
   written in the ``proj`` file.
 
+See also
+........
+:ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+
 
 .. _qgisdeleteduplicategeometries:
 
@@ -186,26 +190,26 @@ The result of the query will be added as new layer.
 Parameters
 ..........
 ``Additional input datasource`` [selection: vector]
-  List of layers to query. In the   SQL editor you can refer this layers with
-  their **real** name or also with   **input1**, **input2**, **inputN** depending
+  List of layers to query. In the SQL editor you can refer these layers with
+  their **real** name or also with **input1**, **input2**, **inputN** depending
   on how many layers have been chosen.
 
 ``SQL query`` [text]
   Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
 
-``Unique identifier field`` (optional)
+``Unique identifier field`` (optional) [text]
   Specify the column with unique ID
 
-``Geometry field`` (optional)
+``Geometry field`` (optional) [text]
   Specify the geometry field
 
-``Geometry type`` (optional)
+``Geometry type`` (optional) [combobox]
   Choose the final geometry of the result. By default the algorithm will autodetect
   it
 
   Default: *Autodetect*
 
-``CRS`` (optional)
+``CRS`` (optional) [projection]
   The CRS to or assign to the output layer
 
 
@@ -249,7 +253,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisassignprojection`, :ref:`qgisreprojectlayer`
+:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisjoinattributestable:
@@ -468,6 +472,10 @@ Outputs
 ``Merged`` [vector]
   Merged vector layer containing all the features and attributes from input layers
 
+See also
+........
+:ref:`qgissplitvectorlayer`
+
 
 .. _qgisorderbyexpression:
 
@@ -532,7 +540,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisassignprojection`, :ref:`qgisfindprojection`
+:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
 
 
 .. _qgissaveselectedfeatures:
@@ -613,7 +621,7 @@ Truncate table
 --------------
 Truncates a layer, by deleting all features from within the layer.
 
-.. warning:: this algorithm modifies the layer in place, and deleted features cannot
+.. warning:: This algorithm modifies the layer in place, and deleted features cannot
   be restored!
 
 Parameters
