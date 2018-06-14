@@ -25,7 +25,7 @@ Depending on the geometry type of the vector layer, the attributes added to the
 table will be different:
 
 * for **point** layers: X and Y coordinates called ``xcoord`` and ``ycoord``
-* for **line** layers: ``length`` and, particularly for LineString and CompoundCurve
+* for **line** layers: ``length`` and, |32| particularly for LineString and CompoundCurve
   geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``)
 * for **polygon** layers: ``perimeter`` and ``area``
 
