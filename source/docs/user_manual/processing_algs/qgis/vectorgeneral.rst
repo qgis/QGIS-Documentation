@@ -279,7 +279,7 @@ Parameters
   * touches
   * overlaps
   * within
-  * crossed
+  * crosses
 
 ``Fields to add`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
@@ -292,6 +292,10 @@ Parameters
 
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
+
+``Joined field prefix`` (optional) [text] |32|
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
 
 Outputs
 .......
@@ -326,13 +330,13 @@ Parameters
 
   Options:
 
-  * intersect
+  * intersects
   * contains
   * equals
   * touches
   * overlaps
   * within
-  * crossed
+  * crosses
 
 ``Fields to summarize`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
@@ -371,8 +375,8 @@ Outputs
 
 .. _qgisjoinattributestable:
 
-Join attributes table
----------------------
+Join attributes by field value
+------------------------------
 Takes an input vector layer and creates a new vector layer that is an extended
 version of the input one, with additional attributes in its attribute table.
 
@@ -386,14 +390,30 @@ Parameters
   Source input vector layer. The final attribute table will be added to **this**
   vector layer
 
-``Input layer 2`` [vector: any]
-  Layer with the attribute table to join
-
 ``Table field`` [tablefield]
   Field of the source layer with the unique identifier
 
+``Input layer 2`` [vector: any]
+  Layer with the attribute table to join
+
 ``Table field 2`` [tablefield]
   Table of the joining layer with the common unique field identifier
+
+``Layer 2 fields to copy`` (optional) [tablefield]
+  Select the specific fields you want to add. By default all the fields are added
+
+``Join type`` [combobox]
+  Choose the type of the final joined layer. You can choose between:
+
+  * Create separate feature for each matching features (one-to-many)
+  * Take attributes of the first matching feature only (one-to-one)
+
+``Discard records which could not be joined`` [boolean]
+  Check if you don't want to add the features that cannot be joined
+
+``Joined field prefix`` (optional) [text] |32|
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
 
 Outputs
 .......
@@ -598,4 +618,5 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |32| replace:: :kbd:`NEW in 3.2`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
