@@ -255,6 +255,9 @@ Centroids
 Creates a new point layer, with points representing the centroid of the geometries
 of the input layer.
 
+The centroid can be a single point representing the barycenter (of all parts) of the feature,
+so it can be outside the feature borders. It can also be a point on each part of the feature.
+
 The attributes associated to each point in the output layer are the same ones
 associated to the original features.
 
@@ -262,10 +265,6 @@ associated to the original features.
    :align: center
 
    The red stars represent the centroids of each feature of the input layer.
-
-In case of a multigeometry layer a single centroid will be calculated for each
-feature. The resulting centroid represents the barycenter of all parts, so the
-centroid can be outside the feature borders.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -275,11 +274,20 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
+``Create point on surface for each part`` [boolean] |32|
+  If checked a point for each different part of the geometry will be created.
+
+  Default: *False*
+
 Outputs
 .......
 
 ``Centroids`` [vector: point]
   Points vector layer in output.
+
+See also
+........
+:ref:`qgispointonsurface`
 
 
 .. _qgischeckvalidity:
@@ -366,17 +374,14 @@ Parameters
 
   Choose one or more attributes to collect the geometries
 
-
 Output
 ......
 
 ``Collected`` [vector]
 
-
 See also
 ........
 :ref:`qgisaggregate` and :ref:`qgispromotetomulti`
-
 
 
 .. _qgisconcavehull:
@@ -401,7 +406,6 @@ Parameters
      :align: center
 
      Different thresholds used (0.3, 0.6, 0.9)
-
 
 
 ``Allow holes`` [boolean]
@@ -499,7 +503,7 @@ Create layer from extent
 Creates a new vector layer that contains a single feature with geometry matching
 the extent of the input layer.
 
-It can be used in models to convert an literal extent (``xmin``, ``xmax``, ``ymin``,
+It can be used in models to convert a literal extent (``xmin``, ``xmax``, ``ymin``,
 ``ymax`` format) into a layer which can be used for other algorithms which require
 a layer based input.
 
@@ -520,7 +524,7 @@ Output
 
 Delaunay triangulation
 ----------------------
-Creates a polygon layer with the delaunay triangulation corresponding to a points
+Creates a polygon layer with the delaunay triangulation corresponding to a point
 layer.
 
 .. figure:: img/delaunay.png
@@ -1313,6 +1317,10 @@ Output
 ``Point`` [vector: point]
   Point vector layer
 
+See also
+........
+:ref:`qgiscentroids`
+
 
 .. _qgispointsalonglines:
 
@@ -1546,7 +1554,7 @@ Output
 
 See also
 ........
-:ref:`qgisaggregate` and :ref:`qgiscollect`
+:ref:`qgisaggregate`, :ref:`qgiscollect`
 
 
 .. _qgisrectanglesovalsdiamondsfixed:
@@ -1720,6 +1728,102 @@ Output
 
 ``Reversed`` [vector: line]
   Inverted line vector layer
+
+
+.. _qgisrotatefeatures:
+
+Rotate |32|
+-----------
+Rotates feature geometries by the specified angle clockwise.
+The rotation occurs around each feature's centroid or a preset point.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer in input
+
+``Rotation (degrees clockwise)`` [number]
+  Angle of the rotation in degrees
+
+  Default: *0.0*
+
+``Rotation anchor point (x, y)`` (optional)
+  X,Y coordinates of the point to rotate the features around.
+  If not set the rotation occurs around each feature's centroid. 
+
+Outputs
+.......
+
+``Rotated`` [vector]
+  Vector layer with rotated geometries
+
+
+.. _qgissegmentizebymaxangle:
+
+Segmentize by maximum angle |32|
+--------------------------------
+Segmentizes a geometry by converting curved sections to linear sections.
+
+The segmentization is performed by specifying the maximum allowed radius angle
+between vertices on the straightened geometry (e.g the angle of the arc created
+from the original arc center to consecutive output vertices on the linearized
+geometry).
+Non-curved geometries will be retained without change.
+
+Parameters
+..........
+
+``Input layer`` [vector: line, polygon]
+  Vector layer in input
+
+``Maximum angle between vertices (degrees)`` [number]
+  Maximum allowed radius angle between vertices on the straightened geometry
+
+  Default: *5.0*
+
+Outputs
+.......
+
+``Segmentized`` [vector: line, polygon]
+  Vector layer with segmentized geometries
+
+See also
+........
+:ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
+
+
+.. _qgissegmentizebymaxdistance:
+
+Segmentize by maximum distance |32|
+-----------------------------------
+Segmentizes a geometry by converting curved sections to linear sections.
+
+The segmentization is performed by specifying the maximum allowed offset
+distance between the original curve and the segmentized representation.
+Non-curved geometries will be retained without change.
+
+Parameters
+..........
+
+``Input layer`` [vector: line, polygon]
+  Vector layer in input
+
+``Maximum offset distance`` [number]
+  Maximum allowed offset distance between the original curve and the segmentized
+  representation, in the layer units
+
+  Default: *1.0*
+
+Outputs
+.......
+
+``Segmentized`` [vector: line, polygon]
+  Vector layer with segmentized geometries
+
+See also
+........
+:ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 
 .. _qgissetmvalue:
