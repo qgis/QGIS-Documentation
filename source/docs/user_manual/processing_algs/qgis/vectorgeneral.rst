@@ -252,6 +252,54 @@ See also
 :ref:`qgisassignprojection`, :ref:`qgisreprojectlayer`
 
 
+.. _qgisjoinattributestable:
+
+Join attributes by field value
+------------------------------
+Takes an input vector layer and creates a new vector layer that is an extended
+version of the input one, with additional attributes in its attribute table.
+
+The additional attributes and their values are taken from a second vector layer.
+An attribute is selected in each of them to define the join criteria (one-to-one
+relation).
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Source input vector layer. The final attribute table will be added to **this**
+  vector layer
+
+``Table field`` [tablefield]
+  Field of the source layer with the unique identifier
+
+``Input layer 2`` [vector: any]
+  Layer with the attribute table to join
+
+``Table field 2`` [tablefield]
+  Table of the joining layer with the common unique field identifier
+
+``Layer 2 fields to copy`` (optional) [tablefield]
+  Select the specific fields you want to add. By default all the fields are added
+
+``Join type`` [combobox]
+  Choose the type of the final joined layer. You can choose between:
+
+  * Create separate feature for each matching features (one-to-many)
+  * Take attributes of the first matching feature only (one-to-one)
+
+``Discard records which could not be joined`` [boolean]
+  Check if you don't want to add the features that cannot be joined
+
+``Joined field prefix`` (optional) [text] |32|
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
+
+Outputs
+.......
+``Joined layer`` [vector]
+  Final vector layer with the attribute table as result of the joining
+
+
 .. _qgisjoinattributesbylocation:
 
 Join attributes by location
@@ -285,18 +333,23 @@ Parameters
   * touches
   * overlaps
   * within
-  * crossed
+  * crosses
 
 ``Fields to add`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
 
 ``Join type`` [combobox]
-  Choose the type of the final joined layer. If you want you can create one feature
-  for each located feature or you can take the attributes of only the first feature
-  located
+  Choose the type of the final joined layer. You can choose between:
+
+  * Create separate feature for each located features (one-to-many)
+  * Take attributes of the first located feature only (one-to-one)
 
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
+
+``Joined field prefix`` (optional) [text] |32|
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
 
 Outputs
 .......
@@ -331,13 +384,13 @@ Parameters
 
   Options:
 
-  * intersect
+  * intersects
   * contains
   * equals
   * touches
   * overlaps
   * within
-  * crossed
+  * crosses
 
 ``Fields to summarize`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
@@ -372,38 +425,6 @@ Outputs
 .......
 ``Joined layer`` [vector]
   The final vector with all the joined features.
-
-
-.. _qgisjoinattributestable:
-
-Join attributes table
----------------------
-Takes an input vector layer and creates a new vector layer that is an extended
-version of the input one, with additional attributes in its attribute table.
-
-The additional attributes and their values are taken from a second vector layer.
-An attribute is selected in each of them to define the join criteria (one-to-one
-relation).
-
-Parameters
-..........
-``Input layer`` [vector: any]
-  Source input vector layer. The final attribute table will be added to **this**
-  vector layer
-
-``Input layer 2`` [vector: any]
-  Layer with the attribute table to join
-
-``Table field`` [tablefield]
-  Field of the source layer with the unique identifier
-
-``Table field 2`` [tablefield]
-  Table of the joining layer with the common unique field identifier
-
-Outputs
-.......
-``Joined layer`` [vector]
-  Final vector layer with the attribute table as result of the joining
 
 
 .. _qgismergevectorlayers:
@@ -607,4 +628,5 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
