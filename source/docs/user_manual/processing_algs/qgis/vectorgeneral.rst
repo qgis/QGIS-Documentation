@@ -285,7 +285,7 @@ Parameters
 ``Layer 2 fields to copy`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
 
-``Join type`` [combobox]
+``Join type`` [selection]
   Choose the type of the final joined layer. You can choose between:
 
   * Create separate feature for each matching features (one-to-many)
@@ -342,7 +342,7 @@ Parameters
 ``Fields to add`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
 
-``Join type`` [combobox]
+``Join type`` [selection]
   Choose the type of the final joined layer. You can choose between:
 
   * Create separate feature for each located features (one-to-many)
