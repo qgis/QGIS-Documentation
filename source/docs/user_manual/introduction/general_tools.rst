@@ -102,7 +102,8 @@ combinations and can also be used in print layout.
 To create a map theme, activate the layers you want to include and configure 
 the desired layer styles. Then press the |showMapTheme| button and choose 
 :menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
-The new theme is listed at the bottom of the drop-down menu and can be restored by
+In the map theme it is also recorded which layers, groups or legend items that are expanded or
+collapsed. The new theme is listed at the bottom of the drop-down menu and can be restored by
 clicking on it.
 
 The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
