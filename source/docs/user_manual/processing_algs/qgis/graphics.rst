@@ -58,7 +58,7 @@ Parameters
 ``Value field`` [tablefield: any]
   Value to use for the plot (Y axis)
 
-``Additional statistic lines`` [combobox]
+``Additional statistic lines`` [selection]
   Additional statistics information to add to the plot. Options available are:
 
   * Show Mean

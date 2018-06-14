@@ -37,7 +37,7 @@ units of this CRS.
 Parameters
 ..........
 
-``Grid type`` [combobox]
+``Grid type`` [selection]
   Shape of the grid. Many options available:
 
   * Point
