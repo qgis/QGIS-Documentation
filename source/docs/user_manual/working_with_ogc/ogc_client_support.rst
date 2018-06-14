@@ -672,6 +672,7 @@ two and view the attribute table.
    engine. There are a number of lists with public URLs, some of them maintained
    and some not.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -686,7 +687,7 @@ two and view the attribute table.
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Introduction to Databases
 ===============================================================================
 
@@ -378,6 +382,7 @@ structures.
 Now that we've looked at how databases work in theory, let's create a new
 database to implement the theory we've covered.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -390,3 +395,4 @@ database to implement the theory we've covered.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

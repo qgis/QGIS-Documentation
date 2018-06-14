@@ -272,9 +272,8 @@ You can setup some parameters that apply to the global symbol:
 
   The :ref:`Data-defined override <data_defined>` button beside the last layer-related
   parameters is inactive when setting the symbol from the Style manager dialog.
-  When the symbol is connected to a map layer, this button offers access to the
-  :ref:`size assistant <size_assistant>` dialog which helps to create proportional
-  or multivariate analysis rendering.
+  When the symbol is connected to a map layer, this button helps you create
+  proportional or multivariate analysis rendering.
 
 The symbols used at this level are items you can pick from the :ref:`symbols
 library <vector_style_manager>`. A list of available symbols of the same type
@@ -537,6 +536,7 @@ field either by:
 The magnitude of field can be scaled up or down to an appropriate size for
 viewing the field.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -565,4 +565,4 @@ viewing the field.
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

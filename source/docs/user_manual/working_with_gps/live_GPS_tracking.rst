@@ -13,9 +13,9 @@ Live GPS tracking
    .. contents::
       :local:
 
-To activate live GPS tracking in QGIS, you need to select :menuselection:`Settings --> Panels`
-|checkbox| :guilabel:`GPS information`. You will get a new docked window on the
-left side of the canvas.
+To activate live GPS tracking in QGIS, you need to select :menuselection:`Settings
+--> Panels` |checkbox| :guilabel:`GPS Information Panel` or press :kbd:`Ctrl+0`.
+You will get a new docked window on the left side of the canvas.
 
 There are four possible screens in this GPS tracking window:
 
@@ -229,6 +229,7 @@ The live tracking works both with GPSD
 or without it, by connecting the QGIS live tracking tool directly to the device
 (for example ``/dev/rfcomm0``).
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -248,4 +249,4 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |slider| image:: /static/common/slider.png
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

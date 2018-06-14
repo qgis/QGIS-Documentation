@@ -405,6 +405,7 @@ of unuseful branches. So keep your repository clean this way:
 
 And do not forget to update the ``master`` branch in your local repository!
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

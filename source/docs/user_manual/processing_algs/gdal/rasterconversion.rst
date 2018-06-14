@@ -42,6 +42,8 @@ Convert an 8bit paletted image to 24bit RGB
 
 This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.
 
+``Default menu``: :menuselection:`Raster --> Conversion`
+
 Parameters
 ..........
 
@@ -101,6 +103,8 @@ raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
 The algorithm is derived from the `GDAL polygonize utility <http://www.gdal.org/gdal_polygonize.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Conversion`
+
 Parameters
 ..........
 
@@ -126,6 +130,8 @@ Rasterize (vector to raster)
 ----------------------------
 Converts vector geometries (points, lines and polygons) into a raster image.
 The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -203,6 +209,8 @@ If you want to classify a raster map and want to reduce the number of classes it
 can be helpful to downsample your image with this algorithm before.
 The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Conversion`
+
 Parameters
 ..........
 
@@ -225,6 +233,8 @@ Outputs
 
 Translate (convert format)
 --------------------------
+
+``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -306,10 +316,11 @@ Outputs
 ``Output layer`` [raster]
   <put output description here>
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

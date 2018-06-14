@@ -20,6 +20,8 @@ Extracts the projection of a raster file and writes it into a
 world-file.
 The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Projections`
+
 Parameters
 ..........
 
@@ -43,6 +45,8 @@ Warp (reproject)
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
 The algorithm is derived from the `GDAL warp utility <http://www.gdal.org/gdalwarp.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
@@ -112,10 +116,11 @@ Outputs
 ``Output layer`` [raster]
   <put output description here>
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

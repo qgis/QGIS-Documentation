@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: Plugins; Processing algorithm
 .. _processing_plugin:
 
@@ -51,3 +55,12 @@ To create a set of processing scripts, follow these steps:
 * Click on OK and the plugin will be created.
 * You can add additional scripts to the plugin by adding scripts python files to the *scripts*
   folder in the resulting plugin folder.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

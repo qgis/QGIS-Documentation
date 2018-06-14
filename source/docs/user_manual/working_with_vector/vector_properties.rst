@@ -66,6 +66,15 @@ Source Properties
 |system| Use this tab to define general settings for the vector layer.
 Available options are:
 
+
+.. _figure_vector_general:
+
+.. figure:: img/vector_source_menu.png
+   :align: center
+
+   Source tab in vector Layer Properties dialog
+
+
 Settings
 --------
 
@@ -93,21 +102,21 @@ Coordinate Reference System
 Query Builder
 -------------
 
-Under the **Provider Feature Filter** frame, the Query Builder allows
+The :guilabel:`Query Builder` dialog is accessible through the eponym button
+at the bottom of the :guilabel:`Source` tab in the Layer Properties dialog,
+under the :guilabel:`Provider feature filter` group.
+
+The Query Builder provides an interface that allows
 you to define a subset of the features in the layer using a SQL-like WHERE
 clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
-project. The query result can be saved as a new vector layer.
+project.
+For example, using the ``TYPE_2`` field of the :file:`regions` layer from the
+QGIS sample data, you could constrain the file to display only regions that
+are of ``borough`` type in the project (see Figure_vector_querybuilder_ for
+such an example). The filter is made at the data provider (OGR, PostgreSQL,
+MSSQL...) level.
 
-The **Query Builder** is accessible through the eponym term at the bottom of
-the :guilabel:`Source` tab in the Layer Properties. Under :guilabel:`Feature
-subset`, click on the **[Query Builder]** button to open the :guilabel:`Query
-builder`. For example, if you have a ``regions`` layer with a ``TYPE_2``
-field, you could select only regions that are ``borough`` in the
-:guilabel:`Provider specific filter expression` box of the Query Builder.
-Figure_vector_querybuilder_ shows an example of the Query Builder populated with
-the :file:`regions.shp` layer from the QGIS sample data. The Fields, Values
-and Operators sections help you to construct the SQL-like query.
 
 .. _figure_vector_querybuilder:
 
@@ -116,46 +125,50 @@ and Operators sections help you to construct the SQL-like query.
 
    Query Builder
 
-The **Fields list** contains all attribute columns of the attribute table to be
-searched. To add an attribute column to the SQL WHERE clause field, double
-click its name in the Fields list. Generally, you can use the various fields,
-values and operators to construct the query, or you can just type it into the
-SQL box.
 
-The **Values list** lists the values of an attribute table. To list all
-possible values of an attribute, select the attribute in the Fields list and
-click the **[all]** button. To list the first 25 unique values of an attribute
-column, select the attribute column in the Fields list and click the
-**[Sample]** button. To add a value to the SQL WHERE clause field, double click
-its name in the Values list.
+You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
+option from the :menuselection:`View` menu or the layer contextual menu.
+The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
+the dialog help you to construct the SQL-like query exposed in the
+:guilabel:`Provider specific filter expression` box.
 
-The **Operators section** contains all usable operators. To add an operator to
+The **Fields** list contains all the fields of the layer. To add an attribute
+column to the SQL WHERE clause field, double-click its name or just type it into
+the SQL box.
+
+The **Values** frame lists the values of the currently selected field. To list all
+unique values of a field, click the **[All]** button. To instead list the first
+25 unique values of the column, click the **[Sample]** button. To add a value
+to the SQL WHERE clause field, double click its name in the Values list.
+You can use the search box at the top of the Values frame to easily browse and
+find attribute values in the list.
+
+The **Operators** section contains all usable operators. To add an operator to
 the SQL WHERE clause field, click the appropriate button. Relational operators
 ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
 operators (``AND``, ``OR``, ...) are available.
 
-The **[Test]** button shows a message box with the number of features
-satisfying the current query, which is useful in the process of query
-construction. The **[Clear]** button clears the text in the SQL WHERE clause
-text field. The **[OK]** button closes the window and selects the features
-satisfying the query. The **[Cancel]** button closes the window without
-changing the current selection.
+The **[Test]** button helps you check your query and displays a message box with
+the number of features satisfying the current query.
+Use the **[Clear]** button to wipe the SQL query and revert the layer to its
+original state (ie, fully load all the features).
 
+When a filter is applied,
 QGIS treats the resulting subset acts as if it were the entire layer. For
-example if you applied the filter above for 'Borough', you can not display,
-query, save or edit Anchorage, because that is a 'Municipality' and therefore
-not part of the subset.
+example if you applied the filter above for 'Borough' (``"TYPE_2" = 'Borough'``),
+you can not display, query, save or edit Anchorage, because that is a
+'Municipality' and therefore not part of the subset.
 
-The only exception is that unless your layer is part of a database, using a
-subset will prevent you from editing the layer.
+Because of the limitations on some :ref:`data providers <opening_data>` (eg, OGR),
+some data formats will prevent you from editing the layer when in a filtered
+state.
 
+.. tip:: **Filtered layers are indicated in the Layers Panel**
 
-.. _figure_vector_general:
-
-.. figure:: img/vector_general_menu.png
-   :align: center
-
-   Source tab in vector layers properties dialog
+  In the :guilabel:`Layers` panel, filtered layer is listed with a |indicatorFilter|
+  :sup:`Filter` icon next to it indicating the query used when the mouse hovers
+  over the button. Double-click the icon opens the :guilabel:`Query Builder` dialog
+  for edit.
 
 
 .. index:: Style, Symbology, Renderer
@@ -442,50 +455,42 @@ Proportional Symbol and Multivariate Analysis
 
 Proportional Symbol and Multivariate Analysis are not
 rendering types available from the Style rendering drop-down list.
-However with the **Size Assistant** options applied over any of the previous
+However with the :ref:`data-defined override <data_defined>` options applied
+over any of the previous
 rendering options, QGIS allows you to display your point and line data with
 such representation.
 
-.. _size_assistant:
-
 **Creating proportional symbol**
 
-Proportional rendering is done by first applying to the layer the :ref:`single_symbol_renderer`.
-Once you set the symbol, at the upper level of the symbol tree, the
-|dataDefined| :guilabel:`Data-defined override` button available beside
-:guilabel:`Size` or :guilabel:`Width` options (for point or line layers
-respectively) provides tool to create proportional symbology for the layer.
-An assistant is moreover accessible through the |dataDefined| menu
-to help you define size expression.
+Proportional rendering is done by:
 
-.. _figure_symbology_size_assistant:
+* first applying to the layer the :ref:`single symbol renderer
+  <single_symbol_renderer>`;
+* then set the symbol to apply to the features;
+* select the item at the upper level of the symbol tree, and use the
+  |dataDefined| :sup:`Data-defined override` :ref:`button <data_defined>` next
+  to the :guilabel:`Size` (for point layer) or :guilabel:`Width` (for line
+  layer) option;
+* select a field or enter an expression, and for each feature, QGIS will apply
+  the output value to the property and proportionally resize the symbol in the
+  map canvas.
 
-.. figure:: img/varying_size_assistant.png
+  If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
+  menu to apply some transformation (exponential, flannery...) to the symbol
+  size rescaling (see :ref:`data_defined_assistant` for more details).
+
+You can choose to display the proportional symbols in the :ref:`Layers panel
+<label_legend>` and the :ref:`print layout legend item <layout_legend_item>`:
+unfold the **[Advanced]** drop-down list at the bottom of the main dialog of
+the :guilabel:`Symbology` tab and select **Data-defined size legend...** to
+configure the legend items (see :ref:`data_defined_size_legend` for details).
+
+.. _figure_symbology_proportional:
+
+.. figure:: img/proportional_symbols.png
    :align: center
 
-   Varying size assistant
-
-The assistant lets you define:
-
-* The attribute to represent, using the Field listbox or the |expression|
-  :sup:`Set column expression` function (see :ref:`vector_expressions`)
-* the scale method of representation which can be 'Flannery', 'Surface' or 'Radius'
-* The minimum and maximum size of the symbol
-* The range of values to represent: The down pointing arrow helps you
-  fill automatically these fields with the minimum (or zero) and maximum values
-  returned by the chosen attribute or the expression applied to your data.
-* An unique size to represent NULL values.
-
-To the right side of the dialog, you can preview the features representation
-within a live-update widget. This representation is added to the layer tree in
-the layer legend and is also used to shape the layer representation in the
-print layout legend item.
-
-The values presented in the varying size assistant above will set the size
-'Data-defined override' with:
-::
-
- coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
+   Scaling airports size based on number of passengers
 
 **Creating multivariate analysis**
 
@@ -493,26 +498,32 @@ A multivariate analysis rendering helps you evaluate the relationship between
 two or more variables e.g., one can be represented by a color ramp while the
 other is represented by a size.
 
+The simplest way to create multivariate analysis in QGIS is to:
 
-The simplest way to create multivariate analysis in QGIS is to first apply
-a categorized or graduated rendering on a layer, using the same type of symbol
-for all the classes. Then, clicking on the symbol **[Change]** button above the
-classification frame, you get the :ref:`symbol-selector` dialog from which,
-as seen above, you can activate and set the :ref:`size assistant <size_assistant>`
-option either on size (for point layer) or width (for line layer).
+* first apply a categorized or graduated rendering on a layer, using the same
+  type of symbol for all the classes;
+* Then, apply a proportional symbology on the classes: click on the symbol
+  **[Change]** button above the classification frame: you get the
+  :ref:`symbol-selector` dialog from which, as seen above, you can rescale the
+  size or width using the |dataDefined| :ref:`data defined override
+  <data_defined>` widget.
 
-Like the proportional symbol, the size-related symbol is added to the layer tree,
-at the top of the categorized or graduated classes symbols. And both representation
-are also available in the print layout legend item.
+Like the proportional symbol, the scaled symbology can be added to the layer
+tree, on top of the categorized or graduated classes symbols using the
+:ref:` data defined size legend <size data_defined_size_legend>` feature. And
+both representation are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
 
 .. figure:: img/multivariate_example.png
    :align: center
 
-   Multivariate example
+   Multivariate example with scaled size legend
 
-.. Index::
+.. tip:: **Add the size scaled symbols to the print layout legend**
+
+
+.. index::
    single: Symbology; Rule-based renderer
    single: Rule-based renderer; Create a rule
 .. _rule_based_rendering:
@@ -523,7 +534,8 @@ Rule-based rendering
 The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
 all the features from a layer,
 using rule-based symbols whose aspect reflects the assignment of a selected
-feature's attribute to a class. The rules are based on SQL statements.
+feature's attribute to a class. The rules are based on SQL statements and can
+be nested.
 The dialog allows rule grouping by filter or scale, and you can decide
 if you want to enable symbol levels or use only the first-matched rule.
 
@@ -535,29 +547,39 @@ To create a rule:
 * In the :guilabel:`Edit Rule` dialog that opens, you can define a label
   to help you identify each rule. This is the label that will be displayed
   in the :guilabel:`Layers Panel` and also in the print composer legend;
-* Press the |expression| button to open the expression string builder dialog;
+* Manually enter an expression in the text box next to the |radioButtonOn|
+  :guilabel:`Filter` option or press the |expression| button next to it to open
+  the expression string builder dialog;
 * Use the provided functions and the layer attributes to build an :ref:`expression
-  <vector_expressions>` to filter the features you'd like to retrieve;
+  <vector_expressions>` to filter the features you'd like to retrieve. Press
+  the **[Test]** button to check the result of the query;
 * A longer label can then be used to complete the rule description;
-* You can use the |checkbox| :guilabel:`Scale Range` option to set when the
-  rule should be applied;
+* You can use the |checkbox| :guilabel:`Scale Range` option to set scales at which
+  the rule should be applied;
 * Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
   and press **[OK]**;
-* A new row summarizing the rule is added to the Layer Properties dialog.
 
+A new row summarizing the rule is added to the Layer Properties dialog.
 You can create as many rules as necessary following the steps above or copy
-pasting an existing one with the right mouse button. You can also use the
-``ELSE`` rule that will be run if none of the other rules on that level matches.
+pasting an existing rule. Drag-and-drop the rules on top of each other to nest
+them and refine the upper rule features in subclasses.
 
-Selecting a rule, you can organize its features in subclasses using the
-:guilabel:`Refine selected rules` drop-down menu. Rule refinement can be based on:
+Selecting a rule, you can also organize its features in subclasses using the
+:guilabel:`Refine selected rules` drop-down menu. Automated rule refinement can be
+based on:
 
 * **scales**;
 * **categories**: applying a :ref:`categorized renderer <categorized_renderer>`;
-* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`. 
+* or **ranges**: applying a :ref:`graduated renderer <graduated_renderer>`.
 
 Refined classes appear like sub-items of the rule, in a tree hierarchy and like
 above, you can set symbology of each class.
+
+In the :guilabel:`Edit rule` dialog, you can avoid writing all the rules and
+make use of the |radioButtonOff| :guilabel:`Else` option to catch all the
+features that do not match any of the other rules, at the same level. This
+can also be achieved by writing ``Else`` in the *Rule* column of the
+:menuselection:`Layer Properties --> Symbology --> Rule-based` dialog.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
@@ -583,8 +605,32 @@ Point displacement
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer works to
 visualize all features of a point layer, even if they have the same location.
-To do this, the symbols of the points are placed on a displacement circle
-around one center symbol or on several concentric circles.
+To do this, the renderer takes the points falling in a given :guilabel:`Distance`
+tolerance from each other and places them around their barycenter following
+different :guilabel:`Placement methods`:
+
+* **Ring**: places all the features on a circle whose radius depends on the
+  number of features to display;
+* **Concentric rings**: uses a set of concentric circles to show the features;
+* **Grid**: generates a regular grid with a point symbol at each intersection.
+
+The :guilabel:`Center symbol` widget helps you customize the symbol and color
+of the middle point.
+For the distributed points symbols, you can apply any of the *No symbols*,
+*Single symbol*, *Categorized*, *Graduated* or *Rule-based* renderer using the
+:guilabel:`Renderer` drop-down list and customize them using the
+:guilabel:`Renderer Settings...` button.
+
+While the minimal spacing of the :guilabel:`Displacement lines` depends on the
+point symbol renderer's, you can still customize some of its settings such as
+the :guilabel:`Stroke width`, :guilabel:`Stroke color` and :guilabel:`Size
+adjustment` (eg, to add more spacing between the rendered points).
+
+Use the :guilabel:`Labels` group options to perform points labeling: the labels
+are placed near the displaced position of the symbol, and not at the feature
+real position. Other than the :guilabel:`Label attribute`, :guilabel:`Label
+font` and :guilabel:`Label color`, you can set the :guilabel:`Minimum map
+scale` to display the labels.
 
 .. _figure_displacement_symbology:
 
@@ -593,9 +639,12 @@ around one center symbol or on several concentric circles.
 
    Point displacement dialog
 
-.. note:: You can still render features with other renderer like Single symbol,
-   Graduated, Categorized or Rule-Based renderer using the :guilabel:`Renderer`
-   drop-down list then the :guilabel:`Renderer Settings...` button.
+.. note::
+
+ Point Displacement renderer does not alter feature geometry,
+ meaning that points are not moved from their position. They are still located
+ at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index:: Cluster
    single: Symbology; Point cluster renderer
@@ -605,7 +654,7 @@ Point Cluster
 ..............
 
 Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
-which blows up overlaid point features placement, the |pointClusterSymbol|
+which blows up nearest or overlaid point features placement, the |pointClusterSymbol|
 :guilabel:`Point Cluster` renderer groups nearby points into a single
 rendered marker symbol. Based on a specified :guilabel:`Distance`, points
 that fall within from each others are merged into a single symbol.
@@ -634,9 +683,10 @@ From the main dialog, you can:
 
 .. note::
 
- Point displacement and cluster renderers do not alter feature geometry,
+ Point Cluster renderer does not alter feature geometry,
  meaning that points are not moved from their position. They are still located
  at their initial place. Changes are only visual, for rendering purpose.
+
 
 .. index::
    single: Symbology; Inverted polygon renderer
@@ -772,8 +822,8 @@ Other Settings
 .. index:: Symbols levels
 .. _Symbols_levels:
 
-Symbols levels
-..............
+Symbol levels
+.............
 
 For renderers that allow stacked symbol layers (only heatmap doesn't) there is
 an option to control the rendering order of each symbol's levels.
@@ -812,6 +862,49 @@ higher values are drawn last, on top of the others.
    :align: center
 
    Symbol levels activated (A) and deactivated (B) difference
+
+.. _data_defined_size_legend:
+
+Data-defined size legend
+........................
+
+When a layer is rendered with the :ref:`proportional symbol or the multivariate
+rendering <proportional_symbols>` or when a :ref:`scaled size diagram
+<diagram_size>` is applied to the layer, you can allow the display of the scaled
+symbols in both the :ref:`Layers panel <label_legend>` and the :ref:`print
+layout legend <layout_legend_item>`.
+
+To enable the :guilabel:`Data-defined Size Legend` dialog to render symbology,
+select the eponym option in the **[Advanced]** button below the saved symbols
+list. For diagrams, the option is available under the :guilabel:`Legend` tab.
+The dialog provides the following options to:
+
+* select the type of legend: |radioButtonOn| :guilabel:`Legend not enabled`,
+  |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
+  :guilabel:`Collapsed legend`. For the latter option, you can select whether
+  the legend items are aligned at the **Bottom** or at the **Center**;
+* set the :ref:`symbol to use <symbol-selector>` for legend representation;
+* insert the title in the legend;
+* resize the classes to use: by default, QGIS provides you with a legend of
+  five classes (based on natural pretty breaks) but you can apply your own
+  classification using the |checkbox| :guilabel:`Manual size classes` option.
+  Use the |signPlus| and |signMinus| buttons to set your custom classes
+  values and labels.
+
+A preview of the legend is displayed in the right panel of the dialog and
+updated as you set the parameters. For collapsed legend, a leader line from
+the horizontal center of the symbol to the corresponding legend text is drawn.
+
+.. _figure_size_legend:
+
+.. figure:: img/data_defined_size_legend.png
+   :align: center
+
+   Setting size scaled legend
+
+.. note:: Currently, data-defined size legend for layer symbology can only be
+  applied to point layer using single, categorized or graduated symbology.
+
 
 .. index:: Paint effects
 .. _draw_effects:
@@ -984,12 +1077,12 @@ The first step is to choose the labeling method from the drop-down list. There
 are four options available:
 
 * **No labels**
-* **Show labels for this layer**
+* **Single labels**, described below
 * :ref:`Rule-based labeling <rule_based_labeling>`
 * and **Blocking**: allows to set a layer as just an obstacle for other layer's
   labels without rendering any labels of its own.
 
-The next steps assume you select the **Show labels for this layer** option,
+The next steps assume you select the **Single labels** option,
 enabling following tabs that help you configure the labeling:
 
 * :ref:`Text <labels_text>`
@@ -1357,6 +1450,13 @@ In the top right corner of the :guilabel:`Labels` tab, you can use the
 configure a global and automated behavior of the labels. Clicking the
 |autoPlacement| button provides you with the following options:
 
+.. _figure_automated_placement:
+
+.. figure:: img/placement_engine.png
+   :align: center
+
+   The labels automated placement engine
+
 * The :guilabel:`Search method` combobox provides you with different placement methods
   for finding good placement solutions for point, line and polygon labeling.
 * The :guilabel:`Number of candidates` controls set how many label placement
@@ -1671,7 +1771,7 @@ The current core implementation of diagrams provides support for:
 For each type of diagram, the properties are divided into several tabs:
 
 * :ref:`Attributes <diagram_attributes>`
-* :ref:`Appearance <diagram_appearance>`
+* :ref:`Rendering <diagram_appearance>`
 * :ref:`Size <diagram_size>`
 * :ref:`Placement <diagram_placement>`
 * :ref:`Options <diagram_options>`
@@ -1703,32 +1803,43 @@ or of the layer tree.
 
 .. _diagram_appearance:
 
-Appearance
+Rendering
 ----------
 
-:guilabel:`Appearance` defines how the diagram looks like. It provides
+:guilabel:`Rendering` defines how the diagram looks like. It provides
 general settings that do not interfere with the statistic values such as:
 
-* the graphic transparency, its outline width and color
-* the width of the bar in case of histogram
-* the circle background color in case of text diagram, and the font used for texts
-* the orientation of the left line of the first slice represented in pie chart.
-  Note that slices are displayed clockwise.
+* the graphic's opacity, its outline width and color;
+* and, depending on the type of diagram:
 
-In this tab, you can also manage the diagram visibility:
+  * the width of the bar in case of histogram;
+  * the circle background color in case of text diagram, and the font used for texts;
+  * the orientation of the left line of the first slice represented in pie chart.
+    Note that slices are displayed clockwise.
 
-* by removing diagrams that overlap others or :guilabel:`Show all diagrams`
-  even if they overlap each other
-* by selecting a field with :guilabel:`Data defined visibility` to precisely
-  tune which diagrams should be rendered
-* by setting the :ref:`scale visibility <label_scaledepend>`
+In this tab, you can also manage and fine tune the diagram visibility with
+different options:
+
+* :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
+  other and on top of labels. A diagram with a high index is drawn over diagrams
+  and labels ;
+* |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
+  overlap each other;
+* :guilabel:`Show diagram`: allows only specific diagrams to be rendered;
+* :guilabel:`Always Show`: selects specific diagrams to always render, even when
+  they overlap other diagrams or map labels;
+* setting the :ref:`Scale dependent visibility <label_scaledepend>`;
+* :guilabel:`Discourage diagrams and labels from covering features`: defines
+  features to use as obstacles, ie QGIS will try to not place diagrams nor labels
+  over these features.
+
 
 .. _figure_diagrams_appearance:
 
 .. figure:: img/diagram_tab_appearance.png
    :align: center
 
-   Diagram properties - Appearance tab
+   Diagram properties - Rendering tab
 
 .. _diagram_size:
 
@@ -1771,12 +1882,12 @@ According to the layer geometry type, it offers different options for the placem
 * 'Over the centroid', 'Around the centroid' (with a distance set),
   'Perimeter' and anywhere 'Inside polygon' are the options for polygon features.
 
-The diagram can also be placed using feature data by filling the ``X``
-and ``Y`` fields with an attribute of the feature.
+The diagram can also be placed using feature data to fill the coordinates ``X``
+and ``Y`` fields.
 
 The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
-the **Priority** slider or the **z-index** value.
+the **Priority** slider value.
 
 .. _figure_diagrams_placement:
 
@@ -1795,19 +1906,26 @@ choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
 
 .. ToDo: explain the behaviour of this option
 
+.. index:: Size legend, Diagram legend
 .. _diagram_legend:
 
 Legend
 -------
 
 From the :guilabel:`Legend` tab, you can choose to display items of the diagram
-in the :ref:`label_legend`, besides the layer symbology. It can be:
+in the :ref:`label_legend`, and in the :ref:`print layout legend <layout_legend_item>`,
+next to the layer symbology:
 
-* the represented attributes: color and legend text set in :guilabel:`Attributes` tab
-* and if applicable, the diagram size, whose symbol you can customize.
+* check :guilabel:`Show legend entries for diagram attributes` to display in the
+  legends the ``Color`` and ``Legend`` properties, as previously assigned in the
+  :guilabel:`Attributes` tab;
+* and, when a :ref:`scaled size <diagram_size>` is being used for the diagrams,
+  push the **[Legend entries for diagram size...]** button to configure the
+  diagram symbol aspect in the legends. This opens the :guilabel:`Data-defined
+  Size Legend` dialog whose options are described in :ref:`data_defined_size_legend`.
 
-When set, the diagram legend items are also available in the print layout legend,
-besides the layer symbology.
+When set, the diagram legend items (attributes with color and diagram size)
+are also displayed in the print layout legend, next to the layer symbology.
 
 
 Case Study
@@ -1933,8 +2051,154 @@ display when creating new features or querying existing one. You can define:
 
 At the top right of the dialog, you can set whether the form is opened by
 default when creating new features. This can be configured per layer or globally
-with the :guilabel:`Suppress attribute form pop-up after feature creation` in
-the :menuselection:`Settings --> Options --> Digitizing` menu.
+with the :guilabel:`Suppress attribute form pop-up after feature creation`
+option in the :menuselection:`Settings --> Options --> Digitizing` menu.
+
+.. index:: Form, Built-in form, Custom form
+.. _customize_form:
+
+Customizing a form for your data
+--------------------------------
+
+By default, when you click on a feature with the |identify| :sup:`Identify
+Features` tool or switch the attribute table to the *form view* mode, QGIS
+displays a basic form with predefined widgets (generally spinboxes and
+textboxes --- each field is represented on a dedicated row by its label next
+to the widget). If :ref:`relations <vector_relations>` are set on the layer,
+fields from the referencing layers are shown in an embedded frame
+at the bottom of the form, following the same basic structure.
+
+This rendering is the result of the default ``Autogenerate`` value of the
+:guilabel:`Attribute editor layout` setting in the :menuselection:`Layer
+properties --> Attributes Form` tab. This property holds three different
+values:
+
+* ``Autogenerate``: keeps the basic structure of "one row - one field" for the
+  form but allows to customize each corresponding widget;
+* ``Drag-and-drop designer``: other than widget customization, the form
+  structure can be made more complex eg, with widgets embedded in groups and
+  tabs;
+* ``Provide ui file``: allows to use a Qt designer file, hence a potentially
+  more complex and fully featured template, as feature form. 
+
+The autogenerated form
+......................
+
+When the ``Autogenerate`` option is on, the :guilabel:`Available widgets` panel
+shows lists of fields (from the layer and its relations) that would be shown in
+the form. Select a field and you can configure its appearance and behavior in
+the right panel:
+
+* adding :ref:`custom label and automated checks <configure_field>` to the field;
+* setting a :ref:`particular widget <edit_widgets>` to use.
+
+.. TODO: we should insert a screenshot showing the default form here
+
+.. _drag_drop_designer:
+
+The drag and drop designer
+..........................
+
+Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
+combobox and you enable a :guilabel:`Form Layout` panel next to the
+:guilabel:`Available widgets` one. From this panel you can create an editor
+form with several tabs and named groups to present the attribute fields, as
+shown for example in figure_fields_form_.
+
+.. _figure_fields_form:
+
+.. figure:: img/resulting_feature_form.png
+   :align: center
+
+   Resulting built-in form with tabs and named groups
+
+To create the form, you can drag and drop fields from the :guilabel:`Available
+Widgets` panel to the :guilabel:`Form Layout` one to have fields added to
+your custom form and drag and drop fiels inside the :guilabel:`Form Layout`
+to reorder their position.
+
+You can also use categories (tab or group frames) to better structure the form.
+The first step is to use the |signPlus| icon to create a tab in which fields
+and groups will be displayed (see figure_fields_layout_). You can create as many
+categories as you want. Use |signMinus| button to remove any unwanted elements.
+The next step will be to assign to each category the relevant fields, by simple
+drag and drop. You can use the same fields many times.
+
+.. _figure_fields_layout:
+
+.. figure:: img/attribute_editor_layout.png
+   :align: center
+
+   Dialog to create categories with the **Attribute editor layout**
+
+
+You can configure tabs or groups with a double-click. QGIS opens a form in which
+you can:
+
+* choose to hide or show the item label;
+* rename the category;
+* set over how many columns the fields under the category should be distributed;
+* enter an expression to control the category visibility. The expression will be
+  re-evaluated everytime values in the form change and the tab or groupbox
+  shown/hidden accordingly;
+* show the category as a group box (only available for tabs).
+
+With a double-click on a field label, you can also specify whether the label of
+its widget should be visible or not in the form.
+
+In case the layer is involved in ``one or many to many relations`` (see :ref:`vector_relations`),
+referencing layers are listed in the :guilabel:`Relations` frame and their form
+can be embedded in the current layer form by drag-and-drop. Like the other
+items, double-click the relation label to configure some options:
+
+* choose to hide or show the item label;
+* show the link button;
+* show the unlink button.
+
+.. _provide_ui_file:
+
+Using custom ui-file
+....................
+
+The ``Provide ui-file`` option allows you to use complex dialogs made with
+Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
+dialog. Note that, in order to link the graphical objects (textbox,
+combobox...) to the layer's fields, you need to give them the same name.
+
+Use the :guilabel:`Edit UI` to define the path to the file to use.
+
+You'll find some example in the :ref:`Creating a new form <creating-new-form>`
+lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
+see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. 
+
+.. _form_custom_functions:
+
+Enhance your form with custom functions
+.......................................
+
+QGIS forms can have a Python function that is called when the dialog is opened.
+Use this function to add extra logic to your dialogs. The form code can be
+specified in three different ways:
+
+* ``load from the environment``: use a function, for example in
+  :file:`startup.py` or from an installed plugin)
+* ``load from an external file``: a file chooser will appear in that case to
+  allow you to select a Python file from your filesystem
+* ``provide code in this dialog``: a Python editor will appear where you can
+  directly type the function to use.
+
+In all cases you must enter the name of the function that will be called
+(``open`` in the example below).
+
+An example is (in module MyForms.py):
+
+::
+
+  def open(dialog,layer,feature):
+      geom = feature.geometry()
+      control = dialog.findChild(QWidged,"My line edit")
+
+Reference in Python Init Function like so: ``open``
 
 .. index:: Edit widget, Field configuration
 .. _configure_field:
@@ -2098,121 +2362,6 @@ with the field type. The available widgets are:
    directory as the :file:`.qgs` project file or below, paths are converted to
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
-
-.. index:: Form, Built-in form, Custom form
-.. _customize_form:
-
-Customize a form for your data
-------------------------------
-
-By default, when you click on a feature with the |identify| :sup:`Identify
-Features` tool or switch the attribute table to the *form view* mode, QGIS
-displays a form with tabulated textboxes (one per field). This rendering is
-the result of the default ``Autogenerate`` value of the :menuselection:`Layer
-properties --> Fields --> Attribute editor layout` setting. Thanks to the
-:ref:`widget setting <configure_field>`, you can improve this dialog.
-
-You can furthermore define built-in forms (see figure_fields_form_),
-e.g. when you have objects with many attributes, you can create
-an editor with several tabs and named groups to present the attribute fields.
-
-
-.. _figure_fields_form:
-
-.. figure:: img/resulting_feature_form.png
-   :align: center
-
-   Resulting built-in form with tabs and named groups
-
-.. _drag_drop_designer:
-
-The drag and drop designer
-..........................
-
-Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
-combobox to layout the features form within QGIS. Then, drag and drop rows
-from the :guilabel:`Fields` frame to the :guilabel:`Label` panel to have fields
-added to your custom form.
-
-You can also use categories (tab or group frames) to better structure the form.
-The first step is to use the |signPlus| icon to create a tab in which fields
-and groups will be displayed (see figure_fields_layout_). You can create as many
-categories as you want.
-The next step will be to assign to each category the relevant fields, using the
-|arrowRight| icon. You'd need to select the targeted category beforehand.
-You can use the same fields many times.
-
-.. _figure_fields_layout:
-
-.. figure:: img/attribute_editor_layout.png
-   :align: center
-
-   Dialog to create categories with the **Attribute editor layout**
-
-
-You can configure tabs or groups with a double-click. QGIS opens a form in which
-you can:
-
-* choose to hide or show the item label
-* rename the category
-* set over how many columns the fields under the category should be distributed
-* enter an expression to control the category visibility. The expression will be
-  re-evaluated everytime values in the form change and the tab or groupbox
-  shown/hidden accordingly.
-* show the category as a group box (only available for tabs)
-
-With a double-click on a field label, you can also specify whether the label of
-its widget should be visible or not in the form.
-
-In case the layer is involved in ``one to many relations`` (see :ref:`vector_relations`),
-referencing layers are listed in the :guilabel:`Relations` frame and their form
-can be embedded in the current layer form by drag-and-drop. Like the other
-items, double-click the relation label to configure some options:
-
-* choose to hide or show the item label
-* show the link button
-* show the unlink button
-
-Provide an ui-file
-..................
-
-The ``Provide ui-file`` option allows you to use complex dialogs made with
-Qt-Designer. Using a UI-file allows a great deal of freedom in creating a
-dialog. Note that, in order to link the graphical objects (textbox,
-combobox...) to the layer's fields, you need to give them the same name.
-
-Use the :guilabel:`Edit UI` to define the path to the file to use.
-
-You'll find some example in the :ref:`Creating a new form <creating-new-form>`
-lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/. 
-
-Enhance your form with custom functions
-.......................................
-
-QGIS forms can have a Python function that is called when the dialog is opened.
-Use this function to add extra logic to your dialogs. The form code can be
-specified in three different ways:
-
-* ``load from the environment``: use a function, for example in
-  :file:`startup.py` or from an installed plugin)
-* ``load from an external file``: a file chooser will appear in that case to
-  allow you to select a Python file from your filesystem
-* ``provide code in this dialog``: a Python editor will appear where you can
-  directly type the function to use.
-
-In all cases you must enter the name of the function that will be called
-(``open`` in the example below).
-
-An example is (in module MyForms.py):
-
-::
-
-  def open(dialog,layer,feature):
-      geom = feature.geometry()
-      control = dialog.findChild(QWidged,"My line edit")
-
-Reference in Python Init Function like so: ``open``
 
 
 .. index:: Jointure, Join layers
@@ -2906,20 +3055,59 @@ Metadata are currently saved in the project file. It can also be saved as an
 :file:`.XML` file alongside file based layers or in a local :file:`.sqlite`
 database for remote layers (e.g. PostGIS).
 
-.. index:: Legend, Embedded widget
+.. index:: Dependencies
+.. _vectordependenciesmenu:
+
+Dependencies Properties
+=======================
+
+|dependencies| The :guilabel:`Dependencies` tab allows to declare data
+dependencies between layers. A data dependency occurs when a data modification
+in a layer, not by direct user manipulation, may modify data of other layers.
+This is the case for instance when geometry of a layer is updated by a
+database trigger or custom PyQGIS scripting after modification of another
+layer's geometry.
+
+In the :guilabel:`Dependencies` tab, you can select any layers which may externally
+alter the data in the current layer. Correctly specifying dependent layers
+allows QGIS to invalidate caches for this layer when the dependent layers are
+altered.
+
+
+.. index:: Legend, Embedded widget, Text on symbol
 .. _vectorlegendmenu:
 
 Legend Properties
 =================
 
-|legend| The :guilabel:`Legend` tab provides you with a list of widgets you
-can embed within the layer tree in the Layers panel. The idea is to have a
-way to quickly access some actions that are often used with the layer (setup
-transparency, filtering, selection, style or other stuff...).
+|legend| The :guilabel:`Legend` properties tab provides you with advanced
+settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print
+layout legend <layout_legend_item>`. These options include:
 
-By default, QGIS provides transparency widget but this can be extended by
-plugins registering their own widgets and assign custom actions to layers
-they manage.
+* |checkbox| :guilabel:`Text on symbols`: In some cases it can be useful to add
+  extra information to the symbols in the legend. With this frame, you can
+  affect to any of the symbols used in the layer symbology a text that is
+  displayed over the symbol, in both :guilabel:`Layers` panel and print layout
+  legend. This mapping is done by typing each text next to the symbol in the
+  table widget or filling the table using the **[Set labels from expression]**
+  button. Text appearance is handled through the font and color selector
+  widgets of the **[Text format]** button.
+
+.. _figure_legend_text_symbol:
+
+.. figure:: img/text_legend_symbols.png
+   :align: center
+
+   Setting text on symbols (left) and its rendering in Layers panel (right)
+
+* a list of widgets you can embed within the layer tree in the Layers panel.
+  The idea is to have a way to quickly access some actions that are often used
+  with the layer (setup transparency, filtering, selection, style or other
+  stuff...).
+
+  By default, QGIS provides transparency widget but this can be extended by
+  plugins registering their own widgets and assign custom actions to layers
+  they manage.
 
 
 .. index:: Metadata, Keyword, QGIS Server
@@ -2964,7 +3152,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    QGIS Server tab in vector layers properties dialog
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -3003,6 +3190,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :ltrim:
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
+.. |dependencies| image:: /static/common/dependencies.png
+   :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
 .. |editMetadata| image:: /static/common/editmetadata.png
@@ -3022,6 +3211,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |iconJoinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
    :width: 1.5em
@@ -3044,8 +3235,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |nullSymbol| image:: /static/common/rendererNullSymbol.png
-   :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
@@ -3094,4 +3283,4 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

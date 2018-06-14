@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Useful QGIS Plugins
 ===============================================================================
 
@@ -14,7 +18,7 @@ and get acquainted with some useful plugins.
   (look in :kbd:`exercise_data/raster/SRTM`).
 
 From the lesson on raster analysis, you're already familiar with raster
-analysis functions. You used GDAL tools (accessible via
+analysis functions. You used Processing tools (accessible via
 :menuselection:`Raster --> Analysis`) for this. However, you should also know about
 the Raster Terrain Analysis plugin. This ships standard with newer versions of
 QGIS, and so you don't need to install it separately.
@@ -149,6 +153,7 @@ optimum use of them.
 Next we'll look at how to use layers that are hosted on remote servers in real
 time.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -162,3 +167,4 @@ time.
 .. |basic| image:: /static/global/basic.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

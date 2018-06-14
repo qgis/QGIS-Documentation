@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Vector simplification and smoothing
 ====================================
 
@@ -17,3 +21,12 @@ We can also do the reverse, and make a layer more complex, smoothing out sharp c
 Try to apply this second command both to original vector and to the one from the first analysis, and see the difference. Note that adjacency is not lost.
 
 This second option can be applied e.g. to contour lines resulting from a coarse raster, to GPS tracks with sparse vertices, etc.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -19,6 +19,8 @@ Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-suppor
 With a mosaic you can merge several raster files.
 The algorithm is derived from the `GDAL buildvrt utility <http://www.gdal.org/gdalbuildvrt.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
+
 Parameters
 ..........
 
@@ -64,6 +66,8 @@ Merges raster files in a simple way. Here you can use a pseudocolor
 table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
 The algorithm is derived from the `GDAL merge utility <http://www.gdal.org/gdal_merge.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -116,6 +120,8 @@ To speed up rendering time of raster layers overviews (pyramids) can
 be created. Overviews are lower resolution copies of the data which
 QGIS uses depending of the level of zoom.
 The algorithm is derived from the `GDAL addo utility <http://www.gdal.org/gdaladdo.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -173,6 +179,8 @@ Information
 -----------
 The gdalinfo program lists various information about a GDAL supported raster dataset.
 
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
+
 Parameters
 ..........
 
@@ -200,13 +208,15 @@ See also
 `GDAL info <http://www.gdal.org/gdalinfo.html>`_
 
 
-.. _tileindex:
+.. _gdaltileindex:
 
 Tile Index
 ----------
 This tool builds a shapefile with a record for each input raster file, an
 attribute containing the filename, and a polygon geometry outlining the raster.
 This output is suitable for use with MapServer as a raster tileindex.
+
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
 Parameters
 ..........
@@ -235,10 +245,11 @@ Outputs
   be created if it doesn't already exist, otherwise it will append to the
   existing file.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

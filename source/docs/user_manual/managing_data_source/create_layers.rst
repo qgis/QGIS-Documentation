@@ -319,7 +319,7 @@ Creating new DXF files
 Besides the :guilabel:`Save As...` dialog which provides options to export a
 single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layers. It's accessible in the
-:menuselection:`Project --> DXF Export...` menu.
+:menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
 The :guilabel:`DXF Export` dialog allows the user to:
 
@@ -335,6 +335,13 @@ The :guilabel:`DXF Export` dialog allows the user to:
   |checkbox| :guilabel:`Use the layer title as name if set` and keep features
   grouped.
 * choose to only :guilabel:`Export features intersecting the current map extent`.
+
+.. _figure_create_dxf:
+
+.. figure:: img/export_dxf.png
+   :align: center
+
+   Exporting a project to DXF dialog
 
 
 .. _paste_into_layer:
@@ -569,4 +576,4 @@ used in conjunction with this spatial index syntax.
    :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

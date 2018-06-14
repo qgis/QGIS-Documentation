@@ -456,18 +456,20 @@ There are several ways to generate output from your QGIS session. We have
 already discussed saving as a project file in :ref:`sec_projects`.
 Other ways to produce output files are:
 
-* Creating images: :menuselection:`Project -->` |saveMapAsImage| :menuselection:`Save
-  as Image...` opens a file dialog where you select the name, path and type of
+* Creating images: :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
+  :menuselection:`Export Map
+  to Image...` opens a file dialog where you select the name, path and type of
   image (PNG, JPG and many other formats). This will also create a world file 
   (with extension ``PNGW`` or ``JPGW``) that is saved in the same folder as your
   image. This world file is used to georeference the image.
-* Exporting DXF files: :menuselection:`Project --> DXF Export...` opens
+* Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export
+  Project to DXF...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity
   (see section :ref:`create_dxf_files`).
 * Designing print maps: :menuselection:`Project -->` |newLayout|
-  :menuselection:`New Print Layout` opens a dialog where you can layout and
+  :menuselection:`New Print Layout...` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printlayout`).
 
 
@@ -495,11 +497,8 @@ Other ways to produce output files are:
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

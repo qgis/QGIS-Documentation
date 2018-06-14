@@ -12,6 +12,42 @@ Vector geometry
       :depth: 1
 
 
+.. _qgisexportaddgeometrycolumns:
+
+Add geometry attributes
+-----------------------
+Computes geometric properties of the features in a vector layer.
+
+It generates a new vector layer with the same content as the input one, but with
+additional attributes, containing geometric measurements.
+
+Depending on the geometry type of the vector layer, the attributes added to the
+table will be different:
+
+* for point layers: x and y coordinates
+* for line layers: length
+* for polygon layers: perimeter and area
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer in input
+
+``Calculate using`` [selection]
+  Choose different calculation type for the geometric properties:
+
+  * Layer CRS
+  * Project CRS
+  * Ellipsoidal
+
+Output
+......
+
+``Added geom info`` [vector]
+  Copy of the input vector layer with the addition of the geometry fields
+
 
 .. _qgisaggregate:
 
@@ -150,6 +186,8 @@ for points, lines and polygons:
 
    In yellow the buffer of point, line and polygon layer
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -229,6 +267,8 @@ In case of a multigeometry layer a single centroid will be calculated for each
 feature. The resulting centroid represents the barycenter of all parts, so the
 centroid can be outside the feature borders.
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -262,6 +302,8 @@ information (numbers of error found and type of error):
    :align: center
 
    Left the input layer. Right: in green the valid layer, in orange the invalid layer
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -310,6 +352,8 @@ a single part. This algorithm does not dissolve overlapping geometries - they wi
 be collected together without modifying the shape of each geometry part.
 
 See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options.
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -431,6 +475,8 @@ covers the whole layer or grouped subsets of features.
 
    Black lines identify the convex hull for each layer feature
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 ``Input point layer`` [vector: any]
@@ -481,6 +527,8 @@ layer.
    :align: center
 
    Delaunay triangulation on points
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -550,6 +598,8 @@ Vertices will be added to each segment of the layer.
    :align: center
 
    Red points show the vertices before and after the densify
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -648,6 +698,8 @@ the features are *aggregated*.
 
    Dissolve the polygon layer on a common attribute
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 
@@ -712,6 +764,8 @@ Eliminate is normally used to get rid of sliver polygons, i.e. tiny polygons tha
 are a result of polygon intersection processes where boundaries of the inputs are
 similar but not identical.
 
+``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
 Parameters
 ..........
 ``Input layer`` [vector: polygon]
@@ -756,41 +810,6 @@ Output
 ......
 
 ``Exploded`` [vector: line]
-
-
-.. _qgisexportaddgeometrycolumns:
-
-Export geometry columns
------------------------
-Computes geometric properties of the features in a vector layer.
-
-It generates a new vector layer with the same content as the input one, but with
-additional attributes, containing geometric measurements.
-
-Depending on the geometry type of the vector layer, the attributes added to the
-table will be different:
-
-* for point layers: x and y coordinates
-* for line layers: length
-* for polygon layers: perimeter and area
-
-Parameters
-..........
-``Input layer`` [vector: any]
-  Vector layer in input
-
-``Calculate using`` [selection]
-  Choose different calculation type for the coordinates:
-
-  * Layer CRS
-  * Project CRS
-  * Ellipsoidal
-
-Output
-......
-
-``Added gom info`` [vector]
-  Copy of the input vector layer with the addition of the coordinates fields
 
 
 .. _qgisextendlines:
@@ -883,6 +902,8 @@ distance along original geometry and bisector angle of vertex for original geome
    :align: center
 
    Vertices extracted for line and polygon layer
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -1011,6 +1032,8 @@ Generates a polygon layer using as polygon rings the lines from an input line la
 The attribute table of the output layer is the same as the one from of the input
 line layer.
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -1133,6 +1156,8 @@ into single features.
    :align: center
 
    Left the multipart source layer and right the single part output result
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -1277,7 +1302,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer
 
-``Create point on surface for each part`` [boolean]
+``Create point on surface for each part`` [boolean] |32|
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -1454,6 +1479,8 @@ of the polygons in the input layer.
 
    Black lines as the result of the algorithm
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -1465,6 +1492,32 @@ Output
 
 ``Lines`` [vector: line]
   Lines from the polygon layer
+
+
+.. _qgisprojectpointcartesian:
+
+Project points (Cartesian) |32|
+-------------------------------
+Projects point geometries by a specified distance and bearing (azimuth), creating
+a new point layer with the projected points.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Point vector layer to project
+
+``Bearing (degrees from North)`` [number]
+  Clockwise angle starting from North, in degree (°) unit
+
+``Distance`` [number]
+  Distance to offset geometries, in layer units
+
+Output
+......
+
+``Projected`` [vector: point]
+  Projected layer at given degrees and distance
 
 
 .. _qgispromotetomulti:
@@ -1740,6 +1793,8 @@ snapping geometries to grid.
 
    Clockwise from left-up: source layer and different simplification tolerances
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -1774,8 +1829,8 @@ Outputs
 
 .. _qgissinglesidedbuffer:
 
-Single side buffer
-------------------
+Single sided buffer
+-------------------
 Computes a buffer on lines by a specified distance on one side of the line only.
 
 
@@ -1896,12 +1951,12 @@ Outputs
 
 .. _qgissnapgeometries:
 
-Snap geometry
--------------
+Snap geometries to layer
+------------------------
 Snaps the geometries in a layer.
 
-Snapping can be done either to the geometries from another layer, or to geometries
-within the same layer.
+Given a tolerance distance, snapping can be done either to the geometries from
+another layer, or to geometries within the same layer.
 
 Vertices will be inserted or removed as required to make the geometries match the
 reference geometries.
@@ -1910,33 +1965,36 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to snap
+  Vector layer to align
 
 ``Reference layer`` [vector: any]
-  Input vector layer to snap
+  Vector layer to snap to
 
 ``Tolerance`` [number]
-  Control how close vertices need to be to the reference layer geometries before
-  they are snapped
+  Control how close input vertices need to be to the reference layer geometries
+  before they are snapped. This distance is specified in layer units.
 
   Default: *10.0*
 
 ``Behavior`` [selection]
+  Snapping can be done on an existing node or a segment (its closest point).
   Choose between different snapping options:
 
-  * Prefer aligning nodes
-  * Prefer closest point
+  * Prefer aligning nodes, insert extra vertices where required
+  * Prefer closest point, insert extra vertices where required
+  * Prefer aligning nodes, don't insert new vertices
+  * Prefer closest point, don't insert new vertices
   * Move end points only, prefer aligning nodes
   * Move end points only, prefer closest point
   * Snap end points to end points only
 
-  Default: *Prefer aligning nodes*
+  Default: *Prefer aligning nodes, insert extra vertices where required*
 
 Outputs
 .......
 
 ``Snapped geometry`` [vector]
-  Snapped geometry in output
+  Vector layer with snapped geometries
 
 
 .. _qgissnappointstogrid:
@@ -1984,7 +2042,7 @@ Outputs
 .......
 
 ``Snapped`` [vector]
-  Snapped geometry in output
+  Vector layer with snapped geometries
 
 
 .. _qgissubdivide:
@@ -2129,6 +2187,8 @@ any other point.
 
    Voronoi polygons
 
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
 Parameters
 ..........
 
@@ -2153,6 +2213,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

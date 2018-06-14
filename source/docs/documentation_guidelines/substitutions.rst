@@ -33,7 +33,7 @@ If no replacement exists:
   .. |splitLayer| image:: /static/common/split_layer.png
      :width: 1.5em
 
-* run the :file:`scripts\find_set_subst.py` script to update the substitution
+* run the :file:`scripts/find_set_subst.py` script to update the substitution
   definitions in the rst files and include the new substitution(s).
 * (optional) add the reference to the icon and its substitution to the list below.
 
@@ -96,6 +96,7 @@ Icon                            Substitution                        Icon        
 |showMapTheme|                  ``|showMapTheme|``                  |showSelectedLayers|            ``|showSelectedLayers|``
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``                      |zip|                           ``|zip|``
+|indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -147,15 +148,17 @@ Icon                          Substitution                       Icon           
 |captureLine|                 ``|captureLine|``                  \                              \
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
 |nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
-|moveFeature|                 ``|moveFeature|``                  |rotateFeature|                ``|rotateFeature|``
+|moveFeature|                 ``|moveFeature|``                  |moveFeatureCopy|              ``|moveFeatureCopy|``
+|moveFeatureLine|             ``|moveFeatureLine|``              |moveFeatureCopyLine|          ``|moveFeatureCopyLine|``
+|moveFeaturePoint|            ``|moveFeaturePoint|``             |moveFeatureCopyPoint|         ``|moveFeatureCopyPoint|``
+|rotateFeature|               ``|rotateFeature|``                |rotatePointSymbols|           ``|rotatePointSymbols|``
+|offsetCurve|                 ``|offsetCurve|``                  |offsetPointSymbols|           ``|offsetPointSymbols|``
 |simplifyFeatures|            ``|simplifyFeatures|``             |reshape|                      ``|reshape|``
 |addRing|                     ``|addRing|``                      |addPart|                      ``|addPart|``
 |fillRing|                    ``|fillRing|``                     \                              \
 |deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
 |mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
 |splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
-|offsetPointSymbols|          ``|offsetPointSymbols|``           |rotatePointSymbols|           ``|rotatePointSymbols|``
-|offsetCurve|                 ``|offsetCurve|``                  \                              \
 ============================  =================================  =============================  ================================
 
 
@@ -334,6 +337,7 @@ Icon                                Substitution                            Icon
 |3d|                                ``|3d|``                                |system|                       ``|system|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
+|search|                            ``|search|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
@@ -382,8 +386,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
-|rasterInterpolate|             ``|rasterInterpolate|``             |rasterInfo|                    ``|rasterInfo|``
-|rasterTerrain|                 ``|rasterTerrain|``                 |heatmap|                       ``|heatmap|``
+|heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -399,10 +402,8 @@ Icon                            Substitution                        Icon        
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |delimitedText|                 ``|delimitedText|``                 \                               \
-|gdalScript|                    ``|gdalScript|``                    |dxf2shpConverter|              ``|dxf2shpConverter|``
-|metasearch|                    ``|metasearch|``
-|geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
-|topologyChecker|               ``|topologyChecker|``               |oracleRaster|                  ``|oracleRaster|``
+|gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
+|geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
 ==============================  ==================================  ==============================  ==================================
 
 Grass integration
@@ -634,8 +635,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
-.. |dxf2shpConverter| image:: /static/common/dxf2shp_converter.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -710,8 +709,6 @@ Icon                            Substitution                        Icon        
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
-.. |geometrySnapper| image:: /static/common/geometrysnapper.png
-   :width: 1.5em
 .. |georeferencer| image:: /static/common/georeferencer.png
    :width: 1.5em
 .. |gpsImporter| image:: /static/common/gps_importer.png
@@ -763,6 +760,10 @@ Icon                            Substitution                        Icon        
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
+   :width: 1.5em
+.. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
@@ -837,6 +838,16 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
+.. |moveFeatureCopy| image:: /static/common/mActionMoveFeatureCopy.png
+   :width: 1.5em
+.. |moveFeatureCopyLine| image:: /static/common/mActionMoveFeatureCopyLine.png
+   :width: 1.5em
+.. |moveFeatureCopyPoint| image:: /static/common/mActionMoveFeatureCopyPoint.png
+   :width: 1.5em
+.. |moveFeatureLine| image:: /static/common/mActionMoveFeatureLine.png
+   :width: 1.5em
+.. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
+   :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |moveItemsToBottom| image:: /static/common/mActionMoveItemsToBottom.png
@@ -889,8 +900,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |oracleRaster| image:: /static/common/oracleraster.png
-   :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |overlay| image:: /static/common/overlay.png
@@ -931,13 +940,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |randomSelection| image:: /static/common/random_selection.png
    :width: 1.5em
-.. |rasterInfo| image:: /static/common/raster-info.png
-   :width: 1.5em
-.. |rasterInterpolate| image:: /static/common/raster-interpolate.png
-   :width: 1.5em
 .. |rasterStats| image:: /static/common/raster-stats.png
-   :width: 1.5em
-.. |rasterTerrain| image:: /static/common/raster_terrain.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
@@ -976,6 +979,8 @@ Icon                            Substitution                        Icon        
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em

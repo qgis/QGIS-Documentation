@@ -118,7 +118,7 @@ Then build:
 Speed up the documentation build
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Running ``make html`` generates **from stratch** the full english documentation.
+Running ``make html`` generates **from scratch** the full english documentation.
 You can see from the output that after it removes the content from static it runs the
 ``sphinx-build -nW -b html -d output/doctrees  -D language=en -A language=en source output/html/en`` command.
 If you change something in the documentation source and you want to preview the changes you shouldn't reuse
@@ -202,7 +202,7 @@ if not already present.
 Building the Documentation using Paver
 --------------------------------------
 
-Paver is a python based Make-like tool (http://paver.github.io/paver/)
+Paver is a python based Make-like tool (http://paver.readthedocs.io/en/latest/)
 
 Paver can be used on Linux and Windows (somebody can test on OSX?)
 
@@ -217,7 +217,7 @@ General use::
     python bootstrap.py
     
     # if the script is complaining about easysetup missing:
-    # download: https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+    # download: http://setuptools.readthedocs.io/en/latest/easy_install.html
     # and install that first:
     python ez_setup.py
 

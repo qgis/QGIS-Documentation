@@ -103,6 +103,8 @@ data provider.
 
 No new output layers are created.
 
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -118,6 +120,8 @@ is missing the ``proj`` file and you know the correct projection.
 
 Final results are not visible directly on QGIS but the ``prj`` file is written in
 the same directory of the input layer.
+
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
 ..........
@@ -307,6 +311,8 @@ The additional attributes and their values are taken from a second vector layer.
 A spatial criteria is applied to select the values from the second layer that are
 added to each feature from the first layer.
 
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -442,6 +448,8 @@ All layers will be reprojected to match this CRS.
 .. figure:: img/merge_vector_layers.png
    :align: center
 
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
 Parameters
 ..........
 
@@ -576,6 +584,8 @@ The number of files generated is equal to the number of different values found
 for the specified attribute.
 
 It is the opposite operation of *merging*.
+
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
 ..........

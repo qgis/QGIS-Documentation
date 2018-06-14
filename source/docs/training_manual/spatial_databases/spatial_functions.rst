@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| PostGIS Setup
 ===============================================================================
 
@@ -237,6 +241,7 @@ you'll be able to make use of PostGIS' extensive spatial functions.
 
 Next you'll learn how spatial features are represented in a database.
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -246,3 +251,4 @@ Next you'll learn how spatial features are represented in a database.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

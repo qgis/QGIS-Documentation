@@ -101,6 +101,11 @@ map view). While in the **Advanced** layer selection mode, it is possible to use
 a snapping tolerance that refers to ``layer units``, the units of the reprojected
 layer when 'on-the-fly' CRS transformation is on.
 
+By default, only visible features (the features whose style is displayed,
+except for layers where the symbology is "No symbols") can be snapped. 
+You can enable the snapping on invisible features by checking 
+|unchecked| :guilabel:`Enable snapping on invisible features` under 
+:menuselection:`Settings -->` |options| :menuselection:`Options --> Digitizing` tab.
 
 .. index:: Search radius
 
@@ -223,17 +228,18 @@ Using the basic digitizing tools, you can perform the following functions:
 +==============================+===================================+==========================+==================================+
 | |allEdits|                   | Current edits                     | |toggleEditing|          | Toggle editing                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |capturePoint|               | Add Feature: Capture Point        | |captureLine|            | Add Feature: Capture Line        |
+| |saveEdits|                  | Save layer edits                  | |capturePoint|           | Add Feature: Capture Point       |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |capturePolygon|             | Add Feature: Capture Polygon      | |moveFeature|            | Move Feature                     |
+| |captureLine|                | Add Feature: Capture Line         | |capturePolygon|         | Add Feature: Capture Polygon     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |circularStringCurvePoint|   | Add Circular String               | |circularStringRadius|   | Add Circular String By Radius    |
+| |nodeTool|                   | Vertex tool                       | |multiEdit|              | Modify the attributes of all     |
+|                              |                                   |                          | selected features simultaneously |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |nodeTool|                   | Vertex tool                       | |deleteSelected|         | Delete Selected                  |
+| |deleteSelected|             | Delete Selected                   ||editCut|                 | Cut Features                     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |editCut|                    | Cut Features                      | |editCopy|               | Copy Features                    |
+| |editCopy|                   | Copy Features                     | |editPaste|              | Paste Features                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |editPaste|                  | Paste Features                    | |saveEdits|              | Save layer edits                 |
+| |undo|                       | Undo                              | |redo|                   | Redo                             |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
@@ -258,6 +264,7 @@ unless :guilabel:`Show markers only for selected features` option under
    check that your data source can accept all the changes.
 
 .. index:: Adding features
+.. _add_feature:
 
 Adding Features
 ---------------
@@ -320,11 +327,9 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 
    Enter Attribute Values Dialog after digitizing a new vector feature
 
-With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
-move existing features.
-
 
 .. index:: Vertex tool
+.. _vertex_tool:
 
 Vertex tool
 -----------
@@ -421,18 +426,6 @@ Each change made with the vertex  is stored as a separate entry in the
 this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
-.. _move_all_vertex:
-
-.. tip:: **Move features with vertex tool**
-
-   Using the |nodeTool| :sup:`Vertex tool` is a way of moving a whole feature,
-   select ALL the vertices of the feature, click a vertex, drag and snap it to a
-   target vertex: the whole feature is moved and snapped to the other feature.
-   In QGIS 2, the |moveFeature| :guilabel:`Move Feature` tool didn't support
-   snapping. This is now fixed since it takes advantage of the new click-click
-   ergonomy, allowing interactive constraints and snapping of features while
-   moving.
-
 .. index:: Vertex editor panel
 
 The Vertex Editor Panel
@@ -467,6 +460,7 @@ them altogether.
 
    Vertex editor panel showing selected nodes
 
+.. _clipboard_feature:
 
 Cutting, Copying and Pasting Features
 -------------------------------------
@@ -539,6 +533,8 @@ make sure the schemas match.
    the GDAL Shapefile driver starting with GDAL/OGR 1.10 knows to auto-extend string
    and integer fields to dynamically accommodate for the length of the data to be inserted.
 
+.. _delete_feature:
+
 Deleting Selected Features
 --------------------------
 
@@ -555,6 +551,40 @@ also places it on a "spatial clipboard". So, we cut the feature to delete.
 We could then use the |editPaste| :sup:`Paste Features` tool to put it back,
 giving us a one-level undo capability. Cut, copy, and paste work on the
 currently selected features, meaning we can operate on more than one at a time.
+
+.. index::
+   single: Digitizing tools; Undo
+   single: Digitizing tools; Redo
+.. _undoredo_edits:
+
+Undo and Redo
+-------------
+
+The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you to undo or redo
+vector editing operations. There is also a dockable widget, which shows all
+operations in the undo/redo history (see Figure_edit_undo_). This widget is not
+displayed by default; it can be displayed by right-clicking on the toolbar and
+activating the :guilabel:`Undo/Redo Panel` checkbox. The Undo/Redo capability
+is however active, even if the widget is not displayed.
+
+.. _figure_edit_undo:
+
+.. figure:: img/redo_undo.png
+   :align: center
+
+   Redo and Undo digitizing steps
+
+When Undo is hit or :kbd:`Ctrl+Z` (or :kbd:`Cmd+Z`) pressed, the state of all
+features and attributes are reverted to
+the state before the reverted operation happened. Changes other than normal
+vector editing operations (for example, changes done by a plugin) may or may
+not be reverted, depending on how the changes were performed.
+
+To use the undo/redo history widget, simply click to select an operation in
+the history list. All features will be reverted to the state they were in
+after the selected operation.
+
+.. _save_feature_edits:
 
 Saving Edited Layers
 --------------------
@@ -619,7 +649,9 @@ Advanced digitizing
 +===========================+=========================================+========================+=========================+
 | |cad|                     | Enable Advanced Digitizing Tools        | |tracing|              | Enable Tracing          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |undo|                    | Undo                                    | |redo|                 | Redo                    |
+| |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
+| |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
+| |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotateFeature|           | Rotate Feature(s)                       | |simplifyFeatures|     | Simplify Feature        |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -642,37 +674,44 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 
 
 .. index::
-   single: Digitizing tools; Undo
-   single: Digitizing tools; Redo
-.. _undoredo_edits:
+   single: Digitizing tools; Move feature
+   single: Digitizing tools; Move and copy feature
+.. _move_feature:
 
-Undo and Redo
--------------
+Move Feature(s)
+---------------
 
-The |undo| :sup:`Undo` and |redo| :sup:`Redo` tools allows you to undo or redo
-vector editing operations. There is also a dockable widget, which shows all
-operations in the undo/redo history (see Figure_edit_undo_). This widget is not
-displayed by default; it can be displayed by right-clicking on the toolbar and
-activating the :guilabel:`Undo/Redo Panel` checkbox. The Undo/Redo capability
-is however active, even if the widget is not displayed.
+The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing features:
 
-.. _figure_edit_undo:
+#. Select the feature(s) to move;
+#. Click on the map canvas to indicate the origin point of the displacement; you
+   can rely on snapping capabilities to select an accurate point.
 
-.. figure:: img/redo_undo.png
-   :align: center
+   You can also take advantages of the :ref:`advanced digitizing constraints
+   <advanced_digitizing_panel>` to accurately set the origin point coordinates. In
+   that case:
 
-   Redo and Undo digitizing steps
+   * first click on the |cad| button to enable the panel;
+   * type ``x`` and enter the corresponding value for the origin point you'd like
+     to use. Then press the |locked| button next to the option to lock the value;
+   * do the same for the ``y`` coordinate;
+   * click on the map canvas and your origin point is placed at the indicated
+     coordinates.
+#. Move over the map canvas to indicate the destination point of the displacement,
+   still using snapping mode or, as above, use the advanced digitizing panel which
+   would provide complementary ``distance`` and ``angle`` placement constraints
+   to place the end point of the translation.
+#. Click on the map canvas: the whole features are moved to new location.
 
-When Undo is hit or :kbd:`Ctrl+Z` (or :kbd:`Cmd+Z`) pressed, the state of all
-features and attributes are reverted to
-the state before the reverted operation happened. Changes other than normal
-vector editing operations (for example, changes done by a plugin) may or may
-not be reverted, depending on how the changes were performed.
+Likewise, you can create a translated copy of the feature(s) using the |moveFeatureCopy|
+:sup:`Copy and Move Feature(s)` tool.
 
-To use the undo/redo history widget, simply click to select an operation in
-the history list. All features will be reverted to the state they were in
-after the selected operation.
+.. note::
 
+   If no feature is selected when you first click on the map canvas with any of
+   the :guilabel:`Move Feature(s)` or :guilabel:`Copy and Move Feature(s)` tools,
+   then only the feature under the mouse is affected by the action. So, if you
+   want to move several features, they should be selected first.
 
 .. index::
    single: Digitizing tools; Rotate Feature
@@ -699,6 +738,7 @@ Feature(s)` icon.
 
 .. index::
    single: Digitizing tools; Simplify Feature
+.. _simplify_feature:
 
 Simplify Feature
 ----------------
@@ -728,6 +768,7 @@ To abort feature simplification, you need to click on |simplifyFeatures|
 
 .. index:: Geometryless feature, Multipoint, Multiline, Multipolygon
    single: Digitizing tools; Add Part
+.. _add_part:
 
 Add Part
 --------
@@ -743,6 +784,7 @@ geometry with the |addPart| :sup:`Add Part` tool.
 
 .. index::
    single: Digitizing tools; Delete Part
+.. _delete_part:
 
 Delete Part
 -----------
@@ -756,6 +798,7 @@ To delete a part, simply click within the target part.
 
 .. index::
    single: Digitizing tools; Add Ring
+.. _add_ring:
 
 Add Ring
 --------
@@ -773,6 +816,7 @@ as a ring polygon.
 
 .. index::
    single: Digitizing tools; Fill Ring
+.. _fill_ring:
 
 Fill Ring
 ---------
@@ -786,6 +830,7 @@ first use the |addRing| :sup:`Add Ring` icon and then the
 
 .. index::
    single: Digitizing tools; Delete Ring
+.. _delete_ring:
 
 Delete Ring
 -----------
@@ -798,6 +843,7 @@ change anything when it is used on the outer ring of the polygon.
 .. index::
    single: Digitizing tools; Reshape Feature
    single: Digitizing tools; Extend lines
+.. _reshape_feature:
 
 Reshape Features
 ----------------
@@ -848,6 +894,7 @@ invalid polygon.
 
 .. index::
    single: Digitizing tools; Offset Curves
+.. _offset_curve:
 
 Offset Curves
 -------------
@@ -871,6 +918,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 
 .. index::
    single: Digitizing tools; Split Features
+.. _split_feature:
 
 Split Features
 --------------
@@ -881,6 +929,7 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 
 .. index::
    single: Digitizing tools; Split Parts
+.. _split_part:
 
 Split parts
 -----------
@@ -937,6 +986,7 @@ attributes are made identical.
 
 .. index::
    single: Digitizing tools; Rotate Point Symbols
+.. _rotate_symbol:
 
 Rotate Point Symbols
 --------------------
@@ -975,6 +1025,7 @@ field is updated in the layer's attribute table.
 
 .. index::
    single: Digitizing tools; Offset Point Symbols
+.. _offset_symbol:
 
 Offset Point Symbols
 --------------------
@@ -1057,13 +1108,12 @@ definition of your new geometry.
 
    The Advanced Digitizing panel
 
-.. note:: The tools are not enabled if the map view is in geographic coordinates.
+The :guilabel:`Advanced Digitizing` panel can be open either with a right-click
+on the toolbar, from :menuselection:`View --> Panels -->` menu or pressing
+:kbd:`Ctrl+4`. Once the panel is visible, click the |cad| :sup:`Enable advanced
+digitizing tools` button to activate the set of tools.
 
-The Advanced Digitizing panel can be open either with a right-click on the
-toolbar and choose Advanced Digitizing panel or in :menuselection:`View -->
-Panels --> Advanced Digitizing Panel`. Once the panel is visible, click the
-|cad| :sup:`enable advanced digitizing tool` button to activate the Advanced
-Digitizing tool.
+.. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 Concepts
 --------
@@ -1344,6 +1394,18 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
+.. |moveFeatureCopy| image:: /static/common/mActionMoveFeatureCopy.png
+   :width: 1.5em
+.. |moveFeatureCopyLine| image:: /static/common/mActionMoveFeatureCopyLine.png
+   :width: 1.5em
+.. |moveFeatureCopyPoint| image:: /static/common/mActionMoveFeatureCopyPoint.png
+   :width: 1.5em
+.. |moveFeatureLine| image:: /static/common/mActionMoveFeatureLine.png
+   :width: 1.5em
+.. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
+   :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
@@ -1380,6 +1442,8 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
