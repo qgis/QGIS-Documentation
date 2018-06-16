@@ -98,16 +98,17 @@ Configuring map themes
 
 The button |showMapTheme| allows you to configure **Map Themes** in the legend.
 These themes are helpful to quickly switch between different preconfigured layer 
-combinations and can also be used in print layout. 
+combinations and can also be used in print layout. The map theme also records
+which layers, groups or legend items are expanded or collapsed. 
+
 To create a map theme, activate the layers you want to include and configure 
 the desired layer styles. Then press the |showMapTheme| button and choose 
-:menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
-In the map theme it is also recorded which layers, groups or legend items that are expanded or
-collapsed. The new theme is listed at the bottom of the drop-down menu and can be restored by
-clicking on it.
+:menuselection:`Add Theme...` from the drop-down menu and enter a name.
+The new theme is listed in the lower part of the drop-down menu and can be
+restored by clicking on it.
 
 The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
-with the currently enabled layers and their styles while the 
+with the currently visible layers, their collapse state and current style while the 
 :menuselection:`Remove Current Theme` button deletes the active theme.
 
 All configured themes are also accessible in the print layout. This allows you
