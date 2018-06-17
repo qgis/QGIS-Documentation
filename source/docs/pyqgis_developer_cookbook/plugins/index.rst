@@ -2,33 +2,23 @@
 
    |updatedisclaimer|
 
-.. _PyQGIS-Developer-Cookbook:
+.. index:: Plugins; Developing, Python; Developing plugins
 
-=========================
-PyQGIS Developer Cookbook
-=========================
+.. _developing_plugins:
+
+*************************
+Developing Python Plugins
+*************************
 
 .. toctree::
    :maxdepth: 2
 
-   intro
-   loadproject
-   loadlayer
-   raster
-   vector
-   geometry
-   crs
-   canvas
-   composer
-   expressions
-   settings
-   communicating
-   authentication
-   plugins/index
-   processing
-   network_analysis
-   server
-
+   plugins
+   snippets
+   pluginlayer
+   ide_debugging
+   releasing
+   
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

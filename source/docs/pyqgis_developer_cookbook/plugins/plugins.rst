@@ -2,13 +2,13 @@
 
    |updatedisclaimer|
 
-.. index:: Plugins; Developing, Python; Developing plugins
+.. index:: Plugins; Folder, Python; Developing plugins
 
-.. _developing_plugins:
+.. _structuring_plugins:
 
-*************************
-Developing Python Plugins
-*************************
+**************************
+Structuring Python Plugins
+**************************
 
 .. contents::
    :local:
