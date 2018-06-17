@@ -1307,7 +1307,7 @@ default it will display three kinds of information:
     and area in map units depending on its geometry, the count of spatial parts and
     the number of the clicked part in case of multi-geometry, the count of vertices in
     the feature and the number of the closest one to the point clicked
-  * coordinates information: the X and Y (and Z/M if available) coordinate values of the
+  * coordinate information: the X and Y (and Z/M if available) coordinate values of the
     clicked point, the feature closest vertex and its first and last vertices.
     In case you click on a curved line using the info tool, QGIS will also display the
     radius of that section in the panel result.
@@ -1344,7 +1344,7 @@ comboboxes.
 With the :guilabel:`Mode` combobox you can define from which layers features
 should be identified:
 
-* **Current layer** : only features from the selected layer are identified. The
+* **Current layer**: only features from the selected layer are identified. The
   layer may not be visible in the canvas.
 * **Top down, stop at first**: for only features from the upper visible layer.
 * **Top down**: for all features from the visible layers. The results are shown in
@@ -1433,7 +1433,7 @@ clicking the |selectString| :menuselection:`Style` combobox and choose:
 * **Add**: A new style is created using the current options. By default, it will
   be saved in the QGIS project file. See below to save the style in another file
   or a database
-* **Remove**: delete unwanted style, in case you have more than one style defined
+* **Remove**: Delete unwanted style, in case you have more than one style defined
   for the layer.
 
 At the bottom of the Style drop-down list, you see the styles set for the layer
