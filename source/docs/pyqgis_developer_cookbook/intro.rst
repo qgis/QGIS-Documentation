@@ -295,7 +295,9 @@ Fix this by adding the directories where the QGIS libraries reside to search
 path of the dynamic linker:
 
 * on Linux: :command:`export LD_LIBRARY_PATH=/qgispath/lib`
-* on Windows: :command:`set PATH=C:\\qgispath;%PATH%`
+* on Windows: :command:`set PATH=C:\\qgispath\\bin;C:\\qgispath\\apps\\qgisrelease\\bin;%PATH%`
+  where ``qgisrelease`` should be replaced with the type of release you are
+  targeting (eg, ``qgis-ltr``, ``qgis``, ``qgis-dev``)
 
 These commands can be put into a bootstrap script that will take care of
 the startup. When deploying custom applications using PyQGIS, there are
