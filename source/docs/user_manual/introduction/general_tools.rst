@@ -744,8 +744,8 @@ panel allows you to:
 Decorations
 -----------
 
-The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow
-and the Scale Bar. They are used to 'decorate' the map by adding cartographic
+The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow,
+the Scale Bar and Layout Extents. They are used to 'decorate' the map by adding cartographic
 elements.
 
 .. index:: Grid
@@ -875,12 +875,36 @@ To add a scale bar:
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
 #. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
 
+Layout Extents
+..............
+|addMap| :sup:`Layout Extents` adds the layout extents of composer maps
+in the main canvas. When enabled, the extents of all maps within all composers
+is shown using a lightly dotted border. You can control the style and the labelling of
+the display of layout extents. This decoration is useful when you are tweaking the
+positioning of map elements such as labels, and need to know the actual visible region
+of composer maps.
+
+.. _figure_decorations_layoutextents:
+
+.. figure:: img/decoration_layoutextents.png
+   :align: center
+
+   The Layout Extents Dialog
+
+To add layout extent(s):
+
+#. Select from menu :menuselection:`View --> Decorations --> Layout Extents`.
+   The dialog starts (see figure_decorations_layoutextents_).
+#. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
+#. Optionally, change the symbol and labelling of the extents
+#. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
+
 .. tip::
 
    **Settings of Decorations**
 
    When you save a :file:`.qgs` project, any changes you have made to Grid,
-   North Arrow, Scale Bar and Copyright will be saved in the project and restored
+   North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project and restored
    the next time you load the project.
 
 
@@ -1863,6 +1887,8 @@ The values presented in the varying size assistant above will set the size
    source folder.
 
 .. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
