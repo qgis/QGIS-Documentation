@@ -811,16 +811,8 @@ followed by the date in the lower right-hand corner of the map canvas.
 North Arrow
 ...........
 
-|northArrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
-Currently, there is only one style available. You can adjust the angle of the
-arrow or let QGIS set the direction automatically.
-If you choose to let QGIS determine the direction, it makes its best guess
-as to how the arrow should be oriented.
-For placement of the arrow, you have four options, corresponding to
-the four corners of the map canvas.
-You can refine the placement of the arrow by setting a Horizontal and/or Vertical
-`Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-**Pixels** or set as **Percentage** of the width or height of the map canvas.
+|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas.
+You can control the style and placement of the north arrow.
 
 .. _figure_decorations_north:
 
@@ -828,6 +820,21 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
    :align: center
 
    The North Arrow Dialog
+
+To add a north arrow:
+
+#. Select from menu :menuselection:`View --> Decorations --> North Arrow`.
+   The dialog starts (see figure_decorations_north_).
+#. Make sure the |checkbox| :guilabel:`Enable north arrow` checkbox is checked.
+#. Optionally, change the color, size or choose a custom svg.
+#. Optionally, change the angle or choose **Automatic** to let QGIS determine the
+   direction.
+#. Optionally, choose the placement from the Placement combo box.
+#. Optionally, refine the placement of the arrow by setting a Horizontal and/or Vertical
+   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
+   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
+
 
 .. index:: Scale bar
 .. _scalebar_decoration:
