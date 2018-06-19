@@ -690,6 +690,7 @@ panel allows you to:
   computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
   in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
 
+You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
 .. _decorations:
