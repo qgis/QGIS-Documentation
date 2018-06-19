@@ -1115,9 +1115,9 @@ geometries.
 .. note:: **Curved geometries are stored as such only in compatible data provider**
 
    Although QGIS allows to digitize curved geometries within any editable
-   data format, you need to be using a data provider (e.g. PostGIS, GML or WFS)
+   data format, you need to be using a data provider (e.g. PostGIS, memory layer, GML or WFS)
    that supports curves to have features stored as curved, otherwise QGIS
-   segmentizes the circular arcs. The memory layer provider also supports curves.
+   segmentizes the circular arcs.
 
 
 .. index::
