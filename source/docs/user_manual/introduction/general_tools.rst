@@ -1307,7 +1307,7 @@ default it will display three kinds of information:
     * the count of geometry parts in the feature and the number of the part you
       clicked on;
     * and the count of vertices in the feature.
-  * coordinates information, uing the project properties :guilabel:`Coordinates
+  * coordinate information, using the project properties :guilabel:`Coordinates
     display` settings:
 
     * the ``X`` and ``Y`` coordinate values of the clicked point;
