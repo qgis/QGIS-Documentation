@@ -277,11 +277,11 @@ otherwise Python will complain::
   ImportError: No module named qgis.core
 
 This can be fixed by setting the ``PYTHONPATH`` environment variable. In
-the following commands, ``qgispath`` should be replaced with your actual
+the following commands, ``<qgispath>`` should be replaced with your actual
 QGIS installation path:
 
-* on Linux: :command:`export PYTHONPATH=/qgispath/share/qgis/python`
-* on Windows: :command:`set PYTHONPATH=c:\\qgispath\\python`
+* on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
+* on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
 
 The path to the PyQGIS modules is now known, however they depend on ``qgis_core``
 and ``qgis_gui`` libraries (the Python modules serve only as wrappers).
@@ -294,8 +294,10 @@ you get an import error again (the message might vary depending on the system)::
 Fix this by adding the directories where the QGIS libraries reside to search
 path of the dynamic linker:
 
-* on Linux: :command:`export LD_LIBRARY_PATH=/qgispath/lib`
-* on Windows: :command:`set PATH=C:\\qgispath;%PATH%`
+* on Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`
+* on Windows: :command:`set PATH=C:\\<qgispath>\\bin;C:\\<qgispath>\\apps\\<qgisrelease>\\bin;%PATH%`
+  where ``<qgisrelease>`` should be replaced with the type of release you are
+  targeting (eg, ``qgis-ltr``, ``qgis``, ``qgis-dev``)
 
 These commands can be put into a bootstrap script that will take care of
 the startup. When deploying custom applications using PyQGIS, there are
