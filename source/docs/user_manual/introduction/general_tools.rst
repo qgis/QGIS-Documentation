@@ -1304,14 +1304,26 @@ default it will display three kinds of information:
 * **Derived**: This information is calculated or derived from other information.
   This includes:
 
-  * general information about the feature and its geometry: feature id, length or perimeter
-    and area in map units depending on its geometry, the count of spatial parts and
-    the number of the clicked part in case of multi-geometry, the count of vertices in
-    the feature and the number of the closest one to the point clicked
-  * coordinates information: the X and Y (and Z/M if available) coordinate values of the
-    clicked point, the feature closest vertex and its first and last vertices.
-    In case you click on a curved line using the info tool, QGIS will also display the
-    radius of that section in the panel result.
+  * the feature ID;
+  * general information about its geometry:
+
+    * depending on the geometry type, the cartesian measurements of length,
+      perimeter or area in the layer's CRS units;
+    * depending on the geometry type and if an ellipsoid is set in the project
+      properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
+      length, perimeter or area using the chosen units;
+    * the count of geometry parts in the feature and the number of the part you
+      clicked on;
+    * and the count of vertices in the feature.
+  * coordinate information, using the project properties :guilabel:`Coordinates
+    display` settings:
+
+    * the ``X`` and ``Y`` coordinate values of the clicked point;
+    * the number of the closest vertex to the clicked point;
+    * the ``X`` and ``Y`` (and ``Z``/``M`` if applicable) coordinate values of the
+      closest vertex;
+    * in case you click on a curved line using the info tool, QGIS will also
+      display the radius of that section in the panel result.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
