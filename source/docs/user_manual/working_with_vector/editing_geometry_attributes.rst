@@ -820,11 +820,22 @@ as a ring polygon.
 Fill Ring
 ---------
 
-You can use the |fillRing| :sup:`Fill Ring` function to add a ring to
-a polygon and add a new feature to the layer at the same time. Using this tool,
-you simply have to digitize a polygon within an existing one. Thus you need not
-first use the |addRing| :sup:`Add Ring` icon and then the
-|capturePolygon| :sup:`Add feature` function anymore.
+The |fillRing| :sup:`Fill Ring` tool helps you create polygon feature that
+totally falls within another one without any overlapping area; that is the new
+feature covers a hole within the existing one. To create such a feature,
+select the tool and:
+
+* draw a new polygon over the existing feature: QGIS adds a ring to its geometry
+  (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
+  feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
+  over the interior boundaries with the |capturePolygon| :sup:`Add polygon
+  feature` tool);
+* or, if the ring already exists on the feature, place the mouse over the ring
+  and left-click while pressing :kbd:`Shift`: a new feature filling the hole is
+  drawn at that place;
+* the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
+  with values of the "parent" feature and/or :ref:`fields constraints
+  <configure_field>`.
 
 
 .. index::
@@ -1100,6 +1111,23 @@ shapes and curved geometries.
 
 Add Circular string
 -------------------
+
+The |circularStringCurvePoint| :sup:`Add circular string` or
+|circularStringRadius| :sup:`Add circular string by radius` buttons allow users
+to add line or polygon features with a circular geometry.
+
+Creating features with these tools follow the same rule as of other digitizing
+tools: left-click to place vertices and right-click to finish the geometry.
+While drawing the geometry, you can switch from one tool to the other as well
+as to the :ref:linear geometry tools <add_feature>`, creating some coumpound
+geometries.
+
+.. note:: **Curved geometries are stored as such only in compatible data provider**
+
+   Although QGIS allows to digitize curved geometries within any editable
+   data format, you need to be using a data provider (e.g. PostGIS, memory layer, GML or WFS)
+   that supports curves to have features stored as curved, otherwise QGIS
+   segmentizes the circular arcs.
 
 
 .. index::

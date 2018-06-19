@@ -139,8 +139,8 @@ Menu Option                                                           Shortcut  
 |capturePoint| :guilabel:`Add Point Feature`                          :kbd:`Ctrl+.`         :guilabel:`Digitizing`              :ref:`add_feature`
 |capturePoint| :guilabel:`Add Line Feature`                           :kbd:`Ctrl+.`         :guilabel:`Digitizing`              :ref:`add_feature`
 |capturePolygon| :guilabel:`Add Polygon Feature`                      :kbd:`Ctrl+.`         :guilabel:`Digitizing`              :ref:`add_feature`
-|circularStringCurvePoint| :guilabel:`Add Circular String`            \                     :guilabel:`Digitizing`              :ref:`sec_edit_existing_layer`
-|circularStringRadius| :guilabel:`Add Circular String by Radius`      \                     :guilabel:`Digitizing`              :ref:`sec_edit_existing_layer`
+|circularStringCurvePoint| :guilabel:`Add Circular String`            \                     :guilabel:`Shape Digitizing`        :ref:`add_circular_string`
+|circularStringRadius| :guilabel:`Add Circular String by Radius`      \                     :guilabel:`Shape Digitizing`        :ref:`add_circular_string`
 :menuselection:`Add Circle -->`                                       \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Rectangle -->`                                    \                     :guilabel:`Shape Digitizing`        \
 :menuselection:`Add Regular Polygon -->`                              \                     :guilabel:`Shape Digitizing`        \

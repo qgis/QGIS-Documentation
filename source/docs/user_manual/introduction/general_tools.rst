@@ -481,9 +481,10 @@ If you want to embed content from other project files into your project, select
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve.
-#. Press **[OK]**. The selected layers and groups are embedded in the Layer
-   panel and can be visualized in the map canvas now. Names of embedded items
-   appear in italic to distinguish them from regular layers and groups.
+#. Press **[OK]**. The selected layers and groups are embedded in the :guilabel:`Layers`
+   panel and can be visualized in the map canvas now. An |indicatorEmbedded|
+   icon is added next to their name for recognition and hovering over displays
+   a tooltip with the original project file path.
 
 .. _figure_embed_dialog:
 
@@ -1924,6 +1925,8 @@ The values presented in the varying size assistant above will set the size
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
