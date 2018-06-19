@@ -877,12 +877,12 @@ To add a scale bar:
 
 Layout Extents
 ..............
-|addMap| :sup:`Layout Extents` adds the layout extents of composer maps
-in the main canvas. When enabled, the extents of all maps within all composers
-is shown using a lightly dotted border. You can control the style and the labelling of
-the display of layout extents. This decoration is useful when you are tweaking the
-positioning of map elements such as labels, and need to know the actual visible region
-of composer maps.
+|addMap| :sup:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
+layout(s) to the canvas. When enabled, the extents of all map items within all print layouts are
+shown using a lightly dotted border labeled with the name of the print layout and map item.
+You can control the style and labeling of the displayed layout extents.
+This decoration is useful when you are tweaking the positioning of map elements such as labels,
+and need to know the actual visible region of print layouts.
 
 .. _figure_decorations_layoutextents:
 
@@ -891,12 +891,21 @@ of composer maps.
 
    The Layout Extents Dialog
 
+.. _figure_decorations_layoutextents_example:
+
+.. figure:: img/decoration_layoutextents_example.png
+   :align: center
+
+   Example of displayed layout extents in a QGIS-projekt with two print layouts. The print
+   layout named 'Sights' contains two map items, while the other print layout contains one
+   map item.
+
 To add layout extent(s):
 
 #. Select from menu :menuselection:`View --> Decorations --> Layout Extents`.
    The dialog starts (see figure_decorations_layoutextents_).
 #. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
-#. Optionally, change the symbol and labelling of the extents
+#. Optionally, change the symbol and labeling of the extents
 #. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
 
 .. tip::
