@@ -745,8 +745,8 @@ panel allows you to:
 Decorations
 -----------
 
-The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow
-and the Scale Bar. They are used to 'decorate' the map by adding cartographic
+The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow,
+the Scale Bar and Layout Extents. They are used to 'decorate' the map by adding cartographic
 elements.
 
 .. index:: Grid
@@ -812,16 +812,8 @@ followed by the date in the lower right-hand corner of the map canvas.
 North Arrow
 ...........
 
-|northArrow| :sup:`North Arrow` places a simple north arrow on the map canvas.
-Currently, there is only one style available. You can adjust the angle of the
-arrow or let QGIS set the direction automatically.
-If you choose to let QGIS determine the direction, it makes its best guess
-as to how the arrow should be oriented.
-For placement of the arrow, you have four options, corresponding to
-the four corners of the map canvas.
-You can refine the placement of the arrow by setting a Horizontal and/or Vertical
-`Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-**Pixels** or set as **Percentage** of the width or height of the map canvas.
+|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas.
+You can control the style and placement of the north arrow.
 
 .. _figure_decorations_north:
 
@@ -829,6 +821,21 @@ You can refine the placement of the arrow by setting a Horizontal and/or Vertica
    :align: center
 
    The North Arrow Dialog
+
+To add a north arrow:
+
+#. Select from menu :menuselection:`View --> Decorations --> North Arrow`.
+   The dialog starts (see figure_decorations_north_).
+#. Make sure the |checkbox| :guilabel:`Enable north arrow` checkbox is checked.
+#. Optionally, change the color, size or choose a custom svg.
+#. Optionally, change the angle or choose **Automatic** to let QGIS determine the
+   direction.
+#. Optionally, choose the placement from the Placement combo box.
+#. Optionally, refine the placement of the arrow by setting a Horizontal and/or Vertical
+   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
+   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
+
 
 .. index:: Scale bar
 .. _scalebar_decoration:
@@ -869,12 +876,45 @@ To add a scale bar:
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
 #. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
 
+Layout Extents
+..............
+|addMap| :sup:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
+layout(s) to the canvas. When enabled, the extents of all map items within all print layouts are
+shown using a lightly dotted border labeled with the name of the print layout and map item.
+You can control the style and labeling of the displayed layout extents.
+This decoration is useful when you are tweaking the positioning of map elements such as labels,
+and need to know the actual visible region of print layouts.
+
+.. _figure_decorations_layoutextents:
+
+.. figure:: img/decoration_layoutextents.png
+   :align: center
+
+   The Layout Extents Dialog
+
+.. _figure_decorations_layoutextents_example:
+
+.. figure:: img/decoration_layoutextents_example.png
+   :align: center
+
+   Example of displayed layout extents in a QGIS project with two print layouts. The print
+   layout named 'Sights' contains two map items, while the other print layout contains one
+   map item.
+
+To add layout extent(s):
+
+#. Select from menu :menuselection:`View --> Decorations --> Layout Extents`.
+   The dialog starts (see figure_decorations_layoutextents_).
+#. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
+#. Optionally, change the symbol and labeling of the extents
+#. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
+
 .. tip::
 
    **Settings of Decorations**
 
    When you save a :file:`.qgs` project, any changes you have made to Grid,
-   North Arrow, Scale Bar and Copyright will be saved in the project and restored
+   North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project and restored
    the next time you load the project.
 
 
@@ -1357,7 +1397,7 @@ comboboxes.
 With the :guilabel:`Mode` combobox you can define from which layers features
 should be identified:
 
-* **Current layer** : only features from the selected layer are identified. The
+* **Current layer**: only features from the selected layer are identified. The
   layer may not be visible in the canvas.
 * **Top down, stop at first**: for only features from the upper visible layer.
 * **Top down**: for all features from the visible layers. The results are shown in
@@ -1446,7 +1486,7 @@ clicking the |selectString| :menuselection:`Style` combobox and choose:
 * **Add**: A new style is created using the current options. By default, it will
   be saved in the QGIS project file. See below to save the style in another file
   or a database
-* **Remove**: delete unwanted style, in case you have more than one style defined
+* **Remove**: Delete unwanted style, in case you have more than one style defined
   for the layer.
 
 At the bottom of the Style drop-down list, you see the styles set for the layer
@@ -1869,6 +1909,8 @@ The values presented in the varying size assistant above will set the size
    source folder.
 
 .. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
