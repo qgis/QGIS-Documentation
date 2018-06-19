@@ -269,35 +269,34 @@ unless :guilabel:`Show markers only for selected features` option under
 Adding Features
 ---------------
 
-You can use the |capturePoint| :sup:`Add Feature`,
-|captureLine| :sup:`Add Feature` or |capturePolygon|
-:sup:`Add Feature` icons on the toolbar to add new feature (point, line and
-polygon) into the current layer.
+Depending on the layer type, you can use the |newTableRow| :sup:`Add Record`,
+|capturePoint| :sup:`Add Point Feature`, |captureLine| :sup:`Add Line Feature`
+or |capturePolygon| :sup:`Add Polygon Feature` icons on the toolbar to add new
+features into the current layer.
 
-The next buttons |circularStringCurvePoint| :sup:`Add circular string` or
-|circularStringRadius| :sup:`Add circular string by radius` allow users to add
-line or polygon features with a circular geometry.
+To add a geometryless feature, click on the |newTableRow| :sup:`Add Record`
+button and you can enter attributes in the feature form that opens.
+To create features with the spatially enabled tools, you first digitize the
+geometry then enter its attributes. To digitize the geometry:
 
-To create features with these tools, you first digitize the geometry
-then enter its attributes.
-To digitize the geometry, left-click on the map area to create the first
-point of your new feature.
+#. Left-click on the map area to create the first point of your new feature. For
+   point features, this should be enough and trigger, if required, the feature
+   form to fill in their attributes;
+#. For line or polygon geometries, keep on left-clicking for each additional
+   point you wish to capture or use :ref:`automatic tracing <tracing>` capability
+   to accelerate the digitization. This will create consecutive straight lines
+   between the vertices you place.
 
-For linear or curved geometries, keep on left-clicking for each additional
-point you wish to capture or use :ref:`automatic tracing <tracing>` capability
-to accelerate the digitization. You can switch back and forth between linear
-:guilabel:`Add feature` tool and curved :guilabel:`Add circular string...` tools
-to create compound curved geometry. Pressing :kbd:`Delete` or :kbd:`Backspace` key
-reverts the last node you add. When you have finished adding points, right-click
-anywhere on the map area to confirm you have finished entering the geometry of
-that feature.
+.. note::
+  Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last node you add.
 
-.. note:: **Curved geometries are stored as such only in compatible data provider**
+#. When you have finished adding points, right-click anywhere on the map area
+   to confirm you have finished entering the geometry of that feature.
 
-   Although QGIS allows to digitize curved geometries within any editable
-   data format, you need to be using a data provider (e.g. PostGIS, GML or WFS)
-   that supports curves to have features stored as curved, otherwise QGIS
-   segmentizes the circular arcs. The memory layer provider also supports curves.
+   .. note::
+   While digitizing line or polygon geometries, you can switch back and forth
+   between the linear :guilabel:`Add feature` tools and :ref:`circular string
+   tools <add_circular_string>` to create compound curved geometries.
 
 .. index:: Rubber band
 
@@ -310,15 +309,15 @@ that feature.
    You can also avoid the use of the rubber band by checking :guilabel:`Don't
    update rubber band during node editing`.
 
-The attribute window will appear, allowing you to enter the information for
-the new feature. Figure_edit_values_ shows setting attributes for a fictitious new
-river in Alaska. However, in the :guilabel:`Digitizing` menu under the
-:menuselection:`Settings --> Options` menu, you can also activate:
+#. The attribute window will appear, allowing you to enter the information for
+   the new feature. Figure_edit_values_ shows setting attributes for a fictitious
+   new river in Alaska. However, in the :guilabel:`Digitizing` menu under the
+   :menuselection:`Settings --> Options` menu, you can also activate:
 
-* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created
-  feature` to avoid the form opening
-* or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
-  automatically filled at the opening of the form and just have to type changing values.
+   * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created
+     feature` to avoid the form opening
+   * or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
+     automatically filled at the opening of the form and just have to type changing values.
 
 .. _figure_edit_values:
 
