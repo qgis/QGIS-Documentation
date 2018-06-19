@@ -213,6 +213,9 @@ More information on layer or group using indicator icon
 In some circumstances, the :guilabel:`Layers` panel can display next to the
 layer or group an icon to advertize some properties. These symbols are:
 
+* |toggleEditing| to indicate that the layer is in edit mode and you can modify
+  the data;
+* |editableEdits| to indicate that the layer being edited has some unsaved changes;
 * |indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied
   to the layer. Hover over the icon to see the filter expression and double-click
   to update the setting;
@@ -1894,6 +1897,8 @@ The values presented in the varying size assistant above will set the size
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
