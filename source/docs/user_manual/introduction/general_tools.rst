@@ -481,9 +481,10 @@ If you want to embed content from other project files into your project, select
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve.
-#. Press **[OK]**. The selected layers and groups are embedded in the Layer
-   panel and can be visualized in the map canvas now. Names of embedded items
-   appear in italic to distinguish them from regular layers and groups.
+#. Press **[OK]**. The selected layers and groups are embedded in the :guilabel:`Layers`
+   panel and can be visualized in the map canvas now. An |indicatorEmbedded|
+   icon is added next to their name for recognition and hovering over displays
+   a tooltip with the original project file path.
 
 .. _figure_embed_dialog:
 
@@ -896,7 +897,7 @@ and need to know the actual visible region of print layouts.
 .. figure:: img/decoration_layoutextents_example.png
    :align: center
 
-   Example of displayed layout extents in a QGIS-projekt with two print layouts. The print
+   Example of displayed layout extents in a QGIS project with two print layouts. The print
    layout named 'Sights' contains two map items, while the other print layout contains one
    map item.
 
@@ -1343,14 +1344,26 @@ default it will display three kinds of information:
 * **Derived**: This information is calculated or derived from other information.
   This includes:
 
-  * general information about the feature and its geometry: feature id, length or perimeter
-    and area in map units depending on its geometry, the count of spatial parts and
-    the number of the clicked part in case of multi-geometry, the count of vertices in
-    the feature and the number of the closest one to the point clicked
-  * coordinate information: the X and Y (and Z/M if available) coordinate values of the
-    clicked point, the feature closest vertex and its first and last vertices.
-    In case you click on a curved line using the info tool, QGIS will also display the
-    radius of that section in the panel result.
+  * the feature ID;
+  * general information about its geometry:
+
+    * depending on the geometry type, the cartesian measurements of length,
+      perimeter or area in the layer's CRS units;
+    * depending on the geometry type and if an ellipsoid is set in the project
+      properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
+      length, perimeter or area using the chosen units;
+    * the count of geometry parts in the feature and the number of the part you
+      clicked on;
+    * and the count of vertices in the feature.
+  * coordinate information, using the project properties :guilabel:`Coordinates
+    display` settings:
+
+    * the ``X`` and ``Y`` coordinate values of the clicked point;
+    * the number of the closest vertex to the clicked point;
+    * the ``X`` and ``Y`` (and ``Z``/``M`` if applicable) coordinate values of the
+      closest vertex;
+    * in case you click on a curved line using the info tool, QGIS will also
+      display the radius of that section in the panel result.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
@@ -1966,6 +1979,8 @@ The values presented in the varying size assistant above will set the size
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em

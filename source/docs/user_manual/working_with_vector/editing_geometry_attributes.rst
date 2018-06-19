@@ -228,7 +228,9 @@ Using the basic digitizing tools, you can perform the following functions:
 +==============================+===================================+==========================+==================================+
 | |allEdits|                   | Current edits                     | |toggleEditing|          | Toggle editing                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |saveEdits|                  | Save layer edits                  | |capturePoint|           | Add Feature: Capture Point       |
+| |saveEdits|                  | Save layer edits                  |                          |                                  |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |newTableRow|                | Add new record                    | |capturePoint|           | Add Feature: Capture Point       |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |captureLine|                | Add Feature: Capture Line         | |capturePolygon|         | Add Feature: Capture Polygon     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
@@ -263,62 +265,59 @@ unless :guilabel:`Show markers only for selected features` option under
    Remember to |saveEdits| :sup:`Save Layer Edits` regularly. This will also
    check that your data source can accept all the changes.
 
-.. index:: Adding features
+.. index:: Adding features, Rubber band
 .. _add_feature:
 
 Adding Features
 ---------------
 
-You can use the |capturePoint| :sup:`Add Feature`,
-|captureLine| :sup:`Add Feature` or |capturePolygon|
-:sup:`Add Feature` icons on the toolbar to add new feature (point, line and
-polygon) into the current layer.
+Depending on the layer type, you can use the |newTableRow| :sup:`Add Record`,
+|capturePoint| :sup:`Add Point Feature`, |captureLine| :sup:`Add Line Feature`
+or |capturePolygon| :sup:`Add Polygon Feature` icons on the toolbar to add new
+features into the current layer.
 
-The next buttons |circularStringCurvePoint| :sup:`Add circular string` or
-|circularStringRadius| :sup:`Add circular string by radius` allow users to add
-line or polygon features with a circular geometry.
+To add a geometryless feature, click on the |newTableRow| :sup:`Add Record`
+button and you can enter attributes in the feature form that opens.
+To create features with the spatially enabled tools, you first digitize the
+geometry then enter its attributes. To digitize the geometry:
 
-To create features with these tools, you first digitize the geometry
-then enter its attributes.
-To digitize the geometry, left-click on the map area to create the first
-point of your new feature.
+#. Left-click on the map area to create the first point of your new feature. For
+   point features, this should be enough and trigger, if required, the feature
+   form to fill in their attributes;
+#. For line or polygon geometries, keep on left-clicking for each additional
+   point you wish to capture or use :ref:`automatic tracing <tracing>` capability
+   to accelerate the digitization. This will create consecutive straight lines
+   between the vertices you place.
 
-For linear or curved geometries, keep on left-clicking for each additional
-point you wish to capture or use :ref:`automatic tracing <tracing>` capability
-to accelerate the digitization. You can switch back and forth between linear
-:guilabel:`Add feature` tool and curved :guilabel:`Add circular string...` tools
-to create compound curved geometry. Pressing :kbd:`Delete` or :kbd:`Backspace` key
-reverts the last node you add. When you have finished adding points, right-click
-anywhere on the map area to confirm you have finished entering the geometry of
-that feature.
+   .. note::
+    Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last node you add.
 
-.. note:: **Curved geometries are stored as such only in compatible data provider**
+#. When you have finished adding points, right-click anywhere on the map area
+   to confirm you have finished entering the geometry of that feature.
 
-   Although QGIS allows to digitize curved geometries within any editable
-   data format, you need to be using a data provider (e.g. PostGIS, GML or WFS)
-   that supports curves to have features stored as curved, otherwise QGIS
-   segmentizes the circular arcs. The memory layer provider also supports curves.
+   .. note::
+    While digitizing line or polygon geometries, you can switch back and forth
+    between the linear :guilabel:`Add feature` tools and :ref:`circular string
+    tools <add_circular_string>` to create compound curved geometries.
 
-.. index:: Rubber band
+   .. tip:: **Customize the digitizing rubber band**
 
-.. tip:: **Customize the digitizing rubber band**
+    While capturing polygon, the by-default red rubber band can hide underlying
+    features or places you'd like to capture a point. This can be fixed by setting
+    a lower opacity (or alpha channel) to the rubber band's :guilabel:`Fill Color`
+    in :menuselection:`Settings --> Options --> Digitizing` menu.
+    You can also avoid the use of the rubber band by checking :guilabel:`Don't
+    update rubber band during node editing`.
 
-   While capturing polygon, the by-default red rubber band can hide underlying
-   features or places you'd like to capture a point. This can be fixed by setting
-   a lower opacity (or alpha channel) to the rubber band's :guilabel:`Fill Color`
-   in :menuselection:`Settings --> Options --> Digitizing` menu.
-   You can also avoid the use of the rubber band by checking :guilabel:`Don't
-   update rubber band during node editing`.
+#. The attribute window will appear, allowing you to enter the information for
+   the new feature. Figure_edit_values_ shows setting attributes for a fictitious
+   new river in Alaska. However, in the :guilabel:`Digitizing` menu under the
+   :menuselection:`Settings --> Options` menu, you can also activate:
 
-The attribute window will appear, allowing you to enter the information for
-the new feature. Figure_edit_values_ shows setting attributes for a fictitious new
-river in Alaska. However, in the :guilabel:`Digitizing` menu under the
-:menuselection:`Settings --> Options` menu, you can also activate:
-
-* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created
-  feature` to avoid the form opening
-* or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
-  automatically filled at the opening of the form and just have to type changing values.
+   * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created
+     feature` to avoid the form opening
+   * or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
+     automatically filled at the opening of the form and just have to type changing values.
 
 .. _figure_edit_values:
 
@@ -821,11 +820,22 @@ as a ring polygon.
 Fill Ring
 ---------
 
-You can use the |fillRing| :sup:`Fill Ring` function to add a ring to
-a polygon and add a new feature to the layer at the same time. Using this tool,
-you simply have to digitize a polygon within an existing one. Thus you need not
-first use the |addRing| :sup:`Add Ring` icon and then the
-|capturePolygon| :sup:`Add feature` function anymore.
+The |fillRing| :sup:`Fill Ring` tool helps you create polygon feature that
+totally falls within another one without any overlapping area; that is the new
+feature covers a hole within the existing one. To create such a feature,
+select the tool and:
+
+* draw a new polygon over the existing feature: QGIS adds a ring to its geometry
+  (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
+  feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
+  over the interior boundaries with the |capturePolygon| :sup:`Add polygon
+  feature` tool);
+* or, if the ring already exists on the feature, place the mouse over the ring
+  and left-click while pressing :kbd:`Shift`: a new feature filling the hole is
+  drawn at that place;
+* the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
+  with values of the "parent" feature and/or :ref:`fields constraints
+  <configure_field>`.
 
 
 .. index::
@@ -1086,6 +1096,38 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
    digitizing one feature, so it is possible to digitize some parts of the feature
    with tracing enabled and other parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
+
+
+.. _shape_edit:
+
+Shape digitizing
+================
+
+The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw regular
+shapes and curved geometries.
+
+.. index:: Circular string
+.. _add_circular_string:
+
+Add Circular string
+-------------------
+
+The |circularStringCurvePoint| :sup:`Add circular string` or
+|circularStringRadius| :sup:`Add circular string by radius` buttons allow users
+to add line or polygon features with a circular geometry.
+
+Creating features with these tools follow the same rule as of other digitizing
+tools: left-click to place vertices and right-click to finish the geometry.
+While drawing the geometry, you can switch from one tool to the other as well
+as to the :ref:linear geometry tools <add_feature>`, creating some coumpound
+geometries.
+
+.. note:: **Curved geometries are stored as such only in compatible data provider**
+
+   Although QGIS allows to digitize curved geometries within any editable
+   data format, you need to be using a data provider (e.g. PostGIS, memory layer, GML or WFS)
+   that supports curves to have features stored as curved, otherwise QGIS
+   segmentizes the circular arcs.
 
 
 .. index::
@@ -1405,6 +1447,8 @@ and angle entered. Repeating the process, several points can be added.
 .. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
