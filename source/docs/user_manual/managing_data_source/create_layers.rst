@@ -321,20 +321,30 @@ single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layers. It's accessible in the
 :menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
-The :guilabel:`DXF Export` dialog allows the user to:
+In the :guilabel:`DXF Export` dialog, you need to:
 
 * indicate the destination layer file;
 * choose the symbology mode and scale (see the `OGR Feature Styles
   <ogr_features_note>`_ note);
-* select the encoding and CRS;
-* check the loaded layers to include in the DXF files or pick them from an
-  existing :ref:`map theme <map_themes>`.
+* select the data :guilabel:`Encoding`;
+* select the :guilabel:`CRS` to apply: the selected layers will be reprojected
+  to the given CRS;
+* select the layers to include in the DXF files either by checking each in the
+  table widget or automatically pick them from an existing :ref:`map theme
+  <map_themes>`. The **[Select all]** and **[Deselect all]** buttons can also
+  help to quickly set the data to export.
 
-  For each layer, you can choose a field whose values are used to split features
-  in generated destination layers in the DXF output. You can also choose to
-  |checkbox| :guilabel:`Use the layer title as name if set` and keep features
-  grouped.
-* choose to only :guilabel:`Export features intersecting the current map extent`.
+  For each layer, you can also choose whether to export all the features in a
+  single DXF layer or rely on a field whose values are used to split the features
+  in generated destination layers in the DXF output.
+  
+Optionally, you can also choose to:
+
+* |checkbox| :guilabel:`Use the layer title as name if set` instead of the
+  layer name itself;
+* |checkbox| :guilabel:`Export features intersecting the current map extent`;
+* |unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;
+* |checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements.
 
 .. _figure_create_dxf:
 
@@ -576,4 +586,6 @@ used in conjunction with this spatial index syntax.
    :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
