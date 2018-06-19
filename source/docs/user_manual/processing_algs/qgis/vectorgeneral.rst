@@ -44,7 +44,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+:ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisbuildvirtualvector:
@@ -69,7 +69,7 @@ Parameters
 
 Outputs
 .......
-``Virtual vector``
+``Virtual vector`` [vector]
   The final virtual vector made by all the source vector chosen
 
 
@@ -132,6 +132,10 @@ Parameters
   Output CRS associated with the source vector layer. The CRS information are
   written in the ``proj`` file.
 
+See also
+........
+:ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+
 
 .. _qgisdeleteduplicategeometries:
 
@@ -186,26 +190,26 @@ The result of the query will be added as new layer.
 Parameters
 ..........
 ``Additional input datasource`` [selection: vector]
-  List of layers to query. In the   SQL editor you can refer this layers with
-  their **real** name or also with   **input1**, **input2**, **inputN** depending
+  List of layers to query. In the SQL editor you can refer these layers with
+  their **real** name or also with **input1**, **input2**, **inputN** depending
   on how many layers have been chosen.
 
 ``SQL query`` [text]
   Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
 
-``Unique identifier field`` (optional)
+``Unique identifier field`` (optional) [text]
   Specify the column with unique ID
 
-``Geometry field`` (optional)
+``Geometry field`` (optional) [text]
   Specify the geometry field
 
-``Geometry type`` (optional)
+``Geometry type`` (optional) [combobox]
   Choose the final geometry of the result. By default the algorithm will autodetect
   it
 
   Default: *Autodetect*
 
-``CRS`` (optional)
+``CRS`` (optional) [projection]
   The CRS to or assign to the output layer
 
 
@@ -249,7 +253,55 @@ Outputs
 
 See also
 ........
-:ref:`qgisassignprojection`, :ref:`qgisreprojectlayer`
+:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisreprojectlayer`
+
+
+.. _qgisjoinattributestable:
+
+Join attributes by field value
+------------------------------
+Takes an input vector layer and creates a new vector layer that is an extended
+version of the input one, with additional attributes in its attribute table.
+
+The additional attributes and their values are taken from a second vector layer.
+An attribute is selected in each of them to define the join criteria (one-to-one
+relation).
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Source input vector layer. The final attribute table will be added to **this**
+  vector layer
+
+``Table field`` [tablefield]
+  Field of the source layer with the unique identifier
+
+``Input layer 2`` [vector: any]
+  Layer with the attribute table to join
+
+``Table field 2`` [tablefield]
+  Table of the joining layer with the common unique field identifier
+
+``Layer 2 fields to copy`` (optional) [tablefield]
+  Select the specific fields you want to add. By default all the fields are added
+
+``Join type`` [selection]
+  Choose the type of the final joined layer. You can choose between:
+
+  * Create separate feature for each matching features (one-to-many)
+  * Take attributes of the first matching feature only (one-to-one)
+
+``Discard records which could not be joined`` [boolean]
+  Check if you don't want to add the features that cannot be joined
+
+``Joined field prefix`` (optional) [text] |32|
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
+
+Outputs
+.......
+``Joined layer`` [vector]
+  Final vector layer with the attribute table as result of the joining
 
 
 .. _qgisjoinattributesbylocation:
@@ -285,18 +337,23 @@ Parameters
   * touches
   * overlaps
   * within
-  * crossed
+  * crosses
 
 ``Fields to add`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
 
-``Join type`` [combobox]
-  Choose the type of the final joined layer. If you want you can create one feature
-  for each located feature or you can take the attributes of only the first feature
-  located
+``Join type`` [selection]
+  Choose the type of the final joined layer. You can choose between:
+
+  * Create separate feature for each located features (one-to-many)
+  * Take attributes of the first located feature only (one-to-one)
 
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
+
+``Joined field prefix`` (optional) [text] |32|
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
 
 Outputs
 .......
@@ -331,13 +388,13 @@ Parameters
 
   Options:
 
-  * intersect
+  * intersects
   * contains
   * equals
   * touches
   * overlaps
   * within
-  * crossed
+  * crosses
 
 ``Fields to summarize`` (optional) [tablefield]
   Select the specific fields you want to add. By default all the fields are added
@@ -372,38 +429,6 @@ Outputs
 .......
 ``Joined layer`` [vector]
   The final vector with all the joined features.
-
-
-.. _qgisjoinattributestable:
-
-Join attributes table
----------------------
-Takes an input vector layer and creates a new vector layer that is an extended
-version of the input one, with additional attributes in its attribute table.
-
-The additional attributes and their values are taken from a second vector layer.
-An attribute is selected in each of them to define the join criteria (one-to-one
-relation).
-
-Parameters
-..........
-``Input layer`` [vector: any]
-  Source input vector layer. The final attribute table will be added to **this**
-  vector layer
-
-``Input layer 2`` [vector: any]
-  Layer with the attribute table to join
-
-``Table field`` [tablefield]
-  Field of the source layer with the unique identifier
-
-``Table field 2`` [tablefield]
-  Table of the joining layer with the common unique field identifier
-
-Outputs
-.......
-``Joined layer`` [vector]
-  Final vector layer with the attribute table as result of the joining
 
 
 .. _qgismergevectorlayers:
@@ -446,6 +471,10 @@ Outputs
 
 ``Merged`` [vector]
   Merged vector layer containing all the features and attributes from input layers
+
+See also
+........
+:ref:`qgissplitvectorlayer`
 
 
 .. _qgisorderbyexpression:
@@ -511,7 +540,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisassignprojection`, :ref:`qgisfindprojection`
+:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
 
 
 .. _qgissaveselectedfeatures:
@@ -592,7 +621,7 @@ Truncate table
 --------------
 Truncates a layer, by deleting all features from within the layer.
 
-.. warning:: this algorithm modifies the layer in place, and deleted features cannot
+.. warning:: This algorithm modifies the layer in place, and deleted features cannot
   be restored!
 
 Parameters
@@ -607,4 +636,5 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

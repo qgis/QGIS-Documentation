@@ -12,9 +12,11 @@ The Toolbox
    .. contents::
       :local:
 
-The *Toolbox* is the main element of the processing GUI, and the one that you are
-more likely to use in your daily work. It shows the list of all available
-algorithms grouped in different blocks, and it is the access point to run them,
+The :guilabel:`Processing Toolbox` is the main element of the processing GUI,
+and the one that you are more likely to use in your daily work. It shows the
+list of all available **algorithms** grouped in different blocks called
+*Providers*, and custom **models** and **scripts** you can add to extend the
+set of tools. Hence the toolbox is the access point to run them,
 whether as a single process or as a batch process involving several executions
 of the same algorithm on different sets of inputs.
 
@@ -25,34 +27,33 @@ of the same algorithm on different sets of inputs.
 
    Processing Toolbox
 
-The toolbox contains all the available algorithms, divided into so-called "Providers".
 
-Providers can be (de)activated in the :ref:`settings dialog <processing.options>`.
-A label in the bottom part of the toolbox will remind you of that whenever there
-are inactive providers. Use the link in the label to open the settings window and
-set up providers. We will discuss the settings dialog later in this manual.
-
+Providers can be (de)activated in the :ref:` Processing settings dialog
+<processing.options>`.
 By default, only providers that do not rely on third-party applications (that is,
 those that only require QGIS elements to be run) are active. Algorithms requiring
 external applications might need additional configuration. Configuring providers
 is explained in a :ref:`later chapter <processing.results>` in this manual.
 
-In the upper part of the toolbox, you will find a set of tools to:
+In the upper part of the toolbox dialog, you will find a set of tools to:
 
 * work with |processingModel| :sup:`Models`: :guilabel:`Create New Model...`,
-  :guilabel:`Open Existing Model...` and :guilabel:`Add Model from File...`;
+  :guilabel:`Open Existing Model...` and :guilabel:`Add Model to Toolbox...`;
 * work with |pythonFile| :sup:`Scripts`: :guilabel:`Create New Script...`,
-  :guilabel:`Create New Script from Template...` and :guilabel:`Add Script from
-  File...`;
+  :guilabel:`Create New Script from Template...`, :guilabel:`Open Existing
+  Script...` and :guilabel:`Add Script to Toolbox...`;
 * open the |processingHistory| :sup:`History` panel;
 * open the |processingResult| :sup:`Results Viewer` panel;
 * open the |options| :sup:`Options` dialog.
 
-Below this toolbar is a search box. To reduce the number
-of algorithms shown in the toolbox and make it easier to find the one you need,
-you can enter any word or phrase on the text box. Notice that, as you type, the
-number of algorithms in the toolbox is reduced to just those that contain the
-text you have entered in their names or keywords.
+Below this toolbar is a |search| :guilabel:`Search` box to help you easily find
+the tools you need.
+You can enter any word or phrase on the text box. Notice that, as you type, the
+number of algorithms, models or scripts in the toolbox is reduced to just those
+that contain the text you have entered in their names or keywords.
+
+.. note:: At the top of the list of algorithms are displayed the most recent
+ used tools; handy if you want to reexecute any.
 
 .. _figure_toolbox_search:
 
@@ -62,14 +63,14 @@ text you have entered in their names or keywords.
    Processing Toolbox showing search results
 
 
-To execute an algorithm, just double-click on its name in the toolbox.
+To execute a tool, just double-click on its name in the toolbox.
 
 The algorithm dialog
 --------------------
 
 Once you double-click on the name of the algorithm that you want to execute, a
 dialog similar to that in the figure below is shown (in this case, the dialog
-corresponds to the 'Polygon centroids' algorithm).
+corresponds to the ``Centroids`` algorithm).
 
 .. _figure_parameters_dialog:
 
@@ -381,5 +382,7 @@ to a temporary file and deleted once you exit QGIS).
 .. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
+   :width: 1.5em
+.. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

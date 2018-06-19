@@ -102,7 +102,8 @@ combinations and can also be used in print layout.
 To create a map theme, activate the layers you want to include and configure 
 the desired layer styles. Then press the |showMapTheme| button and choose 
 :menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
-The new theme is listed at the bottom of the drop-down menu and can be restored by
+In the map theme it is also recorded which layers, groups or legend items that are expanded or
+collapsed. The new theme is listed at the bottom of the drop-down menu and can be restored by
 clicking on it.
 
 The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
@@ -135,7 +136,7 @@ Option                                                             Vector Layer 
 |addGroup| :guilabel:`Add Group`                                   \                   \                  |checkbox|
 |duplicateLayer| :guilabel:`Duplicate Layer`                       |checkbox|          |checkbox|         \
 |removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
-:guilabel:`Move to Top-level`                                      |checkbox|          |checkbox|         \
+:guilabel:`Move Out of Group`                                      |checkbox|          |checkbox|         \
 :guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
 :guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
@@ -189,8 +190,14 @@ do this:
    in a new group.
 
 To bring a layer out of a group, you can drag it out, or right click on it and
-choose :guilabel:`Move to top-level`; the layer is placed at the same level than
-the group it was inside. Groups can also be nested inside other groups.
+choose :guilabel:`Move Out of Group`; the layer is moved from the group and
+placed above the group. Groups can also be nested inside other groups. If a layer
+is placed in a nested group, this function will move the layer out of any of the
+nested groups.
+
+To move a group or a layer to the top of the layer panel, you can either drag it to
+the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
+in a group, the layer is moved to the top in the current group.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
@@ -482,9 +489,10 @@ If you want to embed content from other project files into your project, select
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve.
-#. Press **[OK]**. The selected layers and groups are embedded in the Layer
-   panel and can be visualized in the map canvas now. Names of embedded items
-   appear in italic to distinguish them from regular layers and groups.
+#. Press **[OK]**. The selected layers and groups are embedded in the :guilabel:`Layers`
+   panel and can be visualized in the map canvas now. An |indicatorEmbedded|
+   icon is added next to their name for recognition and hovering over displays
+   a tooltip with the original project file path.
 
 .. _figure_embed_dialog:
 

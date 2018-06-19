@@ -264,6 +264,7 @@ unless :guilabel:`Show markers only for selected features` option under
    check that your data source can accept all the changes.
 
 .. index:: Adding features
+.. _add_feature:
 
 Adding Features
 ---------------
@@ -326,11 +327,9 @@ river in Alaska. However, in the :guilabel:`Digitizing` menu under the
 
    Enter Attribute Values Dialog after digitizing a new vector feature
 
-With the |moveFeature| :sup:`Move Feature(s)` icon on the toolbar, you can
-move existing features.
-
 
 .. index:: Vertex tool
+.. _vertex_tool:
 
 Vertex tool
 -----------
@@ -427,18 +426,6 @@ Each change made with the vertex  is stored as a separate entry in the
 this is turned on. On-the-fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
-.. _move_all_vertex:
-
-.. tip:: **Move features with vertex tool**
-
-   Using the |nodeTool| :sup:`Vertex tool` is a way of moving a whole feature,
-   select ALL the vertices of the feature, click a vertex, drag and snap it to a
-   target vertex: the whole feature is moved and snapped to the other feature.
-   In QGIS 2, the |moveFeature| :guilabel:`Move Feature` tool didn't support
-   snapping. This is now fixed since it takes advantage of the new click-click
-   ergonomy, allowing interactive constraints and snapping of features while
-   moving.
-
 .. index:: Vertex editor panel
 
 The Vertex Editor Panel
@@ -473,6 +460,7 @@ them altogether.
 
    Vertex editor panel showing selected nodes
 
+.. _clipboard_feature:
 
 Cutting, Copying and Pasting Features
 -------------------------------------
@@ -545,6 +533,8 @@ make sure the schemas match.
    the GDAL Shapefile driver starting with GDAL/OGR 1.10 knows to auto-extend string
    and integer fields to dynamically accommodate for the length of the data to be inserted.
 
+.. _delete_feature:
+
 Deleting Selected Features
 --------------------------
 
@@ -594,6 +584,7 @@ To use the undo/redo history widget, simply click to select an operation in
 the history list. All features will be reverted to the state they were in
 after the selected operation.
 
+.. _save_feature_edits:
 
 Saving Edited Layers
 --------------------
@@ -683,6 +674,46 @@ Table Advanced Editing: Vector layer advanced editing toolbar
 
 
 .. index::
+   single: Digitizing tools; Move feature
+   single: Digitizing tools; Move and copy feature
+.. _move_feature:
+
+Move Feature(s)
+---------------
+
+The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing features:
+
+#. Select the feature(s) to move;
+#. Click on the map canvas to indicate the origin point of the displacement; you
+   can rely on snapping capabilities to select an accurate point.
+
+   You can also take advantages of the :ref:`advanced digitizing constraints
+   <advanced_digitizing_panel>` to accurately set the origin point coordinates. In
+   that case:
+
+   * first click on the |cad| button to enable the panel;
+   * type ``x`` and enter the corresponding value for the origin point you'd like
+     to use. Then press the |locked| button next to the option to lock the value;
+   * do the same for the ``y`` coordinate;
+   * click on the map canvas and your origin point is placed at the indicated
+     coordinates.
+#. Move over the map canvas to indicate the destination point of the displacement,
+   still using snapping mode or, as above, use the advanced digitizing panel which
+   would provide complementary ``distance`` and ``angle`` placement constraints
+   to place the end point of the translation.
+#. Click on the map canvas: the whole features are moved to new location.
+
+Likewise, you can create a translated copy of the feature(s) using the |moveFeatureCopy|
+:sup:`Copy and Move Feature(s)` tool.
+
+.. note::
+
+   If no feature is selected when you first click on the map canvas with any of
+   the :guilabel:`Move Feature(s)` or :guilabel:`Copy and Move Feature(s)` tools,
+   then only the feature under the mouse is affected by the action. So, if you
+   want to move several features, they should be selected first.
+
+.. index::
    single: Digitizing tools; Rotate Feature
 .. _rotate_feature:
 
@@ -707,6 +738,7 @@ Feature(s)` icon.
 
 .. index::
    single: Digitizing tools; Simplify Feature
+.. _simplify_feature:
 
 Simplify Feature
 ----------------
@@ -736,6 +768,7 @@ To abort feature simplification, you need to click on |simplifyFeatures|
 
 .. index:: Geometryless feature, Multipoint, Multiline, Multipolygon
    single: Digitizing tools; Add Part
+.. _add_part:
 
 Add Part
 --------
@@ -751,6 +784,7 @@ geometry with the |addPart| :sup:`Add Part` tool.
 
 .. index::
    single: Digitizing tools; Delete Part
+.. _delete_part:
 
 Delete Part
 -----------
@@ -764,6 +798,7 @@ To delete a part, simply click within the target part.
 
 .. index::
    single: Digitizing tools; Add Ring
+.. _add_ring:
 
 Add Ring
 --------
@@ -781,19 +816,32 @@ as a ring polygon.
 
 .. index::
    single: Digitizing tools; Fill Ring
+.. _fill_ring:
 
 Fill Ring
 ---------
 
-You can use the |fillRing| :sup:`Fill Ring` function to add a ring to
-a polygon and add a new feature to the layer at the same time. Using this tool,
-you simply have to digitize a polygon within an existing one. Thus you need not
-first use the |addRing| :sup:`Add Ring` icon and then the
-|capturePolygon| :sup:`Add feature` function anymore.
+The |fillRing| :sup:`Fill Ring` tool helps you create polygon feature that
+totally falls within another one without any overlapping area; that is the new
+feature covers a hole within the existing one. To create such a feature,
+select the tool and:
+
+* draw a new polygon over the existing feature: QGIS adds a ring to its geometry
+  (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
+  feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
+  over the interior boundaries with the |capturePolygon| :sup:`Add polygon
+  feature` tool);
+* or, if the ring already exists on the feature, place the mouse over the ring
+  and left-click while pressing :kbd:`Shift`: a new feature filling the hole is
+  drawn at that place;
+* the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
+  with values of the "parent" feature and/or :ref:`fields constraints
+  <configure_field>`.
 
 
 .. index::
    single: Digitizing tools; Delete Ring
+.. _delete_ring:
 
 Delete Ring
 -----------
@@ -806,6 +854,7 @@ change anything when it is used on the outer ring of the polygon.
 .. index::
    single: Digitizing tools; Reshape Feature
    single: Digitizing tools; Extend lines
+.. _reshape_feature:
 
 Reshape Features
 ----------------
@@ -856,6 +905,7 @@ invalid polygon.
 
 .. index::
    single: Digitizing tools; Offset Curves
+.. _offset_curve:
 
 Offset Curves
 -------------
@@ -879,6 +929,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 
 .. index::
    single: Digitizing tools; Split Features
+.. _split_feature:
 
 Split Features
 --------------
@@ -889,6 +940,7 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 
 .. index::
    single: Digitizing tools; Split Parts
+.. _split_part:
 
 Split parts
 -----------
@@ -945,6 +997,7 @@ attributes are made identical.
 
 .. index::
    single: Digitizing tools; Rotate Point Symbols
+.. _rotate_symbol:
 
 Rotate Point Symbols
 --------------------
@@ -983,6 +1036,7 @@ field is updated in the layer's attribute table.
 
 .. index::
    single: Digitizing tools; Offset Point Symbols
+.. _offset_symbol:
 
 Offset Point Symbols
 --------------------
@@ -1043,6 +1097,38 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
    digitizing one feature, so it is possible to digitize some parts of the feature
    with tracing enabled and other parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
+
+
+.. _shape_edit:
+
+Shape digitizing
+================
+
+The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw regular
+shapes and curved geometries.
+
+.. index:: Circular string
+.. _add_circular_string:
+
+Add Circular string
+-------------------
+
+The |circularStringCurvePoint| :sup:`Add circular string` or
+|circularStringRadius| :sup:`Add circular string by radius` buttons allow users
+to add line or polygon features with a circular geometry.
+
+Creating features with these tools follow the same rule as of other digitizing
+tools: left-click to place vertices and right-click to finish the geometry.
+While drawing the geometry, you can switch from one tool to the other as well
+as to the :ref:linear geometry tools <add_feature>`, creating some coumpound
+geometries.
+
+.. note:: **Curved geometries are stored as such only in compatible data provider**
+
+   Although QGIS allows to digitize curved geometries within any editable
+   data format, you need to be using a data provider (e.g. PostGIS, memory layer, GML or WFS)
+   that supports curves to have features stored as curved, otherwise QGIS
+   segmentizes the circular arcs.
 
 
 .. index::

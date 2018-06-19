@@ -869,11 +869,15 @@ Data-defined size legend
 ........................
 
 When a layer is rendered with the :ref:`proportional symbol or the multivariate
-rendering <proportional_symbols>`, you can allow the display of the scaled
+rendering <proportional_symbols>` or when a :ref:`scaled size diagram
+<diagram_size>` is applied to the layer, you can allow the display of the scaled
 symbols in both the :ref:`Layers panel <label_legend>` and the :ref:`print
-layout legend <layout_legend_item>`. Click on the **[Advanced]** button below
-the saved symbols list and choose :guilabel:`Data-defined size legend...`
-opening a dialog with the following options to:
+layout legend <layout_legend_item>`.
+
+To enable the :guilabel:`Data-defined Size Legend` dialog to render symbology,
+select the eponym option in the **[Advanced]** button below the saved symbols
+list. For diagrams, the option is available under the :guilabel:`Legend` tab.
+The dialog provides the following options to:
 
 * select the type of legend: |radioButtonOn| :guilabel:`Legend not enabled`,
   |radioButtonOff| :guilabel:`Separated legend items` and |radioButtonOff|
@@ -900,9 +904,6 @@ the horizontal center of the symbol to the corresponding legend text is drawn.
 
 .. note:: Currently, data-defined size legend for layer symbology can only be
   applied to point layer using single, categorized or graduated symbology.
-
-.. note:: The data-defined size legend can also be used to render a scaled
-  diagram size in both the :guilabel:`Layers` panel and the print layout legend.
 
 
 .. index:: Paint effects
@@ -1770,7 +1771,7 @@ The current core implementation of diagrams provides support for:
 For each type of diagram, the properties are divided into several tabs:
 
 * :ref:`Attributes <diagram_attributes>`
-* :ref:`Appearance <diagram_appearance>`
+* :ref:`Rendering <diagram_appearance>`
 * :ref:`Size <diagram_size>`
 * :ref:`Placement <diagram_placement>`
 * :ref:`Options <diagram_options>`
@@ -1802,32 +1803,43 @@ or of the layer tree.
 
 .. _diagram_appearance:
 
-Appearance
+Rendering
 ----------
 
-:guilabel:`Appearance` defines how the diagram looks like. It provides
+:guilabel:`Rendering` defines how the diagram looks like. It provides
 general settings that do not interfere with the statistic values such as:
 
-* the graphic transparency, its outline width and color
-* the width of the bar in case of histogram
-* the circle background color in case of text diagram, and the font used for texts
-* the orientation of the left line of the first slice represented in pie chart.
-  Note that slices are displayed clockwise.
+* the graphic's opacity, its outline width and color;
+* and, depending on the type of diagram:
 
-In this tab, you can also manage the diagram visibility:
+  * the width of the bar in case of histogram;
+  * the circle background color in case of text diagram, and the font used for texts;
+  * the orientation of the left line of the first slice represented in pie chart.
+    Note that slices are displayed clockwise.
 
-* by removing diagrams that overlap others or :guilabel:`Show all diagrams`
-  even if they overlap each other
-* by selecting a field with :guilabel:`Data defined visibility` to precisely
-  tune which diagrams should be rendered
-* by setting the :ref:`scale visibility <label_scaledepend>`
+In this tab, you can also manage and fine tune the diagram visibility with
+different options:
+
+* :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
+  other and on top of labels. A diagram with a high index is drawn over diagrams
+  and labels ;
+* |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
+  overlap each other;
+* :guilabel:`Show diagram`: allows only specific diagrams to be rendered;
+* :guilabel:`Always Show`: selects specific diagrams to always render, even when
+  they overlap other diagrams or map labels;
+* setting the :ref:`Scale dependent visibility <label_scaledepend>`;
+* :guilabel:`Discourage diagrams and labels from covering features`: defines
+  features to use as obstacles, ie QGIS will try to not place diagrams nor labels
+  over these features.
+
 
 .. _figure_diagrams_appearance:
 
 .. figure:: img/diagram_tab_appearance.png
    :align: center
 
-   Diagram properties - Appearance tab
+   Diagram properties - Rendering tab
 
 .. _diagram_size:
 
@@ -1870,12 +1882,12 @@ According to the layer geometry type, it offers different options for the placem
 * 'Over the centroid', 'Around the centroid' (with a distance set),
   'Perimeter' and anywhere 'Inside polygon' are the options for polygon features.
 
-The diagram can also be placed using feature data by filling the ``X``
-and ``Y`` fields with an attribute of the feature.
+The diagram can also be placed using feature data to fill the coordinates ``X``
+and ``Y`` fields.
 
 The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
-the **Priority** slider or the **z-index** value.
+the **Priority** slider value.
 
 .. _figure_diagrams_placement:
 

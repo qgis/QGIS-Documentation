@@ -247,7 +247,7 @@ information.
  |duplicateLayout| :guilabel:`Duplicate Layout`                               :guilabel:`Layout`         :ref:`layout_manager`
  |deleteSelected| :guilabel:`Delete Layout`
  |layoutManager| :guilabel:`Layout Manager...`                                :guilabel:`Layout`         :ref:`layout_manager`
- :menuselection:`Layouts —>`
+ :menuselection:`Layouts -->`
  :guilabel:`Layout Properties...`                                                                        :ref:`layout_panel`
  :guilabel:`Rename Layout...`
  |newPage| :guilabel:`Add Pages...`                                           :guilabel:`Layout`         :ref:`page_properties`
@@ -525,16 +525,11 @@ will always take precedence - since they have been manually set (hence,
 assumption that they have been explicitly placed at highly desirable snapping
 locations, and should be selected over the general grid).
 
-.. _figure_composition_grid:
+.. note::
 
-.. figure:: img/composition_guides.png
-   :align: center
-
-   Snapping to Grids in the Print Layout
-
-In the :menuselection:`Settings --> Layout Options` menu, you can also set
-the grid and guides parameters exposed above. However, these options will
-only apply as defaults to new print layouts.
+  In the :menuselection:`Settings --> Layout Options` menu, you can also set
+  the grid and guides parameters exposed above. However, these options will
+  only apply as defaults to new print layouts.
 
 .. _layout_export_settings:
 
@@ -568,12 +563,6 @@ by checking |checkbox| :guilabel:`Save world file`. The world file is created
 beside the exported map(s), has the name of the page output with the reference
 map item and contains information to georeference it easily.
 
-.. _figure_composition_export:
-
-.. figure:: img/composition_export.png
-   :align: center
-
-   Export Settings in the Print Layout
 
 Resize layout to content
 ........................
@@ -638,7 +627,13 @@ Pages` dialog opens and you are asked to fill:
   ``ft``... Conversion of entered values is automatically applied when switching
   from one unit to another.
 
-.. Todo: Add New page dialog screenshot
+.. _figure_layout_new_page:
+
+.. figure:: img/insert_page.png
+   :align: center
+
+   Creating a new page in the Print Layout
+
 
 Any page can be later customized through the Page :guilabel:`Item Properties`
 panel. Right-click on a page and select :guilabel:`Page Properties...`. The
@@ -653,7 +648,12 @@ panel. Right-click on a page and select :guilabel:`Page Properties...`. The
 * the :guilabel:`Background` using the :ref:`color <color-selector>` or
   :ref:`symbol <symbol-selector>` you want.
 
-.. Todo: Add page properties panel screenshot
+.. _figure_layout_page:
+
+.. figure:: img/page_properties.png
+   :align: center
+
+   Page properties dialog
 
 
 .. index:: Guides, Smart guides
@@ -672,6 +672,13 @@ To create a guide, two ways:
   ruler and release the mouse button within the page area, at the desired
   position.
 * more accurate and always available, use the :guilabel:`Guides` panel.
+
+.. _figure_layout_guides_panel:
+
+.. figure:: img/guides_panel.png
+   :align: center
+
+   The Guides panel
 
 The :guilabel:`Guides` panel allows creation of snap lines at specific
 locations: click the |signPlus| :sup:`Add new guide` button and enter
