@@ -1087,6 +1087,21 @@ otherwise QGIS is unable to connect them and thus traces a single straight line.
    Tools behave as usual when tracing is disabled.
 
 
+.. _shape_edit:
+
+Shape digitizing
+================
+
+The :guilabel:`Shape Digitizing` toolbar offers a set of tools to draw regular
+shapes and curved geometries.
+
+.. index:: Circular string
+.. _add_circular_string:
+
+Add Circular string
+-------------------
+
+
 .. index::
    single: Digitizing tools; Advanced panel
 .. _advanced_digitizing_panel:
