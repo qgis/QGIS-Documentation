@@ -228,7 +228,9 @@ Using the basic digitizing tools, you can perform the following functions:
 +==============================+===================================+==========================+==================================+
 | |allEdits|                   | Current edits                     | |toggleEditing|          | Toggle editing                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |saveEdits|                  | Save layer edits                  | |capturePoint|           | Add Feature: Capture Point       |
+| |saveEdits|                  | Save layer edits                  |                          |                                  |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |newTableRow|                | Add new record                    | |capturePoint|           | Add Feature: Capture Point       |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |captureLine|                | Add Feature: Capture Line         | |capturePolygon|         | Add Feature: Capture Polygon     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
@@ -263,7 +265,7 @@ unless :guilabel:`Show markers only for selected features` option under
    Remember to |saveEdits| :sup:`Save Layer Edits` regularly. This will also
    check that your data source can accept all the changes.
 
-.. index:: Adding features
+.. index:: Adding features, Rubber band
 .. _add_feature:
 
 Adding Features
@@ -287,27 +289,25 @@ geometry then enter its attributes. To digitize the geometry:
    to accelerate the digitization. This will create consecutive straight lines
    between the vertices you place.
 
-.. note::
-  Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last node you add.
+   .. note::
+    Pressing :kbd:`Delete` or :kbd:`Backspace` key reverts the last node you add.
 
 #. When you have finished adding points, right-click anywhere on the map area
    to confirm you have finished entering the geometry of that feature.
 
    .. note::
-   While digitizing line or polygon geometries, you can switch back and forth
-   between the linear :guilabel:`Add feature` tools and :ref:`circular string
-   tools <add_circular_string>` to create compound curved geometries.
+    While digitizing line or polygon geometries, you can switch back and forth
+    between the linear :guilabel:`Add feature` tools and :ref:`circular string
+    tools <add_circular_string>` to create compound curved geometries.
 
-.. index:: Rubber band
+   .. tip:: **Customize the digitizing rubber band**
 
-.. tip:: **Customize the digitizing rubber band**
-
-   While capturing polygon, the by-default red rubber band can hide underlying
-   features or places you'd like to capture a point. This can be fixed by setting
-   a lower opacity (or alpha channel) to the rubber band's :guilabel:`Fill Color`
-   in :menuselection:`Settings --> Options --> Digitizing` menu.
-   You can also avoid the use of the rubber band by checking :guilabel:`Don't
-   update rubber band during node editing`.
+    While capturing polygon, the by-default red rubber band can hide underlying
+    features or places you'd like to capture a point. This can be fixed by setting
+    a lower opacity (or alpha channel) to the rubber band's :guilabel:`Fill Color`
+    in :menuselection:`Settings --> Options --> Digitizing` menu.
+    You can also avoid the use of the rubber band by checking :guilabel:`Don't
+    update rubber band during node editing`.
 
 #. The attribute window will appear, allowing you to enter the information for
    the new feature. Figure_edit_values_ shows setting attributes for a fictitious
@@ -1419,6 +1419,8 @@ and angle entered. Repeating the process, several points can be added.
 .. |moveFeaturePoint| image:: /static/common/mActionMoveFeaturePoint.png
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
 .. |nodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
