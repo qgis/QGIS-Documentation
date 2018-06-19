@@ -280,7 +280,7 @@ Data Sources Settings
 
 **Hidden Browser Path**
 
-This widget lists all the folder you chose to hide from the :ref:`Browser panel
+This widget lists all the folders you chose to hide from the :ref:`Browser panel
 <browser_panel>`.
 Removing a folder from the list will make it available in the Browser panel.
 
@@ -299,7 +299,9 @@ Rendering Settings
 
 **Rendering behavior**
 
-* |checkbox| :guilabel:`By default new layers added to the map should be displayed`
+* |unchecked| :guilabel:`By default new layers added to the map should be
+  displayed`: unchecking this option can be handy when loading multiple layers
+  to avoid each new layer being rendered in the canvas and slow down the process;
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
 * |checkbox| :guilabel:`Max cores to use`
@@ -337,7 +339,8 @@ Rendering Settings
   and the curve center, in degrees) or maximum difference (distance between the
   segment of the two vertices and the curve line, in map units), the **more
   straight line** segments will be used during rendering.
-* :guilabel:`Tolerance type`: it can be 'Maximum angle' or 'Maximum distance'
+* :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
+  between approximation and curve.
 
 **Rasters**
 
@@ -362,28 +365,36 @@ For rasters rendering, you can also define the following options:
 
 **Debugging**
 
-* |checkbox| :guilabel:`Map canvas refresh` to debug rendering duration.
+* |checkbox| :guilabel:`Map canvas refresh` to debug rendering duration in
+  the :guilabel:`Log Messages` panel.
 
 .. _canvas_legend_options:
 
 Canvas and Legend Settings
 --------------------------
 
-**Default map appearance (overridden by project properties)**
+.. _figure_canvas_legend:
 
-* Define a :guilabel:`Selection color` and a :guilabel:`Background color`.
+.. figure:: img/options_canvas_legend.png
+   :align: center
 
-**Layer legend**
+   Canvas and Legend Settings
 
-The following :guilabel:`Legend item styles` are possible:
+These properties let you set:
 
-* :guilabel:`Double click action in legend` |selectString|. You can either
-  'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
-  with the double click.
-* |checkbox| :guilabel:`Display classification attribute names` in the Layers
-  panel, e.g. when applying a categorized or rule-based renderer
-  (see :ref:`vector_style_menu` for more information).
-* you can also set the :guilabel:`WMS getLegendGraphic Resolution`
+* the **Default map appearance (overridden by project properties)**: the
+  :guilabel:`Selection color` and :guilabel:`Background color`.
+
+* **Layer legend** interaction:
+
+  * :guilabel:`Double click action in legend` |selectString|. You can either
+    'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
+    with the double click.
+  * |checkbox| :guilabel:`Display classification attribute names` in the Layers
+    panel, e.g. when applying a categorized or rule-based renderer
+    (see :ref:`vector_style_menu` for more information).
+  * the :guilabel:`WMS getLegendGraphic Resolution`
+* the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
 
 .. index:: Map tools
 .. _maptools_options:
@@ -393,8 +404,8 @@ Map tools Settings
 
 This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
-* :guilabel:`Search radius for identifying and displaying map tips` is a tolerance
-  distance within which the identify tool will depict results
+* :guilabel:`Search radius for identifying features and displaying map tips` is
+  a tolerance distance within which the identify tool will depict results
   as long as you click within this tolerance.
 * :guilabel:`Highlight color` allows you to choose with which color should features being
   identified be highlighted.
@@ -455,7 +466,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Feature creation**
 
-* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`
+* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`:
+  this choice can be overridden in each layer properties dialog;
 * |checkbox| :guilabel:`Reuse last entered attribute values`
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
@@ -481,7 +493,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * :guilabel:`Display main dialog as (restart required)`: set whether the
   Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'.
 * :guilabel:`Snapping marker color`
-* |checkbox| :guilabel:`Show snapping tooltips`
+* |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
+  feature you are about to snap. Helpful when multiple features overlap.
 * |checkbox| :guilabel:`Enable snapping on invisible features` 
 
 
@@ -984,6 +997,8 @@ and **[Load]** them into another QGIS installation.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em
