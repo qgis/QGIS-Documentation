@@ -32,8 +32,8 @@ For the :kbd:`forest_stands_2012_results` layer:
 
 Now you can use a saved style for this layer:
 
-* Go to the :guilabel:`Style` tab.
-* Click on :guilabel:`Load Style`.
+* Go to the :guilabel:`Symbology` tab.
+* Click on :menuselection:`Style --> Load Style...`.
 * Select the :kbd:`forest_stands_2012_results.qml` from the :kbd:`exercise_data\\forestry\\results\\` folder.
 * Click :guilabel:`OK`.
 

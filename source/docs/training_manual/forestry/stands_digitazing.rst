@@ -97,7 +97,7 @@ Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the TOC.
 Change the symbology of the centroids layer as:
 
 * Open the :guilabel:`Layer Properties` for :guilabel:`green_centroids`.
-* Go to the :guilabel:`Style` tab.
+* Go to the :guilabel:`Symbology` tab.
 * Set the :guilabel:`Unit` to Map unit.
 * Set the :guilabel:`Size` to 1.
 

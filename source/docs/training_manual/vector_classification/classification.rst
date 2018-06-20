@@ -22,7 +22,7 @@ are numerous different landuse areas on the map.
 -------------------------------------------------------------------------------
 
 * Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
-* Go to the :guilabel:`Style` tab.
+* Go to the :guilabel:`Symbology` tab.
 * Click on the dropdown that says :guilabel:`Single Symbol` and change it to
   :guilabel:`Categorized`:
 
@@ -53,7 +53,7 @@ Now our landuse polygons are appropriately colored and are classified so that
 areas with the same land use are the same color. You may wish to remove the
 black border from the :guilabel:`landuse` layer:
 
-* Open :guilabel:`Layer Properties`, go to the :guilabel:`Style` tab and select
+* Open :guilabel:`Layer Properties`, go to the :guilabel:`Symbology` tab and select
   :guilabel:`Symbol`.
 * Change the symbol by removing the border from the :guilabel:`Simple Fill`
   layer and click :guilabel:`OK`.
@@ -116,12 +116,12 @@ town that it is administered by. Now we will use ratio classification to
 classify the farms by area.
 
 * Save your landuse symbology (if you want to keep it) by clicking on the
-  :guilabel:`Save Style ...` button in the :guilabel:`Style` dialog.
+  :guilabel:`Save Style ...` button in the :guilabel:`Style` drop-down menu.
 
 We're going to reclassify the layer, so existing classes will be lost if not
 saved.
 
-* Close the :guilabel:`Style` dialog.
+* Close the :guilabel:`Layer Properties` dialog.
 * Open the Attributes Table for the :guilabel:`landuse` layer.
 
 We want to classify the landuse areas by size, but there's a problem: they don't
@@ -181,7 +181,7 @@ column header to refresh the data). Save the edits and click :guilabel:`Ok`.
 .. note::  These areas are in degrees. Later, we will compute them in
    square meters.
 
-* Open the :guilabel:`Layer properties` dialog's :guilabel:`Style` tab.
+* Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab.
 * Change the classification style from :guilabel:`Categorized` to
   :guilabel:`Graduated`.
 
@@ -245,7 +245,7 @@ unfortunately normal classification only takes one attribute into account.
 That's where rule-based classification comes in handy.
 
 * Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
-* Switch to the :guilabel:`Style` tab.
+* Switch to the :guilabel:`Symbology` tab.
 * Switch the classification style to :guilabel:`Rule-based`. You'll get this:
 
 .. image:: img/rule_based_classification.png

@@ -416,7 +416,7 @@ available modes are:
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
   environment http://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
 
-The listbox in the center part of the :guilabel:`Style` tab lists the classes
+The listbox in the center part of the :guilabel:`Symbology` tab lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
 Click on **Classify** button to create classes using the chosen mode. Each

@@ -37,7 +37,7 @@ begin by changing the color of the :guilabel:`landuse` layer.
 
 In the :guilabel:`Properties` window:
 
-* Select the :guilabel:`Style` tab at the extreme left:
+* Select the :guilabel:`Symbology` tab at the extreme left:
 
 .. image:: img/layer_properties_style.png
    :align: center
@@ -71,7 +71,7 @@ areas so as to make the map less visually cluttered.
 * Open the :guilabel:`Layer Properties` window for the :guilabel:`landuse`
   layer.
 
-Under the :guilabel:`Style` tab, you will see the same kind of dialog as
+Under the :guilabel:`Symbology` tab, you will see the same kind of dialog as
 before. This time, however, you're doing more than just quickly changing the
 color.
 
@@ -265,7 +265,7 @@ not rendered above another.
 When you're done, remember to save the symbol itself so as not to lose your
 work if you change the symbol again in the future. You can save your current
 symbol style by clicking the :guilabel:`Save Style ...` button under the
-:guilabel:`Style` tab of the :guilabel:`Layer Properties` dialog. Generally, you
+:guilabel:`Symbology` tab of the :guilabel:`Layer Properties` dialog. Generally, you
 should save as :guilabel:`QGIS Layer Style File`.
 
 Save your style under :kbd:`exercise_data/styles`.  You can load a
@@ -479,7 +479,7 @@ First, we'll change the canvas to a size appropriate for a small texture.
 In QGIS:
 
 * Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
-* In the :guilabel:`Style` tab, change the symbol structure by selecting ``SVG Fill``
+* In the :guilabel:`Symbology` tab, change the symbol structure by selecting ``SVG Fill``
   as :guilabel:`Symbol Layer Type` option, as shown below.
 * Click the |browseButton| :guilabel:`Browse` button to select your SVG image.
   It's added to the symbol tree and you can now customize its different
