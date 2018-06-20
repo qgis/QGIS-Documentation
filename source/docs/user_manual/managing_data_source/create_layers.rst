@@ -198,21 +198,24 @@ Creating new layers from an existing layer
 ==========================================
 
 Both raster and vector layers can be saved in a different format and/or reprojected
-to a different coordinate reference system (CRS)
-using the :guilabel:`Save As...` function in the layer context menu (by
-right-clicking in the layer in the layer tree) or in the :menuselection:`Layer
---> Save As...` menu.
+to a different coordinate reference system (CRS) using the :menuselection:`Layer -->
+Save As...` menu or right-clicking on the layer in the :guilabel:`Layers panel` and
+selecting:
+
+* :menuselection:`Export --> Save As...` for raster layer
+* :menuselection:`Export --> Save Features As...` or :menuselection:`Export -->
+  Save Selected Features As...` for vector layer.
 
 Common parameters
 -----------------
 
-The :guilabel:`Save As` dialog shows several parameters to change the behavior
-when saving the layer. Common parameters for raster and vector are:
+The :guilabel:`Save Layer as...` dialog shows several parameters to change the
+behavior when saving the layer. Among the common parameters for raster and vector
+are:
 
-* :guilabel:`Format`
 * :guilabel:`File name`
-* :guilabel:`CRS` can be changed to reproject the data
-* :guilabel:`Add saved file to map` to add the new layer to the canvas
+* :guilabel:`CRS`: can be changed to reproject the data
+* :guilabel:`Add saved file to map`: to add the new layer to the canvas
 * :guilabel:`Extent` (possible values are **layer**, **Map view** or
   **user-defined** extent)
 
@@ -222,12 +225,15 @@ Raster specific parameters
 --------------------------
 
 * :guilabel:`Output mode` (it can be **raw data** or **rendered image**)
+* :guilabel:`Format`: exports to any raster format GDAL can write to, such as
+  GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary Grid,
+  Intergraph Raster, ESRI .hdr Labelled...
 * :guilabel:`Resolution`
 * :guilabel:`Create Options`: advanced options (file compression, block sizes,
   colorimetry...) to fine tune the output file. See the `gdal-ogr
   <http://gdal.org>`_ driver documentation.
 * :guilabel:`Pyramids` creation
-* :guilabel:`VRT Tiles`
+* :guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create VRT`
 * :guilabel:`No data values`
 
 .. _figure_save_raster:
@@ -242,6 +248,10 @@ Vector specific parameters
 
 Depending on the format of export, some of these options are available or not:
 
+* :guilabel:`Format`: exports to any vector format GDAL can write to, such as
+  GeoPackage, ESRI shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
+  SpatiaLite, CSV, KML, ODS...
+* :guilabel:`Layer name` depending on the selected format;
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set
