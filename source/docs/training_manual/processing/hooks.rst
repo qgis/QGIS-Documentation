@@ -77,7 +77,8 @@ Then we iterate over all the algorithm parameters and if a ParameterVector param
 get the corresponding vector layer object from it. We loop over all the features of the layer and 
 check them for geometry errors. If at least one feature contains an invalid geometry, we print a warning message.
 
-To activate this hook we need enter its filename in the *Pre-execution script file* option in the Processing configuration dialog. 
+To activate this hook we need enter its filename in the *Pre-execution script
+file* option in the Processing configuration dialog. 
 The hook will be executed before running any Processing algorithm.
 
 

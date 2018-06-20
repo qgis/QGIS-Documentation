@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. _working_gps:
+
 **********************
 Working with GPS Data
 **********************
