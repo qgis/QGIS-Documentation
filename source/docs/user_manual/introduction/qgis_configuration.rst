@@ -717,7 +717,8 @@ dialog described above.
   including (among the others): author, creation date, language, abstracts, 
   categories, keywords, contact details, links, history. There is also a
   validation functionality that checks if specific fields were filled, anyway
-  this is not enforced.
+  this is not enforced. See :ref:`vector layer metadata properties
+  <vectormetadatamenu>` for some details.
   
 * The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
