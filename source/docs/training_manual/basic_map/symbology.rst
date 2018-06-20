@@ -37,7 +37,7 @@ begin by changing the color of the :guilabel:`landuse` layer.
 
 In the :guilabel:`Properties` window:
 
-* Select the :guilabel:`Symbology` tab at the extreme left:
+* Select the :guilabel:`Symbology` tab:
 
 .. image:: img/layer_properties_style.png
    :align: center
