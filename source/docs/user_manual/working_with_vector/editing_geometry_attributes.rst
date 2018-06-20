@@ -96,6 +96,11 @@ The snapping tolerance setting affects all tools that work with tolerance.
    To avoid layers being checked by default in the **Advanced** mode and hence
    set snappable, define the :guilabel:`Default Snap mode` to ``Off``.
 
+.. tip:: **Quickly toggle snapping**
+
+   You can quickly enable or disable snapping by pressing :kbd:`S` at any time while 
+   you're in the map view.
+
 Snapping tolerance can be set in ``pixels`` or ``map units`` (the units of the
 map view). While in the **Advanced** layer selection mode, it is possible to use
 a snapping tolerance that refers to ``layer units``, the units of the reprojected
