@@ -42,7 +42,7 @@ purposes, and we will learn more about how this works as we continue.
 * Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer
   by right-clicking on the layer in the Layer tree and selecting
   :guilabel:`Properties` option.
-* Switch to the :guilabel:`Style` tab.
+* Switch to the :guilabel:`Symbology` tab.
 
 .. image:: img/dem_layer_properties.png
    :align: center

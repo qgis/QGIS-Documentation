@@ -346,7 +346,7 @@ We will use:
 #. Zoom to your favourite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
-#. Click on the :guilabel:`Style` tab and select a blue as fill color.
+#. Click on the :guilabel:`Symbology` tab and select a blue as fill color.
 #. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
    this layer` in the drop-down menu to enable labeling. Then from the
    :guilabel:`Label with` list, choose the ``NAMES`` field as the field containing labels.

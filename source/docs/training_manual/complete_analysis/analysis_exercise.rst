@@ -123,7 +123,7 @@ Changing the symbology of vector layers
 
 * In the :guilabel:`Layers list`, right-click on the :guilabel:`Streets` layer.
 * Select :guilabel:`Properties` from the menu that appears.
-* Switch to the :guilabel:`Style` tab in the dialog that appears.
+* Switch to the :guilabel:`Symbology` tab in the dialog that appears.
 * Click on the button labelled :guilabel:`Change`, with a square showing the
   current color of the :guilabel:`Streets` layer.
 * Select a new color in the dialog that appears.
@@ -139,7 +139,7 @@ Changing the symbology of raster layers
 Raster layer symbology is somewhat different.
 
 * Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall` raster.
-* Switch to the :guilabel:`Style` tab. You'll notice that this style dialog is
+* Switch to the :guilabel:`Symbology` tab. You'll notice that this dialog is
   very different from the version used for vector layers.
 * Ensure that the button :guilabel:`Use standard deviation` is selected.
 * Change the value in the associated box to :kbd:`2.00` (it should be set to
@@ -346,7 +346,7 @@ as follows.
 
 * Open the layer :guilabel:`Properties` dialog (as usual, via the right-click
   menu of the layer).
-* Click on the :guilabel:`Style` tab.
+* Click on the :guilabel:`Symbology` tab.
 * Where it says :guilabel:`Grayscale` (in the :guilabel:`Color map` dropdown
   menu), change it to :guilabel:`Pseudocolor`.
 * Ensure that the :guilabel:`Use standard deviation` radio button is selected. 
@@ -409,7 +409,7 @@ correctly). To properly display raster data with only two classes (:kbd:`1` and
 Setting the style for the reclassified layers
 -------------------------------------------------------------------------------
 
-* Open the :guilabel:`Style` tab in the layer's :guilabel:`Properties` dialog
+* Open the :guilabel:`Symbology` tab in the layer's :guilabel:`Properties` dialog
   as usual.
 * Under the heading :guilabel:`Load min / max values from band`, select the
   :guilabel:`Actual (slower)` radio button.

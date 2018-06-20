@@ -21,7 +21,7 @@ dialog (see figure_raster_properties_).
 There are several tabs in the dialog:
 
 * :guilabel:`Source`
-* :guilabel:`Style`
+* :guilabel:`Symbology`
 * :guilabel:`Transparency`
 * :guilabel:`Histogram`
 * :guilabel:`Rendering`
@@ -80,8 +80,8 @@ layer <general_saveas>`.
 
 .. _label_symbology:
 
-Style Properties
-----------------
+Symbology Properties
+--------------------
 
 Band rendering
 ..............
@@ -115,7 +115,7 @@ to MinMax' and 'Clip to min max'.
 .. figure:: img/rasterMultibandColor.png
    :align: center
 
-   Raster Style - Multiband color rendering
+   Raster Symbology - Multiband color rendering
 
 This selection offers you a wide range of options to modify the appearance
 of your raster layer. First of all, you have to get the data range from your
@@ -164,7 +164,7 @@ The label appears in the legend of the raster layer then.
 .. figure:: img/rasterPaletted.png
    :align: center
 
-   Raster Style - Paletted Rendering
+   Raster Symbology - Paletted Rendering
 
 .. index:: Contrast enhancement
 
@@ -190,7 +190,7 @@ the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 .. figure:: img/rasterSingleBandGray.png
    :align: center
 
-   Raster Style - Singleband gray rendering
+   Raster Symbology - Singleband gray rendering
 
 
 With the :guilabel:`Load min/max values` section, scaling of the color table
@@ -219,7 +219,7 @@ You can also create individual color maps for the single bands here.
 .. figure:: img/rasterSingleBandPseudocolor.png
    :align: center
 
-   Raster Style - Singleband pseudocolor rendering
+   Raster Symbology - Singleband pseudocolor rendering
 
 
 Three types of color interpolation are available:
@@ -290,7 +290,7 @@ matrix through a geometric transformation.
 .. figure:: img/rasterRenderAndRessampling.png
    :align: center
 
-   Raster Style - Color rendering and Resampling settings
+   Raster Symbology - Color rendering and Resampling settings
 
 
 When applying the 'Nearest neighbour' method, the map can have a pixelated
@@ -299,7 +299,7 @@ structure when zooming in. This appearance can be improved by using the
 The effect is a smoother image. This method can be applied, for instance,
 to digital topographic raster maps.
 
-At the bottom of the :guilabel:`Style` tab, you can see a thumbnail of the layer,
+At the bottom of the :guilabel:`Symbology` tab, you can see a thumbnail of the layer,
 its legend symbol, and the palette.
 
 .. index:: Transparency
