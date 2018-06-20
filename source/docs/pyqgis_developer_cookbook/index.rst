@@ -27,7 +27,6 @@ PyQGIS Developer Cookbook
    authentication
    ide_debugging
    pluginlayer
-   compatibility
    releasing
    snippets
    processing
