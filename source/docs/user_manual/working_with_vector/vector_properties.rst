@@ -2008,10 +2008,10 @@ You can define some alias to display human readable fields in the feature form
 or the attribute table. In this case, you don't need to switch to editing mode.
 Alias are saved in project file.
 
-Comments can be added by clicking in the comment field of the column but if
-you are using a PostgreSQL layer, comment of the column could be the one in
-the PostgreSQL table if set. Comments are saved in the QGIS project file as for
-the alias.
+Depending on the data provider, you can associate a comment with a field, for
+example at its creation. This information is retrieved and shown in the
+:guilabel:`Comment` column and is later displayed when hovering over the
+field label in a feature form.
 
 Other than the fields contained in the dataset, the :guilabel:`Source Fields`
 tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
@@ -2229,9 +2229,10 @@ General options
   results` panel.
   It can also be used as field name replacement in the :ref:`expression builder
   <vector_expressions>`, easing expressions understanding and reviews.
-  Alias are saved in project file.
-* :guilabel:`Comment`: displays the field's comment set in the :guilabel:`Source
-  Fields` tab, in a read-only state.
+  Aliases are saved in project file.
+* :guilabel:`Comment`: displays the field's comment as shown in the :guilabel:`Source
+  Fields` tab, in a read-only state. This information is shown as tooltip when
+  hovering over the field label in a feature form.
 * |checkbox| :guilabel:`Editable`: uncheck this option to set the field read-only
   (not manually modifiable) even when the layer is in edit mode. Note that
   checking this setting doesn't override any edit limitation from the provider.
