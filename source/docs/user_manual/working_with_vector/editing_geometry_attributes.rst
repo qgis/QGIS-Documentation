@@ -98,7 +98,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
 
 .. tip:: **Quickly toggle snapping**
 
-   You can quickly enable or disable snapping by pressing :kbd:`S` at any time while 
+   You can quickly enable or disable snapping by pressing :kbd:`S` at any time while
    you're in the map view.
 
 Snapping tolerance can be set in ``pixels`` or ``map units`` (the units of the
@@ -107,9 +107,9 @@ a snapping tolerance that refers to ``layer units``, the units of the reprojecte
 layer when 'on-the-fly' CRS transformation is on.
 
 By default, only visible features (the features whose style is displayed,
-except for layers where the symbology is "No symbols") can be snapped. 
-You can enable the snapping on invisible features by checking 
-|unchecked| :guilabel:`Enable snapping on invisible features` under 
+except for layers where the symbology is "No symbols") can be snapped.
+You can enable the snapping on invisible features by checking
+|unchecked| :guilabel:`Enable snapping on invisible features` under
 :menuselection:`Settings -->` |options| :menuselection:`Options --> Digitizing` tab.
 
 .. index:: Search radius
@@ -195,6 +195,48 @@ Geometry Checker
 
 A core plugin can help the user to find the geometry invalidity. You can find
 more information on this plugin at :ref:`geometry_checker`.
+
+
+.. index::
+   single: Digitizing tools; Automatic tracing
+
+.. _tracing:
+
+Automatic Tracing
+-----------------
+
+Usually, when using capturing map tools (add feature, add part, add ring, reshape
+and split), you need to click each vertex of the feature.
+
+Using the automatic tracing mode you can speed up the digitization process.
+Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
+:kbd:`t` key and :ref:`snap to <snapping_tolerance>` a vertex or segment of a
+feature you want to trace along. Move the mouse over another vertex or segment
+you'd like to snap and instead of an usual straight line, the digitizing rubber
+band represents a path from the last point you snapped to the current position.
+QGIS actually uses the underlying features topology to build the shortest path
+between the two points. Click and QGIS places the intermediate vertices following
+the path. You no longer need to manually place all the vertices during digitization.
+
+Tracing requires snapping to be activated in traceable layers to build the path.
+You should also snap to an existing vertex or segment while digitizing and ensure
+that the two nodes are topologically connectable following existing features,
+otherwise QGIS is unable to connect them and thus traces a single straight line.
+
+
+.. note:: **Adjust map scale or snapping settings for an optimal tracing**
+
+   If there are too many features in map display, tracing is disabled to avoid
+   potentially long tracing structure preparation and large memory overhead.
+   After zooming in or disabling some layers the tracing is enabled again.
+
+.. tip:: **Quickly enable or disable automatic tracing by pressing** :kbd:`t` **key**
+
+   By pressing :kbd:`t` key, tracing can be enabled/disabled anytime even while
+   digitizing one feature, so it is possible to digitize some parts of the feature
+   with tracing enabled and other parts with tracing disabled.
+   Tools behave as usual when tracing is disabled.
+
 
 .. index:: Digitizing, Digitizing tools
    see: Editing; Digitizing
@@ -1061,46 +1103,6 @@ coordinates while moving the symbol in the map canvas.
    If at least two layers of the symbol have different fields assigned to their
    data-defined property (e.g. rotation), the corresponding tool will consider
    that no field is assigned to the symbol property and won't perform the action.
-
-.. index::
-   single: Digitizing tools; Automatic tracing
-
-.. _tracing:
-
-Automatic Tracing
------------------
-
-Usually, when using capturing map tools (add feature, add part, add ring, reshape
-and split), you need to click each vertex of the feature.
-
-Using the automatic tracing mode you can speed up the digitization process.
-Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
-:kbd:`t` key and :ref:`snap to <snapping_tolerance>` a vertex or segment of a
-feature you want to trace along. Move the mouse over another vertex or segment
-you'd like to snap and instead of an usual straight line, the digitizing rubber
-band represents a path from the last point you snapped to the current position.
-QGIS actually uses the underlying features topology to build the shortest path
-between the two points. Click and QGIS places the intermediate vertices following
-the path. You no longer need to manually place all the vertices during digitization.
-
-Tracing requires snapping to be activated in traceable layers to build the path.
-You should also snap to an existing vertex or segment while digitizing and ensure
-that the two nodes are topologically connectable following existing features,
-otherwise QGIS is unable to connect them and thus traces a single straight line.
-
-
-.. note:: **Adjust map scale or snapping settings for an optimal tracing**
-
-   If there are too many features in map display, tracing is disabled to avoid
-   potentially long tracing structure preparation and large memory overhead.
-   After zooming in or disabling some layers the tracing is enabled again.
-
-.. tip:: **Quickly enable or disable automatic tracing by pressing** :kbd:`t` **key**
-
-   By pressing :kbd:`t` key, tracing can be enabled/disabled anytime even while
-   digitizing one feature, so it is possible to digitize some parts of the feature
-   with tracing enabled and other parts with tracing disabled.
-   Tools behave as usual when tracing is disabled.
 
 
 .. _shape_edit:
