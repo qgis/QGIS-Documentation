@@ -403,6 +403,20 @@ options to customize the histogram:
 Rendering Properties
 ====================
 
+In the :guilabel:`Rendering` tab, it's possible to:
+
+* apply a :guilabel:`Scale dependent visibility` to the layer:
+  You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
+  (exclusive)` scale, defining a range of scale in which the layer will be
+  visible. Out of this range, it's hidden. The |mapIdentification|
+  :sup:`Set to current canvas scale` button helps you use the current map
+  canvas scale as boundary of the range visibility.
+  See :ref:`label_scaledepend` for more information.
+* :guilabel:`Refresh layer at interval (seconds)`: set a timer to automatically
+  refresh individual layers at a matching interval. Canvas updates are
+  deferred in order to avoid refreshing multiple times if more than one layer
+  has an auto update interval set.
+
 You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
 (exclusive)` scale, defining a range of scale in which the layer will be
 visible. Out of this range, it's hidden. The |mapIdentification|
