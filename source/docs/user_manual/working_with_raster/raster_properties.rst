@@ -5,8 +5,9 @@
 .. index:: Raster, Layer properties
 .. _raster_properties_dialog:
 
+************************
 Raster Properties Dialog
-========================
+************************
 
 .. only:: html
 
@@ -20,6 +21,7 @@ dialog (see figure_raster_properties_).
 
 There are several tabs in the dialog:
 
+* :guilabel:`Information`
 * :guilabel:`Source`
 * :guilabel:`Symbology`
 * :guilabel:`Transparency`
@@ -51,29 +53,39 @@ There are several tabs in the dialog:
    project file and to avoid changes that may break this behavior, the layer
    properties dialog is made unavailable for these layers.
 
+.. _raster_information:
+
+Information Properties
+======================
+
+The :guilabel:`Information` tab is read-only and represents an interesting
+place to quickly grab summarized information and metadata on the current layer.
+Provided information are:
+
+* based on the provider of the layer (format of storage, path, data type, extent,
+  width/height, compression, pixel size, statistics on bands, number of columns,
+  rows and no-data values of the raster...);
+* picked from the :ref:`filled metadata <raster_metadata>`: access, links,
+  contacts, history... as well as data information (CRS, Extent, bands...);
+
+
 .. _label_sourcetab:
 
 Source Properties
------------------
-
-Layer Info
-..........
+=================
 
 The :guilabel:`Source` tab displays basic information about the selected
-raster, including the layer source path, the display name in the legend
-(which can be modified), and the number of columns, rows and no-data values
-of the raster.
+raster, including:
 
-Coordinate Reference System
-...........................
-
-Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string. You
-can change the layer's CRS, selecting a recently used one in the drop-down list
-or clicking on |setProjection| :sup:`Select CRS` button (see :ref:`crs_selector`).
-Use this process only if the CRS applied to the layer is a wrong one or if none
-was applied. If you wish to reproject your data into another CRS, rather use
-layer reprojection algorithms from Processing or :ref:`Save it into another
-layer <general_saveas>`.
+* the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
+* setting the :guilabel:`Coordinate Reference System`:
+  Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string. You
+  can change the layer's CRS, selecting a recently used one in the drop-down list
+  or clicking on |setProjection| :sup:`Select CRS` button (see :ref:`crs_selector`).
+  Use this process only if the CRS applied to the layer is a wrong one or if none
+  was applied. If you wish to reproject your data into another CRS, rather use
+  layer reprojection algorithms from Processing or :ref:`Save it into another
+  layer <general_saveas>`.
 
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
@@ -81,10 +93,10 @@ layer <general_saveas>`.
 .. _label_symbology:
 
 Symbology Properties
---------------------
+====================
 
 Band rendering
-..............
+--------------
 
 QGIS offers four different :guilabel:`Render types`.
 The renderer chosen is dependent on the data type.
@@ -102,7 +114,8 @@ The renderer chosen is dependent on the data type.
 
 .. _multiband_color:
 
-**Multiband color**
+Multiband color
+...............
 
 With the multiband color renderer, three selected bands from the image will be
 rendered, each band representing the red, green or blue component that will be
@@ -130,7 +143,7 @@ eliminated using the |radioButtonOn| :guilabel:`Cumulative count cut` setting.
 The standard data range is set from 2% to 98% of the data values and can be adapted
 manually. With this setting, the gray character of the image can disappear.
 With the scaling option |radioButtonOff| :guilabel:`Min/max`, QGIS creates a color
-table with all of the data included in the original image (e.g., QGIS creates 
+table with all of the data included in the original image (e.g., QGIS creates
 a color table with 256 values, given the fact that you have 8 bit bands).
 You can also calculate your color table using the |radioButtonOff| :guilabel:`Mean
 +/- standard deviation x` |selectNumber|.
@@ -150,7 +163,8 @@ All calculations can also be made for the |radioButtonOff| :guilabel:`Current` e
    set the image type to 'Singleband gray', then select Red as the band to use
    for Gray.
 
-**Paletted**
+Paletted
+........
 
 This is the standard render option for singleband files that already include a
 color table, where each pixel value is assigned to a certain color. In that case,
@@ -176,7 +190,8 @@ The label appears in the legend of the raster layer then.
    another value in the QGIS general options.
 
 
-**Singleband gray**
+Singleband gray
+...............
 
 This renderer allows you to render a single band layer with a :guilabel:`Color gradient`:
 'Black to white' or 'White to black'. You can define a :guilabel:`Min`
@@ -209,7 +224,8 @@ a raster grid that are having a negative impact on the rendering of the raster.
 .. index:: Color map, Color interpolation, Discrete
 .. _label_colormaptab:
 
-**Singleband pseudocolor**
+Singleband pseudocolor
+......................
 
 This is a render option for single-band files, including a continuous palette.
 You can also create individual color maps for the single bands here.
@@ -266,7 +282,7 @@ Then, only the values within the standard deviation or within multiple standard 
 are considered for the color table.
 
 Color rendering
-...............
+---------------
 
 For every :guilabel:`Band rendering`, a :guilabel:`Color rendering` is possible.
 
@@ -279,7 +295,7 @@ option, where you can choose between 'By lightness', 'By luminosity' and 'By ave
 For one hue in the color table, you can modify the 'Strength'.
 
 Resampling
-..........
+----------
 
 The :guilabel:`Resampling` option makes its appearance when you zoom in and out of an
 image. Resampling modes can optimize the appearance of the map. They calculate a new gray value
@@ -306,7 +322,7 @@ its legend symbol, and the palette.
 .. _raster_transparency:
 
 Transparency Properties
------------------------
+=======================
 
 QGIS has the ability to display each raster layer at a different transparency level.
 Use the transparency slider |slider| to indicate to what extent the underlying layers
@@ -353,7 +369,7 @@ An even more flexible way to customize the transparency can be done in the
 .. _label_histogram:
 
 Histogram Properties
---------------------
+====================
 
 The :guilabel:`Histogram` tab allows you to view the distribution of the bands
 or colors in your raster. The histogram is generated when you press the
@@ -384,11 +400,8 @@ options to customize the histogram:
 .. index:: Rendering
 .. _raster_rendering:
 
-Rendering
----------
-
-Scale dependent visibility
-..........................
+Rendering Properties
+====================
 
 You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
 (exclusive)` scale, defining a range of scale in which the layer will be
@@ -402,7 +415,7 @@ See :ref:`label_scaledepend` for more information.
 .. _raster_pyramids:
 
 Pyramids Properties
--------------------
+===================
 
 Large resolution raster layers can slow navigation in QGIS. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
@@ -434,6 +447,8 @@ Several :guilabel:`Resampling methods` can be used to calculate the pyramids:
 * Average
 * Gauss
 * Cubic
+* Cubic Spline
+* Laczos
 * Mode
 * None
 
@@ -447,11 +462,22 @@ Finally, click **[Build pyramids]** to start the process.
    Raster Pyramids
 
 
+.. index:: Metadata, Metadata editor, Keyword
+.. _raster_metadata:
+
+Metadata Properties
+===================
+
+The :guilabel:`Metadata` tab provides you with options to create and edit
+a metadata report on your layer. See :ref:`vector layer metadata properties
+<vectormetadatamenu>` for more information.
+
+
 .. index:: Legend, Embedded widget
 .. _raster_legend:
 
 Legend Properties
------------------
+=================
 
 The :guilabel:`Legend` tab provides you with a list of widgets you can embed
 within the layer tree in the Layers panel. The idea is to have a way to
@@ -467,7 +493,7 @@ they manage.
 .. _raster_server:
 
 QGIS Server Properties
-----------------------
+======================
 
 The :guilabel:`QGIS Server` tab displays a wealth of information about the raster
 layer, including statistics about each band in the current raster layer.
