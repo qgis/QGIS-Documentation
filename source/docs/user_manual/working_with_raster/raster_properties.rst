@@ -310,40 +310,43 @@ Transparency Properties
 
 QGIS has the ability to display each raster layer at a different transparency level.
 Use the transparency slider |slider| to indicate to what extent the underlying layers
-(if any) should be visible though the current raster layer. This is very useful
+(if any) should be visible through the current raster layer. This is very useful
 if you like to overlay more than one raster layer (e.g., a shaded relief map
 overlayed by a classified raster map). This will make the look of the map more
 three dimensional.
+
+.. _figure_raster_transparency:
+
+.. figure:: img/rasterTransparency.png
+   :align: center
+
+   Raster Transparency
 
 Additionally, you can enter a raster value that should be treated as *NODATA* in
 the :guilabel:`Additional no data value` option.
 
 An even more flexible way to customize the transparency can be done in the
-:guilabel:`Custom transparency options` section. The transparency of every pixel
-can be set here.
+:guilabel:`Custom transparency options` section:
 
-As an example, we want to set the water of our example raster file :file:`landcover.img`
-to a transparency of 20%. The following steps are necessary:
+* Use :guilabel:`Transparency band` to apply transparency on an entire band;
+* Provide a list of pixels to make transparent with the corresponding level of
+  transparency:
 
-#. Load the raster file :file:`landcover.img`.
-#. Open the :guilabel:`Properties` dialog by double-clicking on the raster
-   name in the legend, or by right-clicking and choosing :menuselection:`Properties`
-   from the pop-up menu.
-#. Select the :guilabel:`Transparency` tab.
-#. From the :guilabel:`Transparency band` drop-down menu, choose 'None'.
-#. Click the |signPlus| :sup:`Add values manually`
-   button. A new row will appear in the pixel list.
-#. Enter the raster value in the 'From' and 'To' column (we use 0 here),
-   and adjust the transparency to 20%.
-#. Press the **[Apply]** button and have a look at the map.
+  #. Click the |signPlus| :sup:`Add values manually` button. A new row will
+     appear in the pixel list;
+  #. Enter the **Red**, **Green** and **Blue** values of the pixel and adjust
+     the **Percent Transparent** to apply;
+  #. Alternatively, you can directly fetch the pixel values directly from the
+     raster using the |contextHelp| :sup:`Add values from display` button.
+     Then enter the transparency value.
+  #. Repeat the steps to adjust more values with custom transparency.
+  #. Press the **[Apply]** button and have a look at the map.
 
-You can repeat steps 5 and 6 to adjust more values with custom transparency.
-
-As you can see, it is quite easy to set custom transparency, but it can be
-quite a lot of work. Therefore, you can use the button |fileSave|
-:sup:`Export to file` to save your transparency list to a file. The button
-|fileOpen| :sup:`Import from file` loads your transparency settings and
-applies them to the current raster layer.
+  As you can see, it is quite easy to set custom transparency, but it can be
+  quite a lot of work. Therefore, you can use the button |fileSave|
+  :sup:`Export to file` to save your transparency list to a file. The button
+  |fileOpen| :sup:`Import from file` loads your transparency settings and
+  applies them to the current raster layer.
 
 
 .. index:: Histogram
@@ -488,6 +491,8 @@ collected.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |contextHelp| image:: /static/common/mActionContextHelp.png
+   :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
