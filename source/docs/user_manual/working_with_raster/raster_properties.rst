@@ -356,16 +356,22 @@ Histogram Properties
 --------------------
 
 The :guilabel:`Histogram` tab allows you to view the distribution of the bands
-or colors in your raster. The histogram is generated automatically when you open the
-:guilabel:`Histogram` tab. All existing bands will be displayed together. You
-can save the histogram as an image with the |fileSave| button.
-With the :guilabel:`Visibility` option in the |actionRun| :guilabel:`Prefs/Actions` menu,
-you can display histograms of the individual bands. You will need to select the option
-|radioButtonOff| :guilabel:`Show selected band`.
-The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
-to min/max' and to 'Update style to min/max'.
-With the :guilabel:`Actions` option, you can 'Reset' and 'Recompute histogram' after
-you have chosen the :guilabel:`Min/max options`.
+or colors in your raster. The histogram is generated when you press the
+**[Compute Histogram]** button. All existing bands will be displayed together.
+You can save the histogram as an image with the |fileSave| button.
+
+At the bottom of the histogram, you can select a raster band in the drop-down
+menu and :guilabel:`Set min/max style for` it.
+The |actionRun| :guilabel:`Prefs/Actions` drop-down menu gives you advanced
+options to customize the histogram:
+
+* With the :guilabel:`Visibility` option, you can display histograms of the individual
+  bands. You will need to select the option |radioButtonOff| :guilabel:`Show selected
+  band`.
+* The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
+  to min/max' and to 'Update style to min/max'.
+* The :guilabel:`Actions` option allows you to 'Reset' or 'Recompute histogram' after
+  you changed the min or max values of the band(s).
 
 .. _figure_raster_histogram:
 
