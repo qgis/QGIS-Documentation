@@ -228,8 +228,8 @@ you no longer need to manually place all the vertices during digitization:
 
 Unfold the |tracing| :sup:`Enable Tracing` icon and set the :guilabel:`Offset`
 option to digitize a path parallel to the features instead of tracing along them;
-a positive value places the new drawing at the left of the original features and
-a negative value does the opposite.
+a positive value shifts the new drawing to the left side of the tracing direction
+and a negative value does the opposite.
 
 .. note:: **Adjust map scale or snapping settings for an optimal tracing**
 
