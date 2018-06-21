@@ -207,22 +207,29 @@ Automatic Tracing
 
 Usually, when using capturing map tools (add feature, add part, add ring, reshape
 and split), you need to click each vertex of the feature.
+With the automatic tracing mode, you can speed up the digitization process as
+you no longer need to manually place all the vertices during digitization:
 
-Using the automatic tracing mode you can speed up the digitization process.
-Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
-:kbd:`t` key and :ref:`snap to <snapping_tolerance>` a vertex or segment of a
-feature you want to trace along. Move the mouse over another vertex or segment
-you'd like to snap and instead of an usual straight line, the digitizing rubber
-band represents a path from the last point you snapped to the current position.
-QGIS actually uses the underlying features topology to build the shortest path
-between the two points. Click and QGIS places the intermediate vertices following
-the path. You no longer need to manually place all the vertices during digitization.
+#. Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
+   :kbd:`t` key;
+#. :ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature you
+   want to trace along;
+#. Move the mouse over another vertex or segment you'd like to snap and, instead
+   of the usual straight line, the digitizing rubber band represents a path from
+   the last point you snapped to the current position.
+   
+   QGIS actually uses the underlying features topology to build the shortest path
+   between the two points. Tracing requires snapping to be activated in traceable
+   layers to build the path. You should also snap to an existing vertex or segment
+   while digitizing and ensure that the two nodes are topologically connectable
+   through existing features edges, otherwise QGIS is unable to connect them and
+   thus traces a single straight line.
+#. Click and QGIS places the intermediate vertices following the displayed path.
 
-Tracing requires snapping to be activated in traceable layers to build the path.
-You should also snap to an existing vertex or segment while digitizing and ensure
-that the two nodes are topologically connectable following existing features,
-otherwise QGIS is unable to connect them and thus traces a single straight line.
-
+Unfold the |tracing| :sup:`Enable Tracing` icon and set the :guilabel:`Offset`
+option to digitize a path parallel to the features instead of tracing along them;
+a positive value places the new drawing at the left of the original features and
+a negative value does the opposite.
 
 .. note:: **Adjust map scale or snapping settings for an optimal tracing**
 
