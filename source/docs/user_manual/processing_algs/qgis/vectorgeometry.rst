@@ -19,14 +19,15 @@ Add geometry attributes
 Computes geometric properties of the features in a vector layer.
 
 It generates a new vector layer with the same content as the input one, but with
-additional attributes, containing geometric measurements.
+additional attributes, containing geometric measurements based on a selected CRS.
 
 Depending on the geometry type of the vector layer, the attributes added to the
 table will be different:
 
-* for point layers: x and y coordinates
-* for line layers: length
-* for polygon layers: perimeter and area
+* for **point** layers: X and Y coordinates called ``xcoord`` and ``ycoord``
+* for **line** layers: ``length`` and, |32| particularly for LineString and CompoundCurve
+  geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``)
+* for **polygon** layers: ``perimeter`` and ``area``
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
