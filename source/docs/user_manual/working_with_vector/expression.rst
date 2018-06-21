@@ -948,8 +948,8 @@ This group contains math functions (e.g., square root, sin and cos).
                     value and base
  log10              Returns the value of the base 10 logarithm of the
                     passed expression
- max                Returns the largest value in a set of values
- min                Returns the smallest value in a set of values
+ max                Returns the largest not null value in a set of values
+ min                Returns the smallest not null value in a set of values
  pi                 Returns the value of pi for calculations
  radians            Converts from degrees to radians
  rand               Returns the random integer within the range specified
