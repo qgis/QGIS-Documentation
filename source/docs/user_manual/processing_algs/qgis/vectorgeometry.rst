@@ -1144,6 +1144,39 @@ See also
 :ref:`qgisminimumboundinggeometry`
 
 
+.. _qgismultiringconstantbuffer:
+
+Multi-ring buffer (constant distance) |32|
+------------------------------------------
+Computes multi-ring (*donuts*) buffer for all the features in an input layer,
+using a fixed or dynamic distance and ring numbers.
+
+Buffer always results in a polygon layer: in the following picture a multi ring
+buffer for a single point layer where each label identifies a single buffer ring:
+
+.. figure:: img/multiringbuffer.png
+   :align: center
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer.
+
+``Number of rings`` [number]
+  Total number of rings that the buffer must have.
+
+``Distance between rings`` [number]
+  Distance between the single rings.
+
+Output
+......
+
+``Multi-ring buffer (constant distance)``
+  Multi ring buffer polygon vector layer
+
+
+
 .. _qgismultiparttosingleparts:
 
 Multipart to singleparts
