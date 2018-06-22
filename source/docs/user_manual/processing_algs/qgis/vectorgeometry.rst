@@ -1152,7 +1152,7 @@ Computes multi-ring (*donuts*) buffer for all the features in an input layer,
 using a fixed or dynamic distance and ring numbers.
 
 Buffer always results in a polygon layer: in the following picture a multi ring
-buffer for a single point layer where each label identifies a single buffer ring:
+buffer for point, line and polygon layer:
 
 .. figure:: img/multiringbuffer.png
    :align: center

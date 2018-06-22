@@ -264,8 +264,7 @@ Takes an input vector layer and creates a new vector layer that is an extended
 version of the input one, with additional attributes in its attribute table.
 
 The additional attributes and their values are taken from a second vector layer.
-An attribute is selected in each of them to define the join criteria (one-to-one
-relation).
+An attribute is selected in each of them to define the join criteria .
 
 Parameters
 ..........
