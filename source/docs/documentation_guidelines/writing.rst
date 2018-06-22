@@ -593,6 +593,7 @@ guidelines:
   Number                                    number
   String                                    string
   Boolean                                   boolean
+  Point (Rotate)                            point
   Fields and values (Refactor Fields)       fieldsmapping
   Values and operators (Raster Calculator)  calculator
   ========================================  ====================
