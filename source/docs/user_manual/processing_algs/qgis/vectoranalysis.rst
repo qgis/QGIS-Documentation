@@ -412,7 +412,7 @@ Parameters
 
   If empty only the count will be calculated
 
-``Field(s) with categories`` [multiselection]
+``Field(s) with categories`` [multipleinput]
   Field(s) of the categories
 
 Outputs

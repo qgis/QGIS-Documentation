@@ -206,7 +206,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer to drop field(s) from
 
-``Fields to drop`` [multiselection]
+``Fields to drop`` [multipleinput]
   Select the field(s) to drop
 
 Output
