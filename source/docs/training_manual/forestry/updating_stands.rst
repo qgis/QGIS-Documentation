@@ -33,7 +33,7 @@ The aerial image used in this exercise has been created from two orthorectified
 CIR images downloaded from that service (M4134F_21062012 and M4143E_21062012). 
 
 * Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in
- :menuselection:`Project --> Project Properties --> CRS`.
+  :menuselection:`Project --> Project Properties --> CRS`.
 * Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is checked.
 * From the :kbd:`exercise_data\\forestry\\` folder, add the CIR image
   :kbd:`rautjarvi_aerial.tif` that is containing the digitized lakes.
