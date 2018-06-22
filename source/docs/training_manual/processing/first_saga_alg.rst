@@ -7,7 +7,8 @@ Running an external algorithm
 
 
 .. note:: In this lesson we will see how to use algorithms that depend on a
-third-party application, particularly SAGA, which is one of the main algorithm providers.
+ third-party application, particularly SAGA, which is one of the main
+ algorithm providers.
 
 All the algorithms that we have run so far are part of processing framework.
 That is, they are *native* algorithms implemented in the plugin and run by QGIS
@@ -99,7 +100,7 @@ Since it cannot create it, it will not produce the expected layer, and you will
 see the error message shown above.
 
 .. note:: In SAGA >= 2.2.3, the command will adjust automatically wrong input data,
-so you'll not get an error. To provoke an error, use negative values for division.
+ so you'll not get an error. To provoke an error, use negative values for division.
 
 Understanding this kind of problems will help you solve them and find an explanation
 to what is happening. As you can see in the error message, a test is performed
