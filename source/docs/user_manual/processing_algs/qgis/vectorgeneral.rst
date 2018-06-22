@@ -291,7 +291,7 @@ Parameters
   * Create separate feature for each matching features (one-to-many)
   * Take attributes of the first matching feature only (one-to-one)
 
-``Discard records which could not be joined`` [boolean]
+``Discard records which could not be joined`` [boolean] |32|
   Check if you don't want to add the features that cannot be joined
 
 ``Joined field prefix`` (optional) [text] |32|
