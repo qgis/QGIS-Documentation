@@ -13,7 +13,9 @@
 Stretch. With negligible variations you can also follow it for
 any Debian based distribution like Ubuntu and its derivatives.
 
-.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to commands requiring admin permissions. In Debian you can work as admin (``root``), without using ``sudo``.
+.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to
+  commands requiring admin permissions. In Debian you can work as admin (``root``),
+  without using ``sudo``.
 
 |moderate| |FA| Install from packages
 -------------------------------------------------------------------------------
@@ -36,7 +38,10 @@ the above link on how to do it) you can run the ``apt-get update`` command
 to refresh the packages list and ``apt-get dist-upgrade`` to upgrade the
 packages.
 
-.. note:: Currently Debian stable has LTR qgis packages in the source ``jessie-backports``, so the above steps are not necessary. Just add the ``jessie-backports`` repository and install with the ``-t jessie-backports`` option.
+.. note:: Currently Debian stable has LTR qgis packages in the source
+ ``jessie-backports``, so the above steps are not necessary. Just add the
+ ``jessie-backports`` repository and install with the ``-t jessie-backports``
+ option.
 
 Install QGIS Server with:
 
@@ -195,7 +200,7 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
  running the following commands.
 
  Install xvfb:
- 
+
 .. code-block:: bash
 
  apt-get install xvfb

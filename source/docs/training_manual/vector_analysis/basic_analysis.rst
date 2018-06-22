@@ -163,7 +163,7 @@ our roads dataset.
 * Open the :kbd:`Query Builder` for the :kbd:`roads` layer,
   click :guilabel:`Clear` and build the following query:
 
-  :kbd:`"highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway" != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
+  :kbd:`"highway" != 'NULL' AND "highway" != 'unclassified' AND "highway" != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
 
 You can either use the approach above, where you double-clicked values and
 clicked buttons, or you can copy and paste the command above.
