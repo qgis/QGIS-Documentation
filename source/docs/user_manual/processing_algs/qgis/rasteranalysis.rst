@@ -158,10 +158,53 @@ Outputs
     - Area (m :sup:`2`): square meters of the area for each pixel class
 
 
+.. _qgiszonalhistogram:
+
+Zonal histogram
+---------------
+Appends fields representing counts of each unique value from a raster layer contained
+within zones defined as polygon.
+
+The output layer attribute table will have as many fields as the unique values
+of the raster layer that intersects the polygon.
+
+In the following picture the selected polygon and the corresponding row in the
+attribute table show that the polygon contains only the value 1115 (see the field
+name) of the raster layer:
+
+.. figure:: img/raster_histogram.png
+  :align: center
+
+  Raster layer histogram example
+
+
+Parameters
+..........
+
+``Raster layer`` [raster]
+  Raster layer in input
+
+``Band number`` [raster band]
+  If the raster is multiband choose the band you want to calculate the statistics
+
+``Vector layer containing the zones``
+  Overlaying vector layer where unique raster values should be appended
+
+``Output column prefix`` [string]
+  Optional.
+
+  Prefix string for output columns
+
+Output
+......
+
+``Output zones`` [vector: polygon]
+  Output polygon vector layer with unique count of raster values
+
 .. _qgiszonalstatistics:
 
-Raster zonal statistics
------------------------
+Zonal statistics
+----------------
 Calculates statistics of a raster layer for each feature of an overlapping polygon
 vector layer.
 
