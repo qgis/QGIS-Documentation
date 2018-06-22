@@ -503,7 +503,7 @@ the same folder as the rst file.
 
 
 Documenting Processing algorithms
----------------------------------
+=================================
 
 If you want to write documentation for Processing algorithms consider these
 guidelines:
