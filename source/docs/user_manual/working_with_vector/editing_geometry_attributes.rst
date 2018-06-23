@@ -262,7 +262,7 @@ supports it (see :ref:`supported_format`), and the underlying data source is wri
 
 .. tip:: **Restrict edit permission on layers within a project**
 
-   From the :menuselection:`Project --> Project properties --> Identify` tab,
+   From the :menuselection:`Project --> Properties... --> Identify` tab,
    You can choose to set any layer read-only regardless the provider permission.
    This can be a handy way, in a multi-users environment to avoid unauthorized users
    to mistakenly edit layers (e.g., shapefile), hence potentially corrupt data.
@@ -681,7 +681,7 @@ The same functions are available for editing all layers of the project.
 
    When working with layers from the same PostGreSQL database, activate the
    :guilabel:`Automatically create transaction groups where possible` option in
-   :menuselection:`Project --> Project Properties --> Data Sources` to sync their
+   :menuselection:`Project --> Properties... --> Data Sources` to sync their
    behavior (enter or exit the edit mode, save or rollback changes at the same time).
 
 .. _sec_advanced_edit:

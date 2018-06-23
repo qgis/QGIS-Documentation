@@ -481,7 +481,7 @@ styles of the layers in QGIS and the project CRS, if not already defined.
    Definitions for a QGIS Server WMS/WFS/WCS project
 
 Then, go to the :guilabel:`QGIS Server` menu of the
-:menuselection:`Project --> Project Properties` dialog and provide
+:menuselection:`Project --> Properties...` dialog and provide
 some information about the OWS in the fields under
 :guilabel:`Service Capabilities`.
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
@@ -589,7 +589,7 @@ This can be accessed by double clicking the annotation while one of the
 annotation tools is active.
 For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
-:menuselection:`Project --> Project Properties` dialog) or to manually modify
+:menuselection:`Project --> Properties...` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
 
 

@@ -52,8 +52,7 @@ shapefile and a :file:`.prj` extension. For example, a shapefile named
 
 Whenever you select a new CRS, the layer units will automatically be
 changed in the :guilabel:`General` tab of the |options|
-:guilabel:`Project Properties` dialog under the :guilabel:`Project`
-(or |kde| :guilabel:`Settings`) menu.
+:guilabel:`Project Properties` dialog under the :guilabel:`Project` menu.
 
 .. index:: CRS
    single: CRS; Default CRS
@@ -114,8 +113,8 @@ coordinates are transformed to the CRS of the project.
 
 There are three ways to enable On The Fly CRS Transformation:
 
-* Select |projectProperties| :menuselection:`Project Properties --> CRS` from
-  the :menuselection:`Project` ( or |kde| :menuselection:`Settings`) menu. You
+* Select |projectProperties| :menuselection:`Properties... --> CRS` from
+  the :menuselection:`Project` menu. You
   can then  activate the |checkbox| :guilabel:`Enable on the fly CRS
   transformation (OTF)` checkbox in the |crs| :guilabel:`CRS` tab and select
   the CRS to use (see :ref:`crs_selector`)

@@ -86,7 +86,7 @@ a projected coordinate system. Start by setting your project's coordinate system
 suitable :guilabel:`CRS` for your data, in the case of |majorUrbanName|,
 :guilabel:`WGS 84 / UTM zone 34S`:
 
-* Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter
+* Open the :guilabel:`Project Properties` dialog, select :guilabel:`CRS` and filter
   the list to find :guilabel:`WGS 84 / UTM zone 34S`.
 * Click :guilabel:`OK`.
 
