@@ -194,22 +194,30 @@ Parameters
   their **real** name or also with **input1**, **input2**, **inputN** depending
   on how many layers have been chosen.
 
-``SQL query`` [text]
+``SQL query`` [string]
   Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
 
-``Unique identifier field`` (optional) [text]
+``Unique identifier field`` [string]
+  Optional
+  
   Specify the column with unique ID
 
-``Geometry field`` (optional) [text]
+``Geometry field`` [string]
+  Optional
+
   Specify the geometry field
 
-``Geometry type`` (optional) [combobox]
+``Geometry type`` [selection]
+  Optional
+
   Choose the final geometry of the result. By default the algorithm will autodetect
   it
 
   Default: *Autodetect*
 
-``CRS`` (optional) [projection]
+``CRS`` [projection]
+  Optional
+
   The CRS to or assign to the output layer
 
 
@@ -282,11 +290,13 @@ Parameters
 ``Table field 2`` [tablefield]
   Table of the joining layer with the common unique field identifier
 
-``Layer 2 fields to copy`` (optional) [tablefield]
+``Layer 2 fields to copy`` [tablefield]
+  Optional
+
   Select the specific fields you want to add. By default all the fields are added
 
-``Join type`` [selection]
-  Choose the type of the final joined layer. You can choose between:
+``Join type`` [selection] |32|
+  Choose the type of the final joined layer between:
 
   * Create separate feature for each matching features (one-to-many)
   * Take attributes of the first matching feature only (one-to-one)
@@ -294,7 +304,9 @@ Parameters
 ``Discard records which could not be joined`` [boolean] |32|
   Check if you don't want to add the features that cannot be joined
 
-``Joined field prefix`` (optional) [text] |32|
+``Joined field prefix`` [string] |32|
+  Optional
+
   Add a prefix to joined fields in order to easily identify them and avoid field
   name collision.
 
@@ -339,11 +351,13 @@ Parameters
   * within
   * crosses
 
-``Fields to add`` (optional) [tablefield]
+``Fields to add`` [tablefield]
+  Optional
+
   Select the specific fields you want to add. By default all the fields are added
 
 ``Join type`` [selection]
-  Choose the type of the final joined layer. You can choose between:
+  Choose the type of the final joined layer between:
 
   * Create separate feature for each located features (one-to-many)
   * Take attributes of the first located feature only (one-to-one)
@@ -351,7 +365,9 @@ Parameters
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined
 
-``Joined field prefix`` (optional) [text] |32|
+``Joined field prefix`` [string] |32|
+  Optional
+
   Add a prefix to joined fields in order to easily identify them and avoid field
   name collision.
 
@@ -396,10 +412,14 @@ Parameters
   * within
   * crosses
 
-``Fields to summarize`` (optional) [tablefield]
+``Fields to summarize`` [tablefield]
+  Optional
+
   Select the specific fields you want to add. By default all the fields are added
 
-``Summaries to calculate`` (optional) [selection]
+``Summaries to calculate`` [selection]
+  Optional
+
   Choose which type of summary you want to add to each field and for each feature.
 
   * count
