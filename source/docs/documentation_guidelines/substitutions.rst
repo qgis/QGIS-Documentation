@@ -131,6 +131,8 @@ Icon                            Substitution                        Icon        
 |expandNewTree|                 ``|expandNewTree|``                 |propertyItem|                  ``|propertyItem|``
 |deselectAll|                   ``|deselectAll|``                   |editCopy|                      ``|editCopy|``
 |filePrint|                     ``|filePrint|``
+|identifyByRectangle|           ``|identifyByRectangle|``           |identifyByPolygon|             ``|identifyByPolygon|``
+|identifyByFreehand|            ``|identifyByFreehand|``            |identifyByRadius|              ``|identifyByRadius|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -758,6 +760,14 @@ Icon                            Substitution                        Icon        
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
+   :width: 1.5em
+.. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
+   :width: 1.5em
+.. |identifyByRadius| image:: /static/common/mActionIdentifyByRadius.png
+   :width: 1.5em
+.. |identifyByRectangle| image:: /static/common/mActionIdentifyByRectangle.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
