@@ -1735,7 +1735,8 @@ Output
 Rotate |32|
 -----------
 Rotates feature geometries by the specified angle clockwise.
-The rotation occurs around each feature's centroid or a preset point.
+The rotation occurs around each feature's centroid, or optionally
+around a unique preset point.
 
 Parameters
 ..........
@@ -1748,7 +1749,9 @@ Parameters
 
   Default: *0.0*
 
-``Rotation anchor point (x, y)`` (optional)
+``Rotation anchor point (x, y)`` [point]
+  Optional
+
   X,Y coordinates of the point to rotate the features around.
   If not set the rotation occurs around each feature's centroid. 
 
