@@ -128,7 +128,7 @@ Identity result
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |expandTree|                    ``|expandTree|``                    |collapseTree|                  ``|collapseTree|``
-|expandNewTree|                 ``|expandNewTree|``                 |propertyItem|                  ``|propertyItem|``
+|expandNewTree|                 ``|expandNewTree|``                 |formView|                      ``|formView|``
 |deselectAll|                   ``|deselectAll|``                   |editCopy|                      ``|editCopy|``
 |filePrint|                     ``|filePrint|``
 ==============================  ==================================  ==============================  ==================================
@@ -925,8 +925,6 @@ Icon                            Substitution                        Icon        
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
-   :width: 1.5em
-.. |propertyItem| image:: /static/common/mActionPropertyItem.png
    :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
