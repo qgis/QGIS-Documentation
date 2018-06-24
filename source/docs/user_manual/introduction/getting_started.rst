@@ -318,7 +318,7 @@ options are available:
   symbollayer (Symbol layer symbology), feature (feature symbology);
 * *--dxf-scale-denom*: the scale denominator of the symbology;
 * *--dxf-encoding*: the file encoding;
-* *--dxf-map-theme*: choose a :ref:`map theme <map_theme>` from the layer tree
+* *--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer tree
   configuration.
 
 .. _samplesession:
