@@ -565,37 +565,38 @@ guidelines:
 * Add the default value if the parameter in *italic*, e.g.::
 
     ``Number of points`` [number]
-      Number of point to create
+      Number of points to create
 
       Default: *1*
 
 * It should be also described the *type* of the parameters. There are several types
   available but avoid to invent new ones and pick one of these:
 
-  ========================================  ====================
-  Parameter/Output type                     Description
-  ========================================  ====================
-  Point vector                              vector: point
-  Line vector                               vector: line
-  Polygon vector                            vector: polygon
-  Generic vector                            vector: any
-  Vector field numeric                      tablefield: numeric
-  Vector field string                       tablefield: string
-  Vector field generic                      tablefield: any
-  Raster layer                              raster
-  Raster band                               raster band
-  HTML file                                 HTML
-  Table layer                               table
-  Extent                                    extent
-  CRS                                       crs
-  Combobox                                  selection
-  Multiple selection                        multipleinput
-  Number                                    number
-  String                                    string
-  Boolean                                   boolean
-  Fields and values (Refactor Fields)       fieldsmapping
-  Values and operators (Raster Calculator)  calculator
-  ========================================  ====================
+  ========================================  =========================  ====================
+  Parameter/Output type                     Description                Visual indicator
+  ========================================  =========================  ====================
+  Point vector                              ``vector: point``          |pointLayer|
+  Line vector                               ``vector: line``           |lineLayer|
+  Polygon vector                            ``vector: polygon``        |polygonLayer|
+  Generic vector                            ``vector: any``
+  Vector field numeric                      ``tablefield: numeric``    |fieldFloat|
+  Vector field string                       ``tablefield: string``     |fieldText|
+  Vector field generic                      ``tablefield: any``
+  Raster layer                              ``raster``                 |rasterLayer|
+  Raster band                               ``raster band``
+  HTML file                                 ``HTML``
+  Table layer                               ``table``                  |tableLayer|
+  Expression                                ``expression``             |expression|
+  Extent                                    ``extent``
+  CRS                                       ``crs``                    |setProjection|
+  Combobox                                  ``selection``              |selectString|
+  Multiple selection                        ``multipleinput``
+  Number                                    ``number``                 |selectNumber|
+  String                                    ``string``                 |inputText|
+  Boolean                                   ``boolean``                |checkbox|
+  Fields and values (Refactor Fields)       ``fieldsmapping``
+  Values and operators (Raster Calculator)  ``calculator``
+  ========================================  =========================  ====================
 
 * the best option is studying an existing and well documented algorithm and copy
   all the useful layouts
@@ -670,9 +671,34 @@ Here an example of an existing algorithm to help you with the layout and the des
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |fieldFloat| image:: /static/common/mIconFieldFloat.png
+   :width: 1.5em
+.. |fieldText| image:: /static/common/mIconFieldText.png
+   :width: 1.5em
+.. |inputText| image:: /static/common/inputtext.png
+.. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |pointLayer| image:: /static/common/mIconPointLayer.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |rasterLayer| image:: /static/common/mIconRasterLayer.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |tableLayer| image:: /static/common/mIconTableLayer.png
+   :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
