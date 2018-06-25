@@ -200,7 +200,7 @@ Parameters
   by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
   ``Type`` column of the table.
 
-``Use Z-coordinate for interpolation`` [checkbox]
+``Use Z-coordinate for interpolation`` [boolean]
   Uses the layer's stored Z values
 
 ``Distance coefficient Power`` [number]
@@ -253,7 +253,7 @@ Parameters
   by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
   ``Type`` column of the table.
 
-``Use Z-coordinate for interpolation`` [checkbox]
+``Use Z-coordinate for interpolation`` [boolean]
   Uses the layer's stored Z values
 
 ``Interpolation method`` [selection]
@@ -280,7 +280,7 @@ Output
 ``Interpolated`` [raster]
   Raster layer of triangulated values
 
-``Triangulation`` [vector: lines]
+``Triangulation`` [vector: line]
   Triangulation lines as vector layer
 
 
