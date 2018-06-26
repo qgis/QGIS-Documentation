@@ -575,10 +575,10 @@ guidelines:
   ========================================  =========================  ====================
   Parameter/Output type                     Description                Visual indicator
   ========================================  =========================  ====================
-  Point vector                              ``vector: point``          |pointLayer|
-  Line vector                               ``vector: line``           |lineLayer|
-  Polygon vector                            ``vector: polygon``        |polygonLayer|
-  Generic vector                            ``vector: any``
+  Point vector layer                        ``vector: point``          |pointLayer|
+  Line vector layer                         ``vector: line``           |lineLayer|
+  Polygon vector layer                      ``vector: polygon``        |polygonLayer|
+  Generic vector layer                      ``vector: any``
   Vector field numeric                      ``tablefield: numeric``    |fieldFloat|
   Vector field string                       ``tablefield: string``     |fieldText|
   Vector field generic                      ``tablefield: any``
@@ -587,6 +587,7 @@ guidelines:
   HTML file                                 ``HTML``
   Table layer                               ``table``                  |tableLayer|
   Expression                                ``expression``             |expression|
+  Point feature                             ``coordinates``
   Extent                                    ``extent``
   CRS                                       ``crs``                    |setProjection|
   Combobox                                  ``selection``              |selectString|
