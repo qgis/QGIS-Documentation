@@ -503,7 +503,7 @@ the same folder as the rst file.
 
 
 Documenting Processing algorithms
----------------------------------
+=================================
 
 If you want to write documentation for Processing algorithms consider these
 guidelines:
@@ -593,6 +593,7 @@ guidelines:
   Number                                    number
   String                                    string
   Boolean                                   boolean
+  Point (Rotate)                            point
   Fields and values (Refactor Fields)       fieldsmapping
   Values and operators (Raster Calculator)  calculator
   ========================================  ====================
