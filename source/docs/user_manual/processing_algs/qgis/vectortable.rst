@@ -22,6 +22,8 @@ This field can be used as a unique ID for features in the layer. The new attribu
 is not added to the input layer but a new layer is generated instead.
 
 The initial starting value for the incremental series can be specified.
+Optionally, the incremental series can be based on grouping fields and a sort order
+for features can also be specified.
 
 Parameters
 ..........
@@ -37,15 +39,44 @@ Parameters
 ``Start values at`` [number]
   Optional
 
-  Choose the number of the initial incremental count
+  Choose the initial number of the incremental count
 
   Default: *0*
+  
+``Group values by`` [multipleinput]
+  Optional
+
+  Select grouping field(s): instead of a single count run for the whole layer,
+  a separate count is processed for each value returned by the combination of
+  these fields.
+
+``Sort expression`` [expression] |32|
+  Optional
+
+  Use an expression to sort the features in the layer either globally
+  or if set, based on group fields.
+
+``Sort ascending`` [boolean] |32|
+  Optional
+
+  When a ``sort expression`` is set, use this option to control the order in
+  which features are assigned values.
+
+  Default: *True*
+
+``Sort nulls first`` [boolean] |32|
+  Optional
+  
+  When a ``sort expression`` is set, use this option to set whether
+  *Null* values are counted first or last.
+
+  Default: *False*
 
 Output
 ......
 
 ``Incremented`` [vector]
-  Vector layer with additional field
+  Vector layer with auto incremental field
 
 
 .. _qgisaddfieldtoattributestable:
@@ -119,16 +150,23 @@ Parameters
   Input vector layer
 
 ``Class field`` [tablefield: any]
-  Name of the new field
+  Features of the same value are given the same index.
 
-  Default: *(not set)*
+``Output field name`` [tablefield: any]
+  Name of the new field containing the indexes.
+
+  Default: *NUM_FIELD*
 
 Output
 ......
 
-``Layer with index field``
+``Layer with index field`` [vector]
   Vector layer with the numeric field containing indexes
 
+``Class summary`` [table]
+  Table with summary of the class field mapped to the corresponding unique value
+  
+  Default: *Skip Output*
 
 .. _qgisadvancedpythonfieldcalculator:
 
@@ -311,6 +349,7 @@ Output
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
