@@ -220,7 +220,7 @@ defined, then it's used by default instead of the layer's name:
 
 Moreover, there's a project option allowing to select layers by their id in
 :menuselection:`OWS Server --> WMS capabilities` menu of the
-:menuselection:`Project --> Project Properties` dialog. To activate this
+:menuselection:`Project --> Properties...` dialog. To activate this
 option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
 
 .. code-block:: none
@@ -505,7 +505,7 @@ is ``-1``.
 
 You can change the default per QGIS project in the
 :menuselection:`OWS Server --> WMS capabilities` menu of the
-:menuselection:`Project --> Project Properties` dialog. If you want to override
+:menuselection:`Project --> Properties...` dialog. If you want to override
 it in a ``GetMap`` request you can do it using the ``IMAGE_QUALITY`` parameter.
 
 URL example:

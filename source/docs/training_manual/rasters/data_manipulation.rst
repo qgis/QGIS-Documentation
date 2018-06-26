@@ -40,7 +40,7 @@ map. Are the rasters not loading? Well, there they are in the :guilabel:`Layers
 list`, so obviously they did load. The problem is that they're not in the same
 projection. Luckily, we've already seen what to do in this situation.
 
-* Select :menuselection:`Project --> Project Properties` in the menu:
+* Select :menuselection:`Project --> Properties...` in the menu:
 * Select :guilabel:`CRS` tab in the menu:
 * Enable "on the fly" reprojection.
 * Set it to the same projection as the rest of your data (:kbd:`WGS 84 / UTM

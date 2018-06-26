@@ -17,9 +17,8 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 
    Coordinate Capture Plugin
 
-#. Start QGIS, select |options| :guilabel:`Project Properties` from the
-   :guilabel:`File` menu
-   and click on the :guilabel:`Projection` tab. As an alternative, you can also
+#. Start QGIS, select :guilabel:`Properties...` from the :guilabel:`Project`
+   menu and click on the :guilabel:`CRS` tab. As an alternative, you can also
    click on the |crs| :sup:`CRS` icon in the lower
    right-hand corner of the status bar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select

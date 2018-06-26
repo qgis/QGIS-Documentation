@@ -1034,11 +1034,11 @@ data. The first three measuring tools behave equally to global project settings:
 * If :guilabel:`"on the fly" CRS transformation` (see :ref:`otf_transformation`)
   is enabled, the default measurement metric is
   - different from most other GIS - ellipsoidal, using the ellipsoid defined in
-  :menuselection:`File --> Project properties --> General`. This is true both
+  :menuselection:`Project --> Properties... --> General`. This is true both
   when geographic and projected coordinate systems are defined for the project.
 * If you want to calculate the projected / planimetric area or distance using cartesian
   maths, the measurement ellipsoid has to be set to "None / Planimetric"
-  (:menuselection:`File --> Project properties --> CRS`). However,
+  (:menuselection:`Project --> Properties... --> CRS`). However,
   with a geographic (= unprojected) CRS defined for the data and project, area and
   distance measurement will be ellipsoidal.
 * If :guilabel:`"on the fly" CRS transformation` is disabled, the measurement
@@ -1058,7 +1058,7 @@ Click the |measure| icon in the Attribute toolbar to begin measurements.
 The downward arrow near the icon helps you switch to the convenient tool to measure
 |measure| length, |measureArea| area or |measureAngle| angle.
 The default unit used in the dialog is the one set in :menuselection:`Project -->
-Project Properties --> General` menu.
+Properties... --> General` menu.
 
 .. note:: **Configuring the measure tool**
 
@@ -1067,7 +1067,7 @@ Project Properties --> General` menu.
    Options --> Map Tools` the rubberband color, the precision of the measurements
    and the unit behavior. You can also choose your preferred measurement or angle
    units but keep in mind that those values are superseded in the current project
-   by options made in :menuselection:`Project --> Project Properties --> General` menu.
+   by options made in :menuselection:`Project --> Properties... --> General` menu.
 
 All measuring modules use the snapping settings from the digitizing module (see
 section :ref:`snapping_tolerance`). So, if you want
@@ -1462,7 +1462,7 @@ Managing Custom Styles
 
 When a vector layer is added to map canvas, QGIS uses by default a random
 symbol/color to render its features. You can however set a default symbol in
-:menuselection:`Project --> Project Properties --> Default styles` that will be
+:menuselection:`Project --> Properties... --> Default styles` that will be
 applied to each newly added layer according to its geometry type.
 
 .. any idea on how it works for raster?
@@ -1633,7 +1633,7 @@ define your own custom variables for any of the levels mentioned above. You can
 manage:
 
 * **global variables** from the :menuselection:`Settings --> Options` menu;
-* **project's variables** from :guilabel:`Project Properties` (see
+* **project's variables** from the :guilabel:`Project Properties` dialog (see
   :ref:`project_properties`);
 * **vector layer's variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
@@ -1732,7 +1732,7 @@ preselected list of color palettes:
 * :guilabel:`Standard colors`, a user-defined list of colors set under
   :menuselection:`Settings --> Options --> Colors` menu
 * or :guilabel:`Project colors`, a user-defined list of colors set under
-  :menuselection:`Project --> Project Properties --> Default Styles`.
+  :menuselection:`Project --> Properties... --> Default Styles`.
 
 The latest palettes can be modified thanks to the |signPlus| and |signMinus|
 buttons at the bottom of the frame.

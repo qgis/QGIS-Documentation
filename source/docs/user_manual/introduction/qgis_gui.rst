@@ -559,7 +559,7 @@ If there are already layers in the project, and in the case the new layer has
 the same CRS as the project, its features falling in the current map canvas
 extent will be visualized. If the new layer is in a different CRS from the
 project's, you must :guilabel:`Enable on-the-fly CRS transformation` from the
-:menuselection:`Project --> Project Properties --> CRS`
+:menuselection:`Project --> Properties... --> CRS`
 (see :ref:`otf_transformation`). The added layer should now be visible if data
 are available in the current view extent.
 
@@ -620,7 +620,7 @@ action.
 
 The |tracking| :guilabel:`Coordinate` option shows the current position of the mouse,
 following it while moving across the map view. You can set the unit (and precision)
-to use in the :menuselection:`Project properties --> General` tab.
+to use in the :menuselection:`Project --> Properties... --> General` tab.
 Click on the small button at the left of the textbox to toggle between
 the Coordinate option and the |extents| :guilabel:`Extents` option that displays
 in map units, the coordinates of the current lower leftmost and upper rightmost
@@ -674,7 +674,7 @@ open the Plugin Manager dialog.
    units are degrees. This means that QGIS will interpret any
    coordinate in your layer as specified in degrees. To get correct scale values,
    you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
-   tab under :menuselection:`Project --> Project Properties`, or you can use
+   tab under :menuselection:`Project --> Properties...`, or you can use
    the |projectionEnabled| :sup:`EPSG:code` icon seen above. In the latter case,
    the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
 

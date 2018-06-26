@@ -91,7 +91,7 @@ properly:
      :align: center
 
 * Open the :guilabel:`Project Properties` Dialog by selecting 
-  :guilabel:`Project --> Project Properties` from the menu.
+  :menuselection:`Project --> Properties...` from the menu.
 
 * Enable "on the fly" projection and use the Google Mercator projection:
 
