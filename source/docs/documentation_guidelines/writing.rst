@@ -503,7 +503,7 @@ the same folder as the rst file.
 
 
 Documenting Processing algorithms
----------------------------------
+=================================
 
 If you want to write documentation for Processing algorithms consider these
 guidelines:
@@ -587,16 +587,14 @@ guidelines:
   HTML file                                 ``HTML``
   Table layer                               ``table``                  |tableLayer|
   Expression                                ``expression``             |expression|
-  Point feature                             ``coordinates``
+  Point geometry                            ``coordinates``
   Extent                                    ``extent``
   CRS                                       ``crs``                    |setProjection|
-  Combobox                                  ``selection``              |selectString|
-  Multiple selection                        ``multipleinput``
+  Enumeration                               ``enumeration``            |selectString|
+  List                                      ``list``
   Number                                    ``number``                 |selectNumber|
   String                                    ``string``                 |inputText|
   Boolean                                   ``boolean``                |checkbox|
-  Fields and values (Refactor Fields)       ``fieldsmapping``
-  Values and operators (Raster Calculator)  ``calculator``
   ========================================  =========================  ====================
 
 * the best option is studying an existing and well documented algorithm and copy
