@@ -59,7 +59,6 @@ Parameters
 ``Sort ascending`` [boolean] |32|
   Optional
 
-  By default, the count follows the layer internal ID ascending order.
   When a ``sort expression`` is set, use this option to control the order in
   which features are assigned values.
 
@@ -68,7 +67,8 @@ Parameters
 ``Sort nulls first`` [boolean] |32|
   Optional
   
-  If checked, *Null* values are counted first.
+  When a ``sort expression`` is set, use this option to set whether
+  *Null* values are counted first or last.
 
   Default: *False*
 
