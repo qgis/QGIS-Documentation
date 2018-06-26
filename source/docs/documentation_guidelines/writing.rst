@@ -503,7 +503,7 @@ the same folder as the rst file.
 
 
 Documenting Processing algorithms
----------------------------------
+=================================
 
 If you want to write documentation for Processing algorithms consider these
 guidelines:
@@ -565,37 +565,37 @@ guidelines:
 * Add the default value if the parameter in *italic*, e.g.::
 
     ``Number of points`` [number]
-      Number of point to create
+      Number of points to create
 
       Default: *1*
 
 * It should be also described the *type* of the parameters. There are several types
   available but avoid to invent new ones and pick one of these:
 
-  ========================================  ====================
-  Parameter/Output type                     Description
-  ========================================  ====================
-  Point vector                              vector: point
-  Line vector                               vector: line
-  Polygon vector                            vector: polygon
-  Generic vector                            vector: any
-  Vector field numeric                      tablefield: numeric
-  Vector field string                       tablefield: string
-  Vector field generic                      tablefield: any
-  Raster layer                              raster
-  Raster band                               raster band
-  HTML file                                 HTML
-  Table layer                               table
-  Extent                                    extent
-  CRS                                       crs
-  Combobox                                  selection
-  Multiple selection                        multipleinput
-  Number                                    number
-  String                                    string
-  Boolean                                   boolean
-  Fields and values (Refactor Fields)       fieldsmapping
-  Values and operators (Raster Calculator)  calculator
-  ========================================  ====================
+  ========================================  =========================  ====================
+  Parameter/Output type                     Description                Visual indicator
+  ========================================  =========================  ====================
+  Point vector layer                        ``vector: point``          |pointLayer|
+  Line vector layer                         ``vector: line``           |lineLayer|
+  Polygon vector layer                      ``vector: polygon``        |polygonLayer|
+  Generic vector layer                      ``vector: any``
+  Vector field numeric                      ``tablefield: numeric``    |fieldFloat|
+  Vector field string                       ``tablefield: string``     |fieldText|
+  Vector field generic                      ``tablefield: any``
+  Raster layer                              ``raster``                 |rasterLayer|
+  Raster band                               ``raster band``
+  HTML file                                 ``HTML``
+  Table layer                               ``table``                  |tableLayer|
+  Expression                                ``expression``             |expression|
+  Point geometry                            ``coordinates``
+  Extent                                    ``extent``
+  CRS                                       ``crs``                    |setProjection|
+  Enumeration                               ``enumeration``            |selectString|
+  List                                      ``list``
+  Number                                    ``number``                 |selectNumber|
+  String                                    ``string``                 |inputText|
+  Boolean                                   ``boolean``                |checkbox|
+  ========================================  =========================  ====================
 
 * the best option is studying an existing and well documented algorithm and copy
   all the useful layouts
@@ -607,59 +607,61 @@ guidelines:
 
 Here an example of an existing algorithm to help you with the layout and the description::
 
-    .. _qgiscountpointsinpolygon:
+  .. _qgiscountpointsinpolygon:
 
-    Count points in polygon
-    -----------------------
-    Takes a point and a polygon layer and counts the number of points from the
-    first one in each polygon of the second one.
+  Count points in polygon
+  -----------------------
+  Takes a point and a polygon layer and counts the number of points from the
+  first one in each polygon of the second one.
 
-    A new polygons layer is generated, with the exact same content as the input polygons
-    layer, but containing an additional field with the points count corresponding to
-    each polygon.
+  A new polygons layer is generated, with the exact same content as the input
+  polygons layer, but containing an additional field with the points count
+  corresponding to each polygon.
 
-    .. figure:: /static/user_manual/processing_algs/qgis/count_points_polygon.png
-      :align: center
+  .. figure:: /img/count_points_polygon.png
+    :align: center
 
-      The labels identify the point count
+    The labels identify the point count
 
-    An optional weight field can be used to assign weights to each point. Alternatively,
-    a unique class field can be specified. If both options are used, the weight field
-    will take precedence and the unique class field will be ignored.
+  An optional weight field can be used to assign weights to each point.
+  Alternatively, a unique class field can be specified. If both options are
+  used, the weight field will take precedence and the unique class field
+  will be ignored.
 
-    Parameters
-    ..........
-    ``Polygons`` [vector: polygon]
-      Polygons layer
+  Parameters
+  ..........
 
-    ``Points`` [vector: point]
-      Points layer
+  ``Polygons`` [vector: polygon]
+    Polygons layer
 
-    ``Weight field`` [tablefield: any]
-      Optional
+  ``Points`` [vector: point]
+    Points layer
 
-      The count generated will be the sum of the weight field for each point contained
-      by the polygon.
+  ``Weight field`` [tablefield: any]
+    Optional
 
-    ``Class field`` [tablefield: any]
-      Optional
+    The count generated will be the sum of the weight field for each point
+    contained by the polygon.
 
-      Points are classified based on the selected attribute and if several points with
-      the same attribute value are within the polygon, only one of them is counted.
-      The final count of the point in a polygon is, therefore, the count of different
-      classes that are found in it.
+  ``Class field`` [tablefield: any]
+    Optional
 
-    ``Count field name`` [string]
-      The name of the field to store the count of points
+    Points are classified based on the selected attribute and if several
+    points with the same attribute value are within the polygon, only one
+    of them is counted. The final count of the point in a polygon is,
+    therefore, the count of different classes that are found in it.
 
-      Default: *NUMPOINTS*
+  ``Count field name`` [string]
+    The name of the field to store the count of points
 
-    Outputs
-    .......
+    Default: *NUMPOINTS*
 
-    ``Count`` [vector: polygon]
-      Resulting layer with the attribute table containing the new column of the
-      points count.
+  Outputs
+  .......
+
+  ``Count`` [vector: polygon]
+    Resulting layer with the attribute table containing the new column of the
+    points count.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -668,9 +670,34 @@ Here an example of an existing algorithm to help you with the layout and the des
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |fieldFloat| image:: /static/common/mIconFieldFloat.png
+   :width: 1.5em
+.. |fieldText| image:: /static/common/mIconFieldText.png
+   :width: 1.5em
+.. |inputText| image:: /static/common/inputtext.png
+.. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |pointLayer| image:: /static/common/mIconPointLayer.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |rasterLayer| image:: /static/common/mIconRasterLayer.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |tableLayer| image:: /static/common/mIconTableLayer.png
+   :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
