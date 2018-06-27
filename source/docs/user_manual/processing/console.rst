@@ -75,8 +75,8 @@ You will see something like this.
    gdal:dissolve -> Dissolve
    ...
 
-That's a list of all the available algorithm IDs, along with
-their corresponding names.
+That's a list of all the available algorithm IDs, sorted by provider
+name and algorithm name, along with their corresponding names.
 
 Once you know the command-line name of the algorithm, the next thing to do is to
 determine the right syntax to execute it. That means knowing which parameters are
@@ -94,15 +94,22 @@ following description:
      >>> processing.algorithmHelp("qgis.buffer")
      Buffer (native:buffer)
      
-     This algorithm computes a buffer area for all the features in an input layer, using a fixed or dynamic distance.
+     This algorithm computes a buffer area for all the features in an
+     input layer, using a fixed or dynamic distance.
      
-     The segments parameter controls the number of line segments to use to approximate a quarter circle when creating rounded offsets.
+     The segments parameter controls the number of line segments to
+     use to approximate a quarter circle when creating rounded
+     offsets.
      
-     The end cap style parameter controls how line endings are handled in the buffer.
+     The end cap style parameter controls how line endings are handled
+     in the buffer.
      
-     The join style parameter specifies whether round, miter or beveled joins should be used when offsetting corners in a line.
+     The join style parameter specifies whether round, miter or
+     beveled joins should be used when offsetting corners in a line.
      
-     The miter limit parameter is only applicable for miter join styles, and controls the maximum distance from the offset curve to use when creating a mitered join.
+     The miter limit parameter is only applicable for miter join
+     styles, and controls the maximum distance from the offset curve
+     to use when creating a mitered join.
      
      ----------------
      Input parameters
@@ -140,9 +147,20 @@ Its syntax is as follows:
 
     >>> processing.run(name_of_the_algorithm, parameters)
 
-Where parameters is a dictionary of parameters that depend on the algorithm you want to
-run, and is exactly the list that the ``algorithmHelp()`` method gives you, in the same
-order as shown.
+Where parameters is a dictionary of parameters that depend on the
+algorithm you want to run, and is exactly the list that the
+``algorithmHelp()`` method gives you, in the same order as shown.
+
+::
+
+    >>> processing.run("qgis.buffer", {'INPUT': "inputlayer",
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': 'memory:'})
 
 No QGIS 3 updates beyond this point (ToDo)
 ==========================================
