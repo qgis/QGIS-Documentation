@@ -195,11 +195,14 @@ The point layer will contain a single PointZ feature per input file from which
 the geotags could be read. Any altitude information from the geotags will be used
 to set the point's Z value.
 
+Besides longitude and latitude also altitude, direction and timestamp information,
+if present in the photo, will be added to the point as attributes.
+
 Parameters
 ..........
 
 ``Input folder`` [folder]
-  Source folder with geotagged photos
+  Path to the source folder containing the geotagged photos
 
 ``Scan recursively`` [boolean]
   If checked, the folder and its subfolders will be scanned
