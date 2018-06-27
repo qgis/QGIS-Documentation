@@ -179,9 +179,6 @@ Computes a buffer area for all the features in an input layer, using a fixed dis
 It is possible to define also a negative distance for polygon input layers: in this
 case the buffer will result in a smaller polygon.
 
-Buffer always results in a polygon layer: in the following picture the buffer
-for points, lines and polygons:
-
 .. figure:: img/buffer.png
    :align: center
 
@@ -246,7 +243,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisvariabledistancebuffer`
+:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`
 
 
 .. _qgiscentroids:
@@ -1151,11 +1148,10 @@ Multi-ring buffer (constant distance) |32|
 Computes multi-ring (*donuts*) buffer for all the features in an input layer,
 using a fixed or dynamic distance and ring numbers.
 
-Buffer always results in a polygon layer: in the following picture a multi ring
-buffer for point, line and polygon layer:
-
 .. figure:: img/multiringbuffer.png
    :align: center
+
+   Multi-ring buffer for line, point and polygon layer
 
 Parameters
 ..........
@@ -1175,6 +1171,10 @@ Output
 ``Multi-ring buffer (constant distance)``
   Multi ring buffer polygon vector layer
 
+See also
+........
+:ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`, :ref:`qgisrectanglesovalsdiamondsfixed`,
+:ref:`qgisrectanglesovalsdiamondsvariable`, :ref:`qgissinglesidedbuffer`
 
 
 .. _qgismultiparttosingleparts:
