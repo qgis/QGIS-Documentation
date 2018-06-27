@@ -510,7 +510,7 @@ Parameters
 
   Default: *10*
 
-``Spacing for Threshold Values`` [selection]
+``Spacing for Threshold Values`` [enumeration]
   This parameter indicates whether logarithmic or linear spacing should be used
   when looking for possible threshold values using drop ananlysis.
 

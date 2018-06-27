@@ -44,7 +44,7 @@ Parameters
   Expression that will be used to calculate the output raster layer. You can use
   the operator buttons provided to type directly the expression in this box.
 
-``Predefined expressions`` [selection]
+``Predefined expressions`` [enumeration]
   You can use the existing ``NDVI`` expression or you can define new expressions
   to use for some default and advanced calculations.
 
@@ -54,7 +54,7 @@ Parameters
 
   Default: *NDVI*
 
-``Reference layers(s)(used for automated extent, cellsize and CRS)`` [multipleinput]
+``Reference layers(s)(used for automated extent, cellsize and CRS)`` [raster] [list]
   Optional.
 
   Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the

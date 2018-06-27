@@ -31,7 +31,7 @@ Parameters
 ``Selection attribute`` [tablefield: any]
   Filtering field of the layer
 
-``Operator`` [selection]
+``Operator`` [enumeration]
   Many different operators are available:
 
   * ``=``
@@ -147,7 +147,7 @@ Parameters
 ``Input layer`` [vector: any]
   Source vector layer to select the features from
 
-``Method`` [selection]
+``Method`` [enumeration]
   Method of the random selection:
 
   * Number of selected features
@@ -188,7 +188,7 @@ Parameters
 ``ID field`` [tablefield: any]
   Category of the source vector layer to select the features from
 
-``Method`` [selection]
+``Method`` [enumeration]
   Method of the random selection:
 
   * Number of selected features
@@ -226,7 +226,7 @@ Parameters
 ``Input layer`` [vector: any]
   Source vector layer to select the features from
 
-``Method`` [selection]
+``Method`` [enumeration]
   Method of the random selection:
 
   * Number of selected features
@@ -269,7 +269,7 @@ Parameters
 ``ID field`` [tablefield: any]
   Category of the source vector layer
 
-``Method`` [selection]
+``Method`` [enumeration]
   Method of the random selection:
 
   * Number of selected features
@@ -303,7 +303,7 @@ Parameters
 ``Selection attribute`` [tablefield: any]
   Filtering field of the layer
 
-``Operator`` [selection]
+``Operator`` [enumeration]
   Many different operators are available:
 
   * ``=``
@@ -322,7 +322,7 @@ Parameters
 
   Values to be evaluated
 
-``Modify current selection by`` [selection] |32|
+``Modify current selection by`` [enumeration] |32|
   How the selection of the algorithm should be managed. You have many options:
 
   * creating new selection
@@ -351,7 +351,7 @@ Parameters
 ``Expression`` [expression]
   Expression to filter the vector layer
 
-``Modify current selection by`` [selection]
+``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
   * creating new selection
@@ -395,7 +395,7 @@ Parameters
 ``By comparing to the features from`` [vector: any]
   Intersection vector layer
 
-``Modify current selection by`` [selection]
+``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
   * creating new selection

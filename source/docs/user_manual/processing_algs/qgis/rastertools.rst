@@ -43,13 +43,13 @@ Parameters
 
   Default: *100*
 
-``Map theme to render`` [selection]
+``Map theme to render`` [enumeration]
   Optional
 
   If you have some map theme set, you can choose one of them for the final raster
   layer.
 
-``Single layer to render`` [selection]
+``Single layer to render`` [enumeration]
   Optional
 
   Choose a single layer for the output raster layer

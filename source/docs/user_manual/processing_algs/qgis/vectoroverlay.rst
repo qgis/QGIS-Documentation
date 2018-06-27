@@ -158,13 +158,13 @@ Parameters
 ``Intersection layer`` [vector: any]
   Layer containing the intersecting features.
 
-``Input fields to keep`` [multipleinput]
+``Input fields to keep`` [tablefield: any] [list]
   Optional
 
   Choose here the field(s) of the input layer to be kept. If no fields are chosen
   all fields are taken.
 
-``Intersect fields to keep`` [multipleinput]
+``Intersect fields to keep`` [tablefield: any] [list]
   Optional
 
   Choose here the field(s) of the intersection layer to be kept. If no fields are
@@ -205,13 +205,13 @@ Parameters
 ``Intersection layer`` [vector: line]
   Layer to use in the intersection operation.
 
-``Input fields to keep`` [multipleinput]
+``Input fields to keep`` [tablefield: any] [list]
   Optional
 
   Choose here the fields of the input layer to be kept. If no fields are chosen
   all fields are taken.
 
-``Intersect fields to keep`` [multipleinput]
+``Intersect fields to keep`` [tablefield: any] [list]
   Optional
 
   Choose here the field of the intersection layer to be kept. If no fields are

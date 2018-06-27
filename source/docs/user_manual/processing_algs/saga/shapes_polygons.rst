@@ -136,7 +136,7 @@ Parameters
 
   <put parameter description here>
 
-``Dissolve...`` [selection]
+``Dissolve...`` [enumeration]
   <put parameter description here>
 
   Options:

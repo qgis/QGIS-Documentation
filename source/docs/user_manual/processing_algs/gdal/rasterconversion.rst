@@ -50,7 +50,7 @@ Parameters
 ``Input layer`` [raster]
   Input 8bit raster image
 
-``Band to convert`` [selection]
+``Band to convert`` [enumeration]
   Band to convert to RGB
 
   Options:
@@ -148,7 +148,7 @@ Parameters
 
   Default: *False*
 
-``Set output raster size (ignored if above option is checked)`` [selection]
+``Set output raster size (ignored if above option is checked)`` [enumeration]
   If the above option is not checked either the output size is in pixels (0)
   or the output resolution is in map units per pixel (1).
 
@@ -169,7 +169,7 @@ Parameters
 
   Default: *100.0*
 
-``Raster type`` [selection]
+``Raster type`` [enumeration]
   Defines the type of the resulting raster image.
 
   Options:
@@ -257,7 +257,7 @@ Parameters
 
   Default: *none*
 
-``Expand`` [selection]
+``Expand`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -291,7 +291,7 @@ Parameters
 
   Default: *(not set)*
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   <put parameter description here>
 
   Options:

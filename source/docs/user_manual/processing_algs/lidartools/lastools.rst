@@ -203,7 +203,7 @@ Parameters
 ``input LAS/LAZ file`` [points]
   The file containing the points to be rastered in LAS/LAZ format.
 
-``filter`` [selection]
+``filter`` [enumeration]
   Specifies which points to use to construct the temporary TIN that is then rastered.
 
   Default: *---*
@@ -213,12 +213,12 @@ Parameters
 
   Default: *1.0*
 
-``Attribute`` [selection]
+``Attribute`` [enumeration]
   Specifies the attribute that is to be rastered.
 
   Default: *elevation*
 
-``Product`` [selection]
+``Product`` [enumeration]
   Specifies how the attribute is to be turned into raster values.
 
   Default: *actual values*
@@ -364,7 +364,7 @@ Parameters
 ``input LAS/LAZ file`` [file]
   The file containing the points to be processed.
 
-``filter (by return, classification, flags)`` [selection]
+``filter (by return, classification, flags)`` [enumeration]
   Filters points based on various options such as return, classification, or flags.
 
   Options:
@@ -388,7 +388,7 @@ Parameters
 
   Default: *0*
 
-``second filter (by return, classification, flags)`` [selection]
+``second filter (by return, classification, flags)`` [enumeration]
   Also filters points based on various options such as return, classification, or flags.
 
   Options:
@@ -412,7 +412,7 @@ Parameters
 
   Default: *0*
 
-``filter (by coordinate, intensity, GPS time, ...)`` [selection]
+``filter (by coordinate, intensity, GPS time, ...)`` [enumeration]
   Filters points based on various other options (that require a value as argument).
 
   Options:
@@ -449,7 +449,7 @@ Parameters
 
   Default: *(not set)*
 
-``second filter (by coordinate, intensity, GPS time, ...)`` [selection]
+``second filter (by coordinate, intensity, GPS time, ...)`` [enumeration]
   Also filters points based on various other options (that require a value as argument).
 
   Options:
@@ -533,7 +533,7 @@ Parameters
 
   <put parameter description here>
 
-``source projection`` [selection]
+``source projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -547,7 +547,7 @@ Parameters
 
   Default: *0*
 
-``source utm zone`` [selection]
+``source utm zone`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -676,7 +676,7 @@ Parameters
 
   Default: *0*
 
-``source state plane code`` [selection]
+``source state plane code`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -812,7 +812,7 @@ Parameters
 
   Default: *0*
 
-``target projection`` [selection]
+``target projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -826,7 +826,7 @@ Parameters
 
   Default: *0*
 
-``target utm zone`` [selection]
+``target utm zone`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -955,7 +955,7 @@ Parameters
 
   Default: *0*
 
-``target state plane code`` [selection]
+``target state plane code`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1134,7 +1134,7 @@ Parameters
 ``input LAS/LAZ file`` [file]
   The file containing the points to be processed.
 
-``transform (coordinates)`` [selection]
+``transform (coordinates)`` [enumeration]
   Either translate, scale, or clamp the x, y, or z coordinate by the value specified below.
 
   Options:
@@ -1157,7 +1157,7 @@ Parameters
 
   Default: *(not set)*
 
-``second transform (coordinates)`` [selection]
+``second transform (coordinates)`` [enumeration]
   Also either translate, scale, or clamp the x, y, or z coordinate by the value
   specified below.
 
@@ -1181,7 +1181,7 @@ Parameters
 
   Default: *(not set)*
 
-``transform (intensities, scan angles, GPS times, ...)`` [selection]
+``transform (intensities, scan angles, GPS times, ...)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1209,7 +1209,7 @@ Parameters
 
   Default: *(not set)*
 
-``second transform (intensities, scan angles, GPS times, ...)`` [selection]
+``second transform (intensities, scan angles, GPS times, ...)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1237,7 +1237,7 @@ Parameters
 
   Default: *(not set)*
 
-``operations (first 7 need an argument)`` [selection]
+``operations (first 7 need an argument)`` [enumeration]
   <put parameter description here>
 
   Options:

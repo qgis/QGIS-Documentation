@@ -42,7 +42,7 @@ Parameters
 
   Default: *1.0*
 
-``Type`` [selection]
+``Type`` [enumeration]
   Geometry type of the resulting grid.
 
   Options:
@@ -82,7 +82,7 @@ Parameters
 ``Vector layer to cut`` [vector: any]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -294,7 +294,7 @@ Parameters
 ``Shapes`` [vector: any]
   Input layer.
 
-``Buffer Distance`` [selection]
+``Buffer Distance`` [enumeration]
   Buffering method.
 
   Options:

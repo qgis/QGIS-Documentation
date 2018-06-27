@@ -31,7 +31,7 @@ Parameters
 ``Elevation`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -41,7 +41,7 @@ Parameters
 
   Default: *0*
 
-``Gradient Calculation`` [selection]
+``Gradient Calculation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -90,7 +90,7 @@ Parameters
 
   Default: *10*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -122,7 +122,7 @@ Parameters
 
   Default: *True*
 
-``Difference`` [selection]
+``Difference`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -240,7 +240,7 @@ Parameters
 
   Default: *10*
 
-``Output`` [selection]
+``Output`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -329,7 +329,7 @@ Parameters
 
   Default: *1.0*
 
-``Wind Direction Units`` [selection]
+``Wind Direction Units`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -379,7 +379,7 @@ Parameters
 
   Default: *100.0*
 
-``Sort`` [selection]
+``Sort`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -389,7 +389,7 @@ Parameters
 
   Default: *0*
 
-``Classification Constant`` [selection]
+``Classification Constant`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -745,7 +745,7 @@ Parameters
 ``Elevation`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -802,7 +802,7 @@ Parameters
 ``Elevation`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -855,7 +855,7 @@ Parameters
 
   Default: *1*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -927,7 +927,7 @@ Parameters
 
   Default: *100.0*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1004,7 +1004,7 @@ Parameters
 
   Default: *1000*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1066,7 +1066,7 @@ Parameters
 
   Default: *1*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1158,7 +1158,7 @@ Parameters
 
   Default: *True*
 
-``Wind Direction Units`` [selection]
+``Wind Direction Units`` [enumeration]
   <put parameter description here>
 
   Options:

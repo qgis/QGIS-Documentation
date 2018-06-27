@@ -36,7 +36,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input
 
-``Calculate using`` [selection]
+``Calculate using`` [enumeration]
   Choose different calculation type for the geometric properties:
 
   * Layer CRS
@@ -209,7 +209,7 @@ Parameters
 
   Default: *5*
 
-``End cap style`` [selection]
+``End cap style`` [enumeration]
   Controls how line endings are handled in the buffer.
 
   .. figure:: img/buffer_cap_style.png
@@ -217,7 +217,7 @@ Parameters
 
      Round, flat and square cap styles
 
-``Join style`` [selection]
+``Join style`` [enumeration]
   Specifies whether round, miter or beveled joins should be used when offsetting
   corners in a line.
 
@@ -320,7 +320,7 @@ Parameters
 ``Input layer`` [vector: any]
   Source layer to check.
 
-``Method`` [selection]
+``Method`` [enumeration]
   Check validity method.
 
   Options:
@@ -370,7 +370,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer to be transformed
 
-``Unique ID fields`` [multipleinput]
+``Unique ID fields`` [tablefield: any] [list]
   Optional
 
   Choose one or more attributes to collect the geometries
@@ -443,7 +443,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer to transform
 
-``New geometry type`` [selection]
+``New geometry type`` [enumeration]
   List of all the conversions supported:
 
   * Centroids
@@ -776,7 +776,7 @@ Parameters
 ``Input layer`` [vector: polygon]
   Input polygon vector layer to clean
 
-``Merge selection with the neighboring polygon with the`` [selection]
+``Merge selection with the neighboring polygon with the`` [enumeration]
   Choose the parameter to use in order to get rid of the selected polygons:
 
   * Largest Area
@@ -965,7 +965,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector input layer
 
-``Output geometry type`` [selection]
+``Output geometry type`` [enumeration]
   The output geometry strongly depends on the expression you will choose: for
   instance, if you want to create a buffer than the geometry type has to be
   a polygon
@@ -1095,13 +1095,13 @@ Parameters
   layer to contain one feature per grouped value with a minimal geometry covering
   just the features with matching values
 
-``Geometry type`` [selection]
+``Geometry type`` [enumeration]
   Numerous enclosing geometry types are supported:
 
-  * Envelopes (bounding boxes)
-  * Minimum oriented rectangle
-  * Minimum enclosing circles
-  * Convex hulls
+  * Envelope (Bounding Box)
+  * Minimum Oriented Rectangle
+  * Minimum Enclosing Circle
+  * Convex Hull
 
   .. figure:: img/minimum_bounding.png
      :align: center
@@ -1211,7 +1211,7 @@ Parameters
 
   Default: *8*
 
-``Join style`` [selection]
+``Join style`` [enumeration]
   Specify whether round, miter or beveled joins should be used when offsetting
   corners in a line
 
@@ -1578,7 +1578,7 @@ Parameters
 ``Input layer`` [vector: point]
   Input point vector layer
 
-``Buffer shape`` [selection]
+``Buffer shape`` [enumeration]
   Different shape available:
 
   * Rectangles
@@ -1640,7 +1640,7 @@ Parameters
 ``Input layer`` [vector: point]
   Input point vector layer
 
-``Buffer shape`` [selection]
+``Buffer shape`` [enumeration]
   Different shape available:
 
   * Rectangles
@@ -1909,7 +1909,7 @@ Parameters
 ``Input layer`` [vector: polygon, line]
   Polygon or line vector to simplify.
 
-``Simplification method`` [selection]
+``Simplification method`` [enumeration]
   Method of the simplification.
 
   Options:
@@ -1960,7 +1960,7 @@ Parameters
 
   Default: *10.0*
 
-``Side`` [selection]
+``Side`` [enumeration]
   Choose which side the buffer should be created
 
   * Left
@@ -1974,7 +1974,7 @@ Parameters
 
   Default: *5*
 
-``Join style`` [selection]
+``Join style`` [enumeration]
   Specifies whether round, miter or beveled joins should be used when offsetting
   corners in a line.
 
@@ -2084,7 +2084,7 @@ Parameters
 
   Default: *10.0*
 
-``Behavior`` [selection]
+``Behavior`` [enumeration]
   Snapping can be done on an existing node or a segment (its closest point).
   Choose between different snapping options:
 
@@ -2230,7 +2230,7 @@ Parameters
 
   Default: *90.0*
 
-``Side to create the transect`` [selection]
+``Side to create the transect`` [enumeration]
   Choose the side of the transect. Three different options available:
 
   * Left

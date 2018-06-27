@@ -25,7 +25,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -72,7 +72,7 @@ Parameters
 ``B`` [raster]
   <put parameter description here>
 
-``Method for R value`` [selection]
+``Method for R value`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -85,7 +85,7 @@ Parameters
 
   Default: *0*
 
-``Method for G value`` [selection]
+``Method for G value`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -98,7 +98,7 @@ Parameters
 
   Default: *0*
 
-``Method for B value`` [selection]
+``Method for B value`` [enumeration]
   <put parameter description here>
 
   Options:

@@ -86,7 +86,7 @@ Parameters
 ``Initiation Grid`` [raster]
   <put parameter description here>
 
-``Initiation Type`` [selection]
+``Initiation Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -161,7 +161,7 @@ Parameters
 ``Channel Network`` [raster]
   <put parameter description here>
 
-``Flow Algorithm`` [selection]
+``Flow Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:

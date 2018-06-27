@@ -94,7 +94,7 @@ Parameters
 
      Normal and dissolved buffer
 
-``End cap style`` [selection]
+``End cap style`` [enumeration]
   Controls how line endings are handled in the buffer.
 
   .. figure:: img/buffer_cap_style.png
@@ -102,7 +102,7 @@ Parameters
 
      Round, flat and square cap styles
 
-``Join style`` [selection]
+``Join style`` [enumeration]
   Specifies whether round, miter or beveled joins should be used when offsetting
   corners in a line.
 

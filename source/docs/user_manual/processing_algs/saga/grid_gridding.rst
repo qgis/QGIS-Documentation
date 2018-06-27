@@ -28,7 +28,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -37,7 +37,7 @@ Parameters
 
   Default: *0*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -59,7 +59,7 @@ Parameters
 
   Default: *1*
 
-``Search Range`` [selection]
+``Search Range`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -74,7 +74,7 @@ Parameters
 
   Default: *100.0*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -84,7 +84,7 @@ Parameters
 
   Default: *0*
 
-``Number of Points`` [selection]
+``Number of Points`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -147,7 +147,7 @@ Parameters
 
   Default: *10*
 
-``Kernel`` [selection]
+``Kernel`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -157,7 +157,7 @@ Parameters
 
   Default: *0*
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -209,7 +209,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -286,7 +286,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -343,7 +343,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -395,7 +395,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Method for Multiple Values`` [selection]
+``Method for Multiple Values`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -408,7 +408,7 @@ Parameters
 
   Default: *0*
 
-``Method for Lines`` [selection]
+``Method for Lines`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -418,7 +418,7 @@ Parameters
 
   Default: *0*
 
-``Preferred Target Grid Type`` [selection]
+``Preferred Target Grid Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -474,7 +474,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:

@@ -70,7 +70,7 @@ Parameters
 
   Default: *(not set)*
 
-``Field type`` [selection]
+``Field type`` [enumeration]
   Type of the new field. You can choose between:
 
   * Integer
@@ -150,7 +150,7 @@ Parameters
 
   Default: *NewField*
 
-``Field type`` [selection]
+``Field type`` [enumeration]
   Type of the new field. You can choose between:
 
   * Integer
@@ -206,13 +206,13 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer to drop field(s) from
 
-``Fields to drop`` [multipleinput]
+``Fields to drop`` [tablefield: any] [list]
   Select the field(s) to drop
 
 Output
 ......
 
-``Fields dropped``
+``Fields dropped`` [vector:any]
   Vector layer without the field(s) chosen
 
 

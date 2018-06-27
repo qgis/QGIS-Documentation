@@ -31,7 +31,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   Background grid layer(s)
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   interpolation method to use.
 
   Options:
@@ -77,7 +77,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -216,7 +216,7 @@ Parameters
 
   Default: *100.0*
 
-``Aggregation`` [selection]
+``Aggregation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -226,7 +226,7 @@ Parameters
 
   Default: *0*
 
-``Style`` [selection]
+``Style`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -285,7 +285,7 @@ Parameters
 
   Default: *100.0*
 
-``Aggregation`` [selection]
+``Aggregation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -295,7 +295,7 @@ Parameters
 
   Default: *0*
 
-``Style`` [selection]
+``Style`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -351,7 +351,7 @@ Parameters
 
   Default: *100.0*
 
-``Aggregation`` [selection]
+``Aggregation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -361,7 +361,7 @@ Parameters
 
   Default: *0*
 
-``Style`` [selection]
+``Style`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -525,7 +525,7 @@ Parameters
 
   Default: *True*
 
-``Type`` [selection]
+``Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -598,7 +598,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Class Selection`` [selection]
+``Class Selection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -613,7 +613,7 @@ Parameters
 
   Default: *0*
 
-``Vectorised class as...`` [selection]
+``Vectorised class as...`` [enumeration]
   <put parameter description here>
 
   Options:

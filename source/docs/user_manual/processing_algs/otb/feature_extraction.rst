@@ -35,7 +35,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -49,7 +49,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -98,7 +98,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -112,7 +112,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -171,7 +171,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -185,7 +185,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -234,7 +234,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -248,7 +248,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -297,7 +297,7 @@ Parameters
 
   Default: *128*
 
-``Edge feature`` [selection]
+``Edge feature`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -346,7 +346,7 @@ Parameters
 
   Default: *128*
 
-``Edge feature`` [selection]
+``Edge feature`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -395,7 +395,7 @@ Parameters
 
   Default: *128*
 
-``Edge feature`` [selection]
+``Edge feature`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -449,7 +449,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -463,7 +463,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -512,7 +512,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -526,7 +526,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -575,7 +575,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -589,7 +589,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -638,7 +638,7 @@ Parameters
 
   Default: *128*
 
-``Structuring Element Type`` [selection]
+``Structuring Element Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -652,7 +652,7 @@ Parameters
 
   Default: *5*
 
-``Morphological Operation`` [selection]
+``Morphological Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -736,7 +736,7 @@ Parameters
 
   Default: *8*
 
-``Texture Set Selection`` [selection]
+``Texture Set Selection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -925,7 +925,7 @@ Parameters
 
   Default: *1*
 
-``Available Radiometric Indices`` [selection]
+``Available Radiometric Indices`` [enumeration]
   <put parameter description here>
 
   Options:

@@ -113,7 +113,7 @@ Parameters
 
   Default: *1*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -158,7 +158,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -180,7 +180,7 @@ Parameters
 
   Default: *1*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -220,7 +220,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -270,7 +270,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -285,7 +285,7 @@ Parameters
 
   Default: *1*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -342,7 +342,7 @@ Parameters
 
   Default: *True*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -389,7 +389,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -439,7 +439,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -449,7 +449,7 @@ Parameters
 
   Default: *0*
 
-``Filter`` [selection]
+``Filter`` [enumeration]
   <put parameter description here>
 
   Options:

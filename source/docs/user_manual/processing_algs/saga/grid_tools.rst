@@ -30,7 +30,7 @@ Parameters
 
   Default: *3*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -68,7 +68,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Replace Condition`` [selection]
+``Replace Condition`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -177,7 +177,7 @@ Parameters
 
   Default: *True*
 
-``Neighbourhood`` [selection]
+``Neighbourhood`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -257,7 +257,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Data storage type`` [selection]
+``Data storage type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -339,7 +339,7 @@ Parameters
 
   Default: *1000*
 
-``Buffer Distance`` [selection]
+``Buffer Distance`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -412,7 +412,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -500,7 +500,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Operation`` [selection]
+``Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -510,7 +510,7 @@ Parameters
 
   Default: *0*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -525,7 +525,7 @@ Parameters
 
   Default: *1*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -597,7 +597,7 @@ Parameters
 ``Grids to Merge`` [multipleinput: rasters]
   <put parameter description here>
 
-``Preferred data storage type`` [selection]
+``Preferred data storage type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -614,7 +614,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -627,7 +627,7 @@ Parameters
 
   Default: *0*
 
-``Overlapping Cells`` [selection]
+``Overlapping Cells`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -670,7 +670,7 @@ Parameters
 ``Patch Grid`` [raster]
   <put parameter description here>
 
-``Interpolation Method`` [selection]
+``Interpolation Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -749,7 +749,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -770,7 +770,7 @@ Parameters
 
   Default: *1.0*
 
-``operator (for single value change)`` [selection]
+``operator (for single value change)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -798,7 +798,7 @@ Parameters
 
   Default: *2.0*
 
-``operator (for range)`` [selection]
+``operator (for range)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -811,7 +811,7 @@ Parameters
 ``Lookup Table`` [fixedtable]
   <put parameter description here>
 
-``operator (for table)`` [selection]
+``operator (for table)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -878,7 +878,7 @@ Parameters
 
   Default: *True*
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -887,7 +887,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation Method (Scale Up)`` [selection]
+``Interpolation Method (Scale Up)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -905,7 +905,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation Method (Scale Down)`` [selection]
+``Interpolation Method (Scale Down)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1042,7 +1042,7 @@ Parameters
 
   Default: *0.0*
 
-``Threshold Type`` [selection]
+``Threshold Type`` [enumeration]
   <put parameter description here>
 
   Options:

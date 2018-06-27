@@ -30,7 +30,7 @@ Parameters
 
   Default: *128*
 
-``Calibration Level`` [selection]
+``Calibration Level`` [enumeration]
   <put parameter description here>
 
   Options:
