@@ -2424,8 +2424,8 @@ Outputs
 
 .. _qgistranslategeometry:
 
-Translate geometry
-------------------
+Translate
+---------
 Creates an offset of the source layer depending on the parameters chosen.
 
 .. figure:: img/translate_geometry.png
