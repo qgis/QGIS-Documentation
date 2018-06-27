@@ -186,8 +186,8 @@ Outputs
 
 .. _qgisimportphotos:
 
-Import geotagged photos
------------------------
+Import geotagged photos |32|
+----------------------------
 Creates a point layer corresponding to the geotagged locations from JPEG images
 from a source folder.
 
@@ -464,4 +464,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
