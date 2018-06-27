@@ -542,15 +542,14 @@ Parameters
   Input vector layer
 
 ``Azimuth (degrees from North)`` [number]
-  Angle (in degrees) for the middle of the wedge to point
-
-  .. figure:: img/wedge_buffers_azimuth.png
-   :align: center
-
-   Wedge buffers with 0, 90 and 180 azimuth values
+  Angle (in degrees) for the middle of the wedge to point. It can be a unique value
+  (same value for all the features) or it can be taken from features data (different
+  value depending on the feature attribute).
 
 ``Wedge width (in degrees)`` [number]
-  Width (in degrees) of the buffer
+  Width (in degrees) of the buffer. It can be a unique value (same value for all
+  the features) or it can be taken from features data (different value depending
+  on the feature attribute).
 
   .. figure:: img/wedge_buffers_width.png
    :align: center
@@ -558,7 +557,9 @@ Parameters
    Wedge buffers different widths: 45 and 90 degrees
 
 ``Outer radius`` [number]
-  The outer *size* of the buffer
+  The outer *size* of the buffer. It can be a unique value (same value for all
+  the features) or it can be taken from features data (different value depending
+  on the feature attribute).
 
   .. figure:: img/wedge_buffers_outer_radius.png
    :align: center
@@ -568,7 +569,9 @@ Parameters
 ``Inner radius`` [number]
   Optional
 
-  Inner radius value
+  Inner radius value.It can be a unique value (same value for all the features)
+  or it can be taken from features data (different value depending on the feature
+  attribute).
 
   .. figure:: img/wedge_buffers_inner_radius.png
    :align: center
