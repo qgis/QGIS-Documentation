@@ -1160,7 +1160,9 @@ Parameters
   Input vector layer.
 
 ``Number of rings`` [number]
-  Total number of rings that the buffer must have.
+  Total number of rings that the buffer must have. It can be an unique value (same
+  ring number for all the features) or it can be taken from features data (different
+  ring number depending on the feature values).
 
 ``Distance between rings`` [number]
   Distance between the single rings. It can be an unique value (same distance for
