@@ -202,7 +202,7 @@ Parameters
   Source folder with geotagged photos
 
 ``Scan recursively`` [boolean]
-  If checked the folder will be recursively scanned
+  If checked, the folder and its subfolders will be scanned
 
 Outputs
 .......
