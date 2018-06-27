@@ -1163,7 +1163,9 @@ Parameters
   Total number of rings that the buffer must have.
 
 ``Distance between rings`` [number]
-  Distance between the single rings.
+  Distance between the single rings. It can be an unique value (same distance for
+  all the the features) or it can be taken from features data (different distance
+  depending on the feature values).
 
 Output
 ......
