@@ -25,7 +25,7 @@ Parameters
 ``Elevation`` [raster]
   <put parameter description here>
 
-``Shading Method`` [selection]
+``Shading Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -87,7 +87,7 @@ Parameters
 
   Default: *10000*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -159,7 +159,7 @@ Parameters
 
   Default: *45.0*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -184,7 +184,7 @@ Parameters
 
   Default: *1000*
 
-``Value Range`` [selection]
+``Value Range`` [enumeration]
   <put parameter description here>
 
   Options:

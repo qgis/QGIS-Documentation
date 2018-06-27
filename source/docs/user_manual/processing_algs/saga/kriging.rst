@@ -33,7 +33,7 @@ Parameters
 
   Default: *True*
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -42,7 +42,7 @@ Parameters
 
   Default: *0*
 
-``Variogram Model`` [selection]
+``Variogram Model`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -162,7 +162,7 @@ Parameters
 
   Default: *True*
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -171,7 +171,7 @@ Parameters
 
   Default: *0*
 
-``Variogram Model`` [selection]
+``Variogram Model`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -306,7 +306,7 @@ Parameters
 
   Default: *True*
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -315,7 +315,7 @@ Parameters
 
   Default: *0*
 
-``Variogram Model`` [selection]
+``Variogram Model`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -382,7 +382,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Grid Interpolation`` [selection]
+``Grid Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -451,7 +451,7 @@ Parameters
 
   Default: *True*
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -460,7 +460,7 @@ Parameters
 
   Default: *0*
 
-``Variogram Model`` [selection]
+``Variogram Model`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -527,7 +527,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Grid Interpolation`` [selection]
+``Grid Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:

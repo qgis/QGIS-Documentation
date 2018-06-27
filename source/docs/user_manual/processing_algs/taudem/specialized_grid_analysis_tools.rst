@@ -464,7 +464,7 @@ Parameters
   perhaps representing travel time or attenuation of a process. If this input
   file is not used, the loadings will assumed to be one for each grid cell.
 
-``Statistical Method`` [selection]
+``Statistical Method`` [enumeration]
   Statistical method used to calculate the distance down to the stream. In the
   D-Infinity flow model, the outflow from each grid cell is proportioned between
   two downslope grid cells. Therefore, the distance from any grid cell to a
@@ -481,7 +481,7 @@ Parameters
 
   Default: *2*
 
-``Distance Method`` [selection]
+``Distance Method`` [enumeration]
   Distance method used to calculate the distance down to the stream. One of
   several ways of measuring distance may be selected: the total straight line
   path (Pythagoras), the horizontal component of the straight line path
@@ -572,7 +572,7 @@ Parameters
   it is most often obtained as the output of the **"D-Infinity Flow Directions"**
   tool.
 
-``Statistical Method`` [selection]
+``Statistical Method`` [enumeration]
   Statistical method used to calculate the distance down to the stream. In the
   D-Infinity flow model, the outflow from each grid cell is proportioned between
   two downslope grid cells. Therefore, the distance from any grid cell to a
@@ -589,7 +589,7 @@ Parameters
 
   Default: *2*
 
-``Distance Method`` [selection]
+``Distance Method`` [enumeration]
   Distance method used to calculate the distance down to the stream. One of
   several ways of measuring distance may be selected: the total straight line
   path (Pythagoras), the horizontal component of the straight line path

@@ -207,7 +207,7 @@ Parameters
 
   Specify the geometry field
 
-``Geometry type`` [selection]
+``Geometry type`` [enumeration]
   Optional
 
   Choose the final geometry of the result. By default the algorithm will autodetect
@@ -295,7 +295,7 @@ Parameters
 
   Select the specific fields you want to add. By default all the fields are added
 
-``Join type`` [selection] |32|
+``Join type`` [enumeration] |32|
   Choose the type of the final joined layer between:
 
   * Create separate feature for each matching features (one-to-many)
@@ -338,7 +338,7 @@ Parameters
   the attributes of this vector layer will be **added** to the source layer
   attribute table
 
-``Geometric predicate`` [checkbox]
+``Geometric predicate`` [enumeration] [list]
   Check the geometric criteria.
 
   Options:
@@ -356,7 +356,7 @@ Parameters
 
   Select the specific fields you want to add. By default all the fields are added
 
-``Join type`` [selection]
+``Join type`` [enumeration]
   Choose the type of the final joined layer between:
 
   * Create separate feature for each located features (one-to-many)
@@ -399,7 +399,7 @@ Parameters
   the attributes of this vector layer will be **added** to the source layer
   attribute table
 
-``Geometric predicate`` [checkbox]
+``Geometric predicate`` [enumeration] [list]
   Check the geometric criteria.
 
   Options:
@@ -412,12 +412,12 @@ Parameters
   * within
   * crosses
 
-``Fields to summarize`` [tablefield]
+``Fields to summarize`` [tablefield] [list]
   Optional
 
   Select the specific fields you want to add. By default all the fields are added
 
-``Summaries to calculate`` [selection]
+``Summaries to calculate`` [enumeration] [list]
   Optional
 
   Choose which type of summary you want to add to each field and for each feature.
@@ -477,8 +477,9 @@ All layers will be reprojected to match this CRS.
 Parameters
 ..........
 
-``Layers to merge`` [multipleinput: vector]
+``Layers to merge`` [vector: any] [list]
   All the layers that have to be merged into a single layer.
+  Layers should be of the same geometry type.
 
 ``Destination CRS`` [projection]
   Optional

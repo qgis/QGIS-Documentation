@@ -52,7 +52,7 @@ Parameters
 
   Default: *-32768*
 
-``Method to fuse measures in each DSM cell`` [selection]
+``Method to fuse measures in each DSM cell`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -64,7 +64,7 @@ Parameters
 
   Default: *0*
 
-``Parameters estimation modes`` [selection]
+``Parameters estimation modes`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -104,7 +104,7 @@ Parameters
 
   Default: *0.0*
 
-``Output Cartographic Map Projection`` [selection]
+``Output Cartographic Map Projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -142,7 +142,7 @@ Parameters
 
   Default: *10*
 
-``Block-matching metric`` [selection]
+``Block-matching metric`` [enumeration]
   <put parameter description here>
 
   Options:

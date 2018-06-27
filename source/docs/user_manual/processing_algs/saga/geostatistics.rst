@@ -45,7 +45,7 @@ Parameters
 
   Default: *0*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -187,7 +187,7 @@ Parameters
 ``Dependent Variable`` [tablefield: any]
   <put parameter description here>
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -214,7 +214,7 @@ Parameters
 
   Default: *1.0*
 
-``Search Range`` [selection]
+``Search Range`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -229,7 +229,7 @@ Parameters
 
   Default: *100*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -239,7 +239,7 @@ Parameters
 
   Default: *0*
 
-``Number of Points`` [selection]
+``Number of Points`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -301,7 +301,7 @@ Parameters
 ``Dependent Variable`` [tablefield: any]
   <put parameter description here>
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -328,7 +328,7 @@ Parameters
 
   Default: *1.0*
 
-``Search Range`` [selection]
+``Search Range`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -343,7 +343,7 @@ Parameters
 
   Default: *100*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -353,7 +353,7 @@ Parameters
 
   Default: *0*
 
-``Number of Points`` [selection]
+``Number of Points`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -406,7 +406,7 @@ Parameters
 ``Dependent Variable`` [tablefield: any]
   <put parameter description here>
 
-``Target Grids`` [selection]
+``Target Grids`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -415,7 +415,7 @@ Parameters
 
   Default: *0*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -442,7 +442,7 @@ Parameters
 
   Default: *1*
 
-``Search Range`` [selection]
+``Search Range`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -457,7 +457,7 @@ Parameters
 
   Default: *100*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -467,7 +467,7 @@ Parameters
 
   Default: *0*
 
-``Number of Points`` [selection]
+``Number of Points`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -542,7 +542,7 @@ Parameters
 ``Dependent Variable`` [tablefield: any]
   <put parameter description here>
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -569,7 +569,7 @@ Parameters
 
   Default: *1.0*
 
-``Search Range`` [selection]
+``Search Range`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -584,7 +584,7 @@ Parameters
 
   Default: *0*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -594,7 +594,7 @@ Parameters
 
   Default: *0*
 
-``Number of Points`` [selection]
+``Number of Points`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -662,7 +662,7 @@ Parameters
 ``Predictor`` [tablefield: any]
   <put parameter description here>
 
-``Target Grids`` [selection]
+``Target Grids`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -671,7 +671,7 @@ Parameters
 
   Default: *0*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -698,7 +698,7 @@ Parameters
 
   Default: *0.0*
 
-``Search Range`` [selection]
+``Search Range`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -713,7 +713,7 @@ Parameters
 
   Default: *100*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -723,7 +723,7 @@ Parameters
 
   Default: *0*
 
-``Number of Points`` [selection]
+``Number of Points`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -792,7 +792,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Case of contiguity`` [selection]
+``Case of contiguity`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -873,7 +873,7 @@ Parameters
 
   Default: *1*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -939,7 +939,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Grid Interpolation`` [selection]
+``Grid Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -962,7 +962,7 @@ Parameters
 
   Default: *True*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1032,7 +1032,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Grid Interpolation`` [selection]
+``Grid Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1055,7 +1055,7 @@ Parameters
 
   Default: *True*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1122,7 +1122,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Polynom`` [selection]
+``Polynom`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1150,7 +1150,7 @@ Parameters
 
   Default: *4*
 
-``Trend Surface`` [selection]
+``Trend Surface`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1212,7 +1212,7 @@ Parameters
 
   Default: *20*
 
-``Type of Output`` [selection]
+``Type of Output`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1258,7 +1258,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Grid Interpolation`` [selection]
+``Grid Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1271,7 +1271,7 @@ Parameters
 
   Default: *0*
 
-``Regression Function`` [selection]
+``Regression Function`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1363,7 +1363,7 @@ Parameters
 
   Default: *7*
 
-``Distance Weighting`` [selection]
+``Distance Weighting`` [enumeration]
   <put parameter description here>
 
   Options:

@@ -28,7 +28,7 @@ Parameters
 ``Date Field`` [tablefield: any]
   Attribute the date.
 
-``Input Format`` [selection]
+``Input Format`` [enumeration]
   Input date format.
 
   Options:
@@ -45,7 +45,7 @@ Parameters
 
   Default: *0*
 
-``Output Format`` [selection]
+``Output Format`` [enumeration]
   Output date format.
 
   Options:
@@ -95,7 +95,7 @@ Parameters
 ``Time Field`` [tablefield: any]
   Attribute with time.
 
-``Input Format`` [selection]
+``Input Format`` [enumeration]
   Input time format.
 
   Options:
@@ -109,7 +109,7 @@ Parameters
 
   Default: *0*
 
-``Output Format`` [selection]
+``Output Format`` [enumeration]
   Output time format.
 
   Options:

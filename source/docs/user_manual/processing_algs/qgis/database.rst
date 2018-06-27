@@ -27,14 +27,14 @@ Parameters
   One of the loaded layer in QGIS. If you want to import another layer you have
   to load it in QGIS before to import.
 
-``Database (connection name)`` [selection]
+``Database (connection name)`` [string]
   Name of the database connection (not the database name). Existing connections
   will be shown in the combobox.
 
 ``Schema (schema name)`` [string]
-  Optional. Existing schemas will be listed in the combobox.
+  Optional.
 
-  An existing schema of the selected database can be chosen.
+  Name of the schema to store the data. It can be a new one or already exist.
 
   Default: *public*
 
@@ -162,7 +162,7 @@ GeoPackage database.
 Parameters
 ..........
 
-``Input layers`` [multipleinput]
+``Input layers`` [vector:any] [list]
   All the vector layers to import into the GeoPackage database
 
 ``Overwrite existing GeoPackage`` [boolean]
@@ -193,7 +193,7 @@ Parameters
   One of the loaded layer in QGIS. If you want to import another layer you have
   to load it in QGIS before to import.
 
-``File database`` [selection]
+``File database`` [enumeration]
   Name of the database connection. The combobox will show all the databases of
   the layers loaded in QGIS. Moreover, it is possible to choose an external
   `sqlite` file.

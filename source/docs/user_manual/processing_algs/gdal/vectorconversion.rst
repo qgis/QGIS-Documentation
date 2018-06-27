@@ -26,7 +26,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-``Destination Format`` [selection]
+``Destination Format`` [enumeration]
   Defines the destination format. By default this is ESRI Shapefile.
 
   Options:

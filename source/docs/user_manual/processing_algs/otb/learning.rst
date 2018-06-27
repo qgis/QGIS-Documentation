@@ -80,7 +80,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Ground truth`` [selection]
+``Ground truth`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -132,7 +132,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Ground truth`` [selection]
+``Ground truth`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -226,7 +226,7 @@ Parameters
 ``Input classifications`` [multipleinput: rasters]
   <put parameter description here>
 
-``Fusion method`` [selection]
+``Fusion method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -238,7 +238,7 @@ Parameters
 ``Confusion Matrices`` [multipleinput: files]
   <put parameter description here>
 
-``Mass of belief measurement`` [selection]
+``Mass of belief measurement`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -290,7 +290,7 @@ Parameters
 ``Input classifications`` [multipleinput: rasters]
   <put parameter description here>
 
-``Fusion method`` [selection]
+``Fusion method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -528,7 +528,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -537,7 +537,7 @@ Parameters
 
   Default: *0*
 
-``Train Method Type`` [selection]
+``Train Method Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -552,7 +552,7 @@ Parameters
 
   Default: *None*
 
-``Neuron activation function type`` [selection]
+``Neuron activation function type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -593,7 +593,7 @@ Parameters
 
   Default: *1e-07*
 
-``Termination criteria`` [selection]
+``Termination criteria`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -690,7 +690,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -775,7 +775,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -784,7 +784,7 @@ Parameters
 
   Default: *0*
 
-``Boost Type`` [selection]
+``Boost Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -887,7 +887,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1007,7 +1007,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1112,7 +1112,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1202,7 +1202,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1211,7 +1211,7 @@ Parameters
 
   Default: *0*
 
-``SVM Kernel Type`` [selection]
+``SVM Kernel Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1309,7 +1309,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1429,7 +1429,7 @@ Parameters
 
   Default: *Class*
 
-``Classifier to use for the training`` [selection]
+``Classifier to use for the training`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1438,7 +1438,7 @@ Parameters
 
   Default: *0*
 
-``SVM Model Type`` [selection]
+``SVM Model Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1449,7 +1449,7 @@ Parameters
 
   Default: *0*
 
-``SVM Kernel Type`` [selection]
+``SVM Kernel Type`` [enumeration]
   <put parameter description here>
 
   Options:

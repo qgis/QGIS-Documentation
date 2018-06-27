@@ -27,7 +27,7 @@ Parameters
 ``Input layers`` [multipleinput: rasters]
   GDAL-supported raster layers.
 
-``Resolution`` [selection]
+``Resolution`` [enumeration]
   The output resolution of the mosaic. By default the average resolution of th
   raster files will be chosen.
 
@@ -86,7 +86,7 @@ Parameters
 
   Default: *False*
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Defines the output raster type. By default this will be 'Float23'.
 
   Options:
@@ -140,7 +140,7 @@ Parameters
 
   Default: *False*
 
-``Resampling method`` [selection]
+``Resampling method`` [enumeration]
   Calculates the overviews with a defined resampling method.
 
   Options:
@@ -155,7 +155,7 @@ Parameters
 
   Default: *0*
 
-``Overview format`` [selection]
+``Overview format`` [enumeration]
   The overviews can be stored internally, or externally as GTiff or ERDAS Imagine file.
   By default the overviews are stored in the output raster.
 

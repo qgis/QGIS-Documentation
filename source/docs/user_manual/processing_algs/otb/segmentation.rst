@@ -311,7 +311,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Segmentation algorithm`` [selection]
+``Segmentation algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -325,7 +325,7 @@ Parameters
 
   Default: *None*
 
-``Processing mode`` [selection]
+``Processing mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -334,7 +334,7 @@ Parameters
 
   Default: *0*
 
-``Writing mode for the output vector file`` [selection]
+``Writing mode for the output vector file`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -428,7 +428,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Segmentation algorithm`` [selection]
+``Segmentation algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -457,7 +457,7 @@ Parameters
 
   Default: *1*
 
-``Processing mode`` [selection]
+``Processing mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -466,7 +466,7 @@ Parameters
 
   Default: *0*
 
-``Writing mode for the output vector file`` [selection]
+``Writing mode for the output vector file`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -560,7 +560,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Segmentation algorithm`` [selection]
+``Segmentation algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -594,7 +594,7 @@ Parameters
 
   Default: *100*
 
-``Processing mode`` [selection]
+``Processing mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -603,7 +603,7 @@ Parameters
 
   Default: *0*
 
-``Writing mode for the output vector file`` [selection]
+``Writing mode for the output vector file`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -697,7 +697,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Segmentation algorithm`` [selection]
+``Segmentation algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -726,7 +726,7 @@ Parameters
 
   Default: *1*
 
-``Processing mode`` [selection]
+``Processing mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -735,7 +735,7 @@ Parameters
 
   Default: *0*
 
-``Writing mode for the output vector file`` [selection]
+``Writing mode for the output vector file`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -829,7 +829,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Segmentation algorithm`` [selection]
+``Segmentation algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -848,7 +848,7 @@ Parameters
 
   Default: *0.1*
 
-``Processing mode`` [selection]
+``Processing mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -857,7 +857,7 @@ Parameters
 
   Default: *0*
 
-``Writing mode for the output vector file`` [selection]
+``Writing mode for the output vector file`` [enumeration]
   <put parameter description here>
 
   Options:

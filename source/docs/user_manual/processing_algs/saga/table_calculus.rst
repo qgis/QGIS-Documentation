@@ -28,7 +28,7 @@ Parameters
 ``Order`` [tablefield: any]
   <put parameter description here>
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -69,7 +69,7 @@ Parameters
 ``Table`` [table]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:

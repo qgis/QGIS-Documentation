@@ -49,7 +49,7 @@ The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.
 Parameters
 ..........
 
-``Database (connection name)`` [selection]
+``Database (connection name)`` [enumeration]
   Requires the database (connection) name.
 
   Options:
@@ -61,7 +61,7 @@ Parameters
 ``Input layer`` [vector: any]
   Any OGR-supported vector layer loaded into the QGIS map canvas.
 
-``Output geometry type`` [selection]
+``Output geometry type`` [enumeration]
   Defines the output geometry type. By default this is Polygon.
 
   Options:
@@ -121,7 +121,7 @@ Parameters
 
   Default: *geom*
 
-``Vector dimensions`` [selection]
+``Vector dimensions`` [enumeration]
   Defines if the vector file to be imported has 2-D or 3-D data.
 
   Options:
@@ -232,7 +232,7 @@ Parameters
 ``Input layer`` [vector: any]
   <put parameter description here>
 
-``Output geometry type`` [selection]
+``Output geometry type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -313,7 +313,7 @@ Parameters
 
   Default: *geom*
 
-``Vector dimensions`` [selection]
+``Vector dimensions`` [enumeration]
   <put parameter description here>
 
   Options:

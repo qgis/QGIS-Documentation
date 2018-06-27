@@ -93,7 +93,7 @@ Parameters
 ``Color configuration file`` [file]
   A text-based color configuration file.
 
-``Matching mode`` [selection]
+``Matching mode`` [enumeration]
   The "0,0,0,0" RGBA mode results in color interpolation whereas the Exact color and
   Nearest color modes avoid interpolation of values that don't match an index of the
   color configuration file.
@@ -215,7 +215,7 @@ Parameters
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*)
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -261,7 +261,7 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer
 
-``Metrics`` [selection]
+``Metrics`` [enumeration]
   List of available metrics:
 
   Options:
@@ -305,7 +305,7 @@ Parameters
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*)
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -403,7 +403,7 @@ Parameters
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*).
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -482,7 +482,7 @@ Parameters
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*).
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -546,7 +546,7 @@ Parameters
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*).
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -617,7 +617,7 @@ Parameters
 ``Z field`` [tablefield: numeric]
   Field for the interpolation (*Optional*).
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -772,7 +772,7 @@ Parameters
 
   Default: *(not set)*
 
-``Dist units`` [selection]
+``Dist units`` [enumeration]
   Indicate whether distances generated should be in pixel or georeferenced coordinates.
 
   Options:
@@ -802,7 +802,7 @@ Parameters
 
   Default: *-1*
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Raster file type
 
   Options:
@@ -892,7 +892,7 @@ Parameters
 
   Default: *2*
 
-``Pixel connection`` [selection]
+``Pixel connection`` [enumeration]
   Either four connectedness or eight connectedness should be used when determining.
 
   Options:

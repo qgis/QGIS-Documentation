@@ -69,7 +69,7 @@ Parameters
 
   Default: *0.0*
 
-``Resampling method`` [selection]
+``Resampling method`` [enumeration]
   Several resampling methods can be chosen for the reprojection.
   By default a near resampling method is chosen.
 
@@ -90,7 +90,7 @@ Parameters
 
   Default: *(not set)*
 
-``Output raster type`` [selection]
+``Output raster type`` [enumeration]
   Defines the format of the output raster file.
   By default this is Float32.
 

@@ -62,7 +62,7 @@ Description
 Parameters
 ..........
 
-``Number Of inputs`` [selection]
+``Number Of inputs`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -109,7 +109,7 @@ Description
 Parameters
 ..........
 
-``Number Of inputs`` [selection]
+``Number Of inputs`` [enumeration]
   <put parameter description here>
 
   Options:

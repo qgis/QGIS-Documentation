@@ -57,7 +57,7 @@ Parameters
   Allows input features to be weighted by an attribute field. This can be used to
   increase the influence certain features have on the resultant heatmap.
 
-``Kernel shape`` [selection]
+``Kernel shape`` [enumeration]
   Controls the rate at which the influence of a point decreases as the distance
   from the point increases. Different kernels decay at different rates, so a triweight
   kernel gives features greater weight for distances closer to the point then the
@@ -90,7 +90,7 @@ Parameters
   * A value greater than 1 indicates that the heat is higher towards the edge of
     the search radius than at the center.
 
-``Output value scaling`` [selection]
+``Output value scaling`` [enumeration]
   Allow to change the values of the output heatmap raster.
 
   Options:
@@ -256,7 +256,7 @@ Parameters
 ``Use Z-coordinate for interpolation`` [boolean]
   Uses the layer's stored Z values
 
-``Interpolation method`` [selection]
+``Interpolation method`` [enumeration]
   There are two different choices:
 
   * Linear

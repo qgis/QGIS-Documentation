@@ -236,7 +236,7 @@ Parameters
 
   Default: *1*
 
-``Level Aggregation`` [selection]
+``Level Aggregation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -383,7 +383,7 @@ Parameters
 
   Default: *3*
 
-``Level Aggregation`` [selection]
+``Level Aggregation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -413,7 +413,7 @@ Parameters
 
   Default: *99*
 
-``Neighborhood Type`` [selection]
+``Neighborhood Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -467,7 +467,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -581,7 +581,7 @@ Parameters
 ``Input Grid`` [raster]
   <put parameter description here>
 
-``Size of Analysis Window`` [selection]
+``Size of Analysis Window`` [enumeration]
   <put parameter description here>
 
   Options:

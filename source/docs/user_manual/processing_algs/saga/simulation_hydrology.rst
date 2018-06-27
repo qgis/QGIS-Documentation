@@ -55,7 +55,7 @@ Parameters
 
   Default: *0.0001*
 
-``Precipitation`` [selection]
+``Precipitation`` [enumeration]
   <put parameter description here>
 
   Options:

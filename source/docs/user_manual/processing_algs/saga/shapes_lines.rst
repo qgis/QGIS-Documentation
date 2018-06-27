@@ -100,7 +100,7 @@ Parameters
 ``3. Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Dissolve...`` [selection]
+``Dissolve...`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -143,7 +143,7 @@ Parameters
 ``Polygons`` [vector: polygon]
   <put parameter description here>
 
-``Output`` [selection]
+``Output`` [enumeration]
   <put parameter description here>
 
   Options:

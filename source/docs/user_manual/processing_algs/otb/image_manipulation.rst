@@ -30,7 +30,7 @@ Parameters
 
   Default: *128*
 
-``Operation`` [selection]
+``Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -39,7 +39,7 @@ Parameters
 
   Default: *0*
 
-``Color mapping method`` [selection]
+``Color mapping method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -48,7 +48,7 @@ Parameters
 
   Default: *0*
 
-``Look-up tables`` [selection]
+``Look-up tables`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -116,7 +116,7 @@ Parameters
 
   Default: *128*
 
-``Operation`` [selection]
+``Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -125,7 +125,7 @@ Parameters
 
   Default: *0*
 
-``Color mapping method`` [selection]
+``Color mapping method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -172,7 +172,7 @@ Parameters
 
   Default: *128*
 
-``Operation`` [selection]
+``Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -181,7 +181,7 @@ Parameters
 
   Default: *0*
 
-``Color mapping method`` [selection]
+``Color mapping method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -243,7 +243,7 @@ Parameters
 
   Default: *128*
 
-``Operation`` [selection]
+``Operation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -252,7 +252,7 @@ Parameters
 
   Default: *0*
 
-``Color mapping method`` [selection]
+``Color mapping method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -301,7 +301,7 @@ Parameters
 
   Default: *128*
 
-``Extraction mode`` [selection]
+``Extraction mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -353,7 +353,7 @@ Parameters
 
   Default: *128*
 
-``Extraction mode`` [selection]
+``Extraction mode`` [enumeration]
   <put parameter description here>
 
   Options:

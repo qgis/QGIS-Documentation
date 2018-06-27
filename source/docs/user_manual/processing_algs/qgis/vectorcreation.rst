@@ -37,7 +37,7 @@ units of this CRS.
 Parameters
 ..........
 
-``Grid type`` [selection]
+``Grid type`` [enumeration]
   Shape of the grid. Many options available:
 
   * Point
@@ -349,7 +349,7 @@ Parameters
   Polygon vector layer in input. All the points will be created withing each
   feature of this layer.
 
-``Sampling strategy`` [selection]
+``Sampling strategy`` [enumeration]
   Choose between:
 
   * Points count: number of points for each feature

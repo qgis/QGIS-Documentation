@@ -125,7 +125,7 @@ Parameters
   Define the field of the target layer with unique ID that will be copied in the
   output attribute table.
 
-``Output matrix type`` [selection]
+``Output matrix type`` [enumeration]
   Three different types of calculation are available:
 
   * Linear (N*k x 3) distance matrix
@@ -179,7 +179,7 @@ Parameters
   Attribute of the destination layer that will be copied into the
   output
 
-``Measurement unit`` [selection]
+``Measurement unit`` [enumeration]
   The distance field in the output attribute table will be calculated according
   to this choice:
 
@@ -217,7 +217,7 @@ Parameters
   Attribute of the destination layer that will be copied into the
   output
 
-``Measurement unit`` [selection]
+``Measurement unit`` [enumeration]
   The distance field in the output attribute table will be calculated according
   to this choice:
 
@@ -412,7 +412,7 @@ Parameters
 
   If empty only the count will be calculated
 
-``Field(s) with categories`` [multipleinput]
+``Field(s) with categories`` [tablefield: any] [list]
   Field(s) of the categories
 
 Outputs

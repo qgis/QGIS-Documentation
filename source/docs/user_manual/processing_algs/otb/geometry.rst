@@ -67,7 +67,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Output Cartographic Map Projection`` [selection]
+``Output Cartographic Map Projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -81,7 +81,7 @@ Parameters
 
   Default: *4326*
 
-``Parameters estimation modes`` [selection]
+``Parameters estimation modes`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -101,7 +101,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -157,7 +157,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Parameters estimation modes`` [selection]
+``Parameters estimation modes`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -181,7 +181,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -237,7 +237,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Output Cartographic Map Projection`` [selection]
+``Output Cartographic Map Projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -248,7 +248,7 @@ Parameters
 
   Default: *0*
 
-``Parameters estimation modes`` [selection]
+``Parameters estimation modes`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -268,7 +268,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -324,7 +324,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Output Cartographic Map Projection`` [selection]
+``Output Cartographic Map Projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -343,7 +343,7 @@ Parameters
 
   Default: *True*
 
-``Parameters estimation modes`` [selection]
+``Parameters estimation modes`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -363,7 +363,7 @@ Parameters
 
   Default: *0*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -422,7 +422,7 @@ Parameters
 ``Input XS Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -479,7 +479,7 @@ Parameters
 ``Input XS Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -536,7 +536,7 @@ Parameters
 ``Input XS Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -580,7 +580,7 @@ Parameters
 ``Input image`` [raster]
   <put parameter description here>
 
-``Type of transformation`` [selection]
+``Type of transformation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -599,7 +599,7 @@ Parameters
 
   Default: *1*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -650,7 +650,7 @@ Parameters
 ``Input image`` [raster]
   <put parameter description here>
 
-``Type of transformation`` [selection]
+``Type of transformation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -674,7 +674,7 @@ Parameters
 
   Default: *1*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -725,7 +725,7 @@ Parameters
 ``Input image`` [raster]
   <put parameter description here>
 
-``Type of transformation`` [selection]
+``Type of transformation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -754,7 +754,7 @@ Parameters
 
   Default: *1*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -818,7 +818,7 @@ Parameters
 
   Default: *4*
 
-``Interpolation`` [selection]
+``Interpolation`` [enumeration]
   <put parameter description here>
 
   Options:

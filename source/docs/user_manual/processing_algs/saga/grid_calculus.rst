@@ -97,7 +97,7 @@ Parameters
 
   Default: *0.0*
 
-``Membership Function Type`` [selection]
+``Membership Function Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -143,7 +143,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Operator Type`` [selection]
+``Operator Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -184,7 +184,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Operator Type`` [selection]
+``Operator Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -232,7 +232,7 @@ Parameters
 
   Default: *0*
 
-``Figure`` [selection]
+``Figure`` [enumeration]
   Type of the figure.
 
   Options:
@@ -281,7 +281,7 @@ Parameters
 ``Y Component`` [raster]
   <put parameter description here>
 
-``Polar Angle Units`` [selection]
+``Polar Angle Units`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -291,7 +291,7 @@ Parameters
 
   Default: *0*
 
-``Polar Coordinate System`` [selection]
+``Polar Coordinate System`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -307,7 +307,7 @@ Parameters
 
   Default: *0.0*
 
-``User defined Orientation`` [selection]
+``User defined Orientation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -353,7 +353,7 @@ Parameters
 ``Length`` [raster]
   <put parameter description here>
 
-``Polar Angle Units`` [selection]
+``Polar Angle Units`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -363,7 +363,7 @@ Parameters
 
   Default: *0*
 
-``Polar Coordinate System`` [selection]
+``Polar Coordinate System`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -379,7 +379,7 @@ Parameters
 
   Default: *0.0*
 
-``User defined Orientation`` [selection]
+``User defined Orientation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -625,7 +625,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -669,7 +669,7 @@ Parameters
 ``Grid`` [raster]
   Grid to process.
 
-``Conversion`` [selection]
+``Conversion`` [enumeration]
   Conversion type.
 
   Options:
@@ -719,7 +719,7 @@ Parameters
 ``Independent Variable (per Grid)`` [fixedtable]
   <put parameter description here>
 
-``Type of Approximated Function`` [selection]
+``Type of Approximated Function`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -787,7 +787,7 @@ Parameters
 
   Default: *0.0*
 
-``Method`` [selection]
+``Method`` [enumeration]
   Statistical method used for the calculation.
 
   Options:
@@ -854,7 +854,7 @@ Parameters
 
   Default: *10*
 
-``Target Dimensions`` [selection]
+``Target Dimensions`` [enumeration]
   <put parameter description here>
 
   Options:

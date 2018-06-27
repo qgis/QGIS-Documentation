@@ -25,7 +25,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -90,7 +90,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -142,7 +142,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -207,7 +207,7 @@ Parameters
 ``Input Image`` [raster]
   <put parameter description here>
 
-``Algorithm`` [selection]
+``Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -330,7 +330,7 @@ Parameters
 
   Default: *128*
 
-``Smoothing Type`` [selection]
+``Smoothing Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -384,7 +384,7 @@ Parameters
 
   Default: *128*
 
-``Smoothing Type`` [selection]
+``Smoothing Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -433,7 +433,7 @@ Parameters
 
   Default: *128*
 
-``Smoothing Type`` [selection]
+``Smoothing Type`` [enumeration]
   <put parameter description here>
 
   Options:

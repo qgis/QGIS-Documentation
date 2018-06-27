@@ -43,7 +43,7 @@ Parameters
 ``Minimum distance between features`` [number]
   Prevent nearby (but non-touching) features from being assigned equal colors
 
-``Balance color assignment`` [selection]
+``Balance color assignment`` [enumeration]
   Options:
 
   * by feature count

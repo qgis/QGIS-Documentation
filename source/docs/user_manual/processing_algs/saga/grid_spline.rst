@@ -28,7 +28,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -85,7 +85,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -154,7 +154,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -163,7 +163,7 @@ Parameters
 
   Default: *0*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -183,7 +183,7 @@ Parameters
 
   Default: *11.0*
 
-``Data Type`` [selection]
+``Data Type`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -236,7 +236,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -245,7 +245,7 @@ Parameters
 
   Default: *0*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -308,7 +308,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -365,7 +365,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -384,7 +384,7 @@ Parameters
 
   Default: *100.0*
 
-``Search Mode`` [selection]
+``Search Mode`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -394,7 +394,7 @@ Parameters
 
   Default: *0*
 
-``Points Selection`` [selection]
+``Points Selection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -452,7 +452,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Target Grid`` [selection]
+``Target Grid`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -466,7 +466,7 @@ Parameters
 
   Default: *0.0*
 
-``Neighbourhood`` [selection]
+``Neighbourhood`` [enumeration]
   <put parameter description here>
 
   Options:

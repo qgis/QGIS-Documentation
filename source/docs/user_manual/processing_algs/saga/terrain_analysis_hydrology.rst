@@ -28,7 +28,7 @@ Parameters
 ``Streams`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -98,7 +98,7 @@ Parameters
 
   Default: *1*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -194,7 +194,7 @@ Parameters
 
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -259,7 +259,7 @@ Parameters
 ``Elevation`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -313,7 +313,7 @@ Parameters
 
   Default: *1.0*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -494,7 +494,7 @@ Parameters
 ``DEM`` [raster]
   <put parameter description here>
 
-``Flat Area Values`` [selection]
+``Flat Area Values`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -547,7 +547,7 @@ Parameters
 
   Default: *True*
 
-``Flow Routing Algorithm`` [selection]
+``Flow Routing Algorithm`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -597,7 +597,7 @@ Parameters
 
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -685,7 +685,7 @@ Parameters
 ``Catchment Area`` [raster]
   <put parameter description here>
 
-``Area to Length Conversion`` [selection]
+``Area to Length Conversion`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -696,7 +696,7 @@ Parameters
 
   Default: *0*
 
-``Method (LS)`` [selection]
+``Method (LS)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -712,7 +712,7 @@ Parameters
 
   Default: *0.0*
 
-``Stability`` [selection]
+``Stability`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -841,7 +841,7 @@ Parameters
 
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -924,7 +924,7 @@ Parameters
 ``Catchment Area`` [raster]
   <put parameter description here>
 
-``Area Conversion`` [selection]
+``Area Conversion`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -972,7 +972,7 @@ Parameters
 
   <put parameter description here>
 
-``Area Conversion`` [selection]
+``Area Conversion`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -982,7 +982,7 @@ Parameters
 
   Default: *0*
 
-``Method (TWI)`` [selection]
+``Method (TWI)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -1042,7 +1042,7 @@ Parameters
 
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:

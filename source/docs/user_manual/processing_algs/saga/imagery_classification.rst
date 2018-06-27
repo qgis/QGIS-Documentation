@@ -61,7 +61,7 @@ Parameters
 
   Default: *True*
 
-``Output as...`` [selection]
+``Output as...`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -105,7 +105,7 @@ Parameters
 ``Grids`` [multipleinput: rasters]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -170,7 +170,7 @@ Parameters
 ``Class Identifier`` [tablefield: any]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -200,7 +200,7 @@ Parameters
 
   Default: *0.0*
 
-``Probability Reference`` [selection]
+``Probability Reference`` [enumeration]
   <put parameter description here>
 
   Options:

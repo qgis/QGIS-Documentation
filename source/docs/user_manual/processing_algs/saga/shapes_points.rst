@@ -163,7 +163,7 @@ Parameters
 ``Add Attribute to Clipped Points`` [tablefield: any]
   <put parameter description here>
 
-``Clipping Options`` [selection]
+``Clipping Options`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -273,7 +273,7 @@ Parameters
 ``Points`` [vector: point]
   <put parameter description here>
 
-``Hull Construction`` [selection]
+``Hull Construction`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -407,7 +407,7 @@ Parameters
 
   Default: *True*
 
-``Filter Criterion`` [selection]
+``Filter Criterion`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -502,7 +502,7 @@ Parameters
 ``Attribute`` [tablefield: any]
   <put parameter description here>
 
-``Point to Keep`` [selection]
+``Point to Keep`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -514,7 +514,7 @@ Parameters
 
   Default: *0*
 
-``Numeric Attribute Values`` [selection]
+``Numeric Attribute Values`` [enumeration]
   <put parameter description here>
 
   Options:

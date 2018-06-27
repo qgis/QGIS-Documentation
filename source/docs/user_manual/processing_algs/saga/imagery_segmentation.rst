@@ -25,7 +25,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -36,7 +36,7 @@ Parameters
 
   Default: *0*
 
-``Initialisation`` [selection]
+``Initialisation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -94,7 +94,7 @@ Parameters
 
   Default: *2*
 
-``Type of Surface`` [selection]
+``Type of Surface`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -105,7 +105,7 @@ Parameters
 
   Default: *0*
 
-``Extraction of...`` [selection]
+``Extraction of...`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -116,7 +116,7 @@ Parameters
 
   Default: *0*
 
-``Feature Aggregation`` [selection]
+``Feature Aggregation`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -170,7 +170,7 @@ Parameters
 ``Features`` [multipleinput: rasters]
   <put parameter description here>
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -180,7 +180,7 @@ Parameters
 
   Default: *0*
 
-``Neighbourhood`` [selection]
+``Neighbourhood`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -251,7 +251,7 @@ Parameters
 ``Grid`` [raster]
   <put parameter description here>
 
-``Output`` [selection]
+``Output`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -261,7 +261,7 @@ Parameters
 
   Default: *0*
 
-``Method`` [selection]
+``Method`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -271,7 +271,7 @@ Parameters
 
   Default: *0*
 
-``Join Segments based on Threshold Value`` [selection]
+``Join Segments based on Threshold Value`` [enumeration]
   <put parameter description here>
 
   Options:
