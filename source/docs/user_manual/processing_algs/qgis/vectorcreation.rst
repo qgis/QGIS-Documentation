@@ -83,8 +83,8 @@ Outputs
 
 .. _qgiscreatepointslayerfromtable:
 
-Points layer from table
------------------------
+Create points layer from table
+------------------------------
 Creates points layer from geometryless table with columns that contain coordinates
 fields.
 
