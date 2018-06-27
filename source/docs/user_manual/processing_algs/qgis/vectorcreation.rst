@@ -184,6 +184,39 @@ Outputs
   Resulting point layer of pixel centroid
 
 
+.. _qgisimportgeotaggedphotos:
+
+Import geotagged photos
+-----------------------
+Creates a point layer corresponding to the geotagged locations from JPEG images
+from a source folder.
+
+The point layer will contain a single PointZ feature per input file from which
+the geotags could be read. Any altitude information from the geotags will be used
+to set the point's Z value.
+
+Parameters
+..........
+
+``Input folder`` [folder]
+  Source folder with geotagged photos
+
+``Scan recursively`` [boolean]
+  If checked the folder will be recursively scanned
+
+Outputs
+.......
+
+``Photos`` [vector: point]
+  Point vector layer with geotagged information. The form of the layer is automatically
+  filled with paths and photo previews settings
+
+``Invalid photos table`` [table]
+  Optional
+
+  Table of unreadable or non-geotagged photos can also be created
+
+
 .. _qgispointstopath:
 
 Points to path
