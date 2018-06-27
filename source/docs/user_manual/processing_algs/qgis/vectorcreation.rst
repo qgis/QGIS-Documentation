@@ -184,7 +184,7 @@ Outputs
   Resulting point layer of pixel centroid
 
 
-.. _qgisimportgeotaggedphotos:
+.. _qgisimportphotos:
 
 Import geotagged photos
 -----------------------
