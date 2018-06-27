@@ -518,6 +518,70 @@ Output
   Final extent of the layer
 
 
+.. _qgiswedgebuffers:
+
+Create wedge buffers |32|
+-------------------------
+Creates wedge shaped buffers from input points.
+
+.. figure:: img/wedge_buffers.png
+   :align: center
+
+   Wedge buffers
+
+The native output from this algorithm are CurvePolygon geometries, but these may
+be automatically segmentized to Polygons depending on the output format.
+
+.. note:: the wedge will extend to half of the angular width either side of the
+  azimuth direction.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer
+
+``Azimuth (degrees from North)`` [number]
+  Angle (in degrees) for the middle of the wedge to point
+
+  .. figure:: img/wedge_buffers_azimuth.png
+   :align: center
+
+   Wedge buffers with 0, 90 and 180 azimuth values
+
+``Wedge width (in degrees)`` [number]
+  Width (in degrees) of the buffer
+
+  .. figure:: img/wedge_buffers_width.png
+   :align: center
+
+   Wedge buffers different widths: 45 and 90 degrees
+
+``Outer radius`` [number]
+  The outer *size* of the buffer
+
+  .. figure:: img/wedge_buffers_outer_radius.png
+   :align: center
+
+   Comparison of different outer radius sizes: 1 (left) and 2 (right)
+
+``Inner radius`` [number]
+  Optional
+
+  Inner radius value
+
+  .. figure:: img/wedge_buffers_inner_radius.png
+   :align: center
+
+   Inner value 1 (left) and 2 (right)
+
+Output
+......
+
+``Buffers`` [vector: polygon]
+  Wedge buffer polygon vector layer
+
+
 .. _qgisdelaunaytriangulation:
 
 Delaunay triangulation
@@ -1791,7 +1855,7 @@ Parameters
   Optional
 
   X,Y coordinates of the point to rotate the features around.
-  If not set the rotation occurs around each feature's centroid. 
+  If not set the rotation occurs around each feature's centroid.
 
 Outputs
 .......
@@ -2227,6 +2291,27 @@ Outputs
 ``Subdivided`` [vector: any]
   Output vector with *sub-parts*.
 
+
+.. _qgiswapxy:
+
+Swap X and Y coordinates |32|
+-----------------------------
+Swaps, aka switches, the X and Y coordinate values in input geometries.
+
+It can be used to repair geometries which have accidentally had their latitude
+and longitude values reversed.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer to swap
+
+Outputs
+.......
+
+``Swapped`` [vector: any]
+  Output swapped vector layer
 
 .. _qgistransect:
 
