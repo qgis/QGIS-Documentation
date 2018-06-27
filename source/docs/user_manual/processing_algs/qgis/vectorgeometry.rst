@@ -243,7 +243,8 @@ Outputs
 
 See also
 ........
-:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`
+:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
+:ref:`qgisbufferbym`
 
 
 .. _qgiscentroids:
@@ -583,6 +584,10 @@ Output
 
 ``Buffers`` [vector: polygon]
   Wedge buffer polygon vector layer
+
+See also
+........
+:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`, :ref:`qgisbufferbym`
 
 
 .. _qgisdelaunaytriangulation:
@@ -2316,6 +2321,52 @@ Outputs
 ``Swapped`` [vector: any]
   Output swapped vector layer
 
+
+.. _qgistaperedbuffer:
+
+Tapered buffers |32|
+--------------------
+Creates tapered buffers along line geometries, using a specified start and end
+buffer diameter corresponding to the buffer diameter at the start and end of the
+linestrings.
+
+.. figure:: img/tapered_buffer.png
+   :align: center
+
+   Tapered buffer example
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Input line vector layer.
+
+``Start width`` [number]
+  Starting width of the tapered buffer. It can be a unique value (same value for
+  all the features) or it can be taken from features data (different value depending
+  on the feature attribute).
+
+``End width`` [number]
+  Ending width of the tapered buffer. It can be a unique value (same value for
+  all the features) or it can be taken from features data (different value depending
+  on the feature attribute).
+
+``Segments`` [number]
+  Number of the buffer segments. It can be a unique value (same value for all the
+  features) or it can be taken from features data (different value depending
+  on the feature attribute).
+
+Output
+......
+
+``Buffered layer`` [vector: polygon]
+  Variable buffer polygon layer
+
+See also
+........
+:ref:`qgisbufferbym`, :ref:`qgisbuffer`
+
+
 .. _qgistransect:
 
 Transect
@@ -2403,6 +2454,40 @@ Outputs
 
 ``Translated`` [vector]
   Translated (offset) vector layer
+
+
+.. _qgisbufferbym:
+
+Variable width buffer (by m-value) |32|
+---------------------------------------
+Creates variable width buffers along lines, using the m-value of the line geometries
+as the diameter of the buffer at each vertex.
+
+.. figure:: img/variable_buffer_m.png
+   :align: center
+
+   Tapered buffer example
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer in input
+
+``Segments`` [number]
+  Number of the buffer segments. It can be a unique value (same value for all the
+  features) or it can be taken from features data (different value depending
+  on the feature attribute).
+
+Output
+......
+
+``Buffered layer`` [vector: polygon]
+  Variable buffer polygon layer
+
+See also
+........
+:ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
 
 
 .. _qgisvoronoipolygons:
