@@ -56,23 +56,24 @@ processingRegistry. Type the following line in your console:
 
     >>> for alg in QgsApplication.processingRegistry().algorithms(): print(alg.displayName(), "->", alg.id())
 
-You will see something like this.
+You will see something like this (with some extra dashes added to
+improve readability).
 
 ::
 
-   3d:tessellate -> Tessellate
-   gdal:aspect -> Aspect
-   gdal:assignprojection -> Assign projection
-   gdal:buffervectors -> Buffer vectors
-   gdal:buildvirtualraster -> Build Virtual Raster
-   gdal:cliprasterbyextent -> Clip raster by extent
+   3d:tessellate --------------> Tessellate
+   gdal:aspect ----------------> Aspect
+   gdal:assignprojection ------> Assign projection
+   gdal:buffervectors ---------> Buffer vectors
+   gdal:buildvirtualraster ----> Build Virtual Raster
+   gdal:cliprasterbyextent ----> Clip raster by extent
    gdal:cliprasterbymasklayer -> Clip raster by mask layer
-   gdal:clipvectorbyextent -> Clip vector by extent
-   gdal:clipvectorbypolygon -> Clip vector by mask layer
-   gdal:colorrelief -> Color relief
-   gdal:contour -> Contour
-   gdal:convertformat -> Convert format
-   gdal:dissolve -> Dissolve
+   gdal:clipvectorbyextent ----> Clip vector by extent
+   gdal:clipvectorbypolygon ---> Clip vector by mask layer
+   gdal:colorrelief -----------> Color relief
+   gdal:contour ---------------> Contour
+   gdal:convertformat ---------> Convert format
+   gdal:dissolve --------------> Dissolve
    ...
 
 That's a list of all the available algorithm IDs, sorted by provider
@@ -86,12 +87,12 @@ used to get a list of the parameters that an algorithm requires and the outputs
 that it will generate. To get this information, you can use the ``algorithmHelp(id_of_the_algorithm)``
 method. Use the ID of the algorithm, not the full descriptive name.
 
-Calling the method with ``qgis.buffer`` as parameter, you get the
+Calling the method with ``qgis:buffer`` as parameter, you get the
 following description:
 
 ::
 
-     >>> processing.algorithmHelp("qgis.buffer")
+     >>> processing.algorithmHelp("qgis:buffer")
      Buffer (native:buffer)
      
      This algorithm computes a buffer area for all the features in an
@@ -153,7 +154,7 @@ algorithm you want to run, and is exactly the list that the
 
 ::
 
-    >>> processing.run("qgis.buffer", {'INPUT': "inputlayer",
+    >>> processing.run("qgis:buffer", {'INPUT': "inputlayer",
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
@@ -162,8 +163,9 @@ algorithm you want to run, and is exactly the list that the
                   'MITER_LIMIT': 10,
                   'OUTPUT': 'memory:'})
 
-No QGIS 3 updates beyond this point (ToDo)
-==========================================
+.. warning::
+
+    No QGIS 3 updates beyond this point (ToDo)
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
