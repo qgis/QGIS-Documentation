@@ -1316,7 +1316,8 @@ Using the Identify Features tool
 QGIS offers two ways to identify features with the |identify|
 :sup:`Identify Features` tool:
 
-* **left click** will identify features according to the mode set in the
+* **left click** will identify features according to the :ref:`selection mask
+  <identify_selection>` and the :ref:`interaction mode <identify_mode>` set in the
   :guilabel:`Identify Results` panel
 * **right click** will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
@@ -1325,11 +1326,10 @@ QGIS offers two ways to identify features with the |identify|
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
    Uncheck the :guilabel:`Identifiable` column in :menuselection:`Project -->`
-   (or |kde| :menuselection:`Settings -->`), :menuselection:`Project
-   Properties --> Identify layers` menu in front of a layer to avoid it
+   Properties... --> Identify layers` menu next to a layer to avoid it
    being queried when using the |identify| :sup:`Identify Features` in a mode
-   other than **Current Layer**. This is a handy way to return features from only
-   layers that are of interest for you.
+   other than **Current Layer**. This is a handy way to return features from
+   only layers that are of interest for you.
 
 If you click on feature(s), the :guilabel:`Identify Results` dialog will list
 information about the clicked feature(s). The default view is a tree view where
@@ -1390,16 +1390,27 @@ default it will display three kinds of information:
 The Identify Results dialog
 ...........................
 
-At the top of the window, you have seven icons:
+At the top of the window, you have handful tools:
 
+* |formView| :sup:`Open Form` of the current feature
 * |expandTree| :sup:`Expand tree`
 * |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Default behavior` to define whether next
+* |expandNewTree| :sup:`Expand New Results by Default` to define whether next
   identified features information should be collapsed or expanded
-* |propertyItem| :sup:`View the feature form`
 * |deselectAll| :sup:`Clear Results`
 * |editCopy| :sup:`Copy selected feature to clipboard`
 * |filePrint| :sup:`Print selected HTML response`
+
+.. _identify_selection:
+
+* and selection mode to use to fetch features to identify. it can be:
+
+  * |identifyByRectangle| :sup:`Identify Features by area or single click`
+  * |identifyByPolygon| :sup:`Identify Features by Polygon`
+  * |identifyByFreehand| :sup:`Identify Features by Freehand`
+  * |identifyByRadius| :sup:`Identify Features by Radius`
+
+.. _identify_mode:
 
 At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
@@ -1418,15 +1429,15 @@ should be identified:
 .. note:: **Identify tool configuration**
 
    You can configure the identify feature in :menuselection:`Project -->
-   Project Properties` in the :guilabel:`Identify layers` tab. The table allows
-   user to select layer(s) that can be used by this tool to identify features
+   Properties...` in the :guilabel:`Identify Layers` tab. The table allows
+   you to select layer(s) whose features can be identified with by this tool
    (column :guilabel:`Identifiable`). You can also put this layer in read-only
    mode with the checkbox in the last column.
 
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
-The identify tool allows you to |checkbox|:guilabel:`Auto open a form`.
+The identify tool allows you to |checkbox|:guilabel:`Auto open form`.
 If checked, each time a single feature is identified QGIS will open a form
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
@@ -1985,9 +1996,19 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
+   :width: 1.5em
+.. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
+   :width: 1.5em
+.. |identifyByRadius| image:: /static/common/mActionIdentifyByRadius.png
+   :width: 1.5em
+.. |identifyByRectangle| image:: /static/common/mActionIdentifyByRectangle.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
@@ -2018,8 +2039,6 @@ The values presented in the varying size assistant above will set the size
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
-   :width: 1.5em
-.. |propertyItem| image:: /static/common/mActionPropertyItem.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
