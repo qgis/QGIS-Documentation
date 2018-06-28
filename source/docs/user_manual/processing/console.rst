@@ -150,18 +150,18 @@ Its syntax is as follows:
 
 Where parameters is a dictionary of parameters that depend on the
 algorithm you want to run, and is exactly the list that the
-``algorithmHelp()`` method gives you, in the same order as shown.
+``algorithmHelp()`` method gives you.
 
 ::
 
-    >>> processing.run("qgis:buffer", {'INPUT': "inputlayer",
+    >>> processing.run("qgis:buffer", {'INPUT': '/data/lines.shp',
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
                   'END_CAP_STYLE': 0,
                   'JOIN_STYLE': 0,
                   'MITER_LIMIT': 10,
-                  'OUTPUT': 'memory:'})
+                  'OUTPUT': '/data/buffers.shp'})
 
 .. warning::
 
