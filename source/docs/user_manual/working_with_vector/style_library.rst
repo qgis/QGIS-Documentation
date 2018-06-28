@@ -388,7 +388,7 @@ predefined symbols you can choose from.
 Line Symbols
 ^^^^^^^^^^^^
 
-Appropriate for line geometry features, line marker symbols have following symbol
+Appropriate for line geometry features, line symbols have following symbol
 layer types:
 
 * **Simple line** (default): available settings are:
