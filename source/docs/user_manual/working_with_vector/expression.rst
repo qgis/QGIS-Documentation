@@ -112,7 +112,7 @@ As the expression is being written, QGIS checks its rightness and highlights
 all the errors using:
 
 * *Underline*: for unknown functions, wrong or invalid arguments;
-* *Marker*: for every other error (eg, missing parenthesis, unexpected 
+* *Marker*: for every other error (eg, missing parenthesis, unexpected
   character) at a single location.
 
 In case of error, the :guilabel:`Output preview` indicates it and you can access
@@ -236,7 +236,7 @@ is irrelevant and values are identified by their keys.
  array_insert           Returns an array with the given value added at the
                         given position
  array_intersect        Returns true if any element of array_1 exists in array_2
- array_last             Returns the last element of an array 
+ array_last             Returns the last element of an array
  array_length           Returns the number of elements of an array
  array_prepend          Returns an array with the given value added at the beginning
  array_remove_all       Returns an array with all the entries of the given
@@ -505,9 +505,9 @@ This group  contains general assorted functions.
  raster_statistic      Returns statistics from a raster layer
  var                   Returns the value stored within a specified
                        variable. See variable functions below
- with_variable         Creates and sets a variable for any expression code 
+ with_variable         Creates and sets a variable for any expression code
                        that will be provided as a third argument. Useful to
-                       avoid repetition in expressions where the same value 
+                       avoid repetition in expressions where the same value
                        needs to be used more than once.
 ====================  =======================================================
 
@@ -557,11 +557,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | boundary               | Returns the closure of the combinatorial boundary |
 |                        | of the geometry (ie the topological boundary of   |
-|                        | the geometry).                                    |
+|                        | the geometry - see :ref:`qgisboundary`).          |
 +------------------------+---------------------------------------------------+
 | bounds                 | Returns a geometry which represents the bounding  |
 |                        | box of an input geometry. Calculations are in     |
 |                        | the Spatial Reference System of this geometry     |
+|                        | (see :ref:`qgisboundingboxes`)                    |
 +------------------------+---------------------------------------------------+
 | bounds_height          | Returns the height of the bounding box of a       |
 |                        | geometry. Calculations are in the Spatial         |
@@ -575,8 +576,14 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | whose distance from this geometry is less than    |
 |                        | or equal to distance. Calculations are in the     |
 |                        | Spatial Reference System of this geometry         |
+|                        | (see :ref:`qgisbuffer`)                           |
++------------------------+---------------------------------------------------+
+| buffer_by_m |32|       | Creates a buffer along a line geometry where the  |
+|                        | buffer diameter varies according to the m-values  |
+|                        | at the line vertices (see :ref:`qgisbufferbym`)   |
 +------------------------+---------------------------------------------------+
 | centroid               | Returns the geometric center of a geometry        |
+|                        | (see :ref:`qgiscentroids`)                        |
 +------------------------+---------------------------------------------------+
 | closest_point          | Returns the point on a geometry that is closest   |
 |                        | to a second geometry                              |
@@ -590,6 +597,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | convex_hull            | Returns the convex hull of a geometry (this       |
 |                        | represents the minimum convex geometry that       |
 |                        | encloses all geometries within the set)           |
+|                        | (see :ref:`qgisconvexhull`)                       |
 +------------------------+---------------------------------------------------+
 | crosses                | Returns 1 (true) if the supplied geometries have  |
 |                        | some, but not all, interior points in common      |
@@ -611,6 +619,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | extend                 | Extends the start and end of a linestring         |
 |                        | geometry by a specified amount                    |
+|                        | (see :ref:`qgisextendlines`)                      |
 +------------------------+---------------------------------------------------+
 | exterior_ring          | Returns a line string representing the exterior   |
 |                        | ring of a polygon geometry,                       |
@@ -621,7 +630,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | extension specified by x and y                    |
 +------------------------+---------------------------------------------------+
 | flip_coordinates |32|  | Returns a copy of the geometry with the x and y   |
-|                        | coordinates swapped                               |
+|                        | coordinates swapped (see :ref:`qgisswapxy`)       |
 +------------------------+---------------------------------------------------+
 | geom_from_gml          | Returns a geometry created from a GML             |
 |                        | representation of geometry                        |
@@ -711,7 +720,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | make_triangle          | Creates a triangle polygon                        |
 +------------------------+---------------------------------------------------+
 | minimal_circle         | Returns the minimal enclosing circle of an input  |
-|                        | geometry                                          |
+|                        | geometry (see :ref:`qgisminimumenclosingcircle`)  |
 +------------------------+---------------------------------------------------+
 | nodes_to_points        | Returns a multipoint geometry consisting of every |
 |                        | node in the input geometry                        |
@@ -740,6 +749,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | oriented_bbox          | Returns a geometry representing the minimal       |
 |                        | oriented bounding box of an input geometry        |
+|                        | (see :ref:`qgisorientedminimumboundingbox`)       |
 +------------------------+---------------------------------------------------+
 | overlaps               | Tests whether a geometry overlaps another.        |
 |                        | Returns 1 (true) if the geometries share space,   |
@@ -753,11 +763,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | point_n                | Returns a specific node from a geometry           |
 +------------------------+---------------------------------------------------+
 | point_on_surface       | Returns a point guaranteed to lie on the surface  |
-|                        | of a geometry                                     |
+|                        | of a geometry (see :ref:`qgispointonsurface`)     |
 +------------------------+---------------------------------------------------+
 | pole_of_inaccessibility| Calculates the approximate pole of inaccessibility|
 |                        | for a surface, which is the most distant internal |
 |                        | point from the boundary of the surface            |
+|                        | (see :ref:`qgispoleofinaccessibility`)            |
 +------------------------+---------------------------------------------------+
 | project                | Returns a point projected from a start point      |
 |                        | using a distance and bearing (azimuth) in radians |
@@ -768,6 +779,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | reverse                | Reverses the direction of a line string by        |
 |                        | reversing the order of its vertices               |
+|                        | (see :ref:`qgisreverselinedirection`)             |
 +------------------------+---------------------------------------------------+
 | segments_to_lines      | Returns a multi line geometry consisting of a     |
 |                        | line for every segment in the input geometry      |
@@ -778,21 +790,29 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | simplify               | Simplifies a geometry by removing nodes using a   |
 |                        | distance based threshold                          |
+|                        | (see :ref:`qgissimplifygeometries`)               |
 +------------------------+---------------------------------------------------+
 | simplify_vw            | Simplifies a geometry by removing nodes using an  |
 |                        | area based threshold                              |
+|                        | (see :ref:`qgissimplifygeometries`)               |
 +------------------------+---------------------------------------------------+
 | single_sided_buffer    | Returns a geometry formed by buffering out just   |
 |                        | one side of a linestring geometry. Distances are  |
 |                        | in the Spatial Reference System of this geometry  |
+|                        | (see :ref:`qgissinglesidedbuffer`)                |
 +------------------------+---------------------------------------------------+
 | smooth                 | Smooths a geometry by adding extra nodes which    |
 |                        | round off corners in the geometry                 |
+|                        | (see :ref:`qgissmoothgeometry`)                   |
 +------------------------+---------------------------------------------------+
 | start_point            | Returns the first node from a geometry            |
 +------------------------+---------------------------------------------------+
 | sym_difference         | Returns a geometry that represents the portions   |
 |                        | of two geometries that do not intersect           |
++------------------------+---------------------------------------------------+
+| tapered_buffer |32|    | Creates a buffer along a line geometry where the  |
+|                        | buffer diameter varies evenly over the length of  |
+|                        | the line (see :ref:`qgistaperedbuffer`)           |
 +------------------------+---------------------------------------------------+
 | touches                | Tests whether a geometry touches another.         |
 |                        | Returns 1 (true) if the geometries have at least  |
@@ -804,13 +824,14 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | translate              | Returns a translated version of a geometry.       |
 |                        | Calculations are in the Spatial Reference System  |
-|                        | of this geometry                                  |
+|                        | of the geometry (see :ref:`qgistranslategeometry`)|
 +------------------------+---------------------------------------------------+
 | union                  | Returns a geometry that represents the point set  |
 |                        | union of the geometries                           |
 +------------------------+---------------------------------------------------+
 | wedge_buffer |32|      | Returns a wedge shaped buffer originating from a  |
 |                        | point geometry given an angle and radii           |
+|                        | (see :ref:`qgiswedgebuffers`)                     |
 +------------------------+---------------------------------------------------+
 | within (a,b)           | Tests whether a geometry is within another.       |
 |                        | Returns 1 (true) if geometry a is completely      |
@@ -1070,7 +1091,7 @@ This group contains functions that operate on record identifiers.
                       feature
  get_feature          Returns the first feature of a layer matching a
                       given attribute value
- get_feature_by_id    Returns the feature of a layer matching the given 
+ get_feature_by_id    Returns the feature of a layer matching the given
                       feature ID
  is_selected          Returns if a feature is selected
  num_selected         Returns the number of selected features on a given layer
@@ -1167,6 +1188,7 @@ To use these functions in an expression, they should be preceded by @ character
 ============================ =======================================================
  Function                     Description
 ============================ =======================================================
+ algorithm_id                 Returns the unique ID of an algorithm
  atlas_feature                Returns the current atlas feature (as feature object)
  atlas_featureid              Returns the current atlas feature ID
  atlas_featurenumber          Returns the current atlas feature number in the layout
@@ -1176,9 +1198,15 @@ To use these functions in an expression, they should be preceded by @ character
  atlas_layername              Returns the current atlas coverage layer name
  atlas_pagename               Returns the current atlas page name
  atlas_totalfeatures          Returns the total number of features in atlas
+ canvas_cursor_point          Returns the last cursor position on the canvas in the
+                              project's geographical coordinates
  cluster_color                Returns the color of symbols within a cluster, or NULL
                               if symbols have mixed colors
  cluster_size                 Returns the number of symbols contained within a cluster
+ current_feature              Returns the feature currently being edited in the
+                              attribute form or table row
+ current_geometry             Returns the geometry of the feature currently being edited
+                              in the form or the table row
  geometry_part_count          Returns the number of parts in rendered feature's geometry
  geometry_part_num            Returns the current geometry part number for feature being rendered
  geometry_point_count         Returns the number of points in the rendered geometry's part
@@ -1211,20 +1239,24 @@ To use these functions in an expression, they should be preceded by @ character
  map_rotation                 Returns the current rotation of the map
  map_scale                    Returns the current scale of the map
  map_units                    Returns the units of map measurements
+ notification_message         Content of the notification message sent by the provider
+                              (available only for actions triggered by provider notifications).
  parent                       Returns attributes and geometry from the parent feature when
                               in the filter of the "aggregate" expression function
  project_abstract |32|        Returns the project abstract, taken from project metadata
  project_author |32|          Returns the project author, taken from project metadata
+ project_basename |32|        Returns the basename of current project's filename (without
+                              path and extension)
  project_creation_date |32|   Returns the project creation date, taken from project metadata
- project_identifier |32|      Returns the project identifier, taken from project metadata
- project_keywords |32|        Returns the project keywords, taken from project metadata
  project_crs                  Returns the Coordinate reference system of the project
  project_crs_definition       Returns the full definition of the Coordinate reference
                               system of the project
- project_filename             Returns the filename of current project
- project_folder               Returns the folder for current project
- project_path                 Returns the full path (including file name)
-                              of current project
+ project_filename             Returns the filename of the current project
+ project_folder               Returns the folder of the current project
+ project_home |32|            Returns the home path of the current project
+ project_identifier |32|      Returns the project identifier, taken from the project's metadata
+ project_keywords |32|        Returns the project keywords, taken from the project's metadata
+ project_path                 Returns the full path (including file name) of the current project
  project_title                Returns the title of current project
  qgis_locale                  Returns the current language of QGIS
  qgis_os_name                 Returns the current Operating system name,
@@ -1258,7 +1290,7 @@ To use these functions in an expression, they should be preceded by @ character
 
 * Return for each feature in the current layer the number of overlapping airports
   features::
-  
+
    aggregate( layer:='airport', aggregate:='count', expression:="code",
                   filter:=intersects( $geometry, geometry( @parent ) ) )
 
