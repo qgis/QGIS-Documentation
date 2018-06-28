@@ -47,7 +47,7 @@ with the following line:
 
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
-``runalg()`` method, which takes the name of the algorithm to execute
+``run()`` method, which takes the name of the algorithm to execute
 as its first parameter, and then a variable number of additional
 parameters depending on the requirements of the algorithm. So the
 first thing you need to know is the name of the algorithm to
@@ -59,7 +59,7 @@ console:
 ::
 
     >>> for alg in QgsApplication.processingRegistry().algorithms():
-            print(alg.displayName(), "->", alg.id())
+            print(alg.id(), "->", alg.displayName())
 
 You will see something like this (with some extra dashes added to
 improve readability).
@@ -86,13 +86,13 @@ name and algorithm name, along with their corresponding names.
 
 Once you know the command-line name of the algorithm, the next thing
 to do is to determine the right syntax to execute it. That means
-knowing which parameters are needed and the order in which they have
-to be passed when calling the ``run()`` method. There is a method to
-describe an algorithm in detail, which can be used to get a list of
-the parameters that an algorithm requires and the outputs that it will
-generate. To get this information, you can use the
-``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of the
-algorithm, not the full descriptive name.
+knowing which parameters are needed when calling the ``run()`` method.
+
+There is a method to describe an algorithm in detail, which can be
+used to get a list of the parameters that an algorithm requires and
+the outputs that it will generate. To get this information, you can
+use the ``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of
+the algorithm, not the full descriptive name.
 
 Calling the method with ``native:buffer`` as parameter
 (``qgis:buffer`` is an alias for ``native:buffer`` and will also
