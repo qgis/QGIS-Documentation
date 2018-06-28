@@ -12,49 +12,54 @@ Using processing algorithms from the console
    .. contents::
       :local:
 
-The console allows advanced users to increase their productivity and perform
-complex operations that cannot be performed using any of the other GUI elements of
-the processing framework. Models involving several algorithms can be defined using the
-command-line interface, and additional operations such as loops and conditional
-sentences can be added to create more flexible and powerful workflows.
+The console allows advanced users to increase their productivity and
+perform complex operations that cannot be performed using any of the
+other GUI elements of the processing framework. Models involving
+several algorithms can be defined using the command-line interface,
+and additional operations such as loops and conditional sentences can
+be added to create more flexible and powerful workflows.
 
-There is not a processing console in QGIS, but all processing commands are
-available instead from the QGIS built-in :ref:`Python console <console>`.
-That means that you can incorporate those commands into your console work
-and connect processing algorithms to all the other features (including methods
-from the QGIS API) available from there.
+There is not a processing console in QGIS, but all processing commands
+are available instead from the QGIS built-in :ref:`Python console
+<console>`.  That means that you can incorporate those commands into
+your console work and connect processing algorithms to all the other
+features (including methods from the QGIS API) available from there.
 
-The code that you can execute from the Python console, even if it does not call
-any specific processing method, can be converted into a new algorithm that you can
-later call from the toolbox, the graphical modeler or any other component,
-just like you do with any other algorithm. In fact, some algorithms that
-you can find in the toolbox are simple scripts.
+The code that you can execute from the Python console, even if it does
+not call any specific processing method, can be converted into a new
+algorithm that you can later call from the toolbox, the graphical
+modeler or any other component, just like you do with any other
+algorithm. In fact, some algorithms that you can find in the toolbox
+are simple scripts.
 
-In this section, we will see how to use processing algorithms from the QGIS Python console,
-and also how to write algorithms using Python.
+In this section, we will see how to use processing algorithms from the
+QGIS Python console, and also how to write algorithms using Python.
 
 Calling algorithms from the Python console
 ------------------------------------------
 
-The first thing you have to do is to import the processing functions with the
-following line:
+The first thing you have to do is to import the processing functions
+with the following line:
 
 ::
 
     >>> import processing
 
-Now, there is basically just one (interesting) thing you can do with that
-from the console: execute an algorithm. That is done using the ``runalg()``
-method, which takes the name of the algorithm to execute as its first parameter,
-and then a variable number of additional parameters depending on the requirements
-of the algorithm. So the first thing you need to know is the name of the algorithm
-to execute. That is not the name you see in the toolbox, but rather a unique
-command–line name. To find the right name for your algorithm, you can use the
-processingRegistry. Type the following line in your console:
+Now, there is basically just one (interesting) thing you can do with
+that from the console: execute an algorithm. That is done using the
+``runalg()`` method, which takes the name of the algorithm to execute
+as its first parameter, and then a variable number of additional
+parameters depending on the requirements of the algorithm. So the
+first thing you need to know is the name of the algorithm to
+execute. That is not the name you see in the toolbox, but rather a
+unique command–line name. To find the right name for your algorithm,
+you can use the processingRegistry. Type the following line in your
+console:
 
 ::
 
-    >>> for alg in QgsApplication.processingRegistry().algorithms(): print(alg.displayName(), "->", alg.id())
+    >>> for alg in QgsApplication.processingRegistry().algorithms():
+            print(alg.displayName(), "->", alg.id())
 
 You will see something like this (with some extra dashes added to
 improve readability).
@@ -79,20 +84,23 @@ improve readability).
 That's a list of all the available algorithm IDs, sorted by provider
 name and algorithm name, along with their corresponding names.
 
-Once you know the command-line name of the algorithm, the next thing to do is to
-determine the right syntax to execute it. That means knowing which parameters are
-needed and the order in which they have to be passed when calling the ``run()``
-method. There is a method to describe an algorithm in detail, which can be
-used to get a list of the parameters that an algorithm requires and the outputs
-that it will generate. To get this information, you can use the ``algorithmHelp(id_of_the_algorithm)``
-method. Use the ID of the algorithm, not the full descriptive name.
+Once you know the command-line name of the algorithm, the next thing
+to do is to determine the right syntax to execute it. That means
+knowing which parameters are needed and the order in which they have
+to be passed when calling the ``run()`` method. There is a method to
+describe an algorithm in detail, which can be used to get a list of
+the parameters that an algorithm requires and the outputs that it will
+generate. To get this information, you can use the
+``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of the
+algorithm, not the full descriptive name.
 
-Calling the method with ``qgis:buffer`` as parameter, you get the
-following description:
+Calling the method with ``native:buffer`` as parameter
+(``qgis:buffer`` is an alias for ``native:buffer`` and will also
+work), you get the following description:
 
 ::
 
-     >>> processing.algorithmHelp("qgis:buffer")
+     >>> processing.algorithmHelp("native:buffer")
      Buffer (native:buffer)
      
      This algorithm computes a buffer area for all the features in an
@@ -112,36 +120,110 @@ following description:
      styles, and controls the maximum distance from the offset curve
      to use when creating a mitered join.
      
+     
      ----------------
      Input parameters
      ----------------
      
-     INPUT:  <QgsProcessingParameterFeatureSource>
-     	Input layer
+     INPUT: Input layer
      
-     DISTANCE:  <QgsProcessingParameterNumber>
-     	Distance
+     	Parameter type:	QgsProcessingParameterFeatureSource
      
-     SEGMENTS:  <QgsProcessingParameterNumber>
-     	Segments
+     	Accepted data types:
+     		- str: layer ID
+     		- str: layer name
+     		- str: layer source
+     		- QgsProcessingFeatureSourceDefinition
+     		- QgsProperty
+     		- QgsVectorLayer
      
-     END_CAP_STYLE:  <QgsProcessingParameterEnum>
-     	End cap style
-     		0 - Round
-     		1 - Flat
-     		2 - Square
+     DISTANCE: Distance
      
-     JOIN_STYLE:  <QgsProcessingParameterEnum>
-     	Join style
-     		0 - Round
-     		1 - Miter
-     		2 - Bevel
+     	Parameter type:	QgsProcessingParameterDistance
      
-     MITER_LIMIT:  <QgsProcessingParameterNumber>
-     	Miter limit
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     SEGMENTS: Segments
+     
+     	Parameter type:	QgsProcessingParameterNumber
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     END_CAP_STYLE: End cap style
+     
+     	Parameter type:	QgsProcessingParameterEnum
+     
+     	Available values:
+     		- 0: Round
+     		- 1: Flat
+     		- 2: Square
+     
+     	Accepted data types:
+     		- int
+     		- str: as string representation of int, e.g. '1'
+     		- QgsProperty
+     
+     JOIN_STYLE: Join style
 
-Now you have everything you need to run any algorithm. As we have already
-mentioned, algorithms can be run using: ``run()``.
+	Parameter type:	QgsProcessingParameterEnum
+
+	Available values:
+		- 0: Round
+		- 1: Miter
+		- 2: Bevel
+
+	Accepted data types:
+		- int
+		- str: as string representation of int, e.g. '1'
+		- QgsProperty
+     
+     MITER_LIMIT: Miter limit
+     
+     	Parameter type:	QgsProcessingParameterNumber
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     DISSOLVE: Dissolve result
+     
+     	Parameter type:	QgsProcessingParameterBoolean
+     
+     	Accepted data types:
+		- bool
+		- int
+		- str
+		- QgsProperty
+          
+     OUTPUT: Buffered
+     
+     	Parameter type:	QgsProcessingParameterFeatureSink
+     
+     	Accepted data types:
+     		- str: destination vector file, e.g. 'd:/test.shp'
+     		- str: 'memory:' to store result in temporary memory layer
+     		- str: using vector provider ID prefix and destination URI,
+                       e.g. 'postgres:...' to store result in PostGIS table
+     		- QgsProcessingOutputLayerDefinition
+     		- QgsProperty
+     
+     ----------------
+     Outputs
+     ----------------
+     
+     OUTPUT:  <QgsProcessingOutputVectorLayer>
+     	Buffered
+     
+     
+Now you have everything you need to run any algorithm. As we have
+already mentioned, algorithms can be run using: ``run()``.
 Its syntax is as follows:
 
 ::
@@ -154,7 +236,7 @@ algorithm you want to run, and is exactly the list that the
 
 ::
 
-    >>> processing.run("qgis:buffer", {'INPUT': '/data/lines.shp',
+    >>> processing.run("native:buffer", {'INPUT': '/data/lines.shp',
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
