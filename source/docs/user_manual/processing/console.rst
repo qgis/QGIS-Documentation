@@ -163,9 +163,7 @@ algorithm you want to run, and is exactly the list that the
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
 
-.. warning::
-
-    No QGIS 3 updates beyond this point (ToDo)
+.. warning:: No QGIS 3 updates beyond this point (ToDo)
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
