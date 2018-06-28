@@ -152,7 +152,7 @@ description            True      short text which describes the plugin, no HTML 
 about                  True      longer text which describes the plugin in details, no HTML allowed
 version                True      short string with the version dotted notation
 author                 True      author name
-email                  True      email of the author, not shown in the QGIS plugin manager or in the website unless by a registered logged in user, so only visible to other plugin authors and plugin website administrators
+email                  True      email of the author, not shown in the website unless by a registered logged in user, but accessible in the Plugin Manager after the plugin is installed
 changelog              False     string, can be multiline, no HTML allowed
 experimental           False     boolean flag, `True` or `False`
 deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
