@@ -533,46 +533,38 @@ Creates wedge shaped buffers from input points.
 The native output from this algorithm are CurvePolygon geometries, but these may
 be automatically segmentized to Polygons depending on the output format.
 
-.. note:: the wedge will extend to half of the angular width either side of the
-  azimuth direction.
-
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer
+``Input layer`` [vector: point]
+  Input point vector layer
 
-``Azimuth (degrees from North)`` [number]
-  Angle (in degrees) for the middle of the wedge to point. It can be a unique value
-  (same value for all the features) or it can be taken from features data (different
-  value depending on the feature attribute).
+``Azimuth (degrees from North)`` [number or data-defined |dataDefined|]
+  Angle (in degrees) for the middle of the wedge to point
 
-``Wedge width (in degrees)`` [number]
-  Width (in degrees) of the buffer. It can be a unique value (same value for all
-  the features) or it can be taken from features data (different value depending
-  on the feature attribute).
+``Wedge width (in degrees)`` [number or data-defined |dataDefined|]
+  Width (in degrees) of the buffer
+
+  .. note:: the wedge will extend to half of the angular width either side of the
+    azimuth direction.
 
   .. figure:: img/wedge_buffers_width.png
    :align: center
 
    Wedge buffers different widths: 45 and 90 degrees
 
-``Outer radius`` [number]
-  The outer *size* of the buffer. It can be a unique value (same value for all
-  the features) or it can be taken from features data (different value depending
-  on the feature attribute).
+``Outer radius`` [number or data-defined |dataDefined|]
+  The outer *size* of the buffer
 
   .. figure:: img/wedge_buffers_outer_radius.png
    :align: center
 
    Comparison of different outer radius sizes: 1 (left) and 2 (right)
 
-``Inner radius`` [number]
+``Inner radius`` [number or data-defined |dataDefined|]
   Optional
 
-  Inner radius value.It can be a unique value (same value for all the features)
-  or it can be taken from features data (different value depending on the feature
-  attribute).
+  Inner radius value
 
   .. figure:: img/wedge_buffers_inner_radius.png
    :align: center
@@ -2304,7 +2296,7 @@ Outputs
 
 Swap X and Y coordinates |32|
 -----------------------------
-Swaps, aka switches, the X and Y coordinate values in input geometries.
+Switches the X and Y coordinate values in input geometries.
 
 It can be used to repair geometries which have accidentally had their latitude
 and longitude values reversed.
@@ -2326,8 +2318,8 @@ Outputs
 
 Tapered buffers |32|
 --------------------
-Creates tapered buffers along line geometries, using a specified start and end
-buffer diameter corresponding to the buffer diameter at the start and end of the
+Creates tapered buffer along line geometries, using a specified start and end
+buffer diameter. corresponding to the buffer diameter at the start and end of the
 linestrings.
 
 .. figure:: img/tapered_buffer.png
@@ -2341,30 +2333,24 @@ Parameters
 ``Input layer`` [vector: line]
   Input line vector layer.
 
-``Start width`` [number]
-  Starting width of the tapered buffer. It can be a unique value (same value for
-  all the features) or it can be taken from features data (different value depending
-  on the feature attribute).
+``Start width`` [number or data-defined |dataDefined|]
+  Represents the radius of the buffer applied at the start point of the line feature.
 
-``End width`` [number]
-  Ending width of the tapered buffer. It can be a unique value (same value for
-  all the features) or it can be taken from features data (different value depending
-  on the feature attribute).
+``End width`` [number or data-defined |dataDefined|]
+  Represents the radius of the buffer applied at the end point of the line feature.
 
-``Segments`` [number]
-  Number of the buffer segments. It can be a unique value (same value for all the
-  features) or it can be taken from features data (different value depending
-  on the feature attribute).
+``Segments`` [number or data-defined |dataDefined|]
+  Number of the buffer segments
 
 Output
 ......
 
 ``Buffered layer`` [vector: polygon]
-  Variable buffer polygon layer
+  Variable buffer polygon
 
 See also
 ........
-:ref:`qgisbufferbym`, :ref:`qgisbuffer`
+:ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
 
 
 .. _qgistransect:
@@ -2466,7 +2452,7 @@ as the diameter of the buffer at each vertex.
 .. figure:: img/variable_buffer_m.png
    :align: center
 
-   Tapered buffer example
+   Variable buffer example
 
 Parameters
 ..........
@@ -2483,7 +2469,7 @@ Output
 ......
 
 ``Buffered layer`` [vector: polygon]
-  Variable buffer polygon layer
+  Variable buffer polygon
 
 See also
 ........
@@ -2533,5 +2519,7 @@ Outputs
 
 .. |32| replace:: :kbd:`NEW in 3.2`
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
