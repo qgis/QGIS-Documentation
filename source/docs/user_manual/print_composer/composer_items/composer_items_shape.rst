@@ -149,7 +149,7 @@ selected node can be moved either by dragging it or by using the arrow keys.
 Moreover, in this mode, you are able to add nodes to an existing shape:
 double-click on a segment and a node is added at the place you click.
 Finally, you can remove the currently selected node by
-hitting the :kbd:`DEL` key.
+hitting the :kbd:`Del` key.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

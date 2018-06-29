@@ -460,7 +460,7 @@ First, we'll change the canvas to a size appropriate for a small texture.
 
 * Draw a line using the :guilabel:`Pencil` tool:
 
-  * Click once to start the line. Hold :kbd:`ctrl` to make it snap to increments
+  * Click once to start the line. Hold :kbd:`Ctrl` to make it snap to increments
     of 15 degrees.
   * Move the pointer horizontally and place a point with a simple click.
   * Click and snap to the vertex of the line and trace a vertical line, ended

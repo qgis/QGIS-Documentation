@@ -178,7 +178,7 @@ choose the ramp type:
  :ref:`color-selector` widgets or by plotting each of its parameters. You can also 
  reposition it using the mouse, the arrow keys (combine with :kbd:`Shift` key for
  a larger move) or the :guilabel:`Relative position` spinbox. Pressing :guilabel:`Delete
- stop` as well as :kbd:`DEL` key removes the selected color stop. 
+ stop` as well as :kbd:`Del` key removes the selected color stop.
 
 You can use the |checkbox| :guilabel:`Invert` option while
 classifying the data with a color ramp. See figure_color_custom_ramp_ for an

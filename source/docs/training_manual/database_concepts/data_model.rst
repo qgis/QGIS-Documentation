@@ -119,7 +119,7 @@ Should return something like this::
     template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
     (3 rows)
 
-Type :kbd:`q` to exit.
+Type :kbd:`Q` to exit.
 
 Create a database
 -------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ Which should return something like this:
   template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | =c/postgres: postgres=CTc/postgres
   (4 rows)
 
-Type :kbd:`q` to exit.
+Type :kbd:`Q` to exit.
 
 Starting a database shell session
 -------------------------------------------------------------------------------

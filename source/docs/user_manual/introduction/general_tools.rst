@@ -614,9 +614,9 @@ should be displayed` checkbox. Any layer subsequently added to the map will be o
 Stopping Rendering
 ^^^^^^^^^^^^^^^^^^
 
-To stop the map drawing, press the :kbd:`ESC` key. This will halt the refresh of
+To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
 the map canvas and leave the map partially drawn. It may take a bit of time
-between pressing :kbd:`ESC` and the time the map drawing is halted.
+between pressing :kbd:`Esc` and the time the map drawing is halted.
 
 .. note::
    It is currently not possible to stop rendering --- this was disabled in the Qt4
@@ -694,7 +694,7 @@ arrow key to pan south.
 You can also use the space bar to temporarily cause mouse movements to pan
 the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
 the map display to zoom in or out following the zoom factor set. Pressing
-:kbd:`Ctrl +` or :kbd:`Ctrl -` also performs an immediate zoom in/out
+:kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out
 on the map canvas.
 
 When certain map tools are active (Identify, Measure...), you can perform a zoom by
@@ -723,7 +723,7 @@ To create a bookmark:
 
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl-B`. The Spatial Bookmark panel opens with the newly created bookmark.
+   :kbd:`Ctrl+B`. The Spatial Bookmark panel opens with the newly created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
 #. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
@@ -993,7 +993,7 @@ moved by map position (by dragging the map marker) or by moving only the balloon
 Also the |annotation| :sup:`Move Annotation` tool allows you to move the
 balloon on the map canvas.
 
-To delete an annotation, select it and either press the :kbd:`DEL` or :kbd:`Backspace`
+To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
 button or either double-click and press the **[Delete]** button in its properties dialog.
 
 .. note::
@@ -1179,7 +1179,7 @@ For the other tools, different behaviors can be performed holding:
 
 * :kbd:`Shift`: add features to the current selection
 * :kbd:`Ctrl`: substract features from the current selection
-* :kbd:`Ctrl + Shift`: intersect with current selection, ie only keep
+* :kbd:`Ctrl+Shift`: intersect with current selection, ie only keep
   overlapping features from the current selection
 * :kbd:`Alt`: select features that are totally within the selection shape.
   Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
@@ -1307,7 +1307,7 @@ The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use:
 
 * :menuselection:`View --> Identify Features` menu,
-* or press :kbd:`Ctrl + Shift + I` (or |osx| :kbd:`Cmd + Shift + I`),
+* or press :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
 * or click the |identify| :sup:`Identify Features` icon on the Attributes toolbar.
 
 Using the Identify Features tool

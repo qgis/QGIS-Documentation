@@ -107,9 +107,9 @@ You can use some tags inside the text to emphasize some items.
 
   .. code-block:: rst
 
-     :kbd:`ctrl B`
+     :kbd:`Ctrl+B`
 
-  will show :kbd:`Ctrl B`
+  will show :kbd:`Ctrl+B`
 
 
 * **User text**
