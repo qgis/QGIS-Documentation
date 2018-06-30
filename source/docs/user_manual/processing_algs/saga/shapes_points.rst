@@ -28,7 +28,7 @@ Parameters
 Outputs
 .......
 
-``Output`` [vector]
+``Output`` [vector: point]
   Resulting layer with the updated attribute table.
 
 Console usage
@@ -66,7 +66,7 @@ Parameters
 Outputs
 .......
 
-``Result`` [vector]
+``Result`` [vector: point]
   The resulting layer.
 
 Console usage
@@ -176,7 +176,7 @@ Parameters
 Outputs
 .......
 
-``Clipped Points`` [vector]
+``Clipped Points`` [vector: point]
   <put output description here>
 
 Console usage
@@ -216,7 +216,7 @@ Parameters
 Outputs
 .......
 
-``Points`` [vector]
+``Points`` [vector: point]
   The resulting layer.
 
 Console usage
@@ -246,7 +246,7 @@ Parameters
 Outputs
 .......
 
-``Points`` [vector]
+``Points`` [vector: point]
   <put output description here>
 
 Console usage
@@ -287,10 +287,10 @@ Parameters
 Outputs
 .......
 
-``Convex Hull`` [vector]
+``Convex Hull`` [vector: polygon]
   <put output description here>
 
-``Minimum Bounding Box`` [vector]
+``Minimum Bounding Box`` [vector: polygon]
   <put output description here>
 
 Console usage
@@ -434,7 +434,7 @@ Parameters
 Outputs
 .......
 
-``Filtered Points`` [vector]
+``Filtered Points`` [vector: point]
   <put output description here>
 
 Console usage
@@ -472,7 +472,7 @@ Parameters
 Outputs
 .......
 
-``Thinned Points`` [vector]
+``Thinned Points`` [vector: point]
   <put output description here>
 
 Console usage
@@ -529,7 +529,7 @@ Parameters
 Outputs
 .......
 
-``Result`` [vector]
+``Result`` [vector: point]
   <put output description here>
 
 Console usage
@@ -569,7 +569,7 @@ Parameters
 Outputs
 .......
 
-``Output`` [vector]
+``Output`` [vector: point]
   <put output description here>
 
 Console usage

@@ -518,10 +518,10 @@ Parameters
 Outputs
 .......
 
-``Profile (points)`` [vector]
+``Profile (points)`` [vector: point]
   <put output description here>
 
-``Profile (lines)`` [vector]
+``Profile (lines)`` [vector: line]
   <put output description here>
 
 Console usage

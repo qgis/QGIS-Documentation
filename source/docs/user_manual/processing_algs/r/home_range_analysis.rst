@@ -31,7 +31,7 @@ Parameters
 Outputs
 .......
 
-``Home_ranges`` [vector]
+``Home_ranges`` [vector: any]
   <put output description here>
 
 Console usage
@@ -79,7 +79,7 @@ Parameters
 Outputs
 .......
 
-``Home_ranges`` [vector]
+``Home_ranges`` [vector: any]
   <put output description here>
 
 Console usage
@@ -117,7 +117,7 @@ Parameters
 Outputs
 .......
 
-``Home_ranges`` [vector]
+``Home_ranges`` [vector: polygon]
   <put output description here>
 
 Console usage

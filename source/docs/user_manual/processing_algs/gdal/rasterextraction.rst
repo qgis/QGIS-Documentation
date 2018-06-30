@@ -139,8 +139,8 @@ Parameters
 Outputs
 .......
 
-``Output file for contour lines (vector)`` [vector]
-  <put output description here>
+``Contours`` [vector: line]
+  Output file for contour lines (vector)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

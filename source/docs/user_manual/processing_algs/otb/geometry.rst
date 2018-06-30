@@ -40,7 +40,7 @@ Parameters
 Outputs
 .......
 
-``Output Vector Data`` [vector]
+``Output Vector Data`` [vector: polygon]
   <put output description here>
 
 Console usage

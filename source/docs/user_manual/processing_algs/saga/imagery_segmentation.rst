@@ -140,7 +140,7 @@ Outputs
 ``Seeds Grid`` [raster]
   <put output description here>
 
-``Seeds`` [vector]
+``Seeds`` [vector: point]
   <put output description here>
 
 Console usage
@@ -303,7 +303,7 @@ Outputs
 ``Segments`` [raster]
   <put output description here>
 
-``Seed Points`` [vector]
+``Seed Points`` [vector: point]
   <put output description here>
 
 ``Borders`` [raster]

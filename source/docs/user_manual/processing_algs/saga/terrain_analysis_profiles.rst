@@ -46,7 +46,7 @@ Parameters
 Outputs
 .......
 
-``Cross Profiles`` [vector]
+``Cross Profiles`` [vector: line]
   <put output description here>
 
 Console usage
@@ -131,10 +131,10 @@ Parameters
 Outputs
 .......
 
-``Profiles`` [vector]
+``Profile`` [vector: line]
   <put output description here>
 
-``Profiles`` [vector]
+``Profiles`` [vector: line]
   <put output description here>
 
 Console usage

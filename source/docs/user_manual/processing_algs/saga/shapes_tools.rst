@@ -55,7 +55,7 @@ Parameters
 Outputs
 .......
 
-``Graticule`` [vector]
+``Graticule`` [vector: polygon, line]
   The resulting layer.
 
 Console usage
@@ -93,13 +93,13 @@ Parameters
 
   Default: *0*
 
-``Cutting polygons`` [vector: any]
+``Cutting polygons`` [vector: polygon]
   <put parameter description here>
 
 Outputs
 .......
 
-``Result`` [vector]
+``Result`` [vector: any]
   <put output description here>
 
 ``Extent`` [vector]
@@ -138,7 +138,7 @@ Parameters
 Outputs
 .......
 
-``Extents`` [vector]
+``Extents`` [vector: polygon]
   The resulting layer.
 
 Console usage
@@ -180,7 +180,7 @@ Parameters
 Outputs
 .......
 
-``Merged Layer`` [vector]
+``Merged Layer`` [vector: any]
   The resulting layer.
 
 Console usage
@@ -228,7 +228,7 @@ Parameters
 Outputs
 .......
 
-``Cartesian Coordinates`` [vector]
+``Cartesian Coordinates`` [vector: any]
   <put output description here>
 
 Console usage
@@ -261,13 +261,13 @@ Parameters
 Outputs
 .......
 
-``Polygons`` [vector]
+``Polygons`` [vector: polygon]
   <put output description here>
 
-``Lines`` [vector]
+``Lines`` [vector: line]
   <put output description here>
 
-``Duplicated Points`` [vector]
+``Duplicated Points`` [vector: point]
   <put output description here>
 
 Console usage
@@ -335,7 +335,7 @@ Parameters
 Outputs
 .......
 
-``Buffer`` [vector]
+``Buffer`` [vector: polygon]
   The resulting layer.
 
 Console usage
@@ -370,10 +370,10 @@ Parameters
 Outputs
 .......
 
-``Group A`` [vector]
+``Group A`` [vector: any]
   First resulting layer.
 
-``Group B`` [vector]
+``Group B`` [vector: any]
   Second resulting layer.
 
 Console usage
@@ -438,7 +438,7 @@ Parameters
 Outputs
 .......
 
-``Output`` [vector]
+``Output`` [vector: any]
   <put output description here>
 
 Console usage

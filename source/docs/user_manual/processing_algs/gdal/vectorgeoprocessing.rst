@@ -41,7 +41,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: any]
   Output vector layer.
 
 
@@ -71,7 +71,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: any]
   Output vector layer. By default this is an ESRI Shapefile.
 
 
