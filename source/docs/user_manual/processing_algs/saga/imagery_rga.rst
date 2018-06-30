@@ -22,7 +22,7 @@ Description
 Parameters
 ..........
 
-``Input Grids`` [multipleinput: rasters]
+``Input Grids`` [raster] [list]
   <put parameter description here>
 
 ``Seeds Grid`` [raster]

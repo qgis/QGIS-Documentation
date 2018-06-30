@@ -409,7 +409,7 @@ Description
 Parameters
 ..........
 
-``Input images list`` [multipleinput: rasters]
+``Input images list`` [raster] [list]
   <put parameter description here>
 
 ``Available RAM (Mb)`` [number]
@@ -444,7 +444,7 @@ Description
 Parameters
 ..........
 
-``Input Tile Images`` [multipleinput: rasters]
+``Input Tile Images`` [raster] [list]
   <put parameter description here>
 
 ``Number of tile columns`` [number]

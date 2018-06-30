@@ -28,7 +28,7 @@ Parameters
 ``Points`` [vector: point]
   Input layer.
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   Background grid layer(s)
 
 ``Interpolation`` [enumeration]
@@ -74,7 +74,7 @@ Parameters
 ``Shapes`` [vector: any]
   <put parameter description here>
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Interpolation`` [enumeration]
@@ -399,7 +399,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Polygons`` [vector: polygon]
@@ -512,7 +512,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Polygons`` [vector: any]

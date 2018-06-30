@@ -22,7 +22,7 @@ Description
 Parameters
 ..........
 
-``Input image list`` [multipleinput: rasters]
+``Input image list`` [raster] [list]
   <put parameter description here>
 
 ``Available RAM (Mb)`` [number]

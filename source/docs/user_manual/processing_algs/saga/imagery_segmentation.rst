@@ -86,7 +86,7 @@ Description
 Parameters
 ..........
 
-``Features`` [multipleinput: rasters]
+``Features`` [raster] [list]
   <put parameter description here>
 
 ``Bandwidth (Cells)`` [number]
@@ -167,7 +167,7 @@ Parameters
 ``Seeds`` [raster]
   <put parameter description here>
 
-``Features`` [multipleinput: rasters]
+``Features`` [raster] [list]
   <put parameter description here>
 
 ``Method`` [enumeration]
