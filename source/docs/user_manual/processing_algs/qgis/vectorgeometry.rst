@@ -1047,7 +1047,7 @@ This allows complex geometry modifications which can utilize all the flexibility
 of the QGIS expression engine to manipulate and create geometries for output features.
 
 For help with QGIS expression functions, see the inbuilt help for specific functions
-which is available in the expression builder.
+which is available in the :ref:`expression builder <vector_expressions>`.
 
 Parameters
 ..........
@@ -1056,8 +1056,10 @@ Parameters
 
 ``Output geometry type`` [enumeration]
   The output geometry strongly depends on the expression you will choose: for
-  instance, if you want to create a buffer than the geometry type has to be
+  instance, if you want to create a buffer then the geometry type has to be
   a polygon
+
+  Available options are:
 
   * Polygon
   * Line
@@ -1069,7 +1071,7 @@ Parameters
   Default: *False*
 
 ``Output geometry has m dimension`` [boolean]
-  Choose if the output geometry should have the z dimension
+  Choose if the output geometry should have the m dimension
 
   Default: *False*
 

@@ -47,7 +47,7 @@ Parameters
 ``Input layer`` [vector: any]
   Layer containing the features to be clipped.
 
-``Clip layer`` [vector: line or polygon]
+``Clip layer`` [vector: polygon]
   Layer containing the clipping features.
 
 Output
@@ -119,7 +119,7 @@ Parameters
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the clipping
 
-``Clip feature to the extent`` [boolean]
+``Clip features to the extent`` [boolean]
   If checked, output geometries will be automatically converted to multi geometries
   to ensure uniform output types. Moreover the geometries will be clipped to the
   extent chosen instead of taking the whole geometry as output.
@@ -242,7 +242,7 @@ Output will contain multi geometries for split features.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon or line]
+``Input layer`` [vector: polygon, line]
   Layer containing the lines or polygons to split.
 
 ``Split layer`` [vector: line]

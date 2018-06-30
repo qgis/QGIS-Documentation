@@ -61,6 +61,11 @@ Parameters
 ``Input layer`` [vector: any]
   Any OGR-supported vector layer loaded into the QGIS map canvas.
 
+``Encoding`` [string]
+  Optional
+
+  Sets the encoding to apply to the data.
+
 ``Output geometry type`` [enumeration]
   Defines the output geometry type. By default this is Polygon.
 
@@ -103,8 +108,6 @@ Parameters
   Defines a name for the table that will be imported into the database.
   By default the table name is the name of the input vector file.
 
-  Default: *(not set)*
-
 ``Primary Key`` [string]
   Optional.
 
@@ -137,20 +140,16 @@ Parameters
   Defines a distance tolerance for the simplification of the vector geometries
   to be imported. By default no simplification there is no simplification.
 
-  Default: *(not set)*
-
 ``Maximum distance between 2 nodes (densification)`` [string]
   Optional.
 
   The maximum distance between two nodes. Used to create intermediate points.
   By default there is no maximum distance.
 
-  Default: *(not set)*
-
 ``Select features by extent (defined in input layer CRS)`` [extent]
   You can select features from a given extent that will be in the output table.
 
-  Default: *0,1,0,1*
+  Default: *minimum covering extent*
 
 ``Clip the input layer using the above (rectangle) extent`` [boolean]
   The input layer will be clipped by the extent you defined before.
@@ -163,13 +162,11 @@ Parameters
   Defines with a SQL "WHERE" statement which features should be selected for the
   output table.
 
-  Default: *(not set)*
-
-``Group "n" features per transaction (Default: 20000)`` [string]
+``Group N features per transaction (Default: 20000)`` [string]
   Optional.
 
-  You can group the input features in transactions where "n" defines the size.
-  By default "n" limits the transaction size to 20000 features.
+  You can group the input features in transactions where N defines the size.
+  By default N limits the transaction size to 20000 features.
 
   Default: *(not set)*
 
@@ -184,20 +181,20 @@ Parameters
 
   Default: *False*
 
-``Append and add new fields to existing table?`` [boolean]
+``Append and add new fields to existing table`` [boolean]
   If activated the vector data will be appended to an existing table,
   there won't be created a new table. By default a new table will be
   created.
 
   Default: *False*
 
-``Do not launder columns/table name/s?`` [boolean]
+``Do not launder columns/table names`` [boolean]
   With this option you can prevent processing from converting column
   names to lowercase, from removing spaces and other invalid characters.
 
   Default: *False*
 
-``Do not create Spatial Index?`` [boolean]
+``Do not create Spatial Index`` [boolean]
   Prevents that a spatial index in the output table will be created.
 
   Default: *False*
@@ -206,6 +203,16 @@ Parameters
   <put parameter description here>
 
   Default: *False*
+
+``Promote to Multipart`` [boolean]
+  Casts features geometry type to multi in the output table.
+
+  Default: *True*
+
+``keep width and precision of input attributes`` [boolean]
+  Avoids to modify fields attributes to comply with input data.
+
+  Default: *True*
 
 ``Additional creation options`` [string]
   Optional.

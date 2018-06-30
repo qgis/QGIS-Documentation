@@ -212,7 +212,7 @@ See also
 
 Tile Index
 ----------
-This tool builds a shapefile with a record for each input raster file, an
+This tool builds a vector layer with a record for each input raster file, an
 attribute containing the filename, and a polygon geometry outlining the raster.
 This output is suitable for use with MapServer as a raster tileindex.
 
@@ -224,12 +224,19 @@ Parameters
 ``Input files`` [raster] [list]
   The input raster files. Can be multiple files.
 
-``Tile index field`` [string]
+``Field name to hold the file path to the indexed rasters`` [string]
   Optional.
 
   The output field name to hold the file path/location to the indexed rasters.
 
   Default: *location*
+
+``Store absolute path to the indexed rasters`` [boolean]
+  Set whether the absolute path to the raster files is stored in the tile index file.
+  By default the raster filenames will be put in the file exactly as they are
+  specified in the command.
+
+  Default: *False*
 
 ``Skip files with different projection reference`` [boolean]
   Only files with same projection as files already inserted in the tile index
@@ -237,14 +244,41 @@ Parameters
 
   Default: *False*
 
-Outputs
-.......
+``Transform geometries to the given CRS`` [crs]
+  Optional.
 
-``Output layer`` [vector]
+  Geometries of input files will be transformed to the desired target coordinate
+  reference system.
+  Default creates simple rectangular polygons in the same coordinate reference
+  system as the input rasters.
+
+``The name of the field to store the SRS of each tile`` [string]
+  Optional.
+
+``The format in which the CRS of each tile must be written`` [enumeration]
+  Optional.
+
+  Possible values are:
+
+  * Auto
+  * Well-known text (WKT)
+  * EPSG
+  * Proj.4
+
+  Default: *AUTO*
+
+Output
+......
+
+``Tile index`` [vector: polygon]
   The name of the output file to create/append to. The default shapefile will
   be created if it doesn't already exist, otherwise it will append to the
   existing file.
 
+See also
+........
+
+`GDAL Tile Index <http://www.gdal.org/gdaltindex.html>`_
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
