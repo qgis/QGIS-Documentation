@@ -171,13 +171,9 @@ source code.
 CRS Settings
 ------------
 
-**Default CRS for new projects**
-
-* |radioButtonOff| :guilabel:`Don't enable 'on the fly' reprojection`
-* |radioButtonOn| :guilabel:`Automatically enable 'on the fly' reprojection if
-  layers have different CRS`
-* |radioButtonOff| :guilabel:`Enable 'on the fly' reprojection by default`
-* Select a CRS and :guilabel:`Always start new projects with this CRS`
+You can select a :guilabel:`Default CRS for new projects` applied each time you
+open a new project. This Coordinate Reference System can then be overridden by
+selected value in :menuselection:`Project --> Project properties --> CRS` tab.
 
 **CRS for new layers**
 
@@ -186,24 +182,48 @@ or when a layer without a CRS is loaded.
 
 * |radioButtonOn| :guilabel:`Prompt for CRS`
 * |radioButtonOff| :guilabel:`Use project CRS`
-* |radioButtonOff| :guilabel:`Use default CRS`
+* |radioButtonOff| :guilabel:`Use a default CRS`
 
 **Default datum transformations**
 
-* |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
-* With the 'on-the-fly' CRS transformation enabled and the above option checked,
-  adding layers of different CRS opens the :guilabel:`Select datum transformations`
-  dialog. This offers you to select the most appropriate transformation settings.
-  Validating this dialog with the 'Remember selection' option checked populates
-  the table under :menuselection:`CRS --> Default datum transformations` with
-  information about 'Source CRS' and 'Destination CRS' as well as 'Source datum
-  transform' and 'Destination datum transform'. From now, QGIS automatically
-  uses the selected datum transformation for further transformation between
-  these two CRSs until you |signMinus| remove it from the list.
+In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
+whenever you use layers with different coordinates system, QGIS transparently
+reprojects their rendering to the project CRS. The :guilabel:`Default datum
+transformations` group allows you to configure/customize the transformation
+settings. You can:
 
-  You can use the |signPlus| button to add a datum transformation if you know
-  its parameters (source and destination ellipsoids and the numbers from the
-  transformation table). You then need to manually enter each setting.
+.. question: is it the project crs that is used or the first loaded layer's?
+
+* |checkbox| :guilabel:`Ask for datum transformation if several are available`,
+  prompting a message so that you choose the appropriate transformation;
+* also predefine a list of the appropriate default transformations to use
+  when loading layers to projects.
+
+.. is this also used when i save as a layer from a CRS to another?
+
+  Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
+  dialog. Then:
+
+  #. indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
+     or the |crs| :sup:`Select CRS` widget
+  #. likewise, provide the :guilabel:`Destination CRS`
+  #. a list of all the available transformations from source to destination is
+     built in the table and clicking on each row shows details on the settings
+     applied (epsg code, accuracy of the transform, number of stations involved...).
+
+.. any technical details on where this list is pulled from?
+
+     You can choose to only display current valid transformations by checking
+     the |checkbox| :guilabel:`Hide deprecated` option.
+
+  #. Find your preferred transformation, select it and click **[OK]**;
+  #. A new row is added to the table under :menuselection:`CRS --> Default datum
+     transformations` with information about 'Source CRS' and 'Destination CRS'
+     as well as 'Source datum transform' and 'Destination datum transform'.
+
+  From now, QGIS automatically uses the selected datum transformation for
+  further transformation between these two CRSs until you |signMinus| remove
+  it from the list or |toggleEditing| replace it with another one.
 
 .. note:: For more information on how QGIS handles layers projection, please
   read the dedicated section at :ref:`label_projections`.
@@ -1003,6 +1023,8 @@ and **[Load]** them into another QGIS installation.
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
