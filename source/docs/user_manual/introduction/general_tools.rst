@@ -48,7 +48,7 @@ Layers Panel
 .. index::
    single: Legend
 
-The :guilabel:`Layers` panel (also enabled pressing :kbd:`Ctrl+1`) lists all
+The :guilabel:`Layers` panel (also called ``map legend``) lists all
 the layers in the project and helps you
 manage their visibility. A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
@@ -57,8 +57,8 @@ top of the legend are drawn over layers listed lower down in the legend.
 .. note:: The Z-ordering behavior can be overridden by the
    :ref:`Layer Order <layer_order>` panel.
 
-At the top of the Layers panel, a toolbar allows you to:
-
+At the top of the Layers panel that you can also enable pressing :kbd:`Ctrl+1`,
+a toolbar allows you to:
 
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
   panel on and off.
@@ -96,23 +96,54 @@ At the top of the Layers panel, a toolbar allows you to:
 Configuring map themes
 ......................
 
-The button |showMapTheme| allows you to configure **Map Themes** in the legend.
-These themes are helpful to quickly switch between different preconfigured layer 
-combinations and can also be used in print layout. The map theme also records
-which layers, groups or legend items are expanded or collapsed. 
+Other than quickly control the visibility of all or (de)selected layers,
+the |showMapTheme| :sup:`Manage Map Themes` button allows you to configure 
+**Map Themes** in the legend and switch from one to another.
+A map theme is a **snapshot** of the current map legend that records:
 
-To create a map theme, activate the layers you want to include and configure 
-the desired layer styles. Then press the |showMapTheme| button and choose 
-:menuselection:`Add Theme...` from the drop-down menu and enter a name.
-The new theme is listed in the lower part of the drop-down menu and can be
-restored by clicking on it.
+* the layers set as visible in the :guilabel:`Layers` panel;
+* AND for each visible layer:
+  
+  * the reference to the applied :ref:`style <save_layer_property>`;
+  * the visible classes of the style ie, the layer checked node items in the
+    :guilabel:`Layers panel`. This applies to :ref:`symbologies <vector_style_menu>`
+    other than the single symbol rendering;
+  * the collapsed/expanded state of the layer node(s) and the group(s) it's placed
+    inside.
 
-The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
-with the currently visible layers, their collapse state and current style while the 
-:menuselection:`Remove Current Theme` button deletes the active theme.
+To create a map theme:
 
-All configured themes are also accessible in the print layout. This allows you
-to create a map layout based on specific themes (see :ref:`layout_main_properties`).
+#. Check the layer you want to show;
+#. Configure the layer properties (symbology, diagram, labels...) and, using
+   the :menuselection:`Symbology --> Style -->` menu, click on **[Add...]** to
+   store the settings as :ref:`a new style embedded in the project
+   <manage_custom_style>`.
+   
+   .. note:: A map theme does not remember the current details of the properties;
+     only a reference to the style name is saved so whenever you apply
+     modifications (eg, change the symbology rendering) to the layer while this
+     style is enabled, the map theme is updated with new information.
+
+#. Repeat the previous steps as necessary;
+#. If applicable, expand or collapse groups or visible layers nodes in the
+   :guilabel:`Layers` panel.
+#. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
+   and **[Add Theme...]**;
+#. Enter the map theme's name and click **[OK]**. The new theme is listed in
+   the lower part of the |showMapTheme| drop-down menu.
+
+You can create as many map themes as you need: whenever the current combination
+in the map legend (visible layers, their active style, the map legend nodes)
+does not match any existing map theme contents as defined above, click on
+**[Add Theme]** for a creation or use :menuselection:`Replace Theme -->` to
+update the map theme.
+Use :menuselection:`Remove Current Theme` button to delete the active theme.
+
+Map themes are helpful to quickly switch between different preconfigured
+combinations; select a map theme in the list to restore its combination.
+All configured themes are also accessible in the print layout, allowing you to
+create a map layout based on specific themes (see :ref:`layout_main_properties`).
+
 
 Overview of the context menu of the Layers panel
 ................................................
@@ -1444,9 +1475,15 @@ Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
-at a time. In combination with Map Themes (see :ref:`map_themes`), 
+at a time. In combination with :ref:`Map Themes <map_themes>`,
 this offers a quick and powerful way to manage complex projects without the need 
 to duplicate any layer in the map legend.
+
+.. note::
+
+  Given that whenever you apply modifications to the layer properties, changes
+  are stored in the active style, always ensure you are editing the right style
+  to avoid mistakenly alter a style used in a :ref:`map theme <map_themes>`.
 
 .. tip:: **Manage styles from layer context menu**
 
