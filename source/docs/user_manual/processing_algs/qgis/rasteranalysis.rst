@@ -185,10 +185,10 @@ Parameters
   Raster layer in input
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics
+  If the raster is multiband, choose the band you want to calculate the statistics
 
 ``Vector layer containing the zones``
-  Overlaying vector layer where unique raster values should be appended
+  Overlaying vector layer where unique raster values will be appended
 
 ``Output column prefix`` [string]
   Optional.
