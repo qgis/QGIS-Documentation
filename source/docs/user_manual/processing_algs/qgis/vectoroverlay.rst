@@ -53,7 +53,7 @@ Parameters
 Output
 ......
 
-``Clipped`` [vector]
+``Clipped`` [vector: any]
   Layer containing features from the input layer split by the clip layer.
 
 See also
@@ -93,7 +93,7 @@ Parameters
 Output
 ......
 
-``Difference`` [vector]
+``Difference`` [vector: any]
   Layer containing the differences feature of the input layer.
 
 See also
@@ -127,7 +127,7 @@ Parameters
 Output
 ......
 
-``Extracted`` [vector]
+``Extracted`` [vector: any]
   Layer containing the clipped features.
 
 
@@ -173,7 +173,7 @@ Parameters
 Output
 ......
 
-``Intersection`` [vector]
+``Intersection`` [vector: any]
   Layer containing the intersected features.
 
 See also
@@ -251,7 +251,7 @@ Parameters
 Output
 ......
 
-``Split`` [vector]
+``Split`` [vector: polygon, line]
   Output layer with split lines or polygons from input layer.
 
 
@@ -286,7 +286,7 @@ Parameters
 Output
 ......
 
-``Symmetrical difference`` [vector]
+``Symmetrical difference`` [vector: any]
   Layer containing the symmetrical differences feature of the input layer.
 
 See also
@@ -328,7 +328,7 @@ Parameters
 Output
 ......
 
-``Union`` [vector]
+``Union`` [vector: any]
   Layer containing the union of the layers
 
 

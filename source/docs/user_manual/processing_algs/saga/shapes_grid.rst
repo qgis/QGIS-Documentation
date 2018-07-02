@@ -47,7 +47,7 @@ Parameters
 Outputs
 .......
 
-``Result`` [vector]
+``Result`` [vector: point]
   The resulting layer.
 
 Console usage
@@ -93,7 +93,7 @@ Parameters
 Outputs
 .......
 
-``Result`` [vector]
+``Result`` [vector: any]
   <put output description here>
 
 Console usage
@@ -171,7 +171,7 @@ Parameters
 Outputs
 .......
 
-``Contour Lines`` [vector]
+``Contour Lines`` [vector: line]
   <put output description here>
 
 Console usage
@@ -240,7 +240,7 @@ Parameters
 Outputs
 .......
 
-``Gradient Vectors`` [vector]
+``Gradient Vectors`` [vector: line]
   <put output description here>
 
 Console usage
@@ -309,7 +309,7 @@ Parameters
 Outputs
 .......
 
-``Gradient Vectors`` [vector]
+``Gradient Vectors`` [vector: line]
   <put output description here>
 
 Console usage
@@ -375,7 +375,7 @@ Parameters
 Outputs
 .......
 
-``Gradient Vectors`` [vector]
+``Gradient Vectors`` [vector: line]
   <put output description here>
 
 Console usage
@@ -453,7 +453,7 @@ Parameters
 Outputs
 .......
 
-``Statistics`` [vector]
+``Statistics`` [vector: polygon]
   <put output description here>
 
 Console usage
@@ -488,7 +488,7 @@ Parameters
 Outputs
 .......
 
-``Points`` [vector]
+``Points`` [vector: point]
   <put output description here>
 
 Console usage
@@ -538,7 +538,7 @@ Parameters
 Outputs
 .......
 
-``Shapes`` [vector]
+``Shapes`` [vector: point]
   <put output description here>
 
 Console usage
@@ -568,10 +568,10 @@ Parameters
 Outputs
 .......
 
-``Minima`` [vector]
+``Minima`` [vector: point]
   <put output description here>
 
-``Maxima`` [vector]
+``Maxima`` [vector: point]
   <put output description here>
 
 Console usage
@@ -626,7 +626,7 @@ Parameters
 Outputs
 .......
 
-``Polygons`` [vector]
+``Polygons`` [vector: polygon]
   <put output description here>
 
 Console usage

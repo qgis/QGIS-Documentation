@@ -28,7 +28,7 @@ Parameters
 Outputs
 .......
 
-``Concatenated VectorData`` [vector]
+``Concatenated VectorData`` [vector: any]
   <put output description here>
 
 Console usage

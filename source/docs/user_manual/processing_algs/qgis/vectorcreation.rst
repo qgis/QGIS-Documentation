@@ -77,7 +77,7 @@ Parameters
 Outputs
 .......
 
-``Grid`` [vector]
+``Grid`` [vector: any]
   Resulting grid layer
 
 

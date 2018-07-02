@@ -45,13 +45,13 @@ Outputs
 ``Drainage Basins`` [raster]
   <put output description here>
 
-``Channels`` [vector]
+``Channels`` [vector: line]
   <put output description here>
 
-``Drainage Basins`` [vector]
+``Drainage Basins`` [vector: polygon]
   <put output description here>
 
-``Junctions`` [vector]
+``Junctions`` [vector: point]
   <put output description here>
 
 Console usage
@@ -131,7 +131,7 @@ Outputs
 ``Channel Direction`` [raster]
   <put output description here>
 
-``Channel Network`` [vector]
+``Channel Network`` [vector: line]
   <put output description here>
 
 Console usage

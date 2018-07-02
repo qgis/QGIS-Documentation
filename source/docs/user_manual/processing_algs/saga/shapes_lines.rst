@@ -34,7 +34,7 @@ Parameters
 Outputs
 .......
 
-``Lines`` [vector]
+``Lines`` [vector: line]
   The resulting layer.
 
 Console usage
@@ -64,7 +64,7 @@ Parameters
 Outputs
 .......
 
-``Lines`` [vector]
+``Lines`` [vector: line]
   The resulting layer.
 
 Console usage
@@ -113,7 +113,7 @@ Parameters
 Outputs
 .......
 
-``Dissolved Lines`` [vector]
+``Dissolved Lines`` [vector: line]
   <put output description here>
 
 Console usage
@@ -156,7 +156,7 @@ Parameters
 Outputs
 .......
 
-``Intersection`` [vector]
+``Intersection`` [vector: line]
   <put output description here>
 
 Console usage
@@ -194,14 +194,14 @@ Parameters
   Default: *True*
 
 ``Length`` [boolean]
-  Determines whether to calculate total line lenght.
+  Determines whether to calculate total line length.
 
   Default: *True*
 
 Outputs
 .......
 
-``Lines with Property Attributes`` [vector]
+``Lines with Property Attributes`` [vector: line]
   The resulting layer.
 
 Console usage
@@ -220,7 +220,7 @@ Line simplification
 Description
 ...........
 
-Simplyfies the geometry of a lines layer.
+Simplifies the geometry of a lines layer.
 
 Parameters
 ..........
@@ -236,7 +236,7 @@ Parameters
 Outputs
 .......
 
-``Simplified Lines`` [vector]
+``Simplified Lines`` [vector: line]
   The resulting layer.
 
 Console usage

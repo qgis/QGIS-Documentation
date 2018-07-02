@@ -69,7 +69,7 @@ Parameters
 
 Outputs
 .......
-``Virtual vector`` [vector]
+``Virtual vector`` [vector: any]
   The final virtual vector made by all the source vector chosen
 
 
@@ -154,7 +154,7 @@ Parameters
 
 Outputs
 .......
-``Cleaned`` [vector]
+``Cleaned`` [vector: any]
   The final layer without any duplicated geometries
 
 
@@ -223,7 +223,7 @@ Parameters
 
 Outputs
 .......
-``SQL Output`` [vector]
+``SQL Output`` [vector: any]
   Vector layer created by the query
 
 
@@ -311,7 +311,7 @@ Parameters
 
 Outputs
 .......
-``Joined layer`` [vector]
+``Joined layer`` [vector: any]
   Final vector layer with the attribute table as result of the joining
 
 
@@ -372,7 +372,7 @@ Parameters
 
 Outputs
 .......
-``Joined layer`` [vector]
+``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
 .. _qgisjoinbylocationsummary:
@@ -446,7 +446,7 @@ Parameters
 
 Outputs
 .......
-``Joined layer`` [vector]
+``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
 
@@ -489,7 +489,7 @@ Parameters
 Outputs
 .......
 
-``Merged`` [vector]
+``Merged`` [vector: any]
   Merged vector layer containing all the features and attributes from input layers
 
 See also
@@ -530,7 +530,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: any]
   Sorted vector layer
 
 
@@ -555,7 +555,7 @@ Parameters
 Outputs
 .......
 
-``Reprojected layer`` [vector]
+``Reprojected layer`` [vector: any]
   The resulting reprojected layer.
 
 See also
@@ -578,7 +578,7 @@ Parameters
 Outputs
 .......
 
-``Selection`` [vector]
+``Selection`` [vector: any]
   Vector layer with just the selected features.
 
 

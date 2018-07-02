@@ -56,10 +56,10 @@ Parameters
 Outputs
 .......
 
-``Extracted (attribute)`` [vector]
+``Extracted (attribute)`` [vector: any]
   Vector layer with matching features
 
-``Extracted (non-matching)`` [vector]
+``Extracted (non-matching)`` [vector: any]
   Vector layer with not matching features
 
 
@@ -86,10 +86,10 @@ Parameters
 Outputs
 .......
 
-``Matching features`` [vector]
+``Matching features`` [vector: any]
   Vector layer with matching features
 
-``Non-matching`` [vector]
+``Non-matching`` [vector: any]
   Vector layer with not matching features
 
 
@@ -127,7 +127,7 @@ Parameters
 Output
 ......
 
-``Extracted (location)``
+``Extracted (location)`` [vector: any]
   Vector layer of the spatial intersection
 
 
@@ -163,7 +163,7 @@ Parameters
 Output
 ......
 
-``Extracted (random)`` [vector]
+``Extracted (random)`` [vector: any]
   Vector layer containing random selected features
 
 
@@ -204,7 +204,7 @@ Parameters
 Output
 ......
 
-``Extracted (random stratified)`` [vector]
+``Extracted (random stratified)`` [vector: any]
   Random vector layer
 
 

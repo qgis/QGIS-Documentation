@@ -46,7 +46,7 @@ Parameters
 Output
 ......
 
-``Added geom info`` [vector]
+``Added geom info`` [vector: any]
   Copy of the input vector layer with the addition of the geometry fields
 
 
@@ -93,7 +93,7 @@ Parameters
 Output
 ......
 
-``Aggregated`` [vector]
+``Aggregated`` [vector: any]
   Multigeometry vector layer with the aggregated values
 
 See also
@@ -375,7 +375,7 @@ Parameters
 Output
 ......
 
-``Collected`` [vector]
+``Collected`` [vector: any]
 
 See also
 ........
@@ -455,7 +455,7 @@ Parameters
 Output
 ......
 
-``Converted`` [vector]
+``Converted`` [vector: any]
   Converted vector layer depending on the parameters chosen
 
 See also
@@ -749,7 +749,7 @@ Parameters
 
 Output
 ......
-``Z/M Dropped`` [vector]
+``Z/M Dropped`` [vector: any]
   Cleaned vector layer without M and/or Z values
 
 
@@ -870,7 +870,7 @@ and bisector angle of vertex for the original geometry.
 
 Parameters
 ..........
-``Input layer`` [vector]
+``Input layer`` [vector: line, polygon]
   Vector layer in input to extract the vertices from
 
 ``Vertex indices`` [number]
@@ -988,7 +988,7 @@ Parameters
 
   Default: *$geometry*
 
-``Modified geometry`` [vector]
+``Modified geometry`` [vector: any]
   Vector layer resulting from the expression added
 
 
@@ -1328,7 +1328,7 @@ Parameters
 Output
 ......
 
-``Orthogonalized`` [vector]
+``Orthogonalized`` [vector: polygon, line]
   Final layer with angles adjusted depending on the parameters chosen
 
 
@@ -1581,13 +1581,13 @@ compatible with data providers that require multipart features.
 Parameters
 ..........
 
-``Input layer`` [vector]
+``Input layer`` [vector: any]
   Input vector layer
 
 Output
 ......
 
-``Multiparts`` [vector]
+``Multiparts`` [vector: any]
   Multiparts vector layer
 
 See also
@@ -1737,10 +1737,10 @@ Parameters
 Outputs
 .......
 
-``Non null geometries`` [vector]
+``Non null geometries`` [vector: any]
   Vector layer without NULL geometries
 
-``Null geometries`` [vector]
+``Null geometries`` [vector: any]
   Vector layer with only NULL geometries
 
 
@@ -1796,7 +1796,7 @@ Parameters
 Outputs
 .......
 
-``Rotated`` [vector]
+``Rotated`` [vector: any]
   Vector layer with rotated geometries
 
 
@@ -1890,7 +1890,7 @@ Parameters
 Output
 ......
 
-``M Added`` [vector]
+``M Added`` [vector: any]
   Vector layer in output with M value
 
 
@@ -1917,7 +1917,7 @@ Parameters
 Output
 ......
 
-``Z Added`` [vector]
+``Z Added`` [vector: any]
   Vector layer in output with Z value
 
 
@@ -2090,7 +2090,7 @@ Parameters
 Outputs
 .......
 
-``Smoothed`` [vector]
+``Smoothed`` [vector: polygon, line]
   The smoothed vector layer.
 
 
@@ -2138,7 +2138,7 @@ Parameters
 Outputs
 .......
 
-``Snapped geometry`` [vector]
+``Snapped geometry`` [vector: any]
   Vector layer with snapped geometries
 
 
@@ -2186,7 +2186,7 @@ Parameters
 Outputs
 .......
 
-``Snapped`` [vector]
+``Snapped`` [vector: any]
   Vector layer with snapped geometries
 
 
@@ -2313,7 +2313,7 @@ Parameters
 Outputs
 .......
 
-``Translated`` [vector]
+``Translated`` [vector: any]
   Translated (offset) vector layer
 
 

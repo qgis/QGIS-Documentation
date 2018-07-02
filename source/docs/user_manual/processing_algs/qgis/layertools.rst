@@ -37,7 +37,7 @@ Parameters
 Outputs
 .......
 
-``Extent`` [vector]
+``Extent`` [vector: polygon]
   Polygon vector layer
 
 
