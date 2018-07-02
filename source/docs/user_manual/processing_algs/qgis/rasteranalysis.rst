@@ -163,14 +163,10 @@ Outputs
 Zonal histogram
 ---------------
 Appends fields representing counts of each unique value from a raster layer contained
-within zones defined as polygon.
+within polygon features.
 
 The output layer attribute table will have as many fields as the unique values
 of the raster layer that intersects the polygon.
-
-In the following picture the selected polygon and the corresponding row in the
-attribute table show that the polygon contains only the value 1115 (see the field
-name) of the raster layer:
 
 .. figure:: img/raster_histogram.png
   :align: center
