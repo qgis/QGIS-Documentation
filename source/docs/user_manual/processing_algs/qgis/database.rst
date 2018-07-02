@@ -162,7 +162,7 @@ GeoPackage database.
 Parameters
 ..........
 
-``Input layers`` [vector:any] [list]
+``Input layers`` [vector: any] [list]
   All the vector layers to import into the GeoPackage database
 
 ``Overwrite existing GeoPackage`` [boolean]

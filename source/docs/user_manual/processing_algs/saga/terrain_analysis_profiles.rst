@@ -112,7 +112,7 @@ Parameters
 ``DEM`` [raster]
   <put parameter description here>
 
-``Values`` [multipleinput: rasters]
+``Values`` [raster] [list]
   Optional.
 
   <put parameter description here>

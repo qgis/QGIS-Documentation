@@ -173,7 +173,7 @@ Description
 Parameters
 ..........
 
-``Predictors`` [multipleinput: rasters]
+``Predictors`` [raster] [list]
   <put parameter description here>
 
 ``Output of Regression Parameters`` [boolean]
@@ -865,7 +865,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Radius [Cells]`` [number]
@@ -936,7 +936,7 @@ Parameters
 ``Dependent`` [raster]
   <put parameter description here>
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Grid Interpolation`` [enumeration]
@@ -1023,7 +1023,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Shapes`` [vector: any]
@@ -1479,7 +1479,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 Outputs
@@ -1622,12 +1622,12 @@ Parameters
 ``Zone Grid`` [raster]
   <put parameter description here>
 
-``Categorial Grids`` [multipleinput: rasters]
+``Categorial Grids`` [raster] [list]
   Optional.
 
   <put parameter description here>
 
-``Grids to analyse`` [multipleinput: rasters]
+``Grids to analyse`` [raster] [list]
   Optional.
 
   <put parameter description here>

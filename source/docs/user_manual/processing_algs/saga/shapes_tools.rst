@@ -172,7 +172,7 @@ Parameters
 ``Main Layer`` [vector: any]
   Initial layer.
 
-``Additional Layers`` [multipleinput: any vectors]
+``Additional Layers`` [vector: any] [list]
   Optional.
 
   Layer(s) to merge with.

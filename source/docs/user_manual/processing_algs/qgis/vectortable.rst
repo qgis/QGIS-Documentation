@@ -43,7 +43,7 @@ Parameters
 
   Default: *0*
   
-``Group values by`` [multipleinput]
+``Group values by`` [tablefield: any] [list]
   Optional
 
   Select grouping field(s): instead of a single count run for the whole layer,
