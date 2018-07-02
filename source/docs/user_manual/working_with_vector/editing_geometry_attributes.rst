@@ -1219,7 +1219,7 @@ To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard
 shorcuts available:
 
 +----------+-------------------+-------------------------------+---------------------------------------+
-| Key      | Simple            | :kbd:`Ctrl+` or :kbd:`Alt+` | :kbd:`Shift+`                        |
+| Key      | Simple            | :kbd:`Ctrl+` or :kbd:`Alt+`   | :kbd:`Shift+`                         |
 +==========+===================+===============================+=======================================+
 | :kbd:`D` | Set distance      | Lock distance                 | \                                     |
 +----------+-------------------+-------------------------------+---------------------------------------+
