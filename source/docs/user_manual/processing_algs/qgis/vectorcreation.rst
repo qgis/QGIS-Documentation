@@ -211,7 +211,7 @@ Outputs
 .......
 
 ``Photos`` [vector: point]
-  Point vector layer with geotagged information. The form of the layer is automatically
+  Point vector layer with geotagged photos. The form of the layer is automatically
   filled with paths and photo previews settings
 
 ``Invalid photos table`` [table]
