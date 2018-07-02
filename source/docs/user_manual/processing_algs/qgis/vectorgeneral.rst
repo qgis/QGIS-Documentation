@@ -59,7 +59,7 @@ layers but accept only one ``vrt`` in which the layers are specified.
 
 Parameters
 ..........
-``Input datasources`` [vector: any] {list]
+``Input datasources`` [vector: any] [list]
   Select the vector layers you want to use to build the virtual vector
 
 ``Create "unioned" VRT`` [boolean]
