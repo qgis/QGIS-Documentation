@@ -539,37 +539,28 @@ Parameters
 ``Input layer`` [vector: point]
   Input point vector layer
 
-``Azimuth (degrees from North)`` [number or data-defined |dataDefined|]
-  Angle (in degrees) for the middle of the wedge to point
+``Azimuth (degrees from North)`` [number |dataDefined|]
+  Angle (in degrees) as the middle value of the wedge
 
-``Wedge width (in degrees)`` [number or data-defined |dataDefined|]
-  Width (in degrees) of the buffer
+``Wedge width (in degrees)`` [number |dataDefined|]
+  Width (in degrees) of the buffer. The wedge will extend to half of the angular
+  width either side of the azimuth direction.
 
-  .. note:: the wedge will extend to half of the angular width either side of the
-    azimuth direction.
+  .. figure:: img/wedge_buffers_azimuth_width.png
+    :align: center
 
-  .. figure:: img/wedge_buffers_width.png
-   :align: center
+    Azimuth and width values of the wedge buffer
 
-   Wedge buffers different widths: 45 and 90 degrees
+``Outer radius`` [number |dataDefined|]
+  The outer *size* (length) of the wedge: the size is meant from the source point
+  to the edge of the wedge shape.
 
-``Outer radius`` [number or data-defined |dataDefined|]
-  The outer *size* of the buffer
-
-  .. figure:: img/wedge_buffers_outer_radius.png
-   :align: center
-
-   Comparison of different outer radius sizes: 1 (left) and 2 (right)
-
-``Inner radius`` [number or data-defined |dataDefined|]
+``Inner radius`` [number |dataDefined|]
   Optional
 
-  Inner radius value
+  Inner radius value. If 0 the wedge will attached to the source point.
 
-  .. figure:: img/wedge_buffers_inner_radius.png
-   :align: center
-
-   Inner value 1 (left) and 2 (right)
+  Default: *0.0*
 
 Output
 ......
@@ -2319,8 +2310,7 @@ Outputs
 Tapered buffers |32|
 --------------------
 Creates tapered buffer along line geometries, using a specified start and end
-buffer diameter. corresponding to the buffer diameter at the start and end of the
-linestrings.
+buffer diameter.
 
 .. figure:: img/tapered_buffer.png
    :align: center
@@ -2333,20 +2323,20 @@ Parameters
 ``Input layer`` [vector: line]
   Input line vector layer.
 
-``Start width`` [number or data-defined |dataDefined|]
+``Start width`` [number |dataDefined|]
   Represents the radius of the buffer applied at the start point of the line feature.
 
-``End width`` [number or data-defined |dataDefined|]
+``End width`` [number |dataDefined|]
   Represents the radius of the buffer applied at the end point of the line feature.
 
-``Segments`` [number or data-defined |dataDefined|]
+``Segments`` [number |dataDefined|]
   Number of the buffer segments
 
 Output
 ......
 
-``Buffered layer`` [vector: polygon]
-  Variable buffer polygon
+``Buffered`` [vector: polygon]
+  Variable buffer polygon layer
 
 See also
 ........
@@ -2468,8 +2458,8 @@ Parameters
 Output
 ......
 
-``Buffered layer`` [vector: polygon]
-  Variable buffer polygon
+``Buffered`` [vector: polygon]
+  Variable buffer polygon layer
 
 See also
 ........
