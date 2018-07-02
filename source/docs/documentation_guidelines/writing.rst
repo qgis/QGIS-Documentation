@@ -595,6 +595,7 @@ guidelines:
   Number                                    ``number``                 |selectNumber|
   String                                    ``string``                 |inputText|
   Boolean                                   ``boolean``                |checkbox|
+  Folder path                               ``folder``
   ========================================  =========================  ====================
 
 * the best option is studying an existing and well documented algorithm and copy
