@@ -140,7 +140,7 @@ Outputs
 .......
 
 ``Contours`` [vector: line]
-  Output file for contour lines (vector)
+  Output file for contour lines
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
