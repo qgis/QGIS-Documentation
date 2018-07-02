@@ -66,38 +66,78 @@ will take precedence and the unique class field will be ignored.
 
 Parameters
 ..........
-``Polygons`` [vector: polygon]
-  Polygons layer
 
-``Points`` [vector: point]
-  Points layer
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 60
+   :stub-columns: 0
 
-``Weight field`` [tablefield: any]
-  Optional
+   *  -  Name
+      -  Type
+      -  Description
 
-  The count generated will be the sum of the weight field for each point contained
-  by the polygon.
+   *  -  **Polygons**
 
-``Class field`` [tablefield: any]
-  Optional
+         ``POLYGONS``
+      -  [vector: polygon]
+      -  Polygons layer
 
-  Points are classified based on the selected attribute and if several points with
-  the same attribute value are within the polygon, only one of them is counted.
-  The final count of the point in a polygon is, therefore, the count of different
-  classes that are found in it.
+   *  -  **Points**
 
-``Count field name`` [string]
-  The name of the field to store the count of points
+         ``POINTS``
+      -  [vector: polygon]
+      -  Points layer
 
-  Default: *NUMPOINTS*
+   *  -  **Weight field**
+
+         ``WEIGHT``
+
+         (Optional)
+
+      -  [tablefield: any]
+      -  The count generated will be the sum of the weight field for each point
+         contained by the polygon.
+
+   *  -  **Class field**
+
+         ``CLASSFIELD``
+
+         (Optional)
+      -  [tablefield: any]
+      -  Points are classified based on the selected attribute and if several
+         points with the same attribute value are within the polygon, only one
+         of them is counted. The final count of the point in a polygon is,
+         therefore, the count of different classes that are found in it.
+
+   *  -  **Count field name**
+
+         ``FIELD``
+      -  [string]
+
+         Default: *NUMPOINTS*
+      -  Points are classified based on the selected attribute and if several
+         points with the same attribute value are within the polygon, only one
+         of them is counted. The final count of the point in a polygon is,
+         therefore, the count of different classes that are found in it.
 
 Outputs
 .......
 
-``Count`` [vector: polygon]
-  Resulting layer with the attribute table containing the new column of the
-  points count.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 60
+   :stub-columns: 0
+
+   *  -  Name
+      -  Type
+      -  Description
+
+   *  -  **Count**
+
+      -  [vector: polygon]
+      -  Resulting layer with the attribute table containing the new column of
+         the points count.
 
 .. _qgisdistancematrix:
 
