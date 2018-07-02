@@ -137,7 +137,7 @@ However, there is also a tool to help position the title relative to the map
 |alignLeft|
 
 * Click the map to select it.
-* Hold in :kbd:`shift` on your keyboard and click on the label so that both the
+* Hold in :kbd:`Shift` on your keyboard and click on the label so that both the
   map and the label are selected.
 * Look for the :guilabel:`Align` button |alignLeft| and click on the
   dropdown arrow next to it to reveal the positioning options and click

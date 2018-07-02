@@ -104,7 +104,7 @@ already connected to the ``address`` database, do so now. Then run:
   \df *point*
 
 This is the command we're looking for: :kbd:`st_pointfromtext`.  To page through
-the list, use the down arrow, then press :kbd:`q` to quit back to the psql shell.
+the list, use the down arrow, then press :kbd:`Q` to quit back to the psql shell.
 
 Try running this command:
 
