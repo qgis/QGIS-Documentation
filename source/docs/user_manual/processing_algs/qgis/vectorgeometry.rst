@@ -2295,7 +2295,7 @@ and longitude values reversed.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
+``Input layer`` [vector: point]
   Input vector layer to swap
 
 Outputs
