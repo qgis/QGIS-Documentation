@@ -237,9 +237,9 @@ and a negative value does the opposite.
    potentially long tracing structure preparation and large memory overhead.
    After zooming in or disabling some layers the tracing is enabled again.
 
-.. tip:: **Quickly enable or disable automatic tracing by pressing** :kbd:`T` **key**
+.. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
 
-   By pressing :kbd:`T` key, tracing can be enabled/disabled anytime even while
+   By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime even while
    digitizing one feature, so it is possible to digitize some parts of the feature
    with tracing enabled and other parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
@@ -1244,11 +1244,11 @@ For example, to add a new feature to a polygonal layer, click the
 |capturePolygon| button. You can choose the X and Y coordinates where you want
 to start editing the feature, then:
 
-- Click the :guilabel:`x` text box (or use the :kbd:`x` keyboard shortcuts).
+- Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut).
 - Type the X coordinate value you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the X axis on the map
   canvas.
-- Click the :guilabel:`y` text box (or use the :kbd:`y` keyboard shortcuts).
+- Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut).
 - Type the Y coordinate value you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the Y axis on the map
   canvas.
