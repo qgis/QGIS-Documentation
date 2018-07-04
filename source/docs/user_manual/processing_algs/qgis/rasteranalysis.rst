@@ -155,7 +155,7 @@ Outputs
 
     - Value: unique value of each pixel
     - Pixel count: count of how many pixels belong to each value
-    - Area (m :sup:`2`): square meters of the area for each pixel class
+    - Area (m\ :sup:`2`): square meters of the area for each pixel class
 
 
 .. _qgiszonalhistogram:
@@ -204,19 +204,19 @@ Zonal statistics
 Calculates statistics of a raster layer for each feature of an overlapping polygon
 vector layer.
 
-.. warning:: no new output file will be created. The algorithm adds new columns
+.. warning:: No new output file will be created. The algorithm adds new columns
   to the source vector layer
 
 Parameters
 ..........
 
 ``Raster layer`` [raster]
- Raster layer in input
+  Raster layer in input
 
 ``Band number`` [raster band]
- If the raster is multiband choose the band you want to calculate the statistics
+  If the raster is multiband choose the band you want to calculate the statistics
 
- Default: *Band 1 (Gray)*
+  Default: *Band 1 (Gray)*
 
 ``Vector layer containing zones`` [vector: polygon]
   Polygon vector layer
