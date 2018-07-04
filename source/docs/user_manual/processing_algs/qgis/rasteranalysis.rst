@@ -166,7 +166,7 @@ Appends fields representing counts of each unique value from a raster layer cont
 within polygon features.
 
 The output layer attribute table will have as many fields as the unique values
-of the raster layer that intersects the polygon.
+of the raster layer that intersects the polygon(s).
 
 .. figure:: img/raster_histogram.png
   :align: center
@@ -183,7 +183,7 @@ Parameters
 ``Band number`` [raster band]
   If the raster is multiband, choose the band you want to calculate the statistics
 
-``Vector layer containing the zones``
+``Vector layer containing the zones`` [vector: polygon]
   Overlaying vector layer where unique raster values will be appended
 
 ``Output column prefix`` [string]
