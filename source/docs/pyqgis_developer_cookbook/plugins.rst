@@ -599,4 +599,4 @@ yours! It will extent the possibilities of QGIS and people will be able to learn
 from your code. All hosted plugins can be found and installed from within QGIS
 with the Plugin Manager.
 
-Information and requirements are `here <https://plugins.qgis.org/>`_.
+Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
