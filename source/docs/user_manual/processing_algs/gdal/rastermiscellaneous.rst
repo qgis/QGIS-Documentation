@@ -24,7 +24,7 @@ The algorithm is derived from the `GDAL buildvrt utility <http://www.gdal.org/gd
 Parameters
 ..........
 
-``Input layers`` [multipleinput: rasters]
+``Input layers`` [raster] [list]
   GDAL-supported raster layers.
 
 ``Resolution`` [enumeration]
@@ -72,7 +72,7 @@ The algorithm is derived from the `GDAL merge utility <http://www.gdal.org/gdal_
 Parameters
 ..........
 
-``Input layers`` [multipleinput: rasters]
+``Input layers`` [raster] [list]
   Input raster layers.
 
 ``Grab pseudocolor table from first layer`` [boolean]
@@ -221,7 +221,7 @@ This output is suitable for use with MapServer as a raster tileindex.
 Parameters
 ..........
 
-``Input layers`` [multipleinput: rasters]
+``Input files`` [raster] [list]
   The input raster files. Can be multiple files.
 
 ``Tile index field`` [string]

@@ -28,7 +28,7 @@ Parameters
 Outputs
 .......
 
-``Polygons`` [vector]
+``Polygons`` [vector: polygon]
   The resulting layer.
 
 Console usage
@@ -58,7 +58,7 @@ Parameters
 Outputs
 .......
 
-``Points`` [vector]
+``Points`` [vector: point]
   The resulting layer.
 
 Console usage
@@ -86,7 +86,7 @@ Parameters
   Input layer.
 
 ``Centroids for each part`` [boolean]
-  Determites whether centroids should be calculated for each part of multipart
+  Determines whether centroids should be calculated for each part of multipart
   polygon or not.
 
   Default: *True*
@@ -94,7 +94,7 @@ Parameters
 Outputs
 .......
 
-``Centroids`` [vector]
+``Centroids`` [vector: point]
   The resulting layer.
 
 Console usage
@@ -151,7 +151,7 @@ Parameters
 Outputs
 .......
 
-``Dissolved Polygons`` [vector]
+``Dissolved Polygons`` [vector: polygon]
   <put output description here>
 
 Console usage
@@ -184,7 +184,7 @@ Parameters
 Outputs
 .......
 
-``Intersection`` [vector]
+``Intersection`` [vector: line]
   <put output description here>
 
 Console usage
@@ -219,7 +219,7 @@ Parameters
 Outputs
 .......
 
-``Polygon Parts`` [vector]
+``Polygon Parts`` [vector: polygon]
   <put output description here>
 
 Console usage
@@ -269,7 +269,7 @@ Parameters
 Outputs
 .......
 
-``Polygons with Property Attributes`` [vector]
+``Polygons with Property Attributes`` [vector: polygon]
   <put output description here>
 
 Console usage
@@ -308,7 +308,7 @@ Parameters
 Outputs
 .......
 
-``Shape Index`` [vector]
+``Shape Index`` [vector: polygon]
   The resulting layer.
 
 Console usage
@@ -338,10 +338,10 @@ Parameters
 Outputs
 .......
 
-``Edges`` [vector]
+``Edges`` [vector: line]
   Resulting line layer with polygons boundaries.
 
-``Nodes`` [vector]
+``Nodes`` [vector: point]
   Resulting line layer with polygons nodes.
 
 Console usage

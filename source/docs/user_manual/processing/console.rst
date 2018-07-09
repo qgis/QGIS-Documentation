@@ -12,131 +12,240 @@ Using processing algorithms from the console
    .. contents::
       :local:
 
-The console allows advanced users to increase their productivity and perform
-complex operations that cannot be performed using any of the other GUI elements of
-the processing framework. Models involving several algorithms can be defined using the
-command-line interface, and additional operations such as loops and conditional
-sentences can be added to create more flexible and powerful workflows.
+The console allows advanced users to increase their productivity and
+perform complex operations that cannot be performed using any of the
+other GUI elements of the processing framework. Models involving
+several algorithms can be defined using the command-line interface,
+and additional operations such as loops and conditional sentences can
+be added to create more flexible and powerful workflows.
 
-There is not a processing console in QGIS, but all processing commands are
-available instead from the QGIS built-in :ref:`Python console <console>`.
-That means that you can incorporate those commands into your console work
-and connect processing algorithms to all the other features (including methods
-from the QGIS API) available from there.
+There is not a processing console in QGIS, but all processing commands
+are available instead from the QGIS built-in :ref:`Python console
+<console>`.  That means that you can incorporate those commands into
+your console work and connect processing algorithms to all the other
+features (including methods from the QGIS API) available from there.
 
-The code that you can execute from the Python console, even if it does not call
-any specific processing method, can be converted into a new algorithm that you can
-later call from the toolbox, the graphical modeler or any other component,
-just like you do with any other algorithm. In fact, some algorithms that
-you can find in the toolbox are simple scripts.
+The code that you can execute from the Python console, even if it does
+not call any specific processing method, can be converted into a new
+algorithm that you can later call from the toolbox, the graphical
+modeler or any other component, just like you do with any other
+algorithm. In fact, some algorithms that you can find in the toolbox
+are simple scripts.
 
-In this section, we will see how to use processing algorithms from the QGIS Python console,
-and also how to write algorithms using Python.
+In this section, we will see how to use processing algorithms from the
+QGIS Python console, and also how to write algorithms using Python.
 
 Calling algorithms from the Python console
 ------------------------------------------
 
-The first thing you have to do is to import the processing functions with the
-following line:
+The first thing you have to do is to import the processing functions
+with the following line:
 
 ::
 
     >>> import processing
 
-Now, there is basically just one (interesting) thing you can do with that
-from the console: execute an algorithm. That is done using the ``runalg()``
-method, which takes the name of the algorithm to execute as its first parameter,
-and then a variable number of additional parameters depending on the requirements
-of the algorithm. So the first thing you need to know is the name of the algorithm
-to execute. That is not the name you see in the toolbox, but rather a unique
-command–line name. To find the right name for your algorithm, you can use the
-``algslist()`` method. Type the following line in your console:
+Now, there is basically just one (interesting) thing you can do with
+that from the console: execute an algorithm. That is done using the
+``run()`` method, which takes the name of the algorithm to execute
+as its first parameter, and then a variable number of additional
+parameters depending on the requirements of the algorithm. So the
+first thing you need to know is the name of the algorithm to
+execute. That is not the name you see in the toolbox, but rather a
+unique command–line name. To find the right name for your algorithm,
+you can use the processingRegistry. Type the following line in your
+console:
 
 ::
 
-    >>> processing.alglist()
+    >>> for alg in QgsApplication.processingRegistry().algorithms():
+            print(alg.id(), "->", alg.displayName())
 
-You will see something like this.
+You will see something like this (with some extra dashes added to
+improve readability).
 
 ::
 
-   Accumulated Cost (Anisotropic)-------->saga:accumulatedcost(anisotropic)
-   Accumulated Cost (Isotropic)---------->saga:accumulatedcost(isotropic)
-   Add Coordinates to points------------->saga:addcoordinatestopoints
-   Add Grid Values to Points------------->saga:addgridvaluestopoints
-   Add Grid Values to Shapes------------->saga:addgridvaluestoshapes
-   Add Polygon Attributes to Points------>saga:addpolygonattributestopoints
-   Aggregate----------------------------->saga:aggregate
-   Aggregate Point Observations---------->saga:aggregatepointobservations
-   Aggregation Index--------------------->saga:aggregationindex
-   Analytical Hierarchy Process---------->saga:analyticalhierarchyprocess
-   Analytical Hillshading---------------->saga:analyticalhillshading
-   Average With Mask 1------------------->saga:averagewithmask1
-   Average With Mask 2------------------->saga:averagewithmask2
-   Average With Thereshold 1------------->saga:averagewiththereshold1
-   Average With Thereshold 2------------->saga:averagewiththereshold2
-   Average With Thereshold 3------------->saga:averagewiththereshold3
-   B-Spline Approximation---------------->saga:b-splineapproximation
+   3d:tessellate --------------> Tessellate
+   gdal:aspect ----------------> Aspect
+   gdal:assignprojection ------> Assign projection
+   gdal:buffervectors ---------> Buffer vectors
+   gdal:buildvirtualraster ----> Build Virtual Raster
+   gdal:cliprasterbyextent ----> Clip raster by extent
+   gdal:cliprasterbymasklayer -> Clip raster by mask layer
+   gdal:clipvectorbyextent ----> Clip vector by extent
+   gdal:clipvectorbypolygon ---> Clip vector by mask layer
+   gdal:colorrelief -----------> Color relief
+   gdal:contour ---------------> Contour
+   gdal:convertformat ---------> Convert format
+   gdal:dissolve --------------> Dissolve
    ...
 
-That's a list of all the available algorithms, alphabetically ordered, along with
-their corresponding command-line names.
+That's a list of all the available algorithm IDs, sorted by provider
+name and algorithm name, along with their corresponding names.
 
-You can use a string as a parameter for this method. Instead of returning the
-full list of algorithms, it will only display those that include that string. If,
-for instance, you are looking for an algorithm to calculate slope from a DEM, type
-``alglist("slope")`` to get the following result::
+Once you know the command-line name of the algorithm, the next thing
+to do is to determine the right syntax to execute it. That means
+knowing which parameters are needed when calling the ``run()`` method.
 
+There is a method to describe an algorithm in detail, which can be
+used to get a list of the parameters that an algorithm requires and
+the outputs that it will generate. To get this information, you can
+use the ``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of
+the algorithm, not the full descriptive name.
 
-
- DTM Filter (slope-based)-------------->saga:dtmfilter(slope-based)
- Downslope Distance Gradient----------->saga:downslopedistancegradient
- Relative Heights and Slope Positions-->saga:relativeheightsandslopepositions
- Slope Length-------------------------->saga:slopelength
- Slope, Aspect, Curvature-------------->saga:slopeaspectcurvature
- Upslope Area-------------------------->saga:upslopearea
- Vegetation Index[slope based]--------->saga:vegetationindex[slopebased]
-
-This result might change depending on the algorithms you have available.
-
-It is easier now to find the algorithm you are looking for and its command-line
-name, in this case ``saga:slopeaspectcurvature``.
-
-Once you know the command-line name of the algorithm, the next thing to do is to
-determine the right syntax to execute it. That means knowing which parameters are
-needed and the order in which they have to be passed when calling the ``runalg()``
-method. There is a method to describe an algorithm in detail, which can be
-used to get a list of the parameters that an algorithm requires and the outputs
-that it will generate. To get this information, you can use the ``alghelp(name_of_the_algorithm)``
-method. Use the command-line name of the algorithm, not the full descriptive name.
-
-Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get the
-following description:
+Calling the method with ``native:buffer`` as parameter
+(``qgis:buffer`` is an alias for ``native:buffer`` and will also
+work), you get the following description:
 
 ::
 
-    >>> processing.alghelp("saga:slopeaspectcurvature")
-    ALGORITHM: Slope, Aspect, Curvature
-       ELEVATION <ParameterRaster>
-       METHOD <ParameterSelection>
-       SLOPE <OutputRaster>
-       ASPECT <OutputRaster>
-       CURV <OutputRaster>
-       HCURV <OutputRaster>
-       VCURV <OutputRaster>
+     >>> processing.algorithmHelp("native:buffer")
+     Buffer (native:buffer)
+     
+     This algorithm computes a buffer area for all the features in an
+     input layer, using a fixed or dynamic distance.
+     
+     The segments parameter controls the number of line segments to
+     use to approximate a quarter circle when creating rounded
+     offsets.
+     
+     The end cap style parameter controls how line endings are handled
+     in the buffer.
+     
+     The join style parameter specifies whether round, miter or
+     beveled joins should be used when offsetting corners in a line.
+     
+     The miter limit parameter is only applicable for miter join
+     styles, and controls the maximum distance from the offset curve
+     to use when creating a mitered join.
+     
+     
+     ----------------
+     Input parameters
+     ----------------
+     
+     INPUT: Input layer
+     
+     	Parameter type:	QgsProcessingParameterFeatureSource
+     
+     	Accepted data types:
+     		- str: layer ID
+     		- str: layer name
+     		- str: layer source
+     		- QgsProcessingFeatureSourceDefinition
+     		- QgsProperty
+     		- QgsVectorLayer
+     
+     DISTANCE: Distance
+     
+     	Parameter type:	QgsProcessingParameterDistance
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     SEGMENTS: Segments
+     
+     	Parameter type:	QgsProcessingParameterNumber
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     END_CAP_STYLE: End cap style
+     
+     	Parameter type:	QgsProcessingParameterEnum
+     
+     	Available values:
+     		- 0: Round
+     		- 1: Flat
+     		- 2: Square
+     
+     	Accepted data types:
+     		- int
+     		- str: as string representation of int, e.g. '1'
+     		- QgsProperty
+     
+     JOIN_STYLE: Join style
 
-Now you have everything you need to run any algorithm. As we have already
-mentioned, there is only one single command to execute algorithms: ``runalg()``.
+	Parameter type:	QgsProcessingParameterEnum
+
+	Available values:
+		- 0: Round
+		- 1: Miter
+		- 2: Bevel
+
+	Accepted data types:
+		- int
+		- str: as string representation of int, e.g. '1'
+		- QgsProperty
+     
+     MITER_LIMIT: Miter limit
+     
+     	Parameter type:	QgsProcessingParameterNumber
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     DISSOLVE: Dissolve result
+     
+     	Parameter type:	QgsProcessingParameterBoolean
+     
+     	Accepted data types:
+		- bool
+		- int
+		- str
+		- QgsProperty
+          
+     OUTPUT: Buffered
+     
+     	Parameter type:	QgsProcessingParameterFeatureSink
+     
+     	Accepted data types:
+     		- str: destination vector file, e.g. 'd:/test.shp'
+     		- str: 'memory:' to store result in temporary memory layer
+     		- str: using vector provider ID prefix and destination URI,
+                       e.g. 'postgres:...' to store result in PostGIS table
+     		- QgsProcessingOutputLayerDefinition
+     		- QgsProperty
+     
+     ----------------
+     Outputs
+     ----------------
+     
+     OUTPUT:  <QgsProcessingOutputVectorLayer>
+     	Buffered
+     
+     
+Now you have everything you need to run any algorithm. As we have
+already mentioned, algorithms can be run using: ``run()``.
 Its syntax is as follows:
 
 ::
 
-    >>> processing.runalg(name_of_the_algorithm, param1, param2, ..., paramN,
-             Output1, Output2, ..., OutputN)
+    >>> processing.run(name_of_the_algorithm, parameters)
 
-The list of parameters and outputs to add depends on the algorithm you want to
-run, and is exactly the list that the ``alghelp()`` method gives you, in the same
-order as shown.
+Where parameters is a dictionary of parameters that depend on the
+algorithm you want to run, and is exactly the list that the
+``algorithmHelp()`` method gives you.
+
+::
+
+    >>> processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+
+.. warning:: No QGIS 3 updates beyond this point (ToDo)
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:

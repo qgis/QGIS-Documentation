@@ -43,7 +43,7 @@ Parameters
 
   Default: *0*
   
-``Group values by`` [multipleinput]
+``Group values by`` [tablefield: any] [list]
   Optional
 
   Select grouping field(s): instead of a single count run for the whole layer,
@@ -75,7 +75,7 @@ Parameters
 Output
 ......
 
-``Incremented`` [vector]
+``Incremented`` [vector: any]
   Vector layer with auto incremental field
 
 
@@ -123,7 +123,7 @@ Parameters
 Output
 ......
 
-``Added`` [vector]
+``Added`` [vector: any]
   Vector layer with new field added
 
 
@@ -160,7 +160,7 @@ Parameters
 Output
 ......
 
-``Layer with index field`` [vector]
+``Layer with index field`` [vector: any]
   Vector layer with the numeric field containing indexes
 
 ``Class summary`` [table]
@@ -227,7 +227,7 @@ Parameters
 Output
 ......
 
-``Calculated`` [vector]
+``Calculated`` [vector: any]
   Vector layer with the new calculated field
 
 
@@ -250,7 +250,7 @@ Parameters
 Output
 ......
 
-``Fields dropped`` [vector:any]
+``Fields dropped`` [vector: any]
   Vector layer without the field(s) chosen
 
 
@@ -312,7 +312,7 @@ Parameters
 Output
 ......
 
-``Refactored`` [vector]
+``Refactored`` [vector: any]
   Output layer with refactored fields
 
 
@@ -339,7 +339,7 @@ Parameters
 Output
 ......
 
-``Float from text`` [vector]
+``Float from text`` [vector: any]
   Output vector layer with string field converted into float
 
 

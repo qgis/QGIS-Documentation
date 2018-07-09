@@ -188,7 +188,7 @@ Description
 Parameters
 ..........
 
-``Input images`` [multipleinput: rasters]
+``Input images`` [raster] [list]
   <put parameter description here>
 
 ``Background Value`` [number]
@@ -223,7 +223,7 @@ Description
 Parameters
 ..........
 
-``Input classifications`` [multipleinput: rasters]
+``Input classifications`` [raster] [list]
   <put parameter description here>
 
 ``Fusion method`` [enumeration]
@@ -287,7 +287,7 @@ Description
 Parameters
 ..........
 
-``Input classifications`` [multipleinput: rasters]
+``Input classifications`` [raster] [list]
   <put parameter description here>
 
 ``Fusion method`` [enumeration]
@@ -487,10 +487,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -649,10 +649,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -734,10 +734,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -846,10 +846,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -966,10 +966,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -1071,10 +1071,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -1161,10 +1161,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -1268,10 +1268,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
@@ -1388,10 +1388,10 @@ Description
 Parameters
 ..........
 
-``Input Image List`` [multipleinput: rasters]
+``Input Image List`` [raster] [list]
   <put parameter description here>
 
-``Input Vector Data List`` [multipleinput: any vectors]
+``Input Vector Data List`` [vector: any] [list]
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]

@@ -144,7 +144,7 @@ Description
 Parameters
 ..........
 
-``Input Grids`` [multipleinput: rasters]
+``Input Grids`` [raster] [list]
   <put parameter description here>
 
 ``Pairwise Comparisons Table`` [table]
@@ -464,7 +464,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Method`` [enumeration]
@@ -510,7 +510,7 @@ Parameters
 ``Accumulated cost`` [raster]
   <put parameter description here>
 
-``Values`` [multipleinput: rasters]
+``Values`` [raster] [list]
   Optional.
 
   <put parameter description here>
@@ -518,10 +518,10 @@ Parameters
 Outputs
 .......
 
-``Profile (points)`` [vector]
+``Profile (points)`` [vector: point]
   <put output description here>
 
-``Profile (lines)`` [vector]
+``Profile (lines)`` [vector: line]
   <put output description here>
 
 Console usage
@@ -545,7 +545,7 @@ Description
 Parameters
 ..........
 
-``Input Grids`` [multipleinput: rasters]
+``Input Grids`` [raster] [list]
   <put parameter description here>
 
 ``Weights`` [fixedtable]

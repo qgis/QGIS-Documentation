@@ -120,7 +120,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: polygon]
   Output vector layer. Default format is \*.shp.
 
 

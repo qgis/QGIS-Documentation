@@ -22,13 +22,13 @@ Description
 Parameters
 ..........
 
-``Input VectorDatas to concatenate`` [multipleinput: any vectors]
+``Input VectorDatas to concatenate`` [vector: any] [list]
   <put parameter description here>
 
 Outputs
 .......
 
-``Concatenated VectorData`` [vector]
+``Concatenated VectorData`` [vector: any]
   <put output description here>
 
 Console usage

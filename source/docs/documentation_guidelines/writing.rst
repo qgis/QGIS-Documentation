@@ -107,9 +107,9 @@ You can use some tags inside the text to emphasize some items.
 
   .. code-block:: rst
 
-     :kbd:`ctrl B`
+     :kbd:`Ctrl+B`
 
-  will show :kbd:`Ctrl B`
+  will show :kbd:`Ctrl+B`
 
 
 * **User text**
@@ -595,6 +595,7 @@ guidelines:
   Number                                    ``number``                 |selectNumber|
   String                                    ``string``                 |inputText|
   Boolean                                   ``boolean``                |checkbox|
+  Folder path                               ``folder``
   ========================================  =========================  ====================
 
 * the best option is studying an existing and well documented algorithm and copy

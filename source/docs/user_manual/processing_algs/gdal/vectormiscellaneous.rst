@@ -31,7 +31,7 @@ Parameters
 Outputs
 .......
 
-``SQL result`` [vector]
+``SQL result`` [vector: any]
   <put output description here>
 
 

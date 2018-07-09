@@ -86,7 +86,7 @@ Description
 Parameters
 ..........
 
-``Features`` [multipleinput: rasters]
+``Features`` [raster] [list]
   <put parameter description here>
 
 ``Bandwidth (Cells)`` [number]
@@ -140,7 +140,7 @@ Outputs
 ``Seeds Grid`` [raster]
   <put output description here>
 
-``Seeds`` [vector]
+``Seeds`` [vector: point]
   <put output description here>
 
 Console usage
@@ -167,7 +167,7 @@ Parameters
 ``Seeds`` [raster]
   <put parameter description here>
 
-``Features`` [multipleinput: rasters]
+``Features`` [raster] [list]
   <put parameter description here>
 
 ``Method`` [enumeration]
@@ -303,7 +303,7 @@ Outputs
 ``Segments`` [raster]
   <put output description here>
 
-``Seed Points`` [vector]
+``Seed Points`` [vector: point]
   <put output description here>
 
 ``Borders`` [raster]

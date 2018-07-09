@@ -594,7 +594,7 @@ Description
 Parameters
 ..........
 
-``Grids to Merge`` [multipleinput: rasters]
+``Grids to Merge`` [raster] [list]
   <put parameter description here>
 
 ``Preferred data storage type`` [enumeration]

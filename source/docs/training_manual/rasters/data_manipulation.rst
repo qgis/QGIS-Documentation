@@ -32,7 +32,7 @@ environment.
 The :guilabel:`Load Raster Layer` dialog will open. The data for this project
 is in :kbd:`exercise_data/raster`.
 
-* Either load them all in separately, or hold down :kbd:`ctrl` and click on all
+* Either load them all in separately, or hold down :kbd:`Ctrl` and click on all
   four of them in turn, then open them at the same time.
 
 The first thing you'll notice is that nothing seems to be happening in your

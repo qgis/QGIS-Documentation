@@ -208,7 +208,7 @@ Parameters
 Outputs
 .......
 
-``Output Outlet Shapefile`` [vector]
+``Output Outlet Shapefile`` [vector: point]
   A point shape file defining points of interest or outlets. This file has one
   point in it for each point in the input outlet shapefile. If the original
   point was located on a stream, then the point was not moved. If the origianl
@@ -663,7 +663,7 @@ Outputs
   in the case where the delineate single watershed option was checked, the
   entire area draining to the stream network is identified with a single ID.
 
-``Stream Reach Shapefile`` [vector]
+``Stream Reach Shapefile`` [vector: line]
   This output is a polyline shapefile giving the links in a stream network. The
   columns in the attribute table are:
 

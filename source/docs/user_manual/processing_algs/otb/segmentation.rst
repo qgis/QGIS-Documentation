@@ -57,7 +57,7 @@ Parameters
 Outputs
 .......
 
-``Output Shape`` [vector]
+``Output Shape`` [vector: polygon]
   <put output description here>
 
 Console usage
@@ -218,7 +218,7 @@ Parameters
 Outputs
 .......
 
-``Output GIS vector file`` [vector]
+``Output GIS vector file`` [vector: polygon]
   <put output description here>
 
 Console usage

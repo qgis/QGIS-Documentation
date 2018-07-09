@@ -48,7 +48,7 @@ Layers Panel
 .. index::
    single: Legend
 
-The :guilabel:`Layers` panel (also enabled pressing :kbd:`Ctrl+1`) lists all
+The :guilabel:`Layers` panel (also called ``map legend``) lists all
 the layers in the project and helps you
 manage their visibility. A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
@@ -57,8 +57,8 @@ top of the legend are drawn over layers listed lower down in the legend.
 .. note:: The Z-ordering behavior can be overridden by the
    :ref:`Layer Order <layer_order>` panel.
 
-At the top of the Layers panel, a toolbar allows you to:
-
+At the top of the Layers panel that you can also enable pressing :kbd:`Ctrl+1`,
+a toolbar allows you to:
 
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
   panel on and off.
@@ -96,22 +96,54 @@ At the top of the Layers panel, a toolbar allows you to:
 Configuring map themes
 ......................
 
-The button |showMapTheme| allows you to configure **Map Themes** in the legend.
-These themes are helpful to quickly switch between different preconfigured layer 
-combinations and can also be used in print layout. 
-To create a map theme, activate the layers you want to include and configure 
-the desired layer styles. Then press the |showMapTheme| button and choose 
-:menuselection:`Add Theme...` from the drop-down menu and enter a name for the new theme.
-In the map theme it is also recorded which layers, groups or legend items that are expanded or
-collapsed. The new theme is listed at the bottom of the drop-down menu and can be restored by
-clicking on it.
+Other than quickly control the visibility of all or (de)selected layers,
+the |showMapTheme| :sup:`Manage Map Themes` button allows you to configure 
+**Map Themes** in the legend and switch from one to another.
+A map theme is a **snapshot** of the current map legend that records:
 
-The :menuselection:`Replace Theme -->` option allows you to overwrite an existing theme
-with the currently enabled layers and their styles while the 
-:menuselection:`Remove Current Theme` button deletes the active theme.
+* the layers set as visible in the :guilabel:`Layers` panel;
+* AND for each visible layer:
+  
+  * the reference to the applied :ref:`style <save_layer_property>`;
+  * the visible classes of the style ie, the layer checked node items in the
+    :guilabel:`Layers panel`. This applies to :ref:`symbologies <vector_style_menu>`
+    other than the single symbol rendering;
+  * the collapsed/expanded state of the layer node(s) and the group(s) it's placed
+    inside.
 
-All configured themes are also accessible in the print layout. This allows you
-to create a map layout based on specific themes (see :ref:`layout_main_properties`).
+To create a map theme:
+
+#. Check the layer you want to show;
+#. Configure the layer properties (symbology, diagram, labels...) and, using
+   the :menuselection:`Symbology --> Style -->` menu, click on **[Add...]** to
+   store the settings as :ref:`a new style embedded in the project
+   <manage_custom_style>`.
+   
+   .. note:: A map theme does not remember the current details of the properties;
+     only a reference to the style name is saved so whenever you apply
+     modifications (eg, change the symbology rendering) to the layer while this
+     style is enabled, the map theme is updated with new information.
+
+#. Repeat the previous steps as necessary;
+#. If applicable, expand or collapse groups or visible layers nodes in the
+   :guilabel:`Layers` panel.
+#. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
+   and **[Add Theme...]**;
+#. Enter the map theme's name and click **[OK]**. The new theme is listed in
+   the lower part of the |showMapTheme| drop-down menu.
+
+You can create as many map themes as you need: whenever the current combination
+in the map legend (visible layers, their active style, the map legend nodes)
+does not match any existing map theme contents as defined above, click on
+**[Add Theme]** for a creation or use :menuselection:`Replace Theme -->` to
+update the map theme.
+Use :menuselection:`Remove Current Theme` button to delete the active theme.
+
+Map themes are helpful to quickly switch between different preconfigured
+combinations; select a map theme in the list to restore its combination.
+All configured themes are also accessible in the print layout, allowing you to
+create a map layout based on specific themes (see :ref:`layout_main_properties`).
+
 
 Overview of the context menu of the Layers panel
 ................................................
@@ -614,9 +646,9 @@ should be displayed` checkbox. Any layer subsequently added to the map will be o
 Stopping Rendering
 ^^^^^^^^^^^^^^^^^^
 
-To stop the map drawing, press the :kbd:`ESC` key. This will halt the refresh of
+To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
 the map canvas and leave the map partially drawn. It may take a bit of time
-between pressing :kbd:`ESC` and the time the map drawing is halted.
+between pressing :kbd:`Esc` and the time the map drawing is halted.
 
 .. note::
    It is currently not possible to stop rendering --- this was disabled in the Qt4
@@ -694,7 +726,7 @@ arrow key to pan south.
 You can also use the space bar to temporarily cause mouse movements to pan
 the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
 the map display to zoom in or out following the zoom factor set. Pressing
-:kbd:`Ctrl +` or :kbd:`Ctrl -` also performs an immediate zoom in/out
+:kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out
 on the map canvas.
 
 When certain map tools are active (Identify, Measure...), you can perform a zoom by
@@ -723,7 +755,7 @@ To create a bookmark:
 
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl-B`. The Spatial Bookmark panel opens with the newly created bookmark.
+   :kbd:`Ctrl+B`. The Spatial Bookmark panel opens with the newly created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
 #. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
@@ -993,7 +1025,7 @@ moved by map position (by dragging the map marker) or by moving only the balloon
 Also the |annotation| :sup:`Move Annotation` tool allows you to move the
 balloon on the map canvas.
 
-To delete an annotation, select it and either press the :kbd:`DEL` or :kbd:`Backspace`
+To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
 button or either double-click and press the **[Delete]** button in its properties dialog.
 
 .. note::
@@ -1179,7 +1211,7 @@ For the other tools, different behaviors can be performed holding:
 
 * :kbd:`Shift`: add features to the current selection
 * :kbd:`Ctrl`: substract features from the current selection
-* :kbd:`Ctrl + Shift`: intersect with current selection, ie only keep
+* :kbd:`Ctrl+Shift`: intersect with current selection, ie only keep
   overlapping features from the current selection
 * :kbd:`Alt`: select features that are totally within the selection shape.
   Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
@@ -1307,7 +1339,7 @@ The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use:
 
 * :menuselection:`View --> Identify Features` menu,
-* or press :kbd:`Ctrl + Shift + I` (or |osx| :kbd:`Cmd + Shift + I`),
+* or press :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
 * or click the |identify| :sup:`Identify Features` icon on the Attributes toolbar.
 
 Using the Identify Features tool
@@ -1316,7 +1348,8 @@ Using the Identify Features tool
 QGIS offers two ways to identify features with the |identify|
 :sup:`Identify Features` tool:
 
-* **left click** will identify features according to the mode set in the
+* **left click** will identify features according to the :ref:`selection mask
+  <identify_selection>` and the :ref:`interaction mode <identify_mode>` set in the
   :guilabel:`Identify Results` panel
 * **right click** will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
@@ -1325,11 +1358,10 @@ QGIS offers two ways to identify features with the |identify|
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
    Uncheck the :guilabel:`Identifiable` column in :menuselection:`Project -->`
-   (or |kde| :menuselection:`Settings -->`), :menuselection:`Project
-   Properties --> Identify layers` menu in front of a layer to avoid it
+   Properties... --> Identify layers` menu next to a layer to avoid it
    being queried when using the |identify| :sup:`Identify Features` in a mode
-   other than **Current Layer**. This is a handy way to return features from only
-   layers that are of interest for you.
+   other than **Current Layer**. This is a handy way to return features from
+   only layers that are of interest for you.
 
 If you click on feature(s), the :guilabel:`Identify Results` dialog will list
 information about the clicked feature(s). The default view is a tree view where
@@ -1390,16 +1422,27 @@ default it will display three kinds of information:
 The Identify Results dialog
 ...........................
 
-At the top of the window, you have seven icons:
+At the top of the window, you have handful tools:
 
+* |formView| :sup:`Open Form` of the current feature
 * |expandTree| :sup:`Expand tree`
 * |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Default behavior` to define whether next
+* |expandNewTree| :sup:`Expand New Results by Default` to define whether next
   identified features information should be collapsed or expanded
-* |propertyItem| :sup:`View the feature form`
 * |deselectAll| :sup:`Clear Results`
 * |editCopy| :sup:`Copy selected feature to clipboard`
 * |filePrint| :sup:`Print selected HTML response`
+
+.. _identify_selection:
+
+* and selection mode to use to fetch features to identify. it can be:
+
+  * |identifyByRectangle| :sup:`Identify Features by area or single click`
+  * |identifyByPolygon| :sup:`Identify Features by Polygon`
+  * |identifyByFreehand| :sup:`Identify Features by Freehand`
+  * |identifyByRadius| :sup:`Identify Features by Radius`
+
+.. _identify_mode:
 
 At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
@@ -1418,15 +1461,15 @@ should be identified:
 .. note:: **Identify tool configuration**
 
    You can configure the identify feature in :menuselection:`Project -->
-   Project Properties` in the :guilabel:`Identify layers` tab. The table allows
-   user to select layer(s) that can be used by this tool to identify features
+   Properties...` in the :guilabel:`Identify Layers` tab. The table allows
+   you to select layer(s) whose features can be identified with by this tool
    (column :guilabel:`Identifiable`). You can also put this layer in read-only
    mode with the checkbox in the last column.
 
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
-The identify tool allows you to |checkbox|:guilabel:`Auto open a form`.
+The identify tool allows you to |checkbox|:guilabel:`Auto open form`.
 If checked, each time a single feature is identified QGIS will open a form
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
@@ -1505,9 +1548,15 @@ Note that each time you validate the layer properties dialog, the active style
 is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
-at a time. In combination with Map Themes (see :ref:`map_themes`), 
+at a time. In combination with :ref:`Map Themes <map_themes>`,
 this offers a quick and powerful way to manage complex projects without the need 
 to duplicate any layer in the map legend.
+
+.. note::
+
+  Given that whenever you apply modifications to the layer properties, changes
+  are stored in the active style, always ensure you are editing the right style
+  to avoid mistakenly alter a style used in a :ref:`map theme <map_themes>`.
 
 .. tip:: **Manage styles from layer context menu**
 
@@ -1985,9 +2034,19 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
+   :width: 1.5em
+.. |identifyByPolygon| image:: /static/common/mActionIdentifyByPolygon.png
+   :width: 1.5em
+.. |identifyByRadius| image:: /static/common/mActionIdentifyByRadius.png
+   :width: 1.5em
+.. |identifyByRectangle| image:: /static/common/mActionIdentifyByRectangle.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
@@ -2018,8 +2077,6 @@ The values presented in the varying size assistant above will set the size
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
-   :width: 1.5em
-.. |propertyItem| image:: /static/common/mActionPropertyItem.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em

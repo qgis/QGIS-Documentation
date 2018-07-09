@@ -211,7 +211,7 @@ With the automatic tracing mode, you can speed up the digitization process as
 you no longer need to manually place all the vertices during digitization:
 
 #. Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
-   :kbd:`t` key;
+   :kbd:`T` key;
 #. :ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature you
    want to trace along;
 #. Move the mouse over another vertex or segment you'd like to snap and, instead
@@ -237,9 +237,9 @@ and a negative value does the opposite.
    potentially long tracing structure preparation and large memory overhead.
    After zooming in or disabling some layers the tracing is enabled again.
 
-.. tip:: **Quickly enable or disable automatic tracing by pressing** :kbd:`t` **key**
+.. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
 
-   By pressing :kbd:`t` key, tracing can be enabled/disabled anytime even while
+   By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime even while
    digitizing one feature, so it is possible to digitize some parts of the feature
    with tracing enabled and other parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
@@ -434,7 +434,7 @@ when hovering vertices.
   hold down :kbd:`Ctrl`.
 
 * **Batch vertex selection mode**:
-  The batch selection mode can be activated by pressing :kbd:`Shift + R`.
+  The batch selection mode can be activated by pressing :kbd:`Shift+R`.
   Select a first node with one single click, and then hover **without clicking**
   another vertex. This will dynamically select all the nodes in
   between using the shortest path (for polygons).
@@ -444,7 +444,7 @@ when hovering vertices.
   .. figure:: img/vertex_batch_selection_mode.png
      :align: center
 
-     Batch vertex selection using :kbd:`Shift + R`
+     Batch vertex selection using :kbd:`Shift+R`
 
 
   Press :kbd:`Ctrl` will invert the selection, selecting the longest path
@@ -1219,19 +1219,19 @@ To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard
 shorcuts available:
 
 +----------+-------------------+-------------------------------+---------------------------------------+
-| Key      | Simple            | :kbd:`Ctrl +` or :kbd:`Alt +` | :kbd:`Shift +`                        |
+| Key      | Simple            | :kbd:`Ctrl+` or :kbd:`Alt+`   | :kbd:`Shift+`                         |
 +==========+===================+===============================+=======================================+
-| :kbd:`d` | Set distance      | Lock distance                 | \                                     |
+| :kbd:`D` | Set distance      | Lock distance                 | \                                     |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`a` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
+| :kbd:`A` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`x` | Set x coordinate  | Lock x coordinate             | Toggle relative x to last vertex      |
+| :kbd:`X` | Set x coordinate  | Lock x coordinate             | Toggle relative x to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`y` | Set y coordinate  | Lock y coordinate             | Toggle relative y to last vertex      |
+| :kbd:`Y` | Set y coordinate  | Lock y coordinate             | Toggle relative y to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`c` | Toggle construction mode                                                                  |
+| :kbd:`C` | Toggle construction mode                                                                  |
 +----------+-------------------------------------------------------------------------------------------+
-| :kbd:`p` | Toggle perpendicular and parallel modes                                                   |
+| :kbd:`P` | Toggle perpendicular and parallel modes                                                   |
 +----------+-------------------------------------------------------------------------------------------+
 
 Absolute reference digitizing
@@ -1244,11 +1244,11 @@ For example, to add a new feature to a polygonal layer, click the
 |capturePolygon| button. You can choose the X and Y coordinates where you want
 to start editing the feature, then:
 
-- Click the :guilabel:`x` text box (or use the :kbd:`x` keyboard shortcuts).
+- Click the :guilabel:`x` text box (or use the :kbd:`X` keyboard shortcut).
 - Type the X coordinate value you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the X axis on the map
   canvas.
-- Click the :guilabel:`y` text box (or use the :kbd:`y` keyboard shortcuts).
+- Click the :guilabel:`y` text box (or use the :kbd:`Y` keyboard shortcut).
 - Type the Y coordinate value you want and press :kbd:`Enter` or click the
   |locked| button to their right to lock the mouse to the Y axis on the map
   canvas.
@@ -1266,7 +1266,7 @@ You can continue digitizing by free hand, adding a new pair of coordinates, or
 you can type the segment's **length** (distance) and **angle**.
 
 If you want to draw a segment of a given length, click the :guilabel:`d
-(distance)` text box (keyboard shortcut :kbd:`d`), type the distance value (in
+(distance)` text box (keyboard shortcut :kbd:`D`), type the distance value (in
 map units) and press :kbd:`Enter` or click the |locked| button on the right to
 lock the mouse in the map canvas to the length of the segment.
 In the map canvas, the clicked point is surrounded by a circle whose radius is
@@ -1278,7 +1278,7 @@ the value entered in the distance text box.
    Fixed length segment
 
 Finally, you can also choose the angle of the segment. As described before ,
-click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`a`), type the
+click the :guilabel:`a (angle)` text box (keyboard shortcut :kbd:`A`), type the
 angle value (in degrees), and press :kbd:`Enter` or click the |locked| buttons
 on the right to lock it. In this way the segment will follow the desired angle:
 
@@ -1294,12 +1294,12 @@ Instead of using absolute values of angles or coordinates, you can also use
 values relative to the last digitized vertex or segment.
 
 For angles, you can click the |delta| button on the left of the :guilabel:`a`
-text box (or press :kbd:`Shift + a`) to toggle relative angles to the previous
+text box (or press :kbd:`Shift+A`) to toggle relative angles to the previous
 segment. With that option on, angles are measured between the last segment
 and the mouse pointer.
 
 For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
-:guilabel:`y` text boxes (or press :kbd:`Shift + x` or :kbd:`Shift + y`) to
+:guilabel:`y` text boxes (or press :kbd:`Shift+X` or :kbd:`Shift+Y`) to
 toggle relative coordinates to the previous vertex. With these options on,
 coordinates measurement will consider the last vertex to be the x and y axes
 origin.
@@ -1321,7 +1321,7 @@ All the tools described above can be combined with the |cadPerpendicular|
 allow drawing segments perfectly perpendicular or parallel to another segment.
 
 To draw a *perpendicular* segment, during the editing click the
-|cadPerpendicular| :sup:`Perpendicular` icon (keyboard shortcut :kbd:`p`) to
+|cadPerpendicular| :sup:`Perpendicular` icon (keyboard shortcut :kbd:`P`) to
 activate it. Before drawing the perpendicular line,
 click on the segment of an existing feature that you want to be perpendicular
 to (the line of the existing feature will be colored in light orange); you
@@ -1333,7 +1333,7 @@ should see a blue dotted line where your feature will be snapped:
    Perpendicular digitizing
 
 To draw a *parallel* feature, the steps are the same: click on the
-|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`p` twice), click on
+|cadParallel| :sup:`Parallel` icon (keyboard shortcut :kbd:`P` twice), click on
 the segment you want to use as reference and start drawing your feature:
 
 .. figure:: img/advanced_digitizing_parallel.png
@@ -1348,7 +1348,7 @@ Construction mode
 -----------------
 
 You can enable and disable *construction* mode by clicking on the
-|cadConstruction| :sup:`Construction` icon or with the :kbd:`c` keyboard
+|cadConstruction| :sup:`Construction` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or x and y relative values.
@@ -1360,10 +1360,10 @@ With an existing point in the map canvas and the snapping mode correctly
 activated, you can easily draw other points at given distances and angles from
 it. In addition to the |cad| button, you have to activate also the
 *construction* mode by clicking the |cadConstruction| :sup:`Construction`
-icon or with the :kbd:`c` keyboard shortcut.
+icon or with the :kbd:`C` keyboard shortcut.
 
 Click next to the point from which you want to calculate the distance and click
-on the :guilabel:`d` box (:kbd:`d` shortcut) type the desired distance and press
+on the :guilabel:`d` box (:kbd:`D` shortcut) type the desired distance and press
 :kbd:`Enter` to lock the mouse position in the map canvas:
 
 .. figure:: img/advanced_digitizing_distance_point.png
@@ -1371,17 +1371,17 @@ on the :guilabel:`d` box (:kbd:`d` shortcut) type the desired distance and press
 
    Distance from point
 
-Before adding the new point, press :kbd:`c` to exit the construction mode.
+Before adding the new point, press :kbd:`C` to exit the construction mode.
 Now, you can click on the map canvas, and the point will be placed at
 the distance entered.
 
 You can also use the angle constraint to, for example, create another point at
 the same distance of the original one, but at a particular angle from the newly
 added point. Click the |cadConstruction| :sup:`Construction` icon or with the
-:kbd:`c` keyboard shortcut to enter construction mode. Click the recently added
+:kbd:`C` keyboard shortcut to enter construction mode. Click the recently added
 point, and then the other one to set a direction segment. Then, click on the
-:guilabel:`d` text box (:kbd:`d` shortcut) type the desired distance and press
-:kbd:`Enter`. Click the :guilabel:`a` text box (:kbd:`a` shortcut) type the
+:guilabel:`d` text box (:kbd:`D` shortcut) type the desired distance and press
+:kbd:`Enter`. Click the :guilabel:`a` text box (:kbd:`A` shortcut) type the
 angle you want and press :kbd:`Enter`. The mouse position will be locked both in
 distance and angle.
 
@@ -1390,7 +1390,7 @@ distance and angle.
 
    Distance and angle from points
 
-Before adding the new point, press :kbd:`c` to exit the construction mode. Now,
+Before adding the new point, press :kbd:`C` to exit the construction mode. Now,
 you can click on the map canvas, and the point will be placed at the distance
 and angle entered. Repeating the process, several points can be added.
 

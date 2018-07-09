@@ -785,7 +785,7 @@ Parameters
 Outputs
 .......
 
-``Output Detected lines`` [vector]
+``Output Detected lines`` [vector: line]
   <put output description here>
 
 Console usage

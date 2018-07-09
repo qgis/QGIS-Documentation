@@ -379,7 +379,7 @@ Parameters
 
   Default: *0.1*
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Grid Interpolation`` [enumeration]
@@ -524,7 +524,7 @@ Parameters
 
   Default: *0.5*
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Grid Interpolation`` [enumeration]

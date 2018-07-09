@@ -140,7 +140,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Operator Type`` [enumeration]
@@ -181,7 +181,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Operator Type`` [enumeration]
@@ -527,7 +527,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 Outputs
@@ -557,7 +557,7 @@ Creates a new grid layer as the result of the sum of two or more grid layers.
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   Grid layers to sum
 
 Outputs
@@ -708,10 +708,10 @@ Description
 Parameters
 ..........
 
-``Dependent Variables`` [multipleinput: rasters]
+``Dependent Variables`` [raster] [list]
   <put parameter description here>
 
-``Independent Variable (per Grid and Cell)`` [multipleinput: rasters]
+``Independent Variable (per Grid and Cell)`` [raster] [list]
   Optional.
 
   <put parameter description here>
@@ -908,7 +908,7 @@ Parameters
 ``Main input layer`` [raster]
   <put parameter description here>
 
-``Additional layers`` [multipleinput: rasters]
+``Additional layers`` [raster] [list]
   Optional.
 
   <put parameter description here>

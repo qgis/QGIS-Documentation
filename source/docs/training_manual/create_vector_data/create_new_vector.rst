@@ -199,7 +199,7 @@ You can use:
   miss-clicked,
 * :guilabel:`Delete Selected` to get rid of the feature entirely so you can try
   again, and
-* the :menuselection:`Edit --> Undo` menu item or the :kbd:`ctrl + z` keyboard
+* the :menuselection:`Edit --> Undo` menu item or the :kbd:`Ctrl+Z` keyboard
   shortcut to undo mistakes.
 
 |basic| |TY|

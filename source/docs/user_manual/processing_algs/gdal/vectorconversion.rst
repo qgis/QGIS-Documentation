@@ -66,7 +66,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: any]
   Output vector layer.
 
 

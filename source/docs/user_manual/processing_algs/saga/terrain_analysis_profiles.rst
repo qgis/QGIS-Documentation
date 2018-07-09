@@ -46,7 +46,7 @@ Parameters
 Outputs
 .......
 
-``Cross Profiles`` [vector]
+``Cross Profiles`` [vector: line]
   <put output description here>
 
 Console usage
@@ -112,7 +112,7 @@ Parameters
 ``DEM`` [raster]
   <put parameter description here>
 
-``Values`` [multipleinput: rasters]
+``Values`` [raster] [list]
   Optional.
 
   <put parameter description here>
@@ -131,10 +131,10 @@ Parameters
 Outputs
 .......
 
-``Profiles`` [vector]
+``Profile`` [vector: line]
   <put output description here>
 
-``Profiles`` [vector]
+``Profiles`` [vector: line]
   <put output description here>
 
 Console usage

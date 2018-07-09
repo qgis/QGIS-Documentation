@@ -22,7 +22,7 @@ Description
 Parameters
 ..........
 
-``Input images list`` [multipleinput: rasters]
+``Input images list`` [raster] [list]
   <put parameter description here>
 
 ``Couples list`` [string]

@@ -102,7 +102,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Method`` [enumeration]
@@ -161,7 +161,7 @@ Description
 Parameters
 ..........
 
-``Grids`` [multipleinput: rasters]
+``Grids`` [raster] [list]
   <put parameter description here>
 
 ``Training Areas`` [vector: polygon]
