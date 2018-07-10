@@ -243,7 +243,8 @@ Outputs
 
 See also
 ........
-:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`
+:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
+:ref:`qgisbufferbym`
 
 
 .. _qgiscentroids:
@@ -516,6 +517,60 @@ Output
 
 ``Extent``
   Final extent of the layer
+
+
+.. _qgiswedgebuffers:
+
+Create wedge buffers |32|
+-------------------------
+Creates wedge shaped buffers from input points.
+
+.. figure:: img/wedge_buffers.png
+   :align: center
+
+   Wedge buffers
+
+The native output from this algorithm are CurvePolygon geometries, but these may
+be automatically segmentized to Polygons depending on the output format.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Input point vector layer
+
+``Azimuth (degrees from North)`` [number |dataDefined|]
+  Angle (in degrees) as the middle value of the wedge
+
+``Wedge width (in degrees)`` [number |dataDefined|]
+  Width (in degrees) of the buffer. The wedge will extend to half of the angular
+  width either side of the azimuth direction.
+
+  .. figure:: img/wedge_buffers_azimuth_width.png
+    :align: center
+
+    Azimuth and width values of the wedge buffer
+
+``Outer radius`` [number |dataDefined|]
+  The outer *size* (length) of the wedge: the size is meant from the source point
+  to the edge of the wedge shape.
+
+``Inner radius`` [number |dataDefined|]
+  Optional
+
+  Inner radius value. If 0 the wedge will attached to the source point.
+
+  Default: *0.0*
+
+Output
+......
+
+``Buffers`` [vector: polygon]
+  Wedge buffer polygon vector layer
+
+See also
+........
+:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`, :ref:`qgisbufferbym`
 
 
 .. _qgisdelaunaytriangulation:
@@ -1791,7 +1846,7 @@ Parameters
   Optional
 
   X,Y coordinates of the point to rotate the features around.
-  If not set the rotation occurs around each feature's centroid. 
+  If not set the rotation occurs around each feature's centroid.
 
 Outputs
 .......
@@ -2228,6 +2283,66 @@ Outputs
   Output vector with *sub-parts*.
 
 
+.. _qgiswapxy:
+
+Swap X and Y coordinates |32|
+-----------------------------
+Switches the X and Y coordinate values in input geometries.
+
+It can be used to repair geometries which have accidentally had their latitude
+and longitude values reversed.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer to swap
+
+Outputs
+.......
+
+``Swapped`` [vector: any]
+  Output swapped vector layer
+
+
+.. _qgistaperedbuffer:
+
+Tapered buffers |32|
+--------------------
+Creates tapered buffer along line geometries, using a specified start and end
+buffer diameter.
+
+.. figure:: img/tapered_buffer.png
+   :align: center
+
+   Tapered buffer example
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Input line vector layer.
+
+``Start width`` [number |dataDefined|]
+  Represents the radius of the buffer applied at the start point of the line feature.
+
+``End width`` [number |dataDefined|]
+  Represents the radius of the buffer applied at the end point of the line feature.
+
+``Segments`` [number |dataDefined|]
+  Number of the buffer segments
+
+Output
+......
+
+``Buffered`` [vector: polygon]
+  Variable buffer polygon layer
+
+See also
+........
+:ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
+
+
 .. _qgistransect:
 
 Transect
@@ -2285,8 +2400,8 @@ Outputs
 
 .. _qgistranslategeometry:
 
-Translate geometry
-------------------
+Translate
+---------
 Creates an offset of the source layer depending on the parameters chosen.
 
 .. figure:: img/translate_geometry.png
@@ -2315,6 +2430,40 @@ Outputs
 
 ``Translated`` [vector: any]
   Translated (offset) vector layer
+
+
+.. _qgisbufferbym:
+
+Variable width buffer (by m-value) |32|
+---------------------------------------
+Creates variable width buffers along lines, using the m-value of the line geometries
+as the diameter of the buffer at each vertex.
+
+.. figure:: img/variable_buffer_m.png
+   :align: center
+
+   Variable buffer example
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer in input
+
+``Segments`` [number]
+  Number of the buffer segments. It can be a unique value (same value for all the
+  features) or it can be taken from features data (different value depending
+  on the feature attribute).
+
+Output
+......
+
+``Buffered`` [vector: polygon]
+  Variable buffer polygon layer
+
+See also
+........
+:ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
 
 
 .. _qgisvoronoipolygons:
@@ -2360,5 +2509,7 @@ Outputs
 
 .. |32| replace:: :kbd:`NEW in 3.2`
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
