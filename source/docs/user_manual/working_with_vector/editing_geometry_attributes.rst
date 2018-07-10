@@ -796,22 +796,45 @@ Feature(s)` icon.
 Simplify Feature
 ----------------
 
-The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to reduce the
-number of vertices of a feature, as long as the geometry remains valid. With the
-tool you can also simplify many features at once or multi-part features.
+The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to interactively
+reshape a line or polygon geometry by reducing or densifying the number of
+vertices, as long as the geometry remains valid:
 
-First, click on the feature or drag a rectangle over the features. A dialog where
-you can define a tolerance in ``map units``, ``layer units`` or ``pixels`` pops up
-and a colored and simplified copy of the feature(s), using the given tolerance,
-appears over them. QGIS calculates the amount of vertices that can be deleted
-while maintaining the geometry.
-The higher the tolerance is the more vertices can be deleted. When the expected
-geometry fits your needs just click the **[OK]** button.
-The tolerance you used will be saved when leaving a project or when leaving an edit session.
-So you can go back to the same tolerance the next time when simplifying a feature.
+#. Select the |simplifyFeatures| :sup:`Simplify Feature` tool;
+#. Click on the feature or drag a rectangle over the features;
+#. A dialog pops up allowing you to define the :guilabel:`Method` to apply, ie
+   whether you would like to:
 
-To abort feature simplification, you need to click on |simplifyFeatures|
-:sup:`Simplify Feature` icon.
+   * :ref:`simplify the geometry <qgissimplifygeometries>`, meaning less vertices
+     than the original. Available methods are ``Simplify by distance``, ``Simplify
+     by snapping to grid`` or ``simplify by area (Visvalingam)``. You'd then need
+     to indicate the value of :guilabel:`Tolerance` in ``Layer units``, ``Pixels``
+     or ``map units`` to use for simplification. The higher the tolerance is the
+     more vertices can be deleted.
+
+     .. TODO: it could be nice to have slight details on these methods and
+        what the tolerance actually represents...
+
+   * or :ref:`densify the geometries <qgissmoothgeometry>` with new vertices
+     thanks to the ``Smooth`` option: for each existing vertex, two vertices are
+     placed on each of the segments originated from it, at an :guilabel:`Offset`
+     distance representing the percentage of the segment length.
+     You can also set the number of :guilabel:`Iterations` the placement would
+     be processed: the more iterations, the more vertices and smoother is the
+     feature.
+
+   Settings that you used will be saved when leaving a project or an edit
+   session. So you can go back to the same parameters the next time you
+   simplify a feature.
+#. A summary of the modifications that would apply is shown at the bottom of the
+   dialog, listing number of features and number of vertices (before and after
+   the operation and the ratio the change represents).
+   Also, in the map canvas, the expected geometry is diplayed over the existing
+   one, using the rubberband color.
+#. When the expected geometry fits your needs, click **[OK]** to apply the
+   modification.
+   Otherwise, to abort the operation, you can either press **[Cancel]** or
+   right-click in the map canvas.
 
 .. note:: Unlike the feature simplification option in :menuselection:`Settings -->
    Options --> Rendering` menu which simplifies the geometry just for rendering,
