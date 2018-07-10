@@ -2283,7 +2283,7 @@ Outputs
   Output vector with *sub-parts*.
 
 
-.. _qgiswapxy:
+.. _qgisswapxy:
 
 Swap X and Y coordinates |32|
 -----------------------------
