@@ -155,29 +155,68 @@ Outputs
 
     - Value: unique value of each pixel
     - Pixel count: count of how many pixels belong to each value
-    - Area (m :sup:`2`): square meters of the area for each pixel class
+    - Area (m\ :sup:`2`): square meters of the area for each pixel class
 
+
+.. _qgiszonalhistogram:
+
+Zonal histogram |32|
+--------------------
+Appends fields representing counts of each unique value from a raster layer contained
+within polygon features.
+
+The output layer attribute table will have as many fields as the unique values
+of the raster layer that intersects the polygon(s).
+
+.. figure:: img/raster_histogram.png
+  :align: center
+
+  Raster layer histogram example
+
+
+Parameters
+..........
+
+``Raster layer`` [raster]
+  Raster layer in input
+
+``Band number`` [raster band]
+  If the raster is multiband, choose the band you want to calculate the statistics
+
+``Vector layer containing the zones`` [vector: polygon]
+  Overlaying vector layer where unique raster values will be appended
+
+``Output column prefix`` [string]
+  Optional.
+
+  Prefix string for output columns
+
+Output
+......
+
+``Output zones`` [vector: polygon]
+  Output polygon vector layer with unique count of raster values
 
 .. _qgiszonalstatistics:
 
-Raster zonal statistics
------------------------
+Zonal statistics
+----------------
 Calculates statistics of a raster layer for each feature of an overlapping polygon
 vector layer.
 
-.. warning:: no new output file will be created. The algorithm adds new columns
+.. warning:: No new output file will be created. The algorithm adds new columns
   to the source vector layer
 
 Parameters
 ..........
 
 ``Raster layer`` [raster]
- Raster layer in input
+  Raster layer in input
 
 ``Band number`` [raster band]
- If the raster is multiband choose the band you want to calculate the statistics
+  If the raster is multiband choose the band you want to calculate the statistics
 
- Default: *Band 1 (Gray)*
+  Default: *Band 1 (Gray)*
 
 ``Vector layer containing zones`` [vector: polygon]
   Polygon vector layer
@@ -211,4 +250,5 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |32| replace:: :kbd:`NEW in 3.2`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
