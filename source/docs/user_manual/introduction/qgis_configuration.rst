@@ -11,15 +11,22 @@ QGIS Configuration
    .. contents::
       :local:
 
-QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
-between Options, Project Properties and Customization.
+QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
+provides different tools to:
 
-.. note:: QGIS follows desktop guidelines for the location of options and project
-   properties item. Consequently related to the OS you are using, location of some
-   of items described below could be in the :menuselection:`Project`
-   or the :menuselection:`Settings` menu.
+* set global :ref:`options <gui_options>` to apply in different areas of the
+  software. These preferences are applied by default whenever you open a new
+  project and can be overridden during each QGIS session by the :ref:`project
+  properties <project_properties>` (accessible under :menuselection:`Project`
+  menu);
+* configure the :ref:`application interface <sec_customization>` as well as
+  :ref:`keyboard shortcuts <shortcuts>`;
+* create and manage :ref:`symbols or color <vector_style_manager>` or custom
+  :ref:`coordinate reference systems <sec_custom_projections>`.
 
-..  FIXME: please add more introduction here
+Besides the global options and the local project properties, QGIS allows to
+store different combinations of those settings as :guilabel:`User profiles`.
+
 
 .. index:: Options, Configuration
 .. _gui_options:
@@ -414,7 +421,7 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   'Yards', 'Miles', 'Nautical Miles', 'Degrees' or 'Map Units' )
 * :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
-  'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
+  'Acres', 'Square nautical miles', 'Square degrees' or 'Map Units')
 * :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc', 'Seconds of arc' or 'Turns/revolutions')
 
@@ -698,8 +705,8 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
-Processing
-----------
+Processing Settings
+-------------------
 
 The |processing| :guilabel:`Processing` tab provides you with general settings
 of tools and data providers that are used in the QGIS Processing framework.
