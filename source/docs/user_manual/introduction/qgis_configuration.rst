@@ -735,6 +735,9 @@ Project Properties`, you can set project-specific options.
 The project-specific options overwrite their equivalent in the :guilabel:`Options`
 dialog described above.
 
+General Properties
+------------------
+
 * In the :guilabel:`General` tab, the **general settings** let you:
 
   * give a title to the project beside the project file path
@@ -778,17 +781,26 @@ dialog described above.
 
    General tab of Project Properties dialog
 
+Metadata Properties
+-------------------
+
 * The :guilabel:`Metadata` tab allows detailed metadata to be defined,
   including (among the others): author, creation date, language, abstracts, 
   categories, keywords, contact details, links, history. There is also a
   validation functionality that checks if specific fields were filled, anyway
   this is not enforced. See :ref:`vector layer metadata properties
   <vectormetadatamenu>` for some details.
-  
+
+CRS Properties
+--------------
+
 * The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS. For more information
   on projection's handling in QGIS, please read :ref:`label_projections` section.
+
+Default Styles Properties
+-------------------------
 
 * The :guilabel:`Default Styles` tab lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
@@ -798,6 +810,9 @@ dialog described above.
   running project. You can find the added colors in the drop down menu of the color dialog
   window present in each renderer.
 
+Identify Layers Properties
+--------------------------
+
 * With the :guilabel:`Identify layers` tab, you set (or disable) which
   layers will respond to the :ref:`identify tool <identify>`. By default, layers
   are set queryable.
@@ -806,6 +821,9 @@ dialog described above.
   it can not be edited by the user, regardless of the data provider's
   capabilities. Although this is a weak protection, it remains a quick and handy
   configuration to avoid end-users modifying data when working with file-based layers.
+
+Data Sources Properties
+-----------------------
 
 * In the :guilabel:`Data Sources` tab, you can:
 
@@ -832,12 +850,18 @@ dialog described above.
   * Define what layers are defined as **required**. Checked layers in this list 
     are protected from inadvertent removal from the project.
 
+Relations Properties
+--------------------
+
 * The :guilabel:`Relations` tab is used to define 1:n relations. The relations
   are defined in the project properties dialog. Once relations exist for a layer,
   a new user interface element in the form view (e.g. when identifying a feature
   and opening its form) will list the related entities. This provides a powerful
   way to express e.g. the inspection history on a length of pipeline or road segment.
   You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+
+Variables Properties
+--------------------
 
 * The :guilabel:`Variables` tab lists all the variables available at
   the project's level (which includes all global variables). Besides, it
@@ -847,6 +871,9 @@ dialog described above.
   remove it.
   More information on variables usage in the General Tools
   :ref:`general_tools_variables` section.
+
+Macros Properties
+-----------------
 
 * The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
   only three macros are available: ``openProject()``, ``saveProject()`` and
@@ -858,6 +885,9 @@ dialog described above.
    :align: center
 
    Macro settings in QGIS
+
+QGIS Server Properties
+----------------------
 
 * The tab :guilabel:`QGIS Server` allows you to configure your project in order
   to publish it online. Here you can define information about the QGIS
