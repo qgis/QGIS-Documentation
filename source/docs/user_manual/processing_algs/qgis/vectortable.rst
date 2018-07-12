@@ -296,8 +296,10 @@ Parameters
 ``Input layer`` [vector: any]
   Layer to edit the attribute table structure
 
-``Fields mapping`` [fieldsmapping]
-  Output fields definitions. The embedded table lists all the fields of the source
+``Fields mapping`` [list]
+  List of output fields  with their definitions.
+
+  The embedded table lists all the fields of the source
   layer and allows you to edit them:
 
   * click on the |newAttribute| button to create a new field
@@ -305,9 +307,27 @@ Parameters
   * use |arrowUp| and |arrowDown| to change the field order
   * click on |clearText| to reset to the default view
 
+  For each of the fields you'd like to reuse, you need to
+  fill following options:
+
+  ``Source expression`` [expression]
+    Represents the field or an expression from the input layer.
+
+  ``Field name`` [string]
+    Represents the name of the field in the output layer.
+    By default input field name is kept.
+
+  ``Type`` [enumeration]
+    Sets the data type to apply to the output field.
+
+  ``Length`` [number]
+    Represents the length of the expected output field.
+
+  ``Precision`` [number]
+    Represents the precision of the expected output field.
 
 ``Load fields from layer`` [vector: any]
-  Load fields from another vector layer to update the field list
+  Load fields from another vector layer to update the field list.
 
 Output
 ......
