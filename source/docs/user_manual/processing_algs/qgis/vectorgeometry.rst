@@ -106,7 +106,7 @@ Parameters
     Default: *concatenate* (for string data type), *sum* (for numeric data type)
 
   ``Delimiter`` [string]
-    Text string to separate values to aggregate, for example in case of concatenation.
+    Text string to separate aggregated values, for example in case of concatenation.
 
     Default: *,*
 
