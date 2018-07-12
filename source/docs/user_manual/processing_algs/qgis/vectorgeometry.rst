@@ -83,46 +83,45 @@ Parameters
   Default: *NULL*
 
 ``Aggregates`` [list]
-  Lists the fields in the output layer with their definitions.
+  List of the fields in the output layer with their definitions.
   
   By default, the embedded table lists all the fields of the source
   layer and allows you to edit them:
 
-  * click on the |newAttribute| button to create a new field
-  * click on the |deleteAttribute| to remove a field
-  * use |arrowUp| and |arrowDown| to change the field order
-  * click on |clearText| to reset to the default view
+  * click the |newAttribute| button to create a new field
+  * click the |deleteAttribute| to remove a field
+  * use |arrowUp| and |arrowDown| to change the selected field order
+  * click |clearText| to reset to the default view
 
   For each of the fields you'd like to retrieve information from, you need to
-  fill following options:
+  fill the following options:
 
   ``Input expression`` [expression]
-    Represents a field or an expression from the input layer.
+    Field or expression from the input layer.
 
   ``Aggregate function`` [enumeration]
-    The :ref:`function <aggregates_function>` to apply to the input expression
-    in order to return aggregated value.
+    :ref:`Function <aggregates_function>` to use on the input expression
+    to return the aggregated value.
 
     Default: *concatenate* (for string data type), *sum* (for numeric data type)
 
   ``Delimiter`` [string]
-    Represents a text to separate values to aggregate, for example in case of
-    concatenation.
+    Text string to separate values to aggregate, for example in case of concatenation.
 
     Default: *,*
 
   ``Output field name`` [string]
-    Represents the name of the aggregated field in the output layer.
+    Name of the aggregated field in the output layer.
     By default input field name is kept.
 
   ``Type`` [enumeration]
-    Sets the data type to apply to the output field.
+    Data type of the output field.
 
   ``Length`` [number]
-    Represents the length of the expected output field.
+    Length of the output field.
 
   ``Precision`` [number]
-    Represents the precision of the expected output field.
+    Precision of the output field.
 
 ``Load fields from layer`` [vector: any]
   You can also load the fields from another layer and use these fields for the
