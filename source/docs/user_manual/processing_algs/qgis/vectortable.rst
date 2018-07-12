@@ -311,7 +311,7 @@ Parameters
   fill the following options:
 
   ``Source expression`` [expression]
-    Field or an expression from the input layer.
+    Field or expression from the input layer.
 
   ``Field name`` [string]
     Name of the field in the output layer.
@@ -324,7 +324,7 @@ Parameters
     Length of the output field.
 
   ``Precision`` [number]
-    Precision of the expected output field.
+    Precision of the output field.
 
 ``Load fields from layer`` [vector: any]
   Load fields from another vector layer to update the field list.
