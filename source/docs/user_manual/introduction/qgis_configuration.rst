@@ -188,30 +188,30 @@ or when a layer without a CRS is loaded.
 
 In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
 whenever you use layers with different coordinates system, QGIS transparently
-reprojects their rendering to the project CRS. The :guilabel:`Default datum
+reprojects them while rendering to the project CRS. The :guilabel:`Default datum
 transformations` group allows you to configure/customize the transformation
 settings. You can:
 
 .. question: is it the project crs that is used or the first loaded layer's?
 
-* |checkbox| :guilabel:`Ask for datum transformation if several are available`,
-  prompting a message so that you choose the appropriate transformation;
+* |checkbox| :guilabel:`Ask for datum transformation if several are available`:
+  When more than one appropriate datum transformation exists for a
+  source/destination CRS combination, a dialog will automatically be opened
+  prompting users to choose which of these datum transformations to use for
+  the project;
 * also predefine a list of the appropriate default transformations to use
-  when loading layers to projects.
-
-.. is this also used when i save as a layer from a CRS to another?
+  when loading layers to projects or reprojecting a layer.
 
   Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
   dialog. Then:
 
   #. indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
-     or the |crs| :sup:`Select CRS` widget
-  #. likewise, provide the :guilabel:`Destination CRS`
-  #. a list of all the available transformations from source to destination is
-     built in the table and clicking on each row shows details on the settings
+     or the |setProjection| :sup:`Select CRS` widget;
+  #. likewise, provide the :guilabel:`Destination CRS`;
+  #. Depending on the transform grid files (based on GDAL and PROJ version
+     installed on your system), a list of available transformations from source to
+     destination is built in the table. Clicking a row shows details on the settings
      applied (epsg code, accuracy of the transform, number of stations involved...).
-
-.. any technical details on where this list is pulled from?
 
      You can choose to only display current valid transformations by checking
      the |checkbox| :guilabel:`Hide deprecated` option.
@@ -1020,6 +1020,8 @@ and **[Load]** them into another QGIS installation.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
