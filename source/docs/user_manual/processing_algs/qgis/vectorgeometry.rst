@@ -62,7 +62,7 @@ Features for which ``group by`` expression returns the same value are grouped to
 It is possible to group all source features together using constant value in ``group
 by`` parameter, example: NULL.
 
-It is also possible to group features using multiple fields using Array function,
+It is also possible to group features by multiple fields using Array function,
 example: Array("Field1", "Field2").
 
 Geometries (if present) are combined into one multipart geometry for each group.
@@ -82,9 +82,47 @@ Parameters
 
   Default: *NULL*
 
-``Aggregates`` [fieldsmapping]
-  Summary of all fields of the source layer, aggregation function available,
-  delimiter and output field name
+``Aggregates`` [list]
+  Lists the fields in the output layer with their definitions.
+  
+  By default, the embedded table lists all the fields of the source
+  layer and allows you to edit them:
+
+  * click on the |newAttribute| button to create a new field
+  * click on the |deleteAttribute| to remove a field
+  * use |arrowUp| and |arrowDown| to change the field order
+  * click on |clearText| to reset to the default view
+
+  For each of the fields you'd like to retrieve information from, you need to
+  fill following options:
+
+  ``Input expression`` [expression]
+    Represents a field or an expression from the input layer.
+
+  ``Aggregate function`` [enumeration]
+    The :ref:`function <aggregates_function>` to apply to the input expression
+    in order to return aggregated value.
+
+    Default: *concatenate* (for string data type), *sum* (for numeric data type)
+
+  ``Delimiter`` [string]
+    Represents a text to separate values to aggregate, for example in case of
+    concatenation.
+
+    Default: *,*
+
+  ``Output field name`` [string]
+    Represents the name of the aggregated field in the output layer.
+    By default input field name is kept.
+
+  ``Type`` [enumeration]
+    Sets the data type to apply to the output field.
+
+  ``Length`` [number]
+    Represents the length of the expected output field.
+
+  ``Precision`` [number]
+    Represents the precision of the expected output field.
 
 ``Load fields from layer`` [vector: any]
   You can also load the fields from another layer and use these fields for the
@@ -2508,8 +2546,18 @@ Outputs
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
-.. |identify| image:: /static/common/mActionIdentify.png
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
