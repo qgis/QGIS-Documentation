@@ -735,41 +735,44 @@ Project Properties`, you can set project-specific options.
 The project-specific options overwrite their equivalent in the :guilabel:`Options`
 dialog described above.
 
-* In the :guilabel:`General` tab, the **general settings** let you:
+General Properties
+------------------
 
-  * give a title to the project beside the project file path
-  * choose the color to use for features when they are selected
-  * choose the background color: the color to use for the map canvas
-  * set whether the path to layers in the project should be saved as absolute
-    (full) or as relative to the project file location. You may prefer
-    relative path when both layers and project files can be moved or shared
-    or if the project is accessed from computers on different platforms.
-  * choose to avoid artifacts when project is rendered as map tiles. Note that
-    checking this option can lead to performance degradation.
+In the :guilabel:`General` tab, the **general settings** let you:
 
-  Calculating areas and distances is a common need in GIS. However, these values
-  are really tied to the underlying projection settings. The **Measurements**
-  frame lets you control these parameters. You can indeed choose:
+* give a title to the project beside the project file path
+* choose the color to use for features when they are selected
+* choose the background color: the color to use for the map canvas
+* set whether the path to layers in the project should be saved as absolute
+  (full) or as relative to the project file location. You may prefer
+  relative path when both layers and project files can be moved or shared
+  or if the project is accessed from computers on different platforms.
+* choose to avoid artifacts when project is rendered as map tiles. Note that
+  checking this option can lead to performance degradation.
 
-  * the ellipsoid to use: it can be an existing one, a custom one
-    (you'll need to set values of the semi-major and semi-minor axis)
-    or None/Planimetric.
-  * the :guilabel:`units for distance measurements` for length and perimeter and
-    the :guilabel:`units for area measurements`. These settings, which default
-    to the units set in QGIS options but then overrides it for the current project,
-    are used in:
+Calculating areas and distances is a common need in GIS. However, these values
+are really tied to the underlying projection settings. The **Measurements**
+frame lets you control these parameters. You can indeed choose:
 
-    * Attribute table field update bar
-    * Field calculator calculations
-    * Identify tool derived length, perimeter and area values
-    * Default unit shown in measure dialog
+* the ellipsoid to use: it can be an existing one, a custom one
+  (you'll need to set values of the semi-major and semi-minor axis)
+  or None/Planimetric.
+* the :guilabel:`units for distance measurements` for length and perimeter and
+  the :guilabel:`units for area measurements`. These settings, which default
+  to the units set in QGIS options but then overrides it for the current project,
+  are used in:
 
-  The **Coordinate display** allows you to choose and customize the format of units
-  to use to display the mouse coordinate in the status bar and the derived coordinates
-  shown via the identify tool.
+  * Attribute table field update bar
+  * Field calculator calculations
+  * Identify tool derived length, perimeter and area values
+  * Default unit shown in measure dialog
 
-  Finally, you can define a **project scale** list, which overrides the global
-  predefined scales.
+The **Coordinate display** allows you to choose and customize the format of units
+to use to display the mouse coordinate in the status bar and the derived coordinates
+shown via the identify tool.
+
+Finally, you can define a **project scale** list, which overrides the global
+predefined scales.
 
 .. _figure_general_tab:
 
@@ -778,79 +781,103 @@ dialog described above.
 
    General tab of Project Properties dialog
 
-* The :guilabel:`Metadata` tab allows detailed metadata to be defined,
-  including (among the others): author, creation date, language, abstracts, 
-  categories, keywords, contact details, links, history. There is also a
-  validation functionality that checks if specific fields were filled, anyway
-  this is not enforced. See :ref:`vector layer metadata properties
-  <vectormetadatamenu>` for some details.
-  
-* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
-  System for this project, and to enable on-the-fly re-projection of raster and
-  vector layers when displaying layers from a different CRS. For more information
-  on projection's handling in QGIS, please read :ref:`label_projections` section.
+Metadata Properties
+-------------------
 
-* The :guilabel:`Default Styles` tab lets you control how new layers will be
-  drawn when they do not have an existing :file:`.qml` style defined. You can
-  also set the default transparency level for new layers and whether symbols
-  should have random colors assigned to them.
-  There is also an additional section where you can define specific colors for the
-  running project. You can find the added colors in the drop down menu of the color dialog
-  window present in each renderer.
+The :guilabel:`Metadata` tab allows detailed metadata to be defined,
+including (among the others): author, creation date, language, abstracts,
+categories, keywords, contact details, links, history. There is also a
+validation functionality that checks if specific fields were filled, anyway
+this is not enforced. See :ref:`vector layer metadata properties
+<vectormetadatamenu>` for some details.
 
-* With the :guilabel:`Identify layers` tab, you set (or disable) which
-  layers will respond to the :ref:`identify tool <identify>`. By default, layers
-  are set queryable.
+CRS Properties
+--------------
 
-  You can also set whether a layer should appear as ``read-only``, meaning that
-  it can not be edited by the user, regardless of the data provider's
-  capabilities. Although this is a weak protection, it remains a quick and handy
-  configuration to avoid end-users modifying data when working with file-based layers.
+The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
+System for this project, and to enable on-the-fly re-projection of raster and
+vector layers when displaying layers from a different CRS. For more information
+on projection's handling in QGIS, please read :ref:`label_projections` section.
 
-* In the :guilabel:`Data Sources` tab, you can:
+Default Styles Properties
+-------------------------
 
-  * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
-    new features in a PostGreSQL table, fields with default value constraint are
-    evaluated and populated at the form opening, and not at the commit moment.
-    This means that instead of an expression like ``nextval('serial')``, the field
-    in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-  * |checkbox| :guilabel:`Automatically create transaction groups where possible`:
-    When this mode is turned on, all
-    (postgres) layers from the same database are synchronised in their edit state,
-    i.e. when one layer is put into edit state, all are, when one layer is committed
-    or one layer is rolled back, so are the others. Also, instead of buffering edit
-    changes locally, they are directly sent to a transaction in the database which
-    gets committed when the user clicks save layer.
-    Note that you can (de)activate this option only if no layer is being edited
-    in the project.
-  * |checkbox| :guilabel:`Trust project when data source has no metadata`:
-    To speed up project loading by skipping data checks. Useful in QGIS Server context 
-    or in projects with huge database views/materialized views. The extent of layers
-    will be read from the QGIS project file (instead of data sources) and when 
-    using the PostgreSQL provider the primary key unicity will not be 
-    checked for views and materialized views.
-  * Define what layers are defined as **required**. Checked layers in this list 
-    are protected from inadvertent removal from the project.
+The :guilabel:`Default Styles` tab lets you control how new layers will be
+drawn when they do not have an existing :file:`.qml` style defined. You can
+also set the default transparency level for new layers and whether symbols
+should have random colors assigned to them.
+There is also an additional section where you can define specific colors for the
+running project. You can find the added colors in the drop down menu of the color dialog
+window present in each renderer.
 
-* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
-  are defined in the project properties dialog. Once relations exist for a layer,
-  a new user interface element in the form view (e.g. when identifying a feature
-  and opening its form) will list the related entities. This provides a powerful
-  way to express e.g. the inspection history on a length of pipeline or road segment.
-  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+Identify Layers Properties
+--------------------------
 
-* The :guilabel:`Variables` tab lists all the variables available at
-  the project's level (which includes all global variables). Besides, it
-  also allows the user to manage project-level variables. Click the |signPlus|
-  button to add a new custom project-level variable. Likewise, select a custom
-  project-level variable from the list and click the |signMinus| button to
-  remove it.
-  More information on variables usage in the General Tools
-  :ref:`general_tools_variables` section.
+With the :guilabel:`Identify layers` tab, you set (or disable) which
+layers will respond to the :ref:`identify tool <identify>`. By default, layers
+are set queryable.
 
-* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
-  only three macros are available: ``openProject()``, ``saveProject()`` and
-  ``closeProject()``.
+You can also set whether a layer should appear as ``read-only``, meaning that
+it can not be edited by the user, regardless of the data provider's
+capabilities. Although this is a weak protection, it remains a quick and handy
+configuration to avoid end-users modifying data when working with file-based layers.
+
+Data Sources Properties
+-----------------------
+
+In the :guilabel:`Data Sources` tab, you can:
+
+* |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
+  new features in a PostGreSQL table, fields with default value constraint are
+  evaluated and populated at the form opening, and not at the commit moment.
+  This means that instead of an expression like ``nextval('serial')``, the field
+  in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
+* |checkbox| :guilabel:`Automatically create transaction groups where possible`:
+  When this mode is turned on, all
+  (postgres) layers from the same database are synchronised in their edit state,
+  i.e. when one layer is put into edit state, all are, when one layer is committed
+  or one layer is rolled back, so are the others. Also, instead of buffering edit
+  changes locally, they are directly sent to a transaction in the database which
+  gets committed when the user clicks save layer.
+  Note that you can (de)activate this option only if no layer is being edited
+  in the project.
+* |checkbox| :guilabel:`Trust project when data source has no metadata`:
+  To speed up project loading by skipping data checks. Useful in QGIS Server context
+  or in projects with huge database views/materialized views. The extent of layers
+  will be read from the QGIS project file (instead of data sources) and when
+  using the PostgreSQL provider the primary key unicity will not be 
+  checked for views and materialized views.
+* Define what layers are defined as **required**. Checked layers in this list
+  are protected from inadvertent removal from the project.
+
+Relations Properties
+--------------------
+
+The :guilabel:`Relations` tab is used to define 1:n relations. The relations
+are defined in the project properties dialog. Once relations exist for a layer,
+a new user interface element in the form view (e.g. when identifying a feature
+and opening its form) will list the related entities. This provides a powerful
+way to express e.g. the inspection history on a length of pipeline or road segment.
+You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+
+Variables Properties
+--------------------
+
+The :guilabel:`Variables` tab lists all the variables available at
+the project's level (which includes all global variables). Besides, it
+also allows the user to manage project-level variables. Click the |signPlus|
+button to add a new custom project-level variable. Likewise, select a custom
+project-level variable from the list and click the |signMinus| button to
+remove it.
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
+
+Macros Properties
+-----------------
+
+The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
+only three macros are available: ``openProject()``, ``saveProject()`` and
+``closeProject()``.
 
 .. _figure_macro_tab:
 
@@ -859,10 +886,13 @@ dialog described above.
 
    Macro settings in QGIS
 
-* The tab :guilabel:`QGIS Server` allows you to configure your project in order
-  to publish it online. Here you can define information about the QGIS
-  Server WMS and WFS capabilities, extent and CRS restrictions. More information
-  available in section :ref:`Creatingwmsfromproject` and subsequent.
+QGIS Server Properties
+----------------------
+
+The tab :guilabel:`QGIS Server` allows you to configure your project in order
+to publish it online. Here you can define information about the QGIS
+Server WMS and WFS capabilities, extent and CRS restrictions. More information
+available in section :ref:`Creatingwmsfromproject` and subsequent.
 
 .. index:: Customization
 .. _sec_customization:
