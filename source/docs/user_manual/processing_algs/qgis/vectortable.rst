@@ -296,18 +296,38 @@ Parameters
 ``Input layer`` [vector: any]
   Layer to edit the attribute table structure
 
-``Fields mapping`` [fieldsmapping]
-  Output fields definitions. The embedded table lists all the fields of the source
+``Fields mapping`` [list]
+  List of output fields with their definitions.
+
+  The embedded table lists all the fields of the source
   layer and allows you to edit them:
 
-  * click on the |newAttribute| button to create a new field
-  * click on the |deleteAttribute| to remove a field
-  * use |arrowUp| and |arrowDown| to change the field order
-  * click on |clearText| to reset to the default view
+  * click the |newAttribute| button to create a new field
+  * click the |deleteAttribute| to remove a field
+  * use |arrowUp| and |arrowDown| to change the selected field order
+  * click |clearText| to reset to the default view
 
+  For each of the fields you'd like to reuse, you need to
+  fill the following options:
+
+  ``Source expression`` [expression]
+    Field or expression from the input layer.
+
+  ``Field name`` [string]
+    Name of the field in the output layer.
+    By default input field name is kept.
+
+  ``Type`` [enumeration]
+    Data type of the output field.
+
+  ``Length`` [number]
+    Length of the output field.
+
+  ``Precision`` [number]
+    Precision of the output field.
 
 ``Load fields from layer`` [vector: any]
-  Load fields from another vector layer to update the field list
+  Load fields from another vector layer to update the field list.
 
 Output
 ......
