@@ -573,3 +573,30 @@ You should see your plugin in the correct language.
    source folder.
 
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+
+Tips and Tricks
+===============
+
+Plugin Reloader
+---------------
+
+During development of your plugin you will frequently need to reload it in QGIS
+for testing. This is very easy using the Plugin Reloader plugin. You can find it
+as an experimental plugin with the Plugin Manager. 
+
+Accessing Plugins
+-----------------
+
+You can access all the classes of installed plugins from within QGIS using python,
+which can be handy for debugging purposes.::
+
+	my_plugin = qgis.utils.plugins['My Plugin']
+
+Share your plugin
+-----------------
+QGIS is hosting hundreds of plugins in the plugin repository. Consider sharing
+yours! It will extend the possibilities of QGIS and people will be able to learn
+from your code. All hosted plugins can be found and installed from within QGIS
+with the Plugin Manager.
+
+Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
