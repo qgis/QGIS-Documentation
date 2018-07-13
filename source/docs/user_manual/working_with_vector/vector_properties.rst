@@ -206,10 +206,10 @@ provides different additional sections.
    single: Symbology; Single symbol renderer
 .. _single_symbol_renderer:
 
-Single Symbol Renderer
+Single Symbol
 ......................
 
-The |singleSymbol| :guilabel:`Single Symbol` Renderer is used to render
+The |singleSymbol| :guilabel:`Single Symbol` renderer is used to render
 all features of the layer using a single user-defined symbol.
 See :ref:`symbol-selector` for further information about symbol representation.
 
@@ -235,7 +235,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
    single: Symbology; No symbols renderer
 .. _no_symbol_renderer:
 
-No Symbols Renderer
+No Symbols
 ...................
 
 The |nullSymbol| :guilabel:`No Symbols` renderer is a special use case of the
@@ -256,10 +256,10 @@ symbols with totally transparent fill/border to achieve this.
    single: Symbology; Categorized renderer
 .. _categorized_rendered:
 
-Categorized Renderer
+Categorized
 ....................
 
-The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render the
+The |categorizedSymbol| :guilabel:`Categorized` renderer is used to render the
 features of a layer, using a user-defined symbol whose aspect reflects the
 discrete values of a field or an expression. The Categorized menu allows you to
 
@@ -342,10 +342,10 @@ for the rivers layer of the QGIS sample dataset.
    single: Symbology; Graduated renderer
 .. _graduated_renderer:
 
-Graduated Renderer
+Graduated
 ..................
 
-The |graduatedSymbol| :guilabel:`Graduated Renderer` is used to render
+The |graduatedSymbol| :guilabel:`Graduated` renderer is used to render
 all the features from a layer, using an user-defined symbol whose color or size
 reflects the assignment of a selected feature's attribute to a class.
 
@@ -502,10 +502,10 @@ are also available in the print composer legend item.
    single: Rule-based renderer; Create a rule
 .. _rule_based_rendering:
 
-Rule-based rendering
+Rule-based
 ....................
 
-The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
+The |ruleBasedSymbol| :guilabel:`Rule-based` renderer is used to render
 all the features from a layer,
 using rule-based symbols whose aspect reflects the assignment of a selected
 feature's attribute to a class. The rules are based on SQL statements.
