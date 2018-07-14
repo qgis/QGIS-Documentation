@@ -206,7 +206,7 @@ provides different additional sections.
    single: Symbology; Single symbol renderer
 .. _single_symbol_renderer:
 
-Single Symbol
+Single Symbol Renderer
 ......................
 
 The |singleSymbol| :guilabel:`Single Symbol` renderer is used to render
@@ -235,7 +235,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
    single: Symbology; No symbols renderer
 .. _no_symbol_renderer:
 
-No Symbols
+No Symbols Renderer
 ...................
 
 The |nullSymbol| :guilabel:`No Symbols` renderer is a special use case of the
@@ -256,7 +256,7 @@ symbols with totally transparent fill/border to achieve this.
    single: Symbology; Categorized renderer
 .. _categorized_rendered:
 
-Categorized
+Categorized Renderer
 ....................
 
 The |categorizedSymbol| :guilabel:`Categorized` renderer is used to render the
@@ -342,7 +342,7 @@ for the rivers layer of the QGIS sample dataset.
    single: Symbology; Graduated renderer
 .. _graduated_renderer:
 
-Graduated
+Graduated Renderer
 ..................
 
 The |graduatedSymbol| :guilabel:`Graduated` renderer is used to render
@@ -502,7 +502,7 @@ are also available in the print composer legend item.
    single: Rule-based renderer; Create a rule
 .. _rule_based_rendering:
 
-Rule-based
+Rule-based Renderer
 ....................
 
 The |ruleBasedSymbol| :guilabel:`Rule-based` renderer is used to render
@@ -544,7 +544,7 @@ dialog for the rivers layer of the QGIS sample dataset.
    single: Symbology; Point displacement renderer
 .. _point_displacement:
 
-Point displacement
+Point displacement Renderer
 ..................
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
@@ -568,7 +568,7 @@ around one center symbol or on several concentric circles.
    single: Symbology; Inverted polygon renderer
 .. _inverted_polygon_renderer:
 
-Inverted Polygon
+Inverted Polygon Renderer
 ................
 
 The |invertedSymbol| :guilabel:`Inverted Polygon` renderer allows user
@@ -587,7 +587,7 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5D renderer.
    single: Symbology; Heatmap renderer
 .. _heatmap:
 
-Heatmap
+Heatmap Renderer
 .......
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
@@ -609,7 +609,7 @@ the heatmap renderer updates the heatmap style automatically.
    single: Symbology; 2.5D renderer
 .. _2.5_D_rendering:
 
-2.5D
+2.5D Renderer
 ....
 
 Using the |25dSymbol| :guilabel:`2.5D` renderer it's possible to create
