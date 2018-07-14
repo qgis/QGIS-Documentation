@@ -545,7 +545,7 @@ dialog for the rivers layer of the QGIS sample dataset.
 .. _point_displacement:
 
 Point displacement Renderer
-..................
+............................
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
 works to visualize all features of a point layer, even if they have the same location.
@@ -569,7 +569,7 @@ around one center symbol or on several concentric circles.
 .. _inverted_polygon_renderer:
 
 Inverted Polygon Renderer
-................
+..........................
 
 The |invertedSymbol| :guilabel:`Inverted Polygon` renderer allows user
 to define a symbol to fill in
@@ -588,7 +588,7 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5D renderer.
 .. _heatmap:
 
 Heatmap Renderer
-.......
+.................
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
@@ -610,7 +610,7 @@ the heatmap renderer updates the heatmap style automatically.
 .. _2.5_D_rendering:
 
 2.5D Renderer
-....
+..............
 
 Using the |25dSymbol| :guilabel:`2.5D` renderer it's possible to create
 a 2.5D effect on your layer's features.
