@@ -13,17 +13,15 @@ Live GPS tracking
    .. contents::
       :local:
 
-To activate live GPS tracking in QGIS, you need to select :menuselection:`Settings
+To activate live GPS tracking in QGIS, you need to select :menuselection:`View
 --> Panels` |checkbox| :guilabel:`GPS Information Panel` or press :kbd:`Ctrl+0`.
 You will get a new docked window on the left side of the canvas.
 
 There are four possible screens in this GPS tracking window:
 
-* |toggleEditing| GPS position coordinates and an interface for manually entering
+* |metadata| GPS position coordinates and an interface for manually entering
   vertices and features
 * |gpsTrackBarChart| GPS signal strength of satellite connections
-* |gpsTrackPolarChart| GPS polar screen showing number and polar position of
-  satellites
 * |options| GPS options screen (see figure_gps_options_)
 
 With a plugged-in GPS receiver (has to be supported by your operating system),
@@ -40,7 +38,7 @@ you first have to configure gpsd properly to connect QGIS to it.
 Position and additional attributes
 ----------------------------------
 
-|toggleEditing| If the GPS is receiving signals from satellites, you will
+|metadata| If the GPS is receiving signals from satellites, you will
 see your position in latitude, longitude and altitude together with additional
 attributes.
 
@@ -59,25 +57,11 @@ are receiving signals from.
 
 .. _figure_gps_strength:
 
-.. figure:: img/gpstrack_stren.png
+.. figure:: img/gpstrack_strength.png
    :align: center
 
    GPS tracking signal strength
 
-
-GPS polar window
-----------------
-
-|gpsTrackPolarChart| If you want to know where in the sky all the connected
-satellites are, you have to switch to the polar screen. You can also see the
-ID numbers of the satellites you are receiving signals from.
-
-.. _figure_gps_polar:
-
-.. figure:: img/gpstrack_polar.png
-   :align: center
-
-   GPS tracking polar window
 
 GPS options
 -----------
@@ -107,6 +91,10 @@ and color.
 Activating |checkbox| :guilabel:`Cursor`, you can use a slider |slider| to shrink
 and grow the position cursor on the canvas.
 
+You can also set an :guilabel:`Acquisition interval (seconds)` and a
+:guilabel:`Distance threshold (meters)` parameters to keep the cursor still
+active when the receiver is in static conditions.
+
 Activating |radioButtonOn| :guilabel:`Map centering` allows you to decide in which
 way the canvas will be updated. This includes 'always', 'when leaving', if your
 recorded coordinates start to move out of the canvas, or 'never', to keep map
@@ -115,7 +103,7 @@ extent.
 Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
 and a file where log messages about the GPS tracking are logged.
 
-If you want to set a feature manually, you have to go back to |toggleEditing|
+If you want to set a feature manually, you have to go back to |metadata|
 :sup:`Position` and click on **[Add Point]** or **[Add track point]**.
 
 Connect to a Bluetooth GPS for live tracking
@@ -240,13 +228,11 @@ or without it, by connecting the QGIS live tracking tool directly to the device
    :width: 1.3em
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
-.. |gpsTrackPolarChart| image:: /static/common/gpstrack_polarchart.png
+.. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |slider| image:: /static/common/slider.png
-.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
-   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

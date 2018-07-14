@@ -249,9 +249,8 @@ Icon                            Substitution                        Icon        
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
-|scaleBar|                      ``|scaleBar|``
+|scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
-|gpsTrackPolarChart|            ``|gpsTrackPolarChart|``            |tracking|                      ``|tracking|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      \                               \
 ==============================  ==================================  ==============================  ==================================
@@ -716,8 +715,6 @@ Icon                            Substitution                        Icon        
 .. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
-   :width: 1.5em
-.. |gpsTrackPolarChart| image:: /static/common/gpstrack_polarchart.png
    :width: 1.5em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
