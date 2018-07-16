@@ -672,7 +672,7 @@ Here an example of an existing algorithm to help you with the layout and the des
    source folder.
 
 .. |checkbox| image:: /static/common/checkbox.png
-   :width: 1em
+   :width: 1.3em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |fieldFloat| image:: /static/common/mIconFieldFloat.png
