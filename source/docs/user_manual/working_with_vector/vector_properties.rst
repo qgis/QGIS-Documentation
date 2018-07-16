@@ -231,7 +231,7 @@ provides different additional sections.
 Single Symbol Renderer
 ......................
 
-The |singleSymbol| :guilabel:`Single Symbol` Renderer is used to render
+The |singleSymbol| :guilabel:`Single Symbol` renderer is used to render
 all features of the layer using a single user-defined symbol.
 See :ref:`symbol-selector` for further information about symbol representation.
 
@@ -281,7 +281,7 @@ symbols with totally transparent fill/border to achieve this.
 Categorized Renderer
 ....................
 
-The |categorizedSymbol| :guilabel:`Categorized Renderer` is used to render the
+The |categorizedSymbol| :guilabel:`Categorized` renderer is used to render the
 features of a layer, using a user-defined symbol whose aspect reflects the
 discrete values of a field or an expression. The Categorized menu allows you to
 
@@ -367,7 +367,7 @@ for the rivers layer of the QGIS sample dataset.
 Graduated Renderer
 ..................
 
-The |graduatedSymbol| :guilabel:`Graduated Renderer` is used to render
+The |graduatedSymbol| :guilabel:`Graduated` renderer is used to render
 all the features from a layer, using an user-defined symbol whose color or size
 reflects the assignment of a selected feature's attribute to a class.
 
@@ -522,10 +522,10 @@ both representation are also available in the print layout legend item.
    single: Rule-based renderer; Create a rule
 .. _rule_based_rendering:
 
-Rule-based rendering
+Rule-based Renderer
 ....................
 
-The |ruleBasedSymbol| :guilabel:`Rule-based Renderer` is used to render
+The |ruleBasedSymbol| :guilabel:`Rule-based` renderer is used to render
 all the features from a layer,
 using rule-based symbols whose aspect reflects the assignment of a selected
 feature's attribute to a class. The rules are based on SQL statements and can
@@ -594,8 +594,8 @@ dialog for the rivers layer of the QGIS sample dataset.
    single: Symbology; Point displacement renderer
 .. _point_displacement:
 
-Point displacement
-..................
+Point displacement Renderer
+............................
 
 The |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer works to
 visualize all features of a point layer, even if they have the same location.
@@ -686,8 +686,8 @@ From the main dialog, you can:
    single: Symbology; Inverted polygon renderer
 .. _inverted_polygon_renderer:
 
-Inverted Polygon
-................
+Inverted Polygon Renderer
+..........................
 
 The |invertedSymbol| :guilabel:`Inverted Polygon` renderer allows user
 to define a symbol to fill in
@@ -705,8 +705,8 @@ Single symbol, Graduated, Categorized, Rule-Based or 2.5D renderer.
    single: Symbology; Heatmap renderer
 .. _heatmap:
 
-Heatmap
-.......
+Heatmap Renderer
+.................
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
@@ -727,8 +727,8 @@ the heatmap renderer updates the heatmap style automatically.
    single: Symbology; 2.5D renderer
 .. _2.5_D_rendering:
 
-2.5D
-....
+2.5D Renderer
+..............
 
 Using the |25dSymbol| :guilabel:`2.5D` renderer it's possible to create
 a 2.5D effect on your layer's features.
