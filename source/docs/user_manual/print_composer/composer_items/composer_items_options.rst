@@ -105,7 +105,7 @@ by distributing equidistantly:
 .. _group_items:
 
 Grouping items
---------------
+..............
 
 Grouping items allows you to manipulate a set of items like a single one: you
 can easily resize, move, delete, copy the items as a whole.
