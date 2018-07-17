@@ -144,12 +144,8 @@ request.
    .. tip:: Though released and being translated, the documentation of QGIS
       |CURRENT| is still maintained and existing issues are fixed. If you plan
       to fix the issues in the current released doc, replace ``master`` branch
-      by the appropriate ``manual_en_...`` branch in any of the steps exposed
+      by the appropriate ``release_...`` branch in any of the steps exposed
       earlier.
-
-      .. %FixMe: Is there a way to have ``manual_en_...`` being automatically
-         appended with the number of the doc version? To have this tip always
-         updated when release number evolves.
 
 #. A green check along the compared branches shows that your changes can
    automatically be merged in the official doc. Click the :guilabel:`Create
@@ -314,8 +310,8 @@ Now you have a local and remote repositories which have both ``master`` branch u
 QGIS-Documentation from QGIS organisation. You can start to work on your
 contribution.
 
-For released doc (``manual_en_`` branch)
-........................................
+For released doc (``release_`` branch)
+......................................
 
 Along the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
 meaning that you can also contribute to it. Following the previous section sample code,
@@ -327,17 +323,17 @@ As above, you need to ensure your branch is up to date with the upstream's:
 
 .. code-block:: bash
 
-  # change branch e.g. for 2.14 LTR
-  $ git checkout manual_en_2.14
-  # get "information" from the manual_en_2.14 branch in upstream repository
-  $ git fetch upstream manual_en_2.14
-  # merge update from upstream/manual_en_2.14 to the current local branch
-  $ git merge upstream/manual_en_2.14
+  # change branch e.g. for 2.18 LTR
+  $ git checkout release_2.18
+  # get "information" from the release_2.18 branch in upstream repository
+  $ git fetch upstream release_2.18
+  # merge update from upstream/release_2.18 to the current local branch
+  $ git merge upstream/release_2.18
   # update **your** remote repository
-  $ git push origin manual_en_2.14
+  $ git push origin release_2.18
 
-In this way your local and remote branches for the 2.14 version are up to date
-with the one of the official upstream repository.
+In this way your local and remote branches for the |CURRENT| version are up to
+date with the one of the official upstream repository.
 
 .. _contribute:
 
@@ -355,7 +351,7 @@ base branch! Always!
    # and -b flag creates a new branch if needed, based on current branch
    $ git branch
    master
-   manual_en_2.14
+   release_2.18
    * myNewBranch
    # a list of existing branch where * means the current branch
    # You can now add your contribution, by editing the concerned file
