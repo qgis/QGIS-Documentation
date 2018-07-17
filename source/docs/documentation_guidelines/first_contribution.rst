@@ -64,8 +64,8 @@ project to learn some basic vocabulary and actions that will be used below.
 Make changes in your repo
 --------------------------
 
-Documentation can be improved by addressing issues reported at
-https://github.com/qgis/QGIS-Documentation/issues or issues you may
+Documentation can be improved by addressing the `reported issues
+<https://github.com/qgis/QGIS-Documentation/issues>`_ or issues you may
 have encountered while browsing the doc. They can be of different
 types: typo error, missing feature, wrong or out of date description...
 
@@ -86,7 +86,6 @@ Alternative 1: Picking an issue in the list
 #. Redo the previous steps for any other file that needs to be updated to fix
    the issue.
 
-
 Alternative 2: Using the ``Fix Me`` shortcut
 .............................................
 
@@ -99,16 +98,18 @@ click the "Fix Me" link at the bottom of the page to open its source file in Edi
    top of the page telling you that you don't have write access to this repo and
    your changes will be applied in a new branch of your repository.
    
-   Note that if you have commit rights to QGIS-Documentation repository, then
-   no message will show and you'll directly modify ``qgis:master`` branch itself
-   unless you save your changes in another branch.
-#. Do your changes following guidelines available at
-   http://docs.qgis.org/testing/en/docs/documentation_guidelines/
+   .. note:: If you have commit rights to QGIS-Documentation repository, then no
+    message will show and you'll directly modify ``qgis:master`` branch itself
+    unless you save your changes in another branch.
+
+#. Do your changes following the :ref:`guidelines <QGIS-documentation-guidelines>`;
 #. When you finish, at the bottom of the page, comment a bit what your changes
    are about and click on :guilabel:`Propose File change`. This will generate a
    new branch (``patch-xxx``) in your repo.
 
-.. tip:: If your ``master`` branch is even with ``qgis:master``, you can safely
+.. tip:: **Switch to your own fork and branch**
+
+   If your ``master`` branch is even with ``qgis:master``, you can safely
    replace in the link ``qgis`` by ``<YourName>``. In this case, once your changes
    are done, you need to check |radioButtonOn| :guilabel:`Create a new branch for
    this commit and start a pull request` and avoid modifying ``master``.
@@ -134,8 +135,8 @@ request.
 
 #. In any case (including pushing branch to GitHub from command lines) you can
    create a new pull request at any moment from many pages. Simply go to the
-   main page of the repository (yours or qgis), click on :guilabel:`New Pull
-   Request` and :guilabel:`Compare across forks` (if needed). Ensure you select
+   main page of the repository (yours or qgis), click on :guilabel:`New pull
+   request` and :guilabel:`Compare across forks` (if needed). Ensure you select
    ``qgis/QGIS-Documentation`` with ``master`` as base branch and that the head
    fork is your repository ``<YourName>/QGIS-Documentation`` with your modified
    branch along.
@@ -174,9 +175,12 @@ request.
     .. %ToDo: The FAQ could add information on Travis error and common fixes.
 
 #. Until your PR is merged with the main repo, you can add modifications to your
-   proposal. Actually any new changes done to your branch is appended to your pull
-   request. Do it if the change has to do with the issue you are fixing, otherwise
-   create a new branch for those changes following steps above.
+   proposal, either to improve your changes, to address requested modifications
+   or to fix a build error. Checkout the ``Files changed`` tab in your pull request
+   page and click the pencil next to the filename you want to modify.
+   Actually any new changes done to your branch is appended to your pull request.
+   Hence, do it only if the change has to do with the issue you are fixing,
+   otherwise create a new branch for those changes following the steps above.
 #. Once everything looks good to you and others, a committer can merge your branch
    with the main repo. Your contribution is validated.
 #. If you want, you can now delete the branch you used, to avoid having too many
