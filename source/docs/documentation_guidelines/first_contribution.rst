@@ -149,15 +149,14 @@ request.
 
 #. A green check along the compared branches shows that your changes can
    automatically be merged in the official doc. Click the :guilabel:`Create
-   pull request` button. If you get a red cross, it means that the files you are
-   modifying were not up to date with the branch you are targetting (a commit has
-   been pushed to it since you create or last update your branch).
-   You then need to use :ref:`git command line tools <git_command_line_tools>`
-   to fix it.
+   pull request` button.
 
-   .. %FixMe: once FAQ is online, a hyperlink to how to rebase branch solution
-      can replace the link to git commands in the previous comment.
-
+   If you get a red cross, it means that there's conflicts: the files you are
+   modifying are not up to date with the branch you are targetting (a commit
+   that brought changes on some common lines or files has been pushed to the
+   branch since you create or last update your branch). You can still create
+   the pull request but you'll need to fix the conflict(s) as 
+   :ref:`explained below <fix_conflicts>` to allow any review.
 #. Fill the form if needed and click again :guilabel:`Create pull request` button.
 #. A new PR is added to https://github.com/qgis/QGIS-Documentation/pulls
    and everybody can look or comment it.
@@ -404,6 +403,34 @@ of unuseful branches. So keep your repository clean this way:
   $ git push origin :myNewBranch
 
 And do not forget to update the ``master`` branch in your local repository!
+
+Further reading
+===============
+
+* Other than the Github web interface and the git command line tools exposed
+  above, there are also `GUI applications <https://git-scm.com/downloads/guis>`_
+  you can use to create and manage your contributions to the documentation.
+
+.. _fix_conflicts:
+
+* When the changes in the pull request are conflicting with recent changes
+  pushed to the target branch, the conflicts need to be resolved before a
+  merge is possible:
+
+  * if the conflict relates to few competing lines, a **[Resolve conflicts]**
+    button is available in the Github pull request page. Press the button
+    and resolve the issue as explained at
+    https://help.github.com/articles/resolving-a-merge-conflict-on-github/
+  * if the conflict involves files renaming or removal, then you'd need to
+    resolve the conflict using git command lines. Typically, you have to first
+    rebase your branch over the target branch using ``git rebase targetBranch``
+    call and fix the conflicts that are reported. Read more at
+    https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
+* Sometimes, at the end of the proofreading process, you may end up with changes
+  split into multiple commits that are not necessarily worth it. Git command
+  lines help you squash these commits to a smaller number and more meaningful
+  commit messages. Some details at
+  https://help.github.com/articles/using-git-rebase-on-the-command-line/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
