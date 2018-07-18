@@ -284,7 +284,7 @@ Icon                            Substitution                        Icon        
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
 |customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
-|georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
+|georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
 |coordinateCapture|             ``|coordinateCapture|``             |startGeoref|                   ``|startGeoref|``
 ==============================  ==================================  ==============================  ==================================
@@ -403,7 +403,6 @@ Icon                            Substitution                        Icon        
 |installPluginFromZip|          ``|installPluginFromZip|``          |pythonFile|                    ``|pythonFile|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
-|delimitedText|                 ``|delimitedText|``                 \                               \
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
 ==============================  ==================================  ==============================  ==================================
@@ -619,8 +618,6 @@ Icon                            Substitution                        Icon        
    :width: 2em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
-.. |delimitedText| image:: /static/common/delimited_text.png
-   :width: 1.5em
 .. |dependencies| image:: /static/common/dependencies.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
@@ -711,7 +708,7 @@ Icon                            Substitution                        Icon        
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
-.. |georeferencer| image:: /static/common/georeferencer.png
+.. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
 .. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em

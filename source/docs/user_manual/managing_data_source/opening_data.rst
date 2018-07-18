@@ -290,10 +290,10 @@ Importing a delimited text file
 Delimited text file (e.g. :file:`.csv`, :file:`.txt`) can be loaded in QGIS
 using the tools described above. However, loaded this way, it'll show up like a
 simple table data. Sometimes, delimited text files can contain geometric data
-you'd want to visualize; this is what the |delimitedText| :guilabel:`Add
+you'd want to visualize; this is what the |addDelimitedTextLayer| :guilabel:`Add
 Delimited Text Layer` is designed for.
 
-Click the toolbar icon |delimitedText| :sup:`Add Delimited Text Layer` in the
+Click the toolbar icon |addDelimitedTextLayer| :sup:`Add Delimited Text Layer` in the
 :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
 Delimited Text File` dialog, as shown in figure_delimited_text_.
 
@@ -849,6 +849,8 @@ Description of these capabilities and how-to are provided in chapter
 
 .. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em
+.. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
@@ -868,8 +870,6 @@ Description of these capabilities and how-to are provided in chapter
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
-   :width: 1.5em
-.. |delimitedText| image:: /static/common/delimited_text.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
