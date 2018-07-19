@@ -16,7 +16,7 @@ The Attribute Table Item
 Any layer in the project can have its attributes shown in the print layout.
 You can use this to decorate and explain your map with information about
 underlying data.
-Use the |openTable| :guilabel:`Add Attribute Table` tool following :ref:`items
+Use the |addTable| :guilabel:`Add Attribute Table` tool following :ref:`items
 creation instructions <create_layout_item>` to add a new map item that you can
 later manipulate the same way as exposed in :ref:`interact_layout_item`.
  
@@ -304,6 +304,8 @@ the following functionalities (see figure_layout_table_frames_):
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addTable| image:: /static/common/mActionAddTable.png
+   :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -313,8 +315,6 @@ the following functionalities (see figure_layout_table_frames_):
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
-   :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
