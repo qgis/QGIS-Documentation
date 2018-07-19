@@ -75,9 +75,10 @@ legend, and you can edit it in the same way as described in section
 Creating a new Shapefile layer
 ------------------------------
 
-To create a new Shapefile layer, choose :menuselection:`Create
-Layer -->` |newVectorLayer| :menuselection:`New Shapefile Layer...` from the
-:menuselection:`Layer` menu. The :guilabel:`New Shapefile Layer` dialog will be
+To create a new Shapefile layer, choose :menuselection:`Create Layer -->`
+|newVectorLayer| :menuselection:`New Shapefile Layer...` from the
+:menuselection:`Layer` menu or select it from the :guilabel:`Data Source Manager`
+toolbar. The :guilabel:`New Shapefile Layer` dialog will be
 displayed as shown in figure_create_shapefile_. 
 The first step is to provide a path and name for the Shapefile. QGIS will
 automatically add the :file:`.shp` extension to the name you specify
@@ -111,10 +112,12 @@ and you can edit it in the same way as described in section :ref:`sec_edit_exist
 Creating a new SpatiaLite layer
 -------------------------------
 
-To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
-|newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
-:menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
-be displayed as shown in Figure_create_spatialite_.
+To create a new SpatiaLite layer for editing, choose :menuselection:`Create Layer
+-->` |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
+:menuselection:`Layer` menu or select it from the :guilabel:`Data Source Manager`
+toolbar.
+The :guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in
+Figure_create_spatialite_.
 
 .. _figure_create_spatialite:
 
@@ -170,10 +173,10 @@ on disk and will be discarded when QGIS is closed. They can be handy to store
 features you temporarily need or as intermediate layers during geoprocessing
 operations. 
 
-Empty, editable temporary scratch layers can be defined using :menuselection:`Layer -->
-Create Layer --> New Temporary Scratch Layer` or |createMemory| :sup:`New temporary
-scratch layer` button from the :guilabel:`Manage Layers Toolbar`. Here you can
-create a:
+Empty, editable temporary scratch layers can be defined using :menuselection:`Layer
+--> Create Layer -->` |createMemory| :menuselection:`New Temporary Scratch Layer`
+or |createMemory| :sup:`New temporary scratch layer` button from the :guilabel:`Data
+Source Manager Toolbar`. Here you can create a:
 
 * ``No geometry`` type layer, served as simple table,
 * ``Point`` or ``MultiPoint`` layer,
@@ -382,9 +385,9 @@ new layer using :menuselection:`Edit --> Paste Features as -->` and choosing:
 A new layer, filled with selected features and their attributes is created and
 added to map canvas if asked.
 
-.. note:: Creating layers from clipboard applies to features selected and copied
-   within QGIS and also to features from another source defined using well-known
-   text (WKT).
+.. note:: Creating layers from clipboard is possible with features selected and
+   copied within QGIS as well as features from another application, as long as
+   they are defined using well-known text (WKT) language.
 
 
 .. index:: Virtual layers
@@ -399,9 +402,13 @@ SQL query involving any number of other vector layers that
 QGIS is able to open. Virtual layers do not carry
 data by themselves and can be seen as views to other layers.
 
-To create a virtual layer, open the virtual layer creation dialog by clicking on
-:guilabel:`Add Virtual Layer` in the :guilabel:`Layer` menu or from the
-corresponding toolbar.
+To create a virtual layer, open the virtual layer creation dialog by:
+
+* clicking |virtualLayer| :guilabel:`Add Virtual Layer` option in the
+  :menuselection:`Layer --> Add Layer -->` menu;
+* enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the
+  :guilabel:`Data Source Manager` dialog;
+* or using the :guilabel:`DB Manager` dialog tree item.
 
 The dialog allows you to specify a :guilabel:`Layer name` and an SQL
 :guilabel:`Query`. The query can use the name (or id) of loaded vector
@@ -599,3 +606,5 @@ used in conjunction with this spatial index syntax.
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
