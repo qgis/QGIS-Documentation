@@ -972,9 +972,9 @@ balloon. These information can be of different types and annotations are
 added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text;
-* |formAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
+* |htmlAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
   file ;
-* |saveAsSVG| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
+* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
@@ -2038,6 +2038,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
+   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |identifyByFreehand| image:: /static/common/mActionIdentifyByFreehand.png
@@ -2106,6 +2108,8 @@ The values presented in the varying size assistant above will set the size
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
