@@ -245,8 +245,6 @@ algorithm you want to run, and is exactly the list that the
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
 
-.. warning:: No QGIS 3 updates beyond this point (ToDo)
-
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
 
@@ -258,22 +256,26 @@ list gives a quick review of how to introduce values for each type of input para
   is optional and you do not want to use any data object, use ``None``.
 * Selection. If an algorithm has a selection parameter, the value of that
   parameter should be entered using an integer value. To know the available
-  options, you can use the ``algoptions()`` command, as shown in the following
-  example:
+  options, you can use the ``algorithmHelp()`` command, as above.
+  For instance, the "native.buffer" algorithm has a selection called JOIN_STYLE:
 
   ::
 
-      >>> processing.algoptions("saga:slopeaspectcurvature")
-      METHOD(Method)
-          0 - [0] Maximum Slope (Travis et al. 1975)
-          1 - [1] Maximum Triangle Slope (Tarboton 1997)
-          2 - [2] Least Squares Fitted Plane (Horn 1981, Costa-Cabral & Burgess 1996)
-          3 - [3] Fit 2.Degree Polynom (Bauer, Rohdenburg, Bork 1985)
-          4 - [4] Fit 2.Degree Polynom (Heerdegen & Beran 1982)
-          5 - [5] Fit 2.Degree Polynom (Zevenbergen & Thorne 1987)
-          6 - [6] Fit 3.Degree Polynom (Haralick 1983)
+     JOIN_STYLE: Join style
 
-  In this case, the algorithm has one such parameter, with seven options.
+	Parameter type:	QgsProcessingParameterEnum
+
+	Available values:
+		- 0: Round
+		- 1: Miter
+		- 2: Bevel
+
+	Accepted data types:
+		- int
+		- str: as string representation of int, e.g. '1'
+		- QgsProperty
+     
+  In this case, the parameter has three options.
   Notice that ordering is zero-based.
 * Multiple input. The value is a string with input descriptors separated by
   semicolons (``;``). As in the case of single layers or tables, each input
@@ -306,10 +308,12 @@ want to add an output to the map canvas, you have to do it yourself after runnin
 algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
 the handy methods provided for such tasks.
 
-The ``runalg`` method returns a dictionary with the output names (the
+The ``run`` method returns a dictionary with the output names (the
 ones shown in the algorithm description) as keys and the file paths of
 those outputs as values. You can load those layers by passing the corresponding
 file paths to the ``load()`` method.
+
+.. warning:: No QGIS 3 updates beyond this point (ToDo)
 
 Additional functions for handling data
 --------------------------------------
