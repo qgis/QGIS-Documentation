@@ -358,24 +358,16 @@ Vector Menu
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|matrix|                        ``|matrix|``                        |unique|                        ``|unique|``
-|sumLines|                      ``|sumLines|``                      |sumPoints|                     ``|sumPoints|``
-|neighbor|                      ``|neighbor|``
-|mean|                          ``|mean|``                          |intersections|                 ``|intersections|``
-|randomSelection|               ``|randomSelection|``               |subSelection|                  ``|subSelection|``
-|randomPoints|                  ``|randomPoints|``                  \                                \
-|regularPoints|                 ``|regularPoints|``                 |vectorGrid|                    ``|vectorGrid|``
-|selectLocation|                ``|selectLocation|``                |layerExtent|                   ``|layerExtent|``
+|mean|                          ``|mean|``                          |layerExtent|                   ``|layerExtent|``
+|randomSelection|               ``|randomSelection|``               |vectorGrid|                    ``|vectorGrid|``
 |convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
 |intersect|                     ``|intersect|``                     |union|                         ``|union|``
 |symDifference|                 ``|symDifference|``                 |clip|                          ``|clip|``
 |difference|                    ``|difference|``                    |dissolve|                      ``|dissolve|``
 |checkGeometry|                 ``|checkGeometry|``                 |exportGeometry|                ``|exportGeometry|``
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
-|simplify|                      ``|simplify|``
-|multiToSingle|                 ``|multiToSingle|``                 |singleToMulti|                 ``|singleToMulti|``
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
-|splitLayer|                    ``|splitLayer|``                    |mergeShapes|                   ``|mergeShapes|``
+|splitLayer|                    ``|splitLayer|``
 ==============================  ==================================  ==============================  ==================================
 
 Raster Menu
@@ -385,8 +377,7 @@ Raster Menu
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
-|showRasterCalculator|          ``|showRasterCalculator|``          |rasterStats|                   ``|rasterStats|``
-|heatmap|                       ``|heatmap|``
+|showRasterCalculator|          ``|showRasterCalculator|``          |heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -765,8 +756,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
    :width: 1.5em
-.. |intersections| image:: /static/common/intersections.png
-   :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |invertedSymbol| image:: /static/common/rendererInvertedSymbol.png
@@ -807,8 +796,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
-.. |matrix| image:: /static/common/matrix.png
-   :width: 1.5em
 .. |mean| image:: /static/common/mean.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
@@ -820,8 +807,6 @@ Icon                            Substitution                        Icon        
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
-   :width: 1.5em
-.. |mergeShapes| image:: /static/common/merge_shapes.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 2em
@@ -846,10 +831,6 @@ Icon                            Substitution                        Icon        
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
-   :width: 1.5em
-.. |multiToSingle| image:: /static/common/multi_to_single.png
-   :width: 1.5em
-.. |neighbor| image:: /static/common/neighbour.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
@@ -925,15 +906,9 @@ Icon                            Substitution                        Icon        
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
-.. |randomPoints| image:: /static/common/random_points.png
-   :width: 1.5em
 .. |randomSelection| image:: /static/common/random_selection.png
    :width: 1.5em
-.. |rasterStats| image:: /static/common/raster-stats.png
-   :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
-   :width: 1.5em
-.. |regularPoints| image:: /static/common/regular_points.png
    :width: 1.5em
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
@@ -980,8 +955,6 @@ Icon                            Substitution                        Icon        
 .. |selectColor| image:: /static/common/selectcolor.png
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
-.. |selectLocation| image:: /static/common/select_location.png
-   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
@@ -1014,13 +987,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |simplify| image:: /static/common/simplify.png
-   :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 2em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
-   :width: 1.5em
-.. |singleToMulti| image:: /static/common/single_to_multi.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
 .. |snapping| image:: /static/common/mIconSnapping.png
@@ -1039,13 +1008,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em
-.. |subSelection| image:: /static/common/sub_selection.png
-   :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
-   :width: 1.5em
-.. |sumLines| image:: /static/common/sum_lines.png
-   :width: 1.5em
-.. |sumPoints| image:: /static/common/sum_points.png
    :width: 1.5em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
@@ -1076,8 +1039,6 @@ Icon                            Substitution                        Icon        
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |union| image:: /static/common/union.png
-   :width: 1.5em
-.. |unique| image:: /static/common/unique.png
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
