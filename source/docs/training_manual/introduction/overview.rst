@@ -196,10 +196,10 @@ to you and start improving on your map! This is the topic of the next lesson.
    :width: 1.5em
 .. |iconQgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
-.. |whatsThis| image:: /static/common/whats_this.png
-   :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
