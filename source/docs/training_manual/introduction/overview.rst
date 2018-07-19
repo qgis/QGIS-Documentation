@@ -117,7 +117,7 @@ wherever it is more comfortable to you.
 
 The Locator bar is a new feature of QGIS 3. Within this bar you can access to
 almost all the objects of QGIS: layers, layer features, algorithms, spatial
-bookmarks, etc. Check all the different options in the :ref:`locator-settings`
+bookmarks, etc. Check all the different options in the :ref:`locator_options`
 section of the QGIS User Manual.
 
 .. tip:: with the shortcut :kbd:`Ctrl+K` you can easily access the bar.
