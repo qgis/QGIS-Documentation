@@ -98,8 +98,8 @@ The snapping tolerance setting affects all tools that work with tolerance.
 
 .. tip:: **Quickly toggle snapping**
 
-   You can quickly enable or disable snapping by pressing :kbd:`S` at any time while
-   you're in the map view.
+   You can quickly enable or disable snapping by clicking the |snapping| :sup:`Enable
+   Snapping` icon or pressing :kbd:`S` at any time while you're in the map view.
 
 Snapping tolerance can be set in ``pixels`` or ``map units`` (the units of the
 map view). While in the **Advanced** layer selection mode, it is possible to use
@@ -1506,6 +1506,8 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 2em
+.. |snapping| image:: /static/common/mIconSnapping.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
