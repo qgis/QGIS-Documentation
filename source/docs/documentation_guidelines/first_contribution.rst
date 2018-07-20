@@ -158,7 +158,7 @@ request.
    the pull request but you'll need to fix the conflict(s) as 
    :ref:`explained below <fix_conflicts>` to allow any review.
 #. Fill the form if needed and click again :guilabel:`Create pull request` button.
-#. A new PR is added to https://github.com/qgis/QGIS-Documentation/pulls
+#. A new PR is added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_
    and everybody can look or comment it.
 #. That will trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
    automatically checking if your contribution doesn't contain a build error.
