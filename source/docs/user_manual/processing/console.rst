@@ -233,8 +233,6 @@ Its syntax is as follows:
 Where parameters is a dictionary of parameters that depend on the
 algorithm you want to run, and is exactly the list that the
 ``algorithmHelp()`` method gives you.
-If want to load the results you can use ``runAndLoadResults()``
-instead of ``run()``.
 
 ::
 
@@ -312,8 +310,25 @@ the handy methods provided for such tasks.
 
 The ``run`` method returns a dictionary with one or more output names (the
 ones shown in the algorithm description) as keys and the file paths of
-those outputs as values. You can load those layers by passing the corresponding
-file paths to the ``load()`` method.
+those outputs as values:
+
+::
+
+    >>> myresult = processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+    >>> myresult['OUTPUT']
+    /data/buffers.shp
+
+You can load those layers by passing the corresponding file paths to
+the ``load()`` method.
+Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
+them immediately.
 
 .. warning:: No QGIS 3 updates beyond this point (ToDo)
 
