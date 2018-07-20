@@ -63,7 +63,7 @@ it is present, ensure that it's checked for now.
 
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
 database. You can have access to common vector files (e.g. ESRI shapefile
-or Geopackge files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial)
+or GeoPackage files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial)
 and WMS/WFS connections. You can also view your GRASS data.
 
 If you have saved a project a new the Browser Panel will also give you quick
@@ -115,10 +115,9 @@ wherever it is more comfortable to you.
 |basic| The Locator Bar
 ...............................................................................
 
-The Locator bar is a new feature of QGIS 3. Within this bar you can access to
-almost all the objects of QGIS: layers, layer features, algorithms, spatial
-bookmarks, etc. Check all the different options in the :ref:`locator_options`
-section of the QGIS User Manual.
+Within this bar you can access to almost all the objects of QGIS: layers, layer
+features, algorithms, spatial bookmarks, etc. Check all the different options in
+the :ref:`locator_options` section of the QGIS User Manual.
 
 .. tip:: with the shortcut :kbd:`Ctrl+K` you can easily access the bar.
 
