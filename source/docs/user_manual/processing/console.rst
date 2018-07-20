@@ -255,7 +255,8 @@ list gives a quick review of how to introduce values for each type of input para
   Contents) or a filename (if the corresponding layer is not opened, it will be
   opened but not added to the map canvas). If you have an instance of a QGIS
   object representing the layer, you can also pass it as parameter. If the input
-  is optional and you do not want to use any data object, use ``None``.
+  is optional and you do not want to use any data object, just don't include it
+  in the dictionary.
 * Selection. If an algorithm has a selection parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
@@ -310,7 +311,7 @@ want to add an output to the map canvas, you have to do it yourself after runnin
 algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
 the handy methods provided for such tasks.
 
-The ``run`` method returns a dictionary with the output names (the
+The ``run`` method returns a dictionary with one or more output names (the
 ones shown in the algorithm description) as keys and the file paths of
 those outputs as values. You can load those layers by passing the corresponding
 file paths to the ``load()`` method.
