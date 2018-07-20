@@ -302,11 +302,10 @@ file extension not supported by the algorithm, the default
 file format for that output type will be used, and its corresponding extension
 appended to the given file path.
 
-Unlike when an algorithm is executed from the toolbox, outputs are not added to
-the map canvas if you execute that same algorithm from the Python console. If you
-want to add an output to the map canvas, you have to do it yourself after running the
-algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
-the handy methods provided for such tasks.
+Unlike when an algorithm is executed from the toolbox, outputs are not
+added to the map canvas if you execute that same algorithm from the
+Python console using ``run()``, but ``runAndLoadResults()`` will do
+that.
 
 The ``run`` method returns a dictionary with one or more output names (the
 ones shown in the algorithm description) as keys and the file paths of
