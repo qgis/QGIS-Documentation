@@ -24,7 +24,7 @@ that the whole QGIS code depends on Qt libraries. Python bindings for
 Qt (PyQt) are done also using SIP and this allows seamless integration
 of PyQGIS with PyQt.
 
-There are several ways how to use Python bindings in QGIS desktop,
+There are several ways to use Python bindings in QGIS desktop,
 they are covered in detail in the following sections:
 
 * automatically run Python code when QGIS starts
@@ -35,17 +35,17 @@ they are covered in detail in the following sections:
 
 Python bindings are also available for QGIS Server:
 
-* starting from 2.8 release, Python plugins are also available on QGIS Server
+* Python plugins are also available on QGIS Server
   (see :ref:`Server Python Plugins <server_plugins>`)
-* starting from 2.11 version (Master at 2015-08-11), QGIS Server
-  library has Python bindings that can be used to embed QGIS Server
-  into a Python application.
+* The QGIS Server library has Python bindings that can be used to
+  embed QGIS Server into a Python application.
 
 .. index:: API
 
 There is a `complete QGIS API <http://qgis.org/api/>`_ reference that
-documents the classes from the QGIS libraries. Pythonic QGIS API is
-nearly identical to the API in C++.
+documents the classes from the QGIS libraries. The Pythonic QGIS API
+(pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the API
+in C++.
 
 A good resource when dealing with plugins is to download some plugins
 from `plugin repository <http://plugins.qgis.org/>`_ and examine their
@@ -87,11 +87,13 @@ MacPorts installs on Mac.
 The :file:`startup.py` file
 ----------------------------
 
-Every time QGIS starts, the user's Python home directory (Linux:
-:file:`.local/share/QGIS/QGIS3/profiles/default/python`, Windows:
-:file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`, Mac OS X:
-:file:`Library/Application Support/QGIS/QGIS3/profiles/default`) is
-searched for a file named :file:`startup.py`, if that file exists, it
+Every time QGIS starts, the user's Python home directory
+
+* Linux: :file:`.local/share/QGIS/QGIS3/profiles/default/python`
+* Windows: :file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`
+* Mac OS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
+
+is searched for a file named :file:`startup.py`, if that file exists, it
 is executed by the embedded Python interpreter.
 
 
@@ -149,9 +151,8 @@ development.
 Many plugins covering various functionality have been written since
 the introduction of Python support. The plugin installer allows users
 to easily fetch, upgrade and remove Python plugins.
-See the `Python Plugin Repositories
-<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ page for
-various sources of plugins.
+See the `Python Plugin <http://plugins.qgis.org/>`_ page for more
+information about plugins and plugin development.
 
 Creating plugins in Python is simple, see :ref:`developing_plugins`
 for detailed instructions.
@@ -193,9 +194,11 @@ or script. The code to initialize QGIS for custom applications and
 standalone scripts is similar, but examples of each are provided
 below.
 
-Note: do *not* use :file:`qgis.py` as a name for your test script ---
-Python will not be able to import the bindings as the script's name
-will shadow them.
+.. note::
+
+     Do *not* use :file:`qgis.py` as a name for your test script
+     Python will not be able to import the bindings as the script's
+     name will shadow them.
 
 .. _standalonescript:
 
