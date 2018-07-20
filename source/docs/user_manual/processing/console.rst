@@ -233,6 +233,8 @@ Its syntax is as follows:
 Where parameters is a dictionary of parameters that depend on the
 algorithm you want to run, and is exactly the list that the
 ``algorithmHelp()`` method gives you.
+If want to load the results you can use ``runAndLoadResults()``
+instead of ``run()``.
 
 ::
 
