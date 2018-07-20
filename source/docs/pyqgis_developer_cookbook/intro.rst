@@ -18,7 +18,7 @@ of the principal functionality.
 
 Starting from 0.9 release, QGIS has optional scripting support using Python
 language. We've decided for Python as it's one of the most favourite
-languages for scripting. PyQGIS bindings depend on SIP and PyQt4. The reason
+languages for scripting. PyQGIS bindings depend on SIP and PyQt. The reason
 for using SIP instead of more widely used SWIG is that the whole QGIS code
 depends on Qt libraries. Python bindings for Qt (PyQt) are done also using
 SIP and this allows seamless integration of PyQGIS with PyQt.
@@ -29,7 +29,7 @@ in detail in the following sections:
 * automatically run Python code when QGIS starts
 * issue commands in Python console within QGIS
 * create and use plugins in Python
-* create custom applications based on QGIS API
+* create custom applications based on the QGIS API
 
 
 Python bindings are also available for QGIS Server:
@@ -82,8 +82,11 @@ homebrew or MacPorts installs on Mac.
 The :file:`startup.py` file
 ----------------------------
 
-Every time QGIS starts, the user's Python home directory (usually:
-:file:`.qgis2/python`) is searched for a file named :file:`startup.py`, if that file exists,
+Every time QGIS starts, the user's Python home directory (Linux:
+:file:`.local/share/QGIS/QGIS3/profiles/default/python`,
+Windows: :file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`,
+Mac OS X: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`)
+is searched for a file named :file:`startup.py`, if that file exists,
 it is executed by the embedded Python interpreter.
 
 
@@ -107,14 +110,16 @@ The console opens as a non-modal utility window:
 
 The screenshot above illustrates how to get the layer currently selected
 in the layer list, show its ID and optionally, if it is a vector layer,
-show the feature count. For interaction with QGIS environment, there is a
+show the feature count (the screenshot is of QGIS 2, but the same
+commands work in QGIS 3).
+For interaction with QGIS environment, there is a
 :data:`iface` variable, which is an instance of :class:`QgsInterface`.
 This interface allows access to the map canvas, menus, toolbars and other
 parts of the QGIS application.
 
 For convenience of the user, the following statements are executed when
-the console is started (in future it will be possible to set further initial
-commands)
+the console is started (in the future it will be possible to set further
+initial commands)
 
 ::
 
@@ -131,8 +136,9 @@ Python Plugins
 ==============
 
 QGIS allows enhancement of its functionality using plugins. This
-was originally possible only with C++ language. With the addition of Python
-support to QGIS, it is also possible to use plugins written in Python.
+was originally possible only using the C++ language.
+With the addition of Python
+support to QGIS, it is now also possible to use plugins written in Python.
 The main advantage over C++ plugins is its simplicity of distribution (no
 compiling for each platform needed) and easier development.
 
@@ -167,7 +173,7 @@ module, initialize it and you are ready for the processing.
 
 Or you may want to create an interactive application that uses some GIS
 functionality --- measure some data, export a map in PDF or any other
-functionality. The :mod:`qgis.gui` module additionally brings various GUI
+functionality. The :mod:`qgis.gui` module brings various GUI
 components, most notably the map canvas widget that can be very easily
 incorporated into the application with support for zooming, panning and/or
 any further custom map tools.
@@ -235,7 +241,8 @@ Using PyQGIS in custom applications
 
 The only difference between :ref:`standalonescript` and a custom PyQGIS
 application is the second argument when instantiating the ``QgsApplication``.
-Pass :const:`True` instead of ``False`` to indicate that we plan to use a GUI.
+Pass :const:`True` instead of :const:`False` to indicate that we plan to
+use a GUI.
 
 ::
 
@@ -283,13 +290,13 @@ QGIS installation path:
 * on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
 * on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
 
-The path to the PyQGIS modules is now known, however they depend on ``qgis_core``
+The path to the PyQGIS modules is now known, however they depend on the ``qgis_core``
 and ``qgis_gui`` libraries (the Python modules serve only as wrappers).
-Path to these libraries is typically unknown for the operating system, so
+The path to these libraries is typically unknown to the operating system, so
 you get an import error again (the message might vary depending on the system)::
 
   >>> import qgis.core
-  ImportError: libqgis_core.so.1.5.0: cannot open shared object file: No such file or directory
+  ImportError: libqgis_core.so.3.2.0: cannot open shared object file: No such file or directory
 
 Fix this by adding the directories where the QGIS libraries reside to search
 path of the dynamic linker:
@@ -303,10 +310,10 @@ These commands can be put into a bootstrap script that will take care of
 the startup. When deploying custom applications using PyQGIS, there are
 usually two possibilities:
 
-* require user to install QGIS on his platform prior to installing your
+* require the user to install QGIS on his platform prior to installing your
   application. The application installer should look for default locations
   of QGIS libraries and allow user to set the path if not found. This
-  approach has the advantage of being simpler, however it requires user
+  approach has the advantage of being simpler, however it requires the user
   to do more steps.
 
 * package QGIS together with your application. Releasing the application
