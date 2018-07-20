@@ -255,8 +255,7 @@ list gives a quick review of how to introduce values for each type of input para
   Contents) or a filename (if the corresponding layer is not opened, it will be
   opened but not added to the map canvas). If you have an instance of a QGIS
   object representing the layer, you can also pass it as parameter. If the input
-  is optional and you do not want to use any data object, just don't include it
-  in the dictionary.
+  is optional and you do not want to use any data object, use ``None``.
 * Selection. If an algorithm has a selection parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
