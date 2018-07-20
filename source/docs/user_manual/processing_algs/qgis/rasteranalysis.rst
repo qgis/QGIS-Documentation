@@ -158,6 +158,37 @@ Outputs
     - Area (m\ :sup:`2`): square meters of the area for each pixel class
 
 
+.. _qgisrastersampling:
+
+Sample raster values |34|
+-------------------------
+Extracts raster values at the point locations. If the raster layer is multiband,
+each band is sampled.
+
+The attribute table of the resulting layer will have as many new columns as the
+raster layer band count.
+
+Parameters
+..........
+
+``Input Point Layer`` [vector: point]
+  Point vector layer in input to use for the sampling
+
+``Raster Layer to sample`` [raster]
+  Raster layer with corresponding band(s) to sample at given point locations
+
+``Output column prefix`` [string]
+  Prefix for the column(s) name.
+
+  Default: ``rvalue``
+
+Output
+......
+
+``Sampled Points`` [vector: point]
+  Layer in output with additional column(s) of sampled raster values
+
+
 .. _qgiszonalhistogram:
 
 Zonal histogram |32|
@@ -251,4 +282,5 @@ Parameters
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
