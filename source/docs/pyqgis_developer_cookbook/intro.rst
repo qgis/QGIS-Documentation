@@ -258,7 +258,7 @@ Using PyQGIS in custom applications
 
 The only difference between :ref:`standalonescript` and a custom PyQGIS
 application is the second argument when instantiating the ``QgsApplication``.
-Pass :const:`True` instead of :const:`False` to indicate that we plan to
+Pass :const:`True` instead of ``False`` to indicate that we plan to
 use a GUI.
 
 ::
