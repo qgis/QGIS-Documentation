@@ -254,7 +254,7 @@ list gives a quick review of how to introduce values for each type of input para
   opened but not added to the map canvas). If you have an instance of a QGIS
   object representing the layer, you can also pass it as parameter. If the input
   is optional and you do not want to use any data object, use ``None``.
-* Selection. If an algorithm has a selection parameter, the value of that
+* Selection. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
   For instance, the "native.buffer" algorithm has a selection called JOIN_STYLE:
@@ -317,7 +317,7 @@ those outputs as values:
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
-                  'END_CAP_STYLE': 0,
+                  'END_CAP_STYLE': None,
                   'JOIN_STYLE': 0,
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
