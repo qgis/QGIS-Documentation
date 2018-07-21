@@ -240,10 +240,17 @@ algorithm you want to run, and is exactly the list that the
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
-                  'END_CAP_STYLE': 0,
+                  'END_CAP_STYLE': None,
                   'JOIN_STYLE': 0,
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
+
+
+If a parameter is optional and you do not want to use it, then don't
+include it in the dictionary.
+
+If a parameter has a default value, that value will be used if you
+use ``None``.
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
@@ -252,12 +259,11 @@ list gives a quick review of how to introduce values for each type of input para
   identifies the data object to use (the name it has in the QGIS Table of
   Contents) or a filename (if the corresponding layer is not opened, it will be
   opened but not added to the map canvas). If you have an instance of a QGIS
-  object representing the layer, you can also pass it as parameter. If the input
-  is optional and you do not want to use any data object, use ``None``.
-* Selection. If an algorithm has an enumeration parameter, the value of that
+  object representing the layer, you can also pass it as parameter.
+* Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
-  For instance, the "native.buffer" algorithm has a selection called JOIN_STYLE:
+  For instance, the "native.buffer" algorithm has an enumeration called JOIN_STYLE:
 
   ::
 
@@ -277,6 +283,7 @@ list gives a quick review of how to introduce values for each type of input para
      
   In this case, the parameter has three options.
   Notice that ordering is zero-based.
+* Boolean.  Use ``True`` or ``False``.
 * Multiple input. The value is a string with input descriptors separated by
   semicolons (``;``). As in the case of single layers or tables, each input
   descriptor can be the data object name, or its file path.
