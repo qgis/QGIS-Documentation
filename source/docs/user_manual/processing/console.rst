@@ -375,7 +375,7 @@ Creating scripts and running them from the toolbox
 You can create your own algorithms by writing the corresponding Python code and
 adding a few extra lines to supply additional information needed to define the
 semantics of the algorithm.
-You can find :guilabel:`Create new script` under :guilabel:`Skripts`
+You can find :guilabel:`Create new script` under :guilabel:`Scripts`
 pulldown menu on the top of the Processing toolbox.  It opens the Processing
 Script Editor, and that's where you should type your code.
 Saving the script from there in the :file:`scripts` folder (the default folder
