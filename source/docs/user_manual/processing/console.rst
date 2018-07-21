@@ -336,8 +336,6 @@ the ``load()`` method.
 Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
 them immediately.
 
-.. warning:: No QGIS 3 updates beyond this point (ToDo)
-
 Additional functions for handling data
 --------------------------------------
 
@@ -348,21 +346,28 @@ functions that wrap some functionality from the QGIS API, usually with a less
 complex syntax. These functions should be used when developing new algorithms,
 as they make it easier to operate with input data.
 
-Below is a list of some of these commands. More information can be found in the
-classes under the ``processing/tools`` package, and also in the example scripts
-provided with QGIS.
+Below is a list (very short for QGIS 3!) of some of these commands.
+More information can be found in the classes under the ``processing/tools``
+package, and also in the example scripts provided with QGIS.
 
-* ``getObject(obj)``: Returns a QGIS object (a layer or table) from the passed
-  object, which can be a filename or the name of the object in the QGIS Layers List
 * ``values(layer, fields)``: Returns the values in the attributes table of a
   vector layer, for the passed fields. Fields can be passed as field names or as
   zero-based field indices. Returns a dict of lists, with the passed field
   identifiers as keys. It considers the existing selection.
-* ``features(layer)``: Returns an iterator over the features of a vector
-  layer, considering the existing selection.
-* ``uniqueValues(layer, field)``: Returns a list of unique values for a given
-  attribute.  Attributes can be passed as a field name or a zero-based field
-  index. It considers the existing selection.
+
+To get a QGIS object (layer or table) from the output of processing
+algorithms, you can use the ``mapLayerFromString`` function that is
+included in ``QgsProcessingUtils`` or ``getMapLayer`` from
+``QgsProcessingContext``:
+
+::
+
+    >>> outputlayer = QgsProcessingUtils.mapLayerFromString(result['OUTPUT'], context)
+
+    >>> outputlayer = context.getMapLayer(result['OUTPUT'])
+
+Where ``context`` is the processing context (``QgsProcessingContext``).
+
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------
@@ -370,15 +375,17 @@ Creating scripts and running them from the toolbox
 You can create your own algorithms by writing the corresponding Python code and
 adding a few extra lines to supply additional information needed to define the
 semantics of the algorithm.
-You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
-group in the :guilabel:`Script` algorithms block of the toolbox. Double-click
-on it to open the script editing dialog. That's where you should type your code.
+You can find :guilabel:`Create new script` under :guilabel:`Skripts`
+pulldown menu on the top of the Processing toolbox.  It opens the Processing
+Script Editor, and that's where you should type your code.
 Saving the script from there in the :file:`scripts` folder (the default folder
-when you open the save file dialog) with :file:`.py` extension will
+when you open the save file dialog) with :file:`.py` extension should
 automatically create the corresponding algorithm.
 
 The name of the algorithm (the one you will see in the toolbox) is created from
 the filename, removing its extension and replacing low hyphens with blank spaces.
+
+.. warning:: No QGIS 3 updates beyond this point (ToDo)
 
 Let's have a look at the following code, which calculates the Topographic
 Wetness Index (TWI) directly from a DEM.
