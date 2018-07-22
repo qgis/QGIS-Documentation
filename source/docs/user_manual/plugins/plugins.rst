@@ -242,6 +242,10 @@ directly from their repository.
    :width: 1.5em
 .. |pluginInvalid| image:: /static/common/plugin-incompatible.png
    :width: 1.5em
+.. |plugin-new| image:: /static/common/plugin-new.png
+   :width: 1.5em
+.. |plugin-upgrade| image:: /static/common/plugin-upgrade.png
+   :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
