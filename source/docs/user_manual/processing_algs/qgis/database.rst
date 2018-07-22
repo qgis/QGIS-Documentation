@@ -163,17 +163,17 @@ Parameters
 ..........
 
 ``Input layers`` [vector: any] [list]
-  All the vector layers to import into the GeoPackage database
+  All the vector layers to import into the GeoPackage database.
 
 ``Overwrite existing GeoPackage`` [boolean]
-  Replaces an existing database with a new one
+  Replaces an existing database with a new one.
 
   Default: *False*
 
 Outputs
 .......
 ``Destination GeoPackage``
-  If not specified the GeoPackage database will be save in the temporary folder.
+  If not specified the GeoPackage database will be saved in the temporary folder.
 
 
 .. _qgisimportintospatialite:

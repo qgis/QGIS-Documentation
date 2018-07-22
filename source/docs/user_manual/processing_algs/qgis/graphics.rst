@@ -23,20 +23,19 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``Category field name`` [tablefield: any]
-  Categorical field to use for grouping the bars (X axis)
+  Categorical field to use for grouping the bars (X axis).
 
 ``Value field`` [tablefield: any]
-  Value to use for the plot (Y axis)
+  Value to use for the plot (Y axis).
 
 Output
 ......
 
 ``Bar plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
-
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgisboxplot:
@@ -50,13 +49,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``Category field name`` [tablefield: any]
-  Categorical field to use for grouping the boxes (X axis)
+  Categorical field to use for grouping the boxes (X axis).
 
 ``Value field`` [tablefield: any]
-  Value to use for the plot (Y axis)
+  Value to use for the plot (Y axis).
 
 ``Additional statistic lines`` [enumeration]
   Additional statistics information to add to the plot. Options available are:
@@ -71,7 +70,7 @@ Output
 ......
 
 ``Box plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 
@@ -86,19 +85,19 @@ Parameters
 ..........
 
 ``Input table`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``Category name field`` [tablefield: any]
-  Categorical field to use for grouping the boxes (X axis)
+  Categorical field to use for grouping the boxes (X axis).
 
 ``Value field`` [tablefield: any]
-  Value to use for the plot (Y axis)
+  Value to use for the plot (Y axis).
 
 Output
 ......
 
 ``Plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 
@@ -116,19 +115,19 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``Category field name`` [tablefield: any]
-  Categorical field to group the features
+  Categorical field to group the features.
 
 ``Value field`` [tablefield: numeric]
-  Value to use for the plot
+  Value to use for the plot.
 
 Output
 ......
 
 ``Polar plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 
@@ -142,13 +141,13 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Input raster layer to use for the plot
+  Input raster layer to use for the plot.
 
 ``Band number`` [raster band]
-  Raster band to use for the histogram
+  Raster band to use for the histogram.
 
 ``number of bins`` [number]
-  Total bins of the histogram
+  Total bins of the histogram.
 
   Default: *10*
 
@@ -156,7 +155,7 @@ Output
 ......
 
 ``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 
@@ -172,13 +171,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``Category field name`` [tablefield: any]
-  Field to use for the histogram
+  Field to use for the histogram.
 
 ``number of bins`` [number]
-  Total bins of the histogram
+  Total bins of the histogram.
 
   Default: *10*
 
@@ -186,7 +185,7 @@ Output
 ......
 
 ``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 
@@ -201,19 +200,19 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``X attribute`` [tablefield: any]
-  Field to use for the x axis
+  Field to use for the x axis.
 
 ``Y attribute`` [tablefield: any]
-  Field to use for the y axis
+  Field to use for the y axis.
 
 Output
 ......
 
 ``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 
@@ -228,22 +227,22 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to use for the plot
+  Input vector layer to use for the plot.
 
 ``X attribute`` [tablefield: any]
-  Field to use for the x axis
+  Field to use for the x axis.
 
 ``Y attribute`` [tablefield: any]
-  Field to use for the y axis
+  Field to use for the y axis.
 
 ``Z attribute`` [tablefield: any]
-  Field to use for the z axis
+  Field to use for the z axis.
 
 Output
 ......
 
 ``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`
+  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

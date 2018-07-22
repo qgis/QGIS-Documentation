@@ -185,10 +185,11 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Raster layer in input
+  Raster layer in input.
 
 ``Suppress GCP info`` [boolean]
-  Suppress ground control points list printing. It may be useful for datasets with huge amount of GCPs, such as L1B AVHRR or HDF4 MODIS which contain thousands of them.
+  Suppress ground control points list printing. It may be useful for datasets with huge amount of GCPs,
+  such as L1B AVHRR or HDF4 MODIS which contain thousands of them.
 
   Default: *False*
 
@@ -201,7 +202,7 @@ Outputs
 .......
 
 ``Layer information`` [html]
-  Raster information in output
+  Raster information in output.
 
 See also
 ........

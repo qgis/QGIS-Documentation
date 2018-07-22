@@ -85,10 +85,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Layer to extract features from
+  Layer to extract features from.
 
 ``Difference layer`` [vector: any]
-  Subtracting layer
+  Subtracting layer.
 
 Output
 ......
@@ -117,7 +117,7 @@ Parameters
   Input layer to be clipped.
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the clipping
+  Extent of the clipping.
 
 ``Clip features to the extent`` [boolean]
   If checked, output geometries will be automatically converted to multi geometries
@@ -138,7 +138,7 @@ Intersection
 Extracts the portions of features from the input layer that overlap features in the intersection layer.
 
 Features in the intersection layer are assigned the attributes of the overlapping
-features from both the input and intersection layers
+features from both the input and intersection layers.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
@@ -153,7 +153,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input layer
+  Input layer.
 
 ``Intersection layer`` [vector: any]
   Layer containing the intersecting features.
@@ -200,7 +200,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Input layer
+  Input layer.
 
 ``Intersection layer`` [vector: line]
   Layer to use in the intersection operation.
@@ -221,7 +221,7 @@ Output
 ......
 
 ``Intersection`` [vector: point]
-  Point vector layer of the intersection
+  Point vector layer of the intersection.
 
 
 .. _qgissplitwithlines:
@@ -281,7 +281,7 @@ Parameters
   One layer containing feature(s) to be compared.
 
 ``Difference layer`` [vector: any]
-  Subtracting layer
+  Subtracting layer.
 
 Output
 ......
@@ -320,7 +320,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Union layer`` [vector: any]
   Layer that will be combined to the first one.
@@ -329,7 +329,7 @@ Output
 ......
 
 ``Union`` [vector: any]
-  Layer containing the union of the layers
+  Layer containing the union of the layers.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

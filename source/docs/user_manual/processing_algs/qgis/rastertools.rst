@@ -34,12 +34,12 @@ Parameters
   of the tile size.
 
 ``Tile size`` [number]
-  Size of the tile of the output raster layer
+  Size of the tile of the output raster layer.
 
   Default: *1024*
 
 ``Map units per pixel`` [number]
-  Pixel size (in map units)
+  Pixel size (in map units).
 
   Default: *100*
 
@@ -52,39 +52,39 @@ Parameters
 ``Single layer to render`` [enumeration]
   Optional
 
-  Choose a single layer for the output raster layer
+  Choose a single layer for the output raster layer.
 
 Outputs
 .......
 
 ``Output layer`` [raster]
-  Output raster layer
+  Output raster layer.
 
 .. _qgiscreateconstantrasterlayer:
 
 Create constant raster layer
 ----------------------------
 Given an extent and a value, generates a raster layer with all the pixels having
-the same value choosen.
+the same value chosen.
 
 Parameters
 ..........
 
 ``Desired extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent for the raster layer
+  Extent for the raster layer.
 
 ``Target CRS`` [crs]
-  CRS for the output raster layer
+  CRS for the output raster layer.
 
   Default: *project CRS*
 
 ``Pixel size`` [number]
-  Pixel size (X=Y) in map units
+  Pixel size (X=Y) in map units.
 
   Default: *0.1*
 
 ``Constant value`` [number]
-  Constant pixel value for the raster layer
+  Constant pixel value for the raster layer.
 
   Default: *1*
 
@@ -92,7 +92,7 @@ Outputs
 .......
 
 ``Constant`` [raster]
-  Raster covering the desired extent with pixel size and value chosen
+  Raster covering the desired extent with pixel size and value chosen.
 
 
 .. _qgissetstyleforrasterlayer:
@@ -107,7 +107,7 @@ Parameters
 ..........
 
 ``Raster layer`` [raster]
-  Raster layer
+  Raster layer.
 
 ``Style file`` [file]
   Path of the ``QML`` style file.

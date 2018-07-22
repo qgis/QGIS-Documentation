@@ -23,7 +23,7 @@ Numeric, date, time and string fields are supported.
 The statistics returned will depend on the field type.
 
 Statistics are generated as an HTML file and are available in the
-:menuselection:`Processing --> Results viewer`
+:menuselection:`Processing --> Results viewer`.
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
@@ -31,15 +31,15 @@ Parameters
 ..........
 
 ``Input vector`` [vector: any]
-  Vector layer to calculate the statistic on
+  Vector layer to calculate the statistic on.
 
 ``Field to calculate statistics on`` [tablefield: any]
-  Any supported table field to calculate the statistics
+  Any supported table field to calculate the statistics.
 
 Outputs
 .......
 ``Statistics`` [html]
-  HTML file with calculated statistics
+  HTML file with calculated statistics.
 
 
 .. _qgiscountpointsinpolygon:
@@ -67,10 +67,10 @@ will take precedence and the unique class field will be ignored.
 Parameters
 ..........
 ``Polygons`` [vector: polygon]
-  Polygons layer
+  Polygons layer.
 
 ``Points`` [vector: point]
-  Points layer
+  Points layer.
 
 ``Weight field`` [tablefield: any]
   Optional
@@ -87,7 +87,7 @@ Parameters
   classes that are found in it.
 
 ``Count field name`` [string]
-  The name of the field to store the count of points
+  The name of the field to store the count of points.
 
   Default: *NUMPOINTS*
 
@@ -112,14 +112,14 @@ Parameters
 ..........
 
 ``Input point layer`` [vector: point]
-  Input point vector layer
+  Input point vector layer.
 
 ``Input unique ID field`` [tablefield: any]
   Define the field of the input layer with unique ID that will be copied in the
   output attribute table.
 
 ``Target point layer`` [vector: point]
-  Destination point vector layer
+  Destination point vector layer.
 
 ``Target unique ID field`` [tablefield: any]
   Define the field of the target layer with unique ID that will be copied in the
@@ -170,14 +170,14 @@ Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Destination hubs layer`` [vector: any]
-  Destination layer to calculate the nearest point
+  Destination layer to calculate the nearest point.
 
 ``Hub layer name attribute`` [tablefield: any]
   Attribute of the destination layer that will be copied into the
-  output
+  output.
 
 ``Measurement unit`` [enumeration]
   The distance field in the output attribute table will be calculated according
@@ -194,7 +194,7 @@ Parameters
 Outputs
 .......
 ``Hub distance`` [vector: line]
-  Line vector layer with distance values
+  Line vector layer with distance values.
 
 
 .. _qgisdistancetonearesthubpoints:
@@ -208,14 +208,14 @@ Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Destination hubs layer`` [vector: any]
-  Destination layer to calculate the nearest point
+  Destination layer to calculate the nearest point.
 
 ``Hub layer name attribute`` [tablefield: any]
   Attribute of the destination layer that will be copied into the
-  output
+  output.
 
 ``Measurement unit`` [enumeration]
   The distance field in the output attribute table will be calculated according
@@ -232,7 +232,7 @@ Parameters
 Outputs
 .......
 ``Hub distance`` [vector: point]
-  Point vector layer with distance values
+  Point vector layer with distance values.
 
 
 .. _qgishublines:
@@ -256,10 +256,10 @@ Parameters
 ..........
 
 ``Hub point layer`` [vector: any]
-  Input layer
+  Input layer.
 
 ``Hub ID field`` [tablefield: any]
-  Field of the hub layer with ID to join
+  Field of the hub layer with ID to join.
 
 ``Hub layer fields to copy``
   Optional
@@ -268,10 +268,10 @@ Parameters
   all fields are taken.
 
 ``Spoke point layer`` [vector: any]
-  Additional spoke point layer
+  Additional spoke point layer.
 
 ``Spoke ID field`` [tablefield: any]
-  Field of the spoke layer with ID to join
+  Field of the spoke layer with ID to join.
 
 ``Spoke layer fields to copy``
   Optional
@@ -282,7 +282,7 @@ Parameters
 Outputs
 .......
 ``Hub lines`` [vector: lines]
-  The resulting line layer
+  The resulting line layer.
 
 
 .. _qgislistuniquevalues:
@@ -306,10 +306,10 @@ Outputs
 .......
 
 ``Unique values`` [table]
-  Summary table layer with unique values
+  Summary table layer with unique values.
 
 ``HTML report`` [html]
-  HTML report of unique values in the :menuselection:`Processing --> Results viewer`
+  HTML report of unique values in the :menuselection:`Processing --> Results viewer`.
 
 
 .. _qgismeancoordinates:
@@ -332,7 +332,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Weight field`` [tablefield: numeric]
   Optional
@@ -370,12 +370,12 @@ Parameters
 ..........
 
 ``Points`` [vector: point]
-  Point vector layer to calculate the statistics on
+  Point vector layer to calculate the statistics on.
 
 Outputs
 .......
 ``Nearest neighbour`` [html]
-  HTML file in output with the computed statistics
+  HTML file in output with the computed statistics.
 
 
 .. _qgisstatisticsbycategories:
@@ -405,20 +405,20 @@ Parameters
 ..........
 
 ``Input vector layer`` [vector: any]
-  Input vector layer with unique classes and values
+  Input vector layer with unique classes and values.
 
 ``Field to calculate the statistics on`` [tablefield: any]
   Optional
 
-  If empty only the count will be calculated
+  If empty only the count will be calculated.
 
 ``Field(s) with categories`` [tablefield: any] [list]
-  Field(s) of the categories
+  Field(s) of the categories.
 
 Outputs
 .......
 ``N unique values`` [table]
-  Table with statistics field
+  Table with statistics field.
 
 
 .. _qgissumlinelengths:
@@ -440,25 +440,25 @@ Parameters
 ..........
 
 ``Lines`` [vector: line]
-  Input vector line layer
+  Input vector line layer.
 
 ``Polygons`` [vector: polygon]
-  Polygon vector layer
+  Polygon vector layer.
 
 ``Lines length field name`` [string]
-  Name of the field of the lines length
+  Name of the field of the lines length.
 
   Default: *LENGTH*
 
 ``Lines count field name`` [string]
-  Name of the field of the lines count
+  Name of the field of the lines count.
 
   Default: *COUNT*
 
 Outputs
 .......
 ``Line length`` [vector: polygon]
-  Polygon output layer with fields of lines length and line count
+  Polygon output layer with fields of lines length and line count.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

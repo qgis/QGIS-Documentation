@@ -24,17 +24,17 @@ additional attributes, containing geometric measurements based on a selected CRS
 Depending on the geometry type of the vector layer, the attributes added to the
 table will be different:
 
-* for **point** layers: X and Y coordinates called ``xcoord`` and ``ycoord``
+* for **point** layers: X and Y coordinates called ``xcoord`` and ``ycoord``;
 * for **line** layers: ``length`` and, |32| particularly for LineString and CompoundCurve
-  geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``)
-* for **polygon** layers: ``perimeter`` and ``area``
+  geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``);
+* for **polygon** layers: ``perimeter`` and ``area``.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input.
 
 ``Calculate using`` [enumeration]
   Choose different calculation type for the geometric properties:
@@ -47,7 +47,7 @@ Output
 ......
 
 ``Added geom info`` [vector: any]
-  Copy of the input vector layer with the addition of the geometry fields
+  Copy of the input vector layer with the addition of the geometry fields.
 
 
 .. _qgisaggregate:
@@ -75,10 +75,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer in input to aggregate the features from
+  Vector layer in input to aggregate the features from.
 
 ``Group by expression`` [tablefield: any]
-  Choose the grouping field. If *NULL* all features will be grouped
+  Choose the grouping field. If *NULL* all features will be grouped.
 
   Default: *NULL*
 
@@ -88,10 +88,10 @@ Parameters
   By default, the embedded table lists all the fields of the source
   layer and allows you to edit them:
 
-  * click the |newAttribute| button to create a new field
-  * click the |deleteAttribute| to remove a field
-  * use |arrowUp| and |arrowDown| to change the selected field order
-  * click |clearText| to reset to the default view
+  * click the |newAttribute| button to create a new field;
+  * click the |deleteAttribute| to remove a field;
+  * use |arrowUp| and |arrowDown| to change the selected field order;
+  * click |clearText| to reset to the default view.
 
   For each of the fields you'd like to retrieve information from, you need to
   fill the following options:
@@ -131,7 +131,7 @@ Output
 ......
 
 ``Aggregated`` [vector: any]
-  Multigeometry vector layer with the aggregated values
+  Multigeometry vector layer with the aggregated values.
 
 See also
 ........
@@ -161,14 +161,14 @@ For **lines geometries**, the boundaries are the vertices between each features.
 .. figure:: img/boundary_lines.png
    :align: center
 
-   Boundary layer for lines. In yellow a selected features
+   Boundary layer for lines. In yellow a selected features.
 
 
 Parameters
 ..........
 
 ``Input layer`` [vector: line, polygon]
-  Input vector layer
+  Input vector layer.
 
 Output
 ......
@@ -194,7 +194,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Input vector layer
+  Input vector layer.
 
 Outputs
 .......
@@ -227,7 +227,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Distance`` [number]
   Distance radius of the buffer calculated from the boundary of each feature.
@@ -256,7 +256,7 @@ Parameters
   corners in a line.
 
 ``Miter limit`` [number]
-  Only applicable for miter join styles
+  Only applicable for miter join styles.
 
   Default: *2.0*
 
@@ -276,7 +276,7 @@ Outputs
 .......
 
 ``Buffer`` [vector: polygon]
-  Buffer polygon vector layer
+  Buffer polygon vector layer.
 
 See also
 ........
@@ -335,9 +335,9 @@ Performs a validity check on the geometries of a vector layer.
 The geometries are classified in three groups (valid, invalid and error) and a
 vector layer is generated with the features in each of these categories:
 
-* the **valid** layer contains only the valid features (without topological errors)
-* the **invalid** layer contains all the invalid features found by the algorithm
-* the **error** layer is the point layer where the invalid features have been found
+* the **valid** layer contains only the valid features (without topological errors);
+* the **invalid** layer contains all the invalid features found by the algorithm;
+* the **error** layer is the point layer where the invalid features have been found.
 
 The attribute table of each generated vector layer will contain some additional
 information (numbers of error found and type of error):
@@ -403,12 +403,12 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer to be transformed
+  Vector layer to be transformed.
 
 ``Unique ID fields`` [tablefield: any] [list]
   Optional
 
-  Choose one or more attributes to collect the geometries
+  Choose one or more attributes to collect the geometries.
 
 Output
 ......
@@ -431,10 +431,10 @@ Computes the concave hull of the features in an input point layer.
 Parameters
 ..........
 ``Input point layer`` [vector: point]
-  Point vector layer to calculate the concave hull
+  Point vector layer to calculate the concave hull.
 
 ``Threshold`` [number]
-  Number from 0 (maximum concave hull) to 1 (convex hull)
+  Number from 0 (maximum concave hull) to 1 (convex hull).
 
   Default: *0.3*
 
@@ -446,19 +446,19 @@ Parameters
 
 
 ``Allow holes`` [boolean]
-  Choose whether to allow holes in the final concave hull
+  Choose whether to allow holes in the final concave hull.
 
   Default: *True*
 
 ``Split multipart geometry into singlepart geometries`` [boolean]
-  Check if you want to have singlepart geometries instead of multipart ones
+  Check if you want to have singlepart geometries instead of multipart ones.
 
   Default: *False*
 
 Output
 ......
 ``Concave hull`` [vector: polygon]
-  Output concave hull
+  Output concave hull.
 
 See also
 ........
@@ -477,7 +477,7 @@ a point layer, but a point layer cannot be converted to a line layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to transform
+  Input vector layer to transform.
 
 ``New geometry type`` [enumeration]
   List of all the conversions supported:
@@ -489,13 +489,13 @@ Parameters
   * Polygons
 
   .. note:: Conversion types availability depends on the input layer and the conversion
-    chosen: e.g. it is not possible to convert a point to a line
+    chosen: e.g. it is not possible to convert a point to a line.
 
 Output
 ......
 
 ``Converted`` [vector: any]
-  Converted vector layer depending on the parameters chosen
+  Converted vector layer depending on the parameters chosen.
 
 See also
 ........
@@ -521,12 +521,12 @@ covers the whole layer or grouped subsets of features.
 Parameters
 ..........
 ``Input point layer`` [vector: any]
-  Point vector layer to calculate the convex hull
+  Point vector layer to calculate the convex hull.
 
 Output
 ......
 ``Convex hull`` [vector: polygon]
-  Output convex hull
+  Output convex hull.
 
 See also
 ........
@@ -575,10 +575,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Input point vector layer
+  Input point vector layer.
 
 ``Azimuth (degrees from North)`` [number |dataDefined|]
-  Angle (in degrees) as the middle value of the wedge
+  Angle (in degrees) as the middle value of the wedge.
 
 ``Wedge width (in degrees)`` [number |dataDefined|]
   Width (in degrees) of the buffer. The wedge will extend to half of the angular
@@ -604,7 +604,7 @@ Output
 ......
 
 ``Buffers`` [vector: polygon]
-  Wedge buffer polygon vector layer
+  Wedge buffer polygon vector layer.
 
 See also
 ........
@@ -629,12 +629,12 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer to compute the triangulation on
+  Point vector layer to compute the triangulation on.
 
 Output
 ......
 ``Delaunay triangulation`` [vector: polygon]
-  Resulting polygon layer of delaunay triangulation
+  Resulting polygon layer of delaunay triangulation.
 
 
 .. _qgisdeleteholes:
@@ -671,7 +671,7 @@ Outputs
 .......
 
 ``Cleaned`` [vector: polygon]
-  Vector layer without holes or holes larger than specified area
+  Vector layer without holes or holes larger than specified area.
 
 
 .. _qgisdensifygeometries:
@@ -762,7 +762,7 @@ Outputs
 .......
 
 ``Densified`` [vector: plygon, line]
-  Densified layer with vertices added at specified intervals
+  Densified layer with vertices added at specified intervals.
 
 
 See also
@@ -816,7 +816,7 @@ Outputs
 .......
 
 ``Dissolved`` [vector: polygon, line]
-  Output layer, either (multi) line or (multi) polygon
+  Output layer, either (multi) line or (multi) polygon.
 
 
 .. _qgisdropmzvalues:
@@ -828,22 +828,22 @@ Removes any M (measure) or Z (altitude) values from input geometries.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to clean
+  Input vector layer to clean.
 
 ``Drop M Values`` [boolean]
-  Check to remove the M values
+  Check to remove the M values.
 
   Default: *False*
 
 ``Drop Z Values`` [boolean]
-  Check to remove the Z values
+  Check to remove the Z values.
 
   Default: *False*
 
 Output
 ......
 ``Z/M Dropped`` [vector: any]
-  Cleaned vector layer without M and/or Z values
+  Cleaned vector layer without M and/or Z values.
 
 
 .. _qgiseliminateselectedpolygons:
@@ -864,7 +864,7 @@ similar but not identical.
 Parameters
 ..........
 ``Input layer`` [vector: polygon]
-  Input polygon vector layer to clean
+  Input polygon vector layer to clean.
 
 ``Merge selection with the neighboring polygon with the`` [enumeration]
   Choose the parameter to use in order to get rid of the selected polygons:
@@ -876,8 +876,7 @@ Parameters
 Output
 ......
 ``Eliminated`` [vector: polygon]
-  Cleaned vector layer as result of the parameters chosen
-
+  Cleaned vector layer as result of the parameters chosen.
 
 
 .. _qgisexplodelines:
@@ -899,7 +898,7 @@ intermediate vertices between them.
 Parameters
 ..........
 ``Input layer`` [vector: line]
-  Line vector layer in input to explode
+  Line vector layer in input to explode.
 
 Output
 ......
@@ -925,19 +924,19 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Line vector layer to extend
+  Line vector layer to extend.
 
 ``Start distance`` [number]
-  Starting distance to extend the line by (starting point)
+  Starting distance to extend the line by (starting point).
 
 ``End distance`` [number]
-  Ending distance of the extension
+  Ending distance of the extension.
 
 Output
 ......
 
 ``Extended`` [vector: line]
-  Extended vector line layer
+  Extended vector line layer.
 
 
 .. _qgisextractspecificvertices:
@@ -965,11 +964,11 @@ and bisector angle of vertex for the original geometry.
 Parameters
 ..........
 ``Input layer`` [vector: line, polygon]
-  Vector layer in input to extract the vertices from
+  Vector layer in input to extract the vertices from.
 
 ``Vertex indices`` [number]
   Type the indices of the vertices to extract. The algorithm accepts comma separated
-  values for many vertices to extract (e.g. ``-2, 3, 5, 7``)
+  values for many vertices to extract (e.g. ``-2, 3, 5, 7``).
 
   Default: *0*
 
@@ -1005,7 +1004,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer in input to extract the vertices from
+  Vector layer in input to extract the vertices from.
 
 Output
 ......
@@ -1054,12 +1053,12 @@ which is available in the :ref:`expression builder <vector_expressions>`.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector input layer
+  Vector input layer.
 
 ``Output geometry type`` [enumeration]
   The output geometry strongly depends on the expression you will choose: for
   instance, if you want to create a buffer then the geometry type has to be
-  a polygon
+  a polygon.
 
   Available options are:
 
@@ -1068,24 +1067,24 @@ Parameters
   * Point
 
 ``Output geometry has z dimension`` [boolean]
-  Choose if the output geometry should have the z dimension
+  Choose if the output geometry should have the z dimension.
 
   Default: *False*
 
 ``Output geometry has m dimension`` [boolean]
-  Choose if the output geometry should have the m dimension
+  Choose if the output geometry should have the m dimension.
 
   Default: *False*
 
 ``Geometry expression`` [expression]
   Add the geometry expression you want to use. You can use the button to open
   the Expression Dialog: the dialog has a lists of all the usable expression
-  together with their help and guide
+  together with their help and guide.
 
   Default: *$geometry*
 
 ``Modified geometry`` [vector: any]
-  Vector layer resulting from the expression added
+  Vector layer resulting from the expression added.
 
 
 .. _qgiskeepnbiggestparts:
@@ -1136,13 +1135,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Line vector layer to convert
+  Line vector layer to convert.
 
 Output
 ......
 
 ``Polygons`` [vector: polygon]
-  Polygon vector layer from the line input vector layer
+  Polygon vector layer from the line input vector layer.
 
 
 .. _qgismergelines:
@@ -1160,13 +1159,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  MultiLineString vector layer
+  MultiLineString vector layer.
 
 Output
 ......
 
 ``Merged`` [vector: lines]
-  Single Linestring vector layer
+  Single LineString vector layer.
 
 
 .. _qgisminimumboundinggeometry:
@@ -1179,14 +1178,14 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Field`` [tablefield: any]
   Optional
 
   Features can be grouped by a field. If set, this causes the output
   layer to contain one feature per grouped value with a minimal geometry covering
-  just the features with matching values
+  only the features with matching values.
 
 ``Geometry type`` [enumeration]
   Numerous enclosing geometry types are supported:
@@ -1205,7 +1204,7 @@ Output
 ......
 
 ``Bounding geometry`` [vector: polygon]
-  Bounding polygon layer
+  Bounding polygon layer.
 
 
 .. _qgisminimumenclosingcircle:
@@ -1223,10 +1222,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Number of segment in circles`` [number]
-  Choose the number of segment for each circle
+  Choose the number of segment for each circle.
 
   Default: *72*
 
@@ -1234,7 +1233,7 @@ Output
 ......
 
 ``Minimum enclosing circles`` [vector: polygon]
-  Enclosing circles for each polygon feature
+  Enclosing circles for each polygon feature.
 
 See also
 ........
@@ -1273,7 +1272,7 @@ Output
 ......
 
 ``Multi-ring buffer (constant distance)``
-  Multi ring buffer polygon vector layer
+  Multi ring buffer polygon vector layer.
 
 See also
 ........
@@ -1330,29 +1329,29 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Line vector layer in input to elaborate the offset on
+  Line vector layer in input to elaborate the offset on.
 
 ``Distance`` [number]
   Distance of the offset. Negative distances are also supported: for instance a
-  negative distance will create the offset to the other part of the layer
+  negative distance will create the offset to the other part of the layer.
 
   Default: *10.0*
 
 ``Segment`` [number]
   Number of line segments to use to approximate a quarter circle when creating
-  rounded offsets
+  rounded offsets.
 
   Default: *8*
 
 ``Join style`` [enumeration]
   Specify whether round, miter or beveled joins should be used when offsetting
-  corners in a line
+  corners in a line.
 
   Default: *Round*
 
 ``Miter limit`` [number]
   Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join
+  the offset curve to use when creating a mitered join.
 
   Default: *2.0*
 
@@ -1360,7 +1359,7 @@ Output
 ......
 
 ``Offset`` [vector: line]
-  Offset line layer
+  Offset line layer.
 
 
 .. _qgisorientedminimumboundingbox:
@@ -1378,13 +1377,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 Output
 ......
 
 ``Bounding boxes`` [vector: polygon]
-  Oriented minimum bounding boxes for each polygon feature
+  Oriented minimum bounding boxes for each polygon feature.
 
 See also
 ........
@@ -1409,7 +1408,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Input vector layer
+  Input vector layer.
 
 ``Maximum angle tolerance (degrees)`` [number]
   Specify the maximum deviation from a right angle or straight line a vertex can
@@ -1419,13 +1418,13 @@ Parameters
 
 ``Maximum algorithm iterations`` [number]
   Setting a larger number for the maximum iterations will result in a more
-  orthogonal geometry at the cost of extra processing time
+  orthogonal geometry at the cost of extra processing time.
 
 Output
 ......
 
 ``Orthogonalized`` [vector: polygon, line]
-  Final layer with angles adjusted depending on the parameters chosen
+  Final layer with angles adjusted depending on the parameters chosen.
 
 
 .. _qgispointonsurface:
@@ -1438,7 +1437,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Create point on surface for each part`` [boolean] |32|
   If checked a point for each different part of the geometry will be created.
@@ -1449,7 +1448,7 @@ Output
 ......
 
 ``Point`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 See also
 ........
@@ -1476,20 +1475,20 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line, polygon]
-  Input vector layer
+  Input vector layer.
 
 ``Distance`` [number]
-  Set the distance between each point
+  Set the distance between each point.
 
   Default: *100*
 
 ``Start offset`` [number]
-  Specify an eventual offset where the first point should start
+  Specify an eventual offset where the first point should start.
 
   Default: *0*
 
 ``End offset`` [number]
-  Specify an eventual offset where the last point should end
+  Specify an eventual offset where the last point should end.
 
   Default: *0*
 
@@ -1497,7 +1496,7 @@ Output
 ......
 
 ``Points`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 
 .. _qgispointsdisplacement:
@@ -1512,20 +1511,20 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Input point vector layer
+  Input point vector layer.
 
 ``Minimum distance to other points`` [number]
-  Set the distance between each point
+  Set the distance between each point.
 
   Default: *0,000150*
 
 ``Displacement distance`` [number]
-  Specify an eventual offset where the first point should start
+  Specify an eventual offset where the first point should start.
 
   Default: *0,000150*
 
 ``Horizontal distribution for two point case`` [boolean]
-  Specify an eventual offset where the last point should end
+  Specify an eventual offset where the last point should end.
 
   Default: *False*
 
@@ -1560,10 +1559,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon]
-  Input polygon vector layer
+  Input polygon vector layer.
 
 ``Tolerance (layer units)`` [number]
-  Set the tolerance for the calculation
+  Set the tolerance for the calculation.
 
   Default: *1.0*
 
@@ -1571,7 +1570,7 @@ Output
 ......
 
 ``Point`` [vector: point]
-  Point as pole of inaccessibility for the source polygon vector layer
+  Point as pole of inaccessibility for the source polygon vector layer.
 
 
 .. _qgispolygonize:
@@ -1582,7 +1581,7 @@ Creates a polygon layer whose features boundaries are generated from a **closed*
 line layer features.
 
 .. note:: the line layer must have closed shapes in order to be transformed into
-  a polygon
+  a polygon.
 
 .. figure:: img/polygonize.png
    :align: center
@@ -1593,12 +1592,12 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Input line vector layer
+  Input line vector layer.
 
 ``Keep table structure of line layer`` [boolean]
   Optional
 
-  Check to copy the original attribute of the line layer
+  Check to copy the original attribute of the line layer.
 
   Default: *False*
 
@@ -1606,7 +1605,7 @@ Output
 ......
 
 ``Polygons from lines`` [vector: polygon]
-  Vector layer with polygonized features
+  Vector layer with polygonized features.
 
 
 .. _qgispolygonstolines:
@@ -1627,13 +1626,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon]
-  Input polygon vector layer
+  Input polygon vector layer.
 
 Output
 ......
 
 ``Lines`` [vector: line]
-  Lines from the polygon layer
+  Lines from the polygon layer.
 
 
 .. _qgisprojectpointcartesian:
@@ -1647,19 +1646,19 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer to project
+  Point vector layer to project.
 
 ``Bearing (degrees from North)`` [number]
-  Clockwise angle starting from North, in degree (°) unit
+  Clockwise angle starting from North, in degree (°) unit.
 
 ``Distance`` [number]
-  Distance to offset geometries, in layer units
+  Distance to offset geometries, in layer units.
 
 Output
 ......
 
 ``Projected`` [vector: point]
-  Projected layer at given degrees and distance
+  Projected layer at given degrees and distance.
 
 
 .. _qgispromotetomulti:
@@ -1678,13 +1677,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 Output
 ......
 
 ``Multiparts`` [vector: any]
-  Multiparts vector layer
+  Multiparts vector layer.
 
 See also
 ........
@@ -1709,7 +1708,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Input point vector layer
+  Input point vector layer.
 
 ``Buffer shape`` [enumeration]
   Different shape available:
@@ -1721,24 +1720,24 @@ Parameters
   Default: *Rectangles*
 
 ``Width`` [number]
-  Width of the buffer shape
+  Width of the buffer shape.
 
   Default: *1.0*
 
 ``Height`` [number]
-  Height of the buffer shape
+  Height of the buffer shape.
 
   Default: *1.0*
 
 ``Rotation`` [number]
   Optional
 
-  Rotation of the buffer shape
+  Rotation of the buffer shape.
 
   Default: *0.0*
 
 ``Number of segment`` [number]
-  How many segment should have the buffer shape
+  How many segment should have the buffer shape.
 
   Default: *36*
 
@@ -1746,7 +1745,7 @@ Outputs
 .......
 
 ``Output`` [vector: polygon]
-  Buffer shape in output
+  Buffer shape in output.
 
 See also
 ........
@@ -1771,7 +1770,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Input point vector layer
+  Input point vector layer.
 
 ``Buffer shape`` [enumeration]
   Different shape available:
@@ -1783,24 +1782,24 @@ Parameters
   Default: *Rectangles*
 
 ``Width`` [tablefield: numeric]
-  Width of the buffer shape
+  Width of the buffer shape.
 
   Default: *1.0*
 
 ``Height`` [tablefield: numeric]
-  Height of the buffer shape
+  Height of the buffer shape.
 
   Default: *1.0*
 
 ``Rotation`` [tablefield: numeric]
   Optional
 
-  Rotation of the buffer shape
+  Rotation of the buffer shape.
 
   Default: *0.0*
 
 ``Number of segment`` [number]
-  How many segment should have the buffer shape
+  How many segment should have the buffer shape.
 
   Default: *36*
 
@@ -1808,7 +1807,7 @@ Outputs
 .......
 
 ``Output`` [vector: polygon]
-  Buffer shape in output
+  Buffer shape in output.
 
 See also
 ........
@@ -1828,16 +1827,16 @@ The features with null geometries can be saved to a separate layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer with NULL geometries
+  Input vector layer with NULL geometries.
 
 Outputs
 .......
 
 ``Non null geometries`` [vector: any]
-  Vector layer without NULL geometries
+  Vector layer without NULL geometries.
 
 ``Null geometries`` [vector: any]
-  Vector layer with only NULL geometries
+  Vector layer with only NULL geometries.
 
 
 .. _qgisreverselinedirection:
@@ -1855,13 +1854,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Input line vector layer to invert the direction
+  Input line vector layer to invert the direction.
 
 Output
 ......
 
 ``Reversed`` [vector: line]
-  Inverted line vector layer
+  Inverted line vector layer.
 
 
 .. _qgisrotatefeatures:
@@ -1876,10 +1875,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input.
 
 ``Rotation (degrees clockwise)`` [number]
-  Angle of the rotation in degrees
+  Angle of the rotation in degrees.
 
   Default: *0.0*
 
@@ -1893,7 +1892,7 @@ Outputs
 .......
 
 ``Rotated`` [vector: any]
-  Vector layer with rotated geometries
+  Vector layer with rotated geometries.
 
 
 .. _qgissegmentizebymaxangle:
@@ -1912,10 +1911,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line, polygon]
-  Vector layer in input
+  Vector layer in input.
 
 ``Maximum angle between vertices (degrees)`` [number]
-  Maximum allowed radius angle between vertices on the straightened geometry
+  Maximum allowed radius angle between vertices on the straightened geometry.
 
   Default: *5.0*
 
@@ -1923,7 +1922,7 @@ Outputs
 .......
 
 ``Segmentized`` [vector: line, polygon]
-  Vector layer with segmentized geometries
+  Vector layer with segmentized geometries.
 
 See also
 ........
@@ -1944,11 +1943,11 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line, polygon]
-  Vector layer in input
+  Vector layer in input.
 
 ``Maximum offset distance`` [number]
   Maximum allowed offset distance between the original curve and the segmentized
-  representation, in the layer units
+  representation, in the layer units.
 
   Default: *1.0*
 
@@ -1956,7 +1955,7 @@ Outputs
 .......
 
 ``Segmentized`` [vector: line, polygon]
-  Vector layer with segmentized geometries
+  Vector layer with segmentized geometries.
 
 See also
 ........
@@ -1981,13 +1980,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 Output
 ......
 
 ``M Added`` [vector: any]
-  Vector layer in output with M value
+  Vector layer in output with M value.
 
 
 .. _qgissetzvalue:
@@ -2008,13 +2007,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 Output
 ......
 
 ``Z Added`` [vector: any]
-  Vector layer in output with Z value
+  Vector layer in output with Z value.
 
 
 .. _qgissimplifygeometries:
@@ -2084,10 +2083,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Input line vector layer
+  Input line vector layer.
 
 ``Distance`` [number]
-  Distance radius of the buffer
+  Distance radius of the buffer.
 
   Default: *10.0*
 
@@ -2101,7 +2100,7 @@ Parameters
 
 ``Segments`` [number]
   Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets
+  creating rounded offsets.
 
   Default: *5*
 
@@ -2117,7 +2116,7 @@ Parameters
 
 ``Miter limit`` [number]
   Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join
+  the offset curve to use when creating a mitered join.
 
   Default: *2.0*
 
@@ -2125,7 +2124,7 @@ Outputs
 .......
 
 ``Buffer`` [vector: polygon]
-  One side buffer polygon vector layer
+  One side buffer polygon vector layer.
 
 
 .. _qgissmoothgeometry:
@@ -2204,10 +2203,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer to align
+  Vector layer to align.
 
 ``Reference layer`` [vector: any]
-  Vector layer to snap to
+  Vector layer to snap to.
 
 ``Tolerance`` [number]
   Control how close input vertices need to be to the reference layer geometries
@@ -2233,7 +2232,7 @@ Outputs
 .......
 
 ``Snapped geometry`` [vector: any]
-  Vector layer with snapped geometries
+  Vector layer with snapped geometries.
 
 
 .. _qgissnappointstogrid:
@@ -2255,25 +2254,25 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to snap
+  Input vector layer to snap.
 
 ``X Grid Spacing`` [number]
-  X snapping parameter
+  X snapping parameter.
 
   Default: *1.0*
 
 ``Y Grid Spacing`` [number]
-  Y snapping parameter
+  Y snapping parameter.
 
   Default: *1.0*
 
 ``Z Grid Spacing`` [number]
-  Z snapping parameter
+  Z snapping parameter.
 
   Default: *0.0*
 
 ``M Grid Spacing`` [number]
-  M snapping parameter
+  M snapping parameter.
 
   Default: *0.0*
 
@@ -2281,7 +2280,7 @@ Outputs
 .......
 
 ``Snapped`` [vector: any]
-  Vector layer with snapped geometries
+  Vector layer with snapped geometries.
 
 
 .. _qgissubdivide:
@@ -2311,7 +2310,7 @@ Parameters
 ``Input layer`` [vector: any]
 
 ``Maximum nodes in parts`` [number]
-  Less *sub-parts* for higher values
+  Less *sub-parts* for higher values.
 
   Default: *256*
 
@@ -2335,13 +2334,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to swap
+  Input vector layer to swap.
 
 Outputs
 .......
 
 ``Swapped`` [vector: any]
-  Output swapped vector layer
+  Output swapped vector layer.
 
 
 .. _qgistaperedbuffer:
@@ -2369,13 +2368,13 @@ Parameters
   Represents the radius of the buffer applied at the end point of the line feature.
 
 ``Segments`` [number |dataDefined|]
-  Number of the buffer segments
+  Number of the buffer segments.
 
 Output
 ......
 
 ``Buffered`` [vector: polygon]
-  Variable buffer polygon layer
+  Variable buffer polygon layer.
 
 See also
 ........
@@ -2409,15 +2408,15 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Input line vector layer
+  Input line vector layer.
 
 ``Length of the transect`` [number]
-  Length in map unit of the transect
+  Length in map unit of the transect.
 
   Default: *5.0*
 
 ``Angle in degrees from the original line at the vertices`` [number]
-  Change the angle of the transect
+  Change the angle of the transect.
 
   Default: *90.0*
 
@@ -2434,7 +2433,7 @@ Outputs
 .......
 
 ``Transect`` [vector: line]
-  Transect of the source line vector layer
+  Transect of the source line vector layer.
 
 
 .. _qgistranslategeometry:
@@ -2452,15 +2451,15 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input.
 
 ``Offset distance (x-axis)`` [number]
-  X axis offset distance
+  X axis offset distance.
 
   Default: *0.0*
 
 ``Offset distance (y-axis)`` [number]
-  Y axis offset distance
+  Y axis offset distance.
 
   Default: *0.0*
 
@@ -2468,7 +2467,7 @@ Outputs
 .......
 
 ``Translated`` [vector: any]
-  Translated (offset) vector layer
+  Translated (offset) vector layer.
 
 
 .. _qgisbufferbym:
@@ -2487,7 +2486,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: line]
-  Line vector layer in input
+  Line vector layer in input.
 
 ``Segments`` [number]
   Number of the buffer segments. It can be a unique value (same value for all the
@@ -2498,7 +2497,7 @@ Output
 ......
 
 ``Buffered`` [vector: polygon]
-  Variable buffer polygon layer
+  Variable buffer polygon layer.
 
 See also
 ........
@@ -2526,10 +2525,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Input point vector layer
+  Input point vector layer.
 
 ``Buffer region`` [number]
-  Area of the Voronoi polygons or of the input layer
+  Area of the Voronoi polygons or of the input layer.
 
   Default: *0.0*
 
@@ -2537,7 +2536,7 @@ Outputs
 .......
 
 ``Voronoi polygons`` [vector: polygon]
-  Voronoi polygons of the input point vector layer
+  Voronoi polygons of the input point vector layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

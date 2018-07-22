@@ -154,7 +154,7 @@ Outputs
 .......
 
 ``Contours`` [vector: line]
-  Output file for contour lines
+  Output file for contour lines.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
