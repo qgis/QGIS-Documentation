@@ -186,16 +186,16 @@ the Python console behavior:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |iconClearConsole| image:: /static/common/iconClearConsole.png
-   :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |iconClearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |iconRunConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
-.. |options| image:: /static/common/mActionOptions.png
-   :width: 1em
 .. |iconeShowEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |startGeoref| image:: /static/common/mActionStartGeoref.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

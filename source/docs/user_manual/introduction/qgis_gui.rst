@@ -695,8 +695,6 @@ open the Plugin Manager dialog.
    :width: 2em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
-.. |captureLine| image:: /static/common/mActionCaptureLine.png
-   :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
@@ -835,8 +833,6 @@ open the Plugin Manager dialog.
 .. |processingModel| image:: /static/common/processingModel.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
-   :width: 1.5em
-.. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em

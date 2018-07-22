@@ -53,8 +53,6 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
 .. |geographic| image:: /static/common/geographic.png
-.. |options| image:: /static/common/mActionOptions.png
-   :width: 1em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
