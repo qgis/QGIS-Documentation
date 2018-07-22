@@ -342,7 +342,7 @@ Parameters
 
   Options:
 
-  * intersect
+  * intersects
   * contains
   * equals
   * touches

@@ -213,7 +213,9 @@ Parameters
   Default: *0.0*
 
 ``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*)
+  Optional
+
+  Field for the interpolation.
 
 ``Output raster type`` [enumeration]
   Raster file type
@@ -303,7 +305,9 @@ Parameters
   Default: *0.0*
 
 ``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*)
+  Optional
+
+  Field for the interpolation.
 
 ``Output raster type`` [enumeration]
   Raster file type
@@ -401,7 +405,9 @@ Parameters
   Default: *0.0*
 
 ``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
+  Optional
+
+  Field for the interpolation.
 
 ``Output raster type`` [enumeration]
   Raster file type
@@ -480,7 +486,9 @@ Parameters
   Default: *0.0*
 
 ``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
+  Optional
+
+  Field for the interpolation.
 
 ``Output raster type`` [enumeration]
   Raster file type
@@ -544,7 +552,9 @@ Parameters
   Default: *0.0*
 
 ``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
+  Optional
+
+  Field for the interpolation.
 
 ``Output raster type`` [enumeration]
   Raster file type
@@ -615,7 +625,9 @@ Parameters
   Default: *0.0*
 
 ``Z field`` [tablefield: numeric]
-  Field for the interpolation (*Optional*).
+  Optional
+
+  Field for the interpolation.
 
 ``Output raster type`` [enumeration]
   Raster file type

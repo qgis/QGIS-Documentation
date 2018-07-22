@@ -226,7 +226,7 @@ Parameters
 
   Default: ``_``
 
-``Statistics to calculate`` [multiple selection]
+``Statistics to calculate`` [enumeration] [list]
   List of statistical operator for the output. The available operators are:
 
   * Count

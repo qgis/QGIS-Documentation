@@ -205,7 +205,7 @@ Parameters
   Default: *False*
 
 ``Promote to Multipart`` [boolean]
-  Casts features geometry type to multi in the output table.
+  Casts features geometry type to multipart in the output table.
 
   Default: *True*
 

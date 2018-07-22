@@ -235,7 +235,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the feature to select
+  Number or the percentage of the features to select.
 
   Default: *10*
 
@@ -278,7 +278,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the feature to select
+  Number or the percentage of the features to select.
 
   Default: *10*
 
@@ -380,7 +380,7 @@ Parameters
 ``Extract features from`` [vector: any]
   Source vector layer
 
-``Where the features intersect (geometric predicate)`` [multiple selection]
+``Where the features intersect (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
   * disjoint

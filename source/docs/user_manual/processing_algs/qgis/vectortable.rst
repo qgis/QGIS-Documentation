@@ -215,8 +215,6 @@ Parameters
   Therefore, this is the correct place to import necessary modules or to calculate
   variables that will be used in subsequent calculations.
 
-  Default: *(not set)*
-
 ``Formula`` [string]
   Add here the Python formula to evaluate. For example to calculate the area of
   an input polygon layer you can add::
