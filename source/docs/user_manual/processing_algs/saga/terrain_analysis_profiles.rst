@@ -113,7 +113,7 @@ Parameters
   <put parameter description here>
 
 ``Values`` [raster] [list]
-  Optional.
+  Optional
 
   <put parameter description here>
 

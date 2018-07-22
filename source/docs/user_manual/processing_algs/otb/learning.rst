@@ -145,7 +145,7 @@ Parameters
   <put parameter description here>
 
 ``Field name`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -340,7 +340,7 @@ Parameters
   <put parameter description here>
 
 ``Input Mask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -348,7 +348,7 @@ Parameters
   <put parameter description here>
 
 ``Statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -388,7 +388,7 @@ Parameters
   <put parameter description here>
 
 ``ValidityMask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -494,7 +494,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -656,7 +656,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -741,7 +741,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -853,7 +853,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -973,7 +973,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1078,7 +1078,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1168,7 +1168,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1275,7 +1275,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1395,7 +1395,7 @@ Parameters
   <put parameter description here>
 
 ``Input XML image statistics file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1535,7 +1535,7 @@ Parameters
   Default: *128*
 
 ``Validity Mask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

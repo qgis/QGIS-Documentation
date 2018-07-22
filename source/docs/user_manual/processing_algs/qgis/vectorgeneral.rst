@@ -483,7 +483,7 @@ Parameters
 ``Destination CRS`` [projection]
   Optional
 
-  Optional parameter to choose the CRS of the output layer. If not specified the
+  Choose the CRS of the output layer. If not specified the
   CRS of the first input layer is taken.
 
 Outputs

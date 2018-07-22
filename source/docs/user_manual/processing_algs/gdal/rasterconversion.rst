@@ -285,7 +285,7 @@ Parameters
   Default: *False*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 

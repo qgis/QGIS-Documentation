@@ -243,7 +243,7 @@ Parameters
   Table field containing the group field of the points
 
 ``Date format (if order field is DateTime)`` [string]
-  Optional.
+  Optional
 
   Choose this option if the points are ordered in a DateTime field
 

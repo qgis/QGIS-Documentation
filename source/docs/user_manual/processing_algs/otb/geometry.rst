@@ -31,7 +31,7 @@ Parameters
   Default: *0*
 
 ``Projection`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -167,7 +167,7 @@ Parameters
   Default: *0*
 
 ``Model ortho-image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

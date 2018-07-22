@@ -50,7 +50,7 @@ Parameters
   Default: *True*
 
 ``Relative Spectral Response File`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 

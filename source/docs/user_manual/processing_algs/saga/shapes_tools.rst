@@ -23,7 +23,7 @@ Parameters
 ..........
 
 ``Extent`` [vector: any]
-  Optional.
+  Optional
 
   Grid will be created according to the selected layer.
 
@@ -173,7 +173,7 @@ Parameters
   Initial layer.
 
 ``Additional Layers`` [vector: any] [list]
-  Optional.
+  Optional
 
   Layer(s) to merge with.
 

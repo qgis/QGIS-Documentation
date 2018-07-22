@@ -335,12 +335,12 @@ Parameters
   Input vector layer
 
 ``Weight field`` [tablefield: numeric]
-  Optional.
+  Optional
 
   Field to use if you want to perform a weighted mean.
 
 ``Unique ID field`` [tablefield: numeric]
-  Optional.
+  Optional
 
   Unique field on which the calculation of the mean will be made.
 

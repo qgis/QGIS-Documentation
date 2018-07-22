@@ -208,7 +208,7 @@ Parameters
   Default: *3*
 
 ``Global expression`` [string]
-  Optional.
+  Optional
 
   The code in the global expression section will be executed only once before the
   calculator starts iterating through all the features of the input layer.

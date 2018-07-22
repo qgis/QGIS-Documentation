@@ -199,7 +199,7 @@ Parameters
   Default: *False*
 
 ``Relief colors`` [table widget]
-  Optional.
+  Optional
 
   Use the following table widget if you want to choose the relief colors manually.
   You can add as many color classes as you want: for each class you can choose

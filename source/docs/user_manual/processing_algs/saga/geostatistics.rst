@@ -26,7 +26,7 @@ Parameters
   <put parameter description here>
 
 ``Points`` [vector: any]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1623,17 +1623,17 @@ Parameters
   <put parameter description here>
 
 ``Categorial Grids`` [raster] [list]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Grids to analyse`` [raster] [list]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Aspect`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

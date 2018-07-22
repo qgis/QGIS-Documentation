@@ -26,7 +26,7 @@ Parameters
   <put parameter description here>
 
 ``Look-up Table`` [table]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -43,7 +43,7 @@ Parameters
   <put parameter description here>
 
 ``Look-up Table`` [table]
-  Optional.
+  Optional
 
   <put parameter description here>
 

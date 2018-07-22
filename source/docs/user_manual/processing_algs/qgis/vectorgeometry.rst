@@ -660,7 +660,7 @@ Parameters
   Polygon layer with holes.
 
 ``Remove holes with area less than`` [number]
-  Optional.
+  Optional
 
   Only holes with an area less than this threshold will be deleted. If ``0.0`` is
   added, **all** the holes will be deleted.
@@ -802,7 +802,7 @@ Parameters
   Line or polygon layer to be dissolved.
 
 ``Unique ID fields`` [tablefield: any]
-  Optional.
+  Optional
 
   If features share a common value in all selected field(s) their geometries will
   be combined.

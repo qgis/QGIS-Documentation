@@ -152,7 +152,7 @@ Parameters
   Default: *1*
 
 ``Validity mask`` [raster]
-  Optional.
+  Optional
 
   A mask that defines which areas are to be filled.
 

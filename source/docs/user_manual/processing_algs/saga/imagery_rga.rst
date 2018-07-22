@@ -29,7 +29,7 @@ Parameters
   <put parameter description here>
 
 ``Smooth Rep`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
