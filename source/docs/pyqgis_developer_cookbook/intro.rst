@@ -309,6 +309,9 @@ QGIS installation path:
 * on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
 * on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
 
+on MacOS: add /Applications/QGIS.app/Contents/Resources/python to the
+Python interpreter in pyCharm.
+
 The path to the PyQGIS modules is now known, however they depend on
 the ``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve
 only as wrappers).  The path to these libraries is typically unknown
