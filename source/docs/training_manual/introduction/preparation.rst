@@ -80,12 +80,17 @@ Together with the ESRI shapefiles you can find a GeoPackage in the
 In order to load a layer from a GeoPackage:
 
 #. click on the |dataSourceManager| button
+
 #. on the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab
+
 #. click on the  **[New]** button and look for the ``training_data.gpkg`` file in
-  the Training Data folder you have downloaded before
+    the Training Data folder you have downloaded before
+
 #. choose the layer to load and click on  **[Connect]** button
+
 #. you should see in the central part of the window the list of all the layers
-  contained in the GeoPackage
+    contained in the GeoPackage
+
 #. select the layer you want to load and click on  the  **[Add]** button
 
 .. image:: img/add_data_dialog_geopackage.png
