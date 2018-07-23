@@ -380,7 +380,7 @@ Parameters
 ``Extract features from`` [vector: any]
   Source vector layer
 
-``Where the features intersect (geometric predicate)`` [enumeration] [list]
+``Where the features (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
   * disjoint
