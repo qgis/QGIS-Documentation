@@ -46,12 +46,12 @@ Can be used/found in many places in manuals.
 Platform Icons
 ..............
 
-==========  ===============  ==========  =============== 
+==========  ===============  ==========  ===============
 Icon        Substitution     Icon        Substitution
-==========  ===============  ==========  =============== 
+==========  ===============  ==========  ===============
 |kde|       ``|kde|``        |nix|       ``|nix|``
 |osx|       ``|osx|``        |win|       ``|win|``
-==========  ===============  ==========  =============== 
+==========  ===============  ==========  ===============
 
 
 
@@ -97,6 +97,7 @@ Icon                            Substitution                        Icon        
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``                      |zip|                           ``|zip|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
+|qgsProjectFile|                ``|qgsProjectFile|``                |favourites|                    ``|favourites|``
 ==============================  ==================================  ==============================  ==================================
 
 File
