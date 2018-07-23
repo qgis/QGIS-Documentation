@@ -63,19 +63,19 @@ it is present, ensure that it's checked for now.
 
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
 database. You can have access to common vector files (e.g. ESRI shapefile
-or GeoPackage files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial)
+or GeoPackage files), databases (e.g.PostGIS, Oracle, SpatiaLite or MSSQL Spatial)
 and WMS/WFS connections. You can also view your GRASS data.
 
-If you have saved a project a new the Browser Panel will also give you quick
-access to all the layers stored in the same path of the project file under the
-tab |iconQgsProjectFile| :guilabel:`Project Home`.
+If you have saved a project the Browser Panel will also give you quick access to
+all the layers stored in the same path of the project file under the tab
+|qgsProjectFile| :guilabel:`Project Home`.
 
 Moreover you can set one or more folder as **Favorites**: search under your path
 and once you have found the folder, right click on it and click on ``Add as a
-Favorite``. You should then be able to see your folder in the tab |IconFavourites|
-:guilabel:`Favorites`.
+Favorite``. You should then be able to see your folder in the |favourites|
+:guilabel:`Favorites` item.
 
-.. tip:: it can happens that the folders added to the |IconFavourites|:guilabel:`Favorites`
+.. tip:: it can happen that the folders added to the |favourites| :guilabel:`Favorites`
   have a really long name: don't worry right click on the path and choose
   ``Rename Favorite...`` to set another name.
 
@@ -97,7 +97,10 @@ map by clicking on the :guilabel:`Project` menu and then clicking on
 |basic| The Map Canvas
 ...............................................................................
 
-This is where the map itself is displayed and where all layers are loaded.
+This is where the map itself is displayed and where layers are loaded. In the map
+canvas you can interact with the visible layers: zoom in/out, move the map,
+select features and many other operations that we will deeply see in the next
+sections.
 
 |basic| The Status Bar
 ...............................................................................
@@ -108,9 +111,9 @@ scale, the map rotation and see the mouse cursor's coordinates on the map.
 |basic| The Side Toolbar
 ...............................................................................
 
-By default the Side toobar contains the button to load the layer and all the
-button to create a new layer. But remember that you can move all the toolbars
-wherever it is more comfortable to you.
+By default the Side toobar contains the buttons to load the layer and all the
+buttons to create a new layer. But remember that you can move all the toolbars
+wherever it is more comfortable for you.
 
 |basic| The Locator Bar
 ...............................................................................
@@ -119,7 +122,7 @@ Within this bar you can access to almost all the objects of QGIS: layers, layer
 features, algorithms, spatial bookmarks, etc. Check all the different options in
 the :ref:`locator_options` section of the QGIS User Manual.
 
-.. tip:: with the shortcut :kbd:`Ctrl+K` you can easily access the bar.
+.. tip:: With the shortcut :kbd:`Ctrl+K` you can easily access the bar.
 
 
 .. _backlink-interface-overview-1:
@@ -185,7 +188,7 @@ to you and start improving on your map! This is the topic of the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |IconFavourites| image:: /static/common/mIconFavourites.png
+.. |favourites| image:: /static/common/mIconFavourites.png
    :width: 1.5em
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
@@ -193,7 +196,7 @@ to you and start improving on your map! This is the topic of the next lesson.
 .. |basic| image:: /static/global/basic.png
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
-.. |iconQgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+.. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em

@@ -34,18 +34,18 @@ Let's get started right away!
 
 * Look for the :guilabel:`Open Data Source Manager` button: |dataSourceManager|
 
-* The dialog allows you to use choose the data to load depending on the data
-  type (each tab on the left part of the dialog lists all the data type available)
-  or you can browse the files directly from the folder of your computer (the
-  *Browser* tab, see :ref:`browser_panel_tm` section):
+* The dialog allows you to choose the data to load depending on the data type:
+  each tab on the left part of the dialog lists the available data types.
+  You can also can browse the files directly from the folder of your computer
+  with the *Browser* tab (see :ref:`browser_panel_tm` section):
 
 .. image:: img/add_data_dialog.png
   :align: center
 
-* Click on the :guilabel:`Vector` tab and on the :guilabel:`Browse` button and
-  navigate to the file :kbd:`exercise_data/epsg4326/roads.shp` (in your course
+* Click on the :guilabel:`Vector` tab and on the **[Browse]** button and
+  navigate to the file :file:`exercise_data/epsg4326/roads.shp` (in your course
   directory). With this file selected, click :guilabel:`Open`. You will see the
-  original dialog, but with the file path filled in. Click :guilabel:`Add` here
+  original dialog, but with the file path filled in. Click  **[Add]** here
   as well. The data you specified will now load.
 
 .. image:: img/add_vector_dialog.png
@@ -63,33 +63,35 @@ your work.
 
 .. _load_geopackage:
 
-|moderate| |FA| Load a layer from Geopackage
+|moderate| |FA| Load a layer from GeoPackage
 -------------------------------------------------------------------------------
 
-`Geopackage <http://www.geopackage.org/>`_ is an open format for storing
-geospatial data. QGIS 3 adds a lot of support to this new format that is slowly
+`GeoPackage <http://www.geopackage.org/>`_ is an open format for storing
+geospatial data. QGIS adds a lot of support to this new format that is slowly
 replacing the ESRI shapefile format.
 
-Geopackage is a single file format that can contain different type of data: vector
-and raster files but also tables without spatial information in them (like CSV file
-files).
+GeoPackage is a single file format that can contain different type of data: vector
+and raster files but also tables without spatial information in them (like CSV
+file).
 
-Together with the ESRI shapefiles you can find a Geopackage in the
+Together with the ESRI shapefiles you can find a GeoPackage in the
 ``training_manual_exercise_data.zip`` file.
 
-In order to load a file from a Geopackage click on the |dataSourceManager| button
-and on the left click on the |newGeoPackageLayer|:guilabel:`GeoPackage` tab.
-Click on the :kbd:`New` button and look for the ``training_data.gpkg`` file in the
-Training Data folder you have downloaded before. Once you have chosen the file
-click on :kbd:`Connect` button. You should see in the central part of the window
-the list of all the files contained in the Geopackage:
+In order to load a layer from a GeoPackage:
+
+#. click on the |dataSourceManager| button
+#. on the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab
+#. click on the  **[New]** button and look for the ``training_data.gpkg`` file in
+  the Training Data folder you have downloaded before
+#. choose the layer to load and click on  **[Connect]** button
+#. you should see in the central part of the window the list of all the layers
+  contained in the GeoPackage
+#. select the layer you want to load and click on  the  **[Add]** button
 
 .. image:: img/add_data_dialog_geopackage.png
   :align: center
 
-Select the layer you want to load and click on  the :kbd:`Add` button.
-
-Congratulations! You have loaded the first layer from a Geopackage file.
+Congratulations! You have loaded the first layer from a GeoPackage file.
 
 |IC|
 -------------------------------------------------------------------------------
