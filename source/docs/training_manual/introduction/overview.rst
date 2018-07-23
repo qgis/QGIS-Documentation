@@ -111,7 +111,7 @@ scale, the map rotation and see the mouse cursor's coordinates on the map.
 |basic| The Side Toolbar
 ...............................................................................
 
-By default the Side toobar contains the buttons to load the layer and all the
+By default the Side toolbar contains the buttons to load the layer and all the
 buttons to create a new layer. But remember that you can move all the toolbars
 wherever it is more comfortable for you.
 
