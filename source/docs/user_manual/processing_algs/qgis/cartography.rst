@@ -35,13 +35,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon]
-  Polygon vector layer
+  Polygon vector layer.
 
 ``Minimum number of colors`` [number]
-  Minimum colors number to assign
+  Minimum colors number to assign.
 
 ``Minimum distance between features`` [number]
-  Prevent nearby (but non-touching) features from being assigned equal colors
+  Prevent nearby (but non-touching) features from being assigned equal colors.
 
 ``Balance color assignment`` [enumeration]
   Options:
@@ -49,7 +49,7 @@ Parameters
   * by feature count
 
     Attempts to assign colors so that the count of features assigned to each
-    individual color index is balanced
+    individual color index is balanced.
 
   * by assigned area
 

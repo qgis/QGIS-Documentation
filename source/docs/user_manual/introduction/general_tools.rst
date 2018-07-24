@@ -2010,9 +2010,9 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
-.. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
@@ -2055,10 +2055,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
-    :width: 1.5em
-.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
-.. |kde| image:: /static/common/kde.png
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
@@ -2081,8 +2079,6 @@ The values presented in the varying size assistant above will set the size
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
-   :width: 1.5em
-.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
    :width: 1.5em
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
    :width: 1.5em

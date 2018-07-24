@@ -3174,8 +3174,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-.. |arrowRight| image:: /static/common/mActionArrowRight.png
-   :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
@@ -3258,8 +3256,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |rendering| image:: /static/common/rendering.png
-   :width: 1.5em
 .. |rotateLabel| image:: /static/common/mActionRotateLabel.png
    :width: 1.5em
 .. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png

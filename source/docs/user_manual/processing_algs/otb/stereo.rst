@@ -26,7 +26,7 @@ Parameters
   <put parameter description here>
 
 ``Couples list`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -190,12 +190,12 @@ Parameters
   Default: *0.6*
 
 ``Input left mask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Input right mask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

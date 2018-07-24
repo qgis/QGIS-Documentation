@@ -32,13 +32,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 Outputs
 .......
 
 ``Extent`` [vector: polygon]
-  Polygon vector layer
+  Polygon vector layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

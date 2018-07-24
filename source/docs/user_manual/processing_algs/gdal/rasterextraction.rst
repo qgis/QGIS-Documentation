@@ -39,7 +39,7 @@ Parameters
   Default: *0,1,0,1*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -87,7 +87,7 @@ Parameters
   Default: *False*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -115,6 +115,9 @@ Parameters
 ``Input layer`` [raster]
   Input elevation raster.
 
+``Band number`` [raster band]
+  Raster band to extract.
+
 ``Interval between contour lines`` [number]
   Defines the interval between the contour lines in the given units of the
   elevation raster.
@@ -122,25 +125,36 @@ Parameters
   Default: *10.0*
 
 ``Attribute name (if not set, no elevation attribute is attached)`` [string]
-  Optional.
+  Optional
 
   Defines the attribute name for the field containing the values of the
   contour lines. If nothing is defines the default name will be 'ELEV'.
 
   Default: *ELEV*
 
-``Additional creation parameters`` [string]
-  Optional.
+``Offset from zero relative to which to interpret intervals`` [number]
+  Optional
 
-  <put parameter description here>
+  Default: *0.0*
 
-  Default: *(not set)*
+``Produce 3D vector`` [boolean]
+
+  Default: *False*
+
+``Treat all raster values as valid`` [boolean]
+
+  Default: *False*
+
+``Input pixel value to treat as "nodata"`` [number]
+  Optional
+
+  Default: *Not set*
 
 Outputs
 .......
 
 ``Contours`` [vector: line]
-  Output file for contour lines
+  Output file for contour lines.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

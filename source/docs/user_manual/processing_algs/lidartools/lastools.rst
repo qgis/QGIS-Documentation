@@ -529,7 +529,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1309,7 +1309,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1351,7 +1351,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1479,7 +1479,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1521,37 +1521,37 @@ Parameters
   Default: *True*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``2nd file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``3rd file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``4th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``5th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``6th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``7th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1588,7 +1588,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1659,7 +1659,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1696,7 +1696,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1738,7 +1738,7 @@ Parameters
   Default: *False*
 
 ``Input ASCII file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 

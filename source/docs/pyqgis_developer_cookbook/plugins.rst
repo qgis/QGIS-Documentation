@@ -526,7 +526,7 @@ now, in the ``i18n`` directory you will see the ``your_plugin.qm`` file(s).
 Translate using Makefile
 -------------------------
 
-Alternatively you can use the makefile to extract messages from python code and 
+Alternatively you can use the makefile to extract messages from python code and
 Qt dialogs, if you created your plugin with Plugin Builder.
 At the beginning of the Makefile there is a LOCALES variable::
 
@@ -566,14 +566,6 @@ You should see your plugin in the correct language.
    again the command of above.
 
 
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
-
 Tips and Tricks
 ===============
 
@@ -582,7 +574,7 @@ Plugin Reloader
 
 During development of your plugin you will frequently need to reload it in QGIS
 for testing. This is very easy using the Plugin Reloader plugin. You can find it
-as an experimental plugin with the Plugin Manager. 
+as an experimental plugin with the Plugin Manager.
 
 Accessing Plugins
 -----------------
@@ -600,3 +592,13 @@ from your code. All hosted plugins can be found and installed from within QGIS
 with the Plugin Manager.
 
 Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
+
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

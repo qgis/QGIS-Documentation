@@ -268,8 +268,6 @@ transform. User defaults can be saved by selecting
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |geographic| image:: /static/common/geographic.png
-.. |kde| image:: /static/common/kde.png
-   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png

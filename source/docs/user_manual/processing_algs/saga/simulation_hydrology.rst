@@ -26,7 +26,7 @@ Parameters
   <put parameter description here>
 
 ``Gauges`` [vector: any]
-  Optional.
+  Optional
 
   <put parameter description here>
 

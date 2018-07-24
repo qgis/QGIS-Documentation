@@ -50,12 +50,12 @@ Parameters
   <put parameter description here>
 
 ``Value`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Base Probability`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

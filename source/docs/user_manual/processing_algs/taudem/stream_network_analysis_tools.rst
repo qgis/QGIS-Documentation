@@ -52,7 +52,7 @@ Parameters
   needed when generating stream rasters according to drop analysis.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shape file defining outlets of interest. If this input file is used,
   only the area upslope of these outlets will be evaluated by the tool.
@@ -388,7 +388,7 @@ Parameters
   Default: *100*
 
 ``Mask Grid`` [raster]
-  Optional.
+  Optional
 
   This optional input is a grid that is used to mask the domain of interest and
   output is only provided where this grid is >= 0. A common use of this input
@@ -625,7 +625,7 @@ Parameters
   the stream network.
 
 ``Outlets Shapefile as Network Nodes`` [vector: point]
-  Optional.
+  Optional
 
   A point shape file defining points of interest. If this file is used, the
   tool will only deliiniate the stream network upstream of these outlets.

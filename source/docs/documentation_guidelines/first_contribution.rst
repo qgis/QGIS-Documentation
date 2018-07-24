@@ -64,8 +64,8 @@ project to learn some basic vocabulary and actions that will be used below.
 Make changes in your repo
 --------------------------
 
-Documentation can be improved by addressing issues reported at
-https://github.com/qgis/QGIS-Documentation/issues or issues you may
+Documentation can be improved by addressing the `reported issues
+<https://github.com/qgis/QGIS-Documentation/issues>`_ or issues you may
 have encountered while browsing the doc. They can be of different
 types: typo error, missing feature, wrong or out of date description...
 
@@ -86,7 +86,6 @@ Alternative 1: Picking an issue in the list
 #. Redo the previous steps for any other file that needs to be updated to fix
    the issue.
 
-
 Alternative 2: Using the ``Fix Me`` shortcut
 .............................................
 
@@ -99,16 +98,18 @@ click the "Fix Me" link at the bottom of the page to open its source file in Edi
    top of the page telling you that you don't have write access to this repo and
    your changes will be applied in a new branch of your repository.
    
-   Note that if you have commit rights to QGIS-Documentation repository, then
-   no message will show and you'll directly modify ``qgis:master`` branch itself
-   unless you save your changes in another branch.
-#. Do your changes following guidelines available at
-   http://docs.qgis.org/testing/en/docs/documentation_guidelines/
+   .. note:: If you have commit rights to QGIS-Documentation repository, then no
+    message will show and you'll directly modify ``qgis:master`` branch itself
+    unless you save your changes in another branch.
+
+#. Do your changes following the :ref:`guidelines <QGIS-documentation-guidelines>`;
 #. When you finish, at the bottom of the page, comment a bit what your changes
    are about and click on :guilabel:`Propose File change`. This will generate a
    new branch (``patch-xxx``) in your repo.
 
-.. tip:: If your ``master`` branch is even with ``qgis:master``, you can safely
+.. tip:: **Switch to your own fork and branch**
+
+   If your ``master`` branch is even with ``qgis:master``, you can safely
    replace in the link ``qgis`` by ``<YourName>``. In this case, once your changes
    are done, you need to check |radioButtonOn| :guilabel:`Create a new branch for
    this commit and start a pull request` and avoid modifying ``master``.
@@ -134,8 +135,8 @@ request.
 
 #. In any case (including pushing branch to GitHub from command lines) you can
    create a new pull request at any moment from many pages. Simply go to the
-   main page of the repository (yours or qgis), click on :guilabel:`New Pull
-   Request` and :guilabel:`Compare across forks` (if needed). Ensure you select
+   main page of the repository (yours or qgis), click on :guilabel:`New pull
+   request` and :guilabel:`Compare across forks` (if needed). Ensure you select
    ``qgis/QGIS-Documentation`` with ``master`` as base branch and that the head
    fork is your repository ``<YourName>/QGIS-Documentation`` with your modified
    branch along.
@@ -143,26 +144,21 @@ request.
    .. tip:: Though released and being translated, the documentation of QGIS
       |CURRENT| is still maintained and existing issues are fixed. If you plan
       to fix the issues in the current released doc, replace ``master`` branch
-      by the appropriate ``manual_en_...`` branch in any of the steps exposed
+      by the appropriate ``release_...`` branch in any of the steps exposed
       earlier.
-
-      .. %FixMe: Is there a way to have ``manual_en_...`` being automatically
-         appended with the number of the doc version? To have this tip always
-         updated when release number evolves.
 
 #. A green check along the compared branches shows that your changes can
    automatically be merged in the official doc. Click the :guilabel:`Create
-   pull request` button. If you get a red cross, it means that the files you are
-   modifying were not up to date with the branch you are targetting (a commit has
-   been pushed to it since you create or last update your branch).
-   You then need to use :ref:`git command line tools <git_command_line_tools>`
-   to fix it.
+   pull request` button.
 
-   .. %FixMe: once FAQ is online, a hyperlink to how to rebase branch solution
-      can replace the link to git commands in the previous comment.
-
+   If you get a red cross, it means that there's conflicts: the files you are
+   modifying are not up to date with the branch you are targetting (a commit
+   that brought changes on some common lines or files has been pushed to the
+   branch since you create or last update your branch). You can still create
+   the pull request but you'll need to fix the conflict(s) as 
+   :ref:`explained below <fix_conflicts>` to allow any review.
 #. Fill the form if needed and click again :guilabel:`Create pull request` button.
-#. A new PR is added to https://github.com/qgis/QGIS-Documentation/pulls
+#. A new PR is added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_
    and everybody can look or comment it.
 #. That will trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
    automatically checking if your contribution doesn't contain a build error.
@@ -174,9 +170,12 @@ request.
     .. %ToDo: The FAQ could add information on Travis error and common fixes.
 
 #. Until your PR is merged with the main repo, you can add modifications to your
-   proposal. Actually any new changes done to your branch is appended to your pull
-   request. Do it if the change has to do with the issue you are fixing, otherwise
-   create a new branch for those changes following steps above.
+   proposal, either to improve your changes, to address requested modifications
+   or to fix a build error. Checkout the ``Files changed`` tab in your pull request
+   page and click the pencil next to the filename you want to modify.
+   Actually any new changes done to your branch is appended to your pull request.
+   Hence, do it only if the change has to do with the issue you are fixing,
+   otherwise create a new branch for those changes following the steps above.
 #. Once everything looks good to you and others, a committer can merge your branch
    with the main repo. Your contribution is validated.
 #. If you want, you can now delete the branch you used, to avoid having too many
@@ -310,8 +309,8 @@ Now you have a local and remote repositories which have both ``master`` branch u
 QGIS-Documentation from QGIS organisation. You can start to work on your
 contribution.
 
-For released doc (``manual_en_`` branch)
-........................................
+For released doc (``release_`` branch)
+......................................
 
 Along the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
 meaning that you can also contribute to it. Following the previous section sample code,
@@ -323,17 +322,17 @@ As above, you need to ensure your branch is up to date with the upstream's:
 
 .. code-block:: bash
 
-  # change branch e.g. for 2.14 LTR
-  $ git checkout manual_en_2.14
-  # get "information" from the manual_en_2.14 branch in upstream repository
-  $ git fetch upstream manual_en_2.14
-  # merge update from upstream/manual_en_2.14 to the current local branch
-  $ git merge upstream/manual_en_2.14
+  # change branch e.g. for 2.18 LTR
+  $ git checkout release_2.18
+  # get "information" from the release_2.18 branch in upstream repository
+  $ git fetch upstream release_2.18
+  # merge update from upstream/release_2.18 to the current local branch
+  $ git merge upstream/release_2.18
   # update **your** remote repository
-  $ git push origin manual_en_2.14
+  $ git push origin release_2.18
 
-In this way your local and remote branches for the 2.14 version are up to date
-with the one of the official upstream repository.
+In this way your local and remote branches for the |CURRENT| version are up to
+date with the one of the official upstream repository.
 
 .. _contribute:
 
@@ -351,7 +350,7 @@ base branch! Always!
    # and -b flag creates a new branch if needed, based on current branch
    $ git branch
    master
-   manual_en_2.14
+   release_2.18
    * myNewBranch
    # a list of existing branch where * means the current branch
    # You can now add your contribution, by editing the concerned file
@@ -404,6 +403,34 @@ of unuseful branches. So keep your repository clean this way:
   $ git push origin :myNewBranch
 
 And do not forget to update the ``master`` branch in your local repository!
+
+Further reading
+===============
+
+* Other than the Github web interface and the git command line tools exposed
+  above, there are also `GUI applications <https://git-scm.com/downloads/guis>`_
+  you can use to create and manage your contributions to the documentation.
+
+.. _fix_conflicts:
+
+* When the changes in the pull request are conflicting with recent changes
+  pushed to the target branch, the conflicts need to be resolved before a
+  merge is possible:
+
+  * if the conflict relates to few competing lines, a **[Resolve conflicts]**
+    button is available in the Github pull request page. Press the button
+    and resolve the issue as explained at
+    https://help.github.com/articles/resolving-a-merge-conflict-on-github/
+  * if the conflict involves files renaming or removal, then you'd need to
+    resolve the conflict using git command lines. Typically, you have to first
+    rebase your branch over the target branch using ``git rebase targetBranch``
+    call and fix the conflicts that are reported. Read more at
+    https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/
+* Sometimes, at the end of the proofreading process, you may end up with changes
+  split into multiple commits that are not necessarily worth it. Git command
+  lines help you squash these commits to a smaller number and more meaningful
+  commit messages. Some details at
+  https://help.github.com/articles/using-git-rebase-on-the-command-line/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
