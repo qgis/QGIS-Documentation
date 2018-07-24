@@ -2,9 +2,9 @@
 
    |updatedisclaimer|
 
-.. index:: 
+.. index::
    pair: Raster; Raster layers
-   
+
 .. _raster:
 
 *********************
@@ -190,11 +190,23 @@ symbology in the layer list (legend) widget. This can be done as follows
 Query Values
 ============
 
-To do a query on value of bands of raster layer at some specified point
+The first method to query raster values is using the :func:`sample` method of
+the :class:`QgsRasterDataProvider` class. You have to specify a :class:`QgsPointXY`
+and the band number of the raster layer you want to query. The method returns a
+tuple with the value and ``True`` or ``False`` depending on the results:
+
+.. code-block:: python
+
+  val, res = rlayer.dataProvider().sample(QgsPointXY(15.30, 40.98), 1)
+  print(val, res)
+
+
+The second method is using the :func:`identify` method that returns a
+:class:`QgsRasterIdentifyResult` object.
 
 ::
 
-  ident = rlayer.dataProvider().identify(QgsPoint(15.30, 40.98), \
+  ident = rlayer.dataProvider().identify(QgsPointXY(15.30, 40.98), \
     QgsRaster.IdentifyFormatValue)
   if ident.isValid():
     print(ident.results())
