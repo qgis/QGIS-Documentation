@@ -254,6 +254,45 @@ transforms. Further information may be found by hovering over a
 transform. User defaults can be saved by selecting
 |radioButtonOn| :guilabel:`Remember selection`.
 
+In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
+whenever you use layers with different coordinates system, QGIS transparently
+reprojects them while rendering to the project CRS. The :guilabel:`Default datum
+transformations` group allows you to configure/customize the transformation
+settings. You can:
+
+.. question: is it the project crs that is used or the first loaded layer's?
+
+* |checkbox| :guilabel:`Ask for datum transformation if several are available`:
+  When more than one appropriate datum transformation exists for a
+  source/destination CRS combination, a dialog will automatically be opened
+  prompting users to choose which of these datum transformations to use for
+  the project;
+* also predefine a list of the appropriate default transformations to use
+  when loading layers to projects or reprojecting a layer.
+
+  Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
+  dialog. Then:
+
+  #. indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
+     or the |setProjection| :sup:`Select CRS` widget;
+  #. likewise, provide the :guilabel:`Destination CRS`;
+  #. Depending on the transform grid files (based on GDAL and PROJ version
+     installed on your system), a list of available transformations from source to
+     destination is built in the table. Clicking a row shows details on the settings
+     applied (epsg code, accuracy of the transform, number of stations involved...).
+
+     You can choose to only display current valid transformations by checking
+     the |checkbox| :guilabel:`Hide deprecated` option.
+
+  #. Find your preferred transformation, select it and click **[OK]**;
+  #. A new row is added to the table under :menuselection:`CRS --> Default datum
+     transformations` with information about 'Source CRS' and 'Destination CRS'
+     as well as 'Source datum transform' and 'Destination datum transform'.
+
+  From now, QGIS automatically uses the selected datum transformation for
+  further transformation between these two CRSs until you |signMinus| remove
+  it from the list or |toggleEditing| replace it with another one.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -276,6 +315,10 @@ transform. User defaults can be saved by selecting
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
