@@ -186,6 +186,15 @@ or when a layer without a CRS is loaded.
 
 **Default datum transformations**
 
+In this group, you can control whether reprojecting layers to another CRS should be:
+
+* automatically processed using QGIS default transformations settings;
+* and/or more controlled by you with custom preferences such as:
+
+  * |checkbox| :guilabel:`Ask for datum transformation if several are available`
+  * a predefined list of datum transformations to apply by default.
+    See :ref:`datum_transformation` for more details.
+
 .. note:: For more information on how QGIS handles layers projection, please
   read the dedicated section at :ref:`label_projections`.
 
