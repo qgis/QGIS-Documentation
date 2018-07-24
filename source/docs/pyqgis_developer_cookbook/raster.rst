@@ -193,7 +193,7 @@ Query Values
 The first method to query raster values is using the :func:`sample` method of
 the :class:`QgsRasterDataProvider` class. You have to specify a :class:`QgsPointXY`
 and the band number of the raster layer you want to query. The method returns a
-tuple of the value and ``True`` or ``False`` depending on the results:
+tuple with the value and ``True`` or ``False`` depending on the results:
 
 .. code-block:: python
 
@@ -201,7 +201,7 @@ tuple of the value and ``True`` or ``False`` depending on the results:
   print(val, res)
 
 
-The second method is using the :func:`identify` method that returns a 
+The second method is using the :func:`identify` method that returns a
 :class:`QgsRasterIdentifyResult` object.
 
 ::
