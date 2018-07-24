@@ -172,10 +172,10 @@ Parameters
 ..........
 
 ``Input Point Layer`` [vector: point]
-  Point vector layer in input to use for the sampling
+  Point vector layer in input to use for the sampling.
 
 ``Raster Layer to sample`` [raster]
-  Raster layer with corresponding band(s) to sample at given point locations
+  Raster layer with corresponding band(s) to sample at given point locations.
 
 ``Output column prefix`` [string]
   Prefix for the column(s) name.
@@ -186,7 +186,7 @@ Output
 ......
 
 ``Sampled Points`` [vector: point]
-  Layer in output with additional column(s) of sampled raster values
+  Layer in output with additional column(s) of sampled raster values.
 
 
 .. _qgiszonalhistogram:
