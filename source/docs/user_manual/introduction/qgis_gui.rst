@@ -205,41 +205,41 @@ Moreover the menu allows to reorganize QGIS interface itself using actions like:
   and only shows the map canvas. Combined with full screen option, it makes
   your screen display only the map.
 
-=======================================================  =======================  =============================  ==========================================
-Menu Option                                              Shortcut                 Toolbar                        Reference
-=======================================================  =======================  =============================  ==========================================
-|newMap| :guilabel:`New Map View`                        :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
-:guilabel:`New 3D Map View`                              :kbd:`Ctrl+Shift+M`      \                              \
-|pan| :guilabel:`Pan Map`                                \                        :guilabel:`Map Navigation`     :ref:`zoom_pan`
-|panToSelected| :guilabel:`Pan Map to Selection`         \                        :guilabel:`Map Navigation`     \
-|zoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
-|zoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+Alt+-`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
-|identify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`      :guilabel:`Attributes`         :ref:`identify`
-:menuselection:`Measure -->`                             \                        :guilabel:`Attributes`         :ref:`sec_measure`
-|sum| :guilabel:`Statistical Summary`                    \                        :guilabel:`Attributes`         :ref:`statistical_summary`
-|zoomFullExtent| :guilabel:`Zoom Full`                   :kbd:`Ctrl+Shift+F`      :guilabel:`Map Navigation`     \
-|zoomToLayer| :guilabel:`Zoom To Layer`                  \                        :guilabel:`Map Navigation`     \
-|zoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`            :guilabel:`Map Navigation`     \
-|zoomLast| :guilabel:`Zoom Last`                         \                        :guilabel:`Map Navigation`     \
-|zoomNext| :guilabel:`Zoom Next`                         \                        :guilabel:`Map Navigation`     \
-|zoomActual| :guilabel:`Zoom To Native Resolution`       \                        :guilabel:`Map Navigation`     \
-:menuselection:`Decorations -->`                         \                        \                              :ref:`decorations`
-:menuselection:`Preview mode -->`                        \                        \                              \
-|mapTips| :guilabel:`Map Tips`                           \                        :guilabel:`Attributes`         :ref:`maptips`
-|newBookmark| :guilabel:`New Bookmark...`                :kbd:`Ctrl+B`            :guilabel:`Attributes`         :ref:`sec_bookmarks`
-|showBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`      :guilabel:`Attributes`         :ref:`sec_bookmarks`
-|draw| :guilabel:`Refresh`                               :kbd:`F5`                :guilabel:`Map Navigation`     \
-|showAllLayers| :guilabel:`Show All Layers`              :kbd:`Ctrl+Shift+U`      :guilabel:`Manage Layers`      \
-|hideAllLayers| :guilabel:`Hide All Layers`              :kbd:`Ctrl+Shift+H`      :guilabel:`Manage Layers`      \
-|showAllLayers| :guilabel:`Show Selected Layers`         \                        \                              \
-|hideAllLayers| :guilabel:`Hide Selected Layers`         \                        \                              \
-|hideAllLayers| :guilabel:`Hide Deselected Layers`       \                        \                              \
-:menuselection:`Panels -->`                              \                        \                              :ref:`sec_panels_and_toolbars`
-:menuselection:`Toolbars -->`                            \                        \                              :ref:`sec_panels_and_toolbars`
-:guilabel:`Toggle Full Screen Mode`                      :kbd:`F11`               \                              \
-:guilabel:`Toggle Panel Visibility`                      :kbd:`Ctrl+Tab`          \                              \
-:guilabel:`Toggle Map Only`                              :kbd:`Ctrl+Shift+Tab`    \                              \
-=======================================================  =======================  =============================  ==========================================
+=========================================================  =======================  =============================  ==========================================
+Menu Option                                                Shortcut                 Toolbar                        Reference
+=========================================================  =======================  =============================  ==========================================
+|newMap| :guilabel:`New Map View`                          :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
+:guilabel:`New 3D Map View`                                :kbd:`Ctrl+Shift+M`      \                              \
+|pan| :guilabel:`Pan Map`                                  \                        :guilabel:`Map Navigation`     :ref:`zoom_pan`
+|panToSelected| :guilabel:`Pan Map to Selection`           \                        :guilabel:`Map Navigation`     \
+|zoomIn| :guilabel:`Zoom In`                               :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
+|zoomOut| :guilabel:`Zoom Out`                             :kbd:`Ctrl+Alt+-`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
+|identify| :guilabel:`Identify Features`                   :kbd:`Ctrl+Shift+I`      :guilabel:`Attributes`         :ref:`identify`
+:menuselection:`Measure -->`                               \                        :guilabel:`Attributes`         :ref:`sec_measure`
+|sum| :guilabel:`Statistical Summary`                      \                        :guilabel:`Attributes`         :ref:`statistical_summary`
+|zoomFullExtent| :guilabel:`Zoom Full`                     :kbd:`Ctrl+Shift+F`      :guilabel:`Map Navigation`     \
+|zoomToLayer| :guilabel:`Zoom To Layer`                    \                        :guilabel:`Map Navigation`     \
+|zoomToSelected| :guilabel:`Zoom To Selection`             :kbd:`Ctrl+J`            :guilabel:`Map Navigation`     \
+|zoomLast| :guilabel:`Zoom Last`                           \                        :guilabel:`Map Navigation`     \
+|zoomNext| :guilabel:`Zoom Next`                           \                        :guilabel:`Map Navigation`     \
+|zoomActual| :guilabel:`Zoom To Native Resolution`         \                        :guilabel:`Map Navigation`     \
+:menuselection:`Decorations -->`                           \                        \                              :ref:`decorations`
+:menuselection:`Preview mode -->`                          \                        \                              \
+|mapTips| :guilabel:`Map Tips`                             \                        :guilabel:`Attributes`         :ref:`maptips`
+|newBookmark| :guilabel:`New Bookmark...`                  :kbd:`Ctrl+B`            :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
+|showBookmarks| :guilabel:`Show Bookmarks`                 :kbd:`Ctrl+Shift+B`      :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
+|draw| :guilabel:`Refresh`                                 :kbd:`F5`                :guilabel:`Map Navigation`     \
+|showAllLayers| :guilabel:`Show All Layers`                :kbd:`Ctrl+Shift+U`      \                              :ref:`label_legend`
+|hideAllLayers| :guilabel:`Hide All Layers`                :kbd:`Ctrl+Shift+H`      \                              :ref:`label_legend`
+|showSelectedLayers| :guilabel:`Show Selected Layers`      \                        \                              :ref:`label_legend`
+|hideSelectedLayers| :guilabel:`Hide Selected Layers`      \                        \                              :ref:`label_legend`
+|hideDeselectedLayers| :guilabel:`Hide Deselected Layers`  \                        \                              :ref:`label_legend`
+:menuselection:`Panels -->`                                \                        \                              :ref:`sec_panels_and_toolbars`
+:menuselection:`Toolbars -->`                              \                        \                              :ref:`sec_panels_and_toolbars`
+:guilabel:`Toggle Full Screen Mode`                        :kbd:`F11`               \                              \
+:guilabel:`Toggle Panel Visibility`                        :kbd:`Ctrl+Tab`          \                              \
+:guilabel:`Toggle Map Only`                                :kbd:`Ctrl+Shift+Tab`    \                              \
+=========================================================  =======================  =============================  ==========================================
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
@@ -758,6 +758,10 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
+   :width: 1.5em
+.. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
+   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
@@ -869,6 +873,8 @@ open the Plugin Manager dialog.
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
+   :width: 1.5em
+.. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 2em
