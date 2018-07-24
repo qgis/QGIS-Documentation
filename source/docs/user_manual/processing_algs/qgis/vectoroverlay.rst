@@ -47,7 +47,7 @@ Parameters
 ``Input layer`` [vector: any]
   Layer containing the features to be clipped.
 
-``Clip layer`` [vector: line or polygon]
+``Clip layer`` [vector: polygon]
   Layer containing the clipping features.
 
 Output
@@ -72,7 +72,7 @@ Input layer features that are partially within difference layer feature(s) are
 split along the boundary of the difference layer feature(s) and only the portions
 outside the difference layer features are retained.
 
-Attributes are not modified (see warning_difference_).
+Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 .. figure:: img/difference.png
   :align: center
@@ -119,7 +119,7 @@ Parameters
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the clipping
 
-``Clip feature to the extent`` [boolean]
+``Clip features to the extent`` [boolean]
   If checked, output geometries will be automatically converted to multi geometries
   to ensure uniform output types. Moreover the geometries will be clipped to the
   extent chosen instead of taking the whole geometry as output.
@@ -140,7 +140,7 @@ Extracts the portions of features from the input layer that overlap features in 
 Features in the intersection layer are assigned the attributes of the overlapping
 features from both the input and intersection layers
 
-Attributes are not modified (see warning_difference_).
+Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 .. figure:: img/intersection.png
   :align: center
@@ -242,7 +242,7 @@ Output will contain multi geometries for split features.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon or line]
+``Input layer`` [vector: polygon, line]
   Layer containing the lines or polygons to split.
 
 ``Split layer`` [vector: line]
@@ -265,7 +265,7 @@ with the overlapping areas between the two layers removed.
 The attribute table of the symmetrical difference layer contains attributes and fields
 from both the input and difference layers.
 
-Attributes are not modified (see warning_difference_).
+Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 .. figure:: img/symmetrical_difference.png
   :align: center

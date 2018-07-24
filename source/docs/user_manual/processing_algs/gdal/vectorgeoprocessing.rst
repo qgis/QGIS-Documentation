@@ -14,7 +14,7 @@ Vector geoprocessing
 
 .. _gdalclipvectorbyextent:
 
-Clip vectors by extent
+Clip vector by extent
 ----------------------
 Clips any OGR-supported vector file to a given extent.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
@@ -28,8 +28,6 @@ Parameters
 ``Clip extent`` [extent]
   Defines the bounding box that should be used for the output vector file.
   It has to be defined in target CRS units.
-
-  Default: *0,1,0,1*
 
 ``Additional creation Options`` [string]
   Optional.
@@ -47,7 +45,7 @@ Outputs
 
 .. _gdalclipvectorbypolygon:
 
-Clip vectors by polygon
+Clip vector by polygon
 -----------------------
 Clips any OGR-supported vector layer by a polygon.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .

@@ -218,7 +218,7 @@ Parameters
 ``CRS`` [projection]
   Optional
 
-  The CRS to or assign to the output layer
+  The CRS to assign to the output layer
 
 
 Outputs
@@ -342,7 +342,7 @@ Parameters
 
   Options:
 
-  * intersect
+  * intersects
   * contains
   * equals
   * touches
@@ -395,7 +395,7 @@ Parameters
   Source vector layer
 
 ``Join layer`` [vector: any]
-  the attributes of this vector layer will be **added** to the source layer
+  The attributes of this vector layer will be **added** to the source layer
   attribute table
 
 ``Geometric predicate`` [enumeration] [list]

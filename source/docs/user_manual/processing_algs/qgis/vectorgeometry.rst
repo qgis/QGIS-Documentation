@@ -414,6 +414,7 @@ Output
 ......
 
 ``Collected`` [vector: any]
+  Vector layer with collected geometries.
 
 See also
 ........
@@ -547,13 +548,13 @@ Parameters
 ..........
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Output layer as result of the chosen extent
+  Extent to represent.
 
 Output
 ......
 
 ``Extent``
-  Final extent of the layer
+  Layer with a polygon feature representing the input extent.
 
 
 .. _qgiswedgebuffers:
@@ -904,6 +905,7 @@ Output
 ......
 
 ``Exploded`` [vector: line]
+  Output vector line with features representing each segment of the input layer.
 
 
 .. _qgisextendlines:
@@ -975,7 +977,7 @@ Output
 ......
 
 ``Vertices`` [vector: point]
-  Extracted vertices of input layer
+  Point layer with features representing the specific vertices in the input layer.
 
 
 .. _qgisextractvertices:
@@ -1009,7 +1011,7 @@ Output
 ......
 
 ``Vertices`` [vector: point]
-  Vector layer of extracted vertices
+  Point layer with features representing all the vertices in the input layer.
 
 
 .. _qgisfixgeometries:
@@ -1047,7 +1049,7 @@ This allows complex geometry modifications which can utilize all the flexibility
 of the QGIS expression engine to manipulate and create geometries for output features.
 
 For help with QGIS expression functions, see the inbuilt help for specific functions
-which is available in the expression builder.
+which is available in the :ref:`expression builder <vector_expressions>`.
 
 Parameters
 ..........
@@ -1056,8 +1058,10 @@ Parameters
 
 ``Output geometry type`` [enumeration]
   The output geometry strongly depends on the expression you will choose: for
-  instance, if you want to create a buffer than the geometry type has to be
+  instance, if you want to create a buffer then the geometry type has to be
   a polygon
+
+  Available options are:
 
   * Polygon
   * Line
@@ -1069,7 +1073,7 @@ Parameters
   Default: *False*
 
 ``Output geometry has m dimension`` [boolean]
-  Choose if the output geometry should have the z dimension
+  Choose if the output geometry should have the m dimension
 
   Default: *False*
 
@@ -1307,7 +1311,7 @@ Outputs
 
 See also
 ........
-:ref:`qgiscollect` and :ref:`qgispromotetomulti`
+:ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
 
 .. _qgisoffsetline:
@@ -1529,7 +1533,7 @@ Output
 ......
 
 ``Displaced`` [vector: point]
-  Point vector layer
+  Point vector layer with displaced features.
 
 
 .. _qgispoleofinaccessibility:
@@ -2050,10 +2054,8 @@ Parameters
   Default: *Distance (Douglas-Peucker)*
 
 ``Tolerance`` [number]
-  Threshold tolerance: if the distance between two nodes is smaller than the
-  tolerance value, the segment will be simplified and vetices will be removed.
-
-  **Value in map unit of the layer**
+  Threshold tolerance (in units of the layer): if the distance between two nodes is smaller than the
+  tolerance value, the segment will be simplified and vertices will be removed.
 
   Default: *1.0*
 
@@ -2090,7 +2092,7 @@ Parameters
   Default: *10.0*
 
 ``Side`` [enumeration]
-  Choose which side the buffer should be created
+  Choose which side the buffer should be created:
 
   * Left
   * Right
