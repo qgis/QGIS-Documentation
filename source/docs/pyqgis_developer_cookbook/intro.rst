@@ -78,7 +78,7 @@ code within QGIS and because this code will run before QGIS
 initialization is complete. This method is very useful for cleaning
 sys.path, which may have undesireable paths, or for isolating/loading
 the initial environ without requiring a virt env, e.g.  homebrew or
-MacPorts installs on Mac.
+MacPorts installs on macOS.
 
 
 .. index::
@@ -91,7 +91,7 @@ Every time QGIS starts, the user's Python home directory
 
 * Linux: :file:`.local/share/QGIS/QGIS3/profiles/default/python`
 * Windows: :file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`
-* Mac OS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
+* macOS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
 
 is searched for a file named :file:`startup.py`, if that file exists, it
 is executed by the embedded Python interpreter.
@@ -308,9 +308,7 @@ QGIS installation path:
 
 * on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`
 * on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
-
-on MacOS: add /Applications/QGIS.app/Contents/Resources/python to the
-Python interpreter in pyCharm.
+* on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`
 
 The path to the PyQGIS modules is now known, however they depend on
 the ``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve
