@@ -35,7 +35,7 @@ Parameters
   Many different operators are available:
 
   * ``=``
-  * ``!=``
+  * ``≠``
   * ``>``
   * ``>=``
   * ``<``
@@ -108,17 +108,17 @@ Parameters
 ``Extract features from`` [vector: any]
   Input vector layer
 
-``Where the features intersect (geometric predicate)`` [enumeration] [list]
+``Where the features (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
+  * intersect
+  * contain
   * disjoint
-  * intersects
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crosses
+  * equal
+  * touch
+  * overlap
+  * are within
+  * cross
 
 ``By comparing to the features from`` [vector: any]
   Intersection vector layer
@@ -307,20 +307,21 @@ Parameters
   Many different operators are available:
 
   * ``=``
-  * ``!=``
+  * ``≠``
   * ``>``
   * ``>=``
   * ``<``
   * ``<=``
   * ``begins with``
   * ``contains``
+  * ``is null``
+  * ``is not null``
+  * ``does not contain``
 
   Default: ``=``
 
 ``Value`` [string]
-  Optional
-
-  Values to be evaluated
+  Value to be evaluated.
 
 ``Modify current selection by`` [enumeration] |32|
   How the selection of the algorithm should be managed. You have many options:
@@ -377,20 +378,20 @@ No new outputs are created.
 Parameters
 ..........
 
-``Extract features from`` [vector: any]
+``Select features from`` [vector: any]
   Source vector layer
 
 ``Where the features (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
+  * intersect
+  * contain
   * disjoint
-  * intersects
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crosses
+  * equal
+  * touch
+  * overlap
+  * are within
+  * cross
 
 ``By comparing to the features from`` [vector: any]
   Intersection vector layer
@@ -400,8 +401,8 @@ Parameters
 
   * creating new selection
   * adding to current selection
-  * removing from current selection
   * selecting within current selection
+  * removing from current selection
 
   Default: *creating new selection*
 
