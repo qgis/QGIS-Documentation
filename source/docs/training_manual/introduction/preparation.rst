@@ -70,7 +70,7 @@ your work.
 geospatial data. QGIS adds a lot of support to this new format that is slowly
 replacing the ESRI shapefile format.
 
-GeoPackage is a single file format that can contain different type of data: vector
+GeoPackage is a single file format that can contain different types of data: vector
 and raster files but also tables without spatial information in them (like CSV
 file).
 

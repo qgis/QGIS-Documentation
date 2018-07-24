@@ -48,10 +48,6 @@ your device.
 Right-clicking on a layer will give you a menu with lots of extra options. You
 will be using some of them before long, so take a look around!
 
-Some versions of QGIS have a separate :guilabel:`Control rendering order`
-checkbox just underneath the Layers list. Don't worry if you can't see it. If
-it is present, ensure that it's checked for now.
-
 .. note::  A vector layer is a dataset, usually of a specific kind of object,
    such as roads, trees, etc. A vector layer can consist of either points,
    lines or polygons.
@@ -63,21 +59,21 @@ it is present, ensure that it's checked for now.
 
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
 database. You can have access to common vector files (e.g. ESRI shapefile
-or GeoPackage files), databases (e.g.PostGIS, Oracle, SpatiaLite or MSSQL Spatial)
-and WMS/WFS connections. You can also view your GRASS data.
+or MapInfo files), databases (e.g. PostGIS, Oracle, SpatiaLite, GeoPackage or
+MSSQL Spatial) and WMS/WFS connections. You can also view your GRASS data.
 
-If you have saved a project the Browser Panel will also give you quick access to
-all the layers stored in the same path of the project file under the tab
-|qgsProjectFile| :guilabel:`Project Home`.
+If you have saved a project, the Browser Panel will also give you quick access to
+all the layers stored in the same path of the project file under in the
+|qgsProjectFile| :guilabel:`Project Home` item.
 
-Moreover you can set one or more folder as **Favorites**: search under your path
+Moreover, you can set one or more folder as **Favorites**: search under your path
 and once you have found the folder, right click on it and click on ``Add as a
 Favorite``. You should then be able to see your folder in the |favourites|
 :guilabel:`Favorites` item.
 
-.. tip:: it can happen that the folders added to the |favourites| :guilabel:`Favorites`
-  have a really long name: don't worry right click on the path and choose
-  ``Rename Favorite...`` to set another name.
+.. tip:: It can happen that the folders added to Favorite item have a really
+  long name: don't worry right-click on the path and choose ``Rename Favorite...``
+  to set another name.
 
 |basic| Toolbars
 ...............................................................................
