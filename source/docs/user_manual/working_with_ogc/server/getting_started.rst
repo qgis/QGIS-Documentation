@@ -267,11 +267,11 @@ Serve the project
 -----------------
 
 Now, save the session in a project file :file:`alaska.qgs`. To provide the
-project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` with
+project as a WMS/WFS, create a new folder ``/usr/lib/cgi-bin/project`` with
 admin privileges and add the project file :file:`alaska.qgs` and a copy of the
 :file:`qgis_mapserv.fcgi` file - that's all.
 
-Now we test our project WMS, WFS and WCS. Add the WMS, WFS and WCS as described
+Now test your project WMS, WFS and WCS. Add the WMS, WFS and WCS as described
 in :ref:`ogc-wms-layers`, :ref:`ogc-wfs` and :ref:`ogc-wcs` to QGIS and load
 the data. The URL is:
 
@@ -282,13 +282,13 @@ the data. The URL is:
 Cascading OGC layers
 --------------------
 
-The QGIS project we plan to use to publish WMS/WFS/WCS layers can of course
-contain layers coming from other (external) OGC servers (regardless of the underlying
-OGC server software used). This way we will effectively **cascade** those layers 
-through our OGC (QGIS Server based) services.
+A QGIS project can of course
+contain layers coming from remote OGC servers (regardless of the underlying
+OGC server software used). This way QGIS will effectively **cascade** those layers 
+through its OGC (QGIS Server based) services.
 
 If the external OGC layers are coming from services that make use of the **HTTPS**
-protocol we must take care of some extra QGIS Server configuration. Example for
+protocol you must take care of some extra QGIS Server configuration. Example for
 the Apache web server:
 
 .. code-block:: bash
@@ -297,7 +297,7 @@ the Apache web server:
   $ chown www-data:www-data /srv/qgis/.qgis2
   $ chmod 774 /srv/qgis/.qgis2
   
-This ensure that the web server is able to write in some user defined folder. Then
+This ensures that the web server is able to write in some user defined folder. Then
 add the following line to the Apache virtual host file to ensure that Apache will use
 such folder:
 
@@ -305,4 +305,4 @@ such folder:
 
    FcgidInitialEnv HOME "/srv/qgis"
    
-Then restart Apache.
+Restart Apache.
