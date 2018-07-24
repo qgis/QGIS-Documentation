@@ -46,12 +46,12 @@ Can be used/found in many places in manuals.
 Platform Icons
 ..............
 
-==========  ===============  ==========  =============== 
+==========  ===============  ==========  ===============
 Icon        Substitution     Icon        Substitution
-==========  ===============  ==========  =============== 
+==========  ===============  ==========  ===============
 |kde|       ``|kde|``        |nix|       ``|nix|``
 |osx|       ``|osx|``        |win|       ``|win|``
-==========  ===============  ==========  =============== 
+==========  ===============  ==========  ===============
 
 
 
@@ -97,6 +97,7 @@ Icon                            Substitution                        Icon        
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
+|qgsProjectFile|                ``|qgsProjectFile|``                |favourites|                    ``|favourites|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -650,6 +651,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |extractNodes| image:: /static/common/extract_nodes.png
    :width: 1.5em
+.. |favourites| image:: /static/common/mIconFavourites.png
+   :width: 1.5em
 .. |fileExit| image:: /static/common/mActionFileExit.png
 .. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
@@ -898,6 +901,8 @@ Icon                            Substitution                        Icon        
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
+   :width: 1.5em
+.. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
