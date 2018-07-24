@@ -14,18 +14,24 @@ QGIS Configuration
 QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
 provides different tools to:
 
-* set global :ref:`options <gui_options>` to apply in different areas of the
-  software. These preferences are applied by default whenever you open a new
-  project and can be overridden during each QGIS session by the :ref:`project
-  properties <project_properties>` (accessible under :menuselection:`Project`
-  menu);
-* configure the :ref:`application interface <sec_customization>` as well as
-  :ref:`keyboard shortcuts <shortcuts>`;
-* create and manage :ref:`symbols or color <vector_style_manager>` or custom
-  :ref:`coordinate reference systems <sec_custom_projections>`.
+* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
+  apply in different areas of the software. These preferences are saved in the
+  active :guilabel:`User profile` settings and applied by default whenever you
+  open a new project with this profile.
+  Also, they can be overridden during each QGIS session by the :ref:`project
+  properties <project_properties>` (accessible under :menuselection:`Project` menu);
 
-Besides the global options and the local project properties, QGIS allows to
-store different combinations of those settings as :guilabel:`User profiles`.
+.. Todo: Add a link to user profile description when available
+
+* |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
+  :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
+  not need;
+* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
+  :ref:`keyboard shortcuts <shortcuts>`;
+* |symbology| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
+  color ramps <vector_style_manager>`;
+* |customProjection| :guilabel:`Custom Projections...`: create your own
+  :ref:`coordinate reference systems <sec_custom_projections>`.
 
 
 .. index:: Options, Configuration
@@ -997,11 +1003,15 @@ and **[Load]** them into another QGIS installation.
    :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
 .. |doubleSpinBox| image:: /static/common/doublespinbox.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
@@ -1033,6 +1043,8 @@ and **[Load]** them into another QGIS installation.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

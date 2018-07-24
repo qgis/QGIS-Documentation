@@ -248,6 +248,7 @@ Icon                            Substitution                        Icon        
 |arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
+|interfaceCustomization|        ``|interfaceCustomization|``        |keyboardShortcuts|             ``|keyboardShortcuts|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
 |scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
@@ -750,6 +751,8 @@ Icon                            Substitution                        Icon        
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
+   :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
    :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
@@ -761,6 +764,8 @@ Icon                            Substitution                        Icon        
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
