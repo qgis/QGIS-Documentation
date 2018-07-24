@@ -236,38 +236,22 @@ results with the known values in your coordinate reference system.
 Default datum transformations
 =============================
 
-OTF depends on being able to transform data into a 'default CRS', and
-QGIS uses WGS84. For some CRS there are a number of transforms
-available. QGIS allows you to define the transformation used otherwise
-QGIS uses a default transformation.
-
-In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
-:guilabel:`Options` you can:
-
-* set QGIS to ask you when it needs define a transformation using |radioButtonOn|
-  :guilabel:`Ask for datum transformation when no default is defined`
-* edit a list of user defaults for transformations.
-
-QGIS asks which transformation to use by opening a dialogue box
-displaying PROJ.4 text describing the source and destination
-transforms. Further information may be found by hovering over a
-transform. User defaults can be saved by selecting
-|radioButtonOn| :guilabel:`Remember selection`.
-
 In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
 whenever you use layers with different coordinates system, QGIS transparently
-reprojects them while rendering to the project CRS. The :guilabel:`Default datum
-transformations` group allows you to configure/customize the transformation
-settings. You can:
+reprojects them while rendering to the project CRS. For some CRS, there are a
+number of transforms available. QGIS allows you to define the transformation to
+use otherwise QGIS uses a default one.
 
-.. question: is it the project crs that is used or the first loaded layer's?
+This customization is done in the :menuselection:`Settings -->` |options|
+:guilabel:`Options --> CRS` tab menu under the :guilabel:`Default datum
+transformations` group:
 
-* |checkbox| :guilabel:`Ask for datum transformation if several are available`:
-  When more than one appropriate datum transformation exists for a
+* using |checkbox| :guilabel:`Ask for datum transformation if several are
+  available`: when more than one appropriate datum transformation exists for a
   source/destination CRS combination, a dialog will automatically be opened
   prompting users to choose which of these datum transformations to use for
   the project;
-* also predefine a list of the appropriate default transformations to use
+* or predefining a list of the appropriate default transformations to use
   when loading layers to projects or reprojecting a layer.
 
   Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
@@ -292,6 +276,13 @@ settings. You can:
   From now, QGIS automatically uses the selected datum transformation for
   further transformation between these two CRSs until you |signMinus| remove
   it from the list or |toggleEditing| replace it with another one.
+
+.. _figure_projection_datum:
+
+.. figure:: img/datumTransformation.png
+   :align: center
+
+   Selecting a preferred default datum transformation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
