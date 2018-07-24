@@ -22,10 +22,10 @@ Parameters
 ..........
 
 ``Layer`` [layer: any]
-  Layer to load in the legend
+  Layer to load in the legend.
 
 ``Loaded layer name`` [string]
-  Name of the loaded layer
+  Name of the loaded layer.
 
 
 .. _qgisrenamelayer:
@@ -37,10 +37,10 @@ Parameters
 ..........
 
 ``Layer`` [layer: any]
-  Layer to rename
+  Layer to rename.
 
 ``New name`` [string]
-  Name of the layer
+  Name of the layer.
 
 
 .. _qgisstringconcatenation:
@@ -53,10 +53,10 @@ Parameters
 ..........
 
 ``Input 1`` [string]
-  First string to concatenate
+  First string to concatenate.
 
 ``Input 2`` [string]
-  Second string to concatenate
+  Second string to concatenate.
 
 
 .. _qgisvariabledistancebuffer:
@@ -72,14 +72,14 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Distance field`` [tablefield: numeric]
-  Attribute for the distance radius of the buffer
+  Attribute for the distance radius of the buffer.
 
 ``Segments`` [number]
   Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets
+  creating rounded offsets.
 
   Default: *5*
 
@@ -108,7 +108,7 @@ Parameters
 
 ``Miter limit`` [number]
   Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join
+  the offset curve to use when creating a mitered join.
 
   Default: *2.0*
 
@@ -116,7 +116,7 @@ Outputs
 .......
 
 ``Buffer`` [vector: polygon]
-  Buffer polygon vector layer
+  Buffer polygon vector layer.
 
 See also
 ........

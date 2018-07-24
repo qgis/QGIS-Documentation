@@ -30,10 +30,10 @@ Attributes are not modified by this algorithm.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer with wrong or missing CRS
+  Vector layer with wrong or missing CRS.
 
 ``Assigned CRS`` [projection]
-  Select the new CRS to assign to the vector layer
+  Select the new CRS to assign to the vector layer.
 
   Default: *EPSG:4326 - WGS84*
 
@@ -60,7 +60,7 @@ layers but accept only one ``vrt`` in which the layers are specified.
 Parameters
 ..........
 ``Input datasources`` [vector: any] [list]
-  Select the vector layers you want to use to build the virtual vector
+  Select the vector layers you want to use to build the virtual vector.
 
 ``Create "unioned" VRT`` [boolean]
   Check if you want to unite all the vectors in a single ``vrt`` file.
@@ -70,7 +70,7 @@ Parameters
 Outputs
 .......
 ``Virtual vector`` [vector: any]
-  The final virtual vector made by all the source vector chosen
+  The final virtual vector made by all the source vector chosen.
 
 
 .. _qgiscreateattributeindex:
@@ -87,10 +87,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 ``Attribute to index`` [tablefield: any]
-  Field of the vector layer
+  Field of the vector layer.
 
 
 .. _qgiscreatespatialindex:
@@ -108,7 +108,7 @@ No new output layers are created.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input.
 
 
 .. _qgisdefinecurrentprojection:
@@ -126,7 +126,7 @@ the same directory of the input layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer with missing projection information
+  Vector layer with missing projection information.
 
 ``Output CRS`` [projection]
   Output CRS associated with the source vector layer. The CRS information are
@@ -149,13 +149,13 @@ but different attributes, only one of them will be added to the result layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  The layer with duplicate geometries you want to clean
+  The layer with duplicate geometries you want to clean.
 
 
 Outputs
 .......
 ``Cleaned`` [vector: any]
-  The final layer without any duplicated geometries
+  The final layer without any duplicated geometries.
 
 
 .. _qgisdropgeometries:
@@ -170,7 +170,7 @@ If the file is saved in a local folder, you can choose between many file formats
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 Outputs
 .......
@@ -195,36 +195,36 @@ Parameters
   on how many layers have been chosen.
 
 ``SQL query`` [string]
-  Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
+  Type here the string of your SQL query, e.g. ``SELECT * FROM input1``.
 
 ``Unique identifier field`` [string]
   Optional
   
-  Specify the column with unique ID
+  Specify the column with unique ID.
 
 ``Geometry field`` [string]
   Optional
 
-  Specify the geometry field
+  Specify the geometry field.
 
 ``Geometry type`` [enumeration]
   Optional
 
   Choose the final geometry of the result. By default the algorithm will autodetect
-  it
+  it.
 
   Default: *Autodetect*
 
 ``CRS`` [projection]
   Optional
 
-  The CRS to assign to the output layer
+  The CRS to assign to the output layer.
 
 
 Outputs
 .......
 ``SQL Output`` [vector: any]
-  Vector layer created by the query
+  Vector layer created by the query.
 
 
 .. _qgisfindprojection:
@@ -245,19 +245,19 @@ layer was in this projection.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Layer with unknown projection
+  Layer with unknown projection.
 
 ``Target area for layer`` [extent]
-  This is the area in which the layer is expected to be
+  This is the area in which the layer is expected to be.
 
 ``Target area CRS`` [projection]
-  Choose the target CRS of the target area selected
+  Choose the target CRS of the target area selected.
 
 Outputs
 .......
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
-  criteria
+  criteria.
 
 See also
 ........
@@ -278,21 +278,21 @@ Parameters
 ..........
 ``Input layer`` [vector: any]
   Source input vector layer. The final attribute table will be added to **this**
-  vector layer
+  vector layer.
 
 ``Table field`` [tablefield]
-  Field of the source layer with the unique identifier
+  Field of the source layer with the unique identifier.
 
 ``Input layer 2`` [vector: any]
-  Layer with the attribute table to join
+  Layer with the attribute table to join.
 
 ``Table field 2`` [tablefield]
-  Table of the joining layer with the common unique field identifier
+  Table of the joining layer with the common unique field identifier.
 
 ``Layer 2 fields to copy`` [tablefield]
   Optional
 
-  Select the specific fields you want to add. By default all the fields are added
+  Select the specific fields you want to add. By default all the fields are added.
 
 ``Join type`` [enumeration] |32|
   Choose the type of the final joined layer between:
@@ -301,7 +301,7 @@ Parameters
   * Take attributes of the first matching feature only (one-to-one)
 
 ``Discard records which could not be joined`` [boolean] |32|
-  Check if you don't want to add the features that cannot be joined
+  Check if you don't want to add the features that cannot be joined.
 
 ``Joined field prefix`` [string] |32|
   Optional
@@ -312,7 +312,7 @@ Parameters
 Outputs
 .......
 ``Joined layer`` [vector: any]
-  Final vector layer with the attribute table as result of the joining
+  Final vector layer with the attribute table as result of the joining.
 
 
 .. _qgisjoinattributesbylocation:
@@ -331,11 +331,11 @@ added to each feature from the first layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Source vector layer
+  Source vector layer.
 
 ``Join layer`` [vector: any]
-  the attributes of this vector layer will be **added** to the source layer
-  attribute table
+  The attributes of this vector layer will be **added** to the source layer
+  attribute table.
 
 ``Geometric predicate`` [enumeration] [list]
   Check the geometric criteria.
@@ -353,7 +353,7 @@ Parameters
 ``Fields to add`` [tablefield]
   Optional
 
-  Select the specific fields you want to add. By default all the fields are added
+  Select the specific fields you want to add. By default all the fields are added.
 
 ``Join type`` [enumeration]
   Choose the type of the final joined layer between:
@@ -362,7 +362,7 @@ Parameters
   * Take attributes of the first located feature only (one-to-one)
 
 ``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined
+  Check if you don't want to add the features that cannot be joined.
 
 ``Joined field prefix`` [string] |32|
   Optional
@@ -392,11 +392,11 @@ features in the second layer (e.g. maximum value, mean value, etc).
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Source vector layer
+  Source vector layer.
 
 ``Join layer`` [vector: any]
   The attributes of this vector layer will be **added** to the source layer
-  attribute table
+  attribute table.
 
 ``Geometric predicate`` [enumeration] [list]
   Check the geometric criteria.
@@ -414,7 +414,7 @@ Parameters
 ``Fields to summarize`` [tablefield] [list]
   Optional
 
-  Select the specific fields you want to add. By default all the fields are added
+  Select the specific fields you want to add. By default all the fields are added.
 
 ``Summaries to calculate`` [enumeration] [list]
   Optional
@@ -442,7 +442,7 @@ Parameters
   * mean_length
 
 ``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined
+  Check if you don't want to add the features that cannot be joined.
 
 Outputs
 .......
@@ -483,14 +483,14 @@ Parameters
 ``Destination CRS`` [projection]
   Optional
 
-  Optional parameter to choose the CRS of the output layer. If not specified the
+  Choose the CRS of the output layer. If not specified the
   CRS of the first input layer is taken.
 
 Outputs
 .......
 
 ``Merged`` [vector: any]
-  Merged vector layer containing all the features and attributes from input layers
+  Merged vector layer containing all the features and attributes from input layers.
 
 See also
 ........
@@ -511,10 +511,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer to sort
+  Vector layer to sort.
 
 ``Expression`` [expression]
-  Expression to use for the vector sorting
+  Expression to use for the vector sorting.
 
 ``Ascending`` [boolean]
   If checked the sorted vector layer will be sorted from the smallest to the
@@ -531,7 +531,7 @@ Outputs
 .......
 
 ``Output layer`` [vector: any]
-  Sorted vector layer
+  Sorted vector layer.
 
 
 .. _qgisreprojectlayer:
@@ -594,10 +594,10 @@ No new output are created: the style is immediately assigned to the vector layer
 Parameters
 ..........
 ``Vector layer`` [vector: any]
-  The layer you want to change the style
+  The layer you want to change the style.
 
 ``Style file`` [file]
-  ``qml`` file of the style
+  ``qml`` file of the style.
 
 
 .. _qgissplitvectorlayer:
@@ -619,7 +619,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 ``Unique ID field`` [tablefield: any]
   Field of the attribute table on which the layer will be split.
@@ -647,7 +647,7 @@ Truncates a layer, by deleting all features from within the layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

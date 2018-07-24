@@ -39,7 +39,7 @@ Parameters
   Default: *0,1,0,1*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -87,7 +87,7 @@ Parameters
   Default: *False*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -125,7 +125,7 @@ Parameters
   Default: *10.0*
 
 ``Attribute name (if not set, no elevation attribute is attached)`` [string]
-  Optional.
+  Optional
 
   Defines the attribute name for the field containing the values of the
   contour lines. If nothing is defines the default name will be 'ELEV'.
@@ -133,7 +133,7 @@ Parameters
   Default: *ELEV*
 
 ``Offset from zero relative to which to interpret intervals`` [number]
-  Optional.
+  Optional
 
   Default: *0.0*
 
@@ -146,7 +146,7 @@ Parameters
   Default: *False*
 
 ``Input pixel value to treat as "nodata"`` [number]
-  Optional.
+  Optional
 
   Default: *Not set*
 
@@ -154,7 +154,7 @@ Outputs
 .......
 
 ``Contours`` [vector: line]
-  Output file for contour lines
+  Output file for contour lines.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -511,7 +511,7 @@ Parameters
   <put parameter description here>
 
 ``Values`` [raster] [list]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -640,17 +640,17 @@ Parameters
 ..........
 
 ``Sand`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Silt`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Clay`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

@@ -79,7 +79,7 @@ Parameters
   <put parameter description here>
 
 ``Flow Direction`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -103,7 +103,7 @@ Parameters
   Default: *0.0*
 
 ``Divergence`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -113,7 +113,7 @@ Parameters
   Default: *10*
 
 ``Tracing: Weight`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -287,7 +287,7 @@ Parameters
   <put parameter description here>
 
 ``Sink Route`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

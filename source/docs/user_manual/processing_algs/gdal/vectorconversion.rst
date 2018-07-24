@@ -57,7 +57,7 @@ Parameters
   Default: *0*
 
 ``Creation Options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 

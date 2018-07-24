@@ -32,23 +32,23 @@ Parameters
   will be shown in the combobox.
 
 ``Schema (schema name)`` [string]
-  Optional.
+  Optional
 
   Name of the schema to store the data. It can be a new one or already exist.
 
   Default: *public*
 
 ``Table to import to (leave blank to use layer name)`` [string]
-  Optional.
+  Optional
 
   Defines a table name for the imported vector file.
   If nothing is added, the layer name will be used.
 
 ``Primary key field`` [tablefield: any]
-  Optional. A column with **unique** values can be used as Primary key for the
-  database.
+  Optional
 
   Sets the primary key field from an existing field in the vector layer.
+  A column with **unique** values can be used as Primary key for the database.
 
 ``Geometry column`` [string]
   Defines the name of the geometry column in the new PostGIS table.
@@ -57,7 +57,7 @@ Parameters
   Default: *geom*
 
 ``Encoding`` [string]
-  Optional.
+  Optional
 
   Defines the encoding of the layer in the new PostGIS table.
 
@@ -163,17 +163,17 @@ Parameters
 ..........
 
 ``Input layers`` [vector: any] [list]
-  All the vector layers to import into the GeoPackage database
+  All the vector layers to import into the GeoPackage database.
 
 ``Overwrite existing GeoPackage`` [boolean]
-  Replaces an existing database with a new one
+  Replaces an existing database with a new one.
 
   Default: *False*
 
 Outputs
 .......
 ``Destination GeoPackage``
-  If not specified the GeoPackage database will be save in the temporary folder.
+  If not specified the GeoPackage database will be saved in the temporary folder.
 
 
 .. _qgisimportintospatialite:
@@ -199,13 +199,13 @@ Parameters
   `sqlite` file.
 
 ``Table to import to (leave blank to use layer name)`` [string]
-  Optional.
+  Optional
 
   Defines a table name for the imported vector file.
   If nothing is added, the layer name will be used.
 
 ``Primary key field`` [tablefield: any]
-  Optional.
+  Optional
 
   Sets the primary key field from an existing field in the vector layer.
 
@@ -216,7 +216,7 @@ Parameters
   Default: *geom*
 
 ``Encoding`` [string]
-  Optional.
+  Optional
 
   Defines the encoding of the layer in the new SpatiaLite table.
 

@@ -30,7 +30,7 @@ Parameters
   It has to be defined in target CRS units.
 
 ``Additional creation Options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -60,7 +60,7 @@ Parameters
   Layer to be used as clipping extent for the input vector layer.
 
 ``Additional creation Options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 

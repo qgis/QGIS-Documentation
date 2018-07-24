@@ -95,7 +95,7 @@ Parameters
   Default: *EPSG:4326*
 
 ``Schema name`` [string]
-  Optional.
+  Optional
 
   Defines the schema to which the database table will be assigned to.
   By default, 'public' is chosen.
@@ -103,13 +103,13 @@ Parameters
   Default: *public*
 
 ``Table name, leave blank to use input name`` [string]
-  Optional.
+  Optional
 
   Defines a name for the table that will be imported into the database.
   By default the table name is the name of the input vector file.
 
 ``Primary Key`` [string]
-  Optional.
+  Optional
 
   Defines which attribute field will be the primary key of the database table.
   By default this is 'id'.
@@ -117,7 +117,7 @@ Parameters
   Default: *id*
 
 ``Geometry column name`` [string]
-  Optional.
+  Optional
 
   Defines in which attribute field of the database there will be the geometry
   information. By default it will be taken from the 'geom' column.
@@ -135,13 +135,13 @@ Parameters
   Default: *0*
 
 ``Distance tolerance for simplification`` [string]
-  Optional.
+  Optional
 
   Defines a distance tolerance for the simplification of the vector geometries
   to be imported. By default no simplification there is no simplification.
 
 ``Maximum distance between 2 nodes (densification)`` [string]
-  Optional.
+  Optional
 
   The maximum distance between two nodes. Used to create intermediate points.
   By default there is no maximum distance.
@@ -157,13 +157,13 @@ Parameters
   Default: *False*
 
 ``Select features using a SQL "WHERE" statement (Ex: column="value")`` [string]
-  Optional.
+  Optional
 
   Defines with a SQL "WHERE" statement which features should be selected for the
   output table.
 
 ``Group N features per transaction (Default: 20000)`` [string]
-  Optional.
+  Optional
 
   You can group the input features in transactions where N defines the size.
   By default N limits the transaction size to 20000 features.
@@ -215,7 +215,7 @@ Parameters
   Default: *True*
 
 ``Additional creation options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -293,28 +293,28 @@ Parameters
   Default: *(not set)*
 
 ``Schema name`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *public*
 
 ``Table name, leave blank to use input name`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
 ``Primary Key`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *id*
 
 ``Geometry column name`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -331,14 +331,14 @@ Parameters
   Default: *0*
 
 ``Distance tolerance for simplification`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
 ``Maximum distance between 2 nodes (densification)`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -355,14 +355,14 @@ Parameters
   Default: *False*
 
 ``Select features using a SQL "WHERE" statement (Ex: column="value")`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
 ``Group "n" features per transaction (Default: 20000)`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -399,7 +399,7 @@ Parameters
   Default: *False*
 
 ``Additional creation options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 

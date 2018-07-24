@@ -185,10 +185,11 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Raster layer in input
+  Raster layer in input.
 
 ``Suppress GCP info`` [boolean]
-  Suppress ground control points list printing. It may be useful for datasets with huge amount of GCPs, such as L1B AVHRR or HDF4 MODIS which contain thousands of them.
+  Suppress ground control points list printing. It may be useful for datasets with huge amount of GCPs,
+  such as L1B AVHRR or HDF4 MODIS which contain thousands of them.
 
   Default: *False*
 
@@ -201,7 +202,7 @@ Outputs
 .......
 
 ``Layer information`` [html]
-  Raster information in output
+  Raster information in output.
 
 See also
 ........
@@ -225,7 +226,7 @@ Parameters
   The input raster files. Can be multiple files.
 
 ``Field name to hold the file path to the indexed rasters`` [string]
-  Optional.
+  Optional
 
   The output field name to hold the file path/location to the indexed rasters.
 
@@ -245,7 +246,7 @@ Parameters
   Default: *False*
 
 ``Transform geometries to the given CRS`` [crs]
-  Optional.
+  Optional
 
   Geometries of input files will be transformed to the desired target coordinate
   reference system.
@@ -253,10 +254,10 @@ Parameters
   system as the input rasters.
 
 ``The name of the field to store the SRS of each tile`` [string]
-  Optional.
+  Optional
 
 ``The format in which the CRS of each tile must be written`` [enumeration]
-  Optional.
+  Optional
 
   Possible values are:
 

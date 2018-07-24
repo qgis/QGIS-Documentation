@@ -74,22 +74,22 @@ Parameters
   <put parameter description here>
 
 ``Sink Routes`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Weight`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Material`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Target`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -165,22 +165,22 @@ Parameters
   <put parameter description here>
 
 ``Sink Routes`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Weight`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Material`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Target`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -190,7 +190,7 @@ Parameters
   Default: *1*
 
 ``Target Areas`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -304,7 +304,7 @@ Parameters
   <put parameter description here>
 
 ``Parameter`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -538,7 +538,7 @@ Parameters
   <put parameter description here>
 
 ``Seeds`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -593,7 +593,7 @@ Parameters
   <put parameter description here>
 
 ``Total Catchment Area (TCA)`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -837,7 +837,7 @@ Parameters
   <put parameter description here>
 
 ``Sink Route`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -968,7 +968,7 @@ Parameters
   <put parameter description here>
 
 ``Transmissivity`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1020,7 +1020,7 @@ Parameters
 ..........
 
 ``Target Area`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1038,7 +1038,7 @@ Parameters
   <put parameter description here>
 
 ``Sink Routes`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

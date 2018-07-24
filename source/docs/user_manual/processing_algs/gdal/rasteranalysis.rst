@@ -152,7 +152,7 @@ Parameters
   Default: *1*
 
 ``Validity mask`` [raster]
-  Optional.
+  Optional
 
   A mask that defines which areas are to be filled.
 
@@ -218,7 +218,7 @@ Parameters
   Field for the interpolation.
 
 ``Output raster type`` [enumeration]
-  Raster file type
+  Raster file type.
 
   Options:
 
@@ -241,7 +241,7 @@ Outputs
 
 ``Output file`` [raster]
 
-Interpolated raster file
+Interpolated raster file.
 
 See also
 ........
@@ -261,7 +261,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 ``Metrics`` [enumeration]
   List of available metrics:
@@ -278,29 +278,33 @@ Parameters
   Default: *0*
 
 ``Radius 1`` [number]
-  The first radius (X axis if rotation angle is 0) of search ellipse. Set this parameter to zero to use whole point array
+  The first radius (X axis if rotation angle is 0) of search ellipse.
+  Set this parameter to zero to use whole point array.
 
   Default: *0.0*
 
 ``Radius 2`` [number]
-  The second radius (Y axis if rotation angle is 0) of search ellipse. Set this parameter to zero to use whole point array
+  The second radius (Y axis if rotation angle is 0) of search ellipse.
+  Set this parameter to zero to use whole point array.
 
   Default: *0.0*
 
 ``Angle`` [number]
-  Angle of search ellipse rotation in degrees (counter clockwise)
+  Angle of search ellipse rotation in degrees (counter clockwise).
 
   Default: *0.0*
 
 ``Min points`` [number]
-  Minimum number of data points to use. If less amount of points found the grid node considered empty and will be filled with NODATA marker.
+  Minimum number of data points to use.
+  If less amount of points found the grid node considered empty and
+  will be filled with NODATA marker.
 
-  This is only used if search ellipse is set (both radii are non-zero)
+  This is only used if search ellipse is set (both radii are non-zero).
 
   Default: *0.0*
 
 ``Nodata`` [number]
-  NODATA marker to fill empty points
+  NODATA marker to fill empty points.
 
   Default: *0.0*
 
@@ -310,7 +314,7 @@ Parameters
   Field for the interpolation.
 
 ``Output raster type`` [enumeration]
-  Raster file type
+  Raster file type.
 
   Options:
 
@@ -332,7 +336,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  Interpolated raster file
+  Interpolated raster file.
 
 See also
 ........
@@ -345,8 +349,9 @@ Grid (Inverse distance to a power)
 ----------------------------------
 The Inverse Distance to a Power gridding method is a weighted average interpolator.
 
-You should supply the input arrays with the scattered data values including coordinates of every data point and output
-grid geometry. The function will compute interpolated value for the given position in output grid.
+You should supply the input arrays with the scattered data values
+including coordinates of every data point and output grid geometry.
+The function will compute interpolated value for the given position in output grid.
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -354,25 +359,25 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 ``Power`` [number]
-  Weighting power
+  Weighting power.
 
   Default: *2.0*
 
 ``Smothing`` [number]
-  Smoothing parameter
+  Smoothing parameter.
 
   Default: *0.0*
 
 ``Radius 1`` [number]
-  The first radius (X axis if rotation angle is 0) of search ellipse
+  The first radius (X axis if rotation angle is 0) of search ellipse.
 
   Default: *0.0*
 
 ``Radius 2`` [number]
-  The second radius (Y axis if rotation angle is 0) of search ellipse
+  The second radius (Y axis if rotation angle is 0) of search ellipse.
 
   Default: *0.0*
 
@@ -387,7 +392,7 @@ Parameters
   Maximum number of data points to use.
 
   Do not search for more points than this number. If less amount of points found
-  the grid node is considered empty and will be filled with NODATA marker
+  the grid node is considered empty and will be filled with NODATA marker.
 
   Default: *0.0*
 
@@ -395,12 +400,12 @@ Parameters
   Minimum number of data points to use.
 
   If less amount of points found the grid node is considered empty and will be
-  filled with NODATA marker
+  filled with NODATA marker.
 
   Default: *0.0*
 
 ``Nodata`` [number]
-  No data marker to fill empty points
+  No data marker to fill empty points.
 
   Default: *0.0*
 
@@ -410,7 +415,7 @@ Parameters
   Field for the interpolation.
 
 ``Output raster type`` [enumeration]
-  Raster file type
+  Raster file type.
 
   Options:
 
@@ -432,7 +437,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  Interpolated raster file
+  Interpolated raster file.
 
 See also
 .........
@@ -452,7 +457,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 ``Power`` [number]
   Weighting power
@@ -460,7 +465,7 @@ Parameters
   Default: *2.0*
 
 ``Smothing`` [number]
-  Smoothing parameter
+  Smoothing parameter.
 
   Default: *0.0*
 
@@ -491,7 +496,7 @@ Parameters
   Field for the interpolation.
 
 ``Output raster type`` [enumeration]
-  Raster file type
+  Raster file type.
 
   Options:
 
@@ -513,7 +518,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  Interpolated raster file
+  Interpolated raster file.
 
 See also
 ........
@@ -536,7 +541,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 ``Search distance`` [number]
   In case the point to be interpolated does not fit into a triangle of the Delaunay
@@ -557,7 +562,7 @@ Parameters
   Field for the interpolation.
 
 ``Output raster type`` [enumeration]
-  Raster file type
+  Raster file type.
 
   Options:
 
@@ -579,7 +584,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  Interpolated raster file
+  Interpolated raster file.
 
 See also
 ........
@@ -601,7 +606,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: point]
-  Point vector layer
+  Point vector layer.
 
 ``Radius 1`` [number]
   The first radius (X axis if rotation angle is 0) of search ellipse.
@@ -652,7 +657,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  Interpolated raster file
+  Interpolated raster file.
 
 See also
 ........
@@ -738,15 +743,16 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Raster file in input
+  Raster file in input.
 
 ``How far from black (white)`` [number]
-  Select how far from black, white or custom colors the pixel values can be and still considered near black, white or custom color
+  Select how far from black, white or custom colors the pixel values can be and
+  still considered near black, white or custom color.
 
   Default: *15*
 
 ``Search for nearly white pixels instead of nearly black`` [boolean]
-  Search for nearly white (255) pixels instead of nearly black pixels
+  Search for nearly white (255) pixels instead of nearly black pixels.
 
   Default: *False*
 
@@ -754,7 +760,7 @@ Outputs
 .......
 
 ``Output layer`` [raster]
-  Raster file in output
+  Raster file in output.
 
 See also
 ........
@@ -776,7 +782,7 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Raster in input
+  Raster in input.
 
 ``Values`` [string]
   A list of target pixel values in the source image to be considered target pixels. If not specified, all non-zero
@@ -799,23 +805,23 @@ Parameters
   value is not provided, the output band will be queried for its nodata value.
 
   If the output band does not have a nodata value, then the value 65535 will be used.
-  Distance is interpreted in pixels unless *distunits* GEO is specified
+  Distance is interpreted in pixels unless *distunits* GEO is specified.
 
   Default: *-1*
 
 ``No data (negative value to ignore)`` [number]
-  Specify a nodata value to use for the destination proximity raster
+  Specify a nodata value to use for the destination proximity raster.
 
   Default: *-1*
 
 ``Fixed buf val (negative value to ignore)`` [number]
   Specify a value to be applied to all pixels that are within the -maxdist of target pixels
-  (including the target pixels) instead of a distance value
+  (including the target pixels) instead of a distance value.
 
   Default: *-1*
 
 ``Output raster type`` [enumeration]
-  Raster file type
+  Raster file type.
 
   Options:
 
@@ -837,7 +843,7 @@ Outputs
 .......
 
 ``Output layer`` [raster]
-  Raster file in output
+  Raster file in output.
 
 See also
 ........
@@ -976,7 +982,7 @@ TPI (Topographic Position Index)
 --------------------------------
 Outputs a single-band raster with values computed from the elevation.
 TPI stands for Topographic Position Index, which is defined as the difference between a central pixel and the mean
-of its surrounding cells
+of its surrounding cells.
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -984,15 +990,15 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Elevation raster layer
+  Elevation raster layer.
 
 ``Band number`` [number]
-  The number of a band containing elevation values
+  The number of a band containing elevation values.
 
   Default: *1*
 
 ``Compute edges`` [boolean]
-  Generates edges from the elevation raster
+  Generates edges from the elevation raster.
 
   Default: *False*
 
@@ -1000,7 +1006,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  TPI raster in output
+  TPI raster in output.
 
 See also
 ........
@@ -1014,7 +1020,7 @@ TRI (Terrain Ruggedness Index)
 ------------------------------
 Outputs a single-band raster with values computed from the elevation.
 TRI stands for Terrain Ruggedness Index, which is defined as the mean difference between a central pixel and its
-surrounding cells
+surrounding cells.
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1022,15 +1028,15 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Elevation raster layer
+  Elevation raster layer.
 
 ``Band number`` [number]
-  The number of a band containing elevation values
+  The number of a band containing elevation values.
 
   Default: *1*
 
 ``Compute edges`` [boolean]
-  Generates edges from the elevation raster
+  Generates edges from the elevation raster.
 
   Default: *False*
 
@@ -1038,7 +1044,7 @@ Outputs
 .......
 
 ``Output file`` [raster]
-  TRI raster file
+  TRI raster file.
 
 See also
 ........
