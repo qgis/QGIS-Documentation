@@ -113,7 +113,7 @@ Parameters
   <put parameter description here>
 
 ``Mask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -153,7 +153,7 @@ Parameters
   <put parameter description here>
 
 ``Mask`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1033,7 +1033,7 @@ Parameters
   <put parameter description here>
 
 ``Threshold Grid`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

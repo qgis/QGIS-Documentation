@@ -38,7 +38,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain Model raster layer
+  Digital Terrain Model raster layer.
 
 ``Z factor`` [number]
   Vertical exaggeration. This parameter is useful when the Z units differ from
@@ -51,7 +51,7 @@ Outputs
 .......
 
 ``Aspect`` [raster]
-  Aspect raster layer
+  Aspect raster layer.
 
 
 .. _qgishillshade:
@@ -91,7 +91,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain Model raster layer
+  Digital Terrain Model raster layer.
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -116,7 +116,7 @@ Outputs
 .......
 
 ``Hillshade`` [raster]
-  Hillshade raster layer
+  Hillshade raster layer.
 
 
 .. _qgishypsometriccurves:
@@ -184,7 +184,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain Model raster layer
+  Digital Terrain Model raster layer.
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -199,7 +199,7 @@ Parameters
   Default: *False*
 
 ``Relief colors`` [table widget]
-  Optional.
+  Optional
 
   Use the following table widget if you want to choose the relief colors manually.
   You can add as many color classes as you want: for each class you can choose
@@ -219,7 +219,7 @@ Outputs
 .......
 
 ``Relief`` [raster]
-  Relief raster layer
+  Relief raster layer.
 
 
 .. _qgisruggednessindex:
@@ -242,7 +242,7 @@ Parameters
 ..........
 
 ``Elevation layer`` [raster]
-  Digital Terrain Model raster layer
+  Digital Terrain Model raster layer.
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -254,7 +254,7 @@ Outputs
 .......
 
 ``Ruggedness`` [raster]
-  Ruggedness raster layer
+  Ruggedness raster layer.
 
 
 .. _qgisslope:
@@ -276,7 +276,7 @@ Parameters
 ..........
 
 ``Elevation raster`` [raster]
-  Digital Terrain Model raster layer
+  Digital Terrain Model raster layer.
 
 ``Z factor`` [number]
   You can use this parameter to exaggerate the final result in order to give it
@@ -288,7 +288,7 @@ Outputs
 .......
 
 ``Slope`` [raster]
-  Slope raster layer
+  Slope raster layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

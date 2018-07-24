@@ -49,14 +49,14 @@ Parameters
   **"D8 Flow Directions"** tool.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shapefile defining the outlets of interest. If this input file is
   used, only the cells upslope of these outlet cells are considered to be
   within the domain being evaluated.
 
 ``Weight Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving contribution to flow for each cell. These contributions (also
   sometimes referred to as weights or loadings) are used in the contributing
@@ -240,14 +240,14 @@ Parameters
   facet with the steepest downward slope.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shapefile defining the outlets of interest. If this input file is
   used, only the cells upslope of these outlet cells are considered to be
   within the domain being evaluated.
 
 ``Weight Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving contribution to flow for each cell. These contributions (also
   sometimes referred to as weights or loadings) are used in the contributing
@@ -424,14 +424,14 @@ Parameters
   **"D8 Flow Directions"** tool.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shapefile defining the outlets of interest. If this input file is
   used, only the cells upslope of these outlet cells are considered to be within
   the domain being evaluated.
 
 ``Mask Grid`` [raster]
-  Optional.
+  Optional
 
   A grid that is used to determine the domain do be analyzed. If the mask grid
   value >= mask threshold (see below), then the cell will be included in the

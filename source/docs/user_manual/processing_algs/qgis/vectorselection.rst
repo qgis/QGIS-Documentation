@@ -26,16 +26,16 @@ Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Vector layer to extract features from
+  Vector layer to extract features from.
 
 ``Selection attribute`` [tablefield: any]
-  Filtering field of the layer
+  Filtering field of the layer.
 
 ``Operator`` [enumeration]
   Many different operators are available:
 
   * ``=``
-  * ``!=``
+  * ``≠``
   * ``>``
   * ``>=``
   * ``<``
@@ -51,16 +51,16 @@ Parameters
 ``Value`` [string]
   Optional
 
-  Value to be evaluated
+  Value to be evaluated.
 
 Outputs
 .......
 
 ``Extracted (attribute)`` [vector: any]
-  Vector layer with matching features
+  Vector layer with matching features.
 
 ``Extracted (non-matching)`` [vector: any]
-  Vector layer with not matching features
+  Vector layer with not matching features.
 
 
 .. _qgisextractbyexpression:
@@ -72,25 +72,25 @@ features while the second will contain all the non-matching features.
 
 The criteria for adding features to the resulting layer is based on a QGIS expression.
 
-For more information about expressions see the :ref:`vector_expressions`
+For more information about expressions see the :ref:`vector_expressions`.
 
 Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Expression`` [expression]
-  Expression to filter the vector layer
+  Expression to filter the vector layer.
 
 Outputs
 .......
 
 ``Matching features`` [vector: any]
-  Vector layer with matching features
+  Vector layer with matching features.
 
 ``Non-matching`` [vector: any]
-  Vector layer with not matching features
+  Vector layer with not matching features.
 
 
 .. _qgisextractbylocation:
@@ -106,29 +106,29 @@ Parameters
 ..........
 
 ``Extract features from`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
-``Where the features intersect (geometric predicate)`` [enumeration] [list]
+``Where the features (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
+  * intersect
+  * contain
   * disjoint
-  * intersects
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crosses
+  * equal
+  * touch
+  * overlap
+  * are within
+  * cross
 
 ``By comparing to the features from`` [vector: any]
-  Intersection vector layer
+  Intersection vector layer.
 
 
 Output
 ......
 
 ``Extracted (location)`` [vector: any]
-  Vector layer of the spatial intersection
+  Vector layer of the spatial intersection.
 
 
 .. _qgisrandomextract:
@@ -145,7 +145,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Source vector layer to select the features from
+  Source vector layer to select the features from.
 
 ``Method`` [enumeration]
   Method of the random selection:
@@ -156,7 +156,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the features to select
+  Number or the percentage of the features to select.
 
   Default: *10*
 
@@ -164,7 +164,7 @@ Output
 ......
 
 ``Extracted (random)`` [vector: any]
-  Vector layer containing random selected features
+  Vector layer containing random selected features.
 
 
 .. _qgisrandomextractwithinsubsets:
@@ -183,10 +183,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Source vector layer to select the features from
+  Source vector layer to select the features from.
 
 ``ID field`` [tablefield: any]
-  Category of the source vector layer to select the features from
+  Category of the source vector layer to select the features from.
 
 ``Method`` [enumeration]
   Method of the random selection:
@@ -197,7 +197,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the feature to select
+  Number or the percentage of the feature to select.
 
   Default: *10*
 
@@ -205,7 +205,7 @@ Output
 ......
 
 ``Extracted (random stratified)`` [vector: any]
-  Random vector layer
+  Random vector layer.
 
 
 .. _qgisrandomselection:
@@ -224,7 +224,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Source vector layer to select the features from
+  Source vector layer to select the features from.
 
 ``Method`` [enumeration]
   Method of the random selection:
@@ -235,7 +235,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the feature to select
+  Number or the percentage of the features to select.
 
   Default: *10*
 
@@ -264,10 +264,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Source vector layer to select the features from
+  Source vector layer to select the features from.
 
 ``ID field`` [tablefield: any]
-  Category of the source vector layer
+  Category of the source vector layer.
 
 ``Method`` [enumeration]
   Method of the random selection:
@@ -278,7 +278,7 @@ Parameters
   Default: *Number of selected features*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the feature to select
+  Number or the percentage of the features to select.
 
   Default: *10*
 
@@ -298,29 +298,30 @@ Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Selection attribute`` [tablefield: any]
-  Filtering field of the layer
+  Filtering field of the layer.
 
 ``Operator`` [enumeration]
   Many different operators are available:
 
   * ``=``
-  * ``!=``
+  * ``≠``
   * ``>``
   * ``>=``
   * ``<``
   * ``<=``
   * ``begins with``
   * ``contains``
+  * ``is null``
+  * ``is not null``
+  * ``does not contain``
 
   Default: ``=``
 
 ``Value`` [string]
-  Optional
-
-  Values to be evaluated
+  Value to be evaluated.
 
 ``Modify current selection by`` [enumeration] |32|
   How the selection of the algorithm should be managed. You have many options:
@@ -338,7 +339,7 @@ Select by expression
 --------------------
 Creates a selection in a vector layer. The criteria for selecting
 features is based on a QGIS expression. For more information about expressions
-see the :ref:`vector_expressions`
+see the :ref:`vector_expressions`.
 
 No new outputs are created.
 
@@ -346,10 +347,10 @@ Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Expression`` [expression]
-  Expression to filter the vector layer
+  Expression to filter the vector layer.
 
 ``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
@@ -377,31 +378,31 @@ No new outputs are created.
 Parameters
 ..........
 
-``Extract features from`` [vector: any]
-  Source vector layer
+``Select features from`` [vector: any]
+  Source vector layer.
 
-``Where the features intersect (geometric predicate)`` [multiple selection]
+``Where the features (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
+  * intersect
+  * contain
   * disjoint
-  * intersects
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crosses
+  * equal
+  * touch
+  * overlap
+  * are within
+  * cross
 
 ``By comparing to the features from`` [vector: any]
-  Intersection vector layer
+  Intersection vector layer.
 
 ``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
   * creating new selection
   * adding to current selection
-  * removing from current selection
   * selecting within current selection
+  * removing from current selection
 
   Default: *creating new selection*
 

@@ -289,7 +289,7 @@ Parameters
   evaluation of Overland Flow Specific Discharge.
 
 ``Outlets shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If this
   file is used, the tool will only evaluate the area upslope of these outlets.
@@ -377,14 +377,14 @@ Parameters
   movement of an attenuating substance.
 
 ``Weight Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving weights (loadings) to be used in the accumulation. If this
   optional grid is not specified, weights are taken as the linear grid cell
   size to give a per unit width accumulation.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If
   this file is used, the tool will only evaluate the area upslope of these
@@ -455,7 +455,7 @@ Parameters
   **"Stream Network Analysis"** toolset.
 
 ``Weight Path Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving weights (loadings) to be used in the distance calculation. This
   might be used for example where only flow distance through a buffer is to be
@@ -783,7 +783,7 @@ Parameters
   eroded sediment.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If
   this file is used, the tool will only evaluate the area upslope of these
@@ -908,7 +908,7 @@ Parameters
   give the transport capacity of the carrying flow.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If
   this file is used, the tool will only evaluate the area upslope of these

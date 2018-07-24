@@ -29,17 +29,17 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Field name`` [string]
-  Name of the field with autoincremental values
+  Name of the field with autoincremental values.
 
   Default: *AUTO*
 
 ``Start values at`` [number]
   Optional
 
-  Choose the initial number of the incremental count
+  Choose the initial number of the incremental count.
 
   Default: *0*
   
@@ -76,7 +76,7 @@ Output
 ......
 
 ``Incremented`` [vector: any]
-  Vector layer with auto incremental field
+  Vector layer with auto incremental field.
 
 
 .. _qgisaddfieldtoattributestable:
@@ -94,10 +94,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Field name`` [string]
-  Name of the new field
+  Name of the new field.
 
   Default: *(not set)*
 
@@ -111,12 +111,12 @@ Parameters
   Default: *Integer*
 
 ``Field length`` [number]
-  Length of the field
+  Length of the field.
 
   Default: *10*
 
 ``Field precision`` [number]
-  Precision of the field. Useful with Float field type
+  Precision of the field. Useful with Float field type.
 
   Default: *0*
 
@@ -124,7 +124,7 @@ Output
 ......
 
 ``Added`` [vector: any]
-  Vector layer with new field added
+  Vector layer with new field added.
 
 
 .. _qgisadduniquevalueindexfield:
@@ -147,7 +147,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Class field`` [tablefield: any]
   Features of the same value are given the same index.
@@ -161,10 +161,10 @@ Output
 ......
 
 ``Layer with index field`` [vector: any]
-  Vector layer with the numeric field containing indexes
+  Vector layer with the numeric field containing indexes.
 
 ``Class summary`` [table]
-  Table with summary of the class field mapped to the corresponding unique value
+  Table with summary of the class field mapped to the corresponding unique value.
   
   Default: *Skip Output*
 
@@ -181,10 +181,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  Input vector layer.
 
 ``Result field name`` [string]
-  name of the new field
+  Name of the new field.
 
   Default: *NewField*
 
@@ -198,24 +198,22 @@ Parameters
   Default: *Integer*
 
 ``Field length`` [number]
-  Length of the field
+  Length of the field.
 
   Default: *10*
 
 ``Field precision`` [number]
-  Precision of the field. Useful with Float field type
+  Precision of the field. Useful with Float field type.
 
   Default: *3*
 
 ``Global expression`` [string]
-  Optional.
+  Optional
 
   The code in the global expression section will be executed only once before the
   calculator starts iterating through all the features of the input layer.
   Therefore, this is the correct place to import necessary modules or to calculate
   variables that will be used in subsequent calculations.
-
-  Default: *(not set)*
 
 ``Formula`` [string]
   Add here the Python formula to evaluate. For example to calculate the area of
@@ -228,7 +226,7 @@ Output
 ......
 
 ``Calculated`` [vector: any]
-  Vector layer with the new calculated field
+  Vector layer with the new calculated field.
 
 
 .. _qgisdeletecolumn:
@@ -242,16 +240,16 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer to drop field(s) from
+  Input vector layer to drop field(s) from.
 
 ``Fields to drop`` [tablefield: any] [list]
-  Select the field(s) to drop
+  Select the field(s) to drop.
 
 Output
 ......
 
 ``Fields dropped`` [vector: any]
-  Vector layer without the field(s) chosen
+  Vector layer without the field(s) chosen.
 
 
 .. _qgisfieldcalculator:
@@ -294,7 +292,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Layer to edit the attribute table structure
+  Layer to edit the attribute table structure.
 
 ``Fields mapping`` [list]
   List of output fields with their definitions.
@@ -302,10 +300,10 @@ Parameters
   The embedded table lists all the fields of the source
   layer and allows you to edit them:
 
-  * click the |newAttribute| button to create a new field
-  * click the |deleteAttribute| to remove a field
-  * use |arrowUp| and |arrowDown| to change the selected field order
-  * click |clearText| to reset to the default view
+  * click the |newAttribute| button to create a new field;
+  * click the |deleteAttribute| to remove a field;
+  * use |arrowUp| and |arrowDown| to change the selected field order;
+  * click |clearText| to reset to the default view.
 
   For each of the fields you'd like to reuse, you need to
   fill the following options:
@@ -333,7 +331,7 @@ Output
 ......
 
 ``Refactored`` [vector: any]
-  Output layer with refactored fields
+  Output layer with refactored fields.
 
 
 .. _qgistexttofloat:
@@ -341,7 +339,7 @@ Output
 Text to float
 -------------
 Modifies the type of a given attribute in a vector layer, converting a text attribute
-containing numeric strings into a numeric attribute (e.g. '1' to ``1.0``)
+containing numeric strings into a numeric attribute (e.g. '1' to ``1.0``).
 
 The algorithm creates a new vector layer so the source one is not modified.
 
@@ -351,16 +349,16 @@ Parameters
 ..........
 
 ``Input Layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Text attribute to convert to float`` [tablefield: string]
-  String field to convert in a floating field type
+  String field to convert in a floating field type.
 
 Output
 ......
 
 ``Float from text`` [vector: any]
-  Output vector layer with string field converted into float
+  Output vector layer with string field converted into float.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

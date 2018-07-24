@@ -26,7 +26,7 @@ Parameters
   <put parameter description here>
 
 ``Mask expression`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -43,7 +43,7 @@ Parameters
   Default: *2*
 
 ``OBIA Expression`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -85,7 +85,7 @@ Parameters
   <put parameter description here>
 
 ``Spatial image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -115,7 +115,7 @@ Parameters
   Default: *500*
 
 ``Directory where to write temporary files`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -347,7 +347,7 @@ Parameters
   Default: *0*
 
 ``Mask Image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -392,7 +392,7 @@ Parameters
   Default: *1*
 
 ``OGR options for layer creation`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -479,7 +479,7 @@ Parameters
   Default: *0*
 
 ``Mask Image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -524,7 +524,7 @@ Parameters
   Default: *1*
 
 ``OGR options for layer creation`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -616,7 +616,7 @@ Parameters
   Default: *0*
 
 ``Mask Image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -661,7 +661,7 @@ Parameters
   Default: *1*
 
 ``OGR options for layer creation`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -748,7 +748,7 @@ Parameters
   Default: *0*
 
 ``Mask Image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -793,7 +793,7 @@ Parameters
   Default: *1*
 
 ``OGR options for layer creation`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -870,7 +870,7 @@ Parameters
   Default: *0*
 
 ``Mask Image`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -915,7 +915,7 @@ Parameters
   Default: *1*
 
 ``OGR options for layer creation`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 

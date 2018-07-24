@@ -496,7 +496,7 @@ Parameters
   <put parameter description here>
 
 ``Filter Matrix`` [table]
-  Optional.
+  Optional
 
   <put parameter description here>
 

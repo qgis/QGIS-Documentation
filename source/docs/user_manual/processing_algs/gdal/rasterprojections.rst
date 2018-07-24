@@ -84,7 +84,7 @@ Parameters
   Default: *0*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 

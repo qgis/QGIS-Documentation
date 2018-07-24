@@ -23,13 +23,13 @@ Parameters
 ..........
 
 ``URL`` [string]
-  Valid URL as a string character
+  Valid URL as a string character.
 
 Output
 ......
 
 ``File destination`` [file]
-  Downloaded file of the chosen URL
+  Downloaded file of the chosen URL.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -122,17 +122,17 @@ Parameters
   <put parameter description here>
 
 ``1. Attribute`` [tablefield: any]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``2. Attribute`` [tablefield: any]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``3. Attribute`` [tablefield: any]
-  Optional.
+  Optional
 
   <put parameter description here>
 

@@ -712,7 +712,7 @@ Parameters
   <put parameter description here>
 
 ``Independent Variable (per Grid and Cell)`` [raster] [list]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -909,7 +909,7 @@ Parameters
   <put parameter description here>
 
 ``Additional layers`` [raster] [list]
-  Optional.
+  Optional
 
   <put parameter description here>
 

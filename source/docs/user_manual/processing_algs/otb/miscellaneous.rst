@@ -228,12 +228,12 @@ Parameters
   Default: *512*
 
 ``Image logo`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Image legend`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

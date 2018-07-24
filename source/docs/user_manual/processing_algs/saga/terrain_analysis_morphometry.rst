@@ -285,12 +285,12 @@ Parameters
   <put parameter description here>
 
 ``Wind Direction`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Wind Speed`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -501,7 +501,7 @@ Parameters
   <put parameter description here>
 
 ``Vertical Distance to Channel Network`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1124,12 +1124,12 @@ Parameters
   <put parameter description here>
 
 ``Wind Direction`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``Wind Speed`` [raster]
-  Optional.
+  Optional
 
   <put parameter description here>
 

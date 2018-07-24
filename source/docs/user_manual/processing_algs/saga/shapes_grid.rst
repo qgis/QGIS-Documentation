@@ -516,7 +516,7 @@ Parameters
   <put parameter description here>
 
 ``Polygons`` [vector: any]
-  Optional.
+  Optional
 
   <put parameter description here>
 

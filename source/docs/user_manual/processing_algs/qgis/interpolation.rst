@@ -27,7 +27,7 @@ Parameters
 ..........
 
 ``Point layer`` [vector: point]
-  Point vector layer to use for the heatmap
+  Point vector layer to use for the heatmap.
 
 ``Radius (layer units)`` [number]
   Heatmap search radius (or kernel bandwidth) in map units. The radius
@@ -103,7 +103,7 @@ Parameters
 Output
 ......
 ``Heatmap`` [raster]
-  Raster layer with kernel density values
+  Raster layer with kernel density values.
 
 
 Example: Creating a Heatmap
@@ -128,8 +128,9 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
    from the list of point layers loaded in the current project.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
 #. Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size Y`,
-    :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
-#. Click on **[Run in Background]**  to create and load the airports heatmap (see Figure_Heatmap_created_processing_).
+   :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
+#. Click on **[Run in Background]**  to create and load the airports heatmap
+   (see Figure_Heatmap_created_processing_).
 
 .. _figure_heatmap_settings_processing:
 
@@ -190,7 +191,7 @@ Parameters
 ..........
 
 ``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation
+  Point vector layer to use for the interpolation.
 
 ``Interpolation attribute`` [tablefield: numeric]
   Field used for the interpolation. Once you have chosen the layer and the field
@@ -201,10 +202,10 @@ Parameters
   ``Type`` column of the table.
 
 ``Use Z-coordinate for interpolation`` [boolean]
-  Uses the layer's stored Z values
+  Uses the layer's stored Z values.
 
 ``Distance coefficient Power`` [number]
-  Sets the distance coefficient for the interpolation
+  Sets the distance coefficient for the interpolation.
 
   Default: *2.0*
 
@@ -222,7 +223,7 @@ Parameters
 Output
 ......
 ``Interpolated`` [raster]
-  Raster layer of interpolated values
+  Raster layer of interpolated values.
 
 
 .. _qgistininterpolation:
@@ -243,7 +244,7 @@ Parameters
 ..........
 
 ``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation
+  Point vector layer to use for the interpolation.
 
 ``Interpolation attribute`` [tablefield: numeric]
   Field used for the interpolation. Once you have chosen the layer and the field
@@ -254,7 +255,7 @@ Parameters
   ``Type`` column of the table.
 
 ``Use Z-coordinate for interpolation`` [boolean]
-  Uses the layer's stored Z values
+  Uses the layer's stored Z values.
 
 ``Interpolation method`` [enumeration]
   There are two different choices:
@@ -278,10 +279,10 @@ Parameters
 Output
 ......
 ``Interpolated`` [raster]
-  Raster layer of triangulated values
+  Raster layer of triangulated values.
 
 ``Triangulation`` [vector: line]
-  Triangulation lines as vector layer
+  Triangulation lines as vector layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -58,7 +58,7 @@ You can combine HTML rendering and expressions, leading to e.g. a text like:
  [% '<b>Check out the new logo for ' || '<a href="https://www.qgis.org" title="Nice logo" target="_blank">QGIS ' ||@qgis_short_version || '</a>' || ' : <img src="https://qgis.org/en/_downloads/qgis-icon128.png" alt="QGIS icon"/>' %]
 
 which will render:
-**Check out the new logo for `QGIS 3.0 <https://www.qgis.org>`_ :** |logo|
+**Check out the new logo for** `QGIS 3.0 <https://www.qgis.org>`_ **:** |logo|
 
 .. Todo: it may be nice to provide some screenshot of some funnier/cooler/advanced
  html label in action
