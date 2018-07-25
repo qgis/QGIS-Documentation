@@ -244,6 +244,16 @@ level selected, you'll get enabled different tools at the bottom of the dialog t
 * |duplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
 
+Selecting a symbol layer in the tree, you can also :
+
+* control its visibility with the |checkbox| :guilabel:`Enable layer` option.
+  Disabled symbol layers are not drawn, but are saved and can be enabled at a
+  later stage. This makes it easier to customize parts of the symbol based on
+  the feature attributes or to tweak symbol appearance without having to
+  totally delete a symbol layer;
+* apply :ref:`rendering effects <draw_effects>` using the |checkbox|
+  :guilabel:`Draw effects` button.
+
 .. _edit_symbol:
 
 Configuring a symbol
@@ -287,7 +297,7 @@ With the :guilabel:`Advanced` |selectString| option, you can:
   each other in the map canvas (see :ref:`Symbols_levels` for more information)
 * and for line and fill symbols, **clip features to canvas extent**.
 
-.. Fix Me: What does advanced "clip features to canvas" option mean for the symbol?
+.. Todo: Explain what does advanced "clip features to canvas" option mean for the symbol?
 
 .. tip::
 
@@ -307,7 +317,7 @@ symbol layer types depend on the upper symbol type. You can apply on the symbol
 layer |paintEffects| :ref:`paint effects <draw_effects>` to enhance its rendering.
 
 Because describing all the options of all the symbol layer types would not be
-possible, only particular and significative ones are mentioned below.
+possible, only particular and significant ones are mentioned below.
 
 Common parameters
 ^^^^^^^^^^^^^^^^^
