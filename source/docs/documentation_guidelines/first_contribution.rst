@@ -102,7 +102,7 @@ click the "Fix Me" link at the bottom of the page to open its source file in Edi
     message will show and you'll directly modify ``qgis:master`` branch itself
     unless you save your changes in another branch.
 
-#. Do your changes following the :ref:`guidelines <QGIS-documentation-guidelines>`;
+#. Do your changes following the :ref:`writing guidelines <QGIS-documentation-guidelines>`;
 #. When you finish, at the bottom of the page, comment a bit what your changes
    are about and click on :guilabel:`Propose File change`. This will generate a
    new branch (``patch-xxx``) in your repo.
