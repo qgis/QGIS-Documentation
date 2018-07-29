@@ -2191,13 +2191,11 @@ Outputs
 
 Snap geometries to layer
 ------------------------
-Snaps the geometries in a layer.
-
-Given a tolerance distance, snapping can be done either to the geometries from
+Snaps the geometries in a layer either to the geometries from
 another layer, or to geometries within the same layer.
 
-Vertices will be inserted or removed as required to make the geometries match the
-reference geometries.
+Matching is done based on a tolerance distance and vertices will be inserted or
+removed as required to make the geometries match the reference geometries.
 
 Parameters
 ..........
@@ -2215,7 +2213,8 @@ Parameters
   Default: *10.0*
 
 ``Behavior`` [enumeration]
-  Snapping can be done on an existing node or a segment (its closest point).
+  Snapping can be done on an existing node or a segment (its closest point
+  to the vertex to move).
   Choose between different snapping options:
 
   * Prefer aligning nodes, insert extra vertices where required
