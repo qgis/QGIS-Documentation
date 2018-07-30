@@ -700,10 +700,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Polygon or line vector layer.
+  Polygon or line vector layer to densify.
 
 ``Vertices to add`` [number]
-  Number of vertices to add.
+  Number of vertices to add to each segment.
 
   Default: *1*
 
@@ -713,10 +713,9 @@ Outputs
 ``Densified`` [vector: polygon, line]
   Densified layer with vertices added.
 
-
 See also
 ........
-To add vertices at specific intervals look at :ref:`qgisdensifygeometriesgivenaninterval`.
+:ref:`qgisdensifygeometriesgivenaninterval`.
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -729,8 +728,6 @@ a larger number of vertices than the original one.
 The geometries are densified by adding regularly placed extra vertices inside each
 segment so that the maximum distance between any two vertices does not exceed the
 specified distance.
-
-The distance is expressed in the same units used by the layer CRS.
 
 If the geometries have z or m values present then these will be linearly interpolated
 at the added vertices.
@@ -751,23 +748,22 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Polygon or line vector layer.
+  Polygon or line vector layer to densify.
 
 ``Interval between vertices to add`` [number]
-  Distance between the vertices. Units are taken from the layer CRS.
+  Maximum distance between two consecutive vertices.
 
   Default: *1.0*
 
 Outputs
 .......
 
-``Densified`` [vector: plygon, line]
-  Densified layer with vertices added at specified intervals.
-
+``Densified`` [vector: polygon, line]
+  Densified layer with vertices added at specified interval.
 
 See also
 ........
-To add a specific number of vertices, look at :ref:`qgisdensifygeometries`.
+:ref:`qgisdensifygeometries`
 
 
 .. _qgisdissolve:
