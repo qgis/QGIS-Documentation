@@ -1972,8 +1972,8 @@ If M values already exist in the layer, they will be overwritten with the new va
 If no M values exist, the geometry will be upgraded to include M values and the
 specified value used as the initial M value for all geometries.
 
-Use the |identify|:sup:`Identify Features` button to check the added M value: the
-results are available in the :guilabel:`Identify Results` dialog.
+.. tip:: Use the |identify|:sup:`Identify Features` button to check the added M value:
+ the results are available in the :guilabel:`Identify Results` dialog.
 
 
 Parameters
@@ -1999,8 +1999,8 @@ If Z values already exist in the layer, they will be overwritten with the new va
 If no Z values exist, the geometry will be upgraded to include Z values and the
 specified value used as the initial Z value for all geometries.
 
-Use the |identify|:sup:`Identify Features` button to check the added Z value: the
-results are available in the :guilabel:`Identify Results` dialog.
+.. tip:: Use the |identify|:sup:`Identify Features` button to check the added Z value:
+ the results are available in the :guilabel:`Identify Results` dialog.
 
 
 Parameters
