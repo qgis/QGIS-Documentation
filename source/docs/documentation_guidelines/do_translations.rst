@@ -7,9 +7,9 @@ Translation Guidelines
 .. contents::
    :local:
 
-This manual is aiming to help the translator.
+This  manual is aiming to help the translator.
 First the general process of how technically a translation is done
-is explained. Later the translation is explained from an actual English
+is explained.  Later the translation is explained from an actual English
 rst document that is translated to Dutch.
 Finally a summary of :ref:`Rules of translation <translation_summary>` is given.
 
