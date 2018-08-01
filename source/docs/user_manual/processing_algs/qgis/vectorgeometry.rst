@@ -759,7 +759,7 @@ Outputs
 .......
 
 ``Densified`` [vector: polygon, line]
-  Densified layer with vertices added at specified interval.
+  Densified layer with vertices added using the specified interval.
 
 See also
 ........
