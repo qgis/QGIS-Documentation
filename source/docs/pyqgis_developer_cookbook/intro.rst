@@ -24,8 +24,8 @@ are covered in the following sections:
 * create and use plugins in Python
 * create custom applications based on the QGIS API
 
-Python bindings are also available for QGIS Server, including:
-Python plugins (see :ref:`Server Python Plugins <server_plugins>`)
+Python bindings are also available for QGIS Server, including
+Python plugins (see :ref:server_plugins)
 and Python bindings that can be used to embed QGIS Server into a
 Python application.
 
@@ -38,7 +38,7 @@ in C++.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from
-`plugin repository <http://plugins.qgis.org/>`_ and examine their
+`plugin repository <https://plugins.qgis.org/>`_ and examine their
 code.
 Also, the ``python/plugins/`` folder in your QGIS installation
 contains some plugins that you can learn from.
