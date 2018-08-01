@@ -32,7 +32,7 @@ PyQGIS Developer Cookbook
    processing
    network_analysis
    server
-   
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
