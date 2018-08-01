@@ -14,8 +14,8 @@ Georeferencer Plugin
    .. contents::
       :local:
 
-The Georeferencer Plugin is a tool for generating world files for rasters. It
-allows you to reference rasters to geographic or projected coordinate systems by
+The |georefRun| Georeferencer Plugin is a tool for generating world files for rasters.
+It allows you to reference rasters to geographic or projected coordinate systems by
 creating a new GeoTiff or by adding a world file to the existing image. The basic
 approach to georeferencing a raster is to locate points on the raster for which
 you can accurately determine coordinates.
@@ -75,9 +75,9 @@ compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
 The first step is to start QGIS, load the Georeferencer Plugin (see
-:ref:`managing_plugins`) and click on :menuselection:`Raster --> Georeferencer`
-, which appears in the QGIS menu bar. The Georeferencer Plugin dialog
-appears as shown in figure_georeferencer_dialog_.
+:ref:`managing_plugins`) and click on :menuselection:`Raster -->` |georefRun|
+:menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
+Plugin dialog appears as shown in figure_georeferencer_dialog_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can
 later be visualized together with the data from the GRASS :file:`spearfish60`
@@ -267,6 +267,8 @@ the new georeferenced raster.
 .. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
    :width: 1.5em
 .. |gdalScript| image:: /static/common/mActionGDALScript.png
+   :width: 1.5em
+.. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
    :width: 2.5em

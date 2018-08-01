@@ -54,8 +54,9 @@ into QGIS before running the Event Browser.
 Launch the Event Browser module
 ...............................
 
-To launch the Event Browser module, click on :menuselection:`Database --> eVis -->
-eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` window.
+To launch the Event Browser module, click on :menuselection:`Database --> eVis -->`
+|eventBrowser| :menuselection:`eVis Event Browser`. This will open the
+:guilabel:`Generic Event Browser` window.
 
 The :guilabel:`Event Browser` window has three tabs displayed at the top
 of the window. The :guilabel:`Display` tab is used to view the photograph and its
@@ -549,6 +550,8 @@ A complete sample XML file with three queries is displayed below:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |eventBrowser| image:: /static/common/event_browser.png
+   :width: 1.5em
 .. |eventId| image:: /static/common/event_id.png
    :width: 1.5em
 .. |evisConnect| image:: /static/common/evis_connect.png
