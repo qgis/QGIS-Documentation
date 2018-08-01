@@ -2194,7 +2194,7 @@ Snap geometries to layer
 Snaps the geometries in a layer either to the geometries from
 another layer, or to geometries within the same layer.
 
-Matching is done based on a tolerance distance and vertices will be inserted or
+Matching is done based on a tolerance distance, and vertices will be inserted or
 removed as required to make the geometries match the reference geometries.
 
 Parameters
