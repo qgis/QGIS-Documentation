@@ -13,15 +13,14 @@ QGIS Server Python Plugins
 .. contents::
    :local:
 
-Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`): by using the
-*server interface* (:class:`QgsServerInterface`) a Python plugin running on the
-server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
+Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`):
 
-With the *server filter interface* (:class:`QgsServerFilter`) we can change the input
-parameters, change the generated output or even by providing new services.
-
-With the *access control interface* (:class:`QgsAccessControlFilter`) we can apply
-some access restriction per requests.
+* by using the *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
+  server can alter the behavior of existing core services (**WMS**, **WFS** etc.);
+* with the *server filter interface* (:class:`QgsServerFilter`) you can change the input
+  parameters, change the generated output or even by providing new services;
+* with the *access control interface* (:class:`QgsAccessControlFilter`) you can apply
+  some access restriction per requests.
 
 
 Server Filter Plugins architecture
@@ -29,7 +28,7 @@ Server Filter Plugins architecture
 
 Server python plugins are loaded once when the FCGI application starts. They
 register one or more :class:`QgsServerFilter` (from this point, you might
-find useful a quick look to the `server plugins API docs <http://qgis.org/api/group__server.html>`_).
+find useful a quick look to the `server plugins API docs <https://qgis.org/api/group__server.html>`_).
 Each filter should implement at least one of three callbacks:
 
 * :func:`requestReady()`
