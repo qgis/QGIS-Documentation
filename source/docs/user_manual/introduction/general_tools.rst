@@ -96,8 +96,18 @@ a toolbar allows you to:
 Configuring map themes
 ......................
 
-Other than quickly control the visibility of all or (de)selected layers,
-the |showMapTheme| :sup:`Manage Map Themes` button allows you to configure 
+The |showMapTheme| :sup:`Manage Map Themes` drop-down button provides access to
+convenient shortcuts to manipulate visibility of the layers in the :guilabel:`Layers`
+panel:
+
+* |showAllLayers| :guilabel:`Show All Layers`;
+* |hideAllLayers| :guilabel:`Hide All Layers`;
+* |showSelectedLayers| :guilabel:`Show Selected Layers`;
+* |hideSelectedLayers| :guilabel:`Hide Selected Layers`;
+* |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`.
+
+Beyond the quick control of layers visibility,
+the |showMapTheme| :sup:`Manage Map Themes` menu allows you to configure 
 **Map Themes** in the legend and switch from one to another.
 A map theme is a **snapshot** of the current map legend that records:
 
@@ -2038,6 +2048,12 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
+   :width: 1.5em
+.. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
+   :width: 1.5em
+.. |history|  image:: /static/common/mActionHistory.png
+   :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
@@ -2100,6 +2116,8 @@ The values presented in the varying size assistant above will set the size
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
