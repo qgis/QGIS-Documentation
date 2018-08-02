@@ -20,7 +20,9 @@ Retrieving information about attributes
 ========================================
 
 You can retrieve information about the fields associated with a vector layer
-by calling :func:`fields` on a :class:`QgsVectorLayer` instance::
+by calling :func:`fields` on a :class:`QgsVectorLayer` instance:
+
+.. code-block:: python
 
     # "layer" is a QgsVectorLayer instance
     for field in layer.fields():
@@ -88,7 +90,9 @@ To select all the features:
  layer.selectAll()
 
 To change the selection color you can use :func:`setSelectionColor()`
-method of :class:`QgsMapCanvas` as shown in the following example::
+method of :class:`QgsMapCanvas` as shown in the following example:
+
+.. code-block:: python
 
     iface.mapCanvas().setSelectionColor( QColor("red") )
 
@@ -108,20 +112,26 @@ can call :func:`select()` passing to it the list of features IDs:
  # Add this features to the selected list
  layer.select(selected_fid)
 
-To clear the selection::
+To clear the selection:
+
+.. code-block:: python
 
  layer.removeSelection()
 
 Accessing attributes
 --------------------
 
-Attributes can be referred to by their name::
+Attributes can be referred to by their name:
+
+.. code-block:: python
 
  print(feature['name'])
 
 Alternatively, attributes can be referred to by index.
 This is will be a bit faster than using the name.
-For example, to get the first attribute::
+For example, to get the first attribute:
+
+.. code-block:: python
 
  print(feature[0])
 
@@ -185,7 +195,7 @@ one like shown in the examples above, you can build an :obj:`QgsExpression`
 object and pass it to the :obj:`QgsFeatureRequest` constructor. 
 Here's an example
 
-::
+.. code-block:: python
 
   # The expression will filter the features where the field "location_name"
   # contains the word "Lake" (case insensitive)
@@ -198,7 +208,7 @@ See :ref:`expressions` for the details about the syntax supported by :class:`Qgs
 The request can be used to define the data retrieved for each feature, so the
 iterator returns all features, but returns partial data for each of them.
 
-::
+.. code-block:: python
 
   # Only return selected fields
   request.setSubsetOfAttributes([0,2])
@@ -227,7 +237,7 @@ Most vector data providers support editing of layer data. Sometimes they support
 just a subset of possible editing actions. Use the :func:`capabilities` function
 to find out what set of functionality is supported
 
-::
+.. code-block:: python
 
   caps = layer.dataProvider().capabilities()
   # Check if a particular capability is supported:
@@ -235,12 +245,13 @@ to find out what set of functionality is supported
       print('The layer supports DeleteFeatures')
 
 For a list of all available capabilities, please refer to the
-`API Documentation of QgsVectorDataProvider <http://qgis.org/api/classQgsVectorDataProvider.html>`_
+`API Documentation of QgsVectorDataProvider
+<https://qgis.org/pyqgis/master/core/Vector/QgsVectorDataProvider.html>`_
 
 To print layer's capabilities textual description in a comma separated list you
 can use :func:`capabilitiesString` as in the following example:
 
-::
+.. code-block:: python
 
   caps_string = layer.dataProvider().capabilitiesString()
   # Print:
@@ -260,8 +271,8 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
  If you are working inside QGIS (either from the console or from a plugin),
  it might be necessary to force a redraw of the map canvas in order to see
  the changes you've done to the geometry, to the style or to the attributes:
-    
- ::
+
+ .. code-block:: python
 
   # If caching is enabled, a simple canvas refresh might not be sufficient
   # to trigger a redraw and you must clear the cached image for the layer
@@ -677,7 +688,7 @@ The renderer for a given layer can be obtained as shown below:
 
 And with that reference, let us explore it a bit
 
-::
+.. code-block:: python
 
   print("Type:", renderer.type())
 
@@ -710,7 +721,7 @@ singleton to find out currently available renderers:
 It is possible to obtain a dump of a renderer contents in text form --- can be
 useful for debugging
 
-::
+.. code-block:: python
 
   print(renderer.dump())
 
@@ -1227,8 +1238,8 @@ function becomes
 
 The icon can be associated also at any later time using :func:`setIcon` method
 of the metadata class. The icon can be loaded from a file (as shown above) or
-can be loaded from a `Qt resource <http://qt.nokia.com/doc/4.5/resources.html>`_
-(PyQt4 includes .qrc compiler for Python).
+can be loaded from a `Qt resource <https://doc.qt.io/qt-5/resources.html>`_
+(PyQt5 includes .qrc compiler for Python).
 
 Further Topics
 ==============
