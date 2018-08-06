@@ -80,7 +80,7 @@ Alternative 1: Picking an issue in the list
    you remind what it's about
 #. Browse the source files to the file that has to be changed
 #. Toggle the file into Edit mode using the pencil icon and do your modifications
-   following :ref:`guidelines <QGIS-documentation-guidelines>`
+   following :ref:`writing guidelines <QGIS-documentation-guidelines>`
 #. Validate your changes by filling the :guilabel:`Commit Changes` frame and
    commit directly to your branch.
 #. Redo the previous steps for any other file that needs to be updated to fix
