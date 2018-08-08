@@ -869,8 +869,8 @@ To load a layer from a database, you can perform the following steps:
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` key while clicking.
-#. If applicable, use the :guilabel:`Set Fillter` button (or double-click the layer)
-   to start the :guilabel:`Query builder` dialog (See section
+#. If applicable, use the :guilabel:`Set Filter` button (or double-click the layer)
+   to start the :guilabel:`Query Builder` dialog (See section
    :ref:`vector_query_builder`) and define which features to load from the
    selected layer. The filter expression appears in the ``sql`` column.
    This restriction can be removed or edited in the :menuselection:`Layer
@@ -889,15 +889,15 @@ To load a layer from a database, you can perform the following steps:
    Add PostGIS Table(s) Dialog
 
 
-.. tip:: **Load database table(s) from the Browser Panel**
+.. tip:: **Use the Browser Panel to speed scan and loading of database table(s)**
 
- Like simple files, connected databases are also listed in the
- :guilabel:`Browser Panel`. Hence, you can load tables from databases using
- the Browser:
-
- #. Find the layer to use with the |filterMap| :sup:`Filter Browser` tool at
-    the top of the browser panel (see :ref:`browser_panel` for the search options).
- #. Select and drag-and-drop it in the map canvas.
+  Adding DB tables from their ad hoc tab of the :guilabel:`Datasource Manager`
+  dialog to the map canvas may sometimes become time consuming as QGIS fetches
+  statistics and properties (e.g. geometry type and field, crs, number of features)
+  of each table beforehand.
+  To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
+  better use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB Manager
+  <dbmanager>` to drag and drop the database tables in the map canvas.
 
 
 QGIS Custom formats
