@@ -43,7 +43,7 @@ Let's get started right away!
   :align: center
 
 * Click on the :guilabel:`Vector` tab and on the **[Browse]** button and
-  navigate to the file :file:`exercise_data/epsg4326/roads.shp` (in your course
+  navigate to the file :file:`exercise_data/shapefile/roads.shp` (in your course
   directory). With this file selected, click :guilabel:`Open`. You will see the
   original dialog, but with the file path filled in. Click  **[Add]** here
   as well. The data you specified will now load.
@@ -74,8 +74,9 @@ GeoPackage is a single file format that can contain different types of data: vec
 and raster files but also tables without spatial information in them (like CSV
 file).
 
-Together with the ESRI shapefiles you can find a GeoPackage in the
-``training_manual_exercise_data.zip`` file.
+Within the `Training data <https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip>`_
+archive you will find the :file:`training_data.gpkg` file. We will now see how
+to load layers from a GeoPackage file.
 
 In order to load a layer from a GeoPackage:
 
