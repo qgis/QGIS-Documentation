@@ -205,6 +205,9 @@ selecting:
 * :menuselection:`Export --> Save As...` for raster layer
 * :menuselection:`Export --> Save Features As...` or :menuselection:`Export -->
   Save Selected Features As...` for vector layer.
+* Drag'n drop layer from the layer tree to the PostGIS entry in the
+  :guilabel:`Browser Panel`. Note that you should have already a PostGIS
+  connection in the :guilabel:`Browser Panel`.
 
 Common parameters
 -----------------
