@@ -180,7 +180,7 @@ Take a look at some example and try to explore the query language.
 -------------------------------------------------------------------------------
 
 DataPlotly plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
-attributes data.
+attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
 * Start a new project and load the :kbd:`sample_point` layer from the :kbd:`training_data`
   Geopackage.
