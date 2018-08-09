@@ -35,6 +35,10 @@ begin by changing the color of the :guilabel:`landuse` layer.
 .. note:: By default, you can also access a layer's properties by
    double-clicking on the layer in the Layers list.
 
+.. tip:: the button |symbology| in the upper part of the Layer Panel will open
+  the Layer Styling Panel. You can use this panel to change the symbology of the
+  layer: changes will be applied immediately!
+
 In the :guilabel:`Properties` window:
 
 * Select the :guilabel:`Symbology` tab:
@@ -56,7 +60,8 @@ A standard color dialog will appear.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-Change the :guilabel:`water` layer to a light blue color.
+Change the :guilabel:`water` layer to a light blue color. Try to use the Layer
+Styling Panel instead of the :guilabel:`Properties` layer menu.
 
 :ref:`Check your results <symbology-colors-1>`
 
@@ -83,7 +88,7 @@ color.
    :align: center
 
 
-* Click on the :guilabel:`Border style` dropdown. At the moment, it should be
+* Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
   showing a short line and the words :guilabel:`Solid Line`.
 * Change this to :guilabel:`No Pen`.
 * Click :guilabel:`OK`.
@@ -100,6 +105,8 @@ Now the :guilabel:`landuse` layer won't have any lines between areas.
   darker blue outline.
 * Change the :guilabel:`rivers` layer's symbology to a sensible representation
   of waterways.
+
+Remember: you can use the |symbology| button and see instantly all the changes.
 
 :ref:`Check your results <symbology-structure-1>`
 
@@ -218,17 +225,16 @@ having many symbol layers in one symbol can cause unexpected results.
 
 * Give the :guilabel:`roads` layer an extra symbol layer (using the method
   for adding symbol layers demonstrated above).
-* Give the base line a :guilabel:`Pen width` of :kbd:`0.3`, a white color
-  and select :guilabel:`Dashed Line` from the :guilabel:`Pen Style` dropdown.
-* Give the new, uppermost layer a thickness of :kbd:`1.3` and ensure that it is
-  a :guilabel:`Solid Line`.
+* Give the base line a :guilabel:`Stroke width` of :kbd:`2` and a black color
+* Give the new, uppermost layer a thickness of :kbd:`1.5` and a white color.
 
 You'll notice that this happens:
 
 .. image:: img/bad_roads_symbology.png
    :align: center
 
-Well that's not what we want at all!
+Well, roads have now a *street* like symbology, but you see that lines are
+overlapping each others at each cross. That's not what we want at all!
 
 To prevent this from happening, you can sort the symbol levels and thereby
 control the order in which the different symbol layers are rendered.
@@ -236,7 +242,12 @@ control the order in which the different symbol layers are rendered.
 To change the order of the symbol layers, select the :guilabel:`Line` layer in
 the :guilabel:`Symbol layers` panel, then click
 :menuselection:`Advanced --> Symbol levels...` in the
-bottom right-hand corner of the window. This will open a dialog like this:
+bottom right-hand corner of the window.
+
+.. image:: img/symbol_levels_main_dialog.png
+   :align: center
+
+This will open a dialog like this:
 
 .. image:: img/symbol_levels_dialog.png
    :align: center
@@ -245,12 +256,12 @@ Select :guilabel:`Enable symbol levels`. You can then set the layer ordering
 of each symbol by entering the corresponding level number. 0 is the bottom
 layer.
 
-In our case, we want to reverse the ordering, like this:
+In our case, we just want to activate the option, like this:
 
 .. image:: img/correct_symbol_layers.png
    :align: center
 
-This will render the dashed, white line above the thick black line.
+This will render the white line above the thick black line borders:
 
 * Click :guilabel:`OK` twice to return to the map.
 
@@ -258,9 +269,6 @@ The map will now look like this:
 
 .. image:: img/better_roads_symbology.png
    :align: center
-
-Also note that the meeting points of roads are now "merged", so that one road is
-not rendered above another.
 
 When you're done, remember to save the symbol itself so as not to lose your
 work if you change the symbol again in the future. You can save your current
@@ -280,9 +288,9 @@ replacing will be lost.
 
 * Change the appearance of the :guilabel:`roads` layer again.
 
-The roads must be narrow and mid-gray, with a thin, pale yellow outline. Remember
-that you may need to change the layer rendering order via the
-:menuselection:`Advanced --> Symbol levels...` dialog.
+The roads must be narrow and yellow, with a thin, pale gray outline and a black
+thin black line in the middle. Remember that you may need to change the layer
+rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 
 .. image:: img/target_road_symbology.png
    :align: center
@@ -317,7 +325,7 @@ rudimentary pre-classified data.
 
 In addition to setting fill colors and using predefined patterns, you can use
 different symbol layer types entirely. The only type we've been using up to now
-was the *Simple Fill* type. The more advanced symbol layer types allow you to
+was the :guilabel:`Simple Fill` type. The more advanced symbol layer types allow you to
 customize your symbols even further.
 
 Each type of vector (point, line and polygon) has its own set of symbol layer
@@ -326,7 +334,7 @@ types. First we will look at the types available for points.
 Point Symbol Layer Types
 ...............................................................................
 
-* Open your :guilabel:`basic_map` project.
+* Uncheck all the layers except for :guilabel:`places`.
 * Change the symbol properties for the :guilabel:`places` layer:
 
 .. image:: img/places_layer_properties.png
@@ -344,8 +352,8 @@ Point Symbol Layer Types
 * Investigate the various options available to you, and choose a symbol with
   styling you think is appropriate.
 * If in doubt, use a round :guilabel:`Simple marker` with a white border and
-  pale green fill, with a :guilabel:`size` of :kbd:`3,00` and an
-  :guilabel:`Outline width` of :kbd:`0.5`.
+  pale green fill, with a :guilabel:`Size` of :kbd:`3.00` and an
+  :guilabel:`Stroke width` of :kbd:`0.5`.
 
 
 Line Symbol Layer Types
@@ -353,7 +361,7 @@ Line Symbol Layer Types
 
 To see the various options available for line data:
 
-* Change the symbol layer type for the :guilabel:`roads` layer's topmost
+* Change the :guilabel:`Symbol layer type` for the :guilabel:`roads` layer's topmost
   symbol layer to :guilabel:`Marker line`:
 
 .. image:: img/change_to_marker_line.png
@@ -368,7 +376,7 @@ To see the various options available for line data:
    :align: center
 
 
-* Change the interval to :kbd:`1,00`:
+* Select the :guilabel:`Marker line` layer and change the interval to :kbd:`1.00`:
 
 
 .. image:: img/marker_line_interval.png
@@ -391,8 +399,8 @@ Polygon Symbol Layer Types
 
 To see the various options available for polygon data:
 
-* Change the symbol layer type for the :guilabel:`water` layer, as before for
-  the other layers.
+* Change the :guilabel:`Symbol layer type` for the :guilabel:`water` layer, as
+  before for the other layers.
 * Investigate what the different options on the list can do.
 * Choose one of them that you find suitable.
 * If in doubt, use the :guilabel:`Point pattern fill` with the following
@@ -415,6 +423,68 @@ To see the various options available for polygon data:
 As a result, you have a textured symbol for the water layer, with the added
 benefit that you can change the size, shape and distance of the individual dots
 that make up the texture.
+
+
+|hard| |FA| Geometry generator symbology
+-------------------------------------------------------------------------------
+
+You can use the Geometry generator symbology with all layer types (points, lines
+and polygons). The resulting symbol depends directly on the layer type.
+
+Very briefly, the Geometry generator symbology allows you to run some spatial
+operations within the symbology itself. For example you can run a real centroid
+spatial operation on a polygon layer without creating a point layer.
+
+Moreover, you have all the styling options to change the appearance of the resulting
+symbol.
+
+Let's give it a try!
+
+* Select the :guilabel:`water` layer.
+* Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer type`
+  to :guilabel:`Geometry generator`.
+
+  .. image:: img/geometry_generator.png
+     :align: center
+
+* Before to start writing the spatial query we have to choose the Geometry Type
+  in output. In this example we are going to create centroids for each feature,
+  so change the Geometry Type to :guilabel:`Point / Multipoint`.
+* Now let's write the query in the query panel::
+
+    centroid($geometry)
+
+  .. image:: img/geometry_generator_query.png
+     :align: center
+
+* When you click on :guilabel:`OK` you will see that the :guilabel:`water` layer
+  is rendered as a point layer! We have just run a spatial operation within the
+  layer symbology itself, isn't that amazing?
+
+  .. image:: img/geometry_generator_result.png
+     :align: center
+
+With the Geometry generator symbology you can really go over the edge of *normal*
+symbology.
+
+
+.. _backlink-symbology-geom_generator:
+
+|hard| |TY|
+...............................................................................
+
+Geometry generator are just another symbol level. Try to add another
+:guilabel:`Simple fill` underneath the :guilabel:`Geometry generator` one.
+
+Change also the appearance of the Simple marker of the Geometry generator symbology.
+
+The final result should look like this:
+
+.. image:: img/geometry_generator_preview.png
+   :align: center
+
+:ref:`Check your results <symbology-geom_generator>`
+
 
 |hard| |FA| Creating a Custom SVG Fill
 -------------------------------------------------------------------------------
@@ -465,7 +535,7 @@ First, we'll change the canvas to a size appropriate for a small texture.
   * Move the pointer horizontally and place a point with a simple click.
   * Click and snap to the vertex of the line and trace a vertical line, ended
     by a simple click.
-  * Now join the two end vertices. 
+  * Now join the two end vertices.
   * Change the color and width of the triangle symbol to match the circle's stroke
     and move it around as necessary, so that you end up with a symbol like this one:
 
@@ -479,9 +549,10 @@ First, we'll change the canvas to a size appropriate for a small texture.
 In QGIS:
 
 * Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
-* In the :guilabel:`Symbology` tab, change the symbol structure by selecting ``SVG Fill``
-  as :guilabel:`Symbol Layer Type` option, as shown below.
-* Click the |browseButton| :guilabel:`Browse` button to select your SVG image.
+* In the :guilabel:`Symbology` tab, change the symbol structure by selecting
+  :guilabel:`SVG Fill` as :guilabel:`Symbol Layer Type` option, as shown below.
+* Click the |browseButton| :guilabel:`Browse` button and then on :guilabel:`Select File...`
+  to select your SVG image.
   It's added to the symbol tree and you can now customize its different
   characteristics (colors, angle, effects, units...).
 
@@ -489,12 +560,7 @@ In QGIS:
 .. image:: img/svg_symbol_settings.png
    :align: center
 
-You may also wish to update the svg layer's border (see below):
-
-.. image:: img/svg_layer_border.png
-   :align: center
-
-Once you validate the dialog, features in :file:`landuse` layer should now
+Once you validate the dialog, features in :guilabel:`landuse` layer should now
 be covered by a set of symbols, showing a texture like the one on the
 following map. If textures are not visible, you may need to zoom in the map
 canvas or set in the layer properties a bigger :guilabel:`Texture width`.
@@ -545,6 +611,8 @@ map.
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
