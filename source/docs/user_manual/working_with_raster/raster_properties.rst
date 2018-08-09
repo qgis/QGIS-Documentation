@@ -244,42 +244,57 @@ Three types of color interpolation are available:
 #. Linear
 #. Exact
 
+You can choose the band on which QGIS will render the layer, then define
+a :guilabel:`Min` and :guilabel:`Max` value.
 
-In the left block, the button |signPlus| :sup:`Add values manually` adds a value
-to the individual color table. The button |signMinus| :sup:`Remove selected row`
-deletes a value from the individual color table, and the
-|arrowDown| :sup:`Sort colormap items` button sorts the color table according
-to the pixel values in the value column. Double clicking on the value column
-lets you insert a specific value. Double clicking on the color column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply on that value.
-Further, you can also add labels for each color, but this value won't be displayed
-when you use the identify feature tool.
-You can also click on the button |draw| :sup:`Load color map from band`,
-which tries to load the table from the band (if it has any). And you can use the
-buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
-:sup:`Export color map to file` to load an existing color table or to save the
-defined color table for other sessions.
-
-
-In the right block, :guilabel:`Generate new color map` allows you to create newly
-categorized color maps. For the :guilabel:`Classification mode` |selectString|
-'Equal interval', you only need to select the :guilabel:`number of classes`
-|selectNumber| and press the button :guilabel:`Classify`. You can invert the colors
-of the color map by clicking the |checkbox| :guilabel:`Invert`
-checkbox. In the case of the :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
-classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
 Defining :guilabel:`Min/Max` values can be done with the help of the :guilabel:`Load min/max values` section.
 A lot of images have a few very low and high data. These outliers can be eliminated
 using the |radioButtonOn| :guilabel:`Cumulative count cut` setting. The standard
 data range is set from 2% to 98% of the data values and can be adapted manually.
+
 With this setting, the gray character of the image can disappear.
-With the scaling option |radioButtonOff| :guilabel:`Min/max`, QGIS creates a color
+With the scaling option |radioButtonOn| :guilabel:`Min/max`, QGIS creates a color
 table with all of the data included in the original image (e.g., QGIS creates a
 color table with 256 values, given the fact that you have 8 bit bands).
-You can also calculate your color table using the |radioButtonOff| :guilabel:`Mean +/-
+You can also calculate your color table using the |radioButtonOn| :guilabel:`Mean +/-
 standard deviation x` |selectNumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
 are considered for the color table.
+
+In the next part, :guilabel:`Interpolation` allows you to choose which
+interpolation mode to use between:
+
+* Discrete (a <= symbol appears in the value column);
+* Linear;
+* Exact (an equal symbol appears in the Value column);
+
+The :guilabel:`Color ramp` drop down list lists the color ramp in your QGIS. You
+can add a new one, edit or save the one you changed. The name of the color ramp
+will be saved in the configuration and in the QML files.
+
+The :guilabel:`Label unit suffix` is a label added after the value in the
+legend.
+
+For the classification :guilabel:`Mode` |selectString| 'Equal interval', you
+only need to select the :guilabel:`number of classes` |selectNumber| and press
+the button :guilabel:`Classify`.
+In the case of the :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
+classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
+
+The button |signPlus| :sup:`Add values manually` adds a value
+to the individual color table. The button |signMinus| :sup:`Remove selected row`
+deletes a value from the individual color table. Double clicking on the value column
+lets you insert a specific value. Double clicking on the color column opens the dialog
+:guilabel:`Change color`, where you can select a color to apply on that value.
+Further, you can also add labels for each color, but this value won't be displayed
+when you use the identify feature tool.
+
+You can use the buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
+:sup:`Export color map to file` to load an existing color table or to save the
+defined color table for other sessions.
+
+The |checkbox| :guilabel:`Clip out of range` allows QGIS to not render pixel greater than
+the :guilabel:`Max` value.
 
 Color rendering
 ---------------
