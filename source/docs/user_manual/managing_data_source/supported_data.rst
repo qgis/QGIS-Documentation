@@ -317,7 +317,7 @@ Support of PostgreSQL data types
 ................................
 
 Most of common data types are supported by the PostgreSQL provider: integer, float,
-varchar, geometry, timestamp and array.
+varchar, geometry, timestamp, array and hstore.
 
 .. index:: shp2pgsql
    single: PostGIS; shp2pgsql
