@@ -2661,6 +2661,11 @@ on **[Create default actions]**. To edit any of the examples, double-click
 its row. One example is performing a search based on an attribute value. This
 concept is used in the following discussion.
 
+The |checkbox| :guilabel:`Show in Attribute Table` enable a settings to add
+some actions within the attribute table. A new button appears to trigger actions
+which are not based on individual features but instead on the whole layer.
+Normally they will perform actions based on all features or the selection.
+
 .. index:: Actions, Attribute Actions
    single: Actions; Define an action
 .. _adding_actions:
