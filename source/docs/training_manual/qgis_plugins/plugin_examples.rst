@@ -84,10 +84,10 @@ QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
 
   .. tip:: if you are not familiar with the ``Key`` and ``Values`` system, click
     on the :guilabel:`Help with key/value` button. It will open a web page with
-    a complete description of this feature of OpenStreetMap
+    a complete description of this concept of OpenStreetMap
 
 * Look for ``railway`` in the ``Key`` menu and let the ``Value`` empty: so we
-  are downloading all the railway features without specifying additional values.
+  are downloading all the railway features without specifying specific values.
 * Choose the :guilabel:`Extent of a layer` by choosing :kbd:`roads`.
 * Click on the :guilabel:`Run query` button.
 
@@ -103,17 +103,23 @@ canvas.
 .. image:: img/quickosm_result.png
    :align: center
 
+.. warning:: QuickOSM creates temporary layer when downloading the data. If you
+  want to save them permanently, right click on the layer in the legend and
+  :guilabel:`Export --> Save Features As...` or open the :kbd:`Advanced` menu
+  in QuickOSM and choose where to save the data in the :guilabel:`Directory`
+  menu.
+
 |hard| |FA| The QuickOSM Query engine
 -------------------------------------------------------------------------------
 
 The quickest way to download data from QuickOSM plugin is using the :guilabel:`Quick query`
-tab and set some small parameter. But if you need some more specific data?
+tab and set some small parameters. But if you need some more specific data?
 
 If you are an OpenStreetMap query master you can use QuickOSM plugin also with
 your personal queries.
 
-QuickOSM has an incredible query engine that, combined with its data parser, lets
-you download data with your specific needs.
+QuickOSM has an incredible data parser that, together with the amazing query engine
+of Overpass, lets you download data with your specific needs.
 
 For example: we want to download the mountain peaks that belongs into a specific
 mountain area known as `Dolomites <https://en.wikipedia.org/wiki/Dolomites>`_.
@@ -155,9 +161,9 @@ be more specific and write your own query. Let's try to do this.
     </osm-script>
 
   .. note:: this query is written in a ``xml`` like language. If you are more
-    used to the ``Overpass QL`` you can write the query in this language
+    used to the ``Overpass QL`` you can write the query in this language.
 
-and click first on :guilabel:`Generate Query` and then on :guilabel:`Run Query`:
+and click on :guilabel:`Run Query`:
 
 .. image:: img/quickosm_advanced_query.png
    :align: center
@@ -167,8 +173,8 @@ The mountain peaks layer will be downloaded and shown in QGIS:
 .. image:: img/quickosm_advanced_result.png
    :align: center
 
-You can write complex queries using the `Overpass Query language <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_
-take a look at some example and try to explore the query language.
+You can write complex queries using the `Overpass Query language <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
+Take a look at some example and try to explore the query language.
 
 |basic| |FA| The DataPlotly Plugin
 -------------------------------------------------------------------------------

@@ -58,7 +58,7 @@ that you currently have installed.
   below the plugin information panel.
 
 .. note:: if the plugin has some error it will be listed in the :guilabel:`Invalid`
-  tab. You can then contact the plugin owner to fix the problem
+  tab. You can then contact the plugin owner to fix the problem.
 
 |basic| |FA| Configuring Additional Plugin Repositories
 -------------------------------------------------------------------------------
