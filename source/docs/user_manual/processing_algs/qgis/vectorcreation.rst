@@ -50,27 +50,27 @@ Parameters
   Extent of the grid.
 
 ``Horizontal spacing`` [number]
-  X-axis spacing between the lines.
+  Size of a grid cell on the X-axis.
 
   Default: *0.000100*
 
 ``Vertical spacing`` [number]
-  Y-axis spacing between the lines.
+  Size of a grid cell on the Y-axis.
 
   Default: *0.000100*
 
 ``Horizontal overlay`` [number]
-  X-axis overlay.
+  Overlay distance between two consecutive grid cells on the X-axis.
 
   Default: *0.0*
 
 ``Vertical overlay`` [number]
-  Y-axis overlay.
+  Overlay distance between two consecutive grid cells on the Y-axis.
 
   Default: *0.0*
 
 ``Grid CRS`` [crs]
-  Coordinate reference system for grid.
+  Coordinate reference system to apply to the grid.
 
   Default: *Project CRS*
 
@@ -78,49 +78,51 @@ Outputs
 .......
 
 ``Grid`` [vector: any]
-  Resulting grid layer.
+  Resulting vector grid layer.
 
 
 .. _qgiscreatepointslayerfromtable:
 
 Create points layer from table
 ------------------------------
-Creates points layer from geometryless table with columns that contain coordinates
+Creates points layer from a table with columns that contain coordinates
 fields.
 
-Besides X and Y coordinates you can also specify Z and M field.
+Besides X and Y coordinates you can also specify Z and M fields.
 
 Parameters
 ..........
 
-``Input layer`` [table]
-  Input table.
+``Input layer`` [vector: any]
+  Input vector layer or geometryless table.
 
 ``X field`` [tablefield: any]
-  Table field containing the X coordinate.
+  Field containing the X coordinate.
 
 ``Y field`` [tablefield: any]
-  Table field containing the Y coordinate.
+  Field containing the Y coordinate.
 
 ``Z field`` [tablefield: any]
   Optional
-  Table field containing the Z coordinate.
+
+  Field containing the Z coordinate.
 
 ``M field`` [tablefield: any]
   Optional
 
-  Table field containing the M coordinate.
+  Field containing the M coordinate.
 
 ``Target CRS`` [crs]
   Coordinate reference system to use for layer.
+  Provided coordinates are assumed to be compliant.
 
   Default: *EPSG:4326*
 
 Outputs
 .......
 
-``Points from table`` [vector: points]
-  The resulting layer.
+``Points from table`` [vector: point]
+  The resulting point layer.
 
 
 .. _qgisgeneratepointspixelcentroidsalongline:
@@ -144,14 +146,13 @@ Parameters
   Raster layer in input.
 
 ``Vector layer`` [vector: line]
-  Line vector layer.
+  Line vector layer to follow.
 
 Outputs
 .......
 
-``Points from polygons`` [vector: points]
+``Points from polygons`` [vector: point]
   Resulting point layer of pixel centroid.
-
 
 
 .. _qgisgeneratepointspixelcentroidsinsidepolygons:
@@ -180,7 +181,7 @@ Parameters
 Outputs
 .......
 
-``Points from polygons`` [vector: points]
+``Points from polygons`` [vector: point]
   Resulting point layer of pixel centroid.
 
 
@@ -235,17 +236,19 @@ Parameters
   point vector layer to be converted.
 
 ``Order field`` [tablefield: any]
-  Table field containing the order of the points.
+  Field containing the order to connect the points in the path.
 
 ``Group field`` [tablefield: any]
   Optional
 
-  Table field containing the group field of the points.
+  Point features of the same value in the field will be grouped in the same line.
+  If not set, a single path is drawn with all the input points.
 
 ``Date format (if order field is DateTime)`` [string]
   Optional
 
-  Choose this option if the points are ordered in a DateTime field.
+  Indicates the format to use for the ``order field`` parameter.
+  Fill this option only if the ``order field`` is of a Date/Time format.
 
   Default: *(not set)*
 
@@ -268,7 +271,7 @@ Creates a new point layer, with points placed in the lines of another layer.
 For each line in the input layer, a given number of points is added to the resulting
 layer.
 
-A minimum distance can be specified to avoid point being too close to each other.
+A minimum distance can be specified, to avoid points being too close to each other.
 
 Parameters
 ..........
@@ -300,7 +303,7 @@ Random points in extent
 Creates a new point layer with a given number of random points, all of them within
 a given extent.
 
-A distance factor can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too close to each other.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
@@ -337,7 +340,7 @@ Random points in layer bounds
 Creates a new point layer with a given number of random points, all of them within
 the extent of a given layer.
 
-A distance factor can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too close to each other.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
@@ -374,7 +377,7 @@ a given layer.
 
 Together with the point number. two different sampling strategies can be chosen.
 
-A distance factor can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too close to each other.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
