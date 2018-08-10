@@ -16,9 +16,9 @@ This document is intended to work both as a tutorial and a reference
 guide.  While it does not list all possible use cases, it should give
 a good overview of the principal functionality.
 
-Starting from 0.9 release, QGIS has optional scripting support using
-Python language. We've decided for Python as it's one of the most
-favourite languages for scripting. PyQGIS bindings depend on SIP and
+Starting from the 0.9 release, QGIS has optional scripting support
+using the Python language. We've decided on Python because it's one of
+the most popular scripting languages. PyQGIS bindings depend on SIP and
 PyQt. The reason for using SIP instead of more widely used SWIG is
 that the whole QGIS code depends on Qt libraries. Python bindings for
 Qt (PyQt) are done also using SIP and this allows seamless integration
