@@ -338,7 +338,8 @@ Icon                                Substitution                            Icon
 |3d|                                ``|3d|``                                |system|                       ``|system|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
-|search|                            ``|search|``
+|search|                            ``|search|``                            |pyramids|                     ``|pyramids|``
+|transparency|                      ``|transparency|``                      |rasterHistogram|              ``|rasterHistogram|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
@@ -895,6 +896,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
+.. |pyramids| image:: /static/common/pyramids.png
+   :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
@@ -906,6 +909,8 @@ Icon                            Substitution                        Icon        
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
 .. |randomSelection| image:: /static/common/random_selection.png
+   :width: 1.5em
+.. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
@@ -1032,6 +1037,8 @@ Icon                            Substitution                        Icon        
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
+   :width: 1.5em
+.. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
