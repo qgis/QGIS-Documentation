@@ -11,15 +11,28 @@ QGIS Configuration
    .. contents::
       :local:
 
-QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
-between Options, Project Properties and Customization.
+QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
+provides different tools to:
 
-.. note:: QGIS follows desktop guidelines for the location of options and project
-   properties item. Consequently related to the OS you are using, location of some
-   of items described below could be in the :menuselection:`Project`
-   or the :menuselection:`Settings` menu.
+* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
+  apply in different areas of the software. These preferences are saved in the
+  active :guilabel:`User profile` settings and applied by default whenever you
+  open a new project with this profile.
+  Also, they can be overridden during each QGIS session by the :ref:`project
+  properties <project_properties>` (accessible under :menuselection:`Project` menu);
 
-..  FIXME: please add more introduction here
+.. Todo: Add a link to user profile description when available
+
+* |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
+  :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
+  not need;
+* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
+  :ref:`keyboard shortcuts <shortcuts>`;
+* |symbology| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
+  color ramps <vector_style_manager>`;
+* |customProjection| :guilabel:`Custom Projections...`: create your own
+  :ref:`coordinate reference systems <sec_custom_projections>`.
+
 
 .. index:: Options, Configuration
 .. _gui_options:
@@ -414,7 +427,7 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   'Yards', 'Miles', 'Nautical Miles', 'Degrees' or 'Map Units' )
 * :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
-  'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
+  'Acres', 'Square nautical miles', 'Square degrees' or 'Map Units')
 * :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc', 'Seconds of arc' or 'Turns/revolutions')
 
@@ -698,8 +711,8 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
-Processing
-----------
+Processing Settings
+-------------------
 
 The |processing| :guilabel:`Processing` tab provides you with general settings
 of tools and data providers that are used in the QGIS Processing framework.
@@ -990,11 +1003,15 @@ and **[Load]** them into another QGIS installation.
    :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
 .. |doubleSpinBox| image:: /static/common/doublespinbox.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
@@ -1026,6 +1043,8 @@ and **[Load]** them into another QGIS installation.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
