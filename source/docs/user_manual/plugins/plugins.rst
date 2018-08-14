@@ -19,6 +19,8 @@ QGIS has been designed with a plugin architecture. This allows many new
 features and functions to be easily added to the application. Some of the
 features in QGIS are actually implemented as plugins.
 
+.. _core_and_external_plugins:
+
 Core and External plugins
 =========================
 
