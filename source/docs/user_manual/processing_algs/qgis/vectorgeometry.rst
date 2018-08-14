@@ -2288,7 +2288,7 @@ Outputs
 Subdivide
 ---------
 Subdivides the geometry. The returned geometry will be a collection containing
-subdivided parts from the original geometry, where no part has more then the
+subdivided parts from the original geometry, where no part has more than the
 specified maximum number of nodes.
 
 This is useful for dividing a complex geometry into less complex parts, easier to
@@ -2297,7 +2297,6 @@ Curved geometries will be segmentized before subdivision.
 
 .. note:: Subdividing a geometry can generate geometry parts that may not be valid
   and may contain self-intersections.
-
 
 .. figure:: img/subdivide.png
    :align: center
@@ -2310,11 +2309,11 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer to subdivide feature geometries.
+  Vector layer that will have its feature geometries subdivided.
 
 ``Maximum nodes in parts`` [number]
   Maximum number of vertices each new geometry part is allowed to have.
-  Less *sub-parts* for higher values.
+  Fewer *sub-parts* for higher values.
 
   Default: *256*
 
@@ -2322,7 +2321,7 @@ Outputs
 .......
 
 ``Subdivided`` [vector: any]
-  Output vector with *sub-parts*.
+  Output vector layer with subdivided geometries.
 
 
 .. _qgisswapxy:
