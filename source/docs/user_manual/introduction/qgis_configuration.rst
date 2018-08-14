@@ -805,8 +805,8 @@ The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
 
 * |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
-  this setting can be used to guess a layer CRS or when using QGIS for
-  non earth uses like rpg maps, building mapping or microscopic stuff.
+  this setting can be used to guess a layer CRS or when using QGIS for non
+  earth uses like role-playing game maps, building mapping or microscopic stuff.
   In this case:
 
   * no reprojection is done while rendering the layers: features are just drawn
@@ -824,7 +824,7 @@ to use in this project. It can be:
 
 The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
 settings by configuring the datum transformation preferences to apply in the
-current project. As usual, these override any corresponding global setting.
+current project. As usual, these override any corresponding global settings.
 See :ref:`datum_transformation` for more details.
 
 Default Styles Properties
