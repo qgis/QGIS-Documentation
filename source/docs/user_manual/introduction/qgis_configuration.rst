@@ -186,44 +186,14 @@ or when a layer without a CRS is loaded.
 
 **Default datum transformations**
 
-In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
-whenever you use layers with different coordinates system, QGIS transparently
-reprojects them while rendering to the project CRS. The :guilabel:`Default datum
-transformations` group allows you to configure/customize the transformation
-settings. You can:
+In this group, you can control whether reprojecting layers to another CRS should be:
 
-.. question: is it the project crs that is used or the first loaded layer's?
+* automatically processed using QGIS default transformations settings;
+* and/or more controlled by you with custom preferences such as:
 
-* |checkbox| :guilabel:`Ask for datum transformation if several are available`:
-  When more than one appropriate datum transformation exists for a
-  source/destination CRS combination, a dialog will automatically be opened
-  prompting users to choose which of these datum transformations to use for
-  the project;
-* also predefine a list of the appropriate default transformations to use
-  when loading layers to projects or reprojecting a layer.
-
-  Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
-  dialog. Then:
-
-  #. indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
-     or the |setProjection| :sup:`Select CRS` widget;
-  #. likewise, provide the :guilabel:`Destination CRS`;
-  #. Depending on the transform grid files (based on GDAL and PROJ version
-     installed on your system), a list of available transformations from source to
-     destination is built in the table. Clicking a row shows details on the settings
-     applied (epsg code, accuracy of the transform, number of stations involved...).
-
-     You can choose to only display current valid transformations by checking
-     the |checkbox| :guilabel:`Hide deprecated` option.
-
-  #. Find your preferred transformation, select it and click **[OK]**;
-  #. A new row is added to the table under :menuselection:`CRS --> Default datum
-     transformations` with information about 'Source CRS' and 'Destination CRS'
-     as well as 'Source datum transform' and 'Destination datum transform'.
-
-  From now, QGIS automatically uses the selected datum transformation for
-  further transformation between these two CRSs until you |signMinus| remove
-  it from the list or |toggleEditing| replace it with another one.
+  * |checkbox| :guilabel:`Ask for datum transformation if several are available`
+  * a predefined list of datum transformations to apply by default.
+    See :ref:`datum_transformation` for more details.
 
 .. note:: For more information on how QGIS handles layers projection, please
   read the dedicated section at :ref:`label_projections`.
@@ -1055,8 +1025,6 @@ and **[Load]** them into another QGIS installation.
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
