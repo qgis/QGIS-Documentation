@@ -8,8 +8,6 @@
 Using Vector Layers
 *******************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -48,21 +46,38 @@ a :class:`QgsVectorLayer` object.
 
  for feature in features:
      # retrieve every feature with its geometry and attributes
-     # fetch geometry
-     geom = feature.geometry()
      print("Feature ID: ", feature.id())
-     # show some information about the feature
-     if geom.wkbType() == QgsWkbTypes.Point:
-         x = geom.asPoint()
-         print("Point:", x)
-     elif geom.wkbType() == QgsWkbTypes.LineString:
-         x = geom.asPolyline()
-         print('Line:', x, 'points', 'length:', geom.length())
-     elif geom.wkbType() == QgsWkbTypes.Polygon:
-         x = geom.asPolygon()
-         print("Polygon:", x, "Area: ", geom.area())
+     # fetch geometry
+     # show some information about the feature geometry
+     geom = feature.geometry()
+
+     geomType = QgsWkbTypes.geometryDisplayString(geom.type())
+     if geomType == 'Point':
+         # the geometry type can be of single or multi type
+         if QgsWkbTypes.isSingleType(geom.wkbType()):
+             x = geom.asPoint()
+             print("Point: ", x)
+         else:
+             x = geom.asMultiPoint()
+             print("MultiPoint: ", x)
+
+     elif geomType == 'Line':
+         if QgsWkbTypes.isSingleType(geom.wkbType()):
+             x = geom.asPolyline()
+             print("Line: ", x, "length: ", geom.length())
+         else:
+             x = geom.asMultiPolyline()
+             print("MultiLine: ", x, "length: ", geom.length())
+
+     elif geomType == 'Polygon':
+         if QgsWkbTypes.isSingleType(geom.wkbType()):
+             x = geom.asPolygon()
+             print("Polygon: ", x, "Area: ", geom.area())
+         else:
+             x = geom.asMultiPolygon()
+             print("MultiPolygon: ", x, "Area: ", geom.area())
      else:
-         print("Unknown")
+         print("Unknown or invalid geometry")
 
      # fetch attributes
      attrs = feature.attributes()
@@ -111,7 +126,7 @@ can call :func:`select()` passing to it the list of features IDs:
      selected_fid.append(feature.id())
      break
 
- # Add this features to the selected list
+ # Add these features to the selected list
  layer.select(selected_fid)
 
 To clear the selection:
@@ -130,7 +145,7 @@ Attributes can be referred to by their name:
  print(feature['name'])
 
 Alternatively, attributes can be referred to by index.
-This is will be a bit faster than using the name.
+This is a bit faster than using the name.
 For example, to get the first attribute:
 
 .. code-block:: python
@@ -151,20 +166,6 @@ method from vector layer:
       # do whatever you need with the feature
 
 
-Another option is the Processing :func:`features` method:
-
-.. code-block:: python
-
-  import processing
-  features = processing.features(layer)
-  for feature in features:
-      # do whatever you need with the feature
-
-By default, this will iterate over all the features in the layer, in case there is no
-selection, or over the selected features otherwise. Note that this behavior can be changed
-in the Processing options to ignore selections.
-
-
 Iterating over a subset of features
 -----------------------------------
 
@@ -181,7 +182,15 @@ to the :func:`getFeatures()` call. Here's an example:
  for feature in layer.getFeatures(request):
      # do whatever you need with the feature
 
-With :func:`setLimit()` you can limit the number of requested features.
+For the sake of speed, the intersection is often done only using feature’s
+bounding box. There is however a flag ``ExactIntersect`` that makes sure that
+only intersecting features will be returned:
+
+.. code-block:: python
+
+  request = QgsFeatureRequest().setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.ExactIntersect)
+  
+With :func:`setLimit()` you can limit the number of requested features. 
 Here's an example:
 
 .. code-block:: python
@@ -227,9 +236,9 @@ iterator returns all features, but returns partial data for each of them.
     request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a subset
     of attributes (possibly empty) like shown in the example above.
 
+.. warning:: |outofdate|
 
 .. index:: Vector layers; Editing
-
 .. _editing:
 
 Modifying Vector Layers
