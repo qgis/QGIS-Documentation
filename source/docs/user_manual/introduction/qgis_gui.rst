@@ -162,7 +162,8 @@ Menu Option                                                           Shortcut  
 |splitParts| :guilabel:`Split Parts`                                  \                     :guilabel:`Advanced Digitizing`     :ref:`split_part`
 |mergeFeatures| :guilabel:`Merge Selected Features`                   \                     :guilabel:`Advanced Digitizing`     :ref:`mergeselectedfeatures`
 |mergeFeatAttributes| :guilabel:`Merge Attr. of Selected Features`    \                     :guilabel:`Advanced Digitizing`     :ref:`mergeattributesfeatures`
-|nodeTool| :guilabel:`Vertex Tool`                                    \                     :guilabel:`Digitizing`              :ref:`vertex_tool`
+|vertexTool| :guilabel:`Vertex Tool (All Layers)`                     \                     :guilabel:`Digitizing`              :ref:`vertex_tool`
+|vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`       \                     :guilabel:`Digitizing`              :ref:`vertex_tool`
 |rotatePointSymbols| :guilabel:`Rotate Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     :ref:`rotate_symbol`
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                 \                     :guilabel:`Advanced Digitizing`     :ref:`offset_symbol`
 ====================================================================  ====================  =================================   ===================================
@@ -810,8 +811,6 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
-.. |nodeTool| image:: /static/common/mActionNodeTool.png
-   :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
@@ -891,6 +890,10 @@ open the Plugin Manager dialog.
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |vertexTool| image:: /static/common/mActionVertexTool.png
+   :width: 1.5em
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
 .. |whatsThis| image:: /static/common/whats_this.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png

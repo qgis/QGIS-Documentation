@@ -148,9 +148,9 @@ Icon                          Substitution                       Icon           
 |toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
 |tracing|                     ``|tracing|``                      |snapping|                     ``|snapping|``
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``                  \                              \
+|captureLine|                 ``|captureLine|``                  |deleteSelected|               ``|deleteSelected|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
-|nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
+|vertexTool|                  ``|vertexTool|``                   |vertexToolActiveLayer|        ``|vertexToolActiveLayer|``
 |moveFeature|                 ``|moveFeature|``                  |moveFeatureCopy|              ``|moveFeatureCopy|``
 |moveFeatureLine|             ``|moveFeatureLine|``              |moveFeatureCopyLine|          ``|moveFeatureCopyLine|``
 |moveFeaturePoint|            ``|moveFeaturePoint|``             |moveFeatureCopyPoint|         ``|moveFeatureCopyPoint|``
@@ -857,8 +857,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
-.. |nodeTool| image:: /static/common/mActionNodeTool.png
-   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |nullSymbol| image:: /static/common/rendererNullSymbol.png
@@ -1054,6 +1052,10 @@ Icon                            Substitution                        Icon        
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em
+.. |vertexTool| image:: /static/common/mActionVertexTool.png
+   :width: 1.5em
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em

@@ -135,7 +135,7 @@ Toolbars --> Digitizing` menu entry.
 As soon as you are in edit mode, you'll see the digitizing tools are now
 active:
 
-  |capturePolygon| |moveFeature| |nodeTool|
+  |capturePolygon| |moveFeature| |vertexToolActiveLayer|
 
 Four other relevant buttons are still inactive, but will become active when we
 start interacting with our new data:
@@ -305,9 +305,9 @@ be useful.
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
-.. |nodeTool| image:: /static/common/mActionNodeTool.png
-   :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |schoolAreaType1| replace:: athletics field
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
