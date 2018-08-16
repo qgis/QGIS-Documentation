@@ -188,8 +188,23 @@ create a:
    Creating a new Temporary Scratch layer dialog
 
 By default, a new temporary scratch layer is created without any attribute. But
-you can also create prepopulated temporary scratch layers using e.g. the clipboard.
-See :ref:`paste_into_layer`.
+you can also create prepopulated temporary scratch layers using e.g. the
+clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing
+algorithm <processing_algs>`.
+
+.. tip:: **Permanently store a memory layer on disk**
+
+  To avoid data loss when closing project with temporary scratch layers, you can
+  save these layers to any vector format supported by QGIS:
+
+  * clicking the |indicatorMemory| indicator icon next to the layer;
+  * selecting the :guilabel:`Make permanent` entry in the layer contextual menu;
+  * or as of any other vector layer, using the :menuselection:`Export -->` entry
+    from the contextual menu or the :menuselection:`Layer --> Save As...` menu.
+
+  Each of these commands prompts the :guilabel:`Save Vector Layer as` dialog
+  exposed in :ref:`general_saveas` section and the saved file replaces the temporary
+  one in the :guilabel:`Layers` panel.
 
 .. index:: Save layer
 .. _general_saveas:
@@ -572,7 +587,6 @@ Spatial binary predicates like ``ST_Intersects`` are significantly sped up when
 used in conjunction with this spatial index syntax.
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -588,6 +602,8 @@ used in conjunction with this spatial index syntax.
 .. |createGPX| image:: /static/common/create_gpx.png
    :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
+   :width: 1.5em
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
