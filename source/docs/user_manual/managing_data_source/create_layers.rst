@@ -387,7 +387,7 @@ added to map canvas if asked.
 
 .. note:: Creating layers from clipboard is possible with features selected and
    copied within QGIS as well as features from another application, as long as
-   they are defined using well-known text (WKT) language.
+   they are defined using well-known text (WKT) string.
 
 
 .. index:: Virtual layers
