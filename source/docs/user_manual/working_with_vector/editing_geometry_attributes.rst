@@ -899,20 +899,20 @@ Fill Ring
 
 The |fillRing| :sup:`Fill Ring` tool helps you create polygon feature that
 totally falls within another one without any overlapping area; that is the new
-feature covers a hole within the existing one. To create such a feature,
-select the tool and:
+feature covers a hole within the existing one. To create such a feature:
 
-* draw a new polygon over the existing feature: QGIS adds a ring to its geometry
-  (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
-  feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
-  over the interior boundaries with the |capturePolygon| :sup:`Add polygon
-  feature` tool);
-* or, if the ring already exists on the feature, place the mouse over the ring
-  and left-click while pressing :kbd:`Shift`: a new feature filling the hole is
-  drawn at that place;
-* the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
-  with values of the "parent" feature and/or :ref:`fields constraints
-  <configure_field>`.
+#. select the |fillRing| :sup:`Fill Ring` tool;
+#. draw a new polygon over the existing feature: QGIS adds a ring to its geometry
+   (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
+   feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
+   over the interior boundaries with the |capturePolygon| :sup:`Add polygon
+   feature` tool);
+#. or alternatively, if the ring already exists on the feature, place the mouse
+   over the ring and left-click while pressing :kbd:`Shift`: a new feature
+   filling the hole is drawn at that place;
+#. the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
+   with values of the "parent" feature and/or :ref:`fields constraints
+   <configure_field>`.
 
 
 .. index::
