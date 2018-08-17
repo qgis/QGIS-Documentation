@@ -2235,15 +2235,15 @@ Outputs
 Snap points to grid
 -------------------
 Modifies the coordinates of geometries in a vector layer, so that all points or
-vertices are snapped to the closest point of the grid.
+vertices are snapped to the closest point of a grid.
 
 If the snapped geometry cannot be calculated (or is totally collapsed) the feature's
 geometry will be cleared.
 
-Note that snapping to grid may generate an invalid geometry in some corner cases.
-
 Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any
 axis will disable snapping for that axis.
+
+.. note:: Snapping to grid may generate an invalid geometry in some corner cases.
 
 Parameters
 ..........
@@ -2252,22 +2252,22 @@ Parameters
   Input vector layer to snap.
 
 ``X Grid Spacing`` [number]
-  X snapping parameter.
+  Spacing of the grid on the X axis.
 
   Default: *1.0*
 
 ``Y Grid Spacing`` [number]
-  Y snapping parameter.
+  Spacing of the grid on the Y axis.
 
   Default: *1.0*
 
 ``Z Grid Spacing`` [number]
-  Z snapping parameter.
+  Spacing of the grid on the Z axis.
 
   Default: *0.0*
 
 ``M Grid Spacing`` [number]
-  M snapping parameter.
+  Spacing of the grid on the M axis.
 
   Default: *0.0*
 
@@ -2283,14 +2283,15 @@ Outputs
 Subdivide
 ---------
 Subdivides the geometry. The returned geometry will be a collection containing
-subdivided parts from the original geometry, where no part has more then the
+subdivided parts from the original geometry, where no part has more than the
 specified maximum number of nodes.
 
 This is useful for dividing a complex geometry into less complex parts, easier to
-spatially index and faster to perform spatial operations. The returned geometry
-parts may not be valid and may contain self-intersections.
-
+spatially index and faster to perform spatial operations.
 Curved geometries will be segmentized before subdivision.
+
+.. note:: Subdividing a geometry can generate geometry parts that may not be valid
+  and may contain self-intersections.
 
 .. figure:: img/subdivide.png
    :align: center
@@ -2303,9 +2304,11 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
+  Vector layer that will have its feature geometries subdivided.
 
 ``Maximum nodes in parts`` [number]
-  Less *sub-parts* for higher values.
+  Maximum number of vertices each new geometry part is allowed to have.
+  Fewer *sub-parts* for higher values.
 
   Default: *256*
 
@@ -2313,7 +2316,7 @@ Outputs
 .......
 
 ``Subdivided`` [vector: any]
-  Output vector with *sub-parts*.
+  Output vector layer with subdivided geometries.
 
 
 .. _qgisswapxy:
