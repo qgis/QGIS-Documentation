@@ -50,27 +50,27 @@ a :class:`QgsVectorLayer` object.
      # fetch geometry
      # show some information about the feature geometry
      geom = feature.geometry()
+     geomSingleType = QgsWkbTypes.isSingleType(geom.wkbType())
 
-     geomType = QgsWkbTypes.geometryDisplayString(geom.type())
-     if geomType == 'Point':
+     if geom.type() == QgsWkbTypes.PointGeometry:
          # the geometry type can be of single or multi type
-         if QgsWkbTypes.isSingleType(geom.wkbType()):
+         if geomSingleType:
              x = geom.asPoint()
              print("Point: ", x)
          else:
              x = geom.asMultiPoint()
              print("MultiPoint: ", x)
 
-     elif geomType == 'Line':
-         if QgsWkbTypes.isSingleType(geom.wkbType()):
+     elif geom.type() == QgsWkbTypes.LineGeometry:
+         if geomSingleType:
              x = geom.asPolyline()
              print("Line: ", x, "length: ", geom.length())
          else:
              x = geom.asMultiPolyline()
              print("MultiLine: ", x, "length: ", geom.length())
 
-     elif geomType == 'Polygon':
-         if QgsWkbTypes.isSingleType(geom.wkbType()):
+     elif geom.type() == QgsWkbTypes.PolygonGeometry:
+         if geomSingleType:
              x = geom.asPolygon()
              print("Polygon: ", x, "Area: ", geom.area())
          else:
