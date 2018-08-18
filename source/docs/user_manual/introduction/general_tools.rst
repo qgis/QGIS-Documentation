@@ -337,7 +337,7 @@ rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency,
+* set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
   and |rasterHistogram| :guilabel:`histogram` properties in case of raster layer.
   These options are the same available in :ref:`raster_properties_dialog`;
 * set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
