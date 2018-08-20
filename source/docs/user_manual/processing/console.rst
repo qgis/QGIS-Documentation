@@ -299,7 +299,7 @@ Boolean, file, string and numerical parameters do not need any additional
 explanations.
 
 Input parameters such as strings, booleans, or numerical values have default values.
-They are used if the corresponding parameter entry is missing.
+The default value is used if the corresponding parameter entry is missing.
 
 For output data objects, type the file path to be used to save it, just as it is
 done from the toolbox. If the output object is not specified, the result is
