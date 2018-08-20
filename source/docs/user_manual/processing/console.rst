@@ -240,7 +240,7 @@ algorithm you want to run, and is exactly the list that the
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
-                  'END_CAP_STYLE': None,
+                  'END_CAP_STYLE': 0,
                   'JOIN_STYLE': 0,
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
@@ -249,8 +249,7 @@ algorithm you want to run, and is exactly the list that the
 If a parameter is optional and you do not want to use it, then don't
 include it in the dictionary.
 
-If a parameter has a default value, that value will be used if you
-use ``None``.
+If a parameter is not specified, the default value will be used.
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
@@ -300,11 +299,12 @@ Boolean, file, string and numerical parameters do not need any additional
 explanations.
 
 Input parameters such as strings, booleans, or numerical values have default values.
-To use them, specify ``None`` in the corresponding parameter entry.
+They are used if the corresponding parameter entry is missing.
 
 For output data objects, type the file path to be used to save it, just as it is
-done from the toolbox. If you want to save the result to a temporary file, use
-``None``. The extension of the file determines the file format. If you enter a
+done from the toolbox. If the output object is not specified, the result is
+saved to a temporary file.
+The extension of the file determines the file format. If you enter a
 file extension not supported by the algorithm, the default
 file format for that output type will be used, and its corresponding extension
 appended to the given file path.
@@ -324,7 +324,7 @@ those outputs as values:
                   'DISTANCE': 100.0,
                   'SEGMENTS': 10,
                   'DISSOLVE': True,
-                  'END_CAP_STYLE': None,
+                  'END_CAP_STYLE': 0,
                   'JOIN_STYLE': 0,
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
