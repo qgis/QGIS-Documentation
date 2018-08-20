@@ -21,15 +21,16 @@ dialog (see figure_raster_properties_).
 
 There are several tabs in the dialog:
 
-* :guilabel:`Information`
-* :guilabel:`Source`
-* :guilabel:`Symbology`
-* :guilabel:`Transparency`
-* :guilabel:`Histogram`
-* :guilabel:`Rendering`
-* :guilabel:`Pyramids`
-* :guilabel:`Legend`
-* :guilabel:`QGIS Server`
+* |metadata| :guilabel:`Information`
+* |system| :guilabel:`Source`
+* |symbology| :guilabel:`Symbology`
+* |transparency| :guilabel:`Transparency`
+* |rasterHistogram| :guilabel:`Histogram`
+* |rendering| :guilabel:`Rendering`
+* |pyramids| :guilabel:`Pyramids`
+* |editMetadata| :guilabel:`Metadata`
+* |legend| :guilabel:`Legend`
+* |overlay| :guilabel:`QGIS Server`
 
 .. _figure_raster_properties:
 
@@ -58,7 +59,7 @@ There are several tabs in the dialog:
 Information Properties
 ======================
 
-The :guilabel:`Information` tab is read-only and represents an interesting
+The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
 Provided information are:
 
@@ -74,7 +75,7 @@ Provided information are:
 Source Properties
 =================
 
-The :guilabel:`Source` tab displays basic information about the selected
+The |system| :guilabel:`Source` tab displays basic information about the selected
 raster, including:
 
 * the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
@@ -244,42 +245,57 @@ Three types of color interpolation are available:
 #. Linear
 #. Exact
 
+You can choose the band on which QGIS will render the layer, then define
+a :guilabel:`Min` and :guilabel:`Max` value.
 
-In the left block, the button |signPlus| :sup:`Add values manually` adds a value
-to the individual color table. The button |signMinus| :sup:`Remove selected row`
-deletes a value from the individual color table, and the
-|arrowDown| :sup:`Sort colormap items` button sorts the color table according
-to the pixel values in the value column. Double clicking on the value column
-lets you insert a specific value. Double clicking on the color column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply on that value.
-Further, you can also add labels for each color, but this value won't be displayed
-when you use the identify feature tool.
-You can also click on the button |draw| :sup:`Load color map from band`,
-which tries to load the table from the band (if it has any). And you can use the
-buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
-:sup:`Export color map to file` to load an existing color table or to save the
-defined color table for other sessions.
-
-
-In the right block, :guilabel:`Generate new color map` allows you to create newly
-categorized color maps. For the :guilabel:`Classification mode` |selectString|
-'Equal interval', you only need to select the :guilabel:`number of classes`
-|selectNumber| and press the button :guilabel:`Classify`. You can invert the colors
-of the color map by clicking the |checkbox| :guilabel:`Invert`
-checkbox. In the case of the :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
-classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
 Defining :guilabel:`Min/Max` values can be done with the help of the :guilabel:`Load min/max values` section.
 A lot of images have a few very low and high data. These outliers can be eliminated
 using the |radioButtonOn| :guilabel:`Cumulative count cut` setting. The standard
 data range is set from 2% to 98% of the data values and can be adapted manually.
+
 With this setting, the gray character of the image can disappear.
-With the scaling option |radioButtonOff| :guilabel:`Min/max`, QGIS creates a color
+With the scaling option |radioButtonOn| :guilabel:`Min/max`, QGIS creates a color
 table with all of the data included in the original image (e.g., QGIS creates a
 color table with 256 values, given the fact that you have 8 bit bands).
-You can also calculate your color table using the |radioButtonOff| :guilabel:`Mean +/-
+You can also calculate your color table using the |radioButtonOn| :guilabel:`Mean +/-
 standard deviation x` |selectNumber|.
 Then, only the values within the standard deviation or within multiple standard deviations
 are considered for the color table.
+
+In the next part, :guilabel:`Interpolation` allows you to choose which
+interpolation mode to use between:
+
+* Discrete (a <= symbol appears in the value column);
+* Linear;
+* Exact (an equal symbol appears in the Value column);
+
+The :guilabel:`Color ramp` drop down list lists the color ramp in your QGIS. You
+can add a new one, edit or save the one you changed. The name of the color ramp
+will be saved in the configuration and in the QML files.
+
+The :guilabel:`Label unit suffix` is a label added after the value in the
+legend.
+
+For the classification :guilabel:`Mode` |selectString| 'Equal interval', you
+only need to select the :guilabel:`number of classes` |selectNumber| and press
+the button :guilabel:`Classify`.
+In the case of the :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
+classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
+
+The button |signPlus| :sup:`Add values manually` adds a value
+to the individual color table. The button |signMinus| :sup:`Remove selected row`
+deletes a value from the individual color table. Double clicking on the value column
+lets you insert a specific value. Double clicking on the color column opens the dialog
+:guilabel:`Change color`, where you can select a color to apply on that value.
+Further, you can also add labels for each color, but this value won't be displayed
+when you use the identify feature tool.
+
+You can use the buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
+:sup:`Export color map to file` to load an existing color table or to save the
+defined color table for other sessions.
+
+The |checkbox| :guilabel:`Clip out of range` allows QGIS to not render pixel greater than
+the :guilabel:`Max` value.
 
 Color rendering
 ---------------
@@ -324,7 +340,7 @@ its legend symbol, and the palette.
 Transparency Properties
 =======================
 
-QGIS has the ability to display each raster layer at a different transparency level.
+|transparency| QGIS has the ability to display each raster layer at a different transparency level.
 Use the transparency slider |slider| to indicate to what extent the underlying layers
 (if any) should be visible through the current raster layer. This is very useful
 if you like to overlay more than one raster layer (e.g., a shaded relief map
@@ -371,8 +387,8 @@ An even more flexible way to customize the transparency can be done in the
 Histogram Properties
 ====================
 
-The :guilabel:`Histogram` tab allows you to view the distribution of the bands
-or colors in your raster. The histogram is generated when you press the
+The |rasterHistogram| :guilabel:`Histogram` tab allows you to view the distribution
+of the bands or colors in your raster. The histogram is generated when you press the
 **[Compute Histogram]** button. All existing bands will be displayed together.
 You can save the histogram as an image with the |fileSave| button.
 
@@ -403,7 +419,7 @@ options to customize the histogram:
 Rendering Properties
 ====================
 
-In the :guilabel:`Rendering` tab, it's possible to:
+In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
 * apply a :guilabel:`Scale dependent visibility` to the layer:
   You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
@@ -482,9 +498,9 @@ Finally, click **[Build pyramids]** to start the process.
 Metadata Properties
 ===================
 
-The :guilabel:`Metadata` tab provides you with options to create and edit
-a metadata report on your layer. See :ref:`vector layer metadata properties
-<vectormetadatamenu>` for more information.
+The |editMetadata| :guilabel:`Metadata` tab provides you with options to create
+and edit a metadata report on your layer. See :ref:`vector layer metadata
+properties <vectormetadatamenu>` for more information.
 
 
 .. index:: Legend, Embedded widget
@@ -493,8 +509,8 @@ a metadata report on your layer. See :ref:`vector layer metadata properties
 Legend Properties
 =================
 
-The :guilabel:`Legend` tab provides you with a list of widgets you can embed
-within the layer tree in the Layers panel. The idea is to have a way to
+The |legend| :guilabel:`Legend` tab provides you with a list of widgets you can
+embed within the layer tree in the Layers panel. The idea is to have a way to
 quickly access some actions that are often used with the layer (setup
 transparency, filtering, selection, style or other stuff...).
 
@@ -509,8 +525,8 @@ they manage.
 QGIS Server Properties
 ======================
 
-The :guilabel:`QGIS Server` tab displays a wealth of information about the raster
-layer, including statistics about each band in the current raster layer.
+The |overlay| :guilabel:`QGIS Server` tab displays a wealth of information about
+the raster layer, including statistics about each band in the current raster layer.
 From this tab, entries may be made for the :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataUrl` and :guilabel:`Properties`.
 In :guilabel:`Properties`, statistics are gathered on a 'need to know'
@@ -541,16 +557,30 @@ collected.
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
+.. |editMetadata| image:: /static/common/editmetadata.png
+   :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
+.. |legend| image:: /static/common/legend.png
+   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |overlay| image:: /static/common/overlay.png
+   :width: 2em
+.. |pyramids| image:: /static/common/pyramids.png
+   :width: 1.5em
+.. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
@@ -562,4 +592,10 @@ collected.
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |system| image:: /static/common/system.png
+   :width: 2em
+.. |transparency| image:: /static/common/transparency.png
+   :width: 2em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

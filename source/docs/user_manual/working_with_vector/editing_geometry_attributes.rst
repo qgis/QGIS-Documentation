@@ -288,8 +288,10 @@ Using the basic digitizing tools, you can perform the following functions:
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |captureLine|                | Add Feature: Capture Line         | |capturePolygon|         | Add Feature: Capture Polygon     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |nodeTool|                   | Vertex tool                       | |multiEdit|              | Modify the attributes of all     |
-|                              |                                   |                          | selected features simultaneously |
+| |vertexTool|                 | Vertex Tool (All Layers)          | |vertexToolActiveLayer|  | Vertex Tool (Current Layer)      |
++------------------------------+-----------------------------------+--------------------------+----------------------------------+
+| |multiEdit|                  | Modify the attributes of all      |                          |                                  |
+|                              | selected features simultaneously  |                          |                                  |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |deleteSelected|             | Delete Selected                   ||editCut|                 | Cut Features                     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
@@ -396,7 +398,8 @@ Vertex tool
     multiple layers at the same time.
 
 For any editable vector layer, the
-|nodeTool| :sup:`Vertex tool` provides manipulation capabilities of
+|vertexToolActiveLayer| :sup:`Vertex tool (Current Layer)` provides manipulation
+capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
 The vertex tool also works with 'on the fly' projection turned on and supports
@@ -423,8 +426,8 @@ Basic operations
 
 .. index:: Nodes, Vertices, Vertex, Geometryless feature
 
-Start by activating the |nodeTool| :sup:`Vertex tool`. Red circles will appear
-when hovering vertices.
+Start by activating the |vertexToolActiveLayer| :sup:`Vertex Tool (Current Layer)`.
+Red circles will appear when hovering vertices.
 
 * **Selecting vertices**: You can select vertices by clicking on them one
   at a time holding :kbd:`Shift` key pressed, or by clicking and dragging a
@@ -899,20 +902,20 @@ Fill Ring
 
 The |fillRing| :sup:`Fill Ring` tool helps you create polygon feature that
 totally falls within another one without any overlapping area; that is the new
-feature covers a hole within the existing one. To create such a feature,
-select the tool and:
+feature covers a hole within the existing one. To create such a feature:
 
-* draw a new polygon over the existing feature: QGIS adds a ring to its geometry
-  (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
-  feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
-  over the interior boundaries with the |capturePolygon| :sup:`Add polygon
-  feature` tool);
-* or, if the ring already exists on the feature, place the mouse over the ring
-  and left-click while pressing :kbd:`Shift`: a new feature filling the hole is
-  drawn at that place;
-* the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
-  with values of the "parent" feature and/or :ref:`fields constraints
-  <configure_field>`.
+#. select the |fillRing| :sup:`Fill Ring` tool;
+#. draw a new polygon over the existing feature: QGIS adds a ring to its geometry
+   (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
+   feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
+   over the interior boundaries with the |capturePolygon| :sup:`Add polygon
+   feature` tool);
+#. or alternatively, if the ring already exists on the feature, place the mouse
+   over the ring and left-click while pressing :kbd:`Shift`: a new feature
+   filling the hole is drawn at that place;
+#. the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
+   with values of the "parent" feature and/or :ref:`fields constraints
+   <configure_field>`.
 
 
 .. index::
@@ -1139,8 +1142,9 @@ property of the symbol, field which will then be populated with the offset
 coordinates while moving the symbol in the map canvas.
 
 .. note:: The |offsetPointSymbols| :sup:`Offset Point Symbols` tool doesn't
-   move the point feature itself; you should use the |nodeTool| :sup:`Vertex tool`
-   or |moveFeature| :sup:`Move Feature` tool for this purpose.
+   move the point feature itself; you should use the |vertexToolActiveLayer|
+   :sup:`Vertex Tool (Current Layer)` or |moveFeature| :sup:`Move Feature`
+   tool for this purpose.
 
 .. warning:: **Ensure to assign the same field to all symbol layers**
 
@@ -1501,8 +1505,6 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
-.. |nodeTool| image:: /static/common/mActionNodeTool.png
-   :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
@@ -1544,3 +1546,7 @@ and angle entered. Repeating the process, several points can be added.
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |vertexTool| image:: /static/common/mActionVertexTool.png
+   :width: 1.5em
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em

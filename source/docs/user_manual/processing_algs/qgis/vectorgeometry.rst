@@ -700,10 +700,10 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Polygon or line vector layer.
+  Polygon or line vector layer to densify.
 
 ``Vertices to add`` [number]
-  Number of vertices to add.
+  Number of vertices to add to each segment.
 
   Default: *1*
 
@@ -713,10 +713,9 @@ Outputs
 ``Densified`` [vector: polygon, line]
   Densified layer with vertices added.
 
-
 See also
 ........
-To add vertices at specific intervals look at :ref:`qgisdensifygeometriesgivenaninterval`.
+:ref:`qgisdensifygeometriesgivenaninterval`.
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -729,8 +728,6 @@ a larger number of vertices than the original one.
 The geometries are densified by adding regularly placed extra vertices inside each
 segment so that the maximum distance between any two vertices does not exceed the
 specified distance.
-
-The distance is expressed in the same units used by the layer CRS.
 
 If the geometries have z or m values present then these will be linearly interpolated
 at the added vertices.
@@ -751,23 +748,22 @@ Parameters
 ..........
 
 ``Input layer`` [vector: polygon, line]
-  Polygon or line vector layer.
+  Polygon or line vector layer to densify.
 
 ``Interval between vertices to add`` [number]
-  Distance between the vertices. Units are taken from the layer CRS.
+  Maximum distance between two consecutive vertices.
 
   Default: *1.0*
 
 Outputs
 .......
 
-``Densified`` [vector: plygon, line]
-  Densified layer with vertices added at specified intervals.
-
+``Densified`` [vector: polygon, line]
+  Densified layer with vertices added using the specified interval.
 
 See also
 ........
-To add a specific number of vertices, look at :ref:`qgisdensifygeometries`.
+:ref:`qgisdensifygeometries`
 
 
 .. _qgisdissolve:
@@ -1972,8 +1968,8 @@ If M values already exist in the layer, they will be overwritten with the new va
 If no M values exist, the geometry will be upgraded to include M values and the
 specified value used as the initial M value for all geometries.
 
-Use the |identify|:sup:`Identify Features` button to check the added M value: the
-results are available in the :guilabel:`Identify Results` dialog.
+.. tip:: Use the |identify|:sup:`Identify Features` button to check the added M value:
+ the results are available in the :guilabel:`Identify Results` dialog.
 
 
 Parameters
@@ -1999,8 +1995,8 @@ If Z values already exist in the layer, they will be overwritten with the new va
 If no Z values exist, the geometry will be upgraded to include Z values and the
 specified value used as the initial Z value for all geometries.
 
-Use the |identify|:sup:`Identify Features` button to check the added Z value: the
-results are available in the :guilabel:`Identify Results` dialog.
+.. tip:: Use the |identify|:sup:`Identify Features` button to check the added Z value:
+ the results are available in the :guilabel:`Identify Results` dialog.
 
 
 Parameters
@@ -2191,13 +2187,11 @@ Outputs
 
 Snap geometries to layer
 ------------------------
-Snaps the geometries in a layer.
-
-Given a tolerance distance, snapping can be done either to the geometries from
+Snaps the geometries in a layer either to the geometries from
 another layer, or to geometries within the same layer.
 
-Vertices will be inserted or removed as required to make the geometries match the
-reference geometries.
+Matching is done based on a tolerance distance, and vertices will be inserted or
+removed as required to make the geometries match the reference geometries.
 
 Parameters
 ..........
@@ -2215,7 +2209,8 @@ Parameters
   Default: *10.0*
 
 ``Behavior`` [enumeration]
-  Snapping can be done on an existing node or a segment (its closest point).
+  Snapping can be done on an existing node or a segment (its closest point
+  to the vertex to move).
   Choose between different snapping options:
 
   * Prefer aligning nodes, insert extra vertices where required
@@ -2240,15 +2235,15 @@ Outputs
 Snap points to grid
 -------------------
 Modifies the coordinates of geometries in a vector layer, so that all points or
-vertices are snapped to the closest point of the grid.
+vertices are snapped to the closest point of a grid.
 
 If the snapped geometry cannot be calculated (or is totally collapsed) the feature's
 geometry will be cleared.
 
-Note that snapping to grid may generate an invalid geometry in some corner cases.
-
 Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any
 axis will disable snapping for that axis.
+
+.. note:: Snapping to grid may generate an invalid geometry in some corner cases.
 
 Parameters
 ..........
@@ -2257,22 +2252,22 @@ Parameters
   Input vector layer to snap.
 
 ``X Grid Spacing`` [number]
-  X snapping parameter.
+  Spacing of the grid on the X axis.
 
   Default: *1.0*
 
 ``Y Grid Spacing`` [number]
-  Y snapping parameter.
+  Spacing of the grid on the Y axis.
 
   Default: *1.0*
 
 ``Z Grid Spacing`` [number]
-  Z snapping parameter.
+  Spacing of the grid on the Z axis.
 
   Default: *0.0*
 
 ``M Grid Spacing`` [number]
-  M snapping parameter.
+  Spacing of the grid on the M axis.
 
   Default: *0.0*
 
@@ -2288,14 +2283,15 @@ Outputs
 Subdivide
 ---------
 Subdivides the geometry. The returned geometry will be a collection containing
-subdivided parts from the original geometry, where no part has more then the
+subdivided parts from the original geometry, where no part has more than the
 specified maximum number of nodes.
 
 This is useful for dividing a complex geometry into less complex parts, easier to
-spatially index and faster to perform spatial operations. The returned geometry
-parts may not be valid and may contain self-intersections.
-
+spatially index and faster to perform spatial operations.
 Curved geometries will be segmentized before subdivision.
+
+.. note:: Subdividing a geometry can generate geometry parts that may not be valid
+  and may contain self-intersections.
 
 .. figure:: img/subdivide.png
    :align: center
@@ -2308,9 +2304,11 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
+  Vector layer that will have its feature geometries subdivided.
 
 ``Maximum nodes in parts`` [number]
-  Less *sub-parts* for higher values.
+  Maximum number of vertices each new geometry part is allowed to have.
+  Fewer *sub-parts* for higher values.
 
   Default: *256*
 
@@ -2318,7 +2316,7 @@ Outputs
 .......
 
 ``Subdivided`` [vector: any]
-  Output vector with *sub-parts*.
+  Output vector layer with subdivided geometries.
 
 
 .. _qgisswapxy:

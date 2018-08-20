@@ -96,8 +96,18 @@ a toolbar allows you to:
 Configuring map themes
 ......................
 
-Other than quickly control the visibility of all or (de)selected layers,
-the |showMapTheme| :sup:`Manage Map Themes` button allows you to configure 
+The |showMapTheme| :sup:`Manage Map Themes` drop-down button provides access to
+convenient shortcuts to manipulate visibility of the layers in the :guilabel:`Layers`
+panel:
+
+* |showAllLayers| :guilabel:`Show All Layers`;
+* |hideAllLayers| :guilabel:`Hide All Layers`;
+* |showSelectedLayers| :guilabel:`Show Selected Layers`;
+* |hideSelectedLayers| :guilabel:`Hide Selected Layers`;
+* |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`.
+
+Beyond the quick control of layers visibility,
+the |showMapTheme| :sup:`Manage Map Themes` menu allows you to configure 
 **Map Themes** in the legend and switch from one to another.
 A map theme is a **snapshot** of the current map legend that records:
 
@@ -327,16 +337,19 @@ rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* set its symbology, transparency, and histogram in case of raster layer. These
-  options are the same available in :ref:`raster_properties_dialog`
-* set its symbology, and labels. These options are the same available in
-  :ref:`vector_properties_dialog`
-* manage the associated style(s) as described in :ref:`manage_custom_style`
-* follow the whole history of changes you applied to the layer style in the
-  current project; you can therefore cancel or restore to any state by selecting
-  it in the list and hit **[Apply]** button.
+* set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
+  and |rasterHistogram| :guilabel:`histogram` properties in case of raster layer.
+  These options are the same available in :ref:`raster_properties_dialog`;
+* set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
+  |labeling| :guilabel:`Labels` properties in case of vector layer.
+  These options are the same available in :ref:`vector_properties_dialog`;
+* manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
+  (more details at :ref:`manage_custom_style`)
+* follow the whole |history| :guilabel:`History` of changes you applied to the
+  layer style in the current project; you can therefore cancel or restore to any
+  state by selecting it in the list and hit **[Apply]** button.
 
-Another powerful feature of this panel is the :guilabel:`Live update` checkbox.
+Another powerful feature of this panel is the |checkbox| :guilabel:`Live update` checkbox.
 Tick it and your changes are automatically rendered in the map canvas as you go on.
 You no longer need to hit the **[Apply]** button.
 
@@ -1966,6 +1979,8 @@ The values presented in the varying size assistant above will set the size
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
@@ -2038,6 +2053,12 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
+.. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
+   :width: 1.5em
+.. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
+   :width: 1.5em
+.. |history|  image:: /static/common/mActionHistory.png
+   :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
@@ -2058,6 +2079,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
@@ -2077,6 +2100,8 @@ The values presented in the varying size assistant above will set the size
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
@@ -2101,9 +2126,13 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
+.. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
@@ -2114,6 +2143,8 @@ The values presented in the varying size assistant above will set the size
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |transformed| image:: /static/common/transformed.png
+   :width: 1.5em
+.. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em

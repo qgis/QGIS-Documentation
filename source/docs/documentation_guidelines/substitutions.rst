@@ -148,9 +148,9 @@ Icon                          Substitution                       Icon           
 |toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
 |tracing|                     ``|tracing|``                      |snapping|                     ``|snapping|``
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``                  \                              \
+|captureLine|                 ``|captureLine|``                  |deleteSelected|               ``|deleteSelected|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
-|nodeTool|                    ``|nodeTool|``                     |deleteSelected|               ``|deleteSelected|``
+|vertexTool|                  ``|vertexTool|``                   |vertexToolActiveLayer|        ``|vertexToolActiveLayer|``
 |moveFeature|                 ``|moveFeature|``                  |moveFeatureCopy|              ``|moveFeatureCopy|``
 |moveFeatureLine|             ``|moveFeatureLine|``              |moveFeatureCopyLine|          ``|moveFeatureCopyLine|``
 |moveFeaturePoint|            ``|moveFeaturePoint|``             |moveFeatureCopyPoint|         ``|moveFeatureCopyPoint|``
@@ -248,6 +248,7 @@ Icon                            Substitution                        Icon        
 |arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
+|interfaceCustomization|        ``|interfaceCustomization|``        |keyboardShortcuts|             ``|keyboardShortcuts|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
 |scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
@@ -283,7 +284,7 @@ Icon                            Substitution                        Icon        
 |geographic|                    ``|geographic|``                    |crs|                           ``|crs|``
 |customProjection|              ``|customProjection|``              |setProjection|                 ``|setProjection|``
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
-|georeferencer|                 ``|georeferencer|``                 |pencil|                        ``|pencil|``
+|georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
 |coordinateCapture|             ``|coordinateCapture|``             |startGeoref|                   ``|startGeoref|``
 ==============================  ==================================  ==============================  ==================================
@@ -338,7 +339,8 @@ Icon                                Substitution                            Icon
 |3d|                                ``|3d|``                                |system|                       ``|system|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
-|search|                            ``|search|``
+|search|                            ``|search|``                            |pyramids|                     ``|pyramids|``
+|transparency|                      ``|transparency|``                      |rasterHistogram|              ``|rasterHistogram|``
 |singleSymbol|                      ``|singleSymbol|``                      |nullSymbol|                   ``|nullSymbol|``
 |graduatedSymbol|                   ``|graduatedSymbol|``                   |categorizedSymbol|            ``|categorizedSymbol|``
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
@@ -392,7 +394,6 @@ Icon                            Substitution                        Icon        
 |installPluginFromZip|          ``|installPluginFromZip|``          |pythonFile|                    ``|pythonFile|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
-|delimitedText|                 ``|delimitedText|``                 \                               \
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
 ==============================  ==================================  ==============================  ==================================
@@ -599,8 +600,6 @@ Icon                            Substitution                        Icon        
    :width: 2em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
-.. |delimitedText| image:: /static/common/delimited_text.png
-   :width: 1.5em
 .. |dependencies| image:: /static/common/dependencies.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
@@ -689,7 +688,7 @@ Icon                            Substitution                        Icon        
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
-.. |georeferencer| image:: /static/common/georeferencer.png
+.. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
 .. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
@@ -752,6 +751,8 @@ Icon                            Substitution                        Icon        
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
+   :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
    :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
@@ -763,6 +764,8 @@ Icon                            Substitution                        Icon        
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
@@ -854,8 +857,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
-.. |nodeTool| image:: /static/common/mActionNodeTool.png
-   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |nullSymbol| image:: /static/common/rendererNullSymbol.png
@@ -898,6 +899,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
+.. |pyramids| image:: /static/common/pyramids.png
+   :width: 1.5em
 .. |pythonFile| image:: /static/common/mIconPythonFile.png
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
@@ -909,6 +912,8 @@ Icon                            Substitution                        Icon        
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
 .. |randomSelection| image:: /static/common/random_selection.png
+   :width: 1.5em
+.. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
@@ -1036,6 +1041,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
+.. |transparency| image:: /static/common/transparency.png
+   :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
@@ -1045,6 +1052,10 @@ Icon                            Substitution                        Icon        
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em
+.. |vertexTool| image:: /static/common/mActionVertexTool.png
+   :width: 1.5em
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em

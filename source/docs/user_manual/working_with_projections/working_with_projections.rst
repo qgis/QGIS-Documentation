@@ -236,23 +236,53 @@ results with the known values in your coordinate reference system.
 Default datum transformations
 =============================
 
-OTF depends on being able to transform data into a 'default CRS', and
-QGIS uses WGS84. For some CRS there are a number of transforms
-available. QGIS allows you to define the transformation used otherwise
-QGIS uses a default transformation.
+In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
+whenever you use layers with different coordinates system, QGIS transparently
+reprojects them while rendering to the project CRS. For some CRS, there are a
+number of transforms available. QGIS allows you to define the transformation to
+use otherwise QGIS uses a default one.
 
-In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
-:guilabel:`Options` you can:
+This customization is done in the :menuselection:`Settings -->` |options|
+:guilabel:`Options --> CRS` tab menu under the :guilabel:`Default datum
+transformations` group:
 
-* set QGIS to ask you when it needs define a transformation using |radioButtonOn|
-  :guilabel:`Ask for datum transformation when no default is defined`
-* edit a list of user defaults for transformations.
+* using |checkbox| :guilabel:`Ask for datum transformation if several are
+  available`: when more than one appropriate datum transformation exists for a
+  source/destination CRS combination, a dialog will automatically be opened
+  prompting users to choose which of these datum transformations to use for
+  the project;
+* or predefining a list of the appropriate default transformations to use
+  when loading layers to projects or reprojecting a layer.
 
-QGIS asks which transformation to use by opening a dialogue box
-displaying PROJ.4 text describing the source and destination
-transforms. Further information may be found by hovering over a
-transform. User defaults can be saved by selecting
-|radioButtonOn| :guilabel:`Remember selection`.
+  Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
+  dialog. Then:
+
+  #. indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
+     or the |setProjection| :sup:`Select CRS` widget;
+  #. likewise, provide the :guilabel:`Destination CRS`;
+  #. Depending on the transform grid files (based on GDAL and PROJ version
+     installed on your system), a list of available transformations from source to
+     destination is built in the table. Clicking a row shows details on the settings
+     applied (epsg code, accuracy of the transform, number of stations involved...).
+
+     You can choose to only display current valid transformations by checking
+     the |checkbox| :guilabel:`Hide deprecated` option.
+
+  #. Find your preferred transformation, select it and click **[OK]**;
+  #. A new row is added to the table under :menuselection:`CRS --> Default datum
+     transformations` with information about 'Source CRS' and 'Destination CRS'
+     as well as 'Source datum transform' and 'Destination datum transform'.
+
+  From now, QGIS automatically uses the selected datum transformation for
+  further transformation between these two CRSs until you |signMinus| remove
+  it from the list or |toggleEditing| replace it with another one.
+
+.. _figure_projection_datum:
+
+.. figure:: img/datumTransformation.png
+   :align: center
+
+   Selecting a preferred default datum transformation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -276,6 +306,10 @@ transform. User defaults can be saved by selecting
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
