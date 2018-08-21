@@ -303,7 +303,7 @@ The default value is used if the corresponding parameter entry is missing.
 
 For output data objects, type the file path to be used to save it, just as it is
 done from the toolbox. If the output object is not specified, the result is
-saved to a temporary file.
+saved to a temporary file (or skipped if it is an optional output).
 The extension of the file determines the file format. If you enter a
 file extension not supported by the algorithm, the default
 file format for that output type will be used, and its corresponding extension
@@ -335,39 +335,6 @@ You can load those layers by passing the corresponding file paths to
 the ``load()`` method.
 Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
 them immediately.
-
-Additional functions for handling data
---------------------------------------
-
-Apart from the functions used to call algorithms, importing the
-``processing`` package will also import some additional functions that make it
-easier to work with data, particularly vector data. They are just convenience
-functions that wrap some functionality from the QGIS API, usually with a less
-complex syntax. These functions should be used when developing new algorithms,
-as they make it easier to operate with input data.
-
-Below is a list (very short for QGIS 3!) of some of these commands.
-More information can be found in the classes under the ``processing/tools``
-package, and also in the example scripts provided with QGIS.
-
-* ``values(layer, fields)``: Returns the values in the attributes table of a
-  vector layer, for the passed fields. Fields can be passed as field names or as
-  zero-based field indices. Returns a dict of lists, with the passed field
-  identifiers as keys. It considers the existing selection.
-
-To get a QGIS object (layer or table) from the output of processing
-algorithms, you can use the ``mapLayerFromString`` function that is
-included in ``QgsProcessingUtils`` or ``getMapLayer`` from
-``QgsProcessingContext``:
-
-::
-
-    >>> outputlayer = QgsProcessingUtils.mapLayerFromString(result['OUTPUT'], context)
-
-    >>> outputlayer = context.getMapLayer(result['OUTPUT'])
-
-Where ``context`` is the processing context (``QgsProcessingContext``).
-
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------
