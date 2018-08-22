@@ -8,37 +8,26 @@
 Introduction
 ************
 
+This document is intended to be both a tutorial and a reference
+guide. While it does not list all possible use cases, it should
+give a good overview of the principal functionality.
+
 .. contents::
    :local:
 
-
-This document is intended to work both as a tutorial and a reference
-guide.  While it does not list all possible use cases, it should give
-a good overview of the principal functionality.
-
-Starting from the 0.9 release, QGIS has optional scripting support
-using the Python language. We've decided on Python because it's one of
-the most popular scripting languages. PyQGIS bindings depend on SIP and
-PyQt. The reason for using SIP instead of more widely used SWIG is
-that the whole QGIS code depends on Qt libraries. Python bindings for
-Qt (PyQt) are done also using SIP and this allows seamless integration
-of PyQGIS with PyQt.
-
-There are several ways to use Python bindings in QGIS desktop,
-they are covered in detail in the following sections:
+Python support was first introduced in QGIS 0.9.
+Today, there are several ways to use Python in QGIS Desktop, they
+are covered in the following sections:
 
 * automatically run Python code when QGIS starts
 * issue commands in Python console within QGIS
 * create and use plugins in Python
 * create custom applications based on the QGIS API
 
-
-Python bindings are also available for QGIS Server:
-
-* Python plugins are also available on QGIS Server
-  (see :ref:`Server Python Plugins <server_plugins>`)
-* The QGIS Server library has Python bindings that can be used to
-  embed QGIS Server into a Python application.
+Python bindings are also available for QGIS Server, including
+Python plugins (see :ref:server_plugins)
+and Python bindings that can be used to embed QGIS Server into a
+Python application.
 
 .. index:: API
 
@@ -47,11 +36,12 @@ documents the classes from the QGIS libraries. The Pythonic QGIS API
 (pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the API
 in C++.
 
-A good resource when dealing with plugins is to download some plugins
-from `plugin repository <http://plugins.qgis.org/>`_ and examine their
-code.  Also, the ``python/plugins/`` folder in your QGIS installation
-contains some plugin that you can use to learn how to develop such
-plugin and how to perform some of the most common tasks.
+A good resource for learning how to perform common tasks is to
+download existing plugins from
+`plugin repository <https://plugins.qgis.org/>`_ and examine their
+code.
+Also, the ``python/plugins/`` folder in your QGIS installation
+contains some plugins that you can learn from.
 
 .. index::
   pair: Python; startup
@@ -77,7 +67,7 @@ mentioning here because it is one of the several ways to run Python
 code within QGIS and because this code will run before QGIS
 initialization is complete. This method is very useful for cleaning
 sys.path, which may have undesireable paths, or for isolating/loading
-the initial environ without requiring a virt env, e.g.  homebrew or
+the initial environ without requiring a virt env, e.g. homebrew or
 MacPorts installs on macOS.
 
 
@@ -106,8 +96,8 @@ Python Console
 ==============
 
 For scripting, it is possible to take advantage of integrated Python
-console.  It can be opened from menu: :menuselection:`Plugins -->
-Python Console`.  The console opens as a non-modal utility window:
+console. It can be opened from menu: :menuselection:`Plugins -->
+Python Console`. The console opens as a non-modal utility window:
 
 .. figure:: img/console.png
    :align: center
@@ -119,7 +109,7 @@ The screenshot above illustrates how to get the layer currently
 selected in the layer list, show its ID and optionally, if it is a
 vector layer, show the feature count.
 For interaction with QGIS environment, there is a :data:`iface`
-variable, which is an instance of :class:`QgsInterface`.  This
+variable, which is an instance of :class:`QgsInterface`. This
 interface allows access to the map canvas, menus, toolbars and other
 parts of the QGIS application.
 
@@ -141,10 +131,10 @@ shortcut for triggering the console (within menu
 Python Plugins
 ==============
 
-QGIS allows enhancement of its functionality using plugins.  This was
-originally possible only using the C++ language.  With the addition of
+QGIS allows enhancement of its functionality using plugins. This was
+originally possible only using the C++ language. With the addition of
 Python support to QGIS, it is now also possible to use plugins written
-in Python.  The main advantage over C++ plugins is its simplicity of
+in Python. The main advantage over C++ plugins is its simplicity of
 distribution (no compiling for each platform needed) and easier
 development.
 
@@ -175,7 +165,7 @@ Python Applications
 
 Often when processing some GIS data, it is handy to create some
 scripts for automating the process instead of doing the same task
-again and again.  With PyQGIS, this is perfectly possible --- import
+again and again. With PyQGIS, this is perfectly possible --- import
 the :mod:`qgis.core` module, initialize it and you are ready for the
 processing.
 
@@ -312,7 +302,7 @@ QGIS installation path:
 
 The path to the PyQGIS modules is now known, however they depend on
 the ``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve
-only as wrappers).  The path to these libraries is typically unknown
+only as wrappers). The path to these libraries is typically unknown
 to the operating system, so you get an import error again (the message
 might vary depending on the system)::
 
@@ -347,6 +337,15 @@ The two deployment models can be mixed - deploy standalone application on
 Windows and macOS, for Linux leave the installation of QGIS up to user
 and his package manager.
 
+Technical notes on PyQt and SIP
+===============================
+
+We've decided for Python as it's one of the most favoured languages for
+scripting. PyQGIS bindings in QGIS 3 depend on SIP and PyQt5.
+The reason for using SIP instead of more widely used SWIG is that the
+QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
+also done using SIP and this allows seamless integration of PyQGIS with
+PyQt.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
