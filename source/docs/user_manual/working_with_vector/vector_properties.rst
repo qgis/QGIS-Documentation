@@ -1062,21 +1062,22 @@ and appropriate capabilities to configure smart labeling on vector layers. This
 dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
 the |labeling| :sup:`Layer Labeling Options` icon of the **Labels toolbar**.
 
+The first step is to choose the labeling method from the drop-down list.
+Available methods are:
+
+* |labelingNone| :guilabel:`No labels`: the default value, showing no labels
+  from the layer
+* |labeling| :ref:`Single labels <showlabels>`, described below
+* |labelingRuleBased| :ref:`Rule-based labeling <rule_based_labeling>`
+* and |labelingObstacle| :guilabel:`Blocking`: allows to set a layer as just an
+  obstacle for other layer's labels without rendering any labels of its own.
+  
 .. _showlabels:
 
 Setting a label
 ---------------
 
-The first step is to choose the labeling method from the drop-down list. There
-are four options available:
-
-* **No labels**
-* **Single labels**, described below
-* :ref:`Rule-based labeling <rule_based_labeling>`
-* and **Blocking**: allows to set a layer as just an obstacle for other layer's
-  labels without rendering any labels of its own.
-
-The next steps assume you select the **Single labels** option,
+The next steps assume you select the |labeling| :guilabel:`Single labels` option,
 enabling following tabs that help you configure the labeling:
 
 * :ref:`Text <labels_text>`
@@ -1087,8 +1088,8 @@ enabling following tabs that help you configure the labeling:
 * :ref:`Placement <labels_placement>`
 * :ref:`Rendering <labels_rendering>`
 
-It also enables the **Label with** drop-down list, from which you can select an
-attribute column to use. Click |expression| if you want to define
+It also enables the :guilabel:`Label with` drop-down list, from which you can
+select an attribute column to use. Click |expression| if you want to define
 labels based on expressions - See :ref:`labeling_with_expressions`.
 
 The following steps describe simple labeling without using the
@@ -1488,7 +1489,7 @@ With rule-based labeling multiple label configurations can be defined
 and applied selectively on the base of expression filters and scale range, as in
 :ref:`Rule-based rendering <rule_based_rendering>`.
 
-To create a rule, select the **Rule-based labeling** option in the main
+To create a rule, select the |labelingRuleBased| **Rule-based labeling** option in the main
 drop-down list from the :guilabel:`Labels` tab and click the |signPlus| button
 at the bottom  of the dialog. Then fill the new dialog with a description and an
 expression to filter features. You can also set a :ref:`scale range
@@ -1750,11 +1751,14 @@ a vector layer (see figure_diagrams_attributes_).
 
 The current core implementation of diagrams provides support for:
 
-* **pie charts**, a circular statistical graphic divided into slices to illustrate
-  numerical proportion. The arc length of each slice is proportional to the
-  quantity it represents,
-* **text diagrams**, a horizontaly divided circle showing statistics values inside
-* and **histograms**.
+* |diagramNone| :guilabel:`No diagrams`: the default value with no diagram
+  displayed over the features;
+* |piechart| :guilabel:`Pie charts`, a circular statistical graphic divided into
+  slices to illustrate numerical proportion. The arc length of each slice is
+  proportional to the quantity it represents;
+* |text| :guilabel:`Text diagrams`, a horizontaly divided circle showing statistics
+  values inside;
+* and |histogram| :guilabel:`Histograms`.
 
 .. tip:: **Switch quickly between types of diagrams**
 
@@ -3198,6 +3202,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |diagramNone| image:: /static/common/diagramNone.png
+   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
@@ -3207,6 +3213,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
+   :width: 1.5em
+.. |histogram|  image:: /static/common/histogram.png
    :width: 1.5em
 .. |iconJoinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
    :width: 1.5em
@@ -3223,6 +3231,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |join| image:: /static/common/join.png
    :width: 2em
 .. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelingNone| image:: /static/common/labelingNone.png
+   :width: 1.5em
+.. |labelingObstacle| image:: /static/common/labelingObstacle.png
+   :width: 1.5em
+.. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.5em
@@ -3245,6 +3259,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
+.. |piechart| image:: /static/common/pie-chart.png
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em
@@ -3282,6 +3298,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png
+   :width: 1.5em
+.. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
