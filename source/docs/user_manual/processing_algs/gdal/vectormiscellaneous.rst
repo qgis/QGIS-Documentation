@@ -21,35 +21,49 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  OGR-supported vector layer.
 
-``SQL`` [string]
-  <put parameter description here>
+``SQL expression`` [string]
+  Defines the SQL query, for example ``SELECT * FROM my_table WHERE name is not null``.
 
   Default: *(not set)*
+
+``SQL dialect`` [enumeration]
+  SQL dialect used.
+
+  Options:
+
+  * 0 --- None
+  * 1 --- OGR SQL
+  * 2 --- SQLite
+
+  Default: *0*
+
+``Additional creation options`` [string]
+  Optional
+
+  <put parameter description here>
 
 Outputs
 .......
 
 ``SQL result`` [vector: any]
-  <put output description here>
-
+  Vector layer created by the query.
 
 .. _importvectorintopostgisdatabaseavailableconnection:
 
-Import Vector into PostGIS database (available connections)
------------------------------------------------------------
-Imports vector layers inside a PostGIS database on the basis of
-an available connection. The connection has to be defined properly
-with the 'Add PostGIS Table(s)' dialog before. Use the 'Edit' button
-to define the connection. Be aware that the checkboxes 'Save Username'
+Export to PostgreSQL (available connections)
+--------------------------------------------
+Imports vector layers inside a PostgreSqL database on the basis of
+an available connection. The connection has to :ref:`be defined properly
+<vector_create_stored_connection>` beforehand. Be aware that the checkboxes 'Save Username'
 and 'Save Password' are activated. Then you can use the algorithm.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
 
-``Database (connection name)`` [enumeration]
+``Database (connection name)`` [string]
   Requires the database (connection) name.
 
   Options:
@@ -59,15 +73,15 @@ Parameters
   Default: *0*
 
 ``Input layer`` [vector: any]
-  Any OGR-supported vector layer loaded into the QGIS map canvas.
+  OGR-supported vector layer to export to the database.
 
-``Encoding`` [string]
+``Shape encoding`` [string]
   Optional
 
   Sets the encoding to apply to the data.
 
 ``Output geometry type`` [enumeration]
-  Defines the output geometry type. By default this is Polygon.
+  Defines the output geometry type.
 
   Options:
 
@@ -82,19 +96,22 @@ Parameters
   * 8 --- MULTIPOLYGON
   * 9 --- MULTILINESTRING
 
-  Default: *5*
+  Default: *0*
 
-``Input CRS (EPSG Code)`` [crs]
-  CRS of the input vector layer.
-
-  Default: *EPSG:4326*
-
-``Output CRS (EPSG Code)`` [crs]
+``Assign an output CRS`` [crs]
   Defines the output CRS of the database table.
 
-  Default: *EPSG:4326*
+``Reproject to this CRS on output`` [crs]
+  Optional
 
-``Schema name`` [string]
+  Reprojects/transforms to this CRS on output.
+
+``Override source CRS`` [crs]
+  Optional
+
+  Overrides the input layer CRS.
+
+``Schema (schema name)`` [string]
   Optional
 
   Defines the schema to which the database table will be assigned to.
@@ -102,30 +119,34 @@ Parameters
 
   Default: *public*
 
-``Table name, leave blank to use input name`` [string]
+``Table to export to (leave blank to use layer name)`` [string]
   Optional
 
   Defines a name for the table that will be imported into the database.
   By default the table name is the name of the input vector file.
 
-``Primary Key`` [string]
+``Primary Key (new field)`` [string]
   Optional
 
   Defines which attribute field will be the primary key of the database table.
-  By default this is 'id'.
 
   Default: *id*
+
+``Primary Key (existing field, used if the above option is left empty)`` [tablefield: any]
+  Optional
+
+  Defines which attribute field in the exported layer will be the primary key of the database table.
 
 ``Geometry column name`` [string]
   Optional
 
   Defines in which attribute field of the database there will be the geometry
-  information. By default it will be taken from the 'geom' column.
+  information.
 
   Default: *geom*
 
 ``Vector dimensions`` [enumeration]
-  Defines if the vector file to be imported has 2-D or 3-D data.
+  Defines if the vector file to be imported has 2D or 3D data.
 
   Options:
 
@@ -149,8 +170,6 @@ Parameters
 ``Select features by extent (defined in input layer CRS)`` [extent]
   You can select features from a given extent that will be in the output table.
 
-  Default: *minimum covering extent*
-
 ``Clip the input layer using the above (rectangle) extent`` [boolean]
   The input layer will be clipped by the extent you defined before.
 
@@ -170,21 +189,23 @@ Parameters
 
   Default: *(not set)*
 
-``Overwrite existing table?`` [boolean]
+``Overwrite existing table`` [boolean]
   If there is a table with the same name in the database, it won't
   be overwritten. By default this takes place.
 
   Default: *True*
 
-``Append to existing table?`` [boolean]
-  <put parameter description here>
+``Append to existing table`` [boolean]
+  If activated the vector data will be appended to an existing table,
+  there won't be created a new table. New fields found in the input layer
+  are ignored. By default a new table will be created.
 
   Default: *False*
 
 ``Append and add new fields to existing table`` [boolean]
   If activated the vector data will be appended to an existing table,
-  there won't be created a new table. By default a new table will be
-  created.
+  there won't be created a new table. New fields found in input layer
+  are added to the table. By default a new table will be created.
 
   Default: *False*
 
@@ -219,17 +240,12 @@ Parameters
 
   <put parameter description here>
 
-  Default: *(not set)*
-
-Outputs
-.......
-
 
 .. _importvectorintopostgisdatabasenewconnection:
 
-Import Vector into PostGIS database (new connection)
-----------------------------------------------------
-Imports vector layers inside a PostGIS database. A new connection
+Export to PostgreSQL (new connection)
+-------------------------------------
+Imports vector layers inside a PostGreSQL database. A new connection
 to the PostGIS database must be created.
 The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
 
@@ -237,10 +253,15 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  <put parameter description here>
+  OGR-supported vector layer to export to the database.
+
+``Shape encoding`` [string]
+  Optional
+
+  Sets the encoding to apply to the data.
 
 ``Output geometry type`` [enumeration]
-  <put parameter description here>
+  Defines the output geometry type.
 
   Options:
 
@@ -255,73 +276,87 @@ Parameters
   * 8 --- MULTIPOLYGON
   * 9 --- MULTILINESTRING
 
-  Default: *5*
+  Default: *0*
 
-``Input CRS (EPSG Code)`` [crs]
-  <put parameter description here>
+``Assign an output CRS`` [crs]
+  Optional
 
-  Default: *EPSG:4326*
+  Defines the output CRS of the database table.
 
-``Output CRS (EPSG Code)`` [crs]
-  <put parameter description here>
+``Reproject to this CRS on output`` [crs]
+  Optional
 
-  Default: *EPSG:4326*
+  Reprojects/transforms to this CRS on output.
+
+``Override source CRS`` [crs]
+  Optional
+
+  Overrides the input layer CRS.
 
 ``Host`` [string]
-  <put parameter description here>
+  Optional
+
+  Name of the database host.
 
   Default: *localhost*
 
 ``Port`` [string]
-  <put parameter description here>
+  Optional
+
+  Port number the PostgreSQL database server listens on.
 
   Default: *5432*
 
 ``Username`` [string]
-  <put parameter description here>
+  Optional
 
-  Default: *(not set)*
+  User name used to log in to the database.
 
 ``Database Name`` [string]
-  <put parameter description here>
+  Optional
 
-  Default: *(not set)*
+  Name of the database.
 
 ``Password`` [string]
-  <put parameter description here>
+  Optional
 
-  Default: *(not set)*
+  Password used with Username to connect to the database.
 
 ``Schema name`` [string]
   Optional
 
-  <put parameter description here>
+  Defines the schema to which the database table will be assigned to.
+  By default, 'public' is chosen.
 
   Default: *public*
 
-``Table name, leave blank to use input name`` [string]
+``Table to export to (leave blank to use layer name)`` [string]
   Optional
 
-  <put parameter description here>
+  Defines a name for the table that will be imported into the database.
+  By default the table name is the name of the input vector file.
 
-  Default: *(not set)*
-
-``Primary Key`` [string]
+``Primary Key (new field)`` [string]
   Optional
 
-  <put parameter description here>
+  Defines which attribute field will be the primary key of the database table.
 
   Default: *id*
+
+``Primary Key (existing field, used if the above option is left empty)`` [tablefield: any]
+  Optional
+
+  Defines which attribute field in the exported layer will be the primary key of the database table.
 
 ``Geometry column name`` [string]
   Optional
 
-  <put parameter description here>
+  Defines in which attribute field to store the geometry information.
 
   Default: *geom*
 
 ``Vector dimensions`` [enumeration]
-  <put parameter description here>
+  Defines if the vector file to be imported has 2D or 3D data.
 
   Options:
 
@@ -333,63 +368,73 @@ Parameters
 ``Distance tolerance for simplification`` [string]
   Optional
 
-  <put parameter description here>
-
-  Default: *(not set)*
+  Defines a distance tolerance for the simplification of the vector geometries
+  to be imported. By default no simplification there is no simplification.
 
 ``Maximum distance between 2 nodes (densification)`` [string]
   Optional
 
-  <put parameter description here>
-
-  Default: *(not set)*
+  The maximum distance between two nodes. Used to create intermediate points.
+  By default there is no maximum distance.
 
 ``Select features by extent (defined in input layer CRS)`` [extent]
-  <put parameter description here>
+  You can select features from a given extent that will be in the output table.
 
-  Default: *0,1,0,1*
+  Default: *minimum covering extent*
 
 ``Clip the input layer using the above (rectangle) extent`` [boolean]
-  <put parameter description here>
+  The input layer will be clipped by the extent you defined before.
 
   Default: *False*
+
+``Fields to include (leave empty to use all fields)`` [list] |34|
+  Optional
+
+  Defines fields to keep from the imported vector file.
+  If none is selected, all the fields are imported.
 
 ``Select features using a SQL "WHERE" statement (Ex: column="value")`` [string]
   Optional
 
-  <put parameter description here>
+  Defines with a SQL "WHERE" statement which features should be selected for the
+  output table.
 
-  Default: *(not set)*
-
-``Group "n" features per transaction (Default: 20000)`` [string]
+``Group N features per transaction (Default: 20000)`` [string]
   Optional
 
-  <put parameter description here>
+  You can group the input features in transactions where N defines the size.
+  By default N limits the transaction size to 20000 features.
 
   Default: *(not set)*
 
-``Overwrite existing table?`` [boolean]
-  <put parameter description here>
+``Overwrite existing table`` [boolean]
+  If there is a table with the same name in the database, it won't
+  be overwritten. By default this takes place.
 
   Default: *True*
 
-``Append to existing table?`` [boolean]
-  <put parameter description here>
+``Append to existing table`` [boolean]
+  If activated the vector data will be appended to an existing table,
+  there won't be created a new table. New fields found in the input layer
+  are ignored. By default a new table will be created.
 
   Default: *False*
 
-``Append and add new fields to existing table?`` [boolean]
-  <put parameter description here>
+``Append and add new fields to existing table`` [boolean]
+  If activated the vector data will be appended to an existing table,
+  there won't be created a new table. New fields found in input layer
+  are added to the table. By default a new table will be created.
 
   Default: *False*
 
-``Do not launder columns/table name/s?`` [boolean]
-  <put parameter description here>
+``Do not launder columns/table names`` [boolean]
+  With this option you can prevent processing from converting column
+  names to lowercase, from removing spaces and other invalid characters.
 
   Default: *False*
 
-``Do not create Spatial Index?`` [boolean]
-  <put parameter description here>
+``Do not create Spatial Index`` [boolean]
+  Prevents that a spatial index in the output table will be created.
 
   Default: *False*
 
@@ -398,15 +443,20 @@ Parameters
 
   Default: *False*
 
+``Promote to Multipart`` [boolean]
+  Casts features geometry type to multipart in the output table.
+
+  Default: *True*
+
+``keep width and precision of input attributes`` [boolean]
+  Avoids to modify fields attributes to comply with input data.
+
+  Default: *True*
+
 ``Additional creation options`` [string]
   Optional
 
   <put parameter description here>
-
-  Default: *(not set)*
-
-Outputs
-.......
 
 
 .. _gdalogrinfo:
@@ -439,4 +489,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
