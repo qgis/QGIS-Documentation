@@ -245,7 +245,11 @@ algorithm you want to run, and is exactly the list that the
                   'MITER_LIMIT': 10,
                   'OUTPUT': '/data/buffers.shp'})
 
-.. warning:: No QGIS 3 updates beyond this point (ToDo)
+
+If a parameter is optional and you do not want to use it, then don't
+include it in the dictionary.
+
+If a parameter is not specified, the default value will be used.
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
@@ -254,27 +258,31 @@ list gives a quick review of how to introduce values for each type of input para
   identifies the data object to use (the name it has in the QGIS Table of
   Contents) or a filename (if the corresponding layer is not opened, it will be
   opened but not added to the map canvas). If you have an instance of a QGIS
-  object representing the layer, you can also pass it as parameter. If the input
-  is optional and you do not want to use any data object, use ``None``.
-* Selection. If an algorithm has a selection parameter, the value of that
+  object representing the layer, you can also pass it as parameter.
+* Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
-  options, you can use the ``algoptions()`` command, as shown in the following
-  example:
+  options, you can use the ``algorithmHelp()`` command, as above.
+  For instance, the "native.buffer" algorithm has an enumeration called JOIN_STYLE:
 
   ::
 
-      >>> processing.algoptions("saga:slopeaspectcurvature")
-      METHOD(Method)
-          0 - [0] Maximum Slope (Travis et al. 1975)
-          1 - [1] Maximum Triangle Slope (Tarboton 1997)
-          2 - [2] Least Squares Fitted Plane (Horn 1981, Costa-Cabral & Burgess 1996)
-          3 - [3] Fit 2.Degree Polynom (Bauer, Rohdenburg, Bork 1985)
-          4 - [4] Fit 2.Degree Polynom (Heerdegen & Beran 1982)
-          5 - [5] Fit 2.Degree Polynom (Zevenbergen & Thorne 1987)
-          6 - [6] Fit 3.Degree Polynom (Haralick 1983)
+     JOIN_STYLE: Join style
 
-  In this case, the algorithm has one such parameter, with seven options.
+	Parameter type:	QgsProcessingParameterEnum
+
+	Available values:
+		- 0: Round
+		- 1: Miter
+		- 2: Bevel
+
+	Accepted data types:
+		- int
+		- str: as string representation of int, e.g. '1'
+		- QgsProperty
+     
+  In this case, the parameter has three options.
   Notice that ordering is zero-based.
+* Boolean.  Use ``True`` or ``False``.
 * Multiple input. The value is a string with input descriptors separated by
   semicolons (``;``). As in the case of single layers or tables, each input
   descriptor can be the data object name, or its file path.
@@ -291,51 +299,42 @@ Boolean, file, string and numerical parameters do not need any additional
 explanations.
 
 Input parameters such as strings, booleans, or numerical values have default values.
-To use them, specify ``None`` in the corresponding parameter entry.
+The default value is used if the corresponding parameter entry is missing.
 
 For output data objects, type the file path to be used to save it, just as it is
-done from the toolbox. If you want to save the result to a temporary file, use
-``None``. The extension of the file determines the file format. If you enter a
+done from the toolbox. If the output object is not specified, the result is
+saved to a temporary file (or skipped if it is an optional output).
+The extension of the file determines the file format. If you enter a
 file extension not supported by the algorithm, the default
 file format for that output type will be used, and its corresponding extension
 appended to the given file path.
 
-Unlike when an algorithm is executed from the toolbox, outputs are not added to
-the map canvas if you execute that same algorithm from the Python console. If you
-want to add an output to the map canvas, you have to do it yourself after running the
-algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
-the handy methods provided for such tasks.
+Unlike when an algorithm is executed from the toolbox, outputs are not
+added to the map canvas if you execute that same algorithm from the
+Python console using ``run()``, but ``runAndLoadResults()`` will do
+that.
 
-The ``runalg`` method returns a dictionary with the output names (the
+The ``run`` method returns a dictionary with one or more output names (the
 ones shown in the algorithm description) as keys and the file paths of
-those outputs as values. You can load those layers by passing the corresponding
-file paths to the ``load()`` method.
+those outputs as values:
 
-Additional functions for handling data
---------------------------------------
+::
 
-Apart from the functions used to call algorithms, importing the
-``processing`` package will also import some additional functions that make it
-easier to work with data, particularly vector data. They are just convenience
-functions that wrap some functionality from the QGIS API, usually with a less
-complex syntax. These functions should be used when developing new algorithms,
-as they make it easier to operate with input data.
+    >>> myresult = processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+    >>> myresult['OUTPUT']
+    /data/buffers.shp
 
-Below is a list of some of these commands. More information can be found in the
-classes under the ``processing/tools`` package, and also in the example scripts
-provided with QGIS.
-
-* ``getObject(obj)``: Returns a QGIS object (a layer or table) from the passed
-  object, which can be a filename or the name of the object in the QGIS Layers List
-* ``values(layer, fields)``: Returns the values in the attributes table of a
-  vector layer, for the passed fields. Fields can be passed as field names or as
-  zero-based field indices. Returns a dict of lists, with the passed field
-  identifiers as keys. It considers the existing selection.
-* ``features(layer)``: Returns an iterator over the features of a vector
-  layer, considering the existing selection.
-* ``uniqueValues(layer, field)``: Returns a list of unique values for a given
-  attribute.  Attributes can be passed as a field name or a zero-based field
-  index. It considers the existing selection.
+You can load those layers by passing the corresponding file paths to
+the ``load()`` method.
+Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
+them immediately.
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------
@@ -343,15 +342,17 @@ Creating scripts and running them from the toolbox
 You can create your own algorithms by writing the corresponding Python code and
 adding a few extra lines to supply additional information needed to define the
 semantics of the algorithm.
-You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
-group in the :guilabel:`Script` algorithms block of the toolbox. Double-click
-on it to open the script editing dialog. That's where you should type your code.
+You can find :guilabel:`Create new script` under :guilabel:`Scripts`
+pulldown menu on the top of the Processing toolbox.  It opens the Processing
+Script Editor, and that's where you should type your code.
 Saving the script from there in the :file:`scripts` folder (the default folder
-when you open the save file dialog) with :file:`.py` extension will
+when you open the save file dialog) with :file:`.py` extension should
 automatically create the corresponding algorithm.
 
 The name of the algorithm (the one you will see in the toolbox) is created from
 the filename, removing its extension and replacing low hyphens with blank spaces.
+
+.. warning:: No QGIS 3 updates beyond this point (ToDo)
 
 Let's have a look at the following code, which calculates the Topographic
 Wetness Index (TWI) directly from a DEM.
