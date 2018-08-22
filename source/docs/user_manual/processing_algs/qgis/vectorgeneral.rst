@@ -627,7 +627,7 @@ Parameters
 Outputs
 .......
 
-``Output directory`` [directory]
+``Output directory`` [folder]
   Directory where all the split layer will be saved.
 
 See also

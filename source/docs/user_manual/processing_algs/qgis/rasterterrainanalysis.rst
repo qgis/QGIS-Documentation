@@ -156,7 +156,7 @@ Parameters
 Outputs
 .......
 
-``Hypsometric curves`` [directory]
+``Hypsometric curves`` [folder]
   Directory where output will be saved. For each feature from input vector layer
   CSV file with area and altitude values will be created.
 

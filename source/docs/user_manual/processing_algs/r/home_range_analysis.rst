@@ -71,7 +71,7 @@ Parameters
 
   Default: *10.0*
 
-``Folder`` [directory]
+``Folder`` [folder]
   Optional
 
   <put parameter description here>

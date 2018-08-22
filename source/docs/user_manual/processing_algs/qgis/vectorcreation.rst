@@ -255,7 +255,7 @@ Outputs
 ``Paths`` [vector: line]
   Line vector layer of the path.
 
-``Directory for text output`` [directory]
+``Directory for text output`` [folder]
   Directory containing description files of points and paths.
 
 
