@@ -13,8 +13,8 @@ Database
 
 .. _qgisimportintopostgis:
 
-Import into PostGIS
--------------------
+Export to PostgreSQL
+--------------------
 
 Imports a vector layer currently loaded in QGIS into a PostGIS database.
 Prior to this a connection between QGIS and the PostGIS database has to
@@ -93,132 +93,10 @@ Parameters
   Default: *False*
 
 
-.. _qgispostgisexecuteandloadsql:
-
-PostgreSQL execute and load SQL |34|
-------------------------------------
-
-Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
-and loads the result. The algorithm **won't** create any new layer: it is designed to
-run queries on the layer itself.
-
-.. _qgis_postgis_execute_sql_example:
-
-Example
-.......
-1. Set all the values of an existing field to a fixed value. The SQL query string
-will be:
-
-.. code-block:: sql
-
-  UPDATE your_table SET field_to_update=20;
-
-in the example above, the values of the field ``field_to_update`` of the table
-``your_table`` will be all set to ``20``.
-
-2. Create a new ``area`` column and calculate the area of each feature with the
-``ST_AREA`` PostGIS function.
-
-Run the first query and create the new column ``area`` on the table ``my_table``:
-
-.. code-block:: sql
-
-  ALTER TABLE my_table ADD COLUMN area double precision;
-
-Run the second query and update the `area` column and calculate the area of each
-feature:
-
-.. code-block:: sql
-
-  UPDATE my_table SET area=ST_AREA(geom);
-
-
-Parameters
-..........
-
-``Database`` [string]
-  Name of the database, not the connection name.
-  By default you don't have to fill in the name, the current database
-  connection will be chosen.
-
-``SQL query`` [string]
-  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
-
-``Unique ID field name`` [tablefield: any]
-  Sets the primary key field from an existing field in the table.
-
-  Default: *id*
-
-``Geometry column`` [string]
-  Optional
-
-  Name of the geometry column in the table.
-
-  Default: *geom*
-
-
-Outputs
-.......
-No new layer is created. The SQL query is executed in place on the layer and
-its result (as a subset of the input table) is automatically loaded in QGIS.
-
-.. _qgispostgisexecutesql:
-
-PostgreSQL execute SQL
-----------------------
-
-Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS.
-The algorithm **won't** create any new layer: it is designed to run queries on
-the layer itself.
-
-Parameters
-..........
-
-``Database`` [string]
-  Name of the database, not the connection name.
-  By default you don't have to fill in the name, the current database
-  connection will be chosen.
-
-``SQL query`` [string]
-  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
-
-Outputs
-.......
-No new layer is created. The SQL query is executed in place on the layer.
-
-See also
-........
-For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
-
-
-.. _qgispackage:
-
-Package layers
---------------
-Collects a number of existing layers and packages them together into a single
-GeoPackage database.
-
-Parameters
-..........
-
-``Input layers`` [vector: any] [list]
-  All the vector layers to import into the GeoPackage database.
-
-``Overwrite existing GeoPackage`` [boolean]
-  Replaces an existing database with a new one.
-
-  Default: *False*
-
-Outputs
-.......
-``Destination GeoPackage``
-  If not specified the GeoPackage database will be saved in the temporary folder.
-
-
 .. _qgisimportintospatialite:
 
-Import into SpatiaLite
-----------------------
+Export to SpatiaLite
+--------------------
 
 Imports a vector layer currently loaded in QGIS into a SpatiaLite database.
 Prior to this a connection between QGIS and the SpatiaLite database has to
@@ -289,6 +167,128 @@ Parameters
   By default the existing geometries information are preserved.
 
   Default: *False*
+
+
+.. _qgispackage:
+
+Package layers
+--------------
+Collects a number of existing layers and packages them together into a single
+GeoPackage database.
+
+Parameters
+..........
+
+``Input layers`` [vector: any] [list]
+  All the vector layers to import into the GeoPackage database.
+
+``Overwrite existing GeoPackage`` [boolean]
+  Replaces an existing database with a new one.
+
+  Default: *False*
+
+Outputs
+.......
+``Destination GeoPackage``
+  If not specified the GeoPackage database will be saved in the temporary folder.
+
+
+.. _qgispostgisexecuteandloadsql:
+
+PostgreSQL execute and load SQL |34|
+------------------------------------
+
+Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
+and loads the result. The algorithm **won't** create any new layer: it is designed to
+run queries on the layer itself.
+
+.. _qgis_postgis_execute_sql_example:
+
+Example
+.......
+1. Set all the values of an existing field to a fixed value. The SQL query string
+will be:
+
+.. code-block:: sql
+
+  UPDATE your_table SET field_to_update=20;
+
+in the example above, the values of the field ``field_to_update`` of the table
+``your_table`` will be all set to ``20``.
+
+2. Create a new ``area`` column and calculate the area of each feature with the
+``ST_AREA`` PostGIS function.
+
+Run the first query and create the new column ``area`` on the table ``my_table``:
+
+.. code-block:: sql
+
+  ALTER TABLE my_table ADD COLUMN area double precision;
+
+Run the second query and update the `area` column and calculate the area of each
+feature:
+
+.. code-block:: sql
+
+  UPDATE my_table SET area=ST_AREA(geom);
+
+
+Parameters
+..........
+
+``Database`` [string]
+  Name of the database, not the connection name.
+  By default you don't have to fill in the name, the current database
+  connection will be chosen.
+
+``SQL query`` [string]
+  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
+
+``Unique ID field name`` [tablefield: any]
+  Sets the primary key field from an existing field in the table.
+
+  Default: *id*
+
+``Geometry column`` [string]
+  Optional
+
+  Name of the geometry column in the table.
+
+  Default: *geom*
+
+Outputs
+.......
+No new layer is created. The SQL query is executed in place on the layer and
+its result (as a subset of the input table) is automatically loaded in QGIS.
+
+
+.. _qgispostgisexecutesql:
+
+PostgreSQL execute SQL
+----------------------
+
+Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS.
+The algorithm **won't** create any new layer: it is designed to run queries on
+the layer itself.
+
+Parameters
+..........
+
+``Database`` [string]
+  Name of the database, not the connection name.
+  By default you don't have to fill in the name, the current database
+  connection will be chosen.
+
+``SQL query`` [string]
+  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
+
+Outputs
+.......
+No new layer is created. The SQL query is executed in place on the layer.
+
+See also
+........
+For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
 
 
 .. _qgisspatialiteexecutesql:
