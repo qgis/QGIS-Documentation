@@ -8,57 +8,52 @@
 Loading Projects
 ****************
 
-.. warning:: |outofdate|
-
 Sometimes you need to load an existing project from a plugin or (more often)
-when developing a stand-alone QGIS Python application (see: :ref:`pythonapplications`).
+when developing a standalone QGIS Python application (see: :ref:`pythonapplications`).
 
 
 .. index::
   pair: Projects; Loading
 
-To load a project into the current QGIS application you need a :class:`QgsProject`
-:func:`instance()` object and call its :func:`read()` method passing to it a
-:class:`QFileInfo` object that contains the path from where the project will
-be loaded::
+To load a project into the current QGIS application you need to create
+a :class:`QgsProject` :func:`instance()` object and call its :func:`read()` method
+passing the path of the project to be loaded::
 
     # If you are not inside a QGIS console you first need to import
-    # qgis and PyQt4 classes you will use in this script as shown below:
+    # qgis and PyQt classes you will use in this script as shown below:
     from qgis.core import QgsProject
-    from qgis.PyQt.QtCore import QFileInfo
     # Get the project instance
     project = QgsProject.instance()
     # Print the current project file name (might be empty in case no projects have been loaded)
     print(project.fileName())
-    u'/home/user/projects/my_qgis_project.qgs'
+    '/home/user/projects/my_qgis_project.qgs'
     # Load another project
-    project.read(QFileInfo('/home/user/projects/my_other_qgis_project.qgs'))
+    project.read('/home/user/projects/my_other_qgis_project.qgs')
     print(project.fileName())
-    u'/home/user/projects/my_other_qgis_project.qgs'
+    '/home/user/projects/my_other_qgis_project.qgs'
 
 
-In case you need to make some modifications to the project (for example
-add or remove some layers) and save your changes, you can call the :func:`write()`
-method of your project instance. The :func:`write()` method also accepts an optional
-:class:`QFileInfo` that allows you to specify a path where the project will be saved::
+If you need to make modifications to the project (for example to add or remove some layers)
+and save your changes, call the :func:`write()` method of your project instance.
+The :func:`write()` method also accepts an optional path for saving the project to a new location::
 
     # Save the project to the same
     project.write()
     # ... or to a new file
-    project.write(QFileInfo('/home/user/projects/my_new_qgis_project.qgs'))
+    project.write('/home/user/projects/my_new_qgis_project.qgs')
 
-Both :func:`read()` and :func:`write()` funtions return a boolean value that you can
+Both :func:`read()` and :func:`write()` functions return a boolean value that you can
 use to check if the operation was successful.
 
 .. note::
 
    If you are writing a QGIS standalone application, in order to synchronise the loaded project with
-   the canvas you need to instanciate a :class:`QgsLayerTreeMapCanvasBridge` as in the example below::
+   the canvas you need to instantiate a :class:`QgsLayerTreeMapCanvasBridge` as in the example below::
 
       bridge = QgsLayerTreeMapCanvasBridge( \
                QgsProject.instance().layerTreeRoot(), canvas)
       # Now you can safely load your project and see it in the canvas
-      project.read(QFileInfo('/home/user/projects/my_other_qgis_project.qgs'))
+      project.read('/home/user/projects/my_other_qgis_project.qgs')
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -67,5 +62,4 @@ use to check if the operation was successful.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
