@@ -203,14 +203,11 @@ Raster Layers
 For accessing raster files, GDAL library is used. It supports a wide range of
 file formats. In case you have troubles with opening some files, check whether
 your GDAL has support for the particular format (not all formats are available
-by default). To load a raster from a file, specify its file name and base name:
+by default). To load a raster from a file, specify its filename and display name:
 
 .. code-block:: python
 
-    fileName = "/path/to/raster/file.tif"
-    fileInfo = QFileInfo(fileName)
-    baseName = fileInfo.baseName()
-    rlayer = QgsRasterLayer(fileName, baseName)
+    rlayer = QgsRasterLayer("/path/to/raster/file.tif", "my layer")
     if not rlayer.isValid():
       print("Layer failed to load!")
 
