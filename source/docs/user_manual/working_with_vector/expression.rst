@@ -232,6 +232,7 @@ is irrelevant and values are identified by their keys.
  array_find             Returns the index (0 for the first one) of a value
                         within an array. Returns -1 if the value is not found.
  array_first            Returns the first value of an array
+ array_foreach |34|     Returns an array with the given expression evaluated on each item
  array_get              Returns the Nth value (0 for the first one) of an array
  array_insert           Returns an array with the given value added at the
                         given position
@@ -246,10 +247,11 @@ is irrelevant and values are identified by their keys.
  array_slice            Returns the values of the array from the start_pos argument up
                         to and including the end_pos argument
  array_to_string        Concatenates array elements into a string separated by
-                        a delimiter using and optional string for empty values.
+                        a delimiter and using optional string for empty values
+ generate_series |34|   Creates an array containing a sequence of numbers
  regexp_matches         Returns an array of all strings captured by capturing
                         groups, in the order the groups themselves appear in
-                        the supplied regular expression against a string.
+                        the supplied regular expression against a string
  string_to_array        Splits string into an array using supplied delimiter
                         and optional string for empty values
 ====================== =======================================================
@@ -502,7 +504,6 @@ This group  contains general assorted functions.
  layer_property        Returns a property of a layer or a value of its
                        metadata. It can be layer name, crs, geometry type,
                        feature count...
- raster_statistic      Returns statistics from a raster layer
  var                   Returns the value stored within a specified
                        variable. See variable functions below
  with_variable         Creates and sets a variable for any expression code
@@ -690,6 +691,10 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | line_locate_point      | Returns the distance along a linestring           |
 |                        | corresponding to the closest position the         |
 |                        | linestring comes to a specified point geometry.   |
++------------------------+---------------------------------------------------+
+| line_substring |34|    | Returns the portion of a line or curve geometry   |
+|                        | falling betweeen specified start and end distances|
+|                        | (measured from the beginning of the line)         |
 +------------------------+---------------------------------------------------+
 | line_merge             | Returns a (Multi-)LineString geometry, where any  |
 |                        | connected LineStrings from the input geometry     |
@@ -1073,6 +1078,22 @@ if one of the inputs is NULL then the result is NULL.
     "description" LIKE 'Hello%'
 
 
+
+.. _raster_functions:
+
+Rasters Functions
+-----------------
+
+This group contains functions to operate on raster layer.
+
+==================== =========================================================
+ Function             Description
+==================== =========================================================
+ raster_statistic     Returns statistics from a raster layer
+ raster_value |34|    Returns the raster band value at the provided point
+==================== =========================================================
+
+
 .. _record_attributes:
 
 Record and Attributes Functions
@@ -1378,6 +1399,7 @@ it can be found whenever you work with expressions.
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
