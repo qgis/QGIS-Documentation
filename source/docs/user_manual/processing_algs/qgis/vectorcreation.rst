@@ -418,6 +418,68 @@ Outputs
   Final random point layer inside polygon.
 
 
+.. _qgispixelstopoints:
+
+Raster pixels to points |34|
+----------------------------
+Creates a vector layer of points corresponding to each pixel in a raster layer.
+
+Converts a raster layer to a vector layer, by creating point features 
+for each individual pixel's center in the raster layer.
+Any nodata pixels are skipped in the output.
+
+Parameters
+..........
+
+``Raster layer`` [raster]
+  Raster layer in input.
+
+``Band number`` [raster band]
+  Raster band to extract data from.
+
+``Field name`` [string]
+  Name of the field to store the raster band value.
+
+  Default: *VALUE*
+
+Outputs
+.......
+
+``Vector points`` [vector: point]
+  Resulting point layer of pixels centroid.
+
+
+.. _qgispixelstopolygons:
+
+Raster pixels to polygons |34|
+------------------------------
+Creates a vector layer of polygons corresponding to each pixel in a raster layer.
+
+Converts a raster layer to a vector layer, by creating polygon features
+for each individual pixel's extent in the raster layer.
+Any nodata pixels are skipped in the output.
+ 
+Parameters
+..........
+
+``Raster layer`` [raster]
+  Raster layer in input.
+
+``Band number`` [raster band]
+  Raster band to extract data from.
+
+``Field name`` [string]
+  Name of the field to store the raster band value.
+
+  Default: *VALUE*
+
+Outputs
+.......
+
+``Vector polygons`` [vector: polygon]
+  Resulting polygon layer of pixels extent.
+
+
 .. _qgisregularpoints:
 
 Regular points
@@ -471,4 +533,5 @@ Outputs
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
