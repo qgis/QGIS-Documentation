@@ -270,6 +270,17 @@ Adding a layer to the registry:
 
     QgsProject.instance().addMapLayer(layer)
 
+To add a layer at an absolute position:
+
+.. code-block:: python
+
+    # first add the layer without showing it
+    QgsProject.instance().addMapLayer(layer, False)
+    # obtain the layer tree of the top-level group in the project
+    layerTree = iface.layerTreeCanvasBridge().rootGroup()
+    # the position is a number starting from 0, with -1 an alias for the end
+    layerTree.insertChildNode(-1, QgsLayerTreeLayer(layer))
+
 If you want to delete the layer use:
 
 .. code-block:: python
