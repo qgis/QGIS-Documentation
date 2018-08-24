@@ -136,33 +136,30 @@ In section :ref:`browser_panel_tm` we saw that the easiest and quickest way to
 load the data in QGIS is the Browser Panel.
 
 GRASS data are recognized from the QGIS Browser as *real* GRASS data and you can
-noticed it because you will see the GRASS icon next to the GRASS Mapset.
+notice it because you will see the GRASS icon next to the GRASS Mapset. Moreover
+you will see the |grassMapsetOpen| icon next to the Mapset that is opened.
 
 .. image:: img/grass_browser.png
    :align: center
 
-.. note:: moreover you will see the |grassMapsetOpen| icon next to the Mapset
-  that is opened
-
-.. warning:: you will see a replication of the GRASS Location as normal folder:
+.. note:: You will see a replication of the GRASS Location as normal folder:
   GRASS ``Mapset`` data are those within the |grass| folder
 
-You can easily **drag and drop** layers from one folder to import them into the
-GRASS Mapset.
+You can easily **drag and drop** layers from a folder to the GRASS Mapset.
 
 Let's try to import the :kbd:`roads.shp` layer into the ``grass_mapset`` Mapset
 of the ``SouthAfrica`` Location.
 
-* Open the :kbd:`shapefiles` folder and simply drag the :kbd:`roads.shp` layer
+* Open the :kbd:`shapefiles` folder and simply drag the :file:`roads.shp` layer
   into the ``grass_mapset`` Mapset.
 
   .. image:: img/grass_browser_import.png
      :align: center
 
-That's it! If you expand the Mapset you will see the imported :kbd:`roads.shp`
+That's it! If you expand the Mapset you will see the imported :file:`roads`
 layer. You can now load in QGIS the imported layer like all the other layers.
 
-.. tip:: you can also load layers from the Layer Legend Panel to Mapset in the
+.. tip:: You can also load layers from the Layer Legend Panel to Mapset in the
   Browser Panel. This will speed up incredibly your workflow!
 
 
@@ -177,7 +174,7 @@ same Mapset.
 * As soon as it is loaded, click on the :guilabel:`Filter` box of the ``GRASS Panel``
   and find the vector import tool by entering the term :kbd:`v.in.ogr.qgis`:
 
-  .. warning:: there are 2 similar tools: :kbd:`v.in.ogr.qgis` and
+  .. warning:: There are 2 similar tools: :kbd:`v.in.ogr.qgis` and
     :kbd:`v.in.ogr.qgis.loc`. We are looking for the **first** one.
 
   .. image:: img/grass_panel_import.png
@@ -195,7 +192,7 @@ already loaded into QGIS.
   .. image:: img/grass_tool_selected.png
      :align: center
 
-.. note::  |hard| Note the extra import options provided under
+.. note:: |hard| Note the extra import options provided under
    :guilabel:`Advanced Options`. These include the ability to add a WHERE
    clause for the SQL query used for importing the data.
 

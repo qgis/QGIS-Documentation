@@ -68,8 +68,8 @@ West = 4).
 Grass reclassify tool accepts a ``txt`` file with the defined rules. Writing the
 rules is very simple and the GRASS Manual contains very good description.
 
-.. tip:: each GRASS tool has its own Manual tab. Take the time to read the
-  description of the tool you are using to don't miss some useful parameter
+.. tip:: Each GRASS tool has its own Manual tab. Take the time to read the
+  description of the tool you are using to don't miss some useful parameters
 
 
 * Load the :kbd:`g_aspect` layer or, if you don't have create it, go back to the
@@ -91,7 +91,7 @@ manage and to process.
 .. image:: img/grass_reclass_result.png
    :align: center
 
-.. tip:: open the :kbd:`reclass_aspect.txt` with a text editor to see the rules
+.. tip:: Open the :kbd:`reclass_aspect.txt` with a text editor to see the rules
   and to start becoming used to them. Moreover, take a deep look at the GRASS
   manual: a lot of different examples are pointed out.
 
@@ -164,7 +164,7 @@ Using these tools:
 
 This shows all the areas where the terrain higher than 1000 meters.
 
-.. tip:: you can also save the formula you have created and load it in another
+.. tip:: You can also save the formula you have created and load it in another
   QGIS project by clicking on the last button on the GRASS Mapcalc toolbar.
 
 |IC|

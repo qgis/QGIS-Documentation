@@ -764,7 +764,7 @@ example. There are many other WMS servers to choose from.
 
 You can add layers (both vector and raster) into a GRASS Mapset by drag and drop
 them in the Browser (see :ref:`grass_browser`) or by using the :kbd:`v.in.gdal.qgis`
-for vector and :kbd:`r.in.gdal.qgis` for raster layers.
+for vector and ``r.in.gdal.qgis`` for raster layers.
 
 :ref:`Back to text <backlink-grass_add_to_mapset>`
 
