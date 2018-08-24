@@ -54,7 +54,7 @@ But there is more.
 
 If the default maps are not enough for you, you can add other map providers.
 Click on :menuselection:`Web --> QuickMapServices --> Settings` and go in the
-:menuselection:`More service` tab. Read carefully the message of this tab and then click
+:guilabel:`More services` tab. Read carefully the message of this tab and then click
 on the :kbd:`Get Contributed pack` button.
 
 If you open now the :menuselection:`Web --> QuickMapServices` menu you will see
@@ -88,7 +88,7 @@ QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
 
 * Look for ``railway`` in the ``Key`` menu and let the ``Value`` empty: so we
   are downloading all the railway features without specifying specific values.
-* Choose the :guilabel:`Extent of a layer` by choosing :kbd:`roads`.
+* Select :guilabel:`Extent of a layer` and choose :kbd:`roads`.
 * Click on the :guilabel:`Run query` button.
 
 .. image:: img/quickosm_setup.png
@@ -127,7 +127,7 @@ mountain area known as `Dolomites <https://en.wikipedia.org/wiki/Dolomites>`_.
 You cannot achieve this task with the :guilabel:`Quick query` tab, you have to
 be more specific and write your own query. Let's try to do this.
 
-* Start an new project.
+* Start a new project.
 * Open the QuickOSM plugin and click on the :guilabel:`Query` tab.
 * Copy and paste the following code into the query canvas::
 
@@ -136,7 +136,7 @@ be more specific and write your own query. Let's try to do this.
     You may want to use the "zoom onto data" button. =>
     -->
     <osm-script output="json">
-    <!-- search the area of the Dolmites -->
+    <!-- search the area of the Dolomites -->
     <query type="area">
       <has-kv k="place" v="region"/>
       <has-kv k="region:type" v="mountain_area"/>
@@ -202,7 +202,9 @@ for the ``X Field`` and :kbd:`mg` for the ``Y Field``:
    :align: center
 
 If you want you can change the colors, the marker type, the transparency and
-many other settings. Once done click on the :guilabel:`Create Plot` button:
+many other settings: just try to change some parameters to create the plot as the
+following picture. Once you set up all the parameters click on the
+:guilabel:`Create Plot` button to create the plot:
 
 .. image:: img/dataplotly_scatterplot.png
    :align: center
