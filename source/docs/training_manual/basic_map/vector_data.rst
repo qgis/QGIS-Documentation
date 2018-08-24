@@ -44,13 +44,14 @@ city blocks.
 
 .. _backlink-vector-load-geopackage-1:
 
-|basic| |FA| Loading Vector Data From Shapefiles
+|basic| |FA| Loading Vector Data From GeoPackage
 -------------------------------------------------------------------------------
 
-The GeoPackage is a specific file format that allows you to store GIS data in an
-associated group of files. Each layer consists of several files with the same
-name, but different file types. GeoPackage layers are easy to send back and forth,
-and most GIS software can read them.
+The `GeoPackage <https://www.geopackage.org/>`_ is a database container that allows
+you to store GIS data (layers) in a single file. A single GeoPackage file can
+contain both vector and raster data also in different coordinate reference systems:
+all these features allow you to easily share data and to avoid file duplication
+in your computer.
 
 Refer back to the introductory exercise in the previous section for
 instructions on how to add vector layers.
@@ -73,9 +74,14 @@ the same method:
 
 Databases allow you to store a large volume of associated data in one file. You
 may already be familiar with a database management system (DBMS) such as
-Libreoffice Base. GIS applications can also make use of databases. GIS-specific
-DBMSes (such as PostGIS) have extra functions, because they need to handle
-spatial data.
+Libreoffice Base or MS Access. GIS applications can also make use of databases.
+GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
+handle spatial data.
+
+Adding a layer from a SpatiaLite database or from a GeoPackage archive is not
+so different: in fact, both are spatial extension of the SQLite library.
+
+Let's add some layer from a SpatiaLite database.
 
 * Click the icon |dataSourceManager| to open the Data Source Manager window
 
@@ -86,11 +92,11 @@ Layers` toolbar is enabled.)
 * In this tab you can see all the connections to existing databases or set up
   new connections.
 * Click the :guilabel:`New` button.
-* In the same :file:`shapefiles` folder, you should find the file
+* In the main folder of the Training Data, you should find the file
   :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
 
 
-Notice that the dropdown select above the three buttons now reads "landuse.sqlite@...",
+Notice that the drop-down above the three buttons now reads "landuse.sqlite@...",
 followed by the path of the database file on your computer.
 
 * Click the :guilabel:`Connect` button. You should see this in the previously
@@ -99,21 +105,16 @@ followed by the path of the database file on your computer.
 .. image:: img/spatiallite_dialog_connected.png
    :align: center
 
-* Click on the :kbd:`landuse` layer to select it, then click
+* Click on the :guilabel:`landuse` layer to select it, then click
   :menuselection:`Add`
 
-Adding a layer from a SpatiaLite database or from a GeoPackage archive is not
-so different: in fact, both are spatial extension of the SQLite library.
-
-.. tip:: once you have set up a connection to a database you can see this connection
+.. tip:: Once you have set up a connection to a database you can see this connection
   and load all the layers contained into it also in the QGIS Browser. We will
   repeat this forever: the QGIS Browser is the quickest and best way to handle
   your data!
 
 .. note::  Remember to save the map often! The map file doesn't contain any of
    the data directly, but it remembers which layers you loaded into your map.
-
-:ref:`Check your results <vector-load-from-database-1>`
 
 
 |FA| Reordering the Layers

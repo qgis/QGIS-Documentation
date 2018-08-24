@@ -60,7 +60,7 @@ Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections
 
 .. _vector-load-geopackage-1:
 
-|basic| *Shapefiles*
+|basic| *GeoPackage*
 ...............................................................................
 
 There should be five layers on your map:
@@ -74,17 +74,6 @@ There should be five layers on your map:
 :ref:`Back to text <backlink-vector-load-geopackage-1>`
 
 
-.. _vector-load-from-database-1:
-
-|basic| *Databases*
-...............................................................................
-
-All the vector layers should be loaded into the map. It probably won't look
-nice yet though (we'll fix the ugly colors later).
-
-:ref:`Back to text <backlink-vector-load-from-database-1>`
-
-
 |RF| *Symbology*
 -------------------------------------------------------------------------------
 
@@ -95,8 +84,8 @@ nice yet though (we'll fix the ugly colors later).
 
 * Verify that the colors are changing as you expect them to change.
 * It is enough to select the :guilabel:`water` layer in the legend and then click
-  on the |symbology| button. Change the color with the one you want and best fits
-  the water layer.
+  on the |symbology|:sup:`Open the Layer Styling panel` button. Change the color
+  with the one you want and best fits the water layer.
 
 .. image:: img/answer_water_blue.png
    :align: center
@@ -198,8 +187,8 @@ slightly thinner solid yellow line and finally another thinner solid black line.
 * Click on the |signPlus| button to add another Symbol level.
 * Move the new symbol at the bottom of the list clicking the |arrowDown| button.
 * Choose a good color to fill the water polygons.
-* Click on Marker of the Geometry generator symbology and change the circle with
-  another shape as your wish.
+* Click on :guilabel:`Marker` of the Geometry generator symbology and change the
+  circle with another shape as your wish.
 * Try experimenting other options to get more useful results.
 
 :ref:`Back to text <backlink-symbology-geom_generator>`

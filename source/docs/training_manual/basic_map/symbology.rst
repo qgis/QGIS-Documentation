@@ -35,7 +35,7 @@ begin by changing the color of the :guilabel:`landuse` layer.
 .. note:: By default, you can also access a layer's properties by
    double-clicking on the layer in the Layers list.
 
-.. tip:: the button |symbology| in the upper part of the Layer Panel will open
+.. tip:: The button |symbology| in the upper part of the Layer Panel will open
   the Layer Styling Panel. You can use this panel to change the symbology of the
   layer: changes will be applied immediately!
 
@@ -225,7 +225,7 @@ having many symbol layers in one symbol can cause unexpected results.
 
 * Give the :guilabel:`roads` layer an extra symbol layer (using the method
   for adding symbol layers demonstrated above).
-* Give the base line a :guilabel:`Stroke width` of :kbd:`2` and a black color
+* Give the base line a :guilabel:`Stroke width` of ``2`` and a black color
 * Give the new, uppermost layer a thickness of :kbd:`1.5` and a white color.
 
 You'll notice that this happens:
