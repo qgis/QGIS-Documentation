@@ -93,14 +93,14 @@ Parameters
   Default: *False*
 
 
-.. _qgispostgisexecutesql:
+.. _qgispostgisexecuteandloadsql:
 
-PostGIS execute SQL
--------------------
+PostgreSQL execute and load SQL |34|
+------------------------------------
 
-Allows a SQL database query to be performed on a PostGIS database connected to QGIS.
-The algorithm **won't** create any new layer: it is designed to run queries on
-the layer itself.
+Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
+and loads the result. The algorithm **won't** create any new layer: it is designed to
+run queries on the layer itself.
 
 .. _qgis_postgis_execute_sql_example:
 
@@ -144,12 +144,51 @@ Parameters
 ``SQL query`` [string]
   Defines the SQL query, for example ``UPDATE my_table SET field=10``.
 
+``Unique ID field name`` [tablefield: any]
+  Sets the primary key field from an existing field in the table.
+
+  Default: *id*
+
+``Geometry column`` [string]
+  Optional
+
+  Name of the geometry column in the table.
+
+  Default: *geom*
+
 
 Outputs
 .......
-No new outputs will be created. The layer chosen will be updated with the executed
-SQL query. By opening the table (for example with Data Manager) you will see
-the results.
+No new layer is created. The SQL query is executed in place on the layer and
+its result (as a subset of the input table) is automatically loaded in QGIS.
+
+.. _qgispostgisexecutesql:
+
+PostgreSQL execute SQL
+----------------------
+
+Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS.
+The algorithm **won't** create any new layer: it is designed to run queries on
+the layer itself.
+
+Parameters
+..........
+
+``Database`` [string]
+  Name of the database, not the connection name.
+  By default you don't have to fill in the name, the current database
+  connection will be chosen.
+
+``SQL query`` [string]
+  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
+
+Outputs
+.......
+No new layer is created. The SQL query is executed in place on the layer.
+
+See also
+........
+For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
 
 
 .. _qgispackage:
@@ -278,9 +317,7 @@ Parameters
 
 Outputs
 .......
-No new outputs will be created. The layer chosen will be updated with the executed
-SQL query. By opening the table (for example with Data Manager) you will see
-the results.
+No new layer is created. The SQL query is executed in place on the layer.
 
 See also
 ........
@@ -293,4 +330,5 @@ For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_e
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
