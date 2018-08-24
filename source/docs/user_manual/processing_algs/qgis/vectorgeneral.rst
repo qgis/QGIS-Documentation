@@ -227,6 +227,25 @@ Outputs
   Vector layer created by the query.
 
 
+.. _qgissaveselectedfeatures:
+
+Extract selected features
+-------------------------
+Saves the selected features as a new layer.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Layer to save the selection from.
+
+Outputs
+.......
+
+``Selection`` [vector: any]
+  Vector layer with just the selected features.
+
+
 .. _qgisfindprojection:
 
 Find projection
@@ -561,25 +580,6 @@ Outputs
 See also
 ........
 :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
-
-
-.. _qgissaveselectedfeatures:
-
-Save selected features
-----------------------
-Saves the selected features as a new layer.
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  Layer to save the selection from.
-
-Outputs
-.......
-
-``Selection`` [vector: any]
-  Vector layer with just the selected features.
 
 
 .. _qgissetstyleforvectorlayer:
