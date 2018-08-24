@@ -195,6 +195,7 @@ Option                                                             Vector Layer 
 |unchecked| :guilabel:`Mutually Exclusive Group`                   \                   \                  |checkbox|
 :guilabel:`Check and all its children (Ctrl-click)`                \                   \                  |checkbox|
 :guilabel:`Uncheck and all its children (Ctrl-click)`              \                   \                  |checkbox|
+:guilabel:`Make Permanent`                                         |checkbox|          \                  \
 :menuselection:`Export -->`                                        |checkbox|          |checkbox|         |checkbox|
 * :guilabel:`Save As...`                                           \                   |checkbox|         \
 * :guilabel:`Save Features As...`                                  |checkbox|          \                  \
@@ -269,8 +270,11 @@ layer or group an icon to advertize some properties. These symbols are:
   to the layer. Hover over the icon to see the filter expression and double-click
   to update the setting;
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
-  <nesting_projects>` and the path to their original project file.
-
+  <nesting_projects>` and the path to their original project file;
+* |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
+  layer <vector_new_scratch_layer>` and its content will be discarded after
+  closing this project. To avoid data loss and make the layer permanent, click
+  the icon to store the layer in any of the OGR vector formats supported by QGIS.
 
 .. index:: Style
 
@@ -2076,6 +2080,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+   :width: 1.5em
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em

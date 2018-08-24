@@ -97,6 +97,7 @@ Icon                            Substitution                        Icon        
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
+|indicatorMemory|               ``|indicatorMemory|``
 |qgsProjectFile|                ``|qgsProjectFile|``                |favourites|                    ``|favourites|``
 ==============================  ==================================  ==============================  ==================================
 
@@ -747,6 +748,8 @@ Icon                            Substitution                        Icon        
 .. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
+   :width: 1.5em
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
