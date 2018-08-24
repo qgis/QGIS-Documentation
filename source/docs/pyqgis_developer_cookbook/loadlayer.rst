@@ -270,8 +270,7 @@ Adding a layer to the registry:
 
     QgsProject.instance().addMapLayer(layer)
 
-Layers are destroyed automatically on exit, however if you want to delete the
-layer explicitly, use:
+If you want to delete the layer use:
 
 .. code-block:: python
 
