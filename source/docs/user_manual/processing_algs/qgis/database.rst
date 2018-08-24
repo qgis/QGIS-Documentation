@@ -95,7 +95,7 @@ Parameters
 
 .. _qgispostgisexecuteandloadsql:
 
-PostGreSQL execute and load SQL |34|
+PostgreSQL execute and load SQL |34|
 ------------------------------------
 
 Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
