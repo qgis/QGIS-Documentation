@@ -1071,7 +1071,7 @@ Available methods are:
 * |labelingRuleBased| :ref:`Rule-based labeling <rule_based_labeling>`
 * and |labelingObstacle| :guilabel:`Blocking`: allows to set a layer as just an
   obstacle for other layer's labels without rendering any labels of its own.
-  
+
 .. _showlabels:
 
 Setting a label
@@ -2788,8 +2788,21 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    layer in the legend, or right-click and choose :menuselection:`Properties`
    from the pop-up menu.
 #. Click on the :guilabel:`Actions` tab.
-#. click |signPlus| :sup:`Add a new action`.
+#. Click |signPlus| :sup:`Add a new action`.
 #. Enter a name for the action, for example ``Google Search``.
+#. The :guilabel:`Action Scopes` allows you to define *where* the action should be available:
+
+   1. :guilabel:`Feature Scope`: action is available when right click in the cell
+      within the attribute table
+   2. :guilabel:`Field Scope`: action is available when right click in the cell
+      within the attribute table, in the feature form and in the default action
+      button of the main toolbar
+   3. :guilabel:`Layer Scope`: action is available in the action button in the
+      attribute table toobar. Be aware that this type of action involves the entire
+      layer and not the single features
+   4. :guilabel:`Canvas`: action is available in the main action button in the
+      toolbar
+
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
    need to provide the full path.
@@ -3214,7 +3227,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
-.. |histogram|  image:: /static/common/histogram.png
+.. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
 .. |iconJoinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
    :width: 1.5em
