@@ -397,7 +397,7 @@ Outputs
 ``Unjoinable features from first layer`` [vector: any] |34|
   Optional
 
-  This vector layer contains only the features that don't match the geometric
+  Vector layer of only the non matching features resulting from the geometric
   predicate. 
 
 .. _qgisjoinbylocationsummary:
