@@ -106,7 +106,7 @@ providers:
 
   .. code-block:: python
 
-      uri = "/some/path/file.csv?delimiter=%s&xField=%s&yField=%s" % (";", "x", "y")
+      uri = "/some/path/file.csv?delimiter={}&xField={}&yField={}".format(";", "x", "y")
       vlayer = QgsVectorLayer(uri, "layer name you like", "delimitedtext")
 
   .. note:: The provider string is structured as a URL, so
@@ -116,7 +116,7 @@ providers:
 
      .. code-block:: python
 
-        uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" % (";", "shape")
+        uri = "file:///some/path/file.csv?delimiter={}&crs=epsg:4723&wktField={}".format(";", "shape")
 
 .. index::
   pair: Loading; GPX files
