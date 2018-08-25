@@ -815,6 +815,48 @@ Outputs
   Output layer, either (multi) line or (multi) polygon.
 
 
+.. _qgissetzfromraster:
+
+Drape (set z-value from raster) |34|
+------------------------------------
+Sets the z value of every vertex in the feature geometry to a value sampled from
+a band within a raster layer.
+
+Input vectors can be points, lines of polygons.
+
+The raster values can optionally be scaled by a preset amount.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Input vector layer to set the z-values to
+
+``Raster layer`` [raster]
+  Raster layer to take the z-values from
+
+``Band number`` [raster band]
+  If the raster is multiband choose the band you want to take the z-values from
+
+``Value for nodata or non-intersecting vertices`` [number | dataDefined]
+  Nodata value to set.
+
+  Default: *0*
+
+``Scale`` [number | dataDefined]
+  Scaling value
+
+  Default: *1.0*
+
+Output
+......
+
+``Updated`` [vector: any]
+  Vector layer in output with the updated z-values extracted
+
+See also
+........
+:ref:`qgissetmfromraster`
+
 .. _qgisdropmzvalues:
 
 Drop m/z values
@@ -1985,6 +2027,48 @@ Output
   Vector layer in output with M value.
 
 
+.. _qgissetmfromraster:
+
+Set m-value from raster |34|
+----------------------------
+
+Sets the m-value for every vertex in the feature geometry to a value sampled from
+a band within a raster layer.
+
+The raster values can optionally be scaled by a preset amount
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Input vector layer to set the m-value to
+
+``Raster layer`` [raster]
+  Raster layer to take the m-value from
+
+``Band number`` [raster band]
+  If the raster is multiband choose the band you want to take the m-value from
+
+``Value for nodata or non-intersecting vertices`` [number | dataDefined]
+  Nodata value to set.
+
+  Default: *0*
+
+``Scale`` [number | dataDefined]
+  Scaling value
+
+  Default: *1.0*
+
+Output
+......
+
+``Updated`` [vector: any]
+  Vector layer in output with the updated m-value extracted
+
+See also
+........
+:ref:`qgissetzfromraster`
+
+
 .. _qgissetzvalue:
 
 Set Z value
@@ -2544,6 +2628,7 @@ Outputs
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
