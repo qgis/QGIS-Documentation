@@ -684,7 +684,7 @@ renderers determine what symbol will be used for a particular feature.
 
 The renderer for a given layer can be obtained as shown below:
 
-::
+.. code-block:: python
 
   renderer = layer.renderer()
 
@@ -832,7 +832,7 @@ To get a list of categories
 .. code-block:: python
 
   for cat in renderer.categories():
-      print("%s: %s :: %s" % (cat.value(), cat.label(), cat.symbol()))
+      print("{}: {} :: {}".format(cat.value(), cat.label(), cat.symbol()))
 
 Where :func:`value` is the value used for discrimination between categories,
 :func:`label` is a text used for category description and :func:`symbol` method
@@ -855,7 +855,7 @@ To find out more about ranges used in the renderer
 .. code-block:: python
 
   for ran in renderer.ranges():
-      print("%f - %f: %s %s" % (
+      print("{} - {}: {} {}".format(
           ran.lowerValue(),
           ran.upperValue(),
           ran.label(),
@@ -931,9 +931,9 @@ the symbol. To get a list of symbol layers
 
 .. code-block:: python
 
-  for i in xrange(symbol.symbolLayerCount()):
+  for i in range(symbol.symbolLayerCount()):
       lyr = symbol.symbolLayer(i)
-      print("%d: %s" % (i, lyr.layerType()))
+      print("format {}: {}".format(i, lyr.layerType()))
 
 To find out symbol's color use :func:`color` method and :func:`setColor` to
 change its color. With marker symbols additionally you can query for the symbol
