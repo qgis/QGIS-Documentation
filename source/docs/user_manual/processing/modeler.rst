@@ -187,6 +187,14 @@ corresponding branch. When the toolbox is invoked, it searches the
 they contain. Since a model is itself an algorithm, it can be added to
 the toolbox just like any other algorithm.
 
+Models can also be saved within the project file using the
+|addToProject|:sup:`Save model in project` button. All the models saved with this
+method won't be written as :file:`.model` file on the disk but will be embedded
+in the :file:`qgz` project file.
+
+Project models are available in the Processing toolbox within the
+|qgsProjectFile|:guilabel:`Project models` menu.
+
 The models folder can be set from the Processing configuration dialog, under the
 :guilabel:`Modeler` group.
 
@@ -274,18 +282,6 @@ on the upper part and then write its description in the text box below.
 
 Model help is saved as part of the model itself.
 
-Exporting a model as a Python script
---------------------------------------
-
-As we will see in a later chapter, Processing algorithms can be called from the
-QGIS Python console, and new Processing algorithms can be created as well using
-Python. A quick way of creating such a Python script is to create a model and
-then to export is as a Python file.
-
-To do so, click on the :guilabel:`Export as Python script` button. Select the
-output file in the file chooser dialog, and Processing will write in it the
-Python commands that perform the same operations defined in the current model.
-
 
 About available algorithms
 --------------------------
@@ -305,4 +301,8 @@ not appear in the list of algorithms that you can find in the modeler dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addToProject| image:: /static/common/add_to_project.png
+   :width: 1.5em
+.. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
