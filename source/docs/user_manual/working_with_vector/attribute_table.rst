@@ -26,10 +26,10 @@ Foreword: Spatial and non-spatial tables
 QGIS allows you to load spatial and non-spatial layers. This currently includes
 tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
 SpatiaLite, DB2 and Oracle provider. All loaded layers are listed in
-the :guilabel:`Layers Panel`. Whether a layer is spatially enabled or not 
+the :guilabel:`Layers Panel`. Whether a layer is spatially enabled or not
 determines whether you can interact with it on the map.
 
-Non-spatial tables can be browsed and edited using the attribute table view. 
+Non-spatial tables can be browsed and edited using the attribute table view.
 Furthermore, they can be used for field lookups.
 For example, you can use columns of a non-spatial table to define attribute
 values, or a range of values that are allowed, to be added to a specific vector
@@ -47,9 +47,9 @@ clicking on it in the :ref:`label_legend`. Then, from the main
 Table`. It is also possible to right-click on the layer and choose
 |openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
 or to click on the |openTable| :guilabel:`Open Attribute Table` button
-in the Attributes toolbar. 
-If you prefer shortcuts, :kbd:`F6` will open the attribute table. 
-:kbd:`Shift+F6` will open the attribute table filtered to selected features and 
+in the Attributes toolbar.
+If you prefer shortcuts, :kbd:`F6` will open the attribute table.
+:kbd:`Shift+F6` will open the attribute table filtered to selected features and
 :kbd:`Ctrl+F6` will open the attribute table filtered to visible features.
 
 This will open a new window that displays the feature attributes for the
@@ -117,6 +117,10 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |conditionalFormatting| | Conditional formatting              | Enable table formatting                    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |dock|                  | Dock attribute table                | Allows to dock/undock the attribute table  |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |actionRun|             | Actions                             | Lists the actions related to the layer     |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 
 Table Attribute 1: Available Tools
 
@@ -140,7 +144,7 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   panel and displays only the attributes of the clicked identifier in the second
   one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
-  
+
 You can switch from one mode to the other by clicking the corresponding icon at
 the bottom right of the dialog.
 
@@ -217,7 +221,7 @@ by preview expression` option.
   may lead to unexpected result because of the ``concat("USE", "ID")`` expression
   returning string values (ie, ``'Borough105' < 'Borough6'``).
   You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
-  returns ``'Borough105' > 'Borough006'``. 
+  returns ``'Borough105' > 'Borough006'``.
 
 .. index:: Conditional formatting
 .. _conditional_formatting:
@@ -339,14 +343,14 @@ left of the attribute table dialog. This list offers the following filters:
 It is also possible to filter features using the :ref:`filter_select_form`.
 
 .. note::
-  
+
   Filtering records out of the attribute table does not filter features out
   of the layer; they are simply momentaneously hidden from the table and can be
   accessed from the map canvas or by removing the filter. For filters that do
   hide features from the layer, use the
   :ref:`Query Builder <vector_query_builder>`.
 
-.. tip:: **Update datasource filtering with** ``Show Features Visible on Map`` 
+.. tip:: **Update datasource filtering with** ``Show Features Visible on Map``
 
   When for performance reasons, features shown in attribute table are spatially
   limited to the canvas extent at its opening (see :ref:`Data Source Options
@@ -566,7 +570,7 @@ edit, multi edit capabilities are accessible:
 * or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify
   attributes of selected features` menu.
 
-In order to edit multiple fields in a row: 
+In order to edit multiple fields in a row:
 
 #. select the features you want to edit;
 #. from the attribute table toolbar, click the |multiEdit| button. This will
@@ -580,14 +584,14 @@ In order to edit multiple fields in a row:
      features. It's shown empty and each feature will keep its original value.
      You can reset the value of the field from the drop-down list of the widget.
    * |multiEditSameValues| all selected features have the same value for this
-     field and the value displayed in the form will be kept. 
+     field and the value displayed in the form will be kept.
    * |multiEditChangedValues| the field has been edited and the entered value
      will be applied to all the selected features. A message appears at the top
      of the dialog, inviting you to either apply or reset your modification.
 
    Clicking any of these widgets allows you to either set the current value for
    the field or reset to original value, meaning that you can roll back changes
-   on a field-by-field basis. 
+   on a field-by-field basis.
 
 #. make the changes to the fields you want and click on **Apply changes** in
    the upper message text or any other feature in the left panel.
@@ -603,7 +607,7 @@ changes for all selected features at once.
  --> Modify Attributes of Selected Features` option provides you with a modal
  dialog to fill attributes changes. Hence, features selection is required
  before execution.
- 
+
 .. _figure_field_multiedit:
 
 .. figure:: img/attribute_multiedit.png
@@ -611,7 +615,7 @@ changes for all selected features at once.
 
    Editing fields of multiple features
 
-.. note:: 
+.. note::
 
   Multi edit mode is only available for auto generated and drag and drop forms
   (see :ref:`customize_form`); it is not supported by custom ui forms.
@@ -726,7 +730,7 @@ a table. And there are also some buttons available. Let's review them shortly
   toggles the edit mode of the airport layer, although we are in the feature
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
-* The |signPlus| button will add a new record to the airport layer attribute table. 
+* The |signPlus| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
 * The |remove| button will delete the selected airport permanently.
 * The |link| symbol will open a new dialog where you can select any existing
@@ -736,16 +740,16 @@ a table. And there are also some buttons available. Let's review them shortly
   leaving them unassigned (the foreign key is set to NULL) effectively.
 * The two buttons to the right switch between table view and form view where
   the later let's you view all the airports in their respective form.
-  
-In the above example the referencing layer has geometries (so it isn't just 
+
+In the above example the referencing layer has geometries (so it isn't just
 an alphanumeric table) so the above steps will create an entry in the layer
-attribute table that has no corresponding geometric feature. To add the 
+attribute table that has no corresponding geometric feature. To add the
 geometry:
 
 * Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
-* Select the record that has been added previously within the feature form of the 
+* Select the record that has been added previously within the feature form of the
   referenced layer;
-* Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the 
+* Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
   selected attributes table record.
 
 If you work on the airport table, a new widget type is available which lets you
@@ -816,6 +820,8 @@ It will appear as a **Many to many relation**.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
@@ -831,6 +837,8 @@ It will appear as a **Many to many relation**.
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
