@@ -320,7 +320,7 @@ by the WMS core service:
             if (request.parameter('SERVICE').upper() == 'WMS' \
                     and request.parameter('REQUEST').upper() == 'GETMAP' \
                     and not request.exceptionRaised() ):
-                QgsMessageLog.logMessage("WatermarkFilter.responseComplete: image ready %s" % request.infoFormat(), 'plugin', QgsMessageLog.INFO)
+                QgsMessageLog.logMessage("WatermarkFilter.responseComplete: image ready {}".format(request.infoFormat()), 'plugin', QgsMessageLog.INFO)
                 # Get the image
                 img = QImage()
                 img.loadFromData(request.body())
