@@ -254,7 +254,7 @@ Icon                            Substitution                        Icon        
 |scaleBar|                      ``|scaleBar|``                      |tracking|                      ``|tracking|``
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
-|settings|                      ``|settings|``                      \                               \
+|settings|                      ``|settings|``                      |start|                         ``|start|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -287,7 +287,7 @@ Icon                            Substitution                        Icon        
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
-|coordinateCapture|             ``|coordinateCapture|``             |startGeoref|                   ``|startGeoref|``
+|coordinateCapture|             ``|coordinateCapture|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -349,6 +349,8 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
+|joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|        ``|joinedLayerNotEditable|``
+|joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``
 ==================================  ======================================  =============================  ================================
 
 
@@ -391,8 +393,9 @@ Standard provided with basic install, but not loaded with initial install
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|showPluginManager|             ``|showPluginManager|``
-|installPluginFromZip|          ``|installPluginFromZip|``          |pythonFile|                    ``|pythonFile|``
+|showPluginManager|             ``|showPluginManager|``             |installPluginFromZip|          ``|installPluginFromZip|``
+|pythonFile|                    ``|pythonFile|``                    |runConsole|                    ``|runConsole|``
+|showEditorConsole|             ``|showEditorConsole|``             |clearConsole|                  ``|clearConsole|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
@@ -544,6 +547,8 @@ Icon                            Substitution                        Icon        
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
+   :width: 1.5em
+.. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
 .. |clip| image:: /static/common/clip.png
    :width: 1.5em
@@ -766,6 +771,12 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
+.. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |joinNotEditable| image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
+   :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
@@ -944,6 +955,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
    :width: 1.5em
+.. |runConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
 .. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
@@ -985,6 +998,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
+.. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
@@ -1014,7 +1029,7 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
-.. |startGeoref| image:: /static/common/mActionStartGeoref.png
+.. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em

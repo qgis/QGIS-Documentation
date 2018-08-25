@@ -2384,13 +2384,13 @@ table of the target layer.
 If the target layer is editable, then some icons will be displayed in the
 attribute table next to fields, in order to inform their status:
 
-* |iconJoinNotEditable|: the join layer is not configured to be
+* |joinNotEditable|: the join layer is not configured to be
   editable. If you want to be able to edit join features from the target
   attribute table, then you have to check the option
   |checkbox| :guilabel:`Editable join layer`.
-* |iconJoinedLayerNotEditable|: the join layer is well configured to be
+* |joinedLayerNotEditable|: the join layer is well configured to be
   editable, but its current status is read only.
-* |iconJoinHasNotUpsertOnEdit|: the join layer is editable but synchronization
+* |joinHasNotUpsertOnEdit|: the join layer is editable but synchronization
   mechanisms are not activated. If you want to automatically add a feature in
   the join layer when a feature is created in the target layer, then you have
   to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, the
@@ -3216,12 +3216,6 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |histogram|  image:: /static/common/histogram.png
    :width: 1.5em
-.. |iconJoinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
-   :width: 1.5em
-.. |iconJoinNotEditable| image:: /static/common/mIconJoinNotEditable.png
-   :width: 1.5em
-.. |iconJoinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
-   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
@@ -3230,6 +3224,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |join| image:: /static/common/join.png
    :width: 2em
+.. |joinHasNotUpsertOnEdit| image:: /static/common/mIconJoinHasNotUpsertOnEdit.png
+   :width: 1.5em
+.. |joinNotEditable| image:: /static/common/mIconJoinNotEditable.png
+   :width: 1.5em
+.. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelingNone| image:: /static/common/labelingNone.png
