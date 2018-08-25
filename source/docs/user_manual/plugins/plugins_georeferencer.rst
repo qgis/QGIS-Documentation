@@ -30,7 +30,7 @@ you can accurately determine coordinates.
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | Icon                           | Purpose                      | Icon                          | Purpose                    |
 +================================+==============================+===============================+============================+
-| |addRasterLayer|               | Open raster                  | |startGeoref|                 | Start georeferencing       |
+| |addRasterLayer|               | Open raster                  | |start|                       | Start georeferencing       |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |gdalScript|                   | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
@@ -246,7 +246,7 @@ Running the transformation
 ..........................
 
 After all GCPs have been collected and all transformation settings are defined,
-just press the |startGeoref| :sup:`Start georeferencing` button to create
+just press the |start| :sup:`Start georeferencing` button to create
 the new georeferenced raster.
 
 
@@ -286,7 +286,7 @@ the new georeferenced raster.
    :width: 1.5em
 .. |saveGCPPointsAs| image:: /static/common/mActionSaveGCPpointsAs.png
    :width: 1.5em
-.. |startGeoref| image:: /static/common/mActionStartGeoref.png
+.. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em

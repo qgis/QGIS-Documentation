@@ -40,10 +40,10 @@ Toolbar
 
 The toolbar proposes the following tools:
 
-* |iconClearConsole| :sup:`Clear Console` to wipe the output area;
-* |iconRunConsole| :sup:`Run Command` available in the input area: same as
+* |clearConsole| :sup:`Clear Console` to wipe the output area;
+* |runConsole| :sup:`Run Command` available in the input area: same as
   pressing :kbd:`Enter`;
-* |iconeShowEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor`
+* |showEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor`
   visibility;
 * |options| :sup:`Options...`: opens a dialog to configure console
   properties (see :ref:`console_options`);
@@ -99,7 +99,7 @@ The console main features are:
 The Code Editor
 ===============
 
-Use the |iconeShowEditorConsole| :sup:`Show Editor` button to enable the editor
+Use the |showEditorConsole| :sup:`Show Editor` button to enable the editor
 widget. It allows editing and saving Python files and offers advanced
 functionalities to manage your code (comment and uncomment code, check syntax,
 share the code via codepad.org and much more). Main features are:
@@ -126,9 +126,9 @@ share the code via codepad.org and much more). Main features are:
 
 * Object inspector: a class and function browser;
 * Go to an object definition with a mouse click (from Object inspector);
-* Execute code snippets with the |iconRunConsole| :guilabel:`Run Selected`
+* Execute code snippets with the |runConsole| :guilabel:`Run Selected`
   command in contextual menu;
-* Execute the whole script with the |startGeoref| :guilabel:`Run Script`
+* Execute the whole script with the |start| :guilabel:`Run Script`
   command (this creates a byte-compiled file with the extension :file:`.pyc`).
 
 .. note::
@@ -188,14 +188,14 @@ the Python console behavior:
 
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
-.. |iconClearConsole| image:: /static/common/iconClearConsole.png
+.. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
-.. |iconRunConsole| image:: /static/common/iconRunConsole.png
+.. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
-.. |iconeShowEditorConsole| image:: /static/common/iconShowEditorConsole.png
+.. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |startGeoref| image:: /static/common/mActionStartGeoref.png
+.. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
