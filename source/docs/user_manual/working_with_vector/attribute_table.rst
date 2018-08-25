@@ -329,7 +329,11 @@ only these records in the table. This can be easily done using the
 left of the attribute table dialog. This list offers the following filters:
 
 * :guilabel:`Show All Features`
-* :guilabel:`Show Selected Features`
+* :guilabel:`Show Selected Features`:
+
+.. note:: If no features are selected the attribute table does not show 
+  anything. This behavior is intentionally done for performance reasons.
+
 * :guilabel:`Show Features visible on map`
 * :guilabel:`Show Edited and New Features`
 * :guilabel:`Field Filter` - allows the user to filter based on value of a field:
