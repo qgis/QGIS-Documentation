@@ -684,9 +684,9 @@ renderers determine what symbol will be used for a particular feature.
 
 The renderer for a given layer can be obtained as shown below:
 
-::
+.. code-block:: python
 
-  renderer = layer.rendererV2()
+  renderer = layer.renderer()
 
 And with that reference, let us explore it a bit
 
@@ -699,26 +699,29 @@ There are several known renderer types available in the QGIS core library:
 =================  =======================================  ===================================================================
 Type               Class                                    Description
 =================  =======================================  ===================================================================
-singleSymbol       :class:`QgsSingleSymbolRendererV2`       Renders all features with the same symbol
-categorizedSymbol  :class:`QgsCategorizedSymbolRendererV2`  Renders features using a different symbol for each category
-graduatedSymbol    :class:`QgsGraduatedSymbolRendererV2`    Renders features using a different symbol for each range of values
+singleSymbol       :class:`QgsSingleSymbolRenderer`         Renders all features with the same symbol
+categorizedSymbol  :class:`QgsCategorizedSymbolRenderer`    Renders features using a different symbol for each category
+graduatedSymbol    :class:`QgsGraduatedSymbolRenderer`      Renders features using a different symbol for each range of values
 =================  =======================================  ===================================================================
 
 There might be also some custom renderer types, so never make an assumption
-there are just these types. You can query :class:`QgsRendererV2Registry`
-singleton to find out currently available renderers:
+there are just these types. You can query the application's :class:`QgsRendererRegistry`
+to find out currently available renderers:
 
 .. code-block:: python
 
-    print(QgsRendererV2Registry.instance().renderersList())
+    print(QgsApplication.rendererRegistry().renderersList())
     # Print:
-    [u'singleSymbol',
-    u'categorizedSymbol',
-    u'graduatedSymbol',
-    u'RuleRenderer',
-    u'pointDisplacement',
-    u'invertedPolygonRenderer',
-    u'heatmapRenderer']
+    ['nullSymbol',
+    'singleSymbol',
+    'categorizedSymbol',
+    'graduatedSymbol',
+    'RuleRenderer',
+    'pointDisplacement',
+    'pointCluster',
+    'invertedPolygonRenderer',
+    'heatmapRenderer',
+    '25dRenderer']
 
 It is possible to obtain a dump of a renderer contents in text form --- can be
 useful for debugging
@@ -740,20 +743,22 @@ You can change the symbol used by a particular vector layer by calling
 :func:`setSymbol()` passing an instance of the appropriate symbol instance.
 Symbols for *point*, *line* and *polygon* layers can be created by calling
 the :func:`createSimple` function of the corresponding classes
-:class:`QgsMarkerSymbolV2`, :class:`QgsLineSymbolV2` and
-:class:`QgsFillSymbolV2`.
+:class:`QgsMarkerSymbol`, :class:`QgsLineSymbol` and
+:class:`QgsFillSymbol`.
 
 The dictionary passed to :func:`createSimple` sets the style properties of the
 symbol.
 
 For example you can replace the symbol used by a particular **point** layer
-by calling :func:`setSymbol()` passing an instance of a :class:`QgsMarkerSymbolV2`
+by calling :func:`setSymbol()` passing an instance of a :class:`QgsMarkerSymbol`
 as in the following code example:
 
 .. code-block:: python
 
-    symbol = QgsMarkerSymbolV2.createSimple({'name': 'square', 'color': 'red'})
-    layer.rendererV2().setSymbol(symbol)
+    symbol = QgsMarkerSymbol.createSimple({'name': 'square', 'color': 'red'})
+    layer.renderer().setSymbol(symbol)
+    # show the change
+    layer.triggerRepaint()
 
 ``name`` indicates the shape of the marker, and can be any of the following:
 
@@ -772,43 +777,46 @@ as in the following code example:
 * ``x``
 
 
-To get the full list of properties for the first symbol layer of a simbol
+To get the full list of properties for the first symbol layer of a symbol
 instance you can follow the example code:
 
 .. code-block:: python
 
-    print(layer.rendererV2().symbol().symbolLayers()[0].properties())
+    print(layer.renderer().symbol().symbolLayers()[0].properties())
     # Prints
-    {u'angle': u'0',
-    u'color': u'0,128,0,255',
-    u'horizontal_anchor_point': u'1',
-    u'name': u'circle',
-    u'offset': u'0,0',
-    u'offset_map_unit_scale': u'0,0',
-    u'offset_unit': u'MM',
-    u'outline_color': u'0,0,0,255',
-    u'outline_style': u'solid',
-    u'outline_width': u'0',
-    u'outline_width_map_unit_scale': u'0,0',
-    u'outline_width_unit': u'MM',
-    u'scale_method': u'area',
-    u'size': u'2',
-    u'size_map_unit_scale': u'0,0',
-    u'size_unit': u'MM',
-    u'vertical_anchor_point': u'1'}
+    {'angle': '0',
+    'color': '0,128,0,255',
+    'horizontal_anchor_point': '1',
+    'joinstyle': 'bevel',
+    'name': 'circle',
+    'offset': '0,0',
+    'offset_map_unit_scale': '0,0',
+    'offset_unit': 'MM',
+    'outline_color': '0,0,0,255',
+    'outline_style': 'solid',
+    'outline_width': '0',
+    'outline_width_map_unit_scale': '0,0',
+    'outline_width_unit': 'MM',
+    'scale_method': 'area',
+    'size': '2',
+    'size_map_unit_scale': '0,0',
+    'size_unit': 'MM',
+    'vertical_anchor_point': '1'}
 
 This can be useful if you want to alter some properties:
 
 .. code-block:: python
 
     # You can alter a single property...
-    layer.rendererV2().symbol().symbolLayer(0).setName('square')
+    layer.renderer().symbol().symbolLayer(0).setSize(3)
     # ... but not all properties are accessible from methods,
     # you can also replace the symbol completely:
-    props = layer.rendererV2().symbol().symbolLayer(0).properties()
+    props = layer.renderer().symbol().symbolLayer(0).properties()
     props['color'] = 'yellow'
     props['name'] = 'square'
-    layer.rendererV2().setSymbol(QgsMarkerSymbolV2.createSimple(props))
+    layer.renderer().setSymbol(QgsMarkerSymbol.createSimple(props))
+    # show the changes
+    layer.triggerRepaint()
 
 
 .. index:: Categorized symbology renderer, Symbology; Categorized symbol renderer
@@ -823,8 +831,8 @@ To get a list of categories
 
 .. code-block:: python
 
-  for cat in rendererV2.categories():
-      print("%s: %s :: %s" % (cat.value().toString(), cat.label(), str(cat.symbol())))
+  for cat in renderer.categories():
+      print("{}: {} :: {}".format(cat.value(), cat.label(), cat.symbol()))
 
 Where :func:`value` is the value used for discrimination between categories,
 :func:`label` is a text used for category description and :func:`symbol` method
@@ -846,12 +854,12 @@ To find out more about ranges used in the renderer
 
 .. code-block:: python
 
-  for ran in rendererV2.ranges():
-      print("%f - %f: %s %s" % (
+  for ran in renderer.ranges():
+      print("{} - {}: {} {}".format(
           ran.lowerValue(),
           ran.upperValue(),
           ran.label(),
-          str(ran.symbol())
+          ran.symbol()
         ))
 
 you can again use :func:`classAttribute` to find out classification attribute
@@ -865,7 +873,7 @@ arrangement)
 
 .. code-block:: python
 
-  from qgis.core import *
+  from qgis.PyQt import QtGui
 
   myVectorLayer = QgsVectorLayer(myVectorPath, myName, 'ogr')
   myTargetField = 'target_field'
@@ -876,28 +884,28 @@ arrangement)
   myMax = 50.0
   myLabel = 'Group 1'
   myColour = QtGui.QColor('#ffee00')
-  mySymbol1 = QgsSymbolV2.defaultSymbol(myVectorLayer.geometryType())
+  mySymbol1 = QgsSymbol.defaultSymbol(myVectorLayer.geometryType())
   mySymbol1.setColor(myColour)
-  mySymbol1.setAlpha(myOpacity)
-  myRange1 = QgsRendererRangeV2(myMin, myMax, mySymbol1, myLabel)
+  mySymbol1.setOpacity(myOpacity)
+  myRange1 = QgsRendererRange(myMin, myMax, mySymbol1, myLabel)
   myRangeList.append(myRange1)
   #now make another symbol and range...
   myMin = 50.1
   myMax = 100
   myLabel = 'Group 2'
   myColour = QtGui.QColor('#00eeff')
-  mySymbol2 = QgsSymbolV2.defaultSymbol(
+  mySymbol2 = QgsSymbol.defaultSymbol(
        myVectorLayer.geometryType())
   mySymbol2.setColor(myColour)
-  mySymbol2.setAlpha(myOpacity)
-  myRange2 = QgsRendererRangeV2(myMin, myMax, mySymbol2 myLabel)
+  mySymbol2.setOpacity(myOpacity)
+  myRange2 = QgsRendererRange(myMin, myMax, mySymbol2, myLabel)
   myRangeList.append(myRange2)
-  myRenderer = QgsGraduatedSymbolRendererV2('', myRangeList)
-  myRenderer.setMode(QgsGraduatedSymbolRendererV2.EqualInterval)
+  myRenderer = QgsGraduatedSymbolRenderer('', myRangeList)
+  myRenderer.setMode(QgsGraduatedSymbolRenderer.EqualInterval)
   myRenderer.setClassAttribute(myTargetField)
 
-  myVectorLayer.setRendererV2(myRenderer)
-  QgsMapLayerRegistry.instance().addMapLayer(myVectorLayer)
+  myVectorLayer.setRenderer(myRenderer)
+  QgsProject.instance().addMapLayer(myVectorLayer)
 
 
 .. index:: Symbols; Working with
@@ -905,15 +913,15 @@ arrangement)
 Working with Symbols
 --------------------
 
-For representation of symbols, there is :class:`QgsSymbolV2` base class with
+For representation of symbols, there is :class:`QgsSymbol` base class with
 three derived classes:
 
-* :class:`QgsMarkerSymbolV2` --- for point features
-* :class:`QgsLineSymbolV2` --- for line features
-* :class:`QgsFillSymbolV2` --- for polygon features
+* :class:`QgsMarkerSymbol` --- for point features
+* :class:`QgsLineSymbol` --- for line features
+* :class:`QgsFillSymbol` --- for polygon features
 
 **Every symbol consists of one or more symbol layers** (classes derived from
-:class:`QgsSymbolLayerV2`). The symbol layers do the actual rendering, the
+:class:`QgsSymbolLayer`). The symbol layers do the actual rendering, the
 symbol class itself serves only as a container for the symbol layers.
 
 Having an instance of a symbol (e.g. from a renderer), it is possible to
@@ -923,9 +931,9 @@ the symbol. To get a list of symbol layers
 
 .. code-block:: python
 
-  for i in xrange(symbol.symbolLayerCount()):
+  for i in range(symbol.symbolLayerCount()):
       lyr = symbol.symbolLayer(i)
-      print("%d: %s" % (i, lyr.layerType()))
+      print("{}: {}".format(i, lyr.layerType()))
 
 To find out symbol's color use :func:`color` method and :func:`setColor` to
 change its color. With marker symbols additionally you can query for the symbol
@@ -939,7 +947,7 @@ Size and width are in millimeters by default, angles are in degrees.
 Working with Symbol Layers
 ..........................
 
-As said before, symbol layers (subclasses of :class:`QgsSymbolLayerV2`)
+As said before, symbol layers (subclasses of :class:`QgsSymbolLayer`)
 determine the appearance of the features.  There are several basic symbol layer
 classes for general use. It is possible to implement new symbol layer types and
 thus arbitrarily customize how features will be rendered. The :func:`layerType`
