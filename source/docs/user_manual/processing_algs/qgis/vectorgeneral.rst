@@ -199,7 +199,7 @@ Parameters
 
 ``Unique identifier field`` [string]
   Optional
-  
+
   Specify the column with unique ID.
 
 ``Geometry field`` [string]
@@ -332,6 +332,12 @@ Outputs
 .......
 ``Joined layer`` [vector: any]
   Final vector layer with the attribute table as result of the joining.
+
+``Unjoinable features from first layer`` [vector: any] |34|
+  Optional
+
+  This vector layer contains only the features that don't match the geometric
+  predicate.
 
 
 .. _qgisjoinattributesbylocation:
@@ -657,4 +663,5 @@ Parameters
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
