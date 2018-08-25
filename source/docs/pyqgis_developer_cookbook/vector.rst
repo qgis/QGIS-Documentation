@@ -933,7 +933,7 @@ the symbol. To get a list of symbol layers
 
   for i in range(symbol.symbolLayerCount()):
       lyr = symbol.symbolLayer(i)
-      print("format {}: {}".format(i, lyr.layerType()))
+      print("{}: {}".format(i, lyr.layerType()))
 
 To find out symbol's color use :func:`color` method and :func:`setColor` to
 change its color. With marker symbols additionally you can query for the symbol
