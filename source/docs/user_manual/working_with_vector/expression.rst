@@ -1346,8 +1346,9 @@ This helps to quickly retrieve and reapply any previously used expression.
 Function Editor
 ===============
 
-With the Function Editor, you are able to define your own Python custom
-functions in a comfortable way.
+With the :guilabel:`Function Editor` tab, you are able to write your own functions
+in Python language. This provides a handy and comfortable way to address
+particular needs that would not be covered by the predefined functions.
 
 .. _figure_expression_function:
 
@@ -1356,21 +1357,51 @@ functions in a comfortable way.
 
    The Function Editor tab
 
-The function editor will create new Python files in :file:`.qgis2\\python\\expressions`
-folder and will auto load all functions defined when starting QGIS. Be aware
-that new functions are only saved in the :file:`expressions` folder and not in
-the project file. If you have a project that uses one of your custom functions
-you will need to also share the :file:`.py` file in the expressions folder.
+To create a new function:
+
+#. press the |tabEditorConsole| :guilabel:`New file` button;
+#. enter a name to use in the form that pops up and press **[OK]**;
+#. a new item of the name you provide is added in the left panel of the
+   :guilabel:`Function Editor` tab; this is a Python :file:`.py` file stored in
+   the :file:`/python/expressions` folder under the active user profile directory;
+#. the right panel displays the content of the file: a python script template.
+   Update the code and its help according to your needs; 
+#. press the |start| :guilabel:`Load` button.
+#. the function you wrote is added to the functions tree in the :guilabel:`Expression`
+   tab, by default under the ``Custom`` group;
+#. enjoy your new function;
+#. if the function requires improvements, enable the :guilabel:`Function Editor`
+   tab, do the changes and press the |start| :guilabel:`Load` button to make
+   them available in the file, hence in any expression.
+   
+Custom Python functions are stored under the user profile directory, meaning that at
+each QGIS startup, it will auto load all the functions defined with the current user
+profile. Be aware that new functions are only saved in the :file:`/python/expressions`
+folder and not in the project file.
+If you share a project that uses one of your custom functions you will need to also
+share the :file:`.py` file in the :file:`/python/expressions` folder.
 
 Here's a short example on how to create your own functions:
 
 .. code-block:: python
 
-   @qgsfunction(args='auto', group='Custom')
-   def myfunc(value1, value2, feature, parent):
-       pass
+   from qgis.core import *
+   from qgis.gui import *
 
-The short example creates a function ``myfunc`` that will give you a function
+   @qgsfunction(args='auto', group='Custom')
+   def my_sum(value1, value2, feature, parent):
+       """
+       Calculates the sum of the two parameters value1 and value2.
+       <h2>Example usage:</h2>
+       <ul>
+         <li>my_sum(5, 8) -> 13</li>
+         <li>my_sum("field1", "field2") -> 42</li>
+       </ul>
+       """
+       return value1 + value2
+
+
+The short example creates a function ``my_sum`` that will give you a function
 with two values.
 When using the ``args='auto'`` function argument the number of function
 arguments required will be calculated by the number of arguments the function
@@ -1380,16 +1411,11 @@ This function then can be used with the following expression:
 
 .. code-block:: python
 
-   myfunc('test1', 'test2')
+   my_sum('field1', 'field2')
 
-Your function will be implemented in the :guilabel:`Custom` functions group of
-the :guilabel:`Expression` tab after using the :guilabel:`Run Script` button.
 
 Further information about creating Python code can be found in the
 :ref:`PyQGIS-Developer-Cookbook`.
-
-The function editor is not only limited to working with the field calculator,
-it can be found whenever you work with expressions.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1407,5 +1433,9 @@ it can be found whenever you work with expressions.
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
+.. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |tabEditorConsole| image:: /static/common/iconTabEditorConsole.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
