@@ -738,7 +738,7 @@ a table. And there are also some buttons available. Let's review them shortly
 * The |saveEdits| button is for saving all the edits.
 * The |newTableRow| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
-* The |editCopy| button allows you to copy one or more child features.
+* The |copyfeature| button allows you to copy one or more child features.
 * The |deleteSelected| button will delete the selected airport permanently.
 * The |link| symbol will open a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
@@ -862,6 +862,8 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |copySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
+.. |copyfeature| image:: /static/common/mActionDuplicateFeature.png
+   :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
@@ -871,8 +873,6 @@ It will appear as a **Many to many relation**.
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
-.. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
