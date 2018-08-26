@@ -244,7 +244,7 @@ level selected, you'll get enabled different tools at the bottom of the dialog t
 * |duplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
 
-Selecting a symbol layer in the tree, you can also :
+When a symbol layer is selected in the tree, you can also:
 
 * control its visibility with the |checkbox| :guilabel:`Enable layer` option.
   Disabled symbol layers are not drawn, but are saved and can be enabled at a
