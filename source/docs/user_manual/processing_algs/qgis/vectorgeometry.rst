@@ -822,28 +822,26 @@ Drape (set z-value from raster) |34|
 Sets the z value of every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
 
-Input vectors can be points, lines of polygons.
-
 The raster values can optionally be scaled by a preset amount.
 
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to set the z-values to
+  Input vector layer to set the z values to.
 
 ``Raster layer`` [raster]
-  Raster layer to take the z-values from
+  Raster layer to take the z values from.
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to take the z-values from
+  The raster band to take the z values from if the raster is multiband.
 
-``Value for nodata or non-intersecting vertices`` [number | dataDefined]
-  Nodata value to set.
+``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
+  Value to use in case the vertex does not intersect (a valid pixel of) the raster.
 
   Default: *0*
 
-``Scale`` [number | dataDefined]
-  Scaling value
+``Scale`` [number |dataDefined|]
+  Scaling value: the band values are multiplied by this value.
 
   Default: *1.0*
 
@@ -851,11 +849,11 @@ Output
 ......
 
 ``Updated`` [vector: any]
-  Vector layer in output with the updated z-values extracted
+  Vector layer in output with the updated z values extracted.
 
 See also
 ........
-:ref:`qgissetmfromraster`
+:ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
 
 .. _qgisdropmzvalues:
 
@@ -2029,10 +2027,10 @@ Output
 
 .. _qgissetmfromraster:
 
-Set m-value from raster |34|
+Set M value from raster |34|
 ----------------------------
 
-Sets the m-value for every vertex in the feature geometry to a value sampled from
+Sets the m value for every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
 
 The raster values can optionally be scaled by a preset amount
@@ -2040,21 +2038,21 @@ The raster values can optionally be scaled by a preset amount
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to set the m-value to
+  Input vector layer to set the m values to.
 
 ``Raster layer`` [raster]
-  Raster layer to take the m-value from
+  Raster layer to take the m values from.
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to take the m-value from
+  The raster band to take the m values from if the raster is multiband.
 
-``Value for nodata or non-intersecting vertices`` [number | dataDefined]
-  Nodata value to set.
+``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
+  Value to use in case the vertex does not intersect (a valid pixel of) the raster..
 
   Default: *0*
 
-``Scale`` [number | dataDefined]
-  Scaling value
+``Scale`` [number |dataDefined|]
+  Scaling value: the band values are multiplied by this value.
 
   Default: *1.0*
 
@@ -2062,11 +2060,11 @@ Output
 ......
 
 ``Updated`` [vector: any]
-  Vector layer in output with the updated m-value extracted
+  Vector layer in output with the updated m values extracted.
 
 See also
 ........
-:ref:`qgissetzfromraster`
+:ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
 
 
 .. _qgissetzvalue:
