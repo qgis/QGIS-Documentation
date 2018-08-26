@@ -274,7 +274,7 @@ Icon                         Substitution                     Icon              
 |draw|                       ``|draw|``                       |formView|               ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
 |dock|                       ``|dock|``                       |actionRun|              ``|actionRun|``
-|duplicateFeature|           ``|duplicateFeature|``                       `                  
+|duplicateFeature|           ``|duplicateFeature|``
 ============================ ===============================  =======================  ===========================
 
 
