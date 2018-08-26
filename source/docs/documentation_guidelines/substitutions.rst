@@ -273,7 +273,8 @@ Icon                         Substitution                     Icon              
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
 |draw|                       ``|draw|``                       |formView|               ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
-|dock|                       ``|dock|``                       |actionRun|              ``|actionRun|``                  
+|dock|                       ``|dock|``                       |actionRun|              ``|actionRun|``
+|duplicateFeature|           ``|duplicateFeature|``                       `                  
 ============================ ===============================  =======================  ===========================
 
 
@@ -624,6 +625,8 @@ Icon                            Substitution                        Icon        
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
