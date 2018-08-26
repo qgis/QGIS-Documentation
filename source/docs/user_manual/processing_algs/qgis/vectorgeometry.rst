@@ -1144,7 +1144,7 @@ Parameters
   Starting point representing the distance from the beginning of the line.
 
 ``End distance`` [number |dataDefined|]
-  Ending point representing the distance at the end of the line.
+  Ending point of extraction, representing the distance along the input line.
 
 Output
 ......

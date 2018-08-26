@@ -140,9 +140,10 @@ def append_subst(file, subst_definition):
 
 if __name__ == '__main__':
     src_path =  path.abspath(path.join(__file__ ,"../../source"))
+    src_path0 =  path.abspath(path.join(__file__ ,"../../source/docs/user_manual/working_with_vector"))
     subst_file_path = path.join(src_path,"substitutions.txt")
     s_dict = read_subst(subst_file_path)
-    for file in find_by_ext(src_path, 'rst'):
+    for file in find_by_ext(src_path0, 'rst'):
         s_list = get_subst_from_file(file)
         if len(s_list) > 0:
             s_definition = get_subst_definition(s_list, s_dict)
