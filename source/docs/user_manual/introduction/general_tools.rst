@@ -63,8 +63,8 @@ a toolbar allows you to:
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
   panel on and off.
 * |addGroup| :sup:`Add new group`
-* |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and 
-  arrange them in different map themes. 
+* |showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and
+  arrange them in different map themes.
 * |filterMap| :sup:`Filter Legend by Map Content`: only the layers that are set
   visible and whose features intersect the current map canvas have their style
   rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
@@ -107,13 +107,13 @@ panel:
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`.
 
 Beyond the quick control of layers visibility,
-the |showMapTheme| :sup:`Manage Map Themes` menu allows you to configure 
+the |showMapTheme| :sup:`Manage Map Themes` menu allows you to configure
 **Map Themes** in the legend and switch from one to another.
 A map theme is a **snapshot** of the current map legend that records:
 
 * the layers set as visible in the :guilabel:`Layers` panel;
 * AND for each visible layer:
-  
+
   * the reference to the applied :ref:`style <save_layer_property>`;
   * the visible classes of the style ie, the layer checked node items in the
     :guilabel:`Layers panel`. This applies to :ref:`symbologies <vector_style_menu>`
@@ -128,7 +128,7 @@ To create a map theme:
    the :menuselection:`Symbology --> Style -->` menu, click on **[Add...]** to
    store the settings as :ref:`a new style embedded in the project
    <manage_custom_style>`.
-   
+
    .. note:: A map theme does not remember the current details of the properties;
      only a reference to the style name is saved so whenever you apply
      modifications (eg, change the symbology rendering) to the layer while this
@@ -337,7 +337,7 @@ properties, it also avoids you cluttering the screen with features dialogs given
 that it embeds most of them (color selector, effects properties, rule edit,
 label substitution...): e.g., clicking color buttons inside the layer style panel
 causes the color selector dialog to be opened inside the layer style panel itself
-rather than as a separate dialog. 
+rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
@@ -464,7 +464,7 @@ The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
 on any vector layer. This panel allows you to select:
 
 * the vector layer to compute the statistics on;
-* the column to use or enter any |expression| :ref:`expression <vector_expressions>`; 
+* the column to use or enter any |expression| :ref:`expression <vector_expressions>`;
 * the statistics to return using the drop-down button at the right bottom of the
   dialog. Depending on the field's (or expression's values) type, available
   statistics are:
@@ -617,7 +617,7 @@ Controlling Map Rendering
 
 Map rendering can be controlled in various ways, as described below.
 
-.. index:: 
+.. index::
    single: Rendering; Suspending
 .. _`label_suspendrender`:
 
@@ -985,7 +985,7 @@ Annotation Tools
 ----------------
 
 Annotations are information added to the map canvas and shown within a
-balloon. These information can be of different types and annotations are 
+balloon. These information can be of different types and annotations are
 added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text;
@@ -1009,7 +1009,7 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
  dialog of form annotation but instead different forms in action, this will be all
  about showing what an annotation looks like.
  Annotation dialog will need to be shown only when it's described (which is done below)
- 
+
 To add an annotation, select the corresponding tool and click on the map canvas.
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
@@ -1022,7 +1022,7 @@ options. This dialog is almost the same for all the annotation types:
   is based on a screen position (instead of the map), meaning that it's always shown
   regardless the map canvas extent;
 * :guilabel:`Linked layer`: allows the annotation to be associated with a map layer
-  and visible only when that layer is visible; 
+  and visible only when that layer is visible;
 * :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, allows to
   set the symbol to display at the balloon anchor position (shown only when
   :guilabel:`Fixed map position` is checked);
@@ -1102,7 +1102,7 @@ if you choose the ellipsoidal measure.
 
 Measure length, areas and angles interactive
 ............................................
-   
+
 Click the |measure| icon in the Attribute toolbar to begin measurements.
 The downward arrow near the icon helps you switch to the convenient tool to measure
 |measure| length, |measureArea| area or |measureAngle| angle.
@@ -1216,7 +1216,7 @@ tools:
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
-.. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these 
+.. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these
    manual selection tools allow you to select feature(s) in the map canvas with a
    single click.
 
@@ -1239,14 +1239,14 @@ For the other tools, different behaviors can be performed holding:
 Automatic selection
 ...................
 
-The other selection tools, also available from the :ref:`Attribute table 
+The other selection tools, also available from the :ref:`Attribute table
 <sec_attribute_table>`, perform a selection based on feature's attribute
 or its selection state (note that attribute table and map canvas show the
 same information, so if you select one feature in attribute table, it will
 be selected in map canvas also):
 
 * |expressionSelect| :sup:`Select By Expression...` allows user to select
-  features using expression dialog. 
+  features using expression dialog.
 * |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
 * |deselectAll| :sup:`Deselect Features from All Layers` or press
   :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers.
@@ -1275,7 +1275,7 @@ chapter for more information and some example.
 
 
 .. tip:: **Save your selection into a new file**
-   
+
    Users can save selected features into a **New Temporary Scratch Layer** or a
    **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
    :menuselection:`Edit --> Paste Features as` in the wanted format.
@@ -1290,7 +1290,8 @@ Select Features By Value
 
 This selection tool opens the layer's feature form allowing the user to choose,
 for each field, which value to look for, if the search should be case sensitive,
-and the operation that should be used.
+and the operation that should be used. The tool has also the autocompleter function
+that fills automatically the search box with the existing values.
 
 .. _figure_filter_form:
 
@@ -1428,7 +1429,7 @@ default it will display three kinds of information:
 
 .. note:: Links in feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
-   
+
 .. _figure_identify:
 
 .. figure:: img/identify_features.png
@@ -1566,7 +1567,7 @@ is updated with the changes you've done.
 
 You can create as many styles as you wish for a layer but only one can be active
 at a time. In combination with :ref:`Map Themes <map_themes>`,
-this offers a quick and powerful way to manage complex projects without the need 
+this offers a quick and powerful way to manage complex projects without the need
 to duplicate any layer in the map legend.
 
 .. note::
@@ -1612,7 +1613,7 @@ converting styles to rule-based.
 Save in database
 .................
 
-Vector layer style can also be stored in a database if the layer datasource is a 
+Vector layer style can also be stored in a database if the layer datasource is a
 database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
 and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
 of the database. Click on :menuselection:`Save Style --> Save in database` item
@@ -1769,7 +1770,7 @@ select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
 
 Whatever method you use, the selected color is always described through color
 sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
-values. The color is also identifiable as a :guilabel:`HTML notation`. 
+values. The color is also identifiable as a :guilabel:`HTML notation`.
 Finally, there is an :guilabel:`opacity` slider to set transparency level.
 
 Modifying a color is as simple as clicking in the color wheel or ramp or in any
@@ -1839,7 +1840,7 @@ can also click the **[Sample color]** button to trigger the picker capability.
 
    Quick color selector menu
 
-.. index:: 
+.. index::
    single: Rendering effects; Blending modes
 .. _blend-modes:
 
