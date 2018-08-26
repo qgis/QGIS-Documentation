@@ -682,20 +682,25 @@ The first thing we are going to do is to let QGIS know about the relations
 between the layers. This is done in :menuselection:`Project --> Project Properties...`.
 Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
 
-* **name** is going to be used as a title. It should be a human readable string,
+* **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **Airports**
   in this case.
-* **referencing layer** also considered as child layer, is the one with the
+* **Referencing layer** also considered as child layer, is the one with the
   foreign key field on it. In our case, this is the ``airports`` layer
-* **referencing field** will say, which field points to the other layer so this
+* **Referencing field** will say, which field points to the other layer so this
   is ``fk_region`` in this case
-* **referenced layer** also considered as parent layer, is the one with the
+* **Referenced layer** also considered as parent layer, is the one with the
   primary key, pointed to, so here it is the ``regions`` layer
-* **referenced field** is the primary key of the referenced layer so it is ``ID``
-* **id** will be used for internal purposes and has to be unique. You may need
+* **Referenced field** is the primary key of the referenced layer so it is ``ID``
+* **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
-  yourself to get one that is easier to handle.
+  yourself to get one that is easier to handle
+* **Relationship strength** sets the strength of the relation between the parent
+  and the child layer. The default :guilabel:`Association` type means that
+  the parent layer is *normally* linked to the child one while the
+  :guilabel:`Composition` type allows you to duplicate also the child features
+  when duplicating the parent ones.
 
 .. _figure_relations_manager:
 
@@ -730,16 +735,21 @@ a table. And there are also some buttons available. Let's review them shortly
   toggles the edit mode of the airport layer, although we are in the feature
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
-* The |signPlus| button will add a new record to the airport layer attribute table.
+* The |saveEdits| button is for saving all the edits.
+* The |newTableRow| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
-* The |remove| button will delete the selected airport permanently.
+* The |editCopy| button allows you to copy one or more child features.
+* The |deleteSelected| button will delete the selected airport permanently.
 * The |link| symbol will open a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
   if you created the airport on the wrong region by accident.
 * The |unlink| symbol will unlink the selected airport from the current region,
   leaving them unassigned (the foreign key is set to NULL) effectively.
-* The two buttons to the right switch between table view and form view where
-  the later let's you view all the airports in their respective form.
+* With the |zoomToSelected| button you can zoom the map to the selected child
+  features.
+* The two buttons |formView| and |openTable| to the right switch between table
+  view and form view where the later let's you view all the airports in their
+  respective form.
 
 In the above example the referencing layer has geometries (so it isn't just
 an alphanumeric table) so the above steps will create an entry in the layer
@@ -842,6 +852,8 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
@@ -878,15 +890,11 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |remove| image:: /static/common/mActionRemove.png
-   :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
