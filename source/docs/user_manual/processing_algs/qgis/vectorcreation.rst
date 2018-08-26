@@ -12,6 +12,45 @@ Vector creation
       :depth: 1
 
 
+.. _qgisarrayfeatures:
+
+Array of offset features |34|
+-----------------------------
+Creates copies of features in a layer, by creating multiple offset versions of
+each feature. Each copy is displaced by a preset amount in the x/y/z/m axis.
+
+In blue the offset features of the red input point layer:
+
+.. figure:: img/offset_features.png
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input layer to offsets the features from.
+
+``Number of features to create`` [number |dataDefined|]
+  Total number of feature to offset.
+
+``Step distance (x-axis)`` [number |dataDefined|]
+  Offset distance on the x axis.
+
+``Step distance (y-axis)`` [number |dataDefined|]
+  Offset distance on the y axis.
+
+``Step distance (z-axis)`` [number |dataDefined|]
+  Offset distance on the z axis.
+
+``Step distance (m-axis)`` [number |dataDefined|]
+  Offset distance on the m axis.
+
+Output
+......
+
+``Offsets`` [vector: any]
+  Layer with the offset features.
+
+
 .. _qgiscreategrid:
 
 Create grid
@@ -424,7 +463,7 @@ Raster pixels to points |34|
 ----------------------------
 Creates a vector layer of points corresponding to each pixel in a raster layer.
 
-Converts a raster layer to a vector layer, by creating point features 
+Converts a raster layer to a vector layer, by creating point features
 for each individual pixel's center in the raster layer.
 Any nodata pixels are skipped in the output.
 
@@ -458,7 +497,7 @@ Creates a vector layer of polygons corresponding to each pixel in a raster layer
 Converts a raster layer to a vector layer, by creating polygon features
 for each individual pixel's extent in the raster layer.
 Any nodata pixels are skipped in the output.
- 
+
 Parameters
 ..........
 
@@ -534,4 +573,6 @@ Outputs
 
 .. |32| replace:: :kbd:`NEW in 3.2`
 .. |34| replace:: :kbd:`NEW in 3.4`
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
