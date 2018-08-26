@@ -26,7 +26,7 @@ Foreword: Spatial and non-spatial tables
 QGIS allows you to load spatial and non-spatial layers. This currently includes
 tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
 SpatiaLite, DB2 and Oracle provider. All loaded layers are listed in
-the :guilabel:`Layers Panel`. Whether a layer is spatially enabled or not
+the :guilabel:`Layers` panel. Whether a layer is spatially enabled or not
 determines whether you can interact with it on the map.
 
 Non-spatial tables can be browsed and edited using the attribute table view.
@@ -685,20 +685,20 @@ Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
 * **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **Airports**
   in this case.
-* **Referencing layer** also considered as child layer, is the one with the
-  foreign key field on it. In our case, this is the ``airports`` layer
-* **Referencing field** will say, which field points to the other layer so this
+* **Referenced Layer (Parent)** also considered as parent layer, is the one with
+  the primary key, pointed to, so here it is the ``regions`` layer
+* **Referenced Field** is the primary key of the referenced layer so it is ``ID``
+* **Referencing Layer (Child)** also considered as child layer, is the one with
+  the foreign key field on it. In our case, this is the ``airports`` layer
+* **Referencing Field** will say, which field points to the other layer so this
   is ``fk_region`` in this case
-* **Referenced layer** also considered as parent layer, is the one with the
-  primary key, pointed to, so here it is the ``regions`` layer
-* **Referenced field** is the primary key of the referenced layer so it is ``ID``
 * **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
   yourself to get one that is easier to handle
 * **Relationship strength** sets the strength of the relation between the parent
   and the child layer. The default :guilabel:`Association` type means that
-  the parent layer is *normally* linked to the child one while the
+  the parent layer is *simply* linked to the child one while the
   :guilabel:`Composition` type allows you to duplicate also the child features
   when duplicating the parent ones.
 
@@ -756,17 +756,21 @@ an alphanumeric table) so the above steps will create an entry in the layer
 attribute table that has no corresponding geometric feature. To add the
 geometry:
 
-* Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
-* Select the record that has been added previously within the feature form of the
-  referenced layer;
-* Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
-  selected attributes table record.
+#. Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
+#. Select the record that has been added previously within the feature form of the
+   referenced layer;
+#. Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
+   selected attributes table record.
 
 If you work on the airport table, the widget Relation Reference is automatically
-set up for the ``fk_region`` field (the one used to create the relation).
+set up for the ``fk_region`` field (the one used to create the relation), see
+:ref:`Relation Reference widget <configure_field>`.
+
+.. Todo: It could be nice that those advanced widgets get a description one day
+
 In the airport form you will see the |formView| button at the right side of the
 ``fk_region`` field: if you click on the button the form of the region layer will
-be opened. This widget allows you to easily and quick open the forms of the
+be opened. This widget allows you to easily and quickly open the forms of the
 linked parent features.
 
 .. _figure_linked_forms:
