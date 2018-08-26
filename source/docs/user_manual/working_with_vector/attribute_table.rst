@@ -762,15 +762,12 @@ geometry:
 * Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
   selected attributes table record.
 
-If you work on the airport table, a new widget type is available which lets you
-embed the feature form of the referenced region on the feature form of the
-airports. It can be used when you open the layer properties of the airports
-table, switch to the :menuselection:`Fields` menu and change the widget type of
-the foreign key field 'fk_region' to Relation Reference.
-
-If you look at the feature dialog now, you will see, that the form of the region
-is embedded inside the airports form and will even have a combobox, which allows
-you to assign the current airport to another region.
+If you work on the airport table, the widget Relation Reference is automatically
+set up for the ``fk_region`` field (the one used to create the relation).
+In the airport form you will see the |formView| button at the right side of the
+``fk_region`` field: if you click on the button the form of the region layer will
+be opened. This widget allows you to easily and quick open the forms of the
+linked parent features.
 
 .. _figure_linked_forms:
 
@@ -778,6 +775,25 @@ you to assign the current airport to another region.
    :align: center
 
    Identification dialog airport with relation to regions
+
+The Relation Reference widget has also an option to embed the form of the parent
+layer within the child one. It is available in  the :guilabel:`Properties --> Attributes Form`
+menu of the airport layer: select the ``fk_region`` field and check the
+``Show embedded form`` option.
+
+If you look at the feature dialog now, you will see, that the form of the region
+is embedded inside the airports form and will even have a combobox, which allows
+you to assign the current airport to another region.
+
+.. _figure_linked_forms_embedded:
+
+.. figure:: img/relations5.png
+   :align: center
+
+Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
+field has also an autocompleter function: while typing you will see all the
+values of the ``id`` field of the region layer.
+
 
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
