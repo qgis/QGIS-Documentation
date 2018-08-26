@@ -190,10 +190,10 @@ the toolbox just like any other algorithm.
 Models can also be saved within the project file using the
 |addToProject|:sup:`Save model in project` button. All the models saved with this
 method won't be written as :file:`.model` file on the disk but will be embedded
-in the :file:`qgz` project file.
+in the :file:`.qgz` project file.
 
-Project models are available in the Processing toolbox within the
-|qgsProjectFile|:guilabel:`Project models` menu.
+Project models are available in |qgsProjectFile|:guilabel:`Project models` menu
+of the toolbox.
 
 The models folder can be set from the Processing configuration dialog, under the
 :guilabel:`Modeler` group.
