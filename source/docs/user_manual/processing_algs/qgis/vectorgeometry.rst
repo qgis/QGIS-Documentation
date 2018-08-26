@@ -84,7 +84,7 @@ Parameters
 
 ``Aggregates`` [list]
   List of the fields in the output layer with their definitions.
-  
+
   By default, the embedded table lists all the fields of the source
   layer and allows you to edit them:
 
@@ -1333,7 +1333,7 @@ Parameters
 
   Default: *10.0*
 
-``Segment`` [number]
+``Segment`` [number |dataDefined|]
   Number of line segments to use to approximate a quarter circle when creating
   rounded offsets.
 
