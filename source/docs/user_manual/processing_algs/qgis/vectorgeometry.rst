@@ -1118,8 +1118,8 @@ Outputs
 
 .. _qgislinesubstring:
 
-Lines substring |34|
---------------------
+Line substring |34|
+-------------------
 Returns the portion of a line (or curve) which falls between the specified start
 and end distances (measured from the beginning of the line).
 
@@ -1128,8 +1128,8 @@ Z and M values are linearly interpolated from existing values.
 If a multipart geometry is encountered, only the first part is considered when
 calculating the substring.
 
-In the following picture an example of a substring with starting distance set at
-0 meters and the ending distance at 250 meters.
+In the following picture an example of a substring line with starting distance
+set at 0 meters and the ending distance at 250 meters.
 
 .. figure:: img/substring.png
 
@@ -1141,10 +1141,10 @@ Parameters
   Line vector layer to extract the substring from.
 
 ``Start distance`` [number |dataDefined|]
-  Starting distance from the line.
+  Starting point representing the distance from the beginning of the line.
 
 ``End distance`` [number |dataDefined|]
-  Final distance of the line.
+  Ending point representing the distance at the end of the line.
 
 Output
 ......
