@@ -1116,6 +1116,43 @@ Outputs
   Resulting polygon layer with the biggest parts chosen.
 
 
+.. _qgislinesubstring:
+
+Line substring |34|
+-------------------
+Returns the portion of a line (or curve) which falls between the specified start
+and end distances (measured from the beginning of the line).
+
+Z and M values are linearly interpolated from existing values.
+
+If a multipart geometry is encountered, only the first part is considered when
+calculating the substring.
+
+In the following picture an example of a substring line with starting distance
+set at 0 meters and the ending distance at 250 meters.
+
+.. figure:: img/substring.png
+
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer to extract the substring from.
+
+``Start distance`` [number |dataDefined|]
+  Starting point representing the distance from the beginning of the line.
+
+``End distance`` [number |dataDefined|]
+  Ending point of extraction, representing the distance along the input line.
+
+Output
+......
+
+``Substring`` [vector: line]
+  Vector line layer of the substring
+
+
 .. _qgislinestopolygons:
 
 Lines to polygon
@@ -2544,6 +2581,7 @@ Outputs
    source folder.
 
 .. |32| replace:: :kbd:`NEW in 3.2`
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
