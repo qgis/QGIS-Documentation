@@ -1333,7 +1333,7 @@ Parameters
 
   Default: *10.0*
 
-``Segment`` [number | dataDefined]
+``Segment`` [number |dataDefined|]
   Number of line segments to use to approximate a quarter circle when creating
   rounded offsets.
 
