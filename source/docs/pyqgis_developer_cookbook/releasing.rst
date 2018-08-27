@@ -15,11 +15,10 @@
 
 Once your plugin is ready and you think the plugin could be helpful for
 some people, do not hesitate to upload it to :ref:`official_pyqgis_repository`.
-On that page you can find also packaging guidelines about how to prepare the
+On that page you can also find packaging guidelines about how to prepare the
 plugin to work well with the plugin installer. Or in case you would like
 to set up your own plugin repository, create a simple XML file that will
-list the plugins and their metadata, for examples see other
-`plugin repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_.
+list the plugins and their metadata.
 
 Please take special care to the following suggestions:
 
@@ -44,11 +43,11 @@ Code and help
 
 .. _official_pyqgis_repository:
 
-Official python plugin repository
+Official Python plugin repository
 ---------------------------------
 
-You can find the *official* python plugin repository at
-`<http://plugins.qgis.org/>`_.
+You can find the *official* Python plugin repository at
+`<https://plugins.qgis.org/>`_.
 
 In order to use the official repository you must obtain an OSGEO ID from the
 `OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_.

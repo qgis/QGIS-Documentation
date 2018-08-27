@@ -10,12 +10,10 @@
 Developing Python Plugins
 *************************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
-It is possible to create plugins in Python programming language. In comparison
+It is possible to create plugins in the Python programming language. In comparison
 with classical plugins written in C++ these should be easier to write,
 understand, maintain and distribute due the dynamic nature of the Python
 language.
@@ -40,11 +38,11 @@ Steps:
    Why do you do it?
    What problem do you want to solve?
    Is there already another plugin for that problem?
-#. *Create files*: Create the files described next.
-   A starting point (:file:`__init__.py`).
-   Fill in the :ref:`plugin_metadata` (:file:`metadata.txt`)
-   A main python plugin body (:file:`mainplugin.py`).
-   A form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`.
+#. *Create files*: The essentials:
+   a starting point :file:`__init__.py`;
+   fill in the :ref:`plugin_metadata` :file:`metadata.txt`.
+   Then implement your own design. A main Python plugin body e.g. :file:`mainplugin.py`.
+   Probably a form in Qt Designer :file:`form.ui`, with its :file:`resources.qrc`.
 #. *Write code*: Write the code inside the :file:`mainplugin.py`
 #. *Test*: Close and re-open QGIS and import your plugin again. Check if
    everything is OK.
@@ -57,13 +55,9 @@ Writing a plugin
 ================
 
 Since the introduction of Python plugins in QGIS, a number of plugins have
-appeared - on `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_
-you can find some of them, you can use their source to learn more about
-programming with PyQGIS or find out whether you are not duplicating development
-effort. The QGIS team also maintains an :ref:`official_pyqgis_repository`.
-Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki
-page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the
-community!
+appeared. The QGIS team maintains an :ref:`official_pyqgis_repository`.
+You can use their source to learn more about programming with PyQGIS or
+find out whether you are duplicating development effort.
 
 .. _plugin_files_architecture:
 
@@ -77,7 +71,7 @@ Here's the directory structure of our example plugin
   PYTHON_PLUGINS_PATH/
     MyPlugin/
       __init__.py    --> *required*
-      mainPlugin.py  --> *required*
+      mainPlugin.py  --> *core code*
       metadata.txt   --> *required*
       resources.qrc  --> *likely useful*
       resources.py   --> *compiled version, likely useful*
@@ -103,9 +97,10 @@ What is the meaning of the files:
 is an online automated way of creating the basic files (skeleton) of a typical
 QGIS Python plugin.
 
-Also there is a QGIS plugin called `Plugin Builder <http://geoapt.net/pluginbuilder/>`_
-that creates plugin template from QGIS and doesn't require internet connection.
-This is the recommended option, as it produces 2.0 compatible sources.
+There is a QGIS plugin called
+`Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
+that creates a plugin template for QGIS and doesn't require an internet connection.
+This is the recommended option, as it produces 3.x compatible sources.
 
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
@@ -128,7 +123,7 @@ files in the file structure described above.
 Plugin metadata
 ---------------
 
-First, plugin manager needs to retrieve some basic information about the
+First, the plugin manager needs to retrieve some basic information about the
 plugin such as its name, description etc. File :file:`metadata.txt` is the
 right place to put this information.
 
@@ -192,7 +187,7 @@ An example for this metadata.txt
   name=HelloWorld
   email=me@example.com
   author=Just Me
-  qgisMinimumVersion=2.0
+  qgisMinimumVersion=3.0
   description=This is an example plugin for greeting the world.
       Multiline is allowed:
       lines starting with spaces belong to the same
@@ -230,7 +225,7 @@ An example for this metadata.txt
   deprecated=False
 
   ; if empty, it will be automatically set to major version + .99
-  qgisMaximumVersion=2.0
+  qgisMaximumVersion=3.99
 
 
 .. index:: Plugins; Initialisation
@@ -240,15 +235,15 @@ __init__.py
 
 This file is required by Python's import system. Also, QGIS requires that this
 file contains a :func:`classFactory()` function, which is called when the
-plugin gets loaded to QGIS. It receives reference to instance of
-:class:`QgisInterface` and must return instance of your plugin's class from the
-:file:`mainplugin.py` --- in our case it's called ``TestPlugin`` (see below).
+plugin gets loaded into QGIS. It receives a reference to the instance of
+:class:`QgisInterface` and must return an object of your plugin's class from
+the :file:`mainplugin.py` --- in our case it's called ``TestPlugin`` (see below).
 This is how :file:`__init__.py` should look like
 
 ::
 
   def classFactory(iface):
-    from mainPlugin import TestPlugin
+    from .mainPlugin import TestPlugin
     return TestPlugin(iface)
 
   ## any other initialisation needed
@@ -262,12 +257,11 @@ This is where the magic happens and this is how magic looks like:
 
 ::
 
-  from qgis.core import *
-  from qgis.PyQt.QtCore import *
   from qgis.PyQt.QtGui import *
+  from qgis.PyQt.QtWidgets import *
 
   # initialize Qt resources from file resources.py
-  import resources
+  from . import resources
 
   class TestPlugin:
 
@@ -281,7 +275,7 @@ This is where the magic happens and this is how magic looks like:
       self.action.setObjectName("testAction")
       self.action.setWhatsThis("Configuration for test plugin")
       self.action.setStatusTip("This is status tip")
-      QObject.connect(self.action, SIGNAL("triggered()"), self.run)
+      self.action.triggered.connect(self.run)
 
       # add toolbar button and menu item
       self.iface.addToolBarIcon(self.action)
@@ -289,7 +283,7 @@ This is where the magic happens and this is how magic looks like:
 
       # connect to signal renderComplete which is emitted when canvas
       # rendering is done
-      QObject.connect(self.iface.mapCanvas(), SIGNAL("renderComplete(QPainter *)"), self.renderTest)
+      self.iface.mapCanvas().renderComplete.connect(self.renderTest)
 
     def unload(self):
       # remove the plugin menu item and icon
@@ -297,7 +291,7 @@ This is where the magic happens and this is how magic looks like:
       self.iface.removeToolBarIcon(self.action)
 
       # disconnect form signal of the canvas
-      QObject.disconnect(self.iface.mapCanvas(), SIGNAL("renderComplete(QPainter *)"), self.renderTest)
+      self.iface.mapCanvas().renderComplete.disconnect(self.renderTest)
 
     def run(self):
       # create and show a configuration dialog or something similar
@@ -342,7 +336,7 @@ custom menu group directly to the menu bar, as the next example demonstrates:
         self.action.setObjectName("testAction")
         self.action.setWhatsThis("Configuration for test plugin")
         self.action.setStatusTip("This is status tip")
-        QObject.connect(self.action, SIGNAL("triggered()"), self.run)
+        self.action.triggered.connect(self.run)
         self.menu.addAction(self.action)
 
         menuBar = self.iface.mainWindow().menuBar()
@@ -373,21 +367,21 @@ You can see that in :func:`initGui()` we've used an icon from the resource file
 It is good to use a prefix that will not collide with other plugins or any
 parts of QGIS, otherwise you might get resources you did not want. Now you
 just need to generate a Python file that will contain the resources. It's
-done with :command:`pyrcc4` command:
+done with :command:`pyrcc5` command:
 
 ::
 
-  pyrcc4 -o resources.py resources.qrc
+  pyrcc5 -o resources.py resources.qrc
 
 .. note::
 
-    In Windows environments, attempting to run the :command:`pyrcc4` from
+    In Windows environments, attempting to run the :command:`pyrcc5` from
     Command Prompt or Powershell will probably result in the error "Windows
     cannot access the specified device, path, or file [...]".  The easiest
     solution is probably to use the OSGeo4W Shell but if you are comfortable
     modifying the PATH environment variable or specifiying the path to the
     executable explicitly you should be able to find it at
-    :file:`<Your QGIS Install Directory>\\bin\\pyrcc4.exe`.
+    :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
 
 And that's all... nothing complicated :)
 
@@ -397,7 +391,7 @@ icon or appropriate menu item is selected.
 
 When working on a real plugin it's wise to write the plugin in another
 (working) directory and create a makefile which will generate UI + resource
-files and install the plugin to your QGIS installation.
+files and install the plugin into your QGIS installation.
 
 .. index:: Plugins; Documentation, Plugins; Implementing help
 
@@ -434,10 +428,10 @@ Software requirements
 ---------------------
 
 The easiest way to create and manage all the translation files is to install
-`Qt Linguist <http://doc.qt.io/qt-4.8/linguist-manual.html>`_.
+`Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_.
 In a Debian-based GNU/Linux environment you can install it typing::
 
-  sudo apt-get install qt4-dev-tools
+  sudo apt-get install qttools5-dev-tools
 
 
 Files and directory
@@ -466,7 +460,7 @@ A possible project file, matching the structure of our
   TRANSLATIONS = your_plugin_it.ts
 
 Your plugin might follow a more complex structure, and it might be distributed
-across several files. If this is the case, keep in mind that ``pylupdate4``,
+across several files. If this is the case, keep in mind that ``pylupdate5``,
 the program we use to read the ``.pro`` file and update the translatable string,
 does not expand wild card characters, so you need to place every file explicitly
 in the ``.pro`` file.
@@ -489,18 +483,18 @@ languages you want.
 .. warning::
 
    Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
-   otherwise the language loading will fail! Use 2 letters shortcut for the
+   otherwise the language loading will fail! Use the 2 letter shortcut for the
    language (**it** for Italian, **de** for German, etc...)
 
 .ts file
 ........
 
 Once you have created the ``.pro`` you are ready to generate the ``.ts`` file(s)
-of the language(s) of your plugin.
+for the language(s) of your plugin.
 
 Open a terminal, go to ``your_plugin/i18n`` directory and type::
 
-  pylupdate4 your_plugin.pro
+  pylupdate5 your_plugin.pro
 
 you should see the ``your_plugin_language.ts`` file(s).
 
@@ -540,7 +534,7 @@ from the sources by::
 
 After this, you have updated ``.ts`` file for all languages set in the LOCALES
 variable.
-Use **Qt4 Linguist** to translate the program messages.
+Use **Qt Linguist** to translate the program messages.
 Finishing the translation the ``.qm`` files can be created by the transcompile::
 
 	make transcompile
@@ -579,6 +573,11 @@ You can access all the classes of installed plugins from within QGIS using pytho
 which can be handy for debugging purposes.::
 
 	my_plugin = qgis.utils.plugins['My Plugin']
+
+Log Messages
+------------
+
+Plugins have their own tab within the :ref:`log_message_panel`.
 
 Share your plugin
 -----------------
