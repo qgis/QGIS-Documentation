@@ -97,8 +97,7 @@ Icon                            Substitution                        Icon        
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
-|indicatorMemory|               ``|indicatorMemory|``
-|qgsProjectFile|                ``|qgsProjectFile|``                |favourites|                    ``|favourites|``
+|indicatorMemory|               ``|indicatorMemory|``               |favourites|                    ``|favourites|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -359,12 +358,15 @@ Icon                                Substitution                            Icon
 Plugins
 =======
 
-Vector Menu
-...........
+Processing
+..........
 
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
+|processing|                    ``|processing|``                    |processingModel|               ``|processingModel|``
+|processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
+|qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
 |mean|                          ``|mean|``                          |layerExtent|                   ``|layerExtent|``
 |randomSelection|               ``|randomSelection|``               |vectorGrid|                    ``|vectorGrid|``
 |convexHull|                    ``|convexHull|``                    |buffer|                        ``|buffer|``
@@ -483,6 +485,8 @@ Icon                            Substitution                        Icon        
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
 .. |addTable| image:: /static/common/mActionAddTable.png
+   :width: 1.5em
+.. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
@@ -910,6 +914,14 @@ Icon                            Substitution                        Icon        
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+   :width: 1.5em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingHistory| image:: /static/common/history.png
+   :width: 2em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
 .. |pyramids| image:: /static/common/pyramids.png
    :width: 1.5em
