@@ -635,9 +635,11 @@ scale` to display the labels.
 
 .. note::
 
- Point Displacement renderer does not alter feature geometry,
- meaning that points are not moved from their position. They are still located
+ Point Displacement renderer does not alter feature geometry, meaning that
+ points are not moved from their position. They are still located
  at their initial place. Changes are only visual, for rendering purpose.
+ Use instead the Processing :ref:`qgispointsdisplacement` algorithm
+ if you want to create displaced features.
 
 
 .. index:: Cluster

@@ -1536,9 +1536,9 @@ Output
 
 Points displacement
 -------------------
-Offsets nearby point features by moving nearby points by a preset amount to minimize
-overlapping features.
-
+Given a distance of proximity, identifies nearby point features and radially
+distributes them over a circle whose center represents their barycenter.
+A convenient tool to scatter overlaid features.
 
 Parameters
 ..........
@@ -1547,17 +1547,19 @@ Parameters
   Input point vector layer.
 
 ``Minimum distance to other points`` [number]
-  Set the distance between each point.
+  Distance below which point features are considered close.
+  Close features are distributed altogether.
 
   Default: *0,000150*
 
 ``Displacement distance`` [number]
-  Specify an eventual offset where the first point should start.
+  Radius of the circle on which close features are placed.
 
   Default: *0,000150*
 
 ``Horizontal distribution for two point case`` [boolean]
-  Specify an eventual offset where the last point should end.
+  When only two points are identified as close, aligns them horizontally
+  on the circle instead of vertically.
 
   Default: *False*
 
