@@ -229,6 +229,8 @@ is irrelevant and values are identified by their keys.
  array_cat              Returns an array containing all the given arrays concatenated
  array_contains         Returns true if an array contains the given value
  array_distinct         Returns an array containing distinct values of the given array
+ array_filter |34|      Returns an array with only the items for which an expression
+                        evaluates to true
  array_find             Returns the index (0 for the first one) of a value
                         within an array. Returns -1 if the value is not found.
  array_first            Returns the first value of an array
@@ -1257,6 +1259,8 @@ To use these functions in an expression, they should be preceded by @ character
  map_id                       Returns the ID of current map destination.
                               This will be 'canvas' for canvas renders, and
                               the item ID for layout map renders
+ map_layer_ids |34|           Returns the list of map layer IDs visible in the map
+ map_layers |34|              Returns the list of map layers visible in the map
  map_rotation                 Returns the current rotation of the map
  map_scale                    Returns the current scale of the map
  map_units                    Returns the units of map measurements
