@@ -301,7 +301,7 @@ not appear in the list of algorithms that you can find in the modeler dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |addToProject| image:: /static/common/add_to_project.png
+.. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
