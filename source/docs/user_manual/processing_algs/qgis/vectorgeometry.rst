@@ -1549,12 +1549,12 @@ Parameters
 ``Minimum distance to other points`` [number]
   Set the distance between each point.
 
-  Default: *0,000150*
+  Default: *1.0*
 
 ``Displacement distance`` [number]
   Specify an eventual offset where the first point should start.
 
-  Default: *0,000150*
+  Default: *1.0*
 
 ``Horizontal distribution for two point case`` [boolean]
   Specify an eventual offset where the last point should end.
@@ -1594,7 +1594,7 @@ Parameters
 ``Input layer`` [vector: polygon]
   Input polygon vector layer.
 
-``Tolerance (layer units)`` [number]
+``Tolerance`` [number]
   Set the tolerance for the calculation.
 
   Default: *1.0*

@@ -29,7 +29,7 @@ Parameters
 ``Point layer`` [vector: point]
   Point vector layer to use for the heatmap.
 
-``Radius (layer units)`` [number]
+``Radius`` [number]
   Heatmap search radius (or kernel bandwidth) in map units. The radius
   specifies the distance around a point at which the influence of the point will
   be felt.
