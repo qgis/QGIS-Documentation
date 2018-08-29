@@ -289,7 +289,7 @@ Icon                            Substitution                        Icon        
 |projectionDisabled|            ``|projectionDisabled|``            |projectionEnabled|             ``|projectionEnabled|``
 |georefRun|                     ``|georefRun|``                     |pencil|                        ``|pencil|``
 |linkQGisToGeoref|              ``|linkQGisToGeoref|``              |linkGeorefToQGis|              ``|linkGeorefToQGis|``
-|coordinateCapture|             ``|coordinateCapture|``
+|coordinateCapture|             ``|coordinateCapture|``             |fullHistogramStretch|          ``|fullHistogramStretch|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -375,15 +375,6 @@ Icon                            Substitution                        Icon        
 |delaunay|                      ``|delaunay|``                      |centroids|                     ``|centroids|``
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
 |splitLayer|                    ``|splitLayer|``
-==============================  ==================================  ==============================  ==================================
-
-Raster Menu
-...........
-
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|fullCumulativeStretch|         ``|fullCumulativeStretch|``         |fullHistogramStretch|          ``|fullHistogramStretch|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |heatmap|                       ``|heatmap|``
 ==============================  ==================================  ==============================  ==================================
 
@@ -689,8 +680,6 @@ Icon                            Substitution                        Icon        
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
-   :width: 1.5em
-.. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
    :width: 1.5em
 .. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
    :width: 1.5em
