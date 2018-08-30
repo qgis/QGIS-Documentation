@@ -781,7 +781,7 @@ linked parent features.
    Identification dialog airport with relation to regions
 
 The Relation Reference widget has also an option to embed the form of the parent
-layer within the child one. It is available in  the :guilabel:`Properties --> Attributes Form`
+layer within the child one. It is available in  the :menuselection:`Properties --> Attributes Form`
 menu of the airport layer: select the ``fk_region`` field and check the
 ``Show embedded form`` option.
 
