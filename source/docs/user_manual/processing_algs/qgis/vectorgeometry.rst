@@ -1550,12 +1550,12 @@ Parameters
   Distance below which point features are considered close.
   Close features are distributed altogether.
 
-  Default: *0,000150*
+  Default: *1.0*
 
 ``Displacement distance`` [number]
   Radius of the circle on which close features are placed.
 
-  Default: *0,000150*
+  Default: *1.0*
 
 ``Horizontal distribution for two point case`` [boolean]
   When only two points are identified as close, aligns them horizontally
@@ -1596,7 +1596,7 @@ Parameters
 ``Input layer`` [vector: polygon]
   Input polygon vector layer.
 
-``Tolerance (layer units)`` [number]
+``Tolerance`` [number]
   Set the tolerance for the calculation.
 
   Default: *1.0*

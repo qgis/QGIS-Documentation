@@ -321,6 +321,8 @@ Parameters
   Default: ``=``
 
 ``Value`` [string]
+  Optional
+
   Value to be evaluated.
 
 ``Modify current selection by`` [enumeration] |32|

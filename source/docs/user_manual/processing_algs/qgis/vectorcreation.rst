@@ -52,12 +52,12 @@ Parameters
 ``Horizontal spacing`` [number]
   Size of a grid cell on the X-axis.
 
-  Default: *0.000100*
+  Default: *1.0*
 
 ``Vertical spacing`` [number]
   Size of a grid cell on the Y-axis.
 
-  Default: *0.000100*
+  Default: *1.0*
 
 ``Horizontal overlay`` [number]
   Overlay distance between two consecutive grid cells on the X-axis.
