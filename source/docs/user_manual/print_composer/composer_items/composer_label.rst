@@ -37,7 +37,7 @@ Main properties
 
 The :guilabel:`Main properties` group is the place to provide the text (it can
 be in HTML) or the expression to build the label. Expressions need to be
-surrounded by ``[%``and ``%]`` in order to be interpreted as such.
+surrounded by ``[%`` and ``%]`` in order to be interpreted as such.
 
 * Labels can be interpreted as HTML code: check |checkbox|
   :guilabel:`Render as HTML`. You can now insert a URL, a clickable image that
@@ -74,7 +74,7 @@ Appearance
   In this case you have to use negative values for the margin.
 * Using the text alignment is another way to position your label. It can be:
 
-  * :guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right`or
+  * :guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right` or
     :guilabel:`Justify` for :guilabel:`Horizontal alignment`
   * and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for
     :guilabel:`Vertical alignment`.
