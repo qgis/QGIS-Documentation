@@ -298,19 +298,17 @@ See also
 
 Union
 -----
-checks overlaps between features within the input layer and creates separate
+Checks overlaps between features within the input layer and creates separate
 features for overlapping and non-overlapping parts. The area of overlap will
 create as many identical overlapping features as there are features that
-participate in that overlap." )
+participate in that overlap.
 
 An overlay layer can also be used, in which case features from each layer
 are split at their overlap with features from the other one, creating a
 layer containing all the portions from both input and overlay layers.
 The attribute table of the union layer is filled with attribute values from the
 respective original layer for non-overlapping features, and attribute values
-from both layers for overlapping features.Creates a layer containing all the
-features from both input layers.
-
+from both layers for overlapping features.
 
 .. figure:: img/union.png
   :align: center
