@@ -2689,6 +2689,20 @@ below). Double quote marks can be used to group text into a single argument to
 the program, script or command. Double quotes will be ignored if preceded by a
 backslash.
 
+The :guilabel:`Action Scopes` allows you to define *where* the action should be
+available. You have 4 different choices:
+
+1. :guilabel:`Feature Scope`: action is available when right click in the cell
+   within the attribute table;
+2. :guilabel:`Field Scope`: action is available when right click in the cell
+   within the attribute table, in the feature form and in the default action
+   button of the main toolbar;
+3. :guilabel:`Layer Scope`: action is available in the action button in the
+   attribute table toolbar. Be aware that this type of action involves the entire
+   layer and not the single features;
+4. :guilabel:`Canvas`: action is available in the main action button in the
+   toolbar.
+
 If you have field names that are substrings of other field names (e.g.,
 ``col1`` and ``col10``), you should indicate that by surrounding the field name
 (and the \% character) with square brackets (e.g., ``[%col10]``). This will
@@ -2790,19 +2804,6 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. Click on the :guilabel:`Actions` tab.
 #. Click |signPlus| :sup:`Add a new action`.
 #. Enter a name for the action, for example ``Google Search``.
-#. The :guilabel:`Action Scopes` allows you to define *where* the action should be available:
-
-   1. :guilabel:`Feature Scope`: action is available when right click in the cell
-      within the attribute table
-   2. :guilabel:`Field Scope`: action is available when right click in the cell
-      within the attribute table, in the feature form and in the default action
-      button of the main toolbar
-   3. :guilabel:`Layer Scope`: action is available in the action button in the
-      attribute table toobar. Be aware that this type of action involves the entire
-      layer and not the single features
-   4. :guilabel:`Canvas`: action is available in the main action button in the
-      toolbar
-
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
    need to provide the full path.
