@@ -2794,7 +2794,7 @@ As an exercise, we can create an action that does a Google search on the ``lakes
 layer. First, we need to determine the URL required to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is http://google.com/search?q=qgis,
+little effort, we see that the format is http://google.com/search?q=QGIS,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
@@ -2803,7 +2803,11 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    from the pop-up menu.
 #. Click on the :guilabel:`Actions` tab.
 #. Click |signPlus| :sup:`Add a new action`.
+#. Choose the :guilabel:`Open` action type,
 #. Enter a name for the action, for example ``Google Search``.
+#. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
+#. Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for further
+   information. Leave the default settings for this example.
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
    need to provide the full path.
@@ -2811,13 +2815,13 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    a Google search, up to but not including the search term:
    ``http://google.com/search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
-   ``firefox http://google.com/search?q=``
+   ``http://google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the **[Insert]** button.
 #. From the drop-down box, select 'NAMES' and click **[Insert]**.
 #. Your action text now looks like this:
 
-   ``firefox http://google.com/search?q=%NAMES``
+   ``http://google.com/search?q=[%NAMES%]``
 #. To finalize and add the action, click the **[OK]** button.
 
 .. _figure_add_action:
@@ -2832,7 +2836,7 @@ action should look like this:
 
 ::
 
-   firefox http://google.com/search?q=%NAMES
+   http://google.com/search?q=[%NAMES%]
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
