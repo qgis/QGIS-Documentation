@@ -16,10 +16,11 @@ Vector overlay
 
 Clip
 ----
-Clips a vector layer using the polygons of an additional polygon layer.
+Clips a vector layer using the features of an additional polygon layer.
 
-Only the parts of the features in the input layer that falls within the polygons
-of the clipping layer will be added to the resulting layer.
+Only the parts of the features in the input layer that fall within the polygons
+of the overlay layer will be added to the resulting layer.
+
 
 .. _warning_difference:
 
@@ -47,14 +48,14 @@ Parameters
 ``Input layer`` [vector: any]
   Layer containing the features to be clipped.
 
-``Clip layer`` [vector: polygon]
+``Overlay layer`` [vector: polygon]
   Layer containing the clipping features.
 
 Output
 ......
 
 ``Clipped`` [vector: any]
-  Layer containing features from the input layer split by the clip layer.
+  Layer containing features from the input layer split by the overlay layer.
 
 See also
 ........
@@ -66,11 +67,11 @@ See also
 Difference
 ----------
 Extracts features from the input layer that don't fall within the boundaries of
-the difference layer.
+the overlay layer.
 
-Input layer features that are partially within difference layer feature(s) are
-split along the boundary of the difference layer feature(s) and only the portions
-outside the difference layer features are retained.
+Input layer features that partially overlap the overlay layer feature(s) are
+split along the boundary of those feature(s) and only the portions
+outside the overlay layer features are retained.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
@@ -85,16 +86,17 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Layer to extract features from.
+  Layer to extract (parts of) features from.
 
-``Difference layer`` [vector: any]
-  Subtracting layer.
+``Overlay layer`` [vector: any]
+  Layer containing the overlapping features to compare to,
+  acting as a subtracting layer.
 
 Output
 ......
 
 ``Difference`` [vector: any]
-  Layer containing the differences feature of the input layer.
+  Layer containing (parts of) features from the input layer not overlapping the overlay layer.
 
 See also
 ........
@@ -114,7 +116,7 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input layer to be clipped.
+  Layer to extract (parts of) features from.
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the clipping.
@@ -135,10 +137,11 @@ Output
 
 Intersection
 ------------
-Extracts the portions of features from the input layer that overlap features in the intersection layer.
+Extracts the portions of features from the input layer that overlap features in
+the overlay layer.
 
 Features in the intersection layer are assigned the attributes of the overlapping
-features from both the input and intersection layers.
+features from both the input and overlay layers.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
@@ -153,28 +156,28 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input layer.
+  Layer to extract (parts of) features from.
 
-``Intersection layer`` [vector: any]
-  Layer containing the intersecting features.
+``Overlay layer`` [vector: any]
+  Layer containing the overlapping features to compare to.
 
 ``Input fields to keep`` [tablefield: any] [list]
   Optional
 
-  Choose here the field(s) of the input layer to be kept. If no fields are chosen
-  all fields are taken.
+  Field(s) of the input layer to keep in the output. If no fields are
+  chosen all fields are taken.
 
-``Intersect fields to keep`` [tablefield: any] [list]
+``Overlay fields to keep`` [tablefield: any] [list]
   Optional
 
-  Choose here the field(s) of the intersection layer to be kept. If no fields are
+  Field(s) of the overlay layer to keep in the output. If no fields are
   chosen all fields are taken.
 
 Output
 ......
 
 ``Intersection`` [vector: any]
-  Layer containing the intersected features.
+  Layer containing (parts of) features from the input layer overlapping the overlay layer.
 
 See also
 ........
@@ -202,25 +205,25 @@ Parameters
 ``Input layer`` [vector: line]
   Input layer.
 
-``Intersection layer`` [vector: line]
+``Intersect layer`` [vector: line]
   Layer to use in the intersection operation.
 
 ``Input fields to keep`` [tablefield: any] [list]
   Optional
 
-  Choose here the fields of the input layer to be kept. If no fields are chosen
-  all fields are taken.
+  Field(s) of the input layer to keep in the output. If no fields are
+  chosen all fields are taken.
 
 ``Intersect fields to keep`` [tablefield: any] [list]
   Optional
 
-  Choose here the field of the intersection layer to be kept. If no fields are
+  Field(s) of the intersect layer to keep in the output. If no fields are
   chosen all fields are taken.
 
 Output
 ......
 
-``Intersection`` [vector: point]
+``Intersections`` [vector: point]
   Point vector layer of the intersection.
 
 
@@ -259,11 +262,11 @@ Output
 
 Symmetrical difference
 -----------------------
-Creates a layer containing features from both the input and difference layers but
+Creates a layer containing features from both the input and overlay layers but
 with the overlapping areas between the two layers removed.
 
 The attribute table of the symmetrical difference layer contains attributes and fields
-from both the input and difference layers.
+from both the input and overlay layers.
 
 Attributes are not modified (see :ref:`warning <warning_difference>`).
 
@@ -278,16 +281,16 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  One layer containing feature(s) to be compared.
+  First layer to extract (parts of) features from.
 
-``Difference layer`` [vector: any]
-  Subtracting layer.
+``Overlay layer`` [vector: any]
+  Second layer to extract (parts of) features from.
 
 Output
 ......
 
 ``Symmetrical difference`` [vector: any]
-  Layer containing the symmetrical differences feature of the input layer.
+  Layer containing (parts of) features from each layer not overlapping the other layer.
 
 See also
 ........
