@@ -300,7 +300,7 @@ will see some option: click on :kbd:`Open mapset`:
 The Mapset is now open and ready to use!
 
 
-.. tip:: right click on a GRASS Mapset offers you a lot of different settings. Try
+.. tip:: Right click on a GRASS Mapset offers you a lot of different settings. Try
   to explore them and see all the useful options.
 
 |IC|
