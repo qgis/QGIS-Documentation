@@ -2033,7 +2033,7 @@ Set M value from raster |34|
 Sets the m value for every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
 
-The raster values can optionally be scaled by a preset amount
+The raster values can optionally be scaled by a preset amount.
 
 Parameters
 ..........
