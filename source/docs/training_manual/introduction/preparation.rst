@@ -30,34 +30,32 @@ Let's get started right away!
 |basic| |FA| Prepare a map
 -------------------------------------------------------------------------------
 
-* Open QGIS. You will have a new, blank map.
+#. Open QGIS. You will have a new, blank map.
+#. Look for and click the :guilabel:`Open Data Source Manager` button: |dataSourceManager|
 
-* Look for the :guilabel:`Open Data Source Manager` button: |dataSourceManager|
+   The dialog allows you to choose the data to load depending on the data type:
+   each tab on the left part of the dialog lists the available data types.
+   You can also browse the files directly from the folder of your computer
+   with the *Browser* tab (see :ref:`browser_panel_tm` section):
 
-* The dialog allows you to choose the data to load depending on the data type:
-  each tab on the left part of the dialog lists the available data types.
-  You can also can browse the files directly from the folder of your computer
-  with the *Browser* tab (see :ref:`browser_panel_tm` section):
+   .. image:: img/add_data_dialog.png
+      :align: center
 
-.. image:: img/add_data_dialog.png
-  :align: center
+#. Click on the :guilabel:`Vector` tab, enable the |radioButtonOn|:guilabel:`File`
+   source type and press the |browseButton| :sup:`Browse` button.
+#. Navigate to the file :file:`exercise_data/shapefile/roads.shp` (in your course
+   directory). Select the file and click :guilabel:`Open`. You will see the
+   original dialog, but with the file path filled in. Click **[Add]** here
+   as well. The data you specified will now load.
 
-* Click on the :guilabel:`Vector` tab and on the **[Browse]** button and
-  navigate to the file :file:`exercise_data/shapefile/roads.shp` (in your course
-  directory). With this file selected, click :guilabel:`Open`. You will see the
-  original dialog, but with the file path filled in. Click  **[Add]** here
-  as well. The data you specified will now load.
-
-.. image:: img/add_vector_dialog.png
-  :align: center
+   .. image:: img/add_vector_dialog.png
+      :align: center
 
 Congratulations! You now have a basic map. Now would be a good time to save
 your work.
 
-* Click on the :guilabel:`Save As` button: |fileSaveAs|
-
-
-* Save the map under :kbd:`exercise_data/` and call it :kbd:`basic_map.qgs`.
+#. Click on the :guilabel:`Save As` button: |fileSaveAs|
+#. Save the map under :kbd:`exercise_data/` and call it :kbd:`basic_map.qgs`.
 
 :ref:`Check your results <interface-preparation-1>`
 
@@ -80,14 +78,16 @@ to load layers from a GeoPackage file.
 
 In order to load a layer from a GeoPackage:
 
-#. click on the |dataSourceManager| button
-#. on the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab
-#. click on the  **[New]** button and look for the :file:`training_data.gpkg` file in
-   the Training Data folder you have downloaded before
-#. choose the layer to load and click on  **[Connect]** button
-#. you should see in the central part of the window the list of all the layers
-   contained in the GeoPackage
-#. select the layer you want to load and click on  the  **[Add]** button
+#. click on the |dataSourceManager| button;
+#. on the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab;
+#. click on the **[New]** button and browse to the :file:`training_data.gpkg`
+   file in the Training Data folder you have downloaded before;
+#. select the file and press **[Open]**. The file path is now added to and shown
+   in the drop-down menu;
+#. click on **[Connect]** button.
+   You should see in the central part of the window the list of all the layers
+   contained in the GeoPackage file;
+#. select the :file:`roads` layer and click on the **[Add]** button.
 
 .. image:: img/add_data_dialog_geopackage.png
   :align: center
@@ -119,6 +119,8 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
@@ -126,4 +128,5 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |moderate| image:: /static/global/moderate.png
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
