@@ -1049,10 +1049,110 @@ Output
   Point layer with features representing all the vertices in the input layer.
 
 
+.. _qgisfilterverticesbym:
+
+Filter vertices by m value |34|
+-------------------------------
+Filters away vertices based on their m-value, returning geometries with only vertex
+points that have a m-value greater than or equal to the specified minimum value and/or
+less than or equal to the maximum value.
+
+If the minimum value is not specified then only the maximum value is tested, and
+similarly if the maximum value is not specified then only the minimum value is tested.
+
+.. figure:: img/filter_zm.png
+   :align: center
+
+   The red line represents the black line with only m<=10 vertices 
+ 
+.. note:: The resultant geometries created by this algorithm may not be valid and may
+  need to be run through the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+
+Parameters
+..........
+
+``Input layer`` [vector: line, polygon]
+  Vector layer to remove vertices from.
+
+``Minimum`` [number]
+  Optional
+
+  Minimum m-value allowed to keep a vertex.
+
+  Default: *Not set*
+
+``Maximum`` [number]
+  Optional
+
+  Maximum m-value allowed to keep a vertex.
+
+  Default: *Not set*
+
+Output
+......
+
+``Filtered`` [vector: line, polygon]
+  Vector layer of the features with only the filtered vertices.
+
+See also
+........
+:ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`
+
+
+.. _qgisfilterverticesbyz:
+
+Filter vertices by z value |34|
+-------------------------------
+Filters away vertices based on their z-value, returning geometries with only vertex
+points that have a z-value greater than or equal to the specified minimum value and/or
+less than or equal to the maximum value.
+
+If the minimum value is not specified then only the maximum value is tested, and
+similarly if the maximum value is not specified then only the minimum value is tested.
+
+.. figure:: img/filter_zm.png
+   :align: center
+
+   The red line represents the black line with only z<=10 vertices 
+
+.. note:: The resultant geometries created by this algorithm may not be valid and may
+  need to be run through the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+
+Parameters
+..........
+
+``Input layer`` [vector: line, polygon]
+  Vector layer to remove vertices from.
+
+``Minimum`` [number]
+  Optional
+
+  Minimum z-value allowed to keep a vertex.
+
+  Default: *Not set*
+
+``Maximum`` [number]
+  Optional
+
+  Maximum z-value allowed to keep a vertex.
+
+  Default: *Not set*
+
+Output
+......
+
+``Filtered`` [vector: line, polygon]
+  Vector layer of the features with only the filtered vertices.
+
+See also
+........
+:ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`
+
+
 .. _qgisfixgeometries:
 
-Fix geometry
-------------
+Fix geometries
+--------------
 This algorithm attempts to create a valid representation of a given invalid geometry
 without losing any of the input vertices. Already-valid geometries are returned
 without further intervention. Always outputs multi-geometry layer.
