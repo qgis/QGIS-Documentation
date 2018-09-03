@@ -484,7 +484,7 @@ for details).
 The first parameter to the constructors is the name of the parameter,
 and the second is the description of the parameter (for the user
 interface).
-The rest of the constructor parameters are parameter specific (see
+The rest of the constructor parameters are parameter type specific (see
 `the API docs
 <https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_).
 
