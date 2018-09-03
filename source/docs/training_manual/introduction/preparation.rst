@@ -78,16 +78,16 @@ to load layers from a GeoPackage file.
 
 In order to load a layer from a GeoPackage:
 
-#. click on the |dataSourceManager| button;
-#. on the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab;
-#. click on the **[New]** button and browse to the :file:`training_data.gpkg`
+#. Click on the |dataSourceManager| button;
+#. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab;
+#. Click on the **[New]** button and browse to the :file:`training_data.gpkg`
    file in the Training Data folder you have downloaded before;
-#. select the file and press **[Open]**. The file path is now added to and shown
+#. Select the file and press **[Open]**. The file path is now added to and shown
    in the drop-down menu;
-#. click on **[Connect]** button.
+#. Click on **[Connect]** button.
    You should see in the central part of the window the list of all the layers
    contained in the GeoPackage file;
-#. select the :file:`roads` layer and click on the **[Add]** button.
+#. Select the :file:`roads` layer and click on the **[Add]** button.
 
 .. image:: img/add_data_dialog_geopackage.png
   :align: center
