@@ -345,7 +345,7 @@ need to add some extra lines of code to implement mandatory functions.
 You can find :guilabel:`Create new script` (clean sheet) and
 :guilabel:`Create New Script from Template` (template that includes
 code for mandatory functions of ``QgsProcessingAlgorithm``) under
-the :guilabel:`Scripts` pulldown menu on the top of the Processing toolbox.
+the :guilabel:`Scripts` dropdown menu on the top of the Processing toolbox.
 The Processing Script Editor will open, and that's where you should type
 your code.
 Saving the script from there in the :file:`scripts` folder (the default folder
@@ -451,7 +451,9 @@ functions are specified:
 There are a number of different parameter types available for
 input and output.
 Their definitions can be found in processing.h.  Below is an
-alphabetically sorted list.
+alphabetically sorted list (see `the Python API documentation
+<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_
+for details).
 
 * QgsProcessingParameterBand
 * QgsProcessingParameterBoolean
@@ -480,13 +482,15 @@ alphabetically sorted list.
 * QgsProcessingParameterVectorLayer
 
 The first parameter to the constructors is the name of the parameter,
-and the second is the description of the parameter (to present in the user
-interface).  The rest of the paramters are specific to the type of
-parameter.
+and the second is the description of the parameter (for the user
+interface).
+The rest of the constructor parameters are parameter specific (see
+`the API docs
+<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_).
 
-The input can be turned into QGIS classes using the parameterAs functions
-of ``QgsProcessingAlgorithm``.  For instance to get the number provided
-for the bufferdistance as a double::
+The input can be turned into QGIS classes using the ``parameterAs`` functions
+of ``QgsProcessingAlgorithm``.
+For instance to get the number provided for the bufferdistance as a double::
 
   self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
 
