@@ -1073,7 +1073,7 @@ Available methods are:
 * |labelingRuleBased| :ref:`Rule-based labeling <rule_based_labeling>`
 * and |labelingObstacle| :guilabel:`Blocking`: allows to set a layer as just an
   obstacle for other layer's labels without rendering any labels of its own.
-  
+
 .. _showlabels:
 
 Setting a label
@@ -2691,6 +2691,20 @@ below). Double quote marks can be used to group text into a single argument to
 the program, script or command. Double quotes will be ignored if preceded by a
 backslash.
 
+The :guilabel:`Action Scopes` allows you to define *where* the action should be
+available. You have 4 different choices:
+
+1. :guilabel:`Feature Scope`: action is available when right click in the cell
+   within the attribute table;
+2. :guilabel:`Field Scope`: action is available when right click in the cell
+   within the attribute table, in the feature form and in the default action
+   button of the main toolbar;
+3. :guilabel:`Layer Scope`: action is available in the action button in the
+   attribute table toolbar. Be aware that this type of action involves the entire
+   layer and not the single features;
+4. :guilabel:`Canvas`: action is available in the main action button in the
+   toolbar.
+
 If you have field names that are substrings of other field names (e.g.,
 ``col1`` and ``col10``), you should indicate that by surrounding the field name
 (and the \% character) with square brackets (e.g., ``[%col10]``). This will
@@ -2782,7 +2796,7 @@ As an exercise, we can create an action that does a Google search on the ``lakes
 layer. First, we need to determine the URL required to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is http://google.com/search?q=qgis,
+little effort, we see that the format is http://google.com/search?q=QGIS,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
@@ -2790,8 +2804,12 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    layer in the legend, or right-click and choose :menuselection:`Properties`
    from the pop-up menu.
 #. Click on the :guilabel:`Actions` tab.
-#. click |signPlus| :sup:`Add a new action`.
+#. Click |signPlus| :sup:`Add a new action`.
+#. Choose the :guilabel:`Open` action type,
 #. Enter a name for the action, for example ``Google Search``.
+#. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
+#. Choose the action :guilabel:`Scope`. See :ref:`adding_actions` for further
+   information. Leave the default settings for this example.
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
    need to provide the full path.
@@ -2799,13 +2817,13 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    a Google search, up to but not including the search term:
    ``http://google.com/search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
-   ``firefox http://google.com/search?q=``
+   ``http://google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the **[Insert]** button.
 #. From the drop-down box, select 'NAMES' and click **[Insert]**.
 #. Your action text now looks like this:
 
-   ``firefox http://google.com/search?q=%NAMES``
+   ``http://google.com/search?q=[%NAMES%]``
 #. To finalize and add the action, click the **[OK]** button.
 
 .. _figure_add_action:
@@ -2820,7 +2838,7 @@ action should look like this:
 
 ::
 
-   firefox http://google.com/search?q=%NAMES
+   http://google.com/search?q=[%NAMES%]
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
@@ -3216,7 +3234,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
-.. |histogram|  image:: /static/common/histogram.png
+.. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
