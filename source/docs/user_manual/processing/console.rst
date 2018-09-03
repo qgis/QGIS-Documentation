@@ -424,23 +424,23 @@ distance on a vector layer that is specified by the user after smoothing.
 After doing the necessary imports, the following ``QgsProcessingAlgorithm``
 functions are specified:
 
-* name: The id of the algorithm (lowercase).
+* ``name``: The id of the algorithm (lowercase).
 
-* displayName: A human readable name for the algorithm.
+* ``displayName``: A human readable name for the algorithm.
 
-* createInstance: Create a new instance of the algorithm class.
+* ``createInstance``: Create a new instance of the algorithm class.
 
-* initAlgorithm: Configure the parameterDefinitions and
+* ``initAlgorithm``: Configure the parameterDefinitions and
   outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
   this case, a FeatureSource for the input layer, a FeatureSink for
   the result and a number for the buffer distance.
 
-* processAlgorithm: Do the work.
+* ``processAlgorithm``: Do the work.
 
-  Here we first run the smoothgeometry algorithm to smooth the
-  geometry, and then we run the buffer algorithm on the smoothed
+  Here we first run the ``smoothgeometry`` algorithm to smooth the
+  geometry, and then we run the ``buffer`` algorithm on the smoothed
   output.
   To be able to run algorithms from within another algorithm we have to
   define a dummy function for the ``onFinish`` parameter for ``run``.
@@ -490,7 +490,7 @@ The rest of the constructor parameters are parameter specific (see
 
 The input can be turned into QGIS classes using the ``parameterAs`` functions
 of ``QgsProcessingAlgorithm``.
-For instance to get the number provided for the bufferdistance as a double::
+For instance to get the number provided for the buffer distance as a double::
 
   self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
 
@@ -501,8 +501,8 @@ Feedback
 ........
 The ``feedback`` object passed to ``processAlgorithm`` can be used for user
 feedback / interaction.
-You can use the setProgress function of the ``feedback`` object to update the
-progress bar (0 to 100) to inform the user about the progress of the
+You can use the ``setProgress`` function of the ``feedback`` object to update
+the progress bar (0 to 100) to inform the user about the progress of the
 algorithm.  This is very useful if your algorithm takes a long time to
 complete.
 The ``feedback`` object provides an ``isCancelled`` method that
@@ -516,8 +516,8 @@ Documenting your scripts
 As in the case of models, you can create additional documentation for
 your scripts, to explain what they do and how to use them.
 
-``processAlgorithm`` provides the shortHelp(), shortHelpString() and
-helpUrl functions for that purpose.
+``processAlgorithm`` provides the ``shortHelp()``, ``shortHelpString()`` and
+``helpUrl`` functions for that purpose.
 
 .. warning:: No QGIS 3 updates beyond this point (ToDo)
 
