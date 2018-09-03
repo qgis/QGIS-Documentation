@@ -55,7 +55,7 @@ Parameters
 Outputs
 .......
 
-``Graticule`` [vector: polygon, line]
+``Graticule`` [vector: line, polygon]
   The resulting layer.
 
 Console usage

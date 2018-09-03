@@ -242,7 +242,7 @@ Output will contain multi geometries for split features.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Layer containing the lines or polygons to split.
 
 ``Split layer`` [vector: line]
@@ -251,7 +251,7 @@ Parameters
 Output
 ......
 
-``Split`` [vector: polygon, line]
+``Split`` [vector: line, polygon]
   Output layer with split lines or polygons from input layer.
 
 
