@@ -193,7 +193,7 @@ Polygon and line geometries are supported.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Input vector layer.
 
 Outputs
@@ -699,7 +699,7 @@ Vertices will be added to each segment of the layer.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Polygon or line vector layer to densify.
 
 ``Vertices to add`` [number]
@@ -710,7 +710,7 @@ Parameters
 Outputs
 .......
 
-``Densified`` [vector: polygon, line]
+``Densified`` [vector: line, polygon]
   Densified layer with vertices added.
 
 See also
@@ -747,7 +747,7 @@ over the segment.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Polygon or line vector layer to densify.
 
 ``Interval between vertices to add`` [number]
@@ -758,7 +758,7 @@ Parameters
 Outputs
 .......
 
-``Densified`` [vector: polygon, line]
+``Densified`` [vector: line, polygon]
   Densified layer with vertices added using the specified interval.
 
 See also
@@ -794,7 +794,7 @@ the features are *aggregated*.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Line or polygon layer to be dissolved.
 
 ``Unique ID fields`` [tablefield: any]
@@ -811,7 +811,7 @@ Parameters
 Outputs
 .......
 
-``Dissolved`` [vector: polygon, line]
+``Dissolved`` [vector: line, polygon]
   Output layer, either (multi) line or (multi) polygon.
 
 
@@ -1051,8 +1051,8 @@ Output
 
 .. _qgisfixgeometries:
 
-Fix geometry
-------------
+Fix geometries
+--------------
 This algorithm attempts to create a valid representation of a given invalid geometry
 without losing any of the input vertices. Already-valid geometries are returned
 without further intervention. Always outputs multi-geometry layer.
@@ -1062,14 +1062,14 @@ without further intervention. Always outputs multi-geometry layer.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Polygon or vector layer in input.
 
 
 Outputs
 .......
 
-``Fixed geometries`` [vector: polygon, line]
+``Fixed geometries`` [vector: line, polygon]
   Layer with fixed geometries.
 
 
@@ -1480,7 +1480,7 @@ angle in the geometry either a right angle or a straight line.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Input vector layer.
 
 ``Maximum angle tolerance (degrees)`` [number]
@@ -1496,7 +1496,7 @@ Parameters
 Output
 ......
 
-``Orthogonalized`` [vector: polygon, line]
+``Orthogonalized`` [vector: line, polygon]
   Final layer with angles adjusted depending on the parameters chosen.
 
 
@@ -2155,7 +2155,7 @@ snapping geometries to grid.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Polygon or line vector to simplify.
 
 ``Simplification method`` [enumeration]
@@ -2178,7 +2178,7 @@ Parameters
 Outputs
 .......
 
-``Simplified`` [vector: polygon, line]
+``Simplified`` [vector: line, polygon]
   Simplified vector layers in output.
 
 
@@ -2268,7 +2268,7 @@ or lower would preserve right angles in the geometry.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon, line]
+``Input layer`` [vector: line, polygon]
   Polygon or line vector to smooth.
 
 ``Iterations`` [number]
@@ -2300,7 +2300,7 @@ Parameters
 Outputs
 .......
 
-``Smoothed`` [vector: polygon, line]
+``Smoothed`` [vector: line, polygon]
   The smoothed vector layer.
 
 
