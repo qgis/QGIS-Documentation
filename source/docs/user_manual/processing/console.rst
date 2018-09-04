@@ -331,7 +331,7 @@ those outputs as values:
     >>> myresult['OUTPUT']
     /data/buffers.shp
 
-You can load those layers by passing the corresponding file paths to
+You can load feature output by passing the corresponding file paths to
 the ``load()`` method.
 Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
 them immediately.
@@ -435,7 +435,7 @@ functions are specified:
   outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
-  this case, a feature source for the input layer, a feature sink for
+  this case, a feature source for the input, a feature sink for
   the result and a number for the buffer distance.
 
 * ``processAlgorithm``: Do the work.
@@ -501,7 +501,7 @@ allows access to these outputs from other algorithms, including other
 algorithms contained within the same model.
 
 Well behaved algorithms should define and return as many outputs as
-makes sense. Non-layer outputs, such as numbers and strings, are very
+makes sense. Non-feature outputs, such as numbers and strings, are very
 useful when running your algorithm as part of a larger model, as these
 values can be used as input parameters for subsequent algorithms
 within the model. Consider adding numeric outputs for things like the
