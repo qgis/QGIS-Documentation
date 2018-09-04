@@ -353,11 +353,12 @@ when you open the save file dialog) with a :file:`.py` extension should
 create the corresponding algorithm.
 
 The name of the algorithm (the one you will see in the toolbox) is defined
-in the code.
+within the code.
 
 Let's have a look at the following code, which defines a Processing
 algorithm that performs a buffer operation with a user defined buffer
-distance on a vector layer that is specified by the user after smoothing.
+distance on a vector layer that is specified by the user, after first
+smoothing the layer.
 
 .. code-block:: python
 
@@ -434,7 +435,7 @@ functions are specified:
   outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
-  this case, a FeatureSource for the input layer, a FeatureSink for
+  this case, a feature source for the input layer, a feature sink for
   the result and a number for the buffer distance.
 
 * processAlgorithm: Do the work.
@@ -490,21 +491,58 @@ for the bufferdistance as a double::
 
   self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
 
-When you declare an output, it will be added to QGIS once the algorithm
-is finished (even if the algorithm returns an empty dictionary).  
+The ``processAlgorithm`` function should return a dictionary
+containing values for every output and output layer defined by the
+algorithm. This allows access to these outputs from other algorithms,
+including other algorithms contained within the same.
+
+Well behaved algorithms should define and return as many outputs as
+makes sense. Non-layer outputs, such as numbers and strings, are very
+useful when running your algorithm as part of a larger model, as these
+values can be used as input parameters for subsequent algorithms
+within the model. Consider adding numeric outputs for things like the
+number of features processed, the number of invalid features
+encountered, the number of features output, etc. The more outputs you
+return, the more useful your algorithm becomes!
 
 Feedback
 ........
-The ``feedback`` object passed to ``processAlgorithm`` can be used for user
-feedback / interaction.
+The ``feedback`` object passed to ``processAlgorithm`` should be used for
+user feedback / interaction.
 You can use the setProgress function of the ``feedback`` object to update the
 progress bar (0 to 100) to inform the user about the progress of the
 algorithm.  This is very useful if your algorithm takes a long time to
 complete.
-The ``feedback`` object provides an ``isCancelled`` method that
+The ``feedback`` object provides an ``isCanceled`` method that
 should be monitored to enable cancellation of the algorithm by the user.
 The ``pushInfo`` method of ``feedback`` can be used to send information
-to the user.
+to the user, and ``reportError`` is handy for pushing non-fatal errors
+to users.
+
+Algorithms should avoid using other forms of providing feedback to
+users, such as print statements or logging to QgsMessageLog, and
+should always use the feedback object instead. This allows verbose
+logging for the algorithm, and is also thread-safe (which is
+important, given that algorithms are typically run in a background
+thread).
+
+Handling errors
+...............
+
+If your algorithm encounters an error which prevents it from
+executing, such as invalid input values or some other condition from
+which it cannot or should not recover, then you should raise a
+QgsProcessingException. E.g.::
+
+  if feature['value'] < 20:
+    raise QgsProcessingException('Invalid input value {}, must be >= 20'.format(feature['value']))
+
+Try to avoid raising QgsProcessingException for non-fatal errors
+(e.g. when a feature has a null geometry), and instead just report
+these errors via ``feedback.reportError()`` and skip the feature. This
+helps make your algorithm "model-friendly", as it avoids halting the
+execution of an entire algorithm when a non-fatal error is
+encountered.
 
 Documenting your scripts
 ........................
