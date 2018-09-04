@@ -1063,10 +1063,10 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only m<=10 vertices 
+   The red line represents the black line with only vertices whose m-value is <=10.
  
-.. note:: The resultant geometries created by this algorithm may not be valid and may
-  need to be run through the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+.. note:: Depending on the input geometry attributes and the filters used,
+  the resultant geometries created by this algorithm may no longer be valid.
 
 Parameters
 ..........
@@ -1113,10 +1113,11 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only z<=10 vertices 
+   The red line represents the black line with only vertices whose z-value is <=10.
 
-.. note:: The resultant geometries created by this algorithm may not be valid and may
-  need to be run through the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+.. note:: Depending on the input geometry attributes and the filters used,
+  the resultant geometries created by this algorithm may no longer be valid.
+  You may need to run the :ref:`qgisfixgeometries` algorithm to ensure their validity.
 
 Parameters
 ..........
