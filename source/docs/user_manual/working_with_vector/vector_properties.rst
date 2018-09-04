@@ -646,8 +646,8 @@ scale` to display the labels.
    single: Symbology; Point cluster renderer
 .. _point_cluster:
 
-Point Cluster
-..............
+Point Cluster Renderer
+.......................
 
 Unlike the |pointDisplacementSymbol| :guilabel:`Point Displacement` renderer
 which blows up nearest or overlaid point features placement, the |pointClusterSymbol|
