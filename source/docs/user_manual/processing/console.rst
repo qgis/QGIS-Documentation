@@ -496,9 +496,9 @@ For instance to get the number provided for the buffer distance as a double::
   self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
 
 The ``processAlgorithm`` function should return a dictionary
-containing values for every output and output layer defined by the
-algorithm. This allows access to these outputs from other algorithms,
-including other algorithms contained within the same.
+containing values for every output defined by the algorithm. This
+allows access to these outputs from other algorithms, including other
+algorithms contained within the same model.
 
 Well behaved algorithms should define and return as many outputs as
 makes sense. Non-layer outputs, such as numbers and strings, are very
@@ -556,6 +556,9 @@ your scripts, to explain what they do and how to use them.
 
 ``processAlgorithm`` provides the ``shortHelp()``, ``shortHelpString()`` and
 ``helpUrl`` functions for that purpose.
+
+``shortDescription()`` (added in 3.4) is used in the tooltip when
+hovering over the algorithm in the toolbox.
 
 .. warning:: No QGIS 3 updates beyond this point (ToDo)
 
