@@ -345,7 +345,7 @@ need to add some extra lines of code to implement mandatory functions.
 You can find :guilabel:`Create new script` (clean sheet) and
 :guilabel:`Create New Script from Template` (template that includes
 code for mandatory functions of ``QgsProcessingAlgorithm``) under
-the :guilabel:`Scripts` pulldown menu on the top of the Processing toolbox.
+the :guilabel:`Scripts` dropdown menu on the top of the Processing toolbox.
 The Processing Script Editor will open, and that's where you should type
 your code.
 Saving the script from there in the :file:`scripts` folder (the default folder
@@ -425,23 +425,23 @@ smoothing the layer.
 After doing the necessary imports, the following ``QgsProcessingAlgorithm``
 functions are specified:
 
-* name: The id of the algorithm (lowercase).
+* ``name``: The id of the algorithm (lowercase).
 
-* displayName: A human readable name for the algorithm.
+* ``displayName``: A human readable name for the algorithm.
 
-* createInstance: Create a new instance of the algorithm class.
+* ``createInstance``: Create a new instance of the algorithm class.
 
-* initAlgorithm: Configure the parameterDefinitions and
+* ``initAlgorithm``: Configure the parameterDefinitions and
   outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
   this case, a feature source for the input layer, a feature sink for
   the result and a number for the buffer distance.
 
-* processAlgorithm: Do the work.
+* ``processAlgorithm``: Do the work.
 
-  Here we first run the smoothgeometry algorithm to smooth the
-  geometry, and then we run the buffer algorithm on the smoothed
+  Here we first run the ``smoothgeometry`` algorithm to smooth the
+  geometry, and then we run the ``buffer`` algorithm on the smoothed
   output.
   To be able to run algorithms from within another algorithm we have to
   define a dummy function for the ``onFinish`` parameter for ``run``.
@@ -452,7 +452,9 @@ functions are specified:
 There are a number of different parameter types available for
 input and output.
 Their definitions can be found in processing.h.  Below is an
-alphabetically sorted list.
+alphabetically sorted list (see `the Python API documentation
+<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_
+for details).
 
 * QgsProcessingParameterBand
 * QgsProcessingParameterBoolean
@@ -481,13 +483,15 @@ alphabetically sorted list.
 * QgsProcessingParameterVectorLayer
 
 The first parameter to the constructors is the name of the parameter,
-and the second is the description of the parameter (to present in the user
-interface).  The rest of the paramters are specific to the type of
-parameter.
+and the second is the description of the parameter (for the user
+interface).
+The rest of the constructor parameters are parameter type specific (see
+`the API docs
+<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_).
 
-The input can be turned into QGIS classes using the parameterAs functions
-of ``QgsProcessingAlgorithm``.  For instance to get the number provided
-for the bufferdistance as a double::
+The input can be turned into QGIS classes using the ``parameterAs`` functions
+of ``QgsProcessingAlgorithm``.
+For instance to get the number provided for the buffer distance as a double::
 
   self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
 
@@ -509,8 +513,8 @@ Feedback
 ........
 The ``feedback`` object passed to ``processAlgorithm`` should be used for
 user feedback / interaction.
-You can use the setProgress function of the ``feedback`` object to update the
-progress bar (0 to 100) to inform the user about the progress of the
+You can use the ``setProgress`` function of the ``feedback`` object to update
+the progress bar (0 to 100) to inform the user about the progress of the
 algorithm.  This is very useful if your algorithm takes a long time to
 complete.
 The ``feedback`` object provides an ``isCanceled`` method that
@@ -550,8 +554,8 @@ Documenting your scripts
 As in the case of models, you can create additional documentation for
 your scripts, to explain what they do and how to use them.
 
-``processAlgorithm`` provides the shortHelp(), shortHelpString() and
-helpUrl functions for that purpose.
+``processAlgorithm`` provides the ``shortHelp()``, ``shortHelpString()`` and
+``helpUrl`` functions for that purpose.
 
 .. warning:: No QGIS 3 updates beyond this point (ToDo)
 
