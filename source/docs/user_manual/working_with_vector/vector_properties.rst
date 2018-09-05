@@ -682,7 +682,9 @@ From the main dialog, you can:
  Point Cluster renderer does not alter feature geometry,
  meaning that points are not moved from their position. They are still located
  at their initial place. Changes are only visual, for rendering purpose.
-
+ Use instead the Processing :ref:`qgiskmeansclustering` or
+ :ref:`qgisdbscanclustering` algorithm if you want to create cluster-based
+ features.
 
 .. index::
    single: Symbology; Inverted polygon renderer
