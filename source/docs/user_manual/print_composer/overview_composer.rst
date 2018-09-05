@@ -608,6 +608,9 @@ a map canvas, and a second page can show the attribute table associated with a
 layer, while a third one shows an HTML frame linking to your organization website.
 Or you can add many types of items on each page.
 
+Adding a new page
+.................
+
 Futhermore, a layout can be made using different size and/or orientation of pages.
 To add a page, select the |newPage| :guilabel:`Add Pages...` tool from the
 :menuselection:`Layout` menu or :guilabel:`Layout Toolbar`. The :guilabel:`Insert
@@ -634,6 +637,9 @@ Pages` dialog opens and you are asked to fill:
 
    Creating a new page in the Print Layout
 
+
+Updating page properties
+........................
 
 Any page can be later customized through the Page :guilabel:`Item Properties`
 panel. Right-click on a page and select :guilabel:`Page Properties...`. The
