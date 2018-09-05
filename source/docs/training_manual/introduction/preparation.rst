@@ -12,7 +12,7 @@ exercises.
 
 .. note::  Before starting this exercise, QGIS must be installed on your
    computer. Also, download the ``training_manual_exercise_data.zip`` file
-   from the `QGIS data downloads area <https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip>`_.
+   from the `QGIS data downloads area <https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v2.0.zip>`_.
 
 Launch QGIS from its desktop shortcut, menu item, etc., depending on how you
 configured its installation.
@@ -72,7 +72,7 @@ GeoPackage is a single file format that can contain different types of data: vec
 and raster files but also tables without spatial information in them (like CSV
 file).
 
-Within the `Training data <https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip>`_
+Within the `Training data <https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v2.0.zip>`_
 archive you will find the :file:`training_data.gpkg` file. We will now see how
 to load layers from a GeoPackage file.
 
