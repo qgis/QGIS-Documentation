@@ -155,8 +155,15 @@ in this list.
 
 There are several alignment options available within the |alignLeft|
 :sup:`Align selected items` pull-down menu (see figure_layout_common_align_).
-To use an alignment function, you first select the elements then click on the
-matching alignment icon. All selected elements will then be aligned to their
+To use an alignment function, you first select the elements and then click on
+one of the alignment icons:
+
+* |alignLeft| :guilabel:`Align Left` or |alignRight| :guilabel:`Align Right`;
+* |alignTop| :guilabel:`Align Top` or |alignBottom| :guilabel:`Align Bottom`;
+* |alignHCenter| :guilabel:`Align Center` horizontally or |alignVCenter|
+  :guilabel:`Align Center Vertical`.
+
+All selected elements will then be aligned to their
 common bounding box. When moving items on the layout canvas, alignment helper
 lines appear when borders, centers or corners are aligned.
 
@@ -286,7 +293,17 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |alignLeft| image:: /static/common/mActionAlignLeft.png
+.. |alignBottom|  image:: /static/common/mActionAlignBottom.png
+   :width: 1.5em
+.. |alignHCenter|  image:: /static/common/mActionAlignHCenter.png
+   :width: 1.5em
+.. |alignLeft|  image:: /static/common/mActionAlignLeft.png
+   :width: 1.5em
+.. |alignRight|  image:: /static/common/mActionAlignRight.png
+   :width: 1.5em
+.. |alignTop|  image:: /static/common/mActionAlignTop.png
+   :width: 1.5em
+.. |alignVCenter|  image:: /static/common/mActionAlignVCenter.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
