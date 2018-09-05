@@ -399,6 +399,12 @@ Outputs
 ``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
+``Unjoinable features from first layer`` [vector: any] |34|
+  Optional
+
+  Vector layer of only the non matching features resulting from the geometric
+  predicate. 
+
 .. _qgisjoinbylocationsummary:
 
 Join attributes by location (summary)
