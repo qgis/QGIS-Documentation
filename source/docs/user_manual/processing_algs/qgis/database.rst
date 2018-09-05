@@ -13,19 +13,17 @@ Database
 
 .. _qgisimportintopostgis:
 
-Import into PostGIS
--------------------
-
-Imports a vector layer currently loaded in QGIS into a PostGIS database.
-Prior to this a connection between QGIS and the PostGIS database has to
-be created (for example with the DB Manager).
+Export to PostgreSQL
+--------------------
+Exports a vector layer to a PostgreSQL database.
+Prior to this a connection between QGIS and the PostgreSQL database has to
+be created (see eg :ref:`vector_create_stored_connection`).
 
 Parameters
 ..........
 
 ``Layer to import`` [vector: any]
-  One of the loaded layer in QGIS. If you want to import another layer you have
-  to load it in QGIS before to import.
+  Vector layer to add to the database.
 
 ``Database (connection name)`` [string]
   Name of the database connection (not the database name). Existing connections
@@ -69,28 +67,122 @@ Parameters
   Default: *True*
 
 ``Create spatial index`` [boolean]
-  Specify whether to create a spatial index or not.
+  Specifies whether to create a spatial index or not.
 
   Default: *True*
 
 ``Convert field names to lowercase`` [boolean]
-  If activated this prevents the field names of the input vector layer from
-  being converted to lowercase.
+  Converts the field names of the input vector layer to lowercase.
 
   Default: *True*
 
 ``Drop length constraints on character fields`` [boolean]
-  Specify whether the length constraints on character fields should be dropped
+  Specifies whether the length constraints on character fields should be dropped
   or not.
 
   Default: *False*
 
 ``Create single-part geometries instead of multi-part`` [boolean]
-  Specify if the features of the loaded layer should be single-part instead of
+  Specifies if the features of the loaded layer should be single-part instead of
   multi-part.
   By default the existing geometries information are preserved.
 
   Default: *False*
+
+
+.. _qgisimportintospatialite:
+
+Export to SpatiaLite
+--------------------
+Exports a vector layer to a SpatiaLite database.
+Prior to this a connection between QGIS and the SpatiaLite database has to
+be created (see eg :ref:`label_spatialite`).
+
+
+Parameters
+..........
+
+``Layer to import`` [vector: any]
+  Vector layer to add to the database.
+
+``File database`` [vector]
+  The SQLite/SpatiaLite database file to connect to.
+
+``Table to import to (leave blank to use layer name)`` [string]
+  Optional
+
+  Defines a table name for the imported vector file.
+  If nothing is added, the layer name will be used.
+
+``Primary key field`` [tablefield: any]
+  Optional
+
+  Sets the primary key field from an existing field in the vector layer.
+
+``Geometry column`` [string]
+  Defines the name of the geometry column in the new SpatiaLite table.
+  Geometry information for the features is stored in this column.
+
+  Default: *geom*
+
+``Encoding`` [string]
+  Optional
+
+  Defines the encoding of the layer in the new SpatiaLite table.
+
+  Default: *UTF-8*
+
+``Overwrite`` [boolean]
+  Overwrites existing table having the same name.
+
+  Default: *True*
+
+``Create spatial index`` [boolean]
+  Specifies whether to create a spatial index or not.
+
+  Default: *True*
+
+``Convert field names to lowercase`` [boolean]
+  Converts the field names of the input vector layer to lowercase.
+
+  Default: *True*
+
+``Drop length constraints on character fields`` [boolean]
+  Specifies whether the length constraints on character fields should be dropped
+  or not.
+
+  Default: *False*
+
+``Create single-part geometries instead of multi-part`` [boolean]
+  Specifies if the features of the loaded layer should be single-part instead of
+  multi-part.
+  By default the existing geometries information are preserved.
+
+  Default: *False*
+
+
+.. _qgispackage:
+
+Package layers
+--------------
+Collects a number of existing layers and packages them together into a single
+GeoPackage database.
+
+Parameters
+..........
+
+``Input layers`` [vector: any] [list]
+  All the vector layers to import into the GeoPackage database.
+
+``Overwrite existing GeoPackage`` [boolean]
+  Replaces an existing database with a new one.
+
+  Default: *False*
+
+Outputs
+.......
+``Destination GeoPackage``
+  If not specified the GeoPackage database will be saved in the temporary folder.
 
 
 .. _qgispostgisexecuteandloadsql:
@@ -125,13 +217,12 @@ Run the first query and create the new column ``area`` on the table ``my_table``
 
   ALTER TABLE my_table ADD COLUMN area double precision;
 
-Run the second query and update the `area` column and calculate the area of each
+Run the second query and update the ``area`` column and calculate the area of each
 feature:
 
 .. code-block:: sql
 
   UPDATE my_table SET area=ST_AREA(geom);
-
 
 Parameters
 ..........
@@ -156,11 +247,11 @@ Parameters
 
   Default: *geom*
 
-
 Outputs
 .......
 No new layer is created. The SQL query is executed in place on the layer and
 its result (as a subset of the input table) is automatically loaded in QGIS.
+
 
 .. _qgispostgisexecutesql:
 
@@ -191,106 +282,6 @@ See also
 For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
 
 
-.. _qgispackage:
-
-Package layers
---------------
-Collects a number of existing layers and packages them together into a single
-GeoPackage database.
-
-Parameters
-..........
-
-``Input layers`` [vector: any] [list]
-  All the vector layers to import into the GeoPackage database.
-
-``Overwrite existing GeoPackage`` [boolean]
-  Replaces an existing database with a new one.
-
-  Default: *False*
-
-Outputs
-.......
-``Destination GeoPackage``
-  If not specified the GeoPackage database will be saved in the temporary folder.
-
-
-.. _qgisimportintospatialite:
-
-Import into SpatiaLite
-----------------------
-
-Imports a vector layer currently loaded in QGIS into a SpatiaLite database.
-Prior to this a connection between QGIS and the SpatiaLite database has to
-be created (for example with the DB Manager).
-
-
-Parameters
-..........
-
-``Layer to import`` [vector: any]
-  One of the loaded layer in QGIS. If you want to import another layer you have
-  to load it in QGIS before to import.
-
-``File database`` [enumeration]
-  Name of the database connection. The combobox will show all the databases of
-  the layers loaded in QGIS. Moreover, it is possible to choose an external
-  `sqlite` file.
-
-``Table to import to (leave blank to use layer name)`` [string]
-  Optional
-
-  Defines a table name for the imported vector file.
-  If nothing is added, the layer name will be used.
-
-``Primary key field`` [tablefield: any]
-  Optional
-
-  Sets the primary key field from an existing field in the vector layer.
-
-``Geometry column`` [string]
-  Defines the name of the geometry column in the new SpatiaLite table.
-  Geometry information for the features is stored in this column.
-
-  Default: *geom*
-
-``Encoding`` [string]
-  Optional
-
-  Defines the encoding of the layer in the new SpatiaLite table.
-
-  Default: *UTF-8*
-
-``Overwrite`` [boolean]
-  Overwrites existing tables having the same name.
-
-  Default: *True*
-
-``Create spatial index`` [boolean]
-  Specify whether to create a spatial index or not.
-
-  Default: *True*
-
-``Convert field names to lowercase`` [boolean]
-  If activated this prevents the field names of the input vector layer from
-  being converted to lowercase.
-
-  Default: *True*
-
-``Drop length constraints on character fields`` [boolean]
-  Specify whether the length constraints on character fields should be dropped
-  or not.
-
-  Default: *False*
-
-``Create single-part geometries instead of multi-part`` [boolean]
-  Specify if the features of the loaded layer should be single-part instead of
-  multi-part.
-  By default the existing geometries information are preserved.
-
-  Default: *False*
-
-
 .. _qgisspatialiteexecutesql:
 
 SpatiaLite execute SQL
@@ -303,10 +294,8 @@ the layer itself.
 Parameters
 ..........
 
-``Database`` [string]
-  Name of the database, not the connection name.
-  By default you don't have to fill in the name, the current database
-  connection will be chosen.
+``Database`` [vector]
+  The SQLite/SpatiaLite database file to connect to.
 
   Default: *(not set)*
 
