@@ -155,8 +155,8 @@ in this list.
 
 There are several alignment options available within the |alignLeft|
 :sup:`Align selected items` pull-down menu (see figure_layout_common_align_).
-To use an alignment function, you first select the elements then click on the
-matching alignment icon that can be:
+To use an alignment function, you first select the elements and then click on
+one of the alignment icons:
 
 * |alignLeft| :guilabel:`Align Left` or |alignRight| :guilabel:`Align Right`;
 * |alignTop| :guilabel:`Align Top` or |alignBottom| :guilabel:`Align Bottom`;
