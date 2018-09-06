@@ -90,25 +90,25 @@ Parameters
 
   Default: *(not set)*
 
-``Output raster type`` [enumeration]
+``Output data type`` [enumeration]
   Defines the format of the output raster file.
-  By default this is Float32.
 
   Options:
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
 
-  Default: *5*
+  Default: *0*
 
 Outputs
 .......
