@@ -321,7 +321,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
   for the ``ServerName`` line that should be ``ServerName myhost``. You could
   also change where the logs go as otherwise the logs for the two virtual hosts
   would be shared but this is optional.
-* Let's now enable the virtual host with ``apt-get a2ensite myhost.conf``
+* Let's now enable the virtual host with ``a2ensite myhost.conf``
   and then reload the Apache service with ``service apache2 reload``.
 * If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url
   you'll notice everything is working now!
