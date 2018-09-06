@@ -316,8 +316,8 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 
 * Apache doesn't know that he's supposed to answer requests pointing to the server
   named ``myhost``. In order to setup the virtual host the simplest way would
-  be to make a ``myhost.conf`` file in the :file:`/etc/apache/sites-available`
-  directory that has the same content as file:`qgis.demo.conf` except
+  be to make a ``myhost.conf`` file in the :file:`/etc/apache2/sites-available`
+  directory that has the same content as :file:`qgis.demo.conf` except
   for the ``ServerName`` line that should be ``ServerName myhost``. You could
   also change where the logs go as otherwise the logs for the two virtual hosts
   would be shared but this is optional.
