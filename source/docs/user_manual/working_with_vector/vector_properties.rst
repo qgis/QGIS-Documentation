@@ -3064,7 +3064,7 @@ Metadata Properties
 |editMetadata| The :guilabel:`Metadata` tab provides you with options to create
 and edit a metadata report on your layer. Information to fill concern:
 
-* the :guilabel:`Data identification`: basic attribution of the dataset (parent,
+* the data :guilabel:`Identification`: basic attribution of the dataset (parent,
   identifier, title, abstract, language...);
 * the :guilabel:`Categories` the data belongs to. Alongside the **ISO** categories,
   you can add custom ones;
