@@ -11,6 +11,72 @@ Cartography
       :local:
       :depth: 1
 
+.. _qgiscategorizeusingstyle:
+
+Create categorized renderer from styles |34|
+--------------------------------------------
+Sets a vector layer's renderer to a categorized renderer using matching symbols
+from a style database. If no style file is specified, symbols from the user's
+current style library are used instead.
+
+The specified expression (or field name) is used to create categories for the
+renderer. A category will be created for each unique value within the layer.
+Each category is individually matched to the symbols which exist within
+the specified QGIS XML style database. Whenever a matching symbol name is found,
+the category's symbol will be set to this matched symbol.
+The matching is case-insensitive by default, but can be made case-sensitive
+if required.
+
+Optionally, non-alphanumeric characters in both the category value and symbol
+name can be ignored while performing the match. This allows for greater
+tolerance when matching categories to symbols.
+
+If desired, tables can also be output containing lists of the categories which
+could not be matched to symbols, and symbols which were not matched to categories.
+
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer to apply a categorized style to.
+
+``Categorize using expression`` [expression]
+  Field or rule of categorization of the features.
+
+``Style database (leave blank to use saved symbols)`` [file]
+  File containing the symbols to apply to the input layer categories.
+
+``Use case-sensitive match to symbol names`` [boolean]
+  If checked, applies a case sensitive comparison between categories and symbol names.
+
+  Default: *False*
+
+``Ignore non-alphanumeric characters while matching`` [boolean]
+  If checked, non-alphanumeric characters in style and category names will be
+  ignored during the match.
+
+  Default: *False*
+
+Outputs
+.......
+
+``Categorized layer`` [vector: any]
+  vector layer with the categorized style applied.
+
+``Non-matching categories`` [table]
+  Optional
+
+  Lists all existing categories which could not be matched
+  to a symbol in the provided style.
+
+``Non-matching symbol names`` [table]
+  Optional
+
+  Lists all symbol names from the provided style file which could not match
+  any existing category.
+
+
 .. _qgistopologicalcoloring:
 
 Topological coloring
@@ -79,4 +145,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
