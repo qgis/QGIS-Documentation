@@ -79,6 +79,52 @@ Appearance
   * and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for
     :guilabel:`Vertical alignment`.
 
+.. _layout_label_expressions:
+
+Exploring expressions in label item
+------------------------------------
+
+Below some examples of expressions you can use to populate the label item with
+interesting information - remember that the code, or at least the calculated part,
+should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` frame):
+
+* Display a title with the current atlas feature value in "field1":
+
+  .. code-block::
+
+    concat( 'This is the map for ', "field1" ) )
+
+  or, written in the :guilabel:`Main properties` section:
+
+  .. code-block::
+
+    This is the map for [% "field1" %]
+
+* Add a pagination for processed atlas features (eg, ``Page 1/10``):
+
+  .. code-block::
+
+    concat( 'Page ', @atlas_featurenumber, '/', @atlas_totalfeatures )
+
+* Return the x coordinate of the bottom left corner of a map canvas:
+
+  .. code-block::
+
+    x_min( map_get( item_variables( 'Map 1' ), 'map_extent' ) )
+
+* Retrieve the name of the layers in the current layout 'Map 1' item,
+  and formats in one name by line :
+
+  .. code-block::
+
+    array_to_string(
+      array_foreach(
+        map_get( item_variables( 'Map 1' ), 'map_layers' ), -- retrieve the layers list
+        layer_property( @element, 'name' ) -- retrieve each layer name
+      ),
+      '\n' -- converts the list to string separated by breaklines
+    )
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
