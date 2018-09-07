@@ -81,8 +81,8 @@ Appearance
 
 .. _layout_label_expressions:
 
-Exploring expressions in label item
-------------------------------------
+Exploring expressions in a label item
+-------------------------------------
 
 Below some examples of expressions you can use to populate the label item with
 interesting information - remember that the code, or at least the calculated part,
@@ -92,7 +92,7 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
 
   ::
 
-    concat( 'This is the map for ', "field1" )
+    'This is the map for ' || "field1"
 
   or, written in the :guilabel:`Main properties` section:
 
