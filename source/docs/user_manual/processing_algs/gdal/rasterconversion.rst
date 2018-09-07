@@ -16,22 +16,29 @@ Raster conversion
 
 gdal2xyz
 --------
+Converts raster data to XYZ ASCII file format.
+
 Parameters
 ..........
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster layer to convert.
 
-``Band number`` [number]
-  <put parameter description here>
+``Band number`` [raster band]
+  Number of the band to export values from.
 
   Default: *1*
 
+``Output comma-separated values`` [boolean]
+  Sets whether output file should be of comma-separated values (csv) type.
+
+  Default: *False*
+  
 Outputs
 .......
 
-``Output file`` [table]
-  <put output description here>
+``XYZ ASCII file`` [table]
+  Table file containing values exported from the raster band.
 
 
 .. _gdalpcttorgb:
@@ -50,7 +57,7 @@ Parameters
 ``Input layer`` [raster]
   Input 8bit raster image.
 
-``Band to convert`` [enumeration]
+``Band number`` [enumeration]
   Band to convert to RGB.
 
   Options:
@@ -83,10 +90,15 @@ Parameters
 
   Default: *0*
 
+``Generate a RGBA file`` [boolean]
+  Sets whether output file should be of RGBA type.
+
+  Default: *False*
+  
 Outputs
 .......
 
-``Output layer`` [raster]
+``PCT to RGB`` [raster]
   24bit RGB raster image
 
 See also
@@ -111,16 +123,24 @@ Parameters
 ``Input layer`` [raster]
   Input raster layer.
 
-``Output field name`` [string]
+``Band number`` [raster band]
+  Band to extract data from.
+
+``Name of the field to create`` [string]
   Defines the field name in which the attributes of the connected regions are
   entered. If no field name is defined the name will be 'DN'.
 
   Default: *DN*
 
+``Use 8-connectedness`` [boolean]
+  <put parameter description here>
+
+  Default: *False*
+
 Outputs
 .......
 
-``Output layer`` [vector: polygon]
+``Vectorized`` [vector: polygon]
   Output vector layer. Default format is \*.shp.
 
 
@@ -139,37 +159,51 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer with point, line or polygon geometries.
 
-``Attribute field`` [tablefield: any]
+``Field to use for a burn-in value`` [tablefield: numeric]
+  Optional
+
   Defines the attribute field from which the attributes for the pixels
   should be chosen.
 
-``Write values inside an existing raster layer(*)`` [boolean]
-  If activated writes the results into an existing raster layer.
+``A fixed value to burn`` [number]
+  Optional
 
-  Default: *False*
+  <put parameter description here>
 
-``Set output raster size (ignored if above option is checked)`` [enumeration]
-  If the above option is not checked either the output size is in pixels (0)
-  or the output resolution is in map units per pixel (1).
+  Default: *0.000000*
+
+``Output raster size units`` [enumeration]
+  Units to apply to features.
 
   Options:
 
-  * 0 --- Output size in pixels
-  * 1 --- Output resolution in map units per pixel
+  * 0 --- Pixels
+  * 1 --- Georeferenced units
 
-  Default: *1*
+  Default: *0*
 
-``Horizontal`` [number]
+``Width/Horizontal resolution`` [number]
   Sets the horizontal resolution of the output raster.
 
-  Default: *100.0*
+  Default: *0.000000*
 
-``Vertical`` [number]
+``Height/Vertical resolution`` [number]
   Sets the vertical resolution of the output raster.
 
-  Default: *100.0*
+  Default: *0.000000*
 
-``Raster type`` [enumeration]
+``Output extent (xmin, xmax, ymin, ymax)`` [extent]
+  Extent of the output raster layer. If the extent is not specified, the minimum
+  extent that covers selected reference layer(s) will be used.
+
+``Assign a specified nodata value to output bands`` [number]
+  Optional
+
+  <put parameter description here>
+
+  Default: *0.000000*
+
+``Output data type`` [enumeration]
   Defines the type of the resulting raster image.
 
   Options:
@@ -186,14 +220,23 @@ Parameters
   * 9 --- CFloat32
   * 10 --- CFloat64
 
-  Default: *0*
+  Default: *5*
+
+``Pre-initialize the output image with value`` [number]
+  Optional
+
+  <put parameter description here>
+
+``Invert rasterization`` [boolean]
+  <put parameter description here>
+
+  Default: *False*
 
 Outputs
 .......
 
-``Output layer: mandatory to choose an existing raster layer if the (*) option is selected`` [raster]
-  Output raster layer. Give in here the name of the raster layer in which the results should be written
-  (if this option is used).
+``Rasterized`` [raster]
+  Output raster layer.
 
 
 .. _gdalrgbtopct:
@@ -225,7 +268,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [raster]
+``RGB to PCT`` [raster]
   8-bit output raster.
 
 
@@ -242,42 +285,15 @@ Parameters
 ``Input layer`` [raster]
   <put parameter description here>
 
-``Set the size of the output file (In pixels or %)`` [number]
+``Override the projection of the output file`` [crs]
   <put parameter description here>
 
-  Default: *100*
+``Assign a specified nodata value to output bands`` [number]
+  Optional
 
-``Output size is a percentage of input size`` [boolean]
   <put parameter description here>
 
-  Default: *True*
-
-``Nodata value, leave as none to take the nodata value from input`` [string]
-  <put parameter description here>
-
-  Default: *none*
-
-``Expand`` [enumeration]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- none
-  * 1 --- gray
-  * 2 --- rgb
-  * 3 --- rgba
-
-  Default: *0*
-
-``Output projection for output file [leave blank to use input projection]`` [crs]
-  <put parameter description here>
-
-  Default: *None*
-
-``Subset based on georeferenced coordinates`` [extent]
-  <put parameter description here>
-
-  Default: *0,1,0,1*
+  Default: *Not set*
 
 ``Copy all subdatasets of this file to individual output files`` [boolean]
   <put parameter description here>
@@ -292,7 +308,7 @@ Parameters
   Default: *(not set)*
 
 ``Output data type`` [enumeration]
-  Defines the format of the output raster file.
+  Defines the type of the resulting raster image.
 
   Options:
 
@@ -314,7 +330,7 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [raster]
+``Converted`` [raster]
   <put output description here>
 
 
