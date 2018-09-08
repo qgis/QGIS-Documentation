@@ -38,8 +38,8 @@ mask geometry.
 .. figure:: img/clip.png
   :align: center
 
-  Clipping operation
-
+  Clipping operation between a two-features input layer and a single feature
+  overlay layer (left) - resulting features are moved for clarity (right)
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -78,7 +78,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 .. figure:: img/difference.png
   :align: center
 
-  Difference operation
+  Difference operation between a two-features input layer and a single feature
+  overlay layer (left) - resulting features are moved for clarity (right)
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -148,7 +149,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 .. figure:: img/intersection.png
   :align: center
 
-  Intersection operation
+  Intersection operation between a two-features input layer and a single feature
+  overlay layer (left) - resulting features are moved for clarity (right)
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -273,7 +275,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 .. figure:: img/symmetrical_difference.png
   :align: center
 
-  Symmetrical difference operation
+  Symmetrical difference operation between a two-features input layer and a single
+  feature overlay layer (left) - resulting features are moved for clarity (right)
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
