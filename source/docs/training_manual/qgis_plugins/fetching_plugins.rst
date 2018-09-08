@@ -34,6 +34,8 @@ and :guilabel:`Plugin Manager`.
 * The :guilabel:`Processing` menu should be available again.
 
 
+.. _plugin_installation:
+
 |basic| |FA| Installing New Plugins
 -------------------------------------------------------------------------------
 

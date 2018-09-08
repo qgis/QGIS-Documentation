@@ -11,28 +11,6 @@ help you in practice by looking at some examples of useful plugins.
 **The goal for this lesson:** To familiarize yourself with the plugin interface
 and get acquainted with some useful plugins.
 
-.. _plugin_installation:
-
-|basic| |FA| Plugin installation
--------------------------------------------------------------------------------
-
-Installing a plugin is a straightforward operation. In this section we will describe
-the general procedure that you can follow every time you want to install a new
-plugin.
-
-* Open the the :guilabel:`Plugins --> Manage and Install Plugins...` menu.
-* Type the name of the plugin you want to install in the :guilabel:`Filter` field.
-* Select the plugin and click on :guilabel:`Install` button.
-* When it's done, close the :guilabel:`Plugin Manager`.
-
-In the following picture an example with the :guilabel:`QuickMapServices` plugin:
-
-.. image:: img/qms_install.png
-   :align: center
-
-The plugin will appear in different menu (Vector, Raster, Database or Web) depending
-on the application field of the plugin.
-
 
 |basic| |FA| The QuickMapServices Plugin
 -------------------------------------------------------------------------------
