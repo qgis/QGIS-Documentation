@@ -58,9 +58,9 @@ Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
-.. _vector-load-shapefiles-1:
+.. _vector-load-geopackage-1:
 
-|basic| *Shapefiles*
+|basic| *GeoPackage*
 ...............................................................................
 
 There should be five layers on your map:
@@ -71,18 +71,7 @@ There should be five layers on your map:
 * :guilabel:`rivers` and
 * :guilabel:`roads`.
 
-:ref:`Back to text <backlink-vector-load-shapefiles-1>`
-
-
-.. _vector-load-from-database-1:
-
-|basic| *Databases*
-...............................................................................
-
-All the vector layers should be loaded into the map. It probably won't look
-nice yet though (we'll fix the ugly colors later).
-
-:ref:`Back to text <backlink-vector-load-from-database-1>`
+:ref:`Back to text <backlink-vector-load-geopackage-1>`
 
 
 |RF| *Symbology*
@@ -94,8 +83,9 @@ nice yet though (we'll fix the ugly colors later).
 ...............................................................................
 
 * Verify that the colors are changing as you expect them to change.
-* It is enough to change only the :guilabel:`water` layer for now. An example
-  is below, but may look different depending on the color you chose.
+* It is enough to select the :guilabel:`water` layer in the legend and then click
+  on the |symbology|:sup:`Open the Layer Styling panel` button. Change the color
+  with the one you want and best fits the water layer.
 
 .. image:: img/answer_water_blue.png
    :align: center
@@ -151,13 +141,13 @@ Here's an example:
 |moderate| *Symbol Levels*
 ...............................................................................
 
-To make the required symbol, you need two symbol layers:
+To make the required symbol, you need three symbol layers:
 
 .. image:: img/answer_road_symbology.png
    :align: center
 
-The lowest symbol layer is a broad, solid yellow line. On top of it there is a
-slightly thinner solid gray line.
+The lowest symbol layer is a broad, solid gray line. On top of it there is a
+slightly thinner solid yellow line and finally another thinner solid black line.
 
 * If your symbol layers resemble the above but you're not getting the result
   you want, check that your symbol levels look something like this:
@@ -188,6 +178,20 @@ slightly thinner solid gray line.
 
 :ref:`Back to text <backlink-symbology-levels-2>`
 
+
+.. _symbology-geom_generator:
+
+|hard| *Geometry generator symbology*
+...............................................................................
+
+* Click on the |signPlus| button to add another Symbol level.
+* Move the new symbol at the bottom of the list clicking the |arrowDown| button.
+* Choose a good color to fill the water polygons.
+* Click on :guilabel:`Marker` of the Geometry generator symbology and change the
+  circle with another shape as your wish.
+* Try experimenting other options to get more useful results.
+
+:ref:`Back to text <backlink-symbology-geom_generator>`
 
 |RF| *Attribute Data*
 -------------------------------------------------------------------------------
@@ -1183,9 +1187,15 @@ As you can see, our constraint allows nulls to be added into the database.
    source folder.
 
 .. |RF| replace:: Results For
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
