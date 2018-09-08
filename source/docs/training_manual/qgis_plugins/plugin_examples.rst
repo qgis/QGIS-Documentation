@@ -19,18 +19,16 @@ The QuickMapServices plugin is a simple and easy to use plugin that adds base ma
 to your QGIS project. It has many different options and settings, let's start to
 explore some of its features.
 
-* Start a new map and add the :guilabel:`roads` layer from the :kbd:`training_data`
-  Geopackage.
-* Install the plugin following the guidelines described in :ref:`plugin_installation`
-  searching :guilabel:`QuickMapServices`.
-* Open the plugin's search tab by clicking on :menuselection:`Web -->
-  QuickMapServices --> Search QMS`.
-* This option of the plugin allows you to filter the available base maps by the
-  current extent of the map canvas. Click on the :guilabel:`Filter by extent`
-  and you should see one service available. Click on the :guilabel:`Add` button
-  next to the map to load it.
-* The base map will be loaded and you will have a satellite background for the
-  map
+#. Start a new map and add the :guilabel:`roads` layer from the :file:`training_data`
+   Geopackage.
+#. Install the QuickMapServices plugin.
+#. Open the plugin's search tab by clicking on :menuselection:`Web -->
+   QuickMapServices --> Search QMS`. This option of the plugin allows you to filter
+   the available base maps by the current extent of the map canvas.
+#. Click on the :guilabel:`Filter by extent` and you should see one service available.
+#. Click on the :guilabel:`Add` button next to the map to load it.
+#. The base map will be loaded and you will have a satellite background for the
+   map
 
 .. image:: img/qms_result.png
    :align: center
@@ -61,11 +59,10 @@ a lot more providers available. Choose the one that best fit your needs!
 With an incredible simple interface, the QuickOSM plugin allows you to download
 `OpenStreetMap <https://www.openstreetmap.org/>`_ data.
 
-* Start a new empty project and add the :kbd:`roads` layer from the :kbd:`training_data`
-  Geopackage.
+* Start a new empty project and add the :guilabel:`roads` layer from the
+  :file:`training_data` GeoPackage.
 
-* Install the plugin following the guidelines described in :ref:`plugin_installation`
-  searching :guilabel:`QuickOSM`.
+* Install the plugin QuickOSM plugin.
 
 * QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
   :guilabel:`Vector --> Quick OSM` menu.
@@ -81,7 +78,7 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 
 * Look for ``railway`` in the ``Key`` menu and let the ``Value`` empty: so we
   are downloading all the railway features without specifying specific values.
-* Select :guilabel:`Extent of a layer` and choose :kbd:`roads`.
+* Select :guilabel:`Extent of a layer` and choose :file:`roads`.
 * Click on the :guilabel:`Run query` button.
 
 .. image:: img/quickosm_setup.png
@@ -97,10 +94,10 @@ canvas.
    :align: center
 
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
-  want to save them permanently, right click on the layer in the legend and
-  :guilabel:`Export --> Save Features As...` or open the :kbd:`Advanced` menu
-  in QuickOSM and choose where to save the data in the :guilabel:`Directory`
-  menu.
+  want to save them permanently, click on the |makepermanent| icon next to the
+  layer and choose the options you prefer. Alternatively you can open the
+  :kbd:`Advanced` menu in QuickOSM and choose where to save the data in the
+  :guilabel:`Directory` menu.
 
 |hard| |FA| The QuickOSM Query engine
 -------------------------------------------------------------------------------
@@ -175,7 +172,7 @@ Take a look at some example and try to explore the query language.
 DataPlotly plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
 attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
-Start a new project and load the :kbd:`sample_point` layer from the :kbd:`training_data`
+Start a new project and load the :guilabel:`sample_point` layer from the :file:`training_data`
 Geopackage and install the plugin following the guidelines described in :ref:`plugin_installation`
 searching :guilabel:`Data Plotly`.
 
@@ -183,9 +180,9 @@ Open the plugin by clicking on the new icon in the toolbar or in the
 :guilabel:`Plugins --> Data Plotly` menu.
 
 In the following example we are creating a simple ``Scatter Plot`` of two fields
-of :kbd:`sample_point` layer.
+of :guilabel:`sample_point` layer.
 
-In the DataPlotly Panel choose :kbd:`sample_point` in the Layer filter, :kbd:`cl`
+In the DataPlotly Panel choose :guilabel:`sample_point` in the Layer filter, :kbd:`cl`
 for the ``X Field`` and :kbd:`mg` for the ``Y Field``:
 
 .. image:: img/dataplotly_setup.png
@@ -262,6 +259,8 @@ time.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |makepermanent| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
