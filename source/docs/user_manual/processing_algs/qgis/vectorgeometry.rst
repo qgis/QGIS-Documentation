@@ -684,10 +684,7 @@ a larger number of vertices than the original one.
 If the geometries have z or m values present then these will be linearly interpolated
 at the added vertices.
 
-The number of new vertices to add to each feature geometry is specified as an
-input parameter.
-
-Vertices will be added to each segment of the layer.
+The number of new vertices to add to each segment is specified as an input parameter.
 
 .. figure:: img/densify_geometry.png
    :align: center
@@ -1224,6 +1221,45 @@ Parameters
   Vector layer resulting from the expression added.
 
 
+.. _qgisinterpolatepoint:
+
+Interpolate point on line |34|
+------------------------------
+Creates a point geometry interpolated at a set distance along line or curve
+geometries.
+
+Z and M values are linearly interpolated from existing values.
+
+If a multipart geometry is encountered, only the first part is considered when
+calculating the substring.
+
+If the specified distance is greater than the input feature's length,
+the resultant feature will have a null geometry.
+
+.. figure:: img/interpolated_point.png
+   :align: center
+
+   Interpolated point at 500m of the beginning of the line
+
+Parameters
+..........
+
+``Input layer`` [vector: line, polygon]
+  Line or polygon vector layer  from which to interpolate point placement.
+
+``Distance`` [number |dataDefined|]
+  Distance from the beginning of the line.
+
+Output
+......
+
+``Interpolated points`` [vector: point]
+  Point vector layer with features at a set distance along the line or polygon boundary.
+
+See also
+........
+:ref:`qgispointsalonglines`
+
 .. _qgiskeepnbiggestparts:
 
 Keep n biggest parts
@@ -1282,10 +1318,10 @@ Parameters
   Line vector layer to extract the substring from.
 
 ``Start distance`` [number |dataDefined|]
-  Starting point representing the distance from the beginning of the line.
+  Distance along the input line, representing the start point of the output feature.
 
 ``End distance`` [number |dataDefined|]
-  Ending point of extraction, representing the distance along the input line.
+  Distance along the input line, representing the end point of the output feature.
 
 Output
 ......
@@ -1631,8 +1667,8 @@ See also
 
 .. _qgispointsalonglines:
 
-Points along lines
-------------------
+Points along geometry
+---------------------
 Creates points at regular intervals along line or polygon geometries. Created
 points will have new attributes added for the distance along the geometry and the
 angle of the line at the point.
@@ -1652,17 +1688,19 @@ Parameters
   Input vector layer.
 
 ``Distance`` [number]
-  Set the distance between each point.
+  Distance between two consecutive points along a geometry.
 
   Default: *100*
 
 ``Start offset`` [number]
-  Specify an eventual offset where the first point should start.
+  Distance from the beginning of the input line, representing the position of
+  the first point.
 
   Default: *0*
 
 ``End offset`` [number]
-  Specify an eventual offset where the last point should end.
+  Distance from the end of the input line, representing the position beyond which
+  no point feature shoud be created.
 
   Default: *0*
 
@@ -1670,8 +1708,11 @@ Output
 ......
 
 ``Points`` [vector: point]
-  Point vector layer.
+  Point vector layer with features placed along the line or polygon boundary.
 
+See also
+........
+:ref:`qgisinterpolatepoint`
 
 .. _qgispointsdisplacement:
 
@@ -1720,7 +1761,7 @@ distant internal point from the boundary of the surface.
 
 This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin, 2016), which
 is an iterative approach guaranteed to find the true pole of inaccessibility within
-a specified tolerance (in layer units). More precise tolerances require more iterations
+a specified tolerance. A more precise tolerance (lower value) requires more iterations
 and will take longer to calculate.
 
 The distance from the calculated pole to the polygon boundary will be stored as
