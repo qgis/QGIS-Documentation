@@ -69,16 +69,17 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 
 * Open the Quick OSM dialog. The plugin has many different tabs: we will use the
   :guilabel:`Quick Query` one.
-* You can download specific features by selecting a generic ``Key`` or be more
-  specific and choose a specific ``Key`` and ``Value`` pair.
+* You can download specific features by selecting a generic :guilabel:`Key` or be more
+  specific and choose a specific :guilabel:`Key` and :guilabel:`Value` pair.
 
-  .. tip:: if you are not familiar with the ``Key`` and ``Values`` system, click
-    on the :guilabel:`Help with key/value` button. It will open a web page with
-    a complete description of this concept of OpenStreetMap
+  .. tip:: if you are not familiar with the :guilabel:`Key` and :guilabel:`Value`
+    system, click on the :guilabel:`Help with key/value` button. It will open a
+    web page with a complete description of this concept of OpenStreetMap
 
-* Look for ``railway`` in the ``Key`` menu and let the ``Value`` empty: so we
-  are downloading all the railway features without specifying specific values.
-* Select :guilabel:`Extent of a layer` and choose :file:`roads`.
+* Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
+  empty: so we are downloading all the :guilabel:`railway` features without specifying
+  specific values.
+* Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
 * Click on the :guilabel:`Run query` button.
 
 .. image:: img/quickosm_setup.png
@@ -94,7 +95,7 @@ canvas.
    :align: center
 
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
-  want to save them permanently, click on the |makepermanent| icon next to the
+  want to save them permanently, click on the |indicatorMemory| icon next to the
   layer and choose the options you prefer. Alternatively you can open the
   :kbd:`Advanced` menu in QuickOSM and choose where to save the data in the
   :guilabel:`Directory` menu.
@@ -260,7 +261,7 @@ time.
 .. |hard| image:: /static/global/hard.png
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
-.. |makepermanent| image:: /static/common/mIndicatorMemory.png
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
