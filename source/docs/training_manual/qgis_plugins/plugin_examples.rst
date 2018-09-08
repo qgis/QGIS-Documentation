@@ -11,6 +11,29 @@ help you in practice by looking at some examples of useful plugins.
 **The goal for this lesson:** To familiarize yourself with the plugin interface
 and get acquainted with some useful plugins.
 
+.. _plugin_installation:
+
+|basic| |FA| Plugin installation
+-------------------------------------------------------------------------------
+
+Installing a plugin is a straightforward operation. In this section we will describe
+the general procedure that you can follow every time you want to install a new
+plugin.
+
+* Open the the :guilabel:`Plugins --> Manage and Install Plugins...` menu.
+* Type the name of the plugin you want to install in the :guilabel:`Filter` field.
+* Select the plugin and click on :guilabel:`Install` button.
+* When it's done, close the :guilabel:`Plugin Manager`.
+
+In the following picture an example with the :guilabel:`QuickMapServices` plugin:
+
+.. image:: img/qms_install.png
+   :align: center
+
+The plugin will appear in different menu (Vector, Raster, Database or Web) depending
+on the application field of the plugin.
+
+
 |basic| |FA| The QuickMapServices Plugin
 -------------------------------------------------------------------------------
 
@@ -20,15 +43,8 @@ explore some of its features.
 
 * Start a new map and add the :guilabel:`roads` layer from the :kbd:`training_data`
   Geopackage.
-* Using the :guilabel:`Plugin Manager`, find a new plugin by entering the word
-  :kbd:`QuickMapServices` in the :guilabel:`Filter` field.
-* Select the QuickMapServices plugin from the filtered list:
-
-  .. image:: img/qms_install.png
-     :align: center
-
-* Click the :guilabel:`Install plugin` button to install.
-* When it's done, close the :guilabel:`Plugin Manager`.
+* Install the plugin following the guidelines described in :ref:`plugin_installation`
+  searching :guilabel:`QuickMapServices`.
 * Open the plugin's search tab by clicking on :menuselection:`Web -->
   QuickMapServices --> Search QMS`.
 * This option of the plugin allows you to filter the available base maps by the
@@ -69,13 +85,12 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 
 * Start a new empty project and add the :kbd:`roads` layer from the :kbd:`training_data`
   Geopackage.
-* Using the :guilabel:`Plugin Manager`, find a new plugin by entering the word
-  :kbd:`QuickOSM` in the :guilabel:`Filter` field.
-* Select the plugin and click on :guilabel:`Install`.
-* Once the process is finished, close the Plugin dialog.
 
-QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
-:guilabel:`Vector --> Quick OSM` menu.
+* Install the plugin following the guidelines described in :ref:`plugin_installation`
+  searching :guilabel:`QuickOSM`.
+
+* QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
+  :guilabel:`Vector --> Quick OSM` menu.
 
 * Open the Quick OSM dialog. The plugin has many different tabs: we will use the
   :guilabel:`Quick Query` one.
@@ -182,12 +197,9 @@ Take a look at some example and try to explore the query language.
 DataPlotly plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
 attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
-* Start a new project and load the :kbd:`sample_point` layer from the :kbd:`training_data`
-  Geopackage.
-* Open the the :guilabel:`Plugins --> Manage and Install Plugins...` menu.
-* Type :kbd:`Data Plotly` in the :guilabel:`Filter` field.
-* Select the Data Plotly plugin and click on :guilabel:`Install` button.
-* When it's done, close the :guilabel:`Plugin Manager`.
+Start a new project and load the :kbd:`sample_point` layer from the :kbd:`training_data`
+Geopackage and install the plugin following the guidelines described in :ref:`plugin_installation`
+searching :guilabel:`Data Plotly`.
 
 Open the plugin by clicking on the new icon in the toolbar or in the
 :guilabel:`Plugins --> Data Plotly` menu.
