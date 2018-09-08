@@ -811,6 +811,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
    :width: 1.5em
+.. |makepermanent| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
