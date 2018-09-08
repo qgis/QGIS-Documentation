@@ -306,6 +306,12 @@ features for overlapping and non-overlapping parts. The area of overlap will
 create as many identical overlapping features as there are features that
 participate in that overlap.
 
+.. figure:: img/union.png
+  :align: center
+
+  Union operation with a single input layer of three overlapping features (left)
+  - resulting features are moved for clarity (right)
+
 An overlay layer can also be used, in which case features from each layer
 are split at their overlap with features from the other one, creating a
 layer containing all the portions from both input and overlay layers.
@@ -313,10 +319,11 @@ The attribute table of the union layer is filled with attribute values from the
 respective original layer for non-overlapping features, and attribute values
 from both layers for overlapping features.
 
-.. figure:: img/union.png
+.. figure:: img/union_with_overlay.png
   :align: center
 
-  Union operation
+  Union operation between a two-features input layer and a single feature
+  overlay layer (left) - resulting features are moved for clarity (right)
 
 .. note::
 
