@@ -15,15 +15,14 @@ QGIS Server Python Plugins
 .. contents::
    :local:
 
-Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`): by using the
-*server interface* (:class:`QgsServerInterface`) a Python plugin running on the
-server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
+Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`):
 
-With the *server filter interface* (:class:`QgsServerFilter`) we can change the input
-parameters, change the generated output or even by providing new services.
-
-With the *access control interface* (:class:`QgsAccessControlFilter`) we can apply
-some access restriction per requests.
+* by using the *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
+  server can alter the behavior of existing core services (**WMS**, **WFS** etc.);
+* with the *server filter interface* (:class:`QgsServerFilter`) you can change the input
+  parameters, change the generated output or even provide new services;
+* with the *access control interface* (:class:`QgsAccessControlFilter`) you can apply
+  some access restriction per requests.
 
 
 Server Filter Plugins architecture
@@ -31,7 +30,7 @@ Server Filter Plugins architecture
 
 Server python plugins are loaded once when the FCGI application starts. They
 register one or more :class:`QgsServerFilter` (from this point, you might
-find useful a quick look to the `server plugins API docs <http://qgis.org/api/group__server.html>`_).
+find useful a quick look to the `server plugins API docs <https://qgis.org/api/group__server.html>`_).
 Each filter should implement at least one of three callbacks:
 
 * :func:`requestReady()`
@@ -127,7 +126,7 @@ loop for being handled there.
 Writing a server plugin
 =======================
 
-A server plugins is just a standard QGIS Python plugin as described in
+A server plugin is a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
 interface: a typical QGIS desktop plugin has access to QGIS application
 through the :class:`QgisInterface` instance, a server plugin has also
@@ -139,7 +138,9 @@ metadata entry is needed (in `metadata.txt`) ::
     server=True
 
 The example plugin discussed here (with many more example filters) is available
-on github: `QGIS HelloServer Example Plugin <https://github.com/elpaso/qgis-helloserver>`_
+on github: `QGIS HelloServer Example Plugin <https://github.com/elpaso/qgis-helloserver>`_.
+You could also find more examples at https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins 
+or browsing the `QGIS plugins repository <https://plugins.qgis.org/plugins/server>`_.
 
 Plugin files
 ------------
@@ -162,7 +163,7 @@ This file is required by Python's import system. Also, QGIS Server requires that
 file contains a :func:`serverClassFactory()` function, which is called when the
 plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface` and must return instance of your plugin's class.
-This is how the example plugin `__init__.py` looks like::
+This is how the example plugin :file:`__init__.py` looks like::
 
     # -*- coding: utf-8 -*-
 
@@ -367,7 +368,7 @@ This file is required by Python's import system. As for all QGIS server plugins,
 file contains a :func:`serverClassFactory()` function, which is called when the
 plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface` and must return instance of your plugin's class.
-This is how the example plugin `__init__.py` looks like:
+This is how the example plugin :file:`__init__.py` looks like:
 
 .. code:: python
 
