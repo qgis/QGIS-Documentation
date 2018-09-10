@@ -126,13 +126,13 @@ Parameters
   output attribute table.
 
 ``Output matrix type`` [enumeration]
-  Three different types of calculation are available:
+  Different types of calculation are available:
 
-  * Linear (N*k x 3) distance matrix
-  * Standard (N x T) distance matrix
-  * Summary distance matrix (mean, std. dev., min, max)
+  * 0 --- Linear (N*k x 3) distance matrix
+  * 1 --- Standard (N x T) distance matrix
+  * 2 --- Summary distance matrix (mean, std. dev., min, max)
 
-  Default: *Linear (N*k x 3) distance matrix*
+  Default: *0*
 
 ``Use only the nearest (k) target points`` [number]
   You can choose to calculate the distance between all points or to stop the
@@ -183,13 +183,13 @@ Parameters
   The distance field in the output attribute table will be calculated according
   to this choice:
 
-  * Meters
-  * Feet
-  * Miles
-  * Kilometers
-  * Layer units
+  * 0 --- Meters
+  * 1 --- Feet
+  * 2 --- Miles
+  * 3 --- Kilometers
+  * 4 --- Layer units
 
-  Default: *Meters*
+  Default: *0*
 
 Outputs
 .......
@@ -221,13 +221,13 @@ Parameters
   The distance field in the output attribute table will be calculated according
   to this choice:
 
-  * Meters
-  * Feet
-  * Miles
-  * Kilometers
-  * Layer units
+  * 0 --- Meters
+  * 1 --- Feet
+  * 2 --- Miles
+  * 3 --- Kilometers
+  * 4 --- Layer units
 
-  Default: *Meters*
+  Default: *0*
 
 Outputs
 .......

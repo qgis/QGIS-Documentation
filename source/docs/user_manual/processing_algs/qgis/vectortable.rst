@@ -99,16 +99,14 @@ Parameters
 ``Field name`` [string]
   Name of the new field.
 
-  Default: *(not set)*
-
 ``Field type`` [enumeration]
   Type of the new field. You can choose between:
 
-  * Integer
-  * Float
-  * String
+  * 0 --- Integer
+  * 1 --- Float
+  * 2 --- String
 
-  Default: *Integer*
+  Default: *0*
 
 ``Field length`` [number]
   Length of the field.
@@ -191,11 +189,11 @@ Parameters
 ``Field type`` [enumeration]
   Type of the new field. You can choose between:
 
-  * Integer
-  * Float
-  * String
+  * 0 --- Integer
+  * 1 --- Float
+  * 2 --- String
 
-  Default: *Integer*
+  Default: *0*
 
 ``Field length`` [number]
   Length of the field.

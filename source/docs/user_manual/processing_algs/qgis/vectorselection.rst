@@ -34,19 +34,19 @@ Parameters
 ``Operator`` [enumeration]
   Many different operators are available:
 
-  * ``=``
-  * ``≠``
-  * ``>``
-  * ``>=``
-  * ``<``
-  * ``<=``
-  * ``begins with``
-  * ``contains``
-  * ``is null``
-  * ``is not null``
-  * ``does not contain``
+  * 0 --- =
+  * 1 --- ≠
+  * 2 --- >
+  * 3 --- >=
+  * 4 --- <
+  * 5 --- <=
+  * 6 --- begins with
+  * 7 --- contains
+  * 8 --- is null
+  * 9 --- is not null
+  * 10 --- does not contain
 
-  Default: ``=``
+  Default: ``0``
 
 ``Value`` [string]
   Optional
@@ -109,16 +109,20 @@ Parameters
   Input vector layer.
 
 ``Where the features (geometric predicate)`` [enumeration] [list]
-  Spatial condition for the selection:
+  Spatial condition for the selection.
 
-  * intersect
-  * contain
-  * disjoint
-  * equal
-  * touch
-  * overlap
-  * are within
-  * cross
+  Options:
+
+  * 0 --- intersect
+  * 1 --- contain
+  * 2 --- disjoint
+  * 3 --- equal
+  * 4 --- touch
+  * 5 --- overlap
+  * 6 --- are within
+  * 7 --- cross
+
+  Default: *0*
 
 ``By comparing to the features from`` [vector: any]
   Intersection vector layer.
@@ -150,13 +154,13 @@ Parameters
 ``Method`` [enumeration]
   Method of the random selection:
 
-  * Number of selected features
-  * Percentage of selected features
+  * 0 --- Number of selected features
+  * 1 --- Percentage of selected features
 
-  Default: *Number of selected features*
+  Default: *0*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the features to select.
+  Number or percentage of features to select.
 
   Default: *10*
 
@@ -191,13 +195,13 @@ Parameters
 ``Method`` [enumeration]
   Method of the random selection:
 
-  * Number of selected features
-  * Percentage of selected features
+  * 0 --- Number of selected features
+  * 1 --- Percentage of selected features
 
-  Default: *Number of selected features*
+  Default: *0*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the feature to select.
+  Number or percentage of features to select.
 
   Default: *10*
 
@@ -205,7 +209,7 @@ Output
 ......
 
 ``Extracted (random stratified)`` [vector: any]
-  Random vector layer.
+  Vector layer containing random selected features.
 
 
 .. _qgisrandomselection:
@@ -229,13 +233,13 @@ Parameters
 ``Method`` [enumeration]
   Method of the random selection:
 
-  * Number of selected features
-  * Percentage of selected features
+  * 0 --- Number of selected features
+  * 1 --- Percentage of selected features
 
-  Default: *Number of selected features*
+  Default: *0*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the features to select.
+  Number or percentage of features to select.
 
   Default: *10*
 
@@ -272,13 +276,13 @@ Parameters
 ``Method`` [enumeration]
   Method of the random selection:
 
-  * Number of selected features
-  * Percentage of selected features
+  * 0 --- Number of selected features
+  * 1 --- Percentage of selected features
 
-  Default: *Number of selected features*
+  Default: *0*
 
 ``Number/percentage of selected features`` [number]
-  Number or the percentage of the features to select.
+  Number or percentage of features to select.
 
   Default: *10*
 
@@ -306,19 +310,19 @@ Parameters
 ``Operator`` [enumeration]
   Many different operators are available:
 
-  * ``=``
-  * ``≠``
-  * ``>``
-  * ``>=``
-  * ``<``
-  * ``<=``
-  * ``begins with``
-  * ``contains``
-  * ``is null``
-  * ``is not null``
-  * ``does not contain``
+  * 0 --- =
+  * 1 --- ≠
+  * 2 --- >
+  * 3 --- >=
+  * 4 --- <
+  * 5 --- <=
+  * 6 --- begins with
+  * 7 --- contains
+  * 8 --- is null
+  * 9 --- is not null
+  * 10 --- does not contain
 
-  Default: ``=``
+  Default: ``0``
 
 ``Value`` [string]
   Optional
@@ -328,12 +332,12 @@ Parameters
 ``Modify current selection by`` [enumeration] |32|
   How the selection of the algorithm should be managed. You have many options:
 
-  * creating new selection
-  * adding to current selection
-  * removing from current selection
-  * selecting within current selection
+  * 0 --- creating new selection
+  * 1 --- adding to current selection
+  * 2 --- selecting within current selection
+  * 3 --- removing from current selection
 
-  Default: *creating new selection*
+  Default: *0*
 
 .. _qgisselectbyexpression:
 
@@ -357,12 +361,12 @@ Parameters
 ``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
-  * creating new selection
-  * adding to current selection
-  * removing from current selection
-  * selecting within current selection
+  * 0 --- creating new selection
+  * 1 --- adding to current selection
+  * 2 --- selecting within current selection
+  * 3 --- removing from current selection
 
-  Default: *creating new selection*
+  Default: *0*
 
 
 .. _qgisselectbylocation:
@@ -386,14 +390,18 @@ Parameters
 ``Where the features (geometric predicate)`` [enumeration] [list]
   Spatial condition for the selection:
 
-  * intersect
-  * contain
-  * disjoint
-  * equal
-  * touch
-  * overlap
-  * are within
-  * cross
+  Options:
+
+  * 0 --- intersect
+  * 1 --- contain
+  * 2 --- disjoint
+  * 3 --- equal
+  * 4 --- touch
+  * 5 --- overlap
+  * 6 --- are within
+  * 7 --- cross
+
+  Default: *0*
 
 ``By comparing to the features from`` [vector: any]
   Intersection vector layer.
@@ -401,12 +409,12 @@ Parameters
 ``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
-  * creating new selection
-  * adding to current selection
-  * selecting within current selection
-  * removing from current selection
+  * 0 --- creating new selection
+  * 1 --- adding to current selection
+  * 2 --- selecting within current selection
+  * 3 --- removing from current selection
 
-  Default: *creating new selection*
+  Default: *0*
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

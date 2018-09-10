@@ -36,6 +36,8 @@ Parameters
   Larger values result in greater smoothing, but smaller values may show finer
   details and variation in point density.
 
+  Default: *100.0*
+
 ``Output raster size`` [number]
   Allows to add the output heatmap raster layer size by specifying the rows and columns
   **or** the X and Y pixel size.
@@ -67,13 +69,13 @@ Parameters
   There are many shapes available (please see the `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
   for further information):
 
-  * Quartic
-  * Triangular
-  * Uniform
-  * Triweight
-  * Epanechnikov
+  * 0 --- Quartic
+  * 1 --- Triangular
+  * 2 --- Uniform
+  * 3 --- Triweight
+  * 4 --- Epanechnikov
 
-  Default: *Quartic*
+  Default: *0*
 
 ``Decay ratio (Triangular kernels only)`` [number]
   Optional
@@ -90,13 +92,15 @@ Parameters
   * A value greater than 1 indicates that the heat is higher towards the edge of
     the search radius than at the center.
 
+  Default: *0.0*
+
 ``Output value scaling`` [enumeration]
   Allow to change the values of the output heatmap raster.
 
   Options:
 
-  * Raw
-  * Scaled
+  * 0 --- Raw
+  * 1 --- Scaled
 
   Default: *Raw*
 
@@ -212,8 +216,12 @@ Parameters
 ``Number of columns`` [number]
   Total number of columns of the output raster layer.
 
+  Default: *300*
+
 ``Number of rows`` [number]
   Total number of rows of the output raster layer.
+
+  Default: *300*
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
@@ -260,16 +268,20 @@ Parameters
 ``Interpolation method`` [enumeration]
   There are two different choices:
 
-  * Linear
-  * Clough-Toucher (cubic)
+  * 0 --- Linear
+  * 1 --- Clough-Toucher (cubic)
 
-  Default: *Linear*
+  Default: *0*
 
 ``Number of columns`` [number]
   Total number of columns of the output raster layer.
 
+  Default: *300*
+
 ``Number of rows`` [number]
   Total number of rows of the output raster layer.
+
+  Default: *300*
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by

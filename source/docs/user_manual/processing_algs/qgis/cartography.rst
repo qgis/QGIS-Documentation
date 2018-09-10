@@ -40,31 +40,35 @@ Parameters
 ``Minimum number of colors`` [number]
   Minimum colors number to assign.
 
+  Default: *4*
+
 ``Minimum distance between features`` [number]
   Prevent nearby (but non-touching) features from being assigned equal colors.
 
-``Balance color assignment`` [enumeration]
-  Options:
+  Default: *0.0*
 
-  * by feature count
+``Balance color assignment`` [enumeration]
+  Options are:
+
+  * 0 --- By feature count
 
     Attempts to assign colors so that the count of features assigned to each
     individual color index is balanced.
 
-  * by assigned area
+  * 1 --- By assigned area
 
     Assigns colors so that the total area of features assigned to each color is
     balanced. This mode can be useful to help avoid large features resulting in
     one of the colors appearing more dominant on a colored map.
 
 
-  * by distance between colors
+  * 2 --- By distance between colors
 
     Assigns colors in order to maximize the distance between features of the same
     color. This mode helps to create a more uniform distribution of colors across
     a map.
 
-  Default: *by feature count*
+  Default: *0*
 
 Outputs
 .......

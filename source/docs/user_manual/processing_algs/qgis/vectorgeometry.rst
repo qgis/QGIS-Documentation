@@ -37,11 +37,14 @@ Parameters
   Vector layer in input.
 
 ``Calculate using`` [enumeration]
-  Choose different calculation type for the geometric properties:
+  Calculation parameters to use for the geometric properties.
+  Options are:
 
-  * Layer CRS
-  * Project CRS
-  * Ellipsoidal
+  * 0 --- Layer CRS
+  * 1 --- Project CRS
+  * 2 --- Ellipsoidal
+
+  Default: *0*
 
 Output
 ......
@@ -229,9 +232,9 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-``Distance`` [number]
+``Distance`` [number |dataDefined|]
   Distance radius of the buffer calculated from the boundary of each feature.
-  Moreover you can use the Data Defined button on the right to choose a field of
+  Moreover you can use the Data Defined button on the right to choose a field
   from which the radius will be calculated: this way you can have different radius
   for each feature (see :ref:`qgisvariabledistancebuffer`).
 
@@ -245,6 +248,13 @@ Parameters
 
 ``End cap style`` [enumeration]
   Controls how line endings are handled in the buffer.
+  Options are:
+
+  * 0 --- Round
+  * 1 --- Flat
+  * 2 --- Square
+
+  Default: *0*
 
   .. figure:: img/buffer_cap_style.png
      :align: center
@@ -254,6 +264,13 @@ Parameters
 ``Join style`` [enumeration]
   Specifies whether round, miter or beveled joins should be used when offsetting
   corners in a line.
+  Options are:
+
+  * 0 --- Round
+  * 1 --- Miter
+  * 2 --- Bevel
+
+  Default: *0*
 
 ``Miter limit`` [number]
   Only applicable for miter join styles.
@@ -310,7 +327,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Create point on surface for each part`` [boolean] |32|
+``Create point on surface for each part`` [boolean |dataDefined|] |32|
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -360,11 +377,11 @@ Parameters
 
   Options:
 
-  * The one selected in digitizing settings
-  * QGIS
-  * GEOS
+  * 0 --- The one selected in digitizing settings
+  * 1 --- QGIS
+  * 2 --- GEOS
 
-  Default: *The one selected in digitizing settings*
+  Default: *2*
 
 Outputs
 .......
@@ -480,13 +497,14 @@ Parameters
   Input vector layer to transform.
 
 ``New geometry type`` [enumeration]
-  List of all the conversions supported:
+  Geometry type to apply to the output features.
+  Options are:
 
-  * Centroids
-  * Vertices
-  * Linestrings
-  * Multilinestrings
-  * Polygons
+  * 0 --- Centroids
+  * 1 --- Nodes
+  * 2 --- Linestrings
+  * 3 --- Multilinestrings
+  * 4 --- Polygons
 
   .. note:: Conversion types availability depends on the input layer and the conversion
     chosen: e.g. it is not possible to convert a point to a line.
@@ -596,7 +614,7 @@ Parameters
 ``Inner radius`` [number |dataDefined|]
   Optional
 
-  Inner radius value. If 0 the wedge will attached to the source point.
+  Inner radius value. If 0 the wedge will begin from the source point.
 
   Default: *0.0*
 
@@ -659,7 +677,7 @@ Parameters
 ``Input layer`` [vector: polygon]
   Polygon layer with holes.
 
-``Remove holes with area less than`` [number]
+``Remove holes with area less than`` [number |dataDefined|]
   Optional
 
   Only holes with an area less than this threshold will be deleted. If ``0.0`` is
@@ -1071,14 +1089,14 @@ Parameters
 ``Input layer`` [vector: line, polygon]
   Vector layer to remove vertices from.
 
-``Minimum`` [number]
+``Minimum`` [number |dataDefined|]
   Optional
 
   Minimum m-value allowed to keep a vertex.
 
   Default: *Not set*
 
-``Maximum`` [number]
+``Maximum`` [number |dataDefined|]
   Optional
 
   Maximum m-value allowed to keep a vertex.
@@ -1122,14 +1140,14 @@ Parameters
 ``Input layer`` [vector: line, polygon]
   Vector layer to remove vertices from.
 
-``Minimum`` [number]
+``Minimum`` [number |dataDefined|]
   Optional
 
   Minimum z-value allowed to keep a vertex.
 
   Default: *Not set*
 
-``Maximum`` [number]
+``Maximum`` [number |dataDefined|]
   Optional
 
   Maximum z-value allowed to keep a vertex.
@@ -1196,9 +1214,11 @@ Parameters
 
   Available options are:
 
-  * Polygon
-  * Line
-  * Point
+  * 0 --- Polygon
+  * 1 --- Line
+  * 2 --- Point
+
+  Default: *0*
 
 ``Output geometry has z dimension`` [boolean]
   Choose if the output geometry should have the z dimension.
@@ -1400,10 +1420,12 @@ Parameters
 ``Geometry type`` [enumeration]
   Numerous enclosing geometry types are supported:
 
-  * Envelope (Bounding Box)
-  * Minimum Oriented Rectangle
-  * Minimum Enclosing Circle
-  * Convex Hull
+  * 0 --- Envelope (Bounding Box)
+  * 1 --- Minimum Oriented Rectangle
+  * 2 --- Minimum Enclosing Circle
+  * 3 --- Convex Hull
+
+  Default: *0*
 
   .. figure:: img/minimum_bounding.png
      :align: center
@@ -1468,12 +1490,12 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-``Number of rings`` [number]
+``Number of rings`` [number |dataDefined|]
   Total number of rings that the buffer must have. It can be a unique value (same
   ring number for all the features) or it can be taken from features data (different
   ring number depending on the feature values).
 
-``Distance between rings`` [number]
+``Distance between rings`` [number |dataDefined|]
   Distance between the single rings. It can be a unique value (same distance for
   all the features) or it can be taken from features data (different distance
   depending on the feature values).
@@ -1541,13 +1563,13 @@ Parameters
 ``Input layer`` [vector: line]
   Line vector layer in input to elaborate the offset on.
 
-``Distance`` [number]
+``Distance`` [number |dataDefined|]
   Distance of the offset. Negative distances are also supported: for instance a
   negative distance will create the offset to the other part of the layer.
 
   Default: *10.0*
 
-``Segment`` [number |dataDefined|]
+``Segment`` [number]
   Number of line segments to use to approximate a quarter circle when creating
   rounded offsets.
 
@@ -1556,8 +1578,13 @@ Parameters
 ``Join style`` [enumeration]
   Specify whether round, miter or beveled joins should be used when offsetting
   corners in a line.
+  Options are:
 
-  Default: *Round*
+  * 0 --- Round
+  * 1 --- Miter
+  * 2 --- Bevel
+
+  Default: *0*
 
 ``Miter limit`` [number]
   Only applicable for mitered join styles, and controls the maximum distance from
@@ -1649,7 +1676,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-``Create point on surface for each part`` [boolean] |32|
+``Create point on surface for each part`` [boolean |dataDefined|] |32|
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -1865,11 +1892,15 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer to project.
 
-``Bearing (degrees from North)`` [number]
+``Bearing (degrees from North)`` [number |dataDefined|]
   Clockwise angle starting from North, in degree (°) unit.
 
-``Distance`` [number]
+  Default: *0.0*
+
+``Distance`` [number |dataDefined|]
   Distance to offset geometries, in layer units.
+
+  Default: *1.0*
 
 Output
 ......
@@ -1928,13 +1959,13 @@ Parameters
   Input point vector layer.
 
 ``Buffer shape`` [enumeration]
-  Different shape available:
+  Different shapes available:
 
-  * Rectangles
-  * Ovals
-  * Diamonds
+  * 0 --- Rectangles
+  * 1 --- Ovals
+  * 2 --- Diamonds
 
-  Default: *Rectangles*
+  Default: *0*
 
 ``Width`` [number]
   Width of the buffer shape.
@@ -1992,11 +2023,11 @@ Parameters
 ``Buffer shape`` [enumeration]
   Different shape available:
 
-  * Rectangles
-  * Ovals
-  * Diamonds
+  * 0 --- Rectangles
+  * 1 --- Ovals
+  * 2 --- Diamonds
 
-  Default: *Rectangles*
+  Default: *0*
 
 ``Width`` [tablefield: numeric]
   Width of the buffer shape.
@@ -2058,8 +2089,8 @@ Outputs
 
 .. _qgisreverselinedirection:
 
-Reverse line
-------------
+Reverse line direction
+----------------------
 Inverts the direction of a line layer.
 
 .. figure:: img/reverse_line.png
@@ -2094,7 +2125,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Rotation (degrees clockwise)`` [number]
+``Rotation (degrees clockwise)`` [number |dataDefined|]
   Angle of the rotation in degrees.
 
   Default: *0.0*
@@ -2130,7 +2161,7 @@ Parameters
 ``Input layer`` [vector: line, polygon]
   Vector layer in input.
 
-``Maximum angle between vertices (degrees)`` [number]
+``Maximum angle between vertices (degrees)`` [number |dataDefined|]
   Maximum allowed radius angle between vertices on the straightened geometry.
 
   Default: *5.0*
@@ -2162,7 +2193,7 @@ Parameters
 ``Input layer`` [vector: line, polygon]
   Vector layer in input.
 
-``Maximum offset distance`` [number]
+``Maximum offset distance`` [number |dataDefined|]
   Maximum allowed offset distance between the original curve and the segmentized
   representation, in the layer units.
 
@@ -2199,6 +2230,11 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
+``M Value`` [number |dataDefined|]
+  New M value to assign to the features.
+
+  Default: *0.0*
+
 Output
 ......
 
@@ -2230,9 +2266,9 @@ Parameters
 ``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
   Value to use in case the vertex does not intersect (a valid pixel of) the raster..
 
-  Default: *0*
+  Default: *0.0*
 
-``Scale`` [number |dataDefined|]
+``Scale factor`` [number |dataDefined|]
   Scaling value: the band values are multiplied by this value.
 
   Default: *1.0*
@@ -2268,6 +2304,11 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
+``Z Value`` [number |dataDefined|]
+  New Z value to assign to the features.
+
+  Default: *0.0*
+
 Output
 ......
 
@@ -2277,8 +2318,8 @@ Output
 
 .. _qgissimplifygeometries:
 
-Simplify geometries
--------------------
+Simplify
+--------
 Simplifies the geometries in a line or polygon layer. It creates a new layer with
 the same features as the ones in the input layer, but with geometries containing
 a lower number of vertices.
@@ -2305,13 +2346,13 @@ Parameters
 
   Options:
 
-  * Distance (Douglas-Peucker)
-  * Snap to grid
-  * Area (Visvalingam)
+  * 0 --- Distance (Douglas-Peucker)
+  * 1 --- Snap to grid
+  * 2 --- Area (Visvalingam)
 
-  Default: *Distance (Douglas-Peucker)*
+  Default: *0*
 
-``Tolerance`` [number]
+``Tolerance`` [number |dataDefined|]
   Threshold tolerance (in units of the layer): if the distance between two nodes is smaller than the
   tolerance value, the segment will be simplified and vertices will be removed.
 
@@ -2352,26 +2393,27 @@ Parameters
 ``Side`` [enumeration]
   Choose which side the buffer should be created:
 
-  * Left
-  * Right
+  * 0 -- Left
+  * 1 -- Right
 
-  Default: *Left*
+  Default: *0*
 
 ``Segments`` [number]
   Controls the number of line segments to use to approximate a quarter circle when
   creating rounded offsets.
 
-  Default: *5*
+  Default: *8*
 
 ``Join style`` [enumeration]
   Specifies whether round, miter or beveled joins should be used when offsetting
   corners in a line.
+  Options are:
 
-  * Round
-  * Miter
-  * Bevel
+  * 0 --- Round
+  * 1 --- Miter
+  * 2 --- Bevel
 
-  Default: *Round*
+  Default: *0*
 
 ``Miter limit`` [number]
   Only applicable for mitered join styles, and controls the maximum distance from
@@ -2388,8 +2430,8 @@ Outputs
 
 .. _qgissmoothgeometry:
 
-Smooth geometry
----------------
+Smooth
+------
 Smooths the geometries in a line or polygon layer. It creates a new layer with
 the same features as the ones in the input layer, but with geometries containing
 a **higher number of vertices and corners** in the geometries smoothed out.
@@ -2413,7 +2455,7 @@ Parameters
 ``Input layer`` [vector: line, polygon]
   Polygon or line vector to smooth.
 
-``Iterations`` [number]
+``Iterations`` [number |dataDefined|]
   With many iterations the resulting layer will have many nodes.
 
   Default: *1*
@@ -2423,7 +2465,7 @@ Parameters
 
      Different number of iterations cause smoother geometries
 
-``Offset`` [number]
+``Offset`` [number |dataDefined|]
   Larger values will *move* the resulting layer borders from the input layer ones.
 
   Default: *0.25*
@@ -2434,10 +2476,10 @@ Parameters
      In blue the input layer. Offset value of 0.25 results in the red line while
      offset value of 0.50 results in the green line
 
-``Maximum angle to smooth`` [number]
+``Maximum node angle to smooth`` [number |dataDefined|]
   Every node below this value will be smoothed.
 
-  Default: *180*
+  Default: *180.0*
 
 Outputs
 .......
@@ -2476,13 +2518,13 @@ Parameters
   to the vertex to move).
   Choose between different snapping options:
 
-  * Prefer aligning nodes, insert extra vertices where required
-  * Prefer closest point, insert extra vertices where required
-  * Prefer aligning nodes, don't insert new vertices
-  * Prefer closest point, don't insert new vertices
-  * Move end points only, prefer aligning nodes
-  * Move end points only, prefer closest point
-  * Snap end points to end points only
+  * 0 --- Prefer aligning nodes, insert extra vertices where required
+  * 1 --- Prefer closest point, insert extra vertices where required
+  * 2 --- Prefer aligning nodes, don't insert new vertices
+  * 3 --- Prefer closest point, don't insert new vertices
+  * 4 --- Move end points only, prefer aligning nodes
+  * 5 --- Move end points only, prefer closest point
+  * 6 --- Snap end points to end points only
 
   Default: *Prefer aligning nodes, insert extra vertices where required*
 
@@ -2514,22 +2556,22 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer to snap.
 
-``X Grid Spacing`` [number]
+``X Grid Spacing`` [number |dataDefined|]
   Spacing of the grid on the X axis.
 
   Default: *1.0*
 
-``Y Grid Spacing`` [number]
+``Y Grid Spacing`` [number |dataDefined|]
   Spacing of the grid on the Y axis.
 
   Default: *1.0*
 
-``Z Grid Spacing`` [number]
+``Z Grid Spacing`` [number |dataDefined|]
   Spacing of the grid on the Z axis.
 
   Default: *0.0*
 
-``M Grid Spacing`` [number]
+``M Grid Spacing`` [number |dataDefined|]
   Spacing of the grid on the M axis.
 
   Default: *0.0*
@@ -2569,7 +2611,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer that will have its feature geometries subdivided.
 
-``Maximum nodes in parts`` [number]
+``Maximum nodes in parts`` [number |dataDefined|]
   Maximum number of vertices each new geometry part is allowed to have.
   Fewer *sub-parts* for higher values.
 
@@ -2625,11 +2667,17 @@ Parameters
 ``Start width`` [number |dataDefined|]
   Represents the radius of the buffer applied at the start point of the line feature.
 
+  Default: *0.0*
+
 ``End width`` [number |dataDefined|]
   Represents the radius of the buffer applied at the end point of the line feature.
 
+  Default: *1.0*
+
 ``Segments`` [number |dataDefined|]
   Number of the buffer segments.
+
+  Default: *16*
 
 Output
 ......
@@ -2671,24 +2719,24 @@ Parameters
 ``Input layer`` [vector: line]
   Input line vector layer.
 
-``Length of the transect`` [number]
+``Length of the transect`` [number |dataDefined|]
   Length in map unit of the transect.
 
   Default: *5.0*
 
-``Angle in degrees from the original line at the vertices`` [number]
+``Angle in degrees from the original line at the vertices`` [number |dataDefined|]
   Change the angle of the transect.
 
   Default: *90.0*
 
 ``Side to create the transect`` [enumeration]
-  Choose the side of the transect. Three different options available:
+  Choose the side of the transect. Available options are:
 
-  * Left
-  * Right
-  * Both
+  * 0 --- Left
+  * 1 --- Right
+  * 2 --- Both
 
-  Default: *Left*
+  Default: *0*
 
 Outputs
 .......
@@ -2749,10 +2797,12 @@ Parameters
 ``Input layer`` [vector: line]
   Line vector layer in input.
 
-``Segments`` [number]
+``Segments`` [number |dataDefined|]
   Number of the buffer segments. It can be a unique value (same value for all the
   features) or it can be taken from features data (different value depending
   on the feature attribute).
+
+  Default: *16*
 
 Output
 ......
