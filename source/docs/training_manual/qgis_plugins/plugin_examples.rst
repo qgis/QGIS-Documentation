@@ -5,141 +5,232 @@
 |LS| Useful QGIS Plugins
 ===============================================================================
 
-Now that you can install, enable and disable plugins, let's see how this can 
-help you in practice by looking at some examples of useful plugins. 
+Now that you can install, enable and disable plugins, let's see how this can
+help you in practice by looking at some examples of useful plugins.
 
 **The goal for this lesson:** To familiarize yourself with the plugin interface
 and get acquainted with some useful plugins.
 
-|basic| |FA| The Raster Terrain Analysis Plugin
+
+|basic| |FA| The QuickMapServices Plugin
 -------------------------------------------------------------------------------
 
-* Start a new map with only the :guilabel:`srtm_41_19.tif` raster dataset in it
-  (look in :kbd:`exercise_data/raster/SRTM`).
+The QuickMapServices plugin is a simple and easy to use plugin that adds base maps
+to your QGIS project. It has many different options and settings, let's start to
+explore some of its features.
 
-From the lesson on raster analysis, you're already familiar with raster
-analysis functions. You used Processing tools (accessible via
-:menuselection:`Raster --> Analysis`) for this. However, you should also know about
-the Raster Terrain Analysis plugin. This ships standard with newer versions of
-QGIS, and so you don't need to install it separately.
+#. Start a new map and add the :guilabel:`roads` layer from the :file:`training_data`
+   Geopackage.
+#. Install the QuickMapServices plugin.
+#. Open the plugin's search tab by clicking on :menuselection:`Web -->
+   QuickMapServices --> Search QMS`. This option of the plugin allows you to filter
+   the available base maps by the current extent of the map canvas.
+#. Click on the :guilabel:`Filter by extent` and you should see one service available.
+#. Click on the :guilabel:`Add` button next to the map to load it.
+#. The base map will be loaded and you will have a satellite background for the
+   map
 
-* Open the :guilabel:`Plugin Manager` and check that the Raster Terrain
-  Analysis plugin is enabled:
-
-  .. image:: img/raster_terrain_enabled.png
-     :align: center
-
-* Open the :menuselection:`Raster` menu. You should see a
-  :menuselection:`Terrain analysis` submenu.
-* Click on :menuselection:`Terrain analysis --> Relief` and input the following
-  options:
-
-  .. image:: img/terrain_analysis_dialog.png
-     :align: center
-
-* Save the new file under :kbd:`exercise_data/plugins/relief.tif` (create a new
-  folder if necessary).
-* Leave the :guilabel:`Output format` and :guilabel:`Z factor` unchanged.
-* Make sure the :guilabel:`Add result to project` box is checked.
-* Click the :guilabel:`Create automatically` button. The list below will be
-  populated:
-
-  .. image:: img/terrain_analysis_list.png
-     :align: center
-
-  These are the colors that the plugin will use to create the relief.
-
-* If you like, you can change these colors by double-clicking on each row's
-  color bar. For example:
-
-  .. image:: img/color_changes.png
-     :align: center
-
-* Click :guilabel:`OK` and the relief will be created:
-
-  .. image:: img/relief_created.png
-     :align: center
-
-This achieves a similar effect to when you used the semi-transparent hillshade
-as an overlay over another raster layer. The advantage of this plugin is that
-it creates this effect using only one layer.
-
-|basic| |FA| The OpenLayers Plugin
--------------------------------------------------------------------------------
-
-* Start a new map and add the :guilabel:`roads.shp` layer to it.
-* Zoom in over the |majorUrbanName| area.
-* Using the :guilabel:`Plugin Manager`, find a new plugin by entering the word
-  :kbd:`OpenLayers` in the :guilabel:`Filter` field.
-* Select the OpenLayers plugin from the filtered list:
-
-  .. image:: img/select_openlayers.png
-     :align: center
-
-* Click the :guilabel:`Install plugin` button to install.
-* When it's done, close the :guilabel:`Plugin Manager`.
-
-Before using it, make sure that both your map and the plugin are configured
-properly:
-
-* Open the plugin's settings by clicking on :menuselection:`Web --> 
-  OpenLayers plugin --> OpenLayers Overview`.
-* Use the panel to choose a map type you want. In this example, we'll use the
-  "Hybrid" type map, but you can choose any others if you want.
-
-  .. image:: img/hybrid_map_selected.png
-     :align: center
-
-* Open the :guilabel:`Project Properties` Dialog by selecting 
-  :menuselection:`Project --> Properties...` from the menu.
-
-* Enable "on the fly" projection and use the Google Mercator projection:
-
-  .. image:: img/google_mercator_crs.png
-     :align: center
-
-* Now use the plugin to give you a Google map of the area. You can click on
-  :menuselection:`Web --> OpenLayers Plugin --> Add Google Hybrid Layer` to
-  add it: 
-
-  .. image:: img/add_google_hybrid.png
-     :align: center
-
-This will load a new raster image in from Google that you can use as a
-backdrop, or to help you find out where you are on the map. Here is such a
-layer, with our own vector road layer as overlay:
-
-.. image:: img/google_hybrid_result.png
+.. image:: img/qms_result.png
    :align: center
 
-.. note:: You may need to drag your roads layer above the Google layer to make
-   it visible above the background layer. It may also be necessary to zoom to the
-   extent of the roads layer to re-center the map.
+QuickMapServices plugin has a lot of available base maps available.
 
-|moderate| |FA| The GeoSearch Plugin
+Close the :guilabel:`Search QMS` panel we open before and click again on
+:menuselection:`Web --> QuickMapServices`. The first menu lists different map
+providers with all the available maps:
+
+.. image:: img/qms_menu.png
+   :align: center
+
+But there is more.
+
+If the default maps are not enough for you, you can add other map providers.
+Click on :menuselection:`Web --> QuickMapServices --> Settings` and go in the
+:guilabel:`More services` tab. Read carefully the message of this tab and then click
+on the :kbd:`Get Contributed pack` button.
+
+If you open now the :menuselection:`Web --> QuickMapServices` menu you will see
+a lot more providers available. Choose the one that best fit your needs!
+
+
+|basic| |FA| The QuickOSM Plugin
 -------------------------------------------------------------------------------
 
-* Start a new map with no datasets. 
+With an incredible simple interface, the QuickOSM plugin allows you to download
+`OpenStreetMap <https://www.openstreetmap.org/>`_ data.
 
-* Open the :guilabel:`Plugin Manager` and filter for the GeoSearch Plugin 
-  and click :guilabel:`Install Plugin` to install it.
+* Start a new empty project and add the :guilabel:`roads` layer from the
+  :file:`training_data` GeoPackage.
 
-  .. image:: img/find_geosearch_plugin.png
-     :align: center
+* Install the plugin QuickOSM plugin.
 
-* Close the :guilabel:`Plugin Manager`.
-* You can now use the GeoSearch plugin to search for placenames. Click on 
-  :menuselection:`Plugins --> GeoSearch Plugin --> GeoSearch` to open the
-  GeoSearch dialog.
+* QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
+  :guilabel:`Vector --> Quick OSM` menu.
 
-  .. image:: img/geosearch_menu.png
-     :align: center
+* Open the Quick OSM dialog. The plugin has many different tabs: we will use the
+  :guilabel:`Quick Query` one.
+* You can download specific features by selecting a generic :guilabel:`Key` or be more
+  specific and choose a specific :guilabel:`Key` and :guilabel:`Value` pair.
 
-* Search for |majorUrbanName| in the GeoSearch Dialog to locate it on your map:
+  .. tip:: if you are not familiar with the :guilabel:`Key` and :guilabel:`Value`
+    system, click on the :guilabel:`Help with key/value` button. It will open a
+    web page with a complete description of this concept of OpenStreetMap
 
-  .. image:: img/city_search.png
-     :align: center
- 
+* Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
+  empty: so we are downloading all the :guilabel:`railway` features without specifying
+  specific values.
+* Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
+* Click on the :guilabel:`Run query` button.
+
+.. image:: img/quickosm_setup.png
+   :align: center
+
+After some seconds the plugin will download all the features tagged in OpenStreetMap
+as ``railway`` and load them directly into the map.
+
+Nothing more! All the layers are loaded in the legend and are shown in the map
+canvas.
+
+.. image:: img/quickosm_result.png
+   :align: center
+
+.. warning:: QuickOSM creates temporary layer when downloading the data. If you
+  want to save them permanently, click on the |indicatorMemory| icon next to the
+  layer and choose the options you prefer. Alternatively you can open the
+  :kbd:`Advanced` menu in QuickOSM and choose where to save the data in the
+  :guilabel:`Directory` menu.
+
+|hard| |FA| The QuickOSM Query engine
+-------------------------------------------------------------------------------
+
+The quickest way to download data from QuickOSM plugin is using the :guilabel:`Quick query`
+tab and set some small parameters. But if you need some more specific data?
+
+If you are an OpenStreetMap query master you can use QuickOSM plugin also with
+your personal queries.
+
+QuickOSM has an incredible data parser that, together with the amazing query engine
+of Overpass, lets you download data with your specific needs.
+
+For example: we want to download the mountain peaks that belongs into a specific
+mountain area known as `Dolomites <https://en.wikipedia.org/wiki/Dolomites>`_.
+
+You cannot achieve this task with the :guilabel:`Quick query` tab, you have to
+be more specific and write your own query. Let's try to do this.
+
+* Start a new project.
+* Open the QuickOSM plugin and click on the :guilabel:`Query` tab.
+* Copy and paste the following code into the query canvas::
+
+      <!--
+    This shows all mountains (peaks) in the Dolomites.
+    You may want to use the "zoom onto data" button. =>
+    -->
+    <osm-script output="json">
+    <!-- search the area of the Dolomites -->
+    <query type="area">
+      <has-kv k="place" v="region"/>
+      <has-kv k="region:type" v="mountain_area"/>
+      <has-kv k="name:en" v="Dolomites"/>
+    </query>
+    <print mode="body" order="quadtile"/>
+    <!-- get all peaks in the area -->
+    <query type="node">
+      <area-query/>
+      <has-kv k="natural" v="peak"/>
+    </query>
+    <print mode="body" order="quadtile"/>
+    <!-- additionally, show the outline of the area -->
+    <query type="relation">
+      <has-kv k="place" v="region"/>
+      <has-kv k="region:type" v="mountain_area"/>
+      <has-kv k="name:en" v="Dolomites"/>
+    </query>
+    <print mode="body" order="quadtile"/>
+    <recurse type="down"/>
+    <print mode="skeleton" order="quadtile"/>
+    </osm-script>
+
+  .. note:: this query is written in a ``xml`` like language. If you are more
+    used to the ``Overpass QL`` you can write the query in this language.
+
+and click on :guilabel:`Run Query`:
+
+.. image:: img/quickosm_advanced_query.png
+   :align: center
+
+The mountain peaks layer will be downloaded and shown in QGIS:
+
+.. image:: img/quickosm_advanced_result.png
+   :align: center
+
+You can write complex queries using the `Overpass Query language <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
+Take a look at some example and try to explore the query language.
+
+|basic| |FA| The DataPlotly Plugin
+-------------------------------------------------------------------------------
+
+DataPlotly plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
+attributes data thanks to the `plotly <https://plot.ly/>`_ library.
+
+Start a new project and load the :guilabel:`sample_point` layer from the :file:`training_data`
+Geopackage and install the plugin following the guidelines described in :ref:`plugin_installation`
+searching :guilabel:`Data Plotly`.
+
+Open the plugin by clicking on the new icon in the toolbar or in the
+:guilabel:`Plugins --> Data Plotly` menu.
+
+In the following example we are creating a simple ``Scatter Plot`` of two fields
+of :guilabel:`sample_point` layer.
+
+In the DataPlotly Panel choose :guilabel:`sample_point` in the Layer filter, :kbd:`cl`
+for the ``X Field`` and :kbd:`mg` for the ``Y Field``:
+
+.. image:: img/dataplotly_setup.png
+   :align: center
+
+If you want you can change the colors, the marker type, the transparency and
+many other settings: just try to change some parameters to create the plot as the
+following picture. Once you set up all the parameters click on the
+:guilabel:`Create Plot` button to create the plot:
+
+.. image:: img/dataplotly_scatterplot.png
+   :align: center
+
+The plot is interactive: this means you can use all the upper buttons to resize,
+move, or zoom in/out the plot canvas. Moreover, each element of the plot is interactive:
+by clicking or selecting one or more point on the plot, the corresponding point(s)
+will be selected in the plot canvas.
+
+You can save the plot as a ``png`` static image or as an ``html`` file by clicking
+on the |saveMapAsImage| or on the |addHtml| button in the lower right corner
+of the plot.
+
+There is more. Sometimes it can be useful to have two (or more) plots showing
+different plot types with different variables on the same page. Let's do this!
+
+* Go back to the main plot settings tab by clicking on the |symbology| button
+  in the upper left corner of the plugin panel.
+* Change the ``Plot Type`` to ``Box Plot``.
+* Choose :kbd:`group` as ``Grouping Field`` and :kbd:`ph` as ``Y Field``.
+* In the lower part of the Panel change the ``Type of Plot`` from ``SinglePlot``.
+  to ``SubPlots`` and let the default option ``Plot in Rows`` selected:
+
+.. image:: img/dataplotly_boxplot.png
+   :align: center
+
+* Once done click on the :guilabel:`Create Plot` button to draw the plot:
+
+.. image:: img/dataplotly_subplots.png
+   :align: center
+
+Now both scatter plot and box plot are shown in the same plot page. You still
+have the chance to click on each plot item and select the corresponding features
+in the map canvas.
+
+.. tip:: Each plot has its own manual page available in the |helpContents| tab.
+  Try to explore all the plot types and see all the other settings available.
+
 |IC|
 -------------------------------------------------------------------------------
 
@@ -164,7 +255,16 @@ time.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
+.. |addHtml| image:: /static/common/mActionAddHtml.png
+   :width: 1.5em
 .. |basic| image:: /static/global/basic.png
-.. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |hard| image:: /static/global/hard.png
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

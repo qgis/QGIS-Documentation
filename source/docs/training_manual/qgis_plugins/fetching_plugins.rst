@@ -21,24 +21,26 @@ and :guilabel:`Plugin Manager`.
   .. image:: img/select_processing_plugin.png
      :align: center
 
-* Click in the box next to this plugin and uncheck it to uninstall it.
+* Click in the box next to this plugin and uncheck it to deactivate it.
 * Click :guilabel:`Close`.
 * Looking at the menu, you will notice that the :guilabel:`Processing` menu is
   is now gone. This means that many of the processing
   functions you have been using before have disappeared! This is because they
-  are part of the :guilabel:`Processing` plugin, which needs to be activated for
-  you to use them.
+  are part of the :guilabel:`Processing` plugin, which needs to be activated to
+  use them.
 * Open the :guilabel:`Plugin Manager` again and reactivate the
   :guilabel:`Processing` plugin by clicking in the checkbox next to it and clicking
   :guilabel:`Close`..
 * The :guilabel:`Processing` menu should be available again.
 
 
+.. _plugin_installation:
+
 |basic| |FA| Installing New Plugins
 -------------------------------------------------------------------------------
 
 The list of plugins that you can activate and deactivate draws from the plugins
-that you currently have installed. 
+that you currently have installed.
 
 * To install new plugins, select the :guilabel:`Not Installed` option in the
   :guilabel:`Plugin Manager` dialog. The plugins available for you to install
@@ -57,7 +59,10 @@ that you currently have installed.
 * A plugin can be installed by clicking the :guilabel:`Install Plugin` button
   below the plugin information panel.
 
-|basic| |FA| Configuring Additional Plugin Repositories 
+.. note:: if the plugin has some error it will be listed in the :guilabel:`Invalid`
+  tab. You can then contact the plugin owner to fix the problem.
+
+|basic| |FA| Configuring Additional Plugin Repositories
 -------------------------------------------------------------------------------
 
 The plugins that are available to you for installation depend on which
@@ -73,14 +78,14 @@ you want to configure additional repositories. To do this:
 
 * Open the :guilabel:`Settings` tab in the :guilabel:`Plugin Manager`
   dialog:
-  
+
   .. image:: img/plugin_manager_settings.png
      :align: center
 
 * Click :guilabel:`Add` to find and add a new repository.
 
 * Provide a Name and URL for the new repository you want to configure and make
-  sure the :guilabel:`Enabled` checkbox is selected. 
+  sure the :guilabel:`Enabled` checkbox is selected.
 
   .. image:: img/new_plugins_setting.png
      :align: center
@@ -94,7 +99,7 @@ you want to configure additional repositories. To do this:
 * You can also select the option to display Experimental Plugins by selecting
   the :guilabel:`Show also experimental plugins` checkbox.
 
-* If you now switch back to the :guilabel:`Get More` tab, you will see that
+* If you now switch back to the :guilabel:`Not Installed` tab, you will see that
   additional plugins are now available for installation.
 
 * To install a plugin, simply click on it in the list and then click the
