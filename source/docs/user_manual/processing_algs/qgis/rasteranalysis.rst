@@ -174,6 +174,8 @@ Parameters
 ``Band number`` [raster band]
   Band of the raster you want to recalculate values.
 
+  Default: *1*
+
 ``Layer containing class breaks`` [vector: any]
   Vector layer containing the values to use for classification.
 
@@ -251,6 +253,8 @@ Parameters
   
 ``Band number`` [raster band]
   Band of the raster you want to recalculate values.
+
+  Default: *1*
 
 ``Reclassification table`` [table]
   A 3-columns table to fill with the values to set the boundaries of each class
