@@ -2031,6 +2031,53 @@ See also
 :ref:`qgisrectanglesovalsdiamondsfixed`
 
 
+.. _qgisremoveduplicatevertices:
+
+Remove duplicate vertices
+-------------------------
+Removes duplicate vertices from features, wherever removing the vertices does not
+result in a degenerate geometry.
+
+The tolerance parameter specifies the tolerance for coordinates when determining
+whether vertices are identical.
+
+By default, z values are not considered when detecting duplicate vertices.
+E.g. two vertices with the same x and y coordinate but different z values will still
+be considered duplicate and one will be removed. If the Use Z Value parameter is true,
+then the z values are also tested and vertices with the same x and y but different z
+will be maintained.
+
+.. note:: Duplicate vertices are not tested between different parts of a multipart
+  geometry, e.g. a multipoint geometry with overlapping points will not be changed by
+  this method.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer with duplicate vertices.
+
+Outputs
+.......
+
+``Tolerance`` [number |dataDefined|]
+  Vertices closer than the specified distance are considered duplicates.
+
+  Default:*0.000001*
+
+``Use Z value`` [boolean |dataDefined|]
+  Allows to consider the Z coordinate when detecting duplicate vertices ie two points
+  at the same X,Y coordinate but with different Z value are not set as duplicates.
+
+  Default:*False*
+
+Outputs
+.......
+
+``Cleaned`` [vector: any]
+  Vector layer without duplicate vertices.
+
+
 .. _qgisremovenullgeometries:
 
 Remove null geometries
@@ -2640,6 +2687,34 @@ Output
 See also
 ........
 :ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
+
+
+.. _qgistessellate:
+
+Tessellate
+----------
+Tessellates a polygon geometry layer, dividing the geometries into triangular
+components.
+
+The output layer consists of multipolygon geometries for each input feature,
+with each multipolygon consisting of multiple triangle component polygons.
+
+.. figure:: img/tessellated.png
+   :align: center
+
+   Tessellated polygon (right)
+
+Parameters
+..........
+
+``Input layer`` [vector: polygon]
+  Polygon vector layer in input.
+
+Output
+......
+
+``Tesselated`` [vector: polygon]
+  Output a multipolygonZ layer with tessellated features.
 
 
 .. _qgistransect:
