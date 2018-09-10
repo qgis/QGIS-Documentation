@@ -201,11 +201,11 @@ This group contains functions which aggregate values over layers and fields.
 * Return the mean of the "field_from_related_table" field for all matching
   child features using the 'my_relation' relation from the layer::
 
-   aggregate_relation('my_relation', 'mean', "field_from_related_table")
+   relation_aggregate('my_relation', 'mean', "field_from_related_table")
 
   or::
 
-   aggregate_relation(relation:='my_relation', calculation := 'mean',
+   relation_aggregate(relation:='my_relation', aggregate := 'mean',
      expression := "field_from_related_table")
 
 
