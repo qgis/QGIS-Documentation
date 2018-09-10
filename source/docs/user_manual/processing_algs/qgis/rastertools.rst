@@ -43,6 +43,12 @@ Parameters
 
   Default: *100*
 
+``Make background transparent`` [boolean]
+  Allows to export the map with a transparent background, i.e. outputs a RGBA
+  image if set to ``True`` instead of RGB.
+
+  Default: *False*
+
 ``Map theme to render`` [enumeration]
   Optional
 

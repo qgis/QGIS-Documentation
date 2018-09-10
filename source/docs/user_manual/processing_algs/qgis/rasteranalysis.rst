@@ -158,6 +158,154 @@ Outputs
     - Area (m\ :sup:`2`): square meters of the area for each pixel class
 
 
+.. _qgisreclassifybylayer:
+
+Reclassify by layer |32|
+------------------------
+Reclassifies a raster band by assigning new class values based on the ranges
+specified in a vector table.
+
+Parameters
+..........
+
+``Raster Layer`` [raster]
+  Raster layer to reclassify.
+  
+``Band number`` [raster band]
+  Band of the raster you want to recalculate values.
+
+``Layer containing class breaks`` [vector: any]
+  Vector layer containing the values to use for classification.
+
+``Minimum class value field`` [tablefield: numeric]
+  Field to extract the minimum value of the range of each class.
+
+``Maximum class value field`` [tablefield: numeric]
+  Field to extract the maximum value of the range of each class.
+
+``Output value field`` [tablefield: numeric]
+  Field to extract the new value to assign to the pixels that fall in the class,
+  i.e. between the corresponding min and max values.
+
+``Output no data value`` [number]
+  Value to apply to no data values.
+
+  Default: *-9999.0*
+
+``Range boundaries`` [enumeration]
+  Defines comparison rules to apply to values classification.
+
+  Options:
+
+  * 0 --- min < value <= max
+  * 1 --- min <= value < max
+  * 2 --- min <= value <= max
+  * 3 --- min < value < max
+
+  Default: *0*
+
+``Use no data when no range matches`` [boolean]
+  Applies the no data value to band values that do not fall in any class.
+  If False, the original value is kept.
+
+  Default: *False*
+
+``Output data type`` [enumeration]
+  Defines the format of the output raster file.
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+Output
+......
+
+``Reclassified raster`` [raster]
+  Raster layer in output with reclassified band values.
+
+
+.. _qgisreclassifybytable:
+
+Reclassify by table |32|
+------------------------
+Reclassifies a raster band by assigning new class values based on the ranges
+specified in a fixed table.
+
+Parameters
+..........
+
+``Raster Layer`` [raster]
+  Raster layer to reclassify.
+  
+``Band number`` [raster band]
+  Band of the raster you want to recalculate values.
+
+``Reclassification table`` [table]
+  A 3-columns table to fill with the values to set the boundaries of each class
+  (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the band
+  values that fall in the class.
+ 
+``Output no data value`` [number]
+  Value to apply to no data values.
+
+  Default: *-9999.0*
+
+``Range boundaries`` [enumeration]
+  Defines comparison rules to apply to values classification.
+
+  Options:
+
+  * 0 --- min < value <= max
+  * 1 --- min <= value < max
+  * 2 --- min <= value <= max
+  * 3 --- min < value < max
+
+  Default: *0*
+
+``Use no data when no range matches`` [boolean]
+  Applies the no data value to band values that do not fall in any class.
+  If False, the original value is kept.
+
+  Default: *False*
+
+``Output data type`` [enumeration]
+  Defines the format of the output raster file.
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+Output
+......
+
+``Reclassified raster`` [raster]
+  Raster layer in output with reclassified band values.
+
+
 .. _qgisrastersampling:
 
 Sample raster values |34|
