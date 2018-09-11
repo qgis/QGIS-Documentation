@@ -233,6 +233,9 @@ Extract selected features
 -------------------------
 Saves the selected features as a new layer.
 
+.. note:: If the selected layer has no selected features, the newly created
+   layer will be empty.
+
 Parameters
 ..........
 
@@ -243,7 +246,7 @@ Outputs
 .......
 
 ``Selection`` [vector: any]
-  Vector layer with just the selected features.
+  Vector layer with only the selected features, or no feature if none was selected.
 
 
 .. _qgisfindprojection:
