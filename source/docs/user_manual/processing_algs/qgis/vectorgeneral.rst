@@ -559,13 +559,13 @@ Parameters
 ``Expression`` [expression]
   Expression to use for the vector sorting.
 
-``Ascending`` [boolean]
-  If checked the sorted vector layer will be sorted from the smallest to the
+``Sort ascending`` [boolean]
+  If checked the vector layer will be sorted from the smallest to the
   biggest values found.
 
   Default: *True*
 
-``Nulls first`` [boolean]
+``Sort nulls first`` [boolean]
   If checked Null values are placed at the beginning of the sorted layer.
 
   Default: *False*
