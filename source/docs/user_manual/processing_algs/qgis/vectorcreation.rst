@@ -32,7 +32,7 @@ The CRS of the output layer must be defined.
 The grid extent and the spacing values must be expressed in the coordinates and
 units of this CRS.
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
