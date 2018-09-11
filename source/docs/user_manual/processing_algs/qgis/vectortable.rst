@@ -57,16 +57,12 @@ Parameters
   or if set, based on group fields.
 
 ``Sort ascending`` [boolean] |32|
-  Optional
-
   When a ``sort expression`` is set, use this option to control the order in
   which features are assigned values.
 
   Default: *True*
 
 ``Sort nulls first`` [boolean] |32|
-  Optional
-  
   When a ``sort expression`` is set, use this option to set whether
   *Null* values are counted first or last.
 
