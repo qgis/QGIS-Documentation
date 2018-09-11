@@ -12,6 +12,130 @@ Vector creation
       :depth: 1
 
 
+.. _qgisparallellines:
+
+Array of offset (parallel) lines |34|
+-------------------------------------
+Creates copies of line features in a layer, by creating multiple offset versions
+of each feature. Each new version is incrementally offset by a specified distance.
+
+Positive distance will offset lines to the left, and negative distances will offset
+them to the right.
+
+.. figure:: img/offset_lines_array.png
+   :align: center
+
+   In blue the source layer, in red the offset one
+
+Parameters
+..........
+
+``Input layer`` [vector: line]
+  Line vector layer in input to elaborate the offset on.
+
+``Number of features to create`` [number |dataDefined|]
+  Number of offset copies to generate for each feature.
+
+  Default: *10*
+
+``Offset step distance`` [number |dataDefined|]
+  Distance between two consecutive offset copies.
+
+  Default: *1.0*
+
+``Segments`` [number]
+  Number of line segments to use to approximate a quarter circle when creating
+  rounded offsets.
+
+  Default: *8*
+
+``Join style`` [enumeration]
+  Specify whether round, miter or beveled joins should be used when offsetting
+  corners in a line.
+
+  Options:
+
+  * 0 --- Round
+  * 1 --- Miter
+  * 2 --- Bevel
+
+  Default: *0*
+
+``Miter limit`` [number]
+  Only applicable for mitered join styles, and controls the maximum distance from
+  the offset curve to use when creating a mitered join.
+
+  Default: *2.0*
+
+Output
+......
+
+``Offset lines`` [vector: line]
+  Output line layer with offset features.
+  The original features are also copied.
+
+See also
+........
+:ref:`qgisoffsetline`, :ref:`qgisarrayfeatures`
+
+
+.. _qgisarrayfeatures:
+
+Array of translated features |34|
+---------------------------------
+Creates copies of features in a layer, by creating multiple translated versions of each.
+Each copy is incrementally displaced by a preset amount in the x/y/z/m axis.
+
+Z and M values present in the geometry can also be translated.
+
+.. figure:: img/translate_array.png
+   :align: center
+
+   Input layers in blue tones, output layers with translated features in red tones
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Vector layer to translate features.
+
+``Number of features to create`` [number |dataDefined|]
+  Number of copies to generate for each feature.
+
+  Default: *10*
+
+``Step distance (x-axis)`` [number |dataDefined|]
+  Displacement to apply on the X axis.
+
+  Default: *0.0*
+
+``Step distance (y-axis)`` [number |dataDefined|]
+  Displacement to apply on the Y axis.
+
+  Default: *0.0*
+
+``Step distance (z-axis)`` [number |dataDefined|]
+  Displacement to apply on the Z axis.
+
+  Default: *0.0*
+
+``Step distance (m values)`` [number |dataDefined|]
+  Offset value to apply on the M axis.
+
+  Default: *0.0*
+
+Outputs
+.......
+
+``Translated`` [vector: any]
+  Output vector layer with translated (moved) copies of the features.
+  The original features are also copied.
+
+See also
+........
+:ref:`qgistranslategeometry`, :ref:`qgisparallellines`
+
+
 .. _qgiscreategrid:
 
 Create grid
@@ -419,7 +543,7 @@ Raster pixels to points |34|
 ----------------------------
 Creates a vector layer of points corresponding to each pixel in a raster layer.
 
-Converts a raster layer to a vector layer, by creating point features 
+Converts a raster layer to a vector layer, by creating point features
 for each individual pixel's center in the raster layer.
 Any nodata pixels are skipped in the output.
 
@@ -453,7 +577,7 @@ Creates a vector layer of polygons corresponding to each pixel in a raster layer
 Converts a raster layer to a vector layer, by creating polygon features
 for each individual pixel's extent in the raster layer.
 Any nodata pixels are skipped in the output.
- 
+
 Parameters
 ..........
 
@@ -529,4 +653,6 @@ Outputs
 
 .. |32| replace:: :kbd:`NEW in 3.2`
 .. |34| replace:: :kbd:`NEW in 3.4`
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

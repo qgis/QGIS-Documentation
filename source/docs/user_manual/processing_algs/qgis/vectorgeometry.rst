@@ -1079,7 +1079,7 @@ similarly if the maximum value is not specified then only the minimum value is t
    :align: center
 
    The red line represents the black line with only vertices whose m-value is <=10.
- 
+
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
 
@@ -1547,10 +1547,10 @@ See also
 
 .. _qgisoffsetline:
 
-Offset line
------------
+Offset lines
+------------
 Offsets lines by a specified distance. Positive distances will offset lines to
-the left, and negative distances will offset to the right of lines.
+the left, and negative distances will offset them to the right.
 
 .. figure:: img/offset_lines.png
    :align: center
@@ -1564,8 +1564,7 @@ Parameters
   Line vector layer in input to elaborate the offset on.
 
 ``Distance`` [number |dataDefined|]
-  Distance of the offset. Negative distances are also supported: for instance a
-  negative distance will create the offset to the other part of the layer.
+  Distance of the offset.
 
   Default: *10.0*
 
@@ -1597,6 +1596,10 @@ Output
 
 ``Offset`` [vector: line]
   Offset line layer.
+
+See also
+........
+:ref:`qgisparallellines`, :ref:`qgistranslategeometry`
 
 
 .. _qgisorientedminimumboundingbox:
@@ -2824,7 +2827,10 @@ Outputs
 
 Translate
 ---------
-Creates an offset of the source layer depending on the parameters chosen.
+Moves the geometries within a layer, by offsetting with a predefined
+X and Y displacement.
+
+Z and M values present in the geometry can also be translated.
 
 .. figure:: img/translate_geometry.png
    :align: center
@@ -2837,13 +2843,23 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Offset distance (x-axis)`` [number]
-  X axis offset distance.
+``Offset distance (x-axis)`` [number |dataDefined|]
+  Displacement to apply on the X axis.
 
   Default: *0.0*
 
-``Offset distance (y-axis)`` [number]
-  Y axis offset distance.
+``Offset distance (y-axis)`` [number |dataDefined|]
+  Displacement to apply on the Y axis.
+
+  Default: *0.0*
+
+``Offset distance (z-axis)`` [number |dataDefined|]
+  Displacement to apply on the Z axis.
+
+  Default: *0.0*
+
+``Offset distance (m values)`` [number |dataDefined|]
+  Offset value to apply on the M axis.
 
   Default: *0.0*
 
@@ -2851,7 +2867,11 @@ Outputs
 .......
 
 ``Translated`` [vector: any]
-  Translated (offset) vector layer.
+  Translated (moved) vector layer.
+
+See also
+........
+:ref:`qgisarrayfeatures`, :ref:`qgisoffsetline`
 
 
 .. _qgisbufferbym:
