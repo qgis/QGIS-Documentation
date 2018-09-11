@@ -124,17 +124,19 @@ Parameters
   Distance beyond which two features can not belong to
   the same cluster.
 
-  Default: *1.000000*
+  Default: *1.0*
 
 ``Treat border points as noise (DBSCAN*)`` [boolean]
   Optional
 
-  <put parameter description here>
-  
+  If checked, points on the border of a cluster are themselves treated as
+  unclustered points, and only points on the interior of a cluster are tagged
+  as clustered.
+
   Default: *FALSE*
 
 ``Cluster field name`` [string]
-  Name of the field in which to save the associated cluster number.
+  Name of the field where to store the associated cluster number.
 
   Default: *CLUSTER_ID*
 
@@ -360,7 +362,7 @@ Parameters
   Default: *5*
 
 ``Cluster field name`` [tablefield: any]
-  Name of the field in which to save the associated cluster number.
+  Name of the field where to store the associated cluster number.
 
   Default: *CLUSTER_ID*
 
