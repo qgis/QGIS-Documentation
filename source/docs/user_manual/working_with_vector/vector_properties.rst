@@ -1526,10 +1526,14 @@ You can as well remove them with the |signMinus| button or edit them with
 Define labels based on expressions
 ----------------------------------
 
-Whether you choose simple or rule-based labeling type, QGIS allows using
-expressions to label features. Click the |expression| icon near the
+Whether you choose single or rule-based labeling type, QGIS allows using
+expressions to label features.
+
+Assuming you are using the :guilabel:`Single labels` method, click the |expression| icon near the
 :guilabel:`Label with` drop-down list in the |labeling| :guilabel:`Labels` tab
-of the properties dialog. In figure_labels_expression_, you see a sample
+of the properties dialog.
+
+In figure_labels_expression_, you see a sample
 expression to label the alaska regions with name and area size, based on the
 field 'NAME_2', some descriptive text, and the function ``$area`` in combination
 with ``format_number()`` to make it look nicer.
@@ -1544,7 +1548,7 @@ with ``format_number()`` to make it look nicer.
 Expression based labeling is easy to work with. All you have to take
 care of is that:
 
-* You need to combine all elements (strings, fields, and functions)
+* You may need to combine all elements (strings, fields, and functions)
   with a string concatenation function such as ``concat``, ``+`` or ``||``. Be
   aware that in some situations (when null or numeric value are involved) not
   all of these tools will fit your need.
@@ -1618,11 +1622,22 @@ Let's have a look at some examples:
    .. code-block:: none
 
       concat('This place is a ',
-      CASE WHEN "population <= 50000" THEN 'town' ELSE 'city' END)
+      CASE WHEN "population" <= 50000 THEN 'town' ELSE 'city' END)
 
    Returns::
 
-       This place is a town
+      This place is a town
+
+#. Display name for the cities and no label for the other features
+   (for the "city" context, see example above):
+
+   .. code-block:: none
+
+      CASE WHEN "population" > 50000 THEN "NAME" END
+
+   Returns::
+
+      Paris
 
 As you can see in the expression builder, you have hundreds of functions available
 to create simple and very complex expressions to label your data in QGIS. See
