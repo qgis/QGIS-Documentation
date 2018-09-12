@@ -343,12 +343,19 @@ Outputs
 
 K-means clustering |34|
 -----------------------
-Calculates the 2D distance based k-means cluster number
-for each input feature. The closer the features are to each other,
-the more they will be grouped together.
+Calculates the 2D distance based k-means cluster number for each input feature.
+
+K-means clustering aims to partition the features into k clusters in which
+each feature belongs to the cluster with the nearest mean.
+The mean point is represented by the barycenter of the clustered features.
 
 If input geometries are lines or polygons, the clustering
 is based on the centroid of the feature.
+
+.. figure:: img/kmeans.png
+  :align: center
+
+  A five class point clusters
 
 Parameters
 ..........
