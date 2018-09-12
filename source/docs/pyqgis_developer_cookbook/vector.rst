@@ -64,10 +64,10 @@ a :class:`QgsVectorLayer` object.
      else:
          print("Unknown")
 
-     # fetch attributes	
+     # fetch attributes
      attrs = feature.attributes()
 
-     # attrs is a list. It contains all the attribute values of this feature	
+     # attrs is a list. It contains all the attribute values of this feature
      print(attrs)
 
 .. index:: Selecting features
@@ -181,7 +181,7 @@ to the :func:`getFeatures()` call. Here's an example:
  for feature in layer.getFeatures(request):
      # do whatever you need with the feature
 
-With :func:`setLimit()` you can limit the number of requested features. 
+With :func:`setLimit()` you can limit the number of requested features.
 Here's an example:
 
 .. code-block:: python
@@ -192,9 +192,9 @@ Here's an example:
       # loop through only 2 features
 
 
-If you need an attribute-based filter instead (or in addition) of a spatial 
-one like shown in the examples above, you can build an :obj:`QgsExpression` 
-object and pass it to the :obj:`QgsFeatureRequest` constructor. 
+If you need an attribute-based filter instead (or in addition) of a spatial
+one like shown in the examples above, you can build an :obj:`QgsExpression`
+object and pass it to the :obj:`QgsFeatureRequest` constructor.
 Here's an example
 
 .. code-block:: python
@@ -345,8 +345,8 @@ then it changes the feature's geometry
 
 .. tip:: **Directly save changes using** ``with`` **based command**
 
-    Using ``with edit(layer):`` the changes will be commited automatically 
-    calling :func:`commitChanges()` at the end. If any exception occurs, it will 
+    Using ``with edit(layer):`` the changes will be commited automatically
+    calling :func:`commitChanges()` at the end. If any exception occurs, it will
     :func:`rollBack()` all the changes. See :ref:`editing-buffer`.
 
 .. _editing-buffer:
@@ -404,7 +404,7 @@ have the changes stored immediately, then you will have easier work by
     return
 
   # ... more editing ...
-  
+
   layer.endEditCommand()
 
 The :func:`beginEditCommand` will create an internal "active" command and will
@@ -425,7 +425,7 @@ a more semantic code block as shown in the example below:
 .. code-block:: python
 
   with edit(layer):
-    feat = layer.getFeatures().next()
+    feat = next(layer.getFeatures())
     feat[0] = 5
     layer.updateFeature(feat)
 
