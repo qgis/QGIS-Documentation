@@ -178,10 +178,12 @@ Parameters
   Default: *0.0*
 
 ``Produce 3D vector`` [boolean]
+  Forces production of 3D vectors instead of 2D. Includes elevation at every vertex.
 
   Default: *False*
 
 ``Treat all raster values as valid`` [boolean]
+  Ignores any nodata value implied in the dataset.
 
   Default: *False*
 
@@ -189,6 +191,9 @@ Parameters
   Optional
 
   Default: *Not set*
+
+``Additional creation options`` [string]
+  Optional
 
 Outputs
 .......
