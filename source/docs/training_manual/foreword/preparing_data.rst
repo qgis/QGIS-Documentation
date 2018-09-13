@@ -5,31 +5,26 @@
 Preparing Exercise Data
 =======================
 
-The sample data provided with the Training Manual refers to the town of
-|majorUrbanName| and its surroundings. |majorUrbanName| is located about 2 hours' east of
-Cape Town in the Western Cape of South Africa. The dataset contains feature
-names in both English and Afrikaans.
+.. note:: This process is intended for course conveners, or more experienced
+  QGIS users who wish to create localised sample data sets for their course.
+  Default data sets are provided with the Training Manual, but you may follow
+  these instructions if you wish to replace the default data sets.
+
+The :ref:`sample data provided <data_downloadlink>` with the Training Manual
+refers to the town of |majorUrbanName| and its surroundings. |majorUrbanName| is
+located about 2 hours' east of Cape Town in the Western Cape of South Africa.
+The dataset contains feature names in both English and Afrikaans.
 
 Anyone can use this dataset without difficulty, but you may prefer to use data
 from your own country or home town. If you choose to do so, your localised
 data will be used in all lessons from Module 3 to Module 7.2. Later modules use
 more complex data sources which may or may not be available for your region.
 
-.. note:: This process is intended for course conveners, or more experienced
-  QGIS users who wish to create localised sample data sets for their course.
-  Default data sets are provided with the Training Manual, but you may follow
-  these instructions if you wish to replace the default data sets.
-
-.. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v2.0.zip.
-   You can save the files in a folder named **exercise_data**.
-
-
-|hard| |TY|
---------------------------------------------------------------------------------
-
 .. note:: These instructions assume you have a good knowledge of QGIS and are
   not intended to be used as teaching material.
+  
+|hard| |TY|  Create OSM based vector Files
+--------------------------------------------------------------------------------
 
 If you wish to replace the default data set with localised data for your course,
 this can easily be done with tools built into QGIS. The region you choose to use
