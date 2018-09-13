@@ -677,6 +677,8 @@ Finally, let's check whether everything went well
 Appearance (Symbology) of Vector Layers
 =======================================
 
+.. **FOR WRITERS**: This section has been updated to QGIS3, down to...
+
 When a vector layer is being rendered, the appearance of the data is given by
 **renderer** and **symbols** associated with the layer.  Symbols are classes
 which take care of drawing of visual representation of features, while
@@ -907,6 +909,8 @@ arrangement)
   myVectorLayer.setRenderer(myRenderer)
   QgsProject.instance().addMapLayer(myVectorLayer)
 
+
+.. **FOR WRITERS**: ...End of updated section to QGIS3
 
 .. index:: Symbols; Working with
 
