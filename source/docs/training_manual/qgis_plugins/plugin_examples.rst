@@ -28,7 +28,7 @@ explore some of its features.
 #. Click on the :guilabel:`Filter by extent` and you should see one service available.
 #. Click on the :guilabel:`Add` button next to the map to load it.
 #. The base map will be loaded and you will have a satellite background for the
-   map
+   map.
 
 .. image:: img/qms_result.png
    :align: center
@@ -59,31 +59,28 @@ a lot more providers available. Choose the one that best fit your needs!
 With an incredible simple interface, the QuickOSM plugin allows you to download
 `OpenStreetMap <https://www.openstreetmap.org/>`_ data.
 
-* Start a new empty project and add the :guilabel:`roads` layer from the
-  :file:`training_data` GeoPackage.
+#. Start a new empty project and add the :guilabel:`roads` layer from the
+   :file:`training_data` GeoPackage.
+#. Install the **QuickOSM** plugin.
+   The plugin adds two new buttons in the QGIS Toolbar
+   and is accessible in the :menuselection:`Vector --> QuickOSM` menu.
+#. Open the QuickOSM dialog. The plugin has many different tabs: we will use the
+   :guilabel:`Quick Query` one.
+#. You can download specific features by selecting a generic :guilabel:`Key` or be more
+   specific and choose a specific :guilabel:`Key` and :guilabel:`Value` pair.
 
-* Install the plugin QuickOSM plugin.
-
-* QuickOSM plugin is available with two new buttons in the QGIS Toolbar or in the
-  :guilabel:`Vector --> Quick OSM` menu.
-
-* Open the Quick OSM dialog. The plugin has many different tabs: we will use the
-  :guilabel:`Quick Query` one.
-* You can download specific features by selecting a generic :guilabel:`Key` or be more
-  specific and choose a specific :guilabel:`Key` and :guilabel:`Value` pair.
-
-  .. tip:: if you are not familiar with the :guilabel:`Key` and :guilabel:`Value`
+   .. tip:: if you are not familiar with the :guilabel:`Key` and :guilabel:`Value`
     system, click on the :guilabel:`Help with key/value` button. It will open a
     web page with a complete description of this concept of OpenStreetMap
 
-* Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
-  empty: so we are downloading all the :guilabel:`railway` features without specifying
-  specific values.
-* Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
-* Click on the :guilabel:`Run query` button.
+#. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
+   empty: so we are downloading all the :guilabel:`railway` features without specifying
+   specific values.
+#. Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
+#. Click on the :guilabel:`Run query` button.
 
-.. image:: img/quickosm_setup.png
-   :align: center
+   .. image:: img/quickosm_setup.png
+      :align: center
 
 After some seconds the plugin will download all the features tagged in OpenStreetMap
 as ``railway`` and load them directly into the map.
@@ -118,9 +115,9 @@ mountain area known as `Dolomites <https://en.wikipedia.org/wiki/Dolomites>`_.
 You cannot achieve this task with the :guilabel:`Quick query` tab, you have to
 be more specific and write your own query. Let's try to do this.
 
-* Start a new project.
-* Open the QuickOSM plugin and click on the :guilabel:`Query` tab.
-* Copy and paste the following code into the query canvas::
+#. Start a new project.
+#. Open the QuickOSM plugin and click on the :guilabel:`Query` tab.
+#. Copy and paste the following code into the query canvas::
 
       <!--
     This shows all mountains (peaks) in the Dolomites.
@@ -151,13 +148,13 @@ be more specific and write your own query. Let's try to do this.
     <print mode="skeleton" order="quadtile"/>
     </osm-script>
 
-  .. note:: this query is written in a ``xml`` like language. If you are more
-    used to the ``Overpass QL`` you can write the query in this language.
+   .. note:: This query is written in a ``xml`` like language. If you are more
+     used to the ``Overpass QL`` you can write the query in this language.
 
-and click on :guilabel:`Run Query`:
+#. And click on :guilabel:`Run Query`:
 
-.. image:: img/quickosm_advanced_query.png
-   :align: center
+   .. image:: img/quickosm_advanced_query.png
+      :align: center
 
 The mountain peaks layer will be downloaded and shown in QGIS:
 
@@ -209,20 +206,20 @@ of the plot.
 There is more. Sometimes it can be useful to have two (or more) plots showing
 different plot types with different variables on the same page. Let's do this!
 
-* Go back to the main plot settings tab by clicking on the |symbology| button
-  in the upper left corner of the plugin panel.
-* Change the ``Plot Type`` to ``Box Plot``.
-* Choose :kbd:`group` as ``Grouping Field`` and :kbd:`ph` as ``Y Field``.
-* In the lower part of the Panel change the ``Type of Plot`` from ``SinglePlot``.
-  to ``SubPlots`` and let the default option ``Plot in Rows`` selected:
+#. Go back to the main plot settings tab by clicking on the |symbology| button
+   in the upper left corner of the plugin panel.
+#. Change the ``Plot Type`` to ``Box Plot``.
+#. Choose :kbd:`group` as ``Grouping Field`` and :kbd:`ph` as ``Y Field``.
+#. In the lower part of the Panel change the ``Type of Plot`` from ``SinglePlot``
+   to ``SubPlots`` and let the default option ``Plot in Rows`` selected:
 
-.. image:: img/dataplotly_boxplot.png
-   :align: center
+   .. image:: img/dataplotly_boxplot.png
+      :align: center
 
-* Once done click on the :guilabel:`Create Plot` button to draw the plot:
+#. Once done click on the :guilabel:`Create Plot` button to draw the plot:
 
-.. image:: img/dataplotly_subplots.png
-   :align: center
+   .. image:: img/dataplotly_subplots.png
+      :align: center
 
 Now both scatter plot and box plot are shown in the same plot page. You still
 have the chance to click on each plot item and select the corresponding features
