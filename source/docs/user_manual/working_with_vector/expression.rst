@@ -344,6 +344,8 @@ This group contains functions to convert one data type to another
 ==================  ========================================================
  to_date             Converts a string into a date object
  to_datetime         Converts a string into a datetime object
+ to_dm               Converts a coordinate to degree, minute
+ to_dms              Converts coordinate to degree, minute, second
  to_int              Converts a string to integer number
  to_interval         Converts a string to an interval type (can be used
                      to take days, hours, months, etc. of a date)
@@ -930,6 +932,8 @@ and values are identified by their keys.
 ==================== =========================================================
  Function             Description
 ==================== =========================================================
+ hstore_to_map        Creates a map from a hstore-formatted string
+ json_to_map          Creates a map from a json-formatted string
  map                  Returns a map containing all the keys and values passed
                       as pair of parameters
  map_akeys            Returns all the keys of a map as an array
@@ -942,6 +946,8 @@ and values are identified by their keys.
  map_exist            Returns true if the given key exists in the map
  map_get              Returns the value of a map, given it's key
  map_insert           Returns a map with an added key/value
+ map_to_hstore        Merges map elements into a hstore-formatted string
+ map_to_json          Merges map elements into a json-formatted string
 ==================== =========================================================
 
 
