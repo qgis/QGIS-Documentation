@@ -560,12 +560,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | boundary               | Returns the closure of the combinatorial boundary |
 |                        | of the geometry (ie the topological boundary of   |
-|                        | the geometry - see :ref:`qgisboundary`).          |
+|                        | the geometry - see also :ref:`qgisboundary`).     |
 +------------------------+---------------------------------------------------+
 | bounds                 | Returns a geometry which represents the bounding  |
 |                        | box of an input geometry. Calculations are in     |
 |                        | the Spatial Reference System of this geometry     |
-|                        | (see :ref:`qgisboundingboxes`)                    |
+|                        | (see also :ref:`qgisboundingboxes`)               |
 +------------------------+---------------------------------------------------+
 | bounds_height          | Returns the height of the bounding box of a       |
 |                        | geometry. Calculations are in the Spatial         |
@@ -579,14 +579,15 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | whose distance from this geometry is less than    |
 |                        | or equal to distance. Calculations are in the     |
 |                        | Spatial Reference System of this geometry         |
-|                        | (see :ref:`qgisbuffer`)                           |
+|                        | (see also :ref:`qgisbuffer`)                      |
 +------------------------+---------------------------------------------------+
 | buffer_by_m |32|       | Creates a buffer along a line geometry where the  |
 |                        | buffer diameter varies according to the m-values  |
-|                        | at the line vertices (see :ref:`qgisbufferbym`)   |
+|                        | at the line vertices                              |
+|                        | (see also :ref:`qgisbufferbym`)                   |
 +------------------------+---------------------------------------------------+
 | centroid               | Returns the geometric center of a geometry        |
-|                        | (see :ref:`qgiscentroids`)                        |
+|                        | (see also :ref:`qgiscentroids`)                   |
 +------------------------+---------------------------------------------------+
 | closest_point          | Returns the point on a geometry that is closest   |
 |                        | to a second geometry                              |
@@ -600,13 +601,14 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | convex_hull            | Returns the convex hull of a geometry (this       |
 |                        | represents the minimum convex geometry that       |
 |                        | encloses all geometries within the set)           |
-|                        | (see :ref:`qgisconvexhull`)                       |
+|                        | (see also :ref:`qgisconvexhull`)                  |
 +------------------------+---------------------------------------------------+
 | crosses                | Returns 1 (true) if the supplied geometries have  |
 |                        | some, but not all, interior points in common      |
 +------------------------+---------------------------------------------------+
 | difference(a,b)        | Returns a geometry that represents that part of   |
 |                        | geometry a that does not intersect with geometry b|
+|                        | (see also :ref:`qgisdifference`)                  |
 +------------------------+---------------------------------------------------+
 | disjoint               | Returns 1 (true) if the geometries do not share   |
 |                        | any space together                                |
@@ -619,10 +621,11 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | specified vertex                                  |
 +------------------------+---------------------------------------------------+
 | end_point              | Returns the last node from a geometry             |
+|                        | (see also :ref:`qgisextractspecificvertices`)     |
 +------------------------+---------------------------------------------------+
 | extend                 | Extends the start and end of a linestring         |
 |                        | geometry by a specified amount                    |
-|                        | (see :ref:`qgisextendlines`)                      |
+|                        | (see also :ref:`qgisextendlines`)                 |
 +------------------------+---------------------------------------------------+
 | exterior_ring          | Returns a line string representing the exterior   |
 |                        | ring of a polygon geometry,                       |
@@ -633,7 +636,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | extension specified by x and y                    |
 +------------------------+---------------------------------------------------+
 | flip_coordinates |32|  | Returns a copy of the geometry with the x and y   |
-|                        | coordinates swapped (see :ref:`qgisswapxy`)       |
+|                        | coordinates swapped (see also :ref:`qgisswapxy`)  |
 +------------------------+---------------------------------------------------+
 | geom_from_gml          | Returns a geometry created from a GML             |
 |                        | representation of geometry                        |
@@ -663,6 +666,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | intersection           | Returns a geometry that represents the shared     |
 |                        | portion of two geometries                         |
+|                        | (see also  :ref:`qgisintersection`)               |
 +------------------------+---------------------------------------------------+
 | intersects             | Tests whether a geometry intersects another.      |
 |                        | Returns 1 (true) if the geometries spatially      |
@@ -689,6 +693,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | line_interpolate_point | Returns the point interpolated by a specified     |
 |                        | distance along a linestring geometry.             |
+|                        | (see also :ref:`qgisinterpolatepoint`)            |
 +------------------------+---------------------------------------------------+
 | line_locate_point      | Returns the distance along a linestring           |
 |                        | corresponding to the closest position the         |
@@ -697,6 +702,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | line_substring |34|    | Returns the portion of a line or curve geometry   |
 |                        | falling betweeen specified start and end distances|
 |                        | (measured from the beginning of the line)         |
+|                        | (see also :ref:`qgislinesubstring`)               |
 +------------------------+---------------------------------------------------+
 | line_merge             | Returns a (Multi-)LineString geometry, where any  |
 |                        | connected LineStrings from the input geometry     |
@@ -727,10 +733,12 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | make_triangle          | Creates a triangle polygon                        |
 +------------------------+---------------------------------------------------+
 | minimal_circle         | Returns the minimal enclosing circle of an input  |
-|                        | geometry (see :ref:`qgisminimumenclosingcircle`)  |
+|                        | geometry (see also                                |
+|                        | :ref:`qgisminimumenclosingcircle`)                |
 +------------------------+---------------------------------------------------+
 | nodes_to_points        | Returns a multipoint geometry consisting of every |
 |                        | node in the input geometry                        |
+|                        | (see also :ref:`qgisextractvertices`)             |
 +------------------------+---------------------------------------------------+
 | num_geometries         | Returns the number of geometries in a geometry    |
 |                        | collection, or null if the input geometry is not  |
@@ -750,13 +758,14 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | offset_curve           | Returns a geometry formed by offsetting a         |
 |                        | linestring geometry to the side. Distances are in |
 |                        | the Spatial Reference System of this geometry.    |
+|                        | (see also :ref:`qgisoffsetline`)                  |
 +------------------------+---------------------------------------------------+
 | order_parts            | Orders the parts of a MultiGeometry by a given    |
 |                        | criteria                                          |
 +------------------------+---------------------------------------------------+
 | oriented_bbox          | Returns a geometry representing the minimal       |
 |                        | oriented bounding box of an input geometry        |
-|                        | (see :ref:`qgisorientedminimumboundingbox`)       |
+|                        | (see also :ref:`qgisorientedminimumboundingbox`)  |
 +------------------------+---------------------------------------------------+
 | overlaps               | Tests whether a geometry overlaps another.        |
 |                        | Returns 1 (true) if the geometries share space,   |
@@ -768,17 +777,19 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | Reference System of this geometry                 |
 +------------------------+---------------------------------------------------+
 | point_n                | Returns a specific node from a geometry           |
+|                        | (see also :ref:`qgisextractspecificvertices`)     |
 +------------------------+---------------------------------------------------+
 | point_on_surface       | Returns a point guaranteed to lie on the surface  |
-|                        | of a geometry (see :ref:`qgispointonsurface`)     |
+|                        | of a geometry (see also :ref:`qgispointonsurface`)|
 +------------------------+---------------------------------------------------+
 | pole_of_inaccessibility| Calculates the approximate pole of inaccessibility|
 |                        | for a surface, which is the most distant internal |
-|                        | point from the boundary of the surface            |
-|                        | (see :ref:`qgispoleofinaccessibility`)            |
+|                        | point from the boundary of the surface (see also  |
+|                        | :ref:`qgispoleofinaccessibility`)                 |
 +------------------------+---------------------------------------------------+
 | project                | Returns a point projected from a start point      |
 |                        | using a distance and bearing (azimuth) in radians |
+|                        | (see also :ref:`qgisprojectpointcartesian`)       |
 +------------------------+---------------------------------------------------+
 | relate                 | Tests or returns the Dimensional Extended 9       |
 |                        | Intersection Model (DE-9IM) representation of the |
@@ -786,10 +797,11 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | reverse                | Reverses the direction of a line string by        |
 |                        | reversing the order of its vertices               |
-|                        | (see :ref:`qgisreverselinedirection`)             |
+|                        | (see also :ref:`qgisreverselinedirection`)        |
 +------------------------+---------------------------------------------------+
 | segments_to_lines      | Returns a multi line geometry consisting of a     |
 |                        | line for every segment in the input geometry      |
+|                        | (see also :ref:`qgisexplodelines`)                |
 +------------------------+---------------------------------------------------+
 | shortest_line          | Returns the shortest line joining two geometries. |
 |                        | The resultant line will start at geometry 1 and   |
@@ -797,29 +809,31 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | simplify               | Simplifies a geometry by removing nodes using a   |
 |                        | distance based threshold                          |
-|                        | (see :ref:`qgissimplifygeometries`)               |
+|                        | (see also :ref:`qgissimplifygeometries`)          |
 +------------------------+---------------------------------------------------+
 | simplify_vw            | Simplifies a geometry by removing nodes using an  |
 |                        | area based threshold                              |
-|                        | (see :ref:`qgissimplifygeometries`)               |
+|                        | (see also :ref:`qgissimplifygeometries`)          |
 +------------------------+---------------------------------------------------+
 | single_sided_buffer    | Returns a geometry formed by buffering out just   |
 |                        | one side of a linestring geometry. Distances are  |
 |                        | in the Spatial Reference System of this geometry  |
-|                        | (see :ref:`qgissinglesidedbuffer`)                |
+|                        | (see also :ref:`qgissinglesidedbuffer`)           |
 +------------------------+---------------------------------------------------+
 | smooth                 | Smooths a geometry by adding extra nodes which    |
 |                        | round off corners in the geometry                 |
-|                        | (see :ref:`qgissmoothgeometry`)                   |
+|                        | (see also :ref:`qgissmoothgeometry`)              |
 +------------------------+---------------------------------------------------+
 | start_point            | Returns the first node from a geometry            |
+|                        | (see also :ref:`qgisextractspecificvertices`)     |
 +------------------------+---------------------------------------------------+
 | sym_difference         | Returns a geometry that represents the portions   |
 |                        | of two geometries that do not intersect           |
+|                        | (see also :ref:`qgissymmetricaldifference`)       |
 +------------------------+---------------------------------------------------+
 | tapered_buffer |32|    | Creates a buffer along a line geometry where the  |
 |                        | buffer diameter varies evenly over the length of  |
-|                        | the line (see :ref:`qgistaperedbuffer`)           |
+|                        | the line (see also :ref:`qgistaperedbuffer`)      |
 +------------------------+---------------------------------------------------+
 | touches                | Tests whether a geometry touches another.         |
 |                        | Returns 1 (true) if the geometries have at least  |
@@ -828,17 +842,19 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | transform              | Returns the geometry transformed from the source  |
 |                        | CRS to the destination CRS                        |
+|                        | (see also :ref:`qgisreprojectlayer`)              |
 +------------------------+---------------------------------------------------+
 | translate              | Returns a translated version of a geometry.       |
 |                        | Calculations are in the Spatial Reference System  |
-|                        | of the geometry (see :ref:`qgistranslategeometry`)|
+|                        | of the geometry                                   |
+|                        | (see also :ref:`qgistranslategeometry`)           |
 +------------------------+---------------------------------------------------+
 | union                  | Returns a geometry that represents the point set  |
 |                        | union of the geometries                           |
 +------------------------+---------------------------------------------------+
 | wedge_buffer |32|      | Returns a wedge shaped buffer originating from a  |
 |                        | point geometry given an angle and radii           |
-|                        | (see :ref:`qgiswedgebuffers`)                     |
+|                        | (see also :ref:`qgiswedgebuffers`)                |
 +------------------------+---------------------------------------------------+
 | within (a,b)           | Tests whether a geometry is within another.       |
 |                        | Returns 1 (true) if geometry a is completely      |
