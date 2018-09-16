@@ -198,10 +198,12 @@ Parameters
   Type here the string of your SQL query, e.g. ``SELECT * FROM input1``.
 
 ``Unique identifier field`` [string]
+  Optional
 
   Specify the column with unique ID.
 
 ``Geometry field`` [string]
+  Optional
 
   Specify the geometry field.
 
