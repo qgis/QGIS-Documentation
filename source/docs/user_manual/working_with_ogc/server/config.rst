@@ -30,6 +30,7 @@ variables:
 
 - **QGIS_SERVER_LOG_LEVEL**
 - **QGIS_SERVER_LOG_FILE**
+- **QGIS_SERVER_LOG_STDERR**
 
 Take a look on :ref:`qgis-server-envvar` to understand their meanings.
 
@@ -77,6 +78,17 @@ Specify path and filename. Make sure that server has proper permissions for
 writing to file. File should be created automatically, just send some requests
 to server. If it's not there, check permissions.
 
+QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will
+be removed in QGIS 4.0.
+
+QGIS_SERVER_LOG_STDERR
+^^^^^^^^^^^^^^^^^^^^^^
+
+Activate logging to stderr. It's disabled by default. This variable
+has no effect when ``QGIS_SERVER_LOG_FILE`` is set.
+
+* ``0`` or ``false`` (case insensitive)
+* ``1`` or ``true`` (case insensitive)
 
 MAX_CACHE_LAYERS
 ^^^^^^^^^^^^^^^^
