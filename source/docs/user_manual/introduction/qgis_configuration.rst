@@ -77,19 +77,20 @@ General Settings
 **Application**
 
 * Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
-  between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks'.
-* Define the :guilabel:`UI theme` |selectString|. It can be 'default' or 'Night Mapping'.
-* Define the :guilabel:`Icon size` |selectString|.
+  between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks';
+* Define the :guilabel:`UI theme` |selectString|. It can be 'default' or 'Night Mapping';
+* Define the :guilabel:`Icon size` |selectString|;
 * Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be
-  |radioButtonOn| :guilabel:`Qt default` or a user-defined one.
-* Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|.
-* |checkbox| :guilabel:`Hide splash screen at startup`
+  |radioButtonOn| :guilabel:`Qt default` or a user-defined one;
+* Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|;
+* |checkbox| :guilabel:`Hide splash screen at startup`;
 * |checkbox| :guilabel:`Check QGIS version at startup` to keep you informed
-  if a newer version is released
-* |checkbox| :guilabel:`Modeless data source manager dialog` to allow interaction with
-  QGIS interface while adding layers to project
-* |checkbox| :guilabel:`QGIS-styled group boxes`
-* |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`)
+  if a newer version is released;
+* |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
+  :ref:`data source manager <datasourcemanager>` dialog opened and allow
+  interaction with QGIS interface while adding layers to project; 
+* |checkbox| :guilabel:`QGIS-styled group boxes`;
+* |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
 
 .. _projectfiles_options:
 

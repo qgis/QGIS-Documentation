@@ -52,15 +52,21 @@ supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
    
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
+.. _datasourcemanager:
 
-In QGIS, depending on the data format, there are different tools to open it.
-These are mainly available in the :menuselection:`Layer --> Add Layer -->` menu
+In QGIS, depending on the data format, there are different tools to open it,
+mainly available in the :menuselection:`Layer --> Add Layer -->` menu
 or from the :guilabel:`Manage Layers` toolbar (enabled through :menuselection:`View
 --> Toolbars` menu).
 However, all these tools point to a unique dialog, the :guilabel:`Data Source
 Manager` dialog that you can directly open with the |dataSourceManager|
 :sup:`Open Data Source Manager` button available on the :guilabel:`Data Source
-Manager Toolbar` or by pressing :kbd:`Ctrl+L`.
+Manager Toolbar` or by pressing :kbd:`Ctrl+L`. Indeed, the :guilabel:`Data Source
+Manager` dialog offers a unified interface to open vector or raster file-based
+data as well as databases or web services supported by QGIS. It can be set
+modal or not with the |checkbox| :guilabel:`Modeless data source manager dialog`
+in :menuselection:`Settings --> Options --> General` menu.
+
 
 .. _figure_datasource_manager:
 
