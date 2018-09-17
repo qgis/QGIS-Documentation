@@ -100,9 +100,9 @@ Parameters
   Raster layer in input
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics
+  If the raster is multiband choose the band you want to calculate the statistics.
 
-  Default: *Band 1 (Gray)*
+  Default: *1*
 
 Outputs
 .......
@@ -110,15 +110,15 @@ Outputs
 ``Statistics`` [html]
   The output file contains the following information:
 
-  - Analyzed file: path of the raster layer
-  - Minimum value: minimum value of the raster
-  - Maximum value: maximum value of the raster
-  - Range: difference between the maximum and minimum values
-  - Sum: total sum of the values
-  - Mean value: mean of the values
-  - Standard deviation: standard deviation of the values
-  - Sum of the squares: sum of the squared differences of each observation from
-    the overall mean
+  * Analyzed file: path of the raster layer;
+  * Minimum value: minimum value of the raster;
+  * Maximum value: maximum value of the raster;
+  * Range: difference between the maximum and minimum values;
+  * Sum: total sum of the values;
+  * Mean value: mean of the values;
+  * Standard deviation: standard deviation of the values;
+  * Sum of the squares: sum of the squared differences of each observation from
+    the overall mean.
 
 
 .. _qgisrasterlayeruniquevaluesreport:
@@ -134,9 +134,9 @@ Parameters
   Raster layer in input
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics
+  If the raster is multiband choose the band you want to calculate the statistics.
 
-  Default: *Band 1 (Gray)*
+  Default: *1*
 
 Outputs
 .......
@@ -144,18 +144,18 @@ Outputs
 ``Unique values report`` [html]
   The output file contains the following information:
 
-  - Analyzed file: the path of the raster layer
-  - Extent: xmin, ymin, xmax, ymax coordinates of the extent
-  - Projection: projection of the layer
-  - Width in pixels: number of columns and pixel width size
-  - Height in pixels: number of rows and pixel width size
-  - Total pixel count: count of all the pixels
-  - NODATA pixel count: count of pixels with NODATA value
-  - Final table with 3 different columns:
+  * Analyzed file: the path of the raster layer;
+  * Extent: xmin, ymin, xmax, ymax coordinates of the extent;
+  * Projection: projection of the layer;
+  * Width in pixels: number of columns and pixel width size;
+  * Height in pixels: number of rows and pixel width size;
+  * Total pixel count: count of all the pixels;
+  * NODATA pixel count: count of pixels with NODATA value;
+  * Final table with 3 different columns:
 
-    - Value: unique value of each pixel
-    - Pixel count: count of how many pixels belong to each value
-    - Area (m\ :sup:`2`): square meters of the area for each pixel class
+    * Value: unique value of each pixel;
+    * Pixel count: count of how many pixels belong to each value;
+    * Area (m\ :sup:`2`): square meters of the area for each pixel class.
 
 
 .. _qgisrastersampling:
@@ -209,24 +209,24 @@ Parameters
 ..........
 
 ``Raster layer`` [raster]
-  Raster layer in input
+  Raster layer in input.
 
 ``Band number`` [raster band]
-  If the raster is multiband, choose the band you want to calculate the statistics
+  If the raster is multiband, choose the band you want to calculate the statistics.
 
 ``Vector layer containing the zones`` [vector: polygon]
-  Overlaying vector layer where unique raster values will be appended
+  Overlaying vector layer where unique raster values will be appended.
 
 ``Output column prefix`` [string]
   Optional
 
-  Prefix string for output columns
+  Prefix string for output columns.
 
 Output
 ......
 
 ``Output zones`` [vector: polygon]
-  Output polygon vector layer with unique count of raster values
+  Output polygon vector layer with unique count of raster values.
 
 .. _qgiszonalstatistics:
 
@@ -236,24 +236,24 @@ Calculates statistics of a raster layer for each feature of an overlapping polyg
 vector layer.
 
 .. warning:: No new output file will be created. The algorithm adds new columns
-  to the source vector layer
+  to the source vector layer.
 
 Parameters
 ..........
 
 ``Raster layer`` [raster]
-  Raster layer in input
+  Raster layer in input.
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics
+  If the raster is multiband choose the band you want to calculate the statistics.
 
-  Default: *Band 1 (Gray)*
+  Default: *1*
 
 ``Vector layer containing zones`` [vector: polygon]
-  Polygon vector layer
+  Polygon vector layer.
 
 ``Output column prefix`` [string]
-  Prefix string for output columns
+  Prefix string for output columns.
 
   Default: ``_``
 
