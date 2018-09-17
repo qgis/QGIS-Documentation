@@ -57,16 +57,12 @@ Parameters
   or if set, based on group fields.
 
 ``Sort ascending`` [boolean] |32|
-  Optional
-
   When a ``sort expression`` is set, use this option to control the order in
   which features are assigned values.
 
   Default: *True*
 
 ``Sort nulls first`` [boolean] |32|
-  Optional
-  
   When a ``sort expression`` is set, use this option to set whether
   *Null* values are counted first or last.
 
@@ -99,16 +95,14 @@ Parameters
 ``Field name`` [string]
   Name of the new field.
 
-  Default: *(not set)*
-
 ``Field type`` [enumeration]
   Type of the new field. You can choose between:
 
-  * Integer
-  * Float
-  * String
+  * 0 --- Integer
+  * 1 --- Float
+  * 2 --- String
 
-  Default: *Integer*
+  Default: *0*
 
 ``Field length`` [number]
   Length of the field.
@@ -191,11 +185,11 @@ Parameters
 ``Field type`` [enumeration]
   Type of the new field. You can choose between:
 
-  * Integer
-  * Float
-  * String
+  * 0 --- Integer
+  * 1 --- Float
+  * 2 --- String
 
-  Default: *Integer*
+  Default: *0*
 
 ``Field length`` [number]
   Length of the field.

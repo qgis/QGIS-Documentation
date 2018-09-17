@@ -391,13 +391,8 @@ Parameters
 ``Sampling strategy`` [enumeration]
   Choose between:
 
-  * Points count: number of points for each feature
-  * points density: density of points for each feature
-
-  Options:
-
-  * 0 --- Points count
-  * 1 --- Points density
+  * 0 --- Points count: number of points for each feature
+  * 1 --- points density: density of points for each feature
 
   Default: *0*
 

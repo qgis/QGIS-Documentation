@@ -211,15 +211,23 @@ Parameters
   Optional
 
   Choose the final geometry of the result. By default the algorithm will autodetect
-  it.
+  it. Available options are:
 
-  Default: *Autodetect*
+  * 0 --- Autodetect
+  * 1 --- No geometry
+  * 2 --- Point
+  * 3 --- LineString
+  * 4 --- Polygon
+  * 5 --- MultiPoint
+  * 6 --- MultiLineString
+  * 7 --- MultiPolygon
+
+  Default: *0*
 
 ``CRS`` [projection]
   Optional
 
   The CRS to assign to the output layer.
-
 
 Outputs
 .......
@@ -319,8 +327,10 @@ Parameters
 ``Join type`` [enumeration] |32|
   Choose the type of the final joined layer between:
 
-  * Create separate feature for each matching features (one-to-many)
-  * Take attributes of the first matching feature only (one-to-one)
+  * 0 --- Create separate feature for each matching feature (one-to-many)
+  * 1 --- Take attributes of the first matching feature only (one-to-one)
+
+  Default: *1*
 
 ``Discard records which could not be joined`` [boolean] |32|
   Check if you don't want to add the features that cannot be joined.
@@ -334,12 +344,12 @@ Parameters
 Outputs
 .......
 ``Joined layer`` [vector: any]
-  Final vector layer with the attribute table as result of the joining.
+  Final vector layer with the attribute table as result of the join.
 
 ``Unjoinable features from first layer`` [vector: any] |34|
   Optional
 
-  Vector layer of the non matching features resulting from the joining.
+  Vector layer of the non matching features resulting from the join.
 
 
 .. _qgisjoinattributesbylocation:
@@ -369,13 +379,15 @@ Parameters
 
   Options:
 
-  * intersects
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crosses
+  * 0 --- intersects
+  * 1 --- contains
+  * 2 --- equals
+  * 3 --- touches
+  * 4 --- overlaps
+  * 5 --- within
+  * 6 --- crosses
+
+  Default: *0*
 
 ``Fields to add`` [tablefield]
   Optional
@@ -385,8 +397,10 @@ Parameters
 ``Join type`` [enumeration]
   Choose the type of the final joined layer between:
 
-  * Create separate feature for each located features (one-to-many)
-  * Take attributes of the first located feature only (one-to-one)
+  * 0 --- Create separate feature for each located feature (one-to-many)
+  * 1 --- Take attributes of the first located feature only (one-to-one)
+
+  Default: *0*
 
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined.
@@ -405,8 +419,7 @@ Outputs
 ``Unjoinable features from first layer`` [vector: any] |34|
   Optional
 
-  Vector layer of only the non matching features resulting from the geometric
-  predicate. 
+  Vector layer of only the input features that do not spatially match any join feature.
 
 .. _qgisjoinbylocationsummary:
 
@@ -436,13 +449,15 @@ Parameters
 
   Options:
 
-  * intersects
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crosses
+  * 0 --- intersects
+  * 1 --- contains
+  * 2 --- equals
+  * 3 --- touches
+  * 4 --- overlaps
+  * 5 --- within
+  * 6 --- crosses
+
+  Default: *0*
 
 ``Fields to summarize`` [tablefield] [list]
   Optional
@@ -454,25 +469,25 @@ Parameters
 
   Choose which type of summary you want to add to each field and for each feature.
 
-  * count
-  * unique
-  * min
-  * max
-  * range
-  * sum
-  * mean
-  * median
-  * stddev
-  * minority
-  * majority
-  * q1
-  * q3
-  * iqr
-  * empty
-  * filled
-  * min_length
-  * max_length
-  * mean_length
+  * 0 --- count
+  * 1 --- unique
+  * 2 --- min
+  * 3 --- max
+  * 4 --- range
+  * 5 --- sum
+  * 6 --- mean
+  * 7 --- median
+  * 8 --- stddev
+  * 9 --- minority
+  * 10 --- majority
+  * 11 --- q1
+  * 12 --- q3
+  * 13 --- iqr
+  * 14 --- empty
+  * 15 --- filled
+  * 16 --- min_length
+  * 17 --- max_length
+  * 18 --- mean_length
 
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined.
@@ -549,13 +564,13 @@ Parameters
 ``Expression`` [expression]
   Expression to use for the vector sorting.
 
-``Ascending`` [boolean]
-  If checked the sorted vector layer will be sorted from the smallest to the
+``Sort ascending`` [boolean]
+  If checked the vector layer will be sorted from the smallest to the
   biggest values found.
 
   Default: *True*
 
-``Nulls first`` [boolean]
+``Sort nulls first`` [boolean]
   If checked Null values are placed at the beginning of the sorted layer.
 
   Default: *False*
