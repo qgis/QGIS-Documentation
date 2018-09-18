@@ -32,7 +32,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer with wrong or missing CRS.
 
-``Assigned CRS`` [projection]
+``Assigned CRS`` [crs]
   Select the new CRS to assign to the vector layer.
 
   Default: *EPSG:4326 - WGS84*
@@ -113,14 +113,17 @@ Parameters
 
 .. _qgisdefinecurrentprojection:
 
-Define current projection
--------------------------
-Takes a vector layer and changes the associated CRS. It is very useful when a layer
-is missing the ``proj`` file and you know the correct projection.
+Define layer projection
+-----------------------
+Sets an existing layer's projection to the provided CRS. It is very useful when
+a layer is missing the ``proj`` file and you know the correct projection.
 
-Final results are not visible directly on QGIS but the ``prj`` file is written in
-the same directory of the input layer.
-
+Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the current
+layer and will not output a new layer.
+  
+.. note:: For shapefile datasets, the ``.prj`` and ``.qpj`` files will
+   be overwritten - or created if missing - to match the provided CRS.
+    
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
@@ -128,9 +131,8 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer with missing projection information.
 
-``Output CRS`` [projection]
-  Output CRS associated with the source vector layer. The CRS information are
-  written in the ``proj`` file.
+``CRS`` [crs]
+  CRS to associate to the input vector layer.
 
 See also
 ........
@@ -224,7 +226,7 @@ Parameters
 
   Default: *0*
 
-``CRS`` [projection]
+``CRS`` [crs]
   Optional
 
   The CRS to assign to the output layer.
@@ -280,7 +282,7 @@ Parameters
 ``Target area for layer`` [extent]
   This is the area in which the layer is expected to be.
 
-``Target area CRS`` [projection]
+``Target area CRS`` [crs]
   Choose the target CRS of the target area selected.
 
 Outputs
@@ -310,16 +312,16 @@ Parameters
   Source input vector layer. The final attribute table will be added to **this**
   vector layer.
 
-``Table field`` [tablefield]
+``Table field`` [tablefield: any]
   Field of the source layer with the unique identifier.
 
 ``Input layer 2`` [vector: any]
   Layer with the attribute table to join.
 
-``Table field 2`` [tablefield]
+``Table field 2`` [tablefield: any]
   Table of the joining layer with the common unique field identifier.
 
-``Layer 2 fields to copy`` [tablefield]
+``Layer 2 fields to copy`` [tablefield: any]
   Optional
 
   Select the specific fields you want to add. By default all the fields are added.
@@ -389,7 +391,7 @@ Parameters
 
   Default: *0*
 
-``Fields to add`` [tablefield]
+``Fields to add`` [tablefield: any]
   Optional
 
   Select the specific fields you want to add. By default all the fields are added.
@@ -459,7 +461,7 @@ Parameters
 
   Default: *0*
 
-``Fields to summarize`` [tablefield] [list]
+``Fields to summarize`` [tablefield: any] [list]
   Optional
 
   Select the specific fields you want to add. By default all the fields are added.
@@ -528,7 +530,7 @@ Parameters
   All the layers that have to be merged into a single layer.
   Layers should be of the same geometry type.
 
-``Destination CRS`` [projection]
+``Destination CRS`` [crs]
   Optional
 
   Choose the CRS of the output layer. If not specified the
@@ -595,7 +597,7 @@ Parameters
 ``Input layer`` [vector: any]
   Layer to reproject.
 
-``Target CRS`` [projection]
+``Target CRS`` [crs]
   Destination coordinate reference system.
 
   Default: *EPSG:4326*

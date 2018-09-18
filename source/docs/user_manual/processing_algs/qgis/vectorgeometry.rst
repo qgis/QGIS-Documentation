@@ -977,11 +977,11 @@ Parameters
 ``Input layer`` [vector: line]
   Line vector layer to extend.
 
-``Start distance`` [number]
-  Starting distance to extend the line by (starting point).
+``Start distance`` [number |dataDefined|]
+  Distance by which to extend the first segment of the line (starting point).
 
-``End distance`` [number]
-  Ending distance of the extension.
+``End distance`` [number |dataDefined|]
+  Distance by which to extend the last segment of the line (ending point).
 
 Output
 ......
