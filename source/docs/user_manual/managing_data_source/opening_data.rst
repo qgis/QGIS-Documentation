@@ -52,6 +52,42 @@ supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
    
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
+.. _datasourcemanager:
+
+In QGIS, depending on the data format, there are different tools to open it,
+mainly available in the :menuselection:`Layer --> Add Layer -->` menu
+or from the :guilabel:`Manage Layers` toolbar (enabled through :menuselection:`View
+--> Toolbars` menu).
+However, all these tools point to a unique dialog, the :guilabel:`Data Source
+Manager` dialog that you can directly open with the |dataSourceManager|
+:sup:`Open Data Source Manager` button available on the :guilabel:`Data Source
+Manager Toolbar` or by pressing :kbd:`Ctrl+L`. Indeed, the :guilabel:`Data Source
+Manager` dialog offers a unified interface to open vector or raster file-based
+data as well as databases or web services supported by QGIS. It can be set
+modal or not with the |checkbox| :guilabel:`Modeless data source manager dialog`
+in :menuselection:`Settings --> Options --> General` menu.
+
+
+.. _figure_datasource_manager:
+
+.. figure:: img/datasource_manager.png
+   :align: center
+
+   QGIS Data Source Manager dialog
+
+
+Beside this main entry point, you also have the |dbManager| :guilabel:`DB Manager`
+plugin that offers advanced capabilities to analyze and manipulate connected
+databases. More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
+
+There are also many other tools, native or third-party plugins, that help you open
+dedicated data formats.
+
+This chapter will describe only the tools provided by default in QGIS to load
+data. It will mainly focus on the :guilabel:`Data Source Manager` dialog but
+more than describing each tab, it will also explore the tools based on the data
+provider or format specificities.
+
 
 .. index:: Browse data, Add layers
 .. _browser_panel:
@@ -59,26 +95,33 @@ supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
 The Browser Panel
 =================
 
-QGIS Browser is one of the main panels of QGIS that lets you quickly and easily
-add your data to projects. It helps you navigate in your filesystem and manage
-geodata, regardless the type of layer (raster, vector, table), or the datasource
-format (plain or compressed files, database, web services).
+The :guilabel:`Browser` is one of the main ways to quickly and easily
+add your data to projects. It's available as:
 
-To add a layer into a project:
+* a :guilabel:`Data Source Manager` tab, enabled pressing the
+  |dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);
+* as a QGIS panel you can open from the menu :menuselection:`View --> Panels`
+  (or |kde| :menuselection:`Settings --> Panels`) or by presssing :kbd:`Ctrl+2`.
 
-#. right-click on QGIS toolbar and check |checkbox| :guilabel:`Browser Panel`
-   to activate it or select it from the menu :menuselection:`View --> Panels`
-   (or |kde| :menuselection:`Settings --> Panels`) or press :kbd:`Ctrl+2`;
-#. a browser tree with your filesystem, databases and web services is displayed;
+In both cases, the :guilabel:`Browser` helps you navigate in your file system
+and manage geodata, regardless the type of layer (raster, vector, table),
+or the datasource format (plain or compressed files, database, web services).
+
+To add a layer into a project, using the :guilabel:`Browser` interface:
+
+#. enable the :guilabel:`Browser` as described above.
+   A browser tree with your file system, databases and web services is
+   displayed. You may need to connect databases and web services before they appear
+   (see dedicated sections);
 #. find the layer in the list;
-#. right-click on its name and select **Add selected layer(s)**. Your layer is
-   now added to the :ref:`Layers Panel <label_legend>` and can be viewed in the
-   :ref:`map canvas <label_mapview>`.
+#. double-click its name or drag-and-drop it into the :ref:`map canvas
+   <label_mapview>`. Your layer is now added to the :ref:`Layers panel
+   <label_legend>` and can be viewed in the map canvas.
 
-.. note::
+   .. tip:: **Open a QGIS project directly from the browser**
 
-  You can also add a layer or open a QGIS project directly from the Browser
-  panel by double-clicking its name or by drag-and-drop into the map canvas.
+    You can also open a QGIS project directly from the Browser
+    panel by double-clicking its name or by drag-and-drop into the map canvas.
 
 Once a file is loaded, you can zoom around it using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
@@ -293,8 +336,8 @@ simple table data. Sometimes, delimited text files can contain geometric data
 you'd want to visualize; this is what the |addDelimitedTextLayer|:guilabel:`Add
 Delimited Text Layer` is designed for.
 
-Click the |dataSourceManager| :sup:`Datasource Manager` icon to open the
-:guilabel:`Datasource Manager` dialog and enable the |addDelimitedTextLayer|
+Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
+:guilabel:`Data Source Manager` dialog and enable the |addDelimitedTextLayer|
 :guilabel:`Delimited Text` tab, as shown in figure_delimited_text_.
 
 .. _figure_delimited_text:
