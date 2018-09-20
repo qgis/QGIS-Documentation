@@ -314,12 +314,20 @@ You can setup some parameters that apply to the global symbol:
   proportional or multivariate analysis rendering.
 
 The symbols used at this level are items you can pick from the :ref:`symbols
-library <vector_style_manager>`. A list of available symbols of the same type
-from your symbol library is shown and can be filtered by selecting a group in
-the drop-down list just above. Click the :guilabel:`Save` button to add the
-designed symbol to your symbol library.
+library <vector_style_manager>`. Available symbols of the corresponding type
+are shown and can be filtered by :ref:`categories <group_symbols>` through
+the drop-down list just above. You can also update the list of symbols using the
+|styleManager| :sup:`Style Manager` button and open the eponym dialog. There,
+you can use any capabilities as exposed in :ref:`vector_style_manager` section.
 
-With the :guilabel:`Advanced` |selectString| option, you can:
+The symbols are displayed either:
+
+* in an icon list (with thumbnail, name and associated tags) using the
+  |openTable| :sup:`List View` button below the frame;
+* or as icon preview using the |filterTableFields| :sup:`Icon View` button.
+
+Press the **[Save Symbol]** button to add any symbol being edited to the symbols
+library. With the :guilabel:`Advanced` |selectString| option, you can:
 
 * set the **symbol levels**: defining the way symbol layers are connected to
   each other in the map canvas (see :ref:`Symbols_levels` for more information)
@@ -588,9 +596,13 @@ viewing the field.
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
+.. |filterTableFields| image:: /static/common/mActionFilterTableFields.png
+   :width: 1.5em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
