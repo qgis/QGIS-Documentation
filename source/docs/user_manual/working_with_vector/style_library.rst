@@ -136,32 +136,56 @@ Right-clicking over a selection of items also allows you to:
 
 .. _share_symbols:
 
-Share symbols
---------------
+Sharing symbols and color ramps
+-------------------------------
 
-The |sharing| :sup:`Share item` tool, at the right bottom of the Style
-Library dialog, offers options to easily share symbols with others: users can
-indeed export their symbols and import symbols to their library.
+The |sharing| :guilabel:`Import/Export` tool, at the left bottom of the Style
+Manager dialog, offers options to easily share symbols and color ramps with
+others. Users can indeed:
 
-**Exporting symbols**
+* export their items to :file:`.XML` file;
+* import items to their library.
 
-You can export the selected symbols to PNG, SVG or XML file formats.
+Exporting items
+...............
+
+To export items to :file:`.XML` format:
+
+#. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
+   |fileSave| :guilabel:`Export Item(s)...`
+#. Choose the symbols and color ramps you'd like to integrate. Symbols selection
+   can be done with the mouse or using a tag or group previously set.
+#. Press **[Export]** when ready. You'll be prompted to indicate the destination
+   of the saved file. The XML format generates a single file containing all the
+   selected symbols. This file can then be imported in another user's style library.
+
+.. _figure_symbol_export:
+
+.. figure:: img/export_styles.png
+   :align: center
+
+   Exporting symbols and color ramps
+
+When symbols are selected, you can also export them to PNG or SVG file formats.
 Exporting to PNG or SVG (both not available for color ramp symbols) creates
 a file for each selected symbol, and the SVG folder can be added to SVG Paths
 in :menuselection:`Settings --> Options` to e.g. share these symbols on a network.
-The XML format generates a single file containing all the selected symbols.
-This file can then be imported in another user's style library.
 
-**Importing symbols**
+Importing items
+...............
 
-You can extend your symbols library by importing new symbols. Just select |sharing|
-:menuselection:`Import` from the drop-down list at the right bottom of the dialog.
-In the new dialog, you'll need to :
+You can extend your symbols library by importing new symbols:
 
-* indicate the source of the symbols (it can be a ``.xml`` file on the disk or an url),
-* give the name of the group under which the symbols will be put
-* select the symbols you want to add to your library
-* and press **Import**.
+#. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
+   |fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog.
+#. In the new dialog, indicate the source of the symbols (it can be a
+   :file:`.xml` file on the disk or a url);
+#. Set whether to |unchecked| :guilabel:`Add to favorites` the items to import;
+#. Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the import
+   of tags associated to the items being imported;
+#. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items;
+#. Select from the preview the symbols you want to add to your library;
+#. And press **Import**.
 
 Note that import and export options are also available through right-click.
 
@@ -170,7 +194,7 @@ Note that import and export options are also available through right-click.
 .. figure:: img/import_styles.png
    :align: center
 
-   Importing symbols
+   Importing symbols and color ramps
 
 
 .. _color-ramp:
@@ -606,6 +630,10 @@ viewing the field.
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
