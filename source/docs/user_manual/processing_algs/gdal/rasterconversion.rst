@@ -196,6 +196,65 @@ Outputs
   (if this option is used).
 
 
+.. _gdalrearrange_bands:
+
+Rearrange bands
+---------------
+Creates a new raster using selected band(s) from a given raster layer.
+The algorithm also makes it possible to reorder the bands for the newly-created raster.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input raster layer.
+
+``selected band(s)`` [raster band] [list]
+  Ordered list of the bands to use to create the new raster.
+
+``Additional creation options``
+  Optional
+
+  ``Profile`` [enumeration]
+    <put parameter description here>
+    Options:
+
+    * 0 --- 
+    * 1 --- Default
+    * 2 --- No compression
+    * 3 --- Low compression
+    * 4 --- High compression
+    * 5 --- JPEG compression
+
+  Default: *0*
+
+``Output data type`` [enumeration]
+  Defines the type of the resulting raster image.
+
+  Options:
+
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
+
+  Default: *0*
+
+Outputs
+.......
+
+``Converted`` [raster]
+  Output raster layer with rearranged bands.
+
+
 .. _gdalrgbtopct:
 
 RGB to PCT
