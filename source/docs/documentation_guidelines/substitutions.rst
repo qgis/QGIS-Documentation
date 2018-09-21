@@ -350,6 +350,7 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
+|styleManager|                      ``|styleManager|``                      |filterTableFields|            ``|filterTableFields|``
 |joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|        ``|joinedLayerNotEditable|``
 |joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``
 ==================================  ======================================  =============================  ================================
@@ -676,6 +677,8 @@ Icon                            Substitution                        Icon        
 .. |fillRing| image:: /static/common/mActionFillRing.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |filterTableFields| image:: /static/common/mActionFilterTableFields.png
    :width: 1.5em
 .. |folder| image:: /static/common/mActionFolder.png
    :width: 1.5em
@@ -1044,6 +1047,8 @@ Icon                            Substitution                        Icon        
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
+   :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
