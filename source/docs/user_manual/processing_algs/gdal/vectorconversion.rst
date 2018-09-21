@@ -94,9 +94,9 @@ Parameters
 ``A fixed value to burn`` [number]
   Optional
 
-  <put parameter description here>
+  A fixed value to burn into a band for all features.
 
-  Default: *0.000000*
+  Default: *0.0*
 
 ``Output raster size units`` [enumeration]
   Units to use when defining the output raster size/resolution.
@@ -110,15 +110,15 @@ Parameters
 
 ``Width/Horizontal resolution`` [number]
   Sets the width (if size units is "Pixels") or horizontal resolution
-  (if size units is "Georeferenced units").
+  (if size units is "Georeferenced units") of the output raster.
 
-  Default: *0.000000*
+  Default: *0.0*
 
 ``Height/Vertical resolution`` [number]
   Sets the height (if size units is "Pixels") or vertical resolution
-  (if size units is "Georeferenced units").
+  (if size units is "Georeferenced units") of the output raster.
 
-  Default: *0.000000*
+  Default: *0.0*
 
 ``Output extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. If the extent is not specified, the minimum
@@ -127,9 +127,25 @@ Parameters
 ``Assign a specified nodata value to output bands`` [number]
   Optional
 
-  <put parameter description here>
+  Assigns a specified nodata value to output bands
 
-  Default: *0.000000*
+  Default: *0.0*
+
+``Additional creation options``
+  Optional
+
+  ``Profile`` [enumeration]
+    <put parameter description here>
+    Options:
+
+    * 0 --- 
+    * 1 --- Default
+    * 2 --- No compression
+    * 3 --- Low compression
+    * 4 --- High compression
+    * 5 --- JPEG compression
+
+  Default: *0*
 
 ``Output data type`` [enumeration]
   Defines the type of the resulting raster image.
@@ -153,10 +169,13 @@ Parameters
 ``Pre-initialize the output image with value`` [number]
   Optional
 
-  <put parameter description here>
+  Pre-initializes the output image bands with this value.
+  Not marked as the nodata value in the output file.
+  The same value is used in all the bands.
 
 ``Invert rasterization`` [boolean]
-  <put parameter description here>
+  Burns the fixed burn value, or the burn value associated with the first feature
+  into all parts of the image not inside the provided polygon.
 
   Default: *False*
 
