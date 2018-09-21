@@ -315,8 +315,9 @@ You can setup some parameters that apply to the global symbol:
 
 The symbols used at this level are items you can pick from the :ref:`symbols
 library <vector_style_manager>`. Available symbols of the corresponding type
-are shown and can be filtered by :ref:`categories <group_symbols>` through
-the drop-down list just above. You can also update the list of symbols using the
+are shown and, through the editable drop-down list just above, can be filtered
+by free-form text or by :ref:`categories <group_symbols>`.
+You can also update the list of symbols using the
 |styleManager| :sup:`Style Manager` button and open the eponym dialog. There,
 you can use any capabilities as exposed in :ref:`vector_style_manager` section.
 
