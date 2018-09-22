@@ -390,7 +390,7 @@ smoothing the layer.
           self.addParameter(QgsProcessingParameterFeatureSource(
               self.INPUT_VECTOR, "Input vector"))
           self.addParameter(QgsProcessingParameterNumber(
-              self.BUFFERDIST, "Input Double", 
+              self.BUFFERDIST, "Buffer distance", 
               QgsProcessingParameterNumber.Double,
               100.0))
           self.addParameter(QgsProcessingParameterFeatureSink(
@@ -426,18 +426,14 @@ After doing the necessary imports, the following ``QgsProcessingAlgorithm``
 functions are specified:
 
 * ``name``: The id of the algorithm (lowercase).
-
 * ``displayName``: A human readable name for the algorithm.
-
 * ``createInstance``: Create a new instance of the algorithm class.
-
 * ``initAlgorithm``: Configure the parameterDefinitions and
   outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
   this case, a feature source for the input, a feature sink for
   the result and a number for the buffer distance.
-
 * ``processAlgorithm``: Do the work.
 
   Here we first run the ``smoothgeometry`` algorithm to smooth the
@@ -485,9 +481,7 @@ for details).
 The first parameter to the constructors is the name of the parameter,
 and the second is the description of the parameter (for the user
 interface).
-The rest of the constructor parameters are parameter type specific (see
-`the API docs
-<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_).
+The rest of the constructor parameters are parameter type specific.
 
 The input can be turned into QGIS classes using the ``parameterAs`` functions
 of ``QgsProcessingAlgorithm``.
@@ -518,7 +512,7 @@ the progress bar (0 to 100) to inform the user about the progress of the
 algorithm.  This is very useful if your algorithm takes a long time to
 complete.
 The ``feedback`` object provides an ``isCanceled`` method that
-should be monitored to enable cancellation of the algorithm by the user.
+should be monitored to enable cancelation of the algorithm by the user.
 The ``pushInfo`` method of ``feedback`` can be used to send information
 to the user, and ``reportError`` is handy for pushing non-fatal errors
 to users.
@@ -554,8 +548,9 @@ Documenting your scripts
 As in the case of models, you can create additional documentation for
 your scripts, to explain what they do and how to use them.
 
-``processAlgorithm`` provides the ``shortHelp()``, ``shortHelpString()`` and
-``helpUrl`` functions for that purpose.
+``QgsProcessingAlgorithm`` provides the ``helpString()``,
+``shortHelpString()`` and ``helpUrl()`` functions for that purpose.
+Specify / override these to provide more help to the user.
 
 ``shortDescription()`` (added in 3.4) is used in the tooltip when
 hovering over the algorithm in the toolbox.
