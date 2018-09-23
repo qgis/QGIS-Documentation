@@ -361,8 +361,10 @@ Appropriate for point geometry features, marker symbols have several
 .. _svg_marker:
 
 * **SVG marker**: provides you with images from your SVG paths (set in
-  :menuselection:`Settings --> Options --> System` menu) to render as marker
-  symbol. Each SVG file colors and stroke can be adapted.
+  :menuselection:`Settings --> Options... --> System` menu) to render as marker
+  symbol. Width and height of the symbol can be set independently or using the
+  |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
+  also be adapted.
 
   .. note:: Requirements for a customizable SVG marker symbol
 
@@ -380,14 +382,19 @@ Appropriate for point geometry features, marker symbols have several
  
 For each marker symbol layer type, you can set some of the following properties:
 
-* :guilabel:`Color` for the fill and/or stroke, using all the capabilities of
-  the :ref:`color-selector` widget;
 * :guilabel:`Size`
+* :guilabel:`Fill color` using all the capabilities of the :ref:`color-selector`
+  widget, extended by a shortcut to apply a :guilabel:`Transparent fill`
+  in the drop-down menu;
+* :guilabel:`Stroke color` using all the capabilities of the color selector
+  widget, extended by a shortcut to apply a :guilabel:`Transparent stroke`
+  in the drop-down menu;
 * :guilabel:`Stroke style`
 * :guilabel:`Stroke width`
 * :guilabel:`Join style`
 * :guilabel:`Rotation`
-* :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y- direction;
+* :guilabel:`Offset`: You can shift the symbol in the :guilabel:`X` or
+  :guilabel:`Y` direction;
 * :guilabel:`Anchor point`.
 
 In most of the marker symbols dialog, you also have a frame with previews of
@@ -438,13 +445,16 @@ symbol layer types:
 
 * **Simple fill** (default): the following settings are available:
 
-  * :guilabel:`Fill` color
-  * :guilabel:`Stroke` color
+  * :guilabel:`Fill color` using all the capabilities of the :ref:`color-selector`
+    widget, extended by a shortcut to apply a :guilabel:`Transparent fill`
   * :guilabel:`Fill style`
-  * :guilabel:`Stroke style`
+  * :guilabel:`Stroke color` using all the capabilities of the color selector
+    widget, extended by a shortcut to apply a :guilabel:`Transparent stroke`
   * :guilabel:`Stroke width`
+  * :guilabel:`Stroke style`
   * :guilabel:`Join style`
-  * :guilabel:`Offset X,Y`
+  * :guilabel:`Offset`: You can shift the symbol in the :guilabel:`X` or
+    :guilabel:`Y` direction;
 
 * **Centroid fill**: places a marker symbol at the centroid of the visible
   feature. The position of the marker may however not be the real centroid
@@ -562,6 +572,8 @@ viewing the field.
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |lockedGray| image:: /static/common/lockedGray.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
