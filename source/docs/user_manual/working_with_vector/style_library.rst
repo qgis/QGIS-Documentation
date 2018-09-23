@@ -325,7 +325,7 @@ The symbols are displayed either:
 
 * in an icon list (with thumbnail, name and associated tags) using the
   |openTable| :sup:`List View` button below the frame;
-* or as icon preview using the |filterTableFields| :sup:`Icon View` button.
+* or as icon preview using the |iconView| :sup:`Icon View` button.
 
 Press the **[Save Symbol]** button to add any symbol being edited to the symbols
 library. With the :guilabel:`Advanced` |selectString| option, you can:
@@ -597,7 +597,7 @@ viewing the field.
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
-.. |filterTableFields| image:: /static/common/mActionFilterTableFields.png
+.. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
