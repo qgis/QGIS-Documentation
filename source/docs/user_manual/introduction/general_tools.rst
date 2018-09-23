@@ -1828,10 +1828,24 @@ can also click the **[Sample color]** button to trigger the picker capability.
 
 .. tip:: **Quick color modification**
 
-   Click the drop-down arrow at the right of the |selectColor| color box button
-   to display a widget for a quick color selection, either in the color wheel or
-   from existing color palettes. You can also use it to :guilabel:`copy` or
-   :guilabel:`paste` a color.
+  Drag-and-drop a color selector widget on another one to apply its color.
+
+
+.. color_widget:
+
+The color drop-down shortcut
+............................
+
+Click the drop-down arrow at the right of the |selectColor| color button
+to display a widget for a quick color selection. This shortcut provides access
+to:
+
+* a color wheel to pick a color from;
+* an alpha slider to tweak the selected color opacity;
+* the color palettes previously set to :guilabel:`Show in Color Buttons`;
+* copy the current color and paste it in another widget;
+* pick color from anywhere on your computer;
+* and choose color from the color selector dialog.
 
 .. _figure_color_selector:
 
