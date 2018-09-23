@@ -1757,31 +1757,21 @@ manipulation, QGIS provides you with special widgets that are presented below.
 Color Selector
 --------------
 
-The :guilabel:`select color` dialog will appear whenever you push
+The color dialog
+................
+
+The :guilabel:`Select Color` dialog will appear whenever you push
 the |selectColor| icon to choose a color. The features of this dialog
 depends on the state of the :guilabel:`Use native color chooser dialogs` parameter
-checkbox in :menuselection:`Settings --> Options --> General` menu.
+checkbox in :menuselection:`Settings --> Options... --> General` menu.
 When checked, the color dialog used is the one of the OS being used. Otherwise,
 QGIS custom color chooser is used.
 
 The custom color chooser dialog has four different tabs which allow you to
-select colors by |colorBox| :sup:`color ramp`, |colorWheel| :sup:`color wheel`,
-|colorSwatches| :sup:`color swatches` or |colorPicker| :sup:`color picker`.
-
-Whatever method you use, the selected color is always described through color
-sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
-values. The color is also identifiable as a :guilabel:`HTML notation`.
-Finally, there is an :guilabel:`opacity` slider to set transparency level.
-
-Modifying a color is as simple as clicking in the color wheel or ramp or in any
-of the color parameters sliders. You can adjust such parameters with the spinbox
-beside or, handy, scrolling the mouse wheel over the corresponding slider. You
-can also typeset the color html notation.
-
-The dialog also provides a visual comparison between the
-:guilabel:`current` (applied to widget) and the :guilabel:`new` (being selected)
-colors. Thanks to drag-and-drop, any of these colors can be saved in a slot for
-an easy access.
+select colors by |colorBox| :sup:`Color ramp`, |colorWheel| :sup:`Color wheel`,
+|colorSwatches| :sup:`Color swatches` or |colorPicker| :sup:`Color picker`.
+With the first two tabs, you can browse to all possible color combinations and
+apply it to the item.
 
 .. _figure_color_selector_ramp:
 
@@ -1790,39 +1780,51 @@ an easy access.
 
    Color selector ramp tab
 
-With |colorBox| :sup:`color ramp` or |colorWheel| :sup:`color wheel` tab,
-you can browse to all possible color combinations and apply it to the item.
-In the |colorSwatches| :sup:`color swatches` tab, you can choose from a
-preselected list of color palettes:
 
-* :guilabel:`Recent colors`,
-* :guilabel:`Standard colors`, a user-defined list of colors set under
-  :menuselection:`Settings --> Options --> Colors` menu
-* or :guilabel:`Project colors`, a user-defined list of colors set under
-  :menuselection:`Project --> Properties... --> Default Styles`.
-
-The latest palettes can be modified thanks to the |signPlus| and |signMinus|
+In the |colorSwatches| :sup:`Color swatches` tab, you can choose from a
+list of color palettes (see :ref:`colors_options` for details).
+All but the :guilabel:`Recent colors` palette can be modified thanks to the
+|signPlus| :sup:`Add current color` and |signMinus| :sup:`Remove selested color`
 buttons at the bottom of the frame.
-The :guilabel:`...` button nearby the palette combobox also offers several
+
+The :guilabel:`...` button next to the palette combobox also offers several
 options to:
 
-* copy, paste, import or export colors
-* create, import or remove color palettes. Check the :guilabel:`Show in Color
-  Buttons` option to add the custom palette to the color selector widget (see
-  figure_color_selector_).
+* copy, paste, import or export colors;
+* create, import or remove color palettes;
+* add the custom palette to the color selector widget with the :guilabel:`Show
+  in Color Buttons` item (see figure_color_selector_).
 
-.. _figure_color_selector_switcher:
+.. _figure_color_selector_swatches:
 
 .. figure:: img/color_selector_recent_colors.png
    :align: center
 
-   Color selector switcher tab
+   Color selector swatches tab
+
+.. index:: Color picker
 
 Another option is to use the |colorPicker| :sup:`color picker` which allows
 you to sample a color from under your mouse cursor at any part of QGIS or even
 from another application: press the space bar while the tab is active, move the
 mouse over the desired color and click on it or press again the space bar. You
 can also click the **[Sample color]** button to trigger the picker capability.
+
+
+Whatever method you use, the selected color is always described through color
+sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
+values. The color is also identifiable as a :guilabel:`HTML notation`.
+
+Modifying a color is as simple as clicking in the color wheel or ramp or in any
+of the color parameters sliders. You can adjust such parameters with the spinbox
+beside or, handy, scrolling the mouse wheel over the corresponding slider. You
+can also typeset the color html notation.
+Finally, there is an :guilabel:`opacity` slider to set transparency level.
+
+The dialog also provides a visual comparison between the
+:guilabel:`Old` (applied to widget) and the :guilabel:`Current` (being selected)
+colors. Thanks to drag-and-drop or pressing the |atlasNext| :sup:`Add color to
+swatch` button, any of these colors can be saved in a slot for an easy access.
 
 .. _quick_color_modification:
 
@@ -1993,6 +1995,8 @@ The values presented in the varying size assistant above will set the size
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
+   :width: 1.5em
+.. |atlasNext|  image:: /static/common/mActionAtlasNext.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
