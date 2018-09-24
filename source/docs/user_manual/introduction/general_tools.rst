@@ -1841,7 +1841,7 @@ can also click the **[Sample color]** button to trigger the picker capability.
    Quick color selector menu
 
 
-.. color_ramp_widget:
+.. _color_ramp_widget:
 
 The color ramp drop-down shortcut
 .................................
