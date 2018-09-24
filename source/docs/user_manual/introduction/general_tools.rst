@@ -1784,7 +1784,7 @@ apply it to the item.
 In the |colorSwatches| :sup:`Color swatches` tab, you can choose from a
 list of color palettes (see :ref:`colors_options` for details).
 All but the :guilabel:`Recent colors` palette can be modified thanks to the
-|signPlus| :sup:`Add current color` and |signMinus| :sup:`Remove selested color`
+|signPlus| :sup:`Add current color` and |signMinus| :sup:`Remove selected color`
 buttons at the bottom of the frame.
 
 The :guilabel:`...` button next to the palette combobox also offers several
@@ -1804,7 +1804,7 @@ options to:
 
 .. index:: Color picker
 
-Another option is to use the |colorPicker| :sup:`color picker` which allows
+Another option is to use the |colorPicker| :sup:`Color picker` which allows
 you to sample a color from under your mouse cursor at any part of QGIS or even
 from another application: press the space bar while the tab is active, move the
 mouse over the desired color and click on it or press again the space bar. You
@@ -1819,7 +1819,7 @@ Modifying a color is as simple as clicking in the color wheel or ramp or in any
 of the color parameters sliders. You can adjust such parameters with the spinbox
 beside or, handy, scrolling the mouse wheel over the corresponding slider. You
 can also typeset the color html notation.
-Finally, there is an :guilabel:`opacity` slider to set transparency level.
+Finally, there is an :guilabel:`Opacity` slider to set transparency level.
 
 The dialog also provides a visual comparison between the
 :guilabel:`Old` (applied to widget) and the :guilabel:`Current` (being selected)
