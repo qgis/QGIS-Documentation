@@ -181,12 +181,12 @@ the bottom the :ref:`layer_rendering` widget.
 
 .. tip:: **Switch quickly between different layer representations**
 
-   Using the :menuselection:`Styles --> Add` combobox at the bottom of the
-   :guilabel:`Layer Properties` dialog, you can save as many combinations of
-   layer properties settings (symbology, labeling, diagram, fields form,
-   actions...) as you want. Then, simply switch between styles from the context
-   menu of the layer in :guilabel:`Layers Panel` to automatically get different
-   representations of your data.
+   Using the :menuselection:`Styles --> Add` menu at the bottom of the
+   :guilabel:`Layer Properties` dialog, you can save as many styles as needed.
+   A style is the combination of all properties of a layer (such as symbology,
+   labeling, diagram, fields form, actions...) as you want. Then, simply 
+   switch between styles from the context menu of the layer in :guilabel:`Layers Panel`
+   to automatically get different representations of your data.
 
 
 .. tip:: **Export vector symbology**
@@ -246,7 +246,7 @@ See :ref:`symbol-selector` for further information about symbol representation.
 .. tip:: **Edit symbol directly from layer panel**
 
    If in your **Layers Panel** you have layers with categories defined through
-   categorized, graduated or rule-based style mode, you can quickly change the
+   categorized, graduated or rule-based symbology mode, you can quickly change the
    fill color of the symbol of the categories by right-clicking on a category
    and choose the color you prefer from a |colorWheel| :sup:`color wheel` menu.
    Right-clicking on a category will also give you access to the options **Hide
@@ -448,7 +448,7 @@ Proportional Symbol and Multivariate Analysis
 .............................................
 
 Proportional Symbol and Multivariate Analysis are not
-rendering types available from the Style rendering drop-down list.
+rendering types available from the Symbology rendering drop-down list.
 However with the :ref:`data-defined override <data_defined>` options applied
 over any of the previous
 rendering options, QGIS allows you to display your point and line data with
@@ -770,7 +770,7 @@ units).
 Layer rendering
 ---------------
 
-From the Style tab, you can also set some options that invariabily act on all
+From the Symbology tab, you can also set some options that invariabily act on all
 features of the layer:
 
 * :guilabel:`Layer transparency` |slider|: You can make the underlying layer in
@@ -913,7 +913,7 @@ the resort to other software for final rendering of maps, QGIS provides another
 powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
 which adds paint effects for customizing the visualization of vector layers.
 
-The option is available in the :guilabel:`Layer Properties --> Style` dialog,
+The option is available in the :guilabel:`Layer Properties --> Symbology` dialog,
 under the :ref:`Layer rendering <layer_rendering>` group (applying to the whole
 layer) or in :ref:`symbol layer properties <symbol-selector>` (applying
 to corresponding features). You can combine both usage.
