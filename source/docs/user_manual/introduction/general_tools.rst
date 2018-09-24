@@ -1831,7 +1831,7 @@ can also click the **[Sample color]** button to trigger the picker capability.
   Drag-and-drop a color selector widget on another one to apply its color.
 
 
-.. color_widget:
+.. _color_widget:
 
 The color drop-down shortcut
 ............................
