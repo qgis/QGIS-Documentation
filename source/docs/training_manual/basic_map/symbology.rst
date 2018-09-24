@@ -29,30 +29,26 @@ any vector layer.
 To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's
 begin by changing the color of the :guilabel:`landuse` layer.
 
-* Right-click on the :guilabel:`landuse` layer in the Layers list.
-* Select the menu item :guilabel:`Properties` in the menu that appears.
+#. Right-click on the :guilabel:`landuse` layer in the Layers list.
+#. Select the menu item :guilabel:`Properties...` in the menu that appears.
 
-.. note:: By default, you can also access a layer's properties by
-   double-clicking on the layer in the Layers list.
+   .. note:: By default, you can also access a layer's properties by
+     double-clicking on the layer in the Layers list.
 
-.. tip:: The button |symbology| in the upper part of the Layer Panel will open
-  the Layer Styling Panel. You can use this panel to change the symbology of the
-  layer: changes will be applied immediately!
+   .. tip:: The button |symbology| in the upper part of the Layer Panel will open
+     the Layer Styling Panel. You can use this panel to change the symbology of
+     the layer: changes will be applied immediately!
 
-In the :guilabel:`Properties` window:
+#. In the :guilabel:`Layer Properties` window, select the :guilabel:`Symbology` tab:
 
-* Select the :guilabel:`Symbology` tab:
+   .. image:: img/layer_properties_style.png
+      :align: center
 
-.. image:: img/layer_properties_style.png
-   :align: center
-
-* Click the color select button next to the :guilabel:`Color` label.
-
-A standard color dialog will appear.
-
-* Choose a gray color and click :guilabel:`OK`.
-* Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and
-  you will see the color change being applied to the layer.
+#. Click the color select button next to the :guilabel:`Color` label.
+   A standard color dialog will appear.
+#. Choose a gray color and click :guilabel:`OK`.
+#. Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and
+   you will see the color change being applied to the layer.
 
 .. _backlink-symbology-colors-1:
 
@@ -73,25 +69,22 @@ This is good stuff so far, but there's more to a layer's symbology than just
 its color. Next we want to eliminate the lines between the different land use
 areas so as to make the map less visually cluttered.
 
-* Open the :guilabel:`Layer Properties` window for the :guilabel:`landuse`
-  layer.
+#. Open the :guilabel:`Layer Properties` window for the :guilabel:`landuse`
+   layer.
 
-Under the :guilabel:`Symbology` tab, you will see the same kind of dialog as
-before. This time, however, you're doing more than just quickly changing the
-color.
+   Under the :guilabel:`Symbology` tab, you will see the same kind of dialog as
+   before. This time, however, you're doing more than just quickly changing the
+   color.
+#. in the :guilabel:`Symbol layers` panel, expand the :guilabel:`Fill` dropdown
+   (if necessary) and select the :guilabel:`Simple fill` option:
 
-* In the :guilabel:`Symbol Layers` panel, expand the :guilabel:`Fill` dropdown
-  (if necessary) and select the :guilabel:`Simple fill` option:
+   .. image:: img/simple_fill_selected.png
+      :align: center
 
-
-.. image:: img/simple_fill_selected.png
-   :align: center
-
-
-* Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
-  showing a short line and the words :guilabel:`Solid Line`.
-* Change this to :guilabel:`No Pen`.
-* Click :guilabel:`OK`.
+#. Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
+   showing a short line and the words :guilabel:`Solid Line`.
+#. Change this to :guilabel:`No Pen`.
+#. Click :guilabel:`OK`.
 
 Now the :guilabel:`landuse` layer won't have any lines between areas.
 
@@ -128,17 +121,17 @@ map, for example ...
 
 To enable scale-based rendering:
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`buildings`
-  layer.
-* Activate the :guilabel:`Rendering` tab.
-* Enable scale-based rendering by clicking on the checkbox labelled
-  :guilabel:`Scale dependent visibility`:
+#. Open the :guilabel:`Layer Properties` dialog for the :guilabel:`buildings`
+   layer.
+#. Activate the :guilabel:`Rendering` tab.
+#. Enable scale-based rendering by clicking on the checkbox labeled
+   :guilabel:`Scale dependent visibility`:
 
-.. image:: img/scale_dependent_visibility.png
-   :align: center
+   .. image:: img/scale_dependent_visibility.png
+      :align: center
 
-* Change the :guilabel:`Minimum` value to :kbd:`1:10,000`.
-* Click :guilabel:`OK`.
+#. Change the :guilabel:`Minimum` value to :kbd:`1:10,000`.
+#. Click :guilabel:`OK`.
 
 Test the effects of this by zooming in and out in your map, noting when the
 :guilabel:`buildings` layer disappears and reappears.
@@ -155,26 +148,26 @@ Now that you know how to change simple symbology for layers, the next step is
 to create more complex symbology. QGIS allows you to do this using symbol
 layers.
 
-* Go back to the :guilabel:`landuse` layer's symbol properties panel (by clicking
-  :guilabel:`Simple fill` in the :guilabel:`Symbol layers` panel).
+#. Go back to the :guilabel:`landuse` layer's symbol properties panel (by clicking
+   :guilabel:`Simple fill` in the :guilabel:`Symbol layers` panel).
 
 
-In this example, the current symbol has no outline (i.e., it uses the
-:guilabel:`No Pen` border style).
+   In this example, the current symbol has no outline (i.e., it uses the
+   :guilabel:`No Pen` border style).
 
-Select the :guilabel:`Fill` in the :guilabel:`Symbol layers` panel. Then click
-the :guilabel:`Add symbol layer` button:
+#. Select the :guilabel:`Fill` in the :guilabel:`Symbol layers` panel. Then click
+   the :guilabel:`Add symbol layer` button:
 
-.. image:: img/add_symbol_layer_button.png
-   :align: center
+   .. image:: img/add_symbol_layer_button.png
+      :align: center
 
-* Click on it and the dialog will change to look somewhat like this:
+#. Click on it and the dialog will change to look somewhat like this:
 
-.. image:: img/new_symbol_layer.png
-   :align: center
+   .. image:: img/new_symbol_layer.png
+      :align: center
 
-(It may appear somewhat different in color, for example, but you're going to
-change that anyway.)
+   It may appear somewhat different in color, for example, but you're going
+   to change that anyway.
 
 Now there's a second symbol layer. Being a solid color, it will of course
 completely hide the previous kind of symbol. Plus, it has a :guilabel:`Solid
@@ -188,15 +181,16 @@ Line` border style, which we don't want. Clearly this symbol has to be changed.
 
 With the new :guilabel:`Simple Fill` layer selected:
 
-* Set the border style to :guilabel:`No Pen`, as before.
-* Change the fill style to something other than :guilabel:`Solid` or
-  :guilabel:`No brush`. For example:
+#. Set the border style to :guilabel:`No Pen`, as before.
+#. Change the fill style to something other than :guilabel:`Solid` or
+   :guilabel:`No brush`. For example:
 
-.. image:: img/new_fill_settings.png
-   :align: center
+   .. image:: img/new_fill_settings.png
+      :align: center
 
-* Click :guilabel:`OK`. Now you can see your results and tweak them as needed.
+#. Click :guilabel:`OK`.
 
+Now you can see your results and tweak them as needed.
 You can even add multiple extra symbol layers and create a kind of texture for
 your layer that way.
 
@@ -223,10 +217,10 @@ When symbol layers are rendered, they are also rendered in a sequence, similar
 to the way the different map layers are rendered. This means that in some cases,
 having many symbol layers in one symbol can cause unexpected results.
 
-* Give the :guilabel:`roads` layer an extra symbol layer (using the method
-  for adding symbol layers demonstrated above).
-* Give the base line a :guilabel:`Stroke width` of ``2`` and a black color
-* Give the new, uppermost layer a thickness of :kbd:`1.5` and a white color.
+#. Give the :guilabel:`roads` layer an extra symbol layer (using the method
+   for adding symbol layers demonstrated above).
+#. Give the base line a :guilabel:`Stroke width` of ``2`` and a black color.
+#. Give the new, uppermost layer a thickness of ``1.5`` and a white color.
 
 You'll notice that this happens:
 
@@ -239,45 +233,46 @@ overlapping each others at each cross. That's not what we want at all!
 To prevent this from happening, you can sort the symbol levels and thereby
 control the order in which the different symbol layers are rendered.
 
-To change the order of the symbol layers, select the :guilabel:`Line` layer in
-the :guilabel:`Symbol layers` panel, then click
-:menuselection:`Advanced --> Symbol levels...` in the
-bottom right-hand corner of the window.
+To change the order of the symbol layers:
 
-.. image:: img/symbol_levels_main_dialog.png
-   :align: center
+#. Select the :guilabel:`Line` layer in the :guilabel:`Symbol layers` panel
+#. Click :menuselection:`Advanced --> Symbol levels...` in the
+   bottom right-hand corner of the window.
 
-This will open a dialog like this:
+   .. image:: img/symbol_levels_main_dialog.png
+      :align: center
 
-.. image:: img/symbol_levels_dialog.png
-   :align: center
+   This will open a dialog like this:
 
-Select :guilabel:`Enable symbol levels`. You can then set the layer ordering
-of each symbol by entering the corresponding level number. 0 is the bottom
-layer.
+   .. image:: img/symbol_levels_dialog.png
+      :align: center
 
-In our case, we just want to activate the option, like this:
+#. Select :guilabel:`Enable symbol levels`. You can then set the layer ordering
+   of each symbol by entering the corresponding level number. 0 is the bottom
+   layer.
 
-.. image:: img/correct_symbol_layers.png
-   :align: center
+   In our case, we just want to activate the option, like this:
 
-This will render the white line above the thick black line borders:
+   .. image:: img/correct_symbol_layers.png
+      :align: center
 
-* Click :guilabel:`OK` twice to return to the map.
+   This will render the white line above the thick black line borders:
 
-The map will now look like this:
+#. Click :guilabel:`OK` twice to return to the map.
 
-.. image:: img/better_roads_symbology.png
-   :align: center
+   The map will now look like this:
+
+   .. image:: img/better_roads_symbology.png
+      :align: center
 
 When you're done, remember to save the symbol itself so as not to lose your
 work if you change the symbol again in the future. You can save your current
-symbol style by clicking the :guilabel:`Save Style ...` button under the
-:guilabel:`Symbology` tab of the :guilabel:`Layer Properties` dialog. Generally, you
-should save as :guilabel:`QGIS Layer Style File`.
+symbol style by clicking the :guilabel:`Save Style...` button under the
+:guilabel:`Symbology` tab of the :guilabel:`Layer Properties` dialog. Generally,
+you should save as :guilabel:`QGIS Layer Style File`.
 
-Save your style under :kbd:`exercise_data/styles`.  You can load a
-previously saved style at any time by clicking the :guilabel:`Load Style ...`
+Save your style under :file:`exercise_data/styles`. You can load a
+previously saved style at any time by clicking the :guilabel:`Load Style...`
 button. Before you change a style, keep in mind that any unsaved style you are
 replacing will be lost.
 
@@ -288,12 +283,12 @@ replacing will be lost.
 
 * Change the appearance of the :guilabel:`roads` layer again.
 
-The roads must be narrow and yellow, with a thin, pale gray outline and a black
-thin black line in the middle. Remember that you may need to change the layer
-rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
+  The roads must be narrow and yellow, with a thin, pale gray outline and a black
+  thin black line in the middle. Remember that you may need to change the layer
+  rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 
-.. image:: img/target_road_symbology.png
-   :align: center
+  .. image:: img/target_road_symbology.png
+     :align: center
 
 :ref:`Check your results <symbology-levels-1>`
 
@@ -304,18 +299,18 @@ rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 -------------------------------------------------------------------------------
 
 Symbol levels also work for classified layers (i.e., layers having multiple
-symbols).  Since we haven't covered classification yet, you will work with some
+symbols). Since we haven't covered classification yet, you will work with some
 rudimentary pre-classified data.
 
-* Create a new map and add only the :guilabel:`roads` dataset.
-* Apply the style :kbd:`advanced_levels_demo.qml` provided in
-  :kbd:`exercise_data/styles`.
-* Zoom in to the |majorUrbanName| area.
-* Using symbol layers, ensure that the outlines of layers flow into one another
-  as per the image below:
+#. Create a new map and add only the :guilabel:`roads` dataset.
+#. Apply the style :file:`advanced_levels_demo.qml` provided in
+   :file:`exercise_data/styles`.
+#. Zoom in to the |majorUrbanName| area.
+#. Using symbol layers, ensure that the outlines of layers flow into one another
+   as per the image below:
 
-.. image:: img/correct_advanced_levels.png
-   :align: center
+   .. image:: img/correct_advanced_levels.png
+      :align: center
 
 :ref:`Check your results <symbology-levels-2>`
 
@@ -325,8 +320,8 @@ rudimentary pre-classified data.
 
 In addition to setting fill colors and using predefined patterns, you can use
 different symbol layer types entirely. The only type we've been using up to now
-was the :guilabel:`Simple Fill` type. The more advanced symbol layer types allow you to
-customize your symbols even further.
+was the :guilabel:`Simple Fill` type. The more advanced symbol layer types allow
+you to customize your symbols even further.
 
 Each type of vector (point, line and polygon) has its own set of symbol layer
 types. First we will look at the types available for points.
@@ -334,26 +329,24 @@ types. First we will look at the types available for points.
 Point Symbol Layer Types
 ...............................................................................
 
-* Uncheck all the layers except for :guilabel:`places`.
-* Change the symbol properties for the :guilabel:`places` layer:
+#. Uncheck all the layers except for :guilabel:`places`.
+#. Change the symbol properties for the :guilabel:`places` layer:
 
-.. image:: img/places_layer_properties.png
-     :align: center
+   .. image:: img/places_layer_properties.png
+      :align: center
 
-* You can access the various symbol layer types by selecting the
-  :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers` panel, then
-  click the :guilabel:`Symbol layer type` dropdown:
+#. You can access the various symbol layer types by selecting the
+   :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers` panel, then
+   click the :guilabel:`Symbol layer type` dropdown:
 
+   .. image:: img/marker_type_dropdown.png
+      :align: center
 
-.. image:: img/marker_type_dropdown.png
-   :align: center
-
-
-* Investigate the various options available to you, and choose a symbol with
-  styling you think is appropriate.
-* If in doubt, use a round :guilabel:`Simple marker` with a white border and
-  pale green fill, with a :guilabel:`Size` of :kbd:`3.00` and an
-  :guilabel:`Stroke width` of :kbd:`0.5`.
+#. Investigate the various options available to you, and choose a symbol with
+   styling you think is appropriate.
+#. If in doubt, use a round :guilabel:`Simple marker` with a white border and
+   pale green fill, with a :guilabel:`Size` of ``3.00`` and a
+   :guilabel:`Stroke width` of ``0.5``.
 
 
 Line Symbol Layer Types
@@ -361,32 +354,26 @@ Line Symbol Layer Types
 
 To see the various options available for line data:
 
-* Change the :guilabel:`Symbol layer type` for the :guilabel:`roads` layer's topmost
-  symbol layer to :guilabel:`Marker line`:
+#. Change the :guilabel:`Symbol layer type` for the :guilabel:`roads` layer's
+   topmost symbol layer to :guilabel:`Marker line`:
 
-.. image:: img/change_to_marker_line.png
-   :align: center
+   .. image:: img/change_to_marker_line.png
+      :align: center
 
+#. Select the :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers`
+   panel. Change the symbol properties to match this dialog:
 
-* Select the :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers`
-  panel. Change the symbol properties to match this dialog:
+   .. image:: img/simple_marker_line_properties.png
+      :align: center
 
+#. Select the :guilabel:`Marker line` layer and change the interval to ``1.00``:
 
-.. image:: img/simple_marker_line_properties.png
-   :align: center
+   .. image:: img/marker_line_interval.png
+      :align: center
 
-
-* Select the :guilabel:`Marker line` layer and change the interval to :kbd:`1.00`:
-
-
-.. image:: img/marker_line_interval.png
-   :align: center
-
-
-* Ensure that the symbol levels are correct (via the
-  :menuselection:`Advanced --> Symbol levels` dialog we used earlier) before
-  applying the style.
-
+#. Ensure that the symbol levels are correct (via the
+   :menuselection:`Advanced --> Symbol levels` dialog we used earlier) before
+   applying the style.
 
 Once you have applied the style, take a look at its results on the map. As you
 can see, these symbols change direction along with the road but don't always
@@ -399,26 +386,26 @@ Polygon Symbol Layer Types
 
 To see the various options available for polygon data:
 
-* Change the :guilabel:`Symbol layer type` for the :guilabel:`water` layer, as
-  before for the other layers.
-* Investigate what the different options on the list can do.
-* Choose one of them that you find suitable.
-* If in doubt, use the :guilabel:`Point pattern fill` with the following
-  options:
+#. Change the :guilabel:`Symbol layer type` for the :guilabel:`water` layer, as
+   before for the other layers.
+#. Investigate what the different options on the list can do.
+#. Choose one of them that you find suitable.
+#. If in doubt, use the :guilabel:`Point pattern fill` with the following
+   options:
 
-.. image:: img/pattern_fill_size.png
-   :align: center
+   .. image:: img/pattern_fill_size.png
+      :align: center
 
-.. image:: img/pattern_fill_distances.png
-   :align: center
+   .. image:: img/pattern_fill_distances.png
+      :align: center
 
-* Add a new symbol layer with a normal :guilabel:`Simple fill`.
-* Make it the same light blue with a darker blue border.
-* Move it underneath the point pattern symbol layer with the :guilabel:`Move
-  down` button:
+#. Add a new symbol layer with a normal :guilabel:`Simple fill`.
+#. Make it the same light blue with a darker blue border.
+#. Move it underneath the point pattern symbol layer with the :guilabel:`Move
+   down` button:
 
-.. image:: img/simple_fill_move_down.png
-   :align: center
+   .. image:: img/simple_fill_move_down.png
+      :align: center
 
 As a result, you have a textured symbol for the water layer, with the added
 benefit that you can change the size, shape and distance of the individual dots
@@ -440,29 +427,29 @@ symbol.
 
 Let's give it a try!
 
-* Select the :guilabel:`water` layer.
-* Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer type`
-  to :guilabel:`Geometry generator`.
+#. Select the :guilabel:`water` layer.
+#. Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer type`
+   to :guilabel:`Geometry generator`.
 
-  .. image:: img/geometry_generator.png
-     :align: center
+   .. image:: img/geometry_generator.png
+      :align: center
 
-* Before to start writing the spatial query we have to choose the Geometry Type
-  in output. In this example we are going to create centroids for each feature,
-  so change the Geometry Type to :guilabel:`Point / Multipoint`.
-* Now let's write the query in the query panel::
+#. Before to start writing the spatial query we have to choose the Geometry Type
+   in output. In this example we are going to create centroids for each feature,
+   so change the Geometry Type to :guilabel:`Point / Multipoint`.
+#. Now let's write the query in the query panel::
 
     centroid($geometry)
 
-  .. image:: img/geometry_generator_query.png
-     :align: center
+   .. image:: img/geometry_generator_query.png
+      :align: center
 
-* When you click on :guilabel:`OK` you will see that the :guilabel:`water` layer
-  is rendered as a point layer! We have just run a spatial operation within the
-  layer symbology itself, isn't that amazing?
+#. When you click on :guilabel:`OK` you will see that the :guilabel:`water` layer
+   is rendered as a point layer! We have just run a spatial operation within the
+   layer symbology itself, isn't that amazing?
 
-  .. image:: img/geometry_generator_result.png
-     :align: center
+   .. image:: img/geometry_generator_result.png
+      :align: center
 
 With the Geometry generator symbology you can really go over the edge of *normal*
 symbology.
@@ -492,73 +479,72 @@ The final result should look like this:
 .. note::  To do this exercise, you will need to have the free vector editing
    software `Inkscape <https://inkscape.org/>`_ installed.
 
-* Start the Inkscape program.
+#. Start the Inkscape program.
+   You will see the following interface:
 
-You will see the following interface:
+   .. image:: img/inkscape_default.png
+      :align: center
 
-.. image:: img/inkscape_default.png
-   :align: center
+   You should find this familiar if you have used other vector image editing
+   programs, like Corel.
 
-You should find this familiar if you have used other vector image editing
-programs, like Corel.
+   First, we'll change the canvas to a size appropriate for a small texture.
 
-First, we'll change the canvas to a size appropriate for a small texture.
+#. Click on the menu item :menuselection:`File --> Document Properties`. This
+   will give you the :guilabel:`Document Properties` dialog.
+#. Change the :guilabel:`Units` to :guilabel:`px`.
+#. Change the :guilabel:`Width` and :guilabel:`Height` to ``100``.
+#. Close the dialog when you are done.
+#. Click on the menu item :menuselection:`View --> Zoom --> Page` to see the
+   page you are working with.
+#. Select the :guilabel:`Circle` tool:
 
-* Click on the menu item :menuselection:`File --> Document Properties`. This
-  will give you the :guilabel:`Document Properties` dialog.
-* Change the :guilabel:`Units` to :guilabel:`px`.
-* Change the :guilabel:`Width` and :guilabel:`Height` to :kbd:`100`.
-* Close the dialog when you are done.
-* Click on the menu item :menuselection:`View --> Zoom --> Page` to see the
-  page you are working with.
-* Select the :guilabel:`Circle` tool:
+   .. image:: img/inkscape_circle_tool.png
+      :align: center
 
-.. image:: img/inkscape_circle_tool.png
-   :align: center
+#. Click and drag on the page to draw an ellipse. To make the ellipse turn into
+   a circle, hold the :kbd:`Ctrl` button while you're drawing it.
+#. Right-click on the circle you just created and open its :guilabel:`Fill and
+   Stroke` options. You can modify its rendering, such as:
 
-* Click and drag on the page to draw an ellipse. To make the ellipse turn into
-  a circle, hold the :kbd:`Ctrl` button while you're drawing it.
-* Right-click on the circle you just created and open its :guilabel:`Fill and
-  Stroke` options. You can modify its rendering, such as:
+   #. Change the :guilabel:`Fill` color to a somehow pale grey-blue,
+   #. Assign to the border a darker color in :guilabel:`Stroke paint` tab,
+   #. And reduce the border thickness under :guilabel:`Stroke style` tab.
 
-  * Change the :guilabel:`Fill` color to a somehow pale grey-blue,
-  * Assign to the border a darker color in :guilabel:`Stroke paint` tab,
-  * And reduce the border thickness under :guilabel:`Stroke style` tab.
+   .. image:: img/inkscape_stroke_fill.png
+      :align: center
 
-.. image:: img/inkscape_stroke_fill.png
-   :align: center
+#. Draw a line using the :guilabel:`Pencil` tool:
 
-* Draw a line using the :guilabel:`Pencil` tool:
+   #. Click once to start the line. Hold :kbd:`Ctrl` to make it snap to increments
+      of 15 degrees.
+   #. Move the pointer horizontally and place a point with a simple click.
+   #. Click and snap to the vertex of the line and trace a vertical line, ended
+      by a simple click.
+   #. Now join the two end vertices.
+   #. Change the color and width of the triangle symbol to match the circle's stroke
+      and move it around as necessary, so that you end up with a symbol like this one:
 
-  * Click once to start the line. Hold :kbd:`Ctrl` to make it snap to increments
-    of 15 degrees.
-  * Move the pointer horizontally and place a point with a simple click.
-  * Click and snap to the vertex of the line and trace a vertical line, ended
-    by a simple click.
-  * Now join the two end vertices.
-  * Change the color and width of the triangle symbol to match the circle's stroke
-    and move it around as necessary, so that you end up with a symbol like this one:
+   .. image:: img/inkscape_final_symbol.png
+      :align: center
 
-.. image:: img/inkscape_final_symbol.png
-   :align: center
-
-* If the symbol you get satisfies you, then save it as :guilabel:`landuse_symbol`
-  under the directory that the course is in, under :kbd:`exercise_data/symbols`,
-  as SVG file.
+#. If the symbol you get satisfies you, then save it as :guilabel:`landuse_symbol`
+   under the directory that the course is in, under :file:`exercise_data/symbols`,
+   as SVG file.
 
 In QGIS:
 
-* Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
-* In the :guilabel:`Symbology` tab, change the symbol structure by selecting
-  :guilabel:`SVG Fill` as :guilabel:`Symbol Layer Type` option, as shown below.
-* Click the |browseButton| :guilabel:`Browse` button and then on :guilabel:`Select File...`
-  to select your SVG image.
-  It's added to the symbol tree and you can now customize its different
-  characteristics (colors, angle, effects, units...).
+#. Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
+#. In the :guilabel:`Symbology` tab, change the symbol structure by selecting
+   :guilabel:`SVG Fill` as :guilabel:`Symbol Layer Type` option, as shown below.
+#. Click the |browseButton| :guilabel:`Browse` button and then on :guilabel:`Select File...`
+   to select your SVG image.
+ 
+   It's added to the symbol tree and you can now customize its different
+   characteristics (colors, angle, effects, units...).
 
-
-.. image:: img/svg_symbol_settings.png
-   :align: center
+   .. image:: img/svg_symbol_settings.png
+      :align: center
 
 Once you validate the dialog, features in :guilabel:`landuse` layer should now
 be covered by a set of symbols, showing a texture like the one on the
