@@ -1897,6 +1897,9 @@ this tool allows you to set dynamic value for the concerned parameter. When enab
 the value returned by this widget is applied to the parameter regardless its normal
 value (checkbox, textbox, slider...).
 
+The data defined override widget
+................................
+
 Clicking the |dataDefined| :sup:`Data defined override` icon shows following entries:
 
 * :guilabel:`Description...` that indicates if the option is enabled, which input is
@@ -1919,6 +1922,10 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
 
 .. tip:: **Use right-click to (de)activate the data overriding**
 
+ When the data-defined override option is setup correctly the
+ icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
+ the icon is red |dataDefineError| or |dataDefineExpressionError|.
+ 
  You can enable or disable a configured |dataDefined| :sup:`data-defined
  override` button by simply clicking the widget with the mouse right button.
 
@@ -1972,10 +1979,6 @@ The values presented in the varying size assistant above will set the size
 ::
 
  coalesce(scale_exp(Importance, 1, 20, 2, 10, 0.57), 1)
-
-.. note:: When the data-defined override option is setup correctly the
-   icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
-   the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
