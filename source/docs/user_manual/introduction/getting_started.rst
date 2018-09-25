@@ -157,7 +157,7 @@ statement for QGIS is::
 
 This returns::
 
-  QGIS - 3.0.2-Girona 'Girona' (307d082e3d)
+  QGIS - 3.4.0-Madeira 'Madeira' (307d082e3d)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
   OPTION:
@@ -176,6 +176,7 @@ This returns::
     [--authdbdirectory path] use the given directory for authentication database
     [--code path]	run the given python file on load
     [--defaultui]	start by resetting user ui settings to default
+    [--hide-browser]	hide the browser widget
     [--dxf-export filename.dxf]	emit dxf output of loaded datasets to given file
     [--dxf-extent xmin,ymin,xmax,ymax]	set extent to export to dxf
     [--dxf-symbology-mode none|symbollayer|feature]	symbology mode for dxf output
@@ -190,7 +191,7 @@ This returns::
 
   FILE:
     Files specified on the command line can include rasters,
-    vectors, and QGIS project files (.qgs):
+    vectors, and QGIS project files (.qgs and .qgz):
      1. Rasters - supported formats include GeoTiff, DEM
         and others supported by GDAL
      2. Vectors - supported formats include ESRI Shapefile
