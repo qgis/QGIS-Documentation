@@ -33,6 +33,12 @@ from the pop-up menu.
    you can use to speed up the configuration of the layer styles and
    automatically view your changes in the map canvas.
 
+.. tip:: **Styles**
+
+   The :ref:`Style` menu at the bottom of the page allows you to import or export
+   these or part of these properties from several destination (file, clipboard, databse).
+   See :ref:`managing-custom-styles`.
+
 .. note::
 
    Because properties (symbology, label, actions, default values, forms...) of
