@@ -989,6 +989,10 @@ Output
 ``Extended`` [vector: line]
   Extended vector line layer.
 
+See also
+........
+:ref:`qgislinesubstring`
+
 
 .. _qgisextractspecificvertices:
 
@@ -1348,6 +1352,10 @@ Output
 
 ``Substring`` [vector: line]
   Vector line layer of the substring
+
+See also
+........
+:ref:`qgisextendlines`
 
 
 .. _qgislinestopolygons:
