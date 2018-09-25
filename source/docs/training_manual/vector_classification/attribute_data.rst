@@ -25,7 +25,7 @@ understand what the various data can be useful for.
 -------------------------------------------------------------------------------
 
 Open the attribute table for the :guilabel:`places` layer (refer back to the
-section *"Working with Vector Data"* if necessary). Which field would be the
+section :ref:`tm_working_vector_data` if necessary). Which field would be the
 most useful to represent in label form, and why?
 
 :ref:`Check your results <labels-attribute-data-1>`
