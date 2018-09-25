@@ -35,7 +35,7 @@ from the pop-up menu.
 
 .. tip:: **Styles**
 
-   The :ref:`Style` menu at the bottom of the page allows you to import or export
+   The :menuselection:`Style` menu at the bottom of the page allows you to import or export
    these or part of these properties from several destination (file, clipboard, databse).
    See :ref:`managing-custom-styles`.
 
