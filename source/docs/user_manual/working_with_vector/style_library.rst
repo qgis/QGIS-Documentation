@@ -215,7 +215,7 @@ You can create or edit Marker, Line or Fill Symbols.
 .. figure:: img/symbolselector.png
    :align: center
 
-   Designing a Marker symbol
+   Designing a Line symbol
 
 
 Two main components structure the symbol selector dialog:
