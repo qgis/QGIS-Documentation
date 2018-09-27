@@ -2859,7 +2859,7 @@ Parameters
   Default: *0.0*
 
 ``Offset distance (m values)`` [number |dataDefined|]
-  Offset value to apply on the M axis.
+  Offset value to apply on M.
 
   Default: *0.0*
 
