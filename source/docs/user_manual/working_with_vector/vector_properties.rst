@@ -1110,7 +1110,7 @@ the drop-down menus - see :ref:`data_defined_labeling` for a use case.
 Text tab
 ........
 
-In the :guilabel:`Text` tab, you can define the :guilabel:`Font`,
+In the |text| :guilabel:`Text` tab, you can define the :guilabel:`Font`,
 :guilabel:`Style`, and :guilabel:`Size` of your labels' text (see
 Figure_labels_). There are options available to set the labels'
 :guilabel:`Color` and :guilabel:`Transparency`. Use the :guilabel:`Type
@@ -1132,7 +1132,8 @@ sharing easier.
 Formatting tab
 ..............
 
-In the :guilabel:`Formatting` tab, you can define a character for a line break
+In the |labelformatting| :guilabel:`Formatting` tab, you can define a character
+for a line break
 in the labels with the :guilabel:`Wrap on character` option. You can also
 format the :guilabel:`Line Height` and the :guilabel:`alignment`. For the
 latter, typical values are available (left, right, and center), plus
@@ -1158,8 +1159,8 @@ you want to show the plus sign in positive numbers.
 Buffer tab
 ..........
 
-To create a buffer around the labels, activate the |checkbox|
-:guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` tab. You can
+To create a buffer around the labels, activate the |checkbox| :guilabel:`Draw
+text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. You can
 set the buffer's :guilabel:`Size`, :guilabel:`color`, and
 :guilabel:`Transparency`. The buffer expands from the label's outline
 , so, if the |checkbox| :guilabel:`color buffer's fill` checkbox is
@@ -1174,8 +1175,8 @@ transparent labels) will allow you to create outlined text labels.
 Background tab
 ..............
 
-In the :guilabel:`Background` tab, you can define with :guilabel:`Size X` and
-:guilabel:`Size Y` the shape of your background.
+In the |labelbackground| :guilabel:`Background` tab, you can define with
+:guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
 Use :guilabel:`Size type` to insert an additional 'Buffer' into your background.
 The buffer size is set by default here.
 The background then consists of the buffer plus the background in :guilabel:`Size X`
@@ -1193,8 +1194,8 @@ map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
 Shadow tab
 ..........
 
-Use the :guilabel:`Shadow` tab for a user-defined :guilabel:`Drop shadow`.
-The drawing of the background is very variable.
+Use the |labelshadow| :guilabel:`Shadow` tab for a user-defined :guilabel:`Draw
+drop shadow`. The drawing of the background is very variable.
 Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'.
 The :guilabel:`Offset` angle depends on the orientation
 of the label. If you choose the |checkbox| :guilabel:`Use global shadow` checkbox,
@@ -1227,7 +1228,7 @@ can also be altered by choosing a blend mode.
 Placement tab
 .............
 
-Choose the :guilabel:`Placement` tab for configuring label placement
+Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
 type of vector layer, namely point, line or polygon.
 
@@ -1364,8 +1365,8 @@ others will be left out.
 Rendering tab
 .............
 
-In the :guilabel:`Rendering` tab, you can tune when the labels can be rendered
-and their interaction with other labels and features.
+In the |render| :guilabel:`Rendering` tab, you can tune when the labels can
+be rendered and their interaction with other labels and features.
 
 Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepend>`
 and the :guilabel:`Pixel size-based` visibility settings.
@@ -3265,6 +3266,12 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
    :width: 1.5em
+.. |labelbackground| image:: /static/common/labelbackground.png
+   :width: 1.5em
+.. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelformatting| image:: /static/common/labelformatting.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelingNone| image:: /static/common/labelingNone.png
@@ -3272,6 +3279,10 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelplacement| image:: /static/common/labelplacement.png
+   :width: 1.5em
+.. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.5em
@@ -3307,6 +3318,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |render| image:: /static/common/render.png
+   :width: 1.5em
 .. |rotateLabel| image:: /static/common/mActionRotateLabel.png
    :width: 1.5em
 .. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
