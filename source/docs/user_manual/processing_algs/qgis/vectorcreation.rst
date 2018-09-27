@@ -84,9 +84,9 @@ See also
 Array of translated features |34|
 ---------------------------------
 Creates copies of features in a layer, by creating multiple translated versions of each.
-Each copy is incrementally displaced by a preset amount in the x/y/z/m axis.
+Each copy is incrementally displaced by a preset amount in the x/y/z axis.
 
-Z and M values present in the geometry can also be translated.
+M values present in the geometry can also be translated.
 
 .. figure:: img/translate_array.png
    :align: center
@@ -120,7 +120,7 @@ Parameters
   Default: *0.0*
 
 ``Step distance (m values)`` [number |dataDefined|]
-  Offset value to apply on the M axis.
+  Offset value to apply on M.
 
   Default: *0.0*
 
