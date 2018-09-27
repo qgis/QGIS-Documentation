@@ -2723,6 +2723,11 @@ on **[Create default actions]**. To edit any of the examples, double-click
 its row. One example is performing a search based on an attribute value. This
 concept is used in the following discussion.
 
+The |checkbox| :guilabel:`Show in Attribute Table` allows you to display in the
+attribute table dialog the checked feature-scoped actions, either as :guilabel:`Combo
+Box` or as :guilabel:`Separate Buttons` (see :ref:`configure_table_columns`).
+
+
 .. index:: Actions, Attribute Actions
    single: Actions; Define an action
 .. _adding_actions:
