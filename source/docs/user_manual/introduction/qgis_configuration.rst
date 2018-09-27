@@ -742,7 +742,7 @@ dialog described above.
 General Properties
 ------------------
 
-In the :guilabel:`General` tab, the **general settings** let you:
+In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
 
 * give a title to the project beside the project file path
 * choose the color to use for features when they are selected
@@ -755,12 +755,16 @@ In the :guilabel:`General` tab, the **general settings** let you:
   checking this option can lead to performance degradation.
 
 Calculating areas and distances is a common need in GIS. However, these values
-are really tied to the underlying projection settings. The **Measurements**
+are really tied to the underlying projection settings. The :guilabel:`Measurements`
 frame lets you control these parameters. You can indeed choose:
 
-* the ellipsoid to use: it can be an existing one, a custom one
-  (you'll need to set values of the semi-major and semi-minor axis)
-  or None/Planimetric.
+* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely
+  based; it can be:
+
+  * **None/Planimetric** (returned values are in this case cartesian measurements);
+  * a **Custom** one (you'll need to set values of the semi-major and semi-minor axes);
+  * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
+    New International 1967, WGS 84...).
 * the :guilabel:`units for distance measurements` for length and perimeter and
   the :guilabel:`units for area measurements`. These settings, which default
   to the units set in QGIS options but then overrides it for the current project,
@@ -771,12 +775,12 @@ frame lets you control these parameters. You can indeed choose:
   * Identify tool derived length, perimeter and area values
   * Default unit shown in measure dialog
 
-The **Coordinate display** allows you to choose and customize the format of units
+The :guilabel:`Coordinate display` allows you to choose and customize the format of units
 to use to display the mouse coordinate in the status bar and the derived coordinates
 shown via the identify tool.
 
-Finally, you can define a **project scale** list, which overrides the global
-predefined scales.
+Finally, you can set a :guilabel:`Project predefined scales` list, which overrides
+the global predefined scales.
 
 .. _figure_general_tab:
 
@@ -798,10 +802,31 @@ this is not enforced. See :ref:`vector layer metadata properties
 CRS Properties
 --------------
 
-The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
-System for this project, and to enable on-the-fly re-projection of raster and
-vector layers when displaying layers from a different CRS. For more information
-on projection's handling in QGIS, please read :ref:`label_projections` section.
+The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
+to use in this project. It can be:
+
+* |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
+  this setting can be used to guess a layer CRS or when using QGIS for non
+  earth uses like role-playing game maps, building mapping or microscopic stuff.
+  In this case:
+
+  * no reprojection is done while rendering the layers: features are just drawn
+    using their raw coordinates;
+  * the ellipsoid is locked out and forced to ``None/Planimetric``;
+  * the distance and area units, and the coordinate display are locked out and
+    forced to "unknown units"; all measurements are done in unknown map units,
+    and no conversion is possible.
+* or an existing coordinate reference system that can be *geographic*, *projected*
+  or *user-defined*. A preview of the CRS extent on earth is displayed to
+  help you select the appropriate one.
+  Layers added to the project are on-the-fly translated to this CRS in order
+  to overlay them regardless their original CRS. Use of units, ellipsoid setting
+  are available and make sense and you can perform calculations accordingly.
+
+The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
+settings by configuring the datum transformation preferences to apply in the
+current project. As usual, these override any corresponding global settings.
+See :ref:`datum_transformation` for more details.
 
 Default Styles Properties
 -------------------------
@@ -1004,6 +1029,8 @@ and **[Load]** them into another QGIS installation.
    :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |doubleSpinBox| image:: /static/common/doublespinbox.png
