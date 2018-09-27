@@ -1651,10 +1651,51 @@ to create simple and very complex expressions to label your data in QGIS. See
 Using data-defined override for labeling
 ----------------------------------------
 
-With the |dataDefined| :sup:`Data defined override` functions, the settings for
-the labeling are overridden by entries in the attribute table. It can be used to
-set values for most of the labeling options described above. See the widget's
+With the |dataDefined| :sup:`Data defined override` function, the settings for
+the labeling are overridden by entries in the attribute table or expressions
+based on them. This feature can be used to
+set values for most of the labeling options described above.
+
+For example, using the Alaska QGIS sample dataset, let's label the :file:`airports`
+layer with their name, based on their militarian ``USE``, i.e. whether the airport
+is accessible to :
+
+* military people, then display it in gray color, size 8;
+* others, then show in blue color, size 10.
+
+To do this, after you enabled the labeling on the ``NAME`` field of the layer
+(see :ref:`showlabels`):
+
+#. activate the :guilabel:`Text` tab;
+#. Click on the |dataDefined| icon next to the :guilabel:`Size` property;
+#. Select :guilabel:`Edit...` and type::
+
+    CASE
+      WHEN "USE" like '%Military%' THEN 8 -- because compatible values are 'Military'
+                                          -- and 'Joint Military/Civilian'
+      ELSE 10
+    END
+
+#. Press **[OK]** to validate. The dialog closes and the |dataDefined| button
+   becomes |dataDefineExpressionOn| meaning that an rule is being run;
+#. Then click the button next to the color property, type the expression below
+   and validate::
+
+    CASE
+      WHEN "USE" like '%Military%' THEN '150, 150, 150'
+      ELSE '0, 0, 255'
+    END
+
+Likewise, you can customize any other property of the label, the way you want.
+See more details on the |dataDefined| :sup:`Data-define override` widget's
 description and manipulation in :ref:`data_defined` section.
+
+.. _figure_labels_attribute_data_defined:
+
+.. figure:: img/label_attribute_data_defined.png
+   :align: center
+
+   Airports labels are formatted based on their attributes
 
 .. _label_toolbar:
 
@@ -1714,7 +1755,7 @@ Customize the labels from the map canvas
 Combined with the :guilabel:`Label Toolbar`, the data defined override setting
 helps you manipulate labels in the map canvas (move, edit, rotate).
 We now describe an example using the data-defined override function for the
-|moveLabel|:sup:`Move label` function (see figure_labels_data_defined_).
+|moveLabel|:sup:`Move label` function (see figure_labels_coordinate_data_defined_).
 
 #. Import :file:`lakes.shp` from the QGIS sample dataset.
 #. Double-click the layer to open the Layer Properties. Click on :guilabel:`Labels`
@@ -1723,9 +1764,9 @@ We now describe an example using the data-defined override function for the
    to define the field type for the :guilabel:`Coordinate`. Choose ``xlabel``
    for X and ``ylabel`` for Y. The icons are now highlighted in yellow.
 
-   .. _figure_labels_data_defined:
+   .. _figure_labels_coordinate_data_defined:
 
-   .. figure:: img/label_data_defined.png
+   .. figure:: img/label_coordinate_data_defined.png
       :align: center
 
       Labeling of vector polygon layers with data-defined override
@@ -3228,6 +3269,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
