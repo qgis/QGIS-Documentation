@@ -813,7 +813,7 @@ to use in this project. It can be:
     using their raw coordinates;
   * the ellipsoid is locked out and forced to ``None/Planimetric``;
   * the distance and area units, and the coordinate display are locked out and
-    forced to unknown "map units"; all measurements are done in unknown map units,
+    forced to "unknown units"; all measurements are done in unknown map units,
     and no conversion is possible.
 * or an existing coordinate reference system that can be *geographic*, *projected*
   or *user-defined*. A preview of the CRS extent on earth is displayed to
