@@ -12,7 +12,7 @@ Vector creation
       :depth: 1
 
 
-.. _qgisparallellines:
+.. _qgisarrayoffsetlines:
 
 Array of offset (parallel) lines |34|
 -------------------------------------
@@ -76,10 +76,10 @@ Output
 
 See also
 ........
-:ref:`qgisoffsetline`, :ref:`qgisarrayfeatures`
+:ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
 
 
-.. _qgisarrayfeatures:
+.. _qgisarraytranslatedfeatures:
 
 Array of translated features |34|
 ---------------------------------
@@ -133,7 +133,7 @@ Outputs
 
 See also
 ........
-:ref:`qgistranslategeometry`, :ref:`qgisparallellines`
+:ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 
 .. _qgiscreategrid:

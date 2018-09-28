@@ -1599,7 +1599,7 @@ Output
 
 See also
 ........
-:ref:`qgisparallellines`, :ref:`qgistranslategeometry`
+:ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
 
 
 .. _qgisorientedminimumboundingbox:
@@ -2871,7 +2871,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisarrayfeatures`, :ref:`qgisoffsetline`
+:ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`
 
 
 .. _qgisbufferbym:
