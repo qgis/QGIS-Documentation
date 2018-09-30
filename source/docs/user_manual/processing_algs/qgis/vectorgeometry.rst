@@ -785,19 +785,19 @@ See also
 
 Dissolve
 --------
-Takes a polygon or line vector layer and combines their geometries into new
-geometries creating a new layer.
-
-One or more attributes can be specified to dissolve only geometries belonging to
-the same class (having the same value for the specified attributes), alternatively
-all geometries can be dissolved.
+Takes a vector layer and combines their features into new features.
+One or more attributes can be specified to dissolve features belonging to the
+same class (having the same value for the specified attributes), alternatively
+all features can be dissolved in a single one.
 
 All output geometries will be converted to multi geometries. In case the input is
 a polygon layer, common boundaries of adjacent polygons being dissolved will get
 erased.
 
-The resulting attribute table will have the same fields of the input layer while
-the features are *aggregated*.
+The resulting attribute table will have the same fields as the input layer
+but the values are not aggregated while the features are *aggregated*.
+Values in the output layer's fields are the ones of the first input feature
+that happens to be processed.
 
 .. figure:: img/dissolve.png
    :align: center
@@ -809,25 +809,24 @@ the features are *aggregated*.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Line or polygon layer to be dissolved.
+``Input layer`` [vector: any]
+  Vector layer to dissolve.
 
-``Unique ID fields`` [tablefield: any]
+``Dissolve field(s)`` [tablefield: any] [list]
   Optional
 
-  If features share a common value in all selected field(s) their geometries will
-  be combined.
+  Features sharing common value in all selected field(s) will be combined.
+  If no field is provided then all the features are dissolved in a single one.
 
-  Values in the output layer's fields are the ones of the first input feature
-  that happens to be processed.
-  Returns one feature for each unique value in the field. The feature's
-  geometry represents all input geometries with this value.
+  
+  Returns one feature for each unique value combination in the field(s).
+  The feature's geometry represents all input geometries with this value.
 
 Outputs
 .......
 
-``Dissolved`` [vector: line, polygon]
-  Output layer, either (multi) line or (multi) polygon.
+``Dissolved`` [vector: any]
+  Output multi geometry type layer.
 
 
 .. _qgissetzfromraster:
