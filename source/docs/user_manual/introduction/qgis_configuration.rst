@@ -839,29 +839,12 @@ There is also an additional section where you can define specific colors for the
 running project. You can find the added colors in the drop down menu of the color dialog
 window present in each renderer.
 
-Identify Layers Properties
---------------------------
-
-With the :guilabel:`Identify layers` tab, you set (or disable) which
-layers will respond to the :ref:`identify tool <identify>`. By default, layers
-are set queryable.
-
-You can also set whether a layer should appear as ``read-only``, meaning that
-it can not be edited by the user, regardless of the data provider's
-capabilities. Although this is a weak protection, it remains a quick and handy
-configuration to avoid end-users modifying data when working with file-based layers.
-
 Data Sources Properties
 -----------------------
 
 In the :guilabel:`Data Sources` tab, you can:
 
-* |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
-  new features in a PostGreSQL table, fields with default value constraint are
-  evaluated and populated at the form opening, and not at the commit moment.
-  This means that instead of an expression like ``nextval('serial')``, the field
-  in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-* |checkbox| :guilabel:`Automatically create transaction groups where possible`:
+* |unchecked| :guilabel:`Automatically create transaction groups where possible`:
   When this mode is turned on, all
   (postgres) layers from the same database are synchronised in their edit state,
   i.e. when one layer is put into edit state, all are, when one layer is committed
@@ -870,14 +853,38 @@ In the :guilabel:`Data Sources` tab, you can:
   gets committed when the user clicks save layer.
   Note that you can (de)activate this option only if no layer is being edited
   in the project.
-* |checkbox| :guilabel:`Trust project when data source has no metadata`:
+* |unchecked| :guilabel:`Evaluate default values on provider side`: When adding
+  new features in a PostgreSQL table, fields with default value constraint are
+  evaluated and populated at the form opening, and not at the commit moment.
+  This means that instead of an expression like ``nextval('serial')``, the field
+  in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
+* |unchecked| :guilabel:`Trust project when data source has no metadata`:
   To speed up project loading by skipping data checks. Useful in QGIS Server context
   or in projects with huge database views/materialized views. The extent of layers
   will be read from the QGIS project file (instead of data sources) and when
   using the PostgreSQL provider the primary key unicity will not be 
   checked for views and materialized views.
-* Define what layers are defined as **required**. Checked layers in this list
-  are protected from inadvertent removal from the project.
+* Configure the :guilabel:`Layers Capabilities`, i.e.:
+  
+  * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
+    :ref:`identify tool <identify>`. By default, layers are set queryable;
+  * Set whether a layer should appear as ``read-only``, meaning that
+    it can not be edited by the user, regardless of the data provider's
+    capabilities. Although this is a weak protection, it remains a quick and handy
+    configuration to avoid end-users modifying data when working with file-based layers;
+  * Define which layers are ``searchable``, i.e. could be queried using the
+    :ref:`locator widget <locator_options>`;
+  * Define which layers are defined as ``required``. Checked layers in this list
+    are protected from inadvertent removal from the project.
+
+  The :guilabel:`Layers Capabilities` table provides some convenient tools to:
+
+  * Select multiple cells and press **[Toggle selection]** to have them change their
+    checkbox state;
+  * |unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial
+    layers from the layers list;
+  * |search| :guilabel:`Filter layers...` and quickly find a particular layer to
+    configure.
 
 Relations Properties
 --------------------
