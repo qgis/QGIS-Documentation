@@ -163,7 +163,7 @@ use during the course:
 |hard| |TY| Create SRTM DEM tiff Files
 --------------------------------------------------------------------------------
 
-For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need
+For modules :ref:`tm_create_vector_dataset` and :ref:`tm_rasters`, you'll also need
 raster images (SRTM DEM) which cover the region you have selected for your
 course.
 
@@ -171,8 +171,9 @@ The CGIAR-CGI (http://srtm.csi.cgiar.org/) provides some SRTM DEM you can downlo
 from http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp.
 
 You'll need images which cover the entire region you have chosen to use.
-If you kept same data as the training manual, you can use the extent shown
-in the figure_set_osm_region_ figure above, otherwise adapt your extent.
+To find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of
+the largest layer and pick the values in the |extents| :guilabel:`Extents`
+box of the status bar.
 Keep the :file:`GeoTiff` format. Once the form is filled, click on the
 :guilabel:`Click here to Begin Search >>` button and download the file(s).
 
@@ -183,19 +184,16 @@ Once you have downloaded the required file(s), they should be saved in the
 --------------------------------------------------------------------------------
 
 
-In Module 6, Lesson 1.2 shows close-up images of three school sports fields
+In Module :ref:`tm_create_vector_dataset`, :ref:`tm_datasources` lesson shows
+close-up images of three school sports fields
 which students are asked to digitize. You'll therefore need to reproduce these
 images using your new SRTM DEM tiff file(s). There is no obligation to use school
 sports fields: any three school land-use types can be used (e.g. different
 school buildings, playgrounds or car parks).
 
-For reference, the images in the example data are:
+For reference, the image in the example data is:
 
 .. image:: img/field_outlines.png
-   :align: center
-
-
-.. image:: img/school_area_one.png
    :align: center
 
 
@@ -203,20 +201,20 @@ For reference, the images in the example data are:
 --------------------------------------------------------------------------------
 
 Having created your localised dataset, the final step is to replace the tokens
-in the :kbd:`conf.py` file so that the appropriate names will appear in your
-localised version of the Training Manual.
+in the :file:`substitutions.txt` file so that the appropriate names will appear
+in your localised version of the Training Manual.
 
 The tokens you need to replace are as follows:
 
-* :kbd:`majorUrbanName`: this defaults to "Swellendam". Replace with the name of
+* ``majorUrbanName``: this defaults to "Swellendam". Replace with the name of
   the major town in your region.
-* :kbd:`schoolAreaType1`: this defaults to "athletics field". Replace with the
+* ``schoolAreaType1``: this defaults to "athletics field". Replace with the
   name of the largest school area type in your region.
-* :kbd:`largeLandUseArea`: this defaults to "Bontebok National Park". Replace
+* ``largeLandUseArea``: this defaults to "Bontebok National Park". Replace
   with the name of a large landuse polygon in your region.
-* :kbd:`srtmFileName`: this defaults to :kbd:`srtm_41_19.tif`. Replace this with
-  the filename of your SRTM DEM file.
-* :kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should replace
+* ``srtmFileName``: this defaults to :file:`srtm_41_19.tif`. Replace this
+  with the filename of your SRTM DEM file.
+* ``localCRS``: this defaults to ``WGS 84 / UTM 34S``. You should replace
   this with the correct CRS for your region.
 
 
@@ -228,8 +226,12 @@ The tokens you need to replace are as follows:
 
 .. |TY| replace:: Try Yourself
 .. |basic| image:: /static/global/basic.png
+.. |extents| image:: /static/common/extents.png
+   :width: 1.5em
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

@@ -77,6 +77,8 @@ will be enough to add one field called :kbd:`name`.
 
 The new layer should appear in your :guilabel:`Layers list`.
 
+.. _tm_datasources:
+
 |basic| |FA| Data Sources
 -------------------------------------------------------------------------------
 
