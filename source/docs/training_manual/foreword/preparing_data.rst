@@ -163,7 +163,7 @@ use during the course:
 |hard| |TY| Create SRTM DEM tiff Files
 --------------------------------------------------------------------------------
 
-For modules :ref:`tm_create_vector_dataset` and :ref:`tm_rasters`, you'll also need
+For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also need
 raster images (SRTM DEM) which cover the region you have selected for your
 course.
 
@@ -184,7 +184,7 @@ Once you have downloaded the required file(s), they should be saved in the
 --------------------------------------------------------------------------------
 
 
-In Module :ref:`tm_create_vector_dataset`, :ref:`tm_datasources` lesson shows
+In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows
 close-up images of three school sports fields
 which students are asked to digitize. You'll therefore need to reproduce these
 images using your new SRTM DEM tiff file(s). There is no obligation to use school
