@@ -188,12 +188,12 @@ To insert an image, use
 
 .. code-block:: rst
 
-   .. image:: /static/common/qgislogo.png
+   .. image:: /static/common/logo.png
       :width: 10 em
 
 which returns
 
-.. image:: /static/common/qgislogo.png
+.. image:: /static/common/logo.png
     :width: 10 em
 
 Replacement
@@ -205,7 +205,7 @@ inside a paragraph, just create an alias somewhere.
 
 .. code-block:: rst
 
-   .. |nice_logo| image:: /static/common/qgislogo.png
+   .. |nice_logo| image:: /static/common/logo.png
                   :width: 2 em
 
 and call it in your paragraph:
@@ -216,7 +216,7 @@ and call it in your paragraph:
 
 Here is how this example become:
 
-.. |nice_logo| image:: /static/common/qgislogo.png
+.. |nice_logo| image:: /static/common/logo.png
                :width: 2 em
 
 my paragraph begins here with a nice logo |nice_logo|.
@@ -233,7 +233,7 @@ Figure
 
    .. _figure_logo:
 
-   .. figure:: /static/common/qgislogo.png
+   .. figure:: /static/common/logo.png
       :width: 20 em
       :align: center
 
@@ -244,7 +244,7 @@ The result looks like this:
 
 .. _figure_logo:
 
-.. figure:: /static/common/qgislogo.png
+.. figure:: /static/common/logo.png
    :width: 20 em
    :align: center
 
