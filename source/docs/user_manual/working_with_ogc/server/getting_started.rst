@@ -216,6 +216,10 @@ as it adds the parameters from ``/etc/nginx/fastcgi_params``:
  fastcgi_param  HTTPS              $https if_not_empty;
 
  fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;
+ 
+ # Be aware that this can be considered as a security issue
+ # Could be advantageously changed with
+ # fastcgi_param  SERVER_SOFTWARE    nginx;
  fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;
 
  fastcgi_param  REMOTE_ADDR        $remote_addr;
