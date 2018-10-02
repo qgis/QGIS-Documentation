@@ -190,7 +190,7 @@ choose the ramp type:
 
    cpt-city dialog with hundreds of color ramps
 
-.. tip:: **Easily custom the color stops of the gradient color ramp**
+.. tip:: **Easily adjust the color stops of the gradient color ramp**
 
  Double-clicking the ramp preview or drag-and-drop a color from the color spot onto
  the ramp preview adds a new color stop. Each color stop can be tweaked using the
