@@ -30,7 +30,7 @@ Parameters
   Default: *1*
 
 ``Output comma-separated values`` [boolean]
-  Sets whether output file should be of comma-separated values (csv) type.
+  Sets whether the output file should be of comma-separated values (csv) type.
 
   Default: *False*
   
@@ -38,14 +38,14 @@ Outputs
 .......
 
 ``XYZ ASCII file`` [table]
-  Table file containing values exported from the raster band.
+  Table file containing the values exported from the raster band.
 
 
 .. _gdalpcttorgb:
 
 PCT to RGB
 ----------
-Convert an 8bit paletted image to 24bit RGB.
+Converts an 8bit paletted image to 24bit RGB.
 
 This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.
 
@@ -91,7 +91,7 @@ Parameters
   Default: *0*
 
 ``Generate a RGBA file`` [boolean]
-  Sets whether output file should be of RGBA type.
+  Sets whether the output file should be of RGBA type.
 
   Default: *False*
   
@@ -173,7 +173,7 @@ Parameters
   Default: *0.000000*
 
 ``Output raster size units`` [enumeration]
-  Units to apply to features.
+  Units to use when defining the output raster size/resolution.
 
   Options:
 
@@ -183,18 +183,20 @@ Parameters
   Default: *0*
 
 ``Width/Horizontal resolution`` [number]
-  Sets the horizontal resolution of the output raster.
+  Sets the width (if size units is "Pixels") or horizontal resolution
+  (if size units is "Georeferenced units").
 
   Default: *0.000000*
 
 ``Height/Vertical resolution`` [number]
-  Sets the vertical resolution of the output raster.
+  Sets the height (if size units is "Pixels") or vertical resolution
+  (if size units is "Georeferenced units").
 
   Default: *0.000000*
 
 ``Output extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. If the extent is not specified, the minimum
-  extent that covers selected reference layer(s) will be used.
+  extent that covers the selected reference layer(s) will be used.
 
 ``Assign a specified nodata value to output bands`` [number]
   Optional
@@ -248,6 +250,7 @@ table for the given RGB-image using a median cut algorithm on a downsampled RGB
 histogram. Then it converts the image into a pseudo-colored image using the color
 table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to
 maximize output image visual quality.
+
 If you want to classify a raster map and want to reduce the number of classes it
 can be helpful to downsample your image with this algorithm before.
 The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
