@@ -99,6 +99,59 @@ Outputs
   points count.
 
 
+.. _qgisdbscanclustering:
+
+DBSCAN clustering |34|
+----------------------
+Clusters point features based on a 2D implementation of Density-based spatial
+clustering of applications with noise (DBSCAN) algorithm.
+
+The algorithm requires two parameters, a minimum cluster size,
+and the maximum distance allowed between clustered points.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Layer to analyze.
+
+``Minimum cluster size`` [number]
+  Minimum number of features to generate a cluster.
+
+  Default: *5*
+
+``Maximum distance between clustered points`` [number]
+  Distance beyond which two features can not belong to
+  the same cluster.
+
+  Default: *1.0*
+
+``Treat border points as noise (DBSCAN*)`` [boolean]
+  Optional
+
+  If checked, points on the border of a cluster are themselves treated as
+  unclustered points, and only points on the interior of a cluster are tagged
+  as clustered.
+
+  Default: *FALSE*
+
+``Cluster field name`` [string]
+  Name of the field where to store the associated cluster number.
+
+  Default: *CLUSTER_ID*
+
+Outputs
+.......
+
+``Clusters`` [vector: point]
+  Vector layer containing the original features with a field
+  setting the cluster they belong to.
+
+See also
+........
+:ref:`qgiskmeansclustering`
+
+
 .. _qgisdistancematrix:
 
 Distance matrix
@@ -245,7 +298,8 @@ to matching points in the hub layer.
 Determination of which hub goes with each point is based on a match between the
 Hub ID field on the hub points and the Spoke ID field on the spoke points.
 
-If input layers are not point layers, a point on the surface of the geometries will be taken as the connecting location.
+If input layers are not point layers, a point on the surface of the geometries
+will be taken as the connecting location.
 
 .. figure:: img/join_lines.png
   :align: center
@@ -283,6 +337,53 @@ Outputs
 .......
 ``Hub lines`` [vector: lines]
   The resulting line layer.
+
+
+.. _qgiskmeansclustering:
+
+K-means clustering |34|
+-----------------------
+Calculates the 2D distance based k-means cluster number for each input feature.
+
+K-means clustering aims to partition the features into k clusters in which
+each feature belongs to the cluster with the nearest mean.
+The mean point is represented by the barycenter of the clustered features.
+
+If input geometries are lines or polygons, the clustering
+is based on the centroid of the feature.
+
+.. figure:: img/kmeans.png
+  :align: center
+
+  A five class point clusters
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Layer to analyze.
+
+``Number of clusters`` [number]
+  Number of clusters to create with the features.
+
+  Default: *5*
+
+``Cluster field name`` [tablefield: any]
+  Name of the field where to store the associated cluster number.
+
+  Default: *CLUSTER_ID*
+
+Outputs
+.......
+
+``Clusters`` [vector: any]
+  Vector layer containing the original features with a field
+  setting the cluster they belong to.
+
+
+See also
+........
+:ref:`qgisdbscanclustering`
 
 
 .. _qgislistuniquevalues:
@@ -467,4 +568,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |34| replace:: :kbd:`NEW in 3.4`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

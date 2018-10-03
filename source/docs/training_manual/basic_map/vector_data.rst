@@ -2,6 +2,8 @@
 
    |updatedisclaimer|
 
+.. _tm_working_vector_data:
+
 |LS| Working with Vector Data
 ===============================================================================
 
@@ -25,9 +27,7 @@ loaded in your map. What you can see right now is merely the position of the
 roads.
 
 To see all the data available to you, with the :guilabel:`roads` layer
-selected in the Layers panel:
-
-* Click on this button: |openTable|
+selected in the Layers panel, click on this button: |openTable|
 
 It will show you a table with more data about the :guilabel:`roads` layer.
 This extra data is called *attribute data*. The lines that you can see on your
@@ -35,7 +35,7 @@ map represent where the roads go; this is the *spatial data*.
 
 These definitions are commonly used in GIS, so it's essential to remember them!
 
-* You may now close the attribute table.
+You may now close the attribute table.
 
 Vector data represents features in terms of points, lines and polygons on a
 coordinate plane. It is usually used to store discrete features, like roads and
@@ -83,30 +83,27 @@ so different: in fact, both are spatial extension of the SQLite library.
 
 Let's add some layer from a SpatiaLite database.
 
-* Click the icon |dataSourceManager| to open the Data Source Manager window
+#. Click the icon |dataSourceManager| to open the Data Source Manager window
+   (If you're sure you can't see it at all, check that the :guilabel:`Data
+   Source Manager` toolbar is enabled.)
+#. Click on the |addSpatiaLiteLayer| :guilabel:`SpatiaLite` tab.
+#. In this tab you can see all the connections to existing databases or set up
+   new connections.
+#. Click the :guilabel:`New` button.
+#. In the main folder of the Training Data, you should find the file
+   :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
 
-(If you're sure you can't see it at all, check that the :guilabel:`Manage
-Layers` toolbar is enabled.)
+   Notice that the drop-down above the three buttons now reads "landuse.sqlite@...",
+   followed by the path of the database file on your computer.
 
-* Click on the |addSpatiaLiteLayer| :guilabel:`SpatiaLite` tab.
-* In this tab you can see all the connections to existing databases or set up
-  new connections.
-* Click the :guilabel:`New` button.
-* In the main folder of the Training Data, you should find the file
-  :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
+#. Click the :guilabel:`Connect` button. You should see this in the previously
+   empty box:
 
+   .. image:: img/spatiallite_dialog_connected.png
+      :align: center
 
-Notice that the drop-down above the three buttons now reads "landuse.sqlite@...",
-followed by the path of the database file on your computer.
-
-* Click the :guilabel:`Connect` button. You should see this in the previously
-  empty box:
-
-.. image:: img/spatiallite_dialog_connected.png
-   :align: center
-
-* Click on the :guilabel:`landuse` layer to select it, then click
-  :menuselection:`Add`
+#. Click on the :guilabel:`landuse` layer to select it, then click
+   :menuselection:`Add`
 
 .. tip:: Once you have set up a connection to a database you can see this connection
   and load all the layers contained into it also in the QGIS Browser. We will
@@ -125,12 +122,9 @@ layer at the bottom of the list is drawn first, and the layer at the top is
 drawn last. By changing the order that they are shown on the list, you can
 change the order they are drawn in.
 
-.. note::  Depending on the version of QGIS that you are using, you may have a
-   checkbox beneath your Layers list reading :guilabel:`Control rendering
-   order`. This must be checked (switched on) so that moving the layers up and
-   down in the Layers list will bring them to the front or send them to the
-   back in the map. If your version of QGIS doesn't have this option, then it
-   is switched on by default and you don't need to worry about it.
+.. note:: You can alter this behavior using the :guilabel:`Control rendering
+   order` checkbox beneath the :guilabel:`Layer Order` panel. We will
+   however not discuss this feature yet.
 
 The order in which the layers have been loaded into the map is probably not
 logical at this stage. It's possible that the road layer is completely hidden
@@ -146,8 +140,8 @@ urban areas.
 
 To resolve this problem:
 
-* Click and drag on a layer in the Layers list.
-* Reorder them to look like this:
+#. Click and drag on a layer in the Layers list.
+#. Reorder them to look like this:
 
 .. image:: img/correct_layer_order.png
    :align: center

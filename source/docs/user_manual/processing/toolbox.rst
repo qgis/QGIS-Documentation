@@ -28,7 +28,7 @@ of the same algorithm on different sets of inputs.
    Processing Toolbox
 
 
-Providers can be (de)activated in the :ref:` Processing settings dialog
+Providers can be (de)activated in the :ref:`Processing settings dialog
 <processing.options>`.
 By default, only providers that do not rely on third-party applications (that is,
 those that only require QGIS elements to be run) are active. Algorithms requiring

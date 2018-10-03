@@ -350,8 +350,9 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
-|joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|        ``|joinedLayerNotEditable|``
-|joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``
+|styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
+|joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|       ``|joinedLayerNotEditable|``
+|joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``            |filterTableFields|            ``|filterTableFields|``
 ==================================  ======================================  =============================  ================================
 
 
@@ -677,6 +678,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
+.. |filterTableFields| image:: /static/common/mActionFilterTableFields.png
+   :width: 1.5em
 .. |folder| image:: /static/common/mActionFolder.png
    :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
@@ -739,6 +742,8 @@ Icon                            Substitution                        Icon        
 .. |history| image:: /static/common/mActionHistory.png
    :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
+   :width: 1.5em
+.. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
@@ -1044,6 +1049,8 @@ Icon                            Substitution                        Icon        
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |stylePreset| image:: /static/common/stylepreset.png
+   :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em

@@ -162,6 +162,7 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 
 .. index:: Sort columns, Add actions
    pair: Attributes; Columns
+.. _configure_table_columns:
 
 Configuring the columns
 -----------------------

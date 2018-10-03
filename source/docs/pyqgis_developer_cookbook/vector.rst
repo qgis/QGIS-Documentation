@@ -227,6 +227,8 @@ iterator returns all features, but returns partial data for each of them.
   request.setSubsetOfAttributes(['name','id'],layer.fields())
   # Don't return geometry objects
   request.setFlags(QgsFeatureRequest.NoGeometry)
+  # fetch only the feature with id 45
+  request.setFilterFid(45)
 
 
 .. tip:: **Speed features request**

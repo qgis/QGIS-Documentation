@@ -742,7 +742,7 @@ dialog described above.
 General Properties
 ------------------
 
-In the :guilabel:`General` tab, the **general settings** let you:
+In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
 
 * give a title to the project beside the project file path
 * choose the color to use for features when they are selected
@@ -755,12 +755,16 @@ In the :guilabel:`General` tab, the **general settings** let you:
   checking this option can lead to performance degradation.
 
 Calculating areas and distances is a common need in GIS. However, these values
-are really tied to the underlying projection settings. The **Measurements**
+are really tied to the underlying projection settings. The :guilabel:`Measurements`
 frame lets you control these parameters. You can indeed choose:
 
-* the ellipsoid to use: it can be an existing one, a custom one
-  (you'll need to set values of the semi-major and semi-minor axis)
-  or None/Planimetric.
+* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely
+  based; it can be:
+
+  * **None/Planimetric** (returned values are in this case cartesian measurements);
+  * a **Custom** one (you'll need to set values of the semi-major and semi-minor axes);
+  * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
+    New International 1967, WGS 84...).
 * the :guilabel:`units for distance measurements` for length and perimeter and
   the :guilabel:`units for area measurements`. These settings, which default
   to the units set in QGIS options but then overrides it for the current project,
@@ -771,12 +775,12 @@ frame lets you control these parameters. You can indeed choose:
   * Identify tool derived length, perimeter and area values
   * Default unit shown in measure dialog
 
-The **Coordinate display** allows you to choose and customize the format of units
+The :guilabel:`Coordinate display` allows you to choose and customize the format of units
 to use to display the mouse coordinate in the status bar and the derived coordinates
 shown via the identify tool.
 
-Finally, you can define a **project scale** list, which overrides the global
-predefined scales.
+Finally, you can set a :guilabel:`Project predefined scales` list, which overrides
+the global predefined scales.
 
 .. _figure_general_tab:
 
@@ -798,10 +802,31 @@ this is not enforced. See :ref:`vector layer metadata properties
 CRS Properties
 --------------
 
-The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
-System for this project, and to enable on-the-fly re-projection of raster and
-vector layers when displaying layers from a different CRS. For more information
-on projection's handling in QGIS, please read :ref:`label_projections` section.
+The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
+to use in this project. It can be:
+
+* |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
+  this setting can be used to guess a layer CRS or when using QGIS for non
+  earth uses like role-playing game maps, building mapping or microscopic stuff.
+  In this case:
+
+  * no reprojection is done while rendering the layers: features are just drawn
+    using their raw coordinates;
+  * the ellipsoid is locked out and forced to ``None/Planimetric``;
+  * the distance and area units, and the coordinate display are locked out and
+    forced to "unknown units"; all measurements are done in unknown map units,
+    and no conversion is possible.
+* or an existing coordinate reference system that can be *geographic*, *projected*
+  or *user-defined*. A preview of the CRS extent on earth is displayed to
+  help you select the appropriate one.
+  Layers added to the project are on-the-fly translated to this CRS in order
+  to overlay them regardless their original CRS. Use of units, ellipsoid setting
+  are available and make sense and you can perform calculations accordingly.
+
+The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
+settings by configuring the datum transformation preferences to apply in the
+current project. As usual, these override any corresponding global settings.
+See :ref:`datum_transformation` for more details.
 
 Default Styles Properties
 -------------------------
@@ -814,29 +839,12 @@ There is also an additional section where you can define specific colors for the
 running project. You can find the added colors in the drop down menu of the color dialog
 window present in each renderer.
 
-Identify Layers Properties
---------------------------
-
-With the :guilabel:`Identify layers` tab, you set (or disable) which
-layers will respond to the :ref:`identify tool <identify>`. By default, layers
-are set queryable.
-
-You can also set whether a layer should appear as ``read-only``, meaning that
-it can not be edited by the user, regardless of the data provider's
-capabilities. Although this is a weak protection, it remains a quick and handy
-configuration to avoid end-users modifying data when working with file-based layers.
-
 Data Sources Properties
 -----------------------
 
 In the :guilabel:`Data Sources` tab, you can:
 
-* |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
-  new features in a PostGreSQL table, fields with default value constraint are
-  evaluated and populated at the form opening, and not at the commit moment.
-  This means that instead of an expression like ``nextval('serial')``, the field
-  in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-* |checkbox| :guilabel:`Automatically create transaction groups where possible`:
+* |unchecked| :guilabel:`Automatically create transaction groups where possible`:
   When this mode is turned on, all
   (postgres) layers from the same database are synchronised in their edit state,
   i.e. when one layer is put into edit state, all are, when one layer is committed
@@ -845,14 +853,38 @@ In the :guilabel:`Data Sources` tab, you can:
   gets committed when the user clicks save layer.
   Note that you can (de)activate this option only if no layer is being edited
   in the project.
-* |checkbox| :guilabel:`Trust project when data source has no metadata`:
+* |unchecked| :guilabel:`Evaluate default values on provider side`: When adding
+  new features in a PostgreSQL table, fields with default value constraint are
+  evaluated and populated at the form opening, and not at the commit moment.
+  This means that instead of an expression like ``nextval('serial')``, the field
+  in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
+* |unchecked| :guilabel:`Trust project when data source has no metadata`:
   To speed up project loading by skipping data checks. Useful in QGIS Server context
   or in projects with huge database views/materialized views. The extent of layers
   will be read from the QGIS project file (instead of data sources) and when
   using the PostgreSQL provider the primary key unicity will not be 
   checked for views and materialized views.
-* Define what layers are defined as **required**. Checked layers in this list
-  are protected from inadvertent removal from the project.
+* Configure the :guilabel:`Layers Capabilities`, i.e.:
+  
+  * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
+    :ref:`identify tool <identify>`. By default, layers are set queryable;
+  * Set whether a layer should appear as ``read-only``, meaning that
+    it can not be edited by the user, regardless of the data provider's
+    capabilities. Although this is a weak protection, it remains a quick and handy
+    configuration to avoid end-users modifying data when working with file-based layers;
+  * Define which layers are ``searchable``, i.e. could be queried using the
+    :ref:`locator widget <locator_options>`;
+  * Define which layers are defined as ``required``. Checked layers in this list
+    are protected from inadvertent removal from the project.
+
+  The :guilabel:`Layers Capabilities` table provides some convenient tools to:
+
+  * Select multiple cells and press **[Toggle selection]** to have them change their
+    checkbox state;
+  * |unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial
+    layers from the layers list;
+  * |search| :guilabel:`Filter layers...` and quickly find a particular layer to
+    configure.
 
 Relations Properties
 --------------------
@@ -1004,6 +1036,8 @@ and **[Load]** them into another QGIS installation.
    :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |doubleSpinBox| image:: /static/common/doublespinbox.png

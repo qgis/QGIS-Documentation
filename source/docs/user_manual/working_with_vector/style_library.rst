@@ -21,14 +21,22 @@
 The Style Manager
 ==================
 
-The Style Manager is the place where users can manage and create generic symbols
-to be used in several QGIS projects. You can open it with the :menuselection:`Settings
---> Style Manager` or from the **Style** tab in the vector layer's
-:menuselection:`Properties`. It allows users to:
+The :guilabel:`Style Manager` is the place where users can manage and create
+generic symbols and color ramps to be used in several QGIS projects. You can
+open that modeless dialog:
 
-* create, edit and remove symbols
-* organize symbols in custom groups
-* export and import symbols.
+* with the |styleManager| :sup:`Style Manager` button of the Project toolbar;
+* from the :menuselection:`Settings -->` |styleManager| :menuselection:`Style
+  Manager...` menu;
+* or from a vector :menuselection:`Layer Properties --> Symbology` tab (using the
+  |styleManager| :sup:`Style Manager` button in a :ref:`symbol property
+  <symbol-selector>` dialog).
+
+The dialog allows you to:
+
+* create, edit and remove symbols and color ramps;
+* organize symbols and color ramps in custom groups;
+* export and import symbols and color ramps.
 
 .. _figure_style_manager:
 
@@ -40,24 +48,36 @@ to be used in several QGIS projects. You can open it with the :menuselection:`Se
 
 .. _group_symbols:
 
-Groups and smart groups
-------------------------
+Organizing symbols and color ramps
+----------------------------------
 
-You can organize symbols into different categories. These categories, listed in
-the panel at the left, can be static (called **Group**) or dynamic (named
-**Smart Group**). A group is smart when its symbols are dynamically fetched
-according to conditions set. See figure_smart_group_:
+The :guilabel:`Style Manager` dialog displays in its center a frame with
+previewed items organized into tabs:
 
-To create a group, right click on an existing group or on the main **Groups**
-directory in the left of the dialog.
-You can also select a group and click the |signPlus| :sup:`Add Group`
-button. The new group will be a sub-group of the selected one.
+* |pointLayer| :guilabel:`Marker` for point symbols;
+* |lineLayer| :guilabel:`Line` for linear symbols;
+* |polygonLayer| :guilabel:`Fill` for surface symbols;
+* and |color| :guilabel:`Color ramp`.
 
-Create **Smart Group** is similar to creating group, but instead select
-**Smart Groups**. The dialog box allows user to choose the expression to
-select symbols in order to appear in the smart group (contains some tags,
-member of a group, have a string in its name, etc.). Any symbol that satisfies
-the entered condition(s) is automatically added to the smart group.
+For each family of items, you can organize the elements into different categories,
+listed in the panel on the left:
+
+* **Favorites**: displayed by default when configuring an item, it shows a
+  set of default symbols and color ramps you can extend;
+* **All**: listing all the installed symbols and color ramps;
+* **Tags**: shows a list of labels you can use to identify the items.
+  A symbol or color ramp can be tagged more than once. Select a tag in the list
+  and you'll see the items that belong to it for each type of item.
+  To create a new tag you could later attach to symbols or color ramps, use the
+  **[Add tag...]** button or select the |signPlus| :guilabel:`Add Tag...`
+  from any tag contextual menu;
+* **Smart Group**: a smart group dynamically fetches its symbols according to
+  conditions set (see eg, figure_smart_group_). Click the **[Add smart group...]**
+  button to create smart groups. The dialog box allows you to enter an expression
+  to filter the items to select (has a particular tag, have a string in its name,
+  etc.). Any symbol or color ramp that satisfies the entered condition(s) is
+  automatically added to the smart group.
+
 
 .. _figure_smart_group:
 
@@ -66,43 +86,53 @@ the entered condition(s) is automatically added to the smart group.
 
    Creating a Smart Group
 
-To remove a group or a smart group, right click on the group and select
-:menuselection:`Remove Group` or select it and push
-|signMinus| :sup:`Remove Group` button.
+Tags and smart groups are not mutually exclusive: they are simply two different
+ways to organize your symbols and color ramps. 
+Unlike the smart groups that automatically fetch their belonged items based on
+the input constraints, tags are filled by the user. To edit any of those categories,
+you can either:
 
-Unlike the smart groups that automatically fetch their belonged symbols,
-simple groups are filled by the user.
-To add a symbol into a group, you can either right click on a symbol, choose
-:menuselection:`Apply Group` and then the group name. There is a second
-way to add several symbols into a group: just select the group, click
-|changeLabelProperties| and choose :menuselection:`Group Symbols`. All
-symbols display a checkbox that allows you to add the symbol into the selected
-groups. When selection is finished, you can click the same button, and
-choose :menuselection:`Finish Grouping`.
+* select the items, right-click and choose :menuselection:`Add to Tag -->`
+  and then select the tag name or create a new tag;
+* select the tag and press :guilabel:`Modify group... --> Attach Selected Tag
+  to Symbols`. A |unchecked| checkbox appears near each item to help you select
+  or deselect it. When selection is finished, press :guilabel:`Modify group... -->
+  Finish Tagging`.
+* select the smart group, press :guilabel:`Modify group... --> Edit smart group...`
+  and configure a new set of constraints in the :guilabel:`Smart Group Editor` dialog.
+  This option is also available in the contextual menu of the smart group.
 
-All the symbols that are not placed under a custom group belong
-to a default group named **Ungrouped**.
+To remove a tag or a smart group, right-click on it and select the |signMinus|
+:guilabel:`Remove` button. Note that this does not delete the items grouped in the
+category.
 
-Add, Edit, Remove Symbol
--------------------------
+Adding, editing or removing an item
+-----------------------------------
 
-Selecting a group returns in the right panel, if applicable, the list of symbols
-of the group (including its subgroups). These symbols are organized in four
-different tabs:
+As seen earlier, symbols and color ramps are listed under different tabs whose
+contents depend on the active category (tag, smart group, favorites...). For each
+type of symbols (*Marker* , *Line* or *Fill*) and color ramp, when the tab is
+enabled, you can:
 
-* **Marker** for point symbols
-* **Line** for linear symbols
-* **Fill** for surface symbols
-* and :ref:`color-ramp`.
+* add new items: press the |signPlus| :sup:`Add item` button and configure the
+  item following :ref:`symbols <symbol-selector>` or :ref:`color ramps <color-ramp>`
+  builder description;
+* modify an existing item: select an item and press |symbologyEdit| :sup:`Edit item`
+  button and configure as mentioned above; 
+* delete existing items: to delete a symbol you no longer need, select it and click
+  |signMinus| :sup:`Remove item` (also available through right-click).
+  The symbol will be deleted from the local symbols database.
 
-To delete a symbol you no longer need, just select it and click |signMinus|
-:sup:`Remove item` (also available through right-click).
-The symbol will be deleted from the local symbols database.
+Right-clicking over a selection of items also allows you to:
 
-The symbol list can be modified by adding new symbols with |signPlus|
-:sup:`Add item` button or modifying existing ones with |symbologyEdit|
-:sup:`Edit item`.
-See :ref:`symbol-selector` for further information.
+* :guilabel:`Add to Favorites`;
+* :guilabel:`Remove from Favorites`;
+* :guilabel:`Add to Tag -->` and select the appropriate tag or create a new one to use;
+* :guilabel:`Clear Tags`: detaching the symbols from any tag;
+* :guilabel:`Remove Item(s)`;
+* :guilabel:`Edit Item`: applies to the item you right-click over;
+* :guilabel:`Export Selected Symbol(s) as PNG...` (not available with color ramps);
+* :guilabel:`Export Selected Symbol(s) as SVG...` (not available with color ramps);
 
 .. _share_symbols:
 
@@ -154,8 +184,8 @@ Color Ramp
    single: Colors; Color brewer
    single: Colors; Custom color ramp
 
-The Color ramp tab in the Style Manager presents different types of
-color ramps you can use to style layers.
+The Color ramp tab in the :guilabel:`Style Manager` dialog helps you preview
+different color ramps based on the category selected in the left panel.
 
 To create a custom color ramp, activate the Color ramp tab and click the
 |signPlus| :sup:`Add item` button. The button reveals a drop-down list to
@@ -164,26 +194,6 @@ choose the ramp type:
 * :guilabel:`Gradient`: given a start and end colors, generate a color ramp which
   can be **continuous** or **discrete**. With double-clicking the ramp preview, you
   can add as many intermediate color stops as you want.
-* :guilabel:`Random`: creates a random set of colors based on range of values for
-  hue, saturation, value and opacity and a number of colors (classes)
-* :guilabel:`ColorBrewer`: a set of predefined discrete color gradients you can
-  custom the number of colors in the ramp
-* or :guilabel:`cpt-city`: an access to a whole catalog of color gradients to
-  locally :guilabel:`save as gradient color`.
-
-.. tip:: **Easily custom the color stops of the gradient color ramp**
-
- Double-clicking the ramp preview or drag-and-drop a color from the color spot onto
- the ramp preview adds a new color stop. Each color stop can be tweaked using the
- :ref:`color-selector` widgets or by plotting each of its parameters. You can also 
- reposition it using the mouse, the arrow keys (combine with :kbd:`Shift` key for
- a larger move) or the :guilabel:`Relative position` spinbox. Pressing :guilabel:`Delete
- stop` as well as :kbd:`Del` key removes the selected color stop.
-
-You can use the |checkbox| :guilabel:`Invert` option while
-classifying the data with a color ramp. See figure_color_custom_ramp_ for an
-example of a custom color ramp and figure_color_cpt_city_ for the cpt-city Colors dialog.
-
 
 .. _figure_color_custom_ramp:
 
@@ -192,7 +202,16 @@ example of a custom color ramp and figure_color_cpt_city_ for the cpt-city Color
 
    Example of custom gradient color ramp with multiple stops
 
-The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
+* :guilabel:`Color presets`: allows to create a color ramp consisting of a list of
+  colors selected by the user;
+* :guilabel:`Random`: creates a random set of colors based on range of values for
+  :guilabel:`Hue`, :guilabel:`Saturation`, :guilabel:`Value` and :guilabel:`Opacity`
+  and a number of colors (:guilabel:`Classes`);
+* :guilabel:`Catalog: ColorBrewer`: a set of predefined discrete color gradients
+  you can custom the number of colors in the ramp;
+* or :guilabel:`Catalog: cpt-city`: an access to a whole catalog of color gradients to
+  locally :guilabel:`save as standard gradient`. The cpt-city option opens a new
+  dialog with hundreds of themes included 'out of the box'.
 
 .. _figure_color_cpt_city:
 
@@ -200,6 +219,15 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
    :align: center
 
    cpt-city dialog with hundreds of color ramps
+
+.. tip:: **Easily adjust the color stops of the gradient color ramp**
+
+ Double-clicking the ramp preview or drag-and-drop a color from the color spot onto
+ the ramp preview adds a new color stop. Each color stop can be tweaked using the
+ :ref:`color-selector` widgets or by plotting each of its parameters. You can also 
+ reposition it using the mouse, the arrow keys (combine with :kbd:`Shift` key for
+ a larger move) or the :guilabel:`Relative position` spinbox. Pressing :guilabel:`Delete
+ stop` as well as :kbd:`DEL` key removes the selected color stop. 
 
 
 .. _symbol-selector:
@@ -215,7 +243,7 @@ You can create or edit Marker, Line or Fill Symbols.
 .. figure:: img/symbolselector.png
    :align: center
 
-   Designing a Marker symbol
+   Designing a Line symbol
 
 
 Two main components structure the symbol selector dialog:
@@ -286,12 +314,21 @@ You can setup some parameters that apply to the global symbol:
   proportional or multivariate analysis rendering.
 
 The symbols used at this level are items you can pick from the :ref:`symbols
-library <vector_style_manager>`. A list of available symbols of the same type
-from your symbol library is shown and can be filtered by selecting a group in
-the drop-down list just above. Click the :guilabel:`Save` button to add the
-designed symbol to your symbol library.
+library <vector_style_manager>`. Available symbols of the corresponding type
+are shown and, through the editable drop-down list just above, can be filtered
+by free-form text or by :ref:`categories <group_symbols>`.
+You can also update the list of symbols using the
+|styleManager| :sup:`Style Manager` button and open the eponym dialog. There,
+you can use any capabilities as exposed in :ref:`vector_style_manager` section.
 
-With the :guilabel:`Advanced` |selectString| option, you can:
+The symbols are displayed either:
+
+* in an icon list (with thumbnail, name and associated tags) using the
+  |openTable| :sup:`List View` button below the frame;
+* or as icon preview using the |iconView| :sup:`Icon View` button.
+
+Press the **[Save Symbol]** button to add any symbol being edited to the symbols
+library. With the :guilabel:`Advanced` |selectString| option, you can:
 
 * set the **symbol levels**: defining the way symbol layers are connected to
   each other in the map canvas (see :ref:`Symbols_levels` for more information)
@@ -563,19 +600,28 @@ viewing the field.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |color|  image:: /static/common/color.png
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
+.. |iconView| image:: /static/common/mActionIconView.png
+   :width: 1.5em
+.. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
    :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
+.. |pointLayer| image:: /static/common/mIconPointLayer.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
@@ -585,6 +631,10 @@ viewing the field.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
