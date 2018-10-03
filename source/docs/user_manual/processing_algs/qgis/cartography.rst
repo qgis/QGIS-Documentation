@@ -17,23 +17,15 @@ Create categorized renderer from styles |34|
 --------------------------------------------
 Sets a vector layer's renderer to a categorized renderer using matching symbols
 from a style database. If no style file is specified, symbols from the user's
-current style library are used instead.
+current :ref:`symbol library <vector_symbol_library>` are used instead.
 
-The specified expression (or field name) is used to create categories for the
-renderer. A category will be created for each unique value within the layer.
+A specified expression or field is used to create categories for the renderer.
 Each category is individually matched to the symbols which exist within
 the specified QGIS XML style database. Whenever a matching symbol name is found,
 the category's symbol will be set to this matched symbol.
-The matching is case-insensitive by default, but can be made case-sensitive
-if required.
 
-Optionally, non-alphanumeric characters in both the category value and symbol
-name can be ignored while performing the match. This allows for greater
-tolerance when matching categories to symbols.
-
-If desired, tables can also be output containing lists of the categories which
+If desired, outputs can also be tables containing lists of the categories which
 could not be matched to symbols, and symbols which were not matched to categories.
-
 
 Parameters
 ..........
@@ -42,19 +34,20 @@ Parameters
   Vector layer to apply a categorized style to.
 
 ``Categorize using expression`` [expression]
-  Field or rule of categorization of the features.
+  Field or expression to categorize the features.
 
 ``Style database (leave blank to use saved symbols)`` [file]
-  File containing the symbols to apply to the input layer categories.
+  File (``.XML``) containing the symbols to apply to the input layer categories.
+  If no file is specified, QGIS local symbols library is used.
 
 ``Use case-sensitive match to symbol names`` [boolean]
-  If checked, applies a case sensitive comparison between categories and symbol names.
+  If checked, applies a case sensitive comparison between the categories and symbols names.
 
   Default: *False*
 
 ``Ignore non-alphanumeric characters while matching`` [boolean]
-  If checked, non-alphanumeric characters in style and category names will be
-  ignored during the match.
+  If checked, non-alphanumeric characters in the categories and symbols names will be
+  ignored, allowing greater tolerance during the match.
 
   Default: *False*
 
@@ -62,19 +55,17 @@ Outputs
 .......
 
 ``Categorized layer`` [vector: any]
-  vector layer with the categorized style applied.
+  Input vector layer with the categorized style applied. No new layer is output.
 
 ``Non-matching categories`` [table]
   Optional
 
-  Lists all existing categories which could not be matched
-  to a symbol in the provided style.
+  Lists categories which could not be matched to any symbol in the provided style database.
 
 ``Non-matching symbol names`` [table]
   Optional
 
-  Lists all symbol names from the provided style file which could not match
-  any existing category.
+  Lists symbols from the provided style database which could not match any category.
 
 
 .. _qgistopologicalcoloring:
