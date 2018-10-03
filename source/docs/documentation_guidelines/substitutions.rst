@@ -350,9 +350,9 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
-|styleManager|                      ``|styleManager|``                      |filterTableFields|            ``|filterTableFields|``
-|joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|        ``|joinedLayerNotEditable|``
-|joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``
+|styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
+|joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|       ``|joinedLayerNotEditable|``
+|joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``            |filterTableFields|            ``|filterTableFields|``
 ==================================  ======================================  =============================  ================================
 
 
@@ -742,6 +742,8 @@ Icon                            Substitution                        Icon        
 .. |history| image:: /static/common/mActionHistory.png
    :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
+   :width: 1.5em
+.. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
