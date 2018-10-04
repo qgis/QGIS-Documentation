@@ -110,8 +110,8 @@ To select using an expression:
 
 .. code-block:: python
 
- # Get the points.shp file from the QGIS test suite
- layer = QgsVectorLayer('points.shp'), 'Points', 'ogr')
+ # Assumes that the active layer is points.shp file from the QGIS test suite
+ layer = iface.activeLayer()
  layer.selectByExpression('"Class"=\'B52\' and "Heading" > 10 and "Heading" <70', QgsVectorLayer.SetSelection)
 
 To change the selection color you can use :func:`setSelectionColor()`
