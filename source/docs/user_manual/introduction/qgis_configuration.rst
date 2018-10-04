@@ -451,13 +451,40 @@ the possibility to remove your changes and reset to the predefined list.
 Colors Settings
 ---------------
 
-This menu allows you to add some custom colors that you can later find in each
-:ref:`color selector dialog <color-selector>`, as standard colors.
+This menu allows you to create or update palettes of colors used throughout the
+application in the :ref:`color selector widget <color_widget>`. You can choose
+from:
 
-You will see a set of predefined colors in the tab: you can |signMinus| delete or
-edit (by doucle-clicking) any of them. Moreover you can add the color you want and
-perform some copy and paste operations. Finally you can export the color set as a
-:file:`gpl` file or import them.
+* :guilabel:`Recent colors` showing recently used colors;
+* :guilabel:`Standard colors`, the default palette of colors;
+* :guilabel:`Project colors`, a set of colors specific to the current project;
+* :guilabel:`New layer colors`, a set of colors to use by default when new
+  layers are added to QGIS;
+* or custom palette(s) you can create or import using the :guilabel:`...`
+  button next to the palette combobox.
+
+By default, :guilabel:`Recent colors`, :guilabel:`Standard colors` and
+:guilabel:`Project colors` palettes can not be removed and are set to appear in
+the color button drop-down. Custom palettes can also be added to this widget
+thanks to the :guilabel:`Show in Color Buttons` option.
+
+For any of the palettes, you can manage the list of colors using the set of
+tools next to the frame, ie: 
+
+* add or remove colors;
+* copy or paste colors;
+* import or export the set of colors from/to :file:`.gpl` file.
+
+Double-click a color in the list to tweak or replace it in the :ref:`Color
+Selector <color-selector>` dialog.
+
+.. _figure_colors_options:
+
+.. figure:: img/options_colors.png
+   :align: center
+
+   Colors Settings
+
 
 .. index:: Digitizing configuration
 .. _digitizing_options:
