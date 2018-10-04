@@ -27,22 +27,8 @@ The beauty of Processing implementation is that you can add your own scripts, si
 
 Test some of the preinstalled examples, if you have R_ already installed (remember to activate R modules from the General configuration of Processing).
 
-OTB
-----
-
-OTB_ (also known as Orfeo ToolBox) is a free and open source library of image processing algorithms. It is installed by deafult on Windows through the OSGeo4W standalone installer (**NB: 32 bit only**). Paths should be configured in Processing.
-
-In a standard OSgeo4W Windows installation, the paths will be::
-
-  OTB application folder    C:\OSGeo4W\apps\orfeotoolbox\applications
-  OTB command line tools folder C:\OSGeo4W\bin
-
-On Debian and derivatives, it will be :kbd:`/usr/bin`
-
 Others
 -------
-
-TauDEM_ is a suite of Digital Elevation Model (DEM) tools for the extraction and analysis of hydrologic information. Availability in various operating system varies.
 
 LASTools_ is a set of mixed, free and proprietary commands to process and analyze LiDAR data. Availability in various operating system varies.
 
@@ -94,8 +80,6 @@ Dissolve features based on a common attribute:
 
 .. _GRASS: http://grass.osgeo.org/
 .. _R: http://www.r-project.org/
-.. _OTB: http://orfeo-toolbox.org
-.. _TauDEM: http://hydrology.usu.edu/taudem/taudem5/
 .. _LASTools: http://rapidlasso.com/lastools/
 .. _LecoS: http://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
