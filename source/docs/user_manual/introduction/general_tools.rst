@@ -1841,6 +1841,46 @@ can also click the **[Sample color]** button to trigger the picker capability.
 
    Quick color selector menu
 
+
+.. _color_ramp_widget:
+
+The color ramp drop-down shortcut
+.................................
+
+Color ramps are a practical way to apply a set of colors to one or many features.
+Their creation is described in the :ref:`color-ramp` section. As for the colors,
+pressing the |selectColorRamp| color ramp button opens the corresponding color
+ramp type dialog allowing you to tweak its properties.
+
+.. _figure_colorBrewer_ramp:
+
+.. figure:: img/color_ramp_brewer.png
+   :align: center
+
+   Customizing a colorbrewer ramp
+
+Likewise, the drop-down menu at the right of the button gives quick access to a
+wider set of color ramps and options:
+
+* :guilabel:`Invert Color Ramp`;
+* a preview of the ``gradient`` or ``catalog: cpt-city`` color ramps flagged as
+  **Favorites** in the :guilabel:`Style Manager` dialog to select from;
+* :guilabel:`All Color Ramps` to access the compatible color ramps database;
+* :guilabel:`Create New Color Ramp...` of any supported type that could be used
+  in the current widget. Note that this color ramp is not available elsewhere
+  unless you save it in the library;
+* :guilabel:`Edit Color Ramp...`, same as pushing the whole color ramp button;
+* :guilabel:`Save Color Ramp...` allows to save the current color ramp with its
+  customizations in the style library.
+
+.. _figure_color_ramp_widget:
+
+.. figure:: img/quick_colorramp_selector.png
+   :align: center
+
+   Quick color ramp selection widget
+
+
 .. index::
    single: Rendering effects; Blending modes
 .. _blend-modes:
@@ -2121,6 +2161,7 @@ The values presented in the varying size assistant above will set the size
 .. |selectAll| image:: /static/common/mActionSelectAll.png
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
+.. |selectColorRamp| image:: /static/common/selectcolorramp.png
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png

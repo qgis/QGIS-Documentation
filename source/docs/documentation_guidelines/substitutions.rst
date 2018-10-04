@@ -65,8 +65,9 @@ Icon                     Substitution               Icon                   Subst
 |radioButtonOn|          ``|radioButtonOn|``        |radioButtonOff|       ``|radioButtonOff|``
 |selectNumber|           ``|selectNumber|``         |selectString|         ``|selectString|``
 |browseButton|           ``|browseButton|``         |slider|               ``|slider|``
-|selectColor|            ``|selectColor|``          |inputText|            ``|inputText|``
+|selectColor|            ``|selectColor|``          |selectColorRamp|      ``|selectColorRamp|``
 |tab|                    ``|tab|``                  |degrees|              ``|degrees|``
+|inputText|              ``|inputText|``
 =======================  =========================  =====================  =========================
 
 
@@ -993,6 +994,7 @@ Icon                            Substitution                        Icon        
 .. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
    :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
+.. |selectColorRamp| image:: /static/common/selectcolorramp.png
 .. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
