@@ -111,6 +111,7 @@ To select using an expression:
 .. code-block:: python
 
  # Assumes that the active layer is points.shp file from the QGIS test suite
+ # (Class (string) and Heading (number) are attributes in points.shp.
  layer = iface.activeLayer()
  layer.selectByExpression('"Class"=\'B52\' and "Heading" > 10 and "Heading" <70', QgsVectorLayer.SetSelection)
 
