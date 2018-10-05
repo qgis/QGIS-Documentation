@@ -512,7 +512,8 @@ Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
 extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
 in which coordinate reference systems (CRS) QGIS Server will offer
-to render maps.
+to render maps. It is recommended that you restrict the offered CRS as this
+reduces the size of the WMS GetCapabilities response.
 Use the |signPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
@@ -533,6 +534,9 @@ WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
 This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
+It is recommended that you exclude from publishing the layers that you don't
+need as this reduces the size of the WMS GetCapabilities response which leads
+to faster loading times on the client side.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
