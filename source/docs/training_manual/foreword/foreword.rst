@@ -110,12 +110,10 @@ Sponsors
 
 * Cape Peninsula University of Technology
 
+.. _data_downloadlink:
+
 Data
 ----
-
-.. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v2.0.zip.
-   You can save the files in a folder named **exercise_data**.
 
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
@@ -123,6 +121,13 @@ from the following sources:
 * Streets and Places datasets from OpenStreetMap (http://www.openstreetmap.org/)
 * Property boundaries (urban and rural), water bodies from NGI (http://www.ngi.gov.za/)
 * SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
+
+Download the prepared dataset from the `Training data repository <training_data_>`_
+and unzip the file. All the necessary data are provided in the :file:`exercise_data`
+folder.
+
+.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
+
 
 Source files and Issue reports
 -------------------------------
