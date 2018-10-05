@@ -551,6 +551,10 @@ response. This allows such clients to still display a feature’s geometry
 (e.g. for highlighting the feature). You need to check the
 |checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
 
+You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
+set the precision of the GetFeatureInfo geometry. This enables you to save
+bandwidth when you don't need the full precision.
+
 If you want QGIS Server to advertise specific request URLs
 in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
