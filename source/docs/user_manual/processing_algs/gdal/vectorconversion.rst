@@ -70,6 +70,103 @@ Outputs
   Output vector layer.
 
 
+.. _gdalrasterize:
+
+Rasterize (vector to raster)
+----------------------------
+Converts vector geometries (points, lines and polygons) into a raster image.
+The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Conversion`
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer with point, line or polygon geometries.
+
+``Field to use for a burn-in value`` [tablefield: numeric]
+  Optional
+
+  Defines the attribute field from which the attributes for the pixels
+  should be chosen.
+
+``A fixed value to burn`` [number]
+  Optional
+
+  <put parameter description here>
+
+  Default: *0.000000*
+
+``Output raster size units`` [enumeration]
+  Units to use when defining the output raster size/resolution.
+
+  Options:
+
+  * 0 --- Pixels
+  * 1 --- Georeferenced units
+
+  Default: *0*
+
+``Width/Horizontal resolution`` [number]
+  Sets the width (if size units is "Pixels") or horizontal resolution
+  (if size units is "Georeferenced units").
+
+  Default: *0.000000*
+
+``Height/Vertical resolution`` [number]
+  Sets the height (if size units is "Pixels") or vertical resolution
+  (if size units is "Georeferenced units").
+
+  Default: *0.000000*
+
+``Output extent (xmin, xmax, ymin, ymax)`` [extent]
+  Extent of the output raster layer. If the extent is not specified, the minimum
+  extent that covers the selected reference layer(s) will be used.
+
+``Assign a specified nodata value to output bands`` [number]
+  Optional
+
+  <put parameter description here>
+
+  Default: *0.000000*
+
+``Output data type`` [enumeration]
+  Defines the type of the resulting raster image.
+
+  Options:
+
+  * 0 --- Byte
+  * 1 --- Int16
+  * 2 --- UInt16
+  * 3 --- UInt32
+  * 4 --- Int32
+  * 5 --- Float32
+  * 6 --- Float64
+  * 7 --- CInt16
+  * 8 --- CInt32
+  * 9 --- CFloat32
+  * 10 --- CFloat64
+
+  Default: *5*
+
+``Pre-initialize the output image with value`` [number]
+  Optional
+
+  <put parameter description here>
+
+``Invert rasterization`` [boolean]
+  <put parameter description here>
+
+  Default: *False*
+
+Outputs
+.......
+
+``Rasterized`` [raster]
+  Output raster layer.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
