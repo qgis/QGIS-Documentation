@@ -141,19 +141,16 @@ Sharing symbols and color ramps
 
 The |sharing| :guilabel:`Import/Export` tool, at the left bottom of the Style
 Manager dialog, offers options to easily share symbols and color ramps with
-others. Users can indeed:
-
-* export their items to :file:`.XML` file;
-* import items to their library.
+others. These options are also available through right-click over the items.
 
 Exporting items
 ...............
 
-To export items to :file:`.XML` format:
+You can export a set of items to an :file:`.XML` file:
 
 #. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
    |fileSave| :guilabel:`Export Item(s)...`
-#. Choose the symbols and color ramps you'd like to integrate. Symbols selection
+#. Choose the symbols and color ramps you'd like to integrate. Symbol selection
    can be done with the mouse or using a tag or group previously set.
 #. Press **[Export]** when ready. You'll be prompted to indicate the destination
    of the saved file. The XML format generates a single file containing all the
@@ -166,10 +163,11 @@ To export items to :file:`.XML` format:
 
    Exporting symbols and color ramps
 
-When symbols are selected, you can also export them to PNG or SVG file formats.
-Exporting to PNG or SVG (both not available for color ramp symbols) creates
-a file for each selected symbol, and the SVG folder can be added to SVG Paths
-in :menuselection:`Settings --> Options` to e.g. share these symbols on a network.
+When symbols are selected, you can also export them to :file:`.PNG` or :file:`.SVG`.
+Exporting to :file:`.PNG` or :file:`.SVG` (both not available for color ramp symbols)
+creates a file for each selected symbol in a given folder. The SVG folder can be
+added to the :guilabel:`SVG paths` in :menuselection:`Settings --> Options -->
+System` menu of another user, allowing him direct access to all these symbols.
 
 Importing items
 ...............
@@ -178,7 +176,7 @@ You can extend your symbols library by importing new symbols:
 
 #. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
    |fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog.
-#. In the new dialog, indicate the source of the symbols (it can be a
+#. In the new dialog, indicate the source of the symbols (it can be an
    :file:`.xml` file on the disk or a url);
 #. Set whether to |unchecked| :guilabel:`Add to favorites` the items to import;
 #. Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the import
@@ -186,8 +184,6 @@ You can extend your symbols library by importing new symbols:
 #. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items;
 #. Select from the preview the symbols you want to add to your library;
 #. And press **Import**.
-
-Note that import and export options are also available through right-click.
 
 .. _figure_symbol_import:
 
