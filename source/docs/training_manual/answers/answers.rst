@@ -201,7 +201,7 @@ slightly thinner solid yellow line and finally another thinner solid black line.
 |basic| *Attribute Data*
 ...............................................................................
 
-The *NAME* field is the most useful to show as labels. This is because all its
+The ``name`` field is the most useful to show as labels. This is because all its
 values are unique for every object and are very unlikely to contain *NULL*
 values. If your data contains some *NULL* values, do not worry as long as most
 of your places have names.
