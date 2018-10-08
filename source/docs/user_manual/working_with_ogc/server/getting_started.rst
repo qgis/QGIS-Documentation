@@ -512,7 +512,8 @@ Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
 extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
 in which coordinate reference systems (CRS) QGIS Server will offer
-to render maps.
+to render maps. It is recommended that you restrict the offered CRS as this
+reduces the size of the WMS GetCapabilities response.
 Use the |signPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
@@ -533,15 +534,31 @@ WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
 This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
+It is recommended that you exclude from publishing the layers that you don't
+need as this reduces the size of the WMS GetCapabilities response which leads
+to faster loading times on the client side.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include in the GetFeatureInfo response the geometries of the
-features in a text format. If you want QGIS Server to advertise specific request URLs
+features in a text format.
+
+As many web clients can’t display circular arcs in geometries you have the option
+to segmentize the geometry before sending it to the client in a GetFeatureInfo
+response. This allows such clients to still display a feature’s geometry
+(e.g. for highlighting the feature). You need to check the
+|checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
+
+You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
+set the precision of the GetFeatureInfo geometry. This enables you to save
+bandwidth when you don't need the full precision.
+
+If you want QGIS Server to advertise specific request URLs
 in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
+
 Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
