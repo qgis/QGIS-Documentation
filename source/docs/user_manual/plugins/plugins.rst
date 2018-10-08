@@ -223,6 +223,12 @@ The |installPluginFromZip| :guilabel:`Install from ZIP` tab provides a file
 selector widget to import plugins in a zipped format, e.g. plugins downloaded
 directly from their repository. 
 
+.. _figure_plugins_install_zip:
+
+.. figure:: img/plugins_install_zip.png
+   :align: center
+
+   The |installPluginFromZip| :guilabel:`Install from zip` tab
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
