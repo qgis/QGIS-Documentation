@@ -216,6 +216,9 @@ Icon                     Substitution                 Icon                     S
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
 |svgAnnotation|          ``|svgAnnotation|``          |autoPlacement|          ``|autoPlacement|``
+|labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
+|labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
+|labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
 =======================  ===========================  =======================  ===========================
 
 Help
@@ -791,6 +794,12 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
+.. |labelbackground| image:: /static/common/labelbackground.png
+   :width: 1.5em
+.. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelformatting| image:: /static/common/labelformatting.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelingNone| image:: /static/common/labelingNone.png
@@ -798,6 +807,10 @@ Icon                            Substitution                        Icon        
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelplacement| image:: /static/common/labelplacement.png
+   :width: 1.5em
+.. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |layerExtent| image:: /static/common/layer_extent.png
    :width: 1.5em
@@ -952,6 +965,8 @@ Icon                            Substitution                        Icon        
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
+   :width: 1.5em
+.. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
