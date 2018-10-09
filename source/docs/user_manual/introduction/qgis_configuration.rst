@@ -28,7 +28,7 @@ provides different tools to:
   not need;
 * |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
   :ref:`keyboard shortcuts <shortcuts>`;
-* |symbology| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
+* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
   color ramps <vector_style_manager>`;
 * |customProjection| :guilabel:`Custom Projections...`: create your own
   :ref:`coordinate reference systems <sec_custom_projections>`.
