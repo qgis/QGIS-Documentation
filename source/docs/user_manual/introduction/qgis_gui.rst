@@ -879,6 +879,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
