@@ -302,7 +302,7 @@ Settings
 Menu Option                                                        Shortcut              Toolbar               Reference
 =================================================================  ====================  ====================  ===================================
 :menuselection:`User Profiles -->`                                 \                     \                     \
-|styleManager| :guilabel:`Style Manager...`                           \                     \                     :ref:`vector_style_manager`
+|styleManager| :guilabel:`Style Manager...`                        \                     \                     :ref:`vector_style_manager`
 |customProjection| :guilabel:`Custom Projections...`               \                     \                     :ref:`sec_custom_projections`
 |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              \                     \                     :ref:`shortcuts`
 |interfaceCustomization| :guilabel:`Interface Customization...`    \                     \                     :ref:`sec_customization`
