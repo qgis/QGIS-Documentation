@@ -302,7 +302,7 @@ Settings
 Menu Option                                                        Shortcut              Toolbar               Reference
 =================================================================  ====================  ====================  ===================================
 :menuselection:`User Profiles -->`                                 \                     \                     \
-|symbology| :guilabel:`Style Manager...`                           \                     \                     :ref:`vector_style_manager`
+|styleManager| :guilabel:`Style Manager...`                        \                     \                     :ref:`vector_style_manager`
 |customProjection| :guilabel:`Custom Projections...`               \                     \                     :ref:`sec_custom_projections`
 |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              \                     \                     :ref:`shortcuts`
 |interfaceCustomization| :guilabel:`Interface Customization...`    \                     \                     :ref:`sec_customization`
@@ -878,6 +878,8 @@ open the Plugin Manager dialog.
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
+   :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
