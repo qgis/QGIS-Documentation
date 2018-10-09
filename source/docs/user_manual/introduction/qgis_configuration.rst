@@ -1105,6 +1105,8 @@ and **[Load]** them into another QGIS installation.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
