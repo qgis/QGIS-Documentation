@@ -183,7 +183,7 @@ in your town to find out whether it is large enough for a new shopping mall,
 equal area projections are the best choice. On the one hand, the larger the area
 you are analysing, the more precise your area measures will be, if you use an
 equal area projection rather than another type. On the other hand, an equal area
-projection results in** distortions of angular conformity** when dealing with
+projection results in **distortions of angular conformity** when dealing with
 large areas. Small areas will be far less prone to having their angles distorted
 when you use an equal area projection. **Alber's equal area**, **Lambert's equal
 area** and **Mollweide Equal Area Cylindrical projections** (shown in
