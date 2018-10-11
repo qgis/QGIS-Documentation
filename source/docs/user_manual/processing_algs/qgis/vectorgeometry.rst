@@ -785,18 +785,17 @@ See also
 
 Dissolve
 --------
-Takes a vector layer and combines their features into new features.
+Takes a vector layer and combines its features into new features.
 One or more attributes can be specified to dissolve features belonging to the
 same class (having the same value for the specified attributes), alternatively
-all features can be dissolved in a single one.
+all features can be dissolved into a single one.
 
 All output geometries will be converted to multi geometries. In case the input is
 a polygon layer, common boundaries of adjacent polygons being dissolved will get
 erased.
 
-The resulting attribute table will have the same fields as the input layer
-but the values are not aggregated while the features are *aggregated*.
-Values in the output layer's fields are the ones of the first input feature
+The resulting attribute table will have the same fields as the input layer.
+The values in the output layer's fields are the ones of the first input feature
 that happens to be processed.
 
 .. figure:: img/dissolve.png
@@ -815,18 +814,16 @@ Parameters
 ``Dissolve field(s)`` [tablefield: any] [list]
   Optional
 
-  Features sharing common value in all selected field(s) will be combined.
-  If no field is provided then all the features are dissolved in a single one.
+  Features having the same value for the selected field(s) will be replaced
+  with a single one and their geometries are merged.
 
-  
-  Returns one feature for each unique value combination in the field(s).
-  The feature's geometry represents all input geometries with this value.
+  If no field is provided then all the features are dissolved in a single feature.
 
 Outputs
 .......
 
 ``Dissolved`` [vector: any]
-  Output multi geometry type layer.
+  Multi geometry type layer with merged geometries but non aggregated values in fields.
 
 
 .. _qgissetzfromraster:
