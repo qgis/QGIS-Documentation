@@ -44,9 +44,13 @@ In the upper part of the toolbox dialog, you will find a set of tools to:
   Script...` and :guilabel:`Add Script to Toolbox...`;
 * open the |processingHistory| :sup:`History` panel;
 * open the |processingResult| :sup:`Results Viewer` panel;
+* toggle the toolbox to the :ref:`in-place modification mode <processing_inplace_edit>`
+  using the |processSelected| :sup:`Edit Features In-Place` button: only
+  the algorithms that are suitable to be executed on the active layer without
+  outputting a new layer are displayed; 
 * open the |options| :sup:`Options` dialog.
 
-Below this toolbar is a |search| :guilabel:`Search` box to help you easily find
+Below this toolbar is a |search| :guilabel:`Search...` box to help you easily find
 the tools you need.
 You can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms, models or scripts in the toolbox is reduced to just those
@@ -375,8 +379,10 @@ to a temporary file and deleted once you exit QGIS).
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
+.. |processSelected| image:: /static/common/mActionProcessSelected.png
+   :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
-   :width: 2em
+   :width: 1.5em
 .. |processingModel| image:: /static/common/processingModel.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
