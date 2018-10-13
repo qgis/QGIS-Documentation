@@ -121,6 +121,7 @@ Icon                            Substitution                        Icon        
 |undo|                          ``|undo|``                          |redo|                          ``|redo|``
 |editCopy|                      ``|editCopy|``                      |editPaste|                     ``|editPaste|``
 |editCut|                       ``|editCut|``                       |saveEdits|                     ``|saveEdits|``
+|editableEdits|                 ``|editableEdits|``
 ==============================  ==================================  ==============================  ==================================
 
 Identity result
@@ -371,6 +372,7 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |processing|                    ``|processing|``                    |processingModel|               ``|processingModel|``
 |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
+|processSelected|               ``|processSelected|``
 |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
 |mean|                          ``|mean|``                          |layerExtent|                   ``|layerExtent|``
 |randomSelection|               ``|randomSelection|``               |vectorGrid|                    ``|vectorGrid|``
@@ -630,6 +632,8 @@ Icon                            Substitution                        Icon        
 .. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
@@ -929,6 +933,8 @@ Icon                            Substitution                        Icon        
 .. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
    :width: 1.5em
 .. |pointDisplacementSymbol| image:: /static/common/rendererPointDisplacementSymbol.png
+   :width: 1.5em
+.. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
