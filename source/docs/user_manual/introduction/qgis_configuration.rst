@@ -681,14 +681,19 @@ anywhere in the application. It provides some default filters (with prefix) to u
 * Project layouts (``pl``): finds and opens a print layout;
 * Actions (``.``): finds and executes a QGIS action; actions can be any tool
   or menu in QGIS, opening a panel...
-* Active layer features  (``f``): searches for matching attributes in any field
-  from the current active layer and zoom to the feature
-* Calculator  (``=``): allows evaluation of any QGIS expression and, if valid,
-  gives an option to copy the result to the clipboard
+* Active layer features (``f``): searches for matching attributes in any field
+  from the current active layer and zoom to the feature;
+* features in all layers (``af``): searches for matching attributes in any field
+  from any layer and zoom to the feature;
+* Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
+  gives an option to copy the result to the clipboard;
 * Spatial bookmarks (``b``): finds and zooms to the bookmark extent;
 * Settings (``set``): browses and opens project and application-wide properties
   dialogs;
-* Processing (``a``): searches and opens a Processing algorithm dialog.
+* Processing (``a``): searches and opens a Processing algorithm dialog;
+* Edit selected features (``ef``): gives quick access and runs a compatible
+  :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
+  active layer.
 
 For each filter, you can customize the filter, set whether it is enabled by default or not.
 The set of default locator filters can be extended by plugins, eg for OSM
@@ -713,7 +718,7 @@ if a very slow search filter is present (e.g. one which uses an online service).
   Click on the |search| icon inside the locator widget on the status bar to
   display the list of filters you can use and a **[Configure]** entry that
   opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
-  Options` menu.
+  Options...` menu.
 
 
 .. _optionsadvanced:
