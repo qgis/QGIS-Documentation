@@ -1340,7 +1340,7 @@ constraints can be locked continuously by clicking the |lockedRepeat|
 digitize several points or vertexes using the same constraints.
 
 
-Parallel and perpendiculars line
+Parallel and perpendicular lines
 --------------------------------
 
 All the tools described above can be combined with the |cadPerpendicular|
