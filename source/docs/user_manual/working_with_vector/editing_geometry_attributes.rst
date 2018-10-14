@@ -1430,25 +1430,25 @@ and angle entered. Repeating the process, several points can be added.
 .. _processing_inplace_edit:
 
 The Processing in-place layer modifier
---------------------------------------
+======================================
 
 The :ref:`Processing menu <label_processing>` provides access to a large set of
 tools to analyze and create new features based on the properties of the input
 features or their relations with other features (within the same layer or not).
 While the common behavior is to create new layers as outputs, some algorithms
-also allow to modify layers in place. This is a handy way to automate multiple
+also allow to modify the input layer. This is a handy way to automate multiple
 features modification using advanced and complex operations.
 
 To edit features in-place:
 
-#. Enable the layer to edit in the :guilabel:`Layers` panel;
+#. Select the layer to edit in the :guilabel:`Layers` panel;
 #. Select the concerned features. You can skip this step, in which case the
    modification will apply to the whole layer;
 #. Press the |processSelected| :sup:`Edit Features In-Place` button at the top
    of the :ref:`Processing toolbox <processing.toolbox>`. The list of algorithms
    is filtered, showing only those compatible with in-place modifications, i.e.:
 
-   * they process on feature source and not at layer level;
+   * they work on feature source and not at layer level;
    * they do not change the layer structure, eg adding or removing fields;
    * they do not change the geometry type (e.g. from line to point layer).
 
@@ -1458,16 +1458,16 @@ To edit features in-place:
    will be run immediately without any dialog popup.
 
    If additional parameters are needed, the algorithm dialog pops up and
-   allows you to fill them.
+   allows you to provide them.
 #. Click :guilabel:`Modify Selected Features` or :guilabel:`Modify All Features`
    depending on whether there's an active selection.
    
    Changes are applied to the layer and placed in the edit buffer: the layer
-   is indeed toggled to edition with unsaved modification as indicated by the
-   |editableEdits| icon next to the layer name;
+   is indeed toggled to editing mode with unsaved modification as indicated by
+   the |editableEdits| icon next to the layer name;
 #. As usual, press |saveEdits| :sup:`Save layer edits` to write the changes in
-   the layer. You can also press |undo| :sup:`Undo` to rollback in one-click
-   the whole modification.
+   the layer. You can also press |undo| :sup:`Undo` to rollback the whole
+   modification in one-click.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
