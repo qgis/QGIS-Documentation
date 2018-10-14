@@ -27,6 +27,8 @@ them to the right.
 
    In blue the source layer, in red the offset one
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -92,6 +94,8 @@ M values present in the geometry can also be translated.
    :align: center
 
    Input layers in blue tones, output layers with translated features in red tones
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -653,6 +657,8 @@ Outputs
 
 .. |32| replace:: :kbd:`NEW in 3.2`
 .. |34| replace:: :kbd:`NEW in 3.4`
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

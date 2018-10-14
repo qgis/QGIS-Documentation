@@ -169,6 +169,8 @@ the attribute table of the source layer.
 
 If the file is saved in a local folder, you can choose between many file formats.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -591,6 +593,8 @@ Reproject layer
 Reprojects a vector layer in a different CRS. The reprojected layer will have
 the same features and attributes of the input layer.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -689,4 +693,6 @@ Parameters
 
 .. |32| replace:: :kbd:`NEW in 3.2`
 .. |34| replace:: :kbd:`NEW in 3.4`
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

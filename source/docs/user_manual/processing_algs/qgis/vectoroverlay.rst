@@ -41,6 +41,8 @@ mask geometry.
   Clipping operation between a two-features input layer and a single feature
   overlay layer (left) - resulting features are moved for clarity (right)
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
 Parameters
@@ -80,6 +82,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
   Difference operation between a two-features input layer and a single feature
   overlay layer (left) - resulting features are moved for clarity (right)
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -244,6 +248,8 @@ Output will contain multi geometries for split features.
 
   Split lines
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -361,4 +367,6 @@ Output
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
