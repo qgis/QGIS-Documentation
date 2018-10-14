@@ -51,8 +51,8 @@ Parameters
 ``Overlay layer`` [vector: polygon]
   Layer containing the clipping features.
 
-Output
-......
+Outputs
+.......
 
 ``Clipped`` [vector: any]
   Layer containing features from the input layer split by the overlay layer.
@@ -93,8 +93,8 @@ Parameters
   Layer containing the overlapping features to compare to,
   acting as a subtracting layer.
 
-Output
-......
+Outputs
+.......
 
 ``Difference`` [vector: any]
   Layer containing (parts of) features from the input layer not overlapping the overlay layer.
@@ -127,8 +127,8 @@ Parameters
   to ensure uniform output types. Moreover the geometries will be clipped to the
   extent chosen instead of taking the whole geometry as output.
 
-Output
-......
+Outputs
+.......
 
 ``Extracted`` [vector: any]
   Layer containing the clipped features.
@@ -175,8 +175,8 @@ Parameters
   Field(s) of the overlay layer to keep in the output. If no fields are
   chosen all fields are taken.
 
-Output
-......
+Outputs
+.......
 
 ``Intersection`` [vector: any]
   Layer containing (parts of) features from the input layer overlapping the overlay layer.
@@ -222,8 +222,8 @@ Parameters
   Field(s) of the intersect layer to keep in the output. If no fields are
   chosen all fields are taken.
 
-Output
-......
+Outputs
+.......
 
 ``Intersections`` [vector: point]
   Point vector layer of the intersection.
@@ -253,8 +253,8 @@ Parameters
 ``Split layer`` [vector: line]
   Line layer whose lines are used to define the breaking points.
 
-Output
-......
+Outputs
+.......
 
 ``Split`` [vector: line, polygon]
   Output layer with split lines or polygons from input layer.
@@ -289,8 +289,8 @@ Parameters
 ``Overlay layer`` [vector: any]
   Second layer to extract (parts of) features from.
 
-Output
-......
+Outputs
+.......
 
 ``Symmetrical difference`` [vector: any]
   Layer containing (parts of) features from each layer not overlapping the other layer.
@@ -348,8 +348,8 @@ Parameters
 
   Layer that will be combined to the first one.
 
-Output
-......
+Outputs
+.......
 
 ``Union`` [vector: any]
   Layer containing all the overlapping and non-overlapping parts from the processed layer(s).

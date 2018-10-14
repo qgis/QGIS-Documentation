@@ -231,8 +231,8 @@ Parameters
 
   Default: *5*
 
-Output
-......
+Outputs
+.......
 
 ``Reclassified raster`` [raster]
   Raster layer in output with reclassified band values.
@@ -303,8 +303,8 @@ Parameters
 
   Default: *5*
 
-Output
-......
+Outputs
+.......
 
 ``Reclassified raster`` [raster]
   Raster layer in output with reclassified band values.
@@ -334,8 +334,8 @@ Parameters
 
   Default: ``rvalue``
 
-Output
-......
+Outputs
+.......
 
 ``Sampled Points`` [vector: point]
   Layer in output with additional column(s) of sampled raster values.
@@ -374,8 +374,8 @@ Parameters
 
   Prefix string for output columns.
 
-Output
-......
+Outputs
+.......
 
 ``Output zones`` [vector: polygon]
   Output polygon vector layer with unique count of raster values.

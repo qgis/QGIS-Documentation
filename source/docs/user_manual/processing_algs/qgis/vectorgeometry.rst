@@ -46,8 +46,8 @@ Parameters
 
   Default: *0*
 
-Output
-......
+Outputs
+.......
 
 ``Added geom info`` [vector: any]
   Copy of the input vector layer with the addition of the geometry fields.
@@ -130,8 +130,8 @@ Parameters
   You can also load the fields from another layer and use these fields for the
   aggregation.
 
-Output
-......
+Outputs
+.......
 
 ``Aggregated`` [vector: any]
   Multigeometry vector layer with the aggregated values.
@@ -166,15 +166,14 @@ For **lines geometries**, the boundaries are the vertices between each features.
 
    Boundary layer for lines. In yellow a selected features.
 
-
 Parameters
 ..........
 
 ``Input layer`` [vector: line, polygon]
   Input vector layer.
 
-Output
-......
+Outputs
+.......
 
 ``Boundary`` [vector: point, line]
   Boundary from the input layer (point for line, and line for polygon).
@@ -186,7 +185,6 @@ Bounding boxes
 ---------------
 Calculates the bounding box (envelope) of each feature in an input layer.
 Polygon and line geometries are supported.
-
 
 .. figure:: img/bounding_box.png
    :align: center
@@ -427,15 +425,15 @@ Parameters
 
   Choose one or more attributes to collect the geometries.
 
-Output
-......
+Outputs
+.......
 
 ``Collected`` [vector: any]
   Vector layer with collected geometries.
 
 See also
 ........
-:ref:`qgisaggregate` and :ref:`qgispromotetomulti`
+:ref:`qgisaggregate`, :ref:`qgispromotetomulti`
 
 
 .. _qgisconcavehull:
@@ -443,7 +441,6 @@ See also
 Concave hull
 ------------
 Computes the concave hull of the features in an input point layer.
-
 
 Parameters
 ..........
@@ -455,12 +452,10 @@ Parameters
 
   Default: *0.3*
 
-
   .. figure:: img/concave_hull_threshold.png
      :align: center
 
      Different thresholds used (0.3, 0.6, 0.9)
-
 
 ``Allow holes`` [boolean]
   Choose whether to allow holes in the final concave hull.
@@ -472,8 +467,8 @@ Parameters
 
   Default: *False*
 
-Output
-......
+Outputs
+.......
 ``Concave hull`` [vector: polygon]
   Output concave hull.
 
@@ -506,11 +501,11 @@ Parameters
   * 3 --- Multilinestrings
   * 4 --- Polygons
 
-  .. note:: Conversion types availability depends on the input layer and the conversion
-    chosen: e.g. it is not possible to convert a point to a line.
+  .. note:: Conversion types availability depends on the input layer and the
+    conversion chosen: e.g. it is not possible to convert a point to a line.
 
-Output
-......
+Outputs
+.......
 
 ``Converted`` [vector: any]
   Converted vector layer depending on the parameters chosen.
@@ -541,8 +536,8 @@ Parameters
 ``Input point layer`` [vector: any]
   Point vector layer to calculate the convex hull.
 
-Output
-......
+Outputs
+.......
 ``Convex hull`` [vector: polygon]
   Output convex hull.
 
@@ -568,8 +563,8 @@ Parameters
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent to represent.
 
-Output
-......
+Outputs
+.......
 
 ``Extent``
   Layer with a polygon feature representing the input extent.
@@ -618,8 +613,8 @@ Parameters
 
   Default: *0.0*
 
-Output
-......
+Outputs
+.......
 
 ``Buffers`` [vector: polygon]
   Wedge buffer polygon vector layer.
@@ -649,8 +644,8 @@ Parameters
 ``Input layer`` [vector: point]
   Point vector layer to compute the triangulation on.
 
-Output
-......
+Outputs
+.......
 ``Delaunay triangulation`` [vector: polygon]
   Resulting polygon layer of delaunay triangulation.
 
@@ -674,6 +669,7 @@ holes being removed.
 
 Parameters
 ..........
+
 ``Input layer`` [vector: polygon]
   Polygon layer with holes.
 
@@ -730,7 +726,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisdensifygeometriesgivenaninterval`.
+:ref:`qgisdensifygeometriesgivenaninterval`
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -860,8 +856,8 @@ Parameters
 
   Default: *1.0*
 
-Output
-......
+Outputs
+.......
 
 ``Updated`` [vector: any]
   Vector layer in output with the updated z values extracted.
@@ -891,8 +887,8 @@ Parameters
 
   Default: *False*
 
-Output
-......
+Outputs
+.......
 ``Z/M Dropped`` [vector: any]
   Cleaned vector layer without M and/or Z values.
 
@@ -924,8 +920,8 @@ Parameters
   * Smallest Area
   * Largest Common Boundary
 
-Output
-......
+Outputs
+.......
 ``Eliminated`` [vector: polygon]
   Cleaned vector layer as result of the parameters chosen.
 
@@ -951,8 +947,8 @@ Parameters
 ``Input layer`` [vector: line]
   Line vector layer in input to explode.
 
-Output
-......
+Outputs
+.......
 
 ``Exploded`` [vector: line]
   Output vector line with features representing each segment of the input layer.
@@ -983,8 +979,8 @@ Parameters
 ``End distance`` [number |dataDefined|]
   Distance by which to extend the last segment of the line (ending point).
 
-Output
-......
+Outputs
+.......
 
 ``Extended`` [vector: line]
   Extended vector line layer.
@@ -1027,8 +1023,8 @@ Parameters
 
   Default: *0*
 
-Output
-......
+Outputs
+.......
 
 ``Vertices`` [vector: point]
   Point layer with features representing the specific vertices in the input layer.
@@ -1061,8 +1057,8 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input to extract the vertices from.
 
-Output
-......
+Outputs
+.......
 
 ``Vertices`` [vector: point]
   Point layer with features representing all the vertices in the input layer.
@@ -1107,8 +1103,8 @@ Parameters
 
   Default: *Not set*
 
-Output
-......
+Outputs
+.......
 
 ``Filtered`` [vector: line, polygon]
   Vector layer of the features with only the filtered vertices.
@@ -1158,8 +1154,8 @@ Parameters
 
   Default: *Not set*
 
-Output
-......
+Outputs
+.......
 
 ``Filtered`` [vector: line, polygon]
   Vector layer of the features with only the filtered vertices.
@@ -1184,7 +1180,6 @@ Parameters
 
 ``Input layer`` [vector: line, polygon]
   Polygon or vector layer in input.
-
 
 Outputs
 .......
@@ -1241,6 +1236,9 @@ Parameters
 
   Default: *$geometry*
 
+Outputs
+.......
+
 ``Modified geometry`` [vector: any]
   Vector layer resulting from the expression added.
 
@@ -1274,8 +1272,8 @@ Parameters
 ``Distance`` [number |dataDefined|]
   Distance from the beginning of the line.
 
-Output
-......
+Outputs
+.......
 
 ``Interpolated points`` [vector: point]
   Point vector layer with features at a set distance along the line or polygon boundary.
@@ -1347,8 +1345,8 @@ Parameters
 ``End distance`` [number |dataDefined|]
   Distance along the input line, representing the end point of the output feature.
 
-Output
-......
+Outputs
+.......
 
 ``Substring`` [vector: line]
   Vector line layer of the substring
@@ -1375,8 +1373,8 @@ Parameters
 ``Input layer`` [vector: line]
   Line vector layer to convert.
 
-Output
-......
+Outputs
+.......
 
 ``Polygons`` [vector: polygon]
   Polygon vector layer from the line input vector layer.
@@ -1399,8 +1397,8 @@ Parameters
 ``Input layer`` [vector: line]
   MultiLineString vector layer.
 
-Output
-......
+Outputs
+.......
 
 ``Merged`` [vector: lines]
   Single LineString vector layer.
@@ -1440,8 +1438,8 @@ Parameters
 
      Clockwise from left-up: envelopes, oriented rectangle, circle, convex hull
 
-Output
-......
+Outputs
+.......
 
 ``Bounding geometry`` [vector: polygon]
   Bounding polygon layer.
@@ -1455,7 +1453,7 @@ Calculates the minimum enclosing circle which covers each feature in an input la
 
 .. figure:: img/minimum_enclosing_circles.png
    :align: center
-
+   
    Enclosing circles for each feature
 
 Parameters
@@ -1469,8 +1467,8 @@ Parameters
 
   Default: *72*
 
-Output
-......
+Outputs
+.......
 
 ``Minimum enclosing circles`` [vector: polygon]
   Enclosing circles for each polygon feature.
@@ -1508,8 +1506,8 @@ Parameters
   all the features) or it can be taken from features data (different distance
   depending on the feature values).
 
-Output
-......
+Outputs
+.......
 
 ``Multi-ring buffer (constant distance)``
   Multi ring buffer polygon vector layer.
@@ -1599,8 +1597,8 @@ Parameters
 
   Default: *2.0*
 
-Output
-......
+Outputs
+.......
 
 ``Offset`` [vector: line]
   Offset line layer.
@@ -1627,8 +1625,8 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-Output
-......
+Outputs
+.......
 
 ``Bounding boxes`` [vector: polygon]
   Oriented minimum bounding boxes for each polygon feature.
@@ -1645,7 +1643,6 @@ Orthogonalize
 Takes a line or polygon layer and attempts to orthogonalize all the geometries
 in the layer. This process shifts the vertices in the geometries to try to make every
 angle in the geometry either a right angle or a straight line.
-
 
 .. figure:: img/orthogonize.png
    :align: center
@@ -1668,8 +1665,8 @@ Parameters
   Setting a larger number for the maximum iterations will result in a more
   orthogonal geometry at the cost of extra processing time.
 
-Output
-......
+Outputs
+.......
 
 ``Orthogonalized`` [vector: line, polygon]
   Final layer with angles adjusted depending on the parameters chosen.
@@ -1692,8 +1689,8 @@ Parameters
 
   Default: *False*
 
-Output
-......
+Outputs
+.......
 
 ``Point`` [vector: point]
   Point vector layer.
@@ -1742,8 +1739,8 @@ Parameters
 
   Default: *0*
 
-Output
-......
+Outputs
+.......
 
 ``Points`` [vector: point]
   Point vector layer with features placed along the line or polygon boundary.
@@ -1783,8 +1780,8 @@ Parameters
 
   Default: *False*
 
-Output
-......
+Outputs
+.......
 
 ``Displaced`` [vector: point]
   Point vector layer with displaced features.
@@ -1821,8 +1818,8 @@ Parameters
 
   Default: *1.0*
 
-Output
-......
+Outputs
+.......
 
 ``Point`` [vector: point]
   Point as pole of inaccessibility for the source polygon vector layer.
@@ -1856,8 +1853,8 @@ Parameters
 
   Default: *False*
 
-Output
-......
+Outputs
+.......
 
 ``Polygons from lines`` [vector: polygon]
   Vector layer with polygonized features.
@@ -1883,8 +1880,8 @@ Parameters
 ``Input layer`` [vector: polygon]
   Input polygon vector layer.
 
-Output
-......
+Outputs
+.......
 
 ``Lines`` [vector: line]
   Lines from the polygon layer.
@@ -1913,8 +1910,8 @@ Parameters
 
   Default: *1.0*
 
-Output
-......
+Outputs
+.......
 
 ``Projected`` [vector: point]
   Projected layer at given degrees and distance.
@@ -1938,8 +1935,8 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-Output
-......
+Outputs
+.......
 
 ``Multiparts`` [vector: any]
   Multiparts vector layer.
@@ -2099,9 +2096,6 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer with duplicate vertices.
 
-Outputs
-.......
-
 ``Tolerance`` [number |dataDefined|]
   Vertices closer than the specified distance are considered duplicates.
 
@@ -2162,8 +2156,8 @@ Parameters
 ``Input layer`` [vector: line]
   Input line vector layer to invert the direction.
 
-Output
-......
+Outputs
+.......
 
 ``Reversed`` [vector: line]
   Inverted line vector layer.
@@ -2281,7 +2275,6 @@ specified value used as the initial M value for all geometries.
 .. tip:: Use the |identify|:sup:`Identify Features` button to check the added M value:
  the results are available in the :guilabel:`Identify Results` dialog.
 
-
 Parameters
 ..........
 
@@ -2293,8 +2286,8 @@ Parameters
 
   Default: *0.0*
 
-Output
-......
+Outputs
+.......
 
 ``M Added`` [vector: any]
   Vector layer in output with M value.
@@ -2331,8 +2324,8 @@ Parameters
 
   Default: *1.0*
 
-Output
-......
+Outputs
+.......
 
 ``Updated`` [vector: any]
   Vector layer in output with the updated m values extracted.
@@ -2355,7 +2348,6 @@ specified value used as the initial Z value for all geometries.
 .. tip:: Use the |identify|:sup:`Identify Features` button to check the added Z value:
  the results are available in the :guilabel:`Identify Results` dialog.
 
-
 Parameters
 ..........
 
@@ -2367,8 +2359,8 @@ Parameters
 
   Default: *0.0*
 
-Output
-......
+Outputs
+.......
 
 ``Z Added`` [vector: any]
   Vector layer in output with Z value.
@@ -2428,7 +2420,6 @@ Outputs
 Single sided buffer
 -------------------
 Computes a buffer on lines by a specified distance on one side of the line only.
-
 
 Buffer always results in a polygon layer.
 
@@ -2737,8 +2728,8 @@ Parameters
 
   Default: *16*
 
-Output
-......
+Outputs
+.......
 
 ``Buffered`` [vector: polygon]
   Variable buffer polygon layer.
@@ -2769,8 +2760,8 @@ Parameters
 ``Input layer`` [vector: polygon]
   Polygon vector layer in input.
 
-Output
-......
+Outputs
+.......
 
 ``Tesselated`` [vector: polygon]
   Output a multipolygonZ layer with tessellated features.
@@ -2907,8 +2898,8 @@ Parameters
 
   Default: *16*
 
-Output
-......
+Outputs
+.......
 
 ``Buffered`` [vector: polygon]
   Variable buffer polygon layer.

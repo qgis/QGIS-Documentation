@@ -31,8 +31,8 @@ Parameters
 ``Value field`` [tablefield: any]
   Value to use for the plot (Y axis).
 
-Output
-......
+Outputs
+.......
 
 ``Bar plot`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -66,8 +66,8 @@ Parameters
 
   Default: *Show Mean*
 
-Output
-......
+Outputs
+.......
 
 ``Box plot`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -93,8 +93,8 @@ Parameters
 ``Value field`` [tablefield: any]
   Value to use for the plot (Y axis).
 
-Output
-......
+Outputs
+.......
 
 ``Plot`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -123,8 +123,8 @@ Parameters
 ``Value field`` [tablefield: numeric]
   Value to use for the plot.
 
-Output
-......
+Outputs
+.......
 
 ``Polar plot`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -151,8 +151,8 @@ Parameters
 
   Default: *10*
 
-Output
-......
+Outputs
+.......
 
 ``Histogram`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -181,8 +181,8 @@ Parameters
 
   Default: *10*
 
-Output
-......
+Outputs
+.......
 
 ``Histogram`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -208,8 +208,8 @@ Parameters
 ``Y attribute`` [tablefield: any]
   Field to use for the y axis.
 
-Output
-......
+Outputs
+.......
 
 ``Scatterplot`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
@@ -238,8 +238,8 @@ Parameters
 ``Z attribute`` [tablefield: any]
   Field to use for the z axis.
 
-Output
-......
+Outputs
+.......
 
 ``Scatterplot`` [html]
   ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
