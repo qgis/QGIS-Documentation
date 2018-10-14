@@ -757,8 +757,8 @@ specified distance.
 If the geometries have z or m values present then these will be linearly interpolated
 at the added vertices.
 
-Example
-.......
+**Example**
+
 Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to be converted
 to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``, since 3 extra vertices are required
 on the segment and spacing these at 2.5 increments allows them to be evenly spaced
@@ -1247,14 +1247,14 @@ Parameters
 
   Default: *False*
 
-``Output geometry has m dimension`` [boolean]
+``Output geometry has m values`` [boolean]
   Choose if the output geometry should have the m dimension.
 
   Default: *False*
 
 ``Geometry expression`` [expression]
   Add the geometry expression you want to use. You can use the button to open
-  the Expression Dialog: the dialog has a lists of all the usable expression
+  the Expression Dialog: the dialog has a list of all the usable expression
   together with their help and guide.
 
   Default: *$geometry*
@@ -1347,10 +1347,10 @@ Z and M values are linearly interpolated from existing values.
 If a multipart geometry is encountered, only the first part is considered when
 calculating the substring.
 
-In the following picture an example of a substring line with starting distance
-set at 0 meters and the ending distance at 250 meters.
-
 .. figure:: img/substring.png
+   :align: center
+
+   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
@@ -1870,13 +1870,13 @@ Polygonize
 Creates a polygon layer whose features boundaries are generated from a **closed**
 line layer features.
 
-.. note:: the line layer must have closed shapes in order to be transformed into
-  a polygon.
-
 .. figure:: img/polygonize.png
    :align: center
 
    The yellow polygons generated from the closed lines
+
+.. note:: The line layer must have closed shapes in order to be transformed into
+  a polygon.
 
 Parameters
 ..........
@@ -2704,14 +2704,14 @@ This is useful for dividing a complex geometry into less complex parts, easier t
 spatially index and faster to perform spatial operations.
 Curved geometries will be segmentized before subdivision.
 
-.. note:: Subdividing a geometry can generate geometry parts that may not be valid
-  and may contain self-intersections.
-
 .. figure:: img/subdivide.png
    :align: center
 
    Left the input layer, middle maximum nodes value is 100 and right maximum value
    is 200
+
+.. note:: Subdividing a geometry can generate geometry parts that may not be valid
+  and may contain self-intersections.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
