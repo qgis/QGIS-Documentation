@@ -1426,6 +1426,49 @@ and angle entered. Repeating the process, several points can be added.
 
    Points at given distance and angle
 
+.. index:: Edit in place
+.. _processing_inplace_edit:
+
+The Processing in-place layer modifier
+======================================
+
+The :ref:`Processing menu <label_processing>` provides access to a large set of
+tools to analyze and create new features based on the properties of the input
+features or their relations with other features (within the same layer or not).
+While the common behavior is to create new layers as outputs, some algorithms
+also allow modifications to the input layer. This is a handy way to automate
+multiple features modification using advanced and complex operations.
+
+To edit features in-place:
+
+#. Select the layer to edit in the :guilabel:`Layers` panel;
+#. Select the concerned features. You can skip this step, in which case the
+   modification will apply to the whole layer;
+#. Press the |processSelected| :sup:`Edit Features In-Place` button at the top
+   of the :ref:`Processing toolbox <processing.toolbox>`. The list of algorithms
+   is filtered, showing only those compatible with in-place modifications, i.e.:
+
+   * they work at the feature source and not at the layer level;
+   * they do not change the layer structure, eg adding or removing fields;
+   * they do not change the geometry type (e.g. from line to point layer).
+
+#. Find the algorithm you'd like to run and double-click it;
+#. If this algorithm does not need any additional user-set parameters
+   (excluding the usual input and output layer parameters), then the algorithm
+   will be run immediately without any dialog popup.
+
+   If additional parameters are needed, the algorithm dialog pops up and
+   allows you to provide them.
+#. Click :guilabel:`Modify Selected Features` or :guilabel:`Modify All Features`
+   depending on whether there's an active selection.
+   
+   Changes are applied to the layer and placed in the edit buffer: the layer
+   is indeed toggled to editing mode with unsaved modification as indicated by
+   the |editableEdits| icon next to the layer name;
+#. As usual, press |saveEdits| :sup:`Save layer edits` to commit the changes in
+   the layer. You can also press |undo| :sup:`Undo` to rollback the whole
+   modification.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -1471,6 +1514,8 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
+   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -1511,6 +1556,8 @@ and angle entered. Repeating the process, several points can be added.
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
+.. |processSelected| image:: /static/common/mActionProcessSelected.png
+   :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
