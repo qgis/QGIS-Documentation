@@ -125,8 +125,8 @@ Edit
 The :menuselection:`Edit` menu presents most of the native tools needed to edit
 layers attributes or geometry (see :ref:`editingvector` for details).
 
-======================================================================  ====================  =================================   ===================================
-Menu Option                                                             Shortcut              Toolbar                             Reference
+=======================================================================  ====================  =================================   ===================================
+Menu Option                                                              Shortcut              Toolbar                             Reference
 =======================================================================  ====================  =================================   ===================================
 |undo| :guilabel:`Undo`                                                  :kbd:`Ctrl+Z`         :guilabel:`Digitizing`              :ref:`undoredo_edits`
 |redo| :guilabel:`Redo`                                                  :kbd:`Ctrl+Shift+Z`   :guilabel:`Digitizing`              :ref:`undoredo_edits`
