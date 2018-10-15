@@ -125,9 +125,9 @@ Edit
 The :menuselection:`Edit` menu presents most of the native tools needed to edit
 layers attributes or geometry (see :ref:`editingvector` for details).
 
-====================================================================    ====================  =================================   ===================================
+======================================================================  ====================  =================================   ===================================
 Menu Option                                                             Shortcut              Toolbar                             Reference
-====================================================================    ====================  =================================   ===================================
+======================================================================  ====================  =================================   ===================================
 |undo| :guilabel:`Undo`                                                 :kbd:`Ctrl+Z`         :guilabel:`Digitizing`              :ref:`undoredo_edits`
 |redo| :guilabel:`Redo`                                                 :kbd:`Ctrl+Shift+Z`   :guilabel:`Digitizing`              :ref:`undoredo_edits`
 |editCut| :guilabel:`Cut Features`                                      :kbd:`Ctrl+X`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
@@ -166,7 +166,7 @@ Menu Option                                                             Shortcut
 |vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`         \                     :guilabel:`Digitizing`              :ref:`vertex_tool`
 |rotatePointSymbols| :guilabel:`Rotate Point Symbols`                   \                     :guilabel:`Advanced Digitizing`     :ref:`rotate_symbol`
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                   \                     :guilabel:`Advanced Digitizing`     :ref:`offset_symbol`
-====================================================================    ====================  =================================   ===================================
+======================================================================  ====================  =================================   ===================================
 
 Depending on the selected layer geometry type, some of the tools may look different:
 
