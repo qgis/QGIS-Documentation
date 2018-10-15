@@ -38,7 +38,7 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Otto Dassau        | Brendan Morely      | David Willis         | Jürgen E. Fischer     | Yoichi Kayama        |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Alex Bruy          | Anita Graser        | Victor Olaya         | Marco Hugentobler     | Gary E. Sherman      |
+| Alexander Bruy     | Anita Graser        | Victor Olaya         | Marco Hugentobler     | Gary E. Sherman      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Tim Sutton         | Larissa Junek       | Raymond Nijssen      | Richard Duivenvoorde  | Andreas Neumann      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
@@ -64,15 +64,17 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Paolo Corti        | Hugo Mercier        | Gavin Macaulay       | Stefan Blumentrath    | Nicholas Duggan      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| David Adler        | Vincent Mora        | Tudor Barascu        | QGIS Koran Translator | Stéphane Brunner     |
+| David Adler        | Vincent Mora        | Tudor Bărăscu        | QGIS Koran Translator | Stéphane Brunner     |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Jaka Kranjc        | Tom Kralidis        | Zoltan Siki          | Sebastian Dietrich    | Uros Preloznik       |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Dick Groskamp      | Mezene Worku        | Alexandre Busquets   | Dominic Keller        | Andre Mano           |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
+| Chris Mayo         | Håvard Tveite       | Mie Winstrup         | Jonathan Willitts     | Giovanni Manghi      |
++--------------------+---------------------+----------------------+-----------------------+----------------------+
 | ajazepk            | icephale            | Andrei               | GiordanoPezzola       | zstadler             |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Ramon              | embelding           |                      |                       |                      |
+| Ramon              | embelding           | stra2da              |                       |                      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 
 
