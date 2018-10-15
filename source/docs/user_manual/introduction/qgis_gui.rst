@@ -280,8 +280,8 @@ Menu Option                                                   Shortcut          
 |toggleEditing| :guilabel:`Toggle Editing`                    \                     :guilabel:`Digitizing`             :ref:`sec_edit_existing_layer`
 |fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             :ref:`save_feature_edits`
 |allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             :ref:`save_feature_edits`
-:menuselection:`Save As...`                                   \                     \                                  :ref:`general_saveas`
-:menuselection:`Save As Layer Definition File...`             \                     \                                  \
+:guilabel:`Save As...`                                        \                     \                                  :ref:`general_saveas`
+:guilabel:`Save As Layer Definition File...`                  \                     \                                  \
 |removeLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                  \
 |duplicateLayer| :guilabel:`Duplicate Layer(s)`               \                     \                                  \
 :guilabel:`Set Scale Visibility of Layer(s)`                  \                     \                                  \
