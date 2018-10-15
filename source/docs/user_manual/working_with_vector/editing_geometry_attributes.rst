@@ -1436,8 +1436,8 @@ The :ref:`Processing menu <label_processing>` provides access to a large set of
 tools to analyze and create new features based on the properties of the input
 features or their relations with other features (within the same layer or not).
 While the common behavior is to create new layers as outputs, some algorithms
-also allow to modify the input layer. This is a handy way to automate multiple
-features modification using advanced and complex operations.
+also allow modifications to the input layer. This is a handy way to automate
+multiple features modification using advanced and complex operations.
 
 To edit features in-place:
 
@@ -1448,7 +1448,7 @@ To edit features in-place:
    of the :ref:`Processing toolbox <processing.toolbox>`. The list of algorithms
    is filtered, showing only those compatible with in-place modifications, i.e.:
 
-   * they work on feature source and not at layer level;
+   * they work at the feature source and not at the layer level;
    * they do not change the layer structure, eg adding or removing fields;
    * they do not change the geometry type (e.g. from line to point layer).
 
@@ -1465,9 +1465,9 @@ To edit features in-place:
    Changes are applied to the layer and placed in the edit buffer: the layer
    is indeed toggled to editing mode with unsaved modification as indicated by
    the |editableEdits| icon next to the layer name;
-#. As usual, press |saveEdits| :sup:`Save layer edits` to write the changes in
+#. As usual, press |saveEdits| :sup:`Save layer edits` to commit the changes in
    the layer. You can also press |undo| :sup:`Undo` to rollback the whole
-   modification in one-click.
+   modification.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
