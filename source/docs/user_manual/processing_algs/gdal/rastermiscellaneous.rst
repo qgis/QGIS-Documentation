@@ -268,8 +268,8 @@ Parameters
 
   Default: *AUTO*
 
-Output
-......
+Outputs
+.......
 
 ``Tile index`` [vector: polygon]
   The name of the output file to create/append to. The default shapefile will

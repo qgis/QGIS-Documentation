@@ -25,8 +25,8 @@ Parameters
 ``URL`` [string]
   Valid URL as a string character.
 
-Output
-......
+Outputs
+.......
 
 ``File destination`` [file]
   Downloaded file of the chosen URL.

@@ -104,8 +104,8 @@ Parameters
 
   Default: *Raw*
 
-Output
-......
+Outputs
+.......
 ``Heatmap`` [raster]
   Raster layer with kernel density values.
 
@@ -228,8 +228,8 @@ Parameters
   either choosing it from the map canvas, selecting it from another layer or type
   it manually.
 
-Output
-......
+Outputs
+.......
 ``Interpolated`` [raster]
   Raster layer of interpolated values.
 
@@ -288,8 +288,8 @@ Parameters
   either choosing it from the map canvas, selecting it from another layer or type
   it manually.
 
-Output
-......
+Outputs
+.......
 ``Interpolated`` [raster]
   Raster layer of triangulated values.
 

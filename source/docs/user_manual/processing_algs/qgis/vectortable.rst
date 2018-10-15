@@ -68,8 +68,8 @@ Parameters
 
   Default: *False*
 
-Output
-......
+Outputs
+.......
 
 ``Incremented`` [vector: any]
   Vector layer with auto incremental field.
@@ -114,8 +114,8 @@ Parameters
 
   Default: *0*
 
-Output
-......
+Outputs
+.......
 
 ``Added`` [vector: any]
   Vector layer with new field added.
@@ -151,8 +151,8 @@ Parameters
 
   Default: *NUM_FIELD*
 
-Output
-......
+Outputs
+.......
 
 ``Layer with index field`` [vector: any]
   Vector layer with the numeric field containing indexes.
@@ -216,8 +216,8 @@ Parameters
     value = $geom.area()
 
 
-Output
-......
+Outputs
+.......
 
 ``Calculated`` [vector: any]
   Vector layer with the new calculated field.
@@ -239,8 +239,8 @@ Parameters
 ``Fields to drop`` [tablefield: any] [list]
   Select the field(s) to drop.
 
-Output
-......
+Outputs
+.......
 
 ``Fields dropped`` [vector: any]
   Vector layer without the field(s) chosen.
@@ -321,8 +321,8 @@ Parameters
 ``Load fields from layer`` [vector: any]
   Load fields from another vector layer to update the field list.
 
-Output
-......
+Outputs
+.......
 
 ``Refactored`` [vector: any]
   Output layer with refactored fields.
@@ -348,8 +348,8 @@ Parameters
 ``Text attribute to convert to float`` [tablefield: string]
   String field to convert in a floating field type.
 
-Output
-......
+Outputs
+.......
 
 ``Float from text`` [vector: any]
   Output vector layer with string field converted into float.

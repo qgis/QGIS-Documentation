@@ -67,8 +67,8 @@ Parameters
 
   Default: *2.0*
 
-Output
-......
+Outputs
+.......
 
 ``Offset lines`` [vector: line]
   Output line layer with offset features.

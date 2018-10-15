@@ -128,8 +128,8 @@ Parameters
   Intersection vector layer.
 
 
-Output
-......
+Outputs
+.......
 
 ``Extracted (location)`` [vector: any]
   Vector layer of the spatial intersection.
@@ -164,8 +164,8 @@ Parameters
 
   Default: *10*
 
-Output
-......
+Outputs
+.......
 
 ``Extracted (random)`` [vector: any]
   Vector layer containing random selected features.
@@ -205,8 +205,8 @@ Parameters
 
   Default: *10*
 
-Output
-......
+Outputs
+.......
 
 ``Extracted (random stratified)`` [vector: any]
   Vector layer containing random selected features.
