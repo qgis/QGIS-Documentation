@@ -227,11 +227,11 @@ feature:
 Parameters
 ..........
 
-``Database`` [string]
-  Name of the database, not the connection name.
-  By default you don't have to fill in the name, the current database
-  connection will be chosen.
+``Database (connection name)`` [string]
 
+  Name of the database connection (not the database name). Existing connections
+  will be shown in the combobox.
+ 
 ``SQL query`` [string]
   Defines the SQL query, for example ``UPDATE my_table SET field=10``.
 
