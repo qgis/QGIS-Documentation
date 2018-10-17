@@ -388,10 +388,9 @@ any Processing algorithms or some external :ref:`plugins <plugins>`.
 Database
 --------
 
-If the DB Manager core plugin is enabled, the :guilabel:`Database` menu will be
-available.
 This is what the :guilabel:`Database` menu will look like if all the core plugins
 are enabled.
+If no database plugins are enabled, there will be no guilabel:`Database` menu.
 
 ===============================================  ============================  ===============================
 Menu Option                                      Toolbar                       Reference
@@ -407,8 +406,9 @@ When starting QGIS for the first time not all core plugins are loaded.
 Web
 ---
 
-If the Metasearch Catalog Client core plugin is enabled, the :guilabel:`Web`
-menu will be available.
+This is what the :guilabel:`Database` menu will look like if all the core plugins
+are enabled.
+If no web plugins are enabled, there will be no guilabel:`Web` menu.
 
 ===============================================  ===========================  ===============================
 Menu Option                                      Toolbar                      Reference
