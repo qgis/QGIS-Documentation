@@ -368,7 +368,6 @@ Menu Option                                                 Toolbar             
 :guilabel:`Align Raster...`                                 \                     :ref:`label_raster_align`
 :menuselection:`Analysis -->`                               \                     :ref:`processing.options`
 :menuselection:`Projection -->`                             \                     :ref:`processing.options`
-:menuselection:`Conversion -->`                             \                     :ref:`processing.options`
 :menuselection:`Miscellaneous -->`                          \                     :ref:`processing.options`
 :menuselection:`Extraction -->`                             \                     :ref:`processing.options`
 :menuselection:`Conversion -->`                             \                     :ref:`processing.options`
