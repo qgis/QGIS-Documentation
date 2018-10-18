@@ -285,38 +285,17 @@ Clean up the map
   :guilabel:`Layers list`. This will make the map render faster and will save
   you some time.
 
-In order to create the hillshade, you will need to use a plugin that was
-written for this purpose.
-
-Activating the :guilabel:`Raster Terrain Analysis` plugin
--------------------------------------------------------------------------------
-
-This plugin is included by default in QGIS 1.8. However, it may not be
-immediately visible. To check if it is accessible on your system:
-
-* Click on the menu item :menuselection:`Plugins --> Manage Plugins...`.
-* Ensure that the box next to :guilabel:`Raster Terrain Analysis plugin` is
-  selected.
-* Click :guilabel:`OK`.
-
-You will now have access to this plugin via the :menuselection:`Raster -->
-Terrain analysis` menu item.
-
-Remember that plugins may sometimes depend on certain Python modules being
-installed on your system.  Should a plugin refuse to work while complaining of
-missing dependencies, please ask your tutor or lecturer for assistance.
-
 Create the hillshade
 -------------------------------------------------------------------------------
 
 * In the :guilabel:`Layers list`, ensure that the :guilabel:`DEM` is the active
   layer (i.e., it is highlighted by having been clicked on).
-* Click on the :menuselection:`Raster --> Terrain analysis --> Hillshade` menu
+* Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu
   item to open the :guilabel:`Hillshade` dialog.
 * Specify an appropriate location for the output layer and call it
-  :guilabel:`hillshade`.
-* Check the :guilabel:`Add result to project` box.
-* Click :guilabel:`OK`.
+  :guilabel:`hillshade` (in the `Hillshade` field).
+* Check the :guilabel:`Open output file after running algorithm` box.
+* Click :guilabel:`Run`.
 * Wait for it to finish processing.
 
 The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers
@@ -337,8 +316,8 @@ Slope
 * Select the :guilabel:`Slope` analysis type, with the clipped DEM as the input
   layer.
 * Specify an appropriate file name and location for output purposes.
-* Check the :guilabel:`Add result to project` box.
-* Click :guilabel:`OK`.
+* Check the :guilabel:`Open output file after running algorithm` box.
+* Click :guilabel:`Run`.
 
 The slope image has been calculated and added to the map. However, as usual it
 is just a gray rectangle. To properly see what's going on, change the symbology
