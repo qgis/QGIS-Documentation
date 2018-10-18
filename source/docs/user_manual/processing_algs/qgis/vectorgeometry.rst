@@ -191,6 +191,8 @@ Polygon and line geometries are supported.
 
    Black lines represent the bounding boxes of each polygon feature
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -316,6 +318,8 @@ associated to the original features.
    :align: center
 
    The red stars represent the centroids of each feature of the input layer.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -529,6 +533,8 @@ covers the whole layer or grouped subsets of features.
 
    Black lines identify the convex hull for each layer feature
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
 Parameters
@@ -667,6 +673,8 @@ holes being removed.
 
    Before and after the cleaning
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -690,8 +698,8 @@ Outputs
 
 .. _qgisdensifygeometries:
 
-Densify geometries
-------------------
+Densify by count
+----------------
 Takes a polygon or line layer and generates a new one in which the geometries have
 a larger number of vertices than the original one.
 
@@ -704,6 +712,8 @@ The number of new vertices to add to each segment is specified as an input param
    :align: center
 
    Red points show the vertices before and after the densify
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -731,8 +741,8 @@ See also
 
 .. _qgisdensifygeometriesgivenaninterval:
 
-Densify geometries given an interval
-------------------------------------
+Densify by interval
+-------------------
 Takes a polygon or line layer and generates a new one in which the geometries have
 a larger number of vertices than the original one.
 
@@ -743,8 +753,8 @@ specified distance.
 If the geometries have z or m values present then these will be linearly interpolated
 at the added vertices.
 
-Example
-.......
+**Example**
+
 Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to be converted
 to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``, since 3 extra vertices are required
 on the segment and spacing these at 2.5 increments allows them to be evenly spaced
@@ -754,6 +764,8 @@ over the segment.
    :align: center
 
    Densify geometry at a given interval
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -938,6 +950,8 @@ intermediate vertices between them.
 
    The original line layer and the exploded one
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 ``Input layer`` [vector: line]
@@ -962,6 +976,8 @@ Lines are extended using the bearing of the first and last segment in the line.
    :align: center
 
    The red dashes represent the initial and final extension of the original layer
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1165,11 +1181,13 @@ See also
 
 Fix geometries
 --------------
-This algorithm attempts to create a valid representation of a given invalid geometry
-without losing any of the input vertices. Already-valid geometries are returned
+Attempts to create a valid representation of a given invalid geometry
+without losing any of the input vertices. Already valid geometries are returned
 without further intervention. Always outputs multi-geometry layer.
 
 .. note:: M values will be dropped from the output.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1220,14 +1238,14 @@ Parameters
 
   Default: *False*
 
-``Output geometry has m dimension`` [boolean]
+``Output geometry has m values`` [boolean]
   Choose if the output geometry should have the m dimension.
 
   Default: *False*
 
 ``Geometry expression`` [expression]
   Add the geometry expression you want to use. You can use the button to open
-  the Expression Dialog: the dialog has a lists of all the usable expression
+  the Expression Dialog: the dialog has a list of all the usable expression
   together with their help and guide.
 
   Default: *$geometry*
@@ -1323,11 +1341,12 @@ Z and M values are linearly interpolated from existing values.
 If a multipart geometry is encountered, only the first part is considered when
 calculating the substring.
 
-In the following picture an example of a substring line with starting distance
-set at 0 meters and the ending distance at 250 meters.
-
 .. figure:: img/substring.png
+   :align: center
 
+   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1386,6 +1405,8 @@ geometries.
 If any parts of the input MultiLineString geometries are not connected, the
 resultant geometry will be a MultiLineString containing any lines which could be
 merged and any non-connected line parts.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1452,6 +1473,8 @@ Calculates the minimum enclosing circle which covers each feature in an input la
    
    Enclosing circles for each feature
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -1485,6 +1508,8 @@ using a fixed or dynamic distance and ring numbers.
    :align: center
 
    Multi-ring buffer for line, point and polygon layer
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1528,6 +1553,8 @@ into single features.
 
    Left the multipart source layer and right the single part output result
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
@@ -1558,6 +1585,8 @@ the left, and negative distances will offset them to the right.
    :align: center
 
    In blue the source layer, in red the offset one
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1615,6 +1644,8 @@ Calculates the minimum area rotated rectangle which covers each feature in an in
 
    Oriented minimum bounding box
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -1645,6 +1676,8 @@ angle in the geometry either a right angle or a straight line.
 
    In blue the source layer while the red line is the orthogonalized result
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -1673,6 +1706,8 @@ Outputs
 Point on surface
 ----------------
 Returns a point guaranteed to lie on the surface of a geometry.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1828,13 +1863,13 @@ Polygonize
 Creates a polygon layer whose features boundaries are generated from a **closed**
 line layer features.
 
-.. note:: the line layer must have closed shapes in order to be transformed into
-  a polygon.
-
 .. figure:: img/polygonize.png
    :align: center
 
    The yellow polygons generated from the closed lines
+
+.. note:: The line layer must have closed shapes in order to be transformed into
+  a polygon.
 
 Parameters
 ..........
@@ -1890,6 +1925,8 @@ Project points (Cartesian) |32|
 Projects point geometries by a specified distance and bearing (azimuth), creating
 a new point layer with the projected points.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -1924,6 +1961,8 @@ Input features which are already multipart features will remain unchanged.
 
 This algorithm can be used to force geometries to multipart types in order to be
 compatible with data providers that require multipart features.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2086,6 +2125,8 @@ will be maintained.
   geometry, e.g. a multipoint geometry with overlapping points will not be changed by
   this method.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -2146,6 +2187,8 @@ Inverts the direction of a line layer.
 
    Before and after the direction inversion
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -2166,6 +2209,8 @@ Rotate |32|
 Rotates feature geometries by the specified angle clockwise.
 The rotation occurs around each feature's centroid, or optionally
 around a unique preset point.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2379,6 +2424,8 @@ snapping geometries to grid.
 
    Clockwise from left-up: source layer and different simplification tolerances
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
@@ -2494,6 +2541,8 @@ angles. Any node where the angle of the segments to either side is larger than
 this will not be smoothed. For example, setting the maximum angle to 90 degrees
 or lower would preserve right angles in the geometry.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -2595,6 +2644,8 @@ axis will disable snapping for that axis.
 
 .. note:: Snapping to grid may generate an invalid geometry in some corner cases.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 
@@ -2640,15 +2691,16 @@ This is useful for dividing a complex geometry into less complex parts, easier t
 spatially index and faster to perform spatial operations.
 Curved geometries will be segmentized before subdivision.
 
-.. note:: Subdividing a geometry can generate geometry parts that may not be valid
-  and may contain self-intersections.
-
 .. figure:: img/subdivide.png
    :align: center
 
    Left the input layer, middle maximum nodes value is 100 and right maximum value
    is 200
 
+.. note:: Subdividing a geometry can generate geometry parts that may not be valid
+  and may contain self-intersections.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2677,6 +2729,8 @@ Switches the X and Y coordinate values in input geometries.
 
 It can be used to repair geometries which have accidentally had their latitude
 and longitude values reversed.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2749,6 +2803,8 @@ with each multipolygon consisting of multiple triangle component polygons.
    :align: center
 
    Tessellated polygon (right)
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2831,6 +2887,8 @@ Z and M values present in the geometry can also be translated.
    :align: center
 
    Dashed lines represent the translated geometry of the input layer
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2952,6 +3010,8 @@ Outputs
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |clearText| image:: /static/common/mIconClearText.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
