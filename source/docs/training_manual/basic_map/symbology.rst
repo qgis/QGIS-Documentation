@@ -283,7 +283,7 @@ replacing will be lost.
 
 * Change the appearance of the :guilabel:`roads` layer again.
 
-  The roads must be narrow and yellow, with a thin, pale gray outline and a black
+  The roads must be narrow and yellow, with a thin, pale gray outline and a
   thin black line in the middle. Remember that you may need to change the layer
   rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 
