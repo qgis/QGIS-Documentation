@@ -285,9 +285,6 @@ Clean up the map
   :guilabel:`Layers list`. This will make the map render faster and will save
   you some time.
 
-In order to create the hillshade, you will need to use a plugin that was
-written for this purpose.
-
 Create the hillshade
 -------------------------------------------------------------------------------
 
@@ -298,7 +295,7 @@ Create the hillshade
 * Specify an appropriate location for the output layer and call it
   :guilabel:`hillshade` (in the `Hillshade` field).
 * Check the :guilabel:`Open output file after running algorithm` box.
-* Click :guilabel:`Run in Background`.
+* Click :guilabel:`Run`.
 * Wait for it to finish processing.
 
 The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers
@@ -320,7 +317,7 @@ Slope
   layer.
 * Specify an appropriate file name and location for output purposes.
 * Check the :guilabel:`Open output file after running algorithm` box.
-* Click :guilabel:`Run in Background`.
+* Click :guilabel:`Run`.
 
 The slope image has been calculated and added to the map. However, as usual it
 is just a gray rectangle. To properly see what's going on, change the symbology
