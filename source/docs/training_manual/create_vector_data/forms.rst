@@ -19,7 +19,7 @@ lesson shows you how.
 |basic| |FA| Using QGIS' Form Design Functionality
 -------------------------------------------------------------------------------
 
-* Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
+* Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel.
 * Enter :guilabel:`Edit Mode` as before.
 * Open its :guilabel:`Attribute Table`.
 * Right-click on any cell in the table. A short menu will appear, with the only
@@ -30,7 +30,7 @@ Obviously it would be nice to be able to do this while looking at the map,
 rather than needing to search for a specific street in the :guilabel:`Attribute
 Table` all the time.
 
-* Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
+* Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel.
 * Using the :guilabel:`Identify` tool, click on any street in the map.
 
   |identify|

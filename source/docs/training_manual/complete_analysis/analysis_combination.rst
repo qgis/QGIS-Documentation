@@ -17,7 +17,7 @@ suitable plots.
 * Save your current map (:kbd:`raster_analysis.qgs`).
 * Open the map in which you created during the vector analysis earlier
   (you should have saved the file as :kbd:`analysis.qgs`).
-* In the :guilabel:`Layers list`, enable these layers:
+* In the :guilabel:`Layers` panel, enable these layers:
 
   * :guilabel:`hillshade`,
   * :guilabel:`solution` (or :guilabel:`buildings_over_100`)

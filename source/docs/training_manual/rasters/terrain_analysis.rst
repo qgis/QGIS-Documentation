@@ -65,7 +65,7 @@ transparent.
 * Hide all the layers except the :guilabel:`DEM` and :guilabel:`hillshade`
   layers.
 * Click and drag the :guilabel:`DEM` to be beneath the :guilabel:`hillshade`
-  layer in the :guilabel:`Layers list`.
+  layer in the :guilabel:`Layers` panel.
 * Set the :guilabel:`hillshade` layer to be transparent by opening its
   :guilabel:`Layer Properties` and go to the :guilabel:`Transparency`
   tab.
@@ -77,7 +77,7 @@ transparent.
      :align: center
 
 * Switch the :guilabel:`hillshade` layer off and back on in the
-  :guilabel:`Layers list` to see the difference it makes.
+  :guilabel:`Layers` panel to see the difference it makes.
 
 Using a hillshade in this way, it's possible to enhance the topography of the
 landscape. If the effect doesn't seem strong enough to you, you can change the
@@ -115,7 +115,7 @@ To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
 * Click :guilabel:`OK` and close the dialogs when processing is complete, and
   click :guilabel:`Close` to close the dialog. You'll
   see a new raster loaded into your map.
-* With the new raster selected in the :guilabel:`Layers list`, click the
+* With the new raster selected in the :guilabel:`Layers` panel, click the
   :guilabel:`Stretch Histogram to Full Dataset` button. Now you'll see the
   slope of the terrain, with black pixels being flat terrain and white pixels,
   steep terrain:

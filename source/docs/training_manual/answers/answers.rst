@@ -594,7 +594,7 @@ Your results:
 ...............................................................................
 
 * Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers list`, and selecting the :menuselection:`Properties
+  layer in the :guilabel:`Layers` panel, and selecting the :menuselection:`Properties
   --> Source` tab.
 * Then build the query :kbd:`"suitable" = 1`.
 * Click :guilabel:`OK` to filter out all the polygons where this condition
@@ -606,7 +606,7 @@ When viewed over the original raster, the areas should overlap perfectly:
    :align: center
 
 * You can save this layer by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers list` and choosing :guilabel:`Save As...`,
+  layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
   then continue as per the instructions.
 
 :ref:`Back to text <backlink-complete-analysis-1>`

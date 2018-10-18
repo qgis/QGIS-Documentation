@@ -110,7 +110,7 @@ final. You can always come back and change it later if you're not satisfied.
 For now, you need to ensure that you've saved your work on this map. Because a
 :guilabel:`Layout` in QGIS is part of the main map file, you'll need to save
 your main project. Go to the main QGIS window (the one with the
-:guilabel:`Layers list` and all the other familiar elements you were working
+:guilabel:`Layers` panel and all the other familiar elements you were working
 with before), and save your project from there as usual.
 
 |basic| |FA| Adding a Title

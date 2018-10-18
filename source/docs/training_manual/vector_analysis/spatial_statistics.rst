@@ -44,7 +44,7 @@ We'll use the area covered by streets.
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`roads_hull.shp`.
-* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
+* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers` panel).
 
 Creating random points
 ...............................................................................
@@ -57,7 +57,7 @@ Creating random points
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
-* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
+* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers` panel).
 
 .. image:: img/random_points_result.png
    :align: center
@@ -216,7 +216,7 @@ To get the mean coordinates of a dataset:
   layer, but leave the optional choices unchanged.
 * Specify the output layer as :kbd:`mean_coords.shp`.
 * Click :guilabel:`OK`.
-* Add the layer to the :guilabel:`Layers list` when prompted.
+* Add the layer to the :guilabel:`Layers` panel when prompted.
 
 Let's compare this to the central coordinate of the polygon that was used to
 create the random sample.
@@ -225,7 +225,7 @@ create the random sample.
   menu item.
 * In the dialog that appears, select :guilabel:`roads_hull` as the input layer.
 * Save the result as :kbd:`center_point`.
-* Add it to the :guilabel:`Layers list` when prompted.
+* Add it to the :guilabel:`Layers` panel when prompted.
 
 As you can see from the example below, the mean coordinates and the center of
 the study area (in orange) don't necessarily coincide:
@@ -240,7 +240,7 @@ The histogram of a dataset shows the distribution of its values. The simplest
 way to demonstrate this in QGIS is via the image histogram, available in the
 :guilabel:`Layer Properties` dialog of any image layer.
 
-* In your :guilabel:`Layers list`, right-click on the SRTM DEM layer.
+* In your :guilabel:`Layers` panel, right-click on the SRTM DEM layer.
 * Select :menuselection:`Properties`.
 * Choose the tab :guilabel:`Histogram`. You may need to click on the
   :guilabel:`Compute Histogram` button to generate the graphic. You will see a
@@ -458,7 +458,7 @@ to be analyzed.
 
 * Choose the :guilabel:`random_points` dataset.
 * Click :guilabel:`OK`. On completion, a DBF table will appear in the
-  :guilabel:`Layers list`.
+  :guilabel:`Layers` panel.
 * Select it, then open its attribute table. Although the figures may vary, your
   results will be in this format:
 

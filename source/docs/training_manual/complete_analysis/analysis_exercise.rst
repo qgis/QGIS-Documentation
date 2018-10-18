@@ -92,7 +92,7 @@ path in this field manually, should you wish to do so.
 * Click :guilabel:`Open`. The vector layer will load in your map. Its color is
   automatically assigned. It will be changed later.
 * Rename the layer to :kbd:`Streets`.
-* Right-click on it in the :guilabel:`Layers list` (by default, the pane along
+* Right-click on it in the :guilabel:`Layers` panel (by default, the pane along
   the left-hand side of the screen).
 * Click :guilabel:`Rename` in the dialog that appears and rename it, pressing
   the :guilabel:`Enter` key when done.
@@ -121,7 +121,7 @@ be changed.
 Changing the symbology of vector layers
 -------------------------------------------------------------------------------
 
-* In the :guilabel:`Layers list`, right-click on the :guilabel:`Streets` layer.
+* In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` layer.
 * Select :guilabel:`Properties` from the menu that appears.
 * Switch to the :guilabel:`Symbology` tab in the dialog that appears.
 * Click on the button labelled :guilabel:`Change`, with a square showing the
@@ -154,10 +154,10 @@ Raster layer symbology is somewhat different.
 Changing the layer order
 -------------------------------------------------------------------------------
 
-* In the :guilabel:`Layers list`, click and drag layers up and down to change
+* In the :guilabel:`Layers` panel, click and drag layers up and down to change
   the order they appear in on the map.
 * Newer versions of QGIS may have a :guilabel:`Control rendering order`
-  checkbox beneath the :guilabel:`Layers list`. Ensure that it is checked.
+  checkbox beneath the :guilabel:`Layers` panel. Ensure that it is checked.
 
 Now that all the data is loaded and properly visible, the analysis can begin.
 It is best if the clipping operation is done first. This is so that no
@@ -170,7 +170,7 @@ Find the Correct Districts
 * Load the vector layer :kbd:`admin_boundaries/Western_Cape_UTM33S.shp` into
   your map.
 * Rename it to :kbd:`Districts`.
-* Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers` panel.
 * In the menu that appears,  select the :guilabel:`Query...` menu item. The
   :guilabel:`Query Builder` dialog appears.
 
@@ -257,7 +257,7 @@ Clean up the map
 -------------------------------------------------------------------------------
 
 * Remove the original :guilabel:`Rainfall` and :guilabel:`DEM` layers from the
-  :guilabel:`Layers list`: 
+  :guilabel:`Layers` panel: 
 
 * Right-click on these layers and select :guilabel:`Remove`.
 
@@ -272,7 +272,7 @@ Clean up the map
 
 * Show all the :guilabel:`Streets` again:
 
-  * Right-click on the layer in the :guilabel:`Layers list`.
+  * Right-click on the layer in the :guilabel:`Layers` panel.
   * Select :guilabel:`Query`.
 
 * In the :guilabel:`Query` dialog that appears, click the :guilabel:`Clear`
@@ -282,7 +282,7 @@ Clean up the map
   layers*).
 * Save the map.
 * You can now hide the vector layers by unchecking the box next to them in the
-  :guilabel:`Layers list`. This will make the map render faster and will save
+  :guilabel:`Layers` panel. This will make the map render faster and will save
   you some time.
 
 In order to create the hillshade, you will need to use a plugin that was
@@ -309,7 +309,7 @@ missing dependencies, please ask your tutor or lecturer for assistance.
 Create the hillshade
 -------------------------------------------------------------------------------
 
-* In the :guilabel:`Layers list`, ensure that the :guilabel:`DEM` is the active
+* In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM` is the active
   layer (i.e., it is highlighted by having been clicked on).
 * Click on the :menuselection:`Raster --> Terrain analysis --> Hillshade` menu
   item to open the :guilabel:`Hillshade` dialog.
@@ -368,7 +368,7 @@ Reclassifying rasters
 * Ensure that the :guilabel:`Add result to project` box is selected.
   
 In the :guilabel:`Raster bands` list on the left, you will see all the raster
-layers in your :guilabel:`Layers list`. If your Slope layer is called
+layers in your :guilabel:`Layers` panel. If your Slope layer is called
 :guilabel:`slope`, it will be listed as :guilabel:`slope@1`.
 
 The slope needs to be between :kbd:`15` and :kbd:`60` degrees. Everything less
@@ -433,7 +433,7 @@ to find all rural areas first.
 Finding rural areas
 -------------------------------------------------------------------------------
 
-* Hide all layers in the :guilabel:`Layers list`.
+* Hide all layers in the :guilabel:`Layers` panel.
 * Unhide the :guilabel:`Zoning` vector layer.
 * Right-click on it and bring up the :guilabel:`Query` dialog.
 * Build the following query:
@@ -515,7 +515,7 @@ Creating a bounding box vector
 * Hide all layers except the new :guilabel:`bbox` layer and one of the
   reclassified rasters.
 * Ensure that the :guilabel:`bbox` layer is highlighted in the
-  :guilabel:`Layers list`.
+  :guilabel:`Layers` panel.
 * Navigate to the :menuselection:`View > Toolbars` menu item and ensure that
   :guilabel:`Digitizing` is selected. You should then see a toolbar icon with a
   pencil or koki on it. This is the :guilabel:`Toggle editing` button.
@@ -732,7 +732,7 @@ Calculate polygon centroids
 * Specify the input layer as :guilabel:`solution.shp`.
 * Provide the output location as :kbd:`Rasterprac`.
 * Call the destination file :kbd:`solution_centroids.shp`.
-* Click :guilabel:`OK` and add the result to the TOC (:guilabel:`Layers list`),
+* Click :guilabel:`OK` and add the result to the TOC (:guilabel:`Layers` panel),
   then close the dialog.
 * Drag the new layer to the top of the layer order so that you can see it.
 

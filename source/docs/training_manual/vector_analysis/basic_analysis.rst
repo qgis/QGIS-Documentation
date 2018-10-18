@@ -96,7 +96,7 @@ region. That information is inside the :guilabel:`multipolygons` layer and can b
 using the information in its :guilabel:`Attribute Table`. We'll start with the :kbd:`schools` layer:
 
 * Right-click on the :guilabel:`multipolygons` layer in the
-  :guilabel:`Layers list` and open the :guilabel:`Layer Properties`.
+  :guilabel:`Layers` panel and open the :guilabel:`Layer Properties`.
 * Go to the :guilabel:`Source` menu.
 * Under :guilabel:`Feature subset` click on the **[Query Builder]** button to
   open the :guilabel:`Query builder` dialog.
@@ -240,7 +240,7 @@ This is why we needed to use projected data.
 * Click :guilabel:`OK` and it will create the buffer.
 * When it asks you if it should "add the new layer to the TOC", click
   :guilabel:`Yes`. ("TOC" stands for "Table of Contents", by which it means the
-  :guilabel:`Layers list`).
+  :guilabel:`Layers` panel).
 * Close the :guilabel:`Fixed distance buffer` dialog.
 
 Now your map will look something like this:
@@ -264,7 +264,7 @@ layer and re-create the buffer using the settings shown here:
   asks your permission to overwrite the old one).
 * Click :guilabel:`OK` and close the :guilabel:`Fixed distance buffer` dialog again.
   
-Once you've added the layer to the :guilabel:`Layers list`, it will look like
+Once you've added the layer to the :guilabel:`Layers` panel, it will look like
 this:
 
 .. image:: img/dissolve_buffer_results.png
@@ -300,7 +300,7 @@ this:
 The two input layers are the two buffers; the save location is as usual; and
 the file name is :kbd:`road_school_buffers_intersect.shp`. Once it's set up
 like this, click :guilabel:`OK` and add the layer to the
-:guilabel:`Layers list` when prompted.
+:guilabel:`Layers` panel when prompted.
 
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
@@ -341,7 +341,7 @@ The buildings highlighted in yellow are those which match our criteria and are
 selected, while the buildings in green are those which do not. We can now save
 the selected buildings as a new layer.
 
-* Right-click on the :guilabel:`houses_34S` layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`houses_34S` layer in the :guilabel:`Layers` panel.
 * Select :guilabel:`Save Selection As...`.
 * Set the dialog up like this:
 

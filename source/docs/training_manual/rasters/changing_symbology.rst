@@ -19,7 +19,7 @@ data properly so that it becomes properly visible and useful.
 * Use the :guilabel:`Add Raster Layer` button to load the new raster dataset.
 * Load the dataset |srtmFileName|, found under the directory
   :kbd:`exercise_data/raster/SRTM/`.
-* Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`.
+* Once it appears in the :guilabel:`Layers` panel, rename it to :kbd:`DEM`.
 * Zoom to the extent of this layer by right-clicking on it in the Layer List
   and selecting :guilabel:`Zoom to Layer Extent`.
 
@@ -119,7 +119,7 @@ But isn't there a better or easier way?
 Yes, there is. Now that you understand what needs to be done, you'll be glad to
 know that there's a tool for doing all of this easily.
 
-* Remove the current DEM from the :guilabel:`Layers list`.
+* Remove the current DEM from the :guilabel:`Layers` panel.
 * Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray
   rectangle again...
 * Enable the tool you'll need by enabling :menuselection:`View --> Toolbars -->

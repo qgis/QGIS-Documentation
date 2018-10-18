@@ -99,7 +99,7 @@ What do you notice?
 
 The layer isn't visible! But that's easy to fix, right?
 
-* Right-click on the :guilabel:`RSA` layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`RSA` layer in the :guilabel:`Layers` panel.
 * Select :guilabel:`Zoom to Layer Extent`.
 
 OK, so now we see South Africa... but where is the rest of the world?
@@ -168,7 +168,7 @@ it says - it doesn't change the data, it just reprojects the layers as they
 appear on the map. To truly reproject the data itself, you need to export it to
 a new file using a new projection.
 
-* Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel.
 * Select :guilabel:`Save As...` in the menu that appears. You will be shown the
   :guilabel:`Save vector layer as...` dialog.
 * Click on the :guilabel:`Browse` button next to the :guilabel:`Save as` field.
