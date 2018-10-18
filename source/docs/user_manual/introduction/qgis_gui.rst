@@ -223,10 +223,10 @@ Menu Option                                                Shortcut             
 |zoomToSelected| :guilabel:`Zoom To Selection`             :kbd:`Ctrl+J`            :guilabel:`Map Navigation`     \
 |zoomLast| :guilabel:`Zoom Last`                           \                        :guilabel:`Map Navigation`     \
 |zoomNext| :guilabel:`Zoom Next`                           \                        :guilabel:`Map Navigation`     \
-|zoomActual| :guilabel:`Zoom To Native Resolution`         \                        :guilabel:`Map Navigation`     \
+|zoomActual| :guilabel:`Zoom To Native Resolution (100%`)  \                        :guilabel:`Map Navigation`     \
 :menuselection:`Decorations -->`                           \                        \                              :ref:`decorations`
 :menuselection:`Preview mode -->`                          \                        \                              \
-|mapTips| :guilabel:`Map Tips`                             \                        :guilabel:`Attributes`         :ref:`maptips`
+|mapTips| :guilabel:`Show Map Tips`                             \                        :guilabel:`Attributes`         :ref:`maptips`
 |newBookmark| :guilabel:`New Bookmark...`                  :kbd:`Ctrl+B`            :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
 |showBookmarks| :guilabel:`Show Bookmarks`                 :kbd:`Ctrl+Shift+B`      :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
 |draw| :guilabel:`Refresh`                                 :kbd:`F5`                :guilabel:`Map Navigation`     \
@@ -328,22 +328,25 @@ When starting QGIS for the first time not all core plugins are loaded.
 Vector
 ------
 
+This is what the :guilabel:`Vector` menu will look like if all the core plugins
+are enabled.
+
 ==============================================================  =======================  =======================  ===============================
 Menu Option                                                     Shortcut                 Toolbar                  Reference
 ==============================================================  =======================  =======================  ===============================
-:menuselection:`Analysis Tools -->`                             :kbd:`Alt+O` + :kbd:`A`  \                        :ref:`processing.options`
-:menuselection:`Research Tools -->`                             :kbd:`Alt+O` + :kbd:`R`  \                        :ref:`processing.options`
 :menuselection:`Geoprocessing Tools -->`                        :kbd:`Alt+O` + :kbd:`G`  \                        :ref:`processing.options`
 :menuselection:`Geometry Tools -->`                             :kbd:`Alt+O` + :kbd:`E`  \                        :ref:`processing.options`
+:menuselection:`Analysis Tools -->`                             :kbd:`Alt+O` + :kbd:`A`  \                        :ref:`processing.options`
 :menuselection:`Data Management Tools -->`                      :kbd:`Alt+O` + :kbd:`D`  \                        :ref:`processing.options`
+:menuselection:`Research Tools -->`                             :kbd:`Alt+O` + :kbd:`R`  \                        :ref:`processing.options`
 |coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       :ref:`coordcapt`
 |geometryChecker| :guilabel:`Geometry Checker`                  \                        :guilabel:`Vector`       :ref:`geometry_checker`
 |gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       :ref:`plugin_gps`
 |topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       :ref:`topology`
 ==============================================================  =======================  =======================  ===============================
 
-By default, QGIS adds to the :guilabel:`Vector` menu some :ref:`Processing
-<sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
+By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
+by sub-menus to the :guilabel:`Vector` menu. This provides shortcuts
 for many common vector-based GIS tasks picked from different providers.
 If not all aforementioned sub-menus are available, then you would need to enable
 the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
@@ -355,6 +358,9 @@ any Processing algorithms or some external :ref:`plugins <plugins>`.
 Raster
 ------
 
+This is what the :guilabel:`Raster` menu will look like if all the core plugins
+are enabled.
+
 ==========================================================  ====================  ==================================
 Menu Option                                                 Toolbar               Reference
 ==========================================================  ====================  ==================================
@@ -362,14 +368,14 @@ Menu Option                                                 Toolbar             
 :guilabel:`Align Raster...`                                 \                     :ref:`label_raster_align`
 :menuselection:`Analysis -->`                               \                     :ref:`processing.options`
 :menuselection:`Projection -->`                             \                     :ref:`processing.options`
-:menuselection:`Conversion -->`                             \                     :ref:`processing.options`
 :menuselection:`Miscellaneous -->`                          \                     :ref:`processing.options`
 :menuselection:`Extraction -->`                             \                     :ref:`processing.options`
+:menuselection:`Conversion -->`                             \                     :ref:`processing.options`
 |georefRun| :guilabel:`Georeferencer`                       :guilabel:`Raster`    :ref:`georef`
 ==========================================================  ====================  ==================================
 
-By default, QGIS adds to the :guilabel:`Raster` menu some :ref:`Processing
-<sec_processing_intro>` algorithms grouped by sub-menus. This provides a shortcut
+By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
+by sub-menus to the :guilabel:`Raster` menu. This provides a shortcut
 for many common raster-based GIS tasks picked from different providers.
 If not all aforementioned sub-menus are available, then you would need to enable
 the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
@@ -380,6 +386,10 @@ any Processing algorithms or some external :ref:`plugins <plugins>`.
 
 Database
 --------
+
+This is what the :guilabel:`Database` menu will look like if all the core plugins
+are enabled.
+If no database plugins are enabled, there will be no guilabel:`Database` menu.
 
 ===============================================  ============================  ===============================
 Menu Option                                      Toolbar                       Reference
@@ -394,6 +404,10 @@ When starting QGIS for the first time not all core plugins are loaded.
 
 Web
 ---
+
+This is what the :guilabel:`Database` menu will look like if all the core plugins
+are enabled.
+If no web plugins are enabled, there will be no guilabel:`Web` menu.
 
 ===============================================  ===========================  ===============================
 Menu Option                                      Toolbar                      Reference
