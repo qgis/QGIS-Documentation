@@ -94,7 +94,7 @@ to choose from.
 * Click :guilabel:`OK`.
 * Click :guilabel:`Add` and the new layer will appear in your map as
   :guilabel:`OSM-WMS`.
-* In the :guilabel:`Layers list`, click and drag it to the bottom of the list.
+* In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
 
 You will notice that your layers aren't located correctly. This is
 because "on the fly" projection is disabled. Let's enable it again,
@@ -110,7 +110,7 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 
 * Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 * Click :guilabel:`OK`.
-* Now right-click on one of your own layers in the :guilabel:`Layers list` and
+* Now right-click on one of your own layers in the :guilabel:`Layers` panel and
   click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
   area:
 
@@ -152,7 +152,7 @@ layer from the :guilabel:`terrestris` WMS server.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-* Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers list`.
+* Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel.
 * Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
   :kbd:`http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms`
 * Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (use the :guilabel:`Add WMS

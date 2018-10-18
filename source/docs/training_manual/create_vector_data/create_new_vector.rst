@@ -75,7 +75,7 @@ will be enough to add one field called :kbd:`name`.
 * Navigate to the :kbd:`exercise_data` directory.
 * Save your new layer as :kbd:`school_property.shp`.
 
-The new layer should appear in your :guilabel:`Layers list`.
+The new layer should appear in your :guilabel:`Layers` panel.
 
 .. _tm_datasources:
 
@@ -101,7 +101,7 @@ are provided, so you'll need to import them as necessary.
 * Navigate to :kbd:`exercise_data/raster/`.
 * Select the file :kbd:`3420C_2010_327_RGB_LATLNG.tif`.
 * Click :guilabel:`Open`. An image will load into your map.
-* Find the new image in the :guilabel:`Layers list`.
+* Find the new image in the :guilabel:`Layers` panel.
 * Click and drag it to the bottom of the list so that you can still see your
   other layers.
 * Find and zoom to this area:

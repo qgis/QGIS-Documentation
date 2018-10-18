@@ -101,7 +101,7 @@ message box.
 * You can now remove the original four rasters from the :guilabel:`Layers
   list`.
 * If necessary, click and drag the new :guilabel:`aerial_photos` raster catalog
-  layer to the bottom of the :guilabel:`Layers list` so that the other
+  layer to the bottom of the :guilabel:`Layers` panel so that the other
   activated layers become visible.
 
 |hard| Transforming Raster Data

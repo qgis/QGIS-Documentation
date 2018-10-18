@@ -26,7 +26,7 @@ been activated.
 * Go to the menu item :menuselection:`View --> Toolbars`.
 * Ensure that the :guilabel:`Label` item has a check mark next to it. If it
   doesn't, click on the :guilabel:`Label` item, and it will be activated.
-* Click on the :guilabel:`places` layer in the :guilabel:`Layers list`, so that
+* Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel, so that
   it is highlighted.
 * Click on the following toolbar button: |labeling|
 

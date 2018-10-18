@@ -128,7 +128,7 @@ is.
 
 Now we will test the new Action:
 
-* Click on the :guilabel:`school_property` layer in the :guilabel:`Layers list`
+* Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` panel
   so that it is highlighted.
 * Find the :guilabel:`Run feature action` button (on the same toolbar as the
   :guilabel:`Open Attribute Table` button):
@@ -233,7 +233,7 @@ cause your browser to visit Google, which will in turn search for
 
 Now to test the new action.
 
-* With the :guilabel:`landuse` layer active in the :guilabel:`Layers list`, click
+* With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, click
   on the :guilabel:`Run feature action` button.
 * Click on any landuse area you can see on the map. Your browser will now open, and
   will automatically start a Google search for the town that is recorded as
