@@ -32,127 +32,121 @@ should have a good mix of urban and rural areas, containing roads of differing
 significance, area boundaries (such as nature reserves or farms) and surface
 water, such as streams and rivers.
 
-* Open a new QGIS project
-* In the :guilabel:`Vector` menu dropdown, select
-  :menuselection:`OpenStreetMap --> Download Data`. You can then manually enter the
-  co-ordinates of the region you wish to use, or you can use an existing layer
-  to set the co-ordinates.
-* Choose a location to save the resulting .osm file and click :guilabel:`Ok`:
+#. Open a new QGIS project;
+#. Select :menuselection:`Layer --> Data Source Manager` to open the
+   :guilabel:`Data Source Manager` dialog;
+#. In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down menu
+   and double-click the :guilabel:`OpenStreetMap` item.
 
-.. _figure_set_osm_region:
+   .. image:: img/browser_xyztiles.png
+      :align: center
 
-.. image:: img/set_osm_region.png
-   :align: center
+   A map of the world is now visible on the map canvas;
+#. Close the :guilabel:`Data Source Manager` dialog.
+#. Move to the area you'd like to use as study area;
 
-* You can then open the .osm file using the :guilabel:`Add Vector Layer` button.
-  You may need to select :guilabel:`All files` in the browser window.
-  Alternatively, you can drag and drop the file into the QGIS window.
-* In the dialog which opens, select all the layers, *except* the
-  :kbd:`other_relations` and :kbd:`multilinestrings` layer:
+   .. image:: img/swellendam_neighborhood.png
+      :align: center
 
-.. _figure_select_osm_layers:
+Now that we have the area we'll extract the data from, let's enable the extraction
+tools.
 
-.. image:: img/select_osm_layers.png
-   :align: center
+#. Go to :menuselection:`Plugins --> Manage/Install Plugins...`
+#. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box;
+#. Select the QuickOSM plugin, press **[Install plugin]** and then **[Close]**
+   the dialog;
 
-This will load three layers into your map which relate to OSM's naming
-conventions (you may need to |zoomFullExtent| :sup:`Zoom Full` to see the
-vector data).
+   .. image:: img/quickosm_plugin_download.png
+      :align: center
 
-.. _figure_osm_data_loaded:
+#. Execute the new plugin from :menuselection:`Vector --> Quick OSM --> QuickOSM`
+#. In the :guilabel:`Quick query` tab, check the |radioButtonOn| :guilabel:`Current
+   Extent`;
+#. Select ``building`` in the :guilabel:`Key` drop-down menu and leave empty the
+   :guilabel:`Value` field, meaning that you are requesting any building in the
+   extent;
+#. Expand the :guilabel:`Advanced` group below and uncheck on the right all
+   geometry types except :guilabel:`Multipolygons`;
+#. Press **[Run query]**
 
-.. image:: img/osm_data_loaded.png
-   :align: center
+   .. image:: img/building_query_builder.png
+      :align: center
 
-We need to extract the useful data from these layers, rename them
-and create corresponding shape files:
+   A new ``building`` layer is added to the :guilabel:`Layers` panel, showing
+   buildings in the selected extent.
+#. Proceed as above to extract other data:
 
-* First, double-click the :kbd:`multipolygons` layer to open the
-  :guilabel:`Layer properties` dialog.
-* In the :guilabel:`Source` tab, click :guilabel:`Query Builder` to open the
-  :guilabel:`Query builder` window.
+   #. ``Key = landuse`` and ``Multipolygons`` geometry type;
+   #. ``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type;
+   #. ``Key = place`` and ``Points`` geometry type;
+   #. ``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types;
+   #. ``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``
+      geometry types;
 
-This layer contains three fields whose data we will need to extract for use
-throughout the Training Manual:
+The above process adds the layers as temporary files (indicated by the
+|indicatorMemory| icon next to their name).
 
-* :kbd:`building`
-* :kbd:`natural` (specifically, water)
-* :kbd:`landuse`
+   .. image:: img/osm_data_loaded.png
+      :align: center
 
 You can sample the data your region contains in order to see what kind of
-results your region will yield. If you find that "landuse" returns no results,
-then feel free to exclude it.
-
-You'll need to write filter expressions for each field to extract the data we
-need. We'll use the "building" field as an example here:
-
-* Enter the following expression into the text area:
-  :kbd:`building != "NULL"` and click :guilabel:`Test` to see how many results
-  the query will return. If the number of results is small, you may wish to
-  have a look at the layer's :guilabel:`Attribute Table` to see what data OSM
-  has returned for your region:
-
-.. image:: img/building_query_builder.png
-   :align: center
-
-* Click :guilabel:`Ok` and you'll see that the layer elements which are not
-  buildings have been removed from the map.
+results your region will yield.
 
 We now need to save the resulting data as a shapefile for you to use during your
 course:
 
-* Right-click the :guilabel:`multipolygons` layer and select
-  :guilabel:`Save As...`
-* Make sure the file type is :kbd:`ESRI Shapefile` and save the file in your
-  new :kbd:`exercise_data` directory, under a directory called "epsg4326".
-* Make sure :menuselection:`No Symbology` is selected (we'll add symbology as
-  part of the course later on).
-* You can also select :guilabel:`Add saved file to map`.
+#. Click the |indicatorMemory| icon next to the :guilabel:`building` layer,
+   opening the :guilabel:`Save Scratch Layer` dialog;
 
-Once the :guilabel:`buildings` layer has been added to the map, you can repeat
-the process for the :kbd:`natural` and :kbd:`landuse` fields using the following
-expressions:
+   .. note:: If you need to replace some particular properties (CRS, extent,
+    fields...) of the temporary layer, use instead the :menuselection:`Export
+    --> Save Features as...` contextual menu, and ensure the :guilabel:`Add
+    saved file to map` option is checked. A new layer is added in such case.
 
-.. note:: Make sure you clear the previous filter (via the
-   :guilabel:`Layer properties` dialog) from the
-   :guilabel:`multipolygons` layer before proceeding with the next filter
-   expression!
+#. Make sure the format is :guilabel:`ESRI Shapefile`;
+#. Use the **[...]** button to browse to the :file:`exercise_data/shapefile/`
+   folder and save the file as :file:`buildings.shp`;
 
-* :kbd:`natural`: "natural = 'water'"
-* :kbd:`landuse`: "landuse != 'NULL'"
+   .. image:: img/save_osm_building.png
+      :align: center
 
-Each resulting data set should be saved in the "epsg4326" directory in your new
-:kbd:`exercise_data` directory (i.e. "water", "landuse").
+#. Press :guilabel:`OK`;
 
-You should then extract and save the following fields from the :kbd:`lines` and
-:kbd:`points` layers to their corresponding directories:
+   In the :guilabel:`Layers` panel, the temporary :guilabel:`building` layer is
+   swapped in place with the saved :guilabel:`buildings` shapefile layer and
+   the temporary icon next to it removed.
+#. Repeat the process for other layers, renaming them as follows:
 
-* :kbd:`lines`:
-  "highway != 'NULL'" to :kbd:`roads`, and
-  "waterway != 'NULL'" to :kbd:`rivers`
-* :kbd:`points`:
-  "place != 'NULL'" to :kbd:`places`
+   * ``natural_water`` into ``water``;
+   * ``waterway_river`` into ``rivers``;
+   * ``place`` into ``places``;
+   * ``highway`` into ``roads``.
 
-Once you have finished extracting the above data, you can remove the
-:guilabel:`multipolygons`, :guilabel:`lines` and :guilabel:`points` layers.
+   Each resulting data set should be saved in the :file:`exercise_data/shapefile/`
+   directory.
+
+The last step is to create a spatiaLite file from the :file:`landuse` layer to
+use during the course:
+
+#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer;
+#. Select the :guilabel:`SpatiaLite` format;
+#. save the file as :file:`landuse.sqlite` under the :file:`exercise_data/`
+   folder. By default, the :guilabel:`Layer name` is filled as the file name.
+   Do not change it.
+
+   .. image:: img/save_osm_landuse.png
+      :align: center
+
+#. Press :guilabel:`OK`.
 
 You should now have a map which looks something like this (the symbology will
 certainly be very different, but that is fine):
 
-.. image:: img/post_osm_import.png
-   :align: center
+   .. image:: img/post_osm_import.png
+      :align: center
 
-The important thing is that you have 6 layers matching those shown above and
-that all those layers have some data.
-
-The last step is to create a spatiallite file from the :kbd:`landuse` layer for
-use during the course:
-
-* Right-click the :kbd:`landuse` layer and select :menuselection:`Save as...`
-* Select :menuselection:`SpatialLite` as the format and save the file as
-  :kbd:`landuse` under the "epsg4326" directory.
-* Click :menuselection:`Ok`.
-* Delete the :kbd:`landuse.shp` and its related files (if created).
+The important thing is that you have 6 vector layers matching those shown above
+and that all those layers have some data.
 
 
 |hard| |TY| Create SRTM DEM tiff Files
@@ -224,7 +218,10 @@ The tokens you need to replace are as follows:
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
 .. |hard| image:: /static/global/hard.png
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
