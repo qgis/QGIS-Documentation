@@ -33,11 +33,11 @@ from the pop-up menu.
    you can use to speed up the configuration of the layer styles and
    automatically view your changes in the map canvas.
 
-.. tip:: **Styles**
+.. tip:: **Share full or partial properties of the layer styles**
 
-   The :menuselection:`Style` menu at the bottom of the page allows you to import or export
-   these or part of these properties from several destination (file, clipboard, databse).
-   See :ref:`managing-custom-styles`.
+   The :menuselection:`Style` menu at the bottom of the dialog allows you to import or export
+   these or part of these properties from/to several destination (file, clipboard, database).
+   See :ref:`manage-custom-style`.
 
 .. note::
 
