@@ -37,7 +37,7 @@ from the pop-up menu.
 
    The :menuselection:`Style` menu at the bottom of the dialog allows you to import or export
    these or part of these properties from/to several destination (file, clipboard, database).
-   See :ref:`manage-custom-style`.
+   See :ref:`manage_custom_style`.
 
 .. note::
 
