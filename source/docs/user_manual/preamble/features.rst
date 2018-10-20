@@ -27,7 +27,7 @@ format. Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
    Spatial, Oracle Spatial, vector formats supported by the installed OGR
-   library, including ESRI shapefiles, MapInfo, SDTS, GML and many more.
+   library, including ESRI Shapefile, MapInfo, SDTS, GML and many more.
    See section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
@@ -53,7 +53,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  Annotation tools
 *  Identify/select features
 *  Edit/view/search attributes
-*  Data-defined feature labelling
+*  Data-defined feature labeling
 *  Data-defined vector and raster symbology tools
 *  Atlas map composition with graticule layers
 *  North arrow scale bar and copyright label for maps
@@ -66,14 +66,13 @@ You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
 
 *  Digitizing tools for OGR-supported formats and GRASS vector layers
-*  Ability to create and edit shapefiles and GRASS vector layers
+*  Ability to create and edit multiple file formats and GRASS vector layers
 *  Georeferencer plugin to geocode images
 *  GPS tools to import and export GPX format, and convert other GPS
    formats to GPX or down/upload directly to a GPS unit (On Linux,
    usb: has been added to list of GPS devices.)
 *  Support for visualizing and editing OpenStreetMap data
-*  Ability to create spatial database tables from shapefiles with
-   DB Manager plugin
+*  Ability to create spatial database tables from files with DB Manager plugin
 *  Improved handling of spatial database tables
 *  Tools for managing vector attribute tables
 *  Option to save screenshots as georeferenced images

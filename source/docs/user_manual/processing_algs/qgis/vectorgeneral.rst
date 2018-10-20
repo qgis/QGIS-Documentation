@@ -121,7 +121,7 @@ a layer is missing the ``proj`` file and you know the correct projection.
 Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the current
 layer and will not output a new layer.
   
-.. note:: For shapefile datasets, the ``.prj`` and ``.qpj`` files will
+.. note:: For Shapefile datasets, the ``.prj`` and ``.qpj`` files will
    be overwritten - or created if missing - to match the provided CRS.
     
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`

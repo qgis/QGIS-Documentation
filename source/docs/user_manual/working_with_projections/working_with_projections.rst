@@ -44,9 +44,9 @@ coordinate reference system or you will need to define a global, layer or
 project-wide CRS. For PostGIS layers, QGIS uses the spatial reference identifier
 that was specified when the layer was created. For data supported by OGR, QGIS
 relies on the presence of a recognized means of specifying the CRS. In the case
-of shapefiles, this means a file containing the well-known text (:index:`WKT`)
+of Shapefile, this means a file containing the well-known text (:index:`WKT`)
 specification of the CRS. This projection file has the same base name as the
-shapefile and a :file:`.prj` extension. For example, a shapefile named
+:file:`.shp` file and a :file:`.prj` extension. For example, a shapefile named
 :file:`alaska.shp` would have a corresponding projection file named
 :file:`alaska.prj`.
 

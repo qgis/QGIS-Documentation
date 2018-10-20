@@ -47,7 +47,7 @@ Vector Data
 
 Many of the features available in QGIS work the same, regardless the vector
 data source. However, because of the differences in formats specifications
-(ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS,
+(ESRI Shapefile, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS,
 SpatiaLite, DB2, Oracle Spatial and MSSQL Spatial databases, and many more),
 QGIS may handle differently some of their properties.
 This section describes how to work with these specificities.
@@ -66,10 +66,10 @@ This section describes how to work with these specificities.
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
 
-ESRI Shapefiles
----------------
+ESRI Shapefile
+--------------
 
-The ESRI shapefile is still one of the most used vector file format in QGIS.
+The ESRI Shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
 not (like GeoPackage, SpatiaLite). Support is provided by the
 `OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
@@ -81,7 +81,7 @@ required:
 #. :file:`.dbf` file containing the attributes in dBase format
 #. :file:`.shx` index file
 
-Shapefiles also can include a file with a :file:`.prj` suffix, which contains
+Shapefile also can include a file with a :file:`.prj` suffix, which contains
 the projection information. While it is very useful to have a projection file,
 it is not mandatory. A shapefile dataset can contain additional files. For
 further details, see the ESRI technical specification at
@@ -360,7 +360,7 @@ reference systems and projections.
 .. tip:: **Exporting datasets from PostGIS**
 
    Like the import tool **shp2pgsql**, there is also a tool to export
-   PostGIS datasets as shapefiles: **pgsql2shp**. This is shipped within
+   PostGIS datasets as Shapefile: **pgsql2shp**. This is shipped within
    your PostGIS distribution.
 
 .. index:: ogr2ogr

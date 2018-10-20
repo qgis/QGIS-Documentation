@@ -193,7 +193,7 @@ This returns::
     vectors, and QGIS project files (.qgs):
      1. Rasters - supported formats include GeoTiff, DEM
         and others supported by GDAL
-     2. Vectors - supported formats include ESRI Shapefiles
+     2. Vectors - supported formats include ESRI Shapefile
         and others supported by OGR and PostgreSQL layers using
         the PostGIS extension
 

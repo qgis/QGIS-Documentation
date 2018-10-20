@@ -446,8 +446,8 @@ possible rectangle which will still enclose all the points.
 |moderate| |FA| Minimum Distance Analysis
 -------------------------------------------------------------------------------
 
-Often, the output of an algorithm will not be a shapefile, but rather a table
-summarizing the statistical properties of a dataset. One of these is the
+Often, the output of an algorithm will not be a spatial layer, but rather a
+table summarizing the statistical properties of a dataset. One of these is the
 :guilabel:`Minimum Distance Analysis` tool.
 
 * Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum

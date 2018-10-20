@@ -832,7 +832,7 @@ The next example shows how a GRASS module can aggregate raster data and add colu
 of statistics for each polygon in a vector map.
 
 * Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import the
-  trees shapefile from the ``shapefiles`` directory into GRASS.
+  :file:`shapefiles/trees.shp` file into GRASS.
 * Now an intermediate step is required: centroids must be added to the imported
   trees map to make it a complete GRASS area vector (including both boundaries
   and centroids).

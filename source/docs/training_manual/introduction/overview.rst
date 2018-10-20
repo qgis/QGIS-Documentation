@@ -58,7 +58,7 @@ will be using some of them before long, so take a look around!
 ...............................................................................
 
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
-database. You can have access to common vector files (e.g. ESRI shapefile
+database. You can have access to common vector files (e.g. ESRI Shapefile
 or MapInfo files), databases (e.g. PostGIS, Oracle, SpatiaLite, GeoPackage or
 MSSQL Spatial) and WMS/WFS connections. You can also view your GRASS data.
 
@@ -166,7 +166,7 @@ Try to find each of these tools on your screen. What is their purpose?
 |basic| |TY| 3
 -------------------------------------------------------------------------------
 
-Try to load some layer, both ESRI shapefile and Geopackage, from the Browser
+Try to load some layer, both ESRI Shapefile and Geopackage, from the Browser
 panel.
 
 :ref:`Check your results <interface-overview-3>`
