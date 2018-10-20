@@ -224,6 +224,8 @@ case the buffer will result in a smaller polygon.
 
    In yellow the buffer of point, line and polygon layer
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
 Parameters
