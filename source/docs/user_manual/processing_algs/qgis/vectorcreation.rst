@@ -655,8 +655,8 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: :kbd:`NEW in 3.2`
-.. |34| replace:: :kbd:`NEW in 3.4`
+.. |32| replace:: ``NEW in 3.2``
+.. |34| replace:: ``NEW in 3.4``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
