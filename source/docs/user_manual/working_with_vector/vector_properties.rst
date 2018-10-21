@@ -150,12 +150,8 @@ original state (ie, fully load all the features).
 When a filter is applied,
 QGIS treats the resulting subset acts as if it were the entire layer. For
 example if you applied the filter above for 'Borough' (``"TYPE_2" = 'Borough'``),
-you can not display, query, save or edit Anchorage, because that is a
+you can not display, query, save or edit ``Anchorage``, because that is a
 'Municipality' and therefore not part of the subset.
-
-Because of the limitations on some :ref:`data providers <opening_data>` (eg, OGR),
-some data formats will prevent you from editing the layer when in a filtered
-state.
 
 .. tip:: **Filtered layers are indicated in the Layers Panel**
 
