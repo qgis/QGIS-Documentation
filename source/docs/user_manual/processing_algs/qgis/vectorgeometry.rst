@@ -3006,8 +3006,8 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: :kbd:`NEW in 3.2`
-.. |34| replace:: :kbd:`NEW in 3.4`
+.. |32| replace:: ``NEW in 3.2``
+.. |34| replace:: ``NEW in 3.4``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

@@ -691,8 +691,8 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: :kbd:`NEW in 3.2`
-.. |34| replace:: :kbd:`NEW in 3.4`
+.. |32| replace:: ``NEW in 3.2``
+.. |34| replace:: ``NEW in 3.4``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
