@@ -19,13 +19,13 @@ Python support was first introduced in QGIS 0.9.
 Today, there are several ways to use Python in QGIS Desktop, they
 are covered in the following sections:
 
-* automatically run Python code when QGIS starts
-* issue commands in Python console within QGIS
-* create and use plugins in Python
-* create custom applications based on the QGIS API
+* Issue commands in the Python console within QGIS
+* Create and use plugins
+* Automatically run Python code when QGIS starts
+* Create custom applications based on the QGIS API
 
 Python bindings are also available for QGIS Server, including
-Python plugins (see :ref:server_plugins)
+Python plugins (see :ref:`Server Python Plugins <server_plugins>`)
 and Python bindings that can be used to embed QGIS Server into a
 Python application.
 
@@ -33,71 +33,25 @@ Python application.
 
 There is a `complete QGIS API <http://qgis.org/api/>`_ reference that
 documents the classes from the QGIS libraries. The Pythonic QGIS API
-(pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the API
-in C++.
+(pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the C++
+API.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from
 `plugin repository <https://plugins.qgis.org/>`_ and examine their
 code.
-Also, the ``python/plugins/`` folder in your QGIS installation
-contains some plugins that you can learn from.
-
-.. index::
-  pair: Python; startup
-
-Run Python code when QGIS starts
-================================
-
-There are two distinct methods to run Python code every time QGIS
-starts.
-
-.. index::
-  pair: Environment; PYQGIS_STARTUP
-
-PYQGIS_STARTUP environment variable
------------------------------------
-
-You can run Python code just before QGIS initialization completes by
-setting the ``PYQGIS_STARTUP`` environment variable to the path of an
-existing Python file.
-
-This method is something you will probably rarely need, but worth
-mentioning here because it is one of the several ways to run Python
-code within QGIS and because this code will run before QGIS
-initialization is complete. This method is very useful for cleaning
-sys.path, which may have undesireable paths, or for isolating/loading
-the initial environ without requiring a virt env, e.g. homebrew or
-MacPorts installs on macOS.
-
-
-.. index::
-  single: Python; startup.py
-
-The :file:`startup.py` file
-----------------------------
-
-Every time QGIS starts, the user's Python home directory
-
-* Linux: :file:`.local/share/QGIS/QGIS3/profiles/default/python`
-* Windows: :file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`
-* macOS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
-
-is searched for a file named :file:`startup.py`, if that file exists, it
-is executed by the embedded Python interpreter.
-
 
 .. index::
   pair: Python; Console
 
 .. _pythonconsole:
 
-Python Console
-==============
+Scripting in the Python Console
+===============================
 
-For scripting, it is possible to take advantage of integrated Python
-console. It can be opened from menu: :menuselection:`Plugins -->
-Python Console`. The console opens as a non-modal utility window:
+QGIS provides an integrated Python console for scripting.
+It can be opened from  menu: :menuselection:`Plugins -->
+Python Console`:
 
 .. figure:: img/console.png
    :align: center
@@ -108,12 +62,12 @@ Python Console`. The console opens as a non-modal utility window:
 The screenshot above illustrates how to get the layer currently
 selected in the layer list, show its ID and optionally, if it is a
 vector layer, show the feature count.
-For interaction with QGIS environment, there is a :data:`iface`
+For interaction with the QGIS environment, there is a :data:`iface`
 variable, which is an instance of :class:`QgsInterface`. This
 interface allows access to the map canvas, menus, toolbars and other
 parts of the QGIS application.
 
-For convenience of the user, the following statements are executed
+For user convenience, the following statements are executed
 when the console is started (in the future it will be possible to set
 further initial commands)
 
@@ -122,7 +76,7 @@ further initial commands)
   from qgis.core import *
   import qgis.utils
 
-For those which use the console often, it may be useful to set a
+For those who use the console often, it may be useful to set a
 shortcut for triggering the console (within menu
 :menuselection:`Settings --> Configure shortcuts...`)
 
@@ -131,11 +85,10 @@ shortcut for triggering the console (within menu
 Python Plugins
 ==============
 
-QGIS allows enhancement of its functionality using plugins. This was
-originally possible only using the C++ language. With the addition of
-Python support to QGIS, it is now also possible to use plugins written
-in Python. The main advantage over C++ plugins is its simplicity of
-distribution (no compiling for each platform needed) and easier
+The functionality of QGIS can be extended using plugins.
+It is now also possible to use plugins written
+in Python. The main advantage over C++ plugins is simplicity of
+distribution (no compiling for each platform) and easier
 development.
 
 Many plugins covering various functionality have been written since
@@ -149,10 +102,55 @@ for detailed instructions.
 
 .. note::
 
-    Python plugins are also available in QGIS server
+    Python plugins are also available for QGIS server
     (:ref:`label_qgisserver`), see :ref:`server_plugins` for further
     details.
 
+
+.. index::
+  pair: Python; startup
+
+Running Python code when QGIS starts
+====================================
+
+There are two distinct methods to run Python code every time QGIS
+starts.
+
+1. Creating a startup.py script
+
+2. Setting the ``PYQGIS_STARTUP`` environment variable to an
+   existing Python file
+
+.. index::
+  single: Python; startup.py
+
+The :file:`startup.py` file
+----------------------------
+
+Every time QGIS starts, the user's Python home directory
+
+* Linux: :file:`.local/share/QGIS/QGIS3/profiles/default/python`
+* Windows: :file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`
+* macOS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
+
+is searched for a file named :file:`startup.py`. If that file exists, it
+is executed by the embedded Python interpreter.
+
+.. index::
+  pair: Environment; PYQGIS_STARTUP
+
+PYQGIS_STARTUP environment variable
+-----------------------------------
+
+You can run Python code just before QGIS initialization completes by
+setting the ``PYQGIS_STARTUP`` environment variable to the path of an
+existing Python file.
+
+This code will run before QGIS initialization is complete.
+This method is very useful for cleaning
+sys.path, which may have undesireable paths, or for isolating/loading
+the initial environ without requiring a virtual environment, e.g.
+homebrew or MacPorts installs on Mac.
 
 .. index::
   pair: Python; Custom applications
@@ -163,16 +161,15 @@ for detailed instructions.
 Python Applications
 ===================
 
-Often when processing some GIS data, it is handy to create some
-scripts for automating the process instead of doing the same task
-again and again. With PyQGIS, this is perfectly possible --- import
+It is often handy to create  scripts for automating processes.
+With PyQGIS, this is perfectly possible --- import
 the :mod:`qgis.core` module, initialize it and you are ready for the
 processing.
 
-Or you may want to create an interactive application that uses some
-GIS functionality --- measure some data, export a map in PDF or any
+Or you may want to create an interactive application that uses
+GIS functionality --- perform measurements, export a map as PDF, or any
 other functionality. The :mod:`qgis.gui` module brings various GUI
-components, most notably the map canvas widget that can be very easily
+components, most notably the map canvas widget that can be
 incorporated into the application with support for zooming, panning
 and/or any further custom map tools.
 
