@@ -3266,6 +3266,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. |25dSymbol| image:: /static/common/renderer25dSymbol.png
    :width: 1.5em
+.. |3d| image:: /static/common/3d.png
+   :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
@@ -3385,6 +3387,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |render| image:: /static/common/render.png
+   :width: 1.5em
+.. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |rotateLabel| image:: /static/common/mActionRotateLabel.png
    :width: 1.5em
