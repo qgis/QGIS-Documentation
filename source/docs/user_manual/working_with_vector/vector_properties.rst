@@ -18,20 +18,36 @@ settings to manage appearance of layer features in the map (symbology,
 labeling, diagrams), interaction with the mouse (actions, map tips, form
 design). It also provides information about the layer.
 
-To access the :guilabel:`Layer Properties` dialog, double-click on a layer in
-the legend or right-click on the layer and select :menuselection:`Properties`
-from the pop-up menu.
+To access the :guilabel:`Layer Properties` dialog:
 
-.. note:: Depending on the :ref:`external plugins <plugins>`
-   you have installed, new tabs may be added to the layer properties dialog.
-   Those are not presented below.
+* From the :guilabel:`Layers` panel, double-click the layer or right-click
+  and select :guilabel:`Properties...` from the pop-up menu;
+* Go to :menuselection:`Layer --> Properties...` menu when the layer is selected.
 
-.. tip:: **Live update rendering**
+The vector :guilabel:`Layer Properties` dialog provides following sections:
 
-   The :ref:`layer_styling_panel` provides you with some of the common features
-   of the Layer properties dialog and is a good modeless widget that
-   you can use to speed up the configuration of the layer styles and
-   automatically view your changes in the map canvas.
+* |metadata| :ref:`Information <vectorinformationmenu>`
+* |system| :ref:`Source <vectorsourcemenu>`
+* |symbology| :ref:`Symbology <vector_style_menu>` (also available in the
+  :ref:`Layer styling panel <layer_styling_panel>`)
+* |labeling| :ref:`Labels <vector_labels_tab>` (also available in the
+  :guilabel:`Layer styling` panel)
+* |3d| :guilabel:`3D View` (also available in the :guilabel:`Layer styling` panel)
+* |sourceFields| :ref:`Source Fields <vector_fields_menu>`
+* |formView| :ref:`Attributes Form <vector_attributes_menu>`
+* |join| :ref:`Joins <sec_joins>`
+* |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
+* |action| :ref:`Actions <actions_menu>`
+* |mapTips| :ref:`Display <maptips>`
+* |rendering| :ref:`Rendering <vectorrenderingmenu>`
+* |expression| :ref:`Variables <vectorvariablesmenu>`
+* |editMetadata| :ref:`Metadata <vectormetadatamenu>`
+* |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
+* |legend| :ref:`Legend <vectorlegendmenu>`
+* |overlay| :ref:`QGIS Server <vectorservermenu>`
+* |digitizing| :guilabel:`Digitizing`
+* and optionally, new tabs added by :ref:`external plugins <plugins>` you have
+  installed. Those are not presented below.
 
 .. note::
 
@@ -3262,6 +3278,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
+.. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
+   :width: 1.5em
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
@@ -3286,6 +3304,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 2em
 .. |diagramNone| image:: /static/common/diagramNone.png
    :width: 1.5em
+.. |digitizing| image:: /static/common/digitizing.png
+   :width: 2em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png

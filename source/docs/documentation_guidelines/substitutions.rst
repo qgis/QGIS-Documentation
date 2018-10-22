@@ -345,6 +345,7 @@ Icon                                Substitution                            Icon
 |legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
 |3d|                                ``|3d|``                                |system|                       ``|system|``
 |editMetadata|                      ``|editMetadata|``                      |overlay|                      ``|overlay|``
+|digitizing|                        ``|digitizing|``                        |auxiliaryStorage|             ``|auxiliaryStorage|``
 |history|                           ``|history|``                           |stylePreset|                  ``|stylePreset|``
 |search|                            ``|search|``                            |pyramids|                     ``|pyramids|``
 |transparency|                      ``|transparency|``                      |rasterHistogram|              ``|rasterHistogram|``
@@ -521,6 +522,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
+.. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
+   :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
 .. |buffer| image:: /static/common/buffer.png
@@ -622,6 +625,8 @@ Icon                            Substitution                        Icon        
 .. |diagramNone| image:: /static/common/diagramNone.png
    :width: 1.5em
 .. |difference| image:: /static/common/difference.png
+   :width: 1.5em
+.. |digitizing| image:: /static/common/digitizing.png
    :width: 1.5em
 .. |dissolve| image:: /static/common/dissolve.png
    :width: 1.5em
