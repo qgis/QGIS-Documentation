@@ -247,6 +247,13 @@ iterator returns all features, but returns partial data for each of them.
     request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a subset
     of attributes (possibly empty) like shown in the example above.
 
+.. note::
+
+ The options may be chained:
+
+ ``r = QgsFeatureRequest()``
+ ``r.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])``
+
 .. warning:: |outofdate|
 
 .. index:: Vector layers; Editing
