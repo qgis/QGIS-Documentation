@@ -369,7 +369,7 @@ smoothing the layer.
 
   import processing
 
-  class algTaskTest(QgsProcessingAlgorithm):
+  class algTest(QgsProcessingAlgorithm):
       INPUT_BUFFERDIST = 'BUFFERDIST'
       OUTPUT_BUFFER = 'OUTPUT_BUFFER'
       INPUT_VECTOR = 'INPUT_VECTOR'
@@ -378,10 +378,10 @@ smoothing the layer.
           super().__init__()
 
       def name(self):
-          return "algTaskTest"
+          return "algTest"
 
       def displayName(self):
-          return "algTaskTest script"
+          return "algTest script"
 
       def createInstance(self):
           return type(self)()
