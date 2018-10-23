@@ -25,19 +25,18 @@ are covered in the following sections:
 * Create custom applications based on the QGIS API
 
 Python bindings are also available for QGIS Server, including
-Python plugins (see :ref:`Server Python Plugins <server_plugins>`)
+Python plugins (see :ref:`server_plugins`)
 and Python bindings that can be used to embed QGIS Server into a
 Python application.
 
 .. index:: API
 
 There is a `complete QGIS API <http://qgis.org/api/>`_ reference that
-documents the classes from the QGIS libraries. The Pythonic QGIS API
-(pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the C++
-API.
+documents the classes from the QGIS libraries. `The Pythonic QGIS API
+(pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the C++ API.
 
 A good resource for learning how to perform common tasks is to
-download existing plugins from
+download existing plugins from the
 `plugin repository <https://plugins.qgis.org/>`_ and examine their
 code.
 
@@ -50,8 +49,8 @@ Scripting in the Python Console
 ===============================
 
 QGIS provides an integrated Python console for scripting.
-It can be opened from  menu: :menuselection:`Plugins -->
-Python Console`:
+It can be opened from the menu (:menuselection:`Plugins -->
+Python Console`):
 
 .. figure:: img/console.png
    :align: center
@@ -76,8 +75,8 @@ further initial commands)
   from qgis.core import *
   import qgis.utils
 
-For those who use the console often, it may be useful to set a
-shortcut for triggering the console (within menu
+For those which use the console often, it may be useful to set a
+shortcut for triggering the console (within
 :menuselection:`Settings --> Configure shortcuts...`)
 
 .. index:: Python; Plugins
@@ -178,7 +177,7 @@ locate the QGIS resources such as projection information, providers
 for reading vector and raster layers, etc. QGIS Resources are
 initialized by adding a few lines to the beginning of your application
 or script. The code to initialize QGIS for custom applications and
-standalone scripts is similar, but examples of each are provided
+standalone scripts is similar. Examples of each are provided
 below.
 
 .. note::
@@ -272,7 +271,7 @@ use a GUI.
   qgs.exitQgis()
 
 
-Now you can work with QGIS API --- load layers and do some processing or fire
+Now you can work with the QGIS API --- load layers and do some processing or fire
 up a GUI with a map canvas. The possibilities are endless :-)
 
 

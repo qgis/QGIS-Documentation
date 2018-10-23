@@ -23,12 +23,8 @@ PyQGIS Developer Cookbook
    expressions
    settings
    communicating
-   plugins
    authentication
-   ide_debugging
-   pluginlayer
-   releasing
-   snippets
+   plugins/index
    processing
    network_analysis
    server

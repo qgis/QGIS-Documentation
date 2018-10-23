@@ -208,5 +208,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |34| replace:: :kbd:`NEW in 3.4`
+.. |34| replace:: ``NEW in 3.4``
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

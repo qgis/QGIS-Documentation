@@ -335,5 +335,5 @@ operations that GRASS offers.
 .. |grassMapsetOpen| image:: /static/common/grass_mapset_open.png
    :width: 1.5em
 .. |hard| image:: /static/global/hard.png
-.. |srtmFileName| replace:: :kbd:`srtm_41_19_4326.tif`
+.. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
