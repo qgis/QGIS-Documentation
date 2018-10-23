@@ -24,6 +24,7 @@ PyQGIS Developer Cookbook
    settings
    communicating
    authentication
+   tasks
    plugins/index
    processing
    network_analysis
