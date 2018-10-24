@@ -20,11 +20,11 @@ design). It also provides information about the layer.
 
 To access the :guilabel:`Layer Properties` dialog:
 
-* From the :guilabel:`Layers` panel, double-click the layer or right-click
+* In the :guilabel:`Layers` panel, double-click the layer or right-click
   and select :guilabel:`Properties...` from the pop-up menu;
 * Go to :menuselection:`Layer --> Properties...` menu when the layer is selected.
 
-The vector :guilabel:`Layer Properties` dialog provides following sections:
+The vector :guilabel:`Layer Properties` dialog provides the following sections:
 
 * |metadata| :ref:`Information <vectorinformationmenu>`
 * |system| :ref:`Source <vectorsourcemenu>`
@@ -32,6 +32,7 @@ The vector :guilabel:`Layer Properties` dialog provides following sections:
   :ref:`Layer styling panel <layer_styling_panel>`)
 * |labeling| :ref:`Labels <vector_labels_tab>` (also available in the
   :guilabel:`Layer styling` panel)
+* |diagram| :ref:`Diagrams <sec_diagram>`
 * |3d| :guilabel:`3D View` (also available in the :guilabel:`Layer styling` panel)
 * |sourceFields| :ref:`Source Fields <vector_fields_menu>`
 * |formView| :ref:`Attributes Form <vector_attributes_menu>`
