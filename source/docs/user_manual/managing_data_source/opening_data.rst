@@ -101,7 +101,7 @@ add your data to projects. It's available as:
 * a :guilabel:`Data Source Manager` tab, enabled pressing the
   |dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);
 * as a QGIS panel you can open from the menu :menuselection:`View --> Panels`
-  (or |kde| :menuselection:`Settings --> Panels`) or by presssing :kbd:`Ctrl+2`.
+  (or |kde| :menuselection:`Settings --> Panels`) or by pressing :kbd:`Ctrl+2`.
 
 In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
