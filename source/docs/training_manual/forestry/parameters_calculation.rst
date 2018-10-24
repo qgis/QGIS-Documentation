@@ -42,7 +42,7 @@ in the text file :file:`legend_2012_inventorydata.txt` located in the
 
 The :file:`systematic_inventory_results` layer you just added is actually just
 a virtual representation of the text information in the :file:`.csv` file.
-Before you continue, convert the inventory results to a real Shapefile:
+Before you continue, convert the inventory results to a real spatial dataset:
 
 #. Right click on the :file:`systematic_inventory_results` layer.
 #. Browse to :file:`exercise_data/forestry/results/` folder.
@@ -63,7 +63,7 @@ You can calculate the average of a field in a vector layer using the
 :guilabel:`Basic statistics` tool:
 
 #. Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for Fields`.
-#. Select the ``sample_plots_results`` as the :guilabel:`Input Vector Layer`.
+#. Select ``sample_plots_results`` as the :guilabel:`Input Vector Layer`.
 #. Select ``Vol`` as :guilabel:`Target field`.
 #. Click :guilabel:`OK`.
 
@@ -129,7 +129,7 @@ volumes and stem numbers for each of them:
 #. In the :guilabel:`Attribute table` enable editing.
 #. Open the :guilabel:`Field calculator`.
 #. Create a new field called ``area``.
-#. Leave the :guilabel:`Output field type` to ``Decimal number (real)``.
+#. Set the :guilabel:`Output field type` to ``Decimal number (real)``.
 #. Set the :guilabel:`Precision` to ``2``.
 #. In the :guilabel:`Expression` box, write ``$area / 10000``. This will
    calculate the area of the forest stands in ha.
