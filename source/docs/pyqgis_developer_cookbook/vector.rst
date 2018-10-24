@@ -213,7 +213,7 @@ Here's an example:
 If you need an attribute-based filter instead (or in addition) of a spatial
 one like shown in the examples above, you can build an :obj:`QgsExpression`
 object and pass it to the :obj:`QgsFeatureRequest` constructor.
-Here's an example
+Here's an example:
 
 .. code-block:: python
 
@@ -230,22 +230,20 @@ iterator returns all features, but returns partial data for each of them.
 
 .. code-block:: python
 
-  # Only return selected fields
+  # Only return selected fields to increase the "speed" of the request
   request.setSubsetOfAttributes([0,2])
+
   # More user friendly version
   request.setSubsetOfAttributes(['name','id'],layer.fields())
-  # Don't return geometry objects
+
+  # Don't return geometry objects to increase the "speed" of the request
   request.setFlags(QgsFeatureRequest.NoGeometry)
-  # fetch only the feature with id 45
+
+  # Fetch only the feature with id 45
   request.setFilterFid(45)
-
-
-.. tip:: **Speed features request**
-
-    If you only need a subset of the attributes or you don't need the geometry
-    information, you can significantly increase the **speed** of the features
-    request by using ``QgsFeatureRequest.NoGeometry`` flag or specifying a subset
-    of attributes (possibly empty) like shown in the example above.
+  
+  # The options may be chained
+  request.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])
 
 .. warning:: |outofdate|
 
