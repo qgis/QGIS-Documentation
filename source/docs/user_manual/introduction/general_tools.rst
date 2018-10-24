@@ -1531,13 +1531,13 @@ applied to each newly added layer according to its geometry type.
 
 But, most of the time, you'd prefer to have a custom and more complex style
 that can be applied automatically or manually (with less efforts) to the layers.
-You can achieve this goal using the :menuselection:`Style` combobox at the bottom
-of the Layer Properties dialog. This combobox provides you with functions to
+You can achieve this goal using the :menuselection:`Style` menu at the bottom
+of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the features (including symbology, labeling, action, diagram...
-settings) for vector layer, or the pixels (band or color rendering, transparency,
+or interact with the layer (including symbology, labeling, fields and form definition, 
+actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
 
