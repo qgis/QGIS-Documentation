@@ -268,7 +268,7 @@ and editing the string.
 Changing authentication config ID
 ---------------------------------
 
-Occasionally, you will need to change the authenticationn configuration ID that
+Occasionally, you will need to change the authentication configuration ID that
 is associated with accessing a resource. There are instances where this is
 useful:
 

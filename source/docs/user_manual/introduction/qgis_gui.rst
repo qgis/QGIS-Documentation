@@ -84,7 +84,7 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
 * :guilabel:`Open...` project file from file browser or PostgreSQL database;
 * :guilabel:`Close` a project or revert it to its last saved state;
 * Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
-  or within a PotgreSQL database;
+  or within a PostgreSQL database;
 * Export the project rendering to different formats from the map canvas or
   using a :ref:`print layout <label_printlayout>`;
 * Set the project properties and the snapping options when editing layers.
