@@ -42,8 +42,8 @@ water, such as streams and rivers.
       :align: center
 
    A map of the world is now visible on the map canvas;
-#. Close the :guilabel:`Data Source Manager` dialog.
-#. Move to the area you'd like to use as study area;
+#. Close the :guilabel:`Data Source Manager` dialog;
+#. Move to the area you'd like to use as study area.
 
    .. image:: img/swellendam_neighborhood.png
       :align: center
@@ -59,15 +59,15 @@ tools.
    .. image:: img/quickosm_plugin_download.png
       :align: center
 
-#. Execute the new plugin from :menuselection:`Vector --> Quick OSM --> QuickOSM`
-#. In the :guilabel:`Quick query` tab, check the |radioButtonOn| :guilabel:`Current
-   Extent`;
-#. Select ``building`` in the :guilabel:`Key` drop-down menu and leave empty the
-   :guilabel:`Value` field, meaning that you are requesting any building in the
-   extent;
+#. Execute the new plugin from :menuselection:`Vector --> QuickOSM --> QuickOSM`
+#. In the :guilabel:`Quick query` tab, select ``building`` in the :guilabel:`Key`
+   drop-down menu;
+#. Leave empty the :guilabel:`Value` field, meaning that you are querying any
+   building;
+#. Select :guilabel:`Canvas Extent` in the next drop-down menu;
 #. Expand the :guilabel:`Advanced` group below and uncheck on the right all
    geometry types except :guilabel:`Multipolygons`;
-#. Press **[Run query]**
+#. Press **[Run query]**;
 
    .. image:: img/building_query_builder.png
       :align: center
@@ -124,6 +124,11 @@ course:
 
    Each resulting data set should be saved in the :file:`exercise_data/shapefile/`
    directory.
+   
+   .. note:: For convenience, you'll also need to rename each layer:
+    double-click the layer to open its :menuselection:`Layer Properties -->
+    Source` tab and update the :guilabel:`Layer name` property accordingly.
+    
 
 The last step is to create a spatiaLite file from the :file:`landuse` layer to
 use during the course:
