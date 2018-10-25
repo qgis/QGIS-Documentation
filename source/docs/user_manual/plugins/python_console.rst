@@ -115,7 +115,7 @@ share the code via codepad.org and much more). Main features are:
 * :kbd:`Ctrl+Space` to view the auto-completion list.
 * Sharing code snippets via codepad.org.
 * :kbd:`Ctrl+4` Syntax check.
-* Search bar (open it with the default Desktop Environment shorcut, usually
+* Search bar (open it with the default Desktop Environment shortcut, usually
   :kbd:`Ctrl+F`):
 
   * Use the default Desktop Environment shortcut to find next/previous

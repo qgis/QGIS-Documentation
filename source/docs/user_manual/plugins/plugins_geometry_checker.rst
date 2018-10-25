@@ -12,7 +12,7 @@ Geometry Checker Plugin
 
 Geometry Checker is a powerful core plugin to check and fix the geometry
 validity of a layer. The :guilabel:`Geometry Checker` dialog show
-differents grouped settings in the first tab (:guilabel:`Settings`):
+different grouped settings in the first tab (:guilabel:`Settings`):
 
 * :guilabel:`Input vector layer`: to select the layer to check. A |checkbox|
   :guilabel:`Only selected features` checkbox can filter the geometry to the
@@ -32,7 +32,7 @@ differents grouped settings in the first tab (:guilabel:`Settings`):
   features, overlaps smaller than a number, for gaps smaller than a number.
 * :guilabel:`Tolerance`: you can define here the tolerance for the check.
 * :guilabel:`Output vector layer` gives the choice to the user how get the
-  result between modifiy the current layer and create a new layer.
+  result between modify the current layer and create a new layer.
 
 After you are happy with the configuration, you can click on the **[Run]** button.
 
@@ -58,7 +58,7 @@ The *Geometry Checker Plugin* can find the following errors:
 * Holes: hole in a polygon,
 * Segment length: a segment length lower than a threshold,
 * Minimum angle: two segments with an angle lower than a threshold,
-* Minimum area: polygon area lower than a treshold,
+* Minimum area: polygon area lower than a threshold,
 * Silver polygon: this error come from very small polygon (with small area) with
   a large perimeter,
 * Duplicates features,
