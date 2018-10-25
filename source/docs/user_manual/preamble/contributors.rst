@@ -32,7 +32,7 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Tara Athan         | Radim Blazek        | K\. Koy              | Godofredo Contreras   | Martin Dobias        |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N\. Horning           | Magnus Homann        |
+| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N. Horning            | Magnus Homann        |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Werner Macho       | Denis Rouzaud       | Tyler Mitchell       | Claudia A. Engel      | Lars Luthman         |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
