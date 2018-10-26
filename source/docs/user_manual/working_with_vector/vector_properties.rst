@@ -3113,7 +3113,7 @@ refresh individual layers at a matching interval. Canvas updates are
 deferred in order to avoid refreshing multiple times if more than one layer
 has an auto update interval set.
 
-Depending on the data provider (e.g. PostGreSQL), notifications can be sent to
+Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
 QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
 :guilabel:`Refresh layer on notification` option to trigger an update.
 You can also limit the layer refresh to a specific message set in the |checkbox|
