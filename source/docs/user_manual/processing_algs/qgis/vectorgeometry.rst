@@ -444,8 +444,8 @@ See also
 
 .. _qgisconcavehull:
 
-Concave hull
-------------
+Concave hull (alpha shapes)
+---------------------------
 Computes the concave hull of the features in an input point layer.
 
 Parameters
@@ -481,6 +481,38 @@ Outputs
 See also
 ........
 :ref:`qgisconvexhull`
+
+
+.. _qgisconcavehullknn:
+
+Concave hull (k-nearest neighbor)
+---------------------------------
+Computes the concave hull of the features in an input point layer
+using nearest neighbors.
+
+Parameters
+..........
+``Input point layer`` [vector: point]
+  Point vector layer to calculate the concave hull.
+
+``Number of neighboring points to consider`` [number]
+  Number (integer) from 3 (maximum concave hull) to 999999999 (convex hull).
+
+  Default: *3*
+
+``Field`` [tablefield: any]
+  To create concave hulls by class (one concave hull per class).
+
+  Default: *None*
+
+Outputs
+.......
+``Concave hull`` [vector: polygon]
+  Output concave hull.
+
+See also
+........
+:ref:`qgisconcavehull`
 
 
 .. _qgisconvertgeometrytype:
