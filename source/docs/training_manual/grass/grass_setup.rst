@@ -286,11 +286,10 @@ correctly opened.
 |basic| |FA| Using the QGIS Browser
 ...............................................................................
 
-Even more fast and easy is open a ``Mapset`` using the QGIS Browser:
+Even faster and easier is opening a ``Mapset`` using the QGIS Browser:
 
 #. Close the Mapset (if it is open) by clicking on the :guilabel:`Close Mapset`
    button of the :guilabel:`GRASS Tools` window.
-
 #. In the QGIS Browser, browse to the folder of the GRASS database.
 #. Right click on the Mapset (remember, the Mapset has the |grass| GRASS icon
    next to it). You will see some options.
