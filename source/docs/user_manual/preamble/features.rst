@@ -72,7 +72,7 @@ several formats. QGIS offers the following:
    formats to GPX or down/upload directly to a GPS unit (On Linux,
    usb: has been added to list of GPS devices.)
 *  Support for visualizing and editing OpenStreetMap data
-*  Ability to create spatial database tables from files with DB Manager plugin
+*  Ability to create spatial database tables from files with the DB Manager plugin
 *  Improved handling of spatial database tables
 *  Tools for managing vector attribute tables
 *  Option to save screenshots as georeferenced images

@@ -69,7 +69,7 @@ This section describes how to work with these specificities.
 ESRI Shapefile
 --------------
 
-The ESRI Shapefile is still one of the most used vector file format in QGIS.
+ESRI Shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
 not (like GeoPackage, SpatiaLite). Support is provided by the
 `OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
@@ -81,7 +81,8 @@ required:
 #. :file:`.dbf` file containing the attributes in dBase format
 #. :file:`.shx` index file
 
-Shapefile also can include a file with a :file:`.prj` suffix, which contains
+An ESRI Shapefile format dataset can also include a file with a :file:`.prj`
+suffix, which contains
 the projection information. While it is very useful to have a projection file,
 it is not mandatory. A shapefile dataset can contain additional files. For
 further details, see the ESRI technical specification at

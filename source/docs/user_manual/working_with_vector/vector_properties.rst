@@ -2944,7 +2944,7 @@ Usually, when we create an action to open a file with an external application,
 we can use absolute paths, or eventually relative paths. In the second case,
 the path is relative to the location of the external program executable file.
 But what about if we need to use relative paths, relative to the selected layer
-(a file-based one, like a Shapefile or SpatiaLite)? The following code will
+(a file-based one, like Shapefile or SpatiaLite)? The following code will
 do the trick:
 
 .. code-block:: python

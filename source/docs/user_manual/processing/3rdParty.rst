@@ -66,7 +66,7 @@ automatically converts from the original file format to one accepted by the
 external application before passing the layer to it. This adds extra processing
 time, which might be significant if the layer has a large size, so do not be
 surprised if it takes more time to process a layer from a DB connection than it
-does to process one of a similar size stored in a Shapefile.
+process a layer from a Shapefile format dataset of similar size.
 
 Providers not using external applications can process any layer that you can
 open in QGIS, since they open it for analysis through QGIS.

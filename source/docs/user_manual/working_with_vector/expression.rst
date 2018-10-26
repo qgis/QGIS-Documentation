@@ -443,7 +443,7 @@ Adding or subtracting an interval to dates, datetimes or times, using the
    * *date*, *Datetime* and *time* can be stored in text type fields after
      using the ``to_format()`` function.
 
-   * Intervals* can be stored in integer or decimal type fields after using
+   * *Intervals* can be stored in integer or decimal type fields after using
      one of the date extraction functions (e.g., ``day()`` to get the interval
      expressed in days)
 
