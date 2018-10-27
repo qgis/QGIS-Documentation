@@ -72,9 +72,9 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Chris Mayo         | Håvard Tveite       | Mie Winstrup         | Jonathan Willitts     | Giovanni Manghi      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| ajazepk            | icephale            | Andrei               | GiordanoPezzola       | zstadler             |
+| Martina Savarese   | icephale            | Andrei               | GiordanoPezzola       | zstadler             |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Ramon              | embelding           | stra2da              |                       |                      |
+| Ramon              | embelding           | ajazepk              |                       |                      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 
 
