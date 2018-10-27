@@ -436,16 +436,16 @@ Adding or subtracting an interval to dates, datetimes or times, using the
 .. note:: **Storing date and datetime and intervals on fields**
 
    The ability to store *date*, *time* and *datetime* values directly on
-   fields may depend on the data source's provider (e.g., shapefiles accept
+   fields may depend on the data source's provider (e.g., Shapefile accepts
    *date* format, but not *datetime* or *time* format). The following are some
-   suggestions to overcame this limitation.
+   suggestions to overcome this limitation:
 
-   *date*, *Datetime* and *time* can be stored in text type fields after
-   using the ``to_format()`` function.
+   * *date*, *Datetime* and *time* can be stored in text type fields after
+     using the ``to_format()`` function.
 
-   *Intervals* can be stored in integer or decimal type fields after using
-   one of the date extraction functions (e.g., ``day()`` to get the interval
-   expressed in days)
+   * *Intervals* can be stored in integer or decimal type fields after using
+     one of the date extraction functions (e.g., ``day()`` to get the interval
+     expressed in days)
 
 .. _fields_values:
 
