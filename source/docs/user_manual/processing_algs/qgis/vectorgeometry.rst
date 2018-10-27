@@ -489,7 +489,7 @@ Concave hull (k-nearest neighbor) |34|
 --------------------------------------
 This algorithm generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
-vertices / nodes.
+vertices.
 
 The number of neighbours to consider determines the concaveness of the
 output polygon.
