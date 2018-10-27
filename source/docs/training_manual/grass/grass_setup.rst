@@ -15,24 +15,25 @@ in GRASS *via* QGIS.
 -------------------------------------------------------------------------------
 
 To launch GRASS from within QGIS, you need to activate it as with any other
-plugin. First, open a new QGIS project.
+plugin
 
-* In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
+#. First, open a new QGIS project.
+#. In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
 
-  .. image:: img/enable_grass.png
-     :align: center
+   .. image:: img/enable_grass.png
+      :align: center
 
-The GRASS toolbar and the GRASS panel will appear:
+   The GRASS toolbar and the GRASS panel will appear:
 
-.. figure:: img/grass_toolbar.png
-   :align: center
+   .. figure:: img/grass_toolbar.png
+      :align: center
 
-   GRASS toolbar
+      GRASS toolbar
 
-.. figure:: img/grass_panel.png
-   :align: center
+   .. figure:: img/grass_panel.png
+      :align: center
 
-   GRASS Panel
+      GRASS Panel
 
 The GRASS panel is not active because, before you can use GRASS, you need to
 create a ``Mapset``. GRASS always works in a database environment, which means
@@ -57,22 +58,21 @@ information visit the `GRASS website <https://grass.osgeo.org/grass75/manuals/gr
 |basic| |FA| Start a New GRASS Project
 -------------------------------------------------------------------------------
 
+#. Click on the :guilabel:`Plugins -> GRASS -> New Mapset` menu:
 
-* Click on the :guilabel:`Plugins -> GRASS -> New Mapset` menu:
+   .. image:: img/grass_menu.png
+      :align: center
 
-  .. image:: img/grass_menu.png
-     :align: center
+   You'll be asked to choose the location of the GRASS database.
 
-  You'll asked to choose the location of the GRASS database.
+#. Set it as the directory that will be used by GRASS to set up its database:
 
-* Set it as the directory that will be used by GRASS to set up its database:
+   .. image:: img/grass_folder.png
+      :align: center
 
-  .. image:: img/grass_folder.png
-     :align: center
+#. Click :guilabel:`Next`.
 
-* Click :guilabel:`Next`.
-
-GRASS needs to create a ``Location``, which describes the maximum extents of the
+GRASS needs to create a ``Location``, which describes the maximum extent of the
 geographic area you'll be working in, also known as Grass ``Region``.
 
 .. note:: the Region is extremely important for GRASS because it describes the
@@ -80,38 +80,38 @@ geographic area you'll be working in, also known as Grass ``Region``.
   that is outside will not be considered. Don't worry, you can always change the
   extent of the GRASS Region after the Location has been created
 
-* Call the new location :kbd:`SouthAfrica`:
+#. Call the new location ``SouthAfrica``:
 
-  .. image:: img/new_location.png
+   .. image:: img/new_location.png
+      :align: center
+
+#. Click :guilabel:`Next`.
+#. We'll be working with ``WGS 84``, so search for and select this CRS:
+
+   .. image:: img/wgs_84_selected.png
+      :align: center
+
+#. Click :guilabel:`Next`.
+#. Now select the region :guilabel:`South Africa` from the dropdown and click
+   :guilabel:`Set`:
+
+   .. image:: img/set_south_africa.png
+      :align: center
+
+#. Click :guilabel:`Next`.
+#. Create a mapset, which is the map file that you'll be working with.
+
+   .. image:: img/grass_mapset.png
+      :align: center
+
+   Once you're done, you'll see a dialog asking with a summary of all the
+   information entered.
+
+   .. image:: img/grass_final.png
      :align: center
 
-* Click :guilabel:`Next`.
-* We'll be working with :kbd:`WGS 84`, so search for and select this CRS:
-
-  .. image:: img/wgs_84_selected.png
-     :align: center
-
-* Click :guilabel:`Next`.
-* Now select the region :guilabel:`South Africa` from the dropdown and click
-  :guilabel:`Set`:
-
-  .. image:: img/set_south_africa.png
-     :align: center
-
-* Click :guilabel:`Next`.
-* Create a mapset, which is the map file that you'll be working with.
-
-  .. image:: img/grass_mapset.png
-     :align: center
-
-Once you're done, you'll see a dialog asking with a summary of all the information
-entered.
-
-.. image:: img/grass_final.png
-   :align: center
-
-* Click :guilabel:`Finish`.
-* Click :guilabel:`OK` on the success dialog.
+#. Click :guilabel:`Finish`.
+#. Click :guilabel:`OK` on the success dialog.
 
 You will see that the GRASS Panel will become active and you can start to use
 all GRASS tools.
@@ -147,14 +147,14 @@ you will see the |grassMapsetOpen| icon next to the Mapset that is opened.
 
 You can easily **drag and drop** layers from a folder to the GRASS Mapset.
 
-Let's try to import the :kbd:`roads.shp` layer into the ``grass_mapset`` Mapset
+Let's try to import the :file:`roads.shp` layer into the ``grass_mapset`` Mapset
 of the ``SouthAfrica`` Location.
 
-* Open the :kbd:`shapefiles` folder and simply drag the :file:`roads.shp` layer
-  into the ``grass_mapset`` Mapset.
+Open the :file:`shapefile/` folder and simply drag the :file:`roads.shp` layer
+into the ``grass_mapset`` Mapset.
 
-  .. image:: img/grass_browser_import.png
-     :align: center
+.. image:: img/grass_browser_import.png
+   :align: center
 
 That's it! If you expand the Mapset you will see the imported :file:`roads`
 layer. You can now load in QGIS the imported layer like all the other layers.
@@ -166,43 +166,43 @@ layer. You can now load in QGIS the imported layer like all the other layers.
 |basic| |FA| Load data using the GRASS Panel
 ...............................................................................
 
-We will use now the *long* method to load the :kbd:`rivers.shp` layer into the
+We will use now the *long* method to load the :file:`rivers.shp` layer into the
 same Mapset.
 
-* Load data into QGIS as usual. Use the :kbd:`rivers.shp` dataset (found in the
-  :kbd:`exercise_data/shapefiles` folder)
-* As soon as it is loaded, click on the :guilabel:`Filter` box of the ``GRASS Panel``
-  and find the vector import tool by entering the term :kbd:`v.in.ogr.qgis`:
+#. Load data into QGIS as usual. Use the :file:`rivers.shp` dataset (found in the
+   :file:`exercise_data/shapefile/` folder)
+#. As soon as it is loaded, click on the :guilabel:`Filter` box of the ``GRASS Panel``
+   and find the vector import tool by entering the term ``v.in.ogr.qgis``:
 
-  .. warning:: There are 2 similar tools: :kbd:`v.in.ogr.qgis` and
-    :kbd:`v.in.ogr.qgis.loc`. We are looking for the **first** one.
+   .. warning:: There are 2 similar tools: ``v.in.ogr.qgis`` and
+     ``v.in.ogr.qgis.loc``. We are looking for the **first** one.
 
-  .. image:: img/grass_panel_import.png
-     :align: center
+   .. image:: img/grass_panel_import.png
+      :align: center
 
-The :kbd:`v` stands for *vector*, :kbd:`in` means a function to import data into
-the GRASS database, :kbd:`ogr` is the software library used to read vector data,
-and :kbd:`qgis` means that the tool will look for a vector from among the vectors
-already loaded into QGIS.
+   The ``v`` stands for *vector*, ``in`` means a function to import data into
+   the GRASS database, ``ogr`` is the software library used to read vector data,
+   and ``qgis`` means that the tool will look for a vector from among the vectors
+   already loaded into QGIS.
 
-* Once you've found this tool, click on it to bring up the tool itself. Choose
-  the :guilabel:`rivers` layer in the :kbd:`Loaded Layer` box and type and name
-  it :kbd:`g_rivers` to prevent confusion:
+#. Once you've found this tool, click on it to bring up the tool itself. Choose
+   the :guilabel:`rivers` layer in the :guilabel:`Loaded Layer` box and type and
+   name it :file:`g_rivers` to prevent confusion:
 
-  .. image:: img/grass_tool_selected.png
-     :align: center
+   .. image:: img/grass_tool_selected.png
+      :align: center
 
-.. note:: |hard| Note the extra import options provided under
-   :guilabel:`Advanced Options`. These include the ability to add a WHERE
-   clause for the SQL query used for importing the data.
+   .. note:: |hard| Note the extra import options provided under
+    :guilabel:`Advanced Options`. These include the ability to add a WHERE
+    clause for the SQL query used for importing the data.
 
-* Click :guilabel:`Run` to begin the import.
-* When it's done, click the :guilabel:`View output` button to see the newly
-  imported GRASS layer in the map.
-* Close first the import tool (click the :guilabel:`Close` button to the
-  immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS
-  Tools` window.
-* Remove the original :guilabel:`rivers` layer.
+#. Click :guilabel:`Run` to begin the import.
+#. When it's done, click the :guilabel:`View output` button to see the newly
+   imported GRASS layer in the map.
+#. Close first the import tool (click the :guilabel:`Close` button to the
+   immediate right of :guilabel:`View output`), then close the :guilabel:`GRASS
+   Tools` window.
+#. Remove the original :guilabel:`rivers` layer.
 
 Now you are left with only the imported GRASS layer as displayed in your QGIS
 map.
@@ -214,39 +214,39 @@ You can import a raster layer in the same ways we imported vector layers.
 
 We are going to import in the GRASS Mapset the layer |srtmFileName|.
 
-.. note:: the raster layer is already in the correct CRS, :kbd:`WGS 84`. If you
+.. note:: the raster layer is already in the correct CRS, ``WGS 84``. If you
   have layers in different CRS you must reproject them in the same CRS of the
   GRASS Mapset
 
 
-* Load the |srtmFileName| layer in QGIS
-* Open the :guilabel:`GRASS Tools` dialog again.
-* Click on the :guilabel:`Modules List` tab.
-* Search for :kbd:`r.in.gdal.qgis` and double click the tool to open the tool's
-  dialog.
-* Set it up so that the input layer is |srtmFileName| and the output is :kbd:`g_dem`.
+#. Load the |srtmFileName| layer in QGIS
+#. Open the :guilabel:`GRASS Tools` dialog again.
+#. Click on the :guilabel:`Modules List` tab.
+#. Search for ``r.in.gdal.qgis`` and double click the tool to open the tool's
+   dialog.
+#. Set it up so that the input layer is |srtmFileName| and the output is :file:`g_dem`.
 
-  .. image:: img/g_dem_settings.png
-     :align: center
+   .. image:: img/g_dem_settings.png
+      :align: center
 
-* Click :guilabel:`Run`.
-* When the process is done, click :guilabel:`View output`.
-* :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
-  dialog.
+#. Click :guilabel:`Run`.
+#. When the process is done, click :guilabel:`View output`.
+#. :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
+   dialog.
 
-  .. image:: img/g_dem_result.png
-     :align: center
+   .. image:: img/g_dem_result.png
+      :align: center
 
-* You may now remove the original |srtmFileName| layer.
+#. You may now remove the original |srtmFileName| layer.
 
 
 .. _backlink-grass_add_to_mapset:
 
 |basic| |TY| Add Layers to Mapset
 -------------------------------------------------------------------------------
-Try to import in the GRASS Mapset the vector layers :kbd:`water.shp` and
-:kbd:`places.shp` from the :kbd:`exercise_data/shapefiles` folder. As we did
-for :kbd:`rivers` rename the imported layer as :kbd:`g_water` and :kbd:`g_places`
+Try to import in the GRASS Mapset the vector layers :file:`water.shp` and
+:file:`places.shp` from the :file:`exercise_data/shapefile/` folder. As we did
+for :file:`rivers` rename the imported layer as :file:`g_water` and :file:`g_places`
 to avoid confusion
 
 :ref:`Check your results <grass_add_to_mapset>`
@@ -266,18 +266,18 @@ Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of the
 |basic| |FA| Using the GRASS plugin
 ...............................................................................
 
-Click on the  to the :guilabel:`Plugins -> GRASS -> Open Mapset` menu next to the
-:guilabel:`Plugins -> GRASS -> New Mapset` menu that we saw in the previous section.
+#. Click on the :guilabel:`Plugins -> GRASS -> Open Mapset` menu next to the
+   :guilabel:`Plugins -> GRASS -> New Mapset` menu that we saw in the previous section.
 
-Browse to the GRASS database folder: be careful! You must choose the parent folder,
-not the GRASS Mapset one. Indeed GRASS will read all the ``Locations`` of the
-database and all the ``Mapsets`` of each ``Location``:
+#. Browse to the GRASS database folder: be careful! You must choose the parent folder,
+   not the GRASS Mapset one. Indeed GRASS will read all the ``Locations`` of the
+   database and all the ``Mapsets`` of each ``Location``:
 
-.. image:: img/grass_open_mapset.png
-   :align: center
+   .. image:: img/grass_open_mapset.png
+      :align: center
 
-Choose the ``Location`` :kbd:`SouthAfrica` and the ``Mapset`` :kbd:`grass_mapset`
-that we have created before.
+#. Choose the ``Location`` :kbd:`SouthAfrica` and the ``Mapset`` :kbd:`grass_mapset`
+   that we have created before.
 
 That's it! The GRASS Panel will become active meaning that the Mapset has been
 correctly opened.
@@ -286,22 +286,22 @@ correctly opened.
 |basic| |FA| Using the QGIS Browser
 ...............................................................................
 
-Even more fast and easy is open a ``Mapset`` using the QGIS Browser. Close the
-Mapset (if it is open) by clicking on the :guilabel:`Close Mapset` button of the
-:guilabel:`GRASS Tools` window.
+Even faster and easier is opening a ``Mapset`` using the QGIS Browser:
 
-In the QGIS Browser, browse to the folder of the GRASS database and right click
-on the Mapset (remember, the Mapset has the |grass| GRASS icon next to it). You
-will see some option: click on :kbd:`Open mapset`:
+#. Close the Mapset (if it is open) by clicking on the :guilabel:`Close Mapset`
+   button of the :guilabel:`GRASS Tools` window.
+#. In the QGIS Browser, browse to the folder of the GRASS database.
+#. Right click on the Mapset (remember, the Mapset has the |grass| GRASS icon
+   next to it). You will see some options.
+#. Click on :guilabel:`Open mapset`:
 
-.. image:: img/grass_open_mapset_browser.png
-   :align: center
+   .. image:: img/grass_open_mapset_browser.png
+      :align: center
 
 The Mapset is now open and ready to use!
 
-
-.. tip:: Right click on a GRASS Mapset offers you a lot of different settings. Try
-  to explore them and see all the useful options.
+.. tip:: Right click on a GRASS Mapset offers you a lot of different settings.
+  Try to explore them and see all the useful options.
 
 |IC|
 -------------------------------------------------------------------------------
