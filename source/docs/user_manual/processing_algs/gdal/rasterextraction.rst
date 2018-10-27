@@ -68,8 +68,8 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+``Clipped (extent)`` [raster]
+  Output raster layer clipped by the given extent.
 
 
 .. _gdalcliprasterbymasklayer:
@@ -95,11 +95,16 @@ Parameters
 
   Default: *none*
 
-``Create and output alpha band`` [boolean]
+``Create an output alpha band`` [boolean]
   Creates an alpha band for the result. The alpha band then includes the transparency
   values of the pixels.
 
   Default: *False*
+
+``Match the extent of the clipped raster to the extent of the mask layer`` [boolean]
+  Applies the vector layer extent to the output raster if checked.
+
+  Default: *True*
 
 ``Keep resolution of output raster`` [boolean]
   The resolution of the output raster will not be changed.
@@ -136,8 +141,8 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+``Clipped (mask)`` [raster]
+  Output raster layer clipped by the vector layer.
 
 
 .. _gdalcontour:
