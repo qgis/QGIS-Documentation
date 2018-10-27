@@ -509,17 +509,18 @@ Parameters
   Vector layer to calculate the concave hull.
 
 ``Number of neighboring points to consider`` [number]
-  Number (integer) from 3 (maximum concave hull) to 999999999 (convex
-  hull).
   Determines the concaveness of the output polygon.
-  A lower number will result in a concave hull that follows the points
-  very closely, while a higher number will tend to a convex hull.
+  A small number will result in a concave hull that follows
+  the points very closely, while a high number will make
+  the polygon look more like the convex hull (if the number
+  is equal to or larger than the number of features, the
+  result will be the convex hull).
 
-  Default: *3*
+  Default (and minimum): *3*
 
 ``Field`` [tablefield: any] Optional
   If specified, one concave hull polygon is generated for each unique
-  value of the field (by selecting points using this value).
+  value of the field (by selecting features using this value).
 
   Default: *None*
 
