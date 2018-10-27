@@ -491,7 +491,7 @@ This algorithm generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
 vertices.
 
-The number of neighbours to consider determines the concaveness of the
+The number of neighbors to consider determines the concaveness of the
 output polygon.
 A lower number will result in a concave hull that follows the points very
 closely, while a higher number will have a smoother shape.
