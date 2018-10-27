@@ -495,7 +495,7 @@ The number of neighbors to consider determines the concaveness of the
 output polygon.
 A lower number will result in a concave hull that follows the points very
 closely, while a higher number will have a smoother shape.
-The minimum number of neighbour points to consider is 3.
+The minimum number of neighbor points to consider is 3.
 A value equal to or greater than the number of points will result in a
 convex hull.
 
