@@ -480,28 +480,46 @@ Outputs
 
 See also
 ........
-:ref:`qgisconvexhull`
+:ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
 
 
-.. _qgisconcavehullknn:
+.. _qgisknearestconcavehull:
 
-Concave hull (k-nearest neighbor)
----------------------------------
-Computes the concave hull of the features in an input point layer
-using nearest neighbors.
+Concave hull (k-nearest neighbor) |34| 
+--------------------------------------
+This algorithm generates a concave hull polygon from a set of points.
+If the input layer is a line or polygon layer, it will use the
+vertices / nodes.
+
+The number of neighbours to consider determines the concaveness of the
+output polygon.
+A lower number will result in a concave hull that follows the points very
+closely, while a higher number will have a smoother shape.
+The minimum number of neighbour points to consider is 3.
+A value equal to or greater than the number of points will result in a
+convex hull.
+
+If a field is selected, the algorithm will group the features in the
+input layer using unique values in that field and generate individual
+polygons in the output layer for each group. 
 
 Parameters
 ..........
-``Input point layer`` [vector: point]
-  Point vector layer to calculate the concave hull.
+``Input layer`` [vector: any]
+  Vector layer to calculate the concave hull.
 
 ``Number of neighboring points to consider`` [number]
-  Number (integer) from 3 (maximum concave hull) to 999999999 (convex hull).
+  Number (integer) from 3 (maximum concave hull) to 999999999 (convex
+  hull).
+  Determines the concaveness of the output polygon.
+  A lower number will result in a concave hull that follows the points
+  very closely, while a higher number will tend to a convex hull.
 
   Default: *3*
 
-``Field`` [tablefield: any]
-  To create concave hulls by class (one concave hull per class).
+``Field`` [tablefield: any] Optional
+  If specified, one concave hull polygon is generated for each unique
+  value of the field (by selecting points using this value).
 
   Default: *None*
 
