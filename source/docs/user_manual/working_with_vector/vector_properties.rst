@@ -39,7 +39,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
 * |join| :ref:`Joins <sec_joins>`
 * |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
 * |action| :ref:`Actions <actions_menu>`
-* |mapTips| :ref:`Display <maptips>`
+* |display| :ref:`Display <maptips>`
 * |rendering| :ref:`Rendering <vectorrenderingmenu>`
 * |expression| :ref:`Variables <vectorvariablesmenu>`
 * |editMetadata| :ref:`Metadata <vectormetadatamenu>`
@@ -3023,7 +3023,7 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|mapTips| This tab is specifically created for map tips: display a message in
+|display| This tab is specifically created for map tips: display a message in
 the map canvas when hovering over a feature of the active layer.
 This message can either be the value of a |radioButtonOff| :guilabel:`Field`
 or a more complex and full |radioButtonOff| :guilabel:`HTML` text mixing fields,
@@ -3315,6 +3315,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |digitizing| image:: /static/common/digitizing.png
    :width: 2em
+.. |display| image:: /static/common/display.png
+   :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png

@@ -340,7 +340,7 @@ Icon                                Substitution                            Icon
 |symbology|                         ``|symbology|``                         |labeling|                     ``|labeling|``
 |sourceFields|                      ``|sourceFields|``                      |general|                      ``|general|``
 |metadata|                          ``|metadata|``                          |action|                       ``|action|``
-|mapTips|                           ``|mapTips|``                           |rendering|                    ``|rendering|``
+|display|                           ``|display|``                           |rendering|                    ``|rendering|``
 |join|                              ``|join|``                              |diagram|                      ``|diagram|``
 |legend|                            ``|legend|``                            |dependencies|                 ``|dependencies|``
 |3d|                                ``|3d|``                                |system|                       ``|system|``
@@ -627,6 +627,8 @@ Icon                            Substitution                        Icon        
 .. |difference| image:: /static/common/difference.png
    :width: 1.5em
 .. |digitizing| image:: /static/common/digitizing.png
+   :width: 1.5em
+.. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |dissolve| image:: /static/common/dissolve.png
    :width: 1.5em
