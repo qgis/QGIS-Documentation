@@ -40,9 +40,9 @@ example:
 .. note:: If you find that the :guilabel:`Intersect` tool does not produce any
   results, check the CRS settings of each of your layers. The CRS must be the
   same for both the layers you are comparing. You may need to reproject one
-  layer by saving the layer as a new shapefile with the required CRS. In our
-  example, the :kbd:`suitable_terrain` layer was reprojected to
-  |localCRS| and named :kbd:`suitable_terrain_34S`.
+  layer by saving the layer as a new file with the required CRS. In our
+  example, the :file:`suitable_terrain` layer was reprojected to
+  |localCRS| and named :file:`suitable_terrain_34S.shp`.
 
 
 .. _backlink-complete-analysis-2:

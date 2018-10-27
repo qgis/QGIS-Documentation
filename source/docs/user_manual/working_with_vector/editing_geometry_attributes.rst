@@ -265,7 +265,7 @@ supports it (see :ref:`supported_format`), and the underlying data source is wri
    From the :menuselection:`Project --> Properties... --> Data Sources --> Layers Capabilities` table,
    You can choose to set any layer read-only regardless the provider permission.
    This can be a handy way, in a multi-users environment to avoid unauthorized users
-   to mistakenly edit layers (e.g., shapefile), hence potentially corrupt data.
+   to mistakenly edit layers (e.g., Shapefile), hence potentially corrupt data.
    Note that this setting only applies inside the current project.
 
 

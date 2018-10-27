@@ -33,13 +33,13 @@ exercises.
      :align: center
 
 * Change the field name (describing the values of the raster) to
-  :kbd:`suitable`.
-* Save the shapefile under :kbd:`exercise_data/residential_development`
-  as :kbd:`all_terrain.shp`.
+  :guilabel:`suitable`.
+* Save the layer under :file:`exercise_data/residential_development`
+  as :file:`all_terrain.shp`.
 
 Now you have a vector file which contains all the values of the raster, but
 the only areas you're interested in are those that are suitable; i.e., those
-polygons where the value of :kbd:`suitable` is :kbd:`1`. You can change the
+polygons where the value of :guilabel:`suitable` is ``1``. You can change the
 style of this layer if you want to have a clearer visualization of it.
 
 .. _backlink-complete-analysis-1:

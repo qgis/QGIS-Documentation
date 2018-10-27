@@ -12,7 +12,7 @@ of tools that will let you easily move data into and out of PostGIS.
 shp2pgsql
 -------------------------------------------------------------------------------
 
-shp2pgsql is a commandline tool to import ESRI shapefiles to the database.
+shp2pgsql is a commandline tool to import ESRI Shapefile to the database.
 Under Unix, you can use the following command for importing a new PostGIS
 table:
 

@@ -539,7 +539,7 @@ Writing Vector Layers
 =====================
 
 You can write vector layer files using :class:`QgsVectorFileWriter` class. It
-supports any other kind of vector file that OGR supports (shapefiles, GeoJSON,
+supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,
 KML and others).
 
 There are two possibilities how to export a vector layer:
@@ -558,7 +558,7 @@ There are two possibilities how to export a vector layer:
         print("success again!")
 
   The third parameter specifies output text encoding. Only some drivers need this
-  for correct operation - shapefiles are one of those --- however in case you
+  for correct operation - Shapefile is one of those --- however in case you
   are not using international characters you do not have to care much about
   the encoding. The fourth parameter that we left as ``None`` may specify
   destination CRS --- if a valid instance of :class:`QgsCoordinateReferenceSystem`

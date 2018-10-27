@@ -66,7 +66,7 @@ your work.
 
 `GeoPackage <http://www.geopackage.org/>`_ is an open format for storing
 geospatial data. QGIS adds a lot of support to this new format that is slowly
-replacing the ESRI shapefile format.
+replacing the ESRI Shapefile format.
 
 GeoPackage is a single file format that can contain different types of data: vector
 and raster layers but also tables without spatial information in them (like CSV

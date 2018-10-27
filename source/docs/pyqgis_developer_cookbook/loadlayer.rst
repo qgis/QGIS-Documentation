@@ -56,10 +56,10 @@ providers:
 .. index::
   pair: Loading; OGR layers
 
-* OGR library (shapefiles and many other file formats) --- data source is the
+* OGR library (Shapefile and many other file formats) --- data source is the
   path to the file:
 
-  * for shapefile:
+  * for Shapefile:
 
   .. code-block:: python
 

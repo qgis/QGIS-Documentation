@@ -270,7 +270,7 @@ Vector specific parameters
 Depending on the format of export, some of these options are available or not:
 
 * :guilabel:`Format`: exports to any vector format GDAL can write to, such as
-  GeoPackage, ESRI shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
+  GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
   SpatiaLite, CSV, KML, ODS...
 * :guilabel:`Layer name` depending on the selected format;
 * :guilabel:`Encoding`

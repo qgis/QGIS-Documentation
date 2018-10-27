@@ -21,7 +21,7 @@ As part of an Open Source Software ecosystem, QGIS is built upon different
 libraries that, combined with its own providers, offer capabilities to read
 and often write a lot of formats:
 
-* Vector data formats include ESRI formats (shapefiles, geodatabases...),
+* Vector data formats include ESRI formats (Shapefile, Geodatabase...),
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
   GRASS, GPX, KML, Comma Separated Values, and many more...
   Read the complete list of `OGR vector supported formats
