@@ -294,8 +294,8 @@ You can use the buttons |fileOpen| :sup:`Load color map from file` or |fileSaveA
 :sup:`Export color map to file` to load an existing color table or to save the
 defined color table for other sessions.
 
-The |checkbox| :guilabel:`Clip out of range` allows QGIS to not render pixel greater than
-the :guilabel:`Max` value.
+The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
+greater than the :guilabel:`Max` value.
 
 Color rendering
 ---------------
