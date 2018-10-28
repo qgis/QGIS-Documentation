@@ -444,8 +444,8 @@ See also
 
 .. _qgisconcavehull:
 
-Concave hull
-------------
+Concave hull (alpha shapes)
+---------------------------
 Computes the concave hull of the features in an input point layer.
 
 Parameters
@@ -480,7 +480,60 @@ Outputs
 
 See also
 ........
-:ref:`qgisconvexhull`
+:ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
+
+
+.. _qgisknearestconcavehull:
+
+Concave hull (k-nearest neighbor) |34| 
+--------------------------------------
+This algorithm generates a concave hull polygon from a set of points.
+If the input layer is a line or polygon layer, it will use the
+vertices.
+
+The number of neighbors to consider determines the concaveness of the
+output polygon.
+A lower number will result in a concave hull that follows the points very
+closely, while a higher number will have a smoother shape.
+The minimum number of neighbor points to consider is 3.
+A value equal to or greater than the number of points will result in a
+convex hull.
+
+If a field is selected, the algorithm will group the features in the
+input layer using unique values in that field and generate individual
+polygons in the output layer for each group. 
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer to calculate the concave hull.
+
+``Number of neighboring points to consider`` [number]
+  Determines the concaveness of the output polygon.
+  A small number will result in a concave hull that follows
+  the points very closely, while a high number will make
+  the polygon look more like the convex hull (if the number
+  is equal to or larger than the number of features, the
+  result will be the convex hull).
+
+  Default (and minimum): *3*
+
+``Field`` [tablefield: any]
+  Optional
+
+  If specified, one concave hull polygon is generated for each unique
+  value of the field (by selecting features using this value).
+
+  Default: *None*
+
+Outputs
+.......
+``Concave hull`` [vector: polygon]
+  Output concave hull.
+
+See also
+........
+:ref:`qgisconcavehull`
 
 
 .. _qgisconvertgeometrytype:
