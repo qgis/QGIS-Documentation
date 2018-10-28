@@ -518,7 +518,9 @@ Parameters
 
   Default (and minimum): *3*
 
-``Field`` [tablefield: any] Optional
+``Field`` [tablefield: any]
+  Optional
+
   If specified, one concave hull polygon is generated for each unique
   value of the field (by selecting features using this value).
 
