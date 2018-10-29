@@ -51,13 +51,15 @@ There are several ways to create a QGIS task:
 
   .. code-block:: python
 
-    QgsTask.fromFunction(u'heavy function', myfunction, onfinished=workdone)
+    QgsTask.fromFunction(u'heavy function', myfunction,
+                         onfinished=workdone)
 
 * Create a task from a processing algorithm
 
   .. code-block:: python
   
-    QgsProcessingAlgRunnerTask(u'native:buffer', params, context, feedback)
+    QgsProcessingAlgRunnerTask(u'native:buffer', params, context,
+                               feedback)
 
 .. note::
    A task must keep away from the graphical user interface
@@ -210,6 +212,88 @@ dependencies.
 
 Task from function
 ..................
+
+Create a task from a function (``run`` in this example).
+The first parameter of the function will hold the QgsTask for the
+function.
+An important (named) parameter is ``on_finished``, that specifies a
+function that will work on the result.
+The ``run`` function in this example has an additional named
+parameter ``wait_time``.
+
+.. code-block:: python
+
+  import random
+  from time import sleep
+  
+  CATEGORY = 'TaskFromFunction'
+  
+  def run(task, wait_time):
+      """
+      Raises an exception to abort the task.
+      Returns a result if success.
+      The result will be passed together with the exception (None in
+      the case of success) to the on_finished method
+      """
+      QgsMessageLog.logMessage('Started task {}'.format(task.description()),
+                               CATEGORY, Qgis.Info)
+      wait_time = wait_time / 100
+      total = 0
+      iterations = 0
+      for i in range(100):
+          sleep(wait_time)
+          # use task.setProgress to report progress
+          task.setProgress(i)
+          total += random.randint(0, 100)
+          iterations += 1
+          # check task.isCanceled() to handle cancellation
+          if task.isCanceled():
+              stopped(task)
+              return None
+          # raise an exception to abort the task
+          if random.randint(0, 500) == 42:
+              raise Exception('bad value!')
+      return {'total': total, 'iterations': iterations,
+              'task': task.description()}
+  
+  def stopped(task):
+      QgsMessageLog.logMessage(
+          'Task "{name}" was cancelled'.format(
+              name=task.description()),
+          CATEGORY, Qgis.Info)
+  
+  def completed(exception, result=None):
+      """This is called when run is finished.
+      Exception is not None if run raises an exception.
+      Result is the return value of run."""
+      if exception is None:
+          if result is None:
+              QgsMessageLog.logMessage(
+                  'Completed with no exception and no result '\
+                  '(probably manually canceled by the user)',
+                  CATEGORY, Qgis.Warning)
+          else:
+              QgsMessageLog.logMessage(
+                  'Task {name} completed\n'
+                  'Total: {total} ( with {iterations} '
+                  'iterations)'.format(
+                      name=result['task'],
+                      total=result['total'],
+                      iterations=result['iterations']),
+                  CATEGORY, Qgis.Info)
+      else:
+          QgsMessageLog.logMessage("Exception: {}".format(exception),
+                                   CATEGORY, Qgis.Critical)
+          raise exception
+  
+  # Creae a few tasks
+  task1 = QgsTask.fromFunction(u'Waste cpu 1', run,
+                               on_finished=completed, wait_time=4)
+  task2 = QgsTask.fromFunction(u'Waste cpu 2', run,
+                               on_finished=completed, wait_time=3)
+  QgsApplication.taskManager().addTask(task1)
+  QgsApplication.taskManager().addTask(task2)
+ 
 
 Task from a processing algorithm
 ................................
