@@ -191,7 +191,8 @@ Extending QgsTask
   # Add a subtask (st1) to shorttask that must run after minitask and
   # longtask has finished
   shorttask.addSubTask(st1, [minitask, longtask])
-  # Add a subtask to longtask that must be run before the parent task
+  # Add a subtask (st2) to longtask that must be run before the parent
+  # task
   longtask.addSubTask(st2, [], QgsTask.ParentDependsOnSubTask)
   longtask.addSubTask(st3)
   
