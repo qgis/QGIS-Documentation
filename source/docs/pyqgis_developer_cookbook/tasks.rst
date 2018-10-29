@@ -1,6 +1,81 @@
 Tasks
 =====
 
-Tasks were introduced in QGIS 3, and is a convenient way to achieve threading.
-While waiting for documentation of this feature, have a look at
-http://www.opengis.ch/2018/06/22/threads-in-pyqgis3/
+Tasks were introduced in QGIS 3, and is a convenient way to achieve
+threading.
+While waiting for the documentation of this feature to be completed,
+have a look at
+http://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
+
+Introduction
+------------
+
+Background processing using threads is a way to maintain a responsive
+user interface when heavy processing is going on.
+
+QgsTask and QgsTaskManager simplify background processing in QGIS.
+They provide mechanisms for signalling, progress reporting and access
+to the status for background processes.
+
+A task (QgsTask) is a container for the code to be performed in the
+background, and the task manager (QgsTaskManager) is used to control
+the running of the tasks.
+Tasks can be grouped using subtasks.
+See http://qgis.org/pyqgis for details on methods, signals and
+attributes.
+
+The global task manager (found with QgsApplication.taskManager())
+is normally used.  This means that your tasks may not be the only
+tasks that are controlled by the task manager.
+
+There are several ways to create a QGIS task:
+
+* Create your own task by extending QgsTask
+
+  class MyTask(QgsTask):
+  
+* Create a task from a function
+
+  QgsTask.fromFunction(u'heavy function', myfunction, onfinished=workdone)
+
+* Create a task from a processing algorithm
+
+  QgsProcessingAlgRunnerTask(u'native:buffer', params, context, feedback)
+
+::note: A task must keep away from the graphical user interface
+(creating widgets or altering things in the gui), as this is not
+allowed in Qt.
+
+Dependencies between tasks can be described using the addSubTask
+function of QgsTask.
+When a dependency is stated, serial execution of the involved classes
+is ensured.
+If a task on which another task depends is cancelled, the dependent
+task will also be cancelled.
+Dependencies make deadlocks possible, so be careful.
+
+If a task depends on a layer being available, this can be stated
+using the setDependentLayers function of QgsTask.
+If a layer on which a task depends is not available, the task will be
+cancelled.
+
+Once the task has been created it can be scheduled for running using
+the addTask function of the task manager.
+The scheduling of the tasks is influenced by the task priority, which
+is set when in addTask.
+
+The status of tasks can be monitored using QgsTask and QgsTaskManager
+signals and functions.
+
+
+Examples
+--------
+
+Extending QgsTask
+.................
+
+Task from function
+..................
+
+Task from a processing algorithm
+................................
