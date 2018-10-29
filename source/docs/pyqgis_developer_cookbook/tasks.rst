@@ -92,6 +92,14 @@ Examples
 Extending QgsTask
 .................
 
+:class:`MyTask` extends :class:`QgsTask` and will generate 100 random
+integers between 0 and 100 during a specified period of time.
+If the random number is 42, the task is aborted and an exception
+is raised.
+Several instances of :class:`MyTask` (with subtasks) are generated
+and added to the task manager, demonstrating two types of
+dependencies.
+
 .. code-block:: python
 
   import random
@@ -123,7 +131,7 @@ Extending QgsTask
                                        self.description()),
                                    MESSAGE_CATEGORY, Qgis.Info)
           wait_time = self.duration / 100
-          for i in range(101):
+          for i in range(100):
               sleep(wait_time)
               # use setProgress to report progress
               self.setProgress(i)
@@ -205,6 +213,10 @@ Task from function
 
 Task from a processing algorithm
 ................................
+
+Create a task that uses qgis:randompointsinextent to generate 50000
+random points inside a specified extent and adds the result to the
+project in a safe way.
 
 .. code-block:: python
 
