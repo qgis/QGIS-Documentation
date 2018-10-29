@@ -55,8 +55,8 @@ QGIS **always** reprojects data "on the fly". What this means is that even if
 the data itself is in another CRS, QGIS can project it as if it were in a CRS
 of your choice.
 
-You can change the projection CRS of the project by clicking on |crs| button in
-the bottom right corner of QGIS.
+You can change the projection CRS of the project by clicking on |projectionEnabled|
+button in the bottom right corner of QGIS.
 
 * In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
   field. One CRS (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list
@@ -120,8 +120,8 @@ The :guilabel:`Save vector layer as...` dialog now looks like this:
 
 * Start a new project and load the reprojected layer you just created.
 
-You should see that the EPSG code next to the |crs| icon in the bottom right
-corner reflects the CRS of the layer, ``32732``.
+You should see that the EPSG code next to the |projectionEnabled| icon in the
+bottom right corner reflects the CRS of the layer, ``32732``.
 
 
 |hard| |FA| Creating Your Own Projection
@@ -154,7 +154,7 @@ rectangular one, as most other projections do.
    :align: center
 
 * Click **[OK]**.
-* Click on the |crs| button to change the project CRS.
+* Click on the |projectionEnabled| button to change the project CRS.
 * Choose your newly defined projection (search for its name in the
   :guilabel:`Filter` field).
 * On applying this projection, the map will be reprojected thus:
@@ -197,10 +197,10 @@ vector analysis tools.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |crs| image:: /static/common/CRS.png
-   :width: 1.5em
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
+.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
+   :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
