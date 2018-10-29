@@ -94,7 +94,7 @@ Examples
 Extending QgsTask
 .................
 
-:class:`MyTask` extends :class:`QgsTask` and will generate 100 random
+``MyTask`` extends :class:`QgsTask` and will generate 100 random
 integers between 0 and 100 during a specified period of time.
 If the random number is 42, the task is aborted and an exception
 is raised.
