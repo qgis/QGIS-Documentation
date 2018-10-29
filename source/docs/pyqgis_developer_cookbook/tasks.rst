@@ -92,6 +92,113 @@ Examples
 Extending QgsTask
 .................
 
+.. code-block:: python
+
+  import random
+  from time import sleep
+  
+  from qgis.core import (
+      QgsApplication, QgsTask, QgsMessageLog,
+      )
+  
+  MESSAGE_CATEGORY = 'SubclassTask'
+  
+  class MyTask(QgsTask):
+      """This shows how to subclass QgsTask"""
+      def __init__(self, description, duration):
+          super().__init__(description, QgsTask.CanCancel)
+          self.duration = duration
+          self.total = 0
+          self.iterations = 0
+          self.exception = None
+      def run(self):
+          """Here you implement your heavy lifting.
+          Should periodically test for isCancelled() to gracefully
+          abort.
+          This method MUST return True or False
+          raising exceptions will crash QGIS, so we handle them
+          internally and raise them in self.finished
+          """
+          QgsMessageLog.logMessage('Started task "{}"'.format(
+                                       self.description()),
+                                   MESSAGE_CATEGORY, Qgis.Info)
+          wait_time = self.duration / 100
+          for i in range(101):
+              sleep(wait_time)
+              # use setProgress to report progress
+              self.setProgress(i)
+              self.total += random.randint(0, 100)
+              self.iterations += 1
+              # check isCanceled() to handle cancellation
+              if self.isCanceled():
+                  return False
+              # simulate exceptions to show how to abort task
+              if 0 and random.randint(0, 500) == 42:
+                  # DO NOT raise Exception('bad value!')
+                  # this would crash QGIS
+                  self.exception = Exception('bad value!')
+                  return False
+          return True
+      def finished(self, result):
+          """
+          This function is automatically called when the task has
+          completed (successfully or not).
+          You implement finished() to do whatever follow-up stuff
+          should happen after the task is complete.
+          finished is always called from the main thread, so it's safe
+          to do GUI operations and raise Python exceptions here.
+          result is the return value from self.run.
+          """
+          if result:
+              QgsMessageLog.logMessage(
+                  'Task "{name}" completed\n' \
+                  'Total: {total} (with {iterations} '\
+                'iterations)'.format(
+                    name=self.description(),
+                    total=self.total,
+                    iterations=self.iterations),
+                MESSAGE_CATEGORY, Qgis.Success)
+          else:
+              if self.exception is None:
+                  QgsMessageLog.logMessage(
+                      'Task "{name}" not successful but without '\
+                      'exception (probably the task was manually '\
+                      'canceled by the user)'.format(
+                          name=self.description()),
+                      MESSAGE_CATEGORY, Qgis.Warning)
+              else:
+                  QgsMessageLog.logMessage(
+                      'Task "{name}" Exception: {exception}'.format(
+                          name=self.description(),
+                          exception=self.exception),
+                      MESSAGE_CATEGORY, Qgis.Critical)
+                  raise self.exception
+      def cancel(self):
+          QgsMessageLog.logMessage(
+              'Task "{name}" was cancelled'.format(
+                  name=self.description()),
+              MESSAGE_CATEGORY, Qgis.Info)
+          super().cancel()
+  
+  
+  longtask = MyTask('waste cpu long', 20)
+  shorttask = MyTask('waste cpu short', 10)
+  minitask = MyTask('waste cpu mini', 5)
+  st1 = MyTask('waste cpu Subtask 1', 5)
+  st2 = MyTask('waste cpu Subtask 2', 10)
+  st3 = MyTask('waste cpu Subtask 3', 4)
+  
+  # Add a subtask (st1) to shorttask that must run after minitask and
+  # longtask has finished
+  shorttask.addSubTask(st1, [minitask, longtask])
+  # Add a subtask to longtask that must be run before the parent task
+  longtask.addSubTask(st2, [], QgsTask.ParentDependsOnSubTask)
+  longtask.addSubTask(st3)
+  
+  QgsApplication.taskManager().addTask(longtask)
+  QgsApplication.taskManager().addTask(shorttask)
+  QgsApplication.taskManager().addTask(minitask)
+
 Task from function
 ..................
 
@@ -99,7 +206,7 @@ Task from a processing algorithm
 ................................
 
 .. code-block:: python
-  
+
   from functools import partial
   from qgis.core import (QgsTaskManager, QgsMessageLog,
                          QgsProcessingAlgRunnerTask, QgsApplication,
