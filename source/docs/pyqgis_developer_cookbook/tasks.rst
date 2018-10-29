@@ -14,6 +14,9 @@ While waiting for the documentation of this feature to be completed,
 have a look at
 http://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
 
+.. note::
+   Documentation in progress...
+
 Introduction
 ------------
 
