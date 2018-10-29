@@ -4,15 +4,9 @@
 
 .. _tasks:
 
-*****
-Tasks
-*****
-
-Tasks were introduced in QGIS 3, and is a convenient way to achieve
-threading.
-While waiting for the documentation of this feature to be completed,
-have a look at
-http://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
+******************************************
+Tasks - doing heavy work in the background
+******************************************
 
 .. note::
    Documentation in progress...
@@ -22,18 +16,17 @@ Introduction
 
 Background processing using threads is a way to maintain a responsive
 user interface when heavy processing is going on.
-
-:class:`QgsTask` and :class:`QgsTaskManager` simplify background
-processing in QGIS.
-They provide mechanisms for signalling, progress reporting and access
-to the status for background processes.
+Tasks can be used to achieve threading in QGIS.
 
 A task (:class:`QgsTask`) is a container for the code to be performed
 in the background, and the task manager (:class:`QgsTaskManager`) is
 used to control the running of the tasks.
+These classes simplify background processing in QGIS by providing
+mechanisms for signaling, progress reporting and access
+to the status for background processes.
 Tasks can be grouped using subtasks.
-See http://qgis.org/pyqgis for details on methods, signals and
-attributes.
+See the `QGIS Python API doc <http://qgis.org/pyqgis>`_  for details
+on methods, signals and attributes.
 
 The global task manager (found with ``QgsApplication.taskManager()``)
 is normally used.  This means that your tasks may not be the only
@@ -66,23 +59,23 @@ There are several ways to create a QGIS task:
    (creating widgets or altering things in the gui), as this is not
    allowed in Qt.
 
-Dependencies between tasks can be described using the addSubTask
+Dependencies between tasks can be described using the ``addSubTask``
 function of :class:`QgsTask`.
 When a dependency is stated, serial execution of the involved classes
 is ensured.
-If a task on which another task depends is cancelled, the dependent
-task will also be cancelled.
+If a task on which another task depends is canceled, the dependent
+task will also be canceled.
 Dependencies make deadlocks possible, so be careful.
 
 If a task depends on a layer being available, this can be stated
-using the setDependentLayers function of :class:`QgsTask`.
+using the ``setDependentLayers`` function of :class:`QgsTask`.
 If a layer on which a task depends is not available, the task will be
-cancelled.
+canceled.
 
 Once the task has been created it can be scheduled for running using
-the addTask function of the task manager.
+the ``addTask`` function of the task manager.
 The scheduling of the tasks is influenced by the task priority, which
-is set when in addTask.
+is set in ``addTask``.
 
 The status of tasks can be monitored using :class:`QgsTask` and
 :class:`QgsTaskManager` signals and functions.
@@ -123,7 +116,7 @@ dependencies.
           self.exception = None
       def run(self):
           """Here you implement your heavy lifting.
-          Should periodically test for isCancelled() to gracefully
+          Should periodically test for isCanceled() to gracefully
           abort.
           This method MUST return True or False
           raising exceptions will crash QGIS, so we handle them
@@ -185,7 +178,7 @@ dependencies.
                   raise self.exception
       def cancel(self):
           QgsMessageLog.logMessage(
-              'Task "{name}" was cancelled'.format(
+              'Task "{name}" was canceled'.format(
                   name=self.description()),
               MESSAGE_CATEGORY, Qgis.Info)
           super().cancel()
@@ -214,8 +207,8 @@ Task from function
 ..................
 
 Create a task from a function (``run`` in this example).
-The first parameter of the function will hold the QgsTask for the
-function.
+The first parameter of the function will hold the :class:`QgsTask`
+for the function.
 An important (named) parameter is ``on_finished``, that specifies a
 function that will work on the result.
 The ``run`` function in this example has an additional named
@@ -258,7 +251,7 @@ parameter ``wait_time``.
   
   def stopped(task):
       QgsMessageLog.logMessage(
-          'Task "{name}" was cancelled'.format(
+          'Task "{name}" was canceled'.format(
               name=task.description()),
           CATEGORY, Qgis.Info)
   
@@ -298,9 +291,9 @@ parameter ``wait_time``.
 Task from a processing algorithm
 ................................
 
-Create a task that uses qgis:randompointsinextent to generate 50000
-random points inside a specified extent and adds the result to the
-project in a safe way.
+Create a task that uses algorithm ``qgis:randompointsinextent`` to
+generate 50000 random points inside a specified extent and adds the
+result to the project in a safe way.
 
 .. code-block:: python
 
@@ -341,3 +334,4 @@ project in a safe way.
   task.executed.connect(partial(task_finished, context))
   QgsApplication.taskManager().addTask(task)
 
+See also: http://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
