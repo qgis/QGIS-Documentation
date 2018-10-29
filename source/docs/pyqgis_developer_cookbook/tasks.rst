@@ -56,9 +56,10 @@ There are several ways to create a QGIS task:
   
     QgsProcessingAlgRunnerTask(u'native:buffer', params, context, feedback)
 
-::note: A task must keep away from the graphical user interface
-(creating widgets or altering things in the gui), as this is not
-allowed in Qt.
+.. note::
+   A task must keep away from the graphical user interface
+   (creating widgets or altering things in the gui), as this is not
+   allowed in Qt.
 
 Dependencies between tasks can be described using the addSubTask
 function of :class:`QgsTask`.
