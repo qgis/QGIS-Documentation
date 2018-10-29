@@ -98,7 +98,7 @@ Extending QgsTask
 integers between 0 and 100 during a specified period of time.
 If the random number is 42, the task is aborted and an exception
 is raised.
-Several instances of :class:`MyTask` (with subtasks) are generated
+Several instances of ``MyTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
 
