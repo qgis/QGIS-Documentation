@@ -169,12 +169,12 @@ Missing (null) values
 * Enter edit mode and digitize three point somewhere among the other points.
 * Alternatively, use the same random point generation method as before, but
   specify only **three** points.
-* Save your new layer as :guilabel:`distance_points` in the format you prefer.
+* Save your new layer as :guilabel:`Distance Points` in the format you prefer.
 
 To generate a distance matrix using these points:
 
 * Open the tool :menuselection:`Vector Analysis --> Distance matrix`.
-* Select the :guilabel:`distance_points` layer as the input layer, and the
+* Select the :guilabel:`Distance Points` layer as the input layer, and the
   :guilabel:`Sampled Points` layer as the target layer.
 * Set it up like this:
 
@@ -185,7 +185,7 @@ To generate a distance matrix using these points:
   and save the temporary output layer in a second moment.
 * Click **[Run]** to generate the distance matrix layer.
 * Open the attribute table of the generated layer: values refer to the distances
-  between the :guilabel:`distance_points` layer and the first two points found of
+  between the :guilabel:`Distance Points` layer and the first two points found of
   the :guilabel:`Sampled Points` one:
 
 .. image:: img/distance_matrix_example.png
