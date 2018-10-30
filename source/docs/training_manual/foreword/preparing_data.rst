@@ -24,7 +24,7 @@ more complex data sources which may or may not be available for your region.
 
 .. note:: These instructions assume you have a good knowledge of QGIS and are
   not intended to be used as teaching material.
-  
+
 |hard| |TY|  Create OSM based vector Files
 --------------------------------------------------------------------------------
 
@@ -34,9 +34,9 @@ should have a good mix of urban and rural areas, containing roads of differing
 significance, area boundaries (such as nature reserves or farms) and surface
 water, such as streams and rivers.
 
-#. Open a new QGIS project;
+#. Open a new QGIS project.
 #. Select :menuselection:`Layer --> Data Source Manager` to open the
-   :guilabel:`Data Source Manager` dialog;
+   :guilabel:`Data Source Manager` dialog.
 #. In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down menu
    and double-click the :guilabel:`OpenStreetMap` item.
 
@@ -44,7 +44,7 @@ water, such as streams and rivers.
       :align: center
 
    A map of the world is now visible on the map canvas;
-#. Close the :guilabel:`Data Source Manager` dialog;
+#. Close the :guilabel:`Data Source Manager` dialog.
 #. Move to the area you'd like to use as study area.
 
    .. image:: img/swellendam_neighborhood.png
@@ -53,23 +53,23 @@ water, such as streams and rivers.
 Now that we have the area we'll extract the data from, let's enable the extraction
 tools.
 
-#. Go to :menuselection:`Plugins --> Manage/Install Plugins...`
-#. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box;
+#. Go to :menuselection:`Plugins --> Manage/Install Plugins...`.
+#. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box.
 #. Select the QuickOSM plugin, press **[Install plugin]** and then **[Close]**
-   the dialog;
+   the dialog.
 
    .. image:: img/quickosm_plugin_download.png
       :align: center
 
-#. Execute the new plugin from :menuselection:`Vector --> QuickOSM --> QuickOSM`
+#. Execute the new plugin from :menuselection:`Vector --> QuickOSM --> QuickOSM`.
 #. In the :guilabel:`Quick query` tab, select ``building`` in the :guilabel:`Key`
-   drop-down menu;
+   drop-down menu.
 #. Leave empty the :guilabel:`Value` field, meaning that you are querying any
-   building;
-#. Select :guilabel:`Canvas Extent` in the next drop-down menu;
+   building.
+#. Select :guilabel:`Canvas Extent` in the next drop-down menu.
 #. Expand the :guilabel:`Advanced` group below and uncheck on the right all
-   geometry types except :guilabel:`Multipolygons`;
-#. Press **[Run query]**;
+   geometry types except :guilabel:`Multipolygons`.
+#. Press **[Run query]**.
 
    .. image:: img/building_query_builder.png
       :align: center
@@ -78,18 +78,18 @@ tools.
    buildings in the selected extent.
 #. Proceed as above to extract other data:
 
-   #. ``Key = landuse`` and ``Multipolygons`` geometry type;
-   #. ``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type;
-   #. ``Key = place`` and ``Points`` geometry type;
-   #. ``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types;
+   #. ``Key = landuse`` and ``Multipolygons`` geometry type.
+   #. ``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type.
+   #. ``Key = place`` and ``Points`` geometry type.
+   #. ``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types.
    #. ``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``
-      geometry types;
+      geometry types.
 
 The above process adds the layers as temporary files (indicated by the
 |indicatorMemory| icon next to their name).
 
-   .. image:: img/osm_data_loaded.png
-      :align: center
+.. image:: img/osm_data_loaded.png
+  :align: center
 
 You can sample the data your region contains in order to see what kind of
 results your region will yield.
@@ -98,45 +98,45 @@ We now need to save the resulting data as a shapefile for you to use during your
 course:
 
 #. Click the |indicatorMemory| icon next to the :guilabel:`building` layer,
-   opening the :guilabel:`Save Scratch Layer` dialog;
+   opening the :guilabel:`Save Scratch Layer` dialog.
 
    .. note:: If you need to replace some particular properties (CRS, extent,
     fields...) of the temporary layer, use instead the :menuselection:`Export
     --> Save Features as...` contextual menu, and ensure the :guilabel:`Add
     saved file to map` option is checked. A new layer is added in such case.
 
-#. Make sure the format is :guilabel:`ESRI Shapefile`;
+#. Make sure the format is :guilabel:`ESRI Shapefile`.
 #. Use the **[...]** button to browse to the :file:`exercise_data/shapefile/`
-   folder and save the file as :file:`buildings.shp`;
+   folder and save the file as :file:`buildings.shp`.
 
    .. image:: img/save_osm_building.png
       :align: center
 
-#. Press :guilabel:`OK`;
+#. Press **[OK]**.
 
    In the :guilabel:`Layers` panel, the temporary :guilabel:`building` layer is
    swapped in place with the saved :guilabel:`buildings` shapefile layer and
    the temporary icon next to it removed.
 #. Repeat the process for other layers, renaming them as follows:
 
-   * ``natural_water`` into ``water``;
-   * ``waterway_river`` into ``rivers``;
-   * ``place`` into ``places``;
+   * ``natural_water`` into ``water``.
+   * ``waterway_river`` into ``rivers``.
+   * ``place`` into ``places``.
    * ``highway`` into ``roads``.
 
    Each resulting data set should be saved in the :file:`exercise_data/shapefile/`
    directory.
-   
+
    .. note:: For convenience, you'll also need to rename each layer:
     double-click the layer to open its :menuselection:`Layer Properties -->
     Source` tab and update the :guilabel:`Layer name` property accordingly.
-    
 
-The last step is to create a spatiaLite file from the :file:`landuse` layer to
+
+The last step is to create a SpatiaLite file from the :file:`landuse` layer to
 use during the course:
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer;
-#. Select the :guilabel:`SpatiaLite` format;
+#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer.
+#. Select the :guilabel:`SpatiaLite` format.
 #. save the file as :file:`landuse.sqlite` under the :file:`exercise_data/`
    folder. By default, the :guilabel:`Layer name` is filled as the file name.
    Do not change it.
@@ -144,13 +144,13 @@ use during the course:
    .. image:: img/save_osm_landuse.png
       :align: center
 
-#. Press :guilabel:`OK`.
+#. Press **[OK]**.
 
 You should now have a map which looks something like this (the symbology will
 certainly be very different, but that is fine):
 
-   .. image:: img/post_osm_import.png
-      :align: center
+.. image:: img/post_osm_import.png
+  :align: center
 
 The important thing is that you have 6 vector layers matching those shown above
 and that all those layers have some data.
