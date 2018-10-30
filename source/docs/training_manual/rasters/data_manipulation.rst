@@ -21,38 +21,26 @@ environment.
 |basic| |FA| Loading Raster Data
 -------------------------------------------------------------------------------
 
-* Open your :kbd:`analysis.qgs` map (which you should have created and saved
-  during the previous module).
-* Deactivate all the layers except the :guilabel:`solution` and
-  :guilabel:`important_roads` layers.
-* Click on the :guilabel:`Load Raster Layer` button:
+Raster data can be loaded with the same methods we used for vector data.
+However we really suggest to use the :guilabel:`Browser` Panel.
 
-  |addRasterLayer|
+* Open the :guilabel:`Browser` Panel and open the :file:`exercise_data/raster`
+  folder.
+* Load all the data in this folder:
 
-The :guilabel:`Load Raster Layer` dialog will open. The data for this project
-is in :kbd:`exercise_data/raster`.
+  * :file:`3320C_2010_314_RGB_LATLNG.tif`
+  * :file:`3320D_2010_315_RGB_LATLNG.tif`
+  * :file:`3420B_2010_328_RGB_LATLNG.tif`
+  * :file:`3420C_2010_327_RGB_LATLNG.tif`
 
-* Either load them all in separately, or hold down :kbd:`Ctrl` and click on all
-  four of them in turn, then open them at the same time.
-
-The first thing you'll notice is that nothing seems to be happening in your
-map. Are the rasters not loading? Well, there they are in the :guilabel:`Layers
-list`, so obviously they did load. The problem is that they're not in the same
-projection. Luckily, we've already seen what to do in this situation.
-
-* Select :menuselection:`Project --> Properties...` in the menu:
-* Select :guilabel:`CRS` tab in the menu:
-* Enable "on the fly" reprojection.
-* Set it to the same projection as the rest of your data (:kbd:`WGS 84 / UTM
-  zone 33S`).
-* Click :guilabel:`OK`.
-
-The rasters should fit nicely:
+You should see the following map:
 
 .. image:: img/raster_step_one.png
    :align: center
 
 There we have it - four aerial photographs covering our whole study area.
+
+.. _tm_virtual_raster:
 
 |basic| |FA| Create a Virtual Raster
 -------------------------------------------------------------------------------
@@ -64,45 +52,39 @@ one (composite) image, right?
 
 Luckily, QGIS allows you to do exactly this, and without needing to actually
 create a new raster file, which could take up a lot of space. Instead, you can
-create a *Virtual Raster*. This is also often called a *Catalog*, which
+create a **Virtual Raster**. This is also often called a *Catalog*, which
 explains its function. It's not really a new raster. Rather, it's a way to
 organize your existing rasters into one catalog: one file for easy access.
 
-To make a catalog:
+To make a catalog we will again use |toolbox|.
 
-* Click on the menu item :menuselection:`Raster --> Miscellaneous --> Build
-  Virtual Raster (Catalog)`.
-* In the dialog that appears, check the box next to :guilabel:`Use visible
-  raster layers for input`.
-* Enter :kbd:`exercise_data/residential_development` as the output location.
-* Enter :kbd:`aerial_photos.vrt` as the file name.
-* Check the :guilabel:`Load into canvas when finished` button.
+#. Click on the menu item :menuselection:`GDAL --> Raster miscellaneous --> Build
+   virtual raster`.
+#. In the dialog that appears click on the |browseButton| button next to the
+   :guilabel:`Input layers` parameter and check all the layers or use the
+   :guilabel:`Select All` button.
+#. Uncheck the :guilabel:`Place each input file into a separate band` parameter.
+#. Finally click on **[Run]**.
+
+.. note:: As you know from the previous modules, :guilabel:`Processing` creates
+    temporary layers by default. If you want you can click on the |browseButton|
+    button to save the file on the disk.
 
 Notice the text field below. What this dialog is actually doing is that it's
 writing that text for you. It's a long command that QGIS is going to run.
 
-.. note::  |hard| Keep in mind that the command text is editable, so you can
-   customize the command further if preferred. Search online for the initial
-   command (in this case, :kbd:`gdalbuildvrt`) for help on the syntax.
-
-* Click :guilabel:`OK` to run the command.
+.. note::  |hard| Keep in mind that you can copy and paste the text in the
+    ``OSGEO Shell`` (Windows user) or ``Terminal`` (Linux and OSX users) to run
+    the command. You can also create script with this each GDAL command. This
+    is very handy when the procedure is taking a long time or when you want to
+    schedule specific tasks. Refer always to the :guilabel:`Help` button to get
+    more help on the syntax or the GDAL command ``gdalbuildvrt``.
 
 .. image:: img/build_virtual_raster.png
    :align: center
 
-
-It may take a while to complete. When it's done, it will tell you so with a
-message box.
-
-* Click :guilabel:`OK` to chase the message away.
-* Click :guilabel:`Close` on the :guilabel:`Build Virtual Raster (Catalog)`
-  dialog.  (Don't click :guilabel:`OK` again, otherwise it's going to start
-  running that command again.)
-* You can now remove the original four rasters from the :guilabel:`Layers
-  list`.
-* If necessary, click and drag the new :guilabel:`aerial_photos` raster catalog
-  layer to the bottom of the :guilabel:`Layers` panel so that the other
-  activated layers become visible.
+You can now remove the original four rasters from the :guilabel:`Layers` Panel
+and leave only the output virtual catalog rater.
 
 |hard| Transforming Raster Data
 -------------------------------------------------------------------------------
@@ -116,12 +98,13 @@ rasters in a map, but it may take some time to set up initially.
 Reprojecting rasters
 ...............................................................................
 
-* Click on the menu item :menuselection:`Raster --> Projections --> Warp
-  (Reproject)`.
+Click on the menu item :menuselection:`GDAL --> Raster projections --> Warp
+(reproject)`.
 
-Note that this tool features a handy batch option for reprojecting the contents
-of whole directories. You can also reproject virtual rasters (catalogs), as
-well as enabling a multithreaded processing mode.
+You can also reproject virtual rasters (catalogs), as well as enabling a
+multithreaded processing mode and many other options are available.
+
+
 
 .. image:: img/warp_rasters.png
    :align: center
@@ -129,16 +112,16 @@ well as enabling a multithreaded processing mode.
 Merging rasters
 ...............................................................................
 
-* Click on the menu item :menuselection:`Raster --> Miscellaneous --> Merge`.
+Click on the menu item :menuselection:`GDAL --> Raster miscellaneous --> Merge`.
 
-You can choose to process entire directories instead of single files, giving
-you a very useful built-in batch processing capability. You can specify a
-virtual raster as input file, too, and all of the rasters that it consists of
-will be processed.
+As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>` you can use
+the |browseButton| to choose which layers you want to merge.
 
-You can also add your own command line options using the :guilabel:`Creation
-Options` checkbox and list. This only applies if you have knowledge of the GDAL
-library's operation.
+You can merge Virtual raster as input file too, and all of the rasters that it
+consists of will be processed.
+
+You can also add your own command line options by opening the :guilabel:`Advanced parameters`
+menu, but you need to know the GDAL library syntax.
 
 .. image:: img/merge_rasters.png
    :align: center
@@ -165,8 +148,9 @@ symbolization is useful in the case of rasters as well.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.5em
 .. |basic| image:: /static/global/basic.png
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
 .. |hard| image:: /static/global/hard.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |toolbox| replace:: :menuselection:`Processing --> Toolbox`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
