@@ -206,7 +206,7 @@ manually choose the start and end points.
   the clicked point.
 * Do the same thing for :guilabel:`End Point(x,y)`.
 * Open the :guilabel:`Advanced parameter` menu.
-* Choose the ``speed`` field in the :guilabel:`Speed Field` menu. With this
+* Choose the ``speed`` field as the :guilabel:`Speed Field` parameter. With this
   option the algorithm will take into account the speed values for each road.
 
   .. image:: img/speed_limit_parameters.png
