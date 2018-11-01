@@ -14,35 +14,37 @@ Geometry Checker is a powerful core plugin to check and fix the geometry
 validity of a layer. The :guilabel:`Geometry Checker` dialog show
 different grouped settings in the first tab (:guilabel:`Settings`):
 
-* :guilabel:`Input vector layer`: to select the layer to check. A |checkbox|
+* :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
   :guilabel:`Only selected features` checkbox can filter the geometry to the
   one selected.
-* :guilabel:`Geometry validity`: give to the user the choice between
-  :guilabel:`Self intersections`, :guilabel:`Duplicate nodes`,
-  :guilabel:`Polygon with less than 3 nodes`.
 * :guilabel:`Allowed geometry types`: to allow only some geometry types like
   point, multipoint, line, multiline, polygon and multipolygon.
-* :guilabel:`Geometry properties` displays |checkbox| `Polygons and
-  multipolygons may not contain any holes` and |checkbox| :guilabel:`Multipart
-  objects must consist of more than one part`.
+* :guilabel:`Geometry validity`: depending on geometry types, the user can
+  choose |checkbox| :guilabel:`Self intersections`, |checkbox| :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts`
+  and |checkbox| :guilabel:`Polygon with less than 3
+  nodes`.
+* :guilabel:`Geometry properties`: depending on geometry types, the user can
+  choose |checkbox| :guilabel:`Polygons and multipolygons may not contain any
+  holes`, |checkbox| :guilabel:`Multipart objects must consist of more than one
+  part` and |checkbox| :guilabel:`Lines must not have dangles`.
 * :guilabel:`Geometry conditions`: user can add some condition to validate the
   geometries with a minimal segment length, a minimum angle between segment,
   a minimal polygon area and sliver polygons detection.
-* :guilabel:`Topology checks`: checks for duplicates, for features within other
-  features, overlaps smaller than a number, for gaps smaller than a number.
+* :guilabel:`Topology checks`: depending on geometry types, the user can choose
+  |checkbox| :guilabel:`Checks for duplicates`, |checkbox| :guilabel:`Checks
+  for features within other features`, |checkbox| :guilabel:`Checks for
+  overlaps smaller than`, |checkbox| :guilabel:`Checks for gaps smaller than`,
+  |checkbox| :guilabel:`Points must be covered by lines`, |checkbox|
+  :guilabel:`Points must properly lie inside a polygon`, |checkbox|
+  :guilabel:`Lines must not intersect any other lines`, |checkbox|
+  :guilabel:`Lines must not intersect with features of layer`, |checkbox|
+  :guilabel:`Polygons must follow boundaries of layer`.
 * :guilabel:`Tolerance`: you can define here the tolerance for the check.
 * :guilabel:`Output vector layer` gives the choice to the user how get the
   result between modify the current layer and create a new layer.
 
 After you are happy with the configuration, you can click on the **[Run]** button.
 
-The results appear in the second tab and as an overview layer of the errors in
-the canvas (its name is *checker*). A table list the :guilabel:`geometry check
-result` with one error by row: the first row is an ID, the second the reason of
-the error, then the coordinates of the error, a value (depending on the type of
-the error) and finally the resolution column which indicates the resolution of
-the error. At the bottom of this table, you can export the error into a
-shapefile. At the left, you have the number of the errors and the fixed errors.
 
 .. _figure_geometry_checker:
 
@@ -50,6 +52,7 @@ shapefile. At the left, you have the number of the errors and the fixed errors.
    :align: center
 
    The Geometry Checker Plugin
+
 
 The *Geometry Checker Plugin* can find the following errors:
 
@@ -74,6 +77,14 @@ The following figure shows the different checks made by the plugin.
    :align: center
 
    The Differents checks supported by the plugin
+
+The results appear in the second tab and as an overview layer of the errors in
+the canvas (its name is *checker*). A table list the :guilabel:`geometry check
+result` with one error by row: the first row is an ID, the second the reason of
+the error, then the coordinates of the error, a value (depending on the type of
+the error) and finally the resolution column which indicates the resolution of
+the error. At the bottom of this table, you can export the error into a
+shapefile. At the left, you have the number of the errors and the fixed errors.
 
 You can select a row to see the localisation of the error. You can change this
 behaviour by selecting another action between :guilabel:`error` (default),
