@@ -78,16 +78,17 @@ The following figure shows the different checks made by the plugin.
 
    The Differents checks supported by the plugin
 
-The results appear in the second tab and as an overview layer of the errors in
-the canvas (its name is *checker*). A table list the :guilabel:`geometry check
-result` with one error by row: the first row is an ID, the second the reason of
-the error, then the coordinates of the error, a value (depending on the type of
-the error) and finally the resolution column which indicates the resolution of
-the error. At the bottom of this table, you can export the error into a
-shapefile. At the left, you have the number of the errors and the fixed errors.
+The results appear in the second tab (:guilabel:`Result`) and as an overview
+layer of the errors in the canvas (its name has the default prefix *checked_*).
+A table list the :guilabel:`Geometry check result` with one error by row and
+columns containing: the layer name, an ID, the error type, then the coordinates
+of the error, a value (depending on the type of the error) and finally the
+resolution column which indicates the resolution of the error.
+At the bottom of this table, you can **[Export]** the error into different file
+formats. You have a counter with the number of total errors and fixed ones.
 
 You can select a row to see the localisation of the error. You can change this
-behaviour by selecting another action between :guilabel:`error` (default),
+behaviour by selecting another action between :guilabel:`Error` (default),
 :guilabel:`Feature`, :guilabel:`Don't move`, and |checkbox| `Highlight contour
 of selected features`.
 
