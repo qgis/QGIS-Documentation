@@ -11,8 +11,11 @@ Geometry Checker Plugin
 =======================
 
 Geometry Checker is a powerful core plugin to check and fix the geometry
-validity of a layer. The |geometryChecker| :guilabel:`Geometry Checker` dialog show
-different grouped settings in the first tab (:guilabel:`Setup`):
+validity of a layer. It is available from the :menuselection:`Vector -->`
+|geometryChecker| :menuselection:`Geometry Checker` menu.
+
+The :guilabel:`Geometry Checker` dialog show different grouped settings in the first tab
+(:guilabel:`Setup`):
 
 * :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
   :guilabel:`Only selected features` checkbox can filter the geometry to the
@@ -20,9 +23,9 @@ different grouped settings in the first tab (:guilabel:`Setup`):
 * :guilabel:`Allowed geometry types`: to allow only some geometry types like
   point, multipoint, line, multiline, polygon and multipolygon.
 * :guilabel:`Geometry validity`: depending on geometry types, the user can
-  choose |checkbox| :guilabel:`Self intersections`, |checkbox| :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts`
-  and |checkbox| :guilabel:`Polygon with less than 3
-  nodes`.
+  choose |checkbox| :guilabel:`Self intersections`, |checkbox|
+  :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts`
+  and |checkbox| :guilabel:`Polygon with less than 3 nodes`.
 * :guilabel:`Geometry properties`: depending on geometry types, the user can
   choose |checkbox| :guilabel:`Polygons and multipolygons may not contain any
   holes`, |checkbox| :guilabel:`Multipart objects must consist of more than one
@@ -33,12 +36,13 @@ different grouped settings in the first tab (:guilabel:`Setup`):
 * :guilabel:`Topology checks`: depending on geometry types, the user can choose
   |checkbox| :guilabel:`Checks for duplicates`, |checkbox| :guilabel:`Checks
   for features within other features`, |checkbox| :guilabel:`Checks for
-  overlaps smaller than`, |checkbox| :guilabel:`Checks for gaps smaller than`,
-  |checkbox| :guilabel:`Points must be covered by lines`, |checkbox|
-  :guilabel:`Points must properly lie inside a polygon`, |checkbox|
-  :guilabel:`Lines must not intersect any other lines`, |checkbox|
-  :guilabel:`Lines must not intersect with features of layer`, |checkbox|
-  :guilabel:`Polygons must follow boundaries of layer`.
+  overlaps smaller than` a number |selectNumber|, |checkbox| :guilabel:`Checks
+  for gaps smaller than` a number |selectNumber|, |checkbox| :guilabel:`Points
+  must be covered by lines`, |checkbox| :guilabel:`Points must properly lie
+  inside a polygon`, |checkbox| :guilabel:`Lines must not intersect any other
+  lines`, |checkbox| :guilabel:`Lines must not intersect with features of
+  layer` |selectString|, |checkbox| :guilabel:`Polygons must follow boundaries
+  of layer` |selectString|.
 * :guilabel:`Tolerance`: you can define here the tolerance for the check.
 * :guilabel:`Output vector layer` gives the choice to the user how get the
   result between modify the current layer and create a new layer.
@@ -85,7 +89,7 @@ columns containing: the layer name, an ID, the error type, then the coordinates
 of the error, a value (depending on the type of the error) and finally the
 resolution column which indicates the resolution of the error.
 At the bottom of this table, you can **[Export]** the error into different file
-formats. You have a counter with the number of total errors and fixed ones.
+formats. You also have a counter with the number of total errors and fixed ones.
 
 You can select a row to see the localisation of the error. You can change this
 behaviour by selecting another action between :guilabel:`Error` (default),
