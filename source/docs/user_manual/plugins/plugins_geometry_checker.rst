@@ -14,14 +14,14 @@ Geometry Checker is a powerful core plugin to check and fix the geometry
 validity of a layer. It is available from the :menuselection:`Vector -->`
 |geometryChecker| :menuselection:`Geometry Checker` menu.
 
-The :guilabel:`Geometry Checker` dialog show different grouped settings in the first tab
-(:guilabel:`Setup`):
+The :guilabel:`Geometry Checker` dialog show different grouped settings in the
+first tab (:guilabel:`Setup`):
 
-* :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
-  :guilabel:`Only selected features` checkbox can filter the geometry to the
-  one selected.
-* :guilabel:`Allowed geometry types`: to allow only some geometry types like
-  point, multipoint, line, multiline, polygon and multipolygon.
+* :guilabel:`Input vector layers`: to select the layers to check. A
+  |checkbox| :guilabel:`Only selected features` checkbox can filter the
+  geometry to the one selected.
+* :guilabel:`Allowed geometry types`: to allow only some geometry types
+  like point, multipoint, line, multiline, polygon and multipolygon.
 * :guilabel:`Geometry validity`: depending on geometry types, the user can
   choose |checkbox| :guilabel:`Self intersections`, |checkbox|
   :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts`
@@ -83,7 +83,8 @@ The following figure shows the different checks made by the plugin.
    The Differents checks supported by the plugin
 
 The results appear in the second tab (:guilabel:`Result`) and as an overview
-layer of the errors in the canvas (its name has the default prefix *checked_*).
+layer of the errors in the canvas (its name has the default prefix
+:file:`checked_`).
 A table list the :guilabel:`Geometry check result` with one error by row and
 columns containing: the layer name, an ID, the error type, then the coordinates
 of the error, a value (depending on the type of the error) and finally the
@@ -92,20 +93,21 @@ At the bottom of this table, you can **[Export]** the error into different file
 formats. You also have a counter with the number of total errors and fixed ones.
 
 You can select a row to see the localisation of the error. You can change this
-behaviour by selecting another action between :guilabel:`Error` (default),
-:guilabel:`Feature`, :guilabel:`Don't move`, and |checkbox| `Highlight contour
-of selected features`.
+behaviour by selecting another action between |radioButtonOn| :guilabel:`Error`
+(default), |radioButtonOff| :guilabel:`Feature`, |radioButtonOff|
+:guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight contour of selected
+features`.
 
 Below the zoom action when clicking on the table row, you can :guilabel:`Show
-the selected features in attribute table`, :guilabel:`Fix selected errors using
-default resolution` and :guilabel:`Fix selected errors, prompt for resolution
+selected features in attribute table`, :guilabel:`Fix selected errors using
+default resolution` and |options| :guilabel:`Fix selected errors, prompt for resolution
 method`. In the latter, you will see a window to choose the resolution's method
 among which:
 
 * Merge with neighboring polygon with longest shared edge,
 * Merge with neighboring polygon with largest area,
-* Merge with neighboring polygon identical attribute value,if any, or leave
-  as it
+* Merge with neighboring polygon with identical attribute value, if any, or
+leave as is
 * Delete feature
 * No action
 
@@ -131,5 +133,7 @@ by attribute value`.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
-      :width: 1.3em
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
