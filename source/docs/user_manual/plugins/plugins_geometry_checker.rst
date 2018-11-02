@@ -47,7 +47,8 @@ first tab (:guilabel:`Setup`):
 * :guilabel:`Output vector layer` gives the choice to the user how get the
   result between modify the current layer and create a new layer.
 
-After you are happy with the configuration, you can click on the **[Run]** button.
+After you are happy with the configuration, you can click on the **[Run]**
+button.
 
 
 .. _figure_geometry_checker:
@@ -98,11 +99,14 @@ behaviour by selecting another action between |radioButtonOn| :guilabel:`Error`
 :guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight contour of selected
 features`.
 
-Below the zoom action when clicking on the table row, you can :guilabel:`Show
-selected features in attribute table`, :guilabel:`Fix selected errors using
-default resolution` and |options| :guilabel:`Fix selected errors, prompt for resolution
-method`. In the latter, you will see a window to choose the resolution's method
-among which:
+Below the zoom action when clicking on the table row, you can:
+|featureInTable| :guilabel:`Show selected features in attribute table`,
+|success| :guilabel:`Fix selected errors using default resolution` and
+|success| |options| :guilabel:`Fix selected errors, prompt for resolution
+method`.
+The default action could be changed with the last icon |settings|
+:guilabel:`Error resolution settings`: you will see a window to choose the
+resolution's method among which:
 
 * Merge with neighboring polygon with longest shared edge,
 * Merge with neighboring polygon with largest area,
@@ -111,14 +115,14 @@ leave as is
 * Delete feature
 * No action
 
+For some type of errors, you can change the default action between some
+specific action or :guilabel:`No action`.
+
 .. tip:: **Fix multiple errors**
 
    You can fix multiple errors by selecting more than one row in the table with
    the *CTRL + click* action.
 
-The default action could be changed with the last icon :guilabel:`Error
-resolution settings`. For some type of errors, you can change the default
-action between some specific action or :guilabel:`No action`.
 
 Finally, you can choose which :guilabel:`attribute to use when merging features
 by attribute value`.
@@ -132,8 +136,18 @@ by attribute value`.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |featureInTable| image:: /static/common/mActionFromSelectedFeature.png
+   :width: 1em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
