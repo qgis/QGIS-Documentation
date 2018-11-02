@@ -102,16 +102,16 @@ features`.
 Below the zoom action when clicking on the table row, you can:
 |featureInTable| :guilabel:`Show selected features in attribute table`,
 |success| :guilabel:`Fix selected errors using default resolution` and
-|success| |options| :guilabel:`Fix selected errors, prompt for resolution
+|success| :guilabel:`Fix selected errors, prompt for resolution
 method`.
-The default action could be changed with the last icon |settings|
+The default action could be changed with the last icon |options|
 :guilabel:`Error resolution settings`: you will see a window to choose the
 resolution's method among which:
 
 * Merge with neighboring polygon with longest shared edge,
 * Merge with neighboring polygon with largest area,
 * Merge with neighboring polygon with identical attribute value, if any, or
-leave as is
+  leave as is
 * Delete feature
 * No action
 
