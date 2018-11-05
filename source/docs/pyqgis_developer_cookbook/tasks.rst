@@ -8,9 +8,6 @@
 Tasks - doing heavy work in the background
 ******************************************
 
-.. note::
-   Documentation in progress...
-
 Introduction
 ------------
 
