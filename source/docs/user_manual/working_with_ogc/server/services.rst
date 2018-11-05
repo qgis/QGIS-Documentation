@@ -19,6 +19,7 @@ by the **Open Geospatial Consortium (OGC)**:
 - WMS 1.1.0 and 1.3.0
 - WFS 1.0.0 and 1.1.0
 - WCS 1.1.1
+- WMTS 1.0.0
 
 Extra vendor parameters and requests are supported in addition to the
 original standard that greatly enhance the possibilities of customizing its
@@ -971,6 +972,510 @@ URL example:
   &VERSION=1.1.0
   &REQUEST=GetFeature
   &STARTINDEX=2
+  &...
+
+
+Web Map Tile Service (WMTS)
+===========================
+
+The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP
+interface to request tiled map images generated from a QGIS project. A typical
+WMTS request defined the QGIS project to use, some WMS parameters like layers
+to render, as well as tile parameters.
+
+Specifications document of the service:
+
+- `WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_
+
+Standard requests provided by QGIS Server:
+
++--------------------+-----------------------------------------------------------+
+| Request            |  Description                                              |
++====================+===========================================================+
+| GetCapabilities    | Returns XML metadata with information about the server    |
++--------------------+-----------------------------------------------------------+
+| GetTile            | Returns a tile                                            |
++--------------------+-----------------------------------------------------------+
+| GetFeatureInfo     | Retrieves data (geometry and values) for a pixel location |
++--------------------+-----------------------------------------------------------+
+
+
+.. _`qgisserver-wmts-getcapabilities`:
+
+GetCapabilities
+---------------
+
+Standard parameters for the **GetCapabilities** request according to the OGC WMTS 1.0.0
+specifications:
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| SERVICE       | Yes      | Name of the service              |
++---------------+----------+----------------------------------+
+| REQUEST       | Yes      | Name of the request              |
++---------------+----------+----------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetCapabilities** request.
+
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &...
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetCapabilities
+  &...
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetCapabilities
+  &MAP=/home/user/project.qgs
+  &...
+
+
+.. _`qgisserver-wmts-gettile`:
+
+GetTile
+-------
+
+Standard parameters for the **GetTile** request according to the OGC WMTS 1.0.0
+specifications:
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| SERVICE       | Yes      | Name of the service              |
++---------------+----------+----------------------------------+
+| REQUEST       | Yes      | Name of the request              |
++---------------+----------+----------------------------------+
+| LAYER         | Yes      | Layer identifier                 |
++---------------+----------+----------------------------------+
+| FORMAT        | Yes      | Output format of the tile        |
++---------------+----------+----------------------------------+
+| TILEMATRIXSET | Yes      | Name of the pyramid              |
++---------------+----------+----------------------------------+
+| TILEMATRIX    | Yes      | Meshing                          |
++---------------+----------+----------------------------------+
+| TILEROW       | Yes      | Row coordinate in the mesh       |
++---------------+----------+----------------------------------+
+| TILECOL       | Yes      | Column coordinate in the mesh    |
++---------------+----------+----------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetTile** request.
+
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &...
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetTile`` in case of the **GetTile** request.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &...
+
+
+LAYER
+^^^^^
+
+This parameter allows to specify the layer to display on the tile.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYER=mylayer
+  &...
+
+In addition, QGIS Server introduced some options to select a layer by:
+
+* a short name
+* the layer id
+
+The short name of a layer may be configured through
+:menuselection:`Properties --> Metadata` in layer menu. If the short name is
+defined, then it's used by default instead of the layer's name:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYERS=mynickname
+  &...
+
+Moreover, there's a project option allowing to select layers by their id in
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Project Properties` dialog. To activate this
+option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &LAYERS=mylayerid1,mylayerid2
+  &...
+
+FORMAT
+^^^^^^
+
+This parameter may be used to specify the format of tile image. Available
+values are:
+
+- ``jpg``
+- ``jpeg``
+- ``image/jpeg``
+- ``image/png``
+
+If the ``FORMAT`` parameter is different from one of these values, then the
+default format PNG is used instead.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &FORMAT=image/jpeg
+  &...
+
+
+TILEMATRIXSET
+^^^^^^^^^^^^^
+
+This parameter allows to define the CRS to use to compute the underlying
+pyramid and has to be formed like ``EPSG:XXXX``..
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &TILEMATRIXSET=EPSG:4326
+  &...
+
+TILEMATRIX
+^^^^^^^^^^
+
+This parameter allows to define the matrix to use for the output tile.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &TILEMATRIX=0
+  &...
+
+TILEROW
+^^^^^^^
+
+This parameter allows to select the row of the tile to get within the matrix.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &TILEROW=0
+  &...
+
+TILECOL
+^^^^^^^
+
+This parameter allows to select the column of the tile to get within the
+matrix.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &TILECOL=0
+  &...
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &MAP=/home/user/project.qgs
+  &...
+
+
+.. _`qgisserver-wmts-getfeatureinfo`:
+
+GetFeatureInfo
+--------------
+
+Standard parameters for the **GetFeatureInfo** request according to the OGC WMTS 1.0.0
+specifications:
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| SERVICE       | Yes      | Name of the service              |
++---------------+----------+----------------------------------+
+| REQUEST       | Yes      | Name of the request              |
++---------------+----------+----------------------------------+
+| LAYER         | Yes      | Layer identifier                 |
++---------------+----------+----------------------------------+
+| INFOFORMAT    | No       | Output format                    |
++---------------+----------+----------------------------------+
+| I             | No       | X coordinate of a pixel          |
++---------------+----------+----------------------------------+
+| J             | No       | Y coordinate of a pixel          |
++---------------+----------+----------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request.
+
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &...
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetFeatureInfo
+  &...
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetCapabilities
+  &MAP=/home/user/project.qgs
+  &...
+
+
+LAYER
+^^^^^
+
+This parameter allows to specify the layer to display on the tile.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYER=mylayer
+  &...
+
+In addition, QGIS Server introduced some options to select a layer by:
+
+* a short name
+* the layer id
+
+The short name of a layer may be configured through
+:menuselection:`Properties --> Metadata` in layer menu. If the short name is
+defined, then it's used by default instead of the layer's name:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYERS=mynickname
+  &...
+
+Moreover, there's a project option allowing to select layers by their id in
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Project Properties` dialog. To activate this
+option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &LAYERS=mylayerid1,mylayerid2
+  &...
+
+
+INFOFORMAT
+^^^^^^^^^^
+
+This parameter allows to define the output format of the result. Available
+values are:
+
+- ``text/xml``
+- ``text/html``
+- ``text/plain``
+- ``application/vnd.ogc.gml``
+
+The default value is ``text/plain``.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &INFOFORMAT=image/html
+  &...
+
+
+I
+^
+
+This parameter allows to define the X coordinate of the pixel for which we
+want to retrieve underlying information.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &I=10
+  &...
+
+
+J
+^
+
+This parameter allows to define the Y coordinate of the pixel for which we
+want to retrieve underlying information.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &J=10
   &...
 
 
