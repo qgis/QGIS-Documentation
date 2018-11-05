@@ -468,16 +468,16 @@ database the frame in the lower half of the dialog is populated with the list of
 layers from the imported file. There you can select which layers to add to the
 QGIS project:
 
-* At the top, set a :guilabel:`Group name` to group the drawing files in the
-  project;
-* Check layers to show: Each selected layer is added to an ad hoc group which
-  contains vector layers for the point, line, label and area features of the
-  drawing layer. The style of each layer is setup so that it resembles the look
-  it originally had in \*CAD;
-* Check whether layer should be visible at opening;
-* Alternatively using the |checkbox| :guilabel:`Merge layers` option places all
-  layers in a single group;
-* Press **[OK]** to open the layers in QGIS.
+#. At the top, set a :guilabel:`Group name` to group the drawing files in the
+   project.
+#. Check layers to show: Each selected layer is added to an ad hoc group which
+   contains vector layers for the point, line, label and area features of the
+   drawing layer. The style of each layer is setup so that it resembles the look
+   it originally had in \*CAD.
+#. Check whether layer should be visible at opening.
+#. Alternatively using the |checkbox| :guilabel:`Merge layers` option places all
+   layers in a single group.
+#. Press **[OK]** to open the layers in QGIS.
 
 
 .. index:: OSM (OpenStreetMap)

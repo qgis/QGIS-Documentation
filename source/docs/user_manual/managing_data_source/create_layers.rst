@@ -352,22 +352,22 @@ single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layers. It's accessible in the
 :menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
-In the :guilabel:`DXF Export` dialog, you need to:
+In the :guilabel:`DXF Export` dialog:
 
-* indicate the destination layer file;
-* choose the symbology mode and scale (see the `OGR Feature Styles
-  <ogr_features_note>`_ note);
-* select the data :guilabel:`Encoding`;
-* select the :guilabel:`CRS` to apply: the selected layers will be reprojected
-  to the given CRS;
-* select the layers to include in the DXF files either by checking each in the
-  table widget or automatically pick them from an existing :ref:`map theme
-  <map_themes>`. The **[Select all]** and **[Deselect all]** buttons can also
-  help to quickly set the data to export.
+#. Indicate the destination layer file.
+#. Choose the symbology mode and scale (see the `OGR Feature Styles
+   <ogr_features_note>`_ note) if applicable.
+#. Select the data :guilabel:`Encoding`.
+#. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
+   to the given CRS.
+#. select the layers to include in the DXF files either by checking each in the
+   table widget or automatically pick them from an existing :ref:`map theme
+   <map_themes>`. The **[Select all]** and **[Deselect all]** buttons can also
+   help to quickly set the data to export.
 
-  For each layer, you can also choose whether to export all the features in a
-  single DXF layer or rely on a field whose values are used to split the features
-  in generated destination layers in the DXF output.
+   For each layer, you can also choose whether to export all the features in a
+   single DXF layer or rely on a field whose values are used to split the features
+   in generated destination layers in the DXF output.
   
 Optionally, you can also choose to:
 

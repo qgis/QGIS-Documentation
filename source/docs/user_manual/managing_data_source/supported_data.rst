@@ -96,11 +96,11 @@ Spatial indexes used by QGIS have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-*  Load a shapefile (see :ref:`browser_panel`);
-*  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
+#. Load a shapefile (see :ref:`browser_panel`).
+#. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
-   :menuselection:`Properties` from the context menu.
-*  In the :guilabel:`Source` tab, click the **[Create Spatial Index]** button.
+   :menuselection:`Properties...` from the context menu.
+#. In the :guilabel:`Source` tab, click the **[Create Spatial Index]** button.
 
 **Problem loading a .prj file**
 
