@@ -27,9 +27,11 @@ To create a layout item, select the corresponding tool either from the
 
 * click on the page and fill the size and placement information requested
   in the :ref:`new items properties <position_size>` dialog that pops up;
-* click-and-drag to define the initial size and placement of the item. You can
-  rely on :ref:`grids and guides <grid_guides>` snapping for a better position;
-* because they can have particular shapes, drawing node or arrow items does not
+* or click-and-drag to define the initial size and placement of the item. You can
+  rely on :ref:`grids and guides <grid_guides>` snapping for a better position.
+
+.. note::
+  Because they can have particular shapes, drawing node or arrow items does not
   work with one-click nor click-and-drag methods; you need to click and
   place each node of the item.
 

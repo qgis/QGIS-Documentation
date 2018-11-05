@@ -123,9 +123,9 @@ A map theme is a **snapshot** of the current map legend that records:
 
 To create a map theme:
 
-#. Check the layer you want to show;
-#. Configure the layer properties (symbology, diagram, labels...) and, using
-   the :menuselection:`Symbology --> Style -->` menu, click on :guilabel:`Add...` to
+#. Check a layer you want to show.
+#. Configure the layer properties (symbology, diagram, labels...) as usual.
+#. Expand the :menuselection:`Style -->` menu at the bottom and click on :guilabel:`Add...` to
    store the settings as :ref:`a new style embedded in the project
    <manage_custom_style>`.
 
@@ -134,11 +134,11 @@ To create a map theme:
      modifications (eg, change the symbology rendering) to the layer while this
      style is enabled, the map theme is updated with new information.
 
-#. Repeat the previous steps as necessary;
+#. Repeat the previous steps as necessary for the other layers.
 #. If applicable, expand or collapse groups or visible layers nodes in the
    :guilabel:`Layers` panel.
 #. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
-   and :guilabel:`Add Theme...`;
+   and :guilabel:`Add Theme...`.
 #. Enter the map theme's name and click :guilabel:`OK`. The new theme is listed in
    the lower part of the |showMapTheme| drop-down menu.
 
@@ -341,15 +341,15 @@ rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
+* Set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
   and |rasterHistogram| :guilabel:`Histogram` properties in case of raster layer.
-  These options are the same available in :ref:`raster_properties_dialog`;
-* set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
+  These options are the same available in :ref:`raster_properties_dialog`.
+* Set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
   |labeling| :guilabel:`Labels` properties in case of vector layer.
-  These options are the same available in :ref:`vector_properties_dialog`;
-* manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
-  (more details at :ref:`manage_custom_style`)
-* follow the whole |history| :guilabel:`History` of changes you applied to the
+  These options are the same available in :ref:`vector_properties_dialog`.
+* Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
+  (more details at :ref:`manage_custom_style`).
+* Follow the whole |history| :guilabel:`History` of changes you applied to the
   layer style in the current project; you can therefore cancel or restore to any
   state by selecting it in the list and hit :guilabel:`Apply` button.
 
@@ -1015,20 +1015,20 @@ To add an annotation, select the corresponding tool and click on the map canvas.
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
-* at the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
+* At the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
   or :file:`ui` file depending on the type of annotation. For text annotation,
   you have instead to enter your message in a text box and set its rendering with
-  provided font tools;
+  provided font tools.
 * |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
   is based on a screen position (instead of the map), meaning that it's always shown
-  regardless the map canvas extent;
+  regardless the map canvas extent.
 * :guilabel:`Linked layer`: allows the annotation to be associated with a map layer
-  and visible only when that layer is visible;
+  and visible only when that layer is visible.
 * :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, allows to
   set the symbol to display at the balloon anchor position (shown only when
-  :guilabel:`Fixed map position` is checked);
+  :guilabel:`Fixed map position` is checked).
 * :guilabel:`Frame style`: Allows to set the frame background color, transparency,
-  stroke color or width... of the balloon using QGIS symbols;
+  stroke color or width... of the balloon using QGIS symbols.
 * :guilabel:`Contents margins`: set interior margins of the annotation frame.
 
 .. _figure_annotation:

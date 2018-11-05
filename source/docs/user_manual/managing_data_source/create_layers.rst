@@ -306,8 +306,8 @@ Depending on the format of export, some of these options are available or not:
     set to **Automatic**, otherwise removes or overrides it with any type. You
     can add an empty geometry column to an attribute table, remove the geometry
     column of a spatial layer.
-  * :guilabel:`Force multi-type`: force creation of multi-geometry features in
-    the layer
+  * :guilabel:`Force multi-type`: forces creation of multi-geometry features in
+    the layer.
   * :guilabel:`Include z-dimension` to geometries.
 
 .. tip::

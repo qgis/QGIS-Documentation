@@ -211,9 +211,9 @@ With the automatic tracing mode, you can speed up the digitization process as
 you no longer need to manually place all the vertices during digitization:
 
 #. Enable the |tracing| :sup:`Tracing` tool by pushing the icon or pressing
-   :kbd:`T` key;
+   :kbd:`T` key.
 #. :ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature you
-   want to trace along;
+   want to trace along.
 #. Move the mouse over another vertex or segment you'd like to snap and, instead
    of the usual straight line, the digitizing rubber band represents a path from
    the last point you snapped to the current position.
@@ -339,7 +339,7 @@ geometry then enter its attributes. To digitize the geometry:
 
 #. Left-click on the map area to create the first point of your new feature. For
    point features, this should be enough and trigger, if required, the feature
-   form to fill in their attributes;
+   form to fill in their attributes.
 #. For line or polygon geometries, keep on left-clicking for each additional
    point you wish to capture or use :ref:`automatic tracing <tracing>` capability
    to accelerate the digitization. This will create consecutive straight lines
@@ -739,7 +739,7 @@ Move Feature(s)
 
 The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing features:
 
-#. Select the feature(s) to move;
+#. Select the feature(s) to move.
 #. Click on the map canvas to indicate the origin point of the displacement; you
    can rely on snapping capabilities to select an accurate point.
 
@@ -804,8 +804,8 @@ The |simplifyFeatures| :sup:`Simplify Feature` tool allows you to interactively
 reshape a line or polygon geometry by reducing or densifying the number of
 vertices, as long as the geometry remains valid:
 
-#. Select the |simplifyFeatures| :sup:`Simplify Feature` tool;
-#. Click on the feature or drag a rectangle over the features;
+#. Select the |simplifyFeatures| :sup:`Simplify Feature` tool.
+#. Click on the feature or drag a rectangle over the features.
 #. A dialog pops up allowing you to define the :guilabel:`Method` to apply, ie
    whether you would like to:
 
@@ -905,16 +905,17 @@ The |fillRing| :sup:`Fill Ring` tool helps you create polygon feature that
 totally falls within another one without any overlapping area; that is the new
 feature covers a hole within the existing one. To create such a feature:
 
-#. select the |fillRing| :sup:`Fill Ring` tool;
-#. draw a new polygon over the existing feature: QGIS adds a ring to its geometry
+#. Select the |fillRing| :sup:`Fill Ring` tool.
+#. Draw a new polygon over the existing feature: QGIS adds a ring to its geometry
    (like if you used the |addRing| :sup:`Add Ring` tool) and creates a new
    feature whose geometry matches the ring (like if you :ref:`traced <tracing>`
    over the interior boundaries with the |capturePolygon| :sup:`Add polygon
-   feature` tool);
-#. or alternatively, if the ring already exists on the feature, place the mouse
+   feature` tool).
+#. Or alternatively, if the ring already exists on the feature, place the mouse
    over the ring and left-click while pressing :kbd:`Shift`: a new feature
-   filling the hole is drawn at that place;
-#. the :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
+   filling the hole is drawn at that place.
+
+   The :guilabel:`Feature Attributes` form of the new feature opens, pre-filled
    with values of the "parent" feature and/or :ref:`fields constraints
    <configure_field>`.
 

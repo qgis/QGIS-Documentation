@@ -39,7 +39,7 @@ layout to different file formats, and it is possible to modify the resolution
   in several image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`,
   :file:`JPG`, and many others...
 * The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout
-  as an :file:`SVG` (Scalable Vector Graphic);
+  as an :file:`SVG` (Scalable Vector Graphic).
 * The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout
   directly as a :file:`PDF`.
 
@@ -48,7 +48,7 @@ Export settings
 
 Whenever you export a print layout, there are a bunch of export settings QGIS needs
 to check in order to return the most appropriate output. These configurations
-are in:
+are:
 
 * the :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
   panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`,
@@ -56,7 +56,7 @@ are in:
 * the :guilabel:`Exclude page from exports` in the :ref:`page item properties
   <page_properties>` panel;
 * the :guilabel:`Exclude item from exports` in the :ref:`item properties
-  <layout_Rendering_Mode>` panel;
+  <layout_Rendering_Mode>` panel.
 
 
 .. _export_layout_image:
@@ -122,14 +122,14 @@ The SVG export options dialog also allows to override the layout default export
 and offers other settings:
 
 * |unchecked|:guilabel:`Export map layers as SVG groups`: may affect label
-  placement;
+  placement.
 * |checkbox|:guilabel:`Render map labels as outlines`: unchecking this will
-  allow you to edit labels as texts in vector illustration software;
+  allow you to edit labels as texts in vector illustration software.
 * |unchecked|:guilabel:`Always export as vectors`: some rendering options
   require items to be rasterized for a better rendering. Check this option to
   keep the objects as vectors with the risk that the appearance of the output
   file may not match the print layout preview (for more details, see
-  :ref:`layout_export_settings`);
+  :ref:`layout_export_settings`).
 * |checkbox|:guilabel:`Export RDF metadata`.
 
 .. _figure_layout_output_svg:
