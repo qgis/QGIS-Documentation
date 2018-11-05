@@ -891,7 +891,7 @@ To load a layer from a database, you can perform the following steps:
 
 .. tip:: **Load database table(s) from the Browser Panel**
 
- Like simple files, connected database are also listed in the
+ Like simple files, connected databases are also listed in the
  :guilabel:`Browser Panel`. Hence, you can load tables from databases using
  the Browser:
 

@@ -2332,7 +2332,7 @@ Default values
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
     feature's x coordinate, length, area or any geometric information at its creation;
-  * incremente a field by 1 for each new feature using ``maximum("field")+1``;
+  * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
     easier to e.g. insert the operator name (``@user_full_name``), the project
