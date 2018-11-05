@@ -682,9 +682,10 @@ anywhere in the application. It provides some default filters (with prefix) to u
 * Actions (``.``): finds and executes a QGIS action; actions can be any tool
   or menu in QGIS, opening a panel...
 * Active layer features (``f``): searches for matching attributes in any field
-  from the current active layer and zoom to the feature.
-* features in all layers (``af``): searches for matching attributes in any field
-  from any layer and zoom to the feature.
+  from the current active layer and zooms to the selected feature.
+* Features in all layers (``af``): searches for matching attributes in the
+  :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
+  and zooms to the selected feature.
 * Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
   gives an option to copy the result to the clipboard.
 * Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
@@ -848,6 +849,7 @@ to use in this project. It can be:
   * The distance and area units, and the coordinate display are locked out and
     forced to "unknown units"; all measurements are done in unknown map units,
     and no conversion is possible.
+
 * or an existing coordinate reference system that can be *geographic*, *projected*
   or *user-defined*. A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
@@ -896,6 +898,9 @@ In the :guilabel:`Data Sources` tab, you can:
   will be read from the QGIS project file (instead of data sources) and when
   using the PostgreSQL provider the primary key unicity will not be 
   checked for views and materialized views.
+
+.. _project_layer_capabilities:
+
 * Configure the :guilabel:`Layers Capabilities`, i.e.:
   
   * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
@@ -905,7 +910,7 @@ In the :guilabel:`Data Sources` tab, you can:
     capabilities. Although this is a weak protection, it remains a quick and handy
     configuration to avoid end-users modifying data when working with file-based layers.
   * Define which layers are ``searchable``, i.e. could be queried using the
-    :ref:`locator widget <locator_options>`.
+    :ref:`locator widget <locator_options>`. By default, layers are set searchable.
   * Define which layers are defined as ``required``. Checked layers in this list
     are protected from inadvertent removal from the project.
 
