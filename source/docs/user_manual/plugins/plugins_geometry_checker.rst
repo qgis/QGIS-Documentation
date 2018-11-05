@@ -18,7 +18,8 @@ The :guilabel:`Geometry Checker` dialog show different grouped settings in the
 first tab (:guilabel:`Setup`):
 
 * :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
-  :guilabel:`Only selected features` checkbox can filter the geometry to the one selected.
+  :guilabel:`Only selected features` checkbox can be used to restrict the
+  checking to the geometries of the selected features.
 * :guilabel:`Allowed geometry types`: to allow only some geometry types like
   point, multipoint, line, multiline, polygon and multipolygon.
 * :guilabel:`Geometry validity`: depending on geometry types, the user can
@@ -42,11 +43,12 @@ first tab (:guilabel:`Setup`):
   lines`, |checkbox| :guilabel:`Lines must not intersect with features of
   layer` |selectString|, |checkbox| :guilabel:`Polygons must follow boundaries
   of layer` |selectString|.
-* :guilabel:`Tolerance`: you can define here the tolerance for the check.
+* :guilabel:`Tolerance`: you can define the tolerance of the check in map layer
+  units.
 * :guilabel:`Output vector layer` gives the choice to the user how get the
   result between modify the current layer and create a new layer.
 
-After you are happy with the configuration, you can click on the **[Run]**
+When you are happy with the configuration, you can click on the **[Run]**
 button.
 
 
@@ -85,14 +87,14 @@ The following figure shows the different checks made by the plugin.
 The results appear in the second tab (:guilabel:`Result`) and as an overview
 layer of the errors in the canvas (its name has the default prefix
 :file:`checked_`).
-A table list the :guilabel:`Geometry check result` with one error by row and
+A table lists the :guilabel:`Geometry check result` with one error per row and
 columns containing: the layer name, an ID, the error type, then the coordinates
 of the error, a value (depending on the type of the error) and finally the
 resolution column which indicates the resolution of the error.
 At the bottom of this table, you can **[Export]** the error into different file
 formats. You also have a counter with the number of total errors and fixed ones.
 
-You can select a row to see the localisation of the error. You can change this
+You can select a row to see the location of the error. You can change this
 behaviour by selecting another action between |radioButtonOn| :guilabel:`Error`
 (default), |radioButtonOff| :guilabel:`Feature`, |radioButtonOff|
 :guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight contour of selected
