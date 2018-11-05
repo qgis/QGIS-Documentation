@@ -84,11 +84,11 @@ Examples
 Extending QgsTask
 .................
 
-``MyTask`` extends :class:`QgsTask` and will generate 100 random
-integers between 0 and 100 during a specified period of time.
+``RandomIntegerTask`` extends :class:`QgsTask` and will generate 100
+random integers between 0 and 100 during a specified period of time.
 If the random number is 42, the task is aborted and an exception
 is raised.
-Several instances of ``MyTask`` (with subtasks) are generated
+Several instances of ``RandomIntegerTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
 
@@ -103,7 +103,7 @@ dependencies.
   
   MESSAGE_CATEGORY = 'SubclassTask'
   
-  class MyTask(QgsTask):
+  class RandomIntegerTask(QgsTask):
       """This shows how to subclass QgsTask"""
       def __init__(self, description, duration):
           super().__init__(description, QgsTask.CanCancel)
@@ -181,12 +181,12 @@ dependencies.
           super().cancel()
   
   
-  longtask = MyTask('waste cpu long', 20)
-  shorttask = MyTask('waste cpu short', 10)
-  minitask = MyTask('waste cpu mini', 5)
-  st1 = MyTask('waste cpu Subtask 1', 5)
-  st2 = MyTask('waste cpu Subtask 2', 10)
-  st3 = MyTask('waste cpu Subtask 3', 4)
+  longtask = RandomIntegerTask('waste cpu long', 20)
+  shorttask = RandomIntegerTask('waste cpu short', 10)
+  minitask = RandomIntegerTask('waste cpu mini', 5)
+  st1 = RandomIntegerTask('waste cpu Subtask 1', 5)
+  st2 = RandomIntegerTask('waste cpu Subtask 2', 10)
+  st3 = RandomIntegerTask('waste cpu Subtask 3', 4)
   
   # Add a subtask (st1) to shorttask that must run after minitask and
   # longtask has finished
