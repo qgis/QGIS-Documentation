@@ -17,15 +17,14 @@ validity of a layer. It is available from the :menuselection:`Vector -->`
 The :guilabel:`Geometry Checker` dialog show different grouped settings in the
 first tab (:guilabel:`Setup`):
 
-* :guilabel:`Input vector layers`: to select the layers to check. A
-  |checkbox| :guilabel:`Only selected features` checkbox can filter the
-  geometry to the one selected.
-* :guilabel:`Allowed geometry types`: to allow only some geometry types
-  like point, multipoint, line, multiline, polygon and multipolygon.
+* :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
+  :guilabel:`Only selected features` checkbox can filter the geometry to the one selected.
+* :guilabel:`Allowed geometry types`: to allow only some geometry types like
+  point, multipoint, line, multiline, polygon and multipolygon.
 * :guilabel:`Geometry validity`: depending on geometry types, the user can
   choose |checkbox| :guilabel:`Self intersections`, |checkbox|
-  :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts`
-  and |checkbox| :guilabel:`Polygon with less than 3 nodes`.
+  :guilabel:`Duplicate nodes`, |checkbox| :guilabel:`Self contacts` and
+  |checkbox| :guilabel:`Polygon with less than 3 nodes`.
 * :guilabel:`Geometry properties`: depending on geometry types, the user can
   choose |checkbox| :guilabel:`Polygons and multipolygons may not contain any
   holes`, |checkbox| :guilabel:`Multipart objects must consist of more than one
@@ -36,8 +35,8 @@ first tab (:guilabel:`Setup`):
 * :guilabel:`Topology checks`: depending on geometry types, the user can choose
   |checkbox| :guilabel:`Checks for duplicates`, |checkbox| :guilabel:`Checks
   for features within other features`, |checkbox| :guilabel:`Checks for
-  overlaps smaller than` a number |selectNumber|, |checkbox| :guilabel:`Checks
-  for gaps smaller than` a number |selectNumber|, |checkbox| :guilabel:`Points
+  overlaps smaller than` |selectNumber|, |checkbox| :guilabel:`Checks
+  for gaps smaller than` |selectNumber|, |checkbox| :guilabel:`Points
   must be covered by lines`, |checkbox| :guilabel:`Points must properly lie
   inside a polygon`, |checkbox| :guilabel:`Lines must not intersect any other
   lines`, |checkbox| :guilabel:`Lines must not intersect with features of
@@ -81,7 +80,7 @@ The following figure shows the different checks made by the plugin.
 .. figure:: img/geometry_checker_scheme.png
    :align: center
 
-   The Differents checks supported by the plugin
+   Some checks supported by the plugin
 
 The results appear in the second tab (:guilabel:`Result`) and as an overview
 layer of the errors in the canvas (its name has the default prefix
@@ -102,11 +101,9 @@ features`.
 Below the zoom action when clicking on the table row, you can:
 |featureInTable| :guilabel:`Show selected features in attribute table`,
 |success| :guilabel:`Fix selected errors using default resolution` and
-|success| :guilabel:`Fix selected errors, prompt for resolution
-method`.
-The default action could be changed with the last icon |options|
-:guilabel:`Error resolution settings`: you will see a window to choose the
-resolution's method among which:
+|success| :guilabel:`Fix selected errors, prompt for resolution method`.
+In the latter you will see a window to choose the resolution's method among
+which:
 
 * Merge with neighboring polygon with longest shared edge,
 * Merge with neighboring polygon with largest area,
@@ -115,14 +112,14 @@ resolution's method among which:
 * Delete feature
 * No action
 
-For some type of errors, you can change the default action between some
-specific action or :guilabel:`No action`.
-
 .. tip:: **Fix multiple errors**
 
    You can fix multiple errors by selecting more than one row in the table with
    the *CTRL + click* action.
 
+The default action can be changed with the last icon |options| :guilabel:`Error
+resolution settings` For some type of errors, you can change the default action
+between some specific action or :guilabel:`No action`.
 
 Finally, you can choose which :guilabel:`attribute to use when merging features
 by attribute value`.
