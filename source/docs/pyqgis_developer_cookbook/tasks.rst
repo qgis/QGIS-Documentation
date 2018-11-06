@@ -321,7 +321,7 @@ result to the project in a safe way.
   context = QgsProcessingContext()
   feedback = QgsProcessingFeedback()
   params = {
-      'EXTENT': '0.0,1000000.0,6000000,7000000 [EPSG:32633]',
+      'EXTENT': '0.0,10.0,40,50 [EPSG:4326]',
       'MIN_DISTANCE': 0.0,
       'POINTS_NUMBER': 50000,
       'TARGET_CRS': 'EPSG:32633',
