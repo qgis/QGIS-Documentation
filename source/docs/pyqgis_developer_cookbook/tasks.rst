@@ -324,7 +324,7 @@ result to the project in a safe way.
       'EXTENT': '0.0,10.0,40,50 [EPSG:4326]',
       'MIN_DISTANCE': 0.0,
       'POINTS_NUMBER': 50000,
-      'TARGET_CRS': 'EPSG:32633',
+      'TARGET_CRS': 'EPSG:4326',
       'OUTPUT': 'memory:My random points'
   }
   task = QgsProcessingAlgRunnerTask(alg, params, context, feedback)
