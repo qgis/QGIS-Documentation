@@ -148,7 +148,7 @@ following dialog:
 The Target language should be filled correctly. The Source language can be left
 as is with language POSIX and Country/Region on Any Country.
 
-When you press the **[OK]** button Qt Linguist is filled with sentences and
+When you press the :guilabel:`OK` button Qt Linguist is filled with sentences and
 you can start translating, see Figure_translation_menu_.
 
 

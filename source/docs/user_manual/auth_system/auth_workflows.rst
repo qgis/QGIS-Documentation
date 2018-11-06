@@ -73,7 +73,7 @@ private keys within the database.
 All PKI components can be managed in separate editors within the **Certificate
 Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 `Options` dialog (:menuselection:`Settings --> Options`) by clicking the
-**[Manage certificates]** button.
+:guilabel:`Manage Certificates` button.
 
 .. _figure_auth_pki_certif:
 
@@ -92,7 +92,7 @@ accustomed to the workflow.
 
    Because all authentication system edits write immediately to the
    authentication database, there is no need to click the :guilabel:`Options`
-   dialog **[OK]** button for any changes to be saved. This is unlike other
+   dialog :guilabel:`OK` button for any changes to be saved. This is unlike other
    settings in the Options dialog.
 
 Authorities

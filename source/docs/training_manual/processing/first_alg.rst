@@ -72,7 +72,7 @@ them to a permament location if you want to.
   complain when you try to open back the project later, since that output file
   will not exist.
 
-Once you have configured the algorithm dialog, press **[Run]** to run the
+Once you have configured the algorithm dialog, press :guilabel:`Run` to run the
 algorithm.
 
 You will get the following output.

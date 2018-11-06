@@ -45,7 +45,7 @@ Let's get started right away!
    source type and press the |browseButton| :sup:`Browse` button.
 #. Navigate to the file :file:`exercise_data/shapefile/roads.shp` (in your course
    directory). Select the file and click :guilabel:`Open`. You will see the
-   original dialog, but with the file path filled in. Click **[Add]** here
+   original dialog, but with the file path filled in. Click :guilabel:`Add` here
    as well. The data you specified will now load.
 
    .. image:: img/add_vector_dialog.png
@@ -76,14 +76,14 @@ In order to load a layer from a GeoPackage:
 
 #. Click on the |dataSourceManager| button;
 #. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab;
-#. Click on the **[New]** button and browse to the :file:`training_data.gpkg`
+#. Click on the :guilabel:`New` button and browse to the :file:`training_data.gpkg`
    file in the Training Data folder you have downloaded before;
-#. Select the file and press **[Open]**. The file path is now added to and shown
+#. Select the file and press :guilabel:`Open`. The file path is now added to and shown
    in the drop-down menu;
-#. Click on **[Connect]** button.
+#. Click on :guilabel:`Connect` button.
    You should see in the central part of the window the list of all the layers
    contained in the GeoPackage file;
-#. Select the :file:`roads` layer and click on the **[Add]** button.
+#. Select the :file:`roads` layer and click on the :guilabel:`Add` button.
 
 .. image:: img/add_data_dialog_geopackage.png
   :align: center

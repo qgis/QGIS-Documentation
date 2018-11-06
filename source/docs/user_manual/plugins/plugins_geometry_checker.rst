@@ -48,7 +48,7 @@ first tab (:guilabel:`Setup`):
 * :guilabel:`Output vector layer` gives the choice to the user how get the
   result between modify the current layer and create a new layer.
 
-When you are happy with the configuration, you can click on the **[Run]**
+When you are happy with the configuration, you can click on the :guilabel:`Run`
 button.
 
 
@@ -91,7 +91,7 @@ A table lists the :guilabel:`Geometry check result` with one error per row and
 columns containing: the layer name, an ID, the error type, then the coordinates
 of the error, a value (depending on the type of the error) and finally the
 resolution column which indicates the resolution of the error.
-At the bottom of this table, you can **[Export]** the error into different file
+At the bottom of this table, you can :guilabel:`Export` the error into different file
 formats. You also have a counter with the number of total errors and fixed ones.
 
 You can select a row to see the location of the error. You can change this

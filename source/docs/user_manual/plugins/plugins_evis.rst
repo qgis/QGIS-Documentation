@@ -139,10 +139,10 @@ F. **Apply rule to all documents**: If checked, the same path rules that are
    apply to photographs, and other documents will ignore the base path parameter.
 G. **Remember settings**: If the checkbox is checked, the values for the associated
    parameters will be saved for the next session when the window is closed or
-   when the **[Save]** button below is pressed.
+   when the :guilabel:`Save` button below is pressed.
 H. **Reset values**: Resets the values on this line to the default setting.
 I. **Restore defaults**: This will reset all of the fields to their default
-   settings. It has the same effect as clicking all of the **[Reset]** buttons.
+   settings. It has the same effect as clicking all of the :guilabel:`Reset` buttons.
 J. **Save**: This will save the settings without closing the :guilabel:`Options`
    pane.
 
@@ -240,7 +240,7 @@ appear pointing in the direction indicated by the value in the compass bearing
 display field in the :guilabel:`Event Browser` window. The arrow will be
 centered over the point that is associated with the photograph or other document.
 
-To close the :guilabel:`Event Browser` window, click on the **[Close]**
+To close the :guilabel:`Event Browser` window, click on the :guilabel:`Close`
 button from the :guilabel:`Display` window.
 
 .. _`evis_id_tool`:
@@ -270,8 +270,8 @@ displayed in the QGIS map window, move the Event ID cursor over the feature and
 then click the mouse. After clicking on the feature, the :guilabel:`Event
 Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
-you can cycle through the different features using the **[Previous]** and
-**[Next]** buttons. The other controls are described in the :ref:`evis_browser`
+you can cycle through the different features using the :guilabel:`Previous` and
+:guilabel:`Next` buttons. The other controls are described in the :ref:`evis_browser`
 section of this guide.
 
 .. _`evis_database`:
@@ -318,7 +318,7 @@ resides on your desktop, you should enter "localhost".
 Enter the name of the database in the :guilabel:`Database Name` textbox. If you
 selected 'ODBC' as the database type, you need to enter the data source name.
 
-When all of the parameters are filled in, click on the **[Connect]** button.
+When all of the parameters are filled in, click on the :guilabel:`Connect` button.
 If the connection is successful, a message will be written in the :guilabel:`Output
 Console` window stating that the connection was established. If a connection was
 not established, you will need to check that the correct parameters were entered
@@ -363,7 +363,7 @@ on SQL commands is available at http://www.w3schools.com/sql. For example, to
 extract all of the data from a worksheet in an Excel file, ``select * from [sheet1$]``
 where ``sheet1`` is the name of the worksheet.
 
-Click on the **[Run Query]** button to execute the command. If the query
+Click on the :guilabel:`Run Query` button to execute the command. If the query
 is successful, a :guilabel:`Database File Selection` window will be displayed. If
 the query is not successful, an error message will appear in the :guilabel:`Output
 Console` window.
@@ -389,7 +389,7 @@ E. **OK**: Closes the main :guilabel:`Database Connection` window.
 
 Use the :guilabel:`X Coordinate` |selectString| and :guilabel:`Y Coordinate`
 |selectString| combo boxes to select the fields from the database that stores the
-``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the **[OK]**
+``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the :guilabel:`OK`
 button causes the vector layer created from the SQL query to be displayed in the
 QGIS map window.
 
@@ -432,7 +432,7 @@ Select the query you want to run from the drop-down menu and then click on the
 window. If it is the first time you are running a predefined query or are
 switching databases, you need to be sure to connect to the database.
 
-Click on the **[Run Query]** button in the :guilabel:`SQL Query` tab to execute
+Click on the :guilabel:`Run Query` button in the :guilabel:`SQL Query` tab to execute
 the command. If the query is successful, a :guilabel:`Database File Selection`
 window will be displayed. If the query is not successful, an error message will
 appear in the :guilabel:`Output Console` window.

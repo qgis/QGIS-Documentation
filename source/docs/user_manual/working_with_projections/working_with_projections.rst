@@ -227,7 +227,7 @@ to represent the new coordinate reference system.
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
-:guilabel:`East` fields, respectively. Click on **[Calculate]**, and compare the
+:guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, and compare the
 results with the known values in your coordinate reference system.
 
 .. index:: Datum transformation
@@ -268,7 +268,7 @@ transformations` group:
      You can choose to only display current valid transformations by checking
      the |checkbox| :guilabel:`Hide deprecated` option.
 
-  #. Find your preferred transformation, select it and click **[OK]**;
+  #. Find your preferred transformation, select it and click :guilabel:`OK`;
   #. A new row is added to the table under :menuselection:`CRS --> Default datum
      transformations` with information about 'Source CRS' and 'Destination CRS'
      as well as 'Source datum transform' and 'Destination datum transform'.

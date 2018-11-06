@@ -98,7 +98,7 @@ using the information in its :guilabel:`Attribute Table`. We'll start with the :
 * Right-click on the :guilabel:`multipolygons` layer in the
   :guilabel:`Layers` panel and open the :guilabel:`Layer Properties`.
 * Go to the :guilabel:`Source` menu.
-* Under :guilabel:`Feature subset` click on the **[Query Builder]** button to
+* Under :guilabel:`Feature subset` click on the :guilabel:`Query Builder` button to
   open the :guilabel:`Query builder` dialog.
 * In the :guilabel:`Fields` list on the left of this dialog until
   you see the field :kbd:`amenity`.

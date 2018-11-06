@@ -80,7 +80,7 @@ server understands HTTP as the data transport mechanism.
 
 Additionally, QGIS will cache your WMS responses (i.e. images) for 24h as long
 as the GetCapabilities request is not triggered. The GetCapabilities request is
-triggered everytime the **[Connect]** button in the **[Add layer(s) from WMS(T)S Server]**
+triggered everytime the :guilabel:`Connect` button in the :guilabel:`Add Layer(s) from WMS(T) Server`
 dialog is used to retrieve the WMS server capabilities. This is an automatic
 feature meant to optimize project loading time. If a project is saved with a WMS layer,
 the corresponding WMS tiles will be loaded from the cache the next time the project is opened
@@ -163,9 +163,9 @@ toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
 the WMS server appears. You can add some servers to play with by clicking the
-**[Add default servers]** button. This will add two WMS demo servers for you to
+:guilabel:`Add Default Servers` button. This will add two WMS demo servers for you to
 use: the WMS servers of the DM Solutions Group and Lizardtech. To define a new
-WMS server in the :guilabel:`Layers` tab, select the **[New]** button. Then enter
+WMS server in the :guilabel:`Layers` tab, select the :guilabel:`New` button. Then enter
 the parameters to connect to your desired WMS server, as listed in table_OGC_wms_:
 
 \
@@ -231,7 +231,7 @@ Loading WMS/WMTS Layers
 -----------------------
 
 Once you have successfully filled in your parameters, you can use the
-**[Connect]** button to retrieve the capabilities of the selected server. This
+:guilabel:`Connect` button to retrieve the capabilities of the selected server. This
 includes the image encoding, layers, layer styles and projections. Since this is
 a network operation, the speed of the response depends on the quality of your
 network connection to the WMS server. While downloading data from the WMS server,
@@ -281,7 +281,7 @@ The :guilabel:`Feature limit for GetFeatureInfo` defines what features from
 the server to query.
 
 If you select a WMS from the list, a field with the default projection provided
-by the mapserver appears. If the **[Change...]** button is active, you can click
+by the mapserver appears. If the :guilabel:`Change...` button is active, you can click
 on it and change the default projection of the WMS to another CRS provided by
 the WMS server.
 
@@ -331,7 +331,7 @@ A coordinate reference system (CRS) is the OGC terminology for a QGIS projection
 Each WMS layer can be presented in multiple CRSs, depending on the capability of
 the WMS server.
 
-To choose a CRS, select **[Change...]** and a dialog similar to :ref:`figure_projection_custom`
+To choose a CRS, select :guilabel:`Change...` and a dialog similar to :ref:`figure_projection_custom`
 will appear. The main difference with the WMS version
 of the dialog is that only those CRSs supported by the WMS server will be shown.
 
@@ -351,14 +351,14 @@ Within QGIS, you can search for WMS servers. Figure_OGC_search_ shows the
    Dialog for searching WMS servers after some keywords
 
 As you can see, it is possible to enter a search string in the text field and hit
-the **[Search]** button. After a short while, the search result will be populated
+the :guilabel:`Search` button. After a short while, the search result will be populated
 into the list below the text field. Browse the result list and inspect your search
 results within the table. To visualize the results, select a table entry, press
-the **[Add selected row to WMS list]** button and change back to the
+the :guilabel:`Add Selected Row to WMS List` button and change back to the
 :guilabel:`Layers` tab. QGIS has automatically updated your server list, and the
 selected search result is already enabled in the list of saved WMS servers in
 the :guilabel:`Layers` tab. You only need to request the list of layers by clicking
-the **[Connect]** button. This option is quite handy when you want to search maps
+the :guilabel:`Connect` button. This option is quite handy when you want to search maps
 by specific keywords.
 
 Basically, this option is a front end to the API of http://geopole.org.
@@ -621,16 +621,16 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 
 #. Click on the |wfs| :sup:`Add WFS Layer` tool on the
    Layers toolbar. The :guilabel:`Add WFS Layer from a Server` dialog appears.
-#. Click on **[New]**.
+#. Click on :guilabel:`New`.
 #. Enter 'DM Solutions' as name.
 #. Enter the URL (see above).
-#. Click **[OK]**.
+#. Click :guilabel:`OK`.
 #. Choose 'DM Solutions' from the :guilabel:`Server Connections`
    |selectString| drop-down list.
-#. Click **[Connect]**.
+#. Click :guilabel:`Connect`.
 #. Wait for the list of layers to be populated.
 #. Select the :guilabel:`Parks` layer in the list.
-#. Click **[Apply]** to add the layer to the map.
+#. Click :guilabel:`Apply` to add the layer to the map.
 
 Note that any proxy settings you may have set in your preferences are also recognized.
 

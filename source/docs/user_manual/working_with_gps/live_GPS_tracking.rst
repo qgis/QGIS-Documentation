@@ -25,8 +25,8 @@ There are four possible screens in this GPS tracking window:
 * |options| GPS options screen (see figure_gps_options_)
 
 With a plugged-in GPS receiver (has to be supported by your operating system),
-a simple click on **[Connect]** connects the GPS to QGIS. A second click (now
-on **[Disconnect]**) disconnects the GPS receiver from your computer. For GNU/Linux,
+a simple click on :guilabel:`Connect` connects the GPS to QGIS. A second click (now
+on :guilabel:`Disconnect`) disconnects the GPS receiver from your computer. For GNU/Linux,
 gpsd support is integrated to support connection to most GPS receivers. Therefore,
 you first have to configure gpsd properly to connect QGIS to it.
 
@@ -74,7 +74,7 @@ GPS options
 * |radioButtonOff| :guilabel:`gpsd` (selecting the Host, Port and Device your
   GPS is connected to)
 
-A click on **[Connect]** again initiates the connection to the GPS receiver.
+A click on :guilabel:`Connect` again initiates the connection to the GPS receiver.
 
 .. _figure_gps_options:
 
@@ -104,7 +104,7 @@ Finally, you can activate |checkbox| :guilabel:`Log file` and define a path
 and a file where log messages about the GPS tracking are logged.
 
 If you want to set a feature manually, you have to go back to |metadata|
-:sup:`Position` and click on **[Add Point]** or **[Add track point]**.
+:sup:`Position` and click on :guilabel:`Add Point` or :guilabel:`Add Track Point`.
 
 Connect to a Bluetooth GPS for live tracking
 --------------------------------------------
@@ -120,7 +120,7 @@ for a New Device.
 On the right side of the Device selection mask make sure that all devices are
 selected so your GPS unit will probably appear among those available. In the
 next step a serial connection service should be available, select it and click
-on **[Configure]** button.
+on :guilabel:`Configure` button.
 
 Remember the number of the COM port assigned to the GPS connection as resulting
 by the Bluetooth properties.
@@ -130,7 +130,7 @@ the authorization code is ``0000``.
 
 Now open :guilabel:`GPS information` panel and switch to |options| GPS
 options screen. Select the COM port assigned to the GPS connection and click
-the **[Connect]**. After a while a cursor indicating your position should
+the :guilabel:`Connect`. After a while a cursor indicating your position should
 appear.
 
 If QGIS can't receive GPS data, then you should restart your GPS device, wait
@@ -148,7 +148,7 @@ Easiest way to make it work is to use a middleware (freeware, not open) called
 `GPSGate <http://update.gpsgate.com/install/GpsGateClient.exe>`_.
 
 Launch the program, make it scan for GPS devices (works for both USB and BT
-ones) and then in QGIS just click **[Connect]** in the Live tracking panel
+ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking panel
 using the |radioButtonOn| :guilabel:`Autodetect` mode.
 
 Ubuntu/Mint GNU/Linux

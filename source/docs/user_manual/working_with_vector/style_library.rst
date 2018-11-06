@@ -69,10 +69,10 @@ listed in the panel on the left:
   A symbol or color ramp can be tagged more than once. Select a tag in the list
   and you'll see the items that belong to it for each type of item.
   To create a new tag you could later attach to symbols or color ramps, use the
-  **[Add tag...]** button or select the |signPlus| :guilabel:`Add Tag...`
+  :guilabel:`Add Tag...` button or select the |signPlus| :guilabel:`Add Tag...`
   from any tag contextual menu;
 * **Smart Group**: a smart group dynamically fetches its symbols according to
-  conditions set (see eg, figure_smart_group_). Click the **[Add smart group...]**
+  conditions set (see eg, figure_smart_group_). Click the :guilabel:`Add Smart Group...`
   button to create smart groups. The dialog box allows you to enter an expression
   to filter the items to select (has a particular tag, have a string in its name,
   etc.). Any symbol or color ramp that satisfies the entered condition(s) is
@@ -152,7 +152,7 @@ You can export a set of items to an :file:`.XML` file:
    |fileSave| :guilabel:`Export Item(s)...`
 #. Choose the symbols and color ramps you'd like to integrate. Symbol selection
    can be done with the mouse or using a tag or group previously set.
-#. Press **[Export]** when ready. You'll be prompted to indicate the destination
+#. Press :guilabel:`Export` when ready. You'll be prompted to indicate the destination
    of the saved file. The XML format generates a single file containing all the
    selected symbols. This file can then be imported in another user's style library.
 
@@ -347,7 +347,7 @@ The symbols are displayed either:
   |openTable| :sup:`List View` button below the frame;
 * or as icon preview using the |iconView| :sup:`Icon View` button.
 
-Press the **[Save Symbol]** button to add any symbol being edited to the symbols
+Press the :guilabel:`Save Symbol` button to add any symbol being edited to the symbols
 library. With the :guilabel:`Advanced` |selectString| option, you can:
 
 * set the **symbol levels**: defining the way symbol layers are connected to

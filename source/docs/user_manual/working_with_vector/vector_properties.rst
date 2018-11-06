@@ -154,8 +154,8 @@ column to the SQL WHERE clause field, double-click its name or just type it into
 the SQL box.
 
 The **Values** frame lists the values of the currently selected field. To list all
-unique values of a field, click the **[All]** button. To instead list the first
-25 unique values of the column, click the **[Sample]** button. To add a value
+unique values of a field, click the :guilabel:`All` button. To instead list the first
+25 unique values of the column, click the :guilabel:`Sample` button. To add a value
 to the SQL WHERE clause field, double click its name in the Values list.
 You can use the search box at the top of the Values frame to easily browse and
 find attribute values in the list.
@@ -165,9 +165,9 @@ the SQL WHERE clause field, click the appropriate button. Relational operators
 ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
 operators (``AND``, ``OR``, ...) are available.
 
-The **[Test]** button helps you check your query and displays a message box with
+The :guilabel:`Test` button helps you check your query and displays a message box with
 the number of features satisfying the current query.
-Use the **[Clear]** button to wipe the SQL query and revert the layer to its
+Use the :guilabel:`Clear` button to wipe the SQL query and revert the layer to its
 original state (ie, fully load all the features).
 
 When a filter is applied,
@@ -342,7 +342,7 @@ discrete values of a field or an expression. The Categorized menu allows you to
 * the range of colors (using the Color ramp listbox) from which color applied
   to the symbol is selected.
 
-Then click on **[Classify]** button to create classes from the distinct
+Then click on :guilabel:`Classify` button to create classes from the distinct
 value of the attribute column. Each class can be disabled unchecking the
 checkbox at the left of the class name.
 
@@ -494,7 +494,7 @@ Proportional rendering is done by:
 
 You can choose to display the proportional symbols in the :ref:`Layers panel
 <label_legend>` and the :ref:`print layout legend item <layout_legend_item>`:
-unfold the **[Advanced]** drop-down list at the bottom of the main dialog of
+unfold the :guilabel:`Advanced` drop-down list at the bottom of the main dialog of
 the :guilabel:`Symbology` tab and select **Data-defined size legend...** to
 configure the legend items (see :ref:`data_defined_size_legend` for details).
 
@@ -516,7 +516,7 @@ The simplest way to create multivariate analysis in QGIS is to:
 * first apply a categorized or graduated rendering on a layer, using the same
   type of symbol for all the classes;
 * Then, apply a proportional symbology on the classes: click on the symbol
-  **[Change]** button above the classification frame: you get the
+  :guilabel:`Change` button above the classification frame: you get the
   :ref:`symbol-selector` dialog from which, as seen above, you can rescale the
   size or width using the |dataDefined| :ref:`data defined override
   <data_defined>` widget.
@@ -565,12 +565,12 @@ To create a rule:
   the expression string builder dialog;
 * Use the provided functions and the layer attributes to build an :ref:`expression
   <vector_expressions>` to filter the features you'd like to retrieve. Press
-  the **[Test]** button to check the result of the query;
+  the :guilabel:`Test` button to check the result of the query;
 * A longer label can then be used to complete the rule description;
 * You can use the |checkbox| :guilabel:`Scale Range` option to set scales at which
   the rule should be applied;
 * Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
-  and press **[OK]**;
+  and press :guilabel:`OK`;
 
 A new row summarizing the rule is added to the Layer Properties dialog.
 You can create as many rules as necessary following the steps above or copy
@@ -684,7 +684,7 @@ From the main dialog, you can:
   symbol layer.
 * use the :guilabel:`Renderer` drop-down list to apply any of the other feature
   rendering types to the layer (single, categorized, rule-based...). Then, push
-  the **[Renderer settings...]** button to configure features' symbology as usual.
+  the :guilabel:`Renderer Settings...` button to configure features' symbology as usual.
   Note that this renderer is only visible on features that are not clustered.
   Also, when the symbol color is the same for all the point features inside a
   cluster, that color sets the ``@cluster_color`` variable of the cluster.
@@ -846,9 +846,9 @@ For renderers that allow stacked symbol layers (only heatmap doesn't) there is
 an option to control the rendering order of each symbol's levels.
 
 For most of the renderers, you can access the Symbols levels option by clicking
-the **[Advanced]** button below the saved symbols list and choosing
+the :guilabel:`Advanced` button below the saved symbols list and choosing
 :guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
-directly available through **[Symbols levels]** button, while for
+directly available through :guilabel:`Symbols Levels` button, while for
 :ref:`point_displacement` renderer the same button is inside the
 :guilabel:`Rendering settings` dialog.
 
@@ -892,7 +892,7 @@ symbols in both the :ref:`Layers panel <label_legend>` and the :ref:`print
 layout legend <layout_legend_item>`.
 
 To enable the :guilabel:`Data-defined Size Legend` dialog to render symbology,
-select the eponym option in the **[Advanced]** button below the saved symbols
+select the eponym option in the :guilabel:`Advanced` button below the saved symbols
 list. For diagrams, the option is available under the :guilabel:`Legend` tab.
 The dialog provides the following options to:
 
@@ -1698,7 +1698,7 @@ To do this, after you enabled the labeling on the ``NAME`` field of the layer
       ELSE 10
     END
 
-#. Press **[OK]** to validate. The dialog closes and the |dataDefined| button
+#. Press :guilabel:`OK` to validate. The dialog closes and the |dataDefined| button
    becomes |dataDefineExpressionOn| meaning that an rule is being run;
 #. Then click the button next to the color property, type the expression below
    and validate::
@@ -1998,7 +1998,7 @@ next to the layer symbology:
   legends the ``Color`` and ``Legend`` properties, as previously assigned in the
   :guilabel:`Attributes` tab;
 * and, when a :ref:`scaled size <diagram_size>` is being used for the diagrams,
-  push the **[Legend entries for diagram size...]** button to configure the
+  push the :guilabel:`Legend Entries for Diagram Size...` button to configure the
   diagram symbol aspect in the legends. This opens the :guilabel:`Data-defined
   Size Legend` dialog whose options are described in :ref:`data_defined_size_legend`.
 
@@ -2028,7 +2028,7 @@ Both vector layers are part of the QGIS sample dataset (see section
    ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. So, in the :guilabel:`Attributes` tab
    first select ``T_F_JAN`` and click the |signPlus| button, then repeat with
    ``T_F_JUL`` and finally ``T_F_MEAN``.
-#. Now click **[Apply]** to display the diagram in the QGIS main window.
+#. Now click :guilabel:`Apply` to display the diagram in the QGIS main window.
 #. You can adapt the chart size in the :guilabel:`Size` tab. Activate the
    |radioButtonOn| :guilabel:`Scaled size` and set the size of the diagrams on
    the basis of the :guilabel:`maximum value` of an attribute and the
@@ -2039,7 +2039,7 @@ Both vector layers are part of the QGIS sample dataset (see section
 #. Change the attribute colors by double clicking on the color values in the
    :guilabel:`Assigned attributes` field.
    Figure_diagrams_mapped_ gives an idea of the result.
-#. Finally, click **[Ok]**.
+#. Finally, click :guilabel:`OK`.
 
 .. _figure_diagrams_mapped:
 
@@ -2741,7 +2741,7 @@ divided into six types and can be used like this:
   see and execute the one 'Edit' action for their platform to run the editor).
 
 There are several examples included in the dialog. You can load them by clicking
-on **[Create default actions]**. To edit any of the examples, double-click
+on :guilabel:`Create Default Actions`. To edit any of the examples, double-click
 its row. One example is performing a search based on an attribute value. This
 concept is used in the following discussion.
 
@@ -2902,12 +2902,12 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. The text in the :guilabel:`Action` field should now look like this:
    ``http://google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
-   layer. It's located just to the left of the **[Insert]** button.
-#. From the drop-down box, select 'NAMES' and click **[Insert]**.
+   layer. It's located just to the left of the :guilabel:`Insert` button.
+#. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
 #. Your action text now looks like this:
 
    ``http://google.com/search?q=[%NAMES%]``
-#. To finalize and add the action, click the **[OK]** button.
+#. To finalize and add the action, click the :guilabel:`OK` button.
 
 .. _figure_add_action:
 
@@ -2937,7 +2937,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 When we click on the action, it brings up Firefox and navigates to the URL
 http://www.google.com/search?q=Tustumena. It is also possible to add further
 attribute fields to the action. Therefore, you can add a ``+`` to the end of
-the action text, select another field and click on **[Insert Field]**. In
+the action text, select another field and click on :guilabel:`Insert Field`. In
 this example, there is just no other field available that would make sense
 to search for.
 
@@ -3202,9 +3202,9 @@ layout legend <layout_legend_item>`. These options include:
   affect to any of the symbols used in the layer symbology a text that is
   displayed over the symbol, in both :guilabel:`Layers` panel and print layout
   legend. This mapping is done by typing each text next to the symbol in the
-  table widget or filling the table using the **[Set labels from expression]**
+  table widget or filling the table using the :guilabel:`Set Labels from Expression`
   button. Text appearance is handled through the font and color selector
-  widgets of the **[Text format]** button.
+  widgets of the :guilabel:`Text Format` button.
 
 .. _figure_legend_text_symbol:
 

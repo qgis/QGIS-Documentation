@@ -834,9 +834,9 @@ vertices, as long as the geometry remains valid:
    the operation and the ratio the change represents).
    Also, in the map canvas, the expected geometry is diplayed over the existing
    one, using the rubberband color.
-#. When the expected geometry fits your needs, click **[OK]** to apply the
+#. When the expected geometry fits your needs, click :guilabel:`OK` to apply the
    modification.
-   Otherwise, to abort the operation, you can either press **[Cancel]** or
+   Otherwise, to abort the operation, you can either press :guilabel:`Cancel` or
    right-click in the map canvas.
 
 .. note:: Unlike the feature simplification option in :menuselection:`Settings -->
