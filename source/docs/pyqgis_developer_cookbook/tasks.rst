@@ -261,7 +261,7 @@ parameter ``wait_time``.
               QgsMessageLog.logMessage(
                   'Completed with no exception and no result '\
                   '(probably manually canceled by the user)',
-                  CATEGORY, Qgis.Warning)
+                  MESSAGE_CATEGORY, Qgis.Warning)
           else:
               QgsMessageLog.logMessage(
                   'Task {name} completed\n'
