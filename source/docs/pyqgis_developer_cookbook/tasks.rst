@@ -270,7 +270,7 @@ parameter ``wait_time``.
                       name=result['task'],
                       total=result['total'],
                       iterations=result['iterations']),
-                  CATEGORY, Qgis.Info)
+                  MESSAGE_CATEGORY, Qgis.Info)
       else:
           QgsMessageLog.logMessage("Exception: {}".format(exception),
                                    CATEGORY, Qgis.Critical)
