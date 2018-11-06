@@ -35,13 +35,13 @@ There are several ways to create a QGIS task:
 
   .. code-block:: python
 
-    class MyTask(QgsTask):
+    class SpecialisedTask(QgsTask):
   
 * Create a task from a function
 
   .. code-block:: python
 
-    QgsTask.fromFunction(u'heavy function', myfunction,
+    QgsTask.fromFunction(u'heavy function', heavyfunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
