@@ -101,7 +101,7 @@ dependencies.
       QgsApplication, QgsTask, QgsMessageLog,
       )
   
-  MESSAGE_CATEGORY = 'SubclassTask'
+  MESSAGE_CATEGORY = 'RandomIntegerTask'
   
   class RandomIntegerTask(QgsTask):
       """This shows how to subclass QgsTask"""
