@@ -273,7 +273,7 @@ parameter ``wait_time``.
                   MESSAGE_CATEGORY, Qgis.Info)
       else:
           QgsMessageLog.logMessage("Exception: {}".format(exception),
-                                   CATEGORY, Qgis.Critical)
+                                   MESSAGE_CATEGORY, Qgis.Critical)
           raise exception
   
   # Creae a few tasks
