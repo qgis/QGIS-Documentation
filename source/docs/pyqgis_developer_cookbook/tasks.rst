@@ -216,7 +216,7 @@ parameter ``wait_time``.
   import random
   from time import sleep
   
-  CATEGORY = 'TaskFromFunction'
+  MESSAGE_CATEGORY = 'TaskFromFunction'
   
   def run(task, wait_time):
       """
