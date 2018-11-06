@@ -667,7 +667,7 @@ The following example code illustrates creating and populating a memory provider
 
   # add a feature
   fet = QgsFeature()
-  fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(10,10)))
+  fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
   fet.setAttributes(["Johny", 2, 0.3])
   pr.addFeatures([fet])
 
@@ -682,8 +682,8 @@ Finally, let's check whether everything went well
   # show some stats
   print("fields:", len(pr.fields()))
   print("features:", pr.featureCount())
-  e = layer.extent()
-  print("extent:", e.xMiniminum(), e.yMinimum(), e.xMaximum(), e.yMaximum())
+  e = vl.extent()
+  print("extent:", e.xMinimum(), e.yMinimum(), e.xMaximum(), e.yMaximum())
 
   # iterate over features
   features = vl.getFeatures()
