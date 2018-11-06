@@ -133,7 +133,7 @@ dependencies.
               if self.isCanceled():
                   return False
               # simulate exceptions to show how to abort task
-              if 0 and random.randint(0, 500) == 42:
+              if random.randint(0, 500) == 42:
                   # DO NOT raise Exception('bad value!')
                   # this would crash QGIS
                   self.exception = Exception('bad value!')
