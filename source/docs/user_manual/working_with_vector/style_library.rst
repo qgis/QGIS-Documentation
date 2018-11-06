@@ -94,11 +94,11 @@ you can either:
 
 * select the items, right-click and choose :menuselection:`Add to Tag -->`
   and then select the tag name or create a new tag;
-* select the tag and press :guilabel:`Modify group... --> Attach Selected Tag
+* select the tag and press :menuselection:`Modify group... --> Attach Selected Tag
   to Symbols`. A |unchecked| checkbox appears near each item to help you select
-  or deselect it. When selection is finished, press :guilabel:`Modify group... -->
+  or deselect it. When selection is finished, press :menuselection:`Modify group... -->
   Finish Tagging`.
-* select the smart group, press :guilabel:`Modify group... --> Edit smart group...`
+* select the smart group, press :menuselection:`Modify group... --> Edit smart group...`
   and configure a new set of constraints in the :guilabel:`Smart Group Editor` dialog.
   This option is also available in the contextual menu of the smart group.
 
@@ -127,7 +127,7 @@ Right-clicking over a selection of items also allows you to:
 
 * :guilabel:`Add to Favorites`;
 * :guilabel:`Remove from Favorites`;
-* :guilabel:`Add to Tag -->` and select the appropriate tag or create a new one to use;
+* :menuselection:`Add to Tag -->` and select the appropriate tag or create a new one to use;
 * :guilabel:`Clear Tags`: detaching the symbols from any tag;
 * :guilabel:`Remove Item(s)`;
 * :guilabel:`Edit Item`: applies to the item you right-click over;
