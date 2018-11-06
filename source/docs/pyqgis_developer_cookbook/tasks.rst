@@ -226,7 +226,7 @@ parameter ``wait_time``.
       the case of success) to the on_finished method
       """
       QgsMessageLog.logMessage('Started task {}'.format(task.description()),
-                               CATEGORY, Qgis.Info)
+                               MESSAGE_CATEGORY, Qgis.Info)
       wait_time = wait_time / 100
       total = 0
       iterations = 0
