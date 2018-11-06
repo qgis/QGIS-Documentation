@@ -250,7 +250,7 @@ parameter ``wait_time``.
       QgsMessageLog.logMessage(
           'Task "{name}" was canceled'.format(
               name=task.description()),
-          CATEGORY, Qgis.Info)
+          MESSAGE_CATEGORY, Qgis.Info)
   
   def completed(exception, result=None):
       """This is called when run is finished.
