@@ -913,41 +913,7 @@ parameters:
 | MAP           | Yes      | Specify the QGIS project file    |
 +---------------+----------+----------------------------------+
 
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **GetCapabilities** request.
-
-For example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &...
-
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
-request.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetCapabilities
-  &...
-
-
-MAP
-^^^
-
-This parameter allows to define the QGIS project file to use.
+|
 
 URL example:
 
@@ -957,7 +923,25 @@ URL example:
   SERVICE=WMTS
   &REQUEST=GetCapabilities
   &MAP=/home/user/project.qgs
-  &...
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetCapabilities** request.
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
 
 
 .. _`qgisserver-wmts-gettile`:
@@ -1000,19 +984,27 @@ parameters:
 | MAP           | Yes      | Specify the QGIS project file    |
 +---------------+----------+----------------------------------+
 
+|
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **GetTile** request.
-
-For example:
+URL example:
 
 .. code-block:: none
 
   http://localhost/qgis_server?
   SERVICE=WMTS
-  &...
+  &REQUEST=GetTile
+  &MAP=/home/user/project.qgs
+  &LAYER=mylayer
+  &FORMAT=image/png
+  &TILEMATRIXSET=EPSG:4326
+  &TILEROW=0
+  &TILECOL=0
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetTile** request.
 
 
 REQUEST
@@ -1020,30 +1012,11 @@ REQUEST
 
 This parameter is ``GetTile`` in case of the **GetTile** request.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &...
-
 
 LAYER
 ^^^^^
 
 This parameter allows to specify the layer to display on the tile.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &LAYER=mylayer
-  &...
 
 In addition, QGIS Server introduced some options to select a layer by:
 
@@ -1059,7 +1032,7 @@ defined, then it's used by default instead of the layer's name:
   http://localhost/qgis_server?
   SERVICE=WMTS
   &REQUEST=GetTile
-  &LAYERS=mynickname
+  &LAYER=mynickname
   &...
 
 Moreover, there's a project option allowing to select layers by their id in
@@ -1070,10 +1043,11 @@ option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
 .. code-block:: none
 
   http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mylayerid1,mylayerid2
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYER=mylayerid1
   &...
+
 
 FORMAT
 ^^^^^^
@@ -1089,62 +1063,25 @@ values are:
 If the ``FORMAT`` parameter is different from one of these values, then the
 default format PNG is used instead.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &FORMAT=image/jpeg
-  &...
-
 
 TILEMATRIXSET
 ^^^^^^^^^^^^^
 
 This parameter allows to define the CRS to use to compute the underlying
-pyramid and has to be formed like ``EPSG:XXXX``..
+pyramid and has to be formed like ``EPSG:XXXX``.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &TILEMATRIXSET=EPSG:4326
-  &...
 
 TILEMATRIX
 ^^^^^^^^^^
 
 This parameter allows to define the matrix to use for the output tile.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &TILEMATRIX=0
-  &...
 
 TILEROW
 ^^^^^^^
 
 This parameter allows to select the row of the tile to get within the matrix.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &TILEROW=0
-  &...
 
 TILECOL
 ^^^^^^^
@@ -1152,30 +1089,18 @@ TILECOL
 This parameter allows to select the column of the tile to get within the
 matrix.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &TILECOL=0
-  &...
 
 MAP
 ^^^
 
 This parameter allows to define the QGIS project file to use.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &MAP=/home/user/project.qgs
-  &...
+As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
+is mandatory because a request needs a QGIS project to actually work. However,
+the ``QGIS_PROJECT_FILE`` environment variable may be used to define a default
+QGIS project. In this specific case, ``MAP`` is not longer a required
+parameter. For further information you may refer to
+:ref:`server_env_variables`.
 
 
 .. _`qgisserver-wmts-getfeatureinfo`:
@@ -1214,25 +1139,7 @@ parameters:
 | MAP           | Yes      | Specify the QGIS project file    |
 +---------------+----------+----------------------------------+
 
-
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request.
-
-For example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &...
-
-
-REQUEST
-^^^^^^^
-
-This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
+|
 
 URL example:
 
@@ -1241,7 +1148,23 @@ URL example:
   http://localhost/qgis_server?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
-  &...
+  &MAP=/home/user/project.qgs
+  &LAYER=mylayer
+  &INFOFORMAT=image/html
+  &I=10
+  &J=5
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request.
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
 
 
 MAP
@@ -1249,31 +1172,18 @@ MAP
 
 This parameter allows to define the QGIS project file to use.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetCapabilities
-  &MAP=/home/user/project.qgs
-  &...
+As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
+is mandatory because a request needs a QGIS project to actually work. However,
+the ``QGIS_PROJECT_FILE`` environment variable may be used to define a default
+QGIS project. In this specific case, ``MAP`` is not longer a required
+parameter. For further information you may refer to
+:ref:`server_env_variables`.
 
 
 LAYER
 ^^^^^
 
 This parameter allows to specify the layer to display on the tile.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &LAYER=mylayer
-  &...
 
 In addition, QGIS Server introduced some options to select a layer by:
 
@@ -1288,8 +1198,8 @@ defined, then it's used by default instead of the layer's name:
 
   http://localhost/qgis_server?
   SERVICE=WMTS
-  &REQUEST=GetTile
-  &LAYERS=mynickname
+  &REQUEST=GetFeatureInfo
+  &LAYER=mynickname
   &...
 
 Moreover, there's a project option allowing to select layers by their id in
@@ -1300,9 +1210,9 @@ option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
 .. code-block:: none
 
   http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mylayerid1,mylayerid2
+  SERVICE=WMTS
+  &REQUEST=GetFeatureInfo
+  &LAYER=mylayerid1
   &...
 
 
@@ -1319,16 +1229,6 @@ values are:
 
 The default value is ``text/plain``.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &INFOFORMAT=image/html
-  &...
-
 
 I
 ^
@@ -1336,32 +1236,12 @@ I
 This parameter allows to define the X coordinate of the pixel for which we
 want to retrieve underlying information.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &I=10
-  &...
-
 
 J
 ^
 
 This parameter allows to define the Y coordinate of the pixel for which we
 want to retrieve underlying information.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMTS
-  &REQUEST=GetTile
-  &J=10
-  &...
 
 
 .. _`extra-getmap-parameters`:
