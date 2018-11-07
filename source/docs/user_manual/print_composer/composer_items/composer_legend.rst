@@ -112,7 +112,7 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   contextual menu.
 
   After changing the symbology in the QGIS main window, you can click on
-  **[Update All]** to adapt the changes in the legend element of the print
+  :guilabel:`Update All` to adapt the changes in the legend element of the print
   layout.
 
 * While generating an atlas with polygon features, you can filter out legend

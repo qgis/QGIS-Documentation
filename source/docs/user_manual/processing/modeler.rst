@@ -155,7 +155,7 @@ and another one that imports a layer into that same database). In that case, jus
 select the previous algorithm in the *Parent algorithms* parameter and the two
 steps will be executed in the correct order.
 
-Once all the parameters have been assigned valid values, click on **[OK]** and the
+Once all the parameters have been assigned valid values, click on :guilabel:`OK` and the
 algorithm will be added to the canvas. It will be linked to all the other elements
 in the canvas, whether algorithms or inputs, that provide objects that are used
 as inputs for that algorithm.
@@ -164,14 +164,14 @@ Elements can be dragged to a different position within the canvas, to change the
 way the module structure is displayed and make it more clear and intuitive. Links
 between elements are updated automatically. You can zoom in and out by using the mouse wheel.
 
-You can run your algorithm any time by clicking on the **[Run]** button. However, in
+You can run your algorithm any time by clicking on the :guilabel:`Run` button. However, in
 order to use the algorithm from the toolbox, it has to be saved and the modeler dialog
 closed, to allow the toolbox to refresh its contents.
 
 Saving and loading models
 -------------------------
 
-Use the **[Save]** button to save the current model and the **[Open]** button to
+Use the :guilabel:`Save` button to save the current model and the :guilabel:`Open` button to
 open any model previously saved. Models are saved with the :file:`.model`
 extension. If the model has been previously saved from the modeler window, you
 will not be prompted for a filename. Since there is already a file associated
@@ -240,7 +240,7 @@ appear in this case as available inputs. Layers or values generated at a more
 advanced step in the workflow defined by the model will not be available if they
 cause circular dependencies.
 
-Select the new values and then click on the **[OK]** button as usual. The
+Select the new values and then click on the :guilabel:`OK` button as usual. The
 connections between the model elements will change accordingly in the modeler
 canvas.
 
@@ -263,8 +263,9 @@ When right-clicking on an algorithm that is not active, you will instead see a
 Editing model help files and meta-information
 ---------------------------------------------
 
-You can document your models from the modeler itself. Just click on the **[Edit model help]**
-button and a dialog like the one shown next will appear.
+You can document your models from the modeler itself. Just click on the
+:guilabel:`Edit Model Help` button and a dialog like the one shown next will
+appear.
 
 .. _figure_help_edition:
 

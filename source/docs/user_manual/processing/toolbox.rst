@@ -244,7 +244,7 @@ algorithm, which will help you understand its purpose and its basic ideas.
 If such a description is not available, the description panel will not be shown.
 
 For a more detailed help file, which might include description of every
-parameter it uses, or examples, you will find a **[Help]** button at the
+parameter it uses, or examples, you will find a :guilabel:`Help` button at the
 bottom of the dialog bringing you to the :ref:`Processing algorithms
 documentation <processing_algs>` or to the provider documentation (for
 some third-party providers).

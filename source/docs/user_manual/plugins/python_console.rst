@@ -171,7 +171,7 @@ the Python console behavior:
 
 * **Using prepared APIs file:** If checked the ``*.pap`` file will be used for code
   completion. To generate a prepared APIs file you have to load at least an ``*.api``
-  file and then compile it by clicking on **[Compile Apis...]** button.
+  file and then compile it by clicking on :guilabel:`Compile APIs...` button.
 
 .. tip:: **Save the options**
 

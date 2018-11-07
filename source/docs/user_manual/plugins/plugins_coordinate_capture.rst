@@ -33,7 +33,7 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
 #. Click on the |geographic| :sup:`Click to the select the CRS to use for
    coordinate display` icon and select a different CRS from the one you selected
    above.
-#. To start capturing coordinates, click on **[Start capture]**. You can now
+#. To start capturing coordinates, click on :guilabel:`Start Capture`. You can now
    click anywhere on the map canvas and the plugin will show the coordinates for
    both of your selected CRS.
 #. To enable mouse coordinate tracking, click the |tracking| :sup:`mouse tracking`

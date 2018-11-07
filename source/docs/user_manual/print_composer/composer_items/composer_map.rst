@@ -42,7 +42,7 @@ Main properties
 In the :guilabel:`Main properties` group (see figure_layout_map_) of the map
 :guilabel:`Item Properties` panel, available options are:
 
-* The **[Update preview]** button to refresh the map item rendering if the view
+* The :guilabel:`Update Preview` button to refresh the map item rendering if the view
   in map canvas has been modified. Note that most of the time, the map item
   refresh is automatically triggered by the changes;
 * The :guilabel:`Scale` to manually set the map item scale;
@@ -97,7 +97,7 @@ map item to those of an existing map theme: select a map theme from the
 the map theme is from now on used for the map item until you select another map
 theme or uncheck the |checkbox| :guilabel:`Lock layers` option. You then may
 need to refresh the view using the |draw| :sup:`Refresh view` button of the
-:guilabel:`Navigation` toolbar or the **[Update preview]** button seen above.
+:guilabel:`Navigation` toolbar or the :guilabel:`Update Preview` button seen above.
 
 Note that, unlike the :guilabel:`Follow map theme` option, if the
 :guilabel:`Lock layers` option is enabled and set to a map theme, the layers in
@@ -130,9 +130,9 @@ following functionalities (see figure_layout_map_extents_):
 The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown
 in the map item. Each of these values can be manually replaced, modifying the
 map canvas area displayed and/or map item size.
-Clicking the **[Set to map canvas extent]** button sets the extent of the
+Clicking the :guilabel:`Set to Map Canvas Extent` button sets the extent of the
 layout map item to the extent of the main map canvas.
-The button **[View extent in map canvas]** does exactly the opposite; it
+The button :guilabel:`View Extent in Map Canvas` does exactly the opposite; it
 updates the extent of the main map canvas to the extent of the layout map item.
 
 You can also alter a map item extent using the |moveItemContent| :sup:`Move
@@ -190,7 +190,7 @@ Double-click the added grid to rename it.
    Map Grids Dialog
 
 After you add a grid, you can activate the checkbox |checkbox| :guilabel:`Draw
-grid` to allow overlaying the grid onto the map item. Press the **[Modify grid...]**
+grid` to allow overlaying the grid onto the map item. Press the :guilabel:`Modify Grid...`
 button to access configuration options.
 
 Grid Appearance

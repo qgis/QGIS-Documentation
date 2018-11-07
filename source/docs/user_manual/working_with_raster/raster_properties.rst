@@ -134,7 +134,7 @@ to MinMax' and 'Clip to min max'.
 This selection offers you a wide range of options to modify the appearance
 of your raster layer. First of all, you have to get the data range from your
 image. This can be done by choosing the :guilabel:`Extent` and pressing
-**[Load]**. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)` the
+:guilabel:`Load`. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radioButtonOff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
@@ -197,7 +197,7 @@ Singleband gray
 This renderer allows you to render a single band layer with a :guilabel:`Color gradient`:
 'Black to white' or 'White to black'. You can define a :guilabel:`Min`
 and a :guilabel:`Max` value by choosing the :guilabel:`Extent` first and
-then pressing **[Load]**. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)`
+then pressing :guilabel:`Load`. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)`
 the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radioButtonOff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
@@ -372,7 +372,7 @@ An even more flexible way to customize the transparency can be done in the
      raster using the |contextHelp| :sup:`Add values from display` button.
      Then enter the transparency value.
   #. Repeat the steps to adjust more values with custom transparency.
-  #. Press the **[Apply]** button and have a look at the map.
+  #. Press the :guilabel:`Apply` button and have a look at the map.
 
   As you can see, it is quite easy to set custom transparency, but it can be
   quite a lot of work. Therefore, you can use the button |fileSave|
@@ -389,7 +389,7 @@ Histogram Properties
 
 The |rasterHistogram| :guilabel:`Histogram` tab allows you to view the distribution
 of the bands or colors in your raster. The histogram is generated when you press the
-**[Compute Histogram]** button. All existing bands will be displayed together.
+:guilabel:`Compute Histogram` button. All existing bands will be displayed together.
 You can save the histogram as an image with the |fileSave| button.
 
 At the bottom of the histogram, you can select a raster band in the drop-down
@@ -482,7 +482,7 @@ Several :guilabel:`Resampling methods` can be used to calculate the pyramids:
 * Mode
 * None
 
-Finally, click **[Build pyramids]** to start the process.
+Finally, click :guilabel:`Build Pyramids` to start the process.
 
 .. _figure_raster_pyramids:
 

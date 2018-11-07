@@ -100,7 +100,7 @@ Use these steps to create the index:
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
    :menuselection:`Properties...` from the context menu.
-#. In the :guilabel:`Source` tab, click the **[Create Spatial Index]** button.
+#. In the :guilabel:`Source` tab, click the :guilabel:`Create Spatial Index` button.
 
 **Problem loading a .prj file**
 
@@ -418,7 +418,7 @@ from the PostGIS documentation available at http://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
    first select the layer and click on :menuselection:`Table --> Edit table`, go
-   to :menuselection:`Indexes` tab and click on **[Add spatial index]**.
+   to :menuselection:`Indexes` tab and click on :guilabel:`Add Spatial Index`.
 
 The syntax for creating a GiST index is:
 ::

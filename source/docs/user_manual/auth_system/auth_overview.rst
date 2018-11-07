@@ -129,7 +129,7 @@ unless you need to do more comprehensive configuration management.
 .. figure:: img/auth-selector-wms-connection.png
    :align: center
 
-   WMS connection dialog showing **[Add]**, **[Edit]**, and **[Remove]** 
+   WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and :guilabel:`Remove` 
    authentication configuration buttons
 
 When creating or editing an authentication configuration, the info required is
@@ -150,7 +150,7 @@ plugin. As such, some authentication method plugins may not be applicable
 everywhere an authentication configuration selector is shown. A list of
 available authentication method plugins and their compatible resource/providers
 can be accessed going to :menuselection:`Settings --> Options` and, in the
-:guilabel:`Authentication` tab, click the |options| **[Installed plugins]**
+:guilabel:`Authentication` tab, click the |options| :guilabel:`Installed Plugins`
 button.
 
 .. _figure_authmethod:

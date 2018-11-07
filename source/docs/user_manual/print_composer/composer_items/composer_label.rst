@@ -42,11 +42,11 @@ surrounded by ``[%`` and ``%]`` in order to be interpreted as such.
 * Labels can be interpreted as HTML code: check |checkbox|
   :guilabel:`Render as HTML`. You can now insert a URL, a clickable image that
   links to a web page or something more complex.
-* You can also use :ref:`expressions <expression_builder>`: click on **[Insert
-  an expression]** button, write your formula as usual and when the dialog is
+* You can also use :ref:`expressions <expression_builder>`: click on :guilabel:`Insert
+  an expression` button, write your formula as usual and when the dialog is
   applied, QGIS automatically adds the surrounding characters.
   
-.. note:: Clicking the **[Insert an expression]** button when no selection is
+.. note:: Clicking the :guilabel:`Insert an Expression` button when no selection is
   made in the textbox will append the new expression to the existing text.
   If you want to update an existing text, you need to select it the part of
   interest beforehand.
@@ -66,7 +66,7 @@ which will render:
 Appearance
 ----------
 
-* Define :guilabel:`Font` by clicking on the **[Font...]** button or a
+* Define :guilabel:`Font` by clicking on the :guilabel:`Font...` button or a
   :guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`.
 * You can specify different horizontal and vertical margins in ``mm``. This is
   the margin from the edge of the layout item. The label can be positioned

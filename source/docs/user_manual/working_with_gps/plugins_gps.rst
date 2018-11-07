@@ -59,7 +59,7 @@ sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
    |importGPX| :sup:`GPS Tools` icon in the toolbar and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_).
 #. Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file
-   :file:`national_monuments.gpx` and click **[Open]**.
+   :file:`national_monuments.gpx` and click :guilabel:`Open`.
 
 .. _figure_gps:
 
@@ -68,10 +68,10 @@ sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 
    The *GPS Tools* dialog window
 
-Use the **[Browse...]** button to select the GPX file, then use the checkboxes
+Use the :guilabel:`Browse...` button to select the GPX file, then use the checkboxes
 to select the feature types you want to load from that GPX file.
 Each feature type will be loaded in a separate layer when you click
-**[OK]**. The file :file:`national_monuments.gpx` only includes waypoints.
+:guilabel:`OK`. The file :file:`national_monuments.gpx` only includes waypoints.
 
 .. note::
    GPS units allow you to store data in different coordinate systems. When
@@ -131,7 +131,7 @@ connected to. It may also be simply USB, for USB-enabled GPS units.
 * |nix| On Linux, this is something like ``/dev/ttyS0`` or ``/dev/ttyS1``.
 * |win| On Windows, it is ``COM1`` or ``COM2``.
 
-When you click **[OK]**, the data will be downloaded from the device and appear
+When you click :guilabel:`OK`, the data will be downloaded from the device and appear
 as a layer in QGIS.
 
 Uploading GPS data to a device
@@ -157,12 +157,12 @@ There are lots of different types of GPS devices. The QGIS developers can't
 test all of them, so if you have one that does not work with any of the device
 types listed in the :guilabel:`Download from GPS` and :guilabel:`Upload to GPS`
 tools, you can define your own device type for it. You do this by using the GPS
-device editor, which you start by clicking the **[Edit devices]** button in the
+device editor, which you start by clicking the :guilabel:`Edit Devices` button in the
 download or the upload tab.
 
-To define a new device, you simply click the **[New device]** button,
+To define a new device, you simply click the :guilabel:`New Device` button,
 enter a name, enter download and upload commands for your device, and
-click the **[Update device]** button. The name will be listed in the
+click the :guilabel:`Update Device` button. The name will be listed in the
 device menus in the upload and download windows -- it can be any string. The
 download command is the command that is used to download data from the device
 to a GPX file. This will probably be a GPSBabel command, but you can use any

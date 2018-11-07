@@ -77,17 +77,11 @@ You can use some tags inside the text to emphasize some items.
      :menuselection:`menu --> submenu`
 
 * **Dialog and Tab title**: Labels presented as part of an interactive user
-  interface including window title, tab title and option labels.
+  interface including window title, tab title, button and option labels.
 
   .. code-block:: rst
 
      :guilabel:`title`
-
-* **Button labels**
-
-  .. code-block:: rst
-
-     **[Apply]**
 
 * **Filename or directory**
 

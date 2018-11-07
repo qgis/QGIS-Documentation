@@ -58,14 +58,14 @@ be displayed as shown in figure_create_geopackage_.
    Creating a New GeoPackage layer dialog
 
 The first step is to select an existing GeoPackage or create a new one. This
-can be done by pressing the ellipses **[...]** button at the right of the
+can be done by pressing the ellipses :guilabel:`...` button at the right of the
 Database field. Then, give a name for the new layer, define the layer type and
-specify the coordinate reference system with **[Specify CRS]**.
+specify the coordinate reference system with :guilabel:`Specify CRS`.
 
 To define an attribute table for the new GeoPackage layer, add the names of
 the attribute columns you want to create with the corresponding column type, 
-and click on the **[Add to fields list]** button. Once you are happy with the
-attributes, click **[OK]**. QGIS will automatically add the new layer to the
+and click on the :guilabel:`Add to Fields List` button. Once you are happy with the
+attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer`.
 
@@ -94,14 +94,14 @@ dimensions, as well as the CRS (coordinate reference system).
 
 To complete the creation of the new Shapefile layer, add the desired attributes
 by specifying a name and type for each attribute and clicking on the 
-**[Add to fields list]** button. 
+:guilabel:`Add to Fields List` button. 
 A first 'id' column is added by default but can be
 removed, if not wanted. Only :guilabel:`Decimal number` |selectString|,
 :guilabel:`Whole number` |selectString|, :guilabel:`Text data`
 |selectString| and :guilabel:`Date` |selectString| attributes are
 supported. Additionally, depending on the attribute type, you can also define
 the length and precision of the new attribute column. Once you are happy with the
-attributes, click **[OK]**. 
+attributes, click :guilabel:`OK`. 
 Once the Shapefile has been created, it will be added to the map as a new layer,
 and you can edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
 
@@ -129,13 +129,13 @@ Figure_create_spatialite_.
 The first step is to select an existing SpatiaLite database or to create a new
 SpatiaLite database. This can be done with the browse button |browseButton| to
 the right of the database field. Then, add a name for the new layer, define
-the layer type, and specify the coordinate reference system with **[Specify CRS]**.
+the layer type, and specify the coordinate reference system with :guilabel:`Specify CRS`.
 If desired, you can select |checkbox| :guilabel:`Create an autoincrementing primary key`.
 
 To define an attribute table for the new SpatiaLite layer, add the names of
 the attribute columns you want to create with the corresponding column type, and
-click on the **[Add to attribute list]** button. Once you are happy with the
-attributes, click **[OK]**. QGIS will automatically add the new layer to the
+click on the :guilabel:`Add to Fields List` button. Once you are happy with the
+attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer`.
 
@@ -157,7 +157,7 @@ Manager...` opens the Plugin Manager Dialog. Activate the |checkbox|
 When this plugin is loaded, choose :menuselection:`New -->` |createGPX|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
 In the :guilabel:`Save new GPX file as` dialog, choose where to save the
-new file and press **[Save]**. Three new layers are added to the
+new file and press :guilabel:`Save`. Three new layers are added to the
 :guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks`` with
 predefined structure.
 
@@ -362,8 +362,8 @@ In the :guilabel:`DXF Export` dialog:
    to the given CRS.
 #. select the layers to include in the DXF files either by checking each in the
    table widget or automatically pick them from an existing :ref:`map theme
-   <map_themes>`. The **[Select all]** and **[Deselect all]** buttons can also
-   help to quickly set the data to export.
+   <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
+   can also help to quickly set the data to export.
 
    For each layer, you can also choose whether to export all the features in a
    single DXF layer or rely on a field whose values are used to split the features

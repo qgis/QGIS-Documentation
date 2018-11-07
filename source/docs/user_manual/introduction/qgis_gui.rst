@@ -622,7 +622,7 @@ helps you find and run any feature or options in QGIS. Simply write a text
 associated to the item you are looking for (name, tag, keyword...) and you get
 a list that updates as you write. You can also limit the search scope thanks to
 the :ref:`locator filters <locator_options>`. Click the |search| button to
-select any of them and press the **[Configure]** entry for global settings.
+select any of them and press the :guilabel:`Configure` entry for global settings.
 
 In the area next to it, will be shown when needed summary of actions you've done
 (such as selecting features in a layer, removing layer) or a long description

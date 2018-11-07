@@ -52,7 +52,7 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
   a table or using a regular expression.
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
   provide a full HTML page.
-* The **[insert an expression]** button can be used to insert an expression like
+* The :guilabel:`Insert an Expression` button can be used to insert an expression like
   ``[%Year($now)%]`` in the Source textbox to display the current year. This
   button is only activated when radiobutton :guilabel:`Source` is selected.
   After inserting the expression click somewhere in the textbox before
@@ -60,7 +60,7 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
 * Activate |checkbox| :guilabel:`Evaluate QGIS expressions in HTML code` to see
   the result of the expression you have included, otherwise you will see the
   expression instead.
-* Use the **[Refresh HTML]** button to refresh the HTML frame(s) and see the
+* Use the :guilabel:`Refresh HTML` button to refresh the HTML frame(s) and see the
   result of changes.
 
 
@@ -90,7 +90,7 @@ panel provides the following functionalities (see figure_layout_html_frames_):
   * ``Repeat until finished`` will also create as many frames as the
     ``Extend to next page`` option, except all frames will have the same size.
 
-* Use the **[Add Frame]** button to add another frame with the same size as
+* Use the :guilabel:`Add Frame` button to add another frame with the same size as
   selected frame. If the HTML page does not fit in the first frame it will
   continue in the next frame when you use :guilabel:`Resize mode` or
   :guilabel:`Use existing frames`.
@@ -138,7 +138,7 @@ following functionalities (see figure_layout_html_breaks_):
         font-size: 20px;
      }
 
-* Use the **[Update HTML]** button to see the result of the style sheet settings.
+* Use the :guilabel:`Update HTML` button to see the result of the style sheet settings.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
