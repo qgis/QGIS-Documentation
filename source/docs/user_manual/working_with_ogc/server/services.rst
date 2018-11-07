@@ -798,7 +798,7 @@ Standard requests provided by QGIS Server:
 +--------------------+-----------------------------------------------------------+
 | DescribeFeatureType| Returns a description of feature types and properties     |
 +--------------------+-----------------------------------------------------------+
-| Transaction        | Allows features to be insertde, updated or deleted        |
+| Transaction        | Allows features to be inserted, updated or deleted        |
 +--------------------+-----------------------------------------------------------+
 
 
@@ -913,7 +913,7 @@ URL example:
 RESULTTYPE
 ^^^^^^^^^^
 
-This parameter may be used to specify the kind of result to return. Availables
+This parameter may be used to specify the kind of result to return. Available
 values are:
 
 - ``results``: the default behavior
@@ -957,11 +957,10 @@ URL example:
 STARTINDEX
 ^^^^^^^^^^
 
-This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.
-0 which is the only version implemented in QGIS Server. Actually, it can be
-used to skip some features in the result set and in combination with
-``MAXFEATURES`` will provide for the ability to use WFS **GetFeature** to page
-through results.
+This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0.
+Actually, it can be used to skip some features in the result set and in
+combination with ``MAXFEATURES``, it provides the ability to page through
+results.
 
 URL example:
 
