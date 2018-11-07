@@ -747,12 +747,13 @@ The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing featur
    <advanced_digitizing_panel>` to accurately set the origin point coordinates. In
    that case:
 
-   * first click on the |cad| button to enable the panel;
-   * type ``x`` and enter the corresponding value for the origin point you'd like
-     to use. Then press the |locked| button next to the option to lock the value;
-   * do the same for the ``y`` coordinate;
-   * click on the map canvas and your origin point is placed at the indicated
-     coordinates.
+   #. First click on the |cad| button to enable the panel.
+   #. Type ``x`` and enter the corresponding value for the origin point you'd like
+      to use. Then press the |locked| button next to the option to lock the value.
+   #. Do the same for the ``y`` coordinate.
+   #. Click on the map canvas and your origin point is placed at the indicated
+      coordinates.
+
 #. Move over the map canvas to indicate the destination point of the displacement,
    still using snapping mode or, as above, use the advanced digitizing panel which
    would provide complementary ``distance`` and ``angle`` placement constraints

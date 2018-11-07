@@ -71,12 +71,12 @@ Information Properties
 
 |metadata| The :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
-Provided information are :
+Provided information are:
 
 * based on the provider of the layer (format of storage, path, geometry type,
   data source encoding, extent...);
 * picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
-  contacts, history...) ;
+  contacts, history...);
 * or related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...)
 
@@ -475,18 +475,18 @@ such representation.
 
 **Creating proportional symbol**
 
-Proportional rendering is done by:
+To apply a proportional rendering:
 
-* first applying to the layer the :ref:`single symbol renderer
-  <single_symbol_renderer>`;
-* then set the symbol to apply to the features;
-* select the item at the upper level of the symbol tree, and use the
-  |dataDefined| :sup:`Data-defined override` :ref:`button <data_defined>` next
-  to the :guilabel:`Size` (for point layer) or :guilabel:`Width` (for line
-  layer) option;
-* select a field or enter an expression, and for each feature, QGIS will apply
-  the output value to the property and proportionally resize the symbol in the
-  map canvas.
+#. First apply to the layer the :ref:`single symbol renderer
+   <single_symbol_renderer>`.
+#. Then set the symbol to apply to the features.
+#. Select the item at the upper level of the symbol tree, and use the
+   |dataDefined| :sup:`Data-defined override` :ref:`button <data_defined>` next
+   to the :guilabel:`Size` (for point layer) or :guilabel:`Width` (for line
+   layer) option.
+#. Select a field or enter an expression, and for each feature, QGIS will apply
+   the output value to the property and proportionally resize the symbol in the
+   map canvas.
 
   If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
   menu to apply some transformation (exponential, flannery...) to the symbol
@@ -513,13 +513,14 @@ other is represented by a size.
 
 The simplest way to create multivariate analysis in QGIS is to:
 
-* first apply a categorized or graduated rendering on a layer, using the same
-  type of symbol for all the classes;
-* Then, apply a proportional symbology on the classes: click on the symbol
-  :guilabel:`Change` button above the classification frame: you get the
-  :ref:`symbol-selector` dialog from which, as seen above, you can rescale the
-  size or width using the |dataDefined| :ref:`data defined override
-  <data_defined>` widget.
+#. First apply a categorized or graduated rendering on a layer, using the same
+   type of symbol for all the classes.
+#. Then, apply a proportional symbology on the classes:
+
+   #. Click on the :guilabel:`Change` button above the classification frame:
+      you get the :ref:`symbol-selector` dialog.
+   #. Rescale the size or width of the symbol layer using the |dataDefined|
+      :ref:`data defined override <data_defined>` widget as seen above.
 
 Like the proportional symbol, the scaled symbology can be added to the layer
 tree, on top of the categorized or graduated classes symbols using the
@@ -554,23 +555,23 @@ if you want to enable symbol levels or use only the first-matched rule.
 
 To create a rule:
 
-* Activate an existing row by double-clicking it (by default, QGIS adds a
-  symbol without a rule when the rendering mode is enabled) or click the
-  |projectProperties| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button;
-* In the :guilabel:`Edit Rule` dialog that opens, you can define a label
-  to help you identify each rule. This is the label that will be displayed
-  in the :guilabel:`Layers Panel` and also in the print composer legend;
-* Manually enter an expression in the text box next to the |radioButtonOn|
-  :guilabel:`Filter` option or press the |expression| button next to it to open
-  the expression string builder dialog;
-* Use the provided functions and the layer attributes to build an :ref:`expression
-  <vector_expressions>` to filter the features you'd like to retrieve. Press
-  the :guilabel:`Test` button to check the result of the query;
-* A longer label can then be used to complete the rule description;
-* You can use the |checkbox| :guilabel:`Scale Range` option to set scales at which
-  the rule should be applied;
-* Finally, configure the :ref:`symbol to use <symbol-selector>` for these features
-  and press :guilabel:`OK`;
+#. Activate an existing row by double-clicking it (by default, QGIS adds a
+   symbol without a rule when the rendering mode is enabled) or click the
+   |projectProperties| :sup:`Edit rule` or |signPlus| :sup:`Add rule` button.
+#. In the :guilabel:`Edit Rule` dialog that opens, you can define a label
+   to help you identify each rule. This is the label that will be displayed
+   in the :guilabel:`Layers Panel` and also in the print composer legend.
+#. Manually enter an expression in the text box next to the |radioButtonOn|
+   :guilabel:`Filter` option or press the |expression| button next to it to open
+   the expression string builder dialog.
+#. Use the provided functions and the layer attributes to build an :ref:`expression
+   <vector_expressions>` to filter the features you'd like to retrieve. Press
+   the :guilabel:`Test` button to check the result of the query.
+#. You can enter a longer label to complete the rule description.
+#. You can use the |checkbox| :guilabel:`Scale Range` option to set scales at which
+   the rule should be applied.
+#. Finally, configure the :ref:`symbol to use <symbol-selector>` for these features.
+#. And press :guilabel:`OK`.
 
 A new row summarizing the rule is added to the Layer Properties dialog.
 You can create as many rules as necessary following the steps above or copy
@@ -1900,7 +1901,7 @@ different options:
 
 * :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
   other and on top of labels. A diagram with a high index is drawn over diagrams
-  and labels ;
+  and labels;
 * |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
   overlap each other;
 * :guilabel:`Show diagram`: allows only specific diagrams to be rendered;
@@ -2332,7 +2333,7 @@ Default values
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
     feature's x coordinate, length, area or any geometric information at its creation;
-  * incremente a field by 1 for each new feature using ``maximum("field")+1``;
+  * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
     easier to e.g. insert the operator name (``@user_full_name``), the project

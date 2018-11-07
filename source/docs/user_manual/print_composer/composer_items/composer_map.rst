@@ -153,11 +153,11 @@ this option if you want the map item being ruled by the atlas; when iterating
 over the coverage layer, the map item extent is panned/zoomed to the atlas
 feature following:
 
-* |radioButtonOn| :guilabel:`Margin around features`: zoom to the feature at the
+* |radioButtonOn| :guilabel:`Margin around features`: zooms to the feature at the
   best scale, keeping around each a margin representing a percentage of the map
   item width or height. The margin can be the same for all features or :ref:`set
   variable <data_defined>`, e.g., depending on map scale;
-* |radioButtonOff| :guilabel:`Predefined scale (best fit)`: zoom to the feature
+* |radioButtonOff| :guilabel:`Predefined scale (best fit)`: zooms to the feature
   at the project :ref:`predefined scale <predefinedscales>` where the atlas
   feature best fits;
 * |radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one

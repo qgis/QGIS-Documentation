@@ -302,7 +302,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
   output layer
 
-  * :guilabel:`geometry type`: keep the original geometry of the features when
+  * :guilabel:`geometry type`: keeps the original geometry of the features when
     set to **Automatic**, otherwise removes or overrides it with any type. You
     can add an empty geometry column to an attribute table, remove the geometry
     column of a spatial layer.
@@ -315,7 +315,7 @@ Depending on the format of export, some of these options are available or not:
   Overriding layer geometry type makes it possible to do things like save a
   geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type of
   geometry (point, line, polygon), so that geometries can then be manually added
-  to rows with the |addPart| :sup:`Add Part` tool .
+  to rows with the |addPart| :sup:`Add Part` tool.
 
 * :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure some advanced
@@ -352,22 +352,22 @@ single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layers. It's accessible in the
 :menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
-In the :guilabel:`DXF Export` dialog, you need to:
+In the :guilabel:`DXF Export` dialog:
 
-* indicate the destination layer file;
-* choose the symbology mode and scale (see the `OGR Feature Styles
-  <ogr_features_note>`_ note);
-* select the data :guilabel:`Encoding`;
-* select the :guilabel:`CRS` to apply: the selected layers will be reprojected
-  to the given CRS;
-* select the layers to include in the DXF files either by checking each in the
-  table widget or automatically pick them from an existing :ref:`map theme
-  <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons can also
-  help to quickly set the data to export.
+#. Indicate the destination layer file.
+#. Choose the symbology mode and scale (see the `OGR Feature Styles
+   <ogr_features_note>`_ note) if applicable.
+#. Select the data :guilabel:`Encoding`.
+#. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
+   to the given CRS.
+#. select the layers to include in the DXF files either by checking each in the
+   table widget or automatically pick them from an existing :ref:`map theme
+   <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
+   can also help to quickly set the data to export.
 
-  For each layer, you can also choose whether to export all the features in a
-  single DXF layer or rely on a field whose values are used to split the features
-  in generated destination layers in the DXF output.
+   For each layer, you can also choose whether to export all the features in a
+   single DXF layer or rely on a field whose values are used to split the features
+   in generated destination layers in the DXF output.
   
 Optionally, you can also choose to:
 
@@ -394,10 +394,10 @@ Features that are on the clipboard can be pasted into a new layer. To do this,
 Select some features, copy them to the clipboard, and then paste them into a
 new layer using :menuselection:`Edit --> Paste Features as -->` and choosing:
 
-* :menuselection:`New Vector Layer...`: you need to select the layer CRS, poping
+* :guilabel:`New Vector Layer...`: you need to select the layer CRS, poping
   up the :guilabel:`Save vector layer as...` dialog from which you can select
   any supported data format (see :ref:`general_saveas` for parameters);
-* or :menuselection:`Temporary Scratch Layer...`: you need to select the layer
+* or :guilabel:`Temporary Scratch Layer...`: you need to select the layer
   CRS and give a name.
 
 A new layer, filled with selected features and their attributes is created and

@@ -228,7 +228,7 @@ choose the ramp type:
   :guilabel:`Hue`, :guilabel:`Saturation`, :guilabel:`Value` and :guilabel:`Opacity`
   and a number of colors (:guilabel:`Classes`);
 * :guilabel:`Catalog: ColorBrewer`: a set of predefined discrete color gradients
-  you can custom the number of colors in the ramp;
+  you can customize the number of colors in the ramp;
 * or :guilabel:`Catalog: cpt-city`: an access to a whole catalog of color gradients to
   locally :guilabel:`save as standard gradient`. The cpt-city option opens a new
   dialog with hundreds of themes included 'out of the box'.

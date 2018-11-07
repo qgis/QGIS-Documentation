@@ -42,7 +42,7 @@ included in this manual.
 To install or activate a plugin, go to :menuselection:`Plugins` menu and select
 |showPluginManager| :menuselection:`Manage and install plugins...`.
 
-Installed external python plugins are placed under the  
+Installed external python plugins are placed under the
 :file:`~/(UserProfile)/python/plugins` folder where:
 
 * ``~`` represents the HOME directory which on |win| Windows is usually something
