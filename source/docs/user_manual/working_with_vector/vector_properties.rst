@@ -71,12 +71,12 @@ Information Properties
 
 |metadata| The :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
-Provided information are :
+Provided information are:
 
 * based on the provider of the layer (format of storage, path, geometry type,
   data source encoding, extent...);
 * picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
-  contacts, history...) ;
+  contacts, history...);
 * or related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...)
 
@@ -1900,7 +1900,7 @@ different options:
 
 * :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
   other and on top of labels. A diagram with a high index is drawn over diagrams
-  and labels ;
+  and labels;
 * |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
   overlap each other;
 * :guilabel:`Show diagram`: allows only specific diagrams to be rendered;

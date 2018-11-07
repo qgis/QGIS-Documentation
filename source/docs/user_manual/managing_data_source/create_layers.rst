@@ -315,7 +315,7 @@ Depending on the format of export, some of these options are available or not:
   Overriding layer geometry type makes it possible to do things like save a
   geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type of
   geometry (point, line, polygon), so that geometries can then be manually added
-  to rows with the |addPart| :sup:`Add Part` tool .
+  to rows with the |addPart| :sup:`Add Part` tool.
 
 * :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure some advanced
