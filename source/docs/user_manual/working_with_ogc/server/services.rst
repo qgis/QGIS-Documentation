@@ -127,19 +127,32 @@ parameters:
 | SELECTION     | No       | Highlight features               |
 +---------------+----------+----------------------------------+
 
+|
 
-SERVICE
-^^^^^^^
-
-This parameter has to be ``WMS`` in case of the **GetMap** request.
-
-For example:
+URL example:
 
 .. code-block:: none
 
   http://localhost/qgis_server?
   SERVICE=WMS
-  &...
+  &VERISON=1.3.0
+  &REQUEST=GetMap
+  &MAP=/home/user/project.qgs
+  &LAYERS=mylayer1,mylayer2,mylayer3
+  &STYLES=style1,default,style3
+  &OPACITIES=125,200,125
+  &CRS=EPSG:4326
+  &WIDTH=400
+  &HEIGHT=400
+  &FORMAT=image/png
+  &TRANSPARENT=TRUE
+  &DPI=300
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMS`` in case of the **GetMap** request.
 
 
 VERSION
@@ -153,16 +166,6 @@ values for the ``VERSION`` parameter are:
 
 If no version is indicated in the request, then ``1.3.0`` is used by default.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &VERSION=1.3.0
-  &...
-
-
 According to the version number, slight differences have to be expected as
 explained later for the next parameters:
 
@@ -175,32 +178,12 @@ REQUEST
 
 This parameter is ``GetMap`` in case of the **GetMap** request.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &VERSION=1.3.0
-  &REQUEST=GetMap
-  &...
-
 
 LAYERS
 ^^^^^^
 
 This parameter allows to specify the layers to display on the map. Names have
 to be separated by a comma.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2
-  &...
 
 In addition, QGIS Server introduced some options to select layers by:
 
@@ -238,17 +221,6 @@ STYLES
 This parameter can be used to specify a layer's style for the rendering step.
 Styles have to be separated by a comma. The name of the default style is
 ``default``.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2,mylayer3
-  &STYLES=style1,default,style3
-  &...
 
 
 SRS / CRS
@@ -345,33 +317,11 @@ WIDTH
 
 This parameter allows to specify the width in pixels of the output image.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &VERSION=1.3.0
-  &WIDTH=400
-  &...
-
 
 HEIGHT
 ^^^^^^
 
 This parameter allows to specify the height in pixels of the output image.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &VERSION=1.3.0
-  &HEIGHT=400
-  &...
 
 
 FORMAT
@@ -391,17 +341,6 @@ values are:
 If the ``FORMAT`` parameter is different from one of these values, then the
 default format PNG is used instead.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &VERSION=1.3.0
-  &FORMAT=image/png; mode=8bit
-  &...
-
 
 TRANSPARENT
 ^^^^^^^^^^^
@@ -415,33 +354,11 @@ Available values are (not case sensitive):
 However, this parameter is ignored if the format of the map image indicated
 with ``FORMAT`` is different from PNG.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &VERSION=1.3.0
-  &TRANSPARENT=TRUE
-  &...
-
 
 MAP
 ^^^
 
 This parameter allows to define the QGIS project file to use.
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &VERSION=1.3.0
-  &MAP=/home/user/project.qgs
-  &...
 
 As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
 is mandatory because a request needs a QGIS project to actually work. However,
@@ -487,16 +404,6 @@ DPI
 
 This parameter can be used to specify the requested output resolution.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &DPI=300
-  &...
-
 
 IMAGE_QUALITY
 ^^^^^^^^^^^^^
@@ -509,34 +416,12 @@ You can change the default per QGIS project in the
 :menuselection:`Project --> Properties...` dialog. If you want to override
 it in a ``GetMap`` request you can do it using the ``IMAGE_QUALITY`` parameter.
 
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &FORMAT=image/jpeg
-  &IMAGE_QUALITY=65
-  &...
-
 
 OPACITIES
 ^^^^^^^^^
 
 Opacity can be set on layer or group level. Allowed values range from 0 (fully
 transparent) to 255 (fully opaque).
-
-URL example:
-
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2
-  &OPACITIES=125,200
-  &...
 
 
 FILTER
