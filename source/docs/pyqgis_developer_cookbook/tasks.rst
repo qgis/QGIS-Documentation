@@ -51,18 +51,23 @@ There are several ways to create a QGIS task:
     QgsProcessingAlgRunnerTask(u'native:buffer', params, context,
                                feedback)
 
-.. note::
-   A task must keep away from the graphical user interface
-   (creating widgets or altering things in the gui), as this is not
-   allowed in Qt.
+.. warning::
+   Any background task (regardless of how it is created) must NEVER
+   perform any GUI based operations, such as creating new widgets or
+   interacting with existing widgets. Qt widgets must only be
+   accessed or modified from the main thread. Attempting to use
+   them from background threads will result in crashes.
 
 Dependencies between tasks can be described using the ``addSubTask``
 function of :class:`QgsTask`.
-When a dependency is stated, serial execution of the involved classes
-is ensured.
+
+When a dependency is stated, the task manager will automatically
+determine how these dependencies will be executed.
+Wherever possible dependencies will be executed in parallel in order
+to satisfy them as quickly as possible.
 If a task on which another task depends is canceled, the dependent
 task will also be canceled.
-Dependencies make deadlocks possible, so be careful.
+Circular dependencies can make deadlocks possible, so be careful.
 
 If a task depends on a layer being available, this can be stated
 using the ``setDependentLayers`` function of :class:`QgsTask`.
@@ -71,6 +76,9 @@ canceled.
 
 Once the task has been created it can be scheduled for running using
 the ``addTask`` function of the task manager.
+Adding a task to the manager automatically transfers ownership of
+that task to the manager, and the manager will cleanup and delete
+tasks after they have executed.
 The scheduling of the tasks is influenced by the task priority, which
 is set in ``addTask``.
 
@@ -84,10 +92,11 @@ Examples
 Extending QgsTask
 .................
 
-``RandomIntegerTask`` extends :class:`QgsTask` and will generate 100
-random integers between 0 and 100 during a specified period of time.
-If the random number is 42, the task is aborted and an exception
-is raised.
+In this example ``RandomIntegerTask`` extends :class:`QgsTask` and will
+generate 100 random integers between 0 and 100 during a specified period
+of time.
+If the random number is 42, the task is aborted and an exception is
+raised.
 Several instances of ``RandomIntegerTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
