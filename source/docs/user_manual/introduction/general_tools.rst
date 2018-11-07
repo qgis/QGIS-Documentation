@@ -990,7 +990,7 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text;
 * |htmlAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
-  file ;
+  file;
 * |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).

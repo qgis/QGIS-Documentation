@@ -71,12 +71,12 @@ Information Properties
 
 |metadata| The :guilabel:`Information` tab is read-only and represents an interesting
 place to quickly grab summarized information and metadata on the current layer.
-Provided information are :
+Provided information are:
 
 * based on the provider of the layer (format of storage, path, geometry type,
   data source encoding, extent...);
 * picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
-  contacts, history...) ;
+  contacts, history...);
 * or related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...)
 
@@ -1901,7 +1901,7 @@ different options:
 
 * :guilabel:`Diagram z-index`: controls how diagrams are drawn on top of each
   other and on top of labels. A diagram with a high index is drawn over diagrams
-  and labels ;
+  and labels;
 * |checkbox| :guilabel:`Show all diagrams`: shows all the diagrams even if they
   overlap each other;
 * :guilabel:`Show diagram`: allows only specific diagrams to be rendered;
@@ -2333,7 +2333,7 @@ Default values
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
     feature's x coordinate, length, area or any geometric information at its creation;
-  * incremente a field by 1 for each new feature using ``maximum("field")+1``;
+  * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
     easier to e.g. insert the operator name (``@user_full_name``), the project

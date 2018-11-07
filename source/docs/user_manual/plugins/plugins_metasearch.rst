@@ -148,7 +148,7 @@ column title. You can navigate through search results with the directional
 buttons below the search results. Clicking the **[View search results as XML]**
 button opens a window with the service response in raw XML format.
 
-Clicking a result will provides the following options:
+Clicking a result will provide the following options:
 
 * if the metadata record has an associated bounding box, a footprint of the
   bounding box will be displayed on the map;

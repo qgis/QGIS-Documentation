@@ -55,7 +55,7 @@ when the frame is resized:
 
 * ``Zoom``: enlarges/reduces the image to the frame while maintaining aspect
   ratio of picture;
-* ``Stretch``: etretches image to fit inside the frame, ignores aspect ratio;
+* ``Stretch``: stretches image to fit inside the frame, ignores aspect ratio;
 * ``Clip``: use this mode for raster images only, it sets the size of the image
   to original image size without scaling and the frame is used to clip the image,
   so only the part of the image inside the frame is visible;

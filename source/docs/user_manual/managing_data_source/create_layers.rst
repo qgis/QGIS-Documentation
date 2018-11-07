@@ -302,7 +302,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
   output layer
 
-  * :guilabel:`geometry type`: keep the original geometry of the features when
+  * :guilabel:`geometry type`: keeps the original geometry of the features when
     set to **Automatic**, otherwise removes or overrides it with any type. You
     can add an empty geometry column to an attribute table, remove the geometry
     column of a spatial layer.
@@ -315,7 +315,7 @@ Depending on the format of export, some of these options are available or not:
   Overriding layer geometry type makes it possible to do things like save a
   geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type of
   geometry (point, line, polygon), so that geometries can then be manually added
-  to rows with the |addPart| :sup:`Add Part` tool .
+  to rows with the |addPart| :sup:`Add Part` tool.
 
 * :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure some advanced
@@ -394,10 +394,10 @@ Features that are on the clipboard can be pasted into a new layer. To do this,
 Select some features, copy them to the clipboard, and then paste them into a
 new layer using :menuselection:`Edit --> Paste Features as -->` and choosing:
 
-* :menuselection:`New Vector Layer...`: you need to select the layer CRS, poping
+* :guilabel:`New Vector Layer...`: you need to select the layer CRS, poping
   up the :guilabel:`Save vector layer as...` dialog from which you can select
   any supported data format (see :ref:`general_saveas` for parameters);
-* or :menuselection:`Temporary Scratch Layer...`: you need to select the layer
+* or :guilabel:`Temporary Scratch Layer...`: you need to select the layer
   CRS and give a name.
 
 A new layer, filled with selected features and their attributes is created and
