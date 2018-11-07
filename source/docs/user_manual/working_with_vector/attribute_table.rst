@@ -456,10 +456,10 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
 * using the :ref:`field calculator <vector_field_calculator>`: update in a row
-  a field that may already exist or to be created but for multiple features; it
-  can be used to create virtual fields.
+  a field that may already exist or to be created but for multiple features. It
+  can be used to create virtual fields;
 * using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
-  same as above but for only existing field
+  same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
   multiple fields for multiple features.
 

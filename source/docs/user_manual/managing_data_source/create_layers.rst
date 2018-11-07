@@ -272,7 +272,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Format`: exports to any vector format GDAL can write to, such as
   GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
   SpatiaLite, CSV, KML, ODS...
-* :guilabel:`Layer name` depending on the selected format;
+* :guilabel:`Layer name` depending on the selected format
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set

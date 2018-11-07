@@ -201,7 +201,7 @@ the :guilabel:`Atlas` panel. This panel contains the following functionalities
    Atlas Panel
 
 * |checkbox| :guilabel:`Generate an atlas`, which enables or disables the atlas
-  generation.
+  generation;
 * A :guilabel:`Coverage layer` |selectString| combo box that allows you to
   choose the table or vector layer containing the features to iterate over;
 * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,

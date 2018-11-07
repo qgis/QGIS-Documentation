@@ -371,7 +371,7 @@ geometry then enter its attributes. To digitize the geometry:
    :menuselection:`Settings --> Options` menu, you can also activate:
 
    * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created
-     feature` to avoid the form opening
+     feature` to avoid the form opening;
    * or |checkbox| :guilabel:`Reuse last entered attribute values` to have fields
      automatically filled at the opening of the form and just have to type changing values.
 

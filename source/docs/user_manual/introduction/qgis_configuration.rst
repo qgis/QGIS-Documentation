@@ -305,7 +305,7 @@ Rendering Settings
 
 * |unchecked| :guilabel:`By default new layers added to the map should be
   displayed`: unchecking this option can be handy when loading multiple layers
-  to avoid each new layer being rendered in the canvas and slow down the process;
+  to avoid each new layer being rendered in the canvas and slow down the process
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
 * |checkbox| :guilabel:`Max cores to use`
