@@ -60,7 +60,6 @@ There are several ways to create a QGIS task:
 
 Dependencies between tasks can be described using the ``addSubTask``
 function of :class:`QgsTask`.
-
 When a dependency is stated, the task manager will automatically
 determine how these dependencies will be executed.
 Wherever possible dependencies will be executed in parallel in order
