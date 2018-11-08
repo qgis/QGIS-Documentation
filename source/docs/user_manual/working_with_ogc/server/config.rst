@@ -70,7 +70,7 @@ The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the
 query string (with *MAP*), you can also set it as an environment variable (for
 example by using ``mod_rewrite`` Apache module).
 
-Note that you may also indicate a project stored in Postgres, e.g.
+Note that you may also indicate a project stored in PostgreSQL, e.g.
 ``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
 
 
