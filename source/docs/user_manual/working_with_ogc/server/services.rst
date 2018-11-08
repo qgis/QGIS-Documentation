@@ -135,7 +135,7 @@ URL example:
 
   http://localhost/qgis_server?
   SERVICE=WMS
-  &VERISON=1.3.0
+  &VERSION=1.3.0
   &REQUEST=GetMap
   &MAP=/home/user/project.qgs
   &LAYERS=mylayer1,mylayer2,mylayer3
