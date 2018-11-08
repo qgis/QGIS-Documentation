@@ -38,6 +38,8 @@ Parameters
 
 ``Style database (leave blank to use saved symbols)`` [file]
   File (``.XML``) containing the symbols to apply to the input layer categories.
+  The file can be obtained from the Style Manager
+  :ref:`Share symbols <share_symbols>` tool.
   If no file is specified, QGIS local symbols library is used.
 
 ``Use case-sensitive match to symbol names`` [boolean]
