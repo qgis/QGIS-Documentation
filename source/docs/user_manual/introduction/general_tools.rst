@@ -342,7 +342,7 @@ rather than as a separate dialog.
 From a drop-down list of current layers in the layer panel, select an item and:
 
 * set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
-  and |rasterHistogram| :guilabel:`histogram` properties in case of raster layer.
+  and |rasterHistogram| :guilabel:`Histogram` properties in case of raster layer.
   These options are the same available in :ref:`raster_properties_dialog`;
 * set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
   |labeling| :guilabel:`Labels` properties in case of vector layer.
@@ -772,7 +772,8 @@ To create a bookmark:
 
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl+B`. The Spatial Bookmark panel opens with the newly created bookmark.
+   :kbd:`Ctrl+B`. The :guilabel:`Spatial Bookmarks` panel opens with the newly
+   created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
 #. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
