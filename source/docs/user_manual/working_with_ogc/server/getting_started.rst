@@ -489,18 +489,6 @@ If you don't check |checkbox| :guilabel:`Service capabilities`,
 QGIS Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
 
-.. warning::
-
- If you're using the QGIS project with styling based on SVG files using
- relative paths then you should know that the server considers the path
- relative to its :file:`qgis_mapserv.fcgi` file (not to the :file:`qgs` file).
- So, if you deploy a project on the server and the SVG files are not placed
- accordingly, the output images may not respect the Desktop styling.
- To ensure this doesn't happen, you can simply copy the SVG files relative
- to the :file:`qgis_mapserv.fcgi`. You can also create a symbolic link in the
- directory where the fcgi file resides that points to the directory containing
- the SVG files (on Linux/Unix).
-
 WMS capabilities
 ----------------
 
