@@ -794,7 +794,7 @@ panel allows you to:
   Confirm your choice.
 * Import or Export a bookmark: To share or transfer your bookmarks between
   computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
-  in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
+  to export all bookmarks to an :file:`.xml` file or import them.
 
 You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
 
@@ -1537,7 +1537,7 @@ of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the layer (including symbology, labeling, fields and form definition, 
+or interact with the layer (including symbology, labeling, fields and form definition,
 actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
@@ -1983,7 +1983,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
  When the data-defined override option is setup correctly the
  icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
  the icon is red |dataDefineError| or |dataDefineExpressionError|.
- 
+
  You can enable or disable a configured |dataDefined| :sup:`data-defined
  override` button by simply clicking the widget with the mouse right button.
 
