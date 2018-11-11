@@ -1018,12 +1018,15 @@ Use the |splitFeatures| :sup:`Split Features` tool to split a feature into two
 or more new and independent features, ie. each geometry corresponding to a new
 row in the attribute table.
 
-To split line or polygon features, select the |splitFeatures| :sup:`Split
-Features` tool and draw a line across the feature(s) you want to split.
-If a selection is active, only selected features are split. When set,
-:ref:`default values or clauses <configure_field>` are applied to corresponding
-fields and other attributes of the parent feature are by default copied to the
-new features. You can then as usual modify any of the attributes.
+To split line or polygon features:
+
+#. Select the |splitFeatures| :sup:`Split Features` tool.
+#. Draw a line across the feature(s) you want to split.
+   If a selection is active, only selected features are split. When set,
+   :ref:`default values or clauses <configure_field>` are applied to corresponding
+   fields and other attributes of the parent feature are by default copied to the
+   new features.
+#. You can then as usually modify any of the attributes of any resulting feature.
 
 .. tip:: **Split a polyline into new features in one-click**
 
@@ -1063,17 +1066,28 @@ a new feature by merging existing ones: their geometries are merged to generate
 a new one. If features don't have common boundaries,
 a multipolygon/multipolyline/multipoint feature is created.
 
-First, select several features. Then press the |mergeFeatures| :sup:`Merge Selected
-Features` button. In the new dialog, you can select at the top of the dialog which value to
-apply to each field of the new feature. That value can be:
+#. First, select the features you'd like to combine.
+#. Then press the |mergeFeatures| :sup:`Merge Selected Features` button.
+#. In the new dialog, the :guilabel:`Merge` line at the bottom of the table
+   shows the attributes of the resulting feature. You can alter any of these
+   values either by:
 
-* picked from the attributes of the initial features,
-* an aggregation of the initial features attributes (Minimum, Maximum, Median, Sum, Count
-  Concatenation... depending on the type of the field. see :ref:`statistical_summary`
-  for the full list of functions),
-* skipped, meaning that the field will be empty,
-* or manually entered, at the bottom of the rows.
+   * manually replacing the value in the corresponding cell;
+   * selecting a row in the table and pressing :guilabel:`Take attributes from
+     selected feature` to use the values of this initial feature;
+   * pressing :guilabel:`Skip all fields` to use empty attributes;
+   * or, expanding the drop down menu at the top of the table, select any of the
+     above options to apply to the corresponding field only. There, you can also
+     choose to aggregate the initial features attributes (Minimum, Maximum, Median,
+     Sum, Count, Concatenation... depending on the type of the field.
+     see :ref:`statistical_summary` for the full list of functions).
 
+   .. note:: 
+    If the layer has default values or clauses present on fields,
+    these are used as the initial value for the merged feature.
+
+#. Press :guilabel:`OK` to apply the modifications. A single (multi)feature is
+   created in the layer, replacing the previously selected ones. 
 
 .. index::
    single: Digitizing tools; Merge Attributes
@@ -1096,33 +1110,40 @@ attributes are made identical.
 Rotate Point Symbols
 --------------------
 
-The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the rotation
-of point symbols in the map canvas. First of all, you must apply to the symbol a
-:ref:`data-defined <data_defined>` rotation: in the :menuselection:`Layer Properties
---> Style` dialog, click the |dataDefined| :guilabel:`Data-defined override` widget
-near the :guilabel:`Rotation` option of the highest level (preferably) of the symbol
-layers and choose a field in the :guilabel:`Field Type` combobox. Values of this
-field are hence used to rotate each feature's symbol accordingly.
+The |rotatePointSymbols| :sup:`Rotate Point Symbols` allows you to change the
+rotation of point symbols in the map canvas.
 
-.. note::
-   As a global option, setting the rotation field at the first level of the symbol
-   applies it to all the underlying levels while setting it at a lower level will
-   rotate only this symbol layer (unless you have a single symbol layer).
+#. First of all, apply to the symbol a :ref:`data-defined <data_defined>`
+   rotation:
 
+   #. In the :menuselection:`Layer Properties --> Symbology` dialog, browse to
+      the symbol editor dialog.
+   #. Click the |dataDefined| :guilabel:`Data-defined override` widget near the
+      :guilabel:`Rotation` option of the top :guilabel:`Marker` level (preferably)
+      of the symbol layers. 
+   #. Choose a field in the :guilabel:`Field Type` combobox. Values of this
+      field are hence used to rotate each feature's symbol accordingly.
 
-.. _figure_rotate_point:
+   .. note:: **Ensure to assign the same field to all the symbol layers**
 
-.. figure:: img/rotatepointsymbol.png
-   :align: center
+    Setting the data-defined rotation field at the topmost level of the symbol
+    tree automatically propagates it to all the symbol layers, a prerequisite to
+    perform graphical symbol rotation with the :guilabel:`Rotate Point Symbols`
+    tool. Indeed, if a symbol layer does not have the same field attached to its
+    rotation property, the tool will not work.
 
-   Rotate Point Symbols
+   .. _figure_rotate_point:
 
-To change the rotation of a symbol, click on a point feature in the map canvas
-with the |rotatePointSymbols| :sup:`Rotate Point Symbols` and move the mouse around,
-holding the left button pressed. A red arrow with the rotation value
-will be visualized (see Figure_rotate_point_). When you release the left mouse
-button again, the symbol is defined with this new rotation and the rotation
-field is updated in the layer's attribute table.
+   .. figure:: img/rotatepointsymbol.png
+      :align: center
+
+      Rotating a point symbol
+
+#. Then click on a point feature in the map canvas with the |rotatePointSymbols|
+   :sup:`Rotate Point Symbols` and move the mouse around, holding the left button
+   pressed. A red arrow with the rotation value will be visualized (see Figure_rotate_point_).
+#. Release the left mouse button again, the symbol is defined with this new rotation
+   and the rotation field is updated in the layer's attribute table.
 
 .. tip::
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
@@ -1144,14 +1165,8 @@ coordinates while moving the symbol in the map canvas.
 
 .. note:: The |offsetPointSymbols| :sup:`Offset Point Symbols` tool doesn't
    move the point feature itself; you should use the |vertexToolActiveLayer|
-   :sup:`Vertex Tool (Current Layer)` or |moveFeature| :sup:`Move Feature`
+   :sup:`Vertex Tool (Current Layer)` or |moveFeaturePoint| :sup:`Move Feature`
    tool for this purpose.
-
-.. warning:: **Ensure to assign the same field to all symbol layers**
-
-   If at least two layers of the symbol have different fields assigned to their
-   data-defined property (e.g. rotation), the corresponding tool will consider
-   that no field is assigned to the symbol property and won't perform the action.
 
 
 .. _shape_edit:
@@ -1175,7 +1190,7 @@ to add line or polygon features with a circular geometry.
 Creating features with these tools follow the same rule as of other digitizing
 tools: left-click to place vertices and right-click to finish the geometry.
 While drawing the geometry, you can switch from one tool to the other as well
-as to the :ref:linear geometry tools <add_feature>`, creating some coumpound
+as to the :ref:`linear geometry tools <add_feature>`, creating some coumpound
 geometries.
 
 .. note:: **Curved geometries are stored as such only in compatible data provider**
