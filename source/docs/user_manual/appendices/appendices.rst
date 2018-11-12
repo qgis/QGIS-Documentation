@@ -323,9 +323,9 @@ license designed for free software.
 We have designed this License in order to use it for manuals for free
 software, because free software needs free documentation: a free
 program should come with manuals providing the same freedoms that the
-software does.  But this License is not limited to software manuals;
+software does. But this License is not limited to software manuals;
 it can be used for any textual work, regardless of subject matter or
-whether it is published as a printed book.  We recommend this License
+whether it is published as a printed book. We recommend this License
 principally for works whose purpose is instruction or reference.
 
 

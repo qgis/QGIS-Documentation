@@ -55,7 +55,7 @@ tools.
 
 #. Go to :menuselection:`Plugins --> Manage/Install Plugins...`
 #. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box;
-#. Select the QuickOSM plugin, press **[Install plugin]** and then **[Close]**
+#. Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then :guilabel:`Close`
    the dialog;
 
    .. image:: img/quickosm_plugin_download.png
@@ -69,7 +69,7 @@ tools.
 #. Select :guilabel:`Canvas Extent` in the next drop-down menu;
 #. Expand the :guilabel:`Advanced` group below and uncheck on the right all
    geometry types except :guilabel:`Multipolygons`;
-#. Press **[Run query]**;
+#. Press :guilabel:`Run query`;
 
    .. image:: img/building_query_builder.png
       :align: center
@@ -106,7 +106,7 @@ course:
     saved file to map` option is checked. A new layer is added in such case.
 
 #. Make sure the format is :guilabel:`ESRI Shapefile`;
-#. Use the **[...]** button to browse to the :file:`exercise_data/shapefile/`
+#. Use the :guilabel:`...` button to browse to the :file:`exercise_data/shapefile/`
    folder and save the file as :file:`buildings.shp`;
 
    .. image:: img/save_osm_building.png

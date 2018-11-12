@@ -237,7 +237,7 @@ To load a layer from a file, you can:
   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
   Layer` menu option or press :kbd:`Ctrl+Shift+V`.
   This will bring up a new window (see figure_vector_add_) from which you can
-  check |radioButtonOn| :guilabel:`File` and click on **[Browse]**. You can
+  check |radioButtonOn| :guilabel:`File` and click on :guilabel:`Browse`. You can
   also specify the encoding for the file if desired.
 
   .. _figure_vector_add:
@@ -266,7 +266,7 @@ selecting ``All files (*.*)``.
 
    Open an OGR Supported Vector Layer Dialog
 
-Selecting a file from the list and clicking **[Open]** loads it into QGIS.
+Selecting a file from the list and clicking :guilabel:`Open` loads it into QGIS.
 More than one layer can be loaded at the same time by holding down the
 :kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the dialog.
 Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
@@ -295,16 +295,16 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
   ``US Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select
   |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this case
-  a directory can be selected in the dialog after pressing **[Browse]**.
+  a directory can be selected in the dialog after pressing :guilabel:`Browse`.
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
   Available database types are ``ODBC``, ``OGDI Vectors``, ``Esri Personal
   Geodatabase``, ``MySQL`` as well as ``PostgreSQL`` or ``MSSQL``.
     
-  Pressing the **[New]** button opens the :guilabel:`Create a New OGR Database
+  Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR Database
   Connection` dialog whose parameters are among the ones you can find in
   :ref:`vector_create_stored_connection`.
-  Pressing **[Open]** you can select from the available tables for example
+  Pressing :guilabel:`Open` you can select from the available tables for example
   of the PostGIS enabled database.
 * The last source type, |radioButtonOn| :guilabel:`Protocol`, enables to open
   data from the web using for example ``GeoJSON`` or ``CouchDB`` format. After
@@ -348,7 +348,7 @@ Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
    Delimited Text Dialog
 
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
-by clicking on the **[Browse]** button. In the :guilabel:`Layer name` field,
+by clicking on the :guilabel:`Browse` button. In the :guilabel:`Layer name` field,
 provide the name to use for the layer in the project (e.g., :file:`Elevation`).
 
 File format
@@ -422,7 +422,7 @@ Additionally, you can enable:
   applications while QGIS is running.
 
 
-At the end, click **[OK]** to add the layer to the map. In our example, a
+At the end, click :guilabel:`OK` to add the layer to the map. In our example, a
 point layer named ``Elevation`` is added to the project and behaves like any
 other map layer in QGIS. However, this layer is the result of a query on the
 :file:`.csv` source layer (hence, linked to it) and would require :ref:`to be
@@ -454,7 +454,7 @@ In the dialog, you have to:
 * Input a location for a GeoPackage file, that will be created to store the
   DWG/DXF content to;
 * Specify which coordinate system the data in the DWG data is in;
-* Then use the **[Import]** button to select the DWG/DXF file to use (one per
+* Then use the :guilabel:`Import` button to select the DWG/DXF file to use (one per
   geopackage). The GeoPackage database will be automatically populated with the
   drawing file content. Depending on the size of the \*CAD file, this could
   take some time;
@@ -468,16 +468,16 @@ database the frame in the lower half of the dialog is populated with the list of
 layers from the imported file. There you can select which layers to add to the
 QGIS project:
 
-* At the top, set a :guilabel:`Group name` to group the drawing files in the
-  project;
-* Check layers to show: Each selected layer is added to an ad hoc group which
-  contains vector layers for the point, line, label and area features of the
-  drawing layer. The style of each layer is setup so that it resembles the look
-  it originally had in \*CAD;
-* Check whether layer should be visible at opening;
-* Alternatively using the |checkbox| :guilabel:`Merge layers` option places all
-  layers in a single group;
-* Press **[OK]** to open the layers in QGIS.
+#. At the top, set a :guilabel:`Group name` to group the drawing files in the
+   project.
+#. Check layers to show: Each selected layer is added to an ad hoc group which
+   contains vector layers for the point, line, label and area features of the
+   drawing layer. The style of each layer is setup so that it resembles the look
+   it originally had in \*CAD.
+#. Check whether layer should be visible at opening.
+#. Alternatively using the |checkbox| :guilabel:`Merge layers` option places all
+   layers in a single group.
+#. Press :guilabel:`OK` to open the layers in QGIS.
 
 
 .. index:: OSM (OpenStreetMap)
@@ -529,7 +529,7 @@ database, begin by:
 This will bring up a window that will allow you either to connect to a
 SpatiaLite database already known to QGIS, which you can choose from the
 drop-down menu, or to define a new connection to a new database. To define a
-new connection, click on **[New]** and use the file browser to point to
+new connection, click on :guilabel:`New` and use the file browser to point to
 your SpatiaLite database, which is a file with a :file:`.sqlite` extension.
 
 QGIS also supports editable views in SpatiaLite.
@@ -583,7 +583,7 @@ The first time you use a PostGIS data source, you must create a connection to a
 database that contains the data. Begin by clicking the appropriate button as
 exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog
 (see figure_add_postgis_tables_).
-To access the connection manager, click on the **[New]** button to display the
+To access the connection manager, click on the :guilabel:`New` button to display the
 :guilabel:`Create a New PostGIS Connection` dialog.
 
 .. _figure_new_postgis_connection:
@@ -660,8 +660,8 @@ checkboxes:
    are not.
 
 Once all parameters and options are set, you can test the connection by
-clicking on the **[Test connection]** button or apply it hitting **[OK]**.
-From the :guilabel:`Add PostGIS Table(s)`, click now on **[Connect]** and the
+clicking on the :guilabel:`Test Connection` button or apply it hitting :guilabel:`OK`.
+From the :guilabel:`Add PostGIS Table(s)`, click now on :guilabel:`Connect` and the
 dialog is filled with tables from the selected database (as shown in
 figure_add_postgis_tables_).
 
@@ -860,16 +860,16 @@ To load a layer from a database, you can perform the following steps:
 
 #. Open the "Add <database> table(s)" dialog
    (see :ref:`vector_create_stored_connection`),
-#. Choose the connection from the drop-down list and click **[Connect]**.
+#. Choose the connection from the drop-down list and click :guilabel:`Connect`.
 #. Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.
 #. Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the
    list of tables to those matching your search. You can also set this option
-   before you hit the **[Connect]** button, speeding this way the database
+   before you hit the :guilabel:`Connect` button, speeding this way the database
    fetching.
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` key while clicking.
-#. If applicable, use the **[Set Filter]** button (or double-click the layer)
+#. If applicable, use the :guilabel:`Set Fillter` button (or double-click the layer)
    to start the :guilabel:`Query builder` dialog (See section
    :ref:`vector_query_builder`) and define which features to load from the
    selected layer. The filter expression appears in the ``sql`` column.
@@ -878,7 +878,7 @@ To load a layer from a database, you can perform the following steps:
 #. The checkbox in the ``Select at id`` column that is activated by default
    gets the features ids without the attributes and speed in most cases the
    data loading.
-#. Click on the **[Add]** button to add the layer to the map.
+#. Click on the :guilabel:`Add` button to add the layer to the map.
 
 
 .. _figure_add_postgis_tables:
@@ -891,7 +891,7 @@ To load a layer from a database, you can perform the following steps:
 
 .. tip:: **Load database table(s) from the Browser Panel**
 
- Like simple files, connected database are also listed in the
+ Like simple files, connected databases are also listed in the
  :guilabel:`Browser Panel`. Hence, you can load tables from databases using
  the Browser:
 

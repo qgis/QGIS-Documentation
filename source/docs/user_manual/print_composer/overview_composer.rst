@@ -124,12 +124,12 @@ profile and the application template directories (accessible with the two
 buttons at the bottom of the frame) but also in any folder declared
 as :guilabel:`Path(s) to search for extra print templates` in
 :menuselection:`Settings --> Options --> Layouts`. Found templates are listed
-in the combobox. Select an item and press the **[Create]** button to generate
+in the combobox. Select an item and press the :guilabel:`Create` button to generate
 a new report or print layout.
 
 You can also use layout templates from a custom folder; in that case, select
 *specific* in the templates drop-down list, browse to the template and press
-**[Create]**.
+:guilabel:`Create`.
 
 .. tip:: **Creating template-based print layouts from Browser panel**
 
@@ -694,12 +694,12 @@ The panel also allows adjusting position of existing guides to exact
 coordinates: double-click a guide coordinate and replace the value.
 
 To delete a guide, select it and press |signMinus| :sup:`Remove selected guide`
-button. Use **[Clear all guides]** to remove all the guides in the panel.
+button. Use :guilabel:`Clear All Guides` to remove all the guides in the panel.
 
 Guides are single page only meaning that the :guilabel:`Guides` panel lists
 guides of the current page (whose number is shown at the top of the dialog).
 Likewise, it allows creation or removal of guides only in the current page.
-The **[Apply to all pages]** button allows you to setup the guide configuration
+The :guilabel:`Apply to All Pages` button allows you to setup the guide configuration
 on a single page and easily transfer it to all other pages in the layout.
 
 .. actually, I'm not sure what does mean current page for the guides panel as

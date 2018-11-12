@@ -42,7 +42,7 @@ included in this manual.
 To install or activate a plugin, go to :menuselection:`Plugins` menu and select
 |showPluginManager| :menuselection:`Manage and install plugins...`.
 
-Installed external python plugins are placed under the  
+Installed external python plugins are placed under the
 :file:`~/(UserProfile)/python/plugins` folder where:
 
 * ``~`` represents the HOME directory which on |win| Windows is usually something
@@ -111,7 +111,7 @@ You can use the following options:
 By default, QGIS provides you with its official plugin repository with the URL
 https://plugins.qgis.org/plugins/plugins.xml?qgis=3.0 (in case of QGIS 3.0)
 in the :guilabel:`Plugin repositories` section. To add external author repositories,
-click **[Add...]** and fill in the :guilabel:`Repository Details` form with a
+click :guilabel:`Add...` and fill in the :guilabel:`Repository Details` form with a
 name and the URL. The URL can be of ``http://`` or ``file://`` protocol type.
 
 The default QGIS repository is an open repository and you don't need any
@@ -120,8 +120,8 @@ and require an authentication (basic authentication, PKI). You can get more
 information on QGIS authentication support in :ref:`authentication` chapter.
 
 If you do not want one or more of the added repositories, they can be disabled
-from the Settings tab via the **[Edit...]** button, or completely removed with
-the **[Delete]** button.
+from the Settings tab via the :guilabel:`Edit...` button, or completely removed with
+the :guilabel:`Delete` button.
 
 .. _figure_plugins_settings:
 
@@ -135,9 +135,9 @@ The All tab
 
 In the |showPluginManager| :guilabel:`All` tab,
 all the available plugins are listed, including both core and external
-plugins. Use **[Upgrade all]** to look for new versions of the plugins.
-Furthermore, you can use **[Install plugin]** if a plugin is listed but not
-installed, **[Uninstall plugin]** as well as **[Reinstall plugin]** if a plugin
+plugins. Use :guilabel:`Upgrade All` to look for new versions of the plugins.
+Furthermore, you can use :guilabel:`Install Plugin` if a plugin is listed but not
+installed, :guilabel:`Uninstall Plugin` as well as :guilabel:`Reinstall Plugin` if a plugin
 is installed. An installed plugin can be temporarily de/activated using the
 checkbox.
 
@@ -154,9 +154,9 @@ The Installed tab
 
 In the |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
 plugins, that you can not uninstall. You can extend this list with external
-plugins that can be uninstalled and reinstalled any time, using the **[Uninstall
-plugin]** and **[Reinstall plugin]** buttons. You can **[Upgrade all]** the
-plugins here as well.
+plugins that can be uninstalled and reinstalled any time, using the
+:guilabel:`Uninstall Plugin` and :guilabel:`Reinstall Plugin` buttons.
+You can :guilabel:`Upgrade All` the plugins here as well.
 
 .. _figure_plugins_installed:
 
@@ -170,7 +170,7 @@ The Not installed tab
 
 The |plugin| :guilabel:`Not installed` tab lists all plugins available that
 are not installed.
-You can use the **[Install plugin]** button to implement a plugin into QGIS.
+You can use the :guilabel:`Install Plugin` button to implement a plugin into QGIS.
 
 .. _figure_plugins_not_installed:
 
@@ -189,8 +189,8 @@ If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
 |transformSettings| :guilabel:`Settings` menu, those also appear in the list
 giving you opportunity to early test upcoming tools.
 
-Installation can be done with the **[Install plugin]**, **[Upgrade plugin]** or
-**[Upgrade all]** buttons.
+Installation can be done with the :guilabel:`Install Plugin`, :guilabel:`Upgrade
+Plugin` or :guilabel:`Upgrade All` buttons.
 
 .. _figure_plugins_upgradeable:
 
@@ -205,7 +205,7 @@ The Invalid tab
 The |pluginInvalid| :guilabel:`Invalid` tab lists all installed plugins that are
 currently broken for any reason (missing dependency, errors while loading,
 incompatible functions with QGIS version...). 
-You can try the **[Reinstall plugin]** button to fix an invalidated plugin but
+You can try the :guilabel:`Reinstall Plugin` button to fix an invalidated plugin but
 most of the times the fix will be elsewhere (install some libraries, look for
 another compatible plugin or help to upgrade the broken one).
 

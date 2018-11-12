@@ -747,12 +747,13 @@ The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing featur
    <advanced_digitizing_panel>` to accurately set the origin point coordinates. In
    that case:
 
-   * first click on the |cad| button to enable the panel;
-   * type ``x`` and enter the corresponding value for the origin point you'd like
-     to use. Then press the |locked| button next to the option to lock the value;
-   * do the same for the ``y`` coordinate;
-   * click on the map canvas and your origin point is placed at the indicated
-     coordinates.
+   #. First click on the |cad| button to enable the panel.
+   #. Type ``x`` and enter the corresponding value for the origin point you'd like
+      to use. Then press the |locked| button next to the option to lock the value.
+   #. Do the same for the ``y`` coordinate.
+   #. Click on the map canvas and your origin point is placed at the indicated
+      coordinates.
+
 #. Move over the map canvas to indicate the destination point of the displacement,
    still using snapping mode or, as above, use the advanced digitizing panel which
    would provide complementary ``distance`` and ``angle`` placement constraints
@@ -834,9 +835,9 @@ vertices, as long as the geometry remains valid:
    the operation and the ratio the change represents).
    Also, in the map canvas, the expected geometry is diplayed over the existing
    one, using the rubberband color.
-#. When the expected geometry fits your needs, click **[OK]** to apply the
+#. When the expected geometry fits your needs, click :guilabel:`OK` to apply the
    modification.
-   Otherwise, to abort the operation, you can either press **[Cancel]** or
+   Otherwise, to abort the operation, you can either press :guilabel:`Cancel` or
    right-click in the map canvas.
 
 .. note:: Unlike the feature simplification option in :menuselection:`Settings -->

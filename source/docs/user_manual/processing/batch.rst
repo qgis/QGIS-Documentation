@@ -131,7 +131,7 @@ Executing the batch process
 ---------------------------
 
 To execute the batch process once you have introduced all the necessary values,
-just click on **[OK]**. Progress of the global batch task will be shown in the
+just click on :guilabel:`OK`. Progress of the global batch task will be shown in the
 progress bar in the lower part of the dialog.
 
 

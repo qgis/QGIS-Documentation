@@ -417,7 +417,7 @@ Further reading
   pushed to the target branch, the conflicts need to be resolved before a
   merge is possible:
 
-  * if the conflict relates to few competing lines, a **[Resolve conflicts]**
+  * if the conflict relates to few competing lines, a :guilabel:`Resolve conflicts`
     button is available in the Github pull request page. Press the button
     and resolve the issue as explained at
     https://help.github.com/articles/resolving-a-merge-conflict-on-github/

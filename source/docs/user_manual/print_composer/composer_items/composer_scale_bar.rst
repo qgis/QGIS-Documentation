@@ -129,7 +129,7 @@ The :guilabel:`Fonts and colors` group of the scale bar
 You can define the fonts and :ref:`colors <color-selector>` used for the scale
 bar.
 
-* Use the **[Font]** button to set the font of scale bar label
+* Use the :guilabel:`Font` button to set the font of scale bar label
 * :guilabel:`Font color`: set the font color
 * :guilabel:`Fill color`: set the first fill color
 * :guilabel:`Secondary fill color`: set the second fill color

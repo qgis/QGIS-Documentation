@@ -180,7 +180,7 @@ Documenting your scripts
 
 As in the case of models, you can create additional documentation for your script,
 to explain what they do and how to use them. In the script editing dialog you will
-find a **[Edit script help]** button. Click on it and it will take you to the help
+find a :guilabel:`Edit Script Help` button. Click on it and it will take you to the help
 editing dialog. Check the chapter about the graphical modeler to find out more about
 this dialog and how to use it.
 

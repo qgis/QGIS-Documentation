@@ -343,7 +343,7 @@ We will use:
 #. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, 
    and double-click on the file :file:`lakes.gml` to open it.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with
-   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**.
+   :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
 #. Close the Data Source Manager window.
 #. Zoom to your favourite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
@@ -355,7 +355,7 @@ We will use:
 #. To improve readability of labels, you can add a white buffer around them
    by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
-#. Click **[Apply]**. Check if the result looks good, and finally click **[OK]**.
+#. Click :guilabel:`Apply`. Check if the result looks good, and finally click :guilabel:`OK`.
 
 You can see how easy it is to visualize raster and vector layers in QGIS. Let's
 move on to learn more about the available functionality, features and settings, 

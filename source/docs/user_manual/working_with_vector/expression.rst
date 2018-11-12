@@ -459,8 +459,8 @@ type the field name (preferably inside double quotes) or its :ref:`alias
 <configure_field>`.
 
 To retrieve fields values to use in an expression, select the appropriate field
-and, in the shown widget, choose between **[10 sample]** and **[all unique
-values]**. Requested values are then displayed and you can use the :guilabel:`Search`
+and, in the shown widget, choose between :guilabel:`10 Samples` and :guilabel:`All
+Unique`. Requested values are then displayed and you can use the :guilabel:`Search`
 box at the top of the list to filter the result.
 Sample values can also be accessed via right-clicking on a field.
 
@@ -1386,7 +1386,7 @@ particular needs that would not be covered by the predefined functions.
 To create a new function:
 
 #. press the |tabEditorConsole| :guilabel:`New file` button;
-#. enter a name to use in the form that pops up and press **[OK]**;
+#. enter a name to use in the form that pops up and press :guilabel:`OK`;
 #. a new item of the name you provide is added in the left panel of the
    :guilabel:`Function Editor` tab; this is a Python :file:`.py` file stored in
    the :file:`/python/expressions` folder under the active user profile directory;

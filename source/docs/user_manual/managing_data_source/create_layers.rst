@@ -58,14 +58,14 @@ be displayed as shown in figure_create_geopackage_.
    Creating a New GeoPackage layer dialog
 
 The first step is to select an existing GeoPackage or create a new one. This
-can be done by pressing the ellipses **[...]** button at the right of the
+can be done by pressing the ellipses :guilabel:`...` button at the right of the
 Database field. Then, give a name for the new layer, define the layer type and
-specify the coordinate reference system with **[Specify CRS]**.
+specify the coordinate reference system with :guilabel:`Specify CRS`.
 
 To define an attribute table for the new GeoPackage layer, add the names of
 the attribute columns you want to create with the corresponding column type, 
-and click on the **[Add to fields list]** button. Once you are happy with the
-attributes, click **[OK]**. QGIS will automatically add the new layer to the
+and click on the :guilabel:`Add to Fields List` button. Once you are happy with the
+attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer`.
 
@@ -94,14 +94,14 @@ dimensions, as well as the CRS (coordinate reference system).
 
 To complete the creation of the new Shapefile layer, add the desired attributes
 by specifying a name and type for each attribute and clicking on the 
-**[Add to fields list]** button. 
+:guilabel:`Add to Fields List` button. 
 A first 'id' column is added by default but can be
 removed, if not wanted. Only :guilabel:`Decimal number` |selectString|,
 :guilabel:`Whole number` |selectString|, :guilabel:`Text data`
 |selectString| and :guilabel:`Date` |selectString| attributes are
 supported. Additionally, depending on the attribute type, you can also define
 the length and precision of the new attribute column. Once you are happy with the
-attributes, click **[OK]**. 
+attributes, click :guilabel:`OK`. 
 Once the Shapefile has been created, it will be added to the map as a new layer,
 and you can edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
 
@@ -129,13 +129,13 @@ Figure_create_spatialite_.
 The first step is to select an existing SpatiaLite database or to create a new
 SpatiaLite database. This can be done with the browse button |browseButton| to
 the right of the database field. Then, add a name for the new layer, define
-the layer type, and specify the coordinate reference system with **[Specify CRS]**.
+the layer type, and specify the coordinate reference system with :guilabel:`Specify CRS`.
 If desired, you can select |checkbox| :guilabel:`Create an autoincrementing primary key`.
 
 To define an attribute table for the new SpatiaLite layer, add the names of
 the attribute columns you want to create with the corresponding column type, and
-click on the **[Add to attribute list]** button. Once you are happy with the
-attributes, click **[OK]**. QGIS will automatically add the new layer to the
+click on the :guilabel:`Add to Fields List` button. Once you are happy with the
+attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer`.
 
@@ -157,7 +157,7 @@ Manager...` opens the Plugin Manager Dialog. Activate the |checkbox|
 When this plugin is loaded, choose :menuselection:`New -->` |createGPX|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
 In the :guilabel:`Save new GPX file as` dialog, choose where to save the
-new file and press **[Save]**. Three new layers are added to the
+new file and press :guilabel:`Save`. Three new layers are added to the
 :guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks`` with
 predefined structure.
 
@@ -302,7 +302,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
   output layer
 
-  * :guilabel:`geometry type`: keep the original geometry of the features when
+  * :guilabel:`geometry type`: keeps the original geometry of the features when
     set to **Automatic**, otherwise removes or overrides it with any type. You
     can add an empty geometry column to an attribute table, remove the geometry
     column of a spatial layer.
@@ -315,7 +315,7 @@ Depending on the format of export, some of these options are available or not:
   Overriding layer geometry type makes it possible to do things like save a
   geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type of
   geometry (point, line, polygon), so that geometries can then be manually added
-  to rows with the |addPart| :sup:`Add Part` tool .
+  to rows with the |addPart| :sup:`Add Part` tool.
 
 * :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure some advanced
@@ -352,22 +352,22 @@ single layer to another format, including :file:`*.DXF`, QGIS provides another
 tool to export multiple layers as a single DXF layers. It's accessible in the
 :menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
-In the :guilabel:`DXF Export` dialog, you need to:
+In the :guilabel:`DXF Export` dialog:
 
-* indicate the destination layer file;
-* choose the symbology mode and scale (see the `OGR Feature Styles
-  <ogr_features_note>`_ note);
-* select the data :guilabel:`Encoding`;
-* select the :guilabel:`CRS` to apply: the selected layers will be reprojected
-  to the given CRS;
-* select the layers to include in the DXF files either by checking each in the
-  table widget or automatically pick them from an existing :ref:`map theme
-  <map_themes>`. The **[Select all]** and **[Deselect all]** buttons can also
-  help to quickly set the data to export.
+#. Indicate the destination layer file.
+#. Choose the symbology mode and scale (see the `OGR Feature Styles
+   <ogr_features_note>`_ note) if applicable.
+#. Select the data :guilabel:`Encoding`.
+#. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
+   to the given CRS.
+#. select the layers to include in the DXF files either by checking each in the
+   table widget or automatically pick them from an existing :ref:`map theme
+   <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
+   can also help to quickly set the data to export.
 
-  For each layer, you can also choose whether to export all the features in a
-  single DXF layer or rely on a field whose values are used to split the features
-  in generated destination layers in the DXF output.
+   For each layer, you can also choose whether to export all the features in a
+   single DXF layer or rely on a field whose values are used to split the features
+   in generated destination layers in the DXF output.
   
 Optionally, you can also choose to:
 
@@ -394,10 +394,10 @@ Features that are on the clipboard can be pasted into a new layer. To do this,
 Select some features, copy them to the clipboard, and then paste them into a
 new layer using :menuselection:`Edit --> Paste Features as -->` and choosing:
 
-* :menuselection:`New Vector Layer...`: you need to select the layer CRS, poping
+* :guilabel:`New Vector Layer...`: you need to select the layer CRS, poping
   up the :guilabel:`Save vector layer as...` dialog from which you can select
   any supported data format (see :ref:`general_saveas` for parameters);
-* or :menuselection:`Temporary Scratch Layer...`: you need to select the layer
+* or :guilabel:`Temporary Scratch Layer...`: you need to select the layer
   CRS and give a name.
 
 A new layer, filled with selected features and their attributes is created and

@@ -27,7 +27,7 @@ instruction in the manual.
 * Menu Options: :menuselection:`Layer --> Add a Raster Layer` or
   :menuselection:`Settings --> Toolbars --> Digitizing`
 * Tool: |addRasterLayer| :sup:`Add a Raster Layer`
-* Button : **\[Save as Default\]**
+* Button : :guilabel:`Save as Default`
 * Dialog Box Title: :guilabel:`Layer Properties`
 * Tab: :guilabel:`General`
 * Checkbox: |checkbox| :guilabel:`Render`

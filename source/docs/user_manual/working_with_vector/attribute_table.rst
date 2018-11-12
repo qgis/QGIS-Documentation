@@ -392,7 +392,7 @@ drop-down list next to the :guilabel:`Filter features` button. The options are:
 
 To clear the filter, either select :guilabel:`Show all features` option
 mentioned in :ref:`filter_features`, or click the clear the expression and
-click **[Apply]**.
+click :guilabel:`Apply`.
 
 Using action on features
 ========================
@@ -515,7 +515,7 @@ A short example illustrates how field calculator works when using the
 #. Now double click on function ``$length`` in the :guilabel:`Geometry` group
    to add it into the Field calculator expression box.
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
-   expression box and click **[Ok]**.
+   expression box and click :guilabel:`OK`.
 #. You can now find a new field ``length`` in the attribute table.
 
 .. _virtual_field:
@@ -553,7 +553,7 @@ In quick field calculation bar, you simply need to:
 * select the existing field name in the drop-down list
 * fill the textbox with an expression you directly write or build using the
   |expression| expression button
-* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]**
+* and click on :guilabel:`Update All`, :guilabel:`Update Selected` or :guilabel:`Update Filtered`
   button according to your need.
 
 .. index:: Multi edit
@@ -681,7 +681,7 @@ Defining 1-N relations (Relation Manager)
 
 The first thing we are going to do is to let QGIS know about the relations
 between the layers. This is done in :menuselection:`Project --> Project Properties...`.
-Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
+Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 
 * **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **Airports**

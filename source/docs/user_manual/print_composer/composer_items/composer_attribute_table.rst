@@ -73,7 +73,7 @@ following functionalities (see figure_layout_table_ppt_):
     layer as parent, and the table will show the children rows of the atlas
     coverage layer's current feature.
 
-* The button **[Refresh table data]** can be used to refresh the table when the
+* The button :guilabel:`Refresh Table Data` can be used to refresh the table when the
   actual contents of the table has changed.
 
 
@@ -93,7 +93,7 @@ following functionalities (see figure_layout_table_ppt_):
    Attribute table Main properties for 'Relation children'
 
 
-* The button **[Attributes...]** starts the :guilabel:`Select Attributes` dialog,
+* The button :guilabel:`Attributes...` starts the :guilabel:`Select Attributes` dialog,
   (see figure_layout_table_select_) that can be used to change the visible
   contents of the table. The upper part of the window shows the list of the
   attributes to display and the lower part helps you sort the data.
@@ -115,8 +115,8 @@ following functionalities (see figure_layout_table_ppt_):
     value or create an attribute via a regular expression.
   * Remove an attribute with the |signMinus| button. Multiple rows can be
     selected and removed at any one time.
-  * Reset the attribute table back to its default state with the **[Reset]** button.
-  * Clear the table using the **[Clear]** button. This is useful when you have a
+  * Reset the attribute table back to its default state with the :guilabel:`Reset` button.
+  * Clear the table using the :guilabel:`Clear` button. This is useful when you have a
     large table but only want to show a small number of attributes. Instead of
     manually removing each row, it may be quicker to clear the table and add
     the rows needed.
@@ -288,7 +288,7 @@ the following functionalities (see figure_layout_table_frames_):
   * ``Repeat until finished`` will also create as many frames as the `Extend to
     next page` option, except all frames will have the same size.
 
-* Use the **[Add Frame]** button to add another frame with the same size as
+* Use the :guilabel:`Add Frame` button to add another frame with the same size as
   selected frame. The result of the table that will not fit in the first frame
   will continue in the next frame when you use the Resize mode ``Use existing frames``.
 * Activate |checkbox| :guilabel:`Don't export page if frame is empty` prevents

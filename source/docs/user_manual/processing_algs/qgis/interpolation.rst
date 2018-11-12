@@ -133,7 +133,7 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
 #. Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size Y`,
    :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
-#. Click on **[Run in Background]**  to create and load the airports heatmap
+#. Click on :guilabel:`Run` to create and load the airports heatmap
    (see Figure_Heatmap_created_processing_).
 
 .. _figure_heatmap_settings_processing:
@@ -161,8 +161,8 @@ can now be styled in QGIS to improve its appearance.
 #. Select the :guilabel:`Symbology` tab.
 #. Change the :guilabel:`Render type` |selectString| to 'Singleband pseudocolor'.
 #. Select a suitable :guilabel:`Color map` |selectString|, for instance ``YlOrRed``.
-#. Click the **[Classify]** button.
-#. Press **[OK]** to update the layer.
+#. Click the :guilabel:`Classify` button.
+#. Press :guilabel:`OK` to update the layer.
 
 The final result is shown in Figure_Heatmap_styled_processing_.
 

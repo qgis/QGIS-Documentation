@@ -40,7 +40,7 @@ the one shown next.
    Rendering Styles
 
 Select the style file (:file:`.qml`) that you want for each output and press
-**[OK]**.
+:guilabel:`OK`.
 
 Other configuration parameters in the :guilabel:`General` group are listed below:
 

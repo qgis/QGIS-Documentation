@@ -46,8 +46,8 @@ to set the :guilabel:`Image source`:
 #. Use the |dataDefined| :sup:`data defined override` button to set the image
    source from a feature attribute or using a regular expression.
 
-.. note:: In the :guilabel:`Search directories` group, you can use the **[Add]**
-  and **[Remove]** buttons in the group to customize the list of folders to fetch
+.. note:: In the :guilabel:`Search directories` group, you can use the :guilabel:`Add`
+  and :guilabel:`Remove` buttons in the group to customize the list of folders to fetch
   and preview images from.
 
 With the :guilabel:`Resize mode` option, you can set how the image is displayed
@@ -55,7 +55,7 @@ when the frame is resized:
 
 * ``Zoom``: enlarges/reduces the image to the frame while maintaining aspect
   ratio of picture;
-* ``Stretch``: etretches image to fit inside the frame, ignores aspect ratio;
+* ``Stretch``: stretches image to fit inside the frame, ignores aspect ratio;
 * ``Clip``: use this mode for raster images only, it sets the size of the image
   to original image size without scaling and the frame is used to clip the image,
   so only the part of the image inside the frame is visible;

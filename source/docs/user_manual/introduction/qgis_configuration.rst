@@ -141,7 +141,7 @@ plugin libraries`.
 Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
 a link to the official online User Manual corresponding to the version being used
 is added. You can however add other links and prioritize them from top to bottom:
-each time you click on a **[Help]** button in a dialog, the topmost link
+each time you click on a :guilabel:`Help` button in a dialog, the topmost link
 is checked and if no corresponding page is found, the next one is tried,
 and so on.
 
@@ -167,7 +167,7 @@ SAGA, GRASS), and for turning on debugging output for specific sections of the
 source code.
 
 * |checkbox| :guilabel:`Use custom variables (restart required - include separators)`.
-  You can **[Add]** and **[Remove]** variables. Already-defined environment
+  You can :guilabel:`Add` and :guilabel:`Remove` variables. Already-defined environment
   variables are displayed in :guilabel:`Current environment variables`, and it's
   possible to filter them by activating
   |checkbox| :guilabel:`Show only QGIS-specific variables`.
@@ -716,7 +716,7 @@ if a very slow search filter is present (e.g. one which uses an online service).
 .. tip:: **Quick access to the locator's configurations**
 
   Click on the |search| icon inside the locator widget on the status bar to
-  display the list of filters you can use and a **[Configure]** entry that
+  display the list of filters you can use and a :guilabel:`Configure` entry that
   opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
   Options...` menu.
 
@@ -911,7 +911,7 @@ In the :guilabel:`Data Sources` tab, you can:
 
   The :guilabel:`Layers Capabilities` table provides some convenient tools to:
 
-  * Select multiple cells and press **[Toggle selection]** to have them change their
+  * Select multiple cells and press :guilabel:`Toggle Selection` to have them change their
     checkbox state;
   * |unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial
     layers from the layers list;
@@ -998,7 +998,7 @@ With |select| :sup:`Switch to catching widgets in main application`, you
 can click on an item in QGIS interface that you want to be hidden and
 QGIS automatically unchecks the corresponding entry in the Customization dialog.
 
-Once you setup your configuration, click **[Apply]** or **[Ok]** to validate your
+Once you setup your configuration, click :guilabel:`Apply` or :guilabel:`OK` to validate your
 changes. This configuration becomes the one used by default by QGIS at the next startup.
 
 The modifications can also be saved in a ``.ini`` file using |fileSave|
@@ -1016,7 +1016,7 @@ setups for different use cases as well.
 
    * unchecking |checkbox| :guilabel:`Enable customization` option in the
      Customization dialog or click the |selectAllTree| :sup:`Check All` button
-   * pressing the **[Reset]** button in the **QSettings** frame under
+   * pressing the :guilabel:`Reset` button in the **QSettings** frame under
      :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
@@ -1048,14 +1048,14 @@ ones to QGIS features.
 Configuration is very simple. Use the search box at the top of the dialog
 to find a particular action, select it from the list and click on :
 
-* **[Change]** and press the new combination you want to assign as new shortcut
-* **[Set none]** to clear any assigned shortcut
-* or **[Set default]** to backup the shortcut to its original and default value.
+* :guilabel:`Change` and press the new combination you want to assign as new shortcut
+* :guilabel:`Set None` to clear any assigned shortcut
+* or :guilabel:`Set Default` to backup the shortcut to its original and default value.
 
 Proceed as above for any other tools you wish to customize. Once you have
-finished your configuration, simply **[Close]** the dialog to have your changes
-applied. You can also **[Save]** the changes as an :file:`.XML` file
-and **[Load]** them into another QGIS installation.
+finished your configuration, simply :guilabel:`Close` the dialog to have your changes
+applied. You can also :guilabel:`Save` the changes as an :file:`.XML` file
+and :guilabel:`Load` them into another QGIS installation.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

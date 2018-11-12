@@ -26,7 +26,7 @@ Context help
 
 Whenever you need help on a specific topic, you can access the corresponding
 page in the current User Manual via the
-**[Help]** button available in most dialogs --- please note that third-party
+:guilabel:`Help` button available in most dialogs --- please note that third-party
 plugins can point to dedicated web pages.
 
 .. index:: Panels
@@ -125,7 +125,7 @@ To create a map theme:
 
 #. Check the layer you want to show;
 #. Configure the layer properties (symbology, diagram, labels...) and, using
-   the :menuselection:`Symbology --> Style -->` menu, click on **[Add...]** to
+   the :menuselection:`Symbology --> Style -->` menu, click on :guilabel:`Add...` to
    store the settings as :ref:`a new style embedded in the project
    <manage_custom_style>`.
 
@@ -138,14 +138,14 @@ To create a map theme:
 #. If applicable, expand or collapse groups or visible layers nodes in the
    :guilabel:`Layers` panel.
 #. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
-   and **[Add Theme...]**;
-#. Enter the map theme's name and click **[OK]**. The new theme is listed in
+   and :guilabel:`Add Theme...`;
+#. Enter the map theme's name and click :guilabel:`OK`. The new theme is listed in
    the lower part of the |showMapTheme| drop-down menu.
 
 You can create as many map themes as you need: whenever the current combination
 in the map legend (visible layers, their active style, the map legend nodes)
 does not match any existing map theme contents as defined above, click on
-**[Add Theme]** for a creation or use :menuselection:`Replace Theme -->` to
+:guilabel:`Add Theme...` for a creation or use :menuselection:`Replace Theme -->` to
 update the map theme.
 Use :menuselection:`Remove Current Theme` button to delete the active theme.
 
@@ -351,11 +351,11 @@ From a drop-down list of current layers in the layer panel, select an item and:
   (more details at :ref:`manage_custom_style`)
 * follow the whole |history| :guilabel:`History` of changes you applied to the
   layer style in the current project; you can therefore cancel or restore to any
-  state by selecting it in the list and hit **[Apply]** button.
+  state by selecting it in the list and hit :guilabel:`Apply` button.
 
 Another powerful feature of this panel is the |checkbox| :guilabel:`Live update` checkbox.
 Tick it and your changes are automatically rendered in the map canvas as you go on.
-You no longer need to hit the **[Apply]** button.
+You no longer need to hit the :guilabel:`Apply` button.
 
 .. _figure_layer_styling:
 
@@ -538,7 +538,7 @@ If you want to embed content from other project files into your project, select
    project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve.
-#. Press **[OK]**. The selected layers and groups are embedded in the :guilabel:`Layers`
+#. Press :guilabel:`OK`. The selected layers and groups are embedded in the :guilabel:`Layers`
    panel and can be visualized in the map canvas now. An |indicatorEmbedded|
    icon is added next to their name for recognition and hovering over displays
    a tooltip with the original project file path.
@@ -829,7 +829,7 @@ annotations to the map canvas.
    definitions according to the layers loaded in the map canvas.
 #. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
    annotation definitions according to the layers loaded in the map canvas.
-#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 .. index:: Copyright
 .. _copyright_decoration:
@@ -859,7 +859,7 @@ you prefer to the map.
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
 #. You can change the color to apply.
-#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 In the example above, which is the default, QGIS places a copyright symbol
 followed by the date in the lower right-hand corner of the map canvas.
@@ -892,7 +892,7 @@ To add a north arrow:
 #. Optionally, refine the placement of the arrow by setting a Horizontal and/or Vertical
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
-#. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 
 .. index:: Scale bar
@@ -932,7 +932,7 @@ To add a scale bar:
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
    `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
    **Pixels** or set as **Percentage** of the width or height of the map canvas.
-#. Click **[Apply]** to verify that it looks as expected or **[OK]** if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 Layout Extents
 ..............
@@ -965,7 +965,7 @@ To add layout extent(s):
    The dialog starts (see figure_decorations_layoutextents_).
 #. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
 #. Optionally, change the symbol and labeling of the extents
-#. Click **[Apply]** to verify that it looks as expected and **[OK]** if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 .. tip::
 
@@ -990,7 +990,7 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
 * |textAnnotation| :sup:`Text Annotation` for custom formatted text;
 * |htmlAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
-  file ;
+  file;
 * |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
@@ -1043,7 +1043,7 @@ Also the |annotation| :sup:`Move Annotation` tool allows you to move the
 balloon on the map canvas.
 
 To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
-button or either double-click and press the **[Delete]** button in its properties dialog.
+button or either double-click and press the :guilabel:`Delete` button in its properties dialog.
 
 .. note::
    If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool (move annotation,
@@ -1258,10 +1258,10 @@ be selected in map canvas also):
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can use the |expressionSelect|
-:sup:`Select features using an Expression` icon. Then, you open the
-:guilabel:`Fields and Values` menu and choose the field that you want to query.
-Double-click the field 'TYPE_2' and also click **[Load all unique values]**
-in the right panel. From the list, choose and double-click 'Borough'. In the
+:sup:`Select features using an Expression` icon. Then, you expand the
+:guilabel:`Fields and Values` group and choose the field that you want to query.
+Double-click the field 'TYPE_2' and also click :guilabel:`All Unique` in the
+panel that shows up. From the list, choose and double-click 'Borough'. In the
 :guilabel:`Expression` field, then you'd write the following query:
 
 ::
@@ -1809,7 +1809,7 @@ Another option is to use the |colorPicker| :sup:`Color picker` which allows
 you to sample a color from under your mouse cursor at any part of QGIS or even
 from another application: press the space bar while the tab is active, move the
 mouse over the desired color and click on it or press again the space bar. You
-can also click the **[Sample color]** button to trigger the picker capability.
+can also click the :guilabel:`Sample Color` button to trigger the picker capability.
 
 
 Whatever method you use, the selected color is always described through color

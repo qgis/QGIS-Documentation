@@ -115,7 +115,7 @@ project.
 
 Now right-click your new project and choose :menuselection:`New --> Folder`.
 
-Click **[Advanced]** and choose :guilabel:`Link to alternate location
+Click :guilabel:`Advanced` and choose :guilabel:`Link to alternate location
 (Linked Folder)`. In case you already have sources you want to debug, choose
 these. In case you don't, create a folder as it was already explained.
 
@@ -153,8 +153,8 @@ proceed.
 
 Open the Console view (:menuselection:`Window --> Show view`). It will show the
 :guilabel:`Debug Server` console which is not very interesting. But there is a
-button **[Open Console]** which lets you change to a more interesting PyDev
-Debug Console. Click the arrow next to the **[Open Console]** button and choose
+button :guilabel:`Open Console` which lets you change to a more interesting PyDev
+Debug Console. Click the arrow next to the :guilabel:`Open Console` button and choose
 *PyDev Console*. A window opens up to ask you which console you want to start.
 Choose *PyDev Debug Console*. In case its greyed out and tells you to Start the
 debugger and select the valid frame, make sure that you've got the remote

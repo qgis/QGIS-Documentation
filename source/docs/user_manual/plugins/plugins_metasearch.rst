@@ -71,23 +71,23 @@ Managing Catalog Services
 
 The :guilabel:`Services` tab allows the user to manage all available catalog
 services. MetaSearch provides a default list of Catalog Services, which can
-be added by pressing **[Add default services]** button.
+be added by pressing :guilabel:`Add Default Services` button.
 
 To all listed Catalog Service entries, click the dropdown select box.
 
-To add a Catalog Service entry, click the **[New]** button, and enter a
+To add a Catalog Service entry, click the :guilabel:`New` button, and enter a
 :guilabel:`Name` for the service, as well as the :guilabel:`URL` (endpoint).
 Note that only the base URL is required (not a full GetCapabilities URL).
 If the CSW requires authentication, enter the appropriate :guilabel:`User name`
-and :guilabel:`Password` credentials. Clicking **[OK]** will add the service to
+and :guilabel:`Password` credentials. Clicking :guilabel:`OK` will add the service to
 the list of entries.
 
 To edit an existing Catalog Service entry, select the entry you would like to
-edit and click the **[Edit]** button, and modify the :guilabel:`Name` or
-:guilabel:`URL` values, then click **[OK]**.
+edit and click the :guilabel:`Edit` button, and modify the :guilabel:`Name` or
+:guilabel:`URL` values, then click :guilabel:`OK`.
 
 To delete a Catalog Service entry, select the entry you would like to delete
-and click the **[Delete]** button. You will be asked to confirm deleting the
+and click the :guilabel:`Delete` button. You will be asked to confirm deleting the
 entry.
 
 MetaSearch allows for loading and saving connections to an XML file. This is
@@ -109,15 +109,15 @@ example of the XML file format.
   </qgsCSWConnections>
 
 
-To load a list of entries, click the **[Load]** button. A new window will
-appear; click the **[Browse]** button and navigate to the XML file of entries
-you wish to load and click **[Open]**. The list of entries will be displayed.
-Select the entries you wish to add from the list and click **[Load]**.
+To load a list of entries, click the :guilabel:`Load` button. A new window will
+appear; click the :guilabel:`Browse` button and navigate to the XML file of entries
+you wish to load and click :guilabel:`Open`. The list of entries will be displayed.
+Select the entries you wish to add from the list and click :guilabel:`Load`.
 
-Click the **[Service info]** button to displays information about the selected
+Click the :guilabel:`Service Info` button to displays information about the selected
 Catalog Service such as service identification, service provider and contact
 information. If you would like to view the raw XML response, click the
-**[GetCapabilities response]** button. A separate window will open displaying
+:guilabel:`GetCapabilities Response` button. A separate window will open displaying
 Capabilities XML.
 
 Searching Catalog Services
@@ -139,23 +139,23 @@ The following search parameters are available:
 * :guilabel:`From`: the Catalog Service to perform the query against;
 * **Bounding box**: the spatial area of interest to filter on defined by
   :guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and :guilabel:`Ymin`.
-  Click **[Set global]** to do a  global search, click **[Map extent]** to do a
+  Click :guilabel:`Set  Global` to do a  global search, click :guilabel:`Map Extent` to do a
   search on the visible area only or manually enter custom values as desired.
 
-Clicking the **[Search]** button will search the selected Metadata Catalog.
+Clicking the :guilabel:`Search` button will search the selected Metadata Catalog.
 Search results are displayed in a list and are sortable by clicking on the
 column title. You can navigate through search results with the directional
-buttons below the search results. Clicking the **[View search results as XML]**
+buttons below the search results. Clicking the :guilabel:`View Search Results as XML`
 button opens a window with the service response in raw XML format.
 
-Clicking a result will provides the following options:
+Clicking a result will provide the following options:
 
 * if the metadata record has an associated bounding box, a footprint of the
   bounding box will be displayed on the map;
 * double-clicking the record displays the record metadata with any associated
   access links. Clicking the links opens the link in the user's web browser;
 * if the record is an OGC web service (WMS/WMTS, WFS, WCS), the appropriate
-  **[Add to WMS/WMTS|WFS|WCS]** buttons will be enabled for the user to add to
+  :guilabel:`Add to WMS/WMTS|WFS|WCS` buttons will be enabled for the user to add to
   QGIS. When clicking this button, MetaSearch will verify if this is a valid
   OWS. The OWS will then be added to the appropriate QGIS connection list, and
   the appropriate WMS/WMTS|WFS|WCS connection dialog will then appear.

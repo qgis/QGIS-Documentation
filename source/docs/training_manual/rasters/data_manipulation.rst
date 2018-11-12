@@ -45,7 +45,7 @@ projection. Luckily, we've already seen what to do in this situation.
 * Enable "on the fly" reprojection.
 * Set it to the same projection as the rest of your data (:kbd:`WGS 84 / UTM
   zone 33S`).
-* Click **[OK]**.
+* Click :guilabel:`OK`.
 
 The rasters should fit nicely:
 
