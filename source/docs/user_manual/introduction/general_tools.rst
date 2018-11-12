@@ -342,7 +342,7 @@ rather than as a separate dialog.
 From a drop-down list of current layers in the layer panel, select an item and:
 
 * set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
-  and |rasterHistogram| :guilabel:`histogram` properties in case of raster layer.
+  and |rasterHistogram| :guilabel:`Histogram` properties in case of raster layer.
   These options are the same available in :ref:`raster_properties_dialog`;
 * set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
   |labeling| :guilabel:`Labels` properties in case of vector layer.
@@ -772,7 +772,8 @@ To create a bookmark:
 
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl+B`. The Spatial Bookmark panel opens with the newly created bookmark.
+   :kbd:`Ctrl+B`. The :guilabel:`Spatial Bookmarks` panel opens with the newly
+   created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
 #. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
@@ -793,7 +794,7 @@ panel allows you to:
   Confirm your choice.
 * Import or Export a bookmark: To share or transfer your bookmarks between
   computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
-  in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
+  to export all bookmarks to an :file:`.xml` file or import them.
 
 You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
 
@@ -1536,7 +1537,7 @@ of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the layer (including symbology, labeling, fields and form definition, 
+or interact with the layer (including symbology, labeling, fields and form definition,
 actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
@@ -1982,7 +1983,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
  When the data-defined override option is setup correctly the
  icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
  the icon is red |dataDefineError| or |dataDefineExpressionError|.
- 
+
  You can enable or disable a configured |dataDefined| :sup:`data-defined
  override` button by simply clicking the widget with the mouse right button.
 
