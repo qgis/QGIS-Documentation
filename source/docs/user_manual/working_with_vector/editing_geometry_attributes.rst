@@ -1124,7 +1124,7 @@ rotation of point symbols in the map canvas.
    #. Choose a field in the :guilabel:`Field Type` combobox. Values of this
       field are hence used to rotate each feature's symbol accordingly.
 
-   .. note:: **Ensure to assign the same field to all the symbol layers**
+   .. note:: **Make sure that the same field is assigned to all the symbol layers**
 
     Setting the data-defined rotation field at the topmost level of the symbol
     tree automatically propagates it to all the symbol layers, a prerequisite to
