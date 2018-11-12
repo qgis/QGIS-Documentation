@@ -32,10 +32,10 @@ Let's start off the process by deciding on a problem to solve. For example,
 you are an estate agent and you are looking for a residential property in
 |majorUrbanName| for clients who have the following criteria:
 
-#. It needs to be in |majorUrbanName|.
-#. It must be within reasonable driving distance of a school (say 1km).
-#. It must be more than 100m squared in size.
-#. Closer than 50m to a main road.
+#. It needs to be in |majorUrbanName|;
+#. It must be within reasonable driving distance of a school (say 1km);
+#. It must be more than 100m squared in size;
+#. Closer than 50m to a main road;
 #. Closer than 500m to a restaurant.
 
 |basic| The Data
@@ -43,9 +43,9 @@ you are an estate agent and you are looking for a residential property in
 
 To answer these questions, we're going to need the following data:
 
-#. The residential properties (buildings) in the area.
-#. The roads in and around the town.
-#. The location of schools and restaurants.
+#. The residential properties (buildings) in the area;
+#. The roads in and around the town;
+#. The location of schools and restaurants;
 #. The size of buildings.
 
 All of this data is available through OSM and you should find that the dataset
@@ -56,20 +56,25 @@ you have been using throughout this manual can also be used for this lesson.
     information on restaurants, for example, you may need to chose a different
     region.
 
+.. note:: You can choose another location and download the same data to replicate
+    the analysis. Just download the data as described in the
+    :ref:`Introduction Chapter <preparing_data>` and replicate the analysis wherever
+    you want.
+
 |basic| |FA| Start a Project and get the Data
 -------------------------------------------------------------------------------
 
 We first need to load the data to work with.
 
 * Start a new QGIS project.
-* Before to load all the data we will add a background map. Open the :guilabel:`Browser`
+* Before loading all the data we will add a background map. Open the :guilabel:`Browser`
   and load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
 * Once the map is loaded zoom to |majorUrbanName|, South Africa.
 
 .. image:: img/osm_swellendam.png
    :align: center
 
-In the :file:`training_data.gpkg` Geopackage database load all the file we will
+In the :file:`training_data.gpkg` Geopackage database load all the files we will
 use in this chapter:
 
 #. ``landuse``
@@ -80,13 +85,13 @@ use in this chapter:
 
 .. note:: all these data have been downloaded with the :guilabel:`QuickOSM` plugin.
     You can replicate the same analysis in another location by downloading the
-    same data. Follow the :ref:`Introduction Chapter <tm_preparing_data>` for more
+    same data. Follow the :ref:`Introduction Chapter <preparing_data>` for more
     information.
 
-Before to proceed we should *filter* the :guilabel:`roads` layer in order to have
+Before proceeding we should *filter* the :guilabel:`roads` layer in order to have
 only some specific road types to work with.
 
-Some of the roads in OSM’s dataset are listed as ``unclassified``, ``tracks``,
+Some of the roads in OSM dataset are listed as ``unclassified``, ``tracks``,
 ``path`` and ``footway``. We want to exclude these from our roads dataset.
 
 Right click on the :guilabel:`roads` layer and choose :guilabel:`Filter...`. In
@@ -116,7 +121,7 @@ change the layers' CRS. To do this, we need to select each layer in turn,
 save the layer to a new one with our new projection, then import that new
 layer into our map.
 
-You have many different options: you can export each layer as a new shapefile,
+You have many different options: you can export each layer as a new Shapefile,
 you can append the layers to an existing GeoPackage file or you can create another
 GeoPackage file and fill it with the new reprojected layers. We will
 show the last option so the :file:`training_data.gpkg` will remain clean. But
@@ -142,13 +147,13 @@ in the :guilabel:`Browser` Panel.
 * Right click on GeoPackage and choose :guilabel:`New Connection...`.
 * Browse to the location where you saved the file to set up the connection.
 
-* You can now remove the :guilabel:`roads`.
+* You can now remove the :guilabel:`roads` layer.
 
 Repeat this process for each layer, creating a new layer in the GeoPackage file
 with ``_34S`` appended to the original name and removing each of the old layers.
 
-.. note:: When you choose to save a layer in an existing GeoPackage, QGIS will
-    **append** that layer in the GeoPackage, not creating a new file.
+.. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
+    **append** that layer in the GeoPackage.
 
 Once you have completed the process for each layer, right click on any layer and
 click :guilabel:`Zoom to layer extent` to focus the map to the area of interest.
@@ -171,15 +176,14 @@ QGIS allows you to calculate distances from any vector object.
 .. note:: :guilabel:`Processing` has its own Training Manual chapter (see :ref:`processing_tm`).
     It is extremely powerful but also complex.
 
-* We start by calculating the area around the :guilabel:`roads_34S` will use the
+* We start by calculating the area around the :guilabel:`roads_34S`by using the
   :guilabel:`Buffer` algorithm. You can find it in the
   :menuselection:`Vector Geometry --> Buffer`:
 
   .. image:: img/processing_buffer_1.png
      :align: center
 
-  Or you can type ``buffer`` in the more comfortable search menu in the upper part
-  of the toolbox:
+  Or you can type ``buffer`` in the search menu in the upper part of the toolbox:
 
   .. image:: img/processing_buffer_2.png
      :align: center
@@ -200,7 +204,7 @@ etc.
     Coordinate System, Processing will warn you and suggest to reproject the
     layer to a metric Coordinate System.
 
-* By default Processing creates temporary layer and adds them to the :guilabel:`Layer`
+* By default Processing creates temporary layers and adds them to the :guilabel:`Layer`
   Panel. You can easily append the result to the GeoPackage database by clicking
   on the |browseButton| button. Name the new layer :guilabel:`roads_buffer_50m`:
 
@@ -228,7 +232,7 @@ shown here:
 
 * Note that we're now checking the :guilabel:`Dissolve result` box.
 * Save the output under the same name as :guilabel:`roads_buffer_50m_dissolved`,
-  always appending the layer to the GeoPackage database.
+  appending the layer to the GeoPackage database.
 * Click **[Run]** and close the :guilabel:`Buffer` dialog again.
 
 Once you've added the layer to the :guilabel:`Layers` panel, it will look like
@@ -239,10 +243,9 @@ this:
 
 Now there are no unnecessary subdivisions.
 
-.. note:: If you have any doubt on an algorithm, please ready carefully the
-    *Short Help* on the right side of the dialog. If you need more information,
-    just click on the **[Help]** button in the bottom part to open a more
-    detailed guide of the algorithm.
+.. note:: The *Short Help* on the right side of the dialog explains how the
+    algorithm works. If you need more information, just click on the **[Help]**
+    button in the bottom part to open a more detailed guide of the algorithm.
 
 .. _backlink-vector-analysis-basic-1:
 
@@ -262,13 +265,14 @@ It needs to be :guilabel:`1 km` in radius, and saved under the usual directory a
 Now we have areas where the road is 50 meters away and there's a school within
 1 km (direct line, not by road). But obviously, we only want the areas where
 both of these criteria are satisfied. To do that, we'll need to use the
-:guilabel:`Intersect` tool. Find it under :menuselection:`Vector Overlay -->  Intersect`
-within :menuselection:`Processing --> Toolbox`. Set it up like this:
+:guilabel:`Intersect` tool. You can find it in
+:menuselection:`Vector Overlay -->  Intersect` menu within
+:menuselection:`Processing --> Toolbox`. Set it up like this:
 
 .. image:: img/school_roads_intersect.png
    :align: center
 
-The two input layers are the two buffers; the saving location is as usual in the
+The input layers are the two buffers; the saving location is, once again, the
 existing GeoPackage; and the file name is :guilabel:`road_school_buffers_intersect`.
 Once it's set up like this, click **[Run]**:
 
@@ -295,7 +299,7 @@ extract the buildings in that area.
 * Look for on the menu entry :menuselection:`Vector Selection --> Extract by location`
   within :menuselection:`Processing --> Toolbox`.
 
-* Set up the algorithm dialog like the following picture:
+* Set up the algorithm dialog like in the following picture:
 
 .. image:: img/location_select_dialog.png
    :align: center
@@ -345,7 +349,7 @@ first need to calculate their size.
    :align: center
 
 * We are creating the new field :guilabel:`AREA` that will contain the area in
-  square meters of each building.
+  of each building square meters.
 * Click **[OK]**.
 * The :guilabel:`AREA` field has been added to the end of the attribute table.
 * Click the edit mode button again to finish editing, and save your edits
