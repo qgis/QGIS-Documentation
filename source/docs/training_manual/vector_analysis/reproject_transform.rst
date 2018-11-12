@@ -17,13 +17,13 @@ The CRS that all the data as well as the map itself are in right now is called
 WGS84. This is a very common Geographic Coordinate System (GCS) for
 representing data. But there's a problem, as we will see.
 
-* Save your current map.
+* Save your current map;
 * Then open the map of the world which you'll find under
-  :file:`exercise_data/world/world.qgs`.
+  :file:`exercise_data/world/world.qgs`;
 * Zoom in to South Africa by using the :guilabel:`Zoom In` tool.
 * Try setting a scale in the :guilabel:`Scale` field, which is in the
   :guilabel:`Status Bar` along the bottom of the screen. While over South
-  Africa, set this value to :guilabel:`1:5000000` (one to five million).
+  Africa, set this value to :guilabel:`1:5000000` (one to five million);
 * Pan around the map while keeping an eye on the :guilabel:`Scale` field.
 
 Notice the scale changing? That's because you're moving away from the one point
@@ -60,13 +60,13 @@ in the bottom right corner of QGIS.
 
 * In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
   field. One CRS (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list
-  below.
+  below;
 * Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click
-  **[[OK]]**.
+  :guilabel:`OK`;
 * Notice how the shape of South Africa changes. All projections work by
   changing the apparent shapes of objects on Earth.
-* Zoom in to a scale of :guilabel:`1:5000000` again, as before.
-* Pan around the map.
+* Zoom in to a scale of :guilabel:`1:5000000` again, as before;
+* Pan around the map;
 * Notice how the scale stays the same!
 
 "On the fly" reprojection is also used for combining datasets that are in
@@ -93,30 +93,30 @@ to single layers. You can have many layers with many different CRS loaded in QGI
 Therefore you need to set a new CRS for each layer you are interested to and you
 can do this only by **saving** the layer as a new layer.
 
-* Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel.
+* Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel;
 * Select :guilabel:`Export --> Save Features As...` in the menu that appears. You
-   will be shown the :guilabel:`Save vector layer as...` dialog.
-* Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field.
+   will be shown the :guilabel:`Save vector layer as...` dialog;
+* Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field;
 * Navigate to :file:`exercise_data/` and specify the name of the new layer as
-  :guilabel:`buildings_reprojected.shp`.
+  :guilabel:`buildings_reprojected.shp`;
 * We must change the value of the :guilabel:`CRS`. Only the recent CRSs used will
-  be shown in the drop down menu.
-* Click on the |setProjection| button next to the dropdown menu.
-* The :guilabel:`CRS Selector` dialog will now appear.
-* In its :guilabel:`Filter` field, search for ``34S``.
-* Select :guilabel:`WGS 84 / UTM zone 34S` from the list.
+  be shown in the drop down menu;
+* Click on the |setProjection| button next to the dropdown menu;
+* The :guilabel:`CRS Selector` dialog will now appear;
+* In its :guilabel:`Filter` field, search for ``34S``;
+* Select :guilabel:`WGS 84 / UTM zone 34S` from the list;
 
 .. image:: img/CRSselector.png
    :align: center
 
-* Leave the other options unchanged.
+* Leave the other options unchanged;
 
 The :guilabel:`Save vector layer as...` dialog now looks like this:
 
 .. image:: img/save_vector_dialog.png
    :align: center
 
-* Click **[OK]**.
+* Click :guilabel:`OK`;
 
 * Start a new project and load the reprojected layer you just created.
 
@@ -130,18 +130,18 @@ bottom right corner reflects the CRS of the layer, ``32732``.
 There are many more projections than just those included in QGIS by default.
 You can also create your own projections.
 
-* Start a new map.
-* Load the :file:`world/oceans.shp` dataset.
-* Go to :menuselection:`Settings --> Custom Projections...` and you'll see this dialog:
+* Start a new map;
+* Load the :file:`world/oceans.shp` dataset;
+* Go to :menuselection:`Settings --> Custom Projections...` and you'll see this dialog;
 
 .. image:: img/custom_crs.png
    :align: center
 
-* Click on the |signPlus| button to create a new projection.
+* Click on the |signPlus| button to create a new projection;
 
 An interesting projection to use is called ``Van der Grinten I``.
 
-* Enter its name in the :guilabel:`Name` field.
+* Enter its name in the :guilabel:`Name` field;
 
 This projection represents the Earth on a circular field instead of a
 rectangular one, as most other projections do.
@@ -153,10 +153,10 @@ rectangular one, as most other projections do.
 .. image:: img/new_crs_parameters.png
    :align: center
 
-* Click **[OK]**.
-* Click on the |projectionEnabled| button to change the project CRS.
+* Click :guilabel:`OK`;
+* Click on the |projectionEnabled| button to change the project CRS;
 * Choose your newly defined projection (search for its name in the
-  :guilabel:`Filter` field).
+  :guilabel:`Filter` field);
 * On applying this projection, the map will be reprojected thus:
 
 .. image:: img/van_grinten_projection.png
