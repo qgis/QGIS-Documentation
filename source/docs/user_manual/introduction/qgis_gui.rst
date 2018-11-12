@@ -444,7 +444,7 @@ Menu Option                                              Shortcut               
 :guilabel:`Report an Issue`                              \                            \
 :guilabel:`Need commercial support?`                     \                            \
 |qgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`                \
-|checkQgisVersion| :guilabel:`Check QGIS Version`        \                            \
+|success| :guilabel:`Check QGIS Version`                 \                            \
 |helpAbout| :guilabel:`About`                            \                            \
 |helpSponsors| :guilabel:`QGIS Sponsors`                 \                            \
 =======================================================  ===========================  ===============================
@@ -714,8 +714,6 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
-.. |checkQgisVersion| image:: /static/common/mActionCheckQgisVersion.png
-   :width: 1.5em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
@@ -891,6 +889,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
+.. |success| image:: /static/common/mIconSuccess.png
+   :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png

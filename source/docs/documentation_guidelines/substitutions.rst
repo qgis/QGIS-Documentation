@@ -229,7 +229,7 @@ Help
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ==================================
 |helpContents|           ``|helpContents|``           |qgisHomePage|           ``|qgisHomePage|``
-|checkQgisVersion|       ``|checkQgisVersion|``       |helpAbout|              ``|helpAbout|``
+|success|                ``|success|``                |helpAbout|              ``|helpAbout|``
 |helpSponsors|           ``|helpSponsors|``           |contextHelp|            ``|contextHelp|``
 =======================  ===========================  =======================  ==================================
 
@@ -404,6 +404,7 @@ Icon                            Substitution                        Icon        
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
+|fromSelectedFeature|           ``|fromSelectedFeature|``
 ==============================  ==================================  ==============================  ==================================
 
 Grass integration
@@ -549,8 +550,6 @@ Icon                            Substitution                        Icon        
 .. |centroids| image:: /static/common/centroids.png
    :width: 1.5em
 .. |checkGeometry| image:: /static/common/check_geometry.png
-   :width: 1.5em
-.. |checkQgisVersion| image:: /static/common/mActionCheckQgisVersion.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
@@ -703,6 +702,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.5em
+.. |fromSelectedFeature| image:: /static/common/mActionFromSelectedFeature.png
+   :width: 1em
 .. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
    :width: 1.5em
 .. |gdal| image:: /static/common/gdal.png
@@ -1082,6 +1083,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
+.. |success| image:: /static/common/mIconSuccess.png
+   :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
