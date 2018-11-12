@@ -66,9 +66,9 @@ you have been using throughout this manual can also be used for this lesson.
 
 We first need to load the data to work with.
 
-* Start a new QGIS project.
+* Start a new QGIS project;
 * Before loading all the data we will add a background map. Open the :guilabel:`Browser`
-  and load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
+  and load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu;
 * Once the map is loaded zoom to |majorUrbanName|, South Africa.
 
 .. image:: img/osm_swellendam.png
@@ -77,11 +77,11 @@ We first need to load the data to work with.
 In the :file:`training_data.gpkg` Geopackage database load all the files we will
 use in this chapter:
 
-#. ``landuse``
-#. ``buildings``
-#. ``roads``
-#. ``restaurants``
-#. ``schools``
+#. ``landuse``;
+#. ``buildings``;
+#. ``roads``;
+#. ``restaurants``;
+#. ``schools``.
 
 .. note:: all these data have been downloaded with the :guilabel:`QuickOSM` plugin.
     You can replicate the same analysis in another location by downloading the
@@ -131,10 +131,10 @@ feel free to choose the best workflow for yourself.
     :guilabel:`WGS 84 / UTM zone 34S` CRS, but you may use a UTM CRS which is
     more appropriate for your region.
 
-* Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel.
-* Click :menuselection:`Export --> Save Features As...`
+* Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel;
+* Click :menuselection:`Export --> Save Features As...`;
 * In the :menuselection:`Save Vector Layer As` dialog, choose the following
-  settings and click **[[OK]]** (making sure you select :kbd:`Add saved file to map`):
+  settings and click :guilabel:`OK` (making sure you select :kbd:`Add saved file to map`);
 
 .. image:: img/save_roads_34S.png
    :align: center
@@ -143,9 +143,9 @@ This will create the new GeoPackage database and fill it with the :guilabel:`roa
 layer. To see the new GeoPackage and all the layers you need to add the connection
 in the :guilabel:`Browser` Panel.
 
-* Open the :guilabel:`Browser` Panel.
-* Right click on GeoPackage and choose :guilabel:`New Connection...`.
-* Browse to the location where you saved the file to set up the connection.
+* Open the :guilabel:`Browser` Panel;
+* Right click on GeoPackage and choose :guilabel:`New Connection...`;
+* Browse to the location where you saved the file to set up the connection;
 
 * You can now remove the :guilabel:`roads` layer.
 
@@ -168,17 +168,17 @@ QGIS allows you to calculate distances from any vector object.
 
 * Make sure that only the :guilabel:`roads_34S` and
   :guilabel:`buildings_34S` layers are visible, to simplify the map while
-  you're working.
+  you're working;
 * Click on the :menuselection:`Processing --> Toolbox` to open the analytical
   *core* of QGIS. Basically: **all** algorithms (for vector **and** raster) analysis
-  are available within this toolbox.
+  are available within this toolbox;
 
 .. note:: :guilabel:`Processing` has its own Training Manual chapter (see :ref:`processing_tm`).
     It is extremely powerful but also complex.
 
 * We start by calculating the area around the :guilabel:`roads_34S`by using the
   :guilabel:`Buffer` algorithm. You can find it in the
-  :menuselection:`Vector Geometry --> Buffer`:
+  :menuselection:`Vector Geometry --> Buffer`;
 
   .. image:: img/processing_buffer_1.png
      :align: center
@@ -190,7 +190,7 @@ QGIS allows you to calculate distances from any vector object.
 
 Double click on it to open the algorithm dialog.
 
-* Set it up like this:
+* Set it up like this;
 
 .. image:: img/vector_buffer_setup.png
    :align: center
@@ -206,12 +206,12 @@ etc.
 
 * By default Processing creates temporary layers and adds them to the :guilabel:`Layer`
   Panel. You can easily append the result to the GeoPackage database by clicking
-  on the |browseButton| button. Name the new layer :guilabel:`roads_buffer_50m`:
+  on the |browseButton| button. Name the new layer :guilabel:`roads_buffer_50m`;
 
   .. image:: img/buffer_saving.png
      :align: center
 
-* Click on **[Run]** and then close the :guilabel:`Buffer` dialog.
+* Click on :guilabel:`Run` and then close the :guilabel:`Buffer` dialog.
 
 Now your map will look something like this:
 
@@ -230,10 +230,10 @@ shown here:
 .. image:: img/dissolve_buffer_setup.png
    :align: center
 
-* Note that we're now checking the :guilabel:`Dissolve result` box.
+* Note that we're now checking the :guilabel:`Dissolve result` box;
 * Save the output under the same name as :guilabel:`roads_buffer_50m_dissolved`,
-  appending the layer to the GeoPackage database.
-* Click **[Run]** and close the :guilabel:`Buffer` dialog again.
+  appending the layer to the GeoPackage database;
+* Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog again.
 
 Once you've added the layer to the :guilabel:`Layers` panel, it will look like
 this:
@@ -244,7 +244,7 @@ this:
 Now there are no unnecessary subdivisions.
 
 .. note:: The *Short Help* on the right side of the dialog explains how the
-    algorithm works. If you need more information, just click on the **[Help]**
+    algorithm works. If you need more information, just click on the :guilabel:`Help`
     button in the bottom part to open a more detailed guide of the algorithm.
 
 .. _backlink-vector-analysis-basic-1:
@@ -274,7 +274,7 @@ both of these criteria are satisfied. To do that, we'll need to use the
 
 The input layers are the two buffers; the saving location is, once again, the
 existing GeoPackage; and the file name is :guilabel:`road_school_buffers_intersect`.
-Once it's set up like this, click **[Run]**:
+Once it's set up like this, click :guilabel:`Run`:
 
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
@@ -297,17 +297,17 @@ Now you've got the area that the buildings must overlap. Next, you want to
 extract the buildings in that area.
 
 * Look for on the menu entry :menuselection:`Vector Selection --> Extract by location`
-  within :menuselection:`Processing --> Toolbox`.
+  within :menuselection:`Processing --> Toolbox`;
 
-* Set up the algorithm dialog like in the following picture:
+* Set up the algorithm dialog like in the following picture;
 
 .. image:: img/location_select_dialog.png
    :align: center
 
-* Click **[Run]** and then close the dialog.
+* Click :guilabel:`Run` and then close the dialog;
 * You'll probably find that not much seems to have changed. If so, move the
   :guilabel:`well_located_houses` layer to the top of the layers list, then
-  zoom in:
+  zoom in.
 
 .. image:: img/select_zoom_result.png
    :align: center
@@ -342,24 +342,24 @@ first need to calculate their size.
 
 * Select the :guilabel:`houses_restaurants_500m` layer and open the :guilabel:`Field Calculator`
   by clicking on the |calculateField| button in the main toolbar or within the
-  attribute table.
-* Set it up like this:
+  attribute table;
+* Set it up like this;
 
 .. image:: img/buildings_area_calculator.png
    :align: center
 
 * We are creating the new field :guilabel:`AREA` that will contain the area in
-  of each building square meters.
-* Click **[OK]**.
+  of each building square meters;
+* Click :guilabel:`OK`;
 * The :guilabel:`AREA` field has been added to the end of the attribute table.
 * Click the edit mode button again to finish editing, and save your edits
-  when prompted.
-* Build a query as earlier in this lesson:
+  when prompted;
+* Build a query as earlier in this lesson;
 
 .. image:: img/buildings_area_query.png
    :align: center
 
-* Click **[OK]**. Your map should now only show you those buildings which
+* Click :guilabel:`OK`. Your map should now only show you those buildings which
   match our starting criteria and which are more than 100m squared in size.
 
 
