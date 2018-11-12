@@ -55,8 +55,8 @@ QGIS **always** reprojects data "on the fly". What this means is that even if
 the data itself is in another CRS, QGIS can project it as if it were in a CRS
 of your choice.
 
-You can change the projection CRS of the project by clicking on |projectionEnabled|
-button in the bottom right corner of QGIS.
+You can change the CRS of the project by clicking on |projectionEnabled| button
+in the bottom right corner of QGIS.
 
 * In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
   field. One CRS (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list
@@ -77,7 +77,7 @@ different CRSs.
 
 What do you notice?
 
-The layer is visible even if it has a different CRS then the :guilabel:`continents`
+The layer is visible even if it has a different CRS from the :guilabel:`continents`
 one.
 
 
@@ -85,8 +85,8 @@ one.
 -----------------------------------------------
 
 Sometimes you need to export an existing dataset in another CRS. As we will see
-in the next lesson, if you need to make some distance calculation on layer, it
-is always better to have the layer in a PCS.
+in the next lesson, if you need to make some distance calculations on layer, it
+is always better to have the layer in a projected coordinate system.
 
 Be aware that the 'on the fly' reprojection is related to the **project** and not
 to single layers. You can have many layers with many different CRS loaded in QGIS.
@@ -99,9 +99,9 @@ can do this only by **saving** the layer as a new layer.
 * Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field.
 * Navigate to :file:`exercise_data/` and specify the name of the new layer as
   :guilabel:`buildings_reprojected.shp`.
-* We must change the value of the :guilabel:`CRS`. Only the recent CRS used will
+* We must change the value of the :guilabel:`CRS`. Only the recent CRSs used will
   be shown in the drop down menu.
-* Click on the |setProjection| button next dropdown menu.
+* Click on the |setProjection| button next to the dropdown menu.
 * The :guilabel:`CRS Selector` dialog will now appear.
 * In its :guilabel:`Filter` field, search for ``34S``.
 * Select :guilabel:`WGS 84 / UTM zone 34S` from the list.
