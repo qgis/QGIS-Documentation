@@ -58,8 +58,8 @@ you have been using throughout this manual can also be used for this lesson.
 
 .. note:: You can choose another location and download the same data to replicate
     the analysis. Just download the data as described in the
-    :ref:`Introduction Chapter <preparing_data>` and replicate the analysis wherever
-    you want.
+    :ref:`Introduction Chapter <tm_preparing_data>` and replicate the analysis
+    wherever you want.
 
 |basic| |FA| Start a Project and get the Data
 -------------------------------------------------------------------------------
@@ -85,8 +85,8 @@ use in this chapter:
 
 .. note:: all these data have been downloaded with the :guilabel:`QuickOSM` plugin.
     You can replicate the same analysis in another location by downloading the
-    same data. Follow the :ref:`Introduction Chapter <preparing_data>` for more
-    information.
+    same data. Follow the :ref:`Introduction Chapter <tm_preparing_data>` for
+    more information.
 
 Before proceeding we should *filter* the :guilabel:`roads` layer in order to have
 only some specific road types to work with.
