@@ -49,6 +49,7 @@ Platform Icons
 ==========  ===============  ==========  ===============
 Icon        Substitution     Icon        Substitution
 ==========  ===============  ==========  ===============
+|logo|      ``|logo|``
 |kde|       ``|kde|``        |nix|       ``|nix|``
 |osx|       ``|osx|``        |win|       ``|win|``
 ==========  ===============  ==========  ===============
@@ -229,7 +230,7 @@ Help
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ==================================
 |helpContents|           ``|helpContents|``           |qgisHomePage|           ``|qgisHomePage|``
-|success|                ``|success|``                |helpAbout|              ``|helpAbout|``
+|success|                ``|success|``
 |helpSponsors|           ``|helpSponsors|``           |contextHelp|            ``|contextHelp|``
 =======================  ===========================  =======================  ==================================
 
@@ -741,8 +742,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
-.. |helpAbout| image:: /static/common/mActionHelpAbout.png
-   :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |helpSponsors| image:: /static/common/mActionHelpSponsors.png
@@ -839,6 +838,8 @@ Icon                            Substitution                        Icon        
 .. |lockedGray| image:: /static/common/lockedGray.png
    :width: 1.5em
 .. |lockedRepeat| image:: /static/common/lock_repeating.png
+   :width: 1.5em
+.. |logo| image:: /static/common/logo.png
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
    :width: 1.5em
