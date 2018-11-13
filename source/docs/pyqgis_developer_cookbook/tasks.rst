@@ -198,7 +198,7 @@ dependencies.
   shortestsubtask = RandomIntegerSumTask('waste cpu subtask shortest', 4)
   
   # Add a subtask (shortsubtask) to shorttask that must run after
-  #  minitask and longtask has finished
+  # minitask and longtask has finished
   shorttask.addSubTask(shortsubtask, [minitask, longtask])
   # Add a subtask (longsubtask) to longtask that must be run
   # before the parent task
