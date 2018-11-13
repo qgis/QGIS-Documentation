@@ -51,20 +51,20 @@ reproject our data to use a PCS.
 |basic| |FA| "On the Fly" Reprojection
 -------------------------------------------------------------------------------
 
-QGIS **always** reprojects data "on the fly". What this means is that even if
-the data itself is in another CRS, QGIS can project it as if it were in a CRS
-of your choice.
+By default, QGIS reprojects reprojects data "on the fly". What this means is that
+even if the data itself is in another CRS, QGIS can project it as if it were in
+a CRS of your choice.
 
 You can change the CRS of the project by clicking on |projectionEnabled| button
 in the bottom right corner of QGIS.
 
 * In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
-  field. One CRS (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list
-  below;
+  field. One CRS (:guilabel:`NSIDC EASE-Grid 2.0 Global`, EPSG:6933) should
+  appear in the list below;
 * Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click
   :guilabel:`OK`;
 * Notice how the shape of South Africa changes. All projections work by
-  changing the apparent shapes of objects on Earth.
+  changing the apparent shapes of objects on Earth;
 * Zoom in to a scale of :guilabel:`1:5000000` again, as before;
 * Pan around the map;
 * Notice how the scale stays the same!
@@ -74,6 +74,8 @@ different CRSs.
 
 * Add another vector layer to your map which has the data for South Africa
   only. You'll find it as :file:`exercise_data/world/RSA.shp`.
+* Load it and a quick way to see what is its CRS is by hovering the mouse over
+  the layer in the legend. It is ``EPSG:3410``.
 
 What do you notice?
 
@@ -89,13 +91,14 @@ in the next lesson, if you need to make some distance calculations on layer, it
 is always better to have the layer in a projected coordinate system.
 
 Be aware that the 'on the fly' reprojection is related to the **project** and not
-to single layers. You can have many layers with many different CRS loaded in QGIS.
-Therefore you need to set a new CRS for each layer you are interested to and you
-can do this only by **saving** the layer as a new layer.
+to single layers. This means that layers can have different CRS from the project
+even if you see them in the *correct* position.
+
+But you can easily export the layer in another CRS.
 
 * Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel;
-* Select :guilabel:`Export --> Save Features As...` in the menu that appears. You
-   will be shown the :guilabel:`Save vector layer as...` dialog;
+* Select :menuselection:`Export --> Save Features As...` in the menu that appears.
+  You will be shown the :guilabel:`Save vector layer as...` dialog;
 * Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field;
 * Navigate to :file:`exercise_data/` and specify the name of the new layer as
   :guilabel:`buildings_reprojected.shp`;
@@ -118,10 +121,8 @@ The :guilabel:`Save vector layer as...` dialog now looks like this:
 
 * Click :guilabel:`OK`;
 
-* Start a new project and load the reprojected layer you just created.
-
-You should see that the EPSG code next to the |projectionEnabled| icon in the
-bottom right corner reflects the CRS of the layer, ``32732``.
+You can now comparing the old and new projection of the layer and see that they
+are in two different CRS but they are still overlapping.
 
 
 |hard| |FA| Creating Your Own Projection
