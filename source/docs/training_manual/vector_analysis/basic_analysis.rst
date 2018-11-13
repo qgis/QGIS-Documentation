@@ -56,10 +56,6 @@ you have been using throughout this manual can also be used for this lesson.
     information on restaurants, for example, you may need to chose a different
     region.
 
-.. note:: You can choose another location and download the same data to replicate
-    the analysis. Just download the data as described in the
-    :ref:`Introduction Chapter <tm_preparing_data>` and replicate the analysis
-    wherever you want.
 
 |basic| |FA| Start a Project and get the Data
 -------------------------------------------------------------------------------
@@ -68,8 +64,7 @@ We first need to load the data to work with.
 
 * Start a new QGIS project;
 * Before loading all the data we will add a background map. Open the :guilabel:`Browser`
-  and load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu;
-* Once the map is loaded zoom to |majorUrbanName|, South Africa.
+  and load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
 
 .. image:: img/osm_swellendam.png
    :align: center
@@ -83,19 +78,22 @@ use in this chapter:
 #. ``restaurants``;
 #. ``schools``.
 
+Zooming to one later extent to see |majorUrbanName|, South Africa.
+
 .. note:: all these data have been downloaded with the :guilabel:`QuickOSM` plugin.
     You can replicate the same analysis in another location by downloading the
     same data. Follow the :ref:`Introduction Chapter <tm_preparing_data>` for
     more information.
 
-Before proceeding we should *filter* the :guilabel:`roads` layer in order to have
+Before proceeding we should filter the :guilabel:`roads` layer in order to have
 only some specific road types to work with.
 
 Some of the roads in OSM dataset are listed as ``unclassified``, ``tracks``,
-``path`` and ``footway``. We want to exclude these from our roads dataset.
+``path`` and ``footway``. We want to exclude these from our dataset and focus on
+the other road types, more suitable for this exercise.
 
 Right click on the :guilabel:`roads` layer and choose :guilabel:`Filter...`. In
-the dialog that pops up we can *filter* these features with the following
+the dialog that pops up we can filter these features with the following
 expression::
 
   "highway" NOT IN ('footway','path','unclassified','track')
@@ -134,7 +132,8 @@ feel free to choose the best workflow for yourself.
 * Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel;
 * Click :menuselection:`Export --> Save Features As...`;
 * In the :menuselection:`Save Vector Layer As` dialog, choose the following
-  settings and click :guilabel:`OK` (making sure you select :kbd:`Add saved file to map`);
+  settings and click :guilabel:`OK` (make sure you checked
+  :guilabel:`Add saved file to map`);
 
 .. image:: img/save_roads_34S.png
    :align: center
@@ -149,8 +148,8 @@ in the :guilabel:`Browser` Panel.
 
 * You can now remove the :guilabel:`roads` layer.
 
-Repeat this process for each layer, creating a new layer in the GeoPackage file
-with ``_34S`` appended to the original name and removing each of the old layers.
+Repeat this process for each layer, creating a new layer in the :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the original name and removing each of
+the old layers from the project.
 
 .. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
     **append** that layer in the GeoPackage.
@@ -176,9 +175,9 @@ QGIS allows you to calculate distances from any vector object.
 .. note:: :guilabel:`Processing` has its own Training Manual chapter (see :ref:`processing_tm`).
     It is extremely powerful but also complex.
 
-* We start by calculating the area around the :guilabel:`roads_34S`by using the
-  :guilabel:`Buffer` algorithm. You can find it in the
-  :menuselection:`Vector Geometry --> Buffer`;
+* We start by calculating the area around the :guilabel:`roads_34S` by using the
+  :guilabel:`Buffer` algorithm. You can find it expanding the
+  :menuselection:`Vector Geometry` group;
 
   .. image:: img/processing_buffer_1.png
      :align: center
@@ -204,9 +203,11 @@ etc.
     Coordinate System, Processing will warn you and suggest to reproject the
     layer to a metric Coordinate System.
 
-* By default Processing creates temporary layers and adds them to the :guilabel:`Layer`
-  Panel. You can easily append the result to the GeoPackage database by clicking
-  on the |browseButton| button. Name the new layer :guilabel:`roads_buffer_50m`;
+* By default Processing creates temporary layers and adds them to the :guilabel:`Layers`
+  panel. You can easily append the result to the GeoPackage database by clicking
+  on the |browseButton| button adn choose :guilabel:`Save to GeoPackage...`. Name
+  the new layer :guilabel:`roads_buffer_50m` and save it in the :file:`vector_analysis.gpkg`
+  file;
 
   .. image:: img/buffer_saving.png
      :align: center
@@ -219,10 +220,10 @@ Now your map will look something like this:
    :align: center
 
 If your new layer is at the top of the :guilabel:`Layers` list, it will probably
-obscure much of your map, but this gives us all the areas in your region which are
+obscure much of your map, but this gives you all the areas in your region which are
 within 50m of a road.
 
-However, you'll notice that there are distinct areas within our buffer, which
+However, you'll notice that there are distinct areas within your buffer, which
 correspond to all the individual roads. To get rid of this problem, uncheck the
 :guilabel:`roads_buffer_50m` layer and re-create the buffer using the settings
 shown here:
@@ -231,8 +232,7 @@ shown here:
    :align: center
 
 * Note that we're now checking the :guilabel:`Dissolve result` box;
-* Save the output under the same name as :guilabel:`roads_buffer_50m_dissolved`,
-  appending the layer to the GeoPackage database;
+* Save the output as :guilabel:`roads_buffer_50m_dissolved`;
 * Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog again.
 
 Once you've added the layer to the :guilabel:`Layers` panel, it will look like
@@ -266,7 +266,7 @@ Now we have areas where the road is 50 meters away and there's a school within
 1 km (direct line, not by road). But obviously, we only want the areas where
 both of these criteria are satisfied. To do that, we'll need to use the
 :guilabel:`Intersect` tool. You can find it in
-:menuselection:`Vector Overlay -->  Intersect` menu within
+:menuselection:`Vector Overlay` group within
 :menuselection:`Processing --> Toolbox`. Set it up like this:
 
 .. image:: img/school_roads_intersect.png
@@ -274,7 +274,7 @@ both of these criteria are satisfied. To do that, we'll need to use the
 
 The input layers are the two buffers; the saving location is, once again, the
 existing GeoPackage; and the file name is :guilabel:`road_school_buffers_intersect`.
-Once it's set up like this, click :guilabel:`Run`:
+Once it's set up like this, click :guilabel:`Run`.
 
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
@@ -296,7 +296,7 @@ they overlap, since that's what we really wanted to know in the first place:
 Now you've got the area that the buildings must overlap. Next, you want to
 extract the buildings in that area.
 
-* Look for on the menu entry :menuselection:`Vector Selection --> Extract by location`
+* Look for the menu entry :menuselection:`Vector Selection --> Extract by location`
   within :menuselection:`Processing --> Toolbox`;
 
 * Set up the algorithm dialog like in the following picture;
@@ -348,10 +348,10 @@ first need to calculate their size.
 .. image:: img/buildings_area_calculator.png
    :align: center
 
-* We are creating the new field :guilabel:`AREA` that will contain the area in
-  of each building square meters;
+* We are creating the new field :guilabel:`AREA` that will contain the area of
+  each building square meters;
 * Click :guilabel:`OK`;
-* The :guilabel:`AREA` field has been added to the end of the attribute table.
+* The :guilabel:`AREA` field has been added at the end of the attribute table.
 * Click the edit mode button again to finish editing, and save your edits
   when prompted;
 * Build a query as earlier in this lesson;
