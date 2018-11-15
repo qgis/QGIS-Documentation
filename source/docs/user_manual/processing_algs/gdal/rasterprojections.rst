@@ -35,8 +35,8 @@ Parameters
 
 Extract projection
 ------------------
-Extracts the projection of a raster file and writes it into a
-world-file.
+Extracts the projection of a raster file and writes it into a `world`
+file with extension :file:`.wld`.
 The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
@@ -44,8 +44,11 @@ The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gd
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+``Input file`` [raster]
+  Input raster.
+  The raster layer has to be file based, as the algorithm uses the path
+  to the raster file as the location of the generated :file:`.wld` file.
+  Using a non-file raster layer will lead to an error.
 
 ``Create also .prj file`` [boolean]
   If this is activated a :file:`.prj` file containing the projection
@@ -56,6 +59,12 @@ Parameters
 Outputs
 .......
 
+``World file`` [file]
+  Text file with extension :file:`.wld` containing transformation parameters
+  for  the raster file.
+
+``ESRI Shapefile prj file`` [file]
+  Text file that describes the CRS.
 
 .. _gdalwarpreproject:
 
