@@ -399,7 +399,6 @@ Icon                            Substitution                        Icon        
 |showPluginManager|             ``|showPluginManager|``             |installPluginFromZip|          ``|installPluginFromZip|``
 |pythonFile|                    ``|pythonFile|``                    |runConsole|                    ``|runConsole|``
 |showEditorConsole|             ``|showEditorConsole|``             |clearConsole|                  ``|clearConsole|``
-|tabEditorConsole|              ``|tabEditorConsole|``
 |offlineEditingCopy|            ``|offlineEditingCopy|``            |offlineEditingSync|            ``|offlineEditingSync|``
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
@@ -1093,8 +1092,6 @@ Icon                            Substitution                        Icon        
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |tab| image:: /static/common/tab.png
-   :width: 1.5em
-.. |tabEditorConsole| image:: /static/common/iconTabEditorConsole.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
