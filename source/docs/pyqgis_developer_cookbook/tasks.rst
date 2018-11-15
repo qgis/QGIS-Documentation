@@ -41,7 +41,7 @@ There are several ways to create a QGIS task:
 
   .. code-block:: python
 
-    QgsTask.fromFunction(u'heavy function', heavyfunction,
+    QgsTask.fromFunction(u'heavy function', heavyFunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
@@ -228,7 +228,7 @@ parameter ``wait_time``.
   
   MESSAGE_CATEGORY = 'TaskFromFunction'
   
-  def dosomething(task, wait_time):
+  def doSomething(task, wait_time):
       """
       Raises an exception to abort the task.
       Returns a result if success.
@@ -264,9 +264,9 @@ parameter ``wait_time``.
           MESSAGE_CATEGORY, Qgis.Info)
   
   def completed(exception, result=None):
-      """This is called when dosomething is finished.
-      Exception is not None if dosomething raises an exception.
-      Result is the return value of dosomething."""
+      """This is called when doSomething is finished.
+      Exception is not None if doSomething raises an exception.
+      Result is the return value of doSomething."""
       if exception is None:
           if result is None:
               QgsMessageLog.logMessage(
@@ -288,7 +288,7 @@ parameter ``wait_time``.
           raise exception
   
   # Creae a few tasks
-  task1 = QgsTask.fromFunction(u'Waste cpu 1', dosomething,
+  task1 = QgsTask.fromFunction(u'Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
   task2 = QgsTask.fromFunction(u'Waste cpu 2', dosomething,
                                on_finished=completed, wait_time=3)
