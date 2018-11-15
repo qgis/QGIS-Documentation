@@ -18,7 +18,7 @@ Extract projection
 ------------------
 Extracts the projection of a raster file and writes it into a
 world-file.
-The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
+The algorithm is derived from the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
@@ -29,7 +29,7 @@ Parameters
   input raster file.
 
 ``Create also .prj file`` [boolean]
-  If this is activated also a \*.prj-file containing the projection
+  If this is activated also a :file:`.prj` file containing the projection
   information is created.
 
   Default: *False*
