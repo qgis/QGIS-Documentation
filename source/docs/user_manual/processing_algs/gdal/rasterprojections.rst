@@ -33,8 +33,8 @@ Parameters
 
 .. _gdalextractprojection:
 
-Extract projection
-------------------
+Extract projection |34|
+-----------------------
 Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
 The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
