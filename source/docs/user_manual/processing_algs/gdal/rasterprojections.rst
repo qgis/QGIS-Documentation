@@ -64,7 +64,7 @@ Outputs
   for  the raster file.
 
 ``ESRI Shapefile prj file`` [file] |34|
-  Text file with :file:.prj extension that describes the CRS.
+  Text file with :file:`.prj` extension that describes the CRS.
   Will be None if ``Create also .prj file`` is False.
 
 .. _gdalwarpreproject:
