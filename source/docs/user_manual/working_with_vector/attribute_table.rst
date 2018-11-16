@@ -138,9 +138,9 @@ Table view vs Form view
 
 QGIS provides two view modes to easily manipulate data in the attribute table:
 
-* the |openTable| Table view, displaying values of multiple features in a
-  tabular mode, each row representing a feature and each column a field;
-* and the |formView| Form view which shows identifiers of features in a first
+* The |openTable| :sup:`Table view`, displays values of multiple features in a
+  tabular mode, each row representing a feature and each column a field.
+* And the |formView| :sup:`Form view` shows identifiers of features in a first
   panel and displays only the attributes of the clicked identifier in the second
   one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
@@ -237,7 +237,7 @@ conditions on feature's:
 * geometry (e.g., identifying multi-parts features, small area ones or in a
   defined map extent...);
 * or field value (e.g., comparing values to a threshold, identifying empty
-  cells...)
+  cells...).
 
 You can enable the conditional formatting panel clicking on
 |conditionalFormatting| at the top right of the attributes window in table
@@ -456,10 +456,10 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
 * using the :ref:`field calculator <vector_field_calculator>`: update in a row
-  a field that may already exist or to be created but for multiple features; it
-  can be used to create virtual fields.
+  a field that may already exist or to be created but for multiple features. It
+  can be used to create virtual fields;
 * using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
-  same as above but for only existing field
+  same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
   multiple fields for multiple features.
 
@@ -737,7 +737,7 @@ under actions.
    Identification dialog regions with relation to airports
 
 As you can see, the airports assigned to this particular region are all shown in
-a table. And there are also some buttons available. Let's review them shortly
+a table. And there are also some buttons available. Let's review them shortly:
 
 * The |toggleEditing| button is for toggling the edit mode. Be aware that it
   toggles the edit mode of the airport layer, although we are in the feature
@@ -764,9 +764,9 @@ an alphanumeric table) so the above steps will create an entry in the layer
 attribute table that has no corresponding geometric feature. To add the
 geometry:
 
-#. Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
+#. Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer.
 #. Select the record that has been added previously within the feature form of the
-   referenced layer;
+   referenced layer.
 #. Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
    selected attributes table record.
 

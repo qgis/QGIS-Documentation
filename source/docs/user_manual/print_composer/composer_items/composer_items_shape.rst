@@ -99,17 +99,17 @@ i.e. add:
 
 * start and/or end markers with options:
 
-  * :guilabel:`None`: draws a simple polyline;
+  * :guilabel:`None`: draws a simple polyline.
   * :guilabel:`Arrow`: adds a regular triangular arrow head that you can
-    customize;
+    customize.
   * :guilabel:`SVG` marker: uses an :file:`SVG` file as arrow head of the
     item.
 * customize the arrow head:
 
-  * :guilabel:`Arrow stroke color`: set the stroke color of the arrow head;
-  * :guilabel:`Arrow fill color`: set the fill color of the arrow head;
-  * :guilabel:`Arrow stroke width`: set the stroke width of the arrow head;
-  * :guilabel:`Arrow head width`: set the size of the arrow head.
+  * :guilabel:`Arrow stroke color`: sets the stroke color of the arrow head.
+  * :guilabel:`Arrow fill color`: sets the fill color of the arrow head.
+  * :guilabel:`Arrow stroke width`: sets the stroke width of the arrow head.
+  * :guilabel:`Arrow head width`: sets the size of the arrow head.
 
 SVG images are automatically rotated with the line. Stroke and fill colors of
 QGIS predefined SVG images can be changed using the corresponding options. Custom

@@ -78,7 +78,7 @@ Provided information are:
 * picked from the :ref:`filled metadata <vectormetadatamenu>` (access, links,
   contacts, history...);
 * or related to its geometry (spatial extent, CRS...) or its attributes (number
-  of fields, characteristics of each...)
+  of fields, characteristics of each...).
 
 
 .. _vectorsourcemenu:
@@ -110,8 +110,8 @@ Coordinate Reference System
   layer is a wrong one or if none was applied.
   If you wish to reproject your data into another CRS, rather use layer reprojection
   algorithms from Processing or :ref:`Save it into another layer <general_saveas>`.
-* :guilabel:`Create spatial index` (only for OGR-supported formats)
-* :guilabel:`Update extents` information for a layer
+* :guilabel:`Create spatial index` (only for OGR-supported formats).
+* :guilabel:`Update extents` information for a layer.
 
 .. index:: Query builder
 .. _vector_query_builder:
@@ -417,13 +417,13 @@ mode for classifying features within the classes (using the Mode list). The
 available modes are:
 
 * Equal Interval: each class has the same size (e.g. values from 0 to 16 and
-  4 classes, each class has a size of 4);
+  4 classes, each class has a size of 4).
 * Quantile: each class will have the same number of element inside
-  (the idea of a boxplot);
+  (the idea of a boxplot).
 * Natural Breaks (Jenks): the variance within each class is minimal while the
-  variance between classes is maximal;
+  variance between classes is maximal.
 * Standard Deviation: classes are built depending on the standard deviation of
-  the values;
+  the values.
 * Pretty Breaks: Computes a sequence of about n+1 equally spaced nice values
   which cover the range of the values in x. The values are chosen so that they
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
@@ -624,8 +624,8 @@ tolerance from each other and places them around their barycenter following
 different :guilabel:`Placement methods`:
 
 * **Ring**: places all the features on a circle whose radius depends on the
-  number of features to display;
-* **Concentric rings**: uses a set of concentric circles to show the features;
+  number of features to display.
+* **Concentric rings**: uses a set of concentric circles to show the features.
 * **Grid**: generates a regular grid with a point symbol at each intersection.
 
 The :guilabel:`Center symbol` widget helps you customize the symbol and color
@@ -1689,8 +1689,8 @@ is accessible to :
 To do this, after you enabled the labeling on the ``NAME`` field of the layer
 (see :ref:`showlabels`):
 
-#. activate the :guilabel:`Text` tab;
-#. Click on the |dataDefined| icon next to the :guilabel:`Size` property;
+#. Activate the :guilabel:`Text` tab.
+#. Click on the |dataDefined| icon next to the :guilabel:`Size` property.
 #. Select :guilabel:`Edit...` and type::
 
     CASE
@@ -1700,7 +1700,7 @@ To do this, after you enabled the labeling on the ``NAME`` field of the layer
     END
 
 #. Press :guilabel:`OK` to validate. The dialog closes and the |dataDefined| button
-   becomes |dataDefineExpressionOn| meaning that an rule is being run;
+   becomes |dataDefineExpressionOn| meaning that an rule is being run.
 #. Then click the button next to the color property, type the expression below
    and validate::
 
@@ -2153,10 +2153,10 @@ properties --> Attributes Form` tab. This property holds three different
 values:
 
 * ``Autogenerate``: keeps the basic structure of "one row - one field" for the
-  form but allows to customize each corresponding widget;
+  form but allows to customize each corresponding widget.
 * ``Drag-and-drop designer``: other than widget customization, the form
   structure can be made more complex eg, with widgets embedded in groups and
-  tabs;
+  tabs.
 * ``Provide ui file``: allows to use a Qt designer file, hence a potentially
   more complex and fully featured template, as feature form.
 
@@ -2390,8 +2390,8 @@ Based on the field type, QGIS automatically determines and assigns a default
 widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
-* **Checkbox**: Displays a checkbox whose state defines the value to insert;
-* **Classification**: only available when a :ref:`categorized symbology
+* **Checkbox**: Displays a checkbox whose state defines the value to insert.
+* **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
   the values of the classes.
 * **Color**: Displays a :ref:`color widget <color-selector>` allowing to select
@@ -2778,15 +2778,15 @@ backslash.
 The :guilabel:`Action Scopes` allows you to define *where* the action should be
 available. You have 4 different choices:
 
-1. :guilabel:`Feature Scope`: action is available when right click in the cell
-   within the attribute table;
-2. :guilabel:`Field Scope`: action is available when right click in the cell
+#. :guilabel:`Feature Scope`: action is available when right click in the cell
+   within the attribute table.
+#. :guilabel:`Field Scope`: action is available when right click in the cell
    within the attribute table, in the feature form and in the default action
-   button of the main toolbar;
-3. :guilabel:`Layer Scope`: action is available in the action button in the
+   button of the main toolbar.
+#. :guilabel:`Layer Scope`: action is available in the action button in the
    attribute table toolbar. Be aware that this type of action involves the entire
-   layer and not the single features;
-4. :guilabel:`Canvas`: action is available in the main action button in the
+   layer and not the single features.
+#. :guilabel:`Canvas`: action is available in the main action button in the
    toolbar.
 
 If you have field names that are substrings of other field names (e.g.,
