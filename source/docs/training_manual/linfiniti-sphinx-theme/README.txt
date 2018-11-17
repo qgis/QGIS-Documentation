@@ -14,9 +14,9 @@ License:
 --------
 
 This is a theme for the `sphinx documentation system
-<http://sphinx.pocoo.org/>`_ based on the `bootstrap css framework
-<http://twitter.github.com/bootstrap/>`_. It also uses a few icons from the
-free `34aL volume 3.2 SE <http://www.icojoy.com/articles/26/>`_ icon set.
+<http://www.sphinx-doc.org/en/master/>`_ based on the `bootstrap css framework
+<https://twitter.github.com/bootstrap/>`_. It also uses a few icons from the
+free `34aL volume 3.2 SE <www.icojam.com>`_ icon set.
 
 The base layout.html is taken from the default sphinx theme and modified.
 
@@ -25,7 +25,7 @@ of which is included under static/bootstrap/LICENSE.txt
 
 This theme is the original work of Tim Sutton, Linfiniti Consulting CC and made
 available under the Creative Commons Share-Alike license. More about this
-license can be found `here <http://creativecommons.org/licenses/by-sa/3.0/>`_.
+license can be found `here <https://creativecommons.org/licenses/by-sa/3.0/>`_.
 
 Please do not remove our name / license logo from the theme without our
 permission.
@@ -127,7 +127,7 @@ History:
 
 We developed this theme for some in-house projects we were working on, but
 decided to 'put it out there' since we started using the theme in some of our
-contributions to the `Quantum GIS (QGIS) <http://qgis.org>`_ project too.
+contributions to the `Quantum GIS (QGIS) <https://qgis.org>`_ project too.
 
 Contact:
 --------

@@ -221,4 +221,4 @@ Next you'll see how to run spatial statistics algorithms on vector datasets.
 .. |moderate| image:: /static/global/moderate.png
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

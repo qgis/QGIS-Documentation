@@ -8,7 +8,7 @@
 R Syntax Summary table for Processing
 **************************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
 Processing allows a lot of different input and output parameter that can be used
 in the script body.
@@ -105,4 +105,4 @@ look at the :ref:`R Syntax chapter <r-syntax>`.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

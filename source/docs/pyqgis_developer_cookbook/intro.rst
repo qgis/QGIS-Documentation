@@ -31,7 +31,7 @@ Python application.
 
 .. index:: API
 
-There is a `complete QGIS API <http://qgis.org/api/>`_ reference that
+There is a `complete QGIS API <https://qgis.org/api/>`_ reference that
 documents the classes from the QGIS libraries. `The Pythonic QGIS API
 (pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the C++ API.
 
@@ -93,7 +93,7 @@ development.
 Many plugins covering various functionality have been written since
 the introduction of Python support. The plugin installer allows users
 to easily fetch, upgrade and remove Python plugins.
-See the `Python Plugin <http://plugins.qgis.org/>`_ page for more
+See the `Python Plugin <https://plugins.qgis.org/>`_ page for more
 information about plugins and plugin development.
 
 Creating plugins in Python is simple, see :ref:`developing_plugins`
@@ -349,4 +349,4 @@ PyQt.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

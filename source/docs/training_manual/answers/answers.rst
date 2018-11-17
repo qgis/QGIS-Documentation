@@ -750,7 +750,7 @@ Marble data is more suitable at global or national scales.
 You may notice that many WMS servers are not always available. Sometimes this
 is temporary, sometimes it is permanent. An example of a WMS server that worked
 at the time of writing is the :guilabel:`World Mineral Deposits` WMS at
-:kbd:`http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows`. It does not
+http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows. It does not
 require fees or have access constraints, and it is global. Therefore, it does
 satisfy the requirements. Keep in mind, however, that this is merely an
 example. There are many other WMS servers to choose from.
@@ -1198,4 +1198,4 @@ As you can see, our constraint allows nulls to be added into the database.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

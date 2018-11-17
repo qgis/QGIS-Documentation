@@ -21,7 +21,7 @@ Aspect is the compass direction that a slope faces. The pixels will
 have a value from 0-360° measured in degrees from north indicating the azimuth.
 On the northern hemisphere, the north side of slopes is often shaded (small azimuth from 0°-90°),
 while the southern side receives more solar radiation (higher azimuth from 180°-270°).
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`_ .
+The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -72,7 +72,7 @@ Color reliefs can particularly be used to depict elevations.
 The Algorithm outputs a 4-band raster with values computed from the elevation
 and a text-based color configuration file. By default, the colors between the given
 elevation values are blended smoothly and the result is a nice colorized elevation raster.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
+The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
 
 Parameters
 ..........
@@ -125,7 +125,7 @@ interpolating missing regions of fairly continuously varying rasters (such as el
 models for instance). It is also suitable for filling small holes and cracks in more irregularly
 varying images (like airphotos). It is generally not so great for interpolating a raster
 from sparse point data.
-The algorithm is derived from the `GDAL fillnodata utility <http://www.gdal.org/gdal_fillnodata.html>`__ .
+The algorithm is derived from the `GDAL fillnodata utility <https://www.gdal.org/gdal_fillnodata.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -246,7 +246,7 @@ Interpolated raster file.
 See also
 ........
 
-`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
+`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
 
 
 .. _gdalgriddatametrics:
@@ -340,7 +340,7 @@ Outputs
 
 See also
 ........
-`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
+`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
 
 
 .. _gdalgridinversedistance:
@@ -442,7 +442,7 @@ Outputs
 See also
 .........
 
-`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
+`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
 
 
 .. _gdalgridinversedistancenearestneighbor:
@@ -523,7 +523,7 @@ Outputs
 See also
 ........
 
-`GDAL grid <http://www.gdal.org/gdal_grid.html>`_
+`GDAL grid <https://www.gdal.org/gdal_grid.html>`_
 
 
 .. _gdalgridlinear:
@@ -589,7 +589,7 @@ Outputs
 See also
 ........
 
-`GDAL grid <http://www.gdal.org/gdal_grid.html>`_
+`GDAL grid <https://www.gdal.org/gdal_grid.html>`_
 
 
 .. _gdalgridnearestneighbor:
@@ -662,7 +662,7 @@ Outputs
 See also
 ........
 
-`GDAL grid tutorial <http://www.gdal.org/grid_tutorial.html>`_
+`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
 
 
 .. _gdalhillshade:
@@ -672,7 +672,7 @@ Hillshade
 Outputs a raster with a nice shaded relief effect. It’s very useful for visualizing
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
+The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -765,7 +765,7 @@ Outputs
 See also
 ........
 
-`GDAL nearblack <http://www.gdal.org/nearblack.html>`_
+`GDAL nearblack <https://www.gdal.org/nearblack.html>`_
 
 
 .. _gdalproximity:
@@ -848,7 +848,7 @@ Outputs
 See also
 ........
 
-`GDAL proximity algorithm <http://www.gdal.org/gdal_proximity.html>`_
+`GDAL proximity algorithm <https://www.gdal.org/gdal_proximity.html>`_
 
 
 .. _gdalroughness:
@@ -861,7 +861,7 @@ difference of a central pixel and its surrounding cell.
 The determination of the roughness plays a role in the analysis of terrain elevation data,
 it's useful for calculations of the river morphology, in climatology and physical geography
 in general.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
+The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -895,7 +895,7 @@ Sieve
 Removes raster polygons smaller than a provided threshold size (in pixels) and
 replaces them with the pixel value of the largest neighbour polygon. It is
 useful if you have a large amount of small areas on your raster map.
-The algorithm is derived from the `GDAL sieve utility <http://www.gdal.org/gdal_sieve.html>`_ .
+The algorithm is derived from the `GDAL sieve utility <https://www.gdal.org/gdal_sieve.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -934,7 +934,7 @@ Slope
 Generate a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
 type of slope value you want: degrees or percent slope.
-The algorithm is derived from the `GDAL DEM utility <http://www.gdal.org/gdaldem.html>`__ .
+The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1011,7 +1011,7 @@ Outputs
 See also
 ........
 
-`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TPI>`__
+`GDAL DEM utility <https://www.gdal.org/gdaldem.html#gdaldem_TPI>`__
 
 
 .. _gdaltriterrainruggednessindex:
@@ -1048,7 +1048,7 @@ Outputs
 
 See also
 ........
-`GDAL DEM utility <http://www.gdal.org/gdaldem.html#gdaldem_TRI>`__
+`GDAL DEM utility <https://www.gdal.org/gdaldem.html#gdaldem_TRI>`__
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1057,4 +1057,4 @@ See also
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

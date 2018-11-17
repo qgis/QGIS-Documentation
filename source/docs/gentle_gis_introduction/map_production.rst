@@ -293,8 +293,8 @@ Further reading
 
 **Websites**:
 
-* http://en.wikipedia.org/wiki/Scale_(map)
-* http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj.html
+* https://en.wikipedia.org/wiki/Scale_(map)
+* https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj.html
 
 The QGIS User Guide also has more detailed information on map production provided
 in QGIS.

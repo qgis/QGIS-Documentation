@@ -342,4 +342,4 @@ added to the project in a safe way.
   task.executed.connect(partial(task_finished, context))
   QgsApplication.taskManager().addTask(task)
 
-See also: http://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
+See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.

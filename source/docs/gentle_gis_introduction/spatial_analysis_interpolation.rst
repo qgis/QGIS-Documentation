@@ -227,9 +227,9 @@ Further reading
 
 **Websites**:
 
-* http://en.wikipedia.org/wiki/Interpolation
-* http://en.wikipedia.org/wiki/Delaunay_triangulation
-* http://www.agt.bme.hu/public_e/funcint/funcint.html
+* https://en.wikipedia.org/wiki/Interpolation
+* https://en.wikipedia.org/wiki/Delaunay_triangulation
+* https://www.agt.bme.hu/public_e/funcint/funcint.html
 
 The QGIS User Guide also has more detailed information on interpolation tools
 provided in QGIS.

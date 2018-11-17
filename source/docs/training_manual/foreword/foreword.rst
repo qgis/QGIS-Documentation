@@ -36,7 +36,7 @@ License
 
 The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on
 an earlier version from Linfiniti and is licensed under a
-`Creative Commons Attribution 4.0 International <http://creativecommons.org/licenses/by/4.0/>`_.
+`Creative Commons Attribution 4.0 International <https://creativecommons.org/licenses/by/4.0/>`_.
 Permissions beyond the scope of this license may be available at below.
 
 
@@ -65,7 +65,7 @@ guidelines are as follows:
   at office@linfiniti.com and we will advise you if what you intend doing is
   acceptable.
 * If you publish this work under a self publishing site such as
-  http://lulu.com we request that you donate the profits to the QGIS project.
+  https://www.lulu.com we request that you donate the profits to the QGIS project.
 * You may not commercialise this work, except with the expressed permission of
   the authors. To be clear, by commercialisation we mean that you may not sell
   for profit, create commercial derivative works (e.g. selling content for use
@@ -118,7 +118,7 @@ Data
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
 
-* Streets and Places datasets from OpenStreetMap (http://www.openstreetmap.org/)
+* Streets and Places datasets from OpenStreetMap (https://www.openstreetmap.org/)
 * Property boundaries (urban and rural), water bodies from NGI (http://www.ngi.gov.za/)
 * SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
 
@@ -144,7 +144,7 @@ Latest Version
 --------------
 
 You can always obtain the latest version of this document by visiting the online
-version which is part of the QGIS documentation website (http://docs.qgis.org).
+version which is part of the QGIS documentation website (https://docs.qgis.org).
 
 .. note:: There are links to online and PDF versions of the Documentation and Training manuals.
 
@@ -159,4 +159,4 @@ Tim Sutton, May 2012
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
