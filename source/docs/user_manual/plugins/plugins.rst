@@ -47,7 +47,7 @@ Installed external python plugins are placed under the
 
 * ``~`` represents the HOME directory which on |win| Windows is usually something
   like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-  or :file:`C:\\Users\\(user)`;
+  or :file:`C:\\Users\\(user)`.
 * and ``(UserProfile)`` represents the active profile folder, which for the
   QGIS ``default`` user profile is:
 

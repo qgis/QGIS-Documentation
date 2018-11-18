@@ -67,7 +67,7 @@ Provided information are:
   width/height, compression, pixel size, statistics on bands, number of columns,
   rows and no-data values of the raster...);
 * picked from the :ref:`filled metadata <raster_metadata>`: access, links,
-  contacts, history... as well as data information (CRS, Extent, bands...);
+  contacts, history... as well as data information (CRS, Extent, bands...).
 
 
 .. _label_sourcetab:
@@ -360,14 +360,14 @@ the :guilabel:`Additional no data value` option.
 An even more flexible way to customize the transparency can be done in the
 :guilabel:`Custom transparency options` section:
 
-* Use :guilabel:`Transparency band` to apply transparency on an entire band;
+* Use :guilabel:`Transparency band` to apply transparency on an entire band.
 * Provide a list of pixels to make transparent with the corresponding level of
   transparency:
 
   #. Click the |signPlus| :sup:`Add values manually` button. A new row will
-     appear in the pixel list;
+     appear in the pixel list.
   #. Enter the **Red**, **Green** and **Blue** values of the pixel and adjust
-     the **Percent Transparent** to apply;
+     the **Percent Transparent** to apply.
   #. Alternatively, you can directly fetch the pixel values directly from the
      raster using the |contextHelp| :sup:`Add values from display` button.
      Then enter the transparency value.

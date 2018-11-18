@@ -69,10 +69,10 @@ opposite conversion from the one performed above. Convert to raster the
 .. image:: img/vector_to_raster.png
    :align: center
 
-* :guilabel:`Input file` is :guilabel:`all_terrain`;
+* :guilabel:`Input file` is :guilabel:`all_terrain`.
 * :guilabel:`Output file...` is
-  :kbd:`exercise_data/residential_development/raster_conversion.tif`;
-* :guilabel:`Width` and :guilabel:`Height` are :kbd:`837` and :kbd:`661`,
+  :file:`exercise_data/residential_development/raster_conversion.tif`.
+* :guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``,
   respectively.
 
 .. note::  The size of the output image is specified here to be the same as the

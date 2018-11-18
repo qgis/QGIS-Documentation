@@ -41,7 +41,7 @@ There are several ways to create a QGIS task:
 
   .. code-block:: python
 
-    QgsTask.fromFunction(u'heavy function', heavyfunction,
+    QgsTask.fromFunction(u'heavy function', heavyFunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
@@ -91,12 +91,12 @@ Examples
 Extending QgsTask
 .................
 
-In this example ``RandomIntegerTask`` extends :class:`QgsTask` and will
-generate 100 random integers between 0 and 100 during a specified period
+In this example ``RandomIntegerSumTask`` extends :class:`QgsTask` and will
+generate 100 random integers between 0 and 500 during a specified period
 of time.
 If the random number is 42, the task is aborted and an exception is
 raised.
-Several instances of ``RandomIntegerTask`` (with subtasks) are generated
+Several instances of ``RandomIntegerSumTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
 
@@ -109,9 +109,9 @@ dependencies.
       QgsApplication, QgsTask, QgsMessageLog,
       )
   
-  MESSAGE_CATEGORY = 'RandomIntegerTask'
+  MESSAGE_CATEGORY = 'RandomIntegerSumTask'
   
-  class RandomIntegerTask(QgsTask):
+  class RandomIntegerSumTask(QgsTask):
       """This shows how to subclass QgsTask"""
       def __init__(self, description, duration):
           super().__init__(description, QgsTask.CanCancel)
@@ -123,8 +123,8 @@ dependencies.
           """Here you implement your heavy lifting.
           Should periodically test for isCanceled() to gracefully
           abort.
-          This method MUST return True or False
-          raising exceptions will crash QGIS, so we handle them
+          This method MUST return True or False.
+          Raising exceptions will crash QGIS, so we handle them
           internally and raise them in self.finished
           """
           QgsMessageLog.logMessage('Started task "{}"'.format(
@@ -135,13 +135,14 @@ dependencies.
               sleep(wait_time)
               # use setProgress to report progress
               self.setProgress(i)
-              self.total += random.randint(0, 100)
+              arandominteger = random.randint(0, 500)
+              self.total += arandominteger
               self.iterations += 1
               # check isCanceled() to handle cancellation
               if self.isCanceled():
                   return False
               # simulate exceptions to show how to abort task
-              if random.randint(0, 500) == 42:
+              if arandominteger == 42:
                   # DO NOT raise Exception('bad value!')
                   # this would crash QGIS
                   self.exception = Exception('bad value!')
@@ -189,20 +190,21 @@ dependencies.
           super().cancel()
   
   
-  longtask = RandomIntegerTask('waste cpu long', 20)
-  shorttask = RandomIntegerTask('waste cpu short', 10)
-  minitask = RandomIntegerTask('waste cpu mini', 5)
-  st1 = RandomIntegerTask('waste cpu Subtask 1', 5)
-  st2 = RandomIntegerTask('waste cpu Subtask 2', 10)
-  st3 = RandomIntegerTask('waste cpu Subtask 3', 4)
+  longtask = RandomIntegerSumTask('waste cpu long', 20)
+  shorttask = RandomIntegerSumTask('waste cpu short', 10)
+  minitask = RandomIntegerSumTask('waste cpu mini', 5)
+  shortsubtask = RandomIntegerSumTask('waste cpu subtask short', 5)
+  longsubtask = RandomIntegerSumTask('waste cpu subtask long', 10)
+  shortestsubtask = RandomIntegerSumTask('waste cpu subtask shortest', 4)
   
-  # Add a subtask (st1) to shorttask that must run after minitask and
-  # longtask has finished
-  shorttask.addSubTask(st1, [minitask, longtask])
-  # Add a subtask (st2) to longtask that must be run before the parent
-  # task
-  longtask.addSubTask(st2, [], QgsTask.ParentDependsOnSubTask)
-  longtask.addSubTask(st3)
+  # Add a subtask (shortsubtask) to shorttask that must run after
+  # minitask and longtask has finished
+  shorttask.addSubTask(shortsubtask, [minitask, longtask])
+  # Add a subtask (longsubtask) to longtask that must be run
+  # before the parent task
+  longtask.addSubTask(longsubtask, [], QgsTask.ParentDependsOnSubTask)
+  # Add a subtask (shortestsubtask) to longtask
+  longtask.addSubTask(shortestsubtask)
   
   QgsApplication.taskManager().addTask(longtask)
   QgsApplication.taskManager().addTask(shorttask)
@@ -226,7 +228,7 @@ parameter ``wait_time``.
   
   MESSAGE_CATEGORY = 'TaskFromFunction'
   
-  def run(task, wait_time):
+  def doSomething(task, wait_time):
       """
       Raises an exception to abort the task.
       Returns a result if success.
@@ -242,14 +244,15 @@ parameter ``wait_time``.
           sleep(wait_time)
           # use task.setProgress to report progress
           task.setProgress(i)
-          total += random.randint(0, 100)
+          arandominteger = random.randint(0, 500)
+          total += arandominteger
           iterations += 1
           # check task.isCanceled() to handle cancellation
           if task.isCanceled():
               stopped(task)
               return None
           # raise an exception to abort the task
-          if random.randint(0, 500) == 42:
+          if arandominteger == 42:
               raise Exception('bad value!')
       return {'total': total, 'iterations': iterations,
               'task': task.description()}
@@ -261,9 +264,9 @@ parameter ``wait_time``.
           MESSAGE_CATEGORY, Qgis.Info)
   
   def completed(exception, result=None):
-      """This is called when run is finished.
-      Exception is not None if run raises an exception.
-      Result is the return value of run."""
+      """This is called when doSomething is finished.
+      Exception is not None if doSomething raises an exception.
+      Result is the return value of doSomething."""
       if exception is None:
           if result is None:
               QgsMessageLog.logMessage(
@@ -285,9 +288,9 @@ parameter ``wait_time``.
           raise exception
   
   # Creae a few tasks
-  task1 = QgsTask.fromFunction(u'Waste cpu 1', run,
+  task1 = QgsTask.fromFunction(u'Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
-  task2 = QgsTask.fromFunction(u'Waste cpu 2', run,
+  task2 = QgsTask.fromFunction(u'Waste cpu 2', dosomething,
                                on_finished=completed, wait_time=3)
   QgsApplication.taskManager().addTask(task1)
   QgsApplication.taskManager().addTask(task2)
@@ -296,9 +299,9 @@ parameter ``wait_time``.
 Task from a processing algorithm
 ................................
 
-Create a task that uses algorithm ``qgis:randompointsinextent`` to
-generate 50000 random points inside a specified extent and adds the
-result to the project in a safe way.
+Create a task that uses the algorithm ``qgis:randompointsinextent`` to
+generate 50000 random points inside a specified extent.  The result is
+added to the project in a safe way.
 
 .. code-block:: python
 
@@ -315,7 +318,7 @@ result to the project in a safe way.
           QgsMessageLog.logMessage('Task finished unsucessfully',
                                    MESSAGE_CATEGORY, Qgis.Warning)
       output_layer = context.getMapLayer(results['OUTPUT'])
-      # because getMapLayer doesn't transfer ownership the layer will
+      # because getMapLayer doesn't transfer ownership, the layer will
       # be deleted when context goes out of scope and you'll get a
       # crash.
       # takeMapLayer transfers ownership so it's then safe to add it

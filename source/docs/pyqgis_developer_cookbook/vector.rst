@@ -1216,7 +1216,7 @@ first symbol
     def setColor1(self):
       color = QColorDialog.getColor(self.r.syms[0].color(), self)
       if not color.isValid(): return
-      self.r.syms[0].setColor(color);
+      self.r.syms[0].setColor(color)
       self.btn1.setColor(self.r.syms[0].color())
 
     def renderer(self):

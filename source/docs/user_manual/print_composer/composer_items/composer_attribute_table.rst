@@ -237,8 +237,8 @@ the following functionalities (see figure_layout_table_grid_):
 
 * Activate |checkbox| :guilabel:`Show grid` when you want to display the grid,
   the outlines of the table cells. You can also select to either :guilabel:`Draw
-  horizontal lines` or :guilabel:`Draw vertical lines` or both;
-* With :guilabel:`Line width` you can set the thickness of the lines used in the grid;
+  horizontal lines` or :guilabel:`Draw vertical lines` or both.
+* With :guilabel:`Line width` you can set the thickness of the lines used in the grid.
 * The :guilabel:`Color` of the grid can be set using the color selection widget.
 
 
