@@ -59,10 +59,10 @@ organize your existing rasters into one catalog: one file for easy access.
 To make a catalog we will use the |toolbox|.
 
 #. Open the :guilabel:`Build virtual raster` algorithm from the
-  :menuselection:`GDAL --> Raster miscellaneous`;
+   :menuselection:`GDAL --> Raster miscellaneous`;
 #. In the dialog that appears click on the |browseButton| button next to the
-   :guilabel:`Input layers` parameter and check all the layers or use the
-   :guilabel:`Select All` button;
+    :guilabel:`Input layers` parameter and check all the layers or use the
+    :guilabel:`Select All` button;
 #. Uncheck the :guilabel:`Place each input file into a separate band` parameter;
 #. Finally click on :guilabel:`Run`.
 
