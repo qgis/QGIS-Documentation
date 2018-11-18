@@ -14,10 +14,10 @@ data properly so that it becomes properly visible and useful.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-#. Use the :guilabel:`Browser` Panel to load the new raster dataset.
+#. Use the :guilabel:`Browser` Panel to load the new raster dataset;
 #. Load the dataset |srtmFileName|, found under the directory
-   :file:`exercise_data/raster/SRTM/`.
-#. Once it appears in the :guilabel:`Layers` Panel, rename it to ``DEM``.
+   :file:`exercise_data/raster/SRTM/`;
+#. Once it appears in the :guilabel:`Layers` Panel, rename it to ``DEM``;
 #. Zoom to the extent of this layer by right-clicking on it in the Layer List
    and selecting :guilabel:`Zoom to Layer Extent`.
 
@@ -44,14 +44,14 @@ You have basically two different options to change the raster symbology:
 
 #. Within the :guilabel:`Layer Properties` dialog for the :guilabel:`DEM` layer
    by right-clicking on the layer in the Layer tree and selecting
-   :guilabel:`Properties` option. Then switch to the :guilabel:`Symbology` tab.
+   :guilabel:`Properties` option. Then switch to the :guilabel:`Symbology` tab;
 #. By clicking on the |symbology| button right above the :guilabel:`Layers` Panel.
    This will open the :guilabel:`Layer Styling` Panel where you can switch to the
    :guilabel:`Symbology` tab
 
 The :guilabel:`Layer Styling` Panel applies immediately the changes to the layer
-while with the :guilabel:`Layer Properties` you have to click on **[OK]** to
-close the dialog and apply the changes.
+while with the :guilabel:`Layer Properties` you have to click on :guilabel:`OK`
+to close the dialog and apply the changes.
 
 Choose the method you prefer to work with.
 
@@ -84,15 +84,15 @@ stretch? The ones that are currently under :guilabel:`Min / Max Value Settings`.
 There are many ways that you can use to calculate the minimum and maximum values
 and use them for the stretch:
 
-#. **User Defined**: you choose both minimum and maximum values manually
+#. **User Defined**: you choose both minimum and maximum values manually;
 #. **Cumulative count cut**: this is useful when you have few extreme low or high
-   values. It *cuts* the ``2%`` (or the value you choose) of these values.
-#. **Min / max**: the *real* minimum and maximum values of the raster.
+   values. It *cuts* the ``2%`` (or the value you choose) of these values;
+#. **Min / max**: the *real* minimum and maximum values of the raster;
 #. **Mean +/- standard deviation**: the values will be calculated according to
    the mean value and the standard deviation.
 
-Each time you change the option click on the **[Apply]** to load the values and
-on **[OK]** to confirm and close the dialog.
+Each time you change the option click on the :guilabel:`Apply` to load the
+values and on :guilabel:`OK` to confirm and close the dialog.
 
 
 |basic| |FA| Singleband pseudocolor
@@ -103,10 +103,10 @@ Grayscales are not always great styles for raster layers. Let's try to make the
 
 * Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`:
   if you don't like the default colors loaded, click on :guilabel:`Color ramp`
-  and change them.
+  and change them;
 * Click the :guilabel:`Classify` button to generate a new color classification,
-  if it is not genereated automatically and finally click on the **[OK]** button
-  to apply this classification to the DEM.
+  if it is not genereated automatically and finally click on the :guilabel:`OK`
+  button to apply this classification to the DEM.
 
 .. image:: img/dem_pseudocolor_properties.png
    :align: center
@@ -141,7 +141,7 @@ To set this values as transparent, the :guilabel:`Custom Transparency Options`
 menu in :guilabel:`Transparency` has some useful methods:
 
 * By clicking on the |signPlus| button you can add a range of values and set the
-  transparency percentage of each range chosen.
+  transparency percentage of each range chosen;
 * For single values the |contextHelp| button is more useful. When you click on it
   the dialog disappears and you can interact with the map. Click on a corner
   of the raster file and you will see that the transparency table will be
@@ -150,7 +150,7 @@ menu in :guilabel:`Transparency` has some useful methods:
   .. image:: img/click_transparency.png
      :align: center
 
-* Click on **[OK]** to close the dialog and see the changes.
+* Click on :guilabel:`OK` to close the dialog and see the changes.
 
   .. image:: img/good_raster.png
      :align: center
