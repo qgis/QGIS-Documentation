@@ -1175,21 +1175,21 @@ coordinates while moving the symbol in the map canvas.
 Trim/Extend Feature
 -------------------
 
-In the case of bad digitization: segment that is not snapped or that exceeds, it
-is necessary to be able to extend or shorten these segments.
+When a digitized line is too short or too long to snap to another line (missing or
+crossing the line), it is necessary to be able to extend or shorten the segment.
 
-Unlike a number of software, the |trimExtend| :sup:`Trim/Extend` tool allows you 
-to modify (multi)lines AND (multi)polygons. Moreover, it is not necessarily the end
+The |trimExtend| :sup:`Trim/Extend` tool allows you to also modify (multi)lines AND
+(multi)polygons. Moreover, it is not necessarily the end
 of the lines that is concerned; any segment of a geometry can be modified.
-The other side is that this can lead to invalid geometries, it is the responsibility
-of the user.
 
-The tool asks you to select a limit (a segment) on which another segment will be
-extended or trimmed. Unlike the node tool, a check is performed to modify only the
-layer being edited.
+.. note:: This can lead to invalid geometries.
+
+The tool asks you to select a limit (a segment) with respect to which another
+segment will be extended or trimmed. Unlike the node tool, a check is performed to
+modify only the layer being edited.
 
 When both segments are in 3D, the tool performs an interpolation on the limit segment
-to return the Z.
+to get the Z value.
 
 In the case of a trim, you must select the part that will be shortened by clicking on it.
 
