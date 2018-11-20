@@ -1478,14 +1478,6 @@ should be identified:
   identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-.. note:: **Identify tool configuration**
-
-   You can configure the identify feature in :menuselection:`Project -->
-   Properties...` in the :guilabel:`Identify Layers` tab. The table allows
-   you to select layer(s) whose features can be identified with by this tool
-   (column :guilabel:`Identifiable`). You can also put this layer in read-only
-   mode with the checkbox in the last column.
-
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
