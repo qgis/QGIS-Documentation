@@ -145,7 +145,7 @@ MS Windows
 ..........
 
 Easiest way to make it work is to use a middleware (freeware, not open) called
-`GPSGate <http://update.gpsgate.com/install/GpsGateClient.exe>`_.
+`GPSGate <https://update.gpsgate.com/install/GpsGateClient.exe>`_.
 
 Launch the program, make it scan for GPS devices (works for both USB and BT
 ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking panel
@@ -235,4 +235,4 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

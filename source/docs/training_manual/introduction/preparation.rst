@@ -64,7 +64,7 @@ your work.
 |moderate| |FA| Load a layer from GeoPackage
 -------------------------------------------------------------------------------
 
-`GeoPackage <http://www.geopackage.org/>`_ is an open format for storing
+`GeoPackage <https://www.geopackage.org/>`_ is an open format for storing
 geospatial data. QGIS adds a lot of support to this new format that is slowly
 replacing the ESRI Shapefile format.
 
@@ -125,4 +125,4 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -659,7 +659,7 @@ Figure_Network_Tab_).
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
-http://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
+https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 
 .. tip:: **Using Proxies**
 
@@ -1121,6 +1121,6 @@ and :guilabel:`Load` them into another QGIS installation.
    :width: 2em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

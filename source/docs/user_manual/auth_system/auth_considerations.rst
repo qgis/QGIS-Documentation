@@ -76,7 +76,7 @@ plugin. Maybe.  I don't really know. I'm not a lawyer.
 The authentication system safely disables itself when ``qca-ossl`` is not found
 at run-time.
 
-.. _licensing and exporting: http://www.opensslfoundation.com/export/README.blurb
+.. _licensing and exporting: https://www.openssl.org/docs/faq.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -85,4 +85,4 @@ at run-time.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

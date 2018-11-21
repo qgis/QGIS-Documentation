@@ -25,12 +25,12 @@ and often write a lot of formats:
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
   GRASS, GPX, KML, Comma Separated Values, and many more...
   Read the complete list of `OGR vector supported formats
-  <http://www.gdal.org/ogr_formats.html>`_.
+  <https://www.gdal.org/ogr_formats.html>`_.
 * Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
   GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
   GDAL Virtual, SRTM, Sentinel Data, and many more...
   Read the complete list of `raster supported formats
-  <http://www.gdal.org/formats_list.html>`_.
+  <https://www.gdal.org/formats_list.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
   or MSSQL Spatial, MySQL...
 * Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
@@ -39,7 +39,7 @@ and often write a lot of formats:
   formats such as virtual and memory layers.
 
 As of the date of this document, more than 80 vector and 140 raster formats are
-supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
+supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
@@ -969,4 +969,4 @@ Description of these capabilities and how-to are provided in chapter
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

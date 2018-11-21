@@ -35,10 +35,10 @@ As an example, we will use the QGIS Alaska dataset (see section :ref:`label_samp
 It includes a small sample GRASS :file:`LOCATION` with three vector layers and one
 raster elevation map. Create a new folder called :file:`grassdata`, download
 the QGIS 'Alaska' dataset :file:`qgis\_sample\_data.zip` from
-http://qgis.org/downloads/data/ and unzip the file into :file:`grassdata`.
+https://qgis.org/downloads/data/ and unzip the file into :file:`grassdata`.
 
 More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
-http://grass.osgeo.org/download/sample-data/.
+https://grass.osgeo.org/download/sample-data/.
 
 .. _sec_load_grassdata:
 
@@ -352,7 +352,7 @@ used as the link to one key column in the database table.
 
    The best way to learn the GRASS vector model and its capabilities is to
    download one of the many GRASS tutorials where the vector model is described
-   more deeply. See http://grass.osgeo.org/documentation/manuals/ for more information,
+   more deeply. See https://grass.osgeo.org/documentation/manuals/ for more information,
    books and tutorials in several languages.
 
 .. index::
@@ -599,7 +599,7 @@ working environment, about 200 of the available GRASS modules and functionalitie
 are also provided by graphical dialogs within the GRASS plugin Toolbox.
 
 A complete list of GRASS modules available in the graphical Toolbox in QGIS
-version |CURRENT| is available in the GRASS wiki at http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
+version |CURRENT| is available in the GRASS wiki at https://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
 
 It is also possible to customize the GRASS Toolbox content. This procedure is
 described in section :ref:`sec_toolbox-customizing`.
@@ -939,4 +939,4 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

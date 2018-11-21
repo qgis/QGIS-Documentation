@@ -109,7 +109,7 @@ QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
 NGINX
 .....
 
-You can also use QGIS Server with `NGINX <http://nginx.org/>`_. Unlike Apache,
+You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
 NGINX does not automatically spawn a FastCGI process. Actually, you have to use
 another component to start these processes.
 
@@ -608,4 +608,4 @@ the path to the SVG image so that it represents a valid relative path.
    :width: 1.3em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

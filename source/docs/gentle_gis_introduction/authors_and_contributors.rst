@@ -10,19 +10,19 @@ About the authors & contributors
 |                | is also a founding member of Linfiniti Consulting CC. --- a small    |
 |                | business set up with the goal of helping people to learn and use     |
 |                | opensource GIS software.                                             |
-|                | **Web**: http://linfiniti.com, **Email**: tim@linfiniti.com          |
+|                | **Web**: https://www.kartoza.com **Email**: tim@kartoza.com          |
 +----------------+----------------------------------------------------------------------+
 | |otto|         | Otto Dassau --- Assistant Author. Otto Dassau is the documentation   |
 |                | maintainer and project steering committee member of the QGIS         |
 |                | project. Otto has considerable experience in using and training      |
 |                | people to use Free and Open Source GIS software.                     |
-|                | **Web**: http://www.nature-consult.de, **Email**: otto.dassau@gmx.de |
+|                | **Web**: http://www.nature-consult.de **Email**: otto.dassau@gmx.de  |
 +----------------+----------------------------------------------------------------------+
 | |marcelle|     | Marcelle Sutton --- Project Manager. Marcelle Sutton studied English |
 |                | and drama and is a qualified teacher. Marcelle is also a founding    |
 |                | member of Linfiniti Consulting CC. --- a small business set up with  |
 |                | the goal of helping people to learn and use opensource GIS software. |
-|                | **Web**: http://linfiniti.com, **Email**: marcelle@linfiniti.com     |
+|                | **Web**: https://kartoza.com **Email**: marcelle@kartoza.com         |
 +----------------+----------------------------------------------------------------------+
 | |lerato|       | Lerato Nsibande –-- Video Presenter. Lerato is a grade 12 scholar    |
 |                | living in Pretoria. Lerato learns Geography at school and has        |

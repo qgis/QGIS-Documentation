@@ -197,8 +197,8 @@ need to log in again before any changes take effect.
 
 More info:
 
-http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
-http://linuxaria.com/article/open-files-in-linux?lang=en
+https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
+https://linuxaria.com/article/open-files-in-linux
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -207,4 +207,4 @@ http://linuxaria.com/article/open-files-in-linux?lang=en
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

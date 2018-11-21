@@ -40,7 +40,7 @@ also can find it in Appendix :ref:`gpl_appendix`.
 
         The latest version of this document can always be found in the
         documentation area of the QGIS website at
-        http://www.qgis.org/en/docs/.
+        https://www.qgis.org/en/docs/.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -49,4 +49,4 @@ also can find it in Appendix :ref:`gpl_appendix`.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

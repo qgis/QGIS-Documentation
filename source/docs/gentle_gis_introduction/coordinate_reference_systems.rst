@@ -475,8 +475,8 @@ Further reading
 
 **Websites**:
 
-* http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html
-* http://geology.isu.edu/geostac/Field_Exercise/topomaps/index.htm
+* https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html
+* https://geology.isu.edu/wapi/geostac/Field_Exercise/topomaps/index.htm
 
 The QGIS User Guide also has more detailed information on working with map
 projections in QGIS.
