@@ -484,7 +484,7 @@ configure the legend items (see :ref:`data_defined_size_legend` for details).
 .. figure:: img/proportional_symbols.png
    :align: center
 
-   Scaling airports size based on number of passengers
+   Scaling airports size based on elevation of the airport
 
 **Creating multivariate analysis**
 
@@ -504,7 +504,7 @@ The simplest way to create multivariate analysis in QGIS is to:
 
 Like the proportional symbol, the scaled symbology can be added to the layer
 tree, on top of the categorized or graduated classes symbols using the
-:ref:` data defined size legend <size data_defined_size_legend>` feature. And
+:ref:`data defined size legend <data_defined_size_legend>` feature. And
 both representation are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
@@ -2272,7 +2272,7 @@ and the values or range of values that are allowed to be added to each.
 
 .. _figure_fields_widget:
 
-.. figure:: img/editwidgetsdialog.png
+.. figure:: img/edit_widgets_dialog.png
    :align: center
 
    Dialog to select an edit widget for an attribute column
@@ -2546,16 +2546,16 @@ retrieve its information in the tab:
    Auxiliary Layer key
 
 
-For now, we can see that:
+The auxiliary layer now has these characteristics:
 
-* the primary key used is well ``id``
-* there's ``0`` feature using an auxiliary field
-* there's ``0`` auxiliary field
+* the primary key is ``ID``,
+* there are ``0`` features using an auxiliary field,
+* there are ``0`` auxiliary fields.
 
-Now that the auxiliary layer is well created, we just have to edit our labels.
-If we click on a label while the |changeLabelProperties| :sup:`Change Label`
-map tool is activated, then we're able to update styling properties like sizes,
-colors and so on. Then, the corresponding data-defined properties are created
+Now that the auxiliary layer is created, you can edit the layer labels.
+Click on a label while the |changeLabelProperties| :sup:`Change Label`
+map tool is activated, then you can update styling properties like sizes,
+colors, and so on. The corresponding data-defined properties are created
 and can be retrieved:
 
 .. figure:: img/auxiliary_storage_fields.png
@@ -2564,16 +2564,9 @@ and can be retrieved:
    Auxiliary Fields
 
 
-As we are seeing in the previous figure, ``21`` fields have been automatically
-created and configured for labeling. For example, the ``Color``
-auxiliary field type is a ``String`` and is named ``labeling_color`` in the
-underlying SQLite database. Moreover, we observe that there's ``1`` entity
-which is currently using these auxiliary fields (according to the current
-example).
+There are now ``19`` fields have been automatically created and configured for labeling. For example, the ``FontStyle`` auxiliary field type is a ``String`` and is named ``labeling_fontstyle`` in the underlying SQLite database. Moreover, we observe that there's ``1`` entity which is currently using these auxiliary fields (according to the current example).
 
-By the way, considering that auxiliary fields are linked to data-defined
-properties, we can observe that data-defined override options are setup
-correctly because of the icon |dataDefineOn| in the labeling tab:
+Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels` properties tab indicating that the data-defined override options are set correctly:
 
 .. figure:: img/auxiliary_storage_dd.png
    :align: center
@@ -2586,7 +2579,7 @@ property thanks to the |dataDefined| :sup:`data-defined override` button. By
 clicking on :guilabel:`Store data in the project`, an auxiliary field is
 automatically created for the :guilabel:`Opacity` field. If you click on this
 button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is firstly displayed to select the
+:ref:`figure_auxiliary_layer_creation` is first displayed to select the
 primary key to use for joining.
 
 
@@ -2628,20 +2621,11 @@ tab:
 Attribute table and widgets
 ---------------------------
 
-Once created, auxiliary fields may be edited through the
-:ref:`attribute table <sec_attribute_table>`. However, there's some subtlety
-about widgets of auxiliary fields.
+Auxiliary fields can be edited using the
+:ref:`Attribute Table <sec_attribute_table>`, however they are not initially visible or editable.
 
-For example, auxiliary fields which may be edited through an external tool
-are not visible in the attribute table. This way, as the :guilabel:`Rotation`
-may be edited through |changeLabelProperties| :sup:`Change Label` or
-|rotateLabel| :sup:`Rotate Label`, the auxiliary widget is **Hidden** by
-default (see :ref:`edit_widgets`). However, as the :guilabel:`Opacity`
-field cannot be edited thanks to map tools, the corresponding widget is not
-**Hidden**. Moreover, auxiliary fields representing a ``Color`` have a
-widget **Color** set by default.
+To make a field visible, open the :ref:`Attribute Form properties tab <vector_attributes_menu>` and change the value of an auxiliary field :guilabel:`Widget Type` from **Hidden** to another relevant value. For example, change the **auxiliary_storage_labeling_size** to **Text Edit** or change **auxiliary_storage_labeling_color** to the **Color** widget. Those fields will now be visible and editable in the Attribute Table:
 
-Then, the underlying form will look like the next figure:
 
 .. figure:: img/auxiliary_storage_widgets.png
    :align: center
@@ -2652,8 +2636,7 @@ Then, the underlying form will look like the next figure:
 Management
 ----------
 
-Some actions are available to manage auxiliary layers thanks to the next
-combobox:
+The :guilabel:`Auxiliary Layer` menu allows you to manage the auxiliary fields:
 
 .. figure:: img/auxiliary_storage_actions.png
    :align: center
@@ -3192,7 +3175,7 @@ layout legend <layout_legend_item>`. These options include:
 .. figure:: img/text_legend_symbols.png
    :align: center
 
-   Setting text on symbols (left) and its rendering in Layers panel (right)
+   Setting text on symbols (top) and its rendering in Layers panel (bottom)
 
 * a list of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
@@ -3212,17 +3195,9 @@ QGIS Server Properties
 ======================
 
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
-and :guilabel:`Properties` sections.
+:guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
-In the :guilabel:`Properties` section, you get general information about the layer,
-including specifics about the type and location, number of features, feature type,
-and editing capabilities. The :guilabel:`Extents`
-table provides you with information on the layer extent and the
-:guilabel:`Layer Spatial Reference System`, which is information about the CRS
-of the layer. This can provide a quick way to get useful information about the layer.
-
-Additionally, you can add or edit a title and abstract for the layer in the
+You can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
 :guilabel:`Keyword list` here. These keyword lists can be used in a
 metadata catalog. If you want to use a title from an XML metadata file,
@@ -3240,7 +3215,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_server_vector:
 
-.. figure:: img/vector_metadata_tab.png
+.. figure:: img/vector_server_properties.png
    :align: center
 
    QGIS Server tab in vector layers properties dialog
