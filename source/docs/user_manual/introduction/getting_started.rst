@@ -206,7 +206,7 @@ returns::
         set to load on startup using the following command:
         ``qgis ./raster/landcover.img ./gml/lakes.gml``
 
-**Command line option** ``--snapshot``
+``--snapshot`` option
 
 This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have many projects and want to generate
@@ -218,19 +218,19 @@ be added after ``--snapshot``. For example::
 
   qgis --width 1000 --height 600 --snapshot my_image.png
 
-**Command line option** ``--lang``
+``--lang``  option
 
 Based on your locale, QGIS selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
 ``qgis --lang it`` starts QGIS in Italian localization.
 
-**Command line option** ``--project``
+``--project`` option
 
 Starting QGIS with an existing project file is also possible. Just add the
 command line option ``--project`` followed by your project name and QGIS will
 open with all layers in the given file loaded.
 
-**Command line option** ``--extent``
+``--extent`` option
 
 To start with a specific map extent use this option. You need to add the
 bounding box of your extent in the following order separated by a comma:
@@ -239,33 +239,33 @@ bounding box of your extent in the following order separated by a comma:
 
     --extent xmin,ymin,xmax,ymax
 
-**Command line option** ``--nologo``
+``--nologo`` option
 
 This option hides the splash screen when you start QGIS.
 
-**command line option** ``--noversioncheck``
+``--noversioncheck`` option
 
 Don't check for new version of QGIS at startup.
 
-**Command line option** ``--noplugins``
+``--noplugins`` option
 
 If you have trouble at start-up with plugins, you can avoid loading them at
 start-up with this option. They will still be available from the Plugins Manager
 afterwards.
 
-**Command line option** ``--nocustomization``
+``--nocustomization`` option
 
 Using this option, existing GUI customization will not be applied
 at startup.
 
 .. _custom_commandline:
 
-**Command line option** ``--customizationfile``
+``--customizationfile`` 
 
 Using this option, you can define a UI customization file, that
 will be used at startup.
 
-**Command line option** ``--globalsettingsfile``
+``--globalsettingsfile`` option
 
 Using this option, you can specify the path for a Global Settings
 file (.ini), also known as the Default Settings. The settings in the specified
@@ -279,12 +279,12 @@ Setting the qgis_global_setting.ini file path to a network shared folder, allows
 a system administrator to change global settings and defaults in several
 machines by only editing one file.
 
-**Command line option** ``--authdbdirectory``
+``--authdbdirectory`` option
 
 This option is similar to the one above but define the path to the
 directory where the authentication database will be stored.
 
-**Command line option** ``--code``
+``--code`` option
 
 This option can be used to run a given python file directly after QGIS has
 started.
@@ -305,7 +305,7 @@ the layer the name 'Alaska' using the following command::
 
   ``qgis --code load_alaska.py``
 
-**Command line option** ``--defaultui``
+``--defaultui`` option
 
 On load, **permanently resets** the user interface (UI) to the default settings.
 This option will restore the panels and toolbars visibility, position, and size.
@@ -313,7 +313,7 @@ This option will restore the panels and toolbars visibility, position, and size.
 Unless it's changed again, the default UI settings will be used in the following
 sessions.
 
-**Command line option** ``--hide-browser``
+``--hide-browser`` option
 
 On load, hides the :guilabel:`Browser` panel from the user interface. The panel
 can be enabled by right-clicking a space in the toolbars or using the
@@ -323,7 +323,7 @@ Linux KDE).
 Unless it's enabled again, the Browser panel will remain hidden in the following
 sessions.
 
-**Command line options** ``--dxf-*``
+``--dxf-*`` option
 
 These options can be used to export a QGIS project into a DXF file. Several
 options are available:
@@ -338,18 +338,18 @@ options are available:
 * *--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer tree
   configuration.
 
-**Command line options** ``--take-screenshots``
+``--take-screenshots`` option
 
 Take screenshots for the user documentation. Can be used together with
 ``--screenshots-categories`` to filter for which categories/sections of the
 documentation screenshots should be created (see QgsAppScreenShots::Categories).
 
-**Command line options** ``--profile``
+``--profile`` option
 
 Loads QGIS using a specific profile from the user's profile folder. Unless it's
 changed, the selected profile will be used in the following QGIS sessions.
 
-**Command line options** ``--profiles-path``
+``--profiles-path`` option
 
 With this option, you can choose a path to load and save the profiles (user
 settings). It creates profiles inside a ``{path}\profiles`` folder, which
@@ -359,12 +359,12 @@ This option allows you to, for instance, carry all your plugins and settings
 in a flash drive, or, for example, share the settings between different computers
 using a file sharing service.
 
-**Command line options** ``--version-migration``
+``--version-migration`` option
 
 If settings from an older version are found (*e.g.*, the ``.qgis2`` folder from QGIS
 2.18), this option will import them into the default QGIS profile.
 
-**Command line options** ``--openclprogramfolder``
+``--openclprogramfolder`` option
 
 Using this option, you can specify an alternative path for your OpenCL programs.
 This is useful for developers while testing new versions of the programs
