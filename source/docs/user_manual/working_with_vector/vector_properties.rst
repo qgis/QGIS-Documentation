@@ -2098,10 +2098,10 @@ example at its creation. This information is retrieved and shown in the
 :guilabel:`Comment` column and is later displayed when hovering over the
 field label in a feature form.
 
-Other than the fields contained in the dataset, the :guilabel:`Source Fields`
-tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
-<vector_relations>`. And depending on the origin of the field, a different
-background color is applied to it.
+Other than the fields contained in the dataset, virtual fields and
+:ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
+:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
