@@ -203,7 +203,7 @@ the bottom the :ref:`layer_rendering` widget.
    Using the :menuselection:`Styles --> Add` menu at the bottom of the
    :guilabel:`Layer Properties` dialog, you can save as many styles as needed.
    A style is the combination of all properties of a layer (such as symbology,
-   labeling, diagram, fields form, actions...) as you want. Then, simply 
+   labeling, diagram, fields form, actions...) as you want. Then, simply
    switch between styles from the context menu of the layer in :guilabel:`Layers Panel`
    to automatically get different representations of your data.
 
@@ -2112,7 +2112,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Field properties tab
+   Source Field properties tab
 
 
 .. _vector_attributes_menu:
