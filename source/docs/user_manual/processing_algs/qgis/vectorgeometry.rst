@@ -2674,6 +2674,7 @@ Parameters
   * 4 --- Move end points only, prefer aligning nodes
   * 5 --- Move end points only, prefer closest point
   * 6 --- Snap end points to end points only
+  * 7 --- Snap to anchor nodes (single layer only)
 
   Default: *Prefer aligning nodes, insert extra vertices where required*
 
