@@ -209,7 +209,7 @@ returns::
 **Command line option** ``--snapshot``
 
 This option allows you to create a snapshot in PNG format from the current view.
-This comes in handy when you have many of projects and want to generate
+This comes in handy when you have many projects and want to generate
 snapshots from your data.
 
 Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
@@ -241,7 +241,7 @@ bounding box of your extent in the following order separated by a comma:
 
 **Command line option** ``--nologo``
 
-This command line argument hides the splash screen when you start QGIS.
+This option hides the splash screen when you start QGIS.
 
 **command line option** ``--noversioncheck``
 
@@ -255,19 +255,19 @@ afterwards.
 
 **Command line option** ``--nocustomization``
 
-Using this argument, existing GUI customization will not be applied
+Using this option, existing GUI customization will not be applied
 at startup.
 
 .. _custom_commandline:
 
 **Command line option** ``--customizationfile``
 
-Using this command line argument, you can define a UI customization file, that
+Using this option, you can define a UI customization file, that
 will be used at startup.
 
 **Command line option** ``--globalsettingsfile``
 
-Using this command line argument, you can specify the path for a Global Settings
+Using this option, you can specify the path for a Global Settings
 file (.ini), also known as the Default Settings. The settings in the specified
 file replace the original inline default ones, but the user profiles'
 settings will be set on top of those.
@@ -281,7 +281,7 @@ machines by only editing one file.
 
 **Command line option** ``--authdbdirectory``
 
-Again, this option is similar to the one above but define the path to the
+This option is similar to the one above but define the path to the
 directory where the authentication database will be stored.
 
 **Command line option** ``--code``
@@ -355,7 +355,7 @@ With this option, you can choose a path to load and save the profiles (user
 settings). It creates profiles inside a ``{path}\profiles`` folder, which
 includes settings, installed plugins, processing models and scripts, and so on.
 
-This option allows users to, for instance, carry all your plugins and settings
+This option allows you to, for instance, carry all your plugins and settings
 in a flash drive, or, for example, share the settings between different computers
 using a file sharing service.
 
@@ -392,7 +392,7 @@ We will use:
 #. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
    and double-click on the file :file:`lakes.gml` to open it.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with
-   :guilabel:`NAD27 / Alaska Alberts` selected, click **[OK]**.
+   :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
 #. Close the Data Source Manager window.
 #. Zoom to your favourite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
