@@ -6,7 +6,7 @@
 TauDEM algorithm provider
 *************************
 
-`TauDEM <http://hydrology.usu.edu/taudem/taudem5.html>`_
+`TauDEM <http://hydrology.usu.edu/taudem/taudem5/index.html>`_
 (Terrain Analysis Using Digital Elevation Models) is a set of Digital Elevation
 Model (DEM) tools for the extraction and analysis of hydrologic information
 from topography as represented by a DEM. This is software developed at Utah
@@ -38,4 +38,4 @@ documentation <http://hydrology.usu.edu/taudem/taudem5/documentation.html>`_
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

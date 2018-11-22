@@ -564,7 +564,7 @@ even nice to look at!
 |FR|
 -------------------------------------------------------------------------------
 
-`Examples of Beautiful Maps <http://gis.stackexchange.com/questions/3083/examples-of-beautiful-maps>`_
+`Examples of Beautiful Maps <https://gis.stackexchange.com/questions/3083/examples-of-beautiful-maps>`_
 
 |WN|
 -------------------------------------------------------------------------------
@@ -599,7 +599,7 @@ map.
 .. |moderate| image:: /static/global/moderate.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png

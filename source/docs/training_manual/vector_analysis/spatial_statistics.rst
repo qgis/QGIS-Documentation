@@ -145,8 +145,8 @@ N
   The amount of samples/values.
 
 CV
-  The `spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance
-  <http://en.wikipedia.org/wiki/Covariance>`_ of the dataset.
+  The `spatial <https://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance
+  <https://en.wikipedia.org/wiki/Covariance>`_ of the dataset.
 
 Number of unique values
   The number of values that are unique across this dataset. If there are 90
@@ -414,7 +414,7 @@ Homebrew users can install SAGA with this command:
 
 If you do not use Homebrew, please follow the instructions here:
 
-http://sourceforge.net/apps/trac/saga-gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X
+https://sourceforge.net/p/saga-gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X/
 
 After installing
 ................................................................................
@@ -493,4 +493,4 @@ rasters? That's what we'll do in the next module!
 .. |localCRS| replace:: ``WGS 84 / UTM 34S``
 .. |moderate| image:: /static/global/moderate.png
 .. |srtmFileName| replace:: :kbd:`srtm_41_19.tif`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

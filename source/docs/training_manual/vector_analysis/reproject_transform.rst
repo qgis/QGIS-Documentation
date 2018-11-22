@@ -264,10 +264,10 @@ represented accurately.
 -------------------------------------------------------------------------------
 
 Materials for the *Advanced* section of this lesson were taken from `this
-article <http://tinyurl.com/75b92np>`_.
+article <https://anitagraser.com/2012/03/18/beautiful-global-projections-adding-custom-projections-to-qgis/>`_.
 
 Further information on Coordinate Reference Systems is available `here
-<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_.
+<https://linfiniti.com/dla/worksheets/7_CRS.pdf>`_.
 
 |WN|
 -------------------------------------------------------------------------------
@@ -291,4 +291,4 @@ vector analysis tools.
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

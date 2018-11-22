@@ -50,17 +50,17 @@ layers are on a remote server.
 
 You'll need a WMS address to continue. There are several free WMS servers
 available on the Internet. One of these is `terrestris
-<http://ows.terrestris.de/osm/service>`_, which makes use of the `OpenStreetMap
-<http://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset.
+<https://ows.terrestris.de/osm/service>`_, which makes use of the `OpenStreetMap
+<https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset.
 
 * To make use of this WMS, set it up in your current dialog, like this:
 
   .. image:: img/new_wms_connection.png
      :align: center
 
-* The value of the :guilabel:`Name` field should be :kbd:`terrestris`.
+* The value of the :guilabel:`Name` field should be ``terrestris``.
 * The value of the :guilabel:`URL` field should be
-  :kbd:`http://ows.terrestris.de/osm/service`.
+  ``https://ows.terrestris.de/osm/service``.
 * Click :guilabel:`OK`. You should see the new WMS server listed:
 
   .. image:: img/new_connection_listed.png
@@ -154,7 +154,7 @@ layer from the :guilabel:`terrestris` WMS server.
 
 * Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel.
 * Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
-  :kbd:`http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms`
+  ``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``
 * Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (use the :guilabel:`Add WMS
   Layer` button as before). Remember to check that it's in the same
   :guilabel:`WGS 84 / World Mercator` projection as the rest of your map!
@@ -176,7 +176,7 @@ layer from the :guilabel:`terrestris` WMS server.
 * Hide all other WMS layers to prevent them rendering unnecessarily in the
   background.
 * Add the "OGC" WMS server at this URL:
-  :kbd:`http://ogc.gbif.org:80/wms`
+  ``http://ogc.gbif.org:80/wms``
 * Add the :guilabel:`bluemarble` layer.
 
 :ref:`Check your results <wms-2>`
@@ -189,7 +189,7 @@ layer from the :guilabel:`terrestris` WMS server.
 
 Part of the difficulty of using WMS is finding a good (free) server.
 
-* Find a new WMS at `directory.spatineo.com <http://directory.spatineo.com/>`_ (or
+* Find a new WMS at `directory.spatineo.com <https://directory.spatineo.com/>`_ (or
   elsewhere online). It must not have associated fees or restrictions, and must
   have coverage over the |majorUrbanName| study area.
 
@@ -207,10 +207,10 @@ Using a WMS, you can add inactive maps as backdrops for your existing map data.
 |FR|
 -------------------------------------------------------------------------------
 
-- `Spatineo Directory <http://directory.spatineo.com/>`_
-- `Geopole.org <http://geopole.org/>`_
+- `Spatineo Directory <https://directory.spatineo.com/>`_
+- `Geopole.org <https://geopole.org/>`_
 - `OpenStreetMap.org list of WMS servers
-  <http://wiki.openstreetmap.org/wiki/WMS>`_
+  <https://wiki.openstreetmap.org/wiki/WMS>`_
 
 |WN|
 -------------------------------------------------------------------------------
@@ -237,6 +237,6 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em

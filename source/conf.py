@@ -223,7 +223,7 @@ latex_elements = {
 rst_prolog = """
 .. role:: disclaimer
 """
-#.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+#.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 #"""
 
 # Substitutions below are sorted and should be in lowerCamelCase

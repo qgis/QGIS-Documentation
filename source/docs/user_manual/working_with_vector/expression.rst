@@ -97,26 +97,34 @@ List of functions
 =================
 
 The :guilabel:`Expression` tab provides the main interface to write expressions
-using functions, layer's fields and values. It contains widgets to:
+using functions, layer's fields and values. It contains following widgets:
 
-* type expressions using functions and/or fields. At the bottom of the dialog,
-  an :guilabel:`Output preview` displays the result of the expression evaluated
-  on the first feature of the layer.
-* select the appropriate function among a list, organized in groups. A search box
-  is available to filter the list and quickly find a particular function or field.
-  Double-clicking on the item's name adds it to the expression being written.
-* display help for each function selected. When a field is selected, this widget
-  shows a sample of its values. Double-clicking a value adds it to the expression.
+* An expression editor area to type or paste expressions. Autocompletion is
+  available to speed expression writing:
 
-As the expression is being written, QGIS checks its rightness and highlights
-all the errors using:
+  * Corresponding variables, function names and field names to the input text
+    are shown below: use the :kbd:`Up` and :kbd:`Down` arrows to browse the
+    items and press :kbd:`Tab` to insert in the expression or simply click
+    on the wished item.
+  * Function parameters are shown while filling them.
 
-* *Underline*: for unknown functions, wrong or invalid arguments;
-* *Marker*: for every other error (eg, missing parenthesis, unexpected
-  character) at a single location.
+  QGIS also checks the expression rightness and highlights all the errors using:
 
-In case of error, the :guilabel:`Output preview` indicates it and you can access
-details with the provided hyperlink.
+  * *Underline*: for unknown functions, wrong or invalid arguments;
+  * *Marker*: for every other error (eg, missing parenthesis, unexpected
+    character) at a single location.
+
+* Under the expression editor, an :guilabel:`Output preview` displays the result
+  of the expression evaluated on the first feature of the layer. In case of
+  error, it indicates it and you can access details with the provided hyperlink.
+* A function selector displays the list of functions, variables, fields...
+  organized in groups. A search box is available to filter the list and quickly
+  find a particular function or field.
+  Double-clicking an item adds it to the expression editor.
+* A help panel displays help for each selected item in the function selector.
+* A field's values widget shown when a field is selected in the function selector
+  helps to fetch features attributes. Double-clicking a value adds it to the
+  expression editor.
 
 .. tip::
 
@@ -1470,4 +1478,4 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

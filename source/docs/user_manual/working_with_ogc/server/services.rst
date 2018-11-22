@@ -36,8 +36,8 @@ well as the image format to generate. Basic support is also available for the
 
 Specifications document according to the version number of the service:
 
-- `WMS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
-- `WMS 1.3.0 <http://portal.opengeospatial.org/files/?artifact_id=14416>`_
+- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
+- `WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416>`_
 
 Standard requests provided by QGIS Server:
 
@@ -1065,4 +1065,4 @@ You can see there are several parameters in this request:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

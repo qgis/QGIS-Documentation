@@ -28,7 +28,7 @@ photograph.
 If what you are using to digitize is a good map, as it is in our case, it is
 likely that the information is clearly displayed as lines with different colors
 for each type of element. Those colors can be relatively easy extracted as
-individual images using an image processing software like `GIMP <http://www.gimp.org/>`_.
+individual images using an image processing software like `GIMP <https://www.gimp.org/>`_.
 Such separate images can be used to assist the digitizing, as you will see below.
 
 The first step will be to use GIMP to obtain an image that contains only the
@@ -373,4 +373,4 @@ aerial photos and the addition of some relevant information to your dataset.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
