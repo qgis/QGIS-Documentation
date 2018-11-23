@@ -137,8 +137,8 @@ Install NGINX:
 fcgiwrap
 ^^^^^^^^
 
-If you want to use fcgiwrap to run QGIS Server, you firstly have to install
-the corresponding package:
+If you want to use `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
+to run QGIS Server, you firstly have to install the corresponding package:
 
 .. code-block:: bash
 
@@ -168,8 +168,8 @@ QGIS Server is now available at http://localhost/qgisserver.
 spawn-fcgi
 ^^^^^^^^^^
 
-If you prefer to use spawn-fcgi instead of fcgiwrap, the first step is to
-install the package:
+If you prefer to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_ instead
+of fcgiwrap, the first step is to install the package:
 
 .. code-block:: bash
 
@@ -208,9 +208,10 @@ QGIS Server is now available at http://localhost/qgisserver.
 
 .. note::
 
-    With the above command spawn-fcgi spawns only one QGIS Server process. To use
-    more than one QGIS Server process you can combine spawn-fcgi with the multiwatch
-    tool, which is also packaged in Debian.
+    With the above command spawn-fcgi spawns only one QGIS Server process. To use more than one QGIS
+    Server process you can combine spawn-fcgi with the
+    `multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, which is also
+    packaged in Debian.
 
 Configuration
 ^^^^^^^^^^^^^
