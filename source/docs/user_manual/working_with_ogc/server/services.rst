@@ -1108,24 +1108,34 @@ parameter. For further information you may refer to
 GetFeatureInfo
 --------------
 
-Standard parameters for the **GetFeatureInfo** request according to the OGC WMTS 1.0.0
-specifications:
+Standard parameters for the **GetFeatureInfo** request according to the OGC
+WMTS 1.0.0 specifications:
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| SERVICE       | Yes      | Name of the service              |
-+---------------+----------+----------------------------------+
-| REQUEST       | Yes      | Name of the request              |
-+---------------+----------+----------------------------------+
-| LAYER         | Yes      | Layer identifier                 |
-+---------------+----------+----------------------------------+
-| INFOFORMAT    | No       | Output format                    |
-+---------------+----------+----------------------------------+
-| I             | No       | X coordinate of a pixel          |
-+---------------+----------+----------------------------------+
-| J             | No       | Y coordinate of a pixel          |
-+---------------+----------+----------------------------------+
+- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
+
++---------------+----------+-----------------------------------------------+
+| Parameter     | Required | Description                                   |
++===============+==========+===============================================+
+| SERVICE       | Yes      | Name of the service                           |
++---------------+----------+-----------------------------------------------+
+| REQUEST       | Yes      | Name of the request                           |
++---------------+----------+-----------------------------------------------+
+| LAYER         | Yes      | Layer identifier                              |
++---------------+----------+-----------------------------------------------+
+| INFOFORMAT    | No       | Output format                                 |
++---------------+----------+-----------------------------------------------+
+| I             | No       | X coordinate of a pixel                       |
++---------------+----------+-----------------------------------------------+
+| J             | No       | Y coordinate of a pixel                       |
++---------------+----------+-----------------------------------------------+
+| TILEMATRIXSET | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+| TILEMATRIX    | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+| TILEROW       | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+| TILECOL       | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
 
 |
 
