@@ -38,7 +38,7 @@ MetaSearch is included by default with QGIS 2.0 and higher. All dependencies
 are included within MetaSearch.
 
 Install MetaSearch from the QGIS plugin manager, or manually from
-http://plugins.qgis.org/plugins/MetaSearch.
+https://plugins.qgis.org/plugins/MetaSearch.
 
 Working with Metadata Catalogs in QGIS
 --------------------------------------
@@ -99,7 +99,7 @@ example of the XML file format.
   <?xml version="1.0" encoding="UTF-8"?>
   <qgsCSWConnections version="1.0">
       <csw name="Data.gov CSW" url="https://catalog.data.gov/csw-all"/>
-      <csw name="Geonorge - National CSW service for Norway" url="http://www.geonorge.no/geonetwork/srv/eng/csw"/>
+      <csw name="Geonorge - National CSW service for Norway" url="https://www.geonorge.no/geonetwork/srv/eng/csw"/>
       <csw name="Geoportale Nazionale - Servizio di ricerca Italiano" url="http://www.pcn.minambiente.it/geoportal/csw"/>
       <csw name="LINZ Data Service" url="http://data.linz.govt.nz/feeds/csw"/>
       <csw name="Nationaal Georegister (Nederland)" url="http://www.nationaalgeoregister.nl/geonetwork/srv/eng/csw"/>
@@ -188,8 +188,8 @@ You can fine tune MetaSearch with the following :guilabel:`settings`:
 * :guilabel:`Timeout`: when searching metadata catalogs, the number of
   seconds for blocking connection attempt. Default value is 10.
 
-.. _`CSW (Catalog Service for the Web)`: http://www.opengeospatial.org/standards/cat
-.. _`OGC (Open Geospatial Consortium)`: http://www.opengeospatial.org
+.. _`CSW (Catalog Service for the Web)`: https://www.opengeospatial.org/standards/cat
+.. _`OGC (Open Geospatial Consortium)`: https://www.opengeospatial.org
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -200,4 +200,4 @@ You can fine tune MetaSearch with the following :guilabel:`settings`:
 
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

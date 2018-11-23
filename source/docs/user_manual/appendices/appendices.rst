@@ -297,7 +297,7 @@ Version 1.3, 3 November 2008
 
 Copyright  2000, 2001, 2002, 2007, 2008  Free Software Foundation, Inc
 
-http://fsf.org/
+https://fsf.org/
 
 
 Everyone is permitted to copy and distribute verbatim copies of this
@@ -701,7 +701,7 @@ The Free Software Foundation may publish new, revised versions
 of the GNU Free Documentation License from time to time.  Such new
 versions will be similar in spirit to the present version, but may
 differ in detail to address new problems or concerns.  See
-http://www.gnu.org/copyleft/.
+https://www.gnu.org/copyleft/.
 
 Each version of the License is given a distinguishing version number.
 If the Document specifies that a particular numbered version of this
@@ -791,4 +791,4 @@ to permit their use in free software.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

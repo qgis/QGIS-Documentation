@@ -1144,7 +1144,7 @@ The :guilabel:`Info` section in the dialog explains how calculations are made
 according to CRS settings available.
 
 .. %FixMe: currently, validating the Settings --> Options dialog revert any change
-   made on units in the measurement dialog (see http://hub.qgis.org/issues/15436
+   made on units in the measurement dialog (see https://issues.qgis.org/issues/15436
    bug or not? should it be documented?)
 
 .. _figure_measure_length:
@@ -1478,14 +1478,6 @@ should be identified:
   identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-.. note:: **Identify tool configuration**
-
-   You can configure the identify feature in :menuselection:`Project -->
-   Properties...` in the :guilabel:`Identify Layers` tab. The table allows
-   you to select layer(s) whose features can be identified with by this tool
-   (column :guilabel:`Identifiable`). You can also put this layer in read-only
-   mode with the checkbox in the last column.
-
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
@@ -1724,9 +1716,9 @@ variables overwritten by lower level ones are strike through.
 
 .. note:: You can read more about variables and find some examples
    in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1
-   <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
-   `part 2 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
-   and `part 3 <http://nyalldawson
+   <https://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
+   `part 2 <https://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
+   and `part 3 <https://nyalldawson
    .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
    blog posts.
 
@@ -2219,7 +2211,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

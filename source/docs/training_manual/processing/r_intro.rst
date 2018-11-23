@@ -9,7 +9,7 @@ Use R scripts in Processing
 ****************************
 
 Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna
-<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+<https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
 Processing allows to write and run R scripts inside QGIS.
 
@@ -229,4 +229,4 @@ Beware that Processing uses some special syntax to get the results out of R:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

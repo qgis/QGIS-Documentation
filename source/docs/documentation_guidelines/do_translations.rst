@@ -114,7 +114,7 @@ Translation in Transifex
 ........................
 
 In order to translate QGIS with Transifex, you first need to `join the project
-<http://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
+<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
 you got a team, click on the corresponding project and your language.
 You get a list of all translatable ``.po`` files. Click on the
 ``docs_user-manual_plugins_plugins-heatmap`` to select the heatmap plugin file
@@ -125,7 +125,7 @@ The next page lists all the sentences in the file. All you need to do is select
 the text and translate following the :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
-http://docs.transifex.com/tutorials/txeditor/.
+https://docs.transifex.com/translation/translating-with-the-web-editor.
 
 
 .. _translation_linguist:
@@ -287,13 +287,13 @@ does not need translation.
     For the following example, we will use the ``airports`` vector point
     layer from the QGIS sample dataset (see :ref:`label_sampledata`).
     Another excellent QGIS tutorial on making heatmaps can be found on
-    `http://qgis.spatialthoughts.com
-    <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
+    `https://www.qgistutorials.com
+    <https://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
 
 This item also includes a hyperlink with an url and an external presentation.
 The url should of course be left intact, you are allowed to change the external
-text ``http://qgis.spatialthoughts.com`` which is visible by the reader. Never
+text ``https://www.qgistutorials.com`` which is visible by the reader. Never
 remove the underscore at the end of the hyperlink which forms an essential
 part of it!!
 
@@ -354,4 +354,4 @@ For any question, please contact the `QGIS Community Team
    :width: 2em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -2674,6 +2674,7 @@ Parameters
   * 4 --- Move end points only, prefer aligning nodes
   * 5 --- Move end points only, prefer closest point
   * 6 --- Snap end points to end points only
+  * 7 --- Snap to anchor nodes (single layer only)
 
   Default: *Prefer aligning nodes, insert extra vertices where required*
 
@@ -3077,4 +3078,4 @@ Outputs
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

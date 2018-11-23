@@ -23,7 +23,7 @@ GIS data processing and exchange.
 Describing a basic data model for geographic features, an increasing number
 of specifications are developed by OGC to serve specific needs for interoperable
 location and geospatial technology, including GIS. Further information
-can be found at http://www.opengeospatial.org/.
+can be found at https://www.opengeospatial.org/.
 
 .. index:: WMS, WFS, WCS, CAT, SFS, GML
 
@@ -125,7 +125,7 @@ them to QGIS differently.
 
    ::
 
-      http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
+      https://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
         service=WMTS&request=GetCapabilities
 
    For testing the topo2 layer in this WMTS works nicely. Adding this string indicates
@@ -141,12 +141,12 @@ them to QGIS differently.
    This format helps you to recognize that it is a RESTful address. A RESTful WMTS is
    accessed in QGIS by simply adding its address in the WMS setup in the URL field of
    the form. An example of this type of address for the case of an Austrian basemap is
-   http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml.
+   https://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml.
 
 .. note:: You can still find some old services called WMS-C. These services are quite similar
    to WMTS (i.e., same purpose but working a little bit differently). You can manage
    them the same as you do WMTS services. Just add ``?tiled=true`` at the end
-   of the url. See http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification for more
+   of the url. See https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification for more
    information about this specification.
 
    When you read WMTS, you can often think WMS-C also.
@@ -374,7 +374,7 @@ When using WMTS (Cached WMS) services like
 
 ::
 
-  http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
+  https://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
     service=WMTS&request=GetCapabilities
 
 you are able to browse through the :guilabel:`Tilesets` tab given by the server.
@@ -560,7 +560,7 @@ details.
    If you need to access secured layers with secured methods other than basic
    authentication, you can use InteProxy as a transparent proxy, which does
    support several authentication methods. More information can be found in the
-   InteProxy manual at http://inteproxy.wald.intevation.org.
+   InteProxy manual at https://inteproxy.wald.intevation.org.
 
 .. index:: Mapserver
 
@@ -687,7 +687,7 @@ two and view the attribute table.
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png

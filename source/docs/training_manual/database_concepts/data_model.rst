@@ -19,7 +19,7 @@ Install PostgreSQL
   PostgreSQL using
   `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
   Windows users can use the
-  graphical installer located here: `<http://www.postgresql.org/download/windows/>`_.
+  `graphical installer <https://www.postgresql.org/download/windows/>`_.
   Please note that the documentation will assume users are running QGIS under
   Ubuntu.
 
@@ -55,7 +55,7 @@ Help
 -------------------------------------------------------------------------------
 
 PostgreSQL has very good `online
-<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation.
+<https://www.postgresql.org/docs/9.1/index.html>`_ documentation.
 
 Create a database user
 -------------------------------------------------------------------------------
@@ -174,9 +174,7 @@ To get help on a specific command, type (for example)::
 
   \help create table
 
-See also the `Psql cheat sheet <http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_ -
-available online `here
-<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_.
+See also the `Psql cheat sheet <http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_.
 
 Make Tables in SQL
 -------------------------------------------------------------------------------
@@ -422,4 +420,4 @@ Next you'll learn how to use the DBMS to add new data.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

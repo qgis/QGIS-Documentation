@@ -320,4 +320,4 @@ For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_e
    source folder.
 
 .. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

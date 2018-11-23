@@ -6,7 +6,7 @@
 OrfeoToolbox algorithm provider
 *******************************
 
-`Orfeo ToolBox <http://www.orfeo-toolbox.org/otb/>`_ (OTB) is an open source
+`Orfeo ToolBox <https://www.orfeo-toolbox.org/otb/>`_ (OTB) is an open source
 library of image processing algorithms. OTB is based on the medical image
 processing library ITK and offers particular functionalities for remote sensing
 image processing in general and for high spatial resolution images in
@@ -39,4 +39,4 @@ or SAR (TerraSarX, ERS, Palsar) are available.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

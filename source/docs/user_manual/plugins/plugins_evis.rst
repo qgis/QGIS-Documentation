@@ -16,7 +16,7 @@ eVis Plugin
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
 Museum of Natural History, Center for Biodiversity and Conservation. Available
-from http://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
+from https://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's
 (AMNH) Center for Biodiversity and Conservation (CBC)
@@ -185,9 +185,9 @@ of the different approaches are listed in Table `evis_examples`_.
   X        Y        FILE                                                BEARING
   780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG     275
   780596   1784017  /groundphotos/DSC_0169.JPG                          80
-  780819   1784015  http://biodiversityinformatics.amnh.org/\
+  780819   1784015  https://biodiversityinformatics.amnh.org/\
                     evis_testdata/DSC_0170.JPG                          10
-  780596   1784017  pdf:http://www.testsite.com/attachments.php?\
+  780596   1784017  pdf:https://www.testsite.com/attachments.php?\
                     attachment_id-12                                    76
 
 
@@ -359,7 +359,7 @@ SQL queries are used to extract information from a database or ODBC resource.
 In eVis, the output from these queries is a vector layer added to the QGIS map
 window. Click on the :guilabel:`SQL Query` tab to display the SQL query
 interface. SQL commands can be entered in this text window. A helpful tutorial
-on SQL commands is available at http://www.w3schools.com/sql. For example, to
+on SQL commands is available at https://www.w3schools.com/sql. For example, to
 extract all of the data from a worksheet in an Excel file, ``select * from [sheet1$]``
 where ``sheet1`` is the name of the worksheet.
 
@@ -561,4 +561,4 @@ A complete sample XML file with three queries is displayed below:
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -33,10 +33,10 @@ Parameters
 
 .. _gdalextractprojection:
 
-Extract projection
-------------------
-Extracts the projection of a raster file and writes it into a
-world-file.
+Extract projection |34|
+-----------------------
+Extracts the projection of a raster file and writes it into a *world*
+file with extension :file:`.wld`.
 The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
@@ -44,8 +44,11 @@ The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gd
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+``Input file`` [raster]
+  Input raster.
+  The raster layer has to be file based, as the algorithm uses the path
+  to the raster file as the location of the generated :file:`.wld` file.
+  Using a non-file raster layer will lead to an error.
 
 ``Create also .prj file`` [boolean]
   If this is activated a :file:`.prj` file containing the projection
@@ -56,6 +59,13 @@ Parameters
 Outputs
 .......
 
+``World file`` [file] |34|
+  Text file with extension :file:`.wld` containing transformation parameters
+  for  the raster file.
+
+``ESRI Shapefile prj file`` [file] |34|
+  Text file with :file:`.prj` extension that describes the CRS.
+  Will be None if ``Create also .prj file`` is False.
 
 .. _gdalwarpreproject:
 
@@ -142,4 +152,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |34| replace:: ``NEW in 3.4``
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
