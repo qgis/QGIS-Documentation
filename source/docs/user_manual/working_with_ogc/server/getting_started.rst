@@ -110,12 +110,24 @@ NGINX
 .....
 
 You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
-NGINX does not automatically spawn a FastCGI process. Actually, you have to use
-another component to start these processes.
+NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
+to be started by something else.
 
-To do that on Debian based systems, you may use **fcgiwrap** or **spawn-fcgi**
-based on your preferences to run QGIS Server. In both case, you have to install
-NGINX:
+On Debian-based systems, you may use **fcgiwrap** or **spawn-fcgi** to start
+and manage the QGIS Server processes. Official Debian packages exist for both.
+
+.. note::
+
+    fcgiwrap is easier to set up than spawn-fcgi, because it's already wrapped
+    in a Systemd service. But it also leads to a solution that is much slower
+    than using spawn-fcgi. With fcgiwrap a new QGIS Server process is created
+    on each request, meaning that the QGIS Server initialization process, which
+    includes reading and parsing the QGIS project file, is done on each request.
+    With spawn-fcgi, the QGIS Server process remains alive between requests,
+    resulting in much better performance. For that reason, spawn-fcgi
+    is recommended for production use.
+
+Install NGINX:
 
 .. code-block:: bash
 
@@ -185,14 +197,20 @@ have to manually start QGIS Server in your terminal:
 
 .. code-block:: bash
 
- sudo spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-                 -s /var/run/qgisserver.socket \
-                 -U www-data -G www-data -n
+ sudo spawn-fcgi -s /var/run/qgisserver.socket \
+                 -U www-data -G www-data -n \
+                 /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi
 
 Of course, you may write an init script (like a ``qgisserver.service`` file
 with Systemd) to start QGIS Server at boot time or whenever you want.
 
 QGIS Server is now available at http://localhost/qgisserver.
+
+.. note::
+
+    With the above command spawn-fcgi spawns only one QGIS Server process. To use
+    more than one QGIS Server process you can combine spawn-fcgi with the multiwatch
+    tool, which is also packaged in Debian.
 
 Configuration
 ^^^^^^^^^^^^^
