@@ -488,9 +488,9 @@ To apply a proportional rendering:
    the output value to the property and proportionally resize the symbol in the
    map canvas.
 
-  If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
-  menu to apply some transformation (exponential, flannery...) to the symbol
-  size rescaling (see :ref:`data_defined_assistant` for more details).
+   If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
+   menu to apply some transformation (exponential, flannery...) to the symbol
+   size rescaling (see :ref:`data_defined_assistant` for more details).
 
 You can choose to display the proportional symbols in the :ref:`Layers panel
 <label_legend>` and the :ref:`print layout legend item <layout_legend_item>`:
