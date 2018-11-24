@@ -14,7 +14,6 @@ Processing providers and algorithms
      qgis/index
      gdal/index
      lidartools/lastools
-     saga/index
      taudem/index
 
 
