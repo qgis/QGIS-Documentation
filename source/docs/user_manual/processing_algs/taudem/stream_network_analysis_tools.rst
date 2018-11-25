@@ -74,15 +74,6 @@ Outputs
 ``Extreme Upslope Values Grid`` [raster]
   A grid of the maximum/minimum upslope values.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8extremeupslopevalue', -p, -sa, -o, -nc, -min, -ssa)
-
-See also
-........
 
 Length Area Stream Source
 -------------------------
@@ -143,15 +134,6 @@ Outputs
   upslope path length, the D8 contributing area grid inputs, and parameters ``M``
   and ``y``. This grid indicates likely stream source grid cells.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:lengthareastreamsource', length_grid, contrib_area_grid, threshold, exponent, stream_source_grid)
-
-See also
-........
 
 Move Outlets To Streams
 -----------------------
@@ -219,15 +201,6 @@ Outputs
   originally on a stream, -1 if it was not moved becuase there was not a stream
   within the maximum distance, or some positive value if it was moved.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:moveoutletstostreams', -p, -src, -o, -md, -om)
-
-See also
-........
 
 Peuker Douglas
 --------------
@@ -280,13 +253,6 @@ Outputs
   and Douglas algorithm, and if viewed, resembles a channel network. This
   proto-channel network generally lacks connectivity and requires thinning,
   issues that were discussed in detail by Band (1986).
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:peukerdouglas', elevation_grid, center_weight, side_weight, diagonal_weight, stream_source_grid)
 
 See also
 ........
