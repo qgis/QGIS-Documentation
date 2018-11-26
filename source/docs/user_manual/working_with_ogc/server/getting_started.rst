@@ -138,7 +138,7 @@ fcgiwrap
 ^^^^^^^^
 
 If you want to use `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
-to run QGIS Server, you firstly have to install the corresponding package:
+to run QGIS Server, you first have to install the corresponding package:
 
 .. code-block:: bash
 
