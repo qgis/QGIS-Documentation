@@ -935,18 +935,20 @@ the resort to other software for final rendering of maps, QGIS provides another
 powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
 which adds paint effects for customizing the visualization of vector layers.
 
-The option is available in the :guilabel:`Layer Properties --> Symbology` dialog,
+The option is available in the :menuselection:`Layer Properties --> Symbology` dialog,
 under the :ref:`Layer rendering <layer_rendering>` group (applying to the whole
 layer) or in :ref:`symbol layer properties <symbol-selector>` (applying
 to corresponding features). You can combine both usage.
 
 Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |paintEffects| :sup:`Customize effects` button, that will open
+and clicking the |paintEffects| :sup:`Customize effects` button. That will open
 the :guilabel:`Effect Properties` Dialog (see figure_effects_source_). The following
 effect types, with custom options are available:
 
-* **Source:** Draws the feature's original style according to the configuration
-  of the layer's properties. The transparency of its style can be adjusted.
+* **Source**: Draws the feature's original style according to the configuration
+  of the layer's properties. The :guilabel:`Opacity` of its style can be adjusted
+  as well as the :ref:`Blend mode <blend-modes>` and :ref:`Draw mode <draw_modes>`.
+  These are common properties for all types of effects.
 
   .. _figure_effects_source:
 
@@ -955,9 +957,9 @@ effect types, with custom options are available:
 
      Draw Effects: Source dialog
 
-* **Blur:** Adds a blur effect on the vector layer. The options that someone can
-  change are the :menuselection:`Blur type` (:menuselection:`Stack` or
-  :menuselection:`Gaussian blur`), the strength and transparency of the blur effect.
+* **Blur**: Adds a blur effect on the vector layer. The custom options that you
+  can change are the :guilabel:`Blur type` (:guilabel:`Stack blur (fast)` or
+  :guilabel:`Gaussian blur (quality)`) and the :guilabel:`Blur strength`.
 
   .. _figure_effects_blur:
 
@@ -966,14 +968,16 @@ effect types, with custom options are available:
 
      Draw Effects: Blur dialog
 
-* **Colorize:** This effect can be used to make a version of the style using one
+* **Colorise**: This effect can be used to make a version of the style using one
   single hue. The base will always be a grayscale version of the symbol and you
-  can use the |selectString| :guilabel:`Grayscale` to select how to create it
-  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
-  :guilabel:`Colorise` is selected, it will be possible to mix another color
-  and choose how strong it should be. You can also control the
-  :guilabel:`Brightness`, :guilabel:`contrast` and
-  :guilabel:`saturation` levels of the resulting symbol.
+  can:
+  
+  * Use the |selectString| :guilabel:`Grayscale` to select how to create it:
+    options are 'By lightness', 'By luminosity', 'By average' and 'Off'.
+  * If |checkbox| :guilabel:`Colorise` is selected, it will be possible to mix
+    another color and choose how strong it should be.
+  * Control the :guilabel:`Brightness`, :guilabel:`Contrast` and
+    :guilabel:`Saturation` levels of the resulting symbol.
 
   .. _figure_effects_colorize:
 
@@ -982,12 +986,12 @@ effect types, with custom options are available:
 
      Draw Effects: Colorize dialog
 
-* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks
+* **Drop Shadow**: Using this effect adds a shadow on the feature, which looks
   like adding an extra dimension. This effect can be customized by changing the
-  :menuselection:`offset` degrees and radius, determining where the shadow shifts
+  :guilabel:`Offset` angle and distance, determining where the shadow shifts
   towards to and the proximity to the source object. :menuselection:`Drop Shadow`
-  also has the option to change the blur radius, the transparency and the color
-  of the effect.
+  also has the option to change the :guilabel:`Blur radius` and the
+  :guilabel:`Color` of the effect.
 
   .. _figure_effects_drop_shadow:
 
@@ -996,9 +1000,9 @@ effect types, with custom options are available:
 
      Draw Effects: Drop Shadow dialog
 
-* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow`
+* **Inner Shadow**: This effect is similar to the :guilabel:`Drop Shadow`
   effect, but it adds the shadow effect on the inside of the edges of the feature.
-  The available options for customization are the same as the :menuselection:`Drop
+  The available options for customization are the same as the :guilabel:`Drop
   Shadow` effect.
 
   .. _figure_effects_inner_shadow:
@@ -1008,12 +1012,12 @@ effect types, with custom options are available:
 
      Draw Effects: Inner Shadow dialog
 
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be
-  customized by adjusting the :menuselection:`spread` (width) of the glow, or
-  the :menuselection:`Blur radius`. The latter specifies the proximity from
+* **Inner Glow**: Adds a glow effect inside the feature. This effect can be
+  customized by adjusting the :guilabel:`Spread` (width) of the glow, or
+  the :guilabel:`Blur radius`. The latter specifies the proximity from
   the edge of the feature where you want any blurring to happen. Additionally,
-  there are options to customize the color of the glow, with a single color or
-  a color ramp.
+  there are options to customize the color of the glow using a :guilabel:`Single
+  color` or a :guilabel:`Color ramp`.
 
   .. _figure_effects_inner_glow:
 
@@ -1022,9 +1026,9 @@ effect types, with custom options are available:
 
      Draw Effects: Inner Glow dialog
 
-* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect,
+* **Outer Glow**: This effect is similar to the :guilabel:`Inner Glow` effect,
   but it adds the glow effect on the outside of the edges of the feature.
-  The available options for customization are the same as the :menuselection:`Inner
+  The available options for customization are the same as the :guilabel:`Inner
   Glow` effect.
 
   .. _figure_effects_outer_glow:
@@ -1034,17 +1038,17 @@ effect types, with custom options are available:
 
      Draw Effects: Outer Glow dialog
 
-* **Transform:** Adds the possibility of transforming the shape of the symbol.
-  The first options available for customization are the :menuselection:`Reflect
-  horizontal` and :menuselection:`Reflect vertical`, which actually create a
-  reflection on the horizontal and/or vertical axes. The 4 other options are:
+* **Transform**: Adds the possibility of transforming the shape of the symbol.
+  The first options available for customization are the :guilabel:`Reflect
+  horizontal` and :guilabel:`Reflect vertical`, which actually create a
+  reflection on the horizontal and/or vertical axes. The other options are:
 
-  * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x
-    and/or y axis by the given percentage
-  * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on
-    a distance given on the x and/or the y axis.
+  * :guilabel:`Shear X,Y`: Slants the feature along the x and/or y axis.
+  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the x
+    and/or y axis by the given percentage.
+  * :guilabel:`Rotation`: Turns the feature around its center point.
+  * and :guilabel:`Translate X,Y` changes the position of the item based on
+    a distance given on the x and/or y axis.
 
   .. _figure_effects_transform:
 
@@ -1053,28 +1057,34 @@ effect types, with custom options are available:
 
      Draw Effects: Transform dialog
 
-There are some common options available for all draw effect types.
-:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
-to the ones described in :ref:`layer_rendering` and can be used in all draw
-effects except for the transform one.
-
-One or more draw effects can used at the same time. You activate/deactivate an effect
+One or more effect types can be used at the same time. You (de)activate an effect
 using its checkbox in the effects list. You can change the selected effect type by
 using the |selectString| :guilabel:`Effect type` option. You can reorder the effects
 using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
-buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
+buttons, and also add/remove effects using the |signPlus| :sup:`Add new effect`
 and |signMinus| :sup:`Remove effect` buttons.
 
+There are some common options available for all draw effect types.
+:guilabel:`Opacity` and :guilabel:`Blend mode` options work similar
+to the ones described in :ref:`layer_rendering` and can be used in all draw
+effects except for the transform one.
+
+.. _draw_modes:
+
 There is also a |selectString| :guilabel:`Draw mode` option available for
-every draw effect, and you can choose whether to render and/or to modify the
-symbol. Effects render from top to bottom.'Render only' mode means that the
-effect will be visible while the 'Modify only' mode means that the effect will
-not be visible but the changes that it applies will be passed to the next effect
-(the one immediately below). The 'Render and Modify' mode will make the
-effect visible and pass any changes to the next effect. If the effect is in the
-top of the effects list or if the immediately above effect is not in modify
-mode, then it will use the original source symbol from the layers properties
-(similar to source).
+every effect, and you can choose whether to render and/or modify the
+symbol, following some rules:
+
+* Effects render from top to bottom.
+* :guilabel:`Render only` mode means that the effect will be visible.
+* :guilabel:`Modifier only` mode means that the effect will not be visible
+  but the changes that it applies will be passed to the next effect
+  (the one immediately below).
+* The :guilabel:`Render and Modify' mode will make the effect visible and
+  pass any changes to the next effect. If the effect is at the top of the
+  effects list or if the immediately above effect is not in modify mode,
+  then it will use the original source symbol from the layers properties
+  (similar to source).
 
 .. _vector_labels_tab:
 
