@@ -77,14 +77,14 @@ points. Uncheck the :guilabel:`network_lines` layer to see the result better:
    :align: center
 
 Let's open the attribute table of the output layer. It contains three fields,
-representing the coordinates of the staring and ending points and the
+representing the coordinates of the starting and ending points and the
 **cost**.
 
 Depending on what you choose in the :guilabel:`Path type to calculate` it will
 contain either the distance, in layer units, between points (``Shortest``) or
 the time, in hour units (``Fastest``).
 
-In out case, the *shortest* distance between the chosen points is around ``1000``
+In our case, the *shortest* distance between the chosen points is around ``1000``
 meters:
 
 .. image:: img/shortest_point_attributes.png
@@ -148,12 +148,12 @@ the other one.
 |moderate| Service area (from layer)
 -------------------------------------------------------------------------------
 The :menuselection:`Network Analysis --> Service area (from layer)` algorithm
-can answers the question: given a point layer, what are all the reachable areas
+can answer the question: given a point layer, what are all the reachable areas
 given a distance or a time value?
 
 .. note:: The :menuselection:`Network Analysis --> Service area (from points)`
-    is the same algorithm but but it allows you to manually choose the point on
-    the map.
+    is the same algorithm but, it allows you to manually choose the point on the
+    map.
 
 Given a distance of ``250`` meters we want to know how far we can get from each
 of the two points of the :guilabel:`network_point` layer.
@@ -223,7 +223,7 @@ As you can see the fastest route does not correspond to the shortest one.
 |IC|
 -------------------------------------------------------------------------------
 
-Now you know how to use the :guilabel:`Network analysis` algorithm to solve
+Now you know how to use :guilabel:`Network analysis` algorithm to solve
 shortest-fastest path problems.
 
 |WN|
