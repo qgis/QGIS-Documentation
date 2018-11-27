@@ -51,9 +51,9 @@ reproject our data to use a PCS.
 |basic| |FA| "On the Fly" Reprojection
 -------------------------------------------------------------------------------
 
-By default, QGIS reprojects reprojects data "on the fly". What this means is that
-even if the data itself is in another CRS, QGIS can project it as if it were in
-a CRS of your choice.
+By default, QGIS reprojects data "on the fly". What this means is that even if
+the data itself is in another CRS, QGIS can project it as if it were in a CRS of
+your choice.
 
 You can change the CRS of the project by clicking on |projectionEnabled| button
 in the bottom right corner of QGIS.
@@ -61,7 +61,7 @@ in the bottom right corner of QGIS.
 * In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
   field. One CRS (:guilabel:`NSIDC EASE-Grid 2.0 Global`, EPSG:6933) should
   appear in the list below;
-* Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click
+* Click on the :guilabel:`NSIDC EASE-Grid 2.0 Global` to select it, then click
   :guilabel:`OK`;
 * Notice how the shape of South Africa changes. All projections work by
   changing the apparent shapes of objects on Earth;
@@ -121,7 +121,7 @@ The :guilabel:`Save vector layer as...` dialog now looks like this:
 
 * Click :guilabel:`OK`;
 
-You can now comparing the old and new projection of the layer and see that they
+You can now compare the old and new projections of the layer and see that they
 are in two different CRS but they are still overlapping.
 
 
