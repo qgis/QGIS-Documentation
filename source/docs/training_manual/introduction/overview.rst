@@ -78,7 +78,7 @@ Favorite``. You should then be able to see your folder in the |favourites|
 |basic| Toolbars
 ...............................................................................
 
-Your most oft-used sets of tools can be turned into toolbars for basic access.
+Your most often used sets of tools can be turned into toolbars for basic access.
 For example, the File toolbar allows you to save, load, print, and start a new
 project. You can easily customize the interface to see only the tools you use
 most often, adding or removing toolbars as necessary via the
