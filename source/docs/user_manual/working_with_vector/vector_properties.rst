@@ -1080,7 +1080,7 @@ symbol, following some rules:
 * :guilabel:`Modifier only` mode means that the effect will not be visible
   but the changes that it applies will be passed to the next effect
   (the one immediately below).
-* The :guilabel:`Render and Modify' mode will make the effect visible and
+* The :guilabel:`Render and Modify` mode will make the effect visible and
   pass any changes to the next effect. If the effect is at the top of the
   effects list or if the immediately above effect is not in modify mode,
   then it will use the original source symbol from the layers properties
