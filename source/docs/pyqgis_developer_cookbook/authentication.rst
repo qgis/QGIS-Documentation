@@ -156,7 +156,7 @@ credentials for an hypothetic alice user:
   p_config = QgsAuthMethodConfig()
   p_config.setName("alice")
   p_config.setMethod("PKI-Paths")
-  p_config.setUri("http://example.com")
+  p_config.setUri("https://example.com")
   p_config.setConfig("certpath", "path/to/alice-cert.pem" ))
   p_config.setConfig("keypath", "path/to/alice-key.pem" ))
   # check if method parameters are correctly set
@@ -412,7 +412,7 @@ an integrated example can be found in the related `test <https://github.com/qgis
 Authorities Editor GUI
 ----------------------
 
-A GUI used to manage only authorities is managed by the class `QgsAuthAuthoritiesEditor <http://www2.qgis.org/api/classQgsAuthAuthoritiesEditor.html>`_
+A GUI used to manage only authorities is managed by the class `QgsAuthAuthoritiesEditor <https://www.qgis.org/api/classQgsAuthAuthoritiesEditor.html>`_
 
 .. figure:: img/QgsAuthAuthoritiesEditor.png
    :align: center
@@ -434,4 +434,4 @@ and can be used as in the following snippet:
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

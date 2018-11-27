@@ -14,11 +14,30 @@ Raster projections
 
 .. _gdalassignprojection:
 
-Extract projection
-------------------
-Extracts the projection of a raster file and writes it into a
-world-file.
-The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
+Assign projection
+-----------------
+Applies a coordinate system to a raster dataset. 
+The algorithm is derived from the the `GDAL edit utility <https://www.gdal.org/gdal_edit.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Projections`
+
+Parameters
+..........
+
+``Input layer`` [raster]
+  Input raster layer.
+
+``Desired CRS`` [CRS]
+  Defines the coordinate system to apply to the input raster layer.
+
+
+.. _gdalextractprojection:
+
+Extract projection |34|
+-----------------------
+Extracts the projection of a raster file and writes it into a *world*
+file with extension :file:`.wld`.
+The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
@@ -26,17 +45,27 @@ Parameters
 ..........
 
 ``Input file`` [raster]
-  input raster file.
+  Input raster.
+  The raster layer has to be file based, as the algorithm uses the path
+  to the raster file as the location of the generated :file:`.wld` file.
+  Using a non-file raster layer will lead to an error.
 
 ``Create also .prj file`` [boolean]
-  If this is activated also a \*.prj-file containing the projection
-  information is created.
+  If this is activated a :file:`.prj` file containing the projection
+  information is also created.
 
   Default: *False*
 
 Outputs
 .......
 
+``World file`` [file] |34|
+  Text file with extension :file:`.wld` containing transformation parameters
+  for  the raster file.
+
+``ESRI Shapefile prj file`` [file] |34|
+  Text file with :file:`.prj` extension that describes the CRS.
+  Will be None if ``Create also .prj file`` is False.
 
 .. _gdalwarpreproject:
 
@@ -44,7 +73,7 @@ Warp (reproject)
 ----------------
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
-The algorithm is derived from the `GDAL warp utility <http://www.gdal.org/gdalwarp.html>`_ .
+The algorithm is derived from the `GDAL warp utility <https://www.gdal.org/gdalwarp.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
@@ -123,4 +152,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |34| replace:: ``NEW in 3.4``
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

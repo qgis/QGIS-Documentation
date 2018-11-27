@@ -55,7 +55,7 @@ Here is a good reference that you can read to learn more about spatial data anal
 *Geospatial Analysis (3rd Edition)*: A Comprehensive Guide to Principles, Techniques and Software Tools
 Michael John De Smith, Michael F. Goodchild, Paul A. Longley
 
-It is available online `here <http://www.spatialanalysisonline.com/>`_
+It is available online `here <https://www.spatialanalysisonline.com/>`_
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -64,4 +64,4 @@ It is available online `here <http://www.spatialanalysisonline.com/>`_
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

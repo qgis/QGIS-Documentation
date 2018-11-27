@@ -1216,7 +1216,7 @@ first symbol
     def setColor1(self):
       color = QColorDialog.getColor(self.r.syms[0].color(), self)
       if not color.isValid(): return
-      self.r.syms[0].setColor(color);
+      self.r.syms[0].setColor(color)
       self.btn1.setColor(self.r.syms[0].color())
 
     def renderer(self):
@@ -1287,7 +1287,7 @@ Further Topics
 * exploring symbol layer and renderer registries
 
 
-.. _supported formats by OGR: http://www.gdal.org/ogr_formats.html
+.. _supported formats by OGR: https://www.gdal.org/ogr_formats.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -1297,4 +1297,4 @@ Further Topics
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -19,17 +19,17 @@ provides different tools to:
   active :guilabel:`User profile` settings and applied by default whenever you
   open a new project with this profile.
   Also, they can be overridden during each QGIS session by the :ref:`project
-  properties <project_properties>` (accessible under :menuselection:`Project` menu);
+  properties <project_properties>` (accessible under :menuselection:`Project` menu).
 
 .. Todo: Add a link to user profile description when available
 
 * |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
   :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
-  not need;
+  not need.
 * |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
-  :ref:`keyboard shortcuts <shortcuts>`;
+  :ref:`keyboard shortcuts <shortcuts>`.
 * |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
-  color ramps <vector_style_manager>`;
+  color ramps <vector_style_manager>`.
 * |customProjection| :guilabel:`Custom Projections...`: create your own
   :ref:`coordinate reference systems <sec_custom_projections>`.
 
@@ -305,7 +305,7 @@ Rendering Settings
 
 * |unchecked| :guilabel:`By default new layers added to the map should be
   displayed`: unchecking this option can be handy when loading multiple layers
-  to avoid each new layer being rendered in the canvas and slow down the process;
+  to avoid each new layer being rendered in the canvas and slow down the process
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
 * |checkbox| :guilabel:`Max cores to use`
@@ -498,8 +498,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 **Feature creation**
 
 * |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`:
-  this choice can be overridden in each layer properties dialog;
-* |checkbox| :guilabel:`Reuse last entered attribute values`
+  this choice can be overridden in each layer properties dialog.
+* |checkbox| :guilabel:`Reuse last entered attribute values`.
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
   validation procedures in QGIS can take a lot of time. To speed up rendering, it
@@ -511,8 +511,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 **Rubberband**
 
 * Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
-  and :guilabel:`Fill color`
-* :guilabel:`Don't update rubberband during vertex editing`
+  and :guilabel:`Fill color`.
+* :guilabel:`Don't update rubberband during vertex editing`.
 
 **Snapping**
 
@@ -659,7 +659,7 @@ Figure_Network_Tab_).
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
-http://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
+https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 
 .. tip:: **Using Proxies**
 
@@ -677,20 +677,21 @@ quick search widget available on the status bar that helps you perform searches
 anywhere in the application. It provides some default filters (with prefix) to use:
 
 * Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
-  panel;
-* Project layouts (``pl``): finds and opens a print layout;
+  panel.
+* Project layouts (``pl``): finds and opens a print layout.
 * Actions (``.``): finds and executes a QGIS action; actions can be any tool
   or menu in QGIS, opening a panel...
 * Active layer features (``f``): searches for matching attributes in any field
-  from the current active layer and zoom to the feature;
-* features in all layers (``af``): searches for matching attributes in any field
-  from any layer and zoom to the feature;
+  from the current active layer and zooms to the selected feature.
+* Features in all layers (``af``): searches for matching attributes in the
+  :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
+  and zooms to the selected feature.
 * Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
-  gives an option to copy the result to the clipboard;
-* Spatial bookmarks (``b``): finds and zooms to the bookmark extent;
+  gives an option to copy the result to the clipboard.
+* Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
 * Settings (``set``): browses and opens project and application-wide properties
-  dialogs;
-* Processing (``a``): searches and opens a Processing algorithm dialog;
+  dialogs.
+* Processing (``a``): searches and opens a Processing algorithm dialog.
 * Edit selected features (``ef``): gives quick access and runs a compatible
   :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
   active layer.
@@ -793,8 +794,8 @@ frame lets you control these parameters. You can indeed choose:
 * the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely
   based; it can be:
 
-  * **None/Planimetric** (returned values are in this case cartesian measurements);
-  * a **Custom** one (you'll need to set values of the semi-major and semi-minor axes);
+  * **None/Planimetric**: returned values are in this case cartesian measurements.
+  * a **Custom** one: you'll need to set values of the semi-major and semi-minor axes.
   * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
     New International 1967, WGS 84...).
 * the :guilabel:`units for distance measurements` for length and perimeter and
@@ -842,12 +843,13 @@ to use in this project. It can be:
   earth uses like role-playing game maps, building mapping or microscopic stuff.
   In this case:
 
-  * no reprojection is done while rendering the layers: features are just drawn
-    using their raw coordinates;
-  * the ellipsoid is locked out and forced to ``None/Planimetric``;
-  * the distance and area units, and the coordinate display are locked out and
+  * No reprojection is done while rendering the layers: features are just drawn
+    using their raw coordinates.
+  * The ellipsoid is locked out and forced to ``None/Planimetric``.
+  * The distance and area units, and the coordinate display are locked out and
     forced to "unknown units"; all measurements are done in unknown map units,
     and no conversion is possible.
+
 * or an existing coordinate reference system that can be *geographic*, *projected*
   or *user-defined*. A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
@@ -896,16 +898,19 @@ In the :guilabel:`Data Sources` tab, you can:
   will be read from the QGIS project file (instead of data sources) and when
   using the PostgreSQL provider the primary key unicity will not be 
   checked for views and materialized views.
+
+.. _project_layer_capabilities:
+
 * Configure the :guilabel:`Layers Capabilities`, i.e.:
   
   * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
-    :ref:`identify tool <identify>`. By default, layers are set queryable;
+    :ref:`identify tool <identify>`. By default, layers are set queryable.
   * Set whether a layer should appear as ``read-only``, meaning that
     it can not be edited by the user, regardless of the data provider's
     capabilities. Although this is a weak protection, it remains a quick and handy
-    configuration to avoid end-users modifying data when working with file-based layers;
+    configuration to avoid end-users modifying data when working with file-based layers.
   * Define which layers are ``searchable``, i.e. could be queried using the
-    :ref:`locator widget <locator_options>`;
+    :ref:`locator widget <locator_options>`. By default, layers are set searchable.
   * Define which layers are defined as ``required``. Checked layers in this list
     are protected from inadvertent removal from the project.
 
@@ -1116,6 +1121,6 @@ and :guilabel:`Load` them into another QGIS installation.
    :width: 2em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

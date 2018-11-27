@@ -17,11 +17,11 @@ QGIS Server Python Plugins
 
 Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`):
 
-* by using the *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
-  server can alter the behavior of existing core services (**WMS**, **WFS** etc.);
-* with the *server filter interface* (:class:`QgsServerFilter`) you can change the input
-  parameters, change the generated output or even provide new services;
-* with the *access control interface* (:class:`QgsAccessControlFilter`) you can apply
+* By using the *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
+  server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
+* With the *server filter interface* (:class:`QgsServerFilter`) you can change the input
+  parameters, change the generated output or even provide new services.
+* With the *access control interface* (:class:`QgsAccessControlFilter`) you can apply
   some access restriction per requests.
 
 
@@ -522,4 +522,4 @@ to completely disable the cache.
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

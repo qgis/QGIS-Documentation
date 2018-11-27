@@ -14,8 +14,8 @@ into the database and make use of the geographic functions that PostGIS offers.
 
 While working through this section, you may want to keep a copy of the **PostGIS
 cheat sheet**  available
-from `Boston GIS user group <http://www.bostongis.com/postgis_quickguide.bqg>`_.
-Another useful resource is the `online <http://postgis.net/docs/>`_ PostGIS
+from `Boston GIS user group <https://www.bostongis.com/postgis_quickguide.bqg>`_.
+Another useful resource is the `online <https://postgis.net/docs/>`_ PostGIS
 documentation.
 
 There are also some more extensive tutorials on PostGIS and Spatial Databases
@@ -44,4 +44,4 @@ See also `PostGIS online <http://postgisonline.org/>`_.
    source folder.
 
 .. |MOD| replace:: Module:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

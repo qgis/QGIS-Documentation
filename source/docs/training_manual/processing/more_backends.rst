@@ -5,7 +5,7 @@
 Other programs
 ===================
 
-Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_ 
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
 
 .. note:: This chapter shows how to use additional programs from inside Processing. To complete it, you must have installed, with the tools of your operating system, the relevant packages.
 
@@ -78,12 +78,12 @@ Dissolve features based on a common attribute:
 
 **Exercise for the reader**: find the differences (geometry and attributes) between different methods.
 
-.. _GRASS: http://grass.osgeo.org/
-.. _R: http://www.r-project.org/
-.. _LASTools: http://rapidlasso.com/lastools/
-.. _LecoS: http://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
+.. _GRASS: https://grass.osgeo.org/
+.. _R: https://www.r-project.org/
+.. _LASTools: https://rapidlasso.com/lastools/
+.. _LecoS: https://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
-.. _Animove: http://www.faunalia.eu/en/animove.html
+.. _Animove: https://www.faunalia.eu/en/animove.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -92,4 +92,4 @@ Dissolve features based on a common attribute:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

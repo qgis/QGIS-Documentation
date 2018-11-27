@@ -27,9 +27,11 @@ To create a layout item, select the corresponding tool either from the
 
 * click on the page and fill the size and placement information requested
   in the :ref:`new items properties <position_size>` dialog that pops up;
-* click-and-drag to define the initial size and placement of the item. You can
-  rely on :ref:`grids and guides <grid_guides>` snapping for a better position;
-* because they can have particular shapes, drawing node or arrow items does not
+* or click-and-drag to define the initial size and placement of the item. You can
+  rely on :ref:`grids and guides <grid_guides>` snapping for a better position.
+
+.. note::
+  Because they can have particular shapes, drawing node or arrow items does not
   work with one-click nor click-and-drag methods; you need to click and
   place each node of the item.
 
@@ -334,4 +336,4 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

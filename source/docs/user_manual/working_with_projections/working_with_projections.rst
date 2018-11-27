@@ -257,9 +257,9 @@ transformations` group:
   Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
   dialog. Then:
 
-  #. indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
-     or the |setProjection| :sup:`Select CRS` widget;
-  #. likewise, provide the :guilabel:`Destination CRS`;
+  #. Indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
+     or the |setProjection| :sup:`Select CRS` widget.
+  #. Likewise, provide the :guilabel:`Destination CRS`.
   #. Depending on the transform grid files (based on GDAL and PROJ version
      installed on your system), a list of available transformations from source to
      destination is built in the table. Clicking a row shows details on the settings
@@ -268,8 +268,9 @@ transformations` group:
      You can choose to only display current valid transformations by checking
      the |checkbox| :guilabel:`Hide deprecated` option.
 
-  #. Find your preferred transformation, select it and click :guilabel:`OK`;
-  #. A new row is added to the table under :menuselection:`CRS --> Default datum
+  #. Find your preferred transformation, select it and click :guilabel:`OK`.
+
+     A new row is added to the table under :menuselection:`CRS --> Default datum
      transformations` with information about 'Source CRS' and 'Destination CRS'
      as well as 'Source datum transform' and 'Destination datum transform'.
 
@@ -312,4 +313,4 @@ transformations` group:
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

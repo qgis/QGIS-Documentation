@@ -13,7 +13,7 @@ actual data processing is performed. This can be used to automate tasks that
 should be performed whenever an algorithm is executed.
 
 The syntax of the hooks is identical to the syntax of Processing scripts, see the
-corresponding `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_
+corresponding `chapter <https://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_
 in the QGIS User Guide for more details.
 
 In addition to all scripts features, in hooks you can use a special global
@@ -88,4 +88,4 @@ The hook will be executed before running any Processing algorithm.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

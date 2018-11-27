@@ -114,12 +114,12 @@ contents depend on the active category (tag, smart group, favorites...). For eac
 type of symbols (*Marker* , *Line* or *Fill*) and color ramp, when the tab is
 enabled, you can:
 
-* add new items: press the |signPlus| :sup:`Add item` button and configure the
+* Add new items: press the |signPlus| :sup:`Add item` button and configure the
   item following :ref:`symbols <symbol-selector>` or :ref:`color ramps <color-ramp>`
-  builder description;
-* modify an existing item: select an item and press |symbologyEdit| :sup:`Edit item`
-  button and configure as mentioned above; 
-* delete existing items: to delete a symbol you no longer need, select it and click
+  builder description.
+* Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit item`
+  button and configure as mentioned above. 
+* Delete existing items: to delete a symbol you no longer need, select it and click
   |signMinus| :sup:`Remove item` (also available through right-click).
   The symbol will be deleted from the local symbols database.
 
@@ -177,12 +177,12 @@ You can extend your symbols library by importing new symbols:
 #. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
    |fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog.
 #. In the new dialog, indicate the source of the symbols (it can be an
-   :file:`.xml` file on the disk or a url);
-#. Set whether to |unchecked| :guilabel:`Add to favorites` the items to import;
+   :file:`.xml` file on the disk or a url).
+#. Set whether to |unchecked| :guilabel:`Add to favorites` the items to import.
 #. Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the import
-   of tags associated to the items being imported;
-#. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items;
-#. Select from the preview the symbols you want to add to your library;
+   of tags associated to the items being imported.
+#. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items.
+#. Select from the preview the symbols you want to add to your library.
 #. And press **Import**.
 
 .. _figure_symbol_import:
@@ -661,4 +661,4 @@ viewing the field.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

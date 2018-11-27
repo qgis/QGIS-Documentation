@@ -16,7 +16,7 @@
 QGIS is an open source project developed by a team of dedicated volunteers and
 organisations. We strive to be a welcoming community for people of all race, creed,
 gender and walks of life.
-At any moment, you can `get involved <http://qgis.org/en/site/getinvolved/index.html>`_.
+At any moment, you can `get involved <https://qgis.org/en/site/getinvolved/index.html>`_.
 
 .. index::
    single: Contributors; Authors
@@ -89,7 +89,7 @@ QGIS is a multi-language application and as is, also publishes a documentation
 translated into several languages. Many other languages are being translated
 and would be released as soon as they reach a reasonable percentage of
 translation. If you wish to help improving a language or request a new one,
-please see http://qgis.org/en/site/getinvolved/index.html.
+please see https://qgis.org/en/site/getinvolved/index.html.
 
 The current translations are made possible thanks to:
 
@@ -149,4 +149,4 @@ Ukrainian             Alexander Bruy
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

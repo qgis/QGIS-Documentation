@@ -228,7 +228,7 @@ Geometry Cleaning
 -------------------------------------------------------------------------------
 
 You can get more information for this topic in `this blog entry
-<http://linfiniti.com/?s=cleangeometry>`_.
+<https://linfiniti.com/?s=cleangeometry>`_.
 
 Differences between tables
 -------------------------------------------------------------------------------
@@ -281,4 +281,4 @@ that would otherwise seem cryptic.
 .. |TY| replace:: Try Yourself
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

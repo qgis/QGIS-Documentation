@@ -50,7 +50,7 @@ You can find the *official* Python plugin repository at
 `<https://plugins.qgis.org/>`_.
 
 In order to use the official repository you must obtain an OSGEO ID from the
-`OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_.
+`OSGEO web portal <https://www.osgeo.org/community/getting-started-osgeo/osgeo_userid/>`_.
 
 Once you have uploaded your plugin it will be approved by a staff member and
 you will be notified.
@@ -146,4 +146,4 @@ look like.
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

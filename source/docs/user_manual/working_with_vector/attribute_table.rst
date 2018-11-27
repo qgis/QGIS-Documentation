@@ -138,9 +138,9 @@ Table view vs Form view
 
 QGIS provides two view modes to easily manipulate data in the attribute table:
 
-* the |openTable| Table view, displaying values of multiple features in a
-  tabular mode, each row representing a feature and each column a field;
-* and the |formView| Form view which shows identifiers of features in a first
+* The |openTable| :sup:`Table view`, displays values of multiple features in a
+  tabular mode, each row representing a feature and each column a field.
+* And the |formView| :sup:`Form view` shows identifiers of features in a first
   panel and displays only the attributes of the clicked identifier in the second
   one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
@@ -237,7 +237,7 @@ conditions on feature's:
 * geometry (e.g., identifying multi-parts features, small area ones or in a
   defined map extent...);
 * or field value (e.g., comparing values to a threshold, identifying empty
-  cells...)
+  cells...).
 
 You can enable the conditional formatting panel clicking on
 |conditionalFormatting| at the top right of the attributes window in table
@@ -456,10 +456,10 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
 * using the :ref:`field calculator <vector_field_calculator>`: update in a row
-  a field that may already exist or to be created but for multiple features; it
-  can be used to create virtual fields.
+  a field that may already exist or to be created but for multiple features. It
+  can be used to create virtual fields;
 * using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
-  same as above but for only existing field
+  same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
   multiple fields for multiple features.
 
@@ -546,15 +546,21 @@ Using the Quick Field Calculation Bar
 While Field calculator is always available, the quick field calculation bar on
 top of the attribute table is only visible if the layer is in edit mode. Thanks
 to the expression engine, it offers a quicker access to edit an already existing
-field.
+field:
 
-In quick field calculation bar, you simply need to:
+#. Select the field to update in the drop-down list.
+#. Fill the textbox with a value, an expression you directly write or build using the
+   |expression| expression button.
+#. Click on :guilabel:`Update All`, :guilabel:`Update Selected` or
+   :guilabel:`Update Filtered` button according to your need.
 
-* select the existing field name in the drop-down list
-* fill the textbox with an expression you directly write or build using the
-  |expression| expression button
-* and click on :guilabel:`Update All`, :guilabel:`Update Selected` or :guilabel:`Update Filtered`
-  button according to your need.
+.. _figure_field_calculator_bar:
+
+.. figure:: img/fieldcalculatorbar.png
+   :align: center
+
+   Quick Field Calculation Bar
+
 
 .. index:: Multi edit
 .. _multi_edit_fields:
@@ -567,40 +573,9 @@ different features to be edited simultaneously. When the layer is toggled to
 edit, multi edit capabilities are accessible:
 
 * using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar
-  inside the attribute table dialog,
+  inside the attribute table dialog;
 * or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify
   attributes of selected features` menu.
-
-In order to edit multiple fields in a row:
-
-#. select the features you want to edit;
-#. from the attribute table toolbar, click the |multiEdit| button. This will
-   toggle the dialog to its form view. Feature selection could also be made
-   at this step;
-#. at the right side of the attribute table, fields (and values) of selected
-   features are shown. New widgets appear next to each field allowing for
-   display of the current multi edit state:
-
-   * |multiEditMixedValues| the field contains different values for selected
-     features. It's shown empty and each feature will keep its original value.
-     You can reset the value of the field from the drop-down list of the widget.
-   * |multiEditSameValues| all selected features have the same value for this
-     field and the value displayed in the form will be kept.
-   * |multiEditChangedValues| the field has been edited and the entered value
-     will be applied to all the selected features. A message appears at the top
-     of the dialog, inviting you to either apply or reset your modification.
-
-   Clicking any of these widgets allows you to either set the current value for
-   the field or reset to original value, meaning that you can roll back changes
-   on a field-by-field basis.
-
-#. make the changes to the fields you want and click on **Apply changes** in
-   the upper message text or any other feature in the left panel.
-
-Changes will apply to **all selected features**. If no feature is selected, the
-whole table is updated with your changes. Modifications are made as a single
-edit command. So pressing |undo| :sup:`Undo` will rollback the attribute
-changes for all selected features at once.
 
 .. note::
 
@@ -609,12 +584,44 @@ changes for all selected features at once.
  dialog to fill attributes changes. Hence, features selection is required
  before execution.
 
-.. _figure_field_multiedit:
+In order to edit multiple fields in a row:
 
-.. figure:: img/attribute_multiedit.png
-   :align: center
+#. Select the features you want to edit.
+#. From the attribute table toolbar, click the |multiEdit| button. This will
+   toggle the dialog to its form view. Feature selection could also be made
+   at this step.
+#. At the right side of the attribute table, fields (and values) of selected
+   features are shown. New widgets appear next to each field allowing for
+   display of the current multi edit state:
 
-   Editing fields of multiple features
+   * |multiEditMixedValues| The field contains different values for selected
+     features. It's shown empty and each feature will keep its original value.
+     You can reset the value of the field from the drop-down list of the widget.
+   * |multiEditSameValues| All selected features have the same value for this
+     field and the value displayed in the form will be kept.
+   * |multiEditChangedValues| The field has been edited and the entered value
+     will be applied to all the selected features. A message appears at the top
+     of the dialog, inviting you to either apply or reset your modification.
+
+   Clicking any of these widgets allows you to either set the current value for
+   the field or reset to original value, meaning that you can roll back changes
+   on a field-by-field basis.
+
+   .. _figure_field_multiedit:
+
+   .. figure:: img/attribute_multiedit.png
+      :align: center
+
+      Editing fields of multiple features
+
+#. Make the changes to the fields you want.
+#. Click on **Apply changes** in the upper message text or any other feature
+   in the left panel.
+
+Changes will apply to **all selected features**. If no feature is selected, the
+whole table is updated with your changes. Modifications are made as a single
+edit command. So pressing |undo| :sup:`Undo` will rollback the attribute
+changes for all selected features at once.
 
 .. note::
 
@@ -730,7 +737,7 @@ under actions.
    Identification dialog regions with relation to airports
 
 As you can see, the airports assigned to this particular region are all shown in
-a table. And there are also some buttons available. Let's review them shortly
+a table. And there are also some buttons available. Let's review them shortly:
 
 * The |toggleEditing| button is for toggling the edit mode. Be aware that it
   toggles the edit mode of the airport layer, although we are in the feature
@@ -757,9 +764,9 @@ an alphanumeric table) so the above steps will create an entry in the layer
 attribute table that has no corresponding geometric feature. To add the
 geometry:
 
-#. Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer;
+#. Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer.
 #. Select the record that has been added previously within the feature form of the
-   referenced layer;
+   referenced layer.
 #. Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
    selected attributes table record.
 
@@ -925,6 +932,6 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

@@ -103,7 +103,7 @@ Outputs
 
 See also
 ........
-`GDAL pct2rgb utility <http://www.gdal.org/pct2rgb.html>`_
+`GDAL pct2rgb utility <https://www.gdal.org/pct2rgb.html>`_
 
 
 .. _gdalpolygonize:
@@ -113,7 +113,7 @@ Polygonize (raster to vector)
 Creates vector polygons for all connected regions of pixels in the
 raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
-The algorithm is derived from the `GDAL polygonize utility <http://www.gdal.org/gdal_polygonize.html>`_ .
+The algorithm is derived from the `GDAL polygonize utility <https://www.gdal.org/gdal_polygonize.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -215,7 +215,7 @@ maximize output image visual quality.
 
 If you want to classify a raster map and want to reduce the number of classes it
 can be helpful to downsample your image with this algorithm before.
-The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
+The algorithm is derived from the `GDAL rgb2pct utility <https://www.gdal.org/rgb2pct.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -305,4 +305,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

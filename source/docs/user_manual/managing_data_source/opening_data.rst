@@ -25,21 +25,21 @@ and often write a lot of formats:
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
   GRASS, GPX, KML, Comma Separated Values, and many more...
   Read the complete list of `OGR vector supported formats
-  <http://www.gdal.org/ogr_formats.html>`_;
+  <https://www.gdal.org/ogr_formats.html>`_.
 * Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
   GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
   GDAL Virtual, SRTM, Sentinel Data, and many more...
   Read the complete list of `raster supported formats
-  <http://www.gdal.org/formats_list.html>`_;
+  <https://www.gdal.org/formats_list.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
-  or MSSQL Spatial, MySQL...;
+  or MSSQL Spatial, MySQL...
 * Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
-  also handled by QGIS providers (see :ref:`working_with_ogc`);
+  also handled by QGIS providers (see :ref:`working_with_ogc`).
 * You can also read supported files from archived folders and use QGIS native
   formats such as virtual and memory layers.
 
 As of the date of this document, more than 80 vector and 140 raster formats are
-supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
+supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
@@ -109,12 +109,12 @@ or the datasource format (plain or compressed files, database, web services).
 
 To add a layer into a project, using the :guilabel:`Browser` interface:
 
-#. enable the :guilabel:`Browser` as described above.
+#. Enable the :guilabel:`Browser` as described above.
    A browser tree with your file system, databases and web services is
    displayed. You may need to connect databases and web services before they appear
-   (see dedicated sections);
-#. find the layer in the list;
-#. double-click its name or drag-and-drop it into the :ref:`map canvas
+   (see dedicated sections).
+#. Find the layer in the list.
+#. Double-click its name or drag-and-drop it into the :ref:`map canvas
    <label_mapview>`. Your layer is now added to the :ref:`Layers panel
    <label_legend>` and can be viewed in the map canvas.
 
@@ -374,16 +374,16 @@ options can be used to tweak the data recognition:
 
 * :guilabel:`Number of header lines to discard`: convenient when you want to
   avoid some lines to show in the import, either because those are blank lines
-  or with another formatting;
+  or with another formatting.
 * |checkbox|:guilabel:`First records has field names`: values in the first row
   of data are used as field names, otherwise QGIS adds a fields row of a type
   ``field_1``, ``field_2``...
 * |checkbox|:guilabel:`Detect field types`: automatically recognizes the field
-  type. If unchecked then all attributes are treated as text fields;
+  type. If unchecked then all attributes are treated as text fields.
 * |checkbox|:guilabel:`Decimal separator is comma`: if necessary, you can force
   a comma to be the decimal separator.
 * |checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing
-  spaces from fields;
+  spaces from fields.
 * |checkbox|:guilabel:`Discard empty fields`.
 
 As you set the parser properties, a sample data preview updates at the bottom
@@ -767,11 +767,11 @@ Optionally, you can activate following checkboxes:
 
 * |checkbox| :guilabel:`Only look in metadata table`: restricts the displayed
   tables to those that are in the ``all_sdo_geom_metadata`` view. This can
-  speed up the initial display of spatial tables;
+  speed up the initial display of spatial tables.
 * |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial
-  tables, restrict the search to tables that are owned by the user;
+  tables, restricts the search to tables that are owned by the user.
 * |checkbox| :guilabel:`Also list tables with no geometry`: indicates that
-  tables without geometry should also be listed by default;
+  tables without geometry should also be listed by default.
 * |checkbox| :guilabel:`Use estimated table statistics for the layer metadata`:
   when the layer is set up, various metadata are required for the Oracle table.
   This includes information such as the table row count, geometry type and
@@ -781,9 +781,9 @@ Optionally, you can activate following checkboxes:
   done: Row count is determined from ``all_tables.num_rows``. Table extents
   are always determined with the SDO_TUNE.EXTENTS_OF function, even if a layer
   filter is applied. Table geometry is determined from the first 100
-  non-null geometry rows in the table;
-* |checkbox| :guilabel:`Only existing geometry types`: only list the existing
-  geometry types and don't offer to add others;
+  non-null geometry rows in the table.
+* |checkbox| :guilabel:`Only existing geometry types`: only lists the existing
+  geometry types and don't offer to add others.
 * |checkbox| :guilabel:`Include additional geometry attributes`.
 
 .. _tip_ORACLE_Spatial_layers:
@@ -859,7 +859,7 @@ PostGIS database.
 To load a layer from a database, you can perform the following steps:
 
 #. Open the "Add <database> table(s)" dialog
-   (see :ref:`vector_create_stored_connection`),
+   (see :ref:`vector_create_stored_connection`).
 #. Choose the connection from the drop-down list and click :guilabel:`Connect`.
 #. Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.
 #. Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the
@@ -876,7 +876,7 @@ To load a layer from a database, you can perform the following steps:
    This restriction can be removed or edited in the :menuselection:`Layer
    Properties --> General --> Provider Feature Filter` frame.
 #. The checkbox in the ``Select at id`` column that is activated by default
-   gets the features ids without the attributes and speed in most cases the
+   gets the features ids without the attributes and speeds in most cases the
    data loading.
 #. Click on the :guilabel:`Add` button to add the layer to the map.
 
@@ -896,8 +896,8 @@ To load a layer from a database, you can perform the following steps:
  the Browser:
 
  #. Find the layer to use with the |filterMap| :sup:`Filter Browser` tool at
-    the top the browser panel (see :ref:`browser_panel` for the search options);
- #. select and drag-and-drop it in the map canvas.
+    the top of the browser panel (see :ref:`browser_panel` for the search options).
+ #. Select and drag-and-drop it in the map canvas.
 
 
 QGIS Custom formats
@@ -969,4 +969,4 @@ Description of these capabilities and how-to are provided in chapter
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

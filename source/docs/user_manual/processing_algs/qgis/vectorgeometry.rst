@@ -91,10 +91,10 @@ Parameters
   By default, the embedded table lists all the fields of the source
   layer and allows you to edit them:
 
-  * click the |newAttribute| button to create a new field;
-  * click the |deleteAttribute| to remove a field;
-  * use |arrowUp| and |arrowDown| to change the selected field order;
-  * click |clearText| to reset to the default view.
+  * Click the |newAttribute| button to create a new field.
+  * Click |deleteAttribute| to remove a field.
+  * Use |arrowUp| and |arrowDown| to change the selected field order.
+  * Click |clearText| to reset to the default view.
 
   For each of the fields you'd like to retrieve information from, you need to
   fill the following options:
@@ -356,9 +356,9 @@ Performs a validity check on the geometries of a vector layer.
 The geometries are classified in three groups (valid, invalid and error) and a
 vector layer is generated with the features in each of these categories:
 
-* the **valid** layer contains only the valid features (without topological errors);
-* the **invalid** layer contains all the invalid features found by the algorithm;
-* the **error** layer is the point layer where the invalid features have been found.
+* The **valid** layer contains only the valid features (without topological errors).
+* The **invalid** layer contains all the invalid features found by the algorithm.
+* The **error** layer is the point layer where the invalid features have been found.
 
 The attribute table of each generated vector layer will contain some additional
 information (numbers of error found and type of error):
@@ -2674,6 +2674,7 @@ Parameters
   * 4 --- Move end points only, prefer aligning nodes
   * 5 --- Move end points only, prefer closest point
   * 6 --- Snap end points to end points only
+  * 7 --- Snap to anchor nodes (single layer only)
 
   Default: *Prefer aligning nodes, insert extra vertices where required*
 
@@ -3077,4 +3078,4 @@ Outputs
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

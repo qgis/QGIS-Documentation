@@ -123,9 +123,9 @@ A map theme is a **snapshot** of the current map legend that records:
 
 To create a map theme:
 
-#. Check the layer you want to show;
-#. Configure the layer properties (symbology, diagram, labels...) and, using
-   the :menuselection:`Symbology --> Style -->` menu, click on :guilabel:`Add...` to
+#. Check a layer you want to show.
+#. Configure the layer properties (symbology, diagram, labels...) as usual.
+#. Expand the :menuselection:`Style -->` menu at the bottom and click on :guilabel:`Add...` to
    store the settings as :ref:`a new style embedded in the project
    <manage_custom_style>`.
 
@@ -134,11 +134,11 @@ To create a map theme:
      modifications (eg, change the symbology rendering) to the layer while this
      style is enabled, the map theme is updated with new information.
 
-#. Repeat the previous steps as necessary;
+#. Repeat the previous steps as necessary for the other layers.
 #. If applicable, expand or collapse groups or visible layers nodes in the
    :guilabel:`Layers` panel.
 #. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
-   and :guilabel:`Add Theme...`;
+   and :guilabel:`Add Theme...`.
 #. Enter the map theme's name and click :guilabel:`OK`. The new theme is listed in
    the lower part of the |showMapTheme| drop-down menu.
 
@@ -341,15 +341,15 @@ rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
-  and |rasterHistogram| :guilabel:`histogram` properties in case of raster layer.
-  These options are the same available in :ref:`raster_properties_dialog`;
-* set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
+* Set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
+  and |rasterHistogram| :guilabel:`Histogram` properties in case of raster layer.
+  These options are the same available in :ref:`raster_properties_dialog`.
+* Set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
   |labeling| :guilabel:`Labels` properties in case of vector layer.
-  These options are the same available in :ref:`vector_properties_dialog`;
-* manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
-  (more details at :ref:`manage_custom_style`)
-* follow the whole |history| :guilabel:`History` of changes you applied to the
+  These options are the same available in :ref:`vector_properties_dialog`.
+* Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
+  (more details at :ref:`manage_custom_style`).
+* Follow the whole |history| :guilabel:`History` of changes you applied to the
   layer style in the current project; you can therefore cancel or restore to any
   state by selecting it in the list and hit :guilabel:`Apply` button.
 
@@ -772,7 +772,8 @@ To create a bookmark:
 
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl+B`. The Spatial Bookmark panel opens with the newly created bookmark.
+   :kbd:`Ctrl+B`. The :guilabel:`Spatial Bookmarks` panel opens with the newly
+   created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
 #. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
@@ -793,7 +794,7 @@ panel allows you to:
   Confirm your choice.
 * Import or Export a bookmark: To share or transfer your bookmarks between
   computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
-  in the :guilabel:`Spatial Bookmarks` dialog. All the bookmarks are transferred.
+  to export all bookmarks to an :file:`.xml` file or import them.
 
 You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
 
@@ -1014,20 +1015,20 @@ To add an annotation, select the corresponding tool and click on the map canvas.
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
-* at the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
+* At the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
   or :file:`ui` file depending on the type of annotation. For text annotation,
   you have instead to enter your message in a text box and set its rendering with
-  provided font tools;
+  provided font tools.
 * |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
   is based on a screen position (instead of the map), meaning that it's always shown
-  regardless the map canvas extent;
+  regardless the map canvas extent.
 * :guilabel:`Linked layer`: allows the annotation to be associated with a map layer
-  and visible only when that layer is visible;
+  and visible only when that layer is visible.
 * :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, allows to
   set the symbol to display at the balloon anchor position (shown only when
-  :guilabel:`Fixed map position` is checked);
+  :guilabel:`Fixed map position` is checked).
 * :guilabel:`Frame style`: Allows to set the frame background color, transparency,
-  stroke color or width... of the balloon using QGIS symbols;
+  stroke color or width... of the balloon using QGIS symbols.
 * :guilabel:`Contents margins`: set interior margins of the annotation frame.
 
 .. _figure_annotation:
@@ -1143,7 +1144,7 @@ The :guilabel:`Info` section in the dialog explains how calculations are made
 according to CRS settings available.
 
 .. %FixMe: currently, validating the Settings --> Options dialog revert any change
-   made on units in the measurement dialog (see http://hub.qgis.org/issues/15436
+   made on units in the measurement dialog (see https://issues.qgis.org/issues/15436
    bug or not? should it be documented?)
 
 .. _figure_measure_length:
@@ -1477,14 +1478,6 @@ should be identified:
   identify features from. Operates like a right-click. Only the chosen features
   will be shown in the result panel.
 
-.. note:: **Identify tool configuration**
-
-   You can configure the identify feature in :menuselection:`Project -->
-   Properties...` in the :guilabel:`Identify Layers` tab. The table allows
-   you to select layer(s) whose features can be identified with by this tool
-   (column :guilabel:`Identifiable`). You can also put this layer in read-only
-   mode with the checkbox in the last column.
-
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
@@ -1536,7 +1529,7 @@ of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the layer (including symbology, labeling, fields and form definition, 
+or interact with the layer (including symbology, labeling, fields and form definition,
 actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
@@ -1723,9 +1716,9 @@ variables overwritten by lower level ones are strike through.
 
 .. note:: You can read more about variables and find some examples
    in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1
-   <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
-   `part 2 <http://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
-   and `part 3 <http://nyalldawson
+   <https://nyalldawson.net/2015/12/exploring-variables-in-qgis-2-12-part-1/>`_,
+   `part 2 <https://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_
+   and `part 3 <https://nyalldawson
    .net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_
    blog posts.
 
@@ -1982,7 +1975,7 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows following ent
  When the data-defined override option is setup correctly the
  icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
  the icon is red |dataDefineError| or |dataDefineExpressionError|.
- 
+
  You can enable or disable a configured |dataDefined| :sup:`data-defined
  override` button by simply clicking the widget with the mouse right button.
 
@@ -2218,7 +2211,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

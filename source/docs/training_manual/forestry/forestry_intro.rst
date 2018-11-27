@@ -21,18 +21,18 @@ Forestry Sample Data
 -------------------------------------------------------------------------------
 
 .. note:: The sample data used in this module is part of the training manual
- data set and can be `downloaded here  <http://qgis.org/downloads/data/training_manual_exercise_data.zip>`_.
+ data set and can be `downloaded here  <https://qgis.org/downloads/data/training_manual_exercise_data.zip>`_.
  Download the zip file and extract the :file:`forestry\\` folder into your
  :file:`exercise_data\\` folder.
 
 The forestry related sample data (forestry map, forest data), has been provided
-by the `EVO-HAMK forestry school <http://www.hamk.fi/tietoa-hamkista/kartat-ja-toimipaikat/Sivut/evo.aspx>`_.
+by the `EVO-HAMK forestry school <https://www.hamk.fi/tietoa-hamkista/kartat-ja-toimipaikat/Sivut/evo.aspx>`_.
 The datasets have been modified to adapt to the lessons needs.
 
 The general sample data (aerial images, LiDAR data, basic maps) has been
 obtained from the National Land Survey of Finland open data service, and adapted
 for the purposes of the exercises. The open data file download service can be
-accessed in English `here <http://www.maanmittauslaitos.fi/en/file_download_service>`_.
+accessed in English `here <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_.
 
 
 .. warning::
@@ -50,4 +50,4 @@ accessed in English `here <http://www.maanmittauslaitos.fi/en/file_download_serv
    source folder.
 
 .. |LS| replace:: Lesson:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

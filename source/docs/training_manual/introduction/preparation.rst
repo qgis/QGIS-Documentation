@@ -64,7 +64,7 @@ your work.
 |moderate| |FA| Load a layer from GeoPackage
 -------------------------------------------------------------------------------
 
-`GeoPackage <http://www.geopackage.org/>`_ is an open format for storing
+`GeoPackage <https://www.geopackage.org/>`_ is an open format for storing
 geospatial data. QGIS adds a lot of support to this new format that is slowly
 replacing the ESRI Shapefile format.
 
@@ -74,15 +74,15 @@ file).
 
 In order to load a layer from a GeoPackage:
 
-#. Click on the |dataSourceManager| button;
-#. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab;
+#. Click on the |dataSourceManager| button.
+#. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab.
 #. Click on the :guilabel:`New` button and browse to the :file:`training_data.gpkg`
-   file in the Training Data folder you have downloaded before;
+   file in the Training Data folder you have downloaded before.
 #. Select the file and press :guilabel:`Open`. The file path is now added to and shown
-   in the drop-down menu;
+   in the drop-down menu.
 #. Click on :guilabel:`Connect` button.
    You should see in the central part of the window the list of all the layers
-   contained in the GeoPackage file;
+   contained in the GeoPackage file.
 #. Select the :file:`roads` layer and click on the :guilabel:`Add` button.
 
 .. image:: img/add_data_dialog_geopackage.png
@@ -125,4 +125,4 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -252,7 +252,7 @@ Raster specific parameters
 * :guilabel:`Resolution`
 * :guilabel:`Create Options`: advanced options (file compression, block sizes,
   colorimetry...) to fine tune the output file. See the `gdal-ogr
-  <http://gdal.org>`_ driver documentation.
+  <https://www.gdal.org>`_ driver documentation.
 * :guilabel:`Pyramids` creation
 * :guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create VRT`
 * :guilabel:`No data values`
@@ -272,7 +272,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Format`: exports to any vector format GDAL can write to, such as
   GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
   SpatiaLite, CSV, KML, ODS...
-* :guilabel:`Layer name` depending on the selected format;
+* :guilabel:`Layer name` depending on the selected format
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set
@@ -297,7 +297,7 @@ Depending on the format of export, some of these options are available or not:
      the data as a hidden attribute. Only some formats can handle this kind of
      information. KML, DXF and TAB file formats are such formats. For advanced
      users, you can read the `OGR Feature Styles specification
-     <http://www.gdal.org/ogr_feature_style.html>`_ document.
+     <https://www.gdal.org/ogr_feature_style.html>`_ document.
 
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
   output layer
@@ -306,8 +306,8 @@ Depending on the format of export, some of these options are available or not:
     set to **Automatic**, otherwise removes or overrides it with any type. You
     can add an empty geometry column to an attribute table, remove the geometry
     column of a spatial layer.
-  * :guilabel:`Force multi-type`: force creation of multi-geometry features in
-    the layer
+  * :guilabel:`Force multi-type`: forces creation of multi-geometry features in
+    the layer.
   * :guilabel:`Include z-dimension` to geometries.
 
 .. tip::
@@ -319,7 +319,7 @@ Depending on the format of export, some of these options are available or not:
 
 * :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure some advanced
-  parameters. See the `gdal-ogr <http://gdal.org>`_ driver documentation.
+  parameters. See the `gdal-ogr <https://www.gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
 
@@ -624,6 +624,6 @@ used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em

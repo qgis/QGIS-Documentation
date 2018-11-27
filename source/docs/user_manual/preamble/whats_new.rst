@@ -14,11 +14,11 @@ previous releases.
 
 This release includes hundreds of bug fixes and many new features and
 enhancements over |QGIS_CURRENT|_ that will be described in this manual.
-You may also review the visual changelogs at http://qgis.org/en/site/forusers/visualchangelogs.html.
+You may also review the visual changelogs at https://qgis.org/en/site/forusers/visualchangelogs.html.
 
 
 .. |QGIS_CURRENT| replace:: QGIS 2.18
-.. _QGIS_CURRENT: http://docs.qgis.org/2.18/en/docs/
+.. _QGIS_CURRENT: https://docs.qgis.org/2.18/en/docs/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -27,4 +27,4 @@ You may also review the visual changelogs at http://qgis.org/en/site/forusers/vi
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

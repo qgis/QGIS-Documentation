@@ -97,26 +97,34 @@ List of functions
 =================
 
 The :guilabel:`Expression` tab provides the main interface to write expressions
-using functions, layer's fields and values. It contains widgets to:
+using functions, layer's fields and values. It contains following widgets:
 
-* type expressions using functions and/or fields. At the bottom of the dialog,
-  an :guilabel:`Output preview` displays the result of the expression evaluated
-  on the first feature of the layer.
-* select the appropriate function among a list, organized in groups. A search box
-  is available to filter the list and quickly find a particular function or field.
-  Double-clicking on the item's name adds it to the expression being written.
-* display help for each function selected. When a field is selected, this widget
-  shows a sample of its values. Double-clicking a value adds it to the expression.
+* An expression editor area to type or paste expressions. Autocompletion is
+  available to speed expression writing:
 
-As the expression is being written, QGIS checks its rightness and highlights
-all the errors using:
+  * Corresponding variables, function names and field names to the input text
+    are shown below: use the :kbd:`Up` and :kbd:`Down` arrows to browse the
+    items and press :kbd:`Tab` to insert in the expression or simply click
+    on the wished item.
+  * Function parameters are shown while filling them.
 
-* *Underline*: for unknown functions, wrong or invalid arguments;
-* *Marker*: for every other error (eg, missing parenthesis, unexpected
-  character) at a single location.
+  QGIS also checks the expression rightness and highlights all the errors using:
 
-In case of error, the :guilabel:`Output preview` indicates it and you can access
-details with the provided hyperlink.
+  * *Underline*: for unknown functions, wrong or invalid arguments;
+  * *Marker*: for every other error (eg, missing parenthesis, unexpected
+    character) at a single location.
+
+* Under the expression editor, an :guilabel:`Output preview` displays the result
+  of the expression evaluated on the first feature of the layer. In case of
+  error, it indicates it and you can access details with the provided hyperlink.
+* A function selector displays the list of functions, variables, fields...
+  organized in groups. A search box is available to filter the list and quickly
+  find a particular function or field.
+  Double-clicking an item adds it to the expression editor.
+* A help panel displays help for each selected item in the function selector.
+* A field's values widget shown when a field is selected in the function selector
+  helps to fetch features attributes. Double-clicking a value adds it to the
+  expression editor.
 
 .. tip::
 
@@ -1385,20 +1393,23 @@ particular needs that would not be covered by the predefined functions.
 
 To create a new function:
 
-#. press the |tabEditorConsole| :guilabel:`New file` button;
-#. enter a name to use in the form that pops up and press :guilabel:`OK`;
-#. a new item of the name you provide is added in the left panel of the
-   :guilabel:`Function Editor` tab; this is a Python :file:`.py` file stored in
-   the :file:`/python/expressions` folder under the active user profile directory;
-#. the right panel displays the content of the file: a python script template.
-   Update the code and its help according to your needs; 
-#. press the |start| :guilabel:`Load` button.
-#. the function you wrote is added to the functions tree in the :guilabel:`Expression`
-   tab, by default under the ``Custom`` group;
-#. enjoy your new function;
-#. if the function requires improvements, enable the :guilabel:`Function Editor`
-   tab, do the changes and press the |start| :guilabel:`Load` button to make
-   them available in the file, hence in any expression.
+#. Press the |signPlus| :sup:`New File` button.
+#. Enter a name to use in the form that pops up and press :guilabel:`OK`.
+
+   A new item of the name you provide is added in the left panel of the
+   :guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on
+   QGIS template file and stored in the :file:`/python/expressions` folder
+   under the active user profile directory.
+#. The right panel displays the content of the file: a python script template.
+   Update the code and its help according to your needs.
+#. Press the |start| :guilabel:`Save and Load Functions` button.
+   The function you wrote is added to the functions tree in the :guilabel:`Expression`
+   tab, by default under the ``Custom`` group.
+#. Enjoy your new function.
+#. If the function requires improvements, enable the :guilabel:`Function Editor`
+   tab, do the changes and press again the |start| :guilabel:`Save and Load
+   Functions` button to make them available in the file, hence in any expression
+   tab.
    
 Custom Python functions are stored under the user profile directory, meaning that at
 each QGIS startup, it will auto load all the functions defined with the current user
@@ -1433,11 +1444,14 @@ When using the ``args='auto'`` function argument the number of function
 arguments required will be calculated by the number of arguments the function
 has been defined with in Python (minus 2 - ``feature``, and ``parent``).
 
-This function then can be used with the following expression:
+This function can then be used in expressions:
 
-.. code-block:: python
+.. _figure_expression_custom_function:
 
-   my_sum('field1', 'field2')
+.. figure:: img/customFunction.png
+   :align: center
+
+   Custom Function added to the Expression tab
 
 
 Further information about creating Python code can be found in the
@@ -1460,8 +1474,8 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |tabEditorConsole| image:: /static/common/iconTabEditorConsole.png
-   :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

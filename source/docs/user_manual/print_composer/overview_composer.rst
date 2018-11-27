@@ -217,12 +217,12 @@ Layout menu
 
 The :menuselection:`Layout` provides action to manage the layout:
 
-* Save the project file directly from the print layout window;
-* Create a new and blank print layout with |newLayout| :guilabel:`New Layout...`;
+* Save the project file directly from the print layout window.
+* Create a new and blank print layout with |newLayout| :guilabel:`New Layout...`.
 * |duplicateLayout| :guilabel:`Duplicate Layout...` : Create a new print layout
-  by duplicating the current one;
-* Remove the current layout with |deleteSelected| :guilabel:`Delete Layout...`;
-* Open the |layoutManager| :guilabel:`Layout Manager...`
+  by duplicating the current one.
+* Remove the current layout with |deleteSelected| :guilabel:`Delete Layout...`.
+* Open the |layoutManager| :guilabel:`Layout Manager...`.
 * :menuselection:`Layouts -->` : Open an existing print layout.
 
 Once the layout is designed, with |fileSaveAs| :guilabel:`Save as Template`
@@ -457,20 +457,20 @@ Depending on where you right-click in the print layout dialog, you open a
 contextual menu with various features:
 
 * Right-click on the menu bar or any toolbar and you get the list of layout
-  panels and toolbars you can enable or disable in one-click;
+  panels and toolbars you can enable or disable in one-click.
 * Right-click over a ruler and you can |checkbox| :guilabel:`Show Guides`,
   |checkbox| :guilabel:`Snap to Guides`, :guilabel:`Manage Guides...` opening
   the :ref:`Guides panel <layout_guides_panel>` or :guilabel:`Clear Guides`.
   It's also possible to hide the rulers.
 * Right-click in the print layout canvas and:
 
-  * you'll be able to :guilabel:`Undo` and :guilabel:`Redo` recent changes, or
-    :guilabel:`Paste` any copied item (only available if no item is selected);
-  * if you click over a page, you can additionally access the current :ref:`Page
-    Properties <page_properties>` panel or :guilabel:`Remove Page`;
-  * if you click on a selected item then you can cut or copy it as well as open
+  * You'll be able to :guilabel:`Undo` and :guilabel:`Redo` recent changes, or
+    :guilabel:`Paste` any copied item (only available if no item is selected).
+  * If you click over a page, you can additionally access the current :ref:`Page
+    Properties <page_properties>` panel or :guilabel:`Remove Page`.
+  * If you click on a selected item then you can cut or copy it as well as open
     the :ref:`Item Properties <layout_item_options>` panel.
-  * if more than one item are selected, then you can either group them and/or
+  * If more than one item are selected, then you can either group them and/or
     ungroup if at least one group is already in the selection.
 * Right-click inside a text box or spinbox widget of any layout panel provides
   edit options to manipulate its content.
@@ -731,9 +731,9 @@ Note that a selected row is shown as bold.
 
 For any selected item, you can :
 
-* |showAllLayers| set it visible or not,
-* |locked| lock or unlock its position,
-* order its Z position. You can move up and down each item in the list with a
+* |showAllLayers| set it visible or not;
+* |locked| lock or unlock its position;
+* sort its Z position. You can move up and down each item in the list with a
   click and drag. The upper item in the list will be brought to the foreground
   in the print layout canvas.
   By default, a newly created item is placed in the foreground.
@@ -891,7 +891,7 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |vectorGrid| image:: /static/common/vector_grid.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png

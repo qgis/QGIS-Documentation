@@ -31,7 +31,7 @@ and are automatically part of every QGIS distribution. They are written in one
 of two languages: **C++** or **Python**.
 
 Most of External Plugins are currently written in Python. They are stored either
-in the 'Official' QGIS Repository at http://plugins.qgis.org/plugins/ or in
+in the 'Official' QGIS Repository at https://plugins.qgis.org/plugins/ or in
 external repositories and are maintained by the individual authors. Detailed
 documentation about the usage, minimum QGIS version, home page, authors,and
 other important information are provided for the plugins in the Official
@@ -47,7 +47,7 @@ Installed external python plugins are placed under the
 
 * ``~`` represents the HOME directory which on |win| Windows is usually something
   like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-  or :file:`C:\\Users\\(user)`;
+  or :file:`C:\\Users\\(user)`.
 * and ``(UserProfile)`` represents the active profile folder, which for the
   QGIS ``default`` user profile is:
 
@@ -258,6 +258,6 @@ directly from their repository.
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

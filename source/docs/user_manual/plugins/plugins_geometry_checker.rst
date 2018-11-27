@@ -14,7 +14,10 @@ Geometry Checker is a powerful core plugin to check and fix the geometry
 validity of a layer. It is available from the :menuselection:`Vector -->`
 |geometryChecker| :menuselection:`Geometry Checker` menu.
 
-The :guilabel:`Geometry Checker` dialog show different grouped settings in the
+Configuring the checks
+----------------------
+
+The :guilabel:`Geometry Checker` dialog shows different grouped settings in the
 first tab (:guilabel:`Setup`):
 
 * :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
@@ -62,18 +65,18 @@ button.
 
 The *Geometry Checker Plugin* can find the following errors:
 
-* Self intersections: a polygon with a self intersection,
-* Duplicate nodes: two duplicates nodes in a segment
-* Holes: hole in a polygon,
-* Segment length: a segment length lower than a threshold,
-* Minimum angle: two segments with an angle lower than a threshold,
-* Minimum area: polygon area lower than a threshold,
+* Self intersections: a polygon with a self intersection;
+* Duplicate nodes: two duplicates nodes in a segment;
+* Holes: hole in a polygon;
+* Segment length: a segment length lower than a threshold;
+* Minimum angle: two segments with an angle lower than a threshold;
+* Minimum area: polygon area lower than a threshold;
 * Silver polygon: this error come from very small polygon (with small area) with
-  a large perimeter,
-* Duplicates features,
-* Feature within feature,
-* Overlaps: polygon overlapping,
-* Gaps: gaps between polygons
+  a large perimeter;
+* Duplicates features;
+* Feature within feature;
+* Overlaps: polygon overlapping;
+* Gaps: gaps between polygons.
 
 The following figure shows the different checks made by the plugin.
 
@@ -83,6 +86,9 @@ The following figure shows the different checks made by the plugin.
    :align: center
 
    Some checks supported by the plugin
+
+Analysing the results
+---------------------
 
 The results appear in the second tab (:guilabel:`Result`) and as an overview
 layer of the errors in the canvas (its name has the default prefix
@@ -95,24 +101,24 @@ At the bottom of this table, you can :guilabel:`Export` the error into different
 formats. You also have a counter with the number of total errors and fixed ones.
 
 You can select a row to see the location of the error. You can change this
-behaviour by selecting another action between |radioButtonOn| :guilabel:`Error`
+behavior by selecting another action between |radioButtonOn| :guilabel:`Error`
 (default), |radioButtonOff| :guilabel:`Feature`, |radioButtonOff|
 :guilabel:`Don't move`, and |checkbox| :guilabel:`Highlight contour of selected
 features`.
 
 Below the zoom action when clicking on the table row, you can:
-|featureInTable| :guilabel:`Show selected features in attribute table`,
-|success| :guilabel:`Fix selected errors using default resolution` and
-|success| :guilabel:`Fix selected errors, prompt for resolution method`.
-In the latter you will see a window to choose the resolution's method among
-which:
 
-* Merge with neighboring polygon with longest shared edge,
-* Merge with neighboring polygon with largest area,
-* Merge with neighboring polygon with identical attribute value, if any, or
-  leave as is
-* Delete feature
-* No action
+* |fromSelectedFeature| :guilabel:`Show selected features in attribute table`;
+* |success| :guilabel:`Fix selected errors using default resolution`;
+* |success| :guilabel:`Fix selected errors, prompt for resolution method`.
+  You will see a window to choose the resolution's method among which:
+
+  * Merge with neighboring polygon with longest shared edge;
+  * Merge with neighboring polygon with largest area;
+  * Merge with neighboring polygon with identical attribute value, if any, or
+    leave as is;
+  * Delete feature;
+  * No action.
 
 .. tip:: **Fix multiple errors**
 
@@ -135,7 +141,7 @@ by attribute value`.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |featureInTable| image:: /static/common/mActionFromSelectedFeature.png
+.. |fromSelectedFeature| image:: /static/common/mActionFromSelectedFeature.png
    :width: 1em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
@@ -149,4 +155,4 @@ by attribute value`.
    :width: 2.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

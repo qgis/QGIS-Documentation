@@ -174,10 +174,10 @@ represented accurately.
 -------------------------------------------------------------------------------
 
 Materials for the *Advanced* section of this lesson were taken from `this
-article <http://tinyurl.com/75b92np>`_.
+article <https://anitagraser.com/2012/03/18/beautiful-global-projections-adding-custom-projections-to-qgis/>`_.
 
 Further information on Coordinate Reference Systems is available `here
-<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_.
+<https://linfiniti.com/dla/worksheets/7_CRS.pdf>`_.
 
 |WN|
 -------------------------------------------------------------------------------
