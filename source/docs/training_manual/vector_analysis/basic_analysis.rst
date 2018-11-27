@@ -51,6 +51,9 @@ To answer these questions, we're going to need the following data:
 All of this data is available through OSM and you should find that the dataset
 you have been using throughout this manual can also be used for this lesson.
 
+If you want to download data from another area jump to
+:ref:`Introduction Chapter <tm_preparing_data>` section to read how to do it.
+
 .. note:: Although OSM downloads have consistent data fields, the coverage and
     detail does vary. If you find that your chosen region does not contain
     information on restaurants, for example, you may need to chose a different
@@ -63,8 +66,8 @@ you have been using throughout this manual can also be used for this lesson.
 We first need to load the data to work with.
 
 * Start a new QGIS project;
-* Before loading all the data we will add a background map. Open the :guilabel:`Browser`
-  and load the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
+* If you want you can add a background map. Open the :guilabel:`Browser` and load
+  the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
 
 .. image:: img/osm_swellendam.png
    :align: center
@@ -92,18 +95,24 @@ Some of the roads in OSM dataset are listed as ``unclassified``, ``tracks``,
 ``path`` and ``footway``. We want to exclude these from our dataset and focus on
 the other road types, more suitable for this exercise.
 
+Moreover, OSM data might not be updated everywhere and we will also exclude
+``NULL`` values.
+
 Right click on the :guilabel:`roads` layer and choose :guilabel:`Filter...`. In
 the dialog that pops up we can filter these features with the following
 expression::
 
-  "highway" NOT IN ('footway','path','unclassified','track')
+  "highway" NOT IN ('footway','path','unclassified','track') OR "highway" != NULL
 
 The concatenation of the two operators ``NOT`` and ``IN`` means to exclude all
 the unwanted features that have these attributes in the ``highway`` field.
 
-You will note the |indicatorFilter| icon next to the :guilabel:`roads` layer that
-helps you to remember that this layer has a filter activated and not all features
-are shown in the map.
+``!= NULL`` combined with the ``OR`` operator is excluding roads with no values
+in the ``highway`` field.
+
+You will note the |indicatorFilter| icon next to the :guilabel:`roads` layer
+that helps you remember that this layer has a filter activated and not all the
+features are available in the project.
 
 The map with all the data should look like the following one:
 
@@ -119,11 +128,11 @@ change the layers' CRS. To do this, we need to select each layer in turn,
 save the layer to a new one with our new projection, then import that new
 layer into our map.
 
-You have many different options: you can export each layer as a new Shapefile,
-you can append the layers to an existing GeoPackage file or you can create another
-GeoPackage file and fill it with the new reprojected layers. We will
-show the last option so the :file:`training_data.gpkg` will remain clean. But
-feel free to choose the best workflow for yourself.
+You have many different options, e.g. you can export each layer as a new
+Shapefile, you can append the layers to an existing GeoPackage file or you can
+create another GeoPackage file and fill it with the new reprojected layers. We
+will show the last option so the :file:`training_data.gpkg` will remain clean.
+But feel free to choose the best workflow for yourself.
 
 .. note:: In this example, we are using the
     :guilabel:`WGS 84 / UTM zone 34S` CRS, but you may use a UTM CRS which is
@@ -131,9 +140,10 @@ feel free to choose the best workflow for yourself.
 
 * Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel;
 * Click :menuselection:`Export --> Save Features As...`;
-* In the :menuselection:`Save Vector Layer As` dialog, choose the following
-  settings and click :guilabel:`OK` (make sure you checked
-  :guilabel:`Add saved file to map`);
+* In the :menuselection:`Save Vector Layer As` dialog be sure to change the
+  :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`, fill the
+  other parameters as in the following pictures and click :guilabel:`OK` (make
+  sure you checked :guilabel:`Add saved file to map`);
 
 .. image:: img/save_roads_34S.png
    :align: center
@@ -199,14 +209,15 @@ Projected Coordinate System that uses meter as its basic measurement unit.
 You can use the combo box to choose other projected units like kilometers, yards,
 etc.
 
-.. warning:: If you are trying to make a buffer on a layer with a Geographical
+.. note:: If you are trying to make a buffer on a layer with a Geographical
     Coordinate System, Processing will warn you and suggest to reproject the
     layer to a metric Coordinate System.
 
-* By default Processing creates temporary layers and adds them to the :guilabel:`Layers`
-  panel. You can easily append the result to the GeoPackage database by clicking
-  on the |browseButton| button adn choose :guilabel:`Save to GeoPackage...`. Name
-  the new layer :guilabel:`roads_buffer_50m` and save it in the :file:`vector_analysis.gpkg`
+* By default Processing creates temporary layers and adds them to the
+  :guilabel:`Layers` panel. You can also append the result to the GeoPackage
+  database by clicking on the |browseButton| button and choose
+  :guilabel:`Save to GeoPackage...`. Name the new layer
+  :guilabel:`roads_buffer_50m` and save it in the :file:`vector_analysis.gpkg`
   file;
 
   .. image:: img/buffer_saving.png
@@ -254,8 +265,8 @@ Now there are no unnecessary subdivisions.
 
 Use the same approach as above and create a buffer for your schools.
 
-It needs to be :guilabel:`1 km` in radius, and saved under the usual directory as
-:guilabel:`schools_buffer_1km_dissolved.shp`.
+It needs to be :guilabel:`1 km` in radius. Save the new layer in the
+:file:`vector_analysis.gpkg` file.
 
 :ref:`Check your results <vector-analysis-basic-1>`
 
