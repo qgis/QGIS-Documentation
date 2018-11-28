@@ -80,11 +80,11 @@ and 1.3.0 specifications:
 +---------------+----------+----------------------------------+
 | Parameter     | Required | Description                      |
 +===============+==========+==================================+
-| SERVICE       | Yes      | Name of the service              |
+| SERVICE       | Yes      | Name of the service (WMS)        |
 +---------------+----------+----------------------------------+
 | VERSION       | No       | Version of the service           |
 +---------------+----------+----------------------------------+
-| REQUEST       | Yes      | Name of the request              |
+| REQUEST       | Yes      | Name of the request (GetMap)     |
 +---------------+----------+----------------------------------+
 | LAYERS        | No       | Layers to display                |
 +---------------+----------+----------------------------------+
@@ -893,13 +893,13 @@ GetCapabilities
 Standard parameters for the **GetCapabilities** request according to the OGC WMTS 1.0.0
 specifications:
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| SERVICE       | Yes      | Name of the service              |
-+---------------+----------+----------------------------------+
-| REQUEST       | Yes      | Name of the request              |
-+---------------+----------+----------------------------------+
++---------------+----------+-----------------------------------------------+
+| Parameter     | Required | Description                                   |
++===============+==========+===============================================+
+| SERVICE       | Yes      | Name of the service (WMTS)                    |
++---------------+----------+-----------------------------------------------+
+| REQUEST       | Yes      | Name of the request (GetCapabilities)         |
++---------------+----------+-----------------------------------------------+
 
 |
 
@@ -955,9 +955,9 @@ specifications:
 +---------------+----------+----------------------------------+
 | Parameter     | Required | Description                      |
 +===============+==========+==================================+
-| SERVICE       | Yes      | Name of the service              |
+| SERVICE       | Yes      | Name of the service (WMTS)       |
 +---------------+----------+----------------------------------+
-| REQUEST       | Yes      | Name of the request              |
+| REQUEST       | Yes      | Name of the request (GetTile)    |
 +---------------+----------+----------------------------------+
 | LAYER         | Yes      | Layer identifier                 |
 +---------------+----------+----------------------------------+
@@ -1116,9 +1116,9 @@ WMTS 1.0.0 specifications:
 +---------------+----------+-----------------------------------------------+
 | Parameter     | Required | Description                                   |
 +===============+==========+===============================================+
-| SERVICE       | Yes      | Name of the service                           |
+| SERVICE       | Yes      | Name of the service (WMTS)                    |
 +---------------+----------+-----------------------------------------------+
-| REQUEST       | Yes      | Name of the request                           |
+| REQUEST       | Yes      | Name of the request (GetFeatureInfo)          |
 +---------------+----------+-----------------------------------------------+
 | LAYER         | Yes      | Layer identifier                              |
 +---------------+----------+-----------------------------------------------+
