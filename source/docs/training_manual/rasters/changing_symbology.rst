@@ -19,7 +19,7 @@ data properly so that it becomes properly visible and useful.
    :file:`exercise_data/raster/SRTM/`;
 #. Once it appears in the :guilabel:`Layers` Panel, rename it to ``DEM``;
 #. Zoom to the extent of this layer by right-clicking on it in the Layer List
-   and selecting :guilabel:`Zoom to Layer Extent`.
+   and selecting :guilabel:`Zoom to Layer`.
 
 This dataset is a *Digital Elevation Model (DEM)*. It's a map of the elevation
 (altitude) of the terrain, allowing us to see where the mountains and valleys
@@ -46,12 +46,8 @@ You have basically two different options to change the raster symbology:
    by right-clicking on the layer in the Layer tree and selecting
    :guilabel:`Properties` option. Then switch to the :guilabel:`Symbology` tab;
 #. By clicking on the |symbology| button right above the :guilabel:`Layers` Panel.
-   This will open the :guilabel:`Layer Styling` Panel where you can switch to the
-   :guilabel:`Symbology` tab
-
-The :guilabel:`Layer Styling` Panel applies immediately the changes to the layer
-while with the :guilabel:`Layer Properties` you have to click on :guilabel:`OK`
-to close the dialog and apply the changes.
+   This will open the :guilabel:`Layer Styling` anel where you can switch to the
+   :guilabel:`Symbology` tab.
 
 Choose the method you prefer to work with.
 
@@ -61,14 +57,14 @@ Choose the method you prefer to work with.
 When you load a raster file, if it is not a photo image like the ones of the previous
 section, the default style is set to a grayscale gradient.
 
-Let's explore some of these features of this renderer.
+Let's explore some of the features of this renderer.
 
 .. image:: img/dem_layer_properties.png
    :align: center
 
 The default :guilabel:`Color gradient` is set to ``Black to white``, meaning
-that pixel values are black and while high values in white. Try to invert this
-setting to ``White to black`` and see the results.
+that low pixel values are black and while high values are white. Try to invert
+this setting to ``White to black`` and see the results.
 
 Very important is the :guilabel:`Contrast enhancement` parameter: by default it
 is set to ``Stretch to MinMax`` meaning that the grayscale is stretched to the
@@ -91,9 +87,6 @@ and use them for the stretch:
 #. **Mean +/- standard deviation**: the values will be calculated according to
    the mean value and the standard deviation.
 
-Each time you change the option click on the :guilabel:`Apply` to load the
-values and on :guilabel:`OK` to confirm and close the dialog.
-
 
 |basic| |FA| Singleband pseudocolor
 -------------------------------------------------------------------------------
@@ -104,9 +97,9 @@ Grayscales are not always great styles for raster layers. Let's try to make the
 * Change the :guilabel:`Render type` to :guilabel:`Singleband pseudocolor`:
   if you don't like the default colors loaded, click on :guilabel:`Color ramp`
   and change them;
-* Click the :guilabel:`Classify` button to generate a new color classification,
-  if it is not genereated automatically and finally click on the :guilabel:`OK`
-  button to apply this classification to the DEM.
+* Click the :guilabel:`Classify` button to generate a new color classification;
+* If it is not generated automatically click on the :guilabel:`OK` button to
+  apply this classification to the DEM.
 
 .. image:: img/dem_pseudocolor_properties.png
    :align: center
@@ -116,14 +109,17 @@ You'll see the raster looking like this:
 .. image:: img/pseudocolor_raster.png
    :align: center
 
-This is an interesting way of looking at the DEM.
+This is an interesting way of looking at the DEM. You'll now see that the values
+of the raster are again properly displayed, with the darker colors representing
+valleys and the lighter ones, mountains.
 
 
 |FA| Changing the transparency
 -------------------------------------------------------------------------------
 
-Sometimes changing the transparency of the whole raster layer can help you to see
-other layers covered by the raster itself to better understand the study area.
+Sometimes changing the transparency of the whole raster layer can help you to
+see other layers covered by the raster itself and better understand the study
+area.
 
 To change the transparency of the whole raster switch to the :guilabel:`Transparency`
 tab and use the slider of the :guilabel:`Global Opacity` to lower the opacity:
@@ -142,10 +138,12 @@ menu in :guilabel:`Transparency` has some useful methods:
 
 * By clicking on the |signPlus| button you can add a range of values and set the
   transparency percentage of each range chosen;
-* For single values the |contextHelp| button is more useful. When you click on it
-  the dialog disappears and you can interact with the map. Click on a corner
-  of the raster file and you will see that the transparency table will be
-  automatically filled with the clicked values:
+* For single values the |contextHelp| button is more useful;
+* Click on the |contextHelp| button. The dialog disappearing and you can
+  interact with the map;
+* Click on a corner of the raster file;
+* You will see that the transparency table will be automatically filled with the
+  clicked values:
 
   .. image:: img/click_transparency.png
      :align: center
@@ -155,7 +153,7 @@ menu in :guilabel:`Transparency` has some useful methods:
   .. image:: img/good_raster.png
      :align: center
 
-  See? The corners are know 100% transparent.
+  See? The corners are now 100% transparent.
 
 
 |IC|
@@ -163,8 +161,9 @@ menu in :guilabel:`Transparency` has some useful methods:
 
 These are only the basic functions to get you started with raster symbology.
 QGIS also allows you many other options, such as symbolizing a layer using
-paletted/unique values or representing different bands with different colors in
-a multispectral image.
+paletted/unique values, representing different bands with different colors in
+a multispectral image or making an automatic hillshade effect (useful only with
+DEM raster files).
 
 Reference
 -------------------------------------------------------------------------------
