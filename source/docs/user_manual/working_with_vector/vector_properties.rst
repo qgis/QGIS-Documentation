@@ -800,7 +800,7 @@ features of the layer:
   of your vector layer to your needs. You can also make a precise definition of
   the percentage of visibility in the the menu beside the slider.
 
-* :guilabel:`Blending mode` at :guilabel:`Layer` and :guilabel:`Feature` levels:
+* :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
   You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
@@ -824,7 +824,7 @@ features of the layer:
   The first rule is applied
   to all the features in the layer, z-ordering them according to their returned value.
   Then, within each group of features with the same value (including those with
-  NULL value) and thus same z-level, the next rule is applied to sort them.
+  NULL value) and thus the same z-level, the next rule is applied to sort them.
   And so on...
 
 .. _figure_layer_rendering:
