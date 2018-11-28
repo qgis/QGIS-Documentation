@@ -46,7 +46,7 @@ layout to different file formats, and it is possible to modify the resolution
 Export settings
 ===============
 
-Whenever you export a print layout, there are a bunch of export settings QGIS needs
+Whenever you export a print layout, there are a selection of export settings QGIS needs
 to check in order to return the most appropriate output. These configurations
 are:
 
