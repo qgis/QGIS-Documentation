@@ -21,7 +21,7 @@ def get_subst_from_file(file):
 
     # defines a pattern for a substitution
     # anything inside || except is preceded by ..
-    s_pattern = re.compile(r"(?<!\.\. )\|([\w\d]+)\|")
+    s_pattern = re.compile(r"(?<!\.\. )\|([\w\d-]+)\|")
     s_title = re.compile(r"\.\. Substitutions definitions - AVOID EDITING "
                          r"PAST THIS LINE\n")
     subs = []
@@ -96,10 +96,10 @@ def read_subst(file):
     subs_dict = dict()
 
     # Create patterns for image, width and replace substitutions
-    image_pattern = re.compile(r"\.\. \|([\w\d\s]+)\|\s+image::\s+([^\n]+)")
+    image_pattern = re.compile(r"\.\. \|([\w\d\s-]+)\|\s+image::\s+([^\n]+)")
     width_pattern = re.compile(r"\s+:width:\s+([^\n]+)")
-    replace_pattern = re.compile(r"\.\. \|([\w\d\s]+)\|\s+replace::\s+([^\n]+)")
-    unicode_pattern = re.compile(r"\.\. \|([\w\d\s]+)\|\s+unicode::\s+([^\n]+)")
+    replace_pattern = re.compile(r"\.\. \|([\w\d\s-]+)\|\s+replace::\s+([^\n]+)")
+    unicode_pattern = re.compile(r"\.\. \|([\w\d\s-]+)\|\s+unicode::\s+([^\n]+)")
 
     # read substitutions file line by line searching for pattern matches
     with open (file, "r") as f:
