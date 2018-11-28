@@ -22,9 +22,9 @@ environment.
 -------------------------------------------------------------------------------
 
 Raster data can be loaded with the same methods we used for vector data.
-However we really suggest to use the :guilabel:`Browser` Panel.
+However we suggest to use the :guilabel:`Browser` Panel.
 
-* Open the :guilabel:`Browser` Panel and open the :file:`exercise_data/raster`
+* Open the :guilabel:`Browser` Panel and expand the :file:`exercise_data/raster`
   folder.
 * Load all the data in this folder:
 
@@ -56,22 +56,29 @@ create a **Virtual Raster**. This is also often called a *Catalog*, which
 explains its function. It's not really a new raster. Rather, it's a way to
 organize your existing rasters into one catalog: one file for easy access.
 
-To make a catalog we will use the |toolbox|.
+To make a catalog we will use the :menuselection:`Processing --> Toolbox`.
 
 #. Open the :guilabel:`Build virtual raster` algorithm from the
    :menuselection:`GDAL --> Raster miscellaneous`;
 #. In the dialog that appears click on the |browseButton| button next to the
-    :guilabel:`Input layers` parameter and check all the layers or use the
-    :guilabel:`Select All` button;
-#. Uncheck the :guilabel:`Place each input file into a separate band` parameter;
+   :guilabel:`Input layers` parameter and check all the layers or use the
+   :guilabel:`Select All` button;
+#. Uncheck the :guilabel:`Place each input file into a separate band` parameter-
+   Notice the text field below. What this dialog is actually doing is that it's
+   writing that text for you. It's a long command that QGIS is going to run.
+
+   .. note:: Keep in mind that you can copy and paste the text in the
+       ``OSGeo Shell`` (Windows user) or ``Terminal`` (Linux and OSX users) to run
+       the command. You can also create script with each GDAL command. This is very
+       handy when the procedure is taking a long time or when you want to schedule
+       specific tasks. Refer always to the :guilabel:`Help` button to get more help
+       on the syntax GDAL commands.
+
 #. Finally click on :guilabel:`Run`.
 
 .. note:: As you know from the previous modules, :guilabel:`Processing` creates
     temporary layers by default. If you want you can click on the |browseButton|
     button to save the file on the disk.
-
-Notice the text field below. What this dialog is actually doing is that it's
-writing that text for you. It's a long command that QGIS is going to run.
 
 .. image:: img/build_virtual_raster.png
    :align: center
@@ -79,12 +86,6 @@ writing that text for you. It's a long command that QGIS is going to run.
 You can now remove the original four rasters from the :guilabel:`Layers` Panel
 and leave only the output virtual catalog rater.
 
-.. note::  |hard| Keep in mind that you can copy and paste the text in the
-    ``OSGEO Shell`` (Windows user) or ``Terminal`` (Linux and OSX users) to run
-    the command. You can also create script with this each GDAL command. This
-    is very handy when the procedure is taking a long time or when you want to
-    schedule specific tasks. Refer always to the :guilabel:`Help` button to get
-    more help on the syntax or the GDAL command ``gdalbuildvrt``.
 
 |hard| Transforming Raster Data
 -------------------------------------------------------------------------------
@@ -111,6 +112,14 @@ multithreaded processing mode and many other options are available.
 Merging rasters
 ...............................................................................
 
+If you need to create a new raster layer and save it to disk you can use the
+merge algorithm.
+
+.. note:: Depending on how many raster files you are merging and their resolution,
+    the new raster file created can be really big. Consider instead to create
+    a raster catalog as described in the
+    :ref:`Create a Virtual Raster <tm_virtual_raster>` section.
+
 Click on the :guilabel:`Merge` algorithm from the
 :menuselection:`GDAL --> Raster miscellaneous` menu.
 
@@ -120,9 +129,8 @@ the |browseButton| to choose which layers you want to merge.
 You can merge Virtual raster as input file too, and all of the rasters that it
 consists of will be processed.
 
-You can also add your own command line options by opening the
-:guilabel:`Advanced parameters` menu, but you need to know the GDAL library
-syntax.
+You can also add your own options by opening the :guilabel:`Advanced parameters`
+menu, if you know the GDAL library.
 
 .. image:: img/merge_rasters.png
    :align: center
