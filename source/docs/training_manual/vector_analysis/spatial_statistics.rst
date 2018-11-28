@@ -27,12 +27,12 @@ want to create the points in.
 We'll use the area covered by streets.
 
 * Start a new project.
-* Add your :guilabel:`roads` layer, as well as the :guilabel:`srtm_41_19_4326`
+* Add your :guilabel:`roads` layer, as well as the :guilabel:`srtm_41_19`
   raster file (elevation data) found in :file:`exercise_data/raster/SRTM/`.
 
 .. note:: You might find that your SRTM DEM layer has a different CRS to that of
     the roads layer. QGIS is reprojecting both layers in a single CRS. For the
-    following exercises it does not matters this difference, but feel free to
+    following exercises this difference does not matter, but feel free to
     reproject a layer in another CRS as shown in this module.
 
 * Open |toolbox|.
@@ -74,11 +74,13 @@ Sampling the data
 * To create a sample dataset from the raster, you'll need to use the
   :menuselection:`Raster Analysis --> Sample raster values` algorithm within
   |toolbox|. This tool samples the raster at the points locations and copies the
-  raster values in another field.
+  raster values in other field(s) depending on how many bands the raster is made
+  of.
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
   the SRTM raster as the band to get values from. The default name of the new
-  field is ``rvalue``, change it if you want:
+  field is ``rvalue_N``, where ``N`` is the number of the raster band. You can
+  change the name of the prefix if you want:
 
   .. image:: img/sample_raster_dialog.png
      :align: center
@@ -92,8 +94,8 @@ A possible sample layer is shown here:
 .. image:: img/random_samples_result.png
    :align: center
 
-The sample points are classified by their value such that red points are at
-a higher altitude.
+The sample points are classified by their ``rvalue_1`` field such that red
+points are at a higher altitude.
 
 You'll be using this sample layer for the rest of the statistical exercises.
 
@@ -165,16 +167,16 @@ Missing (null) values
 |basic| |FA| Compute a Distance Matrix
 -------------------------------------------------------------------------------
 
-* Create a new point layer.
-* Enter edit mode and digitize three point somewhere among the other points.
+* Create a new point layer as a ``Temporary layer``.
+* Enter edit mode and digitize three points somewhere among the other points.
 * Alternatively, use the same random point generation method as before, but
   specify only **three** points.
-* Save your new layer as :guilabel:`Distance Points` in the format you prefer.
+* Save your new layer as :guilabel:`distance_points` in the format you prefer.
 
 To generate a distance matrix using these points:
 
 * Open the tool :menuselection:`Vector Analysis --> Distance matrix`.
-* Select the :guilabel:`Distance Points` layer as the input layer, and the
+* Select the :guilabel:`distance_points` layer as the input layer, and the
   :guilabel:`Sampled Points` layer as the target layer.
 * Set it up like this:
 
@@ -183,13 +185,18 @@ To generate a distance matrix using these points:
 
 * If you want you can save the output layer as a file or just run the algorithm
   and save the temporary output layer in a second moment.
-* Click **[Run]** to generate the distance matrix layer.
+* Click :guilabel:`Run` to generate the distance matrix layer.
 * Open the attribute table of the generated layer: values refer to the distances
-  between the :guilabel:`Distance Points` layer and the first two points found of
-  the :guilabel:`Sampled Points` one:
+  between the :guilabel:`distance_points` features and their two nearest points
+  in the :guilabel:`Sampled Points` layer:
 
 .. image:: img/distance_matrix_example.png
    :align: center
+
+The distance matrix calculates distance statistics among each point of the input
+layer and points of the target layer. Each field of the output layer contains
+information of the mean, standard deviation, minimum and maximum distance of
+the points.
 
 |basic| |FA| Nearest Neighbor Analysis
 -------------------------------------------------------------------------------
@@ -199,7 +206,7 @@ To do a nearest neighbor analysis:
 * Click on the menu item :menuselection:`Vector analysis --> Nearest neighbor
   analysis`.
 * In the dialog that appears, select the :guilabel:`Random points` layer and
-  click **[Run]**.
+  click :guilabel:`Run`.
 * The results will appear in the Processing :guilabel:`Result Viewer` Panel.
 
   .. image:: img/result_viewer.png
@@ -218,7 +225,7 @@ To get the mean coordinates of a dataset:
 * Click on the :menuselection:`Vector analysis --> Mean coordinate(s)` menu item.
 * In the dialog that appears, specify :guilabel:`Random points` as the input
   layer, but leave the optional choices unchanged.
-* Click **[Run]**.
+* Click :guilabel:`Run`.
 
 Let's compare this to the central coordinate of the polygon that was used to
 create the random sample.
@@ -228,7 +235,11 @@ create the random sample.
   layer.
 
 As you can see from the example below, the mean coordinates (pink point) and the
-center of the study area (in green) don't necessarily coincide:
+center of the study area (in green) don't necessarily coincide.
+
+The centroid is the barycenter of the layer (the barycenter of a square is the
+center of the square) while the mean coordinates represent the average of all
+node coordinates.
 
 .. image:: img/polygon_centroid_mean.png
    :align: center
@@ -263,7 +274,7 @@ visible red line marking the frequency of values higher than about ``250``.
 .. note:: If the mean and maxmimum values are not the same as those of the example,
     it can be due to the min/max value calculation. Open the :guilabel:`Symbology`
     tab and expand the :guilabel:`Min / Max Value Settings` menu. Choose
-    ``Min / max`` ans and click on **[Apply]**.
+    ``|radioButtonOn| Min / max`` and click on :guilabel:`Apply`.
 
 Therefore, keep in mind that a histogram shows you the distribution of values,
 and not all values are necessarily visible on the graph.
@@ -278,15 +289,14 @@ some idea of what the terrain looks like.
 
 To start, launch the
 :menuselection:`GDAL --> Raster analysis --> Grid (IDW with nearest neighbor searching)`
-tool within |toolbox| pippo.
+tool within |toolbox|.
 
-* In the :guilabel:`Vector layer` parameter, select :guilabel:`Sampled points`.
-  parameter and click on the |signPlus| button.
+* In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`
 * Set ``5.0`` as the :guilabel:`Weighting power`.
-* Finally click on **[Run]** and wait untill the algorithm ends.
-* In the :guilabel:`Advanced parameters` set :guilabel:`rvlaue_1` for the
+* In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the
   :guilabel:`Z value from field` parameter.
-* Close the dialog
+* Finally click on :guilabel:`Run` and wait until the algorithm ends.
+* Close the dialog.
 
 Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
@@ -299,20 +309,24 @@ As you can see, 100 sample points aren't really enough to get a detailed
 impression of the terrain. It gives a very general idea, but it can be
 misleading as well.
 
-|moderate| |TY|
+|moderate| |TY| Different interpolation methods
 -------------------------------------------------------------------------------
 
 * Use the processes shown above to create a new set of ``10 000`` random points.
+
+  .. note:: If the points amount is really big the processing time can take a
+      long time.
+
 * Use these points to sample the original DEM.
 * Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this
   new dataset as above.
-* Set the :guilabel:`Power` and :guilabel:`Smoothing` set to ``5.0`` and ``2.0``,
+* Set the :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``,
   respectively.
 
 The results (depending on the positioning of your random points) will look more
 or less like this:
 
-.. image:: img/interpolation_comparison_1000.png
+.. image:: img/interpolation_comparison_10000.png
    :align: center
 
 This is a much better representation of the terrain, due to the much greater
@@ -344,11 +358,10 @@ rasters? That's what we'll do in the next module!
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
