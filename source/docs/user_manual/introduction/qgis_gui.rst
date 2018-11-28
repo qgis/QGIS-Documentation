@@ -19,7 +19,7 @@ QGIS GUI
 .. index::
    single: Main window
 
-When QGIS starts, you are presented with the GUI as shown in the figure (the
+When QGIS starts, a GUI displays as shown in the figure below (the
 numbers 1 through 5 in yellow circles are discussed below).
 
 .. _figure_startup:
