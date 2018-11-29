@@ -255,12 +255,18 @@ afterwards.
 
 ``--nocustomization`` option
 
-Using this option, existing GUI customization will not be applied
-at startup.
+Using this option, any existing :ref:`GUI customization<sec_customization>`
+will not be applied at startup. This means that any hidden buttons, menu items,
+toolbars, and so on, will show up on QGIS start up. This is not a permanent
+change. The customization will be applied again if QGIS is launched without
+this option.
+
+This option is useful for temporarily allow access to tools that have been
+removed by customization.
 
 .. _custom_commandline:
 
-``--customizationfile`` 
+``--customizationfile``
 
 Using this option, you can define a UI customization file, that
 will be used at startup.
@@ -309,9 +315,13 @@ the layer the name 'Alaska' using the following command::
 
 On load, **permanently resets** the user interface (UI) to the default settings.
 This option will restore the panels and toolbars visibility, position, and size.
-
 Unless it's changed again, the default UI settings will be used in the following
 sessions.
+
+Notice that this option doesn't have any effect on :ref:`GUI
+customization<sec_customization>`. Itens hidden by GUI customization (e.g. the
+status bar) will remain hidden even using the ``--defaultui`` option. See also
+the ``--nocustomization`` option.
 
 ``--hide-browser`` option
 
