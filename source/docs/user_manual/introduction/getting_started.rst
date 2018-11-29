@@ -257,7 +257,7 @@ afterwards.
 
 ``--nocustomization`` option
 
-Using this option, any existing :ref:`GUI customization<sec_customization>`
+Using this option, any existing :ref:`GUI customization <sec_customization>`
 will not be applied at startup. This means that any hidden buttons, menu items,
 toolbars, and so on, will show up on QGIS start up. This is not a permanent
 change. The customization will be applied again if QGIS is launched without
