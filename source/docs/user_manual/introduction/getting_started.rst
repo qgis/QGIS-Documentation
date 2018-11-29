@@ -210,13 +210,14 @@ returns::
 
 This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have many projects and want to generate
-snapshots from your data.
+snapshots from your data, or when you need to regularily create snapshots of the
+same project with updated data.
 
 Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
 using the ``--width`` and ``--height`` arguments. The filename can
 be added after ``--snapshot``. For example::
 
-  qgis --width 1000 --height 600 --snapshot my_image.png
+  qgis --snapshot my_image.png --width 1000 --height 600 --project my_project.qgs
 
 ``--lang``  option
 
@@ -233,11 +234,12 @@ open with all layers in the given file loaded.
 ``--extent`` option
 
 To start with a specific map extent use this option. You need to add the
-bounding box of your extent in the following order separated by a comma:
+bounding box of your extent in the following order separated by a comma::
 
-::
+  --extent xmin,ymin,xmax,ymax
 
-    --extent xmin,ymin,xmax,ymax
+This option probably makes more sense when paired with the ``--project`` option
+to open a specific project at the desired extent.
 
 ``--nologo`` option
 
@@ -245,7 +247,7 @@ This option hides the splash screen when you start QGIS.
 
 ``--noversioncheck`` option
 
-Don't check for new version of QGIS at startup.
+Skip searching for a new version of QGIS at startup.
 
 ``--noplugins`` option
 
@@ -274,21 +276,21 @@ will be used at startup.
 ``--globalsettingsfile`` option
 
 Using this option, you can specify the path for a Global Settings
-file (.ini), also known as the Default Settings. The settings in the specified
+file (``.ini``), also known as the Default Settings. The settings in the specified
 file replace the original inline default ones, but the user profiles'
 settings will be set on top of those.
 
 Presently, there's no way to specify a file to write settings to; therefore,
 you can create a copy of an original settings file, rename, and adapt it.
 
-Setting the qgis_global_setting.ini file path to a network shared folder, allows
-a system administrator to change global settings and defaults in several
-machines by only editing one file.
+Setting the :file:`qgis_global_setting.ini` file path to a network shared
+folder, allows a system administrator to change global settings and defaults in
+several machines by only editing one file.
 
 ``--authdbdirectory`` option
 
-This option is similar to the one above but define the path to the
-directory where the authentication database will be stored.
+This option is similar to ``--globalsettingsfile``, but defines the path to the
+directory where the authentication database will be stored and loaded.
 
 ``--code`` option
 
@@ -350,8 +352,8 @@ options are available:
 
 ``--take-screenshots`` option
 
-Take screenshots for the user documentation. Can be used together with
-``--screenshots-categories`` to filter for which categories/sections of the
+Takes screenshots for the user documentation. Can be used together with
+``--screenshots-categories`` to filter which categories/sections of the
 documentation screenshots should be created (see QgsAppScreenShots::Categories).
 
 ``--profile`` option
@@ -414,7 +416,8 @@ We will use:
 #. To improve readability of labels, you can add a white buffer around them
    by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
-#. Click **[Apply]**. Check if the result looks good, and finally click **[OK]**.
+#. Click :guilabel:`Apply`. Check if the result looks good, and finally click
+   :guilabel:`OK`.
 
 You can see how easy it is to visualize raster and vector layers in QGIS. Let's
 move on to learn more about the available functionality, features and settings,
