@@ -321,7 +321,7 @@ Unless it's changed again, the default UI settings will be used in the following
 sessions.
 
 Notice that this option doesn't have any effect on :ref:`GUI
-customization<sec_customization>`. Itens hidden by GUI customization (e.g. the
+customization<sec_customization>`. Items hidden by GUI customization (e.g. the
 status bar) will remain hidden even using the ``--defaultui`` option. See also
 the ``--nocustomization`` option.
 
