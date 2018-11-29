@@ -263,7 +263,7 @@ toolbars, and so on, will show up on QGIS start up. This is not a permanent
 change. The customization will be applied again if QGIS is launched without
 this option.
 
-This option is useful for temporarily allow access to tools that have been
+This option is useful for temporarily allowing access to tools that have been
 removed by customization.
 
 .. _custom_commandline:
