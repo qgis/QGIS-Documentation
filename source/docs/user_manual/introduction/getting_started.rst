@@ -181,7 +181,7 @@ returns::
           [--dxf-map-theme maptheme]      map theme to use for dxf output
           [--take-screenshots output_path]        take screen shots for the user documentation
           [--screenshots-categories categories]   specify the categories of screenshot to be used (see QgsAppScreenShots::Categories).
-          [--profile name]        load a named profile from the users profiles folder.
+          [--profile name]        load a named profile from the user's profiles folder.
           [--profiles-path path]  path to store user profile folders. Will create profiles inside a {path}\profiles folder
           [--version-migration]   force the settings migration from older version if found
           [--openclprogramfolder]         path to the folder containing the sources for OpenCL programs.
