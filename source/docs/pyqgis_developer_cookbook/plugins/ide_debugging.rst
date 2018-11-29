@@ -30,7 +30,7 @@ If you used the OSGeo4W Installer, you can find this under the ``bin`` folder
 of your OSGeo4W install. Look for something like
 :file:`C:\\OSGeo4W\\bin\\qgis-unstable.bat`.
 
-For using `Pyscripter IDE <http://code.google.com/p/pyscripter>`_, here's what
+For using `Pyscripter IDE <https://github.com/pyscripter/pyscripter>`_, here's what
 you have to do:
 
 * Make a copy of :file:`qgis-unstable.bat` and rename it ``pyscripter.bat``.
@@ -84,7 +84,7 @@ Installation
 To use Eclipse, make sure you have installed the following
 
 * `Eclipse <https://eclipse.org>`_
-* `Aptana Eclipse Plugin <http://www.aptana.com/products/studio3/success_plugin.html>`_ or `PyDev <http://www.pydev.org>`_
+* `Aptana Studio 3 Plugin <www.aptana.com/>`_ or `PyDev <https://www.pydev.org>`_
 * QGIS 2.x
 
 Preparing QGIS
@@ -264,4 +264,4 @@ And when the application hits your breakpoint you can type in the console!
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

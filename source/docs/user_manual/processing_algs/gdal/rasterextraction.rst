@@ -17,7 +17,8 @@ Raster extraction
 Clip raster by extent
 ---------------------
 Clips any GDAL-supported raster file to a given extent.
-The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Extraction`
 
@@ -77,7 +78,8 @@ Outputs
 Clip raster by mask layer
 -------------------------
 Clips any GDAL-supported raster by a vector mask layer.
-The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Extraction`
 
@@ -150,7 +152,8 @@ Outputs
 Contour
 -------
 Extracts contour lines from any GDAL-supported elevation raster.
-The algorithm is derived from the `GDAL contour utility <http://www.gdal.org/gdal_contour.html>`_ .
+
+This algorithm is derived from the `GDAL contour utility <https://www.gdal.org/gdal_contour.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Extraction`
 
@@ -214,4 +217,4 @@ Outputs
    source folder.
 
 .. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

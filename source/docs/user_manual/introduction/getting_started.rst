@@ -29,8 +29,8 @@ Installing QGIS is easy. Standard installers are available
 for MS Windows |win| and MacOS |osx|. Binary packages (rpm and deb) or
 software repositories are provided for many flavors of GNU/Linux |nix|.
 
-For more information and instructions for your operating system check
-http://download.qgis.org.
+For more information and instructions for your operating system check 
+https://download.qgis.org.
 
 Installing from source
 ----------------------
@@ -38,7 +38,7 @@ Installing from source
 If you need to build QGIS from source, please refer to the installation
 instructions. They are distributed with the QGIS source code in a file
 called :file:`INSTALL`. You can also find them online at
-http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html.
+https://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html.
 
 If you want to build a particular release, you should replace ``master`` by the
 release branch (commonly in the ``release-X_Y`` form) in the above-mentioned
@@ -71,14 +71,14 @@ you may do one of the following:
 
 * Use GIS data that you already have
 * Download sample data from
-  http://qgis.org/downloads/data/qgis_sample_data.zip
+  https://qgis.org/downloads/data/qgis_sample_data.zip
 * Uninstall QGIS and reinstall with the data download option checked (only recommended if
   the above solutions are unsuccessful)
 
 |nix| |osx| For GNU/Linux and macOS, there are no dataset installation
 packages available as rpm, deb or dmg. To use the sample dataset, download the
 file :file:`qgis_sample_data` as a ZIP archive from
-http://qgis.org/downloads/data/ and unzip the archive
+https://qgis.org/downloads/data/ and unzip the archive
 on your system.
 
 The Alaska dataset includes all GIS data that are used for the examples and
@@ -111,7 +111,7 @@ units feet. The EPSG code is 2964.
 
 If you intend to use QGIS as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
-official GRASS GIS website, http://grass.osgeo.org/download/sample-data/.
+official GRASS GIS website, https://grass.osgeo.org/download/sample-data/.
 
 .. index:: Start QGIS, Stop QGIS
 
@@ -579,6 +579,6 @@ Other ways to produce output files are:
    :width: 1em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

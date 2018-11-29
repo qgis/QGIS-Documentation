@@ -21,7 +21,7 @@ any Debian based distribution like Ubuntu and its derivatives.
 -------------------------------------------------------------------------------
 
 In this lesson we're going to do only the install from packages as shown
-`here <http://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
+`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
 
 First add the QGIS repository by creating the
 :file:`/etc/apt/sources.list.d/debian-qgis.list` file with the following
@@ -30,8 +30,8 @@ content:
 .. code-block:: sourceslist
 
  # latest stable
- deb http://qgis.org/debian stretch main
- deb-src http://qgis.org/debian stretch main
+ deb https://qgis.org/debian stretch main
+ deb-src https://qgis.org/debian stretch main
 
 After you add the ``gis.org`` repository public key to your apt keyring (follow
 the above link on how to do it) you can run the ``apt-get update`` command
@@ -79,7 +79,7 @@ like:
  Content-Length: 206
  Content-Type: text/xml; charset=utf-8
 
- <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
+ <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
  </ServiceExceptionReport>
 
@@ -94,7 +94,7 @@ In order to access on the installed QGIS server from an Internet Browser we
 need to use an HTTP server.
 
 In this lesson we're going to use the
-`Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
+`Apache HTTP server <https://httpd.apache.org>`_, colloquially called Apache.
 
 First we need to install Apache by running the following command in a terminal:
 ``apt-get install apache2 libapache2-mod-fcgid``.
@@ -121,7 +121,7 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv PYTHONIOENCODING UTF-8
    FcgidInitialEnv LANG "en_US.UTF-8"
 
-   # QGIS log (different from apache logs) see http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
+   # QGIS log (different from apache logs) see https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
    FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
@@ -134,7 +134,7 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
    FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
 
-   # See http://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
+   # See https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
    SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
    FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
 
@@ -234,7 +234,7 @@ In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
 that tells QGIS Server instances to use display no. 99. If you're running the
 Server in Desktop then there's no need to install xvfb and you should simply
 comment with ``#`` this specific setting in the configuration file.
-More info at http://www.itopen.it/qgis-server-setup-notes/.
+More info at https://www.itopen.it/qgis-server-setup-notes/.
 
 Now that Apache knows that he should answer requests to http://qgis.demo
 we also need to setup the client system so that it knows who ``qgis.demo``
@@ -263,7 +263,7 @@ should output:
 
 .. code-block:: xml
 
-  <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
+  <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
   </ServiceExceptionReport>
 
@@ -351,4 +351,4 @@ The topic of the next lesson is to learn how to access QGIS Server WMS services.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

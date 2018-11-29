@@ -54,7 +54,7 @@ any text or coding within QGIS.
 
 .. Use for all urls. Otherwise, it is not clickable in the document.
 
-* Hyperlinks: http://qgis.org
+* Hyperlinks: https://qgis.org
 * Keystroke Combinations: Press :kbd:`Ctrl+B`, meaning press and hold the Ctrl
   key and then press the B key.
 * Name of a File: :file:`lakes.shp`
@@ -127,6 +127,6 @@ platform-specific icon at the end of the figure caption.
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

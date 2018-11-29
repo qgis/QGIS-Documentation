@@ -192,13 +192,13 @@ Usually when you use Google, you enter your search phrase into the Google
 Search bar. But in this case, you want your computer to do this for you. The
 way you tell Google to search for something (if you don't want to use its
 search bar directly) is by giving your Internet browser the address
-:kbd:`http://www.google.com/search?q=SEARCH_PHRASE`, where
-:kbd:`SEARCH_PHRASE` is what you want to search for. Since we don't know what
+``https://www.google.com/search?q=SEARCH_PHRASE``, where
+``SEARCH_PHRASE`` is what you want to search for. Since we don't know what
 phrase to search for yet, we'll just enter the first part (without the search
 phrase).
 
 * In the :guilabel:`Action` field, write
-  :kbd:`http://www.google.com/search?q=`. Remember to add a space after your
+  ``https://www.google.com/search?q=``. Remember to add a space after your
   initial command before writing this in!
 
 Now you want QGIS to tell the browser to tell Google to search for the value of
@@ -216,13 +216,13 @@ This will tell QGIS to add the phrase next:
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the
-address :kbd:`http://www.google.com/search?q=[% "name" %]`. But :kbd:`[%
+address ``https://www.google.com/search?q=[% "name" %]``. But :kbd:`[%
 "name" %]` tells QGIS to use the contents of the :kbd:`name` field as the
 phrase to search for.
 
 So if, for example, the landuse area you click on is named
-:kbd:`Marloth Nature Reserve`, then QGIS is going to send the browser to
-:kbd:`http://www.google.com/search?q=Marloth%20Nature%20Reserve`, which will
+``Marloth Nature Reserve``, then QGIS is going to send the browser to
+``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, which will
 cause your browser to visit Google, which will in turn search for
 "Marloth Nature Reserve".
 
@@ -265,7 +265,7 @@ webkit based html widget) to display the content in a pop up window.
 Instead of Google, let's use Wikipedia this time. So the URL you request will
 look like this:
 
-:kbd:`http://wikipedia.org/wiki/SEARCH_PHRASE`
+``https://wikipedia.org/wiki/SEARCH_PHRASE``
 
 To create the layer action:
 
@@ -275,8 +275,9 @@ To create the layer action:
 
   * :guilabel:`Type`: :kbd:`Python`
   * :guilabel:`Name`: :kbd:`Wikipedia`
-  * :guilabel:`Action` (all on one line):
-    :kbd:`from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('http://wikipedia.org/wiki/[% "name" %]')); myWV.show()`
+  * :guilabel:`Action` (all on one line)::
+
+     from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
 
 .. image:: img/python_action_example.png
    :align: center
@@ -333,4 +334,4 @@ analyze this data to solve problems. That's the topic of the next module.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

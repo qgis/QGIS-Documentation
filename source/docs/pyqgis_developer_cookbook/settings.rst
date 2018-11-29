@@ -30,7 +30,7 @@ We can make difference between several types of settings:
   framework by the means of :class:`QSettings` class. By default, this class stores
   settings in system's "native" way of storing settings, that is --- registry
   (on Windows), .plist file (on macOS) or .ini file (on Unix). The
-  `QSettings documentation <http://doc.qt.io/qt-4.8/qsettings.html>`_
+  `QSettings documentation <https://doc.qt.io/archives/qt-4.8/qsettings.html>`_
   is comprehensive, so we will provide just a simple example
 
   ::
@@ -104,4 +104,4 @@ We can make difference between several types of settings:
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

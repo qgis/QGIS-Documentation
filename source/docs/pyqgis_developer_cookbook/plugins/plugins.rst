@@ -75,7 +75,7 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-`Here <http://www.dimitrisk.gr/qgis/creator/>`_
+`Here <https://www.dimitrisk.gr/qgis/creator/>`_
 is an online automated way of creating the basic files (skeleton) of a typical
 QGIS Python plugin.
 
@@ -197,7 +197,7 @@ An example for this metadata.txt
   tags=wkt,raster,hello world
 
   ; these metadata can be empty, they will eventually become mandatory.
-  homepage=http://www.itopen.it
+  homepage=https://www.itopen.it
   icon=icon.png
 
   ; experimental flag (applies to the single version)
@@ -579,4 +579,4 @@ Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.o
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

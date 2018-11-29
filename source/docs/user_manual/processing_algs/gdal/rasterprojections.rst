@@ -16,8 +16,9 @@ Raster projections
 
 Assign projection
 -----------------
-Applies a coordinate system to a raster dataset. 
-The algorithm is derived from the the `GDAL edit utility <https://www.gdal.org/gdal_edit.html>`_ .
+Applies a coordinate system to a raster dataset.
+
+This algorithm is derived from the the `GDAL edit utility <https://www.gdal.org/gdal_edit.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
@@ -37,7 +38,8 @@ Extract projection |34|
 -----------------------
 Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
-The algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
+
+This algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
@@ -73,7 +75,8 @@ Warp (reproject)
 ----------------
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
-The algorithm is derived from the `GDAL warp utility <https://www.gdal.org/gdalwarp.html>`_ .
+
+This algorithm is derived from the `GDAL warp utility <https://www.gdal.org/gdalwarp.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
@@ -153,4 +156,4 @@ Outputs
    source folder.
 
 .. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -5,7 +5,7 @@
 Vector simplification and smoothing
 ====================================
 
-Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_ 
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
 
 .. note:: This chapter shows how simplify vectors, and smooth out sharp corners.
 
@@ -36,4 +36,4 @@ raster, to GPS tracks with sparse vertices, etc.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

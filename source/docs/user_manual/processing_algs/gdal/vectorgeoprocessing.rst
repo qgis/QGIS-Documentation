@@ -17,7 +17,8 @@ Vector geoprocessing
 Clip vector by extent
 ----------------------
 Clips any OGR-supported vector file to a given extent.
-The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+
+This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -48,7 +49,8 @@ Outputs
 Clip vector by polygon
 -----------------------
 Clips any OGR-supported vector layer by a polygon.
-The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+
+This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -79,4 +81,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

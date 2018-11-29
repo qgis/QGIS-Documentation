@@ -109,13 +109,25 @@ QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
 NGINX
 .....
 
-You can also use QGIS Server with `NGINX <http://nginx.org/>`_. Unlike Apache,
-NGINX does not automatically spawn a FastCGI process. Actually, you have to use
-another component to start these processes.
+You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
+NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
+to be started by something else.
 
-To do that on Debian based systems, you may use **fcgiwrap** or **spawn-fcgi**
-based on your preferences to run QGIS Server. In both case, you have to install
-NGINX:
+On Debian-based systems, you may use **fcgiwrap** or **spawn-fcgi** to start
+and manage the QGIS Server processes. Official Debian packages exist for both.
+
+.. note::
+
+    fcgiwrap is easier to set up than spawn-fcgi, because it's already wrapped
+    in a Systemd service. But it also leads to a solution that is much slower
+    than using spawn-fcgi. With fcgiwrap a new QGIS Server process is created
+    on each request, meaning that the QGIS Server initialization process, which
+    includes reading and parsing the QGIS project file, is done on each request.
+    With spawn-fcgi, the QGIS Server process remains alive between requests,
+    resulting in much better performance. For that reason, spawn-fcgi
+    is recommended for production use.
+
+Install NGINX:
 
 .. code-block:: bash
 
@@ -125,8 +137,8 @@ NGINX:
 fcgiwrap
 ^^^^^^^^
 
-If you want to use fcgiwrap to run QGIS Server, you firstly have to install
-the corresponding package:
+If you want to use `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
+to run QGIS Server, you first have to install the corresponding package:
 
 .. code-block:: bash
 
@@ -156,8 +168,8 @@ QGIS Server is now available at http://localhost/qgisserver.
 spawn-fcgi
 ^^^^^^^^^^
 
-If you prefer to use spawn-fcgi instead of fcgiwrap, the first step is to
-install the package:
+If you prefer to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_ instead
+of fcgiwrap, the first step is to install the package:
 
 .. code-block:: bash
 
@@ -185,14 +197,21 @@ have to manually start QGIS Server in your terminal:
 
 .. code-block:: bash
 
- sudo spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-                 -s /var/run/qgisserver.socket \
-                 -U www-data -G www-data -n
+ sudo spawn-fcgi -s /var/run/qgisserver.socket \
+                 -U www-data -G www-data -n \
+                 /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi
 
 Of course, you may write an init script (like a ``qgisserver.service`` file
 with Systemd) to start QGIS Server at boot time or whenever you want.
 
 QGIS Server is now available at http://localhost/qgisserver.
+
+.. note::
+
+    With the above command spawn-fcgi spawns only one QGIS Server process. To use more than one QGIS
+    Server process you can combine spawn-fcgi with the
+    `multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, which is also
+    packaged in Debian.
 
 Configuration
 ^^^^^^^^^^^^^
@@ -608,4 +627,4 @@ the path to the SVG image so that it represents a valid relative path.
    :width: 1.3em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

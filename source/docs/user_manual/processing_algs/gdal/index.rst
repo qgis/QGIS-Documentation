@@ -6,10 +6,10 @@
 GDAL algorithm provider
 ***********************
 
-`GDAL <http://gdal.org>`_ (Geospatial Data Abstraction Library) is a translator
+`GDAL <https://www.gdal.org>`_ (Geospatial Data Abstraction Library) is a translator
 library for raster and vector geospatial data formats. Algorithms in the Processing
-Framework are derived from the `GDAL raster utilities <http://www.gdal.org/gdal_utilities.html>`_
-and `GDAL/OGR vector utilities <http://www.gdal.org/ogr_utilities.html>`_ .
+Framework are derived from the `GDAL raster utilities <https://www.gdal.org/gdal_utilities.html>`_
+and `GDAL/OGR vector utilities <https://www.gdal.org/ogr_utilities.html>`_ .
 
 .. toctree::
      :maxdepth: 2
@@ -30,4 +30,4 @@ and `GDAL/OGR vector utilities <http://www.gdal.org/ogr_utilities.html>`_ .
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

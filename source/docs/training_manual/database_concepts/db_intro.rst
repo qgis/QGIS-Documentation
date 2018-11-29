@@ -114,7 +114,7 @@ Result:
     (3 rows)
 
 There are many more datatypes you can use - `check the PostgreSQL manual!
-<http://www.postgresql.org/docs/current/static/datatype.html>`_
+<https://www.postgresql.org/docs/current/datatype.html>`_
 
 Modelling an Address Database
 -------------------------------------------------------------------------------
@@ -195,7 +195,7 @@ Redesign the theoretical `people` table above to reduce duplication and to
 normalise the data structure.
 
 You can read more about database normalisation `here
-<http://en.wikipedia.org/wiki/Database_normalization>`_
+<https://en.wikipedia.org/wiki/Database_normalization>`_
 
 :ref:`Check your results <database-concepts-2>`
 
@@ -395,4 +395,4 @@ database to implement the theory we've covered.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
