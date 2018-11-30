@@ -792,16 +792,16 @@ units).
 Layer rendering
 ---------------
 
-From the Symbology tab, you can also set some options that invariabily act on all
+From the Symbology tab, you can also set some options that invariably act on all
 features of the layer:
 
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in
+* :guilabel:`Opacity` |slider|: You can make the underlying layer in
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
   the percentage of visibility in the the menu beside the slider.
 
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
-  achieve special rendering effects with these tools that you may previously
+* :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
+  You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
@@ -813,17 +813,18 @@ features of the layer:
   Activate the checkbox and click on the |sort| button beside.
   You then get the :guilabel:`Define Order` dialog in which you:
 
-  * choose a field or build an expression to apply to the layer features
-  * set in which order the fetched features should be sorted, i.e. if you choose
-    **Ascending** order, the features with lower value are rendered under those
-    with upper value.
-  * define when features returning NULL value should be rendered: **first** or **last**.
+  #. Choose a field or build an expression to apply to the layer features.
+  #. Set in which order the fetched features should be sorted, i.e. if you choose
+     **Ascending** order, the features with lower value are rendered under those
+     with higher value.
+  #. Define when features returning NULL value should be rendered: **first**
+     (bottom) or **last** (top).
+  #. Repeat the above steps as many times as rules you wish to use.
 
-  You can add several rules of ordering. The first rule is applied
-  to all the features in the layer, z-ordering them according to the value returned.
-  Then, for each group of features with the same value (including those with
-  NULL value) and thus same z-level, the next rule is applied to sort its items
-  among them.
+  The first rule is applied
+  to all the features in the layer, z-ordering them according to their returned value.
+  Then, within each group of features with the same value (including those with
+  NULL value) and thus the same z-level, the next rule is applied to sort them.
   And so on...
 
 .. _figure_layer_rendering:
@@ -849,7 +850,7 @@ an option to control the rendering order of each symbol's levels.
 For most of the renderers, you can access the Symbols levels option by clicking
 the :guilabel:`Advanced` button below the saved symbols list and choosing
 :guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
-directly available through :guilabel:`Symbols Levels` button, while for
+directly available through :guilabel:`Symbols Levels...` button, while for
 :ref:`point_displacement` renderer the same button is inside the
 :guilabel:`Rendering settings` dialog.
 
