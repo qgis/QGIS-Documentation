@@ -88,15 +88,6 @@ Outputs
   plus the contribution from upslope neighbors that drain in to it according
   to the D8 flow model.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8contributingarea', -p, -o, -wg, -nc, -ad8)
-
-See also
-........
 
 D8 Flow Directions
 ------------------
@@ -165,15 +156,6 @@ Outputs
 ``D8 Slope Grid`` [raster]
   A grid giving slope in the D8 flow direction. This is measured as drop/distance.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8flowdirections', -fel, -p, -sd8)
-
-See also
-........
 
 D-Infinity Contributing Area
 ----------------------------
@@ -283,15 +265,6 @@ Outputs
   plus the contribution from upslope neighbors that have some fraction draining
   to it according to the D-infinity flow model.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitycontributingarea', -ang, -o, -wg, -nc, -sca)
-
-See also
-........
 
 D-Infinity Flow Directions
 --------------------------
@@ -367,15 +340,6 @@ Outputs
   triangular facets centered at each grid cell, measured as drop/distance, i.e.
   tan of the slope angle.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityflowdirections', -fel, -ang, -slp)
-
-See also
-........
 
 Grid Network
 ------------
@@ -470,15 +434,6 @@ Outputs
   second highest incoming flow path order + 1. This generalizes the common
   definition to cases where more than two flow paths join at a point.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:gridnetwork', d8_flow_dir_grid, outlets_shape, mask_grid, threshold, longest_len_grid, total_len_grid, strahler_grid)
-
-See also
-........
 
 Pit Remove
 ----------
@@ -515,16 +470,6 @@ Outputs
   A grid of elevation values with pits removed so that flow is routed off of
   the domain.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:pitremove', -z, -fel)
-
-See also
-........
-
 
 Select GT Threshold
 -------------------
@@ -555,16 +500,6 @@ Outputs
 
 ``Output Grid`` [raster]
   Output grid
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:selectgtthreshold', -z, -thresh, -t)
-
-See also
-........
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
