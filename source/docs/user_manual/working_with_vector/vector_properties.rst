@@ -203,7 +203,7 @@ the bottom the :ref:`layer_rendering` widget.
    Using the :menuselection:`Styles --> Add` menu at the bottom of the
    :guilabel:`Layer Properties` dialog, you can save as many styles as needed.
    A style is the combination of all properties of a layer (such as symbology,
-   labeling, diagram, fields form, actions...) as you want. Then, simply 
+   labeling, diagram, fields form, actions...) as you want. Then, simply
    switch between styles from the context menu of the layer in :guilabel:`Layers Panel`
    to automatically get different representations of your data.
 
@@ -446,7 +446,7 @@ the rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
 
-.. figure:: img/graduatesymbol_ng_line.png
+.. figure:: img/graduatedsymbol_ng_line.png
    :align: center
 
    Graduated Symbolizing options
@@ -1556,10 +1556,10 @@ Assuming you are using the :guilabel:`Single labels` method, click the |expressi
 :guilabel:`Label with` drop-down list in the |labeling| :guilabel:`Labels` tab
 of the properties dialog.
 
-In figure_labels_expression_, you see a sample
-expression to label the alaska regions with name and area size, based on the
-field 'NAME_2', some descriptive text, and the function ``$area`` in combination
-with ``format_number()`` to make it look nicer.
+In figure_labels_expression_, you see a sample expression to label the alaska
+trees layer with tree type and area, based on the field 'VEGDESC', some
+descriptive text, and the function ``$area`` in combination with
+``format_number()`` to make it look nicer.
 
 .. _figure_labels_expression:
 
@@ -2112,7 +2112,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Field properties tab
+   Source Fields properties tab
 
 
 .. _vector_attributes_menu:
@@ -2584,9 +2584,14 @@ and can be retrieved:
    Auxiliary Fields
 
 
-There are now ``19`` fields have been automatically created and configured for labeling. For example, the ``FontStyle`` auxiliary field type is a ``String`` and is named ``labeling_fontstyle`` in the underlying SQLite database. Moreover, we observe that there's ``1`` entity which is currently using these auxiliary fields (according to the current example).
+There are now ``19`` fields have been automatically created and configured for
+labeling. For example, the ``FontStyle`` auxiliary field type is a ``String``
+and is named ``labeling_fontstyle`` in the underlying SQLite database. There is
+also ``1`` entity which is currently using these auxiliary fields.
 
-Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels` properties tab indicating that the data-defined override options are set correctly:
+Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels`
+properties tab indicating that the data-defined override options are set
+correctly:
 
 .. figure:: img/auxiliary_storage_dd.png
    :align: center
@@ -2642,9 +2647,15 @@ Attribute table and widgets
 ---------------------------
 
 Auxiliary fields can be edited using the
-:ref:`Attribute Table <sec_attribute_table>`, however they are not initially visible or editable.
+:ref:`attribute table <sec_attribute_table>`, however they are not initially
+visible or editable.
 
-To make a field visible, open the :ref:`Attribute Form properties tab <vector_attributes_menu>` and change the value of an auxiliary field :guilabel:`Widget Type` from **Hidden** to another relevant value. For example, change the **auxiliary_storage_labeling_size** to **Text Edit** or change **auxiliary_storage_labeling_color** to the **Color** widget. Those fields will now be visible and editable in the Attribute Table:
+To make a field visible, open the :ref:`Attribute Form properties tab
+<vector_attributes_menu>` and change the value of an auxiliary field
+:guilabel:`Widget Type` from **Hidden** to another relevant value. For example,
+change the **auxiliary_storage_labeling_size** to **Text Edit** or change
+**auxiliary_storage_labeling_color** to the **Color** widget. Those fields will
+now be visible and editable in the attribute table:
 
 
 .. figure:: img/auxiliary_storage_widgets.png
@@ -3195,7 +3206,7 @@ layout legend <layout_legend_item>`. These options include:
 .. figure:: img/text_legend_symbols.png
    :align: center
 
-   Setting text on symbols (top) and its rendering in Layers panel (bottom)
+   Setting text on symbols (left) and its rendering in Layers panel (right)
 
 * a list of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
