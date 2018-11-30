@@ -422,7 +422,7 @@ that they are predefined.
   .. image:: img/schools_buffer_setup.png
      :align: center
 
-  The :guilabel:`Buffer distance` is :guilabel:`1` kilometer).
+  The :guilabel:`Buffer distance` is :guilabel:`1` kilometer.
 
 * The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This is
   optional, but it's recommended, because it makes the output buffers look
