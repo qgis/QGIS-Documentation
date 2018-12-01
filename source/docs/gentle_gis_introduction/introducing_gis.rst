@@ -212,8 +212,7 @@ a question of how much money you can afford and personal preference. For these
 tutorials, we will be using the QGIS Application. QGIS is completely free and you 
 can copy it and share it with your friends as much as you like. If you received 
 this tutorial in printed form, you should have received a copy of QGIS with it. 
-If not, you can always visit
-http://hub.qgis.org/projects/quantum-gis/wiki/Download to download your free copy
+If not, you can always visit https://www.qgis.org/ to download your free copy
 if you have access to the internet.
 
 GIS Data

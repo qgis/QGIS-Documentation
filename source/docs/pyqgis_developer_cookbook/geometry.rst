@@ -31,7 +31,7 @@ coordinates in CRS of the layer.
 
 Description and specifications of all possible geometries construction and
 relationships are available in the `OGC Simple Feature Access Standards
-<http://www.opengeospatial.org/standards/sfa>`_ for advanced details.
+<https://www.opengeospatial.org/standards/sfa>`_ for advanced details.
 
 .. index:: Geometry; Construction
 
@@ -175,4 +175,4 @@ Additional information can be found in following sources:
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

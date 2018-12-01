@@ -6,7 +6,7 @@
 R algorithm provider
 ********************
 
-`R <http://www.r-project.org/>`_ also called GNU S, is a strongly functional
+`R <https://www.r-project.org/>`_ also called GNU S, is a strongly functional
 language and environment to statistically explore data sets, make many graphical
 displays of data from custom data sets
 
@@ -30,4 +30,4 @@ displays of data from custom data sets
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

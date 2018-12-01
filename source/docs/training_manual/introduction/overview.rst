@@ -78,7 +78,7 @@ Favorite``. You should then be able to see your folder in the |favourites|
 |basic| Toolbars
 ...............................................................................
 
-Your most oft-used sets of tools can be turned into toolbars for basic access.
+Your most often used sets of tools can be turned into toolbars for basic access.
 For example, the File toolbar allows you to save, load, print, and start a new
 project. You can easily customize the interface to see only the tools you use
 most often, adding or removing toolbars as necessary via the
@@ -198,6 +198,6 @@ to you and start improving on your map! This is the topic of the next lesson.
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

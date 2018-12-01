@@ -8,7 +8,7 @@
 R Syntax in Processing scripts
 *******************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
 Writing R scripts in Processing could be quite tricky because of the syntax that
 has to be adopted.
@@ -212,4 +212,4 @@ The plot is automatically added to the *Result Viewer* of Processing.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -17,6 +17,8 @@ Vector miscellaneous
 Execute SQL
 -----------
 
+This algorithm is derived from the `GDAL ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+
 Parameters
 ..........
 
@@ -58,7 +60,8 @@ Imports vector layers inside a PostgreSqL database on the basis of
 an available connection. The connection has to :ref:`be defined properly
 <vector_create_stored_connection>` beforehand. Be aware that the checkboxes 'Save Username'
 and 'Save Password' are activated. Then you can use the algorithm.
-The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+
+This algorithm is derived from the `GDAL ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -247,7 +250,8 @@ Export to PostgreSQL (new connection)
 -------------------------------------
 Imports vector layers inside a PostGreSQL database. A new connection
 to the PostGIS database must be created.
-The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+
+This algorithm is derived from the `GDAL ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -469,6 +473,8 @@ into a HTML-file.
 The information includes the geometry type, feature count, the spatial extent,
 the projection information and many more.
 
+This algorithm is derived from the `GDAL ogrinfo utility <https://www.gdal.org/ogrinfo.html>`_ .
+
 Parameters
 ..........
 
@@ -490,4 +496,4 @@ Outputs
    source folder.
 
 .. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

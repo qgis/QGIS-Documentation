@@ -210,8 +210,8 @@ Further reading
 
 **Websites**:
 
-* http://www.innovativegis.com/basis/primer/concepts.html
-* http://en.wikipedia.org/wiki/Geospatial_topology
+* http://www.innovativegis.com/basis/
+* https://en.wikipedia.org/wiki/Geospatial_topology
 
 The QGIS User Guide also has more detailed information on topological editing
 provided in QGIS.

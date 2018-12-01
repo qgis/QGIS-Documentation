@@ -22,8 +22,8 @@ system.
 Manual Format
 ===============================================================================
 
-This manual is written using `Sphinx <http://sphinx.pocoo.org/>`_, a Python
-document generator using the `reStructuredText
+This manual is written using `Sphinx <https://www.sphinx-doc.org/en/master/>`_,
+a Python document generator using the `reStructuredText
 <http://docutils.sourceforge.net/rst.html>`_ markup language. Instructions on
 how to use these tools are available on their respective sites.
 
@@ -387,4 +387,4 @@ more accessible to users and adding value to the QGIS project as a whole.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

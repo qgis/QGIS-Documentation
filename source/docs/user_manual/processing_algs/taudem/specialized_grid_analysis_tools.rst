@@ -54,15 +54,6 @@ Outputs
   A grid giving the horizontal distance along the flow path as defined by the
   D8 Flow Directions Grid to the streams in the Stream Raster Grid.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8distancetostreams', -p, -src, -thresh, -dist)
-
-See also
-........
 
 D-Infinity Avalanche Runout
 ---------------------------
@@ -191,15 +182,6 @@ Outputs
   This is a grid of the flow distance from the source site that has the highest
   angle to each cell.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityavalancherunout', -ang, -fel, -ass, -thresh, -alpha, -direct, -rz, -dfs)
-
-See also
-........
 
 D-Infinity Concentration Limited Accumulation
 ---------------------------------------------
@@ -315,15 +297,6 @@ Outputs
   A grid giving the resulting concentration of the compound of interest in
   the flow.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityconcentrationlimitedaccumulation', -ang, -dg, -dm, -q, -o, -csol, -nc, -ctpt)
-
-See also
-........
 
 D-Infinity Decaying Accumulation
 --------------------------------
@@ -406,15 +379,6 @@ Outputs
   mass at each location in the domain where mass moves with the D-infinity flow
   field, but is subject to first order decay in moving from cell to cell.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitydecayingaccumulation', -ang, -dm, -wg, -o, -nc, -dsca)
-
-See also
-........
 
 D-Infinity Distance Down
 ------------------------
@@ -519,15 +483,6 @@ Outputs
   Grid containing the distance to stream calculated using the D-infinity flow
   model and the statistical and path methods chosen.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitydistancedown', dinf_flow_dir_grid, pit_filled_grid, stream_grid, weight_path_grid, stat_method, dist_method, edge_contam, dist_down_grid)
-
-See also
-........
 
 D-Infinity Distance Up
 ----------------------
@@ -629,15 +584,6 @@ Outputs
   Grid containing the distances up to the ridge calculated using the D-Infinity
   flow model and the statistical and path methods chosen.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitydistanceup', dinf_flow_dir_grid, pit_filled_grid, slope_grid, stat_method, dist_method, threshold, edge_contam, dist_up_grid)
-
-See also
-........
 
 D-Infinity Reverse Accumulation
 -------------------------------
@@ -687,15 +633,6 @@ Outputs
   The grid giving the maximum of the weight loading grid downslope from each
   grid cell.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityreverseaccumulation', -ang, -wg, -racc, -dmax)
-
-See also
-........
 
 D-Infinity Transport Limited Accumulation - 2
 ---------------------------------------------
@@ -818,15 +755,6 @@ Outputs
   output and gives the concentration of a compound (contaminant) adhered or
   bound to the transported substance (e.g. sediment) is calculated.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitytransportlimitedaccumulation2', dinf_flow_dir_grid, supply_grid, capacity_grid, in_concentr_grid, outlets_shape, edge_contam, transp_lim_accum_grid, deposition_grid, out_concentr_grid)
-
-See also
-........
 
 D-Infinity Transport Limited Accumulation
 -----------------------------------------
@@ -938,15 +866,6 @@ Outputs
   minus the transport capacity out of the grid cell. The deposition grid is
   calculated as the transport in + the local supply - the tranport out.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitytransportlimitedaccumulation', dinf_flow_dir_grid, supply_grid, capacity_grid, outlets_shape, edge_contam, transp_lim_accum_grid, deposition_grid)
-
-See also
-........
 
 D-Infinity Upslope Dependence
 -----------------------------
@@ -996,15 +915,6 @@ Outputs
   A grid quantifing the amount each source point in the domain contributes to
   the zone defined by the destination grid.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityupslopedependence', -ang, -dg, -dep)
-
-See also
-........
 
 Slope Average Down
 ------------------
@@ -1045,15 +955,6 @@ Outputs
   This output is a grid of slopes calculated in the D8 downslope direction,
   averaged over the selected distance.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:slopeaveragedown', -p, -fel, -dn, -slpd)
-
-See also
-........
 
 Slope Over Area Ratio
 ---------------------
@@ -1089,16 +990,6 @@ Outputs
   index, but contributing area is in the denominator to avoid divide by 0
   errors when slope is 0.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:slopeoverarearatio', -slp, -sca, -sar)
-
-See also
-........
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -1106,4 +997,4 @@ See also
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

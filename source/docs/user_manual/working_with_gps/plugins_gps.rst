@@ -78,14 +78,14 @@ Each feature type will be loaded in a separate layer when you click
    downloading a GPX file (from your GPS unit or a web site) and then loading it
    in QGIS, be sure that the data stored in the GPX file uses WGS 84
    (latitude/longitude). QGIS expects this, and it is the official GPX
-   specification. See http://www.topografix.com/GPX/1/1/.
+   specification. See https://www.topografix.com/GPX/1/1/.
 
 GPSBabel
 --------
 
 Since QGIS uses GPX files, you need a way to convert other GPS file formats to
 GPX. This can be done for many formats using the free program GPSBabel, which is
-available at http://www.gpsbabel.org. This program can also transfer GPS
+available at https://www.gpsbabel.org. This program can also transfer GPS
 data between your computer and a GPS device. QGIS uses GPSBabel to do these
 things, so it is recommended that you install it. However, if you just want to
 load GPS data from GPX files you will not need it. Version 1.2.3 of GPSBabel is
@@ -188,7 +188,7 @@ file for the layer that is being uploaded, and ``%out`` is replaced by the port
 name.
 
 You can learn more about GPSBabel and its available command line options at
-http://www.gpsbabel.org.
+https://www.gpsbabel.org.
 
 Once you have created a new device type, it will appear in the device lists for
 the download and upload tools.
@@ -199,7 +199,7 @@ Download of points/tracks from GPS units
 As described in previous sections QGIS uses GPSBabel to download points/tracks
 directly in the project. QGIS comes out of the box with a pre-defined profile
 to download from Garmin devices. Unfortunately there is a `bug #6318
-<http://hub.qgis.org/issues/6318>`_ that does not allow create other profiles,
+<https://issues.qgis.org/issues/6318>`_ that does not allow create other profiles,
 so downloading directly in QGIS using the GPS Tools is at the moment limited to
 Garmin USB units.
 
@@ -209,7 +209,7 @@ Garmin GPSMAP 60cs
 **MS Windows**
 
 Install the Garmin USB drivers ​from
-http://www8.garmin.com/support/download_details.jsp?id=591
+https://www8.garmin.com/support/download_details.jsp?id=591
 
 Connect the unit. Open GPS Tools and use ``type=garmin serial`` and ``port=usb:``
 Fill the fields :guilabel:`Layer name` and :guilabel:`Output file`. Sometimes
@@ -234,7 +234,7 @@ loaded
   rmmod garmin_gps
 
 and then you can use the GPS Tools. Unfortunately there seems to be a `bug #7182
-<http://hub.qgis.org/issues/7182>`_ and usually QGIS freezes several times
+<https://issues.qgis.org/issues/7182>`_ and usually QGIS freezes several times
 before the operation work fine.
 
 BTGP-38KM datalogger (only Bluetooth)
@@ -317,6 +317,6 @@ system port, then run GPSBabel
    :width: 1em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

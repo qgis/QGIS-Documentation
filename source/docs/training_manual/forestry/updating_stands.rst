@@ -28,16 +28,16 @@ CIR aerial photographs and add information from other data-sets.
 The National Land Survey of Finland has an open data policy that allows you
 downloading a variety of geographical data like aerial imagery, traditional
 topographic maps, DEM, LiDAR data, etc. The service can be accessed also in
-English `here <http://www.maanmittauslaitos.fi/en/file_download_service>`_.
+English `here <https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en>`_.
 The aerial image used in this exercise has been created from two orthorectified
 CIR images downloaded from that service (M4134F_21062012 and M4143E_21062012). 
 
-* Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in
+* Open QGIS and set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN` in
   :menuselection:`Project --> Properties... --> CRS`.
 * Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is checked.
-* From the :kbd:`exercise_data\\forestry\\` folder, add the CIR image
-  :kbd:`rautjarvi_aerial.tif` that is containing the digitized lakes.
-* Then save the QGIS project as :kbd:`digitizing_2012.qgs`.
+* From the :file:`exercise_data\\forestry\\` folder, add the CIR image
+  :file:`rautjarvi_aerial.tif` that is containing the digitized lakes.
+* Then save the QGIS project as :file:`digitizing_2012.qgs`.
 
 The CIR images are from 2012. You can compare the stands that were created
 in 1994 with the situation almost 20 years later.
@@ -289,4 +289,4 @@ of forest parameters.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

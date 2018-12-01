@@ -16,9 +16,9 @@ Vector conversion
 
 Convert format
 --------------
-Converts any OGR-supported vector layer into another OGR-supported
-format.
-This algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+Converts any OGR-supported vector layer into another OGR-supported format.
+
+This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -75,7 +75,8 @@ Outputs
 Rasterize (vector to raster)
 ----------------------------
 Converts vector geometries (points, lines and polygons) into a raster image.
-The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
+
+This algorithm is derived from the `GDAL rasterize utility <https://www.gdal.org/gdal_rasterize.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -192,4 +193,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

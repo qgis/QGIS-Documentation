@@ -6,7 +6,7 @@
 SAGA algorithm provider
 ***********************
 
-`SAGA <http://www.saga-gis.org/en.html>`_ (System for Automated
+`SAGA <http://www.saga-gis.org/>`_ (System for Automated
 Geoscientific Analyses) is a free, hybrid, cross-platform GIS software. SAGA
 provides many geoscientific methods which are bundled in so-called module
 libraries.
@@ -54,4 +54,4 @@ libraries.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

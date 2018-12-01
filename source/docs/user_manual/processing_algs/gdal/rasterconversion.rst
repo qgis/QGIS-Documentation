@@ -46,8 +46,9 @@ Outputs
 PCT to RGB
 ----------
 Converts an 8bit paletted image to 24bit RGB.
+It will convert a pseudocolor band on the input file into an output RGB file of the desired format.
 
-This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.
+This algorithm is derived from the `GDAL pct2rgb utility <https://www.gdal.org/pct2rgb.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -101,10 +102,6 @@ Outputs
 ``PCT to RGB`` [raster]
   24bit RGB raster image
 
-See also
-........
-`GDAL pct2rgb utility <http://www.gdal.org/pct2rgb.html>`_
-
 
 .. _gdalpolygonize:
 
@@ -113,7 +110,8 @@ Polygonize (raster to vector)
 Creates vector polygons for all connected regions of pixels in the
 raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
-The algorithm is derived from the `GDAL polygonize utility <http://www.gdal.org/gdal_polygonize.html>`_ .
+
+This algorithm is derived from the `GDAL polygonize utility <https://www.gdal.org/gdal_polygonize.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -150,6 +148,8 @@ Rearrange bands
 ---------------
 Creates a new raster using selected band(s) from a given raster layer.
 The algorithm also makes it possible to reorder the bands for the newly-created raster.
+
+This algorithm is derived from the `GDAL translate utility <https://www.gdal.org/gdal_translate.html>`_ .
 
 Parameters
 ..........
@@ -215,7 +215,8 @@ maximize output image visual quality.
 
 If you want to classify a raster map and want to reduce the number of classes it
 can be helpful to downsample your image with this algorithm before.
-The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
+
+This algorithm is derived from the `GDAL rgb2pct utility <https://www.gdal.org/rgb2pct.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -241,6 +242,9 @@ Outputs
 
 Translate (convert format)
 --------------------------
+Converts raster data between different formats.
+
+This algorithm is derived from the `GDAL translate utility <https://www.gdal.org/gdal_translate.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -305,4 +309,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -51,18 +51,18 @@ Installing under Windows
 Installing on Windows is a little more complicated, but still not hard. Note
 that you need to be online to install the postgis stack.
 
-First Visit `the download page <http://www.postgresql.org/download/>`_.
+First Visit `the download page <https://www.postgresql.org/download/>`_.
 
 Then follow `this guide
-<http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.
+<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.
 
 More information about installing on Windows can be found on the `PostGIS
-website <http://postgis.net/windows_downloads>`_.
+website <https://postgis.net/windows_downloads>`_.
 
 Installing on Other Platforms
 -------------------------------------------------------------------------------
 
-The `PostGIS website download <http://postgis.net/install/>`_ has information about
+The `PostGIS website download <https://postgis.net/install/>`_ has information about
 installing on other platforms including macOS and on other linux distributions
 
 Configuring Databases to use PostGIS
@@ -80,7 +80,7 @@ previous exercise.
 .. note:: If you are using PostGIS 1.5 and a version of PostgreSQL lower than
    9.1, you will need to follow a different set of steps in order to install
    the postgis extensions for your database. Please consult the
-   `PostGIS Documentation <http://postgis.net/docs/postgis_installation.html#create_new_db>`_
+   `PostGIS Documentation <https://postgis.net/docs/postgis_installation.html#create_new_db>`_
    for instructions on how to do this. There are also some instructions in the
    `previous version <http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-plpgsql>`_
    of this manual.
@@ -251,4 +251,4 @@ Next you'll learn how spatial features are represented in a database.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

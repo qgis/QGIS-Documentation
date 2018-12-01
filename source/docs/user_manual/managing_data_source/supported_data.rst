@@ -72,7 +72,7 @@ ESRI Shapefile
 ESRI Shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
 not (like GeoPackage, SpatiaLite). Support is provided by the
-`OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
+`OGR Simple Feature Library <https://www.gdal.org/ogr/>`_.
 
 A shapefile actually consists of several files. The following three are
 required:
@@ -86,7 +86,7 @@ suffix, which contains
 the projection information. While it is very useful to have a projection file,
 it is not mandatory. A shapefile dataset can contain additional files. For
 further details, see the ESRI technical specification at
-http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
+https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
 **Improving Performance for Shapefiles**
 
@@ -227,7 +227,7 @@ You can even specify width and precision of each column, e.g.::
 This file is saved in the same folder as the :file:`.csv` file, with the same
 name, but :file:`.csvt` as the extension.
 
-*You can find more information at* `GDAL CSV Driver <http://www.gdal.org/drv_csv.html>`_.
+*You can find more information at* `GDAL CSV Driver <https://www.gdal.org/drv_csv.html>`_.
 
 
 .. index:: PostGIS, PostgreSQL
@@ -414,7 +414,7 @@ over a network. You can improve the drawing performance of PostgreSQL layers by
 ensuring that a PostGIS spatial index exists on each layer in the
 database. PostGIS supports creation of a GiST (Generalized Search Tree)
 index to speed up spatial searches of the data (GiST index information is taken
-from the PostGIS documentation available at http://postgis.net).
+from the PostGIS documentation available at https://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
    first select the layer and click on :menuselection:`Table --> Edit table`, go
@@ -459,7 +459,7 @@ Vector layers crossing 180 |degrees| longitude
 
 Many GIS packages don't wrap vector maps with a geographic reference system
 (lat/lon) crossing the 180 degrees longitude line
-(http://postgis.refractions.net/documentation/manual-2.0/ST\_Shift\_Longitude.html).
+(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html).
 As result, if we open such a map in QGIS, we will see two far, distinct locations,
 that should appear near each other. In Figure_vector_crossing_, the tiny point on the far
 left of the map canvas (Chatham Islands) should be within the grid, to the right of the
@@ -510,7 +510,7 @@ right clicking the layer in the legend. Then, click on :menuselection:`Save as..
 define the name of the output file, and select 'SpatiaLite' as format and the CRS.
 Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
-database. See also http://www.gdal.org/ogr/drv_sqlite.html.
+database. See also https://www.gdal.org/ogr/drv_sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
 
@@ -541,7 +541,7 @@ The DB2 provider for QGIS supports the full range of visualization, analysis
 and manipulation of spatial data in these databases.
 
 .. _DB2 z/OS KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/en/SSEPEK_11.0.0/spatl/src/tpc/spatl_db2sb03.html
-.. _DB2 LUW KnowledgeCenter: http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.spatial.topics.doc/doc/db2sb03.html
+.. _DB2 LUW KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.spatial.topics.doc/doc/db2sb03.html
 .. _DB2 DashDB KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.db2.luw.spatial.topics.doc/doc/csbp1001.html
 .. _DB2 Spatial Tutorial: https://www.ibm.com/developerworks/data/tutorials/dm-1202db2spatialdata1/
 
@@ -597,4 +597,4 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
    :width: 1em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

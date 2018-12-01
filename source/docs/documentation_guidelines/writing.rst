@@ -12,22 +12,22 @@ Introduction
 
 QGIS Documentation will
 be built automatically on the server at 0, 8am, 4pm US/Pacific (Pacific Time).
-The current status is available at http://docs.qgis.org.
+The current status is available at https://docs.qgis.org.
 
 QGIS Documentation is mainly written using the reStructuredText (reST) format syntax,
 coupled with some scripts from the Sphinx toolset to post-process the HTML output.
 See http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-or http://sphinx.pocoo.org/markup/inline.html.
+or https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
 
 In general, when creating rst documentation for the QGIS project, please follow
 the `Python documentation style guidelines
-<http://docs.python.org/devguide/documenting.html>`_.
+<https://devguide.python.org/documenting/>`_.
 Below are exposed some general guidelines to follow when
 using reST for the QGIS documentation writing.
 
 If you are looking for general rules on contributing to QGIS project or managing
 repositories, you may find help at
-`Get Involved in the QGIS Community <http://qgis.org/en/site/getinvolved/index.html>`_.
+`Get Involved in the QGIS Community <https://qgis.org/en/site/getinvolved/index.html>`_.
 
 
 Writing Documentation
@@ -343,7 +343,7 @@ useful (coherent, consistent and really connected to each other):
 * Always capitalize only the first letter of the index unless the word has a
   particular spelling, in which case keep using its spelling e.g., ``Loading layers``,
   ``Atlas generation``, ``WMS``, ``pgsql2shp``
-* Keep an eye on the existing `Index list <http://docs.qgis.org/testing/en/genindex.html>`_
+* Keep an eye on the existing `Index list <https://docs.qgis.org/testing/en/genindex.html>`_
   in order to reuse the most convenient expression with the right spelling
   and avoid wrong duplicates.
 
@@ -364,7 +364,7 @@ advised to use this latter tag as it's easier to fulfill them.
 
 It's also recommanded to use index parameters such as ``single``, ``pair``,
 ``see``... in order to build a more structured and interconnected table of index.
-See http://www.sphinx-doc.org/en/stable/markup/misc.html#index-generating-markup
+See `Index generating <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#index-generating-markup>`_
 for more information on index creation.
 
 Special Comments
@@ -373,9 +373,9 @@ Special Comments
 Sometimes, you may want to emphasize some points of the description, either to
 warn, remind or give some hints to the user. In QGIS Documentation, we use reST
 special directives such as ``.. warning::``, ``.. note::`` and ``.. tip::``
-generating particular frames that highlight your comments. See
-http://www.sphinx-doc.org/en/stable/markup/para.html#paragraph-level-markup for
-more information.
+generating particular frames that highlight your comments. See `Paragraph Level markup
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-markup>`_
+for more information.
 A clear and appropriate title is required for both warnings and tips.
 
 .. code-block:: rst
@@ -393,8 +393,7 @@ You may also want to give examples and insert a code snippet. In this case,
 write the comment below a line with the ``::`` directive inserted. However, for
 a better rendering, especially to apply color highlighting to code according
 to its language, use the code-block directive, e.g. ``.. code-block:: xml``.
-By default, Python code snippets do not need this reST directive. More details
-at http://www.sphinx-doc.org/en/stable/markup/code.html.
+More details at `Showing code <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#showing-code-examples>`_.
 
 .. note::
 
@@ -456,7 +455,7 @@ rst file.
 * you can find some prepared QGIS-projects that were used before to create
   screenshots in :file:`./qgis-projects`.
   This makes it easier to reproduce screenshots for the next version of QGIS.
-  These projects use the QGIS `Sample Data <http://qgis.org/downloads/data/>`_
+  These projects use the QGIS `Sample Data <https://qgis.org/downloads/data/>`_
   (aka Alaska Dataset), which should be placed in the same folder
   as the QGIS-Documentation Repository.
 * Use the following command to remove the global menu function in Ubuntu
@@ -479,7 +478,7 @@ the same folder as the rst file.
 * use the QGIS -projects included in QGIS-Documentation repository (in
   :file:`./qgis_projects` ).
   These were used to produce the 'original' screenshots in the manual.
-  The QGIS `Sample Data <http://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
+  The QGIS `Sample Data <https://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
   should be placed in the same folder as the QGIS-Documentation Repository.
 * same size as the english 'original' screenshots, otherwise they will be stretched
   and look ugly. If you need to have a different size due to longer ui strings,

@@ -38,7 +38,7 @@ rectangular, variable size), and can be located in the forest in different ways
 (for ex. randomly, systematically, along lines). The size, form and location of
 the sample plots are usually decided following statistical, economical and
 practical considerations. If you have no forestry knowledge, you might be
-interested in reading `this Wikipedia article <http://en.wikipedia.org/wiki/Forest_inventory>`_.
+interested in reading `this Wikipedia article <https://en.wikipedia.org/wiki/Forest_inventory>`_.
 
 |basic| |FA| Implementing a Systematic Sampling Plot Design
 -------------------------------------------------------------------------------
@@ -146,7 +146,7 @@ new :kbd:`Plot_id` field.
 The field teams will be probably using a GPS device to locate the sample plots
 you planned. The next step is to export the points you created to a format that
 your GPS can read. QGIS allows you to save your point and line vector data in
-`GPS eXchange Format (GPX)<http://en.wikipedia.org/wiki/GPS_Exchange_Format>`,
+`GPS eXchange Format (GPX)<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`,
 which is an standard GPS data format that can be read by most of the
 specialized software. You need to be careful with selecting the CRS when you
 save your data:
@@ -205,4 +205,4 @@ navigate to the sample plots assigned to them.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

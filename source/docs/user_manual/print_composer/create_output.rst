@@ -46,7 +46,7 @@ layout to different file formats, and it is possible to modify the resolution
 Export settings
 ===============
 
-Whenever you export a print layout, there are a bunch of export settings QGIS needs
+Whenever you export a print layout, there are a selection of export settings QGIS needs
 to check in order to return the most appropriate output. These configurations
 are:
 
@@ -396,7 +396,7 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
   to any supported file format).
 
 
-.. _Multiple_format_map_series_using_QGIS_2.6: http://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1
+.. _Multiple_format_map_series_using_QGIS_2.6: https://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -432,4 +432,4 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
    :width: 2.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

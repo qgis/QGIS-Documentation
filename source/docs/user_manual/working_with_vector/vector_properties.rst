@@ -488,9 +488,9 @@ To apply a proportional rendering:
    the output value to the property and proportionally resize the symbol in the
    map canvas.
 
-  If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
-  menu to apply some transformation (exponential, flannery...) to the symbol
-  size rescaling (see :ref:`data_defined_assistant` for more details).
+   If need be, use the :guilabel:`Size assistant...` option of the |dataDefined|
+   menu to apply some transformation (exponential, flannery...) to the symbol
+   size rescaling (see :ref:`data_defined_assistant` for more details).
 
 You can choose to display the proportional symbols in the :ref:`Layers panel
 <label_legend>` and the :ref:`print layout legend item <layout_legend_item>`:
@@ -792,16 +792,16 @@ units).
 Layer rendering
 ---------------
 
-From the Symbology tab, you can also set some options that invariabily act on all
+From the Symbology tab, you can also set some options that invariably act on all
 features of the layer:
 
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in
+* :guilabel:`Opacity` |slider|: You can make the underlying layer in
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
   the percentage of visibility in the the menu beside the slider.
 
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
-  achieve special rendering effects with these tools that you may previously
+* :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
+  You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
@@ -813,17 +813,18 @@ features of the layer:
   Activate the checkbox and click on the |sort| button beside.
   You then get the :guilabel:`Define Order` dialog in which you:
 
-  * choose a field or build an expression to apply to the layer features
-  * set in which order the fetched features should be sorted, i.e. if you choose
-    **Ascending** order, the features with lower value are rendered under those
-    with upper value.
-  * define when features returning NULL value should be rendered: **first** or **last**.
+  #. Choose a field or build an expression to apply to the layer features.
+  #. Set in which order the fetched features should be sorted, i.e. if you choose
+     **Ascending** order, the features with lower value are rendered under those
+     with higher value.
+  #. Define when features returning NULL value should be rendered: **first**
+     (bottom) or **last** (top).
+  #. Repeat the above steps as many times as rules you wish to use.
 
-  You can add several rules of ordering. The first rule is applied
-  to all the features in the layer, z-ordering them according to the value returned.
-  Then, for each group of features with the same value (including those with
-  NULL value) and thus same z-level, the next rule is applied to sort its items
-  among them.
+  The first rule is applied
+  to all the features in the layer, z-ordering them according to their returned value.
+  Then, within each group of features with the same value (including those with
+  NULL value) and thus the same z-level, the next rule is applied to sort them.
   And so on...
 
 .. _figure_layer_rendering:
@@ -849,7 +850,7 @@ an option to control the rendering order of each symbol's levels.
 For most of the renderers, you can access the Symbols levels option by clicking
 the :guilabel:`Advanced` button below the saved symbols list and choosing
 :guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
-directly available through :guilabel:`Symbols Levels` button, while for
+directly available through :guilabel:`Symbols Levels...` button, while for
 :ref:`point_displacement` renderer the same button is inside the
 :guilabel:`Rendering settings` dialog.
 
@@ -2098,10 +2099,10 @@ example at its creation. This information is retrieved and shown in the
 :guilabel:`Comment` column and is later displayed when hovering over the
 field label in a feature form.
 
-Other than the fields contained in the dataset, the :guilabel:`Source Fields`
-tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
-<vector_relations>`. And depending on the origin of the field, a different
-background color is applied to it.
+Other than the fields contained in the dataset, virtual fields and
+:ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
+:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
@@ -2112,7 +2113,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Source Fields properties tab
+   Source Field properties tab
 
 
 .. _vector_attributes_menu:
@@ -2248,7 +2249,7 @@ Use the :guilabel:`Edit UI` to define the path to the file to use.
 
 You'll find some example in the :ref:`Creating a new form <creating-new-form>`
 lesson of the :ref:`QGIS-training-manual-index-reference`. For more advanced information,
-see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
+see https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/.
 
 .. _form_custom_functions:
 
@@ -2805,15 +2806,15 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 
 Two example actions are shown below:
 
-* ``konqueror http://www.google.com/search?q=%nam``
-* ``konqueror http://www.google.com/search?q=%%``
+* ``konqueror https://www.google.com/search?q=%nam``
+* ``konqueror https://www.google.com/search?q=%%``
 
 In the first example, the web browser konqueror is invoked and passed a URL
 to open. The URL performs a Google search on the value of the ``nam`` field
 from our vector layer. Note that the application or script called by the
 action must be in the path, or you must provide the full path. To be certain, we
 could rewrite the first example as:
-``/opt/kde3/bin/konqueror http://www.google.com/search?q=%nam``. This will
+``/opt/kde3/bin/konqueror https://www.google.com/search?q=%nam``. This will
 ensure that the konqueror application will be executed when the action is
 invoked.
 
@@ -2874,7 +2875,7 @@ As an exercise, we can create an action that does a Google search on the ``lakes
 layer. First, we need to determine the URL required to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is http://google.com/search?q=QGIS,
+little effort, we see that the format is https://www.google.com//search?q=QGIS,
 where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #. Make sure the ``lakes`` layer is loaded.
@@ -2893,15 +2894,15 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    need to provide the full path.
 #. Following the name of the external application, add the URL used for doing
    a Google search, up to but not including the search term:
-   ``http://google.com/search?q=``
+   ``https://www.google.com//search?q=``
 #. The text in the :guilabel:`Action` field should now look like this:
-   ``http://google.com/search?q=``
+   ``https://www.google.com//search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the :guilabel:`Insert` button.
 #. From the drop-down box, select 'NAMES' and click :guilabel:`Insert`.
 #. Your action text now looks like this:
 
-   ``http://google.com/search?q=[%NAMES%]``
+   ``https://www.google.com//search?q=[%NAMES%]``
 #. To finalize and add the action, click the :guilabel:`OK` button.
 
 .. _figure_add_action:
@@ -2916,7 +2917,7 @@ action should look like this:
 
 ::
 
-   http://google.com/search?q=[%NAMES%]
+   https://www.google.com//search?q=[%NAMES%]
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
@@ -2930,7 +2931,7 @@ identify a lake. In the result box you'll now see that our action is visible:
    Select feature and choose action
 
 When we click on the action, it brings up Firefox and navigates to the URL
-http://www.google.com/search?q=Tustumena. It is also possible to add further
+https://www.google.com/search?q=Tustumena. It is also possible to add further
 attribute fields to the action. Therefore, you can add a ``+`` to the end of
 the action text, select another field and click on :guilabel:`Insert Field`. In
 this example, there is just no other field available that would make sense
@@ -3417,4 +3418,4 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

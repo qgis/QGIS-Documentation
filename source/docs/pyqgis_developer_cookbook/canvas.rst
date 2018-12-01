@@ -29,7 +29,7 @@ This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
 and items. If not, please make sure to read the `overview of the framework
-<http://qt-project.org/doc/qt-4.8/graphicsview.html>`_.
+<https://doc.qt.io/archives/qt-4.8/graphicsview.html>`_.
 
 Whenever the map has been panned, zoomed in/out (or some other action triggers
 a refresh), the map is rendered again within the current extent. The layers are
@@ -385,4 +385,4 @@ Writing Custom Map Canvas Items
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
