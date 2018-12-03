@@ -81,12 +81,7 @@ use in this chapter:
 #. ``restaurants``;
 #. ``schools``.
 
-Zooming to one later extent to see |majorUrbanName|, South Africa.
-
-.. note:: all these data have been downloaded with the :guilabel:`QuickOSM` plugin.
-    You can replicate the same analysis in another location by downloading the
-    same data. Follow the :ref:`Introduction Chapter <tm_preparing_data>` for
-    more information.
+Zooming to the layer extent to see |majorUrbanName|, South Africa.
 
 Before proceeding we should filter the :guilabel:`roads` layer in order to have
 only some specific road types to work with.
@@ -139,27 +134,30 @@ But feel free to choose the best workflow for yourself.
     more appropriate for your region.
 
 * Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel;
-* Click :menuselection:`Export --> Save Features As...`;
-* In the :menuselection:`Save Vector Layer As` dialog be sure to change the
-  :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`, fill the
-  other parameters as in the following pictures and click :guilabel:`OK` (make
-  sure you checked :guilabel:`Add saved file to map`);
+* Click :guilabel:`Export --> Save Features As...`;
+* In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`
+  as :guilabel:`Format`;
+* Click on |browseButton| of :guilabel:`File name` parameter and name the new
+  GeoPackage as :guilabel:`training_data`;
+* Change the :guilabel:`Layer name` as :guilabel:`roads_34S`;
+* Change the :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`;
+* Finally click on :guilabel:`OK`:
 
 .. image:: img/save_roads_34S.png
    :align: center
 
-This will create the new GeoPackage database and fill it with the :guilabel:`roads_34S`
-layer. To see the new GeoPackage and all the layers you need to add the connection
-in the :guilabel:`Browser` Panel.
+This will create the new GeoPackage database and fill it with the
+:guilabel:`roads_34S` layer. To see the new GeoPackage and all the layers you
+need to add the connection in the :guilabel:`Browser` Panel.
 
 * Open the :guilabel:`Browser` Panel;
 * Right click on GeoPackage and choose :guilabel:`New Connection...`;
 * Browse to the location where you saved the file to set up the connection;
-
 * You can now remove the :guilabel:`roads` layer.
 
-Repeat this process for each layer, creating a new layer in the :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the original name and removing each of
-the old layers from the project.
+Repeat this process for each layer, creating a new layer in the
+:file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the
+original name and removing each of the old layers from the project.
 
 .. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
     **append** that layer in the GeoPackage.
@@ -181,10 +179,6 @@ QGIS allows you to calculate distances from any vector object.
 * Click on the :menuselection:`Processing --> Toolbox` to open the analytical
   *core* of QGIS. Basically: **all** algorithms (for vector **and** raster) analysis
   are available within this toolbox;
-
-.. note:: :guilabel:`Processing` has its own Training Manual chapter (see :ref:`processing_tm`).
-    It is extremely powerful but also complex.
-
 * We start by calculating the area around the :guilabel:`roads_34S` by using the
   :guilabel:`Buffer` algorithm. You can find it expanding the
   :menuselection:`Vector Geometry` group;
@@ -266,7 +260,7 @@ Now there are no unnecessary subdivisions.
 Use the same approach as above and create a buffer for your schools.
 
 It needs to be :guilabel:`1 km` in radius. Save the new layer in the
-:file:`vector_analysis.gpkg` file.
+:file:`vector_analysis.gpkg` file as :guilabel:`schools_buffer_1km_dissolved`.
 
 :ref:`Check your results <vector-analysis-basic-1>`
 
@@ -284,8 +278,9 @@ both of these criteria are satisfied. To do that, we'll need to use the
    :align: center
 
 The input layers are the two buffers; the saving location is, once again, the
-existing GeoPackage; and the file name is :guilabel:`road_school_buffers_intersect`.
-Once it's set up like this, click :guilabel:`Run`.
+:file:`vector_analysis.gpkg` GeoPackage; and the output layer name is
+:guilabel:`road_school_buffers_intersect`. Once it's set up like this, click
+:guilabel:`Run`.
 
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
