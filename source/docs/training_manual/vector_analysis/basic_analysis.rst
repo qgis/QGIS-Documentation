@@ -158,10 +158,6 @@ original name and removing each of the old layers from the project.
 * Browse to the location where you saved the file to set up the connection;
 * You can now remove the :guilabel:`roads` layer.
 
-Repeat this process for each layer, creating a new layer in the
-:file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the
-original name and removing each of the old layers from the project.
-
 .. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
     **append** that layer in the GeoPackage.
 
