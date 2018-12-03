@@ -147,8 +147,11 @@ But feel free to choose the best workflow for yourself.
    :align: center
 
 This will create the new GeoPackage database and fill it with the
-:guilabel:`roads_34S` layer. To see the new GeoPackage and all the layers you
-need to add the connection in the :guilabel:`Browser` Panel.
+:guilabel:`roads_34S` layer.
+
+Repeat this process for each layer, creating a new layer in the
+:file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the
+original name and removing each of the old layers from the project.
 
 * Open the :guilabel:`Browser` Panel;
 * Right click on GeoPackage and choose :guilabel:`New Connection...`;
