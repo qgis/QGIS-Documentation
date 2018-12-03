@@ -98,7 +98,7 @@ But you can easily export the layer in another CRS.
 
 * Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel;
 * Select :menuselection:`Export --> Save Features As...` in the menu that appears.
-  You will be shown the :guilabel:`Save vector layer as...` dialog;
+  You will be shown the :guilabel:`Save Vector Layer as...` dialog;
 * Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field;
 * Navigate to :file:`exercise_data/` and specify the name of the new layer as
   :guilabel:`buildings_reprojected.shp`;
@@ -114,7 +114,7 @@ But you can easily export the layer in another CRS.
 
 * Leave the other options unchanged;
 
-The :guilabel:`Save vector layer as...` dialog now looks like this:
+The :guilabel:`Save Vector Layer as...` dialog now looks like this:
 
 .. image:: img/save_vector_dialog.png
    :align: center
