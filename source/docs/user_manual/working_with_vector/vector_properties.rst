@@ -2585,7 +2585,7 @@ and can be retrieved:
    Auxiliary Fields
 
 
-There are now ``19`` fields have been automatically created and configured for
+``19`` fields have been automatically created and configured for
 labeling. For example, the ``FontStyle`` auxiliary field type is a ``String``
 and is named ``labeling_fontstyle`` in the underlying SQLite database. There is
 also ``1`` entity which is currently using these auxiliary fields.
@@ -3207,7 +3207,7 @@ layout legend <layout_legend_item>`. These options include:
 .. figure:: img/text_legend_symbols.png
    :align: center
 
-   Setting text on symbols (left) and its rendering in Layers panel (right)
+   Setting text on symbols (left) and its rendering in the :guilabel:`Layers` panel (right)
 
 * a list of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
