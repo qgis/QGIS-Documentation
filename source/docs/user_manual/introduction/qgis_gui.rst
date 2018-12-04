@@ -55,16 +55,16 @@ icons and keyboard shortcuts are outlined below. Note that these keyboard
 shortcuts are the default settings, however, they can be reconfigured using
 the :guilabel:`Keyboard Shortcuts`via the :menuselection:`Settings -->` menu.
 
-Although most menu options have a corresponding tool and vice-versa, the menus
-are not organized exactly like the toolbars. The toolbar containing the tool is
-listed after each menu option as a checkbox entry. Some menu options only
-appear if the corresponding plugin is loaded. For more information about tools
-and toolbars, see section :ref:`label_toolbars`.
+Most Menu options have a corresponding tool and vice-versa, however, the Menus
+are not organized exactly like the toolbars. The location of menu options
+in the toolbars are indicated below in the table. Plugins may load in additional
+menu options to Menus. For more information about tools and toolbars, see section 
+:ref:`label_toolbars`.
 
-.. note:: QGIS is a cross-platform application meaning that though it provides you
+.. note:: QGIS is a cross-platform application - that though it provides you
    with the same tools, they may be placed in different menus according to the
    operating system specification. The lists below show the most common location
-   and precise when there is a variation.
+   including known variations.
 
 .. index:: Project
 
