@@ -35,7 +35,7 @@ We'll use the area covered by streets.
     following exercises this difference does not matter, but feel free to
     reproject a layer in another CRS as shown in this module.
 
-* Open |toolbox|.
+* Open :guilabel:`Processing` toolbox.
 
 * Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool to
   generate an area enclosing all the roads by selecting ``Convex Hull`` as the
@@ -73,9 +73,9 @@ Sampling the data
 
 * To create a sample dataset from the raster, you'll need to use the
   :menuselection:`Raster Analysis --> Sample raster values` algorithm within
-  |toolbox|. This tool samples the raster at the points locations and copies the
-  raster values in other field(s) depending on how many bands the raster is made
-  of.
+  :guilabel:`Processing` toolbox. This tool samples the raster at the points
+  locations and copies the raster values in other field(s) depending on how many
+  bands the raster is made of.
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
   the SRTM raster as the band to get values from. The default name of the new
@@ -164,8 +164,8 @@ Missing (null) values
   Total count of values with missing data-
 
 
-|basic| |FA| Compute a Distance Matrix
--------------------------------------------------------------------------------
+|basic| |FA| Compute statistics on distances between points using the Distance Matrix tool
+------------------------------------------------------------------------------------------
 
 * Create a new point layer as a ``Temporary layer``.
 * Enter edit mode and digitize three points somewhere among the other points.
@@ -173,7 +173,7 @@ Missing (null) values
   specify only **three** points.
 * Save your new layer as :guilabel:`distance_points` in the format you prefer.
 
-To generate a distance matrix using these points:
+To generate statistics on the distances between points in the two layers:
 
 * Open the tool :menuselection:`Vector Analysis --> Distance matrix`.
 * Select the :guilabel:`distance_points` layer as the input layer, and the
@@ -193,15 +193,18 @@ To generate a distance matrix using these points:
 .. image:: img/distance_matrix_example.png
    :align: center
 
-The distance matrix calculates distance statistics among each point of the input
-layer and points of the target layer. Each field of the output layer contains
-information of the mean, standard deviation, minimum and maximum distance of
-the points.
+
+With these parameters, the ``Distance Matrix`` tool calculates distance
+statistics for each point of the input layer with respect to the nearest points
+of the target layer. The fields of the output layer contains the mean, standard
+deviation, minimum and maximum for the distances to the nearest neighbors of the
+points in the input layer.
+
 
 |basic| |FA| Nearest Neighbor Analysis
 -------------------------------------------------------------------------------
 
-To do a nearest neighbor analysis:
+To do a nearest neighbor analysis of a point layer:
 
 * Click on the menu item :menuselection:`Vector analysis --> Nearest neighbor
   analysis`.
@@ -289,13 +292,13 @@ some idea of what the terrain looks like.
 
 To start, launch the
 :menuselection:`GDAL --> Raster analysis --> Grid (IDW with nearest neighbor searching)`
-tool within |toolbox|.
+tool within :guilabel:`Processing` toolbox.
 
-* In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`
-* Set ``5.0`` as the :guilabel:`Weighting power`.
+* In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`;
+* Set ``5.0`` as the :guilabel:`Weighting power`;
 * In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the
-  :guilabel:`Z value from field` parameter.
-* Finally click on :guilabel:`Run` and wait until the algorithm ends.
+  :guilabel:`Z value from field` parameter;
+* Finally click on :guilabel:`Run` and wait until the algorithm ends;
 * Close the dialog.
 
 Here's a comparison of the original dataset (left) to the one constructed from
@@ -366,5 +369,4 @@ rasters? That's what we'll do in the next module!
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
-.. |toolbox| replace:: :menuselection:`Processing --> Toolbox`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
