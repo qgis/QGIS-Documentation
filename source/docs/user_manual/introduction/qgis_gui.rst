@@ -49,13 +49,11 @@ Scroll down for detailed explanations of these features.
 Menu Bar
 ========
 
-The menu bar provides access to various QGIS features using a standard
-hierarchical menu. The top-level menus and a summary of some of the menu
-options are listed below, together with the associated icons as
-they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in
-this section are the defaults; however, keyboard shortcuts can also be configured
-manually using the :guilabel:`Keyboard Shortcuts` dialog, opened from
-:menuselection:`Settings -->` menu.
+The Menu bar provides access to various QGIS functions using a standard
+hierarchical menu. A summary of the Menus, their options, associated 
+icons and keyboard shortcuts are outlined below. Note that these keyboard
+shortcuts are the default settings, however, they can be reconfigured using
+the :guilabel:`Keyboard Shortcuts`via the :menuselection:`Settings -->` menu.
 
 Although most menu options have a corresponding tool and vice-versa, the menus
 are not organized exactly like the toolbars. The toolbar containing the tool is
