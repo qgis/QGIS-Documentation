@@ -536,7 +536,7 @@ Your map should now show only those buildings which are within 50m of a road,
 
 :ref:`Back to text <backlink-vector-analysis-basic-3>`
 
-|RF| *Vector Analysis*
+|RF| *Network Analysis*
 -------------------------------------------------------------------------------
 
 .. _network-analysis-1:
@@ -550,9 +550,9 @@ fill the dialog as:
 .. image:: img/fastest_path_result.png
    :align: center
 
-Be aware that the :guilabel:`Path type to calculate` is ``Fastest``.
+Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
 
-Click on **[Run]** and close the dialog.
+Click on :guilabel:`Run` and close the dialog.
 
 Open now the attribute table of the output layer. The :guilabel:`cost` field
 contains the travel time between the two points (as fraction of hours):
