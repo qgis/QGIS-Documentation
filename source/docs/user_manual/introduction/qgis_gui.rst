@@ -41,9 +41,7 @@ The QGIS GUI is divided into five components:
 #. Map View
 #. Status Bar
 
-These five components of the QGIS interface are described in more detail in
-the following sections. Two more sections present keyboard shortcuts and
-context help.
+Scroll down for detailed explanations of these features. 
 
 .. index:: Menu
 .. _label_menubar:
