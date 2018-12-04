@@ -71,15 +71,15 @@ menu options to Menus. For more information about tools and toolbars, see sectio
 Project
 -------
 
-The :menuselection:`Project` menu is somehow the entrance and exit points of
-the :ref:`project file <sec_projects>`. It provides you with tools to:
+The :menuselection:`Project` menu contains the functions associated with 
+the :ref:`project file <sec_projects>`. 
+It provides you with tools to:
 
-* Create :guilabel:`New` file from scratch or using another project file as
-  template (see :ref:`Project files options <projectfiles_options>` for
-  template configuration);
-* :guilabel:`Open...` project file from file browser or PostgreSQL database;
-* :guilabel:`Close` a project or revert it to its last saved state;
-* Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+* Create :guilabel:`New` file from scratch or using an existing project file 
+  (see :ref:`Project files options <projectfiles_options>` for template configuration);
+* :guilabel:`Open...` project file from file browser or from a PostgreSQL database
+* :guilabel:`Close` a project or revert to its last saved state;
+* :guilabel: 'Save' a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
   or within a PostgreSQL database;
 * Export the project rendering to different formats from the map canvas or
   using a :ref:`print layout <label_printlayout>`;
