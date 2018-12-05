@@ -1253,7 +1253,7 @@ Placement tab
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
-type of vector layer, namely point, line or polygon and are affected by
+type of vector layer, namely point, line or polygon, and are affected by
 the global :ref:`PAL setting <automated_placement>`.
 
 .. _cartographic:
@@ -1847,7 +1847,7 @@ The current core implementation of diagrams provides support for:
 
 In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacement|
 :sup:`Automated placement settings (applies to all layers)` button provides
-means to control diagram :ref:`labels placement <automated_placement>` in the
+means to control diagram :ref:`labels placement <automated_placement>` on the
 map canvas.
 
 .. tip:: **Switch quickly between types of diagrams**
