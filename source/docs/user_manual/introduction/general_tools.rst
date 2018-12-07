@@ -1394,7 +1394,7 @@ Feature informations
 ....................
 
 The Identify Results dialog can be customized to display custom fields, but by
-default it will display following information:
+default it will display the following information:
 
 .. index:: Actions
 
