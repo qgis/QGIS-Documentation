@@ -102,11 +102,11 @@ Band rendering
 QGIS offers four different :guilabel:`Render types`.
 The renderer chosen is dependent on the data type.
 
-#. :ref:`Multiband color <multiband_color>`- if the file comes as a multiband with
+#. :ref:`Multiband color <multiband_color>` - if the file comes as a multiband with
    several bands (e.g., used with a satellite image with several bands).
-#. :ref:`Paletted <paletted>`- if a single band file comes with an indexed palette
+#. :ref:`Paletted <paletted>` - if a single band file comes with an indexed palette
    (e.g., used with a digital topographic map).
-#. :ref:`Singleband gray <singleband_gray>`- (one band of) the image will be rendered
+#. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
    as gray; QGIS will choose this renderer if the file has neither multibands nor an
    indexed palette nor a continuous palette (e.g., used with a shaded relief map).
 #. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
