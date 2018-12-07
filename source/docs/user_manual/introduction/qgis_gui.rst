@@ -133,7 +133,7 @@ Menu Option                                                              Shortcu
 |editCut| :guilabel:`Cut Features`                                       :kbd:`Ctrl+X`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
 |editCopy| :guilabel:`Copy Features`                                     :kbd:`Ctrl+C`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
 |editPaste| :guilabel:`Paste Features`                                   :kbd:`Ctrl+V`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
-:menuselection:`Paste features as -->`                                   \                     \                                   :ref:`sec_attribute_table`
+:menuselection:`Paste Features as -->`                                   \                     \                                   :ref:`sec_attribute_table`
 :menuselection:`Select -->`                                              \                     :guilabel:`Attributes`              :ref:`sec_selection`
 |newTableRow| :guilabel:`Add Record`                                     :kbd:`Ctrl+.`         :guilabel:`Digitizing`              \
 |capturePoint| :guilabel:`Add Point Feature`                             :kbd:`Ctrl+.`         :guilabel:`Digitizing`              :ref:`add_feature`
@@ -166,6 +166,7 @@ Menu Option                                                              Shortcu
 |vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`          \                     :guilabel:`Digitizing`              :ref:`vertex_tool`
 |rotatePointSymbols| :guilabel:`Rotate Point Symbols`                    \                     :guilabel:`Advanced Digitizing`     :ref:`rotate_symbol`
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                    \                     :guilabel:`Advanced Digitizing`     :ref:`offset_symbol`
+|reverseLine| :guilabel:`Reverse Line`                                   \                     :guilabel:`Advanced Digitizing`     \
 =======================================================================  ====================  =================================   ===================================
 
 Depending on the selected layer geometry type, some of the tools may look different:
@@ -210,7 +211,7 @@ Moreover the menu allows to reorganize QGIS interface itself using actions like:
 Menu Option                                                Shortcut                 Toolbar                        Reference
 =========================================================  =======================  =============================  ==========================================
 |newMap| :guilabel:`New Map View`                          :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
-:guilabel:`New 3D Map View`                                :kbd:`Ctrl+Shift+M`      \                              \
+|new3DMap| :guilabel:`New 3D Map View`                     :kbd:`Ctrl+Shift+M`      \                              \
 |pan| :guilabel:`Pan Map`                                  \                        :guilabel:`Map Navigation`     :ref:`zoom_pan`
 |panToSelected| :guilabel:`Pan Map to Selection`           \                        :guilabel:`Map Navigation`     \
 |zoomIn| :guilabel:`Zoom In`                               :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
@@ -272,8 +273,8 @@ Menu Option                                                   Shortcut          
 :menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  :ref:`nesting_projects`
 :guilabel:`Add from Layer Definition File...`                 \                     \                                  \
-|editCopy| :guilabel:`Copy style`                             \                     \                                  :ref:`save_layer_property`
-|editPaste| :guilabel:`Paste style`                           \                     \                                  :ref:`save_layer_property`
+|editCopy| :guilabel:`Copy Style`                             \                     \                                  :ref:`save_layer_property`
+|editPaste| :guilabel:`Paste Style`                           \                     \                                  :ref:`save_layer_property`
 |editCopy| :guilabel:`Copy Layer`                             \                     \                                  \
 |editPaste| :guilabel:`Paste Layer/Group`                     \                     \                                  \
 |openTable| :guilabel:`Open Attribute Table`                  :kbd:`F6`             :guilabel:`Attributes`             :ref:`sec_attribute_table`
@@ -287,7 +288,7 @@ Menu Option                                                   Shortcut          
 :guilabel:`Set Scale Visibility of Layer(s)`                  \                     \                                  \
 :guilabel:`Set CRS of Layer(s)`                               :kbd:`Ctrl+Shift+C`   \                                  \
 :guilabel:`Set Project CRS from Layer`                        \                     \                                  \
-:guilabel:`Properties...`                                     \                     \                                  :ref:`vector_properties_dialog`
+:guilabel:`Layer Properties...`                                     \                     \                                  :ref:`vector_properties_dialog`
 :guilabel:`Filter...`                                         :kbd:`Ctrl+F`         \                                  :ref:`vector_query_builder`
 |labeling| :guilabel:`Labeling`                               \                     \                                  :ref:`vector_labels_tab`
 |inOverview| :guilabel:`Show in Overview`                     \                     \                                  :ref:`overview_panels`
@@ -428,6 +429,7 @@ Menu Option                                                     Shortcut        
 |processingModel| :guilabel:`Graphical Modeler...`              :kbd:`Ctrl+Alt+M`           :ref:`processing.modeler`
 |processingHistory| :guilabel:`History...`                      :kbd:`Ctrl+Alt+H`           :ref:`processing.history`
 |processingResult| :guilabel:`Results Viewer`                   :kbd:`Ctrl+Alt+R`           :ref:`processing.results`
+|processSelected| :guilabel:`Edit Features In-Place`            \                           :ref:`processing_inplace_edit`
 ==============================================================  ==========================  ==========================================
 
 When starting QGIS for the first time not all core plugins are loaded.
@@ -439,7 +441,6 @@ Help
 Menu Option                                              Shortcut                     Toolbar
 =======================================================  ===========================  ===============================
 |helpContents| :guilabel:`Help Contents`                 :kbd:`F1`                    :guilabel:`Help`
-|whatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`              :guilabel:`Help`
 :guilabel:`API Documentation`                            \                            \
 :guilabel:`Report an Issue`                              \                            \
 :guilabel:`Need commercial support?`                     \                            \
@@ -813,6 +814,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
+.. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
@@ -841,6 +844,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |pluginUpgrade| image:: /static/common/pluginUpgrade.png
    :width: 1.5em
+.. |processSelected| image:: /static/common/mActionProcessSelected.png
+   :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
@@ -862,6 +867,8 @@ open the Plugin Manager dialog.
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
+   :width: 1.5em
+.. |reverseLine| image:: /static/common/mActionReverseLine.png
    :width: 1.5em
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
@@ -909,8 +916,6 @@ open the Plugin Manager dialog.
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
-   :width: 1.5em
-.. |whatsThis| image:: /static/common/whats_this.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
