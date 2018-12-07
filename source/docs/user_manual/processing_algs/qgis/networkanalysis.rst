@@ -16,9 +16,9 @@ Network analysis
 Service area (from layer)
 -------------------------
 Returns all the substrings of streets on a network that can be reached within a distance or
-a time starting from any point of a layer. This allows to evaluate accessibilty within
+a time starting from any point of a layer. This allows evaluation of accessibility within
 a network, eg what are the places I can navigate to on a road network without spending
-cost greater than a given value (the cost can be a distance or a time).
+cost greater than a given value (the cost can be distance or time).
 
 Parameters
 ..........
@@ -27,7 +27,7 @@ Parameters
   Line vector layer representing the network to be covered.
 
 ``Vector layer with start points`` [vector: point]
-  Point vector layer whose features are used as start points to generate the service area.
+  Point vector layer whose features are used as start points to generate the service areas.
 
 ``Path type to calculate`` [enumeration]
   <put parameter description here>
@@ -49,7 +49,8 @@ Parameters
   ``Direction field`` [tablefield: string]
     Optional
     
-    <put parameter description here>
+    The field used to specify directions for the network edges.  The values used in this field are specified with the three parameters
+    ``Value for forward direction``, ``Value for backward direction`` and ``Value for both directions``.
 
     Forward and reverse directions correspond to a one-way road, both directions indicate a two-way road.
     If some features don’t have any value set, the default direction setting is applied.
@@ -57,21 +58,21 @@ Parameters
   ``Value for forward direction`` [string]
     Optional
 
-    Value set in the direction field to identify roads in forward direction.
+    Value set in the direction field to identify edges with a forward direction.
 
   ``Value for backward direction`` [string]
     Optional
 
-    Value set in the direction field to identify roads in backward direction.
+    Value set in the direction field to identify edges with a backward direction.
 
   ``Value for both directions`` [string]
     Optional
 
-    Value set in the direction field to identify roads in both directions.
+    Value set in the direction field to identify bidirectional edges.
 
   ``Default direction`` [enumeration]
     If a feature has no value set in the direction field or if no direction field is set,
-    then following property is applied to all the features.
+    then this direction value is used.
 
     Available options are:
 
@@ -84,11 +85,11 @@ Parameters
   ``Speed field`` [tablefield: string]
     Optional
 
-    Field setting the speed value for each line on the network when looking for the fastest path.
+    Field providing the speed value for the edges of the network when looking for the fastest path.
     If not available, a default speed value is used.
 
   ``Default speed`` [number]
-    Value to use to calculate the travel time if no speed field is provided for a line feature.
+    Value to use to calculate the travel time if no speed field is provided for an edge.
 
     Default: *5.0*
 
@@ -98,7 +99,9 @@ Parameters
     Default: *0.0*
 
   ``Include upper/lower bound points`` [boolean]
-    <put parameter description here>
+    Creates a point layer output with two points for each edge at the boundaries of the
+    service area.
+    One point is the start of that edge, the other is the end.
 
     Default: *False*
 
@@ -106,11 +109,11 @@ Outputs
 .......
 
 ``Service area (lines)`` [vector: line]
-  Line layer representing the area accessible on the network from the input points.
+  Line layer representing the parts of the network that can be serviced by the input points.
 
 ``Service area (boundary nodes)`` [vector: point]
   Point layer representing the furthest points on the network from the start points,
-  at the given cost.
+  for the given cost.
  
 
 .. _qgisserviceareafrompoint:
@@ -118,9 +121,9 @@ Outputs
 Service area (from point)
 -------------------------
 Starting from a point, returns all the substrings of lines on a network that can be
-reached within a distance or a time. This allows to evaluate accessibilty within
+reached within a given distance or time. This allows the evaluation of accessibility within
 a network, eg what are the places I can navigate to on a road network without spending
-a cost greater than a given value (the cost can be a distance or a time).
+a cost greater than a given value (the cost can be distance or time).
 
 Parameters
 ..........
@@ -132,19 +135,19 @@ Outputs
 .......
 
 ``Service area (lines)`` [vector: line]
-  Line layer representing the area accessible on the network from the start point.
+  Line layer representing the part of the network that can be serviced by the start point.
 
 ``Service area (boundary nodes)`` [vector: point]
   Point layer representing the furthest points on the network from the start point,
-  at the given cost.
+  for the given cost.
 
 
 .. _qgisshortestpathlayertopoint:
 
 Shortest path (layer to point)
 ------------------------------
-Computes optimal (shortest or fastest) route from multiple start points defined
-by vector layer and given end point.
+Computes the optimal (shortest or fastest) routes from multiple start points defined
+by a vector layer and a given end point.
 
 Parameters
 ..........
@@ -172,8 +175,8 @@ Outputs
 
 Shortest path (point to layer)
 ------------------------------
-Computes optimal (shortest or fastest) route between given start point and multiple
-end points defined by point vector layer.
+Computes optimal (shortest or fastest) route between a given start point and multiple
+end points defined by a point vector layer.
 
 Parameters
 ..........
@@ -195,7 +198,7 @@ Outputs
 
 Shortest path (point to point)
 ------------------------------
-Computes optimal (shortest or fastest) route between given start and end points.
+Computes the optimal (shortest or fastest) route between a given start point and a given end point.
 
 Parameters
 ..........
