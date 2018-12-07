@@ -15,8 +15,8 @@ Network analysis
 
 Service area (from layer)
 -------------------------
-Returns all the substrings of streets on a network that can be reached within a distance or
-a time starting from any point of a layer. This allows evaluation of accessibility within
+Returns all the edges or parts of edges of a network that can be reached within a distance
+or a time, starting from a point layer. This allows evaluation of accessibility within
 a network, eg what are the places I can navigate to on a road network without spending
 cost greater than a given value (the cost can be distance or time).
 
@@ -30,30 +30,35 @@ Parameters
   Point vector layer whose features are used as start points to generate the service areas.
 
 ``Path type to calculate`` [enumeration]
-  <put parameter description here>
-  
+  The type of path to calculate.
+
   Options are:
-  
+
   * 0 --- Shortest
   * 1 --- Fastest
-  
+
   Default: *0*
 
 ``Travel cost`` [number]
-  The value is estimated as a distance (in the project map units) when looking for the *Shortest*
-  path and as time (in hours) for the *Fastest* path.
+  The value is estimated as a distance (in the project map units) when looking for
+  the *Shortest* path and as time (in hours) for the *Fastest* path.
 
   Default: *0.0*
 
 ``Advanced parameters``
   ``Direction field`` [tablefield: string]
     Optional
-    
-    The field used to specify directions for the network edges.  The values used in this field are specified with the three parameters
-    ``Value for forward direction``, ``Value for backward direction`` and ``Value for both directions``.
 
-    Forward and reverse directions correspond to a one-way road, both directions indicate a two-way road.
-    If some features don’t have any value set, the default direction setting is applied.
+    The field used to specify directions for the network edges.
+
+    The values used in this field are specified with the three parameters ``Value for
+    forward direction``, ``Value for backward direction`` and ``Value for both directions``.
+    Forward and reverse directions correspond to a one-way edge, "both directions"
+    indicates a two-way edge.
+
+    If a feature does not have a value in this field, or no field is set then the
+    default direction setting (provided with the ``Default direction`` parameter)
+    is used.
 
   ``Value for forward direction`` [string]
     Optional
@@ -86,7 +91,9 @@ Parameters
     Optional
 
     Field providing the speed value for the edges of the network when looking for the fastest path.
-    If not available, a default speed value is used.
+
+    If a feature does not have a value in this field, or no field is set then the
+    default speed value (provided with the ``Default speed`` parameter) is used.
 
   ``Default speed`` [number]
     Value to use to calculate the travel time if no speed field is provided for an edge.
@@ -114,14 +121,14 @@ Outputs
 ``Service area (boundary nodes)`` [vector: point]
   Point layer representing the furthest points on the network from the start points,
   for the given cost.
- 
+
 
 .. _qgisserviceareafrompoint:
 
 Service area (from point)
 -------------------------
-Starting from a point, returns all the substrings of lines on a network that can be
-reached within a given distance or time. This allows the evaluation of accessibility within
+Returns all the edges or parts of edges of a network that can be reached within a given distance
+or time, starting from a point feature. This allows the evaluation of accessibility within
 a network, eg what are the places I can navigate to on a road network without spending
 a cost greater than a given value (the cost can be distance or time).
 
@@ -153,16 +160,23 @@ Parameters
 ..........
 
 ``Vector layer representing the network`` [vector: line]
-  <put parameter description here>
+  Line vector layer representing the network to be covered.
 
 ``Path type to calculate`` [enumeration]
-  <put parameter description here>
+  The type of path to calculate.
+
+  Options are:
+
+  * 0 --- Shortest
+  * 1 --- Fastest
+
+  Default: *0*
 
 ``Vector layer with start points`` [vector: point]
-  <put parameter description here>
+  Point vector layer whose features are used as start points of the routes.
 
 ``End point (x, y)`` [coordinates]
-  <put parameter description here>
+  Point feature representing the end point of the routes.
 
 Outputs
 .......
@@ -175,17 +189,17 @@ Outputs
 
 Shortest path (point to layer)
 ------------------------------
-Computes optimal (shortest or fastest) route between a given start point and multiple
+Computes the optimal (shortest or fastest) routes between a given start point and multiple
 end points defined by a point vector layer.
 
 Parameters
 ..........
 
 ``Start point (x, y)`` [coordinates]
-  <put parameter description here>
+  Point feature representing the start point of the routes.
 
 ``Vector layer with end points`` [vector: point]
-  <put parameter description here>
+  Point vector layer whose features are used as end points of the routes.
 
 Outputs
 .......
@@ -204,10 +218,10 @@ Parameters
 ..........
 
 ``Start point (x, y)`` [coordinates]
-  <put parameter description here>
+  Point feature representing the start point of the route.
 
 ``End point (x, y)`` [coordinates]
-  <put parameter description here>
+  Point feature representing the end point of the route.
 
 Outputs
 .......
