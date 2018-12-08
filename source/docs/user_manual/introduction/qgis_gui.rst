@@ -274,7 +274,7 @@ or paste layer properties (style, scale, CRS...).
 ============================================================  ====================  ================================  =====================================
 Menu Option                                                   Shortcut              Toolbar                           Reference
 ============================================================  ====================  ================================  =====================================
-|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    :ref:`datasourcemanager`
+|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    :ref:`Opening Data <datasourcemanager>`
 :menuselection:`Create Layer -->`                             \                     :guilabel:`Data Source Manager`    :ref:`sec_create_vector`
 :menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  :ref:`nesting_projects`
