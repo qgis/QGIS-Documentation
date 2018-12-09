@@ -889,14 +889,14 @@ To load a layer from a database, you can perform the following steps:
    Add PostGIS Table(s) Dialog
 
 
-.. tip:: **Use the Browser Panel to speed scan and loading of database table(s)**
+.. tip:: **Use the Browser Panel to speed up loading of database table(s)**
 
-  Adding DB tables from their ad hoc tab of the :guilabel:`Datasource Manager`
-  dialog to the map canvas may sometimes become time consuming as QGIS fetches
-  statistics and properties (e.g. geometry type and field, crs, number of features)
+  Adding DB tables from their ad hoc tab of the :guilabel:`Data Source Manager`
+  dialog to QGIS may sometimes be time consuming as QGIS fetches
+  statistics and properties (e.g. geometry type and field, CRS, number of features)
   of each table beforehand.
   To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
-  better use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB Manager
+  it's better to use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB Manager
   <dbmanager>` to drag and drop the database tables in the map canvas.
 
 
