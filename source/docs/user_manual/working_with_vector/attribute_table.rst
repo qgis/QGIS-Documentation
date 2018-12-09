@@ -133,6 +133,8 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
+.. _attribute_table_view:
+
 Table view vs Form view
 -----------------------
 
@@ -140,9 +142,9 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 
 * The |openTable| :sup:`Table view`, displays values of multiple features in a
   tabular mode, each row representing a feature and each column a field.
-* And the |formView| :sup:`Form view` shows identifiers of features in a first
-  panel and displays only the attributes of the clicked identifier in the second
-  one. Form view uses the layer fields configuration
+* And the |formView| :sup:`Form view` shows :ref:`feature identifiers
+  <maptips>` in a first panel and displays only the attributes of the clicked
+  identifier in the second one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
 
 You can switch from one mode to the other by clicking the corresponding icon at
