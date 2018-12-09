@@ -63,12 +63,12 @@ section, subsection and minisec.
    Subminisec
    ^^^^^^^^^^
 
-Inline tags
+Inline Tags
 -----------
 
 You can use some tags inside the text to emphasize some items.
 
-* **Menu gui**: to mark a complete sequence of menu selections,
+* **Menu GUI**: to mark a complete sequence of menu selections,
   including selecting submenus and choosing a specific operation,
   or any subsequence of such a sequence.
 
@@ -97,13 +97,19 @@ You can use some tags inside the text to emphasize some items.
 
   (see `image`_ below).
 
-* **Shorcut keyboard**
+* **Keyboard shortcut**
 
   .. code-block:: rst
 
      :kbd:`Ctrl+B`
 
   will show :kbd:`Ctrl+B`
+  
+  When describing keyboard shortcuts, the following conventions
+  should be used:
+  * Letter keys are displayed using uppercase: <kbd>S</kbd>
+  * Special keys are displayed with an uppercase first letter: <kbd>Esc</kbd>
+  * Key combinations are displayed with a `+` sign between keys, without spaces: <kbd>Shift+R</kbd>
 
 
 * **User text**
@@ -141,7 +147,7 @@ which will return:
 see my_anchor_ for more information.
 
 Notice how it will jump to the following line/thing following the 'anchor'.
-Normally to declare this label you do not need to use apastroph's but
+Normally to declare this label you do not need to use apostrophes but
 you do need to use empty lines before and after the anchor.
 
 Another way to jump to the same place **from anywhere in the documentation**
@@ -171,8 +177,8 @@ see :ref:`Label and reference <my_anchor>` for more information.
 
 .. _`image`:
 
-Figure and image
-----------------
+Figures and Images
+------------------
 
 
 Pictures
@@ -194,7 +200,7 @@ Replacement
 ...........
 
 You can put an image inside text or add an alias to use everywhere. To use an image
-inside a paragraph, just create an alias somewhere.
+inside a paragraph, first create an alias:
 
 
 .. code-block:: rst
@@ -202,13 +208,13 @@ inside a paragraph, just create an alias somewhere.
    .. |nice_logo| image:: /static/common/logo.png
                   :width: 2 em
 
-and call it in your paragraph:
+and then call it in your paragraph:
 
 .. code-block:: rst
 
    my paragraph begins here with a nice logo |nice_logo|.
 
-Here is how this example become:
+This is how the example will be displayed:
 
 .. |nice_logo| image:: /static/common/logo.png
                :width: 2 em
@@ -218,7 +224,7 @@ my paragraph begins here with a nice logo |nice_logo|.
 .. note::
 
    Currently, to ensure consistency and help in the use of QGIS icons
-   a list of alias is built and available in :ref:`substitutions` chapter.
+   a list of aliases is built and available in the :ref:`substitutions` chapter.
 
 Figure
 ......
@@ -244,14 +250,14 @@ The result looks like this:
 
    A caption: A logo I like
 
-To avoid possible conflict with another references, always begin figures
-anchor with ``_figure_`` and prefer using terms that can easily refer to the
+To avoid possible conflict with other references, always begin figure
+anchors with ``_figure_`` and prefer using terms that can easily refer to the
 figure caption. While only the centered alignment is mandatory for the image,
-feel free to use any other options for figure (such as ``width``,
+feel free to use any other options for figures (such as ``width``,
 ``height``, ``scale``...) if needed.
 
-The scripts will insert an automatical generated number before the caption of
-the figure in pdf.
+The scripts will insert an automatically generated number before the caption of
+the figure in the generated PDF version of the documentation.
 
 To use a caption (*see My caption*) just insert indented text after a blank line
 in the figure block.
@@ -306,7 +312,7 @@ You can also use more complicated tables by drawing them using references and al
    | and of course not to forget |nix|  |
    +------------------------------------+
 
-   My drawn table, mind you this is unfortunately not regarded a caption
+   My drawn table, mind you this is unfortunately not regarded as a caption
 
    You can reference to it like this my_drawn_table_.
 
@@ -322,7 +328,7 @@ The result:
 | and of course not to forget |nix|  |
 +------------------------------------+
 
-My drawn table, mind you this is unfortunately not regarded a caption
+My drawn table, mind you this is unfortunately not regarded as a caption
 
 You can reference to it like this my_drawn_table_.
 
@@ -336,7 +342,7 @@ QGIS documentation provides some essential indices.
 There are few rules to follow in order to keep a set of indices that are really
 useful (coherent, consistent and really connected to each other):
 
-* Index should be human readable, understandable and translatable; an index can
+* An index should be human readable, understandable and translatable; an index can
   be made from many words but you should avoid any unneeded ``_``, ``-``...
   characters to link them i.e., ``Loading layers`` instead of ``loading_layers``
   or ``loadingLayers``.
@@ -386,7 +392,7 @@ A clear and appropriate title is required for both warnings and tips.
   users to quickly overview the message you want to give them, and
   decide on its relevance.
 
-Code snippets
+Code Snippets
 -------------
 
 You may also want to give examples and insert a code snippet. In this case,
