@@ -97,7 +97,7 @@ You can use some tags inside the text to emphasize some items.
 
   (see `image`_ below).
 
-* **Keyboard shortcut**
+* **Keyboard shortcuts**
 
   .. code-block:: rst
 
@@ -107,9 +107,10 @@ You can use some tags inside the text to emphasize some items.
   
   When describing keyboard shortcuts, the following conventions
   should be used:
-  * Letter keys are displayed using uppercase: <kbd>S</kbd>
-  * Special keys are displayed with an uppercase first letter: <kbd>Esc</kbd>
-  * Key combinations are displayed with a `+` sign between keys, without spaces: <kbd>Shift+R</kbd>
+  
+  * Letter keys are displayed using uppercase: :kbd:`S`
+  * Special keys are displayed with an uppercase first letter: :kbd:`Esc`
+  * Key combinations are displayed with a `+` sign between keys, without spaces: :kbd:`Shift+R`
 
 
 * **User text**
