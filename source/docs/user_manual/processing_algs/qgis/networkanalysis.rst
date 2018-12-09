@@ -90,12 +90,13 @@ Parameters
   ``Speed field`` [tablefield: string]
     Optional
 
-    Field providing the speed value for the edges of the network when looking for the fastest path.
+    Field providing the speed value (in ``km/h``) for the edges of the network when
+    looking for the fastest path.
 
     If a feature does not have a value in this field, or no field is set then the
     default speed value (provided with the ``Default speed`` parameter) is used.
 
-  ``Default speed`` [number]
+  ``Default speed (km/h)`` [number]
     Value to use to calculate the travel time if no speed field is provided for an edge.
 
     Default: *5.0*
@@ -116,7 +117,7 @@ Outputs
 .......
 
 ``Service area (lines)`` [vector: line]
-  Line layer representing the parts of the network that can be serviced by the input points.
+  Line layer representing the parts of the network that can be serviced by the start points.
 
 ``Service area (boundary nodes)`` [vector: point]
   Point layer representing the furthest points on the network from the start points,
@@ -142,7 +143,7 @@ Outputs
 .......
 
 ``Service area (lines)`` [vector: line]
-  Line layer representing the part of the network that can be serviced by the start point.
+  Line layer representing the parts of the network that can be serviced by the start point.
 
 ``Service area (boundary nodes)`` [vector: point]
   Point layer representing the furthest points on the network from the start point,
