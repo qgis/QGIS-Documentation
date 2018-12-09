@@ -483,6 +483,14 @@ QGIS project:
 #. Press :guilabel:`OK` to open the layers in QGIS.
 
 
+.. _figure_dwg_dxf_import:
+
+.. figure:: img/dwg_dxf_import_dialog.png
+    :align: center
+    
+    Import dialog for DQG/DXF files
+
+
 .. index:: OSM (OpenStreetMap)
 .. _openstreetmap:
 
