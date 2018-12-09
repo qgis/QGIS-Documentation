@@ -110,7 +110,7 @@ You can use some tags inside the text to emphasize some items.
   
   * Letter keys are displayed using uppercase: :kbd:`S`
   * Special keys are displayed with an uppercase first letter: :kbd:`Esc`
-  * Key combinations are displayed with a `+` sign between keys, without spaces: :kbd:`Shift+R`
+  * Key combinations are displayed with a ``+`` sign between keys, without spaces: :kbd:`Shift+R`
 
 
 * **User text**
