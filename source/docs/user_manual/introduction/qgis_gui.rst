@@ -108,13 +108,15 @@ Menu Option                                              Shortcut              T
 |saveMapAsImage| :guilabel:`Export Map to Image...`      \                     \                          :ref:`sec_output`
 |saveAsPDF| :guilabel:`Export Map to PDF...`             \                     \                          :ref:`sec_output`
 :guilabel:`Export Project to DXF...`                     \                     \                          :ref:`sec_output`
-:guilabel:`Import Layers from DWG/DXF...`                \                     \                          \
+:guilabel:`Import Layers from DWG/DXF...`                \                     \                          :ref:`import_dxfdwg`
 |newLayout| :guilabel:`New Print Layout...`              :kbd:`Ctrl+P`         :guilabel:`Project`        :ref:`label_printlayout`
 |newReport| :guilabel:`New Report...`                    \                     \                          :ref:`label_printlayout`
 |layoutManager| :guilabel:`Layout Manager...`            \                     :guilabel:`Project`        :ref:`label_printlayout`
 :menuselection:`Layouts -->`                             \                     \                          :ref:`label_printlayout`
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                          \
 =======================================================  ====================  =========================  ===============================
+
+|
 
 Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 :menuselection:`QGIS --> Quit QGIS` (:kbd:`Cmd+Q`).
@@ -168,6 +170,8 @@ Menu Option                                                              Shortcu
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                    \                     :guilabel:`Advanced Digitizing`     :ref:`offset_symbol`
 |reverseLine| :guilabel:`Reverse Line`                                   \                     :guilabel:`Advanced Digitizing`     \
 =======================================================================  ====================  =================================   ===================================
+
+|
 
 Depending on the selected layer geometry type, some of the tools may look different:
 
@@ -227,7 +231,7 @@ Menu Option                                                Shortcut             
 |zoomActual| :guilabel:`Zoom To Native Resolution (100%`)  \                        :guilabel:`Map Navigation`     \
 :menuselection:`Decorations -->`                           \                        \                              :ref:`decorations`
 :menuselection:`Preview mode -->`                          \                        \                              \
-|mapTips| :guilabel:`Show Map Tips`                             \                        :guilabel:`Attributes`         :ref:`maptips`
+|mapTips| :guilabel:`Show Map Tips`                        \                        :guilabel:`Attributes`         :ref:`maptips`
 |newBookmark| :guilabel:`New Bookmark...`                  :kbd:`Ctrl+B`            :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
 |showBookmarks| :guilabel:`Show Bookmarks`                 :kbd:`Ctrl+Shift+B`      :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
 |draw| :guilabel:`Refresh`                                 :kbd:`F5`                :guilabel:`Map Navigation`     \
@@ -242,6 +246,8 @@ Menu Option                                                Shortcut             
 :guilabel:`Toggle Panel Visibility`                        :kbd:`Ctrl+Tab`          \                              \
 :guilabel:`Toggle Map Only`                                :kbd:`Ctrl+Shift+Tab`    \                              \
 =========================================================  =======================  =============================  ==========================================
+
+|
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
@@ -268,7 +274,7 @@ or paste layer properties (style, scale, CRS...).
 ============================================================  ====================  ================================  =====================================
 Menu Option                                                   Shortcut              Toolbar                           Reference
 ============================================================  ====================  ================================  =====================================
-|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    \
+|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    :ref:`Opening Data <datasourcemanager>`
 :menuselection:`Create Layer -->`                             \                     :guilabel:`Data Source Manager`    :ref:`sec_create_vector`
 :menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  :ref:`nesting_projects`
@@ -288,7 +294,7 @@ Menu Option                                                   Shortcut          
 :guilabel:`Set Scale Visibility of Layer(s)`                  \                     \                                  \
 :guilabel:`Set CRS of Layer(s)`                               :kbd:`Ctrl+Shift+C`   \                                  \
 :guilabel:`Set Project CRS from Layer`                        \                     \                                  \
-:guilabel:`Layer Properties...`                                     \                     \                                  :ref:`vector_properties_dialog`
+:guilabel:`Layer Properties...`                               \                     \                                  :ref:`vector_properties_dialog`
 :guilabel:`Filter...`                                         :kbd:`Ctrl+F`         \                                  :ref:`vector_query_builder`
 |labeling| :guilabel:`Labeling`                               \                     \                                  :ref:`vector_labels_tab`
 |inOverview| :guilabel:`Show in Overview`                     \                     \                                  :ref:`overview_panels`
@@ -310,6 +316,8 @@ Menu Option                                                        Shortcut     
 |options| :guilabel:`Options...`                                   \                     \                     :ref:`gui_options`
 =================================================================  ====================  ====================  ===================================
 
+|
+
 Under |kde| Linux KDE, you'll find more tools in :menuselection:`Settings`
 menu such as :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
@@ -323,6 +331,8 @@ Menu Option                                                             Shortcut
 |showPluginManager| :guilabel:`Manage and Install Plugins...`           \                     \                        :ref:`managing_plugins`
 |pythonFile| :guilabel:`Python Console`                                 :kbd:`Ctrl+Alt+P`     :guilabel:`Plugins`      :ref:`console`
 ======================================================================  ====================  =======================  ===============================
+
+|
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -345,6 +355,8 @@ Menu Option                                                     Shortcut        
 |gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       :ref:`plugin_gps`
 |topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       :ref:`topology`
 ==============================================================  =======================  =======================  ===============================
+
+|
 
 By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
 by sub-menus to the :guilabel:`Vector` menu. This provides shortcuts
@@ -375,6 +387,8 @@ Menu Option                                                 Toolbar             
 |georefRun| :guilabel:`Georeferencer`                       :guilabel:`Raster`    :ref:`georef`
 ==========================================================  ====================  ==================================
 
+|
+
 By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
 by sub-menus to the :guilabel:`Raster` menu. This provides a shortcut
 for many common raster-based GIS tasks picked from different providers.
@@ -400,6 +414,8 @@ Menu Option                                      Toolbar                       R
 :menuselection:`Offline Editing -->`             :guilabel:`Database`          :ref:`offlinedit`
 ===============================================  ============================  ===============================
 
+|
+
 When starting QGIS for the first time not all core plugins are loaded.
 
 
@@ -416,6 +432,8 @@ Menu Option                                      Toolbar                      Re
 |metasearch| :menuselection:`Metasearch`         :guilabel:`Web`              :ref:`metasearch`
 ===============================================  ===========================  ===============================
 
+|
+
 When starting QGIS for the first time not all core plugins are loaded.
 
 
@@ -431,6 +449,8 @@ Menu Option                                                     Shortcut        
 |processingResult| :guilabel:`Results Viewer`                   :kbd:`Ctrl+Alt+R`           :ref:`processing.results`
 |processSelected| :guilabel:`Edit Features In-Place`            \                           :ref:`processing_inplace_edit`
 ==============================================================  ==========================  ==========================================
+
+|
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -466,6 +486,8 @@ Menu Option                       Shortcut              Reference
 :guilabel:`Hide Others`           \                     \
 :guilabel:`Quit QGIS`             :kbd:`Cmd+Q`          \
 ================================  ====================  =========================
+
+|
 
 :guilabel:`Preferences` and :guilabel:`About QGIS` are the same commands as
 :menuselection:`Settings --> Options` and :menuselection:`Help --> About`.
