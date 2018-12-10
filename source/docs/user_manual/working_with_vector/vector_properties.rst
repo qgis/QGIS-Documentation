@@ -2521,10 +2521,9 @@ then you need to add and configure more than 20 fields in your original data
 source (x and y positions, rotation angle, font style, color and so on).
 
 The Auxiliary Storage mechanism provides the solution to these limitations
-and awkward configurations. Actually, auxiliary fields are a roundabout
-mean to automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This way,
-data source doesn't even need to be editable!
+and awkward configurations. Auxiliary fields are a roundabout way to
+automatically manage and store these data-defined properties (labels,
+diagram, symbology...) in a SQLite database thanks to editable joins. This allows you to store properties for layers that aren't editable.
 
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
@@ -2585,10 +2584,11 @@ and can be retrieved:
    Auxiliary Fields
 
 
-``19`` fields have been automatically created and configured for
-labeling. For example, the ``FontStyle`` auxiliary field type is a ``String``
-and is named ``labeling_fontstyle`` in the underlying SQLite database. There is
-also ``1`` entity which is currently using these auxiliary fields.
+As you can see in the figure above, ``21`` fields are automatically created and
+configured for labeling. For example, the ``FontStyle`` auxiliary field type is
+a ``String`` and is named ``labeling_fontstyle`` in the underlying SQLite
+database. There is also ``1`` entity which is currently using these auxiliary
+fields.
 
 Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels`
 properties tab indicating that the data-defined override options are set
@@ -2612,10 +2612,11 @@ primary key to use for joining.
 Symbology
 ---------
 
-In the same way than for customizing labels, auxiliary fields may be used to
-stylize symbols too. To do this, you just have to click on
-:guilabel:`Store data in the project` for a specific symbol property. For
-example for the :guilabel:`Fill color` field:
+Like the method described above for customizing labels, auxiliary fields can
+also be used to stylize symbols and diagrams. To do this, click on
+|dataDefined| :sup:`Data-defined override` and select :guilabel:`Store data in
+the project` for a specific property. For example for the :guilabel:`Fill
+color` field:
 
 .. figure:: img/auxiliary_storage_symbol.png
    :align: center
@@ -2623,11 +2624,12 @@ example for the :guilabel:`Fill color` field:
    Data-defined property menu for symbol
 
 
-Because you may customize same property for different (levels of) symbols,
-each setting requires a unique name to avoid conflict. Thus, by clicking on
-:guilabel:`Store data in the project`, a window is displayed, indicating the
-:guilabel:`Type` of the field and providing a way to give the unique name. For
-the :guilabel:`Fill color` field, the next window is opened:
+There are different layers for each symbol (e.g. fill style, fill color, stroke
+color, etc...), so each layer requires a unique name to avoid conflicts.
+After selecting :guilabel:`Store data in the project`, a window opens asking
+you to select the :guilabel:`Type` of the field and providing a
+way to give the auxiliary field a unique name. For the :guilabel:`Fill color`
+field, the next window is opened:
 
 .. figure:: img/auxiliary_storage_symbol_name.png
    :align: center
@@ -2648,15 +2650,26 @@ Attribute table and widgets
 ---------------------------
 
 Auxiliary fields can be edited using the
-:ref:`attribute table <sec_attribute_table>`, however they are not initially
-visible or editable.
+:ref:`attribute table <sec_attribute_table>`. However, not all auxiliary fields
+are initially visible in the attribute table.
 
-To make a field visible, open the :ref:`Attribute Form properties tab
-<vector_attributes_menu>` and change the value of an auxiliary field
+Auxiliary fields representing attributes of a layer's symbology, labeling,
+appearance, or diagrams will appear automatically in the attribute table. The
+exception are attributes that can be modified using the :ref:`Label Toolbar <label_toolbar>`
+which are hidden by default. Auxiliary fields representing a ``Color`` have a
+widget **Color** set by default, otherwise auxiliary fields default to the
+**Text Edit** widget.
+
+Auxiliary fields that represent attributes that can be modified using
+the :ref:`Label toolbar<label_toolbar>` are **Hidden** in the attribute table
+by default. To make a field visible, open the :ref:`Attribute Form properties
+tab <vector_attributes_menu>` and change the value of an auxiliary field
 :guilabel:`Widget Type` from **Hidden** to another relevant value. For example,
 change the **auxiliary_storage_labeling_size** to **Text Edit** or change
 **auxiliary_storage_labeling_color** to the **Color** widget. Those fields will
-now be visible and editable in the attribute table:
+now be visible in the attribute table.
+
+Auxiliary fields in the attribute table will appear like the following image:
 
 
 .. figure:: img/auxiliary_storage_widgets.png
