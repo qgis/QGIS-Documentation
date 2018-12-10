@@ -1253,7 +1253,8 @@ Placement tab
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
-type of vector layer, namely point, line or polygon.
+type of vector layer, namely point, line or polygon, and are affected by
+the global :ref:`PAL setting <automated_placement>`.
 
 .. _cartographic:
 
@@ -1480,6 +1481,8 @@ configure a global and automated behavior of the labels. Clicking the
 
 * The :guilabel:`Search method` combobox provides you with different placement methods
   for finding good placement solutions for point, line and polygon labeling.
+  More details in this `article
+  <https://www.ee.co.za/wp-content/uploads/legacy/PositionIT%202009/PAL_PositIT_Jul09_p56-61.pdf>`_.
 * The :guilabel:`Number of candidates` controls set how many label placement
   candidates should be generated for each feature type. The more candidates generated,
   the better the labeling will be - but at a cost of rendering speed. Smaller number
@@ -1841,6 +1844,11 @@ The current core implementation of diagrams provides support for:
 * |text| :guilabel:`Text diagrams`, a horizontaly divided circle showing statistics
   values inside;
 * and |histogram| :guilabel:`Histograms`.
+
+In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacement|
+:sup:`Automated placement settings (applies to all layers)` button provides
+means to control diagram :ref:`labels placement <automated_placement>` on the
+map canvas.
 
 .. tip:: **Switch quickly between types of diagrams**
 
@@ -2509,8 +2517,8 @@ Additionally, the add vector join dialog allows you to:
 
 .. _vector_auxiliary_storage:
 
-Auxiliary storage
-=================
+Auxiliary Storage Properties
+============================
 
 The regular way to customize styling and labeling is to use data-defined
 properties as described in :ref:`data_defined`. However, it may not be
@@ -3032,21 +3040,25 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|display| This tab is specifically created for map tips: display a message in
-the map canvas when hovering over a feature of the active layer.
-This message can either be the value of a |radioButtonOff| :guilabel:`Field`
-or a more complex and full |radioButtonOff| :guilabel:`HTML` text mixing fields,
-:ref:`expressions <vector_expressions>` and html tags (multiline, fonts, images,
-hyperlink ...).
+|display| The :guilabel:`Display` tab helps you configure fields to use for
+feature identification:
 
-To activate Map Tips, select the menu option :menuselection:`View --> Map Tips`
-or click on the |mapTips| :sup:`Map Tips` icon. Map tip is a cross-session feature
-meaning that once activated, it stays on and apply to any set layer in any project,
-even in future QGIS sessions until it's toggled off.
+* The :guilabel:`Display name`: based on a field or an :ref:`expression
+  <vector_expressions>`. This is:
+  
+  * the label shown on top of the feature information in the :ref:`Identify
+    tool <identify>` results;
+  * the field used in the :ref:`locator bar <locator_options>` when looking for
+    features in all layers;
+  * the feature identifier in the attribute table :ref:`form view
+    <attribute_table_view>`;
+  * the map tip information, i.e. the message displayed in the map canvas when
+    hovering over a feature of the active layer with the |mapTips| :sup:`Show
+    Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
 
-
-Figures Display Code and Mapped show an example of HTML code and how it behaves
-in map canvas.
+* The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
+  a more complex and full HTML text mixing fields, expressions and html tags
+  (multiline, fonts, images, hyperlink...).
 
 .. _figure_display_code:
 
@@ -3055,6 +3067,12 @@ in map canvas.
 
    HTML code for map tip
 
+
+To activate map tips, select the menu option :menuselection:`View --> Show Map
+Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the
+:guilabel:`Attributes Toolbar`. Map tip is a cross-session feature meaning that
+once activated, it stays on and apply to any layer in any project, even in
+future QGIS sessions until it's toggled off.
 
 .. _figure_display_mapped:
 
