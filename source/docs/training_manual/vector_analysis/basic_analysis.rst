@@ -138,7 +138,7 @@ But feel free to choose the best workflow for yourself.
 * In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`
   as :guilabel:`Format`;
 * Click on |browseButton| of :guilabel:`File name` parameter and name the new
-  GeoPackage as :guilabel:`training_data`;
+  GeoPackage as :guilabel:`vector_analysis`;
 * Change the :guilabel:`Layer name` as :guilabel:`roads_34S`;
 * Change the :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`;
 * Finally click on :guilabel:`OK`:
@@ -152,11 +152,6 @@ This will create the new GeoPackage database and fill it with the
 Repeat this process for each layer, creating a new layer in the
 :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the
 original name and removing each of the old layers from the project.
-
-* Open the :guilabel:`Browser` Panel;
-* Right click on GeoPackage and choose :guilabel:`New Connection...`;
-* Browse to the location where you saved the file to set up the connection;
-* You can now remove the :guilabel:`roads` layer.
 
 .. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
     **append** that layer in the GeoPackage.

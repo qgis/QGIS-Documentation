@@ -468,8 +468,8 @@ process:
 Your map should now show only those buildings which are within 50m of a road,
 1km of a school and 500m of a restaurant:
 
-  .. image:: img/restaurant_buffer_result.png
-     :align: center
+.. image:: img/restaurant_buffer_result.png
+   :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-2>`
 
