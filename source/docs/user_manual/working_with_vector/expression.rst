@@ -193,6 +193,8 @@ This group contains functions which aggregate values over layers and fields.
                         or expression
 ====================== =======================================================
 
+|
+
 **Examples:**
 
 * Return the maximum of the "passengers" field from features in the layer
@@ -332,6 +334,8 @@ This group contains functions to handle conditional checks in expressions.
                                       conditional check
 ===================================== =========================================
 
+|
+
 **Some example:**
 
 * Send back a value if the first condition is true, else another value::
@@ -400,6 +404,8 @@ This group contains functions for handling date and time data.
  year            Extracts the year part from a date or datetime,
                  or the number of years from an interval
 ==============  ==============================================================
+
+|
 
 This group also shares several functions with the :ref:`conversion_functions` (
 to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
@@ -897,6 +903,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | z                      | Returns the z coordinate of a point geometry      |
 +------------------------+---------------------------------------------------+
 
+|
+
 **Some examples:**
 
 * You can manipulate the current geometry with the variable $geometry to create
@@ -925,6 +933,8 @@ This group contains functions to manipulate print layout items properties.
  item_variables      Returns a map of variables from a layout item inside
                      this print layout
 ==================  ========================================================
+
+|
 
 **Some example:**
 
@@ -1087,6 +1097,8 @@ if one of the inputs is NULL then the result is NULL.
  a NOT IN (value[,value])    a is not below the values listed
 =========================== ===================================================
 
+|
+
 .. note:: **About fields concatenation**
 
   You can concatenate strings using either `||` or ``+``. The latter also means
@@ -1108,7 +1120,6 @@ if one of the inputs is NULL then the result is NULL.
   in the value (note the position of the % character)::
 
     "description" LIKE 'Hello%'
-
 
 
 .. _raster_functions:
@@ -1154,6 +1165,8 @@ This group contains functions that operate on record identifiers.
  uuid                 Generates a Universally Unique Identifier (UUID)
                       for each row. Each UUID is 38 characters long.
 ==================== =========================================================
+
+|
 
 **Some examples:**
 
@@ -1336,6 +1349,8 @@ To use these functions in an expression, they should be preceded by @ character
  with_variable                Allows setting a variable for usage within an expression
                               and avoid recalculating the same value repeatedly
 ============================ =======================================================
+
+|
 
 **Some examples:**
 

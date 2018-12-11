@@ -1394,10 +1394,11 @@ Feature informations
 ....................
 
 The Identify Results dialog can be customized to display custom fields, but by
-default it will display three kinds of information:
+default it will display the following information:
 
 .. index:: Actions
 
+* The feature :ref:`display name <maptips>`;
 * **Actions**: Actions can be added to the identify feature windows.
   The action is run by clicking on the action label. By default, only one action
   is added, namely ``View feature form`` for editing. You can define more actions
@@ -1405,7 +1406,6 @@ default it will display three kinds of information:
 * **Derived**: This information is calculated or derived from other information.
   This includes:
 
-  * the feature ID;
   * general information about its geometry:
 
     * depending on the geometry type, the cartesian measurements of length,

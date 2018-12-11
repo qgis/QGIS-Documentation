@@ -203,7 +203,7 @@ the bottom the :ref:`layer_rendering` widget.
    Using the :menuselection:`Styles --> Add` menu at the bottom of the
    :guilabel:`Layer Properties` dialog, you can save as many styles as needed.
    A style is the combination of all properties of a layer (such as symbology,
-   labeling, diagram, fields form, actions...) as you want. Then, simply 
+   labeling, diagram, fields form, actions...) as you want. Then, simply
    switch between styles from the context menu of the layer in :guilabel:`Layers Panel`
    to automatically get different representations of your data.
 
@@ -792,16 +792,16 @@ units).
 Layer rendering
 ---------------
 
-From the Symbology tab, you can also set some options that invariabily act on all
+From the Symbology tab, you can also set some options that invariably act on all
 features of the layer:
 
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in
+* :guilabel:`Opacity` |slider|: You can make the underlying layer in
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
   the percentage of visibility in the the menu beside the slider.
 
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
-  achieve special rendering effects with these tools that you may previously
+* :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
+  You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
@@ -813,17 +813,18 @@ features of the layer:
   Activate the checkbox and click on the |sort| button beside.
   You then get the :guilabel:`Define Order` dialog in which you:
 
-  * choose a field or build an expression to apply to the layer features
-  * set in which order the fetched features should be sorted, i.e. if you choose
-    **Ascending** order, the features with lower value are rendered under those
-    with upper value.
-  * define when features returning NULL value should be rendered: **first** or **last**.
+  #. Choose a field or build an expression to apply to the layer features.
+  #. Set in which order the fetched features should be sorted, i.e. if you choose
+     **Ascending** order, the features with lower value are rendered under those
+     with higher value.
+  #. Define when features returning NULL value should be rendered: **first**
+     (bottom) or **last** (top).
+  #. Repeat the above steps as many times as rules you wish to use.
 
-  You can add several rules of ordering. The first rule is applied
-  to all the features in the layer, z-ordering them according to the value returned.
-  Then, for each group of features with the same value (including those with
-  NULL value) and thus same z-level, the next rule is applied to sort its items
-  among them.
+  The first rule is applied
+  to all the features in the layer, z-ordering them according to their returned value.
+  Then, within each group of features with the same value (including those with
+  NULL value) and thus the same z-level, the next rule is applied to sort them.
   And so on...
 
 .. _figure_layer_rendering:
@@ -849,7 +850,7 @@ an option to control the rendering order of each symbol's levels.
 For most of the renderers, you can access the Symbols levels option by clicking
 the :guilabel:`Advanced` button below the saved symbols list and choosing
 :guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
-directly available through :guilabel:`Symbols Levels` button, while for
+directly available through :guilabel:`Symbols Levels...` button, while for
 :ref:`point_displacement` renderer the same button is inside the
 :guilabel:`Rendering settings` dialog.
 
@@ -1252,7 +1253,8 @@ Placement tab
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
-type of vector layer, namely point, line or polygon.
+type of vector layer, namely point, line or polygon, and are affected by
+the global :ref:`PAL setting <automated_placement>`.
 
 .. _cartographic:
 
@@ -1479,6 +1481,8 @@ configure a global and automated behavior of the labels. Clicking the
 
 * The :guilabel:`Search method` combobox provides you with different placement methods
   for finding good placement solutions for point, line and polygon labeling.
+  More details in this `article
+  <https://www.ee.co.za/wp-content/uploads/legacy/PositionIT%202009/PAL_PositIT_Jul09_p56-61.pdf>`_.
 * The :guilabel:`Number of candidates` controls set how many label placement
   candidates should be generated for each feature type. The more candidates generated,
   the better the labeling will be - but at a cost of rendering speed. Smaller number
@@ -1841,6 +1845,11 @@ The current core implementation of diagrams provides support for:
   values inside;
 * and |histogram| :guilabel:`Histograms`.
 
+In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacement|
+:sup:`Automated placement settings (applies to all layers)` button provides
+means to control diagram :ref:`labels placement <automated_placement>` on the
+map canvas.
+
 .. tip:: **Switch quickly between types of diagrams**
 
    Given that the settings are almost common to the different types of
@@ -2098,10 +2107,10 @@ example at its creation. This information is retrieved and shown in the
 :guilabel:`Comment` column and is later displayed when hovering over the
 field label in a feature form.
 
-Other than the fields contained in the dataset, the :guilabel:`Source Fields`
-tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
-<vector_relations>`. And depending on the origin of the field, a different
-background color is applied to it.
+Other than the fields contained in the dataset, virtual fields and
+:ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
+:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
@@ -2112,7 +2121,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Field properties tab
+   Source Field properties tab
 
 
 .. _vector_attributes_menu:
@@ -2508,8 +2517,8 @@ Additionally, the add vector join dialog allows you to:
 
 .. _vector_auxiliary_storage:
 
-Auxiliary storage
-=================
+Auxiliary Storage Properties
+============================
 
 The regular way to customize styling and labeling is to use data-defined
 properties as described in :ref:`data_defined`. However, it may not be
@@ -3024,21 +3033,25 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|display| This tab is specifically created for map tips: display a message in
-the map canvas when hovering over a feature of the active layer.
-This message can either be the value of a |radioButtonOff| :guilabel:`Field`
-or a more complex and full |radioButtonOff| :guilabel:`HTML` text mixing fields,
-:ref:`expressions <vector_expressions>` and html tags (multiline, fonts, images,
-hyperlink ...).
+|display| The :guilabel:`Display` tab helps you configure fields to use for
+feature identification:
 
-To activate Map Tips, select the menu option :menuselection:`View --> Map Tips`
-or click on the |mapTips| :sup:`Map Tips` icon. Map tip is a cross-session feature
-meaning that once activated, it stays on and apply to any set layer in any project,
-even in future QGIS sessions until it's toggled off.
+* The :guilabel:`Display name`: based on a field or an :ref:`expression
+  <vector_expressions>`. This is:
+  
+  * the label shown on top of the feature information in the :ref:`Identify
+    tool <identify>` results;
+  * the field used in the :ref:`locator bar <locator_options>` when looking for
+    features in all layers;
+  * the feature identifier in the attribute table :ref:`form view
+    <attribute_table_view>`;
+  * the map tip information, i.e. the message displayed in the map canvas when
+    hovering over a feature of the active layer with the |mapTips| :sup:`Show
+    Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
 
-
-Figures Display Code and Mapped show an example of HTML code and how it behaves
-in map canvas.
+* The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
+  a more complex and full HTML text mixing fields, expressions and html tags
+  (multiline, fonts, images, hyperlink...).
 
 .. _figure_display_code:
 
@@ -3047,6 +3060,12 @@ in map canvas.
 
    HTML code for map tip
 
+
+To activate map tips, select the menu option :menuselection:`View --> Show Map
+Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the
+:guilabel:`Attributes Toolbar`. Map tip is a cross-session feature meaning that
+once activated, it stays on and apply to any layer in any project, even in
+future QGIS sessions until it's toggled off.
 
 .. _figure_display_mapped:
 

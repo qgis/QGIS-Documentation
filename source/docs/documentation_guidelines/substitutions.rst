@@ -165,6 +165,7 @@ Icon                          Substitution                       Icon           
 |deleteRing|                  ``|deleteRing|``                   |deletePart|                   ``|deletePart|``
 |mergeFeatures|               ``|mergeFeatures|``                |mergeFeatAttributes|          ``|mergeFeatAttributes|``
 |splitFeatures|               ``|splitFeatures|``                |splitParts|                   ``|splitParts|``
+|reverseLine|                 ``|reverseLine|``
 ============================  =================================  =============================  ================================
 
 
@@ -183,7 +184,8 @@ Icon                            Substitution                        Icon        
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
-|measureAngle|                  ``|measureAngle|``                  |newMap|                        ``|newMap|``
+|measureAngle|                  ``|measureAngle|``                  
+|newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -886,6 +888,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
+.. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
@@ -995,6 +999,8 @@ Icon                            Substitution                        Icon        
 .. |resizeTallest| image:: /static/common/mActionResizeTallest.png
    :width: 1.5em
 .. |resizeWidest| image:: /static/common/mActionResizeWidest.png
+   :width: 1.5em
+.. |reverseLine| image:: /static/common/mActionReverseLine.png
    :width: 1.5em
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
