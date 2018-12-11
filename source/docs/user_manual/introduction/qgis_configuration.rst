@@ -214,7 +214,7 @@ In this group, you can control whether reprojecting layers to another CRS should
 
 .. _figure_crs_options:
 
-.. figure:: img/options_crs.png
+.. figure:: ../working_with_projections/img/crsdialog.png
    :align: center
 
    CRS Settings in QGIS
@@ -675,17 +675,10 @@ details.
 
 .. _figure_authentication_settings:
 
-.. figure:: img/options_authentication.png
+.. figure:: ../auth_system/img/auth-editor-configs2.png
    :align: center
 
    Authentication Settings in QGIS
-
-.. _figure_authentication_settings_adding_new:
-
-.. figure:: img/options_authentication_add.png
-   :align: center
-
-   Adding authentication configuration to Authentication Settings
 
 
 .. index:: Proxy, Network
