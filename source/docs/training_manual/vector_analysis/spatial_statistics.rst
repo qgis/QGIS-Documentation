@@ -60,7 +60,7 @@ Creating random points
   .. note:: The yellow warning sign is telling you that that parameter concerns
     something about the distance. The :guilabel:`Bounding geometry` layer is in a
     Geographical Coordinate System and the algorithm is just reminding you this.
-    For this example we won't use this parameter you can ignore it.
+    For this example we won't use this parameter so you can ignore it.
 
 If needed, move the generated random point at the top of the legend to see them
 better:
@@ -104,7 +104,8 @@ You'll be using this sample layer for the rest of the statistical exercises.
 
 Now get the basic statistics for this layer.
 
-* Click on the |sum| icon in the toolbar. A new panel will pop up.
+* Click on the |sum| icon in the :guilabel:`Attributes Toolbar` of QGIS main dialog.
+  A new panel will pop up.
 * In the dialog that appears, specify the :guilabel:`Sampled Points` layer as
   the source.
 * Select the :guilabel:`rvalue_1` field in the field combo box which is the
@@ -115,8 +116,8 @@ Now get the basic statistics for this layer.
 .. image:: img/basic_statistics_results.png
    :align: center
 
-.. note:: You can copy the values by clicking on the |editCopy| button and paste
-    the results into a spreadsheet.
+.. note:: You can copy the values by clicking on the |editCopy|:sup:`Copy Statistics To Clipboard`
+    button and paste the results into a spreadsheet.
 
 .. image:: img/paste_to_spreadsheet.png
    :align: center
@@ -201,7 +202,7 @@ deviation, minimum and maximum for the distances to the nearest neighbors of the
 points in the input layer.
 
 
-|basic| |FA| Nearest Neighbor Analysis
+|basic| |FA| Nearest Neighbor Analysis (within layer)
 -------------------------------------------------------------------------------
 
 To do a nearest neighbor analysis of a point layer:
