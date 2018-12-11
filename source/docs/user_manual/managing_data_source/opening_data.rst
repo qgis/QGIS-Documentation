@@ -485,7 +485,7 @@ QGIS project:
 .. figure:: img/dwg_dxf_import_dialog.png
     :align: center
     
-    Import dialog for DQG/DXF files
+    Import dialog for DWG/DXF files
 
 
 .. index:: OSM (OpenStreetMap)
