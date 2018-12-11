@@ -6,12 +6,12 @@
 ===============================================================================
 
 Calculating the shortest distance between two points is a commonly cited use
-for GIS. This tool can be found in the :guilabel:`Processing` toolbox.
+for GIS. Tools for this can be found in the :guilabel:`Processing` toolbox.
 
 **The goal for this lesson:** learn to use :guilabel:`Network analysis`
 algorithms.
 
-|basic| |FA| The Tool and the Data
+|basic| |FA| The Tools and the Data
 -------------------------------------------------------------------------------
 
 You can find all the network analysis algorithms in the
@@ -34,11 +34,12 @@ to understand the road network.
    :align: center
 
 
-The tools provide ways to calculate either the shortest or the fastest path
+The shortest path tools provide ways to calculate either the shortest or the fastest path
 between two points of a network, given:
 
-* start point(s) selected on the map or taken from a point layer;
-* and end point(s) selected on the map or taken from a point layer.
+* start point and end point selected on the map;
+* start point selected on the map and end points taken from a point layer;
+* start points taken from a point layer and end point selected on the map;
 
 Let's start.
 
