@@ -34,19 +34,16 @@ to understand the road network.
    :align: center
 
 
-|basic| |FA| Use the Tool
--------------------------------------------------------------------------------
-
-The tool provides ways to calculate either the shortest or the fastest path
+The tools provide ways to calculate either the shortest or the fastest path
 between two points of a network, given:
 
-* starting and ending points selected on the map;
-* starting or ending points taken from a point layer.
+* start point(s) selected on the map or taken from a point layer;
+* and end point(s) selected on the map or taken from a point layer.
 
 Let's start.
 
-|basic| |FA| Calculate the shortest path (point to point)
----------------------------------------------------------
+|basic| Calculate the shortest path (point to point)
+----------------------------------------------------
 The :menuselection:`Network analysis --> Shortest path (point to point)` allows
 you to calculate the shortest distance between two manually selected points on
 the map.
