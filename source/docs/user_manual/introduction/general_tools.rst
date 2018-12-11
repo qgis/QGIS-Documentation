@@ -1138,7 +1138,18 @@ To stop measuring, click your right mouse button.
 
 Note that you can use the drop-down list near the total to interactively change
 the measurement units while measuring. This unit is kept for the widget until
-a new or another project is opened.
+a new or another project is opened. Available units are:
+
+* meters
+* kilometers
+* feet
+* yards
+* miles
+* nautical miles
+* centimeters
+* millimeters
+* degrees
+* map units
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
 according to CRS settings available.
@@ -1157,7 +1168,20 @@ according to CRS settings available.
 |measureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
-different area units.
+different area units. Available units are:
+
+* square meters
+* square kilometers
+* square feet
+* square yards
+* square miles
+* hectares
+* acres
+* square centimeters
+* square millimeters
+* square nautical miles
+* square degrees
+* map units
 
 .. _figure_measure_area:
 
