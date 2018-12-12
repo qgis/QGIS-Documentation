@@ -2554,7 +2554,7 @@ Actually, the auxiliary storage system needs an auxiliary layer to store these
 properties in a SQLite database (see :ref:`vector_auxiliary_storage_database`).
 Its creation process is run the first time you click on the map while a
 labeling map tool is currently activated. Then, a window is displayed, allowing
-to indicate the primary key to use for joining (to ensure that features are
+you to select the primary key to use for joining (to ensure that features are
 uniquely identified):
 
 .. _figure_auxiliary_layer_creation:
@@ -2595,7 +2595,7 @@ and can be retrieved:
 As you can see in the figure above, ``21`` fields are automatically created and
 configured for labeling. For example, the ``FontStyle`` auxiliary field type is
 a ``String`` and is named ``labeling_fontstyle`` in the underlying SQLite
-database. There is also ``1`` entity which is currently using these auxiliary
+database. There is also ``1`` feature which is currently using these auxiliary
 fields.
 
 Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels`
@@ -2623,7 +2623,7 @@ Symbology
 Like the method described above for customizing labels, auxiliary fields can
 also be used to stylize symbols and diagrams. To do this, click on
 |dataDefined| :sup:`Data-defined override` and select :guilabel:`Store data in
-the project` for a specific property. For example for the :guilabel:`Fill
+the project` for a specific property. For example, the :guilabel:`Fill
 color` field:
 
 .. figure:: img/auxiliary_storage_symbol.png
@@ -2632,12 +2632,13 @@ color` field:
    Data-defined property menu for symbol
 
 
-There are different layers for each symbol (e.g. fill style, fill color, stroke
-color, etc...), so each layer requires a unique name to avoid conflicts.
-After selecting :guilabel:`Store data in the project`, a window opens asking
-you to select the :guilabel:`Type` of the field and providing a
-way to give the auxiliary field a unique name. For the :guilabel:`Fill color`
-field, the next window is opened:
+There are different attributes for each symbol (e.g. fill style, fill color,
+stroke color, etc...), so each auxiliary field representing an attribute
+requires a unique name to avoid conflicts. After selecting :guilabel:`Store
+data in the project`, a window opens and displays the :guilabel:`Type` of the
+field and prompts you to enter a unique name for the auxiliary field. For
+example, when creating a :guilabel:`Fill color` auxiliary field the following
+window opens:
 
 .. figure:: img/auxiliary_storage_symbol_name.png
    :align: center
@@ -3045,7 +3046,7 @@ feature identification:
 
 * The :guilabel:`Display name`: based on a field or an :ref:`expression
   <vector_expressions>`. This is:
-  
+
   * the label shown on top of the feature information in the :ref:`Identify
     tool <identify>` results;
   * the field used in the :ref:`locator bar <locator_options>` when looking for
