@@ -1113,11 +1113,13 @@ Properties... --> General` menu.
 .. note:: **Configuring the measure tool**
 
    While measuring length or area, clicking the :guilabel:`Configuration` button
-   at the bottom of the widget helps you define in menu :menuselection:`Settings -->
-   Options --> Map Tools` the rubberband color, the precision of the measurements
-   and the unit behavior. You can also choose your preferred measurement or angle
-   units but keep in mind that those values are superseded in the current project
-   by options made in :menuselection:`Project --> Properties... --> General` menu.
+   at the bottom of the widget opens the :menuselection:`Settings -->
+   Options --> Map Tools` menu, where you can select the rubberband color, the
+   precision of the measurements and the unit behavior. You can also choose your
+   preferred measurement or angle units but keep in mind that those values are
+   overridden in the current project by the selection made in the 
+   :menuselection:`Project --> Properties... --> General` menu, and by the
+   selection made in the measurement widget.
 
 All measuring modules use the snapping settings from the digitizing module (see
 section :ref:`snapping_tolerance`). So, if you want
@@ -1137,19 +1139,10 @@ as well as the total, shows up in the measure window.
 To stop measuring, click your right mouse button.
 
 Note that you can use the drop-down list near the total to interactively change
-the measurement units while measuring. This unit is kept for the widget until
-a new or another project is opened. Available units are:
-
-* meters
-* kilometers
-* feet
-* yards
-* miles
-* nautical miles
-* centimeters
-* millimeters
-* degrees
-* map units
+the measurement units while measuring ('Meters', 'Kilometers', 'Feet', 'Yards',
+'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
+This unit is kept for the widget until a new project is created or another project
+is opened.
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
 according to CRS settings available.
@@ -1168,20 +1161,9 @@ according to CRS settings available.
 |measureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
-different area units. Available units are:
-
-* square meters
-* square kilometers
-* square feet
-* square yards
-* square miles
-* hectares
-* acres
-* square centimeters
-* square millimeters
-* square nautical miles
-* square degrees
-* map units
+different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
+'Square miles', 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters',
+'Square millimeters', 'Square degrees', 'Map units').
 
 .. _figure_measure_area:
 
