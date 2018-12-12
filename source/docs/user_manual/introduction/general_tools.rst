@@ -1139,7 +1139,7 @@ as well as the total, shows up in the measure window.
 To stop measuring, click your right mouse button.
 
 Note that you can use the drop-down list near the total to interactively change
-the measurement units while measuring ('Meters', 'Kilometers', 'Feet', 'Yards',
+the measurement units while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
 'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
 This unit is kept for the widget until a new project is created or another project
 is opened.
