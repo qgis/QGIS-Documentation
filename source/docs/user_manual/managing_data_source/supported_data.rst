@@ -62,9 +62,14 @@ This section describes how to work with these specificities.
    types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
    MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
 
+GeoPackage
+---------------
+
+QGIS can open the GeoPackage file format. (work in progress)
 
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
+
 
 ESRI Shapefiles
 ---------------
