@@ -929,6 +929,7 @@ To add a scale bar:
    bar fill and outline can be made opaque by clickng on the down arrow to the right
    of the color input |selectColor|. This will display the quick color 
    modification window (see figure_color_selector_) where opacity settings can be configured.
+#. Select the font of the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
 #. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
    on resize` to display values easy-to-read.
