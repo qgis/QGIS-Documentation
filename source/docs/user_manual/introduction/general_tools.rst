@@ -924,8 +924,11 @@ To add a scale bar:
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
 #. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
-#. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
-   the default black color.
+#. Select the color for the bar :guilabel:`Color of bar` |selectColor| by chosing
+   a fill color (default: Black) and an outline color (default: White). The scale 
+   bar fill and outline can be made opaque by clickng on the down arrow to the right
+   of the :guilabel:`Color of bar` |selectColor|. This will display the quick color 
+   modification window (see figure_color_selector_) where opacity settings can be configured.
 #. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
    on resize` to display values easy-to-read.
