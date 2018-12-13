@@ -11,6 +11,8 @@
 QGIS GUI
 ********
 
+Ma modification personnelle
+
 .. only:: html
 
    .. contents::
