@@ -446,22 +446,22 @@ to the project. Layers are added with random style properties.
 To keep the dxf/dwg structure and its symbology in QGIS, you may want to
 use the dedicated :menuselection:`Project --> Import/Export --> Import Layers
 from DWG/DXF...` tool. Indeed,
-the :guilabel:`DWG/DXF Import` dialog allows you to import into GeoPackage
-database any element of the drawing file.
+the :guilabel:`DWG/DXF Import` dialog allows you to add to a GeoPackage
+database any element of the drawing file you can later open in the project.
 
-In the dialog, you have to:
+In the dialog, you first have to:
 
-* Input a location for a GeoPackage file, that will be created to store the
-  DWG/DXF content to;
-* Specify which coordinate system the data in the DWG data is in;
-* Then use the :guilabel:`Import` button to select the DWG/DXF file to use (one per
-  geopackage). The GeoPackage database will be automatically populated with the
-  drawing file content. Depending on the size of the \*CAD file, this could
-  take some time;
-* The |checkbox| :guilabel:`Expand block references` will transform the existing
-  blocks into normal elements;
-* the |checkbox| :guilabel:`Use curves` promotes the output layers geometry type
-  to a ``curved`` one.
+#. Input the :guilabel:`Target package`, i.e. a location for a GeoPackage file
+   that will be created or overwritten to store the DWG/DXF content to.
+#. Specify the coordinate reference system of the data in the drawing file.
+#. Check |checkbox| :guilabel:`Expand block references` to import the
+   blocks in the drawing file as normal elements.
+#. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
+   to a ``curved`` geometry type.
+#. Use the :guilabel:`Import` button to select the DWG/DXF file to use (one per
+   geopackage). The GeoPackage database will be automatically populated with the
+   drawing file content. Depending on the size of the \*CAD file, this could
+   take some time.
 
 After the :file:`.dwg` or :file:`.dxf` data is imported into the GeoPackage
 database the frame in the lower half of the dialog is populated with the list of
