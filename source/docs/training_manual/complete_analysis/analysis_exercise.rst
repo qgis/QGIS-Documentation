@@ -77,11 +77,12 @@ In order to process the data, you will need to load the necessary layers
 For vectors...
 ...............................................................................
 
-#. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button,
-   or use the :menuselection:`Layer --> Add Layer --> Add Vector Layer...` menu item.
-#. Enable the :guilabel:`Vector` tab in the dialog that appears, and ensure that the
-   :guilabel:`File` radio button is selected.
-#. Click on the |browse| button to browse for :guilabel:`Vector dataset(s)`.
+#. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and
+   enable the |addOgrLayer| :guilabel:`Vector` tab in the dialog that appears,
+   or use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer|
+   :menuselection:`Add Vector Layer...` menu item.
+#. Ensure that the :guilabel:`File` radio button is selected.
+#. Click on the |browseButton| button to browse for :guilabel:`Vector dataset(s)`.
 #. In the dialog that appears, open the :file:`exercise_data/more_analysis/streets`
    directory.
 #. Select the file :file:`Street_Names_UTM33S.shp`.
@@ -99,21 +100,20 @@ For vectors...
    #. Right-click on it in the :guilabel:`Layers` panel (by default, the pane along
       the left-hand side of the screen).
    #. Click :guilabel:`Rename` in the dialog that appears and rename it, pressing
-      the :guilabel:`Enter` key when done.
+      the :kbd:`Enter` key when done.
 #. Repeat the vector adding process, but this time select the
    :file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the :file:`Zoning`
    directory.
-#. Rename it to :guilabel:`Zoning`.
+#. Rename it to ``Zoning``.
 
 For rasters...
 ...............................................................................
 
-#. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button,
-   or use the :menuselection:`Layer --> Add Layer --> Add Vector Layer...` menu item.
-#. Enable the :guilabel:`Raster` tab in the dialog that appears, and ensure that the
-   :guilabel:`File` radio button is selected.
-#. Click on the :guilabel:`Add Raster Layer` button, or use the
-   :menuselection:`Layer --> Add Raster Layer...` menu item.
+#. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and
+   enable the |addRasterLayer| :guilabel:`Raster` tab in the dialog that appears,
+   or use the :menuselection:`Layer --> Add Layer -->` |addRasterLayer|
+   :menuselection:`Add Raster Layer...` menu item.
+#. Ensure that the :guilabel:`File` radio button is selected.
 #. Navigate to the appropriate file, select it, and click :guilabel:`Open`.
 #. Do this for each of the two raster files. The files you want are
    :file:`DEM/reproject/DEM` and
@@ -192,7 +192,7 @@ You will now build a query to select only the following list of districts:
 * ``Kuils River``
 * ``Mitchells Plain``
 * ``Simons Town`` and
-* ``Wynberg`.
+* ``Wynberg``.
 
 #. In the :guilabel:`Fields` list, double-click on the :guilabel:`NAME_2`
    field. It appears in the :guilabel:`SQL where clause` text field below.
@@ -346,8 +346,8 @@ as follows.
 Aspect
 -------------------------------------------------------------------------------
 
-#. Use the same approach as for calculating the slope, but select
-   :guilabel:`Aspect` in the initial dialog box.
+Use the same approach as for calculating the slope, but select
+:guilabel:`Aspect` in the initial dialog box.
 
 Remember to save the map periodically.
 
@@ -618,11 +618,11 @@ Vectorizing the raster
 -------------------------------------------------------------------------------
 
 #. Click on the menu item :menuselection:`Raster --> Conversion --> Polygonize`.
-#. Select the :file:`cross_product` raster.
+#. Select the :file:`cross_product.tif` raster.
 #. Set the output location to :file:`Rasterprac`.
 #. Name the file :file:`candidate_areas.shp`.
 #. Ensure that :guilabel:`Open output file after running algorithm` is checked.
-#. Click OK.
+#. Click :guilabel:`Run`.
 #. Close the dialog when processing is complete.
 
 All areas of the raster have been vectorized, so you need to select only the
@@ -690,7 +690,7 @@ Now that the areas are known:
 
     "area" > 6000
 
-#. Save the selection as a new vector layer called :guilabel:`solution.shp`.
+#. Save the selection as a new vector layer called :file:`solution.shp`.
 
 You now have your solution areas, from which you will pick the one nearest to
 your house.
@@ -761,5 +761,15 @@ cartography in creating your output map.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
 .. |LS| replace:: Lesson:
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
