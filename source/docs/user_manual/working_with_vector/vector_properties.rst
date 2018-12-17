@@ -446,7 +446,7 @@ the rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
 
-.. figure:: img/graduatesymbol_ng_line.png
+.. figure:: img/graduatedsymbol_ng_line.png
    :align: center
 
    Graduated Symbolizing options
@@ -503,7 +503,7 @@ configure the legend items (see :ref:`data_defined_size_legend` for details).
 .. figure:: img/proportional_symbols.png
    :align: center
 
-   Scaling airports size based on number of passengers
+   Scaling airports size based on elevation of the airport
 
 **Creating multivariate analysis**
 
@@ -524,7 +524,7 @@ The simplest way to create multivariate analysis in QGIS is to:
 
 Like the proportional symbol, the scaled symbology can be added to the layer
 tree, on top of the categorized or graduated classes symbols using the
-:ref:` data defined size legend <size data_defined_size_legend>` feature. And
+:ref:`data defined size legend <data_defined_size_legend>` feature. And
 both representation are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
@@ -1560,10 +1560,10 @@ Assuming you are using the :guilabel:`Single labels` method, click the |expressi
 :guilabel:`Label with` drop-down list in the |labeling| :guilabel:`Labels` tab
 of the properties dialog.
 
-In figure_labels_expression_, you see a sample
-expression to label the alaska regions with name and area size, based on the
-field 'NAME_2', some descriptive text, and the function ``$area`` in combination
-with ``format_number()`` to make it look nicer.
+In figure_labels_expression_, you see a sample expression to label the alaska
+trees layer with tree type and area, based on the field 'VEGDESC', some
+descriptive text, and the function ``$area`` in combination with
+``format_number()`` to make it look nicer.
 
 .. _figure_labels_expression:
 
@@ -2301,7 +2301,7 @@ and the values or range of values that are allowed to be added to each.
 
 .. _figure_fields_widget:
 
-.. figure:: img/editwidgetsdialog.png
+.. figure:: img/edit_widgets_dialog.png
    :align: center
 
    Dialog to select an edit widget for an attribute column
@@ -2529,10 +2529,9 @@ then you need to add and configure more than 20 fields in your original data
 source (x and y positions, rotation angle, font style, color and so on).
 
 The Auxiliary Storage mechanism provides the solution to these limitations
-and awkward configurations. Actually, auxiliary fields are a roundabout
-mean to automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This way,
-data source doesn't even need to be editable!
+and awkward configurations. Auxiliary fields are a roundabout way to
+automatically manage and store these data-defined properties (labels,
+diagram, symbology...) in a SQLite database thanks to editable joins. This allows you to store properties for layers that aren't editable.
 
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
@@ -2555,7 +2554,7 @@ Actually, the auxiliary storage system needs an auxiliary layer to store these
 properties in a SQLite database (see :ref:`vector_auxiliary_storage_database`).
 Its creation process is run the first time you click on the map while a
 labeling map tool is currently activated. Then, a window is displayed, allowing
-to indicate the primary key to use for joining (to ensure that features are
+you to select the primary key to use for joining (to ensure that features are
 uniquely identified):
 
 .. _figure_auxiliary_layer_creation:
@@ -2575,16 +2574,16 @@ retrieve its information in the tab:
    Auxiliary Layer key
 
 
-For now, we can see that:
+The auxiliary layer now has these characteristics:
 
-* the primary key used is well ``id``
-* there's ``0`` feature using an auxiliary field
-* there's ``0`` auxiliary field
+* the primary key is ``ID``,
+* there are ``0`` features using an auxiliary field,
+* there are ``0`` auxiliary fields.
 
-Now that the auxiliary layer is well created, we just have to edit our labels.
-If we click on a label while the |changeLabelProperties| :sup:`Change Label`
-map tool is activated, then we're able to update styling properties like sizes,
-colors and so on. Then, the corresponding data-defined properties are created
+Now that the auxiliary layer is created, you can edit the layer labels.
+Click on a label while the |changeLabelProperties| :sup:`Change Label`
+map tool is activated, then you can update styling properties like sizes,
+colors, and so on. The corresponding data-defined properties are created
 and can be retrieved:
 
 .. figure:: img/auxiliary_storage_fields.png
@@ -2593,16 +2592,15 @@ and can be retrieved:
    Auxiliary Fields
 
 
-As we are seeing in the previous figure, ``21`` fields have been automatically
-created and configured for labeling. For example, the ``Color``
-auxiliary field type is a ``String`` and is named ``labeling_color`` in the
-underlying SQLite database. Moreover, we observe that there's ``1`` entity
-which is currently using these auxiliary fields (according to the current
-example).
+As you can see in the figure above, ``21`` fields are automatically created and
+configured for labeling. For example, the ``FontStyle`` auxiliary field type is
+a ``String`` and is named ``labeling_fontstyle`` in the underlying SQLite
+database. There is also ``1`` feature which is currently using these auxiliary
+fields.
 
-By the way, considering that auxiliary fields are linked to data-defined
-properties, we can observe that data-defined override options are setup
-correctly because of the icon |dataDefineOn| in the labeling tab:
+Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels`
+properties tab indicating that the data-defined override options are set
+correctly:
 
 .. figure:: img/auxiliary_storage_dd.png
    :align: center
@@ -2615,17 +2613,18 @@ property thanks to the |dataDefined| :sup:`data-defined override` button. By
 clicking on :guilabel:`Store data in the project`, an auxiliary field is
 automatically created for the :guilabel:`Opacity` field. If you click on this
 button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is firstly displayed to select the
+:ref:`figure_auxiliary_layer_creation` is first displayed to select the
 primary key to use for joining.
 
 
 Symbology
 ---------
 
-In the same way than for customizing labels, auxiliary fields may be used to
-stylize symbols too. To do this, you just have to click on
-:guilabel:`Store data in the project` for a specific symbol property. For
-example for the :guilabel:`Fill color` field:
+Like the method described above for customizing labels, auxiliary fields can
+also be used to stylize symbols and diagrams. To do this, click on
+|dataDefined| :sup:`Data-defined override` and select :guilabel:`Store data in
+the project` for a specific property. For example, the :guilabel:`Fill
+color` field:
 
 .. figure:: img/auxiliary_storage_symbol.png
    :align: center
@@ -2633,11 +2632,13 @@ example for the :guilabel:`Fill color` field:
    Data-defined property menu for symbol
 
 
-Because you may customize same property for different (levels of) symbols,
-each setting requires a unique name to avoid conflict. Thus, by clicking on
-:guilabel:`Store data in the project`, a window is displayed, indicating the
-:guilabel:`Type` of the field and providing a way to give the unique name. For
-the :guilabel:`Fill color` field, the next window is opened:
+There are different attributes for each symbol (e.g. fill style, fill color,
+stroke color, etc...), so each auxiliary field representing an attribute
+requires a unique name to avoid conflicts. After selecting :guilabel:`Store
+data in the project`, a window opens and displays the :guilabel:`Type` of the
+field and prompts you to enter a unique name for the auxiliary field. For
+example, when creating a :guilabel:`Fill color` auxiliary field the following
+window opens:
 
 .. figure:: img/auxiliary_storage_symbol_name.png
    :align: center
@@ -2657,20 +2658,28 @@ tab:
 Attribute table and widgets
 ---------------------------
 
-Once created, auxiliary fields may be edited through the
-:ref:`attribute table <sec_attribute_table>`. However, there's some subtlety
-about widgets of auxiliary fields.
+Auxiliary fields can be edited using the
+:ref:`attribute table <sec_attribute_table>`. However, not all auxiliary fields
+are initially visible in the attribute table.
 
-For example, auxiliary fields which may be edited through an external tool
-are not visible in the attribute table. This way, as the :guilabel:`Rotation`
-may be edited through |changeLabelProperties| :sup:`Change Label` or
-|rotateLabel| :sup:`Rotate Label`, the auxiliary widget is **Hidden** by
-default (see :ref:`edit_widgets`). However, as the :guilabel:`Opacity`
-field cannot be edited thanks to map tools, the corresponding widget is not
-**Hidden**. Moreover, auxiliary fields representing a ``Color`` have a
-widget **Color** set by default.
+Auxiliary fields representing attributes of a layer's symbology, labeling,
+appearance, or diagrams will appear automatically in the attribute table. The
+exception are attributes that can be modified using the :ref:`Label Toolbar <label_toolbar>`
+which are hidden by default. Auxiliary fields representing a ``Color`` have a
+widget **Color** set by default, otherwise auxiliary fields default to the
+**Text Edit** widget.
 
-Then, the underlying form will look like the next figure:
+Auxiliary fields that represent attributes that can be modified using
+the :ref:`Label toolbar<label_toolbar>` are **Hidden** in the attribute table
+by default. To make a field visible, open the :ref:`Attribute Form properties
+tab <vector_attributes_menu>` and change the value of an auxiliary field
+:guilabel:`Widget Type` from **Hidden** to another relevant value. For example,
+change the **auxiliary_storage_labeling_size** to **Text Edit** or change
+**auxiliary_storage_labeling_color** to the **Color** widget. Those fields will
+now be visible in the attribute table.
+
+Auxiliary fields in the attribute table will appear like the following image:
+
 
 .. figure:: img/auxiliary_storage_widgets.png
    :align: center
@@ -2681,8 +2690,7 @@ Then, the underlying form will look like the next figure:
 Management
 ----------
 
-Some actions are available to manage auxiliary layers thanks to the next
-combobox:
+The :guilabel:`Auxiliary Layer` menu allows you to manage the auxiliary fields:
 
 .. figure:: img/auxiliary_storage_actions.png
    :align: center
@@ -3038,7 +3046,7 @@ feature identification:
 
 * The :guilabel:`Display name`: based on a field or an :ref:`expression
   <vector_expressions>`. This is:
-  
+
   * the label shown on top of the feature information in the :ref:`Identify
     tool <identify>` results;
   * the field used in the :ref:`locator bar <locator_options>` when looking for
@@ -3231,7 +3239,7 @@ layout legend <layout_legend_item>`. These options include:
 .. figure:: img/text_legend_symbols.png
    :align: center
 
-   Setting text on symbols (left) and its rendering in Layers panel (right)
+   Setting text on symbols (left) and its rendering in the :guilabel:`Layers` panel (right)
 
 * a list of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
@@ -3251,17 +3259,9 @@ QGIS Server Properties
 ======================
 
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
-and :guilabel:`Properties` sections.
+:guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
-In the :guilabel:`Properties` section, you get general information about the layer,
-including specifics about the type and location, number of features, feature type,
-and editing capabilities. The :guilabel:`Extents`
-table provides you with information on the layer extent and the
-:guilabel:`Layer Spatial Reference System`, which is information about the CRS
-of the layer. This can provide a quick way to get useful information about the layer.
-
-Additionally, you can add or edit a title and abstract for the layer in the
+You can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
 :guilabel:`Keyword list` here. These keyword lists can be used in a
 metadata catalog. If you want to use a title from an XML metadata file,
@@ -3279,7 +3279,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_server_vector:
 
-.. figure:: img/vector_metadata_tab.png
+.. figure:: img/vector_server_properties.png
    :align: center
 
    QGIS Server tab in vector layers properties dialog
