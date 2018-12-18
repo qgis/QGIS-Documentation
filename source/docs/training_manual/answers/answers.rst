@@ -46,14 +46,6 @@ remember the names and functions of the screen elements.
 
 :ref:`Back to text <backlink-interface-overview-2>`
 
-.. _interface-overview-3:
-
-|basic| *Overview* (Part 3)
-...............................................................................
-
-Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections.
-
-:ref:`Back to text <backlink-interface-overview-3>`
 
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
