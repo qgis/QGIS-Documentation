@@ -3287,7 +3287,7 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 .. _digitizingmenu:
 
 Digitizing Properties
-====================
+=====================
 
 |digitizing| The :guilabel:`Digitizing` tab gives access to options that help to ensure the
 quality of digitizied geometries.
