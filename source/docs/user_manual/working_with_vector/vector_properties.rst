@@ -46,7 +46,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
 * |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
 * |legend| :ref:`Legend <vectorlegendmenu>`
 * |overlay| :ref:`QGIS Server <vectorservermenu>`
-* |digitizing| :guilabel:`Digitizing`
+* |digitizing| :ref:`Digitizing <digitizingmenu>`
 * and optionally, new tabs added by :ref:`external plugins <plugins>` you have
   installed. Those are not presented below.
 
@@ -3284,6 +3284,63 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
    QGIS Server tab in vector layers properties dialog
 
+.. _digitizingmenu:
+
+Digitzing Properties
+====================
+
+|digitizing| The :guilabel:`Digitizing` tab gives access to options that help the
+quality of digitizied geometries.
+
+Automatic Fixes
+---------------
+
+Options in the :guilabel:`Automatic Fixes` section will directly affect the vertices
+of any geometry which is added or modified.
+If the :guilabel:`Remove duplicate nodes` option is checked, any two subsequent
+vertices with the exactly same coordinate will be removed.
+If the :guilabel:`Geometry precision` is set, all vertices will be rounded to
+the closest multiple of the configured geometry precision. The rounding will
+happen in the layer coordiante reference system. Z and M values are not
+rounded. With many map tools, a grid is shown on the canvas while digitizing.
+
+Geometry Checks
+---------------
+
+In the :guilabel:`Geometry checks` section, additional validations on a per
+geometry basis can be activated. Failures in these checks are reported immediately 
+after any geometry modification to the user in the geometry validation panel.
+As long as a check is failing, it is not possible to save the layer.
+The `Is valid` check will run basic validity checks like self intersection on
+geometries.
+
+Topology Checks
+---------------
+
+In the :guilabel:`Topology checks` section, additional topology validation
+checks can be activated. Topology checks will be executed, when the user 
+saves the layer. Check errors will be reported to the geometry validation
+panel. As long as validation errors are present, the layer can not be saved.
+Topology checks are executed in the area of the modified features. Since other,
+already existing features may be present in the same area, topological errors
+on these features are reported as well and not strictly only errors introduced
+in the current edit session.
+
+The :guilabel:`Gap check` will check for gaps between neighbouring polygons.
+
+|gapcheck|
+
+The :guilabel:`Overlap check` will check for overlaps between neighbouring
+polygons.
+
+|overlapcheck|
+
+The :guilabel:`Missing vertex check` will check for shared boundaries of
+neighbouring polygons where one border misses a vertex which is present on the
+other one.
+
+|missingvertexcheck|
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -3343,6 +3400,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.5em
+.. |gapcheck| image:: /static/common/gapcheck.png
+   :width: 2em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
@@ -3389,6 +3448,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 2em
+.. |missingvertexcheck| image:: /static/common/missingvertexcheck.png
+   :width: 2em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
@@ -3399,6 +3460,8 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
+.. |overlapcheck| image:: /static/common/overlapcheck.png
+   :width: 2em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
