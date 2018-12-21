@@ -3286,10 +3286,10 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _digitizingmenu:
 
-Digitzing Properties
+Digitizing Properties
 ====================
 
-|digitizing| The :guilabel:`Digitizing` tab gives access to options that help the
+|digitizing| The :guilabel:`Digitizing` tab gives access to options that help to ensure the
 quality of digitizied geometries.
 
 Automatic Fixes
@@ -3298,10 +3298,10 @@ Automatic Fixes
 Options in the :guilabel:`Automatic Fixes` section will directly affect the vertices
 of any geometry which is added or modified.
 If the :guilabel:`Remove duplicate nodes` option is checked, any two subsequent
-vertices with the exactly same coordinate will be removed.
+vertices with exactly the same coordinates will be removed.
 If the :guilabel:`Geometry precision` is set, all vertices will be rounded to
 the closest multiple of the configured geometry precision. The rounding will
-happen in the layer coordiante reference system. Z and M values are not
+happen in the layer coordinate reference system. Z and M values are not
 rounded. With many map tools, a grid is shown on the canvas while digitizing.
 
 Geometry Checks
@@ -3318,8 +3318,8 @@ Topology Checks
 ---------------
 
 In the :guilabel:`Topology checks` section, additional topology validation
-checks can be activated. Topology checks will be executed, when the user 
-saves the layer. Check errors will be reported to the geometry validation
+checks can be activated. Topology checks will be executed when the user 
+saves the layer. Check errors will be reported in the geometry validation
 panel. As long as validation errors are present, the layer can not be saved.
 Topology checks are executed in the area of the modified features. Since other,
 already existing features may be present in the same area, topological errors
