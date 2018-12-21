@@ -3323,7 +3323,7 @@ saves the layer. Check errors will be reported in the geometry validation
 panel. As long as validation errors are present, the layer can not be saved.
 Topology checks are executed in the area of the modified features. Since other,
 already existing features may be present in the same area, topological errors
-on these features are reported as well and not strictly only errors introduced
+concerning these features are reported as well as errors introduced
 in the current edit session.
 
 The :guilabel:`Gap check` will check for gaps between neighbouring polygons.
