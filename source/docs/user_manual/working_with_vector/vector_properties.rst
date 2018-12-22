@@ -3308,8 +3308,8 @@ Geometry Checks
 ---------------
 
 In the :guilabel:`Geometry checks` section, additional validations on a per
-geometry basis can be activated. Failures in these checks are reported immediately 
-after any geometry modification to the user in the geometry validation panel.
+geometry basis can be activated. Immediately after any geometry modification,
+failures in these checks are reported to the user in the geometry validation panel.
 As long as a check is failing, it is not possible to save the layer.
 The `Is valid` check will run basic validity checks like self intersection on
 geometries.
