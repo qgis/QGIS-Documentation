@@ -3321,10 +3321,10 @@ In the :guilabel:`Topology checks` section, additional topology validation
 checks can be activated. Topology checks will be executed when the user 
 saves the layer. Check errors will be reported in the geometry validation
 panel. As long as validation errors are present, the layer can not be saved.
-Topology checks are executed in the area of the modified features. Since other
-already existing features may be present in the same area, topological errors
-concerning these features are reported as well as errors introduced
-in the current edit session.
+Topology checks are executed in the area of the bounding box of the modified
+features. Since other already existing features may be present in the same
+area, topological errors concerning these features are reported as well as
+errors introduced in the current edit session.
 
 The :guilabel:`Gap check` will check for gaps between neighbouring polygons.
 
