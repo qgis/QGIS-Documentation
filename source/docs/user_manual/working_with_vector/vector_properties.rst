@@ -3328,18 +3328,30 @@ in the current edit session.
 
 The :guilabel:`Gap check` will check for gaps between neighbouring polygons.
 
-|gapcheck|
+.. _figure_gapcheck:
+
+.. figure:: img/gapcheck.png
+   :align: center
+
 
 The :guilabel:`Overlap check` will check for overlaps between neighbouring
 polygons.
 
-|overlapcheck|
+.. _figure_overlapcheck:
+
+.. figure:: img/overlapcheck.png
+   :align: center
+
 
 The :guilabel:`Missing vertex check` will check for shared boundaries of
 neighbouring polygons where one border misses a vertex which is present on the
 other one.
 
-|missingvertexcheck|
+.. _figure_missingvertexcheck:
+
+.. figure:: img/missingvertexcheck.png
+   :align: center
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -3400,8 +3412,6 @@ other one.
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
    :width: 1.5em
-.. |gapcheck| image:: /static/common/gapcheck.png
-   :width: 2em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
@@ -3448,8 +3458,6 @@ other one.
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 2em
-.. |missingvertexcheck| image:: /static/common/missingvertexcheck.png
-   :width: 2em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
@@ -3460,8 +3468,6 @@ other one.
    :width: 1.5em
 .. |osx| image:: /static/common/osx.png
    :width: 1em
-.. |overlapcheck| image:: /static/common/overlapcheck.png
-   :width: 2em
 .. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png
