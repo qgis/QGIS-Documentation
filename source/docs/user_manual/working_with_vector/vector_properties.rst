@@ -3292,12 +3292,19 @@ Digitizing Properties
 |digitizing| The :guilabel:`Digitizing` tab gives access to options that help to ensure the
 quality of digitized geometries.
 
+.. _figure_digitizing_vector:
+
+.. figure:: img/vector_digitizing_properties.png
+   :align: center
+
+   The QGIS Digitizing tab in the vector layers properties dialog
+
 Automatic Fixes
 ---------------
 
 Options in the :guilabel:`Automatic Fixes` section will directly affect the vertices
 of any geometry which is added or modified.
-If the :guilabel:`Remove duplicate nodes` option is checked, any two subsequent
+If the |checkbox| :guilabel:`Remove duplicate nodes` option is checked, any two subsequent
 vertices with exactly the same coordinates will be removed.
 If the :guilabel:`Geometry precision` is set, all vertices will be rounded to
 the closest multiple of the configured geometry precision. The rounding will
@@ -3311,7 +3318,7 @@ In the :guilabel:`Geometry checks` section, additional validations on a per
 geometry basis can be activated. Immediately after any geometry modification,
 failures in these checks are reported to the user in the geometry validation panel.
 As long as a check is failing, it is not possible to save the layer.
-The `Is valid` check will run basic validity checks like self intersection on
+The |checkbox| :guilabel:`Is valid` check will run basic validity checks like self intersection on
 geometries.
 
 Topology Checks
@@ -3326,7 +3333,7 @@ features. Since other features may be present in the same area, topological
 errors concerning these features are reported as well as errors introduced
 in the current edit session.
 
-The :guilabel:`Gap check` will check for gaps between neighbouring polygons.
+The |checkbox| :guilabel:`Gap` check will check for gaps between neighbouring polygons.
 
 .. _figure_gapcheck:
 
@@ -3334,7 +3341,7 @@ The :guilabel:`Gap check` will check for gaps between neighbouring polygons.
    :align: center
 
 
-The :guilabel:`Overlap check` will check for overlaps between neighbouring
+The |checkbox| :guilabel:`Overlap` check will check for overlaps between neighbouring
 polygons.
 
 .. _figure_overlapcheck:
@@ -3343,7 +3350,7 @@ polygons.
    :align: center
 
 
-The :guilabel:`Missing vertex check` will check for shared boundaries of
+The |checkbox| :guilabel:`Missing vertex` check will check for shared boundaries of
 neighbouring polygons where one border misses a vertex which is present on the
 other one.
 
