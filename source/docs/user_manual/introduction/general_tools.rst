@@ -854,6 +854,8 @@ you prefer to the map.
    checked.
 #. Enter the text you want to place on the map. You can use HTML as
    shown in the example.
+#. Choose the font face of the label from the :guilabel:`Font` |selectString| combo box. Set the
+   font color and opacity by clicking the black arrow to the right of the font combo box.
 #. Choose the placement of the label from the :guilabel:`Placement`
    |selectString| combo box.
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
