@@ -20,13 +20,13 @@ capabilities of GRASS.
   :guilabel:`Filter` field of the :guilabel:`Modules List` tab.
 * Open the tool and set it up like this and click on the :guilabel:`Run` button:
 
-  .. image:: img/grass_aspect.png
+  .. figure:: img/grass_aspect.png
      :align: center
 
 * When the process is finished click on :guilabel:`View Output` to load the
   resulting layer in the canvas:
 
-.. image:: img/grass_aspect_result.png
+.. figure:: img/grass_aspect_result.png
    :align: center
 
 The :kbd:`g_aspect` layer is stored within the :kbd:`grass_mapset` Mapset so you
@@ -44,13 +44,13 @@ We want to know some basic statistics of the :kbd:`g_dem` raster layer.
 
 * Set up the tool like this and click on :guilabel:`Run`:
 
-  .. image:: img/grass_raster_info.png
+  .. figure:: img/grass_raster_info.png
      :align: center
 
 * Within the Output tab you will see some raster information printed, like the
   path of the file, the number of rows and columns and other useful information:
 
-  .. image:: img/grass_raster_info_result.png
+  .. figure:: img/grass_raster_info_result.png
      :align: center
 
 
@@ -80,7 +80,7 @@ rules is very simple and the GRASS Manual contains very good description.
   rules is in the :kbd:`exercise_data/grass/` folder, named :kbd:`reclass_aspect.txt`.
   Click on :guilabel:`Run` and wait until the process is finished:
 
-  .. image:: img/grass_reclass.png
+  .. figure:: img/grass_reclass.png
      :align: center
 
 * Click on :guilabel:`View Output` to load the reclassified raster in the canvas
@@ -88,7 +88,7 @@ rules is very simple and the GRASS Manual contains very good description.
 The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier to
 manage and to process.
 
-.. image:: img/grass_reclass_result.png
+.. figure:: img/grass_reclass_result.png
    :align: center
 
 .. tip:: Open the :kbd:`reclass_aspect.txt` with a text editor to see the rules
@@ -128,7 +128,7 @@ The Mapcalc dialog allows you to construct a sequence of analyses to be
 performed on a raster, or collection of rasters. You will use these tools to do
 so:
 
-.. image:: img/map_calc_tools.png
+.. figure:: img/map_calc_tools.png
    :align: center
 
 In order, they are:
@@ -153,13 +153,13 @@ Using these tools:
 
 * Construct the following algorithm:
 
-  .. image:: img/grass_mapcalc.png
+  .. figure:: img/grass_mapcalc.png
      :align: center
 
 * Click on :guilabel:`Run` and then on :guilabel:`View output` to see the output
   displayed in your map:
 
-  .. image:: img/grass_mapcalc_result.png
+  .. figure:: img/grass_mapcalc_result.png
      :align: center
 
 This shows all the areas where the terrain higher than 1000 meters.

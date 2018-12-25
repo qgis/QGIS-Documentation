@@ -49,7 +49,7 @@ projection. Luckily, we've already seen what to do in this situation.
 
 The rasters should fit nicely:
 
-.. image:: img/raster_step_one.png
+.. figure:: img/raster_step_one.png
    :align: center
 
 There we have it - four aerial photographs covering our whole study area.
@@ -87,7 +87,7 @@ writing that text for you. It's a long command that QGIS is going to run.
 
 * Click :guilabel:`OK` to run the command.
 
-.. image:: img/build_virtual_raster.png
+.. figure:: img/build_virtual_raster.png
    :align: center
 
 
@@ -123,7 +123,7 @@ Note that this tool features a handy batch option for reprojecting the contents
 of whole directories. You can also reproject virtual rasters (catalogs), as
 well as enabling a multithreaded processing mode.
 
-.. image:: img/warp_rasters.png
+.. figure:: img/warp_rasters.png
    :align: center
 
 Merging rasters
@@ -140,7 +140,7 @@ You can also add your own command line options using the :guilabel:`Creation
 Options` checkbox and list. This only applies if you have knowledge of the GDAL
 library's operation.
 
-.. image:: img/merge_rasters.png
+.. figure:: img/merge_rasters.png
    :align: center
 
 |IC|

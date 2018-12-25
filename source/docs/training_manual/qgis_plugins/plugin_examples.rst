@@ -30,7 +30,7 @@ explore some of its features.
 #. The base map will be loaded and you will have a satellite background for the
    map.
 
-.. image:: img/qms_result.png
+.. figure:: img/qms_result.png
    :align: center
 
 QuickMapServices plugin has a lot of available base maps available.
@@ -39,7 +39,7 @@ Close the :guilabel:`Search QMS` panel we open before and click again on
 :menuselection:`Web --> QuickMapServices`. The first menu lists different map
 providers with all the available maps:
 
-.. image:: img/qms_menu.png
+.. figure:: img/qms_menu.png
    :align: center
 
 But there is more.
@@ -79,7 +79,7 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 #. Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
 #. Click on the :guilabel:`Run query` button.
 
-   .. image:: img/quickosm_setup.png
+   .. figure:: img/quickosm_setup.png
       :align: center
 
 After some seconds the plugin will download all the features tagged in OpenStreetMap
@@ -88,7 +88,7 @@ as ``railway`` and load them directly into the map.
 Nothing more! All the layers are loaded in the legend and are shown in the map
 canvas.
 
-.. image:: img/quickosm_result.png
+.. figure:: img/quickosm_result.png
    :align: center
 
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
@@ -153,12 +153,12 @@ be more specific and write your own query. Let's try to do this.
 
 #. And click on :guilabel:`Run Query`:
 
-   .. image:: img/quickosm_advanced_query.png
+   .. figure:: img/quickosm_advanced_query.png
       :align: center
 
 The mountain peaks layer will be downloaded and shown in QGIS:
 
-.. image:: img/quickosm_advanced_result.png
+.. figure:: img/quickosm_advanced_result.png
    :align: center
 
 You can write complex queries using the `Overpass Query language <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
@@ -183,7 +183,7 @@ of :guilabel:`sample_point` layer.
 In the DataPlotly Panel choose :guilabel:`sample_point` in the Layer filter, :kbd:`cl`
 for the ``X Field`` and :kbd:`mg` for the ``Y Field``:
 
-.. image:: img/dataplotly_setup.png
+.. figure:: img/dataplotly_setup.png
    :align: center
 
 If you want you can change the colors, the marker type, the transparency and
@@ -191,7 +191,7 @@ many other settings: just try to change some parameters to create the plot as th
 following picture. Once you set up all the parameters click on the
 :guilabel:`Create Plot` button to create the plot:
 
-.. image:: img/dataplotly_scatterplot.png
+.. figure:: img/dataplotly_scatterplot.png
    :align: center
 
 The plot is interactive: this means you can use all the upper buttons to resize,
@@ -213,12 +213,12 @@ different plot types with different variables on the same page. Let's do this!
 #. In the lower part of the Panel change the ``Type of Plot`` from ``SinglePlot``
    to ``SubPlots`` and let the default option ``Plot in Rows`` selected:
 
-   .. image:: img/dataplotly_boxplot.png
+   .. figure:: img/dataplotly_boxplot.png
       :align: center
 
 #. Once done click on the :guilabel:`Create Plot` button to draw the plot:
 
-   .. image:: img/dataplotly_subplots.png
+   .. figure:: img/dataplotly_subplots.png
       :align: center
 
 Now both scatter plot and box plot are shown in the same plot page. You still

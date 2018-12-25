@@ -38,7 +38,7 @@ Let's get started right away!
    You can also browse the files directly from the folder of your computer
    with the *Browser* tab (see :ref:`browser_panel_tm` section):
 
-   .. image:: img/add_data_dialog.png
+   .. figure:: img/add_data_dialog.png
       :align: center
 
 #. Click on the :guilabel:`Vector` tab, enable the |radioButtonOn|:guilabel:`File`
@@ -48,7 +48,7 @@ Let's get started right away!
    original dialog, but with the file path filled in. Click :guilabel:`Add` here
    as well. The data you specified will now load.
 
-   .. image:: img/add_vector_dialog.png
+   .. figure:: img/add_vector_dialog.png
       :align: center
 
 Congratulations! You now have a basic map. Now would be a good time to save
@@ -85,7 +85,7 @@ In order to load a layer from a GeoPackage:
    contained in the GeoPackage file.
 #. Select the :file:`roads` layer and click on the :guilabel:`Add` button.
 
-.. image:: img/add_data_dialog_geopackage.png
+.. figure:: img/add_data_dialog_geopackage.png
   :align: center
 
 Congratulations! You have loaded the first layer from a GeoPackage file.

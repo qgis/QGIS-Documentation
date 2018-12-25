@@ -44,7 +44,7 @@ models)` analysis tool.
 You will now have a new layer called :guilabel:`hillshade` that looks like
 this:
 
-.. image:: img/hillshade_raster.png
+.. figure:: img/hillshade_raster.png
    :align: center
 
 That looks nice and 3D, but can we improve on this? On its own, the hillshade
@@ -73,7 +73,7 @@ transparent.
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get a
   result like this:
 
-  .. image:: img/hillshade_pseudocolor.png
+  .. figure:: img/hillshade_pseudocolor.png
      :align: center
 
 * Switch the :guilabel:`hillshade` layer off and back on in the
@@ -106,7 +106,7 @@ To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
 * Open the tool as before.
 * Select the :guilabel:`Mode` option :guilabel:`Slope`:
 
-  .. image:: img/dem_slope_dialog.png
+  .. figure:: img/dem_slope_dialog.png
      :align: center
 
 * Set the save location to
@@ -120,7 +120,7 @@ To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
   slope of the terrain, with black pixels being flat terrain and white pixels,
   steep terrain:
 
-  .. image:: img/slope_raster.png
+  .. figure:: img/slope_raster.png
      :align: center
 
 .. _backlink-raster-analysis-1:
@@ -170,12 +170,12 @@ needs to be greater than 270 degrees and less than 90 degrees.
 * Ensure that the box :guilabel:`Add result to project` is checked.
 * Click :guilabel:`OK` to begin processing.
 
-.. image:: img/raster_calculator.png
+.. figure:: img/raster_calculator.png
    :align: center
 
 Your result will be this:
 
-.. image:: img/aspect_result.png
+.. figure:: img/aspect_result.png
    :align: center
 
 
@@ -232,7 +232,7 @@ To calculate the areas that satisfy these criteria:
   :kbd:`all_conditions.tif`.
 * Click :guilabel:`OK` on the :guilabel:`Raster calculator`. Your results:
 
-  .. image:: img/development_analysis_results.png
+  .. figure:: img/development_analysis_results.png
      :align: center
 
 
@@ -252,13 +252,13 @@ get rid of all these tiny unusable areas.
 * Set both the :guilabel:`Threshold` and :guilabel:`Pixel connections` values
   to :kbd:`8`, then run the tool.
 
-.. image:: img/raster_seive_dialog.png
+.. figure:: img/raster_seive_dialog.png
    :align: center
 
 Once processing is done, the new layer will load into the canvas. But when you
 try to use the histogram stretch tool to view the data, this happens:
 
-.. image:: img/seive_result_incorrect.png
+.. figure:: img/seive_result_incorrect.png
    :align: center
 
 What's going on? The answer lies in the new raster file's metadata.
@@ -266,7 +266,7 @@ What's going on? The answer lies in the new raster file's metadata.
 * View the metadata under the :guilabel:`Metadata` tab of the :guilabel:`Layer
   Properties` dialog. Look in the :guilabel:`Properties` section at the bottom.
 
-.. image:: img/seive_metadata.png
+.. figure:: img/seive_metadata.png
    :align: center
 
 Whereas this raster, like the one it's derived from, should only
@@ -286,7 +286,7 @@ filtered out, let's set these null values to zero.
 
 Your output looks like this:
 
-.. image:: img/raster_seive_correct.png
+.. figure:: img/raster_seive_correct.png
    :align: center
 
 This is what was expected: a simplified version of the earlier results.

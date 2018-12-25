@@ -99,7 +99,7 @@ Let's add some layer from a SpatiaLite database.
 #. Click the :guilabel:`Connect` button. You should see this in the previously
    empty box:
 
-   .. image:: img/spatiallite_dialog_connected.png
+   .. figure:: img/spatiallite_dialog_connected.png
       :align: center
 
 #. Click on the :guilabel:`landuse` layer to select it, then click
@@ -132,7 +132,7 @@ because other layers are on top of it.
 
 For example, this layer order...
 
-.. image:: img/incorrect_layer_order.png
+.. figure:: img/incorrect_layer_order.png
    :align: center
 
 ... would result in roads and places being hidden as they run *underneath*
@@ -143,7 +143,7 @@ To resolve this problem:
 #. Click and drag on a layer in the Layers list.
 #. Reorder them to look like this:
 
-.. image:: img/correct_layer_order.png
+.. figure:: img/correct_layer_order.png
    :align: center
 
 You'll see that the map now makes more sense visually, with roads and buildings

@@ -17,7 +17,7 @@ interface.
 
 .. _figure_gui_numbered:
 
-.. image:: img/gui_numbered.png
+.. figure:: img/gui_numbered.png
    :align: center
 
 The elements identified in the figure above are:

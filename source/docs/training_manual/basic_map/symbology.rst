@@ -41,7 +41,7 @@ begin by changing the color of the :guilabel:`landuse` layer.
 
 #. In the :guilabel:`Layer Properties` window, select the :guilabel:`Symbology` tab:
 
-   .. image:: img/layer_properties_style.png
+   .. figure:: img/layer_properties_style.png
       :align: center
 
 #. Click the color select button next to the :guilabel:`Color` label.
@@ -78,7 +78,7 @@ areas so as to make the map less visually cluttered.
 #. in the :guilabel:`Symbol layers` panel, expand the :guilabel:`Fill` dropdown
    (if necessary) and select the :guilabel:`Simple fill` option:
 
-   .. image:: img/simple_fill_selected.png
+   .. figure:: img/simple_fill_selected.png
       :align: center
 
 #. Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
@@ -114,7 +114,7 @@ dataset at inappropriate scales.
 In our case, we may decide to hide the buildings from view at small scales. This
 map, for example ...
 
-.. image:: img/buildings_small_scale.png
+.. figure:: img/buildings_small_scale.png
    :align: center
 
 ... is not very useful. The buildings are hard to distinguish at that scale.
@@ -127,7 +127,7 @@ To enable scale-based rendering:
 #. Enable scale-based rendering by clicking on the checkbox labeled
    :guilabel:`Scale dependent visibility`:
 
-   .. image:: img/scale_dependent_visibility.png
+   .. figure:: img/scale_dependent_visibility.png
       :align: center
 
 #. Change the :guilabel:`Minimum` value to :kbd:`1:10,000`.
@@ -158,12 +158,12 @@ layers.
 #. Select the :guilabel:`Fill` in the :guilabel:`Symbol layers` panel. Then click
    the :guilabel:`Add symbol layer` button:
 
-   .. image:: img/add_symbol_layer_button.png
+   .. figure:: img/add_symbol_layer_button.png
       :align: center
 
 #. Click on it and the dialog will change to look somewhat like this:
 
-   .. image:: img/new_symbol_layer.png
+   .. figure:: img/new_symbol_layer.png
       :align: center
 
    It may appear somewhat different in color, for example, but you're going
@@ -185,7 +185,7 @@ With the new :guilabel:`Simple Fill` layer selected:
 #. Change the fill style to something other than :guilabel:`Solid` or
    :guilabel:`No brush`. For example:
 
-   .. image:: img/new_fill_settings.png
+   .. figure:: img/new_fill_settings.png
       :align: center
 
 #. Click :guilabel:`OK`.
@@ -194,7 +194,7 @@ Now you can see your results and tweak them as needed.
 You can even add multiple extra symbol layers and create a kind of texture for
 your layer that way.
 
-.. image:: img/multiple_symbol_layers.png
+.. figure:: img/multiple_symbol_layers.png
    :align: center
 
 It's fun! But it probably has too many colors to use in a real map...
@@ -224,7 +224,7 @@ having many symbol layers in one symbol can cause unexpected results.
 
 You'll notice that this happens:
 
-.. image:: img/bad_roads_symbology.png
+.. figure:: img/bad_roads_symbology.png
    :align: center
 
 Well, roads have now a *street* like symbology, but you see that lines are
@@ -239,12 +239,12 @@ To change the order of the symbol layers:
 #. Click :menuselection:`Advanced --> Symbol levels...` in the
    bottom right-hand corner of the window.
 
-   .. image:: img/symbol_levels_main_dialog.png
+   .. figure:: img/symbol_levels_main_dialog.png
       :align: center
 
    This will open a dialog like this:
 
-   .. image:: img/symbol_levels_dialog.png
+   .. figure:: img/symbol_levels_dialog.png
       :align: center
 
 #. Select :guilabel:`Enable symbol levels`. You can then set the layer ordering
@@ -253,7 +253,7 @@ To change the order of the symbol layers:
 
    In our case, we just want to activate the option, like this:
 
-   .. image:: img/correct_symbol_layers.png
+   .. figure:: img/correct_symbol_layers.png
       :align: center
 
    This will render the white line above the thick black line borders:
@@ -262,7 +262,7 @@ To change the order of the symbol layers:
 
    The map will now look like this:
 
-   .. image:: img/better_roads_symbology.png
+   .. figure:: img/better_roads_symbology.png
       :align: center
 
 When you're done, remember to save the symbol itself so as not to lose your
@@ -287,7 +287,7 @@ replacing will be lost.
   thin black line in the middle. Remember that you may need to change the layer
   rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 
-  .. image:: img/target_road_symbology.png
+  .. figure:: img/target_road_symbology.png
      :align: center
 
 :ref:`Check your results <symbology-levels-1>`
@@ -309,7 +309,7 @@ rudimentary pre-classified data.
 #. Using symbol layers, ensure that the outlines of layers flow into one another
    as per the image below:
 
-   .. image:: img/correct_advanced_levels.png
+   .. figure:: img/correct_advanced_levels.png
       :align: center
 
 :ref:`Check your results <symbology-levels-2>`
@@ -332,14 +332,14 @@ Point Symbol Layer Types
 #. Uncheck all the layers except for :guilabel:`places`.
 #. Change the symbol properties for the :guilabel:`places` layer:
 
-   .. image:: img/places_layer_properties.png
+   .. figure:: img/places_layer_properties.png
       :align: center
 
 #. You can access the various symbol layer types by selecting the
    :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers` panel, then
    click the :guilabel:`Symbol layer type` dropdown:
 
-   .. image:: img/marker_type_dropdown.png
+   .. figure:: img/marker_type_dropdown.png
       :align: center
 
 #. Investigate the various options available to you, and choose a symbol with
@@ -357,18 +357,18 @@ To see the various options available for line data:
 #. Change the :guilabel:`Symbol layer type` for the :guilabel:`roads` layer's
    topmost symbol layer to :guilabel:`Marker line`:
 
-   .. image:: img/change_to_marker_line.png
+   .. figure:: img/change_to_marker_line.png
       :align: center
 
 #. Select the :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers`
    panel. Change the symbol properties to match this dialog:
 
-   .. image:: img/simple_marker_line_properties.png
+   .. figure:: img/simple_marker_line_properties.png
       :align: center
 
 #. Select the :guilabel:`Marker line` layer and change the interval to ``1.00``:
 
-   .. image:: img/marker_line_interval.png
+   .. figure:: img/marker_line_interval.png
       :align: center
 
 #. Ensure that the symbol levels are correct (via the
@@ -393,10 +393,10 @@ To see the various options available for polygon data:
 #. If in doubt, use the :guilabel:`Point pattern fill` with the following
    options:
 
-   .. image:: img/pattern_fill_size.png
+   .. figure:: img/pattern_fill_size.png
       :align: center
 
-   .. image:: img/pattern_fill_distances.png
+   .. figure:: img/pattern_fill_distances.png
       :align: center
 
 #. Add a new symbol layer with a normal :guilabel:`Simple fill`.
@@ -404,7 +404,7 @@ To see the various options available for polygon data:
 #. Move it underneath the point pattern symbol layer with the :guilabel:`Move
    down` button:
 
-   .. image:: img/simple_fill_move_down.png
+   .. figure:: img/simple_fill_move_down.png
       :align: center
 
 As a result, you have a textured symbol for the water layer, with the added
@@ -431,7 +431,7 @@ Let's give it a try!
 #. Click on :guilabel:`Simple fill` and change the :guilabel:`Symbol layer type`
    to :guilabel:`Geometry generator`.
 
-   .. image:: img/geometry_generator.png
+   .. figure:: img/geometry_generator.png
       :align: center
 
 #. Before to start writing the spatial query we have to choose the Geometry Type
@@ -441,14 +441,14 @@ Let's give it a try!
 
     centroid($geometry)
 
-   .. image:: img/geometry_generator_query.png
+   .. figure:: img/geometry_generator_query.png
       :align: center
 
 #. When you click on :guilabel:`OK` you will see that the :guilabel:`water` layer
    is rendered as a point layer! We have just run a spatial operation within the
    layer symbology itself, isn't that amazing?
 
-   .. image:: img/geometry_generator_result.png
+   .. figure:: img/geometry_generator_result.png
       :align: center
 
 With the Geometry generator symbology you can really go over the edge of *normal*
@@ -467,7 +467,7 @@ Change also the appearance of the Simple marker of the Geometry generator symbol
 
 The final result should look like this:
 
-.. image:: img/geometry_generator_preview.png
+.. figure:: img/geometry_generator_preview.png
    :align: center
 
 :ref:`Check your results <symbology-geom_generator>`
@@ -482,7 +482,7 @@ The final result should look like this:
 #. Start the Inkscape program.
    You will see the following interface:
 
-   .. image:: img/inkscape_default.png
+   .. figure:: img/inkscape_default.png
       :align: center
 
    You should find this familiar if you have used other vector image editing
@@ -499,7 +499,7 @@ The final result should look like this:
    page you are working with.
 #. Select the :guilabel:`Circle` tool:
 
-   .. image:: img/inkscape_circle_tool.png
+   .. figure:: img/inkscape_circle_tool.png
       :align: center
 
 #. Click and drag on the page to draw an ellipse. To make the ellipse turn into
@@ -511,7 +511,7 @@ The final result should look like this:
    #. Assign to the border a darker color in :guilabel:`Stroke paint` tab,
    #. And reduce the border thickness under :guilabel:`Stroke style` tab.
 
-   .. image:: img/inkscape_stroke_fill.png
+   .. figure:: img/inkscape_stroke_fill.png
       :align: center
 
 #. Draw a line using the :guilabel:`Pencil` tool:
@@ -525,7 +525,7 @@ The final result should look like this:
    #. Change the color and width of the triangle symbol to match the circle's stroke
       and move it around as necessary, so that you end up with a symbol like this one:
 
-   .. image:: img/inkscape_final_symbol.png
+   .. figure:: img/inkscape_final_symbol.png
       :align: center
 
 #. If the symbol you get satisfies you, then save it as :guilabel:`landuse_symbol`
@@ -543,7 +543,7 @@ In QGIS:
    It's added to the symbol tree and you can now customize its different
    characteristics (colors, angle, effects, units...).
 
-   .. image:: img/svg_symbol_settings.png
+   .. figure:: img/svg_symbol_settings.png
       :align: center
 
 Once you validate the dialog, features in :guilabel:`landuse` layer should now
@@ -551,7 +551,7 @@ be covered by a set of symbols, showing a texture like the one on the
 following map. If textures are not visible, you may need to zoom in the map
 canvas or set in the layer properties a bigger :guilabel:`Texture width`.
 
-.. image:: img/svg_symbol_result.png
+.. figure:: img/svg_symbol_result.png
    :align: center
 
 |IC|

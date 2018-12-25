@@ -30,7 +30,7 @@ are, for example.
 Once it's loaded, you'll notice that it's a basic stretched grayscale
 representation of the DEM. It's seen here with the vector layers on top:
 
-.. image:: img/greyscale_dem.png
+.. figure:: img/greyscale_dem.png
    :align: center
 
 QGIS has automatically applied a stretch to the image for visualization
@@ -44,7 +44,7 @@ purposes, and we will learn more about how this works as we continue.
   :guilabel:`Properties` option.
 * Switch to the :guilabel:`Symbology` tab.
 
-.. image:: img/dem_layer_properties.png
+.. figure:: img/dem_layer_properties.png
    :align: center
 
 These are the current settings that QGIS applied for us by default. Its just
@@ -55,12 +55,12 @@ one way to look at a DEM, so lets explore some others.
 * Click the :guilabel:`Classify` button to generate a new color classification,
   and click :guilabel:`OK` to apply this classification to the DEM.
 
-.. image:: img/dem_pseudocolor_properties.png
+.. figure:: img/dem_pseudocolor_properties.png
    :align: center
 
 You'll see the raster looking like this:
 
-.. image:: img/pseudocolor_raster.png
+.. figure:: img/pseudocolor_raster.png
    :align: center
 
 This is an interesting way of looking at the DEM, but maybe we don't want to
@@ -72,7 +72,7 @@ symbolize it using these colors.
 
 You will now see a totally gray rectangle that isn't very useful at all.
 
-.. image:: img/singleband_grey_raster.png
+.. figure:: img/singleband_grey_raster.png
    :align: center
 
 This is because we have lost the default settings which "stretch" the color
@@ -86,7 +86,7 @@ data in the DEM. This will make QGIS use  all of the available colors (in
 * Set the value :guilabel:`Contrast enhancement` to
   :guilabel:`Stretch To MinMax`:
 
-.. image:: img/singleband_grey_settings.png
+.. figure:: img/singleband_grey_settings.png
    :align: center
 
 But what are the minimum and maximum values that should be used for the
@@ -102,7 +102,7 @@ minimum and maximum values of the raster.
 Notice how the :guilabel:`Custom min / max values` have changed to reflect the
 actual values in our DEM:
 
-.. image:: img/grey_custom_min_max.png
+.. figure:: img/grey_custom_min_max.png
    :align: center
 
 * Click :guilabel:`OK` to apply these settings to the image.
@@ -110,7 +110,7 @@ actual values in our DEM:
 You'll now see that the values of the raster are again properly displayed,
 with the darker colors representing valleys and the lighter ones, mountains:
 
-.. image:: img/correct_black_white.png
+.. figure:: img/correct_black_white.png
    :align: center
 
 But isn't there a better or easier way?
@@ -125,7 +125,7 @@ know that there's a tool for doing all of this easily.
 * Enable the tool you'll need by enabling :menuselection:`View --> Toolbars -->
   Raster`. These icons will appear in the interface:
 
-  .. image:: img/raster_toolbar.png
+  .. figure:: img/raster_toolbar.png
      :align: center
 
 The third button from the left :guilabel:`Local Histogram Stretch` will
