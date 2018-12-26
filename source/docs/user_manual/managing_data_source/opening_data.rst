@@ -443,16 +443,19 @@ to the project. Layers are added with random style properties.
    polygon), the name of the layer will be made from
    *<filename.dxf> entities <geometry type>*.
 
-To keep the dxf/dwg structure and its symbology in QGIS, you may want to
+To keep the dxf/dwg file structure and its symbology in QGIS, you may want to
 use the dedicated :menuselection:`Project --> Import/Export --> Import Layers
-from DWG/DXF...` tool. Indeed,
-the :guilabel:`DWG/DXF Import` dialog allows you to add to a GeoPackage
-database any element of the drawing file you can later open in the project.
+from DWG/DXF...` tool which allows you to:
 
-In the dialog, you first have to:
+#. import elements from the drawing file into a GeoPackage database.
+#. and add to the project any of the imported elements.
 
-#. Input the :guilabel:`Target package`, i.e. a location for a GeoPackage file
-   that will be created or overwritten to store the DWG/DXF content to.
+In the :guilabel:`DWG/DXF Import` dialog, to first import the drawing file
+contents:
+
+#. Input the location of the :guilabel:`Target package`, i.e. the new GeoPackage
+   file that will store the data. If an existing file is provided, then it will be
+   overwritten.
 #. Specify the coordinate reference system of the data in the drawing file.
 #. Check |checkbox| :guilabel:`Expand block references` to import the
    blocks in the drawing file as normal elements.
