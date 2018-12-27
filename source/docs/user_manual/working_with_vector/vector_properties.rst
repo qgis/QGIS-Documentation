@@ -3343,33 +3343,22 @@ features. Since other features may be present in the same area, topological
 errors concerning these features are reported as well as errors introduced
 in the current edit session.
 
-The |checkbox| :guilabel:`Gap` check will check for gaps between neighbouring polygons.
+.. list-table::
+   :header-rows: 1
 
-.. _figure_gapcheck:
-
-.. figure:: img/gapcheck.png
-   :align: center
-
-
-The |checkbox| :guilabel:`Overlap` check will check for overlaps between neighbouring
-polygons.
-
-.. _figure_overlapcheck:
-
-.. figure:: img/overlapcheck.png
-   :align: center
-
-
-The |checkbox| :guilabel:`Missing vertex` check will check for shared boundaries of
-neighbouring polygons where one border misses a vertex which is present on the
-other one.
-
-.. _figure_missingvertexcheck:
-
-.. figure:: img/missingvertexcheck.png
-   :align: center
-
-
+   * - Topology check option
+     - Illustration
+   * - The |checkbox| :guilabel:`Gap` check will check for
+       gaps between neighbouring polygons.
+     - .. image:: img/gapcheck.png
+   * - The |checkbox| :guilabel:`Overlap` check will check
+       for overlaps between neighbouring polygons.
+     - .. image:: img/overlapcheck.png
+   * - The |checkbox| :guilabel:`Missing vertex` check will
+       check for shared boundaries of neighbouring polygons
+       where one border misses a vertex which is present on
+       the other one. 
+     - .. image:: img/missingvertexcheck.png
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
