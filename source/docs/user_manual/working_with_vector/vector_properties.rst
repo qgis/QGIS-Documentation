@@ -3334,7 +3334,10 @@ errors concerning these features are reported as well as errors introduced
 in the current edit session.
 
 .. list-table::
+   :header-rows: 1
 
+   * - Topology check option
+     - Illustration
    * - The |checkbox| :guilabel:`Gap` check will check for
        gaps between neighbouring polygons.
      - .. image:: img/gapcheck.png
