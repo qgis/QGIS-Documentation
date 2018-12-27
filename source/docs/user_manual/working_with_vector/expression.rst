@@ -258,6 +258,7 @@ is irrelevant and values are identified by their keys.
  array_reverse          Returns the given array with array values in reversed order
  array_slice            Returns the values of the array from the start_pos argument up
                         to and including the end_pos argument
+ array_sort             Returns the array with its elements sorted
  array_to_string        Concatenates array elements into a string separated by
                         a delimiter and using optional string for empty values
  generate_series |34|   Creates an array containing a sequence of numbers
