@@ -3337,15 +3337,15 @@ in the current edit session.
 
    * - The |checkbox| :guilabel:`Gap` check will check for
        gaps between neighbouring polygons.
-     - |gapcheck|
+     - .. image:: img/gapcheck.png
    * - The |checkbox| :guilabel:`Overlap` check will check
        for overlaps between neighbouring polygons.
-     - |overlapcheck|
+     - .. image:: img/overlapcheck.png
    * - The |checkbox| :guilabel:`Missing vertex` check will
        check for shared boundaries of neighbouring polygons
        where one border misses a vertex which is present on
        the other one. 
-     - |missingvertexcheck|
+     - .. image:: img/missingvertexcheck.png
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -3512,7 +3512,4 @@ in the current edit session.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |gapcheck| image:: img/gapcheck.png
-.. |overlapcheck| image:: img/overlapcheck.png
-.. |missingvertexcheck| image:: img/missingvertexcheck.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
