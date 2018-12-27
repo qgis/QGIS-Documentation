@@ -3333,33 +3333,19 @@ features. Since other features may be present in the same area, topological
 errors concerning these features are reported as well as errors introduced
 in the current edit session.
 
-The |checkbox| :guilabel:`Gap` check will check for gaps between neighbouring polygons.
+.. list-table::
 
-.. _figure_gapcheck:
-
-.. figure:: img/gapcheck.png
-   :align: center
-
-
-The |checkbox| :guilabel:`Overlap` check will check for overlaps between neighbouring
-polygons.
-
-.. _figure_overlapcheck:
-
-.. figure:: img/overlapcheck.png
-   :align: center
-
-
-The |checkbox| :guilabel:`Missing vertex` check will check for shared boundaries of
-neighbouring polygons where one border misses a vertex which is present on the
-other one.
-
-.. _figure_missingvertexcheck:
-
-.. figure:: img/missingvertexcheck.png
-   :align: center
-
-
+   * - The |checkbox| :guilabel:`Gap` check will check for
+       gaps between neighbouring polygons.
+     - |gapcheck|
+   * - The |checkbox| :guilabel:`Overlap` check will check
+       for overlaps between neighbouring polygons.
+     - |overlapcheck|
+   * - The |checkbox| :guilabel:`Missing vertex` check will
+       check for shared boundaries of neighbouring polygons
+       where one border misses a vertex which is present on
+       the other one. 
+     - |missingvertexcheck|
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -3526,4 +3512,7 @@ other one.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |gapcheck| image:: img/gapcheck.png
+.. |overlapcheck| image:: img/overlapcheck.png
+.. |missingvertexcheck| image:: img/missingvertexcheck.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
