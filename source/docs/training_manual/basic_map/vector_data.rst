@@ -42,6 +42,37 @@ coordinate plane. It is usually used to store discrete features, like roads and
 city blocks.
 
 
+.. _load_geopackage:
+
+|moderate| |FA| Load a layer from GeoPackage
+-------------------------------------------------------------------------------
+
+`GeoPackage <https://www.geopackage.org/>`_ is an open format for storing
+geospatial data. QGIS adds a lot of support to this new format that is slowly
+replacing the ESRI Shapefile format.
+
+GeoPackage is a single file format that can contain different types of data: vector
+and raster layers but also tables without spatial information in them (like CSV
+file).
+
+In order to load a layer from a GeoPackage:
+
+#. Click on the |dataSourceManager| button.
+#. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab.
+#. Click on the :guilabel:`New` button and browse to the :file:`training_data.gpkg`
+   file in the Training Data folder you have downloaded before.
+#. Select the file and press :guilabel:`Open`. The file path is now added to and shown
+   in the drop-down menu.
+#. Click on :guilabel:`Connect` button.
+   You should see in the central part of the window the list of all the layers
+   contained in the GeoPackage file.
+#. Select the :file:`roads` layer and click on the :guilabel:`Add` button.
+
+.. image:: img/add_data_dialog_geopackage.png
+  :align: center
+
+Congratulations! You have loaded the first layer from a GeoPackage file.
+
 .. _backlink-vector-load-geopackage-1:
 
 |basic| |FA| Loading Vector Data From GeoPackage
@@ -177,6 +208,9 @@ lesson.
    :width: 1.5em
 .. |basic| image:: /static/global/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
+.. |moderate| image:: /static/global/moderate.png
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
