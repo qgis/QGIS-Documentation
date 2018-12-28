@@ -44,6 +44,15 @@ These definitions are commonly used in GIS, so it's essential to remember them!
 
 You may now close the attribute table.
 
+.. _backlink-vector-explore-attribute-data:
+
+|basic| |TY| Exploring Vector Data Attributes
+-------------------------------------------------------------------------------
+
+#. How many fields are available in the :guilabel:`rivers` layer?
+#. Tell us a bit about the ``town`` places in your dataset.
+
+:ref:`Check your results <vector-explore-attribute-data>`
 
 
 .. _backlink-vector-load-geopackage-1:
@@ -176,6 +185,7 @@ lesson.
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
