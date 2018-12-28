@@ -90,49 +90,56 @@ Congratulations! You have loaded the first layer from a GeoPackage file.
 
 .. _backlink-vector-load-from-database-1:
 
-|basic| |FA| Loading Vector Data From a Database
+|basic| |FA| Loading Vector Data From a SpatiaLite Database with the Browser
 -------------------------------------------------------------------------------
 
-Databases allow you to store a large volume of associated data in one file. You
-may already be familiar with a database management system (DBMS) such as
-Libreoffice Base or MS Access. GIS applications can also make use of databases.
-GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
-handle spatial data.
+QGIS provides access to many other database formats. Like GeoPackage, the
+SpatiaLite database format is an extension of the SQLite library. And adding
+the first time a layer from SpatiaLite provider follows the same rules as seen
+above: Create the connection --> Enable it --> Add the layer(s).
 
-Adding a layer from a SpatiaLite database or from a GeoPackage archive is not
-so different: in fact, both are spatial extension of the SQLite library.
+We could apply these steps and add SpatiaLite data from our sample
+data but let's explore another powerful feature of data loading in QGIS:
+the :guilabel:`Browser`.
 
-Let's add some layer from a SpatiaLite database.
+#. Click the icon |dataSourceManager| to open the :guilabel:`Data Source Manager`
+   window.
+#. Click on the |fileOpen| :guilabel:`Browser` tab.
+#. In this tab you can see all the storage disks connected to your computer
+   as well as entries for most of the tabs in the left. These allow quick access
+   to connected databases or folders.
 
-#. Click the icon |dataSourceManager| to open the Data Source Manager window
-   (If you're sure you can't see it at all, check that the :guilabel:`Data
-   Source Manager` toolbar is enabled.)
-#. Click on the |addSpatiaLiteLayer| :guilabel:`SpatiaLite` tab.
-#. In this tab you can see all the connections to existing databases or set up
-   new connections.
-#. Click the :guilabel:`New` button.
-#. In the main folder of the Training Data, you should find the file
-   :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
+   For example, click on the drop-down icon next to the |geoPackage|
+   :guilabel:`GeoPackage` entry. You'll see the :file:`training-data.gpkg` file
+   we previously connected, and its layers if expanded.
+#. Right-click the |spatialite| :guilabel:`SpatiaLite` entry and select
+   :guilabel:`New Connection...`.
+#. Navigate to the :file:`exercise_data` folder, select the :file:`landuse.sqlite`
+   file and click :guilabel:`Open`.
 
-   Notice that the drop-down above the three buttons now reads "landuse.sqlite@...",
-   followed by the path of the database file on your computer.
+   Notice that a |dbSchema| :guilabel:`landuse.sqlite` collapsible entry has
+   been added under the :guilabel:`SpatiaLite` one.
+#. Expand the |dbSchema| :guilabel:`landuse.sqlite` entry.
+#. Double-click the |polygonLayer| :guilabel:`landuse` layer or select and
+   drag-and-drop it over the map canvas. A new layer is added to the
+   :guilabel:`Layers` panel and its features are displayed in the map canvas.
 
-#. Click the :guilabel:`Connect` button. You should see this in the previously
-   empty box:
-
-   .. image:: img/spatiallite_dialog_connected.png
+   .. image:: img/spatialite_dialog_connected.png
       :align: center
 
-#. Click on the :guilabel:`landuse` layer to select it, then click
-   :menuselection:`Add`
+   |
 
-.. tip:: Once you have set up a connection to a database you can see this connection
-  and load all the layers contained into it also in the QGIS Browser. We will
-  repeat this forever: the QGIS Browser is the quickest and best way to handle
-  your data!
+.. tip:: Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`
+  and use it to add your data. It's a handy shortcut for the :guilabel:`Data Source
+  Manager --> Browser` tab, with the same functionalities.
 
-.. note::  Remember to save the map often! The map file doesn't contain any of
+.. note:: Remember to save the map often! The map file doesn't contain any of
    the data directly, but it remembers which layers you loaded into your map.
+
+
+
+
+
 
 
 |FA| Reordering the Layers
@@ -199,9 +206,19 @@ lesson.
 .. |basic| image:: /static/global/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+.. |dbSchema| image:: /static/common/mIconDbSchema.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
