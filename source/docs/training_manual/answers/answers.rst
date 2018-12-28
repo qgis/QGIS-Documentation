@@ -58,6 +58,29 @@ Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
+.. _vector-explore-attribute-data:
+
+|basic| *Attribute data*
+...............................................................................
+
+* There should be 9 fields in the :guilabel:`rivers` layer:
+
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Attribute table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could also consist in double-clicking the
+   :guilabel:`rivers` layer, open :menuselection:`Layer properties --> Source
+   Fields` tab and pick there the count of fields.
+
+* Information about towns are available in the :guilabel:`places` layer. Open its
+  attribute table as previously seen: there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add any more information picked from these two records.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
+
 .. _vector-load-geopackage-1:
 
 |basic| *GeoPackage*
@@ -1158,6 +1181,8 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
