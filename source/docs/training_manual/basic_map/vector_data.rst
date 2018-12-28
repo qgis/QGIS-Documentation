@@ -44,58 +44,48 @@ city blocks.
 
 .. _load_geopackage:
 
-|moderate| |FA| Load a layer from GeoPackage
+|basic| |FA| Loading Vector Data From GeoPackage Database
 -------------------------------------------------------------------------------
 
-`GeoPackage <https://www.geopackage.org/>`_ is an open format for storing
-geospatial data. QGIS adds a lot of support to this new format that is slowly
-replacing the ESRI Shapefile format.
+Databases allow you to store a large volume of associated data in one file. You
+may already be familiar with a database management system (DBMS) such as
+Libreoffice Base or MS Access. GIS applications can also make use of databases.
+GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
+handle spatial data.
 
-GeoPackage is a single file format that can contain different types of data: vector
-and raster layers but also tables without spatial information in them (like CSV
-file).
+The `GeoPackage <https://www.geopackage.org/>`_ open format is a database container that
+allows you to store GIS data (layers) in a single file. Unlike the ESRI
+Shapefile format (e.g. the :file:`roads.shp` file you previously load that
+contains only roads vector data), a single GeoPackage file can contain various
+data, vector and raster types, in different coordinate reference systems,
+as well as tables without spatial information; all these features allow you to
+easily share data and avoid file duplication in your computer.
 
-In order to load a layer from a GeoPackage:
+In order to load a layer from GeoPackage, you will first need to create the
+connection to the database:
 
-#. Click on the |dataSourceManager| button.
+#. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button.
 #. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab.
 #. Click on the :guilabel:`New` button and browse to the :file:`training_data.gpkg`
-   file in the Training Data folder you have downloaded before.
-#. Select the file and press :guilabel:`Open`. The file path is now added to and shown
-   in the drop-down menu.
+   file in the :file:`exercise_data` folder you have downloaded before.
+#. Select the file and press :guilabel:`Open`. The file path is now added to the
+   Geopackage connections list, and shown in the drop-down menu.
+
+From now, you can add any layer from this GeoPackage file to QGIS.
+
 #. Click on :guilabel:`Connect` button.
    You should see in the central part of the window the list of all the layers
    contained in the GeoPackage file.
-#. Select the :file:`roads` layer and click on the :guilabel:`Add` button.
+#. Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button.
 
-.. image:: img/add_data_dialog_geopackage.png
-  :align: center
+   .. image:: img/add_data_dialog_geopackage.png
+      :align: center
+
+   A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with
+   features displayed in the map canvas.
+#. Click on :guilabel:`Close`.
 
 Congratulations! You have loaded the first layer from a GeoPackage file.
-
-.. _backlink-vector-load-geopackage-1:
-
-|basic| |FA| Loading Vector Data From GeoPackage
--------------------------------------------------------------------------------
-
-The `GeoPackage <https://www.geopackage.org/>`_ is a database container that allows
-you to store GIS data (layers) in a single file. A single GeoPackage file can
-contain both vector and raster data also in different coordinate reference systems:
-all these features allow you to easily share data and to avoid file duplication
-in your computer.
-
-Refer back to the introductory exercise in the previous section for
-instructions on how to add vector layers.
-
-Load the data sets from the :file:`training_data.gpkg` file into your map following
-the same method:
-
-* :guilabel:`buildings`
-* :guilabel:`places`
-* :guilabel:`rivers`
-* :guilabel:`water`
-
-:ref:`Check your results <vector-load-geopackage-1>`
 
 
 .. _backlink-vector-load-from-database-1:
