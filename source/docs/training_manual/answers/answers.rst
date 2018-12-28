@@ -50,20 +50,22 @@ remember the names and functions of the screen elements.
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
-.. _vector-load-geopackage-1:
+.. _vector-load-more-data:
 
 |basic| *GeoPackage*
 ...............................................................................
 
-There should be five layers on your map:
+There should be seven layers on your map:
 
+* :guilabel:`protected_areas`
 * :guilabel:`places`
-* :guilabel:`water`
-* :guilabel:`buildings`
-* :guilabel:`rivers` and
-* :guilabel:`roads`.
+* :guilabel:`rivers`
+* :guilabel:`roads`
+* :guilabel:`landuse`
+* :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+* :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
-:ref:`Back to text <backlink-vector-load-geopackage-1>`
+:ref:`Back to text <backlink-vector-load-more-data>`
 
 
 |RF| *Symbology*
