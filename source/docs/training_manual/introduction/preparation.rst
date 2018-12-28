@@ -25,8 +25,6 @@ configured its installation.
 
 Let's get started right away!
 
-.. _backlink-interface-preparation-1:
-
 |basic| |FA| Prepare a map
 -------------------------------------------------------------------------------
 
@@ -65,6 +63,13 @@ your work.
 #. Save the map under a :file:`solution` folder next to :file:`exercise_data`
    and call it :file:`basic_map.qgs`.
 
+.. _backlink-interface-preparation-1:
+
+|basic| |TY|
+-------------------------------------------------------------------------------
+
+Repeating the steps above add the :file:`places.shp` and :file:`rivers.shp`
+files from the same :file:`exercise_data/shapefile` folder to the map.
 
 :ref:`Check your results <interface-preparation-1>`
 

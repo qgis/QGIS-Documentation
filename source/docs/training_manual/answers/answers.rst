@@ -13,8 +13,12 @@ Answer Sheet
 |basic| *Preparation*
 ...............................................................................
 
-You should see a lot of lines, symbolizing roads. All these lines are in the
-vector layer that you just loaded to create a basic map.
+You should see in the main area of the dialog different shapes of different
+colors. Each entity belongs to a layer you can identify by its color, in the
+left panel (your colors may be different from the ones below):
+
+.. image:: img/basic_map.png
+   :align: center
 
 :ref:`Back to text <backlink-interface-preparation-1>`
 
