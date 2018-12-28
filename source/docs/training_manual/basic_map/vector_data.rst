@@ -8,9 +8,10 @@
 ===============================================================================
 
 Vector data is arguably the most common kind of data you will find in the daily
-use of GIS. It describes geographic data in terms of points, that may be
-connected into lines and polygons. Every object in a vector dataset is called a
-**feature**, and is associated with data that describes that feature.
+use of GIS. It describes geographic data in terms of points, lines and polygons on a
+coordinate plane. It is usually used to store discrete features, like roads and
+city blocks, Every object in a vector dataset is called a **feature**,
+and is associated with data that describes that feature.
 
 **The goal for this lesson:** To learn about the structure of vector data, and
 how to load vector datasets into a map.
@@ -22,24 +23,27 @@ It's important to know that the data you will be working with does not only
 represent **where** objects are in space, but also tells you **what** those
 objects are.
 
-From the previous exercise, you should have the :guilabel:`roads` layer
-loaded in your map. What you can see right now is merely the position of the
-roads.
+From the previous exercise, you should have the :guilabel:`rivers` layer
+loaded in your map. The lines that you can see right now is merely the
+position of the rivers; this is the *spatial data*.
 
-To see all the data available to you, with the :guilabel:`roads` layer
+To see all the data available to you, with the :guilabel:`rivers` layer
 selected in the Layers panel, click on this button: |openTable|
 
-It will show you a table with more data about the :guilabel:`roads` layer.
-This extra data is called *attribute data*. The lines that you can see on your
-map represent where the roads go; this is the *spatial data*.
+It will show you a table with more data about the :guilabel:`rivers` layer.
+This extra dialog is the :guilabel:`Attribute table`. Each row, called
+*record*, represents a river *feature* and each column, also called *field*,
+represents a property of the river. Cells show *attributes*.
+
+.. image:: img/attribute_data_preview.png
+  :align: center
+
+|
 
 These definitions are commonly used in GIS, so it's essential to remember them!
 
 You may now close the attribute table.
 
-Vector data represents features in terms of points, lines and polygons on a
-coordinate plane. It is usually used to store discrete features, like roads and
-city blocks.
 
 
 .. _backlink-vector-load-geopackage-1:
