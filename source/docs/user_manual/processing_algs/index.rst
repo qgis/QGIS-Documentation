@@ -16,20 +16,22 @@ Processing providers and algorithms
      lidartools/lastools
      taudem/index
 
-Processing algorithms and their parameters (as presented in the user interface)
-are documented here.
-Parameter names (as used in Python scripts) are not yet included in the
-algorithms documentation.
-The ``processing.algorithmHelp`` function in the Python console can be used
-to get the names (example for the QGIS Buffer algorithm)::
+.. note::
 
-    processing.algorithmHelp("native:buffer")
+   Processing algorithms and their parameters (as presented in the user interface)
+   are documented here.
+   Parameter names (as used in Python scripts) are not yet included in the
+   algorithms documentation.
+   The ``processing.algorithmHelp`` function in the Python console can be used
+   to get the names (example for the QGIS Buffer algorithm)::
 
-The available Processing algorithms can be found using the
-``QgsApplication.processingRegistry().algorithms()`` function::
+       processing.algorithmHelp("native:buffer")
 
-    for a in QgsApplication.processingRegistry().algorithms():
-        print("{}:{}".format(a.provider().id(), a.name()))
+   The available Processing algorithms can be found using the
+   ``QgsApplication.processingRegistry().algorithms()`` function::
+
+       for a in QgsApplication.processingRegistry().algorithms():
+           print("{}:{}".format(a.provider().id(), a.name()))
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
