@@ -173,6 +173,13 @@ version of QGIS if you intend to add it to an existing target install.
 
    Basic HTTP authentication configs
 
+.. _figure_authmethod_esritoken:
+
+.. figure:: img/auth-config-create_esritoken.png
+   :align: center
+
+   ESRI Token authentication configs
+
 .. _figure_authmethod_oauth2:
 
 .. figure:: img/auth-config-create_oauth2.png
