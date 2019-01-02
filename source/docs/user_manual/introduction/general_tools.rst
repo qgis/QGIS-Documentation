@@ -1231,6 +1231,11 @@ tools:
 .. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these
    manual selection tools allow you to select feature(s) in the map canvas with a
    single click.
+   
+.. note:: With the |selectPolygon| :sup:`Select Features by Polygon` tool, it is
+   possible to use an existing polygon for the selection.
+   Right-click in the polygon and choose it from the context menu that shows a
+   list of all the polygons that contain the clicked point.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
 holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether feature is selected
@@ -1472,6 +1477,11 @@ At the top of the window, you have handful tools:
   * |identifyByPolygon| :sup:`Identify Features by Polygon`
   * |identifyByFreehand| :sup:`Identify Features by Freehand`
   * |identifyByRadius| :sup:`Identify Features by Radius`
+
+  .. note::
+     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
+     right-click an existing polygon to use it for selecting the features to
+     identify.
 
 .. _identify_mode:
 
