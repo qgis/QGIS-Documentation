@@ -632,6 +632,115 @@ view reflect changes you make in the legend area.
    also pan the map using the space bar or the click on mouse wheel: just move
    the mouse while holding down space bar or click on mouse wheel.
 
+
+.. index:: 3D Map view
+.. _`label_3dmapview`:
+
+3D Map View
+===========
+
+3D visualization support is offered through the 3D map view.
+You create and open a 3D map view with :menuselection:`View --> New 3D Map
+View`.
+A floating QGIS panel will appear. You can drag the panel to dock it.
+
+The 3D map view has the same extent and view as the 2D canvas to start with.
+There is no dedicated toolbar for navigation in the 3D canvas.
+You zoom in/out and pan in the same way as in the main 2D canvas.
+You can also zoom in and out by dragging the mouse down/up with the
+right mouse button pressed.
+
+Some additional options help you to explore the map in 3D:
+
+  * Tilt / rotate camera
+ 
+      * By dragging the mouse with the middle mouse button pressed
+      * By pressing :kbd:`Shift` and dragging the mouse with the left mouse
+        button pressed
+      * By pressing :kbd:`Shift` and using up/down/left/right keys
+      
+  * Change the camera angle
+  
+      * By pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
+        button pressed
+      * By pressing :kbd:`Ctrl` and using up/down/left/right keys
+
+  * Move the terrain
+  
+      * By pressing :kbd:`Alt` and dragging the mouse with the left mouse
+        button pressed
+      * By pressing :kbd:`Alt` and using up/down/left/right keys
+
+To reset the camera view, click Zoom Full button on the top of the 3D
+canvas panel.
+
+Terrain Configuration
+---------------------
+
+A terrain raster provides the elevation.
+Such a raster layer must contain a band that represents elevation.
+To select the terrain raster, click the Configure button on the top of
+the 3D canvas panel to open the :guilabel:`3D configuration` window.
+After choosing the terrain raster layer in the :guilabel:`Elevation`
+pull-down menu, you are ready to go.
+
+In the 3D Configuration window there are various other options to
+fine-tune the 3D scene.
+Before diving into the details, it is worth noting that terrain in 3D view
+is represented by a hierarchy of terrain tiles and as the camera moves
+closer to the terrain, existing tiles that do not have sufficient detail
+are replaced by smaller tiles with more details.
+Each tile has mesh geometry derived from the elevation raster layer and
+texture from 2D map layers.
+
+Configuration options and their meaning:
+
+  * **Elevation**: Raster to be used for generation of terrain.
+  * **Vertical scale**: Scale factor for vertical axis.
+    Increasing the scale will exaggerate the terrain.
+  * **Tile resolution**: How many samples from the terrain raster layer to
+    use for each tile.
+    A value of 16 px means that the geometry of each tile will be built
+    from 16x16 elevation samples.
+    Higher numbers create more detailed terrain tiles at the expense of
+    increased rendering complexity.
+  * **Skirt height**: Sometimes it is possible to see small cracks
+    between tiles of the terrain.
+    Raising this value will add vertical walls ("skirts") around terrain
+    tiles to hide the cracks.
+  * **Map tile resolution**: Width and height of the 2D map images used
+    as textures for the terrain tiles.
+    256 px means that each tile will be rendered into an image of
+    256x256 pixels.
+    Higher numbers create more detailed terrain tiles at the expense of
+    increased rendering complexity.
+  * **Max. screen error**: Determines the threshold for swapping terrain
+    tiles with more detailed ones (and vice versa) - i.e. how soon the
+    3D view will use higher quality tiles.
+    Lower numbers mean more details in the scene at the expense of
+    increased rendering complexity.
+  * **Max. ground error**: The resolution of the terrain tiles at which
+    dividing tiles into more detailed ones will stop (splitting them
+    would not introduce any extra detail anyway).
+    This value limits the depth of the hierarchy of tiles: Lower values 
+    make the hierarchy deep, increasing rendering complexity.
+  * **Zoom levels**: Shows the number of zoom levels (depends on the
+    map tile resolution and max. ground error).
+  * **Show labels**: Toggles map labels on/off
+  * **Show map tile info**: Include border and tile numbers for the
+    terrain tiles (useful for troubleshooting terrain issues)
+  * **Show bounding boxes**: Show 3D bounding boxes of the terrain
+    tiles (useful for troubleshooting terrain issues)
+
+3D vector layers
+----------------
+
+A vector layer with elevation values can be shown in 3D in the 3D map
+view by checking :guilabel:`Enable 3D Renderer` in the
+:guilabel:`3D View` section of the vector layer properties.
+A number of options are available for controlling the rendering of
+the 3D vector layer.
+
 .. _`label_statusbar`:
 
 Status Bar
