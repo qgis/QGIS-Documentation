@@ -493,7 +493,7 @@ the same folder as the rst file.
 
 * Same environment for all the screen caps (same OS, same decoration, same font
   size)
-* Use the QGIS -projects included in QGIS-Documentation repository (in
+ * Use the QGIS projects included in QGIS-Documentation repository (in
   :file:`./qgis_projects`)
   These were used to produce the 'original' screenshots in the manual.
   The QGIS `Sample Data <https://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
