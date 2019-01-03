@@ -71,7 +71,7 @@ Start all list items with a capital letter.
 Do not use punctuation after list items that only contain a single simple
 sentence.
 
- Use period (``.``) as punctuation for list items that consist of several
+Use period ( ``.`` ) as punctuation for list items that consist of several
 sentences or is composed.
 
 Inline Tags
