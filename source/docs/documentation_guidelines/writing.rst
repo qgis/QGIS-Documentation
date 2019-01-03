@@ -66,13 +66,16 @@ section, subsection and minisec.
 Lists
 -----
 
-Start all list items with a capital letter.
+Lists are useful for structuring the text.  Here are some simple rules
+common to all lists:
 
-Do not use punctuation after list items that only contain a single simple
-sentence.
+* Start all list items with a capital letter
 
-Use period ( ``.`` ) as punctuation for list items that consist of several
-sentences or is composed.
+* Do not use punctuation after list items that only contain a single simple
+  sentence
+
+* Use period ( ``.`` ) as punctuation for list items that consist of several
+  sentences or is composed
 
 Inline Tags
 -----------
@@ -478,9 +481,9 @@ rst file.
   as the QGIS-Documentation Repository.
 * Use the following command to remove the global menu function in Ubuntu
   to create smaller application screens with menu's:
-
+  
   .. code-block:: bash
-
+  
     sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
@@ -493,7 +496,7 @@ the same folder as the rst file.
 
 * Same environment for all the screen caps (same OS, same decoration, same font
   size)
- * Use the QGIS projects included in QGIS-Documentation repository (in
+* Use the QGIS projects included in QGIS-Documentation repository (in
   :file:`./qgis_projects`)
   These were used to produce the 'original' screenshots in the manual.
   The QGIS `Sample Data <https://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
@@ -501,7 +504,7 @@ the same folder as the rst file.
 * Same size as the english 'original' screenshots, otherwise they will be stretched
   and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
- * Same filename as the english 'original' screenshot
+* Same filename as the english 'original' screenshot
 * Reduce the window to the minimal space needed to show the feature
   (taking all the screen for a small modal window > overkill)
 * The less clutter, the better (no need to activate all the toolbars)
