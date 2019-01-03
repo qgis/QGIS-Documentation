@@ -501,7 +501,7 @@ the same folder as the rst file.
 * Same size as the english 'original' screenshots, otherwise they will be stretched
   and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
-* Same filename as the english 'original' screenshot.
+ * Same filename as the english 'original' screenshot
 * Reduce the window to the minimal space needed to show the feature
   (taking all the screen for a small modal window > overkill)
 * The less clutter, the better (no need to activate all the toolbars)
