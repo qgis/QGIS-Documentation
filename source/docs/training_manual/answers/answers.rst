@@ -186,6 +186,22 @@ you want:
 :ref:`Back to text <backlink-symbology-levels-2>`
 
 
+.. _symbology-marker-line:
+
+|moderate| *Outline Markers* 
+-------------------------------------------------------------------------------
+
+Here are examples of the symbol structure:
+
+.. image:: img/answer_marker_line.png
+   :align: center
+
+.. image:: img/answer_marker_line2.png
+   :align: center
+
+:ref:`Back to text <backlink-symbology-marker-line>`
+
+
 .. _symbology-geom_generator:
 
 |hard| *Geometry generator symbology*

@@ -428,6 +428,22 @@ benefit that you can change the size, shape and distance of the individual dots
 that make up the texture.
 
 
+.. _backlink-symbology-marker-line:
+
+|moderate| |TY|
+-------------------------------------------------------------------------------
+
+Apply to the :guilabel:`protected_areas` layer a green transparent fill color
+with outline looking like this:
+
+.. image:: img/marker_line_preview.png
+   :align: center
+
+|
+
+:ref:`Check your results <symbology-marker-line>`
+
+
 |hard| |FA| Geometry generator symbology
 -------------------------------------------------------------------------------
 
