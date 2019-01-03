@@ -84,15 +84,15 @@ There should be five layers on your map:
 
 * Verify that the colors are changing as you expect them to change.
 * It is enough to select the :guilabel:`water` layer in the legend and then click
-  on the |symbology|:sup:`Open the Layer Styling panel` button. Change the color
+  on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
   with the one you want and best fits the water layer.
 
 .. image:: img/answer_water_blue.png
    :align: center
 
 .. note::  If you want to work on only one layer at a time and don't want the
-   other layers to distract you, you can hide a layer by clicking in the check
-   box next to its name in the Layers list. If the box is blank, then the layer
+   other layers to distract you, you can hide a layer by clicking in the checkbox
+   next to its name in the layers list. If the box is blank, then the layer
    is hidden.
 
 :ref:`Back to text <backlink-symbology-colors-1>`
@@ -114,8 +114,11 @@ If you are a Beginner-level user, you may stop here.
   layers.
 * Try using natural colors for the objects. For example, a road should not be
   red or blue, but can be gray or black.
-* Also feel free to experiment with different :guilabel:`Fill Style` and
-  :guilabel:`Border Style` settings for the polygons.
+* Also feel free to experiment with different :guilabel:`Fill style` and
+  :guilabel:`Stroke style` settings for the polygons.
+
+.. image:: img/answer_symbology2.png
+   :align: center
 
 :ref:`Back to text <backlink-symbology-structure-1>`
 
@@ -125,8 +128,8 @@ If you are a Beginner-level user, you may stop here.
 |moderate| *Symbol Layers*
 ...............................................................................
 
-* Customize your :guilabel:`buildings` layer as you like, but remember that it
-  has to be easy to tell different layers apart on the map.
+Customize your :guilabel:`buildings` layer as you like, but remember that it
+has to be easy to tell different layers apart on the map.
 
 Here's an example:
 
@@ -149,16 +152,20 @@ To make the required symbol, you need three symbol layers:
 The lowest symbol layer is a broad, solid gray line. On top of it there is a
 slightly thinner solid yellow line and finally another thinner solid black line.
 
-* If your symbol layers resemble the above but you're not getting the result
-  you want, check that your symbol levels look something like this:
+If your symbol layers resemble the above but you're not getting the result
+you want:
 
-  .. image:: img/answer_road_symbol_levels.png
-     :align: center
+#. Check that your symbol levels look something like this:
 
-* Now your map should look like this:
+   .. image:: img/answer_road_symbol_levels.png
+      :align: center
 
-  .. image:: img/target_road_symbology.png
-     :align: center
+#. Now your map should look like this:
+
+   .. image:: img/target_road_symbology.png
+      :align: center
+
+|
 
 :ref:`Back to text <backlink-symbology-levels-1>`
 
@@ -168,13 +175,13 @@ slightly thinner solid yellow line and finally another thinner solid black line.
 |hard| *Symbol Levels*
 ...............................................................................
 
-* Adjust your symbol levels to these values:
+#. Adjust your symbol levels to these values:
 
-.. image:: img/answer_road_symbol_layers.png
-   :align: center
+   .. image:: img/answer_road_symbol_layers.png
+      :align: center
 
-* Experiment with different values to get different results.
-* Open your original map again before continuing with the next exercise.
+#. Experiment with different values to get different results.
+#. Open your original map again before continuing with the next exercise.
 
 :ref:`Back to text <backlink-symbology-levels-2>`
 
