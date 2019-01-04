@@ -201,7 +201,8 @@ Replacement
 ...........
 
 You can put an image inside text or add an alias to use everywhere. To use an image
-inside a paragraph, first create an alias:
+inside a paragraph, first create an alias in the :file:`source/substitutions.txt`
+file:
 
 
 .. code-block:: rst
@@ -213,14 +214,21 @@ and then call it in your paragraph:
 
 .. code-block:: rst
 
-   my paragraph begins here with a nice logo |nice_logo|.
+   My paragraph begins here with a nice logo |nice_logo|.
 
 This is how the example will be displayed:
 
 .. |nice_logo| image:: /static/common/logo.png
                :width: 2 em
 
-my paragraph begins here with a nice logo |nice_logo|.
+My paragraph begins here with a nice logo |nice_logo|.
+
+In order to render in GitHub a preview of the documentation that is the closest
+to html rendering, you will also need to add the image replacement call at the
+end of the file you changed. This can be done by copy-pasting it from the
+:file:`substitutions.txt` or by executing the :file:`scripts/find_set_subst.py`
+script.
+
 
 .. note::
 
