@@ -178,57 +178,14 @@ see :ref:`Label and reference <my_anchor>` for more information.
 
 .. _`image`:
 
-Figures and Images
-------------------
+Figures, Images and Tables
+--------------------------
 
 
 Pictures
 ........
 
-To insert an image, use
-
-.. code-block:: rst
-
-   .. figure:: /static/common/logo.png
-      :width: 10 em
-
-which returns
-
-.. figure:: /static/common/logo.png
-    :width: 10 em
-
-Replacement
-...........
-
-You can put an image inside text or add an alias to use everywhere. To use an image
-inside a paragraph, first create an alias:
-
-
-.. code-block:: rst
-
-   .. |nice_logo| image:: /static/common/logo.png
-                  :width: 2 em
-
-and then call it in your paragraph:
-
-.. code-block:: rst
-
-   my paragraph begins here with a nice logo |nice_logo|.
-
-This is how the example will be displayed:
-
-.. |nice_logo| image:: /static/common/logo.png
-               :width: 2 em
-
-my paragraph begins here with a nice logo |nice_logo|.
-
-.. note::
-
-   Currently, to ensure consistency and help in the use of QGIS icons
-   a list of aliases is built and available in the :ref:`substitutions` chapter.
-
-Figure
-......
+To insert an image or a figure, you can use:
 
 .. code-block:: rst
 
