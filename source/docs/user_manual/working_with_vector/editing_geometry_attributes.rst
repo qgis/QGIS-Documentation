@@ -489,7 +489,8 @@ The Vertex Editor Panel
 
 When using the :guilabel:`Vertex tool` on a feature, it is possible to right click to open the
 :guilabel:`Vertex Editor` panel listing all the vertices of the feature with
-their x, y (z, m if applicable) coordinates and r (for the radius, in case of
+their :guilabel:`x`, :guilabel:`y` (:guilabel:`z`, :guilabel:`m` if applicable)
+coordinates and :guilabel:`r` (for the radius, in case of
 circular geometry). Simply select a row in the table does select the corresponding
 vertex in the map canvas, and vice versa. Simply change a coordinate in the table
 and your vertex position is updated. You can also select multiple rows and delete
@@ -1296,9 +1297,9 @@ shorcuts available:
 +----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`A` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`X` | Set x coordinate  | Lock x coordinate             | Toggle relative x to last vertex      |
+| :kbd:`X` | Set X coordinate  | Lock X coordinate             | Toggle relative X to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`Y` | Set y coordinate  | Lock y coordinate             | Toggle relative y to last vertex      |
+| :kbd:`Y` | Set Y coordinate  | Lock Y coordinate             | Toggle relative Y to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`C` | Toggle construction mode                                                                  |
 +----------+-------------------------------------------------------------------------------------------+
@@ -1372,13 +1373,13 @@ and the mouse pointer.
 For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
 :guilabel:`y` text boxes (or press :kbd:`Shift+X` or :kbd:`Shift+Y`) to
 toggle relative coordinates to the previous vertex. With these options on,
-coordinates measurement will consider the last vertex to be the x and y axes
+coordinates measurement will consider the last vertex to be the X and Y axes
 origin.
 
 Continuous lock
 ---------------
 
-Both in absolute or relative reference digitizing, angle, distance, x and y
+Both in absolute or relative reference digitizing, angle, distance, X and Y
 constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
@@ -1422,7 +1423,7 @@ You can enable and disable *construction* mode by clicking on the
 |cadConstruction| :sup:`Construction` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
-reference points to then lock distance, angle or x and y relative values.
+reference points to then lock distance, angle or X and Y relative values.
 
 As an example, the construction mode can be used to draw some point
 at an exact distance from an existing point.

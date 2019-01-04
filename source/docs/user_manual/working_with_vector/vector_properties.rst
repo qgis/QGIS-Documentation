@@ -1044,12 +1044,12 @@ effect types, with custom options are available:
   horizontal` and :guilabel:`Reflect vertical`, which actually create a
   reflection on the horizontal and/or vertical axes. The other options are:
 
-  * :guilabel:`Shear X,Y`: Slants the feature along the x and/or y axis.
-  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the x
-    and/or y axis by the given percentage.
+  * :guilabel:`Shear X,Y`: Slants the feature along the X and/or Y axis.
+  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the X
+    and/or Y axis by the given percentage.
   * :guilabel:`Rotation`: Turns the feature around its center point.
   * and :guilabel:`Translate X,Y` changes the position of the item based on
-    a distance given on the x and/or y axis.
+    a distance given on the X and/or Y axis.
 
   .. _figure_effects_transform:
 
@@ -2351,7 +2351,7 @@ Default values
   For example, you can:
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's x coordinate, length, area or any geometric information at its creation;
+    feature's X coordinate, length, area or any geometric information at its creation;
   * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
@@ -2536,7 +2536,7 @@ possible if the underlying data is read only. Moreover, configuring these
 data-defined properties may be very time consuming or not desirable! For
 example, if you want to fully use map tools coming with :ref:`label_toolbar`,
 then you need to add and configure more than 20 fields in your original data
-source (x and y positions, rotation angle, font style, color and so on).
+source (X and Y positions, rotation angle, font style, color and so on).
 
 The Auxiliary Storage mechanism provides the solution to these limitations
 and awkward configurations. Auxiliary fields are a roundabout way to

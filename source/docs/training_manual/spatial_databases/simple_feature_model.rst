@@ -101,8 +101,8 @@ which tables in the database contain geometry data.
    this table has already been registered and you don't need to do anything
    more.
 
-The value :kbd:`2` refers to the number of dimensions; in this case, two: **x**
-and **y**.
+The value ``2`` refers to the number of dimensions; in this case, two: **X**
+and **Y**.
 
 The value :kbd:`4326` refers to the projection we are using; in this case, WGS
 84, which is referred to by the number 4326 (refer to the earlier discussion

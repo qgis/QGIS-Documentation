@@ -565,7 +565,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 **Grid and guide defaults**
 
 * Define the :guilabel:`Grid spacing` |selectNumber|
-* Define the :guilabel:`Grid offset` |selectNumber| for x and y
+* Define the :guilabel:`Grid offset` |selectNumber| for X and Y
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
 

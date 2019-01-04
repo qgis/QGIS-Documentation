@@ -594,7 +594,7 @@ Parameters in the GetPrint request are:
 * **<map_id>:EXTENT** gives the extent for a layout map item as xmin,ymin,xmax,ymax.
 * **<map_id>:ROTATION** map rotation in degrees
 * **<map_id>:GRID_INTERVAL_X**, **<map_id>:GRID_INTERVAL_Y** Grid line density for a
-  map in x- and y-direction
+  map in X and Y directions
 * **<map_id>:SCALE** Sets a map scale to a layout map item. This is useful to ensure
   scale based visibility of layers and labels even if client and server may
   have different algorithms to calculate the scale denominator
