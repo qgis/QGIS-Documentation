@@ -92,6 +92,8 @@ Icon                            Substitution                        Icon        
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
+|geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
+|dbSchema|                      ``|dbSchema|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
@@ -605,6 +607,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
+.. |dbSchema| image:: /static/common/mIconDbSchema.png
+   :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |delaunay| image:: /static/common/delaunay.png
@@ -716,6 +720,8 @@ Icon                            Substitution                        Icon        
    :width: 2em
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
+   :width: 1.5em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
@@ -1076,6 +1082,8 @@ Icon                            Substitution                        Icon        
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
 .. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
+.. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em

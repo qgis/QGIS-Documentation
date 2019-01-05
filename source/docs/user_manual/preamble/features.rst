@@ -21,13 +21,15 @@ integrated Python console.
 View data
 ---------
 
-You can view and overlay vector and raster data in different formats
-and projections without conversion to an internal or common
-format. Supported formats include:
+You can view (in 2D or 3D) combinations of vector and raster data in
+different formats and projections without conversion to an internal or
+common format.
+Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
    Spatial, Oracle Spatial, vector formats supported by the installed OGR
-   library, including ESRI Shapefile, MapInfo, SDTS, GML and many more.
+   library, including GeoPackage, ESRI Shapefile, MapInfo, SDTS, GML and
+   many more.
    See section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo

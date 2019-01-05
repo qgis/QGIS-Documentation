@@ -854,6 +854,8 @@ you prefer to the map.
    checked.
 #. Enter the text you want to place on the map. You can use HTML as
    shown in the example.
+#. Choose the font of the label from the :guilabel:`Font` |selectString| combo box. Set the
+   font color and opacity by clicking the black arrow to the right of the font combo box.
 #. Choose the placement of the label from the :guilabel:`Placement`
    |selectString| combo box.
 #. You can refine the placement of the item by setting a Horizontal and/or Vertical
@@ -924,8 +926,11 @@ To add a scale bar:
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
 #. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
-#. Select the color for the bar :guilabel:`Color of bar` |selectColor| or use
-   the default black color.
+#. Select the :guilabel:`Color of bar` |selectColor| by chosing
+   a fill color (default: Black) and an outline color (default: White). The scale 
+   bar fill and outline can be made opaque by clicking on the down arrow to the right
+   of the color input.
+#. Select the font of the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
 #. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
    on resize` to display values easy-to-read.
@@ -1113,11 +1118,13 @@ Properties... --> General` menu.
 .. note:: **Configuring the measure tool**
 
    While measuring length or area, clicking the :guilabel:`Configuration` button
-   at the bottom of the widget helps you define in menu :menuselection:`Settings -->
-   Options --> Map Tools` the rubberband color, the precision of the measurements
-   and the unit behavior. You can also choose your preferred measurement or angle
-   units but keep in mind that those values are superseded in the current project
-   by options made in :menuselection:`Project --> Properties... --> General` menu.
+   at the bottom of the widget opens the :menuselection:`Settings -->
+   Options --> Map Tools` menu, where you can select the rubberband color, the
+   precision of the measurements and the unit behavior. You can also choose your
+   preferred measurement or angle units but keep in mind that those values are
+   overridden in the current project by the selection made in the 
+   :menuselection:`Project --> Properties... --> General` menu, and by the
+   selection made in the measurement widget.
 
 All measuring modules use the snapping settings from the digitizing module (see
 section :ref:`snapping_tolerance`). So, if you want
@@ -1137,8 +1144,10 @@ as well as the total, shows up in the measure window.
 To stop measuring, click your right mouse button.
 
 Note that you can use the drop-down list near the total to interactively change
-the measurement units while measuring. This unit is kept for the widget until
-a new or another project is opened.
+the measurement units while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
+'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
+This unit is kept for the widget until a new project is created or another project
+is opened.
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
 according to CRS settings available.
@@ -1157,7 +1166,9 @@ according to CRS settings available.
 |measureArea| :sup:`Measure Area`: Areas can also be measured. In the
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
-different area units.
+different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
+'Square miles', 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters',
+'Square millimeters', 'Square degrees', 'Map units').
 
 .. _figure_measure_area:
 
