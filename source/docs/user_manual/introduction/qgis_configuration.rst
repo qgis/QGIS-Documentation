@@ -656,7 +656,7 @@ section.
 
 .. _figure_variables_settings:
 
-.. figure:: img/options_variables.png
+.. figure:: img/options_variables_global.png
    :align: center
 
    Variables Settings in QGIS
