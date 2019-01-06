@@ -89,7 +89,6 @@ General Settings
 * |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
   :ref:`data source manager <datasourcemanager>` dialog opened and allow
   interaction with QGIS interface while adding layers to project; 
-* |checkbox| :guilabel:`QGIS-styled group boxes`;
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
 
 .. _projectfiles_options:
