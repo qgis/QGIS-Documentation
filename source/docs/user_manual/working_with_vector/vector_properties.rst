@@ -534,8 +534,6 @@ both representation are also available in the print layout legend item.
 
    Multivariate example with scaled size legend
 
-.. tip:: **Add the size scaled symbols to the print layout legend**
-
 
 .. index::
    single: Symbology; Rule-based renderer
