@@ -75,13 +75,13 @@ and toolbars, see section :ref:`label_toolbars`.
 Project
 -------
 
-The :menuselection:`Project` menu is somehow the entrance and exit points of
+The :menuselection:`Project` menu provides access and exit points of
 the :ref:`project file <sec_projects>`. It provides you with tools to:
 
-* Create :guilabel:`New` file from scratch or using another project file as
+* Create a :guilabel:`New` file from scratch or using another project file as
   template (see :ref:`Project files options <projectfiles_options>` for
   template configuration);
-* :guilabel:`Open...` project file from file browser or PostgreSQL database;
+* :guilabel:`Open...` a project file from either a file browser or PostgreSQL database;
 * :guilabel:`Close` a project or revert it to its last saved state;
 * Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
   or within a PostgreSQL database;
@@ -122,7 +122,7 @@ Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 Edit
 ----
 
-The :menuselection:`Edit` menu presents most of the native tools needed to edit
+The :menuselection:`Edit` menu provides most of the native tools needed to edit
 layers attributes or geometry (see :ref:`editingvector` for details).
 
 =======================================================================  ====================  =================================   ===================================
@@ -168,8 +168,7 @@ Menu Option                                                              Shortcu
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                    \                     :guilabel:`Advanced Digitizing`     :ref:`offset_symbol`
 =======================================================================  ====================  =================================   ===================================
 
-Depending on the selected layer geometry type, some of the tools may look different:
-
+Tools dependent on the selected layer geometry type i.e. point, polyline or polygon, are activated accordingly:
 .. :tabularcolumns: |l|c|c|c|
 
 =====================================  ========================  ========================  ==========================
