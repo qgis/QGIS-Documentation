@@ -32,7 +32,7 @@ the features.
 
 A vector feature has its shape represented using **geometry**. The geometry is
 made up of one or more interconnected **vertices**. A vertex describes a position
-in space using an **X**, **Y** and optionally **z** axis. Geometries which have
+in space using an **X**, **Y** and optionally **Z** axis. Geometries which have
 vertices with a ``Z`` axis are often referred to as **2.5D** since they describe
 height or depth at each vertex, but not both.
 

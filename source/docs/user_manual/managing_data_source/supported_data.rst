@@ -31,7 +31,7 @@ aerial photography, or satellite imagery and modelled data, such as an elevation
 matrix.
 
 Unlike vector data, raster data typically do not have an associated database
-record for each cell. They are geocoded by pixel resolution and the x/y
+record for each cell. They are geocoded by pixel resolution and the X/Y
 coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 

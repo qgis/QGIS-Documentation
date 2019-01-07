@@ -31,8 +31,8 @@ Really, it's that easy...
 
 .. note:: Depending on which version of Ubuntu you are using, and which
    repositories you have configured, these commands will install PostGIS 1.5,
-   or 2.x. You can find the version installed by issuing a :kbd:`select
-   PostGIS_full_version();` query with psql or another tool.
+   or 2.x. You can find the version installed by issuing a ``select
+   PostGIS_full_version();`` query with psql or another tool.
 
 To install the absolute latest version of PostGIS, you can use the following
 commands.
