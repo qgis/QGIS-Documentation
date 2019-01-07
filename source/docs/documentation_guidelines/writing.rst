@@ -75,7 +75,7 @@ common to all lists:
   sentence
 
 * Use period ( ``.`` ) as punctuation for list items that consist of several
-  sentences or are compound
+  sentences or a single compound sentence
 
 Inline Tags
 -----------
