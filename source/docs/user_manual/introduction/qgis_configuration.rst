@@ -88,7 +88,7 @@ General Settings
   if a newer version is released;
 * |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
   :ref:`data source manager <datasourcemanager>` dialog opened and allow
-  interaction with QGIS interface while adding layers to project; 
+  interaction with QGIS interface while adding layers to project;
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
 
 .. _projectfiles_options:
@@ -493,7 +493,7 @@ the color button drop-down. Custom palettes can also be added to this widget
 thanks to the :guilabel:`Show in Color Buttons` option.
 
 For any of the palettes, you can manage the list of colors using the set of
-tools next to the frame, ie: 
+tools next to the frame, ie:
 
 * add or remove colors;
 * copy or paste colors;
@@ -508,6 +508,13 @@ Selector <color-selector>` dialog.
    :align: center
 
    Colors Settings
+
+.. tip:: **Using Project colors**
+
+  You can rename the label of each color by double clicking on it in order to
+  use it with the project_color function. You can read more about how to use
+  project colors in Nyall Dawson's `Exploring variables in QGIS pt2
+  <https://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_ blog post
 
 
 .. index:: Digitizing configuration
@@ -550,7 +557,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * :guilabel:`Snapping marker color`
 * |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
   feature you are about to snap. Helpful when multiple features overlap.
-* |checkbox| :guilabel:`Enable snapping on invisible features` 
+* |checkbox| :guilabel:`Enable snapping on invisible features`
 
 
 **Vertex markers**
@@ -992,13 +999,13 @@ In the :guilabel:`Data Sources` tab, you can:
   To speed up project loading by skipping data checks. Useful in QGIS Server context
   or in projects with huge database views/materialized views. The extent of layers
   will be read from the QGIS project file (instead of data sources) and when
-  using the PostgreSQL provider the primary key unicity will not be 
+  using the PostgreSQL provider the primary key unicity will not be
   checked for views and materialized views.
 
 .. _project_layer_capabilities:
 
 * Configure the :guilabel:`Layers Capabilities`, i.e.:
-  
+
   * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
     :ref:`identify tool <identify>`. By default, layers are set queryable.
   * Set whether a layer should appear as ``read-only``, meaning that
