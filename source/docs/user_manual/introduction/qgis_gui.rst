@@ -41,9 +41,7 @@ The QGIS GUI is divided into five components:
 #. Map View
 #. Status Bar
 
-These five components of the QGIS interface are described in more detail in
-the following sections. Two more sections present keyboard shortcuts and
-context help.
+Scroll down for detailed explanations of these features. 
 
 .. index:: Menu
 .. _label_menubar:
@@ -51,39 +49,37 @@ context help.
 Menu Bar
 ========
 
-The menu bar provides access to various QGIS features using a standard
-hierarchical menu. The top-level menus and a summary of some of the menu
-options are listed below, together with the associated icons as
-they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in
-this section are the defaults; however, keyboard shortcuts can also be configured
-manually using the :guilabel:`Keyboard Shortcuts` dialog, opened from
-:menuselection:`Settings -->` menu.
+The Menu bar provides access to various QGIS functions using a standard
+hierarchical menu. A summary of the Menus, their options, associated 
+icons and keyboard shortcuts are outlined below. Note that these keyboard
+shortcuts are the default settings, however, they can be reconfigured using
+the :guilabel:`Keyboard Shortcuts`via the :menuselection:`Settings -->` menu.
 
-Although most menu options have a corresponding tool and vice-versa, the menus
-are not organized exactly like the toolbars. The toolbar containing the tool is
-listed after each menu option as a checkbox entry. Some menu options only
-appear if the corresponding plugin is loaded. For more information about tools
-and toolbars, see section :ref:`label_toolbars`.
+Most Menu options have a corresponding tool and vice-versa, however, the Menus
+are not organized exactly like the toolbars. The location of menu options
+in the toolbars are indicated below in the table. Plugins may load in additional
+menu options to Menus. For more information about tools and toolbars, see section 
+:ref:`label_toolbars`.
 
-.. note:: QGIS is a cross-platform application meaning that though it provides you
+.. note:: QGIS is a cross-platform application - that though it provides you
    with the same tools, they may be placed in different menus according to the
    operating system specification. The lists below show the most common location
-   and precise when there is a variation.
+   including known variations.
 
 .. index:: Project
 
 Project
 -------
 
-The :menuselection:`Project` menu is somehow the entrance and exit points of
-the :ref:`project file <sec_projects>`. It provides you with tools to:
+The :menuselection:`Project` menu contains the functions associated with 
+the :ref:`project file <sec_projects>`. 
+It provides you with tools to:
 
-* Create :guilabel:`New` file from scratch or using another project file as
-  template (see :ref:`Project files options <projectfiles_options>` for
-  template configuration);
-* :guilabel:`Open...` project file from file browser or PostgreSQL database;
-* :guilabel:`Close` a project or revert it to its last saved state;
-* Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+* Create :guilabel:`New` file from scratch or using an existing project file 
+  (see :ref:`Project files options <projectfiles_options>` for template configuration);
+* :guilabel:`Open...` project file from file browser or from a PostgreSQL database
+* :guilabel:`Close` a project or revert to its last saved state;
+* :guilabel:`Save` a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
   or within a PostgreSQL database;
 * Export the project rendering to different formats from the map canvas or
   using a :ref:`print layout <label_printlayout>`;
