@@ -183,8 +183,8 @@ Menu Option                            Point                     Polyline       
 View
 ----
 
-The map being designed is rendered in map views. You can interact with these
-interfaces using the :menuselection:`View` tools (see :ref:`working_canvas`
+The map is rendered in map views. You can interact with these
+views using the :menuselection:`View` tools (see :ref:`working_canvas`
 for more information). For example, you can:
 
 * Create new map views, 2D or 3D, next to the main map canvas;
