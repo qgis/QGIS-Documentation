@@ -665,6 +665,10 @@ Some additional options help you to explore the map in 3D:
         button pressed
       * By pressing :kbd:`Ctrl` and using up/down/left/right keys
 
+  * Move the camera up / down
+  
+      * By pressing :kbd:`Page Up` / :kbd:`Page Down`
+
   * Move the terrain
   
       * By pressing :kbd:`Alt` and dragging the mouse with the left mouse
