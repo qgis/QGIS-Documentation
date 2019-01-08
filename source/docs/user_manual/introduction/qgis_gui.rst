@@ -79,7 +79,7 @@ It provides you with tools to:
   (see :ref:`Project files options <projectfiles_options>` for template configuration);
 * :guilabel:`Open...` project file from file browser or from a PostgreSQL database
 * :guilabel:`Close` a project or revert to its last saved state;
-* :guilabel: 'Save' a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+* :guilabel:`Save` a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
   or within a PostgreSQL database;
 * Export the project rendering to different formats from the map canvas or
   using a :ref:`print layout <label_printlayout>`;
