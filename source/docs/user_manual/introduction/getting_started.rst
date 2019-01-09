@@ -496,7 +496,7 @@ The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the
 default is to save using a compressed format with the ``.qgz`` extension.
 The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive),
 so you can get to it by unzipping.
-To zip a project, select the corresponding extension (`.qgz``) with
+To zip a project, select the corresponding extension (``.qgz``) with
 :menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`. Once
 zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
 will automatically zip your current project.
