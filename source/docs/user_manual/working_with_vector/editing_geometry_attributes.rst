@@ -1189,6 +1189,8 @@ coordinates while moving the symbol in the map canvas.
 
  .. note:: This can lead to invalid geometries.
 
+ .. note:: You must activate segment snapping for this tool works
+ 
  The tool asks you to select a limit (a segment) with respect to which another
  segment will be extended or trimmed. Unlike the node tool, a check is performed to
  modify only the layer being edited.
