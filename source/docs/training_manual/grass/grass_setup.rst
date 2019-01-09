@@ -6,7 +6,7 @@
 
 Using GRASS in QGIS requires you to think of the interface in a slightly
 different way. Remember that you're not working in QGIS directly, but working
-in GRASS *via* QGIS.
+in GRASS *via* QGIS. If you are working in Windows, make sure that you have started QGIS Desktop 3.4 with Grass 7.4.
 
 **The goal for this lesson:** To begin a GRASS project in QGIS.
 
