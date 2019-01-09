@@ -658,34 +658,45 @@ right mouse button pressed.
 Navigation options for exploring the map in 3D:
 
   * Tilt and rotate
+
       * Tilting the terrain (rotating it around a horizonal axis that goes
         through the center of the window) can be achieved by:
+
           * Dragging the mouse forward / backward with the middle mouse button
             pressed
           * Pressing :kbd:`Shift` and dragging the mouse forward / backward
             with the left mouse button pressed
           * Pressing :kbd:`Shift` and using the up / down keys
+
       * Rotating the terrain (around a vertical axis that goes through the
         center of the window) can be achieved by:
+
           * Dragging the mouse right / left with the middle mouse button
             pressed
           * Pressing :kbd:`Shift` and dragging the mouse right / left with the
             left mouse button pressed
           * Pressing :kbd:`Shift` and using left / right keys
-  * Change the camera angle  
+
+  * Change the camera angle
+
       * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
         button pressed will change the camera angle corresponding to
         directions of dragging
       * Pressing :kbd:`Ctrl` and using the up/down/left/right keys turns
         the camera upward, downward, to the left and to the right,
         respectively
+
   * Move the camera up / down
+
       * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
         terrain up and down, respectively
+
   * Zoom in and out
       * Dragging the mouse with the right mouse button pressed will
         zoom in (backward dragging) and out (forward dragging)
+
   * Move the terrain around
+
       * Dragging the mouse with the left mouse button pressed moves the
         terrain around
       * Using the up/down/left/right keys moves the
