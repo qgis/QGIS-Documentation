@@ -215,7 +215,7 @@ Moreover the menu allows to reorganize QGIS interface itself using actions like:
 Menu Option                                                Shortcut                 Toolbar                        Reference
 =========================================================  =======================  =============================  ==========================================
 |newMap| :guilabel:`New Map View`                          :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
-|new3DMap| :guilabel:`New 3D Map View`                     :kbd:`Ctrl+Shift+M`      \                              \
+|new3DMap| :guilabel:`New 3D Map View`                     :kbd:`Ctrl+Shift+M`      \                              :ref:`label_3dmapview`
 |pan| :guilabel:`Pan Map`                                  \                        :guilabel:`Map Navigation`     :ref:`zoom_pan`
 |panToSelected| :guilabel:`Pan Map to Selection`           \                        :guilabel:`Map Navigation`     \
 |zoomIn| :guilabel:`Zoom In`                               :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
