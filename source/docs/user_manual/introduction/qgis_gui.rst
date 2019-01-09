@@ -743,7 +743,7 @@ Configuration options and their meaning:
   between tiles of the terrain.
   Raising this value will add vertical walls ("skirts") around terrain
   tiles to hide the cracks.
-* :guilabel:`Map tile resolution`*: Width and height of the 2D map images used
+* :guilabel:`Map tile resolution`: Width and height of the 2D map images used
   as textures for the terrain tiles.
   256 px means that each tile will be rendered into an image of
   256x256 pixels.
