@@ -657,63 +657,67 @@ right mouse button pressed.
 
 Navigation options for exploring the map in 3D:
 
-  * Tilt and rotate
+* Tilt and rotate
 
-      * Tilting the terrain (rotating it around a horizonal axis that goes
-        through the center of the window) can be achieved by:
+  * Tilting the terrain (rotating it around a horizonal axis that goes
+    through the center of the window) can be achieved by:
 
-          * Dragging the mouse forward / backward with the middle mouse button
-            pressed
-          * Pressing :kbd:`Shift` and dragging the mouse forward / backward
-            with the left mouse button pressed
-          * Pressing :kbd:`Shift` and using the up / down keys
+    * Dragging the mouse forward / backward with the middle mouse button
+      pressed
+    * Pressing :kbd:`Shift` and dragging the mouse forward / backward
+      with the left mouse button pressed
+    * Pressing :kbd:`Shift` and using the up / down keys
 
-      * Rotating the terrain (around a vertical axis that goes through the
-        center of the window) can be achieved by:
+  * Rotating the terrain (around a vertical axis that goes through the
+    center of the window) can be achieved by:
 
-          * Dragging the mouse right / left with the middle mouse button
-            pressed
-          * Pressing :kbd:`Shift` and dragging the mouse right / left with the
-            left mouse button pressed
-          * Pressing :kbd:`Shift` and using left / right keys
+    * Dragging the mouse right / left with the middle mouse button
+      pressed
+    * Pressing :kbd:`Shift` and dragging the mouse right / left with the
+      left mouse button pressed
+    * Pressing :kbd:`Shift` and using left / right keys
 
-  * Change the camera angle
+* Change the camera angle
 
-      * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
-        button pressed will change the camera angle corresponding to
-        directions of dragging
-      * Pressing :kbd:`Ctrl` and using the up/down/left/right keys turns
-        the camera upward, downward, to the left and to the right,
-        respectively
+  * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
+    button pressed will change the camera angle corresponding to
+    directions of dragging
+  * Pressing :kbd:`Ctrl` and using the up / down / left / right keys turns
+    the camera upward, downward, to the left and to the right,
+    respectively
 
-  * Move the camera up / down
+* Move the camera up / down
 
-      * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
-        terrain up and down, respectively
+  * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
+    terrain up and down, respectively
 
-  * Zoom in and out
-      * Dragging the mouse with the right mouse button pressed will
-        zoom in (backward dragging) and out (forward dragging)
+* Zoom in and out
 
-  * Move the terrain around
+  * Dragging the mouse with the right mouse button pressed will
+    zoom in (backward dragging) and out (forward dragging)
 
-      * Dragging the mouse with the left mouse button pressed moves the
-        terrain around
-      * Using the up/down/left/right keys moves the
-        terrain closer, away, right and left, respectively
+* Move the terrain around
+
+  * Dragging the mouse with the left mouse button pressed moves the
+    terrain around
+  * Using the up / down / left / right keys moves the
+    terrain closer, away, right and left, respectively
         
-To reset the camera view, click the |zoomFullExtent| button on the top of
-the 3D canvas panel.
+To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
+button on the top of the 3D canvas panel.
 
 Terrain Configuration
 ---------------------
 
 A terrain raster provides the elevation.
 Such a raster layer must contain a band that represents elevation.
-To select the terrain raster, click the Configure button on the top of
-the 3D canvas panel to open the :guilabel:`3D configuration` window.
-After choosing the terrain raster layer in the :guilabel:`Elevation`
-pull-down menu, you are ready to go.
+To select the terrain raster:
+
+#. Click the Configure button on the top of the 3D canvas panel to
+   open the :guilabel:`3D configuration` window
+#. Choosing the terrain raster layer in the :guilabel:`Elevation`
+   pull-down menu
+#. You are ready to go
 
 In the 3D Configuration window there are various other options to
 fine-tune the 3D scene.
@@ -726,42 +730,43 @@ texture from 2D map layers.
 
 Configuration options and their meaning:
 
-  * **Elevation**: Raster to be used for generation of terrain.
-  * **Vertical scale**: Scale factor for vertical axis.
-    Increasing the scale will exaggerate the terrain.
-  * **Tile resolution**: How many samples from the terrain raster layer to
-    use for each tile.
-    A value of 16 px means that the geometry of each tile will be built
-    from 16x16 elevation samples.
-    Higher numbers create more detailed terrain tiles at the expense of
-    increased rendering complexity.
-  * **Skirt height**: Sometimes it is possible to see small cracks
-    between tiles of the terrain.
-    Raising this value will add vertical walls ("skirts") around terrain
-    tiles to hide the cracks.
-  * **Map tile resolution**: Width and height of the 2D map images used
-    as textures for the terrain tiles.
-    256 px means that each tile will be rendered into an image of
-    256x256 pixels.
-    Higher numbers create more detailed terrain tiles at the expense of
-    increased rendering complexity.
-  * **Max. screen error**: Determines the threshold for swapping terrain
-    tiles with more detailed ones (and vice versa) - i.e. how soon the
-    3D view will use higher quality tiles.
-    Lower numbers mean more details in the scene at the expense of
-    increased rendering complexity.
-  * **Max. ground error**: The resolution of the terrain tiles at which
-    dividing tiles into more detailed ones will stop (splitting them
-    would not introduce any extra detail anyway).
-    This value limits the depth of the hierarchy of tiles: Lower values 
-    make the hierarchy deep, increasing rendering complexity.
-  * **Zoom levels**: Shows the number of zoom levels (depends on the
-    map tile resolution and max. ground error).
-  * **Show labels**: Toggles map labels on/off
-  * **Show map tile info**: Include border and tile numbers for the
-    terrain tiles (useful for troubleshooting terrain issues)
-  * **Show bounding boxes**: Show 3D bounding boxes of the terrain
-    tiles (useful for troubleshooting terrain issues)
+* :guilabel:`Elevation`: Raster to be used for generation of terrain.
+* :guilabel:`Vertical scale`: Scale factor for vertical axis.
+  Increasing the scale will exaggerate the terrain.
+* :guilabel:`Tile resolution`: How many samples from the terrain raster layer to
+  use for each tile.
+  A value of 16 px means that the geometry of each tile will be built
+  from 16x16 elevation samples.
+  Higher numbers create more detailed terrain tiles at the expense of
+  increased rendering complexity.
+* :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
+  between tiles of the terrain.
+  Raising this value will add vertical walls ("skirts") around terrain
+  tiles to hide the cracks.
+* :guilabel:`Map tile resolution`*: Width and height of the 2D map images used
+  as textures for the terrain tiles.
+  256 px means that each tile will be rendered into an image of
+  256x256 pixels.
+  Higher numbers create more detailed terrain tiles at the expense of
+  increased rendering complexity.
+* :guilabel:`Max. screen error`: Determines the threshold for swapping terrain
+  tiles with more detailed ones (and vice versa) - i.e. how soon the
+  3D view will use higher quality tiles.
+  Lower numbers mean more details in the scene at the expense of
+  increased rendering complexity.
+* :guilabel:`Max. ground error`: The resolution of the terrain tiles at which
+  dividing tiles into more detailed ones will stop (splitting them
+  would not introduce any extra detail anyway).
+  This value limits the depth of the hierarchy of tiles: Lower values 
+  make the hierarchy deep, increasing rendering complexity.
+* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on the
+  map tile resolution and max. ground error).
+* |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
+* |unchecked| :guilabel:`Show map tile info`: Include border and tile numbers for the
+  terrain tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the terrain
+  tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show camera's view center`
 
 3D vector layers
 ----------------
@@ -865,6 +870,8 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
