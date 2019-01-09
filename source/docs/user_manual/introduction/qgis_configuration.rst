@@ -509,13 +509,6 @@ Selector <color-selector>` dialog.
 
    Colors Settings
 
-.. tip:: **Using Project colors**
-
-  You can rename the label of each color by double clicking on it in order to
-  use it with the project_color function. You can read more about how to use
-  project colors in Nyall Dawson's `Exploring variables in QGIS pt2
-  <https://nyalldawson.net/2015/12/exploring-variables-in-qgis-pt-2-project-management/>`_ blog post
-
 
 .. index:: Digitizing configuration
 .. _digitizing_options:
@@ -975,6 +968,23 @@ should have random colors assigned to them.
 There is also an additional section where you can define specific colors for the
 running project. You can find the added colors in the drop down menu of the color dialog
 window present in each renderer.
+
+.. _figure_default_styles:
+
+.. figure:: img/default_styles.png
+   :align: center
+
+   Default Styles tab
+
+
+.. tip:: **Using Project colors**
+
+  You can rename the label of each color by double clicking on it in order to
+  use it with the project_color function in the :ref:`expression_builder`.
+  You can set the colors of your project symbology with :ref:`data_defined`
+  widget using an expression (i.e. ``project_color('color_01')``).
+  This will give you the chance to simply change the project colors and having
+  them changed throughout the project symbology.
 
 Data Sources Properties
 -----------------------
