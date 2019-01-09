@@ -645,7 +645,7 @@ view reflect changes you make in the legend area.
    3D visualisation in QGIS requires a recent version (5.8 or later) of the
    QT library.
 
-You create and open a 3D map view with :menuselection:`View --> New 3D Map
+You create and open a 3D map view with :menuselection:`View -->` |new3DMap| :menuselection:`New 3D Map
 View`.
 A floating QGIS panel will appear. The panel can be docked.
 
