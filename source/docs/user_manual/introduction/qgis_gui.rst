@@ -640,9 +640,14 @@ view reflect changes you make in the legend area.
 ===========
 
 3D visualization support is offered through the 3D map view.
+
+.. note::
+   3D visualisation in QGIS requires a recent version (5.8 or later) of the
+   QT library.
+
 You create and open a 3D map view with :menuselection:`View --> New 3D Map
 View`.
-A floating QGIS panel will appear. You can drag the panel to dock it.
+A floating QGIS panel will appear. The panel can be docked.
 
 The 3D map view has the same extent and view as the 2D canvas to start with.
 There is no dedicated toolbar for navigation in the 3D canvas.
@@ -650,33 +655,44 @@ You zoom in/out and pan in the same way as in the main 2D canvas.
 You can also zoom in and out by dragging the mouse down/up with the
 right mouse button pressed.
 
-Some additional options help you to explore the map in 3D:
+Navigation options for exploring the map in 3D:
 
-  * Tilt / rotate camera
- 
-      * By dragging the mouse with the middle mouse button pressed
-      * By pressing :kbd:`Shift` and dragging the mouse with the left mouse
-        button pressed
-      * By pressing :kbd:`Shift` and using up/down/left/right keys
-      
-  * Change the camera angle
-  
-      * By pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
-        button pressed
-      * By pressing :kbd:`Ctrl` and using up/down/left/right keys
-
+  * Tilt and rotate
+      * Tilting the terrain (rotating it around a horizonal axis that goes
+        through the center of the window) can be achieved by:
+          * Dragging the mouse forward / backward with the middle mouse button
+            pressed
+          * Pressing :kbd:`Shift` and dragging the mouse forward / backward
+            with the left mouse button pressed
+          * Pressing :kbd:`Shift` and using the up / down keys
+      * Rotating the terrain (around a vertical axis that goes through the
+        center of the window) can be achieved by:
+          * Dragging the mouse right / left with the middle mouse button
+            pressed
+          * Pressing :kbd:`Shift` and dragging the mouse right / left with the
+            left mouse button pressed
+          * Pressing :kbd:`Shift` and using left / right keys
+  * Change the camera angle  
+      * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
+        button pressed will change the camera angle corresponding to
+        directions of dragging
+      * Pressing :kbd:`Ctrl` and using the up/down/left/right keys turns
+        the camera upward, downward, to the left and to the right,
+        respectively
   * Move the camera up / down
-  
-      * By pressing :kbd:`Page Up` / :kbd:`Page Down`
-
-  * Move the terrain
-  
-      * By pressing :kbd:`Alt` and dragging the mouse with the left mouse
-        button pressed
-      * By pressing :kbd:`Alt` and using up/down/left/right keys
-
-To reset the camera view, click Zoom Full button on the top of the 3D
-canvas panel.
+      * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
+        terrain up and down, respectively
+  * Zoom in and out
+      * Dragging the mouse with the right mouse button pressed will
+        zoom in (backward dragging) and out (forward dragging)
+  * Move the terrain around
+      * Dragging the mouse with the left mouse button pressed moves the
+        terrain around
+      * Using the up/down/left/right keys moves the
+        terrain closer, away, right and left, respectively
+        
+To reset the camera view, click the |zoomFullExtent| button on the top of
+the 3D canvas panel.
 
 Terrain Configuration
 ---------------------
