@@ -971,7 +971,7 @@ window present in each renderer.
 
 .. _figure_default_styles:
 
-.. figure:: img/default_styles.png
+.. figure:: img/project_default_styles.png
    :align: center
 
    Default Styles tab
@@ -981,8 +981,9 @@ window present in each renderer.
 
   You can rename the label of each color by double clicking on it in order to
   use it with the project_color function in the :ref:`expression_builder`.
-  You can set the colors of your project symbology with :ref:`data_defined`
-  widget using an expression (i.e. ``project_color('color_01')``).
+  Then you'll be able to set the colors for your project symbols with the
+  :ref:`data defined override widget <data_defined>` using an expression (i.e.
+  ``project_color('color_01')``).
   This will give you the chance to simply change the project colors and having
   them changed throughout the project symbology.
 
