@@ -129,7 +129,7 @@ This means that you can launch QGIS by:
 * using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock
 * double clicking the icon in your Applications folder or desktop shortcut
 * double clicking an existing QGIS project file (with :file:`.qgz` or :file:`.qgs` extension). Note that this will
-  also open the project.)
+   also open the project.
 * typing ``qgis`` in a command prompt (assuming that QGIS is added to your PATH
   or you are in its installation folder)
 
