@@ -986,6 +986,7 @@ window present in each renderer.
   This will give you the chance to simply change the project colors and having
   them changed throughout the project symbology.
 
+
 Data Sources Properties
 -----------------------
 
