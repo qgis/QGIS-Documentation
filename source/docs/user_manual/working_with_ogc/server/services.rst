@@ -565,13 +565,77 @@ GetPrint
 
 QGIS Server has the capability to create print layout output in pdf or pixel
 format. Print layout windows in the published project are used as templates.
-In the GetPrint request, the client has the possibility to specify parameters
-of the contained layout maps and labels.
+In the **GetPrint** request, the client has the possibility to specify
+parameters of the contained layout maps and labels.
 
-Example:
+Parameters for the **GetPrint** request:
 
-The published project has two print layouts. In the `GetProjectSettings` response,
-they are listed as possible print templates:
++-----------------------+----------+------------------------------------------+
+| Parameter             | Required | Description                              |
++=======================+==========+==========================================+
+| MAP                   | Yes      | Specify the QGIS project file            |
++-----------------------+----------+------------------------------------------+
+| SERVICE               | Yes      | Name of the service (WMS)                |
++-----------------------+----------+------------------------------------------+
+| VERSION               | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| REQUEST               | Yes      | Name of the request (GetPrint)           |
++-----------------------+----------+------------------------------------------+
+| LAYERS                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| TEMPLATE              | Yes      | Layout template to use                   |
++-----------------------+----------+------------------------------------------+
+| SRS / CRS             | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| FORMAT                | Yes      | Output format                            |
++-----------------------+----------+------------------------------------------+
+| STYLES                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| TRANSPARENT           | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| OPACITIES             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| SELECTION             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| mapX:EXTENT           | No       | Extent of the map 'X'                    |
++-----------------------+----------+------------------------------------------+
+| mapX:LAYERS           | No       | Layers of the map 'X'                    |
++-----------------------+----------+------------------------------------------+
+| mapX:STYLES           | No       | Layers' style of the map 'X'             |
++-----------------------+----------+------------------------------------------+
+| mapX:SCALE            | No       | Layers' scale of the map 'X'             |
++-----------------------+----------+------------------------------------------+
+| mapX:ROTATION         | No       | Rotation  of the map 'X'                 |
++-----------------------+----------+------------------------------------------+
+| mapX:GRID_INTERVAL_X  | No       | Grid interval on x axis of the map 'X'   |
++-----------------------+----------+------------------------------------------+
+| mapX:GRID_INTERVAL_Y  | No       | Grid interval on y axis of the map 'X'   |
++-----------------------+----------+------------------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &VERSION=1.3.0
+  &REQUEST=GetPrint
+  &MAP=/home/user/project.qgs
+  &CRS=EPSG:4326
+  &FORMAT=png
+  &map0:EXTENT=-180,-90,180,90
+  &map0:LAYERS=mylayer1,mylayer2,mylayer3
+  &map0:OPACITIES=125,200,125
+  &map0:ROTATION=45
+
+Note that the layout template may contain more than one map. In this way, if
+you want to configure a specific map, you have to use ``mapX:`` parameters
+where ``X`` is a positive number that you can retrieve thanks to the
+**GetProjectSettings** request.
+
+For example:
 
 .. code-block:: xml
 
@@ -585,22 +649,93 @@ they are listed as possible print templates:
     ...
     </WMS_Capabilities>
 
-The client has now the information to request a print output::
 
-    http://myserver.com/cgi/qgis_mapserv.fcgi?...&REQUEST=GetPrint&TEMPLATE=Druckzusammenstellung 1&map0:EXTENT=xmin,ymin,xmax,ymax&map0:ROTATION=45&FORMAT=pdf&DPI=300
+SERVICE
+^^^^^^^
 
-Parameters in the GetPrint request are:
+This parameter has to be ``WMS``.
 
-* **<map_id>:EXTENT** gives the extent for a layout map item as xmin,ymin,xmax,ymax.
-* **<map_id>:ROTATION** map rotation in degrees
-* **<map_id>:GRID_INTERVAL_X**, **<map_id>:GRID_INTERVAL_Y** Grid line density for a
-  map in X and Y directions
-* **<map_id>:SCALE** Sets a map scale to a layout map item. This is useful to ensure
-  scale based visibility of layers and labels even if client and server may
-  have different algorithms to calculate the scale denominator
-* **<map_id>:LAYERS**, **<map_id>:STYLES** possibility to give layer and styles
-  list for layout map item (useful in case of overview maps which should have only
-  a subset of layers)
+
+REQUEST
+^^^^^^^
+
+This parameter has to be ``GetPrint`` for the **GetPrint** request.
+
+
+TEMPLATE
+^^^^^^^^
+
+This parameter can be used to specify the name of a layout template to use for
+printing.
+
+
+FORMAT
+^^^^^^
+
+This parameter specifies the format of map image. Available values are:
+
+- ``jpg``
+- ``jpeg``
+- ``image/jpeg``
+- ``png``
+- ``image/png``
+- ``svg``
+- ``image/svg``
+- ``image/svg+xml``
+- ``pdf``
+- ``application/pdf``
+
+If the ``FORMAT`` parameter is different from one of these values, then an
+exception is returned.
+
+
+mapX:EXTENT
+^^^^^^^^^^^
+
+This parameter specifies the extent for a layout map item as
+xmin,ymin,xmax,ymax.
+
+
+mapX:ROTATION
+^^^^^^^^^^^^^
+
+This parameter specifies the map rotation in degrees.
+
+
+mapX:GRID_INTERVAL_X
+^^^^^^^^^^^^^^^^^^^^
+
+This parameter specifies the grid line density in the X direction.
+
+
+mapX:GRID_INTERVAL_Y
+^^^^^^^^^^^^^^^^^^^^
+
+This parameter specifies the grid line density in the Y direction.
+
+
+mapX:SCALE
+^^^^^^^^^^
+
+This parameter specifies the map scale for a layout map item. This is useful
+to ensure scale based visibility of layers and labels even if client and server
+may have different algorithms to calculate the scale denominator.
+
+
+mapX:LAYERS
+^^^^^^^^^^^
+
+This parameter specifies the layers for a layout map item. See
+:ref:`See GetMap <qgisserver-wms-getmap>` for more information on this
+parameter.
+
+
+mapX:STYLES
+^^^^^^^^^^^
+
+This parameter specifies the layers' styles defined in a specific layout map
+item. See :ref:`See GetMap <qgisserver-wms-getmap>` for more information on
+this parameter.
 
 
 GetLegendGraphics
