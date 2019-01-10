@@ -713,9 +713,9 @@ A terrain raster provides the elevation.
 Such a raster layer must contain a band that represents elevation.
 To select the terrain raster:
 
-#. Click the Configure button on the top of the 3D canvas panel to
+#. Click the |3dconfigure| button at the top of the 3D canvas panel to
    open the :guilabel:`3D configuration` window
-#. Choosing the terrain raster layer in the :guilabel:`Elevation`
+#. Choose the terrain raster layer in the :guilabel:`Elevation`
    pull-down menu
 #. You are ready to go
 
@@ -870,6 +870,8 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3dconfigure| image:: /static/common/mIconProperties.png
+   :width: 1.3em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
