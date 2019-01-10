@@ -1417,7 +1417,6 @@ Extra parameters supported by all request types
     defined it will use the MAP parameter in the request and finally look at
     the server executable directory.
 
-  the first feature, skipping none.
 
 .. _`qgisserver-redlining`:
 
