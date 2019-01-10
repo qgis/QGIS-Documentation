@@ -713,8 +713,8 @@ A terrain raster provides the elevation.
 Such a raster layer must contain a band that represents elevation.
 To select the terrain raster:
 
-#. Click the |3dconfigure| button at the top of the 3D canvas panel to
-   open the :guilabel:`3D configuration` window
+#. Click the |3dconfigure| :sup:`Configure...` button at the top of
+   the 3D canvas panel to open the :guilabel:`3D configuration` window
 #. Choose the terrain raster layer in the :guilabel:`Elevation`
    pull-down menu
 #. You are ready to go
