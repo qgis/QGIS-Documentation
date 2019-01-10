@@ -655,27 +655,26 @@ For example:
 SERVICE
 ^^^^^^^
 
-This parameter has to be ``WMS`` in case of the **GetMap** request.
+This parameter has to be ``WMS``.
 
 
 REQUEST
 ^^^^^^^
 
-This parameter is ``GetPrint`` in case of the **GetPrint** request.
+This parameter has to be ``GetPrint`` for the **GetPrint** request.
 
 
 TEMPLATE
 ^^^^^^^^
 
-This parameter allows to specify the name of the layout template to use for
+This parameter can be used to specify the name of a layout template to use for
 printing.
 
 
 FORMAT
 ^^^^^^
 
-This parameter may be used to specify the format of map image. Available
-values are:
+This parameter specifies the format of map image. Available values are:
 
 - ``jpg``
 - ``jpeg``
@@ -690,44 +689,44 @@ exception is returned.
 ATLAS_PK
 ^^^^^^^^
 
-This parameter allows to activate the Atlas rendering by indicating which
+This parameter allows activation of Atlas rendering by indicating which
 features we want to print. In order to retrieve an atlas with all features,
 the ``*`` symbol may be used (according to the maximum number of feature
 allowed in the project configuration).
 
-When ``FORMAT`` is ``pdf``, then we have a PDF document with one feature per
-page. For all other formats, only the first page is returned.
+When ``FORMAT`` is ``pdf``, a PDF document with one feature per page will be
+returned. For all other formats, only the first page is returned.
 
 
 mapX:EXTENT
 ^^^^^^^^^^^
 
-This parameter allows to give the extent for a layout map item as
+This parameter specifies the extent for a layout map item as
 xmin,ymin,xmax,ymax.
 
 
 mapX:ROTATION
 ^^^^^^^^^^^^^
 
-This parameter allows too indicate the map rotation in degrees.
+This parameter specifies the map rotation in degrees.
 
 
 mapX:GRID_INTERVAL_X
 ^^^^^^^^^^^^^^^^^^^^
 
-This parameter allows to indicate the grid line density in X direction.
+This parameter specifies the grid line density in the X direction.
 
 
 mapX:GRID_INTERVAL_Y
 ^^^^^^^^^^^^^^^^^^^^
 
-This parameter allows to indicate the grid line density in Y direction.
+This parameter specifies the grid line density in the Y direction.
 
 
 mapX:SCALE
 ^^^^^^^^^^
 
-This parameter allows to set a map scale to a layout map item. This is useful
+This parameter specifies the map scale for a layout map item. This is useful
 to ensure scale based visibility of layers and labels even if client and server
 may have different algorithms to calculate the scale denominator.
 
@@ -735,7 +734,7 @@ may have different algorithms to calculate the scale denominator.
 mapX:LAYERS
 ^^^^^^^^^^^
 
-This parameter allows to specify layers for a specific layout map item. See
+This parameter specifies the layers for a layout map item. See
 :ref:`See GetMap <qgisserver-wms-getmap>`: for more information on this
 parameter.
 
@@ -743,9 +742,9 @@ parameter.
 mapX:STYLES
 ^^^^^^^^^^^
 
-This parameter allows to specify a layers' styles defined in a specific
-layout map item. See :ref:`See GetMap <qgisserver-wms-getmap>`: for more
-information on this parameter.
+This parameter specifies the layers' styles defined in a specific layout map
+item. See :ref:`See GetMap <qgisserver-wms-getmap>`: for more information on
+this parameter.
 
 
 GetLegendGraphics
