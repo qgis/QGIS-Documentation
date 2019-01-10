@@ -605,14 +605,14 @@ Parameters for the **GetPrint** request:
 +-----------------------+----------+------------------------------------------+
 | mapX:STYLES           | No       | Layers' style of the map 'X'             |
 +-----------------------+----------+------------------------------------------+
-| mapX:SCALE            | No       | Layers' style of the map 'X'             |
+| mapX:SCALE            | No       | Layers' scale of the map 'X'             |
 +-----------------------+----------+------------------------------------------+
 | mapX:ROTATION         | No       | Rotation  of the map 'X'                 |
 +-----------------------+----------+------------------------------------------+
 | mapX:GRID_INTERVAL_X  | No       | Grid interval on x axis of the map 'X'   |
-+-----------------------+-------+---------------------------------------------+
++-----------------------+----------+------------------------------------------+
 | mapX:GRID_INTERVAL_Y  | No       | Grid interval on y axis of the map 'X'   |
-+-----------------------+-------+---------------------------------------------+
++-----------------------+----------+------------------------------------------+
 
 |
 
@@ -681,6 +681,7 @@ This parameter specifies the format of map image. Available values are:
 - ``image/jpeg``
 - ``png``
 - ``svg``
+- ``pdf``
 
 If the ``FORMAT`` parameter is different from one of these values, then an
 exception is returned.
@@ -735,7 +736,7 @@ mapX:LAYERS
 ^^^^^^^^^^^
 
 This parameter specifies the layers for a layout map item. See
-:ref:`See GetMap <qgisserver-wms-getmap>`: for more information on this
+:ref:`See GetMap <qgisserver-wms-getmap>` for more information on this
 parameter.
 
 
@@ -743,7 +744,7 @@ mapX:STYLES
 ^^^^^^^^^^^
 
 This parameter specifies the layers' styles defined in a specific layout map
-item. See :ref:`See GetMap <qgisserver-wms-getmap>`: for more information on
+item. See :ref:`See GetMap <qgisserver-wms-getmap>` for more information on
 this parameter.
 
 
