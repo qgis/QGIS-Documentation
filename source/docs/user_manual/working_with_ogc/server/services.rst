@@ -597,8 +597,6 @@ Parameters for the **GetPrint** request:
 +-----------------------+----------+------------------------------------------+
 | SELECTION             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
 +-----------------------+----------+------------------------------------------+
-| ATLAS_PK              | No       | Atlas features                           |
-+-----------------------+----------+------------------------------------------+
 | mapX:EXTENT           | No       | Extent of the map 'X'                    |
 +-----------------------+----------+------------------------------------------+
 | mapX:LAYERS           | No       | Layers of the map 'X'                    |
@@ -685,18 +683,6 @@ This parameter specifies the format of map image. Available values are:
 
 If the ``FORMAT`` parameter is different from one of these values, then an
 exception is returned.
-
-
-ATLAS_PK
-^^^^^^^^
-
-This parameter allows activation of Atlas rendering by indicating which
-features we want to print. In order to retrieve an atlas with all features,
-the ``*`` symbol may be used (according to the maximum number of feature
-allowed in the project configuration).
-
-When ``FORMAT`` is ``pdf``, a PDF document with one feature per page will be
-returned. For all other formats, only the first page is returned.
 
 
 mapX:EXTENT
