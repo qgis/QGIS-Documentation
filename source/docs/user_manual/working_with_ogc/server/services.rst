@@ -678,8 +678,12 @@ This parameter specifies the format of map image. Available values are:
 - ``jpeg``
 - ``image/jpeg``
 - ``png``
+- ``image/png``
 - ``svg``
+- ``image/svg``
+- ``image/svg+xml``
 - ``pdf``
+- ``application/pdf``
 
 If the ``FORMAT`` parameter is different from one of these values, then an
 exception is returned.
