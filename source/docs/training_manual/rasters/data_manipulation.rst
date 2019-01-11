@@ -69,22 +69,21 @@ To make a catalog we will use the :menuselection:`Processing --> Toolbox`.
 
    .. note:: Keep in mind that you can copy and paste the text in the
        ``OSGeo Shell`` (Windows user) or ``Terminal`` (Linux and OSX users) to run
-       the command. You can also create script with each GDAL command. This is very
+       the command. You can also create a script for each GDAL command. This is very
        handy when the procedure is taking a long time or when you want to schedule
-       specific tasks. Refer always to the :guilabel:`Help` button to get more help
-       on the syntax GDAL commands.
+       specific tasks. Use the :guilabel:`Help` button to get more help on the
+       syntax of GDAL commands.
 
 #. Finally click on :guilabel:`Run`.
 
 .. note:: As you know from the previous modules, :guilabel:`Processing` creates
-    temporary layers by default. If you want you can click on the |browseButton|
-    button to save the file on the disk.
+    temporary layers by default. To save the file click on the |browseButton|.
 
 .. image:: img/build_virtual_raster.png
    :align: center
 
 You can now remove the original four rasters from the :guilabel:`Layers` Panel
-and leave only the output virtual catalog rater.
+and leave only the output virtual catalog raster.
 
 
 |hard| Transforming Raster Data
@@ -102,9 +101,8 @@ Reprojecting rasters
 Open :guilabel:`Warp (reproject)` from
 :menuselection:`GDAL --> Raster projections`.
 
-You can also reproject virtual rasters (catalogs), as well as enabling a
-multithreaded processing mode and many other options are available.
-
+You can also reproject virtual rasters (catalogs), enable multithreaded
+processing, and more.
 
 .. image:: img/warp_rasters.png
    :align: center
@@ -126,11 +124,11 @@ Click on the :guilabel:`Merge` algorithm from the
 As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>` you can use
 the |browseButton| to choose which layers you want to merge.
 
-You can merge Virtual raster as input file too, and all of the rasters that it
-consists of will be processed.
+You can also specify a Virtual raster as input, and then all of the rasters that
+it consists of will be processed.
 
-You can also add your own options by opening the :guilabel:`Advanced parameters`
-menu, if you know the GDAL library.
+If you know the GDAL library, you can also add your own options by opening the
+:guilabel:`Advanced parameters` menu.
 
 .. image:: img/merge_rasters.png
    :align: center
