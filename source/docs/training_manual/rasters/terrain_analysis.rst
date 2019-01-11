@@ -16,31 +16,31 @@ information about the terrain.
 |basic| |FA| Calculating a Hillshade
 -------------------------------------------------------------------------------
 
-We are going to use the same DEM layer of the previous lesson, if you are starting
-this chapter from scratch use the :guilabel:`Browser` panel and load the
-:file:`raster/SRTM/srtm_41_19.tif`.
+We are going to use the same DEM layer as in the previous lesson. If you are
+starting this chapter from scratch use the :guilabel:`Browser` panel and load
+the :file:`raster/SRTM/srtm_41_19.tif`.
 
-The DEM layer show you the elevation of the terrain, but it can sometimes seem a
+The DEM layer shows you the elevation of the terrain, but it can sometimes seem a
 little abstract. It contains all the 3D information about the terrain that you
 need, but it doesn't look like a 3D object. To get a better look at the terrain,
 it is possible to calculate a *hillshade*, which is a raster that maps the
 terrain using light and shadow to create a 3D-looking image.
 
-We are going to use algorithms of :menuselection:`Processing --> Raster terrain analysis`
-menu. There are other tools available (other Processing algorithms, plugins, etc.).
+We are going to use algorithms of :menuselection:`Raster --> Raster terrain analysis`
+menu.
 
-* Click on the :menuselection:`Hillshade` menu;
-* The algorithm allows basically where the light source comes from: the
-  :guilabel:`Azimuth` parameter has values from 0 (North) through 90 (East), 180
-  (South) and 270 (West) while the :guilabel:`Vertical angle` sets how high the
-  light is. We will leave the default values:
+#. Click on the :menuselection:`Hillshade` menu;
+#. The algorithm allows you to specify where the position of the light source:
+   the :guilabel:`Azimuth` parameter has values from 0 (North) through 90 (East),
+   180 (South) and 270 (West) while the :guilabel:`Vertical angle` sets how high
+   the light is. We will leave the default values:
 
-  .. image:: img/hillshade_explanation.png
-     :align: center
+   .. image:: img/hillshade_explanation.png
+      :align: center
 
-* Save the file in a new folder ``raster_analysis`` within the folder ``exercise_data``
-  with the name ``hillshade``;
-* Finally click on :guilabel:`Run`.
+#. Save the file in a new folder ``raster_analysis`` within the folder ``exercise_data``
+   with the name ``hillshade``;
+#. Finally click on :guilabel:`Run`.
 
 You will now have a new layer called :guilabel:`hillshade` that looks like
 this:
@@ -68,7 +68,7 @@ transparent.
 * Click and drag the :guilabel:`srtm_41_19` to be beneath the :guilabel:`hillshade`
   layer in the :guilabel:`Layer Styling` panel;
 * Set the :guilabel:`hillshade` layer to be transparent by clicking on the
-  :guilabel:`Transparency` tab;
+  :guilabel:`Transparency` tab in the layer properties;
 * Set the :guilabel:`Global transparency` to ``50%``;
 * You'll get a result like this:
 
@@ -114,8 +114,9 @@ and white pixels, steep terrain:
 |moderate| |TY| Calculating the aspect
 -------------------------------------------------------------------------------
 
-The *aspect* of terrain refers to the direction it's facing in. In other words,
-you can understand areas facing North, East, South or West.
+*Aspect* is the compass direction that the slope of the terrain faces. An aspect
+of 0 means that the slope is North-facing, 90 East-facing, 180 South-facing, and
+270 West-facing.
 
 Since this study is taking place in the Southern Hemisphere, properties should
 ideally be built on a north-facing slope so that they can remain in the
@@ -149,8 +150,8 @@ QGIS has different raster calculators available:
 #. :menuselection:`Processing --> GDAL --> Raster miscellaneous --> Raster calculator`;
 #. :menuselection:`SAGA --> Raster calculus --> Raster calculator`.
 
-Each tool is leading to the same results, but the syntax could be slightly
-different or some operators could not be available for everyone.
+Each tool is leading to the same results, but the syntax may be slightly
+different and the availability of operators may vary.
 
 We will use :menuselection:`Processing --> Raster Analysis --> Raster calculator`.
 
@@ -168,10 +169,10 @@ We will use :menuselection:`Processing --> Raster Analysis --> Raster calculator
   ``aspect@1 <= 90 OR aspect@1 >= 270``
 
 * You have now to set up the raster details, like the cell size, extent and CRS.
-  This can be done manually by filling each different parameter or it can be
-  automatically set by choosing a ``Reference layer``. Choose this last option
-  by clicking on the |browseButton| of the :guilabel:`Reference layer(s)` parameter;
-* In the dialog choose the :guilabel:`aspect` layer because we want to obtain
+  This can be done manually by filling or it can be automatically set by choosing
+  a ``Reference layer``. Choose this last option by clicking on the |browseButton|
+  of the :guilabel:`Reference layer(s)` parameter;
+* In the dialog, choose the :guilabel:`aspect` layer because we want to obtain
   a layer with the same resolution;
 * Save the layer as ``aspect_north``;
 * The dialog should look like:
@@ -356,10 +357,12 @@ If you compare the native :guilabel:`aspect` layer with the
 :guilabel:`reclassified` one, there are not big differences. But giving a look
 at the legend you can see that the values go from 1 to 4.
 
-Let's give this layer a better style. Open the :guilabel:`Layer Styling` panel
-and choose :guilabel:`Paletted/Unique values` instead of :guilabel:`Singleband gray`.
-Click on the :guilabel:`Classify` button to automatically fetch the values and
-assign them random colors:
+Let's give this layer a better style.
+
+#. Open the :guilabel:`Layer Styling` panel;
+#. Choose :guilabel:`Paletted/Unique values` instead of :guilabel:`Singleband gray`;
+#. Click on the :guilabel:`Classify` button to automatically fetch the values and
+   assign them random colors:
 
 .. image:: img/unique_style.png
    :align: center
@@ -384,7 +387,7 @@ All the raster layers we used in this exercise are made by just a single band:
 depending on the layer, pixel numbers will represent elevation, aspect or slope
 values.
 
-How can we query the raster layer to now the value of a single pixel? We can use
+How can we query the raster layer to know the value of a single pixel? We can use
 the |identify| button to extract this information.
 
 Select the tool from the upper toolbar and click on a random location of the
@@ -394,9 +397,9 @@ with the value of the band at the clicked location:
 .. image:: img/identify_raster.png
    :align: center
 
-You can change the view of the :guilabel:`Identify Results` panel from the current
-``tree`` view to a ``table`` view by selecting ``Table`` in the :guilabel:`View`
-menu at the bottom of the panel:
+You can change the output of the :guilabel:`Identify Results` panel from the
+current ``tree`` mode to a ``table`` one by selecting :guilabel:``Table`` in the
+:guilabel:`View` menu at the bottom of the panel:
 
 .. image:: img/identify_raster_table.png
    :align: center
@@ -422,9 +425,9 @@ To use the plugin just check the :guilabel:`Enable` checkbox and be sure that
 the :guilabel:`srtm_41_19` layer is active (checked) in the :guilabel:`Layers`
 panel.
 
-Move the cursor on the map to immediately now the value of the pixel.
+Move the cursor on the map to immediately know the value of the pixel.
 
-.. image:: img/value_too_query.png
+.. image:: img/value_tool_query.png
    :align: center
 
 But there is more. The Value Tool plugin allows to query **all** the active
