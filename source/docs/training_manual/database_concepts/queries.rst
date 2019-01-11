@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Queries
 ===============================================================================
 
@@ -12,7 +16,7 @@ useful information.
   foreign key constraints, you will need to add the 'Main Road' object to your
   streets table first
 
-::
+.. code-block:: sql
 
     insert into people (name,house_no, street_id, phone_no)
               values ('Joe Bloggs',3,2,'072 887 23 45');
@@ -27,11 +31,15 @@ useful information.
 Ordering Results
 -------------------------------------------------------------------------------
 
-Let's retrieve a list of people ordered by their house numbers::
+Let's retrieve a list of people ordered by their house numbers:
+
+.. code-block:: sql
 
   select name, house_no from people order by house_no;
 
-Result::
+Result:
+
+.. code-block:: sql
 
          name     | house_no
     --------------+----------
@@ -41,11 +49,15 @@ Result::
      Sally Norman |       83
     (4 rows)
 
-You can sort the results by the values of more than one column::
+You can sort the results by the values of more than one column:
 
-  select name, house_no from people order by name, house_no;
+.. code-block:: sql
 
-Result::
+	select name, house_no from people order by name, house_no;
+
+Result:
+
+.. code-block:: sql
 
          name     | house_no
     --------------+----------
@@ -64,7 +76,9 @@ there are thousands of records and you are only interested in seeing one or
 two.
 
 Here is an example of a numerical filter which only returns objects whose
-:kbd:`house_no` is less than 50::
+``house_no`` is less than 50:
+
+.. code-block:: sql
 
   select name, house_no from people where house_no < 50;
 
@@ -74,8 +88,10 @@ Here is an example of a numerical filter which only returns objects whose
      Roger Jones |       33
     (2 rows)
 
-You can combine filters (defined using the :kbd:`WHERE` clause) with sorting
-(defined using the :kbd:`ORDER BY` clause)::
+You can combine filters (defined using the ``WHERE`` clause) with sorting
+(defined using the ``ORDER BY`` clause):
+
+.. code-block:: sql
 
   select name, house_no from people where house_no < 50 order by house_no;
 
@@ -85,7 +101,9 @@ You can combine filters (defined using the :kbd:`WHERE` clause) with sorting
      Roger Jones |       33
     (2 rows)
 
-You can also filter based on text data::
+You can also filter based on text data:
+
+.. code-block:: sql
 
   select name, house_no from people where name like '%s%';
 
@@ -100,7 +118,9 @@ You'll notice that this query is case-sensitive, so the :kbd:`Sally Norman` entr
 has not been returned.
 
 If you want to search for a string of letters regardless of case, you can do a
-case in-sensitive search using the :kbd:`ILIKE` clause::
+case in-sensitive search using the :kbd:`ILIKE` clause:
+
+.. code-block:: sql
 
   select name, house_no from people where name ilike '%r%';
 
@@ -110,7 +130,7 @@ case in-sensitive search using the :kbd:`ILIKE` clause::
      Sally Norman |       83
     (2 rows)
 
-That query returned every `people` object with an :kbd:`r` or :kbd:`R` in their
+That query returned every **people** object with an :kbd:`r` or :kbd:`R` in their
 name.
 
 Joins
@@ -118,7 +138,9 @@ Joins
 
 What if you want to see the person's details and their street's name instead of
 the ID? In order to do that, you need to join the two tables together in a single
-query. Lets look at an example::
+query. Lets look at an example:
+
+.. code-block:: sql
 
   select people.name, house_no, streets.name
   from people,streets
@@ -130,7 +152,9 @@ query. Lets look at an example::
    that, you will get a list of all possible combinations of people and
    streets, but no way to know who actually lives on which street!
 
-Here is what the correct output will look like::
+Here is what the correct output will look like:
+
+.. code-block:: sql
 
          name     | house_no |    name
     --------------+----------+-------------
@@ -150,7 +174,9 @@ Sub-selections allow you to select objects from one table based on the data
 from another table which is linked via a foreign key relationship. In our case,
 we want to find people who live on a specific street.
 
-First, let's do a little tweaking of our data::
+First, let's do a little tweaking of our data:
+
+.. code-block:: sql
 
   insert into streets (name) values('QGIS Road');
   insert into streets (name) values('OGR Corner');
@@ -159,13 +185,17 @@ First, let's do a little tweaking of our data::
   update people set street_id = 3 where id=3;
 
 Let's take a quick look at our data after those changes: we can reuse our query
-from the previous section::
+from the previous section:
+
+.. code-block:: sql
 
   select people.name, house_no, streets.name
   from people,streets
   where people.street_id=streets.id;
 
-Result::
+Result:
+
+.. code-block:: sql
 
          name     | house_no |    name
     --------------+----------+-------------
@@ -176,7 +206,9 @@ Result::
     (4 rows)
 
 Now let's show you a sub-selection on this data. We want to show only people who
-live in :kbd:`street_id` number :kbd:`1`::
+live in ``street_id`` number :kbd:`1`:
+
+.. code-block:: sql
 
   select people.name
   from people, (
@@ -186,7 +218,9 @@ live in :kbd:`street_id` number :kbd:`1`::
     ) as streets_subset
   where people.street_id = streets_subset.id;
 
-Result::
+Result:
+
+.. code-block:: sql
 
          name
     --------------
@@ -203,24 +237,32 @@ Aggregate Queries
 
 One of the powerful features of a database is its ability to summarise the data
 in its tables. These summaries are called aggregate queries. Here is a typical
-example which tells us how many people objects are in our people table::
+example which tells us how many people objects are in our people table:
+
+.. code-block:: sql
 
   select count(*) from people;
 
-Result::
+Result:
+
+.. code-block:: sql
 
    count
   -------
        4
   (1 row)
 
-If we want the counts to be summarised by street name we can do this::
+If we want the counts to be summarised by street name we can do this:
+
+.. code-block:: sql
 
   select count(name), street_id
   from people
   group by street_id;
 
-Result::
+Result:
+
+.. code-block:: sql
 
      count | street_id
     -------+-----------
@@ -252,3 +294,17 @@ that allows you to extract useful information from it.
 -------------------------------------------------------------------------------
 
 Next you'll see how to create views from the queries that you've written.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Import and Export
 ===============================================================================
 
@@ -8,19 +12,25 @@ of tools that will let you easily move data into and out of PostGIS.
 shp2pgsql
 -------------------------------------------------------------------------------
 
-shp2pgsql is a commandline tool to import ESRI shapefiles to the database.
+shp2pgsql is a commandline tool to import ESRI Shapefile to the database.
 Under Unix, you can use the following command for importing a new PostGIS
-table::
+table:
+
+.. code-block:: bash
 
   shp2pgsql -s <SRID> -c -D -I <path to shapefile> <schema>.<table> | \
     psql -d <databasename> -h <hostname> -U <username>
 
-Under Windows, you have to perform the import process in two steps::
+Under Windows, you have to perform the import process in two steps:
+
+.. code-block:: bash
 
   shp2pgsql -s <SRID> -c -D -I <path to shapefile> <schema>.<table> > import.sql
   psql psql -d <databasename> -h <hostname> -U <username> -f import.sql
 
-You may encounter this error::
+You may encounter this error:
+
+.. code-block:: bash
 
   ERROR:  operator class "gist_geometry_ops" does not exist for access method
   "gist"
@@ -35,12 +45,16 @@ pgsql2shp
 -------------------------------------------------------------------------------
 
 pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL select
-queries. To do this under Unix::
+queries. To do this under Unix:
+
+.. code-block:: bash
 
   pgsql2shp -f <path to new shapefile> -g <geometry column name> \
     -h <hostname> -U <username> <databasename> <table | view>
 
-To export the data using a query::
+To export the data using a query:
+
+.. code-block:: bash
 
   pgsql2shp -f <path to new shapefile> -g <geometry column name> \
     -h <hostname> -U <username> "<query>"
@@ -50,37 +64,18 @@ ogr2ogr
 
 ogr2ogr is a very powerful tool to convert data into and from postgis to many
 data formats. ogr2ogr is part of the GDAL/OGR Software and has to be installed
-separately. To export a table from PostGIS to GML, you can use this command::
+separately. To export a table from PostGIS to GML, you can use this command:
+
+.. code-block:: bash
 
   ogr2ogr -f GML export.gml PG:'dbname=<databasename> user=<username>
           host=<hostname>' <Name of PostGIS-Table>
-
-SPIT
--------------------------------------------------------------------------------
-
-SPIT is a QGIS plugin which is delivered with QGIS. You can use SPIT for
-uploading ESRI shapefiles to PostGIS.
-
-Once you've added the SPIT plugin via the :guilabel:`Plugin Manager`, look for
-this button:
-
-.. image:: /static/training_manual/spatial_databases/008.png
-   :align: center
-
-Clicking on it or selecting :guilabel:`Database --> Spit --> Import Shapefiles
-to PostgreSQL` from the menu will give you the SPIT dialog:
-
-.. image:: /static/training_manual/spatial_databases/spit_dialog.png
-   :align: center
-
-You can add shapefiles to the database by clicking the :guilabel:`Add` button,
-which will give you a file browser window.
 
 DB Manager
 -------------------------------------------------------------------------------
 
 You may have noticed another option in the :guilabel:`Database` menu labeled
-:guilabel:`DB Manager`. This is a new tool in QGIS 2.0 that provides a
+:guilabel:`DB Manager`. This is a tool that provides a
 unified interface for interacting with spatial databases including PostGIS. It
 also allows you to import and export from databases to other formats. Since the
 next module is largely devoted to using this tool, we will only briefly mention
@@ -98,3 +93,15 @@ use these functions (or others like them) on a regular basis.
 -------------------------------------------------------------------------------
 
 Next we'll look at how to query the data we've created before.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

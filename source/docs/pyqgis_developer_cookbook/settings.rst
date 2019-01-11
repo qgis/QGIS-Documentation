@@ -1,10 +1,16 @@
-.. index:: settings; reading, settings; storing
+.. only:: html
+
+   |updatedisclaimer|
+
+.. index:: Settings; Reading, Settings; Storing
 
 .. settings:
 
 ****************************
 Reading And Storing Settings
 ****************************
+
+.. warning:: |outofdate|
 
 Many times it is useful for a plugin to save some variables so that the user
 does not have to enter or select them again next time the plugin is run.
@@ -16,15 +22,15 @@ meaningful string. It is recommended to give some structure to naming of keys.
 
 We can make difference between several types of settings:
 
-.. index:: settings; global
+.. index:: Settings; Global
 
 * **global settings** --- they are bound to the user at particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
   default snapping tolerance. This functionality is provided directly by Qt
   framework by the means of :class:`QSettings` class. By default, this class stores
   settings in system's "native" way of storing settings, that is --- registry
-  (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The
-  `QSettings documentation <http://doc.qt.io/qt-4.8/qsettings.html>`_
+  (on Windows), .plist file (on macOS) or .ini file (on Unix). The
+  `QSettings documentation <https://doc.qt.io/archives/qt-4.8/qsettings.html>`_
   is comprehensive, so we will provide just a simple example
 
   ::
@@ -46,7 +52,7 @@ We can make difference between several types of settings:
   the default value if there is no previous value set for the passed setting
   name.
 
-.. index:: settings; project
+.. index:: Settings; Project
 
 * **project settings** --- vary between different projects and therefore they
   are connected with a project file. Map canvas background color or destination
@@ -72,7 +78,7 @@ We can make difference between several types of settings:
   several methods exist for reading the setting value back, and the
   corresponding one has to be selected for each data type.
 
-.. index:: settings; map layer
+.. index:: Settings; Map layer
 
 * **map layer settings** --- these settings are related to a particular
   instance of a map layer with a project. They are *not* connected with
@@ -89,3 +95,13 @@ We can make difference between several types of settings:
 
    # read the value again
    mytext = layer.customProperty("mytext", "default text")
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

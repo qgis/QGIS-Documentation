@@ -1,12 +1,14 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 .. _sec_processing_intro:
 
 Introduction
 ============
 
-This chapter introduces the |qg| processing framework, a geoprocessing environment
-that can be used to call native and third-party algorithms from |qg|, making your
+This chapter introduces the QGIS processing framework, a geoprocessing environment
+that can be used to call native and third-party algorithms from QGIS, making your
 spatial analysis tasks more productive and easy to accomplish.
 
 In the following sections, we will review how to use the graphical elements of
@@ -16,69 +18,63 @@ There are four basic elements in the framework GUI, which are used to run
 algorithms for different purposes. Choosing one tool or another will depend on
 the kind of analysis that is to be performed and the particular characteristics
 of each user and project. All of them (except for the batch processing interface,
-which is called from the toolbox or the algorithm execution dialog, as we will see) can be accessed from the
-:menuselection:`Processing` menu item. (You will see more than four entries. The
-remaining ones are not used to execute algorithms and will be explained later in
-this chapter.)
+which is called from the toolbox or the algorithm execution dialog, as we will
+see) can be accessed from the :menuselection:`Processing` menu item (you will
+see more entries; the remaining ones are not used to execute algorithms
+and will be explained later in this chapter).
 
-* The toolbox. The main element of the GUI, it is used to
+* The :guilabel:`Toolbox`: The main element of the GUI, it is used to
   execute a single algorithm or run a batch process based on that algorithm.
 
-.. only:: html
+.. _figure_toolbox_dialog:
 
-   **Figure Processing 1:**
-
-.. _figure_toolbox_1:
-
-.. figure:: /static/user_manual/processing/toolbox.png
+.. figure:: img/toolbox.png
    :align: center
 
-   Processing Toolbox |win|
+   Processing Toolbox
 
-* The graphical modeler. Several algorithms can be combined graphically
-  using the modeler to define a workflow, creating a single process that involves
-  several subprocesses.
+* The :guilabel:`Graphical Modeler`: Several algorithms can be combined
+  graphically using the modeler to define a workflow, creating a single
+  process that involves several subprocesses.
 
-.. only:: html
 
-   **Figure Processing 2:**
+.. _figure_model_dialog:
 
-.. _figure_model:
-
-.. figure:: /static/user_manual/processing/models.png
+.. figure:: img/models.png
    :align: center
 
-   Processing Modeler |win|
+   Processing Modeler
 
-* The history manager. All actions performed using any of the
+* The :guilabel:`History` manager: All actions performed using any of the
   aforementioned elements are stored in a history file and can be later easily
   reproduced using the history manager.
 
-.. only:: html
+.. _figure_history_dialog:
 
-   **Figure Processing 3:**
-
-.. _figure_history:
-
-.. figure:: /static/user_manual/processing/history.png
+.. figure:: img/history.png
    :align: center
 
-   Processing History |win|
+   Processing History
 
-* The batch processing interface. This interface allows you to
+* The :guilabel:`Batch Processing` interface: This interface allows you to
   execute batch processes and automate the execution of a single algorithm on
   multiple datasets.
 
 
-.. only:: html
+.. _figure_batchprocess_dialog:
 
-   **Figure Processing 4:**
-
-.. _figure_batchprocess:
-
-.. figure:: /static/user_manual/processing/batch_processing.png
+.. figure:: img/batch_processing.png
    :align: center
 
-   Batch Processing interface |win|
+   Batch Processing interface
 
 In the following sections, we will review each one of these elements in detail.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

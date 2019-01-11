@@ -1,14 +1,16 @@
-|updatedisclaimer|
+.. only:: html
 
-.. _label_printcomposer:
+   |updatedisclaimer|
 
-**************
-Print Composer
-**************
-.. index:: Create_Maps, Layout_Maps, Compose_Maps
+.. index:: Create maps, Map layout, Output map
+.. _label_printlayout:
 
-With the Print Composer you can create nice maps and atlasses that can be printed
-or saved as PDF-file, an image or an SVG-file. This is a powerful way to share
+*******************
+Laying out the maps
+*******************
+
+With the Map Layout you can create nice maps and atlasses that can be printed
+or saved as image, PDF or SVG file. This is a powerful way to share
 geographical information produced with QGIS that can be included in reports or published.
 
 
@@ -18,3 +20,12 @@ geographical information produced with QGIS that can be included in reports or p
    overview_composer
    composer_items/index
    create_output
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

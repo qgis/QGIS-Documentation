@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Working with spatialite databases in QGIS 
 ===============================================================================
 While PostGIS is generally used on a server to provide spatial database
@@ -32,9 +36,9 @@ any tables to this database. Let's go ahead and do that.
 
 * Find the button to create a new layer and use the dropdown to create a new 
   new Spatialite layer, or select
-  :guilabel:`Layer --> New --> New Spatialite Layer`.
+  :menuselection:`Layer --> New --> New Spatialite Layer`.
 
-  |mActionNewSpatiaLiteLayer|
+  |newSpatiaLiteLayer|
 
 * Select the database we created in the previous steps in the drop down.
 * Give the layer the name :kbd:`places`.
@@ -42,13 +46,13 @@ any tables to this database. Let's go ahead and do that.
 * Add 2 attributes as shown in below
 * Click :guilabel:`OK` to create the table.
 
-.. image:: /static/training_manual/databases/new_layer_setup.png
+.. image:: img/new_layer_setup.png
    :align: center
 
 * Click the refresh button at the top of the Browser and you should now see
   your :kbd:`places` table listed.
 
-.. image:: /static/training_manual/databases/new_layer_added.png
+.. image:: img/new_layer_added.png
    :align: center
 
 You can right click on the table and view its properties as we did in the
@@ -65,3 +69,18 @@ and you can use this same technique to import data into your new spatialite DB.
 
 You have seen how to create spatialite databases and add tables to them and to
 use these tables as layers in QGIS. 
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |basic| image:: /static/global/basic.png
+.. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

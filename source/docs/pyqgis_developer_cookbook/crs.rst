@@ -1,13 +1,19 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. _crs:
 
 *******************
 Projections Support
 *******************
 
+.. warning:: |outofdate|
+
 .. contents::
    :local:
 
-.. index:: coordinate reference systems
+.. index:: Coordinate reference systems
 
 Coordinate reference systems
 ============================
@@ -63,19 +69,19 @@ Accessing spatial reference system information
 
 ::
 
-  print "QGIS CRS ID:", crs.srsid()
-  print "PostGIS SRID:", crs.srid()
-  print "EPSG ID:", crs.epsg()
-  print "Description:", crs.description()
-  print "Projection Acronym:", crs.projectionAcronym()
-  print "Ellipsoid Acronym:", crs.ellipsoidAcronym()
-  print "Proj4 String:", crs.proj4String()
+  print("QGIS CRS ID:", crs.srsid())
+  print("PostGIS SRID:", crs.srid())
+  print("EPSG ID:", crs.epsg())
+  print("Description:", crs.description())
+  print("Projection Acronym:", crs.projectionAcronym())
+  print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
+  print("Proj4 String:", crs.toProj4())
   # check whether it's geographic or projected coordinate system
-  print "Is geographic:", crs.geographicFlag()
+  print("Is geographic:", crs.geographicFlag())
   # check type of map units in this CRS (values defined in QGis::units enum)
-  print "Map units:", crs.mapUnits()
+  print("Map units:", crs.mapUnits())
 
-.. index:: projections
+.. index:: Projections
 
 Projections
 ===========
@@ -83,20 +89,30 @@ Projections
 You can do transformation between different spatial reference systems by using
 :class:`QgsCoordinateTransform` class. The easiest way to use it is to create
 source and destination CRS and construct :class:`QgsCoordinateTransform`
-instance with them. Then just repeatedly call :func:`transform` function to do
-the transformation. By default it does forward transformation, but it is
-capable to do also inverse transformation
+instance with them and the current project. Then just repeatedly call
+:func:`transform` function to do the transformation. By default it does forward
+transformation, but it is capable to do also inverse transformation.
 
 ::
 
   crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
   crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
-  xform = QgsCoordinateTransform(crsSrc, crsDest)
+  xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
 
   # forward transformation: src -> dest
   pt1 = xform.transform(QgsPoint(18,5))
-  print "Transformed point:", pt1
+  print("Transformed point:", pt1)
 
   # inverse transformation: dest -> src
   pt2 = xform.transform(pt1, QgsCoordinateTransform.ReverseTransform)
-  print "Transformed back:", pt2
+  print("Transformed back:", pt2)
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

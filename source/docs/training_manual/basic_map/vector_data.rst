@@ -1,3 +1,9 @@
+.. only:: html
+
+   |updatedisclaimer|
+
+.. _tm_working_vector_data:
+
 |LS| Working with Vector Data
 ===============================================================================
 
@@ -21,9 +27,7 @@ loaded in your map. What you can see right now is merely the position of the
 roads.
 
 To see all the data available to you, with the :guilabel:`roads` layer
-selected in the Layers panel:
-
-* Click on this button: |attributes|
+selected in the Layers panel, click on this button: |openTable|
 
 It will show you a table with more data about the :guilabel:`roads` layer.
 This extra data is called *attribute data*. The lines that you can see on your
@@ -31,34 +35,36 @@ map represent where the roads go; this is the *spatial data*.
 
 These definitions are commonly used in GIS, so it's essential to remember them!
 
-* You may now close the attribute table.
+You may now close the attribute table.
 
 Vector data represents features in terms of points, lines and polygons on a
 coordinate plane. It is usually used to store discrete features, like roads and
 city blocks.
 
 
-.. _backlink-vector-load-shapefiles-1:
+.. _backlink-vector-load-geopackage-1:
 
-|basic| |FA| Loading Vector Data From Shapefiles
+|basic| |FA| Loading Vector Data From GeoPackage
 -------------------------------------------------------------------------------
 
-The Shapefile is a specific file format that allows you to store GIS data in an
-associated group of files. Each layer consists of several files with the same
-name, but different file types. Shapefiles are easy to send back and forth, and
-most GIS software can read them.
+The `GeoPackage <https://www.geopackage.org/>`_ is a database container that allows
+you to store GIS data (layers) in a single file. A single GeoPackage file can
+contain both vector and raster data also in different coordinate reference systems:
+all these features allow you to easily share data and to avoid file duplication
+in your computer.
 
 Refer back to the introductory exercise in the previous section for
 instructions on how to add vector layers.
 
-Load the data sets into your map following the same method:
+Load the data sets from the :file:`training_data.gpkg` file into your map following
+the same method:
 
-* "places"
-* "water"
-* "rivers"
-* "buildings"
+* :guilabel:`buildings`
+* :guilabel:`places`
+* :guilabel:`rivers`
+* :guilabel:`water`
 
-:ref:`Check your results <vector-load-shapefiles-1>`
+:ref:`Check your results <vector-load-geopackage-1>`
 
 
 .. _backlink-vector-load-from-database-1:
@@ -68,38 +74,44 @@ Load the data sets into your map following the same method:
 
 Databases allow you to store a large volume of associated data in one file. You
 may already be familiar with a database management system (DBMS) such as
-Microsoft Access. GIS applications can also make use of databases. GIS-specific
-DBMSes (such as PostGIS) have extra functions, because they need to handle
-spatial data.
+Libreoffice Base or MS Access. GIS applications can also make use of databases.
+GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
+handle spatial data.
 
-* Click on this icon: |mActionAddSpatiaLiteLayer|
+Adding a layer from a SpatiaLite database or from a GeoPackage archive is not
+so different: in fact, both are spatial extension of the SQLite library.
 
-(If you're sure you can't see it at all, check that the :guilabel:`Manage
-Layers` toolbar is enabled.)
+Let's add some layer from a SpatiaLite database.
 
-It will give you a new dialog. In this dialog:
+#. Click the icon |dataSourceManager| to open the Data Source Manager window
+   (If you're sure you can't see it at all, check that the :guilabel:`Data
+   Source Manager` toolbar is enabled.)
+#. Click on the |addSpatiaLiteLayer| :guilabel:`SpatiaLite` tab.
+#. In this tab you can see all the connections to existing databases or set up
+   new connections.
+#. Click the :guilabel:`New` button.
+#. In the main folder of the Training Data, you should find the file
+   :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
 
-* Click the :guilabel:`New` button.
-* In the same folder as the other data, you should find the file
-  :guilabel:`landuse.sqlite`. Select it and click :guilabel:`Open`.
+   Notice that the drop-down above the three buttons now reads "landuse.sqlite@...",
+   followed by the path of the database file on your computer.
 
-You will now see the first dialog again. Notice that the dropdown select above
-the three buttons now reads "land_use.db@...", followed by the path of the
-database file on your computer.
+#. Click the :guilabel:`Connect` button. You should see this in the previously
+   empty box:
 
-* Click the :guilabel:`Connect` button. You should see this in the previously
-  empty box:
+   .. image:: img/spatiallite_dialog_connected.png
+      :align: center
 
-.. image:: /static/training_manual/vector/spatiallite_dialog_connected.png
-   :align: center
+#. Click on the :guilabel:`landuse` layer to select it, then click
+   :menuselection:`Add`
 
-* Click on the :kbd:`landuse` layer to select it, then click
-  :menuselection:`Add`
+.. tip:: Once you have set up a connection to a database you can see this connection
+  and load all the layers contained into it also in the QGIS Browser. We will
+  repeat this forever: the QGIS Browser is the quickest and best way to handle
+  your data!
 
 .. note::  Remember to save the map often! The map file doesn't contain any of
    the data directly, but it remembers which layers you loaded into your map.
-
-:ref:`Check your results <vector-load-from-database-1>`
 
 
 |FA| Reordering the Layers
@@ -110,12 +122,9 @@ layer at the bottom of the list is drawn first, and the layer at the top is
 drawn last. By changing the order that they are shown on the list, you can
 change the order they are drawn in.
 
-.. note::  Depending on the version of QGIS that you are using, you may have a
-   checkbox beneath your Layers list reading :guilabel:`Control rendering
-   order`. This must be checked (switched on) so that moving the layers up and
-   down in the Layers list will bring them to the front or send them to the
-   back in the map. If your version of QGIS doesn't have this option, then it
-   is switched on by default and you don't need to worry about it.
+.. note:: You can alter this behavior using the :guilabel:`Control rendering
+   order` checkbox beneath the :guilabel:`Layer Order` panel. We will
+   however not discuss this feature yet.
 
 The order in which the layers have been loaded into the map is probably not
 logical at this stage. It's possible that the road layer is completely hidden
@@ -123,7 +132,7 @@ because other layers are on top of it.
 
 For example, this layer order...
 
-.. image:: /static/training_manual/vector/incorrect_layer_order.png
+.. image:: img/incorrect_layer_order.png
    :align: center
 
 ... would result in roads and places being hidden as they run *underneath*
@@ -131,10 +140,10 @@ urban areas.
 
 To resolve this problem:
 
-* Click and drag on a layer in the Layers list.
-* Reorder them to look like this:
+#. Click and drag on a layer in the Layers list.
+#. Reorder them to look like this:
 
-.. image:: /static/training_manual/vector/correct_layer_order.png
+.. image:: img/correct_layer_order.png
    :align: center
 
 You'll see that the map now makes more sense visually, with roads and buildings
@@ -152,3 +161,23 @@ Using the random palette automatically assigned when loading the layers, your
 current map is probably not easy to read. It would be preferable to assign your
 own choice of colors and symbols. This is what you'll learn to do in the next
 lesson.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

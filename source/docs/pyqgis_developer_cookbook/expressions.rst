@@ -1,10 +1,16 @@
-.. index:: expressions, filtering, calculating values
+.. only:: html
+
+   |updatedisclaimer|
+
+.. index:: Expressions, Filtering, Calculating values
 
 .. _expressions:
 
 *********************************************
 Expressions, Filtering and Calculating Values
 *********************************************
+
+.. warning:: |outofdate|
 
 .. contents::
    :local:
@@ -53,7 +59,7 @@ Examples of scalar expressions:
 * ``sqrt(val)``
 * ``$length + 1``
 
-.. index:: expressions; parsing
+.. index:: Expressions; Parsing
 
 Parsing Expressions
 ===================
@@ -69,7 +75,7 @@ Parsing Expressions
   >>> exp.parserErrorString()
   PyQt4.QtCore.QString(u'syntax error, unexpected $end')
 
-.. index:: expressions; evaluating
+.. index:: Expressions; Evaluating
 
 Evaluating Expressions
 ======================
@@ -123,7 +129,7 @@ Handling errors
   if exp.hasEvalError():
     raise ValueError(exp.evalErrorString())
 
-  print value
+  print(value)
 
 Examples
 ========
@@ -134,7 +140,7 @@ matches a predicate.
 ::
 
   def where(layer, exp):
-    print "Where"
+    print("Where")
     exp = QgsExpression(exp)
     if exp.hasParserError():
       raise Exception(exp.parserErrorString())
@@ -148,4 +154,14 @@ matches a predicate.
 
   layer = qgis.utils.iface.activeLayer()
   for f in where(layer, 'Test > 1.0'):
-    print f + " Matches expression"
+    print(f + " Matches expression")
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

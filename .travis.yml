@@ -1,4 +1,16 @@
 language: python
+python:
+  - "3.5"
+
+cache:
+  apt: true
+  pip: true
+  directories:
+    # Preserve the output dir for faster build times
+    /output
+  # How long we should wait for the cache to be fetched before giving up and
+  # start without a cache
+  timeout: 1000
 
 #addons:
 #  apt:
@@ -27,7 +39,7 @@ notifications:
 
 install:
 # Sphinx requirements
-  - pip install -r REQUIREMENTS.txt
+  - pip3 install -r REQUIREMENTS.txt
 # Latex requirements
 # maybe later...
 

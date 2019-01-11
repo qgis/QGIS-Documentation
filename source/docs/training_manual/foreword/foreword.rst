@@ -1,11 +1,15 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Foreword
 ========
 
 Background
 ----------
 
-In 2008 we launched the `Gentle Introduction to GIS
-<http://docs.qgis.org/testing/en/docs/gentle_gis_introduction/>`_, a completely free, open content resource for
+In 2008 we launched the :ref:`Gentle Introduction to GIS
+<gentle_introduction_gis>`, a completely free, open content resource for
 people who want to learn about GIS without being overloaded with jargon and new
 terminology. It was sponsored by the South African government and has been a
 phenomenal success, with people all over the world writing to us to tell us how
@@ -28,15 +32,16 @@ exercises complete with annotated answers throughout the text.
 License
 -------
 
-.. image:: /static/training_manual/license.png
+.. image:: img/license.png
 
-The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on 
-an earlier version from Linfiniti and is licensed under a 
-`Creative Commons Attribution 4.0 International <http://creativecommons.org/licenses/by/4.0/>`_.
+The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on
+an earlier version from Linfiniti and is licensed under a
+`Creative Commons Attribution 4.0 International <https://creativecommons.org/licenses/by/4.0/>`_.
 Permissions beyond the scope of this license may be available at below.
 
+
 We have published this QGIS training manual under a liberal license that allows
-you to freely copy, modify and redistribute this work. A complete copy of the 
+you to freely copy, modify and redistribute this work. A complete copy of the
 license is available at the end of this document. In simple terms, the usage
 guidelines are as follows:
 
@@ -47,9 +52,9 @@ guidelines are as follows:
 * If you add a substantive portion to the work and contribute it back to the
   project (at least one complete module) you may add your name to the end of
   the authors list for this document (which will appear on the front page)
-* If you contribute minor changes and corrections you may add yourself to the 
+* If you contribute minor changes and corrections you may add yourself to the
   contributors list below.
-* If you translate this document in its entirety, you may add your name to the 
+* If you translate this document in its entirety, you may add your name to the
   authors list in the form "Translated by Joe Bloggs".
 * If you sponsor a module or lesson, you may request the author to include an
   acknowledgement in the beginning of each lesson contributed, e.g.:
@@ -60,7 +65,7 @@ guidelines are as follows:
   at office@linfiniti.com and we will advise you if what you intend doing is
   acceptable.
 * If you publish this work under a self publishing site such as
-  http://lulu.com we request that you donate the profits to the QGIS project.
+  https://www.lulu.com we request that you donate the profits to the QGIS project.
 * You may not commercialise this work, except with the expressed permission of
   the authors. To be clear, by commercialisation we mean that you may not sell
   for profit, create commercial derivative works (e.g. selling content for use
@@ -105,28 +110,53 @@ Sponsors
 
 * Cape Peninsula University of Technology
 
+.. _data_downloadlink:
+
 Data
 ----
-
-.. note:: The sample data used throughout the manual can be downloaded here:
-   http://qgis.org/downloads/data/training_manual_exercise_data.zip
 
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
 
-* Streets and Places datasets from OpenStreetMap (http://www.openstreetmap.org/)
+* Streets and Places datasets from OpenStreetMap (https://www.openstreetmap.org/)
 * Property boundaries (urban and rural), water bodies from NGI (http://www.ngi.gov.za/)
 * SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
 
+Download the prepared dataset from the `Training data repository <training_data_>`_
+and unzip the file. All the necessary data are provided in the :file:`exercise_data`
+folder.
+
+.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
+
+
+Source files and Issue reports
+-------------------------------
+
+The source of this document is available at GitHub `QGIS Documentation repository
+<https://github.com/qgis/QGIS-Documentation>`_. Consult `GitHub.com
+<https://github.com/>`_ for instructions on how to use the git version control
+system.
+
+Despite our efforts, you could find some errors or miss some information while following
+this training. Please report them at https://github.com/qgis/QGIS-Documentation/issues.
 
 Latest Version
 --------------
 
 You can always obtain the latest version of this document by visiting the online
-version which is part of the QGIS documentation website (http://docs.qgis.org).
+version which is part of the QGIS documentation website (https://docs.qgis.org).
 
 .. note:: There are links to online and PDF versions of the Documentation and Training manuals.
 
 
 
 Tim Sutton, May 2012
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

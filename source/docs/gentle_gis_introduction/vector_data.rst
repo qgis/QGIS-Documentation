@@ -5,7 +5,7 @@ Vector Data
 ***********
 
 +-------------------+-------------+--------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding of vector data models as used in GIS.                                              |
+| |gentleLogo|      | Objectives: | Understanding of vector data models as used in GIS.                                              |
 +                   +-------------+--------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, Symbology, Data Sources |
 +-------------------+-------------+--------------------------------------------------------------------------------------------------+
@@ -16,18 +16,14 @@ Overview
 **Vector** data provide a way to represent real world **features** within the GIS
 environment. A feature is anything you can see on the landscape. Imagine you are
 standing on the top of a hill. Looking down you can see houses, roads, trees,
-rivers, and so on (see figure_landscape_). Each one of these things would be a
+rivers, and so on (see figure_vector_landscape_). Each one of these things would be a
 **feature** when we represent them in a GIS Application. Vector features have
 **attributes**, which consist of text or numerical information that **describe**
 the features.
 
-.. _figure_landscape:
+.. _figure_vector_landscape:
 
-.. only:: html
-
-   **Figure Landscape 1:**
-
-.. figure:: /static/gentle_gis_introduction/landscape.jpg
+.. figure:: img/landscape.jpg
    :align: center
    :width: 30em
 
@@ -36,7 +32,7 @@ the features.
 
 A vector feature has its shape represented using **geometry**. The geometry is
 made up of one or more interconnected **vertices**. A vertex describes a position
-in space using an **X**, **Y** and optionally **z** axis. Geometries which have
+in space using an **X**, **Y** and optionally **Z** axis. Geometries which have
 vertices with a ``Z`` axis are often referred to as **2.5D** since they describe
 height or depth at each vertex, but not both.
 
@@ -49,11 +45,7 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_point:
 
-.. only:: html
-
-   **Figure Vector Geometries 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/point_feature.png
+.. figure:: img/point_feature.png
    :align: center
    :width: 30em
 
@@ -62,11 +54,7 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_polyline:
 
-.. only:: html
-
-   **Figure Vector Geometries 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/polyline_feature.png
+.. figure:: img/polyline_feature.png
    :align: center
    :width: 30em
 
@@ -75,11 +63,7 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_polygon:
 
-.. only:: html
-
-   **Figure Vector Geometries 3:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/polygon_feature.png
+.. figure:: img/polygon_feature.png
    :align: center
    :width: 30em
 
@@ -92,11 +76,7 @@ them now (see illustration figure_geometry_landscape_).
 
 .. _figure_geometry_landscape:
 
-.. only:: html
-
-   **Figure Landscape 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/landscape_geometry.jpg
+.. figure:: img/landscape_geometry.jpg
    :align: center
    :width: 30em
 
@@ -159,11 +139,7 @@ small enough for the scale at which you want to use the data.
 
 .. _figure_polyline_jagged:
 
-.. only:: html
-
-   **Figure Polyline 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/jagged_polyline.png
+.. figure:: img/jagged_polyline.png
    :align: center
    :width: 30em
 
@@ -198,7 +174,7 @@ Vector data in layers
 
 Now that we have described what vector data is, let's look at how vector data is
 managed and used in a GIS environment. Most GIS applications group vector features
-into **layers**. Features in a layer have the the same geometry type (e.g. they
+into **layers**. Features in a layer have the same geometry type (e.g. they
 will all be points) and the same kinds of attributes (e.g. information about what
 species a tree is for a trees layer). For example if you have recorded the
 positions of all the footpaths in your school, they will usually be stored
@@ -249,11 +225,7 @@ time and effort capturing the data.
 
 .. _figure_vector_small_scale:
 
-.. only:: html
-
-   **Figure Vector Scale 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/small_scale.png
+.. figure:: img/small_scale.png
    :align: center
    :width: 30em
 
@@ -261,11 +233,7 @@ time and effort capturing the data.
 
 .. _figure_vector_large_scale:
 
-.. only:: html
-
-   **Figure Vector Scale 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/large_scale.png
+.. figure:: img/large_scale.png
    :align: center
    :width: 30em
 
@@ -286,11 +254,7 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_vector_symbology:
 
-.. only:: html
-
-   **Figure Vector Symbology 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/symbology_settings.png
+.. figure:: img/symbology_settings.png
    :align: center
    :width: 30em
 
@@ -299,11 +263,7 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_generic_symbology:
 
-.. only:: html
-
-   **Figure Vector Symbology 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/symbology_generic.png
+.. figure:: img/symbology_generic.png
    :align: center
    :width: 30em
 
@@ -312,11 +272,7 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_custom_symbology:
 
-.. only:: html
-
-   **Figure Vector Symbology 3:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/symbology_custom.png
+.. figure:: img/symbology_custom.png
    :align: center
    :width: 30em
 
@@ -358,11 +314,7 @@ areas don't meet properly (see figure_vector_slivers_).
 
 .. _figure_vector_slivers:
 
-.. only:: html
-
-   **Figure Vector Issues 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/vector_slivers.png
+.. figure:: img/vector_slivers.png
    :align: center
    :width: 30em
 
@@ -374,16 +326,12 @@ areas don't meet properly (see figure_vector_slivers_).
 **Overshoots** can occur when a line feature such as a road does not meet another
 road exactly at an intersection. **Undershoots** can occur when a line feature
 (e.g. a river) does not exactly meet another feature to which it should be
-connected. Figure figure_vector_overshoots_ demonstrates what undershoots and
+connected. Figure figure_vector_shoots_ demonstrates what undershoots and
 overshoots look like.
 
-.. _figure_vector_overshoots:
+.. _figure_vector_shoots:
 
-.. only:: html
-
-   **Figure Vector Issues 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/vector_overshoots.png
+.. figure:: img/vector_overshoots.png
    :align: center
    :width: 30em
 
@@ -425,11 +373,7 @@ We have summarised the GIS Vector Data concept in Figure figure_vector_summary_.
 
 .. _figure_vector_summary:
 
-.. only:: html
-
-   **Figure Vector Summary 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/vector_summary.png
+.. figure:: img/vector_summary.png
    :align: center
    :width: 30em
 
@@ -451,11 +395,7 @@ Here are some ideas for you to try with your learners:
 
 .. _figure_sample_map:
 
-.. only:: html
-
-   **Figure Sample Map 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_data/sample_map.png
+.. figure:: img/sample_map.png
    :align: center
    :width: 30em
 
@@ -498,3 +438,13 @@ What's next?
 
 In the section that follows we will take a closer look at **attribute data** to
 see how it can be used to describe vector features.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

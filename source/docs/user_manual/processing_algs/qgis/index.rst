@@ -1,4 +1,8 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
+
+.. _qgis_algorithms:
 
 ***********************
 QGIS algorithm provider
@@ -8,21 +12,36 @@ QGIS algorithm provider implements various analysis and geoprocessing operations
 using mostly only QGIS API. So almost all algorithms from this provider will work
 "out of the box" without any additional configuration.
 
-This provider incorporates fTools functionality, some algorithms from mmQGIS
-plugin and also adds its own algorithms.
+This provider incorporates some algorithms from plugins and also adds its own
+algorithms.
 
 .. toctree::
      :maxdepth: 2
 
+     cartography
      database
-     raster_general_tools
-     raster_tools
-     table
-     vector_analysis_tools
-     vector_creation_tools
-     vector_general_tools
-     vector_general_tools/mergedatasourcesinvrt
-     vector_geometry_tools
-     vector_overlay_tools
-     vector_selection_tools
-     vector_table_tools
+     filetools
+     graphics
+     interpolation
+     layertools
+     modelertools
+     networkanalysis
+     rasteranalysis
+     rasterterrainanalysis
+     rastertools
+     vectoranalysis
+     vectorcreation
+     vectorgeneral
+     vectorgeometry
+     vectoroverlay
+     vectorselection
+     vectortable
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

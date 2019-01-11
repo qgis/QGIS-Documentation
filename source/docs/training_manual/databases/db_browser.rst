@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Working with Databases in the QGIS Browser 
 ===============================================================================
 
@@ -24,7 +28,7 @@ interface.
   configured connection available (you may need to click the Refresh button at
   the top of the browser window).
 
-.. image:: /static/training_manual/databases/browser_panel.png
+.. image:: img/browser_panel.png
    :align: center
 
 * Double clicking on any of the table/layers listed here will add it to the Map
@@ -34,7 +38,7 @@ interface.
   Click on the :guilabel:`Properties` item to look at the properties of the 
   layer.
 
-.. image:: /static/training_manual/databases/postgis_layer_properties.png
+.. image:: img/postgis_layer_properties.png
    :align: center
 
 .. note:: Of course you can also use this interface to connect to PostGIS 
@@ -51,7 +55,7 @@ nice to learn how to add a filtered set of records from a table as a layer
 by using queries that we learned about in previous sections.
 
 * Start a new empty map with no layers
-* Click the :guilabel:`Add PostGIS Layers` button or select :guilabel:`Layer
+* Click the :guilabel:`Add PostGIS Layers` button or select :menuselection:`Layer
   --> Add PostGIS Layers` from the menu.
 * In the :guilabel:`Add PostGIS Table(s)` dialog that comes up, connect to the
   :kbd:`postgis_demo` connection.
@@ -65,7 +69,7 @@ by using queries that we learned about in previous sections.
 
   "roadtype" = 'major'
 
-.. image:: /static/training_manual/databases/pg_table_filter.png
+.. image:: img/pg_table_filter.png
    :align: center
 
 * Click :guilabel:`OK` to complete editing the filter and click :guilabel:`Add`
@@ -86,3 +90,17 @@ how to add layers to your map based on a query filter.
 
 Next you'll see how to work with the DB Manager interface in QGIS for a more
 complete set of database management tasks.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

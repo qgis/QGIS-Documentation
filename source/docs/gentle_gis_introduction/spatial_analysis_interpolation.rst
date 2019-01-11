@@ -6,7 +6,7 @@ Spatial Analysis (Interpolation)
 ********************************
 
 +-------------------+-------------+---------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding of interpolation as part of spatial analysis                                  |
+| |gentleLogo|      | Objectives: | Understanding of interpolation as part of spatial analysis                                  |
 +                   +-------------+---------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Point data, interpolation method, Inverse Distance Weighted, Triangulated Irregular Network |
 +-------------------+-------------+---------------------------------------------------------------------------------------------+
@@ -40,11 +40,7 @@ be computed using interpolation.
 
 .. _figure_temperature_map:
 
-.. only:: html
-
-   **Figure Tempareature Map 1:**
-
-.. figure:: /static/gentle_gis_introduction/interpolation/temperature_map.png
+.. figure:: img/temperature_map.png
    :align: center
    :width: 30em
 
@@ -77,11 +73,7 @@ figure_idw_interpolation_).
 
 .. _figure_idw_interpolation:
 
-.. only:: html
-
-   **Figure IDW Interpolation 1:**
-
-.. figure:: /static/gentle_gis_introduction/interpolation/idw_interpolation.png
+.. figure:: img/idw_interpolation.png
    :align: center
    :width: 30em
 
@@ -109,11 +101,7 @@ elevation sample points collected in the field with a GPS device.
 
 .. _figure_idw_result:
 
-.. only:: html
-
-   **Figure IDW Interpolation 2:**
-
-.. figure:: /static/gentle_gis_introduction/interpolation/idw_result.png
+.. figure:: img/idw_result.png
    :align: center
    :width: 30em
 
@@ -131,11 +119,7 @@ and as compact as possible triangles (see figure_tin_interpolation_).
 
 .. _figure_tin_interpolation:
 
-.. only:: html
-
-   **Figure TIN Interpolation 1:**
-
-.. figure:: /static/gentle_gis_introduction/interpolation/tin_interpolation.png
+.. figure:: img/tin_interpolation.png
    :align: center
    :width: 30em
 
@@ -147,15 +131,11 @@ The main disadvantage of the TIN interpolation is that the surfaces are not smoo
 and may give a jagged appearance. This is caused by discontinuous slopes at the
 triangle edges and sample data points. In addition, triangulation is generally
 not suitable for extrapolation beyond the area with collected sample data points
-(see  ).
+(see figure_tin_result_ ).
 
 .. _figure_tin_result:
 
-.. only:: html
-
-   **Figure TIN Interpolation 2:**
-
-.. figure:: /static/gentle_gis_introduction/interpolation/tin_result.png
+.. figure:: img/tin_result.png
    :align: center
    :width: 30em
 
@@ -247,9 +227,9 @@ Further reading
 
 **Websites**:
 
-* http://en.wikipedia.org/wiki/Interpolation
-* http://en.wikipedia.org/wiki/Delaunay_triangulation
-* http://www.agt.bme.hu/public_e/funcint/funcint.html
+* https://en.wikipedia.org/wiki/Interpolation
+* https://en.wikipedia.org/wiki/Delaunay_triangulation
+* https://www.agt.bme.hu/public_e/funcint/funcint.html
 
 The QGIS User Guide also has more detailed information on interpolation tools
 provided in QGIS.
@@ -260,3 +240,13 @@ What's next?
 This is the final worksheet in this series. We encourage you to explore QGIS and
 use the accompanying QGIS manual to discover all the other things you can do with
 GIS software!
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

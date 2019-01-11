@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Forms
 ===============================================================================
 
@@ -15,7 +19,7 @@ lesson shows you how.
 |basic| |FA| Using QGIS' Form Design Functionality
 -------------------------------------------------------------------------------
 
-* Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
+* Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel.
 * Enter :guilabel:`Edit Mode` as before.
 * Open its :guilabel:`Attribute Table`.
 * Right-click on any cell in the table. A short menu will appear, with the only
@@ -26,24 +30,22 @@ Obviously it would be nice to be able to do this while looking at the map,
 rather than needing to search for a specific street in the :guilabel:`Attribute
 Table` all the time.
 
-* Go to the :menuselection:`Settings --> Options` menu.
-* In the dialog that appears, select the :guilabel:`Map Tools` tab.
-* Check the :guilabel:`Open feature form ...` checkbox:
-
-.. image:: /static/training_manual/create_vector_data/open_feature_form.png
-   :align: center
-
-* Click :guilabel:`Ok`.
-* Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
+* Select the :guilabel:`roads` layer in the :guilabel:`Layers` panel.
 * Using the :guilabel:`Identify` tool, click on any street in the map.
 
-  |mActionIdentify|
+  |identify|
 
-Instead of the normal :guilabel:`Identify` dialog, you'll see the now-familiar
-form instead:
+* The :guilabel:`Identify Results` panel opens and shows in a tree view
+  the fields values and other general information about the clicked feature.
+* At the bottom of the panel, Check the :guilabel:`Auto open form` checkbox
+* Now, click again on any street in the map. Along the previous
+  :guilabel:`Identify Results` dialog, you'll see the now-familiar form:
 
-.. image:: /static/training_manual/create_vector_data/roads_form.png
-   :align: center
+  .. image:: img/roads_form.png
+     :align: center
+
+* Each time you click on a single feature with the :guilabel:`Identify` tool,
+  its form pops-up unless the :guilabel:`Auto open form` is unchecked.
 
 |basic| |TY| Using the Form to Edit Values
 -------------------------------------------------------------------------------
@@ -54,7 +56,7 @@ If you are in edit mode, you can use this form to edit a feature's attributes.
 * Using the :guilabel:`Identify` tool, click on the main street running through
   |majorUrbanName|:
 
-.. image:: /static/training_manual/create_vector_data/main_street_selected.png
+.. image:: img/main_street_selected.png
    :align: center
 
 * Edit its :guilabel:`highway` value to be :kbd:`secondary`.
@@ -76,14 +78,14 @@ allow you to edit data in various different ways.
 * Open the :guilabel:`roads` layer's :guilabel:`Layer Properties`.
 * Switch to the :guilabel:`Fields` tab. You'll see this:
 
-.. image:: /static/training_manual/create_vector_data/fields_panel.png
+.. image:: img/fields_panel.png
    :align: center
 
 * Click on the :guilabel:`Line edit` button in the same row as
   :guilabel:`man_made` and you'll be given a new dialog.
 * Select :guilabel:`Checkbox` in the list of options:
 
-.. image:: /static/training_manual/create_vector_data/checkbox_selected.png
+.. image:: img/checkbox_selected.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -113,7 +115,7 @@ You can also design your own custom form completely from scratch.
   * Name (text)
   * Age (text)
 
-.. image:: /static/training_manual/create_vector_data/new_point_layer.png
+.. image:: img/new_point_layer.png
    :align: center
 
 * Capture a few points on your new layer using the digitizing tools so
@@ -123,8 +125,10 @@ You can also design your own custom form completely from scratch.
 
 .. note:: You may need to disable Snapping if still enabled from earlier tasks.
 
-.. image:: /static/training_manual/create_vector_data/new_point_entry.png
+.. image:: img/new_point_entry.png
    :align: center
+
+.. _creating-new-form:
 
 |hard| |FA| Creating a New Form
 -------------------------------------------------------------------------------
@@ -148,7 +152,7 @@ another OS. In Ubuntu, do the following in the terminal:
   approach is appropriate in your OS).
 * In the dialog that appears, create a new dialog:
 
-.. image:: /static/training_manual/create_vector_data/qt4_new_dialog.png
+.. image:: img/qt4_new_dialog.png
    :align: center
 
 * Look for the :guilabel:`Widget Box` along the left of your screen (default).
@@ -158,7 +162,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * With the new line edit element selected, you'll see its *properties* along
   the side of your screen (on the right by default):
 
-.. image:: /static/training_manual/create_vector_data/qt4_line_edit.png
+.. image:: img/qt4_line_edit.png
    :align: center
 
 * Set its name to :kbd:`Name`.
@@ -187,7 +191,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * Click the ellipsis button and choose the :kbd:`add_people.ui` file you just
   created:
 
-.. image:: /static/training_manual/create_vector_data/provide_ui_file.png
+.. image:: img/provide_ui_file.png
   :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
@@ -213,7 +217,7 @@ layer, thereby minimizing misunderstandings and unnecessary errors.
 -------------------------------------------------------------------------------
 
 If you completed the advanced section above and have knowledge of Python, you
-may want to check out `this blog entry <http://tinyurl.com/6tr42rb>`_ about
+may want to check out `this blog entry <https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/>`_ about
 creating custom feature forms with Python logic, which allows advanced
 functions including data validation, autocompletion, etc.
 
@@ -223,3 +227,24 @@ functions including data validation, autocompletion, etc.
 Opening a form on identifying a feature is one of the standard actions that
 QGIS can perform. However, you can also direct it to perform custom actions
 that you define. This is the subject of the next lesson.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |FR| replace:: Further Reading
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

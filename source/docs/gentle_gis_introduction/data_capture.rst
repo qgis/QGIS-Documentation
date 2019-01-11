@@ -4,7 +4,7 @@ Data Capture
 ************
 
 +-------------------+-------------+---------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Learn how to create and edit vector and attribute data. |
+| |gentleLogo|      | Objectives: | Learn how to create and edit vector and attribute data. |
 +                   +-------------+---------------------------------------------------------+
 |                   | Keywords:   | Editing, data capture, heads-up, table, database.       |
 +-------------------+-------------+---------------------------------------------------------+
@@ -60,11 +60,7 @@ you would need to give the person :file:`trees.shp`, :file:`trees.shx`,
 
 .. _figure_shapefile:
 
-.. only:: html
-
-   **Figure Shapefile 1:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/shapefile_on_disk.png
+.. figure:: img/shapefile_on_disk.png
    :align: center
    :width: 30em
 
@@ -112,11 +108,7 @@ layers might look on a map if we used all three geometry types.
 
 .. _figure_tourism:
 
-.. only:: html
-
-   **Figure Tourism 1:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/tourism_map.png
+.. figure:: img/tourism_map.png
    :align: center
    :width: 30em
 
@@ -174,11 +166,7 @@ polygon for the geometry.
 
 .. _figure_new_shapefile:
 
-.. only:: html
-
-   **Figure New Shapefile 1:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/new_shapefile.png
+.. figure:: img/new_shapefile.png
    :align: center
    :width: 30em
 
@@ -208,11 +196,7 @@ name. Good examples are 'rivers', 'watersamples' and so on.
 
 .. _figure_save_shapefile:
 
-.. only:: html
-
-   **Figure New Shapefile 2:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/save_shapefile.png
+.. figure:: img/save_shapefile.png
    :align: center
    :width: 30em
 
@@ -251,11 +235,7 @@ useful map from your data!
 
 .. _figure_attribute_dialog:
 
-.. only:: html
-
-   **Figure Attribute Dialog 1:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/attribute_dialog.png
+.. figure:: img/attribute_dialog.png
    :align: center
    :width: 30em
 
@@ -276,11 +256,7 @@ This process is shown in figure_capture_polyline_.
 
 .. _figure_capture_polyline:
 
-.. only:: html
-
-   **Figure Capture Polyline 1:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/capture_polyline.png
+.. figure:: img/capture_polyline.png
    :align: center
    :width: 30em
 
@@ -321,11 +297,7 @@ shown in figure_headsup_digitizing_.
 
 .. _figure_headsup_digitizing:
 
-.. only:: html
-
-   **Figure Digitizing 1:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/headsup_digitizing.png
+.. figure:: img/headsup_digitizing.png
    :align: center
    :width: 30em
 
@@ -347,11 +319,7 @@ puck looks like in figure_digitizing_table_.
 
 .. _figure_digitizing_table:
 
-.. only:: html
-
-   **Figure Digitizing 2:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/digitizing_table.jpg
+.. figure:: img/digitizing_table.jpg
    :align: center
    :width: 30em
 
@@ -378,11 +346,7 @@ figure_georeference_issue_.
 
 .. _figure_georeference_issue:
 
-.. only:: html
-
-   **Figure Digitizing 2:**
-
-.. figure:: /static/gentle_gis_introduction/data_capture/georeferencing_issue.png
+.. figure:: img/georeferencing_issue.png
    :align: center
    :width: 30em
 
@@ -455,7 +419,7 @@ then fill in all the additional information you want to record.
 Further reading
 ===============
 
-**Website** http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal.html
+**Website** http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal/
 --- A school project to assess water quality in their local river.
 
 The QGIS User Guide also has more detailed information on digitising vector data
@@ -466,3 +430,13 @@ What's next?
 
 In the section that follows we will take a closer look at **raster data** to learn
 all about how image data can be used in a GIS.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

@@ -1,10 +1,16 @@
-.. index:: map rendering, map printing
+.. only:: html
 
-.. _composer:
+   |updatedisclaimer|
+
+.. index:: Map rendering, Map printing
+
+.. _layout:
 
 **************************
 Map Rendering and Printing
 **************************
+
+.. warning:: |outofdate|
 
 .. contents::
    :local:
@@ -13,7 +19,7 @@ There are generally two approaches when input data should be rendered as a map:
 either do it quick way using :class:`QgsMapRenderer` or produce more fine-tuned
 output by composing the map with :class:`QgsComposition` class and friends.
 
-.. index:: map rendering; simple
+.. index:: Map rendering; Simple
 
 Simple Rendering
 ================
@@ -39,11 +45,11 @@ and do the rendering
   render = QgsMapRenderer()
 
   # set layer set
-  lst = [layer.getLayerID()]  # add ID of every layer
+  lst = [layer.id()]  # add ID of every layer
   render.setLayerSet(lst)
 
   # set extent
-  rect = QgsRect(render.fullExtent())
+  rect = QgsRectangle(render.fullExtent())
   rect.scale(1.1)
   render.setExtent(rect)
 
@@ -85,26 +91,26 @@ part is reported)
     ...
 
 
-.. index:: output; using Map Composer
+.. index:: Output; Using print layout
 
-Output using Map Composer
+Output using print layout
 =========================
 
-Map composer is a very handy tool if you would like to do a more sophisticated
-output than the simple rendering shown above. Using the composer it is possible
+Print layout is a very handy tool if you would like to do a more sophisticated
+output than the simple rendering shown above. It is possible
 to create complex map layouts consisting of map views, labels, legend, tables
 and other elements that are usually present on paper maps. The layouts can be
 then exported to PDF, raster images or directly printed on a printer.
 
-The composer consists of a bunch of classes. They all belong to the core
+The layout consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
-`Qt Graphics View framework <http://doc.qt.io/qt-4.8/qgraphicsview.html>`_,
-then you are encouraged to check the documentation now, because the composer
+`Qt Graphics View framework <https://doc.qt.io/archives/qt-4.8/graphicsview.html>`_,
+then you are encouraged to check the documentation now, because the layout
 is based on it. Also check the `Python documentation of the implementation of QGraphicView
 <http://pyqt.sourceforge.net/Docs/PyQt4/qgraphicsview.html>`_.
 
-The central class of the composer is :class:`QgsComposition` which is derived
+The central class of the layout is :class:`QgsComposition` which is derived
 from :class:`QGraphicsScene`. Let us create one
 
 ::
@@ -117,7 +123,7 @@ Note that the composition takes an instance of :class:`QgsMapRenderer`. In the
 code we expect we are running within QGIS application and thus use the map
 renderer from map canvas. The composition uses various parameters from the map
 renderer, most importantly the default set of map layers and the current extent.
-When using composer in a standalone application, you can create your own map
+When using a layout in a standalone application, you can create your own map
 renderer instance the same way as shown in the section above and pass it to
 the composition.
 
@@ -165,10 +171,34 @@ Currently supported items are:
 
 * arrow
 * picture
-* shape
+* basic shape
+* nodes based shape
+
+  ::
+
+    polygon = QPolygonF()
+    polygon.append(QPointF(0.0, 0.0))
+    polygon.append(QPointF(100.0, 0.0))
+    polygon.append(QPointF(200.0, 100.0))
+    polygon.append(QPointF(100.0, 200.0))
+
+    composerPolygon = QgsComposerPolygon(polygon, c)
+    c.addItem(composerPolygon)
+
+    props = {}
+    props["color"] = "green"
+    props["style"] = "solid"
+    props["style_border"] = "solid"
+    props["color_border"] = "black"
+    props["width_border"] = "10.0"
+    props["joinstyle"] = "miter"
+
+    style = QgsFillSymbolV2.createSimple(props)
+    composerPolygon.setPolygonStyleSymbol(style)
+
 * table
 
-By default the newly created composer items have zero position (top left corner
+By default the newly created layout items have zero position (top left corner
 of the page) and zero size. The position and size are always measured in
 millimeters
 
@@ -185,12 +215,11 @@ A frame is drawn around each item by default. How to remove the frame
 
   composerLabel.setFrame(False)
 
-Besides creating the composer items by hand, QGIS has support for composer
+Besides creating the layout items by hand, QGIS has support for layout
 templates which are essentially compositions with all their items saved to a
-.qpt file (with XML syntax). Unfortunately this functionality is not yet
-available in the API.
+.qpt file (with XML syntax).
 
-Once the composition is ready (the composer items have been created and added
+Once the composition is ready (the layout items have been created and added
 to the composition), we can proceed to produce a raster and/or vector output.
 
 The default output settings for composition are page size A4 and resolution 300
@@ -202,7 +231,7 @@ millimeters
   c.setPaperSize(width, height)
   c.setPrintResolution(dpi)
 
-.. index:: output; raster image
+.. index:: Output; Raster image
 
 Output to a raster image
 ------------------------
@@ -224,14 +253,12 @@ The following code fragment shows how to render a composition to a raster image
 
   # render the composition
   imagePainter = QPainter(image)
-  sourceArea = QRectF(0, 0, c.paperWidth(), c.paperHeight())
-  targetArea = QRectF(0, 0, width, height)
-  c.render(imagePainter, targetArea, sourceArea)
+  c.renderPage( imagePainter, 0 )
   imagePainter.end()
 
   image.save("out.png", "png")
 
-.. index:: output; PDF
+.. index:: Output; PDF
 
 Output to PDF
 -------------
@@ -253,3 +280,13 @@ The following code fragment renders a composition to a PDF file
   paperRectPixel = printer.pageRect(QPrinter.DevicePixel)
   c.render(pdfPainter, paperRectPixel, paperRectMM)
   pdfPainter.end()
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,12 +1,15 @@
-|updatedisclaimer|
+.. only:: html
 
-.. :index::
-    single:core plugins
+   |updatedisclaimer|
+
+.. index::
+   single: Core plugins
+   seealso: Core plugins; Plugins
 
 .. _core_plugins:
 
 -----------------------
-Using |qg| Core Plugins
+Using QGIS Core Plugins
 -----------------------
 
 \
@@ -18,27 +21,49 @@ Using |qg| Core Plugins
 ======================  ============================  ======================================================  ===============================
 Icon                    Plugin                        Description                                             Manual Reference
 ======================  ============================  ======================================================  ===============================
-|coordinate_capture|    Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
-|dbmanager|             DB Manager                    Manage your databases within |qg|                       :ref:`dbmanager`
-|dxf2shp_converter|     DXF2Shape Converter           Converts from DXF to SHP file format                    :ref:`dxf2shape`
-|event_id|              eVis                          Event Visualization Tool                                :ref:`evis`
-|ftools|                fTools                        A suite of vector tools                                 :ref:`ftools`
-|raster-info|           GDAL Tools                    GDAL raster functionality                               :ref:`label_plugingdaltools`
-|geometrychecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
-|geometrysnapper|       Geometry Snapper              Snap geometries to a reference layer                    :ref:`geometry_snapper`
-|mGeorefRun|            Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
-|gps_importer|          GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
+|coordinateCapture|     Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
+|dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
+|eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
+|geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
+|georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
+|gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
-|heatmap|               Heatmap                       Create heatmap rasters from input vector points         :ref:`heatmap_plugin`
-|interpolation|         Interpolation plugin          Interpolation on base of vertices of a vector layer     :ref:`interpol`
-|metasearch|            Metasearch Catalogue Client   Interact with metadata catalogue services (CSW)         :ref:`metasearch`
-|offline_editing_copy|  Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
-|oracle_raster|         Oracle Spatial Georaster      Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
-|plugin_installer|      Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`
+|metasearch|            Metasearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
+|offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
+|showPluginManager|     Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
-|raster_terrain|        Raster Terrain Analysis       Compute geomorphological features from DEMs             :ref:`rasterrain`
-|roadgraph|             Road Graph plugin             Shortest path analysis                                  :ref:`roadgraph`
-|spatialquery|          Spatial Query                 Spatial queries on vectors                              :ref:`spatial_query`
-|topologychecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
-|raster-stats|          Zonal Statistics              Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
+|topologyChecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 ======================  ============================  ======================================================  ===============================
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |coordinateCapture| image:: /static/common/coordinate_capture.png
+   :width: 1.5em
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |eventId| image:: /static/common/event_id.png
+   :width: 1.5em
+.. |geometryChecker| image:: /static/common/geometrychecker.png
+   :width: 1.5em
+.. |geoprocessing| image:: /static/common/geoprocessing.png
+   :width: 1.5em
+.. |georefRun| image:: /static/common/mGeorefRun.png
+   :width: 1.5em
+.. |gpsImporter| image:: /static/common/gps_importer.png
+   :width: 1.5em
+.. |grass| image:: /static/common/grasslogo.png
+   :width: 1.5em
+.. |metasearch| image:: /static/common/MetaSearch.png
+   :width: 1.5em
+.. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
+   :width: 1.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

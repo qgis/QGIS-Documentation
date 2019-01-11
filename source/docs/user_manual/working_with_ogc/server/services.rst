@@ -1,0 +1,1529 @@
+.. only:: html
+
+   |updatedisclaimer|
+
+********
+Services
+********
+
+.. only:: html
+
+  .. contents::
+    :local:
+    :depth: 2
+
+
+QGIS Server is able to serve data according to standard protocols as described
+by the **Open Geospatial Consortium (OGC)**:
+
+- WMS 1.1.0 and 1.3.0
+- WFS 1.0.0 and 1.1.0
+- WCS 1.1.1
+- WMTS 1.0.0
+
+Extra vendor parameters and requests are supported in addition to the
+original standard that greatly enhance the possibilities of customizing its
+behavior thanks to the QGIS rendering engine.
+
+
+Web Map Service (WMS)
+=====================
+
+The **1.1.0** and **1.3.0** WMS standards implemented in QGIS Server provide
+a HTTP interface to request map or legend images generated from a QGIS project.
+A typical WMS request defines the QGIS project to use, the layers to render as
+well as the image format to generate. Basic support is also available for the
+**Styled Layer Descriptor (SLD)** standard.
+
+Specifications document according to the version number of the service:
+
+- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
+- `WMS 1.3.0 <https://portal.opengeospatial.org/files/?artifact_id=14416>`_
+
+Standard requests provided by QGIS Server:
+
++--------------------+-----------------------------------------------------------+
+| Request            |  Description                                              |
++====================+===========================================================+
+| GetCapabilities    | Return XML metadata with information about the server     |
++--------------------+-----------------------------------------------------------+
+| GetMap             | Return a map                                              |
++--------------------+-----------------------------------------------------------+
+| GetFeatureInfo     | Retrieves data (geometry and values) for a pixel location |
++--------------------+-----------------------------------------------------------+
+| GetLegendGraphics  | Returns legend symbols                                    |
++--------------------+-----------------------------------------------------------+
+
+|
+
+Vendor requests provided by QGIS Server:
+
++---------------------+---------------------------------------------------+
+| Request             |  Description                                      |
++=====================+===================================================+
+| GetPrint            | Returns a QGIS composition                        |
++---------------------+---------------------------------------------------+
+| GetProjectSettings  | Returns specific information about QGIS Server    |
++---------------------+---------------------------------------------------+
+| GetDxf              | Export layers in DXF format                       |
++---------------------+---------------------------------------------------+
+
+
+.. _`qgisserver-wms-getmap`:
+
+GetMap
+------
+
+Standard parameters for the **GetMap** request according to the OGC WMS 1.1.0
+and 1.3.0 specifications:
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| SERVICE       | Yes      | Name of the service (WMS)        |
++---------------+----------+----------------------------------+
+| VERSION       | No       | Version of the service           |
++---------------+----------+----------------------------------+
+| REQUEST       | Yes      | Name of the request (GetMap)     |
++---------------+----------+----------------------------------+
+| LAYERS        | No       | Layers to display                |
++---------------+----------+----------------------------------+
+| STYLES        | No       | Layers' style                    |
++---------------+----------+----------------------------------+
+| SRS / CRS     | Yes      | Coordinate reference system      |
++---------------+----------+----------------------------------+
+| BBOX          | No       | Map extent                       |
++---------------+----------+----------------------------------+
+| WIDTH         | Yes      | Width of the image in pixels     |
++---------------+----------+----------------------------------+
+| HEIGHT        | Yes      | Height of the image in pixels    |
++---------------+----------+----------------------------------+
+| FORMAT        | No       | Image format                     |
++---------------+----------+----------------------------------+
+| TRANSPARENT   | No       | Transparent background           |
++---------------+----------+----------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+| BGCOLOR       | No       | Specify the background color     |
++---------------+----------+----------------------------------+
+| DPI           | No       | Specify the output resolution    |
++---------------+----------+----------------------------------+
+| IMAGE_QUALITY | No       | JPEG compression                 |
++---------------+----------+----------------------------------+
+| OPACITIES     | No       | Opacity for layer or group       |
++---------------+----------+----------------------------------+
+| FILTER        | No       | Subset of features               |
++---------------+----------+----------------------------------+
+| SELECTION     | No       | Highlight features               |
++---------------+----------+----------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &VERSION=1.3.0
+  &REQUEST=GetMap
+  &MAP=/home/user/project.qgs
+  &LAYERS=mylayer1,mylayer2,mylayer3
+  &STYLES=style1,default,style3
+  &OPACITIES=125,200,125
+  &CRS=EPSG:4326
+  &WIDTH=400
+  &HEIGHT=400
+  &FORMAT=image/png
+  &TRANSPARENT=TRUE
+  &DPI=300
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMS`` in case of the **GetMap** request.
+
+
+VERSION
+^^^^^^^
+
+This parameter allows to specify the version of the service to use. Available
+values for the ``VERSION`` parameter are:
+
+- ``1.1.0``
+- ``1.3.0``
+
+If no version is indicated in the request, then ``1.3.0`` is used by default.
+
+According to the version number, slight differences have to be expected as
+explained later for the next parameters:
+
+- ``CRS`` / ``SRS``
+- ``BBOX``
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetMap`` in case of the **GetMap** request.
+
+
+LAYERS
+^^^^^^
+
+This parameter allows to specify the layers to display on the map. Names have
+to be separated by a comma.
+
+In addition, QGIS Server introduced some options to select layers by:
+
+* a short name
+* the layer id
+
+The short name of a layer may be configured through
+:menuselection:`Properties --> Metadata` in layer menu. If the short name is
+defined, then it's used by default instead of the layer's name:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &LAYERS=mynickname1,mynickname2
+  &...
+
+Moreover, there's a project option allowing to select layers by their id in
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Properties...` dialog. To activate this
+option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &LAYERS=mylayerid1,mylayerid2
+  &...
+
+STYLES
+^^^^^^
+
+This parameter can be used to specify a layer's style for the rendering step.
+Styles have to be separated by a comma. The name of the default style is
+``default``.
+
+
+SRS / CRS
+^^^^^^^^^
+
+This parameter allows to indicate the map output Spatial Reference System in
+WMS **1.1.0** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is
+also supported if current version is **1.1.0**.
+
+For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also
+supported.
+
+Note that if both ``CRS`` and ``SRS`` parameters are indicated in the request,
+then it's the current version indicated in ``VERSION`` parameter which is
+decisive.
+
+In the next case, the ``SRS`` parameter is kept whatever the ``VERSION``
+parameter because ``CRS`` is not indicated:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.3.0
+  &SRS=EPSG:2854
+  &...
+
+In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because
+of the ``VERSION`` parameter:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.1.0
+  &CRS=EPSG:4326
+  &SRS=EPSG:2854
+  &...
+
+In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because of
+the ``VERSION`` parameter:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.3.0
+  &CRS=EPSG:4326
+  &SRS=EPSG:2854
+  &...
+
+
+BBOX
+^^^^
+
+This parameter allows to specify the map extent with units according to the
+current CRS. Coordinates have to be separated by a comma.
+
+However, a slight difference has to be noticed according to the current
+``VERSION`` parameter. Actually, in WMS **1.1.0**, coordinates are formed
+like ``minx,miny,maxx,maxy`` or ``minlong,minlat,maxlong,maxlat``.
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.1.0
+  &SRS=epsg:4326
+  &BBOX=-180,-90,180,90
+  &...
+
+But the axis is reversed in WMS **1.3.0**, so coordinates are formed like:
+``miny,minx,maxy,maxx`` or ``minlat,minlong,maxlat,maxlong``. For
+example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.3.0
+  &CRS=epsg:4326
+  &BBOX=-90,-180,90,180
+  &...
+
+
+WIDTH
+^^^^^
+
+This parameter allows to specify the width in pixels of the output image.
+
+
+HEIGHT
+^^^^^^
+
+This parameter allows to specify the height in pixels of the output image.
+
+
+FORMAT
+^^^^^^
+
+This parameter may be used to specify the format of map image. Available
+values are:
+
+- ``jpg``
+- ``jpeg``
+- ``image/jpeg``
+- ``image/png``
+- ``image/png; mode=1bit``
+- ``image/png; mode=8bit``
+- ``image/png; mode=16bit``
+
+If the ``FORMAT`` parameter is different from one of these values, then the
+default format PNG is used instead.
+
+
+TRANSPARENT
+^^^^^^^^^^^
+
+This boolean parameter can be used to specify the background transparency.
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+However, this parameter is ignored if the format of the map image indicated
+with ``FORMAT`` is different from PNG.
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
+is mandatory because a request needs a QGIS project to actually work. However,
+the ``QGIS_PROJECT_FILE`` environment variable may be used to define a default
+QGIS project. In this specific case, ``MAP`` is not longer a required
+parameter. For further information you may refer to
+:ref:`server_env_variables`.
+
+
+BGCOLOR
+^^^^^^^
+
+This parameter allows to indicate a background color for the map image. However
+it cannot be combined with ``TRANSPARENT`` parameter in case of PNG images
+(transparency takes priority). The colour may be literal or in hexadecimal
+notation.
+
+URL example with the literal notation:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.3.0
+  &BGCOLOR=green
+  &...
+
+URL example with the hexadecimal notation:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &VERSION=1.3.0
+  &BGCOLOR=0x00FF00
+  &...
+
+
+DPI
+^^^
+
+This parameter can be used to specify the requested output resolution.
+
+
+IMAGE_QUALITY
+^^^^^^^^^^^^^
+
+This parameter is only used for JPEG images. By default, the JPEG compression
+is ``-1``.
+
+You can change the default per QGIS project in the
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Properties...` dialog. If you want to override
+it in a ``GetMap`` request you can do it using the ``IMAGE_QUALITY`` parameter.
+
+
+OPACITIES
+^^^^^^^^^
+
+Opacity can be set on layer or group level. Allowed values range from 0 (fully
+transparent) to 255 (fully opaque).
+
+
+FILTER
+^^^^^^
+
+A subset of layers can be selected with the ``FILTER`` parameter. Syntax is
+basically the same as for the QGIS subset string. However, there are some
+restrictions to avoid SQL injections into databases via QGIS Server. If a
+dangerous string is found in the parameter, QGIS Server will return the next
+error:
+
+.. code-block:: none
+
+  Indeed, text strings need to be enclosed with quotes (single quotes for strings, double quotes for attributes). A space between each word / special character is mandatory. Allowed Keywords and special characters are 'AND','OR','IN','=','<','>=','>','>=','!=*,'(',')'. Semicolons in string expressions are not allowed
+
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &LAYERS=mylayer1,mylayer2
+  &FILTER=mylayer1:"OBJECTID" = 3;mylayer2:'text' = 'blabla'
+  &...
+
+.. note::
+
+  It is possible to make attribute searches via GetFeatureInfo and omit
+  the X/Y parameter if a FILTER is there. QGIS Server then returns info
+  about the matching features and generates a combined bounding box in the
+  xml output.
+
+
+SELECTION
+^^^^^^^^^
+
+The ``SELECTION`` parameter can highlight features from one or more layers.
+Vector features can be selected by passing comma separated lists with feature
+ids.
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetMap
+  &LAYERS=mylayer1,mylayer2
+  &SELECTION=mylayer1:3,6,9;mylayer2:1,5,6
+  &...
+
+The following image presents the response from a GetMap request using the
+``SELECTION`` option e.g. ``http://myserver.com/...&SELECTION=countries:171,65``.
+
+
+As those features id's correspond in the source dataset to **France** and
+**Romania** they're highlighted in yellow.
+
+.. _figure_server_selection:
+
+.. figure:: img/server_selection_parameter.png
+  :align: center
+
+  Server response to a GetMap request with SELECTION parameter
+
+GetDxf
+------
+
+It is possible to export layers in the DXF format using the GetDxf Request. Only
+layers that have read access in the WFS service are exported in the DXF format.
+Here is a valid REQUEST and a documentation of the available parameters::
+
+    http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetDxf&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
+
+Parameters:
+
+* FILE_NAME=yoursuggested_file_name_for_download.dxf
+* FORMAT_OPTIONS=see options below, key:value pairs separated by Semicolon
+
+FORMAT_OPTIONS Parameters:
+
+* **SCALE:scale** to be used for symbology rules, filters and styles (not an
+  actual scaling of the data - data remains in the original scale).
+* **MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY** corresponds to the
+  three export options offered in the QGIS Desktop DXF export dialog.
+* **LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames** - if
+  not specified, the original QGIS layer names are used.
+* **USE_TITLE_AS_LAYERNAME** if enabled, the title of the layer will be used as
+  layer name.
+
+
+GetFeatureInfo
+--------------
+
+QGIS Server WMS GetFeatureInfo requests supports the following extra optional parameters to
+define the tolerance for point, line and polygon layers:
+
+* **FI_POINT_TOLERANCE** parameter: Tolerance for point layers
+  *GetFeatureInfo* request, in pixels.
+* **FI_LINE_TOLERANCE** parameter: Tolerance for linestring layers
+  *GetFeatureInfo* request, in pixels.
+* **FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers
+  *GetFeatureInfo* request, in pixels.
+
+QGIS Server also permits to make advanced GetFeatureInfo requests and select all
+the features that intersect any given WKT geometry. It does that with the help
+of the **FILTER_GEOM** parameter.
+
+.. code-block:: guess
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetFeatureInfo
+  &LAYERS=countries
+  &QUERY_LAYERS=countries
+  &INFO_FORMAT:text/xml
+  &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
+  &...
+
+The content of map tips can be added to the GetFeatureInfo response by
+passing the **WITH_MAPTIP** vendor parameter.
+
+.. code-block:: guess
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &REQUEST=GetFeatureInfo
+  &LAYERS=countries
+  &QUERY_LAYERS=countries
+  &INFO_FORMAT:text/xml
+  &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
+  &WITH_MAPTIP=true
+  &...
+
+
+
+.. _server_getprint:
+
+GetPrint
+--------
+
+QGIS Server has the capability to create print layout output in pdf or pixel
+format. Print layout windows in the published project are used as templates.
+In the **GetPrint** request, the client has the possibility to specify
+parameters of the contained layout maps and labels.
+
+Parameters for the **GetPrint** request:
+
++-----------------------+----------+------------------------------------------+
+| Parameter             | Required | Description                              |
++=======================+==========+==========================================+
+| MAP                   | Yes      | Specify the QGIS project file            |
++-----------------------+----------+------------------------------------------+
+| SERVICE               | Yes      | Name of the service (WMS)                |
++-----------------------+----------+------------------------------------------+
+| VERSION               | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| REQUEST               | Yes      | Name of the request (GetPrint)           |
++-----------------------+----------+------------------------------------------+
+| LAYERS                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| TEMPLATE              | Yes      | Layout template to use                   |
++-----------------------+----------+------------------------------------------+
+| SRS / CRS             | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| FORMAT                | Yes      | Output format                            |
++-----------------------+----------+------------------------------------------+
+| STYLES                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| TRANSPARENT           | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| OPACITIES             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| SELECTION             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
++-----------------------+----------+------------------------------------------+
+| mapX:EXTENT           | No       | Extent of the map 'X'                    |
++-----------------------+----------+------------------------------------------+
+| mapX:LAYERS           | No       | Layers of the map 'X'                    |
++-----------------------+----------+------------------------------------------+
+| mapX:STYLES           | No       | Layers' style of the map 'X'             |
++-----------------------+----------+------------------------------------------+
+| mapX:SCALE            | No       | Layers' scale of the map 'X'             |
++-----------------------+----------+------------------------------------------+
+| mapX:ROTATION         | No       | Rotation  of the map 'X'                 |
++-----------------------+----------+------------------------------------------+
+| mapX:GRID_INTERVAL_X  | No       | Grid interval on x axis of the map 'X'   |
++-----------------------+----------+------------------------------------------+
+| mapX:GRID_INTERVAL_Y  | No       | Grid interval on y axis of the map 'X'   |
++-----------------------+----------+------------------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMS
+  &VERSION=1.3.0
+  &REQUEST=GetPrint
+  &MAP=/home/user/project.qgs
+  &CRS=EPSG:4326
+  &FORMAT=png
+  &map0:EXTENT=-180,-90,180,90
+  &map0:LAYERS=mylayer1,mylayer2,mylayer3
+  &map0:OPACITIES=125,200,125
+  &map0:ROTATION=45
+
+Note that the layout template may contain more than one map. In this way, if
+you want to configure a specific map, you have to use ``mapX:`` parameters
+where ``X`` is a positive number that you can retrieve thanks to the
+**GetProjectSettings** request.
+
+For example:
+
+.. code-block:: xml
+
+    <WMS_Capabilities>
+    ...
+    <ComposerTemplates xsi:type="wms:_ExtendedCapabilities">
+    <ComposerTemplate width="297" height="210" name="Druckzusammenstellung 1">
+    <ComposerMap width="171" height="133" name="map0"/>
+    <ComposerMap width="49" height="46" name="map1"/></ComposerTemplate>
+    </ComposerTemplates>
+    ...
+    </WMS_Capabilities>
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMS``.
+
+
+REQUEST
+^^^^^^^
+
+This parameter has to be ``GetPrint`` for the **GetPrint** request.
+
+
+TEMPLATE
+^^^^^^^^
+
+This parameter can be used to specify the name of a layout template to use for
+printing.
+
+
+FORMAT
+^^^^^^
+
+This parameter specifies the format of map image. Available values are:
+
+- ``jpg``
+- ``jpeg``
+- ``image/jpeg``
+- ``png``
+- ``image/png``
+- ``svg``
+- ``image/svg``
+- ``image/svg+xml``
+- ``pdf``
+- ``application/pdf``
+
+If the ``FORMAT`` parameter is different from one of these values, then an
+exception is returned.
+
+
+mapX:EXTENT
+^^^^^^^^^^^
+
+This parameter specifies the extent for a layout map item as
+xmin,ymin,xmax,ymax.
+
+
+mapX:ROTATION
+^^^^^^^^^^^^^
+
+This parameter specifies the map rotation in degrees.
+
+
+mapX:GRID_INTERVAL_X
+^^^^^^^^^^^^^^^^^^^^
+
+This parameter specifies the grid line density in the X direction.
+
+
+mapX:GRID_INTERVAL_Y
+^^^^^^^^^^^^^^^^^^^^
+
+This parameter specifies the grid line density in the Y direction.
+
+
+mapX:SCALE
+^^^^^^^^^^
+
+This parameter specifies the map scale for a layout map item. This is useful
+to ensure scale based visibility of layers and labels even if client and server
+may have different algorithms to calculate the scale denominator.
+
+
+mapX:LAYERS
+^^^^^^^^^^^
+
+This parameter specifies the layers for a layout map item. See
+:ref:`See GetMap <qgisserver-wms-getmap>` for more information on this
+parameter.
+
+
+mapX:STYLES
+^^^^^^^^^^^
+
+This parameter specifies the layers' styles defined in a specific layout map
+item. See :ref:`See GetMap <qgisserver-wms-getmap>` for more information on
+this parameter.
+
+
+GetLegendGraphics
+-----------------
+
+Several additional parameters are available to change the size of the legend
+elements:
+
+* **BOXSPACE** space between legend frame and content (mm)
+* **LAYERSPACE** versical space between layers (mm)
+* **LAYERTITLESPACE** vertical space between layer title and items following
+  (mm)
+* **SYMBOLSPACE** vertical space between symbol and item following (mm)
+* **ICONLABELSPACE** horizontal space between symbol and label text (mm)
+* **SYMBOLWIDTH** width of the symbol preview (mm)
+* **SYMBOLHEIGHT** height of the symbol preview (mm)
+
+These parameters change the font properties for layer titles and item labels:
+
+* **LAYERFONTFAMILY / ITEMFONTFAMILY** font family for layer title / item text
+* **LAYERFONTBOLD / ITEMFONTBOLD** ``TRUE`` to use a bold font
+* **LAYERFONTSIZE / ITEMFONTSIZE** Font size in point
+* **LAYERFONTITALIC / ITEMFONTITALIC** ``TRUE`` to use italic font
+* **LAYERFONTCOLOR / ITEMFONTCOLOR** Hex color code (e.g. ``#FF0000`` for red)
+* **LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only
+  the legend graphics without labels
+
+Contest based legend. These parameters let the client request a legend showing
+only the symbols for the features falling into the requested area:
+
+* **BBOX** the geographical area for which the legend should be built
+* **CRS / SRS** the coordinate reference system adopted to define the BBOX
+  coordinates
+* **WIDTH / HEIGHT** if set these should match those defined for the GetMap
+  request, to let QGIS Server scale symbols according to the map view image
+  size.
+
+Contest based legend features are based on the
+`UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
+
+* **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
+  feature count of the features like in the following image:
+
+  .. figure:: img/getfeaturecount_legend.png
+    :align: center
+
+GetProjectSettings
+------------------
+
+This request type works similar to **GetCapabilities**, but it is more specific
+to QGIS Server and allows a client to read additional information which is
+not available in the GetCapabilities output:
+
+* initial visibility of layers
+* information about vector attributes and their edit types
+* information about layer order and drawing order
+* list of layers published in WFS
+
+
+Web Feature Service (WFS)
+=========================
+
+
+The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide
+a HTTP interface to query geographic features from a QGIS project. A typical
+WFS request defines the QGIS project to use and the layer to query.
+
+Specifications document according to the version number of the service:
+
+- `WFS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=7176>`_
+- `WFS 1.1.0 <http://portal.opengeospatial.org/files/?artifact_id=8339>`_
+
+Standard requests provided by QGIS Server:
+
++--------------------+-----------------------------------------------------------+
+| Request            |  Description                                              |
++====================+===========================================================+
+| GetCapabilities    | Returns XML metadata with information about the server    |
++--------------------+-----------------------------------------------------------+
+| GetFeature         | Returns a selection of features                           |
++--------------------+-----------------------------------------------------------+
+| DescribeFeatureType| Returns a description of feature types and properties     |
++--------------------+-----------------------------------------------------------+
+| Transaction        | Allows features to be inserted, updated or deleted        |
++--------------------+-----------------------------------------------------------+
+
+
+.. _`qgisserver-wfs-getfeature`:
+
+GetFeature
+----------
+
+Standard parameters for the **GetFeature** request according to the OGC WFS 1.0.0
+and 1.1.0 specifications:
+
++---------------+----------+-------------------------------------+
+| Parameter     | Required | Description                         |
++===============+==========+=====================================+
+| SERVICE       | Yes      | Name of the service                 |
++---------------+----------+-------------------------------------+
+| VERSION       | No       | Version of the service              |
++---------------+----------+-------------------------------------+
+| REQUEST       | Yes      | Name of the request                 |
++---------------+----------+-------------------------------------+
+| TYPENAME      | No       | Name of layers                      |
++---------------+----------+-------------------------------------+
+| OUTPUTFORMAT  | No       | Output Format                       |
++---------------+----------+-------------------------------------+
+| RESULTTYPE    | No       | Type of the result                  |
++---------------+----------+-------------------------------------+
+| PROPERTYNAME  | No       | Name of properties to return        |
++---------------+----------+-------------------------------------+
+| MAXFEATURES   | No       | Maximum number of features to return|
++---------------+----------+-------------------------------------+
+| SRSNAME       | No       | Coordinate reference system         |
++---------------+----------+-------------------------------------+
+| FEATUREID     | No       | Filter the features by ids          |
++---------------+----------+-------------------------------------+
+| FILTER        | No       | OGC Filter Encoding                 |
++---------------+----------+-------------------------------------+
+| BBOX          | No       | Map Extent                          |
++---------------+----------+-------------------------------------+
+| SORTBY        | No       | Sort the results                    |
++---------------+----------+-------------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+| STARTINDEX    | No       | Paging                           |
++---------------+----------+----------------------------------+
+| GEOMETRYNAME  | No       | Type of geometry to return       |
++---------------+----------+----------------------------------+
+| EXP_FILTER    | No       | Expression filtering             |
++---------------+----------+----------------------------------+
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WFS`` in case of the **GetFeature** request.
+
+For example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WFS
+  &...
+
+
+VERSION
+^^^^^^^
+
+This parameter allows to specify the version of the service to use. Available
+values for the ``VERSION`` parameter are:
+
+- ``1.0.0``
+- ``1.1.0``
+
+If no version is indicated in the request, then ``1.1.0`` is used by default.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &...
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetFeature`` in case of the **GetFeature** request.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=GetFeature
+  &...
+
+
+RESULTTYPE
+^^^^^^^^^^
+
+This parameter may be used to specify the kind of result to return. Available
+values are:
+
+- ``results``: the default behavior
+- ``hits``: returns only a feature count
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=GetFeature
+  &RESULTTYPE=hits
+  &...
+
+
+GEOMETRYNAME
+^^^^^^^^^^^^
+
+This parameter can be used to specify the kind of geometry to return for
+features. Available values are:
+
+- ``extent``
+- ``centroid``
+- ``none``
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=GetFeature
+  &GEOMETRYNAME=centroid
+  &...
+
+
+
+STARTINDEX
+^^^^^^^^^^
+
+This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0.
+Actually, it can be used to skip some features in the result set and in
+combination with ``MAXFEATURES``, it provides the ability to page through
+results.
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WFS
+  &VERSION=1.1.0
+  &REQUEST=GetFeature
+  &STARTINDEX=2
+  &...
+
+
+Web Map Tile Service (WMTS)
+===========================
+
+The **1.0.0** WMTS standard implemented in QGIS Server provides a HTTP
+interface to request tiled map images generated from a QGIS project. A typical
+WMTS request defined the QGIS project to use, some WMS parameters like layers
+to render, as well as tile parameters.
+
+Specifications document of the service:
+
+- `WMTS 1.0.0 <http://portal.opengeospatial.org/files/?artifact_id=35326>`_
+
+Standard requests provided by QGIS Server:
+
++--------------------+-----------------------------------------------------------+
+| Request            |  Description                                              |
++====================+===========================================================+
+| GetCapabilities    | Returns XML metadata with information about the server    |
++--------------------+-----------------------------------------------------------+
+| GetTile            | Returns a tile                                            |
++--------------------+-----------------------------------------------------------+
+| GetFeatureInfo     | Retrieves data (geometry and values) for a pixel location |
++--------------------+-----------------------------------------------------------+
+
+
+.. _`qgisserver-wmts-getcapabilities`:
+
+GetCapabilities
+---------------
+
+Standard parameters for the **GetCapabilities** request according to the OGC WMTS 1.0.0
+specifications:
+
++---------------+----------+-----------------------------------------------+
+| Parameter     | Required | Description                                   |
++===============+==========+===============================================+
+| SERVICE       | Yes      | Name of the service (WMTS)                    |
++---------------+----------+-----------------------------------------------+
+| REQUEST       | Yes      | Name of the request (GetCapabilities)         |
++---------------+----------+-----------------------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetCapabilities
+  &MAP=/home/user/project.qgs
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetCapabilities** request.
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetCapabilities`` in case of the **GetCapabilities**
+request.
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+
+.. _`qgisserver-wmts-gettile`:
+
+GetTile
+-------
+
+Standard parameters for the **GetTile** request according to the OGC WMTS 1.0.0
+specifications:
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| SERVICE       | Yes      | Name of the service (WMTS)       |
++---------------+----------+----------------------------------+
+| REQUEST       | Yes      | Name of the request (GetTile)    |
++---------------+----------+----------------------------------+
+| LAYER         | Yes      | Layer identifier                 |
++---------------+----------+----------------------------------+
+| FORMAT        | Yes      | Output format of the tile        |
++---------------+----------+----------------------------------+
+| TILEMATRIXSET | Yes      | Name of the pyramid              |
++---------------+----------+----------------------------------+
+| TILEMATRIX    | Yes      | Meshing                          |
++---------------+----------+----------------------------------+
+| TILEROW       | Yes      | Row coordinate in the mesh       |
++---------------+----------+----------------------------------+
+| TILECOL       | Yes      | Column coordinate in the mesh    |
++---------------+----------+----------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &MAP=/home/user/project.qgs
+  &LAYER=mylayer
+  &FORMAT=image/png
+  &TILEMATRIXSET=EPSG:4326
+  &TILEROW=0
+  &TILECOL=0
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetTile** request.
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetTile`` in case of the **GetTile** request.
+
+
+LAYER
+^^^^^
+
+This parameter allows to specify the layer to display on the tile.
+
+In addition, QGIS Server introduced some options to select a layer by:
+
+* a short name
+* the layer id
+
+The short name of a layer may be configured through
+:menuselection:`Properties --> Metadata` in layer menu. If the short name is
+defined, then it's used by default instead of the layer's name:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYER=mynickname
+  &...
+
+Moreover, there's a project option allowing to select layers by their id in
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Project Properties` dialog. To activate this
+option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetTile
+  &LAYER=mylayerid1
+  &...
+
+
+FORMAT
+^^^^^^
+
+This parameter may be used to specify the format of tile image. Available
+values are:
+
+- ``jpg``
+- ``jpeg``
+- ``image/jpeg``
+- ``image/png``
+
+If the ``FORMAT`` parameter is different from one of these values, then the
+default format PNG is used instead.
+
+
+TILEMATRIXSET
+^^^^^^^^^^^^^
+
+This parameter allows to define the CRS to use to compute the underlying
+pyramid and has to be formed like ``EPSG:XXXX``.
+
+
+TILEMATRIX
+^^^^^^^^^^
+
+This parameter allows to define the matrix to use for the output tile.
+
+
+TILEROW
+^^^^^^^
+
+This parameter allows to select the row of the tile to get within the matrix.
+
+
+TILECOL
+^^^^^^^
+
+This parameter allows to select the column of the tile to get within the
+matrix.
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
+is mandatory because a request needs a QGIS project to actually work. However,
+the ``QGIS_PROJECT_FILE`` environment variable may be used to define a default
+QGIS project. In this specific case, ``MAP`` is not longer a required
+parameter. For further information you may refer to
+:ref:`server_env_variables`.
+
+
+.. _`qgisserver-wmts-getfeatureinfo`:
+
+GetFeatureInfo
+--------------
+
+Standard parameters for the **GetFeatureInfo** request according to the OGC
+WMTS 1.0.0 specifications:
+
+- `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
+
++---------------+----------+-----------------------------------------------+
+| Parameter     | Required | Description                                   |
++===============+==========+===============================================+
+| SERVICE       | Yes      | Name of the service (WMTS)                    |
++---------------+----------+-----------------------------------------------+
+| REQUEST       | Yes      | Name of the request (GetFeatureInfo)          |
++---------------+----------+-----------------------------------------------+
+| LAYER         | Yes      | Layer identifier                              |
++---------------+----------+-----------------------------------------------+
+| INFOFORMAT    | No       | Output format                                 |
++---------------+----------+-----------------------------------------------+
+| I             | No       | X coordinate of a pixel                       |
++---------------+----------+-----------------------------------------------+
+| J             | No       | Y coordinate of a pixel                       |
++---------------+----------+-----------------------------------------------+
+| TILEMATRIXSET | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+| TILEMATRIX    | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+| TILEROW       | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+| TILECOL       | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
++---------------+----------+-----------------------------------------------+
+
+|
+
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++---------------+----------+----------------------------------+
+| Parameter     | Required | Description                      |
++===============+==========+==================================+
+| MAP           | Yes      | Specify the QGIS project file    |
++---------------+----------+----------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetFeatureInfo
+  &MAP=/home/user/project.qgs
+  &LAYER=mylayer
+  &INFOFORMAT=image/html
+  &I=10
+  &J=5
+
+
+SERVICE
+^^^^^^^
+
+This parameter has to be ``WMTS`` in case of the **GetFeatureInfo** request.
+
+
+REQUEST
+^^^^^^^
+
+This parameter is ``GetFeatureInfo`` in case of the **GetFeatureInfo** request.
+
+
+MAP
+^^^
+
+This parameter allows to define the QGIS project file to use.
+
+As mentioned in :ref:`GetMap parameters table <qgisserver-wms-getmap>`, ``MAP``
+is mandatory because a request needs a QGIS project to actually work. However,
+the ``QGIS_PROJECT_FILE`` environment variable may be used to define a default
+QGIS project. In this specific case, ``MAP`` is not longer a required
+parameter. For further information you may refer to
+:ref:`server_env_variables`.
+
+
+LAYER
+^^^^^
+
+This parameter allows to specify the layer to display on the tile.
+
+In addition, QGIS Server introduced some options to select a layer by:
+
+* a short name
+* the layer id
+
+The short name of a layer may be configured through
+:menuselection:`Properties --> Metadata` in layer menu. If the short name is
+defined, then it's used by default instead of the layer's name:
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetFeatureInfo
+  &LAYER=mynickname
+  &...
+
+Moreover, there's a project option allowing to select layers by their id in
+:menuselection:`OWS Server --> WMS capabilities` menu of the
+:menuselection:`Project --> Project Properties` dialog. To activate this
+option, the checkbox :guilabel:`Use layer ids as names` has to be selected.
+
+.. code-block:: none
+
+  http://localhost/qgis_server?
+  SERVICE=WMTS
+  &REQUEST=GetFeatureInfo
+  &LAYER=mylayerid1
+  &...
+
+
+INFOFORMAT
+^^^^^^^^^^
+
+This parameter allows to define the output format of the result. Available
+values are:
+
+- ``text/xml``
+- ``text/html``
+- ``text/plain``
+- ``application/vnd.ogc.gml``
+
+The default value is ``text/plain``.
+
+
+I
+^
+
+This parameter allows to define the X coordinate of the pixel for which we
+want to retrieve underlying information.
+
+
+J
+^
+
+This parameter allows to define the Y coordinate of the pixel for which we
+want to retrieve underlying information.
+
+
+.. _`extra-getmap-parameters`:
+
+Extra parameters supported by all request types
+===============================================
+
+* **FILE_NAME** parameter: if set, the server response will be sent to the
+  client as a file attachment with the specified file name.
+
+* **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to
+  specify the path to the QGIS project file. You can specify an absolute path
+  or a path relative to the location of the server executable
+  (:file:`qgis_mapserv.fcgi`).
+  If not specified, QGIS Server searches for .qgs files in the directory where
+  the server executable is located.
+
+  Example::
+
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?\
+      REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
+
+..  note::
+
+    You can define a **QGIS_PROJECT_FILE** as an environment variable to tell
+    the server executable where to find the QGIS project file. This variable
+    will be the location where QGIS will look for the project file. If not
+    defined it will use the MAP parameter in the request and finally look at
+    the server executable directory.
+
+
+.. _`qgisserver-redlining`:
+
+REDLINING
+=========
+
+This feature is available and can be used with ``GetMap`` and ``GetPrint`` requests.
+
+The redlining feature can be used to pass geometries and labels in the request which are
+overlapped by the server over the standard returned image (map).
+This permits the user to put emphasis or maybe add some comments (labels) to some areas,
+locations etc. that are not in the standard map.
+
+The request is in the format::
+
+ http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi?map=/world.qgs&SERVICE=WMS&VERSION=1.3.0&
+ REQUEST=GetMap
+ ...
+ &HIGHLIGHT_GEOM=POLYGON((590000 5647000, 590000 6110620, 2500000 6110620, 2500000 5647000, 590000 5647000))
+ &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%23ea1173</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
+ &HIGHLIGHT_LABELSTRING=Write label here
+ &HIGHLIGHT_LABELSIZE=16
+ &HIGHLIGHT_LABELCOLOR=%23000000
+ &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
+ &HIGHLIGHT_LABELBUFFERSIZE=1.5
+
+Here is the image outputed by the above request in which a polygon and a label
+are drawn on top of the normal map:
+
+.. _figure_server_redlining:
+
+.. figure:: img/server_redlining.png
+   :align: center
+
+   Server response to a GetMap request with redlining parameters
+
+You can see there are several parameters in this request:
+
+* **HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It supports multipart
+  geometries. Here is an example:  ``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``.
+  The coordinates should be in the CRS of the GetMap/GetPrint request.
+
+* **HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can change
+  the stroke width, color and opacity.
+
+* **HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this parameter.
+
+* **HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label.
+
+* **HIGHLIGHT_LABELCOLOR**: This parameter controls the label color.
+
+* **HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer color.
+
+* **HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer size.
+
+External WMS layers
+===================
+
+QGIS Server allows including layers from external WMS servers in WMS GetMap 
+and WMS GetPrint requests. This is especially useful if a web client uses an 
+external background layer in the web map. 
+For performance reasons, such layers should be directly requested by the web 
+client (not cascaded via QGIS server). For printing however, these layers 
+should be cascaded via QGIS server in order to appear in the printed map.
+
+External layers can be added to the LAYERS parameter as 
+EXTERNAL_WMS:<layername>. 
+The parameters for the external WMS layers (e.g. url, format, 
+dpiMode, crs, layers, styles) can later be given as service 
+parameters <layername>:<parameter>. 
+In a GetMap request, this might look like this:
+
+.. code-block:: none
+
+   http://localhost/qgis_server?
+   SERVICE=WMS&REQUEST=GetMap
+   ...
+   &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
+   &STYLES=,,
+   &basemap:url=http://externalserver.com/wms.fcgi
+   &basemap:format=image/jpeg
+   &basemap:dpiMode=7
+   &basemap:crs=EPSG:2056
+   &basemap:layers=orthofoto
+   &basemap:styles=default
+
+Similarly, external layers can be used in GetPrint requests:
+
+.. code-block:: none
+
+   http://localhost/qgis_server?
+   SERVICE=WMS
+   ...
+   &REQUEST=GetPrint&TEMPLATE=A4
+   &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
+   &map0:EXTENT=<minx,miny,maxx,maxy>
+   &basemap:url=http://externalserver.com/wms.fcgi
+   &basemap:format=image/jpeg
+   &basemap:dpiMode=7
+   &basemap:crs=EPSG:2056
+   &basemap:layers=orthofoto
+   &basemap:styles=default
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

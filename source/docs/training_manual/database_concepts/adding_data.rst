@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Adding Data to the Model
 ===============================================================================
 
@@ -11,7 +15,9 @@ Insert statement
 -------------------------------------------------------------------------------
 
 How do you add data to a table? The sql :kbd:`INSERT` statement provides the
-functionality for this::
+functionality for this:
+
+.. code-block:: sql
 
   insert into streets (name) values ('High street');
 
@@ -29,11 +35,15 @@ A couple of things to note:
 You should see :kbd:`INSERT 0 1` if it is successful.
 
 You can see the result of your insert action by selecting all the data in the
-table::
+table:
+
+.. code-block:: sql
 
   select * from streets;
 
-Result::
+Result:
+
+.. code-block:: sql
 
   select * from streets;
    id |    name
@@ -73,9 +83,9 @@ first creating a record for Main Street in the :kbd:`streets` table.
 
 You should have also noticed that:
 
- * You can't add the street using its name
- * You can't add a street using a street :kbd:`id` before first creating the
-   street record on the streets table
+* You can't add the street using its name
+* You can't add a street using a street :kbd:`id` before first creating the
+  street record on the streets table
 
 Remember that our two tables are linked via a Primary/Foreign Key pair. This
 means that no valid person can be created without there also being a valid
@@ -91,15 +101,18 @@ Select data
 -------------------------------------------------------------------------------
 
 We have already shown you the syntax for selecting records. Let's look at a few
-more examples::
+more examples:
+
+.. code-block:: sql
 
   select name from streets;
 
-::
+
+.. code-block:: sql
 
   select * from streets;
 
-::
+.. code-block:: sql
 
   select * from streets where name='Main Road';
 
@@ -109,7 +122,9 @@ Update data
 -------------------------------------------------------------------------------
 
 What if you want to make a change to some existing data? For example, a street
-name is changed::
+name is changed:
+
+.. code-block:: sql
 
   update streets set name='New Main Road' where name='Main Road';
 
@@ -117,7 +132,9 @@ Be very careful using such update statements - if more than one record matches
 your :kbd:`WHERE` clause, they will all be updated!
 
 A better solution is to use the primary key of the table to reference the
-record to be changed::
+record to be changed:
+
+.. code-block:: sql
 
   update streets set name='New Main Road' where id=2;
 
@@ -129,11 +146,15 @@ It should return :kbd:`UPDATE 1`.
 Delete Data
 -------------------------------------------------------------------------------
 
-In order to delete an object from a table, use the :kbd:`DELETE` command::
+In order to delete an object from a table, use the :kbd:`DELETE` command:
+
+.. code-block:: sql
 
   delete from people where name = 'Joe Smith';
 
-Let's look at our people table now::
+Let's look at our people table now:
+
+.. code-block:: sql
 
   address=# select * from people;
 
@@ -144,7 +165,9 @@ Let's look at our people table now::
 |TY| |hard|
 -------------------------------------------------------------------------------
 
-Use the skills you have learned to add some new friends to your database::
+Use the skills you have learned to add some new friends to your database:
+
+.. code-block:: sql
 
          name       | house_no | street_id |   phone_no
    -----------------+----------+-----------+--------------
@@ -166,3 +189,19 @@ and/or create new models to contain that data.
 
 Now that you've added some data, you'll learn how to use queries to access this
 data in various ways.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

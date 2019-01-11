@@ -10,3 +10,4 @@ Documentation Guidelines
    writing
    do_translations
    substitutions
+   first_contribution

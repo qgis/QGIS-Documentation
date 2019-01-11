@@ -1,25 +1,24 @@
-|updatedisclaimer|
+.. only:: html
 
+   |updatedisclaimer|
+
+.. index:: DB Manager
 .. _dbmanager:
 
 DB Manager Plugin
 =================
 
-The DB Manager Plugin is officially part of the QGIS core and is intended to be the main tool
-to integrate and manage spatial database formats supported by QGIS
-(PostGIS, SpatiaLite, Geopackage, Oracle Spatial, Virtual layers) in one user interface.
-The |dbmanager| :sup:`DB Manager` Plugin provides several features.
+The DB Manager Plugin is officially part of the QGIS core and is intended to be
+the main tool to integrate and manage spatial database formats supported by QGIS
+(PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, Virtual layers) in one user interface.
+The |dbManager| :sup:`DB Manager` Plugin provides several features.
 You can drag layers from the QGIS Browser into the DB Manager, and it will import your layer
 into your spatial database. You can drag and drop tables between spatial databases
 and they will get imported.
 
 .. _figure_db_manager:
 
-.. only:: html
-
-   **Figure DB Manager 1:**
-
-.. figure:: /static/user_manual/plugins/db_manager.png
+.. figure:: img/db_manager.png
    :align: center
 
    DB Manager dialog
@@ -64,16 +63,27 @@ results to QGIS as a query layer. It is possible to highlight a portion of the S
 and only that portion will be executed when you press :kbd:`F5` or click the 
 :guilabel:`Execute (F5)` button.
 
-.. _figure_db_manager_2:
+.. _figure_db_manager_queries:
 
-.. only:: html
-
-   **Figure DB Manager 2:**
-
-.. figure:: /static/user_manual/plugins/db_manager_sql.png
+.. figure:: img/db_manager_sql.png
    :align: center
 
    Executing SQL queries in the DB Manager SQL window
 
+.. note::
+
+   The SQL Window can also be used to create Virtual Layers. In that case,
+   instead of selecting a database, select **QGIS Layers** under **Virtual
+   Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` for
+   instructions on the SQL syntax to use.
 
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

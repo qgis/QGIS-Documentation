@@ -270,6 +270,11 @@ select#languages option {
   padding: 0 !important;
   margin-left: .1%;
   background: transparent url("logo.png") no-repeat 0 0 !important;
+  background-size:60px !important;
+}
+/* latest version numbers in header */
+.navbar-text.pull-left > p {
+  margin: 10px;
 }
 #main-body {
   position: absolute;
@@ -322,7 +327,7 @@ section {
   margin: 0;
 }
 div.related {
-  display:none; /* NOTE: for website: NO related bar, for docs: YES related bar! */
+  display:block; /* NOTE: for website: NO (none) related bar, for docs: YES (block) related bar! */
   padding-top:10px;
 }
 
@@ -687,6 +692,7 @@ section.content h4 {
 }
 #downloads .accordion-inner .qgis-download {
   background: url('images/qgis-logo.png') no-repeat left;
+  background-size:55px !important;
 }
 #downloads .accordion-inner .osgeo-download {
   background: url('images/osgeo-logo.png') no-repeat left;
@@ -823,7 +829,7 @@ section.menu nav.subnav ul li a:hover {
 }
 /* color for qgis version disclaimer (used when files need to be revised) */
 .disclaimer {
-  display: none; /* only to be make visible in testing */
+  display: block; /* only to be make visible in testing */
   color: black;
   margin-top: 17px;
   padding: 9px 30px 14px 50px;
@@ -876,7 +882,7 @@ section.menu nav.subnav ul li a:hover {
 }
 .admonition p img,
 .bordered-block p img {
-  float: left;
+  /*float: left;*/
   margin: 0 15px 0 0;
 }
 .guilabel {

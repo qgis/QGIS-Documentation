@@ -1,11 +1,298 @@
-|updatedisclaimer|
+.. only:: html
 
-********
-LAStools
-********
+   |updatedisclaimer|
 
-`LAStools <http://rapidlasso.com/lastools/>`_ is a collection of highly
+*******************************
+LAStools algorithm provider
+*******************************
+
+`LAStools <https://rapidlasso.com/lastools/>`_ is a collection of highly
 efficient, multicore command line tools for LiDAR data processing.
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+blast2dem
+---------
+
+Description
+...........
+
+Turns points (up to billions) via seamless Delaunay triangulation
+implemented using streaming into large elevation, intensity, or RGB rasters.
+
+For more info see the `blast2dem <https://rapidlasso.com/blast2dem>`_ page and 
+its online `README <http://lastools.org/download/blast2dem_README.txt>`__ file.
+
+Parameters
+..........
+
+``verbose`` [boolean]
+  Generates more textual control output to the console.
+  
+  Default: *False*
+
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
+``input LAS/LAZ file`` [points]
+  The file containing the points to be rastered in LAS/LAZ format.
+
+``filter`` [string]
+  Specifies which points to use to construct the temporary TIN that is then rastered.
+
+  Default: *---*
+
+``step size / pixel size`` [number]
+  Specifies the size of the cells of the grid the TIN is rastered onto.
+
+  Default: *1.0*
+
+``Attribute`` [string]
+  Specifies the attribute that is to be rastered.
+
+  Default: *elevation*
+
+``Product`` [string]
+  Specifies how the attribute is to be turned into raster values.
+
+  Default: *actual values*
+
+``use tile bounding box`` [boolean]
+  Specifies to limit the rastered area to the tile bounding box (only meaningful
+  for input LAS/LAZ tiles that were created with lastile).
+  
+  Default: *False*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user.
+
+  Default: *---*
+  
+Outputs
+.......
+
+``Output raster file`` [raster]
+  Specifies where the output raster is stored. Use image rasters like TIF, PNG, 
+  and JPG for false color, gray ramps, and hillshades. Use value rasters 
+  like TIF, BIL, IMG, ASC, DTM, FLT, XYZ, and CSV for actual values.
+
+
+blast2iso
+---------
+
+Description
+...........
+
+Turns points (up to billions) via seamless Delaunay triangulation
+implemented using streaming into large iso-contour lines (optionally tiled).
+
+For more info see the `blast2iso <https://rapidlasso.com/blast2iso>`_ page and
+its online `README <http://lastools.org/download/blast2iso_README.txt>`__ file.
+
+Parameters
+..........
+
+``verbose`` [boolean]
+  Generates more textual control output to the console.
+  
+  Default: *False*
+
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
+``input LAS/LAZ file`` [points]
+  The file containing the points to be rastered in LAS/LAZ format.
+
+``smooth`` [integer]
+  Specifies if and with how many passes the temporary TIN should be smoothed.
+
+  Default: *0*
+
+``extract isoline with spacing of`` [number]
+  Specifies spacing at which iso-contour lines are getting extracted.
+
+  Default: *10.0*
+
+``clean isolines shorter than`` [number]
+  Omits iso-contour lines that are shorter than the specified length.
+
+  Default: *0.0*
+
+``simplify segments shorter than`` [number]
+  Rudimentary simplification of iso-contour line segments that are shorter than
+  the specified length.
+
+  Default: *0.0*
+
+``simplify segment pairs with area less than`` [number]
+  Rudimentary simplification of bumps formed by consecutive line segments whose
+  area is smaller than the specified size.
+
+  Default: *0.0*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known
+  to the (advanced) LAStools user.
+
+  Default: *---*
+  
+Outputs
+.......
+
+``Output vector file`` [raster]
+  Specifies where the output vector is stored. Use SHP or WKT output files.
+  If your input LiDAR file is in geographic coordinates (long/lat) or has 
+  geo-referencing information (but only then) you can also create a KML output file.
+
+
+las2dem
+-------
+
+Description
+...........
+
+Turns points (up to 20 million) via a temporary Delaunay triangulation
+that is rasterized with a user-defined step size into an elevation, intensity, or
+RGB raster.
+
+For more info see the `las2dem <https://rapidlasso.com/las2dem>`_ page
+and its online `README <http://lastools.org/download/las2dem_README.txt>`__ file.
+
+Parameters
+..........
+
+``verbose`` [boolean]
+  Generates more textual control output to the console.
+  
+  Default: *False*
+
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
+``input LAS/LAZ file`` [points]
+  The file containing the points to be rastered in LAS/LAZ format.
+
+``filter`` [enumeration]
+  Specifies which points to use to construct the temporary TIN that is then rastered.
+
+  Default: *---*
+
+``step size / pixel size`` [number]
+  Specifies the size of the cells of the grid the TIN is rastered onto.
+
+  Default: *1.0*
+
+``Attribute`` [enumeration]
+  Specifies the attribute that is to be rastered.
+
+  Default: *elevation*
+
+``Product`` [enumeration]
+  Specifies how the attribute is to be turned into raster values.
+
+  Default: *actual values*
+
+``use tile bounding box`` [boolean]
+  Specifies to limit the rastered area to the tile bounding box (only meaningful
+  for input LAS/LAZ tiles that were created with lastile).
+  
+  Default: *False*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user.
+
+  Default: *---*
+  
+Outputs
+.......
+
+``Output raster file`` [raster]
+  Specifies where the output raster is stored. Use image rasters like TIF, PNG,
+  and JPG for false color, gray ramps, and hillshades. Use value rasters like
+  TIF, BIL, IMG, ASC, DTM, FLT, XYZ, and CSV for actual values.
+
+
+las2iso
+-------
+
+Description
+...........
+
+Turns point clouds (up to 20 million per file) into iso-contour lines
+by creating a temporary Delaunay triangulation on which the contours are then traced.
+
+For more info see the `las2iso <https://rapidlasso.com/las2iso>`_ page and its
+online `README <http://lastools.org/download/las2iso_README.txt>`__ file.
+
+Parameters
+..........
+
+``verbose`` [boolean]
+  Generates more textual control output to the console.
+  
+  Default: *False*
+
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
+``input LAS/LAZ file`` [points]
+  The file containing the points to be rastered in LAS/LAZ format.
+
+``smooth`` [integer]
+  Specifies if and with how many passes the temporary TIN should be smoothed.
+
+  Default: *0*
+
+``extract isoline with spacing of`` [number]
+  Specifies spacing at which iso-contour lines are getting extracted.
+
+  Default: *10.0*
+
+``clean isolines shorter than`` [number]
+  Omits iso-contour lines that are shorter than the specified length.
+
+  Default: *0.0*
+
+``simplify segments shorter than`` [number]
+  Rudimentary simplification of iso-contour line segments that are shorter than
+  the specified length.
+
+  Default: *0.0*
+
+``simplify segment pairs with area less than`` [number]
+  Rudimentary simplification of bumps formed by consecutive line segments whose
+  area is smaller than the specified size.
+
+  Default: *0.0*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user.
+
+  Default: *---*
+  
+Outputs
+.......
+
+``Output vector file`` [raster]
+  Specifies where the output vector is stored. Use SHP or WKT output files.
+  If your input LiDAR file is in geographic coordinates (long/lat) or has geo-referencing
+  information (but only then) you can also create a KML output file.
+
 
 las2las_filter
 --------------
@@ -13,23 +300,30 @@ las2las_filter
 Description
 ...........
 
-<put algorithm description here>
+Uses las2las to filter LiDAR points based on different attributes and
+to write the surviving subset of points to a new LAZ or LAS file.
+
+For more info see the `las2las <https://rapidlasso.com/las2las>`_ page and
+its online `README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 Parameters
 ..........
 
 ``verbose`` [boolean]
-  <put parameter description here>
+  Generates more textual control output to the console.
 
   Default: *False*
 
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
 ``input LAS/LAZ file`` [file]
-  Optional.
+  The file containing the points to be processed.
 
-  <put parameter description here>
-
-``filter (by return, classification, flags)`` [selection]
-  <put parameter description here>
+``filter (by return, classification, flags)`` [enumeration]
+  Filters points based on various options such as return, classification, or flags.
 
   Options:
 
@@ -52,8 +346,8 @@ Parameters
 
   Default: *0*
 
-``second filter (by return, classification, flags)`` [selection]
-  <put parameter description here>
+``second filter (by return, classification, flags)`` [enumeration]
+  Also filters points based on various options such as return, classification, or flags.
 
   Options:
 
@@ -76,18 +370,18 @@ Parameters
 
   Default: *0*
 
-``filter (by coordinate, intensity, GPS time, ...)`` [selection]
-  <put parameter description here>
+``filter (by coordinate, intensity, GPS time, ...)`` [enumeration]
+  Filters points based on various other options (that require a value as argument).
 
   Options:
 
   * 0 --- ---
-  * 1 --- clip_x_above
-  * 2 --- clip_x_below
-  * 3 --- clip_y_above
-  * 4 --- clip_y_below
-  * 5 --- clip_z_above
-  * 6 --- clip_z_below
+  * 1 --- drop_x_above
+  * 2 --- drop_x_below
+  * 3 --- drop_y_above
+  * 4 --- drop_y_below
+  * 5 --- drop_z_above
+  * 6 --- drop_z_below
   * 7 --- drop_intensity_above
   * 8 --- drop_intensity_below
   * 9 --- drop_gps_time_above
@@ -109,22 +403,22 @@ Parameters
   Default: *0*
 
 ``value for filter (by coordinate, intensity, GPS time, ...)`` [string]
-  <put parameter description here>
+  The value that is the argument for the filter selected above.
 
   Default: *(not set)*
 
-``second filter (by coordinate, intensity, GPS time, ...)`` [selection]
-  <put parameter description here>
+``second filter (by coordinate, intensity, GPS time, ...)`` [enumeration]
+  Also filters points based on various other options (that require a value as argument).
 
   Options:
 
   * 0 --- ---
-  * 1 --- clip_x_above
-  * 2 --- clip_x_below
-  * 3 --- clip_y_above
-  * 4 --- clip_y_below
-  * 5 --- clip_z_above
-  * 6 --- clip_z_below
+  * 1 --- drop_x_above
+  * 2 --- drop_x_below
+  * 3 --- drop_y_above
+  * 4 --- drop_y_below
+  * 5 --- drop_z_above
+  * 6 --- drop_z_below
   * 7 --- drop_intensity_above
   * 8 --- drop_intensity_below
   * 9 --- drop_gps_time_above
@@ -146,25 +440,23 @@ Parameters
   Default: *0*
 
 ``value for second filter (by coordinate, intensity, GPS time, ...)`` [string]
-  <put parameter description here>
+  The value that is the argument for the filter selected above.
 
   Default: *(not set)*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user.
+
+  Default: *---*
 
 Outputs
 .......
 
 ``output LAS/LAZ file`` [file]
-  <put output description here>
+  Specifies where the output point cloud is stored. Use LAZ for compressed output,
+  LAS for uncompressed output, and TXT for ASCII.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:las2lasfilter', verbose, input_laslaz, filter_return_class_flags1, filter_return_class_flags2, filter_coords_intensity1, filter_coords_intensity1_arg, filter_coords_intensity2, filter_coords_intensity2_arg, output_laslaz)
-
-See also
-........
 
 las2las_project
 ---------------
@@ -183,11 +475,11 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
-``source projection`` [selection]
+``source projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -201,7 +493,7 @@ Parameters
 
   Default: *0*
 
-``source utm zone`` [selection]
+``source utm zone`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -330,7 +622,7 @@ Parameters
 
   Default: *0*
 
-``source state plane code`` [selection]
+``source state plane code`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -466,7 +758,7 @@ Parameters
 
   Default: *0*
 
-``target projection`` [selection]
+``target projection`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -480,7 +772,7 @@ Parameters
 
   Default: *0*
 
-``target utm zone`` [selection]
+``target utm zone`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -609,7 +901,7 @@ Parameters
 
   Default: *0*
 
-``target state plane code`` [selection]
+``target state plane code`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -751,39 +1043,37 @@ Outputs
 ``output LAS/LAZ file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:las2lasproject', verbose, input_laslaz, source_projection, source_utm, source_sp, target_projection, target_utm, target_sp, output_laslaz)
-
-See also
-........
 
 las2las_transform
------------------
+------------------
 
 Description
 ...........
 
-<put algorithm description here>
+Uses las2las to filter LiDAR points based on different attributes and
+to write the surviving subset of points to a new LAZ or LAS file.
+
+For more info see the `las2las <https://rapidlasso.com/las2las>`_ page and
+its online `README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 Parameters
 ..........
 
 ``verbose`` [boolean]
-  <put parameter description here>
+  Generates more textual control output to the console.
 
   Default: *False*
 
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
 ``input LAS/LAZ file`` [file]
-  Optional.
+  The file containing the points to be processed.
 
-  <put parameter description here>
-
-``transform (coordinates)`` [selection]
-  <put parameter description here>
+``transform (coordinates)`` [enumeration]
+  Either translate, scale, or clamp the X, Y, or Z coordinate by the value specified below.
 
   Options:
 
@@ -800,12 +1090,14 @@ Parameters
   Default: *0*
 
 ``value for transform (coordinates)`` [string]
-  <put parameter description here>
+  The value that specifies the amount of translating, scaling, or clamping done
+  by the transform selected above.
 
   Default: *(not set)*
 
-``second transform (coordinates)`` [selection]
-  <put parameter description here>
+``second transform (coordinates)`` [enumeration]
+  Also either translate, scale, or clamp the X, Y, or Z coordinate by the value
+  specified below.
 
   Options:
 
@@ -822,11 +1114,12 @@ Parameters
   Default: *0*
 
 ``value for second transform (coordinates)`` [string]
-  <put parameter description here>
+  The value that specifies the amount of translating, scaling, or clamping done
+  by the transform selected above.
 
   Default: *(not set)*
 
-``transform (intensities, scan angles, GPS times, ...)`` [selection]
+``transform (intensities, scan angles, GPS times, ...)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -849,11 +1142,12 @@ Parameters
   Default: *0*
 
 ``value for transform (intensities, scan angles, GPS times, ...)`` [string]
-  <put parameter description here>
+  The value that specifies the amount of scaling, translating, clamping or setting
+  that is done by the transform selected above.
 
   Default: *(not set)*
 
-``second transform (intensities, scan angles, GPS times, ...)`` [selection]
+``second transform (intensities, scan angles, GPS times, ...)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -876,11 +1170,12 @@ Parameters
   Default: *0*
 
 ``value for second transform (intensities, scan angles, GPS times, ...)`` [string]
-  <put parameter description here>
+  The value that specifies the amount of scaling, translating, clamping or setting
+  that is done by the transform selected above.
 
   Default: *(not set)*
 
-``operations (first 7 need an argument)`` [selection]
+``operations (first 7 need an argument)`` [enumeration]
   <put parameter description here>
 
   Options:
@@ -905,25 +1200,23 @@ Parameters
   Default: *0*
 
 ``argument for operation`` [string]
-  <put parameter description here>
+  The value that is the argument for the operation selected above.
 
   Default: *(not set)*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user.
+
+  Default: *---*
 
 Outputs
 .......
 
 ``output LAS/LAZ file`` [file]
-  <put output description here>
+  Specifies where the output point cloud is stored. Use LAZ for compressed output,
+  LAS for uncompressed output, and TXT for ASCII.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:las2lastransform', verbose, input_laslaz, transform_coordinate1, transform_coordinate1_arg, transform_coordinate2, transform_coordinate2_arg, transform_other1, transform_other1_arg, transform_other2, transform_other2_arg, operation, operationarg, output_laslaz)
-
-See also
-........
 
 las2txt
 -------
@@ -942,7 +1235,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -957,15 +1250,6 @@ Outputs
 ``Output ASCII file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:las2txt', verbose, input_laslaz, parse_string, output)
-
-See also
-........
 
 lasindex
 --------
@@ -984,7 +1268,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -995,16 +1279,86 @@ Parameters
 
 Outputs
 .......
+  <put output description here>
 
-Console usage
-.............
 
-::
+lasgrid
+-------
 
-  processing.runalg('lidartools:lasindex', verbose, input_laslaz, mobile_or_terrestrial)
+Description
+...........
 
-See also
-........
+Grids a selected attribute (e.g. elevation, intensity, classification,
+scan angle, ...) of a large point clouds with a user-defined step size onto raster
+using a particular method (e.g. min, max, average).
+
+For more info see the `lasgrid <https://rapidlasso.com/lasgrid>`_ page and
+its online `README <http://lastools.org/download/lasgrid_README.txt>`__ file.
+
+Parameters
+..........
+
+``verbose`` [boolean]
+  Generates more textual control output to the console.
+  
+  Default: *False*
+
+``open LAStools GUI`` [boolean]
+  Starts the GUI of LAStools with pre-populated input files.
+  
+  Default: *False*
+  
+``input LAS/LAZ file`` [points]
+  The file containing the points to be rastered in LAS/LAZ format.
+
+``filter`` [string]
+  Specifies which subset of points to use for subsequent gridding.
+
+  Default: *---*
+
+``step size / pixel size`` [number]
+  Specifies the size of the grid cells the points are binned into.
+
+  Default: *1.0*
+
+``Attribute`` [string]
+  Specifies the attribute that is to be gridded into each cell.
+
+  Default: *elevation*
+
+``Method`` [string]
+  Specifies how the attributes falling into one cell are turned into a raster value.
+
+  Default: *lowest*
+
+``use tile bounding box`` [boolean]
+  Specifies to limit the rastered area to the tile bounding box (only meaningful
+  for input LAS/LAZ tiles that were created with lastile).
+  
+  Default: *False*
+
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user. A common thing to add here would be '-false or
+  '-gray' to map all values to a color or a gray value (optionally with a specified
+  range of '-set_min_max 40 90' and produce an image.
+
+  Default: *---*
+  
+``additional command line parameter(s)`` [string]
+  Specifies other command-line switches not available via this menu but known to
+  the (advanced) LAStools user.
+
+  Default: *---*
+  
+Outputs
+.......
+
+``Output raster file`` [raster]
+  Specifies where the output raster is stored. Use image rasters like TIF, PNG,
+  and JPG for false color or gray ramps. Use value rasters like TIF, BIL, IMG,
+  ASC, DTM, FLT, XYZ, and CSV for actual values.
+
 
 lasinfo
 -------
@@ -1023,7 +1377,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1033,15 +1387,6 @@ Outputs
 ``Output ASCII file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:lasinfo', verbose, input_laslaz, output)
-
-See also
-........
 
 lasmerge
 --------
@@ -1065,37 +1410,37 @@ Parameters
   Default: *True*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``2nd file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``3rd file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``4th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``5th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``6th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
 ``7th file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1105,15 +1450,6 @@ Outputs
 ``output LAS/LAZ file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:lasmerge', verbose, files_are_flightlines, input_laslaz, file2, file3, file4, file5, file6, file7, output_laslaz)
-
-See also
-........
 
 lasprecision
 ------------
@@ -1132,7 +1468,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1142,15 +1478,6 @@ Outputs
 ``Output ASCII file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:lasprecision', verbose, input_laslaz, output)
-
-See also
-........
 
 lasquery
 --------
@@ -1175,16 +1502,8 @@ Parameters
 
 Outputs
 .......
+  <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:lasquery', verbose, aoi)
-
-See also
-........
 
 lasvalidate
 -----------
@@ -1203,7 +1522,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1213,15 +1532,6 @@ Outputs
 ``Output XML file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:lasvalidate', verbose, input_laslaz, output)
-
-See also
-........
 
 laszip
 ------
@@ -1240,7 +1550,7 @@ Parameters
   Default: *False*
 
 ``input LAS/LAZ file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1255,15 +1565,6 @@ Outputs
 ``output LAS/LAZ file`` [file]
   <put output description here>
 
-Console usage
-.............
-
-::
-
-  processing.runalg('lidartools:laszip', verbose, input_laslaz, report_size, output_laslaz)
-
-See also
-........
 
 txt2las
 -------
@@ -1282,7 +1583,7 @@ Parameters
   Default: *False*
 
 ``Input ASCII file`` [file]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -1312,13 +1613,11 @@ Outputs
 ``output LAS/LAZ file`` [file]
   <put output description here>
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('lidartools:txt2las', verbose, input, parse_string, skip, scale_factor_xy, scale_factor_z, output_laslaz)
-
-See also
-........
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

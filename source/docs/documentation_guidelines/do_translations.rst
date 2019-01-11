@@ -7,11 +7,11 @@ Translation Guidelines
 .. contents::
    :local:
 
-This manual is aiming to help the translator.
+This  manual is aiming to help the translator.
 First the general process of how technically a translation is done
-is explained. Later the translation is explained from an actual English
+is explained.  Later the translation is explained from an actual English
 rst document that is translated to Dutch.
-Finally a summary of `Rules of translation <translation_summary>`_ is given.
+Finally a summary of :ref:`Rules of translation <translation_summary>` is given.
 
 Although these guidelines focus on QGIS documentation, the methods and
 the rules described below are also applicable to QGIS applications and
@@ -114,7 +114,7 @@ Translation in Transifex
 ........................
 
 In order to translate QGIS with Transifex, you first need to `join the project
-<http://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
+<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
 you got a team, click on the corresponding project and your language.
 You get a list of all translatable ``.po`` files. Click on the
 ``docs_user-manual_plugins_plugins-heatmap`` to select the heatmap plugin file
@@ -122,10 +122,10 @@ and choose ``Translate`` in the prompted dialog.
 Note that you can also choose to download the file and translate it
 with tools like Qt Linguist.
 The next page lists all the sentences in the file. All you need to do is select
-the text and translate following the `guidelines <translate_manual>`_.
+the text and translate following the :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
-http://docs.transifex.com/tutorials/txeditor/.
+https://docs.transifex.com/translation/translating-with-the-web-editor.
 
 
 .. _translation_linguist:
@@ -137,48 +137,28 @@ With Qt Linguist, you need to manually grab the ``.po`` file.
 When you open the file in Qt Linguist for the first time you will see the
 following dialog:
 
-.. _figure_translation_1:
+.. _figure_translation_language:
 
-.. only:: html
-
-   **Figure Translation 1:**
-
-.. figure:: /static/documentation_guidelines/linguist_choose_language.png
+.. figure:: img/linguist_choose_language.png
    :align: center
 
-   Select language for translation in linguist menu |osx|
+   Select language for translation in linguist menu
 
 
 The Target language should be filled correctly. The Source language can be left
 as is with language POSIX and Country/Region on Any Country.
 
-When you press the **[OK]** button Qt Linguist is filled with sentences and
-you can start translating, see Figure_translation_2_.
+When you press the :guilabel:`OK` button Qt Linguist is filled with sentences and
+you can start translating, see Figure_translation_menu_.
 
 
-.. _figure_translation_2:
+.. _figure_translation_menu:
 
-.. only:: html
-
-   **Figure Translation 2:**
-
-.. figure:: /static/documentation_guidelines/linguist_menu.png
+.. figure:: img/linguist_menu.png
    :align: center
    :width: 50em
 
    Translate using the linguist menu
-
-
-.. |linguist_done_next| image:: /static/documentation_guidelines/linguist_done_next.png
-   :width: 2em
-.. |linguist_next| image:: /static/documentation_guidelines/linguist_next.png
-   :width: 2em
-.. |linguist_previous| image:: /static/documentation_guidelines/linguist_previous.png
-   :width: 2em
-.. |linguist_next_todo| image:: /static/documentation_guidelines/linguist_next_todo.png
-   :width: 2em
-.. |linguist_previous_todo| image:: /static/documentation_guidelines/linguist_previous_todo.png
-   :width: 2em
 
 In the menu you see the following buttons which are convenient to use.
 
@@ -215,7 +195,7 @@ need special translation.
 
 Below we see an interesting sentence to translate:
 
-::
+.. code-block:: rst
 
    The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a
    point vector map. A heatmap is a raster map showing the density or
@@ -240,7 +220,7 @@ commonly used to refer to another section somewhere in the manual! The text
 following a ``:ref:`` statement should never be changed because it is a unique
 identifier!
 
-::
+.. code-block:: rst
 
    First this core plugin needs to be activated using the Plugin Manager
    (see Section :ref:`load_core_plugin`). After activation the heatmap icon
@@ -256,7 +236,7 @@ The next item contains the rst-tag ``:menuselection:`` followed by text
 actually displayed in a menu in QGIS application, this may be translated in the
 application and therefore should be changed when this is the case.
 
-::
+.. code-block:: rst
 
    Select from menu :menuselection:`View --> Toolbars --> Raster` to activate
    the Raster Toolbar when it is not yet activated.
@@ -266,21 +246,21 @@ the translation used in the Dutch localized QGIS application.
 
 A bit further we meet the following tricky translation item:
 
-::
+.. code-block:: rst
 
    The |heatmap| :sup:`Heatmap` tool button starts the Dialog of the Heatmap
-   plugin (see figure_heatmap_2_).
+   plugin (see figure_heatmap_settings_).
 
-It holds a reference to a figure ``figure_heatmap_2_``, and like a reference
+It holds a reference to a figure ``figure_heatmap_settings_``, and like a reference
 to section this reference should not be changed!! The reference definition
 itself from the rst-document is not included in the ``.po`` file and can therefore
 not be changed. This means the reference to figures can not be translated. When
-HTML is created you will see ``figure_heatmap_2``. When a PDF document is
-created ``figure_heatmap_2_`` is replaced with a figure number.
+HTML is created you will see ``figure_heatmap_settings``. When a PDF document is
+created ``figure_heatmap_settings_`` is replaced with a figure number.
 
 The next translation item with rst attributes is the following item:
 
-::
+.. code-block:: rst
 
     **Input Point dialog**: Provides a selection of loaded point vector maps.
 
@@ -290,7 +270,7 @@ translated in the application.
 
 The following translation item contains the ``:guilabel:`` rst tag.
 
-::
+.. code-block:: rst
 
     When the |checkbox| :guilabel:`Advanced` checkbox is checked it will
     give access to additional advanced options.
@@ -302,18 +282,18 @@ The following translation item contains \``airports\``. The quotes are
 used to give the text another text font. In this case it is a literal value and
 does not need translation.
 
-::
+.. code-block:: rst
 
     For the following example, we will use the ``airports`` vector point
     layer from the QGIS sample dataset (see :ref:`label_sampledata`).
     Another excellent QGIS tutorial on making heatmaps can be found on
-    `http://qgis.spatialthoughts.com
-    <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
+    `https://www.qgistutorials.com
+    <https://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
 
 This item also includes a hyperlink with an url and an external presentation.
 The url should of course be left intact, you are allowed to change the external
-text ``http://qgis.spatialthoughts.com`` which is visible by the reader. Never
+text ``https://www.qgistutorials.com`` which is visible by the reader. Never
 remove the underscore at the end of the hyperlink which forms an essential
 part of it!!
 
@@ -324,7 +304,7 @@ Summary Rules for translation
 .............................
 
 #. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``, 
-   ``|labels|``, ``|selectstring|``, ``|mActionAddLayer|`` ... These are special tags
+   ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These are special tags
    used to replace images
 #. Do not change references that start with the tag ``:ref:`` or ``:file:``
 #. Do not change references that end with an underscore like ``figure_labels_1_``
@@ -349,3 +329,29 @@ For any question, please contact the `QGIS Community Team
 <qgis-community-team@lists.osgeo.org>`_ or the
 `QGIS Translation Team <qgis-tr@lists.osgeo.org>`_.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |heatmap| image:: /static/common/heatmap.png
+   :width: 1.5em
+.. |linguist_done_next| image:: img/linguist_done_next.png
+   :width: 2em
+.. |linguist_next| image:: img/linguist_next.png
+   :width: 2em
+.. |linguist_next_todo| image:: img/linguist_next_todo.png
+   :width: 2em
+.. |linguist_previous| image:: img/linguist_previous.png
+   :width: 2em
+.. |linguist_previous_todo| image:: img/linguist_previous_todo.png
+   :width: 2em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

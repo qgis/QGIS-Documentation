@@ -4,7 +4,7 @@ Introducing GIS
 ***************
 
 +-------------------+-------------+------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding what GIS is and what it can be used for.           |
+| |gentleLogo|      | Objectives: | Understanding what GIS is and what it can be used for.           |
 +                   +-------------+------------------------------------------------------------------+
 |                   | Keywords:   | GIS, Computer, Maps, Data, Information System, Spatial, Analysis |
 +-------------------+-------------+------------------------------------------------------------------+
@@ -64,11 +64,7 @@ patterns of illness:
 
 .. _figure_gis_application:
 
-.. only:: html
-
-   **Figure Patterns of illness:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/patterns_of_illness.png
+.. figure:: img/patterns_of_illness.png
    :align: center
    :width: 30em
 
@@ -99,11 +95,8 @@ mouse, show a panel of **actions**. These actions provide a way for you to tell
 the GIS Application what you want to do. For example you may use the menus to tell
 the GIS Application to add a new layer to the display output.
 
-.. only:: html
 
-   **Figure Menus in GIS Application:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/menus.png
+.. figure:: img/menus.png
    :align: center
 
    Application menus, when clicked with the mouse, expand to show a list of
@@ -113,11 +106,8 @@ the GIS Application to add a new layer to the display output.
 sit just below the menus and provide a quicker way to use frequently needed
 actions.
 
-.. only:: html
 
-   **Figure Toolbars in GIS Application:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/toolbars.png
+.. figure:: img/toolbars.png
    :align: center
 
    Toolbars provide quick access to commonly used functions. Holding your mouse
@@ -131,31 +121,23 @@ will have data about the street network.
 When you open a layer in the GIS Application it will appear in the **map view**.
 The map view shows a graphic representing your layer. When you add more than one
 layer to a map view, the layers are overlaid on top of each other. Look at
-figures figure_map_view_1_, figure_map_view_2_, figure_map_view_3_ and
-figure_map_view_4_ to see a map view that has several layers being added to it.
+figures figure_map_view_towns_, figure_map_view_schools_, figure_map_view_railways_ and
+figure_map_view_rivers_ to see a map view that has several layers being added to it.
 An important function of the map view is to allow you to zoom in to magnify,
 zoom out to see a greater area and move around (panning) in the map.
 
-.. _figure_map_view_1:
+.. _figure_map_view_towns:
 
-.. only:: html
-
-   **Figure Map View 1:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_towns.png
+.. figure:: img/map_view_towns.png
    :align: center
    :width: 30em
 
    A map view with several layers being added to it. A towns layer added to the
    map view.
 
-.. _figure_map_view_2:
+.. _figure_map_view_schools:
 
-.. only:: html
-
-   **Figure Map View 2:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_schools.png
+.. figure:: img/map_view_schools.png
    :align: center
    :width: 30em
 
@@ -163,26 +145,18 @@ zoom out to see a greater area and move around (panning) in the map.
    the map view
 
 
-.. _figure_map_view_3:
+.. _figure_map_view_railways:
 
-.. only:: html
-
-   **Figure Map View 3:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_railways.png
+.. figure:: img/map_view_railways.png
    :align: center
    :width: 30em
 
    A map view with several layers being added to it. A railways layer added to
    the map view
 
-.. _figure_map_view_4:
+.. _figure_map_view_rivers:
 
-.. only:: html
-
-   **Figure Map View 4:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_view_rivers.png
+.. figure:: img/map_view_rivers.png
    :align: center
    :width: 30em
 
@@ -194,45 +168,33 @@ provides a list of layers that have been loaded in the GIS Application. Unlike a
 paper map legend, the map legend or 'layers list' in the GIS Application provides
 a way to re-order, hide, show and group layers. Changing the layer order is done
 by clicking on a layer in the legend, holding the mouse button down and then
-dragging the layer to a new position. In figures figure_map_legend_1 and
-figure_map_legend_2_ the map legend is shown as the area to the left of the GIS
+dragging the layer to a new position. In figures figure_map_legend_before_ and
+figure_map_legend_after_ the map legend is shown as the area to the left of the GIS
 Application window. By changing the layer order, the way that layers are drawn
 can be adjusted –-- in this case so that rivers are drawn over the roads instead
 of below them.
 
-.. _figure_map_symbology_1:
+.. _figure_map_symbology:
 
-.. only:: html
-
-   **Figure Map Symbology 1:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/symbology.png
+.. figure:: img/symbology.png
    :align: center
    :width: 30em
 
    GIS Software let you easily change symbology --- the way information is displayed.
 
 
-.. _figure_map_legend_1:
+.. _figure_map_legend_before:
 
-.. only:: html
-
-   **Figure Map Legend 1:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_legend_before.png
+.. figure:: img/map_legend_before.png
    :align: center
    :width: 30em
 
    Changing the layer order allows to adjust the way that layers are drawn. Before
    changing the layer order, rivers are drawn underneath roads
 
-.. _figure_map_legend_2:
+.. _figure_map_legend_after:
 
-.. only:: html
-
-   **Figure Map Legend 2:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/map_legend_after.png
+.. figure:: img/map_legend_after.png
    :align: center
    :width: 30em
 
@@ -250,8 +212,7 @@ a question of how much money you can afford and personal preference. For these
 tutorials, we will be using the QGIS Application. QGIS is completely free and you 
 can copy it and share it with your friends as much as you like. If you received 
 this tutorial in printed form, you should have received a copy of QGIS with it. 
-If not, you can always visit
-http://hub.qgis.org/projects/quantum-gis/wiki/Download to download your free copy
+If not, you can always visit https://www.qgis.org/ to download your free copy
 if you have access to the internet.
 
 GIS Data
@@ -290,11 +251,7 @@ tutorials that follow we will be exploring vector data in more detail.
 
 .. _figure_vector_data:
 
-.. only:: html
-
-   **Figure Vector Data 1:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/vector_data.png
+.. figure:: img/vector_data.png
    :align: center
    :width: 30em
 
@@ -305,30 +262,22 @@ tutorials that follow we will be exploring vector data in more detail.
 the earth and the photographs they take are a kind of raster data that can be
 viewed in a GIS. One important difference between raster and vector data is that
 if you zoom in too much on a raster image, it will start to appear 'blocky' (see
-illustrations figure_raster_data_1_ and figure_raster_data_2_). In fact these
+illustrations figure_raster_data_ and figure_raster_data_zoom_). In fact these
 blocks are the individual cells of the data grid that makes up the raster image.
 We will be looking at raster data in greater detail in later tutorials.
 
-.. _figure_raster_data_1:
+.. _figure_raster_data:
 
-.. only:: html
-
-   **Figure Raster Data 1:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/raster_data.png
+.. figure:: img/raster_data.png
    :align: center
    :width: 30em
 
    Raster data are often images taken by satellites. Here we can see mountains
    in the Eastern Cape.
 
-.. _figure_raster_data_2:
+.. _figure_raster_data_zoom:
 
-.. only:: html
-
-   **Figure Raster Data 2:**
-
-.. figure:: /static/gentle_gis_introduction/introducing_gis/raster_data_zoomed.png
+.. figure:: img/raster_data_zoomed.png
    :align: center
    :width: 30em
 
@@ -402,3 +351,13 @@ What's next?
 In the sections that follow we are going to go into more detail, showing you how
 to use a GIS Application. All of the tutorials will be done using QGIS. Next up,
 let's look at vectors!
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

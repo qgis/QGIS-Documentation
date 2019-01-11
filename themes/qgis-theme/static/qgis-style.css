@@ -270,6 +270,11 @@ select#languages option {
   padding: 0 !important;
   margin-left: .1%;
   background: transparent url("logo.png") no-repeat 0 0 !important;
+  background-size: 60px !important;
+}
+/* latest version numbers in header */
+.navbar-text.pull-left > p {
+  margin: 10px;
 }
 #main-body {
   position: absolute;
@@ -322,9 +327,8 @@ section {
   margin: 0;
 }
 div.related {
-  /*display: none;*/
-  /* NOTE: for website: NO related bar, for docs: YES related bar! */
-
+  display: block;
+  /* NOTE: for website: NO (none) related bar, for docs: YES (block) related bar! */
   padding-top: 10px;
 }
 /*
@@ -341,9 +345,7 @@ div.section:before {
   height: 60px;
   /*margin: -60px 0 0 0;*/
   /*nice hack, but this breaks responsiveness for related bar*/
-
   /*this is working for non frontpages*/
-
 }
 /* span achors are a little more difficult,
 these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
@@ -687,6 +689,7 @@ section.content h4 {
 }
 #downloads .accordion-inner .qgis-download {
   background: url('images/qgis-logo.png') no-repeat left;
+  background-size: 55px !important;
 }
 #downloads .accordion-inner .osgeo-download {
   background: url('images/osgeo-logo.png') no-repeat left;
@@ -825,7 +828,6 @@ section.menu nav.subnav ul li a:hover {
 .disclaimer {
   display: block;
   /* only to be make visible in testing */
-
   color: black;
   margin-top: 17px;
   padding: 9px 30px 14px 50px;
@@ -879,7 +881,7 @@ section.menu nav.subnav ul li a:hover {
 }
 .admonition p img,
 .bordered-block p img {
-  float: left;
+  /*float: left;*/
   margin: 0 15px 0 0;
 }
 .guilabel {

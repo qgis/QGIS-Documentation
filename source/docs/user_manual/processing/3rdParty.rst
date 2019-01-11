@@ -1,28 +1,34 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
 
 .. _`processing.results`:
 
 Configuring external applications
 =================================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 The processing framework can be extended using additional applications.
-Currently, SAGA, GRASS, OTB (Orfeo Toolbox) and R are supported, along
-with some other command-line applications that provide spatial data analysis
-functionalities. Algorithms relying on an external applications are managed by
-their own algorithm provider.
+Currently, SAGA, GRASS and R are supported. Algorithms relying on an
+external applications are managed by their own algorithm provider.
+Additional providers can be found as separate plugins, and installed using
+the QGIS Plugin Manager.
 
-This section will show you how to configure the processing framework to include these additional
-applications, and it will explain some particular features of the algorithms based
-on them. Once you have correctly configured the system, you will be able to
-execute external algorithms from any component like the toolbox or the
-graphical modeler, just like you do with any other geoalgorithm.
+This section will show you how to configure the Processing framework to
+include these additional applications, and it will explain some particular
+features of the algorithms based on them. Once you have correctly configured
+the system, you will be able to execute external algorithms from any
+component like the toolbox or the graphical modeler, just like you do with
+any other geoalgorithm.
 
-By default, all algorithms that rely on an external application not shipped with
-QGIS are not enabled. You can enable them in the settings dialog.
-Make sure that the corresponding application is already installed in your system.
+By default, all algorithms that rely on an external application not shipped
+with QGIS are not enabled. You can enable them in the settings dialog.
+Make sure that the corresponding application is already installed in your
+system.
 
 
 A note for Windows users
@@ -31,23 +37,21 @@ A note for Windows users
 If you are not an advanced user and you are running QGIS on Windows, you might
 not be interested in reading the rest of this chapter. Make sure you install
 QGIS in your system using the standalone installer. That will automatically
-install SAGA, GRASS and OTB in your system and configure them so they can be
+install SAGA and GRASS in your system and configure them so they can be
 run from QGIS. All the algorithms from these providers will
 be ready to be run without needing any further configuration. If installing
-through OSGeo4W application, make sure you select for installation SAGA, GRASS and
-OTB as well.
+through OSGeo4W application, make sure you select for installation SAGA and
+GRASS as well.
 
-If you want to know more about how these providers work, or if you want to use some
-algorithms not included in the simplified toolbox (such as R scripts), keep on
-reading.
 
 A note on file formats
 ----------------------
 
-When using an external software, opening a file in QGIS does not mean that it can
-be opened and processed as well in that other software. In most cases, other software can read
-what you have opened in QGIS, but in some cases, that might not be true. When
-using databases or uncommon file formats, whether for raster or vector layers,
+When using an external software, opening a file in QGIS does not mean that
+it can be opened and processed as well in that other software. In most
+cases, other software can read what you have opened in QGIS, but in some
+cases, that might not be true. When using databases or uncommon file
+formats, whether for raster or vector layers,
 problems might arise. If that happens, try to use well-known file formats that
 you are sure are understood by both programs, and check the console output
 (in the history and log dialog) to know more about what is going wrong.
@@ -61,15 +65,15 @@ You should, however, find no problems at all with vector layers, since QGIS
 automatically converts from the original file format to one accepted by the
 external application before passing the layer to it. This adds extra processing
 time, which might be significant if the layer has a large size, so do not be
-surprised if it takes more time to process a layer from a DB connection than it does to process one of a
-similar size stored in a shapefile.
+surprised if it takes more time to process a layer from a DB connection than it
+process a layer from a Shapefile format dataset of similar size.
 
-Providers not using external applications can process any layer that you can open
-in QGIS, since they open it for analysis through QGIS.
+Providers not using external applications can process any layer that you can
+open in QGIS, since they open it for analysis through QGIS.
 
 Regarding output formats, all formats supported by QGIS as output can be used,
-both for raster and vector layers. Some providers do not support certain formats,
-but all can export to common  formats that can later be transformed
+both for raster and vector layers. Some providers do not support certain
+formats, but all can export to common  formats that can later be transformed
 by QGIS automatically. As in the case of input layers, if this conversion is
 needed, that might increase the processing time.
 
@@ -77,62 +81,64 @@ needed, that might increase the processing time.
 A note on vector layer selections
 ---------------------------------
 
-External applications may also be made aware of the selections that exist in vector layers
-within QGIS. However, that requires rewriting all input vector layers, just as
-if they were originally in a format not supported by the external application.
-Only when no selection exists, or the *Use only selected features* option is not
-enabled in the processing general configuration, can a layer be directly passed to
-an external application.
+External applications may also be made aware of the selections that exist in
+vector layers within QGIS. However, that requires rewriting all input vector
+layers, just as if they were originally in a format not supported by the
+external application. Only when no selection exists, or the *Use only
+selected features* option is not enabled in the processing general
+configuration, can a layer be directly passed to an external application.
 
-In other cases, exporting only selected features is needed, which causes execution
-times to be longer.
+In other cases, exporting only selected features is needed, which causes
+execution times to be longer.
 
 SAGA
 ----
 
 SAGA algorithms can be run from QGIS if you have SAGA installed in your system
-and you configure the processing framework properly so it can find SAGA executables. In particular,
-the SAGA command-line executable is needed to run SAGA algorithms.
+and you configure the processing framework properly so it can find SAGA
+executables. In particular, the SAGA command-line executable is needed to
+run SAGA algorithms.
 
 
-If you are running Windows, both the stand-alone installer and the OSGeo4W installer
-include SAGA along with QGIS, and the path is automatically configured, so there is
-no need to do anything else.
+If you are running Windows, both the stand-alone installer and the OSGeo4W
+installer include SAGA along with QGIS, and the path is automatically
+configured, so there is no need to do anything else.
 
-If you have installed SAGA yourself and your QGIS installer did not include it, the path to the
-SAGA executable must be configured. To do this, open the
-configuration dialog. In the :guilabel:`SAGA` block, you will find a setting named
-:guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
-Close the configuration dialog, and now you are ready to run SAGA algorithms from
-QGIS.
+If you have installed SAGA yourself and your QGIS installer did not include
+it, the path to the SAGA executable must be configured. To do this, open the
+configuration dialog. In the :guilabel:`SAGA` block, you will find a setting
+named :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is
+installed. Close the configuration dialog, and now you are ready to run SAGA
+algorithms from QGIS.
 
-If you are running Linux, SAGA binaries
-are not included with Processing, so you have to download and install the software
-yourself. Please check the SAGA website for more information.
+If you are running Linux, SAGA binaries are not included with Processing, so
+you have to download and install the software yourself. Please check the
+SAGA website for more information.
 
-In this case, there is no need to configure the path to the SAGA executable, and you will not
-see those folder entries. Instead, you must make sure that SAGA is properly installed
-and its folder is added to the PATH environment variable. Just open a console and
-type ``saga_cmd`` to check that the system can find where the SAGA binaries are
-located.
+In this case, there is no need to configure the path to the SAGA
+executable, and you will not see those folder entries. Instead, you must
+make sure that SAGA is properly installed and its folder is added to the
+PATH environment variable. Just open a console and type ``saga_cmd`` to
+check that the system can find where the SAGA binaries are located.
 
 About SAGA grid system limitations
 ..................................
 
 Most SAGA algorithms that require several input raster layers require them to
-have the same grid system. That is, they must cover the same geographic area and have
-the same cell size, so their corresponding grids match. When calling SAGA
-algorithms from QGIS, you can use any layer, regardless of its cell size and
-extent. When multiple raster layers are used as input for a SAGA algorithm,
-QGIS resamples them to a common grid system and then passes them to SAGA
-(unless the SAGA algorithm can operate with layers from different grid systems).
+have the same grid system. That is, they must cover the same geographic
+area and have the same cell size, so their corresponding grids match. When
+calling SAGA algorithms from QGIS, you can use any layer, regardless of its
+cell size and extent. When multiple raster layers are used as input for a
+SAGA algorithm, QGIS resamples them to a common grid system and then passes
+them to SAGA (unless the SAGA algorithm can operate with layers from
+different grid systems).
 
-The definition of that common grid system is controlled by the user, and you will
-find several parameters in the SAGA group of the settings window to do so. There
-are two ways of setting the target grid system:
+The definition of that common grid system is controlled by the user, and you
+will find several parameters in the SAGA group of the settings window to do
+so. There are two ways of setting the target grid system:
 
-* Setting it manually. You define the extent by setting the values of the following
-  parameters:
+* Setting it manually. You define the extent by setting the values of the
+  following parameters:
 
   - :guilabel:`Resampling min X`
   - :guilabel:`Resampling max X`
@@ -158,11 +164,11 @@ Limitations for multi-band layers
 Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a
 multiband layer (such as an RGB or multispectral image), you first have to split
 it into single-banded images. To do so, you can use the 'SAGA/Grid - Tools/Split
-RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA/Grid - Tools/Extract band'
-algorithm (to extract a single band).
+RGB image' algorithm (which creates three images from an RGB image) or the 'SAGA/Grid
+- Tools/Extract band' algorithm (to extract a single band).
 
 Limitations in cell size
-.........................
+........................
 
 SAGA assumes that raster layers have the same cell size in the X and Y axis. If
 you are working with a layer with different values for horizontal and vertical
@@ -190,6 +196,8 @@ Most other providers that use an external application and call it through the
 command-line have similar options, so you will find them as well in other places
 in the processing settings list.
 
+.. _creating_r_scripts:
+
 R. Creating R scripts
 ---------------------
 
@@ -205,14 +213,18 @@ where your R binaries are located. You can do this using the :guilabel:`R folder
 entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating and executing your own R scripts.
 
+.. note:: for **Windows** user, usually the R executable file is in the
+   :file:`C:\\Program Files\\R\\R-3.2` folder. Add just the folder and **NOT** the
+   binary!
+
 Once again, this is different in Linux, and you just have to make sure that the
 R folder is included in the PATH environment variable. If you can start R just
 typing ``R`` in a console, then you are ready to go.
 
 To add a new algorithm that calls an R function (or a more complex R script that
 you have developed and you would like to have available from QGIS), you have
-to create a script file that tells the processing framework how to perform that operation and the
-corresponding R commands to do so.
+to create a script file that tells the processing framework how to perform that
+operation and the corresponding R commands to do so.
 
 R script files have the extension :file:`.rsx`, and creating them is pretty easy
 if you just have a basic knowledge of R syntax and R scripting. They should be
@@ -227,7 +239,7 @@ all the algorithms that you might like to incorporate into QGIS will use or
 generate spatial data, knowledge of spatial packages like ``maptools`` and,
 especially, ``sp``, is mandatory.
 
-::
+.. code-block:: python
 
     ##polyg=vector
     ##numpoints=number 10
@@ -240,6 +252,9 @@ The first lines, which start with a double Python comment sign (``##``), tell
 QGIS the inputs of the algorithm described in the file and the outputs that
 it will generate. They work with exactly the same syntax as the Processing scripts
 that we have already seen, so they will not be described here again.
+
+Please have a look at the :ref:`R Intro <r-intro>` and the :ref:`R Syntax <r-syntax>`
+Training Manual Chapters to have more information on how to write your own R scripts-
 
 When you declare an input parameter, QGIS uses that information for two
 things: creating the user interface to ask the user for the value of that
@@ -272,7 +287,7 @@ to open the file before performing any operation on the data it contains.
 With the above information, we can now understand the first line of our first
 example script (the first line not starting with a Python comment).
 
-::
+.. code-block:: python
 
     pts=spsample(polyg,numpoints,type="random")
 
@@ -291,11 +306,11 @@ explicitly into a ``SpatialPointsDataFrame`` object, since it is itself an objec
 of class ``ppp``, which is not a suitable class to be returned to QGIS.
 
 If your algorithm generates raster layers, the way they are saved will depend on
-whether or not you have used the ``#dontuserasterpackage`` option. In you have
+whether or not you have used the ``##dontuserasterpackage`` option. If you have
 used it, layers are saved using the ``writeGDAL()`` method. If not, the
 ``writeRaster()`` method from the ``raster`` package will be used.
 
-If you have used the ``#passfilename`` option, outputs are generated using the
+If you have used the ``##passfilenames`` option, outputs are generated using the
 ``raster`` package (with ``writeRaster()``), even though it is not used for the
 inputs.
 
@@ -307,7 +322,7 @@ lines will not be shown. For instance, here is the description file of an
 algorithm that performs a normality test on a given field (column) of the
 attributes of a vector layer:
 
-::
+.. code-block:: python
 
     ##layer=vector
     ##field=field layer
@@ -318,10 +333,10 @@ attributes of a vector layer:
 The output of the last line is printed, but the output of the first is not (and
 neither are the outputs from other command lines added automatically by QGIS).
 
-If your algorithm creates any kind of graphics (using the ``plot()`` method), add
-the following line:
+If your algorithm creates any kind of graphics (using the ``plot()`` method),
+add the following line:
 
-::
+.. code-block:: python
 
     ##showplots
 
@@ -336,32 +351,28 @@ own scripts.
 
 .. note::
 
-   ``rgdal`` and ``maptools`` libraries are loaded by default, so you do not have
+   ``rgdal`` and ``raster`` libraries are loaded by default, so you do not have
    to add the corresponding ``library()`` commands (you just have to make sure
    that those two packages are installed in your R distribution). However, other
-   additional libraries that you might need have to be explicitly loaded. Just
-   add the necessary commands at the beginning of your script. You also have to
-   make sure that the corresponding packages are installed in the R distribution
-   used by QGIS. The processing framework will not take care of any package installation. If you
-   run a script that requires a package that is not installed, the execution will fail, and
-   Processing will try to detect which packages are missing. You must install those
-   missing libraries manually before you can run the algorithm.
+   additional libraries that you might need have to be explicitly loaded by typing,
+   ``library(ggplot2)``. If the package is not already installed on your machine,
+   Processing will download and install it. In this way the package will be also
+   available in R Standalone. **Be aware** that if the package has to be downloaded,
+   the first time you run the script it might take a long time.
 
 GRASS
 -----
 
 Configuring GRASS is not much different from configuring SAGA. First, the path
 to the GRASS folder has to be defined, but only if you are running Windows.
-Additionally, a shell interpreter (usually :file:`msys.exe`, which can be found
-in most GRASS for Windows distributions) has to be defined and its path set up
-as well.
 
-By default, the processing framework tries to configure its GRASS connector to use the GRASS
-distribution that ships along with QGIS. This should work without problems in
-most systems, but if you experience problems, you might have to configure the GRASS connector manually.
-Also, if you want to use a different GRASS installation, you can change that setting
-and point to the folder where the other version is installed. GRASS 6.4 is needed
-for algorithms to work correctly.
+By default, the Processing framework tries to configure its GRASS connector
+to use the GRASS distribution that ships along with QGIS. This should work
+without problems in most systems, but if you experience problems, you might
+have to configure the GRASS connector manually.
+Also, if you want to use a different GRASS installation, you can change that
+setting and point to the folder where the other version is installed. GRASS
+7 is needed for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is correctly
 installed, and that it can be run without problem from a console.
@@ -369,205 +380,15 @@ installed, and that it can be run without problem from a console.
 GRASS algorithms use a region for calculations. This region can be defined
 manually using values similar to the ones found in the SAGA configuration, or
 automatically, taking the minimum extent that covers all the input layers used
-to execute the algorithm each time. If the latter approach is the behavior you prefer, just
-check the :guilabel:`Use min covering region` option in the GRASS configuration
-parameters.
-
-GDAL
-----
-
-No additional configuration is needed to run GDAL algorithms. Since they are already
-incorporated into QGIS, the algorithms can infer their configuration from it.
-
-Orfeo Toolbox
--------------
-
-Orfeo Toolbox (OTB) algorithms can be run from QGIS if you have OTB installed
-in your system and you have configured QGIS properly, so it can find all
-necessary files (command-line tools and libraries).
-
-As in the case of SAGA, OTB binaries are included in the stand-alone installer for
-Windows, but they are not included if you are running Linux, so you have to download
-and install the software yourself. Please check the OTB website for more
-information.
-
-Once OTB is installed, start QGIS, open the processing configuration dialog and
-configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image analysis)`
-block, you will find all settings related to OTB. First, ensure that algorithms are
-enabled.
-
-Then, configure the path to the folder where OTB command-line tools and libraries
-are installed:
-
-* |nix| Usually :guilabel:`OTB applications folder` points to ``/usr/lib/otb/applications``
-  and :guilabel:`OTB command line tools folder` is ``/usr/bin``.
-* |win| If you use any of the installers that include OTB, such as OSGeo4W,
-  there is no need for further configuration. Processing will detect the path
-  automatically and will not show the corresponding configuration entries.
-  Otherwise, fill the :guilabel:`OTB applications folder` and :guilabel:`OTB
-  command line tools folder` parameters with the to the corresponding values for
-  your installation.
-
-TauDEM
-------
-
-TauDEM (Terrain Analysis Using Digital Elevation Models) is a tools for the
-extraction and analysis of hydrological information from Digital Elevation Models
-(DEM). TauDEM can be used from QGIS if you have it installed in your system and
-configured QGIS properly, so it can find all necessary files.
-
-There are two versions of TauDEM tools: singlefile (TauDEM 5.0.6 or 5.1.2) and
-multifile (TauDEM 5.2.0). The difference between these versions in the supported
-inputs/outputs. Single files version accepts only single raster file and write
-single file as output. Multifile version accepts a directory with rasters and
-writes directory with rasters as output. Such directory should contain rasters
-that will be treated as a single DEM grid.
-
-TauDEM Processing provider supports both single- and multifile versions of TauDEM
-and even allows to use them simultaneously.
-
-.. note::
-   While TauDEM Processing provider supports TauDEM 5.0.6, 5.1.2 and 5.2.0 we
-   recommend to use 5.1.2 and/or 5.2.0 as this versions have some new tools
-   available, like Gage Watershed and TWI.
+to execute the algorithm each time. If the latter approach is the behavior
+you prefer, just check the :guilabel:`Use min covering region` option in the
+GRASS configuration parameters.
 
 
-Installing TauDEM under Windows
-...............................
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-Please visit the `TauDEM homepage <http://hydrology.usu.edu/taudem/taudem5/downloads.html>`_
-and download desired version of the precompiled binaries for your platform
-(32-bit or 64-bit), usually this is "Command Line Executables". Also you need
-to download `Microsoft HPC Pack 2012 MS-MPI <http://www.microsoft.com/en-us/download/details.aspx?id=36045>`_.
-First install Microsoft HPC Pack 2012 MS-MPI by runing :file:`mpi_x64.Msi` for
-64-bit platforms and :file:`mpi_x86.Msi` for 32-bit platforms.
-
-.. note::
-   If you want to use TauDEM 5.0.6
-
-
-Installing TauDEM under Linux
-.............................
-
-Unfortunately there are no packages for most Linux distributions, so you should
-compile TauDEM by yourself. As TauDEM uses MPI it is necessary to install first
-any MPI implementation e.g MPICH or OpenMPI. Use your favorite package manager
-to install MPICH or OpenMPI.
-
-Download TauDEM 5.2.0 source code package from `GitHub repository <https://github.com/dtarb/TauDEM/releases>`_
-and extract archive contents. Open terminal and cd into :file:`src` directory inside
-extracted folder. Create build directory and cd into it
-
-::
-
-    mkdir build
-    cd build
-
-Configure your build (change install prefix if necessary) and compile
-
-::
-
-   CXX=mpicxx cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
-   make
-
-When compilation finished install TauDEM tools by running
-
-::
-
-    sudo make install
-
-.. note::
-   Executable files will be installed into :file:`bin` subdirectory inside
-   prefix you specified at the configure stage. For example if you specified
-   prefix :file:`/opt/taudem5.2` than binaries will be installed into
-   :file:`/opt/taudem5.2/bin`.
-
-To use singlefile version --- download source package `here <http://hydrology.usu.edu/taudem/taudem5/TauDEM5PCsrc_512.zip>`_
-and perform above mentioned steps to compile and install it.
-
-Old TauDEM 5.0.6 also `available <http://hydrology.usu.edu/taudem/taudem5/downloads5.0.html>`_.
-But before compiling this version it is necessary to edit some source files.
-
-Open the :file:`linearpart.h` file, and after line
-
-::
-
-   #include "mpi.h"
-
-add a new line with
-
-::
-
-   #include <stdint.h>
-
-so you'll get
-
-::
-
-   #include "mpi.h"
-   #include <stdint.h>
-
-Save the changes and close the file. Now open :file:`tiffIO.h`, find line ``#include "stdint.h"``
-and replace quotes (``""``) with ``<>``, so you'll get
-
-::
-
-   #include <stdint.h>
-
-Save the changes and close the file.
-
-Now configure, compile and install TauDEM 5.0.6 using same commands as described
-above.
-
-Configuring TauDEM provider
-...........................
-
-Once TauDEM is installed, start QGIS, open the Processing options dialog from
-:menuselection:`Processing --> Options...` and configure the TauDEM algorithm
-provider. In the :guilabel:`Providers` group find :guilabel:`TauDEM (hydrologic analysis)`
-block, and expand it. Here you will see all settings related to TauDEM.
-
-First, ensure that algorithms are enabled, and activate provider if necessary.
-
-Next step is to configure MPI. The :guilabel:`MPICH/OpenMPI bin directory`
-setting used to define location of the :file:`mpiexec` program. In most Linux
-distributions you can safely leave this empty, as :file:`mpiexec` available in
-your ``PATH``.
-
-The :guilabel:`Number of MPI parallel processes to use` is a second setting
-related to MPI. It defines number of processes that will be used to execute
-TauDEM commands. If you don't know which value to use, it is better to leave
-this value unchanged.
-
-Now we need to configure the path to the folder(s) where TauDEM command-line
-tools are installed. As we already mention TauDEM provider supports both single-
-and multifile TauDEM, so there are two settings for TauDEM folders:
-
-* :guilabel:`TauDEM command line tools folder` used to set location of the
-  singlefile tools
-* :guilabel:`TauDEM multifile command line tools folder` used to set location
-  of the multifile tools
-
-If you have both TauDEM versions installed in different directories it is possible
-to specify both options.
-
-The last step is to define which TauDEM version to use:
-
-* with :guilabel:`Enable multifile TauDEM tools` option checked you will use
-  multifile TauDEM tools from directory, specified in the
-  :guilabel:`TauDEM multifile command line tools folder`. Multifile tools have
-  same name as singlefile with "(multifile)" suffix added
-* with :guilabel:`Enable single TauDEM tools` option checked you will use
-  multifile TauDEM tools from directory, specified in the
-  :guilabel:`TauDEM command line tools folder`.
-
-It is possible to enable both tools simultaneously. In this case you will have
-two instances of each tool in toolbox and can use them in your analysis.
-
-.. note:: **Be careful with developing Processing models using TauDEM!**
-
-   As single- and multifile versions have different inputs, model created with
-   singlefile algorithms will not work if only multifile algorithms are available.
-   If you plan to share your model please specify which TauDEM version should be
-   used or, better, provide two versions of your model: for single- and multifile
-   TauDEM.
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,37 +1,45 @@
-QGIS Testing Documentation
-***************************
+QGIS Documentation
+******************
 
 .. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=master
     :target: https://travis-ci.org/qgis/QGIS-Documentation
 
-QGIS Testing Documentation is build from corresponding branche and NOT translated.
+.. contents::
+   :local:
 
-Only the current stable branch is available for translation.
+Introduction
+------------
 
-Latest stable documentation is on http://docs.qgis.org/2.8
+This repository is meant to write and manage the Official Documentation of 
+`QGIS <https://qgis.org>`_, an Open Source GIS Software.
 
-Testing is http://docs.qgis.org/testing
+Latest stable documentation is on http://docs.qgis.org/2.18 and its PDF versions
+are available at http://docs.qgis.org/2.18/pdf.
 
-- QGIS 2.6 docs http://docs.qgis.org/2.6
-- QGIS 2.2 docs http://docs.qgis.org/2.2
-- QGIS 2.0 docs http://docs.qgis.org/2.0
-- QGIS 1.8 docs http://docs.qgis.org/1.8
+The ongoing work for future releases is published as QGIS Testing Documentation.
+It's built from the ``master`` branch and NOT translated. QGIS Testing Documentation
+is on http://docs.qgis.org/testing and http://docs.qgis.org/testing/pdf/
 
-Translations are also available via the docs.qgis.org language path:
-for example for the German language: http://docs.qgis.org/2.6/de
+Previous releases are also available:
 
-PDF versions of the manual are available here: http://docs.qgis.org/2.8/pdf, http://docs.qgis.org/2.6/pdf/ http://docs.qgis.org/2.2/pdf/ 
-http://docs.qgis.org/2.0/pdf/, http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
+- QGIS 2.14 docs http://docs.qgis.org/2.14 and http://docs.qgis.org/2.14/pdf/
+- QGIS 2.6 docs http://docs.qgis.org/2.6 and http://docs.qgis.org/2.6/pdf/
+- QGIS 2.2 docs http://docs.qgis.org/2.2 and http://docs.qgis.org/2.2/pdf/
+- QGIS 2.0 docs http://docs.qgis.org/2.0 and http://docs.qgis.org/2.0/pdf/
+- QGIS 1.8 docs http://docs.qgis.org/1.8 and http://docs.qgis.org/1.8/pdf/
 
+Translations of released docs are also available via the docs.qgis.org language path:
+for example for the 2.14 German language: http://docs.qgis.org/2.14/de.
+Note that only the current stable branch is available for translation.
 
 Documentation is static generated website using Sphinx (http://sphinx-doc.org/), 
 based on restructured text sources (rst: http://docutils.sourceforge.net/rst.html)
 and html (jinja2) templates.
 
-Most sources are in source/docs. Only frontpage and landingpages are in theme/qgis-theme
+Most sources are in source/docs. Only frontpage and landing pages are in theme/qgis-theme
 
 Styling is in theme/qgis-theme. This theme is used for website and documentation builds. 
-The Website version is the canonical one.
+The website version is the canonical one.
 
 Partial / faster building
 -------------------------
@@ -40,7 +48,7 @@ Because of the size of the documentation, the building of the full docs can take
 
 You can decide to only build certain parts of the documentation by editing the source/conf.py file.
 
-Uncomment the lines for the modules that you NOT want to build in this part of source/conf.py::
+Uncomment the lines for the modules that you do NOT want to build in this part of source/conf.py::
 
  # List of patterns, relative to source directory, that match files and           
  # directories to ignore when looking for source files.                           
@@ -53,6 +61,8 @@ Uncomment the lines for the modules that you NOT want to build in this part of s
  #exclude_patterns += ['docs/user_manual/*']                                      
  # uncomment to exclude training manual from build                                
  #exclude_patterns += ['docs/training_manual/*']                                  
+ # uncomment to exclude dev guides from build                                     
+ #exclude_patterns += ['docs/developers_guide/*']  
  # uncomment to exclude doc guides from build                                     
  #exclude_patterns += ['docs/documentation_guidelines/*']                         
  # uncomment to exclude gentle intro  from build                                  
@@ -86,7 +96,7 @@ Now always activate your environment before building. To deactivate, you can do:
 
     deactivate
 
-You can install all tools in on go via the REQUIREMENTS.txt here in root of this repo::
+You can install all the tools in one go via the REQUIREMENTS.txt here in root of this repo::
 
     pip install -r REQUIREMENTS.txt
 
@@ -100,18 +110,50 @@ Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl )::
 
     pip install sphinx-intl
 
-Then build::
+Then build:
 
-    make html (to build the english language)
-    make LANG=nl html (to build the dutch version)
+* ``make html`` to build the english language
+* ``make LANG=nl html`` to build the dutch version
 
-If you want add the QGIS-Documentation docs into the build, you either need to manually copy the sources, resources 
-and po files into the website project. Or use the fullhtml target of make (which will checkout the 2.0 branch)::
+Speed up the documentation build
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Running ``make html`` generates **from scratch** the full english documentation.
+You can see from the output that after it removes the content from static it runs the
+``sphinx-build -nW -b html -d output/doctrees  -D language=en -A language=en source output/html/en`` command.
+If you change something in the documentation source and you want to preview the changes you shouldn't reuse
+``make html`` command as it will fully rebuild everything. This takes a lot of time.
+It's far better to use the ``sphinx-build`` command so it only builds the parts from the files that have been
+changed. This ensures a very short build time (several seconds). Pay attention that if you add images in the
+``resources`` directory they won't be copied  into the ``static`` directory if you don't use the ``make``
+command. This means that your ``sphinx-build`` command won't find the new images. If you still want to build
+fast you should copy the new images from ``resources`` to their correspondant location under ``static``.
+Keep in mind that different options of the ``make`` command (presented down the page) are outputting different
+``sphinx-build`` commands.
+
+You should also be aware that the ``make ..`` commands are made for production purposes which translates that
+the build will stop at the first inconsitency because of the ``sphinx-build -nW ..`` command. You should drop
+the ``-W`` option if you want your build to fully complete (with warnings of course)
+(e.g. ``sphinx-build -n -b html -d output/doctrees  -D language=en -A language=en source output/html/en``).
+
+
+If you want add the QGIS-Documentation docs into the build, you either need
+to manually copy the sources, resources and po files into the website project.
+Or use the fullhtml target of make (which will checkout the branch)::
 
     # to build english:
     make fullhtml
     # to build eg dutch:
     make LANG=nl fullhtml
+
+Trying to build a fullhtml you might get an Exception: ``No user credentials found for host https://www.transifex.com``.
+To fix this, add a ``~/.transifexrc`` file stored in the user's home directory with following information::
+
+    [https://www.transifex.com]
+    username = user
+    token =
+    password = p@ssw0rd
+    hostname = https://www.transifex.com
 
 To gather new strings in a pot (.po) file for your language, and merge them with 
 existing translations in the po files (normally to be run by your language maintainer)::
@@ -124,6 +166,19 @@ To add a new language (the scripts will need some directory structure)::
 
 See the website in action: http://www.qgis.org
 
+Building PDF
+^^^^^^^^^^^^
+
+You will need to install **texi2pdf** by doing:
+
+* ``sudo apt-get install texinfo`` on Debian based systems
+* ``sudo yum install texinfo-tex`` on Fedora based systems
+
+Alike the html build command, you need to run make with the option to build pdf
+(pdf also builds the html output):
+
+``make LANG=xx pdf``
+
 
 Building the Documentation using Docker
 -------------------------------------
@@ -133,29 +188,21 @@ sysadmins (https://www.docker.com/).
 
 Docker can be used on Linux, MacOS  and Windows.
 
-In order to use a docker instance to build the documentation, you need first 
-to create your local docker image.
+In order to use a Docker instance to build the documentation, you can use 
+one of the scripts provided with QGIS-Documentation. The image will be installed
+if not already present.
 
-- install Docker (see https://docs.docker.com/installation/#installation)
+- install Docker (see https://docs.docker.com/engine/installation/)
 
-- clone the QGIS-sysadmin repository::
-
-   git clone git@github.com:qgis/QGIS-Sysadmin.git
-
-- build the docker image::
-
-   cd QGIS-Sysadmin/docker/sphinx
-   bash docker-build.sh
-
-- then you can go to your local QGIS-Documentation repository to build the doc::
+- go to your local QGIS-Documentation repository to build the doc::
 
    cd QGIS-Documentation/
-   docker-run.sh LANG=fr html
+   ./docker-run.sh LANG=fr html
 
 Building the Documentation using Paver
 --------------------------------------
 
-Paver is a python based Make-like tool (http://paver.github.io/paver/)
+Paver is a python based Make-like tool (http://paver.readthedocs.io/en/latest/)
 
 Paver can be used on Linux and Windows (somebody can test on OSX?)
 
@@ -170,7 +217,7 @@ General use::
     python bootstrap.py
     
     # if the script is complaining about easysetup missing:
-    # download: https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+    # download: http://setuptools.readthedocs.io/en/latest/easy_install.html
     # and install that first:
     python ez_setup.py
 
@@ -200,7 +247,8 @@ On linux, install with::
 On Windows, you should download it from: http://files.transifex.com/transifex-client/0.10/tx.exe
 see http://support.transifex.com/customer/portal/articles/998120-client-on-windows	
 
-To make tx.exe usable in the paver script, either put it IN this directory next to the pavement.py file, OR add it to your PATH
+To make tx.exe usable in the paver script, either put it IN this directory
+next to the pavement.py file, OR add it to your PATH
 
 IMPORTANT: to be able to pull from transifex.com, you will need a credentials file. 
 This file should be named: ``.transifexrc`` and easiest is to put it in your home dir C:/users/you. 
@@ -214,7 +262,8 @@ The file should contain this::
 	token = 
 	username = yourtransifexusername
 
-With a working tx and a .transifexrc, you should be able to build for example the german version of docs via::	
+With a working tx and a .transifexrc, you should be able to build
+for example the german version of docs via::	
 
         # german:
         paver html -l de
@@ -223,7 +272,8 @@ During the build you will see this command::
 
 	tx pull --minimum-perc=1 --skip -f -l de
 	
-This will pull all german po files from transifex (based on the .tx/config file in the root of this project)
+This will pull all german po files from transifex (based on the
+.tx/config file in the root of this project)
 
 
 Translating the english QGIS Documentation
@@ -292,6 +342,11 @@ Manual and Application Translations
     * Contributor : Alexandre Neto < senhor.neto[at]gmail.com >
     * Contributor : Zara Teixeira < zarafani[at]gmail.com >
 
+  * Romanian Team Lead: Sorin Călinică < sorin.calinica[at]gmail.com >, Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
+    
+    * Contributor: Georgiana Ioanovici
+    * Contributor: Alex Bădescu
+
   * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
   
   * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
@@ -315,3 +370,8 @@ Team Lead) and supported by numerous contributors.
 * Russian Translation
 
   * Contributor: Alexander Bruy  <alexander.bruy[at]gmail.com>
+
+* Romanian Translation
+
+  * Contributor: Sorin Călinică < sorin.calinica[at]gmail.com >
+  * Contributor: Tudor Bărăscu < tudor.barascu[at]qtibia.ro >

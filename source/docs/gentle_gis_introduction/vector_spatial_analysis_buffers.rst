@@ -4,7 +4,7 @@ Vector Spatial Analysis (Buffers)
 *********************************
 
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding the use of buffering in vector spatial analysis.                                                         |
+| |gentleLogo|      | Objectives: | Understanding the use of buffering in vector spatial analysis.                                                         |
 +                   +-------------+------------------------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Vector, buffer zone, spatial analysis, buffer distance, dissolve boundary, outward and inward buffer, multiple buffer  |
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------------+
@@ -41,11 +41,7 @@ pollution protection zones along rivers.
 
 .. _figure_buffer_zone:
 
-.. only:: html
-
-   **Figure Buffer Zone 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/buffer_zone.png
+.. figure:: img/buffer_zone.png
    :align: center
    :width: 30em
 
@@ -58,11 +54,7 @@ figure_point_buffer_, figure_line_buffer_, ).
 
 .. _figure_point_buffer:
 
-.. only:: html
-
-   **Figure Point Buffer 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/point_buffer.png
+.. figure:: img/point_buffer.png
    :align: center
    :width: 30em
 
@@ -70,11 +62,7 @@ figure_point_buffer_, figure_line_buffer_, ).
 
 .. _figure_line_buffer:
 
-.. only:: html
-
-   **Figure Line Buffer 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/line_buffer.png
+.. figure:: img/line_buffer.png
    :align: center
    :width: 30em
 
@@ -82,11 +70,7 @@ figure_point_buffer_, figure_line_buffer_, ).
 
 .. _figure_polygon_buffer:
 
-.. only:: html
-
-   **Figure Polygon Buffer 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/polygon_buffer.png
+.. figure:: img/polygon_buffer.png
    :align: center
    :width: 30em
 
@@ -106,11 +90,7 @@ Table table_buffer_attributes_).
 
 .. _figure_variable_buffer:
 
-.. only:: html
-
-   **Figure Variable Buffer 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/variable_buffer.png
+.. figure:: img/variable_buffer.png
    :align: center
    :width: 30em
 
@@ -147,11 +127,7 @@ around the plant as part of an evacuation plan (see figure_multiple_buffers_).
 
 .. _figure_multiple_buffers:
 
-.. only:: html
-
-   **Figure Multiple Buffers 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/multiple_buffers.png
+.. figure:: img/multiple_buffers.png
    :align: center
    :width: 30em
 
@@ -168,11 +144,7 @@ Figure figure_buffer_dissolve_).
 
 .. _figure_buffer_dissolve:
 
-.. only:: html
-
-   **Figure Dissolve Buffers 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/buffer_dissolve.png
+.. figure:: img/buffer_dissolve.png
    :align: center
    :width: 30em
 
@@ -215,11 +187,7 @@ figure_overlay_operations_).
 
 .. _figure_overlay_operations:
 
-.. only:: html
-
-   **Figure Overlay Operations 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/overlay_operations.png
+.. figure:: img/overlay_operations.png
    :align: center
    :width: 30em
 
@@ -274,11 +242,7 @@ Here are some ideas for you to try with your learners:
 
 .. _figure_buffer_road:
 
-.. only:: html
-
-   **Figure Buffer Road 1:**
-
-.. figure:: /static/gentle_gis_introduction/buffers/buffer_road.png
+.. figure:: img/buffer_road.png
    :align: center
    :width: 30em
 
@@ -317,3 +281,13 @@ What's next?
 
 In the section that follows we will take a closer look at **interpolation** as
 an example of spatial analysis you can do with raster data.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

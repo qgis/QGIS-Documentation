@@ -1,17 +1,24 @@
+.. only:: html
+
+   |updatedisclaimer|
+
+.. index::
+   pair: Raster; Raster layers
+
 .. _raster:
 
-.. index:: raster layers; using
+*********************
+ Using Raster Layers
+*********************
 
-*******************
-Using Raster Layers
-*******************
+.. warning:: |outofdate|
 
 .. contents::
    :local:
 
 This sections lists various operations you can do with raster layers.
 
-.. index:: raster layers; details
+.. index:: Raster layers; Details
 
 Layer Details
 =============
@@ -22,7 +29,9 @@ values. Usual color image (e.g. aerial photo) is a raster consisting of red,
 blue and green band. Single band layers typically represent either continuous
 variables (e.g. elevation) or discrete variables (e.g. land use). In some
 cases, a raster layer comes with a palette and raster values refer to colors
-stored in the palette::
+stored in the palette:
+
+.. code-block:: python
 
   rlayer.width(), rlayer.height()
   (812, 301)
@@ -39,7 +48,7 @@ stored in the palette::
   rlayer.hasPyramids()
   False
 
-.. index:: raster layers; renderer
+.. index:: Raster layers; Renderer
 
 Renderer
 ========
@@ -77,7 +86,7 @@ After doing the changes, you might want to force update of map canvas, see
 **TODO:**
    contrast enhancements, transparency (no data), user defined min/max, band statistics
 
-.. index:: rasters; single band
+.. index:: Raster layers; Single band
 
 Single Band Rasters
 -------------------
@@ -114,7 +123,7 @@ In the second step we will associate this shader with the raster layer::
 The number 1 in the code above is band number (raster bands are indexed from one).
 
 
-.. index:: rasters; multi band
+.. index:: Raster layers; Multi band
 
 Multi Band Rasters
 ------------------
@@ -131,7 +140,7 @@ In case only one band is necessary for visualization of the raster, single band
 drawing can be chosen --- either gray levels or pseudocolor.
 
 .. index::
-  pair: raster layers; refreshing
+  pair: Raster layers; Refreshing
 
 .. _refresh-layer:
 
@@ -152,6 +161,10 @@ in case render caching is turned on. This functionality is available from
 QGIS 1.4, in previous versions this function does not exist --- to make sure
 that the code works with all versions of QGIS, we first check whether the
 method exists.
+
+.. note::
+    This method is deprecated as of QGIS 2.18.0 and will produce a warning.
+    Simply calling ``triggerRepaint()`` is sufficient.
 
 The second call emits signal that will force any map canvas containing the
 layer to issue a refresh.
@@ -174,19 +187,31 @@ symbology in the layer list (legend) widget. This can be done as follows
    iface.legendInterface().refreshLayerSymbology(layer)
 
 .. index::
-  pair: raster layers; querying
+  pair: Raster layers; Querying
 
 Query Values
 ============
 
-To do a query on value of bands of raster layer at some specified point
+The first method to query raster values is using the :func:`sample` method of
+the :class:`QgsRasterDataProvider` class. You have to specify a :class:`QgsPointXY`
+and the band number of the raster layer you want to query. The method returns a
+tuple with the value and ``True`` or ``False`` depending on the results:
+
+.. code-block:: python
+
+  val, res = rlayer.dataProvider().sample(QgsPointXY(15.30, 40.98), 1)
+  print(val, res)
+
+
+The second method is using the :func:`identify` method that returns a
+:class:`QgsRasterIdentifyResult` object.
 
 ::
 
-  ident = rlayer.dataProvider().identify(QgsPoint(15.30, 40.98), \
+  ident = rlayer.dataProvider().identify(QgsPointXY(15.30, 40.98), \
     QgsRaster.IdentifyFormatValue)
   if ident.isValid():
-    print ident.results()
+    print(ident.results())
 
 The ``results`` method in this case returns a dictionary, with band indices as
 keys, and band values as values.
@@ -194,3 +219,13 @@ keys, and band values as values.
 ::
 
   {1: 17, 2: 220}
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

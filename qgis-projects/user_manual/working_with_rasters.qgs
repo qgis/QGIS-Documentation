@@ -1,18 +1,17 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.15.0-Master">
+<qgis projectname="" version="2.18.9">
   <title></title>
-  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="Colored_map20160314121544639" name="Colored_map">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="SR_50M_alaska_nad20160314120639764" source="/home/alexandre/qgis/qgis_sample_data/raster/SR_50M_alaska_nad.tif" name="SR_50M_alaska_nad">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="SR_50M_alaska_nad20160314120639764" name="SR_50M_alaska_nad">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="SR_50M_alaska_nad_copy20160314154255423" source="/home/alexandre/qgis/qgis_sample_data/raster/SR_50M_alaska_nad.tif" name="SR_50M_alaska_nad">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="SR_50M_alaska_nad_copy20160314154255423" name="SR_50M_alaska_nad">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="landcover20130516233229406" name="landcover">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="landcover20130516233229406" source="/home/alexandre/qgis/qgis_sample_data/raster/landcover.img" name="landcover">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -20,10 +19,10 @@
   <mapcanvas>
     <units>feet</units>
     <extent>
-      <xmin>16219304.71060716360807419</xmin>
-      <ymin>27056730.92811916023492813</ymin>
-      <xmax>16230555.56671304628252983</xmax>
-      <ymax>27068490.94424112886190414</ymax>
+      <xmin>-5493610.65535192284733057</xmin>
+      <ymin>-1166453.2444174624979496</ymin>
+      <xmax>7732289.21049975138157606</xmax>
+      <ymax>9344894.76755359396338463</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -42,10 +41,14 @@
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="Colored_map20160314121544639"/>
+      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="SR_50M_alaska_nad_copy20160314154255423"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:3763" srcDatumTransform="-1" destDatumTransform="-1" layerid="TipoSolos20160314151125900"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="landcover20130516233229406"/>
+      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="SR_50M_alaska_nad_copy20170601121831200"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:3763" srcDatumTransform="-1" destDatumTransform="-1" layerid="contour100_2_Plataforma_continental20140508235403851"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="15978" layerid="Portugal_Polygons20140508235517911"/>
+      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="" srcDatumTransform="-1" destDatumTransform="-1" layerid="BGRI2011_110520170601111933456"/>
+      <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="relieve_RGB20170601122009357"/>
       <layer_coordinate_transform destAuthId="EPSG:2964" srcAuthId="EPSG:2964" srcDatumTransform="-1" destDatumTransform="-1" layerid="SR_50M_alaska_nad20160314120639764"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
@@ -53,24 +56,18 @@
     <custom-order enabled="0">
       <item>landcover20130516233229406</item>
       <item>SR_50M_alaska_nad20160314120639764</item>
-      <item>Colored_map20160314121544639</item>
       <item>SR_50M_alaska_nad_copy20160314154255423</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Colored_map" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SR_50M_alaska_nad" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Colored_map20160314121544639" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="SR_50M_alaska_nad20160314120639764" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SR_50M_alaska_nad" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SR_50M_alaska_nad" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="SR_50M_alaska_nad20160314120639764" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SR_50M_alaska_nad" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="SR_50M_alaska_nad_copy20160314154255423" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="SR_50M_alaska_nad_copy20160314154255423" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landcover" showFeatureCount="0">
@@ -81,55 +78,15 @@
   </legend>
   <projectlayers>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <id>Colored_map20160314121544639</id>
-      <datasource>../../../../Desktop/temp/Colored_map.jpeg</datasource>
-      <shortname>Colored_map</shortname>
-      <title></title>
-      <abstract></abstract>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Colored_map</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</proj4>
-          <srsid>932</srsid>
-          <srid>2964</srid>
-          <authid>EPSG:2964</authid>
-          <description>NAD27 / Alaska Albers</description>
-          <projectionacronym>aea</projectionacronym>
-          <ellipsoidacronym>clrk66</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-6232946.67269766889512539</xmin>
+        <ymin>-735684.66176720894873142</ymin>
+        <xmax>6363148.43763725832104683</xmax>
+        <ymax>9275122.96868141554296017</ymax>
+      </extent>
       <id>SR_50M_alaska_nad20160314120639764</id>
       <datasource>../../../qgis_sample_data/raster/SR_50M_alaska_nad.tif</datasource>
       <shortname>SR_50M_alaska_nad</shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -172,11 +129,15 @@
       <blendMode>0</blendMode>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-6232946.67269766889512539</xmin>
+        <ymin>-735684.66176720894873142</ymin>
+        <xmax>6363148.43763725832104683</xmax>
+        <ymax>9275122.96868141554296017</ymax>
+      </extent>
       <id>SR_50M_alaska_nad_copy20160314154255423</id>
       <datasource>../../../qgis_sample_data/raster/SR_50M_alaska_nad.tif</datasource>
       <shortname>SR_50M_alaska_nad copy</shortname>
-      <title></title>
-      <abstract></abstract>
       <keywordList>
         <value></value>
       </keywordList>
@@ -222,15 +183,22 @@
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-7117600</xmin>
+        <ymin>1367760</ymin>
+        <xmax>4897040</xmax>
+        <ymax>7809680</ymax>
+      </extent>
       <id>landcover20130516233229406</id>
       <datasource>../../../qgis_sample_data/raster/landcover.img</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <shortname>UMDLandcover</shortname>
+      <title>UMD Global Land Cover Classification</title>
+      <abstract>The University of Maryland Department of Geography generated this global land cover classification collection in 1998. Imagery from the AVHRR satellites acquired between 1981 and 1994 were analyzed to distinguish fourteen land cover classes. This product is available at three spatial scales: 1 degree, 8 kilometer and 1 kilometer pixel resolutions.</abstract>
       <keywordList>
-        <value></value>
+        <value>landcover</value>
       </keywordList>
+      <attribution href="http://glcf.umd.edu/data/landcover/">Hansen, M., R. DeFries, J.R.G. Townshend, and R. Sohlberg</attribution>
       <layername>landcover</layername>
       <srs>
         <spatialrefsys>
@@ -245,6 +213,7 @@
         </spatialrefsys>
       </srs>
       <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="identify/format" value="Value"/>
       </customproperties>
       <provider>gdal</provider>
@@ -255,7 +224,7 @@
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
+        <rasterrenderer opacity="1" alphaBand="0" band="1" type="paletted">
           <rasterTransparency>
             <singleValuePixelList>
               <pixelListEntry min="0" max="0" percentTransparent="20"/>
@@ -293,13 +262,13 @@
       <value></value>
     </WMSKeywordList>
     <WFSUrl type="QString"></WFSUrl>
+    <LiveStats>
+      <SavedStats type="QStringList"/>
+    </LiveStats>
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
     <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <LiveStats>
-      <SavedStats type="QStringList"/>
-    </LiveStats>
     <WFSLayers type="QStringList"/>
     <WMSContactMail type="QString"></WMSContactMail>
     <PositionPrecision>

@@ -5,7 +5,7 @@ Vector Attribute Data
 *********************
 
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | In this topic we describe how attribute data are associated with vector features and can be used to symbolise data. |
+| |gentleLogo|      | Objectives: | In this topic we describe how attribute data are associated with vector features and can be used to symbolise data. |
 +                   +-------------+---------------------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Attribute, database, fields, data, vector, symbology                                                                |
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+
@@ -19,11 +19,7 @@ give us very little information. Take a look at figure_map_attributes_ for examp
 
 .. _figure_map_attributes:
 
-.. only:: html
-
-   **Figure Attributes on map:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/map_attributes.png
+.. figure:: img/map_attributes.png
    :align: center
    :width: 30em
 
@@ -39,11 +35,7 @@ the house pictures in figure_house_.
 
 .. _figure_house:
 
-.. only:: html
-
-   **Figure House 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/house_picture.png
+.. figure:: img/house_picture.png
    :align: center
    :width: 30em
 
@@ -59,11 +51,7 @@ houses polygon layer, and the attributes in an attribute table (see figure_house
 
 .. _figure_house_gis:
 
-.. only:: html
-
-   **Figure House 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/houses_in_gis.png
+.. figure:: img/houses_in_gis.png
    :align: center
    :width: 30em
 
@@ -80,11 +68,7 @@ feature **symbology**.
 
 .. _figure_style_by_attribute:
 
-.. only:: html
-
-   **Figure Feature Style 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/style_by_attribute.png
+.. figure:: img/style_by_attribute.png
    :align: center
    :width: 30em
 
@@ -104,11 +88,7 @@ an example of an attribute search in a GIS.
 
 .. _figure_search_by_attribute:
 
-.. only:: html
-
-   **Figure Feature Search 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/search_by_attribute.png
+.. figure:: img/search_by_attribute.png
    :align: center
    :width: 30em
 
@@ -136,11 +116,7 @@ describe the feature). This is shown in figure_features_at_glance_.
 
 .. _figure_features_at_glance:
 
-.. only:: html
-
-   **Figure Feature Summary 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/feature_at_glance.png
+.. figure:: img/feature_at_glance.png
    :align: center
    :width: 30em
 
@@ -171,7 +147,7 @@ table.
 | Record 3        | 2001                | Silver              | Yes              |
 +-----------------+---------------------+---------------------+------------------+
 
-Table House Attributes 1: An attribute table has fields (columns) and records (in
+Table House Attributes: An attribute table has fields (columns) and records (in
 rows).
 
 Each field in the attribute table contains contains a specific type of data –--
@@ -211,35 +187,27 @@ In order to do that, you need to use either a **graduated**, **continuous** or
 follow.
 
 A GIS application will normally allow you to set the symbology of a layer using
-a **dialog box** such as the one shown in in figure_single_symbol_1_. In this
+a **dialog box** such as the one shown in in figure_single_symbol_. In this
 dialog box you can choose colours and symbol styles. Depending on the geometry
 type of a layer, different options may be shown. For example with point layers
 you can choose a **marker style**. With line and polygon layers there is no marker
 style option, but instead you can select a **line style** and **colour** such as
 dashed orange for gravel roads, solid orange for minor roads, and so on (as shown
-in figure_single_symbol_2_). With polygon layers you also have the option of
+in figure_single_symbol_poly_). With polygon layers you also have the option of
 setting a **fill style** and color.
 
-.. _figure_single_symbol_1:
+.. _figure_single_symbol:
 
-.. only:: html
-
-   **Figure Single Symbol 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/single_symbol_point.png
+.. figure:: img/single_symbol_point.png
    :align: center
    :width: 30em
 
    When using simple symbols, the feature is drawn without using an attribute to
    control how it looks. This is the dialog for point features.
 
-.. _figure_single_symbol_2:
+.. _figure_single_symbol_poly:
 
-.. only:: html
-
-   **Figure Single Symbol 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/single_symbol_poly.png
+.. figure:: img/single_symbol_poly.png
    :align: center
    :width: 30em
 
@@ -257,13 +225,9 @@ colour. Adding colour to the contours can help us to interpret the meanings of
 contours. For example we can draw low lying areas with one colour, mid-altitude
 areas with another and high-altitude areas with a third.
 
-.. _figure_graduated_symbol_1:
+.. _figure_graduated_symbol:
 
-.. only:: html
-
-   **Figure Graduated Symbol 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/graduated_symbol_settings.png
+.. figure:: img/graduated_symbol_settings.png
    :align: center
    :width: 30em
 
@@ -272,27 +236,23 @@ areas with another and high-altitude areas with a third.
    between 1120 m and 1240 m in green and those between 1240 m and 1500 m in
    purple.
 
-.. _figure_graduated_symbol_2:
+.. _figure_graduated_symbol_map:
 
-.. only:: html
-
-   **Figure Graduated Symbol 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/graduated_symbol_map.png
+.. figure:: img/graduated_symbol_map.png
    :align: center
    :width: 30em
 
    Our map after setting graduated colours for our contours.
 
 Setting colours based on discrete groups of attribute values is called Graduated
-Symbology in QGIS. The process is shown in Illustrations figure_graduated_symbol_1_
-and figure_graduated_symbol_2_. **Graduated symbols** are most useful when you
+Symbology in QGIS. The process is shown in Illustrations figure_graduated_symbol_
+and figure_graduated_symbol_map_. **Graduated symbols** are most useful when you
 want to show clear differences between features with attribute values in different
 value ranges. The GIS Application will analyse the attribute data (e.g. height)
 and, based on the number of classes you request, create groupings for you. This
-process is illustrated in table_graduated_1_.
+process is illustrated in table_graduated_.
 
-.. _table_graduated_1:
+.. _table_graduated:
 
 +-----------------+------------------+
 | Attribute Value | Class and Colour |
@@ -316,7 +276,7 @@ process is illustrated in table_graduated_1_.
 | 9               | Class 3          |
 +-----------------+------------------+
 
-Table Graduaded 1: Graduated colour breaks up the attribute value ranges into the
+Table Graduated: Graduated colour breaks up the attribute value ranges into the
 number of classes you select. Each class is represented by a different colour.
 
 Continuous Colour Symbols
@@ -326,10 +286,10 @@ In the previous section on Graduated Colour symbols we saw that we can draw
 features in discrete groups or classes. Sometimes it is useful to draw features
 in a **colour range** from one colour to another. The GIS Application will use a
 numerical attribute value from a feature (e.g. contour heights or pollution levels
-in a stream) to decide which colour to use. Table table_continuous_1_ shows how
+in a stream) to decide which colour to use. Table table_continuous_ shows how
 the attribute value is used to define a continuous range of colours.
 
-.. _table_continuous_1:
+.. _table_continuous:
 
 +-----------------+---------------------------------+
 | Attribute Value | Colour (no classes or grouping) |
@@ -353,22 +313,18 @@ the attribute value is used to define a continuous range of colours.
 | 9               |                                 |
 +-----------------+---------------------------------+
 
-Table Continuous 1: Continuous colour symbology uses a start colour (e.g. light
+Table Continuous: Continuous colour symbology uses a start colour (e.g. light
 orange shown here) and an end colour (e.g. dark brown shown here) and creates a
 series of shades between those colours.
 
 Using the same contours example we used in the previous section, let's see how a
 map with continuous colour symbology is defined and looks. The process starts by
 setting the layers properties to continuous colour using a dialog like the one
-shown in figure_continuos_symbol_1_.
+shown in figure_continuous_symbol_.
 
-.. _figure_continuos_symbol_1:
+.. _figure_continuous_symbol:
 
-.. only:: html
-
-   **Figure Continuous Symbol 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/continuous_symbol_settings.png
+.. figure:: img/continuous_symbol_settings.png
    :align: center
    :width: 30em
 
@@ -384,15 +340,11 @@ at 1000 m and ending at 1400 m, the value range is 1000 to 1400. If the colour
 set for the minimum value is set to orange and the colour for the maximum value
 is black, contours with a value of close to 1400 m will be drawn close to black.
 On the other hand contours with a value near to 1000 m will be drawn close to
-orange (see figure_continuous_symbol_2_).
+orange (see figure_continuous_symbol_map_).
 
-.. _figure_continuous_symbol_2:
+.. _figure_continuous_symbol_map:
 
-.. only:: html
-
-   **Figure Graduated Symbol 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/continuous_symbol_map.png
+.. figure:: img/continuous_symbol_map.png
    :align: center
    :width: 30em
 
@@ -407,9 +359,9 @@ writing symbols. Strings attributes are often used to classify things by name.
 We can tell the GIS Application to give each unique string or number its own
 colour and symbol. Road features may have different classes (e.g. 'street',
 'secondary road', 'main road' etc.), each drawn in the map view of the GIS with
-different colours or symbols. This is illustrated in table_unique_1_.
+different colours or symbols. This is illustrated in table_unique_.
 
-.. _table_unique_1:
+.. _table_unique:
 
 +-----------------+-------------------------+
 | Attribute Value | Colour class and symbol |
@@ -423,21 +375,17 @@ different colours or symbols. This is illustrated in table_unique_1_.
 | Street          |                         |
 +-----------------+-------------------------+
 
-Table Unique 1: Unique attribute values for a feature type (e.g. roads) can each
+Table Unique: Unique attribute values for a feature type (e.g. roads) can each
 have their own symbol.
 
 Within the GIS Application we can open/choose to use Unique Value symbology for
 a layer. The GIS will scan through all the different string values in the
 attribute field and build a list of unique strings or numbers. Each unique value
-can then be assigned a colour and style. This is shown in figure_unique_symbol_1_.
+can then be assigned a colour and style. This is shown in figure_unique_symbol_.
 
-.. _figure_unique_symbol_1:
+.. _figure_unique_symbol:
 
-.. only:: html
-
-   **Figure Unique Symbol 1:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/unique_symbol_settings.png
+.. figure:: img/unique_symbol_settings.png
    :align: center
    :width: 30em
 
@@ -446,15 +394,11 @@ can then be assigned a colour and style. This is shown in figure_unique_symbol_1
 When the GIS draws the layer, it will look at the attributes of each feature
 before drawing it to the screen. Based on the value in the chosen field in the
 attribute table, the road line will be drawn with suitable colour and line style
-(and fill style if its a polygon feature). This is shown in figure_unique_symbol_2_.
+(and fill style if its a polygon feature). This is shown in figure_unique_symbol_map_.
 
-.. _figure_unique_symbol_2:
+.. _figure_unique_symbol_map:
 
-.. only:: html
-
-   **Figure Unique Symbol 2:**
-
-.. figure:: /static/gentle_gis_introduction/vector_attrs/unique_symbol_map.png
+.. figure:: img/unique_symbol_map.png
    :align: center
    :width: 30em
 
@@ -503,7 +447,7 @@ Here are some ideas for you to try with your learners:
 
 * Using the table that you created in the last topic, add a new column for the
   symbology type you would use for each feature type and have the learners
-  identify which symbology type they would use (see table_example_symbols_1_ for
+  identify which symbology type they would use (see table_example_symbols_ for
   an example).
 * Try to identify which symbology types you would use for the following types of
   vector features:
@@ -513,7 +457,7 @@ Here are some ideas for you to try with your learners:
   - polygons for houses with an attribute that shows whether it is made of brick,
     wood or 'other' material.
 
-.. _table_example_symbols_1:
+.. _table_example_symbols:
 
 +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Real world feature                     | Geometry Type | Symbology Type                                                                                                                                                                                                                          |
@@ -533,7 +477,7 @@ Here are some ideas for you to try with your learners:
 | Classrooms                             | Polygon       | Count the number of learners in each classroom and use a **continuous colour symbol** to define a range of colours from red to blue.                                                                                                    |
 +----------------------------------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Table Example Symbols 1: An example of a table that defines the feature types and
+Table Example Symbols: An example of a table that defines the feature types and
 the kind of symbology you would use for each.
 
 Something to think about
@@ -549,7 +493,7 @@ the same technique?
 Further reading
 ===============
 
-**Website:** http://en.wikipedia.org/wiki/Cartography#Map_symbology
+**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology
 
 The QGIS User Guide also has more detailed information on working with attribute
 data and symbology in QGIS.
@@ -560,3 +504,13 @@ What's next?
 In the section that follows we will take a closer look at **data capture.** We
 will put the things we have learned about vector data and attributes into practice
 by creating new data.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

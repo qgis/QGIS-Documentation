@@ -1,10 +1,17 @@
-|updatedisclaimer|
+.. only:: html
+
+   |updatedisclaimer|
+
+
+.. _processing_batch:
 
 The batch processing interface
 ===============================
 
-.. contents::
-   :local:
+.. only:: html
+
+   .. contents::
+      :local:
 
 Introduction
 ------------
@@ -13,7 +20,7 @@ All algorithms (including models) can be executed as a batch process. That
 is, they can be executed using not just a single set of inputs, but several of them,
 executing the algorithm as many times as needed. This is useful when processing
 large amounts of data, since it is not necessary to launch the algorithm many
-times from the toolbox.
+times from the toolbox. testing changes.
 
 To execute an algorithm as a batch process, right-click on its name in the toolbox
 and select the :guilabel:`Execute as batch process` option in the pop-up menu
@@ -21,14 +28,10 @@ that will appear.
 
 .. _figure_processing_batch_start:
 
-.. only:: html
-
-   **Figure Processing 26:**
-
-.. figure:: /static/user_manual/processing/batch_processing_right_click.png
+.. figure:: img/batch_processing_right_click.png
    :align: center
 
-   Batch Processing Right Click
+   Batch Processing from right-click
 
 If you have the execution dialog of the algorithm open, you can also start the
 batch processing interface from there, clicking on the :guilabel:`Run as batch
@@ -36,11 +39,7 @@ process...` button.
 
 .. _figure_processing_batch_start2:
 
-.. only:: html
-
-   **Figure Processing 27:**
-
-.. figure:: /static/user_manual/processing/batch_processing_params_dialog.png
+.. figure:: img/batch_processing_params_dialog.png
    :align: center
 
    Batch Processing From Algorithm Dialog
@@ -56,11 +55,7 @@ one shown next.
 
 .. _figure_processing_bath_parameters:
 
-.. only:: html
-
-   **Figure Processing 28:**
-
-.. figure:: /static/user_manual/processing/batch_processing.png
+.. figure:: img/batch_processing.png
    :align: center
 
    Batch Processing
@@ -83,7 +78,7 @@ For most parameters, setting the value is trivial. Just type the value or select
 it from the list of available options, depending on the parameter type.
 
 Filenames for input data objects are introduced directly typing or, more
-conveniently, clicking on the |browsebutton| button on the right hand of the cell,
+conveniently, clicking on the |browseButton| button on the right hand of the cell,
 which will show a context menu with two option: one for selecting from the layers
 currently opened and another to select from the filesystem. This second option,
 when selected, shows a typical file chooser dialog. Multiple files can be
@@ -107,13 +102,9 @@ on the accompanying button.
 Once you select the file, a new dialog is shown to allow for autocompletion of
 other cells in the same column (same parameter).
 
-.. _figure_processing_3:
+.. _figure_processing_save:
 
-.. only:: html
-
-   **Figure Processing 29:**
-
-.. figure:: /static/user_manual/processing/batch_processing_save.png
+.. figure:: img/batch_processing_save.png
    :align: center
 
    Batch Processing Save
@@ -128,13 +119,9 @@ Automatic filling can be done by simply adding correlative numbers to the select
 file path, or by appending the value of another field at the same row. This is
 particularly useful for naming output data objects according to input ones.
 
-.. _figure_processing_4:
+.. _figure_processing_file:
 
-.. only:: html
-
-   **Figure Processing 30:**
-
-.. figure:: /static/user_manual/processing/batch_processing_filepath.png
+.. figure:: img/batch_processing_filepath.png
    :align: center
 
    Batch Processing File Path
@@ -144,5 +131,16 @@ Executing the batch process
 ---------------------------
 
 To execute the batch process once you have introduced all the necessary values,
-just click on **[OK]**. Progress of the global batch task will be shown in the
+just click on :guilabel:`OK`. Progress of the global batch task will be shown in the
 progress bar in the lower part of the dialog.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

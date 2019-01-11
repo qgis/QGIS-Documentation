@@ -3,7 +3,7 @@ Map Production
 **************
 
 +-------------------+-------------+---------------------------------------------------------------------------------+
-| |gentlelogo|      | Objectives: | Understanding of map production for spatial data                                |
+| |gentleLogo|      | Objectives: | Understanding of map production for spatial data                                |
 +                   +-------------+---------------------------------------------------------------------------------+
 |                   | Keywords:   | Map production, map layout, scale bar, north arrow, legend, map body, map unit  |
 +-------------------+-------------+---------------------------------------------------------------------------------+
@@ -21,11 +21,7 @@ north arrow, scale bar, acknowledgement, and map border (see figure_map_elements
 
 .. _figure_map_elements:
 
-.. only:: html
-
-   **Figure Map Elements 1:**
-
-.. figure:: /static/gentle_gis_introduction/map_production/map_elements.png
+.. figure:: img/map_elements.png
    :align: center
    :width: 30em
 
@@ -69,11 +65,7 @@ identify houses on the map (see figure_map_legend_).
 
 .. _figure_map_legend:
 
-.. only:: html
-
-   **Figure Map Legend 1:**
-
-.. figure:: /static/gentle_gis_introduction/map_production/map_legend.png
+.. figure:: img/map_legend.png
    :align: center
    :width: 30em
 
@@ -131,11 +123,7 @@ distance in the real world is placed above as you can see in figure_map_scale_ (
 
 .. _figure_map_scale:
 
-.. only:: html
-
-   **Figure Map Scale 1:**
-
-.. figure:: /static/gentle_gis_introduction/map_production/map_scale.png
+.. figure:: img/map_scale.png
    :align: center
    :width: 30em
 
@@ -167,11 +155,7 @@ rectangles and you are not able to see each house clearly.
 
 .. _figure_map_scale_compare:
 
-.. only:: html
-
-   **Figure Map Scale 2:**
-
-.. figure:: /static/gentle_gis_introduction/map_production/map_scale_compare.png
+.. figure:: img/map_scale_compare.png
    :align: center
    :width: 30em
 
@@ -204,11 +188,7 @@ figure_map_graticule_).
 
 .. _figure_map_graticule:
 
-.. only:: html
-
-   **Figure Map Graticule 1:**
-
-.. figure:: /static/gentle_gis_introduction/map_production/map_graticule.png
+.. figure:: img/map_graticule.png
    :align: center
    :width: 30em
 
@@ -232,11 +212,7 @@ for their territorial area (see figure_map_projection_).
 
 .. _figure_map_projection:
 
-.. only:: html
-
-   **Figure Map Projection 1:**
-
-.. figure:: /static/gentle_gis_introduction/map_production/map_projection.png
+.. figure:: img/map_projection.png
    :align: center
    :width: 30em
 
@@ -290,10 +266,10 @@ Here are some ideas for you to try with your learners:
   or buildings. Create a list of legend elements and define what the icons should
   look like, so a reader can most easily figure out their meaning in the map.
 * Create a map layout with your learners on a sheet of paper. Decide on the title
-  of the map, what GIS layers you want to show and what colours and icons to have
+  of the map, what GIS layers you want to show and what colors and icons to have
   on the map. Use the techniques you learned in Topics :ref:`gentle_gis_vector_data`
   and :ref:`gentle_gis_attributes` to adjust the symbology accordingly. When you
-  have a template, open the QGIS Map Composer and try to arrange a map layout as
+  have a template, open the QGIS print layout and try to arrange a map layout as
   planned.
 
 Something to think about
@@ -317,8 +293,8 @@ Further reading
 
 **Websites**:
 
-* http://en.wikipedia.org/wiki/Scale_(map)
-* http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj.html
+* https://en.wikipedia.org/wiki/Scale_(map)
+* https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj.html
 
 The QGIS User Guide also has more detailed information on map production provided
 in QGIS.
@@ -328,3 +304,13 @@ What's next?
 
 In the section that follows we will take a closer look at **vector analysis** to
 see how we can use a GIS for more than just making good looking maps!
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

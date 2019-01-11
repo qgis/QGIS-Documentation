@@ -7,12 +7,15 @@ SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
 PAPER         =
 SOURCEDIR     = source
-RESOURCEDIR   = resources
+RESOURCEDIR   = static
 BUILDDIR      = output
 # using the -A flag, we create a python variable named 'language', which
 # we then can use in html templates to create language dependent switches
 SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
 VERSION       = testing
+
+# needed for python2 -> python3 migration?
+export LC_ALL=C.UTF-8
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -46,54 +49,42 @@ help:
 
 clean:
 	rm -rf $(SOURCEDIR)/static
+	rm -rf $(BUILDDIR)/*
 
 springclean: clean
 	# something in i18n/pot dir creates havoc when using gettext: remove it
 	rm -rf i18n/pot
-	rm -rf $(BUILDDIR)/*
 	# all .mo files
 	find i18n/*/LC_MESSAGES/ -type f -name '*.mo' -delete
 	# rm -rf i18n/*/LC_MESSAGES/docs/*/
 	# rm -f $(SOURCEDIR)/docs_conf.py*
 	# rm -rf $(SOURCEDIR)/docs/*/
 
-# remove all resources from source/static directory
-# copy english resources from resources/en to source/static directory
-# IF we have a localized build (LANG != en) then
-# overwrite with potentially available LANG resources  by
-# copy LANG resources from resources/LANG to source/static directory
-# TODO: check if LANG != en, for now: unnessecary copy for english
-localizeresources: clean
+updatestatic:
 	@echo
-	@echo "Removing all static content from $(SOURCEDIR)/static."
-	rm -rf $(SOURCEDIR)/static
-	@echo "Copy 'en' (base) static content to $(SOURCEDIR)/static."
-	mkdir $(SOURCEDIR)/static
-	# historically the images for the docs sub project are not in a separate docs folder
-	# that is why we copy into root in separate steps
-	@if [ -d "$(RESOURCEDIR)/en/docs" ]; then \
-		cp -r $(RESOURCEDIR)/en/docs/* $(SOURCEDIR)/static; \
-	fi
-	@echo "Copy localized '$(LANG)' static content to $(SOURCEDIR)/static."
-	@if [ -d "$(RESOURCEDIR)/$(LANG)/docs" ]; then \
-		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
-	fi
+	@echo "Updating static content into $(SOURCEDIR)/static."
+	rsync -uthvr --delete $(RESOURCEDIR)/ $(SOURCEDIR)/static
 
-html: localizeresources
-	$(SPHINXINTL) build -l $(LANG) -c $(SOURCEDIR)/conf.py
+html: updatestatic
+	$(SPHINXINTL) --config $(SOURCEDIR)/conf.py build --language=$(LANG)
+	# ONLY in the english version run in nit-picky mode, so source errors/warnings will fail in Travis
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors. This means that the build stops at the first warning and sphinx-build exits with exit status 1.
-	$(SPHINXBUILD) -nW -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
+	@if [ $(LANG) != "en" ]; then \
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG); \
+	else \
+		$(SPHINXBUILD) -n -W -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG); \
+	fi
 	@echo
 	@echo "HTML Build finished. The HTML pages for '$(LANG)' are in $(BUILDDIR)."
 
 # pdf will also make html
 pdf: html
 	# add the 'processing algorithms' part OUT of the pdf by adding it to exclude_patterns of build
-	# NOTE: this exlcusion line will be removed in docker-world.sh via a git checkout!
+	# NOTE: this exclusion line will be removed in docker-world.sh via a git checkout!
 	@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
 
-	@-if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+	@if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
 		cp -f $(SOURCEDIR)/conf.py $(SOURCEDIR)/i18n/$(LANG)/; \
 		cat $(SOURCEDIR)/i18n/$(LANG)/conf.py.diff >> $(SOURCEDIR)/i18n/$(LANG)/conf.py; \
 		$(SPHINXBUILD) -b latex -c $(SOURCEDIR)/i18n/$(LANG) $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(LANG); \
@@ -173,6 +164,27 @@ pdf: html
 		texi2pdf --quiet QGISTrainingManual.tex; \
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf
+	# developer guidelines
+	@-if [ $(LANG) = "ja" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		nkf -W -e --overwrite QGISDevelopersGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISDevelopersGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISDevelopersGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISDevelopersGuide.tex; \
+		dvipdfmx QGISDevelopersGuide.dvi; \
+	elif [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISDevelopersGuide.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISDevelopersGuide.tex; \
+		xelatex -interaction=batchmode --no-pdf -shell-escape QGISDevelopersGuide.tex; \
+		xdvipdfmx QGISDevelopersGuide.xdv; \
+	else \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		texi2pdf --quiet QGISDevelopersGuide.tex; \
+		texi2pdf --quiet QGISDevelopersGuide.tex; \
+		texi2pdf --quiet QGISDevelopersGuide.tex; \
+	fi
+	mv $(BUILDDIR)/latex/$(LANG)/QGISDevelopersGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide.pdf
 
 full:  
 #	@-if [ $(LANG) != "en" ]; then \
@@ -187,6 +199,7 @@ full:
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf
 	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISTrainingManual-$(LANG).pdf
+	mv $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-QGISDevelopersGuide-$(LANG).pdf
 
 world: all
 
@@ -203,7 +216,7 @@ createlang: springclean
 
 pretranslate: gettext
 	@echo "Generating the pot files for the QGIS-Documentation project"
-	$(SPHINXINTL) update -p i18n/pot -c $(SOURCEDIR)/conf.py -l $(LANG)
+	$(SPHINXINTL) update -p i18n/pot -l $(LANG)
 
 gettext:
 	# something in i18n/pot dir creates havoc when using gettext: remove it
@@ -225,3 +238,10 @@ gettext:
 #	make springclean
 #	make pretranslate
 #	tx push -f -s --no-interactive
+
+fasthtml: updatestatic
+	# This build is just for fast previewing changes in EN documentation
+	# It runs in non-nit-picky mode allowing to check all warnings without
+	# cancelling the build
+	# No internationalization is performed
+	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)

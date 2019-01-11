@@ -1,41 +1,43 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="Alaska" version="2.13.0-Master">
+<qgis projectname="Alaska" version="2.18.9">
   <title>Alaska</title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
     <layer-tree-group expanded="1" checked="Qt::Checked" name="Boundaries Group">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Checked" id="regions20130517221648766" name="regions">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="regions20130517221648766" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/regions.shp" name="regions">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="alaska20130517221648216" name="alaska">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="alaska20130517221648216" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/alaska.shp" name="alaska">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Water Group">
       <customproperties/>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="rivers20130517221648798" name="rivers">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="rivers20130517221648798" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/rivers.shp" name="rivers">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="majrivers_copy20141004123744134" name="majrivers">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="majrivers_copy20141004123744134" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/majrivers.shp" name="majrivers">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="lakes20130517221648410" name="lakes">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="lakes20130517221648410" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/lakes.shp" name="lakes">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="swamp20130517232331437" name="swamp">
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="swamp20130517232331437" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/swamp.shp" name="swamp">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="group1">
       <customproperties/>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="popp20130517221648651" name="popp">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="popp20130517221648651" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/popp.shp" name="popp">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Checked" id="airports20130517221648088" name="airports">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="airports20130517221648088" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/airports.shp" name="airports">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="storagep20130517221648873" name="storagep">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="storagep20130517221648873" source="/home/alexandre/qgis/qgis_sample_data/shapefiles/storagep.shp" name="storagep">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -44,10 +46,10 @@
   <mapcanvas>
     <units>feet</units>
     <extent>
-      <xmin>-2547227.42339134495705366</xmin>
-      <ymin>3496451.26407594932243228</ymin>
-      <xmax>-776394.09005801181774586</xmax>
-      <ymax>5076312.37518705986440182</ymax>
+      <xmin>-1150806.24750411277636886</xmin>
+      <ymin>3856242.73264140728861094</ymin>
+      <xmax>2390860.41916255140677094</xmax>
+      <ymax>7015964.95486361626535654</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -147,12 +149,9 @@
     </legendgroup>
   </legend>
   <projectlayers>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>airports20130517221648088</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/airports.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/airports.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -170,7 +169,6 @@
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -179,22 +177,22 @@
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="fk_region">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="ELEV">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="USE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
             <layer pass="0" class="FontMarker" locked="0">
@@ -203,9 +201,14 @@
               <prop k="color" v="0,0,0,255"/>
               <prop k="font" v="Dingbats"/>
               <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="miter"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="255,255,255,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
               <prop k="size" v="6"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
@@ -414,21 +417,53 @@
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <SingleCategoryDiagramRenderer diagramType="Pie">
-        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" sizeType="MM" minScaleDenominator="-4.65661e-10">
+      <SingleCategoryDiagramRenderer diagramType="Pie" sizeLegend="0" attributeLegend="1">
+        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="-4.65661e-10">
           <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
           <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
+        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
+          <layer pass="0" class="SimpleMarker" locked="0">
+            <prop k="angle" v="0"/>
+            <prop k="color" v="255,0,0,255"/>
+            <prop k="horizontal_anchor_point" v="1"/>
+            <prop k="joinstyle" v="bevel"/>
+            <prop k="name" v="circle"/>
+            <prop k="offset" v="0,0"/>
+            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="offset_unit" v="MM"/>
+            <prop k="outline_color" v="0,0,0,255"/>
+            <prop k="outline_style" v="solid"/>
+            <prop k="outline_width" v="0"/>
+            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="outline_width_unit" v="MM"/>
+            <prop k="scale_method" v="diameter"/>
+            <prop k="size" v="2"/>
+            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+            <prop k="size_unit" v="MM"/>
+            <prop k="vertical_anchor_point" v="1"/>
+          </layer>
+        </symbol>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings yPosColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <DiagramLayerSettings yPosColumn="-1" showColumn="0" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="ID" index="0" name=""/>
+        <alias field="fk_region" index="1" name=""/>
+        <alias field="ELEV" index="2" name=""/>
+        <alias field="NAME" index="3" name=""/>
+        <alias field="USE" index="4" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -453,30 +488,18 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="fk_region">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ELEV">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="USE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="ID" expression=""/>
+        <default field="fk_region" expression=""/>
+        <default field="ELEV" expression=""/>
+        <default field="NAME" expression=""/>
+        <default field="USE" expression=""/>
+      </defaults>
+      <previewExpression>cat</previewExpression>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>alaska20130517221648216</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/alaska.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/alaska.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -494,7 +517,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
       <vectorjoins>
         <join joinFieldName="NAME_1" targetFieldName="NAME" memoryCache="1" joinLayerId="regions20130517221648766"/>
       </vectorjoins>
@@ -505,25 +527,25 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="regions_ID">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="regions_NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="regions_TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
@@ -690,14 +712,25 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="NAME" index="1" name=""/>
+        <alias field="AREA_MI" index="2" name=""/>
+        <alias field="regions_ID" index="3" name=""/>
+        <alias field="regions_NAME_2" index="4" name=""/>
+        <alias field="regions_TYPE_2" index="5" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -706,33 +739,19 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="regions_ID">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="regions_NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="regions_TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="0" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="NAME" expression=""/>
+        <default field="AREA_MI" expression=""/>
+        <default field="regions_ID" expression=""/>
+        <default field="regions_NAME_2" expression=""/>
+        <default field="regions_TYPE_2" expression=""/>
+      </defaults>
+      <previewExpression>cat</previewExpression>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>lakes20130517221648410</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/lakes.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/lakes.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -752,7 +771,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -761,25 +779,25 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="Range" name="cat">
-          <widgetv2config AllowNull="0" fieldEditable="1" Step="1" Style="Edit" labelOnTop="0" Min="1" Max="30"/>
+          <widgetv2config AllowNull="0" fieldEditable="1" Step="1" constraint="" Style="Edit" labelOnTop="0" constraintDescription="" Min="1" notNull="0" Max="30"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAMES">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="xlabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="ylabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="rotation">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
@@ -974,38 +992,49 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="NAMES" index="1" name=""/>
+        <alias field="AREA_MI" index="2" name=""/>
+        <alias field="xlabel" index="3" name=""/>
+        <alias field="ylabel" index="4" name=""/>
+        <alias field="rotation" index="5" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions>
-        <actionsetting action="http://www.google.com/search?q=[% &quot;NAMES&quot; %]" icon="" capture="0" type="5" name="Google search"/>
+      <attributeactions default="0">
+        <actionsetting showInAttributeTable="1" action="http://www.google.com/search?q=[% &quot;NAMES&quot; %]" icon="" capture="0" type="5" name="Google search" shortTitle=""/>
       </attributeactions>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
       <attributeEditorForm>
-        <attributeEditorContainer name="main">
-          <attributeEditorContainer name="Fields">
-            <attributeEditorField index="0" name="cat"/>
-            <attributeEditorField index="1" name="NAMES"/>
-            <attributeEditorField index="2" name="AREA_MI"/>
-            <attributeEditorContainer name="more">
-              <attributeEditorField index="5" name="rotation"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="main" groupBox="0" columnCount="0">
+          <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Fields" groupBox="1" columnCount="0">
+            <attributeEditorField showLabel="1" index="0" name="cat"/>
+            <attributeEditorField showLabel="1" index="1" name="NAMES"/>
+            <attributeEditorField showLabel="1" index="2" name="AREA_MI"/>
+            <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="more" groupBox="1" columnCount="0">
+              <attributeEditorField showLabel="1" index="5" name="rotation"/>
             </attributeEditorContainer>
           </attributeEditorContainer>
-          <attributeEditorContainer name="Label control">
-            <attributeEditorField index="3" name="xlabel"/>
-            <attributeEditorField index="4" name="ylabel"/>
+          <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="Label control" groupBox="1" columnCount="0">
+            <attributeEditorField showLabel="1" index="3" name="xlabel"/>
+            <attributeEditorField showLabel="1" index="4" name="ylabel"/>
           </attributeEditorContainer>
         </attributeEditorContainer>
-        <attributeEditorContainer name="new">
-          <attributeEditorField index="3" name="xlabel"/>
-          <attributeEditorField index="4" name="ylabel"/>
-          <attributeEditorField index="5" name="rotation"/>
+        <attributeEditorContainer showLabel="1" visibilityExpressionEnabled="0" visibilityExpression="" name="new" groupBox="0" columnCount="0">
+          <attributeEditorField showLabel="1" index="3" name="xlabel"/>
+          <attributeEditorField showLabel="1" index="4" name="ylabel"/>
+          <attributeEditorField showLabel="1" index="5" name="rotation"/>
         </attributeEditorContainer>
       </attributeEditorForm>
       <widgets/>
@@ -1013,33 +1042,19 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="Range" name="cat">
-          <widgetv2config AllowNull="0" fieldEditable="1" Step="1" Style="Edit" labelOnTop="0" Min="1" Max="30"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAMES">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AREA_MI">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="xlabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ylabel">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="rotation">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="NAMES" expression=""/>
+        <default field="AREA_MI" expression=""/>
+        <default field="xlabel" expression=""/>
+        <default field="ylabel" expression=""/>
+        <default field="rotation" expression=""/>
+      </defaults>
+      <previewExpression>cat</previewExpression>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>majrivers_copy20141004123744134</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/majrivers.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/majrivers.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1057,7 +1072,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -1066,16 +1080,16 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="LENGTH">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="DECRIPTION">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="line" name="0">
             <layer pass="0" class="SimpleLine" locked="0">
@@ -1271,14 +1285,22 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="LENGTH" index="1" name=""/>
+        <alias field="DECRIPTION" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1287,24 +1309,16 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="LENGTH">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="DECRIPTION">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="LENGTH" expression=""/>
+        <default field="DECRIPTION" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>popp20130517221648651</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/popp.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/popp.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1322,7 +1336,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>"cat"||', '||"F_CODEDESC"||', '||"F_CODE"||', '||"TYPE"</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -1331,19 +1344,19 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
             <layer pass="0" class="FontMarker" locked="0">
@@ -1352,9 +1365,14 @@ def my_form_open(dialog, layer, feature):
               <prop k="color" v="166,0,0,255"/>
               <prop k="font" v="Dingbats"/>
               <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="miter"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="255,255,255,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
               <prop k="size" v="2.23333"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
@@ -1507,14 +1525,23 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="F_CODEDESC" index="1" name=""/>
+        <alias field="F_CODE" index="2" name=""/>
+        <alias field="TYPE" index="3" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1523,27 +1550,17 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="F_CODE" expression=""/>
+        <default field="TYPE" expression=""/>
+      </defaults>
+      <previewExpression>"cat"||', '||"F_CODEDESC"||', '||"F_CODE"||', '||"TYPE"</previewExpression>
     </maplayer>
-    <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>regions20130517221648766</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/regions.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/regions.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1561,7 +1578,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression></previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -1570,16 +1586,16 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="0.32549" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleLine" locked="0">
@@ -1777,14 +1793,22 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="ID" index="0" name=""/>
+        <alias field="NAME_2" index="1" name=""/>
+        <alias field="TYPE_2" index="2" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1793,24 +1817,16 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="ID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="TYPE_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="ID" expression=""/>
+        <default field="NAME_2" expression=""/>
+        <default field="TYPE_2" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>rivers20130517221648798</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/rivers.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/rivers.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1828,7 +1844,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -1837,19 +1852,19 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="NAM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="line" name="0">
             <layer pass="0" class="SimpleLine" locked="0">
@@ -2043,14 +2058,23 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="F_CODEDESC" index="1" name=""/>
+        <alias field="NAM" index="2" name=""/>
+        <alias field="F_CODE" index="3" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -2059,27 +2083,17 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="NAM" expression=""/>
+        <default field="F_CODE" expression=""/>
+      </defaults>
+      <previewExpression>cat</previewExpression>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>storagep20130517221648873</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/storagep.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/storagep.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2097,7 +2111,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -2106,25 +2119,26 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
               <prop k="color" v="123,141,186,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -2172,14 +2186,23 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="F_CODEDESC" index="1" name=""/>
+        <alias field="F_CODE" index="2" name=""/>
+        <alias field="TYPE" index="3" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -2188,27 +2211,17 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="TYPE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="F_CODE" expression=""/>
+        <default field="TYPE" expression=""/>
+      </defaults>
+      <previewExpression>cat</previewExpression>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>swamp20130517232331437</id>
-      <datasource>/home/alexandre/git-repos/qgis_sample_data/shapefiles/swamp.shp</datasource>
-      <shortname></shortname>
-      <title></title>
-      <abstract></abstract>
+      <datasource>../../../qgis_sample_data/shapefiles/swamp.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2226,7 +2239,6 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <provider encoding="System">ogr</provider>
-      <previewExpression>cat</previewExpression>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -2235,19 +2247,19 @@ def my_form_open(dialog, layer, feature):
       </map-layer-style-manager>
       <edittypes>
         <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="AREAKM2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol">
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
@@ -2295,14 +2307,23 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <annotationform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</annotationform>
+      <aliases>
+        <alias field="cat" index="0" name=""/>
+        <alias field="F_CODEDESC" index="1" name=""/>
+        <alias field="F_CODE" index="2" name=""/>
+        <alias field="AREAKM2" index="3" name=""/>
+      </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions/>
-      <editform>/home/alexandre/git-repos/QGIS-Documentation/Layouts_Alex</editform>
+      <attributeactions default="0"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>../../../../git-repos/QGIS-Documentation/Layouts_Alex</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>/home/alexandre/git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
+      <editforminitfilepath>../../../../git-repos/QGIS-Documentation/qgis-projects/user_manual</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -2311,29 +2332,28 @@ def my_form_open(dialog, layer, feature):
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="cat">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODEDESC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="F_CODE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AREAKM2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
-        </edittype>
-      </edittypes>
+      <defaults>
+        <default field="cat" expression=""/>
+        <default field="F_CODEDESC" expression=""/>
+        <default field="F_CODE" expression=""/>
+        <default field="AREAKM2" expression=""/>
+      </defaults>
+      <previewExpression>cat</previewExpression>
     </maplayer>
   </projectlayers>
   <properties>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
     <WMSContactPerson type="QString"></WMSContactPerson>
     <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
     <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WMSKeywordList type="QStringList">
       <value></value>
     </WMSKeywordList>
+    <WFSUrl type="QString"></WFSUrl>
     <Topol>
       <tolerance_2 type="QString">0</tolerance_2>
       <layer1_0 type="QString">popp20130517221648651</layer1_0>
@@ -2360,13 +2380,17 @@ def my_form_open(dialog, layer, feature):
       <Automatic type="bool">true</Automatic>
       <DegreeFormat type="QString">D</DegreeFormat>
     </PositionPrecision>
+    <WCSUrl type="QString"></WCSUrl>
     <WMSContactPhone type="QString"></WMSContactPhone>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
     <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
     <Measure>
       <Ellipsoid type="QString">NONE</Ellipsoid>
     </Measure>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
     <WFSTLayers>
       <Insert type="QStringList"/>
       <Update type="QStringList"/>
@@ -2454,12 +2478,14 @@ def my_form_open(dialog, layer, feature):
     <Macros>
       <pythonCode type="QString"></pythonCode>
     </Macros>
-    <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WCSLayers type="QStringList"/>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
     <SpatialRefSys>
-      <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+      <ProjectCRSProj4String type="QString">+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +datum=NAD27 +units=us-ft +no_defs</ProjectCRSProj4String>
+      <ProjectCrs type="QString">EPSG:2964</ProjectCrs>
       <ProjectCRSID type="int">932</ProjectCRSID>
       <ProjectionsEnabled type="int">1</ProjectionsEnabled>
     </SpatialRefSys>
@@ -2471,7 +2497,12 @@ def my_form_open(dialog, layer, feature):
       <AlphaInt type="int">255</AlphaInt>
       <ColorRamp type="QString"></ColorRamp>
     </DefaultStyles>
-    <WMSFees type="QString"></WMSFees>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <Measurement>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+      <AreaUnits type="QString">m2</AreaUnits>
+    </Measurement>
     <WMSUrl type="QString"></WMSUrl>
   </properties>
   <visibility-presets>
