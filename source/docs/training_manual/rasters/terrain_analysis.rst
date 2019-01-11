@@ -65,7 +65,7 @@ transparent.
 * Set the :guilabel:`hillshade` layer to be transparent by opening its
   :guilabel:`Layer Properties` and go to the :guilabel:`Transparency`
   tab.
-* Set the :guilabel:`Global transparency` to :kbd:`50%`:
+* Set the :guilabel:`Global Opacity` to :kbd:`50%`:
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get a
   result like this:
 
