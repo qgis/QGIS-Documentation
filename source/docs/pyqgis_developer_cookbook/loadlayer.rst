@@ -101,7 +101,7 @@ providers:
   pair: Loading; Delimited text files
 
 * CSV or other delimited text files --- to open a file with a semicolon as a
-  delimiter, with field "x" for x-coordinate and field "y" for y-coordinate
+  delimiter, with field "x" for X coordinate and field "y" for Y coordinate
   you would use something like this:
 
   .. code-block:: python

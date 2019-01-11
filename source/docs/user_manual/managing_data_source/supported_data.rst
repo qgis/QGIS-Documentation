@@ -31,7 +31,7 @@ aerial photography, or satellite imagery and modelled data, such as an elevation
 matrix.
 
 Unlike vector data, raster data typically do not have an associated database
-record for each cell. They are geocoded by pixel resolution and the x/y
+record for each cell. They are geocoded by pixel resolution and the X/Y
 coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 
@@ -74,37 +74,39 @@ However, this file format has some limitation that some other file format have
 not (like GeoPackage, SpatiaLite). Support is provided by the
 `OGR Simple Feature Library <https://www.gdal.org/ogr/>`_.
 
-A shapefile actually consists of several files. The following three are
-required:
+A Shapefile format dataset consists of several files.
+The following three are required:
 
 #. :file:`.shp` file containing the feature geometries
 #. :file:`.dbf` file containing the attributes in dBase format
 #. :file:`.shx` index file
 
-An ESRI Shapefile format dataset can also include a file with a :file:`.prj`
+A Shapefile format dataset can also include a file with a :file:`.prj`
 suffix, which contains
 the projection information. While it is very useful to have a projection file,
-it is not mandatory. A shapefile dataset can contain additional files. For
-further details, see the ESRI technical specification at
+it is not mandatory. A Shapefile format dataset can contain additional files.
+For further details, see the ESRI technical specification at
 https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
-**Improving Performance for Shapefiles**
+**Improving Performance for Shapefile format datasets**
 
-To improve the performance of drawing a shapefile, you can create a spatial
-index. A spatial index will improve the speed of both zooming and panning.
+To improve the performance of drawing a Shapefile format dataset, you can
+create a spatial index.
+A spatial index will improve the speed of both zooming and panning.
 Spatial indexes used by QGIS have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-#. Load a shapefile (see :ref:`browser_panel`).
+#. Load a Shapefile format dataset (see :ref:`browser_panel`).
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
-   shapefile name in the legend or by right-clicking and choosing
+   layer name in the legend or by right-clicking and choosing
    :menuselection:`Properties...` from the context menu.
 #. In the :guilabel:`Source` tab, click the :guilabel:`Create Spatial Index` button.
 
 **Problem loading a .prj file**
 
-If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
+If you load a Shapefile format dataset with a :file:`.prj` file and QGIS is not
+able to read the
 coordinate reference system from that file, you will need to define the proper
 projection manually within the :menuselection:`Layer Properties --> Source` tab
 of the layer by clicking the |setProjection| :sup:`Select CRS` button.
@@ -112,7 +114,8 @@ This is due to the fact that :file:`.prj` files
 often do not provide the complete projection parameters as used in QGIS and
 listed in the :guilabel:`CRS` dialog.
 
-For the same reason, if you create a new shapefile with QGIS, two different
+For the same reason, if you create a new Shapefile format dataset with QGIS,
+two different
 projection files are created: a :file:`.prj` file with limited projection
 parameters, compatible with ESRI software, and a :file:`.qpj` file, providing
 the complete parameters of the used CRS. Whenever QGIS finds a :file:`.qpj`
@@ -334,15 +337,16 @@ DB Manager
 ..........
 
 QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can
-be used to load shapefiles and other data formats, and it includes support for
+be used to load data, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 
 shp2pgsql
 .........
 
 PostGIS includes an utility called **shp2pgsql** that can be used to import
-shapefiles into a PostGIS-enabled database. For example, to import a
-shapefile named :file:`lakes.shp` into a PostgreSQL database named
+Shapefile format datasets into a PostGIS-enabled database.
+For example, to import a
+Shapefile format dataset named :file:`lakes.shp` into a PostgreSQL database named
 ``gis_data``, use the following command:
 
 ::
@@ -361,8 +365,8 @@ reference systems and projections.
 .. tip:: **Exporting datasets from PostGIS**
 
    Like the import tool **shp2pgsql**, there is also a tool to export
-   PostGIS datasets as Shapefile: **pgsql2shp**. This is shipped within
-   your PostGIS distribution.
+   PostGIS datasets in the Shapefile format: **pgsql2shp**.
+   This is shipped within your PostGIS distribution.
 
 .. index:: ogr2ogr
    single: PostGIS; ogr2ogr
@@ -370,16 +374,18 @@ reference systems and projections.
 ogr2ogr
 .......
 
-Besides **shp2pgsql** and **DB Manager**, there is another tool for feeding geodata
-in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
+Besides **shp2pgsql** and **DB Manager**, there is another tool for feeding
+geodata in PostGIS: **ogr2ogr**.
+This is part of your GDAL installation.
 
-To import a shapefile into PostGIS, do the following:
+To import a Shapefile format dataset into PostGIS, do the following:
 ::
 
   ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres
   password=topsecret" alaska.shp
 
-This will import the shapefile :file:`alaska.shp` into the PostGIS database
+This will import the Shapefile format dataset :file:`alaska.shp` into the
+PostGIS database
 *postgis* using the user *postgres* with the password *topsecret* on host
 server *myhost.de*.
 

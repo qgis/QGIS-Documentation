@@ -1073,7 +1073,7 @@ Parameters
   The file containing the points to be processed.
 
 ``transform (coordinates)`` [enumeration]
-  Either translate, scale, or clamp the x, y, or z coordinate by the value specified below.
+  Either translate, scale, or clamp the X, Y, or Z coordinate by the value specified below.
 
   Options:
 
@@ -1096,7 +1096,7 @@ Parameters
   Default: *(not set)*
 
 ``second transform (coordinates)`` [enumeration]
-  Also either translate, scale, or clamp the x, y, or z coordinate by the value
+  Also either translate, scale, or clamp the X, Y, or Z coordinate by the value
   specified below.
 
   Options:

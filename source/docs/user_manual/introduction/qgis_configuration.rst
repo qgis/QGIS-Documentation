@@ -89,7 +89,6 @@ General Settings
 * |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
   :ref:`data source manager <datasourcemanager>` dialog opened and allow
   interaction with QGIS interface while adding layers to project; 
-* |checkbox| :guilabel:`QGIS-styled group boxes`;
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
 
 .. _projectfiles_options:
@@ -212,6 +211,13 @@ In this group, you can control whether reprojecting layers to another CRS should
 .. note:: For more information on how QGIS handles layers projection, please
   read the dedicated section at :ref:`label_projections`.
 
+.. _figure_crs_options:
+
+.. figure:: ../working_with_projections/img/crsdialog.png
+   :align: center
+
+   CRS Settings in QGIS
+
 .. _datasources_options:
 
 Data Sources Settings
@@ -287,6 +293,15 @@ Data Sources Settings
 This widget lists all the folders you chose to hide from the :ref:`Browser panel
 <browser_panel>`.
 Removing a folder from the list will make it available in the Browser panel.
+
+
+.. _figure_data_sources_settings:
+
+.. figure:: img/options_data_sources.png
+   :align: center
+
+   Data Sources Settings in QGIS
+
 
 .. index:: Rendering
 .. _rendering_options:
@@ -445,6 +460,15 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
+
+.. _figure_map_tools_settings:
+
+.. figure:: img/options_map_tools.png
+   :align: center
+
+   Map tools Settings in QGIS
+
+
 .. index:: Colors
 .. _colors_options:
 
@@ -547,6 +571,15 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
+
+.. _figure_digitizing_settings:
+
+.. figure:: img/options_digitizing.png
+   :align: center
+
+   Digitizing Settings in QGIS
+
+
 .. _layout_options:
 
 Layouts Settings
@@ -565,7 +598,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 **Grid and guide defaults**
 
 * Define the :guilabel:`Grid spacing` |selectNumber|
-* Define the :guilabel:`Grid offset` |selectNumber| for x and y
+* Define the :guilabel:`Grid offset` |selectNumber| for X and Y
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
 
@@ -573,6 +606,15 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 
 * Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
   with custom layout templates to use while creating new one.
+
+
+.. _figure_layouts_settings:
+
+.. figure:: img/options_layouts.png
+   :align: center
+
+   Layouts Settings in QGIS
+
 
 .. _gdal_options:
 
@@ -584,7 +626,17 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
+
+.. _figure_gdal_settings:
+
+.. figure:: img/options_gdal.png
+   :align: center
+
+   GDAL Settings in QGIS
+
+
 .. index:: Variables
+.. _variables_options:
 
 Variables Settings
 ------------------
@@ -600,12 +652,33 @@ it.
 More information about variables in the :ref:`general_tools_variables`
 section.
 
+
+.. _figure_variables_settings:
+
+.. figure:: img/options_variables_global.png
+   :align: center
+
+   Variables Settings in QGIS
+
+
+.. index:: Authentication
+.. _authentication_options:
+
 Authentication Settings
 -----------------------
 
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
+
+
+.. _figure_authentication_settings:
+
+.. figure:: ../auth_system/img/auth-editor-configs2.png
+   :align: center
+
+   Authentication Settings in QGIS
+
 
 .. index:: Proxy, Network
 .. _network_options:
@@ -722,6 +795,14 @@ if a very slow search filter is present (e.g. one which uses an online service).
   Options...` menu.
 
 
+.. _figure_locator_settings:
+
+.. figure:: img/options_locator.png
+   :align: center
+
+   Locator Settings in QGIS
+
+
 .. _optionsadvanced:
 
 Advanced Settings
@@ -745,6 +826,14 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
+.. _figure_advanced_settings:
+
+.. figure:: img/options_advanced.png
+   :align: center
+
+   Advanced Settings tab in QGIS
+
+
 Processing Settings
 -------------------
 
@@ -756,6 +845,13 @@ More information at :ref:`label_processing`.
  Actually, there seems to not be a real section describing the Processing options
  dialog. So the link above should be redirected if ever such a section is
  created, preferably in Processing chapter.
+
+.. _figure_processing_settings:
+
+.. figure:: img/options_processing.png
+   :align: center
+
+   Processing Settings tab in QGIS
 
 
 .. index:: Project properties

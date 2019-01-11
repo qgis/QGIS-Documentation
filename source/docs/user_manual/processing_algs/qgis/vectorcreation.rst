@@ -86,7 +86,7 @@ See also
 Array of translated features |34|
 ---------------------------------
 Creates copies of features in a layer, by creating multiple translated versions of each.
-Each copy is incrementally displaced by a preset amount in the x/y/z axis.
+Each copy is incrementally displaced by a preset amount in the X, Y and/or Z axis.
 
 M values present in the geometry can also be translated.
 
