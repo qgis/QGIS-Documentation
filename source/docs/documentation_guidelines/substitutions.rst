@@ -264,6 +264,7 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
+|3dconfigure|                   ``|3dconfigure|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -443,6 +444,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |3dconfigure| image:: /static/common/mIconProperties.png
+   :width: 1.3em
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
