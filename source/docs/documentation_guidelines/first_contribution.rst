@@ -92,7 +92,7 @@ Alternative 2: Using the ``Fix Me`` shortcut
 The QGIS project provides an easy way to reach source file from online documentation.
 Indeed, instead of browsing the source files in GitHub to find the one that suits
 the issue, or if you find an issue while reading the manuals, you simply have to
-click the "Fix Me" link at the bottom of the page to open its source file in Edit mode.
+click the "Fix Me" link at the bottom of the footer of the page to open its source file in Edit mode.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo and
