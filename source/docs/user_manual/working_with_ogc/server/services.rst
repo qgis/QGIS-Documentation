@@ -1338,15 +1338,6 @@ You can see there are several parameters in this request:
 
 * **HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer size.
 
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
-
 External WMS layers
 ===================
 
@@ -1358,6 +1349,7 @@ External layers can be added to the LAYERS parameter as EXTERNAL_WMS:<layername>
 
    http://localhost/qgis_server?
    SERVICE=WMS&REQUEST=GetMap
+   ...
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
    &STYLES=,,
    &basemap:url=http://externalserver.com/wms.fcgi
@@ -1373,6 +1365,7 @@ Similarly, external layers can be used in GetPrint requests:
 
    http://localhost/qgis_server?
    SERVICE=WMS
+   ...
    &REQUEST=GetPrint&TEMPLATE=A4
    &map0:layers=EXTERNAL_WMS:basemap,layer1,layer2
    &map0:EXTENT=<minx,miny,maxx,maxy>
@@ -1383,5 +1376,10 @@ Similarly, external layers can be used in GetPrint requests:
    &basemap:layers=orthofoto
    &basemap:styles=default
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
