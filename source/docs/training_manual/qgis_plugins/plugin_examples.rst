@@ -167,32 +167,35 @@ Take a look at some example and try to explore the query language.
 |basic| |FA| The DataPlotly Plugin
 -------------------------------------------------------------------------------
 
-DataPlotly plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
+**DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
 attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
-Start a new project and load the :guilabel:`sample_point` layer from the :file:`training_data`
-Geopackage and install the plugin following the guidelines described in :ref:`plugin_installation`
-searching :guilabel:`Data Plotly`.
-
-Open the plugin by clicking on the new icon in the toolbar or in the
-:guilabel:`Plugins --> Data Plotly` menu.
+#. Start a new project.
+#. Load the :guilabel:`sample_points` layer from the :file:`exercise_data/plugins`
+   folder.
+#. Install the plugin following the guidelines described in :ref:`plugin_installation`
+   searching :guilabel:`Data Plotly`.
+#. Open the plugin by clicking on the new icon in the toolbar or in the
+  :menuselection:`Plugins --> Data Plotly` menu.
 
 In the following example we are creating a simple ``Scatter Plot`` of two fields
-of :guilabel:`sample_point` layer.
+of the :guilabel:`sample_points` layer.
+In the DataPlotly Panel:
 
-In the DataPlotly Panel choose :guilabel:`sample_point` in the Layer filter, :kbd:`cl`
-for the ``X Field`` and :kbd:`mg` for the ``Y Field``:
+#. Choose :guilabel:`sample_points` in the Layer filter, :guilabel:`cl` for
+   the :guilabel:`X Field` and :guilabel:`mg` for the :guilabel:`Y Field`:
 
-.. image:: img/dataplotly_setup.png
-   :align: center
+   .. image:: img/dataplotly_setup.png
+      :align: center
 
-If you want you can change the colors, the marker type, the transparency and
-many other settings: just try to change some parameters to create the plot as the
-following picture. Once you set up all the parameters click on the
-:guilabel:`Create Plot` button to create the plot:
+#. If you want you can change the colors, the marker type, the transparency and
+   many other settings: just try to change some parameters to create the plot
+   as the following picture.
+#. Once you set up all the parameters click on the :guilabel:`Create Plot`
+   button to create the plot.
 
-.. image:: img/dataplotly_scatterplot.png
-   :align: center
+   .. image:: img/dataplotly_scatterplot.png
+      :align: center
 
 The plot is interactive: this means you can use all the upper buttons to resize,
 move, or zoom in/out the plot canvas. Moreover, each element of the plot is interactive:
@@ -207,16 +210,18 @@ There is more. Sometimes it can be useful to have two (or more) plots showing
 different plot types with different variables on the same page. Let's do this!
 
 #. Go back to the main plot settings tab by clicking on the |symbology| button
-   in the upper left corner of the plugin panel.
-#. Change the ``Plot Type`` to ``Box Plot``.
-#. Choose :kbd:`group` as ``Grouping Field`` and :kbd:`ph` as ``Y Field``.
-#. In the lower part of the Panel change the ``Type of Plot`` from ``SinglePlot``
-   to ``SubPlots`` and let the default option ``Plot in Rows`` selected:
+   in the upper left corner of the plugin panel
+#. Change the :guilabel:`Plot Type` to :guilabel:`Box Plot`
+#. Choose :guilabel:`group` as :guilabel:`Grouping Field` and :guilabel:`ph` as
+   :guilabel:`Y Field`
+#. In the lower part of the panel, change the :guilabel:`Type of Plot` from
+   :guilabel:`SinglePlot` to :guilabel:`SubPlots` and let the default option
+   :guilabel:`Plot in Rows` selected.
 
    .. image:: img/dataplotly_boxplot.png
       :align: center
 
-#. Once done click on the :guilabel:`Create Plot` button to draw the plot:
+#. Once done click on the :guilabel:`Create Plot` button to draw the plot
 
    .. image:: img/dataplotly_subplots.png
       :align: center
