@@ -21,7 +21,7 @@ explore some of its features.
 
 #. Start a new map and add the :guilabel:`roads` layer from the :file:`training_data`
    Geopackage.
-#. Install the QuickMapServices plugin.
+#. Install the **QuickMapServices** plugin.
 #. Open the plugin's search tab by clicking on :menuselection:`Web -->
    QuickMapServices --> Search QMS`. This option of the plugin allows you to filter
    the available base maps by the current extent of the map canvas.
@@ -30,27 +30,29 @@ explore some of its features.
 #. The base map will be loaded and you will have a satellite background for the
    map.
 
-.. image:: img/qms_result.png
-   :align: center
+   .. image:: img/qms_result.png
+      :align: center
 
-QuickMapServices plugin has a lot of available base maps available.
+QuickMapServices plugin has a lot of base maps available.
 
-Close the :guilabel:`Search QMS` panel we open before and click again on
-:menuselection:`Web --> QuickMapServices`. The first menu lists different map
-providers with all the available maps:
+#. Close the :guilabel:`Search QMS` panel we open before
+#. Click again on :menuselection:`Web --> QuickMapServices`. The first menu
+   lists different map providers with all the available maps:
 
-.. image:: img/qms_menu.png
-   :align: center
+   .. image:: img/qms_menu.png
+      :align: center
 
 But there is more.
 
 If the default maps are not enough for you, you can add other map providers.
-Click on :menuselection:`Web --> QuickMapServices --> Settings` and go in the
-:guilabel:`More services` tab. Read carefully the message of this tab and then click
-on the :kbd:`Get Contributed pack` button.
+
+#. Click on :menuselection:`Web --> QuickMapServices --> Settings` and go in the
+   :guilabel:`More services` tab.
+#. Read carefully the message of this tab and if you agree click on the
+   :guilabel:`Get Contributed pack` button.
 
 If you open now the :menuselection:`Web --> QuickMapServices` menu you will see
-a lot more providers available. Choose the one that best fit your needs!
+a lot more providers available. Choose the one that best fits your needs!
 
 
 |basic| |FA| The QuickOSM Plugin
@@ -71,12 +73,12 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 
    .. tip:: if you are not familiar with the :guilabel:`Key` and :guilabel:`Value`
     system, click on the :guilabel:`Help with key/value` button. It will open a
-    web page with a complete description of this concept of OpenStreetMap
+    web page with a complete description of this concept of OpenStreetMap.
 
 #. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
    empty: so we are downloading all the :guilabel:`railway` features without specifying
-   specific values.
-#. Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
+   particular values.
+#. Select :guilabel:`Layer Extent` in the next drop-down menu and choose :guilabel:`roads`.
 #. Click on the :guilabel:`Run query` button.
 
    .. image:: img/quickosm_setup.png
@@ -90,6 +92,7 @@ canvas.
 
 .. image:: img/quickosm_result.png
    :align: center
+   :scale: 60 %
 
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
   want to save them permanently, click on the |indicatorMemory| icon next to the
@@ -160,8 +163,10 @@ The mountain peaks layer will be downloaded and shown in QGIS:
 
 .. image:: img/quickosm_advanced_result.png
    :align: center
+   :scale: 60 %
 
-You can write complex queries using the `Overpass Query language <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
+You can write complex queries using the `Overpass Query language
+<https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
 Take a look at some example and try to explore the query language.
 
 |basic| |FA| The DataPlotly Plugin
