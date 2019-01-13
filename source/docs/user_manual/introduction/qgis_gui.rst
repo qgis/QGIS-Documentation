@@ -53,7 +53,7 @@ The Menu bar provides access to various QGIS functions using a standard
 hierarchical menu. A summary of the Menus, their options, associated 
 icons and keyboard shortcuts are outlined below. Note that these keyboard
 shortcuts are the default settings, however, they can be reconfigured using
-the :guilabel:`Keyboard Shortcuts`via the :menuselection:`Settings -->` menu.
+the :guilabel:`Keyboard Shortcuts` via the :menuselection:`Settings -->` menu.
 
 Most Menu options have a corresponding tool and vice-versa, however, the Menus
 are not organized exactly like the toolbars. The location of menu options
@@ -211,7 +211,7 @@ Moreover the menu allows to reorganize QGIS interface itself using actions like:
 Menu Option                                                Shortcut                 Toolbar                        Reference
 =========================================================  =======================  =============================  ==========================================
 |newMap| :guilabel:`New Map View`                          :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
-|new3DMap| :guilabel:`New 3D Map View`                     :kbd:`Ctrl+Shift+M`      \                              \
+|new3DMap| :guilabel:`New 3D Map View`                     :kbd:`Ctrl+Shift+M`      \                              :ref:`label_3dmapview`
 |pan| :guilabel:`Pan Map`                                  \                        :guilabel:`Map Navigation`     :ref:`zoom_pan`
 |panToSelected| :guilabel:`Pan Map to Selection`           \                        :guilabel:`Map Navigation`     \
 |zoomIn| :guilabel:`Zoom In`                               :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
@@ -628,6 +628,151 @@ view reflect changes you make in the legend area.
    also pan the map using the space bar or the click on mouse wheel: just move
    the mouse while holding down space bar or click on mouse wheel.
 
+
+.. index:: 3D Map view
+.. _`label_3dmapview`:
+
+3D Map View
+===========
+
+3D visualization support is offered through the 3D map view.
+
+.. note::
+   3D visualisation in QGIS requires a recent version (5.8 or later) of the
+   QT library.
+
+You create and open a 3D map view with :menuselection:`View -->` |new3DMap| :menuselection:`New 3D Map
+View`.
+A floating QGIS panel will appear. The panel can be docked.
+
+The 3D map view has the same extent and view as the 2D canvas to start with.
+There is no dedicated toolbar for navigation in the 3D canvas.
+You zoom in/out and pan in the same way as in the main 2D canvas.
+You can also zoom in and out by dragging the mouse down/up with the
+right mouse button pressed.
+
+Navigation options for exploring the map in 3D:
+
+* Tilt and rotate
+
+  * Tilting the terrain (rotating it around a horizonal axis that goes
+    through the center of the window) can be achieved by:
+
+    * Dragging the mouse forward / backward with the middle mouse button
+      pressed
+    * Pressing :kbd:`Shift` and dragging the mouse forward / backward
+      with the left mouse button pressed
+    * Pressing :kbd:`Shift` and using the up / down keys
+
+  * Rotating the terrain (around a vertical axis that goes through the
+    center of the window) can be achieved by:
+
+    * Dragging the mouse right / left with the middle mouse button
+      pressed
+    * Pressing :kbd:`Shift` and dragging the mouse right / left with the
+      left mouse button pressed
+    * Pressing :kbd:`Shift` and using left / right keys
+
+* Change the camera angle
+
+  * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
+    button pressed will change the camera angle corresponding to
+    directions of dragging
+  * Pressing :kbd:`Ctrl` and using the up / down / left / right keys turns
+    the camera upward, downward, to the left and to the right,
+    respectively
+
+* Move the camera up / down
+
+  * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
+    terrain up and down, respectively
+
+* Zoom in and out
+
+  * Dragging the mouse with the right mouse button pressed will
+    zoom in (backward dragging) and out (forward dragging)
+
+* Move the terrain around
+
+  * Dragging the mouse with the left mouse button pressed moves the
+    terrain around
+  * Using the up / down / left / right keys moves the
+    terrain closer, away, right and left, respectively
+        
+To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
+button on the top of the 3D canvas panel.
+
+Terrain Configuration
+---------------------
+
+A terrain raster provides the elevation.
+Such a raster layer must contain a band that represents elevation.
+To select the terrain raster:
+
+#. Click the |3dconfigure| :sup:`Configure...` button at the top of
+   the 3D canvas panel to open the :guilabel:`3D configuration` window
+#. Choose the terrain raster layer in the :guilabel:`Elevation`
+   pull-down menu
+#. You are ready to go
+
+In the 3D Configuration window there are various other options to
+fine-tune the 3D scene.
+Before diving into the details, it is worth noting that terrain in 3D view
+is represented by a hierarchy of terrain tiles and as the camera moves
+closer to the terrain, existing tiles that do not have sufficient detail
+are replaced by smaller tiles with more details.
+Each tile has mesh geometry derived from the elevation raster layer and
+texture from 2D map layers.
+
+Configuration options and their meaning:
+
+* :guilabel:`Elevation`: Raster to be used for generation of terrain.
+* :guilabel:`Vertical scale`: Scale factor for vertical axis.
+  Increasing the scale will exaggerate the terrain.
+* :guilabel:`Tile resolution`: How many samples from the terrain raster layer to
+  use for each tile.
+  A value of 16 px means that the geometry of each tile will be built
+  from 16x16 elevation samples.
+  Higher numbers create more detailed terrain tiles at the expense of
+  increased rendering complexity.
+* :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
+  between tiles of the terrain.
+  Raising this value will add vertical walls ("skirts") around terrain
+  tiles to hide the cracks.
+* :guilabel:`Map tile resolution`: Width and height of the 2D map images used
+  as textures for the terrain tiles.
+  256 px means that each tile will be rendered into an image of
+  256x256 pixels.
+  Higher numbers create more detailed terrain tiles at the expense of
+  increased rendering complexity.
+* :guilabel:`Max. screen error`: Determines the threshold for swapping terrain
+  tiles with more detailed ones (and vice versa) - i.e. how soon the
+  3D view will use higher quality tiles.
+  Lower numbers mean more details in the scene at the expense of
+  increased rendering complexity.
+* :guilabel:`Max. ground error`: The resolution of the terrain tiles at which
+  dividing tiles into more detailed ones will stop (splitting them
+  would not introduce any extra detail anyway).
+  This value limits the depth of the hierarchy of tiles: Lower values 
+  make the hierarchy deep, increasing rendering complexity.
+* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on the
+  map tile resolution and max. ground error).
+* |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
+* |unchecked| :guilabel:`Show map tile info`: Include border and tile numbers for the
+  terrain tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the terrain
+  tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show camera's view center`
+
+3D vector layers
+----------------
+
+A vector layer with elevation values can be shown in 3D in the 3D map
+view by checking :guilabel:`Enable 3D Renderer` in the
+:guilabel:`3D View` section of the vector layer properties.
+A number of options are available for controlling the rendering of
+the 3D vector layer.
+
 .. _`label_statusbar`:
 
 Status Bar
@@ -721,6 +866,10 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3dconfigure| image:: /static/common/mIconProperties.png
+   :width: 1.3em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png

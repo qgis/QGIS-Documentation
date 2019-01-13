@@ -10,7 +10,7 @@ Substitutions
 Usage
 =====
 
-To easier the use of icons in QGIS manuals, replacements are defined
+To ease the use of icons in QGIS manuals, replacements are defined
 for each icon in :file:`/source/substitutions.txt` file at `QGIS-Documentation repository
 <https://github.com/qgis/QGIS-Documentation>`_ and some of these substitutions
 are listed below.
@@ -19,23 +19,23 @@ there is a big chance that there is already a substitution that can/should be us
 
 If no replacement exists:
 
-* check the documentation repository whether the icon is available in
-  :file:`/resources/en/docs/common` folder. If no image, then you need to find and
-  copy the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_
-  (often under https://github.com/qgis/QGIS/tree/master/images/themes/default folder)
-  and paste (in ``.png`` format) under :file:`/static/common` folder.
-  For convenience and update, it's advised to keep filename when possible.
-* create the reference to the substitution in the :file:`/source/substitutions.txt`
-  file following the example below. The replacement text should be in camelCase:
+#. check the documentation repository whether the icon is available in
+   :file:`/static/common` folder. If no image, then you need to find and
+   copy the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_
+   (often under https://github.com/qgis/QGIS/tree/master/images/themes/default folder)
+   and paste (in ``.png`` format) under :file:`/static/common` folder.
+   For convenience and update, it's advised to keep filename when possible.
+#. create the reference to the substitution in the :file:`/source/substitutions.txt`
+   file following the example below. The replacement text should be in camelCase:
 
-::
+   ::
 
-  .. |splitLayer| image:: /static/common/split_layer.png
-     :width: 1.5em
+     .. |splitLayer| image:: /static/common/split_layer.png
+        :width: 1.5em
 
-* run the :file:`scripts/find_set_subst.py` script to update the substitution
-  definitions in the rst files and include the new substitution(s).
-* (optional) add the reference to the icon and its substitution to the list below.
+#. run the :file:`scripts/find_set_subst.py` script to update the substitution
+   definitions in the rst files and include the new substitution(s).
+#. (optional) add the reference to the icon and its substitution to the list below.
 
 Common Substitutions
 ====================
@@ -264,6 +264,7 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
+|3dconfigure|                   ``|3dconfigure|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -443,6 +444,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |3dconfigure| image:: /static/common/mIconProperties.png
+   :width: 1.3em
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png

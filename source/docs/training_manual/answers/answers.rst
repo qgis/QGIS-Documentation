@@ -508,7 +508,7 @@ contains the travel time between the two points (as fraction of hours):
 |basic| *Calculate Aspect*
 ...............................................................................
 
-* Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
+* Set your :guilabel:`Aspect` dialog up like this:
 
   .. image:: img/answer_dem_aspect.png
      :align: center
@@ -531,8 +531,8 @@ Your result:
   .. image:: img/answer_raster_calculator_slope.png
      :align: center
 
-* For the 5 degree version, replace the :kbd:`2` in the expression and file
-  name with :kbd:`5`.
+* For the 5 degree version, replace the ``2`` in the expression and file
+  name with ``5``.
 
 Your results:
 
