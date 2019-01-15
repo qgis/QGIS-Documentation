@@ -495,7 +495,7 @@ extension ``.qgs~`` and stored in the same directory as the project file.
 The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the
 default is to save using a compressed format with the ``.qgz`` extension.
 The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together
-with its associated sqlite database (``.qgd``) for auxiliary data.
+with its associated sqlite database (``.qgd``) for ref:`auxiliary data <vector_auxiliary_storage>`.
 You can get to these files by unzipping.
 
 .. note::
