@@ -152,7 +152,7 @@ to use during the course:
       :align: center
 
 #. Press :guilabel:`OK`.
-#. Rename properly the layer in its properties dialog.
+#. Rename the layer in its properties dialog.
 #. Repeat the process with the :guilabel:`highway` layer saved as ``roads`` in
    the GeoPackage database.
 
