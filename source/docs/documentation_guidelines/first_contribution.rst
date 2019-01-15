@@ -134,8 +134,9 @@ then you can skip the rest of this section and go to :ref:`the next step <create
 If instead, it simply displays ``base: master`` on the left, the comparison is done
 within your own repository. This is not what we want. To fix that:
 
-#. Leave that page, e.g. for the `main page <https://github.com/qgis/QGIS-Documentation>`_
-   of the repository.
+#. Leave that page, e.g. for the main page of the repository, by clicking the
+   `QGIS-Documentation <https://github.com/qgis/QGIS-Documentation>`_ link
+   in the top left corner.
 #. Click on :guilabel:`New pull request` and :guilabel:`Compare across forks`.
 #. It should display ``base fork: qgis/QGIS-Documentation`` with ``branch: master``,
    showing that the target is now the upstream repository. Ensure also that the head
