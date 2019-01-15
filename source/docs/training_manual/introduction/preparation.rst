@@ -96,6 +96,7 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |browseButton| image:: /static/common/browsebutton.png
