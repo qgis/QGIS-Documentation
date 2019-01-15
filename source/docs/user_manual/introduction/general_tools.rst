@@ -1381,15 +1381,23 @@ on features in a pop-up window. To identify features, use:
 Using the Identify Features tool
 ................................
 
-QGIS offers two ways to identify features with the |identify|
+QGIS offers several ways to identify features with the |identify|
 :sup:`Identify Features` tool:
 
-* **left click** will identify features according to the :ref:`selection mask
-  <identify_selection>` and the :ref:`interaction mode <identify_mode>` set in the
+* **left click** will identify features according to the
+  :ref:`selection mode <identify_mode>` and the
+  :ref:`selection mask <identify_selection>` set in the
   :guilabel:`Identify Results` panel
-* **right click** will fetch all the snapped features from all the visible layers.
+* **right click** with :guilabel:`Identify Feature(s)` as
+  :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
+  panel will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
-  features to identify or the action to execute on it.
+  features to identify or the action to execute on them.
+* **right click** with :guilabel:`Identify Features by Polygon` as
+  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results`
+  panel will identify the features that overlap with the chosen existing
+  polygon, according to the :ref:`selection mask <identify_selection>` set in
+  the :guilabel:`Identify Results` panel
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
