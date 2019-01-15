@@ -35,7 +35,7 @@ Let's get started right away!
 
    The :guilabel:`Data Source Manager` dialog allows you to choose the data to
    load depending on the data type:
-   each tab on the left part of the dialog lists the main data types.
+   the tabs in the left part of the dialog list the main data types.
    You can also browse the files directly from the folder of your computer
    with the *Browser* tab (see :ref:`browser_panel_tm` section):
 
@@ -68,8 +68,8 @@ your work.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-Repeating the steps above add the :file:`places.shp` and :file:`rivers.shp`
-files from the same :file:`exercise_data/shapefile` folder to the map.
+Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
+data sets from the same folder (:file:`exercise_data/shapefile`) to the map.
 
 :ref:`Check your results <interface-preparation-1>`
 
