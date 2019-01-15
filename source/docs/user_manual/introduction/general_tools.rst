@@ -1467,7 +1467,7 @@ default it will display the following information:
 The Identify Results dialog
 ...........................
 
-At the top of the window, you have handful tools:
+At the top of the window, you have a handful of tools:
 
 * |formView| :sup:`Open Form` of the current feature
 * |expandTree| :sup:`Expand tree`
