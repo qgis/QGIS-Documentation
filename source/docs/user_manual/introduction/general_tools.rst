@@ -1236,6 +1236,7 @@ tools:
    possible to use an existing polygon to select overlapping features.
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
+   All the overlapping features from the active layer are selected.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
 holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether feature is selected
