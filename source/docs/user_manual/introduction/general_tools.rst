@@ -1481,7 +1481,7 @@ At the top of the window, you have handful tools:
 
   .. note::
      When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
-     right-click an existing polygon to use it for selecting the features to
+     right-click any existing polygon and use it to identify overlapping
      identify.
 
 .. _identify_mode:
