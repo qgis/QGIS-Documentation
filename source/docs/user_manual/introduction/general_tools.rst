@@ -1233,7 +1233,7 @@ tools:
    single click.
    
 .. note:: With the |selectPolygon| :sup:`Select Features by Polygon` tool, it is
-   possible to use an existing polygon for the selection.
+   possible to use an existing polygon to select overlapping features.
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
 
