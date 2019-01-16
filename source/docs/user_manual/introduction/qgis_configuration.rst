@@ -1001,7 +1001,7 @@ Selector <color-selector>` dialog. You can also rename it by double-clicking
 in the :guilabel:`Label` column.
 
 These colors are identified as :guilabel:`Project colors` and listed as part of
-`color widgets <color-selector>`.
+:ref:`color widgets <color-selector>`.
 
 .. tip:: **Use project colors to quickly assign and update color widgets**
 
