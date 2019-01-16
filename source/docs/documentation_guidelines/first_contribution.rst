@@ -11,200 +11,251 @@
 .. note:: Though QGIS-Documentation is used to demonstrate the process, all
    commands and steps shown below also apply to QGIS-Website.
 
-Now that you know the :ref:`rules <writing_doc_guidelines>` to follow to write a
-clean doc for QGIS, let's dive in the process of production of this documentation
-and how quickly and safely share your changes with the community.
+Now that you know how to write documentation using :ref:`reStructuredText and
+Sphinx<writing_doc_guidelines>`, let's dive into the process of producing
+documentation and how to quickly and safely share your changes with the
+community.
 
-Assuming you already have a `GitHub account <https://github.com/join>`_,
-you first need to clone the source files of the documentation in order to have
-your own copy you can work on: go to the `QGIS-Documentation repository
-<https://github.com/qgis/QGIS-Documentation>`_ page (for convenience, this repository
-is called below ``qgis/QGIS-Documentation``) and click on the **Fork** button in
-the upper right corner.
+Using the GitHub web interface
+==============================
 
-Few seconds later, in your GitHub account you find a QGIS-Documentation
-repository (``https://github.com/<YourName>/QGIS-Documentation``).
-This repo is a safe copy in which you have full write access and can push all
-your contributions without a risk to affect the official documentation. At the
-beginning, this repository contains the same branches as ``qgis/QGIS-Documentation``
-and is defaulted to ``master`` branch. Branches are parallel lines of
-development containing different snapshots of the doc that may merge or diverge.
-Preferably create a branch for each issue you want to tackle and you can create
-as many branches as you want.
+The GitHub web interface offers you ways to easily:
 
-.. tip:: **Do your changes in an ad'hoc branch, never in** ``master``
-
-   By convention, avoid making changes in your ``master`` branch except merging
-   the modifications from the ``master`` branch of ``qgis/QGIS-Documentation``
-   (called ``qgis:master``). And use it as model to create new branches for a
-   clean history and snapshot.
-
-There are different ways to contribute to QGIS documentation. Though we expose
-them below separately, they are not mutually exclusive, meaning that you can, at
-any moment, switch from one process to another without any harm because they
-both follow the scheme below:
-
-#. Do your modifications in an ad'hoc branch of your repository
-#. Publish your changes and ask for merging in the main doc through a pull request (PR)
-#. Others review, discuss and integrate your work in the main branch when everything seems ok.
-
-Using GitHub web interface
-===========================
-
-From your cloned repository, you can now propose changes to the main documentation.
-Indeed, GitHub web interface offers you ways to easily:
-
-* edit files, preview and commit your changes
-* make a pull request to have your changes inserted in the main repo
-* create, update or delete branches
+* edit files,
+* preview and commit your changes,
+* make a pull request to have your changes inserted into the main repository,
+* and create, update, or delete branches.
 
 Read the GitHub `Hello-world <https://guides.github.com/activities/hello-world/>`_
 project to learn some basic vocabulary and actions that will be used below.
 
-Make changes in your repo
+1. Fork QGIS-Documentation
 --------------------------
 
-Documentation can be improved by addressing the `reported issues
-<https://github.com/qgis/QGIS-Documentation/issues>`_ or issues you may
-have encountered while browsing the doc. They can be of different
-types: typo error, missing feature, wrong or out of date description...
+Assuming you already have a `GitHub account <https://github.com/join>`_,
+you first need to fork the source files of the documentation.
 
-Alternative 1: Picking an issue in the list
+Navigate to the `QGIS-Documentation repository
+<https://github.com/qgis/QGIS-Documentation>`_ page and click on the
+|githubFork| button in the upper right corner.
+
+In your GitHub account you will find a QGIS-Documentation repository
+(``https://github.com/<YourName>/QGIS-Documentation``).
+This repository is a copy of the official QGIS-Documentation repository where
+you have full write access and you can make changes without affecting the
+official documentation.
+
+2. Make changes
+---------------
+
+There are different ways to contribute to QGIS documentation. We show
+them separately below, but you can switch from one process to the other
+without any harm.
+
+Alternative 1: Using the ``Fix Me`` shortcut
 ............................................
 
-#. Select an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_ you
-   want to fix. To avoid many persons tackling the same issue, you can inform
-   contributors about your choice by adding a comment to the issue report and
-   get it assigned to you.
-#. From your repository, create (and switch to) a branch with a name that helps
-   you remind what it's about.
-#. Browse the source files to the file that has to be changed.
-#. Toggle the file into Edit mode using the pencil icon and do your modifications
-   following :ref:`writing guidelines <QGIS-documentation-guidelines>`.
-#. Validate your changes by filling the :guilabel:`Commit Changes` frame and
-   commit directly to your branch.
-#. Redo the previous steps for any other file that needs to be updated to fix
-   the issue.
-
-Alternative 2: Using the ``Fix Me`` shortcut
-.............................................
-
-The QGIS project provides an easy way to reach source file from online documentation.
-Indeed, instead of browsing the source files in GitHub to find the one that suits
-the issue, or if you find an issue while reading the manuals, you simply have to
-click the "Fix Me" link at the bottom of the page to open its source file in Edit mode.
+Pages on the QGIS website can be edited quickly and easily by clicking on the
+"Fix Me" link at the bottom of each page to open its source file.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
-   top of the page telling you that you don't have write access to this repo and
-   your changes will be applied in a new branch of your repository.
-   
-   .. note:: If you have commit rights to QGIS-Documentation repository, then no
-    message will show and you'll directly modify ``qgis:master`` branch itself
-    unless you save your changes in another branch.
+   top of the page telling you that you don't have write access to this repo
+   and your changes will be applied to a new branch of your repository.
 
 #. Do your changes following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
-#. When you finish, at the bottom of the page, comment a bit what your changes
-   are about and click on :guilabel:`Propose File change`. This will generate a
-   new branch (``patch-xxx``) in your repo.
 
-.. tip:: **Switch to your own fork and branch**
+#. When you finish, make a short comment about your changes and click on
+   :guilabel:`Propose file change`. This will generate a
+   new `branch <https://help.github.com/articles/about-branches/>`_ (``patch-xxx``) in your repository.
 
-   If your ``master`` branch is even with ``qgis:master``, you can safely
-   replace in the link ``qgis`` by ``<YourName>``. In this case, once your changes
-   are done, you need to check |radioButtonOn| :guilabel:`Create a new branch for
-   this commit and start a pull request` and avoid modifying ``master``.
+#. To contribute your changes to ``qgis/QGIS-Documentation``, skip
+   to :ref:`Compare changes <compare_changes>` in the **:ref:`Share your changes
+   via Pull Request <sharing_changes>`** section below.
+
+Alternative 2
+.............
+
+You can also fix an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_
+or modify files in your fork of the documentation and then push those
+changes.
+
+To fix an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_, pick
+one from the list and add a comment to avoid more than one person tackling the
+same issue.
+
+Continue with the next step.
+
+2. Create an ad hoc branch
+--------------------------
+
+Click on |githubBranch| in the upper left corner of your copy QGIS-
+Documentation repository and enter a unique name in the text field to create a
+new `branch <https://help.github.com/articles/about-branches/>`_ .
+The name of the new branch should relate to the problem you intend to fix.
+
+.. tip:: **Do your changes in an ad hoc branch, never in the** ``master`` **branch**
+
+   By convention, avoid making changes in your ``master`` branch except when
+   you merge the modifications from the ``master`` branch of ``qgis/QGIS-Documentation``
+   into your copy of the QGIS-Documentation repository.
+   Separate branches allow you to work on multiple problems at the same time
+   without interfering with other branches. If you make a mistake you can
+   always delete a branch and start over by creating a new one from the master
+   branch.
+
+3. Make changes
+---------------
+
+#. Browse the source files to the file that you want to change.
+#. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
+#. When you finish, navigate to the **Commit Changes** frame at the bottom of
+   the page, make a short comment about your changes, and click on
+   :guilabel:`Commit Changes` to commit the changes directly to your branch.
+#. Repeat the previous steps for any other file that needs to be updated to
+   fix the issue.
 
 .. _sharing_changes:
 
-Share your changes via Pull Request
-------------------------------------
+4. Share your changes via Pull Request
+--------------------------------------
 
-Now, you have a new branch in QGIS with a file that diverge from ``qgis:master``.
-To integrate your changes in the official documentation, you need to do a pull
-request.
+You need to make a pull request to integrate your changes into the official documentation.
 
-#. Actually, after you commit your changes, GitHub opens a new dialog comparing
-   branches:
+.. note:: **If you used a** ``Fix Me`` **link**
 
-   * if you used the ``Fix Me`` without changing the url, then the comparison is
-     between your ``patch-xxx`` branch and ``qgis:master`` (the base fork is
-     ``qgis/QGIS-Documentation`` and its branch ``master``).
-   * if you used a branch you had named yourself then the comparison is done between
-     that branch and your own ``master`` branch (the base is simply ``master``).
-     You therefore need to leave that page and follow the next step.
+  After you commit your changes GitHub will automatically open a new page
+  comparing the changes you made in your ``patch-xxx`` branch to the ``qgis/QGIS-Documentation``
+  master branch.
 
-#. In any case (including pushing branch to GitHub from command lines) you can
-   create a new pull request at any moment from many pages. Simply go to the
-   main page of the repository (yours or qgis), click on :guilabel:`New pull
-   request` and :guilabel:`Compare across forks` (if needed). Ensure you select
-   ``qgis/QGIS-Documentation`` with ``master`` as base branch and that the head
-   fork is your repository ``<YourName>/QGIS-Documentation`` with your modified
-   branch along.
+  Skip to :ref:`Step 2 <compare_changes>` below.
 
-   .. tip:: Though released and being translated, the documentation of QGIS
-      |CURRENT| is still maintained and existing issues are fixed. If you plan
-      to fix the issues in the current released doc, replace ``master`` branch
-      by the appropriate ``release_...`` branch in any of the steps exposed
-      earlier.
+1. Start a new pull request
+...........................
 
-#. A green check along the compared branches shows that your changes can
-   automatically be merged in the official doc. Click the :guilabel:`Create
-   pull request` button.
+Navigate to the main page of the QGIS-Documentation repository (either your
+fork or the main ``qgis/QGIS-Documentation`` repository) and click on
+:guilabel:`New pull request`.
 
-   If you get a red cross, it means that there's conflicts: the files you are
-   modifying are not up to date with the branch you are targetting (a commit
-   that brought changes on some common lines or files has been pushed to the
-   branch since you create or last update your branch). You can still create
-   the pull request but you'll need to fix the conflict(s) as 
-   :ref:`explained below <fix_conflicts>` to allow any review.
-#. Fill the form if needed and click again :guilabel:`Create pull request` button.
-#. A new PR is added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_
-   and everybody can look or comment it.
-#. That will trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
-   automatically checking if your contribution doesn't contain a build error.
-   In case of error, a red cross appears along your commit. Simply click on it
-   or on ``Details`` in the summary section at the bottom of the page to have
-   details on the error. You'll need to fix any reported error or warning
-   before your changes are committed in the repository.
+.. _compare_changes:
+
+2. Compare changes
+..................
+
+There are four drop-down menus which allow you to compare the changes you
+have made in your branch with the master branch that you want to merge into.
+
+* **base fork**: the fork that you want merge your changes into,
+* **base**: the branch of the base fork that you want to merge your changes into,
+* **head fork**: the fork that has changes that you want to incorporate into the base fork,
+* **compare**: the branch with those changes.
+
+Select ``qgis/QGIS-Documentation`` with ``master`` as the base branch,
+set the head fork to your repository ``<YourName>/QGIS-Documentation``,
+and set compare to your modified branch.
+
+.. figure:: img/githubCreatePullRequestComparison.png
+    :align: Center
+
+    Comparing changes between ``qgis/QGIS-Documentation`` and your repository
+
+A green check with the words **Able to merge** shows that your changes can
+be merged into the official documentation without conflicts.
+
+Click the :guilabel:`Create pull request` button.
+
+.. warning:: **If you get a red cross**
+
+    If you get a red cross, it means that there are conflicts. The files
+    that you are modifying are not up to date with the branch you are
+    targeting because someone else has made a commit that conflicts with your
+    changes. You can still create the pull request but you'll need to fix any
+    :ref:`conflicts <fix_conflicts>` to complete the merge.
+
+.. tip:: Though released and being translated, the documentation of QGIS
+      |CURRENT| is still maintained and existing issues are fixed. If you are
+      fixing issues for a different release, change **base** from ``master``
+      to the appropriate ``release_...`` branch in the steps above.
+
+.. warning:: **Do not make a pull request against your own** ``master`` **branch.**
+
+    If you make a pull request against your own master branch, no one will
+    know of your changes and you may pollute your own master branch. See the
+    figure above.
+
+3. Enter comments
+.................
+
+A text box will open; fill in any relevant comments for the issue you are
+addressing.
+
+If this relates to a particular `issue <https://github.com/qgis/QGIS-Documentation/issues>`_,
+add the issue number to your comments. This is done by entering # and the issue
+number (*e.g.* ``#1234``). If preceded by terms like ``fix`` or ``close``, the
+concerned issue will be closed as soon as the pull request is merged.
+
+Add links to any documentation pages that you are changing.
+
+Click on :guilabel:`Create pull request`
+
+4. Make corrections
+...................
+
+A new pull request (PR) will be automatically added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_.
+Other editors and administrators will review your PR and they may make
+suggestions or ask for corrections.
+
+A PR will also trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
+which automatically checks your contribution for build errors.
+If Travis CI finds an error, a red cross will appear next to your commit.
+Click on the red cross or on ``Details`` in the summary section at the bottom
+of the pull request page to see the details of the error. You'll have to fix
+any reported errors or warnings before your changes are committed to the
+``qgis/QGIS-Documentation`` repository.
 
     .. %ToDo: The FAQ could add information on Travis error and common fixes.
 
-#. Until your PR is merged with the main repo, you can add modifications to your
-   proposal, either to improve your changes, to address requested modifications
-   or to fix a build error. Checkout the ``Files changed`` tab in your pull request
-   page and click the pencil next to the filename you want to modify.
-   Actually any new changes done to your branch is appended to your pull request.
-   Hence, do it only if the change has to do with the issue you are fixing,
-   otherwise create a new branch for those changes following the steps above.
-#. Once everything looks good to you and others, a committer can merge your branch
-   with the main repo. Your contribution is validated.
-#. If you want, you can now delete the branch you used, to avoid having too many
-   (unused and outdated) branches crowding your repository.
+You can make modifications to your pull request until it is merged with the
+main repository, either to improve your request, to address requested
+modifications, or to fix a build error.
 
-Doing this little steps will make you learn the process easier.
+To make changes click on the |githubFilesChanged| tab in your pull request
+page and click the pencil button |githubEditPencil| next to the filename that
+you want to modify.
 
-.. warning:: Be vigilant to pull request against ``qgis:master`` and not your own
-   ``master`` branch, otherwise nobody is aware of your changes and you may
-   mistakenly merge your changes into your ``master`` branch, polluting its history.
+Any additional changes will be automatically added to your pull request if you
+make those changes to the same branch that you submitted in your pull request.
+For this reason, you should only make additional changes if those changes
+relate to the issue that you intend to fix with that pull request.
 
-.. tip:: **Automatically close issue report from pull request**
+If you want to fix another issue, create a new branch for
+those changes and repeat the steps above.
 
-   To ease issue reports management, mention the number of the issue you are
-   addressing in your pull-request. This can be done using ``#issue_number``. If
-   preceded by terms like ``fix``, ``close``... the concerned issue is closed as
-   soon as the pull request is merged.
+An administrator will merge your contribution after any build errors are
+corrected, and after everything looks good to the administrators and you are
+satisfied with your changes.
+
+5. Delete branch
+................
+
+You can delete the branch after your changes have been merged.
+Deleting old branches saves you from having unused and outdated branches in
+your repository.
+
+Navigate to your fork of the QGIS-Documentation repository (``https://github.com/<YourName>/QGIS-Documentation``).
+Click on the :guilabel:`Branches` tab. Below :guilabel:`Your branches` you'll
+see a list of your branches. Click on the red trash can icon to delete any
+unwanted branches.
 
 .. _git_command_line_tools:
 
 Using Git command line tools
 =============================
 
-GitHub web interface helps you update the repo with your contribution in an easier
-way but it doesn't offer tools to:
+The GitHub web interface is an easy way to update the QGIS-documentation repo with your contributions, but it doesn't offer tools to:
 
-* group your commits and clean your changes history
-* fix conflicts with the main repo if needed...
-* build the documentation to test your changes
+* group your commits and clean your change history,
+* fix possible conflicts with the main repo,
+* or, build the documentation to test your changes.
 
 You then need to `install git <https://git-scm.com/downloads>`_ on your hard
 drive in order to get access to more advanced and powerful tools and have a
@@ -440,4 +491,11 @@ Further reading
    source folder.
 
 .. |CURRENT| replace:: 2.18
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |githubBranch| image:: /static/common/githubBranch.png
+   :width: 8em
+.. |githubEditPencil| image:: /static/common/githubEditPencil.png
+   :width: 2em
+.. |githubFilesChanged| image:: /static/common/githubFilesChanged.png
+   :width: 8em
+.. |githubFork| image:: /static/common/githubFork.png
+   :width: 4em
