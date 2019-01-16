@@ -45,8 +45,8 @@ This repository is a copy of the official QGIS-Documentation repository where
 you have full write access and you can make changes without affecting the
 official documentation.
 
-2. Make changes
----------------
+2. Making changes
+-----------------
 
 There are different ways to contribute to QGIS documentation. We show
 them separately below, but you can switch from one process to the other
@@ -56,7 +56,7 @@ Alternative 1: Using the ``Fix Me`` shortcut
 ............................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
-"Fix Me" link at the bottom of each page to open its source file.
+``Fix Me`` link at the bottom of each page.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
@@ -69,23 +69,23 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
    new `branch <https://help.github.com/articles/about-branches/>`_ (``patch-xxx``) in your repository.
 
 #. To contribute your changes to ``qgis/QGIS-Documentation``, skip
-   to :ref:`Compare changes <compare_changes>` in the **:ref:`Share your changes
-   via Pull Request <sharing_changes>`** section below.
+   to :ref:`Compare changes <compare_changes>` in the :ref:`Share your changes
+   via Pull Request <sharing_changes>` section below.
 
-Alternative 2
-.............
+Alternative 2: Edit files in your documentation repository
+..........................................................
 
-You can also fix an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_
-or modify files in your fork of the documentation and then push those
-changes.
+You can edit files directly from your fork of the QGIS Documentation.
 
-To fix an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_, pick
-one from the list and add a comment to avoid more than one person tackling the
-same issue.
+.. note:: **If you are fixing an issue**
+
+    If you are making changes to fix an `issue <https://github.com/qgis/QGIS-Documentation/issues>`_
+    in the issues list, add a comment to the issue and assign it to yourself to
+    prevent more than one person from tackling the same issue.
 
 Continue with the next step.
 
-2. Create an ad hoc branch
+3. Create an ad hoc branch
 --------------------------
 
 Click on |githubBranch| in the upper left corner of your copy QGIS-
@@ -103,7 +103,7 @@ The name of the new branch should relate to the problem you intend to fix.
    always delete a branch and start over by creating a new one from the master
    branch.
 
-3. Make changes
+4. Make changes
 ---------------
 
 #. Browse the source files to the file that you want to change.
@@ -116,7 +116,7 @@ The name of the new branch should relate to the problem you intend to fix.
 
 .. _sharing_changes:
 
-4. Share your changes via Pull Request
+5. Share your changes via Pull Request
 --------------------------------------
 
 You need to make a pull request to integrate your changes into the official documentation.
@@ -143,6 +143,7 @@ fork or the main ``qgis/QGIS-Documentation`` repository) and click on
 
 There are four drop-down menus which allow you to compare the changes you
 have made in your branch with the master branch that you want to merge into.
+They are:
 
 * **base fork**: the fork that you want merge your changes into,
 * **base**: the branch of the base fork that you want to merge your changes into,
@@ -200,11 +201,11 @@ Click on :guilabel:`Create pull request`
 4. Make corrections
 ...................
 
-A new pull request (PR) will be automatically added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_.
-Other editors and administrators will review your PR and they may make
+A new pull request will automatically be added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_.
+Other editors and administrators will review your pull request and they may make
 suggestions or ask for corrections.
 
-A PR will also trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
+A pull request will also trigger a `Travis CI build <https://travis-ci.org/qgis/QGIS-Documentation>`_
 which automatically checks your contribution for build errors.
 If Travis CI finds an error, a red cross will appear next to your commit.
 Click on the red cross or on ``Details`` in the summary section at the bottom
@@ -234,10 +235,10 @@ An administrator will merge your contribution after any build errors are
 corrected, and after everything looks good to the administrators and you are
 satisfied with your changes.
 
-5. Delete branch
-................
+6. Delete your ad hoc branch
+----------------------------
 
-You can delete the branch after your changes have been merged.
+You can delete the ad hoc branch after your changes have been merged.
 Deleting old branches saves you from having unused and outdated branches in
 your repository.
 
