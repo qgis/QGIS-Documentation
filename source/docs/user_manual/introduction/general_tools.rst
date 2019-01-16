@@ -1313,31 +1313,31 @@ that fills automatically the search box with the existing values.
    Filter/Select features using form dialog
 
 Alongside each field, there is a drop-down list with the operation options to
-control the search behaviour. The common options are:
+control the search behaviour:
 
-* :guilabel:`Exclude Field` - The field will not be used for searching
-* :guilabel:`Equal to (=)`
-* :guilabel:`Not equal to`
-* :guilabel:`Is missing (null)`
-* :guilabel:`Is not missing (not null)`
+============================================= ============ ============  ============
+ Field search option                           String       Numeric       Date
+============================================= ============ ============  ============
+ :guilabel:`Exclude Field` from the search     |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Equal to (=)`                      |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Not equal to (≠)`                  |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Greater than (>)`                               |checkbox|    |checkbox|
+ :guilabel:`Less than (<)`                                  |checkbox|    |checkbox|
+ :guilabel:`Greater than or equal to (≥)`                   |checkbox|    |checkbox|
+ :guilabel:`Less than or equal to (≤)`                      |checkbox|    |checkbox|
+ :guilabel:`Between (inclusive)`                            |checkbox|    |checkbox|
+ :guilabel:`Not between (inclusive)`                        |checkbox|    |checkbox|
+ :guilabel:`Contains`                          |checkbox|
+ :guilabel:`Does not contain`                  |checkbox|
+ :guilabel:`Is missing (null)`                 |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Is not missing (not null)`         |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Starts with`                       |checkbox|
+ :guilabel:`Ends with`                         |checkbox|
+============================================= ============ ============  ============
 
-For numeric and datetime fields, the additional options are:
+|
 
-* :guilabel:`Greater than (>)`
-* :guilabel:`Less than (<)`
-* :guilabel:`Greater than or equal to (>=)`
-* :guilabel:`Less than or equal to (<=)`
-* :guilabel:`Between (inclusive)`
-* :guilabel:`Is not between (inclusive)`
-
-For text fields, the additional options are:
-
-* :guilabel:`Contains`
-* :guilabel:`Does not contain`
-* :guilabel:`Starts with`
-* :guilabel:`Ends with`
-
-For the text options above, it is also possible to use the |checkbox|
+For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.
 
 After setting all search options, you can use the :guilabel:`Select features`
