@@ -71,18 +71,18 @@ menu options to Menus. For more information about tools and toolbars, see sectio
 Project
 -------
 
-The :menuselection:`Project` menu contains the functions associated with 
-the :ref:`project file <sec_projects>`. 
-It provides you with tools to:
+The :menuselection:`Project` menu provides access and exit points of
+the :ref:`project file <sec_projects>`. It provides you with tools to:
 
-* Create :guilabel:`New` file from scratch or using an existing project file 
-  (see :ref:`Project files options <projectfiles_options>` for template configuration);
-* :guilabel:`Open...` project file from file browser or from a PostgreSQL database
-* :guilabel:`Close` a project or revert to its last saved state;
+* Create a :guilabel:`New` file from scratch or using another project file as
+  template (see :ref:`Project files options <projectfiles_options>` for
+  template configuration)
+* :guilabel:`Open...` a project file from either a file browser or PostgreSQL database;
+* :guilabel:`Close` a project or revert it to its last saved state
 * :guilabel:`Save` a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
-  or within a PostgreSQL database;
+  or within a PostgreSQL database
 * Export the project rendering to different formats from the map canvas or
-  using a :ref:`print layout <label_printlayout>`;
+  using a :ref:`print layout <label_printlayout>`
 * Set the project properties and the snapping options when editing layers.
 
 =======================================================  ====================  =========================  ===============================
@@ -120,7 +120,7 @@ Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 Edit
 ----
 
-The :menuselection:`Edit` menu presents most of the native tools needed to edit
+The :menuselection:`Edit` menu provides most of the native tools needed to edit
 layers attributes or geometry (see :ref:`editingvector` for details).
 
 =======================================================================  ====================  =================================   ===================================
@@ -169,7 +169,7 @@ Menu Option                                                              Shortcu
 
 |
 
-Depending on the selected layer geometry type, some of the tools may look different:
+Tools dependent on the selected layer geometry type i.e. point, polyline or polygon, are activated accordingly:
 
 .. :tabularcolumns: |l|c|c|c|
 
@@ -185,8 +185,8 @@ Menu Option                            Point                     Polyline       
 View
 ----
 
-The map being designed is rendered in map views. You can interact with these
-interfaces using the :menuselection:`View` tools (see :ref:`working_canvas`
+The map is rendered in map views. You can interact with these
+views using the :menuselection:`View` tools (see :ref:`working_canvas`
 for more information). For example, you can:
 
 * Create new map views, 2D or 3D, next to the main map canvas;
