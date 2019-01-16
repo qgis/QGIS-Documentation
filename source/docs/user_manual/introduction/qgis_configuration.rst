@@ -88,7 +88,7 @@ General Settings
   if a newer version is released;
 * |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
   :ref:`data source manager <datasourcemanager>` dialog opened and allow
-  interaction with QGIS interface while adding layers to project; 
+  interaction with QGIS interface while adding layers to project;
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
 
 .. _projectfiles_options:
@@ -479,11 +479,12 @@ This menu allows you to create or update palettes of colors used throughout the
 application in the :ref:`color selector widget <color_widget>`. You can choose
 from:
 
-* :guilabel:`Recent colors` showing recently used colors;
-* :guilabel:`Standard colors`, the default palette of colors;
-* :guilabel:`Project colors`, a set of colors specific to the current project;
+* :guilabel:`Recent colors` showing recently used colors
+* :guilabel:`Standard colors`, the default palette of colors
+* :guilabel:`Project colors`, a set of colors specific to the current project
+  (see :ref:`default_styles_properties` for more details)
 * :guilabel:`New layer colors`, a set of colors to use by default when new
-  layers are added to QGIS;
+  layers are added to QGIS
 * or custom palette(s) you can create or import using the :guilabel:`...`
   button next to the palette combobox.
 
@@ -493,14 +494,16 @@ the color button drop-down. Custom palettes can also be added to this widget
 thanks to the :guilabel:`Show in Color Buttons` option.
 
 For any of the palettes, you can manage the list of colors using the set of
-tools next to the frame, ie: 
+tools next to the frame, ie:
 
-* add or remove colors;
-* copy or paste colors;
-* import or export the set of colors from/to :file:`.gpl` file.
+* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
+* |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
+  from/to :file:`.gpl` file.
 
 Double-click a color in the list to tweak or replace it in the :ref:`Color
-Selector <color-selector>` dialog.
+Selector <color-selector>` dialog. You can also rename it by double-clicking
+in the :guilabel:`Label` column.
 
 .. _figure_colors_options:
 
@@ -550,7 +553,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * :guilabel:`Snapping marker color`
 * |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
   feature you are about to snap. Helpful when multiple features overlap.
-* |checkbox| :guilabel:`Enable snapping on invisible features` 
+* |checkbox| :guilabel:`Enable snapping on invisible features`
 
 
 **Vertex markers**
@@ -958,16 +961,60 @@ settings by configuring the datum transformation preferences to apply in the
 current project. As usual, these override any corresponding global settings.
 See :ref:`datum_transformation` for more details.
 
+.. _default_styles_properties:
+
 Default Styles Properties
 -------------------------
 
 The :guilabel:`Default Styles` tab lets you control how new layers will be
-drawn when they do not have an existing :file:`.qml` style defined. You can
-also set the default transparency level for new layers and whether symbols
-should have random colors assigned to them.
+drawn in the project when they do not have an existing :file:`.qml` style
+defined. You can:
+
+* Set default symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)
+  to apply depending on the layer geometry type as well as a default
+  :guilabel:`Color Ramp`
+* Apply a default :guilabel:`Opacity` to new layers
+* |checkbox| :guilabel:`Assign random colors to symbols`, modifying the symbols
+  fill colors, hence avoiding same rendering for all layers.
+
+.. _figure_default_styles:
+
+.. figure:: img/project_default_styles.png
+   :align: center
+
+   Default Styles tab
+
+Using the |styleManager| :guilabel:`Style Manager` button, you can also quickly
+access the :ref:`Style Manager <vector_style_manager>` dialog and configure
+symbols and color ramps.
+
 There is also an additional section where you can define specific colors for the
-running project. You can find the added colors in the drop down menu of the color dialog
-window present in each renderer.
+running project. Like the :ref:`global colors <colors_options>`, you can:
+
+* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
+* |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
+  from/to :file:`.gpl` file.
+
+Double-click a color in the list to tweak or replace it in the :ref:`Color
+Selector <color-selector>` dialog. You can also rename it by double-clicking
+in the :guilabel:`Label` column.
+
+These colors are identified as :guilabel:`Project colors` and listed as part of
+:ref:`color widgets <color-selector>`.
+
+.. tip:: **Use project colors to quickly assign and update color widgets**
+
+  Project colors can be refered to using their label and the color widgets
+  they are used in are bound to them. This means that instead of repeatedly
+  setting the same color for many properties and, to avoid a cumbersome update
+  you can:
+
+  #. Define the color as a project color
+  #. Apply it using the ``project_color('color_label')`` expression in 
+     color :ref:`data defined override widget <data_defined>`
+  #. Update the color once in a :guilabel:`Project colors` list
+  #. And the change is reflected EVERYWHERE.
 
 Data Sources Properties
 -----------------------
@@ -992,13 +1039,13 @@ In the :guilabel:`Data Sources` tab, you can:
   To speed up project loading by skipping data checks. Useful in QGIS Server context
   or in projects with huge database views/materialized views. The extent of layers
   will be read from the QGIS project file (instead of data sources) and when
-  using the PostgreSQL provider the primary key unicity will not be 
+  using the PostgreSQL provider the primary key unicity will not be
   checked for views and materialized views.
 
 .. _project_layer_capabilities:
 
 * Configure the :guilabel:`Layers Capabilities`, i.e.:
-  
+
   * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
     :ref:`identify tool <identify>`. By default, layers are set queryable.
   * Set whether a layer should appear as ``read-only``, meaning that
@@ -1174,6 +1221,10 @@ and :guilabel:`Load` them into another QGIS installation.
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |doubleSpinBox| image:: /static/common/doublespinbox.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
