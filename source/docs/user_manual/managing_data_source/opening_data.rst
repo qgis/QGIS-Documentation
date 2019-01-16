@@ -443,25 +443,28 @@ to the project. Layers are added with random style properties.
    polygon), the name of the layer will be made from
    *<filename.dxf> entities <geometry type>*.
 
-To keep the dxf/dwg structure and its symbology in QGIS, you may want to
+To keep the dxf/dwg file structure and its symbology in QGIS, you may want to
 use the dedicated :menuselection:`Project --> Import/Export --> Import Layers
-from DWG/DXF...` tool. Indeed,
-the :guilabel:`DWG/DXF Import` dialog allows you to import into GeoPackage
-database any element of the drawing file.
+from DWG/DXF...` tool which allows you to:
 
-In the dialog, you have to:
+#. import elements from the drawing file into a GeoPackage database.
+#. and add to the project any of the imported elements.
 
-* Input a location for a GeoPackage file, that will be created to store the
-  DWG/DXF content to;
-* Specify which coordinate system the data in the DWG data is in;
-* Then use the :guilabel:`Import` button to select the DWG/DXF file to use (one per
-  geopackage). The GeoPackage database will be automatically populated with the
-  drawing file content. Depending on the size of the \*CAD file, this could
-  take some time;
-* The |checkbox| :guilabel:`Expand block references` will transform the existing
-  blocks into normal elements;
-* the |checkbox| :guilabel:`Use curves` promotes the output layers geometry type
-  to a ``curved`` one.
+In the :guilabel:`DWG/DXF Import` dialog, to first import the drawing file
+contents:
+
+#. Input the location of the :guilabel:`Target package`, i.e. the new GeoPackage
+   file that will store the data. If an existing file is provided, then it will be
+   overwritten.
+#. Specify the coordinate reference system of the data in the drawing file.
+#. Check |checkbox| :guilabel:`Expand block references` to import the
+   blocks in the drawing file as normal elements.
+#. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
+   to a ``curved`` geometry type.
+#. Use the :guilabel:`Import` button to select the DWG/DXF file to use (one per
+   geopackage). The GeoPackage database will be automatically populated with the
+   drawing file content. Depending on the size of the \*CAD file, this could
+   take some time.
 
 After the :file:`.dwg` or :file:`.dxf` data is imported into the GeoPackage
 database the frame in the lower half of the dialog is populated with the list of
@@ -478,6 +481,14 @@ QGIS project:
 #. Alternatively using the |checkbox| :guilabel:`Merge layers` option places all
    layers in a single group.
 #. Press :guilabel:`OK` to open the layers in QGIS.
+
+
+.. _figure_dwg_dxf_import:
+
+.. figure:: img/dwg_dxf_import_dialog.png
+    :align: center
+    
+    Import dialog for DWG/DXF files
 
 
 .. index:: OSM (OpenStreetMap)
@@ -869,8 +880,8 @@ To load a layer from a database, you can perform the following steps:
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` key while clicking.
-#. If applicable, use the :guilabel:`Set Fillter` button (or double-click the layer)
-   to start the :guilabel:`Query builder` dialog (See section
+#. If applicable, use the :guilabel:`Set Filter` button (or double-click the layer)
+   to start the :guilabel:`Query Builder` dialog (See section
    :ref:`vector_query_builder`) and define which features to load from the
    selected layer. The filter expression appears in the ``sql`` column.
    This restriction can be removed or edited in the :menuselection:`Layer
@@ -889,15 +900,15 @@ To load a layer from a database, you can perform the following steps:
    Add PostGIS Table(s) Dialog
 
 
-.. tip:: **Load database table(s) from the Browser Panel**
+.. tip:: **Use the Browser Panel to speed up loading of database table(s)**
 
- Like simple files, connected databases are also listed in the
- :guilabel:`Browser Panel`. Hence, you can load tables from databases using
- the Browser:
-
- #. Find the layer to use with the |filterMap| :sup:`Filter Browser` tool at
-    the top of the browser panel (see :ref:`browser_panel` for the search options).
- #. Select and drag-and-drop it in the map canvas.
+  Adding DB tables from their ad hoc tab of the :guilabel:`Data Source Manager`
+  dialog to QGIS may sometimes be time consuming as QGIS fetches
+  statistics and properties (e.g. geometry type and field, CRS, number of features)
+  of each table beforehand.
+  To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
+  it's better to use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB Manager
+  <dbmanager>` to drag and drop the database tables in the map canvas.
 
 
 QGIS Custom formats

@@ -193,6 +193,8 @@ This group contains functions which aggregate values over layers and fields.
                         or expression
 ====================== =======================================================
 
+|
+
 **Examples:**
 
 * Return the maximum of the "passengers" field from features in the layer
@@ -332,6 +334,8 @@ This group contains functions to handle conditional checks in expressions.
                                       conditional check
 ===================================== =========================================
 
+|
+
 **Some example:**
 
 * Send back a value if the first condition is true, else another value::
@@ -400,6 +404,8 @@ This group contains functions for handling date and time data.
  year            Extracts the year part from a date or datetime,
                  or the number of years from an interval
 ==============  ==============================================================
+
+|
 
 This group also shares several functions with the :ref:`conversion_functions` (
 to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
@@ -545,14 +551,14 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | $perimeter             | Returns the perimeter of the current polygon      |
 |                        | feature                                           |
 +------------------------+---------------------------------------------------+
-| $x                     | Returns the x coordinate of the current feature   |
+| $x                     | Returns the X coordinate of the current feature   |
 +------------------------+---------------------------------------------------+
-| $x_at(n)               | Returns the x coordinate of the nth node of the   |
+| $x_at(n)               | Returns the X coordinate of the nth node of the   |
 |                        | current feature's geometry                        |
 +------------------------+---------------------------------------------------+
-| $y                     | Returns the y coordinate of the current feature   |
+| $y                     | Returns the Y coordinate of the current feature   |
 +------------------------+---------------------------------------------------+
-| $y_at(n)               | Returns the y coordinate of the nth node of the   |
+| $y_at(n)               | Returns the Y coordinate of the nth node of the   |
 |                        | current feature's geometry                        |
 +------------------------+---------------------------------------------------+
 | angle_at_vertex        | Returns the bisector angle (average angle) to the |
@@ -592,7 +598,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | (see also :ref:`qgisbuffer`)                      |
 +------------------------+---------------------------------------------------+
 | buffer_by_m |32|       | Creates a buffer along a line geometry where the  |
-|                        | buffer diameter varies according to the m-values  |
+|                        | buffer diameter varies according to the M values  |
 |                        | at the line vertices                              |
 |                        | (see also :ref:`qgisbufferbym`)                   |
 +------------------------+---------------------------------------------------+
@@ -643,9 +649,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | extrude(geom,x,y)      | Returns an extruded version of the input (Multi-) |
 |                        | Curve or (Multi-)Linestring geometry with an      |
-|                        | extension specified by x and y                    |
+|                        | extension specified by X and Y                    |
 +------------------------+---------------------------------------------------+
-| flip_coordinates |32|  | Returns a copy of the geometry with the x and y   |
+| flip_coordinates |32|  | Returns a copy of the geometry with the X and Y   |
 |                        | coordinates swapped (see also :ref:`qgisswapxy`)  |
 +------------------------+---------------------------------------------------+
 | geom_from_gml          | Returns a geometry created from a GML             |
@@ -718,7 +724,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | connected LineStrings from the input geometry     |
 |                        | have been merged into a single linestring.        |
 +------------------------+---------------------------------------------------+
-| m                      | Returns the m value of a point geometry           |
+| m                      | Returns the M value of a point geometry           |
 +------------------------+---------------------------------------------------+
 | make_circle            | Creates a circular geometry based on center point |
 |                        | and radius                                        |
@@ -729,11 +735,11 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | make_line              | Creates a line geometry from a series of point    |
 |                        | geometries                                        |
 +------------------------+---------------------------------------------------+
-| make_point(x,y,z,m)    | Returns a point geometry from x and y (and        |
-|                        | optional z or m) values                           |
+| make_point(x,y,z,m)    | Returns a point geometry from X and Y (and        |
+|                        | optional Z or M) values                           |
 +------------------------+---------------------------------------------------+
-| make_point_m(x,y,m)    | Returns a point geometry from x and y coordinates |
-|                        | and m values                                      |
+| make_point_m(x,y,m)    | Returns a point geometry from X and Y coordinates |
+|                        | and M values                                      |
 +------------------------+---------------------------------------------------+
 | make_polygon           | Creates a polygon geometry from an outer ring and |
 |                        | optional series of inner ring geometries          |
@@ -870,32 +876,34 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | Returns 1 (true) if geometry a is completely      |
 |                        | inside geometry b                                 |
 +------------------------+---------------------------------------------------+
-| x                      | Returns the x coordinate of a point geometry, or  |
-|                        | the x coordinate of the centroid for a non-point  |
+| x                      | Returns the X coordinate of a point geometry, or  |
+|                        | the X coordinate of the centroid for a non-point  |
 |                        | geometry                                          |
 +------------------------+---------------------------------------------------+
-| x_min                  | Returns the minimum x coordinate of a geometry.   |
+| x_min                  | Returns the minimum X coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| x_max                  | Returns the maximum x coordinate of a geometry.   |
+| x_max                  | Returns the maximum X coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| y                      | Returns the y coordinate of a point geometry, or  |
-|                        | the y coordinate of the centroid for a non-point  |
+| y                      | Returns the Y coordinate of a point geometry, or  |
+|                        | the Y coordinate of the centroid for a non-point  |
 |                        | geometry                                          |
 +------------------------+---------------------------------------------------+
-| y_min                  | Returns the minimum y coordinate of a geometry.   |
+| y_min                  | Returns the minimum Y coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| y_max                  | Returns the maximum y coordinate of a geometry.   |
+| y_max                  | Returns the maximum Y coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| z                      | Returns the z coordinate of a point geometry      |
+| z                      | Returns the Z coordinate of a point geometry      |
 +------------------------+---------------------------------------------------+
+
+|
 
 **Some examples:**
 
@@ -905,7 +913,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    buffer( $geometry, 10 )
    point_on_surface( $geometry )
 
-* Return the x coordinate of the current feature's centroid::
+* Return the X coordinate of the current feature's centroid::
 
     x( $geometry )
 
@@ -925,6 +933,8 @@ This group contains functions to manipulate print layout items properties.
  item_variables      Returns a map of variables from a layout item inside
                      this print layout
 ==================  ========================================================
+
+|
 
 **Some example:**
 
@@ -987,7 +997,7 @@ This group contains math functions (e.g., square root, sin and cos).
  acos               Returns the inverse cosine of a value in radians
  asin               Returns the inverse sine of a value in radians
  atan               Returns the inverse tangent of a value in radians
- atan2(y,x)         Returns the inverse tangent of y/x by using the signs
+ atan2(y,x)         Returns the inverse tangent of Y/X by using the signs
                     of the two arguments to determine the quadrant of the
                     result
  azimuth(a,b)       Returns the north-based azimuth as the angle in radians
@@ -1087,6 +1097,8 @@ if one of the inputs is NULL then the result is NULL.
  a NOT IN (value[,value])    a is not below the values listed
 =========================== ===================================================
 
+|
+
 .. note:: **About fields concatenation**
 
   You can concatenate strings using either `||` or ``+``. The latter also means
@@ -1108,7 +1120,6 @@ if one of the inputs is NULL then the result is NULL.
   in the value (note the position of the % character)::
 
     "description" LIKE 'Hello%'
-
 
 
 .. _raster_functions:
@@ -1154,6 +1165,8 @@ This group contains functions that operate on record identifiers.
  uuid                 Generates a Universally Unique Identifier (UUID)
                       for each row. Each UUID is 38 characters long.
 ==================== =========================================================
+
+|
 
 **Some examples:**
 
@@ -1337,9 +1350,11 @@ To use these functions in an expression, they should be preceded by @ character
                               and avoid recalculating the same value repeatedly
 ============================ =======================================================
 
+|
+
 **Some examples:**
 
-* Return the x coordinate of a map item center to insert into a label in layout::
+* Return the X coordinate of a map item center to insert into a label in layout::
 
    x( map_get( item_variables( 'map1'), 'map_extent_center' ) )
 

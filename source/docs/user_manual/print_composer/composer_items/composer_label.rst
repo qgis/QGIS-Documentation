@@ -106,7 +106,7 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
 
     concat( 'Page ', @atlas_featurenumber, '/', @atlas_totalfeatures )
 
-* Return the x coordinate of the bottom left corner of a map canvas:
+* Return the X coordinate of the bottom left corner of a map canvas:
 
   ::
 

@@ -19,7 +19,7 @@ QGIS GUI
 .. index::
    single: Main window
 
-When QGIS starts, you are presented with the GUI as shown in the figure (the
+When QGIS starts, a GUI displays as shown in the figure below (the
 numbers 1 through 5 in yellow circles are discussed below).
 
 .. _figure_startup:
@@ -41,9 +41,7 @@ The QGIS GUI is divided into five components:
 #. Map View
 #. Status Bar
 
-These five components of the QGIS interface are described in more detail in
-the following sections. Two more sections present keyboard shortcuts and
-context help.
+Scroll down for detailed explanations of these features. 
 
 .. index:: Menu
 .. _label_menubar:
@@ -51,24 +49,22 @@ context help.
 Menu Bar
 ========
 
-The menu bar provides access to various QGIS features using a standard
-hierarchical menu. The top-level menus and a summary of some of the menu
-options are listed below, together with the associated icons as
-they appear on the toolbar, and keyboard shortcuts. The shortcuts presented in
-this section are the defaults; however, keyboard shortcuts can also be configured
-manually using the :guilabel:`Keyboard Shortcuts` dialog, opened from
-:menuselection:`Settings -->` menu.
+The Menu bar provides access to various QGIS functions using a standard
+hierarchical menu. A summary of the Menus, their options, associated 
+icons and keyboard shortcuts are outlined below. Note that these keyboard
+shortcuts are the default settings, however, they can be reconfigured using
+the :guilabel:`Keyboard Shortcuts` via the :menuselection:`Settings -->` menu.
 
-Although most menu options have a corresponding tool and vice-versa, the menus
-are not organized exactly like the toolbars. The toolbar containing the tool is
-listed after each menu option as a checkbox entry. Some menu options only
-appear if the corresponding plugin is loaded. For more information about tools
-and toolbars, see section :ref:`label_toolbars`.
+Most Menu options have a corresponding tool and vice-versa, however, the Menus
+are not organized exactly like the toolbars. The location of menu options
+in the toolbars are indicated below in the table. Plugins may load in additional
+menu options to Menus. For more information about tools and toolbars, see section 
+:ref:`label_toolbars`.
 
-.. note:: QGIS is a cross-platform application meaning that though it provides you
+.. note:: QGIS is a cross-platform application - that though it provides you
    with the same tools, they may be placed in different menus according to the
    operating system specification. The lists below show the most common location
-   and precise when there is a variation.
+   including known variations.
 
 .. index:: Project
 
@@ -80,13 +76,13 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
 
 * Create a :guilabel:`New` file from scratch or using another project file as
   template (see :ref:`Project files options <projectfiles_options>` for
-  template configuration);
+  template configuration)
 * :guilabel:`Open...` a project file from either a file browser or PostgreSQL database;
-* :guilabel:`Close` a project or revert it to its last saved state;
-* Save a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
-  or within a PostgreSQL database;
+* :guilabel:`Close` a project or revert it to its last saved state
+* :guilabel:`Save` a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+  or within a PostgreSQL database
 * Export the project rendering to different formats from the map canvas or
-  using a :ref:`print layout <label_printlayout>`;
+  using a :ref:`print layout <label_printlayout>`
 * Set the project properties and the snapping options when editing layers.
 
 =======================================================  ====================  =========================  ===============================
@@ -108,13 +104,15 @@ Menu Option                                              Shortcut              T
 |saveMapAsImage| :guilabel:`Export Map to Image...`      \                     \                          :ref:`sec_output`
 |saveAsPDF| :guilabel:`Export Map to PDF...`             \                     \                          :ref:`sec_output`
 :guilabel:`Export Project to DXF...`                     \                     \                          :ref:`sec_output`
-:guilabel:`Import Layers from DWG/DXF...`                \                     \                          \
+:guilabel:`Import Layers from DWG/DXF...`                \                     \                          :ref:`import_dxfdwg`
 |newLayout| :guilabel:`New Print Layout...`              :kbd:`Ctrl+P`         :guilabel:`Project`        :ref:`label_printlayout`
 |newReport| :guilabel:`New Report...`                    \                     \                          :ref:`label_printlayout`
 |layoutManager| :guilabel:`Layout Manager...`            \                     :guilabel:`Project`        :ref:`label_printlayout`
 :menuselection:`Layouts -->`                             \                     \                          :ref:`label_printlayout`
 |fileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                          \
 =======================================================  ====================  =========================  ===============================
+
+|
 
 Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 :menuselection:`QGIS --> Quit QGIS` (:kbd:`Cmd+Q`).
@@ -133,7 +131,7 @@ Menu Option                                                              Shortcu
 |editCut| :guilabel:`Cut Features`                                       :kbd:`Ctrl+X`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
 |editCopy| :guilabel:`Copy Features`                                     :kbd:`Ctrl+C`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
 |editPaste| :guilabel:`Paste Features`                                   :kbd:`Ctrl+V`         :guilabel:`Digitizing`              :ref:`clipboard_feature`
-:menuselection:`Paste features as -->`                                   \                     \                                   :ref:`sec_attribute_table`
+:menuselection:`Paste Features as -->`                                   \                     \                                   :ref:`sec_attribute_table`
 :menuselection:`Select -->`                                              \                     :guilabel:`Attributes`              :ref:`sec_selection`
 |newTableRow| :guilabel:`Add Record`                                     :kbd:`Ctrl+.`         :guilabel:`Digitizing`              \
 |capturePoint| :guilabel:`Add Point Feature`                             :kbd:`Ctrl+.`         :guilabel:`Digitizing`              :ref:`add_feature`
@@ -166,9 +164,13 @@ Menu Option                                                              Shortcu
 |vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`          \                     :guilabel:`Digitizing`              :ref:`vertex_tool`
 |rotatePointSymbols| :guilabel:`Rotate Point Symbols`                    \                     :guilabel:`Advanced Digitizing`     :ref:`rotate_symbol`
 |offsetPointSymbols| :guilabel:`Offset Point Symbols`                    \                     :guilabel:`Advanced Digitizing`     :ref:`offset_symbol`
+|reverseLine| :guilabel:`Reverse Line`                                   \                     :guilabel:`Advanced Digitizing`     \
 =======================================================================  ====================  =================================   ===================================
 
+|
+
 Tools dependent on the selected layer geometry type i.e. point, polyline or polygon, are activated accordingly:
+
 .. :tabularcolumns: |l|c|c|c|
 
 =====================================  ========================  ========================  ==========================
@@ -209,7 +211,7 @@ Moreover the menu allows to reorganize QGIS interface itself using actions like:
 Menu Option                                                Shortcut                 Toolbar                        Reference
 =========================================================  =======================  =============================  ==========================================
 |newMap| :guilabel:`New Map View`                          :kbd:`Ctrl+M`            :guilabel:`Map Navigation`     \
-:guilabel:`New 3D Map View`                                :kbd:`Ctrl+Shift+M`      \                              \
+|new3DMap| :guilabel:`New 3D Map View`                     :kbd:`Ctrl+Shift+M`      \                              :ref:`label_3dmapview`
 |pan| :guilabel:`Pan Map`                                  \                        :guilabel:`Map Navigation`     :ref:`zoom_pan`
 |panToSelected| :guilabel:`Pan Map to Selection`           \                        :guilabel:`Map Navigation`     \
 |zoomIn| :guilabel:`Zoom In`                               :kbd:`Ctrl+Alt++`        :guilabel:`Map Navigation`     :ref:`zoom_pan`
@@ -225,7 +227,7 @@ Menu Option                                                Shortcut             
 |zoomActual| :guilabel:`Zoom To Native Resolution (100%`)  \                        :guilabel:`Map Navigation`     \
 :menuselection:`Decorations -->`                           \                        \                              :ref:`decorations`
 :menuselection:`Preview mode -->`                          \                        \                              \
-|mapTips| :guilabel:`Show Map Tips`                             \                        :guilabel:`Attributes`         :ref:`maptips`
+|mapTips| :guilabel:`Show Map Tips`                        \                        :guilabel:`Attributes`         :ref:`maptips`
 |newBookmark| :guilabel:`New Bookmark...`                  :kbd:`Ctrl+B`            :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
 |showBookmarks| :guilabel:`Show Bookmarks`                 :kbd:`Ctrl+Shift+B`      :guilabel:`Map Navigation`     :ref:`sec_bookmarks`
 |draw| :guilabel:`Refresh`                                 :kbd:`F5`                :guilabel:`Map Navigation`     \
@@ -240,6 +242,8 @@ Menu Option                                                Shortcut             
 :guilabel:`Toggle Panel Visibility`                        :kbd:`Ctrl+Tab`          \                              \
 :guilabel:`Toggle Map Only`                                :kbd:`Ctrl+Shift+Tab`    \                              \
 =========================================================  =======================  =============================  ==========================================
+
+|
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
 and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
@@ -266,13 +270,13 @@ or paste layer properties (style, scale, CRS...).
 ============================================================  ====================  ================================  =====================================
 Menu Option                                                   Shortcut              Toolbar                           Reference
 ============================================================  ====================  ================================  =====================================
-|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    \
+|dataSourceManager| :guilabel:`Data Source Manager`           :kbd:`Ctrl+L`         :guilabel:`Data Source Manager`    :ref:`Opening Data <datasourcemanager>`
 :menuselection:`Create Layer -->`                             \                     :guilabel:`Data Source Manager`    :ref:`sec_create_vector`
 :menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  :ref:`nesting_projects`
 :guilabel:`Add from Layer Definition File...`                 \                     \                                  \
-|editCopy| :guilabel:`Copy style`                             \                     \                                  :ref:`save_layer_property`
-|editPaste| :guilabel:`Paste style`                           \                     \                                  :ref:`save_layer_property`
+|editCopy| :guilabel:`Copy Style`                             \                     \                                  :ref:`save_layer_property`
+|editPaste| :guilabel:`Paste Style`                           \                     \                                  :ref:`save_layer_property`
 |editCopy| :guilabel:`Copy Layer`                             \                     \                                  \
 |editPaste| :guilabel:`Paste Layer/Group`                     \                     \                                  \
 |openTable| :guilabel:`Open Attribute Table`                  :kbd:`F6`             :guilabel:`Attributes`             :ref:`sec_attribute_table`
@@ -286,7 +290,7 @@ Menu Option                                                   Shortcut          
 :guilabel:`Set Scale Visibility of Layer(s)`                  \                     \                                  \
 :guilabel:`Set CRS of Layer(s)`                               :kbd:`Ctrl+Shift+C`   \                                  \
 :guilabel:`Set Project CRS from Layer`                        \                     \                                  \
-:guilabel:`Properties...`                                     \                     \                                  :ref:`vector_properties_dialog`
+:guilabel:`Layer Properties...`                               \                     \                                  :ref:`vector_properties_dialog`
 :guilabel:`Filter...`                                         :kbd:`Ctrl+F`         \                                  :ref:`vector_query_builder`
 |labeling| :guilabel:`Labeling`                               \                     \                                  :ref:`vector_labels_tab`
 |inOverview| :guilabel:`Show in Overview`                     \                     \                                  :ref:`overview_panels`
@@ -308,6 +312,8 @@ Menu Option                                                        Shortcut     
 |options| :guilabel:`Options...`                                   \                     \                     :ref:`gui_options`
 =================================================================  ====================  ====================  ===================================
 
+|
+
 Under |kde| Linux KDE, you'll find more tools in :menuselection:`Settings`
 menu such as :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
@@ -321,6 +327,8 @@ Menu Option                                                             Shortcut
 |showPluginManager| :guilabel:`Manage and Install Plugins...`           \                     \                        :ref:`managing_plugins`
 |pythonFile| :guilabel:`Python Console`                                 :kbd:`Ctrl+Alt+P`     :guilabel:`Plugins`      :ref:`console`
 ======================================================================  ====================  =======================  ===============================
+
+|
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -343,6 +351,8 @@ Menu Option                                                     Shortcut        
 |gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       :ref:`plugin_gps`
 |topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       :ref:`topology`
 ==============================================================  =======================  =======================  ===============================
+
+|
 
 By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
 by sub-menus to the :guilabel:`Vector` menu. This provides shortcuts
@@ -373,6 +383,8 @@ Menu Option                                                 Toolbar             
 |georefRun| :guilabel:`Georeferencer`                       :guilabel:`Raster`    :ref:`georef`
 ==========================================================  ====================  ==================================
 
+|
+
 By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
 by sub-menus to the :guilabel:`Raster` menu. This provides a shortcut
 for many common raster-based GIS tasks picked from different providers.
@@ -398,6 +410,8 @@ Menu Option                                      Toolbar                       R
 :menuselection:`Offline Editing -->`             :guilabel:`Database`          :ref:`offlinedit`
 ===============================================  ============================  ===============================
 
+|
+
 When starting QGIS for the first time not all core plugins are loaded.
 
 
@@ -414,6 +428,8 @@ Menu Option                                      Toolbar                      Re
 |metasearch| :menuselection:`Metasearch`         :guilabel:`Web`              :ref:`metasearch`
 ===============================================  ===========================  ===============================
 
+|
+
 When starting QGIS for the first time not all core plugins are loaded.
 
 
@@ -427,7 +443,10 @@ Menu Option                                                     Shortcut        
 |processingModel| :guilabel:`Graphical Modeler...`              :kbd:`Ctrl+Alt+M`           :ref:`processing.modeler`
 |processingHistory| :guilabel:`History...`                      :kbd:`Ctrl+Alt+H`           :ref:`processing.history`
 |processingResult| :guilabel:`Results Viewer`                   :kbd:`Ctrl+Alt+R`           :ref:`processing.results`
+|processSelected| :guilabel:`Edit Features In-Place`            \                           :ref:`processing_inplace_edit`
 ==============================================================  ==========================  ==========================================
+
+|
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -438,7 +457,6 @@ Help
 Menu Option                                              Shortcut                     Toolbar
 =======================================================  ===========================  ===============================
 |helpContents| :guilabel:`Help Contents`                 :kbd:`F1`                    :guilabel:`Help`
-|whatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`              :guilabel:`Help`
 :guilabel:`API Documentation`                            \                            \
 :guilabel:`Report an Issue`                              \                            \
 :guilabel:`Need commercial support?`                     \                            \
@@ -464,6 +482,8 @@ Menu Option                       Shortcut              Reference
 :guilabel:`Hide Others`           \                     \
 :guilabel:`Quit QGIS`             :kbd:`Cmd+Q`          \
 ================================  ====================  =========================
+
+|
 
 :guilabel:`Preferences` and :guilabel:`About QGIS` are the same commands as
 :menuselection:`Settings --> Options` and :menuselection:`Help --> About`.
@@ -608,6 +628,151 @@ view reflect changes you make in the legend area.
    also pan the map using the space bar or the click on mouse wheel: just move
    the mouse while holding down space bar or click on mouse wheel.
 
+
+.. index:: 3D Map view
+.. _`label_3dmapview`:
+
+3D Map View
+===========
+
+3D visualization support is offered through the 3D map view.
+
+.. note::
+   3D visualisation in QGIS requires a recent version (5.8 or later) of the
+   QT library.
+
+You create and open a 3D map view with :menuselection:`View -->` |new3DMap| :menuselection:`New 3D Map
+View`.
+A floating QGIS panel will appear. The panel can be docked.
+
+The 3D map view has the same extent and view as the 2D canvas to start with.
+There is no dedicated toolbar for navigation in the 3D canvas.
+You zoom in/out and pan in the same way as in the main 2D canvas.
+You can also zoom in and out by dragging the mouse down/up with the
+right mouse button pressed.
+
+Navigation options for exploring the map in 3D:
+
+* Tilt and rotate
+
+  * Tilting the terrain (rotating it around a horizonal axis that goes
+    through the center of the window) can be achieved by:
+
+    * Dragging the mouse forward / backward with the middle mouse button
+      pressed
+    * Pressing :kbd:`Shift` and dragging the mouse forward / backward
+      with the left mouse button pressed
+    * Pressing :kbd:`Shift` and using the up / down keys
+
+  * Rotating the terrain (around a vertical axis that goes through the
+    center of the window) can be achieved by:
+
+    * Dragging the mouse right / left with the middle mouse button
+      pressed
+    * Pressing :kbd:`Shift` and dragging the mouse right / left with the
+      left mouse button pressed
+    * Pressing :kbd:`Shift` and using left / right keys
+
+* Change the camera angle
+
+  * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
+    button pressed will change the camera angle corresponding to
+    directions of dragging
+  * Pressing :kbd:`Ctrl` and using the up / down / left / right keys turns
+    the camera upward, downward, to the left and to the right,
+    respectively
+
+* Move the camera up / down
+
+  * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
+    terrain up and down, respectively
+
+* Zoom in and out
+
+  * Dragging the mouse with the right mouse button pressed will
+    zoom in (backward dragging) and out (forward dragging)
+
+* Move the terrain around
+
+  * Dragging the mouse with the left mouse button pressed moves the
+    terrain around
+  * Using the up / down / left / right keys moves the
+    terrain closer, away, right and left, respectively
+        
+To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
+button on the top of the 3D canvas panel.
+
+Terrain Configuration
+---------------------
+
+A terrain raster provides the elevation.
+Such a raster layer must contain a band that represents elevation.
+To select the terrain raster:
+
+#. Click the |3dconfigure| :sup:`Configure...` button at the top of
+   the 3D canvas panel to open the :guilabel:`3D configuration` window
+#. Choose the terrain raster layer in the :guilabel:`Elevation`
+   pull-down menu
+#. You are ready to go
+
+In the 3D Configuration window there are various other options to
+fine-tune the 3D scene.
+Before diving into the details, it is worth noting that terrain in 3D view
+is represented by a hierarchy of terrain tiles and as the camera moves
+closer to the terrain, existing tiles that do not have sufficient detail
+are replaced by smaller tiles with more details.
+Each tile has mesh geometry derived from the elevation raster layer and
+texture from 2D map layers.
+
+Configuration options and their meaning:
+
+* :guilabel:`Elevation`: Raster to be used for generation of terrain.
+* :guilabel:`Vertical scale`: Scale factor for vertical axis.
+  Increasing the scale will exaggerate the terrain.
+* :guilabel:`Tile resolution`: How many samples from the terrain raster layer to
+  use for each tile.
+  A value of 16 px means that the geometry of each tile will be built
+  from 16x16 elevation samples.
+  Higher numbers create more detailed terrain tiles at the expense of
+  increased rendering complexity.
+* :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
+  between tiles of the terrain.
+  Raising this value will add vertical walls ("skirts") around terrain
+  tiles to hide the cracks.
+* :guilabel:`Map tile resolution`: Width and height of the 2D map images used
+  as textures for the terrain tiles.
+  256 px means that each tile will be rendered into an image of
+  256x256 pixels.
+  Higher numbers create more detailed terrain tiles at the expense of
+  increased rendering complexity.
+* :guilabel:`Max. screen error`: Determines the threshold for swapping terrain
+  tiles with more detailed ones (and vice versa) - i.e. how soon the
+  3D view will use higher quality tiles.
+  Lower numbers mean more details in the scene at the expense of
+  increased rendering complexity.
+* :guilabel:`Max. ground error`: The resolution of the terrain tiles at which
+  dividing tiles into more detailed ones will stop (splitting them
+  would not introduce any extra detail anyway).
+  This value limits the depth of the hierarchy of tiles: Lower values 
+  make the hierarchy deep, increasing rendering complexity.
+* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on the
+  map tile resolution and max. ground error).
+* |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
+* |unchecked| :guilabel:`Show map tile info`: Include border and tile numbers for the
+  terrain tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the terrain
+  tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show camera's view center`
+
+3D vector layers
+----------------
+
+A vector layer with elevation values can be shown in 3D in the 3D map
+view by checking :guilabel:`Enable 3D Renderer` in the
+:guilabel:`3D View` section of the vector layer properties.
+A number of options are available for controlling the rendering of
+the 3D vector layer.
+
 .. _`label_statusbar`:
 
 Status Bar
@@ -701,6 +866,10 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3dconfigure| image:: /static/common/mIconProperties.png
+   :width: 1.3em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
@@ -812,6 +981,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
+.. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
@@ -840,6 +1011,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |pluginUpgrade| image:: /static/common/pluginUpgrade.png
    :width: 1.5em
+.. |processSelected| image:: /static/common/mActionProcessSelected.png
+   :width: 1.5em
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
@@ -861,6 +1034,8 @@ open the Plugin Manager dialog.
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
+   :width: 1.5em
+.. |reverseLine| image:: /static/common/mActionReverseLine.png
    :width: 1.5em
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
@@ -908,8 +1083,6 @@ open the Plugin Manager dialog.
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
-   :width: 1.5em
-.. |whatsThis| image:: /static/common/whats_this.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em

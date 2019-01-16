@@ -758,7 +758,7 @@ Densify by count
 Takes a polygon or line layer and generates a new one in which the geometries have
 a larger number of vertices than the original one.
 
-If the geometries have z or m values present then these will be linearly interpolated
+If the geometries have Z or M values present then these will be linearly interpolated
 at the added vertices.
 
 The number of new vertices to add to each segment is specified as an input parameter.
@@ -805,7 +805,7 @@ The geometries are densified by adding regularly placed extra vertices inside ea
 segment so that the maximum distance between any two vertices does not exceed the
 specified distance.
 
-If the geometries have z or m values present then these will be linearly interpolated
+If the geometries have Z or M values present then these will be linearly interpolated
 at the added vertices.
 
 **Example**
@@ -891,9 +891,9 @@ Outputs
 
 .. _qgissetzfromraster:
 
-Drape (set z-value from raster) |34|
+Drape (set Z value from raster) |34|
 ------------------------------------
-Sets the z value of every vertex in the feature geometry to a value sampled from
+Sets the Z value of every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
 
 The raster values can optionally be scaled by a preset amount.
@@ -901,13 +901,13 @@ The raster values can optionally be scaled by a preset amount.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to set the z values to.
+  Input vector layer to set the Z values to.
 
 ``Raster layer`` [raster]
-  Raster layer to take the z values from.
+  Raster layer to take the Z values from.
 
 ``Band number`` [raster band]
-  The raster band to take the z values from if the raster is multiband.
+  The raster band to take the Z values from if the raster is multiband.
 
 ``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
   Value to use in case the vertex does not intersect (a valid pixel of) the raster.
@@ -923,7 +923,7 @@ Outputs
 .......
 
 ``Updated`` [vector: any]
-  Vector layer in output with the updated z values extracted.
+  Vector layer in output with the updated Z values extracted.
 
 See also
 ........
@@ -1133,10 +1133,10 @@ Outputs
 
 .. _qgisfilterverticesbym:
 
-Filter vertices by m value |34|
+Filter vertices by M value |34|
 -------------------------------
-Filters away vertices based on their m-value, returning geometries with only vertex
-points that have a m-value greater than or equal to the specified minimum value and/or
+Filters away vertices based on their M value, returning geometries with only vertex
+points that have a M value greater than or equal to the specified minimum value and/or
 less than or equal to the maximum value.
 
 If the minimum value is not specified then only the maximum value is tested, and
@@ -1145,7 +1145,7 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only vertices whose m-value is <=10.
+   The red line represents the black line with only vertices whose M value is <=10.
 
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
@@ -1159,14 +1159,14 @@ Parameters
 ``Minimum`` [number |dataDefined|]
   Optional
 
-  Minimum m-value allowed to keep a vertex.
+  Minimum M value allowed to keep a vertex.
 
   Default: *Not set*
 
 ``Maximum`` [number |dataDefined|]
   Optional
 
-  Maximum m-value allowed to keep a vertex.
+  Maximum M value allowed to keep a vertex.
 
   Default: *Not set*
 
@@ -1183,10 +1183,10 @@ See also
 
 .. _qgisfilterverticesbyz:
 
-Filter vertices by z value |34|
+Filter vertices by Z value |34|
 -------------------------------
-Filters away vertices based on their z-value, returning geometries with only vertex
-points that have a z-value greater than or equal to the specified minimum value and/or
+Filters away vertices based on their Z value, returning geometries with only vertex
+points that have a Z value greater than or equal to the specified minimum value and/or
 less than or equal to the maximum value.
 
 If the minimum value is not specified then only the maximum value is tested, and
@@ -1195,7 +1195,7 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only vertices whose z-value is <=10.
+   The red line represents the black line with only vertices whose Z value is <=10.
 
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
@@ -1210,14 +1210,14 @@ Parameters
 ``Minimum`` [number |dataDefined|]
   Optional
 
-  Minimum z-value allowed to keep a vertex.
+  Minimum Z value allowed to keep a vertex.
 
   Default: *Not set*
 
 ``Maximum`` [number |dataDefined|]
   Optional
 
-  Maximum z-value allowed to keep a vertex.
+  Maximum Z value allowed to keep a vertex.
 
   Default: *Not set*
 
@@ -1289,12 +1289,12 @@ Parameters
   Default: *0*
 
 ``Output geometry has z dimension`` [boolean]
-  Choose if the output geometry should have the z dimension.
+  Choose if the output geometry should have the Z dimension.
 
   Default: *False*
 
 ``Output geometry has m values`` [boolean]
-  Choose if the output geometry should have the m dimension.
+  Choose if the output geometry should have the M dimension.
 
   Default: *False*
 
@@ -2170,10 +2170,10 @@ result in a degenerate geometry.
 The tolerance parameter specifies the tolerance for coordinates when determining
 whether vertices are identical.
 
-By default, z values are not considered when detecting duplicate vertices.
-E.g. two vertices with the same x and y coordinate but different z values will still
+By default, Z values are not considered when detecting duplicate vertices.
+E.g. two vertices with the same X and Y coordinate but different Z values will still
 be considered duplicate and one will be removed. If the Use Z Value parameter is true,
-then the z values are also tested and vertices with the same x and y but different z
+then the Z values are also tested and vertices with the same X and Y but different Z
 will be maintained.
 
 .. note:: Duplicate vertices are not tested between different parts of a multipart
@@ -2394,7 +2394,7 @@ Outputs
 Set M value from raster |34|
 ----------------------------
 
-Sets the m value for every vertex in the feature geometry to a value sampled from
+Sets the M value for every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
 
 The raster values can optionally be scaled by a preset amount.
@@ -2402,13 +2402,13 @@ The raster values can optionally be scaled by a preset amount.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to set the m values to.
+  Input vector layer to set the M values to.
 
 ``Raster layer`` [raster]
-  Raster layer to take the m values from.
+  Raster layer to take the M values from.
 
 ``Band number`` [raster band]
-  The raster band to take the m values from if the raster is multiband.
+  The raster band to take the M values from if the raster is multiband.
 
 ``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
   Value to use in case the vertex does not intersect (a valid pixel of) the raster..
@@ -2424,7 +2424,7 @@ Outputs
 .......
 
 ``Updated`` [vector: any]
-  Vector layer in output with the updated m values extracted.
+  Vector layer in output with the updated M values extracted.
 
 See also
 ........
@@ -2985,9 +2985,9 @@ See also
 
 .. _qgisbufferbym:
 
-Variable width buffer (by m-value) |32|
+Variable width buffer (by M value) |32|
 ---------------------------------------
-Creates variable width buffers along lines, using the m-value of the line geometries
+Creates variable width buffers along lines, using the M value of the line geometries
 as the diameter of the buffer at each vertex.
 
 .. figure:: img/variable_buffer_m.png

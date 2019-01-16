@@ -16,7 +16,7 @@ Getting Started
    .. contents::
       :local:
 
-This chapter provides a quick overview of installing QGIS, downloading QGIS sample data, +
+This chapter provides a quick overview of installing QGIS, downloading QGIS sample data,
 and running a first simple session visualizing raster and vector data.
 
 .. index:: Installation
@@ -26,7 +26,7 @@ Installing QGIS
 ===============
 
 Installing QGIS is easy. Standard installers are available
-for MS Windows |win| and MacOS |osx|. Binary packages (rpm and deb) or 
+for MS Windows |win| and MacOS |osx|. Binary packages (rpm and deb) or
 software repositories are provided for many flavors of GNU/Linux |nix|.
 
 For more information and instructions for your operating system check 
@@ -50,7 +50,7 @@ Installing on external media
 It is possible to install QGIS (with all plugins and settings) on a flash drive.
 This is achieved by defining a ``--configpath`` option that overrides the default
 path for user configuration (e.g., :file:`~/.qgis2` under Linux) and forces
-**QSettings** to use this directory, too. 
+**QSettings** to use this directory, too.
 See section :ref:`env_options` for additional information.
 
 
@@ -123,13 +123,13 @@ Launching QGIS
 Starting and stopping QGIS
 --------------------------
 
-QGIS can be started like any other application on your computer. 
+QGIS can be started like any other application on your computer.
 This means that you can launch QGIS by:
 
 * using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock
 * double clicking the icon in your Applications folder or desktop shortcut
-* double clicking an existing QGIS project (``.qgs``) file. (Note that this will
-  also open the project.)
+* double clicking an existing QGIS project file (with :file:`.qgz` or :file:`.qgs` extension). Note that this will
+   also open the project.
 * typing ``qgis`` in a command prompt (assuming that QGIS is added to your PATH
   or you are in its installation folder)
 
@@ -140,8 +140,8 @@ To stop QGIS, use:
 * |osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`
 * or use the red cross at the right top corner of the main interface of the application.
 
-The following section covers advanced command line options. 
-Skip forward to :ref:`samplesession` to get started loading data into QGIS. 
+The following section covers advanced command line options.
+Skip forward to :ref:`samplesession` to get started loading data into QGIS.
 
 .. index:: Command line options
 .. _`label_commandline`:
@@ -150,52 +150,52 @@ Advanced command line options
 -----------------------------
 
 QGIS provides command line options for more advanced use cases. To
-get a list of the options, enter ``qgis --help`` on the command line. The usage
-statement for QGIS is::
+get a list of the options, enter ``qgis --help`` on the command line, which
+returns::
 
-  qgis --help
-
-This returns::
-
-  QGIS - 3.0.2-Girona 'Girona' (307d082e3d)
+  QGIS - 3.4.1-Madeira 'Madeira' (383851c)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
-  OPTION:
-    [--snapshot filename]	emit snapshot of loaded datasets to given file
-    [--width width]	width of snapshot to emit
-    [--height height]	height of snapshot to emit
-    [--lang language]	use language for interface text
-    [--project projectfile]	load the given QGIS project
-    [--extent xmin,ymin,xmax,ymax]	set initial map extent
-    [--nologo]	hide splash screen
-    [--noversioncheck]	don't check for new version of QGIS at startup
-    [--noplugins]	don't restore plugins on startup
-    [--nocustomization]	don't apply GUI customization
-    [--customizationfile path]	use the given ini file as GUI customization
-    [--globalsettingsfile path]	use the given ini file as Global settings (defaults)
-    [--authdbdirectory path] use the given directory for authentication database
-    [--code path]	run the given python file on load
-    [--defaultui]	start by resetting user ui settings to default
-    [--dxf-export filename.dxf]	emit dxf output of loaded datasets to given file
-    [--dxf-extent xmin,ymin,xmax,ymax]	set extent to export to dxf
-    [--dxf-symbology-mode none|symbollayer|feature]	symbology mode for dxf output
-    [--dxf-scale-denom scale]	scale for dxf output
-    [--dxf-encoding encoding]	encoding to use for dxf output
-    [--dxf-map-theme maptheme]	map theme to use for dxf output
-    [--profile name]	load a named profile from the user profiles folder
-    [--profiles-path path]	path to store user profile folders. Will create profile inside a {path}\profiles folder
-    [--version-migration]	forces the settings migration from older version if found
-    [--help]		this text
-    [--]		treat all following arguments as FILEs
+    OPTION:
+          [--snapshot filename]   emit snapshot of loaded datasets to given file
+          [--width width] width of snapshot to emit
+          [--height height]       height of snapshot to emit
+          [--lang language]       use language for interface text (changes existing override)
+          [--project projectfile] load the given QGIS project
+          [--extent xmin,ymin,xmax,ymax]  set initial map extent
+          [--nologo]      hide splash screen
+          [--noversioncheck]      don't check for new version of QGIS at startup
+          [--noplugins]   don't restore plugins on startup
+          [--nocustomization]     don't apply GUI customization
+          [--customizationfile path]      use the given ini file as GUI customization
+          [--globalsettingsfile path]     use the given ini file as Global Settings (defaults)
+          [--authdbdirectory path] use the given directory for authentication database
+          [--code path]   run the given python file on load
+          [--defaultui]   start by resetting user ui settings to default
+          [--hide-browser]        hide the browser widget
+          [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
+          [--dxf-extent xmin,ymin,xmax,ymax]      set extent to export to dxf
+          [--dxf-symbology-mode none|symbollayer|feature] symbology mode for dxf output
+          [--dxf-scale-denom scale]       scale for dxf output
+          [--dxf-encoding encoding]       encoding to use for dxf output
+          [--dxf-map-theme maptheme]      map theme to use for dxf output
+          [--take-screenshots output_path]        take screen shots for the user documentation
+          [--screenshots-categories categories]   specify the categories of screenshot to be used (see QgsAppScreenShots::Categories).
+          [--profile name]        load a named profile from the user's profiles folder.
+          [--profiles-path path]  path to store user profile folders. Will create profiles inside a {path}\profiles folder
+          [--version-migration]   force the settings migration from older version if found
+          [--openclprogramfolder]         path to the folder containing the sources for OpenCL programs.
+          [--help]                this text
+          [--]            treat all following arguments as FILEs
 
-  FILE:
-    Files specified on the command line can include rasters,
-    vectors, and QGIS project files (.qgs):
-     1. Rasters - supported formats include GeoTiff, DEM
-        and others supported by GDAL
-     2. Vectors - supported formats include ESRI Shapefile
-        and others supported by OGR and PostgreSQL layers using
-        the PostGIS extension
+    FILE:
+      Files specified on the command line can include rasters,
+      vectors, and QGIS project files (.qgs and .qgz):
+       1. Rasters - supported formats include GeoTiff, DEM
+          and others supported by GDAL
+       2. Vectors - supported formats include ESRI Shapefiles
+          and others supported by OGR and PostgreSQL layers using
+          the PostGIS extension
 
 .. tip::
         **Example Using command line arguments**
@@ -206,128 +206,189 @@ This returns::
         set to load on startup using the following command:
         ``qgis ./raster/landcover.img ./gml/lakes.gml``
 
-**Command line option** ``--snapshot``
+``--snapshot`` option
 
 This option allows you to create a snapshot in PNG format from the current view.
-This comes in handy when you have a lot of projects and want to generate
-snapshots from your data.
+This comes in handy when you have many projects and want to generate
+snapshots from your data, or when you need to regularily create snapshots of the
+same project with updated data.
 
-Currently, it generates a PNG file with 800x600 pixels. This can be adjusted
-using the ``--width`` and ``--height`` command line arguments. A filename can
-be added after ``--snapshot``.
+Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
+using the ``--width`` and ``--height`` arguments. The filename can
+be added after ``--snapshot``. For example::
 
-**Command line option** ``--lang``
+  qgis --snapshot my_image.png --width 1000 --height 600 --project my_project.qgs
+
+``--lang``  option
 
 Based on your locale, QGIS selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
 ``qgis --lang it`` starts QGIS in Italian localization.
 
-**Command line option** ``--project``
+``--project`` option
 
 Starting QGIS with an existing project file is also possible. Just add the
 command line option ``--project`` followed by your project name and QGIS will
 open with all layers in the given file loaded.
 
-**Command line option** ``--extent``
+``--extent`` option
 
 To start with a specific map extent use this option. You need to add the
-bounding box of your extent in the following order separated by a comma:
+bounding box of your extent in the following order separated by a comma::
 
-::
+  --extent xmin,ymin,xmax,ymax
 
-    --extent xmin,ymin,xmax,ymax
+This option probably makes more sense when paired with the ``--project`` option
+to open a specific project at the desired extent.
 
-**Command line option** ``--nologo``
+``--nologo`` option
 
-This command line argument hides the splash screen when you start QGIS.
+This option hides the splash screen when you start QGIS.
 
-**command line option** ``--noversioncheck``
+``--noversioncheck`` option
 
-Don't check for new version of QGIS at startup.
+Skip searching for a new version of QGIS at startup.
 
-**Command line option** ``--noplugins``
+``--noplugins`` option
 
 If you have trouble at start-up with plugins, you can avoid loading them at
-start-up with this option. They will still be available from the Plugins Manager afterwards.
+start-up with this option. They will still be available from the Plugins Manager
+afterwards.
+
+``--nocustomization`` option
+
+Using this option, any existing :ref:`GUI customization <sec_customization>`
+will not be applied at startup. This means that any hidden buttons, menu items,
+toolbars, and so on, will show up on QGIS start up. This is not a permanent
+change. The customization will be applied again if QGIS is launched without
+this option.
+
+This option is useful for temporarily allowing access to tools that have been
+removed by customization.
 
 .. _custom_commandline:
 
-**Command line option** ``--customizationfile``
+``--customizationfile``
 
-Using this command line argument, you can define a GUI customization file, that will
-be used at startup.
+Using this option, you can define a UI customization file, that
+will be used at startup.
 
-**Command line option** ``--nocustomization``
+``--globalsettingsfile`` option
 
-Using this command line argument, existing GUI customization will not be applied
-at startup.
+Using this option, you can specify the path for a Global Settings
+file (``.ini``), also known as the Default Settings. The settings in the specified
+file replace the original inline default ones, but the user profiles'
+settings will be set on top of those.
 
-**Command line option** ``--optionspath``
+Presently, there's no way to specify a file to write settings to; therefore,
+you can create a copy of an original settings file, rename, and adapt it.
 
-You can have multiple configurations and decide which one to use when starting
-QGIS with this option. See :ref:`gui_options` to confirm where the
-operating system saves the settings files. Presently, there is no way to specify
-a file to write settings to; therefore, you can create a copy of
-the original settings file and rename it. The option specifies path to directory
-with settings. For example, to use :file:`/path/to/config/QGIS/QGIS2.ini` settings file,
-use option:
+Setting the :file:`qgis_global_setting.ini` file path to a network shared
+folder, allows a system administrator to change global settings and defaults in
+several machines by only editing one file.
 
-::
+``--authdbdirectory`` option
 
-    --optionspath /path/to/config/
+This option is similar to ``--globalsettingsfile``, but defines the path to the
+directory where the authentication database will be stored and loaded.
 
-**Command line option** ``--configpath``
+``--code`` option
 
-This option is similar to the one above, but furthermore overrides the default
-path for user configuration (:file:`~/.qgis2`) and forces **QSettings** to use
-this directory, too. This allows users to, for instance, carry a QGIS installation on a
-flash drive together with all plugins and settings.
+This option can be used to run a given python file directly after QGIS has
+started.
 
-**Command line option** ``--authdbdirectory``
+For example, when you have a python file named :file:`load_alaska.py` with
+following content:
 
-Again, this option is similar to the one above but define the path to the
-directory where the authentication database will be stored.
+.. code-block:: python
 
-**Command line option** ``--code``
+   from qgis.utils import iface
+   raster_file = "/home/gisadmin/Documents/qgis_sample_data/raster/landcover.img"
+   layer_name = "Alaska"
+   iface.addRasterLayer(raster_file, layer_name)
 
-This option can be used to run a given python file directly after QGIS has started.
+Assuming you are in the directory where the file :file:`load_alaska.py` is
+located, you can start QGIS, load the raster file :file:`landcover.img` and give
+the layer the name 'Alaska' using the following command::
 
-For example, when you have a python file named :file:`load_alaska.py` with following content:
+  ``qgis --code load_alaska.py``
 
-::
+``--defaultui`` option
 
-  from qgis.utils import iface
-  raster_file = "/home/gisadmin/Documents/qgis_sample_data/raster/landcover.img"
-  layer_name = "Alaska"
-  iface.addRasterLayer(raster_file, layer_name)
+On load, **permanently resets** the user interface (UI) to the default settings.
+This option will restore the panels and toolbars visibility, position, and size.
+Unless it's changed again, the default UI settings will be used in the following
+sessions.
 
-Assuming you are in the directory where the file :file:`load_alaska.py` is located, you
-can start QGIS, load the raster file :file:`landcover.img` and give the layer the name
-'Alaska' using the following command:
-``qgis --code load_alaska.py``
+Notice that this option doesn't have any effect on :ref:`GUI
+customization<sec_customization>`. Items hidden by GUI customization (e.g. the
+status bar) will remain hidden even using the ``--defaultui`` option. See also
+the ``--nocustomization`` option.
 
+``--hide-browser`` option
 
-**Command line options** ``--dxf-*``
+On load, hides the :guilabel:`Browser` panel from the user interface. The panel
+can be enabled by right-clicking a space in the toolbars or using the
+:menuselection:`View --> Panels` (:menuselection:`Settings --> Panels` in |kde|
+Linux KDE).
 
-These options can be used to export QGIS project into a DXF file. Several
+Unless it's enabled again, the Browser panel will remain hidden in the following
+sessions.
+
+``--dxf-*`` option
+
+These options can be used to export a QGIS project into a DXF file. Several
 options are available:
 
 * *--dxf-export*: the DXF filename into which to export the layers;
 * *--dxf-extent*: the extent of the final DXF file;
-* *--dxf-symbology-mode*: several values can be used here: none (no symbology),
-  symbollayer (Symbol layer symbology), feature (feature symbology);
+* *--dxf-symbology-mode*: several values can be used here: ``none``
+  (no symbology), ``symbollayer`` (Symbol layer symbology), ``feature`` (feature
+  symbology);
 * *--dxf-scale-denom*: the scale denominator of the symbology;
 * *--dxf-encoding*: the file encoding;
 * *--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer tree
   configuration.
+
+``--take-screenshots`` option
+
+Takes screenshots for the user documentation. Can be used together with
+``--screenshots-categories`` to filter which categories/sections of the
+documentation screenshots should be created (see QgsAppScreenShots::Categories).
+
+``--profile`` option
+
+Loads QGIS using a specific profile from the user's profile folder. Unless it's
+changed, the selected profile will be used in the following QGIS sessions.
+
+``--profiles-path`` option
+
+With this option, you can choose a path to load and save the profiles (user
+settings). It creates profiles inside a ``{path}\profiles`` folder, which
+includes settings, installed plugins, processing models and scripts, and so on.
+
+This option allows you to, for instance, carry all your plugins and settings
+in a flash drive, or, for example, share the settings between different computers
+using a file sharing service.
+
+``--version-migration`` option
+
+If settings from an older version are found (*e.g.*, the ``.qgis2`` folder from QGIS
+2.18), this option will import them into the default QGIS profile.
+
+``--openclprogramfolder`` option
+
+Using this option, you can specify an alternative path for your OpenCL programs.
+This is useful for developers while testing new versions of the programs
+without needing to replace the existing ones.
 
 .. _samplesession:
 
 Sample Session: Loading raster and vector layers
 ================================================
 
-Now that you have QGIS installed and a sample dataset available, we will demonstrate 
-a first sample session. In this example, we will visualize a raster and a vector layer. 
+Now that you have QGIS installed and a sample dataset available, we will demonstrate
+a first sample session. In this example, we will visualize a raster and a vector layer.
 We will use:
 
 * the :file:`landcover` raster layer i.e., :file:`qgis_sample_data/raster/landcover.img`
@@ -338,9 +399,9 @@ We will use:
 #. To load the landcover data, click on the |dataSourceManager| :sup:`Open Data Source Manager` icon.
 #. The Data Source Manager should open in Browser mode.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select
-   the ERDAS IMG file :file:`landcover.img` and double-click to open it. 
+   the ERDAS IMG file :file:`landcover.img` and double-click to open it.
    (The landcover layer is added in the background while the Data Source Manager window remains open.)
-#. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, 
+#. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
    and double-click on the file :file:`lakes.gml` to open it.
    The :guilabel:`Coordinate Reference System Selector` dialog opens with
    :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
@@ -355,10 +416,11 @@ We will use:
 #. To improve readability of labels, you can add a white buffer around them
    by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
-#. Click :guilabel:`Apply`. Check if the result looks good, and finally click :guilabel:`OK`.
+#. Click :guilabel:`Apply`. Check if the result looks good, and finally click
+   :guilabel:`OK`.
 
 You can see how easy it is to visualize raster and vector layers in QGIS. Let's
-move on to learn more about the available functionality, features and settings, 
+move on to learn more about the available functionality, features and settings,
 and how to use them.
 
 .. index:: Projects
@@ -375,7 +437,7 @@ state of your workspace into a project file using the menu options
 or :menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`.
 
 .. note::
-  
+
   If the project you loaded has been modified in the meantime, by default, QGIS
   will ask you if you want to overwrite the changes. This behavior is controlled
   by the |checkbox| :guilabel:`Prompt to save project and data source changes when
@@ -386,7 +448,7 @@ You can load existing projects into QGIS using :menuselection:`Project -->`
 :menuselection:`Project --> New from template` or
 :menuselection:`Project --> Open Recent -->`.
 
-At startup, a list of recently opened project including screenshots, names and file paths 
+At startup, a list of recently opened project including screenshots, names and file paths
 (for up to ten projects) is displayed. This is a handy quick way to access recently used projects.
 Double-click an entry in this list to open the corresponding project.
 If you instead want to create a new project, just add any layer and the list disappears, giving
@@ -418,46 +480,42 @@ The information saved in a project file includes:
 The project file is saved in XML format. This means that it is possible to edit the file
 outside of QGIS if you know what you are doing. The file format has been updated several
 times compared with earlier QGIS versions. Project files from older QGIS versions
-may not work properly any more. 
+may not work properly any more.
 
 .. note::
 
-  By default, QGIS will warn you of version differences. 
-  This behavior is controlled in :menuselection:`Settings --> Options`. On the 
-  :guilabel:`General` tab, you should tick |checkbox| 
+  By default, QGIS will warn you of version differences.
+  This behavior is controlled in :menuselection:`Settings --> Options`. On the
+  :guilabel:`General` tab, you should tick |checkbox|
   :guilabel:`Warn when opening a project file saved with an older version of QGIS`.
 
-Whenever you save a project in QGIS a backup of the project file is created with the
+Whenever you save a ``.qgs`` project in QGIS, a backup of the project file is created with the
 extension ``.qgs~`` and stored in the same directory as the project file.
 
-The default extension for QGIS projects is ``.qgs`` but a project may be
-zipped in a ``.qgz`` file too. Actually, the ``.qgs`` file is just embedded
-in an archive, so you still have the possibility to unzip it in order to
-manually edit XML information in a text editor. These ``.qgz`` files can also
-be opened like default ``.qgs`` files. To zip a project, the corresponding
-extension has just to be selected in
-:menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`. Once
-zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
-automatically zip your current project.
+The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the
+default is to save using a compressed format with the ``.qgz`` extension.
+The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together
+with its associated sqlite database (``.qgd``) for ref:`auxiliary data <vector_auxiliary_storage>`.
+You can get to these files by unzipping.
 
 .. note::
 
   A zipped project may be particularly useful with the
   :ref:`vector_auxiliary_storage` mechanism in order to embed the underlying
   database.
-  
+
 Projects can also be saved/loaded to/from a PostgreSQL database using the
 following Project menu items:
 
 * :menuselection:`Project --> Open from`
 * :menuselection:`Project --> Save to`
 
-Both menu items have a sub-menu with list of extra project storage implementations 
+Both menu items have a sub-menu with list of extra project storage implementations
 (currently just PostgreSQL). Clicking the action will open a dialog to pick
 a PostgreSQL connection name, schema name and project.
 
-Projects stored in PostgreSQL can be also loaded from the QGIS browser panel 
-(the entries are located within the schema they are stored in), either by 
+Projects stored in PostgreSQL can be also loaded from the QGIS browser panel
+(the entries are located within the schema they are stored in), either by
 double-clicking them or by dragging them to the map canvas.
 
 .. _`sec_output`:
@@ -475,7 +533,7 @@ Other ways to produce output files are:
 * Creating images: :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
   :menuselection:`Export Map
   to Image...` opens a file dialog where you select the name, path and type of
-  image (PNG, JPG and many other formats). This will also create a world file 
+  image (PNG, JPG and many other formats). This will also create a world file
   (with extension ``PNGW`` or ``JPGW``) that is saved in the same folder as your
   image. This world file is used to georeference the image.
 * Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export
@@ -506,6 +564,8 @@ Other ways to produce output files are:
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em

@@ -217,8 +217,7 @@ A frame is drawn around each item by default. How to remove the frame
 
 Besides creating the layout items by hand, QGIS has support for layout
 templates which are essentially compositions with all their items saved to a
-.qpt file (with XML syntax). Unfortunately this functionality is not yet
-available in the API.
+.qpt file (with XML syntax).
 
 Once the composition is ready (the layout items have been created and added
 to the composition), we can proceed to produce a raster and/or vector output.

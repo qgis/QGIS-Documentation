@@ -102,15 +102,15 @@ Band rendering
 QGIS offers four different :guilabel:`Render types`.
 The renderer chosen is dependent on the data type.
 
-#. Multiband color - if the file comes as a multiband with several bands (e.g.,
-   used with a satellite image with several bands)
-#. Paletted - if a single band file comes with an indexed palette (e.g., used
-   with a digital topographic map)
-#. Singleband gray - (one band of) the image will be rendered as gray; QGIS will
-   choose this renderer if the file has neither multibands nor an indexed palette
-   nor a continuous palette (e.g., used with a shaded relief map)
-#. Singleband pseudocolor - this renderer is possible for files with a continuous palette,
-   or color map (e.g., used with an elevation map)
+#. :ref:`Multiband color <multiband_color>` - if the file comes as a multiband with
+   several bands (e.g., used with a satellite image with several bands).
+#. :ref:`Paletted <paletted>` - if a single band file comes with an indexed palette
+   (e.g., used with a digital topographic map).
+#. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
+   as gray; QGIS will choose this renderer if the file has neither multibands nor an
+   indexed palette nor a continuous palette (e.g., used with a shaded relief map).
+#. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
+   files with a continuous palette, or color map (e.g., used with an elevation map).
 
 
 .. _multiband_color:
@@ -164,6 +164,8 @@ All calculations can also be made for the |radioButtonOff| :guilabel:`Current` e
    set the image type to 'Singleband gray', then select Red as the band to use
    for Gray.
 
+.. _paletted:
+
 Paletted
 ........
 
@@ -190,6 +192,7 @@ The label appears in the legend of the raster layer then.
    set automatically to *stretch to min max*, regardless of if this is set to
    another value in the QGIS general options.
 
+.. _singleband_gray:
 
 Singleband gray
 ...............

@@ -411,65 +411,8 @@ that they are predefined.
 
 |RF| *Vector Analysis*
 -------------------------------------------------------------------------------
+
 .. _vector-analysis-basic-1:
-
-|moderate| *Extract Your Layers from OSM Data*
-...............................................................................
-
-For the purpose of this exercise, the OSM layers which we are interested in are
-:kbd:`multipolygons` and :kbd:`lines`. The :kbd:`multipolygons` layer contains
-the data we need in order to produce the :kbd:`houses`, :kbd:`schools` and
-:kbd:`restaurants` layers. The :kbd:`lines` layer contains the roads dataset.
-
-The :guilabel:`Query Builder` is found in the layer properties:
-
-  .. image:: img/query_builder.png
-     :align: center
-
-Using the :guilabel:`Query Builder` against the :kbd:`multipolygons` layer,
-create the following queries for the :kbd:`houses`, :kbd:`schools`,
-:kbd:`restaurants` and :kbd:`residential` layers:
-
-  .. image:: img/houses_query.png
-     :align: center
-
-  .. image:: img/schools_query.png
-     :align: center
-
-  .. image:: img/restaurants_query.png
-     :align: center
-
-Once you have entered each query, click :guilabel:`OK`. You'll see that the map
-updates to show only the data you have selected. Since you need to use again
-the :kbd:`multipolygons` data from the OSM dataset, at this point, you can use one of
-the following methods:
-
-* Rename the filtered OSM layer and re-import the layer from :kbd:`osm_data.osm`, OR
-* Duplicate the filtered layer, rename the copy, clear the query and create your
-  new query in the :guilabel:`Query Builder`.
-
-.. note:: Although OSM's :kbd:`building` field has a :kbd:`house` value, the
-    coverage in your area - as in ours - may not be complete. In our test
-    region, it is therefore more accurate to *exclude* all buildings which are
-    defined as anything other than :kbd:`house`. You may decide to
-    simply include buildings which are defined as :kbd:`house` and all other
-    values that have not a clear meaning like :kbd:`yes`.
-
-To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
-layer:
-
-  .. image:: img/roads_query.png
-     :align: center
-
-
-You should end up with a map which looks similar to the following:
-
-  .. image:: img/osm_queries_result.png
-     :align: center
-
-:ref:`Back to text <backlink-vector-analysis-basic-1>`
-
-.. _vector-analysis-basic-2:
 
 |basic| *Distance from High Schools*
 ...............................................................................
@@ -479,10 +422,9 @@ You should end up with a map which looks similar to the following:
   .. image:: img/schools_buffer_setup.png
      :align: center
 
-  The :guilabel:`Buffer distance` is :kbd:`1000` meters (i.e., :kbd:`1`
-  kilometer).
+  The :guilabel:`Buffer distance` is :guilabel:`1` kilometer.
 
-* The :guilabel:`Segments to approximate` value is set to :kbd:`20`. This is
+* The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This is
   optional, but it's recommended, because it makes the output buffers look
   smoother. Compare this:
 
@@ -491,22 +433,22 @@ You should end up with a map which looks similar to the following:
 
   To this:
 
-  .. image:: img/schools_buffer_20.png
+  .. image:: img/schools_buffer_6.png
      :align: center
 
 The first image shows the buffer with the :guilabel:`Segments to approximate`
-value set to :kbd:`5` and the second shows the value set to :kbd:`20`. In our
-example, the difference is subtle, but you can see that the buffer's edges are
-smoother with the higher value.
+value set to :guilabel:`5` and the second shows the value set to :guilabel:`20`.
+In our example, the difference is subtle, but you can see that the buffer's edges
+are smoother with the higher value.
 
-:ref:`Back to text <backlink-vector-analysis-basic-2>`
+:ref:`Back to text <backlink-vector-analysis-basic-1>`
 
-.. _vector-analysis-basic-3:
+.. _vector-analysis-basic-2:
 
 |basic| *Distance from Restaurants*
 ...............................................................................
 
-To create the new :kbd:`houses_restaurants_500m` layer, we go through a two step
+To create the new :guilabel:`houses_restaurants_500m` layer, we go through a two step
 process:
 
 * First, create a buffer of 500m around the restaurants and add the layer to
@@ -518,23 +460,45 @@ process:
   .. image:: img/restaurants_buffer_result.png
      :align: center
 
-* Next, select buildings within that buffer area:
+* Next, extract buildings within that buffer area:
 
   .. image:: img/select_within_restaurants.png
-     :align: center
-
-* Now save that selection to our new :kbd:`houses_restaurants_500m` layer:
-
-  .. image:: img/save_selection_restaurants.png
      :align: center
 
 Your map should now show only those buildings which are within 50m of a road,
 1km of a school and 500m of a restaurant:
 
-  .. image:: img/restaurant_buffer_result.png
-     :align: center
+.. image:: img/restaurant_buffer_result.png
+   :align: center
 
-:ref:`Back to text <backlink-vector-analysis-basic-3>`
+:ref:`Back to text <backlink-vector-analysis-basic-2>`
+
+|RF| *Network Analysis*
+-------------------------------------------------------------------------------
+
+.. _network-analysis-1:
+
+|moderate| *Fastest path*
+-------------------------------------------------------------------------------
+
+Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
+fill the dialog as:
+
+.. image:: img/fastest_path_result.png
+   :align: center
+
+Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
+
+Click on :guilabel:`Run` and close the dialog.
+
+Open now the attribute table of the output layer. The :guilabel:`cost` field
+contains the travel time between the two points (as fraction of hours):
+
+.. image:: img/fastest_path_attribute.png
+   :align: center
+
+:ref:`Back to text <backlink-network_analysis_1>`
+
 
 |RF| *Raster Analysis*
 -------------------------------------------------------------------------------
@@ -544,7 +508,7 @@ Your map should now show only those buildings which are within 50m of a road,
 |basic| *Calculate Aspect*
 ...............................................................................
 
-* Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
+* Set your :guilabel:`Aspect` dialog up like this:
 
   .. image:: img/answer_dem_aspect.png
      :align: center
@@ -567,8 +531,8 @@ Your result:
   .. image:: img/answer_raster_calculator_slope.png
      :align: center
 
-* For the 5 degree version, replace the :kbd:`2` in the expression and file
-  name with :kbd:`5`.
+* For the 5 degree version, replace the ``2`` in the expression and file
+  name with ``5``.
 
 Your results:
 

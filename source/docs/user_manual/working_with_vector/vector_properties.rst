@@ -46,7 +46,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
 * |dependencies| :ref:`Dependencies <vectordependenciesmenu>`
 * |legend| :ref:`Legend <vectorlegendmenu>`
 * |overlay| :ref:`QGIS Server <vectorservermenu>`
-* |digitizing| :guilabel:`Digitizing`
+* |digitizing| :ref:`Digitizing <digitizingmenu>`
 * and optionally, new tabs added by :ref:`external plugins <plugins>` you have
   installed. Those are not presented below.
 
@@ -203,7 +203,7 @@ the bottom the :ref:`layer_rendering` widget.
    Using the :menuselection:`Styles --> Add` menu at the bottom of the
    :guilabel:`Layer Properties` dialog, you can save as many styles as needed.
    A style is the combination of all properties of a layer (such as symbology,
-   labeling, diagram, fields form, actions...) as you want. Then, simply 
+   labeling, diagram, fields form, actions...) as you want. Then, simply
    switch between styles from the context menu of the layer in :guilabel:`Layers Panel`
    to automatically get different representations of your data.
 
@@ -446,7 +446,7 @@ the rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
 
-.. figure:: img/graduatesymbol_ng_line.png
+.. figure:: img/graduatedsymbol_ng_line.png
    :align: center
 
    Graduated Symbolizing options
@@ -503,7 +503,7 @@ configure the legend items (see :ref:`data_defined_size_legend` for details).
 .. figure:: img/proportional_symbols.png
    :align: center
 
-   Scaling airports size based on number of passengers
+   Scaling airports size based on elevation of the airport
 
 **Creating multivariate analysis**
 
@@ -524,7 +524,7 @@ The simplest way to create multivariate analysis in QGIS is to:
 
 Like the proportional symbol, the scaled symbology can be added to the layer
 tree, on top of the categorized or graduated classes symbols using the
-:ref:` data defined size legend <size data_defined_size_legend>` feature. And
+:ref:`data defined size legend <data_defined_size_legend>` feature. And
 both representation are also available in the print layout legend item.
 
 .. _figure_symbology_multivariate:
@@ -533,8 +533,6 @@ both representation are also available in the print layout legend item.
    :align: center
 
    Multivariate example with scaled size legend
-
-.. tip:: **Add the size scaled symbols to the print layout legend**
 
 
 .. index::
@@ -792,16 +790,16 @@ units).
 Layer rendering
 ---------------
 
-From the Symbology tab, you can also set some options that invariabily act on all
+From the Symbology tab, you can also set some options that invariably act on all
 features of the layer:
 
-* :guilabel:`Layer transparency` |slider|: You can make the underlying layer in
+* :guilabel:`Opacity` |slider|: You can make the underlying layer in
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
   the percentage of visibility in the the menu beside the slider.
 
-* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: You can
-  achieve special rendering effects with these tools that you may previously
+* :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
+  You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
   underlaying layers are mixed through the settings described in :ref:`blend-modes`.
 
@@ -813,17 +811,18 @@ features of the layer:
   Activate the checkbox and click on the |sort| button beside.
   You then get the :guilabel:`Define Order` dialog in which you:
 
-  * choose a field or build an expression to apply to the layer features
-  * set in which order the fetched features should be sorted, i.e. if you choose
-    **Ascending** order, the features with lower value are rendered under those
-    with upper value.
-  * define when features returning NULL value should be rendered: **first** or **last**.
+  #. Choose a field or build an expression to apply to the layer features.
+  #. Set in which order the fetched features should be sorted, i.e. if you choose
+     **Ascending** order, the features with lower value are rendered under those
+     with higher value.
+  #. Define when features returning NULL value should be rendered: **first**
+     (bottom) or **last** (top).
+  #. Repeat the above steps as many times as rules you wish to use.
 
-  You can add several rules of ordering. The first rule is applied
-  to all the features in the layer, z-ordering them according to the value returned.
-  Then, for each group of features with the same value (including those with
-  NULL value) and thus same z-level, the next rule is applied to sort its items
-  among them.
+  The first rule is applied
+  to all the features in the layer, z-ordering them according to their returned value.
+  Then, within each group of features with the same value (including those with
+  NULL value) and thus the same z-level, the next rule is applied to sort them.
   And so on...
 
 .. _figure_layer_rendering:
@@ -849,7 +848,7 @@ an option to control the rendering order of each symbol's levels.
 For most of the renderers, you can access the Symbols levels option by clicking
 the :guilabel:`Advanced` button below the saved symbols list and choosing
 :guilabel:`Symbol levels`. For the :ref:`rule_based_rendering` the option is
-directly available through :guilabel:`Symbols Levels` button, while for
+directly available through :guilabel:`Symbols Levels...` button, while for
 :ref:`point_displacement` renderer the same button is inside the
 :guilabel:`Rendering settings` dialog.
 
@@ -935,18 +934,20 @@ the resort to other software for final rendering of maps, QGIS provides another
 powerful functionality: the |paintEffects| :guilabel:`Draw Effects` options,
 which adds paint effects for customizing the visualization of vector layers.
 
-The option is available in the :guilabel:`Layer Properties --> Symbology` dialog,
+The option is available in the :menuselection:`Layer Properties --> Symbology` dialog,
 under the :ref:`Layer rendering <layer_rendering>` group (applying to the whole
 layer) or in :ref:`symbol layer properties <symbol-selector>` (applying
 to corresponding features). You can combine both usage.
 
 Paint effects can be activated by checking the |checkbox| :guilabel:`Draw effects` option
-and clicking the |paintEffects| :sup:`Customize effects` button, that will open
+and clicking the |paintEffects| :sup:`Customize effects` button. That will open
 the :guilabel:`Effect Properties` Dialog (see figure_effects_source_). The following
 effect types, with custom options are available:
 
-* **Source:** Draws the feature's original style according to the configuration
-  of the layer's properties. The transparency of its style can be adjusted.
+* **Source**: Draws the feature's original style according to the configuration
+  of the layer's properties. The :guilabel:`Opacity` of its style can be adjusted
+  as well as the :ref:`Blend mode <blend-modes>` and :ref:`Draw mode <draw_modes>`.
+  These are common properties for all types of effects.
 
   .. _figure_effects_source:
 
@@ -955,9 +956,9 @@ effect types, with custom options are available:
 
      Draw Effects: Source dialog
 
-* **Blur:** Adds a blur effect on the vector layer. The options that someone can
-  change are the :menuselection:`Blur type` (:menuselection:`Stack` or
-  :menuselection:`Gaussian blur`), the strength and transparency of the blur effect.
+* **Blur**: Adds a blur effect on the vector layer. The custom options that you
+  can change are the :guilabel:`Blur type` (:guilabel:`Stack blur (fast)` or
+  :guilabel:`Gaussian blur (quality)`) and the :guilabel:`Blur strength`.
 
   .. _figure_effects_blur:
 
@@ -966,14 +967,16 @@ effect types, with custom options are available:
 
      Draw Effects: Blur dialog
 
-* **Colorize:** This effect can be used to make a version of the style using one
+* **Colorise**: This effect can be used to make a version of the style using one
   single hue. The base will always be a grayscale version of the symbol and you
-  can use the |selectString| :guilabel:`Grayscale` to select how to create it
-  (options are: 'lightness', 'luminosity' and 'average'). If |checkbox|
-  :guilabel:`Colorise` is selected, it will be possible to mix another color
-  and choose how strong it should be. You can also control the
-  :guilabel:`Brightness`, :guilabel:`contrast` and
-  :guilabel:`saturation` levels of the resulting symbol.
+  can:
+  
+  * Use the |selectString| :guilabel:`Grayscale` to select how to create it:
+    options are 'By lightness', 'By luminosity', 'By average' and 'Off'.
+  * If |checkbox| :guilabel:`Colorise` is selected, it will be possible to mix
+    another color and choose how strong it should be.
+  * Control the :guilabel:`Brightness`, :guilabel:`Contrast` and
+    :guilabel:`Saturation` levels of the resulting symbol.
 
   .. _figure_effects_colorize:
 
@@ -982,12 +985,12 @@ effect types, with custom options are available:
 
      Draw Effects: Colorize dialog
 
-* **Drop Shadow:** Using this effect adds a shadow on the feature, which looks
+* **Drop Shadow**: Using this effect adds a shadow on the feature, which looks
   like adding an extra dimension. This effect can be customized by changing the
-  :menuselection:`offset` degrees and radius, determining where the shadow shifts
+  :guilabel:`Offset` angle and distance, determining where the shadow shifts
   towards to and the proximity to the source object. :menuselection:`Drop Shadow`
-  also has the option to change the blur radius, the transparency and the color
-  of the effect.
+  also has the option to change the :guilabel:`Blur radius` and the
+  :guilabel:`Color` of the effect.
 
   .. _figure_effects_drop_shadow:
 
@@ -996,9 +999,9 @@ effect types, with custom options are available:
 
      Draw Effects: Drop Shadow dialog
 
-* **Inner Shadow:** This effect is similar to the :menuselection:`Drop Shadow`
+* **Inner Shadow**: This effect is similar to the :guilabel:`Drop Shadow`
   effect, but it adds the shadow effect on the inside of the edges of the feature.
-  The available options for customization are the same as the :menuselection:`Drop
+  The available options for customization are the same as the :guilabel:`Drop
   Shadow` effect.
 
   .. _figure_effects_inner_shadow:
@@ -1008,12 +1011,12 @@ effect types, with custom options are available:
 
      Draw Effects: Inner Shadow dialog
 
-* **Inner Glow:** Adds a glow effect inside the feature. This effect can be
-  customized by adjusting the :menuselection:`spread` (width) of the glow, or
-  the :menuselection:`Blur radius`. The latter specifies the proximity from
+* **Inner Glow**: Adds a glow effect inside the feature. This effect can be
+  customized by adjusting the :guilabel:`Spread` (width) of the glow, or
+  the :guilabel:`Blur radius`. The latter specifies the proximity from
   the edge of the feature where you want any blurring to happen. Additionally,
-  there are options to customize the color of the glow, with a single color or
-  a color ramp.
+  there are options to customize the color of the glow using a :guilabel:`Single
+  color` or a :guilabel:`Color ramp`.
 
   .. _figure_effects_inner_glow:
 
@@ -1022,9 +1025,9 @@ effect types, with custom options are available:
 
      Draw Effects: Inner Glow dialog
 
-* **Outer Glow:** This effect is similar to the :menuselection:`Inner Glow` effect,
+* **Outer Glow**: This effect is similar to the :guilabel:`Inner Glow` effect,
   but it adds the glow effect on the outside of the edges of the feature.
-  The available options for customization are the same as the :menuselection:`Inner
+  The available options for customization are the same as the :guilabel:`Inner
   Glow` effect.
 
   .. _figure_effects_outer_glow:
@@ -1034,17 +1037,17 @@ effect types, with custom options are available:
 
      Draw Effects: Outer Glow dialog
 
-* **Transform:** Adds the possibility of transforming the shape of the symbol.
-  The first options available for customization are the :menuselection:`Reflect
-  horizontal` and :menuselection:`Reflect vertical`, which actually create a
-  reflection on the horizontal and/or vertical axes. The 4 other options are:
+* **Transform**: Adds the possibility of transforming the shape of the symbol.
+  The first options available for customization are the :guilabel:`Reflect
+  horizontal` and :guilabel:`Reflect vertical`, which actually create a
+  reflection on the horizontal and/or vertical axes. The other options are:
 
-  * :menuselection:`Shear`: slants the feature along the x and/or y axis
-  * :menuselection:`Scale`: enlarges or minimizes the feature along the x
-    and/or y axis by the given percentage
-  * :menuselection:`Rotation`: turns the feature around its center point
-  * and :menuselection:`Translate` changes the position of the item based on
-    a distance given on the x and/or the y axis.
+  * :guilabel:`Shear X,Y`: Slants the feature along the X and/or Y axis.
+  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the X
+    and/or Y axis by the given percentage.
+  * :guilabel:`Rotation`: Turns the feature around its center point.
+  * and :guilabel:`Translate X,Y` changes the position of the item based on
+    a distance given on the X and/or Y axis.
 
   .. _figure_effects_transform:
 
@@ -1053,28 +1056,34 @@ effect types, with custom options are available:
 
      Draw Effects: Transform dialog
 
-There are some common options available for all draw effect types.
-:guilabel:`Transparency` and :guilabel:`Blend mode` options work similar
-to the ones described in :ref:`layer_rendering` and can be used in all draw
-effects except for the transform one.
-
-One or more draw effects can used at the same time. You activate/deactivate an effect
+One or more effect types can be used at the same time. You (de)activate an effect
 using its checkbox in the effects list. You can change the selected effect type by
 using the |selectString| :guilabel:`Effect type` option. You can reorder the effects
 using |arrowUp| :sup:`Move up` and |arrowDown| :sup:`Move down`
-buttons, and also add/remove effects using the |signPlus| :sup:`Add effect`
+buttons, and also add/remove effects using the |signPlus| :sup:`Add new effect`
 and |signMinus| :sup:`Remove effect` buttons.
 
+There are some common options available for all draw effect types.
+:guilabel:`Opacity` and :guilabel:`Blend mode` options work similar
+to the ones described in :ref:`layer_rendering` and can be used in all draw
+effects except for the transform one.
+
+.. _draw_modes:
+
 There is also a |selectString| :guilabel:`Draw mode` option available for
-every draw effect, and you can choose whether to render and/or to modify the
-symbol. Effects render from top to bottom.'Render only' mode means that the
-effect will be visible while the 'Modify only' mode means that the effect will
-not be visible but the changes that it applies will be passed to the next effect
-(the one immediately below). The 'Render and Modify' mode will make the
-effect visible and pass any changes to the next effect. If the effect is in the
-top of the effects list or if the immediately above effect is not in modify
-mode, then it will use the original source symbol from the layers properties
-(similar to source).
+every effect, and you can choose whether to render and/or modify the
+symbol, following some rules:
+
+* Effects render from top to bottom.
+* :guilabel:`Render only` mode means that the effect will be visible.
+* :guilabel:`Modifier only` mode means that the effect will not be visible
+  but the changes that it applies will be passed to the next effect
+  (the one immediately below).
+* The :guilabel:`Render and Modify` mode will make the effect visible and
+  pass any changes to the next effect. If the effect is at the top of the
+  effects list or if the immediately above effect is not in modify mode,
+  then it will use the original source symbol from the layers properties
+  (similar to source).
 
 .. _vector_labels_tab:
 
@@ -1252,7 +1261,8 @@ Placement tab
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
-type of vector layer, namely point, line or polygon.
+type of vector layer, namely point, line or polygon, and are affected by
+the global :ref:`PAL setting <automated_placement>`.
 
 .. _cartographic:
 
@@ -1479,6 +1489,8 @@ configure a global and automated behavior of the labels. Clicking the
 
 * The :guilabel:`Search method` combobox provides you with different placement methods
   for finding good placement solutions for point, line and polygon labeling.
+  More details in this `article
+  <https://www.ee.co.za/wp-content/uploads/legacy/PositionIT%202009/PAL_PositIT_Jul09_p56-61.pdf>`_.
 * The :guilabel:`Number of candidates` controls set how many label placement
   candidates should be generated for each feature type. The more candidates generated,
   the better the labeling will be - but at a cost of rendering speed. Smaller number
@@ -1556,10 +1568,10 @@ Assuming you are using the :guilabel:`Single labels` method, click the |expressi
 :guilabel:`Label with` drop-down list in the |labeling| :guilabel:`Labels` tab
 of the properties dialog.
 
-In figure_labels_expression_, you see a sample
-expression to label the alaska regions with name and area size, based on the
-field 'NAME_2', some descriptive text, and the function ``$area`` in combination
-with ``format_number()`` to make it look nicer.
+In figure_labels_expression_, you see a sample expression to label the alaska
+trees layer with tree type and area, based on the field 'VEGDESC', some
+descriptive text, and the function ``$area`` in combination with
+``format_number()`` to make it look nicer.
 
 .. _figure_labels_expression:
 
@@ -1841,6 +1853,11 @@ The current core implementation of diagrams provides support for:
   values inside;
 * and |histogram| :guilabel:`Histograms`.
 
+In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacement|
+:sup:`Automated placement settings (applies to all layers)` button provides
+means to control diagram :ref:`labels placement <automated_placement>` on the
+map canvas.
+
 .. tip:: **Switch quickly between types of diagrams**
 
    Given that the settings are almost common to the different types of
@@ -2098,10 +2115,10 @@ example at its creation. This information is retrieved and shown in the
 :guilabel:`Comment` column and is later displayed when hovering over the
 field label in a feature form.
 
-Other than the fields contained in the dataset, the :guilabel:`Source Fields`
-tab also lists fields from any :ref:`joined layers <sec_joins>` or :ref:`relations
-<vector_relations>`. And depending on the origin of the field, a different
-background color is applied to it.
+Other than the fields contained in the dataset, virtual fields and
+:ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
+:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
 its ``type``, ``type name``, ``length`` and ``precision``. When serving the
@@ -2112,7 +2129,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Field properties tab
+   Source Field properties tab
 
 
 .. _vector_attributes_menu:
@@ -2292,7 +2309,7 @@ and the values or range of values that are allowed to be added to each.
 
 .. _figure_fields_widget:
 
-.. figure:: img/editwidgetsdialog.png
+.. figure:: img/edit_widgets_dialog.png
    :align: center
 
    Dialog to select an edit widget for an attribute column
@@ -2332,7 +2349,7 @@ Default values
   For example, you can:
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's x coordinate, length, area or any geometric information at its creation;
+    feature's X coordinate, length, area or any geometric information at its creation;
   * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
@@ -2508,8 +2525,8 @@ Additionally, the add vector join dialog allows you to:
 
 .. _vector_auxiliary_storage:
 
-Auxiliary storage
-=================
+Auxiliary Storage Properties
+============================
 
 The regular way to customize styling and labeling is to use data-defined
 properties as described in :ref:`data_defined`. However, it may not be
@@ -2517,13 +2534,12 @@ possible if the underlying data is read only. Moreover, configuring these
 data-defined properties may be very time consuming or not desirable! For
 example, if you want to fully use map tools coming with :ref:`label_toolbar`,
 then you need to add and configure more than 20 fields in your original data
-source (x and y positions, rotation angle, font style, color and so on).
+source (X and Y positions, rotation angle, font style, color and so on).
 
 The Auxiliary Storage mechanism provides the solution to these limitations
-and awkward configurations. Actually, auxiliary fields are a roundabout
-mean to automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This way,
-data source doesn't even need to be editable!
+and awkward configurations. Auxiliary fields are a roundabout way to
+automatically manage and store these data-defined properties (labels,
+diagram, symbology...) in a SQLite database thanks to editable joins. This allows you to store properties for layers that aren't editable.
 
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
@@ -2546,7 +2562,7 @@ Actually, the auxiliary storage system needs an auxiliary layer to store these
 properties in a SQLite database (see :ref:`vector_auxiliary_storage_database`).
 Its creation process is run the first time you click on the map while a
 labeling map tool is currently activated. Then, a window is displayed, allowing
-to indicate the primary key to use for joining (to ensure that features are
+you to select the primary key to use for joining (to ensure that features are
 uniquely identified):
 
 .. _figure_auxiliary_layer_creation:
@@ -2566,16 +2582,16 @@ retrieve its information in the tab:
    Auxiliary Layer key
 
 
-For now, we can see that:
+The auxiliary layer now has these characteristics:
 
-* the primary key used is well ``id``
-* there's ``0`` feature using an auxiliary field
-* there's ``0`` auxiliary field
+* the primary key is ``ID``,
+* there are ``0`` features using an auxiliary field,
+* there are ``0`` auxiliary fields.
 
-Now that the auxiliary layer is well created, we just have to edit our labels.
-If we click on a label while the |changeLabelProperties| :sup:`Change Label`
-map tool is activated, then we're able to update styling properties like sizes,
-colors and so on. Then, the corresponding data-defined properties are created
+Now that the auxiliary layer is created, you can edit the layer labels.
+Click on a label while the |changeLabelProperties| :sup:`Change Label`
+map tool is activated, then you can update styling properties like sizes,
+colors, and so on. The corresponding data-defined properties are created
 and can be retrieved:
 
 .. figure:: img/auxiliary_storage_fields.png
@@ -2584,16 +2600,15 @@ and can be retrieved:
    Auxiliary Fields
 
 
-As we are seeing in the previous figure, ``21`` fields have been automatically
-created and configured for labeling. For example, the ``Color``
-auxiliary field type is a ``String`` and is named ``labeling_color`` in the
-underlying SQLite database. Moreover, we observe that there's ``1`` entity
-which is currently using these auxiliary fields (according to the current
-example).
+As you can see in the figure above, ``21`` fields are automatically created and
+configured for labeling. For example, the ``FontStyle`` auxiliary field type is
+a ``String`` and is named ``labeling_fontstyle`` in the underlying SQLite
+database. There is also ``1`` feature which is currently using these auxiliary
+fields.
 
-By the way, considering that auxiliary fields are linked to data-defined
-properties, we can observe that data-defined override options are setup
-correctly because of the icon |dataDefineOn| in the labeling tab:
+Notice that the icon |dataDefineOn| is displayed in the :guilabel:`Labels`
+properties tab indicating that the data-defined override options are set
+correctly:
 
 .. figure:: img/auxiliary_storage_dd.png
    :align: center
@@ -2606,17 +2621,18 @@ property thanks to the |dataDefined| :sup:`data-defined override` button. By
 clicking on :guilabel:`Store data in the project`, an auxiliary field is
 automatically created for the :guilabel:`Opacity` field. If you click on this
 button whereas the auxiliary layer is not created yet, then the window
-:ref:`figure_auxiliary_layer_creation` is firstly displayed to select the
+:ref:`figure_auxiliary_layer_creation` is first displayed to select the
 primary key to use for joining.
 
 
 Symbology
 ---------
 
-In the same way than for customizing labels, auxiliary fields may be used to
-stylize symbols too. To do this, you just have to click on
-:guilabel:`Store data in the project` for a specific symbol property. For
-example for the :guilabel:`Fill color` field:
+Like the method described above for customizing labels, auxiliary fields can
+also be used to stylize symbols and diagrams. To do this, click on
+|dataDefined| :sup:`Data-defined override` and select :guilabel:`Store data in
+the project` for a specific property. For example, the :guilabel:`Fill
+color` field:
 
 .. figure:: img/auxiliary_storage_symbol.png
    :align: center
@@ -2624,11 +2640,13 @@ example for the :guilabel:`Fill color` field:
    Data-defined property menu for symbol
 
 
-Because you may customize same property for different (levels of) symbols,
-each setting requires a unique name to avoid conflict. Thus, by clicking on
-:guilabel:`Store data in the project`, a window is displayed, indicating the
-:guilabel:`Type` of the field and providing a way to give the unique name. For
-the :guilabel:`Fill color` field, the next window is opened:
+There are different attributes for each symbol (e.g. fill style, fill color,
+stroke color, etc...), so each auxiliary field representing an attribute
+requires a unique name to avoid conflicts. After selecting :guilabel:`Store
+data in the project`, a window opens and displays the :guilabel:`Type` of the
+field and prompts you to enter a unique name for the auxiliary field. For
+example, when creating a :guilabel:`Fill color` auxiliary field the following
+window opens:
 
 .. figure:: img/auxiliary_storage_symbol_name.png
    :align: center
@@ -2648,20 +2666,28 @@ tab:
 Attribute table and widgets
 ---------------------------
 
-Once created, auxiliary fields may be edited through the
-:ref:`attribute table <sec_attribute_table>`. However, there's some subtlety
-about widgets of auxiliary fields.
+Auxiliary fields can be edited using the
+:ref:`attribute table <sec_attribute_table>`. However, not all auxiliary fields
+are initially visible in the attribute table.
 
-For example, auxiliary fields which may be edited through an external tool
-are not visible in the attribute table. This way, as the :guilabel:`Rotation`
-may be edited through |changeLabelProperties| :sup:`Change Label` or
-|rotateLabel| :sup:`Rotate Label`, the auxiliary widget is **Hidden** by
-default (see :ref:`edit_widgets`). However, as the :guilabel:`Opacity`
-field cannot be edited thanks to map tools, the corresponding widget is not
-**Hidden**. Moreover, auxiliary fields representing a ``Color`` have a
-widget **Color** set by default.
+Auxiliary fields representing attributes of a layer's symbology, labeling,
+appearance, or diagrams will appear automatically in the attribute table. The
+exception are attributes that can be modified using the :ref:`Label Toolbar <label_toolbar>`
+which are hidden by default. Auxiliary fields representing a ``Color`` have a
+widget **Color** set by default, otherwise auxiliary fields default to the
+**Text Edit** widget.
 
-Then, the underlying form will look like the next figure:
+Auxiliary fields that represent attributes that can be modified using
+the :ref:`Label toolbar<label_toolbar>` are **Hidden** in the attribute table
+by default. To make a field visible, open the :ref:`Attribute Form properties
+tab <vector_attributes_menu>` and change the value of an auxiliary field
+:guilabel:`Widget Type` from **Hidden** to another relevant value. For example,
+change the **auxiliary_storage_labeling_size** to **Text Edit** or change
+**auxiliary_storage_labeling_color** to the **Color** widget. Those fields will
+now be visible in the attribute table.
+
+Auxiliary fields in the attribute table will appear like the following image:
+
 
 .. figure:: img/auxiliary_storage_widgets.png
    :align: center
@@ -2672,8 +2698,7 @@ Then, the underlying form will look like the next figure:
 Management
 ----------
 
-Some actions are available to manage auxiliary layers thanks to the next
-combobox:
+The :guilabel:`Auxiliary Layer` menu allows you to manage the auxiliary fields:
 
 .. figure:: img/auxiliary_storage_actions.png
    :align: center
@@ -3024,21 +3049,25 @@ To add a raster (a TIF image in this example), it becomes:
 Display Properties
 ==================
 
-|display| This tab is specifically created for map tips: display a message in
-the map canvas when hovering over a feature of the active layer.
-This message can either be the value of a |radioButtonOff| :guilabel:`Field`
-or a more complex and full |radioButtonOff| :guilabel:`HTML` text mixing fields,
-:ref:`expressions <vector_expressions>` and html tags (multiline, fonts, images,
-hyperlink ...).
+|display| The :guilabel:`Display` tab helps you configure fields to use for
+feature identification:
 
-To activate Map Tips, select the menu option :menuselection:`View --> Map Tips`
-or click on the |mapTips| :sup:`Map Tips` icon. Map tip is a cross-session feature
-meaning that once activated, it stays on and apply to any set layer in any project,
-even in future QGIS sessions until it's toggled off.
+* The :guilabel:`Display name`: based on a field or an :ref:`expression
+  <vector_expressions>`. This is:
 
+  * the label shown on top of the feature information in the :ref:`Identify
+    tool <identify>` results;
+  * the field used in the :ref:`locator bar <locator_options>` when looking for
+    features in all layers;
+  * the feature identifier in the attribute table :ref:`form view
+    <attribute_table_view>`;
+  * the map tip information, i.e. the message displayed in the map canvas when
+    hovering over a feature of the active layer with the |mapTips| :sup:`Show
+    Map Tips` icon pressed. Applicable when no :guilabel:`HTML Map Tip` is set.
 
-Figures Display Code and Mapped show an example of HTML code and how it behaves
-in map canvas.
+* The :guilabel:`HTML Map Tip` is specifically created for the map tips: it's
+  a more complex and full HTML text mixing fields, expressions and html tags
+  (multiline, fonts, images, hyperlink...).
 
 .. _figure_display_code:
 
@@ -3047,6 +3076,12 @@ in map canvas.
 
    HTML code for map tip
 
+
+To activate map tips, select the menu option :menuselection:`View --> Show Map
+Tips` or click on the |mapTips| :sup:`Show Map Tips` icon of the
+:guilabel:`Attributes Toolbar`. Map tip is a cross-session feature meaning that
+once activated, it stays on and apply to any layer in any project, even in
+future QGIS sessions until it's toggled off.
 
 .. _figure_display_mapped:
 
@@ -3212,7 +3247,7 @@ layout legend <layout_legend_item>`. These options include:
 .. figure:: img/text_legend_symbols.png
    :align: center
 
-   Setting text on symbols (left) and its rendering in Layers panel (right)
+   Setting text on symbols (left) and its rendering in the :guilabel:`Layers` panel (right)
 
 * a list of widgets you can embed within the layer tree in the Layers panel.
   The idea is to have a way to quickly access some actions that are often used
@@ -3232,17 +3267,9 @@ QGIS Server Properties
 ======================
 
 |overlay| The :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataURL`, :guilabel:`LegendUrl`
-and :guilabel:`Properties` sections.
+:guilabel:`Attribution`, :guilabel:`MetadataURL`, and :guilabel:`LegendUrl` sections.
 
-In the :guilabel:`Properties` section, you get general information about the layer,
-including specifics about the type and location, number of features, feature type,
-and editing capabilities. The :guilabel:`Extents`
-table provides you with information on the layer extent and the
-:guilabel:`Layer Spatial Reference System`, which is information about the CRS
-of the layer. This can provide a quick way to get useful information about the layer.
-
-Additionally, you can add or edit a title and abstract for the layer in the
+You can add or edit a title and abstract for the layer in the
 :guilabel:`Description` section. It's also possible to define a
 :guilabel:`Keyword list` here. These keyword lists can be used in a
 metadata catalog. If you want to use a title from an XML metadata file,
@@ -3260,11 +3287,76 @@ format of the image. Currently png, jpg and jpeg image formats are supported.
 
 .. _figure_server_vector:
 
-.. figure:: img/vector_metadata_tab.png
+.. figure:: img/vector_server_properties.png
    :align: center
 
    QGIS Server tab in vector layers properties dialog
 
+.. _digitizingmenu:
+
+Digitizing Properties
+=====================
+
+|digitizing| The :guilabel:`Digitizing` tab gives access to options that help to ensure the
+quality of digitized geometries.
+
+.. _figure_digitizing_vector:
+
+.. figure:: img/vector_digitizing_properties.png
+   :align: center
+
+   The QGIS Digitizing tab in the vector layers properties dialog
+
+Automatic Fixes
+---------------
+
+Options in the :guilabel:`Automatic Fixes` section will directly affect the vertices
+of any geometry which is added or modified.
+If the |checkbox| :guilabel:`Remove duplicate nodes` option is checked, any two subsequent
+vertices with exactly the same coordinates will be removed.
+If the :guilabel:`Geometry precision` is set, all vertices will be rounded to
+the closest multiple of the configured geometry precision. The rounding will
+happen in the layer coordinate reference system. Z and M values are not
+rounded. With many map tools, a grid is shown on the canvas while digitizing.
+
+Geometry Checks
+---------------
+
+In the :guilabel:`Geometry checks` section, additional validations on a per
+geometry basis can be activated. Immediately after any geometry modification,
+failures in these checks are reported to the user in the geometry validation panel.
+As long as a check is failing, it is not possible to save the layer.
+The |checkbox| :guilabel:`Is valid` check will run basic validity checks like self intersection on
+geometries.
+
+Topology Checks
+---------------
+
+In the :guilabel:`Topology checks` section, additional topology validation
+checks can be activated. Topology checks will be executed when the user 
+saves the layer. Check errors will be reported in the geometry validation
+panel. As long as validation errors are present, the layer can not be saved.
+Topology checks are executed in the area of the bounding box of the modified
+features. Since other features may be present in the same area, topological
+errors concerning these features are reported as well as errors introduced
+in the current edit session.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Topology check option
+     - Illustration
+   * - The |checkbox| :guilabel:`Gap` check will check for
+       gaps between neighbouring polygons.
+     - .. image:: img/gapcheck.png
+   * - The |checkbox| :guilabel:`Overlap` check will check
+       for overlaps between neighbouring polygons.
+     - .. image:: img/overlapcheck.png
+   * - The |checkbox| :guilabel:`Missing vertex` check will
+       check for shared boundaries of neighbouring polygons
+       where one border misses a vertex which is present on
+       the other one. 
+     - .. image:: img/missingvertexcheck.png
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

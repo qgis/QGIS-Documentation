@@ -21,7 +21,8 @@ Aspect is the compass direction that a slope faces. The pixels will
 have a value from 0-360° measured in degrees from north indicating the azimuth.
 On the northern hemisphere, the north side of slopes is often shaded (small azimuth from 0°-90°),
 while the southern side receives more solar radiation (higher azimuth from 180°-270°).
-The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -72,7 +73,8 @@ Color reliefs can particularly be used to depict elevations.
 The Algorithm outputs a 4-band raster with values computed from the elevation
 and a text-based color configuration file. By default, the colors between the given
 elevation values are blended smoothly and the result is a nice colorized elevation raster.
-The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 Parameters
 ..........
@@ -125,7 +127,8 @@ interpolating missing regions of fairly continuously varying rasters (such as el
 models for instance). It is also suitable for filling small holes and cracks in more irregularly
 varying images (like airphotos). It is generally not so great for interpolating a raster
 from sparse point data.
-The algorithm is derived from the `GDAL fillnodata utility <https://www.gdal.org/gdal_fillnodata.html>`__ .
+
+This algorithm is derived from the `GDAL fillnodata utility <https://www.gdal.org/gdal_fillnodata.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -176,6 +179,8 @@ The Moving Average is a simple data averaging algorithm. It uses a moving window
 and averages all data points within the window. Search ellipse can be rotated by specified angle, the center of ellipse
 located at the grid node. Also the minimum number of data points to average can be set, if there are not enough points
 in window, the grid node considered empty and will be filled with specified NODATA value.
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -253,7 +258,9 @@ See also
 
 Grid (Data metrics)
 -------------------
-This algorithm computes some data metrics using the specified window and output grid geometry.
+Computes some data metrics using the specified window and output grid geometry.
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -352,6 +359,8 @@ The Inverse Distance to a Power gridding method is a weighted average interpolat
 You should supply the input arrays with the scattered data values
 including coordinates of every data point and output grid geometry.
 The function will compute interpolated value for the given position in output grid.
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -453,6 +462,8 @@ Grid (IDW with nearest neighbor searching)
 Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
 Ideal when a maximum number of data points to use is required.
 
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+
 Parameters
 ..........
 
@@ -537,6 +548,8 @@ within the triangle.
 If the point is not in any triangle, depending on the radius, the algorithm will
 use the value of the nearest point or the NODATA value.
 
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+
 Parameters
 ..........
 
@@ -586,11 +599,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-........
-
-`GDAL grid <https://www.gdal.org/gdal_grid.html>`_
-
 
 .. _gdalgridnearestneighbor:
 
@@ -599,6 +607,8 @@ Grid (Nearest neighbor)
 The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point
 found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
 will be returned.
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -672,7 +682,8 @@ Hillshade
 Outputs a raster with a nice shaded relief effect. It’s very useful for visualizing
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
-The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -731,11 +742,13 @@ Outputs
 
 Near black
 ----------
-Convert nearly black/white borders to black.
+Converts nearly black/white borders to black.
 
-This utility will scan an image and try to set all pixels that are nearly or exactly black, white or one or more custom
+This algorithm will scan an image and try to set all pixels that are nearly or exactly black, white or one or more custom
 colors around the collar to black or white. This is often used to "fix up" lossy compressed airphotos so that color
 pixels can be treated as transparent when mosaicking.
+
+This algorithm is derived from the `GDAL nearblack utility <https://www.gdal.org/nearblack.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -762,19 +775,16 @@ Outputs
 ``Output layer`` [raster]
   Raster file in output.
 
-See also
-........
-
-`GDAL nearblack <https://www.gdal.org/nearblack.html>`_
-
 
 .. _gdalproximity:
 
 Proximity (raster distance)
 ---------------------------
-The proximity algorithm generates a raster proximity map indicating the distance from the center of each pixel
+Generates a raster proximity map indicating the distance from the center of each pixel
 to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which
 the raster pixel value is in the set of target pixel values.
+
+This algorithm is derived from the `GDAL proximity utility <https://www.gdal.org/gdal_proximity.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -845,11 +855,6 @@ Outputs
 ``Output layer`` [raster]
   Raster file in output.
 
-See also
-........
-
-`GDAL proximity algorithm <https://www.gdal.org/gdal_proximity.html>`_
-
 
 .. _gdalroughness:
 
@@ -861,7 +866,8 @@ difference of a central pixel and its surrounding cell.
 The determination of the roughness plays a role in the analysis of terrain elevation data,
 it's useful for calculations of the river morphology, in climatology and physical geography
 in general.
-The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -895,7 +901,8 @@ Sieve
 Removes raster polygons smaller than a provided threshold size (in pixels) and
 replaces them with the pixel value of the largest neighbour polygon. It is
 useful if you have a large amount of small areas on your raster map.
-The algorithm is derived from the `GDAL sieve utility <https://www.gdal.org/gdal_sieve.html>`_ .
+
+This algorithm is derived from the `GDAL sieve utility <https://www.gdal.org/gdal_sieve.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -931,10 +938,11 @@ Outputs
 
 Slope
 -----
-Generate a slope map from any GDAL-supported elevation raster. Slope is the
+Generates a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
 type of slope value you want: degrees or percent slope.
-The algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -981,8 +989,10 @@ Outputs
 TPI (Topographic Position Index)
 --------------------------------
 Outputs a single-band raster with values computed from the elevation.
-TPI stands for Topographic Position Index, which is defined as the difference between a central pixel and the mean
-of its surrounding cells.
+TPI stands for Topographic Position Index, which is defined as the difference
+between a central pixel and the mean of its surrounding cells.
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1008,19 +1018,16 @@ Outputs
 ``Output file`` [raster]
   TPI raster in output.
 
-See also
-........
-
-`GDAL DEM utility <https://www.gdal.org/gdaldem.html#gdaldem_TPI>`__
-
 
 .. _gdaltriterrainruggednessindex:
 
 TRI (Terrain Ruggedness Index)
 ------------------------------
 Outputs a single-band raster with values computed from the elevation.
-TRI stands for Terrain Ruggedness Index, which is defined as the mean difference between a central pixel and its
-surrounding cells.
+TRI stands for Terrain Ruggedness Index, which is defined as the mean difference
+between a central pixel and its surrounding cells.
+
+This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1045,10 +1052,6 @@ Outputs
 
 ``Output file`` [raster]
   TRI raster file.
-
-See also
-........
-`GDAL DEM utility <https://www.gdal.org/gdaldem.html#gdaldem_TRI>`__
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

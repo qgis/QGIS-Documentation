@@ -63,12 +63,26 @@ section, subsection and minisec.
    Subminisec
    ^^^^^^^^^^
 
-Inline tags
+Lists
+-----
+
+Lists are useful for structuring the text.  Here are some simple rules
+common to all lists:
+
+* Start all list items with a capital letter
+
+* Do not use punctuation after list items that only contain a single simple
+  sentence
+
+* Use period ( ``.`` ) as punctuation for list items that consist of several
+  sentences or a single compound sentence
+
+Inline Tags
 -----------
 
 You can use some tags inside the text to emphasize some items.
 
-* **Menu gui**: to mark a complete sequence of menu selections,
+* **Menu GUI**: to mark a complete sequence of menu selections,
   including selecting submenus and choosing a specific operation,
   or any subsequence of such a sequence.
 
@@ -97,13 +111,20 @@ You can use some tags inside the text to emphasize some items.
 
   (see `image`_ below).
 
-* **Shorcut keyboard**
+* **Keyboard shortcuts**
 
   .. code-block:: rst
 
      :kbd:`Ctrl+B`
 
   will show :kbd:`Ctrl+B`
+  
+  When describing keyboard shortcuts, the following conventions
+  should be used:
+  
+  * Letter keys are displayed using uppercase: :kbd:`S`
+  * Special keys are displayed with an uppercase first letter: :kbd:`Esc`
+  * Key combinations are displayed with a ``+`` sign between keys, without spaces: :kbd:`Shift+R`
 
 
 * **User text**
@@ -141,7 +162,7 @@ which will return:
 see my_anchor_ for more information.
 
 Notice how it will jump to the following line/thing following the 'anchor'.
-Normally to declare this label you do not need to use apastroph's but
+Normally to declare this label you do not need to use apostrophes but
 you do need to use empty lines before and after the anchor.
 
 Another way to jump to the same place **from anywhere in the documentation**
@@ -171,8 +192,8 @@ see :ref:`Label and reference <my_anchor>` for more information.
 
 .. _`image`:
 
-Figure and image
-----------------
+Figures and Images
+------------------
 
 
 Pictures
@@ -194,7 +215,8 @@ Replacement
 ...........
 
 You can put an image inside text or add an alias to use everywhere. To use an image
-inside a paragraph, just create an alias somewhere.
+inside a paragraph, first create an alias in the :file:`source/substitutions.txt`
+file:
 
 
 .. code-block:: rst
@@ -202,23 +224,30 @@ inside a paragraph, just create an alias somewhere.
    .. |nice_logo| image:: /static/common/logo.png
                   :width: 2 em
 
-and call it in your paragraph:
+and then call it in your paragraph:
 
 .. code-block:: rst
 
-   my paragraph begins here with a nice logo |nice_logo|.
+   My paragraph begins here with a nice logo |nice_logo|.
 
-Here is how this example become:
+This is how the example will be displayed:
 
 .. |nice_logo| image:: /static/common/logo.png
                :width: 2 em
 
-my paragraph begins here with a nice logo |nice_logo|.
+My paragraph begins here with a nice logo |nice_logo|.
+
+In order to render in GitHub a preview of the documentation that is the closest
+to html rendering, you will also need to add the image replacement call at the
+end of the file you changed. This can be done by copy-pasting it from the
+:file:`substitutions.txt` or by executing the :file:`scripts/find_set_subst.py`
+script.
+
 
 .. note::
 
    Currently, to ensure consistency and help in the use of QGIS icons
-   a list of alias is built and available in :ref:`substitutions` chapter.
+   a list of aliases is built and available in the :ref:`substitutions` chapter.
 
 Figure
 ......
@@ -244,14 +273,14 @@ The result looks like this:
 
    A caption: A logo I like
 
-To avoid possible conflict with another references, always begin figures
-anchor with ``_figure_`` and prefer using terms that can easily refer to the
+To avoid possible conflict with other references, always begin figure
+anchors with ``_figure_`` and prefer using terms that can easily refer to the
 figure caption. While only the centered alignment is mandatory for the image,
-feel free to use any other options for figure (such as ``width``,
+feel free to use any other options for figures (such as ``width``,
 ``height``, ``scale``...) if needed.
 
-The scripts will insert an automatical generated number before the caption of
-the figure in pdf.
+The scripts will insert an automatically generated number before the caption of
+the figure in the generated PDF version of the documentation.
 
 To use a caption (*see My caption*) just insert indented text after a blank line
 in the figure block.
@@ -306,7 +335,7 @@ You can also use more complicated tables by drawing them using references and al
    | and of course not to forget |nix|  |
    +------------------------------------+
 
-   My drawn table, mind you this is unfortunately not regarded a caption
+   My drawn table, mind you this is unfortunately not regarded as a caption
 
    You can reference to it like this my_drawn_table_.
 
@@ -322,7 +351,7 @@ The result:
 | and of course not to forget |nix|  |
 +------------------------------------+
 
-My drawn table, mind you this is unfortunately not regarded a caption
+My drawn table, mind you this is unfortunately not regarded as a caption
 
 You can reference to it like this my_drawn_table_.
 
@@ -336,13 +365,13 @@ QGIS documentation provides some essential indices.
 There are few rules to follow in order to keep a set of indices that are really
 useful (coherent, consistent and really connected to each other):
 
-* Index should be human readable, understandable and translatable; an index can
+* An index should be human readable, understandable and translatable; an index can
   be made from many words but you should avoid any unneeded ``_``, ``-``...
   characters to link them i.e., ``Loading layers`` instead of ``loading_layers``
   or ``loadingLayers``.
 * Always capitalize only the first letter of the index unless the word has a
   particular spelling, in which case keep using its spelling e.g., ``Loading layers``,
-  ``Atlas generation``, ``WMS``, ``pgsql2shp``
+  ``Atlas generation``, ``WMS``, ``pgsql2shp``.
 * Keep an eye on the existing `Index list <https://docs.qgis.org/testing/en/genindex.html>`_
   in order to reuse the most convenient expression with the right spelling
   and avoid wrong duplicates.
@@ -386,7 +415,7 @@ A clear and appropriate title is required for both warnings and tips.
   users to quickly overview the message you want to give them, and
   decide on its relevance.
 
-Code snippets
+Code Snippets
 -------------
 
 You may also want to give examples and insert a code snippet. In this case,
@@ -428,31 +457,31 @@ Here are some hints to create new, nice looking screenshots.
 The images should be placed  in a :file:`img/` folder, in the same folder as the
 rst file.
 
-* same environment for all the screen caps (same OS, same decoration, same font
+* Same environment for all the screen caps (same OS, same decoration, same font
   size). We have used Ubuntu with Unity and the default "ambience" theme.
   For screenshots of QGIS main window and layouts we have set it to show menus
   on the window (not the default in unity).
-* reduce the window to the minimal space needed to show the feature (taking the
+* Reduce the window to the minimal space needed to show the feature (taking the
   all screen for a small modal window > overkill)
-* the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files
+* The less clutter, the better (no need to activate all the toolbars)
+* Don't resize them in an image editor, the size will be set into the rst files
   if necessary (downscaling the dimensions without properly upping the
   resolution > ugly)
-* cut the background
-* make the top corners transparent if the background is not white
+* Cut the background
+* Make the top corners transparent if the background is not white
 * Set print size resolution to 135 dpi (e.g. in Gimp set the print resolution
   :menuselection:`image --> print size` and save). This way, images will be at
   original size in html and at a good print resolution in the PDF.
-  You can also use ImageMagick convert command to do a batch of images
+  You can also use ImageMagick convert command to do a batch of images:
 
 .. code-block:: bash
 
   convert -units PixelsPerInch input.png -density 135 output.png
 
-* save them in png (no jpeg artifacts)
-* the screenshot should show the content according to what is described in the
+* Save them in png (no jpeg artifacts)
+* The screenshot should show the content according to what is described in the
   text
-* you can find some prepared QGIS-projects that were used before to create
+* You can find some prepared QGIS-projects that were used before to create
   screenshots in :file:`./qgis-projects`.
   This makes it easier to reproduce screenshots for the next version of QGIS.
   These projects use the QGIS `Sample Data <https://qgis.org/downloads/data/>`_
@@ -460,10 +489,10 @@ rst file.
   as the QGIS-Documentation Repository.
 * Use the following command to remove the global menu function in Ubuntu
   to create smaller application screens with menu's:
-
-.. code-block:: bash
-
-  sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
+  
+  .. code-block:: bash
+  
+    sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
 Translate Screenshots
@@ -473,25 +502,25 @@ Here are some hints to create screenshots for your translated user guide.
 Translated images should be placed in a :file:`img/<your_language>/` folder, in
 the same folder as the rst file.
 
-* same environment for all the screen caps (same OS, same decoration, same font
+* Same environment for all the screen caps (same OS, same decoration, same font
   size)
-* use the QGIS -projects included in QGIS-Documentation repository (in
-  :file:`./qgis_projects` ).
+* Use the QGIS projects included in QGIS-Documentation repository (in
+  :file:`./qgis_projects`)
   These were used to produce the 'original' screenshots in the manual.
   The QGIS `Sample Data <https://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
   should be placed in the same folder as the QGIS-Documentation Repository.
-* same size as the english 'original' screenshots, otherwise they will be stretched
+* Same size as the english 'original' screenshots, otherwise they will be stretched
   and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
-* same filename as the english 'original' screenshot.
-* reduce the window to the minimal space needed to show the feature
+* Same filename as the english 'original' screenshot
+* Reduce the window to the minimal space needed to show the feature
   (taking all the screen for a small modal window > overkill)
-* the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files
+* The less clutter, the better (no need to activate all the toolbars)
+* Don't resize them in an image editor, the size will be set into the rst files
   (downscaling the dimensions without properly upping the resolution > ugly)
-* cut the background
-* save them in png (no jpeg artifacts)
-* the screenshot should show the content according to what is described in the
+* Cut the background
+* Save them in png (no jpeg artifacts)
+* The screenshot should show the content according to what is described in the
   text
 
 
@@ -527,7 +556,7 @@ guidelines:
 
 * Avoid use "This algorithm does this and that..." as first sentence in algorithm
   description. Try to use more general words like in TauDEM or GRASS algorithms
-  help
+  help.
 
 * Avoid to describe what the algorithm does by replicating its name and please
   don't replicate the name of the parameter in the description of the parameter
@@ -591,12 +620,12 @@ guidelines:
   Folder path                               ``folder``
   ========================================  =========================  ====================
 
-* the best option is studying an existing and well documented algorithm and copy
+* The best option is studying an existing and well documented algorithm and copy
   all the useful layouts
 
-* if the algorithm does not provide any output just skip that section
+* If the algorithm does not provide any output just skip that section
 
-* when you are finished just follow the guidelines described in :ref:`step_by_step`
+* When you are finished just follow the guidelines described in :ref:`step_by_step`
   to commit your changes and make a Pull Request
 
 Here an example of an existing algorithm to help you with the layout and the description::
