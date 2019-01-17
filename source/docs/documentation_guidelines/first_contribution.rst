@@ -32,7 +32,7 @@ project to learn some basic vocabulary and actions that will be used below.
 .. note:: **If you are fixing a reported issue**
 
     If you are making changes to fix an `issue <https://github.com/qgis/QGIS-
-    Documentation/issues>`_, add a comment to the issue to assign it to
+    Documentation/issues>`_, add a comment to the issue report to assign it to
     yourself. This will prevent more than one person from working on the same
     issue.
 
