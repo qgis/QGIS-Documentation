@@ -157,7 +157,7 @@ There are four drop-down menus which allow you to compare the changes you
 have made in your branch with the master branch that you want to merge into.
 They are:
 
-* **base fork**: the fork that you want merge your changes into,
+* **base fork**: the fork that you want to merge your changes into,
 * **base**: the branch of the base fork that you want to merge your changes into,
 * **head fork**: the fork that has changes that you want to incorporate into the base fork,
 * **compare**: the branch with those changes.
