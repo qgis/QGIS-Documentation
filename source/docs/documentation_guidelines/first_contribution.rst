@@ -142,6 +142,17 @@ fork or the main ``qgis/QGIS-Documentation`` repository) and click on
 2. Compare changes
 ..................
 
+If you see two dialog boxes, one that says ``base:master`` and the other
+``compare:branch_name`` (see figure), this will only merge your changes from
+one of your branches to your master branch. To fix this click on the
+:guilabel:`compare across forks` link.
+
+.. figure:: img/githubCompareAcrossForks.png
+    :align: Center
+
+    If your :guilabel:`Comparing changes` page looks like this, click on the
+    :guilabel:`compare across forks` link.
+
 There are four drop-down menus which allow you to compare the changes you
 have made in your branch with the master branch that you want to merge into.
 They are:
@@ -151,7 +162,7 @@ They are:
 * **head fork**: the fork that has changes that you want to incorporate into the base fork,
 * **compare**: the branch with those changes.
 
-Select ``qgis/QGIS-Documentation`` with ``master`` as the base branch,
+Select ``qgis/QGIS-Documentation`` as the base fork with ``master`` as base,
 set the head fork to your repository ``<YourName>/QGIS-Documentation``,
 and set compare to your modified branch.
 
@@ -165,9 +176,9 @@ be merged into the official documentation without conflicts.
 
 Click the :guilabel:`Create pull request` button.
 
-.. warning:: **If you get a red cross**
+.. warning:: **If you get a red X**
 
-    If you get a red cross, it means that there are conflicts. The files
+    If you get a red X, it means that there are conflicts. The files
     that you are modifying are not up to date with the branch you are
     targeting because someone else has made a commit that conflicts with your
     changes. You can still create the pull request but you'll need to fix any
