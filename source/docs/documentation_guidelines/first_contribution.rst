@@ -29,7 +29,7 @@ The GitHub web interface offers you ways to easily:
 Read the GitHub `Hello-world <https://guides.github.com/activities/hello-world/>`_
 project to learn some basic vocabulary and actions that will be used below.
 
-.. note:: **If you are fixing an issue**
+.. note:: **If you are fixing a reported issue**
 
     If you are making changes to fix an `issue <https://github.com/qgis/QGIS-
     Documentation/issues>`_, add a comment to the issue to assign it to
