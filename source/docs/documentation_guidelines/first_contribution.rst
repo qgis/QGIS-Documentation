@@ -270,7 +270,7 @@ The GitHub web interface is an easy way to update the QGIS-documentation repo wi
 * fix possible conflicts with the main repo,
 * or, build the documentation to test your changes.
 
-You then need to `install git <https://git-scm.com/downloads>`_ on your hard
+You need to `install git <https://git-scm.com/downloads>`_ on your hard
 drive in order to get access to more advanced and powerful tools and have a
 local copy of the repository. Some basics you may often need are exposed below.
 You'll also find rules to care about even if you opt for the web interface.
