@@ -13,7 +13,7 @@
 
 Now that you know how to write documentation using :ref:`reStructuredText and
 Sphinx<writing_doc_guidelines>`, let's dive into the process of producing
-documentation and how to quickly and safely share your changes with the
+documentation and how to share your changes quickly and safely with the
 community.
 
 Using the GitHub web interface
