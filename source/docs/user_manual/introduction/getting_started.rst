@@ -128,8 +128,8 @@ This means that you can launch QGIS by:
 
 * using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock
 * double clicking the icon in your Applications folder or desktop shortcut
-* double clicking an existing QGIS project (``.qgs``) file. (Note that this will
-  also open the project.)
+* double clicking an existing QGIS project file (with :file:`.qgz` or :file:`.qgs` extension). Note that this will
+   also open the project.
 * typing ``qgis`` in a command prompt (assuming that QGIS is added to your PATH
   or you are in its installation folder)
 
@@ -489,18 +489,14 @@ may not work properly any more.
   :guilabel:`General` tab, you should tick |checkbox|
   :guilabel:`Warn when opening a project file saved with an older version of QGIS`.
 
-Whenever you save a project in QGIS a backup of the project file is created with the
+Whenever you save a ``.qgs`` project in QGIS, a backup of the project file is created with the
 extension ``.qgs~`` and stored in the same directory as the project file.
 
-The default extension for QGIS projects is ``.qgs`` but a project may be
-zipped in a ``.qgz`` file too. Actually, the ``.qgs`` file is just embedded
-in an archive, so you still have the possibility to unzip it in order to
-manually edit XML information in a text editor. These ``.qgz`` files can also
-be opened like default ``.qgs`` files. To zip a project, the corresponding
-extension has just to be selected in
-:menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`. Once
-zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
-automatically zip your current project.
+The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the
+default is to save using a compressed format with the ``.qgz`` extension.
+The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together
+with its associated sqlite database (``.qgd``) for ref:`auxiliary data <vector_auxiliary_storage>`.
+You can get to these files by unzipping.
 
 .. note::
 
