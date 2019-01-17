@@ -63,7 +63,7 @@ Alternative 1: Using the ``Fix Me`` shortcut
 ............................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
-``Fix Me`` link at the bottom of each page.
+``Fix Me`` link in the footer of each page.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
