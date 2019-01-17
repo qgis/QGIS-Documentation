@@ -89,7 +89,7 @@ Continue with the next step.
 3. Create an ad hoc branch
 --------------------------
 
-Click on |githubBranch| in the upper left corner of your copy QGIS-
+Click on |githubBranch| in the upper left corner of your forked QGIS-
 Documentation repository and enter a unique name in the text field to create a
 new `branch <https://help.github.com/articles/about-branches/>`_ .
 The name of the new branch should relate to the problem you intend to fix.
