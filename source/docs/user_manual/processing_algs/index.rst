@@ -23,7 +23,7 @@ Processing providers and algorithms
    Parameter names (as used in Python scripts) are not yet included in the
    algorithms documentation.
    The ``processing.algorithmHelp`` function in the Python console can be used
-   to get the names (example for the QGIS Buffer algorithm)::
+   to get these names (example for the QGIS Buffer algorithm)::
 
        processing.algorithmHelp("native:buffer")
 
