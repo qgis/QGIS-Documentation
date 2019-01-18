@@ -13,26 +13,26 @@
 
 Now that you know how to write documentation using :ref:`reStructuredText and
 Sphinx<writing_doc_guidelines>`, let's dive into the process of producing
-documentation and how to quickly and safely share your changes with the
+documentation and how to share your changes quickly and safely with the
 community.
 
 Using the GitHub web interface
 ==============================
 
-The GitHub web interface offers you ways to easily:
+The GitHub web interface offers you easy ways to:
 
-* edit files,
-* preview and commit your changes,
-* make a pull request to have your changes inserted into the main repository,
-* and create, update, or delete branches.
+* edit files
+* preview and commit your changes
+* make a pull request to have your changes inserted into the main repository
+* create, update, or delete branches
 
 Read the GitHub `Hello-world <https://guides.github.com/activities/hello-world/>`_
 project to learn some basic vocabulary and actions that will be used below.
 
-.. note:: **If you are fixing an issue**
+.. note:: **If you are fixing a reported issue**
 
     If you are making changes to fix an `issue <https://github.com/qgis/QGIS-
-    Documentation/issues>`_, add a comment to the issue to assign it to
+    Documentation/issues>`_, add a comment to the issue report to assign it to
     yourself. This will prevent more than one person from working on the same
     issue.
 
@@ -63,7 +63,7 @@ Alternative 1: Using the ``Fix Me`` shortcut
 ............................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
-``Fix Me`` link at the bottom of each page.
+``Fix Me`` link in the footer of each page.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
@@ -87,7 +87,7 @@ You can edit files directly from your fork of the QGIS Documentation.
 3. Create an ad hoc branch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Click on |githubBranch| in the upper left corner of your copy QGIS-
+Click on |githubBranch| in the upper left corner of your forked QGIS-
 Documentation repository and enter a unique name in the text field to create a
 new `branch <https://help.github.com/articles/about-branches/>`_ .
 The name of the new branch should relate to the problem you intend to fix.
@@ -154,7 +154,7 @@ There are four drop-down menus which allow you to compare the changes you
 have made in your branch with the master branch that you want to merge into.
 They are:
 
-* **base fork**: the fork that you want merge your changes into,
+* **base fork**: the fork that you want to merge your changes into,
 * **base**: the branch of the base fork that you want to merge your changes into,
 * **head fork**: the fork that has changes that you want to incorporate into the base fork,
 * **compare**: the branch with those changes.
@@ -263,11 +263,11 @@ Using Git command line tools
 
 The GitHub web interface is an easy way to update the QGIS-documentation repo with your contributions, but it doesn't offer tools to:
 
-* group your commits and clean your change history,
-* fix possible conflicts with the main repo,
-* or, build the documentation to test your changes.
+* group your commits and clean your change history
+* fix possible conflicts with the main repo
+* build the documentation to test your changes
 
-You then need to `install git <https://git-scm.com/downloads>`_ on your hard
+You need to `install git <https://git-scm.com/downloads>`_ on your hard
 drive in order to get access to more advanced and powerful tools and have a
 local copy of the repository. Some basics you may often need are exposed below.
 You'll also find rules to care about even if you opt for the web interface.
