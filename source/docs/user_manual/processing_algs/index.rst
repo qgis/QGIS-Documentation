@@ -8,6 +8,13 @@
 Processing providers and algorithms
 ***********************************
 
+Processing algorithms and their parameters (as presented in the user interface)
+are documented here.
+
+.. note::
+   Parameter names (as used in Python scripts) are not yet included.
+   :ref:`_processing_console` shows how to find them.
+
 .. toctree::
      :maxdepth: 2
 
@@ -15,24 +22,6 @@ Processing providers and algorithms
      gdal/index
      lidartools/lastools
      taudem/index
-
-.. note::
-
-   Processing algorithms and their parameters (as presented in the user interface)
-   are documented here.
-   Parameter names (as used in Python scripts) are not yet included in the
-   algorithms documentation.
-   The ``processing.algorithmHelp`` function in the Python console can be used
-   to get these names (example for the QGIS Buffer algorithm)::
-
-       processing.algorithmHelp("native:buffer")
-
-   The available Processing algorithms can be found using the
-   ``QgsApplication.processingRegistry().algorithms()`` function::
-
-       for a in QgsApplication.processingRegistry().algorithms():
-           print("{}:{}".format(a.provider().id(), a.name()))
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
