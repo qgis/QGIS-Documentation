@@ -84,10 +84,8 @@ Alternative 2: Edit files in your documentation repository
 
 You can edit files directly from your fork of the QGIS Documentation.
 
-Continue with the next step.
-
 3. Create an ad hoc branch
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Click on |githubBranch| in the upper left corner of your copy QGIS-
 Documentation repository and enter a unique name in the text field to create a
@@ -104,8 +102,8 @@ The name of the new branch should relate to the problem you intend to fix.
    always delete a branch and start over by creating a new one from the master
    branch.
 
-4. Make changes
----------------
+4. Modify files
+^^^^^^^^^^^^^^^
 
 #. Browse the source files to the file that you want to change.
 #. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
@@ -117,7 +115,7 @@ The name of the new branch should relate to the problem you intend to fix.
 
 .. _sharing_changes:
 
-5. Share your changes via Pull Request
+3. Share your changes via Pull Request
 --------------------------------------
 
 You need to make a pull request to integrate your changes into the official documentation.
@@ -133,9 +131,8 @@ You need to make a pull request to integrate your changes into the official docu
 1. Start a new pull request
 ...........................
 
-Navigate to the main page of the QGIS-Documentation repository (either your
-fork or the main ``qgis/QGIS-Documentation`` repository) and click on
-:guilabel:`New pull request`.
+Navigate to the main page of the `QGIS-Documentation <https://github.com/qgis/QGIS-Documentation>`_
+repository and click on :guilabel:`New pull request`.
 
 .. _compare_changes:
 
@@ -189,7 +186,7 @@ Click the :guilabel:`Create pull request` button.
       fixing issues for a different release, change **base** from ``master``
       to the appropriate ``release_...`` branch in the steps above.
 
-.. warning:: **Do not make a pull request against your own** ``master`` **branch.**
+.. note:: **If you make a pull request against your own** ``master`` **branch.**
 
     If you make a pull request against your own master branch, no one will
     know of your changes and you may pollute your own master branch. See the
@@ -247,7 +244,7 @@ An administrator will merge your contribution after any build errors are
 corrected, and after everything looks good to the administrators and you are
 satisfied with your changes.
 
-6. Delete your ad hoc branch
+4. Delete your ad hoc branch
 ----------------------------
 
 You can delete the ad hoc branch after your changes have been merged.
@@ -256,8 +253,8 @@ your repository.
 
 Navigate to your fork of the QGIS-Documentation repository (``https://github.com/<YourName>/QGIS-Documentation``).
 Click on the :guilabel:`Branches` tab. Below :guilabel:`Your branches` you'll
-see a list of your branches. Click on the red trash can icon to delete any
-unwanted branches.
+see a list of your branches. Click on |deleteSelected| :sup:`Delete this branch`
+to delete any unwanted branches.
 
 .. _git_command_line_tools:
 
@@ -504,6 +501,8 @@ Further reading
    source folder.
 
 .. |CURRENT| replace:: 2.18
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |githubBranch| image:: /static/common/githubBranch.png
    :width: 8em
 .. |githubEditPencil| image:: /static/common/githubEditPencil.png
