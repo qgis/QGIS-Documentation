@@ -19,7 +19,7 @@ community.
 Using the GitHub web interface
 ==============================
 
-The GitHub web interface offers you ways to easily:
+The GitHub web interface offers you easy ways to:
 
 * edit files,
 * preview and commit your changes,
