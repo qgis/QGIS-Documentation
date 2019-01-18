@@ -13,7 +13,7 @@ are documented here.
 
 .. note::
    Parameter names (as used in Python scripts) are not yet included.
-   :ref:`_processing_console` shows how to find them.
+   :ref:`processing_console` shows how to find them.
 
 .. toctree::
      :maxdepth: 2
