@@ -266,7 +266,7 @@ Using Git command line tools
 
 The GitHub web interface is an easy way to update the QGIS-documentation repo with your contributions, but it doesn't offer tools to:
 
-* group your commits and clean your change history,
+* group your commits and clean your change history
 * fix possible conflicts with the main repo,
 * or, build the documentation to test your changes.
 
