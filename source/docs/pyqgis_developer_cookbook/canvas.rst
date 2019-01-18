@@ -23,7 +23,7 @@ there are tools for panning, zooming, identifying layers, measuring, vector
 editing and others. Similar to other graphics programs, there is always one
 tool active and the user can switch between the available tools.
 
-Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui`
+Map canvas is implemented as :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class in :mod:`qgis.gui`
 module. The implementation is based on the Qt Graphics View framework.
 This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
@@ -34,7 +34,7 @@ and items. If not, please make sure to read the `overview of the framework
 Whenever the map has been panned, zoomed in/out (or some other action triggers
 a refresh), the map is rendered again within the current extent. The layers are
 rendered to an image (using :class:`QgsMapRendererJob` class) and that image is
-then displayed in the canvas. The :class:`QgsMapCanvas` class also controls refreshing
+then displayed in the canvas. The :class:`qgis.gui.QgsMapCanvas` class also controls refreshing
 of the rendered map. Besides this item which acts as a background, there may be
 more **map canvas items**.
 Typical map canvas items are rubber bands (used for measuring, vector editing
