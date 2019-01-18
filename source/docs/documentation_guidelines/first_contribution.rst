@@ -23,7 +23,7 @@ The GitHub web interface offers you easy ways to:
 
 * edit files
 * preview and commit your changes
-* make a pull request to have your changes inserted into the main repository,
+* make a pull request to have your changes inserted into the main repository
 * and create, update, or delete branches.
 
 Read the GitHub `Hello-world <https://guides.github.com/activities/hello-world/>`_
