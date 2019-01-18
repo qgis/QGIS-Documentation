@@ -19,7 +19,7 @@ community.
 Using the GitHub web interface
 ==============================
 
-The GitHub web interface offers you easy ways to:
+The GitHub web interface allows you to do the following:
 
 * edit files
 * preview and commit your changes
@@ -154,10 +154,10 @@ There are four drop-down menus which allow you to compare the changes you
 have made in your branch with the master branch that you want to merge into.
 They are:
 
-* **base fork**: the fork that you want to merge your changes into,
-* **base**: the branch of the base fork that you want to merge your changes into,
-* **head fork**: the fork that has changes that you want to incorporate into the base fork,
-* **compare**: the branch with those changes.
+* **base fork**: the fork that you want to merge your changes into
+* **base**: the branch of the base fork that you want to merge your changes into
+* **head fork**: the fork that has changes that you want to incorporate into the base fork
+* **compare**: the branch with those changes
 
 Select ``qgis/QGIS-Documentation`` as the base fork with ``master`` as base,
 set the head fork to your repository ``<YourName>/QGIS-Documentation``,
@@ -185,12 +185,6 @@ Click the :guilabel:`Create pull request` button.
       |CURRENT| is still maintained and existing issues are fixed. If you are
       fixing issues for a different release, change **base** from ``master``
       to the appropriate ``release_...`` branch in the steps above.
-
-.. note:: **If you make a pull request against your own** ``master`` **branch.**
-
-    If you make a pull request against your own master branch, no one will
-    know of your changes and you may pollute your own master branch. See the
-    figure above.
 
 3. Enter comments
 .................
@@ -241,8 +235,22 @@ If you want to fix another issue, create a new branch for
 those changes and repeat the steps above.
 
 An administrator will merge your contribution after any build errors are
-corrected, and after everything looks good to the administrators and you are
-satisfied with your changes.
+corrected, and after you and the administrators are satisfied with your changes.
+
+Pull request comments
+^^^^^^^^^^^^^^^^^^^^^
+You can make `comments <https://help.github.com/articles/commenting-on-a-pull-request/>`_
+on the code in a pull request. Navigate to the `pull request page <https://github.com/qgis/QGIS-Documentation/pulls>`_
+and click on the pull request that you want to comment on.
+
+At the bottom of the page you will find a text box where you can leave general
+comments about a pull request. 
+
+To add comments about specific lines of code, click on
+|githubFilesChanged| and find the file you want to comment on. You may have to
+click on :guilabel:`Load diff` to see the code. Scroll to the line of code you
+want to comment on and click on the |githubBluePlus|. That will open a text box
+allowing you to leave a comment.
 
 4. Delete your ad hoc branch
 ----------------------------
@@ -253,8 +261,8 @@ your repository.
 
 Navigate to your fork of the QGIS-Documentation repository (``https://github.com/<YourName>/QGIS-Documentation``).
 Click on the :guilabel:`Branches` tab. Below :guilabel:`Your branches` you'll
-see a list of your branches. Click on |deleteSelected| :sup:`Delete this branch`
-to delete any unwanted branches.
+see a list of your branches. Click on the |deleteSelected| icon to delete any
+unwanted branches.
 
 .. _git_command_line_tools:
 
@@ -502,6 +510,8 @@ Further reading
 
 .. |CURRENT| replace:: 2.18
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |githubBluePlus| image:: /static/common/githubBluePlus.png
    :width: 1.5em
 .. |githubBranch| image:: /static/common/githubBranch.png
    :width: 8em
