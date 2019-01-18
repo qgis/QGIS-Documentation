@@ -21,7 +21,7 @@ Using the GitHub web interface
 
 The GitHub web interface offers you easy ways to:
 
-* edit files,
+* edit files
 * preview and commit your changes,
 * make a pull request to have your changes inserted into the main repository,
 * and create, update, or delete branches.
