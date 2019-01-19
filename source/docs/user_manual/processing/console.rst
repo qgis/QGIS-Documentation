@@ -1,5 +1,7 @@
 .. only:: html
 
+|updatedisclaimer|
+
 .. _processing_console:
 
 Using processing algorithms from the console
