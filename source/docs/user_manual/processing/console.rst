@@ -1,6 +1,6 @@
 .. only:: html
 
-|updatedisclaimer|
+   |updatedisclaimer|
 
 .. _processing_console:
 
