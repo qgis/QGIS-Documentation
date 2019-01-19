@@ -5,14 +5,10 @@
 |LS| The Label Tool
 ===============================================================================
 
-Labels can be added to a map to show any information about an object. Any
+Labels can be added to a map to show information about an object. Any
 vector layer can have labels associated with it. These labels rely on the
 attribute data of a layer for their content.
 
-.. note::  The :guilabel:`Layer Properties` dialog does have a
-   :guilabel:`Labels` tab, which now offers the same functionality,
-   but for this example we'll use the :guilabel:`Label tool`, accessed via a
-   toolbar button.
 
 **The goal for this lesson:** To apply useful and good-looking labels to a
 layer.
@@ -20,89 +16,111 @@ layer.
 |basic| |FA| Using Labels
 -------------------------------------------------------------------------------
 
-Before being able to access the Label tool, you will need to ensure that it has
-been activated.
+In order to display textual information about a layer using its attributes:
 
-* Go to the menu item :menuselection:`View --> Toolbars`.
-* Ensure that the :guilabel:`Label` item has a check mark next to it. If it
-  doesn't, click on the :guilabel:`Label` item, and it will be activated.
-* Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel, so that
-  it is highlighted.
-* Click on the following toolbar button: |labeling|
+#. Select the :guilabel:`places` layer and press the |symbology| :sup:`Open
+   Layer Styling panel` button. You can as well use the :guilabel:`Layer
+   properties` dialog.
+#. Enable the |labeling| :sup:`Labels` tab.
+#. Select :guilabel:`Single labels` from the drop-down menu.
 
-This gives you the :guilabel:`Layer labeling settings` dialog.
+   .. image:: img/select_single_labels.png
+      :align: center
 
-* Check the box next to :guilabel:`Label this layer with...`.
+   |
 
-You'll need to choose which field in the attributes will be used for the
-labels. In the previous lesson, you decided that the :kbd:`NAME` field was the
-most suitable one for this purpose.
+   The dialog is filled with multiple options.
+   You'll need to choose which field in the attributes will be used for the
+   labels. In the previous lesson, you decided that the :guilabel:`name` field
+   was the most suitable for this purpose.
 
-* Select :guilabel:`name` from the list:
+#. Select :guilabel:`name` from the list next to the :guilabel:`Label with`
+   option:
 
-.. image:: img/select_label_with.png
-   :align: center
+   .. image:: img/select_label_with.png
+      :align: center
 
-* Click :guilabel:`OK`.
+   |
 
-The map should now have labels like this:
+   Depending on your OS, you may not have the same default options (e.g. font,
+   size). This is not an issue.
+
+#. Click :guilabel:`Apply`. If the |checkbox| :guilabel:`Live update` option is
+   checked, this is not necessary as the changes are immediately propagated to
+   the map canvas.
+
+The map should now have labels, like this:
 
 .. image:: img/first_place_names.png
    :align: center
+   :scale: 60
 
 |basic| |FA| Changing Label Options
 -------------------------------------------------------------------------------
 
-Depending on the styles you chose for your map in earlier lessons, you'll
+Depending on the styles you chose for your map in earlier lessons, you
 might find that the labels are not appropriately formatted and either overlap or
-are too far away from their point markers.
+are too far away from their point markers. Or you may simply not like the
+default rendering. Let's explore some of the label options to repair that.
 
-* Open the :guilabel:`Label tool` again by clicking on its button as before.
-* Make sure :guilabel:`Text` is selected in the left-hand options list, then
-  update the text formatting options to match those shown here:
+#. Reopen the |labeling| :guilabel:`Labels` tab.
+#. Select the |labelbuffer| :sup:`Buffer` tab in the upper-hand  options list
+   (or left-hand if you are in the :guilabel:`Layer Properties` panel - in this
+   case remember to click :guilabel:`Apply` to see your changes on the map).
+#. Tick the checkbox of the |unchecked| :guilabel:`Draw text buffer` option,
+   then set a buffer :guilabel:`Size` of ``0.8 mm``:
 
+   .. image:: img/buffer_options.png
+      :align: center
 
-.. image:: img/label_formatting_options.png
-   :align: center
+   |
 
-That's the font problem solved! Now let's look at the problem of the labels
-overlapping the points, but before we do that, let's take a look at the
-:guilabel:`Buffer` option.
+   You'll see that this adds a colored buffer or border to the place labels,
+   making them easier to pick out on the map:
 
-* Open the :guilabel:`Label tool` dialog.
-* Select :guilabel:`Buffer` from the left-hand options list.
-* Select the checkbox next to :guilabel:`Draw text buffer`, then choose options
-  to match those shown here:
+   .. image:: img/buffer_results.png
+      :align: center
+      :scale: 60
 
+   |
 
-.. image:: img/buffer_options.png
-   :align: center
+   However, the labels appear too large next to the other features on the map.
+#. Enable the |text| :guilabel:`Text` tab and set a lower :guilabel:`Size`, e.g.
+   ``8 points``.
 
-* Click :guilabel:`Apply`.
+   Better but these long labels are still not good looking.
+#. Go to the |labelformatting| :guilabel:`Formatting` tab and set the
+   :guilabel:`Wrap lines to` option to ``20 characters`` as :guilabel:`Maximum
+   line length`.
+   
+   .. image:: img/label_formatting_result.png
+      :align: center
+      :scale: 60
 
+   |
 
-You'll see that this adds a colored buffer or border to the place labels, making
-them easier to pick out on the map:
+   That's the font problem solved! Now let's look at the problem of the labels
+   overlapping the points.
+   
+#. Select the |labelplacement| :sup:`Placement` tab and check the |radioButtonOn|
+   :guilabel:`Cartographic` placement.
+#. Set the :guilabel:`Distance` to ``1 mm`` as an offset :guilabel:`From symbol
+   bounds`:
 
-.. image:: img/buffer_results.png
-   :align: center
+   .. image:: img/offset_placement_settings.png
+      :align: center
 
-Now we can address the positioning of the labels in relation to their point
-markers.
-
-* In the :guilabel:`Label tool` dialog, go to the :guilabel:`Placement` tab.
-* Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that
-  :guilabel:`Around point` is selected:
-
-
-.. image:: img/offset_placement_settings.png
-   :align: center
-
-* Click :guilabel:`Apply`.
-
+   |
 
 You'll see that the labels are no longer overlapping their point markers.
 
+.. image:: img/fixed_place_names.png
+   :align: center
+   :scale: 60
+
+.. Todo: Use DD button to constrain the label to the right of the marker
+ instead of the default top right or let it fo the DD settings section (would
+ require to save the style - not taught yet!)
 
 |moderate| |FA| Using Labels Instead of Layer Symbology
 -------------------------------------------------------------------------------
@@ -124,28 +142,26 @@ the point symbols and replace them completely with labels.
 In QGIS, you can do this by changing the position of the labels to be rendered
 directly over the points they refer to.
 
-* Open the :guilabel:`Layer labeling settings` dialog for the
-  :guilabel:`places` layer.
-* Select the :guilabel:`Placement` option from the options list.
-* Click on the :guilabel:`Offset from point` button.
+#. Open the :guilabel:`Layer labeling settings` dialog for the
+   :guilabel:`places` layer
+#. Select the |labelplacement| :guilabel:`Placement` option from the options list.
+#. Click on the :guilabel:`Offset from point` button
 
-This will reveal the :guilabel:`Quadrant` options which you can use to set the
-position of the label in relation to the point marker. In this case, we want the
-label to be centered on the point, so choose the center quadrant:
+   This will reveal the :guilabel:`Quadrant` options which you can use to set
+   the position of the label in relation to the point marker. In this case, we
+   want the label to be centered on the point, so choose the center quadrant:
 
-.. image:: img/quadrant_offset_options.png
-   :align: center
+   .. image:: img/quadrant_offset_options.png
+      :align: center
 
-* Hide the point symbols by editing the layer style as usual, and setting the
-  size of the :guilabel:`Ellipse marker` width and height to :kbd:`0`:
+#. Hide the point symbols by editing the layer :guilabel:`symbology`: enable
+   the corresponding tab and replace :guilabel:`Single symbols` with
+   :guilabel:`No symbols` in the upper drop-down menu;
 
-.. image:: img/hide_point_marker.png
-   :align: center
+#. Click :guilabel:`OK` and you'll see this result:
 
-* Click :guilabel:`OK` and you'll see this result:
-
-.. image:: img/hide_point_marker_results.png
-   :align: center
+   .. image:: img/hide_point_marker_results.png
+      :align: center
 
 If you were to zoom out on the map, you would see that some of the labels
 disappear at larger scales to avoid overlapping. Sometimes this is what you
@@ -348,8 +364,20 @@ topic for the next lesson!
 .. |basic| image:: /static/global/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |hard| image:: /static/global/hard.png
+.. |labelbackground| image:: /static/common/labelbackground.png
+   :width: 1.5em
+.. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelformatting| image:: /static/common/labelformatting.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |labelplacement| image:: /static/common/labelplacement.png
+   :width: 1.5em
+.. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
@@ -359,12 +387,21 @@ topic for the next lesson!
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |render| image:: /static/common/render.png
+   :width: 1.5em
 .. |rotateLabel| image:: /static/common/mActionRotateLabel.png
    :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
    :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |text| image:: /static/common/text.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
