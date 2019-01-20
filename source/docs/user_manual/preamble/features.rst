@@ -114,17 +114,18 @@ Core Plugins
 
 Core plugins include:
 
-#.  Coordinate Capture (Capture mouse coordinates in different CRSs)
-#.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  eVIS (Visualize events)
-#.  Georeferencer GDAL (Add projection information to rasters using GDAL)
-#.  GPS Tools (Load and import GPS data)
-#.  GRASS (Integrate GRASS GIS)
-#.  Metasearch Catalogue Client
-#.  Offline Editing (Allow offline editing and synchronizing with databases)
-#.  Processing
-#.  Spatial Query Plugin
-#.  Topology Checker (Find topological errors in vector layers)
+#.  Coordinate Capture (capture mouse coordinates in different CRSs)
+#.  DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
+#.  Geometry Checker (check geometries for errors)
+#.  eVIS (visualize events)
+#.  Georeferencer GDAL (add projection information to rasters using GDAL)
+#.  GPS Tools (load and import GPS data)
+#.  GRASS 7 (integrate GRASS GIS)
+#.  Metasearch Catalogue Client (interacting with metadata catalog services
+    supporting the OGC Catalog Service for the Web (CSW) standard)
+#.  Offline Editing (allow offline editing and synchronizing with databases)
+#.  Processing (the spatial data processing framework for QGIS)
+#.  Topology Checker (find topological errors in vector layers)
 
 
 External Python Plugins
@@ -139,7 +140,7 @@ Python Console
 --------------
 
 For scripting, it is possible to take advantage of an integrated
-Python console, which can be opened from menu: :menuselection:`Plugins
+Python console, which can be opened with: :menuselection:`Plugins
 --> Python Console`. The console opens as a non-modal utility
 window. For interaction with the QGIS environment, there is the
 :data:`qgis.utils.iface` variable, which is an instance of
@@ -150,7 +151,7 @@ executed automatically.
 
 For further information about working with the Python console and
 programming QGIS plugins and applications, please refer to
-:ref:`PyQGIS-Developer-Cookbook`.
+:ref:`console` and :ref:`PyQGIS-Developer-Cookbook`.
 
 Known Issues
 ------------
