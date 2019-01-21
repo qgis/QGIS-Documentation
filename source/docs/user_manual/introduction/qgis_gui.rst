@@ -57,7 +57,7 @@ the :guilabel:`Keyboard Shortcuts` via the :menuselection:`Settings -->` menu.
 
 Most Menu options have a corresponding tool and vice-versa. However, the Menus
 are not organized exactly like the toolbars. The locations of menu options
-in the toolbars are indicated below in the table. Plugins add new
+in the toolbars are indicated below in the table. Plugins may add new
 options to Menus. For more information about tools and toolbars, see 
 :ref:`label_toolbars`.
 
@@ -81,7 +81,7 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
 * :guilabel:`Close` a project or revert it to its last saved state
 * :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file format, either as a file
   or within a PostgreSQL database
-* Export the project as an image file to different formats from the map canvas or
+* Export the project maps to different formats from the map canvas or
   using a :ref:`print layout <label_printlayout>`
 * Set the project properties and the snapping options when editing layers.
 
