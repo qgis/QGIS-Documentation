@@ -175,7 +175,7 @@ For :guilabel:`Editor` you can also specify:
   * :guilabel:`Enable Object Inspector (switching between tabs may be slow)`:
     Enable the object inspector.
 
-  * :guilabel:`Auto-save script before running`: Will save the script
+  * :guilabel:`Auto-save script before running`: Saves the script
     automatically when executed. This action will store a temporary file (in the
     temporary system directory) that will be deleted automatically after running.
 
