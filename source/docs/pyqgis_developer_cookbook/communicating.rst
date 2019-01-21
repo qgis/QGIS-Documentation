@@ -53,7 +53,7 @@ You can set a duration to show it for a limited time
 
 The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
-``Qgis.MessageLevel``. You can use up to 4 different levels:
+``Qgis.MessageLevel`` enumeration. You can use up to 4 different levels:
 
 0. Info
 1. Warning

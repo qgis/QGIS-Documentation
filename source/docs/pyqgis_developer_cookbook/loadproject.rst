@@ -16,8 +16,11 @@ when developing a standalone QGIS Python application (see: :ref:`pythonapplicati
   pair: Projects; Loading
 
 To load a project into the current QGIS application you need to create
-a :class:`QgsProject` :func:`instance()` object and call its :func:`read()` method
-passing the path of the project to be loaded::
+an instance of the :class:`QgsProject <qgis.core.QgsProject>`_ class.
+This is a singleton class, so you must use its :func:`instance() <qgis.core.QgsProject.instance>`_ method to do it..
+With it, you can call its :func:`read() <qgis.core.QgsProject.read>`_ method, passing the path of the project to be loaded::
+
+.. code-block:: python
 
     # If you are not inside a QGIS console you first need to import
     # qgis and PyQt classes you will use in this script as shown below:
@@ -34,21 +37,26 @@ passing the path of the project to be loaded::
 
 
 If you need to make modifications to the project (for example to add or remove some layers)
-and save your changes, call the :func:`write()` method of your project instance.
+and save your changes, call the :func:`write() <qgis.core.QgsProject.write>`_ method of your project instance.
 The :func:`write()` method also accepts an optional path for saving the project to a new location::
+
+.. code-block:: python
 
     # Save the project to the same
     project.write()
     # ... or to a new file
     project.write('/home/user/projects/my_new_qgis_project.qgs')
 
-Both :func:`read()` and :func:`write()` functions return a boolean value that you can
-use to check if the operation was successful.
+Both :func:`read() <qgis.core.QgsProject.read>`_` and 
+:func:`write() <qgis.core.QgsProject.write>`_ functions 
+return a boolean value that you can use to check if the operation was successful.
 
 .. note::
 
    If you are writing a QGIS standalone application, in order to synchronise the loaded project with
-   the canvas you need to instantiate a :class:`QgsLayerTreeMapCanvasBridge` as in the example below::
+   the canvas you need to instantiate a :class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>`_ as in the example below::
+
+   .. code-block:: python
 
       bridge = QgsLayerTreeMapCanvasBridge( \
                QgsProject.instance().layerTreeRoot(), canvas)

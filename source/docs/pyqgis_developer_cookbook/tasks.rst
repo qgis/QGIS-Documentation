@@ -22,7 +22,7 @@ These classes simplify background processing in QGIS by providing
 mechanisms for signaling, progress reporting and access
 to the status for background processes.
 Tasks can be grouped using subtasks.
-See the `QGIS Python API doc <https://qgis.org/pyqgis>`_  for details
+See the :class:`QGIS Python API doc <qgis.core.pyqgis>`_  for details
 on methods, signals and attributes.
 
 The global task manager (found with ``QgsApplication.taskManager()``)

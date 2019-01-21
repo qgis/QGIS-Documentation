@@ -37,8 +37,8 @@ provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
-The quickest way to open and display a vector layer in QGIS is the addVectorLayer
-function of the :class:`QgisInterface`:
+The quickest way to open and display a vector layer in QGIS is the :func:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`_
+method of the :class:`QgisInterface <qgis.gui.QgisInterface>`_:
 
 .. code-block:: python
 
@@ -46,7 +46,7 @@ function of the :class:`QgisInterface`:
     if not layer:
       print("Layer failed to load!")
 
-This creates a new layer and adds it to the map layer registry (making it appear
+This creates a new layer and adds it to the current QGIS project (making it appear
 in the layer list) in one step. The function returns the layer instance or `None`
 if the layer couldn't be loaded.
 
@@ -78,7 +78,8 @@ providers:
   pair: Loading; PostGIS layers
 
 * PostGIS database --- data source is a string with all information needed to
-  create a connection to PostgreSQL database. :class:`QgsDataSourceUri` class
+  create a connection to PostgreSQL database. 
+  :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>`_ class
   can generate this string for you. Note that QGIS has to be compiled with
   Postgres support, otherwise this provider isn't available:
 
@@ -134,7 +135,7 @@ providers:
   pair: Loading; SpatiaLite layers
 
 * SpatiaLite database --- Similarly to PostGIS databases,
-  :class:`QgsDataSourceUri` can be used for generation of data
+  :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>`_ can be used for generation of data
   source identifier:
 
   .. code-block:: python
@@ -213,13 +214,13 @@ by default). To load a raster from a file, specify its filename and display name
 
 
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer
-function of the :class:`QgisInterface`:
+function of the :class:`QgisInterface <qgis.gui.QgisInterface>`_ object:
 
 .. code-block:: python
 
     iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")
 
-This creates a new layer and adds it to the map layer registry (making it appear
+This creates a new layer and adds it to the current project (making it appear
 in the layer list) in one step.
 
 Raster layers can also be created from a WCS service:
@@ -232,8 +233,32 @@ Raster layers can also be created from a WCS service:
     uri.setParam("identifier", layer_name)
     rlayer = QgsRasterLayer(str(uri.encodedUri()), 'my wcs layer', 'wcs')
 
-detailed URI settings can be found in `provider
-documentation <https://github.com/qgis/QGIS/blob/master/src/providers/wcs/URI>`_
+Here is a description of the parameters that the WCS URI can contain:
+
+WCS URI is composed of key=value pairs separated by '&'. It is the same format like query string in URL, encoded the same way. QgsDataSourceUri should be used to construct the URI to ensure that special characters are encoded properly.
+
+  * url (required) : WCS Server URL. Do not use VERSION in URL, because each version of WCS is using different parameter name for GetCapabilities version, see param version.
+
+  * identifier (required) : Coverage name
+
+  * time (optional) : time position or time period (beginPosition/endPosition[/timeResolution])
+
+  * format (optional) : Supported format name. Default is the first supported format with tif in name or the first supported format.
+
+  * crs (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is EPSG:4326 if supported or the first supported CRS.
+
+  * username (optional) : Username for basic authentication.
+
+  * password (optional) : Password for basic authentication.
+
+  * IgnoreGetMapUrl (optional, hack) : If specified (set to 1), ignore GetCoverage URL advertised by GetCapabilities. May be necessary if a server is not configured properly.
+
+  * InvertAxisOrientation (optional, hack) : If specified (set to 1), switch axis in GetCoverage request. May be necessary for geographic CRS if a server is using wrong axis order.
+
+  * IgnoreAxisOrientation (optional, hack) : If specified (set to 1), do not invert axis orientation according to WCS standard for geographic CRS.
+
+  * cache (optional) : cache load control, as described in QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. Default is AlwaysCache.
+
 
 .. index::
   pair: Loading; WMS raster
@@ -255,13 +280,15 @@ QgsProject instance
 ===================
 
 If you would like to use the opened layers for rendering, do not forget to add
-them to ``QgsProject`` instance. ``QgsProject`` takes ownership of layers
+them to the :class:`QgsProject <qgis.core.QgsProject>`_ instance. 
+The :class:`QgsProject <qgis.core.QgsProject>`_ instance takes ownership of layers
 and they can be later accessed from any part of the application by their unique
-ID. When the layer is removed from map layer registry, it gets deleted, too.
+ID. When the layer is removed from the project, it gets deleted, too. Layers can
+be removed by the user in the QGIS interface, or via Python using the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method.
 
-.. index:: Map layer registry; Adding a layer
+.. index:: Qgis project; Adding a layer
 
-Adding a layer to the registry:
+Adding a layer to the current project is done using the :func:`addMapLayer() <qgis.core.QgsProject.addMapLayer>`_ method:
 
 .. code-block:: python
 
@@ -278,13 +305,16 @@ To add a layer at an absolute position:
     # the position is a number starting from 0, with -1 an alias for the end
     layerTree.insertChildNode(-1, QgsLayerTreeLayer(layer))
 
-If you want to delete the layer use:
+If you want to delete the layer use the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>`_ method:
 
 .. code-block:: python
 
     QgsProject.instance().removeMapLayer(layer_id)
 
-For a list of loaded layers and layer ids, use:
+In the above code, the layer id is passed (you can get it calling the :func:`id() <qgis.core.QgsMapLayer.id>`_ method of the layer),
+but you can also pass the layer object itself.
+
+For a list of loaded layers and layer ids, use the :func:`mapLayers() <qgis.core.QgsProject.mapLayers>`_ method:
 
 .. code-block:: python
 
