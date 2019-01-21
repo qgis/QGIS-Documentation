@@ -50,20 +50,20 @@ Menu Bar
 ========
 
 The Menu bar provides access to various QGIS functions using a standard
-hierarchical menu. A summary of the Menus, their options, associated 
-icons and keyboard shortcuts are outlined below. Note that these keyboard
-shortcuts are the default settings, however, they can be reconfigured using
+hierarchical menu. The Menus, their options, associated 
+icons and keyboard shortcuts are outlined below. These keyboard
+shortcuts are the default settings, but they can be reconfigured using
 the :guilabel:`Keyboard Shortcuts` via the :menuselection:`Settings -->` menu.
 
-Most Menu options have a corresponding tool and vice-versa, however, the Menus
-are not organized exactly like the toolbars. The location of menu options
-in the toolbars are indicated below in the table. Plugins may load in additional
-menu options to Menus. For more information about tools and toolbars, see section 
+Most Menu options have a corresponding tool and vice-versa. However, the Menus
+are not organized exactly like the toolbars. The locations of menu options
+in the toolbars are indicated below in the table. Plugins add new
+options to Menus. For more information about tools and toolbars, see 
 :ref:`label_toolbars`.
 
-.. note:: QGIS is a cross-platform application - that though it provides you
-   with the same tools, they may be placed in different menus according to the
-   operating system specification. The lists below show the most common location
+.. note:: QGIS is a cross-platform application - while the same tools are
+   available on all platforms, they may be placed in different menus on
+   different operating systems. The lists below show the most common locations
    including known variations.
 
 .. index:: Project
@@ -75,13 +75,13 @@ The :menuselection:`Project` menu provides access and exit points of
 the :ref:`project file <sec_projects>`. It provides you with tools to:
 
 * Create a :guilabel:`New` file from scratch or using another project file as
-  template (see :ref:`Project files options <projectfiles_options>` for
+  a template (see :ref:`Project files options <projectfiles_options>` for
   template configuration)
-* :guilabel:`Open...` a project file from either a file browser or PostgreSQL database;
+* :guilabel:`Open...` a project file from either a file browser or PostgreSQL database
 * :guilabel:`Close` a project or revert it to its last saved state
-* :guilabel:`Save` a project in a :file:`.qgs` or :file:`.qgz` file format, either as file
+* :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file format, either as a file
   or within a PostgreSQL database
-* Export the project rendering to different formats from the map canvas or
+* Export the project as an image file to different formats from the map canvas or
   using a :ref:`print layout <label_printlayout>`
 * Set the project properties and the snapping options when editing layers.
 
@@ -121,7 +121,7 @@ Edit
 ----
 
 The :menuselection:`Edit` menu provides most of the native tools needed to edit
-layers attributes or geometry (see :ref:`editingvector` for details).
+layer attributes or geometry (see :ref:`editingvector` for details).
 
 =======================================================================  ====================  =================================   ===================================
 Menu Option                                                              Shortcut              Toolbar                             Reference
@@ -189,23 +189,23 @@ The map is rendered in map views. You can interact with these
 views using the :menuselection:`View` tools (see :ref:`working_canvas`
 for more information). For example, you can:
 
-* Create new map views, 2D or 3D, next to the main map canvas;
-* :ref:`Zoom or pan <zoom_pan>` to any place;
-* Query displayed features attributes or geometry;
-* Change the map view aspect using preview modes, annotations or decorations;
-* Access any panel or toolbar.
+* Create new 2D or 3D map views next to the main map canvas
+* :ref:`Zoom or pan <zoom_pan>` to any place
+* Query displayed features' attributes or geometry
+* Enhance the map view with preview modes, annotations or decorations
+* Access any panel or toolbar
 
-Moreover the menu allows to reorganize QGIS interface itself using actions like:
+The menu also allows you to reorganize the QGIS interface itself using actions like:
 
-* :guilabel:`Toggle Full Screen Mode`: covers the whole screen with the
-  application items while hiding its title bar;
+* :guilabel:`Toggle Full Screen Mode`: covers the whole screen
+  while hiding the title bar
 * :guilabel:`Toggle Panel Visibility`: shows or hides enabled :ref:`panels
-  <panels_tools>`, quite useful when digitizing features (where you want
-  maximum canvas visibility) as well as when you do a (projected/recorded)
-  presentation using QGIS' main canvas;
+  <panels_tools>` - useful when digitizing features (for
+  maximum canvas visibility) as well as for (projected/recorded)
+  presentations using QGIS' main canvas
 * :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status bar
-  and only shows the map canvas. Combined with full screen option, it makes
-  your screen display only the map.
+  and only shows the map canvas. Combined with the full screen option, it makes
+  your screen display only the map
 
 =========================================================  =======================  =============================  ==========================================
 Menu Option                                                Shortcut                 Toolbar                        Reference
@@ -246,25 +246,26 @@ Menu Option                                                Shortcut             
 |
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
-and :guilabel:`Toggle Full Screen Mode` are rather placed in :menuselection:`Settings`
+and :guilabel:`Toggle Full Screen Mode` is in the :menuselection:`Settings`
 menu.
 
 Layer
 -----
 
 The :menuselection:`Layer` menu provides a large set of tools to :ref:`create
-<sec_create_vector>` new data source, :ref:`add <opening_data>` it to a project
-or :ref:`save modifications <sec_edit_existing_layer>` done to it. Using the
-same data source, you can also:
+<sec_create_vector>` new data sources, :ref:`add <opening_data>` them to a project
+or :ref:`save modifications <sec_edit_existing_layer>` to them. Using the
+same data sources, you can also:
 
 * :guilabel:`Duplicate` a layer, generating a copy you can modify within the
-  same project;
-* :guilabel:`Copy` and :guilabel:`Paste` layers or group from one project to
-  another, with their properties you can freely customize;
-* or :guilabel:`Embed Layers and Groups...` from another project, with their
-  unmodifiable properties (see :ref:`nesting_projects`).
+  same project
+* :guilabel:`Copy` and :guilabel:`Paste` layers or groups from one project to
+  another as a new instance whose features and properties you can modify
+  independently of the original
+* or :guilabel:`Embed Layers and Groups...` from another project, as read-only
+  copies which you cannot modify (see :ref:`nesting_projects`)
   
-The :menuselection:`Layer` menu  also gives access to tools to configure, copy
+The :menuselection:`Layer` menu also contains tools to configure, copy
 or paste layer properties (style, scale, CRS...).
 
 ============================================================  ====================  ================================  =====================================
@@ -314,7 +315,7 @@ Menu Option                                                        Shortcut     
 
 |
 
-Under |kde| Linux KDE, you'll find more tools in :menuselection:`Settings`
+Under |kde| Linux KDE, you'll find more tools in the :menuselection:`Settings`
 menu such as :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
 
