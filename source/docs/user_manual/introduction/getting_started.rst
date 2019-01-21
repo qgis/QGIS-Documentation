@@ -210,7 +210,7 @@ returns::
 
 This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have many projects and want to generate
-snapshots from your data, or when you need regularly to create snapshots of the
+snapshots from your data, or when you need to create snapshots of the
 same project with updated data.
 
 Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
