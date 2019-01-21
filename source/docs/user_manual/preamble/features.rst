@@ -21,9 +21,8 @@ integrated Python console.
 View data
 ---------
 
-You can view combinations of vector and raster data in different formats
-and projections (in 2D or 3D) without conversion to an internal or common
-format.
+You can view combinations of vector and raster data (in 2D or 3D) in different
+formats and projections without conversion to an internal or common format.
 Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
