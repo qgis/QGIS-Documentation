@@ -513,49 +513,207 @@ FORMAT_OPTIONS Parameters:
   layer name.
 
 
+.. _server_wms_getfeatureinfo:
+
 GetFeatureInfo
 --------------
 
-QGIS Server WMS GetFeatureInfo requests supports the following extra optional parameters to
-define the tolerance for point, line and polygon layers:
+Standard parameters for the **GetFeatureInfo** request according to the OGC WMS 1.1.0
+and 1.3.0 specifications:
 
-* **FI_POINT_TOLERANCE** parameter: Tolerance for point layers
-  *GetFeatureInfo* request, in pixels.
-* **FI_LINE_TOLERANCE** parameter: Tolerance for linestring layers
-  *GetFeatureInfo* request, in pixels.
-* **FI_POLYGON_TOLERANCE** parameter: Tolerance for polygon layers
-  *GetFeatureInfo* request, in pixels.
++---------------+----------+----------------------------------------------+
+| Parameter     | Required | Description                                  |
++===============+==========+==============================================+
+| SERVICE       | Yes      | Name of the service (WMS)                    |
++---------------+----------+----------------------------------------------+
+| VERSION       | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| REQUEST       | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| LAYERS        | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| STYLES        | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| SRS / CRS     | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| BBOX          | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| WIDTH         | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| HEIGHT        | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| TRANSPARENT   | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
++---------------+----------+----------------------------------------------+
+| INFO_FORMAT   | No       | Output format                                |
++---------------+----------+----------------------------------------------+
+| QUERY_LAYERS  | Yes      | Layers to query                              |
++---------------+----------+----------------------------------------------+
+| FEATURE_COUNT | No       | Maximum number of features to return         |
++---------------+----------+----------------------------------------------+
+| X             | No       | X coordinate in pixels of the point to query |
++---------------+----------+----------------------------------------------+
+| I             | No       | Same as `X` parameter, but in WMS 1.3.0      |
++---------------+----------+----------------------------------------------+
+| Y             | No       | Y coordinate in pixels of the point to query |
++---------------+----------+----------------------------------------------+
+| J             | No       | Same as `Y` parameter, but in WMS 1.3.0      |
++---------------+----------+----------------------------------------------+
 
-QGIS Server also permits to make advanced GetFeatureInfo requests and select all
-the features that intersect any given WKT geometry. It does that with the help
-of the **FILTER_GEOM** parameter.
+|
 
-.. code-block:: guess
+In addition to the standard ones, QGIS Server supports the following extra
+parameters:
+
+
++----------------------+----------+------------------------------------------+
+| Parameter            | Required | Description                              |
++======================+==========+==========================================+
+| MAP                  | Yes      | :ref:`See GetMap <qgisserver-wms-getmap> |
++----------------------+----------+------------------------------------------+
+| FILTER               | No       | :ref:`See GetMap <qgisserver-wms-getmap> |
++----------------------+----------+------------------------------------------+
+| FI_POINT_TOLERANCE   | No       | Tolerance in pixels for point layers     |
++----------------------+----------+------------------------------------------+
+| FI_LINE_TOLERANCE    | No       | Tolerance in pixels for line layers      |
++----------------------+----------+------------------------------------------+
+| FI_POLYGON_TOLERANCE | No       | Tolerance in pixels for polygon layers   |
++----------------------+----------+------------------------------------------+
+| FILTER_GEOM          | No       | Geometry filtering                       |
++----------------------+----------+------------------------------------------+
+| WITH_MAPTIP          | No       | Add map tips to the output               |
++----------------------+----------+------------------------------------------+
+| WITH_GEOMETRY        | No       | Add geometry to the output               |
++----------------------+----------+------------------------------------------+
+
+|
+
+URL example:
+
+.. code-block:: none
 
   http://localhost/qgis_server?
   SERVICE=WMS
-  &REQUEST=GetFeatureInfo
-  &LAYERS=countries
-  &QUERY_LAYERS=countries
-  &INFO_FORMAT:text/xml
-  &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
-  &...
+  &VERSION=1.3.0
+  &REQUEST=GetMap
+  &MAP=/home/user/project.qgs
+  &LAYERS=mylayer1,mylayer2,mylayer3
+  &CRS=EPSG:4326
+  &WIDTH=400
+  &HEIGHT=400
+  &INFO_FORMAT=text/xml
+  &TRANSPARENT=TRUE
+  &QUERY_LAYERS=mylayer1
+  &FEATURE_COUNT=3
+  &I=250
+  &J=250
 
-The content of map tips can be added to the GetFeatureInfo response by
-passing the **WITH_MAPTIP** vendor parameter.
 
-.. code-block:: guess
+INFO_FORMAT
+^^^^^^^^^^^
 
-  http://localhost/qgis_server?
-  SERVICE=WMS
-  &REQUEST=GetFeatureInfo
-  &LAYERS=countries
-  &QUERY_LAYERS=countries
-  &INFO_FORMAT:text/xml
-  &FILTER_GEOM=POLYGON((16.04 53.51, 10.98 47.81, 21.33 47.53, 16.04 53.51))
-  &WITH_MAPTIP=true
-  &...
+This parameter may be used to specify the format of the result. Available
+values are:
 
+- ``text/xml``
+- ``text/html``
+- ``text/plain``
+- ``application/vnd.ogc.gml``
+- ``application/json``
+
+
+QUERY_LAYERS
+^^^^^^^^^^^^
+
+This parameter specifies the layers to display on the map. Names have to be
+separated by a comma.
+
+In addition, QGIS Server introduced some options to select layers by:
+
+* a short name
+* the layer id
+
+You may take a look to the ``LAYERS`` parameter defined in
+:ref:`See GetMap <qgisserver-wms-getmap>` for more information.
+
+
+FEATURE_COUNT
+^^^^^^^^^^^^^
+
+This parameter specifies the maximum number of features to return.
+
+By default, only 1 feature is returned.
+
+
+X
+^
+
+This parameter, defined in WMS 1.1.0, allows to specify the X coordinate in
+pixels of the query point.
+
+
+I
+^
+
+Same parameter than ``X``, but defined in WMS 1.3.0.
+
+
+Y
+^
+
+This parameter, defined in WMS 1.1.0, allows to specify the Y coordinate in
+pixels of the query point.
+
+
+J
+^
+
+Same parameter than ``Y``, but defined in WMS 1.3.0.
+
+
+FI_POINT_TOLERANCE
+^^^^^^^^^^^^^^^^^^
+
+This parameter specifies the tolerance in pixels for point layers.
+
+
+FI_LINE_TOLERANCE
+^^^^^^^^^^^^^^^^^
+
+This parameter specifies the tolerance in pixels for line layers.
+
+
+FI_POLYGON_TOLERANCE
+^^^^^^^^^^^^^^^^^^^^
+
+This parameter specifies the tolerance in pixels for polygon layers.
+
+
+FILTER_GEOM
+^^^^^^^^^^^
+
+This parameter specifies a WKT geometry with which features have to intersect.
+
+
+WITH_MAPTIP
+^^^^^^^^^^^
+
+This parameter specifies if map tips have to be added to the output.
+
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
+
+
+WITH_GEOMETRY
+^^^^^^^^^^^^^
+
+This parameter specifies if geometries have to be added to the output.
+
+Available values are (not case sensitive):
+
+- ``TRUE``
+- ``FALSE``
 
 
 .. _server_getprint:
