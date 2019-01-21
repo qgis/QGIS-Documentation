@@ -63,7 +63,9 @@ Alternative 1: Using the ``Fix Me`` shortcut
 ............................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
-``Fix Me`` link in the footer of each page.
+``Fix Me`` link in the footer of each page. This approach works best if you
+plan to make changes on just one page. If you plan to edit more than one page
+you should use Alternative 2.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
@@ -173,10 +175,10 @@ be merged into the official documentation without conflicts.
 
 Click the :guilabel:`Create pull request` button.
 
-.. warning:: **If you get a red X**
+.. warning:: **If you see** |githubCantMerge|
 
-    If you get a red X, it means that there are conflicts. The files
-    that you are modifying are not up to date with the branch you are
+    This means that there are `conflicts <https://help.github.com/articles/addressing-merge-conflicts/>`_.
+    The files that you are modifying are not up to date with the branch you are
     targeting because someone else has made a commit that conflicts with your
     changes. You can still create the pull request but you'll need to fix any
     :ref:`conflicts <fix_conflicts>` to complete the merge.
@@ -244,7 +246,7 @@ on the code in a pull request. Navigate to the `pull request page <https://githu
 and click on the pull request that you want to comment on.
 
 At the bottom of the page you will find a text box where you can leave general
-comments about a pull request. 
+comments about a pull request.
 
 To add comments about specific lines of code, click on
 |githubFilesChanged| and find the file you want to comment on. You may have to
@@ -515,6 +517,8 @@ Further reading
    :width: 1.5em
 .. |githubBranch| image:: /static/common/githubBranch.png
    :width: 8em
+.. |githubCantMerge| image:: /static/common/githubCantMerge.png
+   :width: 12em
 .. |githubEditPencil| image:: /static/common/githubEditPencil.png
    :width: 2em
 .. |githubFilesChanged| image:: /static/common/githubFilesChanged.png
