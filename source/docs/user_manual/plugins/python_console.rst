@@ -163,7 +163,7 @@ For both :guilabel:`Console` and :guilabel:`Editor` you can specify:
 * :guilabel:`Typing`
 
   * :guilabel:`Automatic parentheses insertion`: Enables autoclosing for
-    parenthesis
+    parentheses
 
   * :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
     Enables insertion of 'import' when specifying imports
