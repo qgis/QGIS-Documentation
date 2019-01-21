@@ -1355,15 +1355,13 @@ See also
 
 Keep n biggest parts
 --------------------
-Cuts the n biggest parts of the input layer.
-
-This algorithm is particularly useful if a single layer is very complicated and
-made of many different parts.
+Takes a polygon layer and creates a new polygon layer in which multipart geometries
+have been removed, leaving only up to n largest (in terms of area) parts for each feature.
 
 .. figure:: img/n_biggest.png
    :align: center
 
-   Clockwise from left-up: source layer, one, tow and three biggest parts to keep
+   Clockwise from left-up: original multipart feature, one, two and three biggest parts to keep
 
 Parameters
 ..........
@@ -1373,7 +1371,7 @@ Parameters
 
 ``To keep`` [number]
   Choose how many biggest parts have to be kept. If 1 is selected, only the
-  biggest part of the whole layer will be saved.
+  biggest part of the feature will be saved.
 
   Default: *1*
 
@@ -1381,7 +1379,7 @@ Outputs
 .......
 
 ``Biggest parts`` [vector: polygon]
-  Resulting polygon layer with the biggest parts chosen.
+  Resulting polygon layer with the n biggest parts of each feature.
 
 
 .. _qgislinesubstring:
