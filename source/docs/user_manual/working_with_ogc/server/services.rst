@@ -526,23 +526,23 @@ and 1.3.0 specifications:
 +===============+==========+==============================================+
 | SERVICE       | Yes      | Name of the service (WMS)                    |
 +---------------+----------+----------------------------------------------+
-| VERSION       | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| VERSION       | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| REQUEST       | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| REQUEST       | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| LAYERS        | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| LAYERS        | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| STYLES        | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| STYLES        | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| SRS / CRS     | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| SRS / CRS     | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| BBOX          | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| BBOX          | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| WIDTH         | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| WIDTH         | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| HEIGHT        | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| HEIGHT        | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
-| TRANSPARENT   | No       | :ref:`See GetMap <qgisserver-wms-getmap>     |
+| TRANSPARENT   | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
 +---------------+----------+----------------------------------------------+
 | INFO_FORMAT   | No       | Output format                                |
 +---------------+----------+----------------------------------------------+
@@ -568,9 +568,9 @@ parameters:
 +----------------------+----------+------------------------------------------+
 | Parameter            | Required | Description                              |
 +======================+==========+==========================================+
-| MAP                  | Yes      | :ref:`See GetMap <qgisserver-wms-getmap> |
+| MAP                  | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`|
 +----------------------+----------+------------------------------------------+
-| FILTER               | No       | :ref:`See GetMap <qgisserver-wms-getmap> |
+| FILTER               | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
 +----------------------+----------+------------------------------------------+
 | FI_POINT_TOLERANCE   | No       | Tolerance in pixels for point layers     |
 +----------------------+----------+------------------------------------------+
