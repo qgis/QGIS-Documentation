@@ -335,7 +335,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 Vector
 ------
 
-This is what the :guilabel:`Vector` menu will look like if all the core plugins
+This is what the :guilabel:`Vector` menu looks like if all core plugins
 are enabled.
 
 ==============================================================  =======================  =======================  ===============================
@@ -354,10 +354,10 @@ Menu Option                                                     Shortcut        
 
 |
 
-By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
-by sub-menus to the :guilabel:`Vector` menu. This provides shortcuts
-for many common vector-based GIS tasks picked from different providers.
-If not all aforementioned sub-menus are available, then you would need to enable
+By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms to the
+:guilabel:`Vector` menu, grouped by sub-menus. This provides shortcuts
+for many common vector-based GIS tasks from different providers.
+If not all these sub-menus are available, enable
 the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
 Note that the list of the :guilabel:`Vector` menu tools can be extended with
@@ -367,7 +367,7 @@ any Processing algorithms or some external :ref:`plugins <plugins>`.
 Raster
 ------
 
-This is what the :guilabel:`Raster` menu will look like if all the core plugins
+This is what the :guilabel:`Raster` menu looks like if all core plugins
 are enabled.
 
 ==========================================================  ====================  ==================================
@@ -385,10 +385,10 @@ Menu Option                                                 Toolbar             
 
 |
 
-By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms grouped
-by sub-menus to the :guilabel:`Raster` menu. This provides a shortcut
-for many common raster-based GIS tasks picked from different providers.
-If not all aforementioned sub-menus are available, then you would need to enable
+By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms to the 
+:guilabel:`Raster` menu, grouped by sub-menus. This provides a shortcut
+for many common raster-based GIS tasks from different providers.
+If not all these sub-menus are available, enable
 the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
 Note that the list of the :guilabel:`Raster` menu tools can be extended with
@@ -398,7 +398,7 @@ any Processing algorithms or some external :ref:`plugins <plugins>`.
 Database
 --------
 
-This is what the :guilabel:`Database` menu will look like if all the core plugins
+This is what the :guilabel:`Database` menu looks like if all the core plugins
 are enabled.
 If no database plugins are enabled, there will be no guilabel:`Database` menu.
 
@@ -418,7 +418,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 Web
 ---
 
-This is what the :guilabel:`Database` menu will look like if all the core plugins
+This is what the :guilabel:`Database` menu looks like if all the core plugins
 are enabled.
 If no web plugins are enabled, there will be no guilabel:`Web` menu.
 
@@ -496,11 +496,11 @@ Panels and Toolbars
 ===================
 
 From the :menuselection:`View` menu (or |kde| :menuselection:`Settings`), you can
-switch on and off QGIS widgets (:menuselection:`Panels -->`) or toolbars
-(:menuselection:`Toolbars -->`). You can (de)activate any of them by
-right-clicking the menu bar or a toolbar and choose the item you want.
+switch QGIS widgets (:menuselection:`Panels -->`) and toolbars
+(:menuselection:`Toolbars -->`) on and off. To (de)activate any of them,
+right-click the menu bar or toolbar and choose the item you want.
 Each panel or toolbar can be moved and placed wherever you feel comfortable
-within QGIS interface.
+within the QGIS interface.
 The list can also be extended with the activation of :ref:`Core or external
 plugins <plugins>`.
 
@@ -513,7 +513,7 @@ Toolbars
 
 The toolbar provides access to most of the same functions as the menus, plus
 additional tools for interacting with the map. Each toolbar item has pop-up help
-available. Hold your mouse over the item and a short description of the tool's
+available. Hover your mouse over the item and a short description of the tool's
 purpose will be displayed.
 
 Every toolbar can be moved around according to your needs. Additionally,
@@ -545,9 +545,9 @@ holding the mouse over the toolbars.
 Panels
 ------
 
-Besides toolbars, QGIS provides by default many panels to work with. Panels are
+Besides toolbars, QGIS provides many panels to work with by default. Panels are
 special widgets that you can interact with (selecting options, checking boxes,
-filling values...) in order to perform a more complex task.
+filling values...) to perform more complex tasks.
 
 
 .. _figure_panels:
@@ -588,8 +588,8 @@ will depend on the vector and raster layers you have chosen to load.
 
 When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically
 looks for its Coordinate Reference System (CRS) and zooms to its extent if you
-work in a blank QGIS project. The layer's CRS is then applied to the project.
-If there are already layers in the project, and in the case the new layer has
+start with a blank QGIS project. The layer's CRS is then applied to the project.
+If there are already layers in the project, and if the new layer has
 the same CRS as the project, its features falling in the current map canvas
 extent will be visualized. If the new layer is in a different CRS from the
 project's, you must :guilabel:`Enable on-the-fly CRS transformation` from the
@@ -597,11 +597,11 @@ project's, you must :guilabel:`Enable on-the-fly CRS transformation` from the
 (see :ref:`otf_transformation`). The added layer should now be visible if data
 are available in the current view extent.
 
-The map view can be panned, shifting the focus of the map display to another
-region, and it can be zoomed in and out. Various other operations can be
-performed on the map as described in the :ref:`label_toolbars` description.
+The map view can be panned, shifting the display to another region
+of the map, and it can be zoomed in and out. Various other operations can be
+performed on the map as described in the :ref:`label_toolbars` section.
 The map view and the legend are tightly bound to each other --- the maps in
-view reflect changes you make in the legend area.
+the view reflect changes you make in the legend area.
 
 
 .. index:: Zoom, Mouse wheel
@@ -623,10 +623,9 @@ view reflect changes you make in the legend area.
    **Panning the Map with the Arrow Keys and Space Bar**
 
    You can use the arrow keys to pan the map. Place the mouse cursor inside
-   the map area and click on the right arrow key to pan east, left arrow key to
-   pan west, up arrow key to pan north and down arrow key to pan south. You can
-   also pan the map using the space bar or the click on mouse wheel: just move
-   the mouse while holding down space bar or click on mouse wheel.
+   the map area and click on the arrow keys to pan left, right, up and down. You can
+   also pan the map by moving the mouse while holding down the space bar or the
+   middle mouse button (or holding down the mouse wheel).
 
 
 .. index:: 3D Map view
@@ -638,14 +637,14 @@ view reflect changes you make in the legend area.
 3D visualization support is offered through the 3D map view.
 
 .. note::
-   3D visualisation in QGIS requires a recent version (5.8 or later) of the
-   QT library.
+   3D visualization in QGIS requires a recent version of the
+   QT library (5.8 or later).
 
-You create and open a 3D map view with :menuselection:`View -->` |new3DMap| :menuselection:`New 3D Map
+You create and open a 3D map view via :menuselection:`View -->` |new3DMap| :menuselection:`New 3D Map
 View`.
 A floating QGIS panel will appear. The panel can be docked.
 
-The 3D map view has the same extent and view as the 2D canvas to start with.
+To begin with, the 3D map view has the same extent and view as the 2D canvas.
 There is no dedicated toolbar for navigation in the 3D canvas.
 You zoom in/out and pan in the same way as in the main 2D canvas.
 You can also zoom in and out by dragging the mouse down/up with the
@@ -655,48 +654,47 @@ Navigation options for exploring the map in 3D:
 
 * Tilt and rotate
 
-  * Tilting the terrain (rotating it around a horizonal axis that goes
-    through the center of the window) can be achieved by:
+  * To tilt the terrain (rotating it around a horizonal axis that goes
+    through the center of the window):
 
-    * Dragging the mouse forward / backward with the middle mouse button
+    * Drag the mouse forward/backward with the middle mouse button
       pressed
-    * Pressing :kbd:`Shift` and dragging the mouse forward / backward
+    * Press :kbd:`Shift` and drag the mouse forward/backward
       with the left mouse button pressed
-    * Pressing :kbd:`Shift` and using the up / down keys
+    * Press :kbd:`Shift` and use the up/down keys
 
-  * Rotating the terrain (around a vertical axis that goes through the
-    center of the window) can be achieved by:
+  * To rotate the terrain (around a vertical axis that goes through the
+    center of the window):
 
-    * Dragging the mouse right / left with the middle mouse button
+    * Drag the mouse right/left with the middle mouse button
       pressed
-    * Pressing :kbd:`Shift` and dragging the mouse right / left with the
+    * Press :kbd:`Shift` and drag the mouse right/left with the
       left mouse button pressed
-    * Pressing :kbd:`Shift` and using left / right keys
+    * Press :kbd:`Shift` and use the left/right keys
 
 * Change the camera angle
 
   * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
-    button pressed will change the camera angle corresponding to
+    button pressed changes the camera angle corresponding to
     directions of dragging
-  * Pressing :kbd:`Ctrl` and using the up / down / left / right keys turns
-    the camera upward, downward, to the left and to the right,
-    respectively
+  * Pressing :kbd:`Ctrl` and using the arrow keys turns
+    the camera up, down, left and right
 
-* Move the camera up / down
+* Move the camera up/down
 
-  * Pressing the :kbd:`Page Up` / :kbd:`Page Down` keys moves the
+  * Pressing the :kbd:`Page Up`/:kbd:`Page Down` keys moves the
     terrain up and down, respectively
 
 * Zoom in and out
 
   * Dragging the mouse with the right mouse button pressed will
-    zoom in (backward dragging) and out (forward dragging)
+    zoom in (drag down) and out (drag up)
 
 * Move the terrain around
 
   * Dragging the mouse with the left mouse button pressed moves the
     terrain around
-  * Using the up / down / left / right keys moves the
+  * Using the up/down/left/right keys moves the
     terrain closer, away, right and left, respectively
         
 To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
@@ -706,18 +704,17 @@ Terrain Configuration
 ---------------------
 
 A terrain raster provides the elevation.
-Such a raster layer must contain a band that represents elevation.
+This raster layer must contain a band that represents elevation.
 To select the terrain raster:
 
 #. Click the |3dconfigure| :sup:`Configure...` button at the top of
    the 3D canvas panel to open the :guilabel:`3D configuration` window
 #. Choose the terrain raster layer in the :guilabel:`Elevation`
    pull-down menu
-#. You are ready to go
 
 In the 3D Configuration window there are various other options to
 fine-tune the 3D scene.
-Before diving into the details, it is worth noting that terrain in 3D view
+Before diving into the details, it is worth noting that terrain in a 3D view
 is represented by a hierarchy of terrain tiles and as the camera moves
 closer to the terrain, existing tiles that do not have sufficient detail
 are replaced by smaller tiles with more details.
@@ -731,7 +728,7 @@ Configuration options and their meaning:
   Increasing the scale will exaggerate the terrain.
 * :guilabel:`Tile resolution`: How many samples from the terrain raster layer to
   use for each tile.
-  A value of 16 px means that the geometry of each tile will be built
+  A value of 16px means that the geometry of each tile will be built
   from 16x16 elevation samples.
   Higher numbers create more detailed terrain tiles at the expense of
   increased rendering complexity.
@@ -741,7 +738,7 @@ Configuration options and their meaning:
   tiles to hide the cracks.
 * :guilabel:`Map tile resolution`: Width and height of the 2D map images used
   as textures for the terrain tiles.
-  256 px means that each tile will be rendered into an image of
+  256px means that each tile will be rendered into an image of
   256x256 pixels.
   Higher numbers create more detailed terrain tiles at the expense of
   increased rendering complexity.
@@ -753,7 +750,7 @@ Configuration options and their meaning:
 * :guilabel:`Max. ground error`: The resolution of the terrain tiles at which
   dividing tiles into more detailed ones will stop (splitting them
   would not introduce any extra detail anyway).
-  This value limits the depth of the hierarchy of tiles: Lower values 
+  This value limits the depth of the hierarchy of tiles: lower values 
   make the hierarchy deep, increasing rendering complexity.
 * :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on the
   map tile resolution and max. ground error).
@@ -767,7 +764,7 @@ Configuration options and their meaning:
 3D vector layers
 ----------------
 
-A vector layer with elevation values can be shown in 3D in the 3D map
+A vector layer with elevation values can be shown in the 3D map
 view by checking :guilabel:`Enable 3D Renderer` in the
 :guilabel:`3D View` section of the vector layer properties.
 A number of options are available for controlling the rendering of
@@ -778,37 +775,36 @@ the 3D vector layer.
 Status Bar
 ==========
 
-The status bar provides you with general information about the map view,
-processed or available actions and offers you tools to manage the map view.
+The status bar provides you with general information about the map view
+and processed or available actions, and offers you tools to manage the map view.
 
 On the left side of the status bar, the locator bar, a quick search widget,
-helps you find and run any feature or options in QGIS. Simply write a text
-associated to the item you are looking for (name, tag, keyword...) and you get
-a list that updates as you write. You can also limit the search scope thanks to
-the :ref:`locator filters <locator_options>`. Click the |search| button to
+helps you find and run any feature or options in QGIS. Simply type text
+associated with the item you are looking for (name, tag, keyword...) and you get
+a list that updates as you write. You can also limit the search scope using
+:ref:`locator filters <locator_options>`. Click the |search| button to
 select any of them and press the :guilabel:`Configure` entry for global settings.
 
-In the area next to it, will be shown when needed summary of actions you've done
-(such as selecting features in a layer, removing layer) or a long description
-of the tool you are hovering over (not available for all tools).
+In the area next to the locator bar, a summary of actions you've carried out will
+be shown when needed  (such as selecting features in a layer, removing layer) or
+a long description of the tool you are hovering over (not available for all tools).
 
 In case of lengthy operations, such as gathering of statistics in raster layers,
-Processing algorithms' execution or rendering several layers in map view, a
-progress bar is displayed in the status bar to show the current progress of the
-action.
+executing Processing algorithms or rendering several layers in the map view, a
+progress bar is displayed in the status bar.
 
 The |tracking| :guilabel:`Coordinate` option shows the current position of the mouse,
-following it while moving across the map view. You can set the unit (and precision)
-to use in the :menuselection:`Project --> Properties... --> General` tab.
+following it while moving across the map view. You can set the units (and precision)
+in the :menuselection:`Project --> Properties... --> General` tab.
 Click on the small button at the left of the textbox to toggle between
 the Coordinate option and the |extents| :guilabel:`Extents` option that displays
-in map units, the coordinates of the current lower leftmost and upper rightmost
-points of the map view, as you pan and zoom in and out.
+the coordinates of the current lower leftmost and upper rightmost
+points of the map view in map units.
 
 Next to the coordinate display you will find the :guilabel:`Scale` display.
-It shows the scale of the map view. If you zoom in or out, QGIS shows you the
-current scale. There is a scale selector, which allows you to choose among
-:ref:`predefined and custom scales <predefinedscales>` to assign to the map view.
+It shows the scale of the map view. There is a scale selector, which allows you to
+choose between :ref:`predefined and custom scales <predefinedscales>` to apply to
+the map view.
 
 .. index:: Magnification
 .. _magnifier:
