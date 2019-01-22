@@ -550,13 +550,13 @@ and 1.3.0 specifications:
 +---------------+----------+----------------------------------------------+
 | FEATURE_COUNT | No       | Maximum number of features to return         |
 +---------------+----------+----------------------------------------------+
-| X             | No       | X coordinate in pixels of the point to query |
+| I             | No       | Pixel column of the point to query           |
 +---------------+----------+----------------------------------------------+
-| I             | No       | Same as `X` parameter, but in WMS 1.3.0      |
+| X             | No       | Same as `I` parameter, but in WMS 1.1.0      |
 +---------------+----------+----------------------------------------------+
-| Y             | No       | Y coordinate in pixels of the point to query |
+| J             | No       | Pixel row of the point to query              |
 +---------------+----------+----------------------------------------------+
-| J             | No       | Same as `Y` parameter, but in WMS 1.3.0      |
+| Y             | No       | Same as `J` parameter, but in WMS 1.1.0      |
 +---------------+----------+----------------------------------------------+
 
 |
@@ -624,15 +624,15 @@ values are:
 QUERY_LAYERS
 ^^^^^^^^^^^^
 
-This parameter specifies the layers to display on the map. Names have to be
+This parameter specifies the layers to display on the map. Names are
 separated by a comma.
 
-In addition, QGIS Server introduced some options to select layers by:
+In addition, QGIS Server introduces options to select layers by:
 
-* a short name
-* the layer id
+* short name
+* layer id
 
-You may take a look to the ``LAYERS`` parameter defined in
+See the ``LAYERS`` parameter defined in
 :ref:`See GetMap <qgisserver-wms-getmap>` for more information.
 
 
@@ -644,30 +644,30 @@ This parameter specifies the maximum number of features to return.
 By default, only 1 feature is returned.
 
 
-X
-^
-
-This parameter, defined in WMS 1.1.0, allows to specify the X coordinate in
-pixels of the query point.
-
-
 I
 ^
 
-Same parameter than ``X``, but defined in WMS 1.3.0.
+This parameter, defined in WMS 1.3.0, allows you to specify the pixel column of
+the query point.
 
 
-Y
+X
 ^
 
-This parameter, defined in WMS 1.1.0, allows to specify the Y coordinate in
-pixels of the query point.
+Same parameter as ``I``, but defined in WMS 1.1.0.
 
 
 J
 ^
 
-Same parameter than ``Y``, but defined in WMS 1.3.0.
+This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of
+the query point.
+
+
+Y
+^
+
+Same parameter as ``J``, but defined in WMS 1.1.0.
 
 
 FI_POINT_TOLERANCE
@@ -697,7 +697,7 @@ This parameter specifies a WKT geometry with which features have to intersect.
 WITH_MAPTIP
 ^^^^^^^^^^^
 
-This parameter specifies if map tips have to be added to the output.
+This parameter specifies whether to add map tips to the output.
 
 Available values are (not case sensitive):
 
@@ -708,7 +708,7 @@ Available values are (not case sensitive):
 WITH_GEOMETRY
 ^^^^^^^^^^^^^
 
-This parameter specifies if geometries have to be added to the output.
+This parameter specifies whether to add geometries to the output.
 
 Available values are (not case sensitive):
 
