@@ -1361,7 +1361,7 @@ have been removed, leaving only up to n largest (in terms of area) parts for eac
 .. figure:: img/n_biggest.png
    :align: center
 
-   Clockwise from left-up: original multipart feature, one, two and three biggest parts to keep
+   Clockwise from left-up: original multipart feature, one, two and three biggest parts kept
 
 Parameters
 ..........
@@ -1370,8 +1370,8 @@ Parameters
   Input polygon layer.
 
 ``To keep`` [number]
-  Choose how many biggest parts have to be kept. If 1 is selected, only the
-  biggest part of the feature will be saved.
+  Choose how many parts to keep. If 1 is selected, only the
+  biggest part of the feature will be kept.
 
   Default: *1*
 
