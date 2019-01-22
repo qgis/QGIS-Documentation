@@ -13,8 +13,7 @@
 
 Now that you know how to write documentation using :ref:`reStructuredText and
 Sphinx<writing_doc_guidelines>`, let's dive into the process of producing
-documentation and how to share your changes quickly and safely with the
-community.
+documentation and sharing your changes with the community.
 
 Using the GitHub web interface
 ==============================
@@ -63,9 +62,7 @@ Alternative 1: Using the ``Fix Me`` shortcut
 ............................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
-``Fix Me`` link in the footer of each page. This approach works best if you
-plan to make changes on just one page. If you plan to edit more than one page
-you should use Alternative 2.
+``Fix Me`` link in the footer of each page.
 
 #. This will open the file in the ``qgis:master`` branch with a message at the
    top of the page telling you that you don't have write access to this repo
@@ -77,9 +74,18 @@ you should use Alternative 2.
    :guilabel:`Propose file change`. This will generate a
    new `branch <https://help.github.com/articles/about-branches/>`_ (``patch-xxx``) in your repository.
 
-#. To contribute your changes to ``qgis/QGIS-Documentation``, skip
-   to :ref:`Compare changes <compare_changes>` in the :ref:`Share your changes
-   via Pull Request <sharing_changes>` section below.
+#. After you click on :guilabel:`Propose file change` github will navigate to
+   :guilabel:`Comparing changes` page.
+
+   * If you're done making changes, skip to :ref:`Compare changes <compare_changes>` in the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
+   * If there are additional changes that you want to make before submitting
+     them to QGIS, follow these steps:
+
+     * navigate to your fork of QGIS-Documentation (``https://github.com/<YourName>/QGIS-Documentation``)
+     * Click on |githubBranch| and search for the ``patch-xxx`` branch. Select
+       this patch branch. The |githubBranch| button will now say
+       :guilabel:`Branch: patch-xxx`
+     * Jump down to :ref:`Modify files<modify_files>` below.
 
 Alternative 2: Edit files in your documentation repository
 ..........................................................
@@ -92,7 +98,8 @@ You can edit files directly from your fork of the QGIS Documentation.
 Click on |githubBranch| in the upper left corner of your forked QGIS-
 Documentation repository and enter a unique name in the text field to create a
 new `branch <https://help.github.com/articles/about-branches/>`_ .
-The name of the new branch should relate to the problem you intend to fix.
+The name of the new branch should relate to the problem you intend to fix. The
+|githubBranch| button should now say :guilabel:`Branch: branch_name`
 
 .. tip:: **Do your changes in an ad hoc branch, never in the** ``master`` **branch**
 
@@ -104,14 +111,18 @@ The name of the new branch should relate to the problem you intend to fix.
    always delete a branch and start over by creating a new one from the master
    branch.
 
+.. _modify_files:
+
 4. Modify files
 ^^^^^^^^^^^^^^^
 
-#. Browse the source files to the file that you want to change.
+#. Browse the source files of your fork of QGIS-Documentationto the file that
+   you want to change.
 #. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
 #. When you finish, navigate to the **Commit Changes** frame at the bottom of
    the page, make a short comment about your changes, and click on
    :guilabel:`Commit Changes` to commit the changes directly to your branch.
+   Make sure :guilabel:`Commit directly to the branch_name branch.` is selected.
 #. Repeat the previous steps for any other file that needs to be updated to
    fix the issue.
 
@@ -152,9 +163,9 @@ one of your branches to your master branch. To fix this click on the
     If your :guilabel:`Comparing changes` page looks like this, click on the
     :guilabel:`compare across forks` link.
 
-There are four drop-down menus which allow you to compare the changes you
-have made in your branch with the master branch that you want to merge into.
-They are:
+You should see four drop-down menus. These will allow you to compare the
+changes that you have made in your branch with the master branch that you want
+to merge into. They are:
 
 * **base fork**: the fork that you want to merge your changes into
 * **base**: the branch of the base fork that you want to merge your changes into
@@ -263,8 +274,8 @@ your repository.
 
 Navigate to your fork of the QGIS-Documentation repository (``https://github.com/<YourName>/QGIS-Documentation``).
 Click on the :guilabel:`Branches` tab. Below :guilabel:`Your branches` you'll
-see a list of your branches. Click on the |deleteSelected| icon to delete any
-unwanted branches.
+see a list of your branches. Click on the |deleteSelected| :sup:`Delete this
+branch` icon to delete any unwanted branches.
 
 .. _git_command_line_tools:
 
