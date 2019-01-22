@@ -37,7 +37,7 @@ Iterating over Vector Layer
 Iterating over the features in a vector layer is one of the most common tasks.
 Below is an example of the simple basic code to perform this task and showing
 some information about each feature. The ``layer`` variable is assumed to have
-a :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` object.
+a :class:`QgsVectorLayer` object.
 
 .. code-block:: python
 
