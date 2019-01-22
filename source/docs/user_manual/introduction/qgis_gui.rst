@@ -81,8 +81,8 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
 * :guilabel:`Close` a project or revert it to its last saved state
 * :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file format, either as a file
   or within a PostgreSQL database
-* Export the project maps to different formats from the map canvas or
-  using a :ref:`print layout <label_printlayout>`
+* Export the map canvas to different formats or
+  use a :ref:`print layout <label_printlayout>` for more complex output
 * Set the project properties and the snapping options when editing layers.
 
 =======================================================  ====================  =========================  ===============================
