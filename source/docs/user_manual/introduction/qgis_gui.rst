@@ -814,32 +814,32 @@ current scale. There is a scale selector, which allows you to choose among
 .. _magnifier:
 
 On the right side of the scale display, press the |lockedGray| button to lock
-the scale to use the magnifier to zoom in or out. The magnifier allows to zoom
-in to a map without altering the map scale, making it easier to accurately
-tweak the positions of labels and symbols. The magnification level is expressed as a
+the scale to use the magnifier to zoom in or out. The magnifier allows you to zoom
+in to a map without altering the map scale, making it easier to tweak the
+positions of labels and symbols accurately. The magnification level is expressed as a
 percentage. If the :guilabel:`Magnifier` has a level of 100%, then the current
 map is not magnified. Additionally, a default magnification value can be defined
 within :menuselection:`Settings --> Options --> Rendering --> Rendering behavior`,
-which is very useful for high resolution screen to avoid too small symbols.
+which is very useful for high-resolution screens to enlarge small symbols.
 
-On the right of the magnifier tool you can define a current clockwise rotation for
+To the right of the magnifier tool you can define a current clockwise rotation for
 your map view in degrees.
 
 On the right side of the status bar, there is a small
-checkbox which can be used to temporarily prevent layers being rendered to the
+checkbox which can be used temporarily to prevent layers being rendered to the
 map view (see section :ref:`redraw_events`).
 
 To the right of the render functions, you find the |projectionEnabled|
-:guilabel:`EPSG:code` button mentioning the current project CRS. Clicking on
+:guilabel:`EPSG:code` button showing the current project CRS. Clicking on
 this opens the :guilabel:`Project Properties` dialog and lets you apply another
 CRS to the map view.
 
 The |messageLog| :sup:`Messages` button next to it opens the :guilabel:`Log
-Messages Panel` which informs you on underlying process (QGIS startup, plugins
+Messages Panel` which has information on underlying processes (QGIS startup, plugins
 loading, processing tools...)
 
 Depending on the :ref:`Plugin Manager settings <setting_plugins>`, the status
-bar can sometimes show icons at the to right to inform you about availability
+bar can sometimes show icons to the right to inform you about availability
 of |pluginNew| new or |pluginUpgrade| upgradeable plugins. Click the icon to
 open the Plugin Manager dialog.
 
@@ -849,11 +849,11 @@ open the Plugin Manager dialog.
 .. tip::
    **Calculating the Correct Scale of Your Map Canvas**
 
-   When you start QGIS, the default CRS is ``WGS 84 (epsg 4326)`` and
+   When you start QGIS, the default CRS is ``WGS 84 (EPSG 4326)`` and
    units are degrees. This means that QGIS will interpret any
    coordinate in your layer as specified in degrees. To get correct scale values,
-   you can either manually change this setting, e.g. to meters, in the :guilabel:`General`
-   tab under :menuselection:`Project --> Properties...`, or you can use
+   you can either manually change this setting in the :guilabel:`General`
+   tab under :menuselection:`Project --> Properties...` (e.g. to meters), or you can use
    the |projectionEnabled| :sup:`EPSG:code` icon seen above. In the latter case,
    the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
 
