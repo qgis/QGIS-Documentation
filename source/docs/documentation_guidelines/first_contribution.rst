@@ -51,15 +51,15 @@ This repository is a copy of the official QGIS-Documentation repository where
 you have full write access and you can make changes without affecting the
 official documentation.
 
-2. Making changes
------------------
+2. Make changes
+---------------
 
 There are different ways to contribute to QGIS documentation. We show
 them separately below, but you can switch from one process to the other
 without any harm.
 
-Alternative 1: Using the ``Fix Me`` shortcut
-............................................
+Alternative 1: Use the ``Fix Me`` shortcut
+..........................................
 
 Pages on the QGIS website can be edited quickly and easily by clicking on the
 ``Fix Me`` link in the footer of each page.
@@ -114,7 +114,6 @@ The name of the new branch should relate to the problem you intend to fix. The
 ---------------
 
 #. Browse the source files of your fork of QGIS-Documentation to the file that
-   you want to change.
 #. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
 #. When you finish, navigate to the **Commit Changes** frame at the bottom of
    the page, make a short comment about your changes, and click on

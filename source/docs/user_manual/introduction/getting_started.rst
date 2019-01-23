@@ -63,7 +63,7 @@ Downloading sample data
 This user guide contains examples based on the QGIS sample dataset.
 
 |win| The Windows installer has an option to download the QGIS sample dataset.
-If checked, the data will be downloaded to your :file:`My Documents` folder and
+If checked, the data will be downloaded to your :file:`Documents` folder and
 placed in a folder called :file:`GIS Database`. You may use Windows Explorer to
 move this folder to any convenient location. If you did not select the checkbox
 to install the sample dataset during the initial QGIS installation,
@@ -128,8 +128,8 @@ This means that you can launch QGIS by:
 
 * using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock
 * double clicking the icon in your Applications folder or desktop shortcut
-* double clicking an existing QGIS project (``.qgs``) file. (Note that this will
-  also open the project.)
+* double clicking an existing QGIS project file (with :file:`.qgz` or :file:`.qgs` extension). Note that this will
+   also open the project.
 * typing ``qgis`` in a command prompt (assuming that QGIS is added to your PATH
   or you are in its installation folder)
 
@@ -138,7 +138,7 @@ To stop QGIS, use:
 * |nix| |win| the menu option :menuselection:`Project --> Exit QGIS` or use the shortcut
   :kbd:`Ctrl+Q`
 * |osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`
-* or use the red cross at the right top corner of the main interface of the application.
+* or use the red cross at the top-right corner of the main interface of the application.
 
 The following section covers advanced command line options.
 Skip forward to :ref:`samplesession` to get started loading data into QGIS.
@@ -153,7 +153,7 @@ QGIS provides command line options for more advanced use cases. To
 get a list of the options, enter ``qgis --help`` on the command line, which
 returns::
 
-  QGIS - 3.4.1-Madeira 'Madeira' (383851c)
+  QGIS - 3.4.3-Madeira 'Madeira' (2f64a3c4e7)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
     OPTION:
@@ -210,7 +210,7 @@ returns::
 
 This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have many projects and want to generate
-snapshots from your data, or when you need to regularily create snapshots of the
+snapshots from your data, or when you need to create snapshots of the
 same project with updated data.
 
 Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
@@ -358,7 +358,7 @@ documentation screenshots should be created (see QgsAppScreenShots::Categories).
 
 ``--profile`` option
 
-Loads QGIS using a specific profile from the user's profile folder. Unless it's
+Loads QGIS using a specific profile from the user's profile folder. Unless
 changed, the selected profile will be used in the following QGIS sessions.
 
 ``--profiles-path`` option
@@ -391,8 +391,8 @@ Now that you have QGIS installed and a sample dataset available, we will demonst
 a first sample session. In this example, we will visualize a raster and a vector layer.
 We will use:
 
-* the :file:`landcover` raster layer i.e., :file:`qgis_sample_data/raster/landcover.img`
-* and the :file:`lakes` vector layer i.e., :file:`qgis_sample_data/gml/lakes.gml`.
+* the :file:`landcover` raster layer (:file:`qgis_sample_data/raster/landcover.img`)
+* and the :file:`lakes` vector layer (:file:`qgis_sample_data/gml/lakes.gml`)
 
 
 #. Start QGIS as seen in :ref:`label_startingqgis`.
@@ -412,7 +412,7 @@ We will use:
 #. Click on the :guilabel:`Symbology` tab and select a blue as fill color.
 #. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
    this layer` in the drop-down menu to enable labeling. Then from the
-   :guilabel:`Label with` list, choose the ``NAMES`` field as the field containing labels.
+   :guilabel:`Label with` list, choose the ``NAMES`` field to label each lake with its name.
 #. To improve readability of labels, you can add a white buffer around them
    by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
    :guilabel:`Draw text buffer` and choosing 3 as buffer size.
@@ -448,8 +448,8 @@ You can load existing projects into QGIS using :menuselection:`Project -->`
 :menuselection:`Project --> New from template` or
 :menuselection:`Project --> Open Recent -->`.
 
-At startup, a list of recently opened project including screenshots, names and file paths
-(for up to ten projects) is displayed. This is a handy quick way to access recently used projects.
+At startup, a list of recently opened projects is displayed, including screenshots, names and file paths
+(for up to ten projects). This is a handy quick way to access recently used projects.
 Double-click an entry in this list to open the corresponding project.
 If you instead want to create a new project, just add any layer and the list disappears, giving
 way to the map canvas.
@@ -489,18 +489,14 @@ may not work properly any more.
   :guilabel:`General` tab, you should tick |checkbox|
   :guilabel:`Warn when opening a project file saved with an older version of QGIS`.
 
-Whenever you save a project in QGIS a backup of the project file is created with the
+Whenever you save a ``.qgs`` project in QGIS, a backup of the project file is created with the
 extension ``.qgs~`` and stored in the same directory as the project file.
 
-The default extension for QGIS projects is ``.qgs`` but a project may be
-zipped in a ``.qgz`` file too. Actually, the ``.qgs`` file is just embedded
-in an archive, so you still have the possibility to unzip it in order to
-manually edit XML information in a text editor. These ``.qgz`` files can also
-be opened like default ``.qgs`` files. To zip a project, the corresponding
-extension has just to be selected in
-:menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`. Once
-zipped, a :menuselection:`Project -->` |fileSave| :menuselection:`Save` action
-automatically zip your current project.
+The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the
+default is to save using a compressed format with the ``.qgz`` extension.
+The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together
+with its associated sqlite database (``.qgd``) for ref:`auxiliary data <vector_auxiliary_storage>`.
+You can get to these files by unzipping.
 
 .. note::
 
@@ -514,7 +510,7 @@ following Project menu items:
 * :menuselection:`Project --> Open from`
 * :menuselection:`Project --> Save to`
 
-Both menu items have a sub-menu with list of extra project storage implementations
+Both menu items have a sub-menu with a list of extra project storage implementations
 (currently just PostgreSQL). Clicking the action will open a dialog to pick
 a PostgreSQL connection name, schema name and project.
 

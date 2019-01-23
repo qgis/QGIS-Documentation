@@ -1231,6 +1231,12 @@ tools:
 .. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these
    manual selection tools allow you to select feature(s) in the map canvas with a
    single click.
+   
+.. note:: With the |selectPolygon| :sup:`Select Features by Polygon` tool, it is
+   possible to use an existing polygon to select overlapping features.
+   Right-click in the polygon and choose it from the context menu that shows a
+   list of all the polygons that contain the clicked point.
+   All the overlapping features from the active layer are selected.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
 holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether feature is selected
@@ -1313,31 +1319,31 @@ that fills automatically the search box with the existing values.
    Filter/Select features using form dialog
 
 Alongside each field, there is a drop-down list with the operation options to
-control the search behaviour. The common options are:
+control the search behaviour:
 
-* :guilabel:`Exclude Field` - The field will not be used for searching
-* :guilabel:`Equal to (=)`
-* :guilabel:`Not equal to`
-* :guilabel:`Is missing (null)`
-* :guilabel:`Is not missing (not null)`
+============================================= ============ ============  ============
+ Field search option                           String       Numeric       Date
+============================================= ============ ============  ============
+ :guilabel:`Exclude Field` from the search     |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Equal to (=)`                      |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Not equal to (≠)`                  |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Greater than (>)`                               |checkbox|    |checkbox|
+ :guilabel:`Less than (<)`                                  |checkbox|    |checkbox|
+ :guilabel:`Greater than or equal to (≥)`                   |checkbox|    |checkbox|
+ :guilabel:`Less than or equal to (≤)`                      |checkbox|    |checkbox|
+ :guilabel:`Between (inclusive)`                            |checkbox|    |checkbox|
+ :guilabel:`Not between (inclusive)`                        |checkbox|    |checkbox|
+ :guilabel:`Contains`                          |checkbox|
+ :guilabel:`Does not contain`                  |checkbox|
+ :guilabel:`Is missing (null)`                 |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Is not missing (not null)`         |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Starts with`                       |checkbox|
+ :guilabel:`Ends with`                         |checkbox|
+============================================= ============ ============  ============
 
-For numeric and datetime fields, the additional options are:
+|
 
-* :guilabel:`Greater than (>)`
-* :guilabel:`Less than (<)`
-* :guilabel:`Greater than or equal to (>=)`
-* :guilabel:`Less than or equal to (<=)`
-* :guilabel:`Between (inclusive)`
-* :guilabel:`Is not between (inclusive)`
-
-For text fields, the additional options are:
-
-* :guilabel:`Contains`
-* :guilabel:`Does not contain`
-* :guilabel:`Starts with`
-* :guilabel:`Ends with`
-
-For the text options above, it is also possible to use the |checkbox|
+For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.
 
 After setting all search options, you can use the :guilabel:`Select features`
@@ -1375,15 +1381,23 @@ on features in a pop-up window. To identify features, use:
 Using the Identify Features tool
 ................................
 
-QGIS offers two ways to identify features with the |identify|
+QGIS offers several ways to identify features with the |identify|
 :sup:`Identify Features` tool:
 
-* **left click** will identify features according to the :ref:`selection mask
-  <identify_selection>` and the :ref:`interaction mode <identify_mode>` set in the
+* **left click** will identify features according to the
+  :ref:`selection mode <identify_mode>` and the
+  :ref:`selection mask <identify_selection>` set in the
   :guilabel:`Identify Results` panel
-* **right click** will fetch all the snapped features from all the visible layers.
+* **right click** with :guilabel:`Identify Feature(s)` as
+  :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
+  panel will fetch all the snapped features from all the visible layers.
   This will open a context menu, allowing the user to choose more precisely the
-  features to identify or the action to execute on it.
+  features to identify or the action to execute on them.
+* **right click** with :guilabel:`Identify Features by Polygon` as
+  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results`
+  panel will identify the features that overlap with the chosen existing
+  polygon, according to the :ref:`selection mask <identify_selection>` set in
+  the :guilabel:`Identify Results` panel
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
@@ -1453,7 +1467,7 @@ default it will display the following information:
 The Identify Results dialog
 ...........................
 
-At the top of the window, you have handful tools:
+At the top of the window, you have a handful of tools:
 
 * |formView| :sup:`Open Form` of the current feature
 * |expandTree| :sup:`Expand tree`
@@ -1472,6 +1486,11 @@ At the top of the window, you have handful tools:
   * |identifyByPolygon| :sup:`Identify Features by Polygon`
   * |identifyByFreehand| :sup:`Identify Features by Freehand`
   * |identifyByRadius| :sup:`Identify Features by Radius`
+
+  .. note::
+     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
+     right-click any existing polygon and use it to identify overlapping
+     features in another layer.
 
 .. _identify_mode:
 
