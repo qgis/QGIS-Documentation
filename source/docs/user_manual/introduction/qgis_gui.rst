@@ -799,7 +799,7 @@ in the :menuselection:`Project --> Properties... --> General` tab.
 Click on the small button at the left of the textbox to toggle between
 the Coordinate option and the |extents| :guilabel:`Extents` option that displays
 the coordinates of the current lower leftmost and upper rightmost
-corner of the map view in map units.
+corners of the map view in map units.
 
 Next to the coordinate display you will find the :guilabel:`Scale` display.
 It shows the scale of the map view. There is a scale selector, which allows you to
