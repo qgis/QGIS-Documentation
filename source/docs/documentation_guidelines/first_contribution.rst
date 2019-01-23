@@ -12,7 +12,7 @@
    commands and steps shown below also apply to QGIS-Website.
 
 Now that you know how to write documentation using :ref:`reStructuredText and
-Sphinx<writing_doc_guidelines>`, let's dive into the process of producing
+Sphinx <writing_doc_guidelines>`, let's dive into the process of producing
 documentation and sharing your changes with the community.
 
 Using the GitHub web interface
@@ -81,19 +81,16 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
    * If there are additional changes that you want to make before submitting
      them to QGIS, follow these steps:
 
-     * navigate to your fork of QGIS-Documentation (``https://github.com/<YourName>/QGIS-Documentation``)
-     * Click on |githubBranch| and search for the ``patch-xxx`` branch. Select
-       this patch branch. The |githubBranch| button will now say
-       :guilabel:`Branch: patch-xxx`
-     * Jump down to :ref:`Modify files<modify_files>` below.
+     #. Navigate to your fork of QGIS-Documentation (``https://github.com/<YourName>/QGIS-Documentation``)
+     #. Click on |githubBranch| and search for the ``patch-xxx`` branch. Select
+        this patch branch. The |githubBranch| button will now say
+        :guilabel:`Branch: patch-xxx`
+     #. Jump down to :ref:`Modify files<modify_files>` below.
 
-Alternative 2: Edit files in your documentation repository
-..........................................................
+Alternative 2: Create an ad hoc branch in your documentation repository
+.......................................................................
 
 You can edit files directly from your fork of the QGIS Documentation.
-
-3. Create an ad hoc branch
-^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Click on |githubBranch| in the upper left corner of your forked QGIS-
 Documentation repository and enter a unique name in the text field to create a
@@ -113,10 +110,10 @@ The name of the new branch should relate to the problem you intend to fix. The
 
 .. _modify_files:
 
-4. Modify files
-^^^^^^^^^^^^^^^
+3. Modify files
+---------------
 
-#. Browse the source files of your fork of QGIS-Documentationto the file that
+#. Browse the source files of your fork of QGIS-Documentation to the file that
    you want to change.
 #. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
 #. When you finish, navigate to the **Commit Changes** frame at the bottom of
@@ -128,7 +125,7 @@ The name of the new branch should relate to the problem you intend to fix. The
 
 .. _sharing_changes:
 
-3. Share your changes via Pull Request
+4. Share your changes via Pull Request
 --------------------------------------
 
 You need to make a pull request to integrate your changes into the official documentation.
@@ -199,10 +196,10 @@ Click the :guilabel:`Create pull request` button.
       fixing issues for a different release, change **base** from ``master``
       to the appropriate ``release_...`` branch in the steps above.
 
-3. Enter comments
-.................
+3. Describe your pull request
+.............................
 
-A text box will open; fill in any relevant comments for the issue you are
+A text box will open: fill in any relevant comments for the issue you are
 addressing.
 
 If this relates to a particular `issue <https://github.com/qgis/QGIS-Documentation/issues>`_,
@@ -250,25 +247,26 @@ those changes and repeat the steps above.
 An administrator will merge your contribution after any build errors are
 corrected, and after you and the administrators are satisfied with your changes.
 
-Pull request comments
-^^^^^^^^^^^^^^^^^^^^^
+5. Review and comment pull request
+..................................
+
 You can make `comments <https://help.github.com/articles/commenting-on-a-pull-request/>`_
-on the code in a pull request. Navigate to the `pull request page <https://github.com/qgis/QGIS-Documentation/pulls>`_
+on the changes in a pull request. Navigate to the `pull request page <https://github.com/qgis/QGIS-Documentation/pulls>`_
 and click on the pull request that you want to comment on.
 
 At the bottom of the page you will find a text box where you can leave general
 comments about a pull request.
 
-To add comments about specific lines of code, click on
+To add comments about specific lines, click on
 |githubFilesChanged| and find the file you want to comment on. You may have to
-click on :guilabel:`Load diff` to see the code. Scroll to the line of code you
+click on :guilabel:`Load diff` to see the changes. Scroll to the line you
 want to comment on and click on the |githubBluePlus|. That will open a text box
 allowing you to leave a comment.
 
-4. Delete your ad hoc branch
+5. Delete your merged branch
 ----------------------------
 
-You can delete the ad hoc branch after your changes have been merged.
+You can delete the branch after your changes have been merged.
 Deleting old branches saves you from having unused and outdated branches in
 your repository.
 
