@@ -1355,8 +1355,9 @@ See also
 
 Keep n biggest parts
 --------------------
-Takes a polygon layer and creates a new polygon layer in which multipart geometries
-have been removed, leaving only up to n largest (in terms of area) parts for each feature.
+Takes a layer with polygons or multipolygons and returns a new layer in which only the *n* largest polygons of each multipolygon feature
+are kept.
+If a feature has *n* or fewer parts, the feature will just be copied.
 
 .. figure:: img/n_biggest.png
    :align: center
