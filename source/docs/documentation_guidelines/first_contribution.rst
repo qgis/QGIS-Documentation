@@ -75,7 +75,7 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
    new `branch <https://help.github.com/articles/about-branches/>`_ (``patch-xxx``) in your repository.
 
 #. After you click on :guilabel:`Propose file change` github will navigate to
-   :guilabel:`Comparing changes` page.
+   the :guilabel:`Comparing changes` page.
 
    * If you're done making changes, skip to :ref:`Compare changes <compare_changes>` in the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
    * If there are additional changes that you want to make before submitting
