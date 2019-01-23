@@ -1102,7 +1102,7 @@ data. The first three measuring tools behave equally to global project settings:
 However, neither the identify tool nor the field calculator will transform your
 data to the project CRS before measuring. If you want to achieve this, you have
 to use the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
-Export/Add Geometry Columns`. Here, measurement is by default planimetric, unless
+Add Geometry Attributes...`. Here, measurement is by default planimetric, unless
 you choose the ellipsoidal measurement.
 
 Measure length, areas and angles interactively
