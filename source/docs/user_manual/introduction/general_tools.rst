@@ -334,7 +334,7 @@ dialog. It provides a quick and easy way to define the rendering and the
 behavior of a layer, and to visualize its effects without haveing to open the
 layer properties dialog.
 
-In addition to avoiding blocking (or "modal") layer properties dialog, the layer
+In addition to avoiding the blocking (or "modal") layer properties dialog, the layer
 styling panel also avoids cluttering the screen with dialogs, and
 contains most style functions (color selector, effects properties, rule edit,
 label substitution...): e.g., clicking color buttons inside the layer style panel
@@ -385,7 +385,7 @@ By default, layers shown on the QGIS map canvas are drawn following their order
 in the :guilabel:`Layers` panel: the higher a layer is in the panel, the
 higher (hence, more visible) it'll be in the map view.
 
-You can define an drawing order for the layers independent of the order in the
+You can define a drawing order for the layers independent of the order in the
 layers panel with the :guilabel:`Layer Order` panel enabled
 in :menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9`.
 Check |checkbox| :guilabel:`Control rendering order` underneath
@@ -517,7 +517,7 @@ The statistical summary can be:
 Nesting Projects
 ================
 
-Sometimes, you'd like to keep come layers in different projects, but with the
+Sometimes, you'd like to keep some layers in different projects, but with the
 same style. You can either create a :ref:`default style <store_style>` for
 these layers or embed them from another project to save time and effort.
 
