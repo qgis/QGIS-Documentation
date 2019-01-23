@@ -828,7 +828,7 @@ annotations to the map canvas.
 
    The Grid Dialog
 
-#. Select :menuselection:`View --> Decorations --> Grid`.
+#. Select :menuselection:`View --> Decorations --> Grid`
    to open the Grid dialog (see figure_decorations_grid_).
 #. Tick |checkbox| :guilabel:`Enable grid` and set grid
    definitions according to the layers loaded in the map canvas.
