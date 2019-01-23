@@ -786,7 +786,7 @@ Note that you can have multiple bookmarks with the same name.
 Working with Bookmarks
 ......................
 
-To use or manage bookmarks, select the menu option :menuselection:`View --> Show
+To use or manage bookmarks, select :menuselection:`View --> Show
 Bookmarks` or press :kbd:`Ctrl+7`. The :guilabel:`Spatial Bookmarks`
 panel allows you to:
 
@@ -796,8 +796,9 @@ panel allows you to:
 * Delete a Bookmark: select the bookmark and click :guilabel:`Delete Bookmark`.
   Confirm your choice.
 * Import or Export a bookmark: To share or transfer your bookmarks between
-  computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
-  to export all bookmarks to an :file:`.xml` file or import them.
+  computers you can use the :guilabel:`Import/Export Bookmarks` drop-down menu
+  to export all bookmarks to an :file:`.xml` file or import bookmarks from such
+  a file.
 
 You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
 
@@ -807,8 +808,8 @@ You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`lo
 Decorations
 -----------
 
-The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow,
-the Scale Bar and Layout Extents. They are used to 'decorate' the map by adding cartographic
+Decorations include Grid, Copyright Label, North Arrow,
+Scale Bar and Layout Extents. They are used to 'decorate' the map by adding cartographic
 elements.
 
 .. index:: Grid
@@ -827,11 +828,11 @@ annotations to the map canvas.
 
    The Grid Dialog
 
-#. Select from menu :menuselection:`View --> Decorations --> Grid`.
-   The dialog starts (see figure_decorations_grid_).
-#. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
+#. Select :menuselection:`View --> Decorations --> Grid`.
+   to open the Grid dialog (see figure_decorations_grid_).
+#. Tick |checkbox| :guilabel:`Enable grid` and set grid
    definitions according to the layers loaded in the map canvas.
-#. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
+#. Tick |checkbox| :guilabel:`Draw annotations` and set
    annotation definitions according to the layers loaded in the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
@@ -841,8 +842,8 @@ annotations to the map canvas.
 Copyright Label
 ...............
 
-|copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
-you prefer to the map.
+|copyrightLabel| :sup:`Copyright label` adds a copyright label to the map
+ using your choice of text.
 
 .. _figure_decorations_copyright:
 
@@ -851,24 +852,23 @@ you prefer to the map.
 
    The Copyright Dialog
 
-#. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-   The dialog starts (see figure_decorations_copyright_).
-#. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
-   checked.
+#. Select :menuselection:`View --> Decorations --> Copyright Label` to open
+   the dialog (see figure_decorations_copyright_).
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
 #. Enter the text you want to place on the map. You can use HTML as
    shown in the example.
-#. Choose the font of the label from the :guilabel:`Font` |selectString| combo box. Set the
+#. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
    font color and opacity by clicking the black arrow to the right of the font combo box.
 #. Choose the placement of the label from the :guilabel:`Placement`
    |selectString| combo box.
-#. You can refine the placement of the item by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Refine the placement of the item by setting a horizontal and/or vertical
+   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. You can change the color to apply.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 In the example above, which is the default, QGIS places a copyright symbol
-followed by the date in the lower right-hand corner of the map canvas.
+followed by the date in the bottom-right corner of the map canvas.
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -876,8 +876,8 @@ followed by the date in the lower right-hand corner of the map canvas.
 North Arrow
 ...........
 
-|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas.
-You can control the style and placement of the north arrow.
+|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas,
+with options for style and placement.
 
 .. _figure_decorations_north:
 
@@ -888,16 +888,16 @@ You can control the style and placement of the north arrow.
 
 To add a north arrow:
 
-#. Select from menu :menuselection:`View --> Decorations --> North Arrow`.
-   The dialog starts (see figure_decorations_north_).
-#. Make sure the |checkbox| :guilabel:`Enable north arrow` checkbox is checked.
-#. Optionally, change the color, size or choose a custom svg.
-#. Optionally, change the angle or choose **Automatic** to let QGIS determine the
+#. Select :menuselection:`View --> Decorations --> North Arrow` to open
+   the dialog (see figure_decorations_north_).
+#. Make sure |checkbox| :guilabel:`Enable north arrow` is checked.
+#. Optionally change the color and size, or choose a custom SVG.
+#. Optionally change the angle or choose **Automatic** to let QGIS determine the
    direction.
-#. Optionally, choose the placement from the Placement combo box.
-#. Optionally, refine the placement of the arrow by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Optionally choose the placement from the Placement combo box.
+#. Optionally refine the placement of the arrow by setting a horizontal and/or vertical
+   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 
@@ -918,29 +918,29 @@ can control the style and placement, as well as the labelling of the bar.
    The Scale Bar Dialog
 
 QGIS only supports displaying the scale in the same units as your map frame.
-So if the units of your layers are in meters, you can't create a scale bar in
+So, if the units of your project's CRS are meters, you can't create a scale bar in
 feet. Likewise, if you are using decimal degrees, you can't create a scale
 bar to display distance in meters.
 
 To add a scale bar:
 
-#. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-   The dialog starts (see figure_decorations_scale_).
-#. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
-#. Choose the style from the :guilabel:`Scale bar style` |selectString|
+#. Select :menuselection:`View --> Decorations --> Scale Bar` to open
+   the dialog (see figure_decorations_scale_).
+#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked.
+#. Choose a style from the :guilabel:`Scale bar style` |selectString|
    combo box.
-#. Select the :guilabel:`Color of bar` |selectColor| by chosing
-   a fill color (default: Black) and an outline color (default: White). The scale 
+#. Select the :guilabel:`Color of bar` |selectColor| by choosing
+   a fill color (default: black) and an outline color (default: white). The scale 
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
-#. Select the font of the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
+#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
 #. Set the :guilabel:`Size of bar` |selectNumber|.
-#. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display values easy-to-read.
+#. Optionally check |checkbox| :guilabel:`Automatically snap to round number
+   on resize` to display easy-to-read values.
 #. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
-#. You can refine the placement of the item by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. You can refine the placement of the item by setting a horizontal and/or vertical
+   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 Layout Extents
@@ -964,21 +964,21 @@ and need to know the actual visible region of print layouts.
 .. figure:: img/decoration_layoutextents_example.png
    :align: center
 
-   Example of displayed layout extents in a QGIS project with two print layouts. The print
+   Example of layout extents displayed in a QGIS project with two print layouts. The print
    layout named 'Sights' contains two map items, while the other print layout contains one
    map item.
 
 To add layout extent(s):
 
-#. Select from menu :menuselection:`View --> Decorations --> Layout Extents`.
-   The dialog starts (see figure_decorations_layoutextents_).
-#. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
-#. Optionally, change the symbol and labeling of the extents
-#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
+#. Select :menuselection:`View --> Decorations --> Layout Extents` to open
+   the dialog (see figure_decorations_layoutextents_)
+#. Make sure |checkbox| :guilabel:`Show layout extents` is checked
+#. Optionally change the symbol and labeling of the extents
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied
 
 .. tip::
 
-   **Settings of Decorations**
+   **Decorations Settings**
 
    When you save a :file:`.qgs` project, any changes you have made to Grid,
    North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project and restored
@@ -994,13 +994,13 @@ Annotation Tools
 ----------------
 
 Annotations are information added to the map canvas and shown within a
-balloon. These information can be of different types and annotations are
+balloon. This information can be of different types and annotations are
 added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
-* |textAnnotation| :sup:`Text Annotation` for custom formatted text;
-* |htmlAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
-  file;
-* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
+* |textAnnotation| :sup:`Text Annotation` for custom formatted text
+* |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html`
+  file
+* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
@@ -1012,9 +1012,9 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 .. figure:: img/custom_annotation.png
    :align: center
 
-   Customized qt designer annotation form
+   Customized QT Designer annotation form
 
-.. Todo: Ideally, to sync with the text, this screen shot should not show the
+.. Todo: Ideally, to sync with the text, this screenshot should not show the
  dialog of form annotation but instead different forms in action, this will be all
  about showing what an annotation looks like.
  Annotation dialog will need to be shown only when it's described (which is done below)
@@ -1023,21 +1023,21 @@ To add an annotation, select the corresponding tool and click on the map canvas.
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
-* At the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
+* At the top, a file selector to fill with the path to an :file:`html`, :file:`svg`
   or :file:`ui` file depending on the type of annotation. For text annotation,
-  you have instead to enter your message in a text box and set its rendering with
-  provided font tools.
+  you can enter your message in a text box and set its rendering with
+  the normal font tools.
 * |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
   is based on a screen position (instead of the map), meaning that it's always shown
   regardless the map canvas extent.
-* :guilabel:`Linked layer`: allows the annotation to be associated with a map layer
-  and visible only when that layer is visible.
-* :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, allows to
-  set the symbol to display at the balloon anchor position (shown only when
+* :guilabel:`Linked layer`: associates the annotation with a map layer, making it
+  visible only when that layer is visible.
+* :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`,
+  sets the symbol to display at the balloon anchor position (shown only when
   :guilabel:`Fixed map position` is checked).
-* :guilabel:`Frame style`: Allows to set the frame background color, transparency,
-  stroke color or width... of the balloon using QGIS symbols.
-* :guilabel:`Contents margins`: set interior margins of the annotation frame.
+* :guilabel:`Frame style`: sets the frame background color, transparency,
+  stroke color or width of the balloon using QGIS symbols.
+* :guilabel:`Contents margins`: sets interior margins of the annotation frame.
 
 .. _figure_annotation:
 
@@ -1046,13 +1046,13 @@ options. This dialog is almost the same for all the annotation types:
 
    Annotation text dialog
 
-Annotation can be selected when an annotation tool is enabled. Then it can be
+Annotations can be selected when an annotation tool is enabled. They can then be
 moved by map position (by dragging the map marker) or by moving only the balloon.
-Also the |annotation| :sup:`Move Annotation` tool allows you to move the
+The |annotation| :sup:`Move Annotation` tool also allows you to move the
 balloon on the map canvas.
 
 To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
-button or either double-click and press the :guilabel:`Delete` button in its properties dialog.
+button, or double-click it and press the :guilabel:`Delete` button in the properties dialog.
 
 .. note::
    If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool (move annotation,
@@ -1063,9 +1063,9 @@ button or either double-click and press the :guilabel:`Delete` button in its pro
 
   You can print or export annotations with your map to various formats using:
 
-  * map canvas export tools available in :menuselection:`Project` menu;
-  * or :ref:`print layout <create-output>`: in that case you need to check the
-    :guilabel:`Draw map canvas items` in the corresponding map item properties.
+  * map canvas export tools available in the :menuselection:`Project` menu
+  * :ref:`print layout <create-output>`, in which case you need to check
+    :guilabel:`Draw map canvas items` in the corresponding map item properties
 
 
 .. index::
