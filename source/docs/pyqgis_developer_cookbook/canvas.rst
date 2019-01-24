@@ -17,28 +17,28 @@ Using Map Canvas
 
 The Map canvas widget is probably the most important widget within QGIS because
 it shows the map composed from overlaid map layers and allows interaction with
-the map and layers. The canvas shows always a part of the map defined by the
+the map and layers. The canvas always shows a part of the map defined by the
 current canvas extent. The interaction is done through the use of **map tools**:
 there are tools for panning, zooming, identifying layers, measuring, vector
 editing and others. Similar to other graphics programs, there is always one
 tool active and the user can switch between the available tools.
 
-Map canvas is implemented as :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class in :mod:`qgis.gui`
+The map canvas is implemented with the :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class in the :mod:`qgis.gui`
 module. The implementation is based on the Qt Graphics View framework.
 This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
-and items. If not, please make sure to read the `overview of the framework
+and items. If not, please read the `overview of the framework
 <https://doc.qt.io/archives/qt-4.8/graphicsview.html>`_.
 
-Whenever the map has been panned, zoomed in/out (or some other action triggers
+Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
 rendered to an image (using :class:`QgsMapRendererJob` class) and that image is
-then displayed in the canvas. The :class:`qgis.gui.QgsMapCanvas` class also controls refreshing
+displayed on the canvas. The :class:`qgis.gui.QgsMapCanvas` class also controls refreshing
 of the rendered map. Besides this item which acts as a background, there may be
 more **map canvas items**.
 Typical map canvas items are rubber bands (used for measuring, vector editing
-etc.) or vertex markers. The canvas items are usually used to give some visual
+etc.) or vertex markers. The canvas items are usually used to give visual
 feedback for map tools, for example, when creating a new polygon, the map tool
 creates a rubber band canvas item that shows the current shape of the polygon.
 All map canvas items are subclasses of :class:`QgsMapCanvasItem` which adds
@@ -49,8 +49,8 @@ some more functionality to the basic ``QGraphicsItem`` objects.
 To summarize, the map canvas architecture consists of three concepts:
 
 * map canvas --- for viewing of the map
-* map canvas items --- additional items that can be displayed in map canvas
-* map tools --- for interaction with map canvas
+* map canvas items --- additional items that can be displayed on the map canvas
+* map tools --- for interaction with the map canvas
 
 .. index:: Map canvas; Embedding
 
