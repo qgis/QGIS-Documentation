@@ -6,9 +6,9 @@
 
 .. _canvas:
 
-****************
-Using Map Canvas
-****************
+********************
+Using the Map Canvas
+********************
 
 .. warning:: |outofdate|
 
