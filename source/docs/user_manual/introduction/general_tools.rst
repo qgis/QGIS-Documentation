@@ -1102,7 +1102,7 @@ data. The first three measuring tools behave equally to global project settings:
 However, neither the identify tool nor the field calculator will transform your
 data to the project CRS before measuring. If you want to achieve this, you have
 to use the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
-Add Geometry Attributes...`. Here, measurement is by default planimetric, unless
+Add Geometry Attributes...`. Here, measurement is planimetric, unless
 you choose the ellipsoidal measurement.
 
 Measure length, areas and angles interactively
@@ -1361,7 +1361,7 @@ Once the conditions are set, you can also either:
 * :guilabel:`Flash features`, highlighting the matching features. This is a
   handy way to identify a feature without selection or using the Identify tool.
   Note that the flash does not alter the map canvas extent and would be visible only
-  if the feature is in within the bounds of the current map canvas.
+  if the feature is within the bounds of the current map canvas.
 
 .. index::
    single: Identify features
@@ -1448,7 +1448,7 @@ default it will display the following information:
     * ``X`` and ``Y`` coordinate values of the
       closest vertex (and ``Z`/`M`` if applicable)
     * if click on a curved line,
-      the radius of that section in the panel result is also displayed.
+      the radius of that section is also displayed.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
@@ -1502,8 +1502,8 @@ comboboxes.
 * **Top down, stop at first**: only features from the upper visible layer.
 * **Top down**: all features from the visible layers. The results are shown in
   the panel.
-* and **Layer selection**: opens a context menu where the user selects the layer to
-  identify features from, similar to like a right-click. Only the chosen features
+* **Layer selection**: opens a context menu where the user selects the layer to
+  identify features from, similar to a right-click. Only the chosen features
   will be shown in the result panel.
 
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
