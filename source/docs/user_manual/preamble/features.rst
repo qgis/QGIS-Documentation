@@ -13,7 +13,7 @@ Features
    .. contents::
       :local:
 
-QGIS offers many common GIS functionalities provided by core features
+QGIS offers many common GIS functions provided by core features
 and plugins. A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the
 integrated Python console.
@@ -21,9 +21,8 @@ integrated Python console.
 View data
 ---------
 
-You can view (in 2D or 3D) combinations of vector and raster data in
-different formats and projections without conversion to an internal or
-common format.
+You can view combinations of vector and raster data (in 2D or 3D) in different
+formats and projections without conversion to an internal or common format.
 Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
@@ -58,7 +57,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  Data-defined feature labeling
 *  Data-defined vector and raster symbology tools
 *  Atlas map composition with graticule layers
-*  North arrow scale bar and copyright label for maps
+*  North arrow, scale bar and copyright label for maps
 *  Support for saving and restoring projects
 
 Create, edit, manage and export data
@@ -71,8 +70,8 @@ several formats. QGIS offers the following:
 *  Ability to create and edit multiple file formats and GRASS vector layers
 *  Georeferencer plugin to geocode images
 *  GPS tools to import and export GPX format, and convert other GPS
-   formats to GPX or down/upload directly to a GPS unit (On Linux,
-   usb: has been added to list of GPS devices.)
+   formats to GPX or down/upload directly to a GPS unit (on Linux,
+   usb: has been added to list of GPS devices)
 *  Support for visualizing and editing OpenStreetMap data
 *  Ability to create spatial database tables from files with the DB Manager plugin
 *  Improved handling of spatial database tables
@@ -85,7 +84,7 @@ Analyze data
 ------------
 
 You can perform spatial data analysis on spatial databases and other
-OGR- supported formats. QGIS currently offers vector analysis,
+OGR-supported formats. QGIS currently offers vector analysis,
 sampling, geoprocessing, geometry and database management tools. You
 can also use the integrated GRASS tools, which include the complete
 GRASS functionality of more than 400 modules. (See section
@@ -116,8 +115,8 @@ Core plugins include:
 
 #.  Coordinate Capture (capture mouse coordinates in different CRSs)
 #.  DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  Geometry Checker (check geometries for errors)
 #.  eVIS (visualize events)
+#.  Geometry Checker (check geometries for errors)
 #.  Georeferencer GDAL (add projection information to rasters using GDAL)
 #.  GPS Tools (load and import GPS data)
 #.  GRASS 7 (integrate GRASS GIS)
