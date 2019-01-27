@@ -1147,8 +1147,9 @@ as well as the total, shows up in the measure window.
 To stop measuring, click your right mouse button.
 
 Note that you can use the drop-down list near the total to interactively change
-the measurement units while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
-'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
+the measurement units while working with the measure tool ('Meters', 'Kilometers',
+'Feet', 'Yards', 'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees',
+'Map units').
 This unit is kept for the widget until a new project is created or another project
 is opened.
 
@@ -1170,8 +1171,8 @@ according to CRS settings available.
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
 different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
-'Square miles', 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters',
-'Square millimeters', 'Square degrees', 'Map units').
+'Square miles', 'Hectares', 'Acres', 'Square centimeters',
+'Square millimeters', 'Square nautical miles', 'Square degrees', 'Map units').
 
 .. _figure_measure_area:
 
