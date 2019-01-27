@@ -30,12 +30,12 @@ Let's have the following code, which calculates the Topographic Wetness Index
 
     ##dem=raster
     ##twi=output raster
-    ret_slope = processing.runalg("saga:slopeaspectcurvature", dem, 0, None,
-                    None, None, None, None)
-    ret_area = processing.runalg("saga:catchmentarea", dem,
-                    0, False, False, False, False, None, None, None, None, None)
-    processing.runalg("saga:topographicwetnessindextwi, ret_slope['SLOPE'],
-                    ret_area['AREA'], None, 1, 0, twi)
+    ret_slope = processing.run("saga:slopeaspectcurvature", {"ELEVATION": dem,
+                    "METHOD": 0, "SLOPE": 'myslope', "ASPECT": 'myslope'})
+    ret_area = processing.run("saga:catchmentarea", ,{"ELEVATION": dem,
+                    "METHOD": 0, "FLOW": 'myflow'})
+    processing.run("saga:topographicwetnessindextwi", {"SLOPE": ret_slope['SLOPE'],
+                   "AREA": ret_area['FLOW'], "CONV": 1, "METHOD": 0, "TWI": 'twi'})
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
 one of them calculates the TWI, but it needs a slope layer and a flow accumulation
@@ -130,7 +130,7 @@ Handing data produced by the algorithm
 
 When you declare an output representing a layer (raster, vector or table),
 the algorithm will try to add it to QGIS once it
-is finished. That is the reason why, although the ``runalg()`` method does not
+is finished. That is the reason why, although the ``run()`` method does not
 load the layers it produces, the final *TWI* layer will be loaded, since it is saved
 to the file entered by the user, which is the value of the corresponding output.
 
