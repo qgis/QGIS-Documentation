@@ -69,7 +69,7 @@ transparent.
   layer in the :guilabel:`Layer Styling` panel;
 * Set the :guilabel:`hillshade` layer to be transparent by clicking on the
   :guilabel:`Transparency` tab in the layer properties;
-* Set the :guilabel:`Global transparency` to ``50%``;
+* Set the :guilabel:`Global opacity` to ``50%``;
 * You'll get a result like this:
 
   .. image:: img/hillshade_pseudocolor.png
