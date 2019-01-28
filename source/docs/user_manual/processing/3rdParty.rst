@@ -201,7 +201,7 @@ in the processing settings list.
 R. Creating R scripts
 ---------------------
 
-To enable R in Processing you need to install the **Processing R Provider**.
+To enable R in Processing you need to install the **Processing R Provider** plugin.
 
 R integration in QGIS is different from that of SAGA in that there is not a
 predefined set of algorithms you can run (except for a few examples). Instead,
