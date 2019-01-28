@@ -1447,7 +1447,7 @@ default it will display the following information:
     * the number of the closest vertex to the point clicked
     * ``X`` and ``Y`` coordinate values of the
       closest vertex (and ``Z`/`M`` if applicable)
-    * if click on a curved line,
+    * if you click on a curved segment,
       the radius of that section is also displayed.
 
 * **Data attributes**: This is the list of attribute fields and values for the
