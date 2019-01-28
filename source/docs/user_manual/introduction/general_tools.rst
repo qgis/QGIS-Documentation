@@ -1080,40 +1080,36 @@ General information
 
 QGIS provides four means of measuring geometries:
 
-* the interactive measurement tools |measure|,
-* measuring in the |calculateField| :sup:`Field Calculator`,
-* derived measures in the :ref:`identify` tool,
-* and a vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
+* interactive measurement tools |measure|
+* measuring in the |calculateField| :sup:`Field Calculator`
+* derived measurements in the :ref:`identify` tool
+* the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
   Export/Add Geometry Columns`
 
 Measuring works within projected coordinate systems (e.g., UTM) and unprojected
 data. The first three measuring tools behave equally to global project settings:
 
-* If :guilabel:`"on the fly" CRS transformation` (see :ref:`otf_transformation`)
-  is enabled, the default measurement metric is
-  - different from most other GIS - ellipsoidal, using the ellipsoid defined in
+* Unlike most other GIS, the default measurement metric is
+  ellipsoidal, using the ellipsoid defined in
   :menuselection:`Project --> Properties... --> General`. This is true both
   when geographic and projected coordinate systems are defined for the project.
-* If you want to calculate the projected / planimetric area or distance using cartesian
-  maths, the measurement ellipsoid has to be set to "None / Planimetric"
+* If you want to calculate the projected/planimetric area or distance using cartesian
+  maths, the measurement ellipsoid has to be set to "None/Planimetric"
   (:menuselection:`Project --> Properties... --> CRS`). However,
-  with a geographic (= unprojected) CRS defined for the data and project, area and
+  with a geographic (ie unprojected) CRS defined for the data and project, area and
   distance measurement will be ellipsoidal.
-* If :guilabel:`"on the fly" CRS transformation` is disabled, the measurement
-  metric is planimetric when the project coordinate system is projected and
-  ellipsoidal when the project coordinate system is unprojected / geographic.
 
 However, neither the identify tool nor the field calculator will transform your
 data to the project CRS before measuring. If you want to achieve this, you have
 to use the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
-Export/Add Geometry Columns`. Here, measurement is by default planimetric except
-if you choose the ellipsoidal measure.
+Add Geometry Attributes...`. Here, measurement is planimetric, unless
+you choose the ellipsoidal measurement.
 
-Measure length, areas and angles interactive
-............................................
+Measure length, areas and angles interactively
+..............................................
 
 Click the |measure| icon in the Attribute toolbar to begin measurements.
-The downward arrow near the icon helps you switch to the convenient tool to measure
+The down arrow near the icon switches between
 |measure| length, |measureArea| area or |measureAngle| angle.
 The default unit used in the dialog is the one set in :menuselection:`Project -->
 Properties... --> General` menu.
@@ -1124,7 +1120,7 @@ Properties... --> General` menu.
    at the bottom of the widget opens the :menuselection:`Settings -->
    Options --> Map Tools` menu, where you can select the rubberband color, the
    precision of the measurements and the unit behavior. You can also choose your
-   preferred measurement or angle units but keep in mind that those values are
+   preferred measurement or angle units, but keep in mind that those values are
    overridden in the current project by the selection made in the 
    :menuselection:`Project --> Properties... --> General` menu, and by the
    selection made in the measurement widget.
@@ -1140,21 +1136,20 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
    single: Measure; Areas
    single: Measure; Angles
 
-By default, |measure| :sup:`Measure Line`: QGIS measures real distances
+By default, |measure| :sup:`Measure Line` measures real distances
 between given points according to a defined ellipsoid.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
-To stop measuring, click your right mouse button.
+To stop measuring, click the right mouse button.
 
-Note that you can use the drop-down list near the total to interactively change
-the measurement units while working with the measure tool ('Meters', 'Kilometers',
-'Feet', 'Yards', 'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees',
-'Map units').
-This unit is kept for the widget until a new project is created or another project
+Note that you can use the drop-down list near the total to change
+the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
+'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
+This unit is retained for the widget until a new project is created or another project
 is opened.
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
-according to CRS settings available.
+according to the CRS settings available.
 
 .. %FixMe: currently, validating the Settings --> Options dialog revert any change
    made on units in the measurement dialog (see https://issues.qgis.org/issues/15436
@@ -1183,7 +1178,7 @@ different area units ('Square meters', 'Square kilometers', 'Square feet', 'Squa
 
 |measureAngle| :sup:`Measure Angle`: You can also measure angles. The
 cursor becomes cross-shaped. Click to draw the first segment of the angle you
-wish to measure, then move the cursor to draw the desired angle. The measure
+wish to measure, then move the cursor to draw the desired angle. The measurement
 is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
@@ -1213,18 +1208,18 @@ Interacting with features
 Selecting features
 ------------------
 
-QGIS provides several tools to select features in the map canvas. Selection
-tools are available in :menuselection:`View --> Select` menu or in the
+QGIS provides several tools to select features on the map canvas. Selection
+tools are available in the :menuselection:`View --> Select` menu or in the
 :guilabel:`Attributes toolbar`.
 
 .. note::
 
    Selection tools work with the currently active layer.
 
-Selecting manually in the map canvas
+Selecting manually on the map canvas
 ....................................
 
-To select one or several features with the mouse, you can use one of the following
+To select one or more features with the mouse, you can use one of the following
 tools:
 
 * |selectRectangle| :sup:`Select Features by area or single click`
@@ -1232,28 +1227,28 @@ tools:
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
-.. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these
-   manual selection tools allow you to select feature(s) in the map canvas with a
+.. note:: Other than |selectPolygon| :sup:`Select Features by Polygon`, these
+   manual selection tools allow you to select feature(s) on the map canvas with a
    single click.
    
-.. note:: With the |selectPolygon| :sup:`Select Features by Polygon` tool, it is
-   possible to use an existing polygon to select overlapping features.
+.. note:: Use the |selectPolygon| :sup:`Select Features by Polygon` tool
+   to use an existing polygon to select overlapping features.
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
-holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether feature is selected
+holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected
 (ie either adds to the current selection or remove from it).
 
-For the other tools, different behaviors can be performed holding:
+For the other tools, different behaviors can be performed by holding down:
 
 * :kbd:`Shift`: add features to the current selection
 * :kbd:`Ctrl`: substract features from the current selection
 * :kbd:`Ctrl+Shift`: intersect with current selection, ie only keep
   overlapping features from the current selection
 * :kbd:`Alt`: select features that are totally within the selection shape.
-  Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
+  Combined with :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
   features to/from the current selection.
 
 .. _automatic_selection:
@@ -1262,45 +1257,45 @@ Automatic selection
 ...................
 
 The other selection tools, also available from the :ref:`Attribute table
-<sec_attribute_table>`, perform a selection based on feature's attribute
+<sec_attribute_table>`, perform a selection based on a feature's attribute
 or its selection state (note that attribute table and map canvas show the
-same information, so if you select one feature in attribute table, it will
-be selected in map canvas also):
+same information, so if you select one feature in the attribute table, it will
+be selected on the map canvas too):
 
-* |expressionSelect| :sup:`Select By Expression...` allows user to select
-  features using expression dialog.
+* |expressionSelect| :sup:`Select By Expression...` select
+  features using expression dialog
 * |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
 * |deselectAll| :sup:`Deselect Features from All Layers` or press
-  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers.
+  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers
 * |selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all
-  features in the current layer.
+  features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
-  the current layer.
+  the current layer
 
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can use the |expressionSelect|
-:sup:`Select features using an Expression` icon. Then, you expand the
+:sup:`Select features using an Expression` icon. Then, expand the
 :guilabel:`Fields and Values` group and choose the field that you want to query.
 Double-click the field 'TYPE_2' and also click :guilabel:`All Unique` in the
 panel that shows up. From the list, choose and double-click 'Borough'. In the
-:guilabel:`Expression` field, then you'd write the following query:
+:guilabel:`Expression` field, write the following query:
 
 ::
 
  "TYPE_2"  =  'Borough'
 
-From the expression builder dialog, you can also use the :menuselection:`Function
-list --> Recent (Selection)` to make a selection that you used before. The
-dialog remembers the last 20 used expressions. See :ref:`vector_expressions`
-chapter for more information and some example.
+From the expression builder dialog, you can also use :menuselection:`Function
+list --> Recent (Selection)` to make a selection that you have used before. The
+dialog remembers the last 20 expressions used. See :ref:`vector_expressions`
+for more information and examples.
 
 
 .. tip:: **Save your selection into a new file**
 
    Users can save selected features into a **New Temporary Scratch Layer** or a
    **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
-   :menuselection:`Edit --> Paste Features as` in the wanted format.
+   :menuselection:`Edit --> Paste Features as` in the desired format.
 
 .. index::
    single: Selection tools; Select by value
@@ -1310,10 +1305,10 @@ chapter for more information and some example.
 Select Features By Value
 ........................
 
-This selection tool opens the layer's feature form allowing the user to choose,
-for each field, which value to look for, if the search should be case sensitive,
-and the operation that should be used. The tool has also the autocompleter function
-that fills automatically the search box with the existing values.
+This selection tool opens the layer's feature form allowing the user to choose
+which value to look for for each field, whether the search should be case-sensitive,
+and the operation that should be used. The tool has also autocompletes,
+automatically filling the search box with existing values.
 
 .. _figure_filter_form:
 
@@ -1322,7 +1317,7 @@ that fills automatically the search box with the existing values.
 
    Filter/Select features using form dialog
 
-Alongside each field, there is a drop-down list with the operation options to
+Alongside each field, there is a drop-down list with options to
 control the search behaviour:
 
 ============================================= ============ ============  ============
@@ -1350,23 +1345,23 @@ control the search behaviour:
 For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.
 
-After setting all search options, you can use the :guilabel:`Select features`
-button to select the matching features. The drop-down options are:
+After setting all search options, click :guilabel:`Select features`
+to select the matching features. The drop-down options are:
 
 * :guilabel:`Select features`
 * :guilabel:`Add to current selection`
 * :guilabel:`Filter current selection`
 * :guilabel:`Remove from current current selection`
 
-You can also clean all search options using the :guilabel:`Reset form` button.
+You can also clear all search options using the :guilabel:`Reset form` button.
 
 Once the conditions are set, you can also either:
 
-* :guilabel:`Zoom to features` in the map canvas without the need of a preselection;
-* or :guilabel:`Flash features`, highlighting the concerned features. This is a
+* :guilabel:`Zoom to features` on the map canvas without the need of a preselection
+* :guilabel:`Flash features`, highlighting the matching features. This is a
   handy way to identify a feature without selection or using the Identify tool.
   Note that the flash does not alter the map canvas extent and would be visible only
-  if the feature resides in the current canvas.
+  if the feature is within the bounds of the current map canvas.
 
 .. index::
    single: Identify features
@@ -1378,9 +1373,9 @@ Identifying Features
 The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use:
 
-* :menuselection:`View --> Identify Features` menu,
-* or press :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
-* or click the |identify| :sup:`Identify Features` icon on the Attributes toolbar.
+* :menuselection:`View --> Identify Features`
+* :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
+* |identify| :sup:`Identify Features` icon on the Attributes toolbar
 
 Using the Identify Features tool
 ................................
@@ -1388,39 +1383,39 @@ Using the Identify Features tool
 QGIS offers several ways to identify features with the |identify|
 :sup:`Identify Features` tool:
 
-* **left click** will identify features according to the
+* **left click** identifies features according to the
   :ref:`selection mode <identify_mode>` and the
   :ref:`selection mask <identify_selection>` set in the
   :guilabel:`Identify Results` panel
 * **right click** with :guilabel:`Identify Feature(s)` as
   :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
-  panel will fetch all the snapped features from all the visible layers.
-  This will open a context menu, allowing the user to choose more precisely the
+  panel fetches all snapped features from all visible layers.
+  This opens a context menu, allowing the user to choose more precisely the
   features to identify or the action to execute on them.
 * **right click** with :guilabel:`Identify Features by Polygon` as
   :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results`
-  panel will identify the features that overlap with the chosen existing
+  panel identifies the features that overlap with the chosen existing
   polygon, according to the :ref:`selection mask <identify_selection>` set in
   the :guilabel:`Identify Results` panel
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
    Under :guilabel:`Layer Capabilities` in :menuselection:`Project --> Properties...
-   --> Data Sources` tab, uncheck the :guilabel:`Identifiable` column next to a
+   --> Data Sources`, uncheck the :guilabel:`Identifiable` column next to a
    layer to avoid it
    being queried when using the |identify| :sup:`Identify Features` tool in a mode
    other than **Current Layer**. This is a handy way to return features from
    only layers that are of interest for you.
 
 If you click on feature(s), the :guilabel:`Identify Results` dialog will list
-information about the clicked feature(s). The default view is a tree view where
+information about the feature(s) clicked. The default view is a tree view in which
 the first item is the name of the layer and its children are its identified feature(s).
 Each feature is described by the name of a field along with its value.
 This field is the one set in :menuselection:`Layer Properties --> Display`.
-Then follows all the other information about the feature.
+All the other information about the feature follows.
 
-Feature informations
-....................
+Feature information
+...................
 
 The Identify Results dialog can be customized to display custom fields, but by
 default it will display the following information:
@@ -1433,32 +1428,32 @@ default it will display the following information:
   is added, namely ``View feature form`` for editing. You can define more actions
   in the layer's properties dialog (see :ref:`actions_menu`).
 * **Derived**: This information is calculated or derived from other information.
-  This includes:
+  It includes:
 
-  * general information about its geometry:
+  * general information about the feature's geometry:
 
     * depending on the geometry type, the cartesian measurements of length,
-      perimeter or area in the layer's CRS units;
+      perimeter or area in the layer's CRS units
     * depending on the geometry type and if an ellipsoid is set in the project
       properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
-      length, perimeter or area using the chosen units;
-    * the count of geometry parts in the feature and the number of the part you
-      clicked on;
-    * and the count of vertices in the feature.
+      length, perimeter or area using the specified units
+    * the count of geometry parts in the feature and the number of the part
+      clicked
+    * the count of vertices in the feature
   * coordinate information, using the project properties :guilabel:`Coordinates
     display` settings:
 
-    * the ``X`` and ``Y`` coordinate values of the clicked point;
-    * the number of the closest vertex to the clicked point;
-    * the ``X`` and ``Y`` (and ``Z``/``M`` if applicable) coordinate values of the
-      closest vertex;
-    * in case you click on a curved line using the info tool, QGIS will also
-      display the radius of that section in the panel result.
+    * ``X`` and ``Y`` coordinate values of the point clicked
+    * the number of the closest vertex to the point clicked
+    * ``X`` and ``Y`` coordinate values of the
+      closest vertex (and ``Z`/`M`` if applicable)
+    * if you click on a curved segment,
+      the radius of that section is also displayed.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
 
-.. note:: Links in feature's attributes are clickable from the :guilabel:`Identify
+.. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
 
 .. _figure_identify:
@@ -1476,15 +1471,15 @@ At the top of the window, you have a handful of tools:
 * |formView| :sup:`Open Form` of the current feature
 * |expandTree| :sup:`Expand tree`
 * |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Expand New Results by Default` to define whether next
-  identified features information should be collapsed or expanded
+* |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
+  identified feature's information should be collapsed or expanded
 * |deselectAll| :sup:`Clear Results`
 * |editCopy| :sup:`Copy selected feature to clipboard`
 * |filePrint| :sup:`Print selected HTML response`
 
 .. _identify_selection:
 
-* and selection mode to use to fetch features to identify. it can be:
+* selection mode to use to fetch features to identify:
 
   * |identifyByRectangle| :sup:`Identify Features by area or single click`
   * |identifyByPolygon| :sup:`Identify Features by Polygon`
@@ -1498,25 +1493,24 @@ At the top of the window, you have a handful of tools:
 
 .. _identify_mode:
 
-At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
+At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
-With the :guilabel:`Mode` combobox you can define from which layers features
-should be identified:
+:guilabel:`Mode` defines from which layers features should be identified:
 
 * **Current layer**: only features from the selected layer are identified. The
-  layer may not be visible in the canvas.
-* **Top down, stop at first**: for only features from the upper visible layer.
-* **Top down**: for all features from the visible layers. The results are shown in
+  layer need not be visible in the canvas.
+* **Top down, stop at first**: only features from the upper visible layer.
+* **Top down**: all features from the visible layers. The results are shown in
   the panel.
-* and **Layer selection**: opens a context menu where the user selects the layer to
-  identify features from. Operates like a right-click. Only the chosen features
+* **Layer selection**: opens a context menu where the user selects the layer to
+  identify features from, similar to a right-click. Only the chosen features
   will be shown in the result panel.
 
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
 The identify tool allows you to |checkbox|:guilabel:`Auto open form`.
-If checked, each time a single feature is identified QGIS will open a form
+If checked, each time a single feature is identified, a form opens
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
 Other functions can be found in the context menu of the identified item. For
@@ -1525,7 +1519,7 @@ example, from the context menu you can:
 * View the feature form
 * Zoom to feature
 * Copy feature: Copy all feature geometry and attributes
-* Toggle feature selection: Adds identified feature to selection
+* Toggle feature selection: Add identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy the attributes of the feature
 * Clear result: Remove results in the window
