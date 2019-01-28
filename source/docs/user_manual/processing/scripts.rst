@@ -26,6 +26,9 @@ the filename, removing its extension and replacing underscores with blank spaces
 Let's have the following code, which calculates the Topographic Wetness Index
 (TWI) directly from a DEM
 
+.. note:: The simplified way of writing Python scripts (as used in the example
+   below) is not supported in QGIS 3.
+
 .. code-block:: python
 
     ##dem=raster
