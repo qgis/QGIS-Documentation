@@ -764,14 +764,14 @@ You can change the symbol used by a particular vector layer by calling
 :func:`setSymbol() <qgis.core.QgsSingleSymbolRenderer.setSymbol>`_ passing an instance of the appropriate symbol instance.
 Symbols for *point*, *line* and *polygon* layers can be created by calling
 the :func:`createSimple() <qgis.core.QgsMarkerSymbol.createSimple>`_ function of the corresponding classes
-:class:`QgsMarkerSymbol <qgis.core.>`_, :class:`QgsLineSymbol` and
-:class:`QgsFillSymbol`.
+:class:`QgsMarkerSymbol <qgis.core.QgsMarkerSymbol>`_, :class:`QgsLineSymbol <qgis.core.QgsLineSymbol>` and
+:class:`QgsFillSymbol <qgis.core.QgsFillSymbol>`.
 
 The dictionary passed to :func:`createSimple() <qgis.core.QgsMarkerSymbol.createSimple>`_ sets the style properties of the
 symbol.
 
 For example you can replace the symbol used by a particular **point** layer
-by calling :func:`setSymbol() <qgis.core.QgsSingleSymbolRenderer.setSymbol>`_ passing an instance of a :class:`QgsMarkerSymbol <qgis.core.>`_,
+by calling :func:`setSymbol() <qgis.core.QgsSingleSymbolRenderer.setSymbol>`_ passing an instance of a :class:`QgsMarkerSymbol <qgis.core.QgsMarkerSymbol>`_,
 as in the following code example:
 
 .. code-block:: python
@@ -936,21 +936,21 @@ arrangement)
 Working with Symbols
 --------------------
 
-For representation of symbols, there is :class:`QgsSymbol` base class with
+For representation of symbols, there is :class:`qgis.core.QgsSymbol` base class with
 three derived classes:
 
-* :class:`QgsMarkerSymbol` --- for point features
-* :class:`QgsLineSymbol` --- for line features
-* :class:`QgsFillSymbol` --- for polygon features
+* :class:`qgis.core.QgsMarkerSymbol` --- for point features
+* :class:`qgis.core.QgsLineSymbol` --- for line features
+* :class:`qgis.core.QgsFillSymbol` --- for polygon features
 
 **Every symbol consists of one or more symbol layers** (classes derived from
-:class:`QgsSymbolLayer`). The symbol layers do the actual rendering, the
+:class:`qgis.core.QgsSymbolLayer`). The symbol layers do the actual rendering, the
 symbol class itself serves only as a container for the symbol layers.
 
 Having an instance of a symbol (e.g. from a renderer), it is possible to
-explore it: :func:`type` method says whether it is a marker, line or fill
-symbol. There is a :func:`dump` method which returns a brief description of
-the symbol. To get a list of symbol layers
+explore it: :func:`type <qgis.core.QgsSymbol.type>` method says whether it is a marker, line or fill
+symbol. There is a :func:`dump <qgis.core.QgsSymbol.dump>` method which returns a brief description of
+the symbol. To get a list of symbol layers:
 
 .. code-block:: python
 
@@ -958,10 +958,10 @@ the symbol. To get a list of symbol layers
       lyr = symbol.symbolLayer(i)
       print("{}: {}".format(i, lyr.layerType()))
 
-To find out symbol's color use :func:`color` method and :func:`setColor` to
+To find out symbol's color use :func:`qgis.core.QgsSymbol.color` method and :func:`qgis.core.QgsSymbol.setColor` to
 change its color. With marker symbols additionally you can query for the symbol
-size and rotation with :func:`size` and :func:`angle` methods, for line symbols
-there is :func:`width` method returning line width.
+size and rotation with :func:`qgis.core.QgsSymbol.size` and :func:`qgis.core.QgsSymbol.angle` methods, for line symbols
+there is :func:`qgis.core.QgsSymbol.width` method returning line width.
 
 Size and width are in millimeters by default, angles are in degrees.
 
@@ -1003,7 +1003,7 @@ symbol layer types.
 To access symbol layer data, use its :func:`properties() <qgis.core.QgsSymbolLayer.properties>`_ method that returns a
 key-value dictionary of properties which determine the appearance. Each symbol
 layer type has a specific set of properties that it uses. Additionally, there
-are generic methods :func:`color`, :func:`size`, :func:`angle`, :func:`width`
+are generic methods :func:`color <qgis.core.QgsSymbol.color>`, :func:`size <qgis.core.QgsSymbol.size>`, :func:`angle <qgis.core.QgsSymbol.angle>`, :func:`width <qgis.core.QgsSymbol.width>`
 with their setter counterparts. Of course size and angle is available only for
 marker symbol layers and width for line symbol layers.
 
@@ -1049,18 +1049,18 @@ radius
         return FooSymbolLayer(self.radius)
 
 
-The :func:`layerType` method determines the name of the symbol layer, it has
+The :func:`layerType <qgis.core.QgsMarkerSymbolLayer.layerType>` method determines the name of the symbol layer, it has
 to be unique among all symbol layers. Properties are used for persistence of
-attributes. :func:`clone` method must return a copy of the symbol layer with
+attributes. :func:`clone <qgis.core.QgsMarkerSymbolLayer.clone>` method must return a copy of the symbol layer with
 all attributes being exactly the same. Finally there are rendering methods:
-:func:`startRender` is called before rendering first feature, :func:`stopRender`
-when rendering is done. And :func:`renderPoint` method which does the rendering.
+:func:`startRender <qgis.core.QgsMarkerSymbolLayer.startRender>` is called before rendering first feature, :func:`stopRender <qgis.core.QgsMarkerSymbolLayer.stopRender>`
+when rendering is done. And :func:`renderPoint <qgis.core.QgsMarkerSymbolLayer.renderPoint>` method which does the rendering.
 The coordinates of the point(s) are already transformed to the output
 coordinates.
 
 For polylines and polygons the only difference would be in the rendering
-method: you would use :func:`renderPolyline` which receives a list of lines,
-resp. :func:`renderPolygon` which receives list of points on outer ring as a
+method: you would use :func:`renderPolyline <qgis.core.QgsMarkerSymbolLayer.renderPolyline>` which receives a list of lines,
+resp. :func:`renderPolygon <qgis.core.QgsMarkerSymbolLayer.renderPolygon>` which receives list of points on outer ring as a
 first parameter and a list of inner rings (or None) as a second parameter.
 
 Usually it is convenient to add a GUI for setting attributes of the symbol
@@ -1070,7 +1070,7 @@ widget
 
 .. code-block:: python
 
-    class FooSymbolLayerWidget(QgsSymbolLayerV2Widget):
+    class FooSymbolLayerWidget(QgsSymbolLayerWidget):
         def __init__(self, parent=None):
             QgsSymbolLayerV2Widget.__init__(self, parent)
 
@@ -1120,25 +1120,24 @@ We will have to create metadata for the symbol layer
 
 .. code-block:: python
 
-  class FooSymbolLayerMetadata(QgsSymbolLayerV2AbstractMetadata):
+  class FooSymbolLayerMetadata(QgsSymbolLayerAbstractMetadata):
 
     def __init__(self):
-      QgsSymbolLayerV2AbstractMetadata.__init__(self, "FooMarker", QgsSymbolV2.Marker)
+      QgsSymbolLayerAbstractMetadata.__init__(self, "FooMarker", QgsSymbol.Marker)
 
     def createSymbolLayer(self, props):
-      radius = float(props[QString("radius")]) if QString("radius") in props else 4.0
+      radius = float(props["radius"]) if "radius" in props else 4.0
       return FooSymbolLayer(radius)
 
     def createSymbolLayerWidget(self):
       return FooSymbolLayerWidget()
 
-  QgsSymbolLayerV2Registry.instance().addSymbolLayerType(FooSymbolLayerMetadata())
+  QgsApplication.symbolLayerRegistry().addSymbolLayerType(FooSymbolLayerMetadata())
 
 You should pass layer type (the same as returned by the layer) and symbol type
-(marker/line/fill) to the constructor of parent class. :func:`createSymbolLayer`
+(marker/line/fill) to the constructor of parent class. :func:`createSymbolLayer() <qgis.core.QgsSymbolLayerAbstractMetadata.createSymbolLayer>`
 takes care of creating an instance of symbol layer with attributes specified in
-the `props` dictionary. (Beware, the keys are QString instances, not "str"
-objects). And there is :func:`createSymbolLayerWidget` method which returns
+the `props` dictionary. And there is :func:`createSymbolLayerWidget() <qgis.core.QgsSymbolLayerAbstractMetadata.createSymbolLayerWidget>` method which returns
 settings widget for this symbol layer type.
 
 The last step is to add this symbol layer to the registry --- and we are done.
@@ -1280,10 +1279,8 @@ Further Topics
 **TODO:**
 
 * creating/modifying symbols
-* working with style (:class:`QgsStyleV2`)
-* working with color ramps (:class:`QgsVectorColorRampV2`)
-* rule-based renderer (see `this blogpost
-  <http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins>`_)
+* working with style (:class:`QgsStyle`)
+* working with color ramps (:class:`QgsVectorColorRamp`)
 * exploring symbol layer and renderer registries
 
 

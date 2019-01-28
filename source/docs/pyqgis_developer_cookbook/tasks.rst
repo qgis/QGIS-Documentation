@@ -15,23 +15,21 @@ Background processing using threads is a way to maintain a responsive
 user interface when heavy processing is going on.
 Tasks can be used to achieve threading in QGIS.
 
-A task (:class:`QgsTask`) is a container for the code to be performed
-in the background, and the task manager (:class:`QgsTaskManager`) is
+A task (:class:`QgsTask <qgis.core.QgsTask>`) is a container for the code to be performed
+in the background, and the task manager (:class:`QgsTaskManager <qgis.core.QgsTaskManager>`) is
 used to control the running of the tasks.
 These classes simplify background processing in QGIS by providing
 mechanisms for signaling, progress reporting and access
 to the status for background processes.
 Tasks can be grouped using subtasks.
-See the :class:`QGIS Python API doc <qgis.core.pyqgis>`_  for details
-on methods, signals and attributes.
 
-The global task manager (found with ``QgsApplication.taskManager()``)
+The global task manager (found with :func:`QgsApplication.taskManager() <qgis.core.QgsApplication.TaskManager>`)
 is normally used.  This means that your tasks may not be the only
 tasks that are controlled by the task manager.
 
 There are several ways to create a QGIS task:
 
-* Create your own task by extending :class:`QgsTask`
+* Create your own task by extending :class:`QgsTask <qgis.core.QgsTask>`
 
   .. code-block:: python
 
@@ -59,7 +57,7 @@ There are several ways to create a QGIS task:
    them from background threads will result in crashes.
 
 Dependencies between tasks can be described using the ``addSubTask``
-function of :class:`QgsTask`.
+function of :class:`QgsTask <qgis.core.QgsTask>`.
 When a dependency is stated, the task manager will automatically
 determine how these dependencies will be executed.
 Wherever possible dependencies will be executed in parallel in order
@@ -69,7 +67,7 @@ task will also be canceled.
 Circular dependencies can make deadlocks possible, so be careful.
 
 If a task depends on a layer being available, this can be stated
-using the ``setDependentLayers`` function of :class:`QgsTask`.
+using the ``setDependentLayers`` function of :class:`QgsTask <qgis.core.QgsTask>`.
 If a layer on which a task depends is not available, the task will be
 canceled.
 
@@ -81,8 +79,8 @@ tasks after they have executed.
 The scheduling of the tasks is influenced by the task priority, which
 is set in ``addTask``.
 
-The status of tasks can be monitored using :class:`QgsTask` and
-:class:`QgsTaskManager` signals and functions.
+The status of tasks can be monitored using :class:`QgsTask <qgis.core.QgsTask>` and
+:class:`QgsTaskManager <qgis.core.QgsTaskManager>` signals and functions.
 
 
 Examples
@@ -91,7 +89,7 @@ Examples
 Extending QgsTask
 .................
 
-In this example ``RandomIntegerSumTask`` extends :class:`QgsTask` and will
+In this example ``RandomIntegerSumTask`` extends :class:`QgsTask <qgis.core.QgsTask>` and will
 generate 100 random integers between 0 and 500 during a specified period
 of time.
 If the random number is 42, the task is aborted and an exception is
@@ -214,7 +212,7 @@ Task from function
 ..................
 
 Create a task from a function (``run`` in this example).
-The first parameter of the function will hold the :class:`QgsTask`
+The first parameter of the function will hold the :class:`QgsTask <qgis.core.QgsTask>`
 for the function.
 An important (named) parameter is ``on_finished``, that specifies a
 function that will work on the result.

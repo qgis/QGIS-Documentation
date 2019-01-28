@@ -56,7 +56,9 @@ Renderer
 When a raster layer is loaded, it gets a default renderer based on its
 type. It can be altered either in raster layer properties or programmatically.
 
-To query the current renderer::
+To query the current renderer:
+
+::
 
   >>> rlayer.renderer()
   <qgis._core.QgsSingleBandPseudoColorRenderer object at 0x7f471c1da8a0>

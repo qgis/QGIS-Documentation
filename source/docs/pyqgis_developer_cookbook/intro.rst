@@ -33,7 +33,7 @@ Python application.
 
 There is a `complete QGIS API <https://qgis.org/api/>`_ reference that
 documents the classes from the QGIS libraries. :class:`The Pythonic QGIS API
-(pyqgis) <qgis.core.>`_ is nearly identical to the C++ API.
+(pyqgis) <https://qgis.org/pyqgis/master/index.html>`_ is nearly identical to the C++ API.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from the
