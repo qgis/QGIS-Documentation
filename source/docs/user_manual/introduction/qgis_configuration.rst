@@ -188,9 +188,9 @@ Data Sources Settings
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
 * |checkbox| :guilabel:`Execute expressions on server-side if possible`. If the
-operation you trigger in QGIS has an equivalent within the data source, use the
-data source's native method. This can hugely improve performance, such as when
-performing spatial operations on large PostGIS datasets.
+  operation you trigger in QGIS has an equivalent within the data source, use the
+  data source's native method. This can hugely improve performance, such as when
+  performing spatial operations on large PostGIS datasets.
 
 
 **Hidden Browser Path**
