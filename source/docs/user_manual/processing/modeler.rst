@@ -206,7 +206,7 @@ just as you add any other algorithm.
 Exporting a model as an image, PDF or SVG
 .........................................
 
-A model can also be exported as an image, SVG or PDF (for illustration purposes.
+A model can also be exported as an image, SVG or PDF (for illustration purposes).
 
 
 Editing a model
