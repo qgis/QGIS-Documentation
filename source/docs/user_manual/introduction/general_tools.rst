@@ -1166,8 +1166,8 @@ according to the CRS settings available.
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
 different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
-'Square miles', 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters',
-'Square millimeters', 'Square degrees', 'Map units').
+'Square miles', 'Hectares', 'Acres', 'Square centimeters',
+'Square millimeters', 'Square nautical miles', 'Square degrees', 'Map units').
 
 .. _figure_measure_area:
 

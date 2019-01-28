@@ -213,12 +213,12 @@ dependencies.
 Task from function
 ..................
 
-Create a task from a function (``run`` in this example).
+Create a task from a function (``doSomething`` in this example).
 The first parameter of the function will hold the :class:`QgsTask`
 for the function.
 An important (named) parameter is ``on_finished``, that specifies a
-function that will work on the result.
-The ``run`` function in this example has an additional named
+function that will be called when the task has completed.
+The ``doSomething`` function in this example has an additional named
 parameter ``wait_time``.
 
 .. code-block:: python
@@ -232,8 +232,9 @@ parameter ``wait_time``.
       """
       Raises an exception to abort the task.
       Returns a result if success.
-      The result will be passed together with the exception (None in
-      the case of success) to the on_finished method
+      The result will be passed, together with the exception (None in
+      the case of success), to the on_finished method.
+      If there is an exception, there will be no result.
       """
       QgsMessageLog.logMessage('Started task {}'.format(task.description()),
                                MESSAGE_CATEGORY, Qgis.Info)
@@ -266,7 +267,7 @@ parameter ``wait_time``.
   def completed(exception, result=None):
       """This is called when doSomething is finished.
       Exception is not None if doSomething raises an exception.
-      Result is the return value of doSomething."""
+      result is the return value of doSomething."""
       if exception is None:
           if result is None:
               QgsMessageLog.logMessage(
