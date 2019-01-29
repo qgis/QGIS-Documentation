@@ -63,6 +63,20 @@ section, subsection and minisec.
    Subminisec
    ^^^^^^^^^^
 
+Lists
+-----
+
+Lists are useful for structuring the text.  Here are some simple rules
+common to all lists:
+
+* Start all list items with a capital letter
+
+* Do not use punctuation after list items that only contain a single simple
+  sentence
+
+* Use period ( ``.`` ) as punctuation for list items that consist of several
+  sentences or a single compound sentence
+
 Inline Tags
 -----------
 
@@ -357,7 +371,7 @@ useful (coherent, consistent and really connected to each other):
   or ``loadingLayers``.
 * Always capitalize only the first letter of the index unless the word has a
   particular spelling, in which case keep using its spelling e.g., ``Loading layers``,
-  ``Atlas generation``, ``WMS``, ``pgsql2shp``
+  ``Atlas generation``, ``WMS``, ``pgsql2shp``.
 * Keep an eye on the existing `Index list <https://docs.qgis.org/testing/en/genindex.html>`_
   in order to reuse the most convenient expression with the right spelling
   and avoid wrong duplicates.
@@ -443,31 +457,31 @@ Here are some hints to create new, nice looking screenshots.
 The images should be placed  in a :file:`img/` folder, in the same folder as the
 rst file.
 
-* same environment for all the screen caps (same OS, same decoration, same font
+* Same environment for all the screen caps (same OS, same decoration, same font
   size). We have used Ubuntu with Unity and the default "ambience" theme.
   For screenshots of QGIS main window and layouts we have set it to show menus
   on the window (not the default in unity).
-* reduce the window to the minimal space needed to show the feature (taking the
+* Reduce the window to the minimal space needed to show the feature (taking the
   all screen for a small modal window > overkill)
-* the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files
+* The less clutter, the better (no need to activate all the toolbars)
+* Don't resize them in an image editor, the size will be set into the rst files
   if necessary (downscaling the dimensions without properly upping the
   resolution > ugly)
-* cut the background
-* make the top corners transparent if the background is not white
+* Cut the background
+* Make the top corners transparent if the background is not white
 * Set print size resolution to 135 dpi (e.g. in Gimp set the print resolution
   :menuselection:`image --> print size` and save). This way, images will be at
   original size in html and at a good print resolution in the PDF.
-  You can also use ImageMagick convert command to do a batch of images
+  You can also use ImageMagick convert command to do a batch of images:
 
 .. code-block:: bash
 
   convert -units PixelsPerInch input.png -density 135 output.png
 
-* save them in png (no jpeg artifacts)
-* the screenshot should show the content according to what is described in the
+* Save them in png (no jpeg artifacts)
+* The screenshot should show the content according to what is described in the
   text
-* you can find some prepared QGIS-projects that were used before to create
+* You can find some prepared QGIS-projects that were used before to create
   screenshots in :file:`./qgis-projects`.
   This makes it easier to reproduce screenshots for the next version of QGIS.
   These projects use the QGIS `Sample Data <https://qgis.org/downloads/data/>`_
@@ -475,10 +489,10 @@ rst file.
   as the QGIS-Documentation Repository.
 * Use the following command to remove the global menu function in Ubuntu
   to create smaller application screens with menu's:
-
-.. code-block:: bash
-
-  sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
+  
+  .. code-block:: bash
+  
+    sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
 Translate Screenshots
@@ -488,25 +502,25 @@ Here are some hints to create screenshots for your translated user guide.
 Translated images should be placed in a :file:`img/<your_language>/` folder, in
 the same folder as the rst file.
 
-* same environment for all the screen caps (same OS, same decoration, same font
+* Same environment for all the screen caps (same OS, same decoration, same font
   size)
-* use the QGIS -projects included in QGIS-Documentation repository (in
-  :file:`./qgis_projects` ).
+* Use the QGIS projects included in QGIS-Documentation repository (in
+  :file:`./qgis_projects`)
   These were used to produce the 'original' screenshots in the manual.
   The QGIS `Sample Data <https://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
   should be placed in the same folder as the QGIS-Documentation Repository.
-* same size as the english 'original' screenshots, otherwise they will be stretched
+* Same size as the english 'original' screenshots, otherwise they will be stretched
   and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
-* same filename as the english 'original' screenshot.
-* reduce the window to the minimal space needed to show the feature
+* Same filename as the english 'original' screenshot
+* Reduce the window to the minimal space needed to show the feature
   (taking all the screen for a small modal window > overkill)
-* the less clutter, the better (no need to activate all the toolbars)
-* don't resize them in an image editor, the size will be set into the rst files
+* The less clutter, the better (no need to activate all the toolbars)
+* Don't resize them in an image editor, the size will be set into the rst files
   (downscaling the dimensions without properly upping the resolution > ugly)
-* cut the background
-* save them in png (no jpeg artifacts)
-* the screenshot should show the content according to what is described in the
+* Cut the background
+* Save them in png (no jpeg artifacts)
+* The screenshot should show the content according to what is described in the
   text
 
 
@@ -542,7 +556,7 @@ guidelines:
 
 * Avoid use "This algorithm does this and that..." as first sentence in algorithm
   description. Try to use more general words like in TauDEM or GRASS algorithms
-  help
+  help.
 
 * Avoid to describe what the algorithm does by replicating its name and please
   don't replicate the name of the parameter in the description of the parameter
@@ -606,12 +620,12 @@ guidelines:
   Folder path                               ``folder``
   ========================================  =========================  ====================
 
-* the best option is studying an existing and well documented algorithm and copy
+* The best option is studying an existing and well documented algorithm and copy
   all the useful layouts
 
-* if the algorithm does not provide any output just skip that section
+* If the algorithm does not provide any output just skip that section
 
-* when you are finished just follow the guidelines described in :ref:`step_by_step`
+* When you are finished just follow the guidelines described in :ref:`step_by_step`
   to commit your changes and make a Pull Request
 
 Here an example of an existing algorithm to help you with the layout and the description::

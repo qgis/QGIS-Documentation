@@ -107,7 +107,7 @@ To select all the features, the :func:`selectAll() <qgis.core.QgsVectorLayer.sel
  # Get the active layer (must be a vector layer)
  layer = iface.activeLayer()
  layer.selectAll()
- 
+
 To select using an expression, use the :func:`selectByExpression() <qgis.core.QgsVectorLayer.selectByExpression>` method:
 
 .. code-block:: python
@@ -198,8 +198,8 @@ only intersecting features will be returned:
 .. code-block:: python
 
   request = QgsFeatureRequest().setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.ExactIntersect)
-  
-With `setLimit() <https://qgis.org/api/classQgsFeatureRequest.html#aa724a450498eeba7a783ead6b62a2e67>` you can limit the number of requested features. 
+
+With :func:`setLimit() <qgis.core.QgsFeatureReques.setLimit>` you can limit the number of requested features.
 Here's an example:
 
 .. code-block:: python
@@ -239,7 +239,7 @@ iterator returns all features, but returns partial data for each of them.
 
   # Fetch only the feature with id 45
   request.setFilterFid(45)
-  
+
   # The options may be chained
   request.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])
 
