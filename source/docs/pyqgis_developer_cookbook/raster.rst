@@ -31,7 +31,7 @@ variables (e.g. elevation) or discrete variables (e.g. land use). In some
 cases, a raster layer comes with a palette and raster values refer to colors
 stored in the palette.
 
-The following code assumes ``rlayer`` is a :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`_ object.
+The following code assumes ``rlayer`` is a :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` object.
 
 .. code-block:: python
 
@@ -65,14 +65,14 @@ To query the current renderer:
   >>> rlayer.renderer().type()
   u'singlebandpseudocolor'
 
-To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`_. There
+To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`. There
 are several available renderer classes (derived from :class:`QgsRasterRenderer`):
 
-* :class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`_
-* :class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`_
-* :class:`QgsSingleBandColorDataRenderer <qgis.core.QgsSingleBandColorDataRenderer>`_
-* :class:`QgsSingleBandGrayDataRenderer <qgis.core.QgsSingleBandGrayDataRenderer>`_
-* :class:`QgsSingleBandPseudoColorDataRenderer <qgis.core.QgsSingleBandPseudoColorDataRenderer>`_
+* :class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`
+* :class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`
+* :class:`QgsSingleBandColorDataRenderer <qgis.core.QgsSingleBandColorDataRenderer>`
+* :class:`QgsSingleBandGrayDataRenderer <qgis.core.QgsSingleBandGrayDataRenderer>`
+* :class:`QgsSingleBandPseudoColorDataRenderer <qgis.core.QgsSingleBandPseudoColorDataRenderer>`
 
 Single band raster layers can be drawn either in gray colors (low values =
 black, high values = white) or with a pseudocolor algorithm that assigns colors
@@ -156,7 +156,7 @@ Refreshing Layers
 =================
 
 If you do change layer symbology and would like tp ensure that the changes are
-immediately visible to the user, call the :func:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>`_ method.
+immediately visible to the user, call the :func:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>` method.
 
 With WMS raster layers, these command do not work. In this case, you have to explicitly reload the layer data.
 
@@ -168,7 +168,7 @@ With WMS raster layers, these command do not work. In this case, you have to exp
 In case you have changed layer symbology (see sections about raster and vector
 layers on how to do that), you might want to force QGIS to update the layer
 symbology in the layer list (legend) widget. This can be done as follows:
-(``iface`` is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`_.)
+(``iface`` is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`.)
 
 .. code-block:: python
 
@@ -181,7 +181,7 @@ Query Values
 ============
 
 The first method to query raster values is using the :func:`sample` method of
-the :class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>`_ class. You have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>`_
+the :class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` class. You have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>`
 and the band number of the raster layer you want to query. The method returns a
 tuple with the value and ``True`` or ``False`` depending on the results:
 
@@ -189,8 +189,8 @@ tuple with the value and ``True`` or ``False`` depending on the results:
 
   val, res = rlayer.dataProvider().sample(QgsPointXY(15.30, 40.98), 1)
 
-The second method is using the :func:`identify() <qgis.core.QgsRasterDataProvider.identify>`_ method that returns a
-:class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>`_ object.
+The second method is using the :func:`identify() <qgis.core.QgsRasterDataProvider.identify>` method that returns a
+:class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object.
 
 .. code-block:: python
 
@@ -199,7 +199,7 @@ The second method is using the :func:`identify() <qgis.core.QgsRasterDataProvide
   if ident.isValid():
     print(ident.results())
 
-The :func:`results() <qgis.core.QgsRasterIdentifyResult.results>`_ method in this case returns a dictionary, with band indices as
+The :func:`results() <qgis.core.QgsRasterIdentifyResult.results>` method in this case returns a dictionary, with band indices as
 keys, and band values as values. For instance, something like ``{1: 17, 2: 220}``
 
 

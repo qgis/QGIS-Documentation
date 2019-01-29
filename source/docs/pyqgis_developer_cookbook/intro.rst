@@ -33,7 +33,7 @@ Python application.
 
 There is a `complete QGIS API <https://qgis.org/api/>`_ reference that
 documents the classes from the QGIS libraries. :class:`The Pythonic QGIS API
-(pyqgis) <https://qgis.org/pyqgis/master/index.html>`_ is nearly identical to the C++ API.
+(pyqgis) <https://qgis.org/pyqgis/master/index.html>` is nearly identical to the C++ API.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from the
@@ -62,7 +62,7 @@ The screenshot above illustrates how to get the layer currently
 selected in the layer list, show its ID and optionally, if it is a
 vector layer, show the feature count.
 For interaction with the QGIS environment, there is a :data:`iface`
-variable, which is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`_. This
+variable, which is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`. This
 interface allows access to the map canvas, menus, toolbars and other
 parts of the QGIS application. 
 

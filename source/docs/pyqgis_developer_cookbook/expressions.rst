@@ -94,7 +94,7 @@ Expressions with features
 --------------------------
 
 The following example will evaluate the given expression against a feature.
-A :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`_
+A :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
 object has to be creted and passed, to allow the expression to access the feature field values.
 "Column" is the name of the field in the layer.
 
@@ -106,8 +106,8 @@ object has to be creted and passed, to allow the expression to access the featur
   >>> exp.evaluate(context)
   99
 
-You can also use :func:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>`_ if you need check more than
-one feature.  Using :func:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>`_ will increase the speed
+You can also use :func:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` if you need check more than
+one feature.  Using :func:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` will increase the speed
 that evaluate takes to run.
 
 ::

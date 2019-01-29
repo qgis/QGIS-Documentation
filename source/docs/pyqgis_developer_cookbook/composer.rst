@@ -17,15 +17,15 @@ Map Rendering and Printing
 
 There are generally two approaches when input data should be rendered as a map:
 either do it quick way using `QgsMapRendererJob` or produce more fine-tuned
-output by composing the map with the :class:`QgsLayout <qgis.core.QgsLayout>`_ class.
+output by composing the map with the :class:`QgsLayout <qgis.core.QgsLayout>` class.
 
 .. index:: Map rendering; Simple
 
 Simple Rendering
 ================
 
-The rendering is done creating a :class:`QgsMapSettings <qgis.core.QgsMapSettings>`_ object to define the rendering options,
-and then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>`_ with those options. The latter is then
+The rendering is done creating a :class:`QgsMapSettings <qgis.core.QgsMapSettings>` object to define the rendering options,
+and then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` with those options. The latter is then
 used to create the resulting image.
 
 Here's an example
@@ -81,7 +81,7 @@ though it is not available in the GUI library. If you are not familiar with
 then you are encouraged to check the documentation now, because the layout
 is based on it. 
 
-The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>`_ class, which is derived from the Qt :class:`QGraphicsScene` class. Let us create an instance of it:
+The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>` class, which is derived from the Qt :class:`QGraphicsScene` class. Let us create an instance of it:
 
 .. code-block:: python
   
@@ -90,7 +90,7 @@ The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>`_
   layout.initializeDefaults()
 
 Now we can add various elements (map, label, ...) to the layout. All these objects
-are represented by classes that inherit from the base :class:`QgsLayoutItem <qgis.core.QgsLayoutItem>`_ class.
+are represented by classes that inherit from the base :class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class.
 
 Here's a description of some of the main layout items that can be added to a layout.
 
@@ -184,14 +184,14 @@ to the composition), we can proceed to produce a raster and/or vector output.
 Exporting the layout
 ------------------------
 
-To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`_ class must be used.
+To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` class must be used.
 
 .. code-block:: python
   
   exporter = QgsLayoutExporter(layout)
   exporter.exportToPdf("path/to/output/pdf", QgsLayoutExporter.PdfExportSettings())
 
-Use the :func:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>`_ in case you want to export to an image instead of a PDF file.
+Use the :func:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

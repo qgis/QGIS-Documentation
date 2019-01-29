@@ -56,12 +56,12 @@ created in several different ways:
     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
-has been successful: :func:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>`_ must return :const:`True`.
+has been successful: :func:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
 
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
-:func:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`_ otherwise it will fail to find the
+:func:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the
 database. If you are running the commands from QGIS python console or
 developing a plugin you do not care: everything is already set up for you.
 

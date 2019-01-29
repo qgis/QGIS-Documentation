@@ -33,15 +33,15 @@ and items. If not, please read the `overview of the framework
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
-rendered to an image (using :class:`QgsMapRendererJob <qgis.gui.QgsMapRendererJob>`_ class) and that image is
- displayed on the canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>`_  class also controls refreshing
+rendered to an image (using :class:`QgsMapRendererJob <qgis.gui.QgsMapRendererJob>` class) and that image is
+ displayed on the canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>`  class also controls refreshing
 of the rendered map. Besides this item which acts as a background, there may be
 more **map canvas items**.
 Typical map canvas items are rubber bands (used for measuring, vector editing
 etc.) or vertex markers. The canvas items are usually used to give visual
 feedback for map tools, for example, when creating a new polygon, the map tool
 creates a rubber band canvas item that shows the current shape of the polygon.
-All map canvas items are subclasses of :class:`QgsMapCanvasItem <qgis.gui.QgsMapCanvasItem>`_  which adds
+All map canvas items are subclasses of :class:`QgsMapCanvasItem <qgis.gui.QgsMapCanvasItem>`  which adds
 some more functionality to the basic ``QGraphicsItem`` objects.
 
 .. index:: map canvas; architecture
@@ -113,12 +113,12 @@ Using Map Tools with Canvas
 
 The following example constructs a window that contains a map canvas and basic
 map tools for map panning and zooming. Actions are created for activation of
-each tool: panning is done with :class:`QgsMapToolPan <qgis.gui.QgsMapToolPan>`_, zooming in/out with a
-pair of :class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>`_ instances. The actions are set as checkable and
+each tool: panning is done with :class:`QgsMapToolPan <qgis.gui.QgsMapToolPan>`, zooming in/out with a
+pair of :class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>` instances. The actions are set as checkable and
 later assigned to the tools to allow automatic handling of checked/unchecked
 state of the actions -- when a map tool gets activated, its action is marked as
 selected and the action of the previous map tool is deselected. The map tools
-are activated using :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`_ method.
+are activated using :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method.
 
 .. code-block:: python
 
@@ -194,8 +194,8 @@ Rubber Bands and Vertex Markers
 To show some additional data on top of the map in canvas, use map canvas items.
 It is possible to create custom canvas item classes (covered below), however
 there are two useful canvas item classes for convenience:
-:class:`QgsRubberBand <qgis.gui.QgsRubberBand>`_ for drawing polylines or polygons, and
-:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>`_ for drawing points. They both work with map
+:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` for drawing polylines or polygons, and
+:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` for drawing points. They both work with map
 coordinates, so the shape is moved/scaled automatically when the canvas is
 being panned or zoomed.
 
@@ -240,8 +240,8 @@ would just delete the reference and the object will still exist as it is owned
 by the canvas)
 
 Rubber band can be also used for drawing points, however
-:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>`_ class is better suited for this
-(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>`_` would only draw a rectangle around the desired point).
+:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited for this
+(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>`` would only draw a rectangle around the desired point).
 
 Here's how to use the vertex marker:
 
@@ -271,8 +271,8 @@ Writing Custom Map Tools
 You can write your custom tools, to implement a custom behavior to actions
 performed by users on the canvas.
 
-Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`_, class or any derived
-class, and selected as active tools in the canvas using the :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`_
+Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`, class or any derived
+class, and selected as active tools in the canvas using the :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`
 method as we have already seen.
 
 Here is an example of a map tool that allows to define a rectangular extent by

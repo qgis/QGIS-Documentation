@@ -37,8 +37,8 @@ provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
-The quickest way to open and display a vector layer in QGIS is the :func:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`_
-method of the :class:`QgisInterface <qgis.gui.QgisInterface>`_:
+The quickest way to open and display a vector layer in QGIS is the :func:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
+method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
 
@@ -79,7 +79,7 @@ providers:
 
 * PostGIS database --- data source is a string with all information needed to
   create a connection to PostgreSQL database. 
-  :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>`_ class
+  :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class
   can generate this string for you. Note that QGIS has to be compiled with
   Postgres support, otherwise this provider isn't available:
 
@@ -135,7 +135,7 @@ providers:
   pair: Loading; SpatiaLite layers
 
 * SpatiaLite database --- Similarly to PostGIS databases,
-  :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>`_ can be used for generation of data
+  :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` can be used for generation of data
   source identifier:
 
   .. code-block:: python
@@ -214,7 +214,7 @@ by default). To load a raster from a file, specify its filename and display name
 
 
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer
-function of the :class:`QgisInterface <qgis.gui.QgisInterface>`_ object:
+function of the :class:`QgisInterface <qgis.gui.QgisInterface>` object:
 
 .. code-block:: python
 
@@ -280,15 +280,15 @@ QgsProject instance
 ===================
 
 If you would like to use the opened layers for rendering, do not forget to add
-them to the :class:`QgsProject <qgis.core.QgsProject>`_ instance. 
-The :class:`QgsProject <qgis.core.QgsProject>`_ instance takes ownership of layers
+them to the :class:`QgsProject <qgis.core.QgsProject>` instance. 
+The :class:`QgsProject <qgis.core.QgsProject>` instance takes ownership of layers
 and they can be later accessed from any part of the application by their unique
 ID. When the layer is removed from the project, it gets deleted, too. Layers can
 be removed by the user in the QGIS interface, or via Python using the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method.
 
 .. index:: Qgis project; Adding a layer
 
-Adding a layer to the current project is done using the :func:`addMapLayer() <qgis.core.QgsProject.addMapLayer>`_ method:
+Adding a layer to the current project is done using the :func:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:
 
 .. code-block:: python
 
@@ -305,16 +305,16 @@ To add a layer at an absolute position:
     # the position is a number starting from 0, with -1 an alias for the end
     layerTree.insertChildNode(-1, QgsLayerTreeLayer(layer))
 
-If you want to delete the layer use the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>`_ method:
+If you want to delete the layer use the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method:
 
 .. code-block:: python
 
     QgsProject.instance().removeMapLayer(layer_id)
 
-In the above code, the layer id is passed (you can get it calling the :func:`id() <qgis.core.QgsMapLayer.id>`_ method of the layer),
+In the above code, the layer id is passed (you can get it calling the :func:`id() <qgis.core.QgsMapLayer.id>` method of the layer),
 but you can also pass the layer object itself.
 
-For a list of loaded layers and layer ids, use the :func:`mapLayers() <qgis.core.QgsProject.mapLayers>`_ method:
+For a list of loaded layers and layer ids, use the :func:`mapLayers() <qgis.core.QgsProject.mapLayers>` method:
 
 .. code-block:: python
 
