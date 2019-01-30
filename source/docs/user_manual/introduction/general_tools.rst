@@ -855,14 +855,15 @@ Copyright Label
 #. Select :menuselection:`View --> Decorations --> Copyright Label` to open
    the dialog (see figure_decorations_copyright_).
 #. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
-#. Enter the text you want to place on the map. You can use HTML as
-   shown in the example.
+#. Enter the text you want to place on the map.
+   You can use HTML as shown in the example, and include an expression
+   (the :guilabel:`Insert an Expression` button).
 #. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
    font color and opacity by clicking the black arrow to the right of the font combo box.
 #. Choose the placement of the label from the :guilabel:`Placement`
    |selectString| combo box.
 #. Refine the placement of the item by setting a horizontal and/or vertical
-   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. You can change the color to apply.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
