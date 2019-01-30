@@ -876,6 +876,9 @@ General Properties
 
 In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
 
+* see the location of the project file
+* set the folder for the project home (available in the `Project Home` item
+  in the browser)
 * give a title to the project beside the project file path
 * choose the color to use for features when they are selected
 * choose the background color: the color to use for the map canvas
