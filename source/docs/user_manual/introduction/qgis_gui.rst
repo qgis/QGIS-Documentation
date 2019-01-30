@@ -342,6 +342,7 @@ are enabled.
 ==============================================================  =======================  =======================  ===============================
 Menu Option                                                     Shortcut                 Toolbar                  Reference
 ==============================================================  =======================  =======================  ===============================
+|coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       :ref:`coordcapt`
 |geometryChecker| :guilabel:`Check Geometries...`               \                        :guilabel:`Vector`       :ref:`geometry_checker`
 |gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       :ref:`plugin_gps`
 |topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       :ref:`topology`
@@ -350,7 +351,6 @@ Menu Option                                                     Shortcut        
 :menuselection:`Analysis Tools -->`                             :kbd:`Alt+O` + :kbd:`A`  \                        :ref:`processing.options`
 :menuselection:`Data Management Tools -->`                      :kbd:`Alt+O` + :kbd:`D`  \                        :ref:`processing.options`
 :menuselection:`Research Tools -->`                             :kbd:`Alt+O` + :kbd:`R`  \                        :ref:`processing.options`
-|coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       :ref:`coordcapt`
 ==============================================================  =======================  =======================  ===============================
 
 |
