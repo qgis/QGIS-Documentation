@@ -11,8 +11,8 @@ Geometry Checker Plugin
 =======================
 
 Geometry Checker is a powerful core plugin to check and fix the geometry
-validity of a layer. It is available from the :menuselection:`Vector -->`
-|geometryChecker| :menuselection:`Geometry Checker` menu.
+validity of a layer. It is available from the :menuselection:`Vector`
+menu (|geometryChecker| :menuselection:`Geometry Checker`).
 
 Configuring the checks
 ----------------------
