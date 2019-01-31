@@ -903,7 +903,7 @@ Several additional parameters are available to change the size of the legend
 elements:
 
 * **BOXSPACE** space between legend frame and content (mm)
-* **LAYERSPACE** versical space between layers (mm)
+* **LAYERSPACE** vertical space between layers (mm)
 * **LAYERTITLESPACE** vertical space between layer title and items following
   (mm)
 * **SYMBOLSPACE** vertical space between symbol and item following (mm)
