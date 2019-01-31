@@ -17,7 +17,7 @@ menu (|geometryChecker| :menuselection:`Check Geometries...`).
 Configuring the checks
 ----------------------
 
-The :guilabel:`Geometry Checker` dialog shows different grouped settings in the
+The :guilabel:`Check Geometries` dialog shows different grouped settings in the
 first tab (:guilabel:`Setup`):
 
 * :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
