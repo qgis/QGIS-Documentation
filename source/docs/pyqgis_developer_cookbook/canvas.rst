@@ -33,7 +33,7 @@ and items. If not, please read the `overview of the framework
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
-rendered to an image (using :class:`QgsMapRendererJob <qgis.gui.QgsMapRendererJob>` class) and that image is
+rendered to an image (using the :class:`QgsMapRendererJob <qgis.gui.QgsMapRendererJob>` class) and that image is
  displayed on the canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>`  class also controls refreshing
 of the rendered map. Besides this item which acts as a background, there may be
 more **map canvas items**.
