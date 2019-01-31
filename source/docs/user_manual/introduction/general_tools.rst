@@ -843,7 +843,7 @@ Copyright Label
 ...............
 
 |copyrightLabel| :sup:`Copyright label` adds a copyright label to the map
- using your choice of text.
+using your choice of text.
 
 .. _figure_decorations_copyright:
 
