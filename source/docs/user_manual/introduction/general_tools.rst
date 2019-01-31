@@ -817,15 +817,16 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-.. _figure_decorations_grid:
-
-.. figure:: img/grid_dialog.png
-   :align: center
-
-   The Grid Dialog
-
 #. Select from menu :menuselection:`View --> Decorations --> Grid`.
-   The dialog starts (see figure_decorations_grid_).
+   The dialog starts.
+
+   .. _figure_decorations_grid:
+
+   .. figure:: img/grid_dialog.png
+      :align: center
+
+      The Grid Dialog
+
 #. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
    definitions according to the layers loaded in the map canvas.
 #. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
@@ -841,15 +842,16 @@ Copyright Label
 |copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
 you prefer to the map.
 
-.. _figure_decorations_copyright:
-
-.. figure:: img/copyright.png
-   :align: center
-
-   The Copyright Dialog
-
 #. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-   The dialog starts (see figure_decorations_copyright_).
+   The dialog starts.
+
+   .. _figure_decorations_copyright:
+
+   .. figure:: img/copyright.png
+      :align: center
+
+      The Copyright Dialog
+
 #. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
    checked.
 #. Enter the text you want to place on the map. You can use HTML as
@@ -876,17 +878,18 @@ North Arrow
 |northArrow| :sup:`North Arrow` adds a north arrow on the map canvas.
 You can control the style and placement of the north arrow.
 
-.. _figure_decorations_north:
-
-.. figure:: img/north_arrow_dialog.png
-   :align: center
-
-   The North Arrow Dialog
-
 To add a north arrow:
 
 #. Select from menu :menuselection:`View --> Decorations --> North Arrow`.
-   The dialog starts (see figure_decorations_north_).
+   The dialog starts.
+   
+   .. _figure_decorations_north:
+
+   .. figure:: img/north_arrow_dialog.png
+      :align: center
+
+      The North Arrow Dialog
+
 #. Make sure the |checkbox| :guilabel:`Enable north arrow` checkbox is checked.
 #. Optionally, change the color, size or choose a custom svg.
 #. Optionally, change the angle or choose **Automatic** to let QGIS determine the
@@ -907,13 +910,6 @@ Scale Bar
 |scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
-.. _figure_decorations_scale:
-
-.. figure:: img/scale_bar_dialog.png
-   :align: center
-
-   The Scale Bar Dialog
-
 QGIS only supports displaying the scale in the same units as your map frame.
 So if the units of your layers are in meters, you can't create a scale bar in
 feet. Likewise, if you are using decimal degrees, you can't create a scale
@@ -922,7 +918,15 @@ bar to display distance in meters.
 To add a scale bar:
 
 #. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-   The dialog starts (see figure_decorations_scale_).
+   The dialog starts.
+
+   .. _figure_decorations_scale:
+
+   .. figure:: img/scale_bar_dialog.png
+      :align: center
+
+      The Scale Bar Dialog
+
 #. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
 #. Choose the style from the :guilabel:`Scale bar style` |selectString|
    combo box.
@@ -949,13 +953,6 @@ You can control the style and labeling of the displayed layout extents.
 This decoration is useful when you are tweaking the positioning of map elements such as labels,
 and need to know the actual visible region of print layouts.
 
-.. _figure_decorations_layoutextents:
-
-.. figure:: img/decoration_layoutextents.png
-   :align: center
-
-   The Layout Extents Dialog
-
 .. _figure_decorations_layoutextents_example:
 
 .. figure:: img/decoration_layoutextents_example.png
@@ -968,16 +965,24 @@ and need to know the actual visible region of print layouts.
 To add layout extent(s):
 
 #. Select from menu :menuselection:`View --> Decorations --> Layout Extents`.
-   The dialog starts (see figure_decorations_layoutextents_).
+   The dialog starts.
+
+   .. _figure_decorations_layoutextents:
+
+   .. figure:: img/decoration_layoutextents.png
+      :align: center
+
+      The Layout Extents Dialog
+
 #. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
-#. Optionally, change the symbol and labeling of the extents
+#. Optionally, change the symbol and labeling of the extents.
 #. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 .. tip::
 
    **Settings of Decorations**
 
-   When you save a :file:`.qgs` project, any changes you have made to Grid,
+   When you save a QGIS project file, any changes you have made to Grid,
    North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project and restored
    the next time you load the project.
 
