@@ -67,11 +67,11 @@ tools.
    QuickOSM...` menu.
 #. In the :guilabel:`Quick query` tab, select ``building`` in the :guilabel:`Key`
    drop-down menu.
-#. Leave empty the :guilabel:`Value` field, meaning that you are querying all
+#. Leave the :guilabel:`Value` field empty, meaning that you are querying all
    buildings.
 #. Select :guilabel:`Canvas Extent` in the next drop-down menu.
-#. Expand the :guilabel:`Advanced` group below and uncheck on the right all
-   geometry types except :guilabel:`Multipolygons`.
+ #. Expand the :guilabel:`Advanced` group below and uncheck all
+   geometry types on the right except :guilabel:`Multipolygons`.
 #. Press :guilabel:`Run query`.
 
    .. image:: img/building_query_builder.png
@@ -90,7 +90,7 @@ tools.
       geometry types.
    #. ``Key = place`` and ``Points`` geometry type.
 
-The above process adds the layers as temporary files (indicated by the
+This process adds the layers as temporary files (indicated by the
 |indicatorMemory| icon next to their name).
 
 .. image:: img/osm_data_loaded.png
@@ -99,19 +99,19 @@ The above process adds the layers as temporary files (indicated by the
 You can sample the data your region contains in order to see what kind of
 results your region will yield.
 
-We now need to save the resulting data in permanent formats to use during your
+We now need to save the resulting data to use during your
 course. We'll be using ESRI Shapefile, GeoPackage and SpatiaLite formats
 depending on the data.
 
 To convert the :guilabel:`place` temporary layer to another format:
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`place` layer,
-   opening the :guilabel:`Save Scratch Layer` dialog.
+#. Click the |indicatorMemory| icon next to the :guilabel:`place` layer
+   to open the :guilabel:`Save Scratch Layer` dialog.
 
-   .. note:: If you need to replace some particular properties (CRS, extent,
-    fields...) of the temporary layer, use instead the :menuselection:`Export
-    --> Save Features as...` contextual menu, and ensure the :guilabel:`Add
-    saved file to map` option is checked. A new layer is added in such case.
+    .. note:: If you need to change any of the temporary layer's properties (CRS, extent,
+     fields...), use the :menuselection:`Export
+     --> Save Features as...` contextual menu instead, and ensure the :guilabel:`Add
+     saved file to map` option is checked. This adds a new layer.
 
 #. Select the :guilabel:`ESRI Shapefile` format.
 #. Use the :guilabel:`...` button to browse to the :file:`exercise_data/shapefile/`
@@ -123,7 +123,7 @@ To convert the :guilabel:`place` temporary layer to another format:
 #. Press :guilabel:`OK`.
 
    In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is
-   swapped in place with the saved :guilabel:`places` shapefile layer and
+   replaced with the saved :guilabel:`places` shapefile layer and
    the temporary icon next to it removed.
 #. Double-click the layer to open its :menuselection:`Layer Properties -->
    Source` tab and update the :guilabel:`Layer name` property to match the file
@@ -153,11 +153,10 @@ to use during the course:
 
 #. Press :guilabel:`OK`.
 #. Rename the layer in its properties dialog.
-#. Repeat the process with the :guilabel:`highway` layer saved as ``roads`` in
-   the GeoPackage database.
+#. Repeat the process with the :guilabel:`highway` layer, saving it as ``roads`` in
+   the same GeoPackage database.
 
-The last step is to create a SpatiaLite file with the remaining temporary
-file. 
+The last step is to save the remaining temporary file as a SpatiaLite file.
 
 #. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer.
 #. Select the :guilabel:`SpatiaLite` format.
@@ -171,7 +170,7 @@ file.
 #. Press :guilabel:`OK`.
 
 You should now have a map which looks something like this (the symbology will
-certainly be very different, but that is fine):
+certainly be very different, because QGIS randomly assigns colors when layers are added to the map):
 
 .. image:: img/post_osm_import.png
   :align: center
