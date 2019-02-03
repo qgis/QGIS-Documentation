@@ -34,9 +34,9 @@ should have a good mix of urban and rural areas, containing roads of differing
 significance, area boundaries (such as nature reserves or farms) and surface
 water, such as streams and rivers.
 
-#. Open a new QGIS project.
+#. Open a new QGIS project
 #. Select :menuselection:`Layer --> Data Source Manager` to open the
-   :guilabel:`Data Source Manager` dialog.
+   :guilabel:`Data Source Manager` dialog
 #. In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down menu
    and double-click the :guilabel:`OpenStreetMap` item.
 
@@ -45,8 +45,8 @@ water, such as streams and rivers.
       :scale: 60
 
    A map of the world is now visible on the map canvas.
-#. Close the :guilabel:`Data Source Manager` dialog.
-#. Move to the area you'd like to use as study area.
+#. Close the :guilabel:`Data Source Manager` dialog
+#. Move to the area you'd like to use as study area
 
    .. image:: img/swellendam_neighborhood.png
       :align: center
@@ -55,8 +55,8 @@ water, such as streams and rivers.
 Now that we have the area we'll extract the data from, let's enable the extraction
 tools.
 
-#. Go to :menuselection:`Plugins --> Manage/Install Plugins...`.
-#. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box.
+#. Go to :menuselection:`Plugins --> Manage/Install Plugins...`
+#. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box
 #. Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then :guilabel:`Close`
    the dialog.
 
@@ -64,15 +64,15 @@ tools.
       :align: center
 
 #. Execute the new plugin from :menuselection:`Vector --> QuickOSM -->
-   QuickOSM...` menu.
+   QuickOSM...` menu
 #. In the :guilabel:`Quick query` tab, select ``building`` in the :guilabel:`Key`
-   drop-down menu.
+   drop-down menu
 #. Leave the :guilabel:`Value` field empty, meaning that you are querying all
    buildings.
-#. Select :guilabel:`Canvas Extent` in the next drop-down menu.
- #. Expand the :guilabel:`Advanced` group below and uncheck all
+#. Select :guilabel:`Canvas Extent` in the next drop-down menu
+#. Expand the :guilabel:`Advanced` group below and uncheck all
    geometry types on the right except :guilabel:`Multipolygons`.
-#. Press :guilabel:`Run query`.
+#. Press :guilabel:`Run query`
 
    .. image:: img/building_query_builder.png
       :align: center
@@ -108,19 +108,19 @@ To convert the :guilabel:`place` temporary layer to another format:
 #. Click the |indicatorMemory| icon next to the :guilabel:`place` layer
    to open the :guilabel:`Save Scratch Layer` dialog.
 
-    .. note:: If you need to change any of the temporary layer's properties (CRS, extent,
+   .. note:: If you need to change any of the temporary layer's properties (CRS, extent,
      fields...), use the :menuselection:`Export
      --> Save Features as...` contextual menu instead, and ensure the :guilabel:`Add
      saved file to map` option is checked. This adds a new layer.
 
-#. Select the :guilabel:`ESRI Shapefile` format.
+#. Select the :guilabel:`ESRI Shapefile` format
 #. Use the :guilabel:`...` button to browse to the :file:`exercise_data/shapefile/`
    folder and save the file as :file:`places.shp`.
 
    .. image:: img/save_osm_place.png
       :align: center
 
-#. Press :guilabel:`OK`.
+#. Press :guilabel:`OK`
 
    In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is
    replaced with the saved :guilabel:`places` shapefile layer and
@@ -131,9 +131,9 @@ To convert the :guilabel:`place` temporary layer to another format:
 
 #. Repeat the process for other layers, renaming them as follows:
 
-   * ``natural_water`` into ``water``;
-   * ``waterway_river`` into ``rivers``;
-   * ``boundary_protected_area`` into ``protected_areas``.
+   * ``natural_water`` into ``water``
+   * ``waterway_river`` into ``rivers``
+   * ``boundary_protected_area`` into ``protected_areas``
 
    Each resulting data set should be saved in the :file:`exercise_data/shapefile/`
    directory.
@@ -141,25 +141,25 @@ To convert the :guilabel:`place` temporary layer to another format:
 The next step is to create a GeoPackage file from the :guilabel:`building` layer
 to use during the course:
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`building` layer.
-#. Select the :guilabel:`GeoPackage` format.
+#. Click the |indicatorMemory| icon next to the :guilabel:`building` layer
+#. Select the :guilabel:`GeoPackage` format
 #. Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`
-   folder.
+   folder
 #. By default, the :guilabel:`Layer name` is filled as the file name.
    Replace it with ``buildings``.
 
    .. image:: img/save_osm_building.png
       :align: center
 
-#. Press :guilabel:`OK`.
-#. Rename the layer in its properties dialog.
+#. Press :guilabel:`OK`
+#. Rename the layer in its properties dialog
 #. Repeat the process with the :guilabel:`highway` layer, saving it as ``roads`` in
    the same GeoPackage database.
 
 The last step is to save the remaining temporary file as a SpatiaLite file.
 
-#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer.
-#. Select the :guilabel:`SpatiaLite` format.
+#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer
+#. Select the :guilabel:`SpatiaLite` format
 #. Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/`
    folder. By default, the :guilabel:`Layer name` is filled as the file name.
    Do not change it.
@@ -167,10 +167,11 @@ The last step is to save the remaining temporary file as a SpatiaLite file.
    .. image:: img/save_osm_landuse.png
       :align: center
 
-#. Press :guilabel:`OK`.
+#. Press :guilabel:`OK`
 
 You should now have a map which looks something like this (the symbology will
-certainly be very different, because QGIS randomly assigns colors when layers are added to the map):
+certainly be very different, because QGIS randomly assigns colors when layers
+are added to the map):
 
 .. image:: img/post_osm_import.png
   :align: center
