@@ -66,18 +66,18 @@ Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections
 * There should be 9 fields in the :guilabel:`rivers` layer:
 
   #. Select the layer in the :guilabel:`Layers` panel.
-  #. Right-click and choose :guilabel:`Attribute table`, or press the |openTable|
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
      button on the :guilabel:`Attributes Toolbar`.
   #. Count the number of columns.
 
-  .. tip:: A quicker approach could also consist in double-clicking the
-   :guilabel:`rivers` layer, open :menuselection:`Layer properties --> Source
-   Fields` tab and pick there the count of fields.
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties --> Source
+   Fields` tab, where you will find a numbered list of the table's fields.
 
-* Information about towns are available in the :guilabel:`places` layer. Open its
-  attribute table as previously seen: there are two features whose :guilabel:`place`
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
   attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
-  You can add any more information picked from these two records.
+  You can add comment on other fields from these two records, if you like.
 
 :ref:`Back to text <backlink-vector-explore-attribute-data>`
 
