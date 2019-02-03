@@ -29,13 +29,13 @@ Let's get started right away!
 -------------------------------------------------------------------------------
 
 #. Open QGIS. You will have a new, blank map.
-#. Look for and click the :guilabel:`Open Data Source Manager` button: |dataSourceManager|.
+#. Click the :guilabel:`Open Data Source Manager` button: |dataSourceManager|.
    If you can't find the icon, check that the :guilabel:`Data Source Manager`
    toolbar is enabled in the :menuselection:`View --> Toolbars` menu.
 
    The :guilabel:`Data Source Manager` dialog allows you to choose the data to
    load depending on the data type:
-   the tabs in the left part of the dialog list the main data types.
+   the tabs in the left-hand section of the dialog list the main data types.
    You can also browse the files directly from the folder of your computer
    with the *Browser* tab (see :ref:`browser_panel_tm` section):
 
@@ -83,7 +83,7 @@ You've learned how to add a layer and create a basic map!
 
 Now you're familiar with the basic function of the :guilabel:`Open Data Source Manager`
 button, but what about all the others? How does this interface work? Before we
-go on with the more involved stuff, let's first take a good look at the general
+go on, let's first take a look at the
 layout of the QGIS interface. This is the topic of the next lesson.
 
 

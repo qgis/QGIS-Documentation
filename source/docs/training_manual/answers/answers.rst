@@ -14,7 +14,7 @@ Answer Sheet
 ...............................................................................
 
 In the main area of the dialog you should see many shapes with different
-colors. Each entity belongs to a layer you can identify by its color in the
+colors. Each shape belongs to a layer you can identify by its color in the
 left panel (your colors may be different from the ones below):
 
 .. image:: img/basic_map.png
