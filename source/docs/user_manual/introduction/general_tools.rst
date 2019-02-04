@@ -808,9 +808,8 @@ You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`lo
 Decorations
 -----------
 
-Decorations include Grid, Copyright Label, North Arrow,
-Scale Bar and Layout Extents. They are used to 'decorate' the map by adding cartographic
-elements.
+Decorations include Grid, Copyright Label, North Arrow, Scale Bar and Layout
+Extents. They are used to 'decorate' the map by adding cartographic elements.
 
 .. index:: Grid
 .. _grid_decoration:
@@ -821,15 +820,15 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-.. _figure_decorations_grid:
+#. Select :menuselection:`View --> Decorations --> Grid` to open the dialog.
 
-.. figure:: img/grid_dialog.png
-   :align: center
+   .. _figure_decorations_grid:
 
-   The Grid Dialog
+   .. figure:: img/grid_dialog.png
+      :align: center
 
-#. Select :menuselection:`View --> Decorations --> Grid`
-   to open the Grid dialog (see figure_decorations_grid_).
+      The Grid Dialog
+
 #. Tick |checkbox| :guilabel:`Enable grid` and set grid
    definitions according to the layers loaded in the map canvas.
 #. Tick |checkbox| :guilabel:`Draw annotations` and set
@@ -843,17 +842,18 @@ Copyright Label
 ...............
 
 |copyrightLabel| :sup:`Copyright label` adds a copyright label to the map
- using your choice of text.
-
-.. _figure_decorations_copyright:
-
-.. figure:: img/copyright.png
-   :align: center
-
-   The Copyright Dialog
+using your choice of text.
 
 #. Select :menuselection:`View --> Decorations --> Copyright Label` to open
    the dialog (see figure_decorations_copyright_).
+
+   .. _figure_decorations_copyright:
+
+   .. figure:: img/copyright.png
+      :align: center
+
+      The Copyright Dialog
+
 #. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
 #. Enter the text you want to place on the map.
    You can include an expression
@@ -865,7 +865,7 @@ Copyright Label
 #. Refine the placement of the item by setting a horizontal and/or vertical
    :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
-#. You can change the color to apply.
+#. You can change the color to apply
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 In the example above, which is the default, QGIS places a copyright symbol
@@ -880,22 +880,22 @@ North Arrow
 |northArrow| :sup:`North Arrow` adds a north arrow on the map canvas,
 with options for style and placement.
 
-.. _figure_decorations_north:
-
-.. figure:: img/north_arrow_dialog.png
-   :align: center
-
-   The North Arrow Dialog
-
 To add a north arrow:
 
-#. Select :menuselection:`View --> Decorations --> North Arrow` to open
-   the dialog (see figure_decorations_north_).
-#. Make sure |checkbox| :guilabel:`Enable north arrow` is checked.
+#. Select :menuselection:`View --> Decorations --> North Arrow` to open the dialog.
+   
+   .. _figure_decorations_north:
+
+   .. figure:: img/north_arrow_dialog.png
+      :align: center
+
+      The North Arrow Dialog
+
+#. Make sure |checkbox| :guilabel:`Enable north arrow` is checked
 #. Optionally change the color and size, or choose a custom SVG.
 #. Optionally change the angle or choose **Automatic** to let QGIS determine the
-   direction.
-#. Optionally choose the placement from the Placement combo box.
+   direction
+#. Optionally choose the placement from the Placement combo box
 #. Optionally refine the placement of the arrow by setting a horizontal and/or vertical
    `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
@@ -911,13 +911,6 @@ Scale Bar
 |scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
-.. _figure_decorations_scale:
-
-.. figure:: img/scale_bar_dialog.png
-   :align: center
-
-   The Scale Bar Dialog
-
 QGIS only supports displaying the scale in the same units as your map frame.
 So, if the units of your project's CRS are meters, you can't create a scale bar in
 feet. Likewise, if you are using decimal degrees, you can't create a scale
@@ -925,20 +918,26 @@ bar to display distance in meters.
 
 To add a scale bar:
 
-#. Select :menuselection:`View --> Decorations --> Scale Bar` to open
-   the dialog (see figure_decorations_scale_).
-#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked.
-#. Choose a style from the :guilabel:`Scale bar style` |selectString|
-   combo box.
+#. Select :menuselection:`View --> Decorations --> Scale Bar` to open the dialog
+
+   .. _figure_decorations_scale:
+
+   .. figure:: img/scale_bar_dialog.png
+      :align: center
+
+      The Scale Bar Dialog
+
+#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked
+#. Choose a style from the :guilabel:`Scale bar style` |selectString| combo box
 #. Select the :guilabel:`Color of bar` |selectColor| by choosing
    a fill color (default: black) and an outline color (default: white). The scale 
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
-#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
-#. Set the :guilabel:`Size of bar` |selectNumber|.
+#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
+#. Set the :guilabel:`Size of bar` |selectNumber|
 #. Optionally check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display easy-to-read values.
-#. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
+   on resize` to display easy-to-read values
+#. Choose the placement from the :guilabel:`Placement` |selectString| combo box
 #. You can refine the placement of the item by setting a horizontal and/or vertical
    `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
@@ -953,13 +952,6 @@ You can control the style and labeling of the displayed layout extents.
 This decoration is useful when you are tweaking the positioning of map elements such as labels,
 and need to know the actual visible region of print layouts.
 
-.. _figure_decorations_layoutextents:
-
-.. figure:: img/decoration_layoutextents.png
-   :align: center
-
-   The Layout Extents Dialog
-
 .. _figure_decorations_layoutextents_example:
 
 .. figure:: img/decoration_layoutextents_example.png
@@ -972,16 +964,25 @@ and need to know the actual visible region of print layouts.
 To add layout extent(s):
 
 #. Select :menuselection:`View --> Decorations --> Layout Extents` to open
-   the dialog (see figure_decorations_layoutextents_)
+   the dialog
+
+   .. _figure_decorations_layoutextents:
+
+   .. figure:: img/decoration_layoutextents.png
+      :align: center
+
+      The Layout Extents Dialog
+
 #. Make sure |checkbox| :guilabel:`Show layout extents` is checked
 #. Optionally change the symbol and labeling of the extents
 #. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied
+
 
 .. tip::
 
    **Decorations Settings**
 
-   When you save a :file:`.qgs` project, any changes you have made to Grid,
+   When you save a QGIS project file, any changes you have made to Grid,
    North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project and restored
    the next time you load the project.
 

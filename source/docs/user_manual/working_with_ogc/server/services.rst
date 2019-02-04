@@ -903,7 +903,7 @@ Several additional parameters are available to change the size of the legend
 elements:
 
 * **BOXSPACE** space between legend frame and content (mm)
-* **LAYERSPACE** versical space between layers (mm)
+* **LAYERSPACE** vertical space between layers (mm)
 * **LAYERTITLESPACE** vertical space between layer title and items following
   (mm)
 * **SYMBOLSPACE** vertical space between symbol and item following (mm)
@@ -921,7 +921,7 @@ These parameters change the font properties for layer titles and item labels:
 * **LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only
   the legend graphics without labels
 
-Contest based legend. These parameters let the client request a legend showing
+Content based legend. These parameters let the client request a legend showing
 only the symbols for the features falling into the requested area:
 
 * **BBOX** the geographical area for which the legend should be built
@@ -931,7 +931,7 @@ only the symbols for the features falling into the requested area:
   request, to let QGIS Server scale symbols according to the map view image
   size.
 
-Contest based legend features are based on the
+Content based legend features are based on the
 `UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
 
 * **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the

@@ -113,14 +113,14 @@ The name of the new branch should relate to the problem you intend to fix. The
 3. Modify files
 ---------------
 
-#. Browse the source files of your fork of QGIS-Documentation to the file that
-#. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
+#. Browse the source files of your fork of QGIS-Documentation to the file that needs to be modified
+#. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`
 #. When you finish, navigate to the **Commit Changes** frame at the bottom of
    the page, make a short comment about your changes, and click on
    :guilabel:`Commit Changes` to commit the changes directly to your branch.
    Make sure :guilabel:`Commit directly to the branch_name branch.` is selected.
 #. Repeat the previous steps for any other file that needs to be updated to
-   fix the issue.
+   fix the issue
 
 .. _sharing_changes:
 
