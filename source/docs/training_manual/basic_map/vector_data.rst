@@ -53,28 +53,28 @@ Libreoffice Base or MS Access. GIS applications can also make use of databases.
 GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
 handle spatial data.
 
-The `GeoPackage <https://www.geopackage.org/>`_ open format is a database container that
+The `GeoPackage <https://www.geopackage.org/>`_ open format is a container that
 allows you to store GIS data (layers) in a single file. Unlike the ESRI
-Shapefile format (e.g. the :file:`roads.shp` file you previously load that
+Shapefile format (e.g. the :file:`roads.shp` dataset you previously loaded that
 contains only roads vector data), a single GeoPackage file can contain various
-data, vector and raster types, in different coordinate reference systems,
+data (both vector and/or and raster data) in different coordinate reference systems,
 as well as tables without spatial information; all these features allow you to
-easily share data and avoid file duplication in your computer.
+share data easily and avoid file duplication.
 
-In order to load a layer from GeoPackage, you will first need to create the
+In order to load a layer from a GeoPackage, you will first need to create the
 connection to the database:
 
 #. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button.
 #. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab.
 #. Click on the :guilabel:`New` button and browse to the :file:`training_data.gpkg`
-   file in the :file:`exercise_data` folder you have downloaded before.
+   file in the :file:`exercise_data` folder you downloaded before.
 #. Select the file and press :guilabel:`Open`. The file path is now added to the
-   Geopackage connections list, and shown in the drop-down menu.
+   Geopackage connections list, and appears in the drop-down menu.
 
-From now, you can add any layer from this GeoPackage file to QGIS.
+You are now ready to add any layer from this GeoPackage to QGIS.
 
-#. Click on :guilabel:`Connect` button.
-   You should see in the central part of the window the list of all the layers
+#. Click on the :guilabel:`Connect` button.
+   In the central part of the window you should now see the list of all the layers
    contained in the GeoPackage file.
 #. Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button.
 
@@ -82,10 +82,10 @@ From now, you can add any layer from this GeoPackage file to QGIS.
       :align: center
 
    A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with
-   features displayed in the map canvas.
+   features displayed on the map canvas.
 #. Click on :guilabel:`Close`.
 
-Congratulations! You have loaded the first layer from a GeoPackage file.
+Congratulations! You have loaded the first layer from a GeoPackage.
 
 
 .. _backlink-vector-load-from-database-1:
@@ -95,14 +95,14 @@ Congratulations! You have loaded the first layer from a GeoPackage file.
 
 QGIS provides access to many other database formats. Like GeoPackage, the
 SpatiaLite database format is an extension of the SQLite library. And adding
-the first time a layer from SpatiaLite provider follows the same rules as seen
+a layer from a SpatiaLite provider follows the same rules as described
 above: Create the connection --> Enable it --> Add the layer(s).
 
-We could apply these steps and add SpatiaLite data from our sample
-data but let's explore another powerful feature of data loading in QGIS:
+While this is one way to add SpatiaLite data to your map,
+let's explore another powerful way to add data:
 the :guilabel:`Browser`.
 
-#. Click the icon |dataSourceManager| to open the :guilabel:`Data Source Manager`
+#. Click the |dataSourceManager| icon to open the :guilabel:`Data Source Manager`
    window.
 #. Click on the |fileOpen| :guilabel:`Browser` tab.
 #. In this tab you can see all the storage disks connected to your computer
@@ -111,18 +111,18 @@ the :guilabel:`Browser`.
 
    For example, click on the drop-down icon next to the |geoPackage|
    :guilabel:`GeoPackage` entry. You'll see the :file:`training-data.gpkg` file
-   we previously connected, and its layers if expanded.
+   we previously connected to (and its layers, if expanded).
 #. Right-click the |spatialite| :guilabel:`SpatiaLite` entry and select
    :guilabel:`New Connection...`.
 #. Navigate to the :file:`exercise_data` folder, select the :file:`landuse.sqlite`
    file and click :guilabel:`Open`.
 
-   Notice that a |dbSchema| :guilabel:`landuse.sqlite` collapsible entry has
+   Notice that a |dbSchema| :guilabel:`landuse.sqlite` entry has
    been added under the :guilabel:`SpatiaLite` one.
 #. Expand the |dbSchema| :guilabel:`landuse.sqlite` entry.
 #. Double-click the |polygonLayer| :guilabel:`landuse` layer or select and
-   drag-and-drop it over the map canvas. A new layer is added to the
-   :guilabel:`Layers` panel and its features are displayed in the map canvas.
+   drag-and-drop it onto the map canvas. A new layer is added to the
+   :guilabel:`Layers` panel and its features are displayed on the map canvas.
 
    .. image:: img/spatialite_dialog_connected.png
       :align: center
@@ -131,10 +131,10 @@ the :guilabel:`Browser`.
 
 .. tip:: Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`
   and use it to add your data. It's a handy shortcut for the :guilabel:`Data Source
-  Manager --> Browser` tab, with the same functionalities.
+  Manager --> Browser` tab, with the same functionality.
 
-.. note:: Remember to save the map often! The map file doesn't contain any of
-   the data directly, but it remembers which layers you loaded into your map.
+.. note:: Remember to save your project frequently! The project file doesn't contain any of
+   the data itself, but it remembers which layers you loaded into your map.
 
 
 .. _backlink-vector-load-more-data:
@@ -143,7 +143,7 @@ the :guilabel:`Browser`.
 -------------------------------------------------------------------------------
 
 Load the following datasets from the :file:`exercise_data` folder into your map
-using any of the methods previously shown:
+using any of the methods explained above:
 
 * :guilabel:`buildings`
 * :guilabel:`water`

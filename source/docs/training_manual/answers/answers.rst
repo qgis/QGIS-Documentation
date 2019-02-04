@@ -55,7 +55,7 @@ remember the names and functions of the screen elements.
 |basic| *GeoPackage*
 ...............................................................................
 
-There should be seven layers on your map:
+Your map should have seven layers:
 
 * :guilabel:`protected_areas`
 * :guilabel:`places`
