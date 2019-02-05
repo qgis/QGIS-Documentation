@@ -492,7 +492,7 @@ Requesting DXF
 ^^^^^^^^^^^^^^
 
 It is possible to export layers in the DXF format using the GetMap request 
-with FORMAT=application/dxf. Only layers that have read access in the WFS
+with ``FORMAT=application/dxf``. Only layers that have read access in the WFS
 service are exported in the DXF format.
 Here is a valid REQUEST and a documentation of the available parameters::
 
