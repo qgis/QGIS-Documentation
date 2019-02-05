@@ -880,7 +880,6 @@ In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
 * set the folder for the project home (available in the ``Project Home`` item
   in the browser).
   The path can be relative to the folder of the project file (type it in) or absolute
-  (type or choose).
   The project home can be used for storing data and other content that is
   necessary or useful for the project.
 * give a title to the project beside the project file path
