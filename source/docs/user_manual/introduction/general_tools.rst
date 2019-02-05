@@ -856,7 +856,7 @@ using your choice of text.
 
 #. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
 #. Enter the text you want to place on the map.
-   You can include an expression
+   You can include expressions
    (using the :guilabel:`Insert an Expression` button).
 #. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
    font color and opacity by clicking the black arrow to the right of the font combo box.
