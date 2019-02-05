@@ -845,7 +845,7 @@ Copyright Label
 using your choice of text.
 
 #. Select :menuselection:`View --> Decorations --> Copyright Label` to open
-   the dialog (see figure_decorations_copyright_).
+   the dialog
 
    .. _figure_decorations_copyright:
 
