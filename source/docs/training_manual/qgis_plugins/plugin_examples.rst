@@ -170,13 +170,13 @@ Take a look at some example and try to explore the query language.
 **DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
 attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
-#. Start a new project.
+#. Start a new project
 #. Load the :guilabel:`sample_points` layer from the :file:`exercise_data/plugins`
-   folder.
+   folder
 #. Install the plugin following the guidelines described in :ref:`plugin_installation`
-   searching :guilabel:`Data Plotly`.
+   searching :guilabel:`Data Plotly`
 #. Open the plugin by clicking on the new icon in the toolbar or in the
-  :menuselection:`Plugins --> Data Plotly` menu.
+   :menuselection:`Plugins --> Data Plotly` menu
 
 In the following example we are creating a simple ``Scatter Plot`` of two fields
 of the :guilabel:`sample_points` layer.
