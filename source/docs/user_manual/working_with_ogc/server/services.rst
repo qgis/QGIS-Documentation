@@ -65,8 +65,6 @@ Vendor requests provided by QGIS Server:
 +---------------------+---------------------------------------------------+
 | GetProjectSettings  | Returns specific information about QGIS Server    |
 +---------------------+---------------------------------------------------+
-| GetDxf              | Export layers in DXF format                       |
-+---------------------+---------------------------------------------------+
 
 
 .. _`qgisserver-wms-getmap`:
@@ -337,6 +335,7 @@ values are:
 - ``image/png; mode=1bit``
 - ``image/png; mode=8bit``
 - ``image/png; mode=16bit``
+- ``application/dxf`` (see :ref:`requesting DXF <qgisserver-request-dxf>`)
 
 If the ``FORMAT`` parameter is different from one of these values, then the
 default format PNG is used instead.
@@ -487,14 +486,17 @@ As those features id's correspond in the source dataset to **France** and
 
   Server response to a GetMap request with SELECTION parameter
 
-GetDxf
-------
+.. _`qgisserver-request-dxf`:
 
-It is possible to export layers in the DXF format using the GetDxf Request. Only
-layers that have read access in the WFS service are exported in the DXF format.
+Requesting DXF
+^^^^^^^^^^^^^^
+
+It is possible to export layers in the DXF format using the GetMap request 
+with FORMAT=application/dxf. Only layers that have read access in the WFS
+service are exported in the DXF format.
 Here is a valid REQUEST and a documentation of the available parameters::
 
-    http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetDxf&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
+    http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=application/dxf&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
 
 Parameters:
 
