@@ -35,8 +35,8 @@ begin by changing the color of the :guilabel:`landuse` layer.
    .. note:: By default, you can also access a layer's properties by
      double-clicking on the layer in the Layers list.
 
-   .. tip:: The button |symbology| in the upper part of the :guilabel:`Layers`
-     panel will open the :guilabel:`Layer Styling` panel. You can also use this
+   .. tip:: The |symbology| button at the top of the :guilabel:`Layers`
+     panel will open the :guilabel:`Layer Styling` panel. You can use this
      panel to change some properties of the layer: by default, changes will be
      applied immediately!
 
@@ -58,7 +58,7 @@ begin by changing the color of the :guilabel:`landuse` layer.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-Change the :guilabel:`water` layer to a light blue color. Try to use the
+Change the color of the :guilabel:`water` layer to light blue. Try to use the
 :guilabel:`Layer Styling` panel instead of the :guilabel:`Layer Properties` menu.
 
 :ref:`Check your results <symbology-colors-1>`
@@ -78,7 +78,7 @@ areas so as to make the map less visually cluttered.
    of dialog as before. This time, however, you're doing more than just quickly
    changing the color.
 #. In the symbol layers tree, expand the :guilabel:`Fill` dropdown
-   (if necessary) and select the :guilabel:`Simple fill` option:
+   and select the :guilabel:`Simple fill` option.
 #. Click on the :guilabel:`Stroke style` dropdown. At the moment, it should be
    showing a short line and the words :guilabel:`Solid Line`.
 #. Change this to :guilabel:`No Pen`.
@@ -102,7 +102,7 @@ Now the :guilabel:`landuse` layer won't have any lines between areas.
   of waterways.
 
 Remember: you can use the |symbology| :sup:`Open the Layer Styling panel`
-button and see instantly all the changes. Also that panel allows you to undo
+button and see all the changes instantly. That panel also allows you to undo
 individual changes while symbolizing a layer.
 
 :ref:`Check your results <symbology-structure-1>`
@@ -130,7 +130,7 @@ To enable scale-based rendering:
 #. Activate the |rendering| :guilabel:`Rendering` tab.
 #. Enable scale-based rendering by clicking on the checkbox labeled
    :guilabel:`Scale dependent visibility`:
-#. Change the :guilabel:`Minimum` value to ``1:10,000``.
+#. Change the :guilabel:`Minimum` value to ``1:10000``.
 
    .. image:: img/scale_dependent_visibility.png
       :align: center
@@ -161,9 +161,9 @@ layers.
    .. image:: img/add_symbol_layer_button.png
       :align: center
 
-#. Select now the :guilabel:`Fill` level in the tree and click
+#. Select the :guilabel:`Fill` level in the tree and click
    the |signPlus| :sup:`Add symbol layer` button.
-   The dialog will change to look somewhat like this, with a new symbol layer
+   The dialog will change to look something like this, with a new symbol layer
    added:
 
    .. image:: img/new_symbol_layer.png
@@ -255,7 +255,7 @@ To change the order of the symbol layers:
       :align: center
 
 #. Check |checkbox| :guilabel:`Enable symbol levels`. You can then set the
-   layer ordering of each symbol by entering the corresponding level number.
+   layer order of each symbol by entering the corresponding level number.
    0 is the bottom layer.
 
    In our case, we just want to activate the option, like this:
@@ -277,13 +277,13 @@ To change the order of the symbol layers:
 When you're done, remember to save the symbol itself so as not to lose your
 work if you change the symbol again in the future. You can save your current
 symbol style by clicking the :guilabel:`Save Style...` button at the bottom
-of the :guilabel:`Layer Properties` dialog. Generally,
-you can save as :guilabel:`QGIS QML Style File`.
+of the :guilabel:`Layer Properties` dialog.
+We will be using the :guilabel:`QGIS QML Style File` format.
 
 .. TODO: imho there's a mix of saving symbols and saving styles here that could
  be misleading. Saving style should deserve its own section.
 
-Save your style under :file:`solution/styles/better_roads.qml` folder. You can load a
+Save your style in the :file:`solution/styles/better_roads.qml` folder. You can load a
 previously saved style at any time by clicking the :guilabel:`Load Style...`
 button. Before you change a style, keep in mind that any unsaved style you are
 replacing will be lost.
@@ -295,7 +295,7 @@ replacing will be lost.
 
 Change the appearance of the :guilabel:`roads` layer again.
 
-The roads must be narrow and yellow, with a thin, pale gray outline and a
+Make the roads narrow and yellow, with a thin, pale gray outline and a
 thin black line in the middle. Remember that you may need to change the layer
 rendering order via the :menuselection:`Advanced --> Symbol levels...` dialog.
 
@@ -433,8 +433,8 @@ that make up the texture.
 |moderate| |TY|
 -------------------------------------------------------------------------------
 
-Apply to the :guilabel:`protected_areas` layer a green transparent fill color
-with outline looking like this:
+Apply a green transparent fill color to the :guilabel:`protected_areas` layer,
+and change the outline to look like this:
 
 .. image:: img/marker_line_preview.png
    :align: center
@@ -568,9 +568,9 @@ In QGIS:
 
 #. Open the :guilabel:`Layer Properties` for the :file:`landuse` layer.
 #. In the |symbology| :guilabel:`Symbology` tab, change the symbol structure by
-   selecting :guilabel:`SVG Fill` as :guilabel:`Symbol Layer Type` option, as
+   changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill````
    shown below.
-#. Click the :guilabel:`...` button and then on
+#. Click the :guilabel:`...` button and then
    :guilabel:`Select File...` to select your SVG image.
  
    It's added to the symbol tree and you can now customize its different

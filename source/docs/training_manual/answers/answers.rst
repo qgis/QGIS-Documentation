@@ -85,7 +85,7 @@ There should be five layers on your map:
 * Verify that the colors are changing as you expect them to change.
 * It is enough to select the :guilabel:`water` layer in the legend and then click
   on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
-  with the one you want and best fits the water layer.
+  to one that fits the water layer.
 
 .. image:: img/answer_water_blue.png
    :align: center
