@@ -426,7 +426,7 @@ If no web plugins are enabled, there will be no guilabel:`Web` menu.
 ===============================================  ===========================  ===============================
 Menu Option                                      Toolbar                      Reference
 ===============================================  ===========================  ===============================
-|metasearch| :menuselection:`Metasearch`         :guilabel:`Web`              :ref:`metasearch`
+|metasearch| :menuselection:`MetaSearch`         :guilabel:`Web`              :ref:`metasearch`
 ===============================================  ===========================  ===============================
 
 |

@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Catalog services, Metadata
-   single: Plugins; Metasearch
+   single: Plugins; MetaSearch
 .. _metasearch:
 
 MetaSearch Catalog Client
@@ -29,7 +29,7 @@ to searching metadata catalogs within QGIS.
 .. figure:: img/metasearch-splash.png
    :align: center
 
-   Search and results of Services in Metasearch
+   Search and results of Services in MetaSearch
 
 Installation
 ------------
@@ -175,7 +175,7 @@ Settings
 .. figure:: img/metasearch-settings.png
    :align: center
 
-   Metasearch settings
+   MetaSearch settings
 
 You can fine tune MetaSearch with the following :guilabel:`settings`:
 
