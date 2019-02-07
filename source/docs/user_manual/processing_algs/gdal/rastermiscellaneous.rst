@@ -11,109 +11,6 @@ Raster miscellaneous
       :local:
       :depth: 1
 
-.. _gdalbuildvirtualraster:
-
-Build Virtual Raster
---------------------
-Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
-With a mosaic you can merge several raster files.
-
-This algorithm is derived from the `GDAL buildvrt utility <https://www.gdal.org/gdalbuildvrt.html>`_ .
-
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
-
-Parameters
-..........
-
-``Input layers`` [raster] [list]
-  GDAL-supported raster layers.
-
-``Resolution`` [enumeration]
-  The output resolution of the mosaic. By default the average resolution of th
-  raster files will be chosen.
-
-  Options:
-
-  * 0 --- average
-  * 1 --- highest
-  * 2 --- lowest
-
-  Default: *0*
-
-``Layer stack`` [boolean]
-  With 'False' you can define that each raster file goes into a separated stacked band
-  in the VRT band.
-
-  Default: *True*
-
-``Allow projection difference`` [boolean]
-  Allows that the output bands have different projections derived from the
-  projection of the input raster layers.
-
-  Default: *False*
-
-Outputs
-.......
-
-``Output layer`` [raster]
-  Output raster file.
-
-
-.. _gdalmerge:
-
-Merge
------
-Merges raster files in a simple way. Here you can use a pseudocolor
-table from an input raster and define the output raster type. All
-the images must be in the same coordinate system.
-
-This algorithm is derived from the `GDAL merge utility <https://www.gdal.org/gdal_merge.html>`_ .
-
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
-
-Parameters
-..........
-
-``Input layers`` [raster] [list]
-  Input raster layers.
-
-``Grab pseudocolor table from first layer`` [boolean]
-  The pseudocolor table from the first layer will be used for the
-  coloring.
-
-  Default: *False*
-
-``Layer stack`` [boolean]
-  If 'True' is chosen each input file will be placed into a separate stacked band.
-
-  Default: *False*
-
-``Output raster type`` [enumeration]
-  Defines the output raster type. By default this will be 'Float23'.
-
-  Options:
-
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
-
-Outputs
-.......
-
-``Output layer`` [raster]
-  Output raster layer.
-
-
 .. _gdaloverviews:
 
 Build overviews (pyramids)
@@ -176,10 +73,58 @@ Outputs
 ``Output layer`` [raster]
   Output raster layer with overviews.
 
+.. _gdalbuildvirtualraster:
+
+Build virtual raster
+--------------------
+Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
+With a mosaic you can merge several raster files.
+
+This algorithm is derived from the `GDAL buildvrt utility <https://www.gdal.org/gdalbuildvrt.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
+
+Parameters
+..........
+
+``Input layers`` [raster] [list]
+  GDAL-supported raster layers.
+
+``Resolution`` [enumeration]
+  The output resolution of the mosaic. By default the average resolution of th
+  raster files will be chosen.
+
+  Options:
+
+  * 0 --- average
+  * 1 --- highest
+  * 2 --- lowest
+
+  Default: *0*
+
+``Layer stack`` [boolean]
+  With 'False' you can define that each raster file goes into a separated stacked band
+  in the VRT band.
+
+  Default: *True*
+
+``Allow projection difference`` [boolean]
+  Allows that the output bands have different projections derived from the
+  projection of the input raster layers.
+
+  Default: *False*
+
+Outputs
+.......
+
+``Output layer`` [raster]
+  Output raster file.
+
+
 .. _gdalgdalinfo:
 
-Information
------------
+Raster information
+------------------
 The gdalinfo program lists various information about a GDAL supported raster dataset.
 
 This algorithm is derived from the `GDAL info utility <https://www.gdal.org/gdalinfo.html>`_ .
@@ -212,7 +157,7 @@ Outputs
 
 .. _gdaltileindex:
 
-Tile Index
+Tile index
 ----------
 Builds a vector layer with a record for each input raster file, an
 attribute containing the filename, and a polygon geometry outlining the raster.
