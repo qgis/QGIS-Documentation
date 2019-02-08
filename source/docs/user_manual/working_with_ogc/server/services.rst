@@ -328,14 +328,36 @@ FORMAT
 This parameter may be used to specify the format of map image. Available
 values are:
 
-- ``jpg``
-- ``jpeg``
-- ``image/jpeg``
-- ``image/png``
-- ``image/png; mode=1bit``
-- ``image/png; mode=8bit``
-- ``image/png; mode=16bit``
-- ``application/dxf`` (see :ref:`requesting DXF <qgisserver-request-dxf>`)
+``jpg``
+``jpeg``
+``image/jpeg``
+``image/png``
+``image/png; mode=1bit``
+``image/png; mode=8bit``
+``image/png; mode=16bit``
+``application/dxf``
+   It is possible to export layers in the DXF format using the GetMap request 
+   with ``FORMAT=application/dxf``. Only layers that have read access in the WFS
+   service are exported in the DXF format.
+   Here is a valid REQUEST and a documentation of the available parameters::
+
+       http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=application/dxf&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
+
+   Parameters:
+
+   * FILE_NAME=yoursuggested_file_name_for_download.dxf
+   * FORMAT_OPTIONS=see options below, key:value pairs separated by Semicolon
+
+   FORMAT_OPTIONS Parameters:
+
+   * **SCALE:scale** to be used for symbology rules, filters and styles (not an
+     actual scaling of the data - data remains in the original scale).
+   * **MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY** corresponds to the
+     three export options offered in the QGIS Desktop DXF export dialog.
+   * **LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames** - if
+     not specified, the original QGIS layer names are used.
+   * **USE_TITLE_AS_LAYERNAME** if enabled, the title of the layer will be used as
+     layer name.
 
 If the ``FORMAT`` parameter is different from one of these values, then the
 default format PNG is used instead.
@@ -486,33 +508,6 @@ As those features id's correspond in the source dataset to **France** and
 
   Server response to a GetMap request with SELECTION parameter
 
-.. _`qgisserver-request-dxf`:
-
-Requesting DXF
-^^^^^^^^^^^^^^
-
-It is possible to export layers in the DXF format using the GetMap request 
-with ``FORMAT=application/dxf``. Only layers that have read access in the WFS
-service are exported in the DXF format.
-Here is a valid REQUEST and a documentation of the available parameters::
-
-    http://your.server.address/wms/liegenschaftsentwaesserung/abwasser_werkplan?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=application/dxf&LAYERS=Haltungen,Normschacht,Spezialbauwerke&STYLES=&CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905&WIDTH=1042&HEIGHT=811&FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=werkplan_abwasser.dxf
-
-Parameters:
-
-* FILE_NAME=yoursuggested_file_name_for_download.dxf
-* FORMAT_OPTIONS=see options below, key:value pairs separated by Semicolon
-
-FORMAT_OPTIONS Parameters:
-
-* **SCALE:scale** to be used for symbology rules, filters and styles (not an
-  actual scaling of the data - data remains in the original scale).
-* **MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY** corresponds to the
-  three export options offered in the QGIS Desktop DXF export dialog.
-* **LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames** - if
-  not specified, the original QGIS layer names are used.
-* **USE_TITLE_AS_LAYERNAME** if enabled, the title of the layer will be used as
-  layer name.
 
 
 .. _server_wms_getfeatureinfo:
