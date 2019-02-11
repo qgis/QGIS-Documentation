@@ -33,11 +33,11 @@ explore some of its features.
    .. image:: img/qms_result.png
       :align: center
 
-QuickMapServices plugin has a lot of base maps available.
+The QuickMapServices plugin makes a lot of base maps available.
 
-#. Close the :guilabel:`Search QMS` panel we open before
+#. Close the :guilabel:`Search QMS` panel we opened before
 #. Click again on :menuselection:`Web --> QuickMapServices`. The first menu
-   lists different map providers with all the available maps:
+   lists different map providers with available maps:
 
    .. image:: img/qms_menu.png
       :align: center
@@ -46,13 +46,13 @@ But there is more.
 
 If the default maps are not enough for you, you can add other map providers.
 
-#. Click on :menuselection:`Web --> QuickMapServices --> Settings` and go in the
+#. Click on :menuselection:`Web --> QuickMapServices --> Settings` and go to the
    :guilabel:`More services` tab.
 #. Read carefully the message of this tab and if you agree click on the
    :guilabel:`Get Contributed pack` button.
 
-If you open now the :menuselection:`Web --> QuickMapServices` menu you will see
-a lot more providers available. Choose the one that best fits your needs!
+If you now open the :menuselection:`Web --> QuickMapServices` menu you will see
+that more providers are available. Choose the one that best fits your needs!
 
 
 |basic| |FA| The QuickOSM Plugin
@@ -75,9 +75,9 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
     system, click on the :guilabel:`Help with key/value` button. It will open a
     web page with a complete description of this concept of OpenStreetMap.
 
-#. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
+#. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value` be
    empty: so we are downloading all the :guilabel:`railway` features without specifying
-   particular values.
+   any values.
 #. Select :guilabel:`Layer Extent` in the next drop-down menu and choose :guilabel:`roads`.
 #. Click on the :guilabel:`Run query` button.
 
