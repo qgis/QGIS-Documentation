@@ -62,7 +62,7 @@ as well as tables without spatial information; all these features allow you to
 share data easily and avoid file duplication.
 
 In order to load a layer from a GeoPackage, you will first need to create the
-connection to the database:
+connection to it:
 
 #. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button.
 #. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab.
