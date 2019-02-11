@@ -46,14 +46,6 @@ remember the names and functions of the screen elements.
 
 :ref:`Back to text <backlink-interface-overview-2>`
 
-.. _interface-overview-3:
-
-|basic| *Overview* (Part 3)
-...............................................................................
-
-Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections.
-
-:ref:`Back to text <backlink-interface-overview-3>`
 
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
@@ -81,20 +73,22 @@ Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections
 
 :ref:`Back to text <backlink-vector-explore-attribute-data>`
 
-.. _vector-load-geopackage-1:
+.. _vector-load-more-data:
 
-|basic| *GeoPackage*
+|basic| *Data loading*
 ...............................................................................
 
-There should be five layers on your map:
+Your map should have seven layers:
 
+* :guilabel:`protected_areas`
 * :guilabel:`places`
-* :guilabel:`water`
-* :guilabel:`buildings`
-* :guilabel:`rivers` and
-* :guilabel:`roads`.
+* :guilabel:`rivers`
+* :guilabel:`roads`
+* :guilabel:`landuse`
+* :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+* :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
-:ref:`Back to text <backlink-vector-load-geopackage-1>`
+:ref:`Back to text <backlink-vector-load-more-data>`
 
 
 |RF| *Symbology*

@@ -58,34 +58,9 @@ You may now close the attribute table.
 :ref:`Check your results <vector-explore-attribute-data>`
 
 
-.. _backlink-vector-load-geopackage-1:
+.. _load_geopackage:
 
-|basic| |FA| Loading Vector Data From GeoPackage
--------------------------------------------------------------------------------
-
-The `GeoPackage <https://www.geopackage.org/>`_ is a database container that allows
-you to store GIS data (layers) in a single file. A single GeoPackage file can
-contain both vector and raster data also in different coordinate reference systems:
-all these features allow you to easily share data and to avoid file duplication
-in your computer.
-
-Refer back to the introductory exercise in the previous section for
-instructions on how to add vector layers.
-
-Load the data sets from the :file:`training_data.gpkg` file into your map following
-the same method:
-
-* :guilabel:`buildings`
-* :guilabel:`places`
-* :guilabel:`rivers`
-* :guilabel:`water`
-
-:ref:`Check your results <vector-load-geopackage-1>`
-
-
-.. _backlink-vector-load-from-database-1:
-
-|basic| |FA| Loading Vector Data From a Database
+|basic| |FA| Loading Vector Data From GeoPackage Database
 -------------------------------------------------------------------------------
 
 Databases allow you to store a large volume of associated data in one file. You
@@ -94,41 +69,102 @@ Libreoffice Base or MS Access. GIS applications can also make use of databases.
 GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
 handle spatial data.
 
-Adding a layer from a SpatiaLite database or from a GeoPackage archive is not
-so different: in fact, both are spatial extension of the SQLite library.
+The `GeoPackage <https://www.geopackage.org/>`_ open format is a container that
+allows you to store GIS data (layers) in a single file. Unlike the ESRI
+Shapefile format (e.g. the :file:`roads.shp` dataset you previously loaded that
+contains only roads vector data), a single GeoPackage file can contain various
+data (both vector and/or and raster data) in different coordinate reference systems,
+as well as tables without spatial information; all these features allow you to
+share data easily and avoid file duplication.
 
-Let's add some layer from a SpatiaLite database.
+In order to load a layer from a GeoPackage, you will first need to create the
+connection to it:
 
-#. Click the icon |dataSourceManager| to open the Data Source Manager window
-   (If you're sure you can't see it at all, check that the :guilabel:`Data
-   Source Manager` toolbar is enabled.)
-#. Click on the |addSpatiaLiteLayer| :guilabel:`SpatiaLite` tab.
-#. In this tab you can see all the connections to existing databases or set up
-   new connections.
-#. Click the :guilabel:`New` button.
-#. In the main folder of the Training Data, you should find the file
-   :file:`landuse.sqlite`. Select it and click :guilabel:`Open`.
+#. Click on the |dataSourceManager| :sup:`Open Data Source Manager` button.
+#. On the left click on the |newGeoPackageLayer| :guilabel:`GeoPackage` tab.
+#. Click on the :guilabel:`New` button and browse to the :file:`training_data.gpkg`
+   file in the :file:`exercise_data` folder you downloaded before.
+#. Select the file and press :guilabel:`Open`. The file path is now added to the
+   Geopackage connections list, and appears in the drop-down menu.
 
-   Notice that the drop-down above the three buttons now reads "landuse.sqlite@...",
-   followed by the path of the database file on your computer.
+You are now ready to add any layer from this GeoPackage to QGIS.
 
-#. Click the :guilabel:`Connect` button. You should see this in the previously
-   empty box:
+#. Click on the :guilabel:`Connect` button.
+   In the central part of the window you should now see the list of all the layers
+   contained in the GeoPackage file.
+#. Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button.
 
-   .. image:: img/spatiallite_dialog_connected.png
+   .. image:: img/add_data_dialog_geopackage.png
       :align: center
 
-#. Click on the :guilabel:`landuse` layer to select it, then click
-   :menuselection:`Add`
+   A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with
+   features displayed on the map canvas.
+#. Click on :guilabel:`Close`.
 
-.. tip:: Once you have set up a connection to a database you can see this connection
-  and load all the layers contained into it also in the QGIS Browser. We will
-  repeat this forever: the QGIS Browser is the quickest and best way to handle
-  your data!
+Congratulations! You have loaded the first layer from a GeoPackage.
 
-.. note::  Remember to save the map often! The map file doesn't contain any of
-   the data directly, but it remembers which layers you loaded into your map.
 
+.. _backlink-vector-load-from-database-1:
+
+|basic| |FA| Loading Vector Data From a SpatiaLite Database with the Browser
+-------------------------------------------------------------------------------
+
+QGIS provides access to many other database formats. Like GeoPackage, the
+SpatiaLite database format is an extension of the SQLite library. And adding
+a layer from a SpatiaLite provider follows the same rules as described
+above: Create the connection --> Enable it --> Add the layer(s).
+
+While this is one way to add SpatiaLite data to your map,
+let's explore another powerful way to add data:
+the :guilabel:`Browser`.
+
+#. Click the |dataSourceManager| icon to open the :guilabel:`Data Source Manager`
+   window.
+#. Click on the |fileOpen| :guilabel:`Browser` tab.
+#. In this tab you can see all the storage disks connected to your computer
+   as well as entries for most of the tabs in the left. These allow quick access
+   to connected databases or folders.
+
+   For example, click on the drop-down icon next to the |geoPackage|
+   :guilabel:`GeoPackage` entry. You'll see the :file:`training-data.gpkg` file
+   we previously connected to (and its layers, if expanded).
+#. Right-click the |spatialite| :guilabel:`SpatiaLite` entry and select
+   :guilabel:`New Connection...`.
+#. Navigate to the :file:`exercise_data` folder, select the :file:`landuse.sqlite`
+   file and click :guilabel:`Open`.
+
+   Notice that a |dbSchema| :guilabel:`landuse.sqlite` entry has
+   been added under the :guilabel:`SpatiaLite` one.
+#. Expand the |dbSchema| :guilabel:`landuse.sqlite` entry.
+#. Double-click the |polygonLayer| :guilabel:`landuse` layer or select and
+   drag-and-drop it onto the map canvas. A new layer is added to the
+   :guilabel:`Layers` panel and its features are displayed on the map canvas.
+
+   .. image:: img/spatialite_dialog_connected.png
+      :align: center
+
+   |
+
+.. tip:: Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`
+  and use it to add your data. It's a handy shortcut for the :guilabel:`Data Source
+  Manager --> Browser` tab, with the same functionality.
+
+.. note:: Remember to save your project frequently! The project file doesn't contain any of
+   the data itself, but it remembers which layers you loaded into your map.
+
+
+.. _backlink-vector-load-more-data:
+
+|moderate| |TY| Load More Vector Data
+-------------------------------------------------------------------------------
+
+Load the following datasets from the :file:`exercise_data` folder into your map
+using any of the methods explained above:
+
+* :guilabel:`buildings`
+* :guilabel:`water`
+
+:ref:`Check your results <vector-load-more-data>`
 
 |FA| Reordering the Layers
 -------------------------------------------------------------------------------
@@ -195,6 +231,19 @@ lesson.
 .. |basic| image:: /static/global/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+.. |dbSchema| image:: /static/common/mIconDbSchema.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
+.. |moderate| image:: /static/global/moderate.png
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
