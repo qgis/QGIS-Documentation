@@ -1600,7 +1600,7 @@ to duplicate any layer in the map legend.
 
 .. tip:: **Manage styles from layer context menu**
 
-   Right-click on the layer in the :guilabel:`Layers Panel` to add, rename
+   Right-click on the layer in the :guilabel:`Layers` panel to add, rename
    or remove layer styles.
 
 .. _store_style:
@@ -1638,7 +1638,7 @@ Save in database
 Vector layer styles can also be stored in a database if the layer datasource is a
 database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
 and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
-in the database. Click on :menuselection:`Save Style --> Save in database`
+in the database. Click on :menuselection:`Save Style... --> Save in database`
 then fill in the dialog to define a style name, add a description, a :file:`.ui`
 file if applicable and to check if the style should be the default style.
 
@@ -1679,7 +1679,7 @@ to any layer whatever its format, loading styles stored in a database is only
 possible if the layer is from the same database or the style is stored in the
 QGIS local database.
 
-The :guilabel:`Load Style from Database` dialog displays a list of styles related
+The :guilabel:`Database Styles Manager` dialog displays a list of styles related
 to the layer found in the database and all the other styles saved in it,
 with name and description.
 
@@ -1714,7 +1714,7 @@ example in print layout creating a label with this content:
 
 Will render the label like this::
 
-  This map was made using QGIS 3.4.4. The project file for this map is:
+  This map was made using QGIS 3.4.4-Madeira. The project file for this map is:
   /gis/qgis-user-conference-2019.qgs
 
 Besides the :ref:`preset read-only variables <variables_functions>`, you can
