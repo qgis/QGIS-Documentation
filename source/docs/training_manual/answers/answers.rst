@@ -50,9 +50,32 @@ remember the names and functions of the screen elements.
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
+.. _vector-explore-attribute-data:
+
+|basic| *Attribute data*
+...............................................................................
+
+* There should be 9 fields in the :guilabel:`rivers` layer:
+
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties --> Source
+   Fields` tab, where you will find a numbered list of the table's fields.
+
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add comment on other fields from these two records, if you like.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
+
 .. _vector-load-more-data:
 
-|basic| *GeoPackage*
+|basic| *Data loading*
 ...............................................................................
 
 Your map should have seven layers:
@@ -502,7 +525,7 @@ contains the travel time between the two points (as fraction of hours):
 |basic| *Calculate Aspect*
 ...............................................................................
 
-* Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
+* Set your :guilabel:`Aspect` dialog up like this:
 
   .. image:: img/answer_dem_aspect.png
      :align: center
@@ -525,8 +548,8 @@ Your result:
   .. image:: img/answer_raster_calculator_slope.png
      :align: center
 
-* For the 5 degree version, replace the :kbd:`2` in the expression and file
-  name with :kbd:`5`.
+* For the 5 degree version, replace the ``2`` in the expression and file
+  name with ``5``.
 
 Your results:
 
@@ -1152,6 +1175,8 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png

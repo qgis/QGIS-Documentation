@@ -203,10 +203,10 @@ Parameters
   Input vector layer to use for the plot.
 
 ``X attribute`` [tablefield: any]
-  Field to use for the x axis.
+  Field to use for the X axis.
 
 ``Y attribute`` [tablefield: any]
-  Field to use for the y axis.
+  Field to use for the Y axis.
 
 Outputs
 .......
@@ -230,13 +230,13 @@ Parameters
   Input vector layer to use for the plot.
 
 ``X attribute`` [tablefield: any]
-  Field to use for the x axis.
+  Field to use for the X axis.
 
 ``Y attribute`` [tablefield: any]
-  Field to use for the y axis.
+  Field to use for the Y axis.
 
 ``Z attribute`` [tablefield: any]
-  Field to use for the z axis.
+  Field to use for the Z axis.
 
 Outputs
 .......

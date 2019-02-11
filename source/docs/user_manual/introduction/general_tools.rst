@@ -33,10 +33,10 @@ plugins can point to dedicated web pages.
 
 Panels
 =======
-QGIS provides by default many panels to work with.
+By default, QGIS provides many panels to work with.
 Some of these panels are described below while others may be found in different
 parts of the document. A complete list of default panels provided by QGIS is
-available through :menuselection:`View --> Panels -->` menu and mentioned at
+available via the :menuselection:`View --> Panels -->` menu and mentioned at
 :ref:`panels_tools`.
 
 .. index:: Panels; Layers
@@ -48,17 +48,17 @@ Layers Panel
 .. index::
    single: Legend
 
-The :guilabel:`Layers` panel (also called ``map legend``) lists all
+The :guilabel:`Layers` panel (also called the ``map legend``) lists all
 the layers in the project and helps you
-manage their visibility. A layer can be selected and dragged up or down in the
+manage their visibility. You can show or hide it by pressing :kbd:`Ctrl+1`.
+A layer can be selected and dragged up or down in the
 legend to change the Z-ordering. Z-ordering means that layers listed nearer the
 top of the legend are drawn over layers listed lower down in the legend.
 
 .. note:: The Z-ordering behavior can be overridden by the
    :ref:`Layer Order <layer_order>` panel.
 
-At the top of the Layers panel that you can also enable pressing :kbd:`Ctrl+1`,
-a toolbar allows you to:
+At the top of the Layers panel, a toolbar allows you to:
 
 * |symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer styling
   panel on and off.
@@ -70,14 +70,14 @@ a toolbar allows you to:
   rendered in the layers panel. Otherwise, a generic NULL symbol is applied to
   the layer. Based on the layer symbology, this is a convenient way to identify
   which kind of features from which layers cover your area of interest.
-* |expressionFilter| :sup:`Filter Legend by Expression`: helps you apply an
-  expression to remove from the selected layer tree styles that have no feature
-  satisfying the condition. This can be used for example to highlight features
+* |expressionFilter| :sup:`Filter Legend by Expression`: apply an
+  expression to remove styles from the selected layer tree that have no feature
+  satisfying the condition. This can be used to highlight features
   that are within a given area/feature of another layer.
-  From the drop-down list, you can edit and clear the expression set.
+  From the drop-down list, you can edit and clear the expression currently applied.
 * |expandTree| :sup:`Expand All` or |collapseTree| :sup:`Collapse All`
   layers and groups in the layers panel.
-* and |removeLayer| :sup:`Remove Layer/Group` currently selected.
+* |removeLayer| :sup:`Remove Layer/Group` currently selected.
 
 .. _figure_layer_toolbar:
 
@@ -88,7 +88,7 @@ a toolbar allows you to:
 
 .. note::
    Tools to manage the layers panel are also available for map
-   and legend items of the print layout
+   and legend items in print layouts
 
 .. index:: Map themes
 .. _map_themes:
@@ -100,57 +100,58 @@ The |showMapTheme| :sup:`Manage Map Themes` drop-down button provides access to
 convenient shortcuts to manipulate visibility of the layers in the :guilabel:`Layers`
 panel:
 
-* |showAllLayers| :guilabel:`Show All Layers`;
-* |hideAllLayers| :guilabel:`Hide All Layers`;
-* |showSelectedLayers| :guilabel:`Show Selected Layers`;
-* |hideSelectedLayers| :guilabel:`Hide Selected Layers`;
-* |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`.
+* |showAllLayers| :guilabel:`Show All Layers`
+* |hideAllLayers| :guilabel:`Hide All Layers`
+* |showSelectedLayers| :guilabel:`Show Selected Layers`
+* |hideSelectedLayers| :guilabel:`Hide Selected Layers`
+* |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
 
-Beyond the quick control of layers visibility,
+Beyond the simple control of layer visibility,
 the |showMapTheme| :sup:`Manage Map Themes` menu allows you to configure
-**Map Themes** in the legend and switch from one to another.
+**Map Themes** in the legend and switch from one map theme to another.
 A map theme is a **snapshot** of the current map legend that records:
 
-* the layers set as visible in the :guilabel:`Layers` panel;
-* AND for each visible layer:
+* the layers set as visible in the :guilabel:`Layers` panel
+* **and** for each visible layer:
 
-  * the reference to the applied :ref:`style <save_layer_property>`;
-  * the visible classes of the style ie, the layer checked node items in the
+  * the reference to the :ref:`style <save_layer_property>` applied to the layer
+  * the visible classes of the style, ie the layer checked node items in the
     :guilabel:`Layers panel`. This applies to :ref:`symbologies <vector_style_menu>`
-    other than the single symbol rendering;
+    other than the single symbol rendering
   * the collapsed/expanded state of the layer node(s) and the group(s) it's placed
-    inside.
+    inside
 
 To create a map theme:
 
-#. Check a layer you want to show.
-#. Configure the layer properties (symbology, diagram, labels...) as usual.
+#. Check a layer you want to show
+#. Configure the layer properties (symbology, diagram, labels...) as usual
 #. Expand the :menuselection:`Style -->` menu at the bottom and click on :guilabel:`Add...` to
    store the settings as :ref:`a new style embedded in the project
-   <manage_custom_style>`.
+   <manage_custom_style>`
 
-   .. note:: A map theme does not remember the current details of the properties;
-     only a reference to the style name is saved so whenever you apply
-     modifications (eg, change the symbology rendering) to the layer while this
-     style is enabled, the map theme is updated with new information.
+   .. note:: A map theme does not remember the current details of the properties:
+     only a reference to the style name is saved, so whenever you apply
+     modifications to the layer while this style is enabled (eg change the
+     symbology rendering), the map theme is updated with new information.
 
-#. Repeat the previous steps as necessary for the other layers.
-#. If applicable, expand or collapse groups or visible layers nodes in the
-   :guilabel:`Layers` panel.
+#. Repeat the previous steps as necessary for the other layers
+#. If applicable, expand or collapse groups or visible layer nodes in the
+   :guilabel:`Layers` panel
 #. Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the panel,
-   and :guilabel:`Add Theme...`.
-#. Enter the map theme's name and click :guilabel:`OK`. The new theme is listed in
-   the lower part of the |showMapTheme| drop-down menu.
+   and :guilabel:`Add Theme...`
+#. Enter the map theme's name and click :guilabel:`OK`
+
+The new theme is listed in the lower part of the |showMapTheme| drop-down menu.
 
 You can create as many map themes as you need: whenever the current combination
 in the map legend (visible layers, their active style, the map legend nodes)
 does not match any existing map theme contents as defined above, click on
-:guilabel:`Add Theme...` for a creation or use :menuselection:`Replace Theme -->` to
-update the map theme.
-Use :menuselection:`Remove Current Theme` button to delete the active theme.
+:guilabel:`Add Theme...` to create a new map theme, or use
+:menuselection:`Replace Theme -->` to update the current map theme.
+Use the :menuselection:`Remove Current Theme` button to delete the active theme.
 
-Map themes are helpful to quickly switch between different preconfigured
-combinations; select a map theme in the list to restore its combination.
+Map themes are helpful to switch quickly between different preconfigured
+combinations: select a map theme in the list to restore its combination.
 All configured themes are also accessible in the print layout, allowing you to
 create a map layout based on specific themes (see :ref:`layout_main_properties`).
 
@@ -159,8 +160,8 @@ Overview of the context menu of the Layers panel
 ................................................
 
 At the bottom of the toolbar, the main component of the Layers panel is the
-frame listing vector or raster layers added to the project and, those layers
-can be organized in groups. Depending on the item selected in the panel, a
+frame listing vector or raster layers added to the project, optionally
+organized in groups. Depending on the item selected in the panel, a
 right-click shows a dedicated set of options presented below.
 
 =================================================================  ==================  =================  =============
@@ -219,7 +220,7 @@ layers.
 .. index:: Group, Layer
 .. _group_layers_interact:
 
-Interact with Groups and layers
+Interact with groups and layers
 ...............................
 
 Layers in the legend window can be organized into groups. There are two ways to
@@ -228,52 +229,53 @@ do this:
 #. Press the |folder| icon to add a new group. Type in a name for
    the group and press :kbd:`Enter`. Now click on an existing layer and
    drag it onto the group.
-#. Select some layers, right click in the legend window and choose
+#. Select some layers, right-click in the legend window and choose
    :guilabel:`Group Selected`. The selected layers will automatically be placed
    in a new group.
 
-To bring a layer out of a group, you can drag it out, or right click on it and
-choose :guilabel:`Move Out of Group`; the layer is moved from the group and
-placed above the group. Groups can also be nested inside other groups. If a layer
-is placed in a nested group, this function will move the layer out of any of the
-nested groups.
+To move a layer out of a group, drag it out, or right-click on it and
+choose :guilabel:`Move Out of Group`: the layer is moved from the group and
+placed above it. Groups can also be nested inside other groups. If a layer
+is placed in a nested group, :guilabel:`Move Out of Group` will move the layer
+out of all nested groups.
 
-To move a group or a layer to the top of the layer panel, you can either drag it to
+To move a group or layer to the top of the layer panel, either drag it to
 the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
-in a group, the layer is moved to the top in the current group.
+in a group, the layer is moved to the top in its current group.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
 
-Enabling the **Mutually Exclusive Group** option you can make a group have only
-one layer visible at the same time.
+Enabling the **Mutually Exclusive Group** option means you can make a group have
+only one layer visible at the same time.
 Whenever a layer within the group is set visible the others will be toggled not visible.
 
 It is possible to select more than one layer or group at the same time by
-holding down the :kbd:`Ctrl` key while selecting the layers with the left mouse
-button. You can then move all selected layers to a new group at the same time.
+holding down the :kbd:`Ctrl` key while clicking additional layers. You can then move
+all selected layers to a new group at the same time.
 
 You may also delete more than one layer or group at once by selecting
-several items with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
-This way, all selected layers or groups will be removed from the layers list.
+several items with the :kbd:`Ctrl` key and then pressing :kbd:`Ctrl+D`:
+all selected layers or groups will be removed from the layers list.
 
-More information on layer or group using indicator icon
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+More information on layers and groups using indicator icon
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In some circumstances, the :guilabel:`Layers` panel can display next to the
-layer or group an icon to advertize some properties. These symbols are:
+In some circumstances, icons appears next to the layer or group in the
+:guilabel:`Layers` panel to give more information about the layer/group. These
+symbols are:
 
 * |toggleEditing| to indicate that the layer is in edit mode and you can modify
-  the data;
-* |editableEdits| to indicate that the layer being edited has some unsaved changes;
+  the data
+* |editableEdits| to indicate that the layer being edited has some unsaved changes
 * |indicatorFilter| to indicate :ref:`a filter <vector_query_builder>` applied
   to the layer. Hover over the icon to see the filter expression and double-click
-  to update the setting;
+  to update the setting
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
-  <nesting_projects>` and the path to their original project file;
+  <nesting_projects>` and the path to their original project file
 * |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
-  layer <vector_new_scratch_layer>` and its content will be discarded after
-  closing this project. To avoid data loss and make the layer permanent, click
+  layer <vector_new_scratch_layer>` and its content will be discarded when you
+  close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
 
 .. index:: Style
@@ -283,30 +285,30 @@ layer or group an icon to advertize some properties. These symbols are:
 Editing vector layer style
 ...........................
 
-From the Layers panel, you have shortcuts to easily and quickly edit the layer
-rendering. Right-click on a vector layer and select :menuselection:`Styles -->`
+From the Layers panel, you have shortcuts to change the layer rendering quickly
+and easily. Right-click on a vector layer and select :menuselection:`Styles -->`
 in the list in order to:
 
-* see the currently applied :ref:`styles <manage_custom_style>` to the layer. In
-  case you defined many styles for the layer, you can switch from one to another
-  and have your layer rendering automatically updated in the map canvas.
+* see the :ref:`styles <manage_custom_style>` currently applied to the layer. If
+  you defined many styles for the layer, you can switch from one to another
+  and your layer rendering will automatically be updated on the map canvas.
 * copy the current style, and when applicable, paste a copied style from another layer
-* rename the current style, add a new one (which is actually a copy of the current
-  one) or delete the current style (when multiple styles available).
+* rename the current style, add a new style (which is actually a copy of the current
+  one) or delete the current style (when multiple styles are available).
 
-.. note:: The previous options are also available for raster layer.
+.. note:: The previous options are also available for raster layers.
 
-Whether the features in the vector layer have all the same unique symbol or they are
-classified (in that case, the layer is displayed in a tree structure with each class
-as sub-item), the following options are available at layer level or class level:
+Whether the features in the vector layer all have the same unique symbol or they are
+classified (in which case the layer is displayed in a tree structure with each class
+as a sub-item), the following options are available at layer level or class level:
 
-* a :guilabel:`Edit Symbol...` button to open the :ref:`symbol-selector` dialog and
-  update any property (symbol, size, color...) of the layer or feature symbol.
-  Double-clicking on a feature does also open the :guilabel:`Symbol Selector` dialog.
-* a :ref:`color-selector` widget with a **Color Wheel** from which you can click a
-  color and have it automatically update the symbol fill color. For convenience,
+* :guilabel:`Edit Symbol...` to open the :ref:`symbol-selector` dialog to
+  change any properties of the layer or feature symbol (symbol, size, color...).
+  Double-clicking on a feature also opens the :guilabel:`Symbol Selector` dialog.
+* :ref:`color-selector` with a **Color Wheel** from which you can click a
+  color to update the symbol fill color automatically. For convenience,
   **Recent colors** are available at the bottom of the color wheel.
-* a |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
+* |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
   Items` to toggle on or off the visibility of all the classes of features. This avoids
   (un)checking items one by one.
 
@@ -314,8 +316,8 @@ as sub-item), the following options are available at layer level or class level:
 
     From the context menu, copy the style of a layer and paste it to a group
     or a selection of layers: the style is applied to all the layers that
-    are of the same type (vector vs raster) as the original layer and,
-    in case of vector, have the same geometry type (point, line or polygon).
+    are of the same type (vector/raster) as the original layer and,
+    for vector layers, have the same geometry type (point, line or polygon).
 
 
 .. index::
@@ -326,43 +328,43 @@ as sub-item), the following options are available at layer level or class level:
 Layer Styling Panel
 --------------------
 
-The :guilabel:`Layer Styling` panel (also enabled with :kbd:`Ctrl+3`) is somehow
+The :guilabel:`Layer Styling` panel (also enabled with :kbd:`Ctrl+3`) is
 a shortcut to some of the functionalities of the :guilabel:`Layer Properties`
-dialog. It indeed offers you a quick and handy way to define the rendering and the
-behavior of a layer, and to visualize its effects without opening the layer
-properties dialog.
+dialog. It provides a quick and easy way to define the rendering and the
+behavior of a layer, and to visualize its effects without haveing to open the
+layer properties dialog.
 
-Besides avoiding you dealing with the modal and blocking dialog of the layer
-properties, it also avoids you cluttering the screen with features dialogs given
-that it embeds most of them (color selector, effects properties, rule edit,
+In addition to avoiding the blocking (or "modal") layer properties dialog, the layer
+styling panel also avoids cluttering the screen with dialogs, and
+contains most style functions (color selector, effects properties, rule edit,
 label substitution...): e.g., clicking color buttons inside the layer style panel
 causes the color selector dialog to be opened inside the layer style panel itself
 rather than as a separate dialog.
 
 From a drop-down list of current layers in the layer panel, select an item and:
 
-* Set its |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
-  and |rasterHistogram| :guilabel:`Histogram` properties in case of raster layer.
-  These options are the same available in :ref:`raster_properties_dialog`.
-* Set its |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
-  |labeling| :guilabel:`Labels` properties in case of vector layer.
-  These options are the same available in :ref:`vector_properties_dialog`.
+* Set raster layer |symbology| :guilabel:`Symbology`, |transparency| :guilabel:`Transparency`,
+  and |rasterHistogram| :guilabel:`Histogram` properties.
+  These options are the same as those in the :ref:`raster_properties_dialog`.
+* Set vector layer |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View` and
+  |labeling| :guilabel:`Labels` properties.
+  These options are the same as those in the :ref:`vector_properties_dialog`.
 * Manage the associated style(s) in the |stylePreset| :guilabel:`Style Manager`
   (more details at :ref:`manage_custom_style`).
-* Follow the whole |history| :guilabel:`History` of changes you applied to the
-  layer style in the current project; you can therefore cancel or restore to any
-  state by selecting it in the list and hit :guilabel:`Apply` button.
+* See the |history| :guilabel:`History` of changes you applied to the
+  layer style in the current project: you can therefore cancel or restore to any
+  state by selecting it in the list and clicking :guilabel:`Apply`.
 
 Another powerful feature of this panel is the |checkbox| :guilabel:`Live update` checkbox.
-Tick it and your changes are automatically rendered in the map canvas as you go on.
-You no longer need to hit the :guilabel:`Apply` button.
+Tick it to render your changes immediately on the map canvas:
+you no longer need to click the :guilabel:`Apply` button.
 
 .. _figure_layer_styling:
 
 .. figure:: img/layer_styling.png
     :align: center
 
-    Defining a layer symbology from the layer styling panel
+    Defining a layer's symbology from the layer styling panel
 
 .. tip:: **Add custom tabs to the Layer Styling panel**
 
@@ -379,29 +381,29 @@ You no longer need to hit the :guilabel:`Apply` button.
 Layer Order Panel
 -----------------
 
-By default, layers shown in QGIS map canvas are drawn following their order
-in the :guilabel:`Layers` panel i.e., the higher a layer is in the panel, the
-upper (hence, more visible) it'll be in the map view.
+By default, layers shown on the QGIS map canvas are drawn following their order
+in the :guilabel:`Layers` panel: the higher a layer is in the panel, the
+higher (hence, more visible) it'll be in the map view.
 
-You can however choose another visibility logic and define an independent
-drawing order for the layers with the :guilabel:`Layer Order` panel enabled
-in :menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9` command.
-Check the |checkbox| :guilabel:`Control rendering order` box underneath
+You can define a drawing order for the layers independent of the order in the
+layers panel with the :guilabel:`Layer Order` panel enabled
+in :menuselection:`View --> Panels -->` menu or with :kbd:`Ctrl+9`.
+Check |checkbox| :guilabel:`Control rendering order` underneath
 the list of layers and reorganize the layers in the panel as you want. This
 order becomes the one applied to the map canvas.
-For example, in figure_layer_order_, you can notice that the ``airports``
-features are displayed over the ``alaska`` polygon despite their layers
-placement in the Layers panel.
+For example, in figure_layer_order_, you can see that the ``airports``
+features are displayed over the ``alaska`` polygon despite those layers'
+respective placement in the Layers panel.
 
-Unchecking the |checkbox| :guilabel:`Control rendering order` box will cause
-a revert to default behavior.
+Unchecking |checkbox| :guilabel:`Control rendering order` will
+revert to default behavior.
 
 .. _figure_layer_order:
 
 .. figure:: img/layer_order.png
     :align: center
 
-    Define a legend independent layer order
+    Define a layer order independent of the legend
 
 .. index::
    single: Map; Overview
@@ -411,11 +413,11 @@ a revert to default behavior.
 Overview Panel
 --------------
 
-The :guilabel:`Overview` panel (:kbd:`Ctrl+8`) can constantly display a map with
-full extent view of some of the layers. The Overview map is filled with layers
+The :guilabel:`Overview` panel (:kbd:`Ctrl+8`) displays a map with
+a full extent view of some of the layers. The Overview map is filled with layers
 using the :guilabel:`Show in Overview` option from the :menuselection:`Layer`
 menu or in the layer contextual menu. Within the view,
-a red rectangle shows the current map canvas extent, helping you to quickly
+a red rectangle shows the current map canvas extent, helping you quickly to
 determine which area of the whole map you are currently viewing. If you
 click-and-drag the red rectangle in the overview frame, the main map view
 extent will update accordingly.
@@ -447,8 +449,8 @@ Undo/Redo Panel
 ---------------
 
 For each layer being edited, the :guilabel:`Undo/Redo` (:kbd:`Ctrl+5`) panel
-shows the list of actions done, allowing
-to quickly undo a set of actions by simply selecting the action listed above.
+shows the list of actions carried out, allowing you
+quickly to undo a set of actions by selecting the action listed above.
 More details at :ref:`Undo and Redo edits <undoredo_edits>`.
 
 .. index::
@@ -463,9 +465,9 @@ Statistical Summary Panel
 The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized information
 on any vector layer. This panel allows you to select:
 
-* the vector layer to compute the statistics on;
-* the column to use or enter any |expression| :ref:`expression <vector_expressions>`;
-* the statistics to return using the drop-down button at the right bottom of the
+* the vector layer to compute the statistics on
+* the column to use, or an |expression| :ref:`expression <vector_expressions>`
+* the statistics to return using the drop-down button at the bottom-right of the
   dialog. Depending on the field's (or expression's values) type, available
   statistics are:
 
@@ -494,12 +496,12 @@ Maximum Length                      |checkbox|
 
 Table: Statistics available for each field type
 
-The statistical summary can then be:
+The statistical summary can be:
 
-* returned for the whole layer or the |checkbox| :guilabel:`selected features only`;
+* returned for the whole layer or |checkbox| :guilabel:`selected features only`
 * recalculated using the |draw| button when the underlying data source changes
-  (eg, new or removed features/fields, attribute modification);
-* |editCopy| copied to the clipboard and pasted as table in another application.
+  (eg, new or removed features/fields, attribute modification)
+* |editCopy| copied to the clipboard and pasted as a table in another application
 
 .. _figure_statistical_summary:
 
@@ -515,33 +517,35 @@ The statistical summary can then be:
 Nesting Projects
 ================
 
-Sometimes, you'd like to keep in different projects a bunch of layers with the
+Sometimes, you'd like to keep some layers in different projects, but with the
 same style. You can either create a :ref:`default style <store_style>` for
-these layers or embed them from another project to save you tons of work.
+these layers or embed them from another project to save time and effort.
 
 Embed layers and groups from an existing project has some advantages over
 styling:
 
-* all types of layers (vector or raster, local or online...) can be added
-* fetching groups and layers, you can keep the same tree structure of the
+* All types of layers (vector or raster, local or online...) can be added
+* Fetching groups and layers, you can keep the same tree structure of the
   "background" layers in your different projects
 * While the embedded layers are editable, you can't change their properties
-  such as symbology, labels, forms, default values, actions... This ensures
-  homogeneity throughout the projects
-* modify the items in the original project and changes are propagated to all
-  the other projects.
+  such as symbology, labels, forms, default values and actions, ensuring
+  consistency across projects
+* Modify the items in the original project and changes are propagated to all
+  the other projects
 
 If you want to embed content from other project files into your project, select
-:menuselection:`Layer --> Embed Layers and Groups` and:
+:menuselection:`Layer --> Embed Layers and Groups`:
 
-#. Press |browseButton| to look for a project; you can see the content of the
-   project (see figure_embed_dialog_).
-#. Press :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
-   groups you wish to retrieve.
-#. Press :guilabel:`OK`. The selected layers and groups are embedded in the :guilabel:`Layers`
-   panel and can be visualized in the map canvas now. An |indicatorEmbedded|
-   icon is added next to their name for recognition and hovering over displays
-   a tooltip with the original project file path.
+#. Click the |browseButton| to look for a project: you can see the content of the
+   project (see figure_embed_dialog_)
+#. Hold down :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
+   groups you wish to retrieve
+#. Click :guilabel:`OK`
+
+The selected layers and groups are embedded in the :guilabel:`Layers`
+panel and displayed on the map canvas. An |indicatorEmbedded|
+icon is added next to their name for recognition and hovering over displays
+a tooltip with the original project file path.
 
 .. _figure_embed_dialog:
 
@@ -551,21 +555,21 @@ If you want to embed content from other project files into your project, select
    Select layers and groups to embed
 
 Like any other layer, an embedded layer can be removed from the project by
-right-click on the layer and choose |removeLayer| :sup:`Remove`.
+right-clicking on the layer and clicking |removeLayer| :sup:`Remove`.
 
 .. tip:: **Change rendering of an embedded layer**
 
- It's not possible to change rendering of an embedded layer, unless you make
- the changes in the original project file. However, right-click on a layer and
- select :guilabel:`Duplicate` creates a layer which is fully-featured and not
- dependent to the original project. You can then safely remove the linked
+ It's not possible to change the rendering of an embedded layer, unless you make
+ the changes in the original project file. However, right-clicking on a layer and
+ selecting :guilabel:`Duplicate` creates a layer which is fully-featured and not
+ dependent on the original project. You can then safely remove the linked
  layer.
 
 
 .. _working_canvas:
 
-Working with map canvas
-=======================
+Working with the map canvas
+===========================
 
 .. index:: Rendering
 .. _`redraw_events`:
@@ -576,10 +580,10 @@ Rendering
 By default, QGIS renders all visible layers whenever the map canvas is
 refreshed. The events that trigger a refresh of the map canvas include:
 
-*  Adding a layer
-*  Panning or zooming
-*  Resizing the QGIS window
-*  Changing the visibility of a layer or layers
+*  adding a layer
+*  panning or zooming
+*  resizing the QGIS window
+*  changing the visibility of a layer or layers
 
 QGIS allows you to control the rendering process in a number of ways.
 
@@ -592,19 +596,19 @@ Scale Dependent Rendering
 Scale-dependent rendering allows you to specify the minimum and maximum scales
 at which a layer (raster or vector) will be visible. To set scale-dependent rendering,
 open the :guilabel:`Properties` dialog by double-clicking on the layer in the legend.
-On the :guilabel:`Rendering` tab, tick the |checkbox| :guilabel:`Scale
-dependent visibility` checkbox and enter the :guilabel:`Minimum (exclusive)` and
+On the :guilabel:`Rendering` tab, tick |checkbox| :guilabel:`Scale
+dependent visibility` and enter the :guilabel:`Minimum (exclusive)` and
 :guilabel:`Maximum (inclusive)` scale values.
 
-You can also activate the scale dependent visibility on a layer from the Layers panel.
+You can also activate scale dependent visibility on a layer from the Layers panel.
 Right-click on the layer and in the context menu, select :guilabel:`Set Layer Scale Visibility`.
 
-The |mapIdentification| :sup:`Set to current canvas scale` button helps you use
+The |mapIdentification| :sup:`Set to current canvas scale` button allow you to use
 the current map canvas scale as boundary of the range visibility.
 
 
 .. note::
-   When a layer is not rendered in the map canvas due to the map scale out of
+   When a layer is not rendered in the map canvas because the map scale is out of
    its visibility scale range, the layer is greyed in the Layers panel and
    a new option :guilabel:`Zoom to Visible Scale` appears in the layer context menu.
    Select it and the map is zoomed to the layer's nearest visibility scale.
@@ -625,15 +629,15 @@ Suspending Rendering
 ^^^^^^^^^^^^^^^^^^^^
 
 To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
-lower right corner of the status bar. When the |checkbox| :guilabel:`Render`
-checkbox is not checked, QGIS does not redraw the canvas in response to any of
-the events described in section :ref:`redraw_events`. Examples of when you
+bottom-right corner of the status bar. When |checkbox| :guilabel:`Render`
+is not checked, QGIS does not redraw the canvas in response to any of
+the events described in the section :ref:`redraw_events`. Examples of when you
 might want to suspend rendering include:
 
-* Adding many layers and symbolizing them prior to drawing
-* Adding one or more large layers and setting scale dependency before drawing
-* Adding one or more large layers and zooming to a specific view before drawing
-* Any combination of the above
+* adding many layers and symbolizing them prior to drawing
+* adding one or more large layers and setting scale dependency before drawing
+* adding one or more large layers and zooming to a specific view before drawing
+* any combination of the above
 
 Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and
 causes an immediate refresh of the map canvas.
@@ -651,8 +655,8 @@ You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose menu option
 :menuselection:`Settings --> Options` and click on the :guilabel:`Rendering`
-tab. Uncheck the |checkbox| :guilabel:`By default new layers added to the map
-should be displayed` checkbox. Any layer subsequently added to the map will be off
+tab. Uncheck |checkbox| :guilabel:`By default new layers added to the map
+should be displayed`. Any layer subsequently added to the map will be off
 (invisible) by default.
 
 
@@ -665,7 +669,7 @@ Stopping Rendering
 
 To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
 the map canvas and leave the map partially drawn. It may take a bit of time
-between pressing :kbd:`Esc` and the time the map drawing is halted.
+between pressing :kbd:`Esc` for the map drawing to halt.
 
 .. note::
    It is currently not possible to stop rendering --- this was disabled in the Qt4
@@ -694,7 +698,7 @@ There are some settings that allow you to improve rendering speed. Open the QGIS
 dialog using :menuselection:`Settings --> Options`, go to the :guilabel:`Rendering`
 tab and select or deselect the following checkboxes:
 
-* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
+* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`.
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores` and then
   set the |checkbox| :guilabel:`Max cores to use`.
 * The map renders in the background onto a separate image and each
@@ -703,9 +707,9 @@ tab and select or deselect the following checkboxes:
   However, if rendering finishes faster than this duration, it will be shown
   instantaneously.
 * With |checkbox| :guilabel:`Enable Feature simplification by default for newly
-  added layers`, you simplify features' geometry (less nodes) and as  a result,
-  they quickly display.
-  Be aware that you can also face rendering inconsistencies.
+  added layers`, you simplify features' geometry (fewer nodes) and as a result,
+  they display more quickly.
+  Be aware that this can cause rendering inconsistencies.
 
 
 .. index:: Zoom, Pan, Map navigation
@@ -717,9 +721,9 @@ Zooming and Panning
 QGIS provides tools to zoom and pan to your area of interest.
 
 Apart from using the |pan| :sup:`pan` and |zoomIn|
-:sup:`zoom-in` / |zoomOut| :sup:`zoom-out` icons on the toolbar
-with the mouse, navigating can also be done with the mouse wheel, spacebar
-and the arrow keys. A :guilabel:`Zoom factor` can be set under the
+:sup:`zoom-in`/|zoomOut| :sup:`zoom-out` icons on the toolbar
+with the mouse, you can also navigate with the mouse wheel, spacebar
+and arrow keys. A :guilabel:`Zoom factor` can be set under the
 :menuselection:`Settings -->` |options| :menuselection:`Options --> Map tools`
 menu to define the scale behavior while zooming.
 
@@ -727,7 +731,7 @@ With the mouse wheel
 ....................
 
 You can press the mouse wheel to pan inside of the main window (on macOS,
-you may need to hold :kbd:`cmd` key).
+you may need to hold down the :kbd:`cmd` key).
 You can roll the mouse wheel to zoom in and out on the map; the mouse
 cursor position will be the center of the zoomed area of interest.
 Holding down :kbd:`Ctrl` while rolling the mouse wheel results in a finer zoom.
@@ -736,11 +740,10 @@ With the arrow keys
 ...................
 
 Panning the map is possible with the arrow keys.
-Place the mouse cursor inside the map area, and click on the right arrow key
-to pan east, left arrow key to pan west, up arrow key to pan north, and down
-arrow key to pan south.
+Place the mouse cursor inside the map area, and click on the arrow keys
+to pan up, down, left and right.
 
-You can also use the space bar to temporarily cause mouse movements to pan
+You can also use the space bar to cause mouse movements temporarily to pan
 the map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause
 the map display to zoom in or out following the zoom factor set. Pressing
 :kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out
@@ -748,8 +751,8 @@ on the map canvas.
 
 When certain map tools are active (Identify, Measure...), you can perform a zoom by
 holding down :kbd:`Shift` and dragging a rectangle on the map to zoom to that area.
-This is enabled for the map tools which are not selection tools (since they
-use :kbd:`Shift` for adding to selection) nor edit tools.
+This is not enabled for selection tools (since they
+use :kbd:`Shift` for adding to selection) or edit tools.
 
 
 .. index::
@@ -783,7 +786,7 @@ Note that you can have multiple bookmarks with the same name.
 Working with Bookmarks
 ......................
 
-To use or manage bookmarks, select the menu option :menuselection:`View --> Show
+To use or manage bookmarks, select :menuselection:`View --> Show
 Bookmarks` or press :kbd:`Ctrl+7`. The :guilabel:`Spatial Bookmarks`
 panel allows you to:
 
@@ -793,8 +796,9 @@ panel allows you to:
 * Delete a Bookmark: select the bookmark and click :guilabel:`Delete Bookmark`.
   Confirm your choice.
 * Import or Export a bookmark: To share or transfer your bookmarks between
-  computers you can use the :guilabel:`Import/Export Bookmarks` pull down menu
-  to export all bookmarks to an :file:`.xml` file or import them.
+  computers you can use the :guilabel:`Import/Export Bookmarks` drop-down menu
+  to export all bookmarks to an :file:`.xml` file or import bookmarks from such
+  a file.
 
 You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
 
@@ -804,9 +808,8 @@ You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`lo
 Decorations
 -----------
 
-The Decorations of QGIS include the Grid, the Copyright Label, the North Arrow,
-the Scale Bar and Layout Extents. They are used to 'decorate' the map by adding cartographic
-elements.
+Decorations include Grid, Copyright Label, North Arrow, Scale Bar and Layout
+Extents. They are used to 'decorate' the map by adding cartographic elements.
 
 .. index:: Grid
 .. _grid_decoration:
@@ -817,18 +820,18 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-.. _figure_decorations_grid:
+#. Select :menuselection:`View --> Decorations --> Grid` to open the dialog.
 
-.. figure:: img/grid_dialog.png
-   :align: center
+   .. _figure_decorations_grid:
 
-   The Grid Dialog
+   .. figure:: img/grid_dialog.png
+      :align: center
 
-#. Select from menu :menuselection:`View --> Decorations --> Grid`.
-   The dialog starts (see figure_decorations_grid_).
-#. Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
+      The Grid Dialog
+
+#. Tick |checkbox| :guilabel:`Enable grid` and set grid
    definitions according to the layers loaded in the map canvas.
-#. Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
+#. Tick |checkbox| :guilabel:`Draw annotations` and set
    annotation definitions according to the layers loaded in the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
@@ -838,34 +841,35 @@ annotations to the map canvas.
 Copyright Label
 ...............
 
-|copyrightLabel| :sup:`Copyright label` adds a copyright label using the text
-you prefer to the map.
+|copyrightLabel| :sup:`Copyright label` adds a copyright label to the map
+using your choice of text.
 
-.. _figure_decorations_copyright:
+#. Select :menuselection:`View --> Decorations --> Copyright Label` to open
+   the dialog
 
-.. figure:: img/copyright.png
-   :align: center
+   .. _figure_decorations_copyright:
 
-   The Copyright Dialog
+   .. figure:: img/copyright.png
+      :align: center
 
-#. Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-   The dialog starts (see figure_decorations_copyright_).
-#. Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is
-   checked.
-#. Enter the text you want to place on the map. You can use HTML as
-   shown in the example.
-#. Choose the font of the label from the :guilabel:`Font` |selectString| combo box. Set the
+      The Copyright Dialog
+
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
+#. Enter the text you want to place on the map.
+   You can include expressions
+   (using the :guilabel:`Insert an Expression` button).
+#. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
    font color and opacity by clicking the black arrow to the right of the font combo box.
 #. Choose the placement of the label from the :guilabel:`Placement`
    |selectString| combo box.
-#. You can refine the placement of the item by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
-#. You can change the color to apply.
+#. Refine the placement of the item by setting a horizontal and/or vertical
+   :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
+#. You can change the color to apply
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 In the example above, which is the default, QGIS places a copyright symbol
-followed by the date in the lower right-hand corner of the map canvas.
+followed by the date in the bottom-right corner of the map canvas.
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -873,28 +877,28 @@ followed by the date in the lower right-hand corner of the map canvas.
 North Arrow
 ...........
 
-|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas.
-You can control the style and placement of the north arrow.
-
-.. _figure_decorations_north:
-
-.. figure:: img/north_arrow_dialog.png
-   :align: center
-
-   The North Arrow Dialog
+|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas,
+with options for style and placement.
 
 To add a north arrow:
 
-#. Select from menu :menuselection:`View --> Decorations --> North Arrow`.
-   The dialog starts (see figure_decorations_north_).
-#. Make sure the |checkbox| :guilabel:`Enable north arrow` checkbox is checked.
-#. Optionally, change the color, size or choose a custom svg.
-#. Optionally, change the angle or choose **Automatic** to let QGIS determine the
-   direction.
-#. Optionally, choose the placement from the Placement combo box.
-#. Optionally, refine the placement of the arrow by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Select :menuselection:`View --> Decorations --> North Arrow` to open the dialog.
+   
+   .. _figure_decorations_north:
+
+   .. figure:: img/north_arrow_dialog.png
+      :align: center
+
+      The North Arrow Dialog
+
+#. Make sure |checkbox| :guilabel:`Enable north arrow` is checked
+#. Optionally change the color and size, or choose a custom SVG.
+#. Optionally change the angle or choose **Automatic** to let QGIS determine the
+   direction
+#. Optionally choose the placement from the Placement combo box
+#. Optionally refine the placement of the arrow by setting a horizontal and/or vertical
+   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 
@@ -907,37 +911,36 @@ Scale Bar
 |scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
-.. _figure_decorations_scale:
-
-.. figure:: img/scale_bar_dialog.png
-   :align: center
-
-   The Scale Bar Dialog
-
 QGIS only supports displaying the scale in the same units as your map frame.
-So if the units of your layers are in meters, you can't create a scale bar in
+So, if the units of your project's CRS are meters, you can't create a scale bar in
 feet. Likewise, if you are using decimal degrees, you can't create a scale
 bar to display distance in meters.
 
 To add a scale bar:
 
-#. Select from menu :menuselection:`View --> Decorations --> Scale Bar`.
-   The dialog starts (see figure_decorations_scale_).
-#. Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked.
-#. Choose the style from the :guilabel:`Scale bar style` |selectString|
-   combo box.
-#. Select the :guilabel:`Color of bar` |selectColor| by chosing
-   a fill color (default: Black) and an outline color (default: White). The scale 
+#. Select :menuselection:`View --> Decorations --> Scale Bar` to open the dialog
+
+   .. _figure_decorations_scale:
+
+   .. figure:: img/scale_bar_dialog.png
+      :align: center
+
+      The Scale Bar Dialog
+
+#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked
+#. Choose a style from the :guilabel:`Scale bar style` |selectString| combo box
+#. Select the :guilabel:`Color of bar` |selectColor| by choosing
+   a fill color (default: black) and an outline color (default: white). The scale 
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
-#. Select the font of the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
-#. Set the :guilabel:`Size of bar` |selectNumber|.
-#. Optionally, check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display values easy-to-read.
-#. Choose the placement from the :guilabel:`Placement` |selectString| combo box.
-#. You can refine the placement of the item by setting a Horizontal and/or Vertical
-   `Marging from (Canvas) Edge`. These values can be a distance in **Millimeter** or
-   **Pixels** or set as **Percentage** of the width or height of the map canvas.
+#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
+#. Set the :guilabel:`Size of bar` |selectNumber|
+#. Optionally check |checkbox| :guilabel:`Automatically snap to round number
+   on resize` to display easy-to-read values
+#. Choose the placement from the :guilabel:`Placement` |selectString| combo box
+#. You can refine the placement of the item by setting a horizontal and/or vertical
+   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
 Layout Extents
@@ -949,35 +952,37 @@ You can control the style and labeling of the displayed layout extents.
 This decoration is useful when you are tweaking the positioning of map elements such as labels,
 and need to know the actual visible region of print layouts.
 
-.. _figure_decorations_layoutextents:
-
-.. figure:: img/decoration_layoutextents.png
-   :align: center
-
-   The Layout Extents Dialog
-
 .. _figure_decorations_layoutextents_example:
 
 .. figure:: img/decoration_layoutextents_example.png
    :align: center
 
-   Example of displayed layout extents in a QGIS project with two print layouts. The print
+   Example of layout extents displayed in a QGIS project with two print layouts. The print
    layout named 'Sights' contains two map items, while the other print layout contains one
    map item.
 
 To add layout extent(s):
 
-#. Select from menu :menuselection:`View --> Decorations --> Layout Extents`.
-   The dialog starts (see figure_decorations_layoutextents_).
-#. Make sure the |checkbox| :guilabel:`Show layout extents` checkbox is checked.
-#. Optionally, change the symbol and labeling of the extents
-#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
+#. Select :menuselection:`View --> Decorations --> Layout Extents` to open
+   the dialog
+
+   .. _figure_decorations_layoutextents:
+
+   .. figure:: img/decoration_layoutextents.png
+      :align: center
+
+      The Layout Extents Dialog
+
+#. Make sure |checkbox| :guilabel:`Show layout extents` is checked
+#. Optionally change the symbol and labeling of the extents
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied
+
 
 .. tip::
 
-   **Settings of Decorations**
+   **Decorations Settings**
 
-   When you save a :file:`.qgs` project, any changes you have made to Grid,
+   When you save a QGIS project file, any changes you have made to Grid,
    North Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project and restored
    the next time you load the project.
 
@@ -991,13 +996,13 @@ Annotation Tools
 ----------------
 
 Annotations are information added to the map canvas and shown within a
-balloon. These information can be of different types and annotations are
+balloon. This information can be of different types and annotations are
 added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 
-* |textAnnotation| :sup:`Text Annotation` for custom formatted text;
-* |htmlAnnotation| :sup:`Html Annotation` to place the content of an :file:`html`
-  file;
-* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol;
+* |textAnnotation| :sup:`Text Annotation` for custom formatted text
+* |htmlAnnotation| :sup:`HTML Annotation` to place the content of an :file:`html`
+  file
+* |svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol
 * |formAnnotation| :sup:`Form Annotation`: useful to display attributes
   of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
@@ -1009,9 +1014,9 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
 .. figure:: img/custom_annotation.png
    :align: center
 
-   Customized qt designer annotation form
+   Customized QT Designer annotation form
 
-.. Todo: Ideally, to sync with the text, this screen shot should not show the
+.. Todo: Ideally, to sync with the text, this screenshot should not show the
  dialog of form annotation but instead different forms in action, this will be all
  about showing what an annotation looks like.
  Annotation dialog will need to be shown only when it's described (which is done below)
@@ -1020,21 +1025,21 @@ To add an annotation, select the corresponding tool and click on the map canvas.
 An empty balloon is added. Double-click on it and a dialog opens with various
 options. This dialog is almost the same for all the annotation types:
 
-* At the top, a file selector to fill with the path to a :file:`html`, :file:`svg`
+* At the top, a file selector to fill with the path to an :file:`html`, :file:`svg`
   or :file:`ui` file depending on the type of annotation. For text annotation,
-  you have instead to enter your message in a text box and set its rendering with
-  provided font tools.
+  you can enter your message in a text box and set its rendering with
+  the normal font tools.
 * |checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon placement
   is based on a screen position (instead of the map), meaning that it's always shown
   regardless the map canvas extent.
-* :guilabel:`Linked layer`: allows the annotation to be associated with a map layer
-  and visible only when that layer is visible.
-* :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`, allows to
-  set the symbol to display at the balloon anchor position (shown only when
+* :guilabel:`Linked layer`: associates the annotation with a map layer, making it
+  visible only when that layer is visible.
+* :guilabel:`Map marker`: using :ref:`QGIS symbols <symbol-selector>`,
+  sets the symbol to display at the balloon anchor position (shown only when
   :guilabel:`Fixed map position` is checked).
-* :guilabel:`Frame style`: Allows to set the frame background color, transparency,
-  stroke color or width... of the balloon using QGIS symbols.
-* :guilabel:`Contents margins`: set interior margins of the annotation frame.
+* :guilabel:`Frame style`: sets the frame background color, transparency,
+  stroke color or width of the balloon using QGIS symbols.
+* :guilabel:`Contents margins`: sets interior margins of the annotation frame.
 
 .. _figure_annotation:
 
@@ -1043,13 +1048,13 @@ options. This dialog is almost the same for all the annotation types:
 
    Annotation text dialog
 
-Annotation can be selected when an annotation tool is enabled. Then it can be
+Annotations can be selected when an annotation tool is enabled. They can then be
 moved by map position (by dragging the map marker) or by moving only the balloon.
-Also the |annotation| :sup:`Move Annotation` tool allows you to move the
+The |annotation| :sup:`Move Annotation` tool also allows you to move the
 balloon on the map canvas.
 
 To delete an annotation, select it and either press the :kbd:`Del` or :kbd:`Backspace`
-button or either double-click and press the :guilabel:`Delete` button in its properties dialog.
+button, or double-click it and press the :guilabel:`Delete` button in the properties dialog.
 
 .. note::
    If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool (move annotation,
@@ -1060,9 +1065,9 @@ button or either double-click and press the :guilabel:`Delete` button in its pro
 
   You can print or export annotations with your map to various formats using:
 
-  * map canvas export tools available in :menuselection:`Project` menu;
-  * or :ref:`print layout <create-output>`: in that case you need to check the
-    :guilabel:`Draw map canvas items` in the corresponding map item properties.
+  * map canvas export tools available in the :menuselection:`Project` menu
+  * :ref:`print layout <create-output>`, in which case you need to check
+    :guilabel:`Draw map canvas items` in the corresponding map item properties
 
 
 .. index::
@@ -1077,40 +1082,36 @@ General information
 
 QGIS provides four means of measuring geometries:
 
-* the interactive measurement tools |measure|,
-* measuring in the |calculateField| :sup:`Field Calculator`,
-* derived measures in the :ref:`identify` tool,
-* and a vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
+* interactive measurement tools |measure|
+* measuring in the |calculateField| :sup:`Field Calculator`
+* derived measurements in the :ref:`identify` tool
+* the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
   Export/Add Geometry Columns`
 
 Measuring works within projected coordinate systems (e.g., UTM) and unprojected
 data. The first three measuring tools behave equally to global project settings:
 
-* If :guilabel:`"on the fly" CRS transformation` (see :ref:`otf_transformation`)
-  is enabled, the default measurement metric is
-  - different from most other GIS - ellipsoidal, using the ellipsoid defined in
+* Unlike most other GIS, the default measurement metric is
+  ellipsoidal, using the ellipsoid defined in
   :menuselection:`Project --> Properties... --> General`. This is true both
   when geographic and projected coordinate systems are defined for the project.
-* If you want to calculate the projected / planimetric area or distance using cartesian
-  maths, the measurement ellipsoid has to be set to "None / Planimetric"
+* If you want to calculate the projected/planimetric area or distance using cartesian
+  maths, the measurement ellipsoid has to be set to "None/Planimetric"
   (:menuselection:`Project --> Properties... --> CRS`). However,
-  with a geographic (= unprojected) CRS defined for the data and project, area and
+  with a geographic (ie unprojected) CRS defined for the data and project, area and
   distance measurement will be ellipsoidal.
-* If :guilabel:`"on the fly" CRS transformation` is disabled, the measurement
-  metric is planimetric when the project coordinate system is projected and
-  ellipsoidal when the project coordinate system is unprojected / geographic.
 
 However, neither the identify tool nor the field calculator will transform your
 data to the project CRS before measuring. If you want to achieve this, you have
 to use the vector analysis tool: :menuselection:`Vector --> Geometry Tools -->
-Export/Add Geometry Columns`. Here, measurement is by default planimetric except
-if you choose the ellipsoidal measure.
+Add Geometry Attributes...`. Here, measurement is planimetric, unless
+you choose the ellipsoidal measurement.
 
-Measure length, areas and angles interactive
-............................................
+Measure length, areas and angles interactively
+..............................................
 
 Click the |measure| icon in the Attribute toolbar to begin measurements.
-The downward arrow near the icon helps you switch to the convenient tool to measure
+The down arrow near the icon switches between
 |measure| length, |measureArea| area or |measureAngle| angle.
 The default unit used in the dialog is the one set in :menuselection:`Project -->
 Properties... --> General` menu.
@@ -1121,7 +1122,7 @@ Properties... --> General` menu.
    at the bottom of the widget opens the :menuselection:`Settings -->
    Options --> Map Tools` menu, where you can select the rubberband color, the
    precision of the measurements and the unit behavior. You can also choose your
-   preferred measurement or angle units but keep in mind that those values are
+   preferred measurement or angle units, but keep in mind that those values are
    overridden in the current project by the selection made in the 
    :menuselection:`Project --> Properties... --> General` menu, and by the
    selection made in the measurement widget.
@@ -1137,20 +1138,20 @@ tools, each mouse click (within the tolerance setting) will snap to that layer.
    single: Measure; Areas
    single: Measure; Angles
 
-By default, |measure| :sup:`Measure Line`: QGIS measures real distances
+By default, |measure| :sup:`Measure Line` measures real distances
 between given points according to a defined ellipsoid.
 The tool then allows you to click points on the map. Each segment length,
 as well as the total, shows up in the measure window.
-To stop measuring, click your right mouse button.
+To stop measuring, click the right mouse button.
 
-Note that you can use the drop-down list near the total to interactively change
-the measurement units while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
+Note that you can use the drop-down list near the total to change
+the measurement units interactively while working with the measure tool ('Meters', 'Kilometers', 'Feet', 'Yards',
 'Miles', 'Nautical miles', 'Centimeters', 'Millimeters', 'Degrees', 'Map units').
-This unit is kept for the widget until a new project is created or another project
+This unit is retained for the widget until a new project is created or another project
 is opened.
 
 The :guilabel:`Info` section in the dialog explains how calculations are made
-according to CRS settings available.
+according to the CRS settings available.
 
 .. %FixMe: currently, validating the Settings --> Options dialog revert any change
    made on units in the measurement dialog (see https://issues.qgis.org/issues/15436
@@ -1167,8 +1168,8 @@ according to CRS settings available.
 measure window, the accumulated area size appears. Right-click to stop drawing.
 The Info section is also available as well as the ability to switch between
 different area units ('Square meters', 'Square kilometers', 'Square feet', 'Square yards',
-'Square miles', 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters',
-'Square millimeters', 'Square degrees', 'Map units').
+'Square miles', 'Hectares', 'Acres', 'Square centimeters',
+'Square millimeters', 'Square nautical miles', 'Square degrees', 'Map units').
 
 .. _figure_measure_area:
 
@@ -1179,7 +1180,7 @@ different area units ('Square meters', 'Square kilometers', 'Square feet', 'Squa
 
 |measureAngle| :sup:`Measure Angle`: You can also measure angles. The
 cursor becomes cross-shaped. Click to draw the first segment of the angle you
-wish to measure, then move the cursor to draw the desired angle. The measure
+wish to measure, then move the cursor to draw the desired angle. The measurement
 is displayed in a pop-up dialog.
 
 .. _figure_measure_angle:
@@ -1209,18 +1210,18 @@ Interacting with features
 Selecting features
 ------------------
 
-QGIS provides several tools to select features in the map canvas. Selection
-tools are available in :menuselection:`View --> Select` menu or in the
+QGIS provides several tools to select features on the map canvas. Selection
+tools are available in the :menuselection:`View --> Select` menu or in the
 :guilabel:`Attributes toolbar`.
 
 .. note::
 
    Selection tools work with the currently active layer.
 
-Selecting manually in the map canvas
+Selecting manually on the map canvas
 ....................................
 
-To select one or several features with the mouse, you can use one of the following
+To select one or more features with the mouse, you can use one of the following
 tools:
 
 * |selectRectangle| :sup:`Select Features by area or single click`
@@ -1228,22 +1229,28 @@ tools:
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
-.. note:: Except the |selectPolygon| :sup:`Select Features by Polygon` tool, these
-   manual selection tools allow you to select feature(s) in the map canvas with a
+.. note:: Other than |selectPolygon| :sup:`Select Features by Polygon`, these
+   manual selection tools allow you to select feature(s) on the map canvas with a
    single click.
+   
+.. note:: Use the |selectPolygon| :sup:`Select Features by Polygon` tool
+   to use an existing polygon to select overlapping features.
+   Right-click in the polygon and choose it from the context menu that shows a
+   list of all the polygons that contain the clicked point.
+   All the overlapping features from the active layer are selected.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
-holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether feature is selected
+holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected
 (ie either adds to the current selection or remove from it).
 
-For the other tools, different behaviors can be performed holding:
+For the other tools, different behaviors can be performed by holding down:
 
 * :kbd:`Shift`: add features to the current selection
 * :kbd:`Ctrl`: substract features from the current selection
 * :kbd:`Ctrl+Shift`: intersect with current selection, ie only keep
   overlapping features from the current selection
 * :kbd:`Alt`: select features that are totally within the selection shape.
-  Combined to :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
+  Combined with :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract
   features to/from the current selection.
 
 .. _automatic_selection:
@@ -1252,45 +1259,45 @@ Automatic selection
 ...................
 
 The other selection tools, also available from the :ref:`Attribute table
-<sec_attribute_table>`, perform a selection based on feature's attribute
+<sec_attribute_table>`, perform a selection based on a feature's attribute
 or its selection state (note that attribute table and map canvas show the
-same information, so if you select one feature in attribute table, it will
-be selected in map canvas also):
+same information, so if you select one feature in the attribute table, it will
+be selected on the map canvas too):
 
-* |expressionSelect| :sup:`Select By Expression...` allows user to select
-  features using expression dialog.
+* |expressionSelect| :sup:`Select By Expression...` select
+  features using expression dialog
 * |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
 * |deselectAll| :sup:`Deselect Features from All Layers` or press
-  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers.
+  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers
 * |selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all
-  features in the current layer.
+  features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
-  the current layer.
+  the current layer
 
 
 For example, if you want to find regions that are boroughs from
 :file:`regions.shp` of the QGIS sample data, you can use the |expressionSelect|
-:sup:`Select features using an Expression` icon. Then, you expand the
+:sup:`Select features using an Expression` icon. Then, expand the
 :guilabel:`Fields and Values` group and choose the field that you want to query.
 Double-click the field 'TYPE_2' and also click :guilabel:`All Unique` in the
 panel that shows up. From the list, choose and double-click 'Borough'. In the
-:guilabel:`Expression` field, then you'd write the following query:
+:guilabel:`Expression` field, write the following query:
 
 ::
 
  "TYPE_2"  =  'Borough'
 
-From the expression builder dialog, you can also use the :menuselection:`Function
-list --> Recent (Selection)` to make a selection that you used before. The
-dialog remembers the last 20 used expressions. See :ref:`vector_expressions`
-chapter for more information and some example.
+From the expression builder dialog, you can also use :menuselection:`Function
+list --> Recent (Selection)` to make a selection that you have used before. The
+dialog remembers the last 20 expressions used. See :ref:`vector_expressions`
+for more information and examples.
 
 
 .. tip:: **Save your selection into a new file**
 
    Users can save selected features into a **New Temporary Scratch Layer** or a
    **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
-   :menuselection:`Edit --> Paste Features as` in the wanted format.
+   :menuselection:`Edit --> Paste Features as` in the desired format.
 
 .. index::
    single: Selection tools; Select by value
@@ -1300,10 +1307,10 @@ chapter for more information and some example.
 Select Features By Value
 ........................
 
-This selection tool opens the layer's feature form allowing the user to choose,
-for each field, which value to look for, if the search should be case sensitive,
-and the operation that should be used. The tool has also the autocompleter function
-that fills automatically the search box with the existing values.
+This selection tool opens the layer's feature form allowing the user to choose
+which value to look for for each field, whether the search should be case-sensitive,
+and the operation that should be used. The tool has also autocompletes,
+automatically filling the search box with existing values.
 
 .. _figure_filter_form:
 
@@ -1312,51 +1319,51 @@ that fills automatically the search box with the existing values.
 
    Filter/Select features using form dialog
 
-Alongside each field, there is a drop-down list with the operation options to
-control the search behaviour. The common options are:
+Alongside each field, there is a drop-down list with options to
+control the search behaviour:
 
-* :guilabel:`Exclude Field` - The field will not be used for searching
-* :guilabel:`Equal to (=)`
-* :guilabel:`Not equal to`
-* :guilabel:`Is missing (null)`
-* :guilabel:`Is not missing (not null)`
+============================================= ============ ============  ============
+ Field search option                           String       Numeric       Date
+============================================= ============ ============  ============
+ :guilabel:`Exclude Field` from the search     |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Equal to (=)`                      |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Not equal to (≠)`                  |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Greater than (>)`                               |checkbox|    |checkbox|
+ :guilabel:`Less than (<)`                                  |checkbox|    |checkbox|
+ :guilabel:`Greater than or equal to (≥)`                   |checkbox|    |checkbox|
+ :guilabel:`Less than or equal to (≤)`                      |checkbox|    |checkbox|
+ :guilabel:`Between (inclusive)`                            |checkbox|    |checkbox|
+ :guilabel:`Not between (inclusive)`                        |checkbox|    |checkbox|
+ :guilabel:`Contains`                          |checkbox|
+ :guilabel:`Does not contain`                  |checkbox|
+ :guilabel:`Is missing (null)`                 |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Is not missing (not null)`         |checkbox|   |checkbox|    |checkbox|
+ :guilabel:`Starts with`                       |checkbox|
+ :guilabel:`Ends with`                         |checkbox|
+============================================= ============ ============  ============
 
-For numeric and datetime fields, the additional options are:
+|
 
-* :guilabel:`Greater than (>)`
-* :guilabel:`Less than (<)`
-* :guilabel:`Greater than or equal to (>=)`
-* :guilabel:`Less than or equal to (<=)`
-* :guilabel:`Between (inclusive)`
-* :guilabel:`Is not between (inclusive)`
-
-For text fields, the additional options are:
-
-* :guilabel:`Contains`
-* :guilabel:`Does not contain`
-* :guilabel:`Starts with`
-* :guilabel:`Ends with`
-
-For the text options above, it is also possible to use the |checkbox|
+For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.
 
-After setting all search options, you can use the :guilabel:`Select features`
-button to select the matching features. The drop-down options are:
+After setting all search options, click :guilabel:`Select features`
+to select the matching features. The drop-down options are:
 
 * :guilabel:`Select features`
 * :guilabel:`Add to current selection`
 * :guilabel:`Filter current selection`
 * :guilabel:`Remove from current current selection`
 
-You can also clean all search options using the :guilabel:`Reset form` button.
+You can also clear all search options using the :guilabel:`Reset form` button.
 
 Once the conditions are set, you can also either:
 
-* :guilabel:`Zoom to features` in the map canvas without the need of a preselection;
-* or :guilabel:`Flash features`, highlighting the concerned features. This is a
+* :guilabel:`Zoom to features` on the map canvas without the need of a preselection
+* :guilabel:`Flash features`, highlighting the matching features. This is a
   handy way to identify a feature without selection or using the Identify tool.
   Note that the flash does not alter the map canvas extent and would be visible only
-  if the feature resides in the current canvas.
+  if the feature is within the bounds of the current map canvas.
 
 .. index::
    single: Identify features
@@ -1368,41 +1375,49 @@ Identifying Features
 The Identify tool allows you to interact with the map canvas and get information
 on features in a pop-up window. To identify features, use:
 
-* :menuselection:`View --> Identify Features` menu,
-* or press :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
-* or click the |identify| :sup:`Identify Features` icon on the Attributes toolbar.
+* :menuselection:`View --> Identify Features`
+* :kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),
+* |identify| :sup:`Identify Features` icon on the Attributes toolbar
 
 Using the Identify Features tool
 ................................
 
-QGIS offers two ways to identify features with the |identify|
+QGIS offers several ways to identify features with the |identify|
 :sup:`Identify Features` tool:
 
-* **left click** will identify features according to the :ref:`selection mask
-  <identify_selection>` and the :ref:`interaction mode <identify_mode>` set in the
+* **left click** identifies features according to the
+  :ref:`selection mode <identify_mode>` and the
+  :ref:`selection mask <identify_selection>` set in the
   :guilabel:`Identify Results` panel
-* **right click** will fetch all the snapped features from all the visible layers.
-  This will open a context menu, allowing the user to choose more precisely the
-  features to identify or the action to execute on it.
+* **right click** with :guilabel:`Identify Feature(s)` as
+  :ref:`selection mode <identify_mode>` set in the :guilabel:`Identify Results`
+  panel fetches all snapped features from all visible layers.
+  This opens a context menu, allowing the user to choose more precisely the
+  features to identify or the action to execute on them.
+* **right click** with :guilabel:`Identify Features by Polygon` as
+  :ref:`selection mode <identify_mode>` in the :guilabel:`Identify Results`
+  panel identifies the features that overlap with the chosen existing
+  polygon, according to the :ref:`selection mask <identify_selection>` set in
+  the :guilabel:`Identify Results` panel
 
 .. tip:: **Filter the layers to query with the Identify Features tool**
 
    Under :guilabel:`Layer Capabilities` in :menuselection:`Project --> Properties...
-   --> Data Sources` tab, uncheck the :guilabel:`Identifiable` column next to a
+   --> Data Sources`, uncheck the :guilabel:`Identifiable` column next to a
    layer to avoid it
    being queried when using the |identify| :sup:`Identify Features` tool in a mode
    other than **Current Layer**. This is a handy way to return features from
    only layers that are of interest for you.
 
 If you click on feature(s), the :guilabel:`Identify Results` dialog will list
-information about the clicked feature(s). The default view is a tree view where
+information about the feature(s) clicked. The default view is a tree view in which
 the first item is the name of the layer and its children are its identified feature(s).
 Each feature is described by the name of a field along with its value.
 This field is the one set in :menuselection:`Layer Properties --> Display`.
-Then follows all the other information about the feature.
+All the other information about the feature follows.
 
-Feature informations
-....................
+Feature information
+...................
 
 The Identify Results dialog can be customized to display custom fields, but by
 default it will display the following information:
@@ -1415,32 +1430,32 @@ default it will display the following information:
   is added, namely ``View feature form`` for editing. You can define more actions
   in the layer's properties dialog (see :ref:`actions_menu`).
 * **Derived**: This information is calculated or derived from other information.
-  This includes:
+  It includes:
 
-  * general information about its geometry:
+  * general information about the feature's geometry:
 
     * depending on the geometry type, the cartesian measurements of length,
-      perimeter or area in the layer's CRS units;
+      perimeter or area in the layer's CRS units
     * depending on the geometry type and if an ellipsoid is set in the project
       properties dialog for :guilabel:`Measurements`, the ellipsoidal values of
-      length, perimeter or area using the chosen units;
-    * the count of geometry parts in the feature and the number of the part you
-      clicked on;
-    * and the count of vertices in the feature.
+      length, perimeter or area using the specified units
+    * the count of geometry parts in the feature and the number of the part
+      clicked
+    * the count of vertices in the feature
   * coordinate information, using the project properties :guilabel:`Coordinates
     display` settings:
 
-    * the ``X`` and ``Y`` coordinate values of the clicked point;
-    * the number of the closest vertex to the clicked point;
-    * the ``X`` and ``Y`` (and ``Z``/``M`` if applicable) coordinate values of the
-      closest vertex;
-    * in case you click on a curved line using the info tool, QGIS will also
-      display the radius of that section in the panel result.
+    * ``X`` and ``Y`` coordinate values of the point clicked
+    * the number of the closest vertex to the point clicked
+    * ``X`` and ``Y`` coordinate values of the
+      closest vertex (and ``Z`/`M`` if applicable)
+    * if you click on a curved segment,
+      the radius of that section is also displayed.
 
 * **Data attributes**: This is the list of attribute fields and values for the
   feature that has been clicked.
 
-.. note:: Links in feature's attributes are clickable from the :guilabel:`Identify
+.. note:: Links in the feature's attributes are clickable from the :guilabel:`Identify
    Results` panel and will open in your default web browser.
 
 .. _figure_identify:
@@ -1453,47 +1468,51 @@ default it will display the following information:
 The Identify Results dialog
 ...........................
 
-At the top of the window, you have handful tools:
+At the top of the window, you have a handful of tools:
 
 * |formView| :sup:`Open Form` of the current feature
 * |expandTree| :sup:`Expand tree`
 * |collapseTree| :sup:`Collapse tree`
-* |expandNewTree| :sup:`Expand New Results by Default` to define whether next
-  identified features information should be collapsed or expanded
+* |expandNewTree| :sup:`Expand New Results by Default` to define whether the next
+  identified feature's information should be collapsed or expanded
 * |deselectAll| :sup:`Clear Results`
 * |editCopy| :sup:`Copy selected feature to clipboard`
 * |filePrint| :sup:`Print selected HTML response`
 
 .. _identify_selection:
 
-* and selection mode to use to fetch features to identify. it can be:
+* selection mode to use to fetch features to identify:
 
   * |identifyByRectangle| :sup:`Identify Features by area or single click`
   * |identifyByPolygon| :sup:`Identify Features by Polygon`
   * |identifyByFreehand| :sup:`Identify Features by Freehand`
   * |identifyByRadius| :sup:`Identify Features by Radius`
 
+  .. note::
+     When using |identifyByPolygon| :sup:`Identify Features by Polygon`, you can
+     right-click any existing polygon and use it to identify overlapping
+     features in another layer.
+
 .. _identify_mode:
 
-At the bottom of the window, you have the :guilabel:`Mode` and :guilabel:`View`
+At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View`
 comboboxes.
-With the :guilabel:`Mode` combobox you can define from which layers features
-should be identified:
+:guilabel:`Mode` defines from which layers features should be identified:
 
 * **Current layer**: only features from the selected layer are identified. The
-  layer may not be visible in the canvas.
-* **Top down, stop at first**: for only features from the upper visible layer.
-* **Top down**: for all features from the visible layers. The results are shown in
+  layer need not be visible in the canvas.
+* **Top down, stop at first**: only features from the upper visible layer.
+* **Top down**: all features from the visible layers. The results are shown in
   the panel.
-* and **Layer selection**: opens a context menu where the user selects the layer to
-  identify features from. Operates like a right-click. Only the chosen features
+* **Layer selection**: opens a context menu where the user selects the layer to
+  identify features from, similar to a right-click. Only the chosen features
   will be shown in the result panel.
 
 The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**.
 'Table' and 'Graph' views can only be set for raster layers.
 
 The identify tool allows you to |checkbox|:guilabel:`Auto open form`.
-If checked, each time a single feature is identified QGIS will open a form
+If checked, each time a single feature is identified, a form opens
 showing its attributes. This is a handy way to quickly edit a feature's attributes.
 
 Other functions can be found in the context menu of the identified item. For
@@ -1502,7 +1521,7 @@ example, from the context menu you can:
 * View the feature form
 * Zoom to feature
 * Copy feature: Copy all feature geometry and attributes
-* Toggle feature selection: Adds identified feature to selection
+* Toggle feature selection: Add identified feature to selection
 * Copy attribute value: Copy only the value of the attribute that you click on
 * Copy feature attributes: Copy the attributes of the feature
 * Clear result: Remove results in the window

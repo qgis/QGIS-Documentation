@@ -74,7 +74,7 @@ rules is very simple and the GRASS Manual contains very good description.
 
 * Load the :kbd:`g_aspect` layer or, if you don't have create it, go back to the
   :ref:`grass_aspect` section.
-* Look for the :kbd:`r.info` module by searching for it in the :guilabel:`Filter`
+* Look for the :kbd:`r.reclass` module by searching for it in the :guilabel:`Filter`
   field of the :guilabel:`Modules List` tab.
 * Open the tool and set it up like the following picture. The file containing the
   rules is in the :kbd:`exercise_data/grass/` folder, named :kbd:`reclass_aspect.txt`.

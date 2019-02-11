@@ -88,8 +88,7 @@ General Settings
   if a newer version is released;
 * |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
   :ref:`data source manager <datasourcemanager>` dialog opened and allow
-  interaction with QGIS interface while adding layers to project; 
-* |checkbox| :guilabel:`QGIS-styled group boxes`;
+  interaction with QGIS interface while adding layers to project;
 * |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
 
 .. _projectfiles_options:
@@ -212,6 +211,13 @@ In this group, you can control whether reprojecting layers to another CRS should
 .. note:: For more information on how QGIS handles layers projection, please
   read the dedicated section at :ref:`label_projections`.
 
+.. _figure_crs_options:
+
+.. figure:: ../working_with_projections/img/crsdialog.png
+   :align: center
+
+   CRS Settings in QGIS
+
 .. _datasources_options:
 
 Data Sources Settings
@@ -287,6 +293,15 @@ Data Sources Settings
 This widget lists all the folders you chose to hide from the :ref:`Browser panel
 <browser_panel>`.
 Removing a folder from the list will make it available in the Browser panel.
+
+
+.. _figure_data_sources_settings:
+
+.. figure:: img/options_data_sources.png
+   :align: center
+
+   Data Sources Settings in QGIS
+
 
 .. index:: Rendering
 .. _rendering_options:
@@ -445,6 +460,15 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
+
+.. _figure_map_tools_settings:
+
+.. figure:: img/options_map_tools.png
+   :align: center
+
+   Map tools Settings in QGIS
+
+
 .. index:: Colors
 .. _colors_options:
 
@@ -455,11 +479,12 @@ This menu allows you to create or update palettes of colors used throughout the
 application in the :ref:`color selector widget <color_widget>`. You can choose
 from:
 
-* :guilabel:`Recent colors` showing recently used colors;
-* :guilabel:`Standard colors`, the default palette of colors;
-* :guilabel:`Project colors`, a set of colors specific to the current project;
+* :guilabel:`Recent colors` showing recently used colors
+* :guilabel:`Standard colors`, the default palette of colors
+* :guilabel:`Project colors`, a set of colors specific to the current project
+  (see :ref:`default_styles_properties` for more details)
 * :guilabel:`New layer colors`, a set of colors to use by default when new
-  layers are added to QGIS;
+  layers are added to QGIS
 * or custom palette(s) you can create or import using the :guilabel:`...`
   button next to the palette combobox.
 
@@ -469,14 +494,16 @@ the color button drop-down. Custom palettes can also be added to this widget
 thanks to the :guilabel:`Show in Color Buttons` option.
 
 For any of the palettes, you can manage the list of colors using the set of
-tools next to the frame, ie: 
+tools next to the frame, ie:
 
-* add or remove colors;
-* copy or paste colors;
-* import or export the set of colors from/to :file:`.gpl` file.
+* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
+* |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
+  from/to :file:`.gpl` file.
 
 Double-click a color in the list to tweak or replace it in the :ref:`Color
-Selector <color-selector>` dialog.
+Selector <color-selector>` dialog. You can also rename it by double-clicking
+in the :guilabel:`Label` column.
 
 .. _figure_colors_options:
 
@@ -526,7 +553,7 @@ This tab helps you configure general settings when :ref:`editing vector layer
 * :guilabel:`Snapping marker color`
 * |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
   feature you are about to snap. Helpful when multiple features overlap.
-* |checkbox| :guilabel:`Enable snapping on invisible features` 
+* |checkbox| :guilabel:`Enable snapping on invisible features`
 
 
 **Vertex markers**
@@ -547,6 +574,15 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
+
+.. _figure_digitizing_settings:
+
+.. figure:: img/options_digitizing.png
+   :align: center
+
+   Digitizing Settings in QGIS
+
+
 .. _layout_options:
 
 Layouts Settings
@@ -565,7 +601,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 **Grid and guide defaults**
 
 * Define the :guilabel:`Grid spacing` |selectNumber|
-* Define the :guilabel:`Grid offset` |selectNumber| for x and y
+* Define the :guilabel:`Grid offset` |selectNumber| for X and Y
 * Define the :guilabel:`Snap tolerance` |selectNumber|
 
 
@@ -573,6 +609,15 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 
 * Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
   with custom layout templates to use while creating new one.
+
+
+.. _figure_layouts_settings:
+
+.. figure:: img/options_layouts.png
+   :align: center
+
+   Layouts Settings in QGIS
+
 
 .. _gdal_options:
 
@@ -584,7 +629,17 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
+
+.. _figure_gdal_settings:
+
+.. figure:: img/options_gdal.png
+   :align: center
+
+   GDAL Settings in QGIS
+
+
 .. index:: Variables
+.. _variables_options:
 
 Variables Settings
 ------------------
@@ -600,12 +655,33 @@ it.
 More information about variables in the :ref:`general_tools_variables`
 section.
 
+
+.. _figure_variables_settings:
+
+.. figure:: img/options_variables_global.png
+   :align: center
+
+   Variables Settings in QGIS
+
+
+.. index:: Authentication
+.. _authentication_options:
+
 Authentication Settings
 -----------------------
 
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
+
+
+.. _figure_authentication_settings:
+
+.. figure:: ../auth_system/img/auth-editor-configs2.png
+   :align: center
+
+   Authentication Settings in QGIS
+
 
 .. index:: Proxy, Network
 .. _network_options:
@@ -722,6 +798,14 @@ if a very slow search filter is present (e.g. one which uses an online service).
   Options...` menu.
 
 
+.. _figure_locator_settings:
+
+.. figure:: img/options_locator.png
+   :align: center
+
+   Locator Settings in QGIS
+
+
 .. _optionsadvanced:
 
 Advanced Settings
@@ -745,6 +829,14 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
+.. _figure_advanced_settings:
+
+.. figure:: img/options_advanced.png
+   :align: center
+
+   Advanced Settings tab in QGIS
+
+
 Processing Settings
 -------------------
 
@@ -756,6 +848,13 @@ More information at :ref:`label_processing`.
  Actually, there seems to not be a real section describing the Processing options
  dialog. So the link above should be redirected if ever such a section is
  created, preferably in Processing chapter.
+
+.. _figure_processing_settings:
+
+.. figure:: img/options_processing.png
+   :align: center
+
+   Processing Settings tab in QGIS
 
 
 .. index:: Project properties
@@ -862,16 +961,60 @@ settings by configuring the datum transformation preferences to apply in the
 current project. As usual, these override any corresponding global settings.
 See :ref:`datum_transformation` for more details.
 
+.. _default_styles_properties:
+
 Default Styles Properties
 -------------------------
 
 The :guilabel:`Default Styles` tab lets you control how new layers will be
-drawn when they do not have an existing :file:`.qml` style defined. You can
-also set the default transparency level for new layers and whether symbols
-should have random colors assigned to them.
+drawn in the project when they do not have an existing :file:`.qml` style
+defined. You can:
+
+* Set default symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)
+  to apply depending on the layer geometry type as well as a default
+  :guilabel:`Color Ramp`
+* Apply a default :guilabel:`Opacity` to new layers
+* |checkbox| :guilabel:`Assign random colors to symbols`, modifying the symbols
+  fill colors, hence avoiding same rendering for all layers.
+
+.. _figure_default_styles:
+
+.. figure:: img/project_default_styles.png
+   :align: center
+
+   Default Styles tab
+
+Using the |styleManager| :guilabel:`Style Manager` button, you can also quickly
+access the :ref:`Style Manager <vector_style_manager>` dialog and configure
+symbols and color ramps.
+
 There is also an additional section where you can define specific colors for the
-running project. You can find the added colors in the drop down menu of the color dialog
-window present in each renderer.
+running project. Like the :ref:`global colors <colors_options>`, you can:
+
+* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
+* |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
+  from/to :file:`.gpl` file.
+
+Double-click a color in the list to tweak or replace it in the :ref:`Color
+Selector <color-selector>` dialog. You can also rename it by double-clicking
+in the :guilabel:`Label` column.
+
+These colors are identified as :guilabel:`Project colors` and listed as part of
+:ref:`color widgets <color-selector>`.
+
+.. tip:: **Use project colors to quickly assign and update color widgets**
+
+  Project colors can be refered to using their label and the color widgets
+  they are used in are bound to them. This means that instead of repeatedly
+  setting the same color for many properties and, to avoid a cumbersome update
+  you can:
+
+  #. Define the color as a project color
+  #. Apply it using the ``project_color('color_label')`` expression in 
+     color :ref:`data defined override widget <data_defined>`
+  #. Update the color once in a :guilabel:`Project colors` list
+  #. And the change is reflected EVERYWHERE.
 
 Data Sources Properties
 -----------------------
@@ -896,13 +1039,13 @@ In the :guilabel:`Data Sources` tab, you can:
   To speed up project loading by skipping data checks. Useful in QGIS Server context
   or in projects with huge database views/materialized views. The extent of layers
   will be read from the QGIS project file (instead of data sources) and when
-  using the PostgreSQL provider the primary key unicity will not be 
+  using the PostgreSQL provider the primary key unicity will not be
   checked for views and materialized views.
 
 .. _project_layer_capabilities:
 
 * Configure the :guilabel:`Layers Capabilities`, i.e.:
-  
+
   * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
     :ref:`identify tool <identify>`. By default, layers are set queryable.
   * Set whether a layer should appear as ``read-only``, meaning that
@@ -1078,6 +1221,10 @@ and :guilabel:`Load` them into another QGIS installation.
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |doubleSpinBox| image:: /static/common/doublespinbox.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
