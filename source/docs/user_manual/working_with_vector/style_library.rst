@@ -319,7 +319,8 @@ more symbols (including, of any other type) or symbol layers.
 
 You can setup some parameters that apply to the global symbol:
 
-* :guilabel:`Unit`: it can be **Millimeter**, **Pixels** or **Map unit**
+* :guilabel:`Unit`: it can be **Millimeter**, **Points**, **Pixels**,
+  **Meters at Scale**, **Map unit** or **Inches**
 * :guilabel:`Transparency`
 * :guilabel:`Color`: when this parameter is changed by the user, its value is
   echoed to all unlocked sub-symbols color
@@ -383,7 +384,8 @@ Some common options and widgets are available to build a symbol layer,
 regardless it's of marker, line or fill sub-type:
 
 * the :ref:`color selector <color-selector>` widget to ease color manipulation
-* :guilabel:`Units`: it can be **Millimeter**, **Pixels** or **Map unit**
+* :guilabel:`Units`: it can be **Millimeter**, **Points**, **Pixels**,
+  **Meters at Scale**, **Map unit** or **Inches**
 * the |dataDefined| :sup:`data-defined override` widget near almost all options,
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)

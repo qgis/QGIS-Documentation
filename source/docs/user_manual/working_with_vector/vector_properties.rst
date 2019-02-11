@@ -534,8 +534,6 @@ both representation are also available in the print layout legend item.
 
    Multivariate example with scaled size legend
 
-.. tip:: **Add the size scaled symbols to the print layout legend**
-
 
 .. index::
    single: Symbology; Rule-based renderer
@@ -734,11 +732,12 @@ Heatmap Renderer
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
-You can specify the heatmap radius in pixels, mm or map units, choose and
-edit a color ramp for the heatmap style and use a slider for selecting a trade-off
-between render speed and quality. You can also define a maximum value limit and give a
-weight to points using a field or an expression. When adding or removing a feature
-the heatmap renderer updates the heatmap style automatically.
+You can specify the heatmap radius in millimeters, points, pixels, map units or
+inches, choose and edit a color ramp for the heatmap style and use a slider for
+selecting a trade-off between render speed and quality. You can also define a
+maximum value limit and give a weight to points using a field or an expression.
+When adding or removing a feature the heatmap renderer updates the heatmap style
+automatically.
 
 .. _figure_heatmap_symbology:
 
@@ -1044,12 +1043,12 @@ effect types, with custom options are available:
   horizontal` and :guilabel:`Reflect vertical`, which actually create a
   reflection on the horizontal and/or vertical axes. The other options are:
 
-  * :guilabel:`Shear X,Y`: Slants the feature along the x and/or y axis.
-  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the x
-    and/or y axis by the given percentage.
+  * :guilabel:`Shear X,Y`: Slants the feature along the X and/or Y axis.
+  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the X
+    and/or Y axis by the given percentage.
   * :guilabel:`Rotation`: Turns the feature around its center point.
   * and :guilabel:`Translate X,Y` changes the position of the item based on
-    a distance given on the x and/or y axis.
+    a distance given on the X and/or Y axis.
 
   .. _figure_effects_transform:
 
@@ -1945,7 +1944,8 @@ Size
 ----
 
 :guilabel:`Size` is the main tab to set how the selected statistics are
-represented. The diagram size units can be 'Map Units' or 'Millimeters'.
+represented. The diagram size units can be 'Millimeter', 'Points', Pixels,
+'Map Units' or 'Inches'.
 You can use :
 
 * :guilabel:`Fixed size`, an unique size to represent the graphic of all the
@@ -2351,7 +2351,7 @@ Default values
   For example, you can:
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's x coordinate, length, area or any geometric information at its creation;
+    feature's X coordinate, length, area or any geometric information at its creation;
   * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
@@ -2536,7 +2536,7 @@ possible if the underlying data is read only. Moreover, configuring these
 data-defined properties may be very time consuming or not desirable! For
 example, if you want to fully use map tools coming with :ref:`label_toolbar`,
 then you need to add and configure more than 20 fields in your original data
-source (x and y positions, rotation angle, font style, color and so on).
+source (X and Y positions, rotation angle, font style, color and so on).
 
 The Auxiliary Storage mechanism provides the solution to these limitations
 and awkward configurations. Auxiliary fields are a roundabout way to
@@ -3343,33 +3343,22 @@ features. Since other features may be present in the same area, topological
 errors concerning these features are reported as well as errors introduced
 in the current edit session.
 
-The |checkbox| :guilabel:`Gap` check will check for gaps between neighbouring polygons.
+.. list-table::
+   :header-rows: 1
 
-.. _figure_gapcheck:
-
-.. figure:: img/gapcheck.png
-   :align: center
-
-
-The |checkbox| :guilabel:`Overlap` check will check for overlaps between neighbouring
-polygons.
-
-.. _figure_overlapcheck:
-
-.. figure:: img/overlapcheck.png
-   :align: center
-
-
-The |checkbox| :guilabel:`Missing vertex` check will check for shared boundaries of
-neighbouring polygons where one border misses a vertex which is present on the
-other one.
-
-.. _figure_missingvertexcheck:
-
-.. figure:: img/missingvertexcheck.png
-   :align: center
-
-
+   * - Topology check option
+     - Illustration
+   * - The |checkbox| :guilabel:`Gap` check will check for
+       gaps between neighbouring polygons.
+     - .. image:: img/gapcheck.png
+   * - The |checkbox| :guilabel:`Overlap` check will check
+       for overlaps between neighbouring polygons.
+     - .. image:: img/overlapcheck.png
+   * - The |checkbox| :guilabel:`Missing vertex` check will
+       check for shared boundaries of neighbouring polygons
+       where one border misses a vertex which is present on
+       the other one. 
+     - .. image:: img/missingvertexcheck.png
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

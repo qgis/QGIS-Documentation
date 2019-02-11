@@ -237,7 +237,7 @@ Also you can choose to set visible or not each side of the grid frame.
 When compatible, it's possible to set the :guilabel:`Frame size`,
 :guilabel:`Frame line thickness`, :guilabel:`Frame fill colors`.
 With ``Latitude/Y only`` and ``Longitude/X only`` settings in the divisions
-section you have the possibility to prevent a mix of latitude/y and longitude/x
+section you have the possibility to prevent a mix of latitude/Y and longitude/X
 coordinates showing on a side when working with rotated maps or reprojected
 grids.
 

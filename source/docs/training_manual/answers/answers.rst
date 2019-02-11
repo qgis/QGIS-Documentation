@@ -50,32 +50,49 @@ remember the names and functions of the screen elements.
 
 :ref:`Back to text <backlink-interface-overview-2>`
 
-.. _interface-overview-3:
-
-|basic| *Overview* (Part 3)
-...............................................................................
-
-Refer back to the :ref:`browser_panel_tm` and to :ref:`load_geopackage` sections.
-
-:ref:`Back to text <backlink-interface-overview-3>`
 
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
-.. _vector-load-geopackage-1:
+.. _vector-explore-attribute-data:
 
-|basic| *GeoPackage*
+|basic| *Attribute data*
 ...............................................................................
 
-There should be five layers on your map:
+* There should be 9 fields in the :guilabel:`rivers` layer:
 
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties --> Source
+   Fields` tab, where you will find a numbered list of the table's fields.
+
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add comment on other fields from these two records, if you like.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
+
+.. _vector-load-more-data:
+
+|basic| *Data loading*
+...............................................................................
+
+Your map should have seven layers:
+
+* :guilabel:`protected_areas`
 * :guilabel:`places`
-* :guilabel:`water`
-* :guilabel:`buildings`
-* :guilabel:`rivers` and
-* :guilabel:`roads`.
+* :guilabel:`rivers`
+* :guilabel:`roads`
+* :guilabel:`landuse`
+* :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+* :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
-:ref:`Back to text <backlink-vector-load-geopackage-1>`
+:ref:`Back to text <backlink-vector-load-more-data>`
 
 
 |RF| *Symbology*
@@ -88,15 +105,15 @@ There should be five layers on your map:
 
 * Verify that the colors are changing as you expect them to change.
 * It is enough to select the :guilabel:`water` layer in the legend and then click
-  on the |symbology|:sup:`Open the Layer Styling panel` button. Change the color
-  with the one you want and best fits the water layer.
+  on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
+  to one that fits the water layer.
 
 .. image:: img/answer_water_blue.png
    :align: center
 
 .. note::  If you want to work on only one layer at a time and don't want the
-   other layers to distract you, you can hide a layer by clicking in the check
-   box next to its name in the Layers list. If the box is blank, then the layer
+   other layers to distract you, you can hide a layer by clicking in the checkbox
+   next to its name in the layers list. If the box is blank, then the layer
    is hidden.
 
 :ref:`Back to text <backlink-symbology-colors-1>`
@@ -118,8 +135,11 @@ If you are a Beginner-level user, you may stop here.
   layers.
 * Try using natural colors for the objects. For example, a road should not be
   red or blue, but can be gray or black.
-* Also feel free to experiment with different :guilabel:`Fill Style` and
-  :guilabel:`Border Style` settings for the polygons.
+* Also feel free to experiment with different :guilabel:`Fill style` and
+  :guilabel:`Stroke style` settings for the polygons.
+
+.. image:: img/answer_symbology2.png
+   :align: center
 
 :ref:`Back to text <backlink-symbology-structure-1>`
 
@@ -129,8 +149,8 @@ If you are a Beginner-level user, you may stop here.
 |moderate| *Symbol Layers*
 ...............................................................................
 
-* Customize your :guilabel:`buildings` layer as you like, but remember that it
-  has to be easy to tell different layers apart on the map.
+Customize your :guilabel:`buildings` layer as you like, but remember that it
+has to be easy to tell different layers apart on the map.
 
 Here's an example:
 
@@ -153,16 +173,20 @@ To make the required symbol, you need three symbol layers:
 The lowest symbol layer is a broad, solid gray line. On top of it there is a
 slightly thinner solid yellow line and finally another thinner solid black line.
 
-* If your symbol layers resemble the above but you're not getting the result
-  you want, check that your symbol levels look something like this:
+If your symbol layers resemble the above but you're not getting the result
+you want:
 
-  .. image:: img/answer_road_symbol_levels.png
-     :align: center
+#. Check that your symbol levels look something like this:
 
-* Now your map should look like this:
+   .. image:: img/answer_road_symbol_levels.png
+      :align: center
 
-  .. image:: img/target_road_symbology.png
-     :align: center
+#. Now your map should look like this:
+
+   .. image:: img/target_road_symbology.png
+      :align: center
+
+|
 
 :ref:`Back to text <backlink-symbology-levels-1>`
 
@@ -172,15 +196,31 @@ slightly thinner solid yellow line and finally another thinner solid black line.
 |hard| *Symbol Levels*
 ...............................................................................
 
-* Adjust your symbol levels to these values:
+#. Adjust your symbol levels to these values:
 
-.. image:: img/answer_road_symbol_layers.png
-   :align: center
+   .. image:: img/answer_road_symbol_layers.png
+      :align: center
 
-* Experiment with different values to get different results.
-* Open your original map again before continuing with the next exercise.
+#. Experiment with different values to get different results.
+#. Open your original map again before continuing with the next exercise.
 
 :ref:`Back to text <backlink-symbology-levels-2>`
+
+
+.. _symbology-marker-line:
+
+|moderate| *Outline Markers* 
+-------------------------------------------------------------------------------
+
+Here are examples of the symbol structure:
+
+.. image:: img/answer_marker_line.png
+   :align: center
+
+.. image:: img/answer_marker_line2.png
+   :align: center
+
+:ref:`Back to text <backlink-symbology-marker-line>`
 
 
 .. _symbology-geom_generator:
@@ -512,7 +552,7 @@ contains the travel time between the two points (as fraction of hours):
 |basic| *Calculate Aspect*
 ...............................................................................
 
-* Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
+* Set your :guilabel:`Aspect` dialog up like this:
 
   .. image:: img/answer_dem_aspect.png
      :align: center
@@ -535,8 +575,8 @@ Your result:
   .. image:: img/answer_raster_calculator_slope.png
      :align: center
 
-* For the 5 degree version, replace the :kbd:`2` in the expression and file
-  name with :kbd:`5`.
+* For the 5 degree version, replace the ``2`` in the expression and file
+  name with ``5``.
 
 Your results:
 
@@ -1162,6 +1202,8 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png

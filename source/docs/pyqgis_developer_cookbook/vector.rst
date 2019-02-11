@@ -105,7 +105,7 @@ To select all the features:
  # Get the active layer (must be a vector layer)
  layer = iface.activeLayer()
  layer.selectAll()
- 
+
 To select using an expression:
 
 .. code-block:: python
@@ -116,7 +116,7 @@ To select using an expression:
  layer.selectByExpression('"Class"=\'B52\' and "Heading" > 10 and "Heading" <70', QgsVectorLayer.SetSelection)
 
 To change the selection color you can use :func:`setSelectionColor()`
-method of :class:`QgsMapCanvas` as shown in the following example:
+method of :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` as shown in the following example:
 
 .. code-block:: python
 
@@ -198,8 +198,8 @@ only intersecting features will be returned:
 .. code-block:: python
 
   request = QgsFeatureRequest().setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.ExactIntersect)
-  
-With :func:`setLimit()` you can limit the number of requested features. 
+
+With :func:`setLimit()` you can limit the number of requested features.
 Here's an example:
 
 .. code-block:: python
@@ -241,7 +241,7 @@ iterator returns all features, but returns partial data for each of them.
 
   # Fetch only the feature with id 45
   request.setFilterFid(45)
-  
+
   # The options may be chained
   request.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])
 
