@@ -191,11 +191,12 @@ In the DataPlotly Panel:
 #. If you want you can change the colors, the marker type, the transparency and
    many other settings: try to change some parameters to create the plot
    below.
-#. Once you have set all the parameters, click on the :guilabel:`Create Plot`
-   button to create the plot.
 
    .. image:: img/dataplotly_scatterplot.png
       :align: center
+
+#. Once you have set all the parameters, click on the :guilabel:`Create Plot`
+   button to create the plot.
 
 The plot is interactive: this means you can use all the upper buttons to resize,
 move, or zoom in/out the plot canvas. Moreover, each element of the plot is interactive:
