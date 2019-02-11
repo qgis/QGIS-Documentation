@@ -167,7 +167,7 @@ Take a look at some example and try to explore the query language.
 |basic| |FA| The DataPlotly Plugin
 -------------------------------------------------------------------------------
 
-**DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
+The **DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
 attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
 #. Start a new project
@@ -189,9 +189,9 @@ In the DataPlotly Panel:
       :align: center
 
 #. If you want you can change the colors, the marker type, the transparency and
-   many other settings: just try to change some parameters to create the plot
-   as the following picture.
-#. Once you set up all the parameters click on the :guilabel:`Create Plot`
+   many other settings: try to change some parameters to create the plot
+   below.
+#. Once you have set all the parameters, click on the :guilabel:`Create Plot`
    button to create the plot.
 
    .. image:: img/dataplotly_scatterplot.png
