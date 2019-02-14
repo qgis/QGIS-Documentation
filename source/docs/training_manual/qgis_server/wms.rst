@@ -5,7 +5,7 @@
 |LS| Serving WMS
 ===============================================================================
 
-Let's download the `demo data <https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v2.0.zip>`_
+Let's download the `Training demo data <https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip>`_
 and unzip the files in the :file:`qgis-server-tutorial-data` subdirectory to
 any directory. We recommend that you simply create a :file:`/home/qgis/projects`
 directory and put your files there in order to avoid possible permissions problems.
