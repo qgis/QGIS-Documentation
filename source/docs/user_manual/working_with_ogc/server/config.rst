@@ -62,6 +62,16 @@ QUERY_STRING
 The query string, normally passed by the web server. This variable can be
 useful while testing QGIS server binary from the command line.
 
+For example for testing a GetCapabilities request on the command line
+to a project that also requires a PostgreSQL connection defined in a
+pg_service.conf file:
+
+.. code-block:: bash
+
+ PGSERVICEFILE=/etc/pg_service.conf QUERY_STRING="MAP=/path/to/test.qgs&SERVICE=WMS&REQUEST=GetCapabilities" /path/to/qgis_mapserv.fcgi
+
+The result should be either the content of the GetCapabilities response or,
+if something is wrong, an error message.
 
 QGIS_PROJECT_FILE
 ^^^^^^^^^^^^^^^^^
