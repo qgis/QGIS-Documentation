@@ -168,11 +168,13 @@ Parameters
 ``Grid type`` [enumeration]
   Shape of the grid. Many options available:
 
-  * Point
-  * Line
-  * Rectangle (polygon)
-  * Diamond (polygon)
-  * Hexagon (polygon)
+  * 0 --- Point
+  * 1 --- Line
+  * 2 --- Rectangle (polygon)
+  * 3 --- Diamond (polygon)
+  * 4 --- Hexagon (polygon)
+
+  Default: *0*
 
 ``Grid extent`` [extent]
   Extent of the grid.
