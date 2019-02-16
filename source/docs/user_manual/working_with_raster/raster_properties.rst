@@ -104,13 +104,15 @@ The renderer chosen is dependent on the data type.
 
 #. :ref:`Multiband color <multiband_color>` - if the file comes as a multiband with
    several bands (e.g., used with a satellite image with several bands).
-#. :ref:`Paletted <paletted>` - if a single band file comes with an indexed palette
-   (e.g., used with a digital topographic map).
+#. :ref:`Paletted/Unique values <paletted>` - for single band files that come with an
+   indexed palette (e.g., used with a digital topographic map) or for general use of
+   palets for rendering raster layers.
 #. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
    as gray; QGIS will choose this renderer if the file has neither multibands nor an
    indexed palette nor a continuous palette (e.g., used with a shaded relief map).
 #. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
    files with a continuous palette, or color map (e.g., used with an elevation map).
+#. :ref:`Hillshade <hillshade_rendrer>` - Create hillshade from a single band.
 
 
 .. _multiband_color:
@@ -166,8 +168,8 @@ All calculations can also be made for the |radioButtonOff| :guilabel:`Current` e
 
 .. _paletted:
 
-Paletted
-........
+Paletted/Unique values
+......................
 
 This is the standard render option for singleband files that already include a
 color table, where each pixel value is assigned to a certain color. In that case,
@@ -176,12 +178,22 @@ certain values, just double-click on the color and the :guilabel:`Select color`
 dialog appears. Also, in QGIS it's possible to assign a label to the color values.
 The label appears in the legend of the raster layer then.
 
+This option can be used for rendering all raster bands using a palette, assigning
+a color to each unique raster value.
+
 .. _figure_raster_paletted:
 
 .. figure:: img/rasterPaletted.png
    :align: center
 
-   Raster Symbology - Paletted Rendering
+   Raster Symbology - Paletted rendering
+
+.. _figure_raster_paletted_unique:
+
+.. figure:: img/rasterPalettedUniqueValue.png
+   :align: center
+
+   Raster Symbology - Paletted unique value rendering
 
 .. index:: Contrast enhancement
 
@@ -299,6 +311,26 @@ defined color table for other sessions.
 
 The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
 greater than the :guilabel:`Max` value.
+
+.. _hillshade_rendrer:
+
+Hillshade
+---------
+
+Render the raster layer using hillshading.
+
+Options:
+
+* :guilabel:`Band`: Select the raster band to be used.
+
+* :guilabel:`Altitude`: The elevation angle of the light source (default is 45).
+
+* :guilabel:`Azimuth`: The azimuth of the light source (default is 315).
+
+* :guilabel:`Z Factor`: Scaling factor for the values of the raster band (default is 1).
+
+* |checkbox| :guilabel:`Multidirectional`: Specify if multidirectional hillshading is to be used (default is off).
+
 
 Color rendering
 ---------------
