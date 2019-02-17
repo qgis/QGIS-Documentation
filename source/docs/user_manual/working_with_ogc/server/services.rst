@@ -345,8 +345,8 @@ values are:
 
    Parameters:
 
-   * FILE_NAME=yoursuggested_file_name_for_download.dxf
-   * FORMAT_OPTIONS=see options below, key:value pairs separated by Semicolon
+   * FILE_NAME=your_suggested_file_name_for_download.dxf
+   * FORMAT_OPTIONS=see options below, key:value pairs separated by semicolon
 
    FORMAT_OPTIONS Parameters:
 
