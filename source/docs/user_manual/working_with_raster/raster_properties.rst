@@ -106,7 +106,7 @@ The renderer chosen is dependent on the data type.
    several bands (e.g., used with a satellite image with several bands).
 #. :ref:`Paletted/Unique values <paletted>` - for single band files that come with an
    indexed palette (e.g., used with a digital topographic map) or for general use of
-   palets for rendering raster layers.
+   palettes for rendering raster layers.
 #. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
    as gray; QGIS will choose this renderer if the file has neither multibands nor an
    indexed palette nor a continuous palette (e.g., used with a shaded relief map).
