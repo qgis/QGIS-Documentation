@@ -857,6 +857,61 @@ More information at :ref:`label_processing`.
    Processing Settings tab in QGIS
 
 
+.. _user_profiles:
+
+Working with User Profiles
+==========================
+
+The :menuselection:`Settings --> User Profiles` menu provides functions to set
+and access user profiles. A user profile is a unified application configuration
+that allows to store in a single folder:
+
+* all the :ref:`global settings <gui_options>`, including locale,
+  projections`, authentication settings, color palettes, shortcuts...
+* GUI configurations and :ref:`customization <sec_customization>`
+* installed :ref:`plugins <plugins>` and their configurations
+* project templates and history of saved project with their image preview
+* :ref:`processing settings <label_processing>`, logs, scripts, models.
+
+By default, a QGIS installation contains a single user profile named ``default``.
+But you can create as many user profiles as you want:
+
+#. Click the :guilabel:`New profile...` entry.
+#. You'll be prompted to provide a profile name, creating a folder of the same name
+   under :file:`~/<UserProfiles>/` where:
+
+   * ``~`` represents the HOME directory, which on |win| Windows is usually something
+     like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
+     or :file:`C:\\Users\\(user)`.
+   * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
+
+     * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
+     * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\`
+     * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`
+
+   The user profile folder can be opened from within QGIS using the
+   :guilabel:`Open Active Profile Folder`.
+
+#. The new profile opens a new instance of QGIS, using a clean and unchanged
+   configuration from installation. You can then set your custom configurations. 
+
+As each user profile contains isolated settings, plugins, history they can be great for
+different workflows, demos, users of the same machine, or testing settings, etc.
+And you can switch from one to the other selecting them from :menuselection:`Settings -->
+User Profiles` menu. You can also run QGIS with a specific user profile from
+:ref:`command line <label_commandline>`.
+
+Unless changed, the profile of the last closed QGIS dialog will be used in the
+following QGIS sessions.
+
+.. tip:: **Run QGIS under a new user profile to check for bug persistence**
+
+ When you encounter weird behavior with some functions in QGIS, create a new user
+ profile and run the commands again. Sometimes, bugs are related to some leftovers
+ in the current user profile and creating a new one may fix thm as it restarts QGIS
+ from scratch.
+
+
 .. index:: Project properties
    single: Project; Properties
    single: Settings; Project
