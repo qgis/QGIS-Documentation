@@ -895,10 +895,10 @@ But you can create as many user profiles as you want:
 #. The new profile opens a new instance of QGIS, using a clean and unchanged
    configuration from installation. You can then set your custom configurations. 
 
-As each user profile contains isolated settings, plugins, history they can be great for
+As each user profile contains isolated settings, plugins and history they can be great for
 different workflows, demos, users of the same machine, or testing settings, etc.
-And you can switch from one to the other selecting them from :menuselection:`Settings -->
-User Profiles` menu. You can also run QGIS with a specific user profile from
+And you can switch from one to the other by selecting them in the :menuselection:`Settings -->
+User Profiles` menu. You can also run QGIS with a specific user profile from the
 :ref:`command line <label_commandline>`.
 
 Unless changed, the profile of the last closed QGIS dialog will be used in the

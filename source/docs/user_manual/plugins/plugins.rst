@@ -41,7 +41,7 @@ included in this manual.
 
 To install or activate a plugin, go to :menuselection:`Plugins` menu and select
 |showPluginManager| :menuselection:`Manage and install plugins...`.
-Installed external python plugins are placed under the :file:`/python/plugins`
+Installed external python plugins are placed under the :file:`python/plugins`
 folder of the active :ref:`user profile <user_profiles>` path.
 
 Paths to Custom C++ plugins libraries can also be added under
