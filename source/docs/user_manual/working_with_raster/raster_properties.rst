@@ -319,6 +319,13 @@ Hillshade
 
 Render a band of the raster layer using hillshading.
 
+.. _figure_raster_hillshade:
+
+.. figure:: img/rasterHillshade.png
+   :align: center
+
+   Raster Symbology - Hillshade rendering
+
 Options:
 
 * :guilabel:`Band`: The raster band to use.
