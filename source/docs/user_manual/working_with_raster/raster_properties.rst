@@ -312,7 +312,7 @@ defined color table for other sessions.
 The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
 greater than the :guilabel:`Max` value.
 
-.. _hillshade_rendrer:
+.. _hillshade_renderer:
 
 Hillshade
 ---------
