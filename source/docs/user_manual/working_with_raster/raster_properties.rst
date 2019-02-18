@@ -322,7 +322,7 @@ Render the raster layer using hillshading.
 Options:
 
 * :guilabel:`Band`: The raster band to use.
-* :guilabel:`Altitude`: The elevation angle of the light source (default is 45).
+* :guilabel:`Altitude`: The elevation angle of the light source (default is ``45°``).
 
 * :guilabel:`Azimuth`: The azimuth of the light source (default is 315).
 
