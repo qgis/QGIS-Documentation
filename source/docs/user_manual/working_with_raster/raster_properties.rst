@@ -112,7 +112,7 @@ The renderer chosen is dependent on the data type.
    indexed palette nor a continuous palette (e.g., used with a shaded relief map).
 #. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
    files with a continuous palette, or color map (e.g., used with an elevation map).
-#. :ref:`Hillshade <hillshade_rendrer>` - Create hillshade from a single band.
+#. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band.
 
 
 .. _multiband_color:
