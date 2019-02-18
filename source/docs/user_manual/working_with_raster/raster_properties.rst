@@ -317,7 +317,7 @@ greater than the :guilabel:`Max` value.
 Hillshade
 ---------
 
-Render the raster layer using hillshading.
+Render a band of the raster layer using hillshading.
 
 Options:
 
