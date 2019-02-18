@@ -21,23 +21,16 @@ dialog (see figure_raster_properties_).
 
 There are several tabs in the dialog:
 
-* |metadata| :guilabel:`Information`
-* |system| :guilabel:`Source`
-* |symbology| :guilabel:`Symbology`
-* |transparency| :guilabel:`Transparency`
-* |rasterHistogram| :guilabel:`Histogram`
-* |rendering| :guilabel:`Rendering`
-* |pyramids| :guilabel:`Pyramids`
-* |editMetadata| :guilabel:`Metadata`
-* |legend| :guilabel:`Legend`
-* |overlay| :guilabel:`QGIS Server`
-
-.. _figure_raster_properties:
-
-.. figure:: img/rasterPropertiesDialog.png
-   :align: center
-
-   Raster Layers Properties Dialog
+* |metadata| :ref:`Information <raster_information>`
+* |system| :ref:`Source <label_sourcetab>`
+* |symbology| :ref:`Symbology <label_symbology>`
+* |transparency| :ref:`Transparency <raster_transparency>`
+* |rasterHistogram| :ref:`Histogram <label_histogram>`
+* |rendering| :ref:`Rendering <raster_rendering>`
+* |pyramids| :ref:`Pyramids <raster_pyramids>`
+* |editMetadata| :ref:`Metadata <raster_metadata>`
+* |legend| :ref:`Legend <raster_server>`
+* |overlay| :ref:`QGIS Server <raster_server>`
 
 
 .. tip:: **Live update rendering**
@@ -87,6 +80,13 @@ raster, including:
   was applied. If you wish to reproject your data into another CRS, rather use
   layer reprojection algorithms from Processing or :ref:`Save it into another
   layer <general_saveas>`.
+
+.. _figure_raster_properties:
+
+.. figure:: img/rasterPropertiesDialog.png
+   :align: center
+
+   Raster Layers - Source Properties Dialog
 
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
