@@ -894,7 +894,7 @@ Outputs
 
 Drape (set Z value from raster) |34|
 ------------------------------------
-Uses value sampled from a band within a raster layer to set the Z value for every
+Uses values sampled from a band within a raster layer to set the Z value for every
 overlapping vertex in the feature geometry. The raster values can optionally be
 scaled by a preset amount.
 
@@ -946,12 +946,12 @@ Parameters
   Input vector layer to downgrade the geometry type.
 
 ``Drop M Values`` [boolean]
-  Removes the M values from the features geometry.
+  Removes the M values from the geometries.
 
   Default: *False*
 
 ``Drop Z Values`` [boolean]
-  Removes the Z values from the features geometry.
+  Removes the Z values from the geometries.
 
   Default: *False*
 
@@ -2406,7 +2406,7 @@ See also
 Set M value from raster |34|
 ----------------------------
 
-Uses value sampled from a band within a raster layer to set the M value for every
+Uses values sampled from a band within a raster layer to set the M value for every
 overlapping vertex in the feature geometry. The raster values can optionally be
 scaled by a preset amount.
 
