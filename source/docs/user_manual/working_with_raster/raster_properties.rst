@@ -181,13 +181,6 @@ The label appears in the legend of the raster layer then.
 This option can be used for rendering all raster bands using a palette, assigning
 a color to each unique raster value.
 
-.. _figure_raster_paletted:
-
-.. figure:: img/rasterPaletted.png
-   :align: center
-
-   Raster Symbology - Paletted rendering
-
 .. _figure_raster_paletted_unique:
 
 .. figure:: img/rasterPalettedUniqueValue.png
