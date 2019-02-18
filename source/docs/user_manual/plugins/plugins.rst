@@ -41,19 +41,8 @@ included in this manual.
 
 To install or activate a plugin, go to :menuselection:`Plugins` menu and select
 |showPluginManager| :menuselection:`Manage and install plugins...`.
-
-Installed external python plugins are placed under the
-:file:`~/(UserProfile)/python/plugins` folder where:
-
-* ``~`` represents the HOME directory which on |win| Windows is usually something
-  like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-  or :file:`C:\\Users\\(user)`.
-* and ``(UserProfile)`` represents the active profile folder, which for the
-  QGIS ``default`` user profile is:
-
-  * |nix| :file:`.local/share/QGIS/QGIS3/profiles/default`;
-  * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default`;
-  * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
+Installed external python plugins are placed under the :file:`/python/plugins`
+folder of the active :ref:`user profile <user_profiles>` path.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
