@@ -305,7 +305,7 @@ Settings
 =================================================================  ====================  ====================  ===================================
 Menu Option                                                        Shortcut              Toolbar               Reference
 =================================================================  ====================  ====================  ===================================
-:menuselection:`User Profiles -->`                                 \                     \                     \
+:menuselection:`User Profiles -->`                                 \                     \                     :ref:`user_profiles`
 |styleManager| :guilabel:`Style Manager...`                        \                     \                     :ref:`vector_style_manager`
 |customProjection| :guilabel:`Custom Projections...`               \                     \                     :ref:`sec_custom_projections`
 |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              \                     \                     :ref:`shortcuts`
