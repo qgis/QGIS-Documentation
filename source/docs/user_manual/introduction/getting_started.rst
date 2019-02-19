@@ -48,8 +48,8 @@ Installing on external media
 ----------------------------
 
 It is possible to install QGIS (with all plugins and settings) on a flash drive.
-This is achieved by defining a ``--configpath`` option that overrides the default
-path for user configuration (e.g., :file:`~/.qgis2` under Linux) and forces
+This is achieved by defining a :ref:`--profiles-path <profiles-path_option>` option
+that overrides the default :ref:`user profile <user_profiles>` path and forces
 **QSettings** to use this directory, too.
 See section :ref:`env_options` for additional information.
 
@@ -360,6 +360,8 @@ documentation screenshots should be created (see QgsAppScreenShots::Categories).
 
 Loads QGIS using a specific profile from the user's profile folder. Unless
 changed, the selected profile will be used in the following QGIS sessions.
+
+.. _profiles-path_option:
 
 ``--profiles-path`` option
 
