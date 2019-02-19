@@ -16,28 +16,20 @@ Raster Properties Dialog
 
 To view and set the properties for a raster layer, double click on the layer name
 in the map legend, or right click on the layer name and choose :guilabel:`Properties`
-from the context menu. This will open the :guilabel:`Raster Layer Properties`
-dialog (see figure_raster_properties_).
+from the context menu. This will open the :guilabel:`Raster Layer Properties` dialog.
 
 There are several tabs in the dialog:
 
-* |metadata| :guilabel:`Information`
-* |system| :guilabel:`Source`
-* |symbology| :guilabel:`Symbology`
-* |transparency| :guilabel:`Transparency`
-* |rasterHistogram| :guilabel:`Histogram`
-* |rendering| :guilabel:`Rendering`
-* |pyramids| :guilabel:`Pyramids`
-* |editMetadata| :guilabel:`Metadata`
-* |legend| :guilabel:`Legend`
-* |overlay| :guilabel:`QGIS Server`
-
-.. _figure_raster_properties:
-
-.. figure:: img/rasterPropertiesDialog.png
-   :align: center
-
-   Raster Layers Properties Dialog
+* |metadata| :ref:`Information <raster_information>`
+* |system| :ref:`Source <label_sourcetab>`
+* |symbology| :ref:`Symbology <label_symbology>`
+* |transparency| :ref:`Transparency <raster_transparency>`
+* |rasterHistogram| :ref:`Histogram <label_histogram>`
+* |rendering| :ref:`Rendering <raster_rendering>`
+* |pyramids| :ref:`Pyramids <raster_pyramids>`
+* |editMetadata| :ref:`Metadata <raster_metadata>`
+* |legend| :ref:`Legend <raster_server>`
+* |overlay| :ref:`QGIS Server <raster_server>`
 
 
 .. tip:: **Live update rendering**
@@ -87,6 +79,13 @@ raster, including:
   was applied. If you wish to reproject your data into another CRS, rather use
   layer reprojection algorithms from Processing or :ref:`Save it into another
   layer <general_saveas>`.
+
+.. _figure_raster_properties:
+
+.. figure:: img/rasterPropertiesDialog.png
+   :align: center
+
+   Raster Layers - Source Properties Dialog
 
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
@@ -442,6 +441,13 @@ visible. Out of this range, it's hidden. The |mapIdentification|
 :sup:`Set to current canvas scale` button helps you use the current map
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
+
+.. _figure_raster_rendering:
+
+.. figure:: img/rasterRendering.png
+   :align: center
+
+   Raster Rendering
 
 
 .. index:: Pyramids
