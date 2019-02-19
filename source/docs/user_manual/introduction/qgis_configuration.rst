@@ -891,7 +891,6 @@ But you can create as many user profiles as you want:
 
    The user profile folder can be opened from within QGIS using the
    :guilabel:`Open Active Profile Folder`.
-
 #. The new profile opens a new instance of QGIS, using a clean and unchanged
    configuration from installation. You can then set your custom configurations. 
 
@@ -901,15 +900,15 @@ And you can switch from one to the other by selecting them in the :menuselection
 User Profiles` menu. You can also run QGIS with a specific user profile from the
 :ref:`command line <label_commandline>`.
 
-Unless changed, the profile of the last closed QGIS dialog will be used in the
+Unless changed, the profile of the last closed QGIS session will be used in the
 following QGIS sessions.
 
 .. tip:: **Run QGIS under a new user profile to check for bug persistence**
 
  When you encounter weird behavior with some functions in QGIS, create a new user
  profile and run the commands again. Sometimes, bugs are related to some leftovers
- in the current user profile and creating a new one may fix thm as it restarts QGIS
- from scratch.
+ in the current user profile and creating a new one may fix them as it restarts
+ QGIS with the new (clean) profile.
 
 
 .. index:: Project properties
