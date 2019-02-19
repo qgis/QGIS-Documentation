@@ -16,8 +16,7 @@ Raster Properties Dialog
 
 To view and set the properties for a raster layer, double click on the layer name
 in the map legend, or right click on the layer name and choose :guilabel:`Properties`
-from the context menu. This will open the :guilabel:`Raster Layer Properties`
-dialog (see figure_raster_properties_).
+from the context menu. This will open the :guilabel:`Raster Layer Properties` dialog.
 
 There are several tabs in the dialog:
 
@@ -442,6 +441,13 @@ visible. Out of this range, it's hidden. The |mapIdentification|
 :sup:`Set to current canvas scale` button helps you use the current map
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
+
+.. _figure_raster_rendering:
+
+.. figure:: img/rasterRendering.png
+   :align: center
+
+   Raster Rendering
 
 
 .. index:: Pyramids
