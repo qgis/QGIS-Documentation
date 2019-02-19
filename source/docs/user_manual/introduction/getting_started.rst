@@ -408,16 +408,16 @@ We will use:
    The :guilabel:`Coordinate Reference System Selector` dialog opens with
    :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
 #. Close the Data Source Manager window.
-#. Zoom to your favourite area with some lakes.
+#. Zoom to your favorite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
-#. Click on the :guilabel:`Symbology` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and select :guilabel:`Show labels for
-   this layer` in the drop-down menu to enable labeling. Then from the
-   :guilabel:`Label with` list, choose the ``NAMES`` field to label each lake with its name.
+#. Click on the |symbology| :guilabel:`Symbology` tab and select blue as fill color.
+#. Click on the |labeling| :guilabel:`Labels` tab and select :guilabel:`Single labels`
+   in the drop-down menu to enable labeling. Then from the :guilabel:`Label with`
+   list, choose the ``NAMES`` field to label each lake with its name.
 #. To improve readability of labels, you can add a white buffer around them
    by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
-   :guilabel:`Draw text buffer` and choosing 3 as buffer size.
+   :guilabel:`Draw text buffer` and choosing ``3`` as buffer size.
 #. Click :guilabel:`Apply`. Check if the result looks good, and finally click
    :guilabel:`OK`.
 
@@ -569,6 +569,8 @@ Other ways to produce output files are:
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
@@ -577,6 +579,8 @@ Other ways to produce output files are:
    :width: 1em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em
