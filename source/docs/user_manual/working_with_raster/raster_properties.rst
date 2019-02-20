@@ -120,9 +120,9 @@ Multiband color
 
 With the multiband color renderer, three selected bands from the image will be
 rendered, each band representing the red, green or blue component that will be
-used to create a color image. QGIS automatically fetches for each band its
-:guilabel:`Min` and :guilabel:`Max` values over the whole raster and scale
-the coloring accordingly but you can control the values range with the help
+used to create a color image. QGIS automatically fetches
+:guilabel:`Min` and :guilabel:`Max` values for each band of the raster and scales
+the coloring accordingly. You can control the value ranges with the help
 of the :ref:`Min/Max Value Settings <minmaxvalues>` section.
 
 A :guilabel:`Contrast enhancement` method can also be applied to the values:
@@ -211,7 +211,7 @@ You can also create individual color maps for the single bands here.
    Raster Symbology - Singleband pseudocolor rendering
 
 
-Using a :guilabel:`Band` of the layer and its :ref:`values range set <minmaxvalues>`,
+Using a :guilabel:`Band` of the layer and a :ref:`values range <minmaxvalues>`,
 three types of color :guilabel:`Interpolation` are available:
 
 * Discrete (a <= symbol appears in the value column)
@@ -253,7 +253,7 @@ Setting the min and max values
 ..............................
 
 By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of the band(s)
-of the raster. A lot of images have a few very low and high data which can have a
+of the raster. A few very low and/or high values can have a
 negative impact on the rendering of the raster. The :ref:`Min/Max Value Settings
 <minmaxvalues>` menu helps you control the values to render.
 
@@ -267,14 +267,12 @@ negative impact on the rendering of the raster. The :ref:`Min/Max Value Settings
 
 Available options are:
 
-* |radioButtonOff| :guilabel:`User defined`: Allows to manually override the default
-  :guilabel:`Min` and :guilabel:`Max` values of the band(s)
-* |radioButtonOff| :guilabel:`Cumulative count cut`: Removes the outliers data.
+* |radioButtonOff| :guilabel:`User defined`: The default
+  :guilabel:`Min` and :guilabel:`Max` values of the band(s) can be overridden
+* |radioButtonOff| :guilabel:`Cumulative count cut`: Removes outliers.
   The standard data range of the data values is set from ``2%`` to ``98%`` and can
-  be adapted manually. With this setting, the gray character of the image can disappear.
-* |radioButtonOn| :guilabel:`Min/max`: Creates a color table with all of the
-  data included in the image (e.g., QGIS creates a color table with 256 values,
-  given the fact that you have 8 bit bands).
+  be adapted manually.
+* |radioButtonOn| :guilabel:`Min/max`: Uses the whole range of values in the image band.
 * |radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates a color
   table that only considers values within the standard deviation or within multiple
   standard deviations. This is useful when you have one or two cells with abnormally
