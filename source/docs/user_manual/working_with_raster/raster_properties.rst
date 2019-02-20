@@ -16,28 +16,20 @@ Raster Properties Dialog
 
 To view and set the properties for a raster layer, double click on the layer name
 in the map legend, or right click on the layer name and choose :guilabel:`Properties`
-from the context menu. This will open the :guilabel:`Raster Layer Properties`
-dialog (see figure_raster_properties_).
+from the context menu. This will open the :guilabel:`Raster Layer Properties` dialog.
 
 There are several tabs in the dialog:
 
-* |metadata| :guilabel:`Information`
-* |system| :guilabel:`Source`
-* |symbology| :guilabel:`Symbology`
-* |transparency| :guilabel:`Transparency`
-* |rasterHistogram| :guilabel:`Histogram`
-* |rendering| :guilabel:`Rendering`
-* |pyramids| :guilabel:`Pyramids`
-* |editMetadata| :guilabel:`Metadata`
-* |legend| :guilabel:`Legend`
-* |overlay| :guilabel:`QGIS Server`
-
-.. _figure_raster_properties:
-
-.. figure:: img/rasterPropertiesDialog.png
-   :align: center
-
-   Raster Layers Properties Dialog
+* |metadata| :ref:`Information <raster_information>`
+* |system| :ref:`Source <label_sourcetab>`
+* |symbology| :ref:`Symbology <label_symbology>`
+* |transparency| :ref:`Transparency <raster_transparency>`
+* |rasterHistogram| :ref:`Histogram <label_histogram>`
+* |rendering| :ref:`Rendering <raster_rendering>`
+* |pyramids| :ref:`Pyramids <raster_pyramids>`
+* |editMetadata| :ref:`Metadata <raster_metadata>`
+* |legend| :ref:`Legend <raster_server>`
+* |overlay| :ref:`QGIS Server <raster_server>`
 
 
 .. tip:: **Live update rendering**
@@ -88,6 +80,13 @@ raster, including:
   layer reprojection algorithms from Processing or :ref:`Save it into another
   layer <general_saveas>`.
 
+.. _figure_raster_properties:
+
+.. figure:: img/rasterPropertiesDialog.png
+   :align: center
+
+   Raster Layers - Source Properties Dialog
+
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
 
@@ -104,13 +103,15 @@ The renderer chosen is dependent on the data type.
 
 #. :ref:`Multiband color <multiband_color>` - if the file comes as a multiband with
    several bands (e.g., used with a satellite image with several bands).
-#. :ref:`Paletted <paletted>` - if a single band file comes with an indexed palette
-   (e.g., used with a digital topographic map).
+#. :ref:`Paletted/Unique values <paletted>` - for single band files that come with an
+   indexed palette (e.g., used with a digital topographic map) or for general use of
+   palettes for rendering raster layers.
 #. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
    as gray; QGIS will choose this renderer if the file has neither multibands nor an
    indexed palette nor a continuous palette (e.g., used with a shaded relief map).
 #. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
    files with a continuous palette, or color map (e.g., used with an elevation map).
+#. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band.
 
 
 .. _multiband_color:
@@ -155,8 +156,8 @@ A :guilabel:`Contrast enhancement` method can also be applied to the values:
 
 .. _paletted:
 
-Paletted
-........
+Paletted/Unique values
+......................
 
 This is the standard render option for singleband files that already include a
 color table, where each pixel value is assigned to a certain color. In that case,
@@ -165,12 +166,15 @@ certain values, just double-click on the color and the :guilabel:`Select color`
 dialog appears. Also, in QGIS it's possible to assign a label to the color values.
 The label appears in the legend of the raster layer then.
 
-.. _figure_raster_paletted:
+This option can be used for rendering all raster bands using a palette, assigning
+a color to each unique raster value.
 
-.. figure:: img/rasterPaletted.png
+.. _figure_raster_paletted_unique:
+
+.. figure:: img/rasterPalettedUniqueValue.png
    :align: center
 
-   Raster Symbology - Paletted Rendering
+   Raster Symbology - Paletted unique value rendering
 
 
 .. _singleband_gray:
@@ -245,6 +249,31 @@ defined color table for other sessions.
 
 The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
 greater than the :guilabel:`Max` value.
+
+
+.. index:: Hillshade
+.. _hillshade_renderer:
+
+Hillshade
+.........
+
+Render a band of the raster layer using hillshading.
+
+.. _figure_raster_hillshade:
+
+.. figure:: img/rasterHillshade.png
+   :align: center
+
+   Raster Symbology - Hillshade rendering
+
+Options:
+
+* :guilabel:`Band`: The raster band to use.
+* :guilabel:`Altitude`: The elevation angle of the light source (default is ``45°``).
+* :guilabel:`Azimuth`: The azimuth of the light source (default is ``315°``).
+* :guilabel:`Z Factor`: Scaling factor for the values of the raster band (default is ``1``).
+* |checkbox| :guilabel:`Multidirectional`: Specify if multidirectional hillshading
+  is to be used (default is ``off``).
 
 
 .. _minmaxvalues:
@@ -433,6 +462,13 @@ visible. Out of this range, it's hidden. The |mapIdentification|
 :sup:`Set to current canvas scale` button helps you use the current map
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
+
+.. _figure_raster_rendering:
+
+.. figure:: img/rasterRendering.png
+   :align: center
+
+   Raster Rendering
 
 
 .. index:: Pyramids
