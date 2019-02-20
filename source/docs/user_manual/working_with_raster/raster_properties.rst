@@ -270,7 +270,7 @@ Available options are:
 * |radioButtonOff| :guilabel:`User defined`: The default
   :guilabel:`Min` and :guilabel:`Max` values of the band(s) can be overridden
 * |radioButtonOff| :guilabel:`Cumulative count cut`: Removes outliers.
-  The standard data range of the data values is set from ``2%`` to ``98%`` and can
+  The standard range of values is ``2%`` to ``98%``, but can
   be adapted manually.
 * |radioButtonOn| :guilabel:`Min/max`: Uses the whole range of values in the image band.
 * |radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates a color
