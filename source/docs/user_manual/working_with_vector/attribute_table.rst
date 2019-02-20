@@ -512,13 +512,15 @@ A short example illustrates how field calculator works when using the
    |calculateField| :sup:`Field Calculator` dialog.
 #. Select the |checkbox| :guilabel:`Create a new field` checkbox to save the
    calculations into a new field.
-#. Add ``length`` as Output field name and ``real`` as Output field type, and
-   define Output field length to be 10 and Precision, 3.
-#. Now double click on function ``$length`` in the :guilabel:`Geometry` group
+#. Add ``length_km`` as :guilabel:`Output field name`
+#. Define the :guilabel:`Output field type` as ``Decimal number (real)``
+#. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision`
+   to ``3``
+#. Double click the ``$length`` function in the :guilabel:`Geometry` group
    to add it into the Field calculator expression box.
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
    expression box and click :guilabel:`OK`.
-#. You can now find a new field ``length`` in the attribute table.
+#. You can now find a new :guilabel:`length_km` field in the attribute table.
 
 .. _virtual_field:
 
