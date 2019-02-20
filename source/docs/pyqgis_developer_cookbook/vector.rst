@@ -51,7 +51,6 @@ a :class:`QgsVectorLayer` object.
      # show some information about the feature geometry
      geom = feature.geometry()
      geomSingleType = QgsWkbTypes.isSingleType(geom.wkbType())
-
      if geom.type() == QgsWkbTypes.PointGeometry:
          # the geometry type can be of single or multi type
          if geomSingleType:
@@ -60,7 +59,6 @@ a :class:`QgsVectorLayer` object.
          else:
              x = geom.asMultiPoint()
              print("MultiPoint: ", x)
-
      elif geom.type() == QgsWkbTypes.LineGeometry:
          if geomSingleType:
              x = geom.asPolyline()
@@ -68,7 +66,6 @@ a :class:`QgsVectorLayer` object.
          else:
              x = geom.asMultiPolyline()
              print("MultiLine: ", x, "length: ", geom.length())
-
      elif geom.type() == QgsWkbTypes.PolygonGeometry:
          if geomSingleType:
              x = geom.asPolygon()
@@ -78,10 +75,8 @@ a :class:`QgsVectorLayer` object.
              print("MultiPolygon: ", x, "Area: ", geom.area())
      else:
          print("Unknown or invalid geometry")
-
      # fetch attributes
      attrs = feature.attributes()
-
      # attrs is a list. It contains all the attribute values of this feature
      print(attrs)
 
@@ -245,7 +240,6 @@ iterator returns all features, but returns partial data for each of them.
   # The options may be chained
   request.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])
 
-.. warning:: |outofdate|
 
 .. index:: Vector layers; Editing
 .. _editing:
@@ -261,12 +255,12 @@ to find out what set of functionality is supported
 
   caps = layer.dataProvider().capabilities()
   # Check if a particular capability is supported:
-  if caps & layer.dataProvider().DeleteFeatures:
+  if caps & QgsVectorDataProvider.DeleteFeatures:
       print('The layer supports DeleteFeatures')
 
 For a list of all available capabilities, please refer to the
 `API Documentation of QgsVectorDataProvider
-<https://qgis.org/pyqgis/master/core/Vector/QgsVectorDataProvider.html>`_
+<https://qgis.org/api/classQgsVectorDataProvider.html>`_
 
 To print layer's capabilities textual description in a comma separated list you
 can use :func:`capabilitiesString` as in the following example:
@@ -527,7 +521,7 @@ create them easily. This is what you have to do:
   .. code-block:: python
 
     # returns array of feature IDs of five nearest features
-    nearest = index.nearestNeighbor(QgsPoint(25.4, 12.7), 5)
+    nearest = index.nearestNeighbor(QgsPointXY(25.4, 12.7), 5)
 
     # returns array of IDs of features which intersect the rectangle
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
@@ -539,7 +533,7 @@ Writing Vector Layers
 =====================
 
 You can write vector layer files using :class:`QgsVectorFileWriter` class. It
-supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,
+supports any other kind of vector file that OGR supports (GeoPackage, Shapefile, GeoJSON,
 KML and others).
 
 There are two possibilities how to export a vector layer:
@@ -548,19 +542,19 @@ There are two possibilities how to export a vector layer:
 
   .. code-block:: python
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes", "CP1250")
 
-    if error == QgsVectorFileWriter.NoError:
+    if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", "utf-8", None, "GeoJSON")
-    if error == QgsVectorFileWriter.NoError:
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "utf-8",  driverName="GeoJSON")
+    if error[0] == QgsVectorFileWriter.NoError:
         print("success again!")
 
   The third parameter specifies output text encoding. Only some drivers need this
   for correct operation - Shapefile is one of those --- however in case you
   are not using international characters you do not have to care much about
-  the encoding. The fourth parameter that we left as ``None`` may specify
+  the encoding. The fourth parameter that we left out may specify a
   destination CRS --- if a valid instance of :class:`QgsCoordinateReferenceSystem`
   is passed, the layer is transformed to that CRS.
 
@@ -590,19 +584,21 @@ There are two possibilities how to export a vector layer:
     5. layer's spatial reference (instance of
        QgsCoordinateReferenceSystem) - optional
     6. driver name for the output file """
-    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
+    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
         print("Error when creating shapefile: ",  w.errorMessage())
 
     # add a feature
     fet = QgsFeature()
-    fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(10,10)))
+    fet.setGeometry(QgsPoint(10,10))
     fet.setAttributes([1, "text"])
     writer.addFeature(fet)
 
     # delete the writer to flush features to disk
     del writer
+
+.. warning:: |outofdate|
 
 .. index:: Memory layer
 
