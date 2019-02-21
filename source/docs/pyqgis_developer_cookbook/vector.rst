@@ -260,7 +260,7 @@ to find out what set of functionality is supported
 
 For a list of all available capabilities, please refer to the
 `API Documentation of QgsVectorDataProvider
-<https://qgis.org/api/classQgsVectorDataProvider.html>`_
+<https://qgis.org/pyqgis/master/core/QgsVectorDataProvider.html>`_
 
 To print layer's capabilities textual description in a comma separated list you
 can use :func:`capabilitiesString` as in the following example:
@@ -598,8 +598,6 @@ There are two possibilities how to export a vector layer:
     # delete the writer to flush features to disk
     del writer
 
-.. warning:: |outofdate|
-
 .. index:: Memory layer
 
 Memory Provider
@@ -685,6 +683,8 @@ Finally, let's check whether everything went well
   features = vl.getFeatures()
   for fet in features:
       print("F:", fet.id(), fet.attributes(), fet.geometry().asPoint())
+
+.. warning:: |outofdate|
 
 .. index:: Vector layers; Symbology
 
