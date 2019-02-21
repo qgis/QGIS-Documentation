@@ -542,7 +542,7 @@ There are two possibilities how to export a vector layer:
 
   .. code-block:: python
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes", "CP1250")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
 
     if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
