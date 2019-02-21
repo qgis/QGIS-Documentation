@@ -977,10 +977,10 @@ given symbol layer class like this
 
 .. code-block:: python
 
-  from qgis.core import QgsSymbolLayerV2Registry
-  myRegistry = QgsSymbolLayerV2Registry.instance()
+  from qgis.core import QgsSymbolLayerRegistry
+  myRegistry = QgsApplication.symbolLayerRegistry()
   myMetadata = myRegistry.symbolLayerMetadata("SimpleFill")
-  for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker):
+  for item in myRegistry.symbolLayersForType(QgsSymbol.Marker):
       print(item)
 
 Output
@@ -988,12 +988,14 @@ Output
 ::
 
   EllipseMarker
+  FilledMarker
   FontMarker
+  GeometryGenerator
   SimpleMarker
   SvgMarker
   VectorField
 
-:class:`QgsSymbolLayerV2Registry` class manages a database of all available
+:class:`QgsSymbolLayerRegistry` class manages a database of all available
 symbol layer types.
 
 To access symbol layer data, use its :func:`properties` method that returns a
