@@ -9,9 +9,8 @@
 Laying out the maps
 *******************
 
-With the Map Layout you can create nice maps and atlasses that can be printed
-or saved as image, PDF or SVG file. This is a powerful way to share
-geographical information produced with QGIS that can be included in reports or published.
+With Print Layouts and Reports you can create maps and atlases,
+and print them or save them as image, PDF or SVG files.
 
 
 .. toctree::
