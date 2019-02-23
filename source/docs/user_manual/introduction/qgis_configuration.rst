@@ -16,13 +16,10 @@ provides different tools to:
 
 * |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
   apply in different areas of the software. These preferences are saved in the
-  active :guilabel:`User profile` settings and applied by default whenever you
-  open a new project with this profile.
+  active :ref:`User profile <user_profiles>` settings and applied by default
+  whenever you open a new project with this profile.
   Also, they can be overridden during each QGIS session by the :ref:`project
   properties <project_properties>` (accessible under :menuselection:`Project` menu).
-
-.. Todo: Add a link to user profile description when available
-
 * |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
   :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
   not need.
