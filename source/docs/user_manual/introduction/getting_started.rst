@@ -191,35 +191,6 @@ other softwares. Let's move on to learn more about the available functionality,
 features and settings, and how to use them.
 
 
-.. _`sec_output`:
-
-Generating output
-=================
-
-.. index:: Print layout, Quick print, World file
-   single: Output; Save as image
-
-There are several ways to generate output from your QGIS session. We have
-already discussed saving as a project file in :ref:`sec_projects`.
-Other ways to produce output files are:
-
-* Creating images: :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
-  :menuselection:`Export Map
-  to Image...` opens a file dialog where you select the name, path and type of
-  image (PNG, JPG and many other formats). This will also create a world file
-  (with extension ``PNGW`` or ``JPGW``) that is saved in the same folder as your
-  image. This world file is used to georeference the image.
-* Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export
-  Project to DXF...` opens
-  a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
-  vector layers you want to export to DXF. Through the 'Symbology mode' symbols
-  from the original QGIS Symbology can be exported with high fidelity
-  (see section :ref:`create_dxf_files`).
-* Designing print maps: :menuselection:`Project -->` |newLayout|
-  :menuselection:`New Print Layout...` opens a dialog where you can layout and
-  print the current map canvas (see section :ref:`label_printlayout`).
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -252,3 +223,4 @@ Other ways to produce output files are:
    :width: 2em
 .. |win| image:: /static/common/win.png
    :width: 1em
+
