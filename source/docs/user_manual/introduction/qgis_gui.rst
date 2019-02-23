@@ -224,7 +224,7 @@ Menu Option                                                Shortcut             
 |zoomToSelected| :guilabel:`Zoom To Selection`             :kbd:`Ctrl+J`            :guilabel:`Map Navigation`     \
 |zoomLast| :guilabel:`Zoom Last`                           \                        :guilabel:`Map Navigation`     \
 |zoomNext| :guilabel:`Zoom Next`                           \                        :guilabel:`Map Navigation`     \
-|zoomActual| :guilabel:`Zoom To Native Resolution (100%`)  \                        :guilabel:`Map Navigation`     \
+|zoomActual| :guilabel:`Zoom To Native Resolution (100%)`  \                        :guilabel:`Map Navigation`     \
 :menuselection:`Decorations -->`                           \                        \                              :ref:`decorations`
 :menuselection:`Preview mode -->`                          \                        \                              \
 |mapTips| :guilabel:`Show Map Tips`                        \                        :guilabel:`Attributes`         :ref:`maptips`
@@ -302,16 +302,16 @@ Menu Option                                                   Shortcut          
 Settings
 --------
 
-=================================================================  ====================  ====================  ===================================
-Menu Option                                                        Shortcut              Toolbar               Reference
-=================================================================  ====================  ====================  ===================================
-:menuselection:`User Profiles -->`                                 \                     \                     :ref:`user_profiles`
-|styleManager| :guilabel:`Style Manager...`                        \                     \                     :ref:`vector_style_manager`
-|customProjection| :guilabel:`Custom Projections...`               \                     \                     :ref:`sec_custom_projections`
-|keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              \                     \                     :ref:`shortcuts`
-|interfaceCustomization| :guilabel:`Interface Customization...`    \                     \                     :ref:`sec_customization`
-|options| :guilabel:`Options...`                                   \                     \                     :ref:`gui_options`
-=================================================================  ====================  ====================  ===================================
+=================================================================  ===================================
+Menu Option                                                        Reference
+=================================================================  ===================================
+:menuselection:`User Profiles -->`                                 :ref:`user_profiles`
+|styleManager| :guilabel:`Style Manager...`                        :ref:`vector_style_manager`
+|customProjection| :guilabel:`Custom Projections...`               :ref:`sec_custom_projections`
+|keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              :ref:`shortcuts`
+|interfaceCustomization| :guilabel:`Interface Customization...`    :ref:`sec_customization`
+|options| :guilabel:`Options...`                                   :ref:`gui_options`
+=================================================================  ===================================
 
 |
 
