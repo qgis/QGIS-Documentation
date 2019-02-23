@@ -202,17 +202,9 @@ features and settings, and how to use them.
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |fileNew| image:: /static/common/mActionFileNew.png
-   :width: 1.5em
-.. |fileOpen| image:: /static/common/mActionFileOpen.png
-   :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
-.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
-   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
-   :width: 1.5em
-.. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
