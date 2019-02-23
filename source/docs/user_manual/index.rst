@@ -18,9 +18,9 @@ QGIS User Guide
     preamble/whats_new
     introduction/getting_started
     introduction/qgis_gui
-    introduction/general_tools
     introduction/qgis_configuration
     working_with_projections/working_with_projections
+    introduction/general_tools
     managing_data_source/index
     working_with_vector/index
     working_with_raster/index
@@ -36,7 +36,6 @@ QGIS User Guide
     preamble/contributors
     appendices/appendices
     literature_web/literature_and_web_references
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
