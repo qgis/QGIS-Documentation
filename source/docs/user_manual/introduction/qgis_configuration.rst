@@ -877,9 +877,8 @@ But you can create as many user profiles as you want:
 #. You'll be prompted to provide a profile name, creating a folder of the same name
    under :file:`~/<UserProfiles>/` where:
 
-   * ``~`` represents the HOME directory, which on |win| Windows is usually something
-     like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-     or :file:`C:\\Users\\(user)`.
+   * ``~`` represents the **HOME** directory, which on |win| Windows is usually
+     something like :file:`C:\\Users\\(user)`.
    * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
 
      * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
