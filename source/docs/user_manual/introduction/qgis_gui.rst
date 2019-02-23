@@ -246,7 +246,7 @@ Menu Option                                                Shortcut             
 |
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
-and :guilabel:`Toggle Full Screen Mode` is in the :menuselection:`Settings`
+and :guilabel:`Toggle Full Screen Mode` are in the :menuselection:`Settings`
 menu.
 
 Layer
