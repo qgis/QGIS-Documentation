@@ -99,7 +99,7 @@ use --- it returns a value from ``QGis.WkbType`` enumeration
   >>> gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   False
 
-As an alternative, one can use :func:`wkbType` method which returns a value from
+As an alternative, one can use the :func:`wkbType` method which returns a value from the
 ``QgsWkbTypes.GeometryType`` enumeration. You can use the
 ``QgsWkbTypes.displayString`` to get a human readable geometry type.
 
