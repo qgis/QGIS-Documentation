@@ -101,7 +101,7 @@ use --- it returns a value from ``QGis.WkbType`` enumeration
 
 As an alternative, one can use the :func:`wkbType` method which returns a value from the
 ``QgsWkbTypes.GeometryType`` enumeration. You can use the
-``QgsWkbTypes.displayString`` to get a human readable geometry type.
+``QgsWkbTypes.displayString`` function to get a human readable geometry type.
 
 .. code-block:: python
 
