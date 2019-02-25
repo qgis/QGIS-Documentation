@@ -1274,7 +1274,7 @@ RandomRenderer example
 
   class RandomRendererMetadata(QgsRendererAbstractMetadata):
     def __init__(self):
-      QgsRendererAbstractMetadata.__init__(self, "RandomRenderer", "Random rendere  r")
+      QgsRendererAbstractMetadata.__init__(self, "RandomRenderer", "Random renderer")
 
     def createRenderer(self, element):
       return RandomRenderer()
