@@ -1121,7 +1121,6 @@ We will have to create metadata for the symbol layer
 
 .. code-block:: python
 
-    from qgis.core import QgsSymbolLayerAbstractMetadata 
     from qgis.core import QgsSymbol
 
     class FooSymbolLayerMetadata(QgsSymbolLayerAbstractMetadata):
