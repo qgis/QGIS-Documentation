@@ -1163,58 +1163,58 @@ The following code shows a simple custom renderer that creates two marker
 symbols and chooses randomly one of them for every feature
 
 .. code-block:: python
-  import random
-  from qgis.core import QgsFeatureRenderer
-  from qgis.core import QgsSymbol
-  from qgis.core import QgsWkbTypes
+    import random
+    from qgis.core import QgsFeatureRenderer
+    from qgis.core import QgsSymbol
+    from qgis.core import QgsWkbTypes
 
 
-  class RandomRenderer(QgsFeatureRenderer):
-    def __init__(self, syms=None):
-      QgsFeatureRenderer.__init__(self, "RandomRenderer")
-      self.syms = syms if syms else [QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point))]
+    class RandomRenderer(QgsFeatureRenderer):
+      def __init__(self, syms=None):
+        QgsFeatureRenderer.__init__(self, "RandomRenderer")
+        self.syms = syms if syms else [QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point))]
 
-    def symbolForFeature(self, feature):
-      return random.choice(self.syms)
+      def symbolForFeature(self, feature):
+        return random.choice(self.syms)
 
-    def startRender(self, context, vlayer):
-      for s in self.syms:
-        s.startRender(context)
+      def startRender(self, context, vlayer):
+        for s in self.syms:
+          s.startRender(context)
 
-    def stopRender(self, context):
-      for s in self.syms:
-        s.stopRender(context)
+      def stopRender(self, context):
+        for s in self.syms:
+          s.stopRender(context)
 
-    def usedAttributes(self):
-      return []
+      def usedAttributes(self):
+        return []
 
-    def clone(self):
-      return RandomRenderer(self.syms)
+      def clone(self):
+        return RandomRenderer(self.syms)
 
-  from qgis.gui import QgsRendererWidget
-  class RandomRendererWidget(QgsRendererWidget):
-    def __init__(self, layer, style, renderer):
-      QgsRendererWidget.__init__(self, layer, style)
-      if renderer is None or renderer.type() != "RandomRenderer":
-        self.r = RandomRenderer()
-      else:
-        self.r = renderer
-      # setup UI
-      self.btn1 = QgsColorButton()
-      self.btn1.setColor(self.r.syms[0].color())
-      self.vbox = QVBoxLayout()
-      self.vbox.addWidget(self.btn1)
-      self.setLayout(self.vbox)
-      self.connect(self.btn1, SIGNAL("clicked()"), self.setColor1)
+    from qgis.gui import QgsRendererWidget
+    class RandomRendererWidget(QgsRendererWidget):
+      def __init__(self, layer, style, renderer):
+        QgsRendererWidget.__init__(self, layer, style)
+        if renderer is None or renderer.type() != "RandomRenderer":
+          self.r = RandomRenderer()
+        else:
+          self.r = renderer
+        # setup UI
+        self.btn1 = QgsColorButton()
+        self.btn1.setColor(self.r.syms[0].color())
+        self.vbox = QVBoxLayout()
+        self.vbox.addWidget(self.btn1)
+        self.setLayout(self.vbox)
+        self.connect(self.btn1, SIGNAL("clicked()"), self.setColor1)
 
-    def setColor1(self):
-      color = QColorDialog.getColor(self.r.syms[0].color(), self)
-      if not color.isValid(): return
-      self.r.syms[0].setColor(color)
-      self.btn1.setColor(self.r.syms[0].color())
+      def setColor1(self):
+        color = QColorDialog.getColor(self.r.syms[0].color(), self)
+        if not color.isValid(): return
+        self.r.syms[0].setColor(color)
+        self.btn1.setColor(self.r.syms[0].color())
 
-    def renderer(self):
-      return self.r
+      def renderer(self):
+        return self.r
 
 The constructor of parent :class:`QgsFeatureRenderer` class needs a renderer
 name (which has to be unique among renderers). The :func:`symbolForFeature` method is
