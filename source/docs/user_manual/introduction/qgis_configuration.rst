@@ -16,13 +16,10 @@ provides different tools to:
 
 * |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
   apply in different areas of the software. These preferences are saved in the
-  active :guilabel:`User profile` settings and applied by default whenever you
-  open a new project with this profile.
+  active :ref:`User profile <user_profiles>` settings and applied by default
+  whenever you open a new project with this profile.
   Also, they can be overridden during each QGIS session by the :ref:`project
   properties <project_properties>` (accessible under :menuselection:`Project` menu).
-
-.. Todo: Add a link to user profile description when available
-
 * |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
   :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
   not need.
@@ -880,9 +877,8 @@ But you can create as many user profiles as you want:
 #. You'll be prompted to provide a profile name, creating a folder of the same name
    under :file:`~/<UserProfiles>/` where:
 
-   * ``~`` represents the HOME directory, which on |win| Windows is usually something
-     like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-     or :file:`C:\\Users\\(user)`.
+   * ``~`` represents the **HOME** directory, which on |win| Windows is usually
+     something like :file:`C:\\Users\\(user)`.
    * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
 
      * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
