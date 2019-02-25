@@ -10,8 +10,6 @@
 Geometry Handling
 *****************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -38,7 +36,7 @@ relationships are available in the `OGC Simple Feature Access Standards
 Geometry Construction
 =====================
 
-There are several options for creating a geometry:
+PyQGIS provides several options for creating a geometry:
 
 * from coordinates
 
@@ -46,16 +44,20 @@ There are several options for creating a geometry:
 
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), QgsPointXY(2, 2),
-                                        QgsPointXY(2, 1)]])
+    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), 
+       QgsPointXY(2, 2), QgsPointXY(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint` class or :class:`QgsPointXY`
   class. The difference between these classes is that :class:`QgsPoint`
   supports M and Z dimensions.
 
-  Polyline (Linestring) is represented by a list of points. Polygon is
-  represented by a list of linear rings (i.e. closed linestrings). First ring
+  A Polyline (Linestring) is represented by a list of points. 
+  
+  A Polygon is
+  represented by a list of linear rings (i.e. closed linestrings). The first ring
   is outer ring (boundary), optional subsequent rings are holes in the polygon.
+  Note that unlike some programs, QGIS will close the ring for you so there is
+  no need to duplicate the first point as the last.
 
   Multi-part geometries go one level further: multi-point is a list of points,
   multi-linestring is a list of linestrings and multi-polygon is a list of
@@ -88,17 +90,27 @@ use --- it returns a value from ``QGis.WkbType`` enumeration
 
 .. code-block:: python
 
-  >>> gPnt.wkbType() == QGis.WKBPoint
+  >>> gPnt.wkbType() == QgsWkbTypes.Point
   True
-  >>> gLine.wkbType() == QGis.WKBLineString
+  >>> gLine.wkbType() == QgsWkbTypes.LineString
   True
-  >>> gPolygon.wkbType() == QGis.WKBPolygon
+  >>> gPolygon.wkbType() == QgsWkbTypes.Polygon
   True
-  >>> gPolygon.wkbType() == QGis.WKBMultiPolygon
+  >>> gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   False
 
-As an alternative, one can use :func:`type` method which returns a value from
-``QGis.GeometryType`` enumeration. There is also a helper function
+As an alternative, one can use the :func:`wkbType` method which returns a value from the
+``QgsWkbTypes.GeometryType`` enumeration. You can use the
+``QgsWkbTypes.displayString`` function to get a human readable geometry type.
+
+.. code-block:: python
+
+  >>> gPnt.wkbType()
+  1
+  >>> QgsWkbTypes.displayString(int(gPnt.wkbType()))
+  'Point'
+
+There is also a helper function
 :func:`isMultipart` to find out whether a geometry is multipart or not.
 
 To extract information from geometry there are accessor functions for every
@@ -107,11 +119,11 @@ vector type. How to use accessors
 .. code-block:: python
 
   >>> gPnt.asPoint()
-  (1, 1)
+  <QgsPointXY: POINT(1 1)>
   >>> gLine.asPolyline()
-  [(1, 1), (2, 2)]
+  [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
   >>> gPolygon.asPolygon()
-  [[(1, 1), (2, 2), (2, 1), (1, 1)]]
+  [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint`
    objects, the values are accessible with :func:`x` and :func:`y` methods.
@@ -124,9 +136,9 @@ For multipart geometries there are similar accessor functions:
 Geometry Predicates and Operations
 ==================================
 
-QGIS uses GEOS library for advanced geometry operations such as geometry
-predicates (:func:`contains`, :func:`intersects`, ...) and set operations
-(:func:`union`, :func:`difference`, ...). It can also compute geometric
+QGIS uses the GEOS library for advanced geometry operations such as geometry
+predicates (:func:`contains`, :func:`intersects`, …) and set operations
+(:func:`union`, :func:`difference`, …). It can also compute geometric
 properties of geometries, such as area (in the case of polygons) or lengths
 (for polygons and lines)
 
@@ -153,9 +165,31 @@ done on the ellipsoid.
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
-  d.setEllipsoidalMode(True)
 
-  print("distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11)))
+  # we assume that 'layer' is a polygon layer
+  features = layer.getFeatures()
+  for f in features:
+    geom = f.geometry()
+    print("Area:", d.measureArea(geom))
+    print("Perimeter:", d.measurePerimeter(geom))
+
+  # convert to "better" units
+  features = layer.getFeatures()
+  for f in features:
+      geom = f.geometry()
+      print("Area:", d.convertAreaMeasurement(d.measureArea(geom),QgsUnitTypes.AreaSquareKilometers))
+
+Alternatively, you may want to know the distance and bearing between two points:
+
+.. code-block:: python
+
+  d = QgsDistanceArea()
+  d.setEllipsoid('WGS84')
+  print("distance in meters: ", 
+    d.measureLine(QgsPointXY(10,10),QgsPointXY(11,11)))
+  print("angle in degrees: ", 
+    math.degrees(d.bearing(QgsPointXY(10,10),QgsPointXY(11,11))))
+
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
@@ -163,9 +197,9 @@ of a few of them.
 
 Additional information can be found in following sources:
 
-* Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/ReprojectLayer.py>`_
-* Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/PointDistance.py>`_
-* `Multi-part to single-part algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/MultipartToSingleparts.py>`_
+* Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.githubusercontent.com/qgis/QGIS/release-3_4/python/plugins/processing/algs/qgis/PointDistance.py>`_
+* `Find Projection
+  <https://github.com/qgis/QGIS/blob/release-3_4/python/plugins/processing/algs/qgis/FindProjection.py>`_
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
