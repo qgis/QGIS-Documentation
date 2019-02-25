@@ -1201,7 +1201,7 @@ symbols and chooses randomly one of them for every feature
         self.vbox = QVBoxLayout()
         self.vbox.addWidget(self.btn1)
         self.setLayout(self.vbox)
-        self.connect(self.btn1, SIGNAL("clicked()"), self.setColor1)
+        self.btn1.clicked.connect(self.setColor1)
 
       def setColor1(self):
         color = QColorDialog.getColor(self.r.syms[0].color(), self)
