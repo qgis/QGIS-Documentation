@@ -1161,6 +1161,7 @@ The following code shows a simple custom renderer that creates two marker
 symbols and chooses randomly one of them for every feature
 
 .. code-block:: python
+
     import random
     from qgis.core import QgsWkbTypes, QgsSymbol, QgsFeatureRenderer
 
