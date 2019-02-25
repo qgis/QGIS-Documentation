@@ -10,8 +10,6 @@
 Geometry Handling
 *****************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -46,16 +44,20 @@ There are several options for creating a geometry:
 
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), QgsPointXY(2, 2),
-                                        QgsPointXY(2, 1)]])
+    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), 
+       QgsPointXY(2, 2), QgsPointXY(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint` class or :class:`QgsPointXY`
   class. The difference between these classes is that :class:`QgsPoint`
   supports M and Z dimensions.
 
-  Polyline (Linestring) is represented by a list of points. Polygon is
-  represented by a list of linear rings (i.e. closed linestrings). First ring
+  A Polyline (Linestring) is represented by a list of points. 
+  
+  A Polygon is
+  represented by a list of linear rings (i.e. closed linestrings). The first ring
   is outer ring (boundary), optional subsequent rings are holes in the polygon.
+  Note that unlike some programs, QGIS will close the ring for you so there is
+  no need to duplicate the first point as the last.
 
   Multi-part geometries go one level further: multi-point is a list of points,
   multi-linestring is a list of linestrings and multi-polygon is a list of
@@ -88,17 +90,27 @@ use --- it returns a value from ``QGis.WkbType`` enumeration
 
 .. code-block:: python
 
-  >>> gPnt.wkbType() == QGis.WKBPoint
+  >>> gPnt.wkbType() == QgsWkbTypes.Point
   True
-  >>> gLine.wkbType() == QGis.WKBLineString
+  >>> gLine.wkbType() == QgsWkbTypes.LineString
   True
-  >>> gPolygon.wkbType() == QGis.WKBPolygon
+  >>> gPolygon.wkbType() == QgsWkbTypes.Polygon
   True
-  >>> gPolygon.wkbType() == QGis.WKBMultiPolygon
+  >>> gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   False
 
-As an alternative, one can use :func:`type` method which returns a value from
-``QGis.GeometryType`` enumeration. There is also a helper function
+As an alternative, one can use :func:`wkbType` method which returns a value from
+``QgsWkbTypes.GeometryType`` enumeration. You can use the
+``QgsWkbTypes.displayString`` to get a human readable geometry type.
+
+.. code-block:: python
+
+  >>> gPnt.wkbType()
+  1
+  >>> QgsWkbTypes.displayString(int(gPnt.wkbType()))
+  'Point'
+
+There is also a helper function
 :func:`isMultipart` to find out whether a geometry is multipart or not.
 
 To extract information from geometry there are accessor functions for every
@@ -107,17 +119,19 @@ vector type. How to use accessors
 .. code-block:: python
 
   >>> gPnt.asPoint()
-  (1, 1)
+  <QgsPointXY: POINT(1 1)>
   >>> gLine.asPolyline()
-  [(1, 1), (2, 2)]
+  [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
   >>> gPolygon.asPolygon()
-  [[(1, 1), (2, 2), (2, 1), (1, 1)]]
+  [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint`
    objects, the values are accessible with :func:`x` and :func:`y` methods.
 
 For multipart geometries there are similar accessor functions:
 :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`.
+
+.. warning:: |outofdate|
 
 .. index:: Geometry; Predicates and operations
 
