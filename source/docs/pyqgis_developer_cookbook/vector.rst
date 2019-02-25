@@ -1165,7 +1165,6 @@ symbols and chooses randomly one of them for every feature
 .. code-block:: python
     import random
     from qgis.core import QgsFeatureRenderer
-    from qgis.core import QgsSymbol
     from qgis.core import QgsWkbTypes
 
 
