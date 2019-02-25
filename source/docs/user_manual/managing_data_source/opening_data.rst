@@ -509,19 +509,6 @@ geometry type. The loaded layers will contain all the data of that geometry type
 in the file and keep the :file:`osm` file data structure.
 
 
-GPS
----
-
-Loading GPS data in QGIS can be done using the core plugin: ``GPS Tools``.
-Instructions are described in Section :ref:`plugin_gps`.
-
-
-GRASS
------
-
-Working with GRASS vector data is described in Section :ref:`sec_grass`.
-
-
 .. index:: Spatialite, SQLite
 .. _label_spatialite:
 
@@ -544,6 +531,19 @@ new connection, click on :guilabel:`New` and use the file browser to point to
 your SpatiaLite database, which is a file with a :file:`.sqlite` extension.
 
 QGIS also supports editable views in SpatiaLite.
+
+
+GPS
+---
+
+Loading GPS data in QGIS can be done using the core plugin: ``GPS Tools``.
+Instructions are described in Section :ref:`plugin_gps`.
+
+
+GRASS
+-----
+
+Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 
 .. index:: Database tools, MSSQL Spatial
@@ -718,8 +718,8 @@ The service file looks like::
   If you want to use the service with ``psql`` you need to do something
   like ``export PGSERVICE=water_service`` before doing your psql commands.
 
-.. note:: You can find all the parameters `here
-   <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
+  You can find all the parameters `here
+  <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
 .. note:: If you don't want to save the passwords in the service file you can
   use the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
