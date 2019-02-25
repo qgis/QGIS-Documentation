@@ -1130,7 +1130,7 @@ We will have to create metadata for the symbol layer
           QgsSymbolLayerAbstractMetadata.__init__(self, "FooMarker","Foo Marker", QgsSymbol.Marker)
 
         def createSymbolLayer(self, props):
-          radius = float(props[QString("radius")]) if QString("radius") in props else 4.0
+          radius = float(props["radius"]) if "radius" in props else 4.0
           return FooSymbolLayer(radius)
 
         def createSymbolLayerWidget(self):
