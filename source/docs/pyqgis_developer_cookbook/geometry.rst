@@ -175,7 +175,7 @@ done on the ellipsoid.
 
   # convert to "better" units
   features = layer.getFeatures()
-    for f in features:
+  for f in features:
       geom = f.geometry()
       print("Area:", d.convertAreaMeasurement(d.measureArea(geom),QgsUnitTypes.AreaSquareKilometers))
 
