@@ -1268,11 +1268,13 @@ and :guilabel:`Load` them into another QGIS installation.
 .. index:: Command line options
 .. _`label_commandline`:
 
-Advanced command line options
------------------------------
+Running QGIS with advanced settings
+===================================
 
-QGIS provides command line options for more advanced use cases. To
-get a list of the options, enter ``qgis --help`` on the command line, which
+We've seen that :ref:`launching QGIS <label_startingqgis>` is done as for any
+application on your OS.
+QGIS however provides command line options for more advanced use cases.
+To get a list of the options, enter ``qgis --help`` on the command line, which
 returns::
 
   QGIS - 3.4.3-Madeira 'Madeira' (2f64a3c4e7)
@@ -1532,6 +1534,8 @@ without needing to replace the existing ones.
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em

@@ -114,14 +114,10 @@ selection of sample locations (e.g., Spearfish or South Dakota) at the
 official GRASS GIS website, https://grass.osgeo.org/download/sample-data/.
 
 .. index:: Start QGIS, Stop QGIS
-
-Launching QGIS
-==============
-
 .. _`label_startingqgis`:
 
 Starting and stopping QGIS
---------------------------
+==========================
 
 QGIS can be started like any other application on your computer.
 This means that you can launch QGIS by:
@@ -139,9 +135,6 @@ To stop QGIS, use:
   :kbd:`Ctrl+Q`
 * |osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`
 * or use the red cross at the top-right corner of the main interface of the application.
-
-The following section covers advanced command line options.
-Skip forward to :ref:`samplesession` to get started loading data into QGIS.
 
 
 .. _samplesession:
@@ -180,10 +173,23 @@ We will use:
    :guilabel:`Draw text buffer` and choosing ``3`` as buffer size.
 #. Click :guilabel:`Apply`. Check if the result looks good, and finally click
    :guilabel:`OK`.
+#. Select :menuselection:`View --> Decorations --> Scale Bar`, and in the
+   dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` and
+   press :guilabel:`Apply` (you can customize some options of the dialog if
+   you want).
+#. Likewise, from the decorations menu, add more items (north arrow, copyright...)
+   to the map canvas
+#. Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
+   :menuselection:`Export Map to Image...` and press :guilabel:`Save` in the
+   opened dialog. Select a file location, a format and confirm by pressing
+   :guilabel:`Save` again.
+#. Use :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to
+   store your changes as a :file:`.qgz` project file.
 
-You can see how easy it is to visualize raster and vector layers in QGIS. Let's
-move on to learn more about the available functionality, features and settings,
-and how to use them.
+That's it! You can see how easy it is to visualize raster and vector layers in
+QGIS, configure them and generate your map in an image format you can use in
+other softwares. Let's move on to learn more about the available functionality,
+features and settings, and how to use them.
 
 .. index:: Projects
 .. _sec_projects:
@@ -326,8 +332,6 @@ Other ways to produce output files are:
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
-   :width: 1.5em
-.. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
