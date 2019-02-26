@@ -449,6 +449,8 @@ URL example:
   &FILTER=mylayer1:"OBJECTID" = 3;mylayer2,mylayer3:'text' = 'blabla'
   &...
 
+  In this example, the same filter (field ``text`` equals to ``blabla`` string) is applied to layer ``mylayer2`` and ``mylayer3``, while the filter on ``OBJECTID`` is only applied to ``mylayer1``.
+  
 .. note::
 
   It is possible to make attribute searches via GetFeatureInfo and omit
