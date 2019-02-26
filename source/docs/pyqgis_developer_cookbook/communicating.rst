@@ -40,7 +40,7 @@ You can set a duration to show it for a limited time
 
 .. code-block:: python
 
-    iface.messageBar().pushMessage("Notice", "Ooops, the plugin is not working as it should", level=Qgis.Critical, duration=3)
+    iface.messageBar().pushMessage("Ooops", "The plugin is not working as it should", level=Qgis.Critical, duration=3)
 
 
 .. figure:: img/errorbar-timed.png
