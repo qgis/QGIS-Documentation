@@ -137,8 +137,8 @@ Geometry Predicates and Operations
 ==================================
 
 QGIS uses the GEOS library for advanced geometry operations such as geometry
-predicates (:func:`contains`, :func:`intersects`, …) and set operations
-(:func:`union`, :func:`difference`, …). It can also compute geometric
+predicates (:func:`contains`, :func:`intersects`…) and set operations
+(:func:`union`, :func:`difference`…). It can also compute geometric
 properties of geometries, such as area (in the case of polygons) or lengths
 (for polygons and lines)
 
@@ -173,9 +173,9 @@ done on the ellipsoid.
     print("Area:", d.measureArea(geom))
     print("Perimeter:", d.measurePerimeter(geom))
 
-    # convert to "better" units
-    features = layer.getFeatures()
-    for f in features:
+  # convert to "better" units
+  features = layer.getFeatures()
+  for f in features:
       geom = f.geometry()
       print("Area:", d.convertAreaMeasurement(d.measureArea(geom),QgsUnitTypes.AreaSquareKilometers))
 
