@@ -66,7 +66,7 @@ transparent.
 #. Hide all the layers except the :guilabel:`srtm_41_19` and :guilabel:`hillshade`
    layers
 #. Click and drag the :guilabel:`srtm_41_19` to be beneath the :guilabel:`hillshade`
-   layer in the :guilabel:`Layer Styling` panel
+   layer in the :guilabel:`Layers` panel
 #. Set the :guilabel:`hillshade` layer to be transparent by clicking on the
    :guilabel:`Transparency` tab in the layer properties
 #. Set the :guilabel:`Global opacity` to ``50%``.
@@ -100,7 +100,7 @@ To do this, you need to use the :menuselection:`Slope` algorithm of the
 
 #. Open the algorithm
 #. Choose :guilabel:`srtm_41_19` as the :guilabel:`Elevation layer`
-#. Save the output as a file with the name ``slope`` in the same folder of the
+#. Save the output as a file with the name ``slope`` in the same folder as the
    ``hillshade``
 #. Click on :guilabel:`Run`
 
@@ -146,10 +146,10 @@ The answer lies with the :guilabel:`Raster calculator`.
 
 QGIS has different raster calculators available:
 
-#. :menuselection:`Raster --> Raster Calculator`
-#. :menuselection:`Processing --> Raster Analysis --> Raster calculator`
-#. :menuselection:`Processing --> GDAL --> Raster miscellaneous --> Raster calculator`
-#. :menuselection:`SAGA --> Raster calculus --> Raster calculator`
+* :menuselection:`Raster --> Raster Calculator`
+* :menuselection:`Processing --> Raster Analysis --> Raster calculator`
+* :menuselection:`Processing --> GDAL --> Raster miscellaneous --> Raster calculator`
+* :menuselection:`SAGA --> Raster calculus --> Raster calculator`
 
 Each tool is leading to the same results, but the syntax may be slightly
 different and the availability of operators may vary.
@@ -242,7 +242,7 @@ To calculate the areas that satisfy these criteria:
 #. Use the :guilabel:`Layer` panel, the :guilabel:`Operators` buttons, and
    your keyboard to build this expression in the :guilabel:`Expressions` text area::
 
-    ( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1
+    ( aspect_north@1 = 1 AND slope_lte5@1 = 1 ) OR slope_lte2@1 = 1
 
 #. Set the :guilabel:`Reference layer(s)` parameter as the ``aspect_north`` (it does not
    matter if you choose another one given that all the layers have been calculated
@@ -270,7 +270,7 @@ get rid of all these tiny unusable areas.
 #. Set the :guilabel:`Input file` to :guilabel:`all_conditions`, and the
    :guilabel:`Sieved` to :file:`all_conditions_sieve.tif` (under
    :file:`exercise_data/raster_analysis/`).
-#. Set both the :guilabel:`Threshold` to 8 and check :guilabel:`Use 8-connectedness`;
+#. Set both the :guilabel:`Threshold` to 8 and check :guilabel:`Use 8-connectedness`.
 
    .. image:: img/raster_seive_dialog.png
       :align: center
@@ -403,7 +403,7 @@ the |identify| button to extract this information.
       :align: center
 
 #. You can change the output of the :guilabel:`Identify Results` panel from the
-   current ``tree`` mode to a ``table`` one by selecting :guilabel:``Table`` in
+   current ``tree`` mode to a ``table`` one by selecting :guilabel:`Table` in
    the :guilabel:`View` menu at the bottom of the panel:
 
    .. image:: img/identify_raster_table.png
