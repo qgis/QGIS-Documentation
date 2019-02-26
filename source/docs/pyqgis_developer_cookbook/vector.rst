@@ -1059,7 +1059,7 @@ coordinates.
 
 For polylines and polygons the only difference would be in the rendering
 method: you would use :func:`renderPolyline` which receives a list of lines,
-while :func:`renderPolygon` which receives list of points on outer ring as a
+while :func:`renderPolygon` which receives a list of the points on the outer ring as a
 first parameter and a list of inner rings (or None) as a second parameter.
 
 Usually it is convenient to add a GUI for setting attributes of the symbol
