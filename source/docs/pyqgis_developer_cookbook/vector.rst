@@ -547,7 +547,7 @@ There are two possibilities how to export a vector layer:
     if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "utf-8",  driverName="GeoJSON")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8",  driverName="GeoJSON")
     if error[0] == QgsVectorFileWriter.NoError:
         print("success again!")
 
