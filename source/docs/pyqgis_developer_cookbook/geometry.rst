@@ -36,7 +36,7 @@ relationships are available in the `OGC Simple Feature Access Standards
 Geometry Construction
 =====================
 
-PyQgis provides several options for creating a geometry:
+PyQGIS provides several options for creating a geometry:
 
 * from coordinates
 
