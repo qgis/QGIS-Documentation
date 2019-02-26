@@ -8,8 +8,6 @@
 Communicating with the user
 ***************************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -42,7 +40,7 @@ You can set a duration to show it for a limited time
 
 .. code-block:: python
 
-    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=Qgis.Critical, duration=3)
+    iface.messageBar().pushMessage("Notice", "Ooops, the plugin is not working as it should", level=Qgis.Critical, duration=3)
 
 
 .. figure:: img/errorbar-timed.png
@@ -104,7 +102,6 @@ message box, or if it doesn't make sense to show it in the main QGIS window
             self.buttonbox.accepted.connect(self.run)
             self.layout().addWidget(self.buttonbox, 0, 0, 2, 1)
             self.layout().addWidget(self.bar, 0, 0, 1, 1)
-
         def run(self):
             self.bar.pushMessage("Hello", "World", level=Qgis.Info)
 
@@ -135,9 +132,11 @@ it accepts widgets. Here is an example that you can try in the console.
     progress.setAlignment(Qt.AlignLeft|Qt.AlignVCenter)
     progressMessageBar.layout().addWidget(progress)
     iface.messageBar().pushWidget(progressMessageBar, Qgis.Info)
+
     for i in range(10):
         time.sleep(1)
         progress.setValue(i + 1)
+
     iface.messageBar().clearWidgets()
 
 Also, you can use the built-in status bar to report progress, as in the next
@@ -145,7 +144,7 @@ example
 
 .. code-block:: python
 
-    count = layers.featureCount()
+    count = layer.featureCount()
     for i, feature in enumerate(features):
         #do something time-consuming here
         ...
