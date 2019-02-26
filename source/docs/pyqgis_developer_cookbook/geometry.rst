@@ -179,7 +179,17 @@ done on the ellipsoid.
       geom = f.geometry()
       print("Area:", d.convertAreaMeasurement(d.measureArea(geom),QgsUnitTypes.AreaSquareKilometers))
 
-  print("distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11)))
+Alternatively, you may want to know the distance and bearing between two points:
+
+.. code-block:: python
+
+  d = QgsDistanceArea()
+  d.setEllipsoid('WGS84')
+  print("distance in meters: ", 
+    d.measureLine(QgsPointXY(10,10),QgsPointXY(11,11)))
+  print("angle in degrees: ", 
+    math.degrees(d.bearing(QgsPointXY(10,10),QgsPointXY(11,11))))
+
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
