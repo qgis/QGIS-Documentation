@@ -36,7 +36,7 @@ relationships are available in the `OGC Simple Feature Access Standards
 Geometry Construction
 =====================
 
-There are several options for creating a geometry:
+PyQgis provides several options for creating a geometry:
 
 * from coordinates
 
@@ -131,16 +131,14 @@ vector type. How to use accessors
 For multipart geometries there are similar accessor functions:
 :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`.
 
-.. warning:: |outofdate|
-
 .. index:: Geometry; Predicates and operations
 
 Geometry Predicates and Operations
 ==================================
 
-QGIS uses GEOS library for advanced geometry operations such as geometry
-predicates (:func:`contains`, :func:`intersects`, ...) and set operations
-(:func:`union`, :func:`difference`, ...). It can also compute geometric
+QGIS uses the GEOS library for advanced geometry operations such as geometry
+predicates (:func:`contains`, :func:`intersects`, …) and set operations
+(:func:`union`, :func:`difference`, …). It can also compute geometric
 properties of geometries, such as area (in the case of polygons) or lengths
 (for polygons and lines)
 
@@ -167,7 +165,19 @@ done on the ellipsoid.
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
-  d.setEllipsoidalMode(True)
+
+  # we assume that 'layer' is a polygon layer
+  features = layer.getFeatures()
+  for f in features:
+    geom = f.geometry()
+    print("Area:", d.measureArea(geom))
+    print("Perimeter:", d.measurePerimeter(geom))
+
+    # convert to "better" units
+    features = layer.getFeatures()
+    for f in features:
+      geom = f.geometry()
+      print("Area:", d.convertAreaMeasurement(d.measureArea(geom),QgsUnitTypes.AreaSquareKilometers))
 
   print("distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11)))
 
@@ -177,9 +187,9 @@ of a few of them.
 
 Additional information can be found in following sources:
 
-* Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/ReprojectLayer.py>`_
-* Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/PointDistance.py>`_
-* `Multi-part to single-part algorithm <https://raw.github.com/qgis/QGIS/release-2_18/python/plugins/processing/algs/qgis/MultipartToSingleparts.py>`_
+* Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.githubusercontent.com/qgis/QGIS/release-3_4/python/plugins/processing/algs/qgis/PointDistance.py>`_
+* `Find Projection
+  <https://github.com/qgis/QGIS/blob/release-3_4/python/plugins/processing/algs/qgis/FindProjection.py>`_
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
