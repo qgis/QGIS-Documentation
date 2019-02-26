@@ -533,7 +533,7 @@ Writing Vector Layers
 =====================
 
 You can write vector layer files using :class:`QgsVectorFileWriter` class. It
-supports any other kind of vector file that OGR supports (GeoPackage, Shapefile, GeoJSON,
+supports any other kind of vector format that OGR supports (GeoPackage, Shapefile, GeoJSON,
 KML and others).
 
 There are two possibilities how to export a vector layer:
@@ -547,7 +547,7 @@ There are two possibilities how to export a vector layer:
     if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8",  driverName="GeoJSON")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8", driverName="GeoJSON")
     if error[0] == QgsVectorFileWriter.NoError:
         print("success again!")
 
