@@ -173,7 +173,7 @@ done on the ellipsoid.
     print("Area:", d.measureArea(geom))
     print("Perimeter:", d.measurePerimeter(geom))
 
-    # convert to "better" units
+  # convert to "better" units
     features = layer.getFeatures()
     for f in features:
       geom = f.geometry()
