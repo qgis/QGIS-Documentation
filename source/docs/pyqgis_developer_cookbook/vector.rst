@@ -584,7 +584,7 @@ There are two possibilities how to export a vector layer:
     5. layer's spatial reference (instance of
        QgsCoordinateReferenceSystem) - optional
     6. driver name for the output file """
-    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
+    writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
         print("Error when creating shapefile: ",  w.errorMessage())
