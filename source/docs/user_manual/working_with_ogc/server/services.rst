@@ -445,8 +445,8 @@ URL example:
   http://localhost/qgis_server?
   SERVICE=WMS
   &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2
-  &FILTER=mylayer1:"OBJECTID" = 3;mylayer2:'text' = 'blabla'
+  &LAYERS=mylayer1,mylayer2,mylayer3
+  &FILTER=mylayer1:"OBJECTID" = 3;mylayer2,mylayer3:'text' = 'blabla'
   &...
 
 .. note::
