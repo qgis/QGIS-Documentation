@@ -51,7 +51,6 @@ a :class:`QgsVectorLayer` object.
      # show some information about the feature geometry
      geom = feature.geometry()
      geomSingleType = QgsWkbTypes.isSingleType(geom.wkbType())
-
      if geom.type() == QgsWkbTypes.PointGeometry:
          # the geometry type can be of single or multi type
          if geomSingleType:
@@ -60,7 +59,6 @@ a :class:`QgsVectorLayer` object.
          else:
              x = geom.asMultiPoint()
              print("MultiPoint: ", x)
-
      elif geom.type() == QgsWkbTypes.LineGeometry:
          if geomSingleType:
              x = geom.asPolyline()
@@ -68,7 +66,6 @@ a :class:`QgsVectorLayer` object.
          else:
              x = geom.asMultiPolyline()
              print("MultiLine: ", x, "length: ", geom.length())
-
      elif geom.type() == QgsWkbTypes.PolygonGeometry:
          if geomSingleType:
              x = geom.asPolygon()
@@ -78,10 +75,8 @@ a :class:`QgsVectorLayer` object.
              print("MultiPolygon: ", x, "Area: ", geom.area())
      else:
          print("Unknown or invalid geometry")
-
      # fetch attributes
      attrs = feature.attributes()
-
      # attrs is a list. It contains all the attribute values of this feature
      print(attrs)
 
@@ -245,7 +240,6 @@ iterator returns all features, but returns partial data for each of them.
   # The options may be chained
   request.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])
 
-.. warning:: |outofdate|
 
 .. index:: Vector layers; Editing
 .. _editing:
@@ -261,7 +255,7 @@ to find out what set of functionality is supported
 
   caps = layer.dataProvider().capabilities()
   # Check if a particular capability is supported:
-  if caps & layer.dataProvider().DeleteFeatures:
+  if caps & QgsVectorDataProvider.DeleteFeatures:
       print('The layer supports DeleteFeatures')
 
 For a list of all available capabilities, please refer to the
@@ -527,7 +521,7 @@ create them easily. This is what you have to do:
   .. code-block:: python
 
     # returns array of feature IDs of five nearest features
-    nearest = index.nearestNeighbor(QgsPoint(25.4, 12.7), 5)
+    nearest = index.nearestNeighbor(QgsPointXY(25.4, 12.7), 5)
 
     # returns array of IDs of features which intersect the rectangle
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
@@ -539,7 +533,7 @@ Writing Vector Layers
 =====================
 
 You can write vector layer files using :class:`QgsVectorFileWriter` class. It
-supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,
+supports any other kind of vector file that OGR supports (GeoPackage, Shapefile, GeoJSON,
 KML and others).
 
 There are two possibilities how to export a vector layer:
@@ -548,19 +542,19 @@ There are two possibilities how to export a vector layer:
 
   .. code-block:: python
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
 
-    if error == QgsVectorFileWriter.NoError:
+    if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", "utf-8", None, "GeoJSON")
-    if error == QgsVectorFileWriter.NoError:
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8",  driverName="GeoJSON")
+    if error[0] == QgsVectorFileWriter.NoError:
         print("success again!")
 
   The third parameter specifies output text encoding. Only some drivers need this
   for correct operation - Shapefile is one of those --- however in case you
   are not using international characters you do not have to care much about
-  the encoding. The fourth parameter that we left as ``None`` may specify
+  the encoding. The fourth parameter that we left out may specify a
   destination CRS --- if a valid instance of :class:`QgsCoordinateReferenceSystem`
   is passed, the layer is transformed to that CRS.
 
@@ -590,14 +584,14 @@ There are two possibilities how to export a vector layer:
     5. layer's spatial reference (instance of
        QgsCoordinateReferenceSystem) - optional
     6. driver name for the output file """
-    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
+    writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
         print("Error when creating shapefile: ",  w.errorMessage())
 
     # add a feature
     fet = QgsFeature()
-    fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(10,10)))
+    fet.setGeometry(QgsPoint(10,10))
     fet.setAttributes([1, "text"])
     writer.addFeature(fet)
 
@@ -981,10 +975,10 @@ given symbol layer class like this
 
 .. code-block:: python
 
-  from qgis.core import QgsSymbolLayerV2Registry
-  myRegistry = QgsSymbolLayerV2Registry.instance()
+  from qgis.core import QgsSymbolLayerRegistry
+  myRegistry = QgsApplication.symbolLayerRegistry()
   myMetadata = myRegistry.symbolLayerMetadata("SimpleFill")
-  for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker):
+  for item in myRegistry.symbolLayersForType(QgsSymbol.Marker):
       print(item)
 
 Output
@@ -992,12 +986,14 @@ Output
 ::
 
   EllipseMarker
+  FilledMarker
   FontMarker
+  GeometryGenerator
   SimpleMarker
   SvgMarker
   VectorField
 
-:class:`QgsSymbolLayerV2Registry` class manages a database of all available
+:class:`QgsSymbolLayerRegistry` class manages a database of all available
 symbol layer types.
 
 To access symbol layer data, use its :func:`properties` method that returns a
@@ -1019,10 +1015,13 @@ radius
 
 .. code-block:: python
 
-  class FooSymbolLayer(QgsMarkerSymbolLayerV2):
+  from qgis.core import QgsMarkerSymbolLayer
+  from qgis.PyQt.QtGui import QColor
+
+  class FooSymbolLayer(QgsMarkerSymbolLayer):
 
     def __init__(self, radius=4.0):
-        QgsMarkerSymbolLayerV2.__init__(self)
+        QgsMarkerSymbolLayer.__init__(self)
         self.radius = radius
         self.color = QColor(255,0,0)
 
@@ -1051,7 +1050,7 @@ radius
 
 The :func:`layerType` method determines the name of the symbol layer, it has
 to be unique among all symbol layers. Properties are used for persistence of
-attributes. :func:`clone` method must return a copy of the symbol layer with
+attributes. The :func:`clone` method must return a copy of the symbol layer with
 all attributes being exactly the same. Finally there are rendering methods:
 :func:`startRender` is called before rendering first feature, :func:`stopRender`
 when rendering is done. And :func:`renderPoint` method which does the rendering.
@@ -1060,7 +1059,7 @@ coordinates.
 
 For polylines and polygons the only difference would be in the rendering
 method: you would use :func:`renderPolyline` which receives a list of lines,
-resp. :func:`renderPolygon` which receives list of points on outer ring as a
+while :func:`renderPolygon` which receives list of points on outer ring as a
 first parameter and a list of inner rings (or None) as a second parameter.
 
 Usually it is convenient to add a GUI for setting attributes of the symbol
@@ -1070,9 +1069,11 @@ widget
 
 .. code-block:: python
 
-    class FooSymbolLayerWidget(QgsSymbolLayerV2Widget):
+    from qgis.gui import QgsSymbolLayerWidget
+
+    class FooSymbolLayerWidget(QgsSymbolLayerWidget):
         def __init__(self, parent=None):
-            QgsSymbolLayerV2Widget.__init__(self, parent)
+            QgsSymbolLayerWidget.__init__(self, parent)
 
             self.layer = None
 
@@ -1120,19 +1121,21 @@ We will have to create metadata for the symbol layer
 
 .. code-block:: python
 
-  class FooSymbolLayerMetadata(QgsSymbolLayerV2AbstractMetadata):
+    from qgis.core import QgsSymbol, QgsSymbolLayerAbstractMetadata, QgsSymbolLayerRegistry
 
-    def __init__(self):
-      QgsSymbolLayerV2AbstractMetadata.__init__(self, "FooMarker", QgsSymbolV2.Marker)
+    class FooSymbolLayerMetadata(QgsSymbolLayerAbstractMetadata):
 
-    def createSymbolLayer(self, props):
-      radius = float(props[QString("radius")]) if QString("radius") in props else 4.0
-      return FooSymbolLayer(radius)
+        def __init__(self):
+          QgsSymbolLayerAbstractMetadata.__init__(self, "FooMarker","Foo Marker", QgsSymbol.Marker)
 
-    def createSymbolLayerWidget(self):
-      return FooSymbolLayerWidget()
+        def createSymbolLayer(self, props):
+          radius = float(props["radius"]) if "radius" in props else 4.0
+          return FooSymbolLayer(radius)
 
-  QgsSymbolLayerV2Registry.instance().addSymbolLayerType(FooSymbolLayerMetadata())
+        def createSymbolLayerWidget(self):
+          return FooSymbolLayerWidget()
+
+    QgsSymbolLayerRegistry().addSymbolLayerType(FooSymbolLayerMetadata())
 
 You should pass layer type (the same as returned by the layer) and symbol type
 (marker/line/fill) to the constructor of parent class. :func:`createSymbolLayer`
@@ -1159,54 +1162,83 @@ symbols and chooses randomly one of them for every feature
 
 .. code-block:: python
 
-  import random
+    import random
+    from qgis.core import QgsWkbTypes, QgsSymbol, QgsFeatureRenderer
 
-  class RandomRenderer(QgsFeatureRendererV2):
-    def __init__(self, syms=None):
-      QgsFeatureRendererV2.__init__(self, "RandomRenderer")
-      self.syms = syms if syms else [QgsSymbolV2.defaultSymbol(QGis.Point), QgsSymbolV2.defaultSymbol(QGis.Point)]
 
-    def symbolForFeature(self, feature):
-      return random.choice(self.syms)
+    class RandomRenderer(QgsFeatureRenderer):
+      def __init__(self, syms=None):
+        QgsFeatureRenderer.__init__(self, "RandomRenderer")
+        self.syms = syms if syms else [QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point))]
 
-    def startRender(self, context, vlayer):
-      for s in self.syms:
-        s.startRender(context)
+      def symbolForFeature(self, feature):
+        return random.choice(self.syms)
 
-    def stopRender(self, context):
-      for s in self.syms:
-        s.stopRender(context)
+      def startRender(self, context, vlayer):
+        for s in self.syms:
+          s.startRender(context)
 
-    def usedAttributes(self):
-      return []
+      def stopRender(self, context):
+        for s in self.syms:
+          s.stopRender(context)
 
-    def clone(self):
-      return RandomRenderer(self.syms)
+      def usedAttributes(self):
+        return []
 
-The constructor of parent :class:`QgsFeatureRendererV2` class needs renderer
-name (has to be unique among renderers). :func:`symbolForFeature` method is
+      def clone(self):
+        return RandomRenderer(self.syms)
+
+    from qgis.gui import QgsRendererWidget
+    class RandomRendererWidget(QgsRendererWidget):
+      def __init__(self, layer, style, renderer):
+        QgsRendererWidget.__init__(self, layer, style)
+        if renderer is None or renderer.type() != "RandomRenderer":
+          self.r = RandomRenderer()
+        else:
+          self.r = renderer
+        # setup UI
+        self.btn1 = QgsColorButton()
+        self.btn1.setColor(self.r.syms[0].color())
+        self.vbox = QVBoxLayout()
+        self.vbox.addWidget(self.btn1)
+        self.setLayout(self.vbox)
+        self.btn1.clicked.connect(self.setColor1)
+
+      def setColor1(self):
+        color = QColorDialog.getColor(self.r.syms[0].color(), self)
+        if not color.isValid(): return
+        self.r.syms[0].setColor(color)
+        self.btn1.setColor(self.r.syms[0].color())
+
+      def renderer(self):
+        return self.r
+
+The constructor of parent :class:`QgsFeatureRenderer` class needs a renderer
+name (which has to be unique among renderers). The :func:`symbolForFeature` method is
 the one that decides what symbol will be used for a particular feature.
 :func:`startRender` and :func:`stopRender` take care of initialization/finalization
-of symbol rendering. :func:`usedAttributes` method can return a list of field
-names that renderer expects to be present. Finally :func:`clone` function
+of symbol rendering. The :func:`usedAttributes` method can return a list of field
+names that renderer expects to be present. Finally, the :func:`clone` function
 should return a copy of the renderer.
 
 Like with symbol layers, it is possible to attach a GUI for configuration of
-the renderer. It has to be derived from :class:`QgsRendererV2Widget`. The
+the renderer. It has to be derived from :class:`QgsRendererWidget`. The
 following sample code creates a button that allows user to set symbol of the
 first symbol
 
 .. code-block:: python
 
-  class RandomRendererWidget(QgsRendererV2Widget):
+  from qgis.gui import QgsRendererWidget, QgsColorButton
+
+  class RandomRendererWidget(QgsRendererWidget):
     def __init__(self, layer, style, renderer):
-      QgsRendererV2Widget.__init__(self, layer, style)
+      QgsRendererWidget.__init__(self, layer, style)
       if renderer is None or renderer.type() != "RandomRenderer":
         self.r = RandomRenderer()
       else:
         self.r = renderer
       # setup UI
-      self.btn1 = QgsColorButtonV2()
+      self.btn1 = QgsColorButton()
       self.btn1.setColor(self.r.syms[0].color())
       self.vbox = QVBoxLayout()
       self.vbox.addWidget(self.btn1)
@@ -1222,8 +1254,9 @@ first symbol
     def renderer(self):
       return self.r
 
+
 The constructor receives instances of the active layer (:class:`QgsVectorLayer`),
-the global style (:class:`QgsStyleV2`) and current renderer. If there is no
+the global style (:class:`QgsStyle`) and current renderer. If there is no
 renderer or the renderer has different type, it will be replaced with our new
 renderer, otherwise we will use the current renderer (which has already the
 type we need). The widget contents should be updated to show current state of
@@ -1238,16 +1271,18 @@ RandomRenderer example
 
 .. code-block:: python
 
-  class RandomRendererMetadata(QgsRendererV2AbstractMetadata):
+  from qgis.core import QgsRendererAbstractMetadata,QgsRendererRegistry,QgsApplication
+
+  class RandomRendererMetadata(QgsRendererAbstractMetadata):
     def __init__(self):
-      QgsRendererV2AbstractMetadata.__init__(self, "RandomRenderer", "Random renderer")
+      QgsRendererAbstractMetadata.__init__(self, "RandomRenderer", "Random renderer")
 
     def createRenderer(self, element):
       return RandomRenderer()
     def createRendererWidget(self, layer, style, renderer):
       return RandomRendererWidget(layer, style, renderer)
 
-  QgsRendererV2Registry.instance().addRenderer(RandomRendererMetadata())
+  QgsApplication.rendererRegistry().addRenderer(RandomRendererMetadata())
 
 Similarly as with symbol layers, abstract metadata constructor awaits renderer
 name, name visible for users and optionally name of renderer's icon.
@@ -1257,13 +1292,13 @@ method creates the configuration widget. It does not have to be present or can
 return `None` if the renderer does not come with GUI.
 
 To associate an icon with the renderer you can assign it in
-:class:`QgsRendererV2AbstractMetadata` constructor as a third (optional)
+:class:`QgsRendererAbstractMetadata` constructor as a third (optional)
 argument --- the base class constructor in the RandomRendererMetadata :func:`__init__`
 function becomes
 
 .. code-block:: python
 
-  QgsRendererV2AbstractMetadata.__init__(self,
+  QgsRendererAbstractMetadata.__init__(self,
          "RandomRenderer",
          "Random renderer",
          QIcon(QPixmap("RandomRendererIcon.png", "png")))
@@ -1272,6 +1307,8 @@ The icon can be associated also at any later time using :func:`setIcon` method
 of the metadata class. The icon can be loaded from a file (as shown above) or
 can be loaded from a `Qt resource <https://doc.qt.io/qt-5/resources.html>`_
 (PyQt5 includes .qrc compiler for Python).
+
+.. warning:: |outofdate|
 
 Further Topics
 ==============

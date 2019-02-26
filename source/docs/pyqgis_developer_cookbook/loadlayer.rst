@@ -8,8 +8,6 @@
 Loading Layers
 **************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
