@@ -443,7 +443,7 @@ The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). In the
 contextual menu of the layer, from the :guilabel:`Layers` panel, click on
 :menuselection:`Export --> Save selected features as...` to define the name of
-the output file, its format and CRS (see section :ref:`general_saveas`). You'll
+the output dataset, its format and CRS (see section :ref:`general_saveas`). You'll
 notice that |checkbox| :menuselection:`Save only selected features` is checked.
 It is also possible to specify OGR creation options within the dialog.
 
