@@ -134,6 +134,8 @@ Every time QGIS starts, the user's Python home directory
 is searched for a file named :file:`startup.py`. If that file exists, it
 is executed by the embedded Python interpreter.
 
+.. note:: The default path can differ on each system. To find out, which path will work for you, open Python Console and run `QStandardPaths.standardLocations( QStandardPaths.AppDataLocation )` to see list of default Python directories.
+
 .. index::
   pair: Environment; PYQGIS_STARTUP
 
