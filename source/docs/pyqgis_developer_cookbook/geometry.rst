@@ -55,7 +55,7 @@ PyQGIS provides several options for creating a geometry:
   
   A Polygon is
   represented by a list of linear rings (i.e. closed linestrings). The first ring
-  is outer ring (boundary), optional subsequent rings are holes in the polygon.
+  is the outer ring (boundary), optional subsequent rings are holes in the polygon.
   Note that unlike some programs, QGIS will close the ring for you so there is
   no need to duplicate the first point as the last.
 
