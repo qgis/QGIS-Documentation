@@ -570,7 +570,7 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 
 .. code-block:: python
 
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8", driverName="ESRI Shapefile")
   if error[0] == QgsVectorFileWriter.NoError:
       print("success!")
 
