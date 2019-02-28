@@ -177,7 +177,7 @@ done on the ellipsoid.
   features = layer.getFeatures()
   for f in features:
       geom = f.geometry()
-      print("Area:", d.convertAreaMeasurement(d.measureArea(geom),QgsUnitTypes.AreaSquareKilometers))
+      print("Area:", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
 Alternatively, you may want to know the distance and bearing between two points:
 
