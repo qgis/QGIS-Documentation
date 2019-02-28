@@ -199,7 +199,7 @@ Additional information can be found in following sources:
 
 * Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.githubusercontent.com/qgis/QGIS/release-3_4/python/plugins/processing/algs/qgis/PointDistance.py>`_
 * `Find Projection
-  <https://github.com/qgis/QGIS/blob/release-3_4/python/plugins/processing/algs/qgis/FindProjection.py>`_
+  <https://raw.githubusercontent.com/qgis/QGIS/release-3_4/python/plugins/processing/algs/qgis/FindProjection.py>`_
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
