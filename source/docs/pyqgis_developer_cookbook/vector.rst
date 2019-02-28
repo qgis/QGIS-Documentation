@@ -533,7 +533,7 @@ Writing Vector Layers
 =====================
 
 You can write vector layer files using :class:`QgsVectorFileWriter` class. It
-supports any other kind of vector file that OGR supports (GeoPackage, Shapefile, GeoJSON,
+supports any other kind of vector format that OGR supports (GeoPackage, Shapefile, GeoJSON,
 KML and others).
 
 There are two possibilities how to export a vector layer:
@@ -547,7 +547,7 @@ There are two possibilities how to export a vector layer:
     if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8",  driverName="GeoJSON")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8", driverName="GeoJSON")
     if error[0] == QgsVectorFileWriter.NoError:
         print("success again!")
 
@@ -1059,7 +1059,7 @@ coordinates.
 
 For polylines and polygons the only difference would be in the rendering
 method: you would use :func:`renderPolyline` which receives a list of lines,
-while :func:`renderPolygon` which receives list of points on outer ring as a
+while :func:`renderPolygon` which receives a list of the points on the outer ring as a
 first parameter and a list of inner rings (or None) as a second parameter.
 
 Usually it is convenient to add a GUI for setting attributes of the symbol
