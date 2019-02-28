@@ -112,7 +112,9 @@ To select using an expression, use the :meth:`selectByExpression() <qgis.core.Qg
  layer = iface.activeLayer()
  layer.selectByExpression('"Class"=\'B52\' and "Heading" > 10 and "Heading" <70', QgsVectorLayer.SetSelection)
 
-To change the selection color you can use :meth:`setSelectionColor() <qgis.gui.QgsMapCanvas.setSelectionColor>` method of :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` as shown in the following example:
+To change the selection color you can use :meth:`setSelectionColor()
+<qgis.gui.QgsMapCanvas.setSelectionColor>` method of
+:class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` as shown in the following example:
 
 .. code-block:: python
 
@@ -159,8 +161,8 @@ For example, to get the first attribute:
 Iterating over selected features
 --------------------------------
 
-If you only need selected features, you can use the :meth:`selectedFeatures() <qgis.core.QgsVectorLayer.selectedFeatures>`
-method from the vector layer:
+If you only need selected features, you can use the :meth:`selectedFeatures()
+<qgis.core.QgsVectorLayer.selectedFeatures>` method from the vector layer:
 
 .. code-block:: python
 
@@ -205,8 +207,9 @@ Here's an example:
       # loop through only 2 features
 
 If you need an attribute-based filter instead (or in addition) of a spatial
-one like shown in the examples above, you can build a :class:`QgsExpression <qgis.core.QgsExpression>` object and pass it to the :class:`QgsFeatureRequest <qgis.core.QgsFeatureRequest>` constructor.
-Here's an example:
+one like shown in the examples above, you can build a :class:`QgsExpression
+<qgis.core.QgsExpression>` object and pass it to the :class:`QgsFeatureRequest
+<qgis.core.QgsFeatureRequest>` constructor. Here's an example:
 
 .. code-block:: python
 
@@ -258,7 +261,7 @@ to find out what set of functionality is supported
 
 For a list of all available capabilities, please refer to the
 :class:`API Documentation of QgsVectorDataProvider
-<qgis.core.QgsVectorDataProvider>`
+<qgis.core.QgsVectorDataProvider>`.
 
 To print layer's capabilities textual description in a comma separated list you
 can use :meth:`capabilitiesString() <qgis.core.QgsVectorDataProvider.addFeatures>` as in the following example:
@@ -302,7 +305,10 @@ Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list
 list of added features (their ID is set by the data store).
 
 To set up the attributes of the feature, you can either initialize the feature passing a
-:class:`QgsFields <qgis.core.QgsFields>` object (you can obtain that from the :meth:`fields() <qgis.core.QgsVectorLayer.fields>` method of the vector layer) or call :meth:`initAttributes() <qgis.core.QgsFeature.initAttributes>` passing the number of fields you want to be added.
+:class:`QgsFields <qgis.core.QgsFields>` object (you can obtain that from the
+:meth:`fields() <qgis.core.QgsVectorLayer.fields>` method of the vector layer)
+or call :meth:`initAttributes() <qgis.core.QgsFeature.initAttributes>` passing
+the number of fields you want to be added.
 
 .. code-block:: python
 
@@ -379,7 +385,8 @@ or :meth:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` methods.
 The first one will commit all your changes to the data source, while the second
 one will discard them and will not modify the data source at all.
 
-To find out whether a layer is in editing mode, use the :meth:`isEditable() <qgis.core.QgsVectorLayer.isEditable>` method.
+To find out whether a layer is in editing mode, use the :meth:`isEditable()
+<qgis.core.QgsVectorLayer.isEditable>` method.
 
 Here you have some examples that demonstrate how to use these editing methods.
 
@@ -541,75 +548,76 @@ You can write vector layer files using the :class:`QgsVectorFileWriter <qgis.cor
 supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,r
 KML and others).
 
-There are two possibilities to export a vector layer:
+There are different possibilities how to export a vector layer.
 
-* from an instance of :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`
+From an instance of :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`
+----------------------------------------------------------------------
 
-  .. code-block:: python
+.. code-block:: python
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
-    if error[0] == QgsVectorFileWriter.NoError:
-        print("success!")
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
+  if error[0] == QgsVectorFileWriter.NoError:
+      print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8", driverName="GeoJSON")
-    if error[0] == QgsVectorFileWriter.NoError:
-        print("success again!")
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8",  driverName="GeoJSON")
+  if error[0] == QgsVectorFileWriter.NoError:
+      print("success again!")
 
-  The third parameter specifies output text encoding. Only some drivers need this
-  for correct operation (Shapefile is one of those), but if you
-  are not using international characters you do not have to care much about
-  the encoding.
-  
-  The fourth parameter that we left as ``None`` may specify destination CRS ---
-  if a valid instance of :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
-  is passed, the layer is transformed to that CRS.
+The third parameter specifies output text encoding. Only some drivers need this
+for correct operation (Shapefile is one of those), but if you
+are not using international characters you do not have to care much about
+the encoding.
 
-  For valid driver names please consult the `supported formats by OGR`_ --- you
-  should pass the value in the "Code" column as the driver name. Optionally
-  you can set whether to export only selected features, pass further
-  driver-specific options for creation or tell the writer not to create
-  attributes --- look into the documentation for full syntax.
+The fourth parameter that we left as ``None`` may specify destination CRS ---
+if a valid instance of :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
+is passed, the layer is transformed to that CRS.
 
-* directly from features
+For valid driver names please consult the `supported formats by OGR`_ --- you
+should pass the value in the "Code" column as the driver name. Optionally
+you can set whether to export only selected features, pass further
+driver-specific options for creation or tell the writer not to create
+attributes --- look into the documentation for full syntax.
 
-  .. code-block:: python
+Directly from features
+----------------------
 
-    from qgis.PyQt.QtCore import QVariant
+.. code-block:: python
 
-    # define fields for feature attributes. A QgsFields object is needed
-    fields = QgsFields()
-    fields.append(QgsField("first", QVariant.Int))
-    fields.append(QgsField("second", QVariant.String))
+  from qgis.PyQt.QtCore import QVariant
 
-    """ create an instance of vector file writer, which will create the vector file.
-    Arguments:
-    1. path to new file (will fail if exists already)
-    2. encoding of the attributes
-    3. field map
-    4. geometry type - from QgsWkbTypes.Type enum
-    5. layer's spatial reference (instance of
-       QgsCoordinateReferenceSystem) - optional
-    6. driver name for the output file """
+  # define fields for feature attributes. A QgsFields object is needed
+  fields = QgsFields()
+  fields.append(QgsField("first", QVariant.Int))
+  fields.append(QgsField("second", QVariant.String))
 
-    writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
+  """ create an instance of vector file writer, which will create the vector file.
+  Arguments:
+  1. path to new file (will fail if exists already)
+  2. encoding of the attributes
+  3. field map
+  4. geometry type - from WKBTYPE enum
+  5. layer's spatial reference (instance of
+     QgsCoordinateReferenceSystem) - optional
+  6. driver name for the output file """
+  writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
 
-    if writer.hasError() != QgsVectorFileWriter.NoError:
-        print("Error when creating shapefile: ",  w.errorMessage())
+  if writer.hasError() != QgsVectorFileWriter.NoError:
+      print("Error when creating shapefile: ",  w.errorMessage())
 
-    # add a feature
-    fet = QgsFeature()
+  # add a feature
+  fet = QgsFeature()
 
-    fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
-    fet.setAttributes([1, "text"])
-    writer.addFeature(fet)
+  fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
+  fet.setAttributes([1, "text"])
+  writer.addFeature(fet)
 
-    # delete the writer to flush features to disk
-    del writer
+  # delete the writer to flush features to disk
+  del writer
 
 .. index:: Memory layer
 
-Memory Provider
-===============
+Using a Memory Provider
+-----------------------
 
 Memory provider is intended to be used mainly by plugin or 3rd party app
 developers. It does not store data on disk, allowing developers to use it as a
@@ -618,7 +626,8 @@ fast backend for some temporary layers.
 The provider supports string, int and double fields.
 
 The memory provider also supports spatial indexing, which is enabled by calling
-the provider's :meth:`createSpatialIndex() <qgis.core.QgsVectorDataProvider.createSpatialIndex>` function. Once the spatial index is
+the provider's :meth:`createSpatialIndex()
+<qgis.core.QgsVectorDataProvider.createSpatialIndex>` function. Once the spatial index is
 created you will be able to iterate over features within smaller regions faster
 (since it's not necessary to traverse all the features, only those in specified
 rectangle).
@@ -635,7 +644,8 @@ of the memory provider in the URI. The syntax is:
 
 crs=definition
     Specifies the coordinate reference system, where definition may be any
-    of the forms accepted by :meth:`QgsCoordinateReferenceSystem.createFromString <qgis.core.QgsCoordinateReferenceSystem.createFromString>`
+    of the forms accepted by :meth:`QgsCoordinateReferenceSystem.createFromString
+	<qgis.core.QgsCoordinateReferenceSystem.createFromString>`
 
 index=yes
     Specifies that the provider will use a spatial index
@@ -696,8 +706,6 @@ Finally, let's check whether everything went well
 
 Appearance (Symbology) of Vector Layers
 =======================================
-
-.. **FOR WRITERS**: This section has been updated to QGIS3, down to...
 
 When a vector layer is being rendered, the appearance of the data is given by
 **renderer** and **symbols** associated with the layer.  Symbols are classes
@@ -929,8 +937,6 @@ arrangement)
   myVectorLayer.setRenderer(myRenderer)
   QgsProject.instance().addMapLayer(myVectorLayer)
 
-
-.. **FOR WRITERS**: ...End of updated section to QGIS3
 
 .. index:: Symbols; Working with
 
