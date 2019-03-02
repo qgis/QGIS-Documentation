@@ -98,6 +98,17 @@ the cropped bounds.
 
    Image Export Options, output is resized to items extent
 
+.. tip:: **Use format like PNG when cropping to contents out of the paper extent**
+
+ As layout items may be placed out of the paper extent, using the :guilabel:`Crop
+ to content` option while exporting will result in image(s) larger than the paper.
+ Due to its transparent background, the additional area will render as full black,
+ "corrupting" the image, if exported to an image format not supporting transparency
+ (eg, :file:`.BMP`, :file:`.JPG`).
+
+ Prefer transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in such
+ case.
+
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), check the |unchecked| :guilabel:`Generate world file`
 option and a world file named like the page on which the map reference set in
@@ -156,6 +167,13 @@ into a single PDF file you'd need to provide path and name.
 Unlike the other formats, exporting to :file:`.PDF` does not provide means to
 override the layout export settings. So check :ref:`these settings
 <layout_export_settings>` to ensure they are compatible with your needs.
+
+.. _figure_layout_output_pdf:
+
+.. figure:: img/pdf_export_options.png
+   :align: center
+
+   PDF Export Options
 
 .. note:: Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF`
   creates by default a georeferenced output (no world file needed).
