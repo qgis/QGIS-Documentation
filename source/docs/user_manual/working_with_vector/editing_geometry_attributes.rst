@@ -508,7 +508,7 @@ them altogether.
    In earlier QGIS 3 versions, right click on a feature would bring up a small popup menu
    that offered display of the vertex editor. Now, right click on a feature will immediately
    show the vertex editor and lock this feature, thus disabling the editing of any other features.
-   While being locked a feature is exclusive for editing: Selecting and moving of vertices and
+   While being locked, a feature is exclusive for editing: Selecting and moving of vertices and
    segments by clicking or dragging is only possible for this feature. New vertices can only be
    added to the locked feature. Also, the vertex editor panel now opens itself automatically upon
    activating the vertex tool, and its position/docked state remembered across uses.
