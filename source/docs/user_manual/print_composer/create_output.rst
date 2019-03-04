@@ -98,16 +98,17 @@ the cropped bounds.
 
    Image Export Options, output is resized to items extent
 
-.. tip:: **Use format like PNG when cropping to contents out of the paper extent**
+.. tip:: **Use image formats that support transparency when items extend beyond the paper extent**
 
- As layout items may be placed out of the paper extent, using the :guilabel:`Crop
- to content` option while exporting will result in image(s) larger than the paper.
- Due to its transparent background, the additional area will render as full black,
- "corrupting" the image, if exported to an image format not supporting transparency
- (eg, :file:`.BMP`, :file:`.JPG`).
+ Since layout items may be placed outside the paper extent, using the :guilabel:`Crop
+ to content` option while exporting can result in an image that extends beyond the paper extent.
+ Since the background outside of the paper extent will be transparent, for image
+ formats that do not support transparency (eg, :file:`.BMP`, :file:`.JPG`) it
+ will be rendered as full black,
+ "corrupting" the image.
 
- Prefer transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in such
- case.
+ Use transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in such
+ a case.
 
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), check the |unchecked| :guilabel:`Generate world file`
