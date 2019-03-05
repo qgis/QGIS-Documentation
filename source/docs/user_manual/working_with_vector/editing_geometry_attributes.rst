@@ -241,7 +241,7 @@ and a negative value does the opposite.
 
    This tool does not add topological points to existing geometries.
    If geometry precision is activated on the edited layer, the resulting 
-   geomtry might not exactly follow an existing geometry.
+   geometry might not exactly follow an existing geometry.
 
 .. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
 
