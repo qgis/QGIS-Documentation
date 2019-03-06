@@ -446,10 +446,10 @@ URL example:
   SERVICE=WMS
   &REQUEST=GetMap
   &LAYERS=mylayer1,mylayer2,mylayer3
-  &FILTER=mylayer1:"OBJECTID" = 3;mylayer2,mylayer3:'text' = 'blabla'
+  &FILTER=mylayer1:"col1";mylayer2,mylayer3:"col2" = 'blabla'
   &...
 
-In this example, the same filter (field ``text`` equals to ``blabla`` string) is applied to layer ``mylayer2`` and ``mylayer3``, while the filter on ``OBJECTID`` is only applied to ``mylayer1``.
+In this example, the same filter (field ``col2`` equals the string ``blabla``) is applied to layers ``mylayer2`` and ``mylayer3``, while the filter on ``col1`` is only applied to ``mylayer1``.
   
 .. note::
 
