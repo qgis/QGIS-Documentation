@@ -1709,7 +1709,7 @@ cascading rules, variables can be overwritten - e.g., a project level
 variable will overwrite any application global level variables set with
 the same name. You can use these variables to build text strings or other
 custom expressions using the ``@`` character before the variable name. For
-example in print layout creating a label with this content:
+example in print layout creating a label with this content::
 
   This map was made using QGIS [% @qgis_version %]. The project file for this
   map is: [% @project_path %]
