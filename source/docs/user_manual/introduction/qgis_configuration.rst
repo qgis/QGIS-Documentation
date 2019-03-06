@@ -1431,7 +1431,7 @@ Assuming you are in the directory where the file :file:`load_alaska.py` is
 located, you can start QGIS, load the raster file :file:`landcover.img` and give
 the layer the name 'Alaska' using the following command::
 
-  ``qgis --code load_alaska.py``
+  qgis --code load_alaska.py
 
 ``--defaultui`` option
 
