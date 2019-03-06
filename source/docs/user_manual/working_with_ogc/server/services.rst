@@ -445,10 +445,12 @@ URL example:
   http://localhost/qgis_server?
   SERVICE=WMS
   &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2
-  &FILTER=mylayer1:"OBJECTID" = 3;mylayer2:'text' = 'blabla'
+  &LAYERS=mylayer1,mylayer2,mylayer3
+  &FILTER=mylayer1:"col1";mylayer1,mylayer2:"col2" = 'blabla'
   &...
 
+In this example, the same filter (field ``col2`` equals the string ``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the filter on ``col1`` is only applied to ``mylayer1``.
+  
 .. note::
 
   It is possible to make attribute searches via GetFeatureInfo and omit
