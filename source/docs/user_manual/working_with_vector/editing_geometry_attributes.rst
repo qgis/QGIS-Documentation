@@ -239,7 +239,8 @@ and a negative value does the opposite.
 
 .. note:: **Does not add topological points**
 
-   This tool does not add points to existing polygon geometries even if topological editing is enabled and a point on the new geometry falls on the bounding line of an existing polygon geometry.
+   This tool does not add points to existing polygon geometries even if :guilabel:`Topological editing`
+   is enabled and a point on the new geometry falls on a line of an existing polygon geometry.
    If geometry precision is activated on the edited layer, the resulting 
    geometry might not exactly follow an existing geometry.
 
