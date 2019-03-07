@@ -88,7 +88,7 @@ Projections
 
 You can do transformation between different spatial reference systems by using
 :class:`QgsCoordinateTransform` class. The easiest way to use it is to create
-source and destination CRS and construct `QgsCoordinateTransform <https://qgis.org/pyqgis/3.0/core/Coordinate/QgsCoordinateTransform.html?highlight=qgscoordinatetransform#qgis.core.QgsCoordinateTransform.transform`
+source and destination CRS and construct :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`
 instance with them and the current project. Then just repeatedly call
 :func:`transform() <qgis.core.QgsCoordinateTransform.transform>` function to do the transformation. By default it does forward
 transformation, but it is capable to do also inverse transformation.
