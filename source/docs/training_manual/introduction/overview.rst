@@ -161,16 +161,6 @@ Try to find each of these tools on your screen. What is their purpose?
 :ref:`Check your results <interface-overview-2>`
 
 
-.. _backlink-interface-overview-3:
-
-|basic| |TY| 3
--------------------------------------------------------------------------------
-
-Try to load some layer, both ESRI Shapefile and Geopackage, from the Browser
-panel.
-
-:ref:`Check your results <interface-overview-3>`
-
 |WN|
 -------------------------------------------------------------------------------
 

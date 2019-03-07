@@ -224,7 +224,7 @@ Menu Option                                                Shortcut             
 |zoomToSelected| :guilabel:`Zoom To Selection`             :kbd:`Ctrl+J`            :guilabel:`Map Navigation`     \
 |zoomLast| :guilabel:`Zoom Last`                           \                        :guilabel:`Map Navigation`     \
 |zoomNext| :guilabel:`Zoom Next`                           \                        :guilabel:`Map Navigation`     \
-|zoomActual| :guilabel:`Zoom To Native Resolution (100%`)  \                        :guilabel:`Map Navigation`     \
+|zoomActual| :guilabel:`Zoom To Native Resolution (100%)`  \                        :guilabel:`Map Navigation`     \
 :menuselection:`Decorations -->`                           \                        \                              :ref:`decorations`
 :menuselection:`Preview mode -->`                          \                        \                              \
 |mapTips| :guilabel:`Show Map Tips`                        \                        :guilabel:`Attributes`         :ref:`maptips`
@@ -246,7 +246,7 @@ Menu Option                                                Shortcut             
 |
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
-and :guilabel:`Toggle Full Screen Mode` is in the :menuselection:`Settings`
+and :guilabel:`Toggle Full Screen Mode` are in the :menuselection:`Settings`
 menu.
 
 Layer
@@ -302,16 +302,16 @@ Menu Option                                                   Shortcut          
 Settings
 --------
 
-=================================================================  ====================  ====================  ===================================
-Menu Option                                                        Shortcut              Toolbar               Reference
-=================================================================  ====================  ====================  ===================================
-:menuselection:`User Profiles -->`                                 \                     \                     \
-|styleManager| :guilabel:`Style Manager...`                        \                     \                     :ref:`vector_style_manager`
-|customProjection| :guilabel:`Custom Projections...`               \                     \                     :ref:`sec_custom_projections`
-|keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              \                     \                     :ref:`shortcuts`
-|interfaceCustomization| :guilabel:`Interface Customization...`    \                     \                     :ref:`sec_customization`
-|options| :guilabel:`Options...`                                   \                     \                     :ref:`gui_options`
-=================================================================  ====================  ====================  ===================================
+=================================================================  ===================================
+Menu Option                                                        Reference
+=================================================================  ===================================
+:menuselection:`User Profiles -->`                                 :ref:`user_profiles`
+|styleManager| :guilabel:`Style Manager...`                        :ref:`vector_style_manager`
+|customProjection| :guilabel:`Custom Projections...`               :ref:`sec_custom_projections`
+|keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`              :ref:`shortcuts`
+|interfaceCustomization| :guilabel:`Interface Customization...`    :ref:`sec_customization`
+|options| :guilabel:`Options...`                                   :ref:`gui_options`
+=================================================================  ===================================
 
 |
 
@@ -342,15 +342,15 @@ are enabled.
 ==============================================================  =======================  =======================  ===============================
 Menu Option                                                     Shortcut                 Toolbar                  Reference
 ==============================================================  =======================  =======================  ===============================
+|coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       :ref:`coordcapt`
+|geometryChecker| :guilabel:`Check Geometries...`               \                        :guilabel:`Vector`       :ref:`geometry_checker`
+|gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       :ref:`plugin_gps`
+|topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       :ref:`topology`
 :menuselection:`Geoprocessing Tools -->`                        :kbd:`Alt+O` + :kbd:`G`  \                        :ref:`processing.options`
 :menuselection:`Geometry Tools -->`                             :kbd:`Alt+O` + :kbd:`E`  \                        :ref:`processing.options`
 :menuselection:`Analysis Tools -->`                             :kbd:`Alt+O` + :kbd:`A`  \                        :ref:`processing.options`
 :menuselection:`Data Management Tools -->`                      :kbd:`Alt+O` + :kbd:`D`  \                        :ref:`processing.options`
 :menuselection:`Research Tools -->`                             :kbd:`Alt+O` + :kbd:`R`  \                        :ref:`processing.options`
-|coordinateCapture| :guilabel:`Coordinate Capture`              \                        :guilabel:`Vector`       :ref:`coordcapt`
-|geometryChecker| :guilabel:`Geometry Checker`                  \                        :guilabel:`Vector`       :ref:`geometry_checker`
-|gpsImporter| :guilabel:`GPS Tools`                             \                        :guilabel:`Vector`       :ref:`plugin_gps`
-|topologyChecker| :guilabel:`Topology Checker`                  \                        :guilabel:`Vector`       :ref:`topology`
 ==============================================================  =======================  =======================  ===============================
 
 |
@@ -426,7 +426,7 @@ If no web plugins are enabled, there will be no guilabel:`Web` menu.
 ===============================================  ===========================  ===============================
 Menu Option                                      Toolbar                      Reference
 ===============================================  ===========================  ===============================
-|metasearch| :menuselection:`Metasearch`         :guilabel:`Web`              :ref:`metasearch`
+|metasearch| :menuselection:`MetaSearch`         :guilabel:`Web`              :ref:`metasearch`
 ===============================================  ===========================  ===============================
 
 |

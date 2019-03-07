@@ -445,10 +445,12 @@ URL example:
   http://localhost/qgis_server?
   SERVICE=WMS
   &REQUEST=GetMap
-  &LAYERS=mylayer1,mylayer2
-  &FILTER=mylayer1:"OBJECTID" = 3;mylayer2:'text' = 'blabla'
+  &LAYERS=mylayer1,mylayer2,mylayer3
+  &FILTER=mylayer1:"col1";mylayer1,mylayer2:"col2" = 'blabla'
   &...
 
+In this example, the same filter (field ``col2`` equals the string ``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the filter on ``col1`` is only applied to ``mylayer1``.
+  
 .. note::
 
   It is possible to make attribute searches via GetFeatureInfo and omit
@@ -639,9 +641,12 @@ See the ``LAYERS`` parameter defined in
 FEATURE_COUNT
 ^^^^^^^^^^^^^
 
-This parameter specifies the maximum number of features to return.
+This parameter specifies the maximum number of features per layer to return. For
+example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and ``FEATURE_COUNT`` is
+set to ``3`` then a maximum of 3 features from layer1 will be returned. Likewise
+a maximun of 3 features from layer2 will be returned.
 
-By default, only 1 feature is returned.
+By default, only 1 feature per layer is returned.
 
 
 I
@@ -903,7 +908,7 @@ Several additional parameters are available to change the size of the legend
 elements:
 
 * **BOXSPACE** space between legend frame and content (mm)
-* **LAYERSPACE** versical space between layers (mm)
+* **LAYERSPACE** vertical space between layers (mm)
 * **LAYERTITLESPACE** vertical space between layer title and items following
   (mm)
 * **SYMBOLSPACE** vertical space between symbol and item following (mm)
@@ -921,7 +926,7 @@ These parameters change the font properties for layer titles and item labels:
 * **LAYERTITLE / RULELABEL** set them to ``FALSE`` to get only
   the legend graphics without labels
 
-Contest based legend. These parameters let the client request a legend showing
+Content based legend. These parameters let the client request a legend showing
 only the symbols for the features falling into the requested area:
 
 * **BBOX** the geographical area for which the legend should be built
@@ -931,7 +936,7 @@ only the symbols for the features falling into the requested area:
   request, to let QGIS Server scale symbols according to the map view image
   size.
 
-Contest based legend features are based on the
+Content based legend features are based on the
 `UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
 
 * **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the

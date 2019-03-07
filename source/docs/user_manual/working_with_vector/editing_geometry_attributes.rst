@@ -237,6 +237,13 @@ and a negative value does the opposite.
    potentially long tracing structure preparation and large memory overhead.
    After zooming in or disabling some layers the tracing is enabled again.
 
+.. note:: **Does not add topological points**
+
+   This tool does not add points to existing polygon geometries even if :guilabel:`Topological editing`
+   is enabled.
+   If geometry precision is activated on the edited layer, the resulting 
+   geometry might not exactly follow an existing geometry.
+
 .. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
 
    By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime even while

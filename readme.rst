@@ -22,6 +22,7 @@ is on http://docs.qgis.org/testing and http://docs.qgis.org/testing/pdf/
 
 Previous releases are also available:
 
+- QGIS 2.18 docs http://docs.qgis.org/2.18 and http://docs.qgis.org/2.18/pdf/
 - QGIS 2.14 docs http://docs.qgis.org/2.14 and http://docs.qgis.org/2.14/pdf/
 - QGIS 2.6 docs http://docs.qgis.org/2.6 and http://docs.qgis.org/2.6/pdf/
 - QGIS 2.2 docs http://docs.qgis.org/2.2 and http://docs.qgis.org/2.2/pdf/

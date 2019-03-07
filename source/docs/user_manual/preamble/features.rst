@@ -120,7 +120,7 @@ Core plugins include:
 #.  Georeferencer GDAL (add projection information to rasters using GDAL)
 #.  GPS Tools (load and import GPS data)
 #.  GRASS 7 (integrate GRASS GIS)
-#.  Metasearch Catalogue Client (interacting with metadata catalog services
+#.  MetaSearch Catalogue Client (interacting with metadata catalog services
     supporting the OGC Catalog Service for the Web (CSW) standard)
 #.  Offline Editing (allow offline editing and synchronizing with databases)
 #.  Processing (the spatial data processing framework for QGIS)

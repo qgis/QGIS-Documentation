@@ -1414,7 +1414,7 @@ To create a new function:
    A new item of the name you provide is added in the left panel of the
    :guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on
    QGIS template file and stored in the :file:`/python/expressions` folder
-   under the active user profile directory.
+   under the active :ref:`user profile <user_profiles>` directory.
 #. The right panel displays the content of the file: a python script template.
    Update the code and its help according to your needs.
 #. Press the |start| :guilabel:`Save and Load Functions` button.
