@@ -71,8 +71,8 @@ are several available renderer classes (derived from :class:`QgsRasterRenderer`)
 * :class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`
 * :class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`
 * :class:`QgsSingleBandColorDataRenderer <qgis.core.QgsSingleBandColorDataRenderer>`
-* :class:`QgsSingleBandGrayDataRenderer <qgis.core.QgsSingleBandGrayDataRenderer>`
-* :class:`QgsSingleBandPseudoColorDataRenderer <qgis.core.QgsSingleBandPseudoColorDataRenderer>`
+* :class:`QgsSingleBandGrayRenderer <qgis.core.QgsSingleBandGrayRenderer>`
+* :class:`QgsSingleBandPseudoColorRenderer <qgis.core.QgsSingleBandPseudoColorRenderer>`
 
 Single band raster layers can be drawn either in gray colors (low values =
 black, high values = white) or with a pseudocolor algorithm that assigns colors
@@ -102,7 +102,7 @@ its shader function:
 
   fcn = QgsColorRampShader()
   fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
-  lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), 
+  lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)),
         QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
   fcn.setColorRampItemList(lst)
   shader = QgsRasterShader()

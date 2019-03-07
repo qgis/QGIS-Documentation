@@ -25,7 +25,7 @@ Using the reference to the QGIS interface object, you can show a message in the
 message bar with the following code
 
 .. code-block:: python
-  
+
   from qgis.core import Qgis
   iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.Critical)
 
@@ -51,7 +51,7 @@ You can set a duration to show it for a limited time
 
 The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
-:class:`Qgis.MessageLevel <qgis.core.Qgis.MesageLevel>` enumeration. You can use up to 4 different levels:
+:class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You can use up to 4 different levels:
 
 0. Info
 1. Warning
@@ -175,7 +175,8 @@ save about the execution of your code.
 
 .. note::
 
- You can see the output of the :class:`QgsMessageLog <qgis.core.QgsMessageLog>`` in the :ref:`log_message_panel`
+   You can see the output of the :class:`QgsMessageLog <qgis.core.QgsMessageLog>`
+   in the :ref:`log_message_panel`
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -33,7 +33,7 @@ and items. If not, please read the `overview of the framework
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
-rendered to an image (using the :class:`QgsMapRendererJob <qgis.gui.QgsMapRendererJob>` class) and that image is
+rendered to an image (using the :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` class) and that image is
 displayed on the canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class also controls refreshing
 of the rendered map. Besides this item which acts as a background, there may be more **map canvas items**.
 
@@ -176,8 +176,8 @@ are activated using :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` meth
           self.canvas.setMapTool(self.toolPan)
 
 
-You can try the above code in the Python console editor. To invoke the canvas window, 
-add the following lines to instantiate the ``MyWnd`` class. They will render the currently 
+You can try the above code in the Python console editor. To invoke the canvas window,
+add the following lines to instantiate the ``MyWnd`` class. They will render the currently
 selected layer on the newly created canvas
 
 .. code-block:: python
@@ -241,7 +241,7 @@ by the canvas)
 
 Rubber band can be also used for drawing points, but the
 :class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited for this
-(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>`` would only draw a rectangle around the desired point).
+(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` would only draw a rectangle around the desired point).
 
 You can use the vertex marker like this:
 
