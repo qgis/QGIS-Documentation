@@ -19,6 +19,7 @@ and print them or save them as image, PDF or SVG files.
    overview_composer
    composer_items/index
    create_output
+   create_reports
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
