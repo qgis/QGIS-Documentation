@@ -20,6 +20,7 @@ geographical information produced with QGIS that can be included in reports or p
    overview_composer
    composer_items/index
    create_output
+   create_reports
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
