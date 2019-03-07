@@ -379,7 +379,11 @@ called on the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`
 object instead. 
 
 For these methods to work, the layer must be in editing mode. To start the editing mode, 
-use the is :func:`startEditing() <qgis.core.QgsVectorLayer.startEditing>` method. To stop editing, use the :func:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` or `rollBack() <https://qgis.org/pyqgis/3.0/core/Vector/QgsVectorLayer.html#qgis.core.QgsVectorLayer.rollBack`_ methods. The first one will commit all your changes to the data source, while the second one will discard them and will not modify the data source at all.
+use the :func:`startEditing() <qgis.core.QgsVectorLayer.startEditing>` method.
+To stop editing, use the :func:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>`
+or :func:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` methods.
+The first one will commit all your changes to the data source, while the second
+one will discard them and will not modify the data source at all.
 
 To find out whether a layer is in editing mode, use the :func:`isEditable() <qgis.core.QgsVectorLayer.isEditable>` method.
 
@@ -476,7 +480,7 @@ to be updated because the changes are not automatically propagated.
 .. tip:: **Directly save changes using** ``with`` **based command**
 
     Using ``with edit(layer):`` the changes will be commited automatically
-    calling :func:`commitChanges()` at the end. If any exception occurs, it will
+    calling :func:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` at the end. If any exception occurs, it will
     :func:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` all the changes. See :ref:`editing-buffer`.
 
 
@@ -936,15 +940,15 @@ arrangement)
 Working with Symbols
 --------------------
 
-For representation of symbols, there is :class:`qgis.core.QgsSymbol` base class with
+For representation of symbols, there is :class:`QgsSymbol <qgis.core.QgsSymbol>` base class with
 three derived classes:
 
-* :class:`qgis.core.QgsMarkerSymbol` --- for point features
-* :class:`qgis.core.QgsLineSymbol` --- for line features
-* :class:`qgis.core.QgsFillSymbol` --- for polygon features
+* :class:`QgsMarkerSymbol <qgis.core.QgsMarkerSymbol>` --- for point features
+* :class:`QgsLineSymbol <qgis.core.QgsLineSymbol>` --- for line features
+* :class:`QgsFillSymbol <qgis.core.QgsFillSymbol>` --- for polygon features
 
 **Every symbol consists of one or more symbol layers** (classes derived from
-:class:`qgis.core.QgsSymbolLayer`). The symbol layers do the actual rendering, the
+:class:`QgsSymbolLayer <qgis.core.QgsSymbolLayer>`). The symbol layers do the actual rendering, the
 symbol class itself serves only as a container for the symbol layers.
 
 Having an instance of a symbol (e.g. from a renderer), it is possible to
@@ -958,10 +962,10 @@ the symbol. To get a list of symbol layers:
       lyr = symbol.symbolLayer(i)
       print("{}: {}".format(i, lyr.layerType()))
 
-To find out symbol's color use :func:`qgis.core.QgsSymbol.color` method and :func:`qgis.core.QgsSymbol.setColor` to
+To find out symbol's color use :func:`color <qgis.core.QgsSymbol.color>` method and :func:`setColor <qgis.core.QgsSymbol.setColor>` to
 change its color. With marker symbols additionally you can query for the symbol
-size and rotation with :func:`qgis.core.QgsSymbol.size` and :func:`qgis.core.QgsSymbol.angle` methods, for line symbols
-there is :func:`qgis.core.QgsSymbol.width` method returning line width.
+size and rotation with :func:`size <qgis.core.QgsSymbol.size>` and :func:`angle <qgis.core.QgsSymbol.angle>` methods, for line symbols
+there is :func:`width <qgis.core.QgsSymbol.width>` method returning line width.
 
 Size and width are in millimeters by default, angles are in degrees.
 
@@ -1279,8 +1283,8 @@ Further Topics
 **TODO:**
 
 * creating/modifying symbols
-* working with style (:class:`QgsStyle`)
-* working with color ramps (:class:`QgsVectorColorRamp`)
+* working with style (:class:`QgsStyle <qgis.core.QgsStyle>`)
+* working with color ramps (:class:`QgsColorRamp <qgis.core.QgsColorRamp>`)
 * exploring symbol layer and renderer registries
 
 
