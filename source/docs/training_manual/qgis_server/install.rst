@@ -23,36 +23,13 @@ any Debian based distribution like Ubuntu and its derivatives.
 In this lesson we're going to do only the install from packages as shown
 `here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
 
-First add the QGIS repository by creating the
-:file:`/etc/apt/sources.list.d/debian-qgis.list` file with the following
-content:
-
-.. code-block:: sourceslist
-
- # latest stable
- deb https://qgis.org/debian stretch main
- deb-src https://qgis.org/debian stretch main
-
-After you add the ``gis.org`` repository public key to your apt keyring (follow
-the above link on how to do it) you can run the ``apt-get update`` command
-to refresh the packages list and ``apt-get dist-upgrade`` to upgrade the
-packages.
-
-.. note:: Currently Debian stable has LTR qgis packages in the source
- ``jessie-backports``, so the above steps are not necessary. Just add the
- ``jessie-backports`` repository and install with the ``-t jessie-backports``
- option.
-
 Install QGIS Server with:
 
 .. code-block:: bash
 
  apt-get install qgis-server
- # optionally also:
+ # if you want to install server plugins, also:
  apt-get install python-qgis
-
-.. note:: adding ``-y`` at the end of the apt-get command will run it straight
-   away, without requiring confirmation.
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
