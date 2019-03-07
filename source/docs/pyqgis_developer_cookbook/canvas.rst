@@ -177,7 +177,7 @@ are activated using :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` meth
 
 
 You can try the above code in the Python console editor. To invoke the canvas window, 
-add the following lines to instantiate the ``MyWnd``class. They will render the currently 
+add the following lines to instantiate the ``MyWnd`` class. They will render the currently 
 selected layer on the newly created canvas
 
 .. code-block:: python
