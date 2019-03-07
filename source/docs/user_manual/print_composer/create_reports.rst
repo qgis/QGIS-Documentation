@@ -19,7 +19,7 @@
 
 
 This section will help you configurate an automatic report in QGIS. The current
-information was adapted from the blog of North Road, `Exploring Reports in QGIS 3.0 - the Ultimate Guide! <https://north-road.com/2018/01/23/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_ 
+information was adapted from the blog of North Road, `Exploring Reports in QGIS 3.0 - the Ultimate Guide! <https://north-road.com/2018/01/23/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_
 
 
 Get started
@@ -208,3 +208,11 @@ to imagine, reports in QGIS are extremely powerful and flexible!
    :align: center
 
 .. note:: When you exporting a report to the available formats please choose the options (Print, SVG, Image, PDF) that have the labels saying :guilabel:`Export Report as...` otherwise you will print the current active map.
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
