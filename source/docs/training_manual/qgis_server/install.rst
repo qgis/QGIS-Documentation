@@ -76,6 +76,8 @@ In this lesson we're going to use the
 First we need to install Apache by running the following command in a terminal:
 ``apt-get install apache2 libapache2-mod-fcgid``.
 
+You can run QGIS server on your default website, or configure a virtualhost specifically for this, as follows.
+
 In the :file:`/etc/apache2/sites-available` directory let's create a file
 called :file:`qgis.demo.conf`, with this content:
 
