@@ -718,13 +718,13 @@ And with that reference, let us explore it a bit
 
 There are several known renderer types available in the QGIS core library:
 
-=================  ==============================================================================  ===================================================================
+=================  ============================================================================== ===================================================================
 Type               Class                                                                           Description
-=================  ==============================================================================  ===================================================================
+=================  ============================================================================== ===================================================================
 singleSymbol       :class:`QgsSingleSymbolRenderer <qgis.core.QgsSingleSymbolRenderer>`         Renders all features with the same symbol
 categorizedSymbol  :clas:`QgsCategorizedSymbolRenderer <qgis.core.QgsCategorizedSymbolRenderer>`    Renders features using a different symbol for each category
 graduatedSymbol    :class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`      Renders features using a different symbol for each range of values
-=================  =======================================  ===================================================================
+=================  ============================================================================== ===================================================================
 
 There might be also some custom renderer types, so never make an assumption
 there are just these types. You can query the application's :class:`QgsRendererRegistry`
