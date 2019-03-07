@@ -54,7 +54,7 @@ return a boolean value that you can use to check if the operation was successful
 .. note::
 
    If you are writing a QGIS standalone application, in order to synchronise the loaded project with
-   the canvas you need to instantiate a :class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` as in the example below::
+   the canvas you need to instantiate a :class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` as in the example below:
 
    .. code-block:: python
 
