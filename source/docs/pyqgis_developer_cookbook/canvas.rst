@@ -35,8 +35,8 @@ Whenever the map has been panned, zoomed in/out (or some other action that trigg
 a refresh), the map is rendered again within the current extent. The layers are
 rendered to an image (using the :class:`QgsMapRendererJob <qgis.gui.QgsMapRendererJob>` class) and that image is
 displayed on the canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class also controls refreshing
-of the rendered map. Besides this item which acts as a background, there may be
-more **map canvas items**.
+of the rendered map. Besides this item which acts as a background, there may be more **map canvas items**.
+
 Typical map canvas items are rubber bands (used for measuring, vector editing
 etc.) or vertex markers. The canvas items are usually used to give visual
 feedback for map tools, for example, when creating a new polygon, the map tool
