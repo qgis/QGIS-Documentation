@@ -16,7 +16,7 @@
 .. contents::
    :local:
 
-The code snippets on this page needs the following imports:
+The code snippets on this page needs the following imports if you're outside the pyqgis console:
 
 .. code-block:: python
 
