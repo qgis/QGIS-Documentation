@@ -24,18 +24,23 @@ created in several different ways:
 
 * specify CRS by its ID
 
-  ::
+.. testsetup::
 
-    # PostGIS SRID 4326 is allocated for WGS84
-    crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+   from qgis.core import QgsCoordinateReferenceSystem
 
-  QGIS uses three different IDs for every reference system:
+.. testcode::
+
+   # PostGIS SRID 4326 is allocated for WGS84
+   crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+   assert crs.isValid()
+
+QGIS uses three different IDs for every reference system:
 
   * :const:`PostgisCrsId` --- IDs used within PostGIS databases.
   * :const:`InternalCrsId` --- IDs internally used in QGIS database.
   * :const:`EpsgCrsId` --- IDs assigned by the EPSG organization
 
-  If not specified otherwise in second parameter, PostGIS SRID is used by default.
+If not specified otherwise in second parameter, PostGIS SRID is used by default.
 
 * specify CRS by its well-known text (WKT)
 

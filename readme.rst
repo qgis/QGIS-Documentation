@@ -348,3 +348,48 @@ Team Lead) and supported by numerous contributors.
 
   * Contributor: Sorin Călinică < sorin.calinica[at]gmail.com >
   * Contributor: Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
+
+
+Testing Python snippets
+***********************
+
+To test Python code snippets, you need a *QGIS* installation, for this there are many options:
+
+You can use your system *QGIS* installation with *Sphinx* from Python virtual environment::
+
+   make -f venv.mk doctest
+
+You can use a manually built installation of *QGIS*, to do so, you need to create a custom ``Makefile``
+extension on top of the ``venv.mk`` file, for example a ``user.mk`` file with the following content::
+
+   # Root installation forder
+   QGIS_PREFIX_PATH = /home/user/apps/qgis-master
+
+   # Or build output folder
+   QGIS_PREFIX_PATH = /home/user/dev/QGIS-build-master/output
+
+   include venv.mk
+
+Then use it to run target ``doctest``::
+
+   make -f user.mk doctest
+
+Or you can run target ``doctest`` inside the official *QGIS* docker image::
+
+   make -f docker.mk doctest
+
+Note that only code blocks with directive ``testcode`` are tested and it is possible to run tests setup code
+which does not appear in documentation with directive ``testsetup``, for example::
+
+   .. testsetup::
+
+      from qgis.core import QgsCoordinateReferenceSystem
+
+   .. testcode::
+
+      # PostGIS SRID 4326 is allocated for WGS84
+      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+      assert crs.isValid()
+
+For more information see *Sphinx* doctest extension documentation:
+https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html

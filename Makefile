@@ -38,6 +38,7 @@ help:
 	@echo "  pretranslate to gather all strings from sources, put in .pot files"
 	@echo "                  AND merge them with available .po files"
 	@echo "  transifex_push (only for transifex Maintainers!): renew source files and push to transifex"
+	@echo "  doctest     to run all doctests embedded in the documentation (if enabled)"
 	@echo "  "
 	@echo "OPTION: use LANG=xx to do it only for one language, eg: make html LANG=de"
 	@echo "  "
@@ -240,3 +241,9 @@ fasthtml: updatestatic
 	# cancelling the build
 	# No internationalization is performed
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
+
+.PHONY: doctest
+doctest:
+	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
+	@echo "Testing of doctests in the sources finished, look at the " \
+	      "results in $(BUILDDIR)/doctest/output.txt."
