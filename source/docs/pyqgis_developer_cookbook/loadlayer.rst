@@ -7,6 +7,15 @@
 Loading Layers
 **************
 
+The code snippets on this page needs the following imports:
+
+.. code-block:: python
+
+ import os # This is is needed in the pyconsole also
+ from qgis.core import (
+     QgsVectorLayer
+ )
+
 .. contents::
    :local:
 
@@ -25,7 +34,6 @@ layer and provider's name:
 
 .. code-block:: python
 
- import os
  # get the path to the shapefile e.g. /home/project/data/ports.shp
  path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
 
@@ -45,7 +53,6 @@ For a geopackage vector layer:
 
 .. code-block:: python
 
- import os
  # get the path to a geopackage  e.g. /home/project/data/data.gpkg
  path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
  # append the layername part
