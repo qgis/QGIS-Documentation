@@ -77,44 +77,16 @@ Building the documentation using Make
 
 Building is only tested on Linux systems using make, on windows we now started a Paver setup (see below)
 
-To be able to run localisation targets you will need Sphinx 1.2 which comes with pip.
-Sphinx coming with most distro's is just 1.1.3. You will get an gettext error with those.
+* ``make -f venv.mk html`` to build the english language
+* ``make -f venv.mk LANG=nl html`` to build the dutch version
 
-Best to run the make file in a virtual env ( http://www.virtualenv.org/ ):
+Note that with option ``-f venv.mk``, ``make`` will create and use a Python3 virtual environment with
+required dependencies in ``/venv`` folder on the fly. Once created you can activate this virtual environment
+using::
 
-Move to a directory (~/myvirtualenvs/) and create a virtualenv enabled dir::
+   source venv/bin/activate
 
-    virtualenv sphinx  # one time action, only to create the environment
-    cd sphinx
-
-And activate this virtualenv::
-
-    source bin/activate
-    # now you will see sphinx before your prompt:
-    (sphinx)richard@mymachine
-
-Now always activate your environment before building. To deactivate, you can do::
-
-    deactivate
-
-You can install all the tools in one go via the REQUIREMENTS.txt here in root of this repo::
-
-    pip install -r REQUIREMENTS.txt
-
-Alternatively do it one by one:
-
-Install sphinx 1.2 now in your virtual env::
-
-    pip install sphinx==1.2
-
-Sphinx intl extention ( https://pypi.python.org/pypi/sphinx-intl )::
-
-    pip install sphinx-intl
-
-Then build:
-
-* ``make html`` to build the english language
-* ``make LANG=nl html`` to build the dutch version
+No need to use option ``-f venv.mk`` after that.
 
 Speed up the documentation build
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
