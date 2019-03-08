@@ -17,8 +17,8 @@ when developing a standalone QGIS Python application (see: :ref:`pythonapplicati
 
 To load a project into the current QGIS application you need to create
 an instance of the :class:`QgsProject <qgis.core.QgsProject>` class.
-This is a singleton class, so you must use its :meth:`instance() <qgis.core.QgsProject.instance>` method to do it..
-With it, you can call its :meth:`read() <qgis.core.QgsProject.read>` method, passing the path of the project to be loaded:
+This is a singleton class, so you must use its :meth:`instance() <qgis.core.QgsProject.instance>` method to do it.
+You can call its :meth:`read() <qgis.core.QgsProject.read>` method, passing the path of the project to be loaded:
 
 .. code-block:: python
 
