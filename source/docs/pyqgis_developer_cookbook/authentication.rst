@@ -28,15 +28,6 @@ in the  User Manual in the :ref:`authentication_overview` paragraph.
 This chapter describes the best practices to use the Authentication system from
 a developer perspective.
 
-.. warning::
-
-    Authentication system API is more than the classes and methods exposed
-    here, but it's strongly suggested to use the ones described here and
-    exposed in the following snippets for two main reasons
-
-    #. Authentication API will change during the move to QGIS3
-    #. Python bindings will be restricted to the ``QgsAuthManager`` class use.
-
 Most of the following snippets are derived from the code of Geoserver Explorer
 plugin and its tests. This is the first plugin that used Authentication
 infrastructure. The plugin code and its tests can be found at this
@@ -108,7 +99,7 @@ understand the snippet.
   authMgr = QgsAuthManager.instance()
   # check if QgsAuthManager has been already initialized... a side effect
   # of the QgsAuthManager.init() is that AuthDbPath is set.
-  # QgsAuthManager.init() is executed during QGis application init and hence
+  # QgsAuthManager.init() is executed during QGIS application init and hence
   # you do not normally need to call it directly.
   if authMgr.authenticationDbPath():
       # already initilised => we are inside a QGIS app.
@@ -144,7 +135,7 @@ class accessed using a unique string like the following one::
 that string is generated automatically when creating an entry using QGIS API or
 GUI.
 
-`QgsAuthMethodConfig` is the base class for any :term:`Authentication Method`.
+`QgsAuthMethodConfig <https://qgis.org/api/classQgsAuthMethodConfig.html>`_ is the base class for any :term:`Authentication Method`.
 Any Authentication Method sets a configuration hash map where authentication
 informations will be stored. Hereafter an useful snippet to store PKI-path
 credentials for an hypothetic alice user:
@@ -378,7 +369,7 @@ and can be used as in the following snippet:
   # GUI has to be integrated
   tabGui.insertTab( 1, gui, "Configurations" )
 
-The above example is get from the QGIS source `code
+The above example is taken from the QGIS source `code
 <https://github.com/qgis/QGIS/blob/master/src/providers/postgres/qgspgnewconnection.cpp#L42>`_
 The second parameter of the GUI constructor refers to data provider type. The
 parameter is used to restrict the compatible :term:`Authentication Method`\s with
