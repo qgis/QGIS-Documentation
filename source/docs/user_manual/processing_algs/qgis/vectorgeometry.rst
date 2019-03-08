@@ -1277,7 +1277,7 @@ for the new vertices created at the antimeridian.
 
 Parameters
 ..........
-``Input layer`` [vector: lines]
+``Input layer`` [vector: line]
   Vector input line layer
 
 Outputs
