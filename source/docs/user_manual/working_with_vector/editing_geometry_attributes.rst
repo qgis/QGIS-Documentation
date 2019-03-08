@@ -503,7 +503,7 @@ vertex in the map canvas, and vice versa. Simply change a coordinate in the tabl
 and your vertex position is updated. You can also select multiple rows and delete
 them altogether.
 
-.. note:: **Changed behavior in QGIS 3.4 **
+.. note:: **Changed behavior in QGIS 3.4**
     
    In earlier QGIS 3 versions, right click on a feature would bring up a small popup menu
    that offered display of the vertex editor. Now, right click on a feature will immediately
