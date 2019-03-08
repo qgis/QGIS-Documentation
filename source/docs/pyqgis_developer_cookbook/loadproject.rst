@@ -17,8 +17,8 @@ when developing a standalone QGIS Python application (see: :ref:`pythonapplicati
 
 To load a project into the current QGIS application you need to create
 an instance of the :class:`QgsProject <qgis.core.QgsProject>` class.
-This is a singleton class, so you must use its :func:`instance() <qgis.core.QgsProject.instance>` method to do it..
-With it, you can call its :func:`read() <qgis.core.QgsProject.read>` method, passing the path of the project to be loaded::
+This is a singleton class, so you must use its :meth:`instance() <qgis.core.QgsProject.instance>` method to do it..
+With it, you can call its :meth:`read() <qgis.core.QgsProject.read>` method, passing the path of the project to be loaded::
 
 .. code-block:: python
 
@@ -37,7 +37,7 @@ With it, you can call its :func:`read() <qgis.core.QgsProject.read>` method, pas
 
 
 If you need to make modifications to the project (for example to add or remove some layers)
-and save your changes, call the :func:`write() <qgis.core.QgsProject.write>` method of your project instance.
+and save your changes, call the :meth:`write() <qgis.core.QgsProject.write>` method of your project instance.
 The :func:`write()` method also accepts an optional path for saving the project to a new location::
 
 .. code-block:: python
@@ -47,8 +47,8 @@ The :func:`write()` method also accepts an optional path for saving the project 
     # ... or to a new file
     project.write('/home/user/projects/my_new_qgis_project.qgs')
 
-Both :func:`read() <qgis.core.QgsProject.read>`` and 
-:func:`write() <qgis.core.QgsProject.write>` functions 
+Both :meth:`read() <qgis.core.QgsProject.read>` and
+:meth:`write() <qgis.core.QgsProject.write>` functions
 return a boolean value that you can use to check if the operation was successful.
 
 .. note::

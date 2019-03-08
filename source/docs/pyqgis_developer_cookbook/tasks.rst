@@ -23,7 +23,7 @@ mechanisms for signaling, progress reporting and access
 to the status for background processes.
 Tasks can be grouped using subtasks.
 
-The global task manager (found with :func:`QgsApplication.taskManager() <qgis.core.QgsApplication.TaskManager>`)
+The global task manager (found with :meth:`QgsApplication.taskManager() <qgis.core.QgsApplication.taskManager>`)
 is normally used.  This means that your tasks may not be the only
 tasks that are controlled by the task manager.
 
@@ -34,7 +34,7 @@ There are several ways to create a QGIS task:
   .. code-block:: python
 
     class SpecialisedTask(QgsTask):
-  
+
 * Create a task from a function
 
   .. code-block:: python
@@ -45,7 +45,7 @@ There are several ways to create a QGIS task:
 * Create a task from a processing algorithm
 
   .. code-block:: python
-  
+
     QgsProcessingAlgRunnerTask(u'native:buffer', params, context,
                                feedback)
 
@@ -102,13 +102,13 @@ dependencies.
 
   import random
   from time import sleep
-  
+
   from qgis.core import (
       QgsApplication, QgsTask, QgsMessageLog,
       )
-  
+
   MESSAGE_CATEGORY = 'RandomIntegerSumTask'
-  
+
   class RandomIntegerSumTask(QgsTask):
       """This shows how to subclass QgsTask"""
       def __init__(self, description, duration):
@@ -186,15 +186,15 @@ dependencies.
                   name=self.description()),
               MESSAGE_CATEGORY, Qgis.Info)
           super().cancel()
-  
-  
+
+
   longtask = RandomIntegerSumTask('waste cpu long', 20)
   shorttask = RandomIntegerSumTask('waste cpu short', 10)
   minitask = RandomIntegerSumTask('waste cpu mini', 5)
   shortsubtask = RandomIntegerSumTask('waste cpu subtask short', 5)
   longsubtask = RandomIntegerSumTask('waste cpu subtask long', 10)
   shortestsubtask = RandomIntegerSumTask('waste cpu subtask shortest', 4)
-  
+
   # Add a subtask (shortsubtask) to shorttask that must run after
   # minitask and longtask has finished
   shorttask.addSubTask(shortsubtask, [minitask, longtask])
@@ -203,7 +203,7 @@ dependencies.
   longtask.addSubTask(longsubtask, [], QgsTask.ParentDependsOnSubTask)
   # Add a subtask (shortestsubtask) to longtask
   longtask.addSubTask(shortestsubtask)
-  
+
   QgsApplication.taskManager().addTask(longtask)
   QgsApplication.taskManager().addTask(shorttask)
   QgsApplication.taskManager().addTask(minitask)
@@ -223,9 +223,9 @@ parameter ``wait_time``.
 
   import random
   from time import sleep
-  
+
   MESSAGE_CATEGORY = 'TaskFromFunction'
-  
+
   def doSomething(task, wait_time):
       """
       Raises an exception to abort the task.
@@ -255,13 +255,13 @@ parameter ``wait_time``.
               raise Exception('bad value!')
       return {'total': total, 'iterations': iterations,
               'task': task.description()}
-  
+
   def stopped(task):
       QgsMessageLog.logMessage(
           'Task "{name}" was canceled'.format(
               name=task.description()),
           MESSAGE_CATEGORY, Qgis.Info)
-  
+
   def completed(exception, result=None):
       """This is called when doSomething is finished.
       Exception is not None if doSomething raises an exception.
@@ -285,7 +285,7 @@ parameter ``wait_time``.
           QgsMessageLog.logMessage("Exception: {}".format(exception),
                                    MESSAGE_CATEGORY, Qgis.Critical)
           raise exception
-  
+
   # Creae a few tasks
   task1 = QgsTask.fromFunction(u'Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
@@ -293,7 +293,7 @@ parameter ``wait_time``.
                                on_finished=completed, wait_time=3)
   QgsApplication.taskManager().addTask(task1)
   QgsApplication.taskManager().addTask(task2)
- 
+
 
 Task from a processing algorithm
 ................................
@@ -321,7 +321,7 @@ added to the project in a safe way.
       # be deleted when context goes out of scope and you'll get a
       # crash.
       # takeMapLayer transfers ownership so it's then safe to add it
-      # to the project and give the project ownership. 
+      # to the project and give the project ownership.
       if output_layer and output_layer.isValid():
           QgsProject.instance().addMapLayer(
                context.takeResultLayer(output_layer.id()))

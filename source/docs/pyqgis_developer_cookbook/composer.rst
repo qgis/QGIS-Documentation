@@ -31,7 +31,7 @@ used to create the resulting image.
 Here's an example
 
 .. code-block:: python
-  
+
   layer=iface.activeLayer()
   options = QgsMapSettings()
   options.setLayers([layer])
@@ -50,16 +50,16 @@ Here's an example
 
   render.start()
 
-  
+
 Rendering layers with different CRS
 ====================================
 
 If you have more than one layer and they have a different CRS, the simple
 example above will probably not work: to get the right values from the
-extent calculations you have to explicitly set the destination CRS 
+extent calculations you have to explicitly set the destination CRS
 
 .. code-block:: python
-  
+
   settings.setLayers(layers)
   render.setDestinationCrs(layers[0].crs())
 
@@ -79,12 +79,12 @@ library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
 `Qt Graphics View framework <http://doc.qt.io/qt-5/graphicsview.html>`_,
 then you are encouraged to check the documentation now, because the layout
-is based on it. 
+is based on it.
 
 The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>` class, which is derived from the Qt :class:`QGraphicsScene` class. Let us create an instance of it:
 
 .. code-block:: python
-  
+
   p = QgsProject()
   layout = QgsLayout(p)
   layout.initializeDefaults()
@@ -98,7 +98,7 @@ Here's a description of some of the main layout items that can be added to a lay
   create a map and stretch it over the whole paper size
 
   .. code-block:: python
-  
+
     map = QgsLayoutItemMap(layout)
     layout.addItem(mapp)
 
@@ -106,7 +106,7 @@ Here's a description of some of the main layout items that can be added to a lay
   alignment and margin
 
   .. code-block:: python
-  
+
     label = QgsLayoutItemLabel(layout)
     label.setText("Hello world")
     label.adjustSizeToText()
@@ -121,7 +121,7 @@ Here's a description of some of the main layout items that can be added to a lay
     layout.addItem(legend)
 
 * scale bar
-  
+
   .. code-block:: python
 
     item = QgsLayoutItemScaleBar(layout)
@@ -187,11 +187,11 @@ Exporting the layout
 To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` class must be used.
 
 .. code-block:: python
-  
+
   exporter = QgsLayoutExporter(layout)
   exporter.exportToPdf("path/to/output/pdf", QgsLayoutExporter.PdfExportSettings())
 
-Use the :func:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
+Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

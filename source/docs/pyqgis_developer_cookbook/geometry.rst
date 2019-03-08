@@ -44,15 +44,15 @@ PyQGIS provides several options for creating a geometry:
 
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), 
+    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1),
        QgsPointXY(2, 2), QgsPointXY(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or :class:`QgsPointXY <qgis.core.QgsPointXY>`
   class. The difference between these classes is that :class:`QgsPoint <qgis.core.QgsPoint>`
   supports M and Z dimensions.
 
-  A Polyline (Linestring) is represented by a list of points. 
-  
+  A Polyline (Linestring) is represented by a list of points.
+
   A Polygon is
   represented by a list of linear rings (i.e. closed linestrings). The first ring
   is the outer ring (boundary), optional subsequent rings are holes in the polygon.
@@ -85,7 +85,7 @@ PyQGIS provides several options for creating a geometry:
 Access to Geometry
 ==================
 
-First, you should find out the geometry type. The :func:`wkbType() <qgis.core.QgsGeometry.wkbType>` method is the one to
+First, you should find out the geometry type. The :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` method is the one to
 use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` enumeration
 
 .. code-block:: python
@@ -99,7 +99,7 @@ use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes
   >>> gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   False
 
-As an alternative, one can use :func:`wkbType() <qgis.core.QgsGeometry.wkbType>` method which returns a value from
+As an alternative, one can use :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` method which returns a value from
 :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration.
 
 You can use the func:`wkbType() <qgis.core.QgsWkbTypes.displayString>` function to get a human readable geometry type.
@@ -112,7 +112,7 @@ You can use the func:`wkbType() <qgis.core.QgsWkbTypes.displayString>` function 
   'Point'
 
 There is also a helper function
-:func:`isMultipart() <qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is multipart or not.
+:meth:`isMultipart() <qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is multipart or not.
 
 To extract information from a geometry there are accessor functions for every
 vector type. Here's an example on how to use these accessors:
@@ -127,19 +127,21 @@ vector type. Here's an example on how to use these accessors:
   [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint <qgis.core.QgsPoint>`
-   objects, the values are accessible with :func:`x() <qgis.core.QgsPoint.x>` () and :func:`y() <qgis.core.QgsPoint.y>` methods.
+   objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>` () and :meth:`y() <qgis.core.QgsPoint.y>` methods.
 
 For multipart geometries there are similar accessor functions:
-:func:`asMultiPoint() <qgis.core.QgsPoint.asMultipoint>`, :func:`asMultiPolyline() <qgis.core.QgsPoint.asMultiPolyline>` and :func:`asMultiPolygon() <qgis.core.QgsPoint.asMultiPolygon>`
+:meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, :meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and :meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`
 
+
+qgis.core.QgsGeometry.asMultiPoint
 .. index:: Geometry; Predicates and operations
 
 Geometry Predicates and Operations
 ==================================
 
 QGIS uses GEOS library for advanced geometry operations such as geometry
-predicates (:func:`contains() <qgis.core.QgsGeometry.contains>`, :func:`intersects() <qgis.core.QgsGeometry.intersects>`, …) and set operations
-(:func:`combine() <qgis.core.QgsGeometry.combine>`, :func:`difference() <qgis.core.QgsGeometry.difference>`, …). It can also compute geometric
+predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, :meth:`intersects() <qgis.core.QgsGeometry.intersects>`, …) and set operations
+(:meth:`combine() <qgis.core.QgsGeometry.combine>`, :meth:`difference() <qgis.core.QgsGeometry.difference>`, …). It can also compute geometric
 properties of geometries, such as area (in the case of polygons) or lengths
 (for polygons and lines)
 
@@ -184,9 +186,9 @@ Alternatively, you may want to know the distance and bearing between two points:
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
-  print("distance in meters: ", 
+  print("distance in meters: ",
     d.measureLine(QgsPointXY(10,10),QgsPointXY(11,11)))
-  print("angle in degrees: ", 
+  print("angle in degrees: ",
     math.degrees(d.bearing(QgsPointXY(10,10),QgsPointXY(11,11))))
 
 You can find many example of algorithms that are included in QGIS and use these

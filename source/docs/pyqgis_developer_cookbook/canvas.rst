@@ -118,7 +118,7 @@ pair of :class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>` instances. The actions
 later assigned to the tools to allow automatic handling of checked/unchecked
 state of the actions -- when a map tool gets activated, its action is marked as
 selected and the action of the previous map tool is deselected. The map tools
-are activated using :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method.
+are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method.
 
 .. code-block:: python
 
@@ -272,7 +272,7 @@ You can write your custom tools, to implement a custom behavior to actions
 performed by users on the canvas.
 
 Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`, class or any derived
-class, and selected as active tools in the canvas using the :func:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`
+class, and selected as active tools in the canvas using the :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`
 method as we have already seen.
 
 Here is an example of a map tool that allows to define a rectangular extent by

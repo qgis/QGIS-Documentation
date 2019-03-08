@@ -156,7 +156,7 @@ Refreshing Layers
 =================
 
 If you do change layer symbology and would like tp ensure that the changes are
-immediately visible to the user, call the :func:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>` method.
+immediately visible to the user, call the :meth:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>` method.
 
 With WMS raster layers, these command do not work. In this case, you have to explicitly reload the layer data.
 
@@ -189,7 +189,7 @@ tuple with the value and ``True`` or ``False`` depending on the results:
 
   val, res = rlayer.dataProvider().sample(QgsPointXY(15.30, 40.98), 1)
 
-The second method is using the :func:`identify() <qgis.core.QgsRasterDataProvider.identify>` method that returns a
+The second method is using the :meth:`identify() <qgis.core.QgsRasterDataProvider.identify>` method that returns a
 :class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object.
 
 .. code-block:: python
@@ -199,7 +199,7 @@ The second method is using the :func:`identify() <qgis.core.QgsRasterDataProvide
   if ident.isValid():
     print(ident.results())
 
-The :func:`results() <qgis.core.QgsRasterIdentifyResult.results>` method in this case returns a dictionary, with band indices as
+The :meth:`results() <qgis.core.QgsRasterIdentifyResult.results>` method in this case returns a dictionary, with band indices as
 keys, and band values as values. For instance, something like ``{1: 17, 2: 220}``
 
 

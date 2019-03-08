@@ -26,11 +26,11 @@ We can make difference between several types of settings:
 
 * **global settings** --- they are bound to the user at particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
-  default snapping tolerance. Setting are handled using the :class:`QgsSettings <qgis.core.QgsSettings>` class. 
-  The :func:`setValue() <qgis.core.QgsSettings.setValue>` and :func:`value() <qgis.core.QgsSettings.value>` methods from this class provide 
+  default snapping tolerance. Setting are handled using the :class:`QgsSettings <qgis.core.QgsSettings>` class.
+  The :meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() <qgis.core.QgsSettings.value>` methods from this class provide
 
   Here you can see an example of how this methods are used.
-  
+
   .. code-block:: python
 
     def store():
@@ -46,7 +46,7 @@ We can make difference between several types of settings:
       myreal = s.value("myplugin/myreal", 2.71)
 
 
-  The second parameter of the :func:`value() <qgis.core.QgsSettings.value>` method is optional and specifies
+  The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` method is optional and specifies
   the default value that is returned if there is no previous value set for the passed setting
   name.
 
@@ -56,7 +56,7 @@ We can make difference between several types of settings:
   are connected with a project file. Map canvas background color or destination
   coordinate reference system (CRS) are examples --- white background and WGS84
   might be suitable for one project, while yellow background and UTM projection
-  are better for another one. 
+  are better for another one.
 
   An example of usage follows.
 
@@ -74,7 +74,7 @@ We can make difference between several types of settings:
     mytext = proj.readEntry("myplugin", "mytext", "default text")[0]
     myint = proj.readNumEntry("myplugin", "myint", 123)[0]
 
-  As you can see, the :func:`writeEntry() <qgis.core.QgsProject.writeEntry>` method is used for all data types, but
+  As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` method is used for all data types, but
   several methods exist for reading the setting value back, and the
   corresponding one has to be selected for each data type.
 
@@ -85,8 +85,8 @@ We can make difference between several types of settings:
   underlying data source of a layer, so if you create two map layer instances
   of one shapefile, they will not share the settings. The settings are stored
   in project file, so if the user opens the project again, the layer-related
-  settings will be there again. The value for a given setting is retrieved using 
-  the :func:`customProperty() <qgis.core.QgsMapLayer.customProperty>` method, and can be set using the :func:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
+  settings will be there again. The value for a given setting is retrieved using
+  the :meth:`customProperty() <qgis.core.QgsMapLayer.customProperty>` method, and can be set using the :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
 
  .. code-block:: python
 

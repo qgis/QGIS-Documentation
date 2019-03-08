@@ -56,12 +56,12 @@ created in several different ways:
     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
-has been successful: :func:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
+has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
 
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
-:func:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the
+:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the
 database. If you are running the commands from QGIS python console or
 developing a plugin you do not care: everything is already set up for you.
 
@@ -90,7 +90,7 @@ You can do transformation between different spatial reference systems by using
 :class:`QgsCoordinateTransform` class. The easiest way to use it is to create
 source and destination CRS and construct :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`
 instance with them and the current project. Then just repeatedly call
-:func:`transform() <qgis.core.QgsCoordinateTransform.transform>` function to do the transformation. By default it does forward
+:meth:`transform() <qgis.core.QgsCoordinateTransform.transform>` function to do the transformation. By default it does forward
 transformation, but it is capable to do also inverse transformation.
 
 ::

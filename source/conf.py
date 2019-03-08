@@ -69,7 +69,7 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 # for faster builds, you can exclude certain parts from the build
 # uncomment one or more lines below, or construct such line yourself
 # uncomment to exclude the processing algs from build
-#exclude_patterns += ['docs/user_manual/processing_algs/*']
+# exclude_patterns += ['docs/user_manual/processing_algs/*']
 # uncomment to exclude the user manual from build
 # exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
@@ -512,4 +512,13 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:mod', 'qgis.core'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
+                  ('py:meth', 'qgis.core.QgsVectorDataProvider.nextFeature'),
+                  ('py:meth', 'qgis.core.QgsSymbol.angle'),
+                  ('py:meth', 'qgis.core.QgsSymbol.width'),
+                  ('py:meth', 'qgis.core.QgsSymbol.size'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.layerType'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.clone'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.stopRender'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.renderPolygon'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.renderPolyline'),
                   ]

@@ -35,7 +35,7 @@ provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
-The quickest way to open and display a vector layer in QGIS is the :func:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
+The quickest way to open and display a vector layer in QGIS is the :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
 method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
@@ -52,31 +52,31 @@ The following list shows how to access various data sources using vector data
 providers:
 
 .. index::
-  pair: Loading; OGR layers
+   pair: Loading; OGR layers
 
 * OGR library (Shapefile and many other file formats) --- data source is the
   path to the file:
 
   * for Shapefile:
 
-  .. code-block:: python
+    .. code-block:: python
 
-      vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
-
+       vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
 
   * for dxf (note the internal options in data source uri):
 
-  .. code-block:: python
+    .. code-block:: python
 
-      uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
-      vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
+       uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
+       vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
 
 
 .. index::
-  pair: Loading; PostGIS layers
+   pair: Loading; PostGIS layers
 
-* PostGIS database --- data source is a string with all information needed to
-  create a connection to PostgreSQL database. 
+* PostGIS database - data source is a string with all information needed to
+  create a connection to PostgreSQL database.
+
   :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` class
   can generate this string for you. Note that QGIS has to be compiled with
   Postgres support, otherwise this provider isn't available:
@@ -278,15 +278,15 @@ QgsProject instance
 ===================
 
 If you would like to use the opened layers for rendering, do not forget to add
-them to the :class:`QgsProject <qgis.core.QgsProject>` instance. 
+them to the :class:`QgsProject <qgis.core.QgsProject>` instance.
 The :class:`QgsProject <qgis.core.QgsProject>` instance takes ownership of layers
 and they can be later accessed from any part of the application by their unique
 ID. When the layer is removed from the project, it gets deleted, too. Layers can
-be removed by the user in the QGIS interface, or via Python using the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method.
+be removed by the user in the QGIS interface, or via Python using the :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method.
 
 .. index:: Qgis project; Adding a layer
 
-Adding a layer to the current project is done using the :func:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:
+Adding a layer to the current project is done using the :meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:
 
 .. code-block:: python
 
@@ -303,16 +303,16 @@ To add a layer at an absolute position:
     # the position is a number starting from 0, with -1 an alias for the end
     layerTree.insertChildNode(-1, QgsLayerTreeLayer(layer))
 
-If you want to delete the layer use the :func:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method:
+If you want to delete the layer use the :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method:
 
 .. code-block:: python
 
     QgsProject.instance().removeMapLayer(layer_id)
 
-In the above code, the layer id is passed (you can get it calling the :func:`id() <qgis.core.QgsMapLayer.id>` method of the layer),
+In the above code, the layer id is passed (you can get it calling the :meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer),
 but you can also pass the layer object itself.
 
-For a list of loaded layers and layer ids, use the :func:`mapLayers() <qgis.core.QgsProject.mapLayers>` method:
+For a list of loaded layers and layer ids, use the :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>` method:
 
 .. code-block:: python
 

@@ -68,7 +68,7 @@ Parsing Expressions
 
   exp = QgsExpression('1 + 1 = 2')
   exp.hasParserError() #will return False
-  
+
   exp = QgsExpression('1 + 1 = ')
   exp.hasParserError() #Will return True
 
@@ -104,8 +104,8 @@ object has to be creted and passed, to allow the expression to access the featur
   exp.evaluate(context)
   99
 
-You can also use :func:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` if you need check more than
-one feature.  Using :func:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` will increase the speed
+You can also use :meth:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` if you need check more than
+one feature.  Using :meth:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` will increase the speed
 that evaluate takes to run.
 
 .. code-block:: python
@@ -115,7 +115,7 @@ that evaluate takes to run.
   context.setFeature(feature)
   exp.prepare(context)
   exp.evaluate(feature)
- 
+
 
 
 Handling errors
