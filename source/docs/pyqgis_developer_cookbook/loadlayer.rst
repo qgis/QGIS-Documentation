@@ -21,14 +21,20 @@ them here.
 Vector Layers
 =============
 
-To load a vector layer, specify layer's data source identifier, name for the
+To create a vector layer instance, specify layer's data source identifier, name for the
 layer and provider's name:
 
 .. code-block:: python
 
-  layer = QgsVectorLayer(data_source, layer_name, provider_name)
-  if not layer.isValid():
-    print("Layer failed to load!")
+ # The format is:
+ # vlayer = QgsVectorLayer(data_source, layer_name, provider_name)
+
+ # get the path to the shapefile, e.g. /home/youruser/ports.shp
+ path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
+
+ vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
+ if not vlayer.isValid():
+     print("Layer failed to load!")
 
 The data source identifier is a string and it is specific to each vector data
 provider. Layer's name is used in the layer list widget. It is important to
@@ -40,8 +46,8 @@ method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
 
-    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
-    if not layer:
+    vlayer = iface.addVectorLayer(path_to_ports_layer, "your layer name", "ogr")
+    if not vlayer:
       print("Layer failed to load!")
 
 This creates a new layer and adds it to the current QGIS project (making it appear
