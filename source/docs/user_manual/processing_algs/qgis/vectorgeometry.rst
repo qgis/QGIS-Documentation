@@ -1255,7 +1255,37 @@ Outputs
 
 ``Fixed geometries`` [vector: line, polygon]
   Layer with fixed geometries.
+  
 
+.. _qgisantimeridiansplit:
+
+Geodesic line split at antimeridian
+-----------------------------------
+
+This algorithm splits a line into multiple geodesic segments, whenever the line 
+crosses the antimeridian (±180 degrees longitude).
+
+Splitting at the antimeridian helps the visual display of the lines in some 
+projections. The returned geometry will always be a multi-part geometry.
+
+Whenever line segments in the input geometry cross the antimeridian, they will 
+be split into two segments, with the latitude of the breakpoint being determined
+using a geodesic line connecting the points either side of this segment. The 
+current project ellipsoid setting will be used when calculating this breakpoint.
+
+If the input geometry contains M or Z values, these will be linearly interpolated 
+for the new vertices created at the antimeridian.
+
+Parameters
+..........
+``Input layer`` [vector: lines]
+  Vector input line layer
+
+Outputs
+.......
+
+``Split`` [vector: lines]
+  Vector line layer resulting from geodesic split. 
 
 .. _qgisgeometrybyexpression:
 
