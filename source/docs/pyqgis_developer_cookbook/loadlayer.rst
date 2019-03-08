@@ -26,11 +26,12 @@ layer and provider's name:
 
 .. code-block:: python
 
+ import os
+ # get the path to the shapefile e.g. /home/project/data/ports.shp
+ path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
+
  # The format is:
  # vlayer = QgsVectorLayer(data_source, layer_name, provider_name)
-
- # get the path to the shapefile, e.g. /home/youruser/ports.shp
- path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
 
  vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
  if not vlayer.isValid():
@@ -41,12 +42,26 @@ provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
+For a geopackage vector layer:
+
+.. code-block:: python
+
+ import os
+ # get the path to a geopackage  e.g. /home/project/data/data.gpkg
+ path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
+ # append the layername part
+ gpkg_places_layer = path_to_gpkg + "|layername=places"
+ # e.g. gpkg_places_layer = "/home/project/data/data.gpkg|layername=places"
+ vlayer = QgsVectorLayer(gpkg_places_layer, "Places layer", "ogr")
+ if not vlayer.isValid():
+     print("Layer failed to load!")
+
 The quickest way to open and display a vector layer in QGIS is the :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
 method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
 
-    vlayer = iface.addVectorLayer(path_to_ports_layer, "your layer name", "ogr")
+    vlayer = iface.addVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
     if not vlayer:
       print("Layer failed to load!")
 
