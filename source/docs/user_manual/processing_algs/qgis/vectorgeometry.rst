@@ -485,7 +485,7 @@ See also
 
 .. _qgisknearestconcavehull:
 
-Concave hull (k-nearest neighbor) |34| 
+Concave hull (k-nearest neighbor) |34|
 --------------------------------------
 This algorithm generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
@@ -501,7 +501,7 @@ convex hull.
 
 If a field is selected, the algorithm will group the features in the
 input layer using unique values in that field and generate individual
-polygons in the output layer for each group. 
+polygons in the output layer for each group.
 
 Parameters
 ..........
@@ -1255,25 +1255,25 @@ Outputs
 
 ``Fixed geometries`` [vector: line, polygon]
   Layer with fixed geometries.
-  
+
 
 .. _qgisantimeridiansplit:
 
-Geodesic line split at antimeridian
------------------------------------
+Geodesic line split at antimeridian |36|
+----------------------------------------
 
-This algorithm splits a line into multiple geodesic segments, whenever the line 
+This algorithm splits a line into multiple geodesic segments, whenever the line
 crosses the antimeridian (±180 degrees longitude).
 
-Splitting at the antimeridian helps the visual display of the lines in some 
+Splitting at the antimeridian helps the visual display of the lines in some
 projections. The returned geometry will always be a multi-part geometry.
 
-Whenever line segments in the input geometry cross the antimeridian, they will 
+Whenever line segments in the input geometry cross the antimeridian, they will
 be split into two segments, with the latitude of the breakpoint being determined
-using a geodesic line connecting the points either side of this segment. The 
+using a geodesic line connecting the points either side of this segment. The
 current project ellipsoid setting will be used when calculating this breakpoint.
 
-If the input geometry contains M or Z values, these will be linearly interpolated 
+If the input geometry contains M or Z values, these will be linearly interpolated
 for the new vertices created at the antimeridian.
 
 Parameters
@@ -1284,8 +1284,8 @@ Parameters
 Outputs
 .......
 
-``Split`` [vector: lines]
-  Vector line layer resulting from geodesic split. 
+``Split`` [vector: line]
+  Vector line layer resulting from geodesic split.
 
 .. _qgisgeometrybyexpression:
 
@@ -1554,7 +1554,7 @@ Calculates the minimum enclosing circle which covers each feature in an input la
 
 .. figure:: img/minimum_enclosing_circles.png
    :align: center
-   
+
    Enclosing circles for each feature
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
@@ -3091,6 +3091,7 @@ Outputs
 
 .. |32| replace:: ``NEW in 3.2``
 .. |34| replace:: ``NEW in 3.4``
+.. |36| replace:: ``NEW in 3.6``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
