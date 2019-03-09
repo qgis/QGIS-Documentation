@@ -199,7 +199,7 @@ Parameters
 
   Default: *Not set*
 
-``Additional creation options`` [string] |34|
+``Additional creation options`` [string]
   Optional
 
 Outputs
@@ -207,12 +207,3 @@ Outputs
 
 ``Contours`` [vector: line]
   Output file for contour lines.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |34| replace:: ``NEW in 3.4``
