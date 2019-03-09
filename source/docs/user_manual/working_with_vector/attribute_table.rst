@@ -919,7 +919,7 @@ table.
   desirable. Mainly because there are attributes in the relationship that can only 
   have values when a relationship is established. If your tables are layers (have
   a geometry field) it coud be interested activate the :guilabel:`On map identification` 
-  option for the foreign key fields in the pivot_table.
+  option for the foreign key fields in the pivot table.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
