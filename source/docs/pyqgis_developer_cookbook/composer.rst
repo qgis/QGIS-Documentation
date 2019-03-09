@@ -1,5 +1,3 @@
-.. only:: html
-
 
 .. index:: Map rendering, Map printing
 
@@ -9,7 +7,11 @@
 Map Rendering and Printing
 **************************
 
-.. warning:: |outofdate|
+The code snippets on this page needs the following imports:
+
+.. code-block:: python
+
+ import os
 
 .. contents::
    :local:
@@ -27,27 +29,31 @@ The rendering is done creating a :class:`QgsMapSettings <qgis.core.QgsMapSetting
 and then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` with those options. The latter is then
 used to create the resulting image.
 
-Here's an example
+Here's an example:
 
 .. code-block:: python
 
-  layer=iface.activeLayer()
-  options = QgsMapSettings()
-  options.setLayers([layer])
-  options.setBackgroundColor(QColor(255, 255, 255))
-  options.setOutputSize(QSize(800, 600))
-  options.setExtent(layer.extent())
+ image_location = os.path.join(QgsProject.instance().homePath(), "render.png")
 
-  render = QgsMapRendererParallelJob(options)
+ # e.g. vlayer = iface.activeLayer()
+ vlayer = QgsProject.instance().mapLayersByName("countries")[0]
+ options = QgsMapSettings()
+ options.setLayers([vlayer])
+ options.setBackgroundColor(QColor(255, 255, 255))
+ options.setOutputSize(QSize(800, 600))
+ options.setExtent(vlayer.extent())
 
-  def finished():
-      img = render.renderedImage()
-      img.save("/Users/myuser/render.png","png")
-      print("saved")
+ render = QgsMapRendererParallelJob(options)
 
-  render.finished.connect(finished)
+ def finished():
+     img = render.renderedImage()
+     # save the image; e.g. img.save("/Users/myuser/render.png","png")
+     img.save(image_location, "png")
+     print("saved")
 
-  render.start()
+ render.finished.connect(finished)
+
+ render.start()
 
 
 Rendering layers with different CRS
@@ -99,7 +105,7 @@ Here's a description of some of the main layout items that can be added to a lay
   .. code-block:: python
 
     map = QgsLayoutItemMap(layout)
-    layout.addItem(mapp)
+    layout.addItem(map)
 
 * label --- allows displaying labels. It is possible to modify its font, color,
   alignment and margin
@@ -169,7 +175,8 @@ A frame is drawn around each item by default. You can remove it as follows:
 
 .. code-block:: python
 
-  composerLabel.setFrameEnabled(False)
+  # for a composer label
+  label.setFrameEnabled(False)
 
 Besides creating the layout items by hand, QGIS has support for layout
 templates which are essentially compositions with all their items saved to a
@@ -187,8 +194,10 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
 
 .. code-block:: python
 
-  exporter = QgsLayoutExporter(layout)
-  exporter.exportToPdf("path/to/output/pdf", QgsLayoutExporter.PdfExportSettings())
+ pdf_path = os.path.join(QgsProject.instance().homePath(), "output.pdf")
+
+ exporter = QgsLayoutExporter(layout)
+ exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
 
 Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
 
