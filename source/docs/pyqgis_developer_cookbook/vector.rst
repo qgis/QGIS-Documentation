@@ -547,7 +547,6 @@ There are two possibilities to export a vector layer:
   .. code-block:: python
 
     error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
-
     if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
@@ -558,9 +557,10 @@ There are two possibilities to export a vector layer:
   The third parameter specifies output text encoding. Only some drivers need this
   for correct operation (Shapefile is one of those), but if you
   are not using international characters you do not have to care much about
-
-  the encoding. The fourth parameter that we left as ``None`` may specify
-  destination CRS --- if a valid instance of :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
+  the encoding.
+  
+  The fourth parameter that we left as ``None`` may specify destination CRS ---
+  if a valid instance of :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
   is passed, the layer is transformed to that CRS.
 
   For valid driver names please consult the `supported formats by OGR`_ --- you
