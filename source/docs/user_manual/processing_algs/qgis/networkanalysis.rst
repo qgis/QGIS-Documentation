@@ -524,11 +524,3 @@ Outputs
 
 ``Shortest path`` [vector: line]
   Line layer of the shortest or fastest path from the start point to the end point.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

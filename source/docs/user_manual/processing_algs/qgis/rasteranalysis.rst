@@ -159,8 +159,8 @@ Outputs
 
 .. _qgisreclassifybylayer:
 
-Reclassify by layer |32|
-------------------------
+Reclassify by layer
+-------------------
 Reclassifies a raster band by assigning new class values based on the ranges
 specified in a vector table.
 
@@ -169,7 +169,7 @@ Parameters
 
 ``Raster Layer`` [raster]
   Raster layer to reclassify.
-  
+
 ``Band number`` [raster band]
   Band of the raster you want to recalculate values.
 
@@ -239,8 +239,8 @@ Outputs
 
 .. _qgisreclassifybytable:
 
-Reclassify by table |32|
-------------------------
+Reclassify by table
+-------------------
 Reclassifies a raster band by assigning new class values based on the ranges
 specified in a fixed table.
 
@@ -249,7 +249,7 @@ Parameters
 
 ``Raster Layer`` [raster]
   Raster layer to reclassify.
-  
+
 ``Band number`` [raster band]
   Band of the raster you want to recalculate values.
 
@@ -259,7 +259,7 @@ Parameters
   A 3-columns table to fill with the values to set the boundaries of each class
   (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the band
   values that fall in the class.
- 
+
 ``Output no data value`` [number]
   Value to apply to no data values.
 
@@ -311,8 +311,8 @@ Outputs
 
 .. _qgisrastersampling:
 
-Sample raster values |34|
--------------------------
+Sample raster values
+--------------------
 Extracts raster values at the point locations. If the raster layer is multiband,
 each band is sampled.
 
@@ -342,8 +342,8 @@ Outputs
 
 .. _qgiszonalhistogram:
 
-Zonal histogram |32|
---------------------
+Zonal histogram
+---------------
 Appends fields representing counts of each unique value from a raster layer contained
 within polygon features.
 
@@ -424,13 +424,3 @@ Parameters
   * Variety
   * Variance
   * All
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |32| replace:: ``NEW in 3.2``
-.. |34| replace:: ``NEW in 3.4``
