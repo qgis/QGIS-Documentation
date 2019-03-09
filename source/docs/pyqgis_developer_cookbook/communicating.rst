@@ -140,17 +140,25 @@ it accepts widgets. Here is an example that you can try in the console.
     iface.messageBar().clearWidgets()
 
 Also, you can use the built-in status bar to report progress, as in the next
-example
+example:
 
 .. code-block:: python
 
-    count = layer.featureCount()
-    for i, feature in enumerate(features):
-        #do something time-consuming here
-        ...
-        percent = i / float(count) * 100
-        iface.mainWindow().statusBar().showMessage("Processed {} %".format(int(percent)))
-    iface.mainWindow().statusBar().clearMessage()
+ vlayer = QgsProject.instance().mapLayersByName("countries")[0]
+
+ count = vlayer.featureCount()
+ features = vlayer.getFeatures()
+
+ for i, feature in enumerate(features):
+     # do something time-consuming here
+     print('') # printing should give enough time to present the progress
+
+     percent = i / float(count) * 100
+     # iface.mainWindow().statusBar().showMessage("Processed {} %".format(int(percent)))
+     iface.statusBarIface().showMessage("Processed {} %".format(int(percent)))
+
+ iface.statusBarIface().clearMessage()
+
 
 Logging
 =======
@@ -173,10 +181,16 @@ save about the execution of your code.
  cases you should always use thread safe classes (:class:`QgsLogger <qgis.core.QgsLogger>`
  or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) instead.
 
+
 .. note::
 
    You can see the output of the :class:`QgsMessageLog <qgis.core.QgsMessageLog>`
    in the :ref:`log_message_panel`
+
+.. note::
+
+ * :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging / developers (i.e. you suspect they are triggered by some broken code)
+ * :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to investigate issues by sysadmins (e.g. to help a sysadmin to fix configurations)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
