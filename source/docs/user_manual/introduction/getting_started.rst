@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. Purpose: This chapter aims to describe how the user starts to use QGIS. It
 .. should be kept short with only few steps to get QGIS working with two layers.
@@ -345,6 +344,5 @@ Other ways to produce output files are:
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

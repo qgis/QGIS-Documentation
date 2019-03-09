@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 |LS| Calculating the Forest Parameters
 ===============================================================================
@@ -202,4 +201,3 @@ results you just calculated.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

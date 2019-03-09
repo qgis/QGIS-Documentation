@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. index:: Digitizing, Topology, Geometry validity, Errors
    single: Plugins; Geometry checker
@@ -155,4 +154,3 @@ by attribute value`.
    :width: 2.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

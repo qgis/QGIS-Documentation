@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 |LS| Creating a New Vector Dataset
 ===============================================================================
@@ -310,6 +309,5 @@ be useful.
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |schoolAreaType1| replace:: athletics field
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em

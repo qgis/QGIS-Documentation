@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 |LS| Spatial Queries
 ===============================================================================
@@ -384,4 +383,3 @@ how to create them using PostGIS.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,4 +1,3 @@
-|updatedisclaimer|
 
 .. index:: Attribute table
 .. _sec_attribute_table:
@@ -935,6 +934,5 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

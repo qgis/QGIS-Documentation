@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 Using modeler-only tools for creating a model
 =============================================
@@ -60,4 +59,3 @@ The final algorithm should look like this:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

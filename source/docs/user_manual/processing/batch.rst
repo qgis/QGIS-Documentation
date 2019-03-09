@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 
 .. _processing_batch:
@@ -143,4 +142,3 @@ progress bar in the lower part of the dialog.
 
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

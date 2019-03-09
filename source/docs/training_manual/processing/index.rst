@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. QGIS processing guide documentation master file, created by
    sphinx-quickstart on Thu Jun 13 00:05:30 2013.
@@ -63,4 +62,3 @@ Contents:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

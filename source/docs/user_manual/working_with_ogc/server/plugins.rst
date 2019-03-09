@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 *******
 Plugins
@@ -100,4 +99,3 @@ You can have a look at the default GetCapabilities of the QGIS server at:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

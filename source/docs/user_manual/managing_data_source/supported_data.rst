@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. _supported_format:
 
@@ -603,4 +602,3 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
    :width: 1em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 |LS| Feature Topology
 ===============================================================================
@@ -316,4 +315,3 @@ so that attribute editing is simpler and more effective.
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

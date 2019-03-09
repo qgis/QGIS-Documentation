@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. index:: GPS tracking
 .. _`sec_gpstracking`:
@@ -235,4 +234,3 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

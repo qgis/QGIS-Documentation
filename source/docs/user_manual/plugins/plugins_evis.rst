@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. index:: Geocoding photo, eVis
 .. _`evis`:
@@ -561,4 +560,3 @@ A complete sample XML file with three queries is displayed below:
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

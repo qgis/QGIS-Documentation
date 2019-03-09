@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 *******************************************************************************
 |MOD| Using Spatial Databases in QGIS 
@@ -27,4 +26,3 @@ spatial database implementations including spatialite.
    source folder.
 
 .. |MOD| replace:: Module:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

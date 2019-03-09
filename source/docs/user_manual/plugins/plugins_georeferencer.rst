@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. index:: Georeferencing images
    single: Raster; Georeference
@@ -290,7 +289,6 @@ the new georeferenced raster.
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomLast| image:: /static/common/mActionZoomLast.png

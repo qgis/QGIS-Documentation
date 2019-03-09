@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. index:: Layout; Scale bar, Map scalebar
 .. _layout_scalebar_item:
@@ -146,4 +145,3 @@ Fill colors are only used for *Single Box* and *Double Box* styles.
 
 .. |scaleBar| image:: /static/common/mActionScaleBar.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

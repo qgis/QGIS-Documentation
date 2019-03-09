@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 *******************************************************************************
 |MOD| Plugins
@@ -23,4 +22,3 @@ you'll be shown how to activate and use plugins.
    source folder.
 
 .. |MOD| replace:: Module:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

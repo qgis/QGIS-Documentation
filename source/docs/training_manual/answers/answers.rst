@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 Answer Sheet
 ===============================================================================
@@ -1208,4 +1207,3 @@ As you can see, our constraint allows nulls to be added into the database.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

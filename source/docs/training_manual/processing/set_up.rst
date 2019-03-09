@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 Setting-up the processing framework
 ====================================
@@ -55,4 +54,3 @@ which we will do in the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 .. index:: Plugins; Developing, Python; Developing plugins
 
@@ -44,4 +43,3 @@ For definitions of ``~`` and ``(UserProfile)`` see :ref:`core_and_external_plugi
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

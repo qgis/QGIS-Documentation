@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 |LS| Working with Raster Data
 ===============================================================================
@@ -158,4 +157,3 @@ symbolization is useful in the case of rasters as well.
    :width: 2.3em
 .. |hard| image:: /static/global/hard.png
 .. |toolbox| replace:: :menuselection:`Processing --> Toolbox`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 |LS| Terrain Analysis
 ===============================================================================
@@ -476,4 +475,3 @@ problem? That's the topic for the next lesson, starting in the next module.
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`

@@ -1,6 +1,5 @@
 .. only:: html
 
-   |updatedisclaimer|
 
 The raster calculator. No-data values
 ============================================================
@@ -103,4 +102,3 @@ All that can be done in a single operation with the calculator. We leave that as
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
