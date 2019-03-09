@@ -12,7 +12,7 @@ The code snippets on this page needs the following imports:
 
 .. code-block:: python
 
- import os # This is is needed in the pyconsole also
+ import os # This is is needed in the pyqgis console also
  from qgis.core import (
      QgsVectorLayer
  )
@@ -73,7 +73,7 @@ method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
       print("Layer failed to load!")
 
 This creates a new layer and adds it to the current QGIS project (making it appear
-in the layer list) in one step. The function returns the layer instance or `None`
+in the layer list) in one step. The function returns the layer instance or ``None``
 if the layer couldn't be loaded.
 
 The following list shows how to access various data sources using vector data
@@ -216,8 +216,8 @@ providers:
 
    .. code-block:: python
 
-      # layer is a vector layer, uri is a QgsDataSourceUri instance
-      layer.setDataSource(uri.uri(), "layer name you like", "postgres")
+      # vlayer is a vector layer, uri is a QgsDataSourceUri instance
+      vlayer.setDataSource(uri.uri(), "layer name you like", "postgres")
 
 
 .. index::
