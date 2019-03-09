@@ -816,53 +816,53 @@ Introducing many-to-many (N-M) relations
 ----------------------------------------
 
 N-M relations are many-to-many relation between two tables. For instance, the 
-``airport`` and ``airline`` layers: an airport receives several airline 
+``airports`` and ``airlines`` layers: an airport receives several airline 
 companies and an airline company flies to several airports.
 
 This SQL code creates the three tables what we need for a N-M relationship in
 a PostgreSQL/PostGIS schema named *locations*. You can run the code using pgAdmin
-or similar tools. The airport table stores the ``airport`` layer and the airline 
-table stores the ``airline`` layer. In both tables few fields are used for 
-clarity. The *tricky* part is ``airport_airline`` table. We need it to list all
+or similar tools. The airports table stores the ``airports`` layer and the airlines 
+table stores the ``airlines`` layer. In both tables few fields are used for 
+clarity. The *tricky* part is ``airports_airlines`` table. We need it to list all
 airlines for all airports (or vice versa). This kind of tables are kwown 
 as *pivot tables*. The *constraints* in this table force that one airport can be 
 associated with an airline only if both already exist in their layers.
 
 .. code-block:: sql
 
-   create table locations.airport
+   create table locations.airports
    (
       id serial not null,
       geom geometry(Point, 4326) not null,
       airport_name text not null,
-      constraint airport_pkey primary key (id)
+      constraint airports_pkey primary key (id)
    );
 
-   create index airport_geom_idx on locations.airport using gist (geom);
+   create index airports_geom_idx on locations.airports using gist (geom);
 
-   create table locations.airline
+   create table locations.airlines
    (
       id serial not null,
       geom geometry(Point, 4326) not null,
       airline_name text not null,
-      constraint airline_pkey primary key (id)
+      constraint airlines_pkey primary key (id)
    );
 
-   create index airline_geom_idx on locations.airline using gist (geom);
+   create index airlines_geom_idx on locations.airlines using gist (geom);
 
-   create table locations.airport_airline
+   create table locations.airports_airlines
    (
       id serial not null,
       airport_fk integer not null,
       airline_fk integer not null,
-      constraint airport_airline_pkey primary key (id),
-      constraint airport_airline_airport_fk_fkey foreign key (airport_fk)
-         references locations.airport (id)
+      constraint airports_airlines_pkey primary key (id),
+      constraint airports_airlines_airport_fk_fkey foreign key (airport_fk)
+         references locations.airports (id)
          on delete cascade
          on update cascade
          deferrable initially deferred,
-      constraint airport_airline_airline_fk_fkey foreign key (airline_fk)
-         references locations.airline (id)
+      constraint airports_airlines_airline_fk_fkey foreign key (airline_fk)
+         references locations.airlines (id)
          on delete cascade
          on update cascade
          deferrable initially deferred
@@ -871,8 +871,8 @@ associated with an airline only if both already exist in their layers.
 In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
-* a relation between ``airline`` table and the pivot table;
-* and a second one between ``airport`` table and the pivot table.
+* a relation between ``airlines`` table and the pivot table;
+* and a second one between ``airports`` table and the pivot table.
 
 An easier way to do it is using the :guilabel:`Discover Relations` in the 
 :menuselection:`Project --> Properties --> Relations`. QGIS automatically will read
@@ -887,7 +887,7 @@ to load the three tables in the QGIS project before.
    Setup relations and autodiscover option
 
 In case you want to remove an ``airport`` or an ``airline``, QGIS won't remove
-the associated record(s) in ``airport_airline`` table. This task will be made by
+the associated record(s) in ``airports_airlines`` table. This task will be made by
 the database if we specify the right *constraints* in the pivot table creation as 
 in the current sample.
 
@@ -898,9 +898,9 @@ in the current sample.
   add or update row(s) in all tables (airlines, airports and the pivot tables).
 
 Finally we have to select the right cardinalilty in the 
-:menuselection:`Layer Properties --> Attributes Form` for the ``airport`` and 
-``airline`` layers. For the first one we should choose the **airline (id)** option 
-and for the second one the **airport (id)** option.
+:menuselection:`Layer Properties --> Attributes Form` for the ``airports`` and 
+``airlines`` layers. For the first one we should choose the **airlines (id)** option 
+and for the second one the **airports (id)** option.
 
 .. _figure_cardinality:
 
@@ -911,7 +911,7 @@ and for the second one the **airport (id)** option.
 
 Now you can associate an airport with an airline (or an airline with an airport)
 using the :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
-in the subforms. Automatically a record will be inserted in the ``airport_airline`` 
+in the subforms. Automatically a record will be inserted in the ``airports_airlines`` 
 table.
 
 .. _figure_relationship_working:
@@ -927,14 +927,15 @@ table.
   desirable. Mainly because there are attributes in the relationship that can only 
   have values when a relationship is established. If your tables are layers (have
   a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
-  option for the foreign key fields in the pivot table.
+  option (:menuselection:`Layer Properties --> Attributes Form --> Available widget --> Fields`) 
+  for the foreign key fields in the pivot table.
 
 .. note:: **Pivot table primary key**
 
-  Often pivot tables use as primary key the combination of fiels used in foreign 
-  keys. In our sample: *constraint airport_airline_pkey primary key (airport_fk, airline_fk)*. QGIS
-  assumes a single primary key so this is not a recommended practice.
-  
+  Avoid using multiple fields as primary key in pivot tables. QGIS assumes a single 
+  primary key so a constraint like *constraint airport_airline_pkey primary key (airport_fk, airline_fk)*
+  would be a mistake.
+    
   
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
