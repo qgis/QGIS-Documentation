@@ -268,7 +268,7 @@ to construct the URI to ensure that special characters are encoded properly.
 
 
 * **url** (required) : WCS Server URL. Do not use VERSION in URL, because each
-  version of WCS is using different parameter name for GetCapabilities version,
+  version of WCS is using different parameter name for **GetCapabilities** version,
   see param version.
 * **identifier** (required) : Coverage name
 * **time** (optional) : time position or time period (beginPosition/endPosition[/timeResolution])
@@ -322,24 +322,25 @@ Adding a layer to the current project is done using the :meth:`addMapLayer() <qg
 
 .. code-block:: python
 
-    QgsProject.instance().addMapLayer(layer)
+    QgsProject.instance().addMapLayer(rlayer)
 
 To add a layer at an absolute position:
 
 .. code-block:: python
 
     # first add the layer without showing it
-    QgsProject.instance().addMapLayer(layer, False)
+    QgsProject.instance().addMapLayer(rlayer, False)
     # obtain the layer tree of the top-level group in the project
     layerTree = iface.layerTreeCanvasBridge().rootGroup()
     # the position is a number starting from 0, with -1 an alias for the end
-    layerTree.insertChildNode(-1, QgsLayerTreeLayer(layer))
+    layerTree.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
 
 If you want to delete the layer use the :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method:
 
 .. code-block:: python
 
-    QgsProject.instance().removeMapLayer(layer_id)
+    # QgsProject.instance().removeMapLayer(layer_id)
+    QgsProject.instance().removeMapLayer(rlayer.id())
 
 In the above code, the layer id is passed (you can get it calling the :meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer),
 but you can also pass the layer object itself.
