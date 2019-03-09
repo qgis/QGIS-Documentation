@@ -819,6 +819,15 @@ N-M relations are many-to-many relation between two tables. For instance, the
 ``airport`` and ``airline`` layers: an airport receives several airline 
 companies and an airline company flies to several airports.
 
+This SQL code creates the three tables what we need for a N-M relationship in
+a PostgreSQL/PostGIS schema named *locations*. You can run the code using pgAdmin
+or similar tools. The airport table stores the ``airport`` layer and the airline 
+table stores the ``airline`` layer. In both tables few fields are used for 
+clarity. The *tricky* part is ``airport_airline`` table. We need it to list all
+airlines for all airports (or vice versa). This kind of tables are kwown 
+as *pivot tables*. The *constraints* in this table force that one airport can be 
+associated with an airline only if both already exist in their layers.
+
 .. code-block:: sql
 
    create table locations.airport
@@ -859,8 +868,7 @@ companies and an airline company flies to several airports.
          deferrable initially deferred
     );
 
-We need the ``airport_airline`` table (pivot table) to list all airlines for 
-all airports. In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
+In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
 * a relation between ``airline`` table and the pivot table;
@@ -921,7 +929,13 @@ table.
   a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
   option for the foreign key fields in the pivot table.
 
+.. note:: **Pivot table primary key**
 
+  Often pivot tables use as primary key the combination of fiels used in foreign 
+  keys. In our sample: *constraint airport_airline_pkey primary key (airport_fk, airline_fk)*. QGIS
+  assumes a single primary key so this is not a recommended practice.
+  
+  
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
