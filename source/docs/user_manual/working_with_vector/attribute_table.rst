@@ -870,6 +870,13 @@ An easier way to do it is using the :guilabel:`Discover Relations` in the
 :menuselection:`Project --> Properties --> Relations`. QGIS automatically will setup 
 both relations but remember to load the three tables in a QGIS project before.
 
+.. _figure_linked_forms:
+
+.. figure:: img/relations6.png
+   :align: center
+
+   Setup relations and autodiscover option
+
 In case you want to remove an ``airport`` or an ``airline``, QGIS won´t remove
 the associated record(s) in ``airport_airline`` table. This task will be made by
 the database if we specify the right *constraints* in the pivot table creation as 
@@ -886,60 +893,30 @@ Finally we ha to select the right cardinalilty in the
 ``airline`` layers. For the first one we should choose the **airline (id)** option 
 and for the second one the **airport (id)** option.
 
+.. _figure_linked_forms:
+
+.. figure:: img/relations7.png
+   :align: center
+
+   Set relationship cardinality
+
 Now you can associate an airport with an airline (or an airline with an airport)
 using the :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
 in the subforms. Automatically a record will be inserted in the ``airport_airline`` 
 table.
 
+.. _figure_linked_forms:
+
+.. figure:: img/relations8.png
+   :align: center
+
+   N-M relationship between airports and airlines
+
 .. note:: Using **Many to one relation** cardinality
 
   Sometimes hide the pivot table in a N-M relationship maintenance is not 
-  desirable. Mainly because there attributes in the relationship. Attributes that
-  can only have value when a relationship is established. 
-    
-.. index:: Many-to-many relation; Relation
-.. _many_to_many_relation:
-
-Introducing many-to-many (N-M) relations
-----------------------------------------
-
-N-M relations are many-to-many relation between two tables. For instance, the
-``airports`` and ``airlines`` layers: an airport receives several airline
-companies and an airline company flies to several airports.
-
-In such case, we need a pivot table to list all airlines for all airports. In
-QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
-as explained above:
-
-* a relation between ``airlines`` table and the pivot table;
-* and a second one between ``airports`` table and the pivot table.
-
-When we add a new child (i.e. a company to an airport), QGIS will add a new row
-in the pivot table and in the ``airlines`` table. If we link a company to an
-airport, QGIS will only add a row in the pivot table.
-
-In case you want to remove a link, an airline or an airport, QGIS won't remove
-the row in the pivot table. The database administrator should add a *ON DELETE
-CASCADE* instruction in the foreign key constraint:
-
-.. code-block:: sql
-
-   ALTER TABLE location.airlines
-   ADD CONSTRAINT location_airlines_airports_id_fkey
-      FOREIGN KEY (id)
-         REFERENCES location.airports(id)
-            ON DELETE CASCADE;
-
-.. note:: **Combining N-M relation with automatic transaction group**
-
-  You should enable the transaction mode in :menuselection:`Project Properties
-  --> Data Sources -->` when working on such context. QGIS should be able to
-  add or update row(s) in all tables (airlines, airports and the pivot tables).
-
-Finally, adding such relations in a form is done in the same way that for a
-one-to-many relation. The :guilabel:`Relations` panel in the :guilabel:`Fields`
-properties of the vector layer will let the user add the relation in the form.
-It will appear as a **Many to many relation**.
+  desirable. Mainly because there attributes in the relationship that can only 
+  have value when a relationship is established. 
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
