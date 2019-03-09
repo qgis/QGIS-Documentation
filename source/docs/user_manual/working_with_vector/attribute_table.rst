@@ -878,7 +878,7 @@ to load the three tables in a QGIS project before.
 
    Setup relations and autodiscover option
 
-In case you want to remove an ``airport`` or an ``airline``, QGIS won´t remove
+In case you want to remove an ``airport`` or an ``airline``, QGIS won't remove
 the associated record(s) in ``airport_airline`` table. This task will be made by
 the database if we specify the right *constraints* in the pivot table creation as 
 in the current sample.
