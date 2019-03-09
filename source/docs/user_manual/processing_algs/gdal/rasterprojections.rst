@@ -34,8 +34,8 @@ Parameters
 
 .. _gdalextractprojection:
 
-Extract projection |34|
------------------------
+Extract projection
+------------------
 Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
 
@@ -61,11 +61,11 @@ Parameters
 Outputs
 .......
 
-``World file`` [file] |34|
+``World file`` [file]
   Text file with extension :file:`.wld` containing transformation parameters
   for  the raster file.
 
-``ESRI Shapefile prj file`` [file] |34|
+``ESRI Shapefile prj file`` [file]
   Text file with :file:`.prj` extension that describes the CRS.
   Will be None if ``Create also .prj file`` is False.
 
@@ -155,5 +155,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

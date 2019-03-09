@@ -2076,7 +2076,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
-.. |atlasNext|  image:: /static/common/mActionAtlasNext.png
+.. |atlasNext| image:: /static/common/mActionAtlasNext.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
@@ -2146,7 +2146,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
    :width: 1.5em
-.. |history|  image:: /static/common/mActionHistory.png
+.. |history| image:: /static/common/mActionHistory.png
    :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
@@ -2240,7 +2240,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

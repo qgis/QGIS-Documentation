@@ -687,7 +687,7 @@ two and view the attribute table.
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png
