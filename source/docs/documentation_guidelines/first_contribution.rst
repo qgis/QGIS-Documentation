@@ -518,7 +518,7 @@ Further reading
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 2.18
+.. |CURRENT| replace:: 3.4
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
 .. |githubBluePlus| image:: /static/common/githubBluePlus.png
