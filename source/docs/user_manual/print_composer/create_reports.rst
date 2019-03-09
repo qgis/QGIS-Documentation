@@ -45,8 +45,6 @@ For this example, we use some administrative boundaries, populated places, ports
 and airports from dataset of `Natural Earth
 <https://www.naturalearthdata.com/downloads/>`_.
 
-|
-
 .. figure:: img/project-1.png
    :align: center
 
@@ -56,8 +54,6 @@ Using the :menuselection:`Project --> New Report` command, we then create a new
 blank report. Initially, there’s not much to look at – the dialog which is
 displayed looks much like the print layout designer, except for the new
 :guilabel:`Report Organizer` panel shown on the left:
-
-|
 
 .. figure:: img/report-2.png
    :align: center
@@ -75,8 +71,6 @@ very first page (or pages… individual parts of reports can be multi-page if
 desired) in the report, and the footer would be the last page. Let’s go ahead
 and enable the header, and hit the :guilabel:`Edit` button next to it:
 
-|
-
 .. figure:: img/report_header.png
   :align: center
 
@@ -92,8 +86,6 @@ as are available for standard print layouts – so you can use any desired
 combination of labels, pictures, maps, tables, etc. Let’s add some items to our
 report header to demonstrate:
 
-|
-
 .. figure:: img/header.png
    :align: center
 
@@ -101,8 +93,6 @@ report header to demonstrate:
 
 We’ll also create a simple footer for the report, by checking the
 :guilabel:`Include report footer` option and hitting :guilabel:`Edit`.
-
-|
 
 .. figure:: img/footer.png
    :align: center
@@ -115,8 +105,6 @@ Exporting is done from the Report menu – in this case we select
 Here’s the not-very-impressive result – a two page PDF consisting of our header
 and footer:
 
-|
-
 .. figure:: img/headerfooter.png
    :align: center
 
@@ -125,8 +113,6 @@ and footer:
 Let’s make things more interesting. By hitting the |signPlus| :sup:`Add Static Layout Section`
 button in the :guilabel:`Report Organizer`, we’re given a choice of new sections
 to add to our report.
-
-|
 
 .. figure:: img/add_section.png
    :align: center
@@ -150,8 +136,6 @@ of a :ref:`print atlas <atlas_generation>`. You select a layer to iterate over,
 and the report will insert a section for each feature found. Selecting the new
 ::guilabel:`Field Group Section` section reveals a number of new related settings:
 
-|
-
 .. figure:: img/field_group.png
    :align: center
 
@@ -173,8 +157,6 @@ just like how a map item in an atlas can follow the current atlas feature), and
 a label showing the state’s name. If we went ahead and exported our report now,
 we’d get something like this:
 
-|
-
 .. figure:: img/report1.png
    :align: center
 
@@ -186,8 +168,6 @@ footer. So more or less an atlas, but with a header and footer page. Let’s mak
 things more interesting by adding a subsection to our state group. We do this by
 first selecting the state field group in the organizer, then hitting the
 |signPlus| :sup:`Field Group Section` button and adding a new :guilabel:`Field Group Section`:
-
-|
 
 .. figure:: img/subsection.png
    :align: center
@@ -233,8 +213,6 @@ consecutively. If we add a second subsection to the `Admin Level 1 group` for
 for each state, followed by all the airports within that state, before
 proceeding to the next state. In this case our report would be structured like
 this:
-
-|
 
 .. figure:: img/report_consec.png
    :align: center
