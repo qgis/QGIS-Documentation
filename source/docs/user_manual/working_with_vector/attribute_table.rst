@@ -871,7 +871,7 @@ An easier way to do it is using the :guilabel:`Discover Relations` in the
 all relations in your database and you ony have to select the two you need. Remember 
 to load the three tables in a QGIS project before.
 
-.. _figure_linked_forms:
+.. _figure_setup_relations:
 
 .. figure:: img/relations6.png
    :align: center
@@ -894,7 +894,7 @@ Finally we have to select the right cardinalilty in the
 ``airline`` layers. For the first one we should choose the **airline (id)** option 
 and for the second one the **airport (id)** option.
 
-.. _figure_linked_forms:
+.. _figure_cardinality:
 
 .. figure:: img/relations7.png
    :align: center
@@ -906,7 +906,7 @@ using the :guilabel:`Add child feature` or :guilabel:`Link existing child featur
 in the subforms. Automatically a record will be inserted in the ``airport_airline`` 
 table.
 
-.. _figure_linked_forms:
+.. _figure_relationship_working:
 
 .. figure:: img/relations8.png
    :align: center
