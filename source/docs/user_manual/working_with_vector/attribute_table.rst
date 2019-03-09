@@ -915,7 +915,7 @@ table.
 
 .. note:: Using **Many to one relation** cardinality
 
-  Sometimes hide the pivot table in a N-M relationship maintenance is not 
+  Sometimes hiding the pivot table in a N-M relationship maintenance is not 
   desirable. Mainly because there are attributes in the relationship that can only 
   have values when a relationship is established. If your tables are layers (have
   a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
