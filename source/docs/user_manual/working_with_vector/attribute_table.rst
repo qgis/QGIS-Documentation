@@ -867,8 +867,9 @@ as explained above:
 * and a second one between ``airport`` table and the pivot table.
 
 An easier way to do it is using the :guilabel:`Discover Relations` in the 
-:menuselection:`Project --> Properties --> Relations`. QGIS automatically will setup 
-both relations but remember to load the three tables in a QGIS project before.
+:menuselection:`Project --> Properties --> Relations`. QGIS automatically will read
+all relations in your database and you ony have to select the two you need. Remember 
+to load the three tables in a QGIS project before.
 
 .. _figure_linked_forms:
 
@@ -888,7 +889,7 @@ in the current sample.
   --> Data Sources -->` when working on such context. QGIS should be able to
   add or update row(s) in all tables (airlines, airports and the pivot tables).
 
-Finally we ha to select the right cardinalilty in the 
+Finally we have to select the right cardinalilty in the 
 :menuselection:`Layer Properties --> Attributes Form` for the ``airport`` and 
 ``airline`` layers. For the first one we should choose the **airline (id)** option 
 and for the second one the **airport (id)** option.
@@ -916,7 +917,9 @@ table.
 
   Sometimes hide the pivot table in a N-M relationship maintenance is not 
   desirable. Mainly because there attributes in the relationship that can only 
-  have value when a relationship is established. 
+  have value when a relationship is established. If your tables are layers (has
+  a geometry field) it coud be interested activate the :guilabel:`On map identification` 
+  option for the foreign key fields in the pivot_table.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
