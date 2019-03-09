@@ -14,8 +14,8 @@ Vector creation
 
 .. _qgisarrayoffsetlines:
 
-Array of offset (parallel) lines |34|
--------------------------------------
+Array of offset (parallel) lines
+--------------------------------
 Creates copies of line features in a layer, by creating multiple offset versions
 of each feature. Each new version is incrementally offset by a specified distance.
 
@@ -83,8 +83,8 @@ See also
 
 .. _qgisarraytranslatedfeatures:
 
-Array of translated features |34|
----------------------------------
+Array of translated features
+----------------------------
 Creates copies of features in a layer, by creating multiple translated versions of each.
 Each copy is incrementally displaced by a preset amount in the X, Y and/or Z axis.
 
@@ -317,8 +317,8 @@ Outputs
 
 .. _qgisimportphotos:
 
-Import geotagged photos |32|
-----------------------------
+Import geotagged photos
+-----------------------
 Creates a point layer corresponding to the geotagged locations from JPEG images
 from a source folder.
 
@@ -545,8 +545,8 @@ Outputs
 
 .. _qgispixelstopoints:
 
-Raster pixels to points |34|
-----------------------------
+Raster pixels to points
+-----------------------
 Creates a vector layer of points corresponding to each pixel in a raster layer.
 
 Converts a raster layer to a vector layer, by creating point features
@@ -576,8 +576,8 @@ Outputs
 
 .. _qgispixelstopolygons:
 
-Raster pixels to polygons |34|
-------------------------------
+Raster pixels to polygons
+-------------------------
 Creates a vector layer of polygons corresponding to each pixel in a raster layer.
 
 Converts a raster layer to a vector layer, by creating polygon features
@@ -657,10 +657,8 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
-.. |34| replace:: ``NEW in 3.4``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
