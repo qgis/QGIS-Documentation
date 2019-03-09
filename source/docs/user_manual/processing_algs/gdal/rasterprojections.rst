@@ -33,8 +33,8 @@ Parameters
 
 .. _gdalextractprojection:
 
-Extract projection |34|
------------------------
+Extract projection
+------------------
 Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
 
@@ -60,11 +60,11 @@ Parameters
 Outputs
 .......
 
-``World file`` [file] |34|
+``World file`` [file]
   Text file with extension :file:`.wld` containing transformation parameters
   for  the raster file.
 
-``ESRI Shapefile prj file`` [file] |34|
+``ESRI Shapefile prj file`` [file]
   Text file with :file:`.prj` extension that describes the CRS.
   Will be None if ``Create also .prj file`` is False.
 
@@ -146,12 +146,3 @@ Outputs
 
 ``Output layer`` [raster]
   <put output description here>
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |34| replace:: ``NEW in 3.4``

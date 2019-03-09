@@ -24,7 +24,7 @@ Depending on the geometry type of the vector layer, the attributes added to the
 table will be different:
 
 * for **point** layers: X and Y coordinates called ``xcoord`` and ``ycoord``;
-* for **line** layers: ``length`` and, |32| particularly for LineString and CompoundCurve
+* for **line** layers: ``length`` and, particularly for LineString and CompoundCurve
   geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``);
 * for **polygon** layers: ``perimeter`` and ``area``.
 
@@ -330,7 +330,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Create point on surface for each part`` [boolean |dataDefined|] |32|
+``Create point on surface for each part`` [boolean |dataDefined|]
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -484,8 +484,8 @@ See also
 
 .. _qgisknearestconcavehull:
 
-Concave hull (k-nearest neighbor) |34|
---------------------------------------
+Concave hull (k-nearest neighbor)
+---------------------------------
 This algorithm generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
 vertices.
@@ -632,8 +632,8 @@ Outputs
 
 .. _qgiswedgebuffers:
 
-Create wedge buffers |32|
--------------------------
+Create wedge buffers
+--------------------
 Creates wedge shaped buffers from input points.
 
 .. figure:: img/wedge_buffers.png
@@ -890,8 +890,8 @@ Outputs
 
 .. _qgissetzfromraster:
 
-Drape (set Z value from raster) |34|
-------------------------------------
+Drape (set Z value from raster)
+-------------------------------
 Sets the Z value of every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
 
@@ -1132,8 +1132,8 @@ Outputs
 
 .. _qgisfilterverticesbym:
 
-Filter vertices by M value |34|
--------------------------------
+Filter vertices by M value
+--------------------------
 Filters away vertices based on their M value, returning geometries with only vertex
 points that have a M value greater than or equal to the specified minimum value and/or
 less than or equal to the maximum value.
@@ -1182,8 +1182,8 @@ See also
 
 .. _qgisfilterverticesbyz:
 
-Filter vertices by Z value |34|
--------------------------------
+Filter vertices by Z value
+--------------------------
 Filters away vertices based on their Z value, returning geometries with only vertex
 points that have a Z value greater than or equal to the specified minimum value and/or
 less than or equal to the maximum value.
@@ -1342,8 +1342,8 @@ Outputs
 
 .. _qgisinterpolatepoint:
 
-Interpolate point on line |34|
-------------------------------
+Interpolate point on line
+-------------------------
 Creates a point geometry interpolated at a set distance along line or curve
 geometries.
 
@@ -1413,8 +1413,8 @@ Outputs
 
 .. _qgislinesubstring:
 
-Line substring |34|
--------------------
+Line substring
+--------------
 Returns the portion of a line (or curve) which falls between the specified start
 and end distances (measured from the beginning of the line).
 
@@ -1581,8 +1581,8 @@ See also
 
 .. _qgismultiringconstantbuffer:
 
-Multi-ring buffer (constant distance) |32|
-------------------------------------------
+Multi-ring buffer (constant distance)
+-------------------------------------
 Computes multi-ring (*donuts*) buffer for all the features in an input layer,
 using a fixed or dynamic distance and ring numbers.
 
@@ -1797,7 +1797,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-``Create point on surface for each part`` [boolean |dataDefined|] |32|
+``Create point on surface for each part`` [boolean |dataDefined|]
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -2002,8 +2002,8 @@ Outputs
 
 .. _qgisprojectpointcartesian:
 
-Project points (Cartesian) |32|
--------------------------------
+Project points (Cartesian)
+--------------------------
 Projects point geometries by a specified distance and bearing (azimuth), creating
 a new point layer with the projected points.
 
@@ -2286,8 +2286,8 @@ Outputs
 
 .. _qgisrotatefeatures:
 
-Rotate |32|
------------
+Rotate
+------
 Rotates feature geometries by the specified angle clockwise.
 The rotation occurs around each feature's centroid, or optionally
 around a unique preset point.
@@ -2320,8 +2320,8 @@ Outputs
 
 .. _qgissegmentizebymaxangle:
 
-Segmentize by maximum angle |32|
---------------------------------
+Segmentize by maximum angle
+---------------------------
 Segmentizes a geometry by converting curved sections to linear sections.
 
 The segmentization is performed by specifying the maximum allowed radius angle
@@ -2354,8 +2354,8 @@ See also
 
 .. _qgissegmentizebymaxdistance:
 
-Segmentize by maximum distance |32|
------------------------------------
+Segmentize by maximum distance
+------------------------------
 Segmentizes a geometry by converting curved sections to linear sections.
 
 The segmentization is performed by specifying the maximum allowed offset
@@ -2418,8 +2418,8 @@ Outputs
 
 .. _qgissetmfromraster:
 
-Set M value from raster |34|
-----------------------------
+Set M value from raster
+-----------------------
 
 Sets the M value for every vertex in the feature geometry to a value sampled from
 a band within a raster layer.
@@ -2806,8 +2806,8 @@ Outputs
 
 .. _qgisswapxy:
 
-Swap X and Y coordinates |32|
------------------------------
+Swap X and Y coordinates
+------------------------
 Switches the X and Y coordinate values in input geometries.
 
 It can be used to repair geometries which have accidentally had their latitude
@@ -2830,8 +2830,8 @@ Outputs
 
 .. _qgistaperedbuffer:
 
-Tapered buffers |32|
---------------------
+Tapered buffers
+---------------
 Creates tapered buffer along line geometries, using a specified start and end
 buffer diameter.
 
@@ -3012,8 +3012,8 @@ See also
 
 .. _qgisbufferbym:
 
-Variable width buffer (by M value) |32|
----------------------------------------
+Variable width buffer (by M value)
+----------------------------------
 Creates variable width buffers along lines, using the M value of the line geometries
 as the diameter of the buffer at each vertex.
 
@@ -3087,8 +3087,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
-.. |34| replace:: ``NEW in 3.4``
 .. |36| replace:: ``NEW in 3.6``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em

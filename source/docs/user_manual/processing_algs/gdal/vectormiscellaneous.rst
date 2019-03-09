@@ -390,7 +390,7 @@ Parameters
 
   Default: *False*
 
-``Fields to include (leave empty to use all fields)`` [list] |34|
+``Fields to include (leave empty to use all fields)`` [list]
   Optional
 
   Defines fields to keep from the imported vector file.
@@ -486,12 +486,3 @@ Outputs
 ``Layer information`` [html]
   Name of the output HTML-file that includes the file information.
   If no HTML-file is defined the output will be written into a temporary file.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |34| replace:: ``NEW in 3.4``

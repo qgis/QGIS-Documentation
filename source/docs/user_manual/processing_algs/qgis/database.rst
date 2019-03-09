@@ -186,8 +186,8 @@ Outputs
 
 .. _qgispostgisexecuteandloadsql:
 
-PostgreSQL execute and load SQL |34|
-------------------------------------
+PostgreSQL execute and load SQL
+-------------------------------
 
 Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
 and loads the result. The algorithm **won't** create any new layer: it is designed to
@@ -230,7 +230,7 @@ Parameters
 
   Name of the database connection (not the database name). Existing connections
   will be shown in the combobox.
- 
+
 ``SQL query`` [string]
   Defines the SQL query, for example ``UPDATE my_table SET field=10``.
 
@@ -310,12 +310,3 @@ No new layer is created. The SQL query is executed in place on the layer.
 See also
 ........
 For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |34| replace:: ``NEW in 3.4``

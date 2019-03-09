@@ -100,8 +100,8 @@ Outputs
 
 .. _qgisdbscanclustering:
 
-DBSCAN clustering |34|
-----------------------
+DBSCAN clustering
+-----------------
 Clusters point features based on a 2D implementation of Density-based spatial
 clustering of applications with noise (DBSCAN) algorithm.
 
@@ -340,8 +340,8 @@ Outputs
 
 .. _qgiskmeansclustering:
 
-K-means clustering |34|
------------------------
+K-means clustering
+------------------
 Calculates the 2D distance based k-means cluster number for each input feature.
 
 K-means clustering aims to partition the features into k clusters in which
@@ -559,12 +559,3 @@ Outputs
 .......
 ``Line length`` [vector: polygon]
   Polygon output layer with fields of lines length and line count.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |34| replace:: ``NEW in 3.4``

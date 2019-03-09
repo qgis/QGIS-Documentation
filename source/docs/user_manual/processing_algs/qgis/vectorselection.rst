@@ -328,7 +328,7 @@ Parameters
 
   Value to be evaluated.
 
-``Modify current selection by`` [enumeration] |32|
+``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
   * 0 --- creating new selection
@@ -414,12 +414,3 @@ Parameters
   * 3 --- removing from current selection
 
   Default: *0*
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |32| replace:: ``NEW in 3.2``
