@@ -816,7 +816,7 @@ Introducing many-to-many (N-M) relations
 ----------------------------------------
 
 N-M relations are many-to-many relation between two tables. For instance, the 
-``airports´´ and ´´airlines´´ layers: an airport receives several airline 
+``airport`` and ``airline`` layers: an airport receives several airline 
 companies and an airline company flies to several airports.
 
 .. code-block:: sql
@@ -859,15 +859,44 @@ companies and an airline company flies to several airports.
          deferrable initially deferred
     );
 
-We need the ``airport_airline´´ table (pivot table) to list all airlines for 
+We need the ``airport_airline`` table (pivot table) to list all airlines for 
 all airports. In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
-* a relation between ``airlines`` table and the pivot table;
-* and a second one between ``airports`` table and the pivot table.
+* a relation between ``airline`` table and the pivot table;
+* and a second one between ``airport`` table and the pivot table.
 
+An easier way to do it is using the :guilabel:`Discover Relations` in the 
+:menuselection:`Project --> Properties --> Relations`. QGIS automatically will setup 
+both relations but remember to load the three tables in a QGIS project before.
 
+In case you want to remove an ``airport`` or an ``airline``, QGIS won´t remove
+the associated record(s) in ``airport_airline`` table. This task will be made by
+the database if we specify the right *constraints* in the pivot table creation as 
+in the current sample.
 
+.. note:: **Combining N-M relation with automatic transaction group**
+
+  You should enable the transaction mode in :menuselection:`Project Properties
+  --> Data Sources -->` when working on such context. QGIS should be able to
+  add or update row(s) in all tables (airlines, airports and the pivot tables).
+
+Finally we ha to select the right cardinalilty in the 
+:menuselection:`Layer Properties --> Attributes Form` for the ``airport`` and 
+``airline`` layers. For the first one we should choose the **airline (id)** option 
+and for the second one the **airport (id)** option.
+
+Now you can associate an airport with an airline (or an airline with an airport)
+using the :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
+in the subforms. Automatically a record will be inserted in the ``airport_airline`` 
+table.
+
+.. note:: Using **Many to one relation** cardinality
+
+  Sometimes hide the pivot table in a N-M relationship maintenance is not 
+  desirable. Mainly because there attributes in the relationship. Attributes that
+  can only have value when a relationship is established. 
+    
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
 
