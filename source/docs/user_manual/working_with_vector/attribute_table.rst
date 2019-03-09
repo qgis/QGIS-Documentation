@@ -918,7 +918,7 @@ table.
   Sometimes hide the pivot table in a N-M relationship maintenance is not 
   desirable. Mainly because there are attributes in the relationship that can only 
   have values when a relationship is established. If your tables are layers (have
-  a geometry field) it coud be interested activate the :guilabel:`On map identification` 
+  a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
   option for the foreign key fields in the pivot table.
 
 
