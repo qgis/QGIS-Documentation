@@ -1,6 +1,15 @@
 .. only:: html
 
    |updatedisclaimer|
+The code snippets on this page needs the following imports if you're outside the pyqgis console:
+
+.. code-block:: python
+
+    from qgis.core import (
+      QgsProject,
+      QgsSettings,
+      QgsVectorLayer
+    )
 
 .. index:: Settings; Reading, Settings; Storing
 
@@ -32,8 +41,6 @@ We can differentiate between several types of settings:
   Here you can see an example of how these methods are used.
 
   .. code-block:: python
-
-    from qgis.core import QgsSettings
 
     def store():
       s = QgsSettings()
@@ -68,8 +75,6 @@ We can differentiate between several types of settings:
 
  .. code-block:: python
 
-    from qgis.core import QgsProject
-
     proj = QgsProject.instance()
 
     # store values
@@ -102,8 +107,6 @@ We can differentiate between several types of settings:
 
  .. code-block:: python
 
-   from qgis.core import QgsVectorLayer
-   
    vlayer = QgsVectorLayer()
    # save a value
    vlayer.setCustomProperty("mytext", "hello world")
