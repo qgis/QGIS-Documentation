@@ -864,8 +864,6 @@ open the Plugin Manager dialog.
 
 .. |3dconfigure| image:: /static/common/mIconProperties.png
    :width: 1.3em
-.. |unchecked| image:: /static/common/checkbox_unchecked.png
-   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
@@ -1012,7 +1010,7 @@ open the Plugin Manager dialog.
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |processingHistory| image:: /static/common/history.png
-   :width: 2em
+   :width: 1.5em
 .. |processingModel| image:: /static/common/processingModel.png
    :width: 1.5em
 .. |processingResult| image:: /static/common/processingResult.png
@@ -1059,23 +1057,23 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
-.. |styleManager| image:: /static/common/mActionStyleManager.png
-   :width: 1.5em
-.. |symbology| image:: /static/common/symbology.png
-   :width: 2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png

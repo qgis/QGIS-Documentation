@@ -391,7 +391,7 @@ Parameters
 
   Default: *False*
 
-``Fields to include (leave empty to use all fields)`` [list] |34|
+``Fields to include (leave empty to use all fields)`` [list]
   Optional
 
   Defines fields to keep from the imported vector file.
@@ -495,5 +495,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
