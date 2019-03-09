@@ -1,6 +1,16 @@
 .. only:: html
 
 
+The code snippets on this page needs the following imports if you're outside the pyqgis console:
+
+.. code-block:: python
+
+    from qgis.core import (
+      QgsProject,
+      QgsSettings,
+      QgsVectorLayer
+    )
+
 .. index:: Settings; Reading, Settings; Storing
 
 .. settings:
@@ -19,16 +29,16 @@ variable, you should pick a key that will be used to access the variable ---
 for user's favourite color you could use key "favourite_color" or any other
 meaningful string. It is recommended to give some structure to naming of keys.
 
-We can make difference between several types of settings:
+We can differentiate between several types of settings:
 
 .. index:: Settings; Global
 
-* **global settings** --- they are bound to the user at particular machine.
+* **global settings** --- they are bound to the user at a particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
-  default snapping tolerance. Setting are handled using the :class:`QgsSettings <qgis.core.QgsSettings>` class.
+  default snapping tolerance. Settings are handled using the :class:`QgsSettings <qgis.core.QgsSettings>` class.
   The :meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() <qgis.core.QgsSettings.value>` methods from this class provide
 
-  Here you can see an example of how this methods are used.
+  Here you can see an example of how these methods are used.
 
   .. code-block:: python
 
@@ -43,7 +53,11 @@ We can make difference between several types of settings:
       mytext = s.value("myplugin/mytext", "default text")
       myint  = s.value("myplugin/myint", 123)
       myreal = s.value("myplugin/myreal", 2.71)
-
+      nonexistent = s.value("myplugin/nonexistent", None)
+      print(mytext)
+      print(myint)
+      print(myreal)
+      print(nonexistent)
 
   The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` method is optional and specifies
   the default value that is returned if there is no previous value set for the passed setting
@@ -69,9 +83,13 @@ We can make difference between several types of settings:
     proj.writeEntry("myplugin", "mydouble", 0.01)
     proj.writeEntry("myplugin", "mybool", True)
 
-    # read values
-    mytext = proj.readEntry("myplugin", "mytext", "default text")[0]
-    myint = proj.readNumEntry("myplugin", "myint", 123)[0]
+    # read values (returns a tuple with the value, and a status boolean
+    # which communicates whether the value retrieved could be converted to its type,
+    # in these cases a string, an integer, a double and a boolean respectively)
+    mytext, type_conversion_ok = proj.readEntry("myplugin", "mytext", "default text")
+    myint, type_conversion_ok = proj.readNumEntry("myplugin", "myint", 123)
+    mydouble, type_conversion_ok = proj.readDoubleEntry("myplugin", "mydouble", 123)
+    mybool, type_conversion_ok = proj.readBoolEntry("myplugin", "mybool", 123)
 
   As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` method is used for all data types, but
   several methods exist for reading the setting value back, and the
@@ -83,18 +101,18 @@ We can make difference between several types of settings:
   instance of a map layer with a project. They are *not* connected with
   underlying data source of a layer, so if you create two map layer instances
   of one shapefile, they will not share the settings. The settings are stored
-  in project file, so if the user opens the project again, the layer-related
+  inside the project file, so if the user opens the project again, the layer-related
   settings will be there again. The value for a given setting is retrieved using
   the :meth:`customProperty() <qgis.core.QgsMapLayer.customProperty>` method, and can be set using the :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
 
  .. code-block:: python
 
+   vlayer = QgsVectorLayer()
    # save a value
-   layer.setCustomProperty("mytext", "hello world")
+   vlayer.setCustomProperty("mytext", "hello world")
 
-   # read the value again
-   mytext = layer.customProperty("mytext", "default text")
-
+   # read the value again (returning "default text" if not found)
+   mytext = vlayer.customProperty("mytext", "default text")
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
