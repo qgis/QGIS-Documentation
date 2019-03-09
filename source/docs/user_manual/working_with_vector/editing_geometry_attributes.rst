@@ -477,6 +477,26 @@ Red circles will appear when hovering vertices.
   selection can jump to the nearest vertex or line. You can use Advanced
   Digitizing Panel constraints for distance, angles, exact X Y location
   before the second click.
+  
+  Here you can use the snap-to-grid feature. Having activated the Remove duplicate nodes and set
+  a value for the Geometry precision in the layer properties, a grid appears on a zoom level
+  according to the Geometry precision.
+  
+  
+  .. _figure_select_vertex_snap_to_grid:
+  
+  .. figure:: img/select_vertex_snap_to_grid.png
+     :align: center
+  
+     Selecting a vertex
+  
+  
+  .. _figure_vertex_snap_to_grid:
+  
+  .. figure:: img/vertex_snap_to_grid.png
+     :align: center
+    
+     Moving vertices to grid
 
 Each change made with the vertex  is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
