@@ -239,6 +239,19 @@ by default). To load a raster from a file, specify its filename and display name
  if not rlayer.isValid():
      print("Layer failed to load!")
 
+To load a raster from a geopackage:
+
+.. code-block:: python
+
+ # get the path to a geopackage  e.g. /home/project/data/data.gpkg
+ path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
+ # gpkg_raster_layer = "GPKG:/home/project/data/data.gpkg:srtm"
+ gpkg_raster_layer = "GPKG:" + path_to_gpkg + ":srtm"
+
+ rlayer = QgsRasterLayer(gpkg_raster_layer, "layer name you like", "gdal")
+
+ if not rlayer.isValid():
+     print("Layer failed to load!")
 
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer
 function of the :class:`QgisInterface <qgis.gui.QgisInterface>` object:
