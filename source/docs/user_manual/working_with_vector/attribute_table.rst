@@ -809,6 +809,64 @@ Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
 field has also an autocompleter function: while typing you will see all the
 values of the ``id`` field of the region layer.
 
+.. index:: Many-to-many relation; Relation
+.. _many_to_many_relation:
+
+Introducing many-to-many (N-M) relations
+----------------------------------------
+
+N-M relations are many-to-many relation between two tables. For instance, the 
+``airports´´ and ´´airlines´´ layers: an airport receives several airline 
+companies and an airline company flies to several airports.
+
+.. code-block:: sql
+
+   create table locations.airport
+   (
+      id serial not null,
+      geom geometry(Point, 4326) not null,
+      airport_name text not null,
+      constraint airport_pkey primary key (id)
+   );
+
+   create index airport_geom_idx on locations.airport using gist (geom);
+
+   create table locations.airline
+   (
+      id serial not null,
+      geom geometry(Point, 4326) not null,
+      airline_name text not null,
+      constraint airline_pkey primary key (id)
+   );
+
+   create index airline_geom_idx on locations.airline using gist (geom);
+
+   create table locations.airport_airline
+   (
+      id serial not null,
+      airport_fk integer not null,
+      airline_fk integer not null,
+      constraint airport_airline_pkey primary key (id),
+      constraint airport_airline_airport_fk_fkey foreign key (airport_fk)
+         references locations.airport (id)
+         on delete cascade
+         on update cascade
+         deferrable initially deferred,
+      constraint airport_airline_airline_fk_fkey foreign key (airline_fk)
+         references locations.airline (id)
+         on delete cascade
+         on update cascade
+         deferrable initially deferred
+    );
+
+We need the ``airport_airline´´ table (pivot table) to list all airlines for 
+all airports. In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
+as explained above:
+
+* a relation between ``airlines`` table and the pivot table;
+* and a second one between ``airports`` table and the pivot table.
+
+
 
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
