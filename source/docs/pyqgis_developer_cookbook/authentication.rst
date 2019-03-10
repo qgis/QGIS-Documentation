@@ -254,7 +254,7 @@ enabled service like a WMS or WFS or to a DB connection.
   Take into account that not all QGIS data providers are integrated with the
   Authentication infrastructure. Each authentication method, derived from the
   base class :class:`QgsAuthMethod <qgis.core.QgsAuthMethod>`
-  and support a different set of Providers. For example :meth:`certIdentity ()
+  and support a different set of Providers. For example the :meth:`certIdentity ()
   <qgis.core.QgsAuthManager.certIdentity>` method supports the following list
   of providers:
 
@@ -288,11 +288,11 @@ URI parameter with credential just before setting the HTTP connection.
 
 .. warning::
 
-  Developer would have to leave ``authcfg`` expansion to the :class:`QgsAuthManager
+  The developer would have to leave ``authcfg`` expansion to the :class:`QgsAuthManager
   <qgis.core.QgsAuthManager>`, in this way he will be sure that expansion is not done too early.
 
-Usually an URI string, build using :class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>`
-class, is used to set QGIS data source in the following way:
+Usually an URI string, built using the :class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>`
+class, is used to set a data source in the following way:
 
 .. code-block:: python
 
@@ -382,8 +382,8 @@ Authentication Editor GUI
 -------------------------
 
 The complete GUI used to manage credentials, authorities and to access to
-Authentication utilities is managed by the class
-:class:`QgsAuthEditorWidgets <qgis.gui.QgsAuthEditorWidgets>`.
+ Authentication utilities is managed by the
+:class:`QgsAuthEditorWidgets <qgis.gui.QgsAuthEditorWidgets>` class.
 
 .. figure:: img/QgsAuthEditorWidgets.png
    :align: center
