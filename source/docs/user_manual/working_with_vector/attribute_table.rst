@@ -868,7 +868,7 @@ associated with an airline only if both already exist in their layers.
          DEFERRABLE INITIALLY DEFERRED
     );
 
-In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
+In QGIS, you should set up two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
 * a relation between ``airlines`` table and the pivot table;
