@@ -34,7 +34,7 @@ follow these steps using the Plugin Builder:
 
 If you want to add your existing plugin to Processing, you need to add some code.
 
-In your ``metadata.txt``, you need to add a variable:
+In your :file:`metadata.txt`, you need to add a variable:
 
 .. code-block:: ini
 
@@ -65,7 +65,7 @@ you need to adapt some lines like this:
        def unload(self):
            QgsApplication.processingRegistry().removeProvider(self.provider)
 
-You can create a folder ``processing_provider`` with three files in it:
+You can create a folder :file:`processing_provider` with three files in it:
 
 ``__init__.py`` with nothing in it. This is necessary to make a valid Python package.
 
@@ -104,7 +104,7 @@ You can create a folder ``processing_provider`` with three files in it:
            for alg in self.list_algorithms():
                self.addAlgorithm(alg)
 
-Now, you can create the example algorithm. In ``example_processing_algorithm.py``,
+#. :file:`example_processing_algorithm.py`, the example algorithm file:
 copy/paste the content of the script template: https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py
 
 Now you can reload your plugin in QGIS and you should see your example script in
