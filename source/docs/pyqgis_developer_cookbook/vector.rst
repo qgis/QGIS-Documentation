@@ -249,8 +249,9 @@ Modifying Vector Layers
 =======================
 
 Most vector data providers support editing of layer data. Sometimes they support
-just a subset of possible editing actions. Use the :meth:`capabilities() <qgis.core.QgsVectorDataProvider.addFeatures>` function
-to find out what set of functionality is supported
+just a subset of possible editing actions. Use the :meth:`capabilities()
+<qgis.core.QgsVectorDataProvider.capabilities>` function
+to find out what set of functionality is supported.
 
 .. code-block:: python
 
@@ -264,7 +265,8 @@ For a list of all available capabilities, please refer to the
 <qgis.core.QgsVectorDataProvider>`.
 
 To print layer's capabilities textual description in a comma separated list you
-can use :meth:`capabilitiesString() <qgis.core.QgsVectorDataProvider.addFeatures>` as in the following example:
+can use :meth:`capabilitiesString() <qgis.core.QgsVectorDataProvider.capabilitiesString>`
+as in the following example:
 
 .. code-block:: python
 
@@ -541,17 +543,29 @@ create them easily. This is what you have to do:
 
 .. index:: Vector layers; Creating
 
-Writing Vector Layers
-=====================
+Creating Vector Layers
+======================
 
-You can write vector layer files using the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class. It
-supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,r
-KML and others).
+There are several ways to generate a vector layer dataset:
 
-There are different possibilities how to export a vector layer.
+* the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class:
+  A convenient class for writing vector files to disk, using either a static
+  call to :meth:`writeAsVectorFormat()
+  <qgis.core.QgsVectorFileWriter.writeAsVectorFormat>` which saves the whole
+  vector layer or creating an instance of the class and issue calls to
+  :meth:`addFeature() <qgis.core.QgsVectorFileWriter.addFeature>`. This class
+  supports all the vector formats that OGR supports (GeoPackage, Shapefile,
+  GeoJSON, KML and others).
+* the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class: instantiates
+  a data provider that interprets the supplied path (url) of the data source
+  to connect to and access the data. It can be used to create temporary,
+  memory-based layers (``memory``) and connect to OGR datasets (``ogr``),
+  databases (``postgres``, ``spatialite``, ``mysql``, ``mssql``) and
+  more (``wfs``, ``gpx``, ``delimitedtext``...).
 
-From an instance of :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`
-----------------------------------------------------------------------
+
+From an instance of :class:`QgsVectorFileWriter`
+------------------------------------------------
 
 .. code-block:: python
 
@@ -599,6 +613,7 @@ Directly from features
   5. layer's spatial reference (instance of
      QgsCoordinateReferenceSystem) - optional
   6. driver name for the output file """
+
   writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
 
   if writer.hasError() != QgsVectorFileWriter.NoError:
@@ -616,9 +631,11 @@ Directly from features
 
 .. index:: Memory layer
 
-Using a Memory Provider
------------------------
+From an instance of :class:`QgsVectorLayer`
+-------------------------------------------
 
+Among all the data providers supported by the :class:`QgsVectorLayer
+<qgis.core.QgsVectorLayer>` class, let's focus on the memory-based layers.
 Memory provider is intended to be used mainly by plugin or 3rd party app
 developers. It does not store data on disk, allowing developers to use it as a
 fast backend for some temporary layers.
