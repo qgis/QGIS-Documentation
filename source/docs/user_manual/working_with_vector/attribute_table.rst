@@ -877,7 +877,7 @@ as explained above:
 An easier way to do it is using the :guilabel:`Discover Relations` in
 :menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
 all relations in your database and you only have to select the two you need. Remember 
-to load the three tables in the QGIS project before.
+to load the three tables in the QGIS project first.
 
 .. _figure_setup_relations:
 
