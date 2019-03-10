@@ -830,42 +830,42 @@ associated with an airline only if both already exist in their layers.
 
 .. code-block:: sql
 
-   create table locations.airports
+   CREATE TABLE locations.airports
    (
-      id serial not null,
-      geom geometry(Point, 4326) not null,
-      airport_name text not null,
-      constraint airports_pkey primary key (id)
+      id serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      airport_name text NOT NULL,
+      CONSTRAINT airports_pkey PRIMARY KEY (id)
    );
 
-   create index airports_geom_idx on locations.airports using gist (geom);
+   CREATE INDEX airports_geom_idx ON locations.airports USING gist (geom);
 
-   create table locations.airlines
+   CREATE TABLE locations.airlines
    (
-      id serial not null,
-      geom geometry(Point, 4326) not null,
-      airline_name text not null,
-      constraint airlines_pkey primary key (id)
+      id serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      airline_name text NOT NULL,
+      CONSTRAINT airlines_pkey PRIMARY KEY (id)
    );
 
-   create index airlines_geom_idx on locations.airlines using gist (geom);
+   CREATE INDEX airlines_geom_idx ON locations.airlines USING gist (geom);
 
-   create table locations.airports_airlines
+   CREATE TABLE locations.airports_airlines
    (
-      id serial not null,
-      airport_fk integer not null,
-      airline_fk integer not null,
-      constraint airports_airlines_pkey primary key (id),
-      constraint airports_airlines_airport_fk_fkey foreign key (airport_fk)
-         references locations.airports (id)
-         on delete cascade
-         on update cascade
-         deferrable initially deferred,
-      constraint airports_airlines_airline_fk_fkey foreign key (airline_fk)
-         references locations.airlines (id)
-         on delete cascade
-         on update cascade
-         deferrable initially deferred
+      id serial NOT NULL,
+      airport_fk integer NOT NULL,
+      airline_fk integer NOT NULL,
+      CONSTRAINT airports_airlines_pkey PRIMARY KEY (id),
+      CONSTRAINT airports_airlines_airport_fk_fkey FOREIGN KEY (airport_fk)
+         REFERENCES locations.airports (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED,
+      CONSTRAINT airports_airlines_airline_fk_fkey FOREIGN KEY (airline_fk)
+         REFERENCES locations.airlines (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED
     );
 
 In QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
