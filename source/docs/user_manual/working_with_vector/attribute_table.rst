@@ -875,7 +875,7 @@ as explained above:
 * and a second one between ``airports`` table and the pivot table.
 
 An easier way to do it is using the :guilabel:`Discover Relations` in the 
-:menuselection:`Project --> Properties --> Relations`. QGIS automatically will read
+:menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
 all relations in your database and you only have to select the two you need. Remember 
 to load the three tables in the QGIS project before.
 
