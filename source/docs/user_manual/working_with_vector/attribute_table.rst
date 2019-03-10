@@ -884,7 +884,7 @@ to load the three tables in the QGIS project first.
 .. figure:: img/relations6.png
    :align: center
 
-   Setup relations and autodiscover option
+   Relations and autodiscover
 
 In case you want to remove an ``airport`` or an ``airline``, QGIS won't remove
 the associated record(s) in ``airports_airlines`` table. This task will be made by
