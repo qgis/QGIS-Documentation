@@ -134,8 +134,8 @@ To show a polygon
 .. code-block:: python
 
   r = QgsRubberBand(canvas, True)  # True = a polygon
-  points = [[QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]]
-  r.setToGeometry(QgsGeometry.fromPolygon(points), None)
+  points = [[QgsPointXY(-100, 35), QgsPointXY(10, 50), QgsPointXY(120, 35)]]
+  r.setToGeometry(QgsGeometry.fromPolygonXY(points), None)
 
 Note that points for polygon is not a plain list: in fact, it is a list of
 rings containing linear rings of the polygon: first ring is the outer border,
@@ -170,9 +170,9 @@ You can use the vertex marker like this:
 .. code-block:: python
 
   m = QgsVertexMarker(canvas)
-  m.setCenter(QgsPointXY(0, 0))
+  m.setCenter(QgsPointXY(10,40))
 
-This will draw a red cross on position [0,0]. It is possible to customize the
+This will draw a red cross on position **[10,45]**. It is possible to customize the
 icon type, size, color and pen width
 
 .. code-block:: python
