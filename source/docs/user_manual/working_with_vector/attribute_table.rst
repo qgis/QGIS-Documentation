@@ -816,7 +816,7 @@ Introducing many-to-many (N-M) relations
 ----------------------------------------
 
 N-M relations are many-to-many relation between two tables. For instance, the
-``airports`` and ``airlines`` layers: an airport receives several airlines
+``airports`` and ``airlines`` layers: an airport receives several airline
 companies and an airline company flies to several airports.
 
 This SQL code creates the three tables what we need for an N-M relationship in
