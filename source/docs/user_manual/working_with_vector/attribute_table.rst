@@ -825,7 +825,7 @@ or similar tools. The airports table stores the ``airports`` layer and the airli
 table stores the ``airlines`` layer. In both tables few fields are used for 
 clarity. The *tricky* part is ``airports_airlines`` table. We need it to list all
 airlines for all airports (or vice versa). This kind of table is known 
-as *pivot tables*. The *constraints* in this table force that one airport can be 
+as a *pivot table*. The *constraints* in this table force that an airport can be 
 associated with an airline only if both already exist in their layers.
 
 .. code-block:: sql
