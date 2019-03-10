@@ -815,7 +815,7 @@ values of the ``id`` field of the region layer.
 Introducing many-to-many (N-M) relations
 ----------------------------------------
 
-N-M relations are many-to-many relation between two tables. For instance, the 
+N-M relations are many-to-many relation between two tables. For instance, the
 ``airports`` and ``airlines`` layers: an airport receives several airlines
 companies and an airline company flies to several airports.
 
