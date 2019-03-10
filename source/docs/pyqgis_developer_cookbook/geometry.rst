@@ -145,51 +145,70 @@ predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, :meth:`intersec
 properties of geometries, such as area (in the case of polygons) or lengths
 (for polygons and lines)
 
-Here you have a small example that combines iterating over the features in a
+Let's see an example that combines iterating over the features in a
 given layer and performing some geometric computations based on their
-geometries.
+geometries. The below code will caompute and print the area and perimeter of each country in the 'countries' layer within our tutorial QGIS project.
 
 .. code-block:: python
 
-  # we assume that 'layer' is a polygon layer
-  features = layer.getFeatures()
+  # let's access the 'countries' layer
+  layer = QgsProject.instance().mapLayersByName('countries')[0]
+
+  # let's filter for countries that begin with Z, then get their features
+  query = '"name" LIKE \'Z%\''
+  features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
+
+  # now loop through the features, perform geometry computation and print the results
   for f in features:
     geom = f.geometry()
-    print("Area:", geom.area())
-    print("Perimeter:", geom.length())
+    name = f.attribute('NAME')
+    print(name)
+    print('Area: ', geom.area())
+    print('Perimeter: ', geom.length())
 
-Areas and perimeters don't take CRS into account when computed using these
+
+Now you have calculated and printed the areas and perimeters of the geometries. You may however quickly notice that the values are strange. 
+That is because areas and perimeters don't take CRS into account when computed using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length() <qgis.core.QgsGeometry.length>`
 methods from the :class:`QgsGeometry <qgis.core.QgsGeometry>` class. For a more powerful area and
-distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class can be used, which can perform ellipsoid based calculations.
+distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class can be used, which can perform ellipsoid based calculations:
 
 .. code-block:: python
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
 
-  # we assume that 'layer' is a polygon layer
-  features = layer.getFeatures()
+  layer = QgsProject.instance().mapLayersByName('countries')[0]
+
+  # let's filter for countries that begin with Z, then get their features
+  query = '"name" LIKE \'Z%\''
+  features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
+
   for f in features:
     geom = f.geometry()
-    print("Area:", d.measureArea(geom))
-    print("Perimeter:", d.measurePerimeter(geom))
+    name = f.attribute('NAME')
+    print(name)
+    print("Perimeter (m):", d.measurePerimeter(geom))
+    print("Area (m2):", d.measureArea(geom))
+    
+    # let's calculate and print the area again, but this time in square kilometers
+    print("Area (km2):", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
-  # convert to "better" units
-  features = layer.getFeatures()
-  for f in features:
-      geom = f.geometry()
-      print("Area:", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
-Alternatively, you may want to know the distance and bearing between two points:
+Alternatively, you may want to know the distance and bearing between two points.
 
 .. code-block:: python
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
-  print("distance in meters: ",
-    d.measureLine(QgsPointXY(10,10),QgsPointXY(11,11)))
-  print("angle in degrees: ",
-    math.degrees(d.bearing(QgsPointXY(10,10),QgsPointXY(11,11))))
+
+  # A let's create two points. 
+  # Santa claus is a workoholic and needs a summer break, 
+  # lets see how far is Tenerife from his home
+  santa = QgsPointXY(25.847899, 66.543456)
+  tenerife = QgsPointXY(-16.5735, 28.0443)
+
+  print("Distance in meters: ", d.measureLine(santa, tenerife))
+
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
