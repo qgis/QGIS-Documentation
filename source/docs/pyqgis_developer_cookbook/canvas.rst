@@ -90,18 +90,20 @@ layers for canvas
 
 .. code-block:: python
 
-  layer = QgsVectorLayer(path, name, provider)
-  if not layer.isValid():
-    raise IOError, "Failed to open the layer"
+ path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
 
-  # add layer to the registry
-  QgsProject.instance().addMapLayer(layer)
+ vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
+ if not vlayer.isValid():
+     print("Layer failed to load!")
 
-  # set extent to the extent of our layer
-  canvas.setExtent(layer.extent())
+ # add layer to the registry
+ QgsProject.instance().addMapLayer(vlayer)
 
-  # set the map canvas layer set
-  canvas.setLayers([layer])
+ # set extent to the extent of our layer
+ canvas.setExtent(vlayer.extent())
+
+ # set the map canvas layer set
+ canvas.setLayers([vlayer])
 
 After executing these commands, the canvas should show the layer you have
 loaded.
@@ -123,9 +125,8 @@ are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` meth
 .. code-block:: python
 
   from qgis.gui import *
-  from qgis.PyQt.QtGui import QAction
+  from PyQt5.QtWidgets import QAction, QMainWindow
   from qgis.PyQt.QtCore import Qt
-  from qgis.PyQt.QtWidgets import QMainWindow
 
   class MyWnd(QMainWindow):
       def __init__(self, layer):
