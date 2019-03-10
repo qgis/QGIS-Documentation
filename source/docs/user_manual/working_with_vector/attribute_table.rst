@@ -824,7 +824,7 @@ a PostgreSQL/PostGIS schema named *locations*. You can run the code using pgAdmi
 or similar tools. The airports table stores the ``airports`` layer and the airlines 
 table stores the ``airlines`` layer. In both tables few fields are used for 
 clarity. The *tricky* part is ``airports_airlines`` table. We need it to list all
-airlines for all airports (or vice versa). This kind of tables are kwown 
+airlines for all airports (or vice versa). This kind of table is known 
 as *pivot tables*. The *constraints* in this table force that one airport can be 
 associated with an airline only if both already exist in their layers.
 
