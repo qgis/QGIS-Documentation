@@ -662,7 +662,7 @@ of the memory provider in the URI. The syntax is:
 crs=definition
     Specifies the coordinate reference system, where definition may be any
     of the forms accepted by :meth:`QgsCoordinateReferenceSystem.createFromString
-	<qgis.core.QgsCoordinateReferenceSystem.createFromString>`
+    <qgis.core.QgsCoordinateReferenceSystem.createFromString>`
 
 index=yes
     Specifies that the provider will use a spatial index
