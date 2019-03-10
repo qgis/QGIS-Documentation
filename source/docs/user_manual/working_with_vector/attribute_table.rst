@@ -934,7 +934,7 @@ table.
 
   Avoid using multiple fields in the primary key in a pivot table. QGIS assumes a single 
   primary key so a constraint like *constraint airports_airlines_pkey primary key (airport_fk, airline_fk)*
-  would be a mistake.
+  will not work.
     
   
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
