@@ -68,9 +68,9 @@ you need to adapt some lines like this:
 
 You can create a folder :file:`processing_provider` with three files in it:
 
-``__init__.py`` with nothing in it. This is necessary to make a valid Python package.
+* :file:`__init__.py` with nothing in it. This is necessary to make a valid Python package.
 
-``provider.py`` which will create the Processing provider and expose your algorithms.
+* :file:`provider.py` which will create the Processing provider and expose your algorithms.
 
 .. code-block:: python
 
@@ -105,8 +105,8 @@ You can create a folder :file:`processing_provider` with three files in it:
            for alg in self.list_algorithms():
                self.addAlgorithm(alg)
 
-#. :file:`example_processing_algorithm.py`, the example algorithm file:
-copy/paste the content of the script template: https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py
+* :file:`example_processing_algorithm.py` which contains the example algorithm file.
+  Copy/paste the content of the script template: https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py
 
 Now you can reload your plugin in QGIS and you should see your example script in
 the Processing toolbox and modeller.
