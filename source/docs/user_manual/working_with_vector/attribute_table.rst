@@ -910,7 +910,7 @@ and for the second one the **airports (id)** option.
    Set relationship cardinality
 
 Now you can associate an airport with an airline (or an airline with an airport)
-using the :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
+using :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
 in the subforms. Automatically a record will be inserted in the ``airports_airlines`` 
 table.
 
