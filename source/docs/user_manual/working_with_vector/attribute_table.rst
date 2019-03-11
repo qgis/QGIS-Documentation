@@ -869,14 +869,41 @@ associated with an airline only if both already exist in their layers.
          DEFERRABLE INITIALLY DEFERRED
     );
 
-In QGIS, you should set up two :ref:`one-to-many relations <one_to_many_relation>`
+Instead of PostgreSQL you can also use GeoPackage. In this case, the three tables 
+can be created manually using the :menuselection:`Database --> DB Manager...`. In 
+GeoPackage there are no schemas so the *locations* prefix is not needed.
+
+Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table...` 
+or :menuselection:`Table --> Edit Table...` so they should be created using :menuselection:`Database --> SQL Window...`.
+GeoPackage doesn´t support *ADD CONSTRAINT* statements so the ``airports_airlines`` 
+table should be created in two step. First setup the table only with the id field 
+using :menuselection:`Table --> Create Table...` and then, using :menuselection:`Database --> SQL Window...` 
+type and execute this SQL code:
+
+.. code-block:: sql
+
+   ALTER TABLE airports_airlines
+      ADD COLUMN airport_fk INTEGER
+      REFERENCES airports (id) 
+      ON DELETE CASCADE 
+      ON UPDATE CASCADE 
+      DEFERRABLE INITIALLY DEFERRED;
+   
+   ALTER TABLE airports_airlines 
+      ADD COLUMN airline_fk INTEGER
+      REFERENCES airlines (id)
+      ON DELETE CASCADE
+      ON UPDATE CASCADE
+      DEFERRABLE INITIALLY DEFERRED;
+
+Then in QGIS, you should set up two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
 * a relation between ``airlines`` table and the pivot table;
 * and a second one between ``airports`` table and the pivot table.
 
-An easier way to do it is using the :guilabel:`Discover Relations` in
-:menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
+An easier way to do it (only for PostgreSQL) is using the :guilabel:`Discover Relations` 
+in :menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
 all relations in your database and you only have to select the two you need. Remember 
 to load the three tables in the QGIS project first.
 
