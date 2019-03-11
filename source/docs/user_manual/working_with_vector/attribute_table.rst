@@ -876,7 +876,7 @@ can be created manually using the :menuselection:`Database --> DB Manager…`. I
 GeoPackage there are no schemas so the *locations* prefix is not needed.
 
 Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table…` 
-or :menuselection:`Table --> Edit Table...` so they should be created using :menuselection:`Database --> SQL Window...`.
+or :menuselection:`Table --> Edit Table…` so they should be created using :menuselection:`Database --> SQL Window…`.
 GeoPackage doesn´t support *ADD CONSTRAINT* statements so the ``airports_airlines`` 
 table should be created in two step. First setup the table only with the id field 
 using :menuselection:`Table --> Create Table...` and then, using :menuselection:`Database --> SQL Window...` 
