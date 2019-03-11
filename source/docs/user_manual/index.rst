@@ -18,9 +18,9 @@ QGIS User Guide
     preamble/whats_new
     introduction/getting_started
     introduction/qgis_gui
-    introduction/general_tools
     introduction/qgis_configuration
     working_with_projections/working_with_projections
+    introduction/general_tools
     managing_data_source/index
     working_with_vector/index
     working_with_raster/index
@@ -38,11 +38,10 @@ QGIS User Guide
     literature_web/literature_and_web_references
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

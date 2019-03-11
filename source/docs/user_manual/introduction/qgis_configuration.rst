@@ -16,13 +16,10 @@ provides different tools to:
 
 * |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
   apply in different areas of the software. These preferences are saved in the
-  active :guilabel:`User profile` settings and applied by default whenever you
-  open a new project with this profile.
+  active :ref:`User profile <user_profiles>` settings and applied by default
+  whenever you open a new project with this profile.
   Also, they can be overridden during each QGIS session by the :ref:`project
   properties <project_properties>` (accessible under :menuselection:`Project` menu).
-
-.. Todo: Add a link to user profile description when available
-
 * |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
   :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
   not need.
@@ -857,6 +854,59 @@ More information at :ref:`label_processing`.
    Processing Settings tab in QGIS
 
 
+.. _user_profiles:
+
+Working with User Profiles
+==========================
+
+The :menuselection:`Settings --> User Profiles` menu provides functions to set
+and access user profiles. A user profile is a unified application configuration
+that allows to store in a single folder:
+
+* all the :ref:`global settings <gui_options>`, including locale,
+  projections`, authentication settings, color palettes, shortcuts...
+* GUI configurations and :ref:`customization <sec_customization>`
+* installed :ref:`plugins <plugins>` and their configurations
+* project templates and history of saved project with their image preview
+* :ref:`processing settings <label_processing>`, logs, scripts, models.
+
+By default, a QGIS installation contains a single user profile named ``default``.
+But you can create as many user profiles as you want:
+
+#. Click the :guilabel:`New profile...` entry.
+#. You'll be prompted to provide a profile name, creating a folder of the same name
+   under :file:`~/<UserProfiles>/` where:
+
+   * ``~`` represents the **HOME** directory, which on |win| Windows is usually
+     something like :file:`C:\\Users\\(user)`.
+   * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
+
+     * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
+     * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\`
+     * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`
+
+   The user profile folder can be opened from within QGIS using the
+   :guilabel:`Open Active Profile Folder`.
+#. The new profile opens a new instance of QGIS, using a clean and unchanged
+   configuration from installation. You can then set your custom configurations. 
+
+As each user profile contains isolated settings, plugins and history they can be great for
+different workflows, demos, users of the same machine, or testing settings, etc.
+And you can switch from one to the other by selecting them in the :menuselection:`Settings -->
+User Profiles` menu. You can also run QGIS with a specific user profile from the
+:ref:`command line <label_commandline>`.
+
+Unless changed, the profile of the last closed QGIS session will be used in the
+following QGIS sessions.
+
+.. tip:: **Run QGIS under a new user profile to check for bug persistence**
+
+ When you encounter weird behavior with some functions in QGIS, create a new user
+ profile and run the commands again. Sometimes, bugs are related to some leftovers
+ in the current user profile and creating a new one may fix them as it restarts
+ QGIS with the new (clean) profile.
+
+
 .. index:: Project properties
    single: Project; Properties
    single: Settings; Project
@@ -876,6 +926,12 @@ General Properties
 
 In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
 
+* see the location of the project file
+* set the folder for the project home (available in the ``Project Home`` item
+  in the browser).
+  The path can be relative to the folder of the project file (type it in) or absolute.
+  The project home can be used for storing data and other content that is
+  useful for the project.
 * give a title to the project beside the project file path
 * choose the color to use for features when they are selected
 * choose the background color: the color to use for the map canvas
@@ -1205,6 +1261,249 @@ finished your configuration, simply :guilabel:`Close` the dialog to have your ch
 applied. You can also :guilabel:`Save` the changes as an :file:`.XML` file
 and :guilabel:`Load` them into another QGIS installation.
 
+.. index:: Command line options
+.. _`label_commandline`:
+
+Running QGIS with advanced settings
+===================================
+
+We've seen that :ref:`launching QGIS <label_startingqgis>` is done as for any
+application on your OS.
+QGIS however provides command line options for more advanced use cases.
+To get a list of the options, enter ``qgis --help`` on the command line, which
+returns::
+
+  QGIS - 3.4.3-Madeira 'Madeira' (2f64a3c4e7)
+  QGIS is a user friendly Open Source Geographic Information System.
+  Usage: /usr/bin/qgis.bin [OPTION] [FILE]
+    OPTION:
+          [--snapshot filename]   emit snapshot of loaded datasets to given file
+          [--width width] width of snapshot to emit
+          [--height height]       height of snapshot to emit
+          [--lang language]       use language for interface text (changes existing override)
+          [--project projectfile] load the given QGIS project
+          [--extent xmin,ymin,xmax,ymax]  set initial map extent
+          [--nologo]      hide splash screen
+          [--noversioncheck]      don't check for new version of QGIS at startup
+          [--noplugins]   don't restore plugins on startup
+          [--nocustomization]     don't apply GUI customization
+          [--customizationfile path]      use the given ini file as GUI customization
+          [--globalsettingsfile path]     use the given ini file as Global Settings (defaults)
+          [--authdbdirectory path] use the given directory for authentication database
+          [--code path]   run the given python file on load
+          [--defaultui]   start by resetting user ui settings to default
+          [--hide-browser]        hide the browser widget
+          [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
+          [--dxf-extent xmin,ymin,xmax,ymax]      set extent to export to dxf
+          [--dxf-symbology-mode none|symbollayer|feature] symbology mode for dxf output
+          [--dxf-scale-denom scale]       scale for dxf output
+          [--dxf-encoding encoding]       encoding to use for dxf output
+          [--dxf-map-theme maptheme]      map theme to use for dxf output
+          [--take-screenshots output_path]        take screen shots for the user documentation
+          [--screenshots-categories categories]   specify the categories of screenshot to be used (see QgsAppScreenShots::Categories).
+          [--profile name]        load a named profile from the user's profiles folder.
+          [--profiles-path path]  path to store user profile folders. Will create profiles inside a {path}\profiles folder
+          [--version-migration]   force the settings migration from older version if found
+          [--openclprogramfolder]         path to the folder containing the sources for OpenCL programs.
+          [--help]                this text
+          [--]            treat all following arguments as FILEs
+
+    FILE:
+      Files specified on the command line can include rasters,
+      vectors, and QGIS project files (.qgs and .qgz):
+       1. Rasters - supported formats include GeoTiff, DEM
+          and others supported by GDAL
+       2. Vectors - supported formats include ESRI Shapefiles
+          and others supported by OGR and PostgreSQL layers using
+          the PostGIS extension
+
+.. tip::
+        **Example Using command line arguments**
+
+        You can start QGIS by specifying one or more data files on the command
+        line. For example, assuming you are in the :file:`qgis_sample_data`
+        directory, you could start QGIS with a vector layer and a raster file
+        set to load on startup using the following command:
+        ``qgis ./raster/landcover.img ./gml/lakes.gml``
+
+``--snapshot`` option
+
+This option allows you to create a snapshot in PNG format from the current view.
+This comes in handy when you have many projects and want to generate
+snapshots from your data, or when you need to create snapshots of the
+same project with updated data.
+
+Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
+using the ``--width`` and ``--height`` arguments. The filename can
+be added after ``--snapshot``. For example::
+
+  qgis --snapshot my_image.png --width 1000 --height 600 --project my_project.qgs
+
+``--lang``  option
+
+Based on your locale, QGIS selects the correct localization. If you would like
+to change your language, you can specify a language code. For example,
+``qgis --lang it`` starts QGIS in Italian localization.
+
+``--project`` option
+
+Starting QGIS with an existing project file is also possible. Just add the
+command line option ``--project`` followed by your project name and QGIS will
+open with all layers in the given file loaded.
+
+``--extent`` option
+
+To start with a specific map extent use this option. You need to add the
+bounding box of your extent in the following order separated by a comma::
+
+  --extent xmin,ymin,xmax,ymax
+
+This option probably makes more sense when paired with the ``--project`` option
+to open a specific project at the desired extent.
+
+``--nologo`` option
+
+This option hides the splash screen when you start QGIS.
+
+``--noversioncheck`` option
+
+Skip searching for a new version of QGIS at startup.
+
+``--noplugins`` option
+
+If you have trouble at start-up with plugins, you can avoid loading them at
+start-up with this option. They will still be available from the Plugins Manager
+afterwards.
+
+``--nocustomization`` option
+
+Using this option, any existing :ref:`GUI customization <sec_customization>`
+will not be applied at startup. This means that any hidden buttons, menu items,
+toolbars, and so on, will show up on QGIS start up. This is not a permanent
+change. The customization will be applied again if QGIS is launched without
+this option.
+
+This option is useful for temporarily allowing access to tools that have been
+removed by customization.
+
+.. _custom_commandline:
+
+``--customizationfile``
+
+Using this option, you can define a UI customization file, that
+will be used at startup.
+
+``--globalsettingsfile`` option
+
+Using this option, you can specify the path for a Global Settings
+file (``.ini``), also known as the Default Settings. The settings in the specified
+file replace the original inline default ones, but the user profiles'
+settings will be set on top of those.
+
+Presently, there's no way to specify a file to write settings to; therefore,
+you can create a copy of an original settings file, rename, and adapt it.
+
+Setting the :file:`qgis_global_setting.ini` file path to a network shared
+folder, allows a system administrator to change global settings and defaults in
+several machines by only editing one file.
+
+``--authdbdirectory`` option
+
+This option is similar to ``--globalsettingsfile``, but defines the path to the
+directory where the authentication database will be stored and loaded.
+
+``--code`` option
+
+This option can be used to run a given python file directly after QGIS has
+started.
+
+For example, when you have a python file named :file:`load_alaska.py` with
+following content:
+
+.. code-block:: python
+
+   from qgis.utils import iface
+   raster_file = "/home/gisadmin/Documents/qgis_sample_data/raster/landcover.img"
+   layer_name = "Alaska"
+   iface.addRasterLayer(raster_file, layer_name)
+
+Assuming you are in the directory where the file :file:`load_alaska.py` is
+located, you can start QGIS, load the raster file :file:`landcover.img` and give
+the layer the name 'Alaska' using the following command::
+
+  qgis --code load_alaska.py
+
+``--defaultui`` option
+
+On load, **permanently resets** the user interface (UI) to the default settings.
+This option will restore the panels and toolbars visibility, position, and size.
+Unless it's changed again, the default UI settings will be used in the following
+sessions.
+
+Notice that this option doesn't have any effect on :ref:`GUI
+customization<sec_customization>`. Items hidden by GUI customization (e.g. the
+status bar) will remain hidden even using the ``--defaultui`` option. See also
+the ``--nocustomization`` option.
+
+``--hide-browser`` option
+
+On load, hides the :guilabel:`Browser` panel from the user interface. The panel
+can be enabled by right-clicking a space in the toolbars or using the
+:menuselection:`View --> Panels` (:menuselection:`Settings --> Panels` in |kde|
+Linux KDE).
+
+Unless it's enabled again, the Browser panel will remain hidden in the following
+sessions.
+
+``--dxf-*`` option
+
+These options can be used to export a QGIS project into a DXF file. Several
+options are available:
+
+* *--dxf-export*: the DXF filename into which to export the layers;
+* *--dxf-extent*: the extent of the final DXF file;
+* *--dxf-symbology-mode*: several values can be used here: ``none``
+  (no symbology), ``symbollayer`` (Symbol layer symbology), ``feature`` (feature
+  symbology);
+* *--dxf-scale-denom*: the scale denominator of the symbology;
+* *--dxf-encoding*: the file encoding;
+* *--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer tree
+  configuration.
+
+``--take-screenshots`` option
+
+Takes screenshots for the user documentation. Can be used together with
+``--screenshots-categories`` to filter which categories/sections of the
+documentation screenshots should be created (see QgsAppScreenShots::Categories).
+
+``--profile`` option
+
+Loads QGIS using a specific profile from the user's profile folder. Unless
+changed, the selected profile will be used in the following QGIS sessions.
+
+.. _profiles-path_option:
+
+``--profiles-path`` option
+
+With this option, you can choose a path to load and save the profiles (user
+settings). It creates profiles inside a ``{path}\profiles`` folder, which
+includes settings, installed plugins, processing models and scripts, and so on.
+
+This option allows you to, for instance, carry all your plugins and settings
+in a flash drive, or, for example, share the settings between different computers
+using a file sharing service.
+
+``--version-migration`` option
+
+If settings from an older version are found (*e.g.*, the ``.qgis2`` folder from QGIS
+2.18), this option will import them into the default QGIS profile.
+
+``--openclprogramfolder`` option
+
+Using this option, you can specify an alternative path for your OpenCL programs.
+This is useful for developers while testing new versions of the programs
+without needing to replace the existing ones.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -1232,6 +1531,8 @@ and :guilabel:`Load` them into another QGIS installation.
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
@@ -1256,18 +1557,14 @@ and :guilabel:`Load` them into another QGIS installation.
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
-.. |symbology| image:: /static/common/symbology.png
-   :width: 2em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

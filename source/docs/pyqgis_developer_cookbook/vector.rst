@@ -13,6 +13,8 @@ Using Vector Layers
 
 This section summarizes various actions that can be done with vector layers.
 
+Most work here is based on the methods of the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` class.
+
 .. index::
   single: PyQGIS; Vector layers
 
@@ -20,7 +22,7 @@ Retrieving information about attributes
 ========================================
 
 You can retrieve information about the fields associated with a vector layer
-by calling :func:`fields` on a :class:`QgsVectorLayer` instance:
+by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object:
 
 .. code-block:: python
 
@@ -37,7 +39,7 @@ Iterating over Vector Layer
 Iterating over the features in a vector layer is one of the most common tasks.
 Below is an example of the simple basic code to perform this task and showing
 some information about each feature. The ``layer`` variable is assumed to have
-a :class:`QgsVectorLayer` object.
+a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object.
 
 .. code-block:: python
 
@@ -51,7 +53,6 @@ a :class:`QgsVectorLayer` object.
      # show some information about the feature geometry
      geom = feature.geometry()
      geomSingleType = QgsWkbTypes.isSingleType(geom.wkbType())
-
      if geom.type() == QgsWkbTypes.PointGeometry:
          # the geometry type can be of single or multi type
          if geomSingleType:
@@ -60,7 +61,6 @@ a :class:`QgsVectorLayer` object.
          else:
              x = geom.asMultiPoint()
              print("MultiPoint: ", x)
-
      elif geom.type() == QgsWkbTypes.LineGeometry:
          if geomSingleType:
              x = geom.asPolyline()
@@ -68,7 +68,6 @@ a :class:`QgsVectorLayer` object.
          else:
              x = geom.asMultiPolyline()
              print("MultiLine: ", x, "length: ", geom.length())
-
      elif geom.type() == QgsWkbTypes.PolygonGeometry:
          if geomSingleType:
              x = geom.asPolygon()
@@ -78,10 +77,8 @@ a :class:`QgsVectorLayer` object.
              print("MultiPolygon: ", x, "Area: ", geom.area())
      else:
          print("Unknown or invalid geometry")
-
      # fetch attributes
      attrs = feature.attributes()
-
      # attrs is a list. It contains all the attribute values of this feature
      print(attrs)
 
@@ -90,15 +87,15 @@ a :class:`QgsVectorLayer` object.
 Selecting features
 ==================
 
-In QGIS desktop, features can be selected in different ways, the user can click
+In QGIS desktop, features can be selected in different ways: the user can click
 on a feature, draw a rectangle on the map canvas or use an expression filter.
 Selected features are normally highlighted in a different color (default
 is yellow) to draw user's attention on the selection.
 
-Sometimes can be useful to programmatically select features or to change the
+Sometimes it can be useful to programmatically select features or to change the
 default color.
 
-To select all the features:
+To select all the features, the :meth:`selectAll() <qgis.core.QgsVectorLayer.selectAll>` method can be used:
 
 .. code-block:: python
 
@@ -106,7 +103,7 @@ To select all the features:
  layer = iface.activeLayer()
  layer.selectAll()
 
-To select using an expression:
+To select using an expression, use the :meth:`selectByExpression() <qgis.core.QgsVectorLayer.selectByExpression>` method:
 
 .. code-block:: python
 
@@ -115,16 +112,14 @@ To select using an expression:
  layer = iface.activeLayer()
  layer.selectByExpression('"Class"=\'B52\' and "Heading" > 10 and "Heading" <70', QgsVectorLayer.SetSelection)
 
-To change the selection color you can use :func:`setSelectionColor()`
-method of :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` as shown in the following example:
+To change the selection color you can use :meth:`setSelectionColor() <qgis.gui.QgsMapCanvas.setSelectionColor>` method of :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` as shown in the following example:
 
 .. code-block:: python
 
     iface.mapCanvas().setSelectionColor( QColor("red") )
 
-
 To add features to the selected features list for a given layer, you
-can call :func:`select()` passing to it the list of features IDs:
+can call :meth:`select() <qgis.core.QgsVectorLayer.select>` passing to it the list of features IDs:
 
 .. code-block:: python
 
@@ -151,7 +146,7 @@ Attributes can be referred to by their name:
 
 .. code-block:: python
 
- print(feature['name'])
+  print(feature['name'])
 
 Alternatively, attributes can be referred to by index.
 This is a bit faster than using the name.
@@ -164,8 +159,8 @@ For example, to get the first attribute:
 Iterating over selected features
 --------------------------------
 
-if you only need selected features, you can use the :func:`selectedFeatures`
-method from vector layer:
+If you only need selected features, you can use the :meth:`selectedFeatures() <qgis.core.QgsVectorLayer.selectedFeatures>`
+method from the vector layer:
 
 .. code-block:: python
 
@@ -179,8 +174,8 @@ Iterating over a subset of features
 -----------------------------------
 
 If you want to iterate over a given subset of features in a layer, such as
-those within a given area, you have to add a :obj:`QgsFeatureRequest` object
-to the :func:`getFeatures()` call. Here's an example:
+those within a given area, you have to add a :class:`QgsFeatureRequest <qgis.core.QgsFeatureRequest>` object
+to the :meth:`getFeatures() <qgis.core.QgsVectorLayer.getFeatures>` call. Here's an example:
 
 .. code-block:: python
 
@@ -199,7 +194,7 @@ only intersecting features will be returned:
 
   request = QgsFeatureRequest().setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.ExactIntersect)
 
-With :func:`setLimit()` you can limit the number of requested features.
+With :meth:`setLimit() <qgis.core.QgsFeatureRequest.setLimit>` you can limit the number of requested features.
 Here's an example:
 
 .. code-block:: python
@@ -209,10 +204,8 @@ Here's an example:
   for feature in layer.getFeatures(request):
       # loop through only 2 features
 
-
 If you need an attribute-based filter instead (or in addition) of a spatial
-one like shown in the examples above, you can build an :obj:`QgsExpression`
-object and pass it to the :obj:`QgsFeatureRequest` constructor.
+one like shown in the examples above, you can build a :class:`QgsExpression <qgis.core.QgsExpression>` object and pass it to the :class:`QgsFeatureRequest <qgis.core.QgsFeatureRequest>` constructor.
 Here's an example:
 
 .. code-block:: python
@@ -223,7 +216,7 @@ Here's an example:
   request = QgsFeatureRequest(exp)
 
 
-See :ref:`expressions` for the details about the syntax supported by :class:`QgsExpression`.
+See :ref:`expressions` for the details about the syntax supported by :class:`QgsExpression <qgis.core.QgsExpression>`.
 
 The request can be used to define the data retrieved for each feature, so the
 iterator returns all features, but returns partial data for each of them.
@@ -245,7 +238,6 @@ iterator returns all features, but returns partial data for each of them.
   # The options may be chained
   request.setFilterRect(areaOfInterest).setFlags(QgsFeatureRequest.NoGeometry).setFilterFid(45).setSubsetOfAttributes([0,2])
 
-.. warning:: |outofdate|
 
 .. index:: Vector layers; Editing
 .. _editing:
@@ -254,22 +246,22 @@ Modifying Vector Layers
 =======================
 
 Most vector data providers support editing of layer data. Sometimes they support
-just a subset of possible editing actions. Use the :func:`capabilities` function
+just a subset of possible editing actions. Use the :meth:`capabilities() <qgis.core.QgsVectorDataProvider.addFeatures>` function
 to find out what set of functionality is supported
 
 .. code-block:: python
 
   caps = layer.dataProvider().capabilities()
   # Check if a particular capability is supported:
-  if caps & layer.dataProvider().DeleteFeatures:
+  if caps & QgsVectorDataProvider.DeleteFeatures:
       print('The layer supports DeleteFeatures')
 
 For a list of all available capabilities, please refer to the
-`API Documentation of QgsVectorDataProvider
-<https://qgis.org/pyqgis/master/core/Vector/QgsVectorDataProvider.html>`_
+:class:`API Documentation of QgsVectorDataProvider
+<qgis.core.QgsVectorDataProvider>`
 
 To print layer's capabilities textual description in a comma separated list you
-can use :func:`capabilitiesString` as in the following example:
+can use :meth:`capabilitiesString() <qgis.core.QgsVectorDataProvider.addFeatures>` as in the following example:
 
 .. code-block:: python
 
@@ -305,13 +297,12 @@ explains how to do :ref:`modifications with editing buffer <editing-buffer>`.
 Add Features
 ------------
 
-Create some :class:`QgsFeature` instances and pass a list of them to provider's
-:func:`addFeatures` method. It will return two values: result (true/false) and
+Create some :class:`QgsFeature <qgis.core.QgsFeature>` instances and pass a list of them to provider's
+:meth:`addFeatures() <qgis.core.QgsVectorDataProvider.addFeatures>` method. It will return two values: result (true/false) and
 list of added features (their ID is set by the data store).
 
-To set up the attributes you can either initialize the feature passing a
-:class:`QgsFields` instance or call :func:`initAttributes` passing
-the number of fields you want to be added.
+To set up the attributes of the feature, you can either initialize the feature passing a
+:class:`QgsFields <qgis.core.QgsFields>` object (you can obtain that from the :meth:`fields() <qgis.core.QgsVectorLayer.fields>` method of the vector layer) or call :meth:`initAttributes() <qgis.core.QgsFeature.initAttributes>` passing the number of fields you want to be added.
 
 .. code-block:: python
 
@@ -321,14 +312,14 @@ the number of fields you want to be added.
       # Or set a single attribute by key or by index:
       feat.setAttribute('name', 'hello')
       feat.setAttribute(0, 'hello')
-      feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123, 456)))
+      feat.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(123, 456)))
       (res, outFeats) = layer.dataProvider().addFeatures([feat])
 
 
 Delete Features
 ---------------
 
-To delete some features, just provide a list of their feature IDs
+To delete some features, just provide a list of their feature IDs.
 
 .. code-block:: python
 
@@ -340,7 +331,7 @@ Modify Features
 
 It is possible to either change feature's geometry or to change some attributes.
 The following example first changes values of attributes with index 0 and 1,
-then it changes the feature's geometry
+then it changes the feature's geometry.
 
 .. code-block:: python
 
@@ -351,21 +342,15 @@ then it changes the feature's geometry
       layer.dataProvider().changeAttributeValues({ fid : attrs })
 
   if caps & QgsVectorDataProvider.ChangeGeometries:
-      geom = QgsGeometry.fromPoint(QgsPoint(111,222))
+      geom = QgsGeometry.fromPointXY(QgsPointXY(111,222))
       layer.dataProvider().changeGeometryValues({ fid : geom })
 
 
 .. tip:: **Favor QgsVectorLayerEditUtils class for geometry-only edits**
 
     If you only need to change geometries, you might consider using
-    the :class:`QgsVectorLayerEditUtils` which provides some of useful
-    methods to edit geometries (translate, insert or move vertex etc.).
-
-.. tip:: **Directly save changes using** ``with`` **based command**
-
-    Using ``with edit(layer):`` the changes will be commited automatically
-    calling :func:`commitChanges()` at the end. If any exception occurs, it will
-    :func:`rollBack()` all the changes. See :ref:`editing-buffer`.
+    the :class:`QgsVectorLayerEditUtils <qgis.core.QgsVectorLayerEditUtils>` which provides some useful
+    methods to edit geometries (translate, insert or move vertex, etc.).
 
 .. _editing-buffer:
 
@@ -374,18 +359,29 @@ Modifying Vector Layers with an Editing Buffer
 
 When editing vectors within QGIS application, you have to first start editing
 mode for a particular layer, then do some modifications and finally commit (or
-rollback) the changes. All the changes you do are not written until you commit
+rollback) the changes. All the changes you make are not written until you commit
 them --- they stay in layer's in-memory editing buffer. It is possible to use
 this functionality also programmatically --- it is just another method for
 vector layer editing that complements the direct usage of data providers. Use
 this option when providing some GUI tools for vector layer editing, since this
 will allow user to decide whether to commit/rollback and allows the usage of
-undo/redo. When committing changes, all changes from the editing buffer are
+undo/redo. When changes are commited, all changes from the editing buffer are
 saved to data provider.
 
-To find out whether a layer is in editing mode, use :func:`isEditable` --- the
-editing functions work only when the editing mode is turned on. Usage of
-editing functions
+The methods are similar to the ones we have seen in the provider, but they are
+called on the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`
+object instead.
+
+For these methods to work, the layer must be in editing mode. To start the editing mode,
+use the :meth:`startEditing() <qgis.core.QgsVectorLayer.startEditing>` method.
+To stop editing, use the :meth:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>`
+or :meth:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` methods.
+The first one will commit all your changes to the data source, while the second
+one will discard them and will not modify the data source at all.
+
+To find out whether a layer is in editing mode, use the :meth:`isEditable() <qgis.core.QgsVectorLayer.isEditable>` method.
+
+Here you have some examples that demonstrate how to use these editing methods.
 
 .. code-block:: python
 
@@ -398,7 +394,7 @@ editing functions
 
   # set new geometry (QgsGeometry instance) for a feature
   layer.changeGeometry(fid, geometry)
-  # update an attribute with given field index (int) to given value (QVariant)
+  # update an attribute with given field index (int) to a given value
   layer.changeAttributeValue(fid, fieldIndex, value)
 
   # add new field
@@ -409,7 +405,9 @@ editing functions
 In order to make undo/redo work properly, the above mentioned calls have to be
 wrapped into undo commands. (If you do not care about undo/redo and want to
 have the changes stored immediately, then you will have easier work by
-:ref:`editing with data provider <editing>`.) How to use the undo functionality
+:ref:`editing with data provider <editing>`.)
+
+Here is how you can use the the undo functionality:
 
 .. code-block:: python
 
@@ -425,17 +423,12 @@ have the changes stored immediately, then you will have easier work by
 
   layer.endEditCommand()
 
-The :func:`beginEditCommand` will create an internal "active" command and will
-record subsequent changes in vector layer. With the call to :func:`endEditCommand`
+The :meth:`beginEditCommand() <qgis.core.QgsVectorLayer.beginEditCommand>` method will create an internal "active" command and will
+record subsequent changes in vector layer. With the call to :meth:`endEditCommand() <qgis.core.QgsVectorLayer.endEditCommand>`
 the command is pushed onto the undo stack and the user will be able to undo/redo
 it from GUI. In case something went wrong while doing the changes, the
-:func:`destroyEditCommand` method will remove the command and rollback all
+:meth:`destroyEditCommand() <qgis.core.QgsVectorLayer.destroyEditCommand>` method will remove the command and rollback all
 changes done while this command was active.
-
-To start editing mode, there is :func:`startEditing()` method, to stop editing
-there are :func:`commitChanges()` and :func:`rollBack()` --- however normally
-you should not need these methods and leave this functionality to be triggered
-by the user.
 
 You can also use the :code:`with edit(layer)`-statement to wrap commit and rollback into
 a more semantic code block as shown in the example below:
@@ -448,10 +441,10 @@ a more semantic code block as shown in the example below:
     layer.updateFeature(feat)
 
 
-This will automatically call :func:`commitChanges()` in the end.
-If any exception occurs, it will :func:`rollBack()` all the changes.
-In case a problem is encountered within :func:`commitChanges()` (when the method
-returns False) a :class:`QgsEditError` exception will be raised.
+This will automatically call :meth:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` in the end.
+If any exception occurs, it will :meth:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` all the changes.
+In case a problem is encountered within :meth:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` (when the method
+returns False) a :class:`QgsEditError <qgis.core.QgsEditError>` exception will be raised.
 
 Adding and Removing Fields
 --------------------------
@@ -478,6 +471,12 @@ to be updated because the changes are not automatically propagated.
 
  layer.updateFields()
 
+.. tip:: **Directly save changes using** ``with`` **based command**
+
+    Using ``with edit(layer):`` the changes will be commited automatically
+    calling :meth:`commitChanges() <qgis.core.QgsVectorLayer.commitChanges>` at the end. If any exception occurs, it will
+    :meth:`rollBack() <qgis.core.QgsVectorLayer.rollBack>` all the changes. See :ref:`editing-buffer`.
+
 
 .. index:: Spatial index
 
@@ -502,23 +501,23 @@ of a given person is to read from the beginning until you find it.
 Spatial indexes are not created by default for a QGIS vector layer, but you can
 create them easily. This is what you have to do:
 
-* create spatial index --- the following code creates an empty index
+* create spatial index using the :meth:`QgsSpatialIndex() <qgis.core.QgsVectorLayer.beginEditCommand>` class:
 
-  ::
+  .. code-block:: python
 
      index = QgsSpatialIndex()
 
-* add features to index --- index takes :class:`QgsFeature` object and adds it
+* add features to index --- index takes :class:`QgsFeature <qgis.core.QgsFeature>` object and adds it
   to the internal data structure. You can create the object manually or use
-  one from previous call to provider's :func:`nextFeature()`
+  one from a previous call to provider's :meth:`nextFeature() <qgis.core.QgsVectorDataProvider.nextFeature>`
 
-  ::
+  .. code-block:: python
 
      index.insertFeature(feat)
 
 * alternatively, you can load all features of a layer at once using bulk loading
 
-  ::
+  .. code-block:: python
 
      index = QgsSpatialIndex(layer.getFeatures())
 
@@ -527,7 +526,7 @@ create them easily. This is what you have to do:
   .. code-block:: python
 
     # returns array of feature IDs of five nearest features
-    nearest = index.nearestNeighbor(QgsPoint(25.4, 12.7), 5)
+    nearest = index.nearestNeighbor(QgsPointXY(25.4, 12.7), 5)
 
     # returns array of IDs of features which intersect the rectangle
     intersect = index.intersects(QgsRectangle(22.5, 15.3, 23.1, 17.2))
@@ -538,30 +537,31 @@ create them easily. This is what you have to do:
 Writing Vector Layers
 =====================
 
-You can write vector layer files using :class:`QgsVectorFileWriter` class. It
-supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,
+You can write vector layer files using the :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>` class. It
+supports any other kind of vector file that OGR supports (Shapefile, GeoJSON,r
 KML and others).
 
-There are two possibilities how to export a vector layer:
+There are two possibilities to export a vector layer:
 
-* from an instance of :class:`QgsVectorLayer`
+* from an instance of :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>`
 
   .. code-block:: python
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
-
-    if error == QgsVectorFileWriter.NoError:
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8")
+    if error[0] == QgsVectorFileWriter.NoError:
         print("success!")
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", "utf-8", None, "GeoJSON")
-    if error == QgsVectorFileWriter.NoError:
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8", driverName="GeoJSON")
+    if error[0] == QgsVectorFileWriter.NoError:
         print("success again!")
 
   The third parameter specifies output text encoding. Only some drivers need this
-  for correct operation - Shapefile is one of those --- however in case you
+  for correct operation (Shapefile is one of those), but if you
   are not using international characters you do not have to care much about
-  the encoding. The fourth parameter that we left as ``None`` may specify
-  destination CRS --- if a valid instance of :class:`QgsCoordinateReferenceSystem`
+  the encoding.
+  
+  The fourth parameter that we left as ``None`` may specify destination CRS ---
+  if a valid instance of :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
   is passed, the layer is transformed to that CRS.
 
   For valid driver names please consult the `supported formats by OGR`_ --- you
@@ -586,18 +586,20 @@ There are two possibilities how to export a vector layer:
     1. path to new file (will fail if exists already)
     2. encoding of the attributes
     3. field map
-    4. geometry type - from WKBTYPE enum
+    4. geometry type - from QgsWkbTypes.Type enum
     5. layer's spatial reference (instance of
        QgsCoordinateReferenceSystem) - optional
     6. driver name for the output file """
-    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
+
+    writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
         print("Error when creating shapefile: ",  w.errorMessage())
 
     # add a feature
     fet = QgsFeature()
-    fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(10,10)))
+
+    fet.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
     fet.setAttributes([1, "text"])
     writer.addFeature(fet)
 
@@ -616,13 +618,13 @@ fast backend for some temporary layers.
 The provider supports string, int and double fields.
 
 The memory provider also supports spatial indexing, which is enabled by calling
-the provider's :func:`createSpatialIndex` function. Once the spatial index is
+the provider's :meth:`createSpatialIndex() <qgis.core.QgsVectorDataProvider.createSpatialIndex>` function. Once the spatial index is
 created you will be able to iterate over features within smaller regions faster
 (since it's not necessary to traverse all the features, only those in specified
 rectangle).
 
 A memory provider is created by passing ``"memory"`` as the provider string to
-the :class:`QgsVectorLayer` constructor.
+the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` constructor.
 
 The constructor also takes a URI defining the geometry type of the layer,
 one of: ``"Point"``, ``"LineString"``, ``"Polygon"``, ``"MultiPoint"``,
@@ -633,7 +635,7 @@ of the memory provider in the URI. The syntax is:
 
 crs=definition
     Specifies the coordinate reference system, where definition may be any
-    of the forms accepted by :func:`QgsCoordinateReferenceSystem.createFromString`
+    of the forms accepted by :meth:`QgsCoordinateReferenceSystem.createFromString <qgis.core.QgsCoordinateReferenceSystem.createFromString>`
 
 index=yes
     Specifies that the provider will use a spatial index
@@ -716,16 +718,16 @@ And with that reference, let us explore it a bit
 
 There are several known renderer types available in the QGIS core library:
 
-=================  =======================================  ===================================================================
-Type               Class                                    Description
-=================  =======================================  ===================================================================
-singleSymbol       :class:`QgsSingleSymbolRenderer`         Renders all features with the same symbol
-categorizedSymbol  :class:`QgsCategorizedSymbolRenderer`    Renders features using a different symbol for each category
-graduatedSymbol    :class:`QgsGraduatedSymbolRenderer`      Renders features using a different symbol for each range of values
-=================  =======================================  ===================================================================
+=================  ============================================================================== ===================================================================
+Type               Class                                                                           Description
+=================  ============================================================================== ===================================================================
+singleSymbol       :class:`QgsSingleSymbolRenderer <qgis.core.QgsSingleSymbolRenderer>`           Renders all features with the same symbol
+categorizedSymbol  :class:`QgsCategorizedSymbolRenderer <qgis.core.QgsCategorizedSymbolRenderer>` Renders features using a different symbol for each category
+graduatedSymbol    :class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`    Renders features using a different symbol for each range of values
+=================  ============================================================================== ===================================================================
 
 There might be also some custom renderer types, so never make an assumption
-there are just these types. You can query the application's :class:`QgsRendererRegistry`
+there are just these types. You can query the application's :class:`QgsRendererRegistry <qgis.core.QgsRendererRegistry>`
 to find out currently available renderers:
 
 .. code-block:: python
@@ -755,22 +757,22 @@ useful for debugging
 Single Symbol Renderer
 ----------------------
 
-You can get the symbol used for rendering by calling :func:`symbol` method and
-change it with :func:`setSymbol` method (note for C++ devs: the renderer takes
+You can get the symbol used for rendering by calling :meth:`symbol() <qgis.core.QgsSingleSymbolRenderer.symbol>` method and
+change it with :meth:`setSymbol() <qgis.core.QgsSingleSymbolRenderer.setSymbol>` method (note for C++ devs: the renderer takes
 ownership of the symbol.)
 
 You can change the symbol used by a particular vector layer by calling
-:func:`setSymbol()` passing an instance of the appropriate symbol instance.
+:meth:`setSymbol() <qgis.core.QgsSingleSymbolRenderer.setSymbol>` passing an instance of the appropriate symbol instance.
 Symbols for *point*, *line* and *polygon* layers can be created by calling
-the :func:`createSimple` function of the corresponding classes
-:class:`QgsMarkerSymbol`, :class:`QgsLineSymbol` and
-:class:`QgsFillSymbol`.
+the :meth:`createSimple() <qgis.core.QgsMarkerSymbol.createSimple>` function of the corresponding classes
+:class:`QgsMarkerSymbol <qgis.core.QgsMarkerSymbol>`, :class:`QgsLineSymbol <qgis.core.QgsLineSymbol>` and
+:class:`QgsFillSymbol <qgis.core.QgsFillSymbol>`.
 
-The dictionary passed to :func:`createSimple` sets the style properties of the
+The dictionary passed to :meth:`createSimple() <qgis.core.QgsMarkerSymbol.createSimple>` sets the style properties of the
 symbol.
 
 For example you can replace the symbol used by a particular **point** layer
-by calling :func:`setSymbol()` passing an instance of a :class:`QgsMarkerSymbol`
+by calling :meth:`setSymbol() <qgis.core.QgsSingleSymbolRenderer.setSymbol>` passing an instance of a :class:`QgsMarkerSymbol <qgis.core.QgsMarkerSymbol>`,
 as in the following code example:
 
 .. code-block:: python
@@ -844,8 +846,8 @@ This can be useful if you want to alter some properties:
 Categorized Symbol Renderer
 ---------------------------
 
-You can query and set attribute name which is used for classification: use
-:func:`classAttribute` and :func:`setClassAttribute` methods.
+When using a categorized renderer, you can query and set the attribute that is used for classification: use the
+:meth:`classAttribute() <qgis.core.QgsCategorizedSymbolRenderer.classAttribute>` and :meth:`setClassAttribute() <qgis.core.QgsCategorizedSymbolRenderer.setClassAttribute>` methods.
 
 To get a list of categories
 
@@ -854,12 +856,12 @@ To get a list of categories
   for cat in renderer.categories():
       print("{}: {} :: {}".format(cat.value(), cat.label(), cat.symbol()))
 
-Where :func:`value` is the value used for discrimination between categories,
-:func:`label` is a text used for category description and :func:`symbol` method
-returns assigned symbol.
+Where :meth:`value() <qgis.core.QgsRendererCategory.value>` is the value used for discrimination between categories,
+:meth:`label() <qgis.core.QgsRendererCategory.label>` is a text used for category description and :meth:`symbol() <qgis.core.QgsRendererCategory.symbol>` method
+returns the assigned symbol.
 
 The renderer usually stores also original symbol and color ramp which were used
-for the classification: :func:`sourceColorRamp` and :func:`sourceSymbol` methods.
+for the classification: :meth:`sourceColorRamp() <qgis.core.QgsCategorizedSymbolRenderer.sourceColorRamp>` and :meth:`sourceSymbol() <qgis.core.QgsCategorizedSymbolRenderer.sourceSymbol>` methods.
 
 .. index:: Symbology; Graduated symbol renderer, Graduated symbol renderer
 
@@ -935,21 +937,21 @@ arrangement)
 Working with Symbols
 --------------------
 
-For representation of symbols, there is :class:`QgsSymbol` base class with
+For representation of symbols, there is :class:`QgsSymbol <qgis.core.QgsSymbol>` base class with
 three derived classes:
 
-* :class:`QgsMarkerSymbol` --- for point features
-* :class:`QgsLineSymbol` --- for line features
-* :class:`QgsFillSymbol` --- for polygon features
+* :class:`QgsMarkerSymbol <qgis.core.QgsMarkerSymbol>` --- for point features
+* :class:`QgsLineSymbol <qgis.core.QgsLineSymbol>` --- for line features
+* :class:`QgsFillSymbol <qgis.core.QgsFillSymbol>` --- for polygon features
 
 **Every symbol consists of one or more symbol layers** (classes derived from
-:class:`QgsSymbolLayer`). The symbol layers do the actual rendering, the
+:class:`QgsSymbolLayer <qgis.core.QgsSymbolLayer>`). The symbol layers do the actual rendering, the
 symbol class itself serves only as a container for the symbol layers.
 
 Having an instance of a symbol (e.g. from a renderer), it is possible to
-explore it: :func:`type` method says whether it is a marker, line or fill
-symbol. There is a :func:`dump` method which returns a brief description of
-the symbol. To get a list of symbol layers
+explore it: :meth:`type <qgis.core.QgsSymbol.type>` method says whether it is a marker, line or fill
+symbol. There is a :meth:`dump <qgis.core.QgsSymbol.dump>` method which returns a brief description of
+the symbol. To get a list of symbol layers:
 
 .. code-block:: python
 
@@ -957,10 +959,10 @@ the symbol. To get a list of symbol layers
       lyr = symbol.symbolLayer(i)
       print("{}: {}".format(i, lyr.layerType()))
 
-To find out symbol's color use :func:`color` method and :func:`setColor` to
+To find out symbol's color use :meth:`color <qgis.core.QgsSymbol.color>` method and :meth:`setColor <qgis.core.QgsSymbol.setColor>` to
 change its color. With marker symbols additionally you can query for the symbol
-size and rotation with :func:`size` and :func:`angle` methods, for line symbols
-there is :func:`width` method returning line width.
+size and rotation with :meth:`size <qgis.core.QgsSymbol.size>` and :meth:`angle <qgis.core.QgsSymbol.angle>` methods, for line symbols
+there is :meth:`width <qgis.core.QgsSymbol.width>` method returning line width.
 
 Size and width are in millimeters by default, angles are in degrees.
 
@@ -969,41 +971,44 @@ Size and width are in millimeters by default, angles are in degrees.
 Working with Symbol Layers
 ..........................
 
-As said before, symbol layers (subclasses of :class:`QgsSymbolLayer`)
+As said before, symbol layers (subclasses of :class:`QgsSymbolLayer <qgis.core.QgsSymbolLayer>`)
 determine the appearance of the features.  There are several basic symbol layer
 classes for general use. It is possible to implement new symbol layer types and
-thus arbitrarily customize how features will be rendered. The :func:`layerType`
+thus arbitrarily customize how features will be rendered. The :meth:`layerType() <qgis.core.QgsSymbolLayer.layerType>`
 method uniquely identifies the symbol layer class --- the basic and default
-ones are SimpleMarker, SimpleLine and SimpleFill symbol layers types.
+ones are ``SimpleMarker``, ``SimpleLine`` and ``SimpleFill`` symbol layers types.
 
 You can get a complete list of the types of symbol layers you can create for a
-given symbol layer class like this
+given symbol layer class with the following code:
 
 .. code-block:: python
 
-  from qgis.core import QgsSymbolLayerV2Registry
-  myRegistry = QgsSymbolLayerV2Registry.instance()
+  from qgis.core import QgsSymbolLayerRegistry
+  myRegistry = QgsApplication.symbolLayerRegistry()
   myMetadata = myRegistry.symbolLayerMetadata("SimpleFill")
-  for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker):
+  for item in myRegistry.symbolLayersForType(QgsSymbol.Marker):
       print(item)
 
-Output
+Output:
 
 ::
 
   EllipseMarker
+  FilledMarker
   FontMarker
+  GeometryGenerator
   SimpleMarker
   SvgMarker
   VectorField
 
-:class:`QgsSymbolLayerV2Registry` class manages a database of all available
+:class:`QgsSymbolLayerRegistry <qgis.core.QgsSymbolLayerRegistry>` class manages a database of all available
+
 symbol layer types.
 
-To access symbol layer data, use its :func:`properties` method that returns a
+To access symbol layer data, use its :meth:`properties() <qgis.core.QgsSymbolLayer.properties>` method that returns a
 key-value dictionary of properties which determine the appearance. Each symbol
 layer type has a specific set of properties that it uses. Additionally, there
-are generic methods :func:`color`, :func:`size`, :func:`angle`, :func:`width`
+are generic methods :meth:`color <qgis.core.QgsSymbol.color>`, :meth:`size <qgis.core.QgsSymbol.size>`, :meth:`angle <qgis.core.QgsSymbol.angle>`, :meth:`width <qgis.core.QgsSymbol.width>`
 with their setter counterparts. Of course size and angle is available only for
 marker symbol layers and width for line symbol layers.
 
@@ -1019,10 +1024,13 @@ radius
 
 .. code-block:: python
 
-  class FooSymbolLayer(QgsMarkerSymbolLayerV2):
+  from qgis.core import QgsMarkerSymbolLayer
+  from qgis.PyQt.QtGui import QColor
+
+  class FooSymbolLayer(QgsMarkerSymbolLayer):
 
     def __init__(self, radius=4.0):
-        QgsMarkerSymbolLayerV2.__init__(self)
+        QgsMarkerSymbolLayer.__init__(self)
         self.radius = radius
         self.color = QColor(255,0,0)
 
@@ -1049,18 +1057,18 @@ radius
         return FooSymbolLayer(self.radius)
 
 
-The :func:`layerType` method determines the name of the symbol layer, it has
+The :meth:`layerType <qgis.core.QgsMarkerSymbolLayer.layerType>` method determines the name of the symbol layer, it has
 to be unique among all symbol layers. Properties are used for persistence of
-attributes. :func:`clone` method must return a copy of the symbol layer with
+attributes. :meth:`clone <qgis.core.QgsMarkerSymbolLayer.clone>` method must return a copy of the symbol layer with
 all attributes being exactly the same. Finally there are rendering methods:
-:func:`startRender` is called before rendering first feature, :func:`stopRender`
-when rendering is done. And :func:`renderPoint` method which does the rendering.
+:meth:`startRender <qgis.core.QgsMarkerSymbolLayer.startRender>` is called before rendering first feature, :meth:`stopRender <qgis.core.QgsMarkerSymbolLayer.stopRender>`
+when rendering is done. And :meth:`renderPoint <qgis.core.QgsMarkerSymbolLayer.renderPoint>` method which does the rendering.
 The coordinates of the point(s) are already transformed to the output
 coordinates.
 
 For polylines and polygons the only difference would be in the rendering
-method: you would use :func:`renderPolyline` which receives a list of lines,
-resp. :func:`renderPolygon` which receives list of points on outer ring as a
+method: you would use :meth:`renderPolyline <qgis.core.QgsMarkerSymbolLayer.renderPolyline>` which receives a list of lines,
+while :meth:`renderPolygon <qgis.core.QgsMarkerSymbolLayer.renderPolygon>` receives list of points on outer ring as a
 first parameter and a list of inner rings (or None) as a second parameter.
 
 Usually it is convenient to add a GUI for setting attributes of the symbol
@@ -1070,9 +1078,11 @@ widget
 
 .. code-block:: python
 
-    class FooSymbolLayerWidget(QgsSymbolLayerV2Widget):
+    from qgis.gui import QgsSymbolLayerWidget
+
+    class FooSymbolLayerWidget(QgsSymbolLayerWidget):
         def __init__(self, parent=None):
-            QgsSymbolLayerV2Widget.__init__(self, parent)
+            QgsSymbolLayerWidget.__init__(self, parent)
 
             self.layer = None
 
@@ -1120,25 +1130,27 @@ We will have to create metadata for the symbol layer
 
 .. code-block:: python
 
-  class FooSymbolLayerMetadata(QgsSymbolLayerV2AbstractMetadata):
+  from qgis.core import QgsSymbol, QgsSymbolLayerAbstractMetadata, QgsSymbolLayerRegistry
+
+  class FooSymbolLayerMetadata(QgsSymbolLayerAbstractMetadata):
 
     def __init__(self):
-      QgsSymbolLayerV2AbstractMetadata.__init__(self, "FooMarker", QgsSymbolV2.Marker)
+      QgsSymbolLayerAbstractMetadata.__init__(self, "FooMarker", QgsSymbol.Marker)
 
     def createSymbolLayer(self, props):
-      radius = float(props[QString("radius")]) if QString("radius") in props else 4.0
+      radius = float(props["radius"]) if "radius" in props else 4.0
       return FooSymbolLayer(radius)
 
-    def createSymbolLayerWidget(self):
-      return FooSymbolLayerWidget()
+        def createSymbolLayer(self, props):
+          radius = float(props["radius"]) if "radius" in props else 4.0
+          return FooSymbolLayer(radius)
 
-  QgsSymbolLayerV2Registry.instance().addSymbolLayerType(FooSymbolLayerMetadata())
+  QgsApplication.symbolLayerRegistry().addSymbolLayerType(FooSymbolLayerMetadata())
 
 You should pass layer type (the same as returned by the layer) and symbol type
-(marker/line/fill) to the constructor of parent class. :func:`createSymbolLayer`
+(marker/line/fill) to the constructor of parent class. :meth:`createSymbolLayer() <qgis.core.QgsSymbolLayerAbstractMetadata.createSymbolLayer>`
 takes care of creating an instance of symbol layer with attributes specified in
-the `props` dictionary. (Beware, the keys are QString instances, not "str"
-objects). And there is :func:`createSymbolLayerWidget` method which returns
+the `props` dictionary. And there is :meth:`createSymbolLayerWidget() <qgis.core.QgsSymbolLayerAbstractMetadata.createSymbolLayerWidget>` method which returns
 settings widget for this symbol layer type.
 
 The last step is to add this symbol layer to the registry --- and we are done.
@@ -1159,54 +1171,83 @@ symbols and chooses randomly one of them for every feature
 
 .. code-block:: python
 
-  import random
+    import random
+    from qgis.core import QgsWkbTypes, QgsSymbol, QgsFeatureRenderer
 
-  class RandomRenderer(QgsFeatureRendererV2):
-    def __init__(self, syms=None):
-      QgsFeatureRendererV2.__init__(self, "RandomRenderer")
-      self.syms = syms if syms else [QgsSymbolV2.defaultSymbol(QGis.Point), QgsSymbolV2.defaultSymbol(QGis.Point)]
 
-    def symbolForFeature(self, feature):
-      return random.choice(self.syms)
+    class RandomRenderer(QgsFeatureRenderer):
+      def __init__(self, syms=None):
+        QgsFeatureRenderer.__init__(self, "RandomRenderer")
+        self.syms = syms if syms else [QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point))]
 
-    def startRender(self, context, vlayer):
-      for s in self.syms:
-        s.startRender(context)
+      def symbolForFeature(self, feature):
+        return random.choice(self.syms)
 
-    def stopRender(self, context):
-      for s in self.syms:
-        s.stopRender(context)
+      def startRender(self, context, vlayer):
+        for s in self.syms:
+          s.startRender(context)
 
-    def usedAttributes(self):
-      return []
+      def stopRender(self, context):
+        for s in self.syms:
+          s.stopRender(context)
 
-    def clone(self):
-      return RandomRenderer(self.syms)
+      def usedAttributes(self):
+        return []
 
-The constructor of parent :class:`QgsFeatureRendererV2` class needs renderer
-name (has to be unique among renderers). :func:`symbolForFeature` method is
+      def clone(self):
+        return RandomRenderer(self.syms)
+
+    from qgis.gui import QgsRendererWidget
+    class RandomRendererWidget(QgsRendererWidget):
+      def __init__(self, layer, style, renderer):
+        QgsRendererWidget.__init__(self, layer, style)
+        if renderer is None or renderer.type() != "RandomRenderer":
+          self.r = RandomRenderer()
+        else:
+          self.r = renderer
+        # setup UI
+        self.btn1 = QgsColorButton()
+        self.btn1.setColor(self.r.syms[0].color())
+        self.vbox = QVBoxLayout()
+        self.vbox.addWidget(self.btn1)
+        self.setLayout(self.vbox)
+        self.btn1.clicked.connect(self.setColor1)
+
+      def setColor1(self):
+        color = QColorDialog.getColor(self.r.syms[0].color(), self)
+        if not color.isValid(): return
+        self.r.syms[0].setColor(color)
+        self.btn1.setColor(self.r.syms[0].color())
+
+      def renderer(self):
+        return self.r
+
+The constructor of parent :class:`QgsFeatureRenderer` class needs a renderer
+name (which has to be unique among renderers). The :func:`symbolForFeature` method is
 the one that decides what symbol will be used for a particular feature.
 :func:`startRender` and :func:`stopRender` take care of initialization/finalization
-of symbol rendering. :func:`usedAttributes` method can return a list of field
-names that renderer expects to be present. Finally :func:`clone` function
+of symbol rendering. The :func:`usedAttributes` method can return a list of field
+names that renderer expects to be present. Finally, the :func:`clone` function
 should return a copy of the renderer.
 
 Like with symbol layers, it is possible to attach a GUI for configuration of
-the renderer. It has to be derived from :class:`QgsRendererV2Widget`. The
+the renderer. It has to be derived from :class:`QgsRendererWidget`. The
 following sample code creates a button that allows user to set symbol of the
 first symbol
 
 .. code-block:: python
 
-  class RandomRendererWidget(QgsRendererV2Widget):
+  from qgis.gui import QgsRendererWidget, QgsColorButton
+
+  class RandomRendererWidget(QgsRendererWidget):
     def __init__(self, layer, style, renderer):
-      QgsRendererV2Widget.__init__(self, layer, style)
+      QgsRendererWidget.__init__(self, layer, style)
       if renderer is None or renderer.type() != "RandomRenderer":
         self.r = RandomRenderer()
       else:
         self.r = renderer
       # setup UI
-      self.btn1 = QgsColorButtonV2()
+      self.btn1 = QgsColorButton()
       self.btn1.setColor(self.r.syms[0].color())
       self.vbox = QVBoxLayout()
       self.vbox.addWidget(self.btn1)
@@ -1222,8 +1263,9 @@ first symbol
     def renderer(self):
       return self.r
 
+
 The constructor receives instances of the active layer (:class:`QgsVectorLayer`),
-the global style (:class:`QgsStyleV2`) and current renderer. If there is no
+the global style (:class:`QgsStyle`) and current renderer. If there is no
 renderer or the renderer has different type, it will be replaced with our new
 renderer, otherwise we will use the current renderer (which has already the
 type we need). The widget contents should be updated to show current state of
@@ -1238,16 +1280,18 @@ RandomRenderer example
 
 .. code-block:: python
 
-  class RandomRendererMetadata(QgsRendererV2AbstractMetadata):
+  from qgis.core import QgsRendererAbstractMetadata,QgsRendererRegistry,QgsApplication
+
+  class RandomRendererMetadata(QgsRendererAbstractMetadata):
     def __init__(self):
-      QgsRendererV2AbstractMetadata.__init__(self, "RandomRenderer", "Random renderer")
+      QgsRendererAbstractMetadata.__init__(self, "RandomRenderer", "Random renderer")
 
     def createRenderer(self, element):
       return RandomRenderer()
     def createRendererWidget(self, layer, style, renderer):
       return RandomRendererWidget(layer, style, renderer)
 
-  QgsRendererV2Registry.instance().addRenderer(RandomRendererMetadata())
+  QgsApplication.rendererRegistry().addRenderer(RandomRendererMetadata())
 
 Similarly as with symbol layers, abstract metadata constructor awaits renderer
 name, name visible for users and optionally name of renderer's icon.
@@ -1257,13 +1301,13 @@ method creates the configuration widget. It does not have to be present or can
 return `None` if the renderer does not come with GUI.
 
 To associate an icon with the renderer you can assign it in
-:class:`QgsRendererV2AbstractMetadata` constructor as a third (optional)
+:class:`QgsRendererAbstractMetadata` constructor as a third (optional)
 argument --- the base class constructor in the RandomRendererMetadata :func:`__init__`
 function becomes
 
 .. code-block:: python
 
-  QgsRendererV2AbstractMetadata.__init__(self,
+  QgsRendererAbstractMetadata.__init__(self,
          "RandomRenderer",
          "Random renderer",
          QIcon(QPixmap("RandomRendererIcon.png", "png")))
@@ -1273,6 +1317,8 @@ of the metadata class. The icon can be loaded from a file (as shown above) or
 can be loaded from a `Qt resource <https://doc.qt.io/qt-5/resources.html>`_
 (PyQt5 includes .qrc compiler for Python).
 
+.. warning:: |outofdate|
+
 Further Topics
 ==============
 
@@ -1280,10 +1326,8 @@ Further Topics
 **TODO:**
 
 * creating/modifying symbols
-* working with style (:class:`QgsStyleV2`)
-* working with color ramps (:class:`QgsVectorColorRampV2`)
-* rule-based renderer (see `this blogpost
-  <http://snorf.net/blog/2014/03/04/symbology-of-vector-layers-in-qgis-python-plugins>`_)
+* working with style (:class:`QgsStyle <qgis.core.QgsStyle>`)
+* working with color ramps (:class:`QgsColorRamp <qgis.core.QgsColorRamp>`)
 * exploring symbol layer and renderer registries
 
 
@@ -1297,4 +1341,4 @@ Further Topics
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

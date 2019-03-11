@@ -39,4 +39,4 @@ You can also modify the algorithm. Just copy it, open the :menuselection:`Plugin
    source folder.
 
 .. |hard| image:: /static/global/hard.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

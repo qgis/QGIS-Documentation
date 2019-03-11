@@ -33,15 +33,15 @@ and items. If not, please read the `overview of the framework
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
-rendered to an image (using :class:`QgsMapRendererJob` class) and that image is
-displayed on the canvas. The :class:`qgis.gui.QgsMapCanvas` class also controls refreshing
-of the rendered map. Besides this item which acts as a background, there may be
-more **map canvas items**.
+rendered to an image (using the :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` class) and that image is
+displayed on the canvas. The :class:`QgsMapCanvas <qgis.gui.QgsMapCanvas>` class also controls refreshing
+of the rendered map. Besides this item which acts as a background, there may be more **map canvas items**.
+
 Typical map canvas items are rubber bands (used for measuring, vector editing
 etc.) or vertex markers. The canvas items are usually used to give visual
 feedback for map tools, for example, when creating a new polygon, the map tool
 creates a rubber band canvas item that shows the current shape of the polygon.
-All map canvas items are subclasses of :class:`QgsMapCanvasItem` which adds
+All map canvas items are subclasses of :class:`QgsMapCanvasItem <qgis.gui.QgsMapCanvasItem>`  which adds
 some more functionality to the basic ``QGraphicsItem`` objects.
 
 .. index:: map canvas; architecture
@@ -85,7 +85,7 @@ set white background and enable anti-aliasing for smooth rendering
 ``Qt.white`` is one of the predefined ``QColor`` instances.)
 
 Now it is time to add some map layers. We will first open a layer and add it to
-the map layer registry. Then we will set the canvas extent and set the list of
+the current project. Then we will set the canvas extent and set the list of
 layers for canvas
 
 .. code-block:: python
@@ -113,18 +113,18 @@ Using Map Tools with Canvas
 
 The following example constructs a window that contains a map canvas and basic
 map tools for map panning and zooming. Actions are created for activation of
-each tool: panning is done with :class:`QgsMapToolPan`, zooming in/out with a
-pair of :class:`QgsMapToolZoom` instances. The actions are set as checkable and
+each tool: panning is done with :class:`QgsMapToolPan <qgis.gui.QgsMapToolPan>`, zooming in/out with a
+pair of :class:`QgsMapToolZoom <qgis.gui.QgsMapToolZoom>` instances. The actions are set as checkable and
 later assigned to the tools to allow automatic handling of checked/unchecked
 state of the actions -- when a map tool gets activated, its action is marked as
 selected and the action of the previous map tool is deselected. The map tools
-are activated using :func:`setMapTool` method.
+are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method.
 
 .. code-block:: python
 
   from qgis.gui import *
   from qgis.PyQt.QtGui import QAction
-  from qgis.PyQt.QtCore import SIGNAL, Qt, QString
+  from qgis.PyQt.QtCore import Qt
   from qgis.PyQt.QtWidgets import QMainWindow
 
   class MyWnd(QMainWindow):
@@ -176,20 +176,15 @@ are activated using :func:`setMapTool` method.
           self.canvas.setMapTool(self.toolPan)
 
 
-You can put the above code to a file, e.g. :file:`mywnd.py` and try it out in
-Python console within QGIS. This code will put the currently selected layer
-into newly created canvas
+You can try the above code in the Python console editor. To invoke the canvas window,
+add the following lines to instantiate the ``MyWnd`` class. They will render the currently
+selected layer on the newly created canvas
 
 .. code-block:: python
 
   import mywnd
-  w = mywnd.MyWnd(qgis.utils.iface.activeLayer())
+  w = mywnd.MyWnd(iface.activeLayer())
   w.show()
-
-Just make sure that the :file:`mywnd.py` file is located within Python search
-path (``sys.path``). If it isn't, you can simply add it: ``sys.path.append(
-'/my/path')`` --- otherwise the import statement will fail, not finding the
-module.
 
 .. index:: Map canvas; Rubber bands, Map canvas; Vertex markers
 
@@ -199,8 +194,8 @@ Rubber Bands and Vertex Markers
 To show some additional data on top of the map in canvas, use map canvas items.
 It is possible to create custom canvas item classes (covered below), however
 there are two useful canvas item classes for convenience:
-:class:`QgsRubberBand` for drawing polylines or polygons, and
-:class:`QgsVertexMarker` for drawing points. They both work with map
+:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` for drawing polylines or polygons, and
+:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` for drawing points. They both work with map
 coordinates, so the shape is moved/scaled automatically when the canvas is
 being panned or zoomed.
 
@@ -233,7 +228,7 @@ width
   r.setWidth(3)
 
 The canvas items are bound to the canvas scene. To temporarily hide them (and
-show again, use the :func:`hide` and :func:`show` combo. To completely remove
+show them again), use the :func:`hide` and :func:`show` combo. To completely remove
 the item, you have to remove it from the scene of the canvas
 
 .. code-block:: python
@@ -244,10 +239,11 @@ the item, you have to remove it from the scene of the canvas
 would just delete the reference and the object will still exist as it is owned
 by the canvas)
 
-Rubber band can be also used for drawing points, however
-:class:`QgsVertexMarker` class is better suited for this
-(:class:`QgsRubberBand` would only draw a rectangle around the desired point).
-How to use the vertex marker
+Rubber band can be also used for drawing points, but the
+:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited for this
+(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` would only draw a rectangle around the desired point).
+
+You can use the vertex marker like this:
 
 .. code-block:: python
 
@@ -264,8 +260,8 @@ icon type, size, color and pen width
   m.setIconType(QgsVertexMarker.ICON_BOX) # or ICON_CROSS, ICON_X
   m.setPenWidth(3)
 
-For temporary hiding of vertex markers and removing them from canvas, the same
-applies as for the rubber bands.
+For temporary hiding of vertex markers and removing them from canvas, use the same methods
+as for rubber bands.
 
 .. index:: Map canvas; Custom map tools
 
@@ -275,8 +271,8 @@ Writing Custom Map Tools
 You can write your custom tools, to implement a custom behavior to actions
 performed by users on the canvas.
 
-Map tools should inherit from the :class:`QgsMapTool` class or any derived
-class, and selected as active tools in the canvas using the :func:`setMapTool`
+Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`, class or any derived
+class, and selected as active tools in the canvas using the :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`
 method as we have already seen.
 
 Here is an example of a map tool that allows to define a rectangular extent by
@@ -344,8 +340,8 @@ described before to show the selected rectangle as it is being defined.
         return QgsRectangle(self.startPoint, self.endPoint)
 
     def deactivate(self):
-        super(RectangleMapTool, self).deactivate()
-        self.emit(SIGNAL("deactivated()"))
+        QgsMapTool.deactivate(self)
+        self.deactivated.emit()
 
 .. index:: Map canvas; Custom canvas items
 
@@ -385,4 +381,4 @@ Writing Custom Map Canvas Items
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -101,8 +101,8 @@ Outputs
 
 .. _qgisdbscanclustering:
 
-DBSCAN clustering |34|
-----------------------
+DBSCAN clustering
+-----------------
 Clusters point features based on a 2D implementation of Density-based spatial
 clustering of applications with noise (DBSCAN) algorithm.
 
@@ -341,8 +341,8 @@ Outputs
 
 .. _qgiskmeansclustering:
 
-K-means clustering |34|
------------------------
+K-means clustering
+------------------
 Calculates the 2D distance based k-means cluster number for each input feature.
 
 K-means clustering aims to partition the features into k clusters in which
@@ -568,5 +568,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

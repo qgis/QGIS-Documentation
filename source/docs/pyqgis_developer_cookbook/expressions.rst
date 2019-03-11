@@ -64,16 +64,15 @@ Examples of scalar expressions:
 Parsing Expressions
 ===================
 
-::
+.. code-block:: python
 
-  >>> exp = QgsExpression('1 + 1 = 2')
-  >>> exp.hasParserError()
-  False
-  >>> exp = QgsExpression('1 + 1 = ')
-  >>> exp.hasParserError()
-  True
-  >>> exp.parserErrorString()
-  PyQt4.QtCore.QString(u'syntax error, unexpected $end')
+  exp = QgsExpression('1 + 1 = 2')
+  exp.hasParserError() #will return False
+
+  exp = QgsExpression('1 + 1 = ')
+  exp.hasParserError() #Will return True
+
+  exp.parserErrorString() #will return 'syntax error, unexpected $end'
 
 .. index:: Expressions; Evaluating
 
@@ -83,43 +82,46 @@ Evaluating Expressions
 Basic Expressions
 -----------------
 
-::
+  .. code-block:: python
 
-  >>> exp = QgsExpression('1 + 1 = 2')
-  >>> value = exp.evaluate()
-  >>> value
-  1
+  exp = QgsExpression('1 + 1 = 2')
+  value = exp.evaluate()
+
 
 Expressions with features
 --------------------------
 
 The following example will evaluate the given expression against a feature.
+A :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
+object has to be creted and passed, to allow the expression to access the feature field values.
 "Column" is the name of the field in the layer.
 
-::
+.. code-block:: python
 
-  >>> exp = QgsExpression('Column = 99')
-  >>> value = exp.evaluate(feature, layer.pendingFields())
-  >>> bool(value)
-  True
+  exp = QgsExpression('Column')
+  context = QgsExpressionContext()
+  context.setFeature(feature)
+  exp.evaluate(context)
+  99
 
-You can also use :func:`QgsExpression.prepare()` if you need check more than
-one feature.  Using :func:`QgsExpression.prepare()` will increase the speed
+You can also use :meth:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` if you need check more than
+one feature.  Using :meth:`QgsExpression.prepare() <qgis.core.QgsExpression.prepare>` will increase the speed
 that evaluate takes to run.
 
-::
+.. code-block:: python
 
-  >>> exp = QgsExpression('Column = 99')
-  >>> exp.prepare(layer.pendingFields())
-  >>> value = exp.evaluate(feature)
-  >>> bool(value)
-  True
+  exp = QgsExpression('Column')
+  context = QgsExpressionContext()
+  context.setFeature(feature)
+  exp.prepare(context)
+  exp.evaluate(feature)
+
 
 
 Handling errors
 ---------------
 
-::
+.. code-block:: python
 
   exp = QgsExpression("1 + 1 = 2 ")
   if exp.hasParserError():
@@ -137,16 +139,19 @@ Examples
 The following example can be used to filter a layer and return any feature that
 matches a predicate.
 
-::
+.. code-block:: python
 
   def where(layer, exp):
     print("Where")
     exp = QgsExpression(exp)
     if exp.hasParserError():
       raise Exception(exp.parserErrorString())
-    exp.prepare(layer.pendingFields())
+    context = QgsExpressionContext()
+    context.setFields(layer.fields())
+    exp.prepare(context)
     for feature in layer.getFeatures():
-      value = exp.evaluate(feature)
+      context.setFeature(feature)
+      value = exp.evaluate(context)
       if exp.hasEvalError():
         raise ValueError(exp.evalErrorString())
       if bool(value):
@@ -164,4 +169,4 @@ matches a predicate.
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -28,7 +28,7 @@ Icon                    Plugin                        Description               
 |georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
-|metasearch|            Metasearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
+|metasearch|            MetaSearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
 |showPluginManager|     Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins`
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
@@ -66,4 +66,4 @@ Icon                    Plugin                        Description               
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

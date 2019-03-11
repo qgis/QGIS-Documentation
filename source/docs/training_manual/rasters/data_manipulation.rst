@@ -24,14 +24,14 @@ environment.
 Raster data can be loaded with the same methods we used for vector data.
 However we suggest to use the :guilabel:`Browser` Panel.
 
-* Open the :guilabel:`Browser` Panel and expand the :file:`exercise_data/raster`
-  folder.
-* Load all the data in this folder:
+#. Open the :guilabel:`Browser` Panel and expand the :file:`exercise_data/raster`
+   folder.
+#. Load all the data in this folder:
 
-  * :file:`3320C_2010_314_RGB_LATLNG.tif`
-  * :file:`3320D_2010_315_RGB_LATLNG.tif`
-  * :file:`3420B_2010_328_RGB_LATLNG.tif`
-  * :file:`3420C_2010_327_RGB_LATLNG.tif`
+   * :file:`3320C_2010_314_RGB_LATLNG.tif`
+   * :file:`3320D_2010_315_RGB_LATLNG.tif`
+   * :file:`3420B_2010_328_RGB_LATLNG.tif`
+   * :file:`3420C_2010_327_RGB_LATLNG.tif`
 
 You should see the following map:
 
@@ -118,17 +118,15 @@ merge algorithm.
     a raster catalog as described in the
     :ref:`Create a Virtual Raster <tm_virtual_raster>` section.
 
-Click on the :guilabel:`Merge` algorithm from the
-:menuselection:`GDAL --> Raster miscellaneous` menu.
+#. Click on the :guilabel:`Merge` algorithm from the
+   :menuselection:`GDAL --> Raster miscellaneous` menu.
+#. As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use
+   the |browseButton| to choose which layers you want to merge.
 
-As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>` you can use
-the |browseButton| to choose which layers you want to merge.
-
-You can also specify a Virtual raster as input, and then all of the rasters that
-it consists of will be processed.
-
-If you know the GDAL library, you can also add your own options by opening the
-:guilabel:`Advanced parameters` menu.
+   You can also specify a Virtual raster as input, and then all of the rasters
+   that it consists of will be processed.
+#. If you know the GDAL library, you can also add your own options by opening the
+   :guilabel:`Advanced parameters` menu.
 
 .. image:: img/merge_rasters.png
    :align: center
@@ -159,5 +157,4 @@ symbolization is useful in the case of rasters as well.
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
 .. |hard| image:: /static/global/hard.png
-.. |toolbox| replace:: :menuselection:`Processing --> Toolbox`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

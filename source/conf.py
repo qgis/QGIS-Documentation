@@ -69,7 +69,7 @@ exclude_patterns = ['../output', "../i18n", "../resources", "../scripts"]
 # for faster builds, you can exclude certain parts from the build
 # uncomment one or more lines below, or construct such line yourself
 # uncomment to exclude the processing algs from build
-#exclude_patterns += ['docs/user_manual/processing_algs/*']
+# exclude_patterns += ['docs/user_manual/processing_algs/*']
 # uncomment to exclude the user manual from build
 # exclude_patterns += ['docs/user_manual/*']
 # uncomment to exclude training manual from build
@@ -106,7 +106,7 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/3.4/', None)}
+intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/master/', None)}
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -380,6 +380,11 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:class', 'QgsVertexMarker'),
                   ('py:class', 'QMenu'),
                   ('py:class', 'QSettings'),
+                  ('py:class', 'QgsSymbolLayerRegistry'),
+                  ('py:class', 'QgsFeatureRenderer'),
+                  ('py:class', 'QgsRendererWidget'),
+                  ('py:class', 'QgsStyle'),
+                  ('py:class', 'QgsRendererAbstractMetadata'),
 
                   ('py:data', 'iface'),
                   ('py:data', 'qgis.utils.iface'),
@@ -507,4 +512,13 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:mod', 'qgis.core'),
                   ('py:mod', 'qgis.gui'),
                   ('py:mod', 'qgis.utils'),
+                  ('py:meth', 'qgis.core.QgsVectorDataProvider.nextFeature'),
+                  ('py:meth', 'qgis.core.QgsSymbol.angle'),
+                  ('py:meth', 'qgis.core.QgsSymbol.width'),
+                  ('py:meth', 'qgis.core.QgsSymbol.size'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.layerType'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.clone'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.stopRender'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.renderPolygon'),
+                  ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.renderPolyline'),
                   ]

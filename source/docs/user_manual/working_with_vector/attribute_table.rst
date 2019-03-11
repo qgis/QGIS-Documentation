@@ -441,10 +441,10 @@ Saving selected features as new layer
 
 The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). In the
-contextual menu of the layer, from the :guilabel:`Layers Panel`, click on
-:menuselection:`Save as` to define the name of the output file, its format
-and CRS (see section :ref:`general_saveas`). To save the selection ensure
-that the |checkbox| :menuselection:`Save only selected features` is selected.
+contextual menu of the layer, from the :guilabel:`Layers` panel, click on
+:menuselection:`Export --> Save selected features as...` to define the name of
+the output dataset, its format and CRS (see section :ref:`general_saveas`). You'll
+notice that |checkbox| :menuselection:`Save only selected features` is checked.
 It is also possible to specify OGR creation options within the dialog.
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
@@ -473,8 +473,8 @@ Using the Field Calculator
 The |calculateField| :sup:`Field Calculator` button in the attribute table
 allows you to perform calculations on the basis of existing attribute values or
 defined functions, for instance, to calculate length or area of geometry
-features. The results can be written to a new attribute field, a virtual field,
-or they can be used to update values in an existing field.
+features. The results can be used to update an existing field, or written
+to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
@@ -485,9 +485,10 @@ edit mode before the calculation is made.
 Based on the :ref:`Expression Builder <functions_list>` dialog, the field
 calculator dialog offers a complete interface to define an expression and apply
 it to an existing or a newly created field.
-To use the field calculator dialog, you first must select whether you want to
-only update selected features, create a new attribute field where the results
-of the calculation will be added or update an existing field.
+To use the field calculator dialog, you must select whether you want to:
+
+#. apply calculation on the whole layer or on selected features only
+#. create a new field for the calculation or update an existing one.
 
 .. _figure_field_calculator:
 
@@ -499,8 +500,8 @@ of the calculation will be added or update an existing field.
 If you choose to add a new field, you need to enter a field name, a field type
 (integer, real, date or string) and if needed, the total field length and the
 field precision. For example, if you choose a field length of 10 and a field
-precision of 3, it means you have 6 digits before the dot, then the dot and
-another 3 digits for the precision.
+precision of 3, it means you have 7 digits before the dot, and 3 digits for
+the decimal part.
 
 A short example illustrates how field calculator works when using the
 :guilabel:`Expression` tab. We want to calculate the length in km of the
@@ -526,7 +527,7 @@ Creating a Virtual Field
 ------------------------
 
 A virtual field is a field based on an expression calculated on the fly, meaning
-that its value is automatically updated as soon as the underlying parameter
+that its value is automatically updated as soon as an underlying parameter
 changes. The expression is set once; you no longer need to recalculate the field
 each time underlying values change.
 For example, you may want to use a virtual field if you need area to be evaluated
@@ -934,6 +935,6 @@ It will appear as a **Many to many relation**.
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em

@@ -3392,11 +3392,11 @@ in the current edit session.
    :width: 1.3em
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
+.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
+   :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
-   :width: 1.5em
-.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
@@ -3409,7 +3409,7 @@ in the current edit session.
 .. |diagramNone| image:: /static/common/diagramNone.png
    :width: 1.5em
 .. |digitizing| image:: /static/common/digitizing.png
-   :width: 2em
+   :width: 1.5em
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
@@ -3525,4 +3525,4 @@ in the current edit session.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

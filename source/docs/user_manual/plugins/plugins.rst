@@ -41,19 +41,8 @@ included in this manual.
 
 To install or activate a plugin, go to :menuselection:`Plugins` menu and select
 |showPluginManager| :menuselection:`Manage and install plugins...`.
-
-Installed external python plugins are placed under the
-:file:`~/(UserProfile)/python/plugins` folder where:
-
-* ``~`` represents the HOME directory which on |win| Windows is usually something
-  like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-  or :file:`C:\\Users\\(user)`.
-* and ``(UserProfile)`` represents the active profile folder, which for the
-  QGIS ``default`` user profile is:
-
-  * |nix| :file:`.local/share/QGIS/QGIS3/profiles/default`;
-  * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default`;
-  * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/default`.
+Installed external python plugins are placed under the :file:`python/plugins`
+folder of the active :ref:`user profile <user_profiles>` path.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
@@ -240,24 +229,18 @@ directly from their repository.
    :width: 1.3em
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
-.. |nix| image:: /static/common/nix.png
-   :width: 1em
-.. |osx| image:: /static/common/osx.png
-   :width: 1em
 .. |plugin| image:: /static/common/plugin.png
-   :width: 1.5em
-.. |pluginInstalled| image:: /static/common/plugin-installed.png
-   :width: 1.5em
-.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
    :width: 1.5em
 .. |plugin-new| image:: /static/common/plugin-new.png
    :width: 1.5em
 .. |plugin-upgrade| image:: /static/common/plugin-upgrade.png
    :width: 1.5em
+.. |pluginInstalled| image:: /static/common/plugin-installed.png
+   :width: 1.5em
+.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+   :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
-.. |win| image:: /static/common/win.png
-   :width: 1em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

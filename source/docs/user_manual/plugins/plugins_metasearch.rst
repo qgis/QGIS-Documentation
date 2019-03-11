@@ -3,7 +3,7 @@
    |updatedisclaimer|
 
 .. index:: Catalog services, Metadata
-   single: Plugins; Metasearch
+   single: Plugins; MetaSearch
 .. _metasearch:
 
 MetaSearch Catalog Client
@@ -29,7 +29,7 @@ to searching metadata catalogs within QGIS.
 .. figure:: img/metasearch-splash.png
    :align: center
 
-   Search and results of Services in Metasearch
+   Search and results of Services in MetaSearch
 
 Installation
 ------------
@@ -47,14 +47,14 @@ CSW (Catalog Service for the Web)
 ...................................
 
 `CSW (Catalog Service for the Web)`_ is an
-`OGC (Open Geospatial Consortium)`_ specification, that defines common
+`OGC (Open Geospatial Consortium)`_ specification that defines common
 interfaces to discover, browse and query metadata about data, services,
 and other potential resources.
 
 Startup
 .......
 
-To start MetaSearch, click |metasearch| icon or select :menuselection:`Web -->
+To start MetaSearch, click the |metasearch| icon or select :menuselection:`Web -->
 MetaSearch --> MetaSearch` via the QGIS main menu. The MetaSearch dialog will
 appear. The main GUI consists of three tabs: :guilabel:`Services`,
 :guilabel:`Search` and :guilabel:`Settings`.
@@ -154,11 +154,11 @@ Clicking a result will provide the following options:
   bounding box will be displayed on the map;
 * double-clicking the record displays the record metadata with any associated
   access links. Clicking the links opens the link in the user's web browser;
-* if the record is an OGC web service (WMS/WMTS, WFS, WCS), the appropriate
-  :guilabel:`Add to WMS/WMTS|WFS|WCS` buttons will be enabled for the user to add to
+* if the record is a supported web service (WMS/WMTS, WFS, WCS, ArcGIS MapServer,
+  ArcGIS FeatureServer, etc.), the :guilabel:`Add Data` button will be enabled for the user to add to
   QGIS. When clicking this button, MetaSearch will verify if this is a valid
-  OWS. The OWS will then be added to the appropriate QGIS connection list, and
-  the appropriate WMS/WMTS|WFS|WCS connection dialog will then appear.
+  OWS. The service will then be added to the appropriate QGIS connection list, and
+  the appropriate connection dialog will then appear.
 
 .. _figure_metasearch_metadata:
 
@@ -175,14 +175,10 @@ Settings
 .. figure:: img/metasearch-settings.png
    :align: center
 
-   Metasearch setting
+   MetaSearch settings
 
 You can fine tune MetaSearch with the following :guilabel:`settings`:
 
-* :guilabel:`Connection naming`: when adding an OWS connection 
-  (WMS/WMTS|WFS|WCS), the connection is stored with the various QGIS layer 
-  provider. Use this setting to set whether to use the name provided from 
-  MetaSearch, whether to overwrite or to use a temporary name;
 * :guilabel:`Results paging`: when searching metadata catalogs, the number of
   results to show per page. Default value is 10;
 * :guilabel:`Timeout`: when searching metadata catalogs, the number of
@@ -200,4 +196,4 @@ You can fine tune MetaSearch with the following :guilabel:`settings`:
 
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

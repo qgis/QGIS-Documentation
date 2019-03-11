@@ -33,7 +33,7 @@ Python application.
 
 There is a `complete QGIS API <https://qgis.org/api/>`_ reference that
 documents the classes from the QGIS libraries. `The Pythonic QGIS API
-(pyqgis) <https://qgis.org/pyqgis/>`_ is nearly identical to the C++ API.
+(pyqgis) <https://qgis.org/pyqgis>`_ is nearly identical to the C++ API.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from the
@@ -62,9 +62,9 @@ The screenshot above illustrates how to get the layer currently
 selected in the layer list, show its ID and optionally, if it is a
 vector layer, show the feature count.
 For interaction with the QGIS environment, there is a :data:`iface`
-variable, which is an instance of :class:`QgsInterface`. This
+variable, which is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`. This
 interface allows access to the map canvas, menus, toolbars and other
-parts of the QGIS application.
+parts of the QGIS application. 
 
 For user convenience, the following statements are executed
 when the console is started (in the future it will be possible to set
@@ -93,7 +93,7 @@ development.
 Many plugins covering various functionality have been written since
 the introduction of Python support. The plugin installer allows users
 to easily fetch, upgrade and remove Python plugins.
-See the `Python Plugin <https://plugins.qgis.org/>`_ page for more
+See the `Python Plugins <https://plugins.qgis.org/>`_ page for more
 information about plugins and plugin development.
 
 Creating plugins in Python is simple, see :ref:`developing_plugins`
@@ -349,4 +349,4 @@ PyQt.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

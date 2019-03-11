@@ -329,7 +329,7 @@ Parameters
 
   Value to be evaluated.
 
-``Modify current selection by`` [enumeration] |32|
+``Modify current selection by`` [enumeration]
   How the selection of the algorithm should be managed. You have many options:
 
   * 0 --- creating new selection
@@ -423,5 +423,4 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

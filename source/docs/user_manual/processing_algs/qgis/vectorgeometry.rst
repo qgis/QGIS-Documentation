@@ -26,7 +26,7 @@ the input layer:
 
 * for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) coordinates
   and/or M value (``mvalue``);
-* for **line** layers: ``length`` and, |32| particularly for LineString and CompoundCurve
+* for **line** layers: ``length`` and, particularly for LineString and CompoundCurve
   geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``);
 * for **polygon** layers: ``perimeter`` and ``area``.
 
@@ -332,7 +332,7 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Create point on surface for each part`` [boolean |dataDefined|] |32|
+``Create point on surface for each part`` [boolean |dataDefined|]
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -486,8 +486,8 @@ See also
 
 .. _qgisknearestconcavehull:
 
-Concave hull (k-nearest neighbor) |34| 
---------------------------------------
+Concave hull (k-nearest neighbor)
+---------------------------------
 This algorithm generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
 vertices.
@@ -502,7 +502,7 @@ convex hull.
 
 If a field is selected, the algorithm will group the features in the
 input layer using unique values in that field and generate individual
-polygons in the output layer for each group. 
+polygons in the output layer for each group.
 
 Parameters
 ..........
@@ -634,8 +634,8 @@ Outputs
 
 .. _qgiswedgebuffers:
 
-Create wedge buffers |32|
--------------------------
+Create wedge buffers
+--------------------
 Creates wedge shaped buffers from input points.
 
 .. figure:: img/wedge_buffers.png
@@ -892,8 +892,8 @@ Outputs
 
 .. _qgissetzfromraster:
 
-Drape (set Z value from raster) |34|
-------------------------------------
+Drape (set Z value from raster)
+-------------------------------
 Uses values sampled from a band within a raster layer to set the Z value for every
 overlapping vertex in the feature geometry. The raster values can optionally be
 scaled by a preset amount.
@@ -1141,8 +1141,8 @@ Outputs
 
 .. _qgisfilterverticesbym:
 
-Filter vertices by M value |34|
--------------------------------
+Filter vertices by M value
+--------------------------
 Filters away vertices based on their M value, returning geometries with only vertex
 points that have a M value greater than or equal to the specified minimum value and/or
 less than or equal to the maximum value.
@@ -1191,8 +1191,8 @@ See also
 
 .. _qgisfilterverticesbyz:
 
-Filter vertices by Z value |34|
--------------------------------
+Filter vertices by Z value
+--------------------------
 Filters away vertices based on their Z value, returning geometries with only vertex
 points that have a Z value greater than or equal to the specified minimum value and/or
 less than or equal to the maximum value.
@@ -1264,6 +1264,35 @@ Outputs
 ``Fixed geometries`` [vector: line, polygon]
   Layer with fixed geometries.
 
+.. _qgisantimeridiansplit:
+
+Geodesic line split at antimeridian |36|
+----------------------------------------
+
+This algorithm splits a line into multiple geodesic segments, whenever the line
+crosses the antimeridian (±180 degrees longitude).
+
+Splitting at the antimeridian helps the visual display of the lines in some
+projections. The returned geometry will always be a multi-part geometry.
+
+Whenever line segments in the input geometry cross the antimeridian, they will
+be split into two segments, with the latitude of the breakpoint being determined
+using a geodesic line connecting the points either side of this segment. The
+current project ellipsoid setting will be used when calculating this breakpoint.
+
+If the input geometry contains M or Z values, these will be linearly interpolated
+for the new vertices created at the antimeridian.
+
+Parameters
+..........
+``Input layer`` [vector: line]
+  Vector input line layer
+
+Outputs
+.......
+
+``Split`` [vector: line]
+  Vector line layer resulting from geodesic split.
 
 .. _qgisgeometrybyexpression:
 
@@ -1322,8 +1351,8 @@ Outputs
 
 .. _qgisinterpolatepoint:
 
-Interpolate point on line |34|
-------------------------------
+Interpolate point on line
+-------------------------
 Creates a point geometry interpolated at a set distance along line or curve
 geometries.
 
@@ -1393,8 +1422,8 @@ Outputs
 
 .. _qgislinesubstring:
 
-Line substring |34|
--------------------
+Line substring
+--------------
 Returns the portion of a line (or curve) which falls between the specified start
 and end distances (measured from the beginning of the line).
 
@@ -1532,7 +1561,7 @@ Calculates the minimum enclosing circle which covers each feature in an input la
 
 .. figure:: img/minimum_enclosing_circles.png
    :align: center
-   
+
    Enclosing circles for each feature
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
@@ -1561,8 +1590,8 @@ See also
 
 .. _qgismultiringconstantbuffer:
 
-Multi-ring buffer (constant distance) |32|
-------------------------------------------
+Multi-ring buffer (constant distance)
+-------------------------------------
 Computes multi-ring (*donuts*) buffer for all the features in an input layer,
 using a fixed or dynamic distance and ring numbers.
 
@@ -1777,7 +1806,7 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer.
 
-``Create point on surface for each part`` [boolean |dataDefined|] |32|
+``Create point on surface for each part`` [boolean |dataDefined|]
   If checked a point for each different part of the geometry will be created.
 
   Default: *False*
@@ -1982,8 +2011,8 @@ Outputs
 
 .. _qgisprojectpointcartesian:
 
-Project points (Cartesian) |32|
--------------------------------
+Project points (Cartesian)
+--------------------------
 Projects point geometries by a specified distance and bearing (azimuth), creating
 a new point layer with the projected points.
 
@@ -2266,8 +2295,8 @@ Outputs
 
 .. _qgisrotatefeatures:
 
-Rotate |32|
------------
+Rotate
+------
 Rotates feature geometries by the specified angle clockwise.
 The rotation occurs around each feature's centroid, or optionally
 around a unique preset point.
@@ -2300,8 +2329,8 @@ Outputs
 
 .. _qgissegmentizebymaxangle:
 
-Segmentize by maximum angle |32|
---------------------------------
+Segmentize by maximum angle
+---------------------------
 Segmentizes a geometry by converting curved sections to linear sections.
 
 The segmentization is performed by specifying the maximum allowed radius angle
@@ -2334,8 +2363,8 @@ See also
 
 .. _qgissegmentizebymaxdistance:
 
-Segmentize by maximum distance |32|
------------------------------------
+Segmentize by maximum distance
+------------------------------
 Segmentizes a geometry by converting curved sections to linear sections.
 
 The segmentization is performed by specifying the maximum allowed offset
@@ -2402,8 +2431,8 @@ See also
 
 .. _qgissetmfromraster:
 
-Set M value from raster |34|
-----------------------------
+Set M value from raster
+-----------------------
 
 Uses values sampled from a band within a raster layer to set the M value for every
 overlapping vertex in the feature geometry. The raster values can optionally be
@@ -2796,8 +2825,8 @@ Outputs
 
 .. _qgisswapxy:
 
-Swap X and Y coordinates |32|
------------------------------
+Swap X and Y coordinates
+------------------------
 Switches the X and Y coordinate values in input geometries.
 
 It can be used to repair geometries which have accidentally had their latitude
@@ -2820,8 +2849,8 @@ Outputs
 
 .. _qgistaperedbuffer:
 
-Tapered buffers |32|
---------------------
+Tapered buffers
+---------------
 Creates tapered buffer along line geometries, using a specified start and end
 buffer diameter.
 
@@ -3002,8 +3031,8 @@ See also
 
 .. _qgisbufferbym:
 
-Variable width buffer (by M value) |32|
----------------------------------------
+Variable width buffer (by M value)
+----------------------------------
 Creates variable width buffers along lines, using the M value of the line geometries
 as the diameter of the buffer at each vertex.
 
@@ -3077,8 +3106,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
-.. |34| replace:: ``NEW in 3.4``
+.. |36| replace:: ``NEW in 3.6``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -3095,4 +3123,4 @@ Outputs
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

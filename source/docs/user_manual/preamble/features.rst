@@ -120,7 +120,7 @@ Core plugins include:
 #.  Georeferencer GDAL (add projection information to rasters using GDAL)
 #.  GPS Tools (load and import GPS data)
 #.  GRASS 7 (integrate GRASS GIS)
-#.  Metasearch Catalogue Client (interacting with metadata catalog services
+#.  MetaSearch Catalogue Client (interacting with metadata catalog services
     supporting the OGC Catalog Service for the Web (CSW) standard)
 #.  Offline Editing (allow offline editing and synchronizing with databases)
 #.  Processing (the spatial data processing framework for QGIS)
@@ -209,4 +209,4 @@ https://linuxaria.com/article/open-files-in-linux
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

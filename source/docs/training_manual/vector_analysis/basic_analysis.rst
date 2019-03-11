@@ -20,10 +20,10 @@ tools.
 Before we start, it would be useful to give a brief overview of a process that
 can be used to solve any GIS problem. The way to go about it is:
 
-1. State the Problem
-2. Get the Data
-3. Analyze the Problem
-4. Present the Results
+#. State the Problem
+#. Get the Data
+#. Analyze the Problem
+#. Present the Results
 
 |basic| The Problem
 -------------------------------------------------------------------------------
@@ -32,21 +32,21 @@ Let's start off the process by deciding on a problem to solve. For example,
 you are an estate agent and you are looking for a residential property in
 |majorUrbanName| for clients who have the following criteria:
 
-#. It needs to be in |majorUrbanName|;
-#. It must be within reasonable driving distance of a school (say 1km);
-#. It must be more than 100m squared in size;
-#. Closer than 50m to a main road;
-#. Closer than 500m to a restaurant.
+#. It needs to be in |majorUrbanName|
+#. It must be within reasonable driving distance of a school (say 1km)
+#. It must be more than 100m squared in size
+#. Closer than 50m to a main road
+#. Closer than 500m to a restaurant
 
 |basic| The Data
 -------------------------------------------------------------------------------
 
 To answer these questions, we're going to need the following data:
 
-#. The residential properties (buildings) in the area;
-#. The roads in and around the town;
-#. The location of schools and restaurants;
-#. The size of buildings.
+#. The residential properties (buildings) in the area
+#. The roads in and around the town
+#. The location of schools and restaurants
+#. The size of buildings
 
 All of this data is available through OSM and you should find that the dataset
 you have been using throughout this manual can also be used for this lesson.
@@ -65,23 +65,23 @@ If you want to download data from another area jump to
 
 We first need to load the data to work with.
 
-* Start a new QGIS project;
-* If you want you can add a background map. Open the :guilabel:`Browser` and load
-  the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
+#. Start a new QGIS project
+#. If you want you can add a background map. Open the :guilabel:`Browser` and load
+   the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
 
-.. image:: img/osm_swellendam.png
-   :align: center
+   .. image:: img/osm_swellendam.png
+      :align: center
 
-In the :file:`training_data.gpkg` Geopackage database load all the files we will
-use in this chapter:
+#. In the :file:`training_data.gpkg` Geopackage database load all the files we will
+   use in this chapter:
 
-#. ``landuse``;
-#. ``buildings``;
-#. ``roads``;
-#. ``restaurants``;
-#. ``schools``.
+   #. ``landuse``
+   #. ``buildings``
+   #. ``roads``
+   #. ``restaurants``
+   #. ``schools``
 
-Zooming to the layer extent to see |majorUrbanName|, South Africa.
+#. Zoom to the layer extent to see |majorUrbanName|, South Africa
 
 Before proceeding we should filter the :guilabel:`roads` layer in order to have
 only some specific road types to work with.
@@ -93,21 +93,21 @@ the other road types, more suitable for this exercise.
 Moreover, OSM data might not be updated everywhere and we will also exclude
 ``NULL`` values.
 
-Right click on the :guilabel:`roads` layer and choose :guilabel:`Filter...`. In
-the dialog that pops up we can filter these features with the following
-expression::
+#. Right click on the :guilabel:`roads` layer and choose :guilabel:`Filter...`.
+#. In the dialog that pops up we can filter these features with the following
+   expression::
 
-  "highway" NOT IN ('footway','path','unclassified','track') OR "highway" != NULL
+    "highway" NOT IN ('footway','path','unclassified','track') OR "highway" != NULL
 
-The concatenation of the two operators ``NOT`` and ``IN`` means to exclude all
-the unwanted features that have these attributes in the ``highway`` field.
+   The concatenation of the two operators ``NOT`` and ``IN`` means to exclude all
+   the unwanted features that have these attributes in the ``highway`` field.
 
-``!= NULL`` combined with the ``OR`` operator is excluding roads with no values
-in the ``highway`` field.
+   ``!= NULL`` combined with the ``OR`` operator is excluding roads with no values
+   in the ``highway`` field.
 
-You will note the |indicatorFilter| icon next to the :guilabel:`roads` layer
-that helps you remember that this layer has a filter activated and not all the
-features are available in the project.
+   You will note the |indicatorFilter| icon next to the :guilabel:`roads` layer
+   that helps you remember that this layer has a filter activated and not all the
+   features are available in the project.
 
 The map with all the data should look like the following one:
 
@@ -133,31 +133,31 @@ But feel free to choose the best workflow for yourself.
     :guilabel:`WGS 84 / UTM zone 34S` CRS, but you may use a UTM CRS which is
     more appropriate for your region.
 
-* Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel;
-* Click :guilabel:`Export --> Save Features As...`;
-* In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`
-  as :guilabel:`Format`;
-* Click on |browseButton| of :guilabel:`File name` parameter and name the new
-  GeoPackage as :guilabel:`vector_analysis`;
-* Change the :guilabel:`Layer name` as :guilabel:`roads_34S`;
-* Change the :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`;
-* Finally click on :guilabel:`OK`:
+#. Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel;
+#. Click :guilabel:`Export --> Save Features As...`;
+#. In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`
+   as :guilabel:`Format`;
+#. Click on |browseButton| of :guilabel:`File name` parameter and name the new
+   GeoPackage as :guilabel:`vector_analysis`;
+#. Change the :guilabel:`Layer name` as :guilabel:`roads_34S`;
+#. Change the :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`;
+#. Finally click on :guilabel:`OK`:
 
-.. image:: img/save_roads_34S.png
-   :align: center
+   .. image:: img/save_roads_34S.png
+      :align: center
 
-This will create the new GeoPackage database and fill it with the
-:guilabel:`roads_34S` layer.
+   This will create the new GeoPackage database and fill it with the
+   :guilabel:`roads_34S` layer.
 
-Repeat this process for each layer, creating a new layer in the
-:file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the
-original name and removing each of the old layers from the project.
+#. Repeat this process for each layer, creating a new layer in the
+   :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the
+   original name and removing each of the old layers from the project.
 
-.. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
-    **append** that layer in the GeoPackage.
+   .. note:: When you choose to save a layer to an existing GeoPackage, QGIS will
+      **append** that layer in the GeoPackage.
 
-Once you have completed the process for each layer, right click on any layer and
-click :guilabel:`Zoom to layer extent` to focus the map to the area of interest.
+#. Once you have completed the process for each layer, right click on any layer and
+   click :guilabel:`Zoom to layer extent` to focus the map to the area of interest.
 
 Now that we have converted OSM's data to a UTM projection, we can begin our
 calculations.
@@ -167,51 +167,50 @@ calculations.
 
 QGIS allows you to calculate distances from any vector object.
 
-* Make sure that only the :guilabel:`roads_34S` and
-  :guilabel:`buildings_34S` layers are visible, to simplify the map while
-  you're working;
-* Click on the :menuselection:`Processing --> Toolbox` to open the analytical
-  *core* of QGIS. Basically: **all** algorithms (for vector **and** raster) analysis
-  are available within this toolbox;
-* We start by calculating the area around the :guilabel:`roads_34S` by using the
-  :guilabel:`Buffer` algorithm. You can find it expanding the
-  :menuselection:`Vector Geometry` group;
+#. Make sure that only the :guilabel:`roads_34S` and :guilabel:`buildings_34S`
+   layers are visible, to simplify the map while you're working
+#. Click on the :menuselection:`Processing --> Toolbox` to open the analytical
+   *core* of QGIS. Basically: **all** algorithms (for vector **and** raster)
+   analysis are available within this toolbox.
+#. We start by calculating the area around the :guilabel:`roads_34S` by using the
+   :guilabel:`Buffer` algorithm. You can find it expanding the
+   :menuselection:`Vector Geometry` group.
 
-  .. image:: img/processing_buffer_1.png
-     :align: center
+   .. image:: img/processing_buffer_1.png
+      :align: center
 
-  Or you can type ``buffer`` in the search menu in the upper part of the toolbox:
+   Or you can type ``buffer`` in the search menu in the upper part of the toolbox:
 
-  .. image:: img/processing_buffer_2.png
-     :align: center
+   .. image:: img/processing_buffer_2.png
+      :align: center
 
-Double click on it to open the algorithm dialog.
+#. Double click on it to open the algorithm dialog
+#. Set it up like this
 
-* Set it up like this;
+   .. image:: img/vector_buffer_setup.png
+      :align: center
 
-.. image:: img/vector_buffer_setup.png
-   :align: center
+#. The default :guilabel:`Distance` is in meters because our input dataset is in
+   a Projected Coordinate System that uses meter as its basic measurement unit.
+   You can use the combo box to choose other projected units like kilometers,
+   yards, etc.
 
-The default :guilabel:`Distance` is in meters because our input dataset is in a
-Projected Coordinate System that uses meter as its basic measurement unit.
-You can use the combo box to choose other projected units like kilometers, yards,
-etc.
+   .. note:: If you are trying to make a buffer on a layer with a Geographical
+       Coordinate System, Processing will warn you and suggest to reproject the
+       layer to a metric Coordinate System.
 
-.. note:: If you are trying to make a buffer on a layer with a Geographical
-    Coordinate System, Processing will warn you and suggest to reproject the
-    layer to a metric Coordinate System.
+#. By default Processing creates temporary layers and adds them to the
+   :guilabel:`Layers` panel. You can also append the result to the GeoPackage
+   database by:
+   
+   #. clicking on the |browseButton| button and choose :guilabel:`Save to GeoPackage...`
+   #. naming the new layer :guilabel:`roads_buffer_50m`
+   #. and saving it in the :file:`vector_analysis.gpkg` file
 
-* By default Processing creates temporary layers and adds them to the
-  :guilabel:`Layers` panel. You can also append the result to the GeoPackage
-  database by clicking on the |browseButton| button and choose
-  :guilabel:`Save to GeoPackage...`. Name the new layer
-  :guilabel:`roads_buffer_50m` and save it in the :file:`vector_analysis.gpkg`
-  file;
+   .. image:: img/buffer_saving.png
+      :align: center
 
-  .. image:: img/buffer_saving.png
-     :align: center
-
-* Click on :guilabel:`Run` and then close the :guilabel:`Buffer` dialog.
+#. Click on :guilabel:`Run` and then close the :guilabel:`Buffer` dialog.
 
 Now your map will look something like this:
 
@@ -223,16 +222,17 @@ obscure much of your map, but this gives you all the areas in your region which 
 within 50m of a road.
 
 However, you'll notice that there are distinct areas within your buffer, which
-correspond to all the individual roads. To get rid of this problem, uncheck the
-:guilabel:`roads_buffer_50m` layer and re-create the buffer using the settings
-shown here:
+correspond to all the individual roads. To get rid of this problem:
 
-.. image:: img/dissolve_buffer_setup.png
-   :align: center
+#. Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer using
+   the settings shown here:
 
-* Note that we're now checking the :guilabel:`Dissolve result` box;
-* Save the output as :guilabel:`roads_buffer_50m_dissolved`;
-* Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog again.
+   .. image:: img/dissolve_buffer_setup.png
+      :align: center
+
+   Note that we're now checking the :guilabel:`Dissolve result` box
+#. Save the output as :guilabel:`roads_buffer_50m_dissolved`
+#. Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog again
 
 Once you've added the layer to the :guilabel:`Layers` panel, it will look like
 this:
@@ -264,29 +264,31 @@ It needs to be :guilabel:`1 km` in radius. Save the new layer in the
 Now we have areas where the road is 50 meters away and there's a school within
 1 km (direct line, not by road). But obviously, we only want the areas where
 both of these criteria are satisfied. To do that, we'll need to use the
-:guilabel:`Intersect` tool. You can find it in
-:menuselection:`Vector Overlay` group within
-:menuselection:`Processing --> Toolbox`. Set it up like this:
+:guilabel:`Intersect` tool. You can find it in :menuselection:`Vector Overlay`
+group within :menuselection:`Processing --> Toolbox`.
 
-.. image:: img/school_roads_intersect.png
-   :align: center
+#. Set it up like this:
 
-The input layers are the two buffers; the saving location is, once again, the
-:file:`vector_analysis.gpkg` GeoPackage; and the output layer name is
-:guilabel:`road_school_buffers_intersect`. Once it's set up like this, click
-:guilabel:`Run`.
+   .. image:: img/school_roads_intersect.png
+      :align: center
 
-In the image below, the blue areas show us where both distance criteria are
-satisfied at once!
+   * The input layers are the two buffers
+   * The saving location is, once again, the :file:`vector_analysis.gpkg` GeoPackage
+   * And the output layer name is :guilabel:`road_school_buffers_intersect`
 
-.. image:: img/intersect_result.png
-   :align: center
+#. Click :guilabel:`Run`.
 
-You may remove the two buffer layers and only keep the one that shows where
-they overlap, since that's what we really wanted to know in the first place:
+   In the image below, the blue areas show us where both distance criteria are
+   satisfied at once!
 
-.. image:: img/final_intersect_result.png
-   :align: center
+   .. image:: img/intersect_result.png
+      :align: center
+
+#. You may remove the two buffer layers and only keep the one that shows where
+   they overlap, since that's what we really wanted to know in the first place:
+
+   .. image:: img/final_intersect_result.png
+      :align: center
 
 .. _select-by-location:
 
@@ -296,27 +298,26 @@ they overlap, since that's what we really wanted to know in the first place:
 Now you've got the area that the buildings must overlap. Next, you want to
 extract the buildings in that area.
 
-* Look for the menu entry :menuselection:`Vector Selection --> Extract by location`
-  within :menuselection:`Processing --> Toolbox`;
+#. Look for the menu entry :menuselection:`Vector Selection --> Extract by location`
+   within :menuselection:`Processing --> Toolbox`
+#. Set up the algorithm dialog like in the following picture
 
-* Set up the algorithm dialog like in the following picture;
+   .. image:: img/location_select_dialog.png
+      :align: center
 
-.. image:: img/location_select_dialog.png
-   :align: center
+#. Click :guilabel:`Run` and then close the dialog
+#. You'll probably find that not much seems to have changed. If so, move the
+   :guilabel:`well_located_houses` layer to the top of the layers list, then
+   zoom in.
 
-* Click :guilabel:`Run` and then close the dialog;
-* You'll probably find that not much seems to have changed. If so, move the
-  :guilabel:`well_located_houses` layer to the top of the layers list, then
-  zoom in.
+   .. image:: img/select_zoom_result.png
+      :align: center
 
-.. image:: img/select_zoom_result.png
-   :align: center
+   The red buildings are those which match our criteria, while the buildings
+   in green are those which do not.
 
-The red buildings are those which match our criteria, while the buildings in green
-are those which do not.
-
-Now you have two separated layers and can remove :guilabel:`buildings_34S`  from
-layer list.
+#. Now you have two separated layers and can remove :guilabel:`buildings_34S`
+   from layer list.
 
 .. _backlink-vector-analysis-basic-2:
 
@@ -337,30 +338,32 @@ your :guilabel:`well_located_houses` layer to show only those which are within
 |basic| |FA| Select Buildings of the Right Size
 -------------------------------------------------------------------------------
 
-To see which buildings are the correct size (more than 100 square meters), we
-first need to calculate their size.
+To see which buildings are of the correct size (more than 100 square meters),
+we first need to calculate their size.
 
-* Select the :guilabel:`houses_restaurants_500m` layer and open the :guilabel:`Field Calculator`
-  by clicking on the |calculateField| button in the main toolbar or within the
-  attribute table;
-* Set it up like this;
+#. Select the :guilabel:`houses_restaurants_500m` layer and open the
+   :guilabel:`Field Calculator` by clicking on the |calculateField| button in
+   the main toolbar or within the attribute table
+#. Set it up like this
 
-.. image:: img/buildings_area_calculator.png
-   :align: center
+   .. image:: img/buildings_area_calculator.png
+      :align: center
 
-* We are creating the new field :guilabel:`AREA` that will contain the area of
-  each building square meters;
-* Click :guilabel:`OK`;
-* The :guilabel:`AREA` field has been added at the end of the attribute table.
-* Click the edit mode button again to finish editing, and save your edits
-  when prompted;
-* Build a query as earlier in this lesson;
+   We are creating the new field :guilabel:`AREA` that will contain the area of
+   each building square meters.
+#. Click :guilabel:`OK`.
+   The :guilabel:`AREA` field has been added at the end of the attribute table.
+#. Click the edit mode button again to finish editing, and save your edits
+   when prompted.
+#. Build a query as earlier in this lesson
 
-.. image:: img/buildings_area_query.png
-   :align: center
+   .. image:: img/buildings_area_query.png
+      :align: center
 
-* Click :guilabel:`OK`. Your map should now only show you those buildings which
-  match our starting criteria and which are more than 100m squared in size.
+#. Click :guilabel:`OK`.
+
+Your map should now only show you those buildings which
+match our starting criteria and which are more than 100m squared in size.
 
 
 |basic| |TY|
@@ -404,4 +407,4 @@ the road from one point to another.
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -854,15 +854,16 @@ using your choice of text.
 
       The Copyright Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked
-#. Enter the text you want to place on the map. You can use HTML as
-   shown in the example.
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
+#. Enter the text you want to place on the map.
+   You can include expressions
+   (using the :guilabel:`Insert an Expression` button).
 #. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
    font color and opacity by clicking the black arrow to the right of the font combo box.
 #. Choose the placement of the label from the :guilabel:`Placement`
    |selectString| combo box.
 #. Refine the placement of the item by setting a horizontal and/or vertical
-   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. You can change the color to apply
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
@@ -1544,21 +1545,21 @@ Save and Share Layer Properties
 Managing Custom Styles
 -----------------------
 
-When a vector layer is added to map canvas, QGIS uses by default a random
-symbol/color to render its features. You can however set a default symbol in
+When a vector layer is added to the map canvas, QGIS by default uses a random
+symbol/color to render its features. However, you can set a default symbol in
 :menuselection:`Project --> Properties... --> Default styles` that will be
 applied to each newly added layer according to its geometry type.
 
 .. any idea on how it works for raster?
 
-But, most of the time, you'd prefer to have a custom and more complex style
-that can be applied automatically or manually (with less efforts) to the layers.
-You can achieve this goal using the :menuselection:`Style` menu at the bottom
+Most of the time, though, you'd rather have a custom and more complex style
+that can be applied automatically or manually to the layers (with less effort).
+You can achieve this by using the :menuselection:`Style` menu at the bottom
 of the Layer Properties dialog. This menu provides you with functions to
 create, load and manage styles.
 
 A style stores any information set in the layer properties dialog to render
-or interact with the layer (including symbology, labeling, fields and form definition,
+or interact with the layer (including symbology, labeling, fields and form definitions,
 actions, diagrams...) for vector layers, or the pixels (band or color rendering, transparency,
 pyramids, histogram ...) for raster.
 
@@ -1572,9 +1573,9 @@ pyramids, histogram ...) for raster.
 
 By default, the style applied to a loaded layer is named ``default``. Once you
 have got the ideal and appropriate rendering for your layer, you can save it by
-clicking the |selectString| :menuselection:`Style` combobox and choose:
+clicking the |selectString| :menuselection:`Style` combobox and choosing:
 
-* **Rename Current**: The active style gets renamed and updated with the current
+* **Rename Current**: The active style is renamed and updated with the current
   options
 * **Add**: A new style is created using the current options. By default, it will
   be saved in the QGIS project file. See below to save the style in another file
@@ -1582,11 +1583,11 @@ clicking the |selectString| :menuselection:`Style` combobox and choose:
 * **Remove**: Delete unwanted style, in case you have more than one style defined
   for the layer.
 
-At the bottom of the Style drop-down list, you see the styles set for the layer
-and the active one is checked.
+At the bottom of the Style drop-down list, you can see the styles set for the layer
+with the active one checked.
 
 Note that each time you validate the layer properties dialog, the active style
-is updated with the changes you've done.
+is updated with the changes you've made.
 
 You can create as many styles as you wish for a layer but only one can be active
 at a time. In combination with :ref:`Map Themes <map_themes>`,
@@ -1597,54 +1598,54 @@ to duplicate any layer in the map legend.
 
   Given that whenever you apply modifications to the layer properties, changes
   are stored in the active style, always ensure you are editing the right style
-  to avoid mistakenly alter a style used in a :ref:`map theme <map_themes>`.
+  to avoid mistakenly altering a style used in a :ref:`map theme <map_themes>`.
 
 .. tip:: **Manage styles from layer context menu**
 
-   Right-click on the layer in :guilabel:`Layers Panel` to add, rename
-   or remove layer style.
+   Right-click on the layer in the :guilabel:`Layers` panel to add, rename
+   or remove layer styles.
 
 .. _store_style:
 
-Storing Style in a File or a Database
+Storing Styles in a File or a Database
 --------------------------------------
 
-While created styles from the :guilabel:`Style` combobox are by default saved
+While styles created from the :guilabel:`Style` combobox are by default saved
 inside the project and can be copied and pasted from layer to layer in the project,
 it's also possible to save them outside the project so that they can be loaded
 in another project.
 
-Save in plain text file
+Save as text file
 ........................
 
 Clicking the |selectString| :menuselection:`Style --> Save Style`, you can
 save the style as a:
 
 * QGIS layer style file (:file:`.qml`)
-* or SLD file (:file:`.sld`), only available for vector layers.
+* SLD file (:file:`.sld`), only available for vector layers
 
-Used on file based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
-as Default` generates a :file:`.qml` file along the layer (with the same name).
+Used on file-based format layers (:file:`.shp`, :file:`.tab`...), :guilabel:`Save
+as Default` generates a :file:`.qml` file for the layer (with the same name).
 SLDs can be exported from any type of renderer -- single symbol,
 categorized, graduated or rule-based -- but when importing an SLD, either a
 single symbol or rule-based renderer is created.
-That means that categorized or graduated styles are converted to rule-based.
-If you want to preserve those renderers, you have to stick to the QML format.
+This means that categorized or graduated styles are converted to rule-based.
+If you want to preserve those renderers, you have to use the QML format.
 On the other hand, it can be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
 Save in database
 .................
 
-Vector layer style can also be stored in a database if the layer datasource is a
+Vector layer styles can also be stored in a database if the layer datasource is a
 database provider. Supported formats are PostGIS, GeoPackage, SpatiaLite, MSSQL
 and Oracle. The layer style is saved inside a table (named :file:`layer_styles`)
-of the database. Click on :menuselection:`Save Style --> Save in database` item
+in the database. Click on :menuselection:`Save Style... --> Save in database`
 then fill in the dialog to define a style name, add a description, a :file:`.ui`
-file if applicable and check if the style should be the default style.
+file if applicable and to check if the style should be the default style.
 
-You can save several styles for a single table in the database. However each
-table can have only one default style. Default style can be saved in the layer
+You can save several styles for a single table in the database. However, each
+table can have only one default style. Default styles can be saved in the layer
 database or in the QGIS local database, a SQLite database in the :file:`~/.qgis2/`
 directory (where QGIS stores its local settings).
 
@@ -1664,7 +1665,7 @@ directory (where QGIS stores its local settings).
 
 .. note::
 
-  You may encounter issues to restore the :file:`layer_styles` table from a
+  You may encounter issues restoring the :file:`layer_styles` table from a
   PostgreSQL database backup. Follow :ref:`layer_style_backup` to fix that.
 
 Load style
@@ -1672,26 +1673,26 @@ Load style
 
 When loading a layer in QGIS, if a default style already exists for this layer,
 QGIS loads the layer with this style. Also :menuselection:`Style --> Restore Default`
-looks for and loads that file when pressed, replacing current style of the layer.
+looks for and loads that file, replacing the layer's current style.
 
-The :menuselection:`Style --> Load Style` helps you apply any saved style to a
-layer. While plain text file style (:file:`.sld` or :file:`.qml`) can be applied
-to any layer whatever its format is, loading styles stored in database is only
+:menuselection:`Style --> Load Style` helps you apply any saved style to a
+layer. While text-file styles (:file:`.sld` or :file:`.qml`) can be applied
+to any layer whatever its format, loading styles stored in a database is only
 possible if the layer is from the same database or the style is stored in the
 QGIS local database.
 
-The :guilabel:`Load Style from Database` dialog displays a list of related
-styles to the layer found in the database and all the other styles saved in it,
+The :guilabel:`Database Styles Manager` dialog displays a list of styles related
+to the layer found in the database and all the other styles saved in it,
 with name and description.
 
 .. tip:: **Quickly share a layer style within the project**
 
-   You can also share layer style within a project without importing a file or
+   You can also share layer styles within a project without importing a file or
    database style: right-click on the layer in the :guilabel:`Layers Panel` and,
    from the :guilabel:`Styles` combobox , copy the style of a layer and paste it
    to a group or a selection of layers: the style is applied to all the layers
    that are of the same type (vector vs raster) as the original layer and, in
-   case of vector, have the same geometry type (point, line or polygon).
+   the case of vector layers, have the same geometry type (point, line or polygon).
 
 
 .. index:: Variables, Expressions
@@ -1705,7 +1706,7 @@ project's title, or the user's full name) that can be used in expressions.
 Variables can be defined at the application's global level, project level,
 layer level, layout level, and layout item's level. Just like CSS
 cascading rules, variables can be overwritten - e.g., a project level
-variable will overwrite any application's global level variables set with
+variable will overwrite any application global level variables set with
 the same name. You can use these variables to build text strings or other
 custom expressions using the ``@`` character before the variable name. For
 example in print layout creating a label with this content::
@@ -1715,25 +1716,25 @@ example in print layout creating a label with this content::
 
 Will render the label like this::
 
-  This map was made using QGIS 2.14. The project file for this map is:
-  /gis/qgis-user-conference-2015.qgs
+  This map was made using QGIS 3.4.4-Madeira. The project file for this map is:
+  /gis/qgis-user-conference-2019.qgs
 
 Besides the :ref:`preset read-only variables <variables_functions>`, you can
 define your own custom variables for any of the levels mentioned above. You can
 manage:
 
-* **global variables** from the :menuselection:`Settings --> Options` menu;
-* **project's variables** from the :guilabel:`Project Properties` dialog (see
-  :ref:`project_properties`);
-* **vector layer's variables** from the :guilabel:`Layer Properties` dialog
+* **global variables** from the :menuselection:`Settings --> Options` menu
+* **project variables** from the :guilabel:`Project Properties` dialog (see
+  :ref:`project_properties`)
+* **vector layer variables** from the :guilabel:`Layer Properties` dialog
   (see :ref:`vector_properties_dialog`);
-* **layout's variables** from the :guilabel:`Layout` panel in the
+* **layout variables** from the :guilabel:`Layout` panel in the
   Print layout (see :ref:`layout_panel`);
-* and **layout item's variables** from the :guilabel:`Item Properties`
+* and **layout item variables** from the :guilabel:`Item Properties`
   panel in the Print layout (see :ref:`layout_item_options`).
 
-To differentiate from editable variables, read-only variable's names and
-values are emphasized in italic. On the other hand, higher level
+To differentiate from editable variables, read-only variable names and
+values are displayed in italic. On the other hand, higher level
 variables overwritten by lower level ones are strike through.
 
 .. _figure_variables_dialog:
@@ -1741,7 +1742,7 @@ variables overwritten by lower level ones are strike through.
 .. figure:: img/options_variables.png
    :align: center
 
-   Variables editor at the project's level
+   Variables editor at the project level
 
 .. note:: You can read more about variables and find some examples
    in Nyall Dawson's `Exploring variables in QGIS 2.12, part 1
@@ -1756,10 +1757,10 @@ variables overwritten by lower level ones are strike through.
 Authentication
 ==============
 
-QGIS has facility to store/retrieve authentication credentials in a secure
+QGIS has the facility to store/retrieve authentication credentials in a secure
 manner. Users can securely save credentials into authentication configurations,
 which are stored in a portable database, can be applied to server or database
-connections, and safely referenced by their ID tokens in project or settings
+connections, and are safely referenced by their ID tokens in project or settings
 files. For more information see :ref:`authentication_index`.
 
 A master password needs to be set up when initializing the authentication
@@ -1771,8 +1772,8 @@ system and its portable database.
 Common widgets
 ==============
 
-In QGIS, there are some options you'll often have to work with. To ease their
-manipulation, QGIS provides you with special widgets that are presented below.
+In QGIS, there are some options you'll often have to work with. For
+convenience, QGIS provides you with special widgets that are presented below.
 
 .. index:: Colors
 .. _color-selector:
@@ -1783,18 +1784,18 @@ Color Selector
 The color dialog
 ................
 
-The :guilabel:`Select Color` dialog will appear whenever you push
+The :guilabel:`Select Color` dialog will appear whenever you click
 the |selectColor| icon to choose a color. The features of this dialog
-depends on the state of the :guilabel:`Use native color chooser dialogs` parameter
-checkbox in :menuselection:`Settings --> Options... --> General` menu.
-When checked, the color dialog used is the one of the OS being used. Otherwise,
-QGIS custom color chooser is used.
+depend on the state of the :guilabel:`Use native color chooser dialogs` parameter
+checkbox in :menuselection:`Settings --> Options... --> General`.
+When checked, the color dialog used is the native one of the OS on which QGIS is running. Otherwise,
+the QGIS custom color chooser is used.
 
 The custom color chooser dialog has four different tabs which allow you to
 select colors by |colorBox| :sup:`Color ramp`, |colorWheel| :sup:`Color wheel`,
 |colorSwatches| :sup:`Color swatches` or |colorPicker| :sup:`Color picker`.
 With the first two tabs, you can browse to all possible color combinations and
-apply it to the item.
+apply your choice to the item.
 
 .. _figure_color_selector_ramp:
 
@@ -1806,17 +1807,17 @@ apply it to the item.
 
 In the |colorSwatches| :sup:`Color swatches` tab, you can choose from a
 list of color palettes (see :ref:`colors_options` for details).
-All but the :guilabel:`Recent colors` palette can be modified thanks to the
+All but the :guilabel:`Recent colors` palette can be modified with the
 |signPlus| :sup:`Add current color` and |signMinus| :sup:`Remove selected color`
 buttons at the bottom of the frame.
 
 The :guilabel:`...` button next to the palette combobox also offers several
 options to:
 
-* copy, paste, import or export colors;
-* create, import or remove color palettes;
+* copy, paste, import or export colors
+* create, import or remove color palettes
 * add the custom palette to the color selector widget with the :guilabel:`Show
-  in Color Buttons` item (see figure_color_selector_).
+  in Color Buttons` item (see figure_color_selector_)
 
 .. _figure_color_selector_swatches:
 
@@ -1828,32 +1829,31 @@ options to:
 .. index:: Color picker
 
 Another option is to use the |colorPicker| :sup:`Color picker` which allows
-you to sample a color from under your mouse cursor at any part of QGIS or even
+you to sample a color from under your mouse cursor at any part of the QGIS UI or even
 from another application: press the space bar while the tab is active, move the
-mouse over the desired color and click on it or press again the space bar. You
-can also click the :guilabel:`Sample Color` button to trigger the picker capability.
-
+mouse over the desired color and click on it or press the space bar again. You
+can also click the :guilabel:`Sample Color` button to activate the picker.
 
 Whatever method you use, the selected color is always described through color
 sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, Blue)
-values. The color is also identifiable as a :guilabel:`HTML notation`.
+values. The color is also identifiable in :guilabel:`HTML notation`.
 
-Modifying a color is as simple as clicking in the color wheel or ramp or in any
+Modifying a color is as simple as clicking on the color wheel or ramp or on any
 of the color parameters sliders. You can adjust such parameters with the spinbox
-beside or, handy, scrolling the mouse wheel over the corresponding slider. You
-can also typeset the color html notation.
+beside or by scrolling the mouse wheel over the corresponding slider. You
+can also type the color in HTML notation.
 Finally, there is an :guilabel:`Opacity` slider to set transparency level.
 
 The dialog also provides a visual comparison between the
-:guilabel:`Old` (applied to widget) and the :guilabel:`Current` (being selected)
-colors. Thanks to drag-and-drop or pressing the |atlasNext| :sup:`Add color to
-swatch` button, any of these colors can be saved in a slot for an easy access.
+:guilabel:`Old` color (applied to object) and the :guilabel:`Current` one (being selected).
+Using drag-and-drop or pressing the |atlasNext| :sup:`Add color to
+swatch` button, any of these colors can be saved in a slot for easy access.
 
 .. _quick_color_modification:
 
 .. tip:: **Quick color modification**
 
-  Drag-and-drop a color selector widget on another one to apply its color.
+  Drag-and-drop a color selector widget onto another one to apply its color.
 
 
 .. _color_widget:
@@ -1861,16 +1861,16 @@ swatch` button, any of these colors can be saved in a slot for an easy access.
 The color drop-down shortcut
 ............................
 
-Click the drop-down arrow at the right of the |selectColor| color button
-to display a widget for a quick color selection. This shortcut provides access
+Click the drop-down arrow to the right of the |selectColor| color button
+to display a widget for quick color selection. This shortcut provides access
 to:
 
-* a color wheel to pick a color from;
-* an alpha slider to tweak the selected color opacity;
-* the color palettes previously set to :guilabel:`Show in Color Buttons`;
-* copy the current color and paste it in another widget;
-* pick color from anywhere on your computer;
-* and choose color from the color selector dialog.
+* a color wheel to pick a color from
+* an alpha slider to change color opacity
+* the color palettes previously set to :guilabel:`Show in Color Buttons`
+* copy the current color and paste it into another widget
+* pick a color from anywhere on your computer display
+* choose a color from the color selector dialog
 
 .. _figure_color_selector:
 
@@ -1888,7 +1888,7 @@ The color ramp drop-down shortcut
 Color ramps are a practical way to apply a set of colors to one or many features.
 Their creation is described in the :ref:`color-ramp` section. As for the colors,
 pressing the |selectColorRamp| color ramp button opens the corresponding color
-ramp type dialog allowing you to tweak its properties.
+ramp type dialog allowing you to change its properties.
 
 .. _figure_colorBrewer_ramp:
 
@@ -1897,19 +1897,19 @@ ramp type dialog allowing you to tweak its properties.
 
    Customizing a colorbrewer ramp
 
-Likewise, the drop-down menu at the right of the button gives quick access to a
+The drop-down menu to the right of the button gives quick access to a
 wider set of color ramps and options:
 
-* :guilabel:`Invert Color Ramp`;
+* :guilabel:`Invert Color Ramp`
 * a preview of the ``gradient`` or ``catalog: cpt-city`` color ramps flagged as
-  **Favorites** in the :guilabel:`Style Manager` dialog to select from;
-* :guilabel:`All Color Ramps` to access the compatible color ramps database;
+  **Favorites** in the :guilabel:`Style Manager` dialog
+* :guilabel:`All Color Ramps` to access the compatible color ramps database
 * :guilabel:`Create New Color Ramp...` of any supported type that could be used
-  in the current widget. Note that this color ramp is not available elsewhere
-  unless you save it in the library;
-* :guilabel:`Edit Color Ramp...`, same as pushing the whole color ramp button;
-* :guilabel:`Save Color Ramp...` allows to save the current color ramp with its
-  customizations in the style library.
+  in the current widget (note that this color ramp will not be available elsewhere
+  unless you save it in the library)
+* :guilabel:`Edit Color Ramp...`, the same as clicking the whole color ramp button
+* :guilabel:`Save Color Ramp...`, to save the current color ramp with its
+  customizations in the style library
 
 .. _figure_color_ramp_widget:
 
@@ -1928,7 +1928,7 @@ Blending Modes
 
 QGIS offers different options for special rendering effects with these tools that
 you may previously only know from graphics programs. Blending modes can be applied
-on layers, on features but also on print layout items:
+on layers and features, and also on print layout items:
 
 * **Normal**: This is the standard blend mode, which uses the alpha channel of the top
   pixel to blend with the pixel beneath it. The colors aren't mixed.
@@ -1936,31 +1936,31 @@ on layers, on features but also on print layout items:
   background pixels. Be aware that the results tend to be jagged and harsh.
 * **Screen**: Light pixels from the source are painted over the destination, while
   dark pixels are not. This mode is most useful for mixing the texture of one item
-  with another item (e.g., you can use a hillshade to texture another layer).
-* **Dodge**: Dodge will brighten and saturate underlying pixels based on the lightness
-  of the top pixel. So, brighter top pixels cause the saturation and brightness of
+  with another item (such as using a hillshade to texture another layer).
+* **Dodge**: Brighten and saturate underlying pixels based on the lightness
+  of the top pixel. Brighter top pixels cause the saturation and brightness of
   the underlying pixels to increase. This works best if the top pixels aren't too
-  bright; otherwise the effect is too extreme.
-* **Addition**: This blend mode simply adds pixel values of one item with the other.
-  In case of values above one (in the case of RGB), white is displayed.
+  bright. Otherwise the effect is too extreme.
+* **Addition**: Adds pixel values of one item to the other.
+  In case of values above the maximum value (in the case of RGB), white is displayed.
   This mode is suitable for highlighting features.
-* **Darken**: This creates a resultant pixel that retains the smallest components of the
+* **Darken**: Retains the lowest values of each component of the
   foreground and background pixels. Like lighten, the results tend to be jagged and harsh.
-* **Multiply**: Here, the numbers for each pixel of the top item are multiplied with
-  the corresponding pixels for the bottom item. The results are darker pictures.
+* **Multiply**: Pixel values of the top item are multiplied with
+  the corresponding values for the bottom item. The results are darker.
 * **Burn**: Darker colors in the top item cause the underlying items to darken.
-  Burn can be used to tweak and colorise underlying layers.
-* **Overlay**: This mode combines the multiply and screen blending modes.
-  In the resulting picture, light parts become lighter and dark parts become darker.
-* **Soft light**: This is very similar to overlay, but instead of using multiply/screen
+  Burn can be used to tweak and colorize underlying layers.
+* **Overlay**: Combines multiply and screen blending modes.
+  Light parts become lighter and dark parts become darker.
+* **Soft light**: Very similar to overlay, but instead of using multiply/screen
   it uses color burn/dodge. This is supposed to emulate shining a soft light onto an image.
 * **Hard light**: Hard light is also very similar to the overlay mode. It's supposed
   to emulate projecting a very intense light onto an image.
-* **Difference**: Difference subtracts the top pixel from the bottom pixel, or the other
-  way around, to always get a positive value. Blending with black produces no change,
+* **Difference**: Subtracts the top pixel from the bottom pixel, or the other
+  way around, in order always to get a positive value. Blending with black produces no change,
   as the difference with all colors is zero.
-* **Subtract**: This blend mode simply subtracts pixel values of one item from the other.
-  In case of negative values, black is displayed.
+* **Subtract**: Subtracts pixel values of one item from the other.
+  In the case of negative values, black is displayed.
 
 .. index:: Data-defined override
 .. _data_defined:
@@ -1968,83 +1968,83 @@ on layers, on features but also on print layout items:
 Data defined override setup
 ---------------------------
 
-Beside many options in the vector layer properties dialog or settings in the print
-layout, you can find a |dataDefined| :sup:`Data defined override` icon.
-Thanks to :ref:`expressions <vector_expressions>` based on layer attributes or item
-settings, prebuild or custom functions and :ref:`variables <general_tools_variables>`,
-this tool allows you to set dynamic value for the concerned parameter. When enabled,
-the value returned by this widget is applied to the parameter regardless its normal
+Next to many options in the vector layer properties dialog or settings in the print
+layout, you will find a |dataDefined| :sup:`Data defined override` icon.
+Using :ref:`expressions <vector_expressions>` based on layer attributes or item
+settings, prebuilt or custom functions and :ref:`variables <general_tools_variables>`,
+this tool allows you to set dynamic values for parameters. When enabled,
+the value returned by this widget is applied to the parameter regardless of its normal
 value (checkbox, textbox, slider...).
 
 The data defined override widget
 ................................
 
-Clicking the |dataDefined| :sup:`Data defined override` icon shows following entries:
+Clicking the |dataDefined| :sup:`Data defined override` icon shows the following entries:
 
 * :guilabel:`Description...` that indicates if the option is enabled, which input is
   expected, the valid input type and the current definition. Hovering over the
-  widget also pops up these information;
-* :guilabel:`Store data in the project`: a button allowing to store the property
-  thanks to the :ref:`vector_auxiliary_storage` mechanism;
+  widget also pops up this information.
+* :guilabel:`Store data in the project`: a button allowing  the property to be stored
+  using to the :ref:`vector_auxiliary_storage` mechanism.
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
-  valid input type;
-* an entry to list the :guilabel:`Variable` available;
+  valid input type.
+* An entry to list the :guilabel:`Variable` available.
 * :guilabel:`Edit...` button to create or edit the expression to apply, using
   the :guilabel:`Expression String Builder` dialog. To help you correctly fill
   in the expression, a reminder of the expected output's format is provided in
-  the dialog;
-* :guilabel:`Paste` and :guilabel:`Copy` buttons;
-* :guilabel:`Clear` button to remove the setup;
-* and, for numeric and color properties, :guilabel:`Assistant...` to rescale
+  the dialog.
+* :guilabel:`Paste` and :guilabel:`Copy` buttons.
+* :guilabel:`Clear` button to remove the setup.
+* For numeric and color properties, :guilabel:`Assistant...` to rescale
   how the feature data is applied to the property (more details :ref:`below
-  <data_defined_assistant>`).
+  <data_defined_assistant>`)
 
-.. tip:: **Use right-click to (de)activate the data overriding**
+.. tip:: **Use right-click to (de)activate the data override**
 
- When the data-defined override option is setup correctly the
- icon is yellow |dataDefineOn| or |dataDefineExpressionOn|; if it is broken,
+ When the data-defined override option is set up correctly the
+ icon is yellow |dataDefineOn| or |dataDefineExpressionOn|. If it is broken,
  the icon is red |dataDefineError| or |dataDefineExpressionError|.
 
  You can enable or disable a configured |dataDefined| :sup:`data-defined
- override` button by simply clicking the widget with the mouse right button.
+ override` button by simply clicking the widget with the right mouse button.
 
 .. _data_defined_assistant:
 
 Using the data-defined assistant interface
 ..........................................
 
-When the |dataDefined| :sup:`Data-defined override` button is associated to a
+When the |dataDefined| :sup:`Data-defined override` button is associated with a
 numeric or color parameter, it has an :guilabel:`Assistant...` option that
-allows you to modulate how the data is applied to the parameter, for each
-feature. The assistant lets you:
+allows you to change how the data is applied to the parameter for each
+feature. The assistant allows you to:
 
-* define the :guilabel:`Input` data, ie:
+* Define the :guilabel:`Input` data, ie:
 
   * the attribute to represent, using the Field listbox or the |expression|
     :sup:`Set column expression` function (see :ref:`vector_expressions`)
   * the range of values to represent: you can manually enter the values or use
-    the |draw| :sup:`Fetch value range from layer` button to automatically fill
-    these fields with the minimum and maximum values returned by the chosen
-    attribute or the expression applied to your data.
-* |unchecked| :guilabel:`Apply transform curve`: By default, output values (see
-  below for setting) are applied to input features following a linear scaling.
+    the |draw| :sup:`Fetch value range from layer` button to fill
+    these fields automatically with the minimum and maximum values returned by the chosen
+    attribute or the expression applied to your data
+* |unchecked| :guilabel:`Apply transform curve`: by default, output values (see
+  below for setting) are applied to input features following a linear scale.
   You can override this logic: enable the transform option, click on the
   graphic to add break point(s) and drag the point(s) to apply a custom
-  distribution;
-* define the :guilabel:`Output` values: the options vary according to the
+  distribution.
+* Define the :guilabel:`Output` values: the options vary according to the
   parameter to define. You can globally set:
 
-  * the minimum and maximum values to apply to the selected property. In case
+  * the minimum and maximum values to apply to the selected property (n case
     of a color setting, you'll need to provide a :ref:`color ramp
-    <color-ramp>`;
+    <color-ramp>`)
   * the :guilabel:`Scale method` of representation which can be **Flannery**,
-    **Exponential**, **Surface** or **Radius**;
-  * the :guilabel:`Exponent` to use for data scaling;
+    **Exponential**, **Surface** or **Radius**
+  * the :guilabel:`Exponent` to use for data scaling
   * the output value or :ref:`color <color-selector>` to represent features
-    with NULL values.
+    with NULL values
 
-When compatible with the property, a live-update preview is displayed on the
-right of the dialog and helps you control the value scaling.
+When compatible with the property, a live-update preview is displayed in the
+right-hand side of the dialog to help you control the value scaling.
 
 .. _figure_symbology_size_assistant:
 
@@ -2076,7 +2076,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
-.. |atlasNext|  image:: /static/common/mActionAtlasNext.png
+.. |atlasNext| image:: /static/common/mActionAtlasNext.png
    :width: 1.5em
 .. |browseButton| image:: /static/common/browsebutton.png
    :width: 2.3em
@@ -2146,7 +2146,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
    :width: 1.5em
-.. |history|  image:: /static/common/mActionHistory.png
+.. |history| image:: /static/common/mActionHistory.png
    :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em
@@ -2240,7 +2240,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

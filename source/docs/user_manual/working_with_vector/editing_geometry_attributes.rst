@@ -237,6 +237,13 @@ and a negative value does the opposite.
    potentially long tracing structure preparation and large memory overhead.
    After zooming in or disabling some layers the tracing is enabled again.
 
+.. note:: **Does not add topological points**
+
+   This tool does not add points to existing polygon geometries even if :guilabel:`Topological editing`
+   is enabled.
+   If geometry precision is activated on the edited layer, the resulting 
+   geometry might not exactly follow an existing geometry.
+
 .. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
 
    By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime even while
@@ -1567,13 +1574,13 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
-.. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
@@ -1647,7 +1654,7 @@ To edit features in-place:
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
