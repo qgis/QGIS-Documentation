@@ -20,10 +20,11 @@ Computes geometric properties of the features in a vector layer.
 It generates a new vector layer with the same content as the input one, but with
 additional attributes, containing geometric measurements based on a selected CRS.
 
-Depending on the geometry type of the vector layer, the attributes added to the
-table will be different:
+The attributes added to the table depend on the geometry type and dimension of
+the input layer:
 
-* for **point** layers: X and Y coordinates called ``xcoord`` and ``ycoord``;
+* for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) coordinates
+  and/or M value (``mvalue``);
 * for **line** layers: ``length`` and, particularly for LineString and CompoundCurve
   geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``);
 * for **polygon** layers: ``perimeter`` and ``area``.
@@ -892,10 +893,12 @@ Outputs
 
 Drape (set Z value from raster)
 -------------------------------
-Sets the Z value of every vertex in the feature geometry to a value sampled from
-a band within a raster layer.
+Uses values sampled from a band within a raster layer to set the Z value for every
+overlapping vertex in the feature geometry. The raster values can optionally be
+scaled by a preset amount.
 
-The raster values can optionally be scaled by a preset amount.
+If Z values already exist in the layer, they will be overwritten with the new value.
+If no Z values exist, the geometry will be upgraded to include the Z dimension.
 
 Parameters
 ..........
@@ -922,11 +925,12 @@ Outputs
 .......
 
 ``Updated`` [vector: any]
-  Vector layer in output with the updated Z values extracted.
+  A vector layer with geometries that have Z values extracted from the provided raster layer.
 
 See also
 ........
 :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
+
 
 .. _qgisdropmzvalues:
 
@@ -937,22 +941,27 @@ Removes any M (measure) or Z (altitude) values from input geometries.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to clean.
+  Input vector layer from which M and/or Z values will be dropped.
 
 ``Drop M Values`` [boolean]
-  Check to remove the M values.
+  Removes the M values from the geometries.
 
   Default: *False*
 
 ``Drop Z Values`` [boolean]
-  Check to remove the Z values.
+  Removes the Z values from the geometries.
 
   Default: *False*
 
 Outputs
 .......
 ``Z/M Dropped`` [vector: any]
-  Cleaned vector layer without M and/or Z values.
+  A vector layer that is identical to the input layer, except that
+  M and/or Z values have been removed from its geometries.
+
+See also
+........
+:ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
 
 .. _qgiseliminateselectedpolygons:
@@ -2415,16 +2424,21 @@ Outputs
 ``M Added`` [vector: any]
   Vector layer in output with M value.
 
+See also
+........
+:ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
+
 
 .. _qgissetmfromraster:
 
 Set M value from raster
 -----------------------
+Uses values sampled from a band within a raster layer to set the M value for every
+overlapping vertex in the feature geometry. The raster values can optionally be
+scaled by a preset amount.
 
-Sets the M value for every vertex in the feature geometry to a value sampled from
-a band within a raster layer.
-
-The raster values can optionally be scaled by a preset amount.
+If M values already exist in the layer, they will be overwritten with the new value.
+If no M values exist, the geometry will be upgraded to include M values.
 
 Parameters
 ..........
@@ -2438,7 +2452,7 @@ Parameters
   The raster band to take the M values from if the raster is multiband.
 
 ``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
-  Value to use in case the vertex does not intersect (a valid pixel of) the raster..
+  Value to use in case the vertex does not intersect (a valid pixel of) the raster.
 
   Default: *0.0*
 
@@ -2451,7 +2465,7 @@ Outputs
 .......
 
 ``Updated`` [vector: any]
-  Vector layer in output with the updated M values extracted.
+  A vector layer with M values extracted from the provided raster layer.
 
 See also
 ........
@@ -2487,6 +2501,10 @@ Outputs
 
 ``Z Added`` [vector: any]
   Vector layer in output with Z value.
+
+See also
+........
+:ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues` 
 
 
 .. _qgissimplifygeometries:
