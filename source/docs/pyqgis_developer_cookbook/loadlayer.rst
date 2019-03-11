@@ -232,29 +232,31 @@ Raster layers can also be created from a WCS service:
 
 Here is a description of the parameters that the WCS URI can contain:
 
-WCS URI is composed of key=value pairs separated by '&'. It is the same format like query string in URL, encoded the same way. QgsDataSourceUri should be used to construct the URI to ensure that special characters are encoded properly.
+WCS URI is composed of key=value pairs separated by '&'. It is the same format
+like query string in URL, encoded the same way. QgsDataSourceUri should be used
+to construct the URI to ensure that special characters are encoded properly.
 
-  * url (required) : WCS Server URL. Do not use VERSION in URL, because each version of WCS is using different parameter name for GetCapabilities version, see param version.
-
-  * identifier (required) : Coverage name
-
-  * time (optional) : time position or time period (beginPosition/endPosition[/timeResolution])
-
-  * format (optional) : Supported format name. Default is the first supported format with tif in name or the first supported format.
-
-  * crs (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is EPSG:4326 if supported or the first supported CRS.
-
-  * username (optional) : Username for basic authentication.
-
-  * password (optional) : Password for basic authentication.
-
-  * IgnoreGetMapUrl (optional, hack) : If specified (set to 1), ignore GetCoverage URL advertised by GetCapabilities. May be necessary if a server is not configured properly.
-
-  * InvertAxisOrientation (optional, hack) : If specified (set to 1), switch axis in GetCoverage request. May be necessary for geographic CRS if a server is using wrong axis order.
-
-  * IgnoreAxisOrientation (optional, hack) : If specified (set to 1), do not invert axis orientation according to WCS standard for geographic CRS.
-
-  * cache (optional) : cache load control, as described in QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. Default is AlwaysCache.
+* url (required) : WCS Server URL. Do not use VERSION in URL, because each
+  version of WCS is using different parameter name for GetCapabilities version,
+  see param version.
+* identifier (required) : Coverage name
+* time (optional) : time position or time period (beginPosition/endPosition[/timeResolution])
+* format (optional) : Supported format name. Default is the first supported
+  format with tif in name or the first supported format.
+* crs (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is EPSG:4326
+  if supported or the first supported CRS.
+* username (optional) : Username for basic authentication.
+* password (optional) : Password for basic authentication.
+* IgnoreGetMapUrl (optional, hack) : If specified (set to 1), ignore GetCoverage
+  URL advertised by GetCapabilities. May be necessary if a server is not configured properly.
+* InvertAxisOrientation (optional, hack) : If specified (set to 1), switch axis
+  in GetCoverage request. May be necessary for geographic CRS if a server is
+  using wrong axis order.
+* IgnoreAxisOrientation (optional, hack) : If specified (set to 1), do not invert
+  axis orientation according to WCS standard for geographic CRS.
+* cache (optional) : cache load control, as described in QNetworkRequest::CacheLoadControl,
+  but request is resend as PreferCache if failed with AlwaysCache. Allowed values:
+  AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. Default is AlwaysCache.
 
 
 .. index::
