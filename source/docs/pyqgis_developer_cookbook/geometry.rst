@@ -202,7 +202,7 @@ Alternatively, you may want to know the distance and bearing between two points.
   d.setEllipsoid('WGS84')
 
   # Let's create two points. 
-  # Santa claus is a workoholic and needs a summer break, 
+  # Santa claus is a workaholic and needs a summer break, 
   # lets see how far is Tenerife from his home
   santa = QgsPointXY(25.847899, 66.543456)
   tenerife = QgsPointXY(-16.5735, 28.0443)
