@@ -819,7 +819,7 @@ N-M relations are many-to-many relations between two tables. For instance, the
 ``airports`` and ``airlines`` layers: an airport receives several airline
 companies and an airline company flies to several airports.
 
-This SQL code creates the three tables what we need for an N-M relationship in
+This SQL code creates the three tables we need for an N-M relationship in
 a PostgreSQL/PostGIS schema named *locations*. You can run the code using the 
 :menuselection:`Database --> DB Manager…` for PostGIS or external tools such as `pgAdmin
 <https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines 
@@ -878,9 +878,10 @@ GeoPackage there are no schemas so the *locations* prefix is not needed.
 Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table…` 
 or :menuselection:`Table --> Edit Table…` so they should be created using :menuselection:`Database --> SQL Window…`.
 GeoPackage doesn't support *ADD CONSTRAINT* statements so the ``airports_airlines`` 
-table should be created in two step. First setup the table only with the id field 
-using :menuselection:`Table --> Create Table…` and then, using :menuselection:`Database --> SQL Window…` 
-type and execute this SQL code:
+table should be created in two steps:
+
+#. Set up the table only with the ``id`` field using :menuselection:`Table --> Create Table…`
+#. Using :menuselection:`Database --> SQL Window…`, type and execute this SQL code:
 
 .. code-block:: sql
 
@@ -953,11 +954,11 @@ table.
 
 .. note:: Using **Many to one relation** cardinality
 
-  Sometimes hiding the pivot table in a N-M relationship maintenance is not 
+  Sometimes hiding the pivot table in an N-M relationship is not 
   desirable. Mainly because there are attributes in the relationship that can only 
   have values when a relationship is established. If your tables are layers (have
   a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
-  option (:menuselection:`Layer Properties --> Attributes Form --> Available widget --> Fields`) 
+  option (:menuselection:`Layer Properties --> Attributes Form --> Available widgets --> Fields`) 
   for the foreign key fields in the pivot table.
 
 .. note:: **Pivot table primary key**
