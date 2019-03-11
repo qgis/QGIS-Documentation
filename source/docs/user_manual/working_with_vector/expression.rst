@@ -258,6 +258,7 @@ is irrelevant and values are identified by their keys.
  array_reverse          Returns the given array with array values in reversed order
  array_slice            Returns the values of the array from the start_pos argument up
                         to and including the end_pos argument
+ array_sort |36|        Returns the provided array with its elements sorted
  array_to_string        Concatenates array elements into a string separated by
                         a delimiter and using optional string for empty values
  generate_series        Creates an array containing a sequence of numbers
@@ -1479,6 +1480,7 @@ Further information about creating Python code can be found in the
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |36| replace:: ``NEW in 3.6``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
