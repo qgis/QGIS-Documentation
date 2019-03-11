@@ -821,7 +821,7 @@ companies and an airline company flies to several airports.
 
 This SQL code creates the three tables what we need for an N-M relationship in
 a PostgreSQL/PostGIS schema named *locations*. You can run the code using the 
-DBManager for PostGIS or external tools such as `pgAdmin
+:menuselection:`Database --> DB Manager…` for PostGIS or external tools such as `pgAdmin
 <https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines 
 table stores the ``airlines`` layer. In both tables few fields are used for 
 clarity. The *tricky* part is the ``airports_airlines`` table. We need it to list all
