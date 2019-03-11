@@ -18,9 +18,9 @@ Projections Support
 Coordinate reference systems
 ============================
 
-Coordinate reference systems (CRS) are encapsulated by
+Coordinate reference systems (CRS) are encapsulated by the
 :class:`QgsCoordinateReferenceSystem` class. Instances of this class can be
-created by several different ways:
+created in several different ways:
 
 * specify CRS by its ID
 
@@ -47,7 +47,7 @@ created by several different ways:
     crs = QgsCoordinateReferenceSystem(wkt)
 
 * create invalid CRS and then use one of the :func:`create*` functions to
-  initialize it. In following example we use Proj4 string to initialize the
+  initialize it. In the following example we use Proj4 string to initialize the
   projection
 
   ::
@@ -56,12 +56,12 @@ created by several different ways:
     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
-has been successful: :func:`isValid` must return :const:`True`.
+has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
 
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
-:func:`QgsApplication.setPrefixPath` otherwise it will fail to find the
+:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the
 database. If you are running the commands from QGIS python console or
 developing a plugin you do not care: everything is already set up for you.
 
@@ -88,9 +88,9 @@ Projections
 
 You can do transformation between different spatial reference systems by using
 :class:`QgsCoordinateTransform` class. The easiest way to use it is to create
-source and destination CRS and construct :class:`QgsCoordinateTransform`
+source and destination CRS and construct :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`
 instance with them and the current project. Then just repeatedly call
-:func:`transform` function to do the transformation. By default it does forward
+:meth:`transform() <qgis.core.QgsCoordinateTransform.transform>` function to do the transformation. By default it does forward
 transformation, but it is capable to do also inverse transformation.
 
 ::
@@ -115,4 +115,4 @@ transformation, but it is capable to do also inverse transformation.
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

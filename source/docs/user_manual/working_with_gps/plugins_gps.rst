@@ -55,7 +55,7 @@ For working with GPS data, we provide an example GPX file available in the QGIS
 sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 :ref:`label_sampledata` for more information about the sample data.
 
-#. Select :menuselection:`Vector --> GPS --> GPS Tools` or click the
+#. Select :menuselection:`Vector --> GPS Tools` or click the
    |importGPX| :sup:`GPS Tools` icon in the toolbar and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_).
 #. Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file
@@ -317,6 +317,6 @@ system port, then run GPSBabel
    :width: 1em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

@@ -17,17 +17,17 @@ The CRS that all the data as well as the map itself are in right now is called
 WGS84. This is a very common Geographic Coordinate System (GCS) for
 representing data. But there's a problem, as we will see.
 
-* Save your current map;
-* Then open the map of the world which you'll find under
-  :file:`exercise_data/world/world.qgs`;
-* Zoom in to South Africa by using the :guilabel:`Zoom In` tool.
-* Try setting a scale in the :guilabel:`Scale` field, which is in the
-  :guilabel:`Status Bar` along the bottom of the screen. While over South
-  Africa, set this value to :guilabel:`1:5000000` (one to five million);
-* Pan around the map while keeping an eye on the :guilabel:`Scale` field.
+#. Save your current map
+#. Then open the map of the world which you'll find under
+   :file:`exercise_data/world/world.qgs`
+#. Zoom in to South Africa by using the :guilabel:`Zoom In` tool
+#. Try setting a scale in the :guilabel:`Scale` field, which is in the
+   :guilabel:`Status Bar` along the bottom of the screen. While over South
+   Africa, set this value to :guilabel:`1:5 000 000` (one to five million).
+#. Pan around the map while keeping an eye on the :guilabel:`Scale` field
 
 Notice the scale changing? That's because you're moving away from the one point
-that you zoomed into at :guilabel:`1:5000000`, which was at the center of your
+that you zoomed into at :guilabel:`1:5 000 000`, which was at the center of your
 screen. All around that point, the scale is different.
 
 To understand why, think about a globe of the Earth. It has lines running along
@@ -58,24 +58,26 @@ your choice.
 You can change the CRS of the project by clicking on |projectionEnabled| button
 in the bottom right corner of QGIS.
 
-* In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
-  field. One CRS (:guilabel:`NSIDC EASE-Grid 2.0 Global`, EPSG:6933) should
-  appear in the list below;
-* Click on the :guilabel:`NSIDC EASE-Grid 2.0 Global` to select it, then click
-  :guilabel:`OK`;
-* Notice how the shape of South Africa changes. All projections work by
-  changing the apparent shapes of objects on Earth;
-* Zoom in to a scale of :guilabel:`1:5000000` again, as before;
-* Pan around the map;
-* Notice how the scale stays the same!
+#. In the dialog that appears, type the word ``global`` into the :guilabel:`Filter`
+   field. One CRS (:guilabel:`NSIDC EASE-Grid 2.0 Global`, EPSG:6933) should
+   appear in the list below.
+#. Click on the :guilabel:`NSIDC EASE-Grid 2.0 Global` to select it, then click
+   :guilabel:`OK`.
+
+   Notice how the shape of South Africa changes. All projections work by
+   changing the apparent shapes of objects on Earth.
+#. Zoom in to a scale of :guilabel:`1:5 000 000` again, as before.
+#. Pan around the map.
+
+   Notice how the scale stays the same!
 
 "On the fly" reprojection is also used for combining datasets that are in
 different CRSs.
 
-* Add another vector layer to your map which has the data for South Africa
-  only. You'll find it as :file:`exercise_data/world/RSA.shp`.
-* Load it and a quick way to see what is its CRS is by hovering the mouse over
-  the layer in the legend. It is ``EPSG:3410``.
+#. Add another vector layer to your map which has the data for South Africa
+   only. You'll find it as :file:`exercise_data/world/RSA.shp`.
+#. Load it and a quick way to see what is its CRS is by hovering the mouse over
+   the layer in the legend. It is ``EPSG:3410``.
 
 What do you notice?
 
@@ -84,7 +86,7 @@ one.
 
 
 |moderate| |FA| Saving a Dataset to Another CRS
------------------------------------------------
+-------------------------------------------------------------------------------
 
 Sometimes you need to export an existing dataset in another CRS. As we will see
 in the next lesson, if you need to make some distance calculations on layer, it
@@ -96,30 +98,29 @@ even if you see them in the *correct* position.
 
 But you can easily export the layer in another CRS.
 
-* Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel;
-* Select :menuselection:`Export --> Save Features As...` in the menu that appears.
-  You will be shown the :guilabel:`Save Vector Layer as...` dialog;
-* Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field;
-* Navigate to :file:`exercise_data/` and specify the name of the new layer as
-  :guilabel:`buildings_reprojected.shp`;
-* We must change the value of the :guilabel:`CRS`. Only the recent CRSs used will
-  be shown in the drop down menu;
-* Click on the |setProjection| button next to the dropdown menu;
-* The :guilabel:`CRS Selector` dialog will now appear;
-* In its :guilabel:`Filter` field, search for ``34S``;
-* Select :guilabel:`WGS 84 / UTM zone 34S` from the list;
+#. Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` panel
+#. Select :menuselection:`Export --> Save Features As...` in the menu that appears.
+   You will be shown the :guilabel:`Save Vector Layer as...` dialog.
+#. Click on the :guilabel:`Browse` button next to the :guilabel:`File name` field
+#. Navigate to :file:`exercise_data/` and specify the name of the new layer as
+   :guilabel:`buildings_reprojected.shp`.
+#. We must change the value of the :guilabel:`CRS`. Only the recent CRSs used will
+   be shown in the drop down menu.
+   Click on the |setProjection| button next to the dropdown menu.
+#. The :guilabel:`CRS Selector` dialog will now appear.
+   In its :guilabel:`Filter` field, search for ``34S``.
+#. Select :guilabel:`WGS 84 / UTM zone 34S` from the list
 
-.. image:: img/CRSselector.png
-   :align: center
+   .. image:: img/CRSselector.png
+      :align: center
 
-* Leave the other options unchanged;
+#. Leave the other options unchanged.
+   The :guilabel:`Save Vector Layer as...` dialog now looks like this:
 
-The :guilabel:`Save Vector Layer as...` dialog now looks like this:
+   .. image:: img/save_vector_dialog.png
+      :align: center
 
-.. image:: img/save_vector_dialog.png
-   :align: center
-
-* Click :guilabel:`OK`;
+#. Click :guilabel:`OK`
 
 You can now compare the old and new projections of the layer and see that they
 are in two different CRS but they are still overlapping.
@@ -131,37 +132,36 @@ are in two different CRS but they are still overlapping.
 There are many more projections than just those included in QGIS by default.
 You can also create your own projections.
 
-* Start a new map;
-* Load the :file:`world/oceans.shp` dataset;
-* Go to :menuselection:`Settings --> Custom Projections...` and you'll see this dialog;
+#. Start a new map
+#. Load the :file:`world/oceans.shp` dataset
+#. Go to :menuselection:`Settings --> Custom Projections...` and you'll see
+   this dialog.
 
-.. image:: img/custom_crs.png
-   :align: center
+   .. image:: img/custom_crs.png
+      :align: center
 
-* Click on the |signPlus| button to create a new projection;
+#. Click on the |signPlus| button to create a new projection
+#. An interesting projection to use is called ``Van der Grinten I``.
+   Enter its name in the :guilabel:`Name` field.
 
-An interesting projection to use is called ``Van der Grinten I``.
+   This projection represents the Earth on a circular field instead of a
+   rectangular one, as most other projections do.
 
-* Enter its name in the :guilabel:`Name` field;
+#. Add the following string in the :guilabel:`Parameters` field::
 
-This projection represents the Earth on a circular field instead of a
-rectangular one, as most other projections do.
+    +proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs
 
-* Add the following string in the :guilabel:`Parameters` field::
+   .. image:: img/new_crs_parameters.png
+      :align: center
 
-  +proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs
+#. Click :guilabel:`OK`
+#. Click on the |projectionEnabled| button to change the project CRS
+#. Choose your newly defined projection (search for its name in the
+   :guilabel:`Filter` field)
+#. On applying this projection, the map will be reprojected thus:
 
-.. image:: img/new_crs_parameters.png
-   :align: center
-
-* Click :guilabel:`OK`;
-* Click on the |projectionEnabled| button to change the project CRS;
-* Choose your newly defined projection (search for its name in the
-  :guilabel:`Filter` field);
-* On applying this projection, the map will be reprojected thus:
-
-.. image:: img/van_grinten_projection.png
-   :align: center
+   .. image:: img/van_grinten_projection.png
+      :align: center
 
 |IC|
 -------------------------------------------------------------------------------
@@ -206,4 +206,4 @@ vector analysis tools.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

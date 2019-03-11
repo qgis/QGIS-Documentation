@@ -16,28 +16,20 @@ Raster Properties Dialog
 
 To view and set the properties for a raster layer, double click on the layer name
 in the map legend, or right click on the layer name and choose :guilabel:`Properties`
-from the context menu. This will open the :guilabel:`Raster Layer Properties`
-dialog (see figure_raster_properties_).
+from the context menu. This will open the :guilabel:`Raster Layer Properties` dialog.
 
 There are several tabs in the dialog:
 
-* |metadata| :guilabel:`Information`
-* |system| :guilabel:`Source`
-* |symbology| :guilabel:`Symbology`
-* |transparency| :guilabel:`Transparency`
-* |rasterHistogram| :guilabel:`Histogram`
-* |rendering| :guilabel:`Rendering`
-* |pyramids| :guilabel:`Pyramids`
-* |editMetadata| :guilabel:`Metadata`
-* |legend| :guilabel:`Legend`
-* |overlay| :guilabel:`QGIS Server`
-
-.. _figure_raster_properties:
-
-.. figure:: img/rasterPropertiesDialog.png
-   :align: center
-
-   Raster Layers Properties Dialog
+* |metadata| :ref:`Information <raster_information>`
+* |system| :ref:`Source <label_sourcetab>`
+* |symbology| :ref:`Symbology <label_symbology>`
+* |transparency| :ref:`Transparency <raster_transparency>`
+* |rasterHistogram| :ref:`Histogram <label_histogram>`
+* |rendering| :ref:`Rendering <raster_rendering>`
+* |pyramids| :ref:`Pyramids <raster_pyramids>`
+* |editMetadata| :ref:`Metadata <raster_metadata>`
+* |legend| :ref:`Legend <raster_server>`
+* |overlay| :ref:`QGIS Server <raster_server>`
 
 
 .. tip:: **Live update rendering**
@@ -88,6 +80,13 @@ raster, including:
   layer reprojection algorithms from Processing or :ref:`Save it into another
   layer <general_saveas>`.
 
+.. _figure_raster_properties:
+
+.. figure:: img/rasterPropertiesDialog.png
+   :align: center
+
+   Raster Layers - Source Properties Dialog
+
 
 .. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
 
@@ -104,13 +103,15 @@ The renderer chosen is dependent on the data type.
 
 #. :ref:`Multiband color <multiband_color>` - if the file comes as a multiband with
    several bands (e.g., used with a satellite image with several bands).
-#. :ref:`Paletted <paletted>` - if a single band file comes with an indexed palette
-   (e.g., used with a digital topographic map).
+#. :ref:`Paletted/Unique values <paletted>` - for single band files that come with an
+   indexed palette (e.g., used with a digital topographic map) or for general use of
+   palettes for rendering raster layers.
 #. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
    as gray; QGIS will choose this renderer if the file has neither multibands nor an
    indexed palette nor a continuous palette (e.g., used with a shaded relief map).
 #. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
    files with a continuous palette, or color map (e.g., used with an elevation map).
+#. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band.
 
 
 .. _multiband_color:
@@ -120,9 +121,21 @@ Multiband color
 
 With the multiband color renderer, three selected bands from the image will be
 rendered, each band representing the red, green or blue component that will be
-used to create a color image. You can choose several :guilabel:`Contrast
-enhancement` methods: 'No enhancement', 'Stretch to MinMax', 'Stretch and clip
-to MinMax' and 'Clip to min max'.
+used to create a color image. QGIS automatically fetches
+:guilabel:`Min` and :guilabel:`Max` values for each band of the raster and scales
+the coloring accordingly. You can control the value ranges with the help
+of the :ref:`Min/Max Value Settings <minmaxvalues>` section.
+
+A :guilabel:`Contrast enhancement` method can also be applied to the values:
+'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
+
+.. index:: Contrast enhancement
+
+.. note:: **Contrast enhancement**
+
+   When adding GRASS rasters, the option *Contrast enhancement* will always be
+   set automatically to *stretch to min max*, regardless of if this is set to
+   another value in the QGIS general options.
 
 .. _figure_raster_multiband:
 
@@ -131,43 +144,20 @@ to MinMax' and 'Clip to min max'.
 
    Raster Symbology - Multiband color rendering
 
-This selection offers you a wide range of options to modify the appearance
-of your raster layer. First of all, you have to get the data range from your
-image. This can be done by choosing the :guilabel:`Extent` and pressing
-:guilabel:`Load`. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)` the
-:guilabel:`Min` and :guilabel:`Max` values of the bands or use the
-|radioButtonOff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
-
-Now you can scale the colors with the help of the :guilabel:`Load min/max values`
-section. A lot of images have a few very low and high data. These outliers can be
-eliminated using the |radioButtonOn| :guilabel:`Cumulative count cut` setting.
-The standard data range is set from 2% to 98% of the data values and can be adapted
-manually. With this setting, the gray character of the image can disappear.
-With the scaling option |radioButtonOff| :guilabel:`Min/max`, QGIS creates a color
-table with all of the data included in the original image (e.g., QGIS creates
-a color table with 256 values, given the fact that you have 8 bit bands).
-You can also calculate your color table using the |radioButtonOff| :guilabel:`Mean
-+/- standard deviation x` |selectNumber|.
-Then, only the values within the standard deviation or within multiple standard deviations
-are considered for the color table. This is useful when you have one or two cells
-with abnormally high values in a raster grid that are having a negative impact on
-the rendering of the raster.
-
-All calculations can also be made for the |radioButtonOff| :guilabel:`Current` extent.
-
 
 .. tip:: **Viewing a Single Band of a Multiband Raster**
 
    If you want to view a single band of a multiband
    image (for example, Red), you might think you would set the Green and Blue
-   bands to "Not Set". But this is not the correct way. To display the Red band,
-   set the image type to 'Singleband gray', then select Red as the band to use
-   for Gray.
+   bands to :guilabel:`Not Set`. But this is not the correct way. To display the Red band,
+   set the image type to :ref:`Singleband gray <singleband_gray>`, then select Red
+   as the :guilabel:`Gray band` to use.
+
 
 .. _paletted:
 
-Paletted
-........
+Paletted/Unique values
+......................
 
 This is the standard render option for singleband files that already include a
 color table, where each pixel value is assigned to a certain color. In that case,
@@ -176,33 +166,29 @@ certain values, just double-click on the color and the :guilabel:`Select color`
 dialog appears. Also, in QGIS it's possible to assign a label to the color values.
 The label appears in the legend of the raster layer then.
 
-.. _figure_raster_paletted:
+This option can be used for rendering all raster bands using a palette, assigning
+a color to each unique raster value.
 
-.. figure:: img/rasterPaletted.png
+.. _figure_raster_paletted_unique:
+
+.. figure:: img/rasterPalettedUniqueValue.png
    :align: center
 
-   Raster Symbology - Paletted Rendering
+   Raster Symbology - Paletted unique value rendering
 
-.. index:: Contrast enhancement
-
-**Contrast enhancement**
-
-.. note::
-   When adding GRASS rasters, the option *Contrast enhancement* will always be
-   set automatically to *stretch to min max*, regardless of if this is set to
-   another value in the QGIS general options.
 
 .. _singleband_gray:
 
 Singleband gray
 ...............
 
-This renderer allows you to render a single band layer with a :guilabel:`Color gradient`:
-'Black to white' or 'White to black'. You can define a :guilabel:`Min`
-and a :guilabel:`Max` value by choosing the :guilabel:`Extent` first and
-then pressing :guilabel:`Load`. QGIS can |radioButtonOn| :guilabel:`Estimate (faster)`
-the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
-|radioButtonOff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
+This renderer allows you to render a single band layer with a :guilabel:`Color
+gradient`: 'Black to white' or 'White to black'. You can define a range of values
+to color other than the default :guilabel:`Min` and :guilabel:`Max` values of the
+whole raster, thanks to the :ref:`Min/Max Value Settings <minmaxvalues>` option.
+
+Again, a :guilabel:`Contrast enhancement` method can be applied to the values:
+'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
 
 .. _figure_raster_gray:
 
@@ -211,19 +197,6 @@ the :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 
    Raster Symbology - Singleband gray rendering
 
-
-With the :guilabel:`Load min/max values` section, scaling of the color table
-is possible. Outliers can be eliminated using the |radioButtonOn| :guilabel:`Cumulative
-count cut` setting.
-The standard data range is set from 2% to 98% of the data values and can
-be adapted manually. With this setting, the gray character of the image can disappear.
-Further settings can be made with |radioButtonOff| :guilabel:`Min/max` and
-|radioButtonOff| :guilabel:`Mean +/- standard deviation x` |selectNumber|.
-While the first one creates a color table with all of the data included in the
-original image, the second creates a color table that only considers values
-within the standard deviation or within multiple standard deviations.
-This is useful when you have one or two cells with abnormally high values in
-a raster grid that are having a negative impact on the rendering of the raster.
 
 .. index:: Color map, Color interpolation, Discrete
 .. _label_colormaptab:
@@ -242,35 +215,12 @@ You can also create individual color maps for the single bands here.
    Raster Symbology - Singleband pseudocolor rendering
 
 
-Three types of color interpolation are available:
+Using a :guilabel:`Band` of the layer and a :ref:`values range <minmaxvalues>`,
+three types of color :guilabel:`Interpolation` are available:
 
-#. Discrete
-#. Linear
-#. Exact
-
-You can choose the band on which QGIS will render the layer, then define
-a :guilabel:`Min` and :guilabel:`Max` value.
-
-Defining :guilabel:`Min/Max` values can be done with the help of the :guilabel:`Load min/max values` section.
-A lot of images have a few very low and high data. These outliers can be eliminated
-using the |radioButtonOn| :guilabel:`Cumulative count cut` setting. The standard
-data range is set from 2% to 98% of the data values and can be adapted manually.
-
-With this setting, the gray character of the image can disappear.
-With the scaling option |radioButtonOn| :guilabel:`Min/max`, QGIS creates a color
-table with all of the data included in the original image (e.g., QGIS creates a
-color table with 256 values, given the fact that you have 8 bit bands).
-You can also calculate your color table using the |radioButtonOn| :guilabel:`Mean +/-
-standard deviation x` |selectNumber|.
-Then, only the values within the standard deviation or within multiple standard deviations
-are considered for the color table.
-
-In the next part, :guilabel:`Interpolation` allows you to choose which
-interpolation mode to use between:
-
-* Discrete (a <= symbol appears in the value column);
-* Linear;
-* Exact (an equal symbol appears in the Value column);
+* Discrete (a <= symbol appears in the value column)
+* Linear
+* Exact (an equal symbol appears in the Value column)
 
 The :guilabel:`Color ramp` drop down list lists the color ramp in your QGIS. You
 can add a new one, edit or save the one you changed. The name of the color ramp
@@ -299,6 +249,76 @@ defined color table for other sessions.
 
 The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
 greater than the :guilabel:`Max` value.
+
+
+.. index:: Hillshade
+.. _hillshade_renderer:
+
+Hillshade
+.........
+
+Render a band of the raster layer using hillshading.
+
+.. _figure_raster_hillshade:
+
+.. figure:: img/rasterHillshade.png
+   :align: center
+
+   Raster Symbology - Hillshade rendering
+
+Options:
+
+* :guilabel:`Band`: The raster band to use.
+* :guilabel:`Altitude`: The elevation angle of the light source (default is ``45°``).
+* :guilabel:`Azimuth`: The azimuth of the light source (default is ``315°``).
+* :guilabel:`Z Factor`: Scaling factor for the values of the raster band (default is ``1``).
+* |checkbox| :guilabel:`Multidirectional`: Specify if multidirectional hillshading
+  is to be used (default is ``off``).
+
+
+.. _minmaxvalues:
+
+Setting the min and max values
+..............................
+
+By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of the band(s)
+of the raster. A few very low and/or high values can have a
+negative impact on the rendering of the raster. The :ref:`Min/Max Value Settings
+<minmaxvalues>` menu helps you control the values to render.
+
+.. _figure_raster_minmaxvalues:
+
+.. figure:: img/rasterMinMaxValues.png
+   :align: center
+
+   Raster Symbology - Min and Max Value Settings
+
+
+Available options are:
+
+* |radioButtonOff| :guilabel:`User defined`: The default
+  :guilabel:`Min` and :guilabel:`Max` values of the band(s) can be overridden
+* |radioButtonOff| :guilabel:`Cumulative count cut`: Removes outliers.
+  The standard range of values is ``2%`` to ``98%``, but can
+  be adapted manually.
+* |radioButtonOn| :guilabel:`Min/max`: Uses the whole range of values in the image band.
+* |radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates a color
+  table that only considers values within the standard deviation or within multiple
+  standard deviations. This is useful when you have one or two cells with abnormally
+  high values in a raster grid that are having a negative impact on the rendering
+  of the raster.
+
+Calculations of the min and max values of the bands are made based on the:
+
+* :guilabel:`Statistics extent`: it can be :guilabel:`Whole raster`,
+  :guilabel:`Current canvas` or :guilabel:`Updated canvas`
+* and the :guilabel:`Accuracy`, which can be either :guilabel:`Estimate (faster)`
+  or :guilabel:`Actual (slower)`.
+
+.. note:: For some settings, you may need to press the :guilabel:`Apply` button of
+  the layer properties dialog in order to display the actual min and max values
+  in the widgets.
+
 
 Color rendering
 ---------------
@@ -443,6 +463,13 @@ visible. Out of this range, it's hidden. The |mapIdentification|
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
+.. _figure_raster_rendering:
+
+.. figure:: img/rasterRendering.png
+   :align: center
+
+   Raster Rendering
+
 
 .. index:: Pyramids
 .. _raster_pyramids:
@@ -552,13 +579,9 @@ collected.
 
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
-.. |arrowDown| image:: /static/common/mActionArrowDown.png
-   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
-   :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.5em
@@ -573,15 +596,15 @@ collected.
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 1.5em
-.. |overlay| image:: /static/common/overlay.png
    :width: 2em
-.. |pyramids| image:: /static/common/pyramids.png
+.. |overlay| image:: /static/common/overlay.png
    :width: 1.5em
-.. |rasterHistogram| image:: /static/common/rasterHistogram.png
+.. |pyramids| image:: /static/common/pyramids.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |rasterHistogram| image:: /static/common/rasterHistogram.png
+   :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
@@ -598,7 +621,7 @@ collected.
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
 .. |system| image:: /static/common/system.png
-   :width: 2em
+   :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
-   :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

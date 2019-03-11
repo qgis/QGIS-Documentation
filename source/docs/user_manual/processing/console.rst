@@ -555,22 +555,20 @@ Specify / override these to provide more help to the user.
 ``shortDescription()`` (added in 3.4) is used in the tooltip when
 hovering over the algorithm in the toolbox.
 
-.. warning:: No QGIS 3 updates beyond this point (ToDo)
-
 Pre- and post-execution script hooks
 ------------------------------------
 
-Scripts can also be used to set pre- and post-execution hooks that are run before
-and after an algorithm is run. This can be used to automate tasks that should be
-performed whenever an algorithm is executed.
+Scripts can also be used as pre- and post-execution hooks that are run before
+and after an algorithm is run, respectively. This can be used to automate tasks
+that should be performed whenever an algorithm is executed.
 
 The syntax is identical to the syntax explained above, but an additional global
 variable named ``alg`` is available, representing the algorithm that has just
 been (or is about to be) executed.
 
-In the :guilabel:`General` group of the processing configuration dialog, you will find two
-entries named :guilabel:`Pre-execution script file` and :guilabel:`Post-execution
-script file` where the filename of the scripts to be run in each case can be
+In the :guilabel:`General` group of the processing options dialog, you will find two
+entries named :guilabel:`Pre-execution script` and :guilabel:`Post-execution
+script` where the filenames of the scripts to be run in each case can be
 entered.
 
 
@@ -580,4 +578,4 @@ entered.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

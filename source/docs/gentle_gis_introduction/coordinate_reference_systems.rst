@@ -346,36 +346,36 @@ distortion and to get accurate analysis results, we should use **UTM zone 35S**
 as the coordinate reference system.
 
 The position of a coordinate in UTM south of the equator must be indicated with
-the **zone number** (35) and with its **northing (y) value** and **easting (x)
+the **zone number** (35) and with its **northing (Y) value** and **easting (X)
 value** in meters. The **northing value** is the distance of the position from
 the **equator** in meters. The **easting value** is the distance from the
 **central meridian** (longitude) of the used UTM zone. For UTM zone 35S it is
 **27 degrees** **East** as shown in figure_utm_for_sa_. Furthermore, because we
 are south of the equator and negative values are not allowed in the UTM coordinate
 reference system, we have to add a so called **false northing value** of
-10,000,000 m to the northing (y) value and a false easting value of 500,000 m to
-the easting (x) value. This sounds difficult, so, we will do an example that
+10,000,000 m to the northing (Y) value and a false easting value of 500,000 m to
+the easting (X) value. This sounds difficult, so, we will do an example that
 shows you how to find the correct **UTM 35S** coordinate for the **Area of
 Interest**.
 
-The northing (y) value
+The northing (Y) value
 ----------------------
 
 The place we are looking for is 3,550,000 meters south of the equator, so the
-northing (y) value gets a **negative sign** and is -3,550,000 m. According to
+northing (Y) value gets a **negative sign** and is -3,550,000 m. According to
 the UTM definitions we have to add a **false northing value** of 10,000,000 m.
-This means the northing (y) value of our coordinate is 6,450,000 m (-3,550,000 m
+This means the northing (Y) value of our coordinate is 6,450,000 m (-3,550,000 m
 + 10,000,000 m).
 
-The easting (x) value
+The easting (X) value
 ---------------------
 
 First we have to find the **central meridian** (longitude) for the **UTM zone
 35S**. As we can see in figure_utm_for_sa_ it is **27 degrees East**. The place
 we are looking for is **85,000 meters West** from the central meridian. Just like
-the northing value, the easting (x) value gets a negative sign, giving a result
+the northing value, the easting (X) value gets a negative sign, giving a result
 of **-85,000 m**. According to the UTM definitions we have to add a **false
-easting value** of 500,000 m. This means the easting (x) value of our coordinate
+easting value** of 500,000 m. This means the easting (X) value of our coordinate
 is 415,000 m (-85,000 m + 500,000 m). Finally, we have to add the **zone number**
 to the easting value to get the correct value.
 
@@ -458,7 +458,7 @@ If you don't have a computer available, you can show your pupils the principles
 of the three map projection families. Get a globe and paper and demonstrate how
 cylindrical, conical and planar projections work in general. With the help of a
 transparency sheet you can draw a two-dimensional coordinate reference system
-showing X axes and Y axes. Then, let your pupils define coordinates (x and y
+showing X axes and Y axes. Then, let your pupils define coordinates (X and Y
 values) for different places.
 
 Further reading

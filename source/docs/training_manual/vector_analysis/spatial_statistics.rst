@@ -26,27 +26,26 @@ want to create the points in.
 
 We'll use the area covered by streets.
 
-* Start a new project.
-* Add your :guilabel:`roads` layer, as well as the :guilabel:`srtm_41_19`
-  raster file (elevation data) found in :file:`exercise_data/raster/SRTM/`.
+#. Start a new project.
+#. Add your :guilabel:`roads` layer, as well as the :guilabel:`srtm_41_19`
+   raster file (elevation data) found in :file:`exercise_data/raster/SRTM/`.
 
-.. note:: You might find that your SRTM DEM layer has a different CRS to that of
+   .. note:: You might find that your SRTM DEM layer has a different CRS to that of
     the roads layer. QGIS is reprojecting both layers in a single CRS. For the
     following exercises this difference does not matter, but feel free to
     reproject a layer in another CRS as shown in this module.
 
-* Open :guilabel:`Processing` toolbox.
+#. Open :guilabel:`Processing` toolbox.
+#. Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool to
+   generate an area enclosing all the roads by selecting ``Convex Hull`` as the
+   :guilabel:`Geometry Type` parameter:
 
-* Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool to
-  generate an area enclosing all the roads by selecting ``Convex Hull`` as the
-  :guilabel:`Geometry Type` parameter:
+   .. image:: img/roads_hull_setup.png
+      :align: center
 
-.. image:: img/roads_hull_setup.png
-   :align: center
-
-* As you know, if you don't specify the output, :guilabel:`Processing` creates
-  temporary layers. It is up to you to save the layers immediately or in a
-  second moment.
+   As you know, if you don't specify the output, :guilabel:`Processing` creates
+   temporary layers. It is up to you to save the layers immediately or in a
+   second moment.
 
 Creating random points
 ...............................................................................
@@ -71,19 +70,22 @@ better:
 Sampling the data
 ...............................................................................
 
-* To create a sample dataset from the raster, you'll need to use the
-  :menuselection:`Raster Analysis --> Sample raster values` algorithm within
-  :guilabel:`Processing` toolbox. This tool samples the raster at the points
-  locations and copies the raster values in other field(s) depending on how many
-  bands the raster is made of.
+To create a sample dataset from the raster, you'll need to use the
+:menuselection:`Raster Analysis --> Sample raster values` algorithm within
+:guilabel:`Processing` toolbox. This tool samples the raster at the points
+locations and copies the raster values in other field(s) depending on how many
+bands the raster is made of.
 
-* Select :guilabel:`random_points` as the layer containing sampling points, and
-  the SRTM raster as the band to get values from. The default name of the new
-  field is ``rvalue_N``, where ``N`` is the number of the raster band. You can
-  change the name of the prefix if you want:
+#. Open the :guilabel:`Sample raster values` algorithm dialog
+#. Select :guilabel:`random_points` as the layer containing sampling points, and
+   the SRTM raster as the band to get values from. The default name of the new
+   field is ``rvalue_N``, where ``N`` is the number of the raster band. You can
+   change the name of the prefix if you want:
 
-  .. image:: img/sample_raster_dialog.png
-     :align: center
+   .. image:: img/sample_raster_dialog.png
+      :align: center
+
+#. Press :guilabel:`Run`
 
 Now you can check the sampled data from the raster file in the attributes
 table of the :guilabel:`Random points` layer, they will be in a new field with
@@ -104,25 +106,22 @@ You'll be using this sample layer for the rest of the statistical exercises.
 
 Now get the basic statistics for this layer.
 
-* Click on the |sum| icon in the :guilabel:`Attributes Toolbar` of QGIS main dialog.
-  A new panel will pop up.
-* In the dialog that appears, specify the :guilabel:`Sampled Points` layer as
-  the source.
-* Select the :guilabel:`rvalue_1` field in the field combo box which is the
-  field you will calculate statistics for.
-* The :guilabel:`Statistics` Panel will be automatically updated with the
-  calculated statistics:
+#. Click on the |sum| icon in the :guilabel:`Attributes Toolbar` of QGIS main dialog.
+   A new panel will pop up.
+#. In the dialog that appears, specify the :guilabel:`Sampled Points` layer as
+   the source.
+#. Select the :guilabel:`rvalue_1` field in the field combo box which is the
+   field you will calculate statistics for.
+#. The :guilabel:`Statistics` Panel will be automatically updated with the
+   calculated statistics:
 
-.. image:: img/basic_statistics_results.png
-   :align: center
+   .. image:: img/basic_statistics_results.png
+      :align: center
 
-.. note:: You can copy the values by clicking on the |editCopy|:sup:`Copy Statistics To Clipboard`
+   .. note:: You can copy the values by clicking on the |editCopy|:sup:`Copy Statistics To Clipboard`
     button and paste the results into a spreadsheet.
 
-.. image:: img/paste_to_spreadsheet.png
-   :align: center
-
-* Close the :guilabel:`Statistics` Panel when done.
+#. Close the :guilabel:`Statistics` Panel when done.
 
 Many different statistics are available, below some description:
 
@@ -168,31 +167,32 @@ Missing (null) values
 |basic| |FA| Compute statistics on distances between points using the Distance Matrix tool
 ------------------------------------------------------------------------------------------
 
-* Create a new point layer as a ``Temporary layer``.
-* Enter edit mode and digitize three points somewhere among the other points.
-* Alternatively, use the same random point generation method as before, but
-  specify only **three** points.
-* Save your new layer as :guilabel:`distance_points` in the format you prefer.
+#. Create a new point layer as a ``Temporary layer``.
+#. Enter edit mode and digitize three points somewhere among the other points.
+
+   Alternatively, use the same random point generation method as before, but
+   specify only **three** points.
+#. Save your new layer as :guilabel:`distance_points` in the format you prefer.
 
 To generate statistics on the distances between points in the two layers:
 
-* Open the tool :menuselection:`Vector Analysis --> Distance matrix`.
-* Select the :guilabel:`distance_points` layer as the input layer, and the
-  :guilabel:`Sampled Points` layer as the target layer.
-* Set it up like this:
+#. Open the tool :menuselection:`Vector Analysis --> Distance matrix`.
+#. Select the :guilabel:`distance_points` layer as the input layer, and the
+   :guilabel:`Sampled Points` layer as the target layer.
+#. Set it up like this:
 
-.. image:: img/distance_matrix_setup.png
-   :align: center
+   .. image:: img/distance_matrix_setup.png
+      :align: center
 
-* If you want you can save the output layer as a file or just run the algorithm
-  and save the temporary output layer in a second moment.
-* Click :guilabel:`Run` to generate the distance matrix layer.
-* Open the attribute table of the generated layer: values refer to the distances
-  between the :guilabel:`distance_points` features and their two nearest points
-  in the :guilabel:`Sampled Points` layer:
+#. If you want you can save the output layer as a file or just run the algorithm
+   and save the temporary output layer in a second moment.
+#. Click :guilabel:`Run` to generate the distance matrix layer.
+#. Open the attribute table of the generated layer: values refer to the distances
+   between the :guilabel:`distance_points` features and their two nearest points
+   in the :guilabel:`Sampled Points` layer:
 
-.. image:: img/distance_matrix_example.png
-   :align: center
+   .. image:: img/distance_matrix_example.png
+      :align: center
 
 
 With these parameters, the ``Distance Matrix`` tool calculates distance
@@ -207,36 +207,36 @@ points in the input layer.
 
 To do a nearest neighbor analysis of a point layer:
 
-* Click on the menu item :menuselection:`Vector analysis --> Nearest neighbor
-  analysis`.
-* In the dialog that appears, select the :guilabel:`Random points` layer and
-  click :guilabel:`Run`.
-* The results will appear in the Processing :guilabel:`Result Viewer` Panel.
+#. Click on the menu item :menuselection:`Vector analysis --> Nearest neighbor
+   analysis`.
+#. In the dialog that appears, select the :guilabel:`Random points` layer and
+   click :guilabel:`Run`.
+#. The results will appear in the Processing :guilabel:`Result Viewer` Panel.
 
-  .. image:: img/result_viewer.png
+   .. image:: img/result_viewer.png
+      :align: center
+
+#. Click on the blue link to open the ``html`` page with the results:
+
+   .. image:: img/nearest_neighbour_example.png
      :align: center
-
-* Click on the blue link to open the ``html`` page with the results:
-
-  .. image:: img/nearest_neighbour_example.png
-    :align: center
 
 |basic| |FA| Mean Coordinates
 -------------------------------------------------------------------------------
 
 To get the mean coordinates of a dataset:
 
-* Click on the :menuselection:`Vector analysis --> Mean coordinate(s)` menu item.
-* In the dialog that appears, specify :guilabel:`Random points` as the input
-  layer, but leave the optional choices unchanged.
-* Click :guilabel:`Run`.
+#. Click on the :menuselection:`Vector analysis --> Mean coordinate(s)` menu item.
+#. In the dialog that appears, specify :guilabel:`Random points` as the input
+   layer, but leave the optional choices unchanged.
+#. Click :guilabel:`Run`.
 
 Let's compare this to the central coordinate of the polygon that was used to
 create the random sample.
 
-* Click on the :menuselection:`Vector geometry --> Centroids` menu item.
-* In the dialog that appears, select :guilabel:`Bounding geometry` as the input
-  layer.
+#. Click on the :menuselection:`Vector geometry --> Centroids` menu item.
+#. In the dialog that appears, select :guilabel:`Bounding geometry` as the input
+   layer.
 
 As you can see from the example below, the mean coordinates (pink point) and the
 center of the study area (in green) don't necessarily coincide.
@@ -255,19 +255,19 @@ The histogram of a dataset shows the distribution of its values. The simplest
 way to demonstrate this in QGIS is via the image histogram, available in the
 :guilabel:`Layer Properties` dialog of any image layer (raster dataset).
 
-* In your :guilabel:`Layers` panel, right-click on the :guilabel:`srtm_41_19`
-  layer.
-* Select :menuselection:`Properties`.
-* Choose the tab :guilabel:`Histogram`. You may need to click on the
-  :guilabel:`Compute Histogram` button to generate the graphic. You will see a
-  graph describing the frequency of values in the image.
-* You can export it as an image:
+#. In your :guilabel:`Layers` panel, right-click on the :guilabel:`srtm_41_19`
+   layer.
+#. Select :menuselection:`Properties`.
+#. Choose the tab :guilabel:`Histogram`. You may need to click on the
+   :guilabel:`Compute Histogram` button to generate the graphic. You will see a
+   graph describing the frequency of values in the image.
+#. You can export it as an image:
 
-.. image:: img/histogram_export.png
-   :align: center
+   .. image:: img/histogram_export.png
+      :align: center
 
-* Select the :guilabel:`Information` tab, you can see more detailed information
-  of the layer.
+#. Select the :guilabel:`Information` tab, you can see more detailed information
+   of the layer.
 
 The mean value is ``332.8``, and the maximum value is ``1699``! But those
 values don't show up on the histogram. Why not? It's because there are so few
@@ -291,16 +291,14 @@ extrapolate data. For example, you might have access to the
 :guilabel:`Sampled points` dataset we created earlier, and would like to have
 some idea of what the terrain looks like.
 
-To start, launch the
-:menuselection:`GDAL --> Raster analysis --> Grid (IDW with nearest neighbor searching)`
-tool within :guilabel:`Processing` toolbox.
-
-* In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`;
-* Set ``5.0`` as the :guilabel:`Weighting power`;
-* In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the
-  :guilabel:`Z value from field` parameter;
-* Finally click on :guilabel:`Run` and wait until the algorithm ends;
-* Close the dialog.
+#. To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW
+   with nearest neighbor searching)` tool within :guilabel:`Processing` toolbox.
+#. In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`
+#. Set ``5.0`` as the :guilabel:`Weighting power`
+#. In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the
+   :guilabel:`Z value from field` parameter
+#. Finally click on :guilabel:`Run` and wait until the algorithm ends
+#. Close the dialog
 
 Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
@@ -316,16 +314,16 @@ misleading as well.
 |moderate| |TY| Different interpolation methods
 -------------------------------------------------------------------------------
 
-* Use the processes shown above to create a new set of ``10 000`` random points.
+#. Use the processes shown above to create a new set of ``10 000`` random points.
 
-  .. note:: If the points amount is really big the processing time can take a
+   .. note:: If the points amount is really big the processing time can take a
       long time.
 
-* Use these points to sample the original DEM.
-* Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this
-  new dataset as above.
-* Set the :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``,
-  respectively.
+#. Use these points to sample the original DEM.
+#. Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this
+   new dataset as above.
+#. Set the :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``,
+   respectively.
 
 The results (depending on the positioning of your random points) will look more
 or less like this:
@@ -366,8 +364,6 @@ rasters? That's what we'll do in the next module!
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -203,6 +203,11 @@ also in the algorithms tree in the :guilabel:`Algorithms` tab of the modeler
 window. That means that you can incorporate a model as a part of a bigger model,
 just as you add any other algorithm.
 
+Exporting a model as an image, PDF or SVG
+.........................................
+
+A model can also be exported as an image, SVG or PDF (for illustration purposes).
+
 
 Editing a model
 ---------------
@@ -306,4 +311,4 @@ not appear in the list of algorithms that you can find in the modeler dialog.
    :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

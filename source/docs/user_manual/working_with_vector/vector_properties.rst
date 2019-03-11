@@ -732,11 +732,12 @@ Heatmap Renderer
 
 With the |heatmapSymbol| :guilabel:`Heatmap` renderer you can create live
 dynamic heatmaps for (multi)point layers.
-You can specify the heatmap radius in pixels, mm or map units, choose and
-edit a color ramp for the heatmap style and use a slider for selecting a trade-off
-between render speed and quality. You can also define a maximum value limit and give a
-weight to points using a field or an expression. When adding or removing a feature
-the heatmap renderer updates the heatmap style automatically.
+You can specify the heatmap radius in millimeters, points, pixels, map units or
+inches, choose and edit a color ramp for the heatmap style and use a slider for
+selecting a trade-off between render speed and quality. You can also define a
+maximum value limit and give a weight to points using a field or an expression.
+When adding or removing a feature the heatmap renderer updates the heatmap style
+automatically.
 
 .. _figure_heatmap_symbology:
 
@@ -1042,12 +1043,12 @@ effect types, with custom options are available:
   horizontal` and :guilabel:`Reflect vertical`, which actually create a
   reflection on the horizontal and/or vertical axes. The other options are:
 
-  * :guilabel:`Shear X,Y`: Slants the feature along the x and/or y axis.
-  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the x
-    and/or y axis by the given percentage.
+  * :guilabel:`Shear X,Y`: Slants the feature along the X and/or Y axis.
+  * :guilabel:`Scale X,Y`: Enlarges or minimizes the feature along the X
+    and/or Y axis by the given percentage.
   * :guilabel:`Rotation`: Turns the feature around its center point.
   * and :guilabel:`Translate X,Y` changes the position of the item based on
-    a distance given on the x and/or y axis.
+    a distance given on the X and/or Y axis.
 
   .. _figure_effects_transform:
 
@@ -1943,7 +1944,8 @@ Size
 ----
 
 :guilabel:`Size` is the main tab to set how the selected statistics are
-represented. The diagram size units can be 'Map Units' or 'Millimeters'.
+represented. The diagram size units can be 'Millimeter', 'Points', Pixels,
+'Map Units' or 'Inches'.
 You can use :
 
 * :guilabel:`Fixed size`, an unique size to represent the graphic of all the
@@ -2349,7 +2351,7 @@ Default values
   For example, you can:
 
   * use ``$x``, ``$length``, ``$area`` to automatically populate a field with the
-    feature's x coordinate, length, area or any geometric information at its creation;
+    feature's X coordinate, length, area or any geometric information at its creation;
   * increment a field by 1 for each new feature using ``maximum("field")+1``;
   * save the feature creation datetime using ``now()``;
   * use :ref:`variables <general_tools_variables>` in expressions, making it
@@ -2534,7 +2536,7 @@ possible if the underlying data is read only. Moreover, configuring these
 data-defined properties may be very time consuming or not desirable! For
 example, if you want to fully use map tools coming with :ref:`label_toolbar`,
 then you need to add and configure more than 20 fields in your original data
-source (x and y positions, rotation angle, font style, color and so on).
+source (X and Y positions, rotation angle, font style, color and so on).
 
 The Auxiliary Storage mechanism provides the solution to these limitations
 and awkward configurations. Auxiliary fields are a roundabout way to
@@ -3390,11 +3392,11 @@ in the current edit session.
    :width: 1.3em
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
    :width: 1.5em
+.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
+   :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
-   :width: 1.5em
-.. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
@@ -3407,7 +3409,7 @@ in the current edit session.
 .. |diagramNone| image:: /static/common/diagramNone.png
    :width: 1.5em
 .. |digitizing| image:: /static/common/digitizing.png
-   :width: 2em
+   :width: 1.5em
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
@@ -3523,4 +3525,4 @@ in the current edit session.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

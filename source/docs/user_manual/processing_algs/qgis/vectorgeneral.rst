@@ -120,10 +120,10 @@ a layer is missing the ``proj`` file and you know the correct projection.
 
 Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the current
 layer and will not output a new layer.
-  
+
 .. note:: For Shapefile datasets, the ``.prj`` and ``.qpj`` files will
    be overwritten - or created if missing - to match the provided CRS.
-    
+
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
@@ -328,7 +328,7 @@ Parameters
 
   Select the specific fields you want to add. By default all the fields are added.
 
-``Join type`` [enumeration] |32|
+``Join type`` [enumeration]
   Choose the type of the final joined layer between:
 
   * 0 --- Create separate feature for each matching feature (one-to-many)
@@ -336,10 +336,10 @@ Parameters
 
   Default: *1*
 
-``Discard records which could not be joined`` [boolean] |32|
+``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined.
 
-``Joined field prefix`` [string] |32|
+``Joined field prefix`` [string]
   Optional
 
   Add a prefix to joined fields in order to easily identify them and avoid field
@@ -350,7 +350,7 @@ Outputs
 ``Joined layer`` [vector: any]
   Final vector layer with the attribute table as result of the join.
 
-``Unjoinable features from first layer`` [vector: any] |34|
+``Unjoinable features from first layer`` [vector: any]
   Optional
 
   Vector layer of the non matching features resulting from the join.
@@ -409,7 +409,7 @@ Parameters
 ``Discard records which could not be joined`` [boolean]
   Check if you don't want to add the features that cannot be joined.
 
-``Joined field prefix`` [string] |32|
+``Joined field prefix`` [string]
   Optional
 
   Add a prefix to joined fields in order to easily identify them and avoid field
@@ -420,7 +420,7 @@ Outputs
 ``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
-``Unjoinable features from first layer`` [vector: any] |34|
+``Unjoinable features from first layer`` [vector: any]
   Optional
 
   Vector layer of only the input features that do not spatially match any join feature.
@@ -691,8 +691,6 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
-.. |34| replace:: ``NEW in 3.4``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

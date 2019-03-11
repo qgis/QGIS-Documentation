@@ -237,6 +237,13 @@ and a negative value does the opposite.
    potentially long tracing structure preparation and large memory overhead.
    After zooming in or disabling some layers the tracing is enabled again.
 
+.. note:: **Does not add topological points**
+
+   This tool does not add points to existing polygon geometries even if :guilabel:`Topological editing`
+   is enabled.
+   If geometry precision is activated on the edited layer, the resulting 
+   geometry might not exactly follow an existing geometry.
+
 .. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
 
    By pressing the :kbd:`T` key, tracing can be enabled/disabled anytime even while
@@ -489,7 +496,8 @@ The Vertex Editor Panel
 
 When using the :guilabel:`Vertex tool` on a feature, it is possible to right click to open the
 :guilabel:`Vertex Editor` panel listing all the vertices of the feature with
-their x, y (z, m if applicable) coordinates and r (for the radius, in case of
+their :guilabel:`x`, :guilabel:`y` (:guilabel:`z`, :guilabel:`m` if applicable)
+coordinates and :guilabel:`r` (for the radius, in case of
 circular geometry). Simply select a row in the table does select the corresponding
 vertex in the map canvas, and vice versa. Simply change a coordinate in the table
 and your vertex position is updated. You can also select multiple rows and delete
@@ -1188,6 +1196,8 @@ coordinates while moving the symbol in the map canvas.
 
  .. note:: This can lead to invalid geometries.
 
+ .. note:: You must activate segment snapping for this tool to work
+ 
  The tool asks you to select a limit (a segment) with respect to which another
  segment will be extended or trimmed. Unlike the node tool, a check is performed to
  modify only the layer being edited.
@@ -1296,9 +1306,9 @@ shorcuts available:
 +----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`A` | Set angle         | Lock angle                    | Toggle relative angle to last segment |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`X` | Set x coordinate  | Lock x coordinate             | Toggle relative x to last vertex      |
+| :kbd:`X` | Set X coordinate  | Lock X coordinate             | Toggle relative X to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
-| :kbd:`Y` | Set y coordinate  | Lock y coordinate             | Toggle relative y to last vertex      |
+| :kbd:`Y` | Set Y coordinate  | Lock Y coordinate             | Toggle relative Y to last vertex      |
 +----------+-------------------+-------------------------------+---------------------------------------+
 | :kbd:`C` | Toggle construction mode                                                                  |
 +----------+-------------------------------------------------------------------------------------------+
@@ -1372,13 +1382,13 @@ and the mouse pointer.
 For coordinates, click the |delta| buttons to the left of the :guilabel:`x` or
 :guilabel:`y` text boxes (or press :kbd:`Shift+X` or :kbd:`Shift+Y`) to
 toggle relative coordinates to the previous vertex. With these options on,
-coordinates measurement will consider the last vertex to be the x and y axes
+coordinates measurement will consider the last vertex to be the X and Y axes
 origin.
 
 Continuous lock
 ---------------
 
-Both in absolute or relative reference digitizing, angle, distance, x and y
+Both in absolute or relative reference digitizing, angle, distance, X and Y
 constraints can be locked continuously by clicking the |lockedRepeat|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
 digitize several points or vertexes using the same constraints.
@@ -1422,7 +1432,7 @@ You can enable and disable *construction* mode by clicking on the
 |cadConstruction| :sup:`Construction` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
 vertexes, but will capture the clicks' positions so that you can use them as
-reference points to then lock distance, angle or x and y relative values.
+reference points to then lock distance, angle or X and Y relative values.
 
 As an example, the construction mode can be used to draw some point
 at an exact distance from an existing point.
@@ -1564,13 +1574,13 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
-.. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
@@ -1644,7 +1654,7 @@ To edit features in-place:
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png

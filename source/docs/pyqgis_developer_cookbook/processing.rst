@@ -21,20 +21,11 @@ it can be run in the components of Processing, such as the modeler or the batch
 processing interface), and a quicker development time (since Processing will take of
 a large part of the work).
 
-This document describes how to create a new plugin that adds its functionality as
-Processing algorithms.
+To distribute those algorithms, you should create a new plugin that adds them to the
+Processign Toolbox. The plugin should contain an algorithm provider, which has to be 
+registered when the plugin is instantiated.
 
-There are two main mechanisms for doing that:
-
-* Creating a plugin that adds an algorithm provider: This options is more complex,
-  but provides more flexibility
-* Creating a plugin that contains a set of processing scripts: The simplest solution,
-  you just need a set of Processing script files.
-
-Creating a plugin that adds an algorithm provider 
-==================================================
-
-To create an algorithm provider, follow these steps:
+To create a plugin which contains an algorithm provider, follow these steps:
 
 * Install the Plugin Builder plugin
 * Create a new plugin using the Plugin Builder. When the Plugin Builder asks you for
@@ -43,22 +34,6 @@ To create an algorithm provider, follow these steps:
   file and the algorithm file are fully commented and contain information about how to
   modify the provider and add additional algorithms. Refer to them for more information.
 
-Creating a plugin that contains a set of processing scripts
-=============================================================
-
-To create a set of processing scripts, follow these steps:
-
-* Create your scripts as described in the PyQGIS cookbook. All the scripts that you want
-  to add, you should have them available in the Processing toolbox.
-* In the *Scripts/Tools* group in the Processing toolbox, double-click on the *Create
-  script collection plugin* item. You will see a window where you should select the scripts
-  to add to the plugin (from the set of available ones in the toolbox), and some additional
-  information needed for the plugin metadata.
-* Click on OK and the plugin will be created.
-* You can add additional scripts to the plugin by adding scripts python files to the *scripts*
-  folder in the resulting plugin folder.
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -66,4 +41,4 @@ To create a set of processing scripts, follow these steps:
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -101,8 +101,8 @@ which tables in the database contain geometry data.
    this table has already been registered and you don't need to do anything
    more.
 
-The value :kbd:`2` refers to the number of dimensions; in this case, two: **x**
-and **y**.
+The value ``2`` refers to the number of dimensions; in this case, two: **X**
+and **Y**.
 
 The value :kbd:`4326` refers to the projection we are using; in this case, WGS
 84, which is referred to by the number 4326 (refer to the earlier discussion
@@ -215,4 +215,4 @@ Next you'll see how to import data into, and export data from, your database.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -13,8 +13,8 @@ Cartography
 
 .. _qgiscategorizeusingstyle:
 
-Create categorized renderer from styles |34|
---------------------------------------------
+Create categorized renderer from styles
+---------------------------------------
 Sets a vector layer's renderer to a categorized renderer using matching symbols
 from a style database. If no style file is specified, symbols from the user's
 current :ref:`symbol library <vector_symbol_library>` are used instead.
@@ -142,5 +142,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |34| replace:: :kbd:`NEW in 3.4`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -31,7 +31,7 @@ aerial photography, or satellite imagery and modelled data, such as an elevation
 matrix.
 
 Unlike vector data, raster data typically do not have an associated database
-record for each cell. They are geocoded by pixel resolution and the x/y
+record for each cell. They are geocoded by pixel resolution and the X/Y
 coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 
@@ -603,4 +603,4 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
    :width: 1em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

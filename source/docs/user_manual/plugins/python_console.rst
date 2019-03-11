@@ -148,30 +148,50 @@ share the code via codepad.org and much more). Main features are:
 Options
 =======
 
-Accessible either from the Console toolbar or the contextual menu of Console
-output panel or Code Editor, this adds further settings to manage and control
-the Python console behavior:
+Accessible from the Console toolbar and the contextual menus of the Console
+output panel and the Code Editor, the :guilabel:`Python Console Settings`
+help manage and control the Python console behavior.
 
-* **Autocompletion:** If checked the code completion is enabled. You can get
-  autocompletion from current document, from installed APIs and both from APIs
-  and current document.
+For both :guilabel:`Console` and :guilabel:`Editor` you can specify:
 
-* **Autocompletion threshold:** Sets the threshold to display the autocompletion list
-  (in chars typed).
+* :guilabel:`Autocompletion`: Enables code completion. You can get
+  autocompletion from the current document, the installed API files or both.
 
-* **Automatic parentheses insertion:** If checked enables the autoclosing for bracket.
+  * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
+    the autocompletion list (in characters)
+    
+* :guilabel:`Typing`
 
-* **Auto-save script before running:** Allows you to save automatically the script to
-  be executed in order to avoid to save it after any modification. This action
-  will store a temporary file into the temporary system directory that will be
-  automatically deleted after running.
+  * :guilabel:`Automatic parentheses insertion`: Enables autoclosing for
+    parentheses
 
-* **Using preloaded APIs file:** You can choose whether use the preload APIs file or
-  load some APIs files saved on your system.
+  * :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
+    Enables insertion of 'import' when specifying imports
+    
+For :guilabel:`Editor` you can also specify:
 
-* **Using prepared APIs file:** If checked the ``*.pap`` file will be used for code
-  completion. To generate a prepared APIs file you have to load at least an ``*.api``
-  file and then compile it by clicking on :guilabel:`Compile APIs...` button.
+* :guilabel:`Run and Debug`
+
+  * :guilabel:`Enable Object Inspector (switching between tabs may be slow)`:
+    Enable the object inspector.
+
+  * :guilabel:`Auto-save script before running`: Saves the script
+    automatically when executed. This action will store a temporary file (in the
+    temporary system directory) that will be deleted automatically after running.
+
+* :guilabel:`Font and Colors`: Here you can specify the font to use in the
+  editor and the colors to use for highlighting
+
+For :guilabel:`APIs` you can specify:
+
+* :guilabel:`Using preloaded APIs file`: You can choose if you would like to use the
+  preloaded API files.  If this is not checked you can add API files and you
+  can also choose if you would like to use prepared API files (see next option).
+
+* :guilabel:`Using prepared APIs file`: If checked, the chosen ``*.pap`` file will
+  be used for code completion. To generate a prepared API file you have to load
+  at least one ``*.api`` file and then compile it by clicking the
+  :guilabel:`Compile APIs...` button.
 
 .. tip:: **Save the options**
 
@@ -186,16 +206,16 @@ the Python console behavior:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |helpContents| image:: /static/common/mActionHelpContents.png
-   :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
-.. |options| image:: /static/common/mActionOptions.png
-   :width: 1em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

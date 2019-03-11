@@ -78,7 +78,7 @@ panning tools as you usually do in QGIS to inspect the image in the
 Georeferencer's window.
 
 * Zoom in to the left lower corner of the map and note that there is a cross-hair
-  with a coordinate pair, x and y, that as mentioned before are in :kbd:`KKJ / Finland
+  with a coordinate pair, X and Y, that as mentioned before are in :guilabel:`KKJ / Finland
   zone 2` CRS. You will use this point as the first ground control point for the
   georeferencing your map.
 * Select the :guilabel:`Add point` tool and click in the intersection of the
@@ -161,4 +161,4 @@ and add the inventory data to them.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -239,12 +239,12 @@ is irrelevant and values are identified by their keys.
  array_cat              Returns an array containing all the given arrays concatenated
  array_contains         Returns true if an array contains the given value
  array_distinct         Returns an array containing distinct values of the given array
- array_filter |34|      Returns an array with only the items for which an expression
+ array_filter           Returns an array with only the items for which an expression
                         evaluates to true
  array_find             Returns the index (0 for the first one) of a value
                         within an array. Returns -1 if the value is not found.
  array_first            Returns the first value of an array
- array_foreach |34|     Returns an array with the given expression evaluated on each item
+ array_foreach          Returns an array with the given expression evaluated on each item
  array_get              Returns the Nth value (0 for the first one) of an array
  array_insert           Returns an array with the given value added at the
                         given position
@@ -261,7 +261,7 @@ is irrelevant and values are identified by their keys.
  array_sort |36|        Returns the provided array with its elements sorted
  array_to_string        Concatenates array elements into a string separated by
                         a delimiter and using optional string for empty values
- generate_series |34|   Creates an array containing a sequence of numbers
+ generate_series        Creates an array containing a sequence of numbers
  regexp_matches         Returns an array of all strings captured by capturing
                         groups, in the order the groups themselves appear in
                         the supplied regular expression against a string
@@ -283,7 +283,7 @@ This group contains functions for manipulating colors.
  color_cmyka                    Returns a string representation of a color based on
                                 its cyan, magenta, yellow, black and alpha (transparency)
                                 components
- color_grayscale_average |32|   Applies a grayscale filter and returns a string
+ color_grayscale_average        Applies a grayscale filter and returns a string
                                 representation from a provided color
  color_hsl                      Returns a string representation of a color based on
                                 its hue, saturation, and lightness attributes
@@ -295,7 +295,7 @@ This group contains functions for manipulating colors.
  color_hsva                     Returns a string representation of a color based on
                                 its hue, saturation, value and alpha (transparency)
                                 attributes
- color_mix_rgb |32|             Returns a string representing a color mixing the red,
+ color_mix_rgb                  Returns a string representing a color mixing the red,
                                 green, blue, and alpha values of two provided colors
                                 based on a given ratio
  color_part                     Returns a specific component from a color string,
@@ -552,14 +552,14 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | $perimeter             | Returns the perimeter of the current polygon      |
 |                        | feature                                           |
 +------------------------+---------------------------------------------------+
-| $x                     | Returns the x coordinate of the current feature   |
+| $x                     | Returns the X coordinate of the current feature   |
 +------------------------+---------------------------------------------------+
-| $x_at(n)               | Returns the x coordinate of the nth node of the   |
+| $x_at(n)               | Returns the X coordinate of the nth node of the   |
 |                        | current feature's geometry                        |
 +------------------------+---------------------------------------------------+
-| $y                     | Returns the y coordinate of the current feature   |
+| $y                     | Returns the Y coordinate of the current feature   |
 +------------------------+---------------------------------------------------+
-| $y_at(n)               | Returns the y coordinate of the nth node of the   |
+| $y_at(n)               | Returns the Y coordinate of the nth node of the   |
 |                        | current feature's geometry                        |
 +------------------------+---------------------------------------------------+
 | angle_at_vertex        | Returns the bisector angle (average angle) to the |
@@ -598,8 +598,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | Spatial Reference System of this geometry         |
 |                        | (see also :ref:`qgisbuffer`)                      |
 +------------------------+---------------------------------------------------+
-| buffer_by_m |32|       | Creates a buffer along a line geometry where the  |
-|                        | buffer diameter varies according to the m-values  |
+| buffer_by_m            | Creates a buffer along a line geometry where the  |
+|                        | buffer diameter varies according to the M values  |
 |                        | at the line vertices                              |
 |                        | (see also :ref:`qgisbufferbym`)                   |
 +------------------------+---------------------------------------------------+
@@ -650,9 +650,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 +------------------------+---------------------------------------------------+
 | extrude(geom,x,y)      | Returns an extruded version of the input (Multi-) |
 |                        | Curve or (Multi-)Linestring geometry with an      |
-|                        | extension specified by x and y                    |
+|                        | extension specified by X and Y                    |
 +------------------------+---------------------------------------------------+
-| flip_coordinates |32|  | Returns a copy of the geometry with the x and y   |
+| flip_coordinates       | Returns a copy of the geometry with the X and Y   |
 |                        | coordinates swapped (see also :ref:`qgisswapxy`)  |
 +------------------------+---------------------------------------------------+
 | geom_from_gml          | Returns a geometry created from a GML             |
@@ -716,7 +716,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | corresponding to the closest position the         |
 |                        | linestring comes to a specified point geometry.   |
 +------------------------+---------------------------------------------------+
-| line_substring |34|    | Returns the portion of a line or curve geometry   |
+| line_substring         | Returns the portion of a line or curve geometry   |
 |                        | falling betweeen specified start and end distances|
 |                        | (measured from the beginning of the line)         |
 |                        | (see also :ref:`qgislinesubstring`)               |
@@ -725,7 +725,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | connected LineStrings from the input geometry     |
 |                        | have been merged into a single linestring.        |
 +------------------------+---------------------------------------------------+
-| m                      | Returns the m value of a point geometry           |
+| m                      | Returns the M value of a point geometry           |
 +------------------------+---------------------------------------------------+
 | make_circle            | Creates a circular geometry based on center point |
 |                        | and radius                                        |
@@ -736,11 +736,11 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | make_line              | Creates a line geometry from a series of point    |
 |                        | geometries                                        |
 +------------------------+---------------------------------------------------+
-| make_point(x,y,z,m)    | Returns a point geometry from x and y (and        |
-|                        | optional z or m) values                           |
+| make_point(x,y,z,m)    | Returns a point geometry from X and Y (and        |
+|                        | optional Z or M) values                           |
 +------------------------+---------------------------------------------------+
-| make_point_m(x,y,m)    | Returns a point geometry from x and y coordinates |
-|                        | and m values                                      |
+| make_point_m(x,y,m)    | Returns a point geometry from X and Y coordinates |
+|                        | and M values                                      |
 +------------------------+---------------------------------------------------+
 | make_polygon           | Creates a polygon geometry from an outer ring and |
 |                        | optional series of inner ring geometries          |
@@ -848,7 +848,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | of two geometries that do not intersect           |
 |                        | (see also :ref:`qgissymmetricaldifference`)       |
 +------------------------+---------------------------------------------------+
-| tapered_buffer |32|    | Creates a buffer along a line geometry where the  |
+| tapered_buffer         | Creates a buffer along a line geometry where the  |
 |                        | buffer diameter varies evenly over the length of  |
 |                        | the line (see also :ref:`qgistaperedbuffer`)      |
 +------------------------+---------------------------------------------------+
@@ -869,7 +869,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 | union                  | Returns a geometry that represents the point set  |
 |                        | union of the geometries                           |
 +------------------------+---------------------------------------------------+
-| wedge_buffer |32|      | Returns a wedge shaped buffer originating from a  |
+| wedge_buffer           | Returns a wedge shaped buffer originating from a  |
 |                        | point geometry given an angle and radii           |
 |                        | (see also :ref:`qgiswedgebuffers`)                |
 +------------------------+---------------------------------------------------+
@@ -877,31 +877,31 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 |                        | Returns 1 (true) if geometry a is completely      |
 |                        | inside geometry b                                 |
 +------------------------+---------------------------------------------------+
-| x                      | Returns the x coordinate of a point geometry, or  |
-|                        | the x coordinate of the centroid for a non-point  |
+| x                      | Returns the X coordinate of a point geometry, or  |
+|                        | the X coordinate of the centroid for a non-point  |
 |                        | geometry                                          |
 +------------------------+---------------------------------------------------+
-| x_min                  | Returns the minimum x coordinate of a geometry.   |
+| x_min                  | Returns the minimum X coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| x_max                  | Returns the maximum x coordinate of a geometry.   |
+| x_max                  | Returns the maximum X coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| y                      | Returns the y coordinate of a point geometry, or  |
-|                        | the y coordinate of the centroid for a non-point  |
+| y                      | Returns the Y coordinate of a point geometry, or  |
+|                        | the Y coordinate of the centroid for a non-point  |
 |                        | geometry                                          |
 +------------------------+---------------------------------------------------+
-| y_min                  | Returns the minimum y coordinate of a geometry.   |
+| y_min                  | Returns the minimum Y coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| y_max                  | Returns the maximum y coordinate of a geometry.   |
+| y_max                  | Returns the maximum Y coordinate of a geometry.   |
 |                        | Calculations are in the Spatial Reference System  |
 |                        | of this geometry                                  |
 +------------------------+---------------------------------------------------+
-| z                      | Returns the z coordinate of a point geometry      |
+| z                      | Returns the Z coordinate of a point geometry      |
 +------------------------+---------------------------------------------------+
 
 |
@@ -914,7 +914,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    buffer( $geometry, 10 )
    point_on_surface( $geometry )
 
-* Return the x coordinate of the current feature's centroid::
+* Return the X coordinate of the current feature's centroid::
 
     x( $geometry )
 
@@ -998,7 +998,7 @@ This group contains math functions (e.g., square root, sin and cos).
  acos               Returns the inverse cosine of a value in radians
  asin               Returns the inverse sine of a value in radians
  atan               Returns the inverse tangent of a value in radians
- atan2(y,x)         Returns the inverse tangent of y/x by using the signs
+ atan2(y,x)         Returns the inverse tangent of Y/X by using the signs
                     of the two arguments to determine the quadrant of the
                     result
  azimuth(a,b)       Returns the north-based azimuth as the angle in radians
@@ -1134,7 +1134,7 @@ This group contains functions to operate on raster layer.
  Function             Description
 ==================== =========================================================
  raster_statistic     Returns statistics from a raster layer
- raster_value |34|    Returns the raster band value at the provided point
+ raster_value         Returns the raster band value at the provided point
 ==================== =========================================================
 
 
@@ -1303,8 +1303,8 @@ To use these functions in an expression, they should be preceded by @ character
  map_id                       Returns the ID of current map destination.
                               This will be 'canvas' for canvas renders, and
                               the item ID for layout map renders
- map_layer_ids |34|           Returns the list of map layer IDs visible in the map
- map_layers |34|              Returns the list of map layers visible in the map
+ map_layer_ids                Returns the list of map layer IDs visible in the map
+ map_layers                   Returns the list of map layers visible in the map
  map_rotation                 Returns the current rotation of the map
  map_scale                    Returns the current scale of the map
  map_units                    Returns the units of map measurements
@@ -1312,19 +1312,19 @@ To use these functions in an expression, they should be preceded by @ character
                               (available only for actions triggered by provider notifications).
  parent                       Returns attributes and geometry from the parent feature when
                               in the filter of the "aggregate" expression function
- project_abstract |32|        Returns the project abstract, taken from project metadata
- project_author |32|          Returns the project author, taken from project metadata
- project_basename |32|        Returns the basename of current project's filename (without
+ project_abstract             Returns the project abstract, taken from project metadata
+ project_author               Returns the project author, taken from project metadata
+ project_basename             Returns the basename of current project's filename (without
                               path and extension)
- project_creation_date |32|   Returns the project creation date, taken from project metadata
+ project_creation_date        Returns the project creation date, taken from project metadata
  project_crs                  Returns the Coordinate reference system of the project
  project_crs_definition       Returns the full definition of the Coordinate reference
                               system of the project
  project_filename             Returns the filename of the current project
  project_folder               Returns the folder of the current project
- project_home |32|            Returns the home path of the current project
- project_identifier |32|      Returns the project identifier, taken from the project's metadata
- project_keywords |32|        Returns the project keywords, taken from the project's metadata
+ project_home                 Returns the home path of the current project
+ project_identifier           Returns the project identifier, taken from the project's metadata
+ project_keywords             Returns the project keywords, taken from the project's metadata
  project_path                 Returns the full path (including file name) of the current project
  project_title                Returns the title of current project
  qgis_locale                  Returns the current language of QGIS
@@ -1355,7 +1355,7 @@ To use these functions in an expression, they should be preceded by @ character
 
 **Some examples:**
 
-* Return the x coordinate of a map item center to insert into a label in layout::
+* Return the X coordinate of a map item center to insert into a label in layout::
 
    x( map_get( item_variables( 'map1'), 'map_extent_center' ) )
 
@@ -1415,7 +1415,7 @@ To create a new function:
    A new item of the name you provide is added in the left panel of the
    :guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on
    QGIS template file and stored in the :file:`/python/expressions` folder
-   under the active user profile directory.
+   under the active :ref:`user profile <user_profiles>` directory.
 #. The right panel displays the content of the file: a python script template.
    Update the code and its help according to your needs.
 #. Press the |start| :guilabel:`Save and Load Functions` button.
@@ -1426,7 +1426,7 @@ To create a new function:
    tab, do the changes and press again the |start| :guilabel:`Save and Load
    Functions` button to make them available in the file, hence in any expression
    tab.
-   
+
 Custom Python functions are stored under the user profile directory, meaning that at
 each QGIS startup, it will auto load all the functions defined with the current user
 profile. Be aware that new functions are only saved in the :file:`/python/expressions`
@@ -1480,8 +1480,6 @@ Further information about creating Python code can be found in the
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
-.. |34| replace:: ``NEW in 3.4``
 .. |36| replace:: ``NEW in 3.6``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
@@ -1495,4 +1493,4 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

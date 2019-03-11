@@ -11,9 +11,71 @@ Raster miscellaneous
       :local:
       :depth: 1
 
+.. _gdaloverviews:
+
+Build overviews (pyramids)
+--------------------------
+To speed up rendering time of raster layers overviews (pyramids) can
+be created. Overviews are lower resolution copies of the data which
+QGIS uses depending of the level of zoom.
+
+This algorithm is derived from the `GDAL addo utility <https://www.gdal.org/gdaladdo.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
+
+Parameters
+..........
+
+``Input layer`` [raster]
+  Input raster layer.
+
+``Overview levels`` [string]
+  Defines the number of overview levels calculated by the original resolution
+  of the input raster layer. By default 4 levels will be taken into consideration.
+
+  Default: *2 4 8 16*
+
+``Remove all existing overviews`` [boolean]
+  Removes existing overviews from the raster. By default these aren't removed.
+
+  Default: *False*
+
+``Resampling method`` [enumeration]
+  Calculates the overviews with a defined resampling method.
+
+  Options:
+
+  * 0 --- nearest
+  * 1 --- average
+  * 2 --- gauss
+  * 3 --- cubic
+  * 4 --- average_mp
+  * 5 --- average_magphase
+  * 6 --- mode
+
+  Default: *0*
+
+``Overview format`` [enumeration]
+  The overviews can be stored internally, or externally as GTiff or ERDAS Imagine file.
+  By default the overviews are stored in the output raster.
+
+  Options:
+
+  * 0 --- Internal (if possible)
+  * 1 --- External (GTiff .ovr)
+  * 2 --- External (ERDAS Imagine .aux)
+
+  Default: *0*
+
+Outputs
+.......
+
+``Output layer`` [raster]
+  Output raster layer with overviews.
+
 .. _gdalbuildvirtualraster:
 
-Build Virtual Raster
+Build virtual raster
 --------------------
 Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
 With a mosaic you can merge several raster files.
@@ -114,72 +176,10 @@ Outputs
   Output raster layer.
 
 
-.. _gdaloverviews:
-
-Build overviews (pyramids)
---------------------------
-To speed up rendering time of raster layers overviews (pyramids) can
-be created. Overviews are lower resolution copies of the data which
-QGIS uses depending of the level of zoom.
-
-This algorithm is derived from the `GDAL addo utility <https://www.gdal.org/gdaladdo.html>`_ .
-
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
-
-Parameters
-..........
-
-``Input layer`` [raster]
-  Input raster layer.
-
-``Overview levels`` [string]
-  Defines the number of overview levels calculated by the original resolution
-  of the input raster layer. By default 4 levels will be taken into consideration.
-
-  Default: *2 4 8 16*
-
-``Remove all existing overviews`` [boolean]
-  Removes existing overviews from the raster. By default these aren't removed.
-
-  Default: *False*
-
-``Resampling method`` [enumeration]
-  Calculates the overviews with a defined resampling method.
-
-  Options:
-
-  * 0 --- nearest
-  * 1 --- average
-  * 2 --- gauss
-  * 3 --- cubic
-  * 4 --- average_mp
-  * 5 --- average_magphase
-  * 6 --- mode
-
-  Default: *0*
-
-``Overview format`` [enumeration]
-  The overviews can be stored internally, or externally as GTiff or ERDAS Imagine file.
-  By default the overviews are stored in the output raster.
-
-  Options:
-
-  * 0 --- Internal (if possible)
-  * 1 --- External (GTiff .ovr)
-  * 2 --- External (ERDAS Imagine .aux)
-
-  Default: *0*
-
-Outputs
-.......
-
-``Output layer`` [raster]
-  Output raster layer with overviews.
-
 .. _gdalgdalinfo:
 
-Information
------------
+Raster information
+------------------
 The gdalinfo program lists various information about a GDAL supported raster dataset.
 
 This algorithm is derived from the `GDAL info utility <https://www.gdal.org/gdalinfo.html>`_ .
@@ -212,7 +212,7 @@ Outputs
 
 .. _gdaltileindex:
 
-Tile Index
+Tile index
 ----------
 Builds a vector layer with a record for each input raster file, an
 attribute containing the filename, and a polygon geometry outlining the raster.
@@ -286,4 +286,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -26,30 +26,28 @@ We can make difference between several types of settings:
 
 * **global settings** --- they are bound to the user at particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
-  default snapping tolerance. This functionality is provided directly by Qt
-  framework by the means of :class:`QSettings` class. By default, this class stores
-  settings in system's "native" way of storing settings, that is --- registry
-  (on Windows), .plist file (on macOS) or .ini file (on Unix). The
-  `QSettings documentation <https://doc.qt.io/archives/qt-4.8/qsettings.html>`_
-  is comprehensive, so we will provide just a simple example
+  default snapping tolerance. Setting are handled using the :class:`QgsSettings <qgis.core.QgsSettings>` class.
+  The :meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() <qgis.core.QgsSettings.value>` methods from this class provide
 
-  ::
+  Here you can see an example of how this methods are used.
+
+  .. code-block:: python
 
     def store():
-      s = QSettings()
+      s = QgsSettings()
       s.setValue("myplugin/mytext", "hello world")
       s.setValue("myplugin/myint",  10)
       s.setValue("myplugin/myreal", 3.14)
 
     def read():
-      s = QSettings()
+      s = QgsSettings()
       mytext = s.value("myplugin/mytext", "default text")
       myint  = s.value("myplugin/myint", 123)
       myreal = s.value("myplugin/myreal", 2.71)
 
 
-  The second parameter of the :func:`value()` method is optional and specifies
-  the default value if there is no previous value set for the passed setting
+  The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` method is optional and specifies
+  the default value that is returned if there is no previous value set for the passed setting
   name.
 
 .. index:: Settings; Project
@@ -58,9 +56,11 @@ We can make difference between several types of settings:
   are connected with a project file. Map canvas background color or destination
   coordinate reference system (CRS) are examples --- white background and WGS84
   might be suitable for one project, while yellow background and UTM projection
-  are better for another one. An example of usage follows
+  are better for another one.
 
-  ::
+  An example of usage follows.
+
+ .. code-block:: python
 
     proj = QgsProject.instance()
 
@@ -74,7 +74,7 @@ We can make difference between several types of settings:
     mytext = proj.readEntry("myplugin", "mytext", "default text")[0]
     myint = proj.readNumEntry("myplugin", "myint", 123)[0]
 
-  As you can see, the :func:`writeEntry` method is used for all data types, but
+  As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` method is used for all data types, but
   several methods exist for reading the setting value back, and the
   corresponding one has to be selected for each data type.
 
@@ -85,10 +85,10 @@ We can make difference between several types of settings:
   underlying data source of a layer, so if you create two map layer instances
   of one shapefile, they will not share the settings. The settings are stored
   in project file, so if the user opens the project again, the layer-related
-  settings will be there again. This functionality has been added in QGIS v1.4.
-  The API is similar to QSettings --- it takes and returns QVariant instances
+  settings will be there again. The value for a given setting is retrieved using
+  the :meth:`customProperty() <qgis.core.QgsMapLayer.customProperty>` method, and can be set using the :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
 
-  ::
+ .. code-block:: python
 
    # save a value
    layer.setCustomProperty("mytext", "hello world")
@@ -104,4 +104,4 @@ We can make difference between several types of settings:
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

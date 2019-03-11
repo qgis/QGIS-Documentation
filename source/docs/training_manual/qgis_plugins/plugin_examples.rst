@@ -21,7 +21,7 @@ explore some of its features.
 
 #. Start a new map and add the :guilabel:`roads` layer from the :file:`training_data`
    Geopackage.
-#. Install the QuickMapServices plugin.
+#. Install the **QuickMapServices** plugin.
 #. Open the plugin's search tab by clicking on :menuselection:`Web -->
    QuickMapServices --> Search QMS`. This option of the plugin allows you to filter
    the available base maps by the current extent of the map canvas.
@@ -30,27 +30,29 @@ explore some of its features.
 #. The base map will be loaded and you will have a satellite background for the
    map.
 
-.. image:: img/qms_result.png
-   :align: center
+   .. image:: img/qms_result.png
+      :align: center
 
-QuickMapServices plugin has a lot of available base maps available.
+The QuickMapServices plugin makes a lot of base maps available.
 
-Close the :guilabel:`Search QMS` panel we open before and click again on
-:menuselection:`Web --> QuickMapServices`. The first menu lists different map
-providers with all the available maps:
+#. Close the :guilabel:`Search QMS` panel we opened before
+#. Click again on :menuselection:`Web --> QuickMapServices`. The first menu
+   lists different map providers with available maps:
 
-.. image:: img/qms_menu.png
-   :align: center
+   .. image:: img/qms_menu.png
+      :align: center
 
 But there is more.
 
 If the default maps are not enough for you, you can add other map providers.
-Click on :menuselection:`Web --> QuickMapServices --> Settings` and go in the
-:guilabel:`More services` tab. Read carefully the message of this tab and then click
-on the :kbd:`Get Contributed pack` button.
 
-If you open now the :menuselection:`Web --> QuickMapServices` menu you will see
-a lot more providers available. Choose the one that best fit your needs!
+#. Click on :menuselection:`Web --> QuickMapServices --> Settings` and go to the
+   :guilabel:`More services` tab.
+#. Read carefully the message of this tab and if you agree click on the
+   :guilabel:`Get Contributed pack` button.
+
+If you now open the :menuselection:`Web --> QuickMapServices` menu you will see
+that more providers are available. Choose the one that best fits your needs!
 
 
 |basic| |FA| The QuickOSM Plugin
@@ -71,12 +73,12 @@ With an incredible simple interface, the QuickOSM plugin allows you to download
 
    .. tip:: if you are not familiar with the :guilabel:`Key` and :guilabel:`Value`
     system, click on the :guilabel:`Help with key/value` button. It will open a
-    web page with a complete description of this concept of OpenStreetMap
+    web page with a complete description of this concept of OpenStreetMap.
 
-#. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value`
+#. Look for :guilabel:`railway` in the :guilabel:`Key` menu and let the :guilabel:`Value` be
    empty: so we are downloading all the :guilabel:`railway` features without specifying
-   specific values.
-#. Select :guilabel:`Extent of a layer` and choose :guilabel:`roads`.
+   any values.
+#. Select :guilabel:`Layer Extent` in the next drop-down menu and choose :guilabel:`roads`.
 #. Click on the :guilabel:`Run query` button.
 
    .. image:: img/quickosm_setup.png
@@ -90,6 +92,7 @@ canvas.
 
 .. image:: img/quickosm_result.png
    :align: center
+   :scale: 60 %
 
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
   want to save them permanently, click on the |indicatorMemory| icon next to the
@@ -160,39 +163,45 @@ The mountain peaks layer will be downloaded and shown in QGIS:
 
 .. image:: img/quickosm_advanced_result.png
    :align: center
+   :scale: 60 %
 
-You can write complex queries using the `Overpass Query language <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
+You can write complex queries using the `Overpass Query language
+<https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.
 Take a look at some example and try to explore the query language.
 
 |basic| |FA| The DataPlotly Plugin
 -------------------------------------------------------------------------------
 
-DataPlotly plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
+The **DataPlotly** plugin allows you to create `D3 <https://d3js.org/>`_ plots of vector
 attributes data thanks to the `plotly <https://plot.ly/>`_ library.
 
-Start a new project and load the :guilabel:`sample_point` layer from the :file:`training_data`
-Geopackage and install the plugin following the guidelines described in :ref:`plugin_installation`
-searching :guilabel:`Data Plotly`.
-
-Open the plugin by clicking on the new icon in the toolbar or in the
-:guilabel:`Plugins --> Data Plotly` menu.
+#. Start a new project
+#. Load the :guilabel:`sample_points` layer from the :file:`exercise_data/plugins`
+   folder
+#. Install the plugin following the guidelines described in :ref:`plugin_installation`
+   searching :guilabel:`Data Plotly`
+#. Open the plugin by clicking on the new icon in the toolbar or in the
+   :menuselection:`Plugins --> Data Plotly` menu
 
 In the following example we are creating a simple ``Scatter Plot`` of two fields
-of :guilabel:`sample_point` layer.
+of the :guilabel:`sample_points` layer.
+In the DataPlotly Panel:
 
-In the DataPlotly Panel choose :guilabel:`sample_point` in the Layer filter, :kbd:`cl`
-for the ``X Field`` and :kbd:`mg` for the ``Y Field``:
+#. Choose :guilabel:`sample_points` in the Layer filter, :guilabel:`cl` for
+   the :guilabel:`X Field` and :guilabel:`mg` for the :guilabel:`Y Field`:
 
-.. image:: img/dataplotly_setup.png
-   :align: center
+   .. image:: img/dataplotly_setup.png
+      :align: center
 
-If you want you can change the colors, the marker type, the transparency and
-many other settings: just try to change some parameters to create the plot as the
-following picture. Once you set up all the parameters click on the
-:guilabel:`Create Plot` button to create the plot:
+#. If you want you can change the colors, the marker type, the transparency and
+   many other settings: try to change some parameters to create the plot
+   below.
 
-.. image:: img/dataplotly_scatterplot.png
-   :align: center
+   .. image:: img/dataplotly_scatterplot.png
+      :align: center
+
+#. Once you have set all the parameters, click on the :guilabel:`Create Plot`
+   button to create the plot.
 
 The plot is interactive: this means you can use all the upper buttons to resize,
 move, or zoom in/out the plot canvas. Moreover, each element of the plot is interactive:
@@ -207,16 +216,18 @@ There is more. Sometimes it can be useful to have two (or more) plots showing
 different plot types with different variables on the same page. Let's do this!
 
 #. Go back to the main plot settings tab by clicking on the |symbology| button
-   in the upper left corner of the plugin panel.
-#. Change the ``Plot Type`` to ``Box Plot``.
-#. Choose :kbd:`group` as ``Grouping Field`` and :kbd:`ph` as ``Y Field``.
-#. In the lower part of the Panel change the ``Type of Plot`` from ``SinglePlot``
-   to ``SubPlots`` and let the default option ``Plot in Rows`` selected:
+   in the upper left corner of the plugin panel
+#. Change the :guilabel:`Plot Type` to :guilabel:`Box Plot`
+#. Choose :guilabel:`group` as :guilabel:`Grouping Field` and :guilabel:`ph` as
+   :guilabel:`Y Field`
+#. In the lower part of the panel, change the :guilabel:`Type of Plot` from
+   :guilabel:`SinglePlot` to :guilabel:`SubPlots` and let the default option
+   :guilabel:`Plot in Rows` selected.
 
    .. image:: img/dataplotly_boxplot.png
       :align: center
 
-#. Once done click on the :guilabel:`Create Plot` button to draw the plot:
+#. Once done click on the :guilabel:`Create Plot` button to draw the plot
 
    .. image:: img/dataplotly_subplots.png
       :align: center
@@ -264,4 +275,4 @@ time.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

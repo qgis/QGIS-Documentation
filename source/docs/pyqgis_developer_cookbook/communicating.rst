@@ -8,8 +8,6 @@
 Communicating with the user
 ***************************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -28,7 +26,7 @@ message bar with the following code
 
 .. code-block:: python
 
-  from qgis.gui import QgsMessageBar
+  from qgis.core import Qgis
   iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.Critical)
 
 
@@ -42,7 +40,7 @@ You can set a duration to show it for a limited time
 
 .. code-block:: python
 
-    iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as it should", level=Qgis.Critical, duration=3)
+    iface.messageBar().pushMessage("Ooops", "The plugin is not working as it should", level=Qgis.Critical, duration=3)
 
 
 .. figure:: img/errorbar-timed.png
@@ -53,7 +51,7 @@ You can set a duration to show it for a limited time
 
 The examples above show an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
-``Qgis.MessageLevel``. You can use up to 4 different levels:
+:class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You can use up to 4 different levels:
 
 0. Info
 1. Warning
@@ -104,7 +102,6 @@ message box, or if it doesn't make sense to show it in the main QGIS window
             self.buttonbox.accepted.connect(self.run)
             self.layout().addWidget(self.buttonbox, 0, 0, 2, 1)
             self.layout().addWidget(self.bar, 0, 0, 1, 1)
-
         def run(self):
             self.bar.pushMessage("Hello", "World", level=Qgis.Info)
 
@@ -135,9 +132,11 @@ it accepts widgets. Here is an example that you can try in the console.
     progress.setAlignment(Qt.AlignLeft|Qt.AlignVCenter)
     progressMessageBar.layout().addWidget(progress)
     iface.messageBar().pushWidget(progressMessageBar, Qgis.Info)
+
     for i in range(10):
         time.sleep(1)
         progress.setValue(i + 1)
+
     iface.messageBar().clearWidgets()
 
 Also, you can use the built-in status bar to report progress, as in the next
@@ -145,7 +144,7 @@ example
 
 .. code-block:: python
 
-    count = layers.featureCount()
+    count = layer.featureCount()
     for i, feature in enumerate(features):
         #do something time-consuming here
         ...
@@ -171,12 +170,13 @@ save about the execution of your code.
  Use of the Python ``print`` statement is unsafe to do in any code which may be
  multithreaded. This includes **expression functions**, **renderers**,
  **symbol layers** and **Processing algorithms** (amongst others). In these
- cases you should always use thread safe classes (:class:`QgsLogger`
- or :class:`QgsMessageLog`) instead.
+ cases you should always use thread safe classes (:class:`QgsLogger <qgis.core.QgsLogger>`
+ or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) instead.
 
 .. note::
 
- You can see the output of the :class:`QgsMessageLog` in the :ref:`log_message_panel`
+   You can see the output of the :class:`QgsMessageLog <qgis.core.QgsMessageLog>`
+   in the :ref:`log_message_panel`
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -185,5 +185,4 @@ save about the execution of your code.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

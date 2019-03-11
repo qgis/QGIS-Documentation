@@ -11,13 +11,13 @@ Geometry Checker Plugin
 =======================
 
 Geometry Checker is a powerful core plugin to check and fix the geometry
-validity of a layer. It is available from the :menuselection:`Vector -->`
-|geometryChecker| :menuselection:`Geometry Checker` menu.
+validity of a layer. It is available from the :menuselection:`Vector`
+menu (|geometryChecker| :menuselection:`Check Geometries...`).
 
 Configuring the checks
 ----------------------
 
-The :guilabel:`Geometry Checker` dialog shows different grouped settings in the
+The :guilabel:`Check Geometries` dialog shows different grouped settings in the
 first tab (:guilabel:`Setup`):
 
 * :guilabel:`Input vector layers`: to select the layers to check. A |checkbox|
@@ -155,4 +155,4 @@ by attribute value`.
    :width: 2.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

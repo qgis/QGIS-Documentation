@@ -23,36 +23,13 @@ any Debian based distribution like Ubuntu and its derivatives.
 In this lesson we're going to do only the install from packages as shown
 `here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
 
-First add the QGIS repository by creating the
-:file:`/etc/apt/sources.list.d/debian-qgis.list` file with the following
-content:
-
-.. code-block:: sourceslist
-
- # latest stable
- deb https://qgis.org/debian stretch main
- deb-src https://qgis.org/debian stretch main
-
-After you add the ``gis.org`` repository public key to your apt keyring (follow
-the above link on how to do it) you can run the ``apt-get update`` command
-to refresh the packages list and ``apt-get dist-upgrade`` to upgrade the
-packages.
-
-.. note:: Currently Debian stable has LTR qgis packages in the source
- ``jessie-backports``, so the above steps are not necessary. Just add the
- ``jessie-backports`` repository and install with the ``-t jessie-backports``
- option.
-
 Install QGIS Server with:
 
 .. code-block:: bash
 
  apt-get install qgis-server
- # optionally also:
+ # if you want to install server plugins, also:
  apt-get install python-qgis
-
-.. note:: adding ``-y`` at the end of the apt-get command will run it straight
-   away, without requiring confirmation.
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
@@ -98,6 +75,8 @@ In this lesson we're going to use the
 
 First we need to install Apache by running the following command in a terminal:
 ``apt-get install apache2 libapache2-mod-fcgid``.
+
+You can run QGIS server on your default website, or configure a virtualhost specifically for this, as follows.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
 called :file:`qgis.demo.conf`, with this content:
@@ -351,4 +330,4 @@ The topic of the next lesson is to learn how to access QGIS Server WMS services.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

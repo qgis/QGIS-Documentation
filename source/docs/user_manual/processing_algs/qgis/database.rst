@@ -187,8 +187,8 @@ Outputs
 
 .. _qgispostgisexecuteandloadsql:
 
-PostgreSQL execute and load SQL |34|
-------------------------------------
+PostgreSQL execute and load SQL
+-------------------------------
 
 Allows a SQL database query to be performed on a PostgreSQL database connected to QGIS
 and loads the result. The algorithm **won't** create any new layer: it is designed to
@@ -231,7 +231,7 @@ Parameters
 
   Name of the database connection (not the database name). Existing connections
   will be shown in the combobox.
- 
+
 ``SQL query`` [string]
   Defines the SQL query, for example ``UPDATE my_table SET field=10``.
 
@@ -319,5 +319,4 @@ For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_e
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |34| replace:: ``NEW in 3.4``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

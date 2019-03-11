@@ -203,10 +203,10 @@ Parameters
   Input vector layer to use for the plot.
 
 ``X attribute`` [tablefield: any]
-  Field to use for the x axis.
+  Field to use for the X axis.
 
 ``Y attribute`` [tablefield: any]
-  Field to use for the y axis.
+  Field to use for the Y axis.
 
 Outputs
 .......
@@ -230,13 +230,13 @@ Parameters
   Input vector layer to use for the plot.
 
 ``X attribute`` [tablefield: any]
-  Field to use for the x axis.
+  Field to use for the X axis.
 
 ``Y attribute`` [tablefield: any]
-  Field to use for the y axis.
+  Field to use for the Y axis.
 
 ``Z attribute`` [tablefield: any]
-  Field to use for the z axis.
+  Field to use for the Z axis.
 
 Outputs
 .......
@@ -251,4 +251,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

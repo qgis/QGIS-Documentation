@@ -98,6 +98,18 @@ the cropped bounds.
 
    Image Export Options, output is resized to items extent
 
+.. tip:: **Use image formats that support transparency when items extend beyond the paper extent**
+
+ Since layout items may be placed outside the paper extent, using the :guilabel:`Crop
+ to content` option while exporting can result in an image that extends beyond the paper extent.
+ Since the background outside of the paper extent will be transparent, for image
+ formats that do not support transparency (eg, :file:`.BMP`, :file:`.JPG`) it
+ will be rendered as full black,
+ "corrupting" the image.
+
+ Use transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in such
+ a case.
+
 If you need to export your layout as a **georeferenced image** (e.g., to share
 with other projects), check the |unchecked| :guilabel:`Generate world file`
 option and a world file named like the page on which the map reference set in
@@ -156,6 +168,13 @@ into a single PDF file you'd need to provide path and name.
 Unlike the other formats, exporting to :file:`.PDF` does not provide means to
 override the layout export settings. So check :ref:`these settings
 <layout_export_settings>` to ensure they are compatible with your needs.
+
+.. _figure_layout_output_pdf:
+
+.. figure:: img/pdf_export_options.png
+   :align: center
+
+   PDF Export Options
 
 .. note:: Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF`
   creates by default a georeferenced output (no world file needed).
@@ -432,4 +451,4 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
    :width: 2.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

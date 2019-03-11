@@ -201,6 +201,8 @@ in the processing settings list.
 R. Creating R scripts
 ---------------------
 
+To enable R in Processing you need to install the **Processing R Provider** plugin.
+
 R integration in QGIS is different from that of SAGA in that there is not a
 predefined set of algorithms you can run (except for a few examples). Instead,
 you should write your scripts and call R commands, much like you would do from R,
@@ -391,4 +393,4 @@ GRASS configuration parameters.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

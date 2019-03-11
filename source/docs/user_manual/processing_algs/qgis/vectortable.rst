@@ -42,7 +42,7 @@ Parameters
   Choose the initial number of the incremental count.
 
   Default: *0*
-  
+
 ``Group values by`` [tablefield: any] [list]
   Optional
 
@@ -50,19 +50,19 @@ Parameters
   a separate count is processed for each value returned by the combination of
   these fields.
 
-``Sort expression`` [expression] |32|
+``Sort expression`` [expression]
   Optional
 
   Use an expression to sort the features in the layer either globally
   or if set, based on group fields.
 
-``Sort ascending`` [boolean] |32|
+``Sort ascending`` [boolean]
   When a ``sort expression`` is set, use this option to control the order in
   which features are assigned values.
 
   Default: *True*
 
-``Sort nulls first`` [boolean] |32|
+``Sort nulls first`` [boolean]
   When a ``sort expression`` is set, use this option to set whether
   *Null* values are counted first or last.
 
@@ -159,7 +159,7 @@ Outputs
 
 ``Class summary`` [table]
   Table with summary of the class field mapped to the corresponding unique value.
-  
+
   Default: *Skip Output*
 
 .. _qgisadvancedpythonfieldcalculator:
@@ -361,7 +361,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |32| replace:: ``NEW in 3.2``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -372,4 +371,4 @@ Outputs
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
