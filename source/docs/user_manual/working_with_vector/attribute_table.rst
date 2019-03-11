@@ -883,21 +883,21 @@ table should be created in two steps:
 #. Set up the table only with the ``id`` field using :menuselection:`Table --> Create Table…`
 #. Using :menuselection:`Database --> SQL Window…`, type and execute this SQL code:
 
-.. code-block:: sql
+   .. code-block:: sql
 
-   ALTER TABLE airports_airlines
-      ADD COLUMN airport_fk INTEGER
-      REFERENCES airports (id) 
-      ON DELETE CASCADE 
-      ON UPDATE CASCADE 
-      DEFERRABLE INITIALLY DEFERRED;
+      ALTER TABLE airports_airlines
+         ADD COLUMN airport_fk INTEGER
+         REFERENCES airports (id) 
+         ON DELETE CASCADE 
+         ON UPDATE CASCADE 
+         DEFERRABLE INITIALLY DEFERRED;
    
-   ALTER TABLE airports_airlines 
-      ADD COLUMN airline_fk INTEGER
-      REFERENCES airlines (id)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE
-      DEFERRABLE INITIALLY DEFERRED;
+      ALTER TABLE airports_airlines 
+         ADD COLUMN airline_fk INTEGER
+         REFERENCES airlines (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED;
 
 Then in QGIS, you should set up two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
