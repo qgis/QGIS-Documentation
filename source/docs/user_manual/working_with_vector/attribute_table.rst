@@ -872,7 +872,7 @@ associated with an airline only if both already exist in their layers.
     );
 
 Instead of PostgreSQL you can also use GeoPackage. In this case, the three tables 
-can be created manually using the :menuselection:`Database --> DB Manager...`. In 
+can be created manually using the :menuselection:`Database --> DB Manager…`. In 
 GeoPackage there are no schemas so the *locations* prefix is not needed.
 
 Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table...` 
