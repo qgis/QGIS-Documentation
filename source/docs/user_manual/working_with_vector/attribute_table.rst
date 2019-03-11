@@ -820,9 +820,9 @@ N-M relations are many-to-many relations between two tables. For instance, the
 companies and an airline company flies to several airports.
 
 This SQL code creates the three tables what we need for an N-M relationship in
-a PostgreSQL/PostGIS schema named *locations*. You can run the code using `pgAdmin
-<https://www.pgadmin.org>`_ 
-or similar tools. The airports table stores the ``airports`` layer and the airlines 
+a PostgreSQL/PostGIS schema named *locations*. You can run the code using the 
+DBManager for PostGIS or external tools such as `pgAdmin
+<https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines 
 table stores the ``airlines`` layer. In both tables few fields are used for 
 clarity. The *tricky* part is the ``airports_airlines`` table. We need it to list all
 airlines for all airports (or vice versa). This kind of table is known 
@@ -831,6 +831,8 @@ associated with an airline only if both already exist in their layers.
 
 .. code-block:: sql
 
+   CREATE SCHEMA locations;
+   
    CREATE TABLE locations.airports
    (
       id serial NOT NULL,
