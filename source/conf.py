@@ -106,7 +106,7 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/3.4/', None)}
+intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/master/', None)}
 
 # -- Options for HTML output ---------------------------------------------------
 
