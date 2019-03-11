@@ -926,8 +926,7 @@ Outputs
 .......
 
 ``Updated`` [vector: any]
-  A Z-dimension based vector layer whose vertices are assigned the extracted values
-  for their Z coordinates.
+  A vector layer with geometries that have Z values extracted from the provided raster layer.
 
 See also
 ........
@@ -943,7 +942,7 @@ Removes any M (measure) or Z (altitude) values from input geometries.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Input vector layer to downgrade the geometry type.
+  Input vector layer from which M and/or Z values will be dropped.
 
 ``Drop M Values`` [boolean]
   Removes the M values from the geometries.
@@ -958,7 +957,7 @@ Parameters
 Outputs
 .......
 ``Z/M Dropped`` [vector: any]
-  Vector layer without M and/or Z values.
+  A vector layer that is identical to the input layer, except that M and/or Z values have been removed from its geometries.
 
 See also
 ........
@@ -2438,8 +2437,7 @@ Outputs
 .......
 
 ``Updated`` [vector: any]
-  A M-value based vector layer whose vertices are assigned the extracted values
-  for their M property.
+  A vector layer with M values extracted from the provided raster layer.
 
 See also
 ........
