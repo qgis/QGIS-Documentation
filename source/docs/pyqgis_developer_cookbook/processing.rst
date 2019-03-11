@@ -45,7 +45,7 @@ you need to adapt some lines like this:
 
 .. code-block:: python
 
-   from qgis.core import Qgis, QgsApplication, QgsProcessingAlgorithm
+   from qgis.core import QgsApplication
    from .processing_provider import Provider
 
 
@@ -59,8 +59,7 @@ you need to adapt some lines like this:
            QgsApplication.processingRegistry().addProvider(self.provider)
 
        def initGui(self):
-           if Qgis.QGIS_VERSION_INT < 30800:
-               self.initProcessing()
+           self.initProcessing()
 
        def unload(self):
            QgsApplication.processingRegistry().removeProvider(self.provider)
@@ -80,32 +79,32 @@ You can create a folder :file:`processing_provider` with three files in it:
 
    class Provider(QgsProcessingProvider):
 
-       @staticmethod
-       def list_algorithms(self):
-           """List of algorithms available in your plugin."""
-           algs = [
-               ExampleProcessingAlgorithm(),
-           ]
-           return algs
+       def loadAlgorithms(self, *args, **kwargs):
+           self.addAlgorithm(ExampleProcessingAlgorithm())
+           # add additional algorithms here
+           # self.addAlgorithm(MyOtherAlgorithm())
 
        def id(self, *args, **kwargs):
-           """The ID of your plugin, used for identifying the provider. This string
-           should be a unique, short, character only string, eg "qgis" or "gdal". This
-           string should not be localised."""
+           """The ID of your plugin, used for identifying the provider.
+
+           This string should be a unique, short, character only string,
+           eg "qgis" or "gdal". This string should not be localised.
+           """
            return 'yourplugin'
 
        def name(self, *args, **kwargs):
            """The human friendly name of your plugin in Processing.
-           This string should be as short as possible (e.g. "Lastools", not "Lastools version 1.0.1 64-bit") and localised."""
-           return 'Your plugin'
+
+           This string should be as short as possible (e.g. "Lastools", not
+           "Lastools version 1.0.1 64-bit") and localised.
+           """
+           return self.tr('Your plugin')
 
        def icon(self):
-           """Should return a QIcon which is used for your provider inside the Processing toolbox."""
+           """Should return a QIcon which is used for your provider inside
+           the Processing toolbox.
+           """
            return QgsProcessingProvider.icon(self)
-
-       def loadAlgorithms(self, *args, **kwargs):
-           for alg in self.list_algorithms():
-               self.addAlgorithm(alg)
 
 * :file:`example_processing_algorithm.py` which contains the example algorithm file.
   Copy/paste the content of the script template:
