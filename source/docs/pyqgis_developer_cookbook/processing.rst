@@ -19,7 +19,7 @@ processing interface), and a quicker development time (since Processing will tak
 a large part of the work).
 
 To distribute those algorithms, you should create a new plugin that adds them to the
-Processign Toolbox. The plugin should contain an algorithm provider, which has to be
+Processing Toolbox. The plugin should contain an algorithm provider, which has to be
 registered when the plugin is instantiated.
 
 To create a plugin from scratch which contains an algorithm provider, you can
@@ -40,7 +40,7 @@ In your :file:`metadata.txt`, you need to add a variable:
 
     hasProcessingProvider=yes
 
-In the python file where your plugin is setup with the ``initGui`` method,
+In the Python file where your plugin is setup with the ``initGui`` method,
 you need to adapt some lines like this:
 
 .. code-block:: python
@@ -89,15 +89,18 @@ You can create a folder :file:`processing_provider` with three files in it:
            return algs
 
        def id(self, *args, **kwargs):
-           """The ID of your plugin."""
+           """The ID of your plugin, used for identifying the provider. This string
+           should be a unique, short, character only string, eg "qgis" or "gdal". This
+           string should not be localised."""
            return 'yourplugin'
 
        def name(self, *args, **kwargs):
-           """The human friendly name of your plugin in Processing."""
+           """The human friendly name of your plugin in Processing.
+           This string should be as short as possible (e.g. "Lastools", not "Lastools version 1.0.1 64-bit") and localised."""
            return 'Your plugin'
 
        def icon(self):
-           """The QIcon in the Processing toolbox."""
+           """Should return a QIcon which is used for your provider inside the Processing toolbox."""
            return QgsProcessingProvider.icon(self)
 
        def loadAlgorithms(self, *args, **kwargs):
