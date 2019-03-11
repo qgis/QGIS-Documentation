@@ -201,7 +201,7 @@ Alternatively, you may want to know the distance and bearing between two points.
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
 
-  # A let's create two points. 
+  # Let's create two points. 
   # Santa claus is a workoholic and needs a summer break, 
   # lets see how far is Tenerife from his home
   santa = QgsPointXY(25.847899, 66.543456)
