@@ -656,6 +656,8 @@ checkboxes:
 * |checkbox| :guilabel:`Only look in the 'public' schema`
 * |checkbox| :guilabel:`Also list tables with no geometry`
 * |checkbox| :guilabel:`Use estimated table metadata`
+* |checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`:
+  more details :ref:`here <saveprojecttodb>`
 
 .. tip:: **Use estimated table metadata to speed up operations**
 
