@@ -381,7 +381,7 @@ Authentication Editor GUI
 -------------------------
 
 The complete GUI used to manage credentials, authorities and to access to
- Authentication utilities is managed by the
+Authentication utilities is managed by the
 :class:`QgsAuthEditorWidgets <qgis.gui.QgsAuthEditorWidgets>` class.
 
 .. figure:: img/QgsAuthEditorWidgets.png
@@ -403,8 +403,8 @@ an integrated example can be found in the related `test <https://github.com/qgis
 Authorities Editor GUI
 ----------------------
 
-A GUI used to manage only authorities is managed by the class
-`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>`.
+A GUI used to manage only authorities is managed by the
+`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class.
 
 .. figure:: img/QgsAuthAuthoritiesEditor.png
    :align: center
