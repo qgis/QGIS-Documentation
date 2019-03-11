@@ -50,7 +50,7 @@ Here are some definition of the most common objects treated in this chapter.
     Authentication DB
 
   Authentication Database
-    A :term:`Master Password` crypted sqlite db ``<user home>/.qgis2/qgis-auth.db``
+    A :term:`Master Password` crypted sqlite db :file`qgis-auth.db`
     where :term:`Authentication Configuration` are stored. e.g user/password,
     personal certificates and keys, Certificate Authorities
 
@@ -76,11 +76,10 @@ Here are some definition of the most common objects treated in this chapter.
 QgsAuthManager the entry point
 ==============================
 
-The `QgsAuthManager <https://qgis.org/api/classQgsAuthManager.html>`_ singleton
+The :class:`QgsAuthManager <qgis.core.QgsAuthManager>` singleton
 is the entry point to use the credentials stored in the QGIS encrypted
-:term:`Authentication DB`::
-
-  <user home>/.qgis2/qgis-auth.db
+:term:`Authentication DB`, i.e. the :file:`qgis-auth.db` file under the
+active :ref:`user profile <user_profiles>` folder.
 
 This class takes care of the user interaction: by asking to set master
 password or by transparently using it to access crypted stored info.
@@ -127,7 +126,7 @@ Populate authdb with a new Authentication Configuration entry
 -------------------------------------------------------------
 
 Any stored credential is a :term:`Authentication Configuration` instance of the
-`QgsAuthMethodConfig <https://qgis.org/api/classQgsAuthMethodConfig.html>`_
+:class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>`
 class accessed using a unique string like the following one::
 
   authcfg = 'fm1s770'
@@ -135,7 +134,8 @@ class accessed using a unique string like the following one::
 that string is generated automatically when creating an entry using QGIS API or
 GUI.
 
-`QgsAuthMethodConfig <https://qgis.org/api/classQgsAuthMethodConfig.html>`_ is the base class for any :term:`Authentication Method`.
+:class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` is the base class
+for any :term:`Authentication Method`.
 Any Authentication Method sets a configuration hash map where authentication
 informations will be stored. Hereafter an useful snippet to store PKI-path
 credentials for an hypothetic alice user:
@@ -207,7 +207,7 @@ Manage PKI bundles with QgsPkiBundle
 ....................................
 
 A convenience class to pack PKI bundles composed on SslCert, SslKey and CA
-chain is the `QgsPkiBundle <https://qgis.org/api/classQgsPkiBundle.html>`_
+chain is the :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>`
 class. Hereafter a snippet to get password protected:
 
 .. code-block:: python
@@ -220,8 +220,8 @@ class. Hereafter a snippet to get password protected:
   assert boundle is not None
   assert boundle.isValid()
 
-Refer to QgsPkiBundle class documentation to extract cert/key/CAs from the
-bundle.
+Refer to :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>` class documentation
+to extract cert/key/CAs from the bundle.
 
 .. _Remove_entry_from_authdb:
 
@@ -253,9 +253,10 @@ enabled service like a WMS or WFS or to a DB connection.
 
   Take into account that not all QGIS data providers are integrated with the
   Authentication infrastructure. Each authentication method, derived from the
-  base class `QgsAuthMethod <https://qgis.org/api/classQgsAuthMethod.html>`_
-  and support a different set of Providers. For example ``Identity-Cert``
-  method supports the following list of providers:
+  base class :class:`QgsAuthMethod <qgis.core.QgsAuthMethod>`
+  and support a different set of Providers. For example the :meth:`certIdentity ()
+  <qgis.core.QgsAuthManager.certIdentity>` method supports the following list
+  of providers:
 
   .. code-block:: python
 
@@ -287,11 +288,11 @@ URI parameter with credential just before setting the HTTP connection.
 
 .. warning::
 
-  Developer would have to leave ``authcfg`` expansion to the QgsAuthManager, in
-  this way he will be sure that expansion is not done too early.
+  The developer would have to leave ``authcfg`` expansion to the :class:`QgsAuthManager
+  <qgis.core.QgsAuthManager>`, in this way he will be sure that expansion is not done too early.
 
-Usually an URI string, build using ``QgsDataSourceURI`` class, is used to set
-QGIS data source in the following way:
+Usually an URI string, built using the :class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>`
+class, is used to set a data source in the following way:
 
 .. code-block:: python
 
@@ -321,8 +322,8 @@ Adapt plugins to use Authentication infrastructure
 ==================================================
 
 Many third party plugins are using httplib2 to create HTTP connections instead
-of integrating with ``QgsNetworkAccessManager`` and its related Authentication
-Infrastructure integration.
+of integrating with :class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>`
+and its related Authentication Infrastructure integration.
 To facilitate this integration an helper python function has been created
 called ``NetworkAccessManager``. Its code can be found `here
 <https://github.com/boundlessgeo/qgis-geoserver-plugin/blob/master/geoserverexplorer/geoserver/networkaccessmanager.py#L78>`_.
@@ -353,7 +354,7 @@ GUI to select credentials
 
 If it's necessary to select a :term:`Authentication Configuration` from the set
 stored in the :term:`Authentication DB` it is available in the GUI class
-`QgsAuthConfigSelect <https://qgis.org/api/classQgsAuthConfigSelect.html>`_
+`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`.
 
 .. figure:: img/QgsAuthConfigSelect.png
    :align: center
@@ -381,8 +382,8 @@ Authentication Editor GUI
 -------------------------
 
 The complete GUI used to manage credentials, authorities and to access to
-Authentication utilities is managed by the class
-`QgsAuthEditorWidgets <https://qgis.org/api/classQgsAuthEditorWidgets.html>`_
+Authentication utilities is managed by the
+:class:`QgsAuthEditorWidgets <qgis.gui.QgsAuthEditorWidgets>` class.
 
 .. figure:: img/QgsAuthEditorWidgets.png
    :align: center
@@ -403,7 +404,8 @@ an integrated example can be found in the related `test <https://github.com/qgis
 Authorities Editor GUI
 ----------------------
 
-A GUI used to manage only authorities is managed by the class `QgsAuthAuthoritiesEditor <https://www.qgis.org/api/classQgsAuthAuthoritiesEditor.html>`_
+A GUI used to manage only authorities is managed by the
+`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class.
 
 .. figure:: img/QgsAuthAuthoritiesEditor.png
    :align: center
