@@ -44,7 +44,8 @@ PyQGIS provides several options for creating a geometry:
 
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
-    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1), QgsPointXY(2, 2), QgsPointXY(2, 1)]])
+    gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1),
+	QgsPointXY(2, 2), QgsPointXY(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or :class:`QgsPointXY <qgis.core.QgsPointXY>`
   class. The difference between these classes is that :class:`QgsPoint <qgis.core.QgsPoint>`
