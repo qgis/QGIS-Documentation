@@ -25,8 +25,8 @@ GIS report is a document containing information organized in a narrative,
 graphic, maps, or tabular form, prepared on ad hoc, periodic, recurring,
 regular, or as required basis. Reports may refer to specific periods, events,
 occurrences, or subjects, locations, and may be communicated or presented in
-oral or written form. The reports in QGIS will allow to the users make their GIS
-projects and in a simple, quick and structured way.
+oral or written form. The reports in QGIS will allow the users to output their
+GIS projects in a simple, quick and structured way.
 
 Get started
 ===========
@@ -34,8 +34,6 @@ Get started
 :guilabel:`Reports` menu is an extension of Print Layout. This funcionality can
 be found in :menuselection:`Project --> New Report` or inside of
 :menuselection:`Project --> Layout Manager`.
-
-|
 
 In the :guilabel:`Layout Manager` dialog the report can be created through
 :guilabel:`New from template` and select the dropdown option :guilabel:`Empty
@@ -58,8 +56,6 @@ displayed looks much like the print layout designer, except for the new
 .. figure:: img/report-2.png
    :align: center
 
-|
-
 Layout Report Workspace
 =======================
 
@@ -67,7 +63,7 @@ QGIS reports can consist of multiple, nested sections. In our new blank report
 we initially have only the main report section. The only options present for
 this report section is :guilabel:`Include report header` or :guilabel:`Include
 report footer`. If we enable these options, the header will be included as the
-very first page (or pages… individual parts of reports can be multi-page if
+very first page (or pages… --- individual parts of reports can be multi-page if
 desired) in the report, and the footer would be the last page. Let’s go ahead
 and enable the header, and hit the :guilabel:`Edit` button next to it:
 
@@ -217,8 +213,6 @@ this:
 .. figure:: img/report_consec.png
    :align: center
 
-|
-
 Report Output
 =============
 
@@ -247,8 +241,6 @@ This results in the last part of our report exporting as:
 .. figure:: img/ports.png
    :align: center
 
-|
-
 Export settings
 ===============
 
@@ -275,5 +267,4 @@ Reports in QGIS 3.0 - the Ultimate Guide!
 
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
