@@ -119,10 +119,10 @@ to add to our report.
 
 |
 
-Currently there are two options: :guilabel:`Add Static Layout Section` and a
+There are two options: :guilabel:`Add Static Layout Section` and a
 :guilabel:`Field Group Section`.  The :guilabel:`Add Static Layout Section` is a
-single, static body layout. This can be used to embed static layouts mid way
-through a report. By other hand, a :guilabel:`Field Group Section` repeats its
+single, static body layout. This can be used to embed static layouts mid-way
+through a report. Alternatively, a :guilabel:`Field Group Section` repeats its
 body layout for every feature in a layer. The features are sorted by the
 selected grouping feature (with an option for ascending/descending sort). If a
 field group section has child sections (e.g. another field group section with a
