@@ -125,11 +125,14 @@ parameters:
 | SELECTION      | No       | Highlight features                                                      |
 +----------------+----------+-------------------------------------------------------------------------+
 | FILE_NAME      | No       | Only for ``FORMAT=application/dxf``                                     |
-|                | No       | File name of the downloaded file                                        |
+|                |          |                                                                         |
+|                |          | File name of the downloaded file                                        |
 +----------------+----------+-------------------------------------------------------------------------+
 | FORMAT_OPTIONS | No       | Only for ``FORMAT=application/dxf``                                     |
+|                |          |                                                                         |
 |                |          | key:value pairs separated by                                            |
 |                |          | semicolon.                                                              |
+|                |          |                                                                         |
 |                |          | - SCALE:  to be used for symbology rules, filters and styles (not       |
 |                |          |   actual scaling of the data - data remains in the original scale).     |
 |                |          | - MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY:               |
@@ -138,7 +141,7 @@ parameters:
 |                |          | - LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames |
 |                |          |   if not specified, the original QGIS layer names are used.             |
 |                |          | - USE_TITLE_AS_LAYERNAME:  if enabled, the title of the layer will      |
-|                |          | be used as layer name.                                                  |
+|                |          |   be used as layer name.                                                |
 +----------------+----------+-------------------------------------------------------------------------+
 
 |
@@ -344,31 +347,30 @@ FORMAT
 This parameter may be used to specify the format of map image. Available
 values are:
 
-``jpg``
-``jpeg``
-``image/jpeg``
-``image/png``
-``image/png; mode=1bit``
-``image/png; mode=8bit``
-``image/png; mode=16bit``
-``application/dxf``
-   Only layers that have read access in the WFS service are exported in the DXF format.
+* ``jpg``
+* ``jpeg``
+* ``image/jpeg``
+* ``image/png``
+* ``image/png; mode=1bit``
+* ``image/png; mode=8bit``
+* ``image/png; mode=16bit``
+* ``application/dxf``
+  Only layers that have read access in the WFS service are exported in the DXF format.
 
+  URL example:
 
-URL example:
+  .. code-block:: none
 
-.. code-block:: none
-
-  http://localhost/qgis_server?
-  SERVICE=WMS&VERSION=1.3.0
-  &REQUEST=GetMap
-  &FORMAT=application/dxf
-  &LAYERS=Haltungen,Normschacht,Spezialbauwerke
-  &STYLES=
-  &CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905
-  &WIDTH=1042
-  &HEIGHT=811
-  &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=plan.dxf
+   http://localhost/qgis_server?
+   SERVICE=WMS&VERSION=1.3.0
+   &REQUEST=GetMap
+   &FORMAT=application/dxf
+   &LAYERS=Haltungen,Normschacht,Spezialbauwerke
+   &STYLES=
+   &CRS=EPSG%3A21781&BBOX=696136.28844801,245797.12108743,696318.91114315,245939.25832905
+   &WIDTH=1042
+   &HEIGHT=811
+   &FORMAT_OPTIONS=MODE:SYMBOLLAYERSYMBOLOGY;SCALE:250&FILE_NAME=plan.dxf
 
 TRANSPARENT
 ^^^^^^^^^^^
