@@ -164,9 +164,10 @@ properties of geometries, such as area (in the case of polygons) or lengths
 Let's see an example that combines iterating over the features in a
 given layer and performing some geometric computations based on their
 geometries. The below code will compute and print the area and perimeter of
-each country in the :guilabel:`countries` layer within our tutorial QGIS project.
+each country in the ``countries`` layer within our tutorial QGIS project.
 
 The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
+
 .. code-block:: python
 
   # let's access the 'countries' layer
@@ -190,6 +191,7 @@ methods from the :class:`QgsGeometry <qgis.core.QgsGeometry>` class. For a more 
 distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class can be used, which can perform ellipsoid based calculations:
 
 The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
+
 .. code-block:: python
 
   d = QgsDistanceArea()
