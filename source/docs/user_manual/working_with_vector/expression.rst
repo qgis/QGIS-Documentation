@@ -117,7 +117,7 @@ using functions, layer's fields and values. It contains following widgets:
   .. tip:: **Document your expression with comments**
 
     When using complex expression, it may be a good practice to add
-    texts either as a multiline or inline comments to help you remember.
+    texts either as a multiline comment or inline comments to help you remember.
 
     .. code-block:: sql
 
@@ -165,8 +165,8 @@ using functions, layer's fields and values. It contains following widgets:
 
 .. tip::
 
-   Sometimes, the right panel showing functions help or field values can be
-   collapsed, hence invisible in the dialog. Press the :guilabel:`Show Values`
+   The right panel, showing functions help or field values, can be
+   collapsed (invisible) in the dialog. Press the :guilabel:`Show Values`
    or :guilabel:`Show Help` button to get it back.
 
 .. _figure_expression_tab:
