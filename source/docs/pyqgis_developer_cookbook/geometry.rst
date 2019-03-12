@@ -13,6 +13,21 @@ Geometry Handling
 .. contents::
    :local:
 
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. code-block:: python
+
+    from qgis.core import (
+      QgsGeometry,
+      QgsPoint,
+      QgsPointXY,
+      QgsWkbTypes,
+      QgsProject,
+      QgsFeatureRequest,
+      QgsDistanceArea
+    )
+
 Points, linestrings and polygons that represent a spatial feature are commonly
 referred to as geometries. In QGIS they are represented with the
 :class:`QgsGeometry <qgis.core.QgsGeometry>` class.
@@ -121,7 +136,7 @@ vector type. Here's an example on how to use these accessors:
 
   >>> gPnt.asPoint()
   <QgsPointXY: POINT(1 1)>
-  >>> gLine.asPolyline()
+  >>> gPnt.asPoint()
   [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
   >>> gPolygon.asPolygon()
   [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
@@ -166,7 +181,6 @@ each country in the :guilabel:`countries` layer within our tutorial QGIS project
     print(name)
     print('Area: ', geom.area())
     print('Perimeter: ', geom.length())
-
 
 Now you have calculated and printed the areas and perimeters of the geometries. You may however quickly notice that the values are strange. 
 That is because areas and perimeters don't take CRS into account when computed using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length() <qgis.core.QgsGeometry.length>`
