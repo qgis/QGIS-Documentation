@@ -91,8 +91,9 @@ PyQGIS provides several options for creating a geometry:
     g = QgsGeometry()
     wkb = bytes.fromhex("010100000000000000000045400000000000001440")
     g.fromWkb(wkb)
-    g.asWkt()
-    'Point (42 5)'
+    
+    # print WKT representation of the geometry
+    print(g.asWkt())
 
 
 .. index:: Geometry; Access to
@@ -165,6 +166,7 @@ given layer and performing some geometric computations based on their
 geometries. The below code will compute and print the area and perimeter of
 each country in the :guilabel:`countries` layer within our tutorial QGIS project.
 
+The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 .. code-block:: python
 
   # let's access the 'countries' layer
@@ -187,6 +189,7 @@ That is because areas and perimeters don't take CRS into account when computed u
 methods from the :class:`QgsGeometry <qgis.core.QgsGeometry>` class. For a more powerful area and
 distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class can be used, which can perform ellipsoid based calculations:
 
+The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 .. code-block:: python
 
   d = QgsDistanceArea()
