@@ -155,8 +155,8 @@ See also
 
 Distance matrix
 ---------------
-Creates a table containing a distance matrix, with distances between all the points
-in a points layer.
+Calculates for point features distances to their nearest features in the same layer
+or in another layer.
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
@@ -164,76 +164,76 @@ Parameters
 ..........
 
 ``Input point layer`` [vector: point]
-  Input point vector layer.
+  Point layer for which the distance matrix is calculated (**from** points).
 
 ``Input unique ID field`` [tablefield: any]
-  Define the field of the input layer with unique ID that will be copied in the
-  output attribute table.
+  Field to use to uniquely identify features of the input layer.
+  Used in the output attribute table.
 
 ``Target point layer`` [vector: point]
-  Destination point vector layer.
+  Point layer containing the nearest point(s) to search (**to** points).
 
 ``Target unique ID field`` [tablefield: any]
-  Define the field of the target layer with unique ID that will be copied in the
-  output attribute table.
+  Field to use to uniquely identify features of the target layer.
+  Used in the output attribute table.
 
 ``Output matrix type`` [enumeration]
   Different types of calculation are available:
 
-  * 0 --- Linear (N*k x 3) distance matrix
+  * 0 --- Linear (N * *k* x 3) distance matrix: for each input point, reports
+    the distance to each of the *k* nearest target points. The output matrix consists
+    of up to *k* rows per input point, and each row has three columns: *InputID*,
+    *TargetID* and *Distance*.
   * 1 --- Standard (N x T) distance matrix
-  * 2 --- Summary distance matrix (mean, std. dev., min, max)
+  * 2 --- Summary distance matrix (mean, std. dev., min, max): for each input
+    point, reports statistics on the distances to its target points.
 
   Default: *0*
 
 ``Use only the nearest (k) target points`` [number]
-  You can choose to calculate the distance between all points or to stop the
-  calculation at a chosen point number.
+  You can choose to calculate the distance to all the points in the target layer
+  or limit to a number (*k*) of closest features.
 
-  Default: *0* all points are used
+  Default: *0* --- all the points are used.
 
 Outputs
 .......
 
 ``Distance matrix`` [vector: point]
-  Point vector layer with attribute table composed by:
-
-  * *InputID*: the unique ID of the input layer
-  * *TargetID*: the unique ID of the target layer
-  * *Distance*: the distance between the points
+  Point (or MultiPoint for the "Linear (N * *k* x 3)" case) vector layer containing the distance calculation for each input feature.
+  Its features and attribute table depend on the selected output matrix type.
 
 
 .. _qgisdistancetonearesthublinetohub:
 
 Distance to nearest hub (line to hub)
 -------------------------------------
-Links each feature of the input vector with the nearest feature of the destination
-layer. The output is a line vector layer with all the attributes of the input layer,
-one attribute of the destination layer and the distance.
+Creates lines that join each feature of an input vector to the nearest feature
+in a destination layer. Distances are calculated based on the :ref:`center
+<qgispointonsurface>` of each feature.
 
 
 .. figure:: img/distance_hub.png
   :align: center
 
-  Distance to nearest hub example
+  Display the nearest hub for the red input features
 
 
 Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  Input vector layer.
+  Vector layer for which the nearest feature is searched.
 
 ``Destination hubs layer`` [vector: any]
-  Destination layer to calculate the nearest point.
+  Vector layer containing the features to search for.
 
 ``Hub layer name attribute`` [tablefield: any]
-  Attribute of the destination layer that will be copied into the
-  output.
+  Field to use to uniquely identify features of the destination layer.
+  Used in the output attribute table.
 
 ``Measurement unit`` [enumeration]
-  The distance field in the output attribute table will be calculated according
-  to this choice:
+  Units in which to report the distance to the closest feature:
 
   * 0 --- Meters
   * 1 --- Feet
@@ -246,32 +246,33 @@ Parameters
 Outputs
 .......
 ``Hub distance`` [vector: line]
-  Line vector layer with distance values.
+ Line vector layer with the attributes of the input features, the identifier
+ of their closest feature and the calculated distance.
 
 
 .. _qgisdistancetonearesthubpoints:
 
 Distance to nearest hub (points)
 --------------------------------
-Creates a copy of the input layer with the addition of two fields containing the
-attribute of the destination layer and the distance between points.
+Creates a point layer representing the :ref:`center <qgispointonsurface>` of the
+input features with the addition of two fields containing the identifier of the
+nearest feature (based on its center point) and the distance between the points.
 
 Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  Input vector layer.
+  Vector layer for which the nearest feature is searched.
 
 ``Destination hubs layer`` [vector: any]
-  Destination layer to calculate the nearest point.
+  Vector layer containing the features to search for.
 
 ``Hub layer name attribute`` [tablefield: any]
-  Attribute of the destination layer that will be copied into the
-  output.
+  Field to use to uniquely identify features of the destination layer.
+  Used in the output attribute table.
 
 ``Measurement unit`` [enumeration]
-  The distance field in the output attribute table will be calculated according
-  to this choice:
+  Units in which to report the distance to the closest feature:
 
   * 0 --- Meters
   * 1 --- Feet
@@ -284,7 +285,8 @@ Parameters
 Outputs
 .......
 ``Hub distance`` [vector: point]
-  Point vector layer with distance values.
+  Point vector layer with the attributes of the input features, the identifier
+  of their closest feature and the calculated distance.
 
 
 .. _qgishublines:
