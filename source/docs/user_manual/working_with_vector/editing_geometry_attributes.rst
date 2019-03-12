@@ -733,11 +733,8 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-
-..
- The next feature belongs to QGIS > 3.4 so should be uncommented when the 3.4 is branched away.
- | |trimExtend|              | Trim or Extend Feature                  |                        |                         |
- +---------------------------+-----------------------------------------+------------------------+-------------------------+
+| |trimExtend|              | Trim or Extend Feature                  |                        |                         |
++---------------------------+-----------------------------------------+------------------------+-------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -1182,30 +1179,29 @@ coordinates while moving the symbol in the map canvas.
    :sup:`Vertex Tool (Current Layer)` or |moveFeaturePoint| :sup:`Move Feature`
    tool for this purpose.
 
-..
- The next feature belongs to QGIS > 3.4 so should be uncommented when the 3.4 is branched away.
- Trim/Extend Feature
- -------------------
 
- When a digitized line is too short or too long to snap to another line (missing or
- crossing the line), it is necessary to be able to extend or shorten the segment.
+Trim/Extend Feature
+-------------------
 
- The |trimExtend| :sup:`Trim/Extend` tool allows you to also modify (multi)lines AND
- (multi)polygons. Moreover, it is not necessarily the end
- of the lines that is concerned; any segment of a geometry can be modified.
+When a digitized line is too short or too long to snap to another line (missing or
+crossing the line), it is necessary to be able to extend or shorten the segment.
 
- .. note:: This can lead to invalid geometries.
+The |trimExtend| :sup:`Trim/Extend` tool allows you to also modify (multi)lines AND
+(multi)polygons. Moreover, it is not necessarily the end
+of the lines that is concerned; any segment of a geometry can be modified.
 
- .. note:: You must activate segment snapping for this tool to work
+.. note:: This can lead to invalid geometries.
+
+.. note:: You must activate segment snapping for this tool to work.
  
- The tool asks you to select a limit (a segment) with respect to which another
- segment will be extended or trimmed. Unlike the node tool, a check is performed to
- modify only the layer being edited.
+The tool asks you to select a limit (a segment) with respect to which another
+segment will be extended or trimmed. Unlike the node tool, a check is performed to
+modify only the layer being edited.
 
- When both segments are in 3D, the tool performs an interpolation on the limit segment
- to get the Z value.
+When both segments are in 3D, the tool performs an interpolation on the limit segment
+to get the Z value.
 
- In the case of a trim, you must select the part that will be shortened by clicking on it.
+In the case of a trim, you must select the part that will be shortened by clicking on it.
 
 .. _shape_edit:
 
