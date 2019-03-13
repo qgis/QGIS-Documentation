@@ -77,17 +77,66 @@ The @alg function is used to define the name and location of the algorithm in th
 The @alg.input function is used to define the inputs of the algorithm.
 The @alg.output function is used to define the outputs of the algorithm.
 
-Here is a list of some input and output types types that are supported
-with the alg decorator in processing.
-:file:`algfactory.py` contains the complete list.
+Here is the list of input and output types types that are supported in
+processing and their corresponding alg decorator constants
+(:file:`algfactory.py` contains the complete list of alg constants).
 
 +---------------------------------------------------+---------------------------+--------------------+
 | Class                                             | alg                       |                    |
 +===================================================+===========================+====================+
+| :class:`QgsProcessingParameterAuthConfig`         | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterBand`               | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterBoolean`            | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterCrs`                | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterDistance`           | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterEnum`               | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterExpression`         | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterExtent`             | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterFeatureSink`        | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterFeatureSource`      | ``alg.SOURCE``            | A feature source   |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterField`              | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterFile`               | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterFileDestination`    | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterFolderDestination`  | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterMapLayer`           | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterMatrix`             | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterMeshLayer`          | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterMultipleLayers`     | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterNumber`             | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterPoint`              | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterRange`              | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterRasterDestination`  | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
 | :class:`QgsProcessingParameterRasterLayer`        | ``alg.RASTER_LAYER``      | A raster layer     |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterString`             | ``alg.``                  |                    |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterVectorDestination`  | ``alg.``                  |                    |
 +---------------------------------------------------+---------------------------+--------------------+
 | :class:`QgsProcessingParameterVectorLayer`        | ``alg.VECTOR_LAYER``      | A vector layer     |
 +---------------------------------------------------+---------------------------+--------------------+
+
 
 * ``table``. A table
 * ``number``. A numerical value. A default value must be provided. For instance,
