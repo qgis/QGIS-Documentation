@@ -22,8 +22,8 @@ to activate the venv and then run the build from within that venv::
 
  make html
 
-Alternive
-.........
+Alternative
+...........
 
 You can also use your own virtual env by creating it using it first::
 
@@ -50,6 +50,13 @@ Build on Windows
  pip install -r REQUIREMENTS.txt venv
  venv/source/bin/activate
  make.bat
+
+Want to build your own language? For example 'nl'::
+
+ set SPHINXOPTS=-D language=nl
+ make.bat
+
+ 
 
 Translating
 ===========
