@@ -89,12 +89,6 @@ with the alg decorator in processing.
 | :class:`QgsProcessingParameterVectorLayer`        | ``alg.VECTOR_LAYER``      | A vector layer     |
 +---------------------------------------------------+---------------------------+--------------------+
 
-* ``alg.RASTER_LAYER``. A raster layer
-* ``alg.VECTOR_LAYER``. A vector layer
-
-
-
-
 * ``table``. A table
 * ``number``. A numerical value. A default value must be provided. For instance,
   ``depth=number 2.4``
