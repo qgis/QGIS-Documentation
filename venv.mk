@@ -4,10 +4,6 @@
 SPHINXBUILD   ?= venv/bin/sphinx-build
 SPHINXINTL    ?= venv/bin/sphinx-intl
 
-# Delete all including the 
-cleanall: springclean
-	rm -rf venv
-
 # Create the venv and a timestamp file
 venv/venv.timestamp:
 	virtualenv -p python3 venv
@@ -19,6 +15,10 @@ venv/REQUIREMENTS.timestamp: venv/venv.timestamp REQUIREMENTS.txt
 	touch $@
 
 include Makefile
+
+# Delete all including the 
+cleanall: springclean
+	rm -rf venv
 
 # Add dependencies to targets that require sphinx
 html: venv/REQUIREMENTS.timestamp
