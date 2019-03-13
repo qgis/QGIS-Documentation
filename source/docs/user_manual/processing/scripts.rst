@@ -84,55 +84,55 @@ processing and their corresponding alg decorator constants
 +---------------------------------------------------+---------------------------+--------------------+
 | Class                                             | alg                       |                    |
 +===================================================+===========================+====================+
-| :class:`QgsProcessingParameterAuthConfig`         | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterAuthConfig`         | ``alg.AUTH_CFG``          |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterBand`               | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterBand`               | ``alg.BAND``              |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterBoolean`            | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterBoolean`            | ``alg.BOOL``              |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterCrs`                | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterCrs`                | ``alg.CRS``               |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterDistance`           | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterDistance`           | ``alg.DISTANCE``          |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterEnum`               | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterEnum`               | ``alg.ENUM``              |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterExpression`         | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterExpression`         | ``alg.EXPRESSION``        |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterExtent`             | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterExtent`             | ``alg.EXTENT``            |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterFeatureSink`        | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterFeatureSink`        | ``alg.SINK``              | A feature sink     |
 +---------------------------------------------------+---------------------------+--------------------+
 | :class:`QgsProcessingParameterFeatureSource`      | ``alg.SOURCE``            | A feature source   |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterField`              | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterField`              | ``alg.FIELD``             |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterFile`               | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterFile`               | ``alg.FILE``              |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterFileDestination`    | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterFileDestination`    | ``alg.FILE_DEST``         |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterFolderDestination`  | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterFolderDestination`  | ``alg.FOLDER_DEST``       |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterMapLayer`           | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterMapLayer`           | ``alg.MAPLAYER``          |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterMatrix`             | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterMatrix`             | ``alg.MATRIX``            |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterMeshLayer`          | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterMeshLayer`          | ``alg.MESH_LAYER``        |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterMultipleLayers`     | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterMultipleLayers`     | ``alg.MULTILAYER``        |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterNumber`             | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterNumber`             | ``alg.NUMBER``            |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterPoint`              | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterPoint`              | ``alg.POINT``             |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterRange`              | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterRange`              | ``alg.RANGE``             |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterRasterDestination`  | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterRasterDestination`  | ``alg.RASTER_LAYER_DEST`` |                    |
 +---------------------------------------------------+---------------------------+--------------------+
 | :class:`QgsProcessingParameterRasterLayer`        | ``alg.RASTER_LAYER``      | A raster layer     |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterString`             | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterString`             | ``alg.STRING``            |                    |
 +---------------------------------------------------+---------------------------+--------------------+
-| :class:`QgsProcessingParameterVectorDestination`  | ``alg.``                  |                    |
+| :class:`QgsProcessingParameterVectorDestination`  | ``alg.VECTOR_LAYER_DEST`` |                    |
 +---------------------------------------------------+---------------------------+--------------------+
 | :class:`QgsProcessingParameterVectorLayer`        | ``alg.VECTOR_LAYER``      | A vector layer     |
 +---------------------------------------------------+---------------------------+--------------------+
