@@ -77,12 +77,24 @@ The @alg function is used to define the name and location of the algorithm in th
 The @alg.input function is used to define the inputs of the algorithm.
 The @alg.output function is used to define the outputs of the algorithm.
 
+Here is a list of some input and output types types that are supported
+with the alg decorator in processing.
+:file:`algfactory.py` contains the complete list.
 
-Here is a list of the input and output types types that are supported in processing
-cripts, their syntax and some examples.
++---------------------------------------------------+---------------------------+--------------------+
+| Class                                             | alg                       |                    |
++===================================================+===========================+====================+
+| :class:`QgsProcessingParameterRasterLayer`        | ``alg.RASTER_LAYER``      | A raster layer     |
++---------------------------------------------------+---------------------------+--------------------+
+| :class:`QgsProcessingParameterVectorLayer`        | ``alg.VECTOR_LAYER``      | A vector layer     |
++---------------------------------------------------+---------------------------+--------------------+
 
-* ``alg.RASTERLAYER``. A raster layer
-* ``vector``. A vector layer
+* ``alg.RASTER_LAYER``. A raster layer
+* ``alg.VECTOR_LAYER``. A vector layer
+
+
+
+
 * ``table``. A table
 * ``number``. A numerical value. A default value must be provided. For instance,
   ``depth=number 2.4``
