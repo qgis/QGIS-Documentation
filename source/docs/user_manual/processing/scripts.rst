@@ -46,15 +46,14 @@ a DEM using the @alg decorator.
 
     ##dem=raster
     ##twi=output raster
-    ret_slope = processing.run("saga:slopeaspectcurvature",
-                               {"ELEVATION": dem, "METHOD": 0, "SLOPE": 'myslope',
-                                "ASPECT": 'myslope'},
+    ret_slope = processing.run("qgis:slope",
+                               {"INPUT": dem, "OUTPUT": 'myslope'},
                                is_child_algorithm=True)
     ret_area = processing.run("saga:catchmentarea",
                               {"ELEVATION": dem, "METHOD": 0, "FLOW": 'myflow'},
                               is_child_algorithm=True)
     twilayer = processing.run("saga:topographicwetnessindextwi",
-                              {"SLOPE": ret_slope['SLOPE'], "AREA": ret_area['FLOW'],
+                              {"SLOPE": ret_slope['OUTPUT'], "AREA": ret_area['FLOW'],
                                "CONV": 1, "METHOD": 0, "TWI": 'twi'},
                               is_child_algorithm=True)
     return{twi: twilayer['TWI']}
@@ -90,82 +89,82 @@ processing and their corresponding alg decorator constants
      - Description
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
-     -
+     - Allows users to select from available authentication configurations or create new authentication configurations.
    * - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
      - ``alg.BAND``
-     -
+     - A band of a raster layer.
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
      - ``alg.BOOL``
-     -
+     - A boolean value.
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
-     -
+     - A Coordinate Reference System
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
-     -
+     - A double numeric parameter for distance values.
    * - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
      - ``alg.ENUM``
-     -
+     - An enumeration, allowing for selection from a set of predefined values.
    * - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
      - ``alg.EXPRESSION``
-     -
+     - An expression.
    * - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
      - ``alg.EXTENT``
-     -
+     - A spatial extent defined by xmin, xmax, ymin, ymax.
    * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
      - ``alg.SINK``
-     - A feature sink
+     - A feature sink.
    * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
      - ``alg.SOURCE``
-     - A feature source
+     - A feature source.
    * - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
      - ``alg.FIELD``
-     -
+     - A field in the attribute table of a vector layer.
    * - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
      - ``alg.FILE``
-     -
+     - A filename.
    * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
      - ``alg.FILE_DEST``
-     -
+     - A filename.
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
-     -
+     - A folder.
    * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
      - ``alg.MAPLAYER``
-     -
+     - A map layer.
    * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
      - ``alg.MATRIX``
-     -
+     - A matrix.
    * - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
      - ``alg.MESH_LAYER``
-     -
+     - A mesh layer.
    * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - ``alg.MULTILAYER``
-     -
+     - A set of layers.
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.NUMBER``
-     -
+     - A numerical value.
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
-     -
+     - A point.
    * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
      - ``alg.RANGE``
-     -
+     - A number range.
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - ``alg.RASTER_LAYER_DEST``
-     -
+     - A raster layer.
    * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
      - ``alg.RASTER_LAYER``
-     - A raster layer
+     - A raster layer.
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
-     -
+     - A text string.
    * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
      - ``alg.VECTOR_LAYER_DEST``
-     -
+     - A vector layer.
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
-     - A vector layer
+     - A vector layer.
 
 
 * ``table``. A table
