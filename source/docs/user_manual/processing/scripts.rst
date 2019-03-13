@@ -2,7 +2,7 @@
 
    |updatedisclaimer|
 
-Writing new Processing algorithms as python scripts
+Writing new Processing algorithms as Python scripts
 ====================================================
 
 .. only:: html
@@ -10,35 +10,53 @@ Writing new Processing algorithms as python scripts
    .. contents::
       :local:
 
-You can create your own algorithms by writing the corresponding Python code and
-adding a few extra lines to supply additional information needed to define the
-semantics of the algorithm.
-You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
-group in the :guilabel:`Script` algorithms block of the toolbox. Double-click on
-it to open the script edition dialog. That's where you should type your code.
-Saving the script from there in the :file:`scripts` folder (the default one when
-you open the save file dialog), with :file:`.py` extension, will automatically
-create the corresponding algorithm.
+There are currently two options for writing Processing algorithms using Python.
+
+* Extending QgsProcessingAlgorithm
+* Using the @alg decorator
+
+By using the @alg decorator, you can create your own algorithms by writing the
+corresponding Python code and adding a few extra lines to supply additional
+information needed to define the semantics of the algorithm.
+
+Within QGIS, you can use :guilabel:`Create new script` in the :guilabel:`Scrips`
+menu at the top of the guilabel:`Processing Toolbox` to open the
+:guilabel:`Processing Script Editor` where you can write your code.
+To simplify the task, you can start with a script template by using
+:guilabel:`Create new script from template` from the same menu.
+
+When saving the script to the :file:`scripts` folder (the default location)
+with a :file:`.py` extension, the algorithm will be made available in the
+:guilabel:`Processing Toolbox`.
 
 The name of the algorithm (the one you will see in the toolbox) is created from
-the filename, removing its extension and replacing underscores with blank spaces.
+the filename by removing the :file:`.py` extension and replacing underscores
+with spaces.
 
-Let's have the following code, which calculates the Topographic Wetness Index
-(TWI) directly from a DEM
-
-.. note:: The simplified way of writing Python scripts (as used in the example
-   below) is not supported in QGIS 3.
+The following code calculates the Topographic Wetness Index (TWI) directly from
+a DEM using the @alg decorator.
 
 .. code-block:: python
+    from qgis.processing import alg
+    
+    @alg(name="tpicalc", label="TPI Calculator", group="myscripts", groupid="myscripts")
+    @alg.input(type=alg.RASTER_LAYER, name="dem", label="Input DEM layer")
+    @alg.output(type=alg.RASTER_LAYER, name="twi", label="TWI")
 
     ##dem=raster
     ##twi=output raster
-    ret_slope = processing.run("saga:slopeaspectcurvature", {"ELEVATION": dem,
-                    "METHOD": 0, "SLOPE": 'myslope', "ASPECT": 'myslope'})
-    ret_area = processing.run("saga:catchmentarea", ,{"ELEVATION": dem,
-                    "METHOD": 0, "FLOW": 'myflow'})
-    processing.run("saga:topographicwetnessindextwi", {"SLOPE": ret_slope['SLOPE'],
-                   "AREA": ret_area['FLOW'], "CONV": 1, "METHOD": 0, "TWI": 'twi'})
+    ret_slope = processing.run("saga:slopeaspectcurvature",
+                               {"ELEVATION": dem, "METHOD": 0, "SLOPE": 'myslope',
+                                "ASPECT": 'myslope'},
+                               is_child_algorithm=True)
+    ret_area = processing.run("saga:catchmentarea",
+                              {"ELEVATION": dem, "METHOD": 0, "FLOW": 'myflow'},
+                              is_child_algorithm=True)
+    twilayer = processing.run("saga:topographicwetnessindextwi",
+                              {"SLOPE": ret_slope['SLOPE'], "AREA": ret_area['FLOW'],
+                               "CONV": 1, "METHOD": 0, "TWI": 'twi'},
+                              is_child_algorithm=True)
+    return{twi: twilayer['TWI']}
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
 one of them calculates the TWI, but it needs a slope layer and a flow accumulation
@@ -51,17 +69,18 @@ lines, however, need some additional explanation. They provide the
 information that is needed to turn your code into an algorithm that can be run from any
 of the GUI components, like the toolbox or the graphical modeler.
 
-These lines start with a double Python comment symbol (``##``) and have the
-following structure
+These lines are all calls to the ``@alg`` functions that help simplify the coding of
+the algorithm.
 
-::
+The @alg function is used to define the name and location of the algorithm in the Toolbox.
+The @alg.input function is used to define the inputs of the algorithm.
+The @alg.output function is used to define the outputs of the algorithm.
 
-    [parameter_name]=[parameter_type] [optional_values]
 
-Here is a list of all the parameter types that are supported in processing scripts,
-their syntax and some examples.
+Here is a list of the input and output types types that are supported in processing
+cripts, their syntax and some examples.
 
-* ``raster``. A raster layer
+* ``alg.RASTERLAYER``. A raster layer
 * ``vector``. A vector layer
 * ``table``. A table
 * ``number``. A numerical value. A default value must be provided. For instance,
