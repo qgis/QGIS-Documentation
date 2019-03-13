@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'QGISDoc2'
-copyright = '2019, Richard'
-author = 'Richard'
+project = 'QGISDoc'
+copyright = '2002-now, QGIS project'
+author = 'QGIS Authors'
 
 
 # -- General configuration ---------------------------------------------------

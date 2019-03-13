@@ -34,14 +34,13 @@ You can also use your own virtual env by creating it using it first::
 
 Then activate the venv and install the requirements via the REQUIRMENTS.txt::
 
- cd venv
  source ./venv/bin/activate
- pip install -r REQUIREMENTS.txt
+ # using --pre here to get the not released yet 2.0 version of Sphinx
+ pip install --pre -r REQUIREMENTS.txt
 
 and run the build from within that venv::
 
  make html
-
 
 Build on Windows
 ================
@@ -51,6 +50,25 @@ Build on Windows
  pip install -r REQUIREMENTS.txt venv
  venv/source/bin/activate
  make.bat
+
+Translating
+===========
+
+::
+
+ sphinx-intl create-txconfig
+ sphinx-intl update-txconfig-resources --transifex-project-name qgismanual
+
+ export SPHINXINTL_LANGUAGE=de,nl
+ # same as
+ sphinx-intl <command> --language=de --language=nl
+
+ # create the pot files in build/gettext
+ make gettext
+
+ # update the po files:
+ sphinx-intl update -p build/gettext -l de -l nl -l en
+
 
 
 

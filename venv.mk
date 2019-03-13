@@ -10,8 +10,9 @@ venv/venv.timestamp:
 	touch $@
 
 # Install requirements and create a timestamp file
+# NOTE: we use --pre with pip install to have the not yet release 2.0 Sphinx
 venv/REQUIREMENTS.timestamp: venv/venv.timestamp REQUIREMENTS.txt
-	venv/bin/pip install -r REQUIREMENTS.txt
+	venv/bin/pip install --pre -r REQUIREMENTS.txt
 	touch $@
 
 include Makefile
