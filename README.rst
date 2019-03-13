@@ -54,6 +54,12 @@ Build on Windows
 Translating
 ===========
 
+http://www.sphinx-doc.org/en/master/usage/advanced/intl.html
+
+https://pypi.org/project/sphinx-intl/
+
+https://docs.transifex.com/integrations/transifex-github-integration
+
 ::
 
  sphinx-intl create-txconfig
@@ -67,7 +73,9 @@ Translating
  make gettext
 
  # update the po files:
- sphinx-intl update -p build/gettext -l de -l nl -l en
+ sphinx-intl update -p build/gettext -l nl
+ # and build nl
+ make -e SPHINXOPTS="-D language='nl'" html
 
 
 

@@ -2,11 +2,15 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   ?= sphinx-build
-SPHINXINTL    ?= sphinx-intl
-SOURCEDIR     = source
-BUILDDIR      = build
+LANG            = en
+SPHINXOPTS      =
+SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG)
+SPHINXBUILD     ?= sphinx-build
+SPHINXINTL      ?= sphinx-intl
+SOURCEDIR       = source
+BUILDDIR        = build
+SITEDIR         = /var/www/html/qgisdocs
+
 
 
 # Put it first so that "make" without argument is like "make help".
@@ -15,22 +19,21 @@ help:
 
 .PHONY: help Makefile
 
-# taken from old Makefile, TODO see if this should work
-#springclean: clean
 springclean:
-	# something in i18n/pot dir creates havoc when using gettext: remove it
-	#rm -rf i18n/pot
+	rm -r $(BUILDDIR)
 	# all .mo files
-	#find i18n/*/LC_MESSAGES/ -type f -name '*.mo' -delete
-	# rm -rf i18n/*/LC_MESSAGES/docs/*/
-	# rm -f $(SOURCEDIR)/docs_conf.py*
-	# rm -rf $(SOURCEDIR)/docs/*/
+	find $(SOURCEDIR)/locale/*/LC_MESSAGES/ -type f -name '*.mo' -delete
 
 gettext:
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M gettext "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-#%: Makefile
 html:
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS)"
+	if [ $(LANG) != "en" ]; then \
+		$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXINTLOPTS) $(0); \
+	else \
+		$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(0); \
+	fi
+
+site: html
+	rsync -az $(BUILDDIR)/html/ $(SITEDIR)/$(LANG)/
