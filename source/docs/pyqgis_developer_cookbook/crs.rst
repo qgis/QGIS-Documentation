@@ -7,8 +7,6 @@
 Projections Support
 *******************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -18,46 +16,48 @@ Coordinate reference systems
 ============================
 
 Coordinate reference systems (CRS) are encapsulated by the
-:class:`QgsCoordinateReferenceSystem` class. Instances of this class can be
-created in several different ways:
+:class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
+class. Instances of this class can be created in several different ways:
 
 * specify CRS by its ID
 
-.. testsetup::
+  .. testsetup:: *
 
-   from qgis.core import QgsCoordinateReferenceSystem
+     from qgis.core import QgsCoordinateReferenceSystem
 
-.. testcode::
+  .. testcode:: example1
 
-   # PostGIS SRID 4326 is allocated for WGS84
-   crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
-   assert crs.isValid()
+     # PostGIS SRID 4326 is allocated for WGS84
+     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     assert crs.isValid()
 
-QGIS uses three different IDs for every reference system:
+  QGIS uses three different IDs for every reference system:
 
   * :const:`PostgisCrsId` --- IDs used within PostGIS databases.
   * :const:`InternalCrsId` --- IDs internally used in QGIS database.
   * :const:`EpsgCrsId` --- IDs assigned by the EPSG organization
 
-If not specified otherwise in second parameter, PostGIS SRID is used by default.
+  If not specified otherwise in second parameter, PostGIS SRID is used by default.
 
 * specify CRS by its well-known text (WKT)
 
-  ::
+  .. testcode:: example2
 
-    wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],'
-           PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],'
-           AXIS["Longitude",EAST], AXIS["Latitude",NORTH]]'
-    crs = QgsCoordinateReferenceSystem(wkt)
+     wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],' \
+           'PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],' \
+           'AXIS["Longitude",EAST], AXIS["Latitude",NORTH]]'
+     crs = QgsCoordinateReferenceSystem(wkt)
+     assert crs.isValid()
 
 * create invalid CRS and then use one of the :func:`create*` functions to
   initialize it. In the following example we use Proj4 string to initialize the
   projection
 
-  ::
+  .. testcode:: example2
 
-    crs = QgsCoordinateReferenceSystem()
-    crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+     crs = QgsCoordinateReferenceSystem()
+     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+     assert crs.isValid()
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
 has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
@@ -71,46 +71,71 @@ developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information
 
-::
+.. testcode:: example1
 
-  print("QGIS CRS ID:", crs.srsid())
-  print("PostGIS SRID:", crs.srid())
-  print("EPSG ID:", crs.epsg())
-  print("Description:", crs.description())
-  print("Projection Acronym:", crs.projectionAcronym())
-  print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
-  print("Proj4 String:", crs.toProj4())
-  # check whether it's geographic or projected coordinate system
-  print("Is geographic:", crs.geographicFlag())
-  # check type of map units in this CRS (values defined in QGis::units enum)
-  print("Map units:", crs.mapUnits())
+   print("QGIS CRS ID:", crs.srsid())
+   print("PostGIS SRID:", crs.postgisSrid())
+   #print("EPSG ID:", crs.EpsgCrsId())
+   print("Description:", crs.description())
+   print("Projection Acronym:", crs.projectionAcronym())
+   print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
+   print("Proj4 String:", crs.toProj4())
+   # check whether it's geographic or projected coordinate system
+   print("Is geographic:", crs.isGeographic())
+   # check type of map units in this CRS (values defined in QGis::units enum)
+   print("Map units:", crs.mapUnits())
+
+Output:
+
+.. testoutput:: example1
+
+   QGIS CRS ID: 3452
+   PostGIS SRID: 4326
+   Description: WGS 84
+   Projection Acronym: longlat
+   Ellipsoid Acronym: WGS84
+   Proj4 String: +proj=longlat +datum=WGS84 +no_defs
+   Is geographic: True
+   Map units: 6
 
 .. index:: Projections
 
-Projections
-===========
+CRS Transformation
+==================
 
 You can do transformation between different spatial reference systems by using
-:class:`QgsCoordinateTransform` class. The easiest way to use it is to create
-source and destination CRS and construct :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`
+the :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>` class.
+The easiest way to use it is to create a source and destination CRS and
+construct a :class:`QgsCoordinateTransform <qgis.core.QgsCoordinateTransform>`
 instance with them and the current project. Then just repeatedly call
-:meth:`transform() <qgis.core.QgsCoordinateTransform.transform>` function to do the transformation. By default it does forward
-transformation, but it is capable to do also inverse transformation.
+:meth:`transform() <qgis.core.QgsCoordinateTransform.transform>` function to do
+the transformation. By default it does forward transformation, but it is capable
+to do also inverse transformation.
 
-::
+.. testsetup:: example3
 
-  crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
-  crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
-  xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
+   from qgis.core import QgsCoordinateTransform, QgsProject, QgsPointXY
 
-  # forward transformation: src -> dest
-  pt1 = xform.transform(QgsPoint(18,5))
-  print("Transformed point:", pt1)
+.. testcode:: example3
 
-  # inverse transformation: dest -> src
-  pt2 = xform.transform(pt1, QgsCoordinateTransform.ReverseTransform)
-  print("Transformed back:", pt2)
+   crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
+   crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
+   xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
 
+   # forward transformation: src -> dest
+   pt1 = xform.transform(QgsPointXY(18,5))
+   print("Transformed point:", pt1)
+
+   # inverse transformation: dest -> src
+   pt2 = xform.transform(pt1, QgsCoordinateTransform.ReverseTransform)
+   print("Transformed back:", pt2)
+
+Output:
+
+.. testoutput:: example3
+
+   Transformed point: <QgsPointXY: POINT(832713.79873844375833869 553423.98688333143945783)>
+   Transformed back: <QgsPointXY: POINT(18 5)>
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
