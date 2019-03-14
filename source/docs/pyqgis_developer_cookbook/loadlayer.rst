@@ -283,40 +283,29 @@ encoded properly.
 
 
 * **url** (required) : WCS Server URL. Do not use VERSION in URL, because each
-  version of WCS is using different parameter name for GetCapabilities version,
-  see param version.
-
+  version of WCS is using different parameter name for **GetCapabilities**
+  version, see param version.
 * **identifier** (required) : Coverage name
-
 * **time** (optional) : time position or time period
   (beginPosition/endPosition[/timeResolution])
-
 * **format** (optional) : Supported format name. Default is the first supported
   format with tif in name or the first supported format.
-
 * **crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is
   EPSG:4326 if supported or the first supported CRS.
-
 * **username** (optional) : Username for basic authentication.
-
 * **password** (optional) : Password for basic authentication.
-
 * **IgnoreGetMapUrl** (optional, hack) : If specified (set to 1), ignore
   GetCoverage URL advertised by GetCapabilities. May be necessary if a server is
   not configured properly.
-
 * **InvertAxisOrientation** (optional, hack) : If specified (set to 1), switch
   axis in GetCoverage request. May be necessary for geographic CRS if a server
   is using wrong axis order.
-
 * **IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not
   invert axis orientation according to WCS standard for geographic CRS.
-
 * **cache** (optional) : cache load control, as described in
   QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if
   failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache,
   PreferNetwork, AlwaysNetwork. Default is AlwaysCache.
-
 
 .. index::
   pair: Loading; WMS raster
@@ -386,5 +375,4 @@ For a list of loaded layers and layer ids, use the :meth:`mapLayers() <qgis.core
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
