@@ -106,14 +106,14 @@ use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes
 
 .. code-block:: python
 
-  >>> gPnt.wkbType() == QgsWkbTypes.Point
-  True
-  >>> gLine.wkbType() == QgsWkbTypes.LineString
-  True
-  >>> gPolygon.wkbType() == QgsWkbTypes.Polygon
-  True
-  >>> gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
-  False
+  gPnt.wkbType() == QgsWkbTypes.Point
+  # output: True
+  gLine.wkbType() == QgsWkbTypes.LineString
+  # output: True
+  gPolygon.wkbType() == QgsWkbTypes.Polygon
+  # output: True
+  gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
+  # output: False
 
 As an alternative, one can use :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` method which returns a value from
 :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration.
@@ -122,10 +122,10 @@ You can use the func:`wkbType() <qgis.core.QgsWkbTypes.displayString>` function 
 
 .. code-block:: python
 
-  >>> gPnt.wkbType()
-  1
-  >>> QgsWkbTypes.displayString(int(gPnt.wkbType()))
-  'Point'
+  gPnt.wkbType()
+  # output: 1
+  QgsWkbTypes.displayString(int(gPnt.wkbType()))
+  # output: 'Point'
 
 There is also a helper function
 :meth:`isMultipart() <qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is multipart or not.
@@ -135,12 +135,12 @@ vector type. Here's an example on how to use these accessors:
 
 .. code-block:: python
 
-  >>> gPnt.asPoint()
-  <QgsPointXY: POINT(1 1)>
-  >>> gPnt.asPoint()
-  [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
-  >>> gPolygon.asPolygon()
-  [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
+  gPnt.asPoint()
+  # output: <QgsPointXY: POINT(1 1)>
+  gLine.asPolyline()
+  # output: [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
+  gPolygon.asPolygon()
+  # output: [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint <qgis.core.QgsPoint>`
    objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>` () and :meth:`y() <qgis.core.QgsPoint.y>` methods.
