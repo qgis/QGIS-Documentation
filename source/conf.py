@@ -25,8 +25,11 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.imgmath', 'sphinx.ext.intersphinx']
-
+extensions = [
+    'sphinx.ext.imgmath',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.doctest',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../themes/qgis-theme']
@@ -106,7 +109,7 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/3.4/', None)}
+intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/master/', None)}
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -522,3 +525,21 @@ nitpick_ignore = [('py:class', 'QAction'),
                   ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.renderPolygon'),
                   ('py:meth', 'qgis.core.QgsMarkerSymbolLayer.renderPolyline'),
                   ]
+
+doctest_global_setup = '''
+import os
+import sys
+from qgis.testing import start_app
+
+
+def start_qgis():
+    save_stdout = sys.stdout
+    try:
+        with open(os.devnull, 'w') as f:
+            sys.stdout = f
+            start_app()
+    finally:
+        sys.stdout = save_stdout
+    sys.stdout = sys.stderr
+'''
+doctest_test_doctest_blocks = ''

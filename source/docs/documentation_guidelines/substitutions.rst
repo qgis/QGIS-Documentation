@@ -648,8 +648,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
-.. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -659,6 +657,8 @@ Icon                            Substitution                        Icon        
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |eventBrowser| image:: /static/common/event_browser.png
    :width: 1.5em
@@ -721,10 +721,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 2em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
-   :width: 1.5em
-.. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
@@ -853,8 +853,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
    :width: 1.5em
-.. |makepermanent| image:: /static/common/mIndicatorMemory.png
-   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
@@ -895,9 +893,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
-.. |newAttribute| image:: /static/common/mActionNewAttribute.png
-   :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
@@ -957,19 +955,19 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingHistory| image:: /static/common/history.png
+   :width: 1.5em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingResult| image:: /static/common/processingResult.png
+   :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
-   :width: 1.5em
-.. |processing| image:: /static/common/processingAlgorithm.png
-   :width: 1.5em
-.. |processingHistory| image:: /static/common/history.png
-   :width: 2em
-.. |processingModel| image:: /static/common/processingModel.png
-   :width: 1.5em
-.. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
 .. |pyramids| image:: /static/common/pyramids.png
    :width: 1.5em
@@ -1096,9 +1094,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |stylePreset| image:: /static/common/stylepreset.png
-   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em

@@ -226,8 +226,6 @@ lesson.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
-   :width: 1.5em
 .. |basic| image:: /static/global/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
@@ -246,4 +244,4 @@ lesson.
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -891,7 +891,7 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vectorGrid| image:: /static/common/vector_grid.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png

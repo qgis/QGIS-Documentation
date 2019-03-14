@@ -761,6 +761,7 @@ cartography in creating your output map.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |LS| replace:: Lesson:
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
@@ -771,5 +772,4 @@ cartography in creating your output map.
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |LS| replace:: Lesson:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

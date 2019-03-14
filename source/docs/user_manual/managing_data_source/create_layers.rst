@@ -624,6 +624,6 @@ used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
