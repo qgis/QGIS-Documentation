@@ -3,8 +3,8 @@
 
 # as long as this branch is testing, we only build for english:
 LANG          = en
-SPHINXBUILD   = sphinx-build
-SPHINXINTL    = sphinx-intl
+SPHINXBUILD   ?= sphinx-build
+SPHINXINTL    ?= sphinx-intl
 PAPER         =
 SOURCEDIR     = source
 RESOURCEDIR   = static
@@ -16,11 +16,6 @@ VERSION       = testing
 
 # needed for python2 -> python3 migration?
 export LC_ALL=C.UTF-8
-
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
-endif
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -43,6 +38,7 @@ help:
 	@echo "  pretranslate to gather all strings from sources, put in .pot files"
 	@echo "                  AND merge them with available .po files"
 	@echo "  transifex_push (only for transifex Maintainers!): renew source files and push to transifex"
+	@echo "  doctest     to run all doctests embedded in the documentation (if enabled)"
 	@echo "  "
 	@echo "OPTION: use LANG=xx to do it only for one language, eg: make html LANG=de"
 	@echo "  "
@@ -245,3 +241,9 @@ fasthtml: updatestatic
 	# cancelling the build
 	# No internationalization is performed
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
+
+.PHONY: doctest
+doctest:
+	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
+	@echo "Testing of doctests in the sources finished, look at the " \
+	      "results in $(BUILDDIR)/doctest/output.txt."
