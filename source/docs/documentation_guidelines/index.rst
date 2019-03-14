@@ -12,3 +12,4 @@ Documentation Guidelines
    do_translations
    substitutions
    first_contribution
+   testing_guidelines
