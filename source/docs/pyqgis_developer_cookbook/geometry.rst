@@ -187,7 +187,9 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
 
 Now you have calculated and printed the areas and perimeters of the geometries.
 You may however quickly notice that the values are strange. 
-That is because areas and perimeters don't take CRS into account when computed using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length() <qgis.core.QgsGeometry.length>`
+That is because areas and perimeters don't take CRS into account when computed
+using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length()
+<qgis.core.QgsGeometry.length>`
 methods from the :class:`QgsGeometry <qgis.core.QgsGeometry>` class. For a more powerful area and
 distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class can be used, which can perform ellipsoid based calculations:
 
