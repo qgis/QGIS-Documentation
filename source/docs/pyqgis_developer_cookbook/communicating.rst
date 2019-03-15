@@ -189,8 +189,10 @@ save about the execution of your code.
 
 .. note::
 
- * :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging / developers (i.e. you suspect they are triggered by some broken code)
- * :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to investigate issues by sysadmins (e.g. to help a sysadmin to fix configurations)
+ * :class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging /
+   developers (i.e. you suspect they are triggered by some broken code)
+ * :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to
+   investigate issues by sysadmins (e.g. to help a sysadmin to fix configurations)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

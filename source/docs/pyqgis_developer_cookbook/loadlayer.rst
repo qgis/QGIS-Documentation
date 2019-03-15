@@ -63,7 +63,8 @@ For a geopackage vector layer:
  if not vlayer.isValid():
      print("Layer failed to load!")
 
-The quickest way to open and display a vector layer in QGIS is the :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
+The quickest way to open and display a vector layer in QGIS is the
+:meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
 method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
@@ -277,7 +278,7 @@ Raster layers can also be created from a WCS service:
 Here is a description of the parameters that the WCS URI can contain:
 
 WCS URI is composed of **key=value** pairs separated by ``&``. It is the same
-format like query string in URL, encoded the same way. ``QgsDataSourceUri``
+format like query string in URL, encoded the same way. :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>`
 should be used to construct the URI to ensure that special characters are
 encoded properly.
 
