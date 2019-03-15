@@ -271,6 +271,8 @@ You can get to these files by unzipping.
   :ref:`vector_auxiliary_storage` mechanism in order to embed the underlying
   database.
 
+.. _`saveprojecttodb`:
+
 Projects can also be saved/loaded to/from a PostgreSQL database using the
 following Project menu items:
 
