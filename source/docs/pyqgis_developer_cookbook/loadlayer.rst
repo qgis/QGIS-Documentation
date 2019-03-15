@@ -8,15 +8,6 @@
 Loading Layers
 **************
 
-The code snippets on this page needs the following imports:
-
-.. code-block:: python
-
- import os # This is is needed in the pyqgis console also
- from qgis.core import (
-     QgsVectorLayer
- )
-
 .. contents::
    :local:
 
@@ -30,51 +21,31 @@ them here.
 Vector Layers
 =============
 
-To create a vector layer instance, specify layer's data source identifier, name for the
+To load a vector layer, specify layer's data source identifier, name for the
 layer and provider's name:
 
 .. code-block:: python
 
- # get the path to the shapefile e.g. /home/project/data/ports.shp
- path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
-
- # The format is:
- # vlayer = QgsVectorLayer(data_source, layer_name, provider_name)
-
- vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
- if not vlayer.isValid():
-     print("Layer failed to load!")
+  layer = QgsVectorLayer(data_source, layer_name, provider_name)
+  if not layer.isValid():
+    print("Layer failed to load!")
 
 The data source identifier is a string and it is specific to each vector data
 provider. Layer's name is used in the layer list widget. It is important to
 check whether the layer has been loaded successfully. If it was not, an invalid
 layer instance is returned.
 
-For a geopackage vector layer:
-
-.. code-block:: python
-
- # get the path to a geopackage  e.g. /home/project/data/data.gpkg
- path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
- # append the layername part
- gpkg_places_layer = path_to_gpkg + "|layername=places"
- # e.g. gpkg_places_layer = "/home/project/data/data.gpkg|layername=places"
- vlayer = QgsVectorLayer(gpkg_places_layer, "Places layer", "ogr")
- if not vlayer.isValid():
-     print("Layer failed to load!")
-
-The quickest way to open and display a vector layer in QGIS is the
-:meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
+The quickest way to open and display a vector layer in QGIS is the :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
 method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
 
-    vlayer = iface.addVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
-    if not vlayer:
+    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
+    if not layer:
       print("Layer failed to load!")
 
 This creates a new layer and adds it to the current QGIS project (making it appear
-in the layer list) in one step. The function returns the layer instance or ``None``
+in the layer list) in one step. The function returns the layer instance or `None`
 if the layer couldn't be loaded.
 
 The following list shows how to access various data sources using vector data
@@ -217,8 +188,8 @@ providers:
 
    .. code-block:: python
 
-      # vlayer is a vector layer, uri is a QgsDataSourceUri instance
-      vlayer.setDataSource(uri.uri(), "layer name you like", "postgres")
+      # layer is a vector layer, uri is a QgsDataSourceUri instance
+      layer.setDataSource(uri.uri(), "layer name you like", "postgres")
 
 
 .. index::
@@ -235,25 +206,10 @@ by default). To load a raster from a file, specify its filename and display name
 
 .. code-block:: python
 
- # get the path to a tif file  e.g. /home/project/data/srtm.tif
- path_to_tif = os.path.join(QgsProject.instance().homePath(), "data", "srtm.tif")
- rlayer = QgsRasterLayer(path_to_tif, "SRTM layer name")
- if not rlayer.isValid():
-     print("Layer failed to load!")
+    rlayer = QgsRasterLayer("/path/to/raster/file.tif", "my layer")
+    if not rlayer.isValid():
+      print("Layer failed to load!")
 
-To load a raster from a geopackage:
-
-.. code-block:: python
-
- # get the path to a geopackage  e.g. /home/project/data/data.gpkg
- path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
- # gpkg_raster_layer = "GPKG:/home/project/data/data.gpkg:srtm"
- gpkg_raster_layer = "GPKG:" + path_to_gpkg + ":srtm"
-
- rlayer = QgsRasterLayer(gpkg_raster_layer, "layer name you like", "gdal")
-
- if not rlayer.isValid():
-     print("Layer failed to load!")
 
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer
 function of the :class:`QgisInterface <qgis.gui.QgisInterface>` object:
@@ -269,44 +225,40 @@ Raster layers can also be created from a WCS service:
 
 .. code-block:: python
 
- layer_name = 'modis'
- uri = QgsDataSourceUri()
- uri.setParam('url', 'http://demo.mapserver.org/cgi-bin/wcs')
- uri.setParam("identifier", layer_name)
- rlayer = QgsRasterLayer(str(uri.encodedUri()), 'my wcs layer', 'wcs')
+    layer_name = 'modis'
+    uri = QgsDataSourceUri()
+    uri.setParam('url', 'http://demo.mapserver.org/cgi-bin/wcs')
+    uri.setParam("identifier", layer_name)
+    rlayer = QgsRasterLayer(str(uri.encodedUri()), 'my wcs layer', 'wcs')
 
 Here is a description of the parameters that the WCS URI can contain:
 
-WCS URI is composed of **key=value** pairs separated by ``&``. It is the same
-format like query string in URL, encoded the same way. :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>`
-should be used to construct the URI to ensure that special characters are
-encoded properly.
+WCS URI is composed of key=value pairs separated by '&'. It is the same format
+like query string in URL, encoded the same way. QgsDataSourceUri should be used
+to construct the URI to ensure that special characters are encoded properly.
 
-
-* **url** (required) : WCS Server URL. Do not use VERSION in URL, because each
-  version of WCS is using different parameter name for **GetCapabilities**
-  version, see param version.
-* **identifier** (required) : Coverage name
-* **time** (optional) : time position or time period
-  (beginPosition/endPosition[/timeResolution])
-* **format** (optional) : Supported format name. Default is the first supported
+* url (required) : WCS Server URL. Do not use VERSION in URL, because each
+  version of WCS is using different parameter name for GetCapabilities version,
+  see param version.
+* identifier (required) : Coverage name
+* time (optional) : time position or time period (beginPosition/endPosition[/timeResolution])
+* format (optional) : Supported format name. Default is the first supported
   format with tif in name or the first supported format.
-* **crs** (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is
-  EPSG:4326 if supported or the first supported CRS.
-* **username** (optional) : Username for basic authentication.
-* **password** (optional) : Password for basic authentication.
-* **IgnoreGetMapUrl** (optional, hack) : If specified (set to 1), ignore
-  GetCoverage URL advertised by GetCapabilities. May be necessary if a server is
-  not configured properly.
-* **InvertAxisOrientation** (optional, hack) : If specified (set to 1), switch
-  axis in GetCoverage request. May be necessary for geographic CRS if a server
-  is using wrong axis order.
-* **IgnoreAxisOrientation** (optional, hack) : If specified (set to 1), do not
-  invert axis orientation according to WCS standard for geographic CRS.
-* **cache** (optional) : cache load control, as described in
-  QNetworkRequest::CacheLoadControl, but request is resend as PreferCache if
-  failed with AlwaysCache. Allowed values: AlwaysCache, PreferCache,
-  PreferNetwork, AlwaysNetwork. Default is AlwaysCache.
+* crs (optional) : CRS in form AUTHORITY:ID, e.g. EPSG:4326. Default is EPSG:4326
+  if supported or the first supported CRS.
+* username (optional) : Username for basic authentication.
+* password (optional) : Password for basic authentication.
+* IgnoreGetMapUrl (optional, hack) : If specified (set to 1), ignore GetCoverage
+  URL advertised by GetCapabilities. May be necessary if a server is not configured properly.
+* InvertAxisOrientation (optional, hack) : If specified (set to 1), switch axis
+  in GetCoverage request. May be necessary for geographic CRS if a server is
+  using wrong axis order.
+* IgnoreAxisOrientation (optional, hack) : If specified (set to 1), do not invert
+  axis orientation according to WCS standard for geographic CRS.
+* cache (optional) : cache load control, as described in QNetworkRequest::CacheLoadControl,
+  but request is resend as PreferCache if failed with AlwaysCache. Allowed values:
+  AlwaysCache, PreferCache, PreferNetwork, AlwaysNetwork. Default is AlwaysCache.
+
 
 .. index::
   pair: Loading; WMS raster
@@ -340,25 +292,24 @@ Adding a layer to the current project is done using the :meth:`addMapLayer() <qg
 
 .. code-block:: python
 
-    QgsProject.instance().addMapLayer(rlayer)
+    QgsProject.instance().addMapLayer(layer)
 
 To add a layer at an absolute position:
 
 .. code-block:: python
 
     # first add the layer without showing it
-    QgsProject.instance().addMapLayer(rlayer, False)
+    QgsProject.instance().addMapLayer(layer, False)
     # obtain the layer tree of the top-level group in the project
     layerTree = iface.layerTreeCanvasBridge().rootGroup()
     # the position is a number starting from 0, with -1 an alias for the end
-    layerTree.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
+    layerTree.insertChildNode(-1, QgsLayerTreeLayer(layer))
 
 If you want to delete the layer use the :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method:
 
 .. code-block:: python
 
-    # QgsProject.instance().removeMapLayer(layer_id)
-    QgsProject.instance().removeMapLayer(rlayer.id())
+    QgsProject.instance().removeMapLayer(layer_id)
 
 In the above code, the layer id is passed (you can get it calling the :meth:`id() <qgis.core.QgsMapLayer.id>` method of the layer),
 but you can also pass the layer object itself.
