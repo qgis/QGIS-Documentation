@@ -10,7 +10,7 @@ If you are planning to add or update some chapters of the
 automatic testing of the code snippets.
 
 Testing is really important because allows checking automatically the quality of
-the code. During testing, if the code is not good or outdated, tests will fail,
+the code. During testing, if the code is not good or is outdated, tests will fail,
 meaning that the code snippet has errors and needs to be fixed.
 
 For testing, we use the `Sphinx doctest extension
