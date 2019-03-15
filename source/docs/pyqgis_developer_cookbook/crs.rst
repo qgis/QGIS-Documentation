@@ -1,6 +1,14 @@
 .. only:: html
 
 
+.. testsetup:: *
+
+   from qgis.core import (QgsCoordinateReferenceSystem,
+                          QgsCoordinateTransform,
+                          QgsProject,
+                          QgsPointXY,
+                          )
+
 .. _crs:
 
 *******************
@@ -21,11 +29,7 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its ID
 
-  .. testsetup:: *
-
-     from qgis.core import QgsCoordinateReferenceSystem
-
-  .. testcode:: example1
+  .. testcode:: crs_fromID
 
      # PostGIS SRID 4326 is allocated for WGS84
      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
@@ -41,7 +45,7 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its well-known text (WKT)
 
-  .. testcode:: example2
+  .. testcode:: crs_fromWKT
 
      wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],' \
            'PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],' \
@@ -53,7 +57,7 @@ class. Instances of this class can be created in several different ways:
   initialize it. In the following example we use Proj4 string to initialize the
   projection
 
-  .. testcode:: example2
+  .. testcode:: crs_fromCreate
 
      crs = QgsCoordinateReferenceSystem()
      crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
@@ -71,7 +75,7 @@ developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information
 
-.. testcode:: example1
+.. testcode:: crs_fromID
 
    print("QGIS CRS ID:", crs.srsid())
    print("PostGIS SRID:", crs.postgisSrid())
@@ -87,7 +91,7 @@ Accessing spatial reference system information
 
 Output:
 
-.. testoutput:: example1
+.. testoutput:: crs_fromID
 
    QGIS CRS ID: 3452
    PostGIS SRID: 4326
@@ -112,11 +116,7 @@ instance with them and the current project. Then just repeatedly call
 the transformation. By default it does forward transformation, but it is capable
 to do also inverse transformation.
 
-.. testsetup:: example3
-
-   from qgis.core import QgsCoordinateTransform, QgsProject, QgsPointXY
-
-.. testcode:: example3
+.. testcode:: crs_transform
 
    crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
    crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
@@ -132,7 +132,7 @@ to do also inverse transformation.
 
 Output:
 
-.. testoutput:: example3
+.. testoutput:: crs_transform
 
    Transformed point: <QgsPointXY: POINT(832713.79873844375833869 553423.98688333143945783)>
    Transformed back: <QgsPointXY: POINT(18 5)>
