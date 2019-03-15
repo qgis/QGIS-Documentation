@@ -42,13 +42,26 @@ and run the build from within that venv::
 
  make html
 
+Want to build your own language? For example 'nl'::
+
+ make LANG=nl html
+
 Build on Windows
 ================
+
+You need to install git (https://git-scm.com/download/win) and Python3 (https://www.python.org/downloads/windows/)
+
+Install both in default places and with default options.
+
+Clone the repository, and go into that directory.
+
+Then create a virtual environment called 'venv' in that directory, and activate it (Google for Python Virtual Env on Windows for more details):
 
 ::
 
  pip install -r REQUIREMENTS.txt venv
- venv/source/bin/activate
+ # in dos box:
+ venv\Scripts\activate.bat
  make.bat
 
 Want to build your own language? For example 'nl'::
