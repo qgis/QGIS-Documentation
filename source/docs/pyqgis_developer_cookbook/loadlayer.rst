@@ -63,7 +63,8 @@ For a geopackage vector layer:
  if not vlayer.isValid():
      print("Layer failed to load!")
 
-The quickest way to open and display a vector layer in QGIS is the :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
+The quickest way to open and display a vector layer in QGIS is the
+:meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
 method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
 .. code-block:: python
