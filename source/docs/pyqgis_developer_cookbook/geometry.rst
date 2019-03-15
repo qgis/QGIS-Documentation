@@ -194,7 +194,8 @@ methods from the :class:`QgsGeometry <qgis.core.QgsGeometry>` class. For a more 
 distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>`
 class can be used, which can perform ellipsoid based calculations:
 
-The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
+The following code assumes ``layer`` is a :class:`QgsVectorLayer
+<qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 
 .. code-block:: python
 
