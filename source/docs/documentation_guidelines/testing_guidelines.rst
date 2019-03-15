@@ -86,7 +86,7 @@ Grouping code snippets tests
 ----------------------------
 
 For each rst document, the code snippets are tested sequentially, which means
-you can use one ``..testsetup::`` for all the following code snippets and that
+you can use one ``.. testsetup::`` for all the following code snippets and that
 later snippets will use variables declared in previous ones.
 
 Alternatively, you can use groups to break down the examples on the same page in
