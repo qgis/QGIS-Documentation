@@ -104,7 +104,7 @@ The doctest will pick each group snippets and run them independently.
 
 If you don't declare any group, the code snippet will be added to the *default*
 group. If instead, you use ``*`` as a group name, the snippet will be used in
-all testing groups, something normally usefull to use in the test setup::
+all testing groups, something normally useful to use in the test setup::
 
   .. testsetup:: *
 
