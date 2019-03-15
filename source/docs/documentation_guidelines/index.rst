@@ -8,6 +8,7 @@ Documentation Guidelines
    :maxdepth: 2
 
    writing
+   cookbook_guidelines
    do_translations
    substitutions
    first_contribution
