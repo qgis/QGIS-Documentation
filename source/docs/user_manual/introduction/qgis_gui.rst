@@ -91,12 +91,12 @@ Menu Option                                              Shortcut              T
 |fileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         :guilabel:`Project`        :ref:`sec_projects`
 :menuselection:`New from template -->`                   \                     \                          :ref:`sec_projects`
 |fileOpen| :guilabel:`Open...`                           :kbd:`Ctrl+O`         :guilabel:`Project`        :ref:`sec_projects`
-:menuselection:`Open from --> PostgreSQL`                \                     \                          \
+:menuselection:`Open from --> PostgreSQL`                \                     \                          :ref:`sec_projects`
 :menuselection:`Open Recent -->`                         \                     \                          :ref:`sec_projects`
 :guilabel:`Close`                                        \                     \                          :ref:`sec_projects`
 |fileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         :guilabel:`Project`        :ref:`sec_projects`
 |fileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   :guilabel:`Project`        :ref:`sec_projects`
-:menuselection:`Save to --> PostgreSQL`                  \                     \                          \
+:menuselection:`Save to --> PostgreSQL`                  \                     \                          :ref:`sec_projects`
 :guilabel:`Revert...`                                    \                     \                          \
 :guilabel:`Properties...`                                :kbd:`Ctrl+Shift+P`   \                          :ref:`project_properties`
 :guilabel:`Snapping Options...`                          \                     \                          :ref:`snapping_tolerance`
