@@ -12,6 +12,8 @@ cache:
   # start without a cache
   timeout: 1000
 
+if: NOT branch =~ /^(cherry-pick-)?backport-\d+-on-/
+
 #addons:
 #  apt:
 #    packages:
