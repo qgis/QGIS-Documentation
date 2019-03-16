@@ -1,9 +1,9 @@
 
 .. _pyqgis_testing:
 
-*********************
- Testing pyqgis code
-*********************
+***********************************
+Writing code in the PyQGIS Cookbook
+***********************************
 
 If you are planning to add or update some chapters of the
 :ref:`PyQGIS-Developer-Cookbook`, then you should follow some rules to enable
@@ -16,10 +16,6 @@ meaning that the code snippet has errors and needs to be fixed.
 For testing, we use the `Sphinx doctest extension
 <https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html>`_. Refer to
 the extension documentation for more detailed information.
-
-This section is divided into two parts: the first part explains how to write
-testable code snippets, while the second briefly explains how to run the tests
-locally.
 
 
 How to write testable code snippets
@@ -95,12 +91,19 @@ different tests.
 You add the code snippet to groups by adding one or more group names (separated
 by commas) in the respective directive::
 
-  .. testcode:: example1 [, morenames]
+  .. testcode:: crs_crsfromID [, morenames]
 
      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
      assert crs.isValid()
 
 The doctest will pick each group snippets and run them independently.
+
+.. note::
+
+   Use group names that make sense with the related content.
+   Use something similar to <chapter>_<subchapter>, for example: crs_intro,
+   crs_fromwkt. In case of failures, this will help identifying where the failures
+   occur.
 
 If you don't declare any group, the code snippet will be added to the *default*
 group. If instead, you use ``*`` as a group name, the snippet will be used in
