@@ -2,6 +2,15 @@
 
    |updatedisclaimer|
 
+The code snippets on this page needs the following imports if you're outside the pyqgis console:
+
+.. code-block:: python
+
+    from qgis.core import (
+      QgsExpression,
+      QgsExpressionContext
+    )
+
 .. index:: Expressions, Filtering, Calculating values
 
 .. _expressions:
