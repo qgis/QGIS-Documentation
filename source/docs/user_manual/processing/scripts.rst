@@ -38,6 +38,7 @@ The following code calculates the Topographic Wetness Index (TWI) directly from
 a DEM using the @alg decorator.
 
 .. code-block:: python
+
     from qgis.processing import alg
     
     @alg(name="tpicalc", label="TPI Calculator", group="myscripts", groupid="myscripts")
