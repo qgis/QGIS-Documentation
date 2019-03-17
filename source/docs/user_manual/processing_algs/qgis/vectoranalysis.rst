@@ -67,14 +67,16 @@ will take precedence and the unique class field will be ignored.
 Parameters
 ..........
 ``Polygons`` [vector: polygon]
-  Polygons layer.
+  Polygon layer whose features are associated with the count of points
+  they contain.
 
 ``Points`` [vector: point]
-  Points layer.
+  Point layer to count features from.
 
 ``Weight field`` [tablefield: any]
   Optional
 
+  A field with numeric-like values from the point layer.
   The count generated will be the sum of the weight field for each point contained
   by the polygon.
 
@@ -83,7 +85,7 @@ Parameters
 
   Points are classified based on the selected attribute and if several points with
   the same attribute value are within the polygon, only one of them is counted.
-  The final count of the point in a polygon is, therefore, the count of different
+  The final count of the points in a polygon is, therefore, the count of different
   classes that are found in it.
 
 ``Count field name`` [string]
