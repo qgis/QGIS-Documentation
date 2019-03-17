@@ -536,9 +536,9 @@ guidelines:
 * Each algorithm documentation should be placed in the corresponding **provider**
   folder and **group** file, e.g. the algorithm `Voronoi polygon` belongs to the
   `QGIS` provider and to the group `vectorgeometry`. So the correct file to add
-  the description is: ``source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst``.
+  the description is: :file:`source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst`.
 
-  .. note:: before starting to write the guide, check if the algorithm is already
+  .. note:: Before starting to write the guide, check if the algorithm is already
     described. In this case, you can enhance the existing description.
 
 * It is **extremely** important that each algorithm has an *anchor* that corresponds
@@ -553,46 +553,41 @@ guidelines:
 
   To find out the algorithm name you can just hover the mouse on the algorithm in
   the Processing toolbox.
-
 * Avoid use "This algorithm does this and that..." as first sentence in algorithm
-  description. Try to use more general words like in TauDEM or GRASS algorithms
-  help.
+  description. Try to use more general expressions like::
+  
+    Takes a point layer and generates a polygon layer containing the...
 
 * Avoid to describe what the algorithm does by replicating its name and please
   don't replicate the name of the parameter in the description of the parameter
   itself. For example if the algorithm is ``Voronoi polygon`` consider to describe
   the ``Input layer`` like ``Layer to calculate the polygon from``.
-
-* Add images! A picture is worth a thousand words! Use PNG format and follow general
+* Indicate in the description whether the algorithm has a default shortcut in
+  QGIS or supports in-place editing.
+* Add images! A picture is worth a thousand words! Use :file:`.png` format and follow general
   guidelines for documentation (see the :ref:`image` section for more info).
-  Put the file in the correct folder: it depends on the provider, e.g. for QGIS::
-
-    /source/docs/user_manual/processing_algs/qgis/img/myPicture.png
-
+  Put the image file in the correct folder, i.e. the :file:`img` folder next to
+  the :file:`.rst` file you are editing.
 * If necessary, add links to the "See also" section that provides additional information
   about the algorithm  (e.g., publications or web-pages).  Only add the "See also"
   section if there is really something to see. As a good practice, the "See also"
   section can be filled with links to similar algorithms.
-
-* Give clear explanation for algorithm parameters and outputs (again GRASS and
-  TauDEM are good examples).
-
+* Give clear explanation for algorithm parameters and outputs: take inspiration
+  from existing algorithms.
 * Avoid to duplicate algorithm options detailed description. Add these information
   in the parameter description.
-
 * Avoid to add information about the vector geometry type in algorithm or parameter
   description without compelling reason as this information is already available
   in parameter description.
-
-* Add the default value if the parameter in *italic*, e.g.::
+* Add the default value of the parameter in *italic*, e.g.::
 
     ``Number of points`` [number]
       Number of points to create
 
       Default: *1*
 
-* It should be also described the *type* of the parameters. There are several types
-  available but avoid to invent new ones and pick one of these:
+* Describe the *type* of input supported the parameters. There are several types
+  available you can pick one from:
 
   ========================================  =========================  ====================
   Parameter/Output type                     Description                Visual indicator
@@ -620,15 +615,16 @@ guidelines:
   Folder path                               ``folder``
   ========================================  =========================  ====================
 
+|
+
 * The best option is studying an existing and well documented algorithm and copy
   all the useful layouts
-
 * If the algorithm does not provide any output just skip that section
-
 * When you are finished just follow the guidelines described in :ref:`step_by_step`
   to commit your changes and make a Pull Request
 
-Here an example of an existing algorithm to help you with the layout and the description::
+Here is an example of an :ref:`existing algorithm <qgiscountpointsinpolygon>`
+to help you with the layout and the description::
 
   .. _qgiscountpointsinpolygon:
 
@@ -637,9 +633,9 @@ Here an example of an existing algorithm to help you with the layout and the des
   Takes a point and a polygon layer and counts the number of points from the
   first one in each polygon of the second one.
 
-  A new polygons layer is generated, with the exact same content as the input
-  polygons layer, but containing an additional field with the points count
-  corresponding to each polygon.
+  A new polygon layer is generated, with the exact same content as the
+  input polygon layer, but containing an additional field with the points
+  count corresponding to each polygon.
 
   .. figure:: /img/count_points_polygon.png
     :align: center
@@ -655,14 +651,16 @@ Here an example of an existing algorithm to help you with the layout and the des
   ..........
 
   ``Polygons`` [vector: polygon]
-    Polygons layer
+    Polygon layer whose features are associated with the count of points
+	they contain.
 
   ``Points`` [vector: point]
-    Points layer
+    Point layer to count features from.
 
   ``Weight field`` [tablefield: any]
     Optional
 
+    A field with numeric-like values from the point layer.
     The count generated will be the sum of the weight field for each point
     contained by the polygon.
 
@@ -671,7 +669,7 @@ Here an example of an existing algorithm to help you with the layout and the des
 
     Points are classified based on the selected attribute and if several
     points with the same attribute value are within the polygon, only one
-    of them is counted. The final count of the point in a polygon is,
+    of them is counted. The final count of the points in a polygon is,
     therefore, the count of different classes that are found in it.
 
   ``Count field name`` [string]
@@ -683,8 +681,8 @@ Here an example of an existing algorithm to help you with the layout and the des
   .......
 
   ``Count`` [vector: polygon]
-    Resulting layer with the attribute table containing the new column of the
-    points count.
+    Resulting layer with the attribute table containing the new column of
+    the points count.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
