@@ -1,7 +1,11 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Other programs
 ===================
 
-Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_ 
+Module contributed by Paolo Cavallini - `Faunalia <https://www.faunalia.eu>`_
 
 .. note:: This chapter shows how to use additional programs from inside Processing. To complete it, you must have installed, with the tools of your operating system, the relevant packages.
 
@@ -23,22 +27,8 @@ The beauty of Processing implementation is that you can add your own scripts, si
 
 Test some of the preinstalled examples, if you have R_ already installed (remember to activate R modules from the General configuration of Processing).
 
-OTB
-----
-
-OTB_ (also known as Orfeo ToolBox) is a free and open source library of image processing algorithms. It is installed by deafult on Windows through the OSGeo4W standalone installer (**NB: 32 bit only**). Paths should be configured in Processing.
-
-In a standard OSgeo4W Windows installation, the paths will be::
-
-  OTB application folder    C:\OSGeo4W\apps\orfeotoolbox\applications
-  OTB command line tools folder C:\OSGeo4W\bin
-
-On Debian and derivatives, it will be :kbd:`/usr/bin`
-
 Others
 -------
-
-TauDEM_ is a suite of Digital Elevation Model (DEM) tools for the extraction and analysis of hydrologic information. Availability in various operating system varies.
 
 LASTools_ is a set of mixed, free and proprietary commands to process and analyze LiDAR data. Availability in various operating system varies.
 
@@ -88,11 +78,18 @@ Dissolve features based on a common attribute:
 
 **Exercise for the reader**: find the differences (geometry and attributes) between different methods.
 
-.. _GRASS: http://grass.osgeo.org/
-.. _R: http://www.r-project.org/
-.. _OTB: http://orfeo-toolbox.org
-.. _TauDEM: http://hydrology.usu.edu/taudem/taudem5/
-.. _LASTools: http://rapidlasso.com/lastools/
-.. _LecoS: http://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
+.. _GRASS: https://grass.osgeo.org/
+.. _R: https://www.r-project.org/
+.. _LASTools: https://rapidlasso.com/lastools/
+.. _LecoS: https://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
-.. _Animove: http://www.faunalia.eu/en/animove.html
+.. _Animove: https://www.faunalia.eu/en/animove.html
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Feature Topology
 ===============================================================================
 
@@ -21,7 +25,7 @@ snapping options:
 * Navigate to the menu entry :menuselection:`Project --> Snapping Options...`.
 * Set up your :guilabel:`Snapping options` dialog as shown:
 
-.. image:: /static/training_manual/create_vector_data/set_snapping_options.png
+.. image:: img/set_snapping_options.png
    :align: center
 
 * Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to
@@ -32,12 +36,12 @@ snapping options:
   :guilabel:`Advanced Digitizing` toolbar is enabled.
 * Zoom to this area (enable layers and labels if necessary):
 
-.. image:: /static/training_manual/create_vector_data/zoom_to.png
+.. image:: img/zoom_to.png
    :align: center
 
 * Digitize this new (fictional) area of the |largeLandUseArea|:
 
-.. image:: /static/training_manual/create_vector_data/new_park_area.png
+.. image:: img/new_park_area.png
    :align: center
 
 * When prompted, give it a :guilabel:`OGC_FID` of :kbd:`999`, but feel free to
@@ -59,7 +63,7 @@ Topology features can sometimes need to be updated. In our example, the
 :guilabel:`landuse` layer has some complex forest areas which have recently been
 joined to form one area:
 
-.. image:: /static/training_manual/create_vector_data/forest_area_example.png
+.. image:: img/forest_area_example.png
    :align: center
 
 Instead of creating new polygons to join the forest areas, we're going to use
@@ -70,24 +74,24 @@ the :guilabel:`Node Tool` to edit the existing polygons and join them.
 * Pick an area of forest, select a corner and move it to an adjoining corner so
   two forest sections meet:
 
-.. image:: /static/training_manual/create_vector_data/corner_selected.png
+.. image:: img/corner_selected.png
    :align: center
 
 * Click and drag the nodes until they snap into place.
 
-.. image:: /static/training_manual/create_vector_data/corner_selected_move.png
+.. image:: img/corner_selected_move.png
    :align: center
 
 The topologically correct border looks like this:
 
-.. image:: /static/training_manual/create_vector_data/areas_joined.png
+.. image:: img/areas_joined.png
    :align: center
 
 Go ahead and join a few more areas using the :guilabel:`Node Tool`. You can also
 use the :guilabel:`Add Feature` tool if it is appropriate. If you are using our
 example data, you should have a forest area looking something like this:
 
-.. image:: /static/training_manual/create_vector_data/node_example_result.png
+.. image:: img/node_example_result.png
    :align: center
 
 Don't worry if you have joined more, less or different areas of forest.
@@ -103,12 +107,12 @@ This is the :guilabel:`Simplify Feature` tool:
 * Click on one of the areas which you joined using either the
   :guilabel:`Node Tool` or :guilabel:`Add Feature` tool. You'll see this dialog:
 
-.. image:: /static/training_manual/create_vector_data/simplify_line_dialog.png
+.. image:: img/simplify_line_dialog.png
    :align: center
 
 * Move the slider from side to side and watch what happens:
 
-.. image:: /static/training_manual/create_vector_data/simplify_line_example.png
+.. image:: img/simplify_line_example.png
    :align: center
 
 This allows you to reduce the amount of nodes in complex features.
@@ -169,9 +173,9 @@ South Africa but you haven't yet added the Prince Edward Islands, you'd use
 this tool to create them.
 
 * To use this tool, you must first select the polygon to which you wish to add
-  the part by using the :guilabel:`Select Single Feature` tool:
+  the part by using the :guilabel:`Select Features by area or single click` tool:
 
-  |select|
+  |selectRectangle|
 
 * Now try using the :guilabel:`Add Part` tool to add an outlying area to the
   |largeLandUseArea|.
@@ -198,12 +202,12 @@ It can add a bump to an existing feature. With this tool selected:
   original polygon, forming an open-sided rectangle.
 * Right-click to finish marking points:
 
-.. image:: /static/training_manual/create_vector_data/reshape_step_one.png
+.. image:: img/reshape_step_one.png
    :align: center
 
 This will give a result similar to:
 
-.. image:: /static/training_manual/create_vector_data/reshape_result.png
+.. image:: img/reshape_result.png
    :align: center
 
 You can do the opposite, too:
@@ -212,12 +216,12 @@ You can do the opposite, too:
 * Draw a rectangle into the polygon.
 * Right-click outside the polygon again:
 
-.. image:: /static/training_manual/create_vector_data/reshape_inverse_example.png
+.. image:: img/reshape_inverse_example.png
    :align: center
 
 The result of the above:
 
-.. image:: /static/training_manual/create_vector_data/reshape_inverse_result.png
+.. image:: img/reshape_inverse_result.png
    :align: center
 
 
@@ -238,7 +242,7 @@ We will use the tool to split a corner from the |largeLandUseArea|.
   drawing a line. Click the vertex on the opposite side of the corner you wish
   to split and right-click to complete the line:
 
-.. image:: /static/training_manual/create_vector_data/split_feature_example.png
+.. image:: img/split_feature_example.png
    :align: center
 
 * At this point, it may seem as if nothing has happened. But remember that your
@@ -247,7 +251,7 @@ We will use the tool to split a corner from the |largeLandUseArea|.
 * Use the :guilabel:`Select Single Feature` tool to select the corner you just
   split; the new feature will now be highlighted:
 
-.. image:: /static/training_manual/create_vector_data/new_corner_selected.png
+.. image:: img/new_corner_selected.png
    :align: center
 
 .. _backlink-create-vector-topology-4:
@@ -276,3 +280,40 @@ correct.
 Now you know how to digitize the shape of the objects easily, but adding in the
 attributes is still a bit of a headache! Next we'll show you how to use forms
 so that attribute editing is simpler and more effective.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
+.. |addRing| image:: /static/common/mActionAddRing.png
+   :width: 2em
+.. |deletePart| image:: /static/common/mActionDeletePart.png
+   :width: 2em
+.. |deleteRing| image:: /static/common/mActionDeleteRing.png
+   :width: 2em
+.. |hard| image:: /static/global/hard.png
+.. |largeLandUseArea| replace:: Bontebok National Park
+.. |moderate| image:: /static/global/moderate.png
+.. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |reshape| image:: /static/common/mActionReshape.png
+   :width: 1.5em
+.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
+   :width: 1.5em
+.. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+   :width: 2em
+.. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

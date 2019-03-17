@@ -52,7 +52,7 @@ Parameters
   needed when generating stream rasters according to drop analysis.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shape file defining outlets of interest. If this input file is used,
   only the area upslope of these outlets will be evaluated by the tool.
@@ -74,15 +74,6 @@ Outputs
 ``Extreme Upslope Values Grid`` [raster]
   A grid of the maximum/minimum upslope values.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8extremeupslopevalue', -p, -sa, -o, -nc, -min, -ssa)
-
-See also
-........
 
 Length Area Stream Source
 -------------------------
@@ -143,15 +134,6 @@ Outputs
   upslope path length, the D8 contributing area grid inputs, and parameters ``M``
   and ``y``. This grid indicates likely stream source grid cells.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:lengthareastreamsource', length_grid, contrib_area_grid, threshold, exponent, stream_source_grid)
-
-See also
-........
 
 Move Outlets To Streams
 -----------------------
@@ -208,7 +190,7 @@ Parameters
 Outputs
 .......
 
-``Output Outlet Shapefile`` [vector]
+``Output Outlet Shapefile`` [vector: point]
   A point shape file defining points of interest or outlets. This file has one
   point in it for each point in the input outlet shapefile. If the original
   point was located on a stream, then the point was not moved. If the origianl
@@ -219,15 +201,6 @@ Outputs
   originally on a stream, -1 if it was not moved becuase there was not a stream
   within the maximum distance, or some positive value if it was moved.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:moveoutletstostreams', -p, -src, -o, -md, -om)
-
-See also
-........
 
 Peuker Douglas
 --------------
@@ -280,13 +253,6 @@ Outputs
   and Douglas algorithm, and if viewed, resembles a channel network. This
   proto-channel network generally lacks connectivity and requires thinning,
   issues that were discussed in detail by Band (1986).
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:peukerdouglas', elevation_grid, center_weight, side_weight, diagonal_weight, stream_source_grid)
 
 See also
 ........
@@ -388,7 +354,7 @@ Parameters
   Default: *100*
 
 ``Mask Grid`` [raster]
-  Optional.
+  Optional
 
   This optional input is a grid that is used to mask the domain of interest and
   output is only provided where this grid is >= 0. A common use of this input
@@ -441,7 +407,7 @@ where the exact watershed characteristic(s) that were accumulated in the
 accumulated stream source grid vary based on the method being used to determine
 the stream network raster.
 
-.. figure:: /static/user_manual/processing_algs/taudem/streamdrops.jpg
+.. figure:: img/streamdrops.jpg
    :align: center
 
 The constant stream drop "law" was identified by Broscoe (1959). For the science
@@ -510,7 +476,7 @@ Parameters
 
   Default: *10*
 
-``Spacing for Threshold Values`` [selection]
+``Spacing for Threshold Values`` [enumeration]
   This parameter indicates whether logarithmic or linear spacing should be used
   when looking for possible threshold values using drop ananlysis.
 
@@ -625,7 +591,7 @@ Parameters
   the stream network.
 
 ``Outlets Shapefile as Network Nodes`` [vector: point]
-  Optional.
+  Optional
 
   A point shape file defining points of interest. If this file is used, the
   tool will only deliiniate the stream network upstream of these outlets.
@@ -663,7 +629,7 @@ Outputs
   in the case where the delineate single watershed option was checked, the
   entire area draining to the stream network is identified with a single ID.
 
-``Stream Reach Shapefile`` [vector]
+``Stream Reach Shapefile`` [vector: line]
   This output is a polyline shapefile giving the links in a stream network. The
   columns in the attribute table are:
 
@@ -824,3 +790,12 @@ Console usage
 
 See also
 ........
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

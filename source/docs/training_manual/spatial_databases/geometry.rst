@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Geometry Construction
 ===============================================================================
 
@@ -125,7 +129,7 @@ Looking at Our Schema
 
 By now our schema should be looking like this:
 
-.. image:: /static/training_manual/spatial_databases/final_schema.png
+.. image:: img/final_schema.png
    :align: center
 
 
@@ -177,7 +181,7 @@ To avoid empty geometries, use:
 
   where not st_isempty(st_intersection(a.the_geom, b.the_geom))
 
-.. image:: /static/training_manual/spatial_databases/qgis_001.png
+.. image:: img/qgis_001.png
    :align: center
 
 .. code-block:: sql
@@ -187,7 +191,7 @@ To avoid empty geometries, use:
   where not st_isempty(st_intersection(st_setsrid(a.the_geom,32734),
     b.the_geom));
 
-.. image:: /static/training_manual/spatial_databases/qgis_002.png
+.. image:: img/qgis_002.png
    :align: center
 
 Building Geometries from Other Geometries
@@ -198,7 +202,7 @@ points is defined by their :kbd:`id`. Another ordering method could be a
 timestamp, such as the one you get when you capture waypoints with a GPS
 receiver.
 
-.. image:: /static/training_manual/spatial_databases/qgis_006.png
+.. image:: img/qgis_006.png
    :align: center
 
 To create a linestring from a new point layer called 'points', you can run the
@@ -217,14 +221,14 @@ To see how it works without creating a new layer, you could also run this
 command on the 'people' layer, although of course it would make little
 real-world sense to do this.
 
-.. image:: /static/training_manual/spatial_databases/qgis_007.png
+.. image:: img/qgis_007.png
    :align: center
 
 Geometry Cleaning
 -------------------------------------------------------------------------------
 
 You can get more information for this topic in `this blog entry
-<http://linfiniti.com/?s=cleangeometry>`_.
+<https://linfiniti.com/?s=cleangeometry>`_.
 
 Differences between tables
 -------------------------------------------------------------------------------
@@ -264,3 +268,17 @@ with geo-enabled databases through a GIS frontend. You usually won't need to
 actually enter these statements manually, but having a general idea of their
 structure will help you when using a GIS, especially if you encounter errors
 that would otherwise seem cryptic.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

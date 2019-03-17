@@ -13,10 +13,13 @@ Overview
 ========
 
 **Map projections** try to portray the surface of the earth or a portion of the
-earth on a flat piece of paper or computer screen. A **coordinate reference
-system** (CRS) then defines, with the help of coordinates, how the two-dimensional,
-projected map in your GIS is related to real places on the earth. The decision
-as to which map projection and coordinate reference system to use, depends on
+earth on a flat piece of paper or computer screen. In a lay man's term, map projections
+tries to transform the earth from its spherical shape (3D) to a planar shape (2D) so that
+maps can be made on flat layers e.g maps.
+
+A **coordinate reference system** (CRS) then defines, with the help of coordinates, 
+how the two-dimensional, projected map in your GIS is related to real places on the earth. 
+The decision as to which map projection and coordinate reference system to use, depends on
 the regional extent of the area you want to work in, on the analysis you want to
 do and often on the availability of data.
 
@@ -53,7 +56,7 @@ extent.
 The three families of map projections
 =====================================
 
-The process of creating map projections can be visualised by positioning a light
+The process of creating map projections is best illustrated by positioning a light
 source inside a transparent globe on which opaque earth features are placed. Then
 project the feature outlines onto a two-dimensional flat piece of paper.
 Different ways of projecting can be produced by surrounding the globe in a
@@ -65,7 +68,7 @@ figure_projection_families_)
 
 .. _figure_projection_families:
 
-.. figure:: /static/gentle_gis_introduction/projections/projection_families.png
+.. figure:: img/projection_families.png
    :align: center
    :width: 30em
 
@@ -85,12 +88,12 @@ of angular conformity, distance and area**. A map projection may combine several
 of these characteristics, or may be a compromise that distorts all the properties
 of area, distance and angular conformity, within some acceptable limit. Examples
 of compromise projections are the **Winkel Tripel projection** and the **Robinson
-projection** (see figure_robinson_projection_), which are often used for world
-maps.
+projection** (see figure_robinson_projection_), which are often used for producing
+and visualizing world maps.
 
 .. _figure_robinson_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/robinson_projection.png
+.. figure:: img/robinson_projection.png
    :align: center
    :width: 30em
 
@@ -127,7 +130,7 @@ many of its topographic maps.
 
 .. _figure_mercator_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/mercator_projection.png
+.. figure:: img/mercator_projection.png
    :align: center
    :width: 30em
 
@@ -152,7 +155,7 @@ figure_azimuthal_equidistant_projection_).
 
 .. _figure_plate_caree_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/plate_carree_projection.png
+.. figure:: img/plate_carree_projection.png
    :align: center
    :width: 30em
 
@@ -161,7 +164,7 @@ figure_azimuthal_equidistant_projection_).
 
 .. _figure_azimuthal_equidistant_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/azimuthal_equidistant_projection.png
+.. figure:: img/azimuthal_equidistant_projection.png
    :align: center
    :width: 30em
 
@@ -180,7 +183,7 @@ in your town to find out whether it is large enough for a new shopping mall,
 equal area projections are the best choice. On the one hand, the larger the area
 you are analysing, the more precise your area measures will be, if you use an
 equal area projection rather than another type. On the other hand, an equal area
-projection results in** distortions of angular conformity** when dealing with
+projection results in **distortions of angular conformity** when dealing with
 large areas. Small areas will be far less prone to having their angles distorted
 when you use an equal area projection. **Alber's equal area**, **Lambert's equal
 area** and **Mollweide Equal Area Cylindrical projections** (shown in
@@ -189,7 +192,7 @@ are often encountered in GIS work.
 
 .. _figure_mollweide_equal_area_projection:
 
-.. figure:: /static/gentle_gis_introduction/projections/mollweide_equal_area_projection.png
+.. figure:: img/mollweide_equal_area_projection.png
    :align: center
    :width: 30em
 
@@ -233,7 +236,7 @@ for a pictorial view.
 
 .. _figure_geographic_crs:
 
-.. figure:: /static/gentle_gis_introduction/projections/geographic_crs.png
+.. figure:: img/geographic_crs.png
    :align: center
    :width: 30em
 
@@ -281,7 +284,7 @@ coordinate.
 
 .. _figure_projected_crs:
 
-.. figure:: /static/gentle_gis_introduction/projections/projected_crs.png
+.. figure:: img/projected_crs.png
    :align: center
    :width: 30em
 
@@ -314,7 +317,7 @@ in figure_utm_zones_.
 
 .. _figure_utm_zones:
 
-.. figure:: /static/gentle_gis_introduction/projections/utm_zones.png
+.. figure:: img/utm_zones.png
    :align: center
    :width: 30em
 
@@ -328,7 +331,7 @@ means that the UTM zones are located **south of the equator**.
 
 .. _figure_utm_for_sa:
 
-.. figure:: /static/gentle_gis_introduction/projections/utm_for_sa.png
+.. figure:: img/utm_for_sa.png
    :align: center
    :width: 30em
 
@@ -343,36 +346,36 @@ distortion and to get accurate analysis results, we should use **UTM zone 35S**
 as the coordinate reference system.
 
 The position of a coordinate in UTM south of the equator must be indicated with
-the **zone number** (35) and with its **northing (y) value** and **easting (x)
+the **zone number** (35) and with its **northing (Y) value** and **easting (X)
 value** in meters. The **northing value** is the distance of the position from
 the **equator** in meters. The **easting value** is the distance from the
 **central meridian** (longitude) of the used UTM zone. For UTM zone 35S it is
 **27 degrees** **East** as shown in figure_utm_for_sa_. Furthermore, because we
 are south of the equator and negative values are not allowed in the UTM coordinate
 reference system, we have to add a so called **false northing value** of
-10,000,000 m to the northing (y) value and a false easting value of 500,000 m to
-the easting (x) value. This sounds difficult, so, we will do an example that
+10,000,000 m to the northing (Y) value and a false easting value of 500,000 m to
+the easting (X) value. This sounds difficult, so, we will do an example that
 shows you how to find the correct **UTM 35S** coordinate for the **Area of
 Interest**.
 
-The northing (y) value
+The northing (Y) value
 ----------------------
 
 The place we are looking for is 3,550,000 meters south of the equator, so the
-northing (y) value gets a **negative sign** and is -3,550,000 m. According to
+northing (Y) value gets a **negative sign** and is -3,550,000 m. According to
 the UTM definitions we have to add a **false northing value** of 10,000,000 m.
-This means the northing (y) value of our coordinate is 6,450,000 m (-3,550,000 m
+This means the northing (Y) value of our coordinate is 6,450,000 m (-3,550,000 m
 + 10,000,000 m).
 
-The easting (x) value
+The easting (X) value
 ---------------------
 
 First we have to find the **central meridian** (longitude) for the **UTM zone
 35S**. As we can see in figure_utm_for_sa_ it is **27 degrees East**. The place
 we are looking for is **85,000 meters West** from the central meridian. Just like
-the northing value, the easting (x) value gets a negative sign, giving a result
+the northing value, the easting (X) value gets a negative sign, giving a result
 of **-85,000 m**. According to the UTM definitions we have to add a **false
-easting value** of 500,000 m. This means the easting (x) value of our coordinate
+easting value** of 500,000 m. This means the easting (X) value of our coordinate
 is 415,000 m (-85,000 m + 500,000 m). Finally, we have to add the **zone number**
 to the easting value to get the correct value.
 
@@ -455,7 +458,7 @@ If you don't have a computer available, you can show your pupils the principles
 of the three map projection families. Get a globe and paper and demonstrate how
 cylindrical, conical and planar projections work in general. With the help of a
 transparency sheet you can draw a two-dimensional coordinate reference system
-showing X axes and Y axes. Then, let your pupils define coordinates (x and y
+showing X axes and Y axes. Then, let your pupils define coordinates (X and Y
 values) for different places.
 
 Further reading
@@ -472,8 +475,8 @@ Further reading
 
 **Websites**:
 
-* http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html
-* http://geology.isu.edu/geostac/Field_Exercise/topomaps/index.htm
+* https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html
+* https://geology.isu.edu/wapi/geostac/Field_Exercise/topomaps/index.htm
 
 The QGIS User Guide also has more detailed information on working with map
 projections in QGIS.
@@ -482,3 +485,15 @@ What's next?
 ============
 
 In the section that follows we will take a closer look at **Map Production**.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

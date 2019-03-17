@@ -1,7 +1,11 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Serving WMS
 ===============================================================================
 
-Let's download the `demo data <https://github.com/qgis/QGIS-Training-Data/archive/master.zip>`_
+Let's download the `Training demo data <https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip>`_
 and unzip the files in the :file:`qgis-server-tutorial-data` subdirectory to
 any directory. We recommend that you simply create a :file:`/home/qgis/projects`
 directory and put your files there in order to avoid possible permissions problems.
@@ -61,7 +65,7 @@ or the  :ref:`ogc-wms-servers` section on how to do it.
 By adding the ``countries`` WMS layer to your QGIS project you should get an image
 like the one below:
 
-.. figure:: /static/training_manual/qgis_server/qgis_getmap_request.png
+.. figure:: img/qgis_getmap_request.png
    :align: center
 
    QGIS Desktop consuming the QGIS Server countries layer WMS service
@@ -91,7 +95,7 @@ out. You can also use the ``tail`` command in a terminal:
 This will continuously output in the terminal what's written in that log file.
 You can also have three terminals opened for each of the log files like so:
 
-.. figure:: /static/training_manual/qgis_server/terminal_tail_log.jpg
+.. figure:: img/terminal_tail_log.jpg
    :align: center
 
    Using the ``tail`` command to visualise QGIS Server logs output
@@ -127,13 +131,13 @@ A simple request looks like:
  &WIDTH=665
  &HEIGHT=551
  &LAYERS=countries
- &FORMAT=image/jpg
+ &FORMAT=image/jpeg
 
 The above request should output the following image:
 
 **Figure: simple GetMap request to QGIS Server**
 
-.. figure:: /static/training_manual/qgis_server/getmap_simple_request.jpg
+.. figure:: img/getmap_simple_request.jpg
    :align: center
 
    Qgis Server response after a simple GetMap request
@@ -180,7 +184,7 @@ uses the standard STYLES parameter.
  &SRS=EPSG:3857
  &WIDTH=665
  &HEIGHT=551
- &FORMAT=image/jpg
+ &FORMAT=image/jpeg
  &LAYERS=countries,countries_shapeburst
  &STYLES=classified_by_name,default
  &OPACITIES=255,30
@@ -188,7 +192,7 @@ uses the standard STYLES parameter.
 
 The above request should output the following image:
 
-.. figure:: /static/training_manual/qgis_server/getmap_filter_opacities.jpg
+.. figure:: img/getmap_filter_opacities.jpg
    :align: center
 
    Response to a GetMap request with FILTER and OPACITIES parameters
@@ -215,7 +219,7 @@ feature and of the **SELECTION** parameter detailed in the
  &WIDTH=665
  &HEIGHT=551
  &LAYERS=countries,countries_shapeburst
- &FORMAT=image/jpg
+ &FORMAT=image/jpeg
  &HIGHLIGHT_GEOM=POLYGON((590000 6900000, 590000 7363000, 2500000 7363000, 2500000 6900000, 590000 6900000))
  &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%233a093a</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
  &HIGHLIGHT_LABELSTRING=QGIS Tutorial
@@ -223,11 +227,11 @@ feature and of the **SELECTION** parameter detailed in the
  &HIGHLIGHT_LABELCOLOR=%23000000
  &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &HIGHLIGHT_LABELBUFFERSIZE=3
- &SELECTION=countries:171,6
+ &SELECTION=countries:171,65
 
 Pasting the above request in your web browser should output the following image:
 
-.. figure:: /static/training_manual/qgis_server/getmap_redlining_selection.jpg
+.. figure:: img/getmap_redlining_selection.jpg
    :align: center
 
    Response to a request with the REDLINING feature and SELECTION parameter
@@ -241,10 +245,10 @@ GetPrint requests
 -----------------
 
 One very nice feature of QGIS Server is that it makes use of the QGIS Desktop
-print composers. You can learn about it in the :ref:`server_getprint` section.
+print layouts. You can learn about it in the :ref:`server_getprint` section.
 
 If you open the :file:`world.qgs` project with QGIS Desktop you will find a
-print composer named ``Population distribution``. A simplified ``GetPrint``
+print layout named ``Population distribution``. A simplified ``GetPrint``
 request that exemplifies this amazing feature is:
 
 .. code-block:: guess
@@ -262,7 +266,7 @@ request that exemplifies this amazing feature is:
  &map0:extent=-432786,4372992,3358959,7513746
  &LAYERS=countries
 
-.. figure:: /static/training_manual/qgis_server/getprint.jpg
+.. figure:: img/getprint.jpg
    :align: center
 
    Shows the pdf resulted from the above GetPrint request
@@ -287,7 +291,7 @@ You can install it like this:
 
 Now you should be able to see the Map as in the following figure:
 
-.. figure:: /static/training_manual/qgis_server/qwc.jpg
+.. figure:: img/qwc.jpg
    :align: center
 
    QGIS Web Client consuming the world.qgs project
@@ -305,3 +309,18 @@ You learned how use QGIS Server to provide WMS Services.
 -------------------------------------------------------------------------------
 
 Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

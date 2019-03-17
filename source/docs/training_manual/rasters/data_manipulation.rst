@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Working with Raster Data
 ===============================================================================
 
@@ -17,38 +21,26 @@ environment.
 |basic| |FA| Loading Raster Data
 -------------------------------------------------------------------------------
 
-* Open your :kbd:`analysis.qgs` map (which you should have created and saved
-  during the previous module).
-* Deactivate all the layers except the :guilabel:`solution` and
-  :guilabel:`important_roads` layers.
-* Click on the :guilabel:`Load Raster Layer` button:
+Raster data can be loaded with the same methods we used for vector data.
+However we suggest to use the :guilabel:`Browser` Panel.
 
-  |addRasterLayer|
+#. Open the :guilabel:`Browser` Panel and expand the :file:`exercise_data/raster`
+   folder.
+#. Load all the data in this folder:
 
-The :guilabel:`Load Raster Layer` dialog will open. The data for this project
-is in :kbd:`exercise_data/raster`.
+   * :file:`3320C_2010_314_RGB_LATLNG.tif`
+   * :file:`3320D_2010_315_RGB_LATLNG.tif`
+   * :file:`3420B_2010_328_RGB_LATLNG.tif`
+   * :file:`3420C_2010_327_RGB_LATLNG.tif`
 
-* Either load them all in separately, or hold down :kbd:`ctrl` and click on all
-  four of them in turn, then open them at the same time.
+You should see the following map:
 
-The first thing you'll notice is that nothing seems to be happening in your
-map. Are the rasters not loading? Well, there they are in the :guilabel:`Layers
-list`, so obviously they did load. The problem is that they're not in the same
-projection. Luckily, we've already seen what to do in this situation.
-
-* Select :menuselection:`Project --> Project Properties` in the menu:
-* Select :guilabel:`CRS` tab in the menu:
-* Enable "on the fly" reprojection.
-* Set it to the same projection as the rest of your data (:kbd:`WGS 84 / UTM
-  zone 33S`).
-* Click **[OK]**.
-
-The rasters should fit nicely:
-
-.. image:: /static/training_manual/rasters/raster_step_one.png
+.. image:: img/raster_step_one.png
    :align: center
 
 There we have it - four aerial photographs covering our whole study area.
+
+.. _tm_virtual_raster:
 
 |basic| |FA| Create a Virtual Raster
 -------------------------------------------------------------------------------
@@ -60,45 +52,39 @@ one (composite) image, right?
 
 Luckily, QGIS allows you to do exactly this, and without needing to actually
 create a new raster file, which could take up a lot of space. Instead, you can
-create a *Virtual Raster*. This is also often called a *Catalog*, which
+create a **Virtual Raster**. This is also often called a *Catalog*, which
 explains its function. It's not really a new raster. Rather, it's a way to
 organize your existing rasters into one catalog: one file for easy access.
 
-To make a catalog:
+To make a catalog we will use the :menuselection:`Processing --> Toolbox`.
 
-* Click on the menu item :menuselection:`Raster --> Miscellaneous --> Build
-  Virtual Raster (Catalog)`.
-* In the dialog that appears, check the box next to :guilabel:`Use visible
-  raster layers for input`.
-* Enter :kbd:`exercise_data/residential_development` as the output location.
-* Enter :kbd:`aerial_photos.vrt` as the file name.
-* Check the :guilabel:`Load into canvas when finished` button.
+#. Open the :guilabel:`Build virtual raster` algorithm from the
+   :menuselection:`GDAL --> Raster miscellaneous`;
+#. In the dialog that appears click on the |browseButton| button next to the
+   :guilabel:`Input layers` parameter and check all the layers or use the
+   :guilabel:`Select All` button;
+#. Uncheck the :guilabel:`Place each input file into a separate band` parameter-
+   Notice the text field below. What this dialog is actually doing is that it's
+   writing that text for you. It's a long command that QGIS is going to run.
 
-Notice the text field below. What this dialog is actually doing is that it's
-writing that text for you. It's a long command that QGIS is going to run.
+   .. note:: Keep in mind that you can copy and paste the text in the
+       ``OSGeo Shell`` (Windows user) or ``Terminal`` (Linux and OSX users) to run
+       the command. You can also create a script for each GDAL command. This is very
+       handy when the procedure is taking a long time or when you want to schedule
+       specific tasks. Use the :guilabel:`Help` button to get more help on the
+       syntax of GDAL commands.
 
-.. note::  |hard| Keep in mind that the command text is editable, so you can
-   customize the command further if preferred. Search online for the initial
-   command (in this case, :kbd:`gdalbuildvrt`) for help on the syntax.
+#. Finally click on :guilabel:`Run`.
 
-* Click :guilabel:`OK` to run the command.
+.. note:: As you know from the previous modules, :guilabel:`Processing` creates
+    temporary layers by default. To save the file click on the |browseButton|.
 
-.. image:: /static/training_manual/rasters/build_virtual_raster.png
+.. image:: img/build_virtual_raster.png
    :align: center
 
+You can now remove the original four rasters from the :guilabel:`Layers` Panel
+and leave only the output virtual catalog raster.
 
-It may take a while to complete. When it's done, it will tell you so with a
-message box.
-
-* Click :guilabel:`OK` to chase the message away.
-* Click :guilabel:`Close` on the :guilabel:`Build Virtual Raster (Catalog)`
-  dialog.  (Don't click :guilabel:`OK` again, otherwise it's going to start
-  running that command again.)
-* You can now remove the original four rasters from the :guilabel:`Layers
-  list`.
-* If necessary, click and drag the new :guilabel:`aerial_photos` raster catalog
-  layer to the bottom of the :guilabel:`Layers list` so that the other
-  activated layers become visible.
 
 |hard| Transforming Raster Data
 -------------------------------------------------------------------------------
@@ -112,31 +98,37 @@ rasters in a map, but it may take some time to set up initially.
 Reprojecting rasters
 ...............................................................................
 
-* Click on the menu item :menuselection:`Raster --> Projections --> Warp
-  (Reproject)`.
+Open :guilabel:`Warp (reproject)` from
+:menuselection:`GDAL --> Raster projections`.
 
-Note that this tool features a handy batch option for reprojecting the contents
-of whole directories. You can also reproject virtual rasters (catalogs), as
-well as enabling a multithreaded processing mode.
+You can also reproject virtual rasters (catalogs), enable multithreaded
+processing, and more.
 
-.. image:: /static/training_manual/rasters/warp_rasters.png
+.. image:: img/warp_rasters.png
    :align: center
 
 Merging rasters
 ...............................................................................
 
-* Click on the menu item :menuselection:`Raster --> Miscellaneous --> Merge`.
+If you need to create a new raster layer and save it to disk you can use the
+merge algorithm.
 
-You can choose to process entire directories instead of single files, giving
-you a very useful built-in batch processing capability. You can specify a
-virtual raster as input file, too, and all of the rasters that it consists of
-will be processed.
+.. note:: Depending on how many raster files you are merging and their resolution,
+    the new raster file created can be really big. Consider instead to create
+    a raster catalog as described in the
+    :ref:`Create a Virtual Raster <tm_virtual_raster>` section.
 
-You can also add your own command line options using the :guilabel:`Creation
-Options` checkbox and list. This only applies if you have knowledge of the GDAL
-library's operation.
+#. Click on the :guilabel:`Merge` algorithm from the
+   :menuselection:`GDAL --> Raster miscellaneous` menu.
+#. As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use
+   the |browseButton| to choose which layers you want to merge.
 
-.. image:: /static/training_manual/rasters/merge_rasters.png
+   You can also specify a Virtual raster as input, and then all of the rasters
+   that it consists of will be processed.
+#. If you know the GDAL library, you can also add your own options by opening the
+   :guilabel:`Advanced parameters` menu.
+
+.. image:: img/merge_rasters.png
    :align: center
 
 |IC|
@@ -149,3 +141,20 @@ QGIS makes it easy to include raster data into your existing projects.
 
 Next, we'll use raster data that isn't aerial imagery, and see how
 symbolization is useful in the case of rasters as well.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |hard| image:: /static/global/hard.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

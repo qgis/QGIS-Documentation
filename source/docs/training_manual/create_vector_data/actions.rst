@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Actions
 ===============================================================================
 
@@ -29,24 +33,24 @@ property yet. First we'll create a field for this purpose.
 * Click on the :guilabel:`Fields` tab.
 * Toggle editing mode:
 
-.. image:: /static/training_manual/create_vector_data/toggle_editing_mode.png
+.. image:: img/toggle_editing_mode.png
    :align: center
 
 * Add a new column:
 
-.. image:: /static/training_manual/create_vector_data/add_new_column.png
+.. image:: img/add_new_column.png
    :align: center
 
 * Enter the values below:
 
-.. image:: /static/training_manual/create_vector_data/column_settings.png
+.. image:: img/column_settings.png
    :align: center
 
 * After the field has been created, click on the :guilabel:`Line edit` button
   next to the new field.
 * Set it up for a :guilabel:`File name`:
 
-.. image:: /static/training_manual/create_vector_data/select_file_name.png
+.. image:: img/select_file_name.png
    :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
@@ -56,7 +60,7 @@ property yet. First we'll create a field for this purpose.
 Since you're still in edit mode, the dialog should be active and look like
 this:
 
-.. image:: /static/training_manual/create_vector_data/school_property_no_image.png
+.. image:: img/school_property_no_image.png
    :align: center
 
 * Click on the browse button (the :guilabel:`...` next to the :guilabel:`image`
@@ -76,7 +80,7 @@ this:
 * In the :kbd:`Action properties` panel, enter the words :kbd:`Show Image` into
   the :guilabel:`Name` field:
 
-.. image:: /static/training_manual/create_vector_data/show_image_action.png
+.. image:: img/show_image_action.png
    :align: center
 
 What to do next varies according to your operating system, so choose the
@@ -114,7 +118,7 @@ is.
 
 * Select :guilabel:`image` from the list:
 
-.. image:: /static/training_manual/create_vector_data/select_image.png
+.. image:: img/select_image.png
    :align: center
 
 * Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%
@@ -124,7 +128,7 @@ is.
 
 Now we will test the new Action:
 
-* Click on the :guilabel:`school_property` layer in the :guilabel:`Layers list`
+* Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` panel
   so that it is highlighted.
 * Find the :guilabel:`Run feature action` button (on the same toolbar as the
   :guilabel:`Open Attribute Table` button):
@@ -188,13 +192,13 @@ Usually when you use Google, you enter your search phrase into the Google
 Search bar. But in this case, you want your computer to do this for you. The
 way you tell Google to search for something (if you don't want to use its
 search bar directly) is by giving your Internet browser the address
-:kbd:`http://www.google.com/search?q=SEARCH_PHRASE`, where
-:kbd:`SEARCH_PHRASE` is what you want to search for. Since we don't know what
+``https://www.google.com/search?q=SEARCH_PHRASE``, where
+``SEARCH_PHRASE`` is what you want to search for. Since we don't know what
 phrase to search for yet, we'll just enter the first part (without the search
 phrase).
 
 * In the :guilabel:`Action` field, write
-  :kbd:`http://www.google.com/search?q=`. Remember to add a space after your
+  ``https://www.google.com/search?q=``. Remember to add a space after your
   initial command before writing this in!
 
 Now you want QGIS to tell the browser to tell Google to search for the value of
@@ -203,22 +207,22 @@ Now you want QGIS to tell the browser to tell Google to search for the value of
 * Select the :guilabel:`name` field.
 * Click :guilabel:`Insert field`:
 
-.. image:: /static/training_manual/create_vector_data/google_search_action.png
+.. image:: img/google_search_action.png
    :align: center
 
 This will tell QGIS to add the phrase next:
 
-.. image:: /static/training_manual/create_vector_data/google_search_entry.png
+.. image:: img/google_search_entry.png
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the
-address :kbd:`http://www.google.com/search?q=[% "name" %]`. But :kbd:`[%
+address ``https://www.google.com/search?q=[% "name" %]``. But :kbd:`[%
 "name" %]` tells QGIS to use the contents of the :kbd:`name` field as the
 phrase to search for.
 
 So if, for example, the landuse area you click on is named
-:kbd:`Marloth Nature Reserve`, then QGIS is going to send the browser to
-:kbd:`http://www.google.com/search?q=Marloth%20Nature%20Reserve`, which will
+``Marloth Nature Reserve``, then QGIS is going to send the browser to
+``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, which will
 cause your browser to visit Google, which will in turn search for
 "Marloth Nature Reserve".
 
@@ -229,7 +233,7 @@ cause your browser to visit Google, which will in turn search for
 
 Now to test the new action.
 
-* With the :guilabel:`landuse` layer active in the :guilabel:`Layers list`, click
+* With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, click
   on the :guilabel:`Run feature action` button.
 * Click on any landuse area you can see on the map. Your browser will now open, and
   will automatically start a Google search for the town that is recorded as
@@ -261,7 +265,7 @@ webkit based html widget) to display the content in a pop up window.
 Instead of Google, let's use Wikipedia this time. So the URL you request will
 look like this:
 
-:kbd:`http://wikipedia.org/wiki/SEARCH_PHRASE`
+``https://wikipedia.org/wiki/SEARCH_PHRASE``
 
 To create the layer action:
 
@@ -271,10 +275,11 @@ To create the layer action:
 
   * :guilabel:`Type`: :kbd:`Python`
   * :guilabel:`Name`: :kbd:`Wikipedia`
-  * :guilabel:`Action` (all on one line):
-    :kbd:`from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('http://wikipedia.org/wiki/[% "name" %]')); myWV.show()`
+  * :guilabel:`Action` (all on one line)::
 
-.. image:: /static/training_manual/create_vector_data/python_action_example.png
+     from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
+
+.. image:: img/python_action_example.png
    :align: center
 
 There are a couple of things going on here:
@@ -312,3 +317,21 @@ the functions you could incorporate!
 
 Now that you've done all kinds of vector data creation, you'll learn how to
 analyze this data to solve problems. That's the topic of the next module.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

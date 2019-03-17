@@ -54,15 +54,6 @@ Outputs
   A grid giving the horizontal distance along the flow path as defined by the
   D8 Flow Directions Grid to the streams in the Stream Raster Grid.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8distancetostreams', -p, -src, -thresh, -dist)
-
-See also
-........
 
 D-Infinity Avalanche Runout
 ---------------------------
@@ -84,7 +75,7 @@ All points downslope from the source area are potentially in the affected area,
 but not beyond a point where the slope from the source to the affected area is
 less than a threshold angle called the Alpha Angle.
 
-.. figure:: /static/user_manual/processing_algs/taudem/arexample.gif
+.. figure:: img/arexample.gif
    :align: center
 
 Slope is to be measured using the straight line distance from source point to
@@ -191,15 +182,6 @@ Outputs
   This is a grid of the flow distance from the source site that has the highest
   angle to each cell.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityavalancherunout', -ang, -fel, -ass, -thresh, -alpha, -direct, -rz, -dfs)
-
-See also
-........
 
 D-Infinity Concentration Limited Accumulation
 ---------------------------------------------
@@ -247,7 +229,7 @@ Discharge Grid. Over the substance supply area concentration is at the threshold
 where ``L(x)`` denotes the load being carried by the flow. At remaining locations,
 the load is determined by load accumulation and the concentration by dilution:
 
-.. figure:: /static/user_manual/processing_algs/taudem/claeqn.gif
+.. figure:: img/claeqn.gif
    :align: center
 
 Here ``d(x) = d(i, j)`` is a decay multiplier giving the fractional (first order)
@@ -258,7 +240,7 @@ order decay parameter. The Concentration grid output is ``C(x)``. If the outlets
 shapefile is used, the tool only evaluates the part of the domain that contributes
 flow to the locations given by the shapefile.
 
-.. figure:: /static/user_manual/processing_algs/taudem/clafig.gif
+.. figure:: img/clafig.gif
    :align: center
 
 Useful for a tracking a contaminant released or partitioned to flow at a fixed
@@ -289,7 +271,7 @@ Parameters
   evaluation of Overland Flow Specific Discharge.
 
 ``Outlets shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If this
   file is used, the tool will only evaluate the area upslope of these outlets.
@@ -315,15 +297,6 @@ Outputs
   A grid giving the resulting concentration of the compound of interest in
   the flow.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityconcentrationlimitedaccumulation', -ang, -dg, -dm, -q, -o, -csol, -nc, -ctpt)
-
-See also
-........
 
 D-Infinity Decaying Accumulation
 --------------------------------
@@ -346,7 +319,7 @@ with the flow field but is subject to first order decay in moving from cell to
 cell. The output is the accumulated mass at each location ``DA(x)``. The
 accumulation of ``m`` at each grid cell can be numerically evaluated.
 
-.. figure:: /static/user_manual/processing_algs/taudem/decayeqn.gif
+.. figure:: img/decayeqn.gif
    :align: center
 
 Here ``d(x) = d(i ,j)`` is a decay multiplier giving the fractional (first order)
@@ -358,7 +331,7 @@ order decay parameter. The weight grid is used to represent the mass loading
 the function is only evaluated on that part of the domain that contributes flow
 to the locations given by the shapefile.
 
-.. figure:: /static/user_manual/processing_algs/taudem/decay.gif
+.. figure:: img/decay.gif
    :align: center
 
 Useful for a tracking contaminant or compound subject to decay or attenuation.
@@ -377,14 +350,14 @@ Parameters
   movement of an attenuating substance.
 
 ``Weight Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving weights (loadings) to be used in the accumulation. If this
   optional grid is not specified, weights are taken as the linear grid cell
   size to give a per unit width accumulation.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If
   this file is used, the tool will only evaluate the area upslope of these
@@ -406,15 +379,6 @@ Outputs
   mass at each location in the domain where mass moves with the D-infinity flow
   field, but is subject to first order decay in moving from cell to cell.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitydecayingaccumulation', -ang, -dm, -wg, -o, -nc, -dsca)
-
-See also
-........
 
 D-Infinity Distance Down
 ------------------------
@@ -455,7 +419,7 @@ Parameters
   **"Stream Network Analysis"** toolset.
 
 ``Weight Path Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving weights (loadings) to be used in the distance calculation. This
   might be used for example where only flow distance through a buffer is to be
@@ -464,7 +428,7 @@ Parameters
   perhaps representing travel time or attenuation of a process. If this input
   file is not used, the loadings will assumed to be one for each grid cell.
 
-``Statistical Method`` [selection]
+``Statistical Method`` [enumeration]
   Statistical method used to calculate the distance down to the stream. In the
   D-Infinity flow model, the outflow from each grid cell is proportioned between
   two downslope grid cells. Therefore, the distance from any grid cell to a
@@ -481,7 +445,7 @@ Parameters
 
   Default: *2*
 
-``Distance Method`` [selection]
+``Distance Method`` [enumeration]
   Distance method used to calculate the distance down to the stream. One of
   several ways of measuring distance may be selected: the total straight line
   path (Pythagoras), the horizontal component of the straight line path
@@ -519,15 +483,6 @@ Outputs
   Grid containing the distance to stream calculated using the D-infinity flow
   model and the statistical and path methods chosen.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitydistancedown', dinf_flow_dir_grid, pit_filled_grid, stream_grid, weight_path_grid, stat_method, dist_method, edge_contam, dist_down_grid)
-
-See also
-........
 
 D-Infinity Distance Up
 ----------------------
@@ -572,7 +527,7 @@ Parameters
   it is most often obtained as the output of the **"D-Infinity Flow Directions"**
   tool.
 
-``Statistical Method`` [selection]
+``Statistical Method`` [enumeration]
   Statistical method used to calculate the distance down to the stream. In the
   D-Infinity flow model, the outflow from each grid cell is proportioned between
   two downslope grid cells. Therefore, the distance from any grid cell to a
@@ -589,7 +544,7 @@ Parameters
 
   Default: *2*
 
-``Distance Method`` [selection]
+``Distance Method`` [enumeration]
   Distance method used to calculate the distance down to the stream. One of
   several ways of measuring distance may be selected: the total straight line
   path (Pythagoras), the horizontal component of the straight line path
@@ -629,15 +584,6 @@ Outputs
   Grid containing the distances up to the ridge calculated using the D-Infinity
   flow model and the statistical and path methods chosen.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitydistanceup', dinf_flow_dir_grid, pit_filled_grid, slope_grid, stat_method, dist_method, threshold, edge_contam, dist_up_grid)
-
-See also
-........
 
 D-Infinity Reverse Accumulation
 -------------------------------
@@ -651,7 +597,7 @@ reverse of the flow directions to accumulate the quantity of weight loading
 downslope from each grid cell. The function also reports the maximum value of
 the weight loading downslope from each grid cell in the Maximum Downslope grid.
 
-.. figure:: /static/user_manual/processing_algs/taudem/raccfig.gif
+.. figure:: img/raccfig.gif
    :align: center
 
 This function is designed to evaluate and map the hazard due to activities that
@@ -687,15 +633,6 @@ Outputs
   The grid giving the maximum of the weight loading grid downslope from each
   grid cell.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityreverseaccumulation', -ang, -wg, -racc, -dmax)
-
-See also
-........
 
 D-Infinity Transport Limited Accumulation - 2
 ---------------------------------------------
@@ -712,7 +649,7 @@ a grid cell is calculated as the sum of the transport in from upslope grid cells
 ``Tin``, plus the local supply contribution, ``E`` (e.g. erosion). This function
 also outputs deposition, ``D``, calculated as total supply minus actual transport.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaeqn.gif
+.. figure:: img/tlaeqn.gif
    :align: center
 
 Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for downslope
@@ -721,31 +658,31 @@ is deposition (``tdep``). The function provides the option to evaluate
 concentration of a compound (contaminant) adhered to the transported substance.
 This is evaluated as follows:
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn1.gif
+.. figure:: img/tlaceqn1.gif
    :align: center
 
 Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``
 refer to the Concentration and Transport entering from each upslope grid cell.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn2.gif
+.. figure:: img/tlaceqn2.gif
    :align: center
 
 If
 
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn3.gif
+.. figure:: img/tlaceqn3.gif
    :align: center
 
 else
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn4.gif
+.. figure:: img/tlaceqn4.gif
    :align: center
 
 where ``Cs`` is the concentration supplied locally and the difference in the
 second term on the right represents the additional supply from the local grid
 cell. Then,
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn5.gif
+.. figure:: img/tlaceqn5.gif
    :align: center
 
 ``Cout`` at each grid cell comprises is the concentration grid output from this
@@ -783,7 +720,7 @@ Parameters
   eroded sediment.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If
   this file is used, the tool will only evaluate the area upslope of these
@@ -818,15 +755,6 @@ Outputs
   output and gives the concentration of a compound (contaminant) adhered or
   bound to the transported substance (e.g. sediment) is calculated.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitytransportlimitedaccumulation2', dinf_flow_dir_grid, supply_grid, capacity_grid, in_concentr_grid, outlets_shape, edge_contam, transp_lim_accum_grid, deposition_grid, out_concentr_grid)
-
-See also
-........
 
 D-Infinity Transport Limited Accumulation
 -----------------------------------------
@@ -843,7 +771,7 @@ a grid cell is calculated as the sum of the transport in from upslope grid cells
 ``Tin``, plus the local supply contribution, ``E`` (e.g. erosion). This function
 also outputs deposition, ``D``, calculated as total supply minus actual transport.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaeqn.gif
+.. figure:: img/tlaeqn.gif
    :align: center
 
 Here ``E`` is the supply. ``Tout`` at each grid cell becomes ``Tin`` for downslope
@@ -852,31 +780,31 @@ is deposition (``tdep``). The function provides the option to evaluate
 concentration of a compound (contaminant) adhered to the transported substance.
 This is evaluated as follows:
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn1.gif
+.. figure:: img/tlaceqn1.gif
    :align: center
 
 Where ``Lin`` is the total incoming compound loading and ``Cin`` and ``Tin``
 refer to the Concentration and Transport entering from each upslope grid cell.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn2.gif
+.. figure:: img/tlaceqn2.gif
    :align: center
 
 If
 
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn3.gif
+.. figure:: img/tlaceqn3.gif
    :align: center
 
 else
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn4.gif
+.. figure:: img/tlaceqn4.gif
    :align: center
 
 where ``Cs`` is the concentration supplied locally and the difference in the
 second term on the right represents the additional supply from the local grid
 cell. Then,
 
-.. figure:: /static/user_manual/processing_algs/taudem/tlaceqn5.gif
+.. figure:: img/tlaceqn5.gif
    :align: center
 
 ``Cout`` at each grid cell comprises is the concentration grid output from this
@@ -908,7 +836,7 @@ Parameters
   give the transport capacity of the carrying flow.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   This optional input is a point shapefile defining outlets of interest. If
   this file is used, the tool will only evaluate the area upslope of these
@@ -938,15 +866,6 @@ Outputs
   minus the transport capacity out of the grid cell. The deposition grid is
   calculated as the transport in + the local supply - the tranport out.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitytransportlimitedaccumulation', dinf_flow_dir_grid, supply_grid, capacity_grid, outlets_shape, edge_contam, transp_lim_accum_grid, deposition_grid)
-
-See also
-........
 
 D-Infinity Upslope Dependence
 -----------------------------
@@ -969,7 +888,7 @@ weighted contributing area function is denoted ``I(y; x)`` giving the weighted
 contribution using a unit value (1) from specific grid cells ``y`` to grid cells
 ``x``, then the upslope dependence is: ``D(x; y) = I(y; x)``.
 
-.. figure:: /static/user_manual/processing_algs/taudem/dependence.gif
+.. figure:: img/dependence.gif
    :align: center
 
 This is useful for example to track where flow or a flow related substance or
@@ -996,15 +915,6 @@ Outputs
   A grid quantifing the amount each source point in the domain contributes to
   the zone defined by the destination grid.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityupslopedependence', -ang, -dg, -dep)
-
-See also
-........
 
 Slope Average Down
 ------------------
@@ -1045,15 +955,6 @@ Outputs
   This output is a grid of slopes calculated in the D8 downslope direction,
   averaged over the selected distance.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:slopeaveragedown', -p, -fel, -dn, -slpd)
-
-See also
-........
 
 Slope Over Area Ratio
 ---------------------
@@ -1089,13 +990,11 @@ Outputs
   index, but contributing area is in the denominator to avoid divide by 0
   errors when slope is 0.
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('taudem:slopeoverarearatio', -slp, -sca, -sar)
-
-See also
-........
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

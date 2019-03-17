@@ -1,31 +1,32 @@
+.. only:: html
+
+   |updatedisclaimer|
+
+.. _tm_preparing_data:
+
 Preparing Exercise Data
 =======================
-
-The sample data provided with the Training Manual refers to the town of
-|majorUrbanName| and its surroundings. |majorUrbanName| is located about 2 hours' east of
-Cape Town in the Western Cape of South Africa. The dataset contains feature
-names in both English and Afrikaans.
-
-Anyone can use this dataset without difficulty, but you may prefer to use data
-from your own country or home town. If you choose to do so, your localised
-data will be used in all lessons from Module 3 to Module 7.2. Later modules use
-more complex data sources which may or may not be available for your region.
 
 .. note:: This process is intended for course conveners, or more experienced
   QGIS users who wish to create localised sample data sets for their course.
   Default data sets are provided with the Training Manual, but you may follow
   these instructions if you wish to replace the default data sets.
 
-.. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip.
-   You can save the files in a folder named **exercise_data**.
+The :ref:`sample data provided <data_downloadlink>` with the Training Manual
+refers to the town of |majorUrbanName| and its surroundings. |majorUrbanName| is
+located about 2 hours' east of Cape Town in the Western Cape of South Africa.
+The dataset contains feature names in both English and Afrikaans.
 
-
-|hard| |TY|
---------------------------------------------------------------------------------
+Anyone can use this dataset without difficulty, but you may prefer to use data
+from your own country or home town. If you choose to do so, your localised
+data will be used in all lessons from Module 3 to Module 7.2. Later modules use
+more complex data sources which may or may not be available for your region.
 
 .. note:: These instructions assume you have a good knowledge of QGIS and are
   not intended to be used as teaching material.
+
+|hard| |TY|  Create OSM based vector Files
+--------------------------------------------------------------------------------
 
 If you wish to replace the default data set with localised data for your course,
 this can easily be done with tools built into QGIS. The region you choose to use
@@ -33,133 +34,155 @@ should have a good mix of urban and rural areas, containing roads of differing
 significance, area boundaries (such as nature reserves or farms) and surface
 water, such as streams and rivers.
 
-* Open a new QGIS project
-* In the :guilabel:`Vector` menu dropdown, select
-  :menuselection:`OpenStreetMap --> Download Data`. You can then manually enter the
-  co-ordinates of the region you wish to use, or you can use an existing layer
-  to set the co-ordinates.
-* Choose a location to save the resulting .osm file and click :guilabel:`Ok`:
+#. Open a new QGIS project
+#. Select :menuselection:`Layer --> Data Source Manager` to open the
+   :guilabel:`Data Source Manager` dialog
+#. In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down menu
+   and double-click the :guilabel:`OpenStreetMap` item.
 
-.. _figure_set_osm_region:
+   .. image:: img/browser_xyztiles.png
+      :align: center
+      :scale: 60
 
-.. image:: /static/training_manual/foreword/set_osm_region.png
-   :align: center
+   A map of the world is now visible on the map canvas.
+#. Close the :guilabel:`Data Source Manager` dialog
+#. Move to the area you'd like to use as study area
 
-* You can then open the .osm file using the :guilabel:`Add Vector Layer` button.
-  You may need to select :guilabel:`All files` in the browser window.
-  Alternatively, you can drag and drop the file into the QGIS window.
-* In the dialog which opens, select all the layers, *except* the
-  :kbd:`other_relations` and :kbd:`multilinestrings` layer:
+   .. image:: img/swellendam_neighborhood.png
+      :align: center
+      :scale: 60
 
-.. _figure_select_osm_layers:
+Now that we have the area we'll extract the data from, let's enable the extraction
+tools.
 
-.. image:: /static/training_manual/foreword/select_osm_layers.png
-   :align: center
+#. Go to :menuselection:`Plugins --> Manage/Install Plugins...`
+#. In the :guilabel:`All` tab, type ``QuickOSM`` in the search box
+#. Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then :guilabel:`Close`
+   the dialog.
 
-This will load three layers into your map which relate to OSM's naming
-conventions (you may need to |zoomFullExtent| :sup:`Zoom Full` to see the
-vector data).
+   .. image:: img/quickosm_plugin_download.png
+      :align: center
 
-.. _figure_osm_data_loaded:
+#. Execute the new plugin from :menuselection:`Vector --> QuickOSM -->
+   QuickOSM...` menu
+#. In the :guilabel:`Quick query` tab, select ``building`` in the :guilabel:`Key`
+   drop-down menu
+#. Leave the :guilabel:`Value` field empty, meaning that you are querying all
+   buildings.
+#. Select :guilabel:`Canvas Extent` in the next drop-down menu
+#. Expand the :guilabel:`Advanced` group below and uncheck all
+   geometry types on the right except :guilabel:`Multipolygons`.
+#. Press :guilabel:`Run query`
 
-.. image:: /static/training_manual/foreword/osm_data_loaded.png
-   :align: center
+   .. image:: img/building_query_builder.png
+      :align: center
 
-We need to extract the useful data from these layers, rename them
-and create corresponding shape files:
+   A new ``building`` layer is added to the :guilabel:`Layers` panel, showing
+   buildings in the selected extent.
+#. Proceed as above to extract other data:
 
-* First, double-click the :kbd:`multipolygons` layer to open the
-  :guilabel:`Layer properties` dialog.
-* In the :guilabel:`General` tab, click :guilabel:`Query Builder` to open the
-  :guilabel:`Query builder` window.
+   #. ``Key = landuse`` and ``Multipolygons`` geometry type.
+   #. ``Key = boundary``, ``Value = protected_area`` and ``Multipolygons``
+      geometry type.
+   #. ``Key = natural``, ``Value = water`` and ``Multipolygons`` geometry type.
+   #. ``Key = highway`` and check ``Lines`` and ``Multilines`` geometry types.
+   #. ``Key = waterway``, ``Value = river`` and check ``Lines`` and ``Multilines``
+      geometry types.
+   #. ``Key = place`` and ``Points`` geometry type.
 
-This layer contains three fields whose data we will need to extract for use
-throughout the Training Manual:
+This process adds the layers as temporary files (indicated by the
+|indicatorMemory| icon next to their name).
 
-* :kbd:`building`
-* :kbd:`natural` (specifically, water)
-* :kbd:`landuse`
+.. image:: img/osm_data_loaded.png
+  :align: center
 
 You can sample the data your region contains in order to see what kind of
-results your region will yield. If you find that "landuse" returns no results,
-then feel free to exclude it.
+results your region will yield.
 
-You'll need to write filter expressions for each field to extract the data we
-need. We'll use the "building" field as an example here:
+We now need to save the resulting data to use during your
+course. We'll be using ESRI Shapefile, GeoPackage and SpatiaLite formats
+depending on the data.
 
-* Enter the following expression into the text area:
-  :kbd:`building != "NULL"` and click :guilabel:`Test` to see how many results
-  the query will return. If the number of results is small, you may wish to
-  have a look at the layer's :guilabel:`Attribute Table` to see what data OSM
-  has returned for your region:
+To convert the :guilabel:`place` temporary layer to another format:
 
-.. image:: /static/training_manual/foreword/building_query_builder.png
-   :align: center
+#. Click the |indicatorMemory| icon next to the :guilabel:`place` layer
+   to open the :guilabel:`Save Scratch Layer` dialog.
 
-* Click :guilabel:`Ok` and you'll see that the layer elements which are not
-  buildings have been removed from the map.
+   .. note:: If you need to change any of the temporary layer's properties (CRS, extent,
+     fields...), use the :menuselection:`Export
+     --> Save Features as...` contextual menu instead, and ensure the :guilabel:`Add
+     saved file to map` option is checked. This adds a new layer.
 
-We now need to save the resulting data as a shapefile for you to use during your
-course:
+#. Select the :guilabel:`ESRI Shapefile` format
+#. Use the :guilabel:`...` button to browse to the :file:`exercise_data/shapefile/`
+   folder and save the file as :file:`places.shp`.
 
-* Right-click the :guilabel:`multipolygons` layer and select
-  :guilabel:`Save As...`
-* Make sure the file type is :kbd:`ESRI Shapefile` and save the file in your
-  new :kbd:`exercise_data` directory, under a directory called "epsg4326".
-* Make sure :menuselection:`No Symbology` is selected (we'll add symbology as
-  part of the course later on).
-* You can also select :guilabel:`Add saved file to map`.
+   .. image:: img/save_osm_place.png
+      :align: center
 
-Once the :guilabel:`buildings` layer has been added to the map, you can repeat
-the process for the :kbd:`natural` and :kbd:`landuse` fields using the following
-expressions:
+#. Press :guilabel:`OK`
 
-.. note:: Make sure you clear the previous filter (via the
-   :guilabel:`Layer properties` dialog) from the
-   :guilabel:`multipolygons` layer before proceeding with the next filter
-   expression!
+   In the :guilabel:`Layers` panel, the temporary :guilabel:`place` layer is
+   replaced with the saved :guilabel:`places` shapefile layer and
+   the temporary icon next to it removed.
+#. Double-click the layer to open its :menuselection:`Layer Properties -->
+   Source` tab and update the :guilabel:`Layer name` property to match the file
+   name.
 
-* :kbd:`natural`: "natural = 'water'"
-* :kbd:`landuse`: "landuse != 'NULL'"
+#. Repeat the process for other layers, renaming them as follows:
 
-Each resulting data set should be saved in the "epsg4326" directory in your new
-:kbd:`exercise_data` directory (i.e. "water", "landuse").
+   * ``natural_water`` into ``water``
+   * ``waterway_river`` into ``rivers``
+   * ``boundary_protected_area`` into ``protected_areas``
 
-You should then extract and save the following fields from the :kbd:`lines` and
-:kbd:`points` layers to their corresponding directories:
+   Each resulting data set should be saved in the :file:`exercise_data/shapefile/`
+   directory.
 
-* :kbd:`lines`:
-  "highway != 'NULL'" to :kbd:`roads`, and
-  "waterway != 'NULL'" to :kbd:`rivers`
-* :kbd:`points`:
-  "place != 'NULL'" to :kbd:`places`
+The next step is to create a GeoPackage file from the :guilabel:`building` layer
+to use during the course:
 
-Once you have finished extracting the above data, you can remove the
-:guilabel:`multipolygons`, :guilabel:`lines` and :guilabel:`points` layers.
+#. Click the |indicatorMemory| icon next to the :guilabel:`building` layer
+#. Select the :guilabel:`GeoPackage` format
+#. Save the file as :file:`training_data.gpkg` under the :file:`exercise_data/`
+   folder
+#. By default, the :guilabel:`Layer name` is filled as the file name.
+   Replace it with ``buildings``.
+
+   .. image:: img/save_osm_building.png
+      :align: center
+
+#. Press :guilabel:`OK`
+#. Rename the layer in its properties dialog
+#. Repeat the process with the :guilabel:`highway` layer, saving it as ``roads`` in
+   the same GeoPackage database.
+
+The last step is to save the remaining temporary file as a SpatiaLite file.
+
+#. Click the |indicatorMemory| icon next to the :guilabel:`landuse` layer
+#. Select the :guilabel:`SpatiaLite` format
+#. Save the file as :file:`landuse.sqlite` under the :file:`exercise_data/`
+   folder. By default, the :guilabel:`Layer name` is filled as the file name.
+   Do not change it.
+
+   .. image:: img/save_osm_landuse.png
+      :align: center
+
+#. Press :guilabel:`OK`
 
 You should now have a map which looks something like this (the symbology will
-certainly be very different, but that is fine):
+certainly be very different, because QGIS randomly assigns colors when layers
+are added to the map):
 
-.. image:: /static/training_manual/foreword/post_osm_import.png
-   :align: center
+.. image:: img/post_osm_import.png
+  :align: center
 
-The important thing is that you have 6 layers matching those shown above and
-that all those layers have some data.
-
-The last step is to create a spatiallite file from the :kbd:`landuse` layer for
-use during the course:
-
-* Right-click the :kbd:`landuse` layer and select :menuselection:`Save as...`
-* Select :menuselection:`SpatialLite` as the format and save the file as
-  :kbd:`landuse` under the "epsg4326" directory.
-* Click :menuselection:`Ok`.
-* Delete the :kbd:`landuse.shp` and its related files (if created).
-
+The important thing is that you have 7 vector layers matching those
+shown above and that all those layers have some data.
 
 |hard| |TY| Create SRTM DEM tiff Files
 --------------------------------------------------------------------------------
 
-For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need
+For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also need
 raster images (SRTM DEM) which cover the region you have selected for your
 course.
 
@@ -167,8 +190,9 @@ The CGIAR-CGI (http://srtm.csi.cgiar.org/) provides some SRTM DEM you can downlo
 from http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp.
 
 You'll need images which cover the entire region you have chosen to use.
-If you kept same data as the training manual, you can use the extent shown
-in the figure_set_osm_region_ figure above, otherwise adapt your extent.
+To find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of
+the largest layer and pick the values in the |extents| :guilabel:`Extents`
+box of the status bar.
 Keep the :file:`GeoTiff` format. Once the form is filled, click on the
 :guilabel:`Click here to Begin Search >>` button and download the file(s).
 
@@ -179,19 +203,16 @@ Once you have downloaded the required file(s), they should be saved in the
 --------------------------------------------------------------------------------
 
 
-In Module 6, Lesson 1.2 shows close-up images of three school sports fields
+In Module :ref:`tm_create_vector_data`, :ref:`tm_datasources` lesson shows
+close-up images of three school sports fields
 which students are asked to digitize. You'll therefore need to reproduce these
 images using your new SRTM DEM tiff file(s). There is no obligation to use school
 sports fields: any three school land-use types can be used (e.g. different
 school buildings, playgrounds or car parks).
 
-For reference, the images in the example data are:
+For reference, the image in the example data is:
 
-.. image:: /static/training_manual/create_vector_data/field_outlines.png
-   :align: center
-
-
-.. image:: /static/training_manual/create_vector_data/school_area_one.png
+.. image:: img/field_outlines.png
    :align: center
 
 
@@ -199,18 +220,37 @@ For reference, the images in the example data are:
 --------------------------------------------------------------------------------
 
 Having created your localised dataset, the final step is to replace the tokens
-in the :kbd:`conf.py` file so that the appropriate names will appear in your
-localised version of the Training Manual.
+in the :file:`substitutions.txt` file so that the appropriate names will appear
+in your localised version of the Training Manual.
 
 The tokens you need to replace are as follows:
 
-* :kbd:`majorUrbanName`: this defaults to "Swellendam". Replace with the name of
+* ``majorUrbanName``: this defaults to "Swellendam". Replace with the name of
   the major town in your region.
-* :kbd:`schoolAreaType1`: this defaults to "athletics field". Replace with the
+* ``schoolAreaType1``: this defaults to "athletics field". Replace with the
   name of the largest school area type in your region.
-* :kbd:`largeLandUseArea`: this defaults to "Bontebok National Park". Replace
+* ``largeLandUseArea``: this defaults to "Bontebok National Park". Replace
   with the name of a large landuse polygon in your region.
-* :kbd:`srtmFileName`: this defaults to :kbd:`srtm_41_19.tif`. Replace this with
-  the filename of your SRTM DEM file.
-* :kbd:`localCRS`: this defaults to :kbd:`WGS 84 / UTM 34S`. You should replace
+* ``srtmFileName``: this defaults to :file:`srtm_41_19.tif`. Replace this
+  with the filename of your SRTM DEM file.
+* ``localCRS``: this defaults to ``WGS 84 / UTM 34S``. You should replace
   this with the correct CRS for your region.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |TY| replace:: Try Yourself
+.. |basic| image:: /static/global/basic.png
+.. |extents| image:: /static/common/extents.png
+   :width: 1.5em
+.. |hard| image:: /static/global/hard.png
+.. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em

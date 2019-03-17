@@ -26,13 +26,13 @@ Debian based distro users can do:
 Install git for Windows
 ------------------------
 
-Windows users can obtain `msys git <http://code.google.com/p/msysgit/>`_ or use git distributed with `cygwin <http://cygwin.com>`_.
+Windows users can obtain `msys git <https://gitforwindows.org/>`_ or use git distributed with `cygwin <https://cygwin.com>`_.
 
 
 Install git for OSX
 -------------------
 
-The `git project <http://git-scm.com/>`_ has a downloadable build of git.
+The `git project <https://git-scm.com/>`_ has a downloadable build of git.
 Make sure to get the package matching your processor (x86_64 most likely, only the first Intel Macs need the i386 package).
 
 Once downloaded open the disk image and run the installer.
@@ -42,7 +42,7 @@ PPC/source note
 The git site does not offer PPC builds. If you need a PPC build, or you just want
 a little more control over the installation, you need to compile it yourself.
 
-Download the source from http://git-scm.com/. Unzip it, and in a Terminal cd to the source folder, then:
+Download the source from https://git-scm.com/. Unzip it, and in a Terminal cd to the source folder, then:
 
 .. code-block:: bash
 
@@ -127,8 +127,8 @@ GIT Documentation
 
 See the following sites for information on becoming a GIT master.
 
-* http://gitref.org
-* http://progit.org
+* https://services.github.com/
+* https://progit.org
 * http://gitready.com
 
 
@@ -189,12 +189,6 @@ upstream repo, you can push your repo up to the QGIS official repo by doing:
   git rebase master
 
 
-Documentation on wiki
-----------------------
-
-It is also recommended to document the intended changes and the current status
-of the work on a wiki page.
-
 Testing before merging back to master
 --------------------------------------
 
@@ -227,7 +221,7 @@ branch.
 
 If you are a developer and wish to evaluate the pull request queue, there is a
 very nice `tool that lets you do this from the command line
-<http://thechangelog.com/git-pulls-command-line-tool-for-github-pull-requests/>`_
+<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-requests>`_
 
 Please see the section below on 'getting your patch noticed'. In general when
 you submit a PR you should take the responsibility to follow it through to
@@ -301,10 +295,10 @@ Patch file naming
 
 If the patch is a fix for a specific bug, please name the file with the bug
 number in it e.g. bug777fix.patch, and attach it to the `original bug report in trac 
-<http://hub.qgis.org/projects/quantum-gis>`_.
+<https://issues.qgis.org/projects/qgis>`_.
 
 If the bug is an enhancement or new feature, its usually a good idea to create
-a `ticket in trac <http://hub.qgis.org/projects/quantum-gis>`_ 
+a `ticket in trac <https://issues.qgis.org/projects/qgis>`_
 first and then attach your patch.
 
 
@@ -336,8 +330,8 @@ Getting your patch noticed
 
 QGIS developers are busy folk. We do scan the incoming patches on bug reports
 but sometimes we miss things. Don't be offended or alarmed. Try to identify a
-developer to help you - using the `Technical Resources 
-<http://qgis.org/en/site/getinvolved/governance/organisation/governance.html#community-resources>`_ 
+developer to help you - using the `Technical Resources
+<https://qgis.org/en/site/getinvolved/governance/governance.html#technical-resources>`_
 and contact them
 asking them if they can look at your patch. If you don't get any response, you
 can escalate your query to one of the Project Steering Committee members
@@ -382,4 +376,3 @@ will appear and you should make a comment at the top of the file (above the
 area that says 'don't change this'). Put a descriptive comment and rather do
 several small commits if the changes across a number of files are unrelated.
 Conversely we prefer you to group related changes into a single commit.
-

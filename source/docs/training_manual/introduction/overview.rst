@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| An Overview of the Interface
 ===============================================================================
 
@@ -13,7 +17,7 @@ interface.
 
 .. _figure_gui_numbered:
 
-.. image:: /static/training_manual/interface/gui_numbered.png
+.. image:: img/gui_numbered.png
    :align: center
 
 The elements identified in the figure above are:
@@ -23,6 +27,7 @@ The elements identified in the figure above are:
 #. Map canvas
 #. Status bar
 #. Side Toolbar
+#. Locator bar
 
 .. Don't reorder these list items! They refer to elements as numbered on an
    image.
@@ -36,29 +41,44 @@ available to you.
 Expanding collapsed items (by clicking the arrow or plus symbol beside them)
 will provide you with more information on the layer's current appearance.
 
+Hovering the layer will give you some basic information: layer name, type of
+geometry, coordinate reference system and the complete path of the location on
+your device.
+
 Right-clicking on a layer will give you a menu with lots of extra options. You
 will be using some of them before long, so take a look around!
-
-Some versions of QGIS have a separate :guilabel:`Control rendering order`
-checkbox just underneath the Layers list. Don't worry if you can't see it. If
-it is present, ensure that it's checked for now.
 
 .. note::  A vector layer is a dataset, usually of a specific kind of object,
    such as roads, trees, etc. A vector layer can consist of either points,
    lines or polygons.
 
+.. _browser_panel_tm:
+
 |basic| The Browser Panel
 ...............................................................................
 
 The QGIS Browser is a panel in QGIS that lets you easily navigate in your
-database. You can have access to common vector files (e.g. ESRI shapefile
-or MapInfo files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial)
-and WMS/WFS connections. You can also view your GRASS data.
+database. You can have access to common vector files (e.g. ESRI Shapefile
+or MapInfo files), databases (e.g. PostGIS, Oracle, SpatiaLite, GeoPackage or
+MSSQL Spatial) and WMS/WFS connections. You can also view your GRASS data.
+
+If you have saved a project, the Browser Panel will also give you quick access to
+all the layers stored in the same path of the project file under in the
+|qgsProjectFile| :guilabel:`Project Home` item.
+
+Moreover, you can set one or more folder as **Favorites**: search under your path
+and once you have found the folder, right click on it and click on ``Add as a
+Favorite``. You should then be able to see your folder in the |favourites|
+:guilabel:`Favorites` item.
+
+.. tip:: It can happen that the folders added to Favorite item have a really
+  long name: don't worry right-click on the path and choose ``Rename Favorite...``
+  to set another name.
 
 |basic| Toolbars
 ...............................................................................
 
-Your most oft-used sets of tools can be turned into toolbars for basic access.
+Your most often used sets of tools can be turned into toolbars for basic access.
 For example, the File toolbar allows you to save, load, print, and start a new
 project. You can easily customize the interface to see only the tools you use
 most often, adding or removing toolbars as necessary via the
@@ -73,13 +93,32 @@ map by clicking on the :guilabel:`Project` menu and then clicking on
 |basic| The Map Canvas
 ...............................................................................
 
-This is where the map itself is displayed.
+This is where the map itself is displayed and where layers are loaded. In the map
+canvas you can interact with the visible layers: zoom in/out, move the map,
+select features and many other operations that we will deeply see in the next
+sections.
 
 |basic| The Status Bar
 ...............................................................................
 
 Shows you information about the current map. Also allows you to adjust the map
-scale and see the mouse cursor's coordinates on the map.
+scale, the map rotation and see the mouse cursor's coordinates on the map.
+
+|basic| The Side Toolbar
+...............................................................................
+
+By default the Side toolbar contains the buttons to load the layer and all the
+buttons to create a new layer. But remember that you can move all the toolbars
+wherever it is more comfortable for you.
+
+|basic| The Locator Bar
+...............................................................................
+
+Within this bar you can access to almost all the objects of QGIS: layers, layer
+features, algorithms, spatial bookmarks, etc. Check all the different options in
+the :ref:`locator_options` section of the QGIS User Manual.
+
+.. tip:: With the shortcut :kbd:`Ctrl+K` you can easily access the bar.
 
 
 .. _backlink-interface-overview-1:
@@ -106,9 +145,9 @@ Try to find each of these tools on your screen. What is their purpose?
 
 2. |zoomToLayer|
 
-3. |whatsThis|
+3. |invertSelection|
 
-4. .. image:: /static/training_manual/interface/toggle_render.png
+4. .. image:: img/toggle_render.png
 
 5. |measure|
 
@@ -121,8 +160,34 @@ Try to find each of these tools on your screen. What is their purpose?
 
 :ref:`Check your results <interface-overview-2>`
 
+
 |WN|
 -------------------------------------------------------------------------------
 
 Now you've seen how the QGIS interface works, you can use the tools available
 to you and start improving on your map! This is the topic of the next lesson.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |favourites| image:: /static/common/mIconFavourites.png
+   :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
+.. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em

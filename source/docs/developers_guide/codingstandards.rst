@@ -355,7 +355,7 @@ Braces should start on the line following the expression:
 API Compatibility
 ==================
 
-There is `API documentation <http://qgis.org/api/>`_ for C++.
+There is `API documentation <https://qgis.org/api/>`_ for C++.
 
 We try to keep the API stable and backwards compatible. Cleanups to the API
 should be done in a manner similar to the Qt sourcecode e.g.
@@ -569,10 +569,10 @@ Book recommendations
 ---------------------
 
 
-- `Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, Scott Meyers
-- `More Effective C++ <http://www.informit.com/store/more-effective-c-plus-plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers
-- `Effective STL <http://www.informit.com/store/effective-stl-50-specific-ways-to-improve-your-use-9780201749625>`_, Scott Meyers
-- `Design Patterns <http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612>`_, GoF
+- `Effective Modern C++ <https://shop.oreilly.com/product/0636920033707.do>`_, Scott Meyers
+- `More Effective C++ <https://www.informit.com/store/more-effective-c-plus-plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers
+- `Effective STL <https://www.informit.com/store/effective-stl-50-specific-ways-to-improve-your-use-9780201749625>`_, Scott Meyers
+- `Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612>`_, GoF
 
 You should also really read this article from Qt Quarterly on
 `designing Qt style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_
@@ -587,11 +587,11 @@ contribution by:
 * adding a note to the changelog for the first version where 
   the code has been incorporated, of the type::
 
-    This feature was funded by: Olmiomland http://olmiomland.ol
-    This feature was developed by: Chuck Norris http://chucknorris.kr
+    This feature was funded by: Olmiomland https://olmiomland.ol
+    This feature was developed by: Chuck Norris https://chucknorris.kr
 
 * writing an article about the new feature on a blog, 
-  and add it to the QGIS planet http://plugins.qgis.org/planet/
+  and add it to the QGIS planet https://plugins.qgis.org/planet/
 * adding their name to:
 
   * https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS

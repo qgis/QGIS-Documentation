@@ -278,7 +278,7 @@ NO WARRANTY
 In addition, as a special exception, the QGIS Development Team gives
 permission to link the code of this program with the Qt library,
 including but not limited to the following versions (both free and
-commercial): Qt/Non-commerical Windows, Qt/Windows, Qt/X11, Qt/Mac, and
+commercial): Qt/Non-commercial Windows, Qt/Windows, Qt/X11, Qt/Mac, and
 Qt/Embedded (or with modified versions of Qt that use the same license
 as Qt), and distribute linked combinations including the two. You must
 obey the GNU General Public License in all respects for all of the code
@@ -297,7 +297,7 @@ Version 1.3, 3 November 2008
 
 Copyright  2000, 2001, 2002, 2007, 2008  Free Software Foundation, Inc
 
-http://fsf.org/
+https://fsf.org/
 
 
 Everyone is permitted to copy and distribute verbatim copies of this
@@ -323,9 +323,9 @@ license designed for free software.
 We have designed this License in order to use it for manuals for free
 software, because free software needs free documentation: a free
 program should come with manuals providing the same freedoms that the
-software does.  But this License is not limited to software manuals;
+software does. But this License is not limited to software manuals;
 it can be used for any textual work, regardless of subject matter or
-whether it is published as a printed book.  We recommend this License
+whether it is published as a printed book. We recommend this License
 principally for works whose purpose is instruction or reference.
 
 
@@ -701,7 +701,7 @@ The Free Software Foundation may publish new, revised versions
 of the GNU Free Documentation License from time to time.  Such new
 versions will be similar in spirit to the present version, but may
 differ in detail to address new problems or concerns.  See
-http://www.gnu.org/copyleft/.
+https://www.gnu.org/copyleft/.
 
 Each version of the License is given a distinguishing version number.
 If the Document specifies that a particular numbered version of this
@@ -783,3 +783,12 @@ If your document contains nontrivial examples of program code, we
 recommend releasing these examples in parallel under your choice of
 free software license, such as the GNU General Public License,
 to permit their use in free software.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

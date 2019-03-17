@@ -2,7 +2,8 @@
 
    |updatedisclaimer|
 
-.. index:: composer map
+.. index:: Layout; Map item
+.. _layout_map_item:
 
 The Map Item
 =============
@@ -12,259 +13,303 @@ The Map Item
    .. contents::
       :local:
 
-Click on the |addMap| :sup:`Add new map` toolbar button in the Print Composer
-toolbar to add the QGIS map canvas. Now, drag a rectangle onto the Composer
-canvas with the left mouse button to add the map. To display the current map, you
-can choose between three different modes in the map :guilabel:`Item Properties`
-panel:
 
-* **Rectangle** is the default setting. It only displays an empty box with a
-  message 'Map will be printed here'.
-* **Cache** renders the map in the current screen resolution. If you zoom the
-  Composer window in or out, the map is not rendered again but the image will
-  be scaled.
-* **Render** means that if you zoom the Composer window in or out, the map will
-  be rendered again, but for space reasons, only up to a maximum resolution.
+The map item is the main frame that displays the map you've designed in the map
+canvas.
+Use the |addMap| :guilabel:`Add Map` tool following :ref:`items creation
+instructions <create_layout_item>` to add a new map item that you can later
+manipulate the same way as exposed in :ref:`interact_layout_item`.
 
-**Cache** is the default preview mode for newly added Print Composer maps.
+By default, a new map item shows the current status of the :ref:`map canvas
+<label_mapview>` with its extent and visible layers. You can customize it
+thanks to the :guilabel:`Item Properties` panel. Other than the :ref:`items
+common properties <item_common_properties>`, this feature has the following
+functionalities:
 
-You can resize the map item by clicking on the |select| :sup:`Select/Move item`
-button, selecting the element, and dragging one of the blue handles in the
-corner of the map.  This button also helps to move the map to another place.
-Select the item and while holding the left mouse button, move to the new place
-and release the mouse button. After you have found the right place for an item,
-you can lock the item position within the Print Composer canvas. Select the
-map item and use the toolbar |locked| :sup:`Lock Selected Items` or the
-:menuselection:`Items` panel to Lock the item. A locked item can only be selected
-using the :menuselection:`Items` panel. Once selected you can use the
-:menuselection:`Items` panel to unlock individual items. The |unlocked|
-:sup:`Unlock All Items` icon will unlock all locked composer items. With the
-map selected, you can now adapt more properties in the map
-:guilabel:`Item Properties` panel.
+.. _figure_layout_map:
 
-To move layers within the map element, select the map element, click the
-|moveItemContent| :sup:`Move item content` icon and move the layers within
-the map item frame with the left mouse button.
-
-.. _`composer_main_properties`:
-
-Main properties
----------------
-
-The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properties`
-panel provides the following functionalities (see figure_composer_map_):
-
-.. _Figure_composer_map:
-
-.. figure:: /static/user_manual/print_composer/map_mainproperties.png
+.. figure:: img/map_mainproperties.png
    :align: center
 
    Map Item Properties Panel
 
-* The **Preview** drop-down menu allows you to select one of the preview modes
-  'Rectangle', 'Cache' and 'Render', as described above. If you change the
-  view on the QGIS map canvas by changing vector or raster properties, you can
-  update the Print Composer view by selecting the map element and clicking
-  the **[Update preview]** button.
-* The field :guilabel:`Scale` |selectNumber| manually sets the map item scale.
-* The field :guilabel:`Map rotation` |selectNumber| allows you to rotate the
-  map element content clockwise in degrees. The rotation of the map
-  canvas can be imitated here.
-* |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that
-  may be placed on the map canvas in the main QGIS window.
+
+.. _`layout_main_properties`:
+
+Main properties
+---------------
+
+In the :guilabel:`Main properties` group (see figure_layout_map_) of the map
+:guilabel:`Item Properties` panel, available options are:
+
+* The :guilabel:`Update Preview` button to refresh the map item rendering if the view
+  in map canvas has been modified. Note that most of the time, the map item
+  refresh is automatically triggered by the changes;
+* The :guilabel:`Scale` to manually set the map item scale;
+* The :guilabel:`Map rotation` allows you to rotate the map item content
+  clockwise in degrees. The rotation of the map canvas can be imitated here;
+* The :guilabel:`CRS` allows you to display the map item content in any
+  :ref:`CRS <crs_selector>`. It defaults to ``Use project CRS``;
+* |checkbox| :guilabel:`Draw map canvas items` lets you show in the print
+  layout :ref:`annotations <sec_annotations>` that are placed on the main map
+  canvas.
 
 Layers
 ------
 
-The :guilabel:`Layers` dialog of the map item panel provides the following
-functionality (see figure_composer_map_layers_):
+By default, map item appearance is synced with the map canvas rendering meaning
+that toggling visibility of the layers or modifying their style in the
+:guilabel:`Layers Panel` is automatically applied to the map item. Because,
+like any other item, you may want to add multiple map items to a print layout,
+there's a need to break this synchronization in order to allow showing
+different areas, layer combinations, at different scales...
+The :guilabel:`Layers` properties group (see figure_layout_map_layers_) helps
+you do that.
 
-.. _Figure_composer_map_layers:
+.. _figure_layout_map_layers:
 
-.. figure:: /static/user_manual/print_composer/map_layers.png
+.. figure:: img/map_layers.png
    :align: center
 
-   Map Layers Dialog
+   Map Layers group
 
-If you want to keep the map item consistent with an existing map theme, 
-use |selectString| :guilabel:`Follow map theme` and select the desired theme. 
-(See :ref:`map_themes` to find out how to configure map themes.)
-Any changes applied to the theme in QGIS' main window (using the replace theme
-function) will automatically affect the map item. 
-If a map theme is selected, the :guilabel:`Lock styles for layers` option will
-be disabled because :guilabel:`Follow map theme` also updates the
+
+If you want to keep the map item consistent with an existing :ref:`map theme
+<map_themes>`, check |checkbox| :guilabel:`Follow map theme` and select the
+desired theme in the drop-down list. Any changes applied to the theme in QGIS'
+main window (using the replace theme function) will automatically affect the
+map item.
+If a map theme is selected, the :guilabel:`Lock styles for layers` option is
+disabled because :guilabel:`Follow map theme` also updates the
 style (symbology, labels, diagrams) of the layers.
 
-To lock the layers shown in a map item to the current map canvas check
-|checkbox| :guilabel:`Lock layers`. After this option is enabled, any
-changes on the layers' visibility in QGIS' main window won't affect
-the Composer's map item. Nevertheless, style and labels of locked
+To lock the layers shown in a map item to the current map canvas visibility,
+check |checkbox| :guilabel:`Lock layers`. When this option is enabled, any
+changes on the layers' visibility in QGIS' main window will not affect
+the layout's map item. Nevertheless, style and labels of locked
 layers are still refreshed according to QGIS' main window.
 You can prevent this by using :guilabel:`Lock styles for layers`.
 
-Using the |showMapTheme| button, you can lock the map item's layers to one of
-the map themes you have prepared (see :ref:`map_themes`).
-Clicking the |showMapTheme| button will show the list of all themes. 
-Select the theme you want to display. The map canvas will lock the
-theme layers automatically by enabling the |checkbox| :guilabel:`Lock
-layers`. You can release the theme by unchecking the |checkbox|
-:guilabel:`Lock layers` and press the |draw| button in the
-map composer's :guilabel:`Navigation` toolbar.
+Instead of using the current map canvas, you can also lock the layers of the
+map item to those of an existing map theme: select a map theme from the
+|showMapTheme| :sup:`Set layer list from a map theme` drop-down button, and the
+|checkbox| :guilabel:`Lock layers` is activated. The set of visible layers in
+the map theme is from now on used for the map item until you select another map
+theme or uncheck the |checkbox| :guilabel:`Lock layers` option. You then may
+need to refresh the view using the |draw| :sup:`Refresh view` button of the
+:guilabel:`Navigation` toolbar or the :guilabel:`Update Preview` button seen above.
 
-Note that, unlike the :guilabel:`Follow map theme`, using the
-:guilabel:`Lock layers` option enabled and set to a theme, the map item
-layers won't be updated if the theme is changed (using the replace theme
-function) in QGIS' main window.
+Note that, unlike the :guilabel:`Follow map theme` option, if the
+:guilabel:`Lock layers` option is enabled and set to a map theme, the layers in
+the map item will not be refreshed even if the map theme is updated (using the
+replace theme function) in QGIS' main window.
 
-Locked layers in the map can also be :ref:`data-defined <data_defined>`, using
-the |dataDefined| icon beside the option. When used, this overrides the
+Locked layers in the map item can also be :ref:`data-defined <data_defined>`,
+using the |dataDefined| icon beside the option. When used, this overrides the
 selection set in the drop-down list. You need to pass a list of layers
 separated by ``|`` character.
 The following example locks the map item to use only layers ``layer 1`` and
 ``layer 2``::
 
-    concat ('layer 1', '|', 'layer 2')
+  concat ('layer 1', '|', 'layer 2')
 
 
 Extents
 -------
 
-The :guilabel:`Extents` dialog of the map item panel provides the following
-functionalities (see figure_composer_map_extents_):
+The :guilabel:`Extents` group of the map item properties panel provides the
+following functionalities (see figure_layout_map_extents_):
 
-.. _Figure_composer_map_extents:
+.. _figure_layout_map_extents:
 
-.. figure:: /static/user_manual/print_composer/map_extents.png
+.. figure:: img/map_extents.png
    :align: center
 
-   Map Extents Dialog
+   Map Extents group
 
-The **Map extents** area allows you to specify the map extent using ``X`` and
-``Y`` min/max values and by clicking the **[Set to map canvas extent]** button.
-This button sets the map extent of the composer map item to the extent of the
-current map view in the main QGIS application.
-The button **[View extent in map canvas]** does exactly the opposite; it
-updates the extent of the map view in the QGIS application to the extent
-of the composer map item.
+The **Extents** area displays ``X`` and ``Y`` coordinates of the area shown
+in the map item. Each of these values can be manually replaced, modifying the
+map canvas area displayed and/or map item size.
+Clicking the :guilabel:`Set to Map Canvas Extent` button sets the extent of the
+layout map item to the extent of the main map canvas.
+The button :guilabel:`View Extent in Map Canvas` does exactly the opposite; it
+updates the extent of the main map canvas to the extent of the layout map item.
 
-If you change the view on the QGIS map canvas by changing
-vector or raster properties, you can update the Print Composer view by selecting
-the map element in the Print Composer and clicking the **[Update preview]**
-button in the map :guilabel:`Item Properties` panel (see figure_composer_map_).
+You can also alter a map item extent using the |moveItemContent| :sup:`Move
+item content` tool: click-and-drag within the map item to modify its current
+view, keeping the same scale. With the |moveItemContent| tool enabled, use the
+mouse wheel to zoom in or out, modifying the scale of the shown map. Combine
+the movement with :kbd:`Ctrl` key pressed to have a smaller zoom.
+
+.. index:: Atlas
+.. _controlled_atlas:
+
+Controlled by atlas
+-------------------
+
+The |checkbox| :guilabel:`Controlled by atlas` group properties is available
+only if an :ref:`atlas <atlas_generation>` is active in the print layout. Check
+this option if you want the map item being ruled by the atlas; when iterating
+over the coverage layer, the map item extent is panned/zoomed to the atlas
+feature following:
+
+* |radioButtonOn| :guilabel:`Margin around features`: zooms to the feature at the
+  best scale, keeping around each a margin representing a percentage of the map
+  item width or height. The margin can be the same for all features or :ref:`set
+  variable <data_defined>`, e.g., depending on map scale;
+* |radioButtonOff| :guilabel:`Predefined scale (best fit)`: zooms to the feature
+  at the project :ref:`predefined scale <predefinedscales>` where the atlas
+  feature best fits;
+* |radioButtonOff| :guilabel:`Fixed scale`: atlas features are panned from one
+  to another, keeping the same scale of the map item. Ideal when working with
+  features of same size (e.g., a grid) or willing to highlight size differences
+  among atlas features.
 
 .. index:: Grids, Map grid
 
 Grids
 -----
 
-The :guilabel:`Grids` dialog of the map :guilabel:`Item Properties` panel
-provides the possibility to add several grids to a map item.
+With grids, you can add, over your map, information relative to its extent or
+coordinates, either in the map item projection or a different one. The
+:guilabel:`Grids` group provides the possibility to add several grids to a
+map item.
 
 * With the |signPlus| and |signMinus| buttons you can add or remove a selected
-  grid.
-* With the |arrowUp| and |arrowDown| buttons you can move a grid in the list
-  and set the drawing priority.
+  grid;
+* With the |arrowUp| and |arrowDown| buttons you can move up and down a grid in
+  the list, hence move it on top or bottom of another one, over the map item.
 
-When you double-click the added grid you can give it another name.
+Double-click the added grid to rename it.
 
-.. _Figure_composer_map_grid:
+.. _Figure_layout_map_grid:
 
-.. figure:: /static/user_manual/print_composer/map_grids.png
+.. figure:: img/map_grids.png
    :align: center
 
    Map Grids Dialog
 
-After you have added a grid, you can activate the checkbox |checkbox|
-:guilabel:`Draw grid` to overlay a grid onto the map element. Expand this option
-to provide a lot of configuration options, see Figure_composer_map_grid_draw_.
+After you add a grid, you can activate the checkbox |checkbox| :guilabel:`Draw
+grid` to allow overlaying the grid onto the map item. Press the :guilabel:`Modify Grid...`
+button to access configuration options.
 
-.. _Figure_composer_map_grid_draw:
+Grid Appearance
+...............
 
-.. figure:: /static/user_manual/print_composer/map_draw_grid.png
+As grid type, you can specify to use a:
+
+* *Solid*: shows a line across the grid frame. The :guilabel:`Line style` can
+  be customized using :ref:`color <color-selector>` and :ref:`symbol
+  <symbol-selector>` selector widget;
+* *Cross*: displays segment at the grid lines intersection for which you can
+  set the :guilabel:`Line style` and the :guilabel:`Cross width`;
+* *Markers*: only displays customizable markers symbol at grid lines
+  intersection;
+* or *Frame and annotations only*.
+
+Other than the grid type, you can define:
+
+* the :guilabel:`CRS` which could not be the same as the map item's;
+* the :guilabel:`Interval` between two consecutive grid references in ``X``
+  and ``Y`` directions;
+* the :guilabel:`Interval Units` to use for the grid references, in ``Map
+  units``, ``Millimeters`` or ``Centimeters``;
+* an :guilabel:`Offset` from the map item edges, in ``X`` and ``Y`` directions;
+* and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
+  compatible.
+
+.. _Figure_layout_map_grid_draw:
+
+.. figure:: img/map_draw_grid.png
    :align: center
 
    Draw Grid Dialog
 
-As grid type, you can specify to use a 'Solid', 'Cross', 'Markers' or 'Frame and
-annotations only'.
-'Frame and annotations only' is especially useful when working with rotated maps
-or reprojected grids. In the divisions section of the Grid Frame Dialog mentioned
-below you then have a corresponding setting. Symbology of the grid and its
-rendering mode can be chosen. See :ref:`Composer_Rendering_Mode`. Furthermore,
-you can define an interval in the X and Y directions, an X and Y offset,
-and the width used for the cross or line grid type.
+Grid Frame
+..........
 
-.. _Figure_composer_map_frame:
+There are different options to style the frame that holds the map.
+Following options are available: ``No Frame``, ``Zebra``, ``Interior ticks``,
+``Exterior ticks``, ``Interior and Exterior ticks`` and ``Line border``.
+Also you can choose to set visible or not each side of the grid frame.
 
-.. figure:: /static/user_manual/print_composer/map_grid_frame.png
+
+When compatible, it's possible to set the :guilabel:`Frame size`,
+:guilabel:`Frame line thickness`, :guilabel:`Frame fill colors`.
+With ``Latitude/Y only`` and ``Longitude/X only`` settings in the divisions
+section you have the possibility to prevent a mix of latitude/Y and longitude/X
+coordinates showing on a side when working with rotated maps or reprojected
+grids.
+
+.. _Figure_layout_map_frame:
+
+.. figure:: img/map_grid_frame.png
    :align: center
 
    Grid Frame Dialog
 
-* There are different options to style the frame that holds the map.
-  Following options are available: No Frame, Zebra, Interior ticks, Exterior
-  ticks, Interior and Exterior ticks and Lineborder.
+Coordinates
+...........
 
-* With 'Latitude/Y only' and 'Longitude/X only' setting in the divisions section
-  you have the possibility to prevent a mix of latitude/y and longitude/x
-  coordinates showing on a side when working with rotated maps or reprojected
-  grids.
+The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add
+coordinates to the map frame. You can choose the annotation numeric format,
+the options range from decimal to degrees, minute and seconds, with or without
+suffix, aligned or not and a custom format using the expression dialog.
 
-* Advanced rendering mode is also available for grids.
+You can choose which annotation to show. The options are: show all, latitude
+only, longitude only, or disable(none). This is useful when the map is rotated.
+The annotation can be drawn inside or outside the map frame. The annotation
+direction can be defined as horizontal, vertical ascending or vertical
+descending.
 
-* The |checkbox| :guilabel:`Draw coordinates` checkbox allows you to add
-  coordinates to the map frame. You can choose the annotation numeric format,
-  the options range from decimal to degrees, minute and seconds, with or without
-  suffix, aligned or not and a custom format using the expression dialog.
-  You can choose which annotation to show. The options are: show all, latitude
-  only, longitude only, or disable(none). This is useful when the map is rotated.
-  The annotation can be drawn inside or outside the map frame. The annotation
-  direction can be defined as horizontal, vertical ascending or vertical
-  descending. Finally, you can define the annotation font, the annotation font
-  color, the annotation distance from the map frame and the precision of the
-  drawn coordinates.
+Finally, you can define the annotation font, font color, distance from the map
+frame and the precision of the drawn coordinates.
 
-.. _Figure_composer_map_coord:
+.. _figure_layout_map_coord:
 
-.. figure:: /static/user_manual/print_composer/map_grid_draw_coordinates.png
+.. figure:: img/map_grid_draw_coordinates.png
    :align: center
 
    Grid Draw Coordinates dialog
 
 
+.. index:: Location map, Map overview
+
 Overviews
 ---------
 
-The :guilabel:`Overviews` dialog of the map :guilabel:`Item Properties` panel
-provides the following functionalities:
+Sometimes you may have more than one map in the print layout and would like to
+locate the study area of one map item on another one. This could be for example
+to help map readers identify the area in relation with its larger geographic
+context shown in the second map.
 
-.. _Figure_composer_map_overview:
+The :guilabel:`Overviews` group of the map panel helps you create the link
+between two different maps extent and provides the following functionalities:
 
-.. figure:: /static/user_manual/print_composer/map_overview.png
+.. _figure_layout_map_overview:
+
+.. figure:: img/map_overview.png
    :align: center
 
-   Map Overviews Dialog
+   Map Overviews group
 
-You can choose to create an overview map, which shows the extents of the other
-map(s) that are available in the composer. First you need to create the map(s)
-you want to include in the overview map and the map you want to use as the
-overview map, just like a normal map.
+To create an overview, select the map item on which you want to show the other
+map item's extent and expand the :guilabel:`Overviews` option in the
+:guilabel:`Item Properties` panel. Then press the |signPlus| button to add
+an overview.
 
-Then expand :guilabel:`Overviews` option and press the green plus icon-button to
-add an overview.
-Initially this overview is named 'Overview 1' (see Figure_composer_map_overview_).
-You can change the name when you double-click on the overview item in the list
-named 'Overview 1' and change it to another name.
+Initially this overview is named 'Overview 1' (see Figure_layout_map_overview_).
+You can:
 
-* With the plus and minus button you can add or remove an overview.
-* With the up and down button you can move an overview in the list and set the
-  drawing priority.
+* Rename it with a double-click;
+* With the |signPlus| and |signMinus| buttons, add or remove overviews;
+* With the |arrowUp| and |arrowDown| buttons, move up and down an overview in
+  the list, hence move it on top or bottom of another one, over the map item.
 
+Then select the overview item in the list and check the |checkbox|
+:guilabel:`Draw "<name_overview>" overview` to enable the overview
+drawing over the selected map frame. You can customize it with:
 
-When you select the overview item in the list you can customize it.
-
-* The |checkbox| :guilabel:`Draw "<name_overview>" overview` needs to be
-  activated to draw the extent of selected map frame.
 * The :guilabel:`Map frame` combo list can be used to select the map item whose
   extents will be drawn on the present map item.
 * The :guilabel:`Frame Style` allows you to change the style of the overview frame.
@@ -275,3 +320,34 @@ When you select the overview item in the list you can customize it.
 * The |checkbox| :guilabel:`Center on overview` puts the extent of the overview
   frame in the center of the overview map. You can only activate one overview
   item to center, when you have added several overviews.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |showMapTheme| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

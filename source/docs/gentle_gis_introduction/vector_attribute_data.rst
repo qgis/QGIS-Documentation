@@ -19,7 +19,7 @@ give us very little information. Take a look at figure_map_attributes_ for examp
 
 .. _figure_map_attributes:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/map_attributes.png
+.. figure:: img/map_attributes.png
    :align: center
    :width: 30em
 
@@ -35,7 +35,7 @@ the house pictures in figure_house_.
 
 .. _figure_house:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/house_picture.png
+.. figure:: img/house_picture.png
    :align: center
    :width: 30em
 
@@ -51,7 +51,7 @@ houses polygon layer, and the attributes in an attribute table (see figure_house
 
 .. _figure_house_gis:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/houses_in_gis.png
+.. figure:: img/houses_in_gis.png
    :align: center
    :width: 30em
 
@@ -68,7 +68,7 @@ feature **symbology**.
 
 .. _figure_style_by_attribute:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/style_by_attribute.png
+.. figure:: img/style_by_attribute.png
    :align: center
    :width: 30em
 
@@ -88,7 +88,7 @@ an example of an attribute search in a GIS.
 
 .. _figure_search_by_attribute:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/search_by_attribute.png
+.. figure:: img/search_by_attribute.png
    :align: center
    :width: 30em
 
@@ -116,7 +116,7 @@ describe the feature). This is shown in figure_features_at_glance_.
 
 .. _figure_features_at_glance:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/feature_at_glance.png
+.. figure:: img/feature_at_glance.png
    :align: center
    :width: 30em
 
@@ -198,7 +198,7 @@ setting a **fill style** and color.
 
 .. _figure_single_symbol:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/single_symbol_point.png
+.. figure:: img/single_symbol_point.png
    :align: center
    :width: 30em
 
@@ -207,7 +207,7 @@ setting a **fill style** and color.
 
 .. _figure_single_symbol_poly:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/single_symbol_poly.png
+.. figure:: img/single_symbol_poly.png
    :align: center
    :width: 30em
 
@@ -227,7 +227,7 @@ areas with another and high-altitude areas with a third.
 
 .. _figure_graduated_symbol:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/graduated_symbol_settings.png
+.. figure:: img/graduated_symbol_settings.png
    :align: center
    :width: 30em
 
@@ -238,7 +238,7 @@ areas with another and high-altitude areas with a third.
 
 .. _figure_graduated_symbol_map:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/graduated_symbol_map.png
+.. figure:: img/graduated_symbol_map.png
    :align: center
    :width: 30em
 
@@ -324,7 +324,7 @@ shown in figure_continuous_symbol_.
 
 .. _figure_continuous_symbol:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/continuous_symbol_settings.png
+.. figure:: img/continuous_symbol_settings.png
    :align: center
    :width: 30em
 
@@ -344,7 +344,7 @@ orange (see figure_continuous_symbol_map_).
 
 .. _figure_continuous_symbol_map:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/continuous_symbol_map.png
+.. figure:: img/continuous_symbol_map.png
    :align: center
    :width: 30em
 
@@ -385,7 +385,7 @@ can then be assigned a colour and style. This is shown in figure_unique_symbol_.
 
 .. _figure_unique_symbol:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/unique_symbol_settings.png
+.. figure:: img/unique_symbol_settings.png
    :align: center
    :width: 30em
 
@@ -398,7 +398,7 @@ attribute table, the road line will be drawn with suitable colour and line style
 
 .. _figure_unique_symbol_map:
 
-.. figure:: /static/gentle_gis_introduction/vector_attrs/unique_symbol_map.png
+.. figure:: img/unique_symbol_map.png
    :align: center
    :width: 30em
 
@@ -493,7 +493,7 @@ the same technique?
 Further reading
 ===============
 
-**Website:** http://en.wikipedia.org/wiki/Cartography#Map_symbology
+**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology
 
 The QGIS User Guide also has more detailed information on working with attribute
 data and symbology in QGIS.
@@ -504,3 +504,13 @@ What's next?
 In the section that follows we will take a closer look at **data capture.** We
 will put the things we have learned about vector data and attributes into practice
 by creating new data.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

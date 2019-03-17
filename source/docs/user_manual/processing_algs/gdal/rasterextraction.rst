@@ -11,15 +11,16 @@ Raster extraction
       :local:
       :depth: 1
 
+
+.. _gdalcliprasterbyextent:
+
 Clip raster by extent
 ---------------------
-
-Description
-...........
-
 Clips any GDAL-supported raster file to a given extent.
-The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
 
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -39,36 +40,48 @@ Parameters
   Default: *0,1,0,1*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
+``Output data type`` [enumeration]
+  Defines the format of the output raster file.
+
+  Options:
+
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
+
+  Default: *0*
+
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+``Clipped (extent)`` [raster]
+  Output raster layer clipped by the given extent.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:cliprasterbyextent', input, no_data, projwin, extra, output)
-
-See also
-........
+.. _gdalcliprasterbymasklayer:
 
 Clip raster by mask layer
 -------------------------
-
-Description
-...........
-
 Clips any GDAL-supported raster by a vector mask layer.
-The algorithm is derived from the `GDAL grid utility <http://www.gdal.org/gdal_grid.html>`_ .
+
+This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -84,11 +97,16 @@ Parameters
 
   Default: *none*
 
-``Create and output alpha band`` [boolean]
+``Create an output alpha band`` [boolean]
   Creates an alpha band for the result. The alpha band then includes the transparency
   values of the pixels.
 
   Default: *False*
+
+``Match the extent of the clipped raster to the extent of the mask layer`` [boolean]
+  Applies the vector layer extent to the output raster if checked.
+
+  Default: *True*
 
 ``Keep resolution of output raster`` [boolean]
   The resolution of the output raster will not be changed.
@@ -96,42 +114,57 @@ Parameters
   Default: *False*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
+``Output data type`` [enumeration]
+  Defines the format of the output raster file.
+
+  Options:
+
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
+
+  Default: *0*
+
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+``Clipped (mask)`` [raster]
+  Output raster layer clipped by the vector layer.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:cliprasterbymasklayer', input, mask, no_data, alpha_band, keep_resolution, extra, output)
-
-See also
-........
+.. _gdalcontour:
 
 Contour
 -------
-
-Description
-...........
-
 Extracts contour lines from any GDAL-supported elevation raster.
-The algorithm is derived from the `GDAL contour utility <http://www.gdal.org/gdal_contour.html>`_ .
+
+This algorithm is derived from the `GDAL contour utility <https://www.gdal.org/gdal_contour.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
 
 ``Input layer`` [raster]
   Input elevation raster.
+
+``Band number`` [raster band]
+  Raster band to extract.
 
 ``Interval between contour lines`` [number]
   Defines the interval between the contour lines in the given units of the
@@ -140,33 +173,47 @@ Parameters
   Default: *10.0*
 
 ``Attribute name (if not set, no elevation attribute is attached)`` [string]
-  Optional.
+  Optional
 
   Defines the attribute name for the field containing the values of the
   contour lines. If nothing is defines the default name will be 'ELEV'.
 
   Default: *ELEV*
 
-``Additional creation parameters`` [string]
-  Optional.
+``Offset from zero relative to which to interpret intervals`` [number]
+  Optional
 
-  <put parameter description here>
+  Default: *0.0*
 
-  Default: *(not set)*
+``Produce 3D vector`` [boolean]
+  Forces production of 3D vectors instead of 2D. Includes elevation at every vertex.
+
+  Default: *False*
+
+``Treat all raster values as valid`` [boolean]
+  Ignores any nodata values in the dataset.
+
+  Default: *False*
+
+``Input pixel value to treat as "nodata"`` [number]
+  Optional
+
+  Default: *Not set*
+
+``Additional creation options`` [string]
+  Optional
 
 Outputs
 .......
 
-``Output file for contour lines (vector)`` [vector]
-  <put output description here>
+``Contours`` [vector: line]
+  Output file for contour lines.
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('gdalogr:contour', input_raster, interval, field_name, extra, output_vector)
-
-See also
-........
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

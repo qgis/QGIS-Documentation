@@ -28,7 +28,7 @@ executed at any particular moment.
 
 .. _figure_history:
 
-.. figure:: /static/user_manual/processing/history.png
+.. figure:: img/history.png
    :align: center
 
    History
@@ -40,14 +40,17 @@ toolbox and then check the history manager to see how that same algorithm could
 be called from the command line.
 
 Apart from browsing the entries in the registry, you can also re-execute processes by
-simply double-clicking on the corresponding entry.
+simply double-clicking on the corresponding entry: the algorithm dialog opens
+with parameters already filled; you can then change any of them to fit your
+needs and re-run the algorithm.
 
 The processing log
 -------------------
 
 The history dialog only contains the execution calls, but not the information
 produced by the algorithm when executed. That information is written to the QGIS
-log, in a :guilabel:`Processing` tab.
+log (:menuselection:`View --> Panels --> Log Messages Panel`), in a
+:guilabel:`Processing` tab.
 
 Third-party algorithms are usually executed by calling their
 command-line interfaces, which communicate with the user via the console.
@@ -60,3 +63,12 @@ Some algorithms, even if they can produce a result with the given input data,
 might add comments or additional information to log if
 they detect potential problems with the data, in order to warn you.
 Make sure you check those messages in the log if you are having unexpected results.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

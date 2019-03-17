@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 |MOD| Assessment
 *******************************************************************************
@@ -9,7 +13,7 @@ Use your own data for this section. You will need:
 - a line vector dataset of roads
 - a polygon vector dataset of land use (using property boundaries)
 - a visual-spectrum image (such as an aerial photograph)
-- a DEM (downloadable from `this URL <http://srtm.csi.cgiar.org/>`_ if you
+- a DEM (downloadable from `the CGIAR-CSI <http://srtm.csi.cgiar.org/>`_ if you
   don't have your own)
 
 Create a base map
@@ -147,9 +151,22 @@ Analyze the data
 Final Map
 ===============================================================================
 
-* Use the :guilabel:`Map Composer` to create a final map, which incorporates
+* Use the :guilabel:`Print Layout` to create a final map, which incorporates
   your analysis results.
 * Include this map in a document along with your documented criteria. If the
   map has become too visually busy due to the added layer(s), deselect the
   layers which you feel are the least necessary.
 * Your map must include a title and a legend.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |MOD| replace:: Module:
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

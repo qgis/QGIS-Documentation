@@ -11,7 +11,7 @@ Interpolation
       :local:
       :depth: 1
 
-.. _qgis_heatmap:
+.. _qgisheatmapkerneldensityestimation:
 
 Heatmap (kernel density estimation)
 -----------------------------------
@@ -27,14 +27,16 @@ Parameters
 ..........
 
 ``Point layer`` [vector: point]
-  Point vector layer to use for the heatmap
+  Point vector layer to use for the heatmap.
 
-``Radius (layer units)`` [number]
+``Radius`` [number]
   Heatmap search radius (or kernel bandwidth) in map units. The radius
   specifies the distance around a point at which the influence of the point will
   be felt.
   Larger values result in greater smoothing, but smaller values may show finer
   details and variation in point density.
+
+  Default: *100.0*
 
 ``Output raster size`` [number]
   Allows to add the output heatmap raster layer size by specifying the rows and columns
@@ -57,7 +59,7 @@ Parameters
   Allows input features to be weighted by an attribute field. This can be used to
   increase the influence certain features have on the resultant heatmap.
 
-``Kernel shape`` [selection]
+``Kernel shape`` [enumeration]
   Controls the rate at which the influence of a point decreases as the distance
   from the point increases. Different kernels decay at different rates, so a triweight
   kernel gives features greater weight for distances closer to the point then the
@@ -67,13 +69,13 @@ Parameters
   There are many shapes available (please see the `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
   for further information):
 
-  * Quartic
-  * Triangular
-  * Uniform
-  * Triweight
-  * Epanechnikov
+  * 0 --- Quartic
+  * 1 --- Triangular
+  * 2 --- Uniform
+  * 3 --- Triweight
+  * 4 --- Epanechnikov
 
-  Default: *Quartic*
+  Default: *0*
 
 ``Decay ratio (Triangular kernels only)`` [number]
   Optional
@@ -90,20 +92,22 @@ Parameters
   * A value greater than 1 indicates that the heat is higher towards the edge of
     the search radius than at the center.
 
-``Output value scaling`` [selection]
+  Default: *0.0*
+
+``Output value scaling`` [enumeration]
   Allow to change the values of the output heatmap raster.
 
   Options:
 
-  * Raw
-  * Scaled
+  * 0 --- Raw
+  * 1 --- Scaled
 
   Default: *Raw*
 
-Output
-......
+Outputs
+.......
 ``Heatmap`` [raster]
-  Raster layer with kernel density values
+  Raster layer with kernel density values.
 
 
 Example: Creating a Heatmap
@@ -117,7 +121,7 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 
 .. _figure_heatmap_data_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_start.png
+.. figure:: img/heatmap_start.png
    :align: center
 
    Airports of Alaska
@@ -128,12 +132,13 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
    from the list of point layers loaded in the current project.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
 #. Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size Y`,
-    :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
-#. Click on **[Run in Background]**  to create and load the airports heatmap (see Figure_Heatmap_created_processing_).
+   :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
+#. Click on :guilabel:`Run` to create and load the airports heatmap
+   (see Figure_Heatmap_created_processing_).
 
 .. _figure_heatmap_settings_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_dialog.png
+.. figure:: img/heatmap_dialog.png
    :align: center
 
    The Heatmap Dialog
@@ -144,7 +149,7 @@ can now be styled in QGIS to improve its appearance.
 
 .. _figure_heatmap_created_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_loaded_grey.png
+.. figure:: img/heatmap_loaded_grey.png
    :align: center
 
    The heatmap after loading looks like a grey surface
@@ -156,22 +161,22 @@ can now be styled in QGIS to improve its appearance.
 #. Select the :guilabel:`Symbology` tab.
 #. Change the :guilabel:`Render type` |selectString| to 'Singleband pseudocolor'.
 #. Select a suitable :guilabel:`Color map` |selectString|, for instance ``YlOrRed``.
-#. Click the **[Classify]** button.
-#. Press **[OK]** to update the layer.
+#. Click the :guilabel:`Classify` button.
+#. Press :guilabel:`OK` to update the layer.
 
 The final result is shown in Figure_Heatmap_styled_processing_.
 
 .. _figure_heatmap_styled_processing:
 
-.. figure:: /static/user_manual/processing_algs/qgis/heatmap_loaded_colour.png
+.. figure:: img/heatmap_loaded_colour.png
    :align: center
 
    Styled heatmap of airports of Alaska
 
-.. _Wikipedia: http://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
+.. _Wikipedia: https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
 
 
-.. _qgis_idw_interpolation:
+.. _qgisidwinterpolation:
 
 IDW Interpolation
 -----------------
@@ -190,7 +195,7 @@ Parameters
 ..........
 
 ``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation
+  Point vector layer to use for the interpolation.
 
 ``Interpolation attribute`` [tablefield: numeric]
   Field used for the interpolation. Once you have chosen the layer and the field
@@ -200,32 +205,36 @@ Parameters
   by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
   ``Type`` column of the table.
 
-``Use Z-coordinate for interpolation`` [checkbox]
-  Uses the layer's stored Z values
+``Use Z-coordinate for interpolation`` [boolean]
+  Uses the layer's stored Z values.
 
 ``Distance coefficient Power`` [number]
-  Sets the distance coefficient for the interpolation
+  Sets the distance coefficient for the interpolation.
 
   Default: *2.0*
 
 ``Number of columns`` [number]
   Total number of columns of the output raster layer.
 
+  Default: *300*
+
 ``Number of rows`` [number]
   Total number of rows of the output raster layer.
+
+  Default: *300*
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
   either choosing it from the map canvas, selecting it from another layer or type
   it manually.
 
-Output
-......
+Outputs
+.......
 ``Interpolated`` [raster]
-  Raster layer of interpolated values
+  Raster layer of interpolated values.
 
 
-.. _qgis_tin_interpolation:
+.. _qgistininterpolation:
 
 TIN Interpolation
 -----------------
@@ -243,7 +252,7 @@ Parameters
 ..........
 
 ``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation
+  Point vector layer to use for the interpolation.
 
 ``Interpolation attribute`` [tablefield: numeric]
   Field used for the interpolation. Once you have chosen the layer and the field
@@ -253,32 +262,51 @@ Parameters
   by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
   ``Type`` column of the table.
 
-``Use Z-coordinate for interpolation`` [checkbox]
-  Uses the layer's stored Z values
+``Use Z-coordinate for interpolation`` [boolean]
+  Uses the layer's stored Z values.
 
-``Interpolation method`` [selection]
+``Interpolation method`` [enumeration]
   There are two different choices:
 
-  * Linear
-  * Clough-Toucher (cubic)
+  * 0 --- Linear
+  * 1 --- Clough-Toucher (cubic)
 
-  Default: *Linear*
+  Default: *0*
 
 ``Number of columns`` [number]
   Total number of columns of the output raster layer.
 
+  Default: *300*
+
 ``Number of rows`` [number]
   Total number of rows of the output raster layer.
+
+  Default: *300*
 
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
   either choosing it from the map canvas, selecting it from another layer or type
   it manually.
 
-Output
-......
+Outputs
+.......
 ``Interpolated`` [raster]
-  Raster layer of triangulated values
+  Raster layer of triangulated values.
 
-``Triangulation`` [vector: lines]
-  Triangulation lines as vector layer
+``Triangulation`` [vector: line]
+  Triangulation lines as vector layer.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

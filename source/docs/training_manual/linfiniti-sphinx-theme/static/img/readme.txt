@@ -21,4 +21,4 @@ File Types:
 
 Note: These icons are free for use.
 
-http://www.icojoy.com/articles/26/
+http://www.icojam.com/

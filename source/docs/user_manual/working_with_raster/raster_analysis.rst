@@ -28,7 +28,7 @@ The results are written to a new raster layer with a GDAL-supported format.
 
 .. _figure_raster_calculator:
 
-.. figure:: /static/user_manual/working_with_raster/raster_calculator.png
+.. figure:: img/raster_calculator.png
    :align: center
 
    Raster Calculator
@@ -133,7 +133,7 @@ to the cell size`. The resampling method can be (see figure_raster_align_edit_):
 
 .. _figure_raster_align_edit:
 
-.. figure:: /static/user_manual/working_with_raster/raster_align_edit.png
+.. figure:: img/raster_align_edit.png
    :align: center
 
    Select Raster Resampling Options
@@ -152,7 +152,24 @@ layers. You can also choose one or more other options (see figure_raster_align_)
 
 .. _figure_raster_align:
 
-.. figure:: /static/user_manual/working_with_raster/raster_align.png
+.. figure:: img/raster_align.png
    :align: center
 
    Raster Alignment
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

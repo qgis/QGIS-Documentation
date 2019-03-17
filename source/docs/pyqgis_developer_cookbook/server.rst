@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: Server plugins; Developing, Python; Developing server plugins
 
 .. _server_plugins:
@@ -6,18 +10,19 @@
 QGIS Server Python Plugins
 ****************************
 
+.. warning:: |outofdate|
+
 .. contents::
    :local:
 
-Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`): by using the
-*server interface* (:class:`QgsServerInterface`) a Python plugin running on the
-server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
+Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`):
 
-With the *server filter interface* (:class:`QgsServerFilter`) we can change the input
-parameters, change the generated output or even by providing new services.
-
-With the *access control interface* (:class:`QgsAccessControlFilter`) we can apply
-some access restriction per requests.
+* By using the *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
+  server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
+* With the *server filter interface* (:class:`QgsServerFilter`) you can change the input
+  parameters, change the generated output or even provide new services.
+* With the *access control interface* (:class:`QgsAccessControlFilter`) you can apply
+  some access restriction per requests.
 
 
 Server Filter Plugins architecture
@@ -25,7 +30,7 @@ Server Filter Plugins architecture
 
 Server python plugins are loaded once when the FCGI application starts. They
 register one or more :class:`QgsServerFilter` (from this point, you might
-find useful a quick look to the `server plugins API docs <http://qgis.org/api/group__server.html>`_).
+find useful a quick look to the `server plugins API docs <https://qgis.org/api/group__server.html>`_).
 Each filter should implement at least one of three callbacks:
 
 * :func:`requestReady()`
@@ -121,7 +126,7 @@ loop for being handled there.
 Writing a server plugin
 =======================
 
-A server plugins is just a standard QGIS Python plugin as described in
+A server plugin is a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
 interface: a typical QGIS desktop plugin has access to QGIS application
 through the :class:`QgisInterface` instance, a server plugin has also
@@ -133,7 +138,9 @@ metadata entry is needed (in `metadata.txt`) ::
     server=True
 
 The example plugin discussed here (with many more example filters) is available
-on github: `QGIS HelloServer Example Plugin <https://github.com/elpaso/qgis-helloserver>`_
+on github: `QGIS HelloServer Example Plugin <https://github.com/elpaso/qgis-helloserver>`_.
+You could also find more examples at https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins 
+or browsing the `QGIS plugins repository <https://plugins.qgis.org/plugins/server>`_.
 
 Plugin files
 ------------
@@ -156,7 +163,7 @@ This file is required by Python's import system. Also, QGIS Server requires that
 file contains a :func:`serverClassFactory()` function, which is called when the
 plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface` and must return instance of your plugin's class.
-This is how the example plugin `__init__.py` looks like::
+This is how the example plugin :file:`__init__.py` looks like::
 
     # -*- coding: utf-8 -*-
 
@@ -298,8 +305,8 @@ by the WMS core service:
 
     from qgis.server import *
     from qgis.core import *
-    from PyQt4.QtCore import *
-    from PyQt4.QtGui import *
+    from qgis.PyQt.QtCore import *
+    from qgis.PyQt.QtGui import *
 
 
     class WatermarkFilter(QgsServerFilter):
@@ -314,7 +321,7 @@ by the WMS core service:
             if (request.parameter('SERVICE').upper() == 'WMS' \
                     and request.parameter('REQUEST').upper() == 'GETMAP' \
                     and not request.exceptionRaised() ):
-                QgsMessageLog.logMessage("WatermarkFilter.responseComplete: image ready %s" % request.infoFormat(), 'plugin', QgsMessageLog.INFO)
+                QgsMessageLog.logMessage("WatermarkFilter.responseComplete: image ready {}".format(request.infoFormat()), 'plugin', QgsMessageLog.INFO)
                 # Get the image
                 img = QImage()
                 img.loadFromData(request.body())
@@ -361,7 +368,7 @@ This file is required by Python's import system. As for all QGIS server plugins,
 file contains a :func:`serverClassFactory()` function, which is called when the
 plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface` and must return instance of your plugin's class.
-This is how the example plugin `__init__.py` looks like:
+This is how the example plugin :file:`__init__.py` looks like:
 
 .. code:: python
 
@@ -506,3 +513,13 @@ cacheKey
 QGIS server maintain a cache of the capabilities then to have a cache
 per role you can return the role in this method. Or return ``None``
 to completely disable the cache.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

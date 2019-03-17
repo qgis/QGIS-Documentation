@@ -66,7 +66,7 @@ automatically converts from the original file format to one accepted by the
 external application before passing the layer to it. This adds extra processing
 time, which might be significant if the layer has a large size, so do not be
 surprised if it takes more time to process a layer from a DB connection than it
-does to process one of a similar size stored in a shapefile.
+process a layer from a Shapefile format dataset of similar size.
 
 Providers not using external applications can process any layer that you can
 open in QGIS, since they open it for analysis through QGIS.
@@ -200,6 +200,8 @@ in the processing settings list.
 
 R. Creating R scripts
 ---------------------
+
+To enable R in Processing you need to install the **Processing R Provider** plugin.
 
 R integration in QGIS is different from that of SAGA in that there is not a
 predefined set of algorithms you can run (except for a few examples). Instead,
@@ -383,3 +385,12 @@ automatically, taking the minimum extent that covers all the input layers used
 to execute the algorithm each time. If the latter approach is the behavior
 you prefer, just check the :guilabel:`Use min covering region` option in the
 GRASS configuration parameters.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

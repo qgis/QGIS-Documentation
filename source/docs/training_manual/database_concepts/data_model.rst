@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Implementing the Data Model
 ===============================================================================
 
@@ -15,7 +19,7 @@ Install PostgreSQL
   PostgreSQL using
   `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
   Windows users can use the
-  graphical installer located here: `<http://www.postgresql.org/download/windows/>`_.
+  `graphical installer <https://www.postgresql.org/download/windows/>`_.
   Please note that the documentation will assume users are running QGIS under
   Ubuntu.
 
@@ -51,7 +55,7 @@ Help
 -------------------------------------------------------------------------------
 
 PostgreSQL has very good `online
-<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation.
+<https://www.postgresql.org/docs/9.1/index.html>`_ documentation.
 
 Create a database user
 -------------------------------------------------------------------------------
@@ -115,7 +119,7 @@ Should return something like this::
     template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
     (3 rows)
 
-Type :kbd:`q` to exit.
+Type :kbd:`Q` to exit.
 
 Create a database
 -------------------------------------------------------------------------------
@@ -145,7 +149,7 @@ Which should return something like this:
   template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | =c/postgres: postgres=CTc/postgres
   (4 rows)
 
-Type :kbd:`q` to exit.
+Type :kbd:`Q` to exit.
 
 Starting a database shell session
 -------------------------------------------------------------------------------
@@ -170,9 +174,7 @@ To get help on a specific command, type (for example)::
 
   \help create table
 
-See also the `Psql cheat sheet <http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_ -
-available online `here
-<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_.
+See also the `Psql cheat sheet <http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_.
 
 Make Tables in SQL
 -------------------------------------------------------------------------------
@@ -270,7 +272,7 @@ people and streets have a logical relationship. To express this relationship,
 we have to define a foreign key that points to the primary key of the streets
 table.
 
-.. image:: /static/training_manual/database_concepts/er-people-streets.png
+.. image:: img/er-people-streets.png
    :align: center
 
 There are two ways to do this:
@@ -405,3 +407,17 @@ scratch.
 -------------------------------------------------------------------------------
 
 Next you'll learn how to use the DBMS to add new data.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

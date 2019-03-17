@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Running our first algorithm. The  toolbox
 ============================================================
 
@@ -68,7 +72,7 @@ them to a permament location if you want to.
   complain when you try to open back the project later, since that output file
   will not exist.
 
-Once you have configured the algorithm dialog, press **[Run]** to run the
+Once you have configured the algorithm dialog, press :guilabel:`Run` to run the
 algorithm.
 
 You will get the following output.
@@ -84,3 +88,12 @@ Try yourself saving it using different file formats (use, for instance,
 :file:`shp` and :file:`geojson` as extensions). Also, if you do not want the
 layer to be loaded in QGIS after it is generated, you can check off the checkbox
 that is found below the output path box.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

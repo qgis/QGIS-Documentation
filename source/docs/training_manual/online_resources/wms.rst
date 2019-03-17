@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. _`wms-services`:
 
 |LS| Web Mapping Services
@@ -23,7 +27,7 @@ the course, or just start a new map and load some existing layers into it. For
 this example, we used a new map and loaded the original :guilabel:`places` and
 :guilabel:`landuse` layers and adjusted the symbology:
 
-.. image:: /static/training_manual/online_resources/new_map.png
+.. image:: img/new_map.png
    :align: center
 
 * Load these layers into a new map, or use your original map with only these
@@ -46,26 +50,26 @@ layers are on a remote server.
 
 You'll need a WMS address to continue. There are several free WMS servers
 available on the Internet. One of these is `terrestris
-<http://ows.terrestris.de/osm/service>`_, which makes use of the `OpenStreetMap
-<http://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset.
+<https://ows.terrestris.de/osm/service>`_, which makes use of the `OpenStreetMap
+<https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset.
 
 * To make use of this WMS, set it up in your current dialog, like this:
 
-  .. image:: /static/training_manual/online_resources/new_wms_connection.png
+  .. image:: img/new_wms_connection.png
      :align: center
 
-* The value of the :guilabel:`Name` field should be :kbd:`terrestris`.
+* The value of the :guilabel:`Name` field should be ``terrestris``.
 * The value of the :guilabel:`URL` field should be
-  :kbd:`http://ows.terrestris.de/osm/service`.
+  ``https://ows.terrestris.de/osm/service``.
 * Click :guilabel:`OK`. You should see the new WMS server listed:
 
-  .. image:: /static/training_manual/online_resources/new_connection_listed.png
+  .. image:: img/new_connection_listed.png
      :align: center
 
 * Click :guilabel:`Connect`. In the list below, you should now see these
   new entries loaded:
 
-  .. image:: /static/training_manual/online_resources/new_wms_entries.png
+  .. image:: img/new_wms_entries.png
      :align: center
 
   These are all the layers hosted by this WMS server.
@@ -73,7 +77,7 @@ available on the Internet. One of these is `terrestris
 * Click once on the :guilabel:`OSM-WMS` layer. This will display its
   :guilabel:`Coordinate Reference System`:
 
-  .. image:: /static/training_manual/online_resources/osm_wms_selected.png
+  .. image:: img/osm_wms_selected.png
      :align: center
 
 Since we're not using :kbd:`WGS 84` for our map, let's see all the CRSs we have
@@ -84,13 +88,13 @@ to choose from.
 * We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo
   Mercator`.
 
-  .. image:: /static/training_manual/online_resources/pseudo_mercator_selected.png
+  .. image:: img/pseudo_mercator_selected.png
      :align: center
 
 * Click :guilabel:`OK`.
 * Click :guilabel:`Add` and the new layer will appear in your map as
   :guilabel:`OSM-WMS`.
-* In the :guilabel:`Layers list`, click and drag it to the bottom of the list.
+* In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
 
 You will notice that your layers aren't located correctly. This is
 because "on the fly" projection is disabled. Let's enable it again,
@@ -101,16 +105,16 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 * In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
   value :kbd:`pseudo` in the :guilabel:`Filter` field:
 
-  .. image:: /static/training_manual/online_resources/enable_projection.png
+  .. image:: img/enable_projection.png
      :align: center
 
 * Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 * Click :guilabel:`OK`.
-* Now right-click on one of your own layers in the :guilabel:`Layers list` and
+* Now right-click on one of your own layers in the :guilabel:`Layers` panel and
   click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
   area:
 
-  .. image:: /static/training_manual/online_resources/wms_result.png
+  .. image:: img/wms_result.png
      :align: center
 
 Note how the WMS layer's streets and our own streets overlap. That's a good
@@ -148,9 +152,9 @@ layer from the :guilabel:`terrestris` WMS server.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-* Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers list`.
+* Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel.
 * Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
-  :kbd:`http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms`
+  ``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``
 * Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (use the :guilabel:`Add WMS
   Layer` button as before). Remember to check that it's in the same
   :guilabel:`WGS 84 / World Mercator` projection as the rest of your map!
@@ -158,7 +162,7 @@ layer from the :guilabel:`terrestris` WMS server.
   :guilabel:`Tile size` option to :kbd:`200` by :kbd:`200`, so that it loads
   faster:
 
-  .. image:: /static/training_manual/online_resources/bedrock_geology_layer.png
+  .. image:: img/bedrock_geology_layer.png
      :align: center
 
 :ref:`Check your results <wms-1>`
@@ -172,7 +176,7 @@ layer from the :guilabel:`terrestris` WMS server.
 * Hide all other WMS layers to prevent them rendering unnecessarily in the
   background.
 * Add the "OGC" WMS server at this URL:
-  :kbd:`http://ogc.gbif.org:80/wms`
+  ``http://ogc.gbif.org:80/wms``
 * Add the :guilabel:`bluemarble` layer.
 
 :ref:`Check your results <wms-2>`
@@ -185,7 +189,7 @@ layer from the :guilabel:`terrestris` WMS server.
 
 Part of the difficulty of using WMS is finding a good (free) server.
 
-* Find a new WMS at `directory.spatineo.com <http://directory.spatineo.com/>`_ (or
+* Find a new WMS at `directory.spatineo.com <https://directory.spatineo.com/>`_ (or
   elsewhere online). It must not have associated fees or restrictions, and must
   have coverage over the |majorUrbanName| study area.
 
@@ -203,10 +207,10 @@ Using a WMS, you can add inactive maps as backdrops for your existing map data.
 |FR|
 -------------------------------------------------------------------------------
 
-- `Spatineo Directory <http://directory.spatineo.com/>`_
-- `Geopole.org <http://geopole.org/>`_
+- `Spatineo Directory <https://directory.spatineo.com/>`_
+- `Geopole.org <https://geopole.org/>`_
 - `OpenStreetMap.org list of WMS servers
-  <http://wiki.openstreetmap.org/wiki/WMS>`_
+  <https://wiki.openstreetmap.org/wiki/WMS>`_
 
 |WN|
 -------------------------------------------------------------------------------
@@ -215,3 +219,24 @@ Now that you've added an inactive map as a backdrop, you'll be glad to know
 that it's also possible to add features (such as the other vector layers you
 added before). Adding features from remote servers is possible by using a Web
 Feature Service (WFS). That's the topic of the next lesson.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |FR| replace:: Further Reading
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |wms| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em

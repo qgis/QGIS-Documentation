@@ -21,25 +21,25 @@ As part of an Open Source Software ecosystem, QGIS is built upon different
 libraries that, combined with its own providers, offer capabilities to read
 and often write a lot of formats:
 
-* Vector data formats include ESRI formats (shapefiles, geodatabases...),
+* Vector data formats include ESRI formats (Shapefile, Geodatabase...),
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
   GRASS, GPX, KML, Comma Separated Values, and many more...
   Read the complete list of `OGR vector supported formats
-  <http://www.gdal.org/ogr_formats.html>`_;
+  <https://www.gdal.org/ogr_formats.html>`_.
 * Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
   GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
   GDAL Virtual, SRTM, Sentinel Data, and many more...
   Read the complete list of `raster supported formats
-  <http://www.gdal.org/formats_list.html>`_;
+  <https://www.gdal.org/formats_list.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
-  or MSSQL Spatial, MySQL...;
+  or MSSQL Spatial, MySQL...
 * Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
-  also handled by QGIS providers (see :ref:`working_with_ogc`);
+  also handled by QGIS providers (see :ref:`working_with_ogc`).
 * You can also read supported files from archived folders and use QGIS native
   formats such as virtual and memory layers.
 
 As of the date of this document, more than 80 vector and 140 raster formats are
-supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
+supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
@@ -52,6 +52,42 @@ supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
    
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
+.. _datasourcemanager:
+
+In QGIS, depending on the data format, there are different tools to open it,
+mainly available in the :menuselection:`Layer --> Add Layer -->` menu
+or from the :guilabel:`Manage Layers` toolbar (enabled through :menuselection:`View
+--> Toolbars` menu).
+However, all these tools point to a unique dialog, the :guilabel:`Data Source
+Manager` dialog that you can directly open with the |dataSourceManager|
+:sup:`Open Data Source Manager` button available on the :guilabel:`Data Source
+Manager Toolbar` or by pressing :kbd:`Ctrl+L`. Indeed, the :guilabel:`Data Source
+Manager` dialog offers a unified interface to open vector or raster file-based
+data as well as databases or web services supported by QGIS. It can be set
+modal or not with the |checkbox| :guilabel:`Modeless data source manager dialog`
+in :menuselection:`Settings --> Options --> General` menu.
+
+
+.. _figure_datasource_manager:
+
+.. figure:: img/datasource_manager.png
+   :align: center
+
+   QGIS Data Source Manager dialog
+
+
+Beside this main entry point, you also have the |dbManager| :guilabel:`DB Manager`
+plugin that offers advanced capabilities to analyze and manipulate connected
+databases. More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
+
+There are also many other tools, native or third-party plugins, that help you open
+dedicated data formats.
+
+This chapter will describe only the tools provided by default in QGIS to load
+data. It will mainly focus on the :guilabel:`Data Source Manager` dialog but
+more than describing each tab, it will also explore the tools based on the data
+provider or format specificities.
+
 
 .. index:: Browse data, Add layers
 .. _browser_panel:
@@ -59,26 +95,33 @@ supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native providers.
 The Browser Panel
 =================
 
-QGIS Browser is one of the main panels of QGIS that lets you quickly and easily
-add your data to projects. It helps you navigate in your filesystem and manage
-geodata, regardless the type of layer (raster, vector, table), or the datasource
-format (plain or compressed files, database, web services).
+The :guilabel:`Browser` is one of the main ways to quickly and easily
+add your data to projects. It's available as:
 
-To add a layer into a project:
+* a :guilabel:`Data Source Manager` tab, enabled pressing the
+  |dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);
+* as a QGIS panel you can open from the menu :menuselection:`View --> Panels`
+  (or |kde| :menuselection:`Settings --> Panels`) or by pressing :kbd:`Ctrl+2`.
 
-#. right-click on QGIS toolbar and check |checkbox| :guilabel:`Browser Panel`
-   to activate it or select it from the menu :menuselection:`View --> Panels`
-   (or |kde| :menuselection:`Settings --> Panels`);
-#. a browser tree with your filesystem, databases and web services is displayed;
-#. find the layer in the list;
-#. right-click on its name and select **Add selected layer(s)**. Your layer is
-   now added to the :ref:`Layers Panel <label_legend>` and can be viewed in the
-   :ref:`map canvas <label_mapview>`.
+In both cases, the :guilabel:`Browser` helps you navigate in your file system
+and manage geodata, regardless the type of layer (raster, vector, table),
+or the datasource format (plain or compressed files, database, web services).
 
-.. note::
+To add a layer into a project, using the :guilabel:`Browser` interface:
 
-  You can also add a layer or open a QGIS project directly from the Browser
-  panel by double-clicking its name or by drag-and-drop into the map canvas.
+#. Enable the :guilabel:`Browser` as described above.
+   A browser tree with your file system, databases and web services is
+   displayed. You may need to connect databases and web services before they appear
+   (see dedicated sections).
+#. Find the layer in the list.
+#. Double-click its name or drag-and-drop it into the :ref:`map canvas
+   <label_mapview>`. Your layer is now added to the :ref:`Layers panel
+   <label_legend>` and can be viewed in the map canvas.
+
+   .. tip:: **Open a QGIS project directly from the browser**
+
+    You can also open a QGIS project directly from the Browser
+    panel by double-clicking its name or by drag-and-drop into the map canvas.
 
 Once a file is loaded, you can zoom around it using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
@@ -105,7 +148,7 @@ At the top of the Browser panel, you find some icons that help you to:
   * using a **regular expression**.
 
 * |collapseTree| :sup:`Collapse All` the whole tree;
-* |propertiesWidget| :sup:`Enable/disable properties widget`: when toggled on,
+* |metadata| :sup:`Enable/disable properties widget`: when toggled on,
   a new widget is added at the bottom of the panel showing, if applicable,
   metadatas of the selected item.
 
@@ -126,7 +169,7 @@ drag-and-drop from one panel to the other.
 
 .. _figure_browser_panels:
 
-.. figure:: /static/user_manual/managing_data_source/browser_panels.png
+.. figure:: img/browser_panels.png
    :align: center
 
    QGIS Browser panels side-by-side
@@ -162,7 +205,7 @@ More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
 
 .. _figure_db_manager_bis:
 
-.. figure:: /static/user_manual/plugins/db_manager.png
+.. figure:: img/db_manager.png
    :align: center
 
    DB Manager dialog
@@ -194,12 +237,12 @@ To load a layer from a file, you can:
   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
   Layer` menu option or press :kbd:`Ctrl+Shift+V`.
   This will bring up a new window (see figure_vector_add_) from which you can
-  check |radioButtonOn| :guilabel:`File` and click on **[Browse]**. You can
+  check |radioButtonOn| :guilabel:`File` and click on :guilabel:`Browse`. You can
   also specify the encoding for the file if desired.
 
   .. _figure_vector_add:
 
-  .. figure:: /static/user_manual/managing_data_source/addvectorlayerdialog.png
+  .. figure:: img/addvectorlayerdialog.png
      :align: center
 
      Add Vector Layer Dialog
@@ -218,19 +261,19 @@ selecting ``All files (*.*)``.
 
 .. _figure_vector_open:
 
-.. figure:: /static/user_manual/managing_data_source/shapefileopendialog.png
+.. figure:: img/shapefileopendialog.png
    :align: center
 
    Open an OGR Supported Vector Layer Dialog
 
-Selecting a file from the list and clicking **[Open]** loads it into QGIS.
+Selecting a file from the list and clicking :guilabel:`Open` loads it into QGIS.
 More than one layer can be loaded at the same time by holding down the
 :kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the dialog.
 Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
 .. _figure_vector_loaded:
 
-.. figure:: /static/user_manual/managing_data_source/shapefileloaded.png
+.. figure:: img/shapefileloaded.png
    :align: center
 
    QGIS with Shapefile of Alaska loaded
@@ -252,16 +295,16 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
   ``US Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select
   |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this case
-  a directory can be selected in the dialog after pressing **[Browse]**.
+  a directory can be selected in the dialog after pressing :guilabel:`Browse`.
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
   Available database types are ``ODBC``, ``OGDI Vectors``, ``Esri Personal
   Geodatabase``, ``MySQL`` as well as ``PostgreSQL`` or ``MSSQL``.
     
-  Pressing the **[New]** button opens the :guilabel:`Create a New OGR Database
+  Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR Database
   Connection` dialog whose parameters are among the ones you can find in
   :ref:`vector_create_stored_connection`.
-  Pressing **[Open]** you can select from the available tables for example
+  Pressing :guilabel:`Open` you can select from the available tables for example
   of the PostGIS enabled database.
 * The last source type, |radioButtonOn| :guilabel:`Protocol`, enables to open
   data from the web using for example ``GeoJSON`` or ``CouchDB`` format. After
@@ -273,7 +316,7 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
 .. tip:: **Load layers and projects from mounted external drives on macOS**
 
    On macOS, portable drives that are mounted beside the primary hard drive
-   do not show up as expected under :menuselection:`File --> Open Project`.
+   do not show up as expected under :menuselection:`File --> Open...`.
    We are working on a more macOS-native open/save dialog to fix this.
    As a workaround, you can type ``/Volumes`` in the :guilabel:`File name` box
    and press :kbd:`Enter`. Then you can navigate to external drives and network
@@ -290,69 +333,109 @@ Importing a delimited text file
 Delimited text file (e.g. :file:`.csv`, :file:`.txt`) can be loaded in QGIS
 using the tools described above. However, loaded this way, it'll show up like a
 simple table data. Sometimes, delimited text files can contain geometric data
-you'd want to visualize; this is what the |delimitedText| :guilabel:`Add
+you'd want to visualize; this is what the |addDelimitedTextLayer|:guilabel:`Add
 Delimited Text Layer` is designed for.
 
-Click the toolbar icon |delimitedText| :sup:`Add Delimited Text Layer` in the
-:guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
-Delimited Text File` dialog, as shown in figure_delimited_text_.
+Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
+:guilabel:`Data Source Manager` dialog and enable the |addDelimitedTextLayer|
+:guilabel:`Delimited Text` tab, as shown in figure_delimited_text_.
 
 .. _figure_delimited_text:
 
-.. figure:: /static/user_manual/managing_data_source/delimited_text_dialog.png
+.. figure:: img/delimited_text_dialog.png
    :align: center
 
    Delimited Text Dialog
 
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
-by clicking on the **[Browse]** button. Once the file is selected, QGIS attempts
-to parse the file with the most recently used delimiter. To enable QGIS to
+by clicking on the :guilabel:`Browse` button. In the :guilabel:`Layer name` field,
+provide the name to use for the layer in the project (e.g., :file:`Elevation`).
+
+File format
+...........
+
+Once the file is selected, QGIS attempts to parse the file with the most
+recently used delimiter, trying to identify fields and rows. To enable QGIS to
 properly parse the file, it is important to select the correct delimiter. You
 can specify a delimiter by activating:
 
-* |radioButtonOn|:guilabel:`CSV (comma separated values)`;
+* |radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma character;
 * |radioButtonOff|:guilabel:`Custom delimiters`, choosing among some predefined
   delimiters like ``comma``, ``space``, ``tab``, ``semicolon``...;
 * or |radioButtonOff|:guilabel:`Regular expression delimiter` and entering text
   into the :guilabel:`Expression` field. For example, to change the delimiter to
   tab, use ``\t`` (this is a regular expression for the tab character).
 
+Records and fields
+..................
+
+Other than settings to identify rows and fields in the data, some convenient
+options can be used to tweak the data recognition:
+
+* :guilabel:`Number of header lines to discard`: convenient when you want to
+  avoid some lines to show in the import, either because those are blank lines
+  or with another formatting.
+* |checkbox|:guilabel:`First records has field names`: values in the first row
+  of data are used as field names, otherwise QGIS adds a fields row of a type
+  ``field_1``, ``field_2``...
+* |checkbox|:guilabel:`Detect field types`: automatically recognizes the field
+  type. If unchecked then all attributes are treated as text fields.
+* |checkbox|:guilabel:`Decimal separator is comma`: if necessary, you can force
+  a comma to be the decimal separator.
+* |checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing
+  spaces from fields.
+* |checkbox|:guilabel:`Discard empty fields`.
+
+As you set the parser properties, a sample data preview updates at the bottom
+of the dialog.
+
+Geometry definition
+...................
+
 Once the file is parsed, set :guilabel:`Geometry definition` to
-|radioButtonOn|:guilabel:`Point coordinates` and choose the ``X`` and ``Y``
-fields from the dropdown lists. If the coordinates are defined as
-degrees/minutes/seconds, activate the |checkbox| :guilabel:`DMS coordinates`
-checkbox.
 
-Finally, enter a layer name (e.g., :file:`elevp`), as shown in
-figure_delimited_text_. To add the layer to the map, click **[OK]**. The
-delimited text file now behaves as any other map layer in QGIS.
+* |radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X
+  field` and :guilabel:`Y field` if the layer is of point geometry type and
+  contain such coordinate fields. If the coordinates are defined as
+  degrees/minutes/seconds, activate the |checkbox|:guilabel:`DMS coordinates`
+  checkbox;
+* |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
+  information is represented by WKT: select the :guilabel:`Geometry field`
+  containing the WKT definition and choose the approriate :guilabel:`Geometry
+  field` or let QGIS auto-detect it;
+* If the file contains non-spatial data, activate |radioButtonOn| :guilabel:`No
+  geometry (attribute only table)` and it will be loaded as an ordinary table.
 
-There is also a helper option that allows you to trim leading and trailing
-spaces from fields --- |checkbox| :guilabel:`Trim fields`. Also, it is possible
-to |checkbox| :guilabel:`Discard empty fields`. If necessary, you can force a
-comma to be the decimal separator by activating |checkbox| :guilabel:`Decimal
-separator is comma`.
+Besides the features geometry information, you can also set the layer's
+:guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget.
 
-If spatial information is represented by WKT, activate the |radioButtonOn|
-:guilabel:`Well Known Text` option and select the field with the WKT definition
-for point, line or polygon objects. If the file contains non-spatial data,
-activate |radioButtonOn| :guilabel:`No geometry (attribute only table)` and it
-will be loaded as an ordinal table.
+Layer settings
+..............
 
 Additionally, you can enable:
 
-* |checkbox| :guilabel:`Use spatial index` to improve the performance of
+* |checkbox|:guilabel:`Use spatial index` to improve the performance of
   displaying and spatially selecting features;
-* |checkbox| :guilabel:`Use subset index`;
-* |checkbox| :guilabel:`Watch file` to watch for changes to the file by other
+* |checkbox|:guilabel:`Use subset index` to improve performance of :ref:`subset
+  filters <vector_query_builder>` (when defined in the layer properties);
+* |checkbox|:guilabel:`Watch file` to watch for changes to the file by other
   applications while QGIS is running.
+
+
+At the end, click :guilabel:`OK` to add the layer to the map. In our example, a
+point layer named ``Elevation`` is added to the project and behaves like any
+other map layer in QGIS. However, this layer is the result of a query on the
+:file:`.csv` source layer (hence, linked to it) and would require :ref:`to be
+saved <general_saveas>` in order to get a spatial layer on disk.
+
 
 .. _import_dxfdwg:
 
 Importing a DXF or DWG file
 ---------------------------
 
-DXF files can be added to QGIS by simple drag-and-drop from the common
+:file:`DXF` and :file:`DWG` files can be added to QGIS by simple drag-and-drop
+from the common
 Browser Panel. You'll be prompted to select the sublayers you'd like to add
 to the project. Layers are added with random style properties.
 
@@ -360,12 +443,53 @@ to the project. Layers are added with random style properties.
    polygon), the name of the layer will be made from
    *<filename.dxf> entities <geometry type>*.
 
-.. need to be tested with dwg. How does dwg format behave when added to QGIS?
+To keep the dxf/dwg file structure and its symbology in QGIS, you may want to
+use the dedicated :menuselection:`Project --> Import/Export --> Import Layers
+from DWG/DXF...` tool which allows you to:
 
-To keep the dxf/dwg structure and its symbology in QGIS, you may want to
-use the dedicated :menuselection:`DWG/DXF Import...` tool.
+#. import elements from the drawing file into a GeoPackage database.
+#. and add to the project any of the imported elements.
 
-.. TODO: Add here the fix for https://github.com/qgis/QGIS-Documentation/issues/1579
+In the :guilabel:`DWG/DXF Import` dialog, to first import the drawing file
+contents:
+
+#. Input the location of the :guilabel:`Target package`, i.e. the new GeoPackage
+   file that will store the data. If an existing file is provided, then it will be
+   overwritten.
+#. Specify the coordinate reference system of the data in the drawing file.
+#. Check |checkbox| :guilabel:`Expand block references` to import the
+   blocks in the drawing file as normal elements.
+#. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
+   to a ``curved`` geometry type.
+#. Use the :guilabel:`Import` button to select the DWG/DXF file to use (one per
+   geopackage). The GeoPackage database will be automatically populated with the
+   drawing file content. Depending on the size of the \*CAD file, this could
+   take some time.
+
+After the :file:`.dwg` or :file:`.dxf` data is imported into the GeoPackage
+database the frame in the lower half of the dialog is populated with the list of
+layers from the imported file. There you can select which layers to add to the
+QGIS project:
+
+#. At the top, set a :guilabel:`Group name` to group the drawing files in the
+   project.
+#. Check layers to show: Each selected layer is added to an ad hoc group which
+   contains vector layers for the point, line, label and area features of the
+   drawing layer. The style of each layer is setup so that it resembles the look
+   it originally had in \*CAD.
+#. Check whether layer should be visible at opening.
+#. Alternatively using the |checkbox| :guilabel:`Merge layers` option places all
+   layers in a single group.
+#. Press :guilabel:`OK` to open the layers in QGIS.
+
+
+.. _figure_dwg_dxf_import:
+
+.. figure:: img/dwg_dxf_import_dialog.png
+    :align: center
+    
+    Import dialog for DWG/DXF files
+
 
 .. index:: OSM (OpenStreetMap)
 .. _openstreetmap:
@@ -383,39 +507,6 @@ Using the :guilabel:`Browser Panel`, you can load a :file:`.osm` file to the
 map canvas, in which case you'll get a dialog to select sublayers based on the
 geometry type. The loaded layers will contain all the data of that geometry type
 in the file and keep the :file:`osm` file data structure.
-
-To avoid working with a such complex data structure, and be able to select only
-features you need based on their tags, QGIS provides a core and fully integrated
-OpenStreetMap import tool:
-
-* To connect to the OSM server and download data, open the menu
-  :menuselection:`Vector --> OpenStreetMap --> Download data...`. You can skip
-  this step if you already obtained an :file:`.osm` XML file using JOSM,
-  Overpass API or any other source;
-* The menu :menuselection:`Vector --> OpenStreetMap --> Import Topology from
-  XML...` will convert your :file:`.osm` file into a SpatiaLite database
-  and create a corresponding database connection;
-* The menu :menuselection:`Vector --> OpenStreetMap --> Export Topology to
-  SpatiaLite...` then allows you to open the database connection, select the
-  type of data you want (points, lines, or polygons) and choose tags to import.
-  This creates a SpatiaLite geometry layer that you can add to your
-  project by clicking on the |addSpatiaLiteLayer|
-  :sup:`Add SpatiaLite Layer` toolbar button or by selecting the
-  |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option
-  from the :menuselection:`Layer` menu (see section :ref:`label_spatialite`).
-
-
-GPS
----
-
-Loading GPS data in QGIS can be done using the core plugin: ``GPS Tools``.
-Instructions are described in Section :ref:`plugin_gps`.
-
-
-GRASS
------
-
-Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 
 .. index:: Spatialite, SQLite
@@ -436,10 +527,23 @@ database, begin by:
 This will bring up a window that will allow you either to connect to a
 SpatiaLite database already known to QGIS, which you can choose from the
 drop-down menu, or to define a new connection to a new database. To define a
-new connection, click on **[New]** and use the file browser to point to
+new connection, click on :guilabel:`New` and use the file browser to point to
 your SpatiaLite database, which is a file with a :file:`.sqlite` extension.
 
 QGIS also supports editable views in SpatiaLite.
+
+
+GPS
+---
+
+Loading GPS data in QGIS can be done using the core plugin: ``GPS Tools``.
+Instructions are described in Section :ref:`plugin_gps`.
+
+
+GRASS
+-----
+
+Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 
 .. index:: Database tools, MSSQL Spatial
@@ -490,12 +594,12 @@ The first time you use a PostGIS data source, you must create a connection to a
 database that contains the data. Begin by clicking the appropriate button as
 exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog
 (see figure_add_postgis_tables_).
-To access the connection manager, click on the **[New]** button to display the
+To access the connection manager, click on the :guilabel:`New` button to display the
 :guilabel:`Create a New PostGIS Connection` dialog.
 
 .. _figure_new_postgis_connection:
 
-.. figure:: /static/user_manual/managing_data_source/newpostgisconnection.png
+.. figure:: img/newpostgisconnection.png
    :align: center
 
    Create a New PostGIS Connection Dialog
@@ -553,6 +657,8 @@ checkboxes:
 * |checkbox| :guilabel:`Only look in the 'public' schema`
 * |checkbox| :guilabel:`Also list tables with no geometry`
 * |checkbox| :guilabel:`Use estimated table metadata`
+* |checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`:
+  more details :ref:`here <saveprojecttodb>`
 
 .. tip:: **Use estimated table metadata to speed up operations**
 
@@ -567,8 +673,8 @@ checkboxes:
    are not.
 
 Once all parameters and options are set, you can test the connection by
-clicking on the **[Test connection]** button or apply it hitting **[OK]**.
-From the :guilabel:`Add PostGIS Table(s)`, click now on **[Connect]** and the
+clicking on the :guilabel:`Test Connection` button or apply it hitting :guilabel:`OK`.
+From the :guilabel:`Add PostGIS Table(s)`, click now on :guilabel:`Connect` and the
 dialog is filled with tables from the selected database (as shown in
 figure_add_postgis_tables_).
 
@@ -614,8 +720,8 @@ The service file looks like::
   If you want to use the service with ``psql`` you need to do something
   like ``export PGSERVICE=water_service`` before doing your psql commands.
 
-.. note:: You can find all the parameters `here
-   <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
+  You can find all the parameters `here
+  <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
 .. note:: If you don't want to save the passwords in the service file you can
   use the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
@@ -674,11 +780,11 @@ Optionally, you can activate following checkboxes:
 
 * |checkbox| :guilabel:`Only look in metadata table`: restricts the displayed
   tables to those that are in the ``all_sdo_geom_metadata`` view. This can
-  speed up the initial display of spatial tables;
+  speed up the initial display of spatial tables.
 * |checkbox| :guilabel:`Only look for user's tables`: when searching for spatial
-  tables, restrict the search to tables that are owned by the user;
+  tables, restricts the search to tables that are owned by the user.
 * |checkbox| :guilabel:`Also list tables with no geometry`: indicates that
-  tables without geometry should also be listed by default;
+  tables without geometry should also be listed by default.
 * |checkbox| :guilabel:`Use estimated table statistics for the layer metadata`:
   when the layer is set up, various metadata are required for the Oracle table.
   This includes information such as the table row count, geometry type and
@@ -688,9 +794,9 @@ Optionally, you can activate following checkboxes:
   done: Row count is determined from ``all_tables.num_rows``. Table extents
   are always determined with the SDO_TUNE.EXTENTS_OF function, even if a layer
   filter is applied. Table geometry is determined from the first 100
-  non-null geometry rows in the table;
-* |checkbox| :guilabel:`Only existing geometry types`: only list the existing
-  geometry types and don't offer to add others;
+  non-null geometry rows in the table.
+* |checkbox| :guilabel:`Only existing geometry types`: only lists the existing
+  geometry types and don't offer to add others.
 * |checkbox| :guilabel:`Include additional geometry attributes`.
 
 .. _tip_ORACLE_Spatial_layers:
@@ -766,45 +872,45 @@ PostGIS database.
 To load a layer from a database, you can perform the following steps:
 
 #. Open the "Add <database> table(s)" dialog
-   (see :ref:`vector_create_stored_connection`),
-#. Choose the connection from the drop-down list and click **[Connect]**.
+   (see :ref:`vector_create_stored_connection`).
+#. Choose the connection from the drop-down list and click :guilabel:`Connect`.
 #. Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`.
 #. Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the
    list of tables to those matching your search. You can also set this option
-   before you hit the **[Connect]** button, speeding this way the database
+   before you hit the :guilabel:`Connect` button, speeding this way the database
    fetching.
 #. Find the layer(s) you wish to add in the list of available layers.
 #. Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` key while clicking.
-#. If applicable, use the **[Set Filter]** button (or double-click the layer)
-   to start the :guilabel:`Query builder` dialog (See section
+#. If applicable, use the :guilabel:`Set Filter` button (or double-click the layer)
+   to start the :guilabel:`Query Builder` dialog (See section
    :ref:`vector_query_builder`) and define which features to load from the
    selected layer. The filter expression appears in the ``sql`` column.
    This restriction can be removed or edited in the :menuselection:`Layer
    Properties --> General --> Provider Feature Filter` frame.
 #. The checkbox in the ``Select at id`` column that is activated by default
-   gets the features ids without the attributes and speed in most cases the
+   gets the features ids without the attributes and speeds in most cases the
    data loading.
-#. Click on the **[Add]** button to add the layer to the map.
+#. Click on the :guilabel:`Add` button to add the layer to the map.
 
 
 .. _figure_add_postgis_tables:
 
-.. figure:: /static/user_manual/managing_data_source/addpostgistables.png
+.. figure:: img/addpostgistables.png
    :align: center
 
    Add PostGIS Table(s) Dialog
 
 
-.. tip:: **Load database table(s) from the Browser Panel**
+.. tip:: **Use the Browser Panel to speed up loading of database table(s)**
 
- Like simple files, connected database are also listed in the
- :guilabel:`Browser Panel`. Hence, you can load tables from databases using
- the Browser:
-
- #. Find the layer to use with the |filterMap| :sup:`Filter Browser` tool at
-    the top the browser panel (see :ref:`browser_panel` for the search options);
- #. select and drag-and-drop it in the map canvas.
+  Adding DB tables from their ad hoc tab of the :guilabel:`Data Source Manager`
+  dialog to QGIS may sometimes be time consuming as QGIS fetches
+  statistics and properties (e.g. geometry type and field, CRS, number of features)
+  of each table beforehand.
+  To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
+  it's better to use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB Manager
+  <dbmanager>` to drag and drop the database tables in the map canvas.
 
 
 QGIS Custom formats
@@ -828,3 +934,52 @@ Description of these capabilities and how-to are provided in chapter
 :ref:`sec_ogc`.
 
 
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em
+.. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
+.. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
+   :width: 1.5em
+.. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

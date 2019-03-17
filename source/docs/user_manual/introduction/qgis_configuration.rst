@@ -11,15 +11,25 @@ QGIS Configuration
    .. contents::
       :local:
 
-QGIS is highly configurable through the :menuselection:`Settings` menu. Choose
-between Options, Project Properties and Customization.
+QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
+provides different tools to:
 
-.. note:: QGIS follows desktop guidelines for the location of options and project
-   properties item. Consequently related to the OS you are using, location of some
-   of items described below could be in the :menuselection:`Project`
-   or the :menuselection:`Settings` menu.
+* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
+  apply in different areas of the software. These preferences are saved in the
+  active :ref:`User profile <user_profiles>` settings and applied by default
+  whenever you open a new project with this profile.
+  Also, they can be overridden during each QGIS session by the :ref:`project
+  properties <project_properties>` (accessible under :menuselection:`Project` menu).
+* |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
+  :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
+  not need.
+* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
+  :ref:`keyboard shortcuts <shortcuts>`.
+* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
+  color ramps <vector_style_manager>`.
+* |customProjection| :guilabel:`Custom Projections...`: create your own
+  :ref:`coordinate reference systems <sec_custom_projections>`.
 
-..  FIXME: please add more introduction here
 
 .. index:: Options, Configuration
 .. _gui_options:
@@ -41,9 +51,9 @@ The tabs where you can customize your options are described below.
  by :ref:`installed plugins <plugins>` implementing their own options into the
  standard Options dialog. This avoids each plugin having their own config dialog
  with extra menu items just for them...
- 
- .. comment: Would be nice to link in the future to a place in the PyQGIS Cookbook
-   showing the code to use to implement plugin options in standard dialog 
+
+ .. Todo: Would be nice to link in the future to a place in the PyQGIS Cookbook
+   showing the code to use to implement plugin options in standard dialog
 
 
 .. _general_options:
@@ -51,23 +61,34 @@ The tabs where you can customize your options are described below.
 General Settings
 ----------------
 
+.. index:: Overwrite language
+.. _locale_options:
+
+**Locale Settings**
+
+* Check |checkbox| :guilabel:`Override system locale` if you want to use a language
+  different from your system's and pick the replacement in :guilabel:`Locale to use
+  instead` combobox.
+* Information about active system locale are provided.
+
 **Application**
 
 * Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
-  between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks'.
-* Define the :guilabel:`Icon theme` |selectString|. It can be 'default' or 'Night Mapping'.
-* Define the :guilabel:`Icon size` |selectString|.
+  between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks';
+* Define the :guilabel:`UI theme` |selectString|. It can be 'default' or 'Night Mapping';
+* Define the :guilabel:`Icon size` |selectString|;
 * Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be
-  |radioButtonOn| :guilabel:`Qt default` or a user-defined one.
-* Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|.
-* |checkbox| :guilabel:`Hide splash screen at startup`
-* |checkbox| :guilabel:`Show tips at startup`
+  |radioButtonOn| :guilabel:`Qt default` or a user-defined one;
+* Change the :guilabel:`Timeout for timed messages or dialogs` |selectString|;
+* |checkbox| :guilabel:`Hide splash screen at startup`;
 * |checkbox| :guilabel:`Check QGIS version at startup` to keep you informed
-  if a newer version is released
-* |checkbox| :guilabel:`QGIS-styled group boxes`
-* |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`)
-* |checkbox| :guilabel:`Use live-updating color chooser dialogs` (see :ref:`color-selector`)
-* |checkbox| :guilabel:`Canvas rotation support (restart required)`
+  if a newer version is released;
+* |checkbox| :guilabel:`Modeless data source manager dialog` to keep the
+  :ref:`data source manager <datasourcemanager>` dialog opened and allow
+  interaction with QGIS interface while adding layers to project;
+* |checkbox| :guilabel:`Use native color chooser dialogs` (see :ref:`color-selector`).
+
+.. _projectfiles_options:
 
 **Project files**
 
@@ -83,10 +104,12 @@ General Settings
   |checkbox| :guilabel:`Create new project from default project` and then save
   a project in the project templates folder.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
-  required`
+  required` to avoid losing changes you made.
 * |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older
-  version of QGIS`
+  version of QGIS`. You can always open projects created with older version of
+  QGIS but once the project is saved, trying to open with older release may fail
+  because of features not available in that version.
 * :guilabel:`Enable macros` |selectString|. This option was created to handle
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
@@ -104,11 +127,25 @@ Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
 symbols`. These SVG files are then available to symbolize features or
 decorate your map composition.
 
-
 **Plugin paths**
 
 Add or Remove :guilabel:`Path(s) to search for additional C++
-plugin libraries`
+plugin libraries`.
+
+**Documentation paths**
+
+Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By default,
+a link to the official online User Manual corresponding to the version being used
+is added. You can however add other links and prioritize them from top to bottom:
+each time you click on a :guilabel:`Help` button in a dialog, the topmost link
+is checked and if no corresponding page is found, the next one is tried,
+and so on.
+
+.. note::
+  Documentation is versioned and translated only for QGIS Long Term Releases (LTR),
+  meaning that if you are running a regular release (eg, QGIS 3.0), help button will
+  open the *testing* manual page, which may contain description of features
+  in newer release (3.2 and 3.4) or in development (3.1 and 3.3).
 
 **QSettings**
 
@@ -126,17 +163,57 @@ SAGA, GRASS), and for turning on debugging output for specific sections of the
 source code.
 
 * |checkbox| :guilabel:`Use custom variables (restart required - include separators)`.
-  You can **[Add]** and **[Remove]** variables. Already-defined environment
+  You can :guilabel:`Add` and :guilabel:`Remove` variables. Already-defined environment
   variables are displayed in :guilabel:`Current environment variables`, and it's
   possible to filter them by activating
   |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
 .. _figure_environment_variables:
 
-.. figure:: /static/user_manual/introduction/sys-env-options.png
+.. figure:: img/sys-env-options.png
    :align: center
 
    System environment variables in QGIS
+
+.. index:: CRS, Datum transformation, On-the-fly reprojection
+.. _crs_options:
+
+CRS Settings
+------------
+
+You can select a :guilabel:`Default CRS for new projects` applied each time you
+open a new project. This Coordinate Reference System can then be overridden by
+selected value in :menuselection:`Project --> Project properties --> CRS` tab.
+
+**CRS for new layers**
+
+This area allows you to define the action to take when a new layer is created,
+or when a layer without a CRS is loaded.
+
+* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOff| :guilabel:`Use project CRS`
+* |radioButtonOff| :guilabel:`Use a default CRS`
+
+**Default datum transformations**
+
+In this group, you can control whether reprojecting layers to another CRS should be:
+
+* automatically processed using QGIS default transformations settings;
+* and/or more controlled by you with custom preferences such as:
+
+  * |checkbox| :guilabel:`Ask for datum transformation if several are available`
+  * a predefined list of datum transformations to apply by default.
+    See :ref:`datum_transformation` for more details.
+
+.. note:: For more information on how QGIS handles layers projection, please
+  read the dedicated section at :ref:`label_projections`.
+
+.. _figure_crs_options:
+
+.. figure:: ../working_with_projections/img/crsdialog.png
+   :align: center
+
+   CRS Settings in QGIS
 
 .. _datasources_options:
 
@@ -174,7 +251,7 @@ Data Sources Settings
  extent it was opened with, meaning that selecting **Show All Features** within
  such a table will not display new features. You can however update the set of
  displayed features by changing the canvas extent and selecting **Show Features
- Visible On Map** option in the attribute table. 
+ Visible On Map** option in the attribute table.
 
 
 **Data source handling**
@@ -182,7 +259,9 @@ Data Sources Settings
 * :guilabel:`Scan for valid items in the browser dock` |selectString|. You can
   choose between 'Check extension' and 'Check file contents'.
 * :guilabel:`Scan for contents of compressed files (.zip) in browser dock`
-  |selectString|. 'No', 'Basic scan' and 'Full scan' are possible.
+  |selectString| defines how detailed is the widget information at the bottom
+  of the Browser panel when querying such files. 'No', 'Basic scan' and 'Full scan'
+  are possible options.
 * :guilabel:`Prompt for raster sublayers when opening`. Some rasters support
   sublayers --- they are called subdatasets in GDAL. An example is netCDF files
   --- if there are many netCDF variables, GDAL sees every variable as a
@@ -201,12 +280,25 @@ Data Sources Settings
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
 * |checkbox| :guilabel:`Execute expressions on server-side if possible`
+* |checkbox| :guilabel:`Evaluate default values` defines whether default values
+  from database provider should be calculated when digitizing the new feature
+  (checked status) or when saving the changes.
 
 
 **Hidden Browser Path**
 
-This widget lists all the folder you chose to hide from the Browser panel.
+This widget lists all the folders you chose to hide from the :ref:`Browser panel
+<browser_panel>`.
 Removing a folder from the list will make it available in the Browser panel.
+
+
+.. _figure_data_sources_settings:
+
+.. figure:: img/options_data_sources.png
+   :align: center
+
+   Data Sources Settings in QGIS
+
 
 .. index:: Rendering
 .. _rendering_options:
@@ -216,14 +308,16 @@ Rendering Settings
 
 .. _figure_rendering_menu:
 
-.. figure:: /static/user_manual/introduction/rendering_menu.png
+.. figure:: img/rendering_menu.png
    :align: center
 
    Rendering tab of Project Properties dialog
 
 **Rendering behavior**
 
-* |checkbox| :guilabel:`By default new layers added to the map should be displayed`
+* |unchecked| :guilabel:`By default new layers added to the map should be
+  displayed`: unchecking this option can be handy when loading multiple layers
+  to avoid each new layer being rendered in the canvas and slow down the process
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
 * |checkbox| :guilabel:`Render layers in parallel using many CPU cores`
 * |checkbox| :guilabel:`Max cores to use`
@@ -244,7 +338,7 @@ Rendering Settings
   are simplified by the provider (PostGIS, Oracle...) and unlike the
   local-side simplification, geometry-based calculations may be affected
 * :guilabel:`Maximum scale at which the layer should be simplified`
-* |doublespinbox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
+* |doubleSpinBox| :guilabel:`Magnification level` (see the :ref:`magnifier <magnifier>`)
 
 .. note:: Besides the global setting, feature simplification can be set for any
    specific layer from its :menuselection:`Layer properties --> Rendering` menu.
@@ -261,65 +355,62 @@ Rendering Settings
   and the curve center, in degrees) or maximum difference (distance between the
   segment of the two vertices and the curve line, in map units), the **more
   straight line** segments will be used during rendering.
-* :guilabel:`Tolerance type`: it can be 'Maximum angle' or 'Maximum distance'
+* :guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum difference*
+  between approximation and curve.
 
-  **Rasters**
+**Rasters**
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
 
 *Contrast enhancement*
 
-* :guilabel:`Single band gray` |selectString|. A single band gray can have
-  'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also
-  'Clip to MinMax'.
-* :guilabel:`Multi band color (byte/band)` |selectString|. Options are 'No stretch',
-  'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Multi band color (>byte/band)` |selectString|. Options are 'No stretch',
-  'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Limits (minimum/maximum)` |selectString|. Options are
-  'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
+Contrast enhancement options can be applied to :guilabel:`Single band gray`,
+:guilabel:`Multi band color (byte/band)` or :guilabel:`Multi band color (>byte/band)`.
+For each, you can set:
+
+* the :guilabel:`Algorithm` to use, whose values can be 'No stretch',
+  'Stretch to MinMax', 'Stretch and Clip to MinMax' or 'Clip to MinMax'
+* the :guilabel:`Limits (minimum/maximum)` to apply, with values such as 'Cumulative
+  pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'.
+
+For rasters rendering, you can also define the following options:
+
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
 
 **Debugging**
 
-* |checkbox| :guilabel:`Map canvas refresh`
-
-.. index:: Colors
-.. _colors_options:
-
-Colors Settings
----------------
-
-This menu allows you to add some custom color that you can find in each color dialog
-window of the renderers. You will see a set of predefined colors in the tab: you can
-delete or edit all of them. Moreover you can add the color you want and perform some copy
-and paste operations. Finally you can export the color set as a :file:`gpl` file or import
-them.
+* |checkbox| :guilabel:`Map canvas refresh` to debug rendering duration in
+  the :guilabel:`Log Messages` panel.
 
 .. _canvas_legend_options:
 
 Canvas and Legend Settings
 --------------------------
 
-**Default map appearance (overridden by project properties)**
+.. _figure_canvas_legend:
 
-* Define a :guilabel:`Selection color` and a :guilabel:`Background color`.
+.. figure:: img/options_canvas_legend.png
+   :align: center
 
-**Layer legend**
+   Canvas and Legend Settings
 
-* :guilabel:`Double click action in legend` |selectString|. You can either
-  'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
-  with the double click.
-* The following :guilabel:`Legend item styles` are possible:
+These properties let you set:
 
-  * |checkbox| :guilabel:`Capitalise layer names`
-  * |checkbox| :guilabel:`Bold layer names`
-  * |checkbox| :guilabel:`Bold group names`
-  * |checkbox| :guilabel:`Display classification attribute names`
-  * |checkbox| :guilabel:`Create raster icons (may be slow)`
-  * you can also set the :guilabel:`WMS getLegendGraphic Resolution`
+* the **Default map appearance (overridden by project properties)**: the
+  :guilabel:`Selection color` and :guilabel:`Background color`.
+
+* **Layer legend** interaction:
+
+  * :guilabel:`Double click action in legend` |selectString|. You can either
+    'Open layer properties', 'Open attribute table' or 'Open layer styling dock'
+    with the double click.
+  * |checkbox| :guilabel:`Display classification attribute names` in the Layers
+    panel, e.g. when applying a categorized or rule-based renderer
+    (see :ref:`vector_style_menu` for more information).
+  * the :guilabel:`WMS getLegendGraphic Resolution`
+* the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
 
 .. index:: Map tools
 .. _maptools_options:
@@ -329,8 +420,8 @@ Map tools Settings
 
 This tab offers some options regarding the behavior of the :ref:`Identify tool <identify>`.
 
-* :guilabel:`Search radius for identifying and displaying map tips` is a tolerance
-  distance within which the identify tool will depict results
+* :guilabel:`Search radius for identifying features and displaying map tips` is
+  a tolerance distance within which the identify tool will depict results
   as long as you click within this tolerance.
 * :guilabel:`Highlight color` allows you to choose with which color should features being
   identified be highlighted.
@@ -349,7 +440,7 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   'Yards', 'Miles', 'Nautical Miles', 'Degrees' or 'Map Units' )
 * :guilabel:`Preferred area units` |radioButtonOn| ('Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
-  'Acres', 'Square nautical miles', 'Square degrees" or 'Map Units')
+  'Acres', 'Square nautical miles', 'Square degrees' or 'Map Units')
 * :guilabel:`Preferred angle units` |radioButtonOn| ('Degrees', 'Radians', 'Gon/gradians',
   'Minutes of arc', 'Seconds of arc' or 'Turns/revolutions')
 
@@ -366,32 +457,58 @@ and |signMinus| buttons you can add or remove your personal scales.
 You can also import or export scales from/to a ``.XML`` file. Note that you still have
 the possibility to remove your changes and reset to the predefined list.
 
-.. _composer_options:
 
-Composer Settings
------------------
+.. _figure_map_tools_settings:
 
-**Composition defaults**
+.. figure:: img/options_map_tools.png
+   :align: center
 
-You can define the :guilabel:`Default font` used within the :ref:`print composer
-<label_printcomposer>`.
-
-**Grid appearance**
-
-* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
-* Define the :guilabel:`Grid color`
-
-**Grid and guide defaults**
-
-* Define the :guilabel:`Grid spacing` |selectNumber|
-* Define the :guilabel:`Grid offset` |selectNumber| for x and y
-* Define the :guilabel:`Snap tolerance` |selectNumber|
+   Map tools Settings in QGIS
 
 
-**Composer Paths**
+.. index:: Colors
+.. _colors_options:
 
-* Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
-  with custom composer templates to use while creating new one.
+Colors Settings
+---------------
+
+This menu allows you to create or update palettes of colors used throughout the
+application in the :ref:`color selector widget <color_widget>`. You can choose
+from:
+
+* :guilabel:`Recent colors` showing recently used colors
+* :guilabel:`Standard colors`, the default palette of colors
+* :guilabel:`Project colors`, a set of colors specific to the current project
+  (see :ref:`default_styles_properties` for more details)
+* :guilabel:`New layer colors`, a set of colors to use by default when new
+  layers are added to QGIS
+* or custom palette(s) you can create or import using the :guilabel:`...`
+  button next to the palette combobox.
+
+By default, :guilabel:`Recent colors`, :guilabel:`Standard colors` and
+:guilabel:`Project colors` palettes can not be removed and are set to appear in
+the color button drop-down. Custom palettes can also be added to this widget
+thanks to the :guilabel:`Show in Color Buttons` option.
+
+For any of the palettes, you can manage the list of colors using the set of
+tools next to the frame, ie:
+
+* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
+* |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
+  from/to :file:`.gpl` file.
+
+Double-click a color in the list to tweak or replace it in the :ref:`Color
+Selector <color-selector>` dialog. You can also rename it by double-clicking
+in the :guilabel:`Label` column.
+
+.. _figure_colors_options:
+
+.. figure:: img/options_colors.png
+   :align: center
+
+   Colors Settings
+
 
 .. index:: Digitizing configuration
 .. _digitizing_options:
@@ -404,28 +521,37 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Feature creation**
 
-* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`
-* |checkbox| :guilabel:`Reuse last entered attribute values`
+* |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`:
+  this choice can be overridden in each layer properties dialog.
+* |checkbox| :guilabel:`Reuse last entered attribute values`.
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
   nodes can result in very slow rendering. This is because the default
   validation procedures in QGIS can take a lot of time. To speed up rendering, it
   is possible to select GEOS geometry validation (starting from GEOS 3.3) or to
   switch it off. GEOS geometry validation is much faster, but the disadvantage
   is that only the first geometry problem will be reported.
+* :guilabel:`Default Z value` to use when creating new 3D features.
 
 **Rubberband**
 
 * Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
-  and :guilabel:`Fill color`
-* :guilabel:`Don't update rubberband during node editing`
+  and :guilabel:`Fill color`.
+* :guilabel:`Don't update rubberband during vertex editing`.
 
 **Snapping**
 
-* |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
-* Define :guilabel:`Default snap mode` |selectString| ('To vertex', 'To segment',
-  'To vertex and segment', 'Off')
+* |checkbox| :guilabel:`Enable snapping by default`
+* Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Vertex and segment',
+  'Segment')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
+* :guilabel:`Display main dialog as (restart required)`: set whether the
+  Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'.
+* :guilabel:`Snapping marker color`
+* |checkbox| :guilabel:`Show snapping tooltips` such as name of the layer whose
+  feature you are about to snap. Helpful when multiple features overlap.
+* |checkbox| :guilabel:`Enable snapping on invisible features`
+
 
 **Vertex markers**
 
@@ -445,6 +571,51 @@ from GEOS 3.3.
 * :guilabel:`Quadrant segments`
 * :guilabel:`Miter limit`
 
+
+.. _figure_digitizing_settings:
+
+.. figure:: img/options_digitizing.png
+   :align: center
+
+   Digitizing Settings in QGIS
+
+
+.. _layout_options:
+
+Layouts Settings
+----------------
+
+**Composition defaults**
+
+You can define the :guilabel:`Default font` used within the :ref:`print layout
+<label_printlayout>`.
+
+**Grid appearance**
+
+* Define the :guilabel:`Grid style` |selectString| ('Solid', 'Dots', 'Crosses')
+* Define the :guilabel:`Grid color`
+
+**Grid and guide defaults**
+
+* Define the :guilabel:`Grid spacing` |selectNumber|
+* Define the :guilabel:`Grid offset` |selectNumber| for X and Y
+* Define the :guilabel:`Snap tolerance` |selectNumber|
+
+
+**Layout Paths**
+
+* Define :guilabel:`Path(s) to search for extra print templates`: a list of folders
+  with custom layout templates to use while creating new one.
+
+
+.. _figure_layouts_settings:
+
+.. figure:: img/options_layouts.png
+   :align: center
+
+   Layouts Settings in QGIS
+
+
 .. _gdal_options:
 
 GDAL Settings
@@ -455,57 +626,43 @@ GDAL is a data exchange library for raster files. In this tab, you can
 raster formats. You can define which GDAL driver is to be used for a raster
 format, as in some cases more than one GDAL driver is available.
 
-.. index:: CRS, Datum transformation, On-the-fly reprojection
-.. _crs_options:
 
-CRS Settings
-------------
+.. _figure_gdal_settings:
 
-**Default CRS for new projects**
+.. figure:: img/options_gdal.png
+   :align: center
 
-* |radioButtonOff| :guilabel:`Don't enable 'on the fly' reprojection`
-* |radioButtonOn| :guilabel:`Automatically enable 'on the fly' reprojection if
-  layers have different CRS`
-* |radioButtonOff| :guilabel:`Enable 'on the fly' reprojection by default`
-* Select a CRS and :guilabel:`Always start new projects with this CRS`
+   GDAL Settings in QGIS
 
-**CRS for new layers**
 
-This area allows you to define the action to take when a new layer is created,
-or when a layer without a CRS is loaded.
+.. index:: Variables
+.. _variables_options:
 
-* |radioButtonOn| :guilabel:`Prompt for CRS`
-* |radioButtonOff| :guilabel:`Use project CRS`
-* |radioButtonOff| :guilabel:`Use default CRS`
+Variables Settings
+------------------
 
-**Default datum transformations**
+The :guilabel:`Variables` tab lists all the variables available at the
+global-level.
 
-* |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
-* With the 'on-the-fly' CRS transformation enabled and the above option checked,
-  adding layers of different CRS opens the :guilabel:`Select datum transformations`
-  dialog. This offers you to select the most appropriate transformation settings.
-  Validating this dialog with the 'Remember selection' option checked populates
-  the table under :menuselection:`CRS --> Default datum transformations` with
-  information about 'Source CRS' and 'Destination CRS' as well as 'Source datum
-  transform' and 'Destination datum transform'. From now, QGIS automatically
-  uses the selected datum transformation for further transformation between
-  these two CRSs until you |signMinus| remove it from the list.
+It also allows the user to manage global-level variables. Click the |signPlus|
+button to add a new custom global-level variable. Likewise, select a custom
+global-level variable from the list and click the |signMinus| button to remove
+it.
 
-  You can use the |signPlus| button to add a datum transformation if you know
-  its parameters (source and destination ellipsoids and the numbers from the
-  transformation table). You then need to manually enter each setting.
+More information about variables in the :ref:`general_tools_variables`
+section.
 
-.. note:: For more information on how QGIS handles layers projection, please
-  read the dedicated section at :ref:`label_projections`.
 
-.. index:: Overwrite language
-.. _locale_options:
+.. _figure_variables_settings:
 
-Locale Settings
----------------
+.. figure:: img/options_variables_global.png
+   :align: center
 
-* |checkbox| :guilabel:`Override system locale` and :guilabel:`Locale to use instead`
-* Information about active system locale
+   Variables Settings in QGIS
+
+
+.. index:: Authentication
+.. _authentication_options:
 
 Authentication Settings
 -----------------------
@@ -513,6 +670,15 @@ Authentication Settings
 In the :guilabel:`Authentication` tab you can set authentication configurations
 and manage PKI certificates. See :ref:`authentication_index` for more
 details.
+
+
+.. _figure_authentication_settings:
+
+.. figure:: ../auth_system/img/auth-editor-configs2.png
+   :align: center
+
+   Authentication Settings in QGIS
+
 
 .. index:: Proxy, Network
 .. _network_options:
@@ -532,21 +698,24 @@ Network Settings
 
 .. _figure_network_tab:
 
-.. figure:: /static/user_manual/introduction/proxy-settings.png
+.. figure:: img/proxy-settings.png
    :align: center
 
    Proxy-settings in QGIS
 
 **Cache settings**
 
-Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
+Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
+Also offers tools to :guilabel:`automatically clear the connection authentication
+cache on SSL errors (recommanded)`.
 
-* |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
-  and 'Password'.
-* Set the :guilabel:`Proxy type` |selectString| according to your needs.
+**Proxy for web access**
 
-  * :menuselection:`Default Proxy`: Proxy is determined based on the application
-    proxy set using
+* |checkbox| :guilabel:`Use proxy for web access`
+* Set the :guilabel:`Proxy type` |selectString| according to your needs and
+  define 'Host' and 'Port'. Available proxy types are:
+
+  * :menuselection:`Default Proxy`: Proxy is determined based on system's proxy
   * :menuselection:`Socks5Proxy`: Generic proxy for any kind of connection.
     Supports TCP, UDP, binding to a port (incoming connections) and authentication.
   * :menuselection:`HttpProxy`: Implemented using the "CONNECT" command, supports
@@ -556,45 +725,83 @@ Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
   * :menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is
     useful only in the context of FTP requests.
 
+Credentials of proxy are set using the :ref:`authentication widget <authentication>`.
+
 Excluding some URLs can be added to the text box below the proxy settings (see
 Figure_Network_Tab_).
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
-http://doc.qt.io/qt-4.8/qnetworkproxy.html#ProxyType-enum
+https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 
 .. tip:: **Using Proxies**
 
    Using proxies can sometimes be tricky. It is useful to proceed by 'trial and
    error' with the above proxy types, to check if they succeed in your case.
 
-.. index:: Variables
+.. index:: Search widget, Locator
+.. _locator_options:
 
-Variables Settings
-------------------
+Locator Settings
+----------------
 
-The :guilabel:`Variables` tab lists all the variables available at the
-global-level.
+|search| The :guilabel:`Locator` tab allows to configure the **Locator bar**, a
+quick search widget available on the status bar that helps you perform searches
+anywhere in the application. It provides some default filters (with prefix) to use:
 
-It also allows the user to manage global-level variables. Click the |signPlus|
-button to add a new custom global-level variable. Likewise, select a custom
-global-level variable from the list and click the |signMinus| button to remove
-it.
+* Project layers (``l``): finds and selects a layer in the :guilabel:`Layers`
+  panel.
+* Project layouts (``pl``): finds and opens a print layout.
+* Actions (``.``): finds and executes a QGIS action; actions can be any tool
+  or menu in QGIS, opening a panel...
+* Active layer features (``f``): searches for matching attributes in any field
+  from the current active layer and zooms to the selected feature.
+* Features in all layers (``af``): searches for matching attributes in the
+  :ref:`display name <maptips>` of each :ref:`searchable layers <project_layer_capabilities>`
+  and zooms to the selected feature.
+* Calculator (``=``): allows evaluation of any QGIS expression and, if valid,
+  gives an option to copy the result to the clipboard.
+* Spatial bookmarks (``b``): finds and zooms to the bookmark extent.
+* Settings (``set``): browses and opens project and application-wide properties
+  dialogs.
+* Processing (``a``): searches and opens a Processing algorithm dialog.
+* Edit selected features (``ef``): gives quick access and runs a compatible
+  :ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the
+  active layer.
 
-More information about variables in the :ref:`general_tools_variables`
-section.
+For each filter, you can customize the filter, set whether it is enabled by default or not.
+The set of default locator filters can be extended by plugins, eg for OSM
+nominatim searches, direct database searching, layer catalog searches.
 
-Processing
-----------
+The locator search bar can be activated pressing :kbd:`Ctrl+K`. Type your text
+to perform a search. By default, results are returned for all enabled locator
+filters but you can limit the search to a certain filter by prefixing your
+text with the locator filter prefix, ie. typing ``l cad`` will return only the
+layers whose name contains ``cad``. Click on the result to execute the
+corresponding action, depending on the type of item.
 
-The |processing| :guilabel:`Processing` tab provides you with general settings
-of tools and data providers that are used in the QGIS Processing framework.
-More information at :ref:`label_processing`.
+Searching is handled using threads, so that results always become available as
+quickly as possible, regardless of whether any slow search filters may be
+installed. They also appear as soon as each result is encountered by each
+filter, which means that e.g. a file search filter will show results one by one
+as the file tree is scanned. This ensures that the UI is always responsive even
+if a very slow search filter is present (e.g. one which uses an online service).
 
-.. comment for writers:
- Actually, there seems to not be a real section describing the Processing options
- dialog. So the link above should be redirected if ever such a section is
- created, preferably in Processing chapter.
+.. tip:: **Quick access to the locator's configurations**
+
+  Click on the |search| icon inside the locator widget on the status bar to
+  display the list of filters you can use and a :guilabel:`Configure` entry that
+  opens the :guilabel:`Locator` tab of the :menuselection:`Settings -->
+  Options...` menu.
+
+
+.. _figure_locator_settings:
+
+.. figure:: img/options_locator.png
+   :align: center
+
+   Locator Settings in QGIS
+
 
 .. _optionsadvanced:
 
@@ -619,6 +826,86 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
+.. _figure_advanced_settings:
+
+.. figure:: img/options_advanced.png
+   :align: center
+
+   Advanced Settings tab in QGIS
+
+
+Processing Settings
+-------------------
+
+The |processing| :guilabel:`Processing` tab provides you with general settings
+of tools and data providers that are used in the QGIS Processing framework.
+More information at :ref:`label_processing`.
+
+.. comment for writers:
+ Actually, there seems to not be a real section describing the Processing options
+ dialog. So the link above should be redirected if ever such a section is
+ created, preferably in Processing chapter.
+
+.. _figure_processing_settings:
+
+.. figure:: img/options_processing.png
+   :align: center
+
+   Processing Settings tab in QGIS
+
+
+.. _user_profiles:
+
+Working with User Profiles
+==========================
+
+The :menuselection:`Settings --> User Profiles` menu provides functions to set
+and access user profiles. A user profile is a unified application configuration
+that allows to store in a single folder:
+
+* all the :ref:`global settings <gui_options>`, including locale,
+  projections`, authentication settings, color palettes, shortcuts...
+* GUI configurations and :ref:`customization <sec_customization>`
+* installed :ref:`plugins <plugins>` and their configurations
+* project templates and history of saved project with their image preview
+* :ref:`processing settings <label_processing>`, logs, scripts, models.
+
+By default, a QGIS installation contains a single user profile named ``default``.
+But you can create as many user profiles as you want:
+
+#. Click the :guilabel:`New profile...` entry.
+#. You'll be prompted to provide a profile name, creating a folder of the same name
+   under :file:`~/<UserProfiles>/` where:
+
+   * ``~`` represents the **HOME** directory, which on |win| Windows is usually
+     something like :file:`C:\\Users\\(user)`.
+   * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
+
+     * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
+     * |win| :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\`
+     * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`
+
+   The user profile folder can be opened from within QGIS using the
+   :guilabel:`Open Active Profile Folder`.
+#. The new profile opens a new instance of QGIS, using a clean and unchanged
+   configuration from installation. You can then set your custom configurations. 
+
+As each user profile contains isolated settings, plugins and history they can be great for
+different workflows, demos, users of the same machine, or testing settings, etc.
+And you can switch from one to the other by selecting them in the :menuselection:`Settings -->
+User Profiles` menu. You can also run QGIS with a specific user profile from the
+:ref:`command line <label_commandline>`.
+
+Unless changed, the profile of the last closed QGIS session will be used in the
+following QGIS sessions.
+
+.. tip:: **Run QGIS under a new user profile to check for bug persistence**
+
+ When you encounter weird behavior with some functions in QGIS, create a new user
+ profile and run the commands again. Sometimes, bugs are related to some leftovers
+ in the current user profile and creating a new one may fix them as it restarts
+ QGIS with the new (clean) profile.
+
 
 .. index:: Project properties
    single: Project; Properties
@@ -630,121 +917,254 @@ Project Properties
 ==================
 
 In the properties window for the project under :menuselection:`Project -->
-Project Properties` (or |kde| :menuselection:`Settings --> Project Properties`),
-you can set project-specific options.
+Project Properties`, you can set project-specific options.
+The project-specific options overwrite their equivalent in the :guilabel:`Options`
+dialog described above.
 
-The project-specific options overwrite their equivalent in the options
-described above.
+General Properties
+------------------
 
-* In the :guilabel:`General` tab, the **general settings** let you:
+In the :guilabel:`General` tab, the :guilabel:`General settings` let you:
 
-  * give a title to the project beside the project file path
-  * choose the color to use for features when they are selected
-  * choose the background color: the color to use for the map canvas
-  * set whether the path to layers in the project should be saved as absolute
-    (full) or as relative to the project file location. You may prefer
-    relative path when both layers and project files can be moved or shared
-    or if the project is accessed from computers on different platforms.
-  * choose to avoid artifacts when project is rendered as map tiles. Note that
-    checking this option can lead to performance degradation.
+* see the location of the project file
+* set the folder for the project home (available in the ``Project Home`` item
+  in the browser).
+  The path can be relative to the folder of the project file (type it in) or absolute.
+  The project home can be used for storing data and other content that is
+  useful for the project.
+* give a title to the project beside the project file path
+* choose the color to use for features when they are selected
+* choose the background color: the color to use for the map canvas
+* set whether the path to layers in the project should be saved as absolute
+  (full) or as relative to the project file location. You may prefer
+  relative path when both layers and project files can be moved or shared
+  or if the project is accessed from computers on different platforms.
+* choose to avoid artifacts when project is rendered as map tiles. Note that
+  checking this option can lead to performance degradation.
 
-  Calculating areas and distances is a common need in GIS. However, these values
-  are really tied to the underlying projection settings. The **Measurements**
-  frame lets you control these parameters. You can indeed choose:
+Calculating areas and distances is a common need in GIS. However, these values
+are really tied to the underlying projection settings. The :guilabel:`Measurements`
+frame lets you control these parameters. You can indeed choose:
 
-  * the ellipsoid to use: it can be an existing one, a custom one
-    (you'll need to set values of the semi-major and semi-minor axis)
-    or None/Planimetric.
-  * the :guilabel:`units for distance measurements` for length and perimeter and
-    the :guilabel:`units for area measurements`. These settings, which default
-    to the units set in QGIS options but then overrides it for the current project,
-    are used in:
+* the :guilabel:`Ellipsoid`, on which distance and area calculations are entirely
+  based; it can be:
 
-    * Attribute table field update bar
-    * Field calculator calculations
-    * Identify tool derived length, perimeter and area values
-    * Default unit shown in measure dialog
+  * **None/Planimetric**: returned values are in this case cartesian measurements.
+  * a **Custom** one: you'll need to set values of the semi-major and semi-minor axes.
+  * or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN,
+    New International 1967, WGS 84...).
+* the :guilabel:`units for distance measurements` for length and perimeter and
+  the :guilabel:`units for area measurements`. These settings, which default
+  to the units set in QGIS options but then overrides it for the current project,
+  are used in:
 
-  The **Coordinate display** allows you to choose and customize the format of units
-  to use to display the mouse coordinate in the status bar and the derived coordinates
-  shown via the identify tool.
+  * Attribute table field update bar
+  * Field calculator calculations
+  * Identify tool derived length, perimeter and area values
+  * Default unit shown in measure dialog
 
-  Finally, you can define a **project scale** list, which overrides the global
-  predefined scales.
+The :guilabel:`Coordinate display` allows you to choose and customize the format of units
+to use to display the mouse coordinate in the status bar and the derived coordinates
+shown via the identify tool.
+
+Finally, you can set a :guilabel:`Project predefined scales` list, which overrides
+the global predefined scales.
 
 .. _figure_general_tab:
 
-.. figure:: /static/user_manual/introduction/project_general.png
+.. figure:: img/project_general.png
    :align: center
 
    General tab of Project Properties dialog
 
-* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
-  System for this project, and to enable on-the-fly re-projection of raster and
-  vector layers when displaying layers from a different CRS. For more information
-  on projection's handling in QGIS, please read :ref:`label_projections` section.
-* With the :guilabel:`Identify layers` tab, you set (or disable) which
-  layers will respond to the :ref:`identify tool <identify>`. By default, layers
-  are set queryable.
-  
-  You can also set whether a layer should appear as ``read-only``, meaning that
-  it can not be edited by the user, regardless of the data provider's
-  capabilities. Although this is a weak protection, it remains a quick and handy
-  configuration to avoid end-users modifying data when working with file-based layers.
-* The :guilabel:`Default Styles` tab lets you control how new layers will be
-  drawn when they do not have an existing :file:`.qml` style defined. You can
-  also set the default transparency level for new layers and whether symbols
-  should have random colors assigned to them.
-  There is also an additional section where you can define specific colors for the
-  running project. You can find the added colors in the drop down menu of the color dialog
-  window present in each renderer.
-* The tab :guilabel:`OWS Server` allows you to configure your project in order
-  to publish it online. Here you can define information about the QGIS
-  Server WMS and WFS capabilities, extent and CRS restrictions. More information
-  available in section :ref:`Creatingwmsfromproject` and subsequent.
-* The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
-  only three macros are available: ``openProject()``, ``saveProject()`` and
-  ``closeProject()``.
+Metadata Properties
+-------------------
+
+The :guilabel:`Metadata` tab allows detailed metadata to be defined,
+including (among the others): author, creation date, language, abstracts,
+categories, keywords, contact details, links, history. There is also a
+validation functionality that checks if specific fields were filled, anyway
+this is not enforced. See :ref:`vector layer metadata properties
+<vectormetadatamenu>` for some details.
+
+CRS Properties
+--------------
+
+The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
+to use in this project. It can be:
+
+* |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
+  this setting can be used to guess a layer CRS or when using QGIS for non
+  earth uses like role-playing game maps, building mapping or microscopic stuff.
+  In this case:
+
+  * No reprojection is done while rendering the layers: features are just drawn
+    using their raw coordinates.
+  * The ellipsoid is locked out and forced to ``None/Planimetric``.
+  * The distance and area units, and the coordinate display are locked out and
+    forced to "unknown units"; all measurements are done in unknown map units,
+    and no conversion is possible.
+
+* or an existing coordinate reference system that can be *geographic*, *projected*
+  or *user-defined*. A preview of the CRS extent on earth is displayed to
+  help you select the appropriate one.
+  Layers added to the project are on-the-fly translated to this CRS in order
+  to overlay them regardless their original CRS. Use of units, ellipsoid setting
+  are available and make sense and you can perform calculations accordingly.
+
+The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
+settings by configuring the datum transformation preferences to apply in the
+current project. As usual, these override any corresponding global settings.
+See :ref:`datum_transformation` for more details.
+
+.. _default_styles_properties:
+
+Default Styles Properties
+-------------------------
+
+The :guilabel:`Default Styles` tab lets you control how new layers will be
+drawn in the project when they do not have an existing :file:`.qml` style
+defined. You can:
+
+* Set default symbols (:guilabel:`Marker`, :guilabel:`Line`, :guilabel:`Fill`)
+  to apply depending on the layer geometry type as well as a default
+  :guilabel:`Color Ramp`
+* Apply a default :guilabel:`Opacity` to new layers
+* |checkbox| :guilabel:`Assign random colors to symbols`, modifying the symbols
+  fill colors, hence avoiding same rendering for all layers.
+
+.. _figure_default_styles:
+
+.. figure:: img/project_default_styles.png
+   :align: center
+
+   Default Styles tab
+
+Using the |styleManager| :guilabel:`Style Manager` button, you can also quickly
+access the :ref:`Style Manager <vector_style_manager>` dialog and configure
+symbols and color ramps.
+
+There is also an additional section where you can define specific colors for the
+running project. Like the :ref:`global colors <colors_options>`, you can:
+
+* |signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color
+* |editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color
+* |fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of colors
+  from/to :file:`.gpl` file.
+
+Double-click a color in the list to tweak or replace it in the :ref:`Color
+Selector <color-selector>` dialog. You can also rename it by double-clicking
+in the :guilabel:`Label` column.
+
+These colors are identified as :guilabel:`Project colors` and listed as part of
+:ref:`color widgets <color-selector>`.
+
+.. tip:: **Use project colors to quickly assign and update color widgets**
+
+  Project colors can be refered to using their label and the color widgets
+  they are used in are bound to them. This means that instead of repeatedly
+  setting the same color for many properties and, to avoid a cumbersome update
+  you can:
+
+  #. Define the color as a project color
+  #. Apply it using the ``project_color('color_label')`` expression in 
+     color :ref:`data defined override widget <data_defined>`
+  #. Update the color once in a :guilabel:`Project colors` list
+  #. And the change is reflected EVERYWHERE.
+
+Data Sources Properties
+-----------------------
+
+In the :guilabel:`Data Sources` tab, you can:
+
+* |unchecked| :guilabel:`Automatically create transaction groups where possible`:
+  When this mode is turned on, all
+  (postgres) layers from the same database are synchronised in their edit state,
+  i.e. when one layer is put into edit state, all are, when one layer is committed
+  or one layer is rolled back, so are the others. Also, instead of buffering edit
+  changes locally, they are directly sent to a transaction in the database which
+  gets committed when the user clicks save layer.
+  Note that you can (de)activate this option only if no layer is being edited
+  in the project.
+* |unchecked| :guilabel:`Evaluate default values on provider side`: When adding
+  new features in a PostgreSQL table, fields with default value constraint are
+  evaluated and populated at the form opening, and not at the commit moment.
+  This means that instead of an expression like ``nextval('serial')``, the field
+  in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
+* |unchecked| :guilabel:`Trust project when data source has no metadata`:
+  To speed up project loading by skipping data checks. Useful in QGIS Server context
+  or in projects with huge database views/materialized views. The extent of layers
+  will be read from the QGIS project file (instead of data sources) and when
+  using the PostgreSQL provider the primary key unicity will not be
+  checked for views and materialized views.
+
+.. _project_layer_capabilities:
+
+* Configure the :guilabel:`Layers Capabilities`, i.e.:
+
+  * Set (or disable) which layers are ``identifiable``, i.e. will respond to the
+    :ref:`identify tool <identify>`. By default, layers are set queryable.
+  * Set whether a layer should appear as ``read-only``, meaning that
+    it can not be edited by the user, regardless of the data provider's
+    capabilities. Although this is a weak protection, it remains a quick and handy
+    configuration to avoid end-users modifying data when working with file-based layers.
+  * Define which layers are ``searchable``, i.e. could be queried using the
+    :ref:`locator widget <locator_options>`. By default, layers are set searchable.
+  * Define which layers are defined as ``required``. Checked layers in this list
+    are protected from inadvertent removal from the project.
+
+  The :guilabel:`Layers Capabilities` table provides some convenient tools to:
+
+  * Select multiple cells and press :guilabel:`Toggle Selection` to have them change their
+    checkbox state;
+  * |unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial
+    layers from the layers list;
+  * |search| :guilabel:`Filter layers...` and quickly find a particular layer to
+    configure.
+
+Relations Properties
+--------------------
+
+The :guilabel:`Relations` tab is used to define 1:n relations. The relations
+are defined in the project properties dialog. Once relations exist for a layer,
+a new user interface element in the form view (e.g. when identifying a feature
+and opening its form) will list the related entities. This provides a powerful
+way to express e.g. the inspection history on a length of pipeline or road segment.
+You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+
+Variables Properties
+--------------------
+
+The :guilabel:`Variables` tab lists all the variables available at
+the project's level (which includes all global variables). Besides, it
+also allows the user to manage project-level variables. Click the |signPlus|
+button to add a new custom project-level variable. Likewise, select a custom
+project-level variable from the list and click the |signMinus| button to
+remove it.
+More information on variables usage in the General Tools
+:ref:`general_tools_variables` section.
+
+Macros Properties
+-----------------
+
+The :guilabel:`Macros` tab is used to edit Python macros for projects. Currently,
+only three macros are available: ``openProject()``, ``saveProject()`` and
+``closeProject()``.
 
 .. _figure_macro_tab:
 
-.. figure:: /static/user_manual/introduction/macro.png
+.. figure:: img/macro.png
    :align: center
 
    Macro settings in QGIS
 
+QGIS Server Properties
+----------------------
 
-* The :guilabel:`Relations` tab is used to define 1:n relations. The relations
-  are defined in the project properties dialog. Once relations exist for a layer,
-  a new user interface element in the form view (e.g. when identifying a feature
-  and opening its form) will list the related entities. This provides a powerful
-  way to express e.g. the inspection history on a length of pipeline or road segment.
-  You can find out more about 1:n relations support in Section :ref:`vector_relations`.
-* In the :guilabel:`Data Sources` tab, you can:
-
-  * |checkbox| :guilabel:`Evaluate default values on provider side`: When adding
-    new features in a PostGreSQL table, fields with default value constraint are
-    evaluated and populated at the form opening, and not at the commit moment.
-    This means that instead of an expression like ``nextval('serial')``, the field
-    in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
-  * |checkbox| :guilabel:`Automatically create transaction groups where possible`:
-    When this mode is turned on, all
-    (postgres) layers from the same database are synchronised in their edit state,
-    i.e. when one layer is put into edit state, all are, when one layer is committed
-    or one layer is rolled back, so are the others. Also, instead of buffering edit
-    changes locally, they are directly sent to a transaction in the database which
-    gets committed when the user clicks save layer.
-    Note that you can (de)activate this option only if no layer is being edited
-    in the project.
-
-* The :guilabel:`Variables` tab lists all the variables available at
-  the project's level (which includes all global variables). Besides, it
-  also allows the user to manage project-level variables. Click the |signPlus|
-  button to add a new custom project-level variable. Likewise, select a custom
-  project-level variable from the list and click the |signMinus| button to
-  remove it.
-  More information on variables usage in the General Tools
-  :ref:`general_tools_variables` section.
+The tab :guilabel:`QGIS Server` allows you to configure your project in order
+to publish it online. Here you can define information about the QGIS
+Server WMS and WFS capabilities, extent and CRS restrictions. More information
+available in section :ref:`Creatingwmsfromproject` and subsequent.
 
 .. index:: Customization
 .. _sec_customization:
@@ -761,7 +1181,7 @@ user interface. This can be very useful if you want to provide your end-users wi
 
 .. _figure_customization:
 
-.. figure:: /static/user_manual/introduction/customization.png
+.. figure:: img/customization.png
    :align: center
 
    The Customization dialog
@@ -782,7 +1202,7 @@ With |select| :sup:`Switch to catching widgets in main application`, you
 can click on an item in QGIS interface that you want to be hidden and
 QGIS automatically unchecks the corresponding entry in the Customization dialog.
 
-Once you setup your configuration, click **[Apply]** or **[Ok]** to validate your
+Once you setup your configuration, click :guilabel:`Apply` or :guilabel:`OK` to validate your
 changes. This configuration becomes the one used by default by QGIS at the next startup.
 
 The modifications can also be saved in a ``.ini`` file using |fileSave|
@@ -800,7 +1220,7 @@ setups for different use cases as well.
 
    * unchecking |checkbox| :guilabel:`Enable customization` option in the
      Customization dialog or click the |selectAllTree| :sup:`Check All` button
-   * pressing the **[Reset]** button in the **QSettings** frame under
+   * pressing the :guilabel:`Reset` button in the **QSettings** frame under
      :menuselection:`Settings --> Options` menu, :guilabel:`System` tab
    * launching QGIS at a command prompt with the following command line
      ``qgis --nocustomization``
@@ -824,7 +1244,7 @@ ones to QGIS features.
 
 .. _figure_shortcuts:
 
-.. figure:: /static/user_manual/introduction/shortcuts.png
+.. figure:: img/shortcuts.png
    :align: center
 
    Define shortcut options
@@ -832,11 +1252,319 @@ ones to QGIS features.
 Configuration is very simple. Use the search box at the top of the dialog
 to find a particular action, select it from the list and click on :
 
-* **[Change]** and press the new combination you want to assign as new shortcut
-* **[Set none]** to clear any assigned shortcut
-* or **[Set default]** to backup the shortcut to its original and default value.
+* :guilabel:`Change` and press the new combination you want to assign as new shortcut
+* :guilabel:`Set None` to clear any assigned shortcut
+* or :guilabel:`Set Default` to backup the shortcut to its original and default value.
 
 Proceed as above for any other tools you wish to customize. Once you have
-finished your configuration, simply **[Close]** the dialog to have your changes
-applied. You can also **[Save]** the changes as an :file:`.XML` file
-and **[Load]** them into another QGIS installation.
+finished your configuration, simply :guilabel:`Close` the dialog to have your changes
+applied. You can also :guilabel:`Save` the changes as an :file:`.XML` file
+and :guilabel:`Load` them into another QGIS installation.
+
+.. index:: Command line options
+.. _`label_commandline`:
+
+Running QGIS with advanced settings
+===================================
+
+We've seen that :ref:`launching QGIS <label_startingqgis>` is done as for any
+application on your OS.
+QGIS however provides command line options for more advanced use cases.
+To get a list of the options, enter ``qgis --help`` on the command line, which
+returns::
+
+  QGIS - 3.4.3-Madeira 'Madeira' (2f64a3c4e7)
+  QGIS is a user friendly Open Source Geographic Information System.
+  Usage: /usr/bin/qgis.bin [OPTION] [FILE]
+    OPTION:
+          [--snapshot filename]   emit snapshot of loaded datasets to given file
+          [--width width] width of snapshot to emit
+          [--height height]       height of snapshot to emit
+          [--lang language]       use language for interface text (changes existing override)
+          [--project projectfile] load the given QGIS project
+          [--extent xmin,ymin,xmax,ymax]  set initial map extent
+          [--nologo]      hide splash screen
+          [--noversioncheck]      don't check for new version of QGIS at startup
+          [--noplugins]   don't restore plugins on startup
+          [--nocustomization]     don't apply GUI customization
+          [--customizationfile path]      use the given ini file as GUI customization
+          [--globalsettingsfile path]     use the given ini file as Global Settings (defaults)
+          [--authdbdirectory path] use the given directory for authentication database
+          [--code path]   run the given python file on load
+          [--defaultui]   start by resetting user ui settings to default
+          [--hide-browser]        hide the browser widget
+          [--dxf-export filename.dxf]     emit dxf output of loaded datasets to given file
+          [--dxf-extent xmin,ymin,xmax,ymax]      set extent to export to dxf
+          [--dxf-symbology-mode none|symbollayer|feature] symbology mode for dxf output
+          [--dxf-scale-denom scale]       scale for dxf output
+          [--dxf-encoding encoding]       encoding to use for dxf output
+          [--dxf-map-theme maptheme]      map theme to use for dxf output
+          [--take-screenshots output_path]        take screen shots for the user documentation
+          [--screenshots-categories categories]   specify the categories of screenshot to be used (see QgsAppScreenShots::Categories).
+          [--profile name]        load a named profile from the user's profiles folder.
+          [--profiles-path path]  path to store user profile folders. Will create profiles inside a {path}\profiles folder
+          [--version-migration]   force the settings migration from older version if found
+          [--openclprogramfolder]         path to the folder containing the sources for OpenCL programs.
+          [--help]                this text
+          [--]            treat all following arguments as FILEs
+
+    FILE:
+      Files specified on the command line can include rasters,
+      vectors, and QGIS project files (.qgs and .qgz):
+       1. Rasters - supported formats include GeoTiff, DEM
+          and others supported by GDAL
+       2. Vectors - supported formats include ESRI Shapefiles
+          and others supported by OGR and PostgreSQL layers using
+          the PostGIS extension
+
+.. tip::
+        **Example Using command line arguments**
+
+        You can start QGIS by specifying one or more data files on the command
+        line. For example, assuming you are in the :file:`qgis_sample_data`
+        directory, you could start QGIS with a vector layer and a raster file
+        set to load on startup using the following command:
+        ``qgis ./raster/landcover.img ./gml/lakes.gml``
+
+``--snapshot`` option
+
+This option allows you to create a snapshot in PNG format from the current view.
+This comes in handy when you have many projects and want to generate
+snapshots from your data, or when you need to create snapshots of the
+same project with updated data.
+
+Currently, it generates a PNG file with 800x600 pixels. The size can be adjusted
+using the ``--width`` and ``--height`` arguments. The filename can
+be added after ``--snapshot``. For example::
+
+  qgis --snapshot my_image.png --width 1000 --height 600 --project my_project.qgs
+
+``--lang``  option
+
+Based on your locale, QGIS selects the correct localization. If you would like
+to change your language, you can specify a language code. For example,
+``qgis --lang it`` starts QGIS in Italian localization.
+
+``--project`` option
+
+Starting QGIS with an existing project file is also possible. Just add the
+command line option ``--project`` followed by your project name and QGIS will
+open with all layers in the given file loaded.
+
+``--extent`` option
+
+To start with a specific map extent use this option. You need to add the
+bounding box of your extent in the following order separated by a comma::
+
+  --extent xmin,ymin,xmax,ymax
+
+This option probably makes more sense when paired with the ``--project`` option
+to open a specific project at the desired extent.
+
+``--nologo`` option
+
+This option hides the splash screen when you start QGIS.
+
+``--noversioncheck`` option
+
+Skip searching for a new version of QGIS at startup.
+
+``--noplugins`` option
+
+If you have trouble at start-up with plugins, you can avoid loading them at
+start-up with this option. They will still be available from the Plugins Manager
+afterwards.
+
+``--nocustomization`` option
+
+Using this option, any existing :ref:`GUI customization <sec_customization>`
+will not be applied at startup. This means that any hidden buttons, menu items,
+toolbars, and so on, will show up on QGIS start up. This is not a permanent
+change. The customization will be applied again if QGIS is launched without
+this option.
+
+This option is useful for temporarily allowing access to tools that have been
+removed by customization.
+
+.. _custom_commandline:
+
+``--customizationfile``
+
+Using this option, you can define a UI customization file, that
+will be used at startup.
+
+``--globalsettingsfile`` option
+
+Using this option, you can specify the path for a Global Settings
+file (``.ini``), also known as the Default Settings. The settings in the specified
+file replace the original inline default ones, but the user profiles'
+settings will be set on top of those.
+
+Presently, there's no way to specify a file to write settings to; therefore,
+you can create a copy of an original settings file, rename, and adapt it.
+
+Setting the :file:`qgis_global_setting.ini` file path to a network shared
+folder, allows a system administrator to change global settings and defaults in
+several machines by only editing one file.
+
+``--authdbdirectory`` option
+
+This option is similar to ``--globalsettingsfile``, but defines the path to the
+directory where the authentication database will be stored and loaded.
+
+``--code`` option
+
+This option can be used to run a given python file directly after QGIS has
+started.
+
+For example, when you have a python file named :file:`load_alaska.py` with
+following content:
+
+.. code-block:: python
+
+   from qgis.utils import iface
+   raster_file = "/home/gisadmin/Documents/qgis_sample_data/raster/landcover.img"
+   layer_name = "Alaska"
+   iface.addRasterLayer(raster_file, layer_name)
+
+Assuming you are in the directory where the file :file:`load_alaska.py` is
+located, you can start QGIS, load the raster file :file:`landcover.img` and give
+the layer the name 'Alaska' using the following command::
+
+  qgis --code load_alaska.py
+
+``--defaultui`` option
+
+On load, **permanently resets** the user interface (UI) to the default settings.
+This option will restore the panels and toolbars visibility, position, and size.
+Unless it's changed again, the default UI settings will be used in the following
+sessions.
+
+Notice that this option doesn't have any effect on :ref:`GUI
+customization<sec_customization>`. Items hidden by GUI customization (e.g. the
+status bar) will remain hidden even using the ``--defaultui`` option. See also
+the ``--nocustomization`` option.
+
+``--hide-browser`` option
+
+On load, hides the :guilabel:`Browser` panel from the user interface. The panel
+can be enabled by right-clicking a space in the toolbars or using the
+:menuselection:`View --> Panels` (:menuselection:`Settings --> Panels` in |kde|
+Linux KDE).
+
+Unless it's enabled again, the Browser panel will remain hidden in the following
+sessions.
+
+``--dxf-*`` option
+
+These options can be used to export a QGIS project into a DXF file. Several
+options are available:
+
+* *--dxf-export*: the DXF filename into which to export the layers;
+* *--dxf-extent*: the extent of the final DXF file;
+* *--dxf-symbology-mode*: several values can be used here: ``none``
+  (no symbology), ``symbollayer`` (Symbol layer symbology), ``feature`` (feature
+  symbology);
+* *--dxf-scale-denom*: the scale denominator of the symbology;
+* *--dxf-encoding*: the file encoding;
+* *--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer tree
+  configuration.
+
+``--take-screenshots`` option
+
+Takes screenshots for the user documentation. Can be used together with
+``--screenshots-categories`` to filter which categories/sections of the
+documentation screenshots should be created (see QgsAppScreenShots::Categories).
+
+``--profile`` option
+
+Loads QGIS using a specific profile from the user's profile folder. Unless
+changed, the selected profile will be used in the following QGIS sessions.
+
+.. _profiles-path_option:
+
+``--profiles-path`` option
+
+With this option, you can choose a path to load and save the profiles (user
+settings). It creates profiles inside a ``{path}\profiles`` folder, which
+includes settings, installed plugins, processing models and scripts, and so on.
+
+This option allows you to, for instance, carry all your plugins and settings
+in a flash drive, or, for example, share the settings between different computers
+using a file sharing service.
+
+``--version-migration`` option
+
+If settings from an older version are found (*e.g.*, the ``.qgis2`` folder from QGIS
+2.18), this option will import them into the default QGIS profile.
+
+``--openclprogramfolder`` option
+
+Using this option, you can specify an alternative path for your OpenCL programs.
+This is useful for developers while testing new versions of the programs
+without needing to replace the existing ones.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
+.. |doubleSpinBox| image:: /static/common/doublespinbox.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
+   :width: 1.5em
+.. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |select| image:: /static/common/mActionSelect.png
+   :width: 1.5em
+.. |selectAllTree| image:: /static/common/mActionSelectAllTree.png
+   :width: 1.5em
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em

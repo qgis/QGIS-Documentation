@@ -16,7 +16,7 @@ eVis Plugin
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
 Museum of Natural History, Center for Biodiversity and Conservation. Available
-from http://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
+from https://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's
 (AMNH) Center for Biodiversity and Conservation (CBC)
@@ -54,8 +54,9 @@ into QGIS before running the Event Browser.
 Launch the Event Browser module
 ...............................
 
-To launch the Event Browser module, click on :menuselection:`Database --> eVis -->
-eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` window.
+To launch the Event Browser module, click on :menuselection:`Database --> eVis -->`
+|eventBrowser| :menuselection:`eVis Event Browser`. This will open the
+:guilabel:`Generic Event Browser` window.
 
 The :guilabel:`Event Browser` window has three tabs displayed at the top
 of the window. The :guilabel:`Display` tab is used to view the photograph and its
@@ -76,7 +77,7 @@ to view geocoded photographs and their associated attribute data.
 
 .. _figure_eVis:
 
-.. figure:: /static/user_manual/plugins/evisdisplay.png
+.. figure:: img/evisdisplay.png
    :align: center
 
    The *eVis* display window
@@ -105,7 +106,7 @@ Understanding the Options window
 
 .. _figure_eVis_options:
 
-.. figure:: /static/user_manual/plugins/evisoptions.png
+.. figure:: img/evisoptions.png
    :align: center
 
    The *eVis* Options window
@@ -138,10 +139,10 @@ F. **Apply rule to all documents**: If checked, the same path rules that are
    apply to photographs, and other documents will ignore the base path parameter.
 G. **Remember settings**: If the checkbox is checked, the values for the associated
    parameters will be saved for the next session when the window is closed or
-   when the **[Save]** button below is pressed.
+   when the :guilabel:`Save` button below is pressed.
 H. **Reset values**: Resets the values on this line to the default setting.
 I. **Restore defaults**: This will reset all of the fields to their default
-   settings. It has the same effect as clicking all of the **[Reset]** buttons.
+   settings. It has the same effect as clicking all of the :guilabel:`Reset` buttons.
 J. **Save**: This will save the settings without closing the :guilabel:`Options`
    pane.
 
@@ -152,7 +153,7 @@ Understanding the Configure External Applications window
 
 .. _figure_eVis_app:
 
-.. figure:: /static/user_manual/plugins/evisexternal.png
+.. figure:: img/evisexternal.png
    :align: center
 
    The *eVis* External Applications window
@@ -184,9 +185,9 @@ of the different approaches are listed in Table `evis_examples`_.
   X        Y        FILE                                                BEARING
   780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG     275
   780596   1784017  /groundphotos/DSC_0169.JPG                          80
-  780819   1784015  http://biodiversityinformatics.amnh.org/\
+  780819   1784015  https://biodiversityinformatics.amnh.org/\
                     evis_testdata/DSC_0170.JPG                          10
-  780596   1784017  pdf:http://www.testsite.com/attachments.php?\
+  780596   1784017  pdf:https://www.testsite.com/attachments.php?\
                     attachment_id-12                                    76
 
 
@@ -239,7 +240,7 @@ appear pointing in the direction indicated by the value in the compass bearing
 display field in the :guilabel:`Event Browser` window. The arrow will be
 centered over the point that is associated with the photograph or other document.
 
-To close the :guilabel:`Event Browser` window, click on the **[Close]**
+To close the :guilabel:`Event Browser` window, click on the :guilabel:`Close`
 button from the :guilabel:`Display` window.
 
 .. _`evis_id_tool`:
@@ -269,8 +270,8 @@ displayed in the QGIS map window, move the Event ID cursor over the feature and
 then click the mouse. After clicking on the feature, the :guilabel:`Event
 Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
-you can cycle through the different features using the **[Previous]** and
-**[Next]** buttons. The other controls are described in the :ref:`evis_browser`
+you can cycle through the different features using the :guilabel:`Previous` and
+:guilabel:`Next` buttons. The other controls are described in the :ref:`evis_browser`
 section of this guide.
 
 .. _`evis_database`:
@@ -317,7 +318,7 @@ resides on your desktop, you should enter "localhost".
 Enter the name of the database in the :guilabel:`Database Name` textbox. If you
 selected 'ODBC' as the database type, you need to enter the data source name.
 
-When all of the parameters are filled in, click on the **[Connect]** button.
+When all of the parameters are filled in, click on the :guilabel:`Connect` button.
 If the connection is successful, a message will be written in the :guilabel:`Output
 Console` window stating that the connection was established. If a connection was
 not established, you will need to check that the correct parameters were entered
@@ -325,7 +326,7 @@ above.
 
 .. _figure_eVis_db:
 
-.. figure:: /static/user_manual/plugins/evisdatabase.png
+.. figure:: img/evisdatabase.png
    :align: center
 
    The *eVis* Database connection window
@@ -358,11 +359,11 @@ SQL queries are used to extract information from a database or ODBC resource.
 In eVis, the output from these queries is a vector layer added to the QGIS map
 window. Click on the :guilabel:`SQL Query` tab to display the SQL query
 interface. SQL commands can be entered in this text window. A helpful tutorial
-on SQL commands is available at http://www.w3schools.com/sql. For example, to
+on SQL commands is available at https://www.w3schools.com/sql. For example, to
 extract all of the data from a worksheet in an Excel file, ``select * from [sheet1$]``
 where ``sheet1`` is the name of the worksheet.
 
-Click on the **[Run Query]** button to execute the command. If the query
+Click on the :guilabel:`Run Query` button to execute the command. If the query
 is successful, a :guilabel:`Database File Selection` window will be displayed. If
 the query is not successful, an error message will appear in the :guilabel:`Output
 Console` window.
@@ -373,7 +374,7 @@ Layer` textbox.
 
 .. _figure_eVis_sql:
 
-.. figure:: /static/user_manual/plugins/evissql_query.png
+.. figure:: img/evissql_query.png
    :align: center
 
    The eVis SQL query tab
@@ -388,7 +389,7 @@ E. **OK**: Closes the main :guilabel:`Database Connection` window.
 
 Use the :guilabel:`X Coordinate` |selectString| and :guilabel:`Y Coordinate`
 |selectString| combo boxes to select the fields from the database that stores the
-``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the **[OK]**
+``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the :guilabel:`OK`
 button causes the vector layer created from the SQL query to be displayed in the
 QGIS map window.
 
@@ -431,14 +432,14 @@ Select the query you want to run from the drop-down menu and then click on the
 window. If it is the first time you are running a predefined query or are
 switching databases, you need to be sure to connect to the database.
 
-Click on the **[Run Query]** button in the :guilabel:`SQL Query` tab to execute
+Click on the :guilabel:`Run Query` button in the :guilabel:`SQL Query` tab to execute
 the command. If the query is successful, a :guilabel:`Database File Selection`
 window will be displayed. If the query is not successful, an error message will
 appear in the :guilabel:`Output Console` window.
 
 .. _figure_eVis_queries:
 
-.. figure:: /static/user_manual/plugins/evispredefined.png
+.. figure:: img/evispredefined.png
    :align: center
 
    The *eVis* Predefined Queries tab
@@ -541,3 +542,23 @@ A complete sample XML file with three queries is displayed below:
       <autoconnect>false</autoconnect>
     </query>
    </doc>
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |eventBrowser| image:: /static/common/event_browser.png
+   :width: 1.5em
+.. |eventId| image:: /static/common/event_id.png
+   :width: 1.5em
+.. |evisConnect| image:: /static/common/evis_connect.png
+   :width: 1.5em
+.. |evisFile| image:: /static/common/evis_file.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Foreword
 ========
 
@@ -28,12 +32,13 @@ exercises complete with annotated answers throughout the text.
 License
 -------
 
-.. image:: /static/training_manual/license.png
+.. image:: img/license.png
 
 The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on
 an earlier version from Linfiniti and is licensed under a
-`Creative Commons Attribution 4.0 International <http://creativecommons.org/licenses/by/4.0/>`_.
+`Creative Commons Attribution 4.0 International <https://creativecommons.org/licenses/by/4.0/>`_.
 Permissions beyond the scope of this license may be available at below.
+
 
 We have published this QGIS training manual under a liberal license that allows
 you to freely copy, modify and redistribute this work. A complete copy of the
@@ -60,7 +65,7 @@ guidelines are as follows:
   at office@linfiniti.com and we will advise you if what you intend doing is
   acceptable.
 * If you publish this work under a self publishing site such as
-  http://lulu.com we request that you donate the profits to the QGIS project.
+  https://www.lulu.com we request that you donate the profits to the QGIS project.
 * You may not commercialise this work, except with the expressed permission of
   the authors. To be clear, by commercialisation we mean that you may not sell
   for profit, create commercial derivative works (e.g. selling content for use
@@ -105,19 +110,24 @@ Sponsors
 
 * Cape Peninsula University of Technology
 
+.. _data_downloadlink:
+
 Data
 ----
-
-.. note:: The sample data used throughout the manual can be downloaded here:
-   https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v1.0.zip.
-   You can save the files in a folder named **exercise_data**.
 
 The sample data that accompanies this resource is freely available and comes
 from the following sources:
 
-* Streets and Places datasets from OpenStreetMap (http://www.openstreetmap.org/)
+* Streets and Places datasets from OpenStreetMap (https://www.openstreetmap.org/)
 * Property boundaries (urban and rural), water bodies from NGI (http://www.ngi.gov.za/)
 * SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
+
+Download the prepared dataset from the `Training data repository <training_data_>`_
+and unzip the file. All the necessary data are provided in the :file:`exercise_data`
+folder.
+
+.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
+
 
 Source files and Issue reports
 -------------------------------
@@ -134,10 +144,19 @@ Latest Version
 --------------
 
 You can always obtain the latest version of this document by visiting the online
-version which is part of the QGIS documentation website (http://docs.qgis.org).
+version which is part of the QGIS documentation website (https://docs.qgis.org).
 
 .. note:: There are links to online and PDF versions of the Documentation and Training manuals.
 
 
 
 Tim Sutton, May 2012
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

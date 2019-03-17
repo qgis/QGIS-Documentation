@@ -7,9 +7,9 @@ Translation Guidelines
 .. contents::
    :local:
 
-This manual is aiming to help the translator.
+This  manual is aiming to help the translator.
 First the general process of how technically a translation is done
-is explained. Later the translation is explained from an actual English
+is explained.  Later the translation is explained from an actual English
 rst document that is translated to Dutch.
 Finally a summary of :ref:`Rules of translation <translation_summary>` is given.
 
@@ -114,7 +114,7 @@ Translation in Transifex
 ........................
 
 In order to translate QGIS with Transifex, you first need to `join the project
-<http://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
+<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
 you got a team, click on the corresponding project and your language.
 You get a list of all translatable ``.po`` files. Click on the
 ``docs_user-manual_plugins_plugins-heatmap`` to select the heatmap plugin file
@@ -125,7 +125,7 @@ The next page lists all the sentences in the file. All you need to do is select
 the text and translate following the :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
-http://docs.transifex.com/tutorials/txeditor/.
+https://docs.transifex.com/translation/translating-with-the-web-editor.
 
 
 .. _translation_linguist:
@@ -139,7 +139,7 @@ following dialog:
 
 .. _figure_translation_language:
 
-.. figure:: /static/documentation_guidelines/linguist_choose_language.png
+.. figure:: img/linguist_choose_language.png
    :align: center
 
    Select language for translation in linguist menu
@@ -148,29 +148,17 @@ following dialog:
 The Target language should be filled correctly. The Source language can be left
 as is with language POSIX and Country/Region on Any Country.
 
-When you press the **[OK]** button Qt Linguist is filled with sentences and
+When you press the :guilabel:`OK` button Qt Linguist is filled with sentences and
 you can start translating, see Figure_translation_menu_.
 
 
 .. _figure_translation_menu:
 
-.. figure:: /static/documentation_guidelines/linguist_menu.png
+.. figure:: img/linguist_menu.png
    :align: center
    :width: 50em
 
    Translate using the linguist menu
-
-
-.. |linguist_done_next| image:: /static/documentation_guidelines/linguist_done_next.png
-   :width: 2em
-.. |linguist_next| image:: /static/documentation_guidelines/linguist_next.png
-   :width: 2em
-.. |linguist_previous| image:: /static/documentation_guidelines/linguist_previous.png
-   :width: 2em
-.. |linguist_next_todo| image:: /static/documentation_guidelines/linguist_next_todo.png
-   :width: 2em
-.. |linguist_previous_todo| image:: /static/documentation_guidelines/linguist_previous_todo.png
-   :width: 2em
 
 In the menu you see the following buttons which are convenient to use.
 
@@ -299,13 +287,13 @@ does not need translation.
     For the following example, we will use the ``airports`` vector point
     layer from the QGIS sample dataset (see :ref:`label_sampledata`).
     Another excellent QGIS tutorial on making heatmaps can be found on
-    `http://qgis.spatialthoughts.com
-    <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
+    `https://www.qgistutorials.com
+    <https://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
 
 This item also includes a hyperlink with an url and an external presentation.
 The url should of course be left intact, you are allowed to change the external
-text ``http://qgis.spatialthoughts.com`` which is visible by the reader. Never
+text ``https://www.qgistutorials.com`` which is visible by the reader. Never
 remove the underscore at the end of the hyperlink which forms an essential
 part of it!!
 
@@ -341,3 +329,29 @@ For any question, please contact the `QGIS Community Team
 <qgis-community-team@lists.osgeo.org>`_ or the
 `QGIS Translation Team <qgis-tr@lists.osgeo.org>`_.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |heatmap| image:: /static/common/heatmap.png
+   :width: 1.5em
+.. |linguist_done_next| image:: img/linguist_done_next.png
+   :width: 2em
+.. |linguist_next| image:: img/linguist_next.png
+   :width: 2em
+.. |linguist_next_todo| image:: img/linguist_next_todo.png
+   :width: 2em
+.. |linguist_previous| image:: img/linguist_previous.png
+   :width: 2em
+.. |linguist_previous_todo| image:: img/linguist_previous_todo.png
+   :width: 2em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

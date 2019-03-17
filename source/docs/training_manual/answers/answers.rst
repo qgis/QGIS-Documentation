@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Answer Sheet
 ===============================================================================
 
@@ -9,8 +13,12 @@ Answer Sheet
 |basic| *Preparation*
 ...............................................................................
 
-You should see a lot of lines, symbolizing roads. All these lines are in the
-vector layer that you just loaded to create a basic map.
+In the main area of the dialog you should see many shapes with different
+colors. Each shape belongs to a layer you can identify by its color in the
+left panel (your colors may be different from the ones below):
+
+.. image:: img/basic_map.png
+   :align: center
 
 :ref:`Back to text <backlink-interface-preparation-1>`
 
@@ -46,31 +54,45 @@ remember the names and functions of the screen elements.
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
-.. _vector-load-shapefiles-1:
+.. _vector-explore-attribute-data:
 
-|basic| *Shapefiles*
+|basic| *Attribute data*
 ...............................................................................
 
-There should be five layers on your map:
+* There should be 9 fields in the :guilabel:`rivers` layer:
 
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties --> Source
+   Fields` tab, where you will find a numbered list of the table's fields.
+
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add comment on other fields from these two records, if you like.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
+
+.. _vector-load-more-data:
+
+|basic| *Data loading*
+...............................................................................
+
+Your map should have seven layers:
+
+* :guilabel:`protected_areas`
 * :guilabel:`places`
-* :guilabel:`water`
-* :guilabel:`buildings`
-* :guilabel:`rivers` and
-* :guilabel:`roads`.
+* :guilabel:`rivers`
+* :guilabel:`roads`
+* :guilabel:`landuse`
+* :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+* :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
 
-:ref:`Back to text <backlink-vector-load-shapefiles-1>`
-
-
-.. _vector-load-from-database-1:
-
-|basic| *Databases*
-...............................................................................
-
-All the vector layers should be loaded into the map. It probably won't look
-nice yet though (we'll fix the ugly colors later).
-
-:ref:`Back to text <backlink-vector-load-from-database-1>`
+:ref:`Back to text <backlink-vector-load-more-data>`
 
 
 |RF| *Symbology*
@@ -82,15 +104,16 @@ nice yet though (we'll fix the ugly colors later).
 ...............................................................................
 
 * Verify that the colors are changing as you expect them to change.
-* It is enough to change only the :guilabel:`water` layer for now. An example
-  is below, but may look different depending on the color you chose.
+* It is enough to select the :guilabel:`water` layer in the legend and then click
+  on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
+  to one that fits the water layer.
 
-.. image:: /static/training_manual/symbology/answer_water_blue.png
+.. image:: img/answer_water_blue.png
    :align: center
 
 .. note::  If you want to work on only one layer at a time and don't want the
-   other layers to distract you, you can hide a layer by clicking in the check
-   box next to its name in the Layers list. If the box is blank, then the layer
+   other layers to distract you, you can hide a layer by clicking in the checkbox
+   next to its name in the layers list. If the box is blank, then the layer
    is hidden.
 
 :ref:`Back to text <backlink-symbology-colors-1>`
@@ -103,7 +126,7 @@ nice yet though (we'll fix the ugly colors later).
 
 Your map should now look like this:
 
-.. image:: /static/training_manual/symbology/answer_symbology1.png
+.. image:: img/answer_symbology1.png
    :align: center
 
 If you are a Beginner-level user, you may stop here.
@@ -112,8 +135,11 @@ If you are a Beginner-level user, you may stop here.
   layers.
 * Try using natural colors for the objects. For example, a road should not be
   red or blue, but can be gray or black.
-* Also feel free to experiment with different :guilabel:`Fill Style` and
-  :guilabel:`Border Style` settings for the polygons.
+* Also feel free to experiment with different :guilabel:`Fill style` and
+  :guilabel:`Stroke style` settings for the polygons.
+
+.. image:: img/answer_symbology2.png
+   :align: center
 
 :ref:`Back to text <backlink-symbology-structure-1>`
 
@@ -123,12 +149,12 @@ If you are a Beginner-level user, you may stop here.
 |moderate| *Symbol Layers*
 ...............................................................................
 
-* Customize your :guilabel:`buildings` layer as you like, but remember that it
-  has to be easy to tell different layers apart on the map.
+Customize your :guilabel:`buildings` layer as you like, but remember that it
+has to be easy to tell different layers apart on the map.
 
 Here's an example:
 
-.. image:: /static/training_manual/symbology/answer_buildings_symbology.png
+.. image:: img/answer_buildings_symbology.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-layers-1>`
@@ -139,24 +165,28 @@ Here's an example:
 |moderate| *Symbol Levels*
 ...............................................................................
 
-To make the required symbol, you need two symbol layers:
+To make the required symbol, you need three symbol layers:
 
-.. image:: /static/training_manual/symbology/answer_road_symbology.png
+.. image:: img/answer_road_symbology.png
    :align: center
 
-The lowest symbol layer is a broad, solid yellow line. On top of it there is a
-slightly thinner solid gray line.
+The lowest symbol layer is a broad, solid gray line. On top of it there is a
+slightly thinner solid yellow line and finally another thinner solid black line.
 
-* If your symbol layers resemble the above but you're not getting the result
-  you want, check that your symbol levels look something like this:
+If your symbol layers resemble the above but you're not getting the result
+you want:
 
-  .. image:: /static/training_manual/symbology/answer_road_symbol_levels.png
-     :align: center
+#. Check that your symbol levels look something like this:
 
-* Now your map should look like this:
+   .. image:: img/answer_road_symbol_levels.png
+      :align: center
 
-  .. image:: /static/training_manual/symbology/target_road_symbology.png
-     :align: center
+#. Now your map should look like this:
+
+   .. image:: img/target_road_symbology.png
+      :align: center
+
+|
 
 :ref:`Back to text <backlink-symbology-levels-1>`
 
@@ -166,16 +196,46 @@ slightly thinner solid gray line.
 |hard| *Symbol Levels*
 ...............................................................................
 
-* Adjust your symbol levels to these values:
+#. Adjust your symbol levels to these values:
 
-.. image:: /static/training_manual/symbology/answer_road_symbol_layers.png
-   :align: center
+   .. image:: img/answer_road_symbol_layers.png
+      :align: center
 
-* Experiment with different values to get different results.
-* Open your original map again before continuing with the next exercise.
+#. Experiment with different values to get different results.
+#. Open your original map again before continuing with the next exercise.
 
 :ref:`Back to text <backlink-symbology-levels-2>`
 
+
+.. _symbology-marker-line:
+
+|moderate| *Outline Markers* 
+-------------------------------------------------------------------------------
+
+Here are examples of the symbol structure:
+
+.. image:: img/answer_marker_line.png
+   :align: center
+
+.. image:: img/answer_marker_line2.png
+   :align: center
+
+:ref:`Back to text <backlink-symbology-marker-line>`
+
+
+.. _symbology-geom_generator:
+
+|hard| *Geometry generator symbology*
+...............................................................................
+
+* Click on the |signPlus| button to add another Symbol level.
+* Move the new symbol at the bottom of the list clicking the |arrowDown| button.
+* Choose a good color to fill the water polygons.
+* Click on :guilabel:`Marker` of the Geometry generator symbology and change the
+  circle with another shape as your wish.
+* Try experimenting other options to get more useful results.
+
+:ref:`Back to text <backlink-symbology-geom_generator>`
 
 |RF| *Attribute Data*
 -------------------------------------------------------------------------------
@@ -185,7 +245,7 @@ slightly thinner solid gray line.
 |basic| *Attribute Data*
 ...............................................................................
 
-The *NAME* field is the most useful to show as labels. This is because all its
+The ``name`` field is the most useful to show as labels. This is because all its
 values are unique for every object and are very unlikely to contain *NULL*
 values. If your data contains some *NULL* values, do not worry as long as most
 of your places have names.
@@ -205,7 +265,7 @@ Your map should now show the marker points and the labels should be offset by
 :kbd:`2.0 mm`: The style of the markers and labels should allow both to be
 clearly visible on the map:
 
-.. image:: /static/training_manual/labels/customised_labels_one.png
+.. image:: img/customised_labels_one.png
    :align: center
 
 :ref:`Back to text <backlink-label-tool-1>`
@@ -218,7 +278,7 @@ clearly visible on the map:
 
 One possible solution has this final product:
 
-.. image:: /static/training_manual/labels/possible_outcome_map.png
+.. image:: img/possible_outcome_map.png
    :align: center
 
 To arrive at this result:
@@ -229,7 +289,7 @@ To arrive at this result:
 * In addition, this example uses the :guilabel:`Wrap label on character`
   option:
 
-  .. image:: /static/training_manual/labels/wrap_character_settings.png
+  .. image:: img/wrap_character_settings.png
      :align: center
 
 * Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
@@ -253,12 +313,12 @@ To arrive at this result:
   layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
   font size data override dropdown:
 
-  .. image:: /static/training_manual/labels/font_size_override.png
+  .. image:: img/font_size_override.png
      :align: center
 
   Your results, if using the above values, should be this:
 
-  .. image:: /static/training_manual/labels/font_override_results.png
+  .. image:: img/font_override_results.png
      :align: center
 
 :ref:`Back to text <backlink-label-data-defined-1>`
@@ -275,14 +335,14 @@ To arrive at this result:
 * Use the same method as in the first exercise of the lesson to get rid of the
   borders:
 
-  .. image:: /static/training_manual/classification/gradient_map_no_pen.png
+  .. image:: img/gradient_map_no_pen.png
      :align: center
 
 The settings you used might not be the same, but with the values
 :guilabel:`Classes` = :kbd:`6` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
-.. image:: /static/training_manual/classification/gradient_map_new_mode.png
+.. image:: img/gradient_map_new_mode.png
    :align: center
 
 :ref:`Back to text <backlink-classification-refine-1>`
@@ -299,7 +359,7 @@ The settings you used might not be the same, but with the values
 The symbology doesn't matter, but the results should look more or less like
 this:
 
-.. image:: /static/training_manual/create_vector_data/routes_layer_result.png
+.. image:: img/routes_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-create-vector-digitize-1>`
@@ -313,7 +373,7 @@ this:
 The exact shape doesn't matter, but you should be getting a hole in the middle
 of your feature, like this one:
 
-.. image:: /static/training_manual/create_vector_data/ring_tool_result.png
+.. image:: img/ring_tool_result.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -328,12 +388,12 @@ of your feature, like this one:
 
 * First select the |largeLandUseArea|:
 
-.. image:: /static/training_manual/create_vector_data/park_selected.png
+.. image:: img/park_selected.png
    :align: center
 
 * Now add your new part:
 
-.. image:: /static/training_manual/create_vector_data/new_park_area.png
+.. image:: img/new_park_area.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -356,7 +416,7 @@ of your feature, like this one:
    original polygon's :guilabel:`OGC_FID` will not be :kbd:`1`. Just choose the
    feature which has an :guilabel:`OGC_FID`.
 
-  .. image:: /static/training_manual/create_vector_data/merge_feature_dialog.png
+  .. image:: img/merge_feature_dialog.png
      :align: center
 
 .. Note:: Using the :guilabel:`Merge Attributes of Selected Features` tool
@@ -380,14 +440,14 @@ that they are predefined.
   :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
   options:
 
-  .. image:: /static/training_manual/create_vector_data/value_map_settings.png
+  .. image:: img/value_map_settings.png
      :align: center
 
 * Click :guilabel:`Ok` three times.
 * If you use the :guilabel:`Identify` tool on a street now while edit mode is
   active, the dialog you get should look like this:
 
-  .. image:: /static/training_manual/create_vector_data/highway_as_value_map.png
+  .. image:: img/highway_as_value_map.png
      :align: center
 
 :ref:`Back to text <backlink-create-vector-forms-1>`
@@ -395,130 +455,94 @@ that they are predefined.
 
 |RF| *Vector Analysis*
 -------------------------------------------------------------------------------
+
 .. _vector-analysis-basic-1:
-
-|moderate| *Extract Your Layers from OSM Data*
-...............................................................................
-
-For the purpose of this exercise, the OSM layers which we are interested in are
-:kbd:`multipolygons` and :kbd:`lines`. The :kbd:`multipolygons` layer contains
-the data we need in order to produce the :kbd:`houses`, :kbd:`schools` and
-:kbd:`restaurants` layers. The :kbd:`lines` layer contains the roads dataset.
-
-The :guilabel:`Query Builder` is found in the layer properties:
-
-  .. image:: /static/training_manual/vector_analysis/query_builder.png
-     :align: center
-
-Using the :guilabel:`Query Builder` against the :kbd:`multipolygons` layer,
-create the following queries for the :kbd:`houses`, :kbd:`schools`,
-:kbd:`restaurants` and :kbd:`residential` layers:
-
-  .. image:: /static/training_manual/vector_analysis/houses_query.png
-     :align: center
-
-  .. image:: /static/training_manual/vector_analysis/schools_query.png
-     :align: center
-
-  .. image:: /static/training_manual/vector_analysis/restaurants_query.png
-     :align: center
-
-Once you have entered each query, click :guilabel:`OK`. You'll see that the map
-updates to show only the data you have selected. Since you need to use again
-the :kbd:`multipolygons` data from the OSM dataset, at this point, you can use one of
-the following methods:
-
-* Rename the filtered OSM layer and re-import the layer from :kbd:`osm_data.osm`, OR
-* Duplicate the filtered layer, rename the copy, clear the query and create your
-  new query in the :guilabel:`Query Builder`.
-
-.. note:: Although OSM's :kbd:`building` field has a :kbd:`house` value, the
-    coverage in your area - as in ours - may not be complete. In our test
-    region, it is therefore more accurate to *exclude* all buildings which are
-    defined as anything other than :kbd:`house`. You may decide to
-    simply include buildings which are defined as :kbd:`house` and all other
-    values that have not a clear meaning like :kbd:`yes`.
-
-To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
-layer:
-
-  .. image:: /static/training_manual/vector_analysis/roads_query.png
-     :align: center
-
-
-You should end up with a map which looks similar to the following:
-
-  .. image:: /static/training_manual/vector_analysis/osm_queries_result.png
-     :align: center
-
-:ref:`Back to text <backlink-vector-analysis-basic-1>`
-
-.. _vector-analysis-basic-2:
 
 |basic| *Distance from High Schools*
 ...............................................................................
 
 * Your buffer dialog should look like this:
 
-  .. image:: /static/training_manual/vector_analysis/schools_buffer_setup.png
+  .. image:: img/schools_buffer_setup.png
      :align: center
 
-  The :guilabel:`Buffer distance` is :kbd:`1000` meters (i.e., :kbd:`1`
-  kilometer).
+  The :guilabel:`Buffer distance` is :guilabel:`1` kilometer.
 
-* The :guilabel:`Segments to approximate` value is set to :kbd:`20`. This is
+* The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This is
   optional, but it's recommended, because it makes the output buffers look
   smoother. Compare this:
 
-  .. image:: /static/training_manual/vector_analysis/schools_buffer_5.png
+  .. image:: img/schools_buffer_5.png
      :align: center
 
   To this:
 
-  .. image:: /static/training_manual/vector_analysis/schools_buffer_20.png
+  .. image:: img/schools_buffer_6.png
      :align: center
 
 The first image shows the buffer with the :guilabel:`Segments to approximate`
-value set to :kbd:`5` and the second shows the value set to :kbd:`20`. In our
-example, the difference is subtle, but you can see that the buffer's edges are
-smoother with the higher value.
+value set to :guilabel:`5` and the second shows the value set to :guilabel:`20`.
+In our example, the difference is subtle, but you can see that the buffer's edges
+are smoother with the higher value.
 
-:ref:`Back to text <backlink-vector-analysis-basic-2>`
+:ref:`Back to text <backlink-vector-analysis-basic-1>`
 
-.. _vector-analysis-basic-3:
+.. _vector-analysis-basic-2:
 
 |basic| *Distance from Restaurants*
 ...............................................................................
 
-To create the new :kbd:`houses_restaurants_500m` layer, we go through a two step
+To create the new :guilabel:`houses_restaurants_500m` layer, we go through a two step
 process:
 
 * First, create a buffer of 500m around the restaurants and add the layer to
   the map:
 
-  .. image:: /static/training_manual/vector_analysis/restaurants_buffer.png
+  .. image:: img/restaurants_buffer.png
      :align: center
 
-  .. image:: /static/training_manual/vector_analysis/restaurants_buffer_result.png
+  .. image:: img/restaurants_buffer_result.png
      :align: center
 
-* Next, select buildings within that buffer area:
+* Next, extract buildings within that buffer area:
 
-  .. image:: /static/training_manual/vector_analysis/select_within_restaurants.png
-     :align: center
-
-* Now save that selection to our new :kbd:`houses_restaurants_500m` layer:
-
-  .. image:: /static/training_manual/vector_analysis/save_selection_restaurants.png
+  .. image:: img/select_within_restaurants.png
      :align: center
 
 Your map should now show only those buildings which are within 50m of a road,
 1km of a school and 500m of a restaurant:
 
-  .. image:: /static/training_manual/vector_analysis/restaurant_buffer_result.png
-     :align: center
+.. image:: img/restaurant_buffer_result.png
+   :align: center
 
-:ref:`Back to text <backlink-vector-analysis-basic-3>`
+:ref:`Back to text <backlink-vector-analysis-basic-2>`
+
+|RF| *Network Analysis*
+-------------------------------------------------------------------------------
+
+.. _network-analysis-1:
+
+|moderate| *Fastest path*
+-------------------------------------------------------------------------------
+
+Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
+fill the dialog as:
+
+.. image:: img/fastest_path_result.png
+   :align: center
+
+Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
+
+Click on :guilabel:`Run` and close the dialog.
+
+Open now the attribute table of the output layer. The :guilabel:`cost` field
+contains the travel time between the two points (as fraction of hours):
+
+.. image:: img/fastest_path_attribute.png
+   :align: center
+
+:ref:`Back to text <backlink-network_analysis_1>`
+
 
 |RF| *Raster Analysis*
 -------------------------------------------------------------------------------
@@ -528,14 +552,14 @@ Your map should now show only those buildings which are within 50m of a road,
 |basic| *Calculate Aspect*
 ...............................................................................
 
-* Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
+* Set your :guilabel:`Aspect` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/answer_dem_aspect.png
+  .. image:: img/answer_dem_aspect.png
      :align: center
 
 Your result:
 
-.. image:: /static/training_manual/rasters/answer_aspect_result.png
+.. image:: img/answer_aspect_result.png
    :align: center
 
 :ref:`Back to text <backlink-raster-analysis-1>`
@@ -548,22 +572,22 @@ Your result:
 
 * Set your :guilabel:`Raster calculator` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/answer_raster_calculator_slope.png
+  .. image:: img/answer_raster_calculator_slope.png
      :align: center
 
-* For the 5 degree version, replace the :kbd:`2` in the expression and file
-  name with :kbd:`5`.
+* For the 5 degree version, replace the ``2`` in the expression and file
+  name with ``5``.
 
 Your results:
 
 * 2 degrees:
 
-  .. image:: /static/training_manual/rasters/answer_2degree_result.png
+  .. image:: img/answer_2degree_result.png
      :align: center
 
 * 5 degrees:
 
-  .. image:: /static/training_manual/rasters/answer_5degree_result.png
+  .. image:: img/answer_5degree_result.png
      :align: center
 
 :ref:`Back to text <backlink-raster-analysis-2>`
@@ -578,18 +602,19 @@ Your results:
 ...............................................................................
 
 * Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers list`, select the :guilabel:`General` tab.
+  layer in the :guilabel:`Layers` panel, and selecting the :menuselection:`Properties
+  --> Source` tab.
 * Then build the query :kbd:`"suitable" = 1`.
 * Click :guilabel:`OK` to filter out all the polygons where this condition
   isn't met.
 
 When viewed over the original raster, the areas should overlap perfectly:
 
-.. image:: /static/training_manual/complete_analysis/polygonize_raster.png
+.. image:: img/polygonize_raster.png
    :align: center
 
 * You can save this layer by right-clicking on the :guilabel:`all_terrain`
-  layer in the :guilabel:`Layers list` and choosing :guilabel:`Save As...`,
+  layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`,
   then continue as per the instructions.
 
 :ref:`Back to text <backlink-complete-analysis-1>`
@@ -615,19 +640,19 @@ We can therefore sensibly eliminate those buildings from our dataset
 
 At the moment, your analysis should look something like this:
 
-.. image:: /static/training_manual/complete_analysis/new_solution_example.png
+.. image:: img/new_solution_example.png
    :align: center
 
 Consider a circular area, continuous for 100 meters in all directions.
 
-.. image:: /static/training_manual/complete_analysis/circle_100.png
+.. image:: img/circle_100.png
    :align: center
 
 If it is greater than 100 meters in radius, then subtracting 100 meters from
 its size (from all directions) will result in a part of it being left in the
 middle.
 
-.. image:: /static/training_manual/complete_analysis/circle_with_remainder.png
+.. image:: img/circle_with_remainder.png
    :align: center
 
 Therefore, you can run an *interior buffer* of 100 meters on your existing
@@ -641,7 +666,7 @@ To demonstrate:
   the Buffer(s) dialog.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/suitable_terrain_buffer.png
+  .. image:: img/suitable_terrain_buffer.png
      :align: center
 
 * Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
@@ -654,14 +679,14 @@ To demonstrate:
 
 Your results will look like something like this:
 
-.. image:: /static/training_manual/complete_analysis/suitable_buffer_results.png
+.. image:: img/suitable_buffer_results.png
    :align: center
 
 * Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
   Research Tools --> Select by location`).
 * Set up like this:
 
-  .. image:: /static/training_manual/complete_analysis/select_by_location.png
+  .. image:: img/select_by_location.png
      :align: center
 
 * Select features in :guilabel:`new_solution` that intersect features in
@@ -669,7 +694,7 @@ Your results will look like something like this:
 
 This is the result:
 
-.. image:: /static/training_manual/complete_analysis/buffer_select_result.png
+.. image:: img/buffer_select_result.png
    :align: center
 
 The yellow buildings are selected. Although some of the buildings fall partly
@@ -693,7 +718,7 @@ requirements.
 
 Your map should look like this (you may need to re-order the layers):
 
-.. image:: /static/training_manual/online_resources/geology_layer_result.png
+.. image:: img/geology_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-wms-1>`
@@ -707,16 +732,16 @@ Your map should look like this (you may need to re-order the layers):
 * Use the same approach as before to add the new server and the appropriate
   layer as hosted on that server:
 
-  .. image:: /static/training_manual/online_resources/add_ogc_server.png
+  .. image:: img/add_ogc_server.png
      :align: center
 
-  .. image:: /static/training_manual/online_resources/add_bluemarble_layer.png
+  .. image:: img/add_bluemarble_layer.png
      :align: center
 
 * If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
   low resolution:
 
-.. image:: /static/training_manual/online_resources/low_resolution_dataset.png
+.. image:: img/low_resolution_dataset.png
    :align: center
 
 Therefore, it's better not to use this data for the current map. The Blue
@@ -733,13 +758,56 @@ Marble data is more suitable at global or national scales.
 You may notice that many WMS servers are not always available. Sometimes this
 is temporary, sometimes it is permanent. An example of a WMS server that worked
 at the time of writing is the :guilabel:`World Mineral Deposits` WMS at
-:kbd:`http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows`. It does not
+http://apps1.gdr.nrcan.gc.ca/cgi-bin/worldmin_en-ca_ows. It does not
 require fees or have access constraints, and it is global. Therefore, it does
 satisfy the requirements. Keep in mind, however, that this is merely an
 example. There are many other WMS servers to choose from.
 
 :ref:`Back to text <backlink-wms-3>`
 
+
+.. _grass_add_to_mapset:
+
+|RF| *GRASS Integration*
+-------------------------------------------------------------------------------
+
+|basic| *Add Layers to Mapset*
+...............................................................................
+
+You can add layers (both vector and raster) into a GRASS Mapset by drag and drop
+them in the Browser (see :ref:`grass_browser`) or by using the ``v.in.gdal.qgis``
+for vector and ``r.in.gdal.qgis`` for raster layers.
+
+:ref:`Back to text <backlink-grass_add_to_mapset>`
+
+
+.. _grass_reclass:
+
+|moderate| *Reclassify raster layer*
+...............................................................................
+
+To discover the maximum value of the raster run the :kbd:`r.info` tool: in the
+console you will see that the maximum value is 1699.
+
+You are now ready to write the rules. Open a text editor and add the following
+rules::
+
+  0 thru 1000 = 1
+  1000 thru 1400 = 2
+  1400 thru 1699 = 3
+
+save the file as a ``my_rules.txt`` file and close the text editor.
+
+Run the :kbd:`r.reclass` tool, choose the :kbd:`g_dem` layer and load the file
+containing the rules you just have saved.
+
+Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change the
+colors and the final result should look like the following picture:
+
+.. image:: img/grass_reclass.png
+  :align: center
+
+:ref:`Back to text <backlink-grass_reclass>`
 
 |RF| *Database Concepts*
 -------------------------------------------------------------------------------
@@ -829,7 +897,7 @@ linking them to our `people` table via 'one to many' relationships::
 
 An ER Diagram to represent this would look like this:
 
-.. image:: /static/training_manual/database_concepts/er-people-normalised-example.png
+.. image:: img/er-people-normalised-example.png
    :align: center
 
 :ref:`Back to text <backlink-database-concepts-3>`
@@ -1118,3 +1186,26 @@ Result::
 As you can see, our constraint allows nulls to be added into the database.
 
 :ref:`Back to text <backlink-simple-feature-3>`
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |RF| replace:: Results For
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |largeLandUseArea| replace:: Bontebok National Park
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

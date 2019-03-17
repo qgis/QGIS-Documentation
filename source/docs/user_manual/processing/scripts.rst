@@ -180,7 +180,7 @@ Documenting your scripts
 
 As in the case of models, you can create additional documentation for your script,
 to explain what they do and how to use them. In the script editing dialog you will
-find a **[Edit script help]** button. Click on it and it will take you to the help
+find a :guilabel:`Edit Script Help` button. Click on it and it will take you to the help
 editing dialog. Check the chapter about the graphical modeler to find out more about
 this dialog and how to use it.
 
@@ -202,7 +202,7 @@ under the *Scripts/tools* entry in the toolbox.
 
 .. _figure_script_online:
 
-.. figure:: /static/user_manual/processing/script_online.png
+.. figure:: img/script_online.png
    :align: center
 
    Processing Get Script
@@ -249,3 +249,12 @@ In the :guilabel:`General` group of the processing config dialog you will find t
 entries named :guilabel:`Pre-execution script file` and :guilabel:`Post-execution
 script file` where the filename of the scripts to be run in each case can be
 entered.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

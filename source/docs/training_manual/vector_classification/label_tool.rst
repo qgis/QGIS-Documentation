@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| The Label Tool
 ===============================================================================
 
@@ -22,7 +26,7 @@ been activated.
 * Go to the menu item :menuselection:`View --> Toolbars`.
 * Ensure that the :guilabel:`Label` item has a check mark next to it. If it
   doesn't, click on the :guilabel:`Label` item, and it will be activated.
-* Click on the :guilabel:`places` layer in the :guilabel:`Layers list`, so that
+* Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel, so that
   it is highlighted.
 * Click on the following toolbar button: |labeling|
 
@@ -36,14 +40,14 @@ most suitable one for this purpose.
 
 * Select :guilabel:`name` from the list:
 
-.. image:: /static/training_manual/labels/select_label_with.png
+.. image:: img/select_label_with.png
    :align: center
 
 * Click :guilabel:`OK`.
 
 The map should now have labels like this:
 
-.. image:: /static/training_manual/labels/first_place_names.png
+.. image:: img/first_place_names.png
    :align: center
 
 |basic| |FA| Changing Label Options
@@ -58,7 +62,7 @@ are too far away from their point markers.
   update the text formatting options to match those shown here:
 
 
-.. image:: /static/training_manual/labels/label_formatting_options.png
+.. image:: img/label_formatting_options.png
    :align: center
 
 That's the font problem solved! Now let's look at the problem of the labels
@@ -71,7 +75,7 @@ overlapping the points, but before we do that, let's take a look at the
   to match those shown here:
 
 
-.. image:: /static/training_manual/labels/buffer_options.png
+.. image:: img/buffer_options.png
    :align: center
 
 * Click :guilabel:`Apply`.
@@ -80,7 +84,7 @@ overlapping the points, but before we do that, let's take a look at the
 You'll see that this adds a colored buffer or border to the place labels, making
 them easier to pick out on the map:
 
-.. image:: /static/training_manual/labels/buffer_results.png
+.. image:: img/buffer_results.png
    :align: center
 
 Now we can address the positioning of the labels in relation to their point
@@ -91,7 +95,7 @@ markers.
   :guilabel:`Around point` is selected:
 
 
-.. image:: /static/training_manual/labels/offset_placement_settings.png
+.. image:: img/offset_placement_settings.png
    :align: center
 
 * Click :guilabel:`Apply`.
@@ -129,18 +133,18 @@ This will reveal the :guilabel:`Quadrant` options which you can use to set the
 position of the label in relation to the point marker. In this case, we want the
 label to be centered on the point, so choose the center quadrant:
 
-.. image:: /static/training_manual/labels/quadrant_offset_options.png
+.. image:: img/quadrant_offset_options.png
    :align: center
 
 * Hide the point symbols by editing the layer style as usual, and setting the
   size of the :guilabel:`Ellipse marker` width and height to :kbd:`0`:
 
-.. image:: /static/training_manual/labels/hide_point_marker.png
+.. image:: img/hide_point_marker.png
    :align: center
 
 * Click :guilabel:`OK` and you'll see this result:
 
-.. image:: /static/training_manual/labels/hide_point_marker_results.png
+.. image:: img/hide_point_marker_results.png
    :align: center
 
 If you were to zoom out on the map, you would see that some of the labels
@@ -175,7 +179,7 @@ Now that you know how labeling works, there's an additional problem. Points and
 polygons are easy to label, but what about lines? If you label them the same
 way as the points, your results would look like this:
 
-.. image:: /static/training_manual/labels/bad_street_labels.png
+.. image:: img/bad_street_labels.png
    :align: center
 
 We will now reformat the :guilabel:`roads` layer labels so that they are easy to
@@ -188,7 +192,7 @@ understand.
 * In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the
   following settings:
 
-.. image:: /static/training_manual/labels/street_label_settings.png
+.. image:: img/street_label_settings.png
    :align: center
 
 You'll probably find that the text styling has used default values and the
@@ -197,7 +201,7 @@ dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`.
 
 The map will look somewhat like this, depending on scale:
 
-.. image:: /static/training_manual/labels/street_label_formatted.png
+.. image:: img/street_label_formatted.png
    :align: center
 
 You'll see that some of the road names appear more than once and that's not
@@ -207,7 +211,7 @@ always necessary. To prevent this from happening:
   :guilabel:`Rendering` option and select the
   :guilabel:`Merge connected lines to avoid duplicate labels`:
 
-.. image:: /static/training_manual/labels/merge_lines_option.png
+.. image:: img/merge_lines_option.png
    :align: center
 
 * Click :guilabel:`OK`
@@ -228,7 +232,7 @@ try the :guilabel:`curved` option instead.
 
 Here's the result:
 
-.. image:: /static/training_manual/labels/final_street_labels.png
+.. image:: img/final_street_labels.png
    :align: center
 
 As you can see, this hides a lot of the labels that were previously visible,
@@ -241,7 +245,7 @@ on what you think seems more useful or what looks better.
 
 * Deactivate labeling for the :guilabel:`Streets` layer.
 * Reactivate labeling for the :guilabel:`Places` layer.
-* Open the attribute table for :guilabel:`Places` via the |attributes| button.
+* Open the attribute table for :guilabel:`Places` via the |openTable| button.
 
 It has one fields which is of interest to us now: :kbd:`place` which defines the
 type of urban area for each object. We can use this data to influence the label
@@ -252,18 +256,18 @@ styles.
 * In the :guilabel:`Italic` dropdown, select :kbd:`Edit...` to open the
   :guilabel:`Expression string builder`:
 
-.. image:: /static/training_manual/labels/expression_string_builder.png
+.. image:: img/expression_string_builder.png
    :align: center
 
 In the text input, type: :kbd:`"place"  =  'town'` and click :guilabel:`Ok`
 twice:
 
-.. image:: /static/training_manual/labels/expression_builder_settings.png
+.. image:: img/expression_builder_settings.png
    :align: center
 
 Notice its effects:
 
-.. image:: /static/training_manual/labels/italic_label_result.png
+.. image:: img/italic_label_result.png
    :align: center
 
 
@@ -282,12 +286,12 @@ Notice its effects:
 
 * Add a new column:
 
-.. image:: /static/training_manual/labels/add_column_button.png
+.. image:: img/add_column_button.png
    :align: center
 
 * Configure it like this:
 
-.. image:: /static/training_manual/labels/font_size_column.png
+.. image:: img/font_size_column.png
    :align: center
 
 * Use this to set custom font sizes for each different type of place (i.e.,
@@ -328,3 +332,39 @@ make your map a lot more informative and stylish!
 Now that you know how attributes can make a visual difference for your map, how
 about using them to change the symbology of objects themselves? That's the
 topic for the next lesson!
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
+   :width: 1.5em
+.. |hard| image:: /static/global/hard.png
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |pinLabels| image:: /static/common/mActionPinLabels.png
+   :width: 1.5em
+.. |rotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
+.. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
+.. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

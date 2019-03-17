@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| PostGIS Setup
 ===============================================================================
 
@@ -27,8 +31,8 @@ Really, it's that easy...
 
 .. note:: Depending on which version of Ubuntu you are using, and which
    repositories you have configured, these commands will install PostGIS 1.5,
-   or 2.x. You can find the version installed by issuing a :kbd:`select
-   PostGIS_full_version();` query with psql or another tool.
+   or 2.x. You can find the version installed by issuing a ``select
+   PostGIS_full_version();`` query with psql or another tool.
 
 To install the absolute latest version of PostGIS, you can use the following
 commands.
@@ -47,18 +51,18 @@ Installing under Windows
 Installing on Windows is a little more complicated, but still not hard. Note
 that you need to be online to install the postgis stack.
 
-First Visit `the download page <http://www.postgresql.org/download/>`_.
+First Visit `the download page <https://www.postgresql.org/download/>`_.
 
 Then follow `this guide
-<http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.
+<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.
 
 More information about installing on Windows can be found on the `PostGIS
-website <http://postgis.net/windows_downloads>`_.
+website <https://postgis.net/windows_downloads>`_.
 
 Installing on Other Platforms
 -------------------------------------------------------------------------------
 
-The `PostGIS website download <http://postgis.net/install/>`_ has information about
+The `PostGIS website download <https://postgis.net/install/>`_ has information about
 installing on other platforms including macOS and on other linux distributions
 
 Configuring Databases to use PostGIS
@@ -76,7 +80,7 @@ previous exercise.
 .. note:: If you are using PostGIS 1.5 and a version of PostgreSQL lower than
    9.1, you will need to follow a different set of steps in order to install
    the postgis extensions for your database. Please consult the
-   `PostGIS Documentation <http://postgis.net/docs/postgis_installation.html#create_new_db>`_
+   `PostGIS Documentation <https://postgis.net/docs/postgis_installation.html#create_new_db>`_
    for instructions on how to do this. There are also some instructions in the
    `previous version <http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-plpgsql>`_
    of this manual.
@@ -100,7 +104,7 @@ already connected to the ``address`` database, do so now. Then run:
   \df *point*
 
 This is the command we're looking for: :kbd:`st_pointfromtext`.  To page through
-the list, use the down arrow, then press :kbd:`q` to quit back to the psql shell.
+the list, use the down arrow, then press :kbd:`Q` to quit back to the psql shell.
 
 Try running this command:
 
@@ -236,3 +240,15 @@ you'll be able to make use of PostGIS' extensive spatial functions.
 -------------------------------------------------------------------------------
 
 Next you'll learn how spatial features are represented in a database.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

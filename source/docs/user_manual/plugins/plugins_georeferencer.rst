@@ -14,8 +14,8 @@ Georeferencer Plugin
    .. contents::
       :local:
 
-The Georeferencer Plugin is a tool for generating world files for rasters. It
-allows you to reference rasters to geographic or projected coordinate systems by
+The |georefRun| Georeferencer Plugin is a tool for generating world files for rasters.
+It allows you to reference rasters to geographic or projected coordinate systems by
 creating a new GeoTiff or by adding a world file to the existing image. The basic
 approach to georeferencing a raster is to locate points on the raster for which
 you can accurately determine coordinates.
@@ -30,11 +30,11 @@ you can accurately determine coordinates.
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | Icon                           | Purpose                      | Icon                          | Purpose                    |
 +================================+==============================+===============================+============================+
-| |addRasterLayer|               | Open raster                  | |startGeoref|                 | Start georeferencing       |
+| |addRasterLayer|               | Open raster                  | |start|                       | Start georeferencing       |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |gdalScript|                   | Generate GDAL Script         | |loadGCPpoints|               | Load GCP Points            |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
-| |saveGCPpointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
+| |saveGCPPointsAs|              | Save GCP Points As           | |transformSettings|           | Transformation settings    |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
 | |addGCPPoint|                  | Add Point                    | |deleteGCPPoint|              | Delete Point               |
 +--------------------------------+------------------------------+-------------------------------+----------------------------+
@@ -75,18 +75,18 @@ compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
 The first step is to start QGIS, load the Georeferencer Plugin (see
-:ref:`managing_plugins`) and click on :menuselection:`Raster --> Georeferencer`
-, which appears in the QGIS menu bar. The Georeferencer Plugin dialog
-appears as shown in figure_georeferencer_dialog_.
+:ref:`managing_plugins`) and click on :menuselection:`Raster -->` |georefRun|
+:menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
+Plugin dialog appears as shown in figure_georeferencer_dialog_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can
 later be visualized together with the data from the GRASS :file:`spearfish60`
 location. You can download the topo sheet here:
-http://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz.
+https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz.
 
 .. _figure_georeferencer_dialog:
 
-.. figure:: /static/user_manual/plugins/georefplugin.png
+.. figure:: img/georefplugin.png
    :align: center
 
    Georeferencer Plugin Dialog
@@ -120,7 +120,7 @@ Entering ground control points (GCPs)
 
 .. _figure_georeferencer_add_points:
 
-.. figure:: /static/user_manual/plugins/choose_points.png
+.. figure:: img/choose_points.png
    :align: center
 
    Add points to the raster image
@@ -144,7 +144,7 @@ transformation settings for the georeferencing process.
 
 .. _figure_georeferencer_transform:
 
-.. figure:: /static/user_manual/plugins/transformation_settings.png
+.. figure:: img/transformation_settings.png
    :align: center
 
    Defining the georeferencer transformation settings
@@ -246,5 +246,58 @@ Running the transformation
 ..........................
 
 After all GCPs have been collected and all transformation settings are defined,
-just press the |startGeoref| :sup:`Start georeferencing` button to create
+just press the |start| :sup:`Start georeferencing` button to create
 the new georeferenced raster.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |deleteGCPPoint| image:: /static/common/mActionDeleteGCPPoint.png
+   :width: 1.5em
+.. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
+   :width: 1.5em
+.. |gdalScript| image:: /static/common/mActionGDALScript.png
+   :width: 1.5em
+.. |georefRun| image:: /static/common/mGeorefRun.png
+   :width: 1.5em
+.. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
+   :width: 2.5em
+.. |linkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
+   :width: 2.5em
+.. |loadGCPpoints| image:: /static/common/mActionLoadGCPpoints.png
+   :width: 1.5em
+.. |localHistogramStretch| image:: /static/common/mActionLocalHistogramStretch.png
+   :width: 1.5em
+.. |moveGCPPoint| image:: /static/common/mActionMoveGCPPoint.png
+   :width: 1.5em
+.. |pan| image:: /static/common/mActionPan.png
+   :width: 1.5em
+.. |pencil| image:: /static/common/pencil.png
+   :width: 1.5em
+.. |saveGCPPointsAs| image:: /static/common/mActionSaveGCPpointsAs.png
+   :width: 1.5em
+.. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |transformSettings| image:: /static/common/mActionTransformSettings.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomLast| image:: /static/common/mActionZoomLast.png
+   :width: 1.5em
+.. |zoomNext| image:: /static/common/mActionZoomNext.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
+   :width: 1.5em

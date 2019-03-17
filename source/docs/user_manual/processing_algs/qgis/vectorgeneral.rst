@@ -12,7 +12,7 @@ Vector general
       :depth: 1
 
 
-.. _qgis_assign_projection:
+.. _qgisassignprojection:
 
 Assign projection
 -----------------
@@ -30,10 +30,10 @@ Attributes are not modified by this algorithm.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer with wrong or missing CRS
+  Vector layer with wrong or missing CRS.
 
-``Assigned CRS`` [projection]
-  Select the new CRS to assign to the vector layer
+``Assigned CRS`` [crs]
+  Select the new CRS to assign to the vector layer.
 
   Default: *EPSG:4326 - WGS84*
 
@@ -44,10 +44,10 @@ Outputs
 
 See also
 ........
-:ref:`qgis_find_projection`, :ref:`qgis_reproject_layer`
+:ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
-.. _qgis_build_virtual_vector:
+.. _qgisbuildvirtualvector:
 
 Build virtual vector
 --------------------
@@ -59,8 +59,8 @@ layers but accept only one ``vrt`` in which the layers are specified.
 
 Parameters
 ..........
-``Input datasources`` [multipleinput: vector]
-  Select the vector layers you want to use to build the virtual vector
+``Input datasources`` [vector: any] [list]
+  Select the vector layers you want to use to build the virtual vector.
 
 ``Create "unioned" VRT`` [boolean]
   Check if you want to unite all the vectors in a single ``vrt`` file.
@@ -69,11 +69,11 @@ Parameters
 
 Outputs
 .......
-``Virtual vector``
-  The final virtual vector made by all the source vector chosen
+``Virtual vector`` [vector: any]
+  The final virtual vector made by all the source vector chosen.
 
 
-.. _qgis_create_attribute_index:
+.. _qgiscreateattributeindex:
 
 Create attribute index
 ----------------------
@@ -87,13 +87,13 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 ``Attribute to index`` [tablefield: any]
-  Field of the vector layer
+  Field of the vector layer.
 
 
-.. _qgis_create_spatial_index:
+.. _qgiscreatespatialindex:
 
 Create spatial index
 --------------------
@@ -103,33 +103,43 @@ data provider.
 
 No new output layers are created.
 
-Parameters
-..........
-``Input layer`` [vector: any]
-  Vector layer in input
-
-
-.. _qgis_define_current_projection:
-
-Define current projection
--------------------------
-Takes a vector layer and changes the associated CRS. It is very useful when a layer
-is missing the ``proj`` file and you know the correct projection.
-
-Final results are not visible directly on QGIS but the ``prj`` file is written in
-the same directory of the input layer.
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer with missing projection information
-
-``Output CRS`` [projection]
-  Output CRS associated with the source vector layer. The CRS information are
-  written in the ``proj`` file.
+  Vector layer in input.
 
 
-.. _qgis_delete_duplicate_geometries:
+.. _qgisdefinecurrentprojection:
+
+Define layer projection
+-----------------------
+Sets an existing layer's projection to the provided CRS. It is very useful when
+a layer is missing the ``proj`` file and you know the correct projection.
+
+Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the current
+layer and will not output a new layer.
+
+.. note:: For Shapefile datasets, the ``.prj`` and ``.qpj`` files will
+   be overwritten - or created if missing - to match the provided CRS.
+
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Vector layer with missing projection information.
+
+``CRS`` [crs]
+  CRS to associate to the input vector layer.
+
+See also
+........
+:ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+
+
+.. _qgisdeleteduplicategeometries:
 
 Delete duplicate geometries
 ---------------------------
@@ -141,16 +151,16 @@ but different attributes, only one of them will be added to the result layer.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  The layer with duplicate geometries you want to clean
+  The layer with duplicate geometries you want to clean.
 
 
 Outputs
 .......
-``Cleaned`` [vector]
-  The final layer without any duplicated geometries
+``Cleaned`` [vector: any]
+  The final layer without any duplicated geometries.
 
 
-.. _qgis_drop_geometries:
+.. _qgisdropgeometries:
 
 Drop geometries
 ---------------
@@ -159,10 +169,12 @@ the attribute table of the source layer.
 
 If the file is saved in a local folder, you can choose between many file formats.
 
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 Outputs
 .......
@@ -171,7 +183,7 @@ Outputs
   Geometryless table as a copy of the original attribute table.
 
 
-.. _qgis_execute_sql:
+.. _qgisexecutesql:
 
 Execute SQL
 -----------
@@ -181,37 +193,75 @@ The result of the query will be added as new layer.
 
 Parameters
 ..........
-``Additional input datasource`` [selection: vector]
-  List of layers to query. In the   SQL editor you can refer this layers with
-  their **real** name or also with   **input1**, **input2**, **inputN** depending
+``Additional input datasources`` [vector: any] [list]
+  List of layers to query. In the SQL editor you can refer these layers with
+  their **real** name or also with **input1**, **input2**, **inputN** depending
   on how many layers have been chosen.
 
-``SQL query`` [text]
-  Type here the string of your SQL query, e.g. ``SELECT * FROM input1``
+``SQL query`` [string]
+  Type here the string of your SQL query, e.g. ``SELECT * FROM input1``.
 
-``Unique identifier field`` (optional)
-  Specify the column with unique ID
+``Unique identifier field`` [string]
+  Optional
 
-``Geometry field`` (optional)
-  Specify the geometry field
+  Specify the column with unique ID.
 
-``Geometry type`` (optional)
+``Geometry field`` [string]
+  Optional
+
+  Specify the geometry field.
+
+``Geometry type`` [enumeration]
+  Optional
+
   Choose the final geometry of the result. By default the algorithm will autodetect
-  it
+  it. Available options are:
 
-  Default: *Autodetect*
+  * 0 --- Autodetect
+  * 1 --- No geometry
+  * 2 --- Point
+  * 3 --- LineString
+  * 4 --- Polygon
+  * 5 --- MultiPoint
+  * 6 --- MultiLineString
+  * 7 --- MultiPolygon
 
-``CRS`` (optional)
-  The CRS to or assign to the output layer
+  Default: *0*
 
+``CRS`` [crs]
+  Optional
+
+  The CRS to assign to the output layer.
 
 Outputs
 .......
-``SQL Output`` [vector]
-  Vector layer created by the query
+``SQL Output`` [vector: any]
+  Vector layer created by the query.
 
 
-.. _qgis_find_projection:
+.. _qgissaveselectedfeatures:
+
+Extract selected features
+-------------------------
+Saves the selected features as a new layer.
+
+.. note:: If the selected layer has no selected features, the newly created
+   layer will be empty.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Layer to save the selection from.
+
+Outputs
+.......
+
+``Selection`` [vector: any]
+  Vector layer with only the selected features, or no feature if none was selected.
+
+
+.. _qgisfindprojection:
 
 Find projection
 ---------------
@@ -229,26 +279,84 @@ layer was in this projection.
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Layer with unknown projection
+  Layer with unknown projection.
 
 ``Target area for layer`` [extent]
-  This is the area in which the layer is expected to be
+  This is the area in which the layer is expected to be.
 
-``Target area CRS`` [projection]
-  Choose the target CRS of the target area selected
+``Target area CRS`` [crs]
+  Choose the target CRS of the target area selected.
 
 Outputs
 .......
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
-  criteria
+  criteria.
 
 See also
 ........
-:ref:`qgis_assign_projection`, :ref:`qgis_reproject_layer`
+:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisreprojectlayer`
 
 
-.. _qgis_join_attributes_by_location:
+.. _qgisjoinattributestable:
+
+Join attributes by field value
+------------------------------
+Takes an input vector layer and creates a new vector layer that is an extended
+version of the input one, with additional attributes in its attribute table.
+
+The additional attributes and their values are taken from a second vector layer.
+An attribute is selected in each of them to define the join criteria.
+
+Parameters
+..........
+``Input layer`` [vector: any]
+  Source input vector layer. The final attribute table will be added to **this**
+  vector layer.
+
+``Table field`` [tablefield: any]
+  Field of the source layer with the unique identifier.
+
+``Input layer 2`` [vector: any]
+  Layer with the attribute table to join.
+
+``Table field 2`` [tablefield: any]
+  Table of the joining layer with the common unique field identifier.
+
+``Layer 2 fields to copy`` [tablefield: any]
+  Optional
+
+  Select the specific fields you want to add. By default all the fields are added.
+
+``Join type`` [enumeration]
+  Choose the type of the final joined layer between:
+
+  * 0 --- Create separate feature for each matching feature (one-to-many)
+  * 1 --- Take attributes of the first matching feature only (one-to-one)
+
+  Default: *1*
+
+``Discard records which could not be joined`` [boolean]
+  Check if you don't want to add the features that cannot be joined.
+
+``Joined field prefix`` [string]
+  Optional
+
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
+
+Outputs
+.......
+``Joined layer`` [vector: any]
+  Final vector layer with the attribute table as result of the join.
+
+``Unjoinable features from first layer`` [vector: any]
+  Optional
+
+  Vector layer of the non matching features resulting from the join.
+
+
+.. _qgisjoinattributesbylocation:
 
 Join attributes by location
 ---------------------------
@@ -259,45 +367,65 @@ The additional attributes and their values are taken from a second vector layer.
 A spatial criteria is applied to select the values from the second layer that are
 added to each feature from the first layer.
 
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Source vector layer
+  Source vector layer.
 
 ``Join layer`` [vector: any]
-  the attributes of this vector layer will be **added** to the source layer
-  attribute table
+  The attributes of this vector layer will be **added** to the source layer
+  attribute table.
 
-``Geometric predicate`` [checkbox]
+``Geometric predicate`` [enumeration] [list]
   Check the geometric criteria.
 
   Options:
 
-  * intersect
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crossed
+  * 0 --- intersects
+  * 1 --- contains
+  * 2 --- equals
+  * 3 --- touches
+  * 4 --- overlaps
+  * 5 --- within
+  * 6 --- crosses
 
-``Fields to add`` (optional) [tablefield]
-  Select the specific fields you want to add. By default all the fields are added
+  Default: *0*
 
-``Join type`` [combobox]
-  Choose the type of the final joined layer. If you want you can create one feature
-  for each located feature or you can take the attributes of only the first feature
-  located
+``Fields to add`` [tablefield: any]
+  Optional
+
+  Select the specific fields you want to add. By default all the fields are added.
+
+``Join type`` [enumeration]
+  Choose the type of the final joined layer between:
+
+  * 0 --- Create separate feature for each located feature (one-to-many)
+  * 1 --- Take attributes of the first located feature only (one-to-one)
+
+  Default: *0*
 
 ``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined
+  Check if you don't want to add the features that cannot be joined.
+
+``Joined field prefix`` [string]
+  Optional
+
+  Add a prefix to joined fields in order to easily identify them and avoid field
+  name collision.
 
 Outputs
 .......
-``Joined layer`` [vector]
+``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
-.. _qgis_join_attributes_by_location_summary:
+``Unjoinable features from first layer`` [vector: any]
+  Optional
+
+  Vector layer of only the input features that do not spatially match any join feature.
+
+.. _qgisjoinbylocationsummary:
 
 Join attributes by location (summary)
 -------------------------------------
@@ -314,93 +442,67 @@ features in the second layer (e.g. maximum value, mean value, etc).
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Source vector layer
+  Source vector layer.
 
 ``Join layer`` [vector: any]
-  the attributes of this vector layer will be **added** to the source layer
-  attribute table
+  The attributes of this vector layer will be **added** to the source layer
+  attribute table.
 
-``Geometric predicate`` [checkbox]
+``Geometric predicate`` [enumeration] [list]
   Check the geometric criteria.
 
   Options:
 
-  * intersect
-  * contains
-  * equals
-  * touches
-  * overlaps
-  * within
-  * crossed
+  * 0 --- intersects
+  * 1 --- contains
+  * 2 --- equals
+  * 3 --- touches
+  * 4 --- overlaps
+  * 5 --- within
+  * 6 --- crosses
 
-``Fields to summarize`` (optional) [tablefield]
-  Select the specific fields you want to add. By default all the fields are added
+  Default: *0*
 
-``Summaries to calculate`` (optional) [selection]
+``Fields to summarize`` [tablefield: any] [list]
+  Optional
+
+  Select the specific fields you want to add. By default all the fields are added.
+
+``Summaries to calculate`` [enumeration] [list]
+  Optional
+
   Choose which type of summary you want to add to each field and for each feature.
 
-  * count
-  * unique
-  * min
-  * max
-  * range
-  * sum
-  * mean
-  * median
-  * stddev
-  * minority
-  * majority
-  * q1
-  * q3
-  * iqr
-  * empty
-  * filled
-  * min_length
-  * max_length
-  * mean_length
+  * 0 --- count
+  * 1 --- unique
+  * 2 --- min
+  * 3 --- max
+  * 4 --- range
+  * 5 --- sum
+  * 6 --- mean
+  * 7 --- median
+  * 8 --- stddev
+  * 9 --- minority
+  * 10 --- majority
+  * 11 --- q1
+  * 12 --- q3
+  * 13 --- iqr
+  * 14 --- empty
+  * 15 --- filled
+  * 16 --- min_length
+  * 17 --- max_length
+  * 18 --- mean_length
 
 ``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined
+  Check if you don't want to add the features that cannot be joined.
 
 Outputs
 .......
-``Joined layer`` [vector]
+``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
 
-.. _qgis_join_attributes_table:
-
-Join attributes table
----------------------
-Takes an input vector layer and creates a new vector layer that is an extended
-version of the input one, with additional attributes in its attribute table.
-
-The additional attributes and their values are taken from a second vector layer.
-An attribute is selected in each of them to define the join criteria (one-to-one
-relation).
-
-Parameters
-..........
-``Input layer`` [vector: any]
-  Source input vector layer. The final attribute table will be added to **this**
-  vector layer
-
-``Input layer 2`` [vector: any]
-  Layer with the attribute table to join
-
-``Table field`` [tablefield]
-  Field of the source layer with the unique identifier
-
-``Table field 2`` [tablefield]
-  Table of the joining layer with the common unique field identifier
-
-Outputs
-.......
-``Joined layer`` [vector]
-  Final vector layer with the attribute table as result of the joining
-
-
-.. _qgis_merge_vector_layers:
+.. _qgismergevectorlayers:
 
 Merge vector layers
 -------------------
@@ -418,29 +520,36 @@ Optionally, the destination coordinate reference system (CRS) for the merged lay
 can be set. If it is not set, the CRS will be taken from the first input layer.
 All layers will be reprojected to match this CRS.
 
-.. figure:: /static/user_manual/processing_algs/qgis/merge_vector_layers.png
+.. figure:: img/merge_vector_layers.png
    :align: center
+
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
 ..........
 
-``Layers to merge`` [multipleinput: vector]
+``Layers to merge`` [vector: any] [list]
   All the layers that have to be merged into a single layer.
+  Layers should be of the same geometry type.
 
-``Destination CRS`` [projection]
+``Destination CRS`` [crs]
   Optional
 
-  Optional parameter to choose the CRS of the output layer. If not specified the
+  Choose the CRS of the output layer. If not specified the
   CRS of the first input layer is taken.
 
 Outputs
 .......
 
-``Merged`` [vector]
-  Merged vector layer containing all the features and attributes from input layers
+``Merged`` [vector: any]
+  Merged vector layer containing all the features and attributes from input layers.
+
+See also
+........
+:ref:`qgissplitvectorlayer`
 
 
-.. _qgis_order_by_expression:
+.. _qgisorderbyexpression:
 
 Order by expression
 -------------------
@@ -454,18 +563,18 @@ Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer to sort
+  Vector layer to sort.
 
 ``Expression`` [expression]
-  Expression to use for the vector sorting
+  Expression to use for the vector sorting.
 
-``Ascending`` [boolean]
-  If checked the sorted vector layer will be sorted from the smallest to the
+``Sort ascending`` [boolean]
+  If checked the vector layer will be sorted from the smallest to the
   biggest values found.
 
   Default: *True*
 
-``Nulls first`` [boolean]
+``Sort nulls first`` [boolean]
   If checked Null values are placed at the beginning of the sorted layer.
 
   Default: *False*
@@ -473,16 +582,18 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
-  Sorted vector layer
+``Output layer`` [vector: any]
+  Sorted vector layer.
 
 
-.. _qgis_reproject_layer:
+.. _qgisreprojectlayer:
 
 Reproject layer
 ---------------
 Reprojects a vector layer in a different CRS. The reprojected layer will have
 the same features and attributes of the input layer.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -490,7 +601,7 @@ Parameters
 ``Input layer`` [vector: any]
   Layer to reproject.
 
-``Target CRS`` [projection]
+``Target CRS`` [crs]
   Destination coordinate reference system.
 
   Default: *EPSG:4326*
@@ -498,34 +609,15 @@ Parameters
 Outputs
 .......
 
-``Reprojected layer`` [vector]
+``Reprojected layer`` [vector: any]
   The resulting reprojected layer.
 
 See also
 ........
-:ref:`qgis_assign_projection`, :ref:`qgis_find_projection`
+:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
 
 
-.. _qgis_save_selected_features:
-
-Save selected features
-----------------------
-Saves the selected features as a new layer.
-
-Parameters
-..........
-
-``Input layer`` [vector: any]
-  Layer to save the selection from.
-
-Outputs
-.......
-
-``Selection`` [vector]
-  Vector layer with just the selected features.
-
-
-.. _qgis_set_style_for_vector_layer:
+.. _qgissetstyleforvectorlayer:
 
 Set style for vector layer
 --------------------------
@@ -537,13 +629,13 @@ No new output are created: the style is immediately assigned to the vector layer
 Parameters
 ..........
 ``Vector layer`` [vector: any]
-  The layer you want to change the style
+  The layer you want to change the style.
 
 ``Style file`` [file]
-  ``qml`` file of the style
+  ``qml`` file of the style.
 
 
-.. _qgis_split_vector_layer:
+.. _qgissplitvectorlayer:
 
 Split vector layer
 ------------------
@@ -556,11 +648,13 @@ for the specified attribute.
 
 It is the opposite operation of *merging*.
 
+``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Vector layer
+  Vector layer.
 
 ``Unique ID field`` [tablefield: any]
   Field of the attribute table on which the layer will be split.
@@ -568,24 +662,35 @@ Parameters
 Outputs
 .......
 
-``Output directory`` [directory]
+``Output directory`` [folder]
   Directory where all the split layer will be saved.
 
 See also
 ........
-:ref:`qgis_merge_vector_layers`
+:ref:`qgismergevectorlayers`
 
 
-.. _qgis_truncate_table:
+.. _qgistruncatetable:
 
 Truncate table
 --------------
 Truncates a layer, by deleting all features from within the layer.
 
-.. warning:: this algorithm modifies the layer in place, and deleted features cannot
+.. warning:: This algorithm modifies the layer in place, and deleted features cannot
   be restored!
 
 Parameters
 ..........
 ``Input layer`` [vector: any]
-  Vector layer in input
+  Vector layer in input.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

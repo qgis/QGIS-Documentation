@@ -11,50 +11,74 @@ Raster projections
       :local:
       :depth: 1
 
+
+.. _gdalassignprojection:
+
+Assign projection
+-----------------
+Applies a coordinate system to a raster dataset.
+
+This algorithm is derived from the the `GDAL edit utility <https://www.gdal.org/gdal_edit.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Projections`
+
+Parameters
+..........
+
+``Input layer`` [raster]
+  Input raster layer.
+
+``Desired CRS`` [CRS]
+  Defines the coordinate system to apply to the input raster layer.
+
+
+.. _gdalextractprojection:
+
 Extract projection
 ------------------
+Extracts the projection of a raster file and writes it into a *world*
+file with extension :file:`.wld`.
 
-Description
-...........
+This algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/gdalsrsinfo.html>`_ .
 
-Extracts the projection of a raster file and writes it into a
-world-file.
-The algorithm is derived from the the `GDAL srsinfo utility <http://www.gdal.org/gdalsrsinfo.html>`_ .
+``Default menu``: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
 
 ``Input file`` [raster]
-  input raster file.
+  Input raster.
+  The raster layer has to be file based, as the algorithm uses the path
+  to the raster file as the location of the generated :file:`.wld` file.
+  Using a non-file raster layer will lead to an error.
 
 ``Create also .prj file`` [boolean]
-  If this is activated also a \*.prj-file containing the projection
-  information is created.
+  If this is activated a :file:`.prj` file containing the projection
+  information is also created.
 
   Default: *False*
 
 Outputs
 .......
 
-Console usage
-.............
+``World file`` [file]
+  Text file with extension :file:`.wld` containing transformation parameters
+  for  the raster file.
 
-::
+``ESRI Shapefile prj file`` [file]
+  Text file with :file:`.prj` extension that describes the CRS.
+  Will be None if ``Create also .prj file`` is False.
 
-  processing.runalg('gdalogr:extractprojection', input, prj_file)
-
-See also
-........
+.. _gdalwarpreproject:
 
 Warp (reproject)
 ----------------
-
-Description
-...........
-
 Transfers a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
-The algorithm is derived from the `GDAL warp utility <http://www.gdal.org/gdalwarp.html>`_ .
+
+This algorithm is derived from the `GDAL warp utility <https://www.gdal.org/gdalwarp.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
@@ -77,7 +101,7 @@ Parameters
 
   Default: *0.0*
 
-``Resampling method`` [selection]
+``Resampling method`` [enumeration]
   Several resampling methods can be chosen for the reprojection.
   By default a near resampling method is chosen.
 
@@ -92,31 +116,31 @@ Parameters
   Default: *0*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
-``Output raster type`` [selection]
+``Output data type`` [enumeration]
   Defines the format of the output raster file.
-  By default this is Float32.
 
   Options:
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
 
-  Default: *5*
+  Default: *0*
 
 Outputs
 .......
@@ -124,13 +148,11 @@ Outputs
 ``Output layer`` [raster]
   <put output description here>
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('gdalogr:warpreproject', input, source_srs, dest_srs, tr, method, extra, rtype, output)
-
-See also
-........
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

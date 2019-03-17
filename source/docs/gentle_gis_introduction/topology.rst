@@ -30,7 +30,7 @@ by circles that show connectivity.
 
 .. _figure_topology_london:
 
-.. figure:: /static/gentle_gis_introduction/topology/london_underground.png
+.. figure:: img/london_underground.png
    :align: center
    :width: 30em
 
@@ -50,7 +50,7 @@ figure_topology_errors_).
 
 .. _figure_topology_errors:
 
-.. figure:: /static/gentle_gis_introduction/topology/topology_errors.png
+.. figure:: img/topology_errors.png
    :align: center
    :width: 30em
 
@@ -116,7 +116,7 @@ boundary.
 
 .. _figure_topological_tools:
 
-.. figure:: /static/gentle_gis_introduction/topology/topological_tools.png
+.. figure:: img/topological_tools.png
    :align: center
    :width: 30em
 
@@ -137,7 +137,7 @@ and / or segment (see figure_snapping_distance_).
 
 .. _figure_snapping_distance:
 
-.. figure:: /static/gentle_gis_introduction/topology/snapping_distance.png
+.. figure:: img/snapping_distance.png
    :align: center
    :width: 30em
 
@@ -210,8 +210,8 @@ Further reading
 
 **Websites**:
 
-* http://www.innovativegis.com/basis/primer/concepts.html
-* http://en.wikipedia.org/wiki/Geospatial_topology
+* http://www.innovativegis.com/basis/
+* https://en.wikipedia.org/wiki/Geospatial_topology
 
 The QGIS User Guide also has more detailed information on topological editing
 provided in QGIS.
@@ -222,3 +222,13 @@ What's next?
 In the section that follows we will take a closer look at **Coordinate Reference
 Systems** to understand how we relate data from our spherical earth onto flat
 maps!
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

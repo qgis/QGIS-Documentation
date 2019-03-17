@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 More interpolation 
 ===================
 
@@ -54,3 +58,12 @@ Interpolating that layer will get you a raster layer with the estimated error in
 You can also get the same information (difference between original point values and interpolated ones) directly with :menuselection:`GRASS --> v.sample`.
 
 Your results might differ from these ones, since there is a random component introduced when running the random selection, at the beginning of this lesson.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

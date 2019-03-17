@@ -19,6 +19,8 @@ QGIS has been designed with a plugin architecture. This allows many new
 features and functions to be easily added to the application. Some of the
 features in QGIS are actually implemented as plugins.
 
+.. _core_and_external_plugins:
+
 Core and External plugins
 =========================
 
@@ -29,7 +31,7 @@ and are automatically part of every QGIS distribution. They are written in one
 of two languages: **C++** or **Python**.
 
 Most of External Plugins are currently written in Python. They are stored either
-in the 'Official' QGIS Repository at http://plugins.qgis.org/plugins/ or in
+in the 'Official' QGIS Repository at https://plugins.qgis.org/plugins/ or in
 external repositories and are maintained by the individual authors. Detailed
 documentation about the usage, minimum QGIS version, home page, authors,and
 other important information are provided for the plugins in the Official
@@ -37,18 +39,10 @@ repository. For other external repositories, documentation might be available
 with the external plugins themselves. External plugins documentation is not
 included in this manual.
 
-To install or activate a plugin, go to :menuselection:`Plugins` menu and select:
-
-* |showPluginManager| :menuselection:`Manage and install plugins...` using
-  online repositories;
-* or |installPluginFromZip| :menuselection:`Install plugin from ZIP...` using a
-  local compressed file.
-
-Installed external python plugins are placed under :file:`~/.qgis2/python/plugins`
-folder. Home directory (denoted by above ``~``) on Windows is usually something
-like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier)
-or :file:`C:\\Users\\(user)`. On some platforms (e.g., macOS), the :file:`.qgis2`
-folder is hidden by default.
+To install or activate a plugin, go to :menuselection:`Plugins` menu and select
+|showPluginManager| :menuselection:`Manage and install plugins...`.
+Installed external python plugins are placed under the :file:`python/plugins`
+folder of the active :ref:`user profile <user_profiles>` path.
 
 Paths to Custom C++ plugins libraries can also be added under
 :menuselection:`Settings --> Options --> System`.
@@ -56,8 +50,8 @@ Paths to Custom C++ plugins libraries can also be added under
 .. note::
 
  According to the :ref:`plugin manager settings <setting_plugins>`, QGIS main
- interface can display a blue link in the status bar to inform you that there
- are updates for your installed plugins or new plugins available.
+ interface can display an icon on the right of the status bar to inform you
+ that there are updates for your installed plugins or new plugins available.
 
 .. index::
    single: Plugins; Plugin manager
@@ -104,20 +98,23 @@ You can use the following options:
   invalid plugins list.
 
 By default, QGIS provides you with its official plugin repository with the URL
-https://plugins.qgis.org/plugins/plugins.xml?qgis=2.18 (in case of QGIS 2.18)
+https://plugins.qgis.org/plugins/plugins.xml?qgis=3.0 (in case of QGIS 3.0)
 in the :guilabel:`Plugin repositories` section. To add external author repositories,
-click **[Add...]** and fill in the form with a name and the URL.
-If you do not want one or more of the added repositories, they can be disabled
-via the **[Edit...]** button, or completely removed with the **[Delete]** button.
+click :guilabel:`Add...` and fill in the :guilabel:`Repository Details` form with a
+name and the URL. The URL can be of ``http://`` or ``file://`` protocol type.
 
 The default QGIS repository is an open repository and you don't need any
 authentication to access it. You can however deploy your own plugin repository
 and require an authentication (basic authentication, PKI). You can get more
 information on QGIS authentication support in :ref:`authentication` chapter.
 
+If you do not want one or more of the added repositories, they can be disabled
+from the Settings tab via the :guilabel:`Edit...` button, or completely removed with
+the :guilabel:`Delete` button.
+
 .. _figure_plugins_settings:
 
-.. figure:: /static/user_manual/plugins/plugins_settings.png
+.. figure:: img/plugins_settings.png
    :align: center
 
    The |transformSettings| :guilabel:`Settings` tab
@@ -127,15 +124,15 @@ The All tab
 
 In the |showPluginManager| :guilabel:`All` tab,
 all the available plugins are listed, including both core and external
-plugins. Use **[Upgrade all]** to look for new versions of the plugins.
-Furthermore, you can use **[Install plugin]** if a plugin is listed but not
-installed, **[Uninstall plugin]** as well as **[Reinstall plugin]** if a plugin
+plugins. Use :guilabel:`Upgrade All` to look for new versions of the plugins.
+Furthermore, you can use :guilabel:`Install Plugin` if a plugin is listed but not
+installed, :guilabel:`Uninstall Plugin` as well as :guilabel:`Reinstall Plugin` if a plugin
 is installed. An installed plugin can be temporarily de/activated using the
 checkbox.
 
 .. _figure_plugins_all:
 
-.. figure:: /static/user_manual/plugins/plugins_all.png
+.. figure:: img/plugins_all.png
    :align: center
 
    The |showPluginManager| :guilabel:`All` tab
@@ -144,14 +141,15 @@ checkbox.
 The Installed tab
 -----------------
 
-In |pluginInstalled| :guilabel:`Installed` tab,
-you can find only the installed plugins. The external plugins
-can be uninstalled and reinstalled using the **[Uninstall plugin]** and
-**[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
+In the |pluginInstalled| :guilabel:`Installed` tab, you'll find listed the Core
+plugins, that you can not uninstall. You can extend this list with external
+plugins that can be uninstalled and reinstalled any time, using the
+:guilabel:`Uninstall Plugin` and :guilabel:`Reinstall Plugin` buttons.
+You can :guilabel:`Upgrade All` the plugins here as well.
 
 .. _figure_plugins_installed:
 
-.. figure:: /static/user_manual/plugins/plugins_installed.png
+.. figure:: img/plugins_installed.png
    :align: center
 
    The |pluginInstalled| :guilabel:`Installed` tab
@@ -161,11 +159,11 @@ The Not installed tab
 
 The |plugin| :guilabel:`Not installed` tab lists all plugins available that
 are not installed.
-You can use the **[Install plugin]** button to implement a plugin into QGIS.
+You can use the :guilabel:`Install Plugin` button to implement a plugin into QGIS.
 
 .. _figure_plugins_not_installed:
 
-.. figure:: /static/user_manual/plugins/plugins_not_installed.png
+.. figure:: img/plugins_not_installed.png
    :align: center
 
    The |plugin| :guilabel:`Not installed` tab
@@ -173,22 +171,22 @@ You can use the **[Install plugin]** button to implement a plugin into QGIS.
 The Upgradeable and New tabs
 ----------------------------
 
-The |pluginUpgrade| :guilabel:`Upgradeable` and |pluginNew| :guilabel:`New` tabs
+The |plugin-upgrade| :guilabel:`Upgradeable` and |plugin-new| :guilabel:`New` tabs
 are enabled when new plugins are added to the repository or a new
 version of an installed plugin is released.
 If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
 |transformSettings| :guilabel:`Settings` menu, those also appear in the list
 giving you opportunity to early test upcoming tools.
 
-Installation can be done with the **[Install plugin]**, **[Upgrade plugin]** or
-**[Upgrade all]** buttons.
+Installation can be done with the :guilabel:`Install Plugin`, :guilabel:`Upgrade
+Plugin` or :guilabel:`Upgrade All` buttons.
 
 .. _figure_plugins_upgradeable:
 
-.. figure:: /static/user_manual/plugins/plugins_upgradeable.png
+.. figure:: img/plugins_upgradeable.png
    :align: center
 
-   The |pluginUpgrade| :guilabel:`Upgradeable` tab
+   The |plugin-upgrade| :guilabel:`Upgradeable` tab
 
 The Invalid tab
 ---------------
@@ -196,13 +194,53 @@ The Invalid tab
 The |pluginInvalid| :guilabel:`Invalid` tab lists all installed plugins that are
 currently broken for any reason (missing dependency, errors while loading,
 incompatible functions with QGIS version...). 
-You can try the **[Reinstall plugin]** button to fix an invalidated plugin but
+You can try the :guilabel:`Reinstall Plugin` button to fix an invalidated plugin but
 most of the times the fix will be elsewhere (install some libraries, look for
 another compatible plugin or help to upgrade the broken one).
 
 .. _figure_plugins_invalid:
 
-.. figure:: /static/user_manual/plugins/plugins_invalid.png
+.. figure:: img/plugins_invalid.png
    :align: center
 
    The |pluginInvalid| :guilabel:`Invalid` tab
+
+The Install from ZIP tab
+------------------------
+
+The |installPluginFromZip| :guilabel:`Install from ZIP` tab provides a file
+selector widget to import plugins in a zipped format, e.g. plugins downloaded
+directly from their repository. 
+
+.. _figure_plugins_install_zip:
+
+.. figure:: img/plugins_install_zip.png
+   :align: center
+
+   The |installPluginFromZip| :guilabel:`Install from zip` tab
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
+   :width: 1.5em
+.. |plugin| image:: /static/common/plugin.png
+   :width: 1.5em
+.. |plugin-new| image:: /static/common/plugin-new.png
+   :width: 1.5em
+.. |plugin-upgrade| image:: /static/common/plugin-upgrade.png
+   :width: 1.5em
+.. |pluginInstalled| image:: /static/common/plugin-installed.png
+   :width: 1.5em
+.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+   :width: 1.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |transformSettings| image:: /static/common/mActionTransformSettings.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

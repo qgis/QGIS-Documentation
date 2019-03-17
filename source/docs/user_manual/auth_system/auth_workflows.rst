@@ -14,7 +14,7 @@ User Authentication Workflows
 
 .. _figure_authusage:
 
-.. figure:: /static/user_manual/auth_system/auth-user-usage.png
+.. figure:: img/auth-user-usage.png
    :align: center
 
    Generic user workflow
@@ -32,7 +32,7 @@ upon connection.
 
 .. _figure_auth_https:
 
-.. figure:: /static/user_manual/auth_system/auth-http-basic-wms.png
+.. figure:: img/auth-http-basic-wms.png
    :align: center
 
    Configuring a WMS connection for HTTP BASIC
@@ -48,7 +48,7 @@ authentication configuration. When configuring with the new auth system, the
 
 .. _figure_auth_database:
 
-.. figure:: /static/user_manual/auth_system/auth-db-ssl-pki.png
+.. figure:: img/auth-db-ssl-pki.png
    :align: center
 
    Configuring a Postgres SSL-with-PKI connection
@@ -65,7 +65,7 @@ private keys within the database.
 
 .. _figure_auth_pki_config:
 
-.. figure:: /static/user_manual/auth_system/auth-pki-config.png
+.. figure:: img/auth-pki-config.png
    :align: center
 
    PKI configuration workflow
@@ -73,11 +73,11 @@ private keys within the database.
 All PKI components can be managed in separate editors within the **Certificate
 Manager**, which can be accessed in the :guilabel:`Authentication` tab in QGIS
 `Options` dialog (:menuselection:`Settings --> Options`) by clicking the
-**[Manage certificates]** button.
+:guilabel:`Manage Certificates` button.
 
 .. _figure_auth_pki_certif:
 
-.. figure:: /static/user_manual/auth_system/auth-open-Certificate-manager.png
+.. figure:: img/auth-open-Certificate-manager.png
    :align: center
 
    Opening the Certificate Manager
@@ -92,7 +92,7 @@ accustomed to the workflow.
 
    Because all authentication system edits write immediately to the
    authentication database, there is no need to click the :guilabel:`Options`
-   dialog **[OK]** button for any changes to be saved. This is unlike other
+   dialog :guilabel:`OK` button for any changes to be saved. This is unlike other
    settings in the Options dialog.
 
 Authorities
@@ -112,7 +112,7 @@ administrator if unsure.)
 
 .. _figure_auth_pki_editor:
 
-.. figure:: /static/user_manual/auth_system/auth-editor-authorities.png
+.. figure:: img/auth-editor-authorities.png
    :align: center
 
    Authorities editor
@@ -123,11 +123,11 @@ settings, especially if your OS root CAs have had their policies adjusted. Any
 certificate that is expired will be set to untrusted and will not be used in
 secure server connections, unless you specifically override its trust policy. To
 see the QGIS-discoverable trust chain for any certificate, select it and click
-the |propertiesWidget| :sup:`Show information for certificate`.
+the |metadata| :sup:`Show information for certificate`.
 
 .. _figure_auth_pki_info:
 
-.. figure:: /static/user_manual/auth_system/auth-authority-imported_cert-info-chain.png
+.. figure:: img/auth-authority-imported_cert-info-chain.png
    :align: center
 
    Certificate info dialog
@@ -141,7 +141,7 @@ policy changes.
 
 .. _figure_auth_pki_policy:
 
-.. figure:: /static/user_manual/auth_system/auth-authority-edit-trust_save-not-close.png
+.. figure:: img/auth-authority-edit-trust_save-not-close.png
    :align: center
 
    Saving the trust policy changes
@@ -156,7 +156,7 @@ clicking the |transformSettings| **Options** button.
 
 .. _figure_auth_pki_options:
 
-.. figure:: /static/user_manual/auth_system/auth-editor-authorities_utilities-menu.png
+.. figure:: img/auth-editor-authorities_utilities-menu.png
    :align: center
 
    Authorities options menu
@@ -175,7 +175,7 @@ editor.
 
 .. _figure_auth_pki_import:
 
-.. figure:: /static/user_manual/auth_system/auth-authority-import.png
+.. figure:: img/auth-authority-import.png
    :align: center
 
    Import certificates dialog
@@ -201,7 +201,7 @@ within an individual authentication configuration.
 
 .. _figure_auth_pki_identities:
 
-.. figure:: /static/user_manual/auth_system/auth-editor-identities.png
+.. figure:: img/auth-editor-identities.png
    :align: center
 
    Identities editor
@@ -225,14 +225,14 @@ can not be imported.
 
 .. _figure_auth_pki_identities_import:
 
-.. figure:: /static/user_manual/auth_system/auth-identity-import_paths.png
+.. figure:: img/auth-identity-import_paths.png
    :align: center
 
    PEM/DER identity import
 
 .. _figure_auth_pki_identities_import_2:
 
-.. figure:: /static/user_manual/auth_system/auth-identity-import_bundle-valid.png
+.. figure:: img/auth-identity-import_bundle-valid.png
    :align: center
 
    PKCS#12 identity import
@@ -248,7 +248,7 @@ presented upon QGIS launch.
 
 .. _figure_auth_pki_badlayers:
 
-.. figure:: /static/user_manual/auth_system/auth-handle-bad-layers.png
+.. figure:: img/auth-handle-bad-layers.png
    :align: center
 
    Handle bad layers with authentication
@@ -260,7 +260,7 @@ and editing the string.
 
 .. _figure_auth_pki_badlayers_edit:
 
-.. figure:: /static/user_manual/auth_system/auth-handle-bad-layers-edit.png
+.. figure:: img/auth-handle-bad-layers-edit.png
    :align: center
 
    Edit bad layer's authentication config ID
@@ -268,7 +268,7 @@ and editing the string.
 Changing authentication config ID
 ---------------------------------
 
-Occasionally, you will need to change the authenticationn configuration ID that
+Occasionally, you will need to change the authentication configuration ID that
 is associated with accessing a resource. There are instances where this is
 useful:
 
@@ -284,7 +284,7 @@ useful:
 
 .. _figure_auth_id:
 
-.. figure:: /static/user_manual/auth_system/auth-change-config-id.png
+.. figure:: img/auth-change-config-id.png
    :align: center
 
    Changing a layer's authentication config ID (unlocked yellow text field)
@@ -333,7 +333,7 @@ SSL server exceptions
 
 .. _figure_auth_server:
 
-.. figure:: /static/user_manual/auth_system/auth-ssl-config.png
+.. figure:: img/auth-ssl-config.png
    :align: center
 
    SSL server exception
@@ -365,14 +365,14 @@ the error can be ignored temporarily or saved to the database and ignored):
 
 .. _figure_auth_server_config:
 
-.. figure:: /static/user_manual/auth_system/auth-server-exception.png
+.. figure:: img/auth-server-exception.png
    :align: center
 
    Manually adding configuration
 
 .. _figure_auth_server_error:
 
-.. figure:: /static/user_manual/auth_system/auth-server-error-add-exception.png
+.. figure:: img/auth-server-error-add-exception.png
    :align: center
 
    Adding configuration during SSL error
@@ -381,14 +381,14 @@ Once an SSL configuration is saved to the database, it can be edited or deleted.
 
 .. _figure_auth_server_ssl:
 
-.. figure:: /static/user_manual/auth_system/auth-editor-servers.png
+.. figure:: img/auth-editor-servers.png
    :align: center
 
    Existing SSL configuration
 
 .. _figure_auth_server_ssledit:
 
-.. figure:: /static/user_manual/auth_system/auth-server-edit.png
+.. figure:: img/auth-server-edit.png
    :align: center
 
    Editing an existing SSL configuration
@@ -404,3 +404,22 @@ the **Python Console** by running the following code (replace
 
 This will open an SSL error dialog if any errors occur, where you can choose to
 save the configuration to the database.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |transformSettings| image:: /static/common/mActionTransformSettings.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

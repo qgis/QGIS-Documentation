@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Rules
 ===============================================================================
 
@@ -69,3 +73,15 @@ changes in other parts of the database.
 
 The next module will introduce you to Spatial Database using PostGIS,
 which takes these database concepts and applies them to GIS data.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

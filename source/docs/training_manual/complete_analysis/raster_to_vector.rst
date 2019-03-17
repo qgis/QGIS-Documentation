@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Raster to Vector Conversion
 ===============================================================================
 
@@ -25,17 +29,17 @@ exercises.
   Vector)`. The tool dialog will appear.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/polygonize_raster.png
+  .. image:: img/polygonize_raster.png
      :align: center
 
 * Change the field name (describing the values of the raster) to
-  :kbd:`suitable`.
-* Save the shapefile under :kbd:`exercise_data/residential_development`
-  as :kbd:`all_terrain.shp`.
+  :guilabel:`suitable`.
+* Save the layer under :file:`exercise_data/residential_development`
+  as :file:`all_terrain.shp`.
 
 Now you have a vector file which contains all the values of the raster, but
 the only areas you're interested in are those that are suitable; i.e., those
-polygons where the value of :kbd:`suitable` is :kbd:`1`. You can change the
+polygons where the value of :guilabel:`suitable` is ``1``. You can change the
 style of this layer if you want to have a clearer visualization of it.
 
 .. _backlink-complete-analysis-1:
@@ -62,13 +66,13 @@ opposite conversion from the one performed above. Convert to raster the
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
 
-.. image:: /static/training_manual/complete_analysis/vector_to_raster.png
+.. image:: img/vector_to_raster.png
    :align: center
 
-* :guilabel:`Input file` is :guilabel:`all_terrain`;
+* :guilabel:`Input file` is :guilabel:`all_terrain`.
 * :guilabel:`Output file...` is
-  :kbd:`exercise_data/residential_development/raster_conversion.tif`;
-* :guilabel:`Width` and :guilabel:`Height` are :kbd:`837` and :kbd:`661`,
+  :file:`exercise_data/residential_development/raster_conversion.tif`.
+* :guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``,
   respectively.
 
 .. note::  The size of the output image is specified here to be the same as the
@@ -92,3 +96,18 @@ applicability of data, and need not lead to data degradation.
 Now that we have the results of the terrain analysis available in vector
 format, they can be used to solve the problem of which buildings we should consider
 for the residential development.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

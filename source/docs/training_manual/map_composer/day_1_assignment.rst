@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Assignment 1
 ===============================================================================
 
@@ -32,3 +36,15 @@ the next four modules, you'll learn how to use QGIS for a complete GIS
 analysis. This will include creating and editing vector data; analyzing vector
 data; using and analyzing raster data; and using GIS to solve a problem from
 start to finish, using both raster and vector data sources.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |basic| image:: /static/global/basic.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

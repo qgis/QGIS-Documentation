@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: Plugins; Developing, Python; Authentication infrastructure
 
 .. highlight:: python
@@ -11,6 +15,8 @@ Authentication infrastructure
 .. contents::
    :local:
 
+.. warning:: |outofdate|
+
 .. _Authentication_Introduction:
 
 Introduction
@@ -21,15 +27,6 @@ in the  User Manual in the :ref:`authentication_overview` paragraph.
 
 This chapter describes the best practices to use the Authentication system from
 a developer perspective.
-
-.. warning::
-
-    Authentication system API is more than the classes and methods exposed
-    here, but it's strongly suggested to use the ones described here and
-    exposed in the following snippets for two main reasons
-
-    #. Authentication API will change during the move to QGIS3
-    #. Python bindings will be restricted to the ``QgsAuthManager`` class use.
 
 Most of the following snippets are derived from the code of Geoserver Explorer
 plugin and its tests. This is the first plugin that used Authentication
@@ -53,7 +50,7 @@ Here are some definition of the most common objects treated in this chapter.
     Authentication DB
 
   Authentication Database
-    A :term:`Master Password` crypted sqlite db ``<user home>/.qgis2/qgis-auth.db``
+    A :term:`Master Password` crypted sqlite db :file`qgis-auth.db`
     where :term:`Authentication Configuration` are stored. e.g user/password,
     personal certificates and keys, Certificate Authorities
 
@@ -79,11 +76,10 @@ Here are some definition of the most common objects treated in this chapter.
 QgsAuthManager the entry point
 ==============================
 
-The `QgsAuthManager <https://qgis.org/api/classQgsAuthManager.html>`_ singleton
+The :class:`QgsAuthManager <qgis.core.QgsAuthManager>` singleton
 is the entry point to use the credentials stored in the QGIS encrypted
-:term:`Authentication DB`::
-
-  <user home>/.qgis2/qgis-auth.db
+:term:`Authentication DB`, i.e. the :file:`qgis-auth.db` file under the
+active :ref:`user profile <user_profiles>` folder.
 
 This class takes care of the user interaction: by asking to set master
 password or by transparently using it to access crypted stored info.
@@ -102,7 +98,7 @@ understand the snippet.
   authMgr = QgsAuthManager.instance()
   # check if QgsAuthManager has been already initialized... a side effect
   # of the QgsAuthManager.init() is that AuthDbPath is set.
-  # QgsAuthManager.init() is executed during QGis application init and hence
+  # QgsAuthManager.init() is executed during QGIS application init and hence
   # you do not normally need to call it directly.
   if authMgr.authenticationDbPath():
       # already initilised => we are inside a QGIS app.
@@ -130,7 +126,7 @@ Populate authdb with a new Authentication Configuration entry
 -------------------------------------------------------------
 
 Any stored credential is a :term:`Authentication Configuration` instance of the
-`QgsAuthMethodConfig <https://qgis.org/api/classQgsAuthMethodConfig.html>`_
+:class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>`
 class accessed using a unique string like the following one::
 
   authcfg = 'fm1s770'
@@ -138,7 +134,8 @@ class accessed using a unique string like the following one::
 that string is generated automatically when creating an entry using QGIS API or
 GUI.
 
-`QgsAuthMethodConfig` is the base class for any :term:`Authentication Method`.
+:class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` is the base class
+for any :term:`Authentication Method`.
 Any Authentication Method sets a configuration hash map where authentication
 informations will be stored. Hereafter an useful snippet to store PKI-path
 credentials for an hypothetic alice user:
@@ -150,7 +147,7 @@ credentials for an hypothetic alice user:
   p_config = QgsAuthMethodConfig()
   p_config.setName("alice")
   p_config.setMethod("PKI-Paths")
-  p_config.setUri("http://example.com")
+  p_config.setUri("https://example.com")
   p_config.setConfig("certpath", "path/to/alice-cert.pem" ))
   p_config.setConfig("keypath", "path/to/alice-key.pem" ))
   # check if method parameters are correctly set
@@ -210,7 +207,7 @@ Manage PKI bundles with QgsPkiBundle
 ....................................
 
 A convenience class to pack PKI bundles composed on SslCert, SslKey and CA
-chain is the `QgsPkiBundle <https://qgis.org/api/classQgsPkiBundle.html>`_
+chain is the :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>`
 class. Hereafter a snippet to get password protected:
 
 .. code-block:: python
@@ -223,8 +220,8 @@ class. Hereafter a snippet to get password protected:
   assert boundle is not None
   assert boundle.isValid()
 
-Refer to QgsPkiBundle class documentation to extract cert/key/CAs from the
-bundle.
+Refer to :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>` class documentation
+to extract cert/key/CAs from the bundle.
 
 .. _Remove_entry_from_authdb:
 
@@ -256,9 +253,10 @@ enabled service like a WMS or WFS or to a DB connection.
 
   Take into account that not all QGIS data providers are integrated with the
   Authentication infrastructure. Each authentication method, derived from the
-  base class `QgsAuthMethod <https://qgis.org/api/classQgsAuthMethod.html>`_
-  and support a different set of Providers. For example ``Identity-Cert``
-  method supports the following list of providers:
+  base class :class:`QgsAuthMethod <qgis.core.QgsAuthMethod>`
+  and support a different set of Providers. For example the :meth:`certIdentity ()
+  <qgis.core.QgsAuthManager.certIdentity>` method supports the following list
+  of providers:
 
   .. code-block:: python
 
@@ -290,11 +288,11 @@ URI parameter with credential just before setting the HTTP connection.
 
 .. warning::
 
-  Developer would have to leave ``authcfg`` expansion to the QgsAuthManager, in
-  this way he will be sure that expansion is not done too early.
+  The developer would have to leave ``authcfg`` expansion to the :class:`QgsAuthManager
+  <qgis.core.QgsAuthManager>`, in this way he will be sure that expansion is not done too early.
 
-Usually an URI string, build using ``QgsDataSourceURI`` class, is used to set
-QGIS data source in the following way:
+Usually an URI string, built using the :class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>`
+class, is used to set a data source in the following way:
 
 .. code-block:: python
 
@@ -324,8 +322,8 @@ Adapt plugins to use Authentication infrastructure
 ==================================================
 
 Many third party plugins are using httplib2 to create HTTP connections instead
-of integrating with ``QgsNetworkAccessManager`` and its related Authentication
-Infrastructure integration.
+of integrating with :class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>`
+and its related Authentication Infrastructure integration.
 To facilitate this integration an helper python function has been created
 called ``NetworkAccessManager``. Its code can be found `here
 <https://github.com/boundlessgeo/qgis-geoserver-plugin/blob/master/geoserverexplorer/geoserver/networkaccessmanager.py#L78>`_.
@@ -356,9 +354,9 @@ GUI to select credentials
 
 If it's necessary to select a :term:`Authentication Configuration` from the set
 stored in the :term:`Authentication DB` it is available in the GUI class
-`QgsAuthConfigSelect <https://qgis.org/api/classQgsAuthConfigSelect.html>`_
+`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`.
 
-.. figure:: /static/pyqgis_developer_cookbook/QgsAuthConfigSelect.png
+.. figure:: img/QgsAuthConfigSelect.png
    :align: center
 
 and can be used as in the following snippet:
@@ -372,7 +370,7 @@ and can be used as in the following snippet:
   # GUI has to be integrated
   tabGui.insertTab( 1, gui, "Configurations" )
 
-The above example is get from the QGIS source `code
+The above example is taken from the QGIS source `code
 <https://github.com/qgis/QGIS/blob/master/src/providers/postgres/qgspgnewconnection.cpp#L42>`_
 The second parameter of the GUI constructor refers to data provider type. The
 parameter is used to restrict the compatible :term:`Authentication Method`\s with
@@ -384,10 +382,10 @@ Authentication Editor GUI
 -------------------------
 
 The complete GUI used to manage credentials, authorities and to access to
-Authentication utilities is managed by the class
-`QgsAuthEditorWidgets <https://qgis.org/api/classQgsAuthEditorWidgets.html>`_
+Authentication utilities is managed by the
+:class:`QgsAuthEditorWidgets <qgis.gui.QgsAuthEditorWidgets>` class.
 
-.. figure:: /static/pyqgis_developer_cookbook/QgsAuthEditorWidgets.png
+.. figure:: img/QgsAuthEditorWidgets.png
    :align: center
 
 and can be used as in the following snippet:
@@ -406,9 +404,10 @@ an integrated example can be found in the related `test <https://github.com/qgis
 Authorities Editor GUI
 ----------------------
 
-A GUI used to manage only authorities is managed by the class `QgsAuthAuthoritiesEditor <http://www2.qgis.org/api/classQgsAuthAuthoritiesEditor.html>`_
+A GUI used to manage only authorities is managed by the
+`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class.
 
-.. figure:: /static/pyqgis_developer_cookbook/QgsAuthAuthoritiesEditor.png
+.. figure:: img/QgsAuthAuthoritiesEditor.png
    :align: center
 
 and can be used as in the following snippet:
@@ -418,4 +417,14 @@ and can be used as in the following snippet:
  # create the instance of the QgsAuthAuthoritiesEditor GUI hierarchically
  #  linked to the widget referred with `parent`
  gui = QgsAuthAuthoritiesEditor( parent )
- gui.show()
+ gui.show()   
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

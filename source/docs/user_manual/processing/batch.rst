@@ -20,7 +20,7 @@ All algorithms (including models) can be executed as a batch process. That
 is, they can be executed using not just a single set of inputs, but several of them,
 executing the algorithm as many times as needed. This is useful when processing
 large amounts of data, since it is not necessary to launch the algorithm many
-times from the toolbox.
+times from the toolbox. testing changes.
 
 To execute an algorithm as a batch process, right-click on its name in the toolbox
 and select the :guilabel:`Execute as batch process` option in the pop-up menu
@@ -28,7 +28,7 @@ that will appear.
 
 .. _figure_processing_batch_start:
 
-.. figure:: /static/user_manual/processing/batch_processing_right_click.png
+.. figure:: img/batch_processing_right_click.png
    :align: center
 
    Batch Processing from right-click
@@ -39,7 +39,7 @@ process...` button.
 
 .. _figure_processing_batch_start2:
 
-.. figure:: /static/user_manual/processing/batch_processing_params_dialog.png
+.. figure:: img/batch_processing_params_dialog.png
    :align: center
 
    Batch Processing From Algorithm Dialog
@@ -55,7 +55,7 @@ one shown next.
 
 .. _figure_processing_bath_parameters:
 
-.. figure:: /static/user_manual/processing/batch_processing.png
+.. figure:: img/batch_processing.png
    :align: center
 
    Batch Processing
@@ -104,7 +104,7 @@ other cells in the same column (same parameter).
 
 .. _figure_processing_save:
 
-.. figure:: /static/user_manual/processing/batch_processing_save.png
+.. figure:: img/batch_processing_save.png
    :align: center
 
    Batch Processing Save
@@ -121,7 +121,7 @@ particularly useful for naming output data objects according to input ones.
 
 .. _figure_processing_file:
 
-.. figure:: /static/user_manual/processing/batch_processing_filepath.png
+.. figure:: img/batch_processing_filepath.png
    :align: center
 
    Batch Processing File Path
@@ -131,5 +131,16 @@ Executing the batch process
 ---------------------------
 
 To execute the batch process once you have introduced all the necessary values,
-just click on **[OK]**. Progress of the global batch task will be shown in the
+just click on :guilabel:`OK`. Progress of the global batch task will be shown in the
 progress bar in the lower part of the dialog.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

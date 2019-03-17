@@ -44,16 +44,15 @@ coordinate reference system or you will need to define a global, layer or
 project-wide CRS. For PostGIS layers, QGIS uses the spatial reference identifier
 that was specified when the layer was created. For data supported by OGR, QGIS
 relies on the presence of a recognized means of specifying the CRS. In the case
-of shapefiles, this means a file containing the well-known text (:index:`WKT`)
+of Shapefile, this means a file containing the well-known text (:index:`WKT`)
 specification of the CRS. This projection file has the same base name as the
-shapefile and a :file:`.prj` extension. For example, a shapefile named
+:file:`.shp` file and a :file:`.prj` extension. For example, a shapefile named
 :file:`alaska.shp` would have a corresponding projection file named
 :file:`alaska.prj`.
 
 Whenever you select a new CRS, the layer units will automatically be
 changed in the :guilabel:`General` tab of the |options|
-:guilabel:`Project Properties` dialog under the :guilabel:`Project`
-(or |kde| :guilabel:`Settings`) menu.
+:guilabel:`Project Properties` dialog under the :guilabel:`Project` menu.
 
 .. index:: CRS
    single: CRS; Default CRS
@@ -71,7 +70,7 @@ sessions.
 
 .. _figure_projection_options:
 
-.. figure:: /static/user_manual/working_with_projections/crsdialog.png
+.. figure:: img/crsdialog.png
    :align: center
 
    CRS tab in the QGIS Options Dialog
@@ -88,9 +87,9 @@ The options shown in figure_projection_options_ are:
 * |radioButtonOff| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain layer
-without CRS information, you can also do that in the :guilabel:`General` tab
-of the raster and vector properties dialog (see :ref:`label_generaltab` for
-rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already has a CRS
+without CRS information, you can also do that in the :guilabel:`Source` tab
+of the raster and vector properties dialog (see :ref:`label_sourcetab` for
+rasters and :ref:`vectorsourcemenu` for vectors). If your layer already has a CRS
 defined, it will be displayed as shown in :ref:`figure_vector_general`.
 
 .. tip:: **CRS in the Layers Panel**
@@ -114,8 +113,8 @@ coordinates are transformed to the CRS of the project.
 
 There are three ways to enable On The Fly CRS Transformation:
 
-* Select |projectProperties| :menuselection:`Project Properties --> CRS` from
-  the :menuselection:`Project` ( or |kde| :menuselection:`Settings`) menu. You
+* Select |projectProperties| :menuselection:`Properties... --> CRS` from
+  the :menuselection:`Project` menu. You
   can then  activate the |checkbox| :guilabel:`Enable on the fly CRS
   transformation (OTF)` checkbox in the |crs| :guilabel:`CRS` tab and select
   the CRS to use (see :ref:`crs_selector`)
@@ -138,7 +137,7 @@ layers will be OTF projected to the CRS shown next to the icon.
 
 .. _figure_projection_project:
 
-.. figure:: /static/user_manual/working_with_projections/projectionDialog.png
+.. figure:: img/projectionDialog.png
    :align: center
 
    Project Properties Dialog
@@ -169,7 +168,7 @@ layer, provided a set of projection databases. Items in the dialog are:
 
    Sometimes, you receive a layer and you don't know its projection. Assuming that you
    have another layer with a valid crs that should overlaps with it, enable the
-   OTF reprojection and, in the :guilabel:`General` tab of the Layer properties
+   OTF reprojection and, in the :guilabel:`Source` tab of the Layer properties
    dialog, use the Coordinate Reference System selector to assign a projection.
    Your layer position is then moved accordingly. You may have to do some trial
    and error in order to find the right position, hence its original CRS.
@@ -198,7 +197,7 @@ database also contains your spatial bookmarks and other custom data.
 
 .. _figure_projection_custom:
 
-.. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
+.. figure:: img/customProjectionDialog.png
    :align: center
 
    Custom CRS Dialog
@@ -228,7 +227,7 @@ to represent the new coordinate reference system.
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
-:guilabel:`East` fields, respectively. Click on **[Calculate]**, and compare the
+:guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, and compare the
 results with the known values in your coordinate reference system.
 
 .. index:: Datum transformation
@@ -237,20 +236,81 @@ results with the known values in your coordinate reference system.
 Default datum transformations
 =============================
 
-OTF depends on being able to transform data into a 'default CRS', and
-QGIS uses WGS84. For some CRS there are a number of transforms
-available. QGIS allows you to define the transformation used otherwise
-QGIS uses a default transformation.
+In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
+whenever you use layers with different coordinates system, QGIS transparently
+reprojects them while rendering to the project CRS. For some CRS, there are a
+number of transforms available. QGIS allows you to define the transformation to
+use otherwise QGIS uses a default one.
 
-In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
-:guilabel:`Options` you can:
+This customization is done in the :menuselection:`Settings -->` |options|
+:guilabel:`Options --> CRS` tab menu under the :guilabel:`Default datum
+transformations` group:
 
-* set QGIS to ask you when it needs define a transformation using |radioButtonOn|
-  :guilabel:`Ask for datum transformation when no default is defined`
-* edit a list of user defaults for transformations.
+* using |checkbox| :guilabel:`Ask for datum transformation if several are
+  available`: when more than one appropriate datum transformation exists for a
+  source/destination CRS combination, a dialog will automatically be opened
+  prompting users to choose which of these datum transformations to use for
+  the project;
+* or predefining a list of the appropriate default transformations to use
+  when loading layers to projects or reprojecting a layer.
 
-QGIS asks which transformation to use by opening a dialogue box
-displaying PROJ.4 text describing the source and destination
-transforms. Further information may be found by hovering over a
-transform. User defaults can be saved by selecting
-|radioButtonOn| :guilabel:`Remember selection`.
+  Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
+  dialog. Then:
+
+  #. Indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
+     or the |setProjection| :sup:`Select CRS` widget.
+  #. Likewise, provide the :guilabel:`Destination CRS`.
+  #. Depending on the transform grid files (based on GDAL and PROJ version
+     installed on your system), a list of available transformations from source to
+     destination is built in the table. Clicking a row shows details on the settings
+     applied (epsg code, accuracy of the transform, number of stations involved...).
+
+     You can choose to only display current valid transformations by checking
+     the |checkbox| :guilabel:`Hide deprecated` option.
+
+  #. Find your preferred transformation, select it and click :guilabel:`OK`.
+
+     A new row is added to the table under :menuselection:`CRS --> Default datum
+     transformations` with information about 'Source CRS' and 'Destination CRS'
+     as well as 'Source datum transform' and 'Destination datum transform'.
+
+  From now, QGIS automatically uses the selected datum transformation for
+  further transformation between these two CRSs until you |signMinus| remove
+  it from the list or |toggleEditing| replace it with another one.
+
+.. _figure_projection_datum:
+
+.. figure:: img/datumTransformation.png
+   :align: center
+
+   Selecting a preferred default datum transformation
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |crs| image:: /static/common/CRS.png
+   :width: 1.5em
+.. |customProjection| image:: /static/common/mActionCustomProjection.png
+   :width: 1.5em
+.. |geographic| image:: /static/common/geographic.png
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |projectProperties| image:: /static/common/mActionProjectProperties.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

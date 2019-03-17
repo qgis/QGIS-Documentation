@@ -2,6 +2,9 @@
 
    |updatedisclaimer|
 
+.. index:: Layout; Label item
+.. _layout_label_item:
+
 The Label Item
 ===============
 
@@ -10,16 +13,21 @@ The Label Item
    .. contents::
       :local:
 
-To add a label, click the |label| :sup:`Add label` icon, place the element
-with the left mouse button on the Print Composer canvas and position and
-customize its appearance in the label :guilabel:`Item Properties` panel.
+The :guilabel:`Label` item is a tool that helps decorate your map with
+texts that would help to understand it; it can be the title, author, data
+sources or any other information...
+You can add a label with the |label| :guilabel:`Add Label` tool following
+:ref:`items creation instructions <create_layout_item>` and manipulate it the
+same way as exposed in :ref:`interact_layout_item`.
+ 
+By default, the label item provides a default text that you can customize using
+its :guilabel:`Item Properties` panel. Other than the :ref:`items common
+properties <item_common_properties>`, this feature has the following
+functionalities (see figure_layout_label_):
 
-The :guilabel:`Item Properties` panel of a label item provides the following
-functionality for the label item (see Figure_composer_label_):
+.. _figure_layout_label:
 
-.. _Figure_composer_label:
-
-.. figure:: /static/user_manual/print_composer/label_mainproperties.png
+.. figure:: img/label_mainproperties.png
    :align: center
 
    Label Item Properties Panel
@@ -27,27 +35,107 @@ functionality for the label item (see Figure_composer_label_):
 Main properties
 ----------------
 
-* The main properties dialog is where the text (HTML or not) or the expression
-  needed to fill the label is added to the Composer canvas.
+The :guilabel:`Main properties` group is the place to provide the text (it can
+be in HTML) or the expression to build the label. Expressions need to be
+surrounded by ``[%`` and ``%]`` in order to be interpreted as such.
+
 * Labels can be interpreted as HTML code: check |checkbox|
   :guilabel:`Render as HTML`. You can now insert a URL, a clickable image that
   links to a web page or something more complex.
-* You can also insert an expression. Click on **[Insert an expression]** to open
-  a new dialog. Build an expression by clicking the functions available in the
-  left side of the panel. Two special categories can be useful, particularly
-  associated with the atlas functionality: **geometry** and **records**
-  functions. At the bottom, a preview of the expression is shown.
+* You can also use :ref:`expressions <expression_builder>`: click on :guilabel:`Insert
+  an expression` button, write your formula as usual and when the dialog is
+  applied, QGIS automatically adds the surrounding characters.
+  
+.. note:: Clicking the :guilabel:`Insert an Expression` button when no selection is
+  made in the textbox will append the new expression to the existing text.
+  If you want to update an existing text, you need to select it the part of
+  interest beforehand.
+
+You can combine HTML rendering and expressions, leading to e.g. a text like:
+
+::
+
+ [% '<b>Check out the new logo for ' || '<a href="https://www.qgis.org" title="Nice logo" target="_blank">QGIS ' ||@qgis_short_version || '</a>' || ' : <img src="https://qgis.org/en/_downloads/qgis-icon128.png" alt="QGIS icon"/>' %]
+
+which will render:
+**Check out the new logo for** `QGIS 3.0 <https://www.qgis.org>`_ **:** |logo|
+
+.. Todo: it may be nice to provide some screenshot of some funnier/cooler/advanced
+ html label in action
 
 Appearance
 ----------
 
-* Define :guilabel:`Font` by clicking on the **[Font...]** button or a
-  :guilabel:`Font color` selecting a color using the color selection tool.
+* Define :guilabel:`Font` by clicking on the :guilabel:`Font...` button or a
+  :guilabel:`Font color` by pushing the :ref:`color widget <color-selector>`.
 * You can specify different horizontal and vertical margins in ``mm``. This is
-  the margin from the edge of the composer item. The label can be positioned
+  the margin from the edge of the layout item. The label can be positioned
   outside the bounds of the label e.g. to align label items with other items.
   In this case you have to use negative values for the margin.
-* Using the :guilabel:`Alignment` is another way to position your label. Note
-  that when e.g. using the :guilabel:`Horizontal alignment` in |radioButtonOn|
-  :guilabel:`Center` Position the :guilabel:`Horizontal margin` feature is
-  disabled.
+* Using the text alignment is another way to position your label. It can be:
+
+  * :guilabel:`Left`, :guilabel:`Center`, :guilabel:`Right` or
+    :guilabel:`Justify` for :guilabel:`Horizontal alignment`
+  * and :guilabel:`Top`, :guilabel:`Middle`, :guilabel:`Bottom` for
+    :guilabel:`Vertical alignment`.
+
+.. _layout_label_expressions:
+
+Exploring expressions in a label item
+-------------------------------------
+
+Below some examples of expressions you can use to populate the label item with
+interesting information - remember that the code, or at least the calculated part,
+should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` frame:
+
+* Display a title with the current atlas feature value in "field1":
+
+  ::
+
+    'This is the map for ' || "field1"
+
+  or, written in the :guilabel:`Main properties` section:
+
+  ::
+
+    This is the map for [% "field1" %]
+
+* Add a pagination for processed atlas features (eg, ``Page 1/10``):
+
+  ::
+
+    concat( 'Page ', @atlas_featurenumber, '/', @atlas_totalfeatures )
+
+* Return the X coordinate of the bottom left corner of a map canvas:
+
+  ::
+
+    x_min( map_get( item_variables( 'Map 1' ), 'map_extent' ) )
+
+* Retrieve the name of the layers in the current layout 'Map 1' item,
+  and formats in one name by line:
+
+  ::
+
+    array_to_string(
+      array_foreach(
+        map_get( item_variables( 'Map 1' ), 'map_layers' ), -- retrieve the layers list
+        layer_property( @element, 'name' ) -- retrieve each layer name
+      ),
+      '\n' -- converts the list to string separated by breaklines
+    )
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |logo| image:: /static/common/logo.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

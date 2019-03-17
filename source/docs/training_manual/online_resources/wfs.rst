@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Web Feature Services
 ===============================================================================
 
@@ -18,24 +22,24 @@ WMS.
   |wfs|
 
 * Click the :guilabel:`New` button.
-* In the dialog that appears, enter the :guilabel:`Name` as :kbd:`nsidc.org`
+* In the dialog that appears, enter the :guilabel:`Name` as ``nsidc.org``
   and the :guilabel:`URL` as
-  :kbd:`http://nsidc.org/cgi-bin/atlas_south?version=1.1.0`.
+  ``https://nsidc.org/cgi-bin/atlas_south?version=1.1.0``.
 
-  .. image:: /static/training_manual/online_resources/new_wfs_connection.png
+  .. image:: img/new_wfs_connection.png
      :align: center
 
 * Click :guilabel:`OK`, and the new connection will appear in your
   :guilabel:`Server connections`.
 * Click the :guilabel:`Connect`. A list of the available layers will appear:
 
-  .. image:: /static/training_manual/online_resources/wfs_connection_layers.png
+  .. image:: img/wfs_connection_layers.png
      :align: center
 
 * Find the layer :guilabel:`south_poles_wfs`.
 * Click on the layer to select it:
 
-  .. image:: /static/training_manual/online_resources/south_poles_wfs.png
+  .. image:: img/south_poles_wfs.png
      :align: center
 
 * Click :guilabel:`Add`.
@@ -44,7 +48,7 @@ It may take a while to load the layer. When it has loaded, it will appear in
 the map. Here it is over the outlines of Antarctica (available on the same
 server, and by the name of :guilabel:`antarctica_country_border`):
 
-.. image:: /static/training_manual/online_resources/antarctica_border.png
+.. image:: img/antarctica_border.png
    :align: center
 
 How is this different from having a WMS layer? That will become obvious when
@@ -53,13 +57,13 @@ you see the layers' attributes.
 * Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see
   this:
 
-.. image:: /static/training_manual/online_resources/poles_attribute_table.png
+.. image:: img/poles_attribute_table.png
    :align: center
 
 Since the points have attributes, we are able to label them,
 as well as change their symbology. Here's an example:
 
-.. image:: /static/training_manual/online_resources/labelling_example.png
+.. image:: img/labelling_example.png
    :align: center
 
 * Add labels to your layer to take advantage of the attribute data in this
@@ -103,25 +107,25 @@ from the server.
 * Double-click next to the :guilabel:`countries ...` layer in the
   :guilabel:`Filter` field, or click :guilabel:`Build query`:
 
-  .. image:: /static/training_manual/online_resources/select_country_filter.png
+  .. image:: img/select_country_filter.png
      :align: center
 
 * In the dialog that appears, build the query :kbd:`"Countryeng" = 'South
   Africa'`:
 
-  .. image:: /static/training_manual/online_resources/country_sa_builder.png
+  .. image:: img/country_sa_builder.png
      :align: center
 
 * It will appear as the :guilabel:`Filter` value:
 
-  .. image:: /static/training_manual/online_resources/country_filter_enabled.png
+  .. image:: img/country_filter_enabled.png
      :align: center
 
 * Click :guilabel:`Add` with the :guilabel:`countries` layer selected as
   above. Only the country with the :kbd:`Countryeng` value of :kbd:`South
   Africa` will load from that layer:
 
-  .. image:: /static/training_manual/online_resources/antarctica_sa.png
+  .. image:: img/antarctica_sa.png
      :align: center
 
 You don't have to, but if you tried both methods, you'll notice that this is a
@@ -152,3 +156,20 @@ instead of a WMS.
 -------------------------------------------------------------------------------
 
 Next, you'll see how to use QGIS Server to provide OGC services.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |wfs| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em

@@ -11,14 +11,14 @@ Vector geoprocessing
       :local:
       :depth: 1
 
-Clip vectors by extent
+
+.. _gdalclipvectorbyextent:
+
+Clip vector by extent
 ----------------------
-
-Description
-...........
-
 Clips any OGR-supported vector file to a given extent.
-The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+
+This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -30,10 +30,8 @@ Parameters
   Defines the bounding box that should be used for the output vector file.
   It has to be defined in target CRS units.
 
-  Default: *0,1,0,1*
-
 ``Additional creation Options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -42,27 +40,17 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: any]
   Output vector layer.
 
-Console usage
-.............
 
-::
+.. _gdalclipvectorbypolygon:
 
-  processing.runalg('gdalogr:clipvectorsbyextent', input_layer, clip_extent, options, output_layer)
-
-See also
-........
-
-Clip vectors by polygon
+Clip vector by polygon
 -----------------------
-
-Description
-...........
-
 Clips any OGR-supported vector layer by a polygon.
-The algorithm is derived from the `ogr2ogr utility <http://www.gdal.org/ogr2ogr.html>`_ .
+
+This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -74,7 +62,7 @@ Parameters
   Layer to be used as clipping extent for the input vector layer.
 
 ``Additional creation Options`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
@@ -83,16 +71,14 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [vector]
+``Output layer`` [vector: any]
   Output vector layer. By default this is an ESRI Shapefile.
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('gdalogr:clipvectorsbypolygon', input_layer, clip_layer, options, output_layer)
-
-See also
-........
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

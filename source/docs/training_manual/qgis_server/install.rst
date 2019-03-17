@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: QGIS Server; WMS Server; WFS Server; WCS Server
 
 .. _`label_qgisserver_tutorial`:
@@ -9,41 +13,23 @@
 Stretch. With negligible variations you can also follow it for
 any Debian based distribution like Ubuntu and its derivatives.
 
-.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to commands requiring admin permissions. In Debian you can work as admin (``root``), without using ``sudo``.
+.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to
+  commands requiring admin permissions. In Debian you can work as admin (``root``),
+  without using ``sudo``.
 
 |moderate| |FA| Install from packages
 -------------------------------------------------------------------------------
 
 In this lesson we're going to do only the install from packages as shown
-`here <http://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
-
-First add the QGIS repository by creating the
-:file:`/etc/apt/sources.list.d/debian-qgis.list` file with the following
-content:
-
-.. code-block:: sourceslist
-
- # latest stable
- deb http://qgis.org/debian stretch main
- deb-src http://qgis.org/debian stretch main
-
-After you add the ``gis.org`` repository public key to your apt keyring (follow
-the above link on how to do it) you can run the ``apt-get update`` command
-to refresh the packages list and ``apt-get dist-upgrade`` to upgrade the
-packages.
-
-.. note:: Currently Debian stable has LTR qgis packages in the source ``jessie-backports``, so the above steps are not necessary. Just add the ``jessie-backports`` repository and install with the ``-t jessie-backports`` option.
+`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ .
 
 Install QGIS Server with:
 
 .. code-block:: bash
 
  apt-get install qgis-server
- # optionally also:
+ # if you want to install server plugins, also:
  apt-get install python-qgis
-
-.. note:: adding ``-y`` at the end of the apt-get command will run it straight
-   away, without requiring confirmation.
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
@@ -70,7 +56,7 @@ like:
  Content-Length: 206
  Content-Type: text/xml; charset=utf-8
 
- <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
+ <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
  </ServiceExceptionReport>
 
@@ -85,10 +71,12 @@ In order to access on the installed QGIS server from an Internet Browser we
 need to use an HTTP server.
 
 In this lesson we're going to use the
-`Apache HTTP server <http://httpd.apache.org>`_, colloquially called Apache.
+`Apache HTTP server <https://httpd.apache.org>`_, colloquially called Apache.
 
 First we need to install Apache by running the following command in a terminal:
 ``apt-get install apache2 libapache2-mod-fcgid``.
+
+You can run QGIS server on your default website, or configure a virtualhost specifically for this, as follows.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
 called :file:`qgis.demo.conf`, with this content:
@@ -112,7 +100,7 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv PYTHONIOENCODING UTF-8
    FcgidInitialEnv LANG "en_US.UTF-8"
 
-   # QGIS log (different from apache logs) see http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
+   # QGIS log (different from apache logs) see https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html#qgis-server-logging
    FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
 
@@ -125,7 +113,7 @@ called :file:`qgis.demo.conf`, with this content:
    FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/home/qgis/qgisserverdb/"
    FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/home/qgis/qgisserverdb/qgis-auth.db"
 
-   # See http://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
+   # See https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/supported_data.html#pg-service-file
    SetEnv PGSERVICEFILE /home/qgis/.pg_service.conf
    FcgidInitialEnv PGPASSFILE "/home/qgis/.pgpass"
 
@@ -191,7 +179,7 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
  running the following commands.
 
  Install xvfb:
- 
+
 .. code-block:: bash
 
  apt-get install xvfb
@@ -225,7 +213,7 @@ In the above configuration file there's a ``FcgidInitialEnv DISPLAY ":99"``
 that tells QGIS Server instances to use display no. 99. If you're running the
 Server in Desktop then there's no need to install xvfb and you should simply
 comment with ``#`` this specific setting in the configuration file.
-More info at http://www.itopen.it/qgis-server-setup-notes/.
+More info at https://www.itopen.it/qgis-server-setup-notes/.
 
 Now that Apache knows that he should answer requests to http://qgis.demo
 we also need to setup the client system so that it knows who ``qgis.demo``
@@ -254,7 +242,7 @@ should output:
 
 .. code-block:: xml
 
-  <ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc">
+  <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
   </ServiceExceptionReport>
 
@@ -264,9 +252,9 @@ should output:
 
 Apache is now configured.
 
-Also, from yur client, you can check the capabilities of the server:
+Also, from your web browser you can check the capabilities of the server:
 
-http://qgis.dem/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+http://qgis.demo/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 |moderate| |FA| Create another virtual host
 -------------------------------------------------------------------------------
@@ -307,12 +295,12 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 
 * Apache doesn't know that he's supposed to answer requests pointing to the server
   named ``myhost``. In order to setup the virtual host the simplest way would
-  be to make a ``myhost.conf`` file in the :file:`/etc/apache/sites-available`
-  directory that has the same content as file:`qgis.demo.conf` except
+  be to make a ``myhost.conf`` file in the :file:`/etc/apache2/sites-available`
+  directory that has the same content as :file:`qgis.demo.conf` except
   for the ``ServerName`` line that should be ``ServerName myhost``. You could
   also change where the logs go as otherwise the logs for the two virtual hosts
   would be shared but this is optional.
-* Let's now enable the virtual host with ``apt-get a2ensite myhost.conf``
+* Let's now enable the virtual host with ``a2ensite myhost.conf``
   and then reload the Apache service with ``service apache2 reload``.
 * If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url
   you'll notice everything is working now!
@@ -329,3 +317,17 @@ how to configure Apache with QGIS Server, on Debian based Linux distros.
 Now that you've installed QGIS Server and it's accesible through the HTTP
 protocol, we need to learn how to access some of the services it can offer.
 The topic of the next lesson is to learn how to access QGIS Server WMS services.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

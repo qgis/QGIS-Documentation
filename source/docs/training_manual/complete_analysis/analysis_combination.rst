@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Combining the Analyses
 ===============================================================================
 
@@ -13,7 +17,7 @@ suitable plots.
 * Save your current map (:kbd:`raster_analysis.qgs`).
 * Open the map in which you created during the vector analysis earlier
   (you should have saved the file as :kbd:`analysis.qgs`).
-* In the :guilabel:`Layers list`, enable these layers:
+* In the :guilabel:`Layers` panel, enable these layers:
 
   * :guilabel:`hillshade`,
   * :guilabel:`solution` (or :guilabel:`buildings_over_100`)
@@ -30,15 +34,15 @@ suitable plots.
 You should now have a layer showing certain buildings as your solution, for
 example:
 
-.. image:: /static/training_manual/complete_analysis/new_solution_example.png
+.. image:: img/new_solution_example.png
    :align: center
 
 .. note:: If you find that the :guilabel:`Intersect` tool does not produce any
   results, check the CRS settings of each of your layers. The CRS must be the
   same for both the layers you are comparing. You may need to reproject one
-  layer by saving the layer as a new shapefile with the required CRS. In our
-  example, the :kbd:`suitable_terrain` layer was reprojected to
-  |localCRS| and named :kbd:`suitable_terrain_34S`.
+  layer by saving the layer as a new file with the required CRS. In our
+  example, the :file:`suitable_terrain` layer was reprojected to
+  |localCRS| and named :file:`suitable_terrain_34S.shp`.
 
 
 .. _backlink-complete-analysis-2:
@@ -82,3 +86,18 @@ property to develop.
 -------------------------------------------------------------------------------
 
 Next you will present these results as part of your second assignment.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |localCRS| replace:: ``WGS 84 / UTM 34S``
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

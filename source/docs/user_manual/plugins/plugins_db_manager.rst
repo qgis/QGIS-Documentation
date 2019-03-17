@@ -18,7 +18,7 @@ and they will get imported.
 
 .. _figure_db_manager:
 
-.. figure:: /static/user_manual/plugins/db_manager.png
+.. figure:: img/db_manager.png
    :align: center
 
    DB Manager dialog
@@ -65,7 +65,7 @@ and only that portion will be executed when you press :kbd:`F5` or click the
 
 .. _figure_db_manager_queries:
 
-.. figure:: /static/user_manual/plugins/db_manager_sql.png
+.. figure:: img/db_manager_sql.png
    :align: center
 
    Executing SQL queries in the DB Manager SQL window
@@ -76,3 +76,14 @@ and only that portion will be executed when you press :kbd:`F5` or click the
    instead of selecting a database, select **QGIS Layers** under **Virtual
    Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` for
    instructions on the SQL syntax to use.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

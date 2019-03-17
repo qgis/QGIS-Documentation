@@ -12,8 +12,8 @@ Getting Started
       :local:
       :depth: 2
 
-Installation
-============
+Installation on Debian-based systems
+====================================
 
 .. index:: Debian, Ubuntu
 
@@ -29,12 +29,12 @@ Please refer to that section.
 .. _`httpserver`:
 
 HTTP Server configuration
-=========================
+-------------------------
 
 .. index:: Apache
 
 Apache
-------
+......
 
 Configuration
 ^^^^^^^^^^^^^
@@ -46,10 +46,10 @@ Enable the rewrite module to pass HTTP BASIC auth headers:
 
 .. code-block:: bash
 
-  $ sudo a2enmod rewrite
-  $ cat /etc/apache2/conf-available/qgis-server-port.conf
-  Listen 80
-  $ sudo a2enconf qgis-server-port
+ sudo a2enmod rewrite
+ cat /etc/apache2/conf-available/qgis-server-port.conf
+ Listen 80
+ sudo a2enconf qgis-server-port
 
 This is the virtual host configuration, stored in
 :file:`/etc/apache2/sites-available/001-qgis-server.conf`:
@@ -98,8 +98,8 @@ Now enable the virtual host and restart Apache:
 
 .. code-block:: bash
 
-  $ sudo a2ensite 001-qgis-server
-  $ sudo service apache2 restart
+ sudo a2ensite 001-qgis-server
+ sudo service apache2 restart
 
 QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
 
@@ -107,31 +107,42 @@ QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
 NGINX
------
+.....
 
-You can also use QGIS Server with `NGINX <http://nginx.org/>`_. Unlike Apache,
-NGINX does not automatically spawn a FastCGI process. Actually, you have to use
-another component to start these processes.
+You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike Apache,
+NGINX does not automatically spawn FastCGI processes. The FastCGI processes are
+to be started by something else.
 
-To do that on Debian based systems, you may use **fcgiwrap** or **spawn-fcgi**
-based on your preferences to run QGIS Server. In both case, you have to install
-NGINX:
+On Debian-based systems, you may use **fcgiwrap** or **spawn-fcgi** to start
+and manage the QGIS Server processes. Official Debian packages exist for both.
+
+.. note::
+
+    fcgiwrap is easier to set up than spawn-fcgi, because it's already wrapped
+    in a Systemd service. But it also leads to a solution that is much slower
+    than using spawn-fcgi. With fcgiwrap a new QGIS Server process is created
+    on each request, meaning that the QGIS Server initialization process, which
+    includes reading and parsing the QGIS project file, is done on each request.
+    With spawn-fcgi, the QGIS Server process remains alive between requests,
+    resulting in much better performance. For that reason, spawn-fcgi
+    is recommended for production use.
+
+Install NGINX:
 
 .. code-block:: bash
 
-  $ sudo apt-get install nginx
+ sudo apt-get install nginx
 
 
 fcgiwrap
 ^^^^^^^^
 
-If you want to use fcgiwrap to run QGIS Server, you firstly have to install
-the corresponding package:
+If you want to use `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
+to run QGIS Server, you first have to install the corresponding package:
 
 .. code-block:: bash
 
-  $ sudo apt-get install fcgiwrap
-
+ sudo apt-get install fcgiwrap
 
 Then, introduce the following block in your NGINX server configuration:
 
@@ -149,16 +160,16 @@ Finally, restart NGINX and fcgiwrap to take into account the new configuration:
 
 .. code-block:: bash
 
-  $ sudo service nginx restart
-  $ sudo service fcgiwrap restart
+ sudo service nginx restart
+ sudo service fcgiwrap restart
 
 QGIS Server is now available at http://localhost/qgisserver.
 
 spawn-fcgi
 ^^^^^^^^^^
 
-If you prefer to use spawn-fcgi instead of fcgiwrap, the first step is to
-install the package:
+If you prefer to use `spawn-fcgi <https://redmine.lighttpd.net/projects/spawn-fcgi/wiki>`_ instead
+of fcgiwrap, the first step is to install the package:
 
 .. code-block:: bash
 
@@ -179,21 +190,28 @@ And restart NGINX to take into account the new configuration:
 
 .. code-block:: bash
 
-  $ sudo service nginx restart
+ sudo service nginx restart
 
 Finally, considering that there is no default service file for spawn-fcgi, you
 have to manually start QGIS Server in your terminal:
 
 .. code-block:: bash
 
-  $ sudo spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-                    -s /var/run/qgisserver.socket \
-                    -U www-data -G www-data -n
+ sudo spawn-fcgi -s /var/run/qgisserver.socket \
+                 -U www-data -G www-data -n \
+                 /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi
 
 Of course, you may write an init script (like a ``qgisserver.service`` file
 with Systemd) to start QGIS Server at boot time or whenever you want.
 
 QGIS Server is now available at http://localhost/qgisserver.
+
+.. note::
+
+    With the above command spawn-fcgi spawns only one QGIS Server process. To use more than one QGIS
+    Server process you can combine spawn-fcgi with the
+    `multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, which is also
+    packaged in Debian.
 
 Configuration
 ^^^^^^^^^^^^^
@@ -256,7 +274,7 @@ variables as shown below:
 
 
 Xvfb
-====
+----
 
 QGIS Server needs a running X Server to be fully usable. But if you don't have
 one, you may use xvfb to have a virtual X environment.
@@ -265,7 +283,7 @@ To install the package:
 
 .. code-block:: bash
 
-  $ sudo apt-get install xvfb
+ sudo apt-get install xvfb
 
 Then, according to your HTTP server, you should configure the **DISPLAY**
 parameter or directly use **xvfb-run**.
@@ -274,30 +292,127 @@ For example with NGINX and spawn-fcgi using xvfb-run:
 
 .. code-block:: bash
 
-  $ xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-                                 -s /tmp/qgisserver.socket \
-                                 -G www-data -U www-data -n
+ xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+                              -s /tmp/qgisserver.socket \
+                              -G www-data -U www-data -n
 
 The other option is to start a virtual X server environment with a specific
 display number thanks to **Xvfb**:
 
 .. code-block:: bash
 
-  $ /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+ /usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
 
 Then we just have to set the **DISPLAY** environment variable in the HTTP server
 configuration. For example with NGINX:
 
 .. code-block:: nginx
 
-  fastcgi_param  DISPLAY       ":99";
+ fastcgi_param  DISPLAY       ":99";
 
 Or with Apache:
 
 .. code-block:: apache
 
-  FcgidInitialEnv DISPLAY       ":99"
+ FcgidInitialEnv DISPLAY       ":99"
 
+
+Installation on Windows
+=======================
+
+.. index:: Windows
+
+QGIS Server can also be installed on Windows systems. While the QGIS Server
+package is available in the 64 bit version of the OSGeo4W network installer 
+(https://qgis.org/en/site/forusers/download.html) there is no Apache (or other
+web server) package available, so this must be installed by other means.
+
+A simple procedure is the following:
+
+* Download the XAMPP installer (https://www.apachefriends.org/download.html)
+  for Windows and install Apache
+
+.. figure:: img/qgis_server_windows1.png
+  :align: center
+  
+* Download the OSGeo4W installer, follow the "Advanced Install" and install
+  both the QGIS Desktop and QGIS Server packages
+  
+.. figure:: img/qgis_server_windows2.png
+  :align: center
+  
+* Edit the httpd.conf file (:file:`C:\\xampp\\apache\\httpd.conf`
+  if the default installation paths have been used) and make the following changes:
+
+From:
+
+.. code-block:: apache
+
+    ScriptAlias /cgi-bin/ "C:/xampp/cgi-bin/"
+
+
+To:
+
+.. code-block:: apache
+
+    ScriptAlias /cgi-bin/ "c:/OSGeo4W64/apps/qgis/bin/"
+
+
+From:
+
+.. code-block:: apache
+
+    <Directory "C:/xampp/cgi-bin">
+    AllowOverride None
+    Options None
+    Require all granted
+    </Directory>
+
+
+To:
+
+.. code-block:: apache
+
+    <Directory "c:/OSGeo4W64/apps/qgis/bin">
+    SetHandler cgi-script
+    AllowOverride None
+    Options ExecCGI
+    Order allow,deny
+    Allow from all
+    Require all granted
+    </Directory>
+
+
+From:
+
+.. code-block:: apache
+
+    AddHandler cgi-script .cgi .pl .asp
+
+
+To:
+
+.. code-block:: apache
+
+    AddHandler cgi-script .cgi .pl .asp .exe
+
+
+Then at the bottom of httpd.conf add:
+
+.. code-block:: apache
+
+    SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
+    SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
+    SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python36"
+    SetEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"
+    SetEnv QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
+    SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
+
+
+Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
+a GetCapabilities request to QGIS Server
+
+http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 
 Serve a project
@@ -315,10 +430,10 @@ retrieve the project:
 
 .. code-block:: bash
 
-  $ cd /home/user/
-  $ wget https://github.com/qgis/QGIS-Training-Data/archive/master.zip -O qgis-server-tutorial.zip
-  $ unzip qgis-server-tutorial.zip
-  $ mv QGIS-Training-Data-master/training_manual_data/qgis-server-tutorial-data ~
+ cd /home/user/
+ wget https://github.com/qgis/QGIS-Training-Data/archive/QGIS-Training-Data-v2.0.zip -O qgis-server-tutorial.zip
+ unzip qgis-server-tutorial.zip
+ mv QGIS-Training-Data-QGIS-Training-Data-v2.0/training_manual_data/qgis-server-tutorial-data ~
 
 The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of course,
 you can use your favorite GIS software to open this file and take a look on the
@@ -349,7 +464,7 @@ like this in your web browser to retrieve the *countries* layer:
 
 If you obtain the next image, then QGIS Server is running correctly:
 
-.. figure:: /static/user_manual/working_with_ogc/server_basic_getmap.png
+.. figure:: img/server_basic_getmap.png
   :align: center
 
   Server response to a basic GetMap request
@@ -361,10 +476,10 @@ For example with spawn-fcgi:
 
 .. code-block:: bash
 
-  $ export PROJECT_FILE=/home/user/qgis-server-tutorial-data-master/world.qgs
-  $ spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
-               -s /var/run/qgisserver.socket \
-               -U www-data -G www-data -n
+ export PROJECT_FILE=/home/user/qgis-server-tutorial-data-master/world.qgs
+ spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+            -s /var/run/qgisserver.socket \
+            -U www-data -G www-data -n
 
 
 
@@ -379,31 +494,19 @@ styles of the layers in QGIS and the project CRS, if not already defined.
 
 .. _figure_server_definitions:
 
-.. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
+.. figure:: img/ows_server_definition.png
    :align: center
 
    Definitions for a QGIS Server WMS/WFS/WCS project
 
 Then, go to the :guilabel:`QGIS Server` menu of the
-:menuselection:`Project --> Project Properties` dialog and provide
+:menuselection:`Project --> Properties...` dialog and provide
 some information about the OWS in the fields under
 :guilabel:`Service Capabilities`.
 This will appear in the GetCapabilities response of the WMS, WFS or WCS.
 If you don't check |checkbox| :guilabel:`Service capabilities`,
 QGIS Server will use the information given in the :file:`wms_metadata.xml` file
 located in the :file:`cgi-bin` folder.
-
-.. warning::
-
- If you're using the QGIS project with styling based on SVG files using
- relative paths then you should know that the server considers the path
- relative to its :file:`qgis_mapserv.fcgi` file (not to the :file:`qgs` file).
- So, if you deploy a project on the server and the SVG files are not placed
- accordingly, the output images may not respect the Desktop styling.
- To ensure this doesn't happen, you can simply copy the SVG files relative
- to the :file:`qgis_mapserv.fcgi`. You can also create a symbolic link in the
- directory where the fcgi file resides that points to the directory containing
- the SVG files (on Linux/Unix).
 
 WMS capabilities
 ----------------
@@ -416,20 +519,21 @@ Clicking :guilabel:`Use Current Canvas Extent` sets these values to the
 extent currently displayed in the QGIS map canvas.
 By checking |checkbox| :guilabel:`CRS restrictions`, you can restrict
 in which coordinate reference systems (CRS) QGIS Server will offer
-to render maps.
+to render maps. It is recommended that you restrict the offered CRS as this
+reduces the size of the WMS GetCapabilities response.
 Use the |signPlus| button below to select those CRSs
 from the Coordinate Reference System Selector, or click :guilabel:`Used`
 to add the CRSs used in the QGIS project to the list.
 
-If you have print composers defined in your project, they will be listed in the
+If you have print layouts defined in your project, they will be listed in the
 `GetProjectSettings` response, and they can be used by the GetPrint request to
-create prints, using one of the print composer layouts as a template.
+create prints, using one of the print layout layouts as a template.
 This is a QGIS-specific extension to the WMS 1.3.0 specification.
-If you want to exclude any print composer from being published by the WMS,
-check |checkbox| :guilabel:`Exclude composers` and click the
+If you want to exclude any print layout from being published by the WMS,
+check |checkbox| :guilabel:`Exclude layouts` and click the
 |signPlus| button below.
-Then, select a print composer from the :guilabel:`Select print composer` dialog
-in order to add it to the excluded composers list.
+Then, select a print layout from the :guilabel:`Select print layout` dialog
+in order to add it to the excluded layouts list.
 
 If you want to exclude any layer or layer group from being published by the
 WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
@@ -437,15 +541,31 @@ WMS, check |checkbox| :guilabel:`Exclude Layers` and click the
 This opens the :guilabel:`Select restricted layers and groups` dialog, which
 allows you to choose the layers and groups that you don't want to be published.
 Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to select multiple entries.
+It is recommended that you exclude from publishing the layers that you don't
+need as this reduces the size of the WMS GetCapabilities response which leads
+to faster loading times on the client side.
 
 You can receive requested GetFeatureInfo as plain text, XML and GML. Default is XML,
 text or GML format depends the output format chosen for the GetFeatureInfo request.
 
 If you wish, you can check |checkbox| :guilabel:`Add geometry to feature response`.
 This will include in the GetFeatureInfo response the geometries of the
-features in a text format. If you want QGIS Server to advertise specific request URLs
+features in a text format.
+
+As many web clients can’t display circular arcs in geometries you have the option
+to segmentize the geometry before sending it to the client in a GetFeatureInfo
+response. This allows such clients to still display a feature’s geometry
+(e.g. for highlighting the feature). You need to check the
+|checkbox| :guilabel:`Segmentize feature info geometry` to activate the option.
+
+You can also use the :guilabel:`GetFeatureInfo geometry precision` option to
+set the precision of the GetFeatureInfo geometry. This enables you to save
+bandwidth when you don't need the full precision.
+
+If you want QGIS Server to advertise specific request URLs
 in the WMS GetCapabilities response, enter the corresponding URL in the
 :guilabel:`Advertised URL` field.
+
 Furthermore, you can restrict the maximum size of the maps returned by the
 GetMap request by entering the maximum width and height into the respective
 fields under :guilabel:`Maximums for GetMap request`.
@@ -493,5 +613,18 @@ This can be accessed by double clicking the annotation while one of the
 annotation tools is active.
 For SVG annotations, you will need either to set the project to save absolute
 paths (in the :guilabel:`General` menu of the
-:menuselection:`Project --> Project Properties` dialog) or to manually modify
+:menuselection:`Project --> Properties...` dialog) or to manually modify
 the path to the SVG image so that it represents a valid relative path.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

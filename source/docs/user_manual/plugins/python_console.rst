@@ -40,15 +40,14 @@ Toolbar
 
 The toolbar proposes the following tools:
 
-* |iconClearConsole| :guilabel:`Clear console` to wipe the output area;
-* |iconClassConsole| :guilabel:`Import class`: **Processing**, **PyQt4.QtCore**
-  or **PyQt4.QtGui** class;
-* |iconRunConsole| :guilabel:`Run command` available in the input area: same as
+* |clearConsole| :sup:`Clear Console` to wipe the output area;
+* |runConsole| :sup:`Run Command` available in the input area: same as
   pressing :kbd:`Enter`;
-* |iconeShowEditorConsole| :guilabel:`Show editor`: toggles :ref:`console_editor`
+* |showEditorConsole| :sup:`Show Editor`: toggles :ref:`console_editor`
   visibility;
-* |iconSettingsConsole| :guilabel:`Options...`;
-* |iconHelpConsole| :guilabel:`Help...`.
+* |options| :sup:`Options...`: opens a dialog to configure console
+  properties (see :ref:`console_options`);
+* |helpContents| :sup:`Help...`: browses the current documentation.
 
 
 Console
@@ -60,7 +59,7 @@ The console main features are:
 
   * Python
   * PyQGIS
-  * PyQt4
+  * PyQt5
   * QScintilla2
   * osgeo-gdal-ogr
 
@@ -68,7 +67,7 @@ The console main features are:
   :ref:`console_options`;
 * Execute code snippets from the input area by typing and pressing :kbd:`Enter`
   or :guilabel:`Run Command`;
-* Execute code snippets from the output area using the :guilabel:`Enter selected`
+* Execute code snippets from the output area using the :guilabel:`Enter Selected`
   from the contextual menu or pressing :kbd:`Ctrl+E`;
 * Browse the command history from the input area using the :kbd:`Up` and
   :kbd:`Down` arrow keys and execute the command you want;
@@ -77,8 +76,10 @@ The console main features are:
   accessed from context menu of input area;
 * Save and clear the command history. The history will be saved into the file
   :file:`~/.qgis2/console_history.txt`;
-* Open `QGIS API <http://qgis.org/api>`_ documentation by typing ``_api``;
-* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_pyqgis``.
+* Open `QGIS C++ API <https://qgis.org/api>`_ documentation by typing ``_api``;
+* Open `QGIS Python API <https://qgis.org/pyqgis>`_ documentation by typing ``_pyqgis``.
+* Open :ref:`PyQGIS Cookbook <PyQGIS-Developer-Cookbook>` by typing ``_cookbook``.
+
 
 .. tip:: **Reuse executed commands from the output panel**
 
@@ -88,7 +89,7 @@ The console main features are:
   
 .. _figure_python_console:
 
-.. figure:: /static/user_manual/plugins/python_console.png
+.. figure:: img/python_console.png
    :align: center
 
    The Python Console
@@ -98,7 +99,7 @@ The console main features are:
 The Code Editor
 ===============
 
-Use the |iconeShowEditorConsole| :sup:`Show editor` button to enable the editor
+Use the |showEditorConsole| :sup:`Show Editor` button to enable the editor
 widget. It allows editing and saving Python files and offers advanced
 functionalities to manage your code (comment and uncomment code, check syntax,
 share the code via codepad.org and much more). Main features are:
@@ -107,14 +108,14 @@ share the code via codepad.org and much more). Main features are:
 
   * Python
   * PyQGIS
-  * PyQt4
+  * PyQt5
   * QScintilla2
   * osgeo-gdal-ogr
 
 * :kbd:`Ctrl+Space` to view the auto-completion list.
 * Sharing code snippets via codepad.org.
 * :kbd:`Ctrl+4` Syntax check.
-* Search bar (open it with the default Desktop Environment shorcut, usually
+* Search bar (open it with the default Desktop Environment shortcut, usually
   :kbd:`Ctrl+F`):
 
   * Use the default Desktop Environment shortcut to find next/previous
@@ -125,9 +126,10 @@ share the code via codepad.org and much more). Main features are:
 
 * Object inspector: a class and function browser;
 * Go to an object definition with a mouse click (from Object inspector);
-* Execute code snippets with the :guilabel:`Enter selected` command;
-* Execute the whole script with the :guilabel:`Run script` command (this
-  creates a byte-compiled file with the extension :file:`.pyc`).
+* Execute code snippets with the |runConsole| :guilabel:`Run Selected`
+  command in contextual menu;
+* Execute the whole script with the |start| :guilabel:`Run Script`
+  command (this creates a byte-compiled file with the extension :file:`.pyc`).
 
 .. note::
 
@@ -136,7 +138,7 @@ share the code via codepad.org and much more). Main features are:
 
 .. _figure_python_console_editor:
 
-.. figure:: /static/user_manual/plugins/python_console_editor.png
+.. figure:: img/python_console_editor.png
    :align: center
 
    The Python Console editor
@@ -146,33 +148,74 @@ share the code via codepad.org and much more). Main features are:
 Options
 =======
 
-Accessible either from the Console toolbar or the contextual menu of Console
-output panel or Code Editor, this adds further settings to manage and control
-the Python console behavior:
+Accessible from the Console toolbar and the contextual menus of the Console
+output panel and the Code Editor, the :guilabel:`Python Console Settings`
+help manage and control the Python console behavior.
 
-* **Autocompletion:** If checked the code completion is enabled. You can get
-  autocompletion from current document, from installed APIs and both from APIs
-  and current document.
+For both :guilabel:`Console` and :guilabel:`Editor` you can specify:
 
-* **Autocompletion threshold:** Sets the threshold to display the autocompletion list
-  (in chars typed).
+* :guilabel:`Autocompletion`: Enables code completion. You can get
+  autocompletion from the current document, the installed API files or both.
 
-* **Automatic parentheses insertion:** If checked enables the autoclosing for bracket.
+  * :guilabel:`Autocompletion threshold`: Sets the threshold for displaying
+    the autocompletion list (in characters)
+    
+* :guilabel:`Typing`
 
-* **Auto-save script before running:** Allows you to save automatically the script to
-  be executed in order to avoid to save it after any modification. This action
-  will store a temporary file into the temporary system directory that will be
-  automatically deleted after running.
+  * :guilabel:`Automatic parentheses insertion`: Enables autoclosing for
+    parentheses
 
-* **Using preloaded APIs file:** You can choose whether use the preload APIs file or
-  load some APIs files saved on your system.
+  * :guilabel:`Automatic insertion of the 'import' string on 'from xxx'`:
+    Enables insertion of 'import' when specifying imports
+    
+For :guilabel:`Editor` you can also specify:
 
-* **Using prepared APIs file:** If checked the ``*.pap`` file will be used for code
-  completion. To generate a prepared APIs file you have to load at least an ``*.api``
-  file and then compile it by clicking on **[Compile Apis...]** button.
+* :guilabel:`Run and Debug`
+
+  * :guilabel:`Enable Object Inspector (switching between tabs may be slow)`:
+    Enable the object inspector.
+
+  * :guilabel:`Auto-save script before running`: Saves the script
+    automatically when executed. This action will store a temporary file (in the
+    temporary system directory) that will be deleted automatically after running.
+
+* :guilabel:`Font and Colors`: Here you can specify the font to use in the
+  editor and the colors to use for highlighting
+
+For :guilabel:`APIs` you can specify:
+
+* :guilabel:`Using preloaded APIs file`: You can choose if you would like to use the
+  preloaded API files.  If this is not checked you can add API files and you
+  can also choose if you would like to use prepared API files (see next option).
+
+* :guilabel:`Using prepared APIs file`: If checked, the chosen ``*.pap`` file will
+  be used for code completion. To generate a prepared API file you have to load
+  at least one ``*.api`` file and then compile it by clicking the
+  :guilabel:`Compile APIs...` button.
 
 .. tip:: **Save the options**
 
    To save the state of console's widgets you have to close the Python
    Console from the close button. This allows you to save the geometry to be
    restored to the next start.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |runConsole| image:: /static/common/iconRunConsole.png
+   :width: 1.5em
+.. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
+   :width: 1.5em
+.. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 The processing log
 ====================
 
@@ -26,3 +30,13 @@ For instance, try the following. Open the data corresponding to the first chapte
 ---------------------
 
 You can also modify the algorithm. Just copy it, open the :menuselection:`Plugins --> Python console`, click on :menuselection:`Import class --> Import Processing class`, then paste it to re-run the analysis; change the text at will. To display the resulting file, type :kbd:`iface.addVectorLayer('/path/filename.shp', 'Layer name in legend', 'ogr')`. Otherwise, you can use :kbd:`processing.runandload`.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |hard| image:: /static/global/hard.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 |MOD| Spatial Database Concepts with PostGIS
 *******************************************************************************
@@ -6,13 +10,12 @@ Spatial Databases allow the storage of the geometries of records inside a
 Database as well as providing functionality for querying and retrieving the
 records  using these Geometries. In this module we will use PostGIS, an
 extension to PostgreSQL, to learn how to setup a spatial database, import data
-from shapefiles into the database and make use of the geographic functions that
-PostGIS offers.
+into the database and make use of the geographic functions that PostGIS offers.
 
 While working through this section, you may want to keep a copy of the **PostGIS
 cheat sheet**  available
-from `Boston GIS user group <http://www.bostongis.com/postgis_quickguide.bqg>`_.
-Another useful resource is the `online <http://postgis.net/docs/>`_ PostGIS
+from `Boston GIS user group <https://www.bostongis.com/postgis_quickguide.bqg>`_.
+Another useful resource is the `online <https://postgis.net/docs/>`_ PostGIS
 documentation.
 
 There are also some more extensive tutorials on PostGIS and Spatial Databases
@@ -32,3 +35,13 @@ See also `PostGIS online <http://postgisonline.org/>`_.
    import_export
    spatial_queries
    geometry
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |MOD| replace:: Module:
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

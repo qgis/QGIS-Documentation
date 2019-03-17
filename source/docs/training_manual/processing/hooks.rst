@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Pre- and post-execution script hooks
 ====================================
 
@@ -9,7 +13,7 @@ actual data processing is performed. This can be used to automate tasks that
 should be performed whenever an algorithm is executed.
 
 The syntax of the hooks is identical to the syntax of Processing scripts, see the
-corresponding `chapter <http://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_
+corresponding `chapter <https://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_
 in the QGIS User Guide for more details.
 
 In addition to all scripts features, in hooks you can use a special global
@@ -73,5 +77,15 @@ Then we iterate over all the algorithm parameters and if a ParameterVector param
 get the corresponding vector layer object from it. We loop over all the features of the layer and 
 check them for geometry errors. If at least one feature contains an invalid geometry, we print a warning message.
 
-To activate this hook we need enter its filename in the *Pre-execution script file* option in the Processing configuration dialog. 
+To activate this hook we need enter its filename in the *Pre-execution script
+file* option in the Processing configuration dialog. 
 The hook will be executed before running any Processing algorithm.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -23,7 +23,7 @@ the features.
 
 .. _figure_vector_landscape:
 
-.. figure:: /static/gentle_gis_introduction/landscape.jpg
+.. figure:: img/landscape.jpg
    :align: center
    :width: 30em
 
@@ -32,7 +32,7 @@ the features.
 
 A vector feature has its shape represented using **geometry**. The geometry is
 made up of one or more interconnected **vertices**. A vertex describes a position
-in space using an **X**, **Y** and optionally **z** axis. Geometries which have
+in space using an **X**, **Y** and optionally **Z** axis. Geometries which have
 vertices with a ``Z`` axis are often referred to as **2.5D** since they describe
 height or depth at each vertex, but not both.
 
@@ -45,7 +45,7 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_point:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/point_feature.png
+.. figure:: img/point_feature.png
    :align: center
    :width: 30em
 
@@ -54,7 +54,7 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_polyline:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/polyline_feature.png
+.. figure:: img/polyline_feature.png
    :align: center
    :width: 30em
 
@@ -63,7 +63,7 @@ enclosed **polygon** feature is formed (see illustration figure_geometry_polygon
 
 .. _figure_geometry_polygon:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/polygon_feature.png
+.. figure:: img/polygon_feature.png
    :align: center
    :width: 30em
 
@@ -76,7 +76,7 @@ them now (see illustration figure_geometry_landscape_).
 
 .. _figure_geometry_landscape:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/landscape_geometry.jpg
+.. figure:: img/landscape_geometry.jpg
    :align: center
    :width: 30em
 
@@ -139,7 +139,7 @@ small enough for the scale at which you want to use the data.
 
 .. _figure_polyline_jagged:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/jagged_polyline.png
+.. figure:: img/jagged_polyline.png
    :align: center
    :width: 30em
 
@@ -225,7 +225,7 @@ time and effort capturing the data.
 
 .. _figure_vector_small_scale:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/small_scale.png
+.. figure:: img/small_scale.png
    :align: center
    :width: 30em
 
@@ -233,7 +233,7 @@ time and effort capturing the data.
 
 .. _figure_vector_large_scale:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/large_scale.png
+.. figure:: img/large_scale.png
    :align: center
    :width: 30em
 
@@ -254,7 +254,7 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_vector_symbology:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/symbology_settings.png
+.. figure:: img/symbology_settings.png
    :align: center
    :width: 30em
 
@@ -263,7 +263,7 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_generic_symbology:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/symbology_generic.png
+.. figure:: img/symbology_generic.png
    :align: center
    :width: 30em
 
@@ -272,7 +272,7 @@ figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_custom_symbology:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/symbology_custom.png
+.. figure:: img/symbology_custom.png
    :align: center
    :width: 30em
 
@@ -314,7 +314,7 @@ areas don't meet properly (see figure_vector_slivers_).
 
 .. _figure_vector_slivers:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/vector_slivers.png
+.. figure:: img/vector_slivers.png
    :align: center
    :width: 30em
 
@@ -331,7 +331,7 @@ overshoots look like.
 
 .. _figure_vector_shoots:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/vector_overshoots.png
+.. figure:: img/vector_overshoots.png
    :align: center
    :width: 30em
 
@@ -373,7 +373,7 @@ We have summarised the GIS Vector Data concept in Figure figure_vector_summary_.
 
 .. _figure_vector_summary:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/vector_summary.png
+.. figure:: img/vector_summary.png
    :align: center
    :width: 30em
 
@@ -395,7 +395,7 @@ Here are some ideas for you to try with your learners:
 
 .. _figure_sample_map:
 
-.. figure:: /static/gentle_gis_introduction/vector_data/sample_map.png
+.. figure:: img/sample_map.png
    :align: center
    :width: 30em
 
@@ -438,3 +438,13 @@ What's next?
 
 In the section that follows we will take a closer look at **attribute data** to
 see how it can be used to describe vector features.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

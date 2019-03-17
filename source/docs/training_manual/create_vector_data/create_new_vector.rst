@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Creating a New Vector Dataset
 ===============================================================================
 
@@ -23,7 +27,7 @@ to define a new layer.
 
 You'll be presented with the following dialog:
 
-.. image:: /static/training_manual/create_vector_data/create_vector_layer.png
+.. image:: img/create_vector_layer.png
    :align: center
 
 It's important to decide which kind of dataset you want at this stage. Each
@@ -35,7 +39,7 @@ areas. For such features, you'll need to create a polygon dataset.
 
 * Click on the :guilabel:`Polygon` radio button:
 
-.. image:: /static/training_manual/create_vector_data/polygon_selected.png
+.. image:: img/polygon_selected.png
    :align: center
 
 This has no impact on the rest of the dialog, but it will cause the correct
@@ -46,7 +50,7 @@ CRS specifies how to describe a point on Earth in terms of coordinates, and
 because there are many different ways to do this, there are many different CRSs.
 The CRS of this project is WGS84, so it's already correct by default:
 
-.. image:: /static/training_manual/create_vector_data/default_crs.png
+.. image:: img/default_crs.png
    :align: center
 
 Next there is a collection of fields grouped under :guilabel:`New attribute`.
@@ -59,19 +63,21 @@ will be enough to add one field called :kbd:`name`.
 * Replicate the setup below, then click the :guilabel:`Add to attributes list`
   button:
 
-.. image:: /static/training_manual/create_vector_data/new_attribute.png
+.. image:: img/new_attribute.png
    :align: center
 
 * Check that your dialog now looks like this:
 
-.. image:: /static/training_manual/create_vector_data/new_attribute_added.png
+.. image:: img/new_attribute_added.png
    :align: center
 
 * Click :guilabel:`OK`. A save dialog will appear.
 * Navigate to the :kbd:`exercise_data` directory.
 * Save your new layer as :kbd:`school_property.shp`.
 
-The new layer should appear in your :guilabel:`Layers list`.
+The new layer should appear in your :guilabel:`Layers` panel.
+
+.. _tm_datasources:
 
 |basic| |FA| Data Sources
 -------------------------------------------------------------------------------
@@ -95,12 +101,12 @@ are provided, so you'll need to import them as necessary.
 * Navigate to :kbd:`exercise_data/raster/`.
 * Select the file :kbd:`3420C_2010_327_RGB_LATLNG.tif`.
 * Click :guilabel:`Open`. An image will load into your map.
-* Find the new image in the :guilabel:`Layers list`.
+* Find the new image in the :guilabel:`Layers` panel.
 * Click and drag it to the bottom of the list so that you can still see your
   other layers.
 * Find and zoom to this area:
 
-.. image:: /static/training_manual/create_vector_data/map_area_zoom.png
+.. image:: img/map_area_zoom.png
    :align: center
 
 .. note:: If your :guilabel:`buildings` layer symbology is covering part or all of the
@@ -110,7 +116,7 @@ are provided, so you'll need to import them as necessary.
 
 You'll be digitizing these three fields:
 
-.. image:: /static/training_manual/create_vector_data/field_outlines.png
+.. image:: img/field_outlines.png
    :align: center
 
 In order to begin digitizing, you'll need to enter **edit mode**. GIS software
@@ -131,7 +137,7 @@ Toolbars --> Digitizing` menu entry.
 As soon as you are in edit mode, you'll see the digitizing tools are now
 active:
 
-  |capturePolygon| |moveFeature| |nodeTool|
+  |capturePolygon| |moveFeature| |vertexToolActiveLayer|
 
 Four other relevant buttons are still inactive, but will become active when we
 start interacting with our new data:
@@ -163,7 +169,7 @@ and dragging around in the map.
 
 The first feature you'll be digitizing is the |schoolAreaType1|:
 
-.. image:: /static/training_manual/create_vector_data/school_area_one.png
+.. image:: img/school_area_one.png
    :align: center
 
 * Start digitizing by clicking on a point somewhere along the edge of the
@@ -174,7 +180,7 @@ The first feature you'll be digitizing is the |schoolAreaType1|:
   This will finalize the feature and show you the :guilabel:`Attributes` dialog.
 * Fill in the values as below:
 
-.. image:: /static/training_manual/create_vector_data/school_area_one_attributes.png
+.. image:: img/school_area_one_attributes.png
    :align: center
 
 * Click :guilabel:`OK` and you've created a new feature!
@@ -185,7 +191,7 @@ digitizing until you're done creating the feature as above. Then:
 
 * Select the feature with the :guilabel:`Select Single Feature` tool:
 
-.. image:: /static/training_manual/create_vector_data/single_feature_select.png
+.. image:: img/single_feature_select.png
    :align: center
 
 You can use:
@@ -195,7 +201,7 @@ You can use:
   miss-clicked,
 * :guilabel:`Delete Selected` to get rid of the feature entirely so you can try
   again, and
-* the :menuselection:`Edit --> Undo` menu item or the :kbd:`ctrl + z` keyboard
+* the :menuselection:`Edit --> Undo` menu item or the :kbd:`Ctrl+Z` keyboard
   shortcut to undo mistakes.
 
 |basic| |TY|
@@ -203,7 +209,7 @@ You can use:
 
 * Digitize the school itself and the upper field. Use this image to assist you:
 
-.. image:: /static/training_manual/create_vector_data/field_outlines.png
+.. image:: img/field_outlines.png
    :align: center
 
 Remember that each new feature needs to have a unique :kbd:`id` value!
@@ -229,12 +235,12 @@ Remember that each new feature needs to have a unique :kbd:`id` value!
 Our path runs along the southern edge of the suburb of Railton, starting and
 ending at marked roads:
 
-.. image:: /static/training_manual/create_vector_data/path_start_end.png
+.. image:: img/path_start_end.png
    :align: center
 
 Our track is a little further to the south:
 
-.. image:: /static/training_manual/create_vector_data/track_start_end.png
+.. image:: img/track_start_end.png
    :align: center
 
 One at a time, digitize the path and the track on the :guilabel:`routes` layer.
@@ -271,3 +277,39 @@ Features in a GIS layer aren't just pictures, but objects in space. For
 example, adjacent polygons know where they are in relation to one another. This
 is called *topology*. In the next lesson you'll see an example of why this can
 be useful.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
+   :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |moveFeature| image:: /static/common/mActionMoveFeature.png
+   :width: 1.5em
+.. |saveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |schoolAreaType1| replace:: athletics field
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em

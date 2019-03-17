@@ -12,131 +12,244 @@ Using processing algorithms from the console
    .. contents::
       :local:
 
-The console allows advanced users to increase their productivity and perform
-complex operations that cannot be performed using any of the other GUI elements of
-the processing framework. Models involving several algorithms can be defined using the
-command-line interface, and additional operations such as loops and conditional
-sentences can be added to create more flexible and powerful workflows.
+The console allows advanced users to increase their productivity and
+perform complex operations that cannot be performed using any of the
+other GUI elements of the processing framework. Models involving
+several algorithms can be defined using the command-line interface,
+and additional operations such as loops and conditional sentences can
+be added to create more flexible and powerful workflows.
 
-There is not a processing console in QGIS, but all processing commands are
-available instead from the QGIS built-in :ref:`Python console <console>`.
-That means that you can incorporate those commands into your console work
-and connect processing algorithms to all the other features (including methods
-from the QGIS API) available from there.
+There is not a processing console in QGIS, but all processing commands
+are available instead from the QGIS built-in :ref:`Python console
+<console>`.  That means that you can incorporate those commands into
+your console work and connect processing algorithms to all the other
+features (including methods from the QGIS API) available from there.
 
-The code that you can execute from the Python console, even if it does not call
-any specific processing method, can be converted into a new algorithm that you can
-later call from the toolbox, the graphical modeler or any other component,
-just like you do with any other algorithm. In fact, some algorithms that
-you can find in the toolbox are simple scripts.
+The code that you can execute from the Python console, even if it does
+not call any specific processing method, can be converted into a new
+algorithm that you can later call from the toolbox, the graphical
+modeler or any other component, just like you do with any other
+algorithm. In fact, some algorithms that you can find in the toolbox
+are simple scripts.
 
-In this section, we will see how to use processing algorithms from the QGIS Python console,
-and also how to write algorithms using Python.
+In this section, we will see how to use processing algorithms from the
+QGIS Python console, and also how to write algorithms using Python.
 
 Calling algorithms from the Python console
 ------------------------------------------
 
-The first thing you have to do is to import the processing functions with the
-following line:
+The first thing you have to do is to import the processing functions
+with the following line:
 
 ::
 
     >>> import processing
 
-Now, there is basically just one (interesting) thing you can do with that
-from the console: execute an algorithm. That is done using the ``runalg()``
-method, which takes the name of the algorithm to execute as its first parameter,
-and then a variable number of additional parameters depending on the requirements
-of the algorithm. So the first thing you need to know is the name of the algorithm
-to execute. That is not the name you see in the toolbox, but rather a unique
-command–line name. To find the right name for your algorithm, you can use the
-``algslist()`` method. Type the following line in your console:
+Now, there is basically just one (interesting) thing you can do with
+that from the console: execute an algorithm. That is done using the
+``run()`` method, which takes the name of the algorithm to execute
+as its first parameter, and then a variable number of additional
+parameters depending on the requirements of the algorithm. So the
+first thing you need to know is the name of the algorithm to
+execute. That is not the name you see in the toolbox, but rather a
+unique command–line name. To find the right name for your algorithm,
+you can use the processingRegistry. Type the following line in your
+console:
 
 ::
 
-    >>> processing.alglist()
+    >>> for alg in QgsApplication.processingRegistry().algorithms():
+            print(alg.id(), "->", alg.displayName())
 
-You will see something like this.
+You will see something like this (with some extra dashes added to
+improve readability).
 
 ::
 
-   Accumulated Cost (Anisotropic)-------->saga:accumulatedcost(anisotropic)
-   Accumulated Cost (Isotropic)---------->saga:accumulatedcost(isotropic)
-   Add Coordinates to points------------->saga:addcoordinatestopoints
-   Add Grid Values to Points------------->saga:addgridvaluestopoints
-   Add Grid Values to Shapes------------->saga:addgridvaluestoshapes
-   Add Polygon Attributes to Points------>saga:addpolygonattributestopoints
-   Aggregate----------------------------->saga:aggregate
-   Aggregate Point Observations---------->saga:aggregatepointobservations
-   Aggregation Index--------------------->saga:aggregationindex
-   Analytical Hierarchy Process---------->saga:analyticalhierarchyprocess
-   Analytical Hillshading---------------->saga:analyticalhillshading
-   Average With Mask 1------------------->saga:averagewithmask1
-   Average With Mask 2------------------->saga:averagewithmask2
-   Average With Thereshold 1------------->saga:averagewiththereshold1
-   Average With Thereshold 2------------->saga:averagewiththereshold2
-   Average With Thereshold 3------------->saga:averagewiththereshold3
-   B-Spline Approximation---------------->saga:b-splineapproximation
+   3d:tessellate --------------> Tessellate
+   gdal:aspect ----------------> Aspect
+   gdal:assignprojection ------> Assign projection
+   gdal:buffervectors ---------> Buffer vectors
+   gdal:buildvirtualraster ----> Build Virtual Raster
+   gdal:cliprasterbyextent ----> Clip raster by extent
+   gdal:cliprasterbymasklayer -> Clip raster by mask layer
+   gdal:clipvectorbyextent ----> Clip vector by extent
+   gdal:clipvectorbypolygon ---> Clip vector by mask layer
+   gdal:colorrelief -----------> Color relief
+   gdal:contour ---------------> Contour
+   gdal:convertformat ---------> Convert format
+   gdal:dissolve --------------> Dissolve
    ...
 
-That's a list of all the available algorithms, alphabetically ordered, along with
-their corresponding command-line names.
+That's a list of all the available algorithm IDs, sorted by provider
+name and algorithm name, along with their corresponding names.
 
-You can use a string as a parameter for this method. Instead of returning the
-full list of algorithms, it will only display those that include that string. If,
-for instance, you are looking for an algorithm to calculate slope from a DEM, type
-``alglist("slope")`` to get the following result::
+Once you know the command-line name of the algorithm, the next thing
+to do is to determine the right syntax to execute it. That means
+knowing which parameters are needed when calling the ``run()`` method.
 
+There is a method to describe an algorithm in detail, which can be
+used to get a list of the parameters that an algorithm requires and
+the outputs that it will generate. To get this information, you can
+use the ``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of
+the algorithm, not the full descriptive name.
 
-
- DTM Filter (slope-based)-------------->saga:dtmfilter(slope-based)
- Downslope Distance Gradient----------->saga:downslopedistancegradient
- Relative Heights and Slope Positions-->saga:relativeheightsandslopepositions
- Slope Length-------------------------->saga:slopelength
- Slope, Aspect, Curvature-------------->saga:slopeaspectcurvature
- Upslope Area-------------------------->saga:upslopearea
- Vegetation Index[slope based]--------->saga:vegetationindex[slopebased]
-
-This result might change depending on the algorithms you have available.
-
-It is easier now to find the algorithm you are looking for and its command-line
-name, in this case ``saga:slopeaspectcurvature``.
-
-Once you know the command-line name of the algorithm, the next thing to do is to
-determine the right syntax to execute it. That means knowing which parameters are
-needed and the order in which they have to be passed when calling the ``runalg()``
-method. There is a method to describe an algorithm in detail, which can be
-used to get a list of the parameters that an algorithm requires and the outputs
-that it will generate. To get this information, you can use the ``alghelp(name_of_the_algorithm)``
-method. Use the command-line name of the algorithm, not the full descriptive name.
-
-Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get the
-following description:
+Calling the method with ``native:buffer`` as parameter
+(``qgis:buffer`` is an alias for ``native:buffer`` and will also
+work), you get the following description:
 
 ::
 
-    >>> processing.alghelp("saga:slopeaspectcurvature")
-    ALGORITHM: Slope, Aspect, Curvature
-       ELEVATION <ParameterRaster>
-       METHOD <ParameterSelection>
-       SLOPE <OutputRaster>
-       ASPECT <OutputRaster>
-       CURV <OutputRaster>
-       HCURV <OutputRaster>
-       VCURV <OutputRaster>
+     >>> processing.algorithmHelp("native:buffer")
+     Buffer (native:buffer)
+     
+     This algorithm computes a buffer area for all the features in an
+     input layer, using a fixed or dynamic distance.
+     
+     The segments parameter controls the number of line segments to
+     use to approximate a quarter circle when creating rounded
+     offsets.
+     
+     The end cap style parameter controls how line endings are handled
+     in the buffer.
+     
+     The join style parameter specifies whether round, miter or
+     beveled joins should be used when offsetting corners in a line.
+     
+     The miter limit parameter is only applicable for miter join
+     styles, and controls the maximum distance from the offset curve
+     to use when creating a mitered join.
+     
+     
+     ----------------
+     Input parameters
+     ----------------
+     
+     INPUT: Input layer
+     
+     	Parameter type:	QgsProcessingParameterFeatureSource
+     
+     	Accepted data types:
+     		- str: layer ID
+     		- str: layer name
+     		- str: layer source
+     		- QgsProcessingFeatureSourceDefinition
+     		- QgsProperty
+     		- QgsVectorLayer
+     
+     DISTANCE: Distance
+     
+     	Parameter type:	QgsProcessingParameterDistance
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     SEGMENTS: Segments
+     
+     	Parameter type:	QgsProcessingParameterNumber
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     END_CAP_STYLE: End cap style
+     
+     	Parameter type:	QgsProcessingParameterEnum
+     
+     	Available values:
+     		- 0: Round
+     		- 1: Flat
+     		- 2: Square
+     
+     	Accepted data types:
+     		- int
+     		- str: as string representation of int, e.g. '1'
+     		- QgsProperty
+     
+     JOIN_STYLE: Join style
 
-Now you have everything you need to run any algorithm. As we have already
-mentioned, there is only one single command to execute algorithms: ``runalg()``.
+	Parameter type:	QgsProcessingParameterEnum
+
+	Available values:
+		- 0: Round
+		- 1: Miter
+		- 2: Bevel
+
+	Accepted data types:
+		- int
+		- str: as string representation of int, e.g. '1'
+		- QgsProperty
+     
+     MITER_LIMIT: Miter limit
+     
+     	Parameter type:	QgsProcessingParameterNumber
+     
+     	Accepted data types:
+     		- int
+     		- float
+     		- QgsProperty
+     
+     DISSOLVE: Dissolve result
+     
+     	Parameter type:	QgsProcessingParameterBoolean
+     
+     	Accepted data types:
+		- bool
+		- int
+		- str
+		- QgsProperty
+          
+     OUTPUT: Buffered
+     
+     	Parameter type:	QgsProcessingParameterFeatureSink
+     
+     	Accepted data types:
+     		- str: destination vector file, e.g. 'd:/test.shp'
+     		- str: 'memory:' to store result in temporary memory layer
+     		- str: using vector provider ID prefix and destination URI,
+                       e.g. 'postgres:...' to store result in PostGIS table
+     		- QgsProcessingOutputLayerDefinition
+     		- QgsProperty
+     
+     ----------------
+     Outputs
+     ----------------
+     
+     OUTPUT:  <QgsProcessingOutputVectorLayer>
+     	Buffered
+     
+     
+Now you have everything you need to run any algorithm. As we have
+already mentioned, algorithms can be run using: ``run()``.
 Its syntax is as follows:
 
 ::
 
-    >>> processing.runalg(name_of_the_algorithm, param1, param2, ..., paramN,
-             Output1, Output2, ..., OutputN)
+    >>> processing.run(name_of_the_algorithm, parameters)
 
-The list of parameters and outputs to add depends on the algorithm you want to
-run, and is exactly the list that the ``alghelp()`` method gives you, in the same
-order as shown.
+Where parameters is a dictionary of parameters that depend on the
+algorithm you want to run, and is exactly the list that the
+``algorithmHelp()`` method gives you.
+
+::
+
+    >>> processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+
+
+If a parameter is optional and you do not want to use it, then don't
+include it in the dictionary.
+
+If a parameter is not specified, the default value will be used.
 
 Depending on the type of parameter, values are introduced differently. The next
 list gives a quick review of how to introduce values for each type of input parameter:
@@ -145,27 +258,31 @@ list gives a quick review of how to introduce values for each type of input para
   identifies the data object to use (the name it has in the QGIS Table of
   Contents) or a filename (if the corresponding layer is not opened, it will be
   opened but not added to the map canvas). If you have an instance of a QGIS
-  object representing the layer, you can also pass it as parameter. If the input
-  is optional and you do not want to use any data object, use ``None``.
-* Selection. If an algorithm has a selection parameter, the value of that
+  object representing the layer, you can also pass it as parameter.
+* Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
-  options, you can use the ``algoptions()`` command, as shown in the following
-  example:
+  options, you can use the ``algorithmHelp()`` command, as above.
+  For instance, the "native.buffer" algorithm has an enumeration called JOIN_STYLE:
 
   ::
 
-      >>> processing.algoptions("saga:slopeaspectcurvature")
-      METHOD(Method)
-          0 - [0] Maximum Slope (Travis et al. 1975)
-          1 - [1] Maximum Triangle Slope (Tarboton 1997)
-          2 - [2] Least Squares Fitted Plane (Horn 1981, Costa-Cabral & Burgess 1996)
-          3 - [3] Fit 2.Degree Polynom (Bauer, Rohdenburg, Bork 1985)
-          4 - [4] Fit 2.Degree Polynom (Heerdegen & Beran 1982)
-          5 - [5] Fit 2.Degree Polynom (Zevenbergen & Thorne 1987)
-          6 - [6] Fit 3.Degree Polynom (Haralick 1983)
+     JOIN_STYLE: Join style
 
-  In this case, the algorithm has one such parameter, with seven options.
+	Parameter type:	QgsProcessingParameterEnum
+
+	Available values:
+		- 0: Round
+		- 1: Miter
+		- 2: Bevel
+
+	Accepted data types:
+		- int
+		- str: as string representation of int, e.g. '1'
+		- QgsProperty
+     
+  In this case, the parameter has three options.
   Notice that ordering is zero-based.
+* Boolean.  Use ``True`` or ``False``.
 * Multiple input. The value is a string with input descriptors separated by
   semicolons (``;``). As in the case of single layers or tables, each input
   descriptor can be the data object name, or its file path.
@@ -182,218 +299,283 @@ Boolean, file, string and numerical parameters do not need any additional
 explanations.
 
 Input parameters such as strings, booleans, or numerical values have default values.
-To use them, specify ``None`` in the corresponding parameter entry.
+The default value is used if the corresponding parameter entry is missing.
 
 For output data objects, type the file path to be used to save it, just as it is
-done from the toolbox. If you want to save the result to a temporary file, use
-``None``. The extension of the file determines the file format. If you enter a
+done from the toolbox. If the output object is not specified, the result is
+saved to a temporary file (or skipped if it is an optional output).
+The extension of the file determines the file format. If you enter a
 file extension not supported by the algorithm, the default
 file format for that output type will be used, and its corresponding extension
 appended to the given file path.
 
-Unlike when an algorithm is executed from the toolbox, outputs are not added to
-the map canvas if you execute that same algorithm from the Python console. If you
-want to add an output to the map canvas, you have to do it yourself after running the
-algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
-the handy methods provided for such tasks.
+Unlike when an algorithm is executed from the toolbox, outputs are not
+added to the map canvas if you execute that same algorithm from the
+Python console using ``run()``, but ``runAndLoadResults()`` will do
+that.
 
-The ``runalg`` method returns a dictionary with the output names (the
+The ``run`` method returns a dictionary with one or more output names (the
 ones shown in the algorithm description) as keys and the file paths of
-those outputs as values. You can load those layers by passing the corresponding
-file paths to the ``load()`` method.
+those outputs as values:
 
-Additional functions for handling data
---------------------------------------
+::
 
-Apart from the functions used to call algorithms, importing the
-``processing`` package will also import some additional functions that make it
-easier to work with data, particularly vector data. They are just convenience
-functions that wrap some functionality from the QGIS API, usually with a less
-complex syntax. These functions should be used when developing new algorithms,
-as they make it easier to operate with input data.
+    >>> myresult = processing.run("native:buffer", {'INPUT': '/data/lines.shp',
+                  'DISTANCE': 100.0,
+                  'SEGMENTS': 10,
+                  'DISSOLVE': True,
+                  'END_CAP_STYLE': 0,
+                  'JOIN_STYLE': 0,
+                  'MITER_LIMIT': 10,
+                  'OUTPUT': '/data/buffers.shp'})
+    >>> myresult['OUTPUT']
+    /data/buffers.shp
 
-Below is a list of some of these commands. More information can be found in the
-classes under the ``processing/tools`` package, and also in the example scripts
-provided with QGIS.
-
-* ``getObject(obj)``: Returns a QGIS object (a layer or table) from the passed
-  object, which can be a filename or the name of the object in the QGIS Layers List
-* ``values(layer, fields)``: Returns the values in the attributes table of a
-  vector layer, for the passed fields. Fields can be passed as field names or as
-  zero-based field indices. Returns a dict of lists, with the passed field
-  identifiers as keys. It considers the existing selection.
-* ``features(layer)``: Returns an iterator over the features of a vector
-  layer, considering the existing selection.
-* ``uniqueValues(layer, field)``: Returns a list of unique values for a given
-  attribute.  Attributes can be passed as a field name or a zero-based field
-  index. It considers the existing selection.
+You can load feature output by passing the corresponding file paths to
+the ``load()`` method.
+Or you could use ``runAndLoadResults()`` instead of ``run()`` to load
+them immediately.
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------
 
-You can create your own algorithms by writing the corresponding Python code and
-adding a few extra lines to supply additional information needed to define the
-semantics of the algorithm.
-You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
-group in the :guilabel:`Script` algorithms block of the toolbox. Double-click
-on it to open the script editing dialog. That's where you should type your code.
+You can create your own algorithms by writing Python code.
+Processing scripts extend ``QgsProcessingAlgorithm``, so you
+need to add some extra lines of code to implement mandatory functions.
+You can find :guilabel:`Create new script` (clean sheet) and
+:guilabel:`Create New Script from Template` (template that includes
+code for mandatory functions of ``QgsProcessingAlgorithm``) under
+the :guilabel:`Scripts` dropdown menu on the top of the Processing toolbox.
+The Processing Script Editor will open, and that's where you should type
+your code.
 Saving the script from there in the :file:`scripts` folder (the default folder
-when you open the save file dialog) with :file:`.py` extension will
-automatically create the corresponding algorithm.
+when you open the save file dialog) with a :file:`.py` extension should
+create the corresponding algorithm.
 
-The name of the algorithm (the one you will see in the toolbox) is created from
-the filename, removing its extension and replacing low hyphens with blank spaces.
+The name of the algorithm (the one you will see in the toolbox) is defined
+within the code.
 
-Let's have a look at the following code, which calculates the Topographic
-Wetness Index (TWI) directly from a DEM.
+Let's have a look at the following code, which defines a Processing
+algorithm that performs a buffer operation with a user defined buffer
+distance on a vector layer that is specified by the user, after first
+smoothing the layer.
 
 .. code-block:: python
 
-   ##dem=raster
-   ##twi=output
-   ret_slope = processing.runalg("saga:slopeaspectcurvature", dem, 0, None,
-                   None, None, None, None)
-   ret_area = processing.runalg("saga:catchmentarea(mass-fluxmethod)", dem,
-                   0, False, False, False, False, None, None, None, None, None)
-   processing.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
-                   ret_area['AREA'], None, 1, 0, twi)
+  from qgis.core import (QgsProcessingAlgorithm, 
+         QgsProcessingParameterNumber,
+         QgsProcessingParameterFeatureSource,
+         QgsProcessingParameterFeatureSink)
 
-As you can see, the calculation involves three algorithms, all of them coming
-from SAGA. The last one calculates the TWI, but it needs a slope layer and a
-flow accumulation layer. We do not have these layers, but since we have the DEM,
-we can calculate them by calling the corresponding SAGA algorithms.
+  import processing
 
-The part of the code where this processing takes place is not difficult to
-understand if you have read the previous sections in this chapter. The first
-lines, however, need some additional explanation. They provide the
-information that is needed to turn your code into an algorithm that can be run
-from any of the GUI components, like the toolbox or the graphical modeler.
+  class algTest(QgsProcessingAlgorithm):
+      INPUT_BUFFERDIST = 'BUFFERDIST'
+      OUTPUT_BUFFER = 'OUTPUT_BUFFER'
+      INPUT_VECTOR = 'INPUT_VECTOR'
 
-These lines start with a double Python comment symbol (``##``) and have the
-following structure:
+      def __init__(self):
+          super().__init__()
 
-::
+      def name(self):
+          return "algTest"
 
-    [parameter_name]=[parameter_type] [optional_values]
+      def displayName(self):
+          return "algTest script"
 
-Here is a list of all the parameter types that are supported in processing
-scripts, their syntax and some examples.
+      def createInstance(self):
+          return type(self)()
 
-* ``raster``. A raster layer.
-* ``vector``. A vector layer.
-* ``table``. A table.
-* ``number``. A numerical value. A default value must be provided. For instance,
-  ``depth=number 2.4``.
-* ``string``. A text string. As in the case of numerical values, a default value
-  must be added. For instance, ``name=string Victor``.
-* ``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the
-  default value. For example, ``verbose=boolean True``.
-* ``multiple raster``. A set of input raster layers.
-* ``multiple vector``. A set of input vector layers.
-* ``field``. A field in the attributes table of a vector layer. The name of the
-  layer has to be added after the ``field`` tag. For instance, if you have
-  declared a vector input with ``mylayer=vector``, you could use ``myfield=field
-  mylayer`` to add a field from that layer as parameter.
-* ``folder``. A folder.
-* ``file``. A filename.
+      def initAlgorithm(self, config=None):
+          self.addParameter(QgsProcessingParameterFeatureSource(
+              self.INPUT_VECTOR, "Input vector"))
+          self.addParameter(QgsProcessingParameterNumber(
+              self.BUFFERDIST, "Buffer distance", 
+              QgsProcessingParameterNumber.Double,
+              100.0))
+          self.addParameter(QgsProcessingParameterFeatureSink(
+              self.OUTPUT_BUFFER, "Output buffer"))
 
-The parameter name is the name that will be shown to the user when executing the
-algorithm, and also the variable name to use in the script code. The value entered
-by the user for that parameter will be assigned to a variable with that name.
+      def processAlgorithm(self, parameters, context, feedback):
+          # Dummy function to enable running an alg inside an alg
+          def no_post_process(alg, context, feedback):
+              pass
+          #DO SOMETHING
+          algresult = processing.run("native:smoothgeometry",
+              {'INPUT': parameters[self.INPUT_VECTOR],
+               'ITERATIONS':2,
+               'OFFSET':0.25,
+               'MAX_ANGLE':180,
+               'OUTPUT': 'memory:'},
+              context=context, feedback=feedback, onFinish=no_post_process)
+          smoothed = algresult['OUTPUT']
+          algresult = processing.run('native:buffer',
+              {'INPUT': smoothed,
+              'DISTANCE': parameters[self.BUFFERDIST],
+              'SEGMENTS': 5,
+              'END_CAP_STYLE': 0,
+              'JOIN_STYLE': 0,
+              'MITER_LIMIT': 10,
+              'DISSOLVE': True,
+              'OUTPUT': parameters[self.OUTPUT_BUFFER]},
+              context=context, feedback=feedback, onFinish=no_post_process)
+          buffered = algresult['OUTPUT']
+          return {self.OUTPUT_BUFFER: buffered}
 
-When showing the name of the parameter to the user, the name will be edited to
-improve its appearance, replacing low hyphens with spaces. So, for instance,
-if you want the user to see a parameter named ``A numerical value``, you can use
-the variable name ``A_numerical_value``.
+After doing the necessary imports, the following ``QgsProcessingAlgorithm``
+functions are specified:
 
-Layers and table values are strings containing the file path of the corresponding
-object. To turn them into a QGIS object, you can use the
-``processing.getObjectFromUri()`` function. Multiple inputs also have a string
-value, which contains the file paths to all selected object, separated by
-semicolons (``;``).
+* ``name``: The id of the algorithm (lowercase).
+* ``displayName``: A human readable name for the algorithm.
+* ``createInstance``: Create a new instance of the algorithm class.
+* ``initAlgorithm``: Configure the parameterDefinitions and
+  outputDefinitions.
 
-Outputs are defined in a similar manner, using the following tags:
+  Here you describe the parameters and output of the algorithm.  In
+  this case, a feature source for the input, a feature sink for
+  the result and a number for the buffer distance.
+* ``processAlgorithm``: Do the work.
 
-* ``output raster``
-* ``output vector``
-* ``output table``
-* ``output html``
-* ``output file``
-* ``output number``
-* ``output string``
+  Here we first run the ``smoothgeometry`` algorithm to smooth the
+  geometry, and then we run the ``buffer`` algorithm on the smoothed
+  output.
+  To be able to run algorithms from within another algorithm we have to
+  define a dummy function for the ``onFinish`` parameter for ``run``.
+  This is the ``no_post_process`` function.
+  You can see how input and output parameters are used as parameters
+  to the ``smoothgeometry`` and ``buffer`` algorithms.
 
-The value assigned to the output variables is always a string with a file path.
-It will correspond to a temporary file path in case the user has not entered any
-output filename.
+There are a number of different parameter types available for
+input and output.
+Their definitions can be found in processing.h.  Below is an
+alphabetically sorted list (see `the Python API documentation
+<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_
+for details).
 
-When you declare an output, the algorithm will try to add it to QGIS once it
-is finished. That is why, although the ``runalg()`` method does not
-load the layers it produces, the final TWI layer will be loaded (using the case
-of our previous example), since it is saved
-to the file entered by the user, which is the value of the corresponding output.
+* QgsProcessingParameterBand
+* QgsProcessingParameterBoolean
+* QgsProcessingParameterCrs
+* QgsProcessingParameterDistance
+* QgsProcessingParameterEnum
+* QgsProcessingParameterExpression
+* QgsProcessingParameterExtent
+* QgsProcessingParameterFeatureSink
+* QgsProcessingParameterFeatureSource
+* QgsProcessingParameterField - A field in the attributes table of a
+  vector layer.  The name of the layer has to be specified.
+* QgsProcessingParameterFile
+* QgsProcessingParameterFileDestination
+* QgsProcessingParameterFolderDestination
+* QgsProcessingParameterMapLayer
+* QgsProcessingParameterMatrix
+* QgsProcessingParameterMultipleLayers
+* QgsProcessingParameterNumber
+* QgsProcessingParameterPoint
+* QgsProcessingParameterRange
+* QgsProcessingParameterRasterDestination
+* QgsProcessingParameterRasterLayer
+* QgsProcessingParameterString
+* QgsProcessingParameterVectorDestination
+* QgsProcessingParameterVectorLayer
 
-Do not use the ``load()`` method in your script algorithms, just when working
-with the console line. If a layer is created as output of an algorithm, it should
-be declared as such. Otherwise, you will not be able to properly use the algorithm
-in the modeler, since its syntax (as defined by the tags explained above) will
-not match what the algorithm really creates.
+The first parameter to the constructors is the name of the parameter,
+and the second is the description of the parameter (for the user
+interface).
+The rest of the constructor parameters are parameter type specific.
 
-Hidden outputs (numbers and strings) do not have a value. Instead, you
-have to assign a value to them. To do so, just set the value of a variable with
-the name you used to declare that output. For instance, if you have used this
-declaration,
+The input can be turned into QGIS classes using the ``parameterAs`` functions
+of ``QgsProcessingAlgorithm``.
+For instance to get the number provided for the buffer distance as a double::
 
-::
+  self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
 
-    ##average=output number
+The ``processAlgorithm`` function should return a dictionary
+containing values for every output defined by the algorithm. This
+allows access to these outputs from other algorithms, including other
+algorithms contained within the same model.
 
-the following line will set the value of the output to 5:
+Well behaved algorithms should define and return as many outputs as
+makes sense. Non-feature outputs, such as numbers and strings, are very
+useful when running your algorithm as part of a larger model, as these
+values can be used as input parameters for subsequent algorithms
+within the model. Consider adding numeric outputs for things like the
+number of features processed, the number of invalid features
+encountered, the number of features output, etc. The more outputs you
+return, the more useful your algorithm becomes!
 
-::
+Feedback
+........
+The ``feedback`` object passed to ``processAlgorithm`` should be used for
+user feedback / interaction.
+You can use the ``setProgress`` function of the ``feedback`` object to update
+the progress bar (0 to 100) to inform the user about the progress of the
+algorithm.  This is very useful if your algorithm takes a long time to
+complete.
+The ``feedback`` object provides an ``isCanceled`` method that
+should be monitored to enable cancelation of the algorithm by the user.
+The ``pushInfo`` method of ``feedback`` can be used to send information
+to the user, and ``reportError`` is handy for pushing non-fatal errors
+to users.
 
-    average = 5
+Algorithms should avoid using other forms of providing feedback to
+users, such as print statements or logging to QgsMessageLog, and
+should always use the feedback object instead. This allows verbose
+logging for the algorithm, and is also thread-safe (which is
+important, given that algorithms are typically run in a background
+thread).
 
-In addition to the tags for parameters and outputs, you can also define the group
-under which the algorithm will be shown, using the ``group`` tag.
+Handling errors
+...............
 
-If your algorithm takes a long time to process, it is a good idea to inform the
-user. You have a global named ``progress`` available, with two possible methods:
-``setText(text)`` and ``setPercentage(percent)`` to modify the progress text and
-the progress bar.
+If your algorithm encounters an error which prevents it from
+executing, such as invalid input values or some other condition from
+which it cannot or should not recover, then you should raise a
+QgsProcessingException. E.g.::
 
-Several examples are provided. Please check them to see real
-examples of how to create algorithms using the processing framework classes. You can
-right-click on any script algorithm and select :guilabel:`Edit script` to edit
-its code or just to see it.
+  if feature['value'] < 20:
+    raise QgsProcessingException('Invalid input value {}, must be >= 20'.format(feature['value']))
+
+Try to avoid raising QgsProcessingException for non-fatal errors
+(e.g. when a feature has a null geometry), and instead just report
+these errors via ``feedback.reportError()`` and skip the feature. This
+helps make your algorithm "model-friendly", as it avoids halting the
+execution of an entire algorithm when a non-fatal error is
+encountered.
 
 Documenting your scripts
-------------------------
+........................
 
-As in the case of models, you can create additional documentation for your scripts,
-to explain what they do and how to use them. In the script editing dialog, you will
-find an **[Edit script help]** button. Click on it and it will take you to the help
-editing dialog. Check the section about the graphical modeler to know more about
-this dialog and how to use it.
+As in the case of models, you can create additional documentation for
+your scripts, to explain what they do and how to use them.
 
-Help files are saved in the same folder as the script itself, adding the
-:file:`.help` extension to the filename. Notice that you can edit your script's
-help before saving the script for the first time. If you later close the script editing
-dialog without saving the script (i.e., you discard it), the help content you
-wrote will be lost. If your script was already saved and is associated to a
-filename, saving the help content is done automatically.
+``QgsProcessingAlgorithm`` provides the ``helpString()``,
+``shortHelpString()`` and ``helpUrl()`` functions for that purpose.
+Specify / override these to provide more help to the user.
+
+``shortDescription()`` (added in 3.4) is used in the tooltip when
+hovering over the algorithm in the toolbox.
 
 Pre- and post-execution script hooks
 ------------------------------------
 
-Scripts can also be used to set pre- and post-execution hooks that are run before
-and after an algorithm is run. This can be used to automate tasks that should be
-performed whenever an algorithm is executed.
+Scripts can also be used as pre- and post-execution hooks that are run before
+and after an algorithm is run, respectively. This can be used to automate tasks
+that should be performed whenever an algorithm is executed.
 
 The syntax is identical to the syntax explained above, but an additional global
 variable named ``alg`` is available, representing the algorithm that has just
 been (or is about to be) executed.
 
-In the :guilabel:`General` group of the processing configuration dialog, you will find two
-entries named :guilabel:`Pre-execution script file` and :guilabel:`Post-execution
-script file` where the filename of the scripts to be run in each case can be
+In the :guilabel:`General` group of the processing options dialog, you will find two
+entries named :guilabel:`Pre-execution script` and :guilabel:`Post-execution
+script` where the filenames of the scripts to be run in each case can be
 entered.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

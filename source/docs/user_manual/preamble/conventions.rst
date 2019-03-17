@@ -27,7 +27,7 @@ instruction in the manual.
 * Menu Options: :menuselection:`Layer --> Add a Raster Layer` or
   :menuselection:`Settings --> Toolbars --> Digitizing`
 * Tool: |addRasterLayer| :sup:`Add a Raster Layer`
-* Button : **\[Save as Default\]**
+* Button : :guilabel:`Save as Default`
 * Dialog Box Title: :guilabel:`Layer Properties`
 * Tab: :guilabel:`General`
 * Checkbox: |checkbox| :guilabel:`Render`
@@ -54,7 +54,7 @@ any text or coding within QGIS.
 
 .. Use for all urls. Otherwise, it is not clickable in the document.
 
-* Hyperlinks: http://qgis.org
+* Hyperlinks: https://qgis.org
 * Keystroke Combinations: Press :kbd:`Ctrl+B`, meaning press and hold the Ctrl
   key and then press the B key.
 * Name of a File: :file:`lakes.shp`
@@ -100,3 +100,33 @@ that, and that and that and that, and that and that.
 Screenshots that appear throughout the user guide have been created on
 different platforms; the platform is indicated by the
 platform-specific icon at the end of the figure caption.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |browseButton| image:: /static/common/browsebutton.png
+   :width: 2.3em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |inputText| image:: /static/common/inputtext.png
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |selectColor| image:: /static/common/selectcolor.png
+.. |selectNumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |slider| image:: /static/common/slider.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em

@@ -13,7 +13,7 @@ Features
    .. contents::
       :local:
 
-QGIS offers many common GIS functionalities provided by core features
+QGIS offers many common GIS functions provided by core features
 and plugins. A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the
 integrated Python console.
@@ -21,13 +21,14 @@ integrated Python console.
 View data
 ---------
 
-You can view and overlay vector and raster data in different formats
-and projections without conversion to an internal or common
-format. Supported formats include:
+You can view combinations of vector and raster data (in 2D or 3D) in different
+formats and projections without conversion to an internal or common format.
+Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
    Spatial, Oracle Spatial, vector formats supported by the installed OGR
-   library, including ESRI shapefiles, MapInfo, SDTS, GML and many more.
+   library, including GeoPackage, ESRI Shapefile, MapInfo, SDTS, GML and
+   many more.
    See section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
@@ -47,16 +48,16 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  QGIS browser
 *  On-the-fly reprojection
 *  DB Manager
-*  Map composer
+*  Print layout
 *  Overview panel
 *  Spatial bookmarks
 *  Annotation tools
 *  Identify/select features
 *  Edit/view/search attributes
-*  Data-defined feature labelling
+*  Data-defined feature labeling
 *  Data-defined vector and raster symbology tools
 *  Atlas map composition with graticule layers
-*  North arrow scale bar and copyright label for maps
+*  North arrow, scale bar and copyright label for maps
 *  Support for saving and restoring projects
 
 Create, edit, manage and export data
@@ -66,14 +67,13 @@ You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
 
 *  Digitizing tools for OGR-supported formats and GRASS vector layers
-*  Ability to create and edit shapefiles and GRASS vector layers
+*  Ability to create and edit multiple file formats and GRASS vector layers
 *  Georeferencer plugin to geocode images
 *  GPS tools to import and export GPX format, and convert other GPS
-   formats to GPX or down/upload directly to a GPS unit (On Linux,
-   usb: has been added to list of GPS devices.)
+   formats to GPX or down/upload directly to a GPS unit (on Linux,
+   usb: has been added to list of GPS devices)
 *  Support for visualizing and editing OpenStreetMap data
-*  Ability to create spatial database tables from shapefiles with
-   DB Manager plugin
+*  Ability to create spatial database tables from files with the DB Manager plugin
 *  Improved handling of spatial database tables
 *  Tools for managing vector attribute tables
 *  Option to save screenshots as georeferenced images
@@ -84,7 +84,7 @@ Analyze data
 ------------
 
 You can perform spatial data analysis on spatial databases and other
-OGR- supported formats. QGIS currently offers vector analysis,
+OGR-supported formats. QGIS currently offers vector analysis,
 sampling, geoprocessing, geometry and database management tools. You
 can also use the integrated GRASS tools, which include the complete
 GRASS functionality of more than 400 modules. (See section
@@ -113,18 +113,18 @@ Core Plugins
 
 Core plugins include:
 
-#.  Coordinate Capture (Capture mouse coordinates in different CRSs)
-#.  DB Manager (Exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  eVIS (Visualize events)
-#.  GDALTools (Integrate GDAL Tools into QGIS)
-#.  Georeferencer GDAL (Add projection information to rasters using GDAL)
-#.  GPS Tools (Load and import GPS data)
-#.  GRASS (Integrate GRASS GIS)
-#.  Metasearch Catalogue Client
-#.  Offline Editing (Allow offline editing and synchronizing with databases)
-#.  Processing
-#.  Spatial Query Plugin
-#.  Topology Checker (Find topological errors in vector layers)
+#.  Coordinate Capture (capture mouse coordinates in different CRSs)
+#.  DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
+#.  eVIS (visualize events)
+#.  Geometry Checker (check geometries for errors)
+#.  Georeferencer GDAL (add projection information to rasters using GDAL)
+#.  GPS Tools (load and import GPS data)
+#.  GRASS 7 (integrate GRASS GIS)
+#.  MetaSearch Catalogue Client (interacting with metadata catalog services
+    supporting the OGC Catalog Service for the Web (CSW) standard)
+#.  Offline Editing (allow offline editing and synchronizing with databases)
+#.  Processing (the spatial data processing framework for QGIS)
+#.  Topology Checker (find topological errors in vector layers)
 
 
 External Python Plugins
@@ -139,7 +139,7 @@ Python Console
 --------------
 
 For scripting, it is possible to take advantage of an integrated
-Python console, which can be opened from menu: :menuselection:`Plugins
+Python console, which can be opened with: :menuselection:`Plugins
 --> Python Console`. The console opens as a non-modal utility
 window. For interaction with the QGIS environment, there is the
 :data:`qgis.utils.iface` variable, which is an instance of
@@ -150,7 +150,7 @@ executed automatically.
 
 For further information about working with the Python console and
 programming QGIS plugins and applications, please refer to
-:ref:`PyQGIS-Developer-Cookbook`.
+:ref:`console` and :ref:`PyQGIS-Developer-Cookbook`.
 
 Known Issues
 ------------
@@ -199,5 +199,14 @@ need to log in again before any changes take effect.
 
 More info:
 
-http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
-http://linuxaria.com/article/open-files-in-linux?lang=en
+https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
+https://linuxaria.com/article/open-files-in-linux
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

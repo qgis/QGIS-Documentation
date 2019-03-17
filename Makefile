@@ -3,11 +3,11 @@
 
 # as long as this branch is testing, we only build for english:
 LANG          = en
-SPHINXBUILD   = sphinx-build
-SPHINXINTL    = sphinx-intl
+SPHINXBUILD   ?= sphinx-build
+SPHINXINTL    ?= sphinx-intl
 PAPER         =
 SOURCEDIR     = source
-RESOURCEDIR   = resources
+RESOURCEDIR   = static
 BUILDDIR      = output
 # using the -A flag, we create a python variable named 'language', which
 # we then can use in html templates to create language dependent switches
@@ -16,11 +16,6 @@ VERSION       = testing
 
 # needed for python2 -> python3 migration?
 export LC_ALL=C.UTF-8
-
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
-endif
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -43,46 +38,30 @@ help:
 	@echo "  pretranslate to gather all strings from sources, put in .pot files"
 	@echo "                  AND merge them with available .po files"
 	@echo "  transifex_push (only for transifex Maintainers!): renew source files and push to transifex"
+	@echo "  doctest     to run all doctests embedded in the documentation (if enabled)"
 	@echo "  "
 	@echo "OPTION: use LANG=xx to do it only for one language, eg: make html LANG=de"
 	@echo "  "
 
 clean:
 	rm -rf $(SOURCEDIR)/static
+	rm -rf $(BUILDDIR)/*
 
 springclean: clean
 	# something in i18n/pot dir creates havoc when using gettext: remove it
 	rm -rf i18n/pot
-	rm -rf $(BUILDDIR)/*
 	# all .mo files
 	find i18n/*/LC_MESSAGES/ -type f -name '*.mo' -delete
 	# rm -rf i18n/*/LC_MESSAGES/docs/*/
 	# rm -f $(SOURCEDIR)/docs_conf.py*
 	# rm -rf $(SOURCEDIR)/docs/*/
 
-# remove all resources from source/static directory
-# copy english resources from resources/en to source/static directory
-# IF we have a localized build (LANG != en) then
-# overwrite with potentially available LANG resources by
-# copy LANG resources from resources/LANG to source/static directory
-# TODO: check if LANG != en, for now: unnecessary copy for english
-localizeresources: clean
+updatestatic:
 	@echo
-	@echo "Removing all static content from $(SOURCEDIR)/static."
-	rm -rf $(SOURCEDIR)/static
-	@echo "Copy 'en' (base) static content to $(SOURCEDIR)/static."
-	mkdir $(SOURCEDIR)/static
-	# historically the images for the docs sub project are not in a separate docs folder
-	# that is why we copy into root in separate steps
-	@if [ -d "$(RESOURCEDIR)/en/docs" ]; then \
-		cp -r $(RESOURCEDIR)/en/docs/* $(SOURCEDIR)/static; \
-	fi
-	@echo "Copy localized '$(LANG)' static content to $(SOURCEDIR)/static."
-	@if [ -d "$(RESOURCEDIR)/$(LANG)/docs" ]; then \
-		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
-	fi
+	@echo "Updating static content into $(SOURCEDIR)/static."
+	rsync -uthvr --delete $(RESOURCEDIR)/ $(SOURCEDIR)/static
 
-html: localizeresources
+html: updatestatic
 	$(SPHINXINTL) --config $(SOURCEDIR)/conf.py build --language=$(LANG)
 	# ONLY in the english version run in nit-picky mode, so source errors/warnings will fail in Travis
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
@@ -256,9 +235,15 @@ gettext:
 #	make pretranslate
 #	tx push -f -s --no-interactive
 
-fasthtml:
+fasthtml: updatestatic
 	# This build is just for fast previewing changes in EN documentation
-	# Instead of fully copy the english images to static folder, it syncs it
+	# It runs in non-nit-picky mode allowing to check all warnings without
+	# cancelling the build
 	# No internationalization is performed
-	rsync -uthvr --delete $(RESOURCEDIR)/en/docs/ $(SOURCEDIR)/static
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
+
+.PHONY: doctest
+doctest:
+	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
+	@echo "Testing of doctests in the sources finished, look at the " \
+	      "results in $(BUILDDIR)/doctest/output.txt."

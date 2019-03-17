@@ -1,120 +1,179 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| GRASS Tools
 ===============================================================================
 
 In this lesson we will present a selection of tools to give you an idea of the
 capabilities of GRASS.
 
-|basic| |FA| Set Raster Colors
+
+.. _grass_aspect:
+
+|basic| |FA| Create an aspect map
 -------------------------------------------------------------------------------
 
-* Open the :guilabel:`GRASS Tools` dialog.
-* Look for the :kbd:`r.colors.table` module by searching for it in the
-  :guilabel:`Filter` field of the :guilabel:`Modules List` tab.
-* Open the tool and set it up like this:
+#. Open the :guilabel:`GRASS Tools` tab
+#. Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset
+#. Look for the :guilabel:`r.aspect` module by searching for it in the
+   :guilabel:`Filter` field of the :guilabel:`Modules List` tab
+#. Open the tool and set it up like this and click on the :guilabel:`Run` button:
 
-  .. image:: /static/training_manual/grass/colors_table_setup.png
-     :align: center
+   .. image:: img/grass_aspect.png
+      :align: center
 
-When you run the tool, it will recolor your raster:
+   |
 
-.. image:: /static/training_manual/grass/colors_table_result.png
+#. When the process is finished click on :guilabel:`View Output` to load the
+   resulting layer in the canvas:
+
+.. image:: img/grass_aspect_result.png
    :align: center
 
-|basic| |FA| Visualize Data in 3D
+The :file:`g_aspect` layer is stored within the :guilabel:`grass_mapset` Mapset
+so you can remove the layer from the canvas and reload it whenever you want.
+
+|basic| |FA| Get basic statistic of raster layer
 -------------------------------------------------------------------------------
 
-GRASS allows you to use a DEM to visualize your data in three dimensions. The
-tool you'll use for this operates on the GRASS Region, which at the moment is
-set to the whole extent of South Africa, as you set it up before.
+We want to know some basic statistics of the :file:`g_dem` raster layer.
 
-* To redefine the extent to cover only our raster dataset, click this button:
+#. Open the :guilabel:`GRASS Tools` tab
+#. Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset
+#. Look for the :guilabel:`r.info` module by searching for it in the
+   :guilabel:`Filter` field of the :guilabel:`Modules List` tab
+#. Set up the tool like this and click on :guilabel:`Run`:
 
-  |grassRegionEdit|
+   .. image:: img/grass_raster_info.png
+      :align: center
 
-When this tool is activated, your cursor will turn into a cross when over the
-QGIS map canvas.
+   |
 
-* Using this tool, click and drag a rectangle around the edges of the GRASS
-  raster.
-* Click :guilabel:`OK` in the :guilabel:`GRASS Region Settings` dialog when
-  done.
-* Search for the :kbd:`nviz` tool:
+#. Within the Output tab you will see some raster information printed, like the
+   path of the file, the number of rows and columns and other useful information:
 
-  .. image:: /static/training_manual/grass/nviz_search.png
-     :align: center
+   .. image:: img/grass_raster_info_result.png
+      :align: center
 
-* Set it up as shown:
 
-  .. image:: /static/training_manual/grass/nviz_setup.png
-     :align: center
+|moderate| |FA| The Reclass Tool
+-------------------------------------------------------------------------------
 
-* Remember to enable both :guilabel:`Use region of this map` buttons to the
-  right of the two raster selection dropdown menus. This will allow NVIZ to
-  correctly assess the resolution of the rasters.
-* Click the :guilabel:`Run` button.
+Reclassifying a raster layer is a very useful task. We just created the
+:file:`g_aspect` layer from the :file:`g_dem` one. The value range gets from 0
+(North) passing through 90 (East), 180 (South), 270 (West) and finally to 360
+(North again). We can reclassify the :file:`g_aspect` layer to have just 4
+**categories** following specific *rules* (North = 1, East = 2, South = 3 and
+West = 4).
 
-NVIZ will set up a 3D environment using the raster and vector selected. This
-may take some time, depending on your hardware. When it's done, you will see
-the map rendered in 3D in a new window:
+Grass reclassify tool accepts a ``txt`` file with the defined rules. Writing the
+rules is very simple and the GRASS Manual contains very good description.
 
-.. image:: /static/training_manual/grass/nviz_result.png
-   :align: center
+.. tip:: Each GRASS tool has its own Manual tab. Take the time to read the
+  description of the tool you are using to don't miss some useful parameters
 
-Experiment with the :guilabel:`height`, :guilabel:`z-exag`, and :guilabel:`View
-method` settings to change your view of the data. The navigation methods may
-take some getting used to.
 
-After experimenting, close the :kbd:`NVIZ` window.
+#. Load the :file:`g_aspect` layer or, if you don't have create it, go back to the
+   :ref:`grass_aspect` section.
+#. Look for the :guilabel:`r.reclass` module by searching for it in the
+   :guilabel:`Filter` field of the :guilabel:`Modules List` tab
+#. Open the tool and set it up like the following picture. The file containing the
+   rules is in the :file:`exercise_data/grass/` folder, named :file:`reclass_aspect.txt`.
+#. Click on :guilabel:`Run` and wait until the process is finished:
+
+   .. image:: img/grass_reclass.png
+      :align: center
+
+   |
+
+#. Click on :guilabel:`View Output` to load the reclassified raster in the canvas
+
+   The new layer is made up by just 4 values (1, 2, 3, and 4) and it is easier to
+   manage and to process.
+
+   .. image:: img/grass_reclass_result.png
+      :align: center
+
+.. tip:: Open the :file:`reclass_aspect.txt` with a text editor to see the rules
+  and to start becoming used to them. Moreover, take a deep look at the GRASS
+  manual: a lot of different examples are pointed out.
+
+
+.. _backlink-grass_reclass:
+
+|moderate| |TY| Reclassify with your rules
+-------------------------------------------------------------------------------
+
+Try to reclassify the :file:`g_dem` layer into 3 new categories:
+
+* from 0 to 1000, new value = 1
+* from 1000 to 1400, new value = 2
+* from 1400 to the maximum raster value, new value = 3
+
+:ref:`Check your results <grass_reclass>`
+
 
 |moderate| |FA| The Mapcalc Tool
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
-* Open the :guilabel:`GRASS Tools` dialog's :guilabel:`Modules List` tab and
-  search for :kbd:`calc`.
-* From the list of modules, select :guilabel:`r.mapcalc` (not
-  :guilabel:`r.mapcalculator`, which is more basic).
-* Start the tool.
+The Mapcalc tools is similar to the Raster Calculator of QGIS. You can perform
+mathematical operation on one or more raster layers and the final result will
+be a new layer with the calculated values.
 
-The Mapcalc dialog allows you to construct a sequence of analyses to be
-performed on a raster, or collection of rasters. You will use these tools to do
-so:
+The aim of the next exercise is to extract the values greater than 1000 from the
+:file:`g_dem` raster layer.
 
-.. image:: /static/training_manual/grass/map_calc_tools.png
-   :align: center
+#. Look for the :guilabel:`r.mapcalc` module by searching for it in the
+   :guilabel:`Filter` field of the :guilabel:`Modules List` tab.
+#. Start the tool.
 
-In order, they are:
+   The :guilabel:`Mapcalc` dialog allows you to construct a sequence of analyses
+   to be performed on a raster, or collection of rasters. You will use these tools
+   to do so:
 
-- :kbd:`Add map`: Add a raster file from your current GRASS mapset.
-- :kbd:`Add constant value`: Add a constant value to be used in functions.
-- :kbd:`Add operator or function`: Add an operator or function to be connected
-  to inputs and outputs.
-- :kbd:`Add connection`: Connect elements. Using this tool, click and drag from
-  the red dot on one item to the red dot on another item. Dots that are
-  correctly connected to a connector line will turn gray. If the line or dot is
-  red, it is not properly connected!
-- :kbd:`Select item`: Select an item and move selected items.
-- :kbd:`Delete selected item`: Removes the selected item from the current
-  mapcalc sheet, but not from the mapset (if it is an existing raster).
+   .. image:: img/map_calc_tools.png
+      :align: center
 
-Using these tools:
+   |
 
-* Construct the following algorithm:
+   In order, they are:
 
-  .. image:: /static/training_manual/grass/altitude_range_settings.png
-     :align: center
+   * :guilabel:`Add map`: Add a raster file from your current GRASS mapset.
+   * :guilabel:`Add constant value`: Add a constant value to be used in functions,
+     1000 in this case
+   * :guilabel:`Add operator or function`: Add an operator or function to be connected
+     to inputs and outputs, we will use the operator ``greater equals than``
+   * :guilabel:`Add connection`: Connect elements. Using this tool, click and drag
+     from the red dot on one item to the red dot on another item. Dots that are
+     correctly connected to a connector line will turn gray. If the line or dot is
+     red, it is not properly connected!
+   * :guilabel:`Select item`: Select an item and move selected items.
+   * :guilabel:`Delete selected item`: Removes the selected item from the current
+     mapcalc sheet, but not from the mapset (if it is an existing raster)
+   * :guilabel:`Open`: Open an existing file with the operation defined
+   * :guilabel:`Save`: Save all the operation in a file
+   * :guilabel:`Save as`: Save all the operations as a new file on the disk.
 
-* When you click :guilabel:`Run`, your output should look like this:
+#. Using these tools, construct the following algorithm:
 
-  .. image:: /static/training_manual/grass/altitude_range_result.png
-     :align: center
+   .. image:: img/grass_mapcalc.png
+      :align: center
 
-* Click :guilabel:`View output` to see the output displayed in your map:
+   |
 
-  .. image:: /static/training_manual/grass/altitude_range_output.png
-     :align: center
+#. Click on :guilabel:`Run` and then on :guilabel:`View output` to see the output
+   displayed in your map:
 
-This shows all the areas where the terrain is lower than 500 meters or higher
-than 1000 meters.
+   .. image:: img/grass_mapcalc_result.png
+      :align: center
+
+   |
+
+This shows all the areas where the terrain is higher than 1000 meters.
+
+.. tip:: You can also save the formula you have created and load it in another
+  QGIS project by clicking on the last button on the GRASS Mapcalc toolbar.
 
 |IC|
 -------------------------------------------------------------------------------
@@ -124,3 +183,18 @@ explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS
 Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more
 structured approach, look under the :guilabel:`Modules Tree` tab, which
 organizes tools by type.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |basic| image:: /static/global/basic.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

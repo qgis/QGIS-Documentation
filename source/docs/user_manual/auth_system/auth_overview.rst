@@ -14,7 +14,7 @@ Authentication System Overview
 
 .. _figure_authsystem:
 
-.. figure:: /static/user_manual/auth_system/auth-system-overview.png
+.. figure:: img/auth-system-overview.png
    :align: center
 
    Anatomy of authentication system
@@ -54,7 +54,7 @@ configuration to a server configuration (such as when adding a WMS layer).
 
 .. _figure_masterpass:
 
-.. figure:: /static/user_manual/auth_system/auth-password-new_enter.png
+.. figure:: img/auth-password-new_enter.png
    :align: center
 
    Input new master password
@@ -73,7 +73,7 @@ complete backup of the current database.
 
 .. _figure_masterpass_reset:
 
-.. figure:: /static/user_manual/auth_system/auth-password-reset.png
+.. figure:: img/auth-password-reset.png
    :align: center
 
    Resetting master password
@@ -87,7 +87,7 @@ will offer to erase the database.
 
 .. _figure_masterpass_pwd:
 
-.. figure:: /static/user_manual/auth_system/auth-password-invalid-3times.png
+.. figure:: img/auth-password-invalid-3times.png
    :align: center
 
    Password prompt after three invalid attempts
@@ -101,7 +101,7 @@ the :guilabel:`Authentication` tab of the QGIS Options dialog
 
 .. _figure_authconfigeditor:
 
-.. figure:: /static/user_manual/auth_system/auth-editor-configs2.png
+.. figure:: img/auth-editor-configs2.png
    :align: center
 
    Configurations editor
@@ -111,7 +111,7 @@ to remove configurations, and the |symbologyEdit| button to modify existing ones
 
 .. _figure_authconfigeditor_add:
 
-.. figure:: /static/user_manual/auth_system/auth-config-create_authcfg-id.png
+.. figure:: img/auth-config-create_authcfg-id.png
    :align: center
 
    Adding config from within Configuration editor
@@ -126,10 +126,10 @@ unless you need to do more comprehensive configuration management.
 
 .. _figure_authconfigeditor_wms:
 
-.. figure:: /static/user_manual/auth_system/auth-selector-wms-connection.png
+.. figure:: img/auth-selector-wms-connection.png
    :align: center
 
-   WMS connection dialog showing **[Add]**, **[Edit]**, and **[Remove]** 
+   WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and :guilabel:`Remove` 
    authentication configuration buttons
 
 When creating or editing an authentication configuration, the info required is
@@ -150,12 +150,12 @@ plugin. As such, some authentication method plugins may not be applicable
 everywhere an authentication configuration selector is shown. A list of
 available authentication method plugins and their compatible resource/providers
 can be accessed going to :menuselection:`Settings --> Options` and, in the
-:guilabel:`Authentication` tab, click the |options| **[Installed plugins]**
+:guilabel:`Authentication` tab, click the |options| :guilabel:`Installed Plugins`
 button.
 
 .. _figure_authmethod:
 
-.. figure:: /static/user_manual/auth_system/auth-method-listing.png
+.. figure:: img/auth-method-listing.png
    :align: center
 
    Available method plugins list
@@ -168,28 +168,42 @@ version of QGIS if you intend to add it to an existing target install.
 
 .. _figure_authmethod_http:
 
-.. figure:: /static/user_manual/auth_system/auth-config-create_basic-auth.png
+.. figure:: img/auth-config-create_basic-auth.png
    :align: center
 
    Basic HTTP authentication configs
 
+.. _figure_authmethod_esritoken:
+
+.. figure:: img/auth-config-create_esritoken.png
+   :align: center
+
+   ESRI Token authentication configs
+
+.. _figure_authmethod_oauth2:
+
+.. figure:: img/auth-config-create_oauth2.png
+   :align: center
+
+   OAuth2 authentication configs
+
 .. _figure_authmethod_pki:
 
-.. figure:: /static/user_manual/auth_system/auth-config-create_pem-der-paths.png
+.. figure:: img/auth-config-create_pem-der-paths.png
    :align: center
 
    PKI paths authentication configs
 
 .. _figure_authmethod_pkcs:
 
-.. figure:: /static/user_manual/auth_system/auth-config-create_pkcs12-paths.png
+.. figure:: img/auth-config-create_pkcs12-paths.png
    :align: center
 
    PKI PKCS#12 file paths authentication configs
 
 .. _figure_authmethod_stored:
 
-.. figure:: /static/user_manual/auth_system/auth-config-create_stored-identity2.png
+.. figure:: img/auth-config-create_stored-identity2.png
    :align: center
 
    Stored Identity authentication configs
@@ -209,7 +223,7 @@ authentication database and configurations:
 
 .. _figure_authconfiutils:
 
-.. figure:: /static/user_manual/auth_system/auth-editor-configs_utilities-menu.png
+.. figure:: img/auth-editor-configs_utilities-menu.png
    :align: center
 
    Utilities menu
@@ -242,7 +256,7 @@ authentication database and configurations:
 
   .. _figure_authconfiutilsdb:
 
-  .. figure:: /static/user_manual/auth_system/auth-db-erase.png
+  .. figure:: img/auth-db-erase.png
      :align: center
 
      DB erase verification menu
@@ -264,14 +278,14 @@ config’s ID respectively.
 
 .. _figure_authconfigselector:
 
-.. figure:: /static/user_manual/auth_system/auth-selector-no-authentication.png
+.. figure:: img/auth-selector-no-authentication.png
    :align: center
 
    Authentication configuration selector with no authentication
 
 .. _figure_authconfigselector_pkcs:
 
-.. figure:: /static/user_manual/auth_system/auth-selector-pkcs12-authentication.png
+.. figure:: img/auth-selector-pkcs12-authentication.png
    :align: center
 
    Authentication configuration selector with selected config
@@ -283,3 +297,20 @@ All classes and public functions have sip bindings, except ``QgsAuthCrypto``,
 since management of the master password hashing and auth database encryption
 should be handled by the main app, and not via Python.
 See :ref:`authentication_security_considerations` concerning Python access.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

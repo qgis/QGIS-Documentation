@@ -1,4 +1,8 @@
-|LS| Using Map Composer
+.. only:: html
+
+   |updatedisclaimer|
+
+|LS| Using Print Layout
 ===============================================================================
 
 Now that you've got a map, you need to be able to print it or to export it to a
@@ -8,34 +12,34 @@ colors, etc. So for someone who doesn't have the data or the same GIS program
 (such as QGIS), the map file will be useless. Luckily, QGIS can export its map
 file to a format that anyone's computer can read, as well as printing out the
 map if you have a printer connected. Both exporting and printing is handled via
-the Map Composer.
+the print layout.
 
-**The goal for this lesson:** To use the QGIS Map Composer to create a basic
+**The goal for this lesson:** To use the QGIS print layout to create a basic
 map with all the required settings.
 
-|basic| |FA| The Composer Manager
+|basic| |FA| The Layout Manager
 -------------------------------------------------------------------------------
 
 QGIS allows you to create multiple maps using the same map file. For this
-reason, it has a tool called the :guilabel:`Composer Manager`.
+reason, it has a tool called the :guilabel:`Layout Manager`.
 
-* Click on the :menuselection:`Project --> Composer Manager` menu entry to open
-  this tool.  You'll see a blank :guilabel:`Composer manager` dialog appear.
-* Click the :guilabel:`Add` button and give the new composer the name of
+* Click on the :menuselection:`Project --> Layout Manager` menu entry to open
+  this tool.  You'll see a blank :guilabel:`Layout manager` dialog appear.
+* Click the :guilabel:`Add` button and give the new layout the name of
   |majorUrbanName|.
 * Click :guilabel:`OK`.
 * Click the :guilabel:`Show` button.
 
-(You could also close the dialog and navigate to a composer via the
-:menuselection:`File --> Print Composers` menus, as in the image below.)
+(You could also close the dialog and navigate to a layout via the
+:menuselection:`Project --> Layouts -->` menu, as in the image below.)
 
-.. image:: /static/training_manual/map_composer/print_composer_menu.png
+.. image:: img/print_composer_menu.png
    :align: center
 
 Whichever route you take to get there, you will now see the :guilabel:`Print
-Composer` window:
+Layout` window:
 
-.. image:: /static/training_manual/map_composer/print_composer_dialog.png
+.. image:: img/print_composer_dialog.png
    :align: center
 
 
@@ -45,7 +49,7 @@ Composer` window:
 In this example, the composition was already the way we wanted it. Ensure that
 yours is as well.
 
-* In the :guilabel:`Print Composer` window, check that the values under
+* In the :guilabel:`Print Layout` window, check that the values under
   :menuselection:`Composition --> Paper and Quality` are set to the following:
 
 - :guilabel:`Size`: :kbd:`A4 (210x297mm)`
@@ -61,19 +65,19 @@ With this tool activated, you'll be able to place a map on the page.
 
 * Click and drag a box on the blank page:
 
-.. image:: /static/training_manual/map_composer/drag_add_map.png
+.. image:: img/drag_add_map.png
    :align: center
 
 The map will appear on the page.
 
 * Move the map by clicking and dragging it around:
 
-.. image:: /static/training_manual/map_composer/move_map.png
+.. image:: img/move_map.png
    :align: center
 
 * Resize it by clicking and dragging the boxes in the corners:
 
-.. image:: /static/training_manual/map_composer/resize_map.png
+.. image:: img/resize_map.png
    :align: center
 
 .. note::  Your map may look a lot different, of course! This depends on how
@@ -98,15 +102,15 @@ be at the wrong resolution and will look ugly or unreadable.
 
 * Force the map to refresh by clicking this button:
 
-.. image:: /static/training_manual/map_composer/refresh_button.png
+.. image:: img/refresh_button.png
    :align: center
 
 Remember that the size and position you've given the map doesn't need to be
 final. You can always come back and change it later if you're not satisfied.
 For now, you need to ensure that you've saved your work on this map. Because a
-:guilabel:`Composer` in QGIS is part of the main map file, you'll need to save
+:guilabel:`Layout` in QGIS is part of the main map file, you'll need to save
 your main project. Go to the main QGIS window (the one with the
-:guilabel:`Layers list` and all the other familiar elements you were working
+:guilabel:`Layers` panel and all the other familiar elements you were working
 with before), and save your project from there as usual.
 
 |basic| |FA| Adding a Title
@@ -133,13 +137,13 @@ However, there is also a tool to help position the title relative to the map
 |alignLeft|
 
 * Click the map to select it.
-* Hold in :kbd:`shift` on your keyboard and click on the label so that both the
+* Hold in :kbd:`Shift` on your keyboard and click on the label so that both the
   map and the label are selected.
 * Look for the :guilabel:`Align` button |alignLeft| and click on the
   dropdown arrow next to it to reveal the positioning options and click
   :guilabel:`Align center`:
 
-.. image:: /static/training_manual/map_composer/align_center_dropdown.png
+.. image:: img/align_center_dropdown.png
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
@@ -156,12 +160,12 @@ contents of the label:
 
 * Select the label by clicking on it.
 * Click on the :guilabel:`Item Properties` tab in the side panel of the
-  :guilabel:`Composer` window.
+  :guilabel:`Layout` window.
 * Change the text of the label to "|majorUrbanName|":
 
 * Use this interface to set the font and alignment options:
 
-.. image:: /static/training_manual/map_composer/title_font_alignment.png
+.. image:: img/title_font_alignment.png
    :align: center
 
 * Choose a large but sensible font (the example will use the default font with
@@ -181,7 +185,7 @@ you wish to add a frame, you can do so:
 
 In this example, we won't enable the frame, so here is our page so far:
 
-.. image:: /static/training_manual/map_composer/page_so_far.png
+.. image:: img/page_so_far.png
    :align: center
 
 |basic| |FA| Adding a Legend
@@ -196,7 +200,7 @@ add a new legend.
 
 * Click on the page to place the legend, and move it to where you want it:
 
-.. image:: /static/training_manual/map_composer/legend_added.png
+.. image:: img/legend_added.png
    :align: center
 
 |moderate| |FA| Customizing Legend Items
@@ -220,13 +224,13 @@ You can also rename items.
 * Set :kbd:`landuse` to :guilabel:`Hidden`, then click the down arrow and edit
   each category to name them on the legend. You can also reorder the items:
 
-.. image:: /static/training_manual/map_composer/categories_reordered.png
+.. image:: img/categories_reordered.png
    :align: center
 
 As the legend will likely be widened by the new layer names, you may wish to
 move and resize the legend and or map. This is the result:
 
-.. image:: /static/training_manual/map_composer/map_composer_result.png
+.. image:: img/map_composer_result.png
    :align: center
 
 |basic| |FA| Exporting Your Map
@@ -235,7 +239,7 @@ move and resize the legend and or map. This is the result:
 .. note::  Did you remember to save your work often?
 
 Finally the map is ready for export! You'll see the export buttons near the top
-left corner of the :guilabel:`Composer` window:
+left corner of the :guilabel:`Layout` window:
 
   |filePrint| |saveMapAsImage| |saveAsSVG|
   |saveAsPDF|
@@ -278,7 +282,7 @@ For our purposes, we're going to use PDF.
 |IC|
 -------------------------------------------------------------------------------
 
-* Close the :guilabel:`Composer` window.
+* Close the :guilabel:`Layout` window.
 * Save your map.
 * Find your exported PDF using your operating system's file manager.
 * Open it.
@@ -291,3 +295,47 @@ Congratulations on your first completed QGIS map project!
 
 On the next page, you will be given an assignment to complete. This will allow
 you to practice the techniques you have learned so far.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |addLegend| image:: /static/common/mActionAddLegend.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |alignLeft| image:: /static/common/mActionAlignLeft.png
+   :width: 1.5em
+.. |basic| image:: /static/global/basic.png
+.. |edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |majorUrbanName| replace:: Swellendam
+.. |moderate| image:: /static/global/moderate.png
+.. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
+   :width: 1.5em
+.. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em

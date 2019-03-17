@@ -21,18 +21,26 @@
 The Style Manager
 ==================
 
-The Style Manager is the place where users can manage and create generic symbols
-to be used in several QGIS projects. You can open it with the :menuselection:`Settings
---> Style Manager` or from the **Style** tab in the vector layer's
-:menuselection:`Properties`. It allows users to:
+The :guilabel:`Style Manager` is the place where users can manage and create
+generic symbols and color ramps to be used in several QGIS projects. You can
+open that modeless dialog:
 
-* create, edit and remove symbols
-* organize symbols in custom groups
-* export and import symbols.
+* with the |styleManager| :sup:`Style Manager` button of the Project toolbar;
+* from the :menuselection:`Settings -->` |styleManager| :menuselection:`Style
+  Manager...` menu;
+* or from a vector :menuselection:`Layer Properties --> Symbology` tab (using the
+  |styleManager| :sup:`Style Manager` button in a :ref:`symbol property
+  <symbol-selector>` dialog).
+
+The dialog allows you to:
+
+* create, edit and remove symbols and color ramps;
+* organize symbols and color ramps in custom groups;
+* export and import symbols and color ramps.
 
 .. _figure_style_manager:
 
-.. figure:: /static/user_manual/working_with_vector/stylemanager.png
+.. figure:: img/stylemanager.png
    :align: center
 
    The Style Manager
@@ -40,107 +48,149 @@ to be used in several QGIS projects. You can open it with the :menuselection:`Se
 
 .. _group_symbols:
 
-Groups and smart groups
-------------------------
+Organizing symbols and color ramps
+----------------------------------
 
-You can organize symbols into different categories. These categories, listed in
-the panel at the left, can be static (called **Group**) or dynamic (named
-**Smart Group**). A group is smart when its symbols are dynamically fetched
-according to conditions set. See figure_smart_group_:
+The :guilabel:`Style Manager` dialog displays in its center a frame with
+previewed items organized into tabs:
 
-To create a group, right click on an existing group or on the main **Groups**
-directory in the left of the dialog.
-You can also select a group and click the |signPlus| :sup:`Add Group`
-button. The new group will be a sub-group of the selected one.
+* |pointLayer| :guilabel:`Marker` for point symbols;
+* |lineLayer| :guilabel:`Line` for linear symbols;
+* |polygonLayer| :guilabel:`Fill` for surface symbols;
+* and |color| :guilabel:`Color ramp`.
 
-Create **Smart Group** is similar to creating group, but instead select
-**Smart Groups**. The dialog box allows user to choose the expression to
-select symbols in order to appear in the smart group (contains some tags,
-member of a group, have a string in its name, etc.). Any symbol that satisfies
-the entered condition(s) is automatically added to the smart group.
+For each family of items, you can organize the elements into different categories,
+listed in the panel on the left:
+
+* **Favorites**: displayed by default when configuring an item, it shows a
+  set of default symbols and color ramps you can extend;
+* **All**: listing all the installed symbols and color ramps;
+* **Tags**: shows a list of labels you can use to identify the items.
+  A symbol or color ramp can be tagged more than once. Select a tag in the list
+  and you'll see the items that belong to it for each type of item.
+  To create a new tag you could later attach to symbols or color ramps, use the
+  :guilabel:`Add Tag...` button or select the |signPlus| :guilabel:`Add Tag...`
+  from any tag contextual menu;
+* **Smart Group**: a smart group dynamically fetches its symbols according to
+  conditions set (see eg, figure_smart_group_). Click the :guilabel:`Add Smart Group...`
+  button to create smart groups. The dialog box allows you to enter an expression
+  to filter the items to select (has a particular tag, have a string in its name,
+  etc.). Any symbol or color ramp that satisfies the entered condition(s) is
+  automatically added to the smart group.
+
 
 .. _figure_smart_group:
 
-.. figure:: /static/user_manual/working_with_vector/create_smartgroup.png
+.. figure:: img/create_smartgroup.png
    :align: center
 
    Creating a Smart Group
 
-To remove a group or a smart group, right click on the group and select
-:menuselection:`Remove Group` or select it and push
-|signMinus| :sup:`Remove Group` button.
+Tags and smart groups are not mutually exclusive: they are simply two different
+ways to organize your symbols and color ramps. 
+Unlike the smart groups that automatically fetch their belonged items based on
+the input constraints, tags are filled by the user. To edit any of those categories,
+you can either:
 
-Unlike the smart groups that automatically fetch their belonged symbols,
-simple groups are filled by the user.
-To add a symbol into a group, you can either right click on a symbol, choose
-:menuselection:`Apply Group` and then the group name. There is a second
-way to add several symbols into a group: just select the group, click
-|changeLabelProperties| and choose :menuselection:`Group Symbols`. All
-symbols display a checkbox that allows you to add the symbol into the selected
-groups. When selection is finished, you can click the same button, and
-choose :menuselection:`Finish Grouping`.
+* select the items, right-click and choose :menuselection:`Add to Tag -->`
+  and then select the tag name or create a new tag;
+* select the tag and press :menuselection:`Modify group... --> Attach Selected Tag
+  to Symbols`. A |unchecked| checkbox appears near each item to help you select
+  or deselect it. When selection is finished, press :menuselection:`Modify group... -->
+  Finish Tagging`.
+* select the smart group, press :menuselection:`Modify group... --> Edit smart group...`
+  and configure a new set of constraints in the :guilabel:`Smart Group Editor` dialog.
+  This option is also available in the contextual menu of the smart group.
 
-All the symbols that are not placed under a custom group belong
-to a default group named **Ungrouped**.
+To remove a tag or a smart group, right-click on it and select the |signMinus|
+:guilabel:`Remove` button. Note that this does not delete the items grouped in the
+category.
 
-Add, Edit, Remove Symbol
--------------------------
+Adding, editing or removing an item
+-----------------------------------
 
-Selecting a group returns in the right panel, if applicable, the list of symbols
-of the group (including its subgroups). These symbols are organized in four
-different tabs:
+As seen earlier, symbols and color ramps are listed under different tabs whose
+contents depend on the active category (tag, smart group, favorites...). For each
+type of symbols (*Marker* , *Line* or *Fill*) and color ramp, when the tab is
+enabled, you can:
 
-* **Marker** for point symbols
-* **Line** for linear symbols
-* **Fill** for surface symbols
-* and :ref:`color-ramp`.
+* Add new items: press the |signPlus| :sup:`Add item` button and configure the
+  item following :ref:`symbols <symbol-selector>` or :ref:`color ramps <color-ramp>`
+  builder description.
+* Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit item`
+  button and configure as mentioned above. 
+* Delete existing items: to delete a symbol you no longer need, select it and click
+  |signMinus| :sup:`Remove item` (also available through right-click).
+  The symbol will be deleted from the local symbols database.
 
-To delete a symbol you no longer need, just select it and click |signMinus|
-:sup:`Remove item` (also available through right-click).
-The symbol will be deleted from the local symbols database.
+Right-clicking over a selection of items also allows you to:
 
-The symbol list can be modified by adding new symbols with |signPlus|
-:sup:`Add item` button or modifying existing ones with |symbologyEdit|
-:sup:`Edit item`.
-See :ref:`symbol-selector` for further information.
+* :guilabel:`Add to Favorites`;
+* :guilabel:`Remove from Favorites`;
+* :menuselection:`Add to Tag -->` and select the appropriate tag or create a new one to use;
+* :guilabel:`Clear Tags`: detaching the symbols from any tag;
+* :guilabel:`Remove Item(s)`;
+* :guilabel:`Edit Item`: applies to the item you right-click over;
+* :guilabel:`Export Selected Symbol(s) as PNG...` (not available with color ramps);
+* :guilabel:`Export Selected Symbol(s) as SVG...` (not available with color ramps);
 
 .. _share_symbols:
 
-Share symbols
---------------
+Sharing symbols and color ramps
+-------------------------------
 
-The |sharing| :sup:`Share item` tool, at the right bottom of the Style
-Library dialog, offers options to easily share symbols with others: users can
-indeed export their symbols and import symbols to their library.
+The |sharing| :guilabel:`Import/Export` tool, at the left bottom of the Style
+Manager dialog, offers options to easily share symbols and color ramps with
+others. These options are also available through right-click over the items.
 
-**Exporting symbols**
+Exporting items
+...............
 
-You can export the selected symbols to PNG, SVG or XML file formats.
-Exporting to PNG or SVG (both not available for color ramp symbols) creates
-a file for each selected symbol, and the SVG folder can be added to SVG Paths
-in :menuselection:`Settings --> Options` to e.g. share these symbols on a network.
-The XML format generates a single file containing all the selected symbols.
-This file can then be imported in another user's style library.
+You can export a set of items to an :file:`.XML` file:
 
-**Importing symbols**
+#. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
+   |fileSave| :guilabel:`Export Item(s)...`
+#. Choose the symbols and color ramps you'd like to integrate. Symbol selection
+   can be done with the mouse or using a tag or group previously set.
+#. Press :guilabel:`Export` when ready. You'll be prompted to indicate the destination
+   of the saved file. The XML format generates a single file containing all the
+   selected symbols. This file can then be imported in another user's style library.
 
-You can extend your symbols library by importing new symbols. Just select |sharing|
-:menuselection:`Import` from the drop-down list at the right bottom of the dialog.
-In the new dialog, you'll need to :
+.. _figure_symbol_export:
 
-* indicate the source of the symbols (it can be a ``.xml`` file on the disk or an url),
-* give the name of the group under which the symbols will be put
-* select the symbols you want to add to your library
-* and press **Import**.
+.. figure:: img/export_styles.png
+   :align: center
 
-Note that import and export options are also available through right-click.
+   Exporting symbols and color ramps
+
+When symbols are selected, you can also export them to :file:`.PNG` or :file:`.SVG`.
+Exporting to :file:`.PNG` or :file:`.SVG` (both not available for color ramp symbols)
+creates a file for each selected symbol in a given folder. The SVG folder can be
+added to the :guilabel:`SVG paths` in :menuselection:`Settings --> Options -->
+System` menu of another user, allowing him direct access to all these symbols.
+
+Importing items
+...............
+
+You can extend your symbols library by importing new symbols:
+
+#. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
+   |fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog.
+#. In the new dialog, indicate the source of the symbols (it can be an
+   :file:`.xml` file on the disk or a url).
+#. Set whether to |unchecked| :guilabel:`Add to favorites` the items to import.
+#. Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the import
+   of tags associated to the items being imported.
+#. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items.
+#. Select from the preview the symbols you want to add to your library.
+#. And press **Import**.
 
 .. _figure_symbol_import:
 
-.. figure:: /static/user_manual/working_with_vector/import_styles.png
+.. figure:: img/import_styles.png
    :align: center
 
-   Importing symbols
+   Importing symbols and color ramps
 
 
 .. _color-ramp:
@@ -154,8 +204,8 @@ Color Ramp
    single: Colors; Color brewer
    single: Colors; Custom color ramp
 
-The Color ramp tab in the Style Manager presents different types of
-color ramps you can use to style layers.
+The Color ramp tab in the :guilabel:`Style Manager` dialog helps you preview
+different color ramps based on the category selected in the left panel.
 
 To create a custom color ramp, activate the Color ramp tab and click the
 |signPlus| :sup:`Add item` button. The button reveals a drop-down list to
@@ -164,14 +214,33 @@ choose the ramp type:
 * :guilabel:`Gradient`: given a start and end colors, generate a color ramp which
   can be **continuous** or **discrete**. With double-clicking the ramp preview, you
   can add as many intermediate color stops as you want.
-* :guilabel:`Random`: creates a random set of colors based on range of values for
-  hue, saturation, value and opacity and a number of colors (classes)
-* :guilabel:`ColorBrewer`: a set of predefined discrete color gradients you can
-  custom the number of colors in the ramp
-* or :guilabel:`cpt-city`: an access to a whole catalog of color gradients to
-  locally :guilabel:`save as gradient color`.
 
-.. tip:: **Easily custom the color stops of the gradient color ramp**
+.. _figure_color_custom_ramp:
+
+.. figure:: img/customColorRampGradient.png
+   :align: center
+
+   Example of custom gradient color ramp with multiple stops
+
+* :guilabel:`Color presets`: allows to create a color ramp consisting of a list of
+  colors selected by the user;
+* :guilabel:`Random`: creates a random set of colors based on range of values for
+  :guilabel:`Hue`, :guilabel:`Saturation`, :guilabel:`Value` and :guilabel:`Opacity`
+  and a number of colors (:guilabel:`Classes`);
+* :guilabel:`Catalog: ColorBrewer`: a set of predefined discrete color gradients
+  you can customize the number of colors in the ramp;
+* or :guilabel:`Catalog: cpt-city`: an access to a whole catalog of color gradients to
+  locally :guilabel:`save as standard gradient`. The cpt-city option opens a new
+  dialog with hundreds of themes included 'out of the box'.
+
+.. _figure_color_cpt_city:
+
+.. figure:: img/cpt-cityColorRamps.png
+   :align: center
+
+   cpt-city dialog with hundreds of color ramps
+
+.. tip:: **Easily adjust the color stops of the gradient color ramp**
 
  Double-clicking the ramp preview or drag-and-drop a color from the color spot onto
  the ramp preview adds a new color stop. Each color stop can be tweaked using the
@@ -179,27 +248,6 @@ choose the ramp type:
  reposition it using the mouse, the arrow keys (combine with :kbd:`Shift` key for
  a larger move) or the :guilabel:`Relative position` spinbox. Pressing :guilabel:`Delete
  stop` as well as :kbd:`DEL` key removes the selected color stop. 
-
-You can use the |checkbox| :guilabel:`Invert` option while
-classifying the data with a color ramp. See figure_color_custom_ramp_ for an
-example of a custom color ramp and figure_color_cpt_city_ for the cpt-city Colors dialog.
-
-
-.. _figure_color_custom_ramp:
-
-.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
-   :align: center
-
-   Example of custom gradient color ramp with multiple stops
-
-The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
-
-.. _figure_color_cpt_city:
-
-.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
-   :align: center
-
-   cpt-city dialog with hundreds of color ramps
 
 
 .. _symbol-selector:
@@ -212,10 +260,10 @@ You can create or edit Marker, Line or Fill Symbols.
 
 .. _figure_symbol_marker:
 
-.. figure:: /static/user_manual/working_with_vector/symbolselector.png
+.. figure:: img/symbolselector.png
    :align: center
 
-   Designing a Marker symbol
+   Designing a Line symbol
 
 
 Two main components structure the symbol selector dialog:
@@ -244,6 +292,16 @@ level selected, you'll get enabled different tools at the bottom of the dialog t
 * |duplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
 
+When a symbol layer is selected in the tree, you can also:
+
+* control its visibility with the |checkbox| :guilabel:`Enable layer` option.
+  Disabled symbol layers are not drawn, but are saved and can be enabled at a
+  later stage. This makes it easier to customize parts of the symbol based on
+  the feature attributes or to tweak symbol appearance without having to
+  totally delete a symbol layer;
+* apply :ref:`rendering effects <draw_effects>` using the |checkbox|
+  :guilabel:`Draw effects` button.
+
 .. _edit_symbol:
 
 Configuring a symbol
@@ -261,7 +319,8 @@ more symbols (including, of any other type) or symbol layers.
 
 You can setup some parameters that apply to the global symbol:
 
-* :guilabel:`Unit`: it can be **Millimeter**, **Pixels** or **Map unit**
+* :guilabel:`Unit`: it can be **Millimeter**, **Points**, **Pixels**,
+  **Meters at Scale**, **Map unit** or **Inches**
 * :guilabel:`Transparency`
 * :guilabel:`Color`: when this parameter is changed by the user, its value is
   echoed to all unlocked sub-symbols color
@@ -272,23 +331,31 @@ You can setup some parameters that apply to the global symbol:
 
   The :ref:`Data-defined override <data_defined>` button beside the last layer-related
   parameters is inactive when setting the symbol from the Style manager dialog.
-  When the symbol is connected to a map layer, this button offers access to the
-  :ref:`size assistant <size_assistant>` dialog which helps to create proportional
-  or multivariate analysis rendering.
+  When the symbol is connected to a map layer, this button helps you create
+  proportional or multivariate analysis rendering.
 
 The symbols used at this level are items you can pick from the :ref:`symbols
-library <vector_style_manager>`. A list of available symbols of the same type
-from your symbol library is shown and can be filtered by selecting a group in
-the drop-down list just above. Click the :guilabel:`Save` button to add the
-designed symbol to your symbol library.
+library <vector_style_manager>`. Available symbols of the corresponding type
+are shown and, through the editable drop-down list just above, can be filtered
+by free-form text or by :ref:`categories <group_symbols>`.
+You can also update the list of symbols using the
+|styleManager| :sup:`Style Manager` button and open the eponym dialog. There,
+you can use any capabilities as exposed in :ref:`vector_style_manager` section.
 
-With the :guilabel:`Advanced` |selectString| option, you can:
+The symbols are displayed either:
+
+* in an icon list (with thumbnail, name and associated tags) using the
+  |openTable| :sup:`List View` button below the frame;
+* or as icon preview using the |iconView| :sup:`Icon View` button.
+
+Press the :guilabel:`Save Symbol` button to add any symbol being edited to the symbols
+library. With the :guilabel:`Advanced` |selectString| option, you can:
 
 * set the **symbol levels**: defining the way symbol layers are connected to
   each other in the map canvas (see :ref:`Symbols_levels` for more information)
 * and for line and fill symbols, **clip features to canvas extent**.
 
-.. Fix Me: What does advanced "clip features to canvas" option mean for the symbol?
+.. Todo: Explain what does advanced "clip features to canvas" option mean for the symbol?
 
 .. tip::
 
@@ -308,7 +375,7 @@ symbol layer types depend on the upper symbol type. You can apply on the symbol
 layer |paintEffects| :ref:`paint effects <draw_effects>` to enhance its rendering.
 
 Because describing all the options of all the symbol layer types would not be
-possible, only particular and significative ones are mentioned below.
+possible, only particular and significant ones are mentioned below.
 
 Common parameters
 ^^^^^^^^^^^^^^^^^
@@ -317,7 +384,8 @@ Some common options and widgets are available to build a symbol layer,
 regardless it's of marker, line or fill sub-type:
 
 * the :ref:`color selector <color-selector>` widget to ease color manipulation
-* :guilabel:`Units`: it can be **Millimeter**, **Pixels** or **Map unit**
+* :guilabel:`Units`: it can be **Millimeter**, **Points**, **Pixels**,
+  **Meters at Scale**, **Map unit** or **Inches**
 * the |dataDefined| :sup:`data-defined override` widget near almost all options,
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)
@@ -352,8 +420,10 @@ Appropriate for point geometry features, marker symbols have several
 .. _svg_marker:
 
 * **SVG marker**: provides you with images from your SVG paths (set in
-  :menuselection:`Settings --> Options --> System` menu) to render as marker
-  symbol. Each SVG file colors and stroke can be adapted.
+  :menuselection:`Settings --> Options... --> System` menu) to render as marker
+  symbol. Width and height of the symbol can be set independently or using the
+  |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
+  also be adapted.
 
   .. note:: Requirements for a customizable SVG marker symbol
 
@@ -371,14 +441,19 @@ Appropriate for point geometry features, marker symbols have several
  
 For each marker symbol layer type, you can set some of the following properties:
 
-* :guilabel:`Color` for the fill and/or stroke, using all the capabilities of
-  the :ref:`color-selector` widget;
 * :guilabel:`Size`
+* :guilabel:`Fill color` using all the capabilities of the :ref:`color-selector`
+  widget, extended by a shortcut to apply a :guilabel:`Transparent fill`
+  in the drop-down menu;
+* :guilabel:`Stroke color` using all the capabilities of the color selector
+  widget, extended by a shortcut to apply a :guilabel:`Transparent stroke`
+  in the drop-down menu;
 * :guilabel:`Stroke style`
 * :guilabel:`Stroke width`
 * :guilabel:`Join style`
 * :guilabel:`Rotation`
-* :guilabel:`Offset X,Y`: You can shift the symbol in the x- or y- direction;
+* :guilabel:`Offset`: You can shift the symbol in the :guilabel:`X` or
+  :guilabel:`Y` direction;
 * :guilabel:`Anchor point`.
 
 In most of the marker symbols dialog, you also have a frame with previews of
@@ -389,7 +464,7 @@ predefined symbols you can choose from.
 Line Symbols
 ^^^^^^^^^^^^
 
-Appropriate for line geometry features, line marker symbols have following symbol
+Appropriate for line geometry features, line symbols have following symbol
 layer types:
 
 * **Simple line** (default): available settings are:
@@ -429,24 +504,27 @@ symbol layer types:
 
 * **Simple fill** (default): the following settings are available:
 
-  * :guilabel:`Fill` color
-  * :guilabel:`Stroke` color
+  * :guilabel:`Fill color` using all the capabilities of the :ref:`color-selector`
+    widget, extended by a shortcut to apply a :guilabel:`Transparent fill`
   * :guilabel:`Fill style`
-  * :guilabel:`Stroke style`
+  * :guilabel:`Stroke color` using all the capabilities of the color selector
+    widget, extended by a shortcut to apply a :guilabel:`Transparent stroke`
   * :guilabel:`Stroke width`
+  * :guilabel:`Stroke style`
   * :guilabel:`Join style`
-  * :guilabel:`Offset X,Y`
+  * :guilabel:`Offset`: You can shift the symbol in the :guilabel:`X` or
+    :guilabel:`Y` direction;
 
 * **Centroid fill**: places a marker symbol at the centroid of the visible
   feature. The position of the marker may however not be the real centroid
   of the feature because calculation takes into account the polygon(s)
   clipped to area visible in map canvas for rendering and ignores holes.
-  Use :ref:`geometry_generator_symbol` if you want the exact centroid. 
+  Use the geometry generator symbol if you want the exact centroid. 
   
   The marker can be placed on every part of a multi-part feature or
   only on its biggest part, and forced to be inside the polygon;
 
-* **Geometry generator** (see geometry_generator_symbol_);
+* **Geometry generator** (see :ref:`geometry_generator_symbol`);
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
   simple two color gradients or a predefined :ref:`gradient color ramp
   <color-ramp>` to fill polygon layers. Gradient can be rotated and applied on
@@ -536,3 +614,53 @@ field either by:
 
 The magnitude of field can be scaled up or down to an appropriate size for
 viewing the field.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |color| image:: /static/common/color.png
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
+   :width: 1.5em
+.. |fileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |iconView| image:: /static/common/mActionIconView.png
+   :width: 1.5em
+.. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
+.. |locked| image:: /static/common/locked.png
+   :width: 1.5em
+.. |lockedGray| image:: /static/common/lockedGray.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |paintEffects| image:: /static/common/mIconPaintEffects.png
+   :width: 1.5em
+.. |pointLayer| image:: /static/common/mIconPointLayer.png
+   :width: 1.5em
+.. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |sharing| image:: /static/common/mActionSharing.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

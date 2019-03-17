@@ -22,7 +22,7 @@ makes more sense to use vector data.
 
 .. _figure_raster:
 
-.. figure:: /static/gentle_gis_introduction/raster_data/raster_dataset.png
+.. figure:: img/raster_dataset.png
    :align: center
    :width: 30em
 
@@ -53,7 +53,7 @@ vector dataset.
 
 .. _figure_landscape:
 
-.. figure:: /static/gentle_gis_introduction/landscape.jpg
+.. figure:: img/landscape.jpg
    :align: center
    :width: 30em
 
@@ -80,7 +80,7 @@ and one that shows calculated values can be seen in figure_raster_types_.
 
 .. _figure_raster_types:
 
-.. figure:: /static/gentle_gis_introduction/raster_data/raster_types.png
+.. figure:: img/raster_types.png
    :align: center
    :width: 30em
 
@@ -120,7 +120,7 @@ an aeroplane or satellite is called **remote sensing**.
 
 .. _figure_csir_station:
 
-.. figure:: /static/gentle_gis_introduction/raster_data/csir_station.jpg
+.. figure:: img/csir_station.jpg
    :align: center
    :width: 30em
 
@@ -157,7 +157,7 @@ figure_raster_large_scale_).
 
 .. _figure_raster_small_scale:
 
-.. figure:: /static/gentle_gis_introduction/raster_data/raster_small_scale.png
+.. figure:: img/raster_small_scale.png
    :align: center
    :width: 30em
 
@@ -165,7 +165,7 @@ figure_raster_large_scale_).
 
 .. _figure_raster_large_scale:
 
-.. figure:: /static/gentle_gis_introduction/raster_data/raster_large_scale.png
+.. figure:: img/raster_large_scale.png
    :align: center
    :width: 30em
 
@@ -347,7 +347,7 @@ Further reading
 * DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd
   Edition. Wiley. ISBN: 9814126195
 
-**Website:** http://en.wikipedia.org/wiki/GIS#Raster
+**Website:** https://en.wikipedia.org/wiki/GIS#Raster
 
 The QGIS User Guide also has more detailed information on working with raster
 data in QGIS.
@@ -358,3 +358,13 @@ What's next?
 In the section that follows we will take a closer look at **topology** to see
 how the relationship between vector features can be used to ensure the best data
 quality.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gentleLogo| image:: img/gentlelogo.png
+   :width: 3em

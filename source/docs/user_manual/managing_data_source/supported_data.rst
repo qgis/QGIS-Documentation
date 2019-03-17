@@ -31,7 +31,7 @@ aerial photography, or satellite imagery and modelled data, such as an elevation
 matrix.
 
 Unlike vector data, raster data typically do not have an associated database
-record for each cell. They are geocoded by pixel resolution and the x/y
+record for each cell. They are geocoded by pixel resolution and the X/Y
 coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 
@@ -47,7 +47,7 @@ Vector Data
 
 Many of the features available in QGIS work the same, regardless the vector
 data source. However, because of the differences in formats specifications
-(ESRI shapefiles, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS,
+(ESRI Shapefile, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS,
 SpatiaLite, DB2, Oracle Spatial and MSSQL Spatial databases, and many more),
 QGIS may handle differently some of their properties.
 This section describes how to work with these specificities.
@@ -66,52 +66,56 @@ This section describes how to work with these specificities.
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
 
-ESRI Shapefiles
----------------
+ESRI Shapefile
+--------------
 
-The ESRI shapefile is still one of the most used vector file format in QGIS.
+ESRI Shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
-not (like Geopackage, spatialite). Support is provided by the
-`OGR Simple Feature Library <http://www.gdal.org/ogr/>`_.
+not (like GeoPackage, SpatiaLite). Support is provided by the
+`OGR Simple Feature Library <https://www.gdal.org/ogr/>`_.
 
-A shapefile actually consists of several files. The following three are
-required:
+A Shapefile format dataset consists of several files.
+The following three are required:
 
 #. :file:`.shp` file containing the feature geometries
 #. :file:`.dbf` file containing the attributes in dBase format
 #. :file:`.shx` index file
 
-Shapefiles also can include a file with a :file:`.prj` suffix, which contains
+A Shapefile format dataset can also include a file with a :file:`.prj`
+suffix, which contains
 the projection information. While it is very useful to have a projection file,
-it is not mandatory. A shapefile dataset can contain additional files. For
-further details, see the ESRI technical specification at
-http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
+it is not mandatory. A Shapefile format dataset can contain additional files.
+For further details, see the ESRI technical specification at
+https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
-**Improving Performance for Shapefiles**
+**Improving Performance for Shapefile format datasets**
 
-To improve the performance of drawing a shapefile, you can create a spatial
-index. A spatial index will improve the speed of both zooming and panning.
+To improve the performance of drawing a Shapefile format dataset, you can
+create a spatial index.
+A spatial index will improve the speed of both zooming and panning.
 Spatial indexes used by QGIS have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-*  Load a shapefile (see :ref:`browser_panel`);
-*  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
-   shapefile name in the legend or by right-clicking and choosing
-   :menuselection:`Properties` from the context menu.
-*  In the :guilabel:`General` tab, click the **[Create Spatial Index]** button.
+#. Load a Shapefile format dataset (see :ref:`browser_panel`).
+#. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
+   layer name in the legend or by right-clicking and choosing
+   :menuselection:`Properties...` from the context menu.
+#. In the :guilabel:`Source` tab, click the :guilabel:`Create Spatial Index` button.
 
-**Problem loading a shape .prj file**
+**Problem loading a .prj file**
 
-If you load a shapefile with a :file:`.prj` file and QGIS is not able to read the
+If you load a Shapefile format dataset with a :file:`.prj` file and QGIS is not
+able to read the
 coordinate reference system from that file, you will need to define the proper
-projection manually within the :guilabel:`General` tab of the
-:guilabel:`Layer Properties` dialog of the layer by clicking the
-**[Specify...]**  button. This is due to the fact that :file:`.prj` files
+projection manually within the :menuselection:`Layer Properties --> Source` tab
+of the layer by clicking the |setProjection| :sup:`Select CRS` button.
+This is due to the fact that :file:`.prj` files
 often do not provide the complete projection parameters as used in QGIS and
 listed in the :guilabel:`CRS` dialog.
 
-For the same reason, if you create a new shapefile with QGIS, two different
+For the same reason, if you create a new Shapefile format dataset with QGIS,
+two different
 projection files are created: a :file:`.prj` file with limited projection
 parameters, compatible with ESRI software, and a :file:`.qpj` file, providing
 the complete parameters of the used CRS. Whenever QGIS finds a :file:`.qpj`
@@ -124,26 +128,23 @@ file, it will be used instead of the :file:`.prj`.
 Delimited Text Files
 --------------------
 
-Tabular data is a very common and widely used format because of its simplicity
+Delimited text file is a very common and widely used format because of its simplicity
 and readability -- data can be viewed and edited even in a plain text editor.
-A delimited text file is an attribute table with each column separated by a
+A delimited text file is a tabular data with each column separated by a
 defined character and each row separated by a line break. The first row usually
 contains the column names. A common type of delimited text file is a CSV
 (Comma Separated Values), with each column separated by a comma.
+Such data files can also contain positional information (see :ref:`csv_geometry`). 
 
-Such data files can also contain positional information in two main forms:
-
-* As point coordinates in separate columns
-* As well-known text (WKT) representation of geometry
-
-QGIS allows you to load a delimited text file as a layer or ordinal table. But
+QGIS allows you to load a delimited text file as a layer or ordinal table
+(see :ref:`browser_panel` or :ref:`vector_loading_csv`). But
 first check that the file meets the following requirements:
 
 #. The file must have a delimited header row of field names. This must be the
-   first line in the text file.
-#. The header row must contain field(s) with geometry definition. These field(s)
-   can have any name.
-#. The X and Y coordinates (if geometry is defined by coordinates) must be
+   first line of the data (ideally the first row in the text file).
+#. If geometry should be enabled, the header row must contain field(s) with
+   geometry definition. These field(s) can have any name.
+#. The X and Y coordinates fields (if geometry is defined by coordinates) must be
    specified as numbers. The coordinate system is not important.
 #. If you have any data that is not a string (text) and the file is a CSV file,
    you must have a CSVT file (see section :ref:`csvt_files`).
@@ -170,17 +171,43 @@ Some items to note about the text file:
 #. The X coordinates are contained in the ``X`` field.
 #. The Y coordinates are contained in the ``Y`` field.
 
+.. _csv_geometry:
+
+Storing geometry information in delimited text file
+...................................................
+
+Delimited text files can contain geometry information in two main forms:
+
+* As coordinates in separate columns (eg. ``Xcol``, ``Ycol``... ),
+  compatible with point geometry data;
+* As well-known text (WKT) representation of geometry in a single column,
+  for any geometry type.
+
+Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
+supported. Here are some examples of such geometry types as a delimited text
+with WKT geometries::
+
+  Label;WKT_geom
+  LineString;LINESTRING(10.0 20.0, 11.0 21.0, 13.0 25.5)
+  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
+  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
+  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
+    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
+
+Delimited Text supports also Z and M coordinates in geometries::
+
+   LINESTRINGZ(10.0 20.0 30.0, 11.0 21.0 31.0, 11.0 22.0 30.0)
+
 
 .. index:: CSV, CSVT
 .. _csvt_files:
 
-CSVT Files
-..........
+Using CSVT file to control field formatting
+...........................................
 
 When loading CSV files, the OGR driver assumes all fields are strings (i.e. text)
 unless it is told otherwise. You can create a CSVT file to tell OGR (and QGIS)
 what data type the different columns are:
-
 
 .. csv-table::
     :header: "Type", "Name", "Example"
@@ -203,24 +230,7 @@ You can even specify width and precision of each column, e.g.::
 This file is saved in the same folder as the :file:`.csv` file, with the same
 name, but :file:`.csvt` as the extension.
 
-*You can find more information at* `GDAL CSV Driver <http://www.gdal.org/drv_csv.html>`_.
-
-Others valuable informations for advanced users
-...............................................
-
-Features with curved geometries (CircularString, CurvePolygon and CompoundCurve) are
-supported. Here are three examples of such geometry types as a delimited text
-with WKT geometries::
-
-  Label;WKT_geom
-  CircularString;CIRCULARSTRING(268 415,227 505,227 406)
-  CurvePolygon;CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))
-  CompoundCurve;COMPOUNDCURVE((5 3, 5 13), CIRCULARSTRING(5 13, 7 15,
-    9 13), (9 13, 9 3), CIRCULARSTRING(9 3, 7 1, 5 3))
-
-Delimited Text supports also Z and M coordinates in geometries::
-
-   LINESTRINGM(10.0 20.0 30.0, 11.0 21.0 31.0)
+*You can find more information at* `GDAL CSV Driver <https://www.gdal.org/drv_csv.html>`_.
 
 
 .. index:: PostGIS, PostgreSQL
@@ -311,7 +321,7 @@ Support of PostgreSQL data types
 ................................
 
 Most of common data types are supported by the PostgreSQL provider: integer, float,
-varchar, geometry, timestamp and array.
+varchar, geometry, timestamp, array and hstore.
 
 .. index:: shp2pgsql
    single: PostGIS; shp2pgsql
@@ -327,15 +337,16 @@ DB Manager
 ..........
 
 QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can
-be used to load shapefiles and other data formats, and it includes support for
+be used to load data, and it includes support for
 schemas. See section :ref:`dbmanager` for more information.
 
 shp2pgsql
 .........
 
 PostGIS includes an utility called **shp2pgsql** that can be used to import
-shapefiles into a PostGIS-enabled database. For example, to import a
-shapefile named :file:`lakes.shp` into a PostgreSQL database named
+Shapefile format datasets into a PostGIS-enabled database.
+For example, to import a
+Shapefile format dataset named :file:`lakes.shp` into a PostgreSQL database named
 ``gis_data``, use the following command:
 
 ::
@@ -354,8 +365,8 @@ reference systems and projections.
 .. tip:: **Exporting datasets from PostGIS**
 
    Like the import tool **shp2pgsql**, there is also a tool to export
-   PostGIS datasets as shapefiles: **pgsql2shp**. This is shipped within
-   your PostGIS distribution.
+   PostGIS datasets in the Shapefile format: **pgsql2shp**.
+   This is shipped within your PostGIS distribution.
 
 .. index:: ogr2ogr
    single: PostGIS; ogr2ogr
@@ -363,16 +374,18 @@ reference systems and projections.
 ogr2ogr
 .......
 
-Besides **shp2pgsql** and **DB Manager**, there is another tool for feeding geodata
-in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
+Besides **shp2pgsql** and **DB Manager**, there is another tool for feeding
+geodata in PostGIS: **ogr2ogr**.
+This is part of your GDAL installation.
 
-To import a shapefile into PostGIS, do the following:
+To import a Shapefile format dataset into PostGIS, do the following:
 ::
 
   ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres
   password=topsecret" alaska.shp
 
-This will import the shapefile :file:`alaska.shp` into the PostGIS database
+This will import the Shapefile format dataset :file:`alaska.shp` into the
+PostGIS database
 *postgis* using the user *postgres* with the password *topsecret* on host
 server *myhost.de*.
 
@@ -407,11 +420,11 @@ over a network. You can improve the drawing performance of PostgreSQL layers by
 ensuring that a PostGIS spatial index exists on each layer in the
 database. PostGIS supports creation of a GiST (Generalized Search Tree)
 index to speed up spatial searches of the data (GiST index information is taken
-from the PostGIS documentation available at http://postgis.net).
+from the PostGIS documentation available at https://postgis.net).
 
 .. tip:: You can use the DBManager to create an index to your layer. You should
    first select the layer and click on :menuselection:`Table --> Edit table`, go
-   to :menuselection:`Indexes` tab and click on **[Add spatial index]**.
+   to :menuselection:`Indexes` tab and click on :guilabel:`Add Spatial Index`.
 
 The syntax for creating a GiST index is:
 ::
@@ -452,7 +465,7 @@ Vector layers crossing 180 |degrees| longitude
 
 Many GIS packages don't wrap vector maps with a geographic reference system
 (lat/lon) crossing the 180 degrees longitude line
-(http://postgis.refractions.net/documentation/manual-2.0/ST\_Shift\_Longitude.html).
+(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html).
 As result, if we open such a map in QGIS, we will see two far, distinct locations,
 that should appear near each other. In Figure_vector_crossing_, the tiny point on the far
 left of the map canvas (Chatham Islands) should be within the grid, to the right of the
@@ -460,7 +473,7 @@ New Zealand main islands.
 
 .. _figure_vector_crossing:
 
-.. figure:: /static/user_manual/managing_data_source/vectorNotWrapping.png
+.. figure:: img/vectorNotWrapping.png
    :align: center
 
    Map in lat/lon crossing the 180 |degrees| longitude line
@@ -473,7 +486,7 @@ version of the data to be plotted in a 180 |degrees|-centric map.
 
 .. _figure_vector_crossing_map:
 
-.. figure:: /static/user_manual/managing_data_source/vectorWrapping.png
+.. figure:: img/vectorWrapping.png
    :align: center
    :width: 25em
 
@@ -503,7 +516,7 @@ right clicking the layer in the legend. Then, click on :menuselection:`Save as..
 define the name of the output file, and select 'SpatiaLite' as format and the CRS.
 Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
-database. See also http://www.gdal.org/ogr/drv_sqlite.html.
+database. See also https://www.gdal.org/ogr/drv_sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
 
@@ -534,7 +547,7 @@ The DB2 provider for QGIS supports the full range of visualization, analysis
 and manipulation of spatial data in these databases.
 
 .. _DB2 z/OS KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/en/SSEPEK_11.0.0/spatl/src/tpc/spatl_db2sb03.html
-.. _DB2 LUW KnowledgeCenter: http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.spatial.topics.doc/doc/db2sb03.html
+.. _DB2 LUW KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.spatial.topics.doc/doc/db2sb03.html
 .. _DB2 DashDB KnowledgeCenter: https://www.ibm.com/support/knowledgecenter/SS6NHC/com.ibm.db2.luw.spatial.topics.doc/doc/csbp1001.html
 .. _DB2 Spatial Tutorial: https://www.ibm.com/developerworks/data/tutorials/dm-1202db2spatialdata1/
 
@@ -571,3 +584,23 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
 	SET gskpath=C:\Program Files (x86)\ibm\gsk8
 	SET Path=%db2path%\BIN;%db2path%\FUNCTION;%gskpath%\lib64;%gskpath%\lib;%path%
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |degrees| unicode:: 0x00B0
+   :ltrim:
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |osx| image:: /static/common/osx.png
+   :width: 1em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

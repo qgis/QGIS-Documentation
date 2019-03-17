@@ -16,7 +16,7 @@
 QGIS is an open source project developed by a team of dedicated volunteers and
 organisations. We strive to be a welcoming community for people of all race, creed,
 gender and walks of life.
-At any moment, you can `get involved <http://qgis.org/en/site/getinvolved/index.html>`_.
+At any moment, you can `get involved <https://qgis.org/en/site/getinvolved/index.html>`_.
 
 .. index::
    single: Contributors; Authors
@@ -32,13 +32,13 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Tara Athan         | Radim Blazek        | K\. Koy              | Godofredo Contreras   | Martin Dobias        |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N\. Horning           | Magnus Homann        |
+| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N. Horning            | Magnus Homann        |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Werner Macho       | Denis Rouzaud       | Tyler Mitchell       | Claudia A. Engel      | Lars Luthman         |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Otto Dassau        | Brendan Morely      | David Willis         | Jürgen E. Fischer     | Yoichi Kayama        |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Alex Bruy          | Anita Graser        | Victor Olaya         | Marco Hugentobler     | Gary E. Sherman      |
+| Alexander Bruy     | Anita Graser        | Victor Olaya         | Marco Hugentobler     | Gary E. Sherman      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Tim Sutton         | Larissa Junek       | Raymond Nijssen      | Richard Duivenvoorde  | Andreas Neumann      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
@@ -64,15 +64,17 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Paolo Corti        | Hugo Mercier        | Gavin Macaulay       | Stefan Blumentrath    | Nicholas Duggan      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| David Adler        | Vincent Mora        | Tudor Barascu        | QGIS Koran Translator | Stéphane Brunner     |
+| David Adler        | Vincent Mora        | Tudor Bărăscu        | QGIS Koran Translator | Stéphane Brunner     |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Jaka Kranjc        | Tom Kralidis        | Zoltan Siki          | Sebastian Dietrich    | Uros Preloznik       |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Dick Groskamp      | Mezene Worku        | Alexandre Busquets   | Dominic Keller        | Andre Mano           |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| ajazepk            | icephale            | Andrei               | GiordanoPezzola       | zstadler             |
+| Chris Mayo         | Håvard Tveite       | Mie Winstrup         | Jonathan Willitts     | Giovanni Manghi      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Ramon              | embelding           |                      |                       |                      |
+| Martina Savarese   | icephale            | Andrei               | GiordanoPezzola       | zstadler             |
++--------------------+---------------------+----------------------+-----------------------+----------------------+
+| Ramon              | embelding           | ajazepk              |                       |                      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 
 
@@ -87,7 +89,7 @@ QGIS is a multi-language application and as is, also publishes a documentation
 translated into several languages. Many other languages are being translated
 and would be released as soon as they reach a reasonable percentage of
 translation. If you wish to help improving a language or request a new one,
-please see http://qgis.org/en/site/getinvolved/index.html.
+please see https://qgis.org/en/site/getinvolved/index.html.
 
 The current translations are made possible thanks to:
 
@@ -140,3 +142,11 @@ Spanish               Carlos Dávila, Diana Galindo, Edwin Amado, Gabriela Awad,
 Ukrainian             Alexander Bruy
 ===================== ========================================================
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

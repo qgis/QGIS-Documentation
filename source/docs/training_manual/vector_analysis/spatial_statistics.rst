@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Spatial Statistics
 ===============================================================================
 
@@ -9,7 +13,7 @@ given vector dataset. QGIS includes several standard tools for statistical
 analysis which prove useful in this regard.
 
 **The goal for this lesson:** To know how to use QGIS' spatial statistics
-tools.
+tools within the :guilabel:`Processing` toolbox.
 
 |basic| |FA| Create a Test Dataset
 -------------------------------------------------------------------------------
@@ -22,74 +26,78 @@ want to create the points in.
 
 We'll use the area covered by streets.
 
-* Create a new empty map.
-* Add your :kbd:`roads_34S` layer,
-  as well as the |srtmFileName| raster (elevation data) found in
-  :kbd:`exercise_data/raster/SRTM/`.
+#. Start a new project.
+#. Add your :guilabel:`roads` layer, as well as the :guilabel:`srtm_41_19`
+   raster file (elevation data) found in :file:`exercise_data/raster/SRTM/`.
 
-.. note:: You might find that your SRTM DEM layer has a different CRS to that of
-  the roads layer. If so, you can reproject either the roads or DEM layer using
-  techniques learnt earlier in this module.
+   .. note:: You might find that your SRTM DEM layer has a different CRS to that of
+    the roads layer. QGIS is reprojecting both layers in a single CRS. For the
+    following exercises this difference does not matter, but feel free to
+    reproject a layer in another CRS as shown in this module.
 
-* Use the :guilabel:`Convex hull(s)` tool (available under
-  :menuselection:`Vector --> Geoprocessing Tools`) to generate an area
-  enclosing all the roads:
+#. Open :guilabel:`Processing` toolbox.
+#. Use the :menuselection:`Vector Geometry --> Minimum bounding geometry` tool to
+   generate an area enclosing all the roads by selecting ``Convex Hull`` as the
+   :guilabel:`Geometry Type` parameter:
 
-.. image:: /static/training_manual/vector_analysis/roads_hull_setup.png
-   :align: center
+   .. image:: img/roads_hull_setup.png
+      :align: center
 
-* Save the output under :kbd:`exercise_data/spatial_statistics/` as
-  :kbd:`roads_hull.shp`.
-* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
+   As you know, if you don't specify the output, :guilabel:`Processing` creates
+   temporary layers. It is up to you to save the layers immediately or in a
+   second moment.
 
 Creating random points
 ...............................................................................
 
 * Create random points in this area using the tool at :menuselection:`Vector
-  --> Research Tools --> Random points`:
+  Creation --> Random points in layer bounds`:
 
-.. image:: /static/training_manual/vector_analysis/random_points_setup.png
-   :align: center
+  .. image:: img/random_points_setup.png
+     :align: center
 
-* Save the output under :kbd:`exercise_data/spatial_statistics/` as
-  :kbd:`random_points.shp`.
-* Check :guilabel:`Add result to canvas` option to add the output to the TOC (:guilabel:`Layers list`).
+  .. note:: The yellow warning sign is telling you that that parameter concerns
+    something about the distance. The :guilabel:`Bounding geometry` layer is in a
+    Geographical Coordinate System and the algorithm is just reminding you this.
+    For this example we won't use this parameter so you can ignore it.
 
-.. image:: /static/training_manual/vector_analysis/random_points_result.png
+If needed, move the generated random point at the top of the legend to see them
+better:
+
+.. image:: img/random_points_result.png
    :align: center
 
 Sampling the data
 ...............................................................................
 
-* To create a sample dataset from the raster, you'll need to use the
-  :guilabel:`Point sampling tool` plugin.
-* Refer ahead to the module on plugins if necessary.
-* Search for the phrase :kbd:`point sampling` in the :menuselection:`Plugin -->
-  Manage and Install Plugins...` and you will find the plugin.
-* As soon as it has been activated with the :guilabel:`Plugin Manager`, you
-  will find the tool under :menuselection:`Plugins --> Analyses --> Point
-  sampling tool`:
+To create a sample dataset from the raster, you'll need to use the
+:menuselection:`Raster Analysis --> Sample raster values` algorithm within
+:guilabel:`Processing` toolbox. This tool samples the raster at the points
+locations and copies the raster values in other field(s) depending on how many
+bands the raster is made of.
 
-.. image:: /static/training_manual/vector_analysis/sampling_plugin_dialog.png
-   :align: center
+#. Open the :guilabel:`Sample raster values` algorithm dialog
+#. Select :guilabel:`random_points` as the layer containing sampling points, and
+   the SRTM raster as the band to get values from. The default name of the new
+   field is ``rvalue_N``, where ``N`` is the number of the raster band. You can
+   change the name of the prefix if you want:
 
-* Select :guilabel:`random_points` as the layer containing sampling points, and
-  the SRTM raster as the band to get values from.
-* Make sure that "Add created layer to the TOC" is checked.
-* Save the output under :kbd:`exercise_data/spatial_statistics/` as
-  :kbd:`random_samples.shp`.
+   .. image:: img/sample_raster_dialog.png
+      :align: center
+
+#. Press :guilabel:`Run`
 
 Now you can check the sampled data from the raster file in the attributes
-table of the :guilabel:`random_samples` layer, they will be in a column
-named |srtmFileName|.
+table of the :guilabel:`Random points` layer, they will be in a new field with
+the name you have chosen.
 
 A possible sample layer is shown here:
 
-.. image:: /static/training_manual/vector_analysis/random_samples_result.png
+.. image:: img/random_samples_result.png
    :align: center
 
-The sample points are classified by their value such that darker points are at
-a lower altitude.
+The sample points are classified by their ``rvalue_1`` field such that red
+points are at a higher altitude.
 
 You'll be using this sample layer for the rest of the statistical exercises.
 
@@ -98,135 +106,146 @@ You'll be using this sample layer for the rest of the statistical exercises.
 
 Now get the basic statistics for this layer.
 
-* Click on the :menuselection:`Vector --> Analysis Tools --> Basic statistics`
-  menu entry.
-* In the dialog that appears, specify the :guilabel:`random_samples` layer as
-  the source.
-* Make sure that the :menuselection:`Target field` is set to |srtmFileName|
-  which is the field you will calculate statistics for.
-* Click :guilabel:`OK`. You'll get results like this:
+#. Click on the |sum| icon in the :guilabel:`Attributes Toolbar` of QGIS main dialog.
+   A new panel will pop up.
+#. In the dialog that appears, specify the :guilabel:`Sampled Points` layer as
+   the source.
+#. Select the :guilabel:`rvalue_1` field in the field combo box which is the
+   field you will calculate statistics for.
+#. The :guilabel:`Statistics` Panel will be automatically updated with the
+   calculated statistics:
 
-.. image:: /static/training_manual/vector_analysis/basic_statistics_results.png
-   :align: center
+   .. image:: img/basic_statistics_results.png
+      :align: center
 
-.. note:: You can copy and paste the results into a spreadsheet. The data uses
-   a (colon :kbd:`:`) separator.
+   .. note:: You can copy the values by clicking on the |editCopy|:sup:`Copy Statistics To Clipboard`
+    button and paste the results into a spreadsheet.
 
-.. image:: /static/training_manual/vector_analysis/paste_to_spreadsheet.png
-   :align: center
+#. Close the :guilabel:`Statistics` Panel when done.
 
-* Close the plugin dialog when done.
+Many different statistics are available, below some description:
 
-To understand the statistics above, refer to this definition list:
-
-Mean
-  The mean (average) value is simply the sum of the values divided by the
-  amount of values.
-
-StdDev
-  The standard deviation. Gives an indication of how closely the values are
-  clustered around the mean. The smaller the standard deviation, the closer
-  values tend to be to the mean.
+Count
+  The amount of samples/values.
 
 Sum
   All the values added together.
 
-Min
-  The minimum value.
-
-Max
-  The maximum value.
-
-N
-  The amount of samples/values.
-
-CV
-  The `spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance
-  <http://en.wikipedia.org/wiki/Covariance>`_ of the dataset.
-
-Number of unique values
-  The number of values that are unique across this dataset. If there are 90
-  unique values in a dataset with N=100, then the 10 remaining values are the
-  same as one or more of each other.
-
-Range
-  The difference between the minimum and maximum values.
+Mean
+  The mean (average) value is simply the sum of the values divided by the
+  amount of values.
 
 Median
   If you arrange all the values from least to greatest, the middle value (or
   the average of the two middle values, if N is an even number) is the median
   of the values.
 
-|basic| |FA| Compute a Distance Matrix
+St Dev (pop)
+  The standard deviation. Gives an indication of how closely the values are
+  clustered around the mean. The smaller the standard deviation, the closer
+  values tend to be to the mean.
+
+Minimum
+  The minimum value.
+
+Maximum
+  The maximum value.
+
+Range
+  The difference between the minimum and maximum values.
+
+Q1
+  First quartile of the data.
+
+Q3
+  Third quartile of the data.
+
+Missing (null) values
+  Total count of values with missing data-
+
+
+|basic| |FA| Compute statistics on distances between points using the Distance Matrix tool
+------------------------------------------------------------------------------------------
+
+#. Create a new point layer as a ``Temporary layer``.
+#. Enter edit mode and digitize three points somewhere among the other points.
+
+   Alternatively, use the same random point generation method as before, but
+   specify only **three** points.
+#. Save your new layer as :guilabel:`distance_points` in the format you prefer.
+
+To generate statistics on the distances between points in the two layers:
+
+#. Open the tool :menuselection:`Vector Analysis --> Distance matrix`.
+#. Select the :guilabel:`distance_points` layer as the input layer, and the
+   :guilabel:`Sampled Points` layer as the target layer.
+#. Set it up like this:
+
+   .. image:: img/distance_matrix_setup.png
+      :align: center
+
+#. If you want you can save the output layer as a file or just run the algorithm
+   and save the temporary output layer in a second moment.
+#. Click :guilabel:`Run` to generate the distance matrix layer.
+#. Open the attribute table of the generated layer: values refer to the distances
+   between the :guilabel:`distance_points` features and their two nearest points
+   in the :guilabel:`Sampled Points` layer:
+
+   .. image:: img/distance_matrix_example.png
+      :align: center
+
+
+With these parameters, the ``Distance Matrix`` tool calculates distance
+statistics for each point of the input layer with respect to the nearest points
+of the target layer. The fields of the output layer contains the mean, standard
+deviation, minimum and maximum for the distances to the nearest neighbors of the
+points in the input layer.
+
+
+|basic| |FA| Nearest Neighbor Analysis (within layer)
 -------------------------------------------------------------------------------
 
-* Create a new point layer in the same projection as the other datasets
-  (|localCRS|).
-* Enter edit mode and digitize three point somewhere among the other points.
-* Alternatively, use the same random point generation method as before, but
-  specify only three points.
-* Save your new layer as :kbd:`distance_points.shp`.
+To do a nearest neighbor analysis of a point layer:
 
-To generate a distance matrix using these points:
+#. Click on the menu item :menuselection:`Vector analysis --> Nearest neighbor
+   analysis`.
+#. In the dialog that appears, select the :guilabel:`Random points` layer and
+   click :guilabel:`Run`.
+#. The results will appear in the Processing :guilabel:`Result Viewer` Panel.
 
-* Open the tool :menuselection:`Vector --> Analysis Tools --> Distance matrix`.
-* Select the :guilabel:`distance_points` layer as the input layer, and the
-  :guilabel:`random_samples` layer as the target layer.
-* Set it up like this:
+   .. image:: img/result_viewer.png
+      :align: center
 
-.. image:: /static/training_manual/vector_analysis/distance_matrix_setup.png
-   :align: center
-   
-* Save the result as :kbd:`distance_matrix.csv`.
-* Click :guilabel:`OK` to generate the distance matrix.
-* Open it in a spreadsheet program to see the results. Here is an example:
+#. Click on the blue link to open the ``html`` page with the results:
 
-.. image:: /static/training_manual/vector_analysis/distance_matrix_example.png
-   :align: center
-
-|basic| |FA| Nearest Neighbor Analysis
--------------------------------------------------------------------------------
-
-To do a nearest neighbor analysis:
-
-* Click on the menu item :menuselection:`Vector --> Analysis Tools --> Nearest
-  neighbor analysis`.
-* In the dialog that appears, select the :guilabel:`random_samples` layer and
-  click :guilabel:`OK`.
-* The results will appear in the dialog's text window, for example:
-
-.. image:: /static/training_manual/vector_analysis/nearest_neighbour_example.png
-   :align: center
-
-.. note:: You can copy and paste the results into a spreadsheet. The data uses
-   a (colon :kbd:`:`) separator.
+   .. image:: img/nearest_neighbour_example.png
+     :align: center
 
 |basic| |FA| Mean Coordinates
 -------------------------------------------------------------------------------
 
 To get the mean coordinates of a dataset:
 
-* Click on the :menuselection:`Vector --> Analysis Tools --> Mean
-  coordinate(s)` menu item.
-* In the dialog that appears, specify :guilabel:`random_samples` as the input
-  layer, but leave the optional choices unchanged.
-* Specify the output layer as :kbd:`mean_coords.shp`.
-* Click :guilabel:`OK`.
-* Add the layer to the :guilabel:`Layers list` when prompted.
+#. Click on the :menuselection:`Vector analysis --> Mean coordinate(s)` menu item.
+#. In the dialog that appears, specify :guilabel:`Random points` as the input
+   layer, but leave the optional choices unchanged.
+#. Click :guilabel:`Run`.
 
 Let's compare this to the central coordinate of the polygon that was used to
 create the random sample.
 
-* Click on the :menuselection:`Vector --> Geometry Tools --> Polygon centroids`
-  menu item.
-* In the dialog that appears, select :guilabel:`roads_hull` as the input layer.
-* Save the result as :kbd:`center_point`.
-* Add it to the :guilabel:`Layers list` when prompted.
+#. Click on the :menuselection:`Vector geometry --> Centroids` menu item.
+#. In the dialog that appears, select :guilabel:`Bounding geometry` as the input
+   layer.
 
-As you can see from the example below, the mean coordinates and the center of
-the study area (in orange) don't necessarily coincide:
+As you can see from the example below, the mean coordinates (pink point) and the
+center of the study area (in green) don't necessarily coincide.
 
-.. image:: /static/training_manual/vector_analysis/polygon_centroid_mean.png
+The centroid is the barycenter of the layer (the barycenter of a square is the
+center of the square) while the mean coordinates represent the average of all
+node coordinates.
+
+.. image:: img/polygon_centroid_mean.png
    :align: center
 
 |basic| |FA| Image Histograms
@@ -234,232 +253,87 @@ the study area (in orange) don't necessarily coincide:
 
 The histogram of a dataset shows the distribution of its values. The simplest
 way to demonstrate this in QGIS is via the image histogram, available in the
-:guilabel:`Layer Properties` dialog of any image layer.
+:guilabel:`Layer Properties` dialog of any image layer (raster dataset).
 
-* In your :guilabel:`Layers list`, right-click on the SRTM DEM layer.
-* Select :menuselection:`Properties`.
-* Choose the tab :guilabel:`Histogram`. You may need to click on the
-  :guilabel:`Compute Histogram` button to generate the graphic. You will see a
-  graph describing the frequency of values in the image.
-* You can export it as an image:
+#. In your :guilabel:`Layers` panel, right-click on the :guilabel:`srtm_41_19`
+   layer.
+#. Select :menuselection:`Properties`.
+#. Choose the tab :guilabel:`Histogram`. You may need to click on the
+   :guilabel:`Compute Histogram` button to generate the graphic. You will see a
+   graph describing the frequency of values in the image.
+#. You can export it as an image:
 
-.. image:: /static/training_manual/vector_analysis/histogram_export.png
-   :align: center
-   
-* Select the :guilabel:`Metadata` tab, you can see more detailed information
-  inside the :guilabel:`Properties` box.
+   .. image:: img/histogram_export.png
+      :align: center
 
-The mean value is :kbd:`332.8`, and the maximum value is :kbd:`1699`! But those
+#. Select the :guilabel:`Information` tab, you can see more detailed information
+   of the layer.
+
+The mean value is ``332.8``, and the maximum value is ``1699``! But those
 values don't show up on the histogram. Why not? It's because there are so few
 of them, compared to the abundance of pixels with values below the mean. That's
 also why the histogram extends so far to the right, even though there is no
-visible red line marking the frequency of values higher than about :kbd:`250`.
+visible red line marking the frequency of values higher than about ``250``.
+
+.. note:: If the mean and maxmimum values are not the same as those of the example,
+    it can be due to the min/max value calculation. Open the :guilabel:`Symbology`
+    tab and expand the :guilabel:`Min / Max Value Settings` menu. Choose
+    ``|radioButtonOn| Min / max`` and click on :guilabel:`Apply`.
 
 Therefore, keep in mind that a histogram shows you the distribution of values,
 and not all values are necessarily visible on the graph.
-
-* (You may now close :guilabel:`Layer Properties`.)
 
 |basic| |FA| Spatial Interpolation
 -------------------------------------------------------------------------------
 
 Let's say you have a collection of sample points from which you would like to
 extrapolate data. For example, you might have access to the
-:guilabel:`random_samples` dataset we created earlier, and would like to have
+:guilabel:`Sampled points` dataset we created earlier, and would like to have
 some idea of what the terrain looks like.
 
-To start, launch the :guilabel:`Grid (Interpolation)` tool by clicking on the
-:menuselection:`Raster --> Analysis --> Grid (Interpolation)` menu item.
-
-* In the :guilabel:`Input file` field, select :kbd:`random_samples`.
-* Check the :guilabel:`Z Field` box, and select the field :kbd:`srtm_41_19`.
-* Set the :guilabel:`Output file` location to
-  :kbd:`exercise_data/spatial_statistics/interpolation.tif`.
-* Check the :guilabel:`Algorithm` box and select :guilabel:`Inverse distance to
-  a power`.
-* Set the :guilabel:`Power` to :kbd:`5.0` and the :guilabel:`Smoothing` to
-  :kbd:`2.0`. Leave the other values as-is.
-* Check the :guilabel:`Load into canvas when finished` box and click
-  :guilabel:`OK`.
-* When it's done, click :guilabel:`OK` on the dialog that says
-  :kbd:`Process completed`, click :guilabel:`OK` on the dialog showing feedback
-  information (if it has appeared), and click :guilabel:`Close` on the
-  :guilabel:`Grid (Interpolation)` dialog.
+#. To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW
+   with nearest neighbor searching)` tool within :guilabel:`Processing` toolbox.
+#. In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`
+#. Set ``5.0`` as the :guilabel:`Weighting power`
+#. In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the
+   :guilabel:`Z value from field` parameter
+#. Finally click on :guilabel:`Run` and wait until the algorithm ends
+#. Close the dialog
 
 Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
 the location of the sample points.
 
-.. image:: /static/training_manual/vector_analysis/interpolation_comparison.png
+.. image:: img/interpolation_comparison.png
    :align: center
 
 As you can see, 100 sample points aren't really enough to get a detailed
 impression of the terrain. It gives a very general idea, but it can be
-misleading as well. For example, in the image above, it is not clear that there
-is a high, unbroken mountain running from east to west; rather, the image seems
-to show a valley, with high peaks to the west. Just using visual inspection, we
-can see that the sample dataset is not representative of the terrain.
+misleading as well.
 
-|moderate| |TY|
+|moderate| |TY| Different interpolation methods
 -------------------------------------------------------------------------------
 
-* Use the processes shown above to create a new set of :kbd:`1000` random points.
-* Use these points to sample the original DEM.
-* Use the :guilabel:`Grid (Interpolation)` tool on this new dataset as above.
-* Set the output filename to :kbd:`interpolation_1000.tif`, with
-  :guilabel:`Power` and :guilabel:`Smoothing` set to :kbd:`5.0` and :kbd:`2.0`,
-  respectively.
+#. Use the processes shown above to create a new set of ``10 000`` random points.
+
+   .. note:: If the points amount is really big the processing time can take a
+      long time.
+
+#. Use these points to sample the original DEM.
+#. Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this
+   new dataset as above.
+#. Set the :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``,
+   respectively.
 
 The results (depending on the positioning of your random points) will look more
 or less like this:
 
-.. image:: /static/training_manual/vector_analysis/interpolation_comparison_1000.png
+.. image:: img/interpolation_comparison_10000.png
    :align: center
 
-The border shows the :guilabel:`roads_hull` layer (which represents the
-boundary of the random sample points) to explain the sudden lack of detail
-beyond its edges. This is a much better representation of the terrain, due to
-the much greater density of sample points.
+This is a much better representation of the terrain, due to the much greater
+density of sample points. Remember, bigger samples give better results.
 
-Here is an example of what it looks like with :kbd:`10 000` sample points:
-
-.. image:: /static/training_manual/vector_analysis/011.png
-   :align: center
-
-.. note:: It's not recommended that you try doing this with 10 000 sample
-   points if you are not working on a fast computer, as the size of the sample
-   dataset requires a lot of processing time.
-
-|moderate| |FA| Additional Spatial Analysis Tools
--------------------------------------------------------------------------------
-
-Originally a separate project and then accessible as a plugin, the SEXTANTE software
-has been added to QGIS as a core function from version 2.0. You can find it as
-a new QGIS menu with its new name :menuselection:`Processing` from where you can
-access a rich toolbox of spatial analysis tools allows you to access various plugin
-tools from within a single interface.
-
-* Activate this set of tools by enabling the :menuselection:`Processing --> Toolbox`
-  menu entry. The toolbox looks like this:
-
-.. image:: /static/training_manual/vector_analysis/sextante_toolbox.png
-   :align: center
-
-You will probably see it docked in QGIS to the right of the map. Note that the
-tools listed here are links to the actual tools. Some of them are SEXTANTE's
-own algorithms and others are links to tools that are accessed from external
-applications such as GRASS, SAGA or the Orfeo Toolbox. This external applications
-are installed with QGIS so you are already able to make use of them.
-In case you need to change the configuration of the Processing tools or,
-for example, you need to update to a new version of one of the external
-applications, you can access its setting from
-:menuselection:`Processing --> Options and configurations`.
-
-
-|moderate| |FA| Spatial Point Pattern Analysis
--------------------------------------------------------------------------------
-
-For a simple indication of the spatial distribution of points in the
-:guilabel:`random_samples` dataset, we can make use of SAGA's
-:guilabel:`Spatial Point Pattern Analysis` tool via the
-:guilabel:`Processing Toolbox` you just opened.
-
-* In the :guilabel:`Processing Toolbox`, search for this tool  :guilabel:`Spatial
-  Point Pattern Analysis`.
-* Double-click on it to open its dialog.
-
-Installing SAGA
-................................................................................
-
-.. note:: If SAGA is not installed on your system, the plugin's dialog will
-  inform you that the dependency is missing. If this is not the case, you can
-  skip these steps.
-
-On Windows
-...............................................................................
-
-Included in your course materials you will find the SAGA installer for Windows.
-
-* Start the program and follow its instructions to install SAGA on your Windows
-  system. Take note of the path you are installing it under!
-
-Once you have installed SAGA, you'll need to configure SEXTANTE to find the
-path it was installed under.
-
-* Click on the menu entry :menuselection:`Analysis --> SAGA options and
-  configuration`.
-* In the dialog that appears, expand the :guilabel:`SAGA` item and look for
-  :guilabel:`SAGA folder`. Its value will be blank.
-* In this space, insert the path where you installed SAGA.
-
-On Ubuntu
-...............................................................................
-
-* Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter
-  the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may
-  first need to add a SAGA repository to your sources.)
-* QGIS will find SAGA automatically, although you may need to restart QGIS if
-  it doesn't work straight away.
-
-On Mac
-................................................................................
-
-Homebrew users can install SAGA with this command:
-
-* brew install saga-core
-
-If you do not use Homebrew, please follow the instructions here:
-
-http://sourceforge.net/apps/trac/saga-gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X
-
-After installing
-................................................................................
-
-Now that you have installed and configured SAGA, its functions will become
-accessible to you.
-
-Using SAGA
-................................................................................
-
-* Open the SAGA dialog.
-* SAGA produces three outputs, and so will require three output paths.
-* Save these three outputs under :kbd:`exercise_data/spatial_statistics/`,
-  using whatever file names you find appropriate.
-
-.. image:: /static/training_manual/spatial_statistics/002.png
-   :align: center
-
-The output will look like this (the symbology was changed for this example):
-
-.. image:: /static/training_manual/spatial_statistics/003.png
-   :align: center
-
-The red dot is the mean center; the large circle is the standard distance,
-which gives an indication of how closely the points are distributed around the
-mean center; and the rectangle is the bounding box, describing the smallest
-possible rectangle which will still enclose all the points.
-
-|moderate| |FA| Minimum Distance Analysis
--------------------------------------------------------------------------------
-
-Often, the output of an algorithm will not be a shapefile, but rather a table
-summarizing the statistical properties of a dataset. One of these is the
-:guilabel:`Minimum Distance Analysis` tool.
-
-* Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum
-  Distance Analysis`.
-
-It does not require any other input besides specifying the vector point dataset
-to be analyzed.
-
-* Choose the :guilabel:`random_points` dataset.
-* Click :guilabel:`OK`. On completion, a DBF table will appear in the
-  :guilabel:`Layers list`.
-* Select it, then open its attribute table. Although the figures may vary, your
-  results will be in this format:
-
-.. image:: /static/training_manual/vector_analysis/min_distance_results.png
-   :align: center
 
 |IC|
 -------------------------------------------------------------------------------
@@ -472,3 +346,24 @@ of datasets.
 
 Now that we've covered vector analysis, why not see what can be done with
 rasters? That's what we'll do in the next module!
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |editCopy| image:: /static/common/mActionEditCopy.png
+   :width: 1.5em
+.. |moderate| image:: /static/global/moderate.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |sum| image:: /static/common/mActionSum.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

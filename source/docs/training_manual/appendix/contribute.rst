@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 *******************************************************************************
 Appendix: Contributing To This Manual
 *******************************************************************************
@@ -18,8 +22,8 @@ system.
 Manual Format
 ===============================================================================
 
-This manual is written using `Sphinx <http://sphinx.pocoo.org/>`_, a Python
-document generator using the `reStructuredText
+This manual is written using `Sphinx <https://www.sphinx-doc.org/en/master/>`_,
+a Python document generator using the `reStructuredText
 <http://docutils.sourceforge.net/rst.html>`_ markup language. Instructions on
 how to use these tools are available on their respective sites.
 
@@ -271,7 +275,7 @@ Images
 * When adding an image, save it to the folder :kbd:`_static/lesson_name/`.
 * Include it in the document like this::
   
-    .. image:: /static/training_manual/lesson_name/image_file.extension
+    .. image:: img/image_file.extension
        :align: center
 
 * Remember to leave a line open above and below the image markup.
@@ -366,3 +370,21 @@ Thank You!
 
 Thank you for contributing to this project! By so doing, you are making QGIS
 more accessible to users and adding value to the QGIS project as a whole.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |MOD| replace:: Module:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

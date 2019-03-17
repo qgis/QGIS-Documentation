@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Attribute Data
 ===============================================================================
 
@@ -21,7 +25,7 @@ understand what the various data can be useful for.
 -------------------------------------------------------------------------------
 
 Open the attribute table for the :guilabel:`places` layer (refer back to the
-section *"Working with Vector Data"* if necessary). Which field would be the
+section :ref:`tm_working_vector_data` if necessary). Which field would be the
 most useful to represent in label form, and why?
 
 :ref:`Check your results <labels-attribute-data-1>`
@@ -41,3 +45,17 @@ another one that has the required attribute data.
 Different attributes are useful for different purposes. Some of them can be
 represented directly as text for the map user to see. You'll learn how to do
 this in the next lesson.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

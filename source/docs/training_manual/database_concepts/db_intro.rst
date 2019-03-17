@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Introduction to Databases
 ===============================================================================
 
@@ -110,7 +114,7 @@ Result:
     (3 rows)
 
 There are many more datatypes you can use - `check the PostgreSQL manual!
-<http://www.postgresql.org/docs/current/static/datatype.html>`_
+<https://www.postgresql.org/docs/current/datatype.html>`_
 
 Modelling an Address Database
 -------------------------------------------------------------------------------
@@ -191,7 +195,7 @@ Redesign the theoretical `people` table above to reduce duplication and to
 normalise the data structure.
 
 You can read more about database normalisation `here
-<http://en.wikipedia.org/wiki/Database_normalization>`_
+<https://en.wikipedia.org/wiki/Database_normalization>`_
 
 :ref:`Check your results <database-concepts-2>`
 
@@ -294,7 +298,7 @@ We can then link the two tables using the 'keys' :kbd:`streets.id` and
 If we draw an ER Diagram for these two tables it would look something like
 this:
 
-.. image:: /static/training_manual/database_concepts/er-people-streets.png
+.. image:: img/er-people-streets.png
    :align: center
 
 The ER Diagram helps us to express 'one to many' relationships. In this case
@@ -377,3 +381,18 @@ structures.
 
 Now that we've looked at how databases work in theory, let's create a new
 database to implement the theory we've covered.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |moderate| image:: /static/global/moderate.png
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

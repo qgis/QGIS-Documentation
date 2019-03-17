@@ -26,10 +26,10 @@ Foreword: Spatial and non-spatial tables
 QGIS allows you to load spatial and non-spatial layers. This currently includes
 tables supported by OGR and delimited text, as well as the PostgreSQL, MSSQL,
 SpatiaLite, DB2 and Oracle provider. All loaded layers are listed in
-the :guilabel:`Layers Panel`. Whether a layer is spatially enabled or not 
+the :guilabel:`Layers` panel. Whether a layer is spatially enabled or not
 determines whether you can interact with it on the map.
 
-Non-spatial tables can be browsed and edited using the attribute table view. 
+Non-spatial tables can be browsed and edited using the attribute table view.
 Furthermore, they can be used for field lookups.
 For example, you can use columns of a non-spatial table to define attribute
 values, or a range of values that are allowed, to be added to a specific vector
@@ -47,9 +47,9 @@ clicking on it in the :ref:`label_legend`. Then, from the main
 Table`. It is also possible to right-click on the layer and choose
 |openTable| :menuselection:`Open Attribute Table` from the drop-down menu,
 or to click on the |openTable| :guilabel:`Open Attribute Table` button
-in the Attributes toolbar. 
-If you prefer shortcuts, :kbd:`F6` will open the attribute table. 
-:kbd:`Shift+F6` will open the attribute table filtered to selected features and 
+in the Attributes toolbar.
+If you prefer shortcuts, :kbd:`F6` will open the attribute table.
+:kbd:`Shift+F6` will open the attribute table filtered to selected features and
 :kbd:`Ctrl+F6` will open the attribute table filtered to visible features.
 
 This will open a new window that displays the feature attributes for the
@@ -62,7 +62,7 @@ attribute table title, as well as if the layer is spatially limited.
 
 .. _figure_attributes_table:
 
-.. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
+.. figure:: img/vectorAttributeTable.png
    :align: center
 
    Attribute Table for regions layer
@@ -87,6 +87,12 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |deleteSelected|        | Delete selected features            | Remove selected features from the layer    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |editCut|               | Cut selected features to clipboard  |                                            | :kbd:`Ctrl+X`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |copySelected|          | Copy selected features to clipboard |                                            | :kbd:`Ctrl+C`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |expressionSelect|      | Select features using an Expression |                                            |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |selectAll|             | Select All                          | Select all features in the layer           | :kbd:`Ctrl+A`       |
@@ -103,10 +109,6 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |zoomToSelected|        | Zoom map to the selected rows       |                                            | :kbd:`Ctrl+J`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |copySelected|          | Copy selected rows to clipboard     |                                            | :kbd:`Ctrl+C`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |newAttribute|          | New field                           | Add a new field to the data source         | :kbd:`Ctrl+W`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |deleteAttribute|       | Delete field                        | Remove a field from the data source        | :kbd:`Ctrl+L`       |
@@ -114,6 +116,10 @@ following functionality:
 | |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |conditionalFormatting| | Conditional formatting              | Enable table formatting                    |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |dock|                  | Dock attribute table                | Allows to dock/undock the attribute table  |                     |
++-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+| |actionRun|             | Actions                             | Lists the actions related to the layer     |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 
 Table Attribute 1: Available Tools
@@ -127,20 +133,22 @@ calculations to all or part of the features in the layer. This bar uses the same
 :ref:`expressions <vector_expressions>` as the |calculateField| :sup:`Field
 Calculator` (see :ref:`calculate_fields_values`).
 
+.. _attribute_table_view:
+
 Table view vs Form view
 -----------------------
 
 QGIS provides two view modes to easily manipulate data in the attribute table:
 
-* the |openTable| Table view, displaying values of multiple features in a
-  tabular mode, each row representing a feature and each column a field;
-* and the |formView| Form view which shows identifiers of features in a first
-  panel and displays only the attributes of the clicked identifier in the second
-  one. Form view uses the layer fields configuration
+* The |openTable| :sup:`Table view`, displays values of multiple features in a
+  tabular mode, each row representing a feature and each column a field.
+* And the |formView| :sup:`Form view` shows :ref:`feature identifiers
+  <maptips>` in a first panel and displays only the attributes of the clicked
+  identifier in the second one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
-  
-You can switch from one mode to the other by clicking the convenient icon at the
-bottom right of the dialog.
+
+You can switch from one mode to the other by clicking the corresponding icon at
+the bottom right of the dialog.
 
 You can also specify the :guilabel:`Default view` mode at the opening of the
 attribute table in :menuselection:`Settings --> Options --> Data Sources` menu.
@@ -148,7 +156,7 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 
 .. _figure_attribute_table_views:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_table_views.png
+.. figure:: img/attribute_table_views.png
    :align: center
 
    Attribute table in form view (top) vs table view (bottom)
@@ -156,6 +164,7 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 
 .. index:: Sort columns, Add actions
    pair: Attributes; Columns
+.. _configure_table_columns:
 
 Configuring the columns
 -----------------------
@@ -215,7 +224,7 @@ by preview expression` option.
   may lead to unexpected result because of the ``concat("USE", "ID")`` expression
   returning string values (ie, ``'Borough105' < 'Borough6'``).
   You can workaround this by using eg ``concat("USE", lpad("ID", 3, 0))`` which
-  returns ``'Borough105' > 'Borough006'``. 
+  returns ``'Borough105' > 'Borough006'``.
 
 .. index:: Conditional formatting
 .. _conditional_formatting:
@@ -230,7 +239,7 @@ conditions on feature's:
 * geometry (e.g., identifying multi-parts features, small area ones or in a
   defined map extent...);
 * or field value (e.g., comparing values to a threshold, identifying empty
-  cells...)
+  cells...).
 
 You can enable the conditional formatting panel clicking on
 |conditionalFormatting| at the top right of the attributes window in table
@@ -253,7 +262,7 @@ Adding new rule opens a form to define:
 
 .. _figure_conditional_format:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_table_conditional_formating.png
+.. figure:: img/attribute_table_conditional_formating.png
    :align: center
 
    Conditional Formatting of an attribute table
@@ -337,14 +346,14 @@ left of the attribute table dialog. This list offers the following filters:
 It is also possible to filter features using the :ref:`filter_select_form`.
 
 .. note::
-  
+
   Filtering records out of the attribute table does not filter features out
   of the layer; they are simply momentaneously hidden from the table and can be
   accessed from the map canvas or by removing the filter. For filters that do
   hide features from the layer, use the
   :ref:`Query Builder <vector_query_builder>`.
 
-.. tip:: **Update datasource filtering with** ``Show Features Visible on Map`` 
+.. tip:: **Update datasource filtering with** ``Show Features Visible on Map``
 
   When for performance reasons, features shown in attribute table are spatially
   limited to the canvas extent at its opening (see :ref:`Data Source Options
@@ -372,7 +381,7 @@ creating an Advanced Filter (Expression) for the user).
 
 .. _figure_filter_select_form:
 
-.. figure:: /static/user_manual/working_with_vector/tableFilteredForm.png
+.. figure:: img/tableFilteredForm.png
     :align: center
 
     Attribute table filtered by the filter form
@@ -385,7 +394,7 @@ drop-down list next to the :guilabel:`Filter features` button. The options are:
 
 To clear the filter, either select :guilabel:`Show all features` option
 mentioned in :ref:`filter_features`, or click the clear the expression and
-click **[Apply]**.
+click :guilabel:`Apply`.
 
 Using action on features
 ========================
@@ -393,15 +402,17 @@ Using action on features
 Users have several possibilities to manipulate feature with the contextual menu
 like:
 
-* Select all (:kbd:`Ctrl+A`) the features
-* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`.
-* :guilabel:`Zoom to feature` without having to select it beforehand
-* Open form. It toggles attribute table into form view with a focus on the
-  clicked feature
+* :guilabel:`Select all` (:kbd:`Ctrl+A`) the features;
+* Copy the content of a cell in the clipboard with :guilabel:`Copy cell content`;
+* :guilabel:`Zoom to feature` without having to select it beforehand;
+* :guilabel:`Pan to feature` without having to select it beforehand;
+* :guilabel:`Flash feature`, to highlight it in the map canvas;
+* :guilabel:`Open form`: it toggles attribute table into form view with a focus
+  on the clicked feature.
 
 .. _figure_copy_cell:
 
-.. figure:: /static/user_manual/working_with_vector/copyCellContent.png
+.. figure:: img/copyCellContent.png
     :align: center
 
     Copy cell content button
@@ -430,10 +441,10 @@ Saving selected features as new layer
 
 The selected features can be saved as any OGR-supported vector format and
 also transformed into another coordinate reference system (CRS). In the
-contextual menu of the layer, from the :guilabel:`Layers Panel`, click on
-:menuselection:`Save as` to define the name of the output file, its format
-and CRS (see section :ref:`general_saveas`). To save the selection ensure
-that the |checkbox| :menuselection:`Save only selected features` is selected.
+contextual menu of the layer, from the :guilabel:`Layers` panel, click on
+:menuselection:`Export --> Save selected features as...` to define the name of
+the output dataset, its format and CRS (see section :ref:`general_saveas`). You'll
+notice that |checkbox| :menuselection:`Save only selected features` is checked.
 It is also possible to specify OGR creation options within the dialog.
 
 .. index:: Field Calculator, Derived Fields, Virtual Fields, Fields edit
@@ -447,10 +458,10 @@ Editing attribute values can be done by:
 * typing the new value directly in the cell, whether the attribute table is in
   table or form view. Changes are hence done cell by cell, feature by feature;
 * using the :ref:`field calculator <vector_field_calculator>`: update in a row
-  a field that may already exist or to be created but for multiple features; it
-  can be used to create virtual fields.
+  a field that may already exist or to be created but for multiple features. It
+  can be used to create virtual fields;
 * using the quick field :ref:`calculation bar <quick_field_calculation_bar>`:
-  same as above but for only existing field
+  same as above but for only existing field;
 * or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row
   multiple fields for multiple features.
 
@@ -462,8 +473,8 @@ Using the Field Calculator
 The |calculateField| :sup:`Field Calculator` button in the attribute table
 allows you to perform calculations on the basis of existing attribute values or
 defined functions, for instance, to calculate length or area of geometry
-features. The results can be written to a new attribute field, a virtual field,
-or they can be used to update values in an existing field.
+features. The results can be used to update an existing field, or written
+to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
@@ -474,13 +485,14 @@ edit mode before the calculation is made.
 Based on the :ref:`Expression Builder <functions_list>` dialog, the field
 calculator dialog offers a complete interface to define an expression and apply
 it to an existing or a newly created field.
-To use the field calculator dialog, you first must select whether you want to
-only update selected features, create a new attribute field where the results
-of the calculation will be added or update an existing field.
+To use the field calculator dialog, you must select whether you want to:
+
+#. apply calculation on the whole layer or on selected features only
+#. create a new field for the calculation or update an existing one.
 
 .. _figure_field_calculator:
 
-.. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
+.. figure:: img/fieldcalculator.png
    :align: center
 
    Field Calculator
@@ -488,8 +500,8 @@ of the calculation will be added or update an existing field.
 If you choose to add a new field, you need to enter a field name, a field type
 (integer, real, date or string) and if needed, the total field length and the
 field precision. For example, if you choose a field length of 10 and a field
-precision of 3, it means you have 6 digits before the dot, then the dot and
-another 3 digits for the precision.
+precision of 3, it means you have 7 digits before the dot, and 3 digits for
+the decimal part.
 
 A short example illustrates how field calculator works when using the
 :guilabel:`Expression` tab. We want to calculate the length in km of the
@@ -506,7 +518,7 @@ A short example illustrates how field calculator works when using the
 #. Now double click on function ``$length`` in the :guilabel:`Geometry` group
    to add it into the Field calculator expression box.
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
-   expression box and click **[Ok]**.
+   expression box and click :guilabel:`OK`.
 #. You can now find a new field ``length`` in the attribute table.
 
 .. _virtual_field:
@@ -515,7 +527,7 @@ Creating a Virtual Field
 ------------------------
 
 A virtual field is a field based on an expression calculated on the fly, meaning
-that its value is automatically updated as soon as the underlying parameter
+that its value is automatically updated as soon as an underlying parameter
 changes. The expression is set once; you no longer need to recalculate the field
 each time underlying values change.
 For example, you may want to use a virtual field if you need area to be evaluated
@@ -537,15 +549,21 @@ Using the Quick Field Calculation Bar
 While Field calculator is always available, the quick field calculation bar on
 top of the attribute table is only visible if the layer is in edit mode. Thanks
 to the expression engine, it offers a quicker access to edit an already existing
-field.
+field:
 
-In quick field calculation bar, you simply need to:
+#. Select the field to update in the drop-down list.
+#. Fill the textbox with a value, an expression you directly write or build using the
+   |expression| expression button.
+#. Click on :guilabel:`Update All`, :guilabel:`Update Selected` or
+   :guilabel:`Update Filtered` button according to your need.
 
-* select the existing field name in the drop-down list
-* fill the textbox with an expression you directly write or build using the
-  |expression| expression button
-* and click on **[Update All]**, **[Update Selected]** or **[Update Filtered]**
-  button according to your need.
+.. _figure_field_calculator_bar:
+
+.. figure:: img/fieldcalculatorbar.png
+   :align: center
+
+   Quick Field Calculation Bar
+
 
 .. index:: Multi edit
 .. _multi_edit_fields:
@@ -558,40 +576,9 @@ different features to be edited simultaneously. When the layer is toggled to
 edit, multi edit capabilities are accessible:
 
 * using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar
-  inside the attribute table dialog,
+  inside the attribute table dialog;
 * or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify
   attributes of selected features` menu.
-
-In order to edit multiple fields in a row: 
-
-#. select the features you want to edit;
-#. from the attribute table toolbar, click the |multiEdit| button. This will
-   toggle the dialog to its form view. Feature selection could also be made
-   at this step;
-#. at the right side of the attribute table, fields (and values) of selected
-   features are shown. New widgets appear next to each field allowing for
-   display of the current multi edit state:
-
-   * |multiEditMixedValues| the field contains different values for selected
-     features. It's shown empty and each feature will keep its original value.
-     You can reset the value of the field from the drop-down list of the widget.
-   * |multiEditSameValues| all selected features have the same value for this
-     field and the value displayed in the form will be kept. 
-   * |multiEditChangedValues| the field has been edited and the entered value
-     will be applied to all the selected features. A message appears at the top
-     of the dialog, inviting you to either apply or reset your modification.
-
-   Clicking any of these widgets allows you to either set the current value for
-   the field or reset to original value, meaning that you can roll back changes
-   on a field-by-field basis. 
-
-#. make the changes to the fields you want and click on **Apply changes** in
-   the upper message text or any other feature in the left panel.
-
-Changes will apply to **all selected features**. If no feature is selected, the
-whole table is updated with your changes. Modifications are made as a single
-edit command. So pressing |undo| :sup:`Undo` will rollback the attribute
-changes for all selected features at once.
 
 .. note::
 
@@ -599,15 +586,47 @@ changes for all selected features at once.
  --> Modify Attributes of Selected Features` option provides you with a modal
  dialog to fill attributes changes. Hence, features selection is required
  before execution.
- 
-.. _figure_field_multiedit:
 
-.. figure:: /static/user_manual/working_with_vector/attribute_multiedit.png
-   :align: center
+In order to edit multiple fields in a row:
 
-   Editing fields of multiple features
+#. Select the features you want to edit.
+#. From the attribute table toolbar, click the |multiEdit| button. This will
+   toggle the dialog to its form view. Feature selection could also be made
+   at this step.
+#. At the right side of the attribute table, fields (and values) of selected
+   features are shown. New widgets appear next to each field allowing for
+   display of the current multi edit state:
 
-.. note:: 
+   * |multiEditMixedValues| The field contains different values for selected
+     features. It's shown empty and each feature will keep its original value.
+     You can reset the value of the field from the drop-down list of the widget.
+   * |multiEditSameValues| All selected features have the same value for this
+     field and the value displayed in the form will be kept.
+   * |multiEditChangedValues| The field has been edited and the entered value
+     will be applied to all the selected features. A message appears at the top
+     of the dialog, inviting you to either apply or reset your modification.
+
+   Clicking any of these widgets allows you to either set the current value for
+   the field or reset to original value, meaning that you can roll back changes
+   on a field-by-field basis.
+
+   .. _figure_field_multiedit:
+
+   .. figure:: img/attribute_multiedit.png
+      :align: center
+
+      Editing fields of multiple features
+
+#. Make the changes to the fields you want.
+#. Click on **Apply changes** in the upper message text or any other feature
+   in the left panel.
+
+Changes will apply to **all selected features**. If no feature is selected, the
+whole table is updated with your changes. Modifications are made as a single
+edit command. So pressing |undo| :sup:`Undo` will rollback the attribute
+changes for all selected features at once.
+
+.. note::
 
   Multi edit mode is only available for auto generated and drag and drop forms
   (see :ref:`customize_form`); it is not supported by custom ui forms.
@@ -638,7 +657,7 @@ relation using foreign keys, because there are several airports in most regions.
 
 .. _figure_relations_map:
 
-.. figure:: /static/user_manual/working_with_vector/relations1.png
+.. figure:: img/relations1.png
    :align: center
 
    Alaska region with airports
@@ -672,26 +691,31 @@ Defining 1-N relations (Relation Manager)
 
 The first thing we are going to do is to let QGIS know about the relations
 between the layers. This is done in :menuselection:`Project --> Project Properties...`.
-Open the :guilabel:`Relations` tab and click on **[Add Relation]**.
+Open the :guilabel:`Relations` tab and click on :guilabel:`Add Relation`.
 
-* **name** is going to be used as a title. It should be a human readable string,
+* **Name** is going to be used as a title. It should be a human readable string,
   describing, what the relation is used for. We will just call say **Airports**
   in this case.
-* **referencing layer** also considered as child layer, is the one with the
-  foreign key field on it. In our case, this is the ``airports`` layer
-* **referencing field** will say, which field points to the other layer so this
+* **Referenced Layer (Parent)** also considered as parent layer, is the one with
+  the primary key, pointed to, so here it is the ``regions`` layer
+* **Referenced Field** is the primary key of the referenced layer so it is ``ID``
+* **Referencing Layer (Child)** also considered as child layer, is the one with
+  the foreign key field on it. In our case, this is the ``airports`` layer
+* **Referencing Field** will say, which field points to the other layer so this
   is ``fk_region`` in this case
-* **referenced layer** also considered as parent layer, is the one with the
-  primary key, pointed to, so here it is the ``regions`` layer
-* **referenced field** is the primary key of the referenced layer so it is ``ID``
-* **id** will be used for internal purposes and has to be unique. You may need
+* **Id** will be used for internal purposes and has to be unique. You may need
   it to build :ref:`custom forms <customize_form>`. If
   you leave it empty, one will be generated for you but you can assign one
-  yourself to get one that is easier to handle.
+  yourself to get one that is easier to handle
+* **Relationship strength** sets the strength of the relation between the parent
+  and the child layer. The default :guilabel:`Association` type means that
+  the parent layer is *simply* linked to the child one while the
+  :guilabel:`Composition` type allows you to duplicate also the child features
+  when duplicating the parent ones.
 
 .. _figure_relations_manager:
 
-.. figure:: /static/user_manual/working_with_vector/relations2.png
+.. figure:: img/relations2.png
    :align: center
 
    Relation Manager
@@ -710,45 +734,80 @@ under actions.
 
 .. _figure_embedded_form:
 
-.. figure:: /static/user_manual/working_with_vector/relations3.png
+.. figure:: img/relations3.png
    :align: center
 
    Identification dialog regions with relation to airports
 
 As you can see, the airports assigned to this particular region are all shown in
-a table. And there are also some buttons available. Let's review them shortly
+a table. And there are also some buttons available. Let's review them shortly:
 
 * The |toggleEditing| button is for toggling the edit mode. Be aware that it
   toggles the edit mode of the airport layer, although we are in the feature
   form of a feature from the region layer. But the table is representing
   features of the airport layer.
-* The |signPlus| button will add a new feature to the airport layer. And it will
-  assign the new airport to the current region by default.
-* The |remove| button will delete the selected airport permanently.
+* The |saveEdits| button is for saving all the edits.
+* The |newTableRow| button will add a new record to the airport layer attribute table.
+  And it will assign the new airport to the current region by default.
+* The |duplicateFeature| button allows you to copy one or more child features.
+* The |deleteSelected| button will delete the selected airport permanently.
 * The |link| symbol will open a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
   if you created the airport on the wrong region by accident.
 * The |unlink| symbol will unlink the selected airport from the current region,
   leaving them unassigned (the foreign key is set to NULL) effectively.
-* The two buttons to the right switch between table view and form view where
-  the later let's you view all the airports in their respective form.
+* With the |zoomToSelected| button you can zoom the map to the selected child
+  features.
+* The two buttons |formView| and |openTable| to the right switch between table
+  view and form view where the later let's you view all the airports in their
+  respective form.
 
-If you work on the airport table, a new widget type is available which lets you
-embed the feature form of the referenced region on the feature form of the
-airports. It can be used when you open the layer properties of the airports
-table, switch to the :menuselection:`Fields` menu and change the widget type of
-the foreign key field 'fk_region' to Relation Reference.
+In the above example the referencing layer has geometries (so it isn't just
+an alphanumeric table) so the above steps will create an entry in the layer
+attribute table that has no corresponding geometric feature. To add the
+geometry:
+
+#. Choose |openTable| :menuselection:`Open Attribute Table` for the referencing layer.
+#. Select the record that has been added previously within the feature form of the
+   referenced layer.
+#. Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to the
+   selected attributes table record.
+
+If you work on the airport table, the widget Relation Reference is automatically
+set up for the ``fk_region`` field (the one used to create the relation), see
+:ref:`Relation Reference widget <configure_field>`.
+
+.. Todo: It could be nice that those advanced widgets get a description one day
+
+In the airport form you will see the |formView| button at the right side of the
+``fk_region`` field: if you click on the button the form of the region layer will
+be opened. This widget allows you to easily and quickly open the forms of the
+linked parent features.
+
+.. _figure_linked_forms:
+
+.. figure:: img/relations4.png
+   :align: center
+
+   Identification dialog airport with relation to regions
+
+The Relation Reference widget has also an option to embed the form of the parent
+layer within the child one. It is available in  the :menuselection:`Properties --> Attributes Form`
+menu of the airport layer: select the ``fk_region`` field and check the
+``Show embedded form`` option.
 
 If you look at the feature dialog now, you will see, that the form of the region
 is embedded inside the airports form and will even have a combobox, which allows
 you to assign the current airport to another region.
 
-.. _figure_linked_forms:
+.. _figure_linked_forms_embedded:
 
-.. figure:: /static/user_manual/working_with_vector/relations4.png
+.. figure:: img/relations5.png
    :align: center
 
-   Identification dialog airport with relation to regions
+Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
+field has also an autocompleter function: while typing you will see all the
+values of the ``id`` field of the region layer.
 
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
@@ -756,32 +815,112 @@ you to assign the current airport to another region.
 Introducing many-to-many (N-M) relations
 ----------------------------------------
 
-N-M relations are many-to-many relation between two tables. For instance, the
+N-M relations are many-to-many relations between two tables. For instance, the
 ``airports`` and ``airlines`` layers: an airport receives several airline
 companies and an airline company flies to several airports.
 
-In such case, we need a pivot table to list all airlines for all airports. In
-QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
+This SQL code creates the three tables we need for an N-M relationship in
+a PostgreSQL/PostGIS schema named *locations*. You can run the code using the 
+:menuselection:`Database --> DB Manager…` for PostGIS or external tools such as `pgAdmin
+<https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines 
+table stores the ``airlines`` layer. In both tables few fields are used for 
+clarity. The *tricky* part is the ``airports_airlines`` table. We need it to list all
+airlines for all airports (or vice versa). This kind of table is known 
+as a *pivot table*. The *constraints* in this table force that an airport can be 
+associated with an airline only if both already exist in their layers.
+
+.. code-block:: sql
+
+   CREATE SCHEMA locations;
+   
+   CREATE TABLE locations.airports
+   (
+      id serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      airport_name text NOT NULL,
+      CONSTRAINT airports_pkey PRIMARY KEY (id)
+   );
+
+   CREATE INDEX airports_geom_idx ON locations.airports USING gist (geom);
+
+   CREATE TABLE locations.airlines
+   (
+      id serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      airline_name text NOT NULL,
+      CONSTRAINT airlines_pkey PRIMARY KEY (id)
+   );
+
+   CREATE INDEX airlines_geom_idx ON locations.airlines USING gist (geom);
+
+   CREATE TABLE locations.airports_airlines
+   (
+      id serial NOT NULL,
+      airport_fk integer NOT NULL,
+      airline_fk integer NOT NULL,
+      CONSTRAINT airports_airlines_pkey PRIMARY KEY (id),
+      CONSTRAINT airports_airlines_airport_fk_fkey FOREIGN KEY (airport_fk)
+         REFERENCES locations.airports (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED,
+      CONSTRAINT airports_airlines_airline_fk_fkey FOREIGN KEY (airline_fk)
+         REFERENCES locations.airlines (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED
+    );
+
+Instead of PostgreSQL you can also use GeoPackage. In this case, the three tables 
+can be created manually using the :menuselection:`Database --> DB Manager…`. In 
+GeoPackage there are no schemas so the *locations* prefix is not needed.
+
+Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table…` 
+or :menuselection:`Table --> Edit Table…` so they should be created using :menuselection:`Database --> SQL Window…`.
+GeoPackage doesn't support *ADD CONSTRAINT* statements so the ``airports_airlines`` 
+table should be created in two steps:
+
+#. Set up the table only with the ``id`` field using :menuselection:`Table --> Create Table…`
+#. Using :menuselection:`Database --> SQL Window…`, type and execute this SQL code:
+
+   .. code-block:: sql
+
+      ALTER TABLE airports_airlines
+         ADD COLUMN airport_fk INTEGER
+         REFERENCES airports (id) 
+         ON DELETE CASCADE 
+         ON UPDATE CASCADE 
+         DEFERRABLE INITIALLY DEFERRED;
+   
+      ALTER TABLE airports_airlines 
+         ADD COLUMN airline_fk INTEGER
+         REFERENCES airlines (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED;
+
+Then in QGIS, you should set up two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
 * a relation between ``airlines`` table and the pivot table;
 * and a second one between ``airports`` table and the pivot table.
 
-When we add a new child (i.e. a company to an airport), QGIS will add a new row
-in the pivot table and in the ``airlines`` table. If we link a company to an
-airport, QGIS will only add a row in the pivot table.
+An easier way to do it (only for PostgreSQL) is using the :guilabel:`Discover Relations` 
+in :menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
+all relations in your database and you only have to select the two you need. Remember 
+to load the three tables in the QGIS project first.
 
-In case you want to remove a link, an airline or an airport, QGIS won't remove
-the row in the pivot table. The database administrator should add a *ON DELETE
-CASCADE* instruction in the foreign key constraint:
+.. _figure_setup_relations:
 
-.. code-block:: sql
+.. figure:: img/relations6.png
+   :align: center
 
-   ALTER TABLE location.airlines
-   ADD CONSTRAINT location_airlines_airports_id_fkey
-      FOREIGN KEY (id)
-         REFERENCES location.airports(id)
-            ON DELETE CASCADE;
+   Relations and autodiscover
+
+In case you want to remove an ``airport`` or an ``airline``, QGIS won't remove
+the associated record(s) in ``airports_airlines`` table. This task will be made by
+the database if we specify the right *constraints* in the pivot table creation as 
+in the current example.
 
 .. note:: **Combining N-M relation with automatic transaction group**
 
@@ -789,8 +928,126 @@ CASCADE* instruction in the foreign key constraint:
   --> Data Sources -->` when working on such context. QGIS should be able to
   add or update row(s) in all tables (airlines, airports and the pivot tables).
 
-Finally, adding such relations in a form is done in the same way that for a
-one-to-many relation. The :guilabel:`Relations` panel in the :guilabel:`Fields`
-properties of the vector layer will let the user add the relation in the form.
-It will appear as a **Many to many relation**.
+Finally we have to select the right cardinalilty in the 
+:menuselection:`Layer Properties --> Attributes Form` for the ``airports`` and 
+``airlines`` layers. For the first one we should choose the **airlines (id)** option 
+and for the second one the **airports (id)** option.
 
+.. _figure_cardinality:
+
+.. figure:: img/relations7.png
+   :align: center
+
+   Set relationship cardinality
+
+Now you can associate an airport with an airline (or an airline with an airport)
+using :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
+in the subforms. A record will automatically be inserted in the ``airports_airlines`` 
+table.
+
+.. _figure_relationship_working:
+
+.. figure:: img/relations8.png
+   :align: center
+
+   N-M relationship between airports and airlines
+
+.. note:: Using **Many to one relation** cardinality
+
+  Sometimes hiding the pivot table in an N-M relationship is not 
+  desirable. Mainly because there are attributes in the relationship that can only 
+  have values when a relationship is established. If your tables are layers (have
+  a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
+  option (:menuselection:`Layer Properties --> Attributes Form --> Available widgets --> Fields`) 
+  for the foreign key fields in the pivot table.
+
+.. note:: **Pivot table primary key**
+
+  Avoid using multiple fields in the primary key in a pivot table. QGIS assumes a single 
+  primary key so a constraint like ``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)``
+  will not work.
+    
+  
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |addPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
+   :width: 1.5em
+.. |copySelected| image:: /static/common/mActionCopySelected.png
+   :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
+   :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
+.. |dock| image:: /static/common/dock.png
+   :width: 1.5em
+.. |draw| image:: /static/common/mActionDraw.png
+   :width: 1.5em
+.. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
+   :width: 1.5em
+.. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |formSelect| image:: /static/common/mIconFormSelect.png
+   :width: 1.5em
+.. |formView| image:: /static/common/mActionFormView.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |link| image:: /static/common/mActionLink.png
+   :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
+.. |multiEditChangedValues| image:: /static/common/multieditChangedValues.png
+   :width: 1.5em
+.. |multiEditMixedValues| image:: /static/common/multieditMixedValues.png
+   :width: 1.5em
+.. |multiEditSameValues| image:: /static/common/multieditSameValues.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |newTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
+.. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+.. |saveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
+   :width: 1.5em
+.. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
+.. |unlink| image:: /static/common/mActionUnlink.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
+   :width: 1.5em

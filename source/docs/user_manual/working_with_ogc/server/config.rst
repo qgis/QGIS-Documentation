@@ -30,6 +30,7 @@ variables:
 
 - **QGIS_SERVER_LOG_LEVEL**
 - **QGIS_SERVER_LOG_FILE**
+- **QGIS_SERVER_LOG_STDERR**
 
 Take a look on :ref:`qgis-server-envvar` to understand their meanings.
 
@@ -61,13 +62,26 @@ QUERY_STRING
 The query string, normally passed by the web server. This variable can be
 useful while testing QGIS server binary from the command line.
 
+For example for testing a GetCapabilities request on the command line
+to a project that also requires a PostgreSQL connection defined in a
+pg_service.conf file:
+
+.. code-block:: bash
+
+ PGSERVICEFILE=/etc/pg_service.conf QUERY_STRING="MAP=/path/to/test.qgs&SERVICE=WMS&REQUEST=GetCapabilities" /path/to/qgis_mapserv.fcgi
+
+The result should be either the content of the GetCapabilities response or,
+if something is wrong, an error message.
 
 QGIS_PROJECT_FILE
 ^^^^^^^^^^^^^^^^^
 
-The ``.qgs`` project file, normally passed as a parameter in the query string
-(with *MAP*), you can also set it as an environment variable (for example by
-using ``mod_rewrite`` Apache module).
+The ``.qgs`` or ``.qgz`` project file, normally passed as a parameter in the
+query string (with *MAP*), you can also set it as an environment variable (for
+example by using ``mod_rewrite`` Apache module).
+
+Note that you may also indicate a project stored in PostgreSQL, e.g.
+``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``.
 
 
 QGIS_SERVER_LOG_FILE
@@ -77,6 +91,17 @@ Specify path and filename. Make sure that server has proper permissions for
 writing to file. File should be created automatically, just send some requests
 to server. If it's not there, check permissions.
 
+QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will
+be removed in QGIS 4.0.
+
+QGIS_SERVER_LOG_STDERR
+^^^^^^^^^^^^^^^^^^^^^^
+
+Activate logging to stderr. It's disabled by default. This variable
+has no effect when ``QGIS_SERVER_LOG_FILE`` is set.
+
+* ``0`` or ``false`` (case insensitive)
+* ``1`` or ``true`` (case insensitive)
 
 MAX_CACHE_LAYERS
 ^^^^^^^^^^^^^^^^
@@ -148,10 +173,10 @@ For example with spawn-fcgi:
 
 .. code-block:: bash
 
-  $ export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
-  $ export QGIS_SERVER_LOG_FILE=/home/user/qserv.log
-  $ export QGIS_SERVER_LOG_LEVEL=2
-  $ spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
+ export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
+ export QGIS_SERVER_LOG_FILE=/home/user/qserv.log
+ export QGIS_SERVER_LOG_LEVEL=2
+ spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
 
   QGIS Server Settings:
 
@@ -208,7 +233,7 @@ QGIS Server supports:
 
   .. _figure_group_wms_data:
 
-  .. figure:: /static/user_manual/working_with_ogc/set_group_wms_data.png
+  .. figure:: img/set_group_wms_data.png
      :align: center
 
      Set group WMS data dialog
@@ -261,24 +286,33 @@ For linux, if you don't have a desktop environment installed (or you prefer the 
 
   .. code-block:: bash
 
-   $ sudo su
-   $ mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
+   sudo su
+   mkdir -p /usr/local/share/fonts/truetype/myfonts && cd /usr/local/share/fonts/truetype/myfonts
 
    # copy the fonts from their location
-   $ cp /fonts_location/* .
+   cp /fonts_location/* .
 
-   $ chown root *
-   $ cd .. && fc-cache -f -v
+   chown root *
+   cd .. && fc-cache -f -v
 
 * On Fedora based systems:
 
   .. code-block:: bash
 
-   $ sudo su
-   $ mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
+   sudo su
+   mkdir /usr/share/fonts/myfonts && cd /usr/share/fonts/myfonts
 
    # copy the fonts from their location
-   $ cp /fonts_location/* .
+   cp /fonts_location/* .
 
-   $ chown root *
-   $ cd .. && fc-cache -f -v
+   chown root *
+   cd .. && fc-cache -f -v
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

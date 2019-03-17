@@ -12,10 +12,10 @@ Vector analysis
       :depth: 1
 
 
-.. _qgis_basic_statistics:
+.. _qgisbasicstatisticsforfields:
 
-Basic statistics for numeric fields
------------------------------------
+Basic statistics for fields
+---------------------------
 Generates basic statistics for a field of the attribute table of a vector layer.
 
 Numeric, date, time and string fields are supported.
@@ -23,24 +23,26 @@ Numeric, date, time and string fields are supported.
 The statistics returned will depend on the field type.
 
 Statistics are generated as an HTML file and are available in the
-:menuselection:`Processing --> Results viewer`
+:menuselection:`Processing --> Results viewer`.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
 
 ``Input vector`` [vector: any]
-  Vector layer to calculate the statistic on
+  Vector layer to calculate the statistic on.
 
 ``Field to calculate statistics on`` [tablefield: any]
-  Any supported table field to calculate the statistics
+  Any supported table field to calculate the statistics.
 
 Outputs
 .......
 ``Statistics`` [html]
-  HTML file with calculated statistics
+  HTML file with calculated statistics.
 
 
-.. _qgis_count_points_polygon:
+.. _qgiscountpointsinpolygon:
 
 Count points in polygon
 -----------------------
@@ -51,7 +53,7 @@ A new polygons layer is generated, with the exact same content as the input poly
 layer, but containing an additional field with the points count corresponding to
 each polygon.
 
-.. figure:: /static/user_manual/processing_algs/qgis/count_points_polygon.png
+.. figure:: img/count_points_polygon.png
   :align: center
 
   The labels identify the point count
@@ -60,13 +62,15 @@ An optional weight field can be used to assign weights to each point. Alternativ
 a unique class field can be specified. If both options are used, the weight field
 will take precedence and the unique class field will be ignored.
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 ``Polygons`` [vector: polygon]
-  Polygons layer
+  Polygons layer.
 
 ``Points`` [vector: point]
-  Points layer
+  Points layer.
 
 ``Weight field`` [tablefield: any]
   Optional
@@ -83,7 +87,7 @@ Parameters
   classes that are found in it.
 
 ``Count field name`` [string]
-  The name of the field to store the count of points
+  The name of the field to store the count of points.
 
   Default: *NUMPOINTS*
 
@@ -95,141 +99,198 @@ Outputs
   points count.
 
 
-.. _qgis_distance_matrix:
+.. _qgisdbscanclustering:
+
+DBSCAN clustering
+-----------------
+Clusters point features based on a 2D implementation of Density-based spatial
+clustering of applications with noise (DBSCAN) algorithm.
+
+The algorithm requires two parameters, a minimum cluster size,
+and the maximum distance allowed between clustered points.
+
+Parameters
+..........
+
+``Input layer`` [vector: point]
+  Layer to analyze.
+
+``Minimum cluster size`` [number]
+  Minimum number of features to generate a cluster.
+
+  Default: *5*
+
+``Maximum distance between clustered points`` [number]
+  Distance beyond which two features can not belong to
+  the same cluster.
+
+  Default: *1.0*
+
+``Treat border points as noise (DBSCAN*)`` [boolean]
+  Optional
+
+  If checked, points on the border of a cluster are themselves treated as
+  unclustered points, and only points on the interior of a cluster are tagged
+  as clustered.
+
+  Default: *FALSE*
+
+``Cluster field name`` [string]
+  Name of the field where to store the associated cluster number.
+
+  Default: *CLUSTER_ID*
+
+Outputs
+.......
+
+``Clusters`` [vector: point]
+  Vector layer containing the original features with a field
+  setting the cluster they belong to.
+
+See also
+........
+:ref:`qgiskmeansclustering`
+
+
+.. _qgisdistancematrix:
 
 Distance matrix
 ---------------
-Creates a table containing a distance matrix, with distances between all the points
-in a points layer.
+Calculates for point features distances to their nearest features in the same layer
+or in another layer.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
 
 ``Input point layer`` [vector: point]
-  Input point vector layer
+  Point layer for which the distance matrix is calculated (**from** points).
 
 ``Input unique ID field`` [tablefield: any]
-  Define the field of the input layer with unique ID that will be copied in the
-  output attribute table.
+  Field to use to uniquely identify features of the input layer.
+  Used in the output attribute table.
 
 ``Target point layer`` [vector: point]
-  Destination point vector layer
+  Point layer containing the nearest point(s) to search (**to** points).
 
 ``Target unique ID field`` [tablefield: any]
-  Define the field of the target layer with unique ID that will be copied in the
-  output attribute table.
+  Field to use to uniquely identify features of the target layer.
+  Used in the output attribute table.
 
-``Output matrix type`` [selection]
-  Three different types of calculation are available:
+``Output matrix type`` [enumeration]
+  Different types of calculation are available:
 
-  * Linear (N*k x 3) distance matrix
-  * Standard (N x T) distance matrix
-  * Summary distance matrix (mean, std. dev., min, max)
+  * 0 --- Linear (N * *k* x 3) distance matrix: for each input point, reports
+    the distance to each of the *k* nearest target points. The output matrix consists
+    of up to *k* rows per input point, and each row has three columns: *InputID*,
+    *TargetID* and *Distance*.
+  * 1 --- Standard (N x T) distance matrix
+  * 2 --- Summary distance matrix (mean, std. dev., min, max): for each input
+    point, reports statistics on the distances to its target points.
 
-  Default: *Linear (N*k x 3) distance matrix*
+  Default: *0*
 
 ``Use only the nearest (k) target points`` [number]
-  You can choose to calculate the distance between all points or to stop the
-  calculation at a chosen point number.
+  You can choose to calculate the distance to all the points in the target layer
+  or limit to a number (*k*) of closest features.
 
-  Default: *0* all points are used
+  Default: *0* --- all the points are used.
 
 Outputs
 .......
 
 ``Distance matrix`` [vector: point]
-  Point vector layer with attribute table composed by:
-
-  * *InputID*: the unique ID of the input layer
-  * *TargetID*: the unique ID of the target layer
-  * *Distance*: the distance between the points
+  Point (or MultiPoint for the "Linear (N * *k* x 3)" case) vector layer containing the distance calculation for each input feature.
+  Its features and attribute table depend on the selected output matrix type.
 
 
-.. _qgis_distance_to_nearest_hub_line:
+.. _qgisdistancetonearesthublinetohub:
 
 Distance to nearest hub (line to hub)
 -------------------------------------
-Links each feature of the input vector with the nearest feature of the destination
-layer. The output is a line vector layer with all the attributes of the input layer,
-one attribute of the destination layer and the distance.
+Creates lines that join each feature of an input vector to the nearest feature
+in a destination layer. Distances are calculated based on the :ref:`center
+<qgispointonsurface>` of each feature.
 
 
-.. figure:: /static/user_manual/processing_algs/qgis/distance_hub.png
+.. figure:: img/distance_hub.png
   :align: center
 
-  Distance to nearest hub example
+  Display the nearest hub for the red input features
 
 
 Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  Input vector layer
+  Vector layer for which the nearest feature is searched.
 
 ``Destination hubs layer`` [vector: any]
-  Destination layer to calculate the nearest point
+  Vector layer containing the features to search for.
 
 ``Hub layer name attribute`` [tablefield: any]
-  Attribute of the destination layer that will be copied into the
-  output
+  Field to use to uniquely identify features of the destination layer.
+  Used in the output attribute table.
 
-``Measurement unit`` [selection]
-  The distance field in the output attribute table will be calculated according
-  to this choice:
+``Measurement unit`` [enumeration]
+  Units in which to report the distance to the closest feature:
 
-  * Meters
-  * Feet
-  * Miles
-  * Kilometers
-  * Layer units
+  * 0 --- Meters
+  * 1 --- Feet
+  * 2 --- Miles
+  * 3 --- Kilometers
+  * 4 --- Layer units
 
-  Default: *Meters*
+  Default: *0*
 
 Outputs
 .......
 ``Hub distance`` [vector: line]
-  Line vector layer with distance values
+ Line vector layer with the attributes of the input features, the identifier
+ of their closest feature and the calculated distance.
 
 
-.. _qgis_distance_to_nearest_hub_points:
+.. _qgisdistancetonearesthubpoints:
 
 Distance to nearest hub (points)
 --------------------------------
-Creates a copy of the input layer with the addition of two fields containing the
-attribute of the destination layer and the distance between points.
+Creates a point layer representing the :ref:`center <qgispointonsurface>` of the
+input features with the addition of two fields containing the identifier of the
+nearest feature (based on its center point) and the distance between the points.
 
 Parameters
 ..........
 
 ``Source points layer`` [vector: any]
-  Input vector layer
+  Vector layer for which the nearest feature is searched.
 
 ``Destination hubs layer`` [vector: any]
-  Destination layer to calculate the nearest point
+  Vector layer containing the features to search for.
 
 ``Hub layer name attribute`` [tablefield: any]
-  Attribute of the destination layer that will be copied into the
-  output
+  Field to use to uniquely identify features of the destination layer.
+  Used in the output attribute table.
 
-``Measurement unit`` [selection]
-  The distance field in the output attribute table will be calculated according
-  to this choice:
+``Measurement unit`` [enumeration]
+  Units in which to report the distance to the closest feature:
 
-  * Meters
-  * Feet
-  * Miles
-  * Kilometers
-  * Layer units
+  * 0 --- Meters
+  * 1 --- Feet
+  * 2 --- Miles
+  * 3 --- Kilometers
+  * 4 --- Layer units
 
-  Default: *Meters*
+  Default: *0*
 
 Outputs
 .......
 ``Hub distance`` [vector: point]
-  Point vector layer with distance values
+  Point vector layer with the attributes of the input features, the identifier
+  of their closest feature and the calculated distance.
 
 
-.. _qgis_join_lines:
+.. _qgishublines:
 
 Join by lines (hub lines)
 -------------------------
@@ -239,9 +300,10 @@ to matching points in the hub layer.
 Determination of which hub goes with each point is based on a match between the
 Hub ID field on the hub points and the Spoke ID field on the spoke points.
 
-If input layers are not point layers, a point on the surface of the geometries will be taken as the connecting location.
+If input layers are not point layers, a point on the surface of the geometries
+will be taken as the connecting location.
 
-.. figure:: /static/user_manual/processing_algs/qgis/join_lines.png
+.. figure:: img/join_lines.png
   :align: center
 
   Join points on common field
@@ -250,10 +312,10 @@ Parameters
 ..........
 
 ``Hub point layer`` [vector: any]
-  Input layer
+  Input layer.
 
 ``Hub ID field`` [tablefield: any]
-  Field of the hub layer with ID to join
+  Field of the hub layer with ID to join.
 
 ``Hub layer fields to copy``
   Optional
@@ -262,10 +324,10 @@ Parameters
   all fields are taken.
 
 ``Spoke point layer`` [vector: any]
-  Additional spoke point layer
+  Additional spoke point layer.
 
 ``Spoke ID field`` [tablefield: any]
-  Field of the spoke layer with ID to join
+  Field of the spoke layer with ID to join.
 
 ``Spoke layer fields to copy``
   Optional
@@ -276,14 +338,63 @@ Parameters
 Outputs
 .......
 ``Hub lines`` [vector: lines]
-  The resulting line layer
+  The resulting line layer.
 
 
-.. _qgis_list_unique:
+.. _qgiskmeansclustering:
+
+K-means clustering
+------------------
+Calculates the 2D distance based k-means cluster number for each input feature.
+
+K-means clustering aims to partition the features into k clusters in which
+each feature belongs to the cluster with the nearest mean.
+The mean point is represented by the barycenter of the clustered features.
+
+If input geometries are lines or polygons, the clustering
+is based on the centroid of the feature.
+
+.. figure:: img/kmeans.png
+  :align: center
+
+  A five class point clusters
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Layer to analyze.
+
+``Number of clusters`` [number]
+  Number of clusters to create with the features.
+
+  Default: *5*
+
+``Cluster field name`` [tablefield: any]
+  Name of the field where to store the associated cluster number.
+
+  Default: *CLUSTER_ID*
+
+Outputs
+.......
+
+``Clusters`` [vector: any]
+  Vector layer containing the original features with a field
+  setting the cluster they belong to.
+
+
+See also
+........
+:ref:`qgisdbscanclustering`
+
+
+.. _qgislistuniquevalues:
 
 List unique values
 ------------------
 Lists unique values of an attribute table field and counts their number.
+
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -298,13 +409,13 @@ Outputs
 .......
 
 ``Unique values`` [table]
-  Summary table layer with unique values
+  Summary table layer with unique values.
 
 ``HTML report`` [html]
-  HTML report of unique values in the :menuselection:`Processing --> Results viewer`
+  HTML report of unique values in the :menuselection:`Processing --> Results viewer`.
 
 
-.. _qgis_mean_coordinate:
+.. _qgismeancoordinates:
 
 Mean coordinate(s)
 ------------------
@@ -318,19 +429,21 @@ to values in this field. Instead of a single point with the center of mass of th
 whole layer, the output layer will contain a center of mass for the features in
 each category.
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer
+  Input vector layer.
 
 ``Weight field`` [tablefield: numeric]
-  Optional.
+  Optional
 
   Field to use if you want to perform a weighted mean.
 
 ``Unique ID field`` [tablefield: numeric]
-  Optional.
+  Optional
 
   Unique field on which the calculation of the mean will be made.
 
@@ -340,7 +453,7 @@ Outputs
   Resulting point(s) layer.
 
 
-.. _qgis_nearest_neighbour:
+.. _qgisnearestneighbouranalysis:
 
 Nearest neighbour analysis
 --------------------------
@@ -354,19 +467,21 @@ Output is generated as an HTML file with the computed statistical values:
 * Number of points
 * Z-Score
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 
 ``Points`` [vector: point]
-  Point vector layer to calculate the statistics on
+  Point vector layer to calculate the statistics on.
 
 Outputs
 .......
 ``Nearest neighbour`` [html]
-  HTML file in output with the computed statistics
+  HTML file in output with the computed statistics.
 
 
-.. _qgis_statistics_by_categories:
+.. _qgisstatisticsbycategories:
 
 Statistics by categories
 ------------------------
@@ -393,23 +508,23 @@ Parameters
 ..........
 
 ``Input vector layer`` [vector: any]
-  Input vector layer with unique classes and values
+  Input vector layer with unique classes and values.
 
 ``Field to calculate the statistics on`` [tablefield: any]
   Optional
 
-  If empty only the count will be calculated
+  If empty only the count will be calculated.
 
-``Field(s) with categories`` [multiselection]
-  Field(s) of the categories
+``Field(s) with categories`` [tablefield: any] [list]
+  Field(s) of the categories.
 
 Outputs
 .......
 ``N unique values`` [table]
-  Table with statistics field
+  Table with statistics field.
 
 
-.. _qgis_sum_line_length:
+.. _qgissumlinelengths:
 
 Sum line lengths
 ----------------
@@ -422,26 +537,37 @@ polygon.
 
 The names of these two fields can be configured in the algorithm parameters.
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
 Parameters
 ..........
 
 ``Lines`` [vector: line]
-  Input vector line layer
+  Input vector line layer.
 
 ``Polygons`` [vector: polygon]
-  Polygon vector layer
+  Polygon vector layer.
 
 ``Lines length field name`` [string]
-  Name of the field of the lines length
+  Name of the field of the lines length.
 
   Default: *LENGTH*
 
 ``Lines count field name`` [string]
-  Name of the field of the lines count
+  Name of the field of the lines count.
 
   Default: *COUNT*
 
 Outputs
 .......
 ``Line length`` [vector: polygon]
-  Polygon output layer with fields of lines length and line count
+  Polygon output layer with fields of lines length and line count.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

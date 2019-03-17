@@ -1,16 +1,26 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Hydrological analysis
 ============================================================
 
 
-.. note:: In this lesson we will perform some hydrological analysis. This analysis will be used in some of the following lessons, as it constitutes a very good example of an analysis workflow, and we will use it to demonstrate some advanced features.
+.. note:: In this lesson we will perform some hydrological analysis.
+  This analysis will be used in some of the following lessons, as it constitutes
+  a very good example of an analysis workflow, and we will use it to demonstrate
+  some advanced features.
 
-In this lesson, we are going to do some hydrological analysis. Starting with a DEM, we are going to extract a channel network, delineate watersheds and calculate some statistics. 
+In this lesson, we are going to do some hydrological analysis. Starting with a DEM,
+we are going to extract a channel network, delineate watersheds and calculate some statistics. 
 
 The first thing is to load the project with the lesson data, which just contains a DEM.
 
 .. image:: img/hydro/dem.png
 
-The first module to execute is *Catchment area* (in some SAGA versions it is called *Flow accumulation (Top Down)*). You can use anyone of  the others named *Catchment area*. They have different algorithms underneath, but the results are basically the same.
+The first module to execute is *Catchment area* (in some SAGA versions it is called
+*Flow accumulation (Top Down)*). You can use anyone of  the others named *Catchment area*.
+They have different algorithms underneath, but the results are basically the same.
 
 Select the DEM in the *Elevation* field, and leave the default values for the rest of parameters.
 
@@ -24,25 +34,38 @@ The rendering of the layer is not very informative.
 
 .. image:: img/hydro/catchmentlayer.png
 
-To know why, you can have a look at the histogram and you will see that values are not evenly distributed (there are a few cells with very high value, those corresponding to the channel network). Calculating the logarithm of the catchment area value yields a layer that conveys much more information (you can do it using the raster calculator).
+To know why, you can have a look at the histogram and you will see that value
+are not evenly distributed (there are a few cells with very high value, those
+corresponding to the channel network). Calculating the logarithm of the catchment
+area value yields a layer that conveys much more information (you can do it using
+the raster calculator).
 
 .. image:: img/hydro/catchmentlayerlog.png
 
-The catchment area (also known as flow accumulation), can be used to set a threshold for channel initiation. This can be done using the *Channel network* algorithm. Here is how you have to set it up (note the *Initiation threshold* *Greater than* 10.000.000).
+The catchment area (also known as flow accumulation), can be used to set a
+threshold for channel initiation. This can be done using the *Channel network* algorithm.
+Here is how you have to set it up (note the *Initiation threshold* *Greater than* 10.000.000).
 
 .. image:: img/hydro/channelnetwork.png 
 
 
-Use the original catchment area layer, not the logarithm one. That one was just for rendering purposes.
+Use the original catchment area layer, not the logarithm one.
+That one was just for rendering purposes.
 
-If you increase the *Initiation threshold* value, you will get a more sparse channel network. If you decrease it, you will get a denser one. With the proposed value, this is what you get.
+If you increase the *Initiation threshold* value, you will get a more sparse
+channel network. If you decrease it, you will get a denser one.
+With the proposed value, this is what you get.
 
 .. image:: img/hydro/channelnetworklayer.png 
 
 
-The image above shows just the resulting vector layer and the DEM, but there should be also a raster one with the same channel network. That raster one will be, in fact, the one we will be using.
+The image above shows just the resulting vector layer and the DEM, but there
+should be also a raster one with the same channel network. That raster one
+will be, in fact, the one we will be using.
 
-Now, we will use the *Watersheds basins* algorithm to delineate the subbasins corresponding to that channel network, using as outlet points all the junctions in it. Here is how you have to set the corresponding parameters dialog.
+Now, we will use the *Watersheds basins* algorithm to delineate the subbasins
+corresponding to that channel network, using as outlet points all the junctions
+in it. Here is how you have to set the corresponding parameters dialog.
 
 .. image:: img/hydro/watersheds.png 
 
@@ -58,9 +81,14 @@ This is a raster result. You can vectorise it using the *Vectorising grid classe
 .. image:: img/hydro/watershedslayervector.png 
 
 
-Now, let's try to compute statistics about the elevation values in one of the subbasins. The idea is to have a layer that just represents the elevation within that subbasin and then pass it to the module that calculates those statistics.
+Now, let's try to compute statistics about the elevation values in one of the
+subbasins. The idea is to have a layer that just represents the elevation
+within that subbasin and then pass it to the module that calculates those statistics.
 
-First, let's clip the original DEM with the polygon representing a subbasin. We will use the *Clip raster with polygon* algorithm. If we select a single subbasin polygon and then call the clipping algorithm, we can clip the DEM to the area covered by that polygon, since the algorithm is aware of the selection.
+First, let's clip the original DEM with the polygon representing a subbasin.
+We will use the *Clip raster with polygon* algorithm. If we select a single
+subbasin polygon and then call the clipping algorithm, we can clip the DEM to
+the area covered by that polygon, since the algorithm is aware of the selection.
 
 Select a polygon,
 
@@ -84,4 +112,15 @@ The resulting statistics are the following ones.
 
 .. image:: img/hydro/stats.png 
 
-We will use both the basin calculations procedure and the statistics calculation in other lessons, to find out how other elements can help us automate both of them and work more effectively.
+We will use both the basin calculations procedure and the statistics
+calculation in other lessons, to find out how other elements can help us
+automate both of them and work more effectively.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

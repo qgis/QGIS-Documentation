@@ -49,14 +49,14 @@ Parameters
   **"D8 Flow Directions"** tool.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shapefile defining the outlets of interest. If this input file is
   used, only the cells upslope of these outlet cells are considered to be
   within the domain being evaluated.
 
 ``Weight Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving contribution to flow for each cell. These contributions (also
   sometimes referred to as weights or loadings) are used in the contributing
@@ -88,15 +88,6 @@ Outputs
   plus the contribution from upslope neighbors that drain in to it according
   to the D8 flow model.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8contributingarea', -p, -o, -wg, -nc, -ad8)
-
-See also
-........
 
 D8 Flow Directions
 ------------------
@@ -126,7 +117,7 @@ D8 Flow Direction Coding:
 * 7 --- South
 * 8 --- Southeast
 
-.. figure:: /static/user_manual/processing_algs/taudem/d8index.gif
+.. figure:: img/d8index.gif
    :align: center
    :width: 30em
 
@@ -165,15 +156,6 @@ Outputs
 ``D8 Slope Grid`` [raster]
   A grid giving slope in the D8 flow direction. This is measured as drop/distance.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:d8flowdirections', -fel, -p, -sd8)
-
-See also
-........
 
 D-Infinity Contributing Area
 ----------------------------
@@ -197,7 +179,7 @@ the flow direction angle is to the direct angle to those cells. The contour
 length used here is the grid cell size. The resulting units of the specific
 catchment area are length units the same as those of the grid cell size.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tardemfig.gif
+.. figure:: img/tardemfig.gif
    :align: center
 
 When the optional weight grid is not used, the result is reported in terms of
@@ -240,14 +222,14 @@ Parameters
   facet with the steepest downward slope.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shapefile defining the outlets of interest. If this input file is
   used, only the cells upslope of these outlet cells are considered to be
   within the domain being evaluated.
 
 ``Weight Grid`` [raster]
-  Optional.
+  Optional
 
   A grid giving contribution to flow for each cell. These contributions (also
   sometimes referred to as weights or loadings) are used in the contributing
@@ -283,15 +265,6 @@ Outputs
   plus the contribution from upslope neighbors that have some fraction draining
   to it according to the D-infinity flow model.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinitycontributingarea', -ang, -o, -wg, -nc, -sca)
-
-See also
-........
 
 D-Infinity Flow Directions
 --------------------------
@@ -312,7 +285,7 @@ interest. The resulting flow in a grid is then usually interpreted as being
 proportioned between the two neighboring cells that define the triangular facet
 with the steepest downward slope.
 
-.. figure:: /static/user_manual/processing_algs/taudem/tardemfig.gif
+.. figure:: img/tardemfig.gif
    :align: center
 
 A block-centered representation is used with each elevation value taken to
@@ -367,15 +340,6 @@ Outputs
   triangular facets centered at each grid cell, measured as drop/distance, i.e.
   tan of the slope angle.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dinfinityflowdirections', -fel, -ang, -slp)
-
-See also
-........
 
 Grid Network
 ------------
@@ -424,14 +388,14 @@ Parameters
   **"D8 Flow Directions"** tool.
 
 ``Outlets Shapefile`` [vector: point]
-  Optional.
+  Optional
 
   A point shapefile defining the outlets of interest. If this input file is
   used, only the cells upslope of these outlet cells are considered to be within
   the domain being evaluated.
 
 ``Mask Grid`` [raster]
-  Optional.
+  Optional
 
   A grid that is used to determine the domain do be analyzed. If the mask grid
   value >= mask threshold (see below), then the cell will be included in the
@@ -470,15 +434,6 @@ Outputs
   second highest incoming flow path order + 1. This generalizes the common
   definition to cases where more than two flow paths join at a point.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:gridnetwork', d8_flow_dir_grid, outlets_shape, mask_grid, threshold, longest_len_grid, total_len_grid, strahler_grid)
-
-See also
-........
 
 Pit Remove
 ----------
@@ -515,16 +470,6 @@ Outputs
   A grid of elevation values with pits removed so that flow is routed off of
   the domain.
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:pitremove', -z, -fel)
-
-See also
-........
-
 
 Select GT Threshold
 -------------------
@@ -556,12 +501,11 @@ Outputs
 ``Output Grid`` [raster]
   Output grid
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('taudem:selectgtthreshold', -z, -thresh, -t)
-
-See also
-........
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

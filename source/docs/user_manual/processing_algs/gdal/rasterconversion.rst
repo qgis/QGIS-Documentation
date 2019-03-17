@@ -11,58 +11,55 @@ Raster conversion
       :local:
       :depth: 1
 
+
+.. _gdalgdal2xyz:
+
 gdal2xyz
 --------
-
-Description
-...........
-
-<put algorithm description here>
+Converts raster data to XYZ ASCII file format.
 
 Parameters
 ..........
 
 ``Input layer`` [raster]
-  <put parameter description here>
+  Raster layer to convert.
 
-``Band number`` [number]
-  <put parameter description here>
+``Band number`` [raster band]
+  Number of the band to export values from.
 
   Default: *1*
 
+``Output comma-separated values`` [boolean]
+  Sets whether the output file should be of comma-separated values (csv) type.
+
+  Default: *False*
+  
 Outputs
 .......
 
-``Output file`` [table]
-  <put output description here>
+``XYZ ASCII file`` [table]
+  Table file containing the values exported from the raster band.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:gdal2xyz', input, band, output)
-
-See also
-........
+.. _gdalpcttorgb:
 
 PCT to RGB
 ----------
+Converts an 8bit paletted image to 24bit RGB.
+It will convert a pseudocolor band on the input file into an output RGB file of the desired format.
 
-Description
-...........
-Convert an 8bit paletted image to 24bit RGB
+This algorithm is derived from the `GDAL pct2rgb utility <https://www.gdal.org/pct2rgb.html>`_ .
 
-This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.
+``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
 
 ``Input layer`` [raster]
-  Input 8bit raster image
+  Input 8bit raster image.
 
-``Band to convert`` [selection]
-  Band to convert to RGB
+``Band number`` [enumeration]
+  Band to convert to RGB.
 
   Options:
 
@@ -94,33 +91,29 @@ Parameters
 
   Default: *0*
 
+``Generate a RGBA file`` [boolean]
+  Sets whether the output file should be of RGBA type.
+
+  Default: *False*
+  
 Outputs
 .......
 
-``Output layer`` [raster]
+``PCT to RGB`` [raster]
   24bit RGB raster image
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:pcttorgb', input, nband, output)
-
-See also
-........
-`GDAL pct2rgb utility <http://www.gdal.org/pct2rgb.html>`_
+.. _gdalpolygonize:
 
 Polygonize (raster to vector)
 -----------------------------
-
-Description
-...........
-
 Creates vector polygons for all connected regions of pixels in the
 raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
-The algorithm is derived from the `GDAL polygonize utility <http://www.gdal.org/gdal_polygonize.html>`_ .
+
+This algorithm is derived from the `GDAL polygonize utility <https://www.gdal.org/gdal_polygonize.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -128,124 +121,104 @@ Parameters
 ``Input layer`` [raster]
   Input raster layer.
 
-``Output field name`` [string]
+``Band number`` [raster band]
+  Band to extract data from.
+
+``Name of the field to create`` [string]
   Defines the field name in which the attributes of the connected regions are
   entered. If no field name is defined the name will be 'DN'.
 
   Default: *DN*
 
+``Use 8-connectedness`` [boolean]
+  <put parameter description here>
+
+  Default: *False*
+
 Outputs
 .......
 
-``Output layer`` [vector]
-  Output vector layer. Default format is \*.shp. 
+``Vectorized`` [vector: polygon]
+  Output vector layer. Default format is \*.shp.
 
-Console usage
-.............
 
-::
+.. _gdalrearrange_bands:
 
-  processing.runalg('gdalogr:polygonize', input, field, output)
+Rearrange bands
+---------------
+Creates a new raster using selected band(s) from a given raster layer.
+The algorithm also makes it possible to reorder the bands for the newly-created raster.
 
-See also
-........
-
-Rasterize (vector to raster)
-----------------------------
-
-Description
-...........
-
-Converts vector geometries (points, lines and polygons) into a raster image.
-The algorithm is derived from the `GDAL rasterize utility <http://www.gdal.org/gdal_rasterize.html>`_ .
-
+This algorithm is derived from the `GDAL translate utility <https://www.gdal.org/gdal_translate.html>`_ .
 
 Parameters
 ..........
 
 ``Input layer`` [vector: any]
-  Input vector layer with point, line or polygon geometries.
+  Input raster layer.
 
-``Attribute field`` [tablefield: any]
-  Defines the attribute field from which the attributes for the pixels
-  should be chosen.
+``selected band(s)`` [raster band] [list]
+  Ordered list of the bands to use to create the new raster.
 
-``Write values inside an existing raster layer(*)`` [boolean]
-  If activated writes the results into an existing raster layer.
+``Additional creation options``
+  Optional
 
-  Default: *False*
+  ``Profile`` [enumeration]
+    <put parameter description here>
+    Options:
 
-``Set output raster size (ignored if above option is checked)`` [selection]
-  If the above option is not checked either the output size is in pixels (0)
-  or the output resolution is in map units per pixel (1).
+    * 0 --- 
+    * 1 --- Default
+    * 2 --- No compression
+    * 3 --- Low compression
+    * 4 --- High compression
+    * 5 --- JPEG compression
 
-  Options:
+  Default: *0*
 
-  * 0 --- Output size in pixels
-  * 1 --- Output resolution in map units per pixel
-
-  Default: *1*
-
-``Horizontal`` [number]
-  Sets the horizontal resolution of the output raster.
-
-  Default: *100.0*
-
-``Vertical`` [number]
-  Sets the vertical resolution of the output raster.
-
-  Default: *100.0*
-
-``Raster type`` [selection]
+``Output data type`` [enumeration]
   Defines the type of the resulting raster image.
 
   Options:
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
 
   Default: *0*
 
 Outputs
 .......
 
-``Output layer: mandatory to choose an existing raster layer if the (*) option is selected`` [raster]
-  Output raster layer. Give in here the name of the raster layer in which the results should be written
-  (if this option is used).
+``Converted`` [raster]
+  Output raster layer with rearranged bands.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:rasterize', input, field, writeover, dimensions, width, height, rtype, output)
-
-See also
-........
+.. _gdalrgbtopct:
 
 RGB to PCT
 ----------
-
-Description
-...........
-
 Converts a 24bit RGB image into a 8bit paletted. Computes an optimal pseudo-color
 table for the given RGB-image using a median cut algorithm on a downsampled RGB
 histogram. Then it converts the image into a pseudo-colored image using the color
 table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to
 maximize output image visual quality.
+
 If you want to classify a raster map and want to reduce the number of classes it
 can be helpful to downsample your image with this algorithm before.
-The algorithm is derived from the `GDAL rgb2pct utility <http://www.gdal.org/rgb2pct.html>`_ .
+
+This algorithm is derived from the `GDAL rgb2pct utility <https://www.gdal.org/rgb2pct.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -261,26 +234,19 @@ Parameters
 Outputs
 .......
 
-``Output layer`` [raster]
+``RGB to PCT`` [raster]
   8-bit output raster.
 
-Console usage
-.............
 
-::
-
-  processing.runalg('gdalogr:rgbtopct', input, ncolors, output)
-
-See also
-........
+.. _gdaltranslate:
 
 Translate (convert format)
 --------------------------
+Converts raster data between different formats.
 
-Description
-...........
+This algorithm is derived from the `GDAL translate utility <https://www.gdal.org/gdal_translate.html>`_ .
 
-<put algorithm description here>
+``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -288,42 +254,15 @@ Parameters
 ``Input layer`` [raster]
   <put parameter description here>
 
-``Set the size of the output file (In pixels or %)`` [number]
+``Override the projection of the output file`` [crs]
   <put parameter description here>
 
-  Default: *100*
+``Assign a specified nodata value to output bands`` [number]
+  Optional
 
-``Output size is a percentage of input size`` [boolean]
   <put parameter description here>
 
-  Default: *True*
-
-``Nodata value, leave as none to take the nodata value from input`` [string]
-  <put parameter description here>
-
-  Default: *none*
-
-``Expand`` [selection]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- none
-  * 1 --- gray
-  * 2 --- rgb
-  * 3 --- rgba
-
-  Default: *0*
-
-``Output projection for output file [leave blank to use input projection]`` [crs]
-  <put parameter description here>
-
-  Default: *None*
-
-``Subset based on georeferenced coordinates`` [extent]
-  <put parameter description here>
-
-  Default: *0,1,0,1*
+  Default: *Not set*
 
 ``Copy all subdatasets of this file to individual output files`` [boolean]
   <put parameter description here>
@@ -331,44 +270,43 @@ Parameters
   Default: *False*
 
 ``Additional creation parameters`` [string]
-  Optional.
+  Optional
 
   <put parameter description here>
 
   Default: *(not set)*
 
-``Output raster type`` [selection]
-  <put parameter description here>
+``Output data type`` [enumeration]
+  Defines the type of the resulting raster image.
 
   Options:
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+  * 0 --- Use input layer data type
+  * 1 --- Byte
+  * 2 --- Int16
+  * 3 --- UInt16
+  * 4 --- UInt32
+  * 5 --- Int32
+  * 6 --- Float32
+  * 7 --- Float64
+  * 8 --- CInt16
+  * 9 --- CInt32
+  * 10 --- CFloat32
+  * 11 --- CFloat64
 
-  Default: *5*
+  Default: *0*
 
 Outputs
 .......
 
-``Output layer`` [raster]
+``Converted`` [raster]
   <put output description here>
 
-Console usage
-.............
 
-::
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-  processing.runalg('gdalogr:translate', input, outsize, outsize_perc, no_data, expand, srs, projwin, sds, extra, rtype, output)
-
-See also
-........
-
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -27,7 +27,7 @@ QGIS Users
 This mailing list is used for discussion of QGIS in general, as well
 as specific questions regarding its installation and use. You can
 subscribe to the qgis-users mailing list by visiting the following
-URL: http://lists.osgeo.org/mailman/listinfo/qgis-user
+URL: https://lists.osgeo.org/mailman/listinfo/qgis-user
 
 QGIS Developers
 ---------------
@@ -36,7 +36,7 @@ If you are a developer facing problems of a more technical nature, you
 may want to join the qgis-developer mailing list. This list is also a
 place where people can chime in and collect and discuss QGIS
 related UX (User Experience) / usability issues. It's here:
-http://lists.osgeo.org/mailman/listinfo/qgis-developer
+https://lists.osgeo.org/mailman/listinfo/qgis-developer
 
 QGIS Community Team
 -------------------
@@ -46,7 +46,7 @@ guide, web sites, blog, mailing lists, forums, and translation
 efforts. If you would like to work on the user guide as well, this
 list is a good starting point to ask your questions. You can subscribe
 to this list at:
-http://lists.osgeo.org/mailman/listinfo/qgis-community-team
+https://lists.osgeo.org/mailman/listinfo/qgis-community-team
 
 QGIS Translations
 -----------------
@@ -55,14 +55,14 @@ This list deals with the translation efforts. If you like to work on
 the translation of the website, manuals or the graphical user interface (GUI),
 this list is a good starting point to ask your questions. You can
 subscribe to this list at:
-http://lists.osgeo.org/mailman/listinfo/qgis-tr
+https://lists.osgeo.org/mailman/listinfo/qgis-tr
 
 QGIS Project Steering Committee (PSC)
 -------------------------------------
 
 This list is used to discuss Steering Committee issues related to
 overall management and direction of QGIS. You can subscribe to this
-list at: http://lists.osgeo.org/mailman/listinfo/qgis-psc
+list at: https://lists.osgeo.org/mailman/listinfo/qgis-psc
 
 QGIS User groups
 ----------------
@@ -71,7 +71,7 @@ In order to locally promote QGIS and contribute to its development, some QGIS
 communities are organized into QGIS User Groups. These groups are places to
 discuss local topics, organize regional or national user meetings, organize
 sponsoring of features... The list of current user groups is available at
-http://qgis.org/en/site/forusers/usergroups.html
+https://qgis.org/en/site/forusers/usergroups.html
 
 
 You are welcome to subscribe to any of the lists. Please remember to
@@ -86,11 +86,11 @@ channel on irc.freenode.net. Please wait for a response to your
 question, as many folks on the channel are doing other things and it
 may take a while for them to notice your question. If you missed a
 discussion on IRC, not a problem! We log all discussion, so you can
-easily catch up. Just go to http://qgis.org/irclogs and read the
+easily catch up. Just go to https://qgis.org/irclogs and read the
 IRC-logs.
 
 Commercial support for QGIS is also available. Check the website
-http://qgis.org/en/commercial-support.html for more information.
+https://qgis.org/en/commercial-support.html for more information.
 
 BugTracker
 ==========
@@ -98,7 +98,7 @@ BugTracker
 While the qgis-users mailing list is useful for general 'How do I do
 XYZ in QGIS?'-type questions, you may wish to notify us about bugs in
 QGIS. You can submit bug reports using the QGIS bug tracker at
-http://hub.qgis.org/projects/quantum-gis/issues. When creating a new
+https://issues.qgis.org/projects/qgis/issues. When creating a new
 ticket for a bug, please provide an email address where we can contact
 you for additional information.
 
@@ -113,7 +113,7 @@ as for bugs. Please make sure to select the type ``Feature``.
 If you have found a bug and fixed it yourself, you can submit either a
 Pull Request on the Github QGIS Project (prefered) or a patch also.
 The lovely redmine ticketsystem at
-http://hub.qgis.org/projects/quantum-gis/issues has this type as well.
+https://issues.qgis.org/projects/qgis/issues has this type as well.
 Check the ``Patch supplied`` checkbox and attach your patch before
 submitting your bug. One of the developers will review it and apply it
 to QGIS. Please don't be alarmed if your patch is not applied straight
@@ -126,14 +126,14 @@ Blog
 ====
 
 The QGIS community also runs a weblog at
-http://planet.qgis.org/planet/, which has some interesting articles
+https://planet.qgis.org/planet/, which has some interesting articles
 for users and developers as well provided by other blogs in the
 community. You are invited to contribute your own QGIS blog!
 
 Plugins
 =======
 
-The website http://plugins.qgis.org provides the official QGIS plugins
+The website https://plugins.qgis.org provides the official QGIS plugins
 web portal. Here, you find a list of all stable and experimental QGIS
 plugins available via the 'Official QGIS Plugin Repository'.
 
@@ -141,8 +141,16 @@ Wiki
 ====
 
 Lastly, we maintain a WIKI web site at
-http://hub.qgis.org/projects/quantum-gis/wiki where you can find a
+https://github.com/qgis/QGIS/wiki where you can find a
 variety of useful information relating to QGIS development, release
 plans, links to download sites, message-translation hints and
 more. Check it out, there are some goodies inside!
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

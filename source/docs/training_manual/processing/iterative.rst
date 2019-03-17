@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 Iterative execution of algorithms
 ==================================
 
@@ -46,3 +50,12 @@ Here's the result that you will get if you run the clipping algorithm as explain
 For each layer, the black and white color palette, (or whatever palette you are using), is adjusted differently, from its minimum to its maximum values. That's the reason why you can see the different pieces and the colors do not seem to match in the border between layers. Values, however, do match.
 
 If you enter an output filename, resulting files will be named using that filename and a number corresponding to each iteration as suffix.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

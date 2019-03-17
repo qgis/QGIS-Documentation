@@ -55,37 +55,37 @@ For working with GPS data, we provide an example GPX file available in the QGIS
 sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See section
 :ref:`label_sampledata` for more information about the sample data.
 
-#. Select :menuselection:`Vector --> GPS --> GPS Tools` or click the
+#. Select :menuselection:`Vector --> GPS Tools` or click the
    |importGPX| :sup:`GPS Tools` icon in the toolbar and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_).
 #. Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file
-   :file:`national_monuments.gpx` and click **[Open]**.
+   :file:`national_monuments.gpx` and click :guilabel:`Open`.
 
 .. _figure_gps:
 
-.. figure:: /static/user_manual/working_with_gps/loadgpx.png
+.. figure:: img/loadgpx.png
    :align: center
 
    The *GPS Tools* dialog window
 
-Use the **[Browse...]** button to select the GPX file, then use the checkboxes
+Use the :guilabel:`Browse...` button to select the GPX file, then use the checkboxes
 to select the feature types you want to load from that GPX file.
 Each feature type will be loaded in a separate layer when you click
-**[OK]**. The file :file:`national_monuments.gpx` only includes waypoints.
+:guilabel:`OK`. The file :file:`national_monuments.gpx` only includes waypoints.
 
 .. note::
    GPS units allow you to store data in different coordinate systems. When
    downloading a GPX file (from your GPS unit or a web site) and then loading it
    in QGIS, be sure that the data stored in the GPX file uses WGS 84
    (latitude/longitude). QGIS expects this, and it is the official GPX
-   specification. See http://www.topografix.com/GPX/1/1/.
+   specification. See https://www.topografix.com/GPX/1/1/.
 
 GPSBabel
 --------
 
 Since QGIS uses GPX files, you need a way to convert other GPS file formats to
 GPX. This can be done for many formats using the free program GPSBabel, which is
-available at http://www.gpsbabel.org. This program can also transfer GPS
+available at https://www.gpsbabel.org. This program can also transfer GPS
 data between your computer and a GPS device. QGIS uses GPSBabel to do these
 things, so it is recommended that you install it. However, if you just want to
 load GPS data from GPX files you will not need it. Version 1.2.3 of GPSBabel is
@@ -115,7 +115,7 @@ name of the new layer.
 
 .. _figure_gps_download:
 
-.. figure::  /static/user_manual/working_with_gps/download.png
+.. figure::  img/download.png
    :align: center
 
    The download tool
@@ -131,7 +131,7 @@ connected to. It may also be simply USB, for USB-enabled GPS units.
 * |nix| On Linux, this is something like ``/dev/ttyS0`` or ``/dev/ttyS1``.
 * |win| On Windows, it is ``COM1`` or ``COM2``.
 
-When you click **[OK]**, the data will be downloaded from the device and appear
+When you click :guilabel:`OK`, the data will be downloaded from the device and appear
 as a layer in QGIS.
 
 Uploading GPS data to a device
@@ -157,12 +157,12 @@ There are lots of different types of GPS devices. The QGIS developers can't
 test all of them, so if you have one that does not work with any of the device
 types listed in the :guilabel:`Download from GPS` and :guilabel:`Upload to GPS`
 tools, you can define your own device type for it. You do this by using the GPS
-device editor, which you start by clicking the **[Edit devices]** button in the
+device editor, which you start by clicking the :guilabel:`Edit Devices` button in the
 download or the upload tab.
 
-To define a new device, you simply click the **[New device]** button,
+To define a new device, you simply click the :guilabel:`New Device` button,
 enter a name, enter download and upload commands for your device, and
-click the **[Update device]** button. The name will be listed in the
+click the :guilabel:`Update Device` button. The name will be listed in the
 device menus in the upload and download windows -- it can be any string. The
 download command is the command that is used to download data from the device
 to a GPX file. This will probably be a GPSBabel command, but you can use any
@@ -188,7 +188,7 @@ file for the layer that is being uploaded, and ``%out`` is replaced by the port
 name.
 
 You can learn more about GPSBabel and its available command line options at
-http://www.gpsbabel.org.
+https://www.gpsbabel.org.
 
 Once you have created a new device type, it will appear in the device lists for
 the download and upload tools.
@@ -199,7 +199,7 @@ Download of points/tracks from GPS units
 As described in previous sections QGIS uses GPSBabel to download points/tracks
 directly in the project. QGIS comes out of the box with a pre-defined profile
 to download from Garmin devices. Unfortunately there is a `bug #6318
-<http://hub.qgis.org/issues/6318>`_ that does not allow create other profiles,
+<https://issues.qgis.org/issues/6318>`_ that does not allow create other profiles,
 so downloading directly in QGIS using the GPS Tools is at the moment limited to
 Garmin USB units.
 
@@ -209,7 +209,7 @@ Garmin GPSMAP 60cs
 **MS Windows**
 
 Install the Garmin USB drivers ​from
-http://www8.garmin.com/support/download_details.jsp?id=591
+https://www8.garmin.com/support/download_details.jsp?id=591
 
 Connect the unit. Open GPS Tools and use ``type=garmin serial`` and ``port=usb:``
 Fill the fields :guilabel:`Layer name` and :guilabel:`Output file`. Sometimes
@@ -234,7 +234,7 @@ loaded
   rmmod garmin_gps
 
 and then you can use the GPS Tools. Unfortunately there seems to be a `bug #7182
-<http://hub.qgis.org/issues/7182>`_ and usually QGIS freezes several times
+<https://issues.qgis.org/issues/7182>`_ and usually QGIS freezes several times
 before the operation work fine.
 
 BTGP-38KM datalogger (only Bluetooth)
@@ -300,3 +300,23 @@ system port, then run GPSBabel
 
   gpsbabel -t -i mtk -f /dev/rfcomm0 -o gpx -F /home/user/bluemax_bt.gpx
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
+.. |createGPX| image:: /static/common/create_gpx.png
+   :width: 1.5em
+.. |importGPX| image:: /static/common/import_gpx.png
+   :width: 1.5em
+.. |nix| image:: /static/common/nix.png
+   :width: 1em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. |win| image:: /static/common/win.png
+   :width: 1em

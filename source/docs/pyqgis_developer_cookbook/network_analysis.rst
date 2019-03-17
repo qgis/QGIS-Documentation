@@ -1,8 +1,14 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. _network-analysis:
 
 ************************
 Network analysis library
 ************************
+
+.. warning:: |outofdate|
 
 .. contents::
    :local:
@@ -48,19 +54,19 @@ In the latter case the edge will be split and a new vertex added.
 Vector layer attributes and length of an edge can be used as the properties
 of an edge.
 
-Converting from a vector layer to the graph is done using the `Builder <http://en.wikipedia.org/wiki/Builder_pattern>`_
+Converting from a vector layer to the graph is done using the `Builder <https://en.wikipedia.org/wiki/Builder_pattern>`_
 programming pattern. A graph is constructed using a so-called Director.
-There is only one Director for now: `QgsLineVectorLayerDirector <http://qgis.org/api/classQgsLineVectorLayerDirector.html>`_.
+There is only one Director for now: `QgsLineVectorLayerDirector <https://qgis.org/api/classQgsLineVectorLayerDirector.html>`_.
 The director sets the basic settings that will be used to construct a graph
 from a line vector layer, used by the builder to create the graph. Currently, as
-in the case with the director, only one builder exists: `QgsGraphBuilder <http://qgis.org/api/classQgsGraphBuilder.html>`_,
-that creates `QgsGraph <http://qgis.org/api/classQgsGraph.html>`_ objects.
+in the case with the director, only one builder exists: `QgsGraphBuilder <https://qgis.org/api/classQgsGraphBuilder.html>`_,
+that creates `QgsGraph <https://qgis.org/api/classQgsGraph.html>`_ objects.
 You may want to implement your own builders that will build a graphs compatible
-with such libraries as `BGL <http://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_
-or `NetworkX <http://networkx.lanl.gov/>`_.
+with such libraries as `BGL <https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_
+or `NetworkX <https://networkx.lanl.gov/>`_.
 
-To calculate edge properties the programming pattern `strategy <http://en.wikipedia.org/wiki/Strategy_pattern>`_
-is used. For now only `QgsDistanceArcProperter <http://qgis.org/api/classQgsDistanceArcProperter.html>`_
+To calculate edge properties the programming pattern `strategy <https://en.wikipedia.org/wiki/Strategy_pattern>`_
+is used. For now only `QgsDistanceArcProperter <https://qgis.org/api/classQgsDistanceArcProperter.html>`_
 strategy is available, that takes into account the length of the route. You
 can implement your own strategy that will use all necessary parameters.
 For example, RoadGraph plugin uses a strategy that computes travel time
@@ -197,7 +203,7 @@ with the following properties:
   single available path and it is optimal (shortest) on this graph
 
 To get the shortest path tree use the methods :func:`shortestTree` and
-:func:`dijkstra` of `QgsGraphAnalyzer <http://qgis.org/api/classQgsGraphAnalyzer.html>`_
+:func:`dijkstra` of `QgsGraphAnalyzer <https://qgis.org/api/classQgsGraphAnalyzer.html>`_
 class. It is recommended to use method :func:`dijkstra` because it works
 faster and uses memory more efficiently.
 
@@ -226,17 +232,16 @@ from the root.
 Here is some very simple code to display the shortest path tree using the graph
 created with the :func:`shortestTree` method (select linestring layer in TOC
 and replace coordinates with your own). **Warning**: use this code only as an
-example, it creates a lots of `QgsRubberBand <http://qgis.org/api/classQgsRubberBand.html>`_
+example, it creates a lots of `QgsRubberBand <https://qgis.org/api/classQgsRubberBand.html>`_
 objects and may be slow on large data-sets.
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -267,12 +272,11 @@ Same thing but using :func:`dijkstra` method
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -329,12 +333,11 @@ uses method :func:`shortestTree`
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -359,7 +362,7 @@ uses method :func:`shortestTree`
   idStop = tree.findVertex(tStop)
 
   if idStop == -1:
-    print "Path not found"
+    print("Path not found")
   else:
     p = []
     while (idStart != idStop):
@@ -381,12 +384,11 @@ And here is the same sample but using :func:`dijkstra` method
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -410,7 +412,7 @@ And here is the same sample but using :func:`dijkstra` method
   (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, idStart, 0)
 
   if tree[idStop] == -1:
-    print "Path not found"
+    print("Path not found")
   else:
     p = []
     curPos = idStop
@@ -455,12 +457,11 @@ Here is an example
 
 ::
 
-  from PyQt4.QtCore import *
-  from PyQt4.QtGui import *
-
   from qgis.core import *
   from qgis.gui import *
   from qgis.networkanalysis import *
+  from qgis.PyQt.QtCore import *
+  from qgis.PyQt.QtGui import *
 
   vl = qgis.utils.iface.mapCanvas().currentLayer()
   director = QgsLineVectorLayerDirector(vl, -1, '', '', '', 3)
@@ -505,3 +506,13 @@ Here is an example
     rb.addPoint(QgsPoint(centerPoint.x() + delta, centerPoint.y() - delta))
     rb.addPoint(QgsPoint(centerPoint.x() + delta, centerPoint.y() + delta))
     rb.addPoint(QgsPoint(centerPoint.x() - delta, centerPoint.y() + delta))
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

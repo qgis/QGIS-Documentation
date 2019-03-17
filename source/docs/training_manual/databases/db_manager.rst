@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 |LS| Using DB Manager to work with Spatial Databases in QGIS 
 ===============================================================================
 
@@ -25,14 +29,14 @@ tables we have worked with in previous sections.
 The first thing you may notice is that you can now see some metadata about the
 Schemas contained in your database. 
 
-.. image:: /static/training_manual/databases/db_manager_dialog.png
+.. image:: img/db_manager_dialog.png
    :align: center
 
 Schemas are a way of grouping data tables and other objects in a PostgreSQL 
 database and a container for permissions and other constraints. Managing 
 PostgreSQL schemas is beyond the scope of this manual, but you can find 
 more information about them in the `PostgreSQL documentation on Schemas
-<http://www.postgresql.org/docs/9.1/static/ddl-schemas.html>`_.
+<https://www.postgresql.org/docs/9.1/ddl-schemas.html>`_.
 You can use the DB Manager to create new Schemas, but will need to use a tool
 like pgAdmin III or the command line interface to manage them effectively.
 
@@ -43,7 +47,7 @@ but now lets look at how to do this in DB Manager.
 First, its useful to just look at a table's metadata by clicking on its name in
 tree and looking in the :guilabel:`Info` tab.
 
-.. image:: /static/training_manual/databases/table_info.png
+.. image:: img/table_info.png
    :align: center
 
 In this panel you can see the :guilabel:`General Info` about the table as well
@@ -54,7 +58,7 @@ If you scroll down in the :guilabel:`Info` tab, you can see more information
 about the :guilabel:`Fields`, :guilabel:`Constraints` and :guilabel:`Indexes`
 for the table you are viewing.
 
-.. image:: /static/training_manual/databases/table_info_fields.png
+.. image:: img/table_info_fields.png
    :align: center
 
 Its also very useful to use DB Manager to simply look at the records in the
@@ -62,7 +66,7 @@ database in much the same way you might do this by viewing the attribute table
 of a layer in the Layer Tree. You can browse the data by selecting the 
 :guilabel:`Table` tab.
 
-.. image:: /static/training_manual/databases/table_panel.png
+.. image:: img/table_panel.png
    :align: center
 
 There is also a :guilabel:`Preview` tab which will show you the layer data in
@@ -79,7 +83,7 @@ perhaps? DB Manager allows you to do this directly.
 * Select :menuselection:`Table --> Edit Table` from the menu to open the 
   :guilabel:`Table Properties` dialog.
 
-.. image:: /static/training_manual/databases/edit_table.png
+.. image:: img/edit_table.png
    :align: center
 
 You can use this dialog to Add Columns, Add geometry columns, edit existing
@@ -88,13 +92,13 @@ columns or to remove a column completely.
 Using the :guilabel:`Constraints` tab, you can manage which fields are used as
 the primary key or to drop existing constraints.
 
-.. image:: /static/training_manual/databases/constraints_panel.png
+.. image:: img/constraints_panel.png
    :align: center
 
 The :guilabel:`Indexes` tab can be used to add and delete both spatial and normal
 indexes.
 
-.. image:: /static/training_manual/databases/indexes_panel.png
+.. image:: img/indexes_panel.png
    :align: center
  
 |basic| |FA| Creating a New Table
@@ -117,7 +121,7 @@ our database, let's use DB Manager to create a new table.
 * Click the checkbox to :guilabel:`Create spatial index` and click
   :guilabel:`Create` to create the table.
 
-.. image:: /static/training_manual/databases/create_table.png
+.. image:: img/create_table.png
    :align: center
  
 * Dismiss the dialog letting you know that the table was created and click
@@ -152,7 +156,7 @@ table is, this may take some time to complete.
 
 You can find more information about the VACUUM ANALYZE process in the
 `PostgreSQL Documentation on VACUUM ANALYZE
-<http://www.postgresql.org/docs/9.1/static/sql-vacuum.html>`_ 
+<https://www.postgresql.org/docs/9.1/sql-vacuum.html>`_.
 
 |basic| |FA| Executing SQL Queries with DB Manager
 -------------------------------------------------------------------------------
@@ -165,7 +169,7 @@ Manager.
 * Select the :kbd:`lines` table in the tree.
 * Select the :guilabel:`SQL window` button in the DB Manager toolbar.
 
-.. image:: /static/training_manual/databases/sql_window_btn.png
+.. image:: img/sql_window_btn.png
    :align: center
 
 * Compose the following :guilabel:`SQL query` in the space provided::
@@ -175,7 +179,7 @@ Manager.
 * Click the :guilabel:`Execute (F5)` button to run the query.
 * You should now see the records that match in the :guilabel:`Result` panel.
 
-.. image:: /static/training_manual/databases/sql_results.png
+.. image:: img/sql_results.png
    :align: center
 
 * Click the checkbox for :guilabel:`Load as new layer` to add the results to your map.
@@ -184,7 +188,7 @@ Manager.
 * Enter :kbd:`roads_primary` as the :guilabel:`Layer name (prefix)`.
 * Click :guilabel:`Load now!` to load the results as a new layer into your map.
  
-.. image:: /static/training_manual/databases/sql_add_to_map.png
+.. image:: img/sql_add_to_map.png
    :align: center
 
 The layers that matched your query are now displayed on your map. You can of
@@ -200,7 +204,7 @@ command line tools, so now let's learn how to use DB Manager to do imports.
 * Click the :guilabel:`Import layer/file` button on the toolbar in the DB
   Manager dialog.
 
-.. image:: /static/training_manual/databases/import_layer_btn.png
+.. image:: img/import_layer_btn.png
    :align: center
 
 * Select the :kbd:`urban_33S.shp` file from :kbd:`exercise_data/projected_data`
@@ -213,7 +217,7 @@ command line tools, so now let's learn how to use DB Manager to do imports.
 * Enable the checkbox to :guilabel:`Create Spatial Index`
 * Click :guilabel:`OK` to perform the import.
 
-.. image:: /static/training_manual/databases/import_urban.png
+.. image:: img/import_urban.png
    :align: center
 
 * Dismiss the dialog letting you know that the import was successful
@@ -223,7 +227,7 @@ You can now inspect the table in your database by clicking on it in the Tree.
 Verify that the data has been reprojected by checking that the
 :guilabel:`Spatial ref:` is listed as :kbd:`WGS 84 (4326)`
 
-.. image:: /static/training_manual/databases/urban_info.png
+.. image:: img/urban_info.png
    :align: center
 
 Right clicking on the table in the Tree and a selecting
@@ -244,7 +248,7 @@ databases, so lets take a look at how that is done.
 * Set the :guilabel:`Target SRID` as :kbd:`4326`.
 * Click :guilabel:`OK` to initialize the export.
 
-.. image:: /static/training_manual/databases/export_to_vector.png
+.. image:: img/export_to_vector.png
    :align: center
 
 * Dismiss the dialog letting you know the export was successful and close the
@@ -252,7 +256,7 @@ databases, so lets take a look at how that is done.
 
 You can now inspect the shapefile you created with the Browser panel.
 
-.. image:: /static/training_manual/databases/inspect_vector_output.png
+.. image:: img/inspect_vector_output.png
    :align: center
 
 |IC|
@@ -268,3 +272,18 @@ and export data.
 Next, we will look at how to use many of these same techniques with
 *spatialite* databases.
 
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |FA| replace:: Follow Along:
+.. |IC| replace:: In Conclusion
+.. |LS| replace:: Lesson:
+.. |WN| replace:: What's Next?
+.. |basic| image:: /static/global/basic.png
+.. |dbManager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -11,7 +11,7 @@
 QGIS as OGC Data Server
 ***********************
 
-QGIS Server is an open source WMS 1.3, WFS 1.0.0 and WCS 1.1.1
+QGIS Server is an open source WMS 1.3, WFS 1.0.0, WFS 1.1.0 and WCS 1.1.1
 implementation that, in addition, implements advanced cartographic features for
 thematic mapping. QGIS Server is a FastCGI/CGI (Common Gateway Interface)
 application written in C++ that works together with a web server (e.g., Apache,
@@ -45,3 +45,12 @@ Manual <training_qgis_server>` or :ref:`server_plugins`.
   services
   plugins
   config
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
