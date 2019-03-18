@@ -808,39 +808,118 @@ Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
 field has also an autocompleter function: while typing you will see all the
 values of the ``id`` field of the region layer.
 
-
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
 
 Introducing many-to-many (N-M) relations
 ----------------------------------------
 
-N-M relations are many-to-many relation between two tables. For instance, the
+N-M relations are many-to-many relations between two tables. For instance, the
 ``airports`` and ``airlines`` layers: an airport receives several airline
 companies and an airline company flies to several airports.
 
-In such case, we need a pivot table to list all airlines for all airports. In
-QGIS, you should setup two :ref:`one-to-many relations <one_to_many_relation>`
+This SQL code creates the three tables we need for an N-M relationship in
+a PostgreSQL/PostGIS schema named *locations*. You can run the code using the 
+:menuselection:`Database --> DB Manager…` for PostGIS or external tools such as `pgAdmin
+<https://www.pgadmin.org>`_. The airports table stores the ``airports`` layer and the airlines 
+table stores the ``airlines`` layer. In both tables few fields are used for 
+clarity. The *tricky* part is the ``airports_airlines`` table. We need it to list all
+airlines for all airports (or vice versa). This kind of table is known 
+as a *pivot table*. The *constraints* in this table force that an airport can be 
+associated with an airline only if both already exist in their layers.
+
+.. code-block:: sql
+
+   CREATE SCHEMA locations;
+   
+   CREATE TABLE locations.airports
+   (
+      id serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      airport_name text NOT NULL,
+      CONSTRAINT airports_pkey PRIMARY KEY (id)
+   );
+
+   CREATE INDEX airports_geom_idx ON locations.airports USING gist (geom);
+
+   CREATE TABLE locations.airlines
+   (
+      id serial NOT NULL,
+      geom geometry(Point, 4326) NOT NULL,
+      airline_name text NOT NULL,
+      CONSTRAINT airlines_pkey PRIMARY KEY (id)
+   );
+
+   CREATE INDEX airlines_geom_idx ON locations.airlines USING gist (geom);
+
+   CREATE TABLE locations.airports_airlines
+   (
+      id serial NOT NULL,
+      airport_fk integer NOT NULL,
+      airline_fk integer NOT NULL,
+      CONSTRAINT airports_airlines_pkey PRIMARY KEY (id),
+      CONSTRAINT airports_airlines_airport_fk_fkey FOREIGN KEY (airport_fk)
+         REFERENCES locations.airports (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED,
+      CONSTRAINT airports_airlines_airline_fk_fkey FOREIGN KEY (airline_fk)
+         REFERENCES locations.airlines (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED
+    );
+
+Instead of PostgreSQL you can also use GeoPackage. In this case, the three tables 
+can be created manually using the :menuselection:`Database --> DB Manager…`. In 
+GeoPackage there are no schemas so the *locations* prefix is not needed.
+
+Foreign key constraints in ``airports_airlines`` table can´t be created using :menuselection:`Table --> Create Table…` 
+or :menuselection:`Table --> Edit Table…` so they should be created using :menuselection:`Database --> SQL Window…`.
+GeoPackage doesn't support *ADD CONSTRAINT* statements so the ``airports_airlines`` 
+table should be created in two steps:
+
+#. Set up the table only with the ``id`` field using :menuselection:`Table --> Create Table…`
+#. Using :menuselection:`Database --> SQL Window…`, type and execute this SQL code:
+
+   .. code-block:: sql
+
+      ALTER TABLE airports_airlines
+         ADD COLUMN airport_fk INTEGER
+         REFERENCES airports (id) 
+         ON DELETE CASCADE 
+         ON UPDATE CASCADE 
+         DEFERRABLE INITIALLY DEFERRED;
+   
+      ALTER TABLE airports_airlines 
+         ADD COLUMN airline_fk INTEGER
+         REFERENCES airlines (id)
+         ON DELETE CASCADE
+         ON UPDATE CASCADE
+         DEFERRABLE INITIALLY DEFERRED;
+
+Then in QGIS, you should set up two :ref:`one-to-many relations <one_to_many_relation>`
 as explained above:
 
 * a relation between ``airlines`` table and the pivot table;
 * and a second one between ``airports`` table and the pivot table.
 
-When we add a new child (i.e. a company to an airport), QGIS will add a new row
-in the pivot table and in the ``airlines`` table. If we link a company to an
-airport, QGIS will only add a row in the pivot table.
+An easier way to do it (only for PostgreSQL) is using the :guilabel:`Discover Relations` 
+in :menuselection:`Project --> Properties --> Relations`. QGIS will automatically read
+all relations in your database and you only have to select the two you need. Remember 
+to load the three tables in the QGIS project first.
 
-In case you want to remove a link, an airline or an airport, QGIS won't remove
-the row in the pivot table. The database administrator should add a *ON DELETE
-CASCADE* instruction in the foreign key constraint:
+.. _figure_setup_relations:
 
-.. code-block:: sql
+.. figure:: img/relations6.png
+   :align: center
 
-   ALTER TABLE location.airlines
-   ADD CONSTRAINT location_airlines_airports_id_fkey
-      FOREIGN KEY (id)
-         REFERENCES location.airports(id)
-            ON DELETE CASCADE;
+   Relations and autodiscover
+
+In case you want to remove an ``airport`` or an ``airline``, QGIS won't remove
+the associated record(s) in ``airports_airlines`` table. This task will be made by
+the database if we specify the right *constraints* in the pivot table creation as 
+in the current example.
 
 .. note:: **Combining N-M relation with automatic transaction group**
 
@@ -848,12 +927,46 @@ CASCADE* instruction in the foreign key constraint:
   --> Data Sources -->` when working on such context. QGIS should be able to
   add or update row(s) in all tables (airlines, airports and the pivot tables).
 
-Finally, adding such relations in a form is done in the same way that for a
-one-to-many relation. The :guilabel:`Relations` panel in the :guilabel:`Fields`
-properties of the vector layer will let the user add the relation in the form.
-It will appear as a **Many to many relation**.
+Finally we have to select the right cardinalilty in the 
+:menuselection:`Layer Properties --> Attributes Form` for the ``airports`` and 
+``airlines`` layers. For the first one we should choose the **airlines (id)** option 
+and for the second one the **airports (id)** option.
 
+.. _figure_cardinality:
 
+.. figure:: img/relations7.png
+   :align: center
+
+   Set relationship cardinality
+
+Now you can associate an airport with an airline (or an airline with an airport)
+using :guilabel:`Add child feature` or :guilabel:`Link existing child feature` 
+in the subforms. A record will automatically be inserted in the ``airports_airlines`` 
+table.
+
+.. _figure_relationship_working:
+
+.. figure:: img/relations8.png
+   :align: center
+
+   N-M relationship between airports and airlines
+
+.. note:: Using **Many to one relation** cardinality
+
+  Sometimes hiding the pivot table in an N-M relationship is not 
+  desirable. Mainly because there are attributes in the relationship that can only 
+  have values when a relationship is established. If your tables are layers (have
+  a geometry field) it could be interesting to activate the :guilabel:`On map identification` 
+  option (:menuselection:`Layer Properties --> Attributes Form --> Available widgets --> Fields`) 
+  for the foreign key fields in the pivot table.
+
+.. note:: **Pivot table primary key**
+
+  Avoid using multiple fields in the primary key in a pivot table. QGIS assumes a single 
+  primary key so a constraint like ``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)``
+  will not work.
+    
+  
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

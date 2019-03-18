@@ -15,7 +15,15 @@
 .. contents::
    :local:
 
-This sections lists various operations you can do with raster layers.
+The code snippets on this page needs the following imports if you're outside the pyqgis console:
+
+.. code-block:: python
+
+    from qgis.core import (
+      QgsRasterLayer,
+      QgsColorRampShader,
+      QgsSingleBandPseudoColorRenderer
+    )
 
 .. index:: Raster layers; Details
 
@@ -34,18 +42,25 @@ The following code assumes ``rlayer`` is a :class:`QgsRasterLayer <qgis.core.Qgs
 
 .. code-block:: python
 
-  >>> rlayer.width(), rlayer.height()
-  (812, 301)
-  >>> rlayer.extent()
-  <qgis._core.QgsRectangle object at 0x000000000F8A2048>
-  >>> rlayer.extent().toString()
-  u'12.095833,48.552777 : 18.863888,51.056944'
-  >>> rlayer.rasterType()
-  2  # 0 = GrayOrUndefined (single band), 1 = Palette (single band), 2 = Multiband
-  >>> rlayer.bandCount()
-  3
-  >>> rlayer.metadata()
-  '<qgis._core.QgsLayerMetadata object at 0x13711d558>'
+    rlayer = QgsProject.instance().mapLayersByName('srtm')[0]
+    # get the resolution of the raster in layer unit
+    rlayer.width(), rlayer.height()
+    (919, 619)
+    # get the extent of the layer as QgsRectangle
+    rlayer.extent()
+    <QgsRectangle: 20.06856808199999875 -34.27001076999999896, 20.83945284300000012 -33.75077500700000144>
+    # get the extent of the layer as Strings
+    rlayer.extent().toString()
+    '20.0685680819999988,-34.2700107699999990 : 20.8394528430000001,-33.7507750070000014'
+    # get the raster type: 0 = GrayOrUndefined (single band), 1 = Palette (single band), 2 = Multiband
+    rlayer.rasterType()
+    0
+    # get the total band count of the raster
+    rlayer.bandCount()
+    1
+    # get all the available metadata as a QgsLayerMetadata object
+    rlayer.metadata()
+    '<qgis._core.QgsLayerMetadata object at 0x13711d558>'
 
 .. index:: Raster layers; Renderer
 
@@ -57,12 +72,12 @@ type. It can be altered either in raster layer properties or programmatically.
 
 To query the current renderer:
 
-::
+.. code-block:: python
 
-  >>> rlayer.renderer()
-  <qgis._core.QgsSingleBandPseudoColorRenderer object at 0x7f471c1da8a0>
-  >>> rlayer.renderer().type()
-  u'singlebandpseudocolor'
+    rlayer.renderer()
+    <qgis._core.QgsSingleBandGrayRenderer object at 0x7f471c1da8a0>
+    rlayer.renderer().type()
+    'singlebandgray'
 
 To set a renderer use :func:`setRenderer` method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`. There
 are several available renderer classes (derived from :class:`QgsRasterRenderer`):
@@ -80,12 +95,6 @@ additionally drawn using their palette. Multiband layers are typically drawn by
 mapping the bands to RGB colors. Other possibility is to use just one band for
 gray or pseudocolor drawing.
 
-The following sections explain how to query and modify the layer drawing style.
-After doing the changes, you might want to force update of map canvas, see
-:ref:`refresh-layer`.
-
-**TODO:**
-   contrast enhancements, transparency (no data), user defined min/max, band statistics
 
 .. index:: Raster layers; Single band
 
@@ -99,33 +108,40 @@ its shader function:
 
 .. code-block:: python
 
-  fcn = QgsColorRampShader()
-  fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
-  lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)),
-        QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
-  fcn.setColorRampItemList(lst)
-  shader = QgsRasterShader()
-  shader.setRasterShaderFunction(fcn)
+    fcn = QgsColorRampShader()
+    fcn.setColorRampType(QgsColorRampShader.Interpolated)
+    lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)),
+          QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
+    fcn.setColorRampItemList(lst)
+    shader = QgsRasterShader()
+    shader.setRasterShaderFunction(fcn)
 
 The shader maps the colors as specified by its color map. The color map is
 provided as a list of items with pixel value and its associated color.
 There are three modes of interpolation of values:
 
-* linear (``INTERPOLATED``): resulting color is linearly interpolated from the
+* linear (``Interpolated``): resulting color is linearly interpolated from the
   color map entries above and below the actual pixel value
-* discrete (``DISCRETE``): color is used from the color map entry with equal
+* discrete (``Discrete``): color is used from the color map entry with equal
   or higher value
-* exact (``EXACT``): color is not interpolated, only the pixels with value
+* exact (``Exact``): color is not interpolated, only the pixels with value
   equal to color map entries are drawn
 
-In the second step we will associate this shader with the raster layer::
+In the second step we will associate this shader with the raster layer:
 
 .. code-block:: python
 
-  renderer = QgsSingleBandPseudoColorRenderer(layer.dataProvider(), 1, shader)
-  layer.setRenderer(renderer)
+    renderer = QgsSingleBandPseudoColorRenderer(rlayer.dataProvider(), 1, shader)
+    rlayer.setRenderer(renderer)
 
 The number 1 in the code above is then band number (raster bands are indexed from one).
+
+Finally we have to use the :meth:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>`
+to see the results:
+
+.. code-block:: python
+
+    rlayer.triggerRepaint()
 
 
 .. index:: Raster layers; Multi band
@@ -136,42 +152,26 @@ Multi Band Rasters
 By default, QGIS maps the first three bands to red, green and blue values to
 create a color image (this is the ``MultiBandColor`` drawing style. In some
 cases you might want to override these setting. The following code interchanges
-red band (1) and green band (2)::
+red band (1) and green band (2):
 
 .. code-block:: python
 
-    rlayer.renderer().setGreenBand(1)
-    rlayer.renderer().setRedBand(2)
+    rlayer_multi = QgsProject.instance().mapLayersByName('multiband')[0]
+    rlayer_multi.renderer().setGreenBand(1)
+    rlayer_multi.renderer().setRedBand(2)
 
 In case only one band is necessary for visualization of the raster, single band
-drawing can be chosen --- either gray levels or pseudocolor.
+drawing can be chosen, either gray levels or pseudocolor.
+
+As we did before, we have to use meth:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>`
+to update the map and see the results:
+
+.. code-block:: python
+
+    rlayer_multi.triggerRepaint()
 
 .. index::
   pair: Raster layers; Refreshing
-
-.. _refresh-layer:
-
-Refreshing Layers
-=================
-
-If you do change layer symbology and would like tp ensure that the changes are
-immediately visible to the user, call the :meth:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>` method.
-
-With WMS raster layers, these command do not work. In this case, you have to explicitly reload the layer data.
-
-.. code-block:: python
-
-  layer.dataProvider().reloadData()
-  layer.triggerRepaint()
-
-In case you have changed layer symbology (see sections about raster and vector
-layers on how to do that), you might want to force QGIS to update the layer
-symbology in the layer list (legend) widget. This can be done as follows:
-(``iface`` is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`.)
-
-.. code-block:: python
-
-   iface.legendInterface().refreshLayerSymbology(layer)
 
 .. index::
   pair: Raster layers; Querying
@@ -186,20 +186,21 @@ tuple with the value and ``True`` or ``False`` depending on the results:
 
 .. code-block:: python
 
-  val, res = rlayer.dataProvider().sample(QgsPointXY(15.30, 40.98), 1)
+    val, res = rlayer.dataProvider().sample(QgsPointXY(20.50, -34), 1)
 
 The second method is using the :meth:`identify() <qgis.core.QgsRasterDataProvider.identify>` method that returns a
 :class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object.
 
 .. code-block:: python
 
-  ident = rlayer.dataProvider().identify(QgsPointXY(15.30, 40.98), \
-                                      QgsRaster.IdentifyFormatValue)
-  if ident.isValid():
-    print(ident.results())
+    ident = rlayer.dataProvider().identify(QgsPointXY(20.5, -34), QgsRaster.IdentifyFormatValue)
 
-The :meth:`results() <qgis.core.QgsRasterIdentifyResult.results>` method in this case returns a dictionary, with band indices as
-keys, and band values as values. For instance, something like ``{1: 17, 2: 220}``
+    if ident.isValid():
+      print(ident.results())
+
+The :meth:`results() <qgis.core.QgsRasterIdentifyResult.results>` method in this
+case returns a dictionary, with band indices as keys, and band values as values.
+For instance, something like ``{1: 323.0}``
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -89,21 +89,100 @@ layers for canvas
 
 .. code-block:: python
 
-  layer = QgsVectorLayer(path, name, provider)
-  if not layer.isValid():
-    raise IOError, "Failed to open the layer"
+ path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
 
-  # add layer to the registry
-  QgsProject.instance().addMapLayer(layer)
+ vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
+ if not vlayer.isValid():
+     print("Layer failed to load!")
 
-  # set extent to the extent of our layer
-  canvas.setExtent(layer.extent())
+ # add layer to the registry
+ QgsProject.instance().addMapLayer(vlayer)
 
-  # set the map canvas layer set
-  canvas.setLayers([layer])
+ # set extent to the extent of our layer
+ canvas.setExtent(vlayer.extent())
+
+ # set the map canvas layer set
+ canvas.setLayers([vlayer])
 
 After executing these commands, the canvas should show the layer you have
 loaded.
+
+.. index:: Map canvas; Rubber bands, Map canvas; Vertex markers
+
+Rubber Bands and Vertex Markers
+===============================
+
+To show some additional data on top of the map in canvas, use map canvas items.
+It is possible to create custom canvas item classes (covered below), however
+there are two useful canvas item classes for convenience:
+:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` for drawing polylines or polygons, and
+:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` for drawing points. They both work with map
+coordinates, so the shape is moved/scaled automatically when the canvas is
+being panned or zoomed.
+
+To show a polyline
+
+.. code-block:: python
+
+  r = QgsRubberBand(canvas, False)  # False = not a polygon
+  points = [QgsPoint(-100, 45), QgsPoint(10, 60), QgsPoint(120, 45)]
+  r.setToGeometry(QgsGeometry.fromPolyline(points), None)
+
+To show a polygon
+
+.. code-block:: python
+
+  r = QgsRubberBand(canvas, True)  # True = a polygon
+  points = [[QgsPointXY(-100, 35), QgsPointXY(10, 50), QgsPointXY(120, 35)]]
+  r.setToGeometry(QgsGeometry.fromPolygonXY(points), None)
+
+Note that points for polygon is not a plain list: in fact, it is a list of
+rings containing linear rings of the polygon: first ring is the outer border,
+further (optional) rings correspond to holes in the polygon.
+
+Rubber bands allow some customization, namely to change their color and line
+width
+
+.. code-block:: python
+
+  r.setColor(QColor(0, 0, 255))
+  r.setWidth(3)
+
+The canvas items are bound to the canvas scene. To temporarily hide them (and
+show them again), use the :func:`hide` and :func:`show` combo. To completely remove
+the item, you have to remove it from the scene of the canvas
+
+.. code-block:: python
+
+  canvas.scene().removeItem(r)
+
+(in C++ it's possible to just delete the item, however in Python ``del r``
+would just delete the reference and the object will still exist as it is owned
+by the canvas)
+
+Rubber band can be also used for drawing points, but the
+:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited for this
+(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` would only draw a rectangle around the desired point).
+
+You can use the vertex marker like this:
+
+.. code-block:: python
+
+  m = QgsVertexMarker(canvas)
+  m.setCenter(QgsPointXY(10,40))
+
+This will draw a red cross on position **[10,45]**. It is possible to customize the
+icon type, size, color and pen width
+
+.. code-block:: python
+
+  m.setColor(QColor(0, 255, 0))
+  m.setIconSize(5)
+  m.setIconType(QgsVertexMarker.ICON_BOX) # or ICON_CROSS, ICON_X
+  m.setPenWidth(3)
+
+For temporary hiding of vertex markers and removing them from canvas, use the same methods
+as for rubber bands.
 
 .. index:: Map canvas; Map tools
 
@@ -122,9 +201,8 @@ are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` meth
 .. code-block:: python
 
   from qgis.gui import *
-  from qgis.PyQt.QtGui import QAction
+  from PyQt5.QtWidgets import QAction, QMainWindow
   from qgis.PyQt.QtCore import Qt
-  from qgis.PyQt.QtWidgets import QMainWindow
 
   class MyWnd(QMainWindow):
       def __init__(self, layer):
@@ -181,86 +259,8 @@ selected layer on the newly created canvas
 
 .. code-block:: python
 
-  import mywnd
-  w = mywnd.MyWnd(iface.activeLayer())
-  w.show()
-
-.. index:: Map canvas; Rubber bands, Map canvas; Vertex markers
-
-Rubber Bands and Vertex Markers
-===============================
-
-To show some additional data on top of the map in canvas, use map canvas items.
-It is possible to create custom canvas item classes (covered below), however
-there are two useful canvas item classes for convenience:
-:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` for drawing polylines or polygons, and
-:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` for drawing points. They both work with map
-coordinates, so the shape is moved/scaled automatically when the canvas is
-being panned or zoomed.
-
-To show a polyline
-
-.. code-block:: python
-
-  r = QgsRubberBand(canvas, False)  # False = not a polygon
-  points = [QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]
-  r.setToGeometry(QgsGeometry.fromPolyline(points), None)
-
-To show a polygon
-
-.. code-block:: python
-
-  r = QgsRubberBand(canvas, True)  # True = a polygon
-  points = [[QgsPoint(-1, -1), QgsPoint(0, 1), QgsPoint(1, -1)]]
-  r.setToGeometry(QgsGeometry.fromPolygon(points), None)
-
-Note that points for polygon is not a plain list: in fact, it is a list of
-rings containing linear rings of the polygon: first ring is the outer border,
-further (optional) rings correspond to holes in the polygon.
-
-Rubber bands allow some customization, namely to change their color and line
-width
-
-.. code-block:: python
-
-  r.setColor(QColor(0, 0, 255))
-  r.setWidth(3)
-
-The canvas items are bound to the canvas scene. To temporarily hide them (and
-show them again), use the :func:`hide` and :func:`show` combo. To completely remove
-the item, you have to remove it from the scene of the canvas
-
-.. code-block:: python
-
-  canvas.scene().removeItem(r)
-
-(in C++ it's possible to just delete the item, however in Python ``del r``
-would just delete the reference and the object will still exist as it is owned
-by the canvas)
-
-Rubber band can be also used for drawing points, but the
-:class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited for this
-(:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` would only draw a rectangle around the desired point).
-
-You can use the vertex marker like this:
-
-.. code-block:: python
-
-  m = QgsVertexMarker(canvas)
-  m.setCenter(QgsPointXY(0, 0))
-
-This will draw a red cross on position [0,0]. It is possible to customize the
-icon type, size, color and pen width
-
-.. code-block:: python
-
-  m.setColor(QColor(0, 255, 0))
-  m.setIconSize(5)
-  m.setIconType(QgsVertexMarker.ICON_BOX) # or ICON_CROSS, ICON_X
-  m.setPenWidth(3)
-
-For temporary hiding of vertex markers and removing them from canvas, use the same methods
-as for rubber bands.
+ w = MyWnd(iface.activeLayer())
+ w.show()
 
 .. index:: Map canvas; Custom map tools
 

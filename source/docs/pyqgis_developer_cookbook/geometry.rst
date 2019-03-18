@@ -12,6 +12,21 @@ Geometry Handling
 .. contents::
    :local:
 
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+  .. code-block:: python
+
+    from qgis.core import (
+      QgsGeometry,
+      QgsPoint,
+      QgsPointXY,
+      QgsWkbTypes,
+      QgsProject,
+      QgsFeatureRequest,
+      QgsDistanceArea
+    )
+
 Points, linestrings and polygons that represent a spatial feature are commonly
 referred to as geometries. In QGIS they are represented with the
 :class:`QgsGeometry <qgis.core.QgsGeometry>` class.
@@ -44,7 +59,7 @@ PyQGIS provides several options for creating a geometry:
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
     gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1),
-       QgsPointXY(2, 2), QgsPointXY(2, 1)]])
+	QgsPointXY(2, 2), QgsPointXY(2, 1)]])
 
   Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or :class:`QgsPointXY <qgis.core.QgsPointXY>`
   class. The difference between these classes is that :class:`QgsPoint <qgis.core.QgsPoint>`
@@ -75,8 +90,9 @@ PyQGIS provides several options for creating a geometry:
     g = QgsGeometry()
     wkb = bytes.fromhex("010100000000000000000045400000000000001440")
     g.fromWkb(wkb)
-    g.asWkt()
-    'Point (42 5)'
+    
+    # print WKT representation of the geometry
+    print(g.asWkt())
 
 
 .. index:: Geometry; Access to
@@ -89,14 +105,14 @@ use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes
 
 .. code-block:: python
 
-  >>> gPnt.wkbType() == QgsWkbTypes.Point
-  True
-  >>> gLine.wkbType() == QgsWkbTypes.LineString
-  True
-  >>> gPolygon.wkbType() == QgsWkbTypes.Polygon
-  True
-  >>> gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
-  False
+  gPnt.wkbType() == QgsWkbTypes.Point
+  # output: True
+  gLine.wkbType() == QgsWkbTypes.LineString
+  # output: True
+  gPolygon.wkbType() == QgsWkbTypes.Polygon
+  # output: True
+  gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
+  # output: False
 
 As an alternative, one can use :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` method which returns a value from
 :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration.
@@ -105,10 +121,10 @@ You can use the func:`wkbType() <qgis.core.QgsWkbTypes.displayString>` function 
 
 .. code-block:: python
 
-  >>> gPnt.wkbType()
-  1
-  >>> QgsWkbTypes.displayString(int(gPnt.wkbType()))
-  'Point'
+  gPnt.wkbType()
+  # output: 1
+  QgsWkbTypes.displayString(int(gPnt.wkbType()))
+  # output: 'Point'
 
 There is also a helper function
 :meth:`isMultipart() <qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is multipart or not.
@@ -118,12 +134,12 @@ vector type. Here's an example on how to use these accessors:
 
 .. code-block:: python
 
-  >>> gPnt.asPoint()
-  <QgsPointXY: POINT(1 1)>
-  >>> gLine.asPolyline()
-  [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
-  >>> gPolygon.asPolygon()
-  [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
+  gPnt.asPoint()
+  # output: <QgsPointXY: POINT(1 1)>
+  gLine.asPolyline()
+  # output: [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
+  gPolygon.asPolygon()
+  # output: [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint <qgis.core.QgsPoint>`
    objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>` () and :meth:`y() <qgis.core.QgsPoint.y>` methods.
@@ -144,51 +160,79 @@ predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, :meth:`intersec
 properties of geometries, such as area (in the case of polygons) or lengths
 (for polygons and lines)
 
-Here you have a small example that combines iterating over the features in a
+Let's see an example that combines iterating over the features in a
 given layer and performing some geometric computations based on their
-geometries.
+geometries. The below code will compute and print the area and perimeter of
+each country in the ``countries`` layer within our tutorial QGIS project.
+
+The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 
 .. code-block:: python
 
-  # we assume that 'layer' is a polygon layer
-  features = layer.getFeatures()
+  # let's access the 'countries' layer
+  layer = QgsProject.instance().mapLayersByName('countries')[0]
+
+  # let's filter for countries that begin with Z, then get their features
+  query = '"name" LIKE \'Z%\''
+  features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
+
+  # now loop through the features, perform geometry computation and print the results
   for f in features:
     geom = f.geometry()
-    print("Area:", geom.area())
-    print("Perimeter:", geom.length())
+    name = f.attribute('NAME')
+    print(name)
+    print('Area: ', geom.area())
+    print('Perimeter: ', geom.length())
 
-Areas and perimeters don't take CRS into account when computed using these
+Now you have calculated and printed the areas and perimeters of the geometries.
+You may however quickly notice that the values are strange. 
+That is because areas and perimeters don't take CRS into account when computed
+using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length()
+<qgis.core.QgsGeometry.length>`
 methods from the :class:`QgsGeometry <qgis.core.QgsGeometry>` class. For a more powerful area and
-distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class can be used, which can perform ellipsoid based calculations.
+distance calculation, the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>`
+class can be used, which can perform ellipsoid based calculations:
+
+The following code assumes ``layer`` is a :class:`QgsVectorLayer
+<qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 
 .. code-block:: python
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
 
-  # we assume that 'layer' is a polygon layer
-  features = layer.getFeatures()
+  layer = QgsProject.instance().mapLayersByName('countries')[0]
+
+  # let's filter for countries that begin with Z, then get their features
+  query = '"name" LIKE \'Z%\''
+  features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
+
   for f in features:
     geom = f.geometry()
-    print("Area:", d.measureArea(geom))
-    print("Perimeter:", d.measurePerimeter(geom))
+    name = f.attribute('NAME')
+    print(name)
+    print("Perimeter (m):", d.measurePerimeter(geom))
+    print("Area (m2):", d.measureArea(geom))
+    
+    # let's calculate and print the area again, but this time in square kilometers
+    print("Area (km2):", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
-  # convert to "better" units
-  features = layer.getFeatures()
-  for f in features:
-      geom = f.geometry()
-      print("Area:", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
-Alternatively, you may want to know the distance and bearing between two points:
+Alternatively, you may want to know the distance and bearing between two points.
 
 .. code-block:: python
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
-  print("distance in meters: ",
-    d.measureLine(QgsPointXY(10,10),QgsPointXY(11,11)))
-  print("angle in degrees: ",
-    math.degrees(d.bearing(QgsPointXY(10,10),QgsPointXY(11,11))))
+
+  # Let's create two points. 
+  # Santa claus is a workaholic and needs a summer break, 
+  # lets see how far is Tenerife from his home
+  santa = QgsPointXY(25.847899, 66.543456)
+  tenerife = QgsPointXY(-16.5735, 28.0443)
+
+  print("Distance in meters: ", d.measureLine(santa, tenerife))
+
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
