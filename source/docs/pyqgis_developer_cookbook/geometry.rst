@@ -16,7 +16,7 @@ Geometry Handling
 
 The code snippets on this page need the following imports if you're outside the pyqgis console:
 
-  .. code-block:: python
+.. code-block:: python
 
     from qgis.core import (
       QgsGeometry,
