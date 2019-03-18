@@ -14,7 +14,7 @@
 Mesh properties
 ===============
 
-A mesh is an unstructured grid usually with temporal and other component . 
+A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and faces in 2D or 3D space:
 
 * vertices - XY(Z) points (in the layer's coordinate reference system)
@@ -142,9 +142,96 @@ The :guilabel:`Source` tab displays basic information about the selected mesh, i
 Use the button :guilabel:`Assign Extra Dataset to Mesh` to add more groups to the current mesh layer. 
 
 Style
------
+=====
 
-TODO
+By clicking the button Style |symbology|, you activate the :guilabel:`Layer Styling` dialog as shown in the following image:
+
+
+.. figure:: img/styling_panel.png
+   :align: center
+
+   Mesh Layer Style
+
+In the tab |rendering_mesh|,  QGIS offers two possibilities to display the grid:
+
+*	Native mesh rendering that shows quadrants
+*	Triangular mesh rendering that display triangles
+
+The line width and color can be changed in this dialog or deactivate both grid rendering.
+
+The tab |tbutton| presents the following items:
+
+* groups available in the mesh dataset
+* dataset in the selected group(s), for example, if the layer has a temporal dimension
+* metadata if available
+* blending mode available for the selected dataset, for example: normal, lighten,multiply,…(see blending modes :ref:`blend-modes`)
+
+
+The slide bar, combo box and arrows allow to explore another dimension of the data, if available.
+As the slide moves, the metadata is presented accordingly. See the figure below as an example.
+The map canvas will display the selected dataset group as well.
+
+.. figure:: img/groups_available.png
+   :align: center
+
+   Dataset in Selected Group(s)
+
+Under groups click on |contour_inactive| to show contours with default visualization parameters. Then,
+in the tab |contour_active| you can see and change the current visualization options of contours
+for the selected group, as shown in the image below:
+
+.. figure:: img/contours_style.png
+   :align: center
+
+   Styling Contours in a Mesh Layer
+
+Use the slide bar or combo box to set the opacity of the current group.
+
+Use :guilabel:`Load` to adjust the min and max value of the current group.
+
+The :guilabel:`Interpolation` list contains three option to render contours: Linear, Discrete and Exact.
+
+The :guilabel:`Color ramp`  drop down list lists the color ramp in your QGIS.
+You can list all available ramps, add a new one, edit or save the one you changed.
+The name of the color ramp will be saved in the configuration and in the QML files.
+
+The :guilabel:`Label unit suffix` is a label added after the value in the legend.
+
+By selecting ‘Continuous’ in the classification :guilabel:`Mode`, QGIS creates classes automatically considering
+the :guilabel:`Min` and :guilabel:`Max` values. With ‘Equal interval’, you only need to select the number of classes
+using the combo box  :guilabel:`Classes`  and pressing the button |classify|.
+
+The button |signPlus| :sup:`Add values manually` adds a value
+to the individual color table. The button |signMinus| :sup:`Remove selected row`
+deletes a value from the individual color table. Double clicking on the value column
+lets you insert a specific value. Double clicking on the color column opens the dialog
+:guilabel:`Change color`, where you can select a color to apply on that value.
+
+In the tab |tbutton|, click on |vector_inactive| to display vectors if available.
+The map canvas will display the vectors in the selected group with default parameters.
+Click on the tab |vector_active| to change the visualization parameters for vectors, see figure below:
+
+.. figure:: img/vector_styling.png
+   :align: center
+
+   Styling Vectors in a Mesh Layer
+
+The line width can be set using the combo box or typing the value. The color list, opens the dialog :guilabel:`Change color`,
+where you can select a color to apply to vectors.
+
+Enter values on :guilabel:`Min` and :guilabel:`Max` to filter vectors according to their magnitude.
+
+Check on the box |display_user_grid| and specify the :guilabel:`X spacing` and the :guilabel:`Y spacing`,
+QGIS will render the vector considering the given spacing.
+
+On the Head Options :guilabel:`Head Options`, QGIS allows to set the shape of the arrow head by specifying width and length (in percentage).
+
+Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different ways:
+
+* Defined by Min and Max: You should specify the minimum and maximum length for vector,
+  QGIS will adjust their visualization accordingly
+* Scale to magnitude: You should specify the (multiplying) factor to use
+* Fixed: all the vectors are shown with the same length
 
 
 
@@ -160,4 +247,25 @@ TODO
       :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |rendering_mesh| image:: img/rendering.png
+   :width: 1.5em
+.. |tbutton| image:: img/tbutton.png
+   :width: 1.5em
+.. |contour_active| image:: img/contours_active.png
+   :width: 1.5em
+.. |contour_inactive| image:: img/contours_inactive.png
+   :width: 2em
+.. |classify| image:: img/classify.png
+   :width: 4.5em
+.. |vector_active| image:: img/vector_active.png
+   :width: 2em
+.. |vector_inactive| image:: img/vector_inactive.png
+   :width: 1.5em
+.. |display_user_grid| image:: img/display_user_grid.png
+   :width: 9.5em
