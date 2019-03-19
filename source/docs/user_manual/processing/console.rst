@@ -390,16 +390,13 @@ smoothing the layer.
           self.addParameter(QgsProcessingParameterFeatureSource(
               self.INPUT_VECTOR, "Input vector"))
           self.addParameter(QgsProcessingParameterNumber(
-              self.BUFFERDIST, "Buffer distance", 
+              self.INPUT_BUFFERDIST, "Buffer distance", 
               QgsProcessingParameterNumber.Double,
               100.0))
           self.addParameter(QgsProcessingParameterFeatureSink(
               self.OUTPUT_BUFFER, "Output buffer"))
 
       def processAlgorithm(self, parameters, context, feedback):
-          # Dummy function to enable running an alg inside an alg
-          def no_post_process(alg, context, feedback):
-              pass
           #DO SOMETHING
           algresult = processing.run("native:smoothgeometry",
               {'INPUT': parameters[self.INPUT_VECTOR],
@@ -407,18 +404,18 @@ smoothing the layer.
                'OFFSET':0.25,
                'MAX_ANGLE':180,
                'OUTPUT': 'memory:'},
-              context=context, feedback=feedback, onFinish=no_post_process)
+              context=context, feedback=feedback, is_child_algorithm=True)
           smoothed = algresult['OUTPUT']
           algresult = processing.run('native:buffer',
               {'INPUT': smoothed,
-              'DISTANCE': parameters[self.BUFFERDIST],
+              'DISTANCE': parameters[self.INPUT_BUFFERDIST],
               'SEGMENTS': 5,
               'END_CAP_STYLE': 0,
               'JOIN_STYLE': 0,
               'MITER_LIMIT': 10,
               'DISSOLVE': True,
               'OUTPUT': parameters[self.OUTPUT_BUFFER]},
-              context=context, feedback=feedback, onFinish=no_post_process)
+              context=context, feedback=feedback, is_child_algorithm=True)
           buffered = algresult['OUTPUT']
           return {self.OUTPUT_BUFFER: buffered}
 
@@ -487,7 +484,7 @@ The input can be turned into QGIS classes using the ``parameterAs`` functions
 of ``QgsProcessingAlgorithm``.
 For instance to get the number provided for the buffer distance as a double::
 
-  self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
+  self.parameterAsDouble(parameters, self.INPUT_BUFFERDIST, context)).
 
 The ``processAlgorithm`` function should return a dictionary
 containing values for every output defined by the algorithm. This
