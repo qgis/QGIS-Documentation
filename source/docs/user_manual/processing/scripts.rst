@@ -43,22 +43,28 @@ a DEM using the @alg decorator.
     from qgis.processing import alg
     
     @alg(name="tpicalc", label="TPI Calculator", group="myscripts", groupid="myscripts")
+    ##dem=raster # (QGIS 2)
     @alg.input(type=alg.RASTER_LAYER, name="dem", label="Input DEM layer")
-    @alg.output(type=alg.RASTER_LAYER, name="twi", label="TWI")
+    ##twi=output raster # (QGIS 2)
+    @alg.input(type=alg.RASTER_LAYER_DEST, name="twi", label="TWI")
 
-    ##dem=raster
-    ##twi=output raster
-    ret_slope = processing.run("qgis:slope",
+    def algtest(instance, parameters, context, feedback, inputs):
+        ##dem=raster # (QGIS 2)
+        dem = instance.parameterAsRasterLayer(parameters, "dem", context)
+        ##twi=output raster # (QGIS 2)
+        twi = instance.parameterAsOutputLayer(parameters, "twi", context)
+
+        ret_slope = processing.run("qgis:slope",
                                {"INPUT": dem, "OUTPUT": 'myslope'},
                                is_child_algorithm=True)
-    ret_area = processing.run("saga:catchmentarea",
+        ret_area = processing.run("saga:catchmentarea",
                               {"ELEVATION": dem, "METHOD": 0, "FLOW": 'myflow'},
                               is_child_algorithm=True)
-    twilayer = processing.run("saga:topographicwetnessindextwi",
+        twilayer = processing.run("saga:topographicwetnessindextwi",
                               {"SLOPE": ret_slope['OUTPUT'], "AREA": ret_area['FLOW'],
                                "CONV": 1, "METHOD": 0, "TWI": 'twi'},
                               is_child_algorithm=True)
-    return{twi: twilayer['TWI']}
+        return{'TWI': twilayer['TWI']}
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
 one of them calculates the TWI, but it needs a slope layer and a flow accumulation
