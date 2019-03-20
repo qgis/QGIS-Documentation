@@ -47,9 +47,8 @@ code.
 Scripting in the Python Console
 ===============================
 
-QGIS provides an integrated Python console for scripting.
-It can be opened from the menu (:menuselection:`Plugins -->
-Python Console`):
+QGIS provides an integrated :ref:`Python console <console>` for scripting.
+It can be opened from the :menuselection:`Plugins --> Python Console` menu:
 
 .. figure:: img/console.png
    :align: center
@@ -128,11 +127,16 @@ The :file:`startup.py` file
 Every time QGIS starts, the user's Python home directory
 
 * Linux: :file:`.local/share/QGIS/QGIS3/profiles/default/python`
-* Windows: :file:`AppData\Roaming\QGIS\QGIS3\profiles\default/python`
+* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python`
 * macOS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
 
 is searched for a file named :file:`startup.py`. If that file exists, it
 is executed by the embedded Python interpreter.
+
+.. note:: The default path depends on the operating system. To find the
+  path that will work for you, open the Python Console and run
+  ``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)``
+  to see the list of default directories.
 
 .. index::
   pair: Environment; PYQGIS_STARTUP
