@@ -9,9 +9,9 @@ If you are planning to add or update some chapters of the
 :ref:`PyQGIS-Developer-Cookbook`, then you should follow some rules to enable
 automatic testing of the code snippets.
 
-Testing is really important because allows checking automatically the quality of
-the code. During testing, if the code is not good or is outdated, tests will fail,
-meaning that the code snippet has errors and needs to be fixed.
+Testing is really important because it allows automatic checking of
+the code. Code snippets with errors or code that uses outdated methods will fail and
+the notification will help you fix the problems. 
 
 For testing, we use the `Sphinx doctest extension
 <https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html>`_. Refer to
@@ -50,8 +50,8 @@ you **test** if it is valid. If the code has a wrong python syntax or the
 To successfully run the tests on snippets, you must import all the classes and
 declare any variables used in the code snippets. You can include those in the
 code snippet itself (visible in the HTML pages) or you can add them to a ``..
-testsetup::`` directive (hidden in the HTML pages). The ``.. testsetup::`` need
-to be before the ``.. testcode::``::
+testsetup::`` directive (hidden in the HTML pages). The ``.. testsetup::`` needs
+to be placed before the ``.. testcode::``::
 
   .. testsetup::
 
@@ -96,7 +96,7 @@ by commas) in the respective directive::
      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
      assert crs.isValid()
 
-The doctest will pick each group snippets and run them independently.
+The ``doctest`` will pick each group snippets and run them independently.
 
 .. note::
 
