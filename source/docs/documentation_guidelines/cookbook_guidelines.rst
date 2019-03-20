@@ -78,12 +78,12 @@ compare the expected output::
       QGIS CRS ID: 3452
       PostGIS SRID: 4326
 
-Grouping code snippets tests
+Grouping tests
 ----------------------------
 
 For each rst document, the code snippets are tested sequentially, which means
 you can use one ``.. testsetup::`` for all the following code snippets and that
-latter snippets will use variables declared in previous ones.
+later snippets will have access to variables declared in earlier ones in the document.
 
 Alternatively, you can use groups to break down the examples on the same page in
 different tests.
