@@ -787,21 +787,29 @@ Likewise, you can create a translated copy of the feature(s) using the |moveFeat
 Rotate Feature(s)
 -----------------
 
-Use |rotateFeature| :sup:`Rotate Feature(s)` to rotate one or multiple features
-in the map canvas. Press the |rotateFeature| :sup:`Rotate Feature(s)` icon and then
-click on the feature to rotate. Either click on the map to place the rotated feature or
-enter an angle in the user input widget. If you want to rotate several features,
-they shall be selected first.
+Use the |rotateFeature| :sup:`Rotate Feature(s)` tool to rotate one or multiple
+features in the map canvas:
 
-If you enable the map tool with feature(s) selected, its (their) centroid appears
-and will be the rotation anchor point. If you want to move the anchor point,
-hold the :kbd:`Ctrl` button  and click on the map to place it.
+#. Press the |rotateFeature| :sup:`Rotate Feature(s)` icon
+#. Then click on the feature to rotate. The feature's centroid is referenced as
+   rotation center, a preview of the rotated feature is displayed and a widget
+   opens showing the current :guilabel:`Rotation` angle. 
+#. Click on the map canvas when you are satisfied with the new placement or
+   manually enter the rotation angle in the text box. You can also use the
+   :guilabel:`Snap to °` box to constrain the rotation values.
+#. If you want to rotate several features at once, they shall be selected first,
+   and the rotation is by default around the centroid of their combined
+   geometries.
+
+You can also use an anchor point different from the default feature centroid:
+press the :kbd:`Ctrl` button, click on the map canvas and that point will be
+used as the new rotation center.
 
 If you hold :kbd:`Shift` before clicking on the map, the rotation will be done
 in 45 degree steps, which can be modified afterwards in the user input widget.
 
-To abort feature rotation, you need to click on |rotateFeature| :sup:`Rotate
-Feature(s)` icon.
+To abort feature rotation, press the :kbd:`ESC` button or click on the |rotateFeature|
+:sup:`Rotate Feature(s)` icon.
 
 .. index::
    single: Digitizing tools; Simplify Feature
