@@ -567,28 +567,37 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 
 .. code-block:: python
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_data", "UTF-8", driverName="ESRI Shapefile")
+  # Write to a GeoPackage (default)
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_data", "")
   if error[0] == QgsVectorFileWriter.NoError:
       print("success!")
 
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json", "UTF-8",  driverName="GeoJSON")
+  # Write to an ESRI Shapefile format dataset using UTF-8 text encoding
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_esridata",
+                                                  "UTF-8", driverName="ESRI Shapefile") 
   if error[0] == QgsVectorFileWriter.NoError:
       print("success again!")
 
-The third parameter specifies output text encoding. Only some drivers need this
-for correct operation (Shapefile is one of those), but if you
-are not using international characters you do not have to care much about
-the encoding.
+The third (mandatory) parameter specifies output text encoding.
+Only some drivers need this for correct operation - Shapefile is one of them
+(other drivers will ignore this parameter).
+Specifying the correct encoding is important if you are using international
+(non US-ASCII) characters.
 
-The fourth parameter that we left as ``None`` may specify the destination CRS ---
-if a valid instance of :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
-is passed, the layer is transformed to that CRS.
+A destination CRS may also be specified --- if a valid instance of
+:class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
+is passed as the fourth parameter, the layer is transformed to that CRS.
 
-For valid driver names please consult the `supported formats by OGR`_ --- you
-should pass the value in the "Code" column as the driver name. Optionally
-you can set whether to export only selected features, pass further
-driver-specific options for creation or tell the writer not to create
-attributes --- look into the documentation for full syntax.
+For valid driver names please call the :meth:`supportedFiltersAndFormats 
+<qgis.core.QgsVectorFileWriter.supportedFiltersAndFormats>` method
+or consult the `supported formats by OGR`_ --- you
+should pass the value in the "Code" column as the driver name.
+
+Optionally you can set whether to export only selected features, pass further
+driver-specific options for creation or tell the writer not to create attributes...
+There are a number of other (optional) parameters; see the :class:`QgsVectorFileWriter
+<qgis.core.QgsVectorFileWriter>` documentation for details.
+
 
 Directly from features
 ----------------------
