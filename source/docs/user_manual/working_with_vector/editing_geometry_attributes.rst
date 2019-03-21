@@ -800,17 +800,17 @@ features in the map canvas:
    manually enter the rotation angle in the text box. You can also use the
    :guilabel:`Snap to °` box to constrain the rotation values.
 #. If you want to rotate several features at once, they shall be selected first,
-   and the rotation is by default processed around the centroid of their combined
+   and the rotation is by default around the centroid of their combined
    geometries.
 
 You can also use an anchor point different from the default feature centroid:
-press :kbd:`Ctrl` button, click on the map canvas and that point will be
+press the :kbd:`Ctrl` button, click on the map canvas and that point will be
 used as the new rotation center.
 
 If you hold :kbd:`Shift` before clicking on the map, the rotation will be done
 in 45 degree steps, which can be modified afterwards in the user input widget.
 
-To abort feature rotation, press :kbd:`ESC` button or click on the |rotateFeature|
+To abort feature rotation, press the :kbd:`ESC` button or click on the |rotateFeature|
 :sup:`Rotate Feature(s)` icon.
 
 .. index::
