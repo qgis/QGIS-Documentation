@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _QGIS-manual-index-reference:
 
 ===============
