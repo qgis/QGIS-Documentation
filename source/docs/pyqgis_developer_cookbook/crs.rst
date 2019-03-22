@@ -2,14 +2,6 @@
 
    |updatedisclaimer|
 
-.. testsetup:: *
-
-   from qgis.core import (QgsCoordinateReferenceSystem,
-                          QgsCoordinateTransform,
-                          QgsProject,
-                          QgsPointXY,
-                          )
-
 .. _crs:
 
 *******************
@@ -18,6 +10,17 @@ Projections Support
 
 .. contents::
    :local:
+
+If you're outside the pyqgis console, the code snippets on this page need the
+following imports:
+
+.. testcode:: *
+
+   from qgis.core import (QgsCoordinateReferenceSystem,
+                          QgsCoordinateTransform,
+                          QgsProject,
+                          QgsPointXY,
+                          )
 
 .. index:: Coordinate reference systems
 
@@ -74,7 +77,7 @@ create an independent application you need to set paths correctly with
 database. If you are running the commands from QGIS python console or
 developing a plugin you do not care: everything is already set up for you.
 
-Accessing spatial reference system information
+Accessing spatial reference system information:
 
 .. testcode:: crs_fromID
 
@@ -90,7 +93,7 @@ Accessing spatial reference system information
    # check type of map units in this CRS (values defined in QGis::units enum)
    print("Map units:", crs.mapUnits())
 
-Output:
+This is the expected output for the *specify CRS by its ID* example:
 
 .. testoutput:: crs_fromID
 
