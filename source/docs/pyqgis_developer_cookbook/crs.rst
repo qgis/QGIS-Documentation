@@ -14,7 +14,7 @@ Projections Support
 If you're outside the pyqgis console, the code snippets on this page need the
 following imports:
 
-.. testcode:: *
+.. testcode::
 
    from qgis.core import (QgsCoordinateReferenceSystem,
                           QgsCoordinateTransform,
@@ -33,7 +33,7 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its ID
 
-  .. testcode:: crs_fromID
+  .. testcode::
 
      # PostGIS SRID 4326 is allocated for WGS84
      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
@@ -49,7 +49,7 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its well-known text (WKT)
 
-  .. testcode:: crs_fromWKT
+  .. testcode::
 
      wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],' \
            'PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],' \
@@ -61,7 +61,7 @@ class. Instances of this class can be created in several different ways:
   initialize it. In the following example we use Proj4 string to initialize the
   projection
 
-  .. testcode:: crs_fromCreate
+  .. testcode::
 
      crs = QgsCoordinateReferenceSystem()
      crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
@@ -79,11 +79,12 @@ developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information:
 
-.. testcode:: crs_fromID
+.. testcode::
+
+   crs = QgsCoordinateReferenceSystem(4326)
 
    print("QGIS CRS ID:", crs.srsid())
    print("PostGIS SRID:", crs.postgisSrid())
-   #print("EPSG ID:", crs.EpsgCrsId())
    print("Description:", crs.description())
    print("Projection Acronym:", crs.projectionAcronym())
    print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
@@ -93,9 +94,9 @@ Accessing spatial reference system information:
    # check type of map units in this CRS (values defined in QGis::units enum)
    print("Map units:", crs.mapUnits())
 
-This is the expected output for the *specify CRS by its ID* example:
+Output:
 
-.. testoutput:: crs_fromID
+.. testoutput::
 
    QGIS CRS ID: 3452
    PostGIS SRID: 4326
@@ -120,7 +121,7 @@ instance with them and the current project. Then just repeatedly call
 the transformation. By default it does forward transformation, but it is capable
 to do also inverse transformation.
 
-.. testcode:: crs_transform
+.. testcode::
 
    crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
    crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
@@ -136,7 +137,7 @@ to do also inverse transformation.
 
 Output:
 
-.. testoutput:: crs_transform
+.. testoutput::
 
    Transformed point: <QgsPointXY: POINT(832713.79873844375833869 553423.98688333143945783)>
    Transformed back: <QgsPointXY: POINT(18 5)>
