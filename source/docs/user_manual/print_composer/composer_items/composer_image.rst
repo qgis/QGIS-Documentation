@@ -32,7 +32,7 @@ By default, the picture item is a blank frame that you can customize using its
 You first have to select the image you want to display. There are several ways
 to set the :guilabel:`Image source`:
 
-#. In the :guilabel:`Main properties` group, use the |browseButton|
+#. In the :guilabel:`Main properties` group, use the :guilabel:`...`
    :sup:`Browse` button of :guilabel:`image source` to
    select a file on your computer. The browser will start in the
    SVG-libraries provided with QGIS. Besides :file:`SVG`, you can also select
@@ -121,8 +121,6 @@ You can also apply a declination :guilabel:`Offset` to the picture rotation.
 
 .. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png

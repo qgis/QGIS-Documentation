@@ -82,7 +82,7 @@ For vectors...
    or use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer|
    :menuselection:`Add Vector Layer...` menu item.
 #. Ensure that the :guilabel:`File` radio button is selected.
-#. Click on the |browseButton| button to browse for :guilabel:`Vector dataset(s)`.
+#. Click on the :guilabel:`...` button to browse for :guilabel:`Vector dataset(s)`.
 #. In the dialog that appears, open the :file:`exercise_data/more_analysis/streets`
    directory.
 #. Select the file :file:`Street_Names_UTM33S.shp`.
@@ -766,8 +766,6 @@ cartography in creating your output map.
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png

@@ -61,7 +61,7 @@ for the analysis:
 * Open the :guilabel:`Shortest path (point to point)` algorithm;
 * Select :guilabel:`network_lines` for :guilabel:`Vector layer representing network`;
 * Let ``Shortest`` in the :guilabel:`Path type to calculate` parameter;
-* Click on the |browseButton| button next to the :guilabel:`Start point (x, y)`
+* Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, y)`
   and choose the location tagged with ``Starting Point`` in the picture. The menu
   is filled with the coordinates of the clicked point;
 * Do the same thing but choosing the location tagged with ``Ending point`` for
@@ -171,7 +171,7 @@ manually choose the start and end points.
 * Select :guilabel:`network_lines` for the :guilabel:`Vector layer representing network`
   parameter;
 * Choose ``Fastest`` as the :guilabel:`Path type to calculate`;
-* Click on the |browseButton| button next to the :guilabel:`Start point (x, y)`
+* Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, y)`
   and choose the location tagged with ``Start Point`` in the picture. The menu
   is filled with the coordinates of the clicked point;
 * Do the same thing but choosing the location tagged with ``End point`` for
@@ -252,8 +252,6 @@ Next you'll see how to run spatial statistics algorithms on vector datasets.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |hard| image:: /static/global/hard.png

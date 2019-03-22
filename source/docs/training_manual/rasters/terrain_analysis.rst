@@ -173,8 +173,8 @@ We will use :menuselection:`Processing --> Raster Analysis --> Raster calculator
 
 #. You have now to set up the raster details, like the cell size, extent and CRS.
    This can be done manually by filling or it can be automatically set by choosing
-   a ``Reference layer``. Choose this last option by clicking on the |browseButton|
-   of the :guilabel:`Reference layer(s)` parameter.
+   a ``Reference layer``. Choose this last option by clicking on the :guilabel:`...`
+   button next to the :guilabel:`Reference layer(s)` parameter.
 #. In the dialog, choose the :guilabel:`aspect` layer because we want to obtain
    a layer with the same resolution.
 #. Save the layer as ``aspect_north``.
@@ -338,7 +338,7 @@ The alternative tool is the :guilabel:`Reclassify by table` tool within
 
 #. Open the tool
 #. Choose :guilabel:`aspect` as the ``Input raster layer``
-#. Click on the |browseButton| of the :guilabel:`Reclassification table` parameter.
+#. Click on the :guilabel:`...` of the :guilabel:`Reclassification table` parameter.
    A table like dialog will pop up where you can choose the minimum, maximum and
    new values for each class.
 #. Click on the :guilabel:`Add row` button and add 5 rows. Fill each row as the
@@ -471,8 +471,6 @@ problem? That's the topic for the next lesson, starting in the next module.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png

@@ -60,7 +60,7 @@ To make a catalog we will use the :menuselection:`Processing --> Toolbox`.
 
 #. Open the :guilabel:`Build virtual raster` algorithm from the
    :menuselection:`GDAL --> Raster miscellaneous`;
-#. In the dialog that appears click on the |browseButton| button next to the
+#. In the dialog that appears click on the :guilabel:`...` button next to the
    :guilabel:`Input layers` parameter and check all the layers or use the
    :guilabel:`Select All` button;
 #. Uncheck the :guilabel:`Place each input file into a separate band` parameter-
@@ -77,7 +77,8 @@ To make a catalog we will use the :menuselection:`Processing --> Toolbox`.
 #. Finally click on :guilabel:`Run`.
 
 .. note:: As you know from the previous modules, :guilabel:`Processing` creates
-    temporary layers by default. To save the file click on the |browseButton|.
+    temporary layers by default. To save the file click on the :guilabel:`...`
+    button.
 
 .. image:: img/build_virtual_raster.png
    :align: center
@@ -121,7 +122,7 @@ merge algorithm.
 #. Click on the :guilabel:`Merge` algorithm from the
    :menuselection:`GDAL --> Raster miscellaneous` menu.
 #. As we did for the :ref:`Create a Virtual raster <tm_virtual_raster>`, use
-   the |browseButton| to choose which layers you want to merge.
+   the :guilabel:`...` button to choose which layers you want to merge.
 
    You can also specify a Virtual raster as input, and then all of the rasters
    that it consists of will be processed.
@@ -154,7 +155,5 @@ symbolization is useful in the case of rasters as well.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |hard| image:: /static/global/hard.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
