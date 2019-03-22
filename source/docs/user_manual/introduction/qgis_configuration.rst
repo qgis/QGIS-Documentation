@@ -93,7 +93,7 @@ General Settings
 
 * :guilabel:`Open project on launch` |selectString| (choose between 'New',
   'Most recent', 'Welcome Page', and 'Specific'). When choosing 'Specific' use
-  the |browseButton| to define the project to use by default. The 'Welcome Page'
+  the :guilabel:`...` button to define the project to use by default. The 'Welcome Page'
   displays a list of recent projects with screenshot.
 * |checkbox| :guilabel:`Create new project from default project`. You have the
   possibility to press on :guilabel:`Set current project as default` or on
@@ -1510,8 +1510,6 @@ without needing to replace the existing ones.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |crs| image:: /static/common/CRS.png

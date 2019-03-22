@@ -65,10 +65,9 @@ Icon                     Substitution               Icon                   Subst
 |checkbox|               ``|checkbox|``             |unchecked|            ``|unchecked|``
 |radioButtonOn|          ``|radioButtonOn|``        |radioButtonOff|       ``|radioButtonOff|``
 |selectNumber|           ``|selectNumber|``         |selectString|         ``|selectString|``
-|browseButton|           ``|browseButton|``         |slider|               ``|slider|``
 |selectColor|            ``|selectColor|``          |selectColorRamp|      ``|selectColorRamp|``
 |tab|                    ``|tab|``                  |degrees|              ``|degrees|``
-|inputText|              ``|inputText|``
+|inputText|              ``|inputText|``            |slider|               ``|slider|``
 =======================  =========================  =====================  =========================
 
 
@@ -535,8 +534,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |buffer| image:: /static/common/buffer.png
    :width: 1.5em
 .. |cad| image:: /static/common/cad.png
