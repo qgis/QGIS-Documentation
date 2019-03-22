@@ -11,7 +11,7 @@ automatic testing of the code snippets.
 
 Testing is really important because it allows automatic checking of
 the code. Code snippets with errors or code that uses outdated methods will fail and
-the notification will help you fix the problems. 
+the notification will help you fix the problems.
 
 For testing, we use the `Sphinx doctest extension
 <https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html>`_. Refer to
@@ -23,6 +23,9 @@ How to write testable code snippets
 
 Writing testable code snippets is not so different from the *old* method.
 Basically, you need to use a different Sphinx `directive`.
+
+Doctest sphinx directives
+-------------------------
 
 Instead of embedding the code in a ``.. code-block:: python``
 directive (which would highlight the code syntax automatically), you now need to
@@ -70,13 +73,22 @@ compare the expected output::
 
   .. testcode::
 
-      print("QGIS CRS ID:", crs.srsid())
-      print("PostGIS SRID:", crs.srid())
+     print("QGIS CRS ID:", crs.srsid())
+     print("PostGIS SRID:", crs.postgisSrid())
 
   .. testoutput::
 
-      QGIS CRS ID: 3452
-      PostGIS SRID: 4326
+     QGIS CRS ID: 3452
+     PostGIS SRID: 4326
+
+By default, the content of `.. testoutput::` is shown in the HTLM output.
+To hide it from the HTML use the `:hide:` option::
+
+  .. testoutput::
+     :hide:
+
+     QGIS CRS ID: 3452
+     PostGIS SRID: 4326
 
 Grouping tests
 ----------------------------
@@ -105,9 +117,9 @@ The ``doctest`` will pick each group snippets and run them independently.
    crs_fromwkt. In case of failures, this will help identifying where the failures
    occur.
 
-If you don't declare any group, the code snippet will be added to the *default*
-group. If instead, you use ``*`` as a group name, the snippet will be used in
-all testing groups, something normally useful to use in the test setup::
+If you don't declare any group, the code snippet will be added to a group named
+``default``. If instead, you use ``*`` as a group name, the snippet will be used
+in all testing groups, something normally usefull to use in the test setup::
 
   .. testsetup:: *
 
