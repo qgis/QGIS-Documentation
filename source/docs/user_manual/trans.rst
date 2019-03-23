@@ -11,7 +11,7 @@ Some styling tests: a **bold** item, and *italic* item and a
 Or what about combinations of those: **``fixed bold``** or 
 *``fixed italic``* ?
 
-This is an image |actionRun0| with ``/static/common`` (OK in build but fails in git*.com if static in source folder). We could try to do a feature request at git*.com OR sphin to handle ``/static`` either as coming from project root OR source|conf.py root? BUT OK  in gitlab if static folder in source
+This is an image |actionRun0| with ``/static/common`` (OK in build but fails in git*.com if static in source folder). We could try to do a feature request at git*.com OR sphin to handle ``/static`` either as coming from project root OR source|conf.py root? BUT OK  in gitlab if static folder in root
 
 This is an image |actionRun1| with ``static/common`` (fails in build and git*.com), BUT OK in gitlab if static in root of project.
 
