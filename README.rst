@@ -42,7 +42,8 @@ and run the build from within that venv::
 
  make html
 
-Want to build your own language? For example 'nl'::
+Want to build your own language? Note that you will use the translations from the 
+po files from git! For example for 'nl' do::
 
  make LANG=nl html
 
@@ -64,7 +65,8 @@ Then create a virtual environment called 'venv' in that directory, and activate 
  venv\Scripts\activate.bat
  make.bat
 
-Want to build your own language? For example 'nl'::
+Want to build your own language? Note that you will use the translations from the
+po files from git! For example 'nl' do::
 
  set SPHINXOPTS=-D language=nl
  make.bat
@@ -80,23 +82,27 @@ https://pypi.org/project/sphinx-intl/
 
 https://docs.transifex.com/integrations/transifex-github-integration
 
-::
+We created a script to create the transifex yaml files for github-transifex integrations::
+
+ .\scripts\create_transifex_yaml.sh
+
+To create the .tx/config to push/pull using tx client do::
 
  sphinx-intl create-txconfig
- sphinx-intl update-txconfig-resources --transifex-project-name qgismanual
+ sphinx-intl update-txconfig-resources --transifex-project-name qgisdoc
 
- export SPHINXINTL_LANGUAGE=de,nl
- # same as
- sphinx-intl <command> --language=de --language=nl
+To update the english po files (which are being used as SOURCE files in transifex)::
 
- # create the pot files in build/gettext
+ # FIRST create the pot files in build/gettext (po file be based on those pot files)
  make gettext
+ # then update the english po files only:
+ sphinx-intl update -p build/gettext -l en
 
- # update the po files:
- sphinx-intl update -p build/gettext -l nl
- # and build nl
- make -e SPHINXOPTS="-D language='nl'" html
+To update all po files (which we do not use if we do github-transifex integration!!!)::
 
+ export SPHINXINTL_LANGUAGE=de,nl, ...
+ # is the same same as
+ sphinx-intl <command> --language=de --language=nl ...
 
 
 
