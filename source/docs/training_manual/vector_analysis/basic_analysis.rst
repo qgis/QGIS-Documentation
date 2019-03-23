@@ -137,7 +137,7 @@ But feel free to choose the best workflow for yourself.
 #. Click :guilabel:`Export --> Save Features As...`;
 #. In the :guilabel:`Save Vector Layer As` dialog choose :guilabel:`GeoPackage`
    as :guilabel:`Format`;
-#. Click on |browseButton| of :guilabel:`File name` parameter and name the new
+#. Click on :guilabel:`...` of :guilabel:`File name` parameter and name the new
    GeoPackage as :guilabel:`vector_analysis`;
 #. Change the :guilabel:`Layer name` as :guilabel:`roads_34S`;
 #. Change the :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`;
@@ -203,7 +203,7 @@ QGIS allows you to calculate distances from any vector object.
    :guilabel:`Layers` panel. You can also append the result to the GeoPackage
    database by:
    
-   #. clicking on the |browseButton| button and choose :guilabel:`Save to GeoPackage...`
+   #. clicking on the :guilabel:`...` button and choose :guilabel:`Save to GeoPackage...`
    #. naming the new layer :guilabel:`roads_buffer_50m`
    #. and saving it in the :file:`vector_analysis.gpkg` file
 
@@ -399,8 +399,6 @@ the road from one point to another.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png

@@ -196,7 +196,7 @@ table can be of one of the following types.
      Extent Drag
 
 * A **list of elements** (whether raster or vector layers, tables, fields) to
-  select from. Click on the |browseButton| button at the left of the option to
+  select from. Click on the :guilabel:`...` button at the left of the option to
   see a dialog like the following one. Multiple selection is allowed and when
   the dialog is closed, number of selected items is displayed in the parameter
   text box widget.
@@ -373,8 +373,6 @@ to a temporary file and deleted once you exit QGIS).
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
