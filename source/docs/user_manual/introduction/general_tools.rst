@@ -535,7 +535,7 @@ styling:
 If you want to embed content from other project files into your project, select
 :menuselection:`Layer --> Embed Layers and Groups`:
 
-#. Click the |browseButton| to look for a project: you can see the content of the
+#. Click the :guilabel:`...` button to look for a project: you can see the content of the
    project (see figure_embed_dialog_)
 #. Hold down :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and
    groups you wish to retrieve
@@ -2077,8 +2077,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |atlasNext|  image:: /static/common/mActionAtlasNext.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png

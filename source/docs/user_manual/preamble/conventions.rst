@@ -34,7 +34,7 @@ instruction in the manual.
   |radioButtonOff| :guilabel:`EPSG ID`
 * Select a number: |selectNumber|
 * Select a string: |selectString|
-* Browse for a file: |browseButton|
+* Browse for a file: :guilabel:`...`
 * Select a color: |selectColor|
 * Slider: |slider|
 * Input Text: |inputText|
@@ -109,8 +109,6 @@ platform-specific icon at the end of the figure caption.
 
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |inputText| image:: /static/common/inputtext.png

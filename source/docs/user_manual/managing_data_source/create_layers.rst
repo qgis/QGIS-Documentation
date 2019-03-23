@@ -126,7 +126,7 @@ Figure_create_spatialite_.
    Creating a New SpatiaLite layer dialog
 
 The first step is to select an existing SpatiaLite database or to create a new
-SpatiaLite database. This can be done with the browse button |browseButton| to
+SpatiaLite database. This can be done with the :guilabel:`...` button at
 the right of the database field. Then, add a name for the new layer, define
 the layer type, and specify the coordinate reference system with :guilabel:`Specify CRS`.
 If desired, you can select |checkbox| :guilabel:`Create an autoincrementing primary key`.
@@ -601,8 +601,6 @@ used in conjunction with this spatial index syntax.
 
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |createGPX| image:: /static/common/create_gpx.png
