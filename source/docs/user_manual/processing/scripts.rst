@@ -18,6 +18,11 @@ There are currently two options for writing Processing algorithms using Python.
 Extending QgsProcessingAlgorithm
 --------------------------------
 
+The following code takes a vector layer, counts the number of features, does a
+buffer operation and creates a raster layer from the result of the buffer
+operation.
+The buffer layer, raster layer and number of features are returned.
+
 .. code-block:: python
 
     from PyQt5.QtCore import QCoreApplication
@@ -139,6 +144,7 @@ Extending QgsProcessingAlgorithm
                                     },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
+            # both bufferlayer and inpbuffer['OUTPUT'] refer to the result
             if feedback.isCanceled():
                 return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
                         'NUMBEROFFEATURES': numfeatures}
@@ -149,6 +155,7 @@ Extending QgsProcessingAlgorithm
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
+            # both outputraster and rasterized['OUTPUT'] refer to the result
             return {'OUTPUTRASTER': outputraster, 'BUFFER': bufferlayer,
                     'NUMBEROFFEATURES': numfeatures}
  
@@ -175,8 +182,10 @@ The name of the algorithm (the one you will see in the toolbox) is created from
 the filename by removing the :file:`.py` extension and replacing underscores
 with spaces.
 
-The following code calculates the Topographic Wetness Index (TWI) directly from
-a DEM using the @alg decorator.
+The following code takes a vector layer, counts the number of features, does a
+buffer operation and creates a raster layer from the result of the buffer
+operation using the @alg decorator.
+The buffer layer, raster layer and number of features are returned.
 
 .. code-block:: python
 
@@ -198,13 +207,15 @@ a DEM using the @alg decorator.
         Description of the algorithm.
         (If there is no comment here, you will get an error)
         """
-        numfeatures = 0
         inputlayer = instance.parameterAsVectorLayer(parameters, "INPUTVECTOR", context)
         numfeatures = inputlayer.featureCount()
         bufferlayer = instance.parameterAsOutputLayer(parameters, "BUFFER", context)
         outputraster = instance.parameterAsOutputLayer(parameters, "OUTPUTRASTER", context)
         bufferdist = instance.parameterAsDouble(parameters, "BUFFERDIST", context)
         rastercellsize = instance.parameterAsDouble(parameters, "CELLSIZE", context)
+        if feedback.isCanceled():
+            return {'OUTPUTRASTER': None, 'BUFFER': None,
+                    'NUMBEROFFEATURES': numfeatures}
         inpbuffer = processing.run("native:buffer",
                                    {"INPUT": inputlayer, "OUTPUT": bufferlayer,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
@@ -213,6 +224,10 @@ a DEM using the @alg decorator.
                                     },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
+        # both bufferlayer and inpbuffer['OUTPUT'] refer to the result
+        if feedback.isCanceled():
+            return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
+                    'NUMBEROFFEATURES': numfeatures}
         rasterized = processing.run("qgis:rasterize",
                                    {"LAYER": bufferlayer, "EXTENT": bufferlayer,
                                     "MAP_UNITS_PER_PIXEL": rastercellsize,
@@ -220,7 +235,9 @@ a DEM using the @alg decorator.
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
-        return {'OUTPUTRASTER': outputraster, 'NUMBEROFFEATURES': numfeatures}
+        # both outputraster and rasterized['OUTPUT'] refer to the result
+        return {'OUTPUTRASTER': outputraster, 'BUFFER': bufferlayer,
+                'NUMBEROFFEATURES': numfeatures}
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
 one of them calculates the TWI, but it needs a slope layer and a flow accumulation
