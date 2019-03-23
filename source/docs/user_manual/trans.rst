@@ -2,7 +2,7 @@
 Translation test
 ================
 
-This is just a file to test Transifex translations.
+This is just a file to test Transifex translations: https://www.transifex.com/qgis/qgisdoc/
 
 Two sentences.
 
