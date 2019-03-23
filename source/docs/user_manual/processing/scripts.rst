@@ -15,6 +15,146 @@ There are currently two options for writing Processing algorithms using Python.
 * Extending :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 * Using the @alg decorator
 
+Extending QgsProcessingAlgorithm
+--------------------------------
+
+.. code-block:: python
+
+    from PyQt5.QtCore import QCoreApplication
+    from qgis.core import (QgsProcessing,
+                           QgsProcessingAlgorithm,
+                           QgsProcessingException,
+                           QgsProcessingParameterNumber,
+                           QgsProcessingParameterDistance,
+                           QgsProcessingParameterVectorLayer,
+                           QgsProcessingParameterVectorDestination,
+                           QgsProcessingParameterRasterDestination)
+    import processing
+    
+    class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
+        """
+        This is an example algorithm that takes a vector layer,
+        creates some new layers and returns some results.
+        """
+    
+        def tr(self, string):
+            """
+            Returns a translatable string with the self.tr() function.
+            """
+            return QCoreApplication.translate('Processing', string)
+    
+        def createInstance(self):
+            return ExampleProcessingAlgorithm()
+    
+        def name(self):
+            """
+            Returns the algorithm name, used for identifying the algorithm.
+            """
+            return 'bufferraster'
+    
+        def displayName(self):
+            """
+            Returns the translated algorithm name.
+            """
+            return self.tr('Buffer and export to raster')
+    
+        def group(self):
+            """
+            Returns the name of the group this algorithm belongs to.
+            """
+            return self.tr('Example scripts')
+    
+        def groupId(self):
+            """
+            Returns the unique ID of the group this algorithm belongs to.
+            """
+            return 'examplescripts'
+    
+        def shortHelpString(self):
+            """
+            Returns a localised short helper string for the algorithm.
+            """
+            return self.tr("Example algorithm short description")
+    
+        def initAlgorithm(self, config=None):
+            """
+            Here we define the inputs and output of the algorithm.
+            """
+            self.addParameter(
+                QgsProcessingParameterVectorLayer(
+                    'INPUTVECTOR',
+                    self.tr('Input vector layer'),
+                    types=[QgsProcessing.TypeVectorAnyGeometry]
+                )
+            )
+            self.addParameter(
+                QgsProcessingParameterVectorDestination(
+                    'BUFFER',
+                    self.tr('BUFFER'),
+                )
+            )
+            self.addParameter(
+                QgsProcessingParameterRasterDestination(
+                    "OUTPUTRASTER",
+                    self.tr('OUTPUTRASTER')
+                )
+            )
+            self.addParameter(
+                QgsProcessingParameterDistance(
+                    'BUFFERDIST',
+                    self.tr('BUFFERDIST'),
+                    defaultValue = 100
+                )
+            )
+            self.addParameter(
+                QgsProcessingParameterDistance(
+                    'CELLSIZE',
+                    self.tr('CELLSIZE'),
+                    defaultValue = 10
+                )
+            )
+    
+        def processAlgorithm(self, parameters, context, feedback):
+            """
+            Here is where the processing itself takes place.
+            """
+            inputlayer = self.parameterAsVectorLayer(parameters, "INPUTVECTOR",
+                                                     context)
+            numfeatures = inputlayer.featureCount()
+            bufferlayer = self.parameterAsOutputLayer(parameters, "BUFFER",
+                                                      context)
+            outputraster = self.parameterAsOutputLayer(parameters, "OUTPUTRASTER",
+                                                       context)
+            bufferdist = self.parameterAsDouble(parameters, "BUFFERDIST", context)
+            rastercellsize = self.parameterAsDouble(parameters, "CELLSIZE",
+                                                    context)
+            if feedback.isCanceled():
+                return {'OUTPUTRASTER': None, 'BUFFER': None,
+                        'NUMBEROFFEATURES': numfeatures}
+            inpbuffer = processing.run("native:buffer",
+                                   {"INPUT": inputlayer, "OUTPUT": bufferlayer,
+                                    'DISTANCE': bufferdist, 'SEGMENTS': 10, 
+                                    'DISSOLVE': True, 'END_CAP_STYLE': 0,
+                                    'JOIN_STYLE': 0, 'MITER_LIMIT': 10
+                                    },
+                                   is_child_algorithm=True, context=context,
+                                   feedback=feedback)
+            if feedback.isCanceled():
+                return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
+                        'NUMBEROFFEATURES': numfeatures}
+            rasterized = processing.run("qgis:rasterize",
+                                   {"LAYER": bufferlayer, "EXTENT": bufferlayer,
+                                    "MAP_UNITS_PER_PIXEL": rastercellsize,
+                                    "OUTPUT": outputraster
+                                   },
+                                   is_child_algorithm=True, context=context,
+                                   feedback=feedback)
+            return {'OUTPUTRASTER': outputraster, 'BUFFER': bufferlayer,
+                    'NUMBEROFFEATURES': numfeatures}
+ 
+The @alg decorator
+------------------
+
 By using the @alg decorator, you can create your own algorithms by writing the
 corresponding Python code and adding a few extra lines to supply additional
 information needed to define the semantics of the algorithm.
@@ -40,31 +180,47 @@ a DEM using the @alg decorator.
 
 .. code-block:: python
 
+    import processing
     from qgis.processing import alg
+    from qgis.core import QgsProject
     
-    @alg(name="tpicalc", label="TPI Calculator", group="myscripts", groupid="myscripts")
-    ##dem=raster # (QGIS 2)
-    @alg.input(type=alg.RASTER_LAYER, name="dem", label="Input DEM layer")
-    ##twi=output raster # (QGIS 2)
-    @alg.input(type=alg.RASTER_LAYER_DEST, name="twi", label="TWI")
-
-    def algtest(instance, parameters, context, feedback, inputs):
-        ##dem=raster # (QGIS 2)
-        dem = instance.parameterAsRasterLayer(parameters, "dem", context)
-        ##twi=output raster # (QGIS 2)
-        twi = instance.parameterAsOutputLayer(parameters, "twi", context)
-
-        ret_slope = processing.run("qgis:slope",
-                               {"INPUT": dem, "OUTPUT": 'myslope'},
-                               is_child_algorithm=True)
-        ret_area = processing.run("saga:catchmentarea",
-                              {"ELEVATION": dem, "METHOD": 0, "FLOW": 'myflow'},
-                              is_child_algorithm=True)
-        twilayer = processing.run("saga:topographicwetnessindextwi",
-                              {"SLOPE": ret_slope['OUTPUT'], "AREA": ret_area['FLOW'],
-                               "CONV": 1, "METHOD": 0, "TWI": 'twi'},
-                              is_child_algorithm=True)
-        return{'TWI': twilayer['TWI']}
+    @alg(name="bufferraster", label="Buffer and export to raster", group="examplescripts",
+         group_label="Example scripts")
+    @alg.input(type=alg.VECTOR_LAYER, name="INPUTVECTOR", label="Input vector layer")
+    @alg.input(type=alg.RASTER_LAYER_DEST, name="OUTPUTRASTER", label="OUTPUTRASTER")
+    @alg.input(type=alg.VECTOR_LAYER_DEST, name="BUFFER", label="BUFFER")
+    @alg.input(type=alg.DISTANCE, name="BUFFERDIST", label="BUFFER DISTANCE", default=1.0)
+    @alg.input(type=alg.DISTANCE, name="CELLSIZE", label="RASTER CELL SIZE", default=10.0)
+    @alg.output(type=alg.NUMBER, name="NUMBEROFFEATURES", label="NUMBEROFFEATURES")
+    
+    def bufferrasteralg(instance, parameters, context, feedback, inputs):
+        """
+        Description of the algorithm.
+        (If there is no comment here, you will get an error)
+        """
+        numfeatures = 0
+        inputlayer = instance.parameterAsVectorLayer(parameters, "INPUTVECTOR", context)
+        numfeatures = inputlayer.featureCount()
+        bufferlayer = instance.parameterAsOutputLayer(parameters, "BUFFER", context)
+        outputraster = instance.parameterAsOutputLayer(parameters, "OUTPUTRASTER", context)
+        bufferdist = instance.parameterAsDouble(parameters, "BUFFERDIST", context)
+        rastercellsize = instance.parameterAsDouble(parameters, "CELLSIZE", context)
+        inpbuffer = processing.run("native:buffer",
+                                   {"INPUT": inputlayer, "OUTPUT": bufferlayer,
+                                    'DISTANCE': bufferdist, 'SEGMENTS': 10, 
+                                    'DISSOLVE': True, 'END_CAP_STYLE': 0,
+                                    'JOIN_STYLE': 0, 'MITER_LIMIT': 10
+                                    },
+                                   is_child_algorithm=True, context=context,
+                                   feedback=feedback)
+        rasterized = processing.run("qgis:rasterize",
+                                   {"LAYER": bufferlayer, "EXTENT": bufferlayer,
+                                    "MAP_UNITS_PER_PIXEL": rastercellsize,
+                                    "OUTPUT": outputraster
+                                   },
+                                   is_child_algorithm=True, context=context,
+                                   feedback=feedback)
+        return {'OUTPUTRASTER': outputraster, 'NUMBEROFFEATURES': numfeatures}
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
 one of them calculates the TWI, but it needs a slope layer and a flow accumulation
