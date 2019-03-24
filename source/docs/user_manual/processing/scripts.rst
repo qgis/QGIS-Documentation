@@ -15,6 +15,18 @@ There are two options for writing Processing algorithms using Python.
 * Extending :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 * Using the @alg decorator
 
+Within QGIS, you can use :guilabel:`Create new script` in the
+:guilabel:`Scrips` menu at the top of the :guilabel:`Processing Toolbox` to
+open the :guilabel:`Processing Script Editor` where you can write your code.
+To simplify the task, you can start with a script template by using
+:guilabel:`Create new script from template` from the same menu.
+This opens a template that extends
+:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
+
+When saving the script to the :file:`scripts` folder (the default location)
+with a :file:`.py` extension, the algorithm will be made available in the
+:guilabel:`Processing Toolbox`.
+
 Extending QgsProcessingAlgorithm
 --------------------------------
 
@@ -55,13 +67,13 @@ The buffer layer, raster layer and number of features are returned.
             """
             Returns the algorithm name, used for identifying the algorithm.
             """
-            return 'bufferraster'
+            return 'bufferrasterextend'
     
         def displayName(self):
             """
             Returns the translated algorithm name.
             """
-            return self.tr('Buffer and export to raster')
+            return self.tr('Buffer and export to raster (extend)')
     
         def group(self):
             """
@@ -166,22 +178,6 @@ By using the @alg decorator, you can create your own algorithms by writing the
 corresponding Python code and adding a few extra lines to supply additional
 information needed to define the semantics of the algorithm.
 
-Within QGIS, you can use :guilabel:`Create new script` in the
-:guilabel:`Scrips` menu at the top of the :guilabel:`Processing Toolbox` to
-open the :guilabel:`Processing Script Editor` where you can write your code.
-To simplify the task, you can start with a script template by using
-:guilabel:`Create new script from template` from the same menu.
-This opens a template that extends
-:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
-
-When saving the script to the :file:`scripts` folder (the default location)
-with a :file:`.py` extension, the algorithm will be made available in the
-:guilabel:`Processing Toolbox`.
-
-The name of the algorithm (the one you will see in the toolbox) is created from
-the filename by removing the :file:`.py` extension and replacing underscores
-with spaces.
-
 The following code takes a vector layer, counts the number of features, does a
 buffer operation and creates a raster layer from the result of the buffer
 operation using the @alg decorator.
@@ -193,7 +189,7 @@ The buffer layer, raster layer and number of features are returned.
     from qgis.processing import alg
     from qgis.core import QgsProject
     
-    @alg(name='bufferraster', label='Buffer and export to raster', group='examplescripts',
+    @alg(name='bufferrasteralg', label='Buffer and export to raster (alg)', group='examplescripts',
          group_label='Example scripts')
     @alg.input(type=alg.VECTOR_LAYER, name='INPUTVECTOR', label='Input vector layer')
     @alg.input(type=alg.RASTER_LAYER_DEST, name='OUTPUTRASTER', label='OUTPUTRASTER')
