@@ -79,7 +79,7 @@ The buffer layer, raster layer and number of features are returned.
             """
             Returns a localised short helper string for the algorithm.
             """
-            return self.tr("Example algorithm short description")
+            return self.tr('Example algorithm short description')
     
         def initAlgorithm(self, config=None):
             """
@@ -100,7 +100,7 @@ The buffer layer, raster layer and number of features are returned.
             )
             self.addParameter(
                 QgsProcessingParameterRasterDestination(
-                    "OUTPUTRASTER",
+                    'OUTPUTRASTER',
                     self.tr('OUTPUTRASTER')
                 )
             )
@@ -123,21 +123,21 @@ The buffer layer, raster layer and number of features are returned.
             """
             Here is where the processing itself takes place.
             """
-            inputlayer = self.parameterAsVectorLayer(parameters, "INPUTVECTOR",
+            inputlayer = self.parameterAsVectorLayer(parameters, 'INPUTVECTOR',
                                                      context)
             numfeatures = inputlayer.featureCount()
-            bufferlayer = self.parameterAsOutputLayer(parameters, "BUFFER",
+            bufferlayer = self.parameterAsOutputLayer(parameters, 'BUFFER',
                                                       context)
-            outputraster = self.parameterAsOutputLayer(parameters, "OUTPUTRASTER",
+            outputraster = self.parameterAsOutputLayer(parameters, 'OUTPUTRASTER',
                                                        context)
-            bufferdist = self.parameterAsDouble(parameters, "BUFFERDIST", context)
-            rastercellsize = self.parameterAsDouble(parameters, "CELLSIZE",
+            bufferdist = self.parameterAsDouble(parameters, 'BUFFERDIST', context)
+            rastercellsize = self.parameterAsDouble(parameters, 'CELLSIZE',
                                                     context)
             if feedback.isCanceled():
                 return {'OUTPUTRASTER': None, 'BUFFER': None,
                         'NUMBEROFFEATURES': numfeatures}
-            inpbuffer = processing.run("native:buffer",
-                                   {"INPUT": inputlayer, "OUTPUT": bufferlayer,
+            inpbuffer = processing.run('native:buffer',
+                                   {'INPUT': inputlayer, 'OUTPUT': bufferlayer,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
                                     'DISSOLVE': True, 'END_CAP_STYLE': 0,
                                     'JOIN_STYLE': 0, 'MITER_LIMIT': 10
@@ -148,10 +148,10 @@ The buffer layer, raster layer and number of features are returned.
             if feedback.isCanceled():
                 return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
                         'NUMBEROFFEATURES': numfeatures}
-            rasterized = processing.run("qgis:rasterize",
-                                   {"LAYER": bufferlayer, "EXTENT": bufferlayer,
-                                    "MAP_UNITS_PER_PIXEL": rastercellsize,
-                                    "OUTPUT": outputraster
+            rasterized = processing.run('qgis:rasterize',
+                                   {'LAYER': bufferlayer, 'EXTENT': bufferlayer,
+                                    'MAP_UNITS_PER_PIXEL': rastercellsize,
+                                    'OUTPUT': outputraster
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
@@ -193,31 +193,31 @@ The buffer layer, raster layer and number of features are returned.
     from qgis.processing import alg
     from qgis.core import QgsProject
     
-    @alg(name="bufferraster", label="Buffer and export to raster", group="examplescripts",
-         group_label="Example scripts")
-    @alg.input(type=alg.VECTOR_LAYER, name="INPUTVECTOR", label="Input vector layer")
-    @alg.input(type=alg.RASTER_LAYER_DEST, name="OUTPUTRASTER", label="OUTPUTRASTER")
-    @alg.input(type=alg.VECTOR_LAYER_DEST, name="BUFFER", label="BUFFER")
-    @alg.input(type=alg.DISTANCE, name="BUFFERDIST", label="BUFFER DISTANCE", default=1.0)
-    @alg.input(type=alg.DISTANCE, name="CELLSIZE", label="RASTER CELL SIZE", default=10.0)
-    @alg.output(type=alg.NUMBER, name="NUMBEROFFEATURES", label="NUMBEROFFEATURES")
+    @alg(name='bufferraster', label='Buffer and export to raster', group='examplescripts',
+         group_label='Example scripts')
+    @alg.input(type=alg.VECTOR_LAYER, name='INPUTVECTOR', label='Input vector layer')
+    @alg.input(type=alg.RASTER_LAYER_DEST, name='OUTPUTRASTER', label='OUTPUTRASTER')
+    @alg.input(type=alg.VECTOR_LAYER_DEST, name='BUFFER', label='BUFFER')
+    @alg.input(type=alg.DISTANCE, name='BUFFERDIST', label='BUFFER DISTANCE', default=1.0)
+    @alg.input(type=alg.DISTANCE, name='CELLSIZE', label='RASTER CELL SIZE', default=10.0)
+    @alg.output(type=alg.NUMBER, name='NUMBEROFFEATURES', label='NUMBEROFFEATURES')
     
     def bufferrasteralg(instance, parameters, context, feedback, inputs):
         """
         Description of the algorithm.
         (If there is no comment here, you will get an error)
         """
-        inputlayer = instance.parameterAsVectorLayer(parameters, "INPUTVECTOR", context)
+        inputlayer = instance.parameterAsVectorLayer(parameters, 'INPUTVECTOR', context)
         numfeatures = inputlayer.featureCount()
-        bufferlayer = instance.parameterAsOutputLayer(parameters, "BUFFER", context)
-        outputraster = instance.parameterAsOutputLayer(parameters, "OUTPUTRASTER", context)
-        bufferdist = instance.parameterAsDouble(parameters, "BUFFERDIST", context)
-        rastercellsize = instance.parameterAsDouble(parameters, "CELLSIZE", context)
+        bufferlayer = instance.parameterAsOutputLayer(parameters, 'BUFFER', context)
+        outputraster = instance.parameterAsOutputLayer(parameters, 'OUTPUTRASTER', context)
+        bufferdist = instance.parameterAsDouble(parameters, 'BUFFERDIST', context)
+        rastercellsize = instance.parameterAsDouble(parameters, 'CELLSIZE', context)
         if feedback.isCanceled():
             return {'OUTPUTRASTER': None, 'BUFFER': None,
                     'NUMBEROFFEATURES': numfeatures}
-        inpbuffer = processing.run("native:buffer",
-                                   {"INPUT": inputlayer, "OUTPUT": bufferlayer,
+        inpbuffer = processing.run('native:buffer',
+                                   {'INPUT': inputlayer, 'OUTPUT': bufferlayer,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
                                     'DISSOLVE': True, 'END_CAP_STYLE': 0,
                                     'JOIN_STYLE': 0, 'MITER_LIMIT': 10
@@ -228,10 +228,10 @@ The buffer layer, raster layer and number of features are returned.
         if feedback.isCanceled():
             return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
                     'NUMBEROFFEATURES': numfeatures}
-        rasterized = processing.run("qgis:rasterize",
-                                   {"LAYER": bufferlayer, "EXTENT": bufferlayer,
-                                    "MAP_UNITS_PER_PIXEL": rastercellsize,
-                                    "OUTPUT": outputraster
+        rasterized = processing.run('qgis:rasterize',
+                                   {'LAYER': bufferlayer, 'EXTENT': bufferlayer,
+                                    'MAP_UNITS_PER_PIXEL': rastercellsize,
+                                    'OUTPUT': outputraster
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
