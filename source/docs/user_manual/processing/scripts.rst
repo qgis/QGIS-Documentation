@@ -10,7 +10,7 @@ Writing new Processing algorithms as Python scripts
    .. contents::
       :local:
 
-There are currently two options for writing Processing algorithms using Python.
+There are two options for writing Processing algorithms using Python.
 
 * Extending :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 * Using the @alg decorator
@@ -83,7 +83,7 @@ The buffer layer, raster layer and number of features are returned.
     
         def initAlgorithm(self, config=None):
             """
-            Here we define the inputs and output of the algorithm.
+            Here we define the inputs and outputs of the algorithm.
             """
             self.addParameter(
                 QgsProcessingParameterVectorLayer(
@@ -108,7 +108,7 @@ The buffer layer, raster layer and number of features are returned.
                 QgsProcessingParameterDistance(
                     'BUFFERDIST',
                     self.tr('BUFFERDIST'),
-                    defaultValue = 100
+                    defaultValue = 1
                 )
             )
             self.addParameter(
