@@ -41,7 +41,7 @@ The buffer layer, raster layer and number of features are returned.
     from qgis.core import (QgsProcessing,
                            QgsProcessingAlgorithm,
                            QgsProcessingException,
-                           QgsProcessingParameterNumber,
+                           QgsProcessingOutputNumber,
                            QgsProcessingParameterDistance,
                            QgsProcessingParameterVectorLayer,
                            QgsProcessingParameterVectorDestination,
@@ -128,6 +128,12 @@ The buffer layer, raster layer and number of features are returned.
                     'CELLSIZE',
                     self.tr('CELLSIZE'),
                     defaultValue = 10
+                )
+            )
+            self.addOutput(
+                QgsProcessingOutputNumber(
+                    'NUMBEROFFEATURES',
+                    self.tr('NUMBEROFFEATURES')
                 )
             )
     
