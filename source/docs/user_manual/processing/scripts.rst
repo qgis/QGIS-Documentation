@@ -288,12 +288,6 @@ processing and their corresponding alg decorator constants
    * - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
      - ``alg.EXTENT``
      - A spatial extent defined by xmin, xmax, ymin, ymax.
-   * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
-     - ``alg.SINK``
-     - A feature sink.
-   * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
-     - ``alg.SOURCE``
-     - A feature source.
    * - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
      - ``alg.FIELD``
      - A field in the attribute table of a vector layer.
@@ -327,20 +321,26 @@ processing and their corresponding alg decorator constants
    * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
      - ``alg.RANGE``
      - A number range.
-   * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
-     - ``alg.RASTER_LAYER_DEST``
-     - A raster layer.
    * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
      - ``alg.RASTER_LAYER``
      - A raster layer.
+   * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
+     - ``alg.RASTER_LAYER_DEST``
+     - A raster layer.
+   * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
+     - ``alg.SINK``
+     - A feature sink.
+   * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
+     - ``alg.SOURCE``
+     - A feature source.
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
      - A text string.
-   * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
-     - ``alg.VECTOR_LAYER_DEST``
-     - A vector layer.
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
+     - A vector layer.
+   * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
+     - ``alg.VECTOR_LAYER_DEST``
      - A vector layer.
 
 Layer values are strings containing the filepath of the corresponding
