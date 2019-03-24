@@ -340,11 +340,13 @@ Creating scripts and running them from the toolbox
 --------------------------------------------------
 
 You can create your own algorithms by writing Python code.
-Processing scripts extend ``QgsProcessingAlgorithm``, so you
+Processing scripts extend
+:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`, so you
 need to add some extra lines of code to implement mandatory functions.
 You can find :guilabel:`Create new script` (clean sheet) and
 :guilabel:`Create New Script from Template` (template that includes
-code for mandatory functions of ``QgsProcessingAlgorithm``) under
+code for mandatory functions of
+:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`) under
 the :guilabel:`Scripts` dropdown menu on the top of the Processing toolbox.
 The Processing Script Editor will open, and that's where you should type
 your code.
@@ -390,16 +392,13 @@ smoothing the layer.
           self.addParameter(QgsProcessingParameterFeatureSource(
               self.INPUT_VECTOR, "Input vector"))
           self.addParameter(QgsProcessingParameterNumber(
-              self.BUFFERDIST, "Buffer distance", 
+              self.INPUT_BUFFERDIST, "Buffer distance", 
               QgsProcessingParameterNumber.Double,
               100.0))
           self.addParameter(QgsProcessingParameterFeatureSink(
               self.OUTPUT_BUFFER, "Output buffer"))
 
       def processAlgorithm(self, parameters, context, feedback):
-          # Dummy function to enable running an alg inside an alg
-          def no_post_process(alg, context, feedback):
-              pass
           #DO SOMETHING
           algresult = processing.run("native:smoothgeometry",
               {'INPUT': parameters[self.INPUT_VECTOR],
@@ -407,22 +406,23 @@ smoothing the layer.
                'OFFSET':0.25,
                'MAX_ANGLE':180,
                'OUTPUT': 'memory:'},
-              context=context, feedback=feedback, onFinish=no_post_process)
+              context=context, feedback=feedback, is_child_algorithm=True)
           smoothed = algresult['OUTPUT']
           algresult = processing.run('native:buffer',
               {'INPUT': smoothed,
-              'DISTANCE': parameters[self.BUFFERDIST],
+              'DISTANCE': parameters[self.INPUT_BUFFERDIST],
               'SEGMENTS': 5,
               'END_CAP_STYLE': 0,
               'JOIN_STYLE': 0,
               'MITER_LIMIT': 10,
               'DISSOLVE': True,
               'OUTPUT': parameters[self.OUTPUT_BUFFER]},
-              context=context, feedback=feedback, onFinish=no_post_process)
+              context=context, feedback=feedback, is_child_algorithm=True)
           buffered = algresult['OUTPUT']
           return {self.OUTPUT_BUFFER: buffered}
 
-After doing the necessary imports, the following ``QgsProcessingAlgorithm``
+After doing the necessary imports, the following
+:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 functions are specified:
 
 * ``name``: The id of the algorithm (lowercase).
@@ -484,10 +484,10 @@ interface).
 The rest of the constructor parameters are parameter type specific.
 
 The input can be turned into QGIS classes using the ``parameterAs`` functions
-of ``QgsProcessingAlgorithm``.
+of :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 For instance to get the number provided for the buffer distance as a double::
 
-  self.parameterAsDouble(parameters, self.BUFFERDIST, context)).
+  self.parameterAsDouble(parameters, self.INPUT_BUFFERDIST, context)).
 
 The ``processAlgorithm`` function should return a dictionary
 containing values for every output defined by the algorithm. This
@@ -518,7 +518,8 @@ to the user, and ``reportError`` is handy for pushing non-fatal errors
 to users.
 
 Algorithms should avoid using other forms of providing feedback to
-users, such as print statements or logging to QgsMessageLog, and
+users, such as print statements or logging to
+:class:`QgsMessageLog <qgis.core.QgsMessageLog>`, and
 should always use the feedback object instead. This allows verbose
 logging for the algorithm, and is also thread-safe (which is
 important, given that algorithms are typically run in a background
@@ -530,12 +531,15 @@ Handling errors
 If your algorithm encounters an error which prevents it from
 executing, such as invalid input values or some other condition from
 which it cannot or should not recover, then you should raise a
-QgsProcessingException. E.g.::
+:class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
+E.g.::
 
   if feature['value'] < 20:
     raise QgsProcessingException('Invalid input value {}, must be >= 20'.format(feature['value']))
 
-Try to avoid raising QgsProcessingException for non-fatal errors
+Try to avoid raising
+:class:`QgsProcessingException <qgis.core.QgsProcessingException>` for
+non-fatal errors
 (e.g. when a feature has a null geometry), and instead just report
 these errors via ``feedback.reportError()`` and skip the feature. This
 helps make your algorithm "model-friendly", as it avoids halting the
@@ -548,8 +552,9 @@ Documenting your scripts
 As in the case of models, you can create additional documentation for
 your scripts, to explain what they do and how to use them.
 
-``QgsProcessingAlgorithm`` provides the ``helpString()``,
-``shortHelpString()`` and ``helpUrl()`` functions for that purpose.
+:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
+provides the ``helpString()``, ``shortHelpString()`` and ``helpUrl()``
+functions for that purpose.
 Specify / override these to provide more help to the user.
 
 ``shortDescription()`` (added in 3.4) is used in the tooltip when
