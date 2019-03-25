@@ -413,7 +413,7 @@ Documenting your scripts
 ------------------------
 
 Your can document your scripts by overloading the ``helpString`` and
-``helpUrl`` methods of
+:meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
 Flags
