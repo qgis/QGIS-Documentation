@@ -399,9 +399,11 @@ The progress text and progressbar can be updated using two methods:
 :meth:`setProgressText(text) <qgis.core.QgsProcessingFeedback.setProgressText>`
 and :meth:`setProgress(percent) <qgis.core.QgsProcessingFeedback.setProgress>`.
 
-You can provide more information to the user using ``pushConsoleInfo(text)``,
-``pushCommandInfo(text)``, ``pushDebugInfo(text)``, ``pushInfo(text)``,  and
-``reportError(text)``.
+You can provide more information to the user using
+:meth:`pushCommandInfo(text) <qgis.core.QgsProcessingFeedback.pushCommandInfo>`,
+:meth:`pushDebugInfo(text) <qgis.core.QgsProcessingFeedback.pushDebugInfo>`,
+:meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>` and
+:meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>`.
 
 If your script has a problem, the correct way of propagating it is to raise
 a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
@@ -414,7 +416,8 @@ Python console, ...)
 Documenting your scripts
 ------------------------
 
-You can document your scripts by overloading the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>` and
+You can document your scripts by overloading the
+:meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>` and
 :meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
