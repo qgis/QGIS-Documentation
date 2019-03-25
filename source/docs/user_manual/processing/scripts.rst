@@ -361,10 +361,12 @@ Handing data produced by the algorithm
 
 When you declare an output representing a layer (raster or vector),
 the algorithm will try to add it to QGIS once it is finished.
-Raster layer output: QgsProcessingParameterRasterDestination /
-alg.RASTER_LAYER_DEST.
-Vector layer output: QgsProcessingParameterVectorDestination /
-alg.VECTOR_LAYER_DEST.
+
+* Raster layer output: QgsProcessingParameterRasterDestination /
+  alg.RASTER_LAYER_DEST.
+* Vector layer output: QgsProcessingParameterVectorDestination /
+  alg.VECTOR_LAYER_DEST.
+
 So even if the ``run()`` method does not load the layers it produces,
 the two output layers (buffer and raster buffer) will be loaded,
 since they are saved to the destinations entered by the user (or to
