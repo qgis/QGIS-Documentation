@@ -35,7 +35,7 @@ buffer operation and creates a raster layer from the result of the buffer
 operation.
 The buffer layer, raster layer and number of features are returned.
 
-.. test-code:: 
+.. testcode:: 
 
     from qgis.PyQt.QtCore import QCoreApplication
     from qgis.core import (QgsProcessing,
