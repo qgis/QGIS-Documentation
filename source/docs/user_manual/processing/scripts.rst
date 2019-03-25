@@ -397,7 +397,7 @@ user about the progress.  You can use ``feedback``
 
 The progress text and progressbar can be updated using two methods:
 :meth:`setProgressText(text) <qgis.core.QgsProcessingFeedback.setProgressText>`
-and :meth:`setProgress(percent) <qgis.core.QgsProcessingFeedback.setProgress>`.
+and :meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`.
 
 You can provide more information to the user using
 :meth:`pushCommandInfo(text) <qgis.core.QgsProcessingFeedback.pushCommandInfo>`,
