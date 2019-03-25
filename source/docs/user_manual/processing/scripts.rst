@@ -37,7 +37,7 @@ The buffer layer, raster layer and number of features are returned.
 
 .. code-block:: python
 
-    from PyQt5.QtCore import QCoreApplication
+    from qgis.PyQt.QtCore import QCoreApplication
     from qgis.core import (QgsProcessing,
                            QgsProcessingAlgorithm,
                            QgsProcessingException,
