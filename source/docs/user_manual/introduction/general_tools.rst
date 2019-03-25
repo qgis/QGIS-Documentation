@@ -1539,17 +1539,6 @@ example, from the context menu you can:
 Save and Share Layer Properties
 ===============================
 
-.. index:: Layer Definition File, qlr file
-
-The layer definition can be saved as a ``Layer Definition File``
-(:file:`.qlr`) using
-:menuselection:`Export --> Save As Layer Definition File...` in the
-layer's context menu.
-A layer definition file (:file:`.qlr`) includes a reference to the layer's
-data source and the style of the layer.
-:file:`.qlr` files are shown in the Browser Panel and can be used to add
-the layer (with the saved style) to the Layers Panel.
-
 .. _manage_custom_style:
 
 Managing Custom Styles
@@ -1703,6 +1692,21 @@ with name and description.
    to a group or a selection of layers: the style is applied to all the layers
    that are of the same type (vector vs raster) as the original layer and, in
    the case of vector layers, have the same geometry type (point, line or polygon).
+
+.. index:: Layer Definition File, qlr file
+.. _layer_definition_file:
+
+Layer definition file
+--------------------- 
+
+The layer definition can be saved as a ``Layer Definition File``
+(:file:`.qlr`) using
+:menuselection:`Export --> Save As Layer Definition File...` in the
+layer's context menu.
+A layer definition file (:file:`.qlr`) includes a reference to the
+layer's data source and the style of the layer.
+:file:`.qlr` files are shown in the Browser Panel and can be used to add
+the layer (with the saved style) to the Layers Panel.
 
 
 .. index:: Variables, Expressions
