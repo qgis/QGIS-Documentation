@@ -28,7 +28,7 @@ This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
 and items. If not, please read the `overview of the framework
-<https://doc.qt.io/archives/qt-4.8/graphicsview.html>`_.
+<https://doc.qt.io/qt-5/graphicsview.html>`_.
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are
@@ -65,7 +65,7 @@ creating and showing it
   canvas.show()
 
 This produces a standalone window with map canvas. It can be also embedded into
-an existing widget or window. When using .ui files and Qt Designer, place a
+an existing widget or window. When using :file:`.ui` files and Qt Designer, place a
 ``QWidget`` on the form and promote it to a new class: set ``QgsMapCanvas`` as
 class name and set ``qgis.gui`` as header file. The ``pyuic5`` utility will
 take care of it. This is a very convenient way of embedding the canvas. The
@@ -80,7 +80,7 @@ set white background and enable anti-aliasing for smooth rendering
   canvas.setCanvasColor(Qt.white)
   canvas.enableAntiAliasing(True)
 
-(In case you are wondering, ``Qt`` comes from ``PyQt5.QtCore`` module and
+(In case you are wondering, ``Qt`` comes from ``PyQt.QtCore`` module and
 ``Qt.white`` is one of the predefined ``QColor`` instances.)
 
 Now it is time to add some map layers. We will first open a layer and add it to
@@ -201,7 +201,7 @@ are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` meth
 .. code-block:: python
 
   from qgis.gui import *
-  from PyQt5.QtWidgets import QAction, QMainWindow
+  from qgis.PyQt.QtWidgets import QAction, QMainWindow
   from qgis.PyQt.QtCore import Qt
 
   class MyWnd(QMainWindow):
