@@ -16,7 +16,7 @@ There are two options for writing Processing algorithms using Python.
 * Using the @alg decorator
 
 Within QGIS, you can use :guilabel:`Create new script` in the
-:guilabel:`Scrips` menu at the top of the :guilabel:`Processing Toolbox` to
+:guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox` to
 open the :guilabel:`Processing Script Editor` where you can write your code.
 To simplify the task, you can start with a script template by using
 :guilabel:`Create new script from template` from the same menu.
