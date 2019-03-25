@@ -600,8 +600,8 @@ More information on variables usage in the
 .. index:: Layout pages, Page properties
 .. _page_properties:
 
-The Page Properties Panel
--------------------------
+Working with the page properties
+--------------------------------
 
 A layout can be composed of several pages. For instance, a first page can show
 a map canvas, and a second page can show the attribute table associated with a
