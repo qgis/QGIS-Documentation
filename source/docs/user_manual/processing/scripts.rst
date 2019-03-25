@@ -374,7 +374,7 @@ Do not use the ``load()`` method in your script algorithms.
 If a layer is created as output of an algorithm, it should be
 declared as such.
 Otherwise, you will not be able to properly use the algorithm in the
-modeler, since what is declared will not not match what the algorithm
+modeler, since what is declared will not match what the algorithm
 really creates.
 
 Hidden outputs (numbers and strings) do not have a value. Instead, it is you who
