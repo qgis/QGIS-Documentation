@@ -423,7 +423,7 @@ You can override the :meth:`flags <qgis.core.QgsProcessingAlgorithm.flags>` meth
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 to tell QGIS more about your algorithm.
 You can for instance tell QGIS that the script shall be hidden from
-the modeller, that it can be cancelled, that it is not thread safe,
+the modeler, that it can be canceled, that it is not thread safe,
 and more.
 
 Best practices for writing script algorithms
