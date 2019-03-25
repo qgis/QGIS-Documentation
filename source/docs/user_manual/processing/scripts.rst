@@ -35,7 +35,7 @@ buffer operation and creates a raster layer from the result of the buffer
 operation.
 The buffer layer, raster layer and number of features are returned.
 
-.. code-block:: python
+.. test-code:: 
 
     from qgis.PyQt.QtCore import QCoreApplication
     from qgis.core import (QgsProcessing,
@@ -189,7 +189,7 @@ buffer operation and creates a raster layer from the result of the buffer
 operation using the @alg decorator.
 The buffer layer, raster layer and number of features are returned.
 
-.. code-block:: python
+.. test-code:: 
 
     import processing
     from qgis.processing import alg
