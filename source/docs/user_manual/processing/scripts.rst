@@ -412,7 +412,7 @@ Python console, ...)
 Documenting your scripts
 ------------------------
 
-Your can document your scripts by overloading the ``helpString`` and
+You can document your scripts by overloading the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>` and
 :meth:`helpUrl() <qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
