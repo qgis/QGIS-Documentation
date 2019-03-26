@@ -1707,7 +1707,8 @@ A layer definition file (:file:`.qlr`) includes references to the
 data source of the layers and their styles.
 :file:`.qlr` files are shown in the Browser Panel and can be used to add
 the layers (with the saved style) to the Layers Panel.
-
+You can also drag and drop :file:`.qlr` files from the system file manager into the map
+canvas.
 
 .. index:: Variables, Expressions
 .. _`general_tools_variables`:
