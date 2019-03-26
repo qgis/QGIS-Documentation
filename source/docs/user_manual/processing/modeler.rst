@@ -188,11 +188,11 @@ they contain. Since a model is itself an algorithm, it can be added to
 the toolbox just like any other algorithm.
 
 Models can also be saved within the project file using the
-|addToProject|:sup:`Save model in project` button. All the models saved with this
-method won't be written as :file:`.model` file on the disk but will be embedded
+|addToProject|:sup:`Save model in project` button. Models saved with this
+method won't be written as :file:`.model` files on the disk but will be embedded
 in the :file:`.qgz` project file.
 
-Project models are available in |qgsProjectFile|:guilabel:`Project models` menu
+Project models are available in the |qgsProjectFile|:guilabel:`Project models` menu
 of the toolbox.
 
 The models folder can be set from the Processing configuration dialog, under the
@@ -202,6 +202,8 @@ Models loaded from the :file:`models` folder appear not only in the toolbox, but
 also in the algorithms tree in the :guilabel:`Algorithms` tab of the modeler
 window. That means that you can incorporate a model as a part of a bigger model,
 just as you add any other algorithm.
+
+Models will show up in the :ref:`Browser <browser_panel>` panel , and can be run from there.
 
 Exporting a model as an image, PDF or SVG
 .........................................
