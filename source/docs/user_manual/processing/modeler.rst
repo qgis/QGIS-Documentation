@@ -202,7 +202,7 @@ also in the algorithms tree in the :guilabel:`Algorithms` tab of the modeler
 window. That means that you can incorporate a model as a part of a bigger model,
 just as you add any other algorithm.
 
-Models will show up in the Browser Panel, and can be run from there.
+Models will show up in the :ref:`Browser <browser_panel>` panel , and can be run from there.
 
 Exporting a model as an image, PDF or SVG
 .........................................
