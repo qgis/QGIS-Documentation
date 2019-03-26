@@ -1703,7 +1703,7 @@ Layer definition file
 Layer definitions can be saved as a ``Layer Definition File``
 (:file:`.qlr`) using
 :menuselection:`Export --> Save As Layer Definition File...` in the
-layer's context menu.
+active layers' context menu.
 A layer definition file (:file:`.qlr`) includes references to the
 data source of the layers and their styles.
 :file:`.qlr` files are shown in the Browser Panel and can be used to add
