@@ -43,7 +43,7 @@ The buffer layer, raster layer and number of features are returned.
                            QgsProcessingException,
                            QgsProcessingOutputNumber,
                            QgsProcessingParameterDistance,
-                           QgsProcessingParameterVectorLayer,
+                           QgsProcessingParameterFeatureSource,
                            QgsProcessingParameterVectorDestination,
                            QgsProcessingParameterRasterDestination)
     import processing
@@ -97,9 +97,10 @@ The buffer layer, raster layer and number of features are returned.
             """
             Here we define the inputs and outputs of the algorithm.
             """
+            # 'INPUT' is the recommended name for the main input parameter
             self.addParameter(
-                QgsProcessingParameterVectorLayer(
-                    'INPUTVECTOR',
+                QgsProcessingParameterFeatureSource(
+                    'INPUT',
                     self.tr('Input vector layer'),
                     types=[QgsProcessing.TypeVectorAnyGeometry]
                 )
@@ -110,10 +111,11 @@ The buffer layer, raster layer and number of features are returned.
                     self.tr('BUFFER'),
                 )
             )
+            # 'OUTPUT' is the recommended name for the main output parameter
             self.addParameter(
                 QgsProcessingParameterRasterDestination(
-                    'OUTPUTRASTER',
-                    self.tr('OUTPUTRASTER')
+                    'OUTPUT', # 'OUTPUT' is recommended for the main input
+                    self.tr('OUTPUT')
                 )
             )
             self.addParameter(
@@ -141,20 +143,20 @@ The buffer layer, raster layer and number of features are returned.
             """
             Here is where the processing itself takes place.
             """
-            inputlayer = self.parameterAsVectorLayer(parameters, 'INPUTVECTOR',
+            inputlayer = self.parameterAsSource(parameters, 'INPUT',
                                                      context)
             numfeatures = inputlayer.featureCount()
             bufferlayer = self.parameterAsOutputLayer(parameters, 'BUFFER',
                                                       context)
-            outputraster = self.parameterAsOutputLayer(parameters, 'OUTPUTRASTER',
+            outputraster = self.parameterAsOutputLayer(parameters, 'OUTPUT',
                                                        context)
             bufferdist = self.parameterAsDouble(parameters, 'BUFFERDIST', context)
             rastercellsize = self.parameterAsDouble(parameters, 'CELLSIZE',
                                                     context)
             if feedback.isCanceled():
-                return {'OUTPUTRASTER': None, 'BUFFER': None,
+                return {'OUTPUT': None, 'BUFFER': None,
                         'NUMBEROFFEATURES': numfeatures}
-            inpbuffer = processing.run('native:buffer',
+            buffer_result = processing.run('native:buffer',
                                    {'INPUT': inputlayer, 'OUTPUT': bufferlayer,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
                                     'DISSOLVE': True, 'END_CAP_STYLE': 0,
@@ -162,19 +164,18 @@ The buffer layer, raster layer and number of features are returned.
                                     },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
-            # both bufferlayer and inpbuffer['OUTPUT'] refer to the result
             if feedback.isCanceled():
-                return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
+                return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
                         'NUMBEROFFEATURES': numfeatures}
-            rasterized = processing.run('qgis:rasterize',
+            rasterized_result = processing.run('qgis:rasterize',
                                    {'LAYER': bufferlayer, 'EXTENT': bufferlayer,
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
                                     'OUTPUT': outputraster
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
-            # both outputraster and rasterized['OUTPUT'] refer to the result
-            return {'OUTPUTRASTER': outputraster, 'BUFFER': bufferlayer,
+            return {'OUTPUT': rasterized_result['OUTPUT'],
+                    'BUFFER': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
  
 The @alg decorator
@@ -183,6 +184,12 @@ The @alg decorator
 By using the @alg decorator, you can create your own algorithms by writing the
 corresponding Python code and adding a few extra lines to supply additional
 information needed to define the semantics of the algorithm.
+This simplifies the creation of algorithms and specification of inputs and
+outputs.
+One important limitation with the decorator approach is that algorithms
+created in this way will always be added to a user's Processing Scripts
+provider -- it is not possible to add these algorithms to a custom provider,
+e.g. for use in plugins.
 
 The following code takes a vector layer, counts the number of features, does a
 buffer operation and creates a raster layer from the result of the buffer
@@ -197,8 +204,10 @@ The buffer layer, raster layer and number of features are returned.
     
     @alg(name='bufferrasteralg', label='Buffer and export to raster (alg)', group='examplescripts',
          group_label='Example scripts')
-    @alg.input(type=alg.VECTOR_LAYER, name='INPUTVECTOR', label='Input vector layer')
-    @alg.input(type=alg.RASTER_LAYER_DEST, name='OUTPUTRASTER', label='OUTPUTRASTER')
+    # 'INPUT' is the recommended name for the main input parameter
+    @alg.input(type=alg.SOURCE, name='INPUT', label='Input vector layer')
+    # 'OUTPUT' is the recommended name for the main output parameter
+    @alg.input(type=alg.RASTER_LAYER_DEST, name='OUTPUT', label='OUTPUT')
     @alg.input(type=alg.VECTOR_LAYER_DEST, name='BUFFER', label='BUFFER')
     @alg.input(type=alg.DISTANCE, name='BUFFERDIST', label='BUFFER DISTANCE', default=1.0)
     @alg.input(type=alg.DISTANCE, name='CELLSIZE', label='RASTER CELL SIZE', default=10.0)
@@ -209,16 +218,16 @@ The buffer layer, raster layer and number of features are returned.
         Description of the algorithm.
         (If there is no comment here, you will get an error)
         """
-        inputlayer = instance.parameterAsVectorLayer(parameters, 'INPUTVECTOR', context)
+        inputlayer = instance.parameterAsSource(parameters, 'INPUT', context)
         numfeatures = inputlayer.featureCount()
         bufferlayer = instance.parameterAsOutputLayer(parameters, 'BUFFER', context)
-        outputraster = instance.parameterAsOutputLayer(parameters, 'OUTPUTRASTER', context)
+        outputraster = instance.parameterAsOutputLayer(parameters, 'OUTPUT', context)
         bufferdist = instance.parameterAsDouble(parameters, 'BUFFERDIST', context)
         rastercellsize = instance.parameterAsDouble(parameters, 'CELLSIZE', context)
         if feedback.isCanceled():
-            return {'OUTPUTRASTER': None, 'BUFFER': None,
+            return {'OUTPUT': None, 'BUFFER': None,
                     'NUMBEROFFEATURES': numfeatures}
-        inpbuffer = processing.run('native:buffer',
+        buffer_result = processing.run('native:buffer',
                                    {'INPUT': inputlayer, 'OUTPUT': bufferlayer,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
                                     'DISSOLVE': True, 'END_CAP_STYLE': 0,
@@ -226,24 +235,24 @@ The buffer layer, raster layer and number of features are returned.
                                     },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
-        # both bufferlayer and inpbuffer['OUTPUT'] refer to the result
         if feedback.isCanceled():
-            return {'OUTPUTRASTER': None, 'BUFFER': bufferlayer,
+            return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
-        rasterized = processing.run('qgis:rasterize',
+        rasterized_result = processing.run('qgis:rasterize',
                                    {'LAYER': bufferlayer, 'EXTENT': bufferlayer,
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
                                     'OUTPUT': outputraster
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
-        # both outputraster and rasterized['OUTPUT'] refer to the result
-        return {'OUTPUTRASTER': outputraster, 'BUFFER': bufferlayer,
+        return {'OUTPUT': rasterized_result['OUTPUT'],
+                'BUFFER': buffer_result['OUTPUT'],
                 'NUMBEROFFEATURES': numfeatures}
 
-As you can see, it involves two algorithms.
-The last one creates a raster from the buffer layer that was
-generated by the first one.
+As you can see, it involves two algorithms ('native:buffer' and
+'qgis:rasterize').
+The last one ('qgis:rasterize') creates a raster layer from the buffer
+layer that was generated by the first one ('native:buffer').
 
 The part of the code where this processing takes place is not
 difficult to understand if you have read the previous chapter.
@@ -252,16 +261,16 @@ They provide the information that is needed to turn your code into
 an algorithm that can be run from any of the GUI components, like
 the toolbox or the graphical modeler.
 
-These lines are all calls to the ``@alg`` functions that help
-simplify the coding of the algorithm.
+These lines are all calls to the ``@alg`` decorator functions that
+help simplify the coding of the algorithm.
 
-The @alg function is used to define the name and location of the
+The @alg decorator is used to define the name and location of the
 algorithm in the Toolbox.
-The @alg.input function is used to define the inputs of the algorithm.
-The @alg.output function is used to define the outputs of the algorithm.
+The @alg.input decorator is used to define the inputs of the algorithm.
+The @alg.output decorator is used to define the outputs of the algorithm.
 
 Here is the list of input and output types types that are supported in
-processing and their corresponding alg decorator constants
+Processing and their corresponding alg decorator constants
 (:file:`algfactory.py` contains the complete list of alg constants).
 
 .. list-table:: Input and output types
@@ -300,10 +309,10 @@ processing and their corresponding alg decorator constants
      - A field in the attribute table of a vector layer.
    * - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
      - ``alg.FILE``
-     - A filename.
+     - A filename of an existing file.
    * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
      - ``alg.FILE_DEST``
-     - A filename.
+     - A filename for a newly created output file.
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
      - A folder.
@@ -350,11 +359,6 @@ processing and their corresponding alg decorator constants
      - ``alg.VECTOR_LAYER_DEST``
      - A vector layer.
 
-Layer values are strings containing the filepath of the corresponding
-object.
-A multiple layer input will come as a string value, containing the filepaths
-to all selected objects, separated by semicolons (``;``).
-
 
 Handing data produced by the algorithm
 --------------------------------------
@@ -367,25 +371,25 @@ the algorithm will try to add it to QGIS once it is finished.
 * Vector layer output: QgsProcessingParameterVectorDestination /
   alg.VECTOR_LAYER_DEST.
 
-So even if the ``run()`` method does not load the layers it produces,
+So even if the ``processing.run()`` method does not add the layers
+it creates into the user's current project,
 the two output layers (buffer and raster buffer) will be loaded,
 since they are saved to the destinations entered by the user (or to
 temporary destinations if the user does not specify a destination).
 
-Do not use the ``load()`` method in your script algorithms.
+Do not use the ``processing.load()`` method in your script algorithms.
 If a layer is created as output of an algorithm, it should be
 declared as such.
 Otherwise, you will not be able to properly use the algorithm in the
 modeler, since what is declared will not match what the algorithm
 really creates.
 
-Hidden outputs (numbers and strings) do not have a value. Instead, it is you who
-has to assign a value to them. To do so, just set the value of a variable with
-the name you used to declare that output. For instance, if you have used this
-declaration,
-
 You can return strings, numbers and more by specifying them in the result
-dictionary (as demonstrated for "NUMBEROFFEATURES").
+dictionary (as demonstrated for "NUMBEROFFEATURES"), but they should
+always be explicitly defined as outputs from your algorithm.
+We encourage algorithms to output as many useful values as possible,
+since these can be valuable for use in later algorithms when your
+algorithm is used as part of a model.
 
 
 Communicating with the user
@@ -405,7 +409,7 @@ You can provide more information to the user using
 :meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>` and
 :meth:`reportError(text) <qgis.core.QgsProcessingFeedback.reportError>`.
 
-If your script has a problem, the correct way of propagating it is to raise
+If your script has a problem, the correct way of handling it is to raise
 a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 You can pass a message as an argument to the constructor of the exception.
 Processing will take care of handling it and communicating with the user,
