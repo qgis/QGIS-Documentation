@@ -168,7 +168,7 @@ The buffer layer, raster layer and number of features are returned.
                 return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
                         'NUMBEROFFEATURES': numfeatures}
             rasterized_result = processing.run('qgis:rasterize',
-                                   {'LAYER': bufferlayer, 'EXTENT': bufferlayer,
+                                   {'LAYER': bufferlayer, 'EXTENT': buffer_result['OUTPUT'],
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
                                     'OUTPUT': outputraster
                                    },
