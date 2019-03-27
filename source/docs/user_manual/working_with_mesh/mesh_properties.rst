@@ -181,7 +181,7 @@ The tab |general| presents the following items:
 
 The slider |slider|, combo box |selectString| and |groupsexploring| buttons allow to explore another dimension of the data, if available.
 As the slider moves, the metadata is presented accordingly.
-See the figure :ref:`Mesh groups <figure_mesh_groups_>` below as an example.
+See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
 The map canvas will display the selected dataset group as well.
 
 .. _figure_mesh_groups:
@@ -205,7 +205,7 @@ Under :guilabel:`Groups`, click on |contour_inactive| to show contours with
 default visualization parameters.
 
 In the tab |contour_active| you can see and change the current visualization options of contours
-for the selected group, as shown in the image :ref:`Styling contours in a mesh <figure_mesh_symbology_contours_>` below:
+for the selected group, as shown in the image :ref:`Styling contours in a mesh <figure_mesh_symbology_contours>` below:
 
 .. _figure_mesh_symbology_contours:
 
