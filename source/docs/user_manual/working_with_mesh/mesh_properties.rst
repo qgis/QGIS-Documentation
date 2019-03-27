@@ -14,7 +14,7 @@
 Mesh properties
 ===============
 
-A mesh is an unstructured grid usually with temporal and other component . 
+A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and faces in 2D or 3D space:
 
 * vertices - XY(Z) points (in the layer's coordinate reference system)
@@ -66,7 +66,6 @@ for example, vector of wind direction at given time stamps:
 ...                             ...       ...       ...       ...
 =============================== ========= ========= ========= =====
 
-.
 
 We can visualize the data by assigning colors to values 
 (similarly to how it is done with "Singleband pseudocolor" raster rendering) 
@@ -94,7 +93,7 @@ Hence, the natively supported formats are:
 * XMDF: As an example, hydraulic outputs from TUFLOW modelling package
 * DAT: Outputs of various hydrodynamic modelling packages (e.g. BASEMENT, HYDRO_AS-2D, TUFLOW)
 * 3Di: 3Di modelling package format based on Climate and Forecast Conventions (http://cfconventions.org/)
-* Some examples of mesh datasets can be found: https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/
+* Some examples of mesh datasets can be found at: https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/
 
    
 Loading a mesh layer
@@ -137,16 +136,164 @@ Source
 The :guilabel:`Source` tab displays basic information about the selected mesh, including:
 
 * the Layer name to display in the Layers Panel
-* setting the Coordinate Reference System: Displays the layer’s Coordinate Reference System (CRS) as a PROJ.4 string. You can change the layer’s CRS, selecting a recently used one in the drop-down list or clicking on |setProjection| :guilabel:`Select CRS` button (see Coordinate Reference System Selector) Use this process only if the CRS applied to the layer is a wrong one or if none was applied. 
+* setting the Coordinate Reference System: Displays the layer’s Coordinate Reference System (CRS) as a PROJ.4 string.
 
-Use the button :guilabel:`Assign Extra Dataset to Mesh` to add more groups to the current mesh layer. 
+You can change the layer’s CRS, selecting a recently used one in the drop-down
+list or clicking on |setProjection| :guilabel:`Select CRS` button (see
+:ref:`crs_selector`). Use this process only if the CRS applied to the layer is
+wrong or if none was applied.
 
-Style
------
+Use the button :guilabel:`Assign Extra Dataset to Mesh` to add more groups to the current mesh layer.
 
-TODO
+Symbology
+---------
+
+Click the |symbology| :guilabel:`Symbology` button to activate the dialog
+as shown in the following image:
 
 
+.. _figure_mesh_symbology:
+
+.. figure:: img/mesh_symbology.png
+   :align: center
+
+   Mesh Layer Symbology
+
+Symbology properties are divided in several tabs:
+
+* :ref:`General <mesh_symbology_general>`
+* :ref:`Contours Symbology <mesh_symbology_contours>`
+* :ref:`Vectors Symbology <mesh_symbology_vectors>`
+* :ref:`Rendering <mesh_symbology_rendering>`
+
+.. _mesh_symbology_general:
+
+General 
+.......
+
+The tab |general| presents the following items:
+
+* groups available in the mesh dataset
+* dataset in the selected group(s), for example, if the layer has a temporal dimension
+* metadata if available
+* :ref:`blending mode <blend-modes>` available for the selected dataset.
+
+
+The slider |slider|, combo box |selectString| and |groupsexploring| buttons allow to explore another dimension of the data, if available.
+As the slider moves, the metadata is presented accordingly.
+See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
+The map canvas will display the selected dataset group as well.
+
+.. _figure_mesh_groups:
+
+.. figure:: img/mesh_groups.png
+   :align: center
+
+   Dataset in Selected Group(s)
+
+
+
+You can apply symbology to each group using the tabs.
+
+
+.. _mesh_symbology_contours:
+
+Contours Symbology
+..................
+
+Under :guilabel:`Groups`, click on |contour_inactive| to show contours with
+default visualization parameters.
+
+In the tab |contour_active| you can see and change the current visualization options of contours
+for the selected group, as shown in the image :ref:`Styling contours in a mesh <figure_mesh_symbology_contours>` below:
+
+.. _figure_mesh_symbology_contours:
+
+.. figure:: img/mesh_symbology_contours.png
+   :align: center
+
+   Styling Contours in a Mesh Layer
+
+Use the slide bar or combo box to set the opacity of the current group.
+
+Use :guilabel:`Load` to adjust the min and max values of the current group.
+
+The :guilabel:`Interpolation` list contains three options to render contours: :guilabel:`Linear`,
+:guilabel:`Discrete` and :guilabel:`Exact`.
+
+The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down shorcut <color_ramp_widget>`.
+
+The :guilabel:`Label unit suffix` is a label added after the value in the legend.
+
+By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`,
+QGIS creates classes automatically considering
+the :guilabel:`Min` and :guilabel:`Max` values. With ‘Equal interval’, you only need to select the number of classes
+using the combo box  :guilabel:`Classes`  and press the button :guilabel:`Classify`.
+
+The button |signPlus| :sup:`Add values manually` adds a value
+to the individual color table. The button |signMinus| :sup:`Remove selected row`
+deletes a value from the individual color table. Double clicking on the value column
+lets you insert a specific value. Double clicking on the color column opens the dialog
+:guilabel:`Change color`, where you can select a color to apply on that value.
+
+
+.. _mesh_symbology_vectors:
+
+Vectors Symbology
+.................
+
+In the tab |general|, click on |vector_inactive| to display vectors if available.
+The map canvas will display the vectors in the selected group with default parameters.
+Click on the tab |vector_active| to change the visualization parameters for vectors as shown in the image below:
+
+.. _figure_mesh_symbology_vector:
+
+.. figure:: img/mesh_symbology_vector.png
+   :align: center
+
+   Styling Vectors in a Mesh Layer
+
+The line width can be set using the combo box or typing the value.
+The color widget opens the dialog :guilabel:`Change color`,
+where you can select a color to apply to vectors.
+
+Enter values for :guilabel:`Min` and :guilabel:`Max` to filter vectors according to their magnitude.
+
+Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and specify
+the :guilabel:`X spacing` and the :guilabel:`Y spacing`,
+QGIS will render the vector considering the given spacing.
+
+With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the arrow
+head to be set by specifying width and length (in percentage).
+
+Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different ways:
+
+* Defined by Min and Max: You specify the minimum and maximum length for the vectors,
+  QGIS will adjust their visualization accordingly
+* Scale to magnitude: You specify the (multiplying) factor to use
+* Fixed: all the vectors are shown with the same length
+
+.. _mesh_symbology_rendering:
+
+Rendering
+.........
+
+In the tab |rendering_mesh|,  QGIS offers two possibilities to display the grid,
+as shown in the image :ref:` Mesh rendering <figure_mesh_symbology_grid>`:
+
+*	``Native Mesh Rendering`` that shows quadrants
+*	``Triangular Mesh Rendering`` that display triangles
+
+
+.. _figure_mesh_symbology_grid:
+
+.. figure:: img/mesh_symbology_grid.png
+   :align: center
+   
+   Mesh Rendering
+   
+   
+The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -160,4 +307,27 @@ TODO
       :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
+   :width: 2em
+.. |rendering_mesh| image:: /static/common/mesh_rendering.png
+   :width: 1.5em
+.. |contour_active| image:: /static/common/contours_active.png
+   :width: 1.5em
+.. |contour_inactive| image:: /static/common/contours_inactive.png
+   :width: 2em
+.. |vector_active| image:: /static/common/vector_active.png
+   :width: 2em
+.. |vector_inactive| image:: /static/common/vector_inactive.png
+   :width: 1.5em
+.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.5em
+.. |slider| image:: /static/common/slider.png
+.. |selectString| image:: /static/common/selectstring.png
