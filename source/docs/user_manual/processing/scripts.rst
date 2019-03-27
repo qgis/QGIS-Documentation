@@ -218,10 +218,10 @@ The buffer layer, raster layer and number of features are returned.
         Description of the algorithm.
         (If there is no comment here, you will get an error)
         """
-        inputlayer = instance.parameterAsSource(parameters, 'INPUT', context)
+        input_featuresource = instance.parameterAsSource(parameters, 'INPUT', context)
         numfeatures = inputlayer.featureCount()
-        bufferlayer = instance.parameterAsOutputLayer(parameters, 'BUFFER', context)
-        outputraster = instance.parameterAsOutputLayer(parameters, 'OUTPUT', context)
+        buffer_layer_path = instance.parameterAsOutputLayer(parameters, 'BUFFER', context)
+        output_raster_path = instance.parameterAsOutputLayer(parameters, 'OUTPUT', context)
         bufferdist = instance.parameterAsDouble(parameters, 'BUFFERDIST', context)
         rastercellsize = instance.parameterAsDouble(parameters, 'CELLSIZE', context)
         if feedback.isCanceled():
@@ -377,7 +377,6 @@ the two output layers (buffer and raster buffer) will be loaded,
 since they are saved to the destinations entered by the user (or to
 temporary destinations if the user does not specify a destination).
 
-Do not use the ``processing.load()`` method in your script algorithms.
 If a layer is created as output of an algorithm, it should be
 declared as such.
 Otherwise, you will not be able to properly use the algorithm in the
@@ -434,6 +433,15 @@ to tell QGIS more about your algorithm.
 You can for instance tell QGIS that the script shall be hidden from
 the modeler, that it can be canceled, that it is not thread safe,
 and more.
+
+.. hint::
+    By default, Processing runs algorithms in a separate thread in order
+    to keep QGIS responsive while the processing task runs.
+    If your algorithm is regularly crashing, you are probably using API
+    calls which are not safe to do in a background thread.
+    Try returning the QgsProcessingAlgorithm.FlagNoThreading flag from
+    your algorithm's flags() method to force Processing to run your
+    algorithm in the main thread instead.
 
 Best practices for writing script algorithms
 --------------------------------------------
