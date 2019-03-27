@@ -168,7 +168,7 @@ The buffer layer, raster layer and number of features are returned.
                 return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
                         'NUMBEROFFEATURES': numfeatures}
             rasterized_result = processing.run('qgis:rasterize',
-                                   {'LAYER': bufferlayer, 'EXTENT': buffer_result['OUTPUT'],
+                                   {'LAYER': buffer_layer_path, 'EXTENT': buffer_result['OUTPUT'],
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
                                     'OUTPUT': output_raster_path
                                    },
@@ -228,7 +228,7 @@ The buffer layer, raster layer and number of features are returned.
             return {'OUTPUT': None, 'BUFFER': None,
                     'NUMBEROFFEATURES': numfeatures}
         buffer_result = processing.run('native:buffer',
-                                   {'INPUT': inputlayer, 'OUTPUT': bufferlayer,
+                                   {'INPUT': inputlayer, 'OUTPUT': buffer_layer_path,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
                                     'DISSOLVE': True, 'END_CAP_STYLE': 0,
                                     'JOIN_STYLE': 0, 'MITER_LIMIT': 10
@@ -239,9 +239,9 @@ The buffer layer, raster layer and number of features are returned.
             return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
         rasterized_result = processing.run('qgis:rasterize',
-                                   {'LAYER': bufferlayer, 'EXTENT': bufferlayer,
+                                   {'LAYER': buffer_layer_path, 'EXTENT': buffer_result['OUTPUT'],
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
-                                    'OUTPUT': outputraster
+                                    'OUTPUT': output_raster_path
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
