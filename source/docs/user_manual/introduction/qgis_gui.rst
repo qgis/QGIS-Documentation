@@ -274,7 +274,7 @@ Menu Option                                                   Shortcut          
 :menuselection:`Create Layer -->`                             \                     :guilabel:`Data Source Manager`    :ref:`sec_create_vector`
 :menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  :ref:`nesting_projects`
-:guilabel:`Add from Layer Definition File...`                 \                     \                                  \
+:guilabel:`Add from Layer Definition File...`                 \                     \                                  :ref:`layer_definition_file`
 |editCopy| :guilabel:`Copy Style`                             \                     \                                  :ref:`save_layer_property`
 |editPaste| :guilabel:`Paste Style`                           \                     \                                  :ref:`save_layer_property`
 |editCopy| :guilabel:`Copy Layer`                             \                     \                                  \
@@ -284,7 +284,7 @@ Menu Option                                                   Shortcut          
 |fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             :ref:`save_feature_edits`
 |allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             :ref:`save_feature_edits`
 :guilabel:`Save As...`                                        \                     \                                  :ref:`general_saveas`
-:guilabel:`Save As Layer Definition File...`                  \                     \                                  \
+:guilabel:`Save As Layer Definition File...`                  \                     \                                  :ref:`layer_definition_file`
 |removeLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                  \
 |duplicateLayer| :guilabel:`Duplicate Layer(s)`               \                     \                                  \
 :guilabel:`Set Scale Visibility of Layer(s)`                  \                     \                                  \

@@ -1693,6 +1693,22 @@ with name and description.
    that are of the same type (vector vs raster) as the original layer and, in
    the case of vector layers, have the same geometry type (point, line or polygon).
 
+.. index:: Layer Definition File, qlr file
+.. _layer_definition_file:
+
+Layer definition file
+--------------------- 
+
+Layer definitions can be saved as a ``Layer Definition File``
+(:file:`.qlr`) using
+:menuselection:`Export --> Save As Layer Definition File...` in the
+active layers' context menu.
+A layer definition file (:file:`.qlr`) includes references to the
+data source of the layers and their styles.
+:file:`.qlr` files are shown in the Browser Panel and can be used to add
+the layers (with the saved style) to the Layers Panel.
+You can also drag and drop :file:`.qlr` files from the system file manager into the map
+canvas.
 
 .. index:: Variables, Expressions
 .. _`general_tools_variables`:
