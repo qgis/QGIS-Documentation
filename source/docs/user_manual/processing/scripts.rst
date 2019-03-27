@@ -170,7 +170,7 @@ The buffer layer, raster layer and number of features are returned.
             rasterized_result = processing.run('qgis:rasterize',
                                    {'LAYER': bufferlayer, 'EXTENT': buffer_result['OUTPUT'],
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
-                                    'OUTPUT': outputraster
+                                    'OUTPUT': output_raster_path
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
