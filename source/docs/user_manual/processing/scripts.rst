@@ -157,7 +157,7 @@ The buffer layer, raster layer and number of features are returned.
                 return {'OUTPUT': None, 'BUFFER': None,
                         'NUMBEROFFEATURES': numfeatures}
             buffer_result = processing.run('native:buffer',
-                                   {'INPUT': inputlayer, 'OUTPUT': bufferlayer,
+                                   {'INPUT': input_featuresource, 'OUTPUT': buffer_layer_path,
                                     'DISTANCE': bufferdist, 'SEGMENTS': 10, 
                                     'DISSOLVE': True, 'END_CAP_STYLE': 0,
                                     'JOIN_STYLE': 0, 'MITER_LIMIT': 10
