@@ -143,7 +143,7 @@ The buffer layer, raster layer and number of features are returned.
             """
             Here is where the processing itself takes place.
             """
-            inputlayer = self.parameterAsSource(parameters, 'INPUT',
+            input_featuresource = self.parameterAsSource(parameters, 'INPUT',
                                                      context)
             numfeatures = inputlayer.featureCount()
             bufferlayer = self.parameterAsOutputLayer(parameters, 'BUFFER',
