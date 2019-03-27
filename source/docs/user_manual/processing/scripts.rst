@@ -145,7 +145,7 @@ The buffer layer, raster layer and number of features are returned.
             """
             input_featuresource = self.parameterAsSource(parameters, 'INPUT',
                                                      context)
-            numfeatures = inputlayer.featureCount()
+            numfeatures = input_featuresource.featureCount()
             buffer_layer_path = self.parameterAsOutputLayer(parameters, 'BUFFER',
                                                       context)
             output_raster_path = self.parameterAsOutputLayer(parameters, 'OUTPUT',
