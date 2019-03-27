@@ -434,7 +434,7 @@ You can for instance tell QGIS that the script shall be hidden from
 the modeler, that it can be canceled, that it is not thread safe,
 and more.
 
-.. hint::
+.. tip::
     By default, Processing runs algorithms in a separate thread in order
     to keep QGIS responsive while the processing task runs.
     If your algorithm is regularly crashing, you are probably using API
